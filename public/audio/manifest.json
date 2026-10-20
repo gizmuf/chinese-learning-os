@@ -1,0 +1,457 @@
+{
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "language": "zh-CN",
+  "generationRate": "-10%",
+  "provider": "Microsoft Edge Read Aloud via edge-tts",
+  "edgeTtsVersion": "7.3.1",
+  "recordings": [
+    {
+      "itemId": "can",
+      "kind": "sentence",
+      "text": "可以吗？",
+      "file": "can-sentence.mp3",
+      "sha256": "339b20d5e733ef6081ddfeec52fccb7ee547baa8bcf3d36fe3bef27368df4e6f"
+    },
+    {
+      "itemId": "can",
+      "kind": "word",
+      "text": "可以",
+      "file": "can-word.mp3",
+      "sha256": "b73796704108706c6c30e304ffe6c68d09dd8d482631976ca6190ad586bcef88"
+    },
+    {
+      "itemId": "china",
+      "kind": "sentence",
+      "text": "我在中国。",
+      "file": "china-sentence.mp3",
+      "sha256": "d1f9406e24fe51e19d100d6f524dadfe082792508e254352306f627f4b13c257"
+    },
+    {
+      "itemId": "china",
+      "kind": "word",
+      "text": "中国",
+      "file": "china-word.mp3",
+      "sha256": "d64f7a6104e92a28627a4a0d08487b447b13cd73b5d8cd7afc45a6d2c5bb5cf5"
+    },
+    {
+      "itemId": "delicious",
+      "kind": "sentence",
+      "text": "这个很好吃。",
+      "file": "delicious-sentence.mp3",
+      "sha256": "c8d312db8ec3c1458896a8944125ecf9887d23ed6291c539c6a9108b2a69d184"
+    },
+    {
+      "itemId": "delicious",
+      "kind": "word",
+      "text": "好吃",
+      "file": "delicious-word.mp3",
+      "sha256": "c0b7e498d823017cd64f3913233fbbe5cc2c4a07585dc0be38bec9d8137163a5"
+    },
+    {
+      "itemId": "eat",
+      "kind": "sentence",
+      "text": "你吃什么？",
+      "file": "eat-sentence.mp3",
+      "sha256": "bb11caabc80438a9f2f702beb0aa5d9e7d9dd6c020a0ccfd91a629cfb7ad4d09"
+    },
+    {
+      "itemId": "eat",
+      "kind": "word",
+      "text": "吃",
+      "file": "eat-word.mp3",
+      "sha256": "f58a32ed69bc5896a09e67e2312fe1fd8255cf80c79969b31558608fa7841e8d"
+    },
+    {
+      "itemId": "goodbye",
+      "kind": "sentence",
+      "text": "老师，再见。",
+      "file": "goodbye-sentence.mp3",
+      "sha256": "aa99949e864af65d4a392f93e77563e2adc60bd01746c2c6c5bc092a0f990063"
+    },
+    {
+      "itemId": "goodbye",
+      "kind": "word",
+      "text": "再见",
+      "file": "goodbye-word.mp3",
+      "sha256": "ec46ad79b2d650b3867b15818d9707ecc28b2a4f9018aed6f28a09c328f0ba02"
+    },
+    {
+      "itemId": "have",
+      "kind": "sentence",
+      "text": "你有时间吗？",
+      "file": "have-sentence.mp3",
+      "sha256": "d56ab5ab6b3910e9227c2ee45a6a1e11bc89b30e74d755c5bf8b4a918fbbf6a9"
+    },
+    {
+      "itemId": "have",
+      "kind": "word",
+      "text": "有",
+      "file": "have-word.mp3",
+      "sha256": "8258b09a4d71128b39a1e3b11905b406f655d40d7792b9cc7349a1272df178e6"
+    },
+    {
+      "itemId": "hello",
+      "kind": "sentence",
+      "text": "你好，很高兴认识你。",
+      "file": "hello-sentence.mp3",
+      "sha256": "5748d93aa329e67e07714c1c906671230412203e81c5314880b0a82f33fbb8fd"
+    },
+    {
+      "itemId": "hello",
+      "kind": "word",
+      "text": "你好",
+      "file": "hello-word.mp3",
+      "sha256": "5a5707afe24078b81b2524ee55a0a04e1ce179922c8695acbb95a2804f4315c8"
+    },
+    {
+      "itemId": "howmuch",
+      "kind": "sentence",
+      "text": "这个多少钱？",
+      "file": "howmuch-sentence.mp3",
+      "sha256": "41f65c082a0d92b112d0eb3d3fd7ceb1b1ea8b3aa1dcbe850a9a08a5b31377e5"
+    },
+    {
+      "itemId": "howmuch",
+      "kind": "word",
+      "text": "多少",
+      "file": "howmuch-word.mp3",
+      "sha256": "76a77c9f23abc07d45bc5741ab38b434272d2baab2f71740f6cb17fff59dfdf6"
+    },
+    {
+      "itemId": "later",
+      "kind": "sentence",
+      "text": "我以后再来。",
+      "file": "later-sentence.mp3",
+      "sha256": "095491ea92d42452b9e8cccaff0b37627f0eebd0fd57ad6652ef64d7b75a9a43"
+    },
+    {
+      "itemId": "later",
+      "kind": "word",
+      "text": "以后",
+      "file": "later-word.mp3",
+      "sha256": "203cca56ea6ad050bed70b5ff2ae20c9d39b680ba2e9f8bc7fc8337a11a04136"
+    },
+    {
+      "itemId": "little",
+      "kind": "sentence",
+      "text": "我要一点。",
+      "file": "little-sentence.mp3",
+      "sha256": "4a3aa05b807d7542c35dc9e29d0fa7526a736546e489a95a55ea71d525807a9f"
+    },
+    {
+      "itemId": "little",
+      "kind": "word",
+      "text": "一点",
+      "file": "little-word.mp3",
+      "sha256": "ad9d3d8ac3ca5696cb03374cc1875858c0ced34faee00a638d75a5e37e751e99"
+    },
+    {
+      "itemId": "me",
+      "kind": "sentence",
+      "text": "我是学生。",
+      "file": "me-sentence.mp3",
+      "sha256": "9785a1404227bd35adc19d6c36364e76f04aa0287df03a9ef8550b1d23777a5c"
+    },
+    {
+      "itemId": "me",
+      "kind": "word",
+      "text": "我",
+      "file": "me-word.mp3",
+      "sha256": "9af66368d6f5fd7ec00cc2d9b8c62917dd113630088ed37a043b371b2df97e68"
+    },
+    {
+      "itemId": "meat",
+      "kind": "sentence",
+      "text": "我不吃肉。",
+      "file": "meat-sentence.mp3",
+      "sha256": "8dabe3e0c94df8047b0fe69c8fa7bea882ca0c06f974fd44951a5404cb1144de"
+    },
+    {
+      "itemId": "meat",
+      "kind": "word",
+      "text": "肉",
+      "file": "meat-word.mp3",
+      "sha256": "797d5cc1c6ace2eba5307ad23cce52eb3b3a1bbb6f9399f65054eb36aab4d261"
+    },
+    {
+      "itemId": "no",
+      "kind": "sentence",
+      "text": "我不是老师。",
+      "file": "no-sentence.mp3",
+      "sha256": "e2f15e7f311798f7143d4408e11142b8ef7da1bff61d2306ee110ce488c15bf2"
+    },
+    {
+      "itemId": "no",
+      "kind": "word",
+      "text": "不",
+      "file": "no-word.mp3",
+      "sha256": "15c47418467d0112d1760db37fb07af2c06e7ca72e3e65017919bdb2bdc18689"
+    },
+    {
+      "itemId": "notbad",
+      "kind": "sentence",
+      "text": "这个不错。",
+      "file": "notbad-sentence.mp3",
+      "sha256": "30570c1a6e54b7ff60da4d752e861ae9fd9fb16579ebc395c7b2b59de3ad3edd"
+    },
+    {
+      "itemId": "notbad",
+      "kind": "word",
+      "text": "不错",
+      "file": "notbad-word.mp3",
+      "sha256": "45204389f81d377740f138a45d3a6b3e40084b44c6ef30cf5f880444b07270f9"
+    },
+    {
+      "itemId": "now",
+      "kind": "sentence",
+      "text": "现在可以吗？",
+      "file": "now-sentence.mp3",
+      "sha256": "101383a9ad27404d5941f2ff9c8a9de4c8485622667b39026da6e305b695fd3a"
+    },
+    {
+      "itemId": "now",
+      "kind": "word",
+      "text": "现在",
+      "file": "now-word.mp3",
+      "sha256": "92158761e6e987f284a62c7d36e1aeeaaada081167602dbf654933a000eb38ef"
+    },
+    {
+      "itemId": "start",
+      "kind": "sentence",
+      "text": "我们开始吧。",
+      "file": "start-sentence.mp3",
+      "sha256": "041a35d63c092064329dff2823b85d8089864d589db3b860559508487dbe30ee"
+    },
+    {
+      "itemId": "start",
+      "kind": "word",
+      "text": "开始",
+      "file": "start-word.mp3",
+      "sha256": "3c86ec87a12b789b09b49bbe1e3332fbf981d4a3dbe9422dfa5605c899f0d2f4"
+    },
+    {
+      "itemId": "student",
+      "kind": "sentence",
+      "text": "我是学生。",
+      "file": "student-sentence.mp3",
+      "sha256": "19c93d5214f9873344354a33be0ee0a967d0abbe259300eacd0d20670843b4c9"
+    },
+    {
+      "itemId": "student",
+      "kind": "word",
+      "text": "学生",
+      "file": "student-word.mp3",
+      "sha256": "558f3c214250f6487c41bdffab997df104e61fb9de380de453fb4d4c3bb72425"
+    },
+    {
+      "itemId": "sweet",
+      "kind": "sentence",
+      "text": "这个甜吗？",
+      "file": "sweet-sentence.mp3",
+      "sha256": "1b8a0348e09c44408c788ee7a255ef812abd9c429786ae20c5318a83c4489ccb"
+    },
+    {
+      "itemId": "sweet",
+      "kind": "word",
+      "text": "甜",
+      "file": "sweet-word.mp3",
+      "sha256": "ffccf4b12b087851450e23d3ac11320885802c11496a511ae182fce815f70d4d"
+    },
+    {
+      "itemId": "tea",
+      "kind": "sentence",
+      "text": "我要一杯茶。",
+      "file": "tea-sentence.mp3",
+      "sha256": "bef77b2ddf4f6bae2768662e579fb3b0f346c9722e83653472f2aa5e701cbbe1"
+    },
+    {
+      "itemId": "tea",
+      "kind": "word",
+      "text": "茶",
+      "file": "tea-word.mp3",
+      "sha256": "e497084c2822b2f70bc29cb727d90206f0e81b736845195f2c8fcf6f18cf662a"
+    },
+    {
+      "itemId": "teacher",
+      "kind": "sentence",
+      "text": "老师，您好。",
+      "file": "teacher-sentence.mp3",
+      "sha256": "261f9baf7f5f5170036179e61a38492a945a639c82d057b27f086526be7c65c9"
+    },
+    {
+      "itemId": "teacher",
+      "kind": "word",
+      "text": "老师",
+      "file": "teacher-word.mp3",
+      "sha256": "8bc522fe77965788cf0c9fdae72e3cb17bc478b10ae907c0f46294178ac800c8"
+    },
+    {
+      "itemId": "thanks",
+      "kind": "sentence",
+      "text": "谢谢你。",
+      "file": "thanks-sentence.mp3",
+      "sha256": "e38b27803d3e1f52f08f54f5e7c831b9d3f2be313ace50a0ec9bfda25b500919"
+    },
+    {
+      "itemId": "thanks",
+      "kind": "word",
+      "text": "谢谢",
+      "file": "thanks-word.mp3",
+      "sha256": "8118cba749272c6c3b06928383ca2a104ef49d804ea5cd18f2de0fa82c54624b"
+    },
+    {
+      "itemId": "this",
+      "kind": "sentence",
+      "text": "这个多少钱？",
+      "file": "this-sentence.mp3",
+      "sha256": "72011d6abddf7fdf0a70ae9f411c5bf86d55f3edacf987ce6204f90ebba5898d"
+    },
+    {
+      "itemId": "this",
+      "kind": "word",
+      "text": "这个",
+      "file": "this-word.mp3",
+      "sha256": "2b3166930c2e8b9f24d349c3c5090fc98efcd70aabc1d1dc6fe29bb6335f5fb6"
+    },
+    {
+      "itemId": "time",
+      "kind": "sentence",
+      "text": "你有时间吗？",
+      "file": "time-sentence.mp3",
+      "sha256": "ddeb7ccdc4ee31bec58eb99d400507993f98d21516552a8eff3ed93e8fc988ea"
+    },
+    {
+      "itemId": "time",
+      "kind": "word",
+      "text": "时间",
+      "file": "time-word.mp3",
+      "sha256": "6791c191335ac02e09878b68a0039a95c28e38c2ae04019e17b639028c9dd7ee"
+    },
+    {
+      "itemId": "today",
+      "kind": "sentence",
+      "text": "今天我有课。",
+      "file": "today-sentence.mp3",
+      "sha256": "b20f976ed2add1a9179429049a775189bdfc14f1bedd9adc4ac6c22537285997"
+    },
+    {
+      "itemId": "today",
+      "kind": "word",
+      "text": "今天",
+      "file": "today-word.mp3",
+      "sha256": "9cb2e11a49604ee68f67abf04ad2e507636e90470707d18d71eba05ce7f9ef8e"
+    },
+    {
+      "itemId": "tomorrow",
+      "kind": "sentence",
+      "text": "明天见。",
+      "file": "tomorrow-sentence.mp3",
+      "sha256": "05b68557ec8d6cc9ae46734abe2d9e495d0686f134781a91b662a3c16e58538d"
+    },
+    {
+      "itemId": "tomorrow",
+      "kind": "word",
+      "text": "明天",
+      "file": "tomorrow-word.mp3",
+      "sha256": "ef572cc4a258d3ef24bbaf9e4106b2b95ef912227b22c8ed2a08e90aab2b57b8"
+    },
+    {
+      "itemId": "vegetarian",
+      "kind": "sentence",
+      "text": "有素食吗？",
+      "file": "vegetarian-sentence.mp3",
+      "sha256": "b8d5c8adc7e8539f66dfe99066c17ab6aba08bd3ff51f145b96dba661c8e16d1"
+    },
+    {
+      "itemId": "vegetarian",
+      "kind": "word",
+      "text": "素食",
+      "file": "vegetarian-word.mp3",
+      "sha256": "6778354aabe6a10a8668765efd887bf8d29326ba966cd0a62f4c1580e1633ad8"
+    },
+    {
+      "itemId": "want",
+      "kind": "sentence",
+      "text": "我要这个。",
+      "file": "want-sentence.mp3",
+      "sha256": "dd88ec43fd0017e64c35b2f31fdd42e724ac5248278496353c43e6b44c1160ab"
+    },
+    {
+      "itemId": "want",
+      "kind": "word",
+      "text": "要",
+      "file": "want-word.mp3",
+      "sha256": "8c94658ce59e2d3dbd623229998685feac08d0e814ad0d14283447105a01246f"
+    },
+    {
+      "itemId": "water",
+      "kind": "sentence",
+      "text": "我要水。",
+      "file": "water-sentence.mp3",
+      "sha256": "cdda5af727f18b1b332251bf8d7f78613b57070a98df7afd528d2b685989a40e"
+    },
+    {
+      "itemId": "water",
+      "kind": "word",
+      "text": "水",
+      "file": "water-word.mp3",
+      "sha256": "f1f7b75774462bb8dfb7813f8eabb6d8578f763d67ff074d99ed145275d9cb18"
+    },
+    {
+      "itemId": "week",
+      "kind": "sentence",
+      "text": "下周见。",
+      "file": "week-sentence.mp3",
+      "sha256": "6329f3c2d732fcc5c5a3209cf3c0ceead74e4ae51c84202c4323284ddabd90b1"
+    },
+    {
+      "itemId": "week",
+      "kind": "word",
+      "text": "下周",
+      "file": "week-word.mp3",
+      "sha256": "20dcbba053cf16c8b44441983eb409ac566c0f7464b3e2822d958f9f39fb24f6"
+    },
+    {
+      "itemId": "yes",
+      "kind": "sentence",
+      "text": "我是学生。",
+      "file": "yes-sentence.mp3",
+      "sha256": "69708170c68468f2446452f305e1c3e1ce77e4ad48a9e7d9de2c6b7eea955f8d"
+    },
+    {
+      "itemId": "yes",
+      "kind": "word",
+      "text": "是",
+      "file": "yes-word.mp3",
+      "sha256": "4ce14f174a28e632ec16f4ede3d799c196fc9e5b46bd9334444c089689c193a0"
+    },
+    {
+      "itemId": "yesterday",
+      "kind": "sentence",
+      "text": "昨天我有课。",
+      "file": "yesterday-sentence.mp3",
+      "sha256": "983813abfbad08f6c22f19bf986a1884f2cb658417f6666f9e72264f846af28d"
+    },
+    {
+      "itemId": "yesterday",
+      "kind": "word",
+      "text": "昨天",
+      "file": "yesterday-word.mp3",
+      "sha256": "e098d11f60220b4fa538a04cee099baf3e1aaa68839d67ed96a22442a7281100"
+    },
+    {
+      "itemId": "you",
+      "kind": "sentence",
+      "text": "你叫什么名字？",
+      "file": "you-sentence.mp3",
+      "sha256": "7ec550ecef6c33d4c602111899ee147d93415789206829c59d9a54c7c9878615"
+    },
+    {
+      "itemId": "you",
+      "kind": "word",
+      "text": "你",
+      "file": "you-word.mp3",
+      "sha256": "541bb788548e7ae0a828d8a57a3b693dde2c6d704145ae9d606f768ab32edb16"
+    }
+  ]
+}
