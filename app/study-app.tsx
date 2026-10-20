@@ -53,7 +53,8 @@ import Ink from "./ink";
 import Guided from "./guided";
 import { progressSchema } from "./event-schema";
 import { speak, setSpeechRate, stopAudio } from "./audio";
-type User = { id: string; name: string } | null;
+import { authenticatedFetch } from "./auth-client";
+import type { StudyUser as User } from "./auth-shell";
 type View = "today" | "lessons" | "practice" | "reviews" | "progress";
 type Draft = {
   strokes: Stroke[][];
@@ -64,7 +65,17 @@ type Draft = {
   completed?: number[];
   attemptId?: string;
 };
-export default function StudyApp({ user }: { user: User }) {
+export default function StudyApp({
+  user,
+  onSignIn,
+  onSignOut,
+  onManageAccount,
+}: {
+  user: User;
+  onSignIn: () => void;
+  onSignOut: () => void;
+  onManageAccount: () => void;
+}) {
   const [view, setView] = useState<View>("today");
   const [events, setEvents] = useState<LearningEvent[]>([]);
   const [sync, setSync] = useState("Loading your notebook…");
@@ -154,18 +165,28 @@ export default function StudyApp({ user }: { user: User }) {
           }
           batch.push(pending[i++]);
         }
-        const r = await fetch("/api/progress", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ events: batch }),
-        });
+        const r = await authenticatedFetch(
+          "/api/progress",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ events: batch }),
+          },
+          user.id,
+        );
         if (!r.ok) throw Error("sync");
         await putEvents(
           db,
           batch.map((e) => ({ ...e, synced: true })),
         );
       }
-      const r = await fetch("/api/progress", { cache: "no-store" });
+      const r = await authenticatedFetch(
+        "/api/progress",
+        {
+          cache: "no-store",
+        },
+        user.id,
+      );
       if (!r.ok) throw Error("sync");
       const data = progressSchema.parse(await r.json());
       await putEvents(
@@ -383,7 +404,11 @@ export default function StudyApp({ user }: { user: User }) {
           </div>
           {!user && (
             <a
-              href="/signin-with-chatgpt?return_to=%2F"
+              href="#account"
+              onClick={(event) => {
+                event.preventDefault();
+                onSignIn();
+              }}
               target="_top"
               aria-label="Sign in"
             >
@@ -411,7 +436,11 @@ export default function StudyApp({ user }: { user: User }) {
             {!user && (
               <a
                 className="signin-link"
-                href="/signin-with-chatgpt?return_to=%2F"
+                href="#account"
+                onClick={(event) => {
+                  event.preventDefault();
+                  onSignIn();
+                }}
                 target="_top"
               >
                 Sign in
@@ -1044,7 +1073,14 @@ export default function StudyApp({ user }: { user: User }) {
                     : "Guest progress stays in this browser. Sign in to keep a separate notebook across your devices."}
                 </p>
                 {!user && (
-                  <a href="/signin-with-chatgpt?return_to=%2F" target="_top">
+                  <a
+                    href="#account"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      onSignIn();
+                    }}
+                    target="_top"
+                  >
                     Sign in <ArrowUpRight size={16} />
                   </a>
                 )}
@@ -1117,6 +1153,17 @@ export default function StudyApp({ user }: { user: User }) {
                 onChange={(e) => setLeft(e.target.checked)}
               />
             </label>
+            {user && (
+              <button
+                className="secondary auth-wide"
+                onClick={() => {
+                  setSettings(false);
+                  onManageAccount();
+                }}
+              >
+                Manage learning account <ArrowUpRight size={16} />
+              </button>
+            )}
             <p className="muted">
               Guest and signed-in notebooks are separate. Pronunciation uses
               bundled Mandarin recordings.
@@ -1124,7 +1171,11 @@ export default function StudyApp({ user }: { user: User }) {
             {!user ? (
               <a
                 className="primary"
-                href="/signin-with-chatgpt?return_to=%2F"
+                href="#account"
+                onClick={(event) => {
+                  event.preventDefault();
+                  onSignIn();
+                }}
                 target="_top"
               >
                 Sign in to sync progress <ArrowUpRight size={16} />
@@ -1132,7 +1183,11 @@ export default function StudyApp({ user }: { user: User }) {
             ) : (
               <a
                 className="text-button"
-                href="/signout-with-chatgpt?return_to=%2F"
+                href="#signout"
+                onClick={(event) => {
+                  event.preventDefault();
+                  onSignOut();
+                }}
                 target="_top"
               >
                 Sign out

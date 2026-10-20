@@ -2202,3 +2202,197 @@ td small {
     white-space: nowrap;
   }
 }
+
+/* Account entry follows the notebook's calm visual language. */
+.auth-loading {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+}
+.account-dialog {
+  position: relative;
+  width: min(470px, calc(100vw - 30px));
+  max-height: calc(100dvh - 36px);
+  overflow: auto;
+  padding: 34px;
+  outline: none;
+}
+.account-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.auth-logo {
+  display: inline-flex;
+  padding: 12px;
+  background: var(--sage);
+  border-radius: 15px;
+  color: var(--green);
+  margin-bottom: 22px;
+}
+.account-dialog h2 {
+  font-size: 27px;
+  line-height: 1.2;
+  margin: 12px 0;
+}
+.auth-description {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #687566;
+  margin-bottom: 22px;
+}
+.google-signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 13px 16px;
+  background: white;
+  font-weight: 600;
+}
+.google-signin svg {
+  width: 20px;
+  height: 20px;
+}
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #85907d;
+  font-size: 11px;
+  margin: 22px 0;
+}
+.auth-divider:before,
+.auth-divider:after {
+  content: "";
+  height: 1px;
+  background: var(--border);
+  flex: 1;
+}
+.auth-form {
+  display: grid;
+  gap: 16px;
+}
+.auth-form label {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.auth-form input {
+  width: 100%;
+  border: 1px solid #d9e0d4;
+  border-radius: 8px;
+  padding: 12px;
+  background: white;
+  color: var(--ink);
+  font-size: 16px;
+}
+.auth-form small {
+  font-weight: 400;
+  color: #788571;
+}
+.auth-wide {
+  width: 100%;
+  justify-content: center;
+  margin: 5px 0;
+}
+.auth-switch {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 20px 0;
+  font-size: 11px;
+  color: var(--green);
+}
+.auth-switch button {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.auth-chatgpt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  line-height: 1.6;
+  border-top: 1px solid var(--border);
+  padding: 18px 0;
+}
+.auth-note {
+  display: flex;
+  gap: 9px;
+  font-size: 11px;
+  color: #788571;
+  line-height: 1.7;
+  margin: 14px 0;
+}
+.auth-error,
+.auth-message {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 12px 0;
+}
+.auth-error {
+  background: #fff1e9;
+  color: #8c482b;
+}
+.auth-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: var(--sage);
+  color: var(--green);
+}
+.auth-actions {
+  display: grid;
+  gap: 10px;
+}
+.account-banner {
+  position: relative;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: #f5e9cf;
+  font-size: 12px;
+}
+.account-banner button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: underline;
+}
+.account-banner + .app-shell .sidebar {
+  top: 42px;
+}
+@media (max-width: 650px) {
+  .account-dialog {
+    padding: 27px 22px;
+  }
+  .account-dialog h2 {
+    font-size: 25px;
+  }
+  .account-banner {
+    font-size: 11px;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .account-banner + .app-shell .sidebar {
+    top: auto;
+  }
+  .auth-switch {
+    font-size: 12px;
+  }
+}

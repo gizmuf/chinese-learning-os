@@ -25,7 +25,7 @@ node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1
 npm run dev
 ```
 
-Apply a migration only once per local database. The development server has the starter's loopback-only mock sign-in. Sites supplies real authenticated identity after deployment; never add a client-provided user ID as authorization.
+Apply a migration only once per local database. The development server has the starter's loopback-only mock sign-in. Production supports Google and verified email/password through the isolated Firebase project `chinese-os-gizmuf-auth`, plus existing ChatGPT notebooks. Configure `FIREBASE_WEB_CONFIG` in Sites runtime variables (or ignored `.dev.vars` locally), with the web app's apiKey, authDomain, projectId and appId as JSON. The server verifies signed Firebase tokens; never trust a client-provided user ID as authorization. See `docs/PRODUCT.md` for account boundaries and deployment details.
 
 ## Deployment and source
 

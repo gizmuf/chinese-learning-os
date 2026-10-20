@@ -1,4 +1,4 @@
-import { getChatGPTUser } from "../../chatgpt-auth";
+import { getRequestUser } from "../../request-user";
 import { getDb } from "../../../db";
 import { learningEvents } from "../../../db/schema";
 import { eq } from "drizzle-orm";
@@ -7,7 +7,7 @@ import { eventSchema } from "../../event-schema";
 export const dynamic = "force-dynamic";
 const headers = { "Cache-Control": "no-store" };
 export async function GET() {
-  const u = await getChatGPTUser();
+  const u = await getRequestUser();
   if (!u)
     return Response.json(
       { error: "Please sign in." },
@@ -24,7 +24,7 @@ export async function GET() {
   );
 }
 export async function POST(request: Request) {
-  const u = await getChatGPTUser();
+  const u = await getRequestUser();
   if (!u)
     return Response.json(
       { error: "Please sign in." },

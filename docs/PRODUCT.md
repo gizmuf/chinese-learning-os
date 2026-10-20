@@ -22,7 +22,7 @@ A calm daily Chinese practice space for beginner classmates. Works in a browser 
 
 ## Accounts, saving and privacy
 
-A guest notebook belongs to the current browser. Clearing browser data can remove it. Sign in with ChatGPT for an account notebook synchronized through Sites D1. Guest and signed-in notebooks are separate; signing in does not silently import another notebook.
+A guest notebook belongs to the current browser. Clearing browser data can remove it. Sign in with Google or email/password for an account notebook synchronized through Sites D1. No ChatGPT account is required. Email accounts must verify their address before syncing. The sign-in dialog includes registration, resend verification, and password reset. Guest and signed-in notebooks are separate; signing in does not silently import another notebook.
 
 Each learning event has a unique ID. The server derives the owner from authenticated identity, never from a client-submitted user ID. Repeated uploads are deduplicated per user. Review state is replayed deterministically from event time and ID, preserving both devices' history. There is no teacher dashboard or access to classmates' progress.
 
@@ -37,3 +37,11 @@ Real Apple Pencil pressure, palm rejection, device speakers and installed browse
 ## Adding a lesson
 
 Edit `app/content.ts`: add a lesson and vocabulary rows with stable unique IDs, full words, pinyin with tone marks, an English meaning, a Chinese example, example pinyin and its translation. Never repurpose an existing ID: historical reviews depend on it. Generate bundled audio for the new text and run `npm run prebuild` to add character data. Run the documented checks and deploy an updated version of the same Site.
+
+## Account identity and deployment
+
+Firebase Authentication is isolated in `chinese-os-gizmuf-auth` (Chinese OS Auth); it stores credentials, not learning records. Google and Email/Password are enabled. Passwords need at least 8 characters; email enumeration protection is enabled. Google support contact: gizmuf@gmail.com. Only verified Firebase ID tokens issued by this exact project are accepted. The server verifies RS256 signatures, issuer, audience, expiry, subject, and verification status. Learning records remain in the existing Sites D1 database under `firebase:<uid>`.
+
+The existing ChatGPT sign-in remains available for existing notebooks. ChatGPT and Firebase identities are not merged by email. Use the original sign-in method to see an old notebook. Guest work is also separate. The client remounts its notebook on identity changes and binds every sync request to the expected owner; the server rejects an owner mismatch. Clearing local data does not remove synchronized account records.
+
+Production uses a Sites runtime variable `FIREBASE_WEB_CONFIG`, containing the Firebase web client fields apiKey, authDomain, projectId, and appId. These are public client configuration, served by `/api/auth/config`; they grant no admin access. Never store admin credentials in the browser or repository. The Firebase authorized domains include the production Sites hostname and local development loopback. For development use an ignored `.dev.vars` file, not a committed config.

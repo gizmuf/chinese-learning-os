@@ -4,10 +4,11 @@ from urllib.request import Request,urlopen
 from urllib.error import HTTPError
 BASE='http://127.0.0.1:8788'
 checks=[]
-def call(method='GET',user=None,body=None,origin=BASE):
+def call(method='GET',user=None,body=None,origin=BASE,extra=None):
     headers={}
     if user:
         headers.update({'oai-authenticated-user-id':'qa-'+user,'oai-authenticated-user-email':user+'@example.test'})
+    headers.update(extra or {})
     if method=='POST':headers.update({'Origin':origin,'Content-Type':'application/json'})
     data=(body if isinstance(body,str) else json.dumps(body)).encode() if body is not None else None
     try:
@@ -33,5 +34,8 @@ assert call('POST',a,{'events':[event]},origin='https://other.example')[0]==403;
 assert call('POST',a,{'events':[{**event,'itemId':'unknown'}]})[0]==400;checks.append('unknown learning item rejected')
 assert call('POST',a,'{bad')[0]==400;checks.append('malformed JSON rejected')
 assert call('POST',a,'x'*1000001)[0]==413;checks.append('oversized upload rejected')
+assert call(user=a,extra={'X-Notebook-Owner':'qa-'+b})[0]==401;checks.append('switched notebook owner rejected')
+assert call(user=a,extra={'Authorization':'Bearer invalid'})[0]==401;checks.append('invalid bearer cannot fall back to ChatGPT')
+assert call(user=a,extra={'X-Notebook-Owner':'qa-'+a})[0]==200;checks.append('matching notebook owner accepted')
 for check in checks:print('PASS',check)
 print(f'{len(checks)} API integration checks passed')
