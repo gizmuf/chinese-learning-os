@@ -1,0 +1,322 @@
+[
+  {
+    "lesson": "first",
+    "id": "hello",
+    "hanzi": "你好",
+    "pinyin": "nǐ hǎo",
+    "english": "hello",
+    "sentence": "你好，很高兴认识你。",
+    "sentencePinyin": "Nǐ hǎo, hěn gāoxìng rènshi nǐ.",
+    "translation": "Hello, nice to meet you."
+  },
+  {
+    "lesson": "first",
+    "id": "me",
+    "hanzi": "我",
+    "pinyin": "wǒ",
+    "english": "I / me",
+    "sentence": "我是学生。",
+    "sentencePinyin": "Wǒ shì xuésheng.",
+    "translation": "I am a student."
+  },
+  {
+    "lesson": "first",
+    "id": "you",
+    "hanzi": "你",
+    "pinyin": "nǐ",
+    "english": "you",
+    "sentence": "你叫什么名字？",
+    "sentencePinyin": "Nǐ jiào shénme míngzi?",
+    "translation": "What is your name?"
+  },
+  {
+    "lesson": "first",
+    "id": "teacher",
+    "hanzi": "老师",
+    "pinyin": "lǎoshī",
+    "english": "teacher",
+    "sentence": "老师，您好。",
+    "sentencePinyin": "Lǎoshī, nín hǎo.",
+    "translation": "Hello, teacher."
+  },
+  {
+    "lesson": "first",
+    "id": "student",
+    "hanzi": "学生",
+    "pinyin": "xuésheng",
+    "english": "student",
+    "sentence": "我是学生。",
+    "sentencePinyin": "Wǒ shì xuésheng.",
+    "translation": "I am a student."
+  },
+  {
+    "lesson": "first",
+    "id": "thanks",
+    "hanzi": "谢谢",
+    "pinyin": "xièxie",
+    "english": "thank you",
+    "sentence": "谢谢你。",
+    "sentencePinyin": "Xièxie nǐ.",
+    "translation": "Thank you."
+  },
+  {
+    "lesson": "first",
+    "id": "goodbye",
+    "hanzi": "再见",
+    "pinyin": "zàijiàn",
+    "english": "goodbye",
+    "sentence": "老师，再见。",
+    "sentencePinyin": "Lǎoshī, zàijiàn.",
+    "translation": "Goodbye, teacher."
+  },
+  {
+    "lesson": "first",
+    "id": "china",
+    "hanzi": "中国",
+    "pinyin": "Zhōngguó",
+    "english": "China",
+    "sentence": "我在中国。",
+    "sentencePinyin": "Wǒ zài Zhōngguó.",
+    "translation": "I am in China."
+  },
+  {
+    "lesson": "daily",
+    "id": "yes",
+    "hanzi": "是",
+    "pinyin": "shì",
+    "english": "to be / yes",
+    "sentence": "我是学生。",
+    "sentencePinyin": "Wǒ shì xuésheng.",
+    "translation": "I am a student."
+  },
+  {
+    "lesson": "daily",
+    "id": "no",
+    "hanzi": "不",
+    "pinyin": "bù",
+    "english": "not / no",
+    "sentence": "我不是老师。",
+    "sentencePinyin": "Wǒ bú shì lǎoshī.",
+    "translation": "I am not a teacher."
+  },
+  {
+    "lesson": "daily",
+    "id": "have",
+    "hanzi": "有",
+    "pinyin": "yǒu",
+    "english": "to have / there is",
+    "sentence": "你有时间吗？",
+    "sentencePinyin": "Nǐ yǒu shíjiān ma?",
+    "translation": "Do you have time?"
+  },
+  {
+    "lesson": "daily",
+    "id": "want",
+    "hanzi": "要",
+    "pinyin": "yào",
+    "english": "to want",
+    "sentence": "我要这个。",
+    "sentencePinyin": "Wǒ yào zhège.",
+    "translation": "I want this one."
+  },
+  {
+    "lesson": "daily",
+    "id": "this",
+    "hanzi": "这个",
+    "pinyin": "zhège",
+    "english": "this one",
+    "sentence": "这个多少钱？",
+    "sentencePinyin": "Zhège duōshao qián?",
+    "translation": "How much is this?"
+  },
+  {
+    "lesson": "daily",
+    "id": "howmuch",
+    "hanzi": "多少",
+    "pinyin": "duōshao",
+    "english": "how much / how many",
+    "sentence": "这个多少钱？",
+    "sentencePinyin": "Zhège duōshao qián?",
+    "translation": "How much is this?"
+  },
+  {
+    "lesson": "daily",
+    "id": "can",
+    "hanzi": "可以",
+    "pinyin": "kěyǐ",
+    "english": "can / may",
+    "sentence": "可以吗？",
+    "sentencePinyin": "Kěyǐ ma?",
+    "translation": "Is that okay?"
+  },
+  {
+    "lesson": "daily",
+    "id": "notbad",
+    "hanzi": "不错",
+    "pinyin": "búcuò",
+    "english": "not bad / pretty good",
+    "sentence": "这个不错。",
+    "sentencePinyin": "Zhège búcuò.",
+    "translation": "This one is pretty good."
+  },
+  {
+    "lesson": "food",
+    "id": "water",
+    "hanzi": "水",
+    "pinyin": "shuǐ",
+    "english": "water",
+    "sentence": "我要水。",
+    "sentencePinyin": "Wǒ yào shuǐ.",
+    "translation": "I would like water."
+  },
+  {
+    "lesson": "food",
+    "id": "tea",
+    "hanzi": "茶",
+    "pinyin": "chá",
+    "english": "tea",
+    "sentence": "我要一杯茶。",
+    "sentencePinyin": "Wǒ yào yì bēi chá.",
+    "translation": "I would like a cup of tea."
+  },
+  {
+    "lesson": "food",
+    "id": "eat",
+    "hanzi": "吃",
+    "pinyin": "chī",
+    "english": "to eat",
+    "sentence": "你吃什么？",
+    "sentencePinyin": "Nǐ chī shénme?",
+    "translation": "What are you eating?"
+  },
+  {
+    "lesson": "food",
+    "id": "sweet",
+    "hanzi": "甜",
+    "pinyin": "tián",
+    "english": "sweet",
+    "sentence": "这个甜吗？",
+    "sentencePinyin": "Zhège tián ma?",
+    "translation": "Is this sweet?"
+  },
+  {
+    "lesson": "food",
+    "id": "little",
+    "hanzi": "一点",
+    "pinyin": "yìdiǎn",
+    "english": "a little",
+    "sentence": "我要一点。",
+    "sentencePinyin": "Wǒ yào yìdiǎn.",
+    "translation": "I would like a little."
+  },
+  {
+    "lesson": "food",
+    "id": "vegetarian",
+    "hanzi": "素食",
+    "pinyin": "sùshí",
+    "english": "vegetarian food",
+    "sentence": "有素食吗？",
+    "sentencePinyin": "Yǒu sùshí ma?",
+    "translation": "Do you have vegetarian food?"
+  },
+  {
+    "lesson": "food",
+    "id": "meat",
+    "hanzi": "肉",
+    "pinyin": "ròu",
+    "english": "meat",
+    "sentence": "我不吃肉。",
+    "sentencePinyin": "Wǒ bù chī ròu.",
+    "translation": "I do not eat meat."
+  },
+  {
+    "lesson": "food",
+    "id": "delicious",
+    "hanzi": "好吃",
+    "pinyin": "hǎochī",
+    "english": "delicious",
+    "sentence": "这个很好吃。",
+    "sentencePinyin": "Zhège hěn hǎochī.",
+    "translation": "This is delicious."
+  },
+  {
+    "lesson": "time",
+    "id": "today",
+    "hanzi": "今天",
+    "pinyin": "jīntiān",
+    "english": "today",
+    "sentence": "今天我有课。",
+    "sentencePinyin": "Jīntiān wǒ yǒu kè.",
+    "translation": "I have class today."
+  },
+  {
+    "lesson": "time",
+    "id": "tomorrow",
+    "hanzi": "明天",
+    "pinyin": "míngtiān",
+    "english": "tomorrow",
+    "sentence": "明天见。",
+    "sentencePinyin": "Míngtiān jiàn.",
+    "translation": "See you tomorrow."
+  },
+  {
+    "lesson": "time",
+    "id": "yesterday",
+    "hanzi": "昨天",
+    "pinyin": "zuótiān",
+    "english": "yesterday",
+    "sentence": "昨天我有课。",
+    "sentencePinyin": "Zuótiān wǒ yǒu kè.",
+    "translation": "I had class yesterday."
+  },
+  {
+    "lesson": "time",
+    "id": "now",
+    "hanzi": "现在",
+    "pinyin": "xiànzài",
+    "english": "now",
+    "sentence": "现在可以吗？",
+    "sentencePinyin": "Xiànzài kěyǐ ma?",
+    "translation": "Is now okay?"
+  },
+  {
+    "lesson": "time",
+    "id": "later",
+    "hanzi": "以后",
+    "pinyin": "yǐhòu",
+    "english": "later / afterwards",
+    "sentence": "我以后再来。",
+    "sentencePinyin": "Wǒ yǐhòu zài lái.",
+    "translation": "I will come back later."
+  },
+  {
+    "lesson": "time",
+    "id": "week",
+    "hanzi": "下周",
+    "pinyin": "xià zhōu",
+    "english": "next week",
+    "sentence": "下周见。",
+    "sentencePinyin": "Xià zhōu jiàn.",
+    "translation": "See you next week."
+  },
+  {
+    "lesson": "time",
+    "id": "time",
+    "hanzi": "时间",
+    "pinyin": "shíjiān",
+    "english": "time",
+    "sentence": "你有时间吗？",
+    "sentencePinyin": "Nǐ yǒu shíjiān ma?",
+    "translation": "Do you have time?"
+  },
+  {
+    "lesson": "time",
+    "id": "start",
+    "hanzi": "开始",
+    "pinyin": "kāishǐ",
+    "english": "to start",
+    "sentence": "我们开始吧。",
+    "sentencePinyin": "Wǒmen kāishǐ ba.",
+    "translation": "Let us start."
+  }
+]

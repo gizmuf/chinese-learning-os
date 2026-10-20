@@ -2396,3 +2396,5 @@ td small {
     font-size: 12px;
   }
 }
+
+.library-count { color: var(--muted, #63736b); font-size: .85rem; margin: -8px 0 20px; }

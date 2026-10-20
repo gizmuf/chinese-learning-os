@@ -6,6 +6,174 @@
   "edgeTtsVersion": "7.3.1",
   "recordings": [
     {
+      "itemId": "bonus-01",
+      "kind": "sentence",
+      "text": "不好意思，请再说一遍。",
+      "file": "bonus-01-sentence.mp3",
+      "sha256": "3cef54ae77d3886d7a54d3a98c182f46e5c325e322a45353e42abfeec5d25622"
+    },
+    {
+      "itemId": "bonus-01",
+      "kind": "word",
+      "text": "不好意思",
+      "file": "bonus-01-word.mp3",
+      "sha256": "fcc890febb87ca6fc2fd0c6e9337f0cf9dbb89449a5c204406df967562fe9455"
+    },
+    {
+      "itemId": "bonus-02",
+      "kind": "sentence",
+      "text": "请问，厕所在哪里？",
+      "file": "bonus-02-sentence.mp3",
+      "sha256": "90c3a447c00a5e18ddc21dbfcf88580b74a849ba701bb9687326b013fe9b277a"
+    },
+    {
+      "itemId": "bonus-02",
+      "kind": "word",
+      "text": "厕所",
+      "file": "bonus-02-word.mp3",
+      "sha256": "6584ca0954681785b9c46d076cf0fd3a52ef5d988670e79e28a9cc02e52ccde5"
+    },
+    {
+      "itemId": "bonus-03",
+      "kind": "sentence",
+      "text": "我坐地铁去学校。",
+      "file": "bonus-03-sentence.mp3",
+      "sha256": "8b99f6d8ce48595dbf5ec7f1700e4eea8d3dd513d33a68ca3679f4bfe655c6ff"
+    },
+    {
+      "itemId": "bonus-03",
+      "kind": "word",
+      "text": "地铁",
+      "file": "bonus-03-word.mp3",
+      "sha256": "9530ea89f16818adf94a289398f46338ec67a46a6c1658e5fd0c14effb6f4adf"
+    },
+    {
+      "itemId": "bonus-04",
+      "kind": "sentence",
+      "text": "我想喝一杯咖啡。",
+      "file": "bonus-04-sentence.mp3",
+      "sha256": "cad527cbd84a3f1ceda26fc64be7afc3a83ef78a56d025af441061a31f6d1a0d"
+    },
+    {
+      "itemId": "bonus-04",
+      "kind": "word",
+      "text": "咖啡",
+      "file": "bonus-04-word.mp3",
+      "sha256": "14649056ac5be51c856a707864b14ea53e894fb581c82848b541523e0d95f951"
+    },
+    {
+      "itemId": "bonus-05",
+      "kind": "sentence",
+      "text": "谢谢您，老师。",
+      "file": "bonus-05-sentence.mp3",
+      "sha256": "a7ebe33904ca414dafa13c9b6cad331bfe61ec3cf395f7fade23915885004dac"
+    },
+    {
+      "itemId": "bonus-05",
+      "kind": "word",
+      "text": "谢谢您",
+      "file": "bonus-05-word.mp3",
+      "sha256": "8ea3bd979bc575cf811e8be0b4785f3959fec94447ce33a4c6cc9854840b3ffa"
+    },
+    {
+      "itemId": "bonus-06",
+      "kind": "sentence",
+      "text": "谢谢你的帮助。",
+      "file": "bonus-06-sentence.mp3",
+      "sha256": "2fe4b91cb77f6bb8c35518d4d555ad343ab13d14609566ad7abd22b3eabd5b2a"
+    },
+    {
+      "itemId": "bonus-06",
+      "kind": "word",
+      "text": "帮助",
+      "file": "bonus-06-word.mp3",
+      "sha256": "b1ddaacb23395a3ffafea244df3ed08c89452ba20c90dcabea21db592192b9af"
+    },
+    {
+      "itemId": "bonus-07",
+      "kind": "sentence",
+      "text": "请说慢一点儿。",
+      "file": "bonus-07-sentence.mp3",
+      "sha256": "b39042adfd041ac8a88c004bafdd4c5142729496449e4623895ea9c49709b172"
+    },
+    {
+      "itemId": "bonus-07",
+      "kind": "word",
+      "text": "慢",
+      "file": "bonus-07-word.mp3",
+      "sha256": "b9acafddd509f8509bd54617780de8126b0d017d856625192cc005da9225fab2"
+    },
+    {
+      "itemId": "bonus-08",
+      "kind": "sentence",
+      "text": "这辆车很快。",
+      "file": "bonus-08-sentence.mp3",
+      "sha256": "4a352e99ccd589b6200f41915a76b8c616c7a72bf6f7f43514544e66ec3dd0fe"
+    },
+    {
+      "itemId": "bonus-08",
+      "kind": "word",
+      "text": "快",
+      "file": "bonus-08-word.mp3",
+      "sha256": "bb5c55c2535dd71191bd87a3533ccc69265276bdb316835eb057ff0ad109148b"
+    },
+    {
+      "itemId": "bonus-09",
+      "kind": "sentence",
+      "text": "我听懂了。",
+      "file": "bonus-09-sentence.mp3",
+      "sha256": "4c1f2a0657289b2ed3e6f2a98f4086d5864ce15e5e72597dec05e66073d2e646"
+    },
+    {
+      "itemId": "bonus-09",
+      "kind": "word",
+      "text": "听懂",
+      "file": "bonus-09-word.mp3",
+      "sha256": "c9af7f70af3fd47ee6575b0b15a1d0cc730fe79ffdf2286f4c1c30df091b6490"
+    },
+    {
+      "itemId": "bonus-10",
+      "kind": "sentence",
+      "text": "我明白你的意思。",
+      "file": "bonus-10-sentence.mp3",
+      "sha256": "ea8c166fd7ddf21a7f9192e2f46c7d944df47bd619caf6fa54fd5cfbe97733f4"
+    },
+    {
+      "itemId": "bonus-10",
+      "kind": "word",
+      "text": "明白",
+      "file": "bonus-10-word.mp3",
+      "sha256": "fed072ae13e4e2d04bb1b4de98c779e009a288a5492a8d774fe65da8ca9cdca7"
+    },
+    {
+      "itemId": "bonus-11",
+      "kind": "sentence",
+      "text": "书店在左边。",
+      "file": "bonus-11-sentence.mp3",
+      "sha256": "ce01a9e451743b6cdb33cccdbd14d059f7016f68fa56c2fb435264b0677948b9"
+    },
+    {
+      "itemId": "bonus-11",
+      "kind": "word",
+      "text": "左边",
+      "file": "bonus-11-word.mp3",
+      "sha256": "bde3086ad0f2761782861b3a105295027a4c7d768e8f16e12ebf2c7793762791"
+    },
+    {
+      "itemId": "bonus-12",
+      "kind": "sentence",
+      "text": "医院在右边。",
+      "file": "bonus-12-sentence.mp3",
+      "sha256": "b46bc8b499c4f5aab1aab993cfd0b19ca0e91525d73bd9c526c8374ec447ee6c"
+    },
+    {
+      "itemId": "bonus-12",
+      "kind": "word",
+      "text": "右边",
+      "file": "bonus-12-word.mp3",
+      "sha256": "5bc8cb9567a514497bacdd42cd2c1897b4047a875cfca00268d6cf48bf00b351"
+    },
+    {
       "itemId": "can",
       "kind": "sentence",
       "text": "可以吗？",
@@ -116,6 +284,3872 @@
       "text": "多少",
       "file": "howmuch-word.mp3",
       "sha256": "76a77c9f23abc07d45bc5741ab38b434272d2baab2f71740f6cb17fff59dfdf6"
+    },
+    {
+      "itemId": "hsk1-001",
+      "kind": "sentence",
+      "text": "我爱我的家人。",
+      "file": "hsk1-001-sentence.mp3",
+      "sha256": "81262d83476aa53e4bdfc5390cd16c4b20551618906622f1a88e9fd785ab1437"
+    },
+    {
+      "itemId": "hsk1-001",
+      "kind": "word",
+      "text": "爱",
+      "file": "hsk1-001-word.mp3",
+      "sha256": "199d9734d5a7cebdc305629aff92c8044dd244f17f34dd52bd855b01b45906dc"
+    },
+    {
+      "itemId": "hsk1-002",
+      "kind": "sentence",
+      "text": "我有八本书。",
+      "file": "hsk1-002-sentence.mp3",
+      "sha256": "e30fde85f852032e7646051db12e07de5f6de81c943ce5a4a4a6f5c7b2f20e1d"
+    },
+    {
+      "itemId": "hsk1-002",
+      "kind": "word",
+      "text": "八",
+      "file": "hsk1-002-word.mp3",
+      "sha256": "a3e30e7decbf05b1c5d7460d2b8b744f9aa7780634b5ea8bbd56778097cd340d"
+    },
+    {
+      "itemId": "hsk1-003",
+      "kind": "sentence",
+      "text": "我爸爸是医生。",
+      "file": "hsk1-003-sentence.mp3",
+      "sha256": "ceb80ccab2e7123174824bd477996e6708a8a5cf4245b3aa72520f30b75a14ef"
+    },
+    {
+      "itemId": "hsk1-003",
+      "kind": "word",
+      "text": "爸爸",
+      "file": "hsk1-003-word.mp3",
+      "sha256": "d4ee959436bb040fc2b78cebf9a4d429e2e9a7995d6ea1b83ddafd90505f57ee"
+    },
+    {
+      "itemId": "hsk1-004",
+      "kind": "sentence",
+      "text": "我们去吃饭吧。",
+      "file": "hsk1-004-sentence.mp3",
+      "sha256": "f4b01e1cf5c88067186e0fa98d6f7f790b25760e24f00c76333b5ca05c77ca6e"
+    },
+    {
+      "itemId": "hsk1-004",
+      "kind": "word",
+      "text": "吧",
+      "file": "hsk1-004-word.mp3",
+      "sha256": "1243c17654d973236ea30b66e6b7cb86ea43be0e686dd82a7e8e713cabaacae5"
+    },
+    {
+      "itemId": "hsk1-005",
+      "kind": "sentence",
+      "text": "我白天上课。",
+      "file": "hsk1-005-sentence.mp3",
+      "sha256": "010c95a3748ad8436831e20f8e7b5dfeb5759efae49faedc337cc9045befd41a"
+    },
+    {
+      "itemId": "hsk1-005",
+      "kind": "word",
+      "text": "白天",
+      "file": "hsk1-005-word.mp3",
+      "sha256": "27040eef90483289b35c4842ac12078859003364e64067654e381faac5020608"
+    },
+    {
+      "itemId": "hsk1-006",
+      "kind": "sentence",
+      "text": "这件衣服一百元。",
+      "file": "hsk1-006-sentence.mp3",
+      "sha256": "043c11cce22330f120a3ac076a14522cec595af76270036d1683195b39f2fb40"
+    },
+    {
+      "itemId": "hsk1-006",
+      "kind": "word",
+      "text": "百",
+      "file": "hsk1-006-word.mp3",
+      "sha256": "fbe53ec0a2788eb14cc44b77f1f978d5c288633ed7fe9f3b9ced9fc522057662"
+    },
+    {
+      "itemId": "hsk1-007",
+      "kind": "sentence",
+      "text": "现在三点半。",
+      "file": "hsk1-007-sentence.mp3",
+      "sha256": "14f86269fb31609e3b6c1eb77c3c857ca98131532fb5c31be24ce37c971ce354"
+    },
+    {
+      "itemId": "hsk1-007",
+      "kind": "word",
+      "text": "半",
+      "file": "hsk1-007-word.mp3",
+      "sha256": "4ac52e74eabfa3a4f232d72b01235bd73f75569439220ef22ffb5f28ff5a9f9d"
+    },
+    {
+      "itemId": "hsk1-008",
+      "kind": "sentence",
+      "text": "我早饭吃包子。",
+      "file": "hsk1-008-sentence.mp3",
+      "sha256": "423a82c5d1be29141f22de9d68b0df095335c2f9fcbf7f6c303687a9933029bc"
+    },
+    {
+      "itemId": "hsk1-008",
+      "kind": "word",
+      "text": "包子",
+      "file": "hsk1-008-word.mp3",
+      "sha256": "015d3955fbbc1dfd62c57ddfdc03a53591c7489279d3a47c931fcc0e01054827"
+    },
+    {
+      "itemId": "hsk1-009",
+      "kind": "sentence",
+      "text": "这是我的杯子。",
+      "file": "hsk1-009-sentence.mp3",
+      "sha256": "a9e86c878c7e8a60424d016f5ecc91e5b03f19220e2c0a3598c9f7aef78ef430"
+    },
+    {
+      "itemId": "hsk1-009",
+      "kind": "word",
+      "text": "杯子",
+      "file": "hsk1-009-word.mp3",
+      "sha256": "2da7037b02b7207dad0778a2932b1d42853e76923486a6571ba633ebdc0d0a61"
+    },
+    {
+      "itemId": "hsk1-010",
+      "kind": "sentence",
+      "text": "我买了一本书。",
+      "file": "hsk1-010-sentence.mp3",
+      "sha256": "ba2384570831dcb972799f1bc2bc3dbb4ce04ae823c2bc080171a04fb3200b7f"
+    },
+    {
+      "itemId": "hsk1-010",
+      "kind": "word",
+      "text": "本",
+      "file": "hsk1-010-word.mp3",
+      "sha256": "f9cb4730f1158bfdaa161d7fca3dd9575347857d9c24d7eda22e1f39b756229a"
+    },
+    {
+      "itemId": "hsk1-011",
+      "kind": "sentence",
+      "text": "请坐在我这边。",
+      "file": "hsk1-011-sentence.mp3",
+      "sha256": "6925fee677ed35d790a34f3d9fd04dbaa9cbb951595dceba676ddfd5f647a006"
+    },
+    {
+      "itemId": "hsk1-011",
+      "kind": "word",
+      "text": "边",
+      "file": "hsk1-011-word.mp3",
+      "sha256": "61c0b7e1dfd1f9b7c56f205922fa7f63ec33e0762323b04f38670eefa9a4a7d5"
+    },
+    {
+      "itemId": "hsk1-012",
+      "kind": "sentence",
+      "text": "你的病好了吗？",
+      "file": "hsk1-012-sentence.mp3",
+      "sha256": "f9a41a5ef22c4ed079e2f24a1153e77c1b06a29754abcced4130090e56cbf3cc"
+    },
+    {
+      "itemId": "hsk1-012",
+      "kind": "word",
+      "text": "病",
+      "file": "hsk1-012-word.mp3",
+      "sha256": "b0adfe888964e7b6b721b57e5094d034fa3f9d8732284359c02279f3b59218d7"
+    },
+    {
+      "itemId": "hsk1-014",
+      "kind": "sentence",
+      "text": "不客气，这是你的书。",
+      "file": "hsk1-014-sentence.mp3",
+      "sha256": "d546c225d91032f7aa3f2a4641be2a142fec81a5c1ef3a7d4218155dbfeb1289"
+    },
+    {
+      "itemId": "hsk1-014",
+      "kind": "word",
+      "text": "不客气",
+      "file": "hsk1-014-word.mp3",
+      "sha256": "8904ba043444bcdc2602665096bf1ce625c409dafd83e995320d90e6edf0e4f3"
+    },
+    {
+      "itemId": "hsk1-015",
+      "kind": "sentence",
+      "text": "不要在这儿说话。",
+      "file": "hsk1-015-sentence.mp3",
+      "sha256": "2dcbf65c6dd432637c1d9c054f749cc70b9b3ccd8924ddf2e1e6b2bc2d61a73d"
+    },
+    {
+      "itemId": "hsk1-015",
+      "kind": "word",
+      "text": "不要",
+      "file": "hsk1-015-word.mp3",
+      "sha256": "894dd9555d49f91360c0e4043aad54a33ed998311fa0aa85ec48d33a09d7b49c"
+    },
+    {
+      "itemId": "hsk1-016",
+      "kind": "sentence",
+      "text": "这个菜很好吃。",
+      "file": "hsk1-016-sentence.mp3",
+      "sha256": "aee7abc9f397c94e4c537a184da169594c3d0e2e95f4aaeb1c98da3649a31f34"
+    },
+    {
+      "itemId": "hsk1-016",
+      "kind": "word",
+      "text": "菜",
+      "file": "hsk1-016-word.mp3",
+      "sha256": "1bc0d66451690cbfef98ca3ac67851d5e450f390290370946f431fde6789f318"
+    },
+    {
+      "itemId": "hsk1-018",
+      "kind": "sentence",
+      "text": "你会唱这首歌吗？",
+      "file": "hsk1-018-sentence.mp3",
+      "sha256": "b5bebd70e6bc6beca230daf40811947641ae601f7f4cfb7250f5c29cc7f46f8b"
+    },
+    {
+      "itemId": "hsk1-018",
+      "kind": "word",
+      "text": "唱",
+      "file": "hsk1-018-word.mp3",
+      "sha256": "44b7e4e847b52e88076c5d0aa99c2b65cdc75562461de05e5b913fb582ae60e0"
+    },
+    {
+      "itemId": "hsk1-019",
+      "kind": "sentence",
+      "text": "我去超市买水果。",
+      "file": "hsk1-019-sentence.mp3",
+      "sha256": "897fb1b5b4b682133cc2130cfa28d3947b005232e8c01e48d306a14e8c5e3594"
+    },
+    {
+      "itemId": "hsk1-019",
+      "kind": "word",
+      "text": "超市",
+      "file": "hsk1-019-word.mp3",
+      "sha256": "46fbb8291664d5631508f0a8a7f978fb2383c461b93915fed21be46c7ca820b7"
+    },
+    {
+      "itemId": "hsk1-020",
+      "kind": "sentence",
+      "text": "我的车在外边。",
+      "file": "hsk1-020-sentence.mp3",
+      "sha256": "94c66919ac6940d8fb352870c993ce3d50066dc89b3732ac5604600a4b0ae3b6"
+    },
+    {
+      "itemId": "hsk1-020",
+      "kind": "word",
+      "text": "车",
+      "file": "hsk1-020-word.mp3",
+      "sha256": "a3e762feaafcd75a595d62f74c2db5801f554780053a3a0eacf9bb4c1ca5530c"
+    },
+    {
+      "itemId": "hsk1-022",
+      "kind": "sentence",
+      "text": "我们坐出租车去学校。",
+      "file": "hsk1-022-sentence.mp3",
+      "sha256": "652e31bc3f905d3576449550149aa40287ddbc9679e9bfab9681516aa95c5f17"
+    },
+    {
+      "itemId": "hsk1-022",
+      "kind": "word",
+      "text": "出租车",
+      "file": "hsk1-022-word.mp3",
+      "sha256": "d44bec823b8695e6b165f9e9990c4ab868189638448ec6ed30fafdabfce1e76c"
+    },
+    {
+      "itemId": "hsk1-023",
+      "kind": "sentence",
+      "text": "今天冷，多穿一点儿。",
+      "file": "hsk1-023-sentence.mp3",
+      "sha256": "46e7d1b17c9f4ef70282ae51fe5811722857ebd923e7ce2e0d2bba82c43b40ff"
+    },
+    {
+      "itemId": "hsk1-023",
+      "kind": "word",
+      "text": "穿",
+      "file": "hsk1-023-word.mp3",
+      "sha256": "325aba8f4c9eab0754410a8a84d4bac68710d425fdb573267734d51a8fceb138"
+    },
+    {
+      "itemId": "hsk1-024",
+      "kind": "sentence",
+      "text": "我给妈妈打电话。",
+      "file": "hsk1-024-sentence.mp3",
+      "sha256": "3ff9c13cf25d97f2bad8126e1b3ee8819a811e0726eb149ff29d40050d0bb410"
+    },
+    {
+      "itemId": "hsk1-024",
+      "kind": "word",
+      "text": "打电话",
+      "file": "hsk1-024-word.mp3",
+      "sha256": "9ea61131f0c17f61ad6809828918c6add38aa8bcfe6e15d19b11c98f0ec1e6dd"
+    },
+    {
+      "itemId": "hsk1-025",
+      "kind": "sentence",
+      "text": "这个房间很大。",
+      "file": "hsk1-025-sentence.mp3",
+      "sha256": "9a79a78e4dd9c93af559e1cac90f819f6272a98e55b1e6ce247993b443ee7554"
+    },
+    {
+      "itemId": "hsk1-025",
+      "kind": "word",
+      "text": "大",
+      "file": "hsk1-025-word.mp3",
+      "sha256": "89fbe2d5991b5b908e985a4a4814e2e6c6c673b741806f896fc2b8518f1c5747"
+    },
+    {
+      "itemId": "hsk1-026",
+      "kind": "sentence",
+      "text": "大家好，我是新同学。",
+      "file": "hsk1-026-sentence.mp3",
+      "sha256": "3a0a8a526a5f614332b5ad3577c0dd42eb9acf504967c1f1dba726e6f6df8001"
+    },
+    {
+      "itemId": "hsk1-026",
+      "kind": "word",
+      "text": "大家",
+      "file": "hsk1-026-word.mp3",
+      "sha256": "e63c43ab24fcea2e621a91d82ef8c7d45a80a50b438c0ca11fa1a30694d373d9"
+    },
+    {
+      "itemId": "hsk1-027",
+      "kind": "sentence",
+      "text": "我在大学学习中文。",
+      "file": "hsk1-027-sentence.mp3",
+      "sha256": "83d1b2ef914f3fc517f8fde5ab4dc433623d0cedb7443938e1b5fde1205b252c"
+    },
+    {
+      "itemId": "hsk1-027",
+      "kind": "word",
+      "text": "大学",
+      "file": "hsk1-027-word.mp3",
+      "sha256": "c171a5a2301a961290d58cdb3f2841eb3bce7d58fe1c7b59cb378428ba5560b1"
+    },
+    {
+      "itemId": "hsk1-028",
+      "kind": "sentence",
+      "text": "我哥哥是大学生。",
+      "file": "hsk1-028-sentence.mp3",
+      "sha256": "61819dab91948e4fd700e7a6200d3667bb77a416ba4b8e295d11ce03bb457a03"
+    },
+    {
+      "itemId": "hsk1-028",
+      "kind": "word",
+      "text": "大学生",
+      "file": "hsk1-028-word.mp3",
+      "sha256": "a403b7961a0e70c412fd02a97e4347e0a5d9802f37f55e7d7f7c435ec44a78df"
+    },
+    {
+      "itemId": "hsk1-029",
+      "kind": "sentence",
+      "text": "我到学校了。",
+      "file": "hsk1-029-sentence.mp3",
+      "sha256": "e518df297f10892369da4c7432692389ccf4290e1e0c51be92a66a7fad210fe3"
+    },
+    {
+      "itemId": "hsk1-029",
+      "kind": "word",
+      "text": "到",
+      "file": "hsk1-029-word.mp3",
+      "sha256": "0f1c17382afb23a0799ceae7f31f7b53ca1f31f81c262d2bb40f0ac11e44403e"
+    },
+    {
+      "itemId": "hsk1-030",
+      "kind": "sentence",
+      "text": "这是我的手机。",
+      "file": "hsk1-030-sentence.mp3",
+      "sha256": "d129ce39103334f2dae406e7e4d9f559f30aad7a382ecea16fd2d1ef59d26c11"
+    },
+    {
+      "itemId": "hsk1-030",
+      "kind": "word",
+      "text": "的",
+      "file": "hsk1-030-word.mp3",
+      "sha256": "89a975d9ee9f4d8a6b04f873359735c78f2103a7b5e45527a10b0bdc820301ff"
+    },
+    {
+      "itemId": "hsk1-031",
+      "kind": "sentence",
+      "text": "这是我的第一本中文书。",
+      "file": "hsk1-031-sentence.mp3",
+      "sha256": "50da12728e09795cbae4bf6269caca5108d9be966bb002d337e31a3c3caf8759"
+    },
+    {
+      "itemId": "hsk1-031",
+      "kind": "word",
+      "text": "第",
+      "file": "hsk1-031-word.mp3",
+      "sha256": "be1d71c8eca8586df6552a04d621667998eeb6814732c2b8b66898dc55e14ea1"
+    },
+    {
+      "itemId": "hsk1-032",
+      "kind": "sentence",
+      "text": "我弟弟今年八岁。",
+      "file": "hsk1-032-sentence.mp3",
+      "sha256": "d7c435fee4bf57c920972b82f19b700be6d9530c09668789998198b716409482"
+    },
+    {
+      "itemId": "hsk1-032",
+      "kind": "word",
+      "text": "弟弟",
+      "file": "hsk1-032-word.mp3",
+      "sha256": "bb0d99be1472a491f5b0cfd8e8079e37e32248937e3321e64ffcd52f8b04d3eb"
+    },
+    {
+      "itemId": "hsk1-033",
+      "kind": "sentence",
+      "text": "我们八点上课。",
+      "file": "hsk1-033-sentence.mp3",
+      "sha256": "02f050adda43203e850eb92a1be84b76ad3797a4c0f3bb8b8e11a968ea6a4bdd"
+    },
+    {
+      "itemId": "hsk1-033",
+      "kind": "word",
+      "text": "点",
+      "file": "hsk1-033-word.mp3",
+      "sha256": "580306b1e3985c3ef60d2903c173aefb47704bc6aa5fb7f1ef5f5cf01af1b8a9"
+    },
+    {
+      "itemId": "hsk1-034",
+      "kind": "sentence",
+      "text": "这家店的东西很便宜。",
+      "file": "hsk1-034-sentence.mp3",
+      "sha256": "076aff858aadcc3d9dc72b68b87dca5c5f0ae6b098c2e7b35912ec1bef6617de"
+    },
+    {
+      "itemId": "hsk1-034",
+      "kind": "word",
+      "text": "店",
+      "file": "hsk1-034-word.mp3",
+      "sha256": "1ada722facef0a6e596b692ff1c57723f871dd38a416ea9e875bc9c5c985acc1"
+    },
+    {
+      "itemId": "hsk1-035",
+      "kind": "sentence",
+      "text": "你的电话是多少？",
+      "file": "hsk1-035-sentence.mp3",
+      "sha256": "4de939e9bc883147707419c7f68d3d2681f3e7e1cc16142c5d7609fbbbaca177"
+    },
+    {
+      "itemId": "hsk1-035",
+      "kind": "word",
+      "text": "电话",
+      "file": "hsk1-035-word.mp3",
+      "sha256": "80718622716e62f294951fd20491026fae00499227f66db3ed331942532ca3c6"
+    },
+    {
+      "itemId": "hsk1-036",
+      "kind": "sentence",
+      "text": "我用电脑学习。",
+      "file": "hsk1-036-sentence.mp3",
+      "sha256": "ca63b4ec8ef422b72bcb8e508bc50b02981943f1626cfa5c87eb19582776f1be"
+    },
+    {
+      "itemId": "hsk1-036",
+      "kind": "word",
+      "text": "电脑",
+      "file": "hsk1-036-word.mp3",
+      "sha256": "7c1cc7426c3c272d13b4e5ff41bb3f62d7b87f969d26a7dd34ac62f2e523ff5f"
+    },
+    {
+      "itemId": "hsk1-037",
+      "kind": "sentence",
+      "text": "妈妈在看电视。",
+      "file": "hsk1-037-sentence.mp3",
+      "sha256": "ab0581736cfeb59182e1da5ff7d89eeae9f2839fb43a05d83a8787d9f32719a0"
+    },
+    {
+      "itemId": "hsk1-037",
+      "kind": "word",
+      "text": "电视",
+      "file": "hsk1-037-word.mp3",
+      "sha256": "3aea97a6853a52d9728e9dcd5461643c9c32737df4c5936ac7e4512e3626039c"
+    },
+    {
+      "itemId": "hsk1-038",
+      "kind": "sentence",
+      "text": "这部电影很好看。",
+      "file": "hsk1-038-sentence.mp3",
+      "sha256": "f6e0789731a2b1474499492782e11499d72ed0a3af693778768ac3b29de14389"
+    },
+    {
+      "itemId": "hsk1-038",
+      "kind": "word",
+      "text": "电影",
+      "file": "hsk1-038-word.mp3",
+      "sha256": "4f23aa42897fe526ea52ea11036b8d2510decfcc597b7e5580797bc0d35dfe28"
+    },
+    {
+      "itemId": "hsk1-039",
+      "kind": "sentence",
+      "text": "电影院在学校后边。",
+      "file": "hsk1-039-sentence.mp3",
+      "sha256": "498b3f5f5a5158e3a4e369fa407974e2e8e4fe041c09977b42e58d4e1f6d7572"
+    },
+    {
+      "itemId": "hsk1-039",
+      "kind": "word",
+      "text": "电影院",
+      "file": "hsk1-039-word.mp3",
+      "sha256": "a4b78a90e63ebff5eeb7ed40dbf05747f5d7f506cd741343c7d8a2e4ae46d52e"
+    },
+    {
+      "itemId": "hsk1-040",
+      "kind": "sentence",
+      "text": "这些东西是谁的？",
+      "file": "hsk1-040-sentence.mp3",
+      "sha256": "393ada9b8fcab89082c684f1279e5d98da3a1536b838b6a2fe26b978248cf94b"
+    },
+    {
+      "itemId": "hsk1-040",
+      "kind": "word",
+      "text": "东西",
+      "file": "hsk1-040-word.mp3",
+      "sha256": "736157e25a38950402e39030e86452a3955c3cd14a731670e962cf67fb764f41"
+    },
+    {
+      "itemId": "hsk1-041",
+      "kind": "sentence",
+      "text": "我们都是学生。",
+      "file": "hsk1-041-sentence.mp3",
+      "sha256": "7efc1b3a41728a0a64c466be346ecda5168f656524f2e6b34abcd6c20c803b94"
+    },
+    {
+      "itemId": "hsk1-041",
+      "kind": "word",
+      "text": "都",
+      "file": "hsk1-041-word.mp3",
+      "sha256": "a4ade13b6c65dd71842df5869f8b541027e8cd1b728e7474123cc523150243b2"
+    },
+    {
+      "itemId": "hsk1-042",
+      "kind": "sentence",
+      "text": "请读这个字。",
+      "file": "hsk1-042-sentence.mp3",
+      "sha256": "07f63f23d31db740cf5a4d59adcda172085852df838479711f980db8ce1cf561"
+    },
+    {
+      "itemId": "hsk1-042",
+      "kind": "word",
+      "text": "读",
+      "file": "hsk1-042-word.mp3",
+      "sha256": "b7adfcdba0b89e27cfcfabcc6b45d75f2f41a69818ef5ab5851c01bb7173b61f"
+    },
+    {
+      "itemId": "hsk1-043",
+      "kind": "sentence",
+      "text": "我喜欢在家读书。",
+      "file": "hsk1-043-sentence.mp3",
+      "sha256": "8325de26ab80adf48f0c6324a83a8d129f94cb9e991233703ffa08a6a56ff93b"
+    },
+    {
+      "itemId": "hsk1-043",
+      "kind": "word",
+      "text": "读书",
+      "file": "hsk1-043-word.mp3",
+      "sha256": "54edae0863dd410061072b05492a9978a68f819a6116d5fe3aa0472ad2c56e75"
+    },
+    {
+      "itemId": "hsk1-044",
+      "kind": "sentence",
+      "text": "你说得对。",
+      "file": "hsk1-044-sentence.mp3",
+      "sha256": "d9648c8a8c62a0fd5231809956150a3a8dedabef7459c0331b06ff9e59a1cccf"
+    },
+    {
+      "itemId": "hsk1-044",
+      "kind": "word",
+      "text": "对",
+      "file": "hsk1-044-word.mp3",
+      "sha256": "371d1104f42c85a3e7939bae935722a3946c747b4fe3ecee20caeae672a81019"
+    },
+    {
+      "itemId": "hsk1-045",
+      "kind": "sentence",
+      "text": "对不起，我来晚了。",
+      "file": "hsk1-045-sentence.mp3",
+      "sha256": "ad9d2c1f79c791a6510f41fe83b327019a5cbeff86bb9b06c22a10762e14ee1a"
+    },
+    {
+      "itemId": "hsk1-045",
+      "kind": "word",
+      "text": "对不起",
+      "file": "hsk1-045-word.mp3",
+      "sha256": "aa5b3602537ba7cea824a22a8dc77bebf4110a1f1b6e0382a3e85092549b3042"
+    },
+    {
+      "itemId": "hsk1-046",
+      "kind": "sentence",
+      "text": "这里的人很多。",
+      "file": "hsk1-046-sentence.mp3",
+      "sha256": "d3f11d58b4f0936dba49617ce31da398dc475a60bdbab24dcf790e51e3216b3d"
+    },
+    {
+      "itemId": "hsk1-046",
+      "kind": "word",
+      "text": "多",
+      "file": "hsk1-046-word.mp3",
+      "sha256": "7ca5567c05245362e30a22af59309011eac5581ec136c030f2e006815e3915ed"
+    },
+    {
+      "itemId": "hsk1-048",
+      "kind": "sentence",
+      "text": "她儿子在上学。",
+      "file": "hsk1-048-sentence.mp3",
+      "sha256": "34e0d622e1f9c72e6b301a01ced42958374cae054cf368aaf281cfad91a4019e"
+    },
+    {
+      "itemId": "hsk1-048",
+      "kind": "word",
+      "text": "儿子",
+      "file": "hsk1-048-word.mp3",
+      "sha256": "01906905f2449091686e1654dfbb8f958f7580df6e21454c63876738203240dd"
+    },
+    {
+      "itemId": "hsk1-049",
+      "kind": "sentence",
+      "text": "今天是星期二。",
+      "file": "hsk1-049-sentence.mp3",
+      "sha256": "48df8a99ac05241e5be5a8ac46485cfa71187a5f67a6d14e248380b24d3e79ea"
+    },
+    {
+      "itemId": "hsk1-049",
+      "kind": "word",
+      "text": "二",
+      "file": "hsk1-049-word.mp3",
+      "sha256": "8a6e3244476d3e6dce01905c31370b77cd49b58be33941812cc58f06c37db34f"
+    },
+    {
+      "itemId": "hsk1-050",
+      "kind": "sentence",
+      "text": "饭做好了。",
+      "file": "hsk1-050-sentence.mp3",
+      "sha256": "3dfc80c0384aaaac91e12700a6301f362267fe7ab8b0acc367f3126bdeed78ac"
+    },
+    {
+      "itemId": "hsk1-050",
+      "kind": "word",
+      "text": "饭",
+      "file": "hsk1-050-word.mp3",
+      "sha256": "1e1d7a7657cc0620fb2eef4c49b1e55a9297d2fe9687a8980fcdefb8fbc89d11"
+    },
+    {
+      "itemId": "hsk1-051",
+      "kind": "sentence",
+      "text": "我们去那家饭店吃饭。",
+      "file": "hsk1-051-sentence.mp3",
+      "sha256": "d62d1ded1c00762c28ebac24d4963a4fa1f1683c151375ac5da70a1390de271b"
+    },
+    {
+      "itemId": "hsk1-051",
+      "kind": "word",
+      "text": "饭店",
+      "file": "hsk1-051-word.mp3",
+      "sha256": "fadfec8a6c98d51386013a4da08bbb015e00cb95f57d51ef06821fef807dd5cc"
+    },
+    {
+      "itemId": "hsk1-052",
+      "kind": "sentence",
+      "text": "我的房间很小。",
+      "file": "hsk1-052-sentence.mp3",
+      "sha256": "7a1484b1454706292c2b50aa50e4bd8acadaeb27d65f99bfaa5e672c8aae746b"
+    },
+    {
+      "itemId": "hsk1-052",
+      "kind": "word",
+      "text": "房间",
+      "file": "hsk1-052-word.mp3",
+      "sha256": "08fd701b77d87d7bb72e8c30eb4351f7abcb3c9e13de6dbcc2b4907e413824b1"
+    },
+    {
+      "itemId": "hsk1-053",
+      "kind": "sentence",
+      "text": "今天我非常高兴。",
+      "file": "hsk1-053-sentence.mp3",
+      "sha256": "c5ab5a355fd52e55d52a7c044ed957b9f4168ee5c2aff345a31d096b79c58040"
+    },
+    {
+      "itemId": "hsk1-053",
+      "kind": "word",
+      "text": "非常",
+      "file": "hsk1-053-word.mp3",
+      "sha256": "3927bd5cbb40ea713f3e4fd09678f25a9daada04c41960187d0422366e4cc2c7"
+    },
+    {
+      "itemId": "hsk1-054",
+      "kind": "sentence",
+      "text": "我坐飞机去中国。",
+      "file": "hsk1-054-sentence.mp3",
+      "sha256": "c47c2ac9adb6f0b757f971c834809f4e92326c3f33bd6b1bcd6dbf8b2e91da7e"
+    },
+    {
+      "itemId": "hsk1-054",
+      "kind": "word",
+      "text": "飞机",
+      "file": "hsk1-054-word.mp3",
+      "sha256": "037a56631b3f5efc1836d608cb8fd2372caac6662ee59e76f2ddb7ac4ad6013e"
+    },
+    {
+      "itemId": "hsk1-055",
+      "kind": "sentence",
+      "text": "现在八点十分。",
+      "file": "hsk1-055-sentence.mp3",
+      "sha256": "93ae6b448a3eed86c94ecd9fa13e39cc3d25ddf20ac0fd77c18ab6c82569f349"
+    },
+    {
+      "itemId": "hsk1-055",
+      "kind": "word",
+      "text": "分",
+      "file": "hsk1-055-word.mp3",
+      "sha256": "bcc2b4d1a8231c778553d18d4769ae304512654dcddfe70e479edaaaf4495e8b"
+    },
+    {
+      "itemId": "hsk1-056",
+      "kind": "sentence",
+      "text": "请等我五分钟。",
+      "file": "hsk1-056-sentence.mp3",
+      "sha256": "22a989443a640be53bc4e7b29195d700c412f82efc485384984d237c3e5f7858"
+    },
+    {
+      "itemId": "hsk1-056",
+      "kind": "word",
+      "text": "分钟",
+      "file": "hsk1-056-word.mp3",
+      "sha256": "bf35a03a5d8dce3740b73ef10803bf9bdfa189479af228e9546f4164d352ed80"
+    },
+    {
+      "itemId": "hsk1-057",
+      "kind": "sentence",
+      "text": "认识你很高兴。",
+      "file": "hsk1-057-sentence.mp3",
+      "sha256": "05defbc04a8ca1071dc3d609cb80bbe658146d211ff199c3bc74e76b98b4b508"
+    },
+    {
+      "itemId": "hsk1-057",
+      "kind": "word",
+      "text": "高兴",
+      "file": "hsk1-057-word.mp3",
+      "sha256": "58ab0d57cf00645d016ee15b07cf8f1758bbda835997f79548c9bbfb36883b0c"
+    },
+    {
+      "itemId": "hsk1-058",
+      "kind": "sentence",
+      "text": "我喜欢这首歌。",
+      "file": "hsk1-058-sentence.mp3",
+      "sha256": "95d6ebd646bbf2797d8b3e1479fc6bd23289251a9aa9e203b60a181216a79494"
+    },
+    {
+      "itemId": "hsk1-058",
+      "kind": "word",
+      "text": "歌",
+      "file": "hsk1-058-word.mp3",
+      "sha256": "5c33e546f5368d508edeee6369358d29003121a927d224f7cda0574e22937214"
+    },
+    {
+      "itemId": "hsk1-059",
+      "kind": "sentence",
+      "text": "我哥哥会开车。",
+      "file": "hsk1-059-sentence.mp3",
+      "sha256": "3824e243c9521ee979d1328b0b50b3de9a76db1327712025ee70665072e1cc4f"
+    },
+    {
+      "itemId": "hsk1-059",
+      "kind": "word",
+      "text": "哥哥",
+      "file": "hsk1-059-word.mp3",
+      "sha256": "1375082a2621e631a12ae366a9566827eac48e8d67a7c64f135feee694768b1b"
+    },
+    {
+      "itemId": "hsk1-060",
+      "kind": "sentence",
+      "text": "我有三个苹果。",
+      "file": "hsk1-060-sentence.mp3",
+      "sha256": "8b12568c916177ea21c078340d9b231fb74d7057845b2ad64d70eb20148acf02"
+    },
+    {
+      "itemId": "hsk1-060",
+      "kind": "word",
+      "text": "个",
+      "file": "hsk1-060-word.mp3",
+      "sha256": "7533be65b64361a19c20245e3ed9d7a1c41c8c657552e8bc0bf97a02de467f1f"
+    },
+    {
+      "itemId": "hsk1-061",
+      "kind": "sentence",
+      "text": "请给我一杯水。",
+      "file": "hsk1-061-sentence.mp3",
+      "sha256": "e23f3a2a0addd45ab27607c4166f7238848080d08093efd39447246ae61b80c3"
+    },
+    {
+      "itemId": "hsk1-061",
+      "kind": "word",
+      "text": "给",
+      "file": "hsk1-061-word.mp3",
+      "sha256": "83c3b61cb332d1c2c461bad96cba4987111193b190f2d35472ba5d29421d633f"
+    },
+    {
+      "itemId": "hsk1-062",
+      "kind": "sentence",
+      "text": "我在这家公司工作。",
+      "file": "hsk1-062-sentence.mp3",
+      "sha256": "a2b0e59d015f4b9505e7b62d4ee81a5e7813e039b23118306dc4e22d15572a91"
+    },
+    {
+      "itemId": "hsk1-062",
+      "kind": "word",
+      "text": "公司",
+      "file": "hsk1-062-word.mp3",
+      "sha256": "0924bf2639a63da77fa35309fe34115f9181e6ac1e3736a2031cb257aaad4fe4"
+    },
+    {
+      "itemId": "hsk1-063",
+      "kind": "sentence",
+      "text": "我爸爸今天不工作。",
+      "file": "hsk1-063-sentence.mp3",
+      "sha256": "32605fa0aa7ffcfaaf2582bef38930d8767e23ef2bcc283943a68a6104d17560"
+    },
+    {
+      "itemId": "hsk1-063",
+      "kind": "word",
+      "text": "工作",
+      "file": "hsk1-063-word.mp3",
+      "sha256": "1d339905d5f2b8cb151aabe936c1b2cad0a96a3e522ce772c59a28ca75a77369"
+    },
+    {
+      "itemId": "hsk1-064",
+      "kind": "sentence",
+      "text": "这只狗很小。",
+      "file": "hsk1-064-sentence.mp3",
+      "sha256": "03cf8448cbfdad30449b7e78500aace7c96582e3b21b77afcf575f6a2fbde9e8"
+    },
+    {
+      "itemId": "hsk1-064",
+      "kind": "word",
+      "text": "狗",
+      "file": "hsk1-064-word.mp3",
+      "sha256": "09d1631e33530f3a4dbfec2ad79c1a15527bbd6b1d0b1f62c1d0f33c86fe9d2c"
+    },
+    {
+      "itemId": "hsk1-065",
+      "kind": "sentence",
+      "text": "这件衣服太贵了。",
+      "file": "hsk1-065-sentence.mp3",
+      "sha256": "b16287f7d8a8a5a5f7f77cd149bb8503458fb8b2d57bc64f86dece33a0f8ec73"
+    },
+    {
+      "itemId": "hsk1-065",
+      "kind": "word",
+      "text": "贵",
+      "file": "hsk1-065-word.mp3",
+      "sha256": "ec29a0e999faa9f34ae41940d275e9d73e6294ffe23830e63e7c60c280640bdd"
+    },
+    {
+      "itemId": "hsk1-066",
+      "kind": "sentence",
+      "text": "你是哪国人？",
+      "file": "hsk1-066-sentence.mp3",
+      "sha256": "ac113f7ef879ba7cb9c1fe325f5417fb1b1b2a5c5c55dfe2be736d24f7a642e2"
+    },
+    {
+      "itemId": "hsk1-066",
+      "kind": "word",
+      "text": "国",
+      "file": "hsk1-066-word.mp3",
+      "sha256": "0b445ee42d9710dffc45cf217954b76ca7b93aa3c068f8f9d4c19e6c626f0c6b"
+    },
+    {
+      "itemId": "hsk1-067",
+      "kind": "sentence",
+      "text": "我还想喝一点儿水。",
+      "file": "hsk1-067-sentence.mp3",
+      "sha256": "b5ecb23fb3b2859e825aa0cc2322262f8ace607cbad5571096d24add1d72d4cd"
+    },
+    {
+      "itemId": "hsk1-067",
+      "kind": "word",
+      "text": "还",
+      "file": "hsk1-067-word.mp3",
+      "sha256": "9d57175e2509a563a6fe684b485fcadfc8b3b813030920339e092adcd31c8ba1"
+    },
+    {
+      "itemId": "hsk1-068",
+      "kind": "sentence",
+      "text": "孩子们在学校。",
+      "file": "hsk1-068-sentence.mp3",
+      "sha256": "1d013e7512668839a90313dcef3a09db9a43f325c2d90bc4193ddabbad0e2a06"
+    },
+    {
+      "itemId": "hsk1-068",
+      "kind": "word",
+      "text": "孩子",
+      "file": "hsk1-068-word.mp3",
+      "sha256": "0e069b790bf4ba2e787b8af8d5bbeb66c16ffeff6426cab6a374a0506bf42d7b"
+    },
+    {
+      "itemId": "hsk1-069",
+      "kind": "sentence",
+      "text": "我正在学汉语。",
+      "file": "hsk1-069-sentence.mp3",
+      "sha256": "82212f9e7c3247252b81d20d671f3da1d53478c623ab7730c6b66198c02d1853"
+    },
+    {
+      "itemId": "hsk1-069",
+      "kind": "word",
+      "text": "汉语",
+      "file": "hsk1-069-word.mp3",
+      "sha256": "d1369318c2785c0aff448a81f9c0861130cb1c398c18b6f9049c051f207e9cec"
+    },
+    {
+      "itemId": "hsk1-070",
+      "kind": "sentence",
+      "text": "这个汉字怎么写？",
+      "file": "hsk1-070-sentence.mp3",
+      "sha256": "5624fd957c0819b9650c04e5c0a36ba569a908085d9ebda06a86aa0adcd47011"
+    },
+    {
+      "itemId": "hsk1-070",
+      "kind": "word",
+      "text": "汉字",
+      "file": "hsk1-070-word.mp3",
+      "sha256": "87e431ad38c3ec6fd47861fc2b03da5c87d52576b8acb0b1543228992777304d"
+    },
+    {
+      "itemId": "hsk1-071",
+      "kind": "sentence",
+      "text": "今天天气很好。",
+      "file": "hsk1-071-sentence.mp3",
+      "sha256": "3493ba783246842c80814b856c631854094c6e3cd024d0a00e0c05d19e3d5df6"
+    },
+    {
+      "itemId": "hsk1-071",
+      "kind": "word",
+      "text": "好",
+      "file": "hsk1-071-word.mp3",
+      "sha256": "2052b0b04a4f0a997924084f90234badca9e4d10950c95c13816ce08daf319ed"
+    },
+    {
+      "itemId": "hsk1-073",
+      "kind": "sentence",
+      "text": "这本书很好看。",
+      "file": "hsk1-073-sentence.mp3",
+      "sha256": "b0fa0fc3fd705725cc3201cb10720bd5718b59407b2400a831782585621f9ba4"
+    },
+    {
+      "itemId": "hsk1-073",
+      "kind": "word",
+      "text": "好看",
+      "file": "hsk1-073-word.mp3",
+      "sha256": "a5bcd8dd577085cea40dedf64fa8553872d3661ec5e504aac86675d0d1818f74"
+    },
+    {
+      "itemId": "hsk1-074",
+      "kind": "sentence",
+      "text": "这首歌很好听。",
+      "file": "hsk1-074-sentence.mp3",
+      "sha256": "309db9567f244711072050c699c87948a45444975e53ed38d086a426fc498530"
+    },
+    {
+      "itemId": "hsk1-074",
+      "kind": "word",
+      "text": "好听",
+      "file": "hsk1-074-word.mp3",
+      "sha256": "dc6b6fb4f0ce2365e80a036034903e1029c41c9727be6b4011e7b50e5f9242f0"
+    },
+    {
+      "itemId": "hsk1-075",
+      "kind": "sentence",
+      "text": "这个地方很好玩儿。",
+      "file": "hsk1-075-sentence.mp3",
+      "sha256": "49e5d0b9c011b73c219ebd3c4c7e1c0a9cd817a5d1be6a48d7cf2eb2d45cd458"
+    },
+    {
+      "itemId": "hsk1-075",
+      "kind": "word",
+      "text": "好玩儿",
+      "file": "hsk1-075-word.mp3",
+      "sha256": "c63087f66d55bed53c48e044967ca85dccfa123424117dd87e109a8927cd8ef0"
+    },
+    {
+      "itemId": "hsk1-076",
+      "kind": "sentence",
+      "text": "今天是几号？",
+      "file": "hsk1-076-sentence.mp3",
+      "sha256": "3332abb54e73380819f58a03af33f81717e802d24a39fc5165796be3466b64be"
+    },
+    {
+      "itemId": "hsk1-076",
+      "kind": "word",
+      "text": "号",
+      "file": "hsk1-076-word.mp3",
+      "sha256": "44ce77fea3b677f79f9c2b66cb98c8b22d9ab78674de14a8ea49a63902e69e6d"
+    },
+    {
+      "itemId": "hsk1-077",
+      "kind": "sentence",
+      "text": "你想喝什么？",
+      "file": "hsk1-077-sentence.mp3",
+      "sha256": "d6670fc7dc50eae121f928c1cc95a9dac7a5762eeb4e815b00cc5d6ccf0e0d38"
+    },
+    {
+      "itemId": "hsk1-077",
+      "kind": "word",
+      "text": "喝",
+      "file": "hsk1-077-word.mp3",
+      "sha256": "1c1b94af762e4f84d2163ff063339f804b6ba2a2d08b7a9643c0cfaaa2876e7e"
+    },
+    {
+      "itemId": "hsk1-078",
+      "kind": "sentence",
+      "text": "我和朋友去学校。",
+      "file": "hsk1-078-sentence.mp3",
+      "sha256": "275860d74dd1afaa4f70caccf04966a3247bdf1a83218995d71bd877698e577b"
+    },
+    {
+      "itemId": "hsk1-078",
+      "kind": "word",
+      "text": "和",
+      "file": "hsk1-078-word.mp3",
+      "sha256": "a0facd2a392b0a6ef7871ec900fffbc016c9563046b73e9abf7fe51666812b9c"
+    },
+    {
+      "itemId": "hsk1-079",
+      "kind": "sentence",
+      "text": "我今天很忙。",
+      "file": "hsk1-079-sentence.mp3",
+      "sha256": "fb8b7fb0b4a69b6f3bbec9ecb9047b92b8e008e87f58167dd9bc2404d3dab29d"
+    },
+    {
+      "itemId": "hsk1-079",
+      "kind": "word",
+      "text": "很",
+      "file": "hsk1-079-word.mp3",
+      "sha256": "2b05dedfa4bbf8c8f454766c10856136865c1fb0cf44b3dda06666f5a7d9fbd3"
+    },
+    {
+      "itemId": "hsk1-080",
+      "kind": "sentence",
+      "text": "下课后我回家。",
+      "file": "hsk1-080-sentence.mp3",
+      "sha256": "ac6bfedc35e4efcd0efb3bf060a7cda9c52bf9d81030b03041ccbad03e5b3617"
+    },
+    {
+      "itemId": "hsk1-080",
+      "kind": "word",
+      "text": "后",
+      "file": "hsk1-080-word.mp3",
+      "sha256": "f89f16775adc901c586973b8172061b46b7427574df82d8089ea758bde1214e1"
+    },
+    {
+      "itemId": "hsk1-081",
+      "kind": "sentence",
+      "text": "我明天回家。",
+      "file": "hsk1-081-sentence.mp3",
+      "sha256": "e8dea36d85d531b8f062f3b5d6438e5658d8ac70bcd46926e490b61609a9ff68"
+    },
+    {
+      "itemId": "hsk1-081",
+      "kind": "word",
+      "text": "回",
+      "file": "hsk1-081-word.mp3",
+      "sha256": "e8e2a4c76b80b25824a3ff8bcf831f3a200cae79c3f96d6a51babf2252d23540"
+    },
+    {
+      "itemId": "hsk1-082",
+      "kind": "sentence",
+      "text": "我会说一点儿中文。",
+      "file": "hsk1-082-sentence.mp3",
+      "sha256": "ed75b1991a2b0487c52b175c0e05da93e03a349d83ee16a0044b3f7eabede453"
+    },
+    {
+      "itemId": "hsk1-082",
+      "kind": "word",
+      "text": "会",
+      "file": "hsk1-082-word.mp3",
+      "sha256": "554b0e21b74c7e73f0f45e14a7e56053eec80f980cb799fedec45f4d172eedf7"
+    },
+    {
+      "itemId": "hsk1-083",
+      "kind": "sentence",
+      "text": "我们坐火车去北京。",
+      "file": "hsk1-083-sentence.mp3",
+      "sha256": "252d425333874583ad9a4e56476b0cef60b80f83d5d334568f6d90ad91e2abdd"
+    },
+    {
+      "itemId": "hsk1-083",
+      "kind": "word",
+      "text": "火车",
+      "file": "hsk1-083-word.mp3",
+      "sha256": "c5ca1df2189e842638946c18215646d09e37d872f6816af9f311465f26a7afa7"
+    },
+    {
+      "itemId": "hsk1-084",
+      "kind": "sentence",
+      "text": "我早饭吃鸡蛋。",
+      "file": "hsk1-084-sentence.mp3",
+      "sha256": "38c77ec09a76c7527b8cc39d3846a620ff96fbe3a82ab4a9287136be8a0c1192"
+    },
+    {
+      "itemId": "hsk1-084",
+      "kind": "word",
+      "text": "鸡蛋",
+      "file": "hsk1-084-word.mp3",
+      "sha256": "f3b68f6524370eef434b5b1788b7604edc43199c189a0f8b45c57fc29dc9c842"
+    },
+    {
+      "itemId": "hsk1-085",
+      "kind": "sentence",
+      "text": "你家有几口人？",
+      "file": "hsk1-085-sentence.mp3",
+      "sha256": "59095c2e2b05e98c1f0b15b82be9a24fcc98f9aefce51112a618082003c0afa6"
+    },
+    {
+      "itemId": "hsk1-085",
+      "kind": "word",
+      "text": "几",
+      "file": "hsk1-085-word.mp3",
+      "sha256": "dc8f4fb5612083f707337fc9153d86eeb35cd400d66d64b28666ac291fb5aedf"
+    },
+    {
+      "itemId": "hsk1-086",
+      "kind": "sentence",
+      "text": "我家在这儿。",
+      "file": "hsk1-086-sentence.mp3",
+      "sha256": "1964fca7f3b18560ede83482e730cd2c728fa5e9a6bfd6b54c865e606769f8a0"
+    },
+    {
+      "itemId": "hsk1-086",
+      "kind": "word",
+      "text": "家",
+      "file": "hsk1-086-word.mp3",
+      "sha256": "d1e48f2af730d001962dad035c14099876bae14330ea37ceea04eb89780c9206"
+    },
+    {
+      "itemId": "hsk1-087",
+      "kind": "sentence",
+      "text": "我的家人都很好。",
+      "file": "hsk1-087-sentence.mp3",
+      "sha256": "8d6eb9e402ef4c26e5ebb8ba2cf243ab2e78761665affcdcc5eda2fb6df9b348"
+    },
+    {
+      "itemId": "hsk1-087",
+      "kind": "word",
+      "text": "家人",
+      "file": "hsk1-087-word.mp3",
+      "sha256": "f7dcda22118bc7376fea98568f6592b8ee89c380a7f6938fcd31eb446bc023d1"
+    },
+    {
+      "itemId": "hsk1-088",
+      "kind": "sentence",
+      "text": "明天见！",
+      "file": "hsk1-088-sentence.mp3",
+      "sha256": "7d65b1f1d49610e3299d0c268a232b0754cff57dba3d8d6dc93aee86fb9d0a23"
+    },
+    {
+      "itemId": "hsk1-088",
+      "kind": "word",
+      "text": "见",
+      "file": "hsk1-088-word.mp3",
+      "sha256": "b401cfeeb38e603714dadc1ef85faacca5e2afc56cf13be78e09637225c3c74e"
+    },
+    {
+      "itemId": "hsk1-089",
+      "kind": "sentence",
+      "text": "我买了两件衣服。",
+      "file": "hsk1-089-sentence.mp3",
+      "sha256": "1c64f8672290c340c2dffc93799cda4e98cc7ec05a64b751a5b05cfcd9a7454f"
+    },
+    {
+      "itemId": "hsk1-089",
+      "kind": "word",
+      "text": "件",
+      "file": "hsk1-089-word.mp3",
+      "sha256": "a2b46c4041e381b1060c5d089791e74aa74423f901deaf6a619a9dbf593c737f"
+    },
+    {
+      "itemId": "hsk1-090",
+      "kind": "sentence",
+      "text": "我们晚上吃饺子。",
+      "file": "hsk1-090-sentence.mp3",
+      "sha256": "f9d0e15fc18c37f52edea9fa15c4f818027ffbff9e099808b7d192eaeaf06b71"
+    },
+    {
+      "itemId": "hsk1-090",
+      "kind": "word",
+      "text": "饺子",
+      "file": "hsk1-090-word.mp3",
+      "sha256": "2d4accd5e0fb380312c9ea472bdcf5fcfa14a3ec5f3ab69851f5d91bda803b57"
+    },
+    {
+      "itemId": "hsk1-091",
+      "kind": "sentence",
+      "text": "你叫什么名字？",
+      "file": "hsk1-091-sentence.mp3",
+      "sha256": "7ec550ecef6c33d4c602111899ee147d93415789206829c59d9a54c7c9878615"
+    },
+    {
+      "itemId": "hsk1-091",
+      "kind": "word",
+      "text": "叫",
+      "file": "hsk1-091-word.mp3",
+      "sha256": "10f9acd831a7280d1fcf24d6549b759ce559ac1d5844bce59965b68c7343ebf7"
+    },
+    {
+      "itemId": "hsk1-092",
+      "kind": "sentence",
+      "text": "我姐姐是老师。",
+      "file": "hsk1-092-sentence.mp3",
+      "sha256": "c6f455f5eb916c553706036485db601656a25ad09e664387152ec767167f0515"
+    },
+    {
+      "itemId": "hsk1-092",
+      "kind": "word",
+      "text": "姐姐",
+      "file": "hsk1-092-word.mp3",
+      "sha256": "33b3d120bfd19bf14e2120e20f5f2f3d756a251b703635caa8c5f9bd7e9493cc"
+    },
+    {
+      "itemId": "hsk1-093",
+      "kind": "sentence",
+      "text": "我今年二十岁。",
+      "file": "hsk1-093-sentence.mp3",
+      "sha256": "ef1a28d12ec5d6dff897d0738ce3efd0e725f5ebbfe1c51dce255a64f6928519"
+    },
+    {
+      "itemId": "hsk1-093",
+      "kind": "word",
+      "text": "今年",
+      "file": "hsk1-093-word.mp3",
+      "sha256": "524c359283a860ab094dc13d23a63c1c4fb32bf015dafaae8ea9f70aae5cd625"
+    },
+    {
+      "itemId": "hsk1-095",
+      "kind": "sentence",
+      "text": "我每天九点睡觉。",
+      "file": "hsk1-095-sentence.mp3",
+      "sha256": "50ad76b1b726b86804dfbd12337244ec401a8b141182f7ac7f7da74e952098de"
+    },
+    {
+      "itemId": "hsk1-095",
+      "kind": "word",
+      "text": "九",
+      "file": "hsk1-095-word.mp3",
+      "sha256": "0d424a46827b72308e85899bc318cf9cf337d892e6e1c40056981f9c01d7e980"
+    },
+    {
+      "itemId": "hsk1-096",
+      "kind": "sentence",
+      "text": "你觉得这个怎么样？",
+      "file": "hsk1-096-sentence.mp3",
+      "sha256": "82d73d01b9ed1fef91d3d9c5ecef4c02955ed10379c5c527b5e98393066a0ea0"
+    },
+    {
+      "itemId": "hsk1-096",
+      "kind": "word",
+      "text": "觉得",
+      "file": "hsk1-096-word.mp3",
+      "sha256": "22943d7093ca8677c43af9bacd3b43ccdb297522ca81ee0d4ab338688be83786"
+    },
+    {
+      "itemId": "hsk1-097",
+      "kind": "sentence",
+      "text": "请开门。",
+      "file": "hsk1-097-sentence.mp3",
+      "sha256": "2e0550acd68a5ff440fee65770fa2c2736c0a42a2ff526c32c3e3a3870a5901a"
+    },
+    {
+      "itemId": "hsk1-097",
+      "kind": "word",
+      "text": "开",
+      "file": "hsk1-097-word.mp3",
+      "sha256": "bc4c5ddf404b30368ebd57054c06a9bcac7b2413752ea198ef947e435adbac2e"
+    },
+    {
+      "itemId": "hsk1-098",
+      "kind": "sentence",
+      "text": "我妈妈会开车。",
+      "file": "hsk1-098-sentence.mp3",
+      "sha256": "d3f410daa71335807a6473b024b2e1923943dc07cdbed955b9625015e3ac6ba2"
+    },
+    {
+      "itemId": "hsk1-098",
+      "kind": "word",
+      "text": "开车",
+      "file": "hsk1-098-word.mp3",
+      "sha256": "0649191eaa896febc4a56a9b9e1133e26dd761b48f43402b6681bf5405ca984c"
+    },
+    {
+      "itemId": "hsk1-099",
+      "kind": "sentence",
+      "text": "你在看什么？",
+      "file": "hsk1-099-sentence.mp3",
+      "sha256": "a469764552b74a10d3e33a4f9b34104a6ee6a2a23f18479d9fc7cb9372b8752d"
+    },
+    {
+      "itemId": "hsk1-099",
+      "kind": "word",
+      "text": "看",
+      "file": "hsk1-099-word.mp3",
+      "sha256": "ddd91a620261ba7babf72074d1731576b14f7fcdcfda95e26d44d20da772d72e"
+    },
+    {
+      "itemId": "hsk1-100",
+      "kind": "sentence",
+      "text": "我今天去医院看病。",
+      "file": "hsk1-100-sentence.mp3",
+      "sha256": "80621db71a42c8b8f128e351eb0481488ca2e76e96a6134897f720b02771f290"
+    },
+    {
+      "itemId": "hsk1-100",
+      "kind": "word",
+      "text": "看病",
+      "file": "hsk1-100-word.mp3",
+      "sha256": "b6f4585fd643511931093841e49777d99fc725d99325a03fd0b53cc67482ec6a"
+    },
+    {
+      "itemId": "hsk1-101",
+      "kind": "sentence",
+      "text": "我看见老师了。",
+      "file": "hsk1-101-sentence.mp3",
+      "sha256": "db95f597e4e76fcaf7011869efcf2e526fa81fb05479b75f82ae20e1268029e5"
+    },
+    {
+      "itemId": "hsk1-101",
+      "kind": "word",
+      "text": "看见",
+      "file": "hsk1-101-word.mp3",
+      "sha256": "fcc9eb9cc3fd0a509053b62a7f64ec5fa23fd89cd1e013a1ff1a25c6aa90157c"
+    },
+    {
+      "itemId": "hsk1-103",
+      "kind": "sentence",
+      "text": "这节课很有意思。",
+      "file": "hsk1-103-sentence.mp3",
+      "sha256": "63be1c537c602a0721992a233170f812eb9c814194ade80babb254238fcf140f"
+    },
+    {
+      "itemId": "hsk1-103",
+      "kind": "word",
+      "text": "课",
+      "file": "hsk1-103-word.mp3",
+      "sha256": "7281d394d08c4a91e4103d2d3d23dbd729d5139fd176d55f03f44d8caa261035"
+    },
+    {
+      "itemId": "hsk1-104",
+      "kind": "sentence",
+      "text": "我家有三口人。",
+      "file": "hsk1-104-sentence.mp3",
+      "sha256": "e3ac135157bf6d33a3070fe148bc5f9fa4073d8a1ffe810c7343d5bc95fd06f2"
+    },
+    {
+      "itemId": "hsk1-104",
+      "kind": "word",
+      "text": "口",
+      "file": "hsk1-104-word.mp3",
+      "sha256": "4f8d3723f02a876a81ef047274a4dae26b33f4e9e7750aff7f7453a3e9bfadd1"
+    },
+    {
+      "itemId": "hsk1-105",
+      "kind": "sentence",
+      "text": "这个苹果三块钱。",
+      "file": "hsk1-105-sentence.mp3",
+      "sha256": "0507016e8c7442a12d7837ee559f5d48c2a61e1771535ec3f4b15c3dedf49c9e"
+    },
+    {
+      "itemId": "hsk1-105",
+      "kind": "word",
+      "text": "块",
+      "file": "hsk1-105-word.mp3",
+      "sha256": "8b0e4e107f1cfab1cdd5f2fa376b9d14007b4b6a609991033fd8c67d1204d765"
+    },
+    {
+      "itemId": "hsk1-106",
+      "kind": "sentence",
+      "text": "请来我家。",
+      "file": "hsk1-106-sentence.mp3",
+      "sha256": "532a18e404d8292a59d3a920466eeea8a3e68ac40f8afdcb89d3898988857f90"
+    },
+    {
+      "itemId": "hsk1-106",
+      "kind": "word",
+      "text": "来",
+      "file": "hsk1-106-word.mp3",
+      "sha256": "b51614c30c78f5d90f98b0aee6fa4375ebad0a23546666bfd90091c47938c801"
+    },
+    {
+      "itemId": "hsk1-108",
+      "kind": "sentence",
+      "text": "我吃饭了。",
+      "file": "hsk1-108-sentence.mp3",
+      "sha256": "ca11bd8cf16892493a0db8d430f876ac0697e17438fb080ca6326e151ed093d1"
+    },
+    {
+      "itemId": "hsk1-108",
+      "kind": "word",
+      "text": "了",
+      "file": "hsk1-108-word.mp3",
+      "sha256": "51a2f48dfabcda13442472d7f800853cba1aa779fd23761a595885aeba5db771",
+      "pronunciationContext": "好了"
+    },
+    {
+      "itemId": "hsk1-109",
+      "kind": "sentence",
+      "text": "今天很冷。",
+      "file": "hsk1-109-sentence.mp3",
+      "sha256": "379ced35565b101c76e93f0597009aff30af6546ffcb5937d5f23e3334b3a113"
+    },
+    {
+      "itemId": "hsk1-109",
+      "kind": "word",
+      "text": "冷",
+      "file": "hsk1-109-word.mp3",
+      "sha256": "357fa82b4f9866478f5d47a4d5e29035346ba988375b6df6f9d9ee73567f81e3"
+    },
+    {
+      "itemId": "hsk1-110",
+      "kind": "sentence",
+      "text": "书在包里。",
+      "file": "hsk1-110-sentence.mp3",
+      "sha256": "0dfa1489142bb84edf8e16a72e53679a59de90fd6ace8c199d9673dc3d351a4d"
+    },
+    {
+      "itemId": "hsk1-110",
+      "kind": "word",
+      "text": "里",
+      "file": "hsk1-110-word.mp3",
+      "sha256": "a8a5ce74f12a547a91c5b2848593d53ed453a52e77e59f5d46ff6db07b816c45"
+    },
+    {
+      "itemId": "hsk1-111",
+      "kind": "sentence",
+      "text": "我要两杯茶。",
+      "file": "hsk1-111-sentence.mp3",
+      "sha256": "0af0a4beed172994c699b448483dd9c49227e3612a96dcd5f5082e6f959601ac"
+    },
+    {
+      "itemId": "hsk1-111",
+      "kind": "word",
+      "text": "两",
+      "file": "hsk1-111-word.mp3",
+      "sha256": "5acabbd3a1707c36cbe78669c301132d28f6f47f552d161ed72d4a30553b6184"
+    },
+    {
+      "itemId": "hsk1-112",
+      "kind": "sentence",
+      "text": "一百零一是多少？",
+      "file": "hsk1-112-sentence.mp3",
+      "sha256": "4ac51dd85be7d8aaf1dea0ca7f8d2741131bae3a5f1f3d38c0f7414281865898"
+    },
+    {
+      "itemId": "hsk1-112",
+      "kind": "word",
+      "text": "零",
+      "file": "hsk1-112-word.mp3",
+      "sha256": "7537dccb06c94e9f7aae159bd08fc8a9f767d84c4a0d4142d9489b9143578f08"
+    },
+    {
+      "itemId": "hsk1-113",
+      "kind": "sentence",
+      "text": "我六点起床。",
+      "file": "hsk1-113-sentence.mp3",
+      "sha256": "644e7fb0c37052bb46bbb5104764cbd3d0a86a18f11f16d9b4484801610fb092"
+    },
+    {
+      "itemId": "hsk1-113",
+      "kind": "word",
+      "text": "六",
+      "file": "hsk1-113-word.mp3",
+      "sha256": "1faec8396c31a5ae00ddd620314337a06ffa30f139b0714990b71c64a9f0760f"
+    },
+    {
+      "itemId": "hsk1-114",
+      "kind": "sentence",
+      "text": "妈妈正在做饭。",
+      "file": "hsk1-114-sentence.mp3",
+      "sha256": "86166f5f16eb97d0f74977983ef59da931b69fcd710a0c574d357046422accd3"
+    },
+    {
+      "itemId": "hsk1-114",
+      "kind": "word",
+      "text": "妈妈",
+      "file": "hsk1-114-word.mp3",
+      "sha256": "594effc2f3105346018a224ff4a1f597ce3dee9defb82270ac75a3b332a464fa"
+    },
+    {
+      "itemId": "hsk1-115",
+      "kind": "sentence",
+      "text": "你是学生吗？",
+      "file": "hsk1-115-sentence.mp3",
+      "sha256": "0f4eed2767206a0ef4e06ccb4178047183f43134700bff6c05eac335fbdfcdca"
+    },
+    {
+      "itemId": "hsk1-115",
+      "kind": "word",
+      "text": "吗",
+      "file": "hsk1-115-word.mp3",
+      "sha256": "c00d9b5c6dd92315a1cdf7f597c9c8f9d375290ecd460daad930370610056dac"
+    },
+    {
+      "itemId": "hsk1-116",
+      "kind": "sentence",
+      "text": "我要买一本书。",
+      "file": "hsk1-116-sentence.mp3",
+      "sha256": "8f8f04e6d83c2b19e1ff62dc4e47b9b7025b4b0ff8a9ce3de6f400520fc0f7ad"
+    },
+    {
+      "itemId": "hsk1-116",
+      "kind": "word",
+      "text": "买",
+      "file": "hsk1-116-word.mp3",
+      "sha256": "0e3763d92a8c1df9dc7476bdc616e9a6a18e47a17a5c8294e760d321444a803d"
+    },
+    {
+      "itemId": "hsk1-117",
+      "kind": "sentence",
+      "text": "这家店卖水果。",
+      "file": "hsk1-117-sentence.mp3",
+      "sha256": "7c1004e589fb6233e61f180e09164cb91d9399b6dba64a509fb397f06380be78"
+    },
+    {
+      "itemId": "hsk1-117",
+      "kind": "word",
+      "text": "卖",
+      "file": "hsk1-117-word.mp3",
+      "sha256": "c1a2f2a73b106fb997ef23850722b49ab42740ba43f1a1f84cbcc9e7290b2f92"
+    },
+    {
+      "itemId": "hsk1-118",
+      "kind": "sentence",
+      "text": "你今天忙吗？",
+      "file": "hsk1-118-sentence.mp3",
+      "sha256": "2bc17166dd33f4c64f5adaab65f8678ffb5701ac72a61839ccdec8739bd7206b"
+    },
+    {
+      "itemId": "hsk1-118",
+      "kind": "word",
+      "text": "忙",
+      "file": "hsk1-118-word.mp3",
+      "sha256": "5feb6a414c254008c736d33196689991e31bf66ec21b3c245f3005cf76ac4b62"
+    },
+    {
+      "itemId": "hsk1-119",
+      "kind": "sentence",
+      "text": "我的猫在椅子上。",
+      "file": "hsk1-119-sentence.mp3",
+      "sha256": "09d52a6e4a55d0bf2f1b37ff5521c5019251f0e832b12661f6c6e79453ef549b"
+    },
+    {
+      "itemId": "hsk1-119",
+      "kind": "word",
+      "text": "猫",
+      "file": "hsk1-119-word.mp3",
+      "sha256": "fef5a18084078f90da6c8f90df51b71c15139234b437a1d27ddd8e788072a7ad"
+    },
+    {
+      "itemId": "hsk1-120",
+      "kind": "sentence",
+      "text": "没关系，请坐。",
+      "file": "hsk1-120-sentence.mp3",
+      "sha256": "428e281b090fd40f2f8046d9749659d51be32c7ca4661cc1973d8d571e301243"
+    },
+    {
+      "itemId": "hsk1-120",
+      "kind": "word",
+      "text": "没关系",
+      "file": "hsk1-120-word.mp3",
+      "sha256": "8f0f1019094098a2fa0e6733a9cfe114a0bdeef4ccd41323a62c5b99199ff3c0"
+    },
+    {
+      "itemId": "hsk1-121",
+      "kind": "sentence",
+      "text": "我没事，谢谢你。",
+      "file": "hsk1-121-sentence.mp3",
+      "sha256": "5faf52387e177b00bdae59f560ad8ebd2221ead852c0071725157debe82fb108"
+    },
+    {
+      "itemId": "hsk1-121",
+      "kind": "word",
+      "text": "没事",
+      "file": "hsk1-121-word.mp3",
+      "sha256": "b3fd4a2a16b65ebb134ac8ec11630be8b6d80e927682da6fd12968fd9efdc4dd"
+    },
+    {
+      "itemId": "hsk1-122",
+      "kind": "sentence",
+      "text": "我没有电脑。",
+      "file": "hsk1-122-sentence.mp3",
+      "sha256": "3ee61e51c9245bb794d06c842275985bad39300a544401a94863908cb0992244"
+    },
+    {
+      "itemId": "hsk1-122",
+      "kind": "word",
+      "text": "没有",
+      "file": "hsk1-122-word.mp3",
+      "sha256": "e75633101a5d90077241e43e7a07177887ea4a6a8f52514d220c65b17319e7e9"
+    },
+    {
+      "itemId": "hsk1-123",
+      "kind": "sentence",
+      "text": "我妹妹喜欢唱歌。",
+      "file": "hsk1-123-sentence.mp3",
+      "sha256": "d6fbe3f4982fbd61debbb8bd7328ba991adc1e76720edc1af2e71aafc8475669"
+    },
+    {
+      "itemId": "hsk1-123",
+      "kind": "word",
+      "text": "妹妹",
+      "file": "hsk1-123-word.mp3",
+      "sha256": "e911f03310c7a22e5c4df0a45c9635f2129cbcce035176e2c4dbd5086f0e40ef"
+    },
+    {
+      "itemId": "hsk1-124",
+      "kind": "sentence",
+      "text": "同学们，早上好！",
+      "file": "hsk1-124-sentence.mp3",
+      "sha256": "15d38d9af627bd7cad82bed044ab06a9b47dac78d64d610c75f6b22d4df30cf1"
+    },
+    {
+      "itemId": "hsk1-124",
+      "kind": "word",
+      "text": "们",
+      "file": "hsk1-124-word.mp3",
+      "sha256": "b6eec3f197878fdc3a546e1d40061ad9bf64d0aef4ed4c37da5be4285b331dec"
+    },
+    {
+      "itemId": "hsk1-125",
+      "kind": "sentence",
+      "text": "我要一碗米饭。",
+      "file": "hsk1-125-sentence.mp3",
+      "sha256": "281b0f8ecf711ad1926e5e94f1a9292e06ee6670fb665b0ccd0b68c629daaa5a"
+    },
+    {
+      "itemId": "hsk1-125",
+      "kind": "word",
+      "text": "米饭",
+      "file": "hsk1-125-word.mp3",
+      "sha256": "713eadfe092ff23c535a2823cd762ae0303514796f6d7d9180c34347f592cdb9"
+    },
+    {
+      "itemId": "hsk1-126",
+      "kind": "sentence",
+      "text": "我早饭吃面包。",
+      "file": "hsk1-126-sentence.mp3",
+      "sha256": "e4a8aaf15f24e28de8654e79cb7fe08d86158f433c777e9f9d03bf217405e792"
+    },
+    {
+      "itemId": "hsk1-126",
+      "kind": "word",
+      "text": "面包",
+      "file": "hsk1-126-word.mp3",
+      "sha256": "93fb846e7e7a1cf5debd97f59bc15077166636d3381d55273acc30310481bc80"
+    },
+    {
+      "itemId": "hsk1-127",
+      "kind": "sentence",
+      "text": "这碗面条儿很好吃。",
+      "file": "hsk1-127-sentence.mp3",
+      "sha256": "cdf9977cc1813f2de300bbf90cb07ea557ddbcf8c658fc32f4cb5e92aa989be4"
+    },
+    {
+      "itemId": "hsk1-127",
+      "kind": "word",
+      "text": "面条儿",
+      "file": "hsk1-127-word.mp3",
+      "sha256": "a77360b286e839ef1302628c43fec7ef180bc4f61d8d98b1f784ede6fce41a49"
+    },
+    {
+      "itemId": "hsk1-128",
+      "kind": "sentence",
+      "text": "我明年去中国。",
+      "file": "hsk1-128-sentence.mp3",
+      "sha256": "45b7dcda93ae01bae07d580c00f62d05234cce8f2d64c0179a95d6b5341fee2f"
+    },
+    {
+      "itemId": "hsk1-128",
+      "kind": "word",
+      "text": "明年",
+      "file": "hsk1-128-word.mp3",
+      "sha256": "d2b2da3f669f2175ee938fdd13b798cd8fc60fd2802d04bdb78f2460384f350b"
+    },
+    {
+      "itemId": "hsk1-130",
+      "kind": "sentence",
+      "text": "你的名字怎么写？",
+      "file": "hsk1-130-sentence.mp3",
+      "sha256": "3ea445eb27265c33ea238e6968c9cdaa80f8c6ec2089a99e0829babb8bce7d43"
+    },
+    {
+      "itemId": "hsk1-130",
+      "kind": "word",
+      "text": "名字",
+      "file": "hsk1-130-word.mp3",
+      "sha256": "25764c8462cda4bcfb42a50275ec1107d197a900b4cf5456e8ef6630e1edeed6"
+    },
+    {
+      "itemId": "hsk1-131",
+      "kind": "sentence",
+      "text": "你是哪国人？",
+      "file": "hsk1-131-sentence.mp3",
+      "sha256": "ac113f7ef879ba7cb9c1fe325f5417fb1b1b2a5c5c55dfe2be736d24f7a642e2"
+    },
+    {
+      "itemId": "hsk1-131",
+      "kind": "word",
+      "text": "哪",
+      "file": "hsk1-131-word.mp3",
+      "sha256": "8bbe3feda34271a3ee0ebe44d40719adeaebeb386446a01325b7b73013a60e2a"
+    },
+    {
+      "itemId": "hsk1-132",
+      "kind": "sentence",
+      "text": "你喜欢哪个？",
+      "file": "hsk1-132-sentence.mp3",
+      "sha256": "5e9a88d1fe09145fc79fcda61e002c37a6d196913bcc9d310551957f008f64eb"
+    },
+    {
+      "itemId": "hsk1-132",
+      "kind": "word",
+      "text": "哪个",
+      "file": "hsk1-132-word.mp3",
+      "sha256": "58f9ecd949e1a346da072d6f57e820f10925315f721fd9afcb89505baad31f16"
+    },
+    {
+      "itemId": "hsk1-133",
+      "kind": "sentence",
+      "text": "你住在哪里？",
+      "file": "hsk1-133-sentence.mp3",
+      "sha256": "2ce323172bbe1ccf4bb4578fda13e6bf11cc67feb2c81d15eea44bcdfb8129e6"
+    },
+    {
+      "itemId": "hsk1-133",
+      "kind": "word",
+      "text": "哪里",
+      "file": "hsk1-133-word.mp3",
+      "sha256": "0f943e0e1bf4d5a8771121888e1119fa4a7fd030efdc867d72a69988a01ee838"
+    },
+    {
+      "itemId": "hsk1-134",
+      "kind": "sentence",
+      "text": "你去哪儿？",
+      "file": "hsk1-134-sentence.mp3",
+      "sha256": "26594ac7543bab2b9c47cf99c2376124c5c611d8622ee9e21d010403dd5a6d28"
+    },
+    {
+      "itemId": "hsk1-134",
+      "kind": "word",
+      "text": "哪儿",
+      "file": "hsk1-134-word.mp3",
+      "sha256": "d978ed632d4200509b1a1cec3cb0b0031a479af5401bb19756cfc2bb5c68afb5"
+    },
+    {
+      "itemId": "hsk1-135",
+      "kind": "sentence",
+      "text": "哪些书是你的？",
+      "file": "hsk1-135-sentence.mp3",
+      "sha256": "17b8d3285f1bfba64310a7fe0ad4cbe985fa8836c9f49cca4a6aa662e690a042"
+    },
+    {
+      "itemId": "hsk1-135",
+      "kind": "word",
+      "text": "哪些",
+      "file": "hsk1-135-word.mp3",
+      "sha256": "8d303810cb1382ae72146415501f1382d4ebef3ef03e851d7846bafd2b800e6e"
+    },
+    {
+      "itemId": "hsk1-136",
+      "kind": "sentence",
+      "text": "那是我爸爸。",
+      "file": "hsk1-136-sentence.mp3",
+      "sha256": "46570d279865da24d8ac20ac0bc040d9b86342ed83c61fe073139bb44f2a4e30"
+    },
+    {
+      "itemId": "hsk1-136",
+      "kind": "word",
+      "text": "那",
+      "file": "hsk1-136-word.mp3",
+      "sha256": "62afc170afab6441cf49c3b17162ddd34e713dba143bdd3fb64ee843dcadcf8c"
+    },
+    {
+      "itemId": "hsk1-137",
+      "kind": "sentence",
+      "text": "学校在那边。",
+      "file": "hsk1-137-sentence.mp3",
+      "sha256": "724dc08186697d06df58fc730364c9d86b350f1401cc41c4ec78d987987d255b"
+    },
+    {
+      "itemId": "hsk1-137",
+      "kind": "word",
+      "text": "那边",
+      "file": "hsk1-137-word.mp3",
+      "sha256": "5f22ffe1562b2f9616535b8487d6b224191e8d67d8660a9d2f12aff4d95a6ef6"
+    },
+    {
+      "itemId": "hsk1-138",
+      "kind": "sentence",
+      "text": "我要那个杯子。",
+      "file": "hsk1-138-sentence.mp3",
+      "sha256": "55ee88276db820d905b5cb7e086c2c576ac3f571f462b6f180416ca0bc702312"
+    },
+    {
+      "itemId": "hsk1-138",
+      "kind": "word",
+      "text": "那个",
+      "file": "hsk1-138-word.mp3",
+      "sha256": "ab93190711b8e55482fa264097df78e2870065a0b655b4a1ff6573b788f526f2"
+    },
+    {
+      "itemId": "hsk1-139",
+      "kind": "sentence",
+      "text": "我的朋友在那里。",
+      "file": "hsk1-139-sentence.mp3",
+      "sha256": "23eb8111941de5bb3a4486a5ec10478f5322d0c987bd9d7a7998e43b7656eb1d"
+    },
+    {
+      "itemId": "hsk1-139",
+      "kind": "word",
+      "text": "那里",
+      "file": "hsk1-139-word.mp3",
+      "sha256": "bfdecf9a7f8cb451fea9caaa404d763f0a0d812279d326566567a799ada01f75"
+    },
+    {
+      "itemId": "hsk1-140",
+      "kind": "sentence",
+      "text": "请坐那儿。",
+      "file": "hsk1-140-sentence.mp3",
+      "sha256": "b5454bdcf4b311dfab8b3e2727bf698edb48931d48924d5134bc4fc428e59807"
+    },
+    {
+      "itemId": "hsk1-140",
+      "kind": "word",
+      "text": "那儿",
+      "file": "hsk1-140-word.mp3",
+      "sha256": "86663976cb68254375f0f77b3f867bf974b16d2605cffdc4cc3d9c00a5a4124a"
+    },
+    {
+      "itemId": "hsk1-141",
+      "kind": "sentence",
+      "text": "那些学生是我的朋友。",
+      "file": "hsk1-141-sentence.mp3",
+      "sha256": "399f7829acb1426ca69163dad9d4896ec93c424e4b3550962a2fad27ef9a2710"
+    },
+    {
+      "itemId": "hsk1-141",
+      "kind": "word",
+      "text": "那些",
+      "file": "hsk1-141-word.mp3",
+      "sha256": "81196a2cef54bcaf3b426b7ef415dd71021db0238e92ec463534db14795c0703"
+    },
+    {
+      "itemId": "hsk1-142",
+      "kind": "sentence",
+      "text": "这是男老师。",
+      "file": "hsk1-142-sentence.mp3",
+      "sha256": "9b690aa0f7a9a27eb1da0178b34d244c0255bd961affbdf1ec7ca1192627d792"
+    },
+    {
+      "itemId": "hsk1-142",
+      "kind": "word",
+      "text": "男",
+      "file": "hsk1-142-word.mp3",
+      "sha256": "a7b930007f40280997298d04ed24b8003c03eda00cdbd2612099a65195132409"
+    },
+    {
+      "itemId": "hsk1-143",
+      "kind": "sentence",
+      "text": "她男朋友是医生。",
+      "file": "hsk1-143-sentence.mp3",
+      "sha256": "797afedb56e8c91a9d8ce05f4fdbc2b685ba62df00170bb78e19805ee104d326"
+    },
+    {
+      "itemId": "hsk1-143",
+      "kind": "word",
+      "text": "男朋友",
+      "file": "hsk1-143-word.mp3",
+      "sha256": "28ca1fe5c31f6bd1781d2c38088e911ae5ede02524054d9cb033b43bba4845ca"
+    },
+    {
+      "itemId": "hsk1-144",
+      "kind": "sentence",
+      "text": "我很好，你呢？",
+      "file": "hsk1-144-sentence.mp3",
+      "sha256": "511d23941256879fbfac4ae0bd12474a5edf92d2d3a032364f3084d66b986140"
+    },
+    {
+      "itemId": "hsk1-144",
+      "kind": "word",
+      "text": "呢",
+      "file": "hsk1-144-word.mp3",
+      "sha256": "8529f4cf57fab3f2f2139fd2d9523cb48cc50ce8e20843f6357011817fbc6792"
+    },
+    {
+      "itemId": "hsk1-145",
+      "kind": "sentence",
+      "text": "你明天能来吗？",
+      "file": "hsk1-145-sentence.mp3",
+      "sha256": "f8d54ffcaf842646ef44fb499d3809ff02ad1106cb616c4d23d60d6fd47780c9"
+    },
+    {
+      "itemId": "hsk1-145",
+      "kind": "word",
+      "text": "能",
+      "file": "hsk1-145-word.mp3",
+      "sha256": "d8133e24e9520d1c692054aec647afc5473d6aa44de9aac753c1bfd4d2b280b3"
+    },
+    {
+      "itemId": "hsk1-148",
+      "kind": "sentence",
+      "text": "你们都是大学生吗？",
+      "file": "hsk1-148-sentence.mp3",
+      "sha256": "a9bf565a4ad3e4596e693885f9dd2031bee4b03c098a935a8d3c180a62d69681"
+    },
+    {
+      "itemId": "hsk1-148",
+      "kind": "word",
+      "text": "你们",
+      "file": "hsk1-148-word.mp3",
+      "sha256": "4b7c2d8712fe40017ebe10a8a3bd5cae52762d96a12cb6abcc913128d9c39df3"
+    },
+    {
+      "itemId": "hsk1-149",
+      "kind": "sentence",
+      "text": "一年有十二个月。",
+      "file": "hsk1-149-sentence.mp3",
+      "sha256": "a65d8f57ecc9b8d7e00e2dfc560385188419ee3018f91f152b2631d02de94b6f"
+    },
+    {
+      "itemId": "hsk1-149",
+      "kind": "word",
+      "text": "年",
+      "file": "hsk1-149-word.mp3",
+      "sha256": "30159e37b00b3ec2509523db417d7a356dbecea713dae48499cccdb007c5c7a3"
+    },
+    {
+      "itemId": "hsk1-150",
+      "kind": "sentence",
+      "text": "您好，请坐。",
+      "file": "hsk1-150-sentence.mp3",
+      "sha256": "b0999cbea3a42335900ca6ac7c2c9b2c5aef99f5d4d1b1a5840be4d4fc3abeaa"
+    },
+    {
+      "itemId": "hsk1-150",
+      "kind": "word",
+      "text": "您",
+      "file": "hsk1-150-word.mp3",
+      "sha256": "58a9427d3d99d52de0b1050c2aa96111a830145b3e578f88f04f3a1f21ed7dc2"
+    },
+    {
+      "itemId": "hsk1-151",
+      "kind": "sentence",
+      "text": "我每天喝牛奶。",
+      "file": "hsk1-151-sentence.mp3",
+      "sha256": "61b2fb471a1f70949f2c1b2afdd9ba3d2c12e00eb7d710c3e7bfc18f11acb0ee"
+    },
+    {
+      "itemId": "hsk1-151",
+      "kind": "word",
+      "text": "牛奶",
+      "file": "hsk1-151-word.mp3",
+      "sha256": "1ee9ba16ca9579fb908bc595083a81339c7b159babb9fa677c8c44957c9309fc"
+    },
+    {
+      "itemId": "hsk1-152",
+      "kind": "sentence",
+      "text": "这是女医生。",
+      "file": "hsk1-152-sentence.mp3",
+      "sha256": "e94265ac18a6b584f28f25bbc8c186ed5f48c1196d7d208fbadf3ac9239eef09"
+    },
+    {
+      "itemId": "hsk1-152",
+      "kind": "word",
+      "text": "女",
+      "file": "hsk1-152-word.mp3",
+      "sha256": "014655e30f86056e076277c8037bb36ea1297feb6012cfcb736685312ebe2322"
+    },
+    {
+      "itemId": "hsk1-153",
+      "kind": "sentence",
+      "text": "我女儿今年六岁。",
+      "file": "hsk1-153-sentence.mp3",
+      "sha256": "7af16289e46fb052226163c604bf871e92a85630497cce2435881252fe5a8a79"
+    },
+    {
+      "itemId": "hsk1-153",
+      "kind": "word",
+      "text": "女儿",
+      "file": "hsk1-153-word.mp3",
+      "sha256": "7503bf38a7d25cfb527e1d37fc39ec17febe97aad91736f78f914a8b188f5559"
+    },
+    {
+      "itemId": "hsk1-154",
+      "kind": "sentence",
+      "text": "他女朋友在大学工作。",
+      "file": "hsk1-154-sentence.mp3",
+      "sha256": "f2d6245fc3d34a856382eb38adbb24d94dbe195b1bbe6f2d8f676f518047f594"
+    },
+    {
+      "itemId": "hsk1-154",
+      "kind": "word",
+      "text": "女朋友",
+      "file": "hsk1-154-word.mp3",
+      "sha256": "14b3c52898373d9782ab9c4c728b44631f8b721c7b63e81cc7e655052b103d27"
+    },
+    {
+      "itemId": "hsk1-155",
+      "kind": "sentence",
+      "text": "这位女士是我的老师。",
+      "file": "hsk1-155-sentence.mp3",
+      "sha256": "9fb6285136cbad43b4ada2b4a4a0ee8969349b619b595926d161e1937bbd7446"
+    },
+    {
+      "itemId": "hsk1-155",
+      "kind": "word",
+      "text": "女士",
+      "file": "hsk1-155-word.mp3",
+      "sha256": "73e2fc5791d2d725b6bbe3566cbe83a5cbf3cb8f3af5d6d8f4193f3f51bba721"
+    },
+    {
+      "itemId": "hsk1-156",
+      "kind": "sentence",
+      "text": "他是我的好朋友。",
+      "file": "hsk1-156-sentence.mp3",
+      "sha256": "26f60788a5a9d1ebcc5bad22e4681b4bca4577d0022175b7b0cd75f78d6c0f9a"
+    },
+    {
+      "itemId": "hsk1-156",
+      "kind": "word",
+      "text": "朋友",
+      "file": "hsk1-156-word.mp3",
+      "sha256": "d646c7d9aabc5faa0e2bb323655a848f1ff7e6d8807e82cdeaa91227f19a3c7d"
+    },
+    {
+      "itemId": "hsk1-157",
+      "kind": "sentence",
+      "text": "这里的水果很便宜。",
+      "file": "hsk1-157-sentence.mp3",
+      "sha256": "319200bfc29afc9ff5a30fb04cf4ac0ae76cc14c1c6930ac5782ca8c87b39e6b"
+    },
+    {
+      "itemId": "hsk1-157",
+      "kind": "word",
+      "text": "便宜",
+      "file": "hsk1-157-word.mp3",
+      "sha256": "9fbbfb03f16c5225880b20e25f4a39b918eebbffc9ed41995efccf2fb0d11aa7"
+    },
+    {
+      "itemId": "hsk1-158",
+      "kind": "sentence",
+      "text": "你的衣服很漂亮。",
+      "file": "hsk1-158-sentence.mp3",
+      "sha256": "fdf13474d6d29418a1544603d8d2a7f98420c93ffae7daa031d2be650bb8c546"
+    },
+    {
+      "itemId": "hsk1-158",
+      "kind": "word",
+      "text": "漂亮",
+      "file": "hsk1-158-word.mp3",
+      "sha256": "da9dcbf6f9912bb32d237d008a7205fce0c81a6b0dc7d2e1d3cf494b0f9b28e5"
+    },
+    {
+      "itemId": "hsk1-159",
+      "kind": "sentence",
+      "text": "我喜欢吃苹果。",
+      "file": "hsk1-159-sentence.mp3",
+      "sha256": "523790fe9239d45a41a2b0847e69ebb90221d9d60f1da6fff69faaf41a210c8a"
+    },
+    {
+      "itemId": "hsk1-159",
+      "kind": "word",
+      "text": "苹果",
+      "file": "hsk1-159-word.mp3",
+      "sha256": "5e531711d13ae133808bef42bb860b1a6bb4f6da0706dc5396f5bd220f745ab5"
+    },
+    {
+      "itemId": "hsk1-160",
+      "kind": "sentence",
+      "text": "我们七点吃早饭。",
+      "file": "hsk1-160-sentence.mp3",
+      "sha256": "f7aff23602861b5bee18262114835dfbc2ff9dbc78e9c740f7469c44afce7013"
+    },
+    {
+      "itemId": "hsk1-160",
+      "kind": "word",
+      "text": "七",
+      "file": "hsk1-160-word.mp3",
+      "sha256": "cafdad8526cddf203a794f9d1bdb8805fa97f89a6d2dfac94ef79a766302eab9"
+    },
+    {
+      "itemId": "hsk1-161",
+      "kind": "sentence",
+      "text": "你每天几点起床？",
+      "file": "hsk1-161-sentence.mp3",
+      "sha256": "79e3465b32fa946f619f8b0cb9b74cbe50da4ce5d14611f0c158fd92638b636e"
+    },
+    {
+      "itemId": "hsk1-161",
+      "kind": "word",
+      "text": "起床",
+      "file": "hsk1-161-word.mp3",
+      "sha256": "36fa41b61a1a8826c6454c642710f027054bc5a27ef4f691d27a86017c775e91"
+    },
+    {
+      "itemId": "hsk1-162",
+      "kind": "sentence",
+      "text": "这台电脑三千元。",
+      "file": "hsk1-162-sentence.mp3",
+      "sha256": "7362694e45dc9e9fcd362d21551fd63d0e3185b05acd759be22f5c12cb43d8e4"
+    },
+    {
+      "itemId": "hsk1-162",
+      "kind": "word",
+      "text": "千",
+      "file": "hsk1-162-word.mp3",
+      "sha256": "0fa0a3bcfe7e42d9234e86e10415216f8311c12877cd8d0c9898efd143bb37a7"
+    },
+    {
+      "itemId": "hsk1-163",
+      "kind": "sentence",
+      "text": "吃饭前请洗手。",
+      "file": "hsk1-163-sentence.mp3",
+      "sha256": "7a9d8455014154afcb22c612bc87351a41d3b479316cd49800e94e5bc76f6a16"
+    },
+    {
+      "itemId": "hsk1-163",
+      "kind": "word",
+      "text": "前",
+      "file": "hsk1-163-word.mp3",
+      "sha256": "39b0b20902fe8d923cab9876530a0ad0eea6b5b2307d2899c627259b9e812b08"
+    },
+    {
+      "itemId": "hsk1-164",
+      "kind": "sentence",
+      "text": "我没有钱。",
+      "file": "hsk1-164-sentence.mp3",
+      "sha256": "ab43dfd1cb1db4feb3ac6ede17d97df4495ea245edc25eebd825d5b93f14f5b5"
+    },
+    {
+      "itemId": "hsk1-164",
+      "kind": "word",
+      "text": "钱",
+      "file": "hsk1-164-word.mp3",
+      "sha256": "c162a380910ffca53092221637c4b8a57f620aef80d489d321432040d5061447"
+    },
+    {
+      "itemId": "hsk1-165",
+      "kind": "sentence",
+      "text": "请喝茶。",
+      "file": "hsk1-165-sentence.mp3",
+      "sha256": "e1f99e8df45f8a2eab65e183c3512c6cd0a939423ed587aacfd080225640096b"
+    },
+    {
+      "itemId": "hsk1-165",
+      "kind": "word",
+      "text": "请",
+      "file": "hsk1-165-word.mp3",
+      "sha256": "f7bc2461afb0f0ebcc6da4f963788239b58df8c15224ea2ceb6998d7e82265f8"
+    },
+    {
+      "itemId": "hsk1-166",
+      "kind": "sentence",
+      "text": "请问，医院在哪儿？",
+      "file": "hsk1-166-sentence.mp3",
+      "sha256": "187b74c6282a6bd2539479f8b42a3a8903d2092de1a5aaad0f063b8210a57418"
+    },
+    {
+      "itemId": "hsk1-166",
+      "kind": "word",
+      "text": "请问",
+      "file": "hsk1-166-word.mp3",
+      "sha256": "f581c429a202fc7eea6975f50947cb2b2fc81684832e8db2baa32f41ca71167d"
+    },
+    {
+      "itemId": "hsk1-167",
+      "kind": "sentence",
+      "text": "你想去哪儿？",
+      "file": "hsk1-167-sentence.mp3",
+      "sha256": "7cc19ea3ad90e0dc60b47f07626b2e6f1076aa0ca58760bf6f1d61889ff505b5"
+    },
+    {
+      "itemId": "hsk1-167",
+      "kind": "word",
+      "text": "去",
+      "file": "hsk1-167-word.mp3",
+      "sha256": "7f10e3fc935bb60cc61bd3878a951c3089c2214b440a923f615bdfe1a38884b6"
+    },
+    {
+      "itemId": "hsk1-168",
+      "kind": "sentence",
+      "text": "我去年在中国学习。",
+      "file": "hsk1-168-sentence.mp3",
+      "sha256": "72f6c6893c1110ce31f91b755e776ab86963f49f121b25b2edc48a854886ab9e"
+    },
+    {
+      "itemId": "hsk1-168",
+      "kind": "word",
+      "text": "去年",
+      "file": "hsk1-168-word.mp3",
+      "sha256": "50bb1bcc2d3f57c784e5f7c9cad588f4395fd41719dd4c9c9986cb9afbb51777"
+    },
+    {
+      "itemId": "hsk1-169",
+      "kind": "sentence",
+      "text": "今天很热。",
+      "file": "hsk1-169-sentence.mp3",
+      "sha256": "1335d5f46b24322da1ae9a2edf16f657a3187fb40d95ab2c6da2e7d8926da623"
+    },
+    {
+      "itemId": "hsk1-169",
+      "kind": "word",
+      "text": "热",
+      "file": "hsk1-169-word.mp3",
+      "sha256": "dfe36a41c8331693e6db7012996b9e0f022e091fc4fdd6ddca46be88b29f1a46"
+    },
+    {
+      "itemId": "hsk1-170",
+      "kind": "sentence",
+      "text": "这里有很多人。",
+      "file": "hsk1-170-sentence.mp3",
+      "sha256": "733c73bbdeff548b4efcf9dcc432122ce40f767f61df9e5f4f66ac804c795d27"
+    },
+    {
+      "itemId": "hsk1-170",
+      "kind": "word",
+      "text": "人",
+      "file": "hsk1-170-word.mp3",
+      "sha256": "c5cdf4560953312f767dbf324b3807a14d0480dbec23aa92411c4c756f0a6be4"
+    },
+    {
+      "itemId": "hsk1-171",
+      "kind": "sentence",
+      "text": "我认识这位老师。",
+      "file": "hsk1-171-sentence.mp3",
+      "sha256": "366db8fe78a04f07a5240c58fd6d5f4df6af47582cf28e2de0bab2a0760b51e5"
+    },
+    {
+      "itemId": "hsk1-171",
+      "kind": "word",
+      "text": "认识",
+      "file": "hsk1-171-word.mp3",
+      "sha256": "23174bd14a5ebc27cc82040078b66327958f0fffb514436874ea6a55341f082f"
+    },
+    {
+      "itemId": "hsk1-172",
+      "kind": "sentence",
+      "text": "今天是十月一日。",
+      "file": "hsk1-172-sentence.mp3",
+      "sha256": "ce100fc04a5489eb46ffdb7dfd80a6a34d5f6154a31c09aba748a6836c74a79a"
+    },
+    {
+      "itemId": "hsk1-172",
+      "kind": "word",
+      "text": "日",
+      "file": "hsk1-172-word.mp3",
+      "sha256": "2503cb24648c2c6b3bc7b1f38ce7f8cd77393a399a5495d70ab4d2ec922f2002"
+    },
+    {
+      "itemId": "hsk1-173",
+      "kind": "sentence",
+      "text": "我有三本书。",
+      "file": "hsk1-173-sentence.mp3",
+      "sha256": "fddb8007f6a5f15b29da5c0f9ceb745ca7c5b9adedd9c80eda994f1098ea1460"
+    },
+    {
+      "itemId": "hsk1-173",
+      "kind": "word",
+      "text": "三",
+      "file": "hsk1-173-word.mp3",
+      "sha256": "f8f9fce460cacc0cfeeaacc9caafa78e9f35a313b0c92a23d229e13718339517"
+    },
+    {
+      "itemId": "hsk1-174",
+      "kind": "sentence",
+      "text": "商店在医院前边。",
+      "file": "hsk1-174-sentence.mp3",
+      "sha256": "bca6d648415b8b411c8fe625e9c3138eaa4cde1368b3ae726b9d12dc2a6ae000"
+    },
+    {
+      "itemId": "hsk1-174",
+      "kind": "word",
+      "text": "商店",
+      "file": "hsk1-174-word.mp3",
+      "sha256": "09b13c8a50dfd8f691c776dc1337a1c126b4c03cfd353a17b4984fc82d5f9a27"
+    },
+    {
+      "itemId": "hsk1-175",
+      "kind": "sentence",
+      "text": "书在桌子上。",
+      "file": "hsk1-175-sentence.mp3",
+      "sha256": "a26181ee4a6517539944658d4bf589ffea2338b5b61a64679ed2256b5fd9751a"
+    },
+    {
+      "itemId": "hsk1-175",
+      "kind": "word",
+      "text": "上",
+      "file": "hsk1-175-word.mp3",
+      "sha256": "70d1ef8318e97f87130e24f7190b193cd3a7881249ac8acf648fd820ff0c325c"
+    },
+    {
+      "itemId": "hsk1-176",
+      "kind": "sentence",
+      "text": "我爸爸八点上班。",
+      "file": "hsk1-176-sentence.mp3",
+      "sha256": "874f936017edd259203360235f25f128809fa4f1dac2ee8432a0f99ff0928a21"
+    },
+    {
+      "itemId": "hsk1-176",
+      "kind": "word",
+      "text": "上班",
+      "file": "hsk1-176-word.mp3",
+      "sha256": "7644398e4b1d8b961224a48857b92b896c3f4301fe607d0085cefc078ac14af1"
+    },
+    {
+      "itemId": "hsk1-177",
+      "kind": "sentence",
+      "text": "我们上午上课。",
+      "file": "hsk1-177-sentence.mp3",
+      "sha256": "f0c8dda8b94c8217b0735c8ad79e71efce2c8b6d12abb918f1b2e612f95f6f13"
+    },
+    {
+      "itemId": "hsk1-177",
+      "kind": "word",
+      "text": "上课",
+      "file": "hsk1-177-word.mp3",
+      "sha256": "ba2bf76817385d03885fa9adc6430adb5c1e4f7375ef643970f96ae994711088"
+    },
+    {
+      "itemId": "hsk1-178",
+      "kind": "sentence",
+      "text": "我上午去学校。",
+      "file": "hsk1-178-sentence.mp3",
+      "sha256": "f7d36ffc87e01b1103d4e7ac725e3b87c0cbb5d7aa1ff6139a87fb53cbe5349e"
+    },
+    {
+      "itemId": "hsk1-178",
+      "kind": "word",
+      "text": "上午",
+      "file": "hsk1-178-word.mp3",
+      "sha256": "3e51d56f43406846a5a4bb9aafd25508503941b8b900a006f38708782ed32ca6"
+    },
+    {
+      "itemId": "hsk1-179",
+      "kind": "sentence",
+      "text": "弟弟每天坐车上学。",
+      "file": "hsk1-179-sentence.mp3",
+      "sha256": "c30f087ca75fea174dea75bd2f945da089c02b29e19b3971422bd16e23d3d55d"
+    },
+    {
+      "itemId": "hsk1-179",
+      "kind": "word",
+      "text": "上学",
+      "file": "hsk1-179-word.mp3",
+      "sha256": "675247be1519350e9f249125debeb3001a0c0010e9c2e2b27ef02b2974365d20"
+    },
+    {
+      "itemId": "hsk1-180",
+      "kind": "sentence",
+      "text": "今天人很少。",
+      "file": "hsk1-180-sentence.mp3",
+      "sha256": "aabdaf2dec79ba8e09e85583029ca890bb29aafd74ea6892806b9d630b186193"
+    },
+    {
+      "itemId": "hsk1-180",
+      "kind": "word",
+      "text": "少",
+      "file": "hsk1-180-word.mp3",
+      "sha256": "f8b40a8b6d0b27c293f0dd0fd746868cc086fc5bde201f5b4e8ae1b4b2b1f05c"
+    },
+    {
+      "itemId": "hsk1-181",
+      "kind": "sentence",
+      "text": "那个人是谁？",
+      "file": "hsk1-181-sentence.mp3",
+      "sha256": "01657c1e03ee0e04a51c861a3a781d1e12fe468ad144a53ae64b327cf23b81c7"
+    },
+    {
+      "itemId": "hsk1-181",
+      "kind": "word",
+      "text": "谁",
+      "file": "hsk1-181-word.mp3",
+      "sha256": "38484075033644931e4218913dcc90ac71d693385a8cdf7928b3dba65d3727ec"
+    },
+    {
+      "itemId": "hsk1-182",
+      "kind": "sentence",
+      "text": "你想吃什么？",
+      "file": "hsk1-182-sentence.mp3",
+      "sha256": "3905d807aea18ee09f512dec377656f85d70dd09eec53c97639ae925b595a8f3"
+    },
+    {
+      "itemId": "hsk1-182",
+      "kind": "word",
+      "text": "什么",
+      "file": "hsk1-182-word.mp3",
+      "sha256": "8c9d93f3b47d564f17be45adc6f42895e268e641af5a9500b09f81de532a0933"
+    },
+    {
+      "itemId": "hsk1-183",
+      "kind": "sentence",
+      "text": "我生病了，想休息。",
+      "file": "hsk1-183-sentence.mp3",
+      "sha256": "9e016e96db04e859592d5646de0ace8760beb9300ec13328309c2db3bd641861"
+    },
+    {
+      "itemId": "hsk1-183",
+      "kind": "word",
+      "text": "生病",
+      "file": "hsk1-183-word.mp3",
+      "sha256": "8ea055f923ffe4ccdca567ea6d48dc00448b2337dd7f5234725230a0bff106d1"
+    },
+    {
+      "itemId": "hsk1-184",
+      "kind": "sentence",
+      "text": "这里有十个学生。",
+      "file": "hsk1-184-sentence.mp3",
+      "sha256": "9a278c2045c35cd4c40de8896a065075d7b346f0b71b481eefd994c2d73fd066"
+    },
+    {
+      "itemId": "hsk1-184",
+      "kind": "word",
+      "text": "十",
+      "file": "hsk1-184-word.mp3",
+      "sha256": "b7ca95151f423573c797ed1cf6fad4ec6e8effcbe53318579459de3807e0c876"
+    },
+    {
+      "itemId": "hsk1-185",
+      "kind": "sentence",
+      "text": "你什么时候来？",
+      "file": "hsk1-185-sentence.mp3",
+      "sha256": "eeac6fd35f3fe40997edad1696fa94dc3f6fa3d193c91c546c688e505156c44c"
+    },
+    {
+      "itemId": "hsk1-185",
+      "kind": "word",
+      "text": "时候",
+      "file": "hsk1-185-word.mp3",
+      "sha256": "9f59f304e279933bd918c740e4525e7a39558037ab930345e64e58decdc543eb"
+    },
+    {
+      "itemId": "hsk1-187",
+      "kind": "sentence",
+      "text": "我有事想问你。",
+      "file": "hsk1-187-sentence.mp3",
+      "sha256": "c99c03498575895ac636773cc766d33b89ec2e1dac68ddb913df3ba89e00e1b7"
+    },
+    {
+      "itemId": "hsk1-187",
+      "kind": "word",
+      "text": "事",
+      "file": "hsk1-187-word.mp3",
+      "sha256": "e19b68038f925cc2226c14717c1028c1ed3c656b3ac6dac0d2f778ef483147b5"
+    },
+    {
+      "itemId": "hsk1-189",
+      "kind": "sentence",
+      "text": "我的手机在哪里？",
+      "file": "hsk1-189-sentence.mp3",
+      "sha256": "5daae38b2c2b0e7ad03536308d9a4e9abeb98224cbef3eedbfaefd76bb3c63ec"
+    },
+    {
+      "itemId": "hsk1-189",
+      "kind": "word",
+      "text": "手机",
+      "file": "hsk1-189-word.mp3",
+      "sha256": "a580500b3c20de9637473ead5faf08160c9cc5bd4f8740e381abb221a36e67aa"
+    },
+    {
+      "itemId": "hsk1-190",
+      "kind": "sentence",
+      "text": "这本书是我的。",
+      "file": "hsk1-190-sentence.mp3",
+      "sha256": "3ed0f0ac4db8352a974aa2c94c090eb4c6b29c81d8b1acfbafb173e164791c4a"
+    },
+    {
+      "itemId": "hsk1-190",
+      "kind": "word",
+      "text": "书",
+      "file": "hsk1-190-word.mp3",
+      "sha256": "994ff681f7d360e5337e58c28d815ae7fe9d305184768e5f1befb3041c38b771"
+    },
+    {
+      "itemId": "hsk1-191",
+      "kind": "sentence",
+      "text": "我去书店买书。",
+      "file": "hsk1-191-sentence.mp3",
+      "sha256": "51f715914e4afa83677fb4ca5e363c5ac8103944c4c0dbf156660a752ec8332f"
+    },
+    {
+      "itemId": "hsk1-191",
+      "kind": "word",
+      "text": "书店",
+      "file": "hsk1-191-word.mp3",
+      "sha256": "4a5334ff548bf1fec7316b2ec2fb1d092fceefa4312c56eddcab30df3d33c7b0"
+    },
+    {
+      "itemId": "hsk1-193",
+      "kind": "sentence",
+      "text": "你喜欢吃什么水果？",
+      "file": "hsk1-193-sentence.mp3",
+      "sha256": "b951774b3f9602de7cd00194358750a821b110a94c764ef88d9b7a84875e905b"
+    },
+    {
+      "itemId": "hsk1-193",
+      "kind": "word",
+      "text": "水果",
+      "file": "hsk1-193-word.mp3",
+      "sha256": "e14cbee2b4949dd3cbac14c8d5678994261a3b4aa151ce45c62693d058bbf954"
+    },
+    {
+      "itemId": "hsk1-194",
+      "kind": "sentence",
+      "text": "孩子已经睡了。",
+      "file": "hsk1-194-sentence.mp3",
+      "sha256": "5420d74b30461cc9350b5370ff69aa540ca8c5b44af5afa333f6890e178fea01"
+    },
+    {
+      "itemId": "hsk1-194",
+      "kind": "word",
+      "text": "睡",
+      "file": "hsk1-194-word.mp3",
+      "sha256": "bda6c87924289a515b24bfa6872a3dec577b738b44f2085ab652aba41fcc046d"
+    },
+    {
+      "itemId": "hsk1-195",
+      "kind": "sentence",
+      "text": "我每天十点睡觉。",
+      "file": "hsk1-195-sentence.mp3",
+      "sha256": "50e433f6bc96ac6b527e93733240b02d4d51404828f2df3e79d22cca6e2b5c2d"
+    },
+    {
+      "itemId": "hsk1-195",
+      "kind": "word",
+      "text": "睡觉",
+      "file": "hsk1-195-word.mp3",
+      "sha256": "89141c0a421bc6cf6e5b68018cf9bda662a18868eb193c05431020ff92e282b4"
+    },
+    {
+      "itemId": "hsk1-196",
+      "kind": "sentence",
+      "text": "请再说一次。",
+      "file": "hsk1-196-sentence.mp3",
+      "sha256": "3f7c134557ae582cd53c6582795e13da249f500c8b2eaa58854bf1ca5e513c43"
+    },
+    {
+      "itemId": "hsk1-196",
+      "kind": "word",
+      "text": "说",
+      "file": "hsk1-196-word.mp3",
+      "sha256": "7c51e96a81af31dd2a854f610c7012cc4c2076f238d9805f678b7cdfade5579b"
+    },
+    {
+      "itemId": "hsk1-197",
+      "kind": "sentence",
+      "text": "老师正在说话。",
+      "file": "hsk1-197-sentence.mp3",
+      "sha256": "ca880aa9cb9450efedbb4aae41666699197e778736316e4dad4d341d36ec5986"
+    },
+    {
+      "itemId": "hsk1-197",
+      "kind": "word",
+      "text": "说话",
+      "file": "hsk1-197-word.mp3",
+      "sha256": "b6bdb53248ac32a3ab7abf308dc4e4ad8226f68dd848a7883b73faf4acce4e96"
+    },
+    {
+      "itemId": "hsk1-198",
+      "kind": "sentence",
+      "text": "我们家有四口人。",
+      "file": "hsk1-198-sentence.mp3",
+      "sha256": "f9ea6f8dd001313d35f5e1cf5e16294226592f937120ea739848a632ff9dcdaa"
+    },
+    {
+      "itemId": "hsk1-198",
+      "kind": "word",
+      "text": "四",
+      "file": "hsk1-198-word.mp3",
+      "sha256": "3c90f3532014e1fefa66d42ce3eca3e18ca0f1aace23e46f1024cc73e1ebaefd"
+    },
+    {
+      "itemId": "hsk1-199",
+      "kind": "sentence",
+      "text": "你今年几岁？",
+      "file": "hsk1-199-sentence.mp3",
+      "sha256": "3bb38813b6982f5e8729fac00dce9747d61003839c66b845963c440ee5332d85"
+    },
+    {
+      "itemId": "hsk1-199",
+      "kind": "word",
+      "text": "岁",
+      "file": "hsk1-199-word.mp3",
+      "sha256": "afd3930131d14e474c3ea3c2659eac4fdaaa5c09f7e4f18236a0b7596ccc96a9"
+    },
+    {
+      "itemId": "hsk1-200",
+      "kind": "sentence",
+      "text": "他是我的朋友。",
+      "file": "hsk1-200-sentence.mp3",
+      "sha256": "4207eed2a5c76b31e7053c0b2d8f525b85f5530787eaab48dc11d6246cc0cdf4"
+    },
+    {
+      "itemId": "hsk1-200",
+      "kind": "word",
+      "text": "他",
+      "file": "hsk1-200-word.mp3",
+      "sha256": "0887b738e1bf3fb8be7d15d1bb24cda49bb689f805f4d33e09ed538fd54f60cc"
+    },
+    {
+      "itemId": "hsk1-201",
+      "kind": "sentence",
+      "text": "它是一只猫。",
+      "file": "hsk1-201-sentence.mp3",
+      "sha256": "5a6956c92df4c5acae28dde34cf47813ff5a395b83b8f4815625b91d6a438957"
+    },
+    {
+      "itemId": "hsk1-201",
+      "kind": "word",
+      "text": "它",
+      "file": "hsk1-201-word.mp3",
+      "sha256": "690d37eaa483d39065264e92a956eed402759c200bdf3831a1666c5ab8cc23c7"
+    },
+    {
+      "itemId": "hsk1-202",
+      "kind": "sentence",
+      "text": "她是我们的老师。",
+      "file": "hsk1-202-sentence.mp3",
+      "sha256": "b4e0d74ff9ef3197dac402e3b4553b62e0530f4e9f2fbf9bcd907fd698de0002"
+    },
+    {
+      "itemId": "hsk1-202",
+      "kind": "word",
+      "text": "她",
+      "file": "hsk1-202-word.mp3",
+      "sha256": "b930f793528a9288e12cd87acf5e598467177a18bcdddf7ff809486a6165e4b4"
+    },
+    {
+      "itemId": "hsk1-203",
+      "kind": "sentence",
+      "text": "他们在学校学习。",
+      "file": "hsk1-203-sentence.mp3",
+      "sha256": "f4d1a60c6e49efeedb0fa495a0093d8678bd86604f098fb3a354b71078136170"
+    },
+    {
+      "itemId": "hsk1-203",
+      "kind": "word",
+      "text": "他们",
+      "file": "hsk1-203-word.mp3",
+      "sha256": "5082449f4db12db3e00bf352724e1facca073997f5d49b5dacc20c91199d9d8b"
+    },
+    {
+      "itemId": "hsk1-204",
+      "kind": "sentence",
+      "text": "它们是我的猫。",
+      "file": "hsk1-204-sentence.mp3",
+      "sha256": "41d648874bca732d3c177fcd1c07bf31919aaa7294b75bf9de9bb79b0d0df4d4"
+    },
+    {
+      "itemId": "hsk1-204",
+      "kind": "word",
+      "text": "它们",
+      "file": "hsk1-204-word.mp3",
+      "sha256": "cf76754156d9ca0d941a57528009abcb29cb1d9332f20e1dae7f3ea028493dab"
+    },
+    {
+      "itemId": "hsk1-205",
+      "kind": "sentence",
+      "text": "她们都是学生。",
+      "file": "hsk1-205-sentence.mp3",
+      "sha256": "0449559cf5713951ade7592a9b89444351396aab355b550dd916e010eb8b9294"
+    },
+    {
+      "itemId": "hsk1-205",
+      "kind": "word",
+      "text": "她们",
+      "file": "hsk1-205-word.mp3",
+      "sha256": "06e50e1f095fbfb4e70c74d8e03595c596dfa872fc11303c0960b3c8524d1fbb"
+    },
+    {
+      "itemId": "hsk1-206",
+      "kind": "sentence",
+      "text": "今天太热了！",
+      "file": "hsk1-206-sentence.mp3",
+      "sha256": "a22ae68f31290957e1030935efd8e83feb4d1b3e31fe708ded301827b5f20448"
+    },
+    {
+      "itemId": "hsk1-206",
+      "kind": "word",
+      "text": "太",
+      "file": "hsk1-206-word.mp3",
+      "sha256": "a2c1088d8e87dc9de4863913f986923a39a1e4ad2a0f26481fc34c4be8f37175"
+    },
+    {
+      "itemId": "hsk1-207",
+      "kind": "sentence",
+      "text": "我在这里住三天。",
+      "file": "hsk1-207-sentence.mp3",
+      "sha256": "ccc1a7b0b6a2050036ffad9731cdb66e15c81af86949a6129fb0050279db39d0"
+    },
+    {
+      "itemId": "hsk1-207",
+      "kind": "word",
+      "text": "天",
+      "file": "hsk1-207-word.mp3",
+      "sha256": "09493b661faaace3b5c3f7cae95d2853aba68a21f81d7820a9ce1b0e503e5664"
+    },
+    {
+      "itemId": "hsk1-208",
+      "kind": "sentence",
+      "text": "今天天气怎么样？",
+      "file": "hsk1-208-sentence.mp3",
+      "sha256": "d94ac6f7e49493ac06eb9263ef4abd783e1adcd3cd6121a609b4dc65bcb7c357"
+    },
+    {
+      "itemId": "hsk1-208",
+      "kind": "word",
+      "text": "天气",
+      "file": "hsk1-208-word.mp3",
+      "sha256": "a5be6becb506d2d3d7c0976072b5204b685844866345a28e6fe79dcdf82de6ef"
+    },
+    {
+      "itemId": "hsk1-209",
+      "kind": "sentence",
+      "text": "我喜欢听中文歌。",
+      "file": "hsk1-209-sentence.mp3",
+      "sha256": "d9f05dbd80738daed8336eeafe25deb7b040c2ac83597a1a96759d8bc2878d89"
+    },
+    {
+      "itemId": "hsk1-209",
+      "kind": "word",
+      "text": "听",
+      "file": "hsk1-209-word.mp3",
+      "sha256": "e48474e545cb957e1dc486d972236edfdfabacd3d2120613d062b3d9b370c360"
+    },
+    {
+      "itemId": "hsk1-210",
+      "kind": "sentence",
+      "text": "你听见了吗？",
+      "file": "hsk1-210-sentence.mp3",
+      "sha256": "5d5d42a62f64e80e240c08c8bd70d0a0d00ef4b732ed0728e99ff19ff6752803"
+    },
+    {
+      "itemId": "hsk1-210",
+      "kind": "word",
+      "text": "听见",
+      "file": "hsk1-210-word.mp3",
+      "sha256": "bbdd5dc5d48c96801b5778c43d5bbe6f4fa511f298fe385b3ff4f6b1e280f232"
+    },
+    {
+      "itemId": "hsk1-211",
+      "kind": "sentence",
+      "text": "他是我的同学。",
+      "file": "hsk1-211-sentence.mp3",
+      "sha256": "e7e754a75fee03b0018b2349103cd7ab9045e196f3d6e77240bb189637ba6adc"
+    },
+    {
+      "itemId": "hsk1-211",
+      "kind": "word",
+      "text": "同学",
+      "file": "hsk1-211-word.mp3",
+      "sha256": "75a668b64578130ad4df2afe4070862d71ba9c144a075670088d83a18a592971"
+    },
+    {
+      "itemId": "hsk1-212",
+      "kind": "sentence",
+      "text": "我在学校外等你。",
+      "file": "hsk1-212-sentence.mp3",
+      "sha256": "e251424dcdcb2b92aad6dabed7a076267cb49285b4f3b0b1e664a945b117ea61"
+    },
+    {
+      "itemId": "hsk1-212",
+      "kind": "word",
+      "text": "外",
+      "file": "hsk1-212-word.mp3",
+      "sha256": "cbbc576bcdf98a5f6e45b6a803a4c03c598bdba94f70b0bdb55136c4942a7712"
+    },
+    {
+      "itemId": "hsk1-213",
+      "kind": "sentence",
+      "text": "外边很冷。",
+      "file": "hsk1-213-sentence.mp3",
+      "sha256": "718034af8f63d9b9fff00b7ebc39c14e70c8bc8b092c5b6cd0270e1fe78a1066"
+    },
+    {
+      "itemId": "hsk1-213",
+      "kind": "word",
+      "text": "外边",
+      "file": "hsk1-213-word.mp3",
+      "sha256": "ebbe483db011c58307a4f26ee7ce529e29b5071300fe8216964b0b552e89bcdc"
+    },
+    {
+      "itemId": "hsk1-214",
+      "kind": "sentence",
+      "text": "孩子们在家玩。",
+      "file": "hsk1-214-sentence.mp3",
+      "sha256": "bbff8f9ca3159194861f5e1884dd9fd264740a44823267e969eeb6ebd7f1c2c5"
+    },
+    {
+      "itemId": "hsk1-214",
+      "kind": "word",
+      "text": "玩",
+      "file": "hsk1-214-word.mp3",
+      "sha256": "2c28e581523052dde069d8cdd2e7975b6c5d00f31a75988b172f0d60faba68f7"
+    },
+    {
+      "itemId": "hsk1-215",
+      "kind": "sentence",
+      "text": "现在太晚了。",
+      "file": "hsk1-215-sentence.mp3",
+      "sha256": "8e670bdeb721e648c194423720490b81efaab11ceac152b476c65ff4f70b4f6b"
+    },
+    {
+      "itemId": "hsk1-215",
+      "kind": "word",
+      "text": "晚",
+      "file": "hsk1-215-word.mp3",
+      "sha256": "db537f120e46fe0f9ca6d6a4a75976035c9ed6124f30f092afb58224f45490b3"
+    },
+    {
+      "itemId": "hsk1-216",
+      "kind": "sentence",
+      "text": "我们六点吃晚饭。",
+      "file": "hsk1-216-sentence.mp3",
+      "sha256": "fab8d74de1c01241f7511c03d7961a5146b578623e3fcada214fbfaf6551ad8a"
+    },
+    {
+      "itemId": "hsk1-216",
+      "kind": "word",
+      "text": "晚饭",
+      "file": "hsk1-216-word.mp3",
+      "sha256": "1683b4fdf339d03ecb06355145e7662dafd23974451d1a2ec9e39647a817e28c"
+    },
+    {
+      "itemId": "hsk1-217",
+      "kind": "sentence",
+      "text": "我晚上在家学习。",
+      "file": "hsk1-217-sentence.mp3",
+      "sha256": "f93399999cb04e462d45b01442e99ada9d89454c3a4f592b149feaff4a79e93e"
+    },
+    {
+      "itemId": "hsk1-217",
+      "kind": "word",
+      "text": "晚上",
+      "file": "hsk1-217-word.mp3",
+      "sha256": "09e73d5324fc0227c0ee2b6efd80d2c9738d5b3de54cc60db8f28583c02a4fb5"
+    },
+    {
+      "itemId": "hsk1-218",
+      "kind": "sentence",
+      "text": "喂，你好，请问你是谁？",
+      "file": "hsk1-218-sentence.mp3",
+      "sha256": "2553d9728790692ebd59aa8e4ee1be33eb789a0826cdba8ef00f69349b4b30b3"
+    },
+    {
+      "itemId": "hsk1-218",
+      "kind": "word",
+      "text": "喂",
+      "file": "hsk1-218-word.mp3",
+      "sha256": "bc4cca5c8fd3b73a1bb2f1409869322a557537223895123a6970e07a183b2118"
+    },
+    {
+      "itemId": "hsk1-219",
+      "kind": "sentence",
+      "text": "我想问一个问题。",
+      "file": "hsk1-219-sentence.mp3",
+      "sha256": "f47c83384607d282be3b9b0a42811fdc13edadda6c9499a05af7f08cc70ae51b"
+    },
+    {
+      "itemId": "hsk1-219",
+      "kind": "word",
+      "text": "问",
+      "file": "hsk1-219-word.mp3",
+      "sha256": "4be4cf584fcc7028d7aebebd636c3410ed20076f7cd62120d3121f2d4f5f4a45"
+    },
+    {
+      "itemId": "hsk1-220",
+      "kind": "sentence",
+      "text": "这个问题很简单。",
+      "file": "hsk1-220-sentence.mp3",
+      "sha256": "14346e64dbe7455dc2f4399a6438c8b2d534cfda4034a9930c41ae052df2ff8c"
+    },
+    {
+      "itemId": "hsk1-220",
+      "kind": "word",
+      "text": "问题",
+      "file": "hsk1-220-word.mp3",
+      "sha256": "1ab2603d25c97e90308a416b64acaa1f2e94623be6bdf800a301b01c47d6e32f"
+    },
+    {
+      "itemId": "hsk1-222",
+      "kind": "sentence",
+      "text": "我们一起学习吧。",
+      "file": "hsk1-222-sentence.mp3",
+      "sha256": "77aff3814a82f444f60abeda2882a32a105844f696b03da32915590152548dfa"
+    },
+    {
+      "itemId": "hsk1-222",
+      "kind": "word",
+      "text": "我们",
+      "file": "hsk1-222-word.mp3",
+      "sha256": "c097bf5e895046e6fd034ebd7445953161df3e60c3791a0b22684750c6848f62"
+    },
+    {
+      "itemId": "hsk1-223",
+      "kind": "sentence",
+      "text": "我有五个苹果。",
+      "file": "hsk1-223-sentence.mp3",
+      "sha256": "6f7179250ed41377c0c445ac7f41c4d18a6c9c26eee35d4ef54ed2c06ea602ce"
+    },
+    {
+      "itemId": "hsk1-223",
+      "kind": "word",
+      "text": "五",
+      "file": "hsk1-223-word.mp3",
+      "sha256": "912abd23cbe506f9f7b7c296ef85033737c347114eab5c8ba5ac63a8e19b91c2"
+    },
+    {
+      "itemId": "hsk1-224",
+      "kind": "sentence",
+      "text": "中午你吃什么午饭？",
+      "file": "hsk1-224-sentence.mp3",
+      "sha256": "3ed8685ebc8f5513a280fb9a230fbe36e6ab4ac8da7290efb16ea5bf5fb1220d"
+    },
+    {
+      "itemId": "hsk1-224",
+      "kind": "word",
+      "text": "午饭",
+      "file": "hsk1-224-word.mp3",
+      "sha256": "5ececd4c11b41cd43aa5150e256a3c64851d107b43ea0a3c826e8439b6d399e8"
+    },
+    {
+      "itemId": "hsk1-225",
+      "kind": "sentence",
+      "text": "我喜欢学习中文。",
+      "file": "hsk1-225-sentence.mp3",
+      "sha256": "5c8a0c935ae19426b65094d71d355a3768caa35d6d81dd2e2c7b424bcd6bd43a"
+    },
+    {
+      "itemId": "hsk1-225",
+      "kind": "word",
+      "text": "喜欢",
+      "file": "hsk1-225-word.mp3",
+      "sha256": "b75d8efd5a81f86ef5760a3cd3c3027f8badb9046ed391e6c3344919ac0ec95f"
+    },
+    {
+      "itemId": "hsk1-226",
+      "kind": "sentence",
+      "text": "猫在桌子下。",
+      "file": "hsk1-226-sentence.mp3",
+      "sha256": "50ce8ba467b13fe95e99c41022f544e1f83b621e947865405eaeadab830c184a"
+    },
+    {
+      "itemId": "hsk1-226",
+      "kind": "word",
+      "text": "下",
+      "file": "hsk1-226-word.mp3",
+      "sha256": "f6ac37502be6232b4ce04c559b0f489005d00ae75cae14db03f1cf44c0a2bf88"
+    },
+    {
+      "itemId": "hsk1-227",
+      "kind": "sentence",
+      "text": "今天下雨了。",
+      "file": "hsk1-227-sentence.mp3",
+      "sha256": "301785b887039af2e4b4687d575fcc7e27351cc7bc1ec4b177f71357a9021d1a"
+    },
+    {
+      "itemId": "hsk1-227",
+      "kind": "word",
+      "text": "下雨",
+      "file": "hsk1-227-word.mp3",
+      "sha256": "eaef12fdbf1737a6f0c81bb41c4773d680220351e6adb6a5238820a8279bdab2"
+    },
+    {
+      "itemId": "hsk1-228",
+      "kind": "sentence",
+      "text": "我妈妈六点下班。",
+      "file": "hsk1-228-sentence.mp3",
+      "sha256": "c667bef34000d073ec84cdcde310e322c323f812ac8c823a7719253ce6892133"
+    },
+    {
+      "itemId": "hsk1-228",
+      "kind": "word",
+      "text": "下班",
+      "file": "hsk1-228-word.mp3",
+      "sha256": "a3e62c332d9950df2c95371e89449b83b6dad5a645afd24c4c882b9af707ca49"
+    },
+    {
+      "itemId": "hsk1-229",
+      "kind": "sentence",
+      "text": "我们五点下课。",
+      "file": "hsk1-229-sentence.mp3",
+      "sha256": "bf66a72107eaef59d6dc75c933b073ff65a4562dc46d8488862948243f731ebf"
+    },
+    {
+      "itemId": "hsk1-229",
+      "kind": "word",
+      "text": "下课",
+      "file": "hsk1-229-word.mp3",
+      "sha256": "c1c76545a150eae686e3627549a1d9ba96007d5671af4d5cd48c03a59206317f"
+    },
+    {
+      "itemId": "hsk1-230",
+      "kind": "sentence",
+      "text": "我下午去书店。",
+      "file": "hsk1-230-sentence.mp3",
+      "sha256": "8548e83cfeb4ce481af07b9aef63ff69857cb29d8d6dc0a42db48725bde560d2"
+    },
+    {
+      "itemId": "hsk1-230",
+      "kind": "word",
+      "text": "下午",
+      "file": "hsk1-230-word.mp3",
+      "sha256": "06514017db0df6d3080a8a5fe8c69e04774bac0a4fb58ebf5978d8a3868d7627"
+    },
+    {
+      "itemId": "hsk1-231",
+      "kind": "sentence",
+      "text": "王先生是我的老师。",
+      "file": "hsk1-231-sentence.mp3",
+      "sha256": "39d79f671732683b3f452d93a43862b1621068515c11d92daeae92ac9fb52b20"
+    },
+    {
+      "itemId": "hsk1-231",
+      "kind": "word",
+      "text": "先生",
+      "file": "hsk1-231-word.mp3",
+      "sha256": "4b10d8f04bbe0d34b5c437d8d38cf693ab0257f00ddeb323c7ff07d8859b68b1"
+    },
+    {
+      "itemId": "hsk1-233",
+      "kind": "sentence",
+      "text": "我想喝茶。",
+      "file": "hsk1-233-sentence.mp3",
+      "sha256": "37aceafba1b452d9f877bdf626623b3ce7d91e76e85be6102affe3233afa926c"
+    },
+    {
+      "itemId": "hsk1-233",
+      "kind": "word",
+      "text": "想",
+      "file": "hsk1-233-word.mp3",
+      "sha256": "c67ec0676c1f2ae61405ba34cec936f46f1d3edc0fa5a1dcd137822b8226b905"
+    },
+    {
+      "itemId": "hsk1-234",
+      "kind": "sentence",
+      "text": "我的房间很小。",
+      "file": "hsk1-234-sentence.mp3",
+      "sha256": "7a1484b1454706292c2b50aa50e4bd8acadaeb27d65f99bfaa5e672c8aae746b"
+    },
+    {
+      "itemId": "hsk1-234",
+      "kind": "word",
+      "text": "小",
+      "file": "hsk1-234-word.mp3",
+      "sha256": "9b6589f3bc28c6e9929df80882666541a0f0c33d05524a289a500ce5eb294647"
+    },
+    {
+      "itemId": "hsk1-235",
+      "kind": "sentence",
+      "text": "小朋友，你叫什么名字？",
+      "file": "hsk1-235-sentence.mp3",
+      "sha256": "84463ff72b40f13834bff5375dc5c8ba0fdee04ecd653f493d39d597cdb3caa9"
+    },
+    {
+      "itemId": "hsk1-235",
+      "kind": "word",
+      "text": "小朋友",
+      "file": "hsk1-235-word.mp3",
+      "sha256": "9b6ac7aa991481f6520b77bd359ac67b3158e392dfb45dc7731d1e7c9f5724f9"
+    },
+    {
+      "itemId": "hsk1-236",
+      "kind": "sentence",
+      "text": "我每天学习一个小时。",
+      "file": "hsk1-236-sentence.mp3",
+      "sha256": "94c86e3c03e981d28a21da7dcf4bb96cdebe8d65ae9e6cbb0595122282818bbf"
+    },
+    {
+      "itemId": "hsk1-236",
+      "kind": "word",
+      "text": "小时",
+      "file": "hsk1-236-word.mp3",
+      "sha256": "3b091ef6390a90552b8d54b7bbb15caa81f449790065ff0aa9e2fafd422f6bb7"
+    },
+    {
+      "itemId": "hsk1-237",
+      "kind": "sentence",
+      "text": "小学在我家旁边。",
+      "file": "hsk1-237-sentence.mp3",
+      "sha256": "c8011cf645b8395f651f2b993b61170c7fd2a70626bd62c7e203c21353ebb2d7"
+    },
+    {
+      "itemId": "hsk1-237",
+      "kind": "word",
+      "text": "小学",
+      "file": "hsk1-237-word.mp3",
+      "sha256": "edbf654a82cdf689fdd5c4a9b4ba0e9a1354e7582beb1c07cf518f57a15fea84"
+    },
+    {
+      "itemId": "hsk1-238",
+      "kind": "sentence",
+      "text": "我妹妹是小学生。",
+      "file": "hsk1-238-sentence.mp3",
+      "sha256": "76dc1f1f56cdce0fd74b24c581e6cd1f268537e07288497ab38838d2fb08a03d"
+    },
+    {
+      "itemId": "hsk1-238",
+      "kind": "word",
+      "text": "小学生",
+      "file": "hsk1-238-word.mp3",
+      "sha256": "7e77e9de168755cdbdbb3cd1dce423e173522f847fd97adad7e95e3c2b43b669"
+    },
+    {
+      "itemId": "hsk1-239",
+      "kind": "sentence",
+      "text": "我买了些水果。",
+      "file": "hsk1-239-sentence.mp3",
+      "sha256": "420f93fa53a9882b8cf74f39cf30850447defc1775da5bc337eb3d1b747f7e65"
+    },
+    {
+      "itemId": "hsk1-239",
+      "kind": "word",
+      "text": "些",
+      "file": "hsk1-239-word.mp3",
+      "sha256": "324323e7267155e7cc5ab4de22d2cbd944c39f41f39c02cea8886cfa8e66655d"
+    },
+    {
+      "itemId": "hsk1-240",
+      "kind": "sentence",
+      "text": "请写你的名字。",
+      "file": "hsk1-240-sentence.mp3",
+      "sha256": "93f357c83c3ace3a83b8353ef40400e8c012473bbb28b6e622aea872e1cc2a76"
+    },
+    {
+      "itemId": "hsk1-240",
+      "kind": "word",
+      "text": "写",
+      "file": "hsk1-240-word.mp3",
+      "sha256": "3feabde76193b154b8b2af6e3f0df2a40945474a5ae184ba7202468c9fb05225"
+    },
+    {
+      "itemId": "hsk1-242",
+      "kind": "sentence",
+      "text": "这是我的新手机。",
+      "file": "hsk1-242-sentence.mp3",
+      "sha256": "54c7ffe916f3c1a5ecadedc97e7694cb621a58f1bbb08f5414371735037f159a"
+    },
+    {
+      "itemId": "hsk1-242",
+      "kind": "word",
+      "text": "新",
+      "file": "hsk1-242-word.mp3",
+      "sha256": "a25b025e54db3c08e7d8fb98f450deb5b84de42e00435f6e9179bdb541362af1"
+    },
+    {
+      "itemId": "hsk1-243",
+      "kind": "sentence",
+      "text": "一个星期有七天。",
+      "file": "hsk1-243-sentence.mp3",
+      "sha256": "c4959d2e9e793798455239683a5bdcf66719b780065e3b3c0decf334d7d30f2e"
+    },
+    {
+      "itemId": "hsk1-243",
+      "kind": "word",
+      "text": "星期",
+      "file": "hsk1-243-word.mp3",
+      "sha256": "8bd25ed7f80b3880ae60023b70b8e7706a4e5fbd27660c6ca0d9f68fe3cd880f"
+    },
+    {
+      "itemId": "hsk1-244",
+      "kind": "sentence",
+      "text": "星期日我在家休息。",
+      "file": "hsk1-244-sentence.mp3",
+      "sha256": "da34928020d20be3838cb1221dfe15f49677b5fdd8d6ff5be5bddfc0cefb5d7e"
+    },
+    {
+      "itemId": "hsk1-244",
+      "kind": "word",
+      "text": "星期日",
+      "file": "hsk1-244-word.mp3",
+      "sha256": "e3161ded71ad1046bcf7a5c60ad1138b90a263f39b2a2931e1827d5382667c98"
+    },
+    {
+      "itemId": "hsk1-245",
+      "kind": "sentence",
+      "text": "星期天我们去玩吧。",
+      "file": "hsk1-245-sentence.mp3",
+      "sha256": "2083dfc36cb1cc80bfe1a6d7246279957c98e8d13d53799e9bc50d3e67395721"
+    },
+    {
+      "itemId": "hsk1-245",
+      "kind": "word",
+      "text": "星期天",
+      "file": "hsk1-245-word.mp3",
+      "sha256": "6e65bf4a57f2937dc3fc659861b4f0b2b8e3e845c057dde7137f2b9d6e8b7159"
+    },
+    {
+      "itemId": "hsk1-246",
+      "kind": "sentence",
+      "text": "我们休息一下吧。",
+      "file": "hsk1-246-sentence.mp3",
+      "sha256": "8f6ec6fd5e1b9df998de77ff8f66302cb71a2aa23e62f51bb336c158481f30d0"
+    },
+    {
+      "itemId": "hsk1-246",
+      "kind": "word",
+      "text": "休息",
+      "file": "hsk1-246-word.mp3",
+      "sha256": "b950dbfa43c9c107e44c3ca5e32acbd4efff4eba66927a12c10fe2b11c26b412"
+    },
+    {
+      "itemId": "hsk1-247",
+      "kind": "sentence",
+      "text": "你在哪儿学中文？",
+      "file": "hsk1-247-sentence.mp3",
+      "sha256": "7f738d5b1fadd75d17c28e4d9bd0abed3c6d485bc27861348cb7f4e45696f740"
+    },
+    {
+      "itemId": "hsk1-247",
+      "kind": "word",
+      "text": "学",
+      "file": "hsk1-247-word.mp3",
+      "sha256": "e5f09368619e2aa1751f6bfb2f17b88897565f9ff44ec0b8cfb6ffc8afe1a4e2"
+    },
+    {
+      "itemId": "hsk1-249",
+      "kind": "sentence",
+      "text": "我每天学习汉语。",
+      "file": "hsk1-249-sentence.mp3",
+      "sha256": "151e61afdec301b19c97b0348a3b5b103d05bc3f4f8ade5b93c60e7baa9d8693"
+    },
+    {
+      "itemId": "hsk1-249",
+      "kind": "word",
+      "text": "学习",
+      "file": "hsk1-249-word.mp3",
+      "sha256": "486f92c16bbec657a4594bf14eb79af50319d8462d66224040c23aa96b6a4c1b"
+    },
+    {
+      "itemId": "hsk1-250",
+      "kind": "sentence",
+      "text": "学校在这边。",
+      "file": "hsk1-250-sentence.mp3",
+      "sha256": "00b223b404e8aecc8d439cef3c2356e486020885cfe747ac0de373d94de70aea"
+    },
+    {
+      "itemId": "hsk1-250",
+      "kind": "word",
+      "text": "学校",
+      "file": "hsk1-250-word.mp3",
+      "sha256": "010b0a4b821a0916d0c6ed0e5cc7daec1652681023e922987d16267a5df56d54"
+    },
+    {
+      "itemId": "hsk1-251",
+      "kind": "sentence",
+      "text": "外边有很多雪。",
+      "file": "hsk1-251-sentence.mp3",
+      "sha256": "0fba1fb4e16ba5621867e96b646b30b73322796e24e5476163cdc93ae243717b"
+    },
+    {
+      "itemId": "hsk1-251",
+      "kind": "word",
+      "text": "雪",
+      "file": "hsk1-251-word.mp3",
+      "sha256": "6639d92b3d68f816586101e351fc57a0136985e5b39d102a4dca6b7872cfe836"
+    },
+    {
+      "itemId": "hsk1-253",
+      "kind": "sentence",
+      "text": "我也是学生。",
+      "file": "hsk1-253-sentence.mp3",
+      "sha256": "aa5bc94acb642bc5a50001560d6a0e3f6429e7fb77c51b942477186e7ce14478"
+    },
+    {
+      "itemId": "hsk1-253",
+      "kind": "word",
+      "text": "也",
+      "file": "hsk1-253-word.mp3",
+      "sha256": "b94e346ba162d1fa5adacd25d696b7feb90f05b5dfabe3bfd1462b5e95144b8b"
+    },
+    {
+      "itemId": "hsk1-254",
+      "kind": "sentence",
+      "text": "我有一个问题。",
+      "file": "hsk1-254-sentence.mp3",
+      "sha256": "d4df6d49fb941f477d76cc1dfb5ce5902156afce58d9503f2ee73842f103c124"
+    },
+    {
+      "itemId": "hsk1-254",
+      "kind": "word",
+      "text": "一",
+      "file": "hsk1-254-word.mp3",
+      "sha256": "3a3841e33e0388b65fe1b2e59e4ec2f05fdabcfeb15086e7e4127354b7c1dc9e"
+    },
+    {
+      "itemId": "hsk1-255",
+      "kind": "sentence",
+      "text": "你的衣服很好看。",
+      "file": "hsk1-255-sentence.mp3",
+      "sha256": "a64be553e5b3b203d600817ee84a9b0577b751f8a46fafabf8b7c1d7b276ce1d"
+    },
+    {
+      "itemId": "hsk1-255",
+      "kind": "word",
+      "text": "衣服",
+      "file": "hsk1-255-word.mp3",
+      "sha256": "d2463bf0c627eecc5d01b208e2eff71c8ef90f0faa093fd5937250af263e0055"
+    },
+    {
+      "itemId": "hsk1-256",
+      "kind": "sentence",
+      "text": "我想见医生。",
+      "file": "hsk1-256-sentence.mp3",
+      "sha256": "8805a31e217637634b552ab7698d5cb740da679719287c3d533a39d909c21ca5"
+    },
+    {
+      "itemId": "hsk1-256",
+      "kind": "word",
+      "text": "医生",
+      "file": "hsk1-256-word.mp3",
+      "sha256": "da03862bf0cfb550275213647d90240c965a29b32eb1807cc81244b30427a3ca"
+    },
+    {
+      "itemId": "hsk1-257",
+      "kind": "sentence",
+      "text": "医院在哪里？",
+      "file": "hsk1-257-sentence.mp3",
+      "sha256": "392f7eee655e75a805b654dad8a517b0d7d21986bff8f9dd989befc49f91d5a5"
+    },
+    {
+      "itemId": "hsk1-257",
+      "kind": "word",
+      "text": "医院",
+      "file": "hsk1-257-word.mp3",
+      "sha256": "1625c61eb3afbc0514f9514bb5c1090a68506a5bc8fe82619405199588d5ce14"
+    },
+    {
+      "itemId": "hsk1-258",
+      "kind": "sentence",
+      "text": "这个苹果我吃一半。",
+      "file": "hsk1-258-sentence.mp3",
+      "sha256": "ddb0919647eff1764f59e1076881192636b492d923a0397cbe77a8765fad09ed"
+    },
+    {
+      "itemId": "hsk1-258",
+      "kind": "word",
+      "text": "一半",
+      "file": "hsk1-258-word.mp3",
+      "sha256": "6e11249c92a872a963622535a8f7400e1e35291cf67f49aa3d7c408bdacb24e3"
+    },
+    {
+      "itemId": "hsk1-259",
+      "kind": "sentence",
+      "text": "请看一下这个字。",
+      "file": "hsk1-259-sentence.mp3",
+      "sha256": "48c10976287b6d517b5b5d309b3d5571f1af0b67e9a3ae4dae66e75a651aa06e"
+    },
+    {
+      "itemId": "hsk1-259",
+      "kind": "word",
+      "text": "一下",
+      "file": "hsk1-259-word.mp3",
+      "sha256": "e5decd13558edecfd524516d238dd1f080dfc2f39f882035055acfe8a74b486c"
+    },
+    {
+      "itemId": "hsk1-260",
+      "kind": "sentence",
+      "text": "这里有一把椅子。",
+      "file": "hsk1-260-sentence.mp3",
+      "sha256": "a32909ab39c2e5820334340704185b942a8bea55a3bf4e4267f627da84c903c1"
+    },
+    {
+      "itemId": "hsk1-260",
+      "kind": "word",
+      "text": "椅子",
+      "file": "hsk1-260-word.mp3",
+      "sha256": "e17dca0dcd05cf2240e99023f9030596eb4aade474ea7d2327d6de94d9693f46"
+    },
+    {
+      "itemId": "hsk1-261",
+      "kind": "sentence",
+      "text": "我会说一点儿汉语。",
+      "file": "hsk1-261-sentence.mp3",
+      "sha256": "7726b72271359d88decd86abedcefe1abe58a0347416712b217153fe42aa5dfe"
+    },
+    {
+      "itemId": "hsk1-261",
+      "kind": "word",
+      "text": "一点儿",
+      "file": "hsk1-261-word.mp3",
+      "sha256": "71d777979906fd20cef904c85be5d659cbdcda96cb5d8ae1c8dd0359e915461c"
+    },
+    {
+      "itemId": "hsk1-262",
+      "kind": "sentence",
+      "text": "我买了一些水果。",
+      "file": "hsk1-262-sentence.mp3",
+      "sha256": "8f38110c11aac148aa26785f19dedaac5da078fe26533d6af039b4b78f9e58b3"
+    },
+    {
+      "itemId": "hsk1-262",
+      "kind": "word",
+      "text": "一些",
+      "file": "hsk1-262-word.mp3",
+      "sha256": "a1b24a387c53504048f150a086772636606ab3b1c1f193df8bb6d9d0a7dd43e6"
+    },
+    {
+      "itemId": "hsk1-264",
+      "kind": "sentence",
+      "text": "有的学生喜欢唱歌。",
+      "file": "hsk1-264-sentence.mp3",
+      "sha256": "03cea829e9d0807e2369c4e97e299640729edbcf51f67788b815aec99c424369"
+    },
+    {
+      "itemId": "hsk1-264",
+      "kind": "word",
+      "text": "有的",
+      "file": "hsk1-264-word.mp3",
+      "sha256": "331037a0bb036b70fe42730cda3276d497a65fe713e06696d61a3475b99c57eb"
+    },
+    {
+      "itemId": "hsk1-265",
+      "kind": "sentence",
+      "text": "今天有点儿冷。",
+      "file": "hsk1-265-sentence.mp3",
+      "sha256": "00af47ed93b00778b959238f3b431e802f548b532b48eb2d3a65c97479e07225"
+    },
+    {
+      "itemId": "hsk1-265",
+      "kind": "word",
+      "text": "有点儿",
+      "file": "hsk1-265-word.mp3",
+      "sha256": "9c39401844a3ff74db878cd1272a4b09d2a468676d0a3ea4e5461995320fc9c6"
+    },
+    {
+      "itemId": "hsk1-266",
+      "kind": "sentence",
+      "text": "有些水果很贵。",
+      "file": "hsk1-266-sentence.mp3",
+      "sha256": "c6cdcc6643e1665b024c0be8cb1f1bc68723a2d3711882a7b94a4587de477ab7"
+    },
+    {
+      "itemId": "hsk1-266",
+      "kind": "word",
+      "text": "有些",
+      "file": "hsk1-266-word.mp3",
+      "sha256": "03a38011bc39ae3393adc444cbe7c40f9cafff12459dc030c730dba9f4374a73"
+    },
+    {
+      "itemId": "hsk1-267",
+      "kind": "sentence",
+      "text": "今天的雨很大。",
+      "file": "hsk1-267-sentence.mp3",
+      "sha256": "ecc789b73bc681d6e281985c5137295967522209abf61fe28c048a5c21519ef4"
+    },
+    {
+      "itemId": "hsk1-267",
+      "kind": "word",
+      "text": "雨",
+      "file": "hsk1-267-word.mp3",
+      "sha256": "370007766f3d92cd2a42e2302021b31b2c7cd7550289034f2bbdfb5ae5b42757"
+    },
+    {
+      "itemId": "hsk1-268",
+      "kind": "sentence",
+      "text": "这本书二十元。",
+      "file": "hsk1-268-sentence.mp3",
+      "sha256": "48dffc49ddfb4de5517ad8a3c1807a5fbada3de563aac52f4cec115e9eafb4c9"
+    },
+    {
+      "itemId": "hsk1-268",
+      "kind": "word",
+      "text": "元",
+      "file": "hsk1-268-word.mp3",
+      "sha256": "ed6f653e72535c8066d7a406699b8aeca97ead40ade7788fc59936debee67f28"
+    },
+    {
+      "itemId": "hsk1-269",
+      "kind": "sentence",
+      "text": "一年有十二个月。",
+      "file": "hsk1-269-sentence.mp3",
+      "sha256": "a65d8f57ecc9b8d7e00e2dfc560385188419ee3018f91f152b2631d02de94b6f"
+    },
+    {
+      "itemId": "hsk1-269",
+      "kind": "word",
+      "text": "月",
+      "file": "hsk1-269-word.mp3",
+      "sha256": "2791b2a2e52a97ee7e80ce319282352a5eab55e3464ea0b82c0b4526f7625d09"
+    },
+    {
+      "itemId": "hsk1-270",
+      "kind": "sentence",
+      "text": "请再说一遍。",
+      "file": "hsk1-270-sentence.mp3",
+      "sha256": "6ce767af80fb36b8141921fc43355774bdb13510d0bce7c20ece049e15119ac8"
+    },
+    {
+      "itemId": "hsk1-270",
+      "kind": "word",
+      "text": "再",
+      "file": "hsk1-270-word.mp3",
+      "sha256": "b4e726700d1a230d23c5ffe587827b8509fa82f66bafd46e4b25ccc4bc4ca7ae"
+    },
+    {
+      "itemId": "hsk1-271",
+      "kind": "sentence",
+      "text": "我在家。",
+      "file": "hsk1-271-sentence.mp3",
+      "sha256": "7c99cb40a4609d30106b9d9ccde043a8943631f23f953c2a417abe10c18c9184"
+    },
+    {
+      "itemId": "hsk1-271",
+      "kind": "word",
+      "text": "在",
+      "file": "hsk1-271-word.mp3",
+      "sha256": "1c53df1860e89251106b671810997af71059cb57e684b710dcce80b59bf9381d"
+    },
+    {
+      "itemId": "hsk1-273",
+      "kind": "sentence",
+      "text": "你今天来得很早。",
+      "file": "hsk1-273-sentence.mp3",
+      "sha256": "5d0dc65e59cf402c60f65c56e3d873640686ee5a61c287e13bba45c735e4e152"
+    },
+    {
+      "itemId": "hsk1-273",
+      "kind": "word",
+      "text": "早",
+      "file": "hsk1-273-word.mp3",
+      "sha256": "901f494fa69286d14532853237a8934cd4278ec512d4800bdb25537f7edccecb"
+    },
+    {
+      "itemId": "hsk1-274",
+      "kind": "sentence",
+      "text": "你吃早饭了吗？",
+      "file": "hsk1-274-sentence.mp3",
+      "sha256": "0aa2fd341218785e7ab13400660d5820a58107af4131eabb3d2dbfbf807ea9d1"
+    },
+    {
+      "itemId": "hsk1-274",
+      "kind": "word",
+      "text": "早饭",
+      "file": "hsk1-274-word.mp3",
+      "sha256": "3f78992ecf9fdd5a07da597b88cc126cda531200b125a0340629f55aa7d83ea9"
+    },
+    {
+      "itemId": "hsk1-275",
+      "kind": "sentence",
+      "text": "我早上七点起床。",
+      "file": "hsk1-275-sentence.mp3",
+      "sha256": "aa5d826a96b4bc39b26aec393e54604615e1b5b66105792ac1813bcd87320800"
+    },
+    {
+      "itemId": "hsk1-275",
+      "kind": "word",
+      "text": "早上",
+      "file": "hsk1-275-word.mp3",
+      "sha256": "903519f3acb67a351b2ea6af910fc2c8f4d5c259fc40ff32e6a8b63138b0113d"
+    },
+    {
+      "itemId": "hsk1-276",
+      "kind": "sentence",
+      "text": "这个字怎么读？",
+      "file": "hsk1-276-sentence.mp3",
+      "sha256": "bb7bbf9ebe4fc3819890f776ec78ac6063ec129a86e03b74e0f8e3f3b7e7d406"
+    },
+    {
+      "itemId": "hsk1-276",
+      "kind": "word",
+      "text": "怎么",
+      "file": "hsk1-276-word.mp3",
+      "sha256": "ce0de49ac73b2d24feba9cb70dc951b0ee442075ae70c9869571e159b7653db1"
+    },
+    {
+      "itemId": "hsk1-277",
+      "kind": "sentence",
+      "text": "你觉得这本书怎么样？",
+      "file": "hsk1-277-sentence.mp3",
+      "sha256": "f869a6b59e4da6359bb2ddab83da496f7b97e6e34d5c7ea9b951c73d72aab6b9"
+    },
+    {
+      "itemId": "hsk1-277",
+      "kind": "word",
+      "text": "怎么样",
+      "file": "hsk1-277-word.mp3",
+      "sha256": "50248b492be1f3f95441f29427edf36989bef7de6fb282df31eceff5e6b3fffe"
+    },
+    {
+      "itemId": "hsk1-278",
+      "kind": "sentence",
+      "text": "我在找我的手机。",
+      "file": "hsk1-278-sentence.mp3",
+      "sha256": "67cc65943f00e2ae20e22e934b0891bd9677c69b00c0be742d9b07401168b18f"
+    },
+    {
+      "itemId": "hsk1-278",
+      "kind": "word",
+      "text": "找",
+      "file": "hsk1-278-word.mp3",
+      "sha256": "087bf5e7453a7d91669648528ca9935d7901972025d62151dc84519a2631f879"
+    },
+    {
+      "itemId": "hsk1-279",
+      "kind": "sentence",
+      "text": "这是我的书。",
+      "file": "hsk1-279-sentence.mp3",
+      "sha256": "82ed758847a492767f7eac294dc830bf00ead089c19d3de585e5284c9e08d432"
+    },
+    {
+      "itemId": "hsk1-279",
+      "kind": "word",
+      "text": "这",
+      "file": "hsk1-279-word.mp3",
+      "sha256": "0dc43625434a330a36e7516b817c13df179db63872ad1b5df5907023334c673e"
+    },
+    {
+      "itemId": "hsk1-280",
+      "kind": "sentence",
+      "text": "请来这边。",
+      "file": "hsk1-280-sentence.mp3",
+      "sha256": "abeff82b7d8876e4f5bdc57a7def86b03b236083710cd057f63c7026fe0862d3"
+    },
+    {
+      "itemId": "hsk1-280",
+      "kind": "word",
+      "text": "这边",
+      "file": "hsk1-280-word.mp3",
+      "sha256": "0e7b3c7bf9b1ec0ff015267eed1719897d412c07284272d126bcb8abc683ed15"
+    },
+    {
+      "itemId": "hsk1-282",
+      "kind": "sentence",
+      "text": "我住在这里。",
+      "file": "hsk1-282-sentence.mp3",
+      "sha256": "fa6ca6a4da068af8635d0ee93f2c76708bf1fa5d2c4a0bdbdc63afcef0414670"
+    },
+    {
+      "itemId": "hsk1-282",
+      "kind": "word",
+      "text": "这里",
+      "file": "hsk1-282-word.mp3",
+      "sha256": "d6b90d902846af51c9da3e6b2978d7b317a612e11159200bac8ea2bead47aff4"
+    },
+    {
+      "itemId": "hsk1-283",
+      "kind": "sentence",
+      "text": "请坐这儿。",
+      "file": "hsk1-283-sentence.mp3",
+      "sha256": "d1fb98061f4c3b5754c0b2488b8b120c4dfe2461375dd7bf44986ce3739ef1bf"
+    },
+    {
+      "itemId": "hsk1-283",
+      "kind": "word",
+      "text": "这儿",
+      "file": "hsk1-283-word.mp3",
+      "sha256": "7315c4020df46083298c7ef7b053f373540c068eb46ded09fb2fb78a584f151b"
+    },
+    {
+      "itemId": "hsk1-284",
+      "kind": "sentence",
+      "text": "这些书都是我的。",
+      "file": "hsk1-284-sentence.mp3",
+      "sha256": "3f9be1f5899c97d564fe7a1c7d7d7e3f282777b26d1debecb896c60322f96580"
+    },
+    {
+      "itemId": "hsk1-284",
+      "kind": "word",
+      "text": "这些",
+      "file": "hsk1-284-word.mp3",
+      "sha256": "bb8642176027047c31f8d59138d5112899f02458921dbfa9653cbba3338fabe2"
+    },
+    {
+      "itemId": "hsk1-285",
+      "kind": "sentence",
+      "text": "这个菜真好吃！",
+      "file": "hsk1-285-sentence.mp3",
+      "sha256": "80990d6b2a4256a3143852eb70c58e3a7d7b3418fffc6316570f95285b9a3b45"
+    },
+    {
+      "itemId": "hsk1-285",
+      "kind": "word",
+      "text": "真",
+      "file": "hsk1-285-word.mp3",
+      "sha256": "05f4cd116c3d307a277ad0fc8ceacfa28def7cb463bcade00d4b4bb124a5ab13"
+    },
+    {
+      "itemId": "hsk1-286",
+      "kind": "sentence",
+      "text": "我正在学习。",
+      "file": "hsk1-286-sentence.mp3",
+      "sha256": "7b3f8e0c95c39a4a2a6940eea7a8c8c7f638870b448713ce77b541174a6a6258"
+    },
+    {
+      "itemId": "hsk1-286",
+      "kind": "word",
+      "text": "正在",
+      "file": "hsk1-286-word.mp3",
+      "sha256": "603e32580d7179ba6e328856582c9917a4c3c73eef0168f3b780e7690130e90f"
+    },
+    {
+      "itemId": "hsk1-287",
+      "kind": "sentence",
+      "text": "我家有一只狗。",
+      "file": "hsk1-287-sentence.mp3",
+      "sha256": "833bfbfa718fb79d9dabb38c087f102665441409d7a0dcb0b3ca5bfe8fc2b27d"
+    },
+    {
+      "itemId": "hsk1-287",
+      "kind": "word",
+      "text": "只",
+      "file": "hsk1-287-word.mp3",
+      "sha256": "ff6b26aaa891d01c3bc2edfa97820437d2e9ca2500859f3eabc514ac06d3ff47",
+      "pronunciationContext": "一只。"
+    },
+    {
+      "itemId": "hsk1-288",
+      "kind": "sentence",
+      "text": "我不知道他在哪儿。",
+      "file": "hsk1-288-sentence.mp3",
+      "sha256": "2e02efcd80e44aed49fea12369b17a011943f7f51783599fde65ac1af162d77f"
+    },
+    {
+      "itemId": "hsk1-288",
+      "kind": "word",
+      "text": "知道",
+      "file": "hsk1-288-word.mp3",
+      "sha256": "a539e784c3660937cf5c669c655e43a30c00ffd71036315359d054ca1d6e897b"
+    },
+    {
+      "itemId": "hsk1-290",
+      "kind": "sentence",
+      "text": "我正在学中文。",
+      "file": "hsk1-290-sentence.mp3",
+      "sha256": "692be60f99cc4dae47ca21e3a74cd97ac991f12c6d074dcba8194aa7c87353d3"
+    },
+    {
+      "itemId": "hsk1-290",
+      "kind": "word",
+      "text": "中文",
+      "file": "hsk1-290-word.mp3",
+      "sha256": "ff18d0b42f508b24606ca24a33d954b0a9d8e0dec98fe14b1ab916c8049773fa"
+    },
+    {
+      "itemId": "hsk1-291",
+      "kind": "sentence",
+      "text": "我们中午一起吃饭。",
+      "file": "hsk1-291-sentence.mp3",
+      "sha256": "d6da38a613cbef601a89a7e9669d23ecac322fd1a9f65ce20f98da2ba2cd6163"
+    },
+    {
+      "itemId": "hsk1-291",
+      "kind": "word",
+      "text": "中午",
+      "file": "hsk1-291-word.mp3",
+      "sha256": "893c0484dbfb130608c9c089fed9063be65eb3b79ea734ec5e7f1ce82fa1ada0"
+    },
+    {
+      "itemId": "hsk1-292",
+      "kind": "sentence",
+      "text": "我哥哥在中学上学。",
+      "file": "hsk1-292-sentence.mp3",
+      "sha256": "71cdea9a4582adb0bb4bf0ce33b7a996ae9889489785ea35215d8f6f48e9c570"
+    },
+    {
+      "itemId": "hsk1-292",
+      "kind": "word",
+      "text": "中学",
+      "file": "hsk1-292-word.mp3",
+      "sha256": "46a973713667faa6a90d9912ed3b751636c1de959c2b3c9381638d637e5123f5"
+    },
+    {
+      "itemId": "hsk1-293",
+      "kind": "sentence",
+      "text": "他是中学生。",
+      "file": "hsk1-293-sentence.mp3",
+      "sha256": "dbe04cd147c285f70d167a4bef8eeb7c6035521f8bfde0f55dcc010738e16403"
+    },
+    {
+      "itemId": "hsk1-293",
+      "kind": "word",
+      "text": "中学生",
+      "file": "hsk1-293-word.mp3",
+      "sha256": "f695b769daa05eb82e2b1af96ffde5ae952cfb2d2ae20c9264fc0aaa16b41e4d"
+    },
+    {
+      "itemId": "hsk1-294",
+      "kind": "sentence",
+      "text": "你住在哪里？",
+      "file": "hsk1-294-sentence.mp3",
+      "sha256": "2ce323172bbe1ccf4bb4578fda13e6bf11cc67feb2c81d15eea44bcdfb8129e6"
+    },
+    {
+      "itemId": "hsk1-294",
+      "kind": "word",
+      "text": "住",
+      "file": "hsk1-294-word.mp3",
+      "sha256": "676c113c5256a7f6f6e76b86bf39be979ea3fb79e044910130f40f09d0c90133"
+    },
+    {
+      "itemId": "hsk1-295",
+      "kind": "sentence",
+      "text": "书在桌子上。",
+      "file": "hsk1-295-sentence.mp3",
+      "sha256": "a26181ee4a6517539944658d4bf589ffea2338b5b61a64679ed2256b5fd9751a"
+    },
+    {
+      "itemId": "hsk1-295",
+      "kind": "word",
+      "text": "桌子",
+      "file": "hsk1-295-word.mp3",
+      "sha256": "8c806f04ae95c3af8aa35f9bd2e6ce6143a47025a0943a4f5345813ac37a4504"
+    },
+    {
+      "itemId": "hsk1-296",
+      "kind": "sentence",
+      "text": "这个字怎么写？",
+      "file": "hsk1-296-sentence.mp3",
+      "sha256": "fc9a9e093caee8f4e6fca4ec34b2af13d557d01294355528bf4eb0e9f79f1c03"
+    },
+    {
+      "itemId": "hsk1-296",
+      "kind": "word",
+      "text": "字",
+      "file": "hsk1-296-word.mp3",
+      "sha256": "85370b521e3eae6a90511ddebb11c4e4247a02f432c4e95d572718978334cbc1"
+    },
+    {
+      "itemId": "hsk1-298",
+      "kind": "sentence",
+      "text": "请坐这把椅子。",
+      "file": "hsk1-298-sentence.mp3",
+      "sha256": "dc663f8346cc0bd7ee4b991ffbd2aa5082b43f68b5df58677f9458a6da2e32a7"
+    },
+    {
+      "itemId": "hsk1-298",
+      "kind": "word",
+      "text": "坐",
+      "file": "hsk1-298-word.mp3",
+      "sha256": "56049d9574e703a3f458c5e396cf164446fd4f96905c54bd864a8c9fc98f4f14"
+    },
+    {
+      "itemId": "hsk1-299",
+      "kind": "sentence",
+      "text": "你在做什么？",
+      "file": "hsk1-299-sentence.mp3",
+      "sha256": "c95ed9f149afad729317589896f66f7d3b026114d9f16ff32f44dc058e425502"
+    },
+    {
+      "itemId": "hsk1-299",
+      "kind": "word",
+      "text": "做",
+      "file": "hsk1-299-word.mp3",
+      "sha256": "8763f8a60508f1cbe9c03d50deace176c41e9abcbd6a44a2df836a55d436b2b2"
+    },
+    {
+      "itemId": "hsk1-300",
+      "kind": "sentence",
+      "text": "我爸爸会做饭。",
+      "file": "hsk1-300-sentence.mp3",
+      "sha256": "de74837299ccc2201568ec987999b3a5436e3fb0cc5f3d764c81a38323fe58a0"
+    },
+    {
+      "itemId": "hsk1-300",
+      "kind": "word",
+      "text": "做饭",
+      "file": "hsk1-300-word.mp3",
+      "sha256": "eb679cf86c6f6d7096076b94e5390ec335ae08b208ec36035b8e70aa6dd31a60"
     },
     {
       "itemId": "later",

@@ -58,3 +58,7 @@ node scripts/export-audio-content.mjs /tmp/chinese-os-audio-content.json
 ```
 
 The generator uses Mandarin `zh-CN-XiaoxiaoNeural`, a gently reduced generation rate and per-file hashes. It sends only the lesson text to the speech service during preparation. Audio, manifest and generation script are versioned together. Review new vocabulary and listening examples before release.
+
+## Vocabulary and reuse
+
+The library includes 320 words and phrases: the complete 300-entry HSK1 list from the November 2025 syllabus and 20 everyday extras, across 14 topics. All 32 original item IDs and their teaching material are retained. Each entry has word/example audio and local writing data. See [data/README.md](data/README.md) for provenance, authoring and regeneration, and [docs/OPEN_SOURCE.md](docs/OPEN_SOURCE.md) for the reuse review.

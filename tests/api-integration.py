@@ -37,5 +37,8 @@ assert call('POST',a,'x'*1000001)[0]==413;checks.append('oversized upload reject
 assert call(user=a,extra={'X-Notebook-Owner':'qa-'+b})[0]==401;checks.append('switched notebook owner rejected')
 assert call(user=a,extra={'Authorization':'Bearer invalid'})[0]==401;checks.append('invalid bearer cannot fall back to ChatGPT')
 assert call(user=a,extra={'X-Notebook-Owner':'qa-'+a})[0]==200;checks.append('matching notebook owner accepted')
+expanded={**event,'id':str(uuid.uuid4()),'itemId':'hsk1-300'}
+assert call('POST',a,{'events':[expanded]})[0]==200;checks.append('expanded HSK vocabulary accepted by server')
+assert any(e['id']==expanded['id'] for e in call(user=a)[1]['events']);checks.append('new vocabulary history retained')
 for check in checks:print('PASS',check)
 print(f'{len(checks)} API integration checks passed')

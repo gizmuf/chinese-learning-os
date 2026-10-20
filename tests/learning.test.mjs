@@ -71,6 +71,14 @@ const { eventSchema } = await import(
 test("sync rejects unknown content and oversized or invalid ink", () => {
   assert.equal(eventSchema.safeParse(base).success, true);
   assert.equal(
+    eventSchema.safeParse({ ...base, itemId: "hsk1-300" }).success,
+    true,
+  );
+  assert.equal(
+    eventSchema.safeParse({ ...base, itemId: "bonus-12" }).success,
+    true,
+  );
+  assert.equal(
     eventSchema.safeParse({ ...base, itemId: "unknown" }).success,
     false,
   );

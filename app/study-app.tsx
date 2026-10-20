@@ -29,6 +29,8 @@ import {
 import {
   items,
   lessons,
+  curriculum,
+  matchesItem,
   skillNames,
   type Item,
   type Mode,
@@ -302,13 +304,7 @@ export default function StudyApp({
       );
     }
   }
-  const filtered = items.filter(
-    (i) =>
-      (lesson === "all" || i.lesson === lesson) &&
-      [i.hanzi, i.pinyin, i.english].some((t) =>
-        t.toLowerCase().includes(search.toLowerCase()),
-      ),
-  );
+  const filtered = items.filter((item) => matchesItem(item, search, lesson));
   function changeView(v: View) {
     stopAudio();
     if (v === "practice") {
@@ -700,7 +696,10 @@ export default function StudyApp({
                   <h1>
                     Your learning library<span className="orange">.</span>
                   </h1>
-                  <p>Learn complete words. Put them to use.</p>
+                  <p>
+                    {curriculum.total} words &amp; phrases · {curriculum.hsk1}{" "}
+                    HSK1 + {curriculum.extras} everyday extras.
+                  </p>
                 </div>
               </div>
               <div className="library-controls">
@@ -717,7 +716,13 @@ export default function StudyApp({
                   value={lesson}
                   onChange={(e) => setLesson(e.target.value)}
                 >
-                  <option value="all">All lessons</option>
+                  <option value="all">All words · {curriculum.total}</option>
+                  <option value="hsk1">
+                    HSK1 · all {curriculum.hsk1} words
+                  </option>
+                  <option value="bonus">
+                    Everyday extras · {curriculum.extras}
+                  </option>
                   {lessons.map((l) => (
                     <option key={l.id} value={l.id}>
                       {l.title}
@@ -725,10 +730,17 @@ export default function StudyApp({
                   ))}
                 </select>
               </div>
+              <p className="library-count" role="status">
+                {filtered.length} {filtered.length === 1 ? "word" : "words"} ·{" "}
+                {lesson === "hsk1"
+                  ? "HSK 2025 syllabus"
+                  : "choose a topic or search"}
+              </p>
               <div className="word-grid">
                 {filtered.map((i) => (
                   <article className="word-card panel" key={i.id}>
                     <span className="eyebrow">
+                      {i.hskEntry ? "HSK1" : "EXTRA"} ·{" "}
                       {lessons.find((l) => l.id === i.lesson)?.title}
                     </span>
                     <div className="word-heading">

@@ -18,7 +18,7 @@ A calm daily Chinese practice space for beginner classmates. Works in a browser 
 - FSRS tracks recognition, listening and writing independently, with a 90% target retention. This target is a scheduling setting, not a measured success rate.
 - Watch, Trace, Copy and assisted attempts are practice records; they do not earn successful independent-recall credit.
 - Due reviews precede new words. A session has a finite number of words and a completion screen.
-- The initial library contains 32 words in four lessons: introductions, everyday language, food, and time/plans. It is starter material, not a claimed full curriculum or a transcription of unprovided class materials.
+- The library contains 320 words and phrases in 14 topics: all 300 HSK1 entries from the November 2025 examination syllabus plus 20 practical extras. Filters separate HSK1, extras and topics; search accepts pinyin with or without tone marks. This is a vocabulary practice library, not the complete grammar/task syllabus. See `data/README.md` for authoring and provenance.
 
 ## Accounts, saving and privacy
 
@@ -36,7 +36,7 @@ Real Apple Pencil pressure, palm rejection, device speakers and installed browse
 
 ## Adding a lesson
 
-Edit `app/content.ts`: add a lesson and vocabulary rows with stable unique IDs, full words, pinyin with tone marks, an English meaning, a Chinese example, example pinyin and its translation. Never repurpose an existing ID: historical reviews depend on it. Generate bundled audio for the new text and run `npm run prebuild` to add character data. Run the documented checks and deploy an updated version of the same Site.
+Edit the authoring files in `data/` and run `scripts/build-hsk-content.py` to regenerate `app/content.ts`. Each item needs a stable unique ID, full word, tone-marked pinyin, English meaning, Chinese example, example pinyin and translation. Never repurpose an existing ID: historical reviews depend on it. Generate bundled audio for the new text and run `npm run prebuild` to add character data. Run the documented checks and deploy an updated version of the same Site.
 
 ## Account identity and deployment
 
