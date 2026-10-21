@@ -22,6 +22,7 @@ import {
   Leaf,
   LoaderCircle,
   Mail,
+  MessageCircle,
   X,
 } from "lucide-react";
 import StudyApp from "./study-app";
@@ -185,9 +186,9 @@ function AccountDialog({
       if (event.key !== "Tab" || !dialog) return;
       const targets = Array.from(
         dialog.querySelectorAll<HTMLElement>(
-          "button:not(:disabled), input:not(:disabled), a[href]",
+          "summary, button:not(:disabled), input:not(:disabled), a[href]",
         ),
-      );
+      ).filter((element) => element.getClientRects().length > 0);
       const first = targets[0],
         last = targets.at(-1);
       if (
@@ -348,7 +349,7 @@ function AccountDialog({
             ? `We need to verify ${account.user.email} before syncing. You can still practice as a guest.`
             : signedIn
               ? `Signed in as ${account?.user.email ?? initialUser?.name}. Your progress belongs only to this account.`
-              : "Sign in with Google or your email. No ChatGPT account needed."}
+              : "Choose Google or ChatGPT for a quick start."}
         </p>
         {error && (
           <p className="auth-error" role="alert">
@@ -400,160 +401,160 @@ function AccountDialog({
           </>
         ) : (
           <>
-            {mode !== "reset" && (
-              <>
-                <button
-                  className="google-signin"
-                  disabled={busy || !auth}
-                  onClick={() => void google()}
-                >
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      fill="#4285F4"
-                      d="M21.6 12.2c0-.7-.1-1.4-.2-2.1H12v4h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.8 3-4.4 3-7.4Z"
-                    />
-                    <path
-                      fill="#34A853"
-                      d="M12 22c2.7 0 5-1 6.6-2.4L15.4 17c-.9.6-2 1-3.4 1-2.6 0-4.9-1.8-5.7-4.1H3v2.6A10 10 0 0 0 12 22Z"
-                    />
-                    <path
-                      fill="#FBBC05"
-                      d="M6.3 13.9a6 6 0 0 1 0-3.8V7.5H3a10 10 0 0 0 0 9l3.3-2.6Z"
-                    />
-                    <path
-                      fill="#EA4335"
-                      d="M12 6c1.5 0 2.8.5 3.8 1.5l2.8-2.8A9.6 9.6 0 0 0 12 2a10 10 0 0 0-9 5.5l3.3 2.6A6 6 0 0 1 12 6Z"
-                    />
-                  </svg>
-                  Continue with Google
-                </button>
-                <div className="auth-divider">
-                  <span>or use your email</span>
-                </div>
-              </>
-            )}
-            {!auth && (
-              <p className="auth-error">
-                {unavailable
-                  ? "Sign-in could not load. Check your connection and reload the page."
-                  : "Google and email sign-in are not configured yet."}
-              </p>
-            )}
-            <form
-              onSubmit={(event) => void submit(event)}
-              className="auth-form"
-            >
-              {mode === "signup" && (
-                <label>
-                  Your name
-                  <input
-                    value={name}
-                    onChange={(event) => setName(event.target.value)}
-                    autoComplete="name"
-                    maxLength={80}
-                    required
-                    disabled={busy}
-                  />
-                </label>
-              )}
-              <label>
-                Email address
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(event) => setEmail(event.target.value)}
-                  autoComplete="email"
-                  inputMode="email"
-                  maxLength={254}
-                  required
-                  disabled={busy}
-                />
-              </label>
-              {mode !== "reset" && (
-                <label>
-                  Password
-                  <input
-                    type="password"
-                    value={password}
-                    onChange={(event) => setPassword(event.target.value)}
-                    autoComplete={
-                      mode === "signup" ? "new-password" : "current-password"
-                    }
-                    minLength={mode === "signup" ? 8 : undefined}
-                    maxLength={4096}
-                    required
-                    disabled={busy}
-                  />
-                  {mode === "signup" && (
-                    <small>At least 8 characters. Use a unique password.</small>
-                  )}
-                </label>
-              )}
+            <div className="auth-provider-options">
               <button
-                className="primary auth-wide"
+                className="google-signin"
                 disabled={busy || !auth}
-                type="submit"
+                onClick={() => void google()}
               >
-                {busy ? (
-                  <LoaderCircle size={18} className="spin" />
-                ) : mode === "signup" ? (
-                  "Create my account"
-                ) : mode === "reset" ? (
-                  "Send reset email"
-                ) : (
-                  "Sign in"
-                )}
-                <ArrowRight size={17} />
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="#4285F4"
+                    d="M21.6 12.2c0-.7-.1-1.4-.2-2.1H12v4h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.8 3-4.4 3-7.4Z"
+                  />
+                  <path
+                    fill="#34A853"
+                    d="M12 22c2.7 0 5-1 6.6-2.4L15.4 17c-.9.6-2 1-3.4 1-2.6 0-4.9-1.8-5.7-4.1H3v2.6A10 10 0 0 0 12 22Z"
+                  />
+                  <path
+                    fill="#FBBC05"
+                    d="M6.3 13.9a6 6 0 0 1 0-3.8V7.5H3a10 10 0 0 0 0 9l3.3-2.6Z"
+                  />
+                  <path
+                    fill="#EA4335"
+                    d="M12 6c1.5 0 2.8.5 3.8 1.5l2.8-2.8A9.6 9.6 0 0 0 12 2a10 10 0 0 0-9 5.5l3.3 2.6A6 6 0 0 1 12 6Z"
+                  />
+                </svg>
+                Continue with Google
               </button>
-            </form>
-            <div className="auth-switch">
-              {mode === "signin" ? (
-                <>
-                  <button
-                    disabled={busy}
-                    onClick={() => {
-                      setMode("signup");
-                      setError("");
-                      setMessage("");
-                    }}
-                  >
-                    New here? Create an account
-                  </button>
-                  <button
-                    disabled={busy}
-                    onClick={() => {
-                      setMode("reset");
-                      setError("");
-                      setMessage("");
-                    }}
-                  >
-                    Forgot password?
-                  </button>
-                </>
-              ) : (
-                <button
-                  disabled={busy}
-                  onClick={() => {
-                    setMode("signin");
-                    setError("");
-                    setMessage("");
-                  }}
-                >
-                  Already have an account? Sign in
-                </button>
-              )}
+              <a
+                className="google-signin chatgpt-signin"
+                href="/signin-with-chatgpt?return_to=%2F"
+                target="_top"
+              >
+                <MessageCircle size={20} aria-hidden="true" />
+                Continue with ChatGPT
+              </a>
             </div>
-            <a
-              className="auth-chatgpt"
-              href="/signin-with-chatgpt?return_to=%2F"
-              target="_top"
-            >
-              Already used ChatGPT here? Continue to your existing notebook{" "}
-              <ArrowRight size={14} />
-            </a>
+            <details className="auth-email">
+              <summary>Use email instead</summary>
+              {!auth && (
+                <p className="auth-error">
+                  {unavailable
+                    ? "Sign-in could not load. Check your connection and reload the page."
+                    : "Google and email sign-in are not configured yet."}
+                </p>
+              )}
+              <form
+                onSubmit={(event) => void submit(event)}
+                className="auth-form"
+              >
+                {mode === "signup" && (
+                  <label>
+                    Your name
+                    <input
+                      value={name}
+                      onChange={(event) => setName(event.target.value)}
+                      autoComplete="name"
+                      maxLength={80}
+                      required
+                      disabled={busy}
+                    />
+                  </label>
+                )}
+                <label>
+                  Email address
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
+                    autoComplete="email"
+                    inputMode="email"
+                    maxLength={254}
+                    required
+                    disabled={busy}
+                  />
+                </label>
+                {mode !== "reset" && (
+                  <label>
+                    Password
+                    <input
+                      type="password"
+                      value={password}
+                      onChange={(event) => setPassword(event.target.value)}
+                      autoComplete={
+                        mode === "signup" ? "new-password" : "current-password"
+                      }
+                      minLength={mode === "signup" ? 8 : undefined}
+                      maxLength={4096}
+                      required
+                      disabled={busy}
+                    />
+                    {mode === "signup" && (
+                      <small>
+                        At least 8 characters. Use a unique password.
+                      </small>
+                    )}
+                  </label>
+                )}
+                <button
+                  className="primary auth-wide"
+                  disabled={busy || !auth}
+                  type="submit"
+                >
+                  {busy ? (
+                    <LoaderCircle size={18} className="spin" />
+                  ) : mode === "signup" ? (
+                    "Create my account"
+                  ) : mode === "reset" ? (
+                    "Send reset email"
+                  ) : (
+                    "Sign in"
+                  )}
+                  <ArrowRight size={17} />
+                </button>
+              </form>
+              <div className="auth-switch">
+                {mode === "signin" ? (
+                  <>
+                    <button
+                      disabled={busy}
+                      onClick={() => {
+                        setMode("signup");
+                        setError("");
+                        setMessage("");
+                      }}
+                    >
+                      New here? Create an account
+                    </button>
+                    <button
+                      disabled={busy}
+                      onClick={() => {
+                        setMode("reset");
+                        setError("");
+                        setMessage("");
+                      }}
+                    >
+                      Forgot password?
+                    </button>
+                  </>
+                ) : (
+                  <button
+                    disabled={busy}
+                    onClick={() => {
+                      setMode("signin");
+                      setError("");
+                      setMessage("");
+                    }}
+                  >
+                    Already have an account? Sign in
+                  </button>
+                )}
+              </div>
+            </details>
             <p className="auth-note">
-              Guest and account notebooks are separate. Signing in never exposes
-              another student’s progress.
+              Your progress stays with your account. Use the same sign-in method
+              on each device.
             </p>
           </>
         )}

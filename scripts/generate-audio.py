@@ -6,7 +6,7 @@ import argparse, asyncio, hashlib, json, shutil
 from pathlib import Path
 import edge_tts
 
-CONTEXTS={"hsk1-287":"一只。", "hsk1-108":"好了"}
+CONTEXTS={"hsk1-287":"一只。", "hsk1-108":"好了", "hsk2-332":"说得好", "hsk2-333":"高兴地说", "hsk2-351":"我吃过了", "hsk2-367":"老师教我们中文", "hsk2-490":"门开着"}
 
 async def contextual_audio(text, context, voice, rate, dest):
     source=dest.with_suffix(".context.mp3"); boundaries=[]

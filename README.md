@@ -61,4 +61,4 @@ The generator uses Mandarin `zh-CN-XiaoxiaoNeural`, a gently reduced generation 
 
 ## Vocabulary and reuse
 
-The library includes 320 words and phrases: the complete 300-entry HSK1 list from the November 2025 syllabus and 20 everyday extras, across 14 topics. All 32 original item IDs and their teaching material are retained. Each entry has word/example audio and local writing data. See [data/README.md](data/README.md) for provenance, authoring and regeneration, and [docs/OPEN_SOURCE.md](docs/OPEN_SOURCE.md) for the reuse review.
+The library includes 520 learning cards: 300 HSK1 entries, 200 separate HSK2 entries from the November 2025 syllabus, and 20 everyday extras, across 14 topics. A persistent study-level selector scopes the library, writing, reviews and progress without mixing levels. All previous 320 card IDs and their material are retained. Each entry has word/example audio and local writing data. See [data/README.md](data/README.md) for provenance, authoring and regeneration, and [docs/OPEN_SOURCE.md](docs/OPEN_SOURCE.md) for the reuse review.

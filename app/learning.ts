@@ -77,10 +77,10 @@ export function getCards(events: LearningEvent[]) {
   }
   return cards;
 }
-export function makeQueue(events: LearningEvent[], skill: Skill) {
+export function makeQueue(events: LearningEvent[], skill: Skill, pool = items) {
   const cards = getCards(events);
   const now = Date.now();
-  const due = items
+  const due = pool
     .filter(
       (i) =>
         cards[i.id + ":" + skill] &&
@@ -91,5 +91,5 @@ export function makeQueue(events: LearningEvent[], skill: Skill) {
         new Date(cards[a.id + ":" + skill].due).getTime() -
         new Date(cards[b.id + ":" + skill].due).getTime(),
     );
-  return [...due, ...items.filter((i) => !cards[i.id + ":" + skill])];
+  return [...due, ...pool.filter((i) => !cards[i.id + ":" + skill])];
 }

@@ -71,6 +71,10 @@ const { eventSchema } = await import(
 test("sync rejects unknown content and oversized or invalid ink", () => {
   assert.equal(eventSchema.safeParse(base).success, true);
   assert.equal(
+    eventSchema.safeParse({ ...base, itemId: "hsk2-500" }).success,
+    true,
+  );
+  assert.equal(
     eventSchema.safeParse({ ...base, itemId: "hsk1-300" }).success,
     true,
   );
@@ -114,4 +118,37 @@ test("long Pencil attempts fit sync limits while preserving stroke endpoints", (
   assert.equal(compact[0][0].at(-1).x, 1);
   assert.ok(Buffer.byteLength(JSON.stringify(compact)) < 900000);
   assert.equal(stroke.length, 1500);
+});
+
+const contentOutput = await build({
+  entryPoints: ["app/content.ts"],
+  bundle: true,
+  platform: "node",
+  format: "esm",
+  write: false,
+  logLevel: "silent",
+});
+const { items, isInLevel } = await import(
+  "data:text/javascript;base64," +
+    Buffer.from(contentOutput.outputFiles[0].text).toString("base64")
+);
+test("review pools never mix HSK1, HSK2 and extra cards, even with due cards from another level", () => {
+  const events = [
+    base,
+    { ...base, id: "00000000-0000-4000-8000-000000000002", itemId: "hsk2-351" },
+  ];
+  for (const level of ["hsk1", "hsk2", "bonus"]) {
+    const pool = items.filter((item) => isInLevel(item, level));
+    const queue = makeQueue(events, "writing", pool);
+    assert.equal(queue.length, pool.length);
+    assert.ok(queue.every((item) => isInLevel(item, level)));
+  }
+  assert.equal(
+    makeQueue(
+      events,
+      "writing",
+      items.filter((item) => isInLevel(item, "hsk2")),
+    )[0].id,
+    "hsk2-351",
+  );
 });

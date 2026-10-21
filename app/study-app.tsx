@@ -31,6 +31,9 @@ import {
   lessons,
   curriculum,
   matchesItem,
+  isInLevel,
+  levelNames,
+  type StudyLevel,
   skillNames,
   type Item,
   type Mode,
@@ -79,7 +82,7 @@ export default function StudyApp({
   onManageAccount: () => void;
 }) {
   const [view, setView] = useState<View>("today");
-  const [events, setEvents] = useState<LearningEvent[]>([]);
+  const [notebookEvents, setEvents] = useState<LearningEvent[]>([]);
   const [sync, setSync] = useState("Loading your notebook…");
   const [db, setDb] = useState<IDBDatabase | null>(null);
   const syncLock = useRef(false);
@@ -88,6 +91,33 @@ export default function StudyApp({
   const [mode, setMode] = useState<Mode>("trace");
   const [search, setSearch] = useState("");
   const [lesson, setLesson] = useState("all");
+  const [level, setLevel] = useState<StudyLevel>("hsk1");
+  const studyItems = useMemo(
+    () => items.filter((item) => isInLevel(item, level)),
+    [level],
+  );
+  const studyIds = useMemo(
+    () => new Set(studyItems.map((item) => item.id)),
+    [studyItems],
+  );
+  const events = useMemo(
+    () => notebookEvents.filter((event) => studyIds.has(event.itemId)),
+    [notebookEvents, studyIds],
+  );
+  const visibleLessons = lessons.filter((lesson) =>
+    studyItems.some((item) => item.lesson === lesson.id),
+  );
+  function changeLevel(next: StudyLevel) {
+    stopAudio();
+    setLevel(next);
+    setSelected(items.find((item) => isInLevel(item, next))!);
+    setLesson("all");
+    setSearch("");
+    setSession(null);
+    setFinished(false);
+    if (view === "practice") setView("lessons");
+  }
+
   const [toast, setToast] = useState("");
   const [settings, setSettings] = useState(false);
   const [penOnly, setPenOnly] = useState(false);
@@ -117,11 +147,11 @@ export default function StudyApp({
         }
         setDb(store);
         setEvents(await allEvents(store));
-        setIsReady(true);
         setSync(user ? "Ready to sync" : "Guest · saved on this device");
         const prefs = await readDraft<{
           penOnly: boolean;
           slowAudio?: boolean;
+          level?: StudyLevel;
           left: boolean;
           minutes: number;
         }>(store, "settings");
@@ -130,7 +160,12 @@ export default function StudyApp({
           setSlowAudio(prefs.slowAudio ?? false);
           setLeft(prefs.left);
           setMinutes(prefs.minutes);
+          if (prefs.level && ["hsk1", "hsk2", "bonus"].includes(prefs.level)) {
+            setLevel(prefs.level);
+            setSelected(items.find((item) => isInLevel(item, prefs.level!))!);
+          }
         }
+        setIsReady(true);
       })
       .catch(() => {
         setSync("Device storage unavailable");
@@ -142,10 +177,14 @@ export default function StudyApp({
   }, [user?.id, notify]);
   useEffect(() => {
     if (db && isReady)
-      saveDraft(db, "settings", { penOnly, slowAudio, left, minutes }).catch(
-        () => notify("Could not save preferences."),
-      );
-  }, [db, isReady, penOnly, slowAudio, left, minutes, notify]);
+      saveDraft(db, "settings", {
+        penOnly,
+        slowAudio,
+        left,
+        minutes,
+        level,
+      }).catch(() => notify("Could not save preferences."));
+  }, [db, isReady, penOnly, slowAudio, left, minutes, level, notify]);
   const synchronize = useCallback(async () => {
     if (!db || !user || syncLock.current) return;
     syncLock.current = true;
@@ -270,7 +309,7 @@ export default function StudyApp({
       1,
       Math.floor((minutes * 60) / (s === "writing" ? 90 : 25)),
     );
-    const queue = makeQueue(events, s).slice(0, count);
+    const queue = makeQueue(events, s, studyItems).slice(0, count);
     if (!queue.length) {
       notify(
         "You are all caught up for this skill. Try another skill or practice a lesson.",
@@ -296,7 +335,7 @@ export default function StudyApp({
       setSessionIndex(n);
       setSelected(session[n]);
     } else {
-      const group = items.filter((i) => i.lesson === selected.lesson);
+      const group = studyItems.filter((i) => i.lesson === selected.lesson);
       setSelected(
         group[
           (group.findIndex((i) => i.id === selected.id) + 1) % group.length
@@ -304,7 +343,9 @@ export default function StudyApp({
       );
     }
   }
-  const filtered = items.filter((item) => matchesItem(item, search, lesson));
+  const filtered = studyItems.filter((item) =>
+    matchesItem(item, search, lesson),
+  );
   function changeView(v: View) {
     stopAudio();
     if (v === "practice") {
@@ -429,6 +470,18 @@ export default function StudyApp({
                     : "My progress"}
           </span>
           <div className="topbar-actions">
+            <select
+              className="study-level"
+              aria-label="Study level"
+              value={level}
+              onChange={(event) =>
+                changeLevel(event.target.value as StudyLevel)
+              }
+            >
+              <option value="hsk1">HSK1 · {curriculum.hsk1}</option>
+              <option value="hsk2">HSK2 · {curriculum.hsk2}</option>
+              <option value="bonus">Extras · {curriculum.extras}</option>
+            </select>
             {!user && (
               <a
                 className="signin-link"
@@ -566,7 +619,7 @@ export default function StudyApp({
                   <p>
                     <strong>
                       {practiced}
-                      <small> / {items.length}</small>
+                      <small> / {studyItems.length}</small>
                     </strong>
                     <span>Words explored</span>
                   </p>
@@ -614,7 +667,7 @@ export default function StudyApp({
                 </button>
               </div>
               <div className="lesson-grid">
-                {lessons.slice(0, 3).map((l) => (
+                {visibleLessons.slice(0, 3).map((l) => (
                   <button
                     key={l.id}
                     className="lesson-card panel"
@@ -625,15 +678,22 @@ export default function StudyApp({
                   >
                     <div className={"lesson-illustration " + l.color}>
                       <span>
-                        {items.find((i) => i.lesson === l.id)!.hanzi}
+                        {studyItems.find((i) => i.lesson === l.id)!.hanzi}
                         <small>
-                          {items.find((i) => i.lesson === l.id)!.pinyin}
+                          {studyItems.find((i) => i.lesson === l.id)!.pinyin}
                         </small>
                       </span>
                       <b>{l.icon}</b>
                     </div>
                     <div className="lesson-content">
-                      <span className="eyebrow">FOUNDATIONS · 8 WORDS</span>
+                      <span className="eyebrow">
+                        {levelNames[level]} ·{" "}
+                        {
+                          studyItems.filter((item) => item.lesson === l.id)
+                            .length
+                        }{" "}
+                        WORDS
+                      </span>
                       <h3>{l.title}</h3>
                       <p>{l.subtitle}</p>
                       <div className="lesson-progress">
@@ -649,7 +709,12 @@ export default function StudyApp({
                                   )
                                   .map((e) => e.itemId),
                               ).size /
-                                8) *
+                                Math.max(
+                                  1,
+                                  studyItems.filter(
+                                    (item) => item.lesson === l.id,
+                                  ).length,
+                                )) *
                                 100 +
                               "%",
                           }}
@@ -668,7 +733,12 @@ export default function StudyApp({
                                 .map((e) => e.itemId),
                             ).size
                           }{" "}
-                          of 8 explored
+                          of{" "}
+                          {
+                            studyItems.filter((item) => item.lesson === l.id)
+                              .length
+                          }{" "}
+                          explored
                         </span>
                         <ArrowRight size={17} />
                       </div>
@@ -682,7 +752,7 @@ export default function StudyApp({
                   <strong>Let your hand do the remembering.</strong> Try the
                   writing studio with Apple Pencil, a finger, or your mouse.
                 </p>
-                <button onClick={() => openPractice(items[0])}>
+                <button onClick={() => openPractice(studyItems[0])}>
                   Give it a try <ArrowRight size={16} />
                 </button>
               </div>
@@ -697,8 +767,11 @@ export default function StudyApp({
                     Your learning library<span className="orange">.</span>
                   </h1>
                   <p>
-                    {curriculum.total} words &amp; phrases · {curriculum.hsk1}{" "}
-                    HSK1 + {curriculum.extras} everyday extras.
+                    {levelNames[level]} · {studyItems.length} words &amp;
+                    phrases.{" "}
+                    {level === "bonus"
+                      ? "Useful everyday additions."
+                      : "HSK 2025 syllabus."}
                   </p>
                 </div>
               </div>
@@ -716,14 +789,10 @@ export default function StudyApp({
                   value={lesson}
                   onChange={(e) => setLesson(e.target.value)}
                 >
-                  <option value="all">All words · {curriculum.total}</option>
-                  <option value="hsk1">
-                    HSK1 · all {curriculum.hsk1} words
+                  <option value="all">
+                    All {levelNames[level]} words · {studyItems.length}
                   </option>
-                  <option value="bonus">
-                    Everyday extras · {curriculum.extras}
-                  </option>
-                  {lessons.map((l) => (
+                  {visibleLessons.map((l) => (
                     <option key={l.id} value={l.id}>
                       {l.title}
                     </option>
@@ -732,15 +801,13 @@ export default function StudyApp({
               </div>
               <p className="library-count" role="status">
                 {filtered.length} {filtered.length === 1 ? "word" : "words"} ·{" "}
-                {lesson === "hsk1"
-                  ? "HSK 2025 syllabus"
-                  : "choose a topic or search"}
+                {levelNames[level]}
               </p>
               <div className="word-grid">
                 {filtered.map((i) => (
                   <article className="word-card panel" key={i.id}>
                     <span className="eyebrow">
-                      {i.hskEntry ? "HSK1" : "EXTRA"} ·{" "}
+                      {i.hskLevel ? `HSK${i.hskLevel}` : "EXTRA"} ·{" "}
                       {lessons.find((l) => l.id === i.lesson)?.title}
                     </span>
                     <div className="word-heading">
@@ -751,7 +818,7 @@ export default function StudyApp({
                       <button
                         className="icon-button"
                         aria-label={"Listen to " + i.pinyin}
-                        onClick={() => speak(i.hanzi, notify)}
+                        onClick={() => speak(i.hanzi, notify, i)}
                       >
                         <Volume2 size={20} />
                       </button>
@@ -764,7 +831,7 @@ export default function StudyApp({
                       <button
                         className="text-button"
                         aria-label={"Listen to example: " + i.pinyin}
-                        onClick={() => speak(i.sentence, notify)}
+                        onClick={() => speak(i.sentence, notify, i)}
                       >
                         <Volume2 size={14} /> Listen to example
                       </button>
@@ -820,7 +887,7 @@ export default function StudyApp({
                         k.endsWith(":" + s) &&
                         new Date(c.due).getTime() <= Date.now(),
                     ).length;
-                    const fresh = items.filter(
+                    const fresh = studyItems.filter(
                       (i) => !cards[i.id + ":" + s],
                     ).length;
                     return (
@@ -918,7 +985,7 @@ export default function StudyApp({
                         setSelected(items.find((i) => i.id === e.target.value)!)
                       }
                     >
-                      {items.map((i) => (
+                      {studyItems.map((i) => (
                         <option key={i.id} value={i.id}>
                           {i.hanzi} · {i.pinyin} · {i.english}
                         </option>
@@ -1011,7 +1078,7 @@ export default function StudyApp({
                       </tr>
                     </thead>
                     <tbody>
-                      {items
+                      {studyItems
                         .filter((i) => events.some((e) => e.itemId === i.id))
                         .map((i) => (
                           <tr key={i.id}>
@@ -1069,7 +1136,7 @@ export default function StudyApp({
                       <p>Start with a word. Your progress will grow here.</p>
                       <button
                         className="primary"
-                        onClick={() => openPractice(items[0])}
+                        onClick={() => openPractice(studyItems[0])}
                       >
                         Try your first word <ArrowRight size={16} />
                       </button>
@@ -1309,7 +1376,7 @@ function Recall({
           <button
             className="listen-big"
             aria-label="Play Chinese word"
-            onClick={() => speak(item.hanzi, notify)}
+            onClick={() => speak(item.hanzi, notify, item)}
           >
             <Volume2 size={42} />
           </button>
@@ -1336,7 +1403,7 @@ function Recall({
             <small>{item.translation}</small>
             <button
               className="text-button"
-              onClick={() => speak(item.sentence, notify)}
+              onClick={() => speak(item.sentence, notify, item)}
             >
               <Volume2 size={14} /> Listen to example
             </button>
@@ -1625,7 +1692,7 @@ function Writing({
                 setAssisted(true);
                 setHints((n) => n + 1);
                 setRevealed(true);
-                speak(item.hanzi, notify);
+                speak(item.hanzi, notify, item);
               } else setReplay((r) => r + 1);
             }}
           >
@@ -1676,7 +1743,7 @@ function Writing({
               <h3>{item.english}</h3>
               <button
                 className="audio-button"
-                onClick={() => speak(item.hanzi, notify)}
+                onClick={() => speak(item.hanzi, notify, item)}
               >
                 <Volume2 size={17} /> Hear pronunciation
               </button>
@@ -1687,7 +1754,7 @@ function Writing({
                 <small>{item.translation}</small>
                 <button
                   className="text-button"
-                  onClick={() => speak(item.sentence, notify)}
+                  onClick={() => speak(item.sentence, notify, item)}
                 >
                   <Volume2 size={14} /> Listen to example
                 </button>

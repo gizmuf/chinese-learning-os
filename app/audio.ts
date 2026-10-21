@@ -1,13 +1,5 @@
 "use client";
-import { items } from "./content";
-const recordings = new Map<string, string>();
-for (const item of items) {
-  recordings.set(item.hanzi, `/audio/${encodeURIComponent(item.id)}-word.mp3`);
-  recordings.set(
-    item.sentence,
-    `/audio/${encodeURIComponent(item.id)}-sentence.mp3`,
-  );
-}
+import type { Item } from "./content";
 let current: HTMLAudioElement | null = null;
 let playbackRate = 1;
 export function setSpeechRate(rate: number) {
@@ -21,12 +13,12 @@ export function stopAudio() {
   current.load();
   current = null;
 }
-export function speak(text: string, notify: (message: string) => void) {
-  const source = recordings.get(text);
-  if (!source) {
-    notify("This pronunciation recording is not available yet.");
-    return;
-  }
+export function speak(
+  text: string,
+  notify: (message: string) => void,
+  item: Item,
+) {
+  const source = `/audio/${encodeURIComponent(item.id)}-${text === item.hanzi ? "word" : "sentence"}.mp3`;
   stopAudio();
   const audio = new Audio(source);
   current = audio;
