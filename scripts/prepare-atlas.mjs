@@ -9,3 +9,8 @@ for(const c of atlasCharacters){const data=JSON.parse(readFileSync('public/chara
 for(const name of ['makemeahanzi-COPYING.txt','makemeahanzi-dictionary-LGPL.txt','makemeahanzi-GPL-3.0.txt'])if(readFileSync('public/licenses/'+name).length<500)throw Error('Missing licence');
 if(readFileSync('public/atlas/Hanzi_Connections_Atlas_v2_100_EN.pdf').subarray(0,4).toString()!=='%PDF')throw Error('Missing Atlas PDF');
 console.log(`Verified Atlas: 100 core + 6 discovery entries, ${chars.size} writing/example glyphs, 212 contextual recordings and component mappings.`);
+const storyBuild=await build({entryPoints:['app/atlas-stories.ts'],bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent'});const{atlasStories}=await import('data:text/javascript;base64,'+Buffer.from(storyBuild.outputFiles[0].text).toString('base64'));
+const storyManifest=JSON.parse(readFileSync('public/atlas/stories/manifest.json','utf8'));const voices={en:'en-GB-SoniaNeural',fr:'fr-FR-DeniseNeural',ru:'ru-RU-SvetlanaNeural'};
+if(storyManifest.recordings.length!==18)throw Error('Unexpected story narration inventory');
+for(const[id,story]of Object.entries(atlasStories))for(const[locale,voice]of Object.entries(voices))for(let i=0;i<story.steps.length;i++){const file=`${id}-${locale}-${i}.mp3`;const r=storyManifest.recordings.find(r=>r.file===file);const bytes=readFileSync('public/atlas/stories/'+file);if(!r||r.text!==story.steps[i].caption[locale]||r.voice!==voice||bytes.length<1000||createHash('sha256').update(bytes).digest('hex')!==r.sha256)throw Error('Invalid story narration '+file);}
+console.log('Verified two visual stories and 18 EN/FR/RU narration recordings.');

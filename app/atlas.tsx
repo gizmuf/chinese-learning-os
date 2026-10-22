@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -12,6 +12,13 @@ import {
   Search,
   Volume2,
 } from "lucide-react";
+import AtlasStory from "./atlas-story";
+import {
+  emptyAnswer,
+  sessionTotals,
+  swipeStep,
+  seededQuestion,
+} from "./atlas-session";
 import { useI18n } from "./i18n";
 import { characters, groups, type AtlasCharacter } from "./atlas-data";
 import {
@@ -27,7 +34,6 @@ import {
   linkedWords,
   atlasItem,
   atlasQueue,
-  questionFor,
   type AtlasSkill,
 } from "./atlas-model";
 import { useAtlasProgress } from "./atlas-store";
@@ -89,8 +95,10 @@ export default function Atlas({
     else if (group && groupById.has(group))
       setScope({ kind: "group", id: group });
     if (target && atlasById.has(target)) setSelected(target);
-    else if(component && componentById.has(component)) setSelected(containing(component)[0]?.id ?? "u6674");
-    else if(group && groupById.has(group)) setSelected(atlasByHanzi.get(groupById.get(group)!.characters[0])!.id);
+    else if (component && componentById.has(component))
+      setSelected(containing(component)[0]?.id ?? "u6674");
+    else if (group && groupById.has(group))
+      setSelected(atlasByHanzi.get(groupById.get(group)!.characters[0])!.id);
     return () => stopAudio();
   }, []);
   const character = atlasById.get(selected) ?? characters[0];
@@ -134,7 +142,7 @@ export default function Atlas({
   }
   function navigate(next: Scope) {
     stopAudio();
-    setTrail((v) => [...v, {scope, target:selected}].slice(-12));
+    setTrail((v) => [...v, { scope, target: selected }].slice(-12));
     setScope(next);
     setSearch("");
     setTab("explore");
@@ -164,7 +172,7 @@ export default function Atlas({
   }
   function back() {
     stopAudio();
-    const previous = trail.at(-1) ?? {scope:null,target:"u6674"};
+    const previous = trail.at(-1) ?? { scope: null, target: "u6674" };
     setTrail((v) => v.slice(0, -1));
     setScope(previous.scope);
     setSelected(previous.target);
@@ -253,7 +261,8 @@ export default function Atlas({
         <div>
           <p className="eyebrow">{t("FOLLOW THE CONNECTIONS")}</p>
           <h1>
-            Atlas chmur<span className="orange">.</span>
+            {t("Cloud Atlas")}
+            <span className="orange">.</span>
           </h1>
           <p>
             {t("100 characters · 20 constellations · more ways to remember")}
@@ -471,8 +480,21 @@ export default function Atlas({
                 {!search && (
                   <Constellation
                     rows={results}
-                    center={activeComponent?.glyph ?? (activeGroup && componentById.get(activeGroup.id)?.glyph) ?? activeGroup?.anchor ?? ""}
-                    onCenter={!activeComponent && activeGroup && componentById.has(activeGroup.id) ? () => navigate({kind:"component",id:activeGroup.id}) : undefined}
+                    center={
+                      activeComponent?.glyph ??
+                      (activeGroup &&
+                        componentById.get(activeGroup.id)?.glyph) ??
+                      activeGroup?.anchor ??
+                      ""
+                    }
+                    onCenter={
+                      !activeComponent &&
+                      activeGroup &&
+                      componentById.has(activeGroup.id)
+                        ? () =>
+                            navigate({ kind: "component", id: activeGroup.id })
+                        : undefined
+                    }
                     selected={selected}
                     onChoose={choose}
                   />
@@ -581,6 +603,11 @@ export default function Atlas({
                   </div>
                 </div>
                 <div className="atlas-bridges">
+                  <AtlasStory
+                    notify={notify}
+                    character={character.hanzi}
+                    onComponent={(id) => navigate({ kind: "component", id })}
+                  />
                   <h3>{t("Follow another connection")}</h3>
                   <p>
                     {t(
@@ -1018,7 +1045,21 @@ function Constellation({
         ))}
       </svg>
       <div className="atlas-cloud-center">
-        {onCenter ? <button className="atlas-center-action" onClick={onCenter} aria-label={t("Follow a component")+" "+center}><strong lang="zh-Hans">{center}</strong><small>{t("connection")}</small></button> : <><strong lang="zh-Hans">{center}</strong><small>{t("connection")}</small></>}
+        {onCenter ? (
+          <button
+            className="atlas-center-action"
+            onClick={onCenter}
+            aria-label={t("Follow a component") + " " + center}
+          >
+            <strong lang="zh-Hans">{center}</strong>
+            <small>{t("connection")}</small>
+          </button>
+        ) : (
+          <>
+            <strong lang="zh-Hans">{center}</strong>
+            <small>{t("connection")}</small>
+          </>
+        )}
       </div>
       {points.map((p) => (
         <button
@@ -1060,27 +1101,38 @@ function AtlasQuiz({
 }) {
   const { t, locale } = useI18n();
   const [index, setIndex] = useState(0);
-  const [picked, setPicked] = useState("");
-  const [result, setResult] = useState<boolean | null>(null);
-  const [hint, setHint] = useState(false);
-  const [played, setPlayed] = useState(false);
+  const [answers, setAnswers] = useState(() => tasks.map(() => emptyAnswer()));
+  const { picked, result, hint, played, retry } = answers[index];
   const [saving, setSaving] = useState(false);
   const [done, setDone] = useState(false);
-  const [score, setScore] = useState(0);
-  const [independent, setIndependent] = useState(0);
-  const [missed, setMissed] = useState<Task[]>([]);
-  const [retry, setRetry] = useState(false);
+  const gesture = useRef<{ x: number; y: number; id: number } | null>(null);
+  const suppressClick = useRef(false);
   const task = tasks[index];
   const c = atlasById.get(task.targetId)!;
   const q = useMemo(
-    () => questionFor(task.targetId, task.skill, locale),
-    [task.targetId, task.skill, locale],
+    () => seededQuestion(task.targetId, task.skill, locale, index),
+    [task.targetId, task.skill, locale, index],
   );
   const item = atlasItem(c, locale);
   const assisted = guided || hint || retry;
+  const { score, independent, answered } = sessionTotals(answers);
+  const missed = answers.filter((a) => a.result === false);
+  function update(patch: Partial<ReturnType<typeof emptyAnswer>>) {
+    setAnswers((all) =>
+      all.map((a, i) => (i === index ? { ...a, ...patch } : a)),
+    );
+  }
   useEffect(() => {
-    if (result === null) setPicked("");
-  }, [locale]);
+    if (picked && !q.options.some((o) => o.id === picked))
+      update({ picked: "" });
+  }, [q]);
+  function go(delta: number) {
+    if (saving) return;
+    const next = index + delta;
+    if (next < 0 || next >= tasks.length) return;
+    stopAudio();
+    setIndex(next);
+  }
   async function check() {
     if (!picked || saving || result !== null) return;
     const correct = picked === q.answer;
@@ -1089,10 +1141,11 @@ function AtlasQuiz({
       await record(
         newAtlasEvent(c.id, task.skill, "choice", correct ? 3 : 1, assisted),
       );
-      setResult(correct);
-      if (correct) setScore((v) => v + 1);
-      if (correct && !assisted) setIndependent((v) => v + 1);
-      if (!correct) setMissed((v) => [...v, task]);
+      update({
+        result: correct,
+        credited: answers[index].credited || correct,
+        independent: answers[index].independent || (correct && !assisted),
+      });
     } catch {
       notify(t("Could not save this review. Please try again."));
     } finally {
@@ -1100,17 +1153,11 @@ function AtlasQuiz({
     }
   }
   function next() {
-    stopAudio();
+    if (saving) return;
     if (index === tasks.length - 1) {
+      stopAudio();
       setDone(true);
-      return;
-    }
-    setIndex((v) => v + 1);
-    setPicked("");
-    setResult(null);
-    setHint(false);
-    setPlayed(false);
-    setRetry(false);
+    } else go(1);
   }
   if (done)
     return (
@@ -1124,8 +1171,25 @@ function AtlasQuiz({
           {independent} {t("correct without answer hints")}
         </p>
         <p>
+          {answered}/{tasks.length} {t("answered")} · {tasks.length - answered}{" "}
+          {t("unanswered")}
+        </p>
+        {answered < tasks.length && (
+          <button
+            className="secondary"
+            onClick={() => {
+              setIndex(answers.findIndex((a) => a.result === null));
+              setDone(false);
+            }}
+          >
+            {t("Return to unanswered activities")}
+          </button>
+        )}
+        <p>
           {t(
-            "Your answers are saved. Corrected or revealed answers remain assisted practice.",
+            answered
+              ? "Your answers are saved. Corrected or revealed answers remain assisted practice."
+              : "No answers were recorded.",
           )}
         </p>
         {missed.length > 0 && (
@@ -1138,7 +1202,47 @@ function AtlasQuiz({
       </section>
     );
   return (
-    <section className="panel atlas-quiz">
+    <section
+      className="panel atlas-quiz"
+      aria-label={t("Atlas practice session")}
+      onPointerDown={(e) => {
+        suppressClick.current = false;
+        if (e.pointerType === "touch") {
+          if (e.isPrimary)
+            gesture.current = { x: e.clientX, y: e.clientY, id: e.pointerId };
+          else gesture.current = null;
+        }
+      }}
+      onPointerMove={(e) => {
+        const g = gesture.current;
+        if (
+          g &&
+          g.id === e.pointerId &&
+          swipeStep(g.x, g.y, e.clientX, e.clientY) !== 0
+        )
+          e.currentTarget.setPointerCapture(e.pointerId);
+      }}
+      onPointerCancel={() => {
+        gesture.current = null;
+      }}
+      onPointerUp={(e) => {
+        const g = gesture.current;
+        gesture.current = null;
+        if (!g || g.id !== e.pointerId) return;
+        const delta = swipeStep(g.x, g.y, e.clientX, e.clientY);
+        if (delta) {
+          suppressClick.current = true;
+          go(delta);
+        }
+      }}
+      onClickCapture={(e) => {
+        if (suppressClick.current) {
+          e.preventDefault();
+          e.stopPropagation();
+          suppressClick.current = false;
+        }
+      }}
+    >
       <div className="section-top">
         <span className="eyebrow">
           {t(guided ? "GUIDED CONSTELLATION PRACTICE" : "MIXED RECALL")}
@@ -1147,12 +1251,44 @@ function AtlasQuiz({
           {index + 1}/{tasks.length}
         </span>
       </div>
+      <div
+        className="atlas-session-nav"
+        role="group"
+        aria-label={t("Practice navigation")}
+      >
+        <button
+          className="secondary"
+          aria-label={t("Previous activity")}
+          disabled={index === 0 || saving}
+          onClick={() => go(-1)}
+        >
+          <ArrowLeft size={18} />
+          <span>{t("Previous")}</span>
+        </button>
+        <span>
+          {answered}/{tasks.length} {t("answered")}
+        </span>
+        <button
+          className="secondary"
+          aria-label={t("Next activity")}
+          disabled={index === tasks.length - 1 || saving}
+          onClick={() => go(1)}
+        >
+          <span>{t("Next")}</span>
+          <ArrowRight size={18} />
+        </button>
+      </div>
+      <p className="atlas-swipe-note">
+        {t(
+          "Swipe left or right to browse. Skipping does not record an answer.",
+        )}
+      </p>
       <h2>{t(q.prompt)}</h2>
       {task.skill === "sound" ? (
         <button
           className="primary atlas-listen"
           onClick={() => {
-            setPlayed(true);
+            update({ played: true });
             speak(item.sentence, notify, item);
           }}
         >
@@ -1175,7 +1311,7 @@ function AtlasQuiz({
             disabled={saving || result !== null}
             aria-pressed={picked === o.id}
             className={picked === o.id ? "selected" : ""}
-            onClick={() => setPicked(o.id)}
+            onClick={() => update({ picked: o.id })}
           >
             {o.label}
           </button>
@@ -1200,17 +1336,22 @@ function AtlasQuiz({
             <button
               className="text-button"
               disabled={saving}
-              onClick={() => setHint(true)}
+              onClick={() => update({ hint: true })}
             >
               {t("Show answer hint")}
             </button>
           </>
-        ) : (
+        ) : index === tasks.length - 1 ? (
           <button className="primary" onClick={next}>
             {t(
               index === tasks.length - 1 ? "Finish practice" : "Next activity",
             )}
             <ArrowRight size={16} />
+          </button>
+        ) : null}
+        {index === tasks.length - 1 && result === null && (
+          <button className="secondary" disabled={saving} onClick={next}>
+            {t("Finish practice")}
           </button>
         )}
       </div>
@@ -1245,10 +1386,7 @@ function AtlasQuiz({
             <button
               className="secondary"
               onClick={() => {
-                setResult(null);
-                setPicked("");
-                setHint(true);
-                setRetry(true);
+                update({ result: null, picked: "", hint: true, retry: true });
               }}
             >
               {t("Try again with help")}

@@ -4221,3 +4221,26 @@ html[lang="ru"] .nav-item, html[lang="fr"] .nav-item { font-size: 12px; }
   }
 }
 .atlas-center-action{border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;width:100%;height:100%;border-radius:50%;color:var(--ink)}.atlas-center-action>strong{font-size:39px;font-weight:500}.atlas-center-action>small{font-size:10px;color:var(--muted)}
+
+/* Cloud Atlas: reversible studio bridge, touch browsing and visual stories. */
+.atlas-return-button { margin:0 0 22px; }
+.atlas-quiz { touch-action:pan-y; }
+.atlas-session-nav { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:18px 0 8px; }
+.atlas-session-nav>span { color:var(--muted); font-size:12px; }
+.atlas-session-nav button { min-height:44px; }
+.atlas-swipe-note { color:var(--muted); font-size:12px; margin:0 0 24px; }
+.atlas-story { border:1px solid var(--border); border-radius:16px; padding:22px; margin:26px 0; background:var(--paper); --atlas-story-wash:#dfe5d9; }
+.atlas-story .section-top { gap:12px; flex-wrap:wrap; }
+.atlas-story .section-top h3 { margin:0; }
+.atlas-story-layout { display:grid; grid-template-columns:minmax(160px,240px) 1fr; gap:20px; align-items:center; }
+.atlas-story-art { width:100%; max-height:210px; color:var(--green); }
+.atlas-story-art rect,.atlas-story-art path,.atlas-story-art circle,.atlas-story-art line,.atlas-story-art g { transition:all .8s ease; }
+.atlas-story-caption { font-size:17px; line-height:1.65; }
+.atlas-story-steps { display:flex; gap:8px; flex-wrap:wrap; margin:14px 0; }
+.atlas-story-steps button { border:1px solid var(--border); border-radius:10px; padding:10px 12px; min-height:44px; background:var(--white); color:var(--ink); text-align:left; }
+.atlas-story-steps button[aria-pressed=true] { background:var(--green); color:white; }
+.atlas-story-source { display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; align-items:center; margin-top:16px; font-size:12px; color:var(--muted); }
+.atlas-story .atlas-actions { gap:8px; flex-wrap:wrap; }
+.atlas-story .icon-button { min-width:44px; min-height:44px; }
+@media(max-width:600px){.atlas-story {padding:16px;} .atlas-story-layout {grid-template-columns:1fr;gap:4px;} .atlas-story-art {max-height:170px;} .atlas-story .eyebrow {font-size:9px;} .atlas-session-nav {gap:8px;} .atlas-session-nav .secondary{padding:10px;}}
+@media(prefers-reduced-motion:reduce){.atlas-story-art *{transition:none!important;}}

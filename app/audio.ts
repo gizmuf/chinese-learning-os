@@ -20,6 +20,9 @@ export function speak(
 ) {
   const prefix = item.id.startsWith("atlas-") ? "/atlas/audio" : item.id.startsWith("course03-") ? "/course03/audio" : "/audio";
   const source = `${prefix}/${encodeURIComponent(item.id)}-${text === item.hanzi ? "word" : "sentence"}.mp3`;
+  playRecording(source,notify);
+}
+export function playRecording(source:string,notify:(message:string)=>void) {
   stopAudio();
   const audio = new Audio(source);
   current = audio;

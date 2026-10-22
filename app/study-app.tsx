@@ -95,6 +95,7 @@ export default function StudyApp({
   const lessons = sourceLessons.map(lesson => ({...lesson, title: t(lesson.title), subtitle: t(lesson.subtitle)}));
   const skillNames = Object.fromEntries(Object.entries(sourceSkillNames).map(([key,value]) => [key,t(value)])) as typeof sourceSkillNames;
   const [view, setView] = useState<View>("today");
+  const [atlasReturn, setAtlasReturn] = useState<{url:string;scroll:number}|null>(null);
   useEffect(() => { if (new URLSearchParams(window.location.search).get("atlas") === "1") setView("atlas"); else if (new URLSearchParams(window.location.search).get("course") === "intensive") setView("course"); }, []);
   const [notebookEvents, setEvents] = useState<LearningEvent[]>([]);
   const [sync, setSync] = useState(t("Loading your notebook…"));
@@ -313,6 +314,8 @@ export default function StudyApp({
     void synchronize();
   };
   function openPractice(item: Item, practiceMode: Mode = "trace") {
+    stopAudio();
+    setAtlasReturn(null);
     window.history.replaceState(null, "", window.location.pathname);
     setSession(null);
     setFinished(false);
@@ -364,7 +367,22 @@ export default function StudyApp({
   const filtered = studyItems.filter((item) =>
     matchesItem(item, search, lesson),
   );
+  function returnToAtlas() {
+    if (!atlasReturn) return;
+    stopAudio();
+    window.history.replaceState(null,"",atlasReturn.url);
+    const scroll=atlasReturn.scroll;
+    setView("atlas"); setAtlasReturn(null);
+    requestAnimationFrame(()=>window.scrollTo({top:scroll,behavior:"instant"}));
+  }
+  function openAtlasWord(item: Item) {
+    const origin={url:window.location.pathname+window.location.search,scroll:window.scrollY};
+    setLevel(item.hskLevel===2?"hsk2":item.hskLevel===1?"hsk1":"bonus");
+    openPractice(item); setAtlasReturn(origin);
+  }
   function changeView(v: View) {
+    if(v==="atlas"&&atlasReturn){returnToAtlas();return;}
+    setAtlasReturn(null);
     window.history.replaceState(null, "", window.location.pathname + (v === "atlas" ? "?atlas=1" : v === "course" ? "?course=intensive" : ""));
     stopAudio();
     if (v === "practice") {
@@ -416,7 +434,7 @@ export default function StudyApp({
               { id: "today", title: t("Today"), icon: Home },
               { id: "lessons", title: t("My lessons"), icon: BookOpen },
               { id: "course", title: t("Course"), icon: GraduationCap },
-              { id: "atlas", title: "Atlas", icon: Network },
+              { id: "atlas", title: t("Cloud Atlas"), icon: Network },
               { id: "practice", title: t("Writing studio"), icon: PenLine },
               { id: "reviews", title: t("Review"), icon: RotateCcw },
               { id: "progress", title: t("My progress"), icon: TrendingUp },
@@ -477,7 +495,7 @@ export default function StudyApp({
           <span>
             <span className="breadcrumb">{t("My study space")}</span>
             <ChevronRight size={13} />
-            {view === "atlas" ? "Atlas chmur" : view === "course" ? t("Intensive course") : view === "practice"
+            {view === "atlas" ? t("Cloud Atlas") : view === "course" ? t("Intensive course") : view === "practice"
               ? t("Writing studio")
               : view === "today"
                 ? t("Today")
@@ -533,7 +551,8 @@ export default function StudyApp({
           </div>
         </header>
         <div className="page-content">
-          {view === "atlas" && <Suspense fallback={<p role="status">{t("Loading your notebook…")}</p>}><Atlas owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} onWord={item=>{setLevel(item.hskLevel===2?"hsk2":item.hskLevel===1?"hsk1":"bonus");openPractice(item);}}/></Suspense>}
+          {(view === "atlas" || atlasReturn) && <div hidden={view!=="atlas"}><Suspense fallback={<p role="status">{t("Loading your notebook…")}</p>}><Atlas owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} onWord={openAtlasWord}/></Suspense></div>}
+          {view==="practice" && atlasReturn && <button className="secondary atlas-return-button" onClick={returnToAtlas}><ArrowRight size={16} style={{transform:"rotate(180deg)"}}/>{t("Back to Cloud Atlas")}</button>}
           {view === "course" && <IntensiveCourse owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} recordHSK={record} notify={notify} onHSKRecall={item => { setLevel(item.hskLevel === 2 ? "hsk2" : item.hskLevel === 1 ? "hsk1" : "bonus"); openPractice(item, "recall"); }} />}
           {view === "today" && (
             <>

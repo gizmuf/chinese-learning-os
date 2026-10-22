@@ -2087,6 +2087,94 @@
     "Write the character before comparing. Rate your memory honestly.": {
       "fr": "Écrivez le caractère avant de comparer. Évaluez honnêtement votre mémoire.",
       "ru": "Напишите иероглиф перед сравнением. Честно оцените, как вы его помните."
+    },
+    "Cloud Atlas": {
+      "fr": "Atlas des nuages",
+      "ru": "Атлас облаков"
+    },
+    "Back to Cloud Atlas": {
+      "fr": "Retour à l’Atlas des nuages",
+      "ru": "Вернуться в Атлас облаков"
+    },
+    "Previous activity": {
+      "fr": "Activité précédente",
+      "ru": "Предыдущее задание"
+    },
+    "answered": {
+      "fr": "réponses données",
+      "ru": "с ответом"
+    },
+    "unanswered": {
+      "fr": "sans réponse",
+      "ru": "без ответа"
+    },
+    "Atlas practice session": {
+      "fr": "Session de pratique de l’Atlas",
+      "ru": "Практическая сессия Атласа"
+    },
+    "Practice navigation": {
+      "fr": "Navigation des exercices",
+      "ru": "Навигация по заданиям"
+    },
+    "Swipe left or right to browse. Skipping does not record an answer.": {
+      "fr": "Balayez vers la gauche ou la droite pour parcourir. Passer une question n’enregistre aucune réponse.",
+      "ru": "Листайте влево или вправо. Пропуск задания не записывается как ответ."
+    },
+    "Return to unanswered activities": {
+      "fr": "Revenir aux questions sans réponse",
+      "ru": "Вернуться к заданиям без ответа"
+    },
+    "Visual character story": {
+      "fr": "Histoire visuelle du caractère",
+      "ru": "Визуальная история иероглифа"
+    },
+    "VISUAL STORY": {
+      "fr": "HISTOIRE VISUELLE",
+      "ru": "ВИЗУАЛЬНАЯ ИСТОРИЯ"
+    },
+    "Illustrative reconstruction, not a tracing of a dated inscription.": {
+      "fr": "Reconstitution illustrative, et non copie d’une inscription datée.",
+      "ru": "Учебная реконструкция, а не копия датированной надписи."
+    },
+    "Story steps": {
+      "fr": "Étapes de l’histoire",
+      "ru": "Этапы истории"
+    },
+    "Play animation": {
+      "fr": "Lancer l’animation",
+      "ru": "Запустить анимацию"
+    },
+    "Pause animation": {
+      "fr": "Mettre l’animation en pause",
+      "ru": "Приостановить анимацию"
+    },
+    "Listen to this step": {
+      "fr": "Écouter cette étape",
+      "ru": "Прослушать этот этап"
+    },
+    "Stop narration": {
+      "fr": "Arrêter la narration",
+      "ru": "Остановить озвучивание"
+    },
+    "Previous story step": {
+      "fr": "Étape précédente de l’histoire",
+      "ru": "Предыдущий этап истории"
+    },
+    "Next story step": {
+      "fr": "Étape suivante de l’histoire",
+      "ru": "Следующий этап истории"
+    },
+    "Origin reference": {
+      "fr": "Référence étymologique",
+      "ru": "Источник об истории знака"
+    },
+    "Explore this component": {
+      "fr": "Explorer ce composant",
+      "ru": "Изучить этот компонент"
+    },
+    "No answers were recorded.": {
+      "fr": "Aucune réponse n’a été enregistrée.",
+      "ru": "Ответы не были записаны."
     }
   },
   "vocabulary": {
