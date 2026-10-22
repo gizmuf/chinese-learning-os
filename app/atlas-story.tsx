@@ -1,222 +1,136 @@
 "use client";
-import { useEffect, useState } from "react";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Play,
-  Pause,
-  Volume2,
-  Square,
-} from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { ArrowRight, Play, Pause, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import { atlasStories } from "./atlas-stories";
 import { useI18n } from "./i18n";
-import { playRecording, stopAudio } from "./audio";
-export default function AtlasStory({
-  character,
-  onComponent,
-  notify,
-}: {
-  character: string;
-  onComponent: (id: string) => void;
-  notify: (message: string) => void;
-}) {
-  const { t, locale } = useI18n();
-  const id = character === "日" ? "sun" : character === "木" ? "wood" : null;
-  const [step, setStep] = useState(0),
-    [playing, setPlaying] = useState(false);
+import { playRecording, releaseRecording } from "./audio";
+import AtlasStoryArt from "./atlas-story-art";
+import { clamp, progressForAudio, stageAt, STORY_DURATION } from "./atlas-story-motion";
+import "./atlas-story.css";
+
+const copy = {
+  en: { eyebrow: "A CHARACTER, DISCOVERED", sun: "A little sunlight. A lasting shape.", wood: "Find the tree inside the character.", sunMeaning: "sun · day", woodMeaning: "tree · wood", drag: "Drag to explore the transformation", play: "Play story", resume: "Continue", pause: "Pause", replay: "Start again", sound: "Narration on", mute: "Narration off", note: "A visual memory aid. The middle drawing is an illustration, not a historical inscription.", explore: "Find this shape in other characters", reduced: "Reduced motion: three still frames" },
+  fr: { eyebrow: "UN CARACTÈRE À DÉCOUVRIR", sun: "Un peu de soleil. Une forme qui reste.", wood: "Retrouvez l’arbre dans le caractère.", sunMeaning: "soleil · jour", woodMeaning: "arbre · bois", drag: "Faites glisser pour explorer la transformation", play: "Lire l’histoire", resume: "Continuer", pause: "Pause", replay: "Recommencer", sound: "Narration activée", mute: "Narration désactivée", note: "Une aide visuelle à la mémorisation. Le dessin intermédiaire est une illustration, pas une inscription historique.", explore: "Retrouver cette forme dans d’autres caractères", reduced: "Mouvement réduit : trois images fixes" },
+  ru: { eyebrow: "ОТКРЫВАЕМ ИЕРОГЛИФ", sun: "Немного солнца. Запоминающийся образ.", wood: "Найдите дерево в иероглифе.", sunMeaning: "солнце · день", woodMeaning: "дерево · древесина", drag: "Перемещайте ползунок, чтобы изучить переход", play: "Смотреть историю", resume: "Продолжить", pause: "Пауза", replay: "Сначала", sound: "Озвучка включена", mute: "Озвучка выключена", note: "Образ для запоминания. Промежуточный рисунок — иллюстрация, а не историческая надпись.", explore: "Найти эту форму в других иероглифах", reduced: "Меньше движения: три неподвижных кадра" },
+};
+
+export default function AtlasStory(props: { character: string; onComponent: (id: string) => void; notify: (message: string) => void }) {
+  const { locale } = useI18n();
+  const id = props.character === "日" ? "sun" : props.character === "木" ? "wood" : null;
+  return id ? <StoryPlayer key={`${id}-${locale}`} id={id} {...props}/> : null;
+}
+
+function StoryPlayer({ id, onComponent, notify }: { id: "sun" | "wood"; onComponent: (id: string) => void; notify: (message: string) => void }) {
+  const { locale, t } = useI18n();
+  const c = copy[locale], story = atlasStories[id];
+  const [progress, setProgress] = useState(0);
+  const position = useRef(0);
+  const [playing, setPlaying] = useState(false);
+  const [narration, setNarration] = useState(true);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const recording = useRef<HTMLAudioElement | null>(null);
+  const audioStage = useRef(0);
+  const audioReady = useRef(false);
+  const detach = useRef<() => void>(() => {});
+  const notice = useRef(notify);
+  notice.current = notify;
+  const update = useCallback((value: number) => { position.current = clamp(value); setProgress(position.current); }, []);
+  const clearAudio = useCallback(() => {
+    detach.current();
+    detach.current = () => {};
+    if (recording.current) releaseRecording(recording.current);
+    recording.current = null;
+    audioReady.current = false;
+  }, []);
+
   useEffect(() => {
-    setStep(0);
-    setPlaying(false);
-    stopAudio();
-    return stopAudio;
-  }, [id, locale]);
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const change = () => setReducedMotion(media.matches);
+    const visibility = () => { if (document.hidden) { setPlaying(false); recording.current?.pause(); } };
+    change(); media.addEventListener("change", change);
+    document.addEventListener("visibilitychange", visibility);
+    return () => { media.removeEventListener("change", change); document.removeEventListener("visibilitychange", visibility); clearAudio(); };
+  }, [clearAudio]);
+
+  const startAudio = useCallback(function start(at: number) {
+    clearAudio();
+    const stage = stageAt(at);
+    audioStage.current = stage;
+    const offset = clamp(at * 3 - stage);
+    const audio = playRecording(`/atlas/stories/${id}-${locale}-${stage}.mp3`, message => {
+      notice.current(message); setPlaying(false);
+    });
+    recording.current = audio;
+    const seek = () => { if (Number.isFinite(audio.duration)) { audio.currentTime = offset * audio.duration; audioReady.current = true; } };
+    const ended = () => {
+      if (recording.current !== audio) return;
+      update((stage + 1) / 3);
+      if (stage < 2) start((stage + 1) / 3);
+      else { clearAudio(); setPlaying(false); }
+    };
+    const paused = () => { if (!audio.ended && recording.current === audio) setPlaying(false); };
+    audio.addEventListener("loadedmetadata", seek, { once: true });
+    audio.addEventListener("ended", ended);
+    audio.addEventListener("pause", paused);
+    detach.current = () => {
+      audio.removeEventListener("loadedmetadata", seek);
+      audio.removeEventListener("ended", ended);
+      audio.removeEventListener("pause", paused);
+    };
+  }, [clearAudio, id, locale, update]);
+
   useEffect(() => {
     if (!playing) return;
-    const timer = setTimeout(() => {
-      if (step === 2) setPlaying(false);
-      else setStep(step + 1);
-    }, 4200);
-    return () => clearTimeout(timer);
-  }, [playing, step]);
-  if (!id) return null;
-  const story = atlasStories[id],
-    current = story.steps[step];
-  function move(next: number) {
-    stopAudio();
-    setPlaying(false);
-    setStep(next);
+    let frame = 0, last = performance.now();
+    function tick(now: number) {
+      if (document.hidden) { setPlaying(false); recording.current?.pause(); return; }
+      if (narration) {
+        const audio = recording.current;
+        if (audio && audioReady.current && Number.isFinite(audio.duration) && audio.duration > 0) {
+          update(progressForAudio(audioStage.current, audio.currentTime, audio.duration));
+        }
+      } else {
+        update(position.current + Math.min(now - last, 100) / STORY_DURATION);
+        if (position.current >= 1) { setPlaying(false); return; }
+      }
+      last = now;
+      frame = requestAnimationFrame(tick);
+    }
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [playing, narration, update]);
+
+  function seek(value: number) { setPlaying(false); clearAudio(); update(value); }
+  function toggle() {
+    if (playing) { setPlaying(false); recording.current?.pause(); return; }
+    const at = position.current >= .9999 ? 0 : position.current;
+    update(at);
+    if (narration) startAudio(at);
+    setPlaying(true);
   }
-  return (
-    <section className="atlas-story" aria-label={t("Visual character story")}>
-      <div className="section-top">
-        <h3>{story.title[locale]}</h3>
-        <span className="eyebrow">{t("VISUAL STORY")}</span>
+  const stage = stageAt(progress), current = story.steps[stage];
+  return <section className="atlas-motion" aria-label={t("Visual character story")}>
+    <header className="story-heading">
+      <div><p className="story-kicker">{c.eyebrow}</p><h3>{c[id]}</h3></div>
+      <div className="story-word"><span lang="zh-Hans">{story.character}</span><div><strong>{id === "sun" ? "rì" : "mù"}</strong><small>{id === "sun" ? c.sunMeaning : c.woodMeaning}</small></div></div>
+    </header>
+    <div className="story-stage">
+      <span className="story-stage-tag">0{stage + 1} <span> / </span> 03 · {current.label[locale]}</span>
+      <AtlasStoryArt id={id} progress={progress} reducedMotion={reducedMotion} label={`${story.character} · ${id === "sun" ? "rì" : "mù"} · ${current.label[locale]}`}/>
+      <div className="story-caption" aria-live="polite" aria-atomic="true"><span className="story-caption-number">0{stage + 1}</span><p>{current.caption[locale]}</p></div>
+    </div>
+    <div className="story-console">
+      <div className="story-transport">
+        <button className="story-play" onClick={toggle}>{playing ? <Pause size={17}/> : <Play size={17}/>}<span>{playing ? c.pause : progress > 0 && progress < 1 ? c.resume : c.play}</span></button>
+        <button className="story-icon" onClick={() => seek(0)} aria-label={c.replay} title={c.replay}><RotateCcw size={18}/></button>
+        <span className="story-drag-hint">{reducedMotion ? c.reduced : c.drag}</span>
+        <button className="story-sound" aria-pressed={narration} onClick={() => { seek(position.current); setNarration(!narration); }}>{narration ? <Volume2 size={18}/> : <VolumeX size={18}/>}<span>{narration ? c.sound : c.mute}</span></button>
       </div>
-      <div className="atlas-story-layout">
-        <svg
-          className={"atlas-story-art story-" + id}
-          viewBox="0 0 240 180"
-          role="img"
-          aria-label={story.title[locale] + " · " + current.label[locale]}
-        >
-          {id === "sun" ? (
-            <g
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="6"
-              strokeLinecap="round"
-            >
-              <g style={{ opacity: step === 0 ? 1 : 0 }}>
-                {Array.from({ length: 8 }, (_, i) => (
-                  <line
-                    key={i}
-                    x1="120"
-                    y1="14"
-                    x2="120"
-                    y2="4"
-                    transform={`rotate(${i * 45} 120 90)`}
-                  />
-                ))}
-              </g>
-              <rect
-                x={step === 2 ? 77 : 65}
-                y={step === 2 ? 27 : 35}
-                width={step === 2 ? 86 : 110}
-                height={step === 2 ? 126 : 110}
-                rx={step === 2 ? 2 : 55}
-                fill={step === 0 ? "var(--atlas-story-wash)" : "none"}
-              />
-              <circle
-                cx="120"
-                cy="90"
-                r="5"
-                fill="currentColor"
-                stroke="none"
-                style={{ opacity: step === 1 ? 1 : 0 }}
-              />
-              <line
-                x1="78"
-                y1="90"
-                x2="162"
-                y2="90"
-                style={{ opacity: step === 2 ? 1 : 0 }}
-              />
-            </g>
-          ) : (
-            <g
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path
-                d="M120 34 C82 10 58 43 72 66 C43 92 75 119 108 98 C139 124 181 100 166 74 C194 48 156 13 120 34Z"
-                fill="var(--atlas-story-wash)"
-                stroke="none"
-                style={{ opacity: step === 0 ? 1 : 0 }}
-              />
-              <path d="M120 28V153" />
-              <path
-                d={step === 2 ? "M60 66H180" : "M120 64L78 40 M120 64L162 40"}
-                style={{ opacity: step === 0 ? 0.4 : 1 }}
-              />
-              <path
-                d={
-                  step === 2
-                    ? "M120 66Q101 112 57 142 M120 66Q139 112 183 142"
-                    : "M120 142L83 164 M120 142L157 164"
-                }
-              />
-              <path
-                d="M120 90L84 70 M120 90L156 70"
-                style={{ opacity: step === 1 ? 1 : 0 }}
-              />
-            </g>
-          )}
-        </svg>
-        <div>
-          <p className="eyebrow">
-            {step + 1}/3 · {current.label[locale]}
-          </p>
-          <p className="atlas-story-caption" aria-live="polite">
-            {current.caption[locale]}
-          </p>
-          <p className="atlas-scope-note">
-            {t(
-              "Illustrative reconstruction, not a tracing of a dated inscription.",
-            )}
-          </p>
-        </div>
+      <input className="story-scrubber" type="range" min="0" max="1000" step="1" value={Math.round(progress * 1000)} onChange={e => seek(Number(e.target.value) / 1000)} aria-label={c.drag} aria-valuetext={`${Math.round(progress * 100)}% · ${current.label[locale]}`} style={{ "--story-progress": `${progress * 100}%` } as React.CSSProperties}/>
+      <div className="story-chapters" role="group" aria-label={t("Story steps")}>
+        {story.steps.map((s, i) => <button key={i} aria-pressed={stage === i} onClick={() => seek(i === 2 ? 1 : i === 1 ? .48 : 0)}><span>0{i + 1}</span>{s.label[locale]}</button>)}
       </div>
-      <div
-        className="atlas-story-steps"
-        role="group"
-        aria-label={t("Story steps")}
-      >
-        {story.steps.map((s, i) => (
-          <button key={i} aria-pressed={step === i} onClick={() => move(i)}>
-            {i + 1}. {s.label[locale]}
-          </button>
-        ))}
-      </div>
-      <div className="atlas-actions">
-        <button
-          className="secondary"
-          onClick={() => {
-            stopAudio();
-            if (playing) setPlaying(false);
-            else {
-              setStep(0);
-              setPlaying(true);
-            }
-          }}
-        >
-          {playing ? <Pause size={16} /> : <Play size={16} />}{" "}
-          {t(playing ? "Pause animation" : "Play animation")}
-        </button>
-        <button
-          className="secondary"
-          onClick={() => {
-            setPlaying(false);
-            playRecording(`/atlas/stories/${id}-${locale}-${step}.mp3`, notify);
-          }}
-        >
-          <Volume2 size={16} />
-          {t("Listen to this step")}
-        </button>
-        <button
-          className="icon-button"
-          aria-label={t("Stop narration")}
-          onClick={stopAudio}
-        >
-          <Square size={15} />
-        </button>
-        <button
-          className="icon-button"
-          aria-label={t("Previous story step")}
-          disabled={step === 0}
-          onClick={() => move(step - 1)}
-        >
-          <ArrowLeft size={16} />
-        </button>
-        <button
-          className="icon-button"
-          aria-label={t("Next story step")}
-          disabled={step === 2}
-          onClick={() => move(step + 1)}
-        >
-          <ArrowRight size={16} />
-        </button>
-      </div>
-      <div className="atlas-story-source">
-        <a href={story.source} target="_blank" rel="noreferrer">
-          {t("Origin reference")} · CUHK
-        </a>
-        <button className="text-button" onClick={() => onComponent(id)}>
-          {t("Explore this component")} <ArrowRight size={15} />
-        </button>
-      </div>
-    </section>
-  );
+    </div>
+    <footer className="story-footnote"><p>{c.note} <a href={story.source} target="_blank" rel="noreferrer">CUHK ↗</a></p><button onClick={() => onComponent(id)}>{c.explore}<ArrowRight size={16}/></button></footer>
+  </section>;
 }
