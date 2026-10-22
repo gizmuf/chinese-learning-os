@@ -37,3 +37,9 @@ Pinyin examples are generated locally using pypinyin, including overrides for co
 - [hsk-tutor.com machine-readable transcription](https://github.com/uranbekanarbaev/hsk-3.0-vocabulary-dataset) was used to cross-check the numbered words and readings. Every word identity was also compared with text extracted directly from the official PDF: 300 HSK1 and 200 HSK2 matches, with zero mismatches. Its [rights notice](https://github.com/uranbekanarbaev/hsk-3.0-vocabulary-dataset/blob/main/LICENSE.md) does not license source examination material under MIT; no such grant is assumed here.
 
 Only basic word identities/readings are used as a factual syllabus reference. The source PDF and examination tasks have not been bundled. No example sentences, English definitions or recordings were copied from the source datasets. English glosses, translations, topic assignments and practice examples were authored for Chinese OS. Character graphics and application libraries retain their separate licenses in `public/licenses/`.
+
+## Interface and learning translations
+
+`ui-translations.tsv` contains English UI keys with French and Russian text; numbered placeholders must match. `vocabulary-fr-ru.tsv` contains stable card IDs followed by French meaning, Russian meaning, French example translation and Russian example translation. These are app-authored learning translations, separate from the examination syllabus membership. `node scripts/build-translations.mjs` validates all 520 IDs and builds `translations.json`; it also runs before dev/build. Keep the original Chinese, pinyin, English authoring content and historical IDs unchanged.
+
+Printable worksheets reuse local Hanzi Writer stroke paths and bundle Noto Sans under the SIL Open Font License (`public/fonts/OFL.txt`) for Latin, pinyin and Cyrillic text. They use pdf-lib (MIT) and @pdf-lib/fontkit (MIT), loaded only when exporting.

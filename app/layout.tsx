@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { I18nProvider } from "./i18n";
 
 export const metadata: Metadata = {
   title: "Chinese OS · A little Chinese, every day",
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased"><I18nProvider>{children}</I18nProvider></body>
     </html>
   );
 }

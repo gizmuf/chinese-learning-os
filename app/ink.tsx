@@ -1,4 +1,5 @@
 "use client";
+import { useI18n } from "./i18n";
 import { useEffect, useRef, useState } from "react";
 import type { Point, Stroke } from "./learning";
 export default function Ink({
@@ -12,6 +13,7 @@ export default function Ink({
   penOnly: boolean;
   disabled?: boolean;
 }) {
+  const { t, locale } = useI18n();
   const ref = useRef<HTMLCanvasElement>(null);
   const active = useRef<{ id: number; points: Stroke } | null>(null);
   const current = useRef(strokes);
@@ -81,7 +83,7 @@ export default function Ink({
   return (
     <>
       <canvas
-        aria-label="Write a character here using a pencil, finger or mouse"
+        aria-label={t("Write a character here using a pencil, finger or mouse")}
         ref={ref}
         className="ink-canvas"
         onPointerDown={(e) => {
@@ -110,8 +112,7 @@ export default function Ink({
       />
       {touchNotice && (
         <span className="canvas-notice">
-          Pencil only is on. Turn it off for finger or mouse input.
-        </span>
+          {t("Pencil only is on. Turn it off for finger or mouse input.")}</span>
       )}
     </>
   );

@@ -1,0 +1,520 @@
+hello	bonjour	привет	Bonjour, ravi de vous rencontrer.	Здравствуйте, рад познакомиться.
+me	je / moi	я / меня	Je suis étudiant.	Я студент.
+you	tu / vous	ты / вы	Comment vous appelez-vous ?	Как вас зовут?
+teacher	professeur	учитель	Bonjour, professeur.	Здравствуйте, учитель.
+student	étudiant / élève	студент / ученик	Je suis étudiant.	Я студент.
+thanks	merci	спасибо	Merci.	Спасибо.
+goodbye	au revoir	до свидания	Au revoir, professeur.	До свидания, учитель.
+china	Chine	Китай	Je suis en Chine.	Я в Китае.
+yes	être / oui	быть / да	Je suis étudiant.	Я студент.
+no	ne… pas / non	не / нет	Je ne suis pas professeur.	Я не учитель.
+have	avoir / il y a	иметь / есть	Avez-vous le temps ?	У вас есть время?
+want	vouloir	хотеть	Je veux celui-ci.	Я хочу вот это.
+this	celui-ci / ceci	этот / это	Combien ça coûte ?	Сколько это стоит?
+howmuch	combien	сколько	Combien ça coûte ?	Сколько это стоит?
+can	pouvoir / avoir la permission	можно / мочь	Est-ce possible ?	Так можно?
+notbad	pas mal / plutôt bien	неплохо / довольно хорошо	Celui-ci est plutôt bien.	Это довольно хорошо.
+water	eau	вода	Je voudrais de l’eau.	Я хотел бы воды.
+tea	thé	чай	Je voudrais une tasse de thé.	Я хотел бы чашку чая.
+eat	manger	есть / кушать	Que mangez-vous ?	Что вы едите?
+sweet	sucré	сладкий	Est-ce sucré ?	Это сладкое?
+little	un peu	немного	J’en voudrais un peu.	Я хотел бы немного.
+vegetarian	nourriture végétarienne	вегетарианская еда	Avez-vous des plats végétariens ?	У вас есть вегетарианские блюда?
+meat	viande	мясо	Je ne mange pas de viande.	Я не ем мясо.
+delicious	délicieux	вкусный	C’est délicieux.	Это вкусно.
+today	aujourd’hui	сегодня	J’ai cours aujourd’hui.	У меня сегодня занятия.
+tomorrow	demain	завтра	À demain.	До завтра.
+yesterday	hier	вчера	J’avais cours hier.	У меня вчера были занятия.
+now	maintenant	сейчас	Est-ce possible maintenant ?	Сейчас можно?
+later	plus tard / ensuite	позже / потом	Je reviendrai plus tard.	Я вернусь позже.
+week	la semaine prochaine	следующая неделя	À la semaine prochaine.	До следующей недели.
+time	temps	время	Avez-vous le temps ?	У вас есть время?
+start	commencer	начинать	Commençons.	Давайте начнём.
+hsk1-001	aimer	любить	J’aime ma famille.	Я люблю свою семью.
+hsk1-002	huit	восемь	J’ai huit livres.	У меня восемь книг.
+hsk1-003	papa / père	папа / отец	Mon père est médecin.	Мой папа врач.
+hsk1-004	particule de suggestion	частица предложения	Allons manger.	Пойдём поедим.
+hsk1-005	journée	дневное время	J’ai cours dans la journée.	Днём у меня занятия.
+hsk1-006	cent	сто	Ce vêtement coûte cent yuans.	Эта одежда стоит сто юаней.
+hsk1-007	demi / moitié	половина	Il est trois heures et demie.	Сейчас половина четвёртого.
+hsk1-008	petit pain farci à la vapeur	баоцзы / паровая булочка с начинкой	Je mange des petits pains farcis au petit-déjeuner.	На завтрак я ем баоцзы.
+hsk1-009	tasse / verre	чашка / стакан	C’est ma tasse.	Это моя чашка.
+hsk1-010	classificateur des livres	счётное слово для книг	J’ai acheté un livre.	Я купил книгу.
+hsk1-011	côté / bord	сторона / край	Asseyez-vous de mon côté, s’il vous plaît.	Пожалуйста, садитесь рядом со мной.
+hsk1-012	maladie / être malade	болезнь / болеть	Êtes-vous guéri ?	Вы уже выздоровели?
+hsk1-014	de rien	не за что	De rien ; voici votre livre.	Не за что; вот ваша книга.
+hsk1-015	ne pas / ne pas vouloir	не надо / не хотеть	Ne parlez pas ici.	Не разговаривайте здесь.
+hsk1-016	plat / légumes	блюдо / овощи	Ce plat est délicieux.	Это блюдо вкусное.
+hsk1-018	chanter	петь	Savez-vous chanter cette chanson ?	Вы умеете петь эту песню?
+hsk1-019	supermarché	супермаркет	Je vais au supermarché acheter des fruits.	Я иду в супермаркет за фруктами.
+hsk1-020	véhicule / voiture	транспорт / машина	Ma voiture est dehors.	Моя машина снаружи.
+hsk1-022	taxi	такси	Nous allons à l’école en taxi.	Мы едем в школу на такси.
+hsk1-023	porter / mettre un vêtement	носить / надевать	Il fait froid aujourd’hui ; couvrez-vous davantage.	Сегодня холодно; оденьтесь потеплее.
+hsk1-024	téléphoner	звонить по телефону	Je téléphone à ma mère.	Я звоню маме.
+hsk1-025	grand	большой	Cette chambre est grande.	Эта комната большая.
+hsk1-026	tout le monde	все	Bonjour à tous, je suis un nouveau camarade de classe.	Всем привет, я новый одноклассник.
+hsk1-027	université	университет	J’étudie le chinois à l’université.	Я изучаю китайский в университете.
+hsk1-028	étudiant à l’université	студент университета	Mon grand frère est étudiant.	Мой старший брат студент.
+hsk1-029	arriver / atteindre	прибывать / достигать	Je suis arrivé à l’école.	Я пришёл в школу.
+hsk1-030	particule de possession	притяжательная частица	C’est mon téléphone.	Это мой телефон.
+hsk1-031	préfixe ordinal	показатель порядкового числительного	C’est mon premier livre de chinois.	Это моя первая книга по китайскому.
+hsk1-032	petit frère	младший брат	Mon petit frère a huit ans cette année.	Моему младшему брату в этом году восемь лет.
+hsk1-033	heure (sur le cadran)	час (время суток)	Nous commençons le cours à huit heures.	Мы начинаем занятия в восемь часов.
+hsk1-034	magasin	магазин	Les articles de ce magasin sont bon marché.	Вещи в этом магазине недорогие.
+hsk1-035	téléphone / appel	телефон / звонок	Quel est votre numéro de téléphone ?	Какой у вас номер телефона?
+hsk1-036	ordinateur	компьютер	J’utilise un ordinateur pour étudier.	Я учусь с помощью компьютера.
+hsk1-037	télévision	телевизор	Maman regarde la télévision.	Мама смотрит телевизор.
+hsk1-038	film	фильм	Ce film est très bien.	Этот фильм очень хороший.
+hsk1-039	cinéma	кинотеатр	Le cinéma est derrière l’école.	Кинотеатр за школой.
+hsk1-040	chose / objet	вещь / вещи	À qui sont ces affaires ?	Чьи это вещи?
+hsk1-041	tous / les deux	все / оба	Nous sommes tous étudiants.	Мы все студенты.
+hsk1-042	lire / lire à voix haute	читать / читать вслух	Lisez ce caractère, s’il vous plaît.	Пожалуйста, прочитайте этот иероглиф.
+hsk1-043	lire / étudier	читать / учиться	J’aime lire à la maison.	Я люблю читать дома.
+hsk1-044	correct / juste	правильно / верный	Ce que vous avez dit est juste.	Вы сказали правильно.
+hsk1-045	pardon / désolé	извините	Pardon, je suis en retard.	Извините, я опоздал.
+hsk1-046	beaucoup	много	Il y a beaucoup de monde ici.	Здесь много людей.
+hsk1-048	fils	сын	Son fils va à l’école.	Её сын ходит в школу.
+hsk1-049	deux	два	Aujourd’hui, c’est mardi.	Сегодня вторник.
+hsk1-050	repas / riz cuit	еда / варёный рис	Le repas est prêt.	Еда готова.
+hsk1-051	restaurant	ресторан	Allons manger dans ce restaurant.	Давайте поедим в том ресторане.
+hsk1-052	chambre / pièce	комната	Ma chambre est petite.	Моя комната маленькая.
+hsk1-053	très / extrêmement	очень / чрезвычайно	Je suis très heureux aujourd’hui.	Сегодня я очень рад.
+hsk1-054	avion	самолёт	Je vais en Chine en avion.	Я лечу в Китай на самолёте.
+hsk1-055	minute / centime	минута / фэнь	Il est huit heures dix.	Сейчас восемь часов десять минут.
+hsk1-056	minute (durée)	минута (длительность)	Attendez-moi cinq minutes, s’il vous plaît.	Подождите меня пять минут, пожалуйста.
+hsk1-057	heureux / content	радостный / довольный	Je suis heureux de vous rencontrer.	Рад с вами познакомиться.
+hsk1-058	chanson	песня	J’aime cette chanson.	Мне нравится эта песня.
+hsk1-059	grand frère	старший брат	Mon grand frère sait conduire.	Мой старший брат умеет водить.
+hsk1-060	classificateur général	универсальное счётное слово	J’ai trois pommes.	У меня три яблока.
+hsk1-061	donner / pour	давать / для	Donnez-moi un verre d’eau, s’il vous plaît.	Дайте мне стакан воды, пожалуйста.
+hsk1-062	entreprise / société	компания	Je travaille dans cette entreprise.	Я работаю в этой компании.
+hsk1-063	travailler / travail	работать / работа	Mon père ne travaille pas aujourd’hui.	Мой папа сегодня не работает.
+hsk1-064	chien	собака	Ce chien est petit.	Эта собака маленькая.
+hsk1-065	cher / coûteux	дорогой	Ce vêtement est trop cher.	Эта одежда слишком дорогая.
+hsk1-066	pays / nation	страна	De quel pays venez-vous ?	Из какой вы страны?
+hsk1-067	encore / aussi	ещё / также	Je voudrais aussi un peu d’eau.	Я хотел бы ещё немного воды.
+hsk1-068	enfant / enfants	ребёнок / дети	Les enfants sont à l’école.	Дети в школе.
+hsk1-069	chinois / mandarin	китайский язык / путунхуа	J’apprends le chinois.	Я изучаю китайский.
+hsk1-070	caractère chinois	китайский иероглиф	Comment écrit-on ce caractère chinois ?	Как пишется этот китайский иероглиф?
+hsk1-071	bon / bien	хороший / хорошо	Il fait beau aujourd’hui.	Сегодня хорошая погода.
+hsk1-073	beau / agréable à regarder	красивый / интересный	Ce livre est agréable à lire.	Эту книгу интересно читать.
+hsk1-074	agréable à entendre	приятный на слух	Cette chanson est très agréable.	Эта песня очень красивая.
+hsk1-075	amusant / divertissant	весёлый / интересный	Cet endroit est amusant.	Здесь весело.
+hsk1-076	numéro / jour du mois	номер / число месяца	Quelle est la date aujourd’hui ?	Какое сегодня число?
+hsk1-077	boire	пить	Que voulez-vous boire ?	Что вы хотите выпить?
+hsk1-078	et / avec	и / с	Mon ami et moi allons à l’école.	Мы с другом идём в школу.
+hsk1-079	très / assez	очень / довольно	Je suis très occupé aujourd’hui.	Сегодня я очень занят.
+hsk1-080	après / derrière	после / позади	Je rentre après le cours.	После занятий я иду домой.
+hsk1-081	retourner / revenir	возвращаться	Je rentre chez moi demain.	Завтра я возвращаюсь домой.
+hsk1-082	savoir faire / pouvoir	уметь / мочь	Je sais parler un peu chinois.	Я немного говорю по-китайски.
+hsk1-083	train	поезд	Nous allons à Pékin en train.	Мы едем в Пекин на поезде.
+hsk1-084	œuf	яйцо	Je mange des œufs au petit-déjeuner.	На завтрак я ем яйца.
+hsk1-085	combien (petit nombre)	сколько (небольшое число)	Combien de personnes y a-t-il dans votre famille ?	Сколько человек в вашей семье?
+hsk1-086	maison / famille	дом / семья	Ma maison est ici.	Мой дом здесь.
+hsk1-087	membres de la famille	члены семьи	Tous les membres de ma famille vont bien.	Все в моей семье здоровы.
+hsk1-088	voir / rencontrer	видеть / встречать	À demain !	До завтра!
+hsk1-089	classificateur des vêtements et affaires	счётное слово для одежды и дел	J’ai acheté deux vêtements.	Я купил две вещи из одежды.
+hsk1-090	ravioli chinois	цзяоцзы / пельмени	Nous mangeons des raviolis ce soir.	Сегодня вечером мы едим пельмени.
+hsk1-091	s’appeler / appeler	зваться / звать	Comment vous appelez-vous ?	Как вас зовут?
+hsk1-092	grande sœur	старшая сестра	Ma grande sœur est professeur.	Моя старшая сестра учитель.
+hsk1-093	cette année	этот год	J’ai vingt ans cette année.	В этом году мне двадцать лет.
+hsk1-095	neuf	девять	Je me couche à neuf heures tous les jours.	Я каждый день ложусь спать в девять.
+hsk1-096	penser / trouver / ressentir	считать / чувствовать	Qu’en pensez-vous ?	Что вы об этом думаете?
+hsk1-097	ouvrir / allumer	открывать / включать	Ouvrez la porte, s’il vous plaît.	Откройте дверь, пожалуйста.
+hsk1-098	conduire	водить машину	Ma mère sait conduire.	Моя мама умеет водить.
+hsk1-099	regarder / lire	смотреть / читать	Que regardez-vous ?	На что вы смотрите?
+hsk1-100	consulter un médecin	обратиться к врачу	Je vais à l’hôpital consulter un médecin aujourd’hui.	Сегодня я иду в больницу к врачу.
+hsk1-101	voir / apercevoir	увидеть / заметить	J’ai vu le professeur.	Я увидел учителя.
+hsk1-103	cours / leçon	урок / занятие	Ce cours est intéressant.	Этот урок интересный.
+hsk1-104	classificateur des membres d’une famille	счётное слово для членов семьи	Il y a trois personnes dans ma famille.	В моей семье три человека.
+hsk1-105	yuan (familier) / morceau	юань (разговорное) / кусок	Cette pomme coûte trois yuans.	Это яблоко стоит три юаня.
+hsk1-106	venir	приходить	Venez chez moi, s’il vous plaît.	Приходите ко мне домой, пожалуйста.
+hsk1-108	particule de changement ou d’action accomplie	частица изменения или завершённого действия	J’ai mangé.	Я поел.
+hsk1-109	froid	холодный / холодно	Il fait froid aujourd’hui.	Сегодня холодно.
+hsk1-110	à l’intérieur / dans	внутри / в	Le livre est dans le sac.	Книга в сумке.
+hsk1-111	deux (devant un classificateur)	два (перед счётным словом)	Je voudrais deux tasses de thé.	Я хотел бы две чашки чая.
+hsk1-112	zéro	ноль	Combien font cent un ?	Сколько будет сто один?
+hsk1-113	six	шесть	Je me lève à six heures.	Я встаю в шесть часов.
+hsk1-114	maman / mère	мама / мать	Maman fait la cuisine.	Мама готовит.
+hsk1-115	particule de question fermée	вопросительная частица	Êtes-vous étudiant ?	Вы студент?
+hsk1-116	acheter	покупать	Je veux acheter un livre.	Я хочу купить книгу.
+hsk1-117	vendre	продавать	Ce magasin vend des fruits.	В этом магазине продают фрукты.
+hsk1-118	occupé	занятой	Êtes-vous occupé aujourd’hui ?	Вы сегодня заняты?
+hsk1-119	chat	кошка	Mon chat est sur la chaise.	Моя кошка на стуле.
+hsk1-120	ce n’est pas grave	ничего страшного	Ce n’est pas grave ; asseyez-vous.	Ничего страшного; садитесь, пожалуйста.
+hsk1-121	ce n’est rien / pas de problème	всё в порядке / ничего	Je vais bien, merci.	У меня всё хорошо, спасибо.
+hsk1-122	ne pas avoir / il n’y a pas	не иметь / нет	Je n’ai pas d’ordinateur.	У меня нет компьютера.
+hsk1-123	petite sœur	младшая сестра	Ma petite sœur aime chanter.	Моя младшая сестра любит петь.
+hsk1-124	suffixe du pluriel pour les personnes	суффикс множественного числа для людей	Bonjour, chers camarades !	Доброе утро, одноклассники!
+hsk1-125	riz cuit	варёный рис	Je voudrais un bol de riz.	Я хотел бы миску риса.
+hsk1-126	pain	хлеб	Je mange du pain au petit-déjeuner.	На завтрак я ем хлеб.
+hsk1-127	nouilles	лапша	Ce bol de nouilles est délicieux.	Эта лапша очень вкусная.
+hsk1-128	l’année prochaine	следующий год	Je vais en Chine l’année prochaine.	В следующем году я еду в Китай.
+hsk1-130	nom	имя	Comment écrit-on votre nom ?	Как пишется ваше имя?
+hsk1-131	quel / lequel	какой / который	De quel pays venez-vous ?	Из какой вы страны?
+hsk1-132	lequel	который / какой	Lequel aimez-vous ?	Какой вам нравится?
+hsk1-133	où	где	Où habitez-vous ?	Где вы живёте?
+hsk1-134	où (variante orale)	где / куда (разговорное)	Où allez-vous ?	Куда вы идёте?
+hsk1-135	lesquels	какие / которые	Quels livres sont à vous ?	Какие книги ваши?
+hsk1-136	cela / ce… là	тот / то	C’est mon père.	Это мой папа.
+hsk1-137	là-bas / de ce côté-là	там / та сторона	L’école est là-bas.	Школа там.
+hsk1-138	celui-là	тот	Je voudrais cette tasse-là.	Я хотел бы ту чашку.
+hsk1-139	là-bas	там	Mon ami est là-bas.	Мой друг там.
+hsk1-140	là-bas (variante orale)	там (разговорное)	Asseyez-vous là-bas, s’il vous plaît.	Садитесь там, пожалуйста.
+hsk1-141	ces… là / ceux-là	те	Ces élèves sont mes amis.	Те студенты — мои друзья.
+hsk1-142	masculin / homme	мужской / мужчина	C’est un professeur homme.	Это учитель-мужчина.
+hsk1-143	petit ami	парень / молодой человек	Son petit ami est médecin.	Её парень врач.
+hsk1-144	particule de question ou de continuation	частица вопроса или продолжения	Je vais bien, et vous ?	У меня всё хорошо, а у вас?
+hsk1-145	pouvoir / être capable	мочь / быть в состоянии	Pouvez-vous venir demain ?	Вы можете прийти завтра?
+hsk1-148	vous (pluriel)	вы (множественное число)	Êtes-vous tous étudiants à l’université ?	Вы все студенты университета?
+hsk1-149	année / an	год	Il y a douze mois dans une année.	В году двенадцать месяцев.
+hsk1-150	vous (politesse)	Вы (вежливо)	Bonjour, asseyez-vous, s’il vous plaît.	Здравствуйте, садитесь, пожалуйста.
+hsk1-151	lait	молоко	Je bois du lait tous les jours.	Я каждый день пью молоко.
+hsk1-152	féminin / femme	женский / женщина	C’est une femme médecin.	Это женщина-врач.
+hsk1-153	fille (enfant)	дочь	Ma fille a six ans cette année.	Моей дочери в этом году шесть лет.
+hsk1-154	petite amie	девушка / подруга	Sa petite amie travaille à l’université.	Его девушка работает в университете.
+hsk1-155	madame / dame	госпожа / женщина	Cette dame est mon professeur.	Эта женщина — мой учитель.
+hsk1-156	ami	друг	C’est mon bon ami.	Он мой хороший друг.
+hsk1-157	bon marché / peu cher	дешёвый / недорогой	Les fruits sont bon marché ici.	Здесь недорогие фрукты.
+hsk1-158	beau / joli	красивый	Vos vêtements sont beaux.	У вас красивая одежда.
+hsk1-159	pomme	яблоко	J’aime manger des pommes.	Я люблю есть яблоки.
+hsk1-160	sept	семь	Nous prenons le petit-déjeuner à sept heures.	Мы завтракаем в семь.
+hsk1-161	se lever	вставать	À quelle heure vous levez-vous chaque jour ?	Во сколько вы каждый день встаёте?
+hsk1-162	mille	тысяча	Cet ordinateur coûte trois mille yuans.	Этот компьютер стоит три тысячи юаней.
+hsk1-163	avant / devant	перед / впереди	Lavez-vous les mains avant de manger.	Помойте руки перед едой.
+hsk1-164	argent	деньги	Je n’ai pas d’argent.	У меня нет денег.
+hsk1-165	s’il vous plaît / inviter	пожалуйста / приглашать	Prenez du thé, s’il vous plaît.	Попейте чаю, пожалуйста.
+hsk1-166	excusez-moi / puis-je demander	извините, можно спросить	Excusez-moi, où est l’hôpital ?	Извините, где больница?
+hsk1-167	aller	идти / ехать	Où voulez-vous aller ?	Куда вы хотите пойти?
+hsk1-168	l’année dernière	прошлый год	J’ai étudié en Chine l’année dernière.	В прошлом году я учился в Китае.
+hsk1-169	chaud	жаркий / жарко	Il fait chaud aujourd’hui.	Сегодня жарко.
+hsk1-170	personne / gens	человек / люди	Il y a beaucoup de monde ici.	Здесь много людей.
+hsk1-171	connaître / rencontrer	знать / знакомиться	Je connais ce professeur.	Я знаю этого учителя.
+hsk1-172	jour / date (formel)	день / число (официально)	Aujourd’hui, c’est le premier octobre.	Сегодня первое октября.
+hsk1-173	trois	три	J’ai trois livres.	У меня три книги.
+hsk1-174	magasin	магазин	Le magasin est devant l’hôpital.	Магазин перед больницей.
+hsk1-175	sur / au-dessus	на / над	Le livre est sur la table.	Книга на столе.
+hsk1-176	aller travailler	идти на работу	Mon père commence le travail à huit heures.	Мой папа начинает работать в восемь.
+hsk1-177	assister au cours	посещать занятия	Nous avons cours le matin.	У нас занятия утром.
+hsk1-178	matin (avant midi)	утро (до полудня)	Je vais à l’école le matin.	Утром я иду в школу.
+hsk1-179	aller à l’école	ходить в школу	Mon petit frère va à l’école en voiture tous les jours.	Мой младший брат каждый день ездит в школу на машине.
+hsk1-180	peu	мало	Il y a peu de monde aujourd’hui.	Сегодня мало людей.
+hsk1-181	qui	кто	Qui est cette personne ?	Кто этот человек?
+hsk1-182	quoi / quel	что / какой	Que voulez-vous manger ?	Что вы хотите поесть?
+hsk1-183	tomber malade / être malade	заболеть / болеть	Je suis malade et je veux me reposer.	Я болею и хочу отдохнуть.
+hsk1-184	dix	десять	Il y a dix étudiants ici.	Здесь десять студентов.
+hsk1-185	moment	время / момент	Quand venez-vous ?	Когда вы придёте?
+hsk1-187	affaire / chose à faire	дело	J’aimerais vous demander quelque chose.	Я хочу вас кое о чём спросить.
+hsk1-189	téléphone portable	мобильный телефон	Où est mon téléphone ?	Где мой телефон?
+hsk1-190	livre	книга	Ce livre est à moi.	Эта книга моя.
+hsk1-191	librairie	книжный магазин	Je vais à la librairie acheter des livres.	Я иду в книжный магазин за книгами.
+hsk1-193	fruit	фрукты	Quels fruits aimez-vous manger ?	Какие фрукты вы любите?
+hsk1-194	dormir	спать	L’enfant dort déjà.	Ребёнок уже спит.
+hsk1-195	dormir / se coucher	спать / ложиться спать	Je me couche à dix heures tous les jours.	Я каждый день ложусь спать в десять.
+hsk1-196	dire / parler	говорить / сказать	Dites-le encore une fois, s’il vous plaît.	Скажите ещё раз, пожалуйста.
+hsk1-197	parler	разговаривать	Le professeur parle.	Учитель говорит.
+hsk1-198	quatre	четыре	Il y a quatre personnes dans notre famille.	В нашей семье четыре человека.
+hsk1-199	ans (âge)	лет (возраст)	Quel âge avez-vous cette année ?	Сколько вам лет в этом году?
+hsk1-200	il / lui	он / его	C’est mon ami.	Он мой друг.
+hsk1-201	il / elle (animal ou chose)	оно / он / она (животное или предмет)	C’est un chat.	Это кошка.
+hsk1-202	elle	она / её	C’est notre professeur.	Она наш учитель.
+hsk1-203	ils / eux (masculin ou mixte)	они (мужчины или смешанная группа)	Ils étudient à l’école.	Они учатся в школе.
+hsk1-204	ils / elles (animaux ou choses)	они (животные или предметы)	Ce sont mes chats.	Это мои кошки.
+hsk1-205	elles	они (женщины)	Elles sont toutes étudiantes.	Они все студентки.
+hsk1-206	trop / extrêmement	слишком / чрезвычайно	Il fait trop chaud aujourd’hui !	Сегодня слишком жарко!
+hsk1-207	jour	день	Je reste ici trois jours.	Я остаюсь здесь на три дня.
+hsk1-208	temps / météo	погода	Quel temps fait-il aujourd’hui ?	Какая сегодня погода?
+hsk1-209	écouter	слушать	J’aime écouter des chansons chinoises.	Я люблю слушать китайские песни.
+hsk1-210	entendre	услышать	Avez-vous entendu ?	Вы это слышали?
+hsk1-211	camarade de classe	одноклассник / одногруппник	C’est mon camarade de classe.	Он мой одноклассник.
+hsk1-212	extérieur / dehors	снаружи / вне	Je vous attends devant l’école.	Я жду вас у школы.
+hsk1-213	dehors	снаружи	Il fait froid dehors.	На улице холодно.
+hsk1-214	jouer / s’amuser	играть / развлекаться	Les enfants jouent à la maison.	Дети играют дома.
+hsk1-215	tard	поздний / поздно	Il est trop tard maintenant.	Сейчас слишком поздно.
+hsk1-216	dîner / repas du soir	ужин	Nous dînons à six heures.	Мы ужинаем в шесть.
+hsk1-217	soir / nuit	вечер / ночь	J’étudie chez moi le soir.	Вечером я учусь дома.
+hsk1-218	allô	алло	Allô, qui est à l’appareil ?	Алло, кто говорит?
+hsk1-219	demander	спрашивать	Je voudrais poser une question.	Я хотел бы задать вопрос.
+hsk1-220	question / problème	вопрос / проблема	Cette question est simple.	Этот вопрос простой.
+hsk1-222	nous	мы / нас	Étudions ensemble.	Давайте учиться вместе.
+hsk1-223	cinq	пять	J’ai cinq pommes.	У меня пять яблок.
+hsk1-224	déjeuner	обед	Que mangez-vous à midi ?	Что вы едите на обед?
+hsk1-225	aimer / apprécier	любить / нравиться	J’aime apprendre le chinois.	Мне нравится изучать китайский.
+hsk1-226	sous / en dessous	под / внизу	Le chat est sous la table.	Кошка под столом.
+hsk1-227	pleuvoir	идти (о дожде)	Il pleut aujourd’hui.	Сегодня идёт дождь.
+hsk1-228	finir le travail	заканчивать работу	Ma mère finit le travail à six heures.	Моя мама заканчивает работу в шесть.
+hsk1-229	finir le cours	заканчивать занятие	Notre cours se termine à cinq heures.	Наш урок заканчивается в пять.
+hsk1-230	après-midi	после полудня	Je vais à la librairie cet après-midi.	Сегодня после обеда я иду в книжный магазин.
+hsk1-231	monsieur	господин / мужчина	Monsieur Wang est mon professeur.	Господин Ван — мой учитель.
+hsk1-233	vouloir / penser / manquer	хотеть / думать / скучать	Je voudrais du thé.	Я хотел бы чаю.
+hsk1-234	petit	маленький	Ma chambre est petite.	Моя комната маленькая.
+hsk1-235	enfant / petit	ребёнок / малыш	Petit, comment t’appelles-tu ?	Малыш, как тебя зовут?
+hsk1-236	heure (durée)	час (длительность)	J’étudie une heure chaque jour.	Я занимаюсь по часу каждый день.
+hsk1-237	école primaire	начальная школа	L’école primaire est près de chez moi.	Начальная школа рядом с моим домом.
+hsk1-238	élève du primaire	ученик начальной школы	Ma petite sœur est à l’école primaire.	Моя младшая сестра учится в начальной школе.
+hsk1-239	quelques / des	немного / несколько	J’ai acheté des fruits.	Я купил немного фруктов.
+hsk1-240	écrire	писать	Écrivez votre nom, s’il vous plaît.	Напишите ваше имя, пожалуйста.
+hsk1-242	nouveau	новый	C’est mon nouveau téléphone.	Это мой новый телефон.
+hsk1-243	semaine	неделя	Il y a sept jours dans une semaine.	В неделе семь дней.
+hsk1-244	dimanche	воскресенье	Je me repose chez moi le dimanche.	В воскресенье я отдыхаю дома.
+hsk1-245	dimanche (variante orale)	воскресенье (разговорное)	Sortons nous amuser dimanche.	Давайте в воскресенье пойдём погуляем.
+hsk1-246	se reposer / faire une pause	отдыхать / сделать перерыв	Faisons une petite pause.	Давайте немного отдохнём.
+hsk1-247	apprendre / étudier	учить / учиться	Où apprenez-vous le chinois ?	Где вы учите китайский?
+hsk1-249	étudier / apprendre	учиться / изучать	J’étudie le chinois tous les jours.	Я каждый день учу китайский.
+hsk1-250	école	школа	L’école est par ici.	Школа в этой стороне.
+hsk1-251	neige	снег	Il y a beaucoup de neige dehors.	На улице много снега.
+hsk1-253	aussi	тоже / также	Je suis étudiant aussi.	Я тоже студент.
+hsk1-254	un	один	J’ai une question.	У меня один вопрос.
+hsk1-255	vêtements	одежда	Vos vêtements sont jolis.	У вас красивая одежда.
+hsk1-256	médecin	врач	Je voudrais consulter un médecin.	Я хотел бы обратиться к врачу.
+hsk1-257	hôpital	больница	Où est l’hôpital ?	Где больница?
+hsk1-258	moitié	половина	Je vais manger la moitié de cette pomme.	Я съем половину этого яблока.
+hsk1-259	un instant / un peu (après un verbe)	немного / недолго (после глагола)	Regardez rapidement ce caractère, s’il vous plaît.	Посмотрите, пожалуйста, на этот иероглиф.
+hsk1-260	chaise	стул	Il y a une chaise ici.	Здесь есть стул.
+hsk1-261	un peu	немного	Je sais parler un peu chinois.	Я немного говорю по-китайски.
+hsk1-262	quelques / des	некоторое количество	J’ai acheté des fruits.	Я купил немного фруктов.
+hsk1-264	certains (d’un groupe)	некоторые (из группы)	Certains élèves aiment chanter.	Некоторые студенты любят петь.
+hsk1-265	un peu / quelque peu	немного / несколько	Il fait un peu froid aujourd’hui.	Сегодня немного холодно.
+hsk1-266	certains / quelque peu	некоторые / несколько	Certains fruits sont chers.	Некоторые фрукты дорогие.
+hsk1-267	pluie	дождь	La pluie est forte aujourd’hui.	Сегодня сильный дождь.
+hsk1-268	yuan (monnaie)	юань (денежная единица)	Ce livre coûte vingt yuans.	Эта книга стоит двадцать юаней.
+hsk1-269	mois / lune	месяц / луна	Il y a douze mois dans une année.	В году двенадцать месяцев.
+hsk1-270	encore / puis	снова / затем	Dites-le encore, s’il vous plaît.	Скажите ещё раз, пожалуйста.
+hsk1-271	à / dans / se trouver	в / на / находиться	Je suis à la maison.	Я дома.
+hsk1-273	tôt	ранний / рано	Vous êtes venu très tôt aujourd’hui.	Сегодня вы пришли очень рано.
+hsk1-274	petit-déjeuner	завтрак	Avez-vous pris votre petit-déjeuner ?	Вы уже позавтракали?
+hsk1-275	début de matinée	раннее утро	Je me lève à sept heures du matin.	Я встаю в семь утра.
+hsk1-276	comment	как	Comment prononce-t-on ce caractère ?	Как читается этот иероглиф?
+hsk1-277	comment / comment est…	как / какой	Que pensez-vous de ce livre ?	Что вы думаете об этой книге?
+hsk1-278	chercher / trouver	искать / находить	Je cherche mon téléphone.	Я ищу свой телефон.
+hsk1-279	ceci / ce… ci	этот / это	C’est mon livre.	Это моя книга.
+hsk1-280	par ici / ce côté-ci	сюда / эта сторона	Venez par ici, s’il vous plaît.	Подойдите сюда, пожалуйста.
+hsk1-282	ici	здесь	J’habite ici.	Я живу здесь.
+hsk1-283	ici (variante orale)	здесь (разговорное)	Asseyez-vous ici, s’il vous plaît.	Садитесь здесь, пожалуйста.
+hsk1-284	ces… ci / ceux-ci	эти	Ces livres sont tous à moi.	Все эти книги мои.
+hsk1-285	vraiment	действительно / правда	Ce plat est vraiment délicieux !	Это блюдо действительно вкусное!
+hsk1-286	en train de	в процессе / сейчас	Je suis en train d’étudier.	Я сейчас занимаюсь.
+hsk1-287	classificateur de nombreux animaux	счётное слово для многих животных	Ma famille a un chien.	У нас дома есть собака.
+hsk1-288	savoir (un fait)	знать (факт)	Je ne sais pas où il est.	Я не знаю, где он.
+hsk1-290	chinois (notamment écrit)	китайский язык (особенно письменный)	J’apprends le chinois.	Я изучаю китайский.
+hsk1-291	midi	полдень	Mangeons ensemble à midi.	Давайте пообедаем вместе в полдень.
+hsk1-292	école secondaire	средняя школа	Mon grand frère est au secondaire.	Мой старший брат учится в средней школе.
+hsk1-293	élève du secondaire	ученик средней школы	Il est élève du secondaire.	Он ученик средней школы.
+hsk1-294	habiter / séjourner	жить / останавливаться	Où habitez-vous ?	Где вы живёте?
+hsk1-295	table / bureau	стол / парта	Le livre est sur la table.	Книга на столе.
+hsk1-296	caractère / mot écrit	иероглиф / письменный знак	Comment écrit-on ce caractère ?	Как пишется этот иероглиф?
+hsk1-298	s’asseoir / prendre un transport	сидеть / ехать на транспорте	Asseyez-vous sur cette chaise, s’il vous plaît.	Садитесь на этот стул, пожалуйста.
+hsk1-299	faire / fabriquer	делать / создавать	Que faites-vous ?	Что вы делаете?
+hsk1-300	cuisiner / préparer un repas	готовить еду	Mon père sait cuisiner.	Мой папа умеет готовить.
+bonus-01	excusez-moi / désolé	извините	Excusez-moi, répétez, s’il vous plaît.	Извините, повторите, пожалуйста.
+bonus-02	toilettes	туалет	Excusez-moi, où sont les toilettes ?	Извините, где туалет?
+bonus-03	métro	метро	Je vais à l’école en métro.	Я езжу в школу на метро.
+bonus-04	café	кофе	Je voudrais une tasse de café.	Я хотел бы чашку кофе.
+bonus-05	merci (poli)	спасибо (вежливо)	Merci, professeur.	Спасибо, учитель.
+bonus-06	aider / aide	помогать / помощь	Merci de votre aide.	Спасибо за вашу помощь.
+bonus-07	lent	медленный	Parlez un peu plus lentement, s’il vous plaît.	Говорите немного медленнее, пожалуйста.
+bonus-08	rapide	быстрый	Cette voiture est rapide.	Эта машина быстрая.
+bonus-09	comprendre ce qu’on entend	понимать на слух	J’ai compris ce qui a été dit.	Я понял, что было сказано.
+bonus-10	comprendre / clair	понимать / ясно	Je comprends ce que vous voulez dire.	Я понимаю, что вы имеете в виду.
+bonus-11	côté gauche	левая сторона	La librairie est à gauche.	Книжный магазин слева.
+bonus-12	côté droit	правая сторона	L’hôpital est à droite.	Больница справа.
+hsk2-301	particule d’exclamation (ah / oh)	восклицательная частица (а / о)	Ah, c’est vous !	А, это вы!
+hsk2-302	loisir / centre d’intérêt	хобби / увлечение	Mon loisir est la lecture.	Моё хобби — чтение.
+hsk2-303	blanc (couleur)	белый (цвет)	J’aime les vêtements blancs.	Мне нравится белая одежда.
+hsk2-304	classe / groupe	класс / группа	Il y a vingt élèves dans notre classe.	В нашем классе двадцать учеников.
+hsk2-305	aider	помогать	Aidez-moi à porter les livres, s’il vous plaît.	Помогите мне принести книги, пожалуйста.
+hsk2-306	aider / rendre service	помогать / оказать услугу	Pouvez-vous aider ?	Можете помочь?
+hsk2-307	sac / paquet	сумка / пакет	Mon sac est sur la chaise.	Моя сумка на стуле.
+hsk2-308	cahier	тетрадь	J’ai acheté un nouveau cahier.	Я купил новую тетрадь.
+hsk2-309	que / par rapport à	чем / по сравнению с	Mon grand frère est plus grand que moi.	Мой старший брат выше меня.
+hsk2-310	stylo / instrument d’écriture	ручка / письменная принадлежность	Ce stylo est à moi.	Эта ручка моя.
+hsk2-311	ne… pas (interdiction)	не надо (запрет)	Ne parlez pas ; le professeur est là.	Не разговаривайте, учитель пришёл.
+hsk2-312	pas mal / plutôt bien	неплохо / довольно хорошо	Ce restaurant est plutôt bien.	Этот ресторан довольно хороший.
+hsk2-313	excusez-moi / désolé	извините	Pardon, répétez encore une fois, s’il vous plaît.	Извините, скажите ещё раз, пожалуйста.
+hsk2-314	long	длинный	Cette route est longue.	Эта дорога длинная.
+hsk2-315	gare / arrêt	станция / остановка	La gare est près d’ici.	Станция недалеко отсюда.
+hsk2-316	sortir	выходить	Sortez par cette porte, s’il vous plaît.	Выходите через эту дверь, пожалуйста.
+hsk2-317	partir à l’étranger	ехать за границу	Je voudrais étudier à l’étranger l’année prochaine.	В следующем году я хотел бы учиться за границей.
+hsk2-318	sortir (vers le locuteur)	выйти (к говорящему)	Sortez un instant, s’il vous plaît.	Выйдите на минутку, пожалуйста.
+hsk2-319	quitter la maison / sortir	выходить из дома	Je pars de chez moi à huit heures chaque jour.	Я каждый день выхожу из дома в восемь.
+hsk2-320	sortir (en s’éloignant)	выходить / уходить	Allons nous promener.	Давайте пойдём погуляем.
+hsk2-321	lit	кровать	Je veux acheter un nouveau lit.	Я хочу купить новую кровать.
+hsk2-322	mot / expression	слово / выражение	Que signifie ce mot ?	Что означает это слово?
+hsk2-323	fois (classificateur)	раз (счётное слово)	Je suis allé en Chine trois fois.	Я был в Китае три раза.
+hsk2-324	depuis / de	из / от	Je vais de chez moi à l’école à pied.	Я иду из дома в школу пешком.
+hsk2-325	depuis l’enfance	с детства	J’aime dessiner depuis l’enfance.	Я с детства люблю рисовать.
+hsk2-326	faux / erreur	неправильно / ошибка	Ce caractère est mal écrit.	Этот иероглиф написан неправильно.
+hsk2-327	frapper	бить / ударять	Ne frappez pas le chiot.	Не бейте щенка.
+hsk2-328	prendre un taxi	ехать на такси	Prenons un taxi pour l’aéroport.	Давайте поедем в аэропорт на такси.
+hsk2-329	ouvrir / allumer	открывать / включать	Ouvrez ce livre, s’il vous plaît.	Откройте эту книгу, пожалуйста.
+hsk2-330	mais / cependant	но / однако	Je veux y aller, mais je n’ai pas le temps.	Я хочу пойти, но у меня нет времени.
+hsk2-331	mais / cependant	но / однако	Ces vêtements sont beaux, mais trop chers.	Эта одежда красивая, но слишком дорогая.
+hsk2-332	particule de complément (de)	частица дополнения (de)	Elle parle très bien.	Она говорит очень хорошо.
+hsk2-333	particule formant les adverbes (de)	частица образования наречия (de)	Il a souri joyeusement.	Он радостно улыбнулся.
+hsk2-334	attendre	ждать	Je vous attends à l’entrée.	Я жду вас у входа.
+hsk2-335	métro	метро	Je vais au travail en métro.	Я езжу на работу на метро.
+hsk2-336	commander (à manger ou à boire)	заказывать (еду или напитки)	Commandons deux plats.	Давайте закажем два блюда.
+hsk2-337	comprendre	понимать	Je ne comprends pas ce mot.	Я не понимаю это слово.
+hsk2-338	bouger / déplacer	двигать / двигаться	Ne déplacez pas cette table, s’il vous plaît.	Не двигайте этот стол, пожалуйста.
+hsk2-339	restaurant	ресторан	Le restaurant est juste à côté de l’école.	Ресторан прямо рядом со школой.
+hsk2-340	voler (dans les airs)	летать	Les oiseaux volent dans le ciel.	Птицы летят в небе.
+hsk2-341	grand / haut	высокий	Ce bâtiment est haut.	Это здание высокое.
+hsk2-342	lycée	старшая школа	Ma grande sœur est au lycée.	Моя старшая сестра учится в старшей школе.
+hsk2-343	dire / informer	сообщать / говорить	Dites-moi votre nom, s’il vous plaît.	Скажите ваше имя, пожалуйста.
+hsk2-344	taille / stature	рост	Mon grand frère est grand.	Мой старший брат высокий.
+hsk2-345	avec / et / suivre	с / и / следовать	J’y vais avec mon ami.	Я иду вместе с другом.
+hsk2-346	autobus	автобус	Je vais à l’école en bus tous les jours.	Я каждый день езжу в школу на автобусе.
+hsk2-347	passer / traverser / passer du temps	проходить / пересекать / проводить время	Traversons cette route.	Давайте перейдём эту дорогу.
+hsk2-348	venir (vers ici)	подойти / прийти сюда	Venez vous asseoir ici, s’il vous plaît.	Подойдите и садитесь, пожалуйста.
+hsk2-349	fêter le Nouvel An	праздновать Новый год	Nous rentrons fêter le Nouvel An.	Мы едем домой праздновать Новый год.
+hsk2-350	aller là-bas	перейти / пойти туда	Allez-y d’abord, j’arrive dans un instant.	Вы идите первыми, я скоро приду.
+hsk2-351	particule d’expérience (guo)	частица опыта (guo)	Je suis déjà allé en Chine.	Я был в Китае.
+hsk2-352	ou (question) / encore	или (в вопросе) / всё ещё	Voulez-vous du thé ou du café ?	Вы будете чай или кофе?
+hsk2-353	noir (couleur)	чёрный (цвет)	Mon cartable est noir.	Мой рюкзак чёрный.
+hsk2-354	thé noir	чёрный чай	Je voudrais une tasse de thé noir.	Я хотел бы чашку чёрного чая.
+hsk2-355	rouge (couleur)	красный (цвет)	Elle aime le rouge.	Ей нравится красный цвет.
+hsk2-356	derrière / au fond	позади / сзади	La gare est derrière l’école.	Станция за школой.
+hsk2-357	dépenser (argent ou temps)	тратить (деньги или время)	J’ai dépensé cinquante yuans en livres.	Я потратил на книги пятьдесят юаней.
+hsk2-358	fleur	цветок	Il y a une fleur sur la table.	На столе стоит цветок.
+hsk2-359	dessiner / peindre	рисовать	J’aime dessiner.	Я люблю рисовать.
+hsk2-360	mauvais / cassé	плохой / сломанный	Mon téléphone est cassé.	Мой телефон сломан.
+hsk2-361	revenir	возвращаться сюда	Quand revenez-vous ?	Когда вы вернётесь?
+hsk2-362	retourner / rentrer	возвращаться туда	Je dois rentrer maintenant.	Мне сейчас нужно возвращаться.
+hsk2-363	aéroport	аэропорт	L’aéroport est loin d’ici.	Аэропорт далеко отсюда.
+hsk2-364	billet d’avion	авиабилет	J’ai déjà acheté le billet d’avion.	Я уже купил авиабилет.
+hsk2-365	se souvenir	помнить	Vous souvenez-vous de son nom ?	Вы помните его имя?
+hsk2-366	classificateur des pièces	счётное слово для комнат	Nous voudrions deux chambres.	Мы хотели бы две комнаты.
+hsk2-367	enseigner (jiāo)	учить / преподавать (jiāo)	Le professeur nous apprend à écrire les caractères chinois.	Учитель учит нас писать китайские иероглифы.
+hsk2-368	salle de classe	классная комната	Notre salle de classe est au deuxième étage.	Наша аудитория на втором этаже.
+hsk2-369	présenter / présentation	представлять / знакомство	Je vous présente mon ami.	Позвольте представить моего друга.
+hsk2-370	entrer	входить	Entrez par cette porte, s’il vous plaît.	Войдите в эту дверь, пожалуйста.
+hsk2-371	proche / près	близкий / близко	Ma maison est près de l’école.	Мой дом недалеко от школы.
+hsk2-372	entrer (vers ici)	войти (сюда)	Entrez et asseyez-vous, s’il vous plaît.	Войдите и садитесь, пожалуйста.
+hsk2-373	entrer (vers l’intérieur)	войти (внутрь)	Entrons voir.	Давайте зайдём посмотрим.
+hsk2-374	souvent / fréquemment	часто	Je mange souvent ici.	Я часто здесь ем.
+hsk2-375	hôtel	гостиница / отель	Nous séjournons dans cet hôtel.	Мы остановились в этом отеле.
+hsk2-376	alors / juste / immédiatement	тогда / именно / сразу	J’y vais tout de suite.	Я сейчас же пойду.
+hsk2-377	café	кофе	Cette tasse de café est bonne.	Этот кофе вкусный.
+hsk2-378	commencer	начинать	L’examen commence à neuf heures.	Экзамен начинается в девять.
+hsk2-379	commencer un nouveau trimestre	начинать учебный семестр	Notre nouvelle période scolaire commence la semaine prochaine.	Новый семестр начинается на следующей неделе.
+hsk2-380	passer / faire passer un examen	сдавать / проводить экзамен	J’ai un examen de chinois demain.	Завтра у меня экзамен по китайскому.
+hsk2-381	examen / passer un examen	экзамен / сдавать экзамен	Cet examen n’est pas difficile.	Этот экзамен нетрудный.
+hsk2-382	possible / peut-être	возможно / может быть	Il pleuvra peut-être demain.	Завтра, возможно, пойдёт дождь.
+hsk2-383	pantalon	брюки	Ce pantalon est trop long.	Эти брюки слишком длинные.
+hsk2-384	rapide / bientôt	быстрый / скоро	Il parle très vite.	Он говорит очень быстро.
+hsk2-385	heureux / joyeux	радостный / счастливый	Joyeux anniversaire !	С днём рождения!
+hsk2-386	être sur le point de / bientôt	вот-вот / скоро	Notre cours va bientôt finir.	Наш урок скоро закончится.
+hsk2-387	basket-ball	баскетбол	Il aime jouer au basket-ball.	Он любит играть в баскетбол.
+hsk2-388	fatigué	уставший	Je suis un peu fatigué aujourd’hui.	Сегодня я немного устал.
+hsk2-389	à… de (distance)	от (расстояние)	Ma maison n’est pas loin de l’école.	Мой дом недалеко от школы.
+hsk2-390	à l’intérieur	внутри	Il y a un livre dans le sac.	В сумке есть книга.
+hsk2-391	bâtiment / étage	здание / этаж	J’habite dans ce bâtiment.	Я живу в этом здании.
+hsk2-392	route / chemin	дорога / путь	Comment suivre cette route ?	Как пройти по этой дороге?
+hsk2-393	en chemin / sur la route	по дороге / в пути	Je suis en route pour l’école.	Я по дороге в школу.
+hsk2-394	voyager / tourisme	путешествовать / туризм	Je voudrais voyager en Chine.	Я хотел бы поехать путешествовать в Китай.
+hsk2-395	thé vert	зелёный чай	Aimez-vous boire du thé vert ?	Вы любите зелёный чай?
+hsk2-396	vert (couleur)	зелёный (цвет)	Ce vêtement est vert.	Эта одежда зелёная.
+hsk2-397	lent	медленный	Parlez un peu plus lentement, s’il vous plaît.	Говорите немного медленнее, пожалуйста.
+hsk2-398	ennuyeux / sans intérêt	скучный / неинтересный	Ce film est ennuyeux.	Этот фильм скучный.
+hsk2-399	chaque / tous les	каждый	J’étudie chaque jour.	Я занимаюсь каждый день.
+hsk2-400	porte	дверь	Ouvrez la porte, s’il vous plaît.	Откройте дверь, пожалуйста.
+hsk2-401	entrée / seuil	вход / дверной проём	Je vous attends à l’entrée de l’école.	Я жду вас у входа в школу.
+hsk2-402	billet d’entrée	входной билет	Combien coûte ce billet d’entrée ?	Сколько стоит этот входной билет?
+hsk2-403	nouilles / farine	лапша / мука	Je voudrais des nouilles aujourd’hui.	Сегодня я хотел бы лапши.
+hsk2-404	classificateur des personnes	счётное слово для людей	Notre classe a trois nouveaux élèves.	В нашем классе три новых ученика.
+hsk2-405	prendre / tenir / apporter	брать / держать / приносить	Aidez-moi à porter ce sac, s’il vous plaît.	Помогите мне нести эту сумку, пожалуйста.
+hsk2-406	si / tellement (degré)	так / настолько	Ne parlez pas si vite.	Не говорите так быстро.
+hsk2-407	comme cela / de cette façon	так / таким образом	Peut-on faire comme cela ?	Так можно сделать?
+hsk2-408	thé au lait	чай с молоком	Je voudrais une tasse de thé au lait.	Я хотел бы чашку чая с молоком.
+hsk2-409	grand-mère paternelle	бабушка по отцу	Ma grand-mère habite ici.	Моя бабушка живёт здесь.
+hsk2-410	garçon	мальчик	Ce garçon est mon petit frère.	Тот мальчик — мой младший брат.
+hsk2-411	oiseau	птица	Il y a un oiseau dans l’arbre.	На дереве сидит птица.
+hsk2-412	fille	девочка	Cette fille est ma camarade de classe.	Та девочка — моя одноклассница.
+hsk2-413	à côté de	рядом / возле	La librairie est à côté du supermarché.	Книжный магазин рядом с супермаркетом.
+hsk2-414	courir	бежать	Ne courez pas ; marchez lentement.	Не бегите, идите медленно.
+hsk2-415	courir / faire du jogging	бегать / заниматься бегом	Je cours tous les matins.	Я бегаю каждое утро.
+hsk2-416	billet	билет	Avez-vous acheté un billet ?	Вы купили билет?
+hsk2-417	épouse / femme	жена	Ma femme est professeur.	Моя жена учитель.
+hsk2-418	se lever	вставать	Levez-vous, s’il vous plaît.	Встаньте, пожалуйста.
+hsk2-419	devant	впереди / перед	L’hôpital est devant l’école.	Больница перед школой.
+hsk2-420	clair / ensoleillé	ясный / солнечный	Il fera beau demain.	Завтра будет солнечно.
+hsk2-421	balle / ballon	мяч	Ce ballon est à moi.	Этот мяч мой.
+hsk2-422	laisser / permettre / demander de	позволять / просить	Le professeur m’a demandé de lire ce mot.	Учитель попросил меня прочитать это слово.
+hsk2-423	viande	мясо	Je ne veux pas manger de viande aujourd’hui.	Сегодня я не хочу есть мясо.
+hsk2-424	centre commercial	торговый центр	Allons au centre commercial acheter des vêtements.	Давайте поедем в торговый центр за одеждой.
+hsk2-425	monter (vers ici)	подняться сюда	Montez vous asseoir, s’il vous plaît.	Поднимайтесь и садитесь, пожалуйста.
+hsk2-426	sur / au-dessus	сверху / над	Le livre est sur la table.	Книга лежит на столе.
+hsk2-427	monter (vers là-bas)	подняться туда	Montons voir.	Давайте поднимемся посмотрим.
+hsk2-428	aller sur Internet	выходить в интернет	Je vais sur Internet avec mon téléphone.	Я выхожу в интернет с телефона.
+hsk2-429	corps / santé	тело / здоровье	Mon grand-père est en bonne santé.	У моего дедушки хорошее здоровье.
+hsk2-430	anniversaire	день рождения	C’est mon anniversaire aujourd’hui.	Сегодня мой день рождения.
+hsk2-431	temps / quand	время / когда	Appelez-moi s’il se passe quelque chose.	Позвоните мне, если что-то случится.
+hsk2-432	affaire / chose	дело / событие	J’ai quelque chose à vous dire.	Я хочу вам кое-что сказать.
+hsk2-433	main	рука / кисть	Il faut se laver les mains avant de manger.	Перед едой нужно мыть руки.
+hsk2-434	montre	наручные часы	C’est ma nouvelle montre.	Это мои новые часы.
+hsk2-435	cartable / sac d’école	школьный рюкзак	Il y a trois livres dans mon cartable.	В моём рюкзаке три книги.
+hsk2-436	confortable / à l’aise	удобный / хорошо себя чувствовать	Je ne me sens pas bien aujourd’hui.	Сегодня я плохо себя чувствую.
+hsk2-437	offrir / livrer / raccompagner	дарить / доставлять / провожать	Je voudrais vous offrir un livre.	Я хотел бы подарить вам книгу.
+hsk2-438	bien que / quoique	хотя	Bien qu’il pleuve, nous y sommes allés.	Хотя шёл дождь, мы всё равно пошли.
+hsk2-439	donc / c’est pourquoi	поэтому	Il pleuvait aujourd’hui, donc je ne suis pas sorti.	Сегодня шёл дождь, поэтому я не выходил.
+hsk2-440	avoir mal / douloureux	болеть / больно	J’ai un peu mal à la tête.	У меня немного болит голова.
+hsk2-441	donner un coup de pied	пинать / бить ногой	Allons jouer au football.	Давайте поиграем в футбол.
+hsk2-442	question / exercice	вопрос / задание	Comment fait-on cet exercice ?	Как выполнить это задание?
+hsk2-443	classificateur des objets longs	счётное слово для длинных предметов	Ce pantalon est beau.	Эти брюки красивые.
+hsk2-444	danser	танцевать	Ma petite sœur aime danser.	Моя младшая сестра любит танцевать.
+hsk2-445	tête	голова	Je n’ai plus mal à la tête.	Голова больше не болит.
+hsk2-446	pays étranger / étranger	иностранное государство / за границей	Il étudie à l’étranger.	Он учится за границей.
+hsk2-447	dehors / extérieur	снаружи / на улице	Il pleut dehors.	На улице идёт дождь.
+hsk2-448	finir / terminer	заканчивать / завершать	J’ai fini mes devoirs.	Я закончил домашнее задание.
+hsk2-449	dix mille	десять тысяч	Cette voiture coûte cinquante mille yuans.	Эта машина стоит пятьдесят тысяч юаней.
+hsk2-450	vers / en direction de	по направлению к	Allez à gauche, s’il vous plaît.	Идите налево, пожалуйста.
+hsk2-451	en ligne / sur Internet	онлайн / в интернете	J’ai acheté un livre sur Internet.	Я купил книгу в интернете.
+hsk2-452	oublier	забывать	J’ai oublié son nom.	Я забыл его имя.
+hsk2-453	classificateur poli des personnes	вежливое счётное слово для людей	Ce professeur nous enseigne le chinois.	Этот учитель преподаёт нам китайский.
+hsk2-454	pourquoi	почему / зачем	Pourquoi apprenez-vous le chinois ?	Почему вы учите китайский?
+hsk2-455	espérer / souhait	надеяться / надежда	J’espère qu’il fera beau demain.	Я надеюсь, что завтра будет солнечно.
+hsk2-456	laver	мыть	Je voudrais me laver les mains.	Я хотел бы помыть руки.
+hsk2-457	toilettes	туалет	Excusez-moi, où sont les toilettes ?	Извините, где туалет?
+hsk2-458	descendre (vers ici)	спуститься сюда	Descendez manger, s’il vous plaît.	Спускайтесь есть, пожалуйста.
+hsk2-459	sous / en dessous	внизу / под	Le chat est sous la table.	Кошка под столом.
+hsk2-460	descendre (vers là-bas)	спуститься вниз	Descendons nous promener.	Давайте спустимся погулять.
+hsk2-461	enfant	ребёнок	Les enfants jouent dehors.	Дети играют на улице.
+hsk2-462	enfance / étant petit	детство / в детстве	J’habitais ici quand j’étais enfant.	В детстве я жил здесь.
+hsk2-463	sourire / rire	улыбаться / смеяться	Elle a ri joyeusement.	Она радостно рассмеялась.
+hsk2-464	avoir pour nom de famille	носить фамилию	Quel est votre nom de famille ?	Какая у вас фамилия?
+hsk2-465	nom complet	полное имя	Écrivez votre nom complet, s’il vous plaît.	Напишите полное имя, пожалуйста.
+hsk2-466	couleur	цвет	Quelle couleur aimez-vous ?	Какой цвет вам нравится?
+hsk2-467	œil	глаз	Ses yeux sont beaux.	У неё красивые глаза.
+hsk2-468	médicament	лекарство	Le médecin m’a dit de prendre un médicament.	Врач сказал мне принимать лекарство.
+hsk2-469	pharmacie	аптека	La pharmacie est à côté de l’hôpital.	Аптека рядом с больницей.
+hsk2-470	grand-père paternel	дедушка по отцу	Mon grand-père se promène chaque jour.	Мой дедушка каждый день гуляет.
+hsk2-471	un instant / un moment	мгновение / немного времени	Attendez-moi un instant, s’il vous plaît.	Подождите меня немного, пожалуйста.
+hsk2-472	déjà	уже	J’ai déjà mangé.	Я уже поел.
+hsk2-473	ensemble	вместе	Allons en cours ensemble.	Давайте пойдём на занятия вместе.
+hsk2-474	sens / idée	значение / смысл	Que signifie ce mot ?	Что означает это слово?
+hsk2-475	nuageux / couvert	облачный / пасмурный	Le ciel est couvert aujourd’hui.	Сегодня пасмурно.
+hsk2-476	parce que	потому что	Je n’y suis pas allé parce que j’étais malade.	Я не пошёл, потому что болел.
+hsk2-477	nager	плавать	Les poissons nagent dans l’eau.	Рыбы плавают в воде.
+hsk2-478	nager / faire de la natation	плавать / заниматься плаванием	J’aime nager.	Я люблю плавать.
+hsk2-479	intéressant / qui a du sens	интересный / осмысленный	Ce livre est intéressant.	Эта книга интересная.
+hsk2-480	parfois	иногда	Je vais parfois à l’école en bus.	Иногда я езжу в школу на автобусе.
+hsk2-481	droite (direction)	правый / направо	Allez à droite, s’il vous plaît.	Идите направо, пожалуйста.
+hsk2-482	côté droit	правая сторона	L’hôpital est à droite.	Больница справа.
+hsk2-483	poisson	рыба	J’aime manger du poisson.	Я люблю есть рыбу.
+hsk2-484	loin / éloigné	далёкий / далеко	Ma maison est loin de l’aéroport.	Мой дом далеко от аэропорта.
+hsk2-485	sport / exercice physique	спорт / физические упражнения	Je fais du sport chaque jour.	Я каждый день занимаюсь спортом.
+hsk2-486	se tenir debout	стоять	Placez-vous ici, s’il vous plaît.	Встаньте здесь, пожалуйста.
+hsk2-487	mari / époux	муж	Son mari travaille à l’hôpital.	Её муж работает в больнице.
+hsk2-488	si / tellement (degré)	так / настолько	Pourquoi fait-il si chaud aujourd’hui ?	Почему сегодня так жарко?
+hsk2-489	comme ceci / de cette façon	так / таким образом	Est-ce correct d’écrire ainsi ?	Так писать правильно?
+hsk2-490	particule d’état continu (zhe)	частица продолжающегося состояния (zhe)	La porte est ouverte.	Дверь открыта.
+hsk2-491	juste / en train de	как раз / в процессе	Je suis en train de me préparer à sortir.	Я как раз собираюсь выходить.
+hsk2-492	semaine	неделя	Je suis très occupé cette semaine.	На этой неделе я очень занят.
+hsk2-493	préparer / se préparer	готовить / готовиться	Je prépare un examen.	Я готовлюсь к экзамену.
+hsk2-494	soi-même / moi-même	сам / себя	Je cuisine pour moi-même.	Я готовлю себе сам.
+hsk2-495	marcher / aller / partir	идти / уходить	Allons-y.	Пойдём.
+hsk2-496	marcher / aller à pied	идти пешком	Je vais à l’école à pied chaque jour.	Я каждый день хожу в школу пешком.
+hsk2-497	football	футбол	Il aime jouer au football.	Он любит играть в футбол.
+hsk2-498	le plus / superlatif	самый / наиболее	C’est le livre le plus agréable à lire.	Эту книгу читать интереснее всего.
+hsk2-499	gauche (direction)	левый / налево	Allez à gauche, s’il vous plaît.	Идите налево, пожалуйста.
+hsk2-500	côté gauche	левая сторона	L’école est à gauche.	Школа слева.

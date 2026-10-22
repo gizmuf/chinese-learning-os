@@ -1,0 +1,6586 @@
+{
+  "ui": {
+    "Loading your notebook…": {
+      "fr": "Chargement de votre carnet…",
+      "ru": "Загрузка тетради…"
+    },
+    "Ready to sync": {
+      "fr": "Prêt à synchroniser",
+      "ru": "Готово к синхронизации"
+    },
+    "Guest · saved on this device": {
+      "fr": "Invité · enregistré sur cet appareil",
+      "ru": "Гость · сохранено на устройстве"
+    },
+    "Device storage unavailable": {
+      "fr": "Stockage de l’appareil indisponible",
+      "ru": "Хранилище устройства недоступно"
+    },
+    "Enable browser storage to save your practice.": {
+      "fr": "Activez le stockage du navigateur pour enregistrer vos exercices.",
+      "ru": "Разрешите хранение данных в браузере для сохранения упражнений."
+    },
+    "Could not save preferences.": {
+      "fr": "Impossible d’enregistrer les préférences.",
+      "ru": "Не удалось сохранить настройки."
+    },
+    "Syncing…": {
+      "fr": "Synchronisation…",
+      "ru": "Синхронизация…"
+    },
+    "Attempt exceeds sync limit": {
+      "fr": "Exercice trop volumineux pour la synchronisation",
+      "ru": "Упражнение превышает лимит синхронизации"
+    },
+    "All progress synced": {
+      "fr": "Toute la progression est synchronisée",
+      "ru": "Весь прогресс синхронизирован"
+    },
+    "Saved here · sync pending": {
+      "fr": "Enregistré ici · synchronisation en attente",
+      "ru": "Сохранено здесь · ожидается синхронизация"
+    },
+    "Offline · saved on this device": {
+      "fr": "Hors ligne · enregistré sur cet appareil",
+      "ru": "Без сети · сохранено на устройстве"
+    },
+    "Storage is not ready.": {
+      "fr": "Le stockage n’est pas prêt.",
+      "ru": "Хранилище ещё не готово."
+    },
+    "Saved here · syncing…": {
+      "fr": "Enregistré ici · synchronisation…",
+      "ru": "Сохранено здесь · синхронизация…"
+    },
+    "You are all caught up for this skill. Try another skill or practice a lesson.": {
+      "fr": "Vous êtes à jour pour cette compétence. Essayez-en une autre ou révisez une leçon.",
+      "ru": "Для этого навыка всё повторено. Выберите другой навык или урок."
+    },
+    "Chinese OS home": {
+      "fr": "Accueil Chinese OS",
+      "ru": "Главная Chinese OS"
+    },
+    "A LITTLE, EVERY DAY": {
+      "fr": "UN PEU, CHAQUE JOUR",
+      "ru": "ПОНЕМНОГУ КАЖДЫЙ ДЕНЬ"
+    },
+    "YOUR STUDY SPACE": {
+      "fr": "VOTRE ESPACE D’ÉTUDE",
+      "ru": "ВАШЕ УЧЕБНОЕ ПРОСТРАНСТВО"
+    },
+    "Today": {
+      "fr": "Aujourd’hui",
+      "ru": "Сегодня"
+    },
+    "My lessons": {
+      "fr": "Mes leçons",
+      "ru": "Мои уроки"
+    },
+    "Writing studio": {
+      "fr": "Atelier d’écriture",
+      "ru": "Практика письма"
+    },
+    "Review": {
+      "fr": "Révisions",
+      "ru": "Повторение"
+    },
+    "My progress": {
+      "fr": "Ma progression",
+      "ru": "Мой прогресс"
+    },
+    "A little adds up.": {
+      "fr": "Les petits efforts s’additionnent.",
+      "ru": "Маленькие шаги дают результат."
+    },
+    "One word. One stroke.": {
+      "fr": "Un mot. Un trait.",
+      "ru": "Одно слово. Одна черта."
+    },
+    "One step closer.": {
+      "fr": "Un pas de plus.",
+      "ru": "Ещё один шаг вперёд."
+    },
+    "Study preferences": {
+      "fr": "Préférences d’étude",
+      "ru": "Настройки обучения"
+    },
+    "Your notebook": {
+      "fr": "Votre carnet",
+      "ru": "Ваша тетрадь"
+    },
+    "Personal learning account": {
+      "fr": "Compte d’apprentissage personnel",
+      "ru": "Личный учебный аккаунт"
+    },
+    "Try it as a guest": {
+      "fr": "Essayer en tant qu’invité",
+      "ru": "Попробовать без регистрации"
+    },
+    "Sign in": {
+      "fr": "Se connecter",
+      "ru": "Войти"
+    },
+    "My study space": {
+      "fr": "Mon espace d’étude",
+      "ru": "Моё учебное пространство"
+    },
+    "Study level": {
+      "fr": "Niveau d’étude",
+      "ru": "Уровень обучения"
+    },
+    "Extras ·": {
+      "fr": "Compléments ·",
+      "ru": "Дополнительно ·"
+    },
+    "Offline": {
+      "fr": "Hors ligne",
+      "ru": "Нет сети"
+    },
+    "YOUR DAILY PRACTICE": {
+      "fr": "VOTRE PRATIQUE QUOTIDIENNE",
+      "ru": "ЕЖЕДНЕВНАЯ ПРАКТИКА"
+    },
+    "A little Chinese,": {
+      "fr": "Un peu de chinois,",
+      "ru": "Немного китайского,"
+    },
+    "every day": {
+      "fr": "chaque jour",
+      "ru": "каждый день"
+    },
+    "Build a habit. Find your rhythm. Make it yours.": {
+      "fr": "Créez une habitude. Trouvez votre rythme. À votre façon.",
+      "ru": "Заведите привычку. Найдите свой ритм. Учитесь по-своему."
+    },
+    "LET’S KEEP GROWING": {
+      "fr": "CONTINUONS À PROGRESSER",
+      "ru": "ПРОДОЛЖАЕМ УЧИТЬСЯ"
+    },
+    "YOUR NEXT SMALL STEP": {
+      "fr": "VOTRE PROCHAIN PETIT PAS",
+      "ru": "ВАШ СЛЕДУЮЩИЙ МАЛЕНЬКИЙ ШАГ"
+    },
+    "From seeing it": {
+      "fr": "De la découverte",
+      "ru": "От знакомства"
+    },
+    "to knowing it.": {
+      "fr": "à la connaissance.",
+      "ru": "к знанию."
+    },
+    "Give your new words a little attention.": {
+      "fr": "Accordez un peu d’attention à vos nouveaux mots.",
+      "ru": "Уделите немного внимания новым словам."
+    },
+    "Your future self will thank you.": {
+      "fr": "Votre futur vous vous remerciera.",
+      "ru": "В будущем вы скажете себе спасибо."
+    },
+    "Start today’s practice": {
+      "fr": "Commencer les exercices du jour",
+      "ru": "Начать сегодняшнюю практику"
+    },
+    "minutes · at your own pace": {
+      "fr": "minutes · à votre rythme",
+      "ru": "минут · в своём темпе"
+    },
+    "Your week": {
+      "fr": "Votre semaine",
+      "ru": "Ваша неделя"
+    },
+    "Every practice is progress.": {
+      "fr": "Chaque exercice vous fait avancer.",
+      "ru": "Каждое упражнение — шаг вперёд."
+    },
+    "You showed up today. Keep it going.": {
+      "fr": "Vous avez pratiqué aujourd’hui. Continuez ainsi.",
+      "ru": "Сегодня вы позанимались. Продолжайте!"
+    },
+    "Your next chapter starts today.": {
+      "fr": "Votre prochain chapitre commence aujourd’hui.",
+      "ru": "Новая глава начинается сегодня."
+    },
+    "Words explored": {
+      "fr": "Mots découverts",
+      "ru": "Изученные слова"
+    },
+    "Reviews due": {
+      "fr": "Révisions à faire",
+      "ru": "Пора повторить"
+    },
+    "Writing attempts": {
+      "fr": "Exercices d’écriture",
+      "ru": "Попытки письма"
+    },
+    "Independent recall": {
+      "fr": "Rappel autonome",
+      "ru": "Самостоятельное воспроизведение"
+    },
+    "Pick up where you left off": {
+      "fr": "Reprenez là où vous en étiez",
+      "ru": "Продолжите с того же места"
+    },
+    "A few useful words. A world of possibilities.": {
+      "fr": "Quelques mots utiles. Un monde de possibilités.",
+      "ru": "Несколько полезных слов. Мир возможностей."
+    },
+    "All lessons": {
+      "fr": "Toutes les leçons",
+      "ru": "Все уроки"
+    },
+    "WORDS": {
+      "fr": "MOTS",
+      "ru": "СЛОВ"
+    },
+    "Let your hand do the remembering.": {
+      "fr": "Laissez votre main mémoriser.",
+      "ru": "Пусть рука помогает запоминать."
+    },
+    "Try the writing studio with Apple Pencil, a finger, or your mouse.": {
+      "fr": "Essayez l’atelier avec un Apple Pencil, le doigt ou la souris.",
+      "ru": "Попробуйте писать с Apple Pencil, пальцем или мышью."
+    },
+    "Give it a try": {
+      "fr": "Essayer",
+      "ru": "Попробовать"
+    },
+    "WORDS FOR YOUR REAL LIFE": {
+      "fr": "DES MOTS POUR LE QUOTIDIEN",
+      "ru": "СЛОВА ДЛЯ ПОВСЕДНЕВНОЙ ЖИЗНИ"
+    },
+    "Your learning library": {
+      "fr": "Votre bibliothèque d’apprentissage",
+      "ru": "Ваша учебная библиотека"
+    },
+    "words & phrases.": {
+      "fr": "mots et expressions.",
+      "ru": "слов и выражений."
+    },
+    "Useful everyday additions.": {
+      "fr": "Des compléments utiles au quotidien.",
+      "ru": "Полезные повседневные дополнения."
+    },
+    "HSK 2025 syllabus.": {
+      "fr": "Programme HSK 2025.",
+      "ru": "Программа HSK 2025."
+    },
+    "Find a word, pinyin or meaning…": {
+      "fr": "Chercher un mot, son pinyin ou son sens…",
+      "ru": "Поиск слова, пиньиня или значения…"
+    },
+    "Choose lesson": {
+      "fr": "Choisir une leçon",
+      "ru": "Выбрать урок"
+    },
+    "All": {
+      "fr": "Tous",
+      "ru": "Все"
+    },
+    "words ·": {
+      "fr": "mots ·",
+      "ru": "слов ·"
+    },
+    "EXTRA": {
+      "fr": "COMPLÉMENT",
+      "ru": "ДОПОЛНИТЕЛЬНО"
+    },
+    "Listen to": {
+      "fr": "Écouter",
+      "ru": "Слушать"
+    },
+    "Listen to example:": {
+      "fr": "Écouter l’exemple :",
+      "ru": "Прослушать пример:"
+    },
+    "Listen to example": {
+      "fr": "Écouter l’exemple",
+      "ru": "Прослушать пример"
+    },
+    "Practice writing": {
+      "fr": "Pratiquer l’écriture",
+      "ru": "Практиковать письмо"
+    },
+    "No words found. Try another spelling or lesson.": {
+      "fr": "Aucun mot trouvé. Essayez une autre orthographe ou leçon.",
+      "ru": "Слова не найдены. Попробуйте другое написание или урок."
+    },
+    "MAKE IT STICK": {
+      "fr": "POUR BIEN MÉMORISER",
+      "ru": "ЗАКРЕПИТЕ ЗНАНИЯ"
+    },
+    "A little recall goes far": {
+      "fr": "Un peu de rappel mène loin",
+      "ru": "Повторение помогает надолго"
+    },
+    "Your memory grows differently for every skill. Give each one its own time.": {
+      "fr": "Votre mémoire progresse différemment selon la compétence. Accordez du temps à chacune.",
+      "ru": "Каждый навык развивается по-своему. Уделяйте время каждому."
+    },
+    "My session": {
+      "fr": "Ma séance",
+      "ru": "Моё занятие"
+    },
+    "See the word. Recall what it means.": {
+      "fr": "Regardez le mot. Retrouvez son sens.",
+      "ru": "Посмотрите на слово. Вспомните значение."
+    },
+    "Listen carefully. Connect sound to meaning.": {
+      "fr": "Écoutez attentivement. Reliez le son au sens.",
+      "ru": "Слушайте внимательно. Свяжите звучание со значением."
+    },
+    "An empty grid. A word from memory.": {
+      "fr": "Une grille vide. Un mot de mémoire.",
+      "ru": "Пустая клетка. Слово по памяти."
+    },
+    "due ·": {
+      "fr": "à revoir ·",
+      "ru": "к повторению ·"
+    },
+    "Start": {
+      "fr": "Commencer",
+      "ru": "Начать"
+    },
+    "FSRS schedules each skill separately at a 90% retention target. Tracing and copying are practice; they do not count as independent recall.": {
+      "fr": "FSRS planifie chaque compétence séparément avec un objectif de rétention de 90 %. Le tracé et la copie sont des exercices guidés, pas du rappel autonome.",
+      "ru": "FSRS планирует повторения каждого навыка отдельно с целью удержания 90 %. Обводка и копирование — практика, а не самостоятельное воспроизведение."
+    },
+    "SESSION COMPLETE": {
+      "fr": "SÉANCE TERMINÉE",
+      "ru": "ЗАНЯТИЕ ЗАВЕРШЕНО"
+    },
+    "You showed up.": {
+      "fr": "Vous avez pratiqué.",
+      "ru": "Вы позанимались."
+    },
+    "That’s how it starts.": {
+      "fr": "C’est comme ça que tout commence.",
+      "ru": "С этого всё начинается."
+    },
+    "words reviewed. Your next reviews are scheduled.": {
+      "fr": "mots révisés. Vos prochaines révisions sont planifiées.",
+      "ru": "слов повторено. Следующие повторения запланированы."
+    },
+    "See my progress": {
+      "fr": "Voir ma progression",
+      "ru": "Посмотреть прогресс"
+    },
+    "THE WRITING STUDIO": {
+      "fr": "L’ATELIER D’ÉCRITURE",
+      "ru": "ПРАКТИКА ПИСЬМА"
+    },
+    "One stroke at a time": {
+      "fr": "Un trait à la fois",
+      "ru": "Черта за чертой"
+    },
+    "Take a breath. Recall before you reveal.": {
+      "fr": "Respirez. Rappelez-vous avant de regarder.",
+      "ru": "Не спешите. Вспомните, прежде чем открыть ответ."
+    },
+    "Watch it. Trace it. Make it yours.": {
+      "fr": "Observez. Tracez. Appropriez-vous le geste.",
+      "ru": "Смотрите. Обводите. Запоминайте."
+    },
+    "Select word": {
+      "fr": "Choisir un mot",
+      "ru": "Выбрать слово"
+    },
+    "Writing layout": {
+      "fr": "Présentation de l’écriture",
+      "ru": "Режим письма"
+    },
+    "Single character": {
+      "fr": "Un caractère",
+      "ru": "Один иероглиф"
+    },
+    "Notebook · Zeszyt": {
+      "fr": "Cahier d’écriture",
+      "ru": "Прописи"
+    },
+    "YOUR EFFORT, MADE VISIBLE": {
+      "fr": "VOS EFFORTS EN UN COUP D’ŒIL",
+      "ru": "ВАШИ УСИЛИЯ ВИДНЫ"
+    },
+    "Look how far you’ve come": {
+      "fr": "Voyez le chemin parcouru",
+      "ru": "Посмотрите, сколько вы прошли"
+    },
+    "Practice builds familiarity. Independent recall builds lasting memory.": {
+      "fr": "La pratique familiarise. Le rappel autonome ancre les connaissances.",
+      "ru": "Практика знакомит со словом. Воспроизведение по памяти закрепляет его."
+    },
+    "Export again": {
+      "fr": "Exporter à nouveau",
+      "ru": "Экспортировать снова"
+    },
+    "Export my history": {
+      "fr": "Exporter mon historique",
+      "ru": "Экспортировать историю"
+    },
+    "Total attempts": {
+      "fr": "Nombre d’exercices",
+      "ru": "Всего попыток"
+    },
+    "Independent reviews": {
+      "fr": "Révisions autonomes",
+      "ru": "Самостоятельные повторения"
+    },
+    "Guided / assisted practice": {
+      "fr": "Exercices guidés / avec aide",
+      "ru": "Практика с подсказками"
+    },
+    "Your words, by skill": {
+      "fr": "Vos mots, par compétence",
+      "ru": "Ваши слова по навыкам"
+    },
+    "words explored": {
+      "fr": "mots découverts",
+      "ru": "слов изучено"
+    },
+    "Word": {
+      "fr": "Mot",
+      "ru": "Слово"
+    },
+    "Practice": {
+      "fr": "Pratique",
+      "ru": "Практика"
+    },
+    "Due now": {
+      "fr": "À revoir maintenant",
+      "ru": "Пора повторить"
+    },
+    "Not reviewed": {
+      "fr": "Pas encore révisé",
+      "ru": "Ещё не повторялось"
+    },
+    "Your notebook is ready.": {
+      "fr": "Votre carnet est prêt.",
+      "ru": "Ваша тетрадь готова."
+    },
+    "Start with a word. Your progress will grow here.": {
+      "fr": "Commencez par un mot. Votre progression apparaîtra ici.",
+      "ru": "Начните с одного слова. Здесь появится ваш прогресс."
+    },
+    "Try your first word": {
+      "fr": "Essayer votre premier mot",
+      "ru": "Попробовать первое слово"
+    },
+    "Your records are private to your account. Repeated offline uploads are deduplicated, and review order is rebuilt from your history.": {
+      "fr": "Vos données restent privées dans votre compte. Les envois hors ligne répétés sont dédoublonnés ; les révisions sont recalculées à partir de votre historique.",
+      "ru": "Данные доступны только вашему аккаунту. Повторные загрузки без сети не создают дубликатов; порядок повторений восстанавливается по истории."
+    },
+    "Guest progress stays in this browser. Sign in to keep a separate notebook across your devices.": {
+      "fr": "La progression des invités reste dans ce navigateur. Connectez-vous pour retrouver votre carnet personnel sur vos appareils.",
+      "ru": "Гостевой прогресс хранится в этом браузере. Войдите, чтобы вести отдельную тетрадь на разных устройствах."
+    },
+    "Small steps. Lasting connections.": {
+      "fr": "Petits pas. Liens durables.",
+      "ru": "Маленькие шаги. Прочные связи."
+    },
+    "CHINESE OS · MADE FOR YOUR EVERYDAY": {
+      "fr": "CHINESE OS · POUR VOTRE QUOTIDIEN",
+      "ru": "CHINESE OS · ДЛЯ КАЖДОГО ДНЯ"
+    },
+    "Dismiss": {
+      "fr": "Fermer",
+      "ru": "Закрыть"
+    },
+    "Make yourself at home.": {
+      "fr": "Faites comme chez vous.",
+      "ru": "Чувствуйте себя как дома."
+    },
+    "Close settings": {
+      "fr": "Fermer les préférences",
+      "ru": "Закрыть настройки"
+    },
+    "Slower pronunciation": {
+      "fr": "Prononciation plus lente",
+      "ru": "Замедленное произношение"
+    },
+    "Take your time. Keep the same natural pitch.": {
+      "fr": "Prenez votre temps. Le timbre reste naturel.",
+      "ru": "Не спешите. Высота голоса остаётся естественной."
+    },
+    "Pencil only": {
+      "fr": "Stylet uniquement",
+      "ru": "Только стилус"
+    },
+    "Ignore finger drawing inside the writing grid.": {
+      "fr": "Ignorer les tracés au doigt dans la grille.",
+      "ru": "Игнорировать касания пальцем в поле письма."
+    },
+    "Left-handed layout": {
+      "fr": "Disposition pour gauchers",
+      "ru": "Режим для левшей"
+    },
+    "Move writing controls to the left.": {
+      "fr": "Déplacer les commandes d’écriture vers la gauche.",
+      "ru": "Переместить инструменты письма влево."
+    },
+    "Manage learning account": {
+      "fr": "Gérer le compte d’apprentissage",
+      "ru": "Управление учебным аккаунтом"
+    },
+    "Guest and signed-in notebooks are separate. Pronunciation uses bundled Mandarin recordings.": {
+      "fr": "Les carnets invité et connecté sont distincts. La prononciation utilise des enregistrements de mandarin intégrés.",
+      "ru": "Гостевая и личная тетради разделены. Для произношения используются встроенные записи на путунхуа."
+    },
+    "Sign in to sync progress": {
+      "fr": "Se connecter pour synchroniser",
+      "ru": "Войти для синхронизации прогресса"
+    },
+    "Sign out": {
+      "fr": "Se déconnecter",
+      "ru": "Выйти"
+    },
+    "Again": {
+      "fr": "À revoir",
+      "ru": "Снова"
+    },
+    "Could not recall": {
+      "fr": "Impossible de se rappeler",
+      "ru": "Не удалось вспомнить"
+    },
+    "Hard": {
+      "fr": "Difficile",
+      "ru": "Трудно"
+    },
+    "Correct, with effort": {
+      "fr": "Correct, avec effort",
+      "ru": "Правильно, но с усилием"
+    },
+    "Good": {
+      "fr": "Bien",
+      "ru": "Хорошо"
+    },
+    "Recalled correctly": {
+      "fr": "Rappel correct",
+      "ru": "Вспомнили правильно"
+    },
+    "Easy": {
+      "fr": "Facile",
+      "ru": "Легко"
+    },
+    "Quick & confident": {
+      "fr": "Rapide et sûr",
+      "ru": "Быстро и уверенно"
+    },
+    "Could not save this review. Please try again.": {
+      "fr": "Impossible d’enregistrer cette révision. Réessayez.",
+      "ru": "Не удалось сохранить повторение. Попробуйте снова."
+    },
+    "· INDEPENDENT RECALL": {
+      "fr": "· RAPPEL AUTONOME",
+      "ru": "· ПО ПАМЯТИ"
+    },
+    "What does this word mean?": {
+      "fr": "Que signifie ce mot ?",
+      "ru": "Что означает это слово?"
+    },
+    "Play Chinese word": {
+      "fr": "Écouter le mot chinois",
+      "ru": "Прослушать китайское слово"
+    },
+    "What did you hear?": {
+      "fr": "Qu’avez-vous entendu ?",
+      "ru": "Что вы услышали?"
+    },
+    "Play it again if you need to. Recall the meaning.": {
+      "fr": "Réécoutez si nécessaire. Retrouvez le sens.",
+      "ru": "Послушайте ещё раз, если нужно. Вспомните значение."
+    },
+    "Reveal answer": {
+      "fr": "Voir la réponse",
+      "ru": "Показать ответ"
+    },
+    "Saved · next word": {
+      "fr": "Enregistré · mot suivant",
+      "ru": "Сохранено · следующее слово"
+    },
+    "Rate what you remembered before revealing.": {
+      "fr": "Évaluez ce dont vous vous souveniez avant de regarder.",
+      "ru": "Оцените, что вы вспомнили до показа ответа."
+    },
+    "Could not restore the last drawing. You can still start a new attempt.": {
+      "fr": "Impossible de restaurer le dernier tracé. Vous pouvez en commencer un nouveau.",
+      "ru": "Не удалось восстановить рисунок. Можно начать новую попытку."
+    },
+    "Could not save this drawing on your device.": {
+      "fr": "Impossible d’enregistrer ce tracé sur l’appareil.",
+      "ru": "Не удалось сохранить рисунок на устройстве."
+    },
+    "Review saved. Your next writing review is scheduled.": {
+      "fr": "Révision enregistrée. Votre prochaine révision d’écriture est planifiée.",
+      "ru": "Повторение сохранено. Следующее повторение письма запланировано."
+    },
+    "Practice saved. Independent recall has its own schedule.": {
+      "fr": "Exercice enregistré. Le rappel autonome suit son propre calendrier.",
+      "ru": "Практика сохранена. У воспроизведения по памяти отдельное расписание."
+    },
+    "Could not save. Keep this page open and try again.": {
+      "fr": "Impossible d’enregistrer. Gardez cette page ouverte et réessayez.",
+      "ru": "Не удалось сохранить. Не закрывайте страницу и попробуйте снова."
+    },
+    "WRITE FROM MEMORY": {
+      "fr": "ÉCRIVEZ DE MÉMOIRE",
+      "ru": "ПИШИТЕ ПО ПАМЯТИ"
+    },
+    "LET YOUR HAND LEARN THE SHAPE": {
+      "fr": "LAISSEZ VOTRE MAIN APPRENDRE LA FORME",
+      "ru": "ПУСТЬ РУКА ЗАПОМНИТ ФОРМУ"
+    },
+    "Character": {
+      "fr": "Caractère",
+      "ru": "Иероглиф"
+    },
+    "Loading your saved drawing…": {
+      "fr": "Chargement de votre tracé…",
+      "ru": "Загрузка сохранённого рисунка…"
+    },
+    "✓ Character complete. Choose the next cell.": {
+      "fr": "✓ Caractère terminé. Passez au suivant.",
+      "ru": "✓ Иероглиф готов. Перейдите к следующему."
+    },
+    "Follow the stroke order. Replay whenever you like.": {
+      "fr": "Suivez l’ordre des traits. Relancez à volonté.",
+      "ru": "Следите за порядком черт. Повторяйте показ в любое время."
+    },
+    "Follow the outline, one stroke at a time.": {
+      "fr": "Suivez le contour, un trait à la fois.",
+      "ru": "Следуйте контуру, черта за чертой."
+    },
+    "Look at the reference. Write in the empty grid.": {
+      "fr": "Regardez le modèle. Écrivez dans la grille vide.",
+      "ru": "Посмотрите на образец. Напишите в пустой клетке."
+    },
+    "Write the whole word, then compare your answer.": {
+      "fr": "Écrivez le mot entier, puis comparez votre réponse.",
+      "ru": "Напишите всё слово и сравните с образцом."
+    },
+    "Undo": {
+      "fr": "Annuler le trait",
+      "ru": "Отменить черту"
+    },
+    "Clear": {
+      "fr": "Effacer",
+      "ru": "Очистить"
+    },
+    "Hint": {
+      "fr": "Indice",
+      "ru": "Подсказка"
+    },
+    "Replay": {
+      "fr": "Rejouer",
+      "ru": "Повторить показ"
+    },
+    "Next character": {
+      "fr": "Caractère suivant",
+      "ru": "Следующий иероглиф"
+    },
+    "Compare answer": {
+      "fr": "Comparer la réponse",
+      "ru": "Сравнить с ответом"
+    },
+    "YOUR PROMPT": {
+      "fr": "VOTRE INDICE",
+      "ru": "ВАШЕ ЗАДАНИЕ"
+    },
+    "WORD IN FOCUS": {
+      "fr": "LE MOT ÉTUDIÉ",
+      "ru": "ИЗУЧАЕМОЕ СЛОВО"
+    },
+    "Trust your memory.": {
+      "fr": "Faites confiance à votre mémoire.",
+      "ru": "Доверьтесь памяти."
+    },
+    "The answer stays hidden until you finish. A hint counts as assisted practice.": {
+      "fr": "La réponse reste cachée jusqu’à la fin. Un indice transforme l’essai en exercice guidé.",
+      "ru": "Ответ скрыт до завершения. При использовании подсказки это практика с помощью."
+    },
+    "Hear pronunciation": {
+      "fr": "Écouter la prononciation",
+      "ru": "Послушать произношение"
+    },
+    "IN EVERYDAY LIFE": {
+      "fr": "DANS LA VIE QUOTIDIENNE",
+      "ru": "В ПОВСЕДНЕВНОЙ ЖИЗНИ"
+    },
+    "A small step, saved.": {
+      "fr": "Un petit pas enregistré.",
+      "ru": "Маленький шаг сохранён."
+    },
+    "Recall first. Refine second.": {
+      "fr": "D’abord se rappeler. Puis affiner.",
+      "ru": "Сначала вспомните. Потом улучшайте."
+    },
+    "Familiarity comes with practice.": {
+      "fr": "La pratique rend familier.",
+      "ru": "Привычка приходит с практикой."
+    },
+    "Compare your completed word and rate your memory. This exercise uses self-assessment; free writing is not automatically graded.": {
+      "fr": "Comparez votre mot et évaluez votre mémoire. Il s’agit d’une autoévaluation ; l’écriture libre n’est pas notée automatiquement.",
+      "ru": "Сравните написанное слово и оцените память. Это самооценка; свободное письмо не проверяется автоматически."
+    },
+    "Watching, tracing and copying help your hand learn. Try recall next to check your memory.": {
+      "fr": "Observer, tracer et copier aident votre main à apprendre. Passez au rappel pour tester votre mémoire.",
+      "ru": "Наблюдение, обводка и копирование помогают руке учиться. Затем проверьте память."
+    },
+    "You used help. This saves practice only.": {
+      "fr": "Vous avez utilisé une aide. Seul l’exercice sera enregistré.",
+      "ru": "Вы использовали подсказку. Сохранится только практика."
+    },
+    "How well did you remember before comparing?": {
+      "fr": "Comment vous souveniez-vous du mot avant de comparer ?",
+      "ru": "Насколько хорошо вы вспомнили до сравнения?"
+    },
+    "Save practice": {
+      "fr": "Enregistrer l’exercice",
+      "ru": "Сохранить практику"
+    },
+    "Next word": {
+      "fr": "Mot suivant",
+      "ru": "Следующее слово"
+    },
+    "The email or password is incorrect. Try again or reset your password.": {
+      "fr": "Adresse e-mail ou mot de passe incorrect. Réessayez ou réinitialisez votre mot de passe.",
+      "ru": "Неверная почта или пароль. Попробуйте снова или сбросьте пароль."
+    },
+    "An account already uses this email. Sign in or reset its password.": {
+      "fr": "Cette adresse est déjà utilisée. Connectez-vous ou réinitialisez le mot de passe.",
+      "ru": "Эта почта уже используется. Войдите или сбросьте пароль."
+    },
+    "Enter a valid email address.": {
+      "fr": "Saisissez une adresse e-mail valide.",
+      "ru": "Введите действительный адрес почты."
+    },
+    "Use a longer password with at least 8 characters.": {
+      "fr": "Utilisez un mot de passe d’au moins 8 caractères.",
+      "ru": "Используйте пароль длиной не менее 8 символов."
+    },
+    "Too many attempts. Please wait a little before trying again.": {
+      "fr": "Trop de tentatives. Patientez avant de réessayer.",
+      "ru": "Слишком много попыток. Подождите и попробуйте снова."
+    },
+    "Allow the Google sign-in popup, then try again.": {
+      "fr": "Autorisez la fenêtre de connexion Google, puis réessayez.",
+      "ru": "Разрешите всплывающее окно Google и повторите попытку."
+    },
+    "Google sign-in was closed. You can try again.": {
+      "fr": "La fenêtre Google a été fermée. Vous pouvez réessayer.",
+      "ru": "Окно входа Google закрыто. Можно попробовать снова."
+    },
+    "Could not reach sign-in. Check your connection and try again.": {
+      "fr": "Connexion inaccessible. Vérifiez le réseau et réessayez.",
+      "ru": "Не удалось подключиться. Проверьте сеть и попробуйте снова."
+    },
+    "This email uses another sign-in method. Sign in with that method to keep the same notebook.": {
+      "fr": "Cette adresse utilise une autre méthode de connexion. Utilisez-la pour conserver le même carnet.",
+      "ru": "Для этой почты используется другой способ входа. Войдите тем же способом, чтобы сохранить тетрадь."
+    },
+    "This address is not enabled for sign-in yet. Please contact the app owner.": {
+      "fr": "La connexion n’est pas encore activée pour cette adresse. Contactez le propriétaire de l’application.",
+      "ru": "Вход с этого адреса ещё не настроен. Обратитесь к владельцу приложения."
+    },
+    "Could not complete sign-in. Please try again.": {
+      "fr": "Impossible de terminer la connexion. Réessayez.",
+      "ru": "Не удалось войти. Попробуйте снова."
+    },
+    "Student": {
+      "fr": "Élève",
+      "ru": "Ученик"
+    },
+    "Opening your notebook…": {
+      "fr": "Ouverture de votre carnet…",
+      "ru": "Открытие тетради…"
+    },
+    "Verify your email to save progress to your account.": {
+      "fr": "Confirmez votre adresse pour enregistrer la progression dans votre compte.",
+      "ru": "Подтвердите почту, чтобы сохранять прогресс в аккаунте."
+    },
+    "Check verification": {
+      "fr": "Vérifier la confirmation",
+      "ru": "Проверить подтверждение"
+    },
+    "If this address has an account, a password reset email is on its way. Check your inbox and spam folder.": {
+      "fr": "Si cette adresse possède un compte, un e-mail de réinitialisation est envoyé. Vérifiez votre boîte de réception et les indésirables.",
+      "ru": "Если для адреса есть аккаунт, письмо для сброса пароля отправлено. Проверьте входящие и спам."
+    },
+    "Verification email sent. Open its link, then return here.": {
+      "fr": "E-mail de confirmation envoyé. Ouvrez le lien, puis revenez ici.",
+      "ru": "Письмо с подтверждением отправлено. Откройте ссылку и вернитесь сюда."
+    },
+    "Verify your email before syncing your personal notebook.": {
+      "fr": "Confirmez votre adresse avant de synchroniser votre carnet personnel.",
+      "ru": "Подтвердите почту перед синхронизацией личной тетради."
+    },
+    "The address is not verified yet. Open the link in your email first.": {
+      "fr": "L’adresse n’est pas encore confirmée. Ouvrez d’abord le lien reçu par e-mail.",
+      "ru": "Почта ещё не подтверждена. Сначала откройте ссылку из письма."
+    },
+    "Verification email sent. Check your inbox and spam folder.": {
+      "fr": "E-mail de confirmation envoyé. Vérifiez votre boîte de réception et les indésirables.",
+      "ru": "Письмо с подтверждением отправлено. Проверьте входящие и спам."
+    },
+    "Close sign in": {
+      "fr": "Fermer la connexion",
+      "ru": "Закрыть окно входа"
+    },
+    "YOUR OWN LITTLE NOTEBOOK": {
+      "fr": "VOTRE PETIT CARNET PERSONNEL",
+      "ru": "ВАША ЛИЧНАЯ ТЕТРАДЬ"
+    },
+    "Check your inbox.": {
+      "fr": "Vérifiez votre boîte de réception.",
+      "ru": "Проверьте почту."
+    },
+    "Your learning account.": {
+      "fr": "Votre compte d’apprentissage.",
+      "ru": "Ваш учебный аккаунт."
+    },
+    "A fresh start, just for you.": {
+      "fr": "Un nouveau départ, rien que pour vous.",
+      "ru": "Новое начало для вас."
+    },
+    "Let’s get you back in.": {
+      "fr": "Retrouvons votre compte.",
+      "ru": "Вернёмся в аккаунт."
+    },
+    "Make your progress yours.": {
+      "fr": "Gardez votre progression avec vous.",
+      "ru": "Сохраняйте свой прогресс."
+    },
+    "Choose Google or ChatGPT for a quick start.": {
+      "fr": "Choisissez Google ou ChatGPT pour commencer rapidement.",
+      "ru": "Выберите Google или ChatGPT для быстрого входа."
+    },
+    "I verified my email": {
+      "fr": "J’ai confirmé mon adresse",
+      "ru": "Я подтвердил(а) почту"
+    },
+    "Resend verification email": {
+      "fr": "Renvoyer l’e-mail de confirmation",
+      "ru": "Отправить подтверждение ещё раз"
+    },
+    "Your signed-in notebook synchronizes across devices.": {
+      "fr": "Votre carnet connecté se synchronise entre vos appareils.",
+      "ru": "Личная тетрадь синхронизируется между устройствами."
+    },
+    "Sign out / switch account": {
+      "fr": "Se déconnecter / changer de compte",
+      "ru": "Выйти / сменить аккаунт"
+    },
+    "Back to practice": {
+      "fr": "Retour aux exercices",
+      "ru": "Назад к практике"
+    },
+    "Continue with Google": {
+      "fr": "Continuer avec Google",
+      "ru": "Продолжить с Google"
+    },
+    "Continue with ChatGPT": {
+      "fr": "Continuer avec ChatGPT",
+      "ru": "Продолжить с ChatGPT"
+    },
+    "Use email instead": {
+      "fr": "Utiliser une adresse e-mail",
+      "ru": "Войти по почте"
+    },
+    "Sign-in could not load. Check your connection and reload the page.": {
+      "fr": "Impossible de charger la connexion. Vérifiez le réseau et actualisez la page.",
+      "ru": "Не удалось загрузить вход. Проверьте сеть и обновите страницу."
+    },
+    "Google and email sign-in are not configured yet.": {
+      "fr": "Les connexions Google et e-mail ne sont pas encore configurées.",
+      "ru": "Вход через Google и почту ещё не настроен."
+    },
+    "Your name": {
+      "fr": "Votre nom",
+      "ru": "Ваше имя"
+    },
+    "Email address": {
+      "fr": "Adresse e-mail",
+      "ru": "Электронная почта"
+    },
+    "Password": {
+      "fr": "Mot de passe",
+      "ru": "Пароль"
+    },
+    "At least 8 characters. Use a unique password.": {
+      "fr": "Au moins 8 caractères. Utilisez un mot de passe unique.",
+      "ru": "Не менее 8 символов. Используйте уникальный пароль."
+    },
+    "Create my account": {
+      "fr": "Créer mon compte",
+      "ru": "Создать аккаунт"
+    },
+    "Send reset email": {
+      "fr": "Envoyer l’e-mail de réinitialisation",
+      "ru": "Отправить письмо для сброса"
+    },
+    "New here? Create an account": {
+      "fr": "Première visite ? Créer un compte",
+      "ru": "Впервые здесь? Создать аккаунт"
+    },
+    "Forgot password?": {
+      "fr": "Mot de passe oublié ?",
+      "ru": "Забыли пароль?"
+    },
+    "Already have an account? Sign in": {
+      "fr": "Déjà un compte ? Se connecter",
+      "ru": "Уже есть аккаунт? Войти"
+    },
+    "Your progress stays with your account. Use the same sign-in method on each device.": {
+      "fr": "Votre progression suit votre compte. Utilisez la même méthode de connexion sur chaque appareil.",
+      "ru": "Прогресс хранится в аккаунте. Используйте одинаковый способ входа на всех устройствах."
+    },
+    "Stroke": {
+      "fr": "Trait",
+      "ru": "Черта"
+    },
+    "Start at the white dot and follow the highlighted stroke.": {
+      "fr": "Commencez au point blanc et suivez le trait en couleur.",
+      "ru": "Начните с белой точки и ведите по выделенной черте."
+    },
+    "Previous": {
+      "fr": "Précédent",
+      "ru": "Назад"
+    },
+    "Next": {
+      "fr": "Suivant",
+      "ru": "Далее"
+    },
+    "Stroke guide unavailable.": {
+      "fr": "Guide des traits indisponible.",
+      "ru": "Схема черт недоступна."
+    },
+    "Retry": {
+      "fr": "Réessayer",
+      "ru": "Повторить"
+    },
+    "You can still write below.": {
+      "fr": "Vous pouvez toujours écrire ci-dessous.",
+      "ru": "Вы можете писать ниже."
+    },
+    "Loading stroke guide…": {
+      "fr": "Chargement des traits…",
+      "ru": "Загрузка схемы черт…"
+    },
+    "Model": {
+      "fr": "Modèle",
+      "ru": "Образец"
+    },
+    "Trace 1": {
+      "fr": "Tracé 1",
+      "ru": "Обводка 1"
+    },
+    "Trace 2": {
+      "fr": "Tracé 2",
+      "ru": "Обводка 2"
+    },
+    "Copy 1": {
+      "fr": "Copie 1",
+      "ru": "Копия 1"
+    },
+    "Copy 2": {
+      "fr": "Copie 2",
+      "ru": "Копия 2"
+    },
+    "Copy 3": {
+      "fr": "Copie 3",
+      "ru": "Копия 3"
+    },
+    "Could not restore this worksheet. You can start a new one.": {
+      "fr": "Impossible de restaurer cette fiche. Vous pouvez en commencer une nouvelle.",
+      "ru": "Не удалось восстановить прописи. Можно начать заново."
+    },
+    "Could not save the worksheet on this device.": {
+      "fr": "Impossible d’enregistrer la fiche sur cet appareil.",
+      "ru": "Не удалось сохранить прописи на устройстве."
+    },
+    "Notebook practice saved. Try Recall for an independent memory review.": {
+      "fr": "Exercice du cahier enregistré. Essayez le rappel pour réviser de façon autonome.",
+      "ru": "Практика в прописях сохранена. Проверьте себя в режиме «По памяти»."
+    },
+    "Could not save practice. Keep this worksheet open and try again.": {
+      "fr": "Impossible d’enregistrer l’exercice. Gardez la fiche ouverte et réessayez.",
+      "ru": "Не удалось сохранить практику. Оставьте прописи открытыми и повторите попытку."
+    },
+    "Writing notebook": {
+      "fr": "Cahier d’écriture",
+      "ru": "Прописи"
+    },
+    "YOUR PRACTICE NOTEBOOK": {
+      "fr": "VOTRE CAHIER D’EXERCICES",
+      "ru": "ВАШИ ПРОПИСИ"
+    },
+    "Show guides & compare": {
+      "fr": "Afficher les modèles et comparer",
+      "ru": "Показать образцы и сравнить"
+    },
+    "Hide guides": {
+      "fr": "Masquer les modèles",
+      "ru": "Скрыть образцы"
+    },
+    "Hear word": {
+      "fr": "Écouter le mot",
+      "ru": "Прослушать слово"
+    },
+    "Hear example": {
+      "fr": "Écouter l’exemple",
+      "ru": "Прослушать пример"
+    },
+    "Follow the steps, trace twice, then write in the empty boxes. Your worksheet stays on this device; saved practice syncs with your account.": {
+      "fr": "Suivez les étapes, tracez deux fois, puis écrivez dans les cases vides. La fiche reste sur cet appareil ; les exercices enregistrés sont synchronisés avec votre compte.",
+      "ru": "Следуйте шагам, обведите дважды, затем пишите в пустых клетках. Прописи хранятся на устройстве; сохранённая практика синхронизируется с аккаунтом."
+    },
+    "Loading your worksheet…": {
+      "fr": "Chargement de votre fiche…",
+      "ru": "Загрузка прописей…"
+    },
+    "Write the whole word": {
+      "fr": "Écrivez le mot entier",
+      "ru": "Напишите слово целиком"
+    },
+    "Write the characters together from memory.": {
+      "fr": "Écrivez les caractères ensemble de mémoire.",
+      "ru": "Напишите иероглифы вместе по памяти."
+    },
+    "Notebook work counts as assisted practice, even with guides hidden. Use Recall for a separate memory review. Free writing is self-assessed.": {
+      "fr": "Le cahier compte comme exercice guidé, même sans modèles. Utilisez le rappel pour une révision autonome. L’écriture libre s’évalue soi-même.",
+      "ru": "Прописи считаются практикой с помощью, даже если образцы скрыты. Для проверки памяти используйте отдельный режим. Свободное письмо оценивается самостоятельно."
+    },
+    "Saving…": {
+      "fr": "Enregistrement…",
+      "ru": "Сохранение…"
+    },
+    "Save notebook practice": {
+      "fr": "Enregistrer l’exercice du cahier",
+      "ru": "Сохранить практику в прописях"
+    },
+    "Try Recall": {
+      "fr": "Essayer le rappel",
+      "ru": "Попробовать по памяти"
+    },
+    "Write in at least one empty copy box for each character to save.": {
+      "fr": "Écrivez dans au moins une case vide par caractère pour enregistrer.",
+      "ru": "Для сохранения заполните хотя бы одну пустую клетку для каждого иероглифа."
+    },
+    "Character data unavailable. Reconnect and retry.": {
+      "fr": "Données du caractère indisponibles. Reconnectez-vous et réessayez.",
+      "ru": "Данные иероглифа недоступны. Подключитесь к сети и повторите попытку."
+    },
+    "Write a character here using a pencil, finger or mouse": {
+      "fr": "Écrivez ici au stylet, au doigt ou à la souris",
+      "ru": "Напишите иероглиф стилусом, пальцем или мышью"
+    },
+    "Pencil only is on. Turn it off for finger or mouse input.": {
+      "fr": "Le mode stylet est activé. Désactivez-le pour utiliser le doigt ou la souris.",
+      "ru": "Включён режим «Только стилус». Отключите его для пальца или мыши."
+    },
+    "Watch": {
+      "fr": "Observer",
+      "ru": "Смотреть"
+    },
+    "Trace": {
+      "fr": "Tracer",
+      "ru": "Обводить"
+    },
+    "Copy": {
+      "fr": "Copier",
+      "ru": "Копировать"
+    },
+    "Recall": {
+      "fr": "De mémoire",
+      "ru": "По памяти"
+    },
+    "Recognition": {
+      "fr": "Reconnaissance",
+      "ru": "Узнавание"
+    },
+    "Listening": {
+      "fr": "Écoute",
+      "ru": "Аудирование"
+    },
+    "Writing": {
+      "fr": "Écriture",
+      "ru": "Письмо"
+    },
+    "Everyday extras": {
+      "fr": "Compléments du quotidien",
+      "ru": "Повседневные дополнения"
+    },
+    "Language": {
+      "fr": "Langue",
+      "ru": "Язык"
+    },
+    "Print notebook PDF": {
+      "fr": "Télécharger le cahier PDF",
+      "ru": "Скачать прописи PDF"
+    },
+    "Printable notebook": {
+      "fr": "Cahier à imprimer",
+      "ru": "Прописи для печати"
+    },
+    "Choose words or a whole lesson. A4 pages include stroke order, trace models and empty practice grids.": {
+      "fr": "Choisissez des mots ou une leçon entière. Les pages A4 comprennent l’ordre des traits, des modèles et des grilles vides.",
+      "ru": "Выберите слова или целый урок. Страницы A4 содержат порядок черт, образцы для обводки и пустые клетки."
+    },
+    "Select all shown": {
+      "fr": "Tout sélectionner",
+      "ru": "Выбрать все показанные"
+    },
+    "Clear selection": {
+      "fr": "Effacer la sélection",
+      "ru": "Снять выделение"
+    },
+    "Download PDF": {
+      "fr": "Télécharger le PDF",
+      "ru": "Скачать PDF"
+    },
+    "Preparing PDF…": {
+      "fr": "Préparation du PDF…",
+      "ru": "Подготовка PDF…"
+    },
+    "Close PDF export": {
+      "fr": "Fermer l’export PDF",
+      "ru": "Закрыть экспорт PDF"
+    },
+    "selected": {
+      "fr": " sélectionnés",
+      "ru": "выбрано"
+    },
+    "Could not create the PDF. Please try again.": {
+      "fr": "Impossible de créer le PDF. Réessayez.",
+      "ru": "Не удалось создать PDF. Попробуйте снова."
+    },
+    "Stroke order": {
+      "fr": "Ordre des traits",
+      "ru": "Порядок черт"
+    },
+    "Name": {
+      "fr": "Nom",
+      "ru": "Имя"
+    },
+    "Date": {
+      "fr": "Date",
+      "ru": "Дата"
+    },
+    "Page": {
+      "fr": "Page",
+      "ru": "Страница"
+    },
+    "Writing practice": {
+      "fr": "Exercices d’écriture",
+      "ru": "Практика письма"
+    },
+    "First conversations": {
+      "fr": "Premières conversations",
+      "ru": "Первые разговоры"
+    },
+    "Meet someone. Make a connection.": {
+      "fr": "Rencontrez quelqu’un. Créez un lien.",
+      "ru": "Познакомьтесь. Найдите общий язык."
+    },
+    "Your everyday toolkit": {
+      "fr": "Vos outils du quotidien",
+      "ru": "Слова на каждый день"
+    },
+    "Small words that open big conversations.": {
+      "fr": "De petits mots pour de grandes conversations.",
+      "ru": "Маленькие слова для больших разговоров."
+    },
+    "At the table": {
+      "fr": "À table",
+      "ru": "За столом"
+    },
+    "Order what you actually want.": {
+      "fr": "Commandez ce qui vous fait envie.",
+      "ru": "Закажите то, что хотите."
+    },
+    "Time & plans": {
+      "fr": "Temps et projets",
+      "ru": "Время и планы"
+    },
+    "From today to next week.": {
+      "fr": "D’aujourd’hui à la semaine prochaine.",
+      "ru": "От сегодня до следующей недели."
+    },
+    "Family & friends": {
+      "fr": "Famille et amis",
+      "ru": "Семья и друзья"
+    },
+    "Numbers & money": {
+      "fr": "Nombres et argent",
+      "ru": "Числа и деньги"
+    },
+    "School & Chinese": {
+      "fr": "École et chinois",
+      "ru": "Школа и китайский"
+    },
+    "Places & directions": {
+      "fr": "Lieux et directions",
+      "ru": "Места и направления"
+    },
+    "Coming & going": {
+      "fr": "Allées et venues",
+      "ru": "Приход и уход"
+    },
+    "Home & belongings": {
+      "fr": "Maison et objets",
+      "ru": "Дом и вещи"
+    },
+    "How things are": {
+      "fr": "Comment vont les choses",
+      "ru": "Какие бывают вещи"
+    },
+    "Ask a question": {
+      "fr": "Poser une question",
+      "ru": "Задайте вопрос"
+    },
+    "Weather & health": {
+      "fr": "Météo et santé",
+      "ru": "Погода и здоровье"
+    },
+    "Little words, big meaning": {
+      "fr": "Petits mots, grand sens",
+      "ru": "Маленькие слова, большой смысл"
+    },
+    "{0} of {1}": {
+      "fr": "{0} sur {1}",
+      "ru": "{0} из {1}"
+    },
+    "Character {0}": {
+      "fr": "Caractère {0}",
+      "ru": "Иероглиф {0}"
+    },
+    "Stroke {0} of {1}": {
+      "fr": "Trait {0} sur {1}",
+      "ru": "Черта {0} из {1}"
+    },
+    "YOUR REVIEW · {0} OF {1}": {
+      "fr": "VOTRE RÉVISION · {0} SUR {1}",
+      "ru": "ПОВТОРЕНИЕ · {0} ИЗ {1}"
+    },
+    "Talk about the people in your life.": {
+      "fr": "Parlez des personnes de votre entourage.",
+      "ru": "Расскажите о близких людях."
+    },
+    "Count, compare and ask the price.": {
+      "fr": "Comptez, comparez et demandez le prix.",
+      "ru": "Считайте, сравнивайте и спрашивайте цену."
+    },
+    "Words for learning together.": {
+      "fr": "Des mots pour apprendre ensemble.",
+      "ru": "Слова для совместной учёбы."
+    },
+    "Find your way and say where things are.": {
+      "fr": "Trouvez votre chemin et indiquez où sont les choses.",
+      "ru": "Найдите дорогу и объясните, где что находится."
+    },
+    "Get around town and travel further.": {
+      "fr": "Déplacez-vous en ville et voyagez plus loin.",
+      "ru": "Передвигайтесь по городу и путешествуйте дальше."
+    },
+    "Describe what you see and how you feel.": {
+      "fr": "Décrivez ce que vous voyez et ressentez.",
+      "ru": "Опишите, что видите и чувствуете."
+    },
+    "Who, what, where and how.": {
+      "fr": "Qui, quoi, où et comment.",
+      "ru": "Кто, что, где и как."
+    },
+    "Talk about the weather and how you feel.": {
+      "fr": "Parlez du temps et de votre état de santé.",
+      "ru": "Говорите о погоде и самочувствии."
+    },
+    "Use particles and connect your thoughts.": {
+      "fr": "Utilisez les particules pour relier vos idées.",
+      "ru": "Используйте частицы и связывайте мысли."
+    },
+    "We need to verify {0} before syncing. You can still practice as a guest.": {
+      "fr": "Confirmez {0} avant la synchronisation. Vous pouvez continuer comme invité.",
+      "ru": "Перед синхронизацией подтвердите {0}. Пока можно заниматься как гость."
+    },
+    "Signed in as {0}. Your progress belongs only to this account.": {
+      "fr": "Connecté en tant que {0}. Votre progression appartient uniquement à ce compte.",
+      "ru": "Вы вошли как {0}. Прогресс принадлежит только этому аккаунту."
+    },
+    "Undo {0} {1}": {
+      "fr": "Annuler {0} {1}",
+      "ru": "Отменить {0} {1}"
+    },
+    "Clear {0} {1}": {
+      "fr": "Effacer {0} {1}",
+      "ru": "Очистить {0} {1}"
+    },
+    "Character {0} practice": {
+      "fr": "Exercice du caractère {0}",
+      "ru": "Практика иероглифа {0}"
+    },
+    "Stroke order for {0}": {
+      "fr": "Ordre des traits de {0}",
+      "ru": "Порядок черт: {0}"
+    },
+    "{0} stroke {1}": {
+      "fr": "{0} trait {1}",
+      "ru": "{0} черта {1}"
+    },
+    "Previous stroke for {0}": {
+      "fr": "Trait précédent de {0}",
+      "ru": "Предыдущая черта: {0}"
+    },
+    "Next stroke for {0}": {
+      "fr": "Trait suivant de {0}",
+      "ru": "Следующая черта: {0}"
+    },
+    "Clear whole word character {0}": {
+      "fr": "Effacer le caractère {0} du mot",
+      "ru": "Очистить иероглиф {0} в слове"
+    },
+    "of": {
+      "fr": "sur",
+      "ru": "из"
+    },
+    "new": {
+      "fr": "nouveaux",
+      "ru": "новых"
+    },
+    "practice": {
+      "fr": "exercice",
+      "ru": "практика"
+    },
+    "days": {
+      "fr": "jours",
+      "ru": "дней"
+    },
+    "explored": {
+      "fr": "découverts",
+      "ru": "изучено"
+    },
+    "reviews": {
+      "fr": "révisions",
+      "ru": "повторений"
+    },
+    "min": {
+      "fr": "min",
+      "ru": "мин"
+    },
+    "word": {
+      "fr": "mot",
+      "ru": "слово"
+    },
+    "words": {
+      "fr": "mots",
+      "ru": "слов"
+    },
+    "Could not load the pronunciation. Reconnect and try again.": {
+      "fr": "Impossible de charger la prononciation. Reconnectez-vous et réessayez.",
+      "ru": "Не удалось загрузить произношение. Подключитесь к сети и попробуйте снова."
+    },
+    "Tap the speaker again to play the pronunciation.": {
+      "fr": "Touchez à nouveau le haut-parleur pour écouter la prononciation.",
+      "ru": "Нажмите на динамик ещё раз для воспроизведения."
+    }
+  },
+  "vocabulary": {
+    "hello": {
+      "fr": {
+        "english": "bonjour",
+        "translation": "Bonjour, ravi de vous rencontrer."
+      },
+      "ru": {
+        "english": "привет",
+        "translation": "Здравствуйте, рад познакомиться."
+      }
+    },
+    "me": {
+      "fr": {
+        "english": "je / moi",
+        "translation": "Je suis étudiant."
+      },
+      "ru": {
+        "english": "я / меня",
+        "translation": "Я студент."
+      }
+    },
+    "you": {
+      "fr": {
+        "english": "tu / vous",
+        "translation": "Comment vous appelez-vous ?"
+      },
+      "ru": {
+        "english": "ты / вы",
+        "translation": "Как вас зовут?"
+      }
+    },
+    "teacher": {
+      "fr": {
+        "english": "professeur",
+        "translation": "Bonjour, professeur."
+      },
+      "ru": {
+        "english": "учитель",
+        "translation": "Здравствуйте, учитель."
+      }
+    },
+    "student": {
+      "fr": {
+        "english": "étudiant / élève",
+        "translation": "Je suis étudiant."
+      },
+      "ru": {
+        "english": "студент / ученик",
+        "translation": "Я студент."
+      }
+    },
+    "thanks": {
+      "fr": {
+        "english": "merci",
+        "translation": "Merci."
+      },
+      "ru": {
+        "english": "спасибо",
+        "translation": "Спасибо."
+      }
+    },
+    "goodbye": {
+      "fr": {
+        "english": "au revoir",
+        "translation": "Au revoir, professeur."
+      },
+      "ru": {
+        "english": "до свидания",
+        "translation": "До свидания, учитель."
+      }
+    },
+    "china": {
+      "fr": {
+        "english": "Chine",
+        "translation": "Je suis en Chine."
+      },
+      "ru": {
+        "english": "Китай",
+        "translation": "Я в Китае."
+      }
+    },
+    "yes": {
+      "fr": {
+        "english": "être / oui",
+        "translation": "Je suis étudiant."
+      },
+      "ru": {
+        "english": "быть / да",
+        "translation": "Я студент."
+      }
+    },
+    "no": {
+      "fr": {
+        "english": "ne… pas / non",
+        "translation": "Je ne suis pas professeur."
+      },
+      "ru": {
+        "english": "не / нет",
+        "translation": "Я не учитель."
+      }
+    },
+    "have": {
+      "fr": {
+        "english": "avoir / il y a",
+        "translation": "Avez-vous le temps ?"
+      },
+      "ru": {
+        "english": "иметь / есть",
+        "translation": "У вас есть время?"
+      }
+    },
+    "want": {
+      "fr": {
+        "english": "vouloir",
+        "translation": "Je veux celui-ci."
+      },
+      "ru": {
+        "english": "хотеть",
+        "translation": "Я хочу вот это."
+      }
+    },
+    "this": {
+      "fr": {
+        "english": "celui-ci / ceci",
+        "translation": "Combien ça coûte ?"
+      },
+      "ru": {
+        "english": "этот / это",
+        "translation": "Сколько это стоит?"
+      }
+    },
+    "howmuch": {
+      "fr": {
+        "english": "combien",
+        "translation": "Combien ça coûte ?"
+      },
+      "ru": {
+        "english": "сколько",
+        "translation": "Сколько это стоит?"
+      }
+    },
+    "can": {
+      "fr": {
+        "english": "pouvoir / avoir la permission",
+        "translation": "Est-ce possible ?"
+      },
+      "ru": {
+        "english": "можно / мочь",
+        "translation": "Так можно?"
+      }
+    },
+    "notbad": {
+      "fr": {
+        "english": "pas mal / plutôt bien",
+        "translation": "Celui-ci est plutôt bien."
+      },
+      "ru": {
+        "english": "неплохо / довольно хорошо",
+        "translation": "Это довольно хорошо."
+      }
+    },
+    "water": {
+      "fr": {
+        "english": "eau",
+        "translation": "Je voudrais de l’eau."
+      },
+      "ru": {
+        "english": "вода",
+        "translation": "Я хотел бы воды."
+      }
+    },
+    "tea": {
+      "fr": {
+        "english": "thé",
+        "translation": "Je voudrais une tasse de thé."
+      },
+      "ru": {
+        "english": "чай",
+        "translation": "Я хотел бы чашку чая."
+      }
+    },
+    "eat": {
+      "fr": {
+        "english": "manger",
+        "translation": "Que mangez-vous ?"
+      },
+      "ru": {
+        "english": "есть / кушать",
+        "translation": "Что вы едите?"
+      }
+    },
+    "sweet": {
+      "fr": {
+        "english": "sucré",
+        "translation": "Est-ce sucré ?"
+      },
+      "ru": {
+        "english": "сладкий",
+        "translation": "Это сладкое?"
+      }
+    },
+    "little": {
+      "fr": {
+        "english": "un peu",
+        "translation": "J’en voudrais un peu."
+      },
+      "ru": {
+        "english": "немного",
+        "translation": "Я хотел бы немного."
+      }
+    },
+    "vegetarian": {
+      "fr": {
+        "english": "nourriture végétarienne",
+        "translation": "Avez-vous des plats végétariens ?"
+      },
+      "ru": {
+        "english": "вегетарианская еда",
+        "translation": "У вас есть вегетарианские блюда?"
+      }
+    },
+    "meat": {
+      "fr": {
+        "english": "viande",
+        "translation": "Je ne mange pas de viande."
+      },
+      "ru": {
+        "english": "мясо",
+        "translation": "Я не ем мясо."
+      }
+    },
+    "delicious": {
+      "fr": {
+        "english": "délicieux",
+        "translation": "C’est délicieux."
+      },
+      "ru": {
+        "english": "вкусный",
+        "translation": "Это вкусно."
+      }
+    },
+    "today": {
+      "fr": {
+        "english": "aujourd’hui",
+        "translation": "J’ai cours aujourd’hui."
+      },
+      "ru": {
+        "english": "сегодня",
+        "translation": "У меня сегодня занятия."
+      }
+    },
+    "tomorrow": {
+      "fr": {
+        "english": "demain",
+        "translation": "À demain."
+      },
+      "ru": {
+        "english": "завтра",
+        "translation": "До завтра."
+      }
+    },
+    "yesterday": {
+      "fr": {
+        "english": "hier",
+        "translation": "J’avais cours hier."
+      },
+      "ru": {
+        "english": "вчера",
+        "translation": "У меня вчера были занятия."
+      }
+    },
+    "now": {
+      "fr": {
+        "english": "maintenant",
+        "translation": "Est-ce possible maintenant ?"
+      },
+      "ru": {
+        "english": "сейчас",
+        "translation": "Сейчас можно?"
+      }
+    },
+    "later": {
+      "fr": {
+        "english": "plus tard / ensuite",
+        "translation": "Je reviendrai plus tard."
+      },
+      "ru": {
+        "english": "позже / потом",
+        "translation": "Я вернусь позже."
+      }
+    },
+    "week": {
+      "fr": {
+        "english": "la semaine prochaine",
+        "translation": "À la semaine prochaine."
+      },
+      "ru": {
+        "english": "следующая неделя",
+        "translation": "До следующей недели."
+      }
+    },
+    "time": {
+      "fr": {
+        "english": "temps",
+        "translation": "Avez-vous le temps ?"
+      },
+      "ru": {
+        "english": "время",
+        "translation": "У вас есть время?"
+      }
+    },
+    "start": {
+      "fr": {
+        "english": "commencer",
+        "translation": "Commençons."
+      },
+      "ru": {
+        "english": "начинать",
+        "translation": "Давайте начнём."
+      }
+    },
+    "hsk1-001": {
+      "fr": {
+        "english": "aimer",
+        "translation": "J’aime ma famille."
+      },
+      "ru": {
+        "english": "любить",
+        "translation": "Я люблю свою семью."
+      }
+    },
+    "hsk1-002": {
+      "fr": {
+        "english": "huit",
+        "translation": "J’ai huit livres."
+      },
+      "ru": {
+        "english": "восемь",
+        "translation": "У меня восемь книг."
+      }
+    },
+    "hsk1-003": {
+      "fr": {
+        "english": "papa / père",
+        "translation": "Mon père est médecin."
+      },
+      "ru": {
+        "english": "папа / отец",
+        "translation": "Мой папа врач."
+      }
+    },
+    "hsk1-004": {
+      "fr": {
+        "english": "particule de suggestion",
+        "translation": "Allons manger."
+      },
+      "ru": {
+        "english": "частица предложения",
+        "translation": "Пойдём поедим."
+      }
+    },
+    "hsk1-005": {
+      "fr": {
+        "english": "journée",
+        "translation": "J’ai cours dans la journée."
+      },
+      "ru": {
+        "english": "дневное время",
+        "translation": "Днём у меня занятия."
+      }
+    },
+    "hsk1-006": {
+      "fr": {
+        "english": "cent",
+        "translation": "Ce vêtement coûte cent yuans."
+      },
+      "ru": {
+        "english": "сто",
+        "translation": "Эта одежда стоит сто юаней."
+      }
+    },
+    "hsk1-007": {
+      "fr": {
+        "english": "demi / moitié",
+        "translation": "Il est trois heures et demie."
+      },
+      "ru": {
+        "english": "половина",
+        "translation": "Сейчас половина четвёртого."
+      }
+    },
+    "hsk1-008": {
+      "fr": {
+        "english": "petit pain farci à la vapeur",
+        "translation": "Je mange des petits pains farcis au petit-déjeuner."
+      },
+      "ru": {
+        "english": "баоцзы / паровая булочка с начинкой",
+        "translation": "На завтрак я ем баоцзы."
+      }
+    },
+    "hsk1-009": {
+      "fr": {
+        "english": "tasse / verre",
+        "translation": "C’est ma tasse."
+      },
+      "ru": {
+        "english": "чашка / стакан",
+        "translation": "Это моя чашка."
+      }
+    },
+    "hsk1-010": {
+      "fr": {
+        "english": "classificateur des livres",
+        "translation": "J’ai acheté un livre."
+      },
+      "ru": {
+        "english": "счётное слово для книг",
+        "translation": "Я купил книгу."
+      }
+    },
+    "hsk1-011": {
+      "fr": {
+        "english": "côté / bord",
+        "translation": "Asseyez-vous de mon côté, s’il vous plaît."
+      },
+      "ru": {
+        "english": "сторона / край",
+        "translation": "Пожалуйста, садитесь рядом со мной."
+      }
+    },
+    "hsk1-012": {
+      "fr": {
+        "english": "maladie / être malade",
+        "translation": "Êtes-vous guéri ?"
+      },
+      "ru": {
+        "english": "болезнь / болеть",
+        "translation": "Вы уже выздоровели?"
+      }
+    },
+    "hsk1-014": {
+      "fr": {
+        "english": "de rien",
+        "translation": "De rien ; voici votre livre."
+      },
+      "ru": {
+        "english": "не за что",
+        "translation": "Не за что; вот ваша книга."
+      }
+    },
+    "hsk1-015": {
+      "fr": {
+        "english": "ne pas / ne pas vouloir",
+        "translation": "Ne parlez pas ici."
+      },
+      "ru": {
+        "english": "не надо / не хотеть",
+        "translation": "Не разговаривайте здесь."
+      }
+    },
+    "hsk1-016": {
+      "fr": {
+        "english": "plat / légumes",
+        "translation": "Ce plat est délicieux."
+      },
+      "ru": {
+        "english": "блюдо / овощи",
+        "translation": "Это блюдо вкусное."
+      }
+    },
+    "hsk1-018": {
+      "fr": {
+        "english": "chanter",
+        "translation": "Savez-vous chanter cette chanson ?"
+      },
+      "ru": {
+        "english": "петь",
+        "translation": "Вы умеете петь эту песню?"
+      }
+    },
+    "hsk1-019": {
+      "fr": {
+        "english": "supermarché",
+        "translation": "Je vais au supermarché acheter des fruits."
+      },
+      "ru": {
+        "english": "супермаркет",
+        "translation": "Я иду в супермаркет за фруктами."
+      }
+    },
+    "hsk1-020": {
+      "fr": {
+        "english": "véhicule / voiture",
+        "translation": "Ma voiture est dehors."
+      },
+      "ru": {
+        "english": "транспорт / машина",
+        "translation": "Моя машина снаружи."
+      }
+    },
+    "hsk1-022": {
+      "fr": {
+        "english": "taxi",
+        "translation": "Nous allons à l’école en taxi."
+      },
+      "ru": {
+        "english": "такси",
+        "translation": "Мы едем в школу на такси."
+      }
+    },
+    "hsk1-023": {
+      "fr": {
+        "english": "porter / mettre un vêtement",
+        "translation": "Il fait froid aujourd’hui ; couvrez-vous davantage."
+      },
+      "ru": {
+        "english": "носить / надевать",
+        "translation": "Сегодня холодно; оденьтесь потеплее."
+      }
+    },
+    "hsk1-024": {
+      "fr": {
+        "english": "téléphoner",
+        "translation": "Je téléphone à ma mère."
+      },
+      "ru": {
+        "english": "звонить по телефону",
+        "translation": "Я звоню маме."
+      }
+    },
+    "hsk1-025": {
+      "fr": {
+        "english": "grand",
+        "translation": "Cette chambre est grande."
+      },
+      "ru": {
+        "english": "большой",
+        "translation": "Эта комната большая."
+      }
+    },
+    "hsk1-026": {
+      "fr": {
+        "english": "tout le monde",
+        "translation": "Bonjour à tous, je suis un nouveau camarade de classe."
+      },
+      "ru": {
+        "english": "все",
+        "translation": "Всем привет, я новый одноклассник."
+      }
+    },
+    "hsk1-027": {
+      "fr": {
+        "english": "université",
+        "translation": "J’étudie le chinois à l’université."
+      },
+      "ru": {
+        "english": "университет",
+        "translation": "Я изучаю китайский в университете."
+      }
+    },
+    "hsk1-028": {
+      "fr": {
+        "english": "étudiant à l’université",
+        "translation": "Mon grand frère est étudiant."
+      },
+      "ru": {
+        "english": "студент университета",
+        "translation": "Мой старший брат студент."
+      }
+    },
+    "hsk1-029": {
+      "fr": {
+        "english": "arriver / atteindre",
+        "translation": "Je suis arrivé à l’école."
+      },
+      "ru": {
+        "english": "прибывать / достигать",
+        "translation": "Я пришёл в школу."
+      }
+    },
+    "hsk1-030": {
+      "fr": {
+        "english": "particule de possession",
+        "translation": "C’est mon téléphone."
+      },
+      "ru": {
+        "english": "притяжательная частица",
+        "translation": "Это мой телефон."
+      }
+    },
+    "hsk1-031": {
+      "fr": {
+        "english": "préfixe ordinal",
+        "translation": "C’est mon premier livre de chinois."
+      },
+      "ru": {
+        "english": "показатель порядкового числительного",
+        "translation": "Это моя первая книга по китайскому."
+      }
+    },
+    "hsk1-032": {
+      "fr": {
+        "english": "petit frère",
+        "translation": "Mon petit frère a huit ans cette année."
+      },
+      "ru": {
+        "english": "младший брат",
+        "translation": "Моему младшему брату в этом году восемь лет."
+      }
+    },
+    "hsk1-033": {
+      "fr": {
+        "english": "heure (sur le cadran)",
+        "translation": "Nous commençons le cours à huit heures."
+      },
+      "ru": {
+        "english": "час (время суток)",
+        "translation": "Мы начинаем занятия в восемь часов."
+      }
+    },
+    "hsk1-034": {
+      "fr": {
+        "english": "magasin",
+        "translation": "Les articles de ce magasin sont bon marché."
+      },
+      "ru": {
+        "english": "магазин",
+        "translation": "Вещи в этом магазине недорогие."
+      }
+    },
+    "hsk1-035": {
+      "fr": {
+        "english": "téléphone / appel",
+        "translation": "Quel est votre numéro de téléphone ?"
+      },
+      "ru": {
+        "english": "телефон / звонок",
+        "translation": "Какой у вас номер телефона?"
+      }
+    },
+    "hsk1-036": {
+      "fr": {
+        "english": "ordinateur",
+        "translation": "J’utilise un ordinateur pour étudier."
+      },
+      "ru": {
+        "english": "компьютер",
+        "translation": "Я учусь с помощью компьютера."
+      }
+    },
+    "hsk1-037": {
+      "fr": {
+        "english": "télévision",
+        "translation": "Maman regarde la télévision."
+      },
+      "ru": {
+        "english": "телевизор",
+        "translation": "Мама смотрит телевизор."
+      }
+    },
+    "hsk1-038": {
+      "fr": {
+        "english": "film",
+        "translation": "Ce film est très bien."
+      },
+      "ru": {
+        "english": "фильм",
+        "translation": "Этот фильм очень хороший."
+      }
+    },
+    "hsk1-039": {
+      "fr": {
+        "english": "cinéma",
+        "translation": "Le cinéma est derrière l’école."
+      },
+      "ru": {
+        "english": "кинотеатр",
+        "translation": "Кинотеатр за школой."
+      }
+    },
+    "hsk1-040": {
+      "fr": {
+        "english": "chose / objet",
+        "translation": "À qui sont ces affaires ?"
+      },
+      "ru": {
+        "english": "вещь / вещи",
+        "translation": "Чьи это вещи?"
+      }
+    },
+    "hsk1-041": {
+      "fr": {
+        "english": "tous / les deux",
+        "translation": "Nous sommes tous étudiants."
+      },
+      "ru": {
+        "english": "все / оба",
+        "translation": "Мы все студенты."
+      }
+    },
+    "hsk1-042": {
+      "fr": {
+        "english": "lire / lire à voix haute",
+        "translation": "Lisez ce caractère, s’il vous plaît."
+      },
+      "ru": {
+        "english": "читать / читать вслух",
+        "translation": "Пожалуйста, прочитайте этот иероглиф."
+      }
+    },
+    "hsk1-043": {
+      "fr": {
+        "english": "lire / étudier",
+        "translation": "J’aime lire à la maison."
+      },
+      "ru": {
+        "english": "читать / учиться",
+        "translation": "Я люблю читать дома."
+      }
+    },
+    "hsk1-044": {
+      "fr": {
+        "english": "correct / juste",
+        "translation": "Ce que vous avez dit est juste."
+      },
+      "ru": {
+        "english": "правильно / верный",
+        "translation": "Вы сказали правильно."
+      }
+    },
+    "hsk1-045": {
+      "fr": {
+        "english": "pardon / désolé",
+        "translation": "Pardon, je suis en retard."
+      },
+      "ru": {
+        "english": "извините",
+        "translation": "Извините, я опоздал."
+      }
+    },
+    "hsk1-046": {
+      "fr": {
+        "english": "beaucoup",
+        "translation": "Il y a beaucoup de monde ici."
+      },
+      "ru": {
+        "english": "много",
+        "translation": "Здесь много людей."
+      }
+    },
+    "hsk1-048": {
+      "fr": {
+        "english": "fils",
+        "translation": "Son fils va à l’école."
+      },
+      "ru": {
+        "english": "сын",
+        "translation": "Её сын ходит в школу."
+      }
+    },
+    "hsk1-049": {
+      "fr": {
+        "english": "deux",
+        "translation": "Aujourd’hui, c’est mardi."
+      },
+      "ru": {
+        "english": "два",
+        "translation": "Сегодня вторник."
+      }
+    },
+    "hsk1-050": {
+      "fr": {
+        "english": "repas / riz cuit",
+        "translation": "Le repas est prêt."
+      },
+      "ru": {
+        "english": "еда / варёный рис",
+        "translation": "Еда готова."
+      }
+    },
+    "hsk1-051": {
+      "fr": {
+        "english": "restaurant",
+        "translation": "Allons manger dans ce restaurant."
+      },
+      "ru": {
+        "english": "ресторан",
+        "translation": "Давайте поедим в том ресторане."
+      }
+    },
+    "hsk1-052": {
+      "fr": {
+        "english": "chambre / pièce",
+        "translation": "Ma chambre est petite."
+      },
+      "ru": {
+        "english": "комната",
+        "translation": "Моя комната маленькая."
+      }
+    },
+    "hsk1-053": {
+      "fr": {
+        "english": "très / extrêmement",
+        "translation": "Je suis très heureux aujourd’hui."
+      },
+      "ru": {
+        "english": "очень / чрезвычайно",
+        "translation": "Сегодня я очень рад."
+      }
+    },
+    "hsk1-054": {
+      "fr": {
+        "english": "avion",
+        "translation": "Je vais en Chine en avion."
+      },
+      "ru": {
+        "english": "самолёт",
+        "translation": "Я лечу в Китай на самолёте."
+      }
+    },
+    "hsk1-055": {
+      "fr": {
+        "english": "minute / centime",
+        "translation": "Il est huit heures dix."
+      },
+      "ru": {
+        "english": "минута / фэнь",
+        "translation": "Сейчас восемь часов десять минут."
+      }
+    },
+    "hsk1-056": {
+      "fr": {
+        "english": "minute (durée)",
+        "translation": "Attendez-moi cinq minutes, s’il vous plaît."
+      },
+      "ru": {
+        "english": "минута (длительность)",
+        "translation": "Подождите меня пять минут, пожалуйста."
+      }
+    },
+    "hsk1-057": {
+      "fr": {
+        "english": "heureux / content",
+        "translation": "Je suis heureux de vous rencontrer."
+      },
+      "ru": {
+        "english": "радостный / довольный",
+        "translation": "Рад с вами познакомиться."
+      }
+    },
+    "hsk1-058": {
+      "fr": {
+        "english": "chanson",
+        "translation": "J’aime cette chanson."
+      },
+      "ru": {
+        "english": "песня",
+        "translation": "Мне нравится эта песня."
+      }
+    },
+    "hsk1-059": {
+      "fr": {
+        "english": "grand frère",
+        "translation": "Mon grand frère sait conduire."
+      },
+      "ru": {
+        "english": "старший брат",
+        "translation": "Мой старший брат умеет водить."
+      }
+    },
+    "hsk1-060": {
+      "fr": {
+        "english": "classificateur général",
+        "translation": "J’ai trois pommes."
+      },
+      "ru": {
+        "english": "универсальное счётное слово",
+        "translation": "У меня три яблока."
+      }
+    },
+    "hsk1-061": {
+      "fr": {
+        "english": "donner / pour",
+        "translation": "Donnez-moi un verre d’eau, s’il vous plaît."
+      },
+      "ru": {
+        "english": "давать / для",
+        "translation": "Дайте мне стакан воды, пожалуйста."
+      }
+    },
+    "hsk1-062": {
+      "fr": {
+        "english": "entreprise / société",
+        "translation": "Je travaille dans cette entreprise."
+      },
+      "ru": {
+        "english": "компания",
+        "translation": "Я работаю в этой компании."
+      }
+    },
+    "hsk1-063": {
+      "fr": {
+        "english": "travailler / travail",
+        "translation": "Mon père ne travaille pas aujourd’hui."
+      },
+      "ru": {
+        "english": "работать / работа",
+        "translation": "Мой папа сегодня не работает."
+      }
+    },
+    "hsk1-064": {
+      "fr": {
+        "english": "chien",
+        "translation": "Ce chien est petit."
+      },
+      "ru": {
+        "english": "собака",
+        "translation": "Эта собака маленькая."
+      }
+    },
+    "hsk1-065": {
+      "fr": {
+        "english": "cher / coûteux",
+        "translation": "Ce vêtement est trop cher."
+      },
+      "ru": {
+        "english": "дорогой",
+        "translation": "Эта одежда слишком дорогая."
+      }
+    },
+    "hsk1-066": {
+      "fr": {
+        "english": "pays / nation",
+        "translation": "De quel pays venez-vous ?"
+      },
+      "ru": {
+        "english": "страна",
+        "translation": "Из какой вы страны?"
+      }
+    },
+    "hsk1-067": {
+      "fr": {
+        "english": "encore / aussi",
+        "translation": "Je voudrais aussi un peu d’eau."
+      },
+      "ru": {
+        "english": "ещё / также",
+        "translation": "Я хотел бы ещё немного воды."
+      }
+    },
+    "hsk1-068": {
+      "fr": {
+        "english": "enfant / enfants",
+        "translation": "Les enfants sont à l’école."
+      },
+      "ru": {
+        "english": "ребёнок / дети",
+        "translation": "Дети в школе."
+      }
+    },
+    "hsk1-069": {
+      "fr": {
+        "english": "chinois / mandarin",
+        "translation": "J’apprends le chinois."
+      },
+      "ru": {
+        "english": "китайский язык / путунхуа",
+        "translation": "Я изучаю китайский."
+      }
+    },
+    "hsk1-070": {
+      "fr": {
+        "english": "caractère chinois",
+        "translation": "Comment écrit-on ce caractère chinois ?"
+      },
+      "ru": {
+        "english": "китайский иероглиф",
+        "translation": "Как пишется этот китайский иероглиф?"
+      }
+    },
+    "hsk1-071": {
+      "fr": {
+        "english": "bon / bien",
+        "translation": "Il fait beau aujourd’hui."
+      },
+      "ru": {
+        "english": "хороший / хорошо",
+        "translation": "Сегодня хорошая погода."
+      }
+    },
+    "hsk1-073": {
+      "fr": {
+        "english": "beau / agréable à regarder",
+        "translation": "Ce livre est agréable à lire."
+      },
+      "ru": {
+        "english": "красивый / интересный",
+        "translation": "Эту книгу интересно читать."
+      }
+    },
+    "hsk1-074": {
+      "fr": {
+        "english": "agréable à entendre",
+        "translation": "Cette chanson est très agréable."
+      },
+      "ru": {
+        "english": "приятный на слух",
+        "translation": "Эта песня очень красивая."
+      }
+    },
+    "hsk1-075": {
+      "fr": {
+        "english": "amusant / divertissant",
+        "translation": "Cet endroit est amusant."
+      },
+      "ru": {
+        "english": "весёлый / интересный",
+        "translation": "Здесь весело."
+      }
+    },
+    "hsk1-076": {
+      "fr": {
+        "english": "numéro / jour du mois",
+        "translation": "Quelle est la date aujourd’hui ?"
+      },
+      "ru": {
+        "english": "номер / число месяца",
+        "translation": "Какое сегодня число?"
+      }
+    },
+    "hsk1-077": {
+      "fr": {
+        "english": "boire",
+        "translation": "Que voulez-vous boire ?"
+      },
+      "ru": {
+        "english": "пить",
+        "translation": "Что вы хотите выпить?"
+      }
+    },
+    "hsk1-078": {
+      "fr": {
+        "english": "et / avec",
+        "translation": "Mon ami et moi allons à l’école."
+      },
+      "ru": {
+        "english": "и / с",
+        "translation": "Мы с другом идём в школу."
+      }
+    },
+    "hsk1-079": {
+      "fr": {
+        "english": "très / assez",
+        "translation": "Je suis très occupé aujourd’hui."
+      },
+      "ru": {
+        "english": "очень / довольно",
+        "translation": "Сегодня я очень занят."
+      }
+    },
+    "hsk1-080": {
+      "fr": {
+        "english": "après / derrière",
+        "translation": "Je rentre après le cours."
+      },
+      "ru": {
+        "english": "после / позади",
+        "translation": "После занятий я иду домой."
+      }
+    },
+    "hsk1-081": {
+      "fr": {
+        "english": "retourner / revenir",
+        "translation": "Je rentre chez moi demain."
+      },
+      "ru": {
+        "english": "возвращаться",
+        "translation": "Завтра я возвращаюсь домой."
+      }
+    },
+    "hsk1-082": {
+      "fr": {
+        "english": "savoir faire / pouvoir",
+        "translation": "Je sais parler un peu chinois."
+      },
+      "ru": {
+        "english": "уметь / мочь",
+        "translation": "Я немного говорю по-китайски."
+      }
+    },
+    "hsk1-083": {
+      "fr": {
+        "english": "train",
+        "translation": "Nous allons à Pékin en train."
+      },
+      "ru": {
+        "english": "поезд",
+        "translation": "Мы едем в Пекин на поезде."
+      }
+    },
+    "hsk1-084": {
+      "fr": {
+        "english": "œuf",
+        "translation": "Je mange des œufs au petit-déjeuner."
+      },
+      "ru": {
+        "english": "яйцо",
+        "translation": "На завтрак я ем яйца."
+      }
+    },
+    "hsk1-085": {
+      "fr": {
+        "english": "combien (petit nombre)",
+        "translation": "Combien de personnes y a-t-il dans votre famille ?"
+      },
+      "ru": {
+        "english": "сколько (небольшое число)",
+        "translation": "Сколько человек в вашей семье?"
+      }
+    },
+    "hsk1-086": {
+      "fr": {
+        "english": "maison / famille",
+        "translation": "Ma maison est ici."
+      },
+      "ru": {
+        "english": "дом / семья",
+        "translation": "Мой дом здесь."
+      }
+    },
+    "hsk1-087": {
+      "fr": {
+        "english": "membres de la famille",
+        "translation": "Tous les membres de ma famille vont bien."
+      },
+      "ru": {
+        "english": "члены семьи",
+        "translation": "Все в моей семье здоровы."
+      }
+    },
+    "hsk1-088": {
+      "fr": {
+        "english": "voir / rencontrer",
+        "translation": "À demain !"
+      },
+      "ru": {
+        "english": "видеть / встречать",
+        "translation": "До завтра!"
+      }
+    },
+    "hsk1-089": {
+      "fr": {
+        "english": "classificateur des vêtements et affaires",
+        "translation": "J’ai acheté deux vêtements."
+      },
+      "ru": {
+        "english": "счётное слово для одежды и дел",
+        "translation": "Я купил две вещи из одежды."
+      }
+    },
+    "hsk1-090": {
+      "fr": {
+        "english": "ravioli chinois",
+        "translation": "Nous mangeons des raviolis ce soir."
+      },
+      "ru": {
+        "english": "цзяоцзы / пельмени",
+        "translation": "Сегодня вечером мы едим пельмени."
+      }
+    },
+    "hsk1-091": {
+      "fr": {
+        "english": "s’appeler / appeler",
+        "translation": "Comment vous appelez-vous ?"
+      },
+      "ru": {
+        "english": "зваться / звать",
+        "translation": "Как вас зовут?"
+      }
+    },
+    "hsk1-092": {
+      "fr": {
+        "english": "grande sœur",
+        "translation": "Ma grande sœur est professeur."
+      },
+      "ru": {
+        "english": "старшая сестра",
+        "translation": "Моя старшая сестра учитель."
+      }
+    },
+    "hsk1-093": {
+      "fr": {
+        "english": "cette année",
+        "translation": "J’ai vingt ans cette année."
+      },
+      "ru": {
+        "english": "этот год",
+        "translation": "В этом году мне двадцать лет."
+      }
+    },
+    "hsk1-095": {
+      "fr": {
+        "english": "neuf",
+        "translation": "Je me couche à neuf heures tous les jours."
+      },
+      "ru": {
+        "english": "девять",
+        "translation": "Я каждый день ложусь спать в девять."
+      }
+    },
+    "hsk1-096": {
+      "fr": {
+        "english": "penser / trouver / ressentir",
+        "translation": "Qu’en pensez-vous ?"
+      },
+      "ru": {
+        "english": "считать / чувствовать",
+        "translation": "Что вы об этом думаете?"
+      }
+    },
+    "hsk1-097": {
+      "fr": {
+        "english": "ouvrir / allumer",
+        "translation": "Ouvrez la porte, s’il vous plaît."
+      },
+      "ru": {
+        "english": "открывать / включать",
+        "translation": "Откройте дверь, пожалуйста."
+      }
+    },
+    "hsk1-098": {
+      "fr": {
+        "english": "conduire",
+        "translation": "Ma mère sait conduire."
+      },
+      "ru": {
+        "english": "водить машину",
+        "translation": "Моя мама умеет водить."
+      }
+    },
+    "hsk1-099": {
+      "fr": {
+        "english": "regarder / lire",
+        "translation": "Que regardez-vous ?"
+      },
+      "ru": {
+        "english": "смотреть / читать",
+        "translation": "На что вы смотрите?"
+      }
+    },
+    "hsk1-100": {
+      "fr": {
+        "english": "consulter un médecin",
+        "translation": "Je vais à l’hôpital consulter un médecin aujourd’hui."
+      },
+      "ru": {
+        "english": "обратиться к врачу",
+        "translation": "Сегодня я иду в больницу к врачу."
+      }
+    },
+    "hsk1-101": {
+      "fr": {
+        "english": "voir / apercevoir",
+        "translation": "J’ai vu le professeur."
+      },
+      "ru": {
+        "english": "увидеть / заметить",
+        "translation": "Я увидел учителя."
+      }
+    },
+    "hsk1-103": {
+      "fr": {
+        "english": "cours / leçon",
+        "translation": "Ce cours est intéressant."
+      },
+      "ru": {
+        "english": "урок / занятие",
+        "translation": "Этот урок интересный."
+      }
+    },
+    "hsk1-104": {
+      "fr": {
+        "english": "classificateur des membres d’une famille",
+        "translation": "Il y a trois personnes dans ma famille."
+      },
+      "ru": {
+        "english": "счётное слово для членов семьи",
+        "translation": "В моей семье три человека."
+      }
+    },
+    "hsk1-105": {
+      "fr": {
+        "english": "yuan (familier) / morceau",
+        "translation": "Cette pomme coûte trois yuans."
+      },
+      "ru": {
+        "english": "юань (разговорное) / кусок",
+        "translation": "Это яблоко стоит три юаня."
+      }
+    },
+    "hsk1-106": {
+      "fr": {
+        "english": "venir",
+        "translation": "Venez chez moi, s’il vous plaît."
+      },
+      "ru": {
+        "english": "приходить",
+        "translation": "Приходите ко мне домой, пожалуйста."
+      }
+    },
+    "hsk1-108": {
+      "fr": {
+        "english": "particule de changement ou d’action accomplie",
+        "translation": "J’ai mangé."
+      },
+      "ru": {
+        "english": "частица изменения или завершённого действия",
+        "translation": "Я поел."
+      }
+    },
+    "hsk1-109": {
+      "fr": {
+        "english": "froid",
+        "translation": "Il fait froid aujourd’hui."
+      },
+      "ru": {
+        "english": "холодный / холодно",
+        "translation": "Сегодня холодно."
+      }
+    },
+    "hsk1-110": {
+      "fr": {
+        "english": "à l’intérieur / dans",
+        "translation": "Le livre est dans le sac."
+      },
+      "ru": {
+        "english": "внутри / в",
+        "translation": "Книга в сумке."
+      }
+    },
+    "hsk1-111": {
+      "fr": {
+        "english": "deux (devant un classificateur)",
+        "translation": "Je voudrais deux tasses de thé."
+      },
+      "ru": {
+        "english": "два (перед счётным словом)",
+        "translation": "Я хотел бы две чашки чая."
+      }
+    },
+    "hsk1-112": {
+      "fr": {
+        "english": "zéro",
+        "translation": "Combien font cent un ?"
+      },
+      "ru": {
+        "english": "ноль",
+        "translation": "Сколько будет сто один?"
+      }
+    },
+    "hsk1-113": {
+      "fr": {
+        "english": "six",
+        "translation": "Je me lève à six heures."
+      },
+      "ru": {
+        "english": "шесть",
+        "translation": "Я встаю в шесть часов."
+      }
+    },
+    "hsk1-114": {
+      "fr": {
+        "english": "maman / mère",
+        "translation": "Maman fait la cuisine."
+      },
+      "ru": {
+        "english": "мама / мать",
+        "translation": "Мама готовит."
+      }
+    },
+    "hsk1-115": {
+      "fr": {
+        "english": "particule de question fermée",
+        "translation": "Êtes-vous étudiant ?"
+      },
+      "ru": {
+        "english": "вопросительная частица",
+        "translation": "Вы студент?"
+      }
+    },
+    "hsk1-116": {
+      "fr": {
+        "english": "acheter",
+        "translation": "Je veux acheter un livre."
+      },
+      "ru": {
+        "english": "покупать",
+        "translation": "Я хочу купить книгу."
+      }
+    },
+    "hsk1-117": {
+      "fr": {
+        "english": "vendre",
+        "translation": "Ce magasin vend des fruits."
+      },
+      "ru": {
+        "english": "продавать",
+        "translation": "В этом магазине продают фрукты."
+      }
+    },
+    "hsk1-118": {
+      "fr": {
+        "english": "occupé",
+        "translation": "Êtes-vous occupé aujourd’hui ?"
+      },
+      "ru": {
+        "english": "занятой",
+        "translation": "Вы сегодня заняты?"
+      }
+    },
+    "hsk1-119": {
+      "fr": {
+        "english": "chat",
+        "translation": "Mon chat est sur la chaise."
+      },
+      "ru": {
+        "english": "кошка",
+        "translation": "Моя кошка на стуле."
+      }
+    },
+    "hsk1-120": {
+      "fr": {
+        "english": "ce n’est pas grave",
+        "translation": "Ce n’est pas grave ; asseyez-vous."
+      },
+      "ru": {
+        "english": "ничего страшного",
+        "translation": "Ничего страшного; садитесь, пожалуйста."
+      }
+    },
+    "hsk1-121": {
+      "fr": {
+        "english": "ce n’est rien / pas de problème",
+        "translation": "Je vais bien, merci."
+      },
+      "ru": {
+        "english": "всё в порядке / ничего",
+        "translation": "У меня всё хорошо, спасибо."
+      }
+    },
+    "hsk1-122": {
+      "fr": {
+        "english": "ne pas avoir / il n’y a pas",
+        "translation": "Je n’ai pas d’ordinateur."
+      },
+      "ru": {
+        "english": "не иметь / нет",
+        "translation": "У меня нет компьютера."
+      }
+    },
+    "hsk1-123": {
+      "fr": {
+        "english": "petite sœur",
+        "translation": "Ma petite sœur aime chanter."
+      },
+      "ru": {
+        "english": "младшая сестра",
+        "translation": "Моя младшая сестра любит петь."
+      }
+    },
+    "hsk1-124": {
+      "fr": {
+        "english": "suffixe du pluriel pour les personnes",
+        "translation": "Bonjour, chers camarades !"
+      },
+      "ru": {
+        "english": "суффикс множественного числа для людей",
+        "translation": "Доброе утро, одноклассники!"
+      }
+    },
+    "hsk1-125": {
+      "fr": {
+        "english": "riz cuit",
+        "translation": "Je voudrais un bol de riz."
+      },
+      "ru": {
+        "english": "варёный рис",
+        "translation": "Я хотел бы миску риса."
+      }
+    },
+    "hsk1-126": {
+      "fr": {
+        "english": "pain",
+        "translation": "Je mange du pain au petit-déjeuner."
+      },
+      "ru": {
+        "english": "хлеб",
+        "translation": "На завтрак я ем хлеб."
+      }
+    },
+    "hsk1-127": {
+      "fr": {
+        "english": "nouilles",
+        "translation": "Ce bol de nouilles est délicieux."
+      },
+      "ru": {
+        "english": "лапша",
+        "translation": "Эта лапша очень вкусная."
+      }
+    },
+    "hsk1-128": {
+      "fr": {
+        "english": "l’année prochaine",
+        "translation": "Je vais en Chine l’année prochaine."
+      },
+      "ru": {
+        "english": "следующий год",
+        "translation": "В следующем году я еду в Китай."
+      }
+    },
+    "hsk1-130": {
+      "fr": {
+        "english": "nom",
+        "translation": "Comment écrit-on votre nom ?"
+      },
+      "ru": {
+        "english": "имя",
+        "translation": "Как пишется ваше имя?"
+      }
+    },
+    "hsk1-131": {
+      "fr": {
+        "english": "quel / lequel",
+        "translation": "De quel pays venez-vous ?"
+      },
+      "ru": {
+        "english": "какой / который",
+        "translation": "Из какой вы страны?"
+      }
+    },
+    "hsk1-132": {
+      "fr": {
+        "english": "lequel",
+        "translation": "Lequel aimez-vous ?"
+      },
+      "ru": {
+        "english": "который / какой",
+        "translation": "Какой вам нравится?"
+      }
+    },
+    "hsk1-133": {
+      "fr": {
+        "english": "où",
+        "translation": "Où habitez-vous ?"
+      },
+      "ru": {
+        "english": "где",
+        "translation": "Где вы живёте?"
+      }
+    },
+    "hsk1-134": {
+      "fr": {
+        "english": "où (variante orale)",
+        "translation": "Où allez-vous ?"
+      },
+      "ru": {
+        "english": "где / куда (разговорное)",
+        "translation": "Куда вы идёте?"
+      }
+    },
+    "hsk1-135": {
+      "fr": {
+        "english": "lesquels",
+        "translation": "Quels livres sont à vous ?"
+      },
+      "ru": {
+        "english": "какие / которые",
+        "translation": "Какие книги ваши?"
+      }
+    },
+    "hsk1-136": {
+      "fr": {
+        "english": "cela / ce… là",
+        "translation": "C’est mon père."
+      },
+      "ru": {
+        "english": "тот / то",
+        "translation": "Это мой папа."
+      }
+    },
+    "hsk1-137": {
+      "fr": {
+        "english": "là-bas / de ce côté-là",
+        "translation": "L’école est là-bas."
+      },
+      "ru": {
+        "english": "там / та сторона",
+        "translation": "Школа там."
+      }
+    },
+    "hsk1-138": {
+      "fr": {
+        "english": "celui-là",
+        "translation": "Je voudrais cette tasse-là."
+      },
+      "ru": {
+        "english": "тот",
+        "translation": "Я хотел бы ту чашку."
+      }
+    },
+    "hsk1-139": {
+      "fr": {
+        "english": "là-bas",
+        "translation": "Mon ami est là-bas."
+      },
+      "ru": {
+        "english": "там",
+        "translation": "Мой друг там."
+      }
+    },
+    "hsk1-140": {
+      "fr": {
+        "english": "là-bas (variante orale)",
+        "translation": "Asseyez-vous là-bas, s’il vous plaît."
+      },
+      "ru": {
+        "english": "там (разговорное)",
+        "translation": "Садитесь там, пожалуйста."
+      }
+    },
+    "hsk1-141": {
+      "fr": {
+        "english": "ces… là / ceux-là",
+        "translation": "Ces élèves sont mes amis."
+      },
+      "ru": {
+        "english": "те",
+        "translation": "Те студенты — мои друзья."
+      }
+    },
+    "hsk1-142": {
+      "fr": {
+        "english": "masculin / homme",
+        "translation": "C’est un professeur homme."
+      },
+      "ru": {
+        "english": "мужской / мужчина",
+        "translation": "Это учитель-мужчина."
+      }
+    },
+    "hsk1-143": {
+      "fr": {
+        "english": "petit ami",
+        "translation": "Son petit ami est médecin."
+      },
+      "ru": {
+        "english": "парень / молодой человек",
+        "translation": "Её парень врач."
+      }
+    },
+    "hsk1-144": {
+      "fr": {
+        "english": "particule de question ou de continuation",
+        "translation": "Je vais bien, et vous ?"
+      },
+      "ru": {
+        "english": "частица вопроса или продолжения",
+        "translation": "У меня всё хорошо, а у вас?"
+      }
+    },
+    "hsk1-145": {
+      "fr": {
+        "english": "pouvoir / être capable",
+        "translation": "Pouvez-vous venir demain ?"
+      },
+      "ru": {
+        "english": "мочь / быть в состоянии",
+        "translation": "Вы можете прийти завтра?"
+      }
+    },
+    "hsk1-148": {
+      "fr": {
+        "english": "vous (pluriel)",
+        "translation": "Êtes-vous tous étudiants à l’université ?"
+      },
+      "ru": {
+        "english": "вы (множественное число)",
+        "translation": "Вы все студенты университета?"
+      }
+    },
+    "hsk1-149": {
+      "fr": {
+        "english": "année / an",
+        "translation": "Il y a douze mois dans une année."
+      },
+      "ru": {
+        "english": "год",
+        "translation": "В году двенадцать месяцев."
+      }
+    },
+    "hsk1-150": {
+      "fr": {
+        "english": "vous (politesse)",
+        "translation": "Bonjour, asseyez-vous, s’il vous plaît."
+      },
+      "ru": {
+        "english": "Вы (вежливо)",
+        "translation": "Здравствуйте, садитесь, пожалуйста."
+      }
+    },
+    "hsk1-151": {
+      "fr": {
+        "english": "lait",
+        "translation": "Je bois du lait tous les jours."
+      },
+      "ru": {
+        "english": "молоко",
+        "translation": "Я каждый день пью молоко."
+      }
+    },
+    "hsk1-152": {
+      "fr": {
+        "english": "féminin / femme",
+        "translation": "C’est une femme médecin."
+      },
+      "ru": {
+        "english": "женский / женщина",
+        "translation": "Это женщина-врач."
+      }
+    },
+    "hsk1-153": {
+      "fr": {
+        "english": "fille (enfant)",
+        "translation": "Ma fille a six ans cette année."
+      },
+      "ru": {
+        "english": "дочь",
+        "translation": "Моей дочери в этом году шесть лет."
+      }
+    },
+    "hsk1-154": {
+      "fr": {
+        "english": "petite amie",
+        "translation": "Sa petite amie travaille à l’université."
+      },
+      "ru": {
+        "english": "девушка / подруга",
+        "translation": "Его девушка работает в университете."
+      }
+    },
+    "hsk1-155": {
+      "fr": {
+        "english": "madame / dame",
+        "translation": "Cette dame est mon professeur."
+      },
+      "ru": {
+        "english": "госпожа / женщина",
+        "translation": "Эта женщина — мой учитель."
+      }
+    },
+    "hsk1-156": {
+      "fr": {
+        "english": "ami",
+        "translation": "C’est mon bon ami."
+      },
+      "ru": {
+        "english": "друг",
+        "translation": "Он мой хороший друг."
+      }
+    },
+    "hsk1-157": {
+      "fr": {
+        "english": "bon marché / peu cher",
+        "translation": "Les fruits sont bon marché ici."
+      },
+      "ru": {
+        "english": "дешёвый / недорогой",
+        "translation": "Здесь недорогие фрукты."
+      }
+    },
+    "hsk1-158": {
+      "fr": {
+        "english": "beau / joli",
+        "translation": "Vos vêtements sont beaux."
+      },
+      "ru": {
+        "english": "красивый",
+        "translation": "У вас красивая одежда."
+      }
+    },
+    "hsk1-159": {
+      "fr": {
+        "english": "pomme",
+        "translation": "J’aime manger des pommes."
+      },
+      "ru": {
+        "english": "яблоко",
+        "translation": "Я люблю есть яблоки."
+      }
+    },
+    "hsk1-160": {
+      "fr": {
+        "english": "sept",
+        "translation": "Nous prenons le petit-déjeuner à sept heures."
+      },
+      "ru": {
+        "english": "семь",
+        "translation": "Мы завтракаем в семь."
+      }
+    },
+    "hsk1-161": {
+      "fr": {
+        "english": "se lever",
+        "translation": "À quelle heure vous levez-vous chaque jour ?"
+      },
+      "ru": {
+        "english": "вставать",
+        "translation": "Во сколько вы каждый день встаёте?"
+      }
+    },
+    "hsk1-162": {
+      "fr": {
+        "english": "mille",
+        "translation": "Cet ordinateur coûte trois mille yuans."
+      },
+      "ru": {
+        "english": "тысяча",
+        "translation": "Этот компьютер стоит три тысячи юаней."
+      }
+    },
+    "hsk1-163": {
+      "fr": {
+        "english": "avant / devant",
+        "translation": "Lavez-vous les mains avant de manger."
+      },
+      "ru": {
+        "english": "перед / впереди",
+        "translation": "Помойте руки перед едой."
+      }
+    },
+    "hsk1-164": {
+      "fr": {
+        "english": "argent",
+        "translation": "Je n’ai pas d’argent."
+      },
+      "ru": {
+        "english": "деньги",
+        "translation": "У меня нет денег."
+      }
+    },
+    "hsk1-165": {
+      "fr": {
+        "english": "s’il vous plaît / inviter",
+        "translation": "Prenez du thé, s’il vous plaît."
+      },
+      "ru": {
+        "english": "пожалуйста / приглашать",
+        "translation": "Попейте чаю, пожалуйста."
+      }
+    },
+    "hsk1-166": {
+      "fr": {
+        "english": "excusez-moi / puis-je demander",
+        "translation": "Excusez-moi, où est l’hôpital ?"
+      },
+      "ru": {
+        "english": "извините, можно спросить",
+        "translation": "Извините, где больница?"
+      }
+    },
+    "hsk1-167": {
+      "fr": {
+        "english": "aller",
+        "translation": "Où voulez-vous aller ?"
+      },
+      "ru": {
+        "english": "идти / ехать",
+        "translation": "Куда вы хотите пойти?"
+      }
+    },
+    "hsk1-168": {
+      "fr": {
+        "english": "l’année dernière",
+        "translation": "J’ai étudié en Chine l’année dernière."
+      },
+      "ru": {
+        "english": "прошлый год",
+        "translation": "В прошлом году я учился в Китае."
+      }
+    },
+    "hsk1-169": {
+      "fr": {
+        "english": "chaud",
+        "translation": "Il fait chaud aujourd’hui."
+      },
+      "ru": {
+        "english": "жаркий / жарко",
+        "translation": "Сегодня жарко."
+      }
+    },
+    "hsk1-170": {
+      "fr": {
+        "english": "personne / gens",
+        "translation": "Il y a beaucoup de monde ici."
+      },
+      "ru": {
+        "english": "человек / люди",
+        "translation": "Здесь много людей."
+      }
+    },
+    "hsk1-171": {
+      "fr": {
+        "english": "connaître / rencontrer",
+        "translation": "Je connais ce professeur."
+      },
+      "ru": {
+        "english": "знать / знакомиться",
+        "translation": "Я знаю этого учителя."
+      }
+    },
+    "hsk1-172": {
+      "fr": {
+        "english": "jour / date (formel)",
+        "translation": "Aujourd’hui, c’est le premier octobre."
+      },
+      "ru": {
+        "english": "день / число (официально)",
+        "translation": "Сегодня первое октября."
+      }
+    },
+    "hsk1-173": {
+      "fr": {
+        "english": "trois",
+        "translation": "J’ai trois livres."
+      },
+      "ru": {
+        "english": "три",
+        "translation": "У меня три книги."
+      }
+    },
+    "hsk1-174": {
+      "fr": {
+        "english": "magasin",
+        "translation": "Le magasin est devant l’hôpital."
+      },
+      "ru": {
+        "english": "магазин",
+        "translation": "Магазин перед больницей."
+      }
+    },
+    "hsk1-175": {
+      "fr": {
+        "english": "sur / au-dessus",
+        "translation": "Le livre est sur la table."
+      },
+      "ru": {
+        "english": "на / над",
+        "translation": "Книга на столе."
+      }
+    },
+    "hsk1-176": {
+      "fr": {
+        "english": "aller travailler",
+        "translation": "Mon père commence le travail à huit heures."
+      },
+      "ru": {
+        "english": "идти на работу",
+        "translation": "Мой папа начинает работать в восемь."
+      }
+    },
+    "hsk1-177": {
+      "fr": {
+        "english": "assister au cours",
+        "translation": "Nous avons cours le matin."
+      },
+      "ru": {
+        "english": "посещать занятия",
+        "translation": "У нас занятия утром."
+      }
+    },
+    "hsk1-178": {
+      "fr": {
+        "english": "matin (avant midi)",
+        "translation": "Je vais à l’école le matin."
+      },
+      "ru": {
+        "english": "утро (до полудня)",
+        "translation": "Утром я иду в школу."
+      }
+    },
+    "hsk1-179": {
+      "fr": {
+        "english": "aller à l’école",
+        "translation": "Mon petit frère va à l’école en voiture tous les jours."
+      },
+      "ru": {
+        "english": "ходить в школу",
+        "translation": "Мой младший брат каждый день ездит в школу на машине."
+      }
+    },
+    "hsk1-180": {
+      "fr": {
+        "english": "peu",
+        "translation": "Il y a peu de monde aujourd’hui."
+      },
+      "ru": {
+        "english": "мало",
+        "translation": "Сегодня мало людей."
+      }
+    },
+    "hsk1-181": {
+      "fr": {
+        "english": "qui",
+        "translation": "Qui est cette personne ?"
+      },
+      "ru": {
+        "english": "кто",
+        "translation": "Кто этот человек?"
+      }
+    },
+    "hsk1-182": {
+      "fr": {
+        "english": "quoi / quel",
+        "translation": "Que voulez-vous manger ?"
+      },
+      "ru": {
+        "english": "что / какой",
+        "translation": "Что вы хотите поесть?"
+      }
+    },
+    "hsk1-183": {
+      "fr": {
+        "english": "tomber malade / être malade",
+        "translation": "Je suis malade et je veux me reposer."
+      },
+      "ru": {
+        "english": "заболеть / болеть",
+        "translation": "Я болею и хочу отдохнуть."
+      }
+    },
+    "hsk1-184": {
+      "fr": {
+        "english": "dix",
+        "translation": "Il y a dix étudiants ici."
+      },
+      "ru": {
+        "english": "десять",
+        "translation": "Здесь десять студентов."
+      }
+    },
+    "hsk1-185": {
+      "fr": {
+        "english": "moment",
+        "translation": "Quand venez-vous ?"
+      },
+      "ru": {
+        "english": "время / момент",
+        "translation": "Когда вы придёте?"
+      }
+    },
+    "hsk1-187": {
+      "fr": {
+        "english": "affaire / chose à faire",
+        "translation": "J’aimerais vous demander quelque chose."
+      },
+      "ru": {
+        "english": "дело",
+        "translation": "Я хочу вас кое о чём спросить."
+      }
+    },
+    "hsk1-189": {
+      "fr": {
+        "english": "téléphone portable",
+        "translation": "Où est mon téléphone ?"
+      },
+      "ru": {
+        "english": "мобильный телефон",
+        "translation": "Где мой телефон?"
+      }
+    },
+    "hsk1-190": {
+      "fr": {
+        "english": "livre",
+        "translation": "Ce livre est à moi."
+      },
+      "ru": {
+        "english": "книга",
+        "translation": "Эта книга моя."
+      }
+    },
+    "hsk1-191": {
+      "fr": {
+        "english": "librairie",
+        "translation": "Je vais à la librairie acheter des livres."
+      },
+      "ru": {
+        "english": "книжный магазин",
+        "translation": "Я иду в книжный магазин за книгами."
+      }
+    },
+    "hsk1-193": {
+      "fr": {
+        "english": "fruit",
+        "translation": "Quels fruits aimez-vous manger ?"
+      },
+      "ru": {
+        "english": "фрукты",
+        "translation": "Какие фрукты вы любите?"
+      }
+    },
+    "hsk1-194": {
+      "fr": {
+        "english": "dormir",
+        "translation": "L’enfant dort déjà."
+      },
+      "ru": {
+        "english": "спать",
+        "translation": "Ребёнок уже спит."
+      }
+    },
+    "hsk1-195": {
+      "fr": {
+        "english": "dormir / se coucher",
+        "translation": "Je me couche à dix heures tous les jours."
+      },
+      "ru": {
+        "english": "спать / ложиться спать",
+        "translation": "Я каждый день ложусь спать в десять."
+      }
+    },
+    "hsk1-196": {
+      "fr": {
+        "english": "dire / parler",
+        "translation": "Dites-le encore une fois, s’il vous plaît."
+      },
+      "ru": {
+        "english": "говорить / сказать",
+        "translation": "Скажите ещё раз, пожалуйста."
+      }
+    },
+    "hsk1-197": {
+      "fr": {
+        "english": "parler",
+        "translation": "Le professeur parle."
+      },
+      "ru": {
+        "english": "разговаривать",
+        "translation": "Учитель говорит."
+      }
+    },
+    "hsk1-198": {
+      "fr": {
+        "english": "quatre",
+        "translation": "Il y a quatre personnes dans notre famille."
+      },
+      "ru": {
+        "english": "четыре",
+        "translation": "В нашей семье четыре человека."
+      }
+    },
+    "hsk1-199": {
+      "fr": {
+        "english": "ans (âge)",
+        "translation": "Quel âge avez-vous cette année ?"
+      },
+      "ru": {
+        "english": "лет (возраст)",
+        "translation": "Сколько вам лет в этом году?"
+      }
+    },
+    "hsk1-200": {
+      "fr": {
+        "english": "il / lui",
+        "translation": "C’est mon ami."
+      },
+      "ru": {
+        "english": "он / его",
+        "translation": "Он мой друг."
+      }
+    },
+    "hsk1-201": {
+      "fr": {
+        "english": "il / elle (animal ou chose)",
+        "translation": "C’est un chat."
+      },
+      "ru": {
+        "english": "оно / он / она (животное или предмет)",
+        "translation": "Это кошка."
+      }
+    },
+    "hsk1-202": {
+      "fr": {
+        "english": "elle",
+        "translation": "C’est notre professeur."
+      },
+      "ru": {
+        "english": "она / её",
+        "translation": "Она наш учитель."
+      }
+    },
+    "hsk1-203": {
+      "fr": {
+        "english": "ils / eux (masculin ou mixte)",
+        "translation": "Ils étudient à l’école."
+      },
+      "ru": {
+        "english": "они (мужчины или смешанная группа)",
+        "translation": "Они учатся в школе."
+      }
+    },
+    "hsk1-204": {
+      "fr": {
+        "english": "ils / elles (animaux ou choses)",
+        "translation": "Ce sont mes chats."
+      },
+      "ru": {
+        "english": "они (животные или предметы)",
+        "translation": "Это мои кошки."
+      }
+    },
+    "hsk1-205": {
+      "fr": {
+        "english": "elles",
+        "translation": "Elles sont toutes étudiantes."
+      },
+      "ru": {
+        "english": "они (женщины)",
+        "translation": "Они все студентки."
+      }
+    },
+    "hsk1-206": {
+      "fr": {
+        "english": "trop / extrêmement",
+        "translation": "Il fait trop chaud aujourd’hui !"
+      },
+      "ru": {
+        "english": "слишком / чрезвычайно",
+        "translation": "Сегодня слишком жарко!"
+      }
+    },
+    "hsk1-207": {
+      "fr": {
+        "english": "jour",
+        "translation": "Je reste ici trois jours."
+      },
+      "ru": {
+        "english": "день",
+        "translation": "Я остаюсь здесь на три дня."
+      }
+    },
+    "hsk1-208": {
+      "fr": {
+        "english": "temps / météo",
+        "translation": "Quel temps fait-il aujourd’hui ?"
+      },
+      "ru": {
+        "english": "погода",
+        "translation": "Какая сегодня погода?"
+      }
+    },
+    "hsk1-209": {
+      "fr": {
+        "english": "écouter",
+        "translation": "J’aime écouter des chansons chinoises."
+      },
+      "ru": {
+        "english": "слушать",
+        "translation": "Я люблю слушать китайские песни."
+      }
+    },
+    "hsk1-210": {
+      "fr": {
+        "english": "entendre",
+        "translation": "Avez-vous entendu ?"
+      },
+      "ru": {
+        "english": "услышать",
+        "translation": "Вы это слышали?"
+      }
+    },
+    "hsk1-211": {
+      "fr": {
+        "english": "camarade de classe",
+        "translation": "C’est mon camarade de classe."
+      },
+      "ru": {
+        "english": "одноклассник / одногруппник",
+        "translation": "Он мой одноклассник."
+      }
+    },
+    "hsk1-212": {
+      "fr": {
+        "english": "extérieur / dehors",
+        "translation": "Je vous attends devant l’école."
+      },
+      "ru": {
+        "english": "снаружи / вне",
+        "translation": "Я жду вас у школы."
+      }
+    },
+    "hsk1-213": {
+      "fr": {
+        "english": "dehors",
+        "translation": "Il fait froid dehors."
+      },
+      "ru": {
+        "english": "снаружи",
+        "translation": "На улице холодно."
+      }
+    },
+    "hsk1-214": {
+      "fr": {
+        "english": "jouer / s’amuser",
+        "translation": "Les enfants jouent à la maison."
+      },
+      "ru": {
+        "english": "играть / развлекаться",
+        "translation": "Дети играют дома."
+      }
+    },
+    "hsk1-215": {
+      "fr": {
+        "english": "tard",
+        "translation": "Il est trop tard maintenant."
+      },
+      "ru": {
+        "english": "поздний / поздно",
+        "translation": "Сейчас слишком поздно."
+      }
+    },
+    "hsk1-216": {
+      "fr": {
+        "english": "dîner / repas du soir",
+        "translation": "Nous dînons à six heures."
+      },
+      "ru": {
+        "english": "ужин",
+        "translation": "Мы ужинаем в шесть."
+      }
+    },
+    "hsk1-217": {
+      "fr": {
+        "english": "soir / nuit",
+        "translation": "J’étudie chez moi le soir."
+      },
+      "ru": {
+        "english": "вечер / ночь",
+        "translation": "Вечером я учусь дома."
+      }
+    },
+    "hsk1-218": {
+      "fr": {
+        "english": "allô",
+        "translation": "Allô, qui est à l’appareil ?"
+      },
+      "ru": {
+        "english": "алло",
+        "translation": "Алло, кто говорит?"
+      }
+    },
+    "hsk1-219": {
+      "fr": {
+        "english": "demander",
+        "translation": "Je voudrais poser une question."
+      },
+      "ru": {
+        "english": "спрашивать",
+        "translation": "Я хотел бы задать вопрос."
+      }
+    },
+    "hsk1-220": {
+      "fr": {
+        "english": "question / problème",
+        "translation": "Cette question est simple."
+      },
+      "ru": {
+        "english": "вопрос / проблема",
+        "translation": "Этот вопрос простой."
+      }
+    },
+    "hsk1-222": {
+      "fr": {
+        "english": "nous",
+        "translation": "Étudions ensemble."
+      },
+      "ru": {
+        "english": "мы / нас",
+        "translation": "Давайте учиться вместе."
+      }
+    },
+    "hsk1-223": {
+      "fr": {
+        "english": "cinq",
+        "translation": "J’ai cinq pommes."
+      },
+      "ru": {
+        "english": "пять",
+        "translation": "У меня пять яблок."
+      }
+    },
+    "hsk1-224": {
+      "fr": {
+        "english": "déjeuner",
+        "translation": "Que mangez-vous à midi ?"
+      },
+      "ru": {
+        "english": "обед",
+        "translation": "Что вы едите на обед?"
+      }
+    },
+    "hsk1-225": {
+      "fr": {
+        "english": "aimer / apprécier",
+        "translation": "J’aime apprendre le chinois."
+      },
+      "ru": {
+        "english": "любить / нравиться",
+        "translation": "Мне нравится изучать китайский."
+      }
+    },
+    "hsk1-226": {
+      "fr": {
+        "english": "sous / en dessous",
+        "translation": "Le chat est sous la table."
+      },
+      "ru": {
+        "english": "под / внизу",
+        "translation": "Кошка под столом."
+      }
+    },
+    "hsk1-227": {
+      "fr": {
+        "english": "pleuvoir",
+        "translation": "Il pleut aujourd’hui."
+      },
+      "ru": {
+        "english": "идти (о дожде)",
+        "translation": "Сегодня идёт дождь."
+      }
+    },
+    "hsk1-228": {
+      "fr": {
+        "english": "finir le travail",
+        "translation": "Ma mère finit le travail à six heures."
+      },
+      "ru": {
+        "english": "заканчивать работу",
+        "translation": "Моя мама заканчивает работу в шесть."
+      }
+    },
+    "hsk1-229": {
+      "fr": {
+        "english": "finir le cours",
+        "translation": "Notre cours se termine à cinq heures."
+      },
+      "ru": {
+        "english": "заканчивать занятие",
+        "translation": "Наш урок заканчивается в пять."
+      }
+    },
+    "hsk1-230": {
+      "fr": {
+        "english": "après-midi",
+        "translation": "Je vais à la librairie cet après-midi."
+      },
+      "ru": {
+        "english": "после полудня",
+        "translation": "Сегодня после обеда я иду в книжный магазин."
+      }
+    },
+    "hsk1-231": {
+      "fr": {
+        "english": "monsieur",
+        "translation": "Monsieur Wang est mon professeur."
+      },
+      "ru": {
+        "english": "господин / мужчина",
+        "translation": "Господин Ван — мой учитель."
+      }
+    },
+    "hsk1-233": {
+      "fr": {
+        "english": "vouloir / penser / manquer",
+        "translation": "Je voudrais du thé."
+      },
+      "ru": {
+        "english": "хотеть / думать / скучать",
+        "translation": "Я хотел бы чаю."
+      }
+    },
+    "hsk1-234": {
+      "fr": {
+        "english": "petit",
+        "translation": "Ma chambre est petite."
+      },
+      "ru": {
+        "english": "маленький",
+        "translation": "Моя комната маленькая."
+      }
+    },
+    "hsk1-235": {
+      "fr": {
+        "english": "enfant / petit",
+        "translation": "Petit, comment t’appelles-tu ?"
+      },
+      "ru": {
+        "english": "ребёнок / малыш",
+        "translation": "Малыш, как тебя зовут?"
+      }
+    },
+    "hsk1-236": {
+      "fr": {
+        "english": "heure (durée)",
+        "translation": "J’étudie une heure chaque jour."
+      },
+      "ru": {
+        "english": "час (длительность)",
+        "translation": "Я занимаюсь по часу каждый день."
+      }
+    },
+    "hsk1-237": {
+      "fr": {
+        "english": "école primaire",
+        "translation": "L’école primaire est près de chez moi."
+      },
+      "ru": {
+        "english": "начальная школа",
+        "translation": "Начальная школа рядом с моим домом."
+      }
+    },
+    "hsk1-238": {
+      "fr": {
+        "english": "élève du primaire",
+        "translation": "Ma petite sœur est à l’école primaire."
+      },
+      "ru": {
+        "english": "ученик начальной школы",
+        "translation": "Моя младшая сестра учится в начальной школе."
+      }
+    },
+    "hsk1-239": {
+      "fr": {
+        "english": "quelques / des",
+        "translation": "J’ai acheté des fruits."
+      },
+      "ru": {
+        "english": "немного / несколько",
+        "translation": "Я купил немного фруктов."
+      }
+    },
+    "hsk1-240": {
+      "fr": {
+        "english": "écrire",
+        "translation": "Écrivez votre nom, s’il vous plaît."
+      },
+      "ru": {
+        "english": "писать",
+        "translation": "Напишите ваше имя, пожалуйста."
+      }
+    },
+    "hsk1-242": {
+      "fr": {
+        "english": "nouveau",
+        "translation": "C’est mon nouveau téléphone."
+      },
+      "ru": {
+        "english": "новый",
+        "translation": "Это мой новый телефон."
+      }
+    },
+    "hsk1-243": {
+      "fr": {
+        "english": "semaine",
+        "translation": "Il y a sept jours dans une semaine."
+      },
+      "ru": {
+        "english": "неделя",
+        "translation": "В неделе семь дней."
+      }
+    },
+    "hsk1-244": {
+      "fr": {
+        "english": "dimanche",
+        "translation": "Je me repose chez moi le dimanche."
+      },
+      "ru": {
+        "english": "воскресенье",
+        "translation": "В воскресенье я отдыхаю дома."
+      }
+    },
+    "hsk1-245": {
+      "fr": {
+        "english": "dimanche (variante orale)",
+        "translation": "Sortons nous amuser dimanche."
+      },
+      "ru": {
+        "english": "воскресенье (разговорное)",
+        "translation": "Давайте в воскресенье пойдём погуляем."
+      }
+    },
+    "hsk1-246": {
+      "fr": {
+        "english": "se reposer / faire une pause",
+        "translation": "Faisons une petite pause."
+      },
+      "ru": {
+        "english": "отдыхать / сделать перерыв",
+        "translation": "Давайте немного отдохнём."
+      }
+    },
+    "hsk1-247": {
+      "fr": {
+        "english": "apprendre / étudier",
+        "translation": "Où apprenez-vous le chinois ?"
+      },
+      "ru": {
+        "english": "учить / учиться",
+        "translation": "Где вы учите китайский?"
+      }
+    },
+    "hsk1-249": {
+      "fr": {
+        "english": "étudier / apprendre",
+        "translation": "J’étudie le chinois tous les jours."
+      },
+      "ru": {
+        "english": "учиться / изучать",
+        "translation": "Я каждый день учу китайский."
+      }
+    },
+    "hsk1-250": {
+      "fr": {
+        "english": "école",
+        "translation": "L’école est par ici."
+      },
+      "ru": {
+        "english": "школа",
+        "translation": "Школа в этой стороне."
+      }
+    },
+    "hsk1-251": {
+      "fr": {
+        "english": "neige",
+        "translation": "Il y a beaucoup de neige dehors."
+      },
+      "ru": {
+        "english": "снег",
+        "translation": "На улице много снега."
+      }
+    },
+    "hsk1-253": {
+      "fr": {
+        "english": "aussi",
+        "translation": "Je suis étudiant aussi."
+      },
+      "ru": {
+        "english": "тоже / также",
+        "translation": "Я тоже студент."
+      }
+    },
+    "hsk1-254": {
+      "fr": {
+        "english": "un",
+        "translation": "J’ai une question."
+      },
+      "ru": {
+        "english": "один",
+        "translation": "У меня один вопрос."
+      }
+    },
+    "hsk1-255": {
+      "fr": {
+        "english": "vêtements",
+        "translation": "Vos vêtements sont jolis."
+      },
+      "ru": {
+        "english": "одежда",
+        "translation": "У вас красивая одежда."
+      }
+    },
+    "hsk1-256": {
+      "fr": {
+        "english": "médecin",
+        "translation": "Je voudrais consulter un médecin."
+      },
+      "ru": {
+        "english": "врач",
+        "translation": "Я хотел бы обратиться к врачу."
+      }
+    },
+    "hsk1-257": {
+      "fr": {
+        "english": "hôpital",
+        "translation": "Où est l’hôpital ?"
+      },
+      "ru": {
+        "english": "больница",
+        "translation": "Где больница?"
+      }
+    },
+    "hsk1-258": {
+      "fr": {
+        "english": "moitié",
+        "translation": "Je vais manger la moitié de cette pomme."
+      },
+      "ru": {
+        "english": "половина",
+        "translation": "Я съем половину этого яблока."
+      }
+    },
+    "hsk1-259": {
+      "fr": {
+        "english": "un instant / un peu (après un verbe)",
+        "translation": "Regardez rapidement ce caractère, s’il vous plaît."
+      },
+      "ru": {
+        "english": "немного / недолго (после глагола)",
+        "translation": "Посмотрите, пожалуйста, на этот иероглиф."
+      }
+    },
+    "hsk1-260": {
+      "fr": {
+        "english": "chaise",
+        "translation": "Il y a une chaise ici."
+      },
+      "ru": {
+        "english": "стул",
+        "translation": "Здесь есть стул."
+      }
+    },
+    "hsk1-261": {
+      "fr": {
+        "english": "un peu",
+        "translation": "Je sais parler un peu chinois."
+      },
+      "ru": {
+        "english": "немного",
+        "translation": "Я немного говорю по-китайски."
+      }
+    },
+    "hsk1-262": {
+      "fr": {
+        "english": "quelques / des",
+        "translation": "J’ai acheté des fruits."
+      },
+      "ru": {
+        "english": "некоторое количество",
+        "translation": "Я купил немного фруктов."
+      }
+    },
+    "hsk1-264": {
+      "fr": {
+        "english": "certains (d’un groupe)",
+        "translation": "Certains élèves aiment chanter."
+      },
+      "ru": {
+        "english": "некоторые (из группы)",
+        "translation": "Некоторые студенты любят петь."
+      }
+    },
+    "hsk1-265": {
+      "fr": {
+        "english": "un peu / quelque peu",
+        "translation": "Il fait un peu froid aujourd’hui."
+      },
+      "ru": {
+        "english": "немного / несколько",
+        "translation": "Сегодня немного холодно."
+      }
+    },
+    "hsk1-266": {
+      "fr": {
+        "english": "certains / quelque peu",
+        "translation": "Certains fruits sont chers."
+      },
+      "ru": {
+        "english": "некоторые / несколько",
+        "translation": "Некоторые фрукты дорогие."
+      }
+    },
+    "hsk1-267": {
+      "fr": {
+        "english": "pluie",
+        "translation": "La pluie est forte aujourd’hui."
+      },
+      "ru": {
+        "english": "дождь",
+        "translation": "Сегодня сильный дождь."
+      }
+    },
+    "hsk1-268": {
+      "fr": {
+        "english": "yuan (monnaie)",
+        "translation": "Ce livre coûte vingt yuans."
+      },
+      "ru": {
+        "english": "юань (денежная единица)",
+        "translation": "Эта книга стоит двадцать юаней."
+      }
+    },
+    "hsk1-269": {
+      "fr": {
+        "english": "mois / lune",
+        "translation": "Il y a douze mois dans une année."
+      },
+      "ru": {
+        "english": "месяц / луна",
+        "translation": "В году двенадцать месяцев."
+      }
+    },
+    "hsk1-270": {
+      "fr": {
+        "english": "encore / puis",
+        "translation": "Dites-le encore, s’il vous plaît."
+      },
+      "ru": {
+        "english": "снова / затем",
+        "translation": "Скажите ещё раз, пожалуйста."
+      }
+    },
+    "hsk1-271": {
+      "fr": {
+        "english": "à / dans / se trouver",
+        "translation": "Je suis à la maison."
+      },
+      "ru": {
+        "english": "в / на / находиться",
+        "translation": "Я дома."
+      }
+    },
+    "hsk1-273": {
+      "fr": {
+        "english": "tôt",
+        "translation": "Vous êtes venu très tôt aujourd’hui."
+      },
+      "ru": {
+        "english": "ранний / рано",
+        "translation": "Сегодня вы пришли очень рано."
+      }
+    },
+    "hsk1-274": {
+      "fr": {
+        "english": "petit-déjeuner",
+        "translation": "Avez-vous pris votre petit-déjeuner ?"
+      },
+      "ru": {
+        "english": "завтрак",
+        "translation": "Вы уже позавтракали?"
+      }
+    },
+    "hsk1-275": {
+      "fr": {
+        "english": "début de matinée",
+        "translation": "Je me lève à sept heures du matin."
+      },
+      "ru": {
+        "english": "раннее утро",
+        "translation": "Я встаю в семь утра."
+      }
+    },
+    "hsk1-276": {
+      "fr": {
+        "english": "comment",
+        "translation": "Comment prononce-t-on ce caractère ?"
+      },
+      "ru": {
+        "english": "как",
+        "translation": "Как читается этот иероглиф?"
+      }
+    },
+    "hsk1-277": {
+      "fr": {
+        "english": "comment / comment est…",
+        "translation": "Que pensez-vous de ce livre ?"
+      },
+      "ru": {
+        "english": "как / какой",
+        "translation": "Что вы думаете об этой книге?"
+      }
+    },
+    "hsk1-278": {
+      "fr": {
+        "english": "chercher / trouver",
+        "translation": "Je cherche mon téléphone."
+      },
+      "ru": {
+        "english": "искать / находить",
+        "translation": "Я ищу свой телефон."
+      }
+    },
+    "hsk1-279": {
+      "fr": {
+        "english": "ceci / ce… ci",
+        "translation": "C’est mon livre."
+      },
+      "ru": {
+        "english": "этот / это",
+        "translation": "Это моя книга."
+      }
+    },
+    "hsk1-280": {
+      "fr": {
+        "english": "par ici / ce côté-ci",
+        "translation": "Venez par ici, s’il vous plaît."
+      },
+      "ru": {
+        "english": "сюда / эта сторона",
+        "translation": "Подойдите сюда, пожалуйста."
+      }
+    },
+    "hsk1-282": {
+      "fr": {
+        "english": "ici",
+        "translation": "J’habite ici."
+      },
+      "ru": {
+        "english": "здесь",
+        "translation": "Я живу здесь."
+      }
+    },
+    "hsk1-283": {
+      "fr": {
+        "english": "ici (variante orale)",
+        "translation": "Asseyez-vous ici, s’il vous plaît."
+      },
+      "ru": {
+        "english": "здесь (разговорное)",
+        "translation": "Садитесь здесь, пожалуйста."
+      }
+    },
+    "hsk1-284": {
+      "fr": {
+        "english": "ces… ci / ceux-ci",
+        "translation": "Ces livres sont tous à moi."
+      },
+      "ru": {
+        "english": "эти",
+        "translation": "Все эти книги мои."
+      }
+    },
+    "hsk1-285": {
+      "fr": {
+        "english": "vraiment",
+        "translation": "Ce plat est vraiment délicieux !"
+      },
+      "ru": {
+        "english": "действительно / правда",
+        "translation": "Это блюдо действительно вкусное!"
+      }
+    },
+    "hsk1-286": {
+      "fr": {
+        "english": "en train de",
+        "translation": "Je suis en train d’étudier."
+      },
+      "ru": {
+        "english": "в процессе / сейчас",
+        "translation": "Я сейчас занимаюсь."
+      }
+    },
+    "hsk1-287": {
+      "fr": {
+        "english": "classificateur de nombreux animaux",
+        "translation": "Ma famille a un chien."
+      },
+      "ru": {
+        "english": "счётное слово для многих животных",
+        "translation": "У нас дома есть собака."
+      }
+    },
+    "hsk1-288": {
+      "fr": {
+        "english": "savoir (un fait)",
+        "translation": "Je ne sais pas où il est."
+      },
+      "ru": {
+        "english": "знать (факт)",
+        "translation": "Я не знаю, где он."
+      }
+    },
+    "hsk1-290": {
+      "fr": {
+        "english": "chinois (notamment écrit)",
+        "translation": "J’apprends le chinois."
+      },
+      "ru": {
+        "english": "китайский язык (особенно письменный)",
+        "translation": "Я изучаю китайский."
+      }
+    },
+    "hsk1-291": {
+      "fr": {
+        "english": "midi",
+        "translation": "Mangeons ensemble à midi."
+      },
+      "ru": {
+        "english": "полдень",
+        "translation": "Давайте пообедаем вместе в полдень."
+      }
+    },
+    "hsk1-292": {
+      "fr": {
+        "english": "école secondaire",
+        "translation": "Mon grand frère est au secondaire."
+      },
+      "ru": {
+        "english": "средняя школа",
+        "translation": "Мой старший брат учится в средней школе."
+      }
+    },
+    "hsk1-293": {
+      "fr": {
+        "english": "élève du secondaire",
+        "translation": "Il est élève du secondaire."
+      },
+      "ru": {
+        "english": "ученик средней школы",
+        "translation": "Он ученик средней школы."
+      }
+    },
+    "hsk1-294": {
+      "fr": {
+        "english": "habiter / séjourner",
+        "translation": "Où habitez-vous ?"
+      },
+      "ru": {
+        "english": "жить / останавливаться",
+        "translation": "Где вы живёте?"
+      }
+    },
+    "hsk1-295": {
+      "fr": {
+        "english": "table / bureau",
+        "translation": "Le livre est sur la table."
+      },
+      "ru": {
+        "english": "стол / парта",
+        "translation": "Книга на столе."
+      }
+    },
+    "hsk1-296": {
+      "fr": {
+        "english": "caractère / mot écrit",
+        "translation": "Comment écrit-on ce caractère ?"
+      },
+      "ru": {
+        "english": "иероглиф / письменный знак",
+        "translation": "Как пишется этот иероглиф?"
+      }
+    },
+    "hsk1-298": {
+      "fr": {
+        "english": "s’asseoir / prendre un transport",
+        "translation": "Asseyez-vous sur cette chaise, s’il vous plaît."
+      },
+      "ru": {
+        "english": "сидеть / ехать на транспорте",
+        "translation": "Садитесь на этот стул, пожалуйста."
+      }
+    },
+    "hsk1-299": {
+      "fr": {
+        "english": "faire / fabriquer",
+        "translation": "Que faites-vous ?"
+      },
+      "ru": {
+        "english": "делать / создавать",
+        "translation": "Что вы делаете?"
+      }
+    },
+    "hsk1-300": {
+      "fr": {
+        "english": "cuisiner / préparer un repas",
+        "translation": "Mon père sait cuisiner."
+      },
+      "ru": {
+        "english": "готовить еду",
+        "translation": "Мой папа умеет готовить."
+      }
+    },
+    "bonus-01": {
+      "fr": {
+        "english": "excusez-moi / désolé",
+        "translation": "Excusez-moi, répétez, s’il vous plaît."
+      },
+      "ru": {
+        "english": "извините",
+        "translation": "Извините, повторите, пожалуйста."
+      }
+    },
+    "bonus-02": {
+      "fr": {
+        "english": "toilettes",
+        "translation": "Excusez-moi, où sont les toilettes ?"
+      },
+      "ru": {
+        "english": "туалет",
+        "translation": "Извините, где туалет?"
+      }
+    },
+    "bonus-03": {
+      "fr": {
+        "english": "métro",
+        "translation": "Je vais à l’école en métro."
+      },
+      "ru": {
+        "english": "метро",
+        "translation": "Я езжу в школу на метро."
+      }
+    },
+    "bonus-04": {
+      "fr": {
+        "english": "café",
+        "translation": "Je voudrais une tasse de café."
+      },
+      "ru": {
+        "english": "кофе",
+        "translation": "Я хотел бы чашку кофе."
+      }
+    },
+    "bonus-05": {
+      "fr": {
+        "english": "merci (poli)",
+        "translation": "Merci, professeur."
+      },
+      "ru": {
+        "english": "спасибо (вежливо)",
+        "translation": "Спасибо, учитель."
+      }
+    },
+    "bonus-06": {
+      "fr": {
+        "english": "aider / aide",
+        "translation": "Merci de votre aide."
+      },
+      "ru": {
+        "english": "помогать / помощь",
+        "translation": "Спасибо за вашу помощь."
+      }
+    },
+    "bonus-07": {
+      "fr": {
+        "english": "lent",
+        "translation": "Parlez un peu plus lentement, s’il vous plaît."
+      },
+      "ru": {
+        "english": "медленный",
+        "translation": "Говорите немного медленнее, пожалуйста."
+      }
+    },
+    "bonus-08": {
+      "fr": {
+        "english": "rapide",
+        "translation": "Cette voiture est rapide."
+      },
+      "ru": {
+        "english": "быстрый",
+        "translation": "Эта машина быстрая."
+      }
+    },
+    "bonus-09": {
+      "fr": {
+        "english": "comprendre ce qu’on entend",
+        "translation": "J’ai compris ce qui a été dit."
+      },
+      "ru": {
+        "english": "понимать на слух",
+        "translation": "Я понял, что было сказано."
+      }
+    },
+    "bonus-10": {
+      "fr": {
+        "english": "comprendre / clair",
+        "translation": "Je comprends ce que vous voulez dire."
+      },
+      "ru": {
+        "english": "понимать / ясно",
+        "translation": "Я понимаю, что вы имеете в виду."
+      }
+    },
+    "bonus-11": {
+      "fr": {
+        "english": "côté gauche",
+        "translation": "La librairie est à gauche."
+      },
+      "ru": {
+        "english": "левая сторона",
+        "translation": "Книжный магазин слева."
+      }
+    },
+    "bonus-12": {
+      "fr": {
+        "english": "côté droit",
+        "translation": "L’hôpital est à droite."
+      },
+      "ru": {
+        "english": "правая сторона",
+        "translation": "Больница справа."
+      }
+    },
+    "hsk2-301": {
+      "fr": {
+        "english": "particule d’exclamation (ah / oh)",
+        "translation": "Ah, c’est vous !"
+      },
+      "ru": {
+        "english": "восклицательная частица (а / о)",
+        "translation": "А, это вы!"
+      }
+    },
+    "hsk2-302": {
+      "fr": {
+        "english": "loisir / centre d’intérêt",
+        "translation": "Mon loisir est la lecture."
+      },
+      "ru": {
+        "english": "хобби / увлечение",
+        "translation": "Моё хобби — чтение."
+      }
+    },
+    "hsk2-303": {
+      "fr": {
+        "english": "blanc (couleur)",
+        "translation": "J’aime les vêtements blancs."
+      },
+      "ru": {
+        "english": "белый (цвет)",
+        "translation": "Мне нравится белая одежда."
+      }
+    },
+    "hsk2-304": {
+      "fr": {
+        "english": "classe / groupe",
+        "translation": "Il y a vingt élèves dans notre classe."
+      },
+      "ru": {
+        "english": "класс / группа",
+        "translation": "В нашем классе двадцать учеников."
+      }
+    },
+    "hsk2-305": {
+      "fr": {
+        "english": "aider",
+        "translation": "Aidez-moi à porter les livres, s’il vous plaît."
+      },
+      "ru": {
+        "english": "помогать",
+        "translation": "Помогите мне принести книги, пожалуйста."
+      }
+    },
+    "hsk2-306": {
+      "fr": {
+        "english": "aider / rendre service",
+        "translation": "Pouvez-vous aider ?"
+      },
+      "ru": {
+        "english": "помогать / оказать услугу",
+        "translation": "Можете помочь?"
+      }
+    },
+    "hsk2-307": {
+      "fr": {
+        "english": "sac / paquet",
+        "translation": "Mon sac est sur la chaise."
+      },
+      "ru": {
+        "english": "сумка / пакет",
+        "translation": "Моя сумка на стуле."
+      }
+    },
+    "hsk2-308": {
+      "fr": {
+        "english": "cahier",
+        "translation": "J’ai acheté un nouveau cahier."
+      },
+      "ru": {
+        "english": "тетрадь",
+        "translation": "Я купил новую тетрадь."
+      }
+    },
+    "hsk2-309": {
+      "fr": {
+        "english": "que / par rapport à",
+        "translation": "Mon grand frère est plus grand que moi."
+      },
+      "ru": {
+        "english": "чем / по сравнению с",
+        "translation": "Мой старший брат выше меня."
+      }
+    },
+    "hsk2-310": {
+      "fr": {
+        "english": "stylo / instrument d’écriture",
+        "translation": "Ce stylo est à moi."
+      },
+      "ru": {
+        "english": "ручка / письменная принадлежность",
+        "translation": "Эта ручка моя."
+      }
+    },
+    "hsk2-311": {
+      "fr": {
+        "english": "ne… pas (interdiction)",
+        "translation": "Ne parlez pas ; le professeur est là."
+      },
+      "ru": {
+        "english": "не надо (запрет)",
+        "translation": "Не разговаривайте, учитель пришёл."
+      }
+    },
+    "hsk2-312": {
+      "fr": {
+        "english": "pas mal / plutôt bien",
+        "translation": "Ce restaurant est plutôt bien."
+      },
+      "ru": {
+        "english": "неплохо / довольно хорошо",
+        "translation": "Этот ресторан довольно хороший."
+      }
+    },
+    "hsk2-313": {
+      "fr": {
+        "english": "excusez-moi / désolé",
+        "translation": "Pardon, répétez encore une fois, s’il vous plaît."
+      },
+      "ru": {
+        "english": "извините",
+        "translation": "Извините, скажите ещё раз, пожалуйста."
+      }
+    },
+    "hsk2-314": {
+      "fr": {
+        "english": "long",
+        "translation": "Cette route est longue."
+      },
+      "ru": {
+        "english": "длинный",
+        "translation": "Эта дорога длинная."
+      }
+    },
+    "hsk2-315": {
+      "fr": {
+        "english": "gare / arrêt",
+        "translation": "La gare est près d’ici."
+      },
+      "ru": {
+        "english": "станция / остановка",
+        "translation": "Станция недалеко отсюда."
+      }
+    },
+    "hsk2-316": {
+      "fr": {
+        "english": "sortir",
+        "translation": "Sortez par cette porte, s’il vous plaît."
+      },
+      "ru": {
+        "english": "выходить",
+        "translation": "Выходите через эту дверь, пожалуйста."
+      }
+    },
+    "hsk2-317": {
+      "fr": {
+        "english": "partir à l’étranger",
+        "translation": "Je voudrais étudier à l’étranger l’année prochaine."
+      },
+      "ru": {
+        "english": "ехать за границу",
+        "translation": "В следующем году я хотел бы учиться за границей."
+      }
+    },
+    "hsk2-318": {
+      "fr": {
+        "english": "sortir (vers le locuteur)",
+        "translation": "Sortez un instant, s’il vous plaît."
+      },
+      "ru": {
+        "english": "выйти (к говорящему)",
+        "translation": "Выйдите на минутку, пожалуйста."
+      }
+    },
+    "hsk2-319": {
+      "fr": {
+        "english": "quitter la maison / sortir",
+        "translation": "Je pars de chez moi à huit heures chaque jour."
+      },
+      "ru": {
+        "english": "выходить из дома",
+        "translation": "Я каждый день выхожу из дома в восемь."
+      }
+    },
+    "hsk2-320": {
+      "fr": {
+        "english": "sortir (en s’éloignant)",
+        "translation": "Allons nous promener."
+      },
+      "ru": {
+        "english": "выходить / уходить",
+        "translation": "Давайте пойдём погуляем."
+      }
+    },
+    "hsk2-321": {
+      "fr": {
+        "english": "lit",
+        "translation": "Je veux acheter un nouveau lit."
+      },
+      "ru": {
+        "english": "кровать",
+        "translation": "Я хочу купить новую кровать."
+      }
+    },
+    "hsk2-322": {
+      "fr": {
+        "english": "mot / expression",
+        "translation": "Que signifie ce mot ?"
+      },
+      "ru": {
+        "english": "слово / выражение",
+        "translation": "Что означает это слово?"
+      }
+    },
+    "hsk2-323": {
+      "fr": {
+        "english": "fois (classificateur)",
+        "translation": "Je suis allé en Chine trois fois."
+      },
+      "ru": {
+        "english": "раз (счётное слово)",
+        "translation": "Я был в Китае три раза."
+      }
+    },
+    "hsk2-324": {
+      "fr": {
+        "english": "depuis / de",
+        "translation": "Je vais de chez moi à l’école à pied."
+      },
+      "ru": {
+        "english": "из / от",
+        "translation": "Я иду из дома в школу пешком."
+      }
+    },
+    "hsk2-325": {
+      "fr": {
+        "english": "depuis l’enfance",
+        "translation": "J’aime dessiner depuis l’enfance."
+      },
+      "ru": {
+        "english": "с детства",
+        "translation": "Я с детства люблю рисовать."
+      }
+    },
+    "hsk2-326": {
+      "fr": {
+        "english": "faux / erreur",
+        "translation": "Ce caractère est mal écrit."
+      },
+      "ru": {
+        "english": "неправильно / ошибка",
+        "translation": "Этот иероглиф написан неправильно."
+      }
+    },
+    "hsk2-327": {
+      "fr": {
+        "english": "frapper",
+        "translation": "Ne frappez pas le chiot."
+      },
+      "ru": {
+        "english": "бить / ударять",
+        "translation": "Не бейте щенка."
+      }
+    },
+    "hsk2-328": {
+      "fr": {
+        "english": "prendre un taxi",
+        "translation": "Prenons un taxi pour l’aéroport."
+      },
+      "ru": {
+        "english": "ехать на такси",
+        "translation": "Давайте поедем в аэропорт на такси."
+      }
+    },
+    "hsk2-329": {
+      "fr": {
+        "english": "ouvrir / allumer",
+        "translation": "Ouvrez ce livre, s’il vous plaît."
+      },
+      "ru": {
+        "english": "открывать / включать",
+        "translation": "Откройте эту книгу, пожалуйста."
+      }
+    },
+    "hsk2-330": {
+      "fr": {
+        "english": "mais / cependant",
+        "translation": "Je veux y aller, mais je n’ai pas le temps."
+      },
+      "ru": {
+        "english": "но / однако",
+        "translation": "Я хочу пойти, но у меня нет времени."
+      }
+    },
+    "hsk2-331": {
+      "fr": {
+        "english": "mais / cependant",
+        "translation": "Ces vêtements sont beaux, mais trop chers."
+      },
+      "ru": {
+        "english": "но / однако",
+        "translation": "Эта одежда красивая, но слишком дорогая."
+      }
+    },
+    "hsk2-332": {
+      "fr": {
+        "english": "particule de complément (de)",
+        "translation": "Elle parle très bien."
+      },
+      "ru": {
+        "english": "частица дополнения (de)",
+        "translation": "Она говорит очень хорошо."
+      }
+    },
+    "hsk2-333": {
+      "fr": {
+        "english": "particule formant les adverbes (de)",
+        "translation": "Il a souri joyeusement."
+      },
+      "ru": {
+        "english": "частица образования наречия (de)",
+        "translation": "Он радостно улыбнулся."
+      }
+    },
+    "hsk2-334": {
+      "fr": {
+        "english": "attendre",
+        "translation": "Je vous attends à l’entrée."
+      },
+      "ru": {
+        "english": "ждать",
+        "translation": "Я жду вас у входа."
+      }
+    },
+    "hsk2-335": {
+      "fr": {
+        "english": "métro",
+        "translation": "Je vais au travail en métro."
+      },
+      "ru": {
+        "english": "метро",
+        "translation": "Я езжу на работу на метро."
+      }
+    },
+    "hsk2-336": {
+      "fr": {
+        "english": "commander (à manger ou à boire)",
+        "translation": "Commandons deux plats."
+      },
+      "ru": {
+        "english": "заказывать (еду или напитки)",
+        "translation": "Давайте закажем два блюда."
+      }
+    },
+    "hsk2-337": {
+      "fr": {
+        "english": "comprendre",
+        "translation": "Je ne comprends pas ce mot."
+      },
+      "ru": {
+        "english": "понимать",
+        "translation": "Я не понимаю это слово."
+      }
+    },
+    "hsk2-338": {
+      "fr": {
+        "english": "bouger / déplacer",
+        "translation": "Ne déplacez pas cette table, s’il vous plaît."
+      },
+      "ru": {
+        "english": "двигать / двигаться",
+        "translation": "Не двигайте этот стол, пожалуйста."
+      }
+    },
+    "hsk2-339": {
+      "fr": {
+        "english": "restaurant",
+        "translation": "Le restaurant est juste à côté de l’école."
+      },
+      "ru": {
+        "english": "ресторан",
+        "translation": "Ресторан прямо рядом со школой."
+      }
+    },
+    "hsk2-340": {
+      "fr": {
+        "english": "voler (dans les airs)",
+        "translation": "Les oiseaux volent dans le ciel."
+      },
+      "ru": {
+        "english": "летать",
+        "translation": "Птицы летят в небе."
+      }
+    },
+    "hsk2-341": {
+      "fr": {
+        "english": "grand / haut",
+        "translation": "Ce bâtiment est haut."
+      },
+      "ru": {
+        "english": "высокий",
+        "translation": "Это здание высокое."
+      }
+    },
+    "hsk2-342": {
+      "fr": {
+        "english": "lycée",
+        "translation": "Ma grande sœur est au lycée."
+      },
+      "ru": {
+        "english": "старшая школа",
+        "translation": "Моя старшая сестра учится в старшей школе."
+      }
+    },
+    "hsk2-343": {
+      "fr": {
+        "english": "dire / informer",
+        "translation": "Dites-moi votre nom, s’il vous plaît."
+      },
+      "ru": {
+        "english": "сообщать / говорить",
+        "translation": "Скажите ваше имя, пожалуйста."
+      }
+    },
+    "hsk2-344": {
+      "fr": {
+        "english": "taille / stature",
+        "translation": "Mon grand frère est grand."
+      },
+      "ru": {
+        "english": "рост",
+        "translation": "Мой старший брат высокий."
+      }
+    },
+    "hsk2-345": {
+      "fr": {
+        "english": "avec / et / suivre",
+        "translation": "J’y vais avec mon ami."
+      },
+      "ru": {
+        "english": "с / и / следовать",
+        "translation": "Я иду вместе с другом."
+      }
+    },
+    "hsk2-346": {
+      "fr": {
+        "english": "autobus",
+        "translation": "Je vais à l’école en bus tous les jours."
+      },
+      "ru": {
+        "english": "автобус",
+        "translation": "Я каждый день езжу в школу на автобусе."
+      }
+    },
+    "hsk2-347": {
+      "fr": {
+        "english": "passer / traverser / passer du temps",
+        "translation": "Traversons cette route."
+      },
+      "ru": {
+        "english": "проходить / пересекать / проводить время",
+        "translation": "Давайте перейдём эту дорогу."
+      }
+    },
+    "hsk2-348": {
+      "fr": {
+        "english": "venir (vers ici)",
+        "translation": "Venez vous asseoir ici, s’il vous plaît."
+      },
+      "ru": {
+        "english": "подойти / прийти сюда",
+        "translation": "Подойдите и садитесь, пожалуйста."
+      }
+    },
+    "hsk2-349": {
+      "fr": {
+        "english": "fêter le Nouvel An",
+        "translation": "Nous rentrons fêter le Nouvel An."
+      },
+      "ru": {
+        "english": "праздновать Новый год",
+        "translation": "Мы едем домой праздновать Новый год."
+      }
+    },
+    "hsk2-350": {
+      "fr": {
+        "english": "aller là-bas",
+        "translation": "Allez-y d’abord, j’arrive dans un instant."
+      },
+      "ru": {
+        "english": "перейти / пойти туда",
+        "translation": "Вы идите первыми, я скоро приду."
+      }
+    },
+    "hsk2-351": {
+      "fr": {
+        "english": "particule d’expérience (guo)",
+        "translation": "Je suis déjà allé en Chine."
+      },
+      "ru": {
+        "english": "частица опыта (guo)",
+        "translation": "Я был в Китае."
+      }
+    },
+    "hsk2-352": {
+      "fr": {
+        "english": "ou (question) / encore",
+        "translation": "Voulez-vous du thé ou du café ?"
+      },
+      "ru": {
+        "english": "или (в вопросе) / всё ещё",
+        "translation": "Вы будете чай или кофе?"
+      }
+    },
+    "hsk2-353": {
+      "fr": {
+        "english": "noir (couleur)",
+        "translation": "Mon cartable est noir."
+      },
+      "ru": {
+        "english": "чёрный (цвет)",
+        "translation": "Мой рюкзак чёрный."
+      }
+    },
+    "hsk2-354": {
+      "fr": {
+        "english": "thé noir",
+        "translation": "Je voudrais une tasse de thé noir."
+      },
+      "ru": {
+        "english": "чёрный чай",
+        "translation": "Я хотел бы чашку чёрного чая."
+      }
+    },
+    "hsk2-355": {
+      "fr": {
+        "english": "rouge (couleur)",
+        "translation": "Elle aime le rouge."
+      },
+      "ru": {
+        "english": "красный (цвет)",
+        "translation": "Ей нравится красный цвет."
+      }
+    },
+    "hsk2-356": {
+      "fr": {
+        "english": "derrière / au fond",
+        "translation": "La gare est derrière l’école."
+      },
+      "ru": {
+        "english": "позади / сзади",
+        "translation": "Станция за школой."
+      }
+    },
+    "hsk2-357": {
+      "fr": {
+        "english": "dépenser (argent ou temps)",
+        "translation": "J’ai dépensé cinquante yuans en livres."
+      },
+      "ru": {
+        "english": "тратить (деньги или время)",
+        "translation": "Я потратил на книги пятьдесят юаней."
+      }
+    },
+    "hsk2-358": {
+      "fr": {
+        "english": "fleur",
+        "translation": "Il y a une fleur sur la table."
+      },
+      "ru": {
+        "english": "цветок",
+        "translation": "На столе стоит цветок."
+      }
+    },
+    "hsk2-359": {
+      "fr": {
+        "english": "dessiner / peindre",
+        "translation": "J’aime dessiner."
+      },
+      "ru": {
+        "english": "рисовать",
+        "translation": "Я люблю рисовать."
+      }
+    },
+    "hsk2-360": {
+      "fr": {
+        "english": "mauvais / cassé",
+        "translation": "Mon téléphone est cassé."
+      },
+      "ru": {
+        "english": "плохой / сломанный",
+        "translation": "Мой телефон сломан."
+      }
+    },
+    "hsk2-361": {
+      "fr": {
+        "english": "revenir",
+        "translation": "Quand revenez-vous ?"
+      },
+      "ru": {
+        "english": "возвращаться сюда",
+        "translation": "Когда вы вернётесь?"
+      }
+    },
+    "hsk2-362": {
+      "fr": {
+        "english": "retourner / rentrer",
+        "translation": "Je dois rentrer maintenant."
+      },
+      "ru": {
+        "english": "возвращаться туда",
+        "translation": "Мне сейчас нужно возвращаться."
+      }
+    },
+    "hsk2-363": {
+      "fr": {
+        "english": "aéroport",
+        "translation": "L’aéroport est loin d’ici."
+      },
+      "ru": {
+        "english": "аэропорт",
+        "translation": "Аэропорт далеко отсюда."
+      }
+    },
+    "hsk2-364": {
+      "fr": {
+        "english": "billet d’avion",
+        "translation": "J’ai déjà acheté le billet d’avion."
+      },
+      "ru": {
+        "english": "авиабилет",
+        "translation": "Я уже купил авиабилет."
+      }
+    },
+    "hsk2-365": {
+      "fr": {
+        "english": "se souvenir",
+        "translation": "Vous souvenez-vous de son nom ?"
+      },
+      "ru": {
+        "english": "помнить",
+        "translation": "Вы помните его имя?"
+      }
+    },
+    "hsk2-366": {
+      "fr": {
+        "english": "classificateur des pièces",
+        "translation": "Nous voudrions deux chambres."
+      },
+      "ru": {
+        "english": "счётное слово для комнат",
+        "translation": "Мы хотели бы две комнаты."
+      }
+    },
+    "hsk2-367": {
+      "fr": {
+        "english": "enseigner (jiāo)",
+        "translation": "Le professeur nous apprend à écrire les caractères chinois."
+      },
+      "ru": {
+        "english": "учить / преподавать (jiāo)",
+        "translation": "Учитель учит нас писать китайские иероглифы."
+      }
+    },
+    "hsk2-368": {
+      "fr": {
+        "english": "salle de classe",
+        "translation": "Notre salle de classe est au deuxième étage."
+      },
+      "ru": {
+        "english": "классная комната",
+        "translation": "Наша аудитория на втором этаже."
+      }
+    },
+    "hsk2-369": {
+      "fr": {
+        "english": "présenter / présentation",
+        "translation": "Je vous présente mon ami."
+      },
+      "ru": {
+        "english": "представлять / знакомство",
+        "translation": "Позвольте представить моего друга."
+      }
+    },
+    "hsk2-370": {
+      "fr": {
+        "english": "entrer",
+        "translation": "Entrez par cette porte, s’il vous plaît."
+      },
+      "ru": {
+        "english": "входить",
+        "translation": "Войдите в эту дверь, пожалуйста."
+      }
+    },
+    "hsk2-371": {
+      "fr": {
+        "english": "proche / près",
+        "translation": "Ma maison est près de l’école."
+      },
+      "ru": {
+        "english": "близкий / близко",
+        "translation": "Мой дом недалеко от школы."
+      }
+    },
+    "hsk2-372": {
+      "fr": {
+        "english": "entrer (vers ici)",
+        "translation": "Entrez et asseyez-vous, s’il vous plaît."
+      },
+      "ru": {
+        "english": "войти (сюда)",
+        "translation": "Войдите и садитесь, пожалуйста."
+      }
+    },
+    "hsk2-373": {
+      "fr": {
+        "english": "entrer (vers l’intérieur)",
+        "translation": "Entrons voir."
+      },
+      "ru": {
+        "english": "войти (внутрь)",
+        "translation": "Давайте зайдём посмотрим."
+      }
+    },
+    "hsk2-374": {
+      "fr": {
+        "english": "souvent / fréquemment",
+        "translation": "Je mange souvent ici."
+      },
+      "ru": {
+        "english": "часто",
+        "translation": "Я часто здесь ем."
+      }
+    },
+    "hsk2-375": {
+      "fr": {
+        "english": "hôtel",
+        "translation": "Nous séjournons dans cet hôtel."
+      },
+      "ru": {
+        "english": "гостиница / отель",
+        "translation": "Мы остановились в этом отеле."
+      }
+    },
+    "hsk2-376": {
+      "fr": {
+        "english": "alors / juste / immédiatement",
+        "translation": "J’y vais tout de suite."
+      },
+      "ru": {
+        "english": "тогда / именно / сразу",
+        "translation": "Я сейчас же пойду."
+      }
+    },
+    "hsk2-377": {
+      "fr": {
+        "english": "café",
+        "translation": "Cette tasse de café est bonne."
+      },
+      "ru": {
+        "english": "кофе",
+        "translation": "Этот кофе вкусный."
+      }
+    },
+    "hsk2-378": {
+      "fr": {
+        "english": "commencer",
+        "translation": "L’examen commence à neuf heures."
+      },
+      "ru": {
+        "english": "начинать",
+        "translation": "Экзамен начинается в девять."
+      }
+    },
+    "hsk2-379": {
+      "fr": {
+        "english": "commencer un nouveau trimestre",
+        "translation": "Notre nouvelle période scolaire commence la semaine prochaine."
+      },
+      "ru": {
+        "english": "начинать учебный семестр",
+        "translation": "Новый семестр начинается на следующей неделе."
+      }
+    },
+    "hsk2-380": {
+      "fr": {
+        "english": "passer / faire passer un examen",
+        "translation": "J’ai un examen de chinois demain."
+      },
+      "ru": {
+        "english": "сдавать / проводить экзамен",
+        "translation": "Завтра у меня экзамен по китайскому."
+      }
+    },
+    "hsk2-381": {
+      "fr": {
+        "english": "examen / passer un examen",
+        "translation": "Cet examen n’est pas difficile."
+      },
+      "ru": {
+        "english": "экзамен / сдавать экзамен",
+        "translation": "Этот экзамен нетрудный."
+      }
+    },
+    "hsk2-382": {
+      "fr": {
+        "english": "possible / peut-être",
+        "translation": "Il pleuvra peut-être demain."
+      },
+      "ru": {
+        "english": "возможно / может быть",
+        "translation": "Завтра, возможно, пойдёт дождь."
+      }
+    },
+    "hsk2-383": {
+      "fr": {
+        "english": "pantalon",
+        "translation": "Ce pantalon est trop long."
+      },
+      "ru": {
+        "english": "брюки",
+        "translation": "Эти брюки слишком длинные."
+      }
+    },
+    "hsk2-384": {
+      "fr": {
+        "english": "rapide / bientôt",
+        "translation": "Il parle très vite."
+      },
+      "ru": {
+        "english": "быстрый / скоро",
+        "translation": "Он говорит очень быстро."
+      }
+    },
+    "hsk2-385": {
+      "fr": {
+        "english": "heureux / joyeux",
+        "translation": "Joyeux anniversaire !"
+      },
+      "ru": {
+        "english": "радостный / счастливый",
+        "translation": "С днём рождения!"
+      }
+    },
+    "hsk2-386": {
+      "fr": {
+        "english": "être sur le point de / bientôt",
+        "translation": "Notre cours va bientôt finir."
+      },
+      "ru": {
+        "english": "вот-вот / скоро",
+        "translation": "Наш урок скоро закончится."
+      }
+    },
+    "hsk2-387": {
+      "fr": {
+        "english": "basket-ball",
+        "translation": "Il aime jouer au basket-ball."
+      },
+      "ru": {
+        "english": "баскетбол",
+        "translation": "Он любит играть в баскетбол."
+      }
+    },
+    "hsk2-388": {
+      "fr": {
+        "english": "fatigué",
+        "translation": "Je suis un peu fatigué aujourd’hui."
+      },
+      "ru": {
+        "english": "уставший",
+        "translation": "Сегодня я немного устал."
+      }
+    },
+    "hsk2-389": {
+      "fr": {
+        "english": "à… de (distance)",
+        "translation": "Ma maison n’est pas loin de l’école."
+      },
+      "ru": {
+        "english": "от (расстояние)",
+        "translation": "Мой дом недалеко от школы."
+      }
+    },
+    "hsk2-390": {
+      "fr": {
+        "english": "à l’intérieur",
+        "translation": "Il y a un livre dans le sac."
+      },
+      "ru": {
+        "english": "внутри",
+        "translation": "В сумке есть книга."
+      }
+    },
+    "hsk2-391": {
+      "fr": {
+        "english": "bâtiment / étage",
+        "translation": "J’habite dans ce bâtiment."
+      },
+      "ru": {
+        "english": "здание / этаж",
+        "translation": "Я живу в этом здании."
+      }
+    },
+    "hsk2-392": {
+      "fr": {
+        "english": "route / chemin",
+        "translation": "Comment suivre cette route ?"
+      },
+      "ru": {
+        "english": "дорога / путь",
+        "translation": "Как пройти по этой дороге?"
+      }
+    },
+    "hsk2-393": {
+      "fr": {
+        "english": "en chemin / sur la route",
+        "translation": "Je suis en route pour l’école."
+      },
+      "ru": {
+        "english": "по дороге / в пути",
+        "translation": "Я по дороге в школу."
+      }
+    },
+    "hsk2-394": {
+      "fr": {
+        "english": "voyager / tourisme",
+        "translation": "Je voudrais voyager en Chine."
+      },
+      "ru": {
+        "english": "путешествовать / туризм",
+        "translation": "Я хотел бы поехать путешествовать в Китай."
+      }
+    },
+    "hsk2-395": {
+      "fr": {
+        "english": "thé vert",
+        "translation": "Aimez-vous boire du thé vert ?"
+      },
+      "ru": {
+        "english": "зелёный чай",
+        "translation": "Вы любите зелёный чай?"
+      }
+    },
+    "hsk2-396": {
+      "fr": {
+        "english": "vert (couleur)",
+        "translation": "Ce vêtement est vert."
+      },
+      "ru": {
+        "english": "зелёный (цвет)",
+        "translation": "Эта одежда зелёная."
+      }
+    },
+    "hsk2-397": {
+      "fr": {
+        "english": "lent",
+        "translation": "Parlez un peu plus lentement, s’il vous plaît."
+      },
+      "ru": {
+        "english": "медленный",
+        "translation": "Говорите немного медленнее, пожалуйста."
+      }
+    },
+    "hsk2-398": {
+      "fr": {
+        "english": "ennuyeux / sans intérêt",
+        "translation": "Ce film est ennuyeux."
+      },
+      "ru": {
+        "english": "скучный / неинтересный",
+        "translation": "Этот фильм скучный."
+      }
+    },
+    "hsk2-399": {
+      "fr": {
+        "english": "chaque / tous les",
+        "translation": "J’étudie chaque jour."
+      },
+      "ru": {
+        "english": "каждый",
+        "translation": "Я занимаюсь каждый день."
+      }
+    },
+    "hsk2-400": {
+      "fr": {
+        "english": "porte",
+        "translation": "Ouvrez la porte, s’il vous plaît."
+      },
+      "ru": {
+        "english": "дверь",
+        "translation": "Откройте дверь, пожалуйста."
+      }
+    },
+    "hsk2-401": {
+      "fr": {
+        "english": "entrée / seuil",
+        "translation": "Je vous attends à l’entrée de l’école."
+      },
+      "ru": {
+        "english": "вход / дверной проём",
+        "translation": "Я жду вас у входа в школу."
+      }
+    },
+    "hsk2-402": {
+      "fr": {
+        "english": "billet d’entrée",
+        "translation": "Combien coûte ce billet d’entrée ?"
+      },
+      "ru": {
+        "english": "входной билет",
+        "translation": "Сколько стоит этот входной билет?"
+      }
+    },
+    "hsk2-403": {
+      "fr": {
+        "english": "nouilles / farine",
+        "translation": "Je voudrais des nouilles aujourd’hui."
+      },
+      "ru": {
+        "english": "лапша / мука",
+        "translation": "Сегодня я хотел бы лапши."
+      }
+    },
+    "hsk2-404": {
+      "fr": {
+        "english": "classificateur des personnes",
+        "translation": "Notre classe a trois nouveaux élèves."
+      },
+      "ru": {
+        "english": "счётное слово для людей",
+        "translation": "В нашем классе три новых ученика."
+      }
+    },
+    "hsk2-405": {
+      "fr": {
+        "english": "prendre / tenir / apporter",
+        "translation": "Aidez-moi à porter ce sac, s’il vous plaît."
+      },
+      "ru": {
+        "english": "брать / держать / приносить",
+        "translation": "Помогите мне нести эту сумку, пожалуйста."
+      }
+    },
+    "hsk2-406": {
+      "fr": {
+        "english": "si / tellement (degré)",
+        "translation": "Ne parlez pas si vite."
+      },
+      "ru": {
+        "english": "так / настолько",
+        "translation": "Не говорите так быстро."
+      }
+    },
+    "hsk2-407": {
+      "fr": {
+        "english": "comme cela / de cette façon",
+        "translation": "Peut-on faire comme cela ?"
+      },
+      "ru": {
+        "english": "так / таким образом",
+        "translation": "Так можно сделать?"
+      }
+    },
+    "hsk2-408": {
+      "fr": {
+        "english": "thé au lait",
+        "translation": "Je voudrais une tasse de thé au lait."
+      },
+      "ru": {
+        "english": "чай с молоком",
+        "translation": "Я хотел бы чашку чая с молоком."
+      }
+    },
+    "hsk2-409": {
+      "fr": {
+        "english": "grand-mère paternelle",
+        "translation": "Ma grand-mère habite ici."
+      },
+      "ru": {
+        "english": "бабушка по отцу",
+        "translation": "Моя бабушка живёт здесь."
+      }
+    },
+    "hsk2-410": {
+      "fr": {
+        "english": "garçon",
+        "translation": "Ce garçon est mon petit frère."
+      },
+      "ru": {
+        "english": "мальчик",
+        "translation": "Тот мальчик — мой младший брат."
+      }
+    },
+    "hsk2-411": {
+      "fr": {
+        "english": "oiseau",
+        "translation": "Il y a un oiseau dans l’arbre."
+      },
+      "ru": {
+        "english": "птица",
+        "translation": "На дереве сидит птица."
+      }
+    },
+    "hsk2-412": {
+      "fr": {
+        "english": "fille",
+        "translation": "Cette fille est ma camarade de classe."
+      },
+      "ru": {
+        "english": "девочка",
+        "translation": "Та девочка — моя одноклассница."
+      }
+    },
+    "hsk2-413": {
+      "fr": {
+        "english": "à côté de",
+        "translation": "La librairie est à côté du supermarché."
+      },
+      "ru": {
+        "english": "рядом / возле",
+        "translation": "Книжный магазин рядом с супермаркетом."
+      }
+    },
+    "hsk2-414": {
+      "fr": {
+        "english": "courir",
+        "translation": "Ne courez pas ; marchez lentement."
+      },
+      "ru": {
+        "english": "бежать",
+        "translation": "Не бегите, идите медленно."
+      }
+    },
+    "hsk2-415": {
+      "fr": {
+        "english": "courir / faire du jogging",
+        "translation": "Je cours tous les matins."
+      },
+      "ru": {
+        "english": "бегать / заниматься бегом",
+        "translation": "Я бегаю каждое утро."
+      }
+    },
+    "hsk2-416": {
+      "fr": {
+        "english": "billet",
+        "translation": "Avez-vous acheté un billet ?"
+      },
+      "ru": {
+        "english": "билет",
+        "translation": "Вы купили билет?"
+      }
+    },
+    "hsk2-417": {
+      "fr": {
+        "english": "épouse / femme",
+        "translation": "Ma femme est professeur."
+      },
+      "ru": {
+        "english": "жена",
+        "translation": "Моя жена учитель."
+      }
+    },
+    "hsk2-418": {
+      "fr": {
+        "english": "se lever",
+        "translation": "Levez-vous, s’il vous plaît."
+      },
+      "ru": {
+        "english": "вставать",
+        "translation": "Встаньте, пожалуйста."
+      }
+    },
+    "hsk2-419": {
+      "fr": {
+        "english": "devant",
+        "translation": "L’hôpital est devant l’école."
+      },
+      "ru": {
+        "english": "впереди / перед",
+        "translation": "Больница перед школой."
+      }
+    },
+    "hsk2-420": {
+      "fr": {
+        "english": "clair / ensoleillé",
+        "translation": "Il fera beau demain."
+      },
+      "ru": {
+        "english": "ясный / солнечный",
+        "translation": "Завтра будет солнечно."
+      }
+    },
+    "hsk2-421": {
+      "fr": {
+        "english": "balle / ballon",
+        "translation": "Ce ballon est à moi."
+      },
+      "ru": {
+        "english": "мяч",
+        "translation": "Этот мяч мой."
+      }
+    },
+    "hsk2-422": {
+      "fr": {
+        "english": "laisser / permettre / demander de",
+        "translation": "Le professeur m’a demandé de lire ce mot."
+      },
+      "ru": {
+        "english": "позволять / просить",
+        "translation": "Учитель попросил меня прочитать это слово."
+      }
+    },
+    "hsk2-423": {
+      "fr": {
+        "english": "viande",
+        "translation": "Je ne veux pas manger de viande aujourd’hui."
+      },
+      "ru": {
+        "english": "мясо",
+        "translation": "Сегодня я не хочу есть мясо."
+      }
+    },
+    "hsk2-424": {
+      "fr": {
+        "english": "centre commercial",
+        "translation": "Allons au centre commercial acheter des vêtements."
+      },
+      "ru": {
+        "english": "торговый центр",
+        "translation": "Давайте поедем в торговый центр за одеждой."
+      }
+    },
+    "hsk2-425": {
+      "fr": {
+        "english": "monter (vers ici)",
+        "translation": "Montez vous asseoir, s’il vous plaît."
+      },
+      "ru": {
+        "english": "подняться сюда",
+        "translation": "Поднимайтесь и садитесь, пожалуйста."
+      }
+    },
+    "hsk2-426": {
+      "fr": {
+        "english": "sur / au-dessus",
+        "translation": "Le livre est sur la table."
+      },
+      "ru": {
+        "english": "сверху / над",
+        "translation": "Книга лежит на столе."
+      }
+    },
+    "hsk2-427": {
+      "fr": {
+        "english": "monter (vers là-bas)",
+        "translation": "Montons voir."
+      },
+      "ru": {
+        "english": "подняться туда",
+        "translation": "Давайте поднимемся посмотрим."
+      }
+    },
+    "hsk2-428": {
+      "fr": {
+        "english": "aller sur Internet",
+        "translation": "Je vais sur Internet avec mon téléphone."
+      },
+      "ru": {
+        "english": "выходить в интернет",
+        "translation": "Я выхожу в интернет с телефона."
+      }
+    },
+    "hsk2-429": {
+      "fr": {
+        "english": "corps / santé",
+        "translation": "Mon grand-père est en bonne santé."
+      },
+      "ru": {
+        "english": "тело / здоровье",
+        "translation": "У моего дедушки хорошее здоровье."
+      }
+    },
+    "hsk2-430": {
+      "fr": {
+        "english": "anniversaire",
+        "translation": "C’est mon anniversaire aujourd’hui."
+      },
+      "ru": {
+        "english": "день рождения",
+        "translation": "Сегодня мой день рождения."
+      }
+    },
+    "hsk2-431": {
+      "fr": {
+        "english": "temps / quand",
+        "translation": "Appelez-moi s’il se passe quelque chose."
+      },
+      "ru": {
+        "english": "время / когда",
+        "translation": "Позвоните мне, если что-то случится."
+      }
+    },
+    "hsk2-432": {
+      "fr": {
+        "english": "affaire / chose",
+        "translation": "J’ai quelque chose à vous dire."
+      },
+      "ru": {
+        "english": "дело / событие",
+        "translation": "Я хочу вам кое-что сказать."
+      }
+    },
+    "hsk2-433": {
+      "fr": {
+        "english": "main",
+        "translation": "Il faut se laver les mains avant de manger."
+      },
+      "ru": {
+        "english": "рука / кисть",
+        "translation": "Перед едой нужно мыть руки."
+      }
+    },
+    "hsk2-434": {
+      "fr": {
+        "english": "montre",
+        "translation": "C’est ma nouvelle montre."
+      },
+      "ru": {
+        "english": "наручные часы",
+        "translation": "Это мои новые часы."
+      }
+    },
+    "hsk2-435": {
+      "fr": {
+        "english": "cartable / sac d’école",
+        "translation": "Il y a trois livres dans mon cartable."
+      },
+      "ru": {
+        "english": "школьный рюкзак",
+        "translation": "В моём рюкзаке три книги."
+      }
+    },
+    "hsk2-436": {
+      "fr": {
+        "english": "confortable / à l’aise",
+        "translation": "Je ne me sens pas bien aujourd’hui."
+      },
+      "ru": {
+        "english": "удобный / хорошо себя чувствовать",
+        "translation": "Сегодня я плохо себя чувствую."
+      }
+    },
+    "hsk2-437": {
+      "fr": {
+        "english": "offrir / livrer / raccompagner",
+        "translation": "Je voudrais vous offrir un livre."
+      },
+      "ru": {
+        "english": "дарить / доставлять / провожать",
+        "translation": "Я хотел бы подарить вам книгу."
+      }
+    },
+    "hsk2-438": {
+      "fr": {
+        "english": "bien que / quoique",
+        "translation": "Bien qu’il pleuve, nous y sommes allés."
+      },
+      "ru": {
+        "english": "хотя",
+        "translation": "Хотя шёл дождь, мы всё равно пошли."
+      }
+    },
+    "hsk2-439": {
+      "fr": {
+        "english": "donc / c’est pourquoi",
+        "translation": "Il pleuvait aujourd’hui, donc je ne suis pas sorti."
+      },
+      "ru": {
+        "english": "поэтому",
+        "translation": "Сегодня шёл дождь, поэтому я не выходил."
+      }
+    },
+    "hsk2-440": {
+      "fr": {
+        "english": "avoir mal / douloureux",
+        "translation": "J’ai un peu mal à la tête."
+      },
+      "ru": {
+        "english": "болеть / больно",
+        "translation": "У меня немного болит голова."
+      }
+    },
+    "hsk2-441": {
+      "fr": {
+        "english": "donner un coup de pied",
+        "translation": "Allons jouer au football."
+      },
+      "ru": {
+        "english": "пинать / бить ногой",
+        "translation": "Давайте поиграем в футбол."
+      }
+    },
+    "hsk2-442": {
+      "fr": {
+        "english": "question / exercice",
+        "translation": "Comment fait-on cet exercice ?"
+      },
+      "ru": {
+        "english": "вопрос / задание",
+        "translation": "Как выполнить это задание?"
+      }
+    },
+    "hsk2-443": {
+      "fr": {
+        "english": "classificateur des objets longs",
+        "translation": "Ce pantalon est beau."
+      },
+      "ru": {
+        "english": "счётное слово для длинных предметов",
+        "translation": "Эти брюки красивые."
+      }
+    },
+    "hsk2-444": {
+      "fr": {
+        "english": "danser",
+        "translation": "Ma petite sœur aime danser."
+      },
+      "ru": {
+        "english": "танцевать",
+        "translation": "Моя младшая сестра любит танцевать."
+      }
+    },
+    "hsk2-445": {
+      "fr": {
+        "english": "tête",
+        "translation": "Je n’ai plus mal à la tête."
+      },
+      "ru": {
+        "english": "голова",
+        "translation": "Голова больше не болит."
+      }
+    },
+    "hsk2-446": {
+      "fr": {
+        "english": "pays étranger / étranger",
+        "translation": "Il étudie à l’étranger."
+      },
+      "ru": {
+        "english": "иностранное государство / за границей",
+        "translation": "Он учится за границей."
+      }
+    },
+    "hsk2-447": {
+      "fr": {
+        "english": "dehors / extérieur",
+        "translation": "Il pleut dehors."
+      },
+      "ru": {
+        "english": "снаружи / на улице",
+        "translation": "На улице идёт дождь."
+      }
+    },
+    "hsk2-448": {
+      "fr": {
+        "english": "finir / terminer",
+        "translation": "J’ai fini mes devoirs."
+      },
+      "ru": {
+        "english": "заканчивать / завершать",
+        "translation": "Я закончил домашнее задание."
+      }
+    },
+    "hsk2-449": {
+      "fr": {
+        "english": "dix mille",
+        "translation": "Cette voiture coûte cinquante mille yuans."
+      },
+      "ru": {
+        "english": "десять тысяч",
+        "translation": "Эта машина стоит пятьдесят тысяч юаней."
+      }
+    },
+    "hsk2-450": {
+      "fr": {
+        "english": "vers / en direction de",
+        "translation": "Allez à gauche, s’il vous plaît."
+      },
+      "ru": {
+        "english": "по направлению к",
+        "translation": "Идите налево, пожалуйста."
+      }
+    },
+    "hsk2-451": {
+      "fr": {
+        "english": "en ligne / sur Internet",
+        "translation": "J’ai acheté un livre sur Internet."
+      },
+      "ru": {
+        "english": "онлайн / в интернете",
+        "translation": "Я купил книгу в интернете."
+      }
+    },
+    "hsk2-452": {
+      "fr": {
+        "english": "oublier",
+        "translation": "J’ai oublié son nom."
+      },
+      "ru": {
+        "english": "забывать",
+        "translation": "Я забыл его имя."
+      }
+    },
+    "hsk2-453": {
+      "fr": {
+        "english": "classificateur poli des personnes",
+        "translation": "Ce professeur nous enseigne le chinois."
+      },
+      "ru": {
+        "english": "вежливое счётное слово для людей",
+        "translation": "Этот учитель преподаёт нам китайский."
+      }
+    },
+    "hsk2-454": {
+      "fr": {
+        "english": "pourquoi",
+        "translation": "Pourquoi apprenez-vous le chinois ?"
+      },
+      "ru": {
+        "english": "почему / зачем",
+        "translation": "Почему вы учите китайский?"
+      }
+    },
+    "hsk2-455": {
+      "fr": {
+        "english": "espérer / souhait",
+        "translation": "J’espère qu’il fera beau demain."
+      },
+      "ru": {
+        "english": "надеяться / надежда",
+        "translation": "Я надеюсь, что завтра будет солнечно."
+      }
+    },
+    "hsk2-456": {
+      "fr": {
+        "english": "laver",
+        "translation": "Je voudrais me laver les mains."
+      },
+      "ru": {
+        "english": "мыть",
+        "translation": "Я хотел бы помыть руки."
+      }
+    },
+    "hsk2-457": {
+      "fr": {
+        "english": "toilettes",
+        "translation": "Excusez-moi, où sont les toilettes ?"
+      },
+      "ru": {
+        "english": "туалет",
+        "translation": "Извините, где туалет?"
+      }
+    },
+    "hsk2-458": {
+      "fr": {
+        "english": "descendre (vers ici)",
+        "translation": "Descendez manger, s’il vous plaît."
+      },
+      "ru": {
+        "english": "спуститься сюда",
+        "translation": "Спускайтесь есть, пожалуйста."
+      }
+    },
+    "hsk2-459": {
+      "fr": {
+        "english": "sous / en dessous",
+        "translation": "Le chat est sous la table."
+      },
+      "ru": {
+        "english": "внизу / под",
+        "translation": "Кошка под столом."
+      }
+    },
+    "hsk2-460": {
+      "fr": {
+        "english": "descendre (vers là-bas)",
+        "translation": "Descendons nous promener."
+      },
+      "ru": {
+        "english": "спуститься вниз",
+        "translation": "Давайте спустимся погулять."
+      }
+    },
+    "hsk2-461": {
+      "fr": {
+        "english": "enfant",
+        "translation": "Les enfants jouent dehors."
+      },
+      "ru": {
+        "english": "ребёнок",
+        "translation": "Дети играют на улице."
+      }
+    },
+    "hsk2-462": {
+      "fr": {
+        "english": "enfance / étant petit",
+        "translation": "J’habitais ici quand j’étais enfant."
+      },
+      "ru": {
+        "english": "детство / в детстве",
+        "translation": "В детстве я жил здесь."
+      }
+    },
+    "hsk2-463": {
+      "fr": {
+        "english": "sourire / rire",
+        "translation": "Elle a ri joyeusement."
+      },
+      "ru": {
+        "english": "улыбаться / смеяться",
+        "translation": "Она радостно рассмеялась."
+      }
+    },
+    "hsk2-464": {
+      "fr": {
+        "english": "avoir pour nom de famille",
+        "translation": "Quel est votre nom de famille ?"
+      },
+      "ru": {
+        "english": "носить фамилию",
+        "translation": "Какая у вас фамилия?"
+      }
+    },
+    "hsk2-465": {
+      "fr": {
+        "english": "nom complet",
+        "translation": "Écrivez votre nom complet, s’il vous plaît."
+      },
+      "ru": {
+        "english": "полное имя",
+        "translation": "Напишите полное имя, пожалуйста."
+      }
+    },
+    "hsk2-466": {
+      "fr": {
+        "english": "couleur",
+        "translation": "Quelle couleur aimez-vous ?"
+      },
+      "ru": {
+        "english": "цвет",
+        "translation": "Какой цвет вам нравится?"
+      }
+    },
+    "hsk2-467": {
+      "fr": {
+        "english": "œil",
+        "translation": "Ses yeux sont beaux."
+      },
+      "ru": {
+        "english": "глаз",
+        "translation": "У неё красивые глаза."
+      }
+    },
+    "hsk2-468": {
+      "fr": {
+        "english": "médicament",
+        "translation": "Le médecin m’a dit de prendre un médicament."
+      },
+      "ru": {
+        "english": "лекарство",
+        "translation": "Врач сказал мне принимать лекарство."
+      }
+    },
+    "hsk2-469": {
+      "fr": {
+        "english": "pharmacie",
+        "translation": "La pharmacie est à côté de l’hôpital."
+      },
+      "ru": {
+        "english": "аптека",
+        "translation": "Аптека рядом с больницей."
+      }
+    },
+    "hsk2-470": {
+      "fr": {
+        "english": "grand-père paternel",
+        "translation": "Mon grand-père se promène chaque jour."
+      },
+      "ru": {
+        "english": "дедушка по отцу",
+        "translation": "Мой дедушка каждый день гуляет."
+      }
+    },
+    "hsk2-471": {
+      "fr": {
+        "english": "un instant / un moment",
+        "translation": "Attendez-moi un instant, s’il vous plaît."
+      },
+      "ru": {
+        "english": "мгновение / немного времени",
+        "translation": "Подождите меня немного, пожалуйста."
+      }
+    },
+    "hsk2-472": {
+      "fr": {
+        "english": "déjà",
+        "translation": "J’ai déjà mangé."
+      },
+      "ru": {
+        "english": "уже",
+        "translation": "Я уже поел."
+      }
+    },
+    "hsk2-473": {
+      "fr": {
+        "english": "ensemble",
+        "translation": "Allons en cours ensemble."
+      },
+      "ru": {
+        "english": "вместе",
+        "translation": "Давайте пойдём на занятия вместе."
+      }
+    },
+    "hsk2-474": {
+      "fr": {
+        "english": "sens / idée",
+        "translation": "Que signifie ce mot ?"
+      },
+      "ru": {
+        "english": "значение / смысл",
+        "translation": "Что означает это слово?"
+      }
+    },
+    "hsk2-475": {
+      "fr": {
+        "english": "nuageux / couvert",
+        "translation": "Le ciel est couvert aujourd’hui."
+      },
+      "ru": {
+        "english": "облачный / пасмурный",
+        "translation": "Сегодня пасмурно."
+      }
+    },
+    "hsk2-476": {
+      "fr": {
+        "english": "parce que",
+        "translation": "Je n’y suis pas allé parce que j’étais malade."
+      },
+      "ru": {
+        "english": "потому что",
+        "translation": "Я не пошёл, потому что болел."
+      }
+    },
+    "hsk2-477": {
+      "fr": {
+        "english": "nager",
+        "translation": "Les poissons nagent dans l’eau."
+      },
+      "ru": {
+        "english": "плавать",
+        "translation": "Рыбы плавают в воде."
+      }
+    },
+    "hsk2-478": {
+      "fr": {
+        "english": "nager / faire de la natation",
+        "translation": "J’aime nager."
+      },
+      "ru": {
+        "english": "плавать / заниматься плаванием",
+        "translation": "Я люблю плавать."
+      }
+    },
+    "hsk2-479": {
+      "fr": {
+        "english": "intéressant / qui a du sens",
+        "translation": "Ce livre est intéressant."
+      },
+      "ru": {
+        "english": "интересный / осмысленный",
+        "translation": "Эта книга интересная."
+      }
+    },
+    "hsk2-480": {
+      "fr": {
+        "english": "parfois",
+        "translation": "Je vais parfois à l’école en bus."
+      },
+      "ru": {
+        "english": "иногда",
+        "translation": "Иногда я езжу в школу на автобусе."
+      }
+    },
+    "hsk2-481": {
+      "fr": {
+        "english": "droite (direction)",
+        "translation": "Allez à droite, s’il vous plaît."
+      },
+      "ru": {
+        "english": "правый / направо",
+        "translation": "Идите направо, пожалуйста."
+      }
+    },
+    "hsk2-482": {
+      "fr": {
+        "english": "côté droit",
+        "translation": "L’hôpital est à droite."
+      },
+      "ru": {
+        "english": "правая сторона",
+        "translation": "Больница справа."
+      }
+    },
+    "hsk2-483": {
+      "fr": {
+        "english": "poisson",
+        "translation": "J’aime manger du poisson."
+      },
+      "ru": {
+        "english": "рыба",
+        "translation": "Я люблю есть рыбу."
+      }
+    },
+    "hsk2-484": {
+      "fr": {
+        "english": "loin / éloigné",
+        "translation": "Ma maison est loin de l’aéroport."
+      },
+      "ru": {
+        "english": "далёкий / далеко",
+        "translation": "Мой дом далеко от аэропорта."
+      }
+    },
+    "hsk2-485": {
+      "fr": {
+        "english": "sport / exercice physique",
+        "translation": "Je fais du sport chaque jour."
+      },
+      "ru": {
+        "english": "спорт / физические упражнения",
+        "translation": "Я каждый день занимаюсь спортом."
+      }
+    },
+    "hsk2-486": {
+      "fr": {
+        "english": "se tenir debout",
+        "translation": "Placez-vous ici, s’il vous plaît."
+      },
+      "ru": {
+        "english": "стоять",
+        "translation": "Встаньте здесь, пожалуйста."
+      }
+    },
+    "hsk2-487": {
+      "fr": {
+        "english": "mari / époux",
+        "translation": "Son mari travaille à l’hôpital."
+      },
+      "ru": {
+        "english": "муж",
+        "translation": "Её муж работает в больнице."
+      }
+    },
+    "hsk2-488": {
+      "fr": {
+        "english": "si / tellement (degré)",
+        "translation": "Pourquoi fait-il si chaud aujourd’hui ?"
+      },
+      "ru": {
+        "english": "так / настолько",
+        "translation": "Почему сегодня так жарко?"
+      }
+    },
+    "hsk2-489": {
+      "fr": {
+        "english": "comme ceci / de cette façon",
+        "translation": "Est-ce correct d’écrire ainsi ?"
+      },
+      "ru": {
+        "english": "так / таким образом",
+        "translation": "Так писать правильно?"
+      }
+    },
+    "hsk2-490": {
+      "fr": {
+        "english": "particule d’état continu (zhe)",
+        "translation": "La porte est ouverte."
+      },
+      "ru": {
+        "english": "частица продолжающегося состояния (zhe)",
+        "translation": "Дверь открыта."
+      }
+    },
+    "hsk2-491": {
+      "fr": {
+        "english": "juste / en train de",
+        "translation": "Je suis en train de me préparer à sortir."
+      },
+      "ru": {
+        "english": "как раз / в процессе",
+        "translation": "Я как раз собираюсь выходить."
+      }
+    },
+    "hsk2-492": {
+      "fr": {
+        "english": "semaine",
+        "translation": "Je suis très occupé cette semaine."
+      },
+      "ru": {
+        "english": "неделя",
+        "translation": "На этой неделе я очень занят."
+      }
+    },
+    "hsk2-493": {
+      "fr": {
+        "english": "préparer / se préparer",
+        "translation": "Je prépare un examen."
+      },
+      "ru": {
+        "english": "готовить / готовиться",
+        "translation": "Я готовлюсь к экзамену."
+      }
+    },
+    "hsk2-494": {
+      "fr": {
+        "english": "soi-même / moi-même",
+        "translation": "Je cuisine pour moi-même."
+      },
+      "ru": {
+        "english": "сам / себя",
+        "translation": "Я готовлю себе сам."
+      }
+    },
+    "hsk2-495": {
+      "fr": {
+        "english": "marcher / aller / partir",
+        "translation": "Allons-y."
+      },
+      "ru": {
+        "english": "идти / уходить",
+        "translation": "Пойдём."
+      }
+    },
+    "hsk2-496": {
+      "fr": {
+        "english": "marcher / aller à pied",
+        "translation": "Je vais à l’école à pied chaque jour."
+      },
+      "ru": {
+        "english": "идти пешком",
+        "translation": "Я каждый день хожу в школу пешком."
+      }
+    },
+    "hsk2-497": {
+      "fr": {
+        "english": "football",
+        "translation": "Il aime jouer au football."
+      },
+      "ru": {
+        "english": "футбол",
+        "translation": "Он любит играть в футбол."
+      }
+    },
+    "hsk2-498": {
+      "fr": {
+        "english": "le plus / superlatif",
+        "translation": "C’est le livre le plus agréable à lire."
+      },
+      "ru": {
+        "english": "самый / наиболее",
+        "translation": "Эту книгу читать интереснее всего."
+      }
+    },
+    "hsk2-499": {
+      "fr": {
+        "english": "gauche (direction)",
+        "translation": "Allez à gauche, s’il vous plaît."
+      },
+      "ru": {
+        "english": "левый / налево",
+        "translation": "Идите налево, пожалуйста."
+      }
+    },
+    "hsk2-500": {
+      "fr": {
+        "english": "côté gauche",
+        "translation": "L’école est à gauche."
+      },
+      "ru": {
+        "english": "левая сторона",
+        "translation": "Школа слева."
+      }
+    }
+  }
+}

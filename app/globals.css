@@ -2457,3 +2457,28 @@ td small {
   .notebook-step-glyph { width: 90px; flex-basis: 90px; }
   .notebook-header .pencil-toggle { margin: 0; }
 }
+
+/* Language and print controls follow the existing study controls. */
+.study-language { border: 1px solid #dce4d4; border-radius: 9px; padding: 7px 8px; background: #fdfefb; color: #53634d; font-size: 12px; max-width: 115px; }
+.pdf-library-button { margin: 0 0 18px; }
+.pdf-dialog { width: min(760px, 100%); max-height: calc(100dvh - 40px); overflow-y: auto; padding: clamp(18px, 3vw, 30px); }
+.pdf-dialog h2 { margin: 8px 0; }
+.pdf-dialog > p { color: #78836d; font-size: 13px; line-height: 1.6; }
+.pdf-filters { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0 14px; }
+.pdf-filters input, .pdf-filters select { min-width: 0; flex: 1 1 220px; padding: 12px; border: 1px solid #dce4d4; border-radius: 8px; background: white; }
+.pdf-selection-tools { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; font-size: 12px; }
+.pdf-selection-tools strong { margin-left: auto; }
+.pdf-word-list { max-height: 38dvh; overflow-y: auto; margin-bottom: 20px; border: 1px solid #e0e6d8; border-radius: 8px; }
+.pdf-word-list label { display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #edf0e7; padding: 12px; cursor: pointer; }
+.pdf-word-list input { width: 18px; height: 18px; flex-shrink: 0; accent-color: #315f50; }
+.pdf-word-list label > span[lang] { font-size: 22px; min-width: 50px; }
+.pdf-word-list small { margin-left: auto; color: #63715b; }
+html[lang="ru"] .nav-item, html[lang="fr"] .nav-item { font-size: 12px; }
+@media (max-width: 650px) {
+ .topbar { gap: 7px; flex-wrap: wrap; height: auto; min-height: 56px; padding-top: 10px; padding-bottom: 10px; }
+ .topbar-actions { flex-wrap: wrap; gap: 7px; }
+ .study-language { max-width: 98px; font-size: 11px; }
+ .pdf-word-list label { flex-wrap: wrap; }
+ .pdf-word-list small { flex-basis: 100%; margin-left: 30px; }
+ .pdf-dialog .section-top h2 { font-size: 23px; }
+}

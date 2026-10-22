@@ -1,4 +1,5 @@
 "use client";
+import { useI18n } from "./i18n";
 import { useEffect, useRef, useState } from "react";
 import HanziWriter, { type CharacterJson } from "hanzi-writer";
 export default function Guided({
@@ -16,6 +17,7 @@ export default function Guided({
   onComplete: () => void;
   onMistake: () => void;
 }) {
+  const { t, locale } = useI18n();
   const host = useRef<HTMLDivElement>(null);
   const callbacks = useRef({ onComplete, onMistake });
   callbacks.current = { onComplete, onMistake };
@@ -103,8 +105,7 @@ export default function Guided({
       />
       {error && (
         <div className="canvas-notice">
-          Character data unavailable. Reconnect and retry.
-        </div>
+          {t("Character data unavailable. Reconnect and retry.")}</div>
       )}
     </>
   );

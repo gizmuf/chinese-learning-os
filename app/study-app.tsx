@@ -9,6 +9,7 @@ import {
   ChevronRight,
   Cloud,
   CloudOff,
+  Download,
   Headphones,
   Home,
   Leaf,
@@ -27,14 +28,14 @@ import {
   X,
 } from "lucide-react";
 import {
-  items,
-  lessons,
+  items as sourceItems,
+  lessons as sourceLessons,
   curriculum,
   matchesItem,
   isInLevel,
   levelNames,
   type StudyLevel,
-  skillNames,
+  skillNames as sourceSkillNames,
   type Item,
   type Mode,
   type Skill,
@@ -57,6 +58,9 @@ import {
 import Ink from "./ink";
 import Guided from "./guided";
 import Notebook from "./notebook";
+import PdfExport from "./pdf-export";
+import { LanguagePicker, useI18n } from "./i18n";
+import { localizeItem } from "./translate";
 import { progressSchema } from "./event-schema";
 import { speak, setSpeechRate, stopAudio } from "./audio";
 import { authenticatedFetch } from "./auth-client";
@@ -82,12 +86,17 @@ export default function StudyApp({
   onSignOut: () => void;
   onManageAccount: () => void;
 }) {
+  const { locale, t } = useI18n();
+  const items = useMemo(() => sourceItems.map(item => localizeItem(item, locale)), [locale]);
+  const lessons = sourceLessons.map(lesson => ({...lesson, title: t(lesson.title), subtitle: t(lesson.subtitle)}));
+  const skillNames = Object.fromEntries(Object.entries(sourceSkillNames).map(([key,value]) => [key,t(value)])) as typeof sourceSkillNames;
   const [view, setView] = useState<View>("today");
   const [notebookEvents, setEvents] = useState<LearningEvent[]>([]);
-  const [sync, setSync] = useState("Loading your notebook…");
+  const [sync, setSync] = useState(t("Loading your notebook…"));
   const [db, setDb] = useState<IDBDatabase | null>(null);
   const syncLock = useRef(false);
-  const [selected, setSelected] = useState(items[0]);
+  const [selectedRecord, setSelected] = useState(items[0]);
+  const selected = items.find(item => item.id === selectedRecord.id) ?? items[0];
   const [skill, setSkill] = useState<Skill>("writing");
   const [mode, setMode] = useState<Mode>("trace");
   const [writingLayout, setWritingLayout] = useState<"studio" | "notebook">("studio");
@@ -96,7 +105,7 @@ export default function StudyApp({
   const [level, setLevel] = useState<StudyLevel>("hsk1");
   const studyItems = useMemo(
     () => items.filter((item) => isInLevel(item, level)),
-    [level],
+    [level, items],
   );
   const studyIds = useMemo(
     () => new Set(studyItems.map((item) => item.id)),
@@ -122,6 +131,7 @@ export default function StudyApp({
 
   const [toast, setToast] = useState("");
   const [settings, setSettings] = useState(false);
+  const [pdfSelection, setPdfSelection] = useState<string[] | null>(null);
   const [penOnly, setPenOnly] = useState(false);
   const [slowAudio, setSlowAudio] = useState(false);
   useEffect(() => {
@@ -149,7 +159,7 @@ export default function StudyApp({
         }
         setDb(store);
         setEvents(await allEvents(store));
-        setSync(user ? "Ready to sync" : "Guest · saved on this device");
+        setSync(user ? t("Ready to sync") : t("Guest · saved on this device"));
         const prefs = await readDraft<{
           penOnly: boolean;
           slowAudio?: boolean;
@@ -170,8 +180,8 @@ export default function StudyApp({
         setIsReady(true);
       })
       .catch(() => {
-        setSync("Device storage unavailable");
-        notify("Enable browser storage to save your practice.");
+        setSync(t("Device storage unavailable"));
+        notify(t("Enable browser storage to save your practice."));
       });
     return () => {
       alive = false;
@@ -185,14 +195,14 @@ export default function StudyApp({
         left,
         minutes,
         level,
-      }).catch(() => notify("Could not save preferences."));
+      }).catch(() => notify(t("Could not save preferences.")));
   }, [db, isReady, penOnly, slowAudio, left, minutes, level, notify]);
   const synchronize = useCallback(async () => {
     if (!db || !user || syncLock.current) return;
     syncLock.current = true;
     try {
       if (!navigator.onLine) throw Error("offline");
-      setSync("Syncing…");
+      setSync(t("Syncing…"));
       const local = await allEvents(db);
       const pending = local.filter((e) => !e.synced);
       for (let i = 0; i < pending.length;) {
@@ -203,7 +213,7 @@ export default function StudyApp({
             new TextEncoder().encode(JSON.stringify({ events: candidate }))
               .length > 900000
           ) {
-            if (!batch.length) throw new Error("Attempt exceeds sync limit");
+            if (!batch.length) throw new Error(t("Attempt exceeds sync limit"));
             break;
           }
           batch.push(pending[i++]);
@@ -237,12 +247,12 @@ export default function StudyApp({
         data.events.map((e: LearningEvent) => ({ ...e, synced: true })),
       );
       setEvents(await allEvents(db));
-      setSync("All progress synced");
+      setSync(t("All progress synced"));
     } catch {
       setSync(
         navigator.onLine
-          ? "Saved here · sync pending"
-          : "Offline · saved on this device",
+          ? t("Saved here · sync pending")
+          : t("Offline · saved on this device"),
       );
     } finally {
       syncLock.current = false;
@@ -283,7 +293,7 @@ export default function StudyApp({
     const d = new Date();
     d.setDate(d.getDate() - 6 + i);
     return {
-      day: isReady ? d.toLocaleDateString("en", { weekday: "narrow" }) : "·",
+      day: isReady ? d.toLocaleDateString(locale, { weekday: "narrow" }) : "·",
       count: events.filter(
         (e) => new Date(e.at).toLocaleDateString() === d.toLocaleDateString(),
       ).length,
@@ -291,10 +301,10 @@ export default function StudyApp({
     };
   });
   const record = async (e: LearningEvent) => {
-    if (!db) throw Error("Storage is not ready.");
+    if (!db) throw Error(t("Storage is not ready."));
     await putEvents(db, [{ ...e, synced: false }]);
     setEvents(await allEvents(db));
-    setSync(user ? "Saved here · syncing…" : "Guest · saved on this device");
+    setSync(user ? t("Saved here · syncing…") : t("Guest · saved on this device"));
     void synchronize();
   };
   function openPractice(item: Item, practiceMode: Mode = "trace") {
@@ -314,7 +324,7 @@ export default function StudyApp({
     const queue = makeQueue(events, s, studyItems).slice(0, count);
     if (!queue.length) {
       notify(
-        "You are all caught up for this skill. Try another skill or practice a lesson.",
+        t("You are all caught up for this skill. Try another skill or practice a lesson."),
       );
       return;
     }
@@ -383,24 +393,24 @@ export default function StudyApp({
   return (
     <div className="app-shell">
       <aside className="sidebar">
-        <a className="brand" href="/" aria-label="Chinese OS home">
+        <a className="brand" href="/" aria-label={t("Chinese OS home")}>
           <span className="brand-mark">
             <Leaf size={23} />
           </span>
           <span>
             chinese<span className="brand-os">os</span>
-            <small>A LITTLE, EVERY DAY</small>
+            <small>{t("A LITTLE, EVERY DAY")}</small>
           </span>
         </a>
-        <div className="workspace-label">YOUR STUDY SPACE</div>
+        <div className="workspace-label">{t("YOUR STUDY SPACE")}</div>
         <nav>
           {(
             [
-              { id: "today", title: "Today", icon: Home },
-              { id: "lessons", title: "My lessons", icon: BookOpen },
-              { id: "practice", title: "Writing studio", icon: PenLine },
-              { id: "reviews", title: "Review", icon: RotateCcw },
-              { id: "progress", title: "My progress", icon: TrendingUp },
+              { id: "today", title: t("Today"), icon: Home },
+              { id: "lessons", title: t("My lessons"), icon: BookOpen },
+              { id: "practice", title: t("Writing studio"), icon: PenLine },
+              { id: "reviews", title: t("Review"), icon: RotateCcw },
+              { id: "progress", title: t("My progress"), icon: TrendingUp },
             ] as const
           ).map((n) => (
             <button
@@ -418,12 +428,10 @@ export default function StudyApp({
           <span className="little-spark">
             <Sparkles size={18} />
           </span>
-          <h3>A little adds up.</h3>
+          <h3>{t("A little adds up.")}</h3>
           <p>
-            One word. One stroke.
-            <br />
-            One step closer.
-          </p>
+            {t("One word. One stroke.")}<br />
+            {t("One step closer.")}</p>
           <div className="mini-lines">
             <i />
             <i />
@@ -431,14 +439,13 @@ export default function StudyApp({
           </div>
         </div>
         <button className="settings-button" onClick={() => setSettings(true)}>
-          <Settings2 size={18} /> Study preferences
-        </button>
+          <Settings2 size={18} /> {t("Study preferences")}</button>
         <div className="profile">
           <div className="avatar">{user?.name[0]?.toUpperCase() ?? "Y"}</div>
           <div>
-            <strong>{user?.name ?? "Your notebook"}</strong>
+            <strong>{user?.name ?? t("Your notebook")}</strong>
             <small>
-              {user ? "Personal learning account" : "Try it as a guest"}
+              {user ? t("Personal learning account") : t("Try it as a guest")}
             </small>
           </div>
           {!user && (
@@ -449,7 +456,7 @@ export default function StudyApp({
                 onSignIn();
               }}
               target="_top"
-              aria-label="Sign in"
+              aria-label={t("Sign in")}
             >
               <ArrowUpRight size={18} />
             </a>
@@ -459,22 +466,23 @@ export default function StudyApp({
       <main className="main">
         <header className="topbar">
           <span>
-            <span className="breadcrumb">My study space</span>
+            <span className="breadcrumb">{t("My study space")}</span>
             <ChevronRight size={13} />
             {view === "practice"
-              ? "Writing studio"
+              ? t("Writing studio")
               : view === "today"
-                ? "Today"
+                ? t("Today")
                 : view === "lessons"
-                  ? "My lessons"
+                  ? t("My lessons")
                   : view === "reviews"
-                    ? "Review"
-                    : "My progress"}
+                    ? t("Review")
+                    : t("My progress")}
           </span>
           <div className="topbar-actions">
+            <LanguagePicker />
             <select
               className="study-level"
-              aria-label="Study level"
+              aria-label={t("Study level")}
               value={level}
               onChange={(event) =>
                 changeLevel(event.target.value as StudyLevel)
@@ -482,7 +490,7 @@ export default function StudyApp({
             >
               <option value="hsk1">HSK1 · {curriculum.hsk1}</option>
               <option value="hsk2">HSK2 · {curriculum.hsk2}</option>
-              <option value="bonus">Extras · {curriculum.extras}</option>
+              <option value="bonus">{t("Extras ·")} {curriculum.extras}</option>
             </select>
             {!user && (
               <a
@@ -494,25 +502,24 @@ export default function StudyApp({
                 }}
                 target="_top"
               >
-                Sign in
-              </a>
+                {t("Sign in")}</a>
             )}
             <button
               className="icon-button mobile-settings"
-              aria-label="Study preferences"
+              aria-label={t("Study preferences")}
               onClick={() => setSettings(true)}
             >
               <Settings2 size={16} />
             </button>
             <button className="sync-state" onClick={() => void synchronize()}>
-              {sync.includes("pending") || sync.includes("Offline") ? (
+              {sync.includes("pending") || sync.includes(t("Offline")) ? (
                 <CloudOff size={15} />
-              ) : sync === "Syncing…" ? (
+              ) : sync === t("Syncing…") ? (
                 <LoaderCircle className="spin" size={15} />
               ) : (
                 <Cloud size={15} />
               )}
-              <span>{sync}</span>
+              <span>{t(sync)}</span>
             </button>
           </div>
         </header>
@@ -521,49 +528,41 @@ export default function StudyApp({
             <>
               <div className="page-heading">
                 <div>
-                  <p className="eyebrow">YOUR DAILY PRACTICE</p>
+                  <p className="eyebrow">{t("YOUR DAILY PRACTICE")}</p>
                   <h1>
-                    A little Chinese,
-                    <br className="mobile-br" /> every day
-                    <span className="orange">.</span>
+                    {t("A little Chinese,")}<br className="mobile-br" /> {t("every day")}<span className="orange">.</span>
                   </h1>
-                  <p>Build a habit. Find your rhythm. Make it yours.</p>
+                  <p>{t("Build a habit. Find your rhythm. Make it yours.")}</p>
                 </div>
                 <div className="date-chip">
                   {isReady
-                    ? new Date().toLocaleDateString("en", {
+                    ? new Date().toLocaleDateString(locale, {
                         month: "short",
                         day: "numeric",
                       })
-                    : "Today"}
-                  <span>LET’S KEEP GROWING</span>
+                    : t("Today")}
+                  <span>{t("LET’S KEEP GROWING")}</span>
                 </div>
               </div>
               <div className="dashboard-grid">
                 <section className="hero-card">
                   <div className="hero-copy">
                     <span className="pill">
-                      <span className="status-dot" /> YOUR NEXT SMALL STEP
-                    </span>
+                      <span className="status-dot" /> {t("YOUR NEXT SMALL STEP")}</span>
                     <h2>
-                      From seeing it
-                      <br />
-                      to knowing it.
-                    </h2>
+                      {t("From seeing it")}<br />
+                      {t("to knowing it.")}</h2>
                     <p>
-                      Give your new words a little attention.
-                      <br />
-                      Your future self will thank you.
-                    </p>
+                      {t("Give your new words a little attention.")}<br />
+                      {t("Your future self will thank you.")}</p>
                     <button
                       className="primary"
                       onClick={() => startReview("meaning")}
                     >
-                      Start today’s practice <ArrowRight size={17} />
+                      {t("Start today’s practice")}<ArrowRight size={17} />
                     </button>
                     <span className="hero-caption">
-                      {minutes} minutes · at your own pace
-                    </span>
+                      {minutes} {t("minutes · at your own pace")}</span>
                   </div>
                   <div className="hero-art" aria-hidden="true">
                     <div className="art-orbit" />
@@ -582,16 +581,16 @@ export default function StudyApp({
                 </section>
                 <section className="week-card panel">
                   <div className="section-top">
-                    <h3>Your week</h3>
+                    <h3>{t("Your week")}</h3>
                     <span className="soft-icon">
                       <TrendingUp size={17} />
                     </span>
                   </div>
                   <div className="week-total">
                     {week.filter((d) => d.count > 0).length}
-                    <span> / 7 days</span>
+                    <span> / 7 {t("days")}</span>
                   </div>
-                  <p>Every practice is progress.</p>
+                  <p>{t("Every practice is progress.")}</p>
                   <div className="week-chart">
                     {week.map((d, i) => (
                       <div key={i}>
@@ -608,8 +607,8 @@ export default function StudyApp({
                   </div>
                   <small>
                     {todays.length
-                      ? "You showed up today. Keep it going."
-                      : "Your next chapter starts today."}
+                      ? t("You showed up today. Keep it going.")
+                      : t("Your next chapter starts today.")}
                   </small>
                 </section>
               </div>
@@ -623,7 +622,7 @@ export default function StudyApp({
                       {practiced}
                       <small> / {studyItems.length}</small>
                     </strong>
-                    <span>Words explored</span>
+                    <span>{t("Words explored")}</span>
                   </p>
                 </div>
                 <div>
@@ -632,7 +631,7 @@ export default function StudyApp({
                   </span>
                   <p>
                     <strong>{due}</strong>
-                    <span>Reviews due</span>
+                    <span>{t("Reviews due")}</span>
                   </p>
                 </div>
                 <div>
@@ -643,7 +642,7 @@ export default function StudyApp({
                     <strong>
                       {events.filter((e) => e.skill === "writing").length}
                     </strong>
-                    <span>Writing attempts</span>
+                    <span>{t("Writing attempts")}</span>
                   </p>
                 </div>
                 <div>
@@ -652,20 +651,20 @@ export default function StudyApp({
                   </span>
                   <p>
                     <strong>{accuracy === null ? "—" : accuracy + "%"}</strong>
-                    <span>Independent recall</span>
+                    <span>{t("Independent recall")}</span>
                   </p>
                 </div>
               </div>
               <div className="section-title">
                 <div>
-                  <h2>Pick up where you left off</h2>
-                  <p>A few useful words. A world of possibilities.</p>
+                  <h2>{t("Pick up where you left off")}</h2>
+                  <p>{t("A few useful words. A world of possibilities.")}</p>
                 </div>
                 <button
                   className="text-button"
                   onClick={() => changeView("lessons")}
                 >
-                  All lessons <ArrowRight size={16} />
+                  {t("All lessons")}<ArrowRight size={16} />
                 </button>
               </div>
               <div className="lesson-grid">
@@ -689,13 +688,12 @@ export default function StudyApp({
                     </div>
                     <div className="lesson-content">
                       <span className="eyebrow">
-                        {levelNames[level]} ·{" "}
+                        {t(levelNames[level])} ·{" "}
                         {
                           studyItems.filter((item) => item.lesson === l.id)
                             .length
                         }{" "}
-                        WORDS
-                      </span>
+                        {t("WORDS")}</span>
                       <h3>{l.title}</h3>
                       <p>{l.subtitle}</p>
                       <div className="lesson-progress">
@@ -735,12 +733,12 @@ export default function StudyApp({
                                 .map((e) => e.itemId),
                             ).size
                           }{" "}
-                          of{" "}
+                          {t("of")}{" "}
                           {
                             studyItems.filter((item) => item.lesson === l.id)
                               .length
                           }{" "}
-                          explored
+                          {t("explored")}
                         </span>
                         <ArrowRight size={17} />
                       </div>
@@ -751,11 +749,9 @@ export default function StudyApp({
               <div className="tip-strip">
                 <Lightbulb size={21} />
                 <p>
-                  <strong>Let your hand do the remembering.</strong> Try the
-                  writing studio with Apple Pencil, a finger, or your mouse.
-                </p>
+                  <strong>{t("Let your hand do the remembering.")}</strong> {t("Try the writing studio with Apple Pencil, a finger, or your mouse.")}</p>
                 <button onClick={() => openPractice(studyItems[0])}>
-                  Give it a try <ArrowRight size={16} />
+                  {t("Give it a try")}<ArrowRight size={16} />
                 </button>
               </div>
             </>
@@ -764,35 +760,35 @@ export default function StudyApp({
             <>
               <div className="page-heading">
                 <div>
-                  <p className="eyebrow">WORDS FOR YOUR REAL LIFE</p>
+                  <p className="eyebrow">{t("WORDS FOR YOUR REAL LIFE")}</p>
                   <h1>
-                    Your learning library<span className="orange">.</span>
+                    {t("Your learning library")}<span className="orange">.</span>
                   </h1>
                   <p>
-                    {levelNames[level]} · {studyItems.length} words &amp;
-                    phrases.{" "}
+                    {t(levelNames[level])} · {studyItems.length} {t("words & phrases.")}{" "}
                     {level === "bonus"
-                      ? "Useful everyday additions."
-                      : "HSK 2025 syllabus."}
+                      ? t("Useful everyday additions.")
+                      : t("HSK 2025 syllabus.")}
                   </p>
                 </div>
               </div>
+              <button className="secondary pdf-library-button" onClick={() => setPdfSelection(filtered.map(item => item.id))}><Download size={16} /> {t("Print notebook PDF")}</button>
               <div className="library-controls">
                 <label className="search-field">
                   <Search size={18} />
                   <input
-                    placeholder="Find a word, pinyin or meaning…"
+                    placeholder={t("Find a word, pinyin or meaning…")}
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                   />
                 </label>
                 <select
-                  aria-label="Choose lesson"
+                  aria-label={t("Choose lesson")}
                   value={lesson}
                   onChange={(e) => setLesson(e.target.value)}
                 >
                   <option value="all">
-                    All {levelNames[level]} words · {studyItems.length}
+                    {t("All")} {t(levelNames[level])} {t("words ·")} {studyItems.length}
                   </option>
                   {visibleLessons.map((l) => (
                     <option key={l.id} value={l.id}>
@@ -802,14 +798,14 @@ export default function StudyApp({
                 </select>
               </div>
               <p className="library-count" role="status">
-                {filtered.length} {filtered.length === 1 ? "word" : "words"} ·{" "}
-                {levelNames[level]}
+                {filtered.length} {t(filtered.length === 1 ? "word" : "words")} ·{" "}
+                {t(levelNames[level])}
               </p>
               <div className="word-grid">
                 {filtered.map((i) => (
                   <article className="word-card panel" key={i.id}>
                     <span className="eyebrow">
-                      {i.hskLevel ? `HSK${i.hskLevel}` : "EXTRA"} ·{" "}
+                      {i.hskLevel ? `HSK${i.hskLevel}` : t("EXTRA")} ·{" "}
                       {lessons.find((l) => l.id === i.lesson)?.title}
                     </span>
                     <div className="word-heading">
@@ -819,7 +815,7 @@ export default function StudyApp({
                       </div>
                       <button
                         className="icon-button"
-                        aria-label={"Listen to " + i.pinyin}
+                        aria-label={t("Listen to") + " " + i.pinyin}
                         onClick={() => speak(i.hanzi, notify, i)}
                       >
                         <Volume2 size={20} />
@@ -832,25 +828,23 @@ export default function StudyApp({
                       <small>{i.translation}</small>
                       <button
                         className="text-button"
-                        aria-label={"Listen to example: " + i.pinyin}
+                        aria-label={t("Listen to example:") + " " + i.pinyin}
                         onClick={() => speak(i.sentence, notify, i)}
                       >
-                        <Volume2 size={14} /> Listen to example
-                      </button>
+                        <Volume2 size={14} /> {t("Listen to example")}</button>
                     </div>
                     <button
                       className="text-button"
                       onClick={() => openPractice(i)}
                     >
-                      Practice writing <ArrowRight size={16} />
+                      {t("Practice writing")}<ArrowRight size={16} />
                     </button>
                   </article>
                 ))}
               </div>
               {!filtered.length && (
                 <div className="empty-state">
-                  No words found. Try another spelling or lesson.
-                </div>
+                  {t("No words found. Try another spelling or lesson.")}</div>
               )}
             </>
           )}
@@ -858,18 +852,16 @@ export default function StudyApp({
             <>
               <div className="page-heading">
                 <div>
-                  <p className="eyebrow">MAKE IT STICK</p>
+                  <p className="eyebrow">{t("MAKE IT STICK")}</p>
                   <h1>
-                    A little recall goes far<span className="orange">.</span>
+                    {t("A little recall goes far")}<span className="orange">.</span>
                   </h1>
                   <p>
-                    Your memory grows differently for every skill. Give each one
-                    its own time.
-                  </p>
+                    {t("Your memory grows differently for every skill. Give each one its own time.")}</p>
                 </div>
               </div>
               <div className="session-length">
-                <span>My session</span>
+                <span>{t("My session")}</span>
                 {[5, 10, 20].map((m) => (
                   <button
                     key={m}
@@ -904,20 +896,20 @@ export default function StudyApp({
                         <h2>{skillNames[s]}</h2>
                         <p>
                           {s === "meaning"
-                            ? "See the word. Recall what it means."
+                            ? t("See the word. Recall what it means.")
                             : s === "listening"
-                              ? "Listen carefully. Connect sound to meaning."
-                              : "An empty grid. A word from memory."}
+                              ? t("Listen carefully. Connect sound to meaning.")
+                              : t("An empty grid. A word from memory.")}
                         </p>
                         <strong>
                           {count}
-                          <small> due · {fresh} new</small>
+                          <small> {t("due ·")} {fresh} {t("new")}</small>
                         </strong>
                         <button
                           className="primary"
                           onClick={() => startReview(s)}
                         >
-                          Start {skillNames[s].toLowerCase()}{" "}
+                          {t("Start")} {skillNames[s].toLowerCase()}{" "}
                           <ArrowRight size={17} />
                         </button>
                       </section>
@@ -928,10 +920,7 @@ export default function StudyApp({
               <div className="tip-strip">
                 <Sparkles size={22} />
                 <p>
-                  FSRS schedules each skill separately at a 90% retention
-                  target. Tracing and copying are practice; they do not count as
-                  independent recall.
-                </p>
+                  {t("FSRS schedules each skill separately at a 90% retention target. Tracing and copying are practice; they do not count as independent recall.")}</p>
               </div>
             </>
           )}
@@ -941,21 +930,17 @@ export default function StudyApp({
                 <span className="completion-icon">
                   <Check size={34} />
                 </span>
-                <p className="eyebrow">SESSION COMPLETE</p>
+                <p className="eyebrow">{t("SESSION COMPLETE")}</p>
                 <h1>
-                  You showed up.
-                  <br />
-                  That’s how it starts.
-                </h1>
+                  {t("You showed up.")}<br />
+                  {t("That’s how it starts.")}</h1>
                 <p>
-                  {session?.length} words reviewed. Your next reviews are
-                  scheduled.
-                </p>
+                  {session?.length} {t("words reviewed. Your next reviews are scheduled.")}</p>
                 <button
                   className="primary"
                   onClick={() => changeView("progress")}
                 >
-                  See my progress <ArrowRight size={17} />
+                  {t("See my progress")}<ArrowRight size={17} />
                 </button>
               </section>
             ) : (
@@ -964,24 +949,24 @@ export default function StudyApp({
                   <div>
                     <p className="eyebrow">
                       {session
-                        ? `YOUR REVIEW · ${sessionIndex + 1} OF ${session.length}`
-                        : "THE WRITING STUDIO"}
+                        ? t("YOUR REVIEW · {0} OF {1}", [sessionIndex + 1, session.length])
+                        : t("THE WRITING STUDIO")}
                     </p>
                     <h1>
                       {session && skill !== "writing"
-                        ? skillNames[skill] + " practice"
-                        : "One stroke at a time"}
+                        ? skillNames[skill] + " · " + t("Practice")
+                        : t("One stroke at a time")}
                       <span className="orange">.</span>
                     </h1>
                     <p>
                       {session
-                        ? "Take a breath. Recall before you reveal."
-                        : "Watch it. Trace it. Make it yours."}
+                        ? t("Take a breath. Recall before you reveal.")
+                        : t("Watch it. Trace it. Make it yours.")}
                     </p>
                   </div>
                   {!session && (
                     <select
-                      aria-label="Select word"
+                      aria-label={t("Select word")}
                       value={selected.id}
                       onChange={(e) =>
                         setSelected(items.find((i) => i.id === e.target.value)!)
@@ -996,9 +981,10 @@ export default function StudyApp({
                   )}
                 </div>
                 {skill === "writing" && !session && (
-                  <div className="notebook-layout-switch" role="group" aria-label="Writing layout">
-                    <button className={writingLayout === "studio" ? "selected" : ""} aria-pressed={writingLayout === "studio"} onClick={() => setWritingLayout("studio")}>Single character</button>
-                    <button className={writingLayout === "notebook" ? "selected" : ""} aria-pressed={writingLayout === "notebook"} onClick={() => setWritingLayout("notebook")}><BookOpen size={16} /> Notebook · Zeszyt</button>
+                  <div className="notebook-layout-switch" role="group" aria-label={t("Writing layout")}>
+                    <button className={writingLayout === "studio" ? "selected" : ""} aria-pressed={writingLayout === "studio"} onClick={() => setWritingLayout("studio")}>{t("Single character")}</button>
+                    <button className={writingLayout === "notebook" ? "selected" : ""} aria-pressed={writingLayout === "notebook"} onClick={() => setWritingLayout("notebook")}><BookOpen size={16} /> {t("Notebook · Zeszyt")}</button>
+                    <button onClick={() => setPdfSelection([selected.id])}><Download size={16} /> {t("Print notebook PDF")}</button>
                   </div>
                 )}
                 {skill === "writing" && writingLayout === "notebook" && !session ? (
@@ -1041,51 +1027,49 @@ export default function StudyApp({
             <>
               <div className="page-heading">
                 <div>
-                  <p className="eyebrow">YOUR EFFORT, MADE VISIBLE</p>
+                  <p className="eyebrow">{t("YOUR EFFORT, MADE VISIBLE")}</p>
                   <h1>
-                    Look how far you’ve come<span className="orange">.</span>
+                    {t("Look how far you’ve come")}<span className="orange">.</span>
                   </h1>
                   <p>
-                    Practice builds familiarity. Independent recall builds
-                    lasting memory.
-                  </p>
+                    {t("Practice builds familiarity. Independent recall builds lasting memory.")}</p>
                 </div>
                 <button
                   className="secondary"
                   onClick={() => void exportBackup()}
                 >
-                  {backup ? "Export again" : "Export my history"}{" "}
+                  {backup ? t("Export again") : t("Export my history")}{" "}
                   <ArrowUpRight size={16} />
                 </button>
               </div>
               <div className="progress-summary">
                 <div className="panel">
                   <strong>{events.length}</strong>
-                  <span>Total attempts</span>
+                  <span>{t("Total attempts")}</span>
                 </div>
                 <div className="panel">
                   <strong>{independent.length}</strong>
-                  <span>Independent reviews</span>
+                  <span>{t("Independent reviews")}</span>
                 </div>
                 <div className="panel">
                   <strong>{events.length - independent.length}</strong>
-                  <span>Guided / assisted practice</span>
+                  <span>{t("Guided / assisted practice")}</span>
                 </div>
               </div>
               <div className="panel progress-table">
                 <div className="section-title">
-                  <h2>Your words, by skill</h2>
-                  <span>{practiced} words explored</span>
+                  <h2>{t("Your words, by skill")}</h2>
+                  <span>{practiced} {t("words explored")}</span>
                 </div>
                 <div className="table-scroll">
                   <table>
                     <thead>
                       <tr>
-                        <th>Word</th>
+                        <th>{t("Word")}</th>
                         {Object.values(skillNames).map((s) => (
                           <th key={s}>{s}</th>
                         ))}
-                        <th>Practice</th>
+                        <th>{t("Practice")}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -1114,15 +1098,15 @@ export default function StudyApp({
                                       }
                                     >
                                       {new Date(c.due).getTime() <= Date.now()
-                                        ? "Due now"
+                                        ? t("Due now")
                                         : new Date(c.due).toLocaleDateString(
-                                            undefined,
+                                            locale,
                                             { month: "short", day: "numeric" },
                                           )}
-                                      <small>{c.reps} reviews</small>
+                                      <small>{c.reps} {t("reviews")}</small>
                                     </span>
                                   ) : (
-                                    <span className="muted">Not reviewed</span>
+                                    <span className="muted">{t("Not reviewed")}</span>
                                   )}
                                 </td>
                               );
@@ -1130,7 +1114,7 @@ export default function StudyApp({
                             <td>
                               <button
                                 className="icon-button"
-                                aria-label={"Practice " + i.pinyin}
+                                aria-label={t("Practice") + " " + i.pinyin}
                                 onClick={() => openPractice(i, "recall")}
                               >
                                 <PenLine size={18} />
@@ -1143,13 +1127,13 @@ export default function StudyApp({
                   {!events.length && (
                     <div className="empty-state">
                       <Leaf size={32} />
-                      <h3>Your notebook is ready.</h3>
-                      <p>Start with a word. Your progress will grow here.</p>
+                      <h3>{t("Your notebook is ready.")}</h3>
+                      <p>{t("Start with a word. Your progress will grow here.")}</p>
                       <button
                         className="primary"
                         onClick={() => openPractice(studyItems[0])}
                       >
-                        Try your first word <ArrowRight size={16} />
+                        {t("Try your first word")}<ArrowRight size={16} />
                       </button>
                     </div>
                   )}
@@ -1159,8 +1143,8 @@ export default function StudyApp({
                 <Cloud size={21} />
                 <p>
                   {user
-                    ? "Your records are private to your account. Repeated offline uploads are deduplicated, and review order is rebuilt from your history."
-                    : "Guest progress stays in this browser. Sign in to keep a separate notebook across your devices."}
+                    ? t("Your records are private to your account. Repeated offline uploads are deduplicated, and review order is rebuilt from your history.")
+                    : t("Guest progress stays in this browser. Sign in to keep a separate notebook across your devices.")}
                 </p>
                 {!user && (
                   <a
@@ -1171,22 +1155,22 @@ export default function StudyApp({
                     }}
                     target="_top"
                   >
-                    Sign in <ArrowUpRight size={16} />
+                    {t("Sign in")}<ArrowUpRight size={16} />
                   </a>
                 )}
               </div>
             </>
           )}
           <footer>
-            Small steps. Lasting connections.
-            <span>CHINESE OS · MADE FOR YOUR EVERYDAY</span>
+            {t("Small steps. Lasting connections.")}<span>{t("CHINESE OS · MADE FOR YOUR EVERYDAY")}</span>
           </footer>
         </div>
       </main>
+      {pdfSelection && <PdfExport key={level} level={level} initialIds={pdfSelection} onClose={() => setPdfSelection(null)} />}
       {toast && (
         <div className="toast" role="status">
-          {toast}
-          <button onClick={() => setToast("")} aria-label="Dismiss">
+          {t(toast)}
+          <button onClick={() => setToast("")} aria-label={t("Dismiss")}>
             <X size={16} />
           </button>
         </div>
@@ -1197,23 +1181,23 @@ export default function StudyApp({
             className="settings-modal panel"
             role="dialog"
             aria-modal="true"
-            aria-label="Study preferences"
+            aria-label={t("Study preferences")}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="section-top">
-              <h2>Make yourself at home.</h2>
+              <h2>{t("Make yourself at home.")}</h2>
               <button
                 className="icon-button"
                 onClick={() => setSettings(false)}
-                aria-label="Close settings"
+                aria-label={t("Close settings")}
               >
                 <X size={20} />
               </button>
             </div>
             <label className="setting-row">
               <span>
-                <strong>Slower pronunciation</strong>
-                <small>Take your time. Keep the same natural pitch.</small>
+                <strong>{t("Slower pronunciation")}</strong>
+                <small>{t("Take your time. Keep the same natural pitch.")}</small>
               </span>
               <input
                 type="checkbox"
@@ -1223,8 +1207,8 @@ export default function StudyApp({
             </label>
             <label className="setting-row">
               <span>
-                <strong>Pencil only</strong>
-                <small>Ignore finger drawing inside the writing grid.</small>
+                <strong>{t("Pencil only")}</strong>
+                <small>{t("Ignore finger drawing inside the writing grid.")}</small>
               </span>
               <input
                 type="checkbox"
@@ -1234,8 +1218,8 @@ export default function StudyApp({
             </label>
             <label className="setting-row">
               <span>
-                <strong>Left-handed layout</strong>
-                <small>Move writing controls to the left.</small>
+                <strong>{t("Left-handed layout")}</strong>
+                <small>{t("Move writing controls to the left.")}</small>
               </span>
               <input
                 type="checkbox"
@@ -1251,13 +1235,11 @@ export default function StudyApp({
                   onManageAccount();
                 }}
               >
-                Manage learning account <ArrowUpRight size={16} />
+                {t("Manage learning account")}<ArrowUpRight size={16} />
               </button>
             )}
             <p className="muted">
-              Guest and signed-in notebooks are separate. Pronunciation uses
-              bundled Mandarin recordings.
-            </p>
+              {t("Guest and signed-in notebooks are separate. Pronunciation uses bundled Mandarin recordings.")}</p>
             {!user ? (
               <a
                 className="primary"
@@ -1268,7 +1250,7 @@ export default function StudyApp({
                 }}
                 target="_top"
               >
-                Sign in to sync progress <ArrowUpRight size={16} />
+                {t("Sign in to sync progress")}<ArrowUpRight size={16} />
               </a>
             ) : (
               <a
@@ -1280,8 +1262,7 @@ export default function StudyApp({
                 }}
                 target="_top"
               >
-                Sign out
-              </a>
+                {t("Sign out")}</a>
             )}
           </section>
         </div>
@@ -1317,14 +1298,15 @@ function Ratings({
   onRate: (r: 1 | 2 | 3 | 4) => void;
   disabled: boolean;
 }) {
+  const { t, locale } = useI18n();
   return (
     <div className="ratings">
       {(
         [
-          { r: 1, title: "Again", help: "Could not recall" },
-          { r: 2, title: "Hard", help: "Correct, with effort" },
-          { r: 3, title: "Good", help: "Recalled correctly" },
-          { r: 4, title: "Easy", help: "Quick & confident" },
+          { r: 1, title: t("Again"), help: t("Could not recall") },
+          { r: 2, title: t("Hard"), help: t("Correct, with effort") },
+          { r: 3, title: t("Good"), help: t("Recalled correctly") },
+          { r: 4, title: t("Easy"), help: t("Quick & confident") },
         ] as const
       ).map((b) => (
         <button
@@ -1353,6 +1335,7 @@ function Recall({
   next: () => void;
   notify: (m: string) => void;
 }) {
+  const { t, locale } = useI18n();
   const [revealed, setRevealed] = useState(false);
   const [saving, setSaving] = useState(false);
   const [done, setDone] = useState(false);
@@ -1368,36 +1351,36 @@ function Recall({
       );
       setDone(true);
     } catch {
-      notify("Could not save this review. Please try again.");
+      notify(t("Could not save this review. Please try again."));
     } finally {
       setSaving(false);
     }
   }
   return (
     <section className="recall-card panel">
-      <span className="pill">{skillNames[skill]} · INDEPENDENT RECALL</span>
+      <span className="pill">{t(sourceSkillNames[skill])} {t("· INDEPENDENT RECALL")}</span>
       {skill === "meaning" ? (
         <>
           <div className="recall-hanzi">{item.hanzi}</div>
           <p className="pinyin">{item.pinyin}</p>
-          <p>What does this word mean?</p>
+          <p>{t("What does this word mean?")}</p>
         </>
       ) : (
         <>
           <button
             className="listen-big"
-            aria-label="Play Chinese word"
+            aria-label={t("Play Chinese word")}
             onClick={() => speak(item.hanzi, notify, item)}
           >
             <Volume2 size={42} />
           </button>
-          <h2>What did you hear?</h2>
-          <p>Play it again if you need to. Recall the meaning.</p>
+          <h2>{t("What did you hear?")}</h2>
+          <p>{t("Play it again if you need to. Recall the meaning.")}</p>
         </>
       )}
       {!revealed ? (
         <button className="primary" onClick={() => setRevealed(true)}>
-          Reveal answer <ArrowRight size={16} />
+          {t("Reveal answer")}<ArrowRight size={16} />
         </button>
       ) : (
         <>
@@ -1416,18 +1399,16 @@ function Recall({
               className="text-button"
               onClick={() => speak(item.sentence, notify, item)}
             >
-              <Volume2 size={14} /> Listen to example
-            </button>
+              <Volume2 size={14} /> {t("Listen to example")}</button>
           </div>
           {done ? (
             <button className="primary" onClick={next}>
-              Saved · next word <ArrowRight size={17} />
+              {t("Saved · next word")}<ArrowRight size={17} />
             </button>
           ) : (
             <>
               <p className="rating-instruction">
-                Rate what you remembered before revealing.
-              </p>
+                {t("Rate what you remembered before revealing.")}</p>
               <Ratings onRate={rate} disabled={saving} />
             </>
           )}
@@ -1462,6 +1443,7 @@ function Writing({
   notify: (m: string) => void;
   session: boolean;
 }) {
+  const { t, locale } = useI18n();
   const [strokes, setStrokes] = useState<Stroke[][]>(
     Array.from(item.hanzi, () => []),
   );
@@ -1498,7 +1480,7 @@ function Writing({
       .catch(() => {
         setReady(true);
         notify(
-          "Could not restore the last drawing. You can still start a new attempt.",
+          t("Could not restore the last drawing. You can still start a new attempt."),
         );
       });
     return () => {
@@ -1515,7 +1497,7 @@ function Writing({
         revealed,
         completed: [...completed],
         attemptId: attemptId.current,
-      }).catch(() => notify("Could not save this drawing on your device."));
+      }).catch(() => notify(t("Could not save this drawing on your device.")));
   }, [
     db,
     ready,
@@ -1561,11 +1543,11 @@ function Writing({
       if (db) await saveDraft(db, key, undefined);
       notify(
         mode === "recall" && !assisted
-          ? "Review saved. Your next writing review is scheduled."
-          : "Practice saved. Independent recall has its own schedule.",
+          ? t("Review saved. Your next writing review is scheduled.")
+          : t("Practice saved. Independent recall has its own schedule."),
       );
     } catch {
-      notify("Could not save. Keep this page open and try again.");
+      notify(t("Could not save. Keep this page open and try again."));
     } finally {
       setSaving(false);
     }
@@ -1583,7 +1565,7 @@ function Writing({
                 onClick={() => setMode(m)}
               >
                 <span>{i + 1}</span>
-                {m[0].toUpperCase() + m.slice(1)}
+                {t(m[0].toUpperCase() + m.slice(1))}
               </button>
             ))}
           </div>
@@ -1593,14 +1575,13 @@ function Writing({
               checked={penOnly}
               onChange={(e) => setPenOnly(e.target.checked)}
             />
-            Pencil only
-          </label>
+            {t("Pencil only")}</label>
         </div>
         <div className="writing-prompt">
           <span className="eyebrow">
             {mode === "recall"
-              ? "WRITE FROM MEMORY"
-              : "LET YOUR HAND LEARN THE SHAPE"}
+              ? t("WRITE FROM MEMORY")
+              : t("LET YOUR HAND LEARN THE SHAPE")}
           </span>
           <h2>{item.english}</h2>
           <span className="pinyin">{item.pinyin}</span>
@@ -1611,7 +1592,7 @@ function Writing({
               key={i}
               className={index === i ? "selected" : ""}
               onClick={() => setIndex(i)}
-              aria-label={"Character " + (i + 1)}
+              aria-label={t("Character {0}", [i + 1])}
             >
               {mode === "recall" && !revealed ? i + 1 : c}
               {completed.has(i) && <Check size={11} />}
@@ -1633,7 +1614,7 @@ function Writing({
                 penOnly={penOnly}
               />
             ) : (
-              <span className="canvas-notice">Loading your saved drawing…</span>
+              <span className="canvas-notice">{t("Loading your saved drawing…")}</span>
             )
           ) : (
             <Guided
@@ -1651,14 +1632,14 @@ function Writing({
         </div>
         <p className="canvas-caption">
           {completed.has(index) && !free
-            ? "✓ Character complete. Choose the next cell."
+            ? t("✓ Character complete. Choose the next cell.")
             : mode === "watch"
-              ? "Follow the stroke order. Replay whenever you like."
+              ? t("Follow the stroke order. Replay whenever you like.")
               : mode === "trace"
-                ? "Follow the outline, one stroke at a time."
+                ? t("Follow the outline, one stroke at a time.")
                 : mode === "copy"
-                  ? "Look at the reference. Write in the empty grid."
-                  : "Write the whole word, then compare your answer."}
+                  ? t("Look at the reference. Write in the empty grid.")
+                  : t("Write the whole word, then compare your answer.")}
         </p>
         <div className="writing-tools">
           <button
@@ -1666,8 +1647,7 @@ function Writing({
             onClick={() => changeStrokes(strokes[index].slice(0, -1))}
           >
             <Undo2 size={17} />
-            Undo
-          </button>
+            {t("Undo")}</button>
           <button
             disabled={saved}
             onClick={() => {
@@ -1683,8 +1663,7 @@ function Writing({
             }}
           >
             <Trash2 size={17} />
-            Clear
-          </button>
+            {t("Clear")}</button>
           <button
             disabled={saved || revealed}
             onClick={() => {
@@ -1694,8 +1673,7 @@ function Writing({
             }}
           >
             <Lightbulb size={17} />
-            Hint
-          </button>
+            {t("Hint")}</button>
           <button
             disabled={saved}
             onClick={() => {
@@ -1708,19 +1686,18 @@ function Writing({
             }}
           >
             <Play size={17} />
-            Replay
-          </button>
+            {t("Replay")}</button>
         </div>
         <div className="writing-bottom">
           <span>
-            Character {index + 1} of {characters.length}
+            {t("Character")} {t("{0} of {1}", [index + 1, characters.length])}
           </span>
           {index < characters.length - 1 ? (
             <button
               className="secondary"
               onClick={() => setIndex((i) => i + 1)}
             >
-              Next character <ChevronRight size={16} />
+              {t("Next character")}<ChevronRight size={16} />
             </button>
           ) : !revealed && mode === "recall" ? (
             <button
@@ -1728,7 +1705,7 @@ function Writing({
               disabled={!allWritten}
               onClick={() => setRevealed(true)}
             >
-              Compare answer <ArrowRight size={16} />
+              {t("Compare answer")}<ArrowRight size={16} />
             </button>
           ) : null}
         </div>
@@ -1736,16 +1713,14 @@ function Writing({
       <aside className="reference-panel">
         <section className="panel reference-card">
           <span className="eyebrow">
-            {mode === "recall" && !revealed ? "YOUR PROMPT" : "WORD IN FOCUS"}
+            {mode === "recall" && !revealed ? t("YOUR PROMPT") : t("WORD IN FOCUS")}
           </span>
           {mode === "recall" && !revealed ? (
             <div className="hidden-answer">
               <PenLine size={33} />
-              <h3>Trust your memory.</h3>
+              <h3>{t("Trust your memory.")}</h3>
               <p>
-                The answer stays hidden until you finish. A hint counts as
-                assisted practice.
-              </p>
+                {t("The answer stays hidden until you finish. A hint counts as assisted practice.")}</p>
             </div>
           ) : (
             <>
@@ -1756,10 +1731,9 @@ function Writing({
                 className="audio-button"
                 onClick={() => speak(item.hanzi, notify, item)}
               >
-                <Volume2 size={17} /> Hear pronunciation
-              </button>
+                <Volume2 size={17} /> {t("Hear pronunciation")}</button>
               <div className="reference-example">
-                <span className="eyebrow">IN EVERYDAY LIFE</span>
+                <span className="eyebrow">{t("IN EVERYDAY LIFE")}</span>
                 <p>{item.sentence}</p>
                 <p className="pinyin">{item.sentencePinyin}</p>
                 <small>{item.translation}</small>
@@ -1767,8 +1741,7 @@ function Writing({
                   className="text-button"
                   onClick={() => speak(item.sentence, notify, item)}
                 >
-                  <Volume2 size={14} /> Listen to example
-                </button>
+                  <Volume2 size={14} /> {t("Listen to example")}</button>
               </div>
             </>
           )}
@@ -1779,22 +1752,22 @@ function Writing({
           </span>
           <h3>
             {saved
-              ? "A small step, saved."
+              ? t("A small step, saved.")
               : mode === "recall"
-                ? "Recall first. Refine second."
-                : "Familiarity comes with practice."}
+                ? t("Recall first. Refine second.")
+                : t("Familiarity comes with practice.")}
           </h3>
           <p>
             {mode === "recall"
-              ? "Compare your completed word and rate your memory. This exercise uses self-assessment; free writing is not automatically graded."
-              : "Watching, tracing and copying help your hand learn. Try recall next to check your memory."}
+              ? t("Compare your completed word and rate your memory. This exercise uses self-assessment; free writing is not automatically graded.")
+              : t("Watching, tracing and copying help your hand learn. Try recall next to check your memory.")}
           </p>
           {mode === "recall" && revealed && !saved && (
             <>
               <p className="rating-instruction">
                 {assisted
-                  ? "You used help. This saves practice only."
-                  : "How well did you remember before comparing?"}
+                  ? t("You used help. This saves practice only.")
+                  : t("How well did you remember before comparing?")}
               </p>
               <Ratings
                 onRate={(r) => void save(r)}
@@ -1808,12 +1781,12 @@ function Writing({
               disabled={!allWritten || saving || !ready}
               onClick={() => void save(0)}
             >
-              Save practice <Check size={16} />
+              {t("Save practice")}<Check size={16} />
             </button>
           )}
           {saved && (
             <button className="primary" onClick={next}>
-              Next word <ArrowRight size={17} />
+              {t("Next word")}<ArrowRight size={17} />
             </button>
           )}
         </section>
