@@ -96,6 +96,8 @@ export default function Atlas({
       setScope({ kind: "component", id: component });
     else if (group && groupById.has(group))
       setScope({ kind: "group", id: group });
+    if (!component && !group && params.get("story")==="mo")
+      setScope({ kind: "component", id: "sun" });
     if (target && atlasById.has(target)) setSelected(target);
     else if (component && componentById.has(component))
       setSelected(containing(component)[0]?.id ?? "u6674");

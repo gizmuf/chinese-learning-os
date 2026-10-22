@@ -17,3 +17,4 @@ if(storyManifest.recordings.length!==18)throw Error('Unexpected story narration 
 for(const[id,story]of Object.entries(atlasStories).filter(([id])=>id==='sun'||id==='wood'))for(const[locale,voice]of Object.entries(voices))for(let i=0;i<story.steps.length;i++){const file=`${id}-${locale}-${i}.mp3`;const r=storyManifest.recordings.find(r=>r.file===file);const bytes=readFileSync('public/atlas/stories/'+file);if(!r||r.text!==story.steps[i].caption[locale]||r.voice!==voice||bytes.length<1000||createHash('sha256').update(bytes).digest('hex')!==r.sha256)throw Error('Invalid story narration '+file);}
 console.log('Verified two visual stories and 18 EN/FR/RU narration recordings.');
 await import('./verify-atlas-workshop-audio.mjs');
+await import('./verify-atlas-family-stories.mjs');

@@ -5,6 +5,7 @@ import { useI18n } from "./i18n";
 import { A } from "./atlas-data";
 import { atlasStories, storyPinyin, type StoryId } from "./atlas-stories";
 import AtlasStory from "./atlas-story";
+import AtlasFamilyStories from "./atlas-family-stories";
 import AtlasWordScene, { extendedScenes } from "./atlas-word-scenes";
 import { extraAnchors } from "./atlas-workshop-content";
 import { familyIds, wordFamilies, assemblies, wordBuilds, checkAssemblyChoice, type Assembly, type WordBuild, type WordScene } from "./atlas-workshop-data";
@@ -18,6 +19,7 @@ import anchorSun from "../public/characters/日.json";
 const copy = {
  title:A("Make the connection","Faites le lien","Найдите связь"),
  intro:A("Watch a shape. Move its parts. Build a word.","Observez une forme. Déplacez ses parties. Composez un mot.","Увидьте форму. Соедините части. Составьте слово."),
+ trail:A("Story trail · 莫","Parcours · 莫","Истории · 莫"),
  story:A("Picture stories","Histoires en images","Истории в картинках"),family:A("Character families","Familles de caractères","Семейства знаков"),words:A("Whole words","Mots entiers","Целые слова"),
  join:A("Bring together","Assembler","Соединить"),split:A("Take apart","Séparer","Разобрать"),try:A("Build it yourself","À vous de composer","Соберите сами"),watch:A("Back to exploring","Retour à l’exploration","Вернуться к изучению"),
  prompt:A("Tap the components you need. Repeated parts can be used more than once.","Touchez les composants nécessaires. Une partie répétée peut servir plusieurs fois.","Нажмите нужные компоненты. Повторяющиеся части можно использовать несколько раз."),
@@ -36,7 +38,7 @@ const copy = {
  hearSentence:A("Hear the sentence","Écouter la phrase","Слушать предложение"),
  hear:A("Hear the word","Écouter le mot","Слушать слово"),open:A("Open character","Ouvrir le caractère","Открыть иероглиф"),
 };
-type Mode="story"|"family"|"words";
+type Mode="story"|"family"|"words"|"trail";
 type Feedback = "" | "retry" | "correct" | "picked";
 const storyIds=Object.keys(atlasStories) as StoryId[];
 function storyFor(char:string){return storyIds.find(id=>atlasStories[id].character===char);}
@@ -55,11 +57,12 @@ export default function AtlasWorkshop({character,onComponent,onCharacter,notify}
    else if(assembly){setFamily(assembly.family);setSelected(character);setMode("family");}
    const word=wordBuilds.find(w=>w.hanzi.includes(character));if(word){setWord(word.hanzi);setWordFamily("all");}
  },[character]);
+ useEffect(()=>{if(new URLSearchParams(window.location.search).get("story")==="mo")setMode("trail");},[]);
  const current=assemblies.find(a=>a.hanzi===selected&&a.family===family)??assemblies[0];
  return <section className="atlas-workshop" aria-label={copy.title[locale]}>
    <header className="workshop-intro"><p className="story-kicker">CHINESE OS · ATLAS</p><h3>{copy.title[locale]}</h3><p>{copy.intro[locale]}</p></header>
-   <div className="workshop-tabs" role="group" aria-label={copy.title[locale]}>{(["story","family","words"] as const).map(key=><button key={key} aria-pressed={mode===key} onClick={()=>setMode(key)}>{copy[key][locale]}</button>)}</div>
-   {mode==="story"?<>
+   <div className="workshop-tabs" role="group" aria-label={copy.title[locale]}>{(["story","family","words","trail"] as const).map(key=><button key={key} aria-pressed={mode===key} onClick={()=>setMode(key)}>{copy[key][locale]}</button>)}</div>
+   {mode==="trail"?<AtlasFamilyStories notify={notify}/>:mode==="story"?<>
      <div className="workshop-choices">{storyIds.map(id=><button key={id} aria-pressed={story===id} onClick={()=>setStory(id)}><strong lang="zh-Hans">{atlasStories[id].character}</strong><span>{storyPinyin[id]}</span></button>)}</div>
      <AtlasStory character={atlasStories[story].character} onComponent={onComponent} notify={notify}/>
    </>:mode==="family"?<>
