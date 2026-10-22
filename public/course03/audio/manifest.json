@@ -1,0 +1,709 @@
+{
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "language": "zh-CN",
+  "generationRate": "-10%",
+  "provider": "Microsoft Edge Read Aloud via edge-tts",
+  "edgeTtsVersion": "7.3.1",
+  "recordings": [
+    {
+      "itemId": "course03-chinese-friend",
+      "kind": "sentence",
+      "text": "你有中国朋友吗？",
+      "file": "course03-chinese-friend-sentence.mp3",
+      "sha256": "6b8f12a0a1c7fc382ae6d4dfd77d1067eebabcd140a4fadce5b68b5650644550"
+    },
+    {
+      "itemId": "course03-chinese-friend",
+      "kind": "word",
+      "text": "中国朋友",
+      "file": "course03-chinese-friend-word.mp3",
+      "sha256": "dff6e3bed30a13f56493cddb2cabe2380bd6f81960ffaa8095d26a0279909122"
+    },
+    {
+      "itemId": "course03-chinese-person",
+      "kind": "sentence",
+      "text": "你是中国人吗？",
+      "file": "course03-chinese-person-sentence.mp3",
+      "sha256": "d3785129965b6516a7b90f4ece225ff7b86c13c941c61b46d1bc2e3d12e47fa3"
+    },
+    {
+      "itemId": "course03-chinese-person",
+      "kind": "word",
+      "text": "中国人",
+      "file": "course03-chinese-person-word.mp3",
+      "sha256": "e77cb1e1c7faa1503b5d6d05402af1dd07895028e46d9f82e28fa84e4643edba"
+    },
+    {
+      "itemId": "course03-cool",
+      "kind": "sentence",
+      "text": "凉",
+      "file": "course03-cool-sentence.mp3",
+      "sha256": "f6e0660f0b807ca317daf5e44febdc0146c37b43f2fdd35fb18ee6b77794a509"
+    },
+    {
+      "itemId": "course03-cool",
+      "kind": "word",
+      "text": "凉",
+      "file": "course03-cool-word.mp3",
+      "sha256": "f1c91fad9938a8778774e697ec8cbc4fd6252dce6448b9c3f7f1697113b4d3b2"
+    },
+    {
+      "itemId": "course03-day-after",
+      "kind": "sentence",
+      "text": "后天",
+      "file": "course03-day-after-sentence.mp3",
+      "sha256": "c6f1fe1dda4e1bc76b80af707cfa75e01b04092e5aec31a1a9c1e8090b04d86d"
+    },
+    {
+      "itemId": "course03-day-after",
+      "kind": "word",
+      "text": "后天",
+      "file": "course03-day-after-word.mp3",
+      "sha256": "c6f1fe1dda4e1bc76b80af707cfa75e01b04092e5aec31a1a9c1e8090b04d86d"
+    },
+    {
+      "itemId": "course03-day-before",
+      "kind": "sentence",
+      "text": "前天",
+      "file": "course03-day-before-sentence.mp3",
+      "sha256": "b34d04cf45ed37f30896c72b50fd8a63f56474d5e2e3cf26815551ae3c58dfd7"
+    },
+    {
+      "itemId": "course03-day-before",
+      "kind": "word",
+      "text": "前天",
+      "file": "course03-day-before-word.mp3",
+      "sha256": "c702102dc5b3b1b3c03f163cd3400348a9ffd5f567fcec293bca7b1bc19ebe78"
+    },
+    {
+      "itemId": "course03-degree",
+      "kind": "sentence",
+      "text": "度",
+      "file": "course03-degree-sentence.mp3",
+      "sha256": "c58bcc6b145f01afd5778efc42fe626cbd41155610c67911468205ad0e32e606"
+    },
+    {
+      "itemId": "course03-degree",
+      "kind": "word",
+      "text": "度",
+      "file": "course03-degree-word.mp3",
+      "sha256": "c58bcc6b145f01afd5778efc42fe626cbd41155610c67911468205ad0e32e606"
+    },
+    {
+      "itemId": "course03-impressive",
+      "kind": "sentence",
+      "text": "厉害",
+      "file": "course03-impressive-sentence.mp3",
+      "sha256": "2e8bcf67d6f04568c844e73564b9e50193559c3302571d99db7d267089f3a752"
+    },
+    {
+      "itemId": "course03-impressive",
+      "kind": "word",
+      "text": "厉害",
+      "file": "course03-impressive-word.mp3",
+      "sha256": "2e8bcf67d6f04568c844e73564b9e50193559c3302571d99db7d267089f3a752"
+    },
+    {
+      "itemId": "course03-last-month",
+      "kind": "sentence",
+      "text": "上个月",
+      "file": "course03-last-month-sentence.mp3",
+      "sha256": "0d15b7ed65dce708453bb370f5f8c4886af744dbc5bae6128871ba9949ada06f"
+    },
+    {
+      "itemId": "course03-last-month",
+      "kind": "word",
+      "text": "上个月",
+      "file": "course03-last-month-word.mp3",
+      "sha256": "4182eae506191f3568874600bf8370b50d293a9141b291d3a2877a5496d52b69"
+    },
+    {
+      "itemId": "course03-last-week",
+      "kind": "sentence",
+      "text": "上个星期",
+      "file": "course03-last-week-sentence.mp3",
+      "sha256": "e0a6c2984b072fb3df83576bb37e2ef1aaef4e62af5bbd8ff38e91def2ca00d0"
+    },
+    {
+      "itemId": "course03-last-week",
+      "kind": "word",
+      "text": "上个星期",
+      "file": "course03-last-week-word.mp3",
+      "sha256": "dd404e6184d9668ad9c57e3d7fc1ba37ddc87971896f27c24f2988629c4478c3"
+    },
+    {
+      "itemId": "course03-lunch-variant",
+      "kind": "sentence",
+      "text": "中饭",
+      "file": "course03-lunch-variant-sentence.mp3",
+      "sha256": "f8eac7f1fb945c5fb032c05cc81ebe3795f70c6f480096ea06221cd7b71569c4"
+    },
+    {
+      "itemId": "course03-lunch-variant",
+      "kind": "word",
+      "text": "中饭",
+      "file": "course03-lunch-variant-word.mp3",
+      "sha256": "f8eac7f1fb945c5fb032c05cc81ebe3795f70c6f480096ea06221cd7b71569c4"
+    },
+    {
+      "itemId": "course03-mei",
+      "kind": "sentence",
+      "text": "你有没有中国朋友？",
+      "file": "course03-mei-sentence.mp3",
+      "sha256": "24ca38576260f7cb20dd34d0f3a3fc57a662e3d762a2b7ea72b55725e7488f7a"
+    },
+    {
+      "itemId": "course03-mei",
+      "kind": "word",
+      "text": "没",
+      "file": "course03-mei-word.mp3",
+      "sha256": "7be16a1d8a0f4456d0c0e9b3d68a71d07eb85b5f1c5397c5f43abaa8dcc35645"
+    },
+    {
+      "itemId": "course03-month-after",
+      "kind": "sentence",
+      "text": "下下个月",
+      "file": "course03-month-after-sentence.mp3",
+      "sha256": "6634b7cfc2a682862fb26e447bbcaf4055a9fdba0f055777b583cc4701f6adb4"
+    },
+    {
+      "itemId": "course03-month-after",
+      "kind": "word",
+      "text": "下下个月",
+      "file": "course03-month-after-word.mp3",
+      "sha256": "0a017ec5a135bcfcf415241a155853c6ff2e239cb4251c1e95f8aca73fb0f714"
+    },
+    {
+      "itemId": "course03-month-before",
+      "kind": "sentence",
+      "text": "上上个月",
+      "file": "course03-month-before-sentence.mp3",
+      "sha256": "96436ed1d42f936a479e21650662c3a3ac957d3552b0bf7fecc7988f901f518a"
+    },
+    {
+      "itemId": "course03-month-before",
+      "kind": "word",
+      "text": "上上个月",
+      "file": "course03-month-before-word.mp3",
+      "sha256": "a95f1913dfeb0695f66d07a259883f6ec0b2d8376dce87a28c4149d21dc72860"
+    },
+    {
+      "itemId": "course03-next-month",
+      "kind": "sentence",
+      "text": "下个月我们在苏州。",
+      "file": "course03-next-month-sentence.mp3",
+      "sha256": "1eaf751d7858ee01133dc0032ca870f559c1b6a07e3ee50bcad14a0ca6cfc0cc"
+    },
+    {
+      "itemId": "course03-next-month",
+      "kind": "word",
+      "text": "下个月",
+      "file": "course03-next-month-word.mp3",
+      "sha256": "5caa8beed7aa5120cbcda1cb9a115b2185645a0fb388ccedb946fa53e63a943b"
+    },
+    {
+      "itemId": "course03-next-week",
+      "kind": "sentence",
+      "text": "下个星期",
+      "file": "course03-next-week-sentence.mp3",
+      "sha256": "e481a7c080eb511fbf65b7694ab139c2e655b4d621c2bf888917163aa71e6dc1"
+    },
+    {
+      "itemId": "course03-next-week",
+      "kind": "word",
+      "text": "下个星期",
+      "file": "course03-next-week-word.mp3",
+      "sha256": "98691c9094e2135e8a4bc484884f5a289e2ddc36a55afbdb45eeee878c197994"
+    },
+    {
+      "itemId": "course03-qingdao-beer",
+      "kind": "sentence",
+      "text": "你喝过青岛啤酒吗？",
+      "file": "course03-qingdao-beer-sentence.mp3",
+      "sha256": "31d02491fea9e22dea83864e24fdf2013d035b5c1873bfbc945608e471ed95ca"
+    },
+    {
+      "itemId": "course03-qingdao-beer",
+      "kind": "word",
+      "text": "青岛啤酒",
+      "file": "course03-qingdao-beer-word.mp3",
+      "sha256": "19c622c79696df6da0cbe9748063a77285bcdea4a64d6d95b331b4857de5dfdb"
+    },
+    {
+      "itemId": "course03-s01",
+      "kind": "sentence",
+      "text": "他去过上海。",
+      "file": "course03-s01-sentence.mp3",
+      "sha256": "66e7ca005ca621959ff05ba3f19674be14215951f45f2206efb05653a4ced429"
+    },
+    {
+      "itemId": "course03-s01",
+      "kind": "word",
+      "text": "他去过上海。",
+      "file": "course03-s01-word.mp3",
+      "sha256": "66e7ca005ca621959ff05ba3f19674be14215951f45f2206efb05653a4ced429"
+    },
+    {
+      "itemId": "course03-s02",
+      "kind": "sentence",
+      "text": "他现在在苏州。",
+      "file": "course03-s02-sentence.mp3",
+      "sha256": "b0b305eed39cc438c003116ebaef446db12c476652377e2252777ae06dfd2393"
+    },
+    {
+      "itemId": "course03-s02",
+      "kind": "word",
+      "text": "他现在在苏州。",
+      "file": "course03-s02-word.mp3",
+      "sha256": "b0b305eed39cc438c003116ebaef446db12c476652377e2252777ae06dfd2393"
+    },
+    {
+      "itemId": "course03-s03",
+      "kind": "sentence",
+      "text": "他去上海了。",
+      "file": "course03-s03-sentence.mp3",
+      "sha256": "4ed450df480ea423e968074ed2c9ef41b64d5748887127f7836acc7633d183d0"
+    },
+    {
+      "itemId": "course03-s03",
+      "kind": "word",
+      "text": "他去上海了。",
+      "file": "course03-s03-word.mp3",
+      "sha256": "0ec885f67406f93d2848859f57093aeae23c62e4ad85587977e13b0366d0d3a7"
+    },
+    {
+      "itemId": "course03-s04",
+      "kind": "sentence",
+      "text": "他现在在上海。",
+      "file": "course03-s04-sentence.mp3",
+      "sha256": "c52e10f652499792f44711cecf08546bcedeab2a8f676be3aa121227bcd245f8"
+    },
+    {
+      "itemId": "course03-s04",
+      "kind": "word",
+      "text": "他现在在上海。",
+      "file": "course03-s04-word.mp3",
+      "sha256": "3b1c5d2986011275045583963879d2e552c3af2ce089f37a8d091f5d1f129086"
+    },
+    {
+      "itemId": "course03-s05",
+      "kind": "sentence",
+      "text": "你去过上海吗？",
+      "file": "course03-s05-sentence.mp3",
+      "sha256": "8769eff1f6777b1fd61dca25c3d9491e9231348614c1d83e3ceee40960a14fe5"
+    },
+    {
+      "itemId": "course03-s05",
+      "kind": "word",
+      "text": "你去过上海吗？",
+      "file": "course03-s05-word.mp3",
+      "sha256": "1ac0da6779ae510f5d50c3284c898419eb4bc9553f541b54a7f18d5c0ced8f58"
+    },
+    {
+      "itemId": "course03-s06",
+      "kind": "sentence",
+      "text": "你看过这个电影吗？",
+      "file": "course03-s06-sentence.mp3",
+      "sha256": "dc774a347cbd4ff6a77f87dd3107f031771f912ac0486f037ac1fd752d86ca39"
+    },
+    {
+      "itemId": "course03-s06",
+      "kind": "word",
+      "text": "你看过这个电影吗？",
+      "file": "course03-s06-word.mp3",
+      "sha256": "64aab95911c98615b50cc9f258f4f9e26133cf191d7b17562c4a54d9f8b65827"
+    },
+    {
+      "itemId": "course03-s07",
+      "kind": "sentence",
+      "text": "你有中国朋友吗？",
+      "file": "course03-s07-sentence.mp3",
+      "sha256": "6b8f12a0a1c7fc382ae6d4dfd77d1067eebabcd140a4fadce5b68b5650644550"
+    },
+    {
+      "itemId": "course03-s07",
+      "kind": "word",
+      "text": "你有中国朋友吗？",
+      "file": "course03-s07-word.mp3",
+      "sha256": "6b8f12a0a1c7fc382ae6d4dfd77d1067eebabcd140a4fadce5b68b5650644550"
+    },
+    {
+      "itemId": "course03-s08",
+      "kind": "sentence",
+      "text": "你有没有中国朋友？",
+      "file": "course03-s08-sentence.mp3",
+      "sha256": "24ca38576260f7cb20dd34d0f3a3fc57a662e3d762a2b7ea72b55725e7488f7a"
+    },
+    {
+      "itemId": "course03-s08",
+      "kind": "word",
+      "text": "你有没有中国朋友？",
+      "file": "course03-s08-word.mp3",
+      "sha256": "24ca38576260f7cb20dd34d0f3a3fc57a662e3d762a2b7ea72b55725e7488f7a"
+    },
+    {
+      "itemId": "course03-s09",
+      "kind": "sentence",
+      "text": "你吃包子吗？",
+      "file": "course03-s09-sentence.mp3",
+      "sha256": "2d5fc8302362dd3211b2b4bbffffa778744846b9927dc410185b5c460190f0e4"
+    },
+    {
+      "itemId": "course03-s09",
+      "kind": "word",
+      "text": "你吃包子吗？",
+      "file": "course03-s09-word.mp3",
+      "sha256": "9b96b4191b331a145325d6c585c37ddad595cbce6782814294960491a50787c4"
+    },
+    {
+      "itemId": "course03-s10",
+      "kind": "sentence",
+      "text": "你吃不吃包子？",
+      "file": "course03-s10-sentence.mp3",
+      "sha256": "4e08ca609b4beed75988ddebe7259d883af6cf71a728d3a59aa0383ef5d502e7"
+    },
+    {
+      "itemId": "course03-s10",
+      "kind": "word",
+      "text": "你吃不吃包子？",
+      "file": "course03-s10-word.mp3",
+      "sha256": "4e08ca609b4beed75988ddebe7259d883af6cf71a728d3a59aa0383ef5d502e7"
+    },
+    {
+      "itemId": "course03-s11",
+      "kind": "sentence",
+      "text": "每天我不吃早饭。",
+      "file": "course03-s11-sentence.mp3",
+      "sha256": "dfbdf76ea23737b8c16055aa18e452833e8663ba288727cf8e036d3f9c137d08"
+    },
+    {
+      "itemId": "course03-s11",
+      "kind": "word",
+      "text": "每天我不吃早饭。",
+      "file": "course03-s11-word.mp3",
+      "sha256": "52acff21512d5799312095df13b17cedad17e46e401fcfa8fd877bc71fdde6c6"
+    },
+    {
+      "itemId": "course03-s12",
+      "kind": "sentence",
+      "text": "昨天我没吃早饭。",
+      "file": "course03-s12-sentence.mp3",
+      "sha256": "0acb04202b9d6c4debb933d648a813c80a4335a0d9ce87ab9bcac9761ede0fa5"
+    },
+    {
+      "itemId": "course03-s12",
+      "kind": "word",
+      "text": "昨天我没吃早饭。",
+      "file": "course03-s12-word.mp3",
+      "sha256": "08bfb6e8a5ad72398674be2c12ce27a46a4195cbdf3aa7c75d7ecfd254002231"
+    },
+    {
+      "itemId": "course03-s13",
+      "kind": "sentence",
+      "text": "今天晴，但是很冷。",
+      "file": "course03-s13-sentence.mp3",
+      "sha256": "da643a4c0cadb3dbd012112920dbe3f24e4028e502daba6f409dc9d4a47a0ee9"
+    },
+    {
+      "itemId": "course03-s13",
+      "kind": "word",
+      "text": "今天晴，但是很冷。",
+      "file": "course03-s13-word.mp3",
+      "sha256": "da643a4c0cadb3dbd012112920dbe3f24e4028e502daba6f409dc9d4a47a0ee9"
+    },
+    {
+      "itemId": "course03-s14",
+      "kind": "sentence",
+      "text": "今天有太阳。",
+      "file": "course03-s14-sentence.mp3",
+      "sha256": "18743d9b6c11684b17dd4009e3f661a098a8117bf888ca08a8da639e71fe83f0"
+    },
+    {
+      "itemId": "course03-s14",
+      "kind": "word",
+      "text": "今天有太阳。",
+      "file": "course03-s14-word.mp3",
+      "sha256": "18743d9b6c11684b17dd4009e3f661a098a8117bf888ca08a8da639e71fe83f0"
+    },
+    {
+      "itemId": "course03-s15",
+      "kind": "sentence",
+      "text": "你们今天很早。",
+      "file": "course03-s15-sentence.mp3",
+      "sha256": "d5fe3fcba4044f1dfb73833416001b3e4ebd4654e92df827671b7e0694522681"
+    },
+    {
+      "itemId": "course03-s15",
+      "kind": "word",
+      "text": "你们今天很早。",
+      "file": "course03-s15-word.mp3",
+      "sha256": "6c59b01858630ae7a40102fa7520b7525e2687d6bd13da4c7385d4b646cd0a15"
+    },
+    {
+      "itemId": "course03-s16",
+      "kind": "sentence",
+      "text": "你是中国人吗？",
+      "file": "course03-s16-sentence.mp3",
+      "sha256": "d3785129965b6516a7b90f4ece225ff7b86c13c941c61b46d1bc2e3d12e47fa3"
+    },
+    {
+      "itemId": "course03-s16",
+      "kind": "word",
+      "text": "你是中国人吗？",
+      "file": "course03-s16-word.mp3",
+      "sha256": "d3785129965b6516a7b90f4ece225ff7b86c13c941c61b46d1bc2e3d12e47fa3"
+    },
+    {
+      "itemId": "course03-s17",
+      "kind": "sentence",
+      "text": "你是不是中国人？",
+      "file": "course03-s17-sentence.mp3",
+      "sha256": "9253d0cad90b97a80f0afc1a01331d490a485e6deed07160bbe31bb91d8c4131"
+    },
+    {
+      "itemId": "course03-s17",
+      "kind": "word",
+      "text": "你是不是中国人？",
+      "file": "course03-s17-word.mp3",
+      "sha256": "e42e26636f15087def9fc77561637cf87e2c9bdd7b5db7d2fa911abc7fb33e14"
+    },
+    {
+      "itemId": "course03-s18",
+      "kind": "sentence",
+      "text": "你吃过松鼠鳜鱼吗？",
+      "file": "course03-s18-sentence.mp3",
+      "sha256": "c8839816a2931f53404fadf4caca478f330e28d0018f3aa731c043cb40ec5126"
+    },
+    {
+      "itemId": "course03-s18",
+      "kind": "word",
+      "text": "你吃过松鼠鳜鱼吗？",
+      "file": "course03-s18-word.mp3",
+      "sha256": "c8839816a2931f53404fadf4caca478f330e28d0018f3aa731c043cb40ec5126"
+    },
+    {
+      "itemId": "course03-s19",
+      "kind": "sentence",
+      "text": "你喝过青岛啤酒吗？",
+      "file": "course03-s19-sentence.mp3",
+      "sha256": "31d02491fea9e22dea83864e24fdf2013d035b5c1873bfbc945608e471ed95ca"
+    },
+    {
+      "itemId": "course03-s19",
+      "kind": "word",
+      "text": "你喝过青岛啤酒吗？",
+      "file": "course03-s19-word.mp3",
+      "sha256": "31d02491fea9e22dea83864e24fdf2013d035b5c1873bfbc945608e471ed95ca"
+    },
+    {
+      "itemId": "course03-s20",
+      "kind": "sentence",
+      "text": "今天你好吗？",
+      "file": "course03-s20-sentence.mp3",
+      "sha256": "6134d32cf53052ad03eb0aa25f5a0aa10efbbca7c512ecd3f5805df5260b580e"
+    },
+    {
+      "itemId": "course03-s20",
+      "kind": "word",
+      "text": "今天你好吗？",
+      "file": "course03-s20-word.mp3",
+      "sha256": "99008262bd147d03a00c8411f30a417e58c40a222db2e2b551ccfda6d59be593"
+    },
+    {
+      "itemId": "course03-s21",
+      "kind": "sentence",
+      "text": "我没看过。",
+      "file": "course03-s21-sentence.mp3",
+      "sha256": "e9b46c52db3cc748b27e882e8fe992ab57f2b65efe9d9e4212b15a58dcf9e127"
+    },
+    {
+      "itemId": "course03-s21",
+      "kind": "word",
+      "text": "我没看过。",
+      "file": "course03-s21-word.mp3",
+      "sha256": "500562d8b87b61c2de2a878e2cac8c92a60ed8e04fc3d009a3c06e243a1749d9"
+    },
+    {
+      "itemId": "course03-s22",
+      "kind": "sentence",
+      "text": "下个月我们在苏州。",
+      "file": "course03-s22-sentence.mp3",
+      "sha256": "1eaf751d7858ee01133dc0032ca870f559c1b6a07e3ee50bcad14a0ca6cfc0cc"
+    },
+    {
+      "itemId": "course03-s22",
+      "kind": "word",
+      "text": "下个月我们在苏州。",
+      "file": "course03-s22-word.mp3",
+      "sha256": "1eaf751d7858ee01133dc0032ca870f559c1b6a07e3ee50bcad14a0ca6cfc0cc"
+    },
+    {
+      "itemId": "course03-shanghai",
+      "kind": "sentence",
+      "text": "他去过上海。",
+      "file": "course03-shanghai-sentence.mp3",
+      "sha256": "66e7ca005ca621959ff05ba3f19674be14215951f45f2206efb05653a4ced429"
+    },
+    {
+      "itemId": "course03-shanghai",
+      "kind": "word",
+      "text": "上海",
+      "file": "course03-shanghai-word.mp3",
+      "sha256": "3d4f62f24bbdfce656c8401594c8d035ab7b13bb926d1caf393c53fd2862cacb"
+    },
+    {
+      "itemId": "course03-shy",
+      "kind": "sentence",
+      "text": "害羞",
+      "file": "course03-shy-sentence.mp3",
+      "sha256": "e85164276a51b957de1ca2ec9928908194a3d631c364222683c59b65c45db92f"
+    },
+    {
+      "itemId": "course03-shy",
+      "kind": "word",
+      "text": "害羞",
+      "file": "course03-shy-word.mp3",
+      "sha256": "b8c51dde68d42d447fcdd850527b692a81c290303480a2681bb6179fe9f51d90"
+    },
+    {
+      "itemId": "course03-squirrel-fish",
+      "kind": "sentence",
+      "text": "你吃过松鼠鳜鱼吗？",
+      "file": "course03-squirrel-fish-sentence.mp3",
+      "sha256": "c8839816a2931f53404fadf4caca478f330e28d0018f3aa731c043cb40ec5126"
+    },
+    {
+      "itemId": "course03-squirrel-fish",
+      "kind": "word",
+      "text": "松鼠鳜鱼",
+      "file": "course03-squirrel-fish-word.mp3",
+      "sha256": "6876093097a6c56cc3d050417b1361bd1b34d451ca529c72bdbe4c7f4398bfae"
+    },
+    {
+      "itemId": "course03-sun",
+      "kind": "sentence",
+      "text": "今天有太阳。",
+      "file": "course03-sun-sentence.mp3",
+      "sha256": "18743d9b6c11684b17dd4009e3f661a098a8117bf888ca08a8da639e71fe83f0"
+    },
+    {
+      "itemId": "course03-sun",
+      "kind": "word",
+      "text": "太阳",
+      "file": "course03-sun-word.mp3",
+      "sha256": "8126d807b9962d49fa38a88198b7efa46f224faeef68d4f4d496faf78defb282"
+    },
+    {
+      "itemId": "course03-suzhou",
+      "kind": "sentence",
+      "text": "他现在在苏州。",
+      "file": "course03-suzhou-sentence.mp3",
+      "sha256": "b0b305eed39cc438c003116ebaef446db12c476652377e2252777ae06dfd2393"
+    },
+    {
+      "itemId": "course03-suzhou",
+      "kind": "word",
+      "text": "苏州",
+      "file": "course03-suzhou-word.mp3",
+      "sha256": "605651e54eac57a961d612056a672e36aa8aa2773d433c6ad404d8bd69b05241"
+    },
+    {
+      "itemId": "course03-taste",
+      "kind": "sentence",
+      "text": "尝",
+      "file": "course03-taste-sentence.mp3",
+      "sha256": "41c02f87fc3d9420c01f86f2edeb895adc23c75d383d0dff66ba443bccc4fac0"
+    },
+    {
+      "itemId": "course03-taste",
+      "kind": "word",
+      "text": "尝",
+      "file": "course03-taste-word.mp3",
+      "sha256": "a3fdb9fa8f39b3215f48278a367f647b26e14288b8902d362c1ae791c10c8302"
+    },
+    {
+      "itemId": "course03-this-month",
+      "kind": "sentence",
+      "text": "这个月",
+      "file": "course03-this-month-sentence.mp3",
+      "sha256": "566ace8d6cddce8f3137333fabcfc42c373bc0130e6f2166c88d8fa6db34c3ea"
+    },
+    {
+      "itemId": "course03-this-month",
+      "kind": "word",
+      "text": "这个月",
+      "file": "course03-this-month-word.mp3",
+      "sha256": "566ace8d6cddce8f3137333fabcfc42c373bc0130e6f2166c88d8fa6db34c3ea"
+    },
+    {
+      "itemId": "course03-this-week",
+      "kind": "sentence",
+      "text": "这个星期",
+      "file": "course03-this-week-sentence.mp3",
+      "sha256": "914cc012e8677fe8fbc8c9333d3a76bc1195695ddda9e585e86c4b8a35c5a403"
+    },
+    {
+      "itemId": "course03-this-week",
+      "kind": "word",
+      "text": "这个星期",
+      "file": "course03-this-week-word.mp3",
+      "sha256": "927f582c23857020aca32705833ea5163858a44e0652ebd797fe3250d5b53422"
+    },
+    {
+      "itemId": "course03-week-after",
+      "kind": "sentence",
+      "text": "下下个星期",
+      "file": "course03-week-after-sentence.mp3",
+      "sha256": "0da6dc7c92f3f2953b58151aaa73511e722cc5306a180667ae6136f99195e8fa"
+    },
+    {
+      "itemId": "course03-week-after",
+      "kind": "word",
+      "text": "下下个星期",
+      "file": "course03-week-after-word.mp3",
+      "sha256": "ea020ad18e2eb02111d904198aa9c6e420a1eefc184373e318080d26f05b4350"
+    },
+    {
+      "itemId": "course03-week-before",
+      "kind": "sentence",
+      "text": "上上个星期",
+      "file": "course03-week-before-sentence.mp3",
+      "sha256": "0e25622e003967a9d666a8067c7256e4488b150d69516fe9abf64acfa8eb16dc"
+    },
+    {
+      "itemId": "course03-week-before",
+      "kind": "word",
+      "text": "上上个星期",
+      "file": "course03-week-before-word.mp3",
+      "sha256": "7e2c7d080d98f2e4c0e1d055e16821f1be55a4223238106eac5237a71fbae92d"
+    },
+    {
+      "itemId": "course03-year-after",
+      "kind": "sentence",
+      "text": "后年",
+      "file": "course03-year-after-sentence.mp3",
+      "sha256": "ab4dbf90163b962479eff87968fda1792b52e2303d914e2fd17b4f5ba4f086cf"
+    },
+    {
+      "itemId": "course03-year-after",
+      "kind": "word",
+      "text": "后年",
+      "file": "course03-year-after-word.mp3",
+      "sha256": "649a789f3669c5c3f18cf7225269b45cc421dd38780526d46588a41a60a55fa8"
+    },
+    {
+      "itemId": "course03-year-before",
+      "kind": "sentence",
+      "text": "前年",
+      "file": "course03-year-before-sentence.mp3",
+      "sha256": "251785b6d91256727d09b10f37a76fd40bef56e6acc21b1b9c5a155ef65c73b7"
+    },
+    {
+      "itemId": "course03-year-before",
+      "kind": "word",
+      "text": "前年",
+      "file": "course03-year-before-word.mp3",
+      "sha256": "1bbc2eb783d07bf92976ee210e4c7f1f72e4c51719bfb08642b2e6e6df3d8051"
+    }
+  ]
+}

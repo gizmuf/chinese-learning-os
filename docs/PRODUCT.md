@@ -1,6 +1,6 @@
 # Chinese OS
 
-A calm daily Chinese practice space for beginner classmates. Works in a browser on iPad, iPhone and desktop; no Xcode or native app installation is required. The interface is English. Learning material pairs simplified characters with tone-marked pinyin and translations.
+A calm daily Chinese practice space for beginner classmates. Works in a browser on iPad, iPhone and desktop; no Xcode or native app installation is required. The interface and learning translations are available in English, French and Russian. Learning material pairs simplified characters with tone-marked pinyin and translations.
 
 ## Daily use
 
@@ -51,3 +51,11 @@ Firebase Authentication is isolated in `chinese-os-gizmuf-auth` (Chinese OS Auth
 The existing ChatGPT sign-in remains available for existing notebooks. ChatGPT and Firebase identities are not merged by email. Use the original sign-in method to see an old notebook. Guest work is also separate. The client remounts its notebook on identity changes and binds every sync request to the expected owner; the server rejects an owner mismatch. Clearing local data does not remove synchronized account records.
 
 Production uses a Sites runtime variable `FIREBASE_WEB_CONFIG`, containing the Firebase web client fields apiKey, authDomain, projectId, and appId. These are public client configuration, served by `/api/auth/config`; they grant no admin access. Never store admin credentials in the browser or repository. The Firebase authorized domains include the production Sites hostname and local development loopback. For development use an ignored `.dev.vars` file, not a committed config.
+
+## Intensive classroom course
+
+The existing study space now includes a separate **Intensive course** with 60 lesson slots. Only lesson 03 is published; other numbers await real class material. Lesson 03 contains six topics, 58 expressions, 22 sentences, 24 interactive activities, six classroom-board photos and the nine supplied EN/FR/RU documents. HSK1, HSK2, extra cards and their identifiers stay unchanged.
+
+Course activities have their own account-scoped event table, local offline queue and FSRS schedule. Reading, guided copying, revealed answers and corrected retries never advance independent recall. The course overview counts distinct activities attempted, not mastery. Handwriting is self-assessed; drafts remain on the current device. Existing HSK words reuse their original writing identity; their guided course practice can appear in both histories.
+
+See [COURSE_AUTHORING.md](COURSE_AUTHORING.md) for source review, lesson structure and the next-lesson workflow.

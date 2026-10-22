@@ -104,7 +104,7 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
   const [saved, setSaved] = useState(false);
   const started = useRef(Date.now());
   const key = `notebook:${item.id}`;
-  const characters = Array.from(item.hanzi);
+  const characters = Array.from(item.hanzi).filter(c => /[\u3400-\u9fff]/.test(c));
   useEffect(() => {
     let alive = true;
     if (!db) return;

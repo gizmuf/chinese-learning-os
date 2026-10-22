@@ -12,6 +12,7 @@ import {
   Download,
   Headphones,
   Home,
+  GraduationCap,
   Leaf,
   Lightbulb,
   LoaderCircle,
@@ -58,6 +59,7 @@ import {
 import Ink from "./ink";
 import Guided from "./guided";
 import Notebook from "./notebook";
+import IntensiveCourse from "./intensive-course";
 import PdfExport from "./pdf-export";
 import { LanguagePicker, useI18n } from "./i18n";
 import { localizeItem } from "./translate";
@@ -65,7 +67,7 @@ import { progressSchema } from "./event-schema";
 import { speak, setSpeechRate, stopAudio } from "./audio";
 import { authenticatedFetch } from "./auth-client";
 import type { StudyUser as User } from "./auth-shell";
-type View = "today" | "lessons" | "practice" | "reviews" | "progress";
+type View = "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
 type Draft = {
   strokes: Stroke[][];
   index: number;
@@ -91,6 +93,7 @@ export default function StudyApp({
   const lessons = sourceLessons.map(lesson => ({...lesson, title: t(lesson.title), subtitle: t(lesson.subtitle)}));
   const skillNames = Object.fromEntries(Object.entries(sourceSkillNames).map(([key,value]) => [key,t(value)])) as typeof sourceSkillNames;
   const [view, setView] = useState<View>("today");
+  useEffect(() => { if (new URLSearchParams(window.location.search).get("course") === "intensive") setView("course"); }, []);
   const [notebookEvents, setEvents] = useState<LearningEvent[]>([]);
   const [sync, setSync] = useState(t("Loading your notebook…"));
   const [db, setDb] = useState<IDBDatabase | null>(null);
@@ -308,6 +311,7 @@ export default function StudyApp({
     void synchronize();
   };
   function openPractice(item: Item, practiceMode: Mode = "trace") {
+    window.history.replaceState(null, "", window.location.pathname);
     setSession(null);
     setFinished(false);
     setSelected(item);
@@ -359,6 +363,7 @@ export default function StudyApp({
     matchesItem(item, search, lesson),
   );
   function changeView(v: View) {
+    window.history.replaceState(null, "", window.location.pathname + (v === "course" ? "?course=intensive" : ""));
     stopAudio();
     if (v === "practice") {
       setSkill("writing");
@@ -408,6 +413,7 @@ export default function StudyApp({
             [
               { id: "today", title: t("Today"), icon: Home },
               { id: "lessons", title: t("My lessons"), icon: BookOpen },
+              { id: "course", title: t("Course"), icon: GraduationCap },
               { id: "practice", title: t("Writing studio"), icon: PenLine },
               { id: "reviews", title: t("Review"), icon: RotateCcw },
               { id: "progress", title: t("My progress"), icon: TrendingUp },
@@ -468,7 +474,7 @@ export default function StudyApp({
           <span>
             <span className="breadcrumb">{t("My study space")}</span>
             <ChevronRight size={13} />
-            {view === "practice"
+            {view === "course" ? t("Intensive course") : view === "practice"
               ? t("Writing studio")
               : view === "today"
                 ? t("Today")
@@ -480,7 +486,7 @@ export default function StudyApp({
           </span>
           <div className="topbar-actions">
             <LanguagePicker />
-            <select
+            {view !== "course" && <select
               className="study-level"
               aria-label={t("Study level")}
               value={level}
@@ -491,7 +497,7 @@ export default function StudyApp({
               <option value="hsk1">HSK1 · {curriculum.hsk1}</option>
               <option value="hsk2">HSK2 · {curriculum.hsk2}</option>
               <option value="bonus">{t("Extras ·")} {curriculum.extras}</option>
-            </select>
+            </select>}
             {!user && (
               <a
                 className="signin-link"
@@ -524,6 +530,7 @@ export default function StudyApp({
           </div>
         </header>
         <div className="page-content">
+          {view === "course" && <IntensiveCourse owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} recordHSK={record} notify={notify} onHSKRecall={item => { setLevel(item.hskLevel === 2 ? "hsk2" : item.hskLevel === 1 ? "hsk1" : "bonus"); openPractice(item, "recall"); }} />}
           {view === "today" && (
             <>
               <div className="page-heading">

@@ -1379,6 +1379,326 @@
     "Tap the speaker again to play the pronunciation.": {
       "fr": "Touchez à nouveau le haut-parleur pour écouter la prononciation.",
       "ru": "Нажмите на динамик ещё раз для воспроизведения."
+    },
+    "Course": {
+      "fr": "Cours",
+      "ru": "Курс"
+    },
+    "Intensive course": {
+      "fr": "Cours intensif",
+      "ru": "Интенсивный курс"
+    },
+    "Overview": {
+      "fr": "Vue d’ensemble",
+      "ru": "Обзор"
+    },
+    "Learn the patterns": {
+      "fr": "Comprendre les structures",
+      "ru": "Изучить конструкции"
+    },
+    "Class materials": {
+      "fr": "Supports de cours",
+      "ru": "Материалы урока"
+    },
+    "Days": {
+      "fr": "Jours",
+      "ru": "Дни"
+    },
+    "Years": {
+      "fr": "Années",
+      "ru": "Годы"
+    },
+    "Months": {
+      "fr": "Mois",
+      "ru": "Месяцы"
+    },
+    "Weeks": {
+      "fr": "Semaines",
+      "ru": "Недели"
+    },
+    "Times of day": {
+      "fr": "Moments de la journée",
+      "ru": "Время суток"
+    },
+    "Meals": {
+      "fr": "Repas",
+      "ru": "Приёмы пищи"
+    },
+    "Integrated workbook · 30 pages": {
+      "fr": "Cahier intégré · 30 pages",
+      "ru": "Рабочая тетрадь · 30 страниц"
+    },
+    "Study guide · 9 pages": {
+      "fr": "Guide d’étude · 9 pages",
+      "ru": "Учебное пособие · 9 страниц"
+    },
+    "Time reference · 1 page": {
+      "fr": "Repères temporels · 1 page",
+      "ru": "Справочник по времени · 1 страница"
+    },
+    "Study step saved.": {
+      "fr": "Étape d’étude enregistrée.",
+      "ru": "Изученный раздел сохранён."
+    },
+    "YOUR CLASSROOM, REMEMBERED": {
+      "fr": "LES SOUVENIRS DE VOTRE CLASSE",
+      "ru": "ВОСПОМИНАНИЯ О ВАШИХ ЗАНЯТИЯХ"
+    },
+    "60 lessons, connected to your real classes.": {
+      "fr": "60 leçons liées à vos cours en classe.",
+      "ru": "60 уроков, связанных с вашими занятиями в классе."
+    },
+    "Classroom board: the time expressions from lesson 03": {
+      "fr": "Tableau de la classe : expressions temporelles de la leçon 03",
+      "ru": "Классная доска: выражения времени из урока 03"
+    },
+    "Lesson": {
+      "fr": "Leçon",
+      "ru": "Урок"
+    },
+    "Open lesson 03": {
+      "fr": "Ouvrir la leçon 03",
+      "ru": "Открыть урок 03"
+    },
+    "All 60 lessons": {
+      "fr": "Les 60 leçons",
+      "ru": "Все 60 уроков"
+    },
+    "One lesson ready": {
+      "fr": "Une leçon disponible",
+      "ru": "Один урок готов"
+    },
+    "Ready to practice": {
+      "fr": "Prête à pratiquer",
+      "ru": "Готов к практике"
+    },
+    "Awaiting class material": {
+      "fr": "En attente des supports",
+      "ru": "Ожидаются материалы урока"
+    },
+    "All course lessons": {
+      "fr": "Toutes les leçons du cours",
+      "ru": "Все уроки курса"
+    },
+    "activities tried": {
+      "fr": "activités essayées",
+      "ru": "заданий выполнено"
+    },
+    "Course sections": {
+      "fr": "Sections du cours",
+      "ru": "Разделы курса"
+    },
+    "correct without answer hints": {
+      "fr": "bonnes réponses sans indice",
+      "ru": "верных ответов без подсказок"
+    },
+    "course reviews due": {
+      "fr": "révisions du cours à faire",
+      "ru": "повторений курса на сегодня"
+    },
+    "Start with what you remember from class.": {
+      "fr": "Commencez par vos souvenirs du cours.",
+      "ru": "Начните с того, что помните с занятия."
+    },
+    "A board, a sentence, a situation. Explore the six topics, then practise without answer hints. HSK progress stays separate.": {
+      "fr": "Un tableau, une phrase, une situation. Explorez les six thèmes, puis entraînez-vous sans indice. La progression HSK reste distincte.",
+      "ru": "Доска, предложение, ситуация. Изучите шесть тем, затем практикуйтесь без подсказок. Прогресс HSK учитывается отдельно."
+    },
+    "Explore the lesson": {
+      "fr": "Explorer la leçon",
+      "ru": "Изучить урок"
+    },
+    "Practise all 24 activities": {
+      "fr": "Faire les 24 activités",
+      "ru": "Выполнить все 24 задания"
+    },
+    "Quick check · 6 activities": {
+      "fr": "Test rapide · 6 activités",
+      "ru": "Быстрая проверка · 6 заданий"
+    },
+    "Review due activities": {
+      "fr": "Faire les révisions prévues",
+      "ru": "Повторить задания на сегодня"
+    },
+    "You have practised every activity. Revisit the difficult ones over time.": {
+      "fr": "Vous avez essayé toutes les activités. Revenez régulièrement sur les plus difficiles.",
+      "ru": "Вы выполнили все задания. Возвращайтесь к трудным заданиям со временем."
+    },
+    "activities": {
+      "fr": "activités",
+      "ru": "задания"
+    },
+    "Practise this topic": {
+      "fr": "Pratiquer ce thème",
+      "ru": "Практиковать эту тему"
+    },
+    "Earlier": {
+      "fr": "Plus tôt",
+      "ru": "Раньше"
+    },
+    "Later": {
+      "fr": "Plus tard",
+      "ru": "Позже"
+    },
+    "Now": {
+      "fr": "Maintenant",
+      "ru": "Сейчас"
+    },
+    "Remember this board?": {
+      "fr": "Vous vous souvenez de ce tableau ?",
+      "ru": "Помните эту доску?"
+    },
+    "Original classroom board, 22 October 2026. Explanations above clarify the class examples.": {
+      "fr": "Tableau original du 22 octobre 2026. Les explications ci-dessus précisent les exemples du cours.",
+      "ru": "Оригинальная доска, 22 октября 2026 года. Пояснения выше уточняют примеры с занятия."
+    },
+    "Mark this study step as read": {
+      "fr": "Marquer cette étape comme lue",
+      "ru": "Отметить этот раздел как изученный"
+    },
+    "Words and complete expressions": {
+      "fr": "Mots et expressions complètes",
+      "ru": "Слова и полные выражения"
+    },
+    "Linked to your HSK vocabulary": {
+      "fr": "Lié à votre vocabulaire HSK",
+      "ru": "Связано с вашим словарём HSK"
+    },
+    "Course expression": {
+      "fr": "Expression du cours",
+      "ru": "Выражение из курса"
+    },
+    "Select a course word or sentence": {
+      "fr": "Choisir un mot ou une phrase du cours",
+      "ru": "Выберите слово или предложение курса"
+    },
+    "Sentences": {
+      "fr": "Phrases",
+      "ru": "Предложения"
+    },
+    "Copy with guidance, or write from memory and assess your own answer. This is handwriting practice, not automatic handwriting recognition.": {
+      "fr": "Copiez avec un modèle ou écrivez de mémoire, puis évaluez votre réponse. Il s’agit d’un entraînement à l’écriture, sans reconnaissance automatique.",
+      "ru": "Переписывайте по образцу или пишите по памяти и оценивайте свой ответ. Это практика письма без автоматического распознавания почерка."
+    },
+    "The original lesson documents, in your selected language. Interactive explanations above are reviewed and supplemented from the board photos.": {
+      "fr": "Les documents originaux dans la langue choisie. Les explications interactives ont été vérifiées et complétées à partir des photos du tableau.",
+      "ru": "Оригинальные документы урока на выбранном языке. Интерактивные пояснения проверены и дополнены по фотографиям доски."
+    },
+    "Your course history": {
+      "fr": "Votre historique du cours",
+      "ru": "Ваша история курса"
+    },
+    "Course results sync with your signed-in account. Guest results and handwriting drafts stay on this device. Exporting materials does not record study.": {
+      "fr": "Les résultats du cours sont synchronisés avec votre compte connecté. Les résultats en mode invité et les brouillons d’écriture restent sur cet appareil. Télécharger les supports ne compte pas comme une séance d’étude.",
+      "ru": "Результаты курса синхронизируются с вашим аккаунтом. Результаты гостя и черновики письма остаются на этом устройстве. Скачивание материалов не засчитывается как обучение."
+    },
+    "Export course history": {
+      "fr": "Exporter l’historique du cours",
+      "ru": "Экспортировать историю курса"
+    },
+    "Practice example": {
+      "fr": "Exemple d’entraînement",
+      "ru": "Учебный пример"
+    },
+    "From the lesson": {
+      "fr": "Extrait de la leçon",
+      "ru": "Из урока"
+    },
+    "Practice session complete.": {
+      "fr": "Séance d’entraînement terminée.",
+      "ru": "Практика завершена."
+    },
+    "Your answers are saved. Corrected or revealed answers remain assisted practice.": {
+      "fr": "Vos réponses sont enregistrées. Les réponses corrigées ou dévoilées restent des exercices avec aide.",
+      "ru": "Ваши ответы сохранены. Исправленные и показанные ответы учитываются как практика с подсказками."
+    },
+    "Revisit a difficult activity": {
+      "fr": "Revoir une activité difficile",
+      "ru": "Вернуться к трудному заданию"
+    },
+    "Back to lesson": {
+      "fr": "Retour à la leçon",
+      "ru": "Вернуться к уроку"
+    },
+    "Play Chinese sentence": {
+      "fr": "Écouter la phrase chinoise",
+      "ru": "Прослушать предложение на китайском"
+    },
+    "Tap the cards in order. Tap a selected card to remove it.": {
+      "fr": "Touchez les cartes dans l’ordre. Touchez une carte sélectionnée pour la retirer.",
+      "ru": "Нажимайте на карточки по порядку. Нажмите выбранную карточку, чтобы убрать её."
+    },
+    "Your ordered answer": {
+      "fr": "Votre réponse dans l’ordre",
+      "ru": "Ваш ответ по порядку"
+    },
+    "Your ordered answer will appear here.": {
+      "fr": "Votre réponse dans l’ordre apparaîtra ici.",
+      "ru": "Здесь появится ваш ответ по порядку."
+    },
+    "Check answer": {
+      "fr": "Vérifier la réponse",
+      "ru": "Проверить ответ"
+    },
+    "Show answer hint": {
+      "fr": "Afficher un indice",
+      "ru": "Показать подсказку"
+    },
+    "Finish practice": {
+      "fr": "Terminer l’entraînement",
+      "ru": "Завершить практику"
+    },
+    "Next activity": {
+      "fr": "Activité suivante",
+      "ru": "Следующее задание"
+    },
+    "Try again with help": {
+      "fr": "Réessayer avec de l’aide",
+      "ru": "Повторить с подсказкой"
+    },
+    "Play the audio before checking your answer.": {
+      "fr": "Écoutez l’enregistrement avant de vérifier votre réponse.",
+      "ru": "Прослушайте запись перед проверкой ответа."
+    },
+    "Answer hint": {
+      "fr": "Indice de réponse",
+      "ru": "Подсказка к ответу"
+    },
+    "Correct.": {
+      "fr": "Correct.",
+      "ru": "Верно."
+    },
+    "Not yet. Compare the explanation.": {
+      "fr": "Pas encore. Consultez l’explication.",
+      "ru": "Пока неверно. Сравните с пояснением."
+    },
+    "Open the Writing section to practise this sentence.": {
+      "fr": "Ouvrez la section Écriture pour pratiquer cette phrase.",
+      "ru": "Откройте раздел «Письмо», чтобы потренировать это предложение."
+    },
+    "Answer help used. This attempt saves practice without advancing independent recall.": {
+      "fr": "Une aide a été utilisée. Cet essai est enregistré sans faire progresser le rappel autonome.",
+      "ru": "Использована подсказка. Эта попытка сохраняется как практика, но не продвигает самостоятельное повторение."
+    },
+    "Free writing is self-assessed. Rate what you remembered before comparing.": {
+      "fr": "L’écriture libre est autoévaluée. Évaluez ce dont vous vous souveniez avant de comparer.",
+      "ru": "Свободное письмо оценивается самостоятельно. Оцените, что вы вспомнили до сравнения."
+    },
+    "Practice saved.": {
+      "fr": "Entraînement enregistré.",
+      "ru": "Практика сохранена."
+    },
+    "Back to notebook": {
+      "fr": "Retour au cahier",
+      "ru": "Вернуться в тетрадь"
+    },
+    "Review course writing": {
+      "fr": "Réviser l’écriture du cours",
+      "ru": "Повторить письмо по курсу"
+    },
+    "Sync course progress": {
+      "fr": "Synchroniser la progression du cours",
+      "ru": "Синхронизировать прогресс курса"
     }
   },
   "vocabulary": {

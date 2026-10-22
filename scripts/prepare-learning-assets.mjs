@@ -1,7 +1,7 @@
 import {readFile,mkdir,copyFile,readdir,writeFile} from 'node:fs/promises';
 import path from 'node:path';
 const root=process.cwd();
-const source=await readFile(path.join(root,'app/content.ts'),'utf8');
+const source=(await Promise.all(['app/content.ts','app/course-data.ts'].map(file=>readFile(path.join(root,file),'utf8')))).join('\n');
 const chars=[...new Set(source.match(/[\u3400-\u9fff]/gu))];
 const target=path.join(root,'public/characters');
 await mkdir(target,{recursive:true});
@@ -15,3 +15,4 @@ await writeFile(path.join(root,'public/licenses/README.txt'),'Hanzi Writer code:
 console.log(`Prepared ${chars.length} locally served characters and dependency licenses.`);
 
 await import("./verify-audio.mjs");
+await import("./verify-course.mjs");

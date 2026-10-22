@@ -19,3 +19,11 @@ export const learningEvents = sqliteTable(
     index("events_user_at").on(t.userId, t.at),
   ],
 );
+
+// Course activities have their own history; vocabulary FSRS events stay unchanged.
+export const courseEvents = sqliteTable("course_events", {
+  userId: text("user_id").notNull(),
+  id: text("id").notNull(),
+  at: integer("at").notNull(),
+  payload: text("payload").notNull(),
+}, t => [primaryKey({columns:[t.userId,t.id]}), index("course_events_user_at").on(t.userId,t.at)]);
