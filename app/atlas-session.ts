@@ -18,15 +18,7 @@ export function sessionTotals(answers: ReturnType<typeof emptyAnswer>[]) {
     answered: answers.filter((a) => a.result !== null).length,
   };
 }
-export function swipeStep(x: number, y: number, endX: number, endY: number) {
-  const dx = endX - x,
-    dy = endY - y;
-  return Math.abs(dx) >= 70 && Math.abs(dx) > Math.abs(dy) * 1.5
-    ? dx < 0
-      ? 1
-      : -1
-    : 0;
-}
+export { swipeStep } from "./swipe-navigation";
 export function seededQuestion(
   targetId: string,
   skill: Exclude<AtlasSkill, "writing">,

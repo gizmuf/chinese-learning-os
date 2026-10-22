@@ -4289,3 +4289,6 @@ html[lang="ru"] .nav-item, html[lang="fr"] .nav-item { font-size: 12px; }
 .lesson-lab-back {margin:0 0 20px;}
 @media(max-width:600px){.lesson-lab-intro,.lesson-lab-activity{padding:18px;}.lesson-lab-options{grid-template-columns:1fr;}.lesson-lab-read{font-size:38px;}.lesson-lab-blocks button{min-width:54px;padding:10px 14px;}.lesson-lab-nav{gap:8px;}.lesson-lab-nav button{padding:10px;}}
 .lesson-lab .muted {color:var(--muted);font-size:13px;line-height:1.65;}
+.lesson-lab-activity {touch-action:pan-y;}
+.lesson-lab-swipe-hint {display:none;font-size:12px;color:var(--muted);}
+@media(hover:none),(pointer:coarse){.lesson-lab-swipe-hint {display:block;margin:-12px 0 22px;}}

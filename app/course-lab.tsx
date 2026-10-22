@@ -8,6 +8,7 @@ import {
   Volume2,
   PenLine,
 } from "lucide-react";
+import { useSwipeNavigation } from "./use-swipe-navigation";
 import { useI18n } from "./i18n";
 import {
   blockTasks,
@@ -135,6 +136,7 @@ export default function CourseLab({
     else if (section === "families") setFamilyIndex(next);
     else setCheckIndex(next);
   }
+  const swipe = useSwipeNavigation((delta) => move(index + delta), saving);
   async function save(correct: boolean) {
     if (saving || locked || !ready) return;
     setSaving(true);
@@ -273,6 +275,7 @@ export default function CourseLab({
       </div>
       <section
         className="panel lesson-lab-activity"
+        {...swipe}
         aria-label={t("Current lab activity")}
       >
         <div className="lesson-lab-nav">
@@ -298,6 +301,11 @@ export default function CourseLab({
             <ArrowRight size={16} />
           </button>
         </div>
+        <p className="lesson-lab-swipe-hint">
+          {t(
+            "Swipe left/right to browse. Drawing and text fields stay in place.",
+          )}
+        </p>
         {section === "blocks" && (
           <>
             <p className="eyebrow">{t("BUILD THE FULL CLASSROOM FORM")}</p>

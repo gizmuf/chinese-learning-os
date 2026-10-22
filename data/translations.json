@@ -2375,6 +2375,10 @@
     "Written recall": {
       "fr": "Rappel écrit",
       "ru": "Письменное воспроизведение"
+    },
+    "Swipe left/right to browse. Drawing and text fields stay in place.": {
+      "fr": "Balayez vers la gauche ou la droite. Les zones de dessin et de saisie restent fixes.",
+      "ru": "Листайте влево или вправо. Области рисования и ввода текста не переключают задания."
     }
   },
   "vocabulary": {
