@@ -33,6 +33,7 @@ const copy = {
  hear:A("Hear the word","Écouter le mot","Слушать слово"),open:A("Open character","Ouvrir le caractère","Открыть иероглиф"),
 };
 type Mode="story"|"family"|"words";
+type Feedback = "" | "retry" | "correct" | "picked";
 const storyIds=Object.keys(atlasStories) as StoryId[];
 function storyFor(char:string){return storyIds.find(id=>atlasStories[id].character===char);}
 function defaultMode(char:string):Mode{return storyFor(char)?"story":"family";}
@@ -70,13 +71,13 @@ export default function AtlasWorkshop({character,onComponent,onCharacter,notify}
 function useReducedMotion(){const [reduced,setReduced]=useState(false);useEffect(()=>{const m=matchMedia("(prefers-reduced-motion: reduce)");const f=()=>setReduced(m.matches);f();m.addEventListener("change",f);return()=>m.removeEventListener("change",f);},[]);return reduced;}
 function CharacterBuild({entry,notify,onCharacter}:{entry:Assembly;notify:(message:string)=>void;onCharacter:(hanzi:string)=>void}){
  const {locale}=useI18n();const reduced=useReducedMotion();
- const [joined,setJoined]=useState(true),[quiz,setQuiz]=useState(false),[placed,setPlaced]=useState<number[]>([]),[hint,setHint]=useState(false),[message,setMessage]=useState("");
+ const [joined,setJoined]=useState(true),[quiz,setQuiz]=useState(false),[placed,setPlaced]=useState<number[]>([]),[hint,setHint]=useState(false),[message,setMessage]=useState<Feedback>("");
  const [settled,setSettled]=useState(false);
  const [focus,setFocus]=useState<number|null>(null);const [arrived,setArrived]=useState(false);
  useEffect(()=>{setQuiz(false);setPlaced([]);setMessage("");setHint(false);setFocus(null);setJoined(true);setArrived(false);setSettled(false);const timer=setTimeout(()=>setSettled(true),950);let second=0;const first=requestAnimationFrame(()=>{second=requestAnimationFrame(()=>setArrived(true));});return()=>{clearTimeout(timer);cancelAnimationFrame(first);cancelAnimationFrame(second);};},[entry.hanzi]);
  const choices=[...new Map([...entry.parts.map(p=>({glyph:p.glyph,pinyin:p.pinyin})),{glyph:"日",pinyin:"rì"},{glyph:"月",pinyin:"yuè"}].map(p=>[p.glyph,p])).values()].sort((a,b)=>a.glyph.localeCompare(b.glyph));
  const completed=placed.length===entry.parts.length;
- function choose(glyph:string){const index=checkAssemblyChoice(entry.parts,placed,glyph);if(index<0){setMessage(copy.retry[locale]);return;}const next=[...placed,index];setPlaced(next);setMessage(next.length===entry.parts.length?copy.correct[locale]:copy.picked[locale]);}
+ function choose(glyph:string){const index=checkAssemblyChoice(entry.parts,placed,glyph);if(index<0){setMessage("retry");return;}const next=[...placed,index];setPlaced(next);setMessage(next.length===entry.parts.length?"correct":"picked");}
  const audio=atlasByHanzi.get(entry.hanzi);
  return <div className="workshop-build">
   <div className="workshop-result"><strong lang="zh-Hans">{entry.hanzi}</strong><span>{entry.pinyin}</span><p>{entry.meaning[locale]}</p></div>
@@ -103,7 +104,7 @@ function CharacterBuild({entry,notify,onCharacter}:{entry:Assembly;notify:(messa
    {audio&&<button onClick={()=>{const item=atlasItem(audio,locale);speak(item.sentence,notify,item);}}><Volume2 size={16}/>{copy.hear[locale]}</button>}
    {audio&&<button onClick={()=>onCharacter(entry.hanzi)}>{copy.open[locale]}<ArrowRight size={16}/></button>}
   </div>
-  {quiz&&<div className="workshop-quiz"><p>{copy.prompt[locale]}</p><div className="workshop-choices">{choices.map(p=><button key={p.glyph} disabled={completed} onClick={()=>choose(p.glyph)}><strong>{p.glyph}</strong><span>{p.pinyin}</span></button>)}</div><div className="workshop-actions"><button onClick={()=>setHint(!hint)}>{hint?copy.hide[locale]:copy.hint[locale]}</button><button onClick={()=>{setPlaced([]);setMessage("");setHint(false);}}><RotateCcw size={16}/>{locale==="fr"?"Recommencer":locale==="ru"?"Сначала":"Start again"}</button><span>{placed.length} / {entry.parts.length}</span></div><p role="status">{message}</p><small>{copy.practice[locale]}</small></div>}
+  {quiz&&<div className="workshop-quiz"><p>{copy.prompt[locale]}</p><div className="workshop-choices">{choices.map(p=><button key={p.glyph} disabled={completed} onClick={()=>choose(p.glyph)}><strong>{p.glyph}</strong><span>{p.pinyin}</span></button>)}</div><div className="workshop-actions"><button onClick={()=>setHint(!hint)}>{hint?copy.hide[locale]:copy.hint[locale]}</button><button onClick={()=>{setPlaced([]);setMessage("");setHint(false);}}><RotateCcw size={16}/>{locale==="fr"?"Recommencer":locale==="ru"?"Сначала":"Start again"}</button><span>{placed.length} / {entry.parts.length}</span></div><p role="status">{message ? copy[message][locale] : ""}</p><small>{copy.practice[locale]}</small></div>}
   <details className="workshop-source"><summary>{copy.source[locale]}</summary><p><a href={entry.source} target="_blank" rel="noreferrer">Dong Chinese · {entry.hanzi} · {entry.pinyin} ↗</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a></p><p>{locale==="fr"?"Notes adaptées ; illustrations pédagogiques originales.":locale==="ru"?"Адаптированные пояснения; оригинальные учебные иллюстрации.":"Adapted notes; original teaching illustrations."}</p></details>
  </div>;
 }
@@ -128,7 +129,7 @@ export function WordSceneArt({scene}:{scene:WordScene}){
 }
 function WordBuilder({entry,notify}:{entry:WordBuild;notify:(message:string)=>void}){
  const {locale}=useI18n();const reduced=useReducedMotion();
- const [joined,setJoined]=useState(false),[quiz,setQuiz]=useState(false),[placed,setPlaced]=useState(0),[message,setMessage]=useState("");
+ const [joined,setJoined]=useState(false),[quiz,setQuiz]=useState(false),[placed,setPlaced]=useState(0),[message,setMessage]=useState<Feedback>("");
  const atlasAudio=[...atlasByHanzi.values()].find(c=>c.word===entry.hanzi);
  const item=items.find(i=>i.hanzi===entry.hanzi)??(atlasAudio?{...atlasItem(atlasAudio,locale),hanzi:entry.hanzi}:undefined);
  const choices=[...new Map([...entry.parts,{hanzi:"木",pinyin:"mù"},{hanzi:"日",pinyin:"rì"}].map(p=>[p.hanzi,p])).values()].sort((a,b)=>a.hanzi.localeCompare(b.hanzi));
@@ -141,7 +142,7 @@ function WordBuilder({entry,notify}:{entry:WordBuild;notify:(message:string)=>vo
   <div className="workshop-parts word-parts">{entry.parts.map(p=><div key={p.hanzi}><strong>{p.hanzi}</strong><span>{p.pinyin}</span><small>{p.meaning[locale]}</small></div>)}</div>
   <p className="workshop-note">{entry.note[locale]}</p>
   <div className="workshop-actions"><button className="workshop-primary" onClick={()=>{setQuiz(false);setJoined(!joined);}}>{joined?copy.split[locale]:copy.join[locale]}<ArrowRight size={16}/></button><button onClick={()=>{setQuiz(!quiz);setPlaced(0);setJoined(false);setMessage("");}}>{quiz?copy.watch[locale]:copy.try[locale]}</button>{item&&<button onClick={()=>speak(item.hanzi,notify,item)}><Volume2 size={16}/>{copy.hear[locale]}</button>}</div>
-  {quiz&&<div className="workshop-quiz"><p>{copy.wordPrompt[locale]}</p><div className="workshop-choices">{choices.map(p=><button key={p.hanzi} disabled={placed===entry.parts.length} onClick={()=>{if(entry.parts[placed]?.hanzi===p.hanzi){setPlaced(placed+1);setMessage(placed+1===entry.parts.length?copy.correct[locale]:copy.picked[locale]);}else setMessage(copy.retry[locale]);}}><strong>{p.hanzi}</strong><span>{p.pinyin}</span></button>)}</div><p role="status">{message}</p><small>{copy.practice[locale]}</small></div>}
+  {quiz&&<div className="workshop-quiz"><p>{copy.wordPrompt[locale]}</p><div className="workshop-choices">{choices.map(p=><button key={p.hanzi} disabled={placed===entry.parts.length} onClick={()=>{if(entry.parts[placed]?.hanzi===p.hanzi){setPlaced(placed+1);setMessage(placed+1===entry.parts.length?"correct":"picked");}else setMessage("retry");}}><strong>{p.hanzi}</strong><span>{p.pinyin}</span></button>)}</div><p role="status">{message ? copy[message][locale] : ""}</p><small>{copy.practice[locale]}</small></div>}
   <details className="workshop-source"><summary>{copy.source[locale]}</summary><p>{copy.mnemonic[locale]}</p><a href={entry.source} target="_blank" rel="noreferrer">Dong Chinese · {entry.hanzi} · {entry.pinyin} ↗</a></details>
  </div>;
 }
