@@ -6,6 +6,7 @@ import type { LearningEvent, Stroke } from "./learning";
 import { readDraft, saveDraft } from "./local-store";
 import { speak } from "./audio";
 import Ink from "./ink";
+import { assetPath } from "./asset-path";
 
 type CharacterData = { strokes: string[]; medians: number[][][] };
 type Sheet = { cells: Record<string, Stroke[]>; hidden: boolean; attemptId: string };
@@ -39,7 +40,7 @@ function CharacterRow({ character, position, sheet, change, penOnly, disabled }:
   useEffect(() => {
     const controller = new AbortController();
     setData(null); setFailed(false); setStep(0);
-    fetch(`/characters/${encodeURIComponent(character)}.json`, { signal: controller.signal })
+    fetch(assetPath(`/characters/${encodeURIComponent(character)}.json`), { signal: controller.signal })
       .then(r => { if (!r.ok) throw Error("Missing character"); return r.json() as Promise<CharacterData>; })
       .then(value => setData(value))
       .catch(() => { if (!controller.signal.aborted) setFailed(true); });
@@ -137,7 +138,7 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
       <button className="audio-button" onClick={() => speak(item.hanzi, notify, item)}><Volume2 size={17} /> Hear word</button>
       <button className="text-button" onClick={() => speak(item.sentence, notify, item)}><Volume2 size={16} /> Hear example</button>
     </div>
-    <p className="notebook-intro">Follow the steps, trace twice, then write in the empty boxes. Your worksheet stays on this device; saved practice syncs with your account.</p>
+    <p className="notebook-intro">Follow the steps, trace twice, then write in the empty boxes. Your worksheet stays on this device. Completed practice is saved in your notebook.</p>
     {!ready ? <p role="status">Loading your worksheet…</p> : <>
       {characters.map((character, position) => <CharacterRow key={`${position}:${character}`} {...{ character, position, sheet, change, penOnly }} disabled={saved} />)}
       <section className="notebook-character"><h3>Write the whole word</h3><p>{sheet.hidden ? "Write the characters together from memory." : item.hanzi}</p>

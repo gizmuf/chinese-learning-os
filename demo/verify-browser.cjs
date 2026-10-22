@@ -1,0 +1,54 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+(async()=>{
+ const url=process.env.DEMO_URL||'http://127.0.0.1:4173/';
+ const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH,headless:true,args:['--no-sandbox']});
+ const context=await browser.newContext({viewport:{width:1440,height:1000}}), page=await context.newPage();
+ const requests=[],errors=[],failed=[];
+ page.on('request',r=>requests.push(r.url()));page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)failed.push([r.status(),r.url()]);});
+ await page.addInitScript(()=>{window.__played=[];const Original=window.Audio;window.Audio=function(...args){const audio=new Original(...args);audio.addEventListener('playing',()=>window.__played.push({source:audio.src,duration:audio.duration}));return audio;};});
+ await page.goto(url);await page.getByText('Guest · saved on this device',{exact:true}).waitFor();
+ assert.equal(await page.locator('a[href="#account"]').count(),0);
+ await page.getByRole('button',{name:'My lessons',exact:true}).click();
+ assert.equal(await page.locator('.word-card').count(),300);
+ await page.getByLabel('Study level').selectOption('hsk2');assert.equal(await page.locator('.word-card').count(),200);
+ await page.getByLabel('Study level').selectOption('hsk1');
+ await page.getByRole('button',{name:/Listen to example/}).first().click();
+ await page.waitForFunction(()=>window.__played.length>0);assert.ok((await page.evaluate(()=>window.__played[0].duration))>0);
+ await page.getByRole('button',{name:'Practice writing',exact:true}).first().click();
+ await page.locator('.guided-host svg path').first().waitFor({state:'attached'});
+ assert.ok(await page.locator('.guided-host svg').isVisible());
+ await page.getByRole('button',{name:/Copy/}).click();
+ for(let i=0;i<2;i++){
+   await page.getByRole('button',{name:`Character ${i+1}`,exact:true}).click();
+   const canvas=page.getByLabel('Write a character here using a pencil, finger or mouse');
+   await canvas.waitFor();const box=await canvas.boundingBox();
+   await page.mouse.move(box.x+box.width*.3,box.y+box.height*.3);await page.mouse.down();await page.mouse.move(box.x+box.width*.7,box.y+box.height*.7,{steps:12});await page.mouse.up();
+ }
+ await page.getByRole('button',{name:'Save practice',exact:true}).click();
+ await page.getByRole('heading',{name:'A small step, saved.'}).waitFor();
+ const before=await page.evaluate(async()=>{const db=await new Promise((res,rej)=>{const r=indexedDB.open('chinese-os-v1-teacher-demo');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});return await new Promise(res=>{const r=db.transaction('events').objectStore('events').getAll();r.onsuccess=()=>res(r.result);});});
+ assert.equal(before.length,1);assert.ok(before[0].detail.strokes.flat().length>0);
+ await page.reload();await page.getByText('Guest · saved on this device',{exact:true}).waitFor();
+ await page.getByRole('button',{name:'My progress',exact:true}).click();
+ console.log('PROGRESS', (await page.locator('.page-content').innerText()).slice(0,1800));
+ assert.ok((await page.locator('.page-content').innerText()).includes('1'));
+ await page.getByRole('button',{name:'Writing studio',exact:true}).click();
+ await page.getByRole('button',{name:'Practice notebook',exact:true}).click();
+ await page.locator('.notebook-step-glyph svg path').first().waitFor({state:'attached'});
+ const nextStroke=page.getByRole('button',{name:'Next stroke for 你',exact:true});await nextStroke.click();
+ const notebookCanvas=page.locator('.notebook-cell canvas').first();const nb=await notebookCanvas.boundingBox();
+ await page.mouse.move(nb.x+20,nb.y+20);await page.mouse.down();await page.mouse.move(nb.x+60,nb.y+60,{steps:8});await page.mouse.up();
+ await page.getByRole('button',{name:'Undo 你 Trace 1',exact:true}).waitFor();
+ assert.ok(await page.getByRole('button',{name:'Undo 你 Trace 1',exact:true}).isEnabled());
+ const after=await page.evaluate(async()=>{const db=await new Promise(res=>{const r=indexedDB.open('chinese-os-v1-teacher-demo');r.onsuccess=()=>res(r.result);});return await new Promise(res=>{const r=db.transaction('events').objectStore('events').getAll();r.onsuccess=()=>res(r.result);});});
+ assert.equal(after[0].id,before[0].id);
+ assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);
+ assert.ok(requests.every(r=>new URL(r).origin===new URL(url).origin));assert.ok(requests.every(r=>!r.includes('/api/')));
+ console.log('PASS: lessons, HSK levels, audio playback, character SVG, two-character drawing/save, IndexedDB reload persistence, notebook stroke navigation and drawing; no external/API requests.');
+ if (process.env.DEMO_SCREENSHOT) await page.screenshot({path:process.env.DEMO_SCREENSHOT,fullPage:true});
+ 
+ console.log({requests,errors,failed});
+ await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});
