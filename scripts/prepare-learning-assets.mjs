@@ -16,3 +16,4 @@ console.log(`Prepared ${chars.length} locally served characters and dependency l
 
 await import("./verify-audio.mjs");
 await import("./verify-course.mjs");
+await import('./prepare-atlas.mjs');

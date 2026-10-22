@@ -92,10 +92,10 @@ function Grid() {
   return <svg className="notebook-guidelines" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0V100 M0 50H100 M0 0L100 100 M100 0L0 100" /></svg>;
 }
 
-export default function Notebook({ item, db, penOnly, setPenOnly, record, notify, onRecall, next }: {
+export default function Notebook({ item, db, penOnly, setPenOnly, record, notify, onRecall, next, contextAudioOnly = false }: {
   item: Item; db: IDBDatabase | null; penOnly: boolean; setPenOnly: (value: boolean) => void;
   record: (event: LearningEvent) => Promise<void>; notify: (message: string) => void;
-  onRecall: () => void; next: () => void;
+  onRecall: () => void; next: () => void; contextAudioOnly?: boolean;
 }) {
   const { t, locale } = useI18n();
   const [sheet, setSheet] = useState<Sheet>(emptySheet);
@@ -137,7 +137,7 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
     </div>
     <div className="notebook-actions">
       <button className="secondary" onClick={() => setSheet(s => ({ ...s, hidden: !s.hidden }))}>{sheet.hidden ? t("Show guides & compare") : t("Hide guides")}</button>
-      <button className="audio-button" onClick={() => speak(item.hanzi, notify, item)}><Volume2 size={17} /> {t("Hear word")}</button>
+      {!contextAudioOnly && <button className="audio-button" onClick={() => speak(item.hanzi, notify, item)}><Volume2 size={17} /> {t("Hear word")}</button>}
       <button className="text-button" onClick={() => speak(item.sentence, notify, item)}><Volume2 size={16} /> {t("Hear example")}</button>
     </div>
     <p className="notebook-intro">{t("Follow the steps, trace twice, then write in the empty boxes. Your worksheet stays on this device; saved practice syncs with your account.")}</p>

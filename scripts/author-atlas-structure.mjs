@@ -1,0 +1,15 @@
+// Authoring only; builds never download dictionaries or infer new teaching relations.
+import {build}from'esbuild';import{readFileSync,writeFileSync}from'node:fs';import{createHash}from'node:crypto';
+const dictionaryPath=process.argv[2];if(!dictionaryPath)throw Error('Provide the downloaded Make Me a Hanzi dictionary.txt path.');
+const raw=readFileSync(dictionaryPath,'utf8');const dictionary=new Map(raw.trim().split('\n').map(l=>{const d=JSON.parse(l);return[d.character,d]}));
+const compiled=await build({entryPoints:['app/atlas-model.ts'],bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent'});const {atlasCharacters,componentById}=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const arities=new Map([...'⿰⿱⿴⿵⿶⿷⿸⿹⿺⿻'].map(c=>[c,2]).concat([['⿲',3],['⿳',3]]));
+function tree(text){const chars=Array.from(text??'');let i=0;function node(){const value=chars[i++];if(!value)return null;const n=arities.get(value)??0;return{value,children:Array.from({length:n},node)}}const out=node();return i===chars.length?out:null;}
+function count(c){try{return JSON.parse(readFileSync('node_modules/hanzi-writer-data/'+c+'.json','utf8')).strokes.length}catch{return 0}}
+function indicesFor(char,variants,depth=0,seen=new Set()){
+ if(variants.has(char))return Array.from({length:count(char)},(_,i)=>i);if(depth>5||seen.has(char))return[];const record=dictionary.get(char);if(!record?.matches)return[];const root=tree(record.decomposition);if(!root)return[];const output=new Set();const pathSeen=new Set([...seen,char]);
+ function visit(node,path){if(!node)return;const indices=record.matches.flatMap((match,i)=>match&&path.every((v,j)=>match[j]===v)?[i]:[]);if(!node.children.length){if(variants.has(node.value)){for(const i of indices)output.add(i)}else if(node.value!=='？'&&node.value!==char&&indices.length===count(node.value)){for(const sub of indicesFor(node.value,variants,depth+1,pathSeen)){if(indices[sub]!==undefined)output.add(indices[sub])}}}else node.children.forEach((child,i)=>visit(child,[...path,i]));}
+ visit(root,[]);return[...output].sort((a,b)=>a-b);
+}
+const mappings={};const missing=[];for(const c of atlasCharacters){mappings[c.id]={};for(const id of c.components){const component=componentById.get(id);if(!component)throw Error('Unknown component '+id);const indices=indicesFor(c.hanzi,new Set([component.glyph,...component.aliases]));if(indices.length)mappings[c.id][id]=indices;else missing.push(c.hanzi+':'+id);}}
+writeFileSync('public/atlas/component-strokes.json',JSON.stringify({version:1,source:'https://github.com/skishore/makemeahanzi',dictionarySha256:createHash('sha256').update(raw).digest('hex'),license:'LGPL-3.0-or-later',mappings},null,2)+'\n');console.log('Mapped',Object.values(mappings).reduce((n,m)=>n+Object.keys(m).length,0),'component connections;',missing.length,'connections have no verified stroke mapping.');writeFileSync('/tmp/chinese-atlas-build/unmapped-components.json',JSON.stringify(missing));

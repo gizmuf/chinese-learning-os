@@ -1739,6 +1739,354 @@
     "This is one possible story. The second sentence explicitly gives the current location. 过 or 了 alone does not establish where someone is now.": {
       "fr": "C’est une histoire possible. La deuxième phrase précise la position actuelle. 过 ou 了 ne suffit pas à indiquer où quelqu’un est maintenant.",
       "ru": "Это одна из возможных историй. Второе предложение прямо указывает нынешнее место. Само по себе 过 или 了 не определяет, где человек сейчас."
+    },
+    "Explore": {
+      "fr": "Explorer",
+      "ru": "Обзор"
+    },
+    "Compare": {
+      "fr": "Comparer",
+      "ru": "Сравнение"
+    },
+    "Mixed recall": {
+      "fr": "Rappel mélangé",
+      "ru": "Смешанная проверка"
+    },
+    "Materials": {
+      "fr": "Ressources",
+      "ru": "Материалы"
+    },
+    "Sound family": {
+      "fr": "Famille phonétique",
+      "ru": "Фонетическое семейство"
+    },
+    "Meaning component": {
+      "fr": "Composant de sens",
+      "ru": "Смысловой компонент"
+    },
+    "Structure & meaning": {
+      "fr": "Structure et sens",
+      "ru": "Структура и значение"
+    },
+    "Study theme": {
+      "fr": "Thème d’étude",
+      "ru": "Учебная тема"
+    },
+    "Meaning in a word": {
+      "fr": "Sens dans un mot",
+      "ru": "Значение в слове"
+    },
+    "Components": {
+      "fr": "Composants",
+      "ru": "Компоненты"
+    },
+    "Meaning in this word": {
+      "fr": "Sens dans ce mot",
+      "ru": "Значение в этом слове"
+    },
+    "Listen and choose the word": {
+      "fr": "Écoutez et choisissez le mot",
+      "ru": "Послушайте и выберите слово"
+    },
+    "Find a component in this character": {
+      "fr": "Trouvez un composant dans ce caractère",
+      "ru": "Найдите компонент в этом иероглифе"
+    },
+    "First character": {
+      "fr": "Premier caractère",
+      "ru": "Первый иероглиф"
+    },
+    "Second character": {
+      "fr": "Deuxième caractère",
+      "ru": "Второй иероглиф"
+    },
+    "GUIDED CONSTELLATION PRACTICE": {
+      "fr": "ENTRAÎNEMENT GUIDÉ PAR CONSTELLATION",
+      "ru": "УПРАЖНЕНИЯ ПО СОЗВЕЗДИЮ С ПОДСКАЗКАМИ"
+    },
+    "MIXED RECALL": {
+      "fr": "RAPPEL MÉLANGÉ",
+      "ru": "СМЕШАННАЯ ПРОВЕРКА"
+    },
+    "STUDY THEME": {
+      "fr": "THÈME D’ÉTUDE",
+      "ru": "УЧЕБНАЯ ТЕМА"
+    },
+    "CONSTELLATION": {
+      "fr": "CONSTELLATION",
+      "ru": "СОЗВЕЗДИЕ"
+    },
+    "Exploration saved. Recall is measured separately.": {
+      "fr": "Exploration enregistrée. Le rappel est évalué séparément.",
+      "ru": "Знакомство сохранено. Самостоятельное припоминание оценивается отдельно."
+    },
+    "FOLLOW THE CONNECTIONS": {
+      "fr": "SUIVEZ LES LIENS",
+      "ru": "СЛЕДУЙТЕ ПО СВЯЗЯМ"
+    },
+    "100 characters · 20 constellations · more ways to remember": {
+      "fr": "100 caractères · 20 constellations · plus de façons de mémoriser",
+      "ru": "100 иероглифов · 20 созвездий · больше способов запоминать"
+    },
+    "Sync Atlas progress": {
+      "fr": "Synchroniser la progression de l’Atlas",
+      "ru": "Синхронизировать прогресс в Атласе"
+    },
+    "Atlas sections": {
+      "fr": "Sections de l’Atlas",
+      "ru": "Разделы Атласа"
+    },
+    "Search Atlas": {
+      "fr": "Rechercher dans l’Atlas",
+      "ru": "Поиск по Атласу"
+    },
+    "Character, pinyin, word or meaning…": {
+      "fr": "Caractère, pinyin, mot ou sens…",
+      "ru": "Иероглиф, пиньинь, слово или значение…"
+    },
+    "Follow a component": {
+      "fr": "Suivre un composant",
+      "ru": "Перейти по компоненту"
+    },
+    "Choose a component": {
+      "fr": "Choisir un composant",
+      "ru": "Выбрать компонент"
+    },
+    "One character opens another constellation.": {
+      "fr": "Un caractère ouvre une autre constellation.",
+      "ru": "Один иероглиф открывает другое созвездие."
+    },
+    "Follow a shared shape, a sound clue or a meaning. Every connection is labelled; a theme is not a shared component.": {
+      "fr": "Suivez une forme commune, un indice sonore ou un sens. Chaque lien est identifié ; un thème n’implique pas de composant commun.",
+      "ru": "Следуйте за общей формой, звуковой подсказкой или значением. Тип каждой связи указан; общая тема не означает общий компонент."
+    },
+    "core characters practised": {
+      "fr": "caractères de base travaillés",
+      "ru": "основных иероглифов отработано"
+    },
+    "Start mixed recall": {
+      "fr": "Commencer le rappel mélangé",
+      "ru": "Начать смешанную проверку"
+    },
+    "5 core characters": {
+      "fr": "5 caractères de base",
+      "ru": "5 основных иероглифов"
+    },
+    "All constellations": {
+      "fr": "Toutes les constellations",
+      "ru": "Все созвездия"
+    },
+    "Previous constellation": {
+      "fr": "Constellation précédente",
+      "ru": "Предыдущее созвездие"
+    },
+    "Search results": {
+      "fr": "Résultats de recherche",
+      "ru": "Результаты поиска"
+    },
+    "INDEXED COMPONENT CONNECTIONS": {
+      "fr": "LIENS ENTRE COMPOSANTS INDEXÉS",
+      "ru": "СВЯЗИ ПО КОМПОНЕНТАМ В УКАЗАТЕЛЕ"
+    },
+    "Every matching entry in this Atlas is listed below. Variants and reviewed nested components are included.": {
+      "fr": "Toutes les entrées correspondantes de cet Atlas figurent ci-dessous, y compris les variantes et les composants imbriqués vérifiés.",
+      "ru": "Ниже перечислены все подходящие записи Атласа, включая варианты и проверенные вложенные компоненты."
+    },
+    "connections": {
+      "fr": "liens",
+      "ru": "связей"
+    },
+    "All matching characters": {
+      "fr": "Tous les caractères correspondants",
+      "ru": "Все подходящие иероглифы"
+    },
+    "Discovery": {
+      "fr": "Découverte",
+      "ru": "Знакомство"
+    },
+    "No Atlas entries match this search.": {
+      "fr": "Aucune entrée de l’Atlas ne correspond à cette recherche.",
+      "ru": "В Атласе нет записей по этому запросу."
+    },
+    "Scope: 100 core targets + 6 discovery extensions. This is a curated learning index, not all Chinese characters or every possible stroke fragment.": {
+      "fr": "Périmètre : 100 caractères de base et 6 compléments de découverte. Cet index pédagogique est une sélection, pas un inventaire de tous les caractères chinois ni de tous les fragments de traits possibles.",
+      "ru": "Охват: 100 основных иероглифов и 6 дополнительных для знакомства. Это учебный указатель с отобранными элементами, а не перечень всех китайских иероглифов и любых фрагментов черт."
+    },
+    "Character details": {
+      "fr": "Détails du caractère",
+      "ru": "Сведения об иероглифе"
+    },
+    "Show component colours": {
+      "fr": "Afficher les couleurs des composants",
+      "ru": "Показать цвета компонентов"
+    },
+    "Core target": {
+      "fr": "Caractère de base",
+      "ru": "Основной иероглиф"
+    },
+    "Discovery extension": {
+      "fr": "Complément de découverte",
+      "ru": "Дополнительный иероглиф"
+    },
+    "Meaning clue": {
+      "fr": "Indice de sens",
+      "ru": "Смысловая подсказка"
+    },
+    "Sound clue": {
+      "fr": "Indice sonore",
+      "ru": "Звуковая подсказка"
+    },
+    "Selected shape": {
+      "fr": "Forme sélectionnée",
+      "ru": "Выбранная форма"
+    },
+    "Hear example word": {
+      "fr": "Écouter le mot d’exemple",
+      "ru": "Послушать слово-пример"
+    },
+    "Mark explored": {
+      "fr": "Marquer comme exploré",
+      "ru": "Отметить как изученный"
+    },
+    "Compare characters": {
+      "fr": "Comparer des caractères",
+      "ru": "Сравнить иероглифы"
+    },
+    "Follow another connection": {
+      "fr": "Suivre un autre lien",
+      "ru": "Перейти по другой связи"
+    },
+    "A component label is a shape name, not a pronunciation rule. Colours are learning clues, not origin stories.": {
+      "fr": "Le nom d’un composant décrit une forme, pas une règle de prononciation. Les couleurs sont des repères d’apprentissage, pas des récits d’origine.",
+      "ru": "Название компонента обозначает форму, а не правило произношения. Цвета помогают учиться, но не объясняют происхождение."
+    },
+    "Related constellations": {
+      "fr": "Constellations associées",
+      "ru": "Связанные созвездия"
+    },
+    "Discovery extensions connect through their indexed components.": {
+      "fr": "Les compléments de découverte sont reliés par leurs composants indexés.",
+      "ru": "Дополнительные иероглифы связаны через компоненты, внесённые в указатель."
+    },
+    "Constellations sharing this component": {
+      "fr": "Constellations partageant ce composant",
+      "ru": "Созвездия с этим компонентом"
+    },
+    "Already in your HSK vocabulary": {
+      "fr": "Déjà dans votre vocabulaire HSK",
+      "ru": "Уже в вашем словаре HSK"
+    },
+    "No independent recall yet": {
+      "fr": "Pas encore de rappel autonome",
+      "ru": "Самостоятельной проверки ещё не было"
+    },
+    "Guided practice in this constellation": {
+      "fr": "Entraînement guidé dans cette constellation",
+      "ru": "Упражнения с подсказками в этом созвездии"
+    },
+    "Small differences, different characters.": {
+      "fr": "De petites différences, des caractères distincts.",
+      "ru": "Небольшие отличия — разные иероглифы."
+    },
+    "Compare the written shape, then its actual tone and example word.": {
+      "fr": "Comparez la forme écrite, puis le ton réel et le mot d’exemple.",
+      "ru": "Сравните написание, затем точный тон и слово-пример."
+    },
+    "Some characters share the same syllable and tone. Listening questions use full words so the answer can be distinguished.": {
+      "fr": "Certains caractères ont la même syllabe et le même ton. Les questions d’écoute utilisent des mots entiers pour permettre de distinguer la réponse.",
+      "ru": "У некоторых иероглифов совпадают слог и тон. В заданиях на слух используются целые слова, чтобы можно было различить ответы."
+    },
+    "Recall beyond the constellation.": {
+      "fr": "Rappelez-vous au-delà de la constellation.",
+      "ru": "Проверьте память за пределами созвездия."
+    },
+    "Eight mixed activities: word meanings, listening and component recognition. Hints are recorded as assisted practice.": {
+      "fr": "Huit activités mélangées : sens des mots, écoute et reconnaissance des composants. Les réponses avec indice sont enregistrées comme entraînement assisté.",
+      "ru": "Восемь смешанных заданий: значения слов, аудирование и распознавание компонентов. Использование подсказок учитывается как практика с помощью."
+    },
+    "Sound, meaning, components and handwriting have separate review schedules.": {
+      "fr": "Le son, le sens, les composants et l’écriture ont des calendriers de révision distincts.",
+      "ru": "Звучание, значение, компоненты и письмо имеют отдельные расписания повторения."
+    },
+    "Choose an Atlas character": {
+      "fr": "Choisir un caractère de l’Atlas",
+      "ru": "Выбрать иероглиф из Атласа"
+    },
+    "Audio uses the example word to preserve the selected reading. Atlas handwriting has its own history; whole-word HSK reviews remain separate.": {
+      "fr": "L’audio utilise le mot d’exemple pour conserver la lecture choisie. L’écriture de l’Atlas a son propre historique ; les révisions HSK de mots entiers restent distinctes.",
+      "ru": "Для озвучивания используется слово-пример, чтобы сохранить выбранное чтение. Письмо в Атласе имеет собственную историю; повторение целых слов HSK учитывается отдельно."
+    },
+    "Your Atlas, connected to real practice.": {
+      "fr": "Votre Atlas, relié à une pratique concrète.",
+      "ru": "Ваш Атлас связан с реальной практикой."
+    },
+    "The original English PDF contains 100 targets in 20 groups. The app adds six discovery extensions, interactive connections and translations in English, French and Russian.": {
+      "fr": "Le PDF original en anglais contient 100 caractères en 20 groupes. L’application ajoute six compléments de découverte, des liens interactifs et des traductions en anglais, français et russe.",
+      "ru": "Исходный PDF на английском содержит 100 иероглифов в 20 группах. Приложение добавляет шесть иероглифов для знакомства, интерактивные связи и переводы на английский, французский и русский."
+    },
+    "Original Atlas PDF · English": {
+      "fr": "PDF original de l’Atlas · Anglais",
+      "ru": "Исходный PDF Атласа · Английский"
+    },
+    "Export Atlas history": {
+      "fr": "Exporter l’historique de l’Atlas",
+      "ru": "Экспортировать историю Атласа"
+    },
+    "What a connection means": {
+      "fr": "Ce que signifie un lien",
+      "ru": "Что означает связь"
+    },
+    "A sound family suggests a pronunciation connection; learn the actual syllable and tone. A meaning component is a clue, not a full definition. A study theme does not imply a shared shape.": {
+      "fr": "Une famille phonétique suggère un lien de prononciation ; apprenez la syllabe et le ton réels. Un composant de sens donne un indice, pas une définition complète. Un thème d’étude n’implique pas de forme commune.",
+      "ru": "Фонетическое семейство подсказывает связь в произношении; учите точный слог и тон. Смысловой компонент даёт подсказку, а не полное определение. Учебная тема не подразумевает общую форму."
+    },
+    "Component searches include the reviewed shapes and variants in this dataset. Unreviewed fragments are not inferred automatically. Discovery extensions are not graded on component recognition.": {
+      "fr": "La recherche par composant inclut les formes et variantes vérifiées de ces données. Les fragments non vérifiés ne sont pas déduits automatiquement. Les compléments de découverte ne sont pas évalués sur la reconnaissance des composants.",
+      "ru": "Поиск по компонентам учитывает проверенные формы и варианты из этого набора данных. Непроверенные фрагменты не выводятся автоматически. Распознавание компонентов дополнительных иероглифов не оценивается."
+    },
+    "Exploration and copying never advance independent recall. Guest history and ink drafts stay on this device; signed-in Atlas events sync with your account.": {
+      "fr": "L’exploration et la copie ne font jamais progresser le rappel autonome. L’historique invité et les brouillons manuscrits restent sur cet appareil ; les événements Atlas des utilisateurs connectés sont synchronisés avec leur compte.",
+      "ru": "Знакомство и переписывание никогда не повышают показатель самостоятельного припоминания. Гостевая история и черновики письма остаются на этом устройстве; действия в Атласе после входа синхронизируются с аккаунтом."
+    },
+    "Sources and licences": {
+      "fr": "Sources et licences",
+      "ru": "Источники и лицензии"
+    },
+    "Constellation map": {
+      "fr": "Carte des constellations",
+      "ru": "Карта созвездий"
+    },
+    "connection": {
+      "fr": "lien",
+      "ru": "связь"
+    },
+    "All results are listed below.": {
+      "fr": "Tous les résultats figurent ci-dessous.",
+      "ru": "Ниже перечислены все результаты."
+    },
+    "correct": {
+      "fr": "correct",
+      "ru": "верно"
+    },
+    "Return to mixed recall to revisit difficult activities.": {
+      "fr": "Revenez au rappel mélangé pour reprendre les activités difficiles.",
+      "ru": "Вернитесь к смешанной проверке, чтобы повторить сложные задания."
+    },
+    "Back to Atlas": {
+      "fr": "Retour à l’Atlas",
+      "ru": "Назад к Атласу"
+    },
+    "Retry character data": {
+      "fr": "Réessayer de charger les données du caractère",
+      "ru": "Повторить загрузку данных иероглифа"
+    },
+    "Connection indexed; full shape shown.": {
+      "fr": "Lien indexé ; forme complète affichée.",
+      "ru": "Связь внесена в указатель; показана полная форма."
+    },
+    "Write the character before comparing. Rate your memory honestly.": {
+      "fr": "Écrivez le caractère avant de comparer. Évaluez honnêtement votre mémoire.",
+      "ru": "Напишите иероглиф перед сравнением. Честно оцените, как вы его помните."
     }
   },
   "vocabulary": {

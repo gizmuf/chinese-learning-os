@@ -12,3 +12,7 @@ Reviewed for this content expansion, 21 October 2026. Keep the existing browser 
 | [HSK 3.0 vocabulary dataset](https://github.com/uranbekanarbaev/hsk-3.0-vocabulary-dataset) | Numbered 2025-syllabus transcription | Original browser code MIT, selected original additions CC BY 4.0; source syllabus and transcriptions excluded from those grants | Cross-checked factual membership/readings against the official PDF. Authored our own teaching material. See `data/README.md`. |
 
 This release adds content, not another learning engine. A future Anki export could reuse the stable IDs and existing scheduling history, but no new account system, dictionary service, dependency upgrade or imported application code is needed for this expansion.
+
+## Atlas component mappings
+
+The Atlas reuses Make Me a Hanzi's **dictionary** decomposition/matches in addition to the existing graphic strokes. Dictionary data is LGPL-3.0-or-later; graphics derive from Arphic fonts and retain their separate notices. The generated mapping artifact records upstream URL and input SHA256. The derivation script is `scripts/author-atlas-structure.mjs`; no runtime dictionary service or new application dependency is introduced. License texts are shipped as `makemeahanzi-COPYING.txt`, `makemeahanzi-dictionary-LGPL.txt` and `makemeahanzi-GPL-3.0.txt`, alongside the existing graphic notices. Teaching translations, grouping navigation and six discovery entries are authored application content; the original supplied Atlas PDF is downloadable from Materials.

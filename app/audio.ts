@@ -18,7 +18,7 @@ export function speak(
   notify: (message: string) => void,
   item: Item,
 ) {
-  const prefix = item.id.startsWith("course03-") ? "/course03/audio" : "/audio";
+  const prefix = item.id.startsWith("atlas-") ? "/atlas/audio" : item.id.startsWith("course03-") ? "/course03/audio" : "/audio";
   const source = `${prefix}/${encodeURIComponent(item.id)}-${text === item.hanzi ? "word" : "sentence"}.mp3`;
   stopAudio();
   const audio = new Audio(source);

@@ -1,0 +1,1493 @@
+{
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "language": "zh-CN",
+  "generationRate": "-10%",
+  "provider": "Microsoft Edge Read Aloud via edge-tts",
+  "edgeTtsVersion": "7.3.1",
+  "recordings": [
+    {
+      "itemId": "atlas-u4e00",
+      "kind": "sentence",
+      "text": "第一",
+      "file": "atlas-u4e00-sentence.mp3",
+      "sha256": "34d0b7eb9bb79ee006e37bc7d874929a14d24070348785c0d4630acc95772f1c"
+    },
+    {
+      "itemId": "atlas-u4e00",
+      "kind": "word",
+      "text": "第一",
+      "file": "atlas-u4e00-word.mp3",
+      "sha256": "142290f7bf25ee97aab47fe8480887c84787c0fc44bf255ca700ad83e6b24413"
+    },
+    {
+      "itemId": "atlas-u4e09",
+      "kind": "sentence",
+      "text": "三月",
+      "file": "atlas-u4e09-sentence.mp3",
+      "sha256": "cabb4429af07a0809c62e34a5569a749b32b0264b148668b52f1398b00507327"
+    },
+    {
+      "itemId": "atlas-u4e09",
+      "kind": "word",
+      "text": "三月",
+      "file": "atlas-u4e09-word.mp3",
+      "sha256": "babf102cd6b88b01f3c0973821734b5ba29f31b3ec9d59523219b21e28100199"
+    },
+    {
+      "itemId": "atlas-u4e0a",
+      "kind": "sentence",
+      "text": "上面",
+      "file": "atlas-u4e0a-sentence.mp3",
+      "sha256": "d6c50708ae45a1e1729dedda7b46f535309580e2e0b5c0a8beedeaecfff23097"
+    },
+    {
+      "itemId": "atlas-u4e0a",
+      "kind": "word",
+      "text": "上面",
+      "file": "atlas-u4e0a-word.mp3",
+      "sha256": "3e9cca93ee62c10b96c9da7b3824e064386dba2e3c2fa03fcac8098588f3da24"
+    },
+    {
+      "itemId": "atlas-u4e0b",
+      "kind": "sentence",
+      "text": "下面",
+      "file": "atlas-u4e0b-sentence.mp3",
+      "sha256": "58c0328c30b742ed1ce036e3401b9005162b1c58aff7e95aa78496d0d6094631"
+    },
+    {
+      "itemId": "atlas-u4e0b",
+      "kind": "word",
+      "text": "下面",
+      "file": "atlas-u4e0b-word.mp3",
+      "sha256": "58c0328c30b742ed1ce036e3401b9005162b1c58aff7e95aa78496d0d6094631"
+    },
+    {
+      "itemId": "atlas-u4e2d",
+      "kind": "sentence",
+      "text": "中间",
+      "file": "atlas-u4e2d-sentence.mp3",
+      "sha256": "a338f1ed5e253f77eec5ad94d502441066524272d830072ad85f776f8b235cf8"
+    },
+    {
+      "itemId": "atlas-u4e2d",
+      "kind": "word",
+      "text": "中间",
+      "file": "atlas-u4e2d-word.mp3",
+      "sha256": "b517871699f43b9e939268a56c695ad676979fc857cb0aaa01fbb562653e5e85"
+    },
+    {
+      "itemId": "atlas-u4e66",
+      "kind": "sentence",
+      "text": "书店",
+      "file": "atlas-u4e66-sentence.mp3",
+      "sha256": "907b62054e477a13e2e4e3bf269767bf7c260297e0a44e3890b8460de24f202f"
+    },
+    {
+      "itemId": "atlas-u4e66",
+      "kind": "word",
+      "text": "书店",
+      "file": "atlas-u4e66-word.mp3",
+      "sha256": "da6000cc815cbebd895af1221242085daec98545fe1e4fb85007c7d78706f19e"
+    },
+    {
+      "itemId": "atlas-u4e8c",
+      "kind": "sentence",
+      "text": "二月",
+      "file": "atlas-u4e8c-sentence.mp3",
+      "sha256": "6500cdc8293fbf4a21dba38ffa5e9ba7feb0c9157d9cb57aa9e7a1b641847656"
+    },
+    {
+      "itemId": "atlas-u4e8c",
+      "kind": "word",
+      "text": "二月",
+      "file": "atlas-u4e8c-word.mp3",
+      "sha256": "1bf7f6bee97b948c81546716e2d7a0b49a79491960b80989b67f04be0b635442"
+    },
+    {
+      "itemId": "atlas-u4e94",
+      "kind": "sentence",
+      "text": "五月",
+      "file": "atlas-u4e94-sentence.mp3",
+      "sha256": "2d3c1b00b60b8dfb6d9b70358d7a66b6b88df5e7d47650162ffe20dcb50837c0"
+    },
+    {
+      "itemId": "atlas-u4e94",
+      "kind": "word",
+      "text": "五月",
+      "file": "atlas-u4e94-word.mp3",
+      "sha256": "2d3c1b00b60b8dfb6d9b70358d7a66b6b88df5e7d47650162ffe20dcb50837c0"
+    },
+    {
+      "itemId": "atlas-u4eba",
+      "kind": "sentence",
+      "text": "人人",
+      "file": "atlas-u4eba-sentence.mp3",
+      "sha256": "fc1b59e201ad114ba3e01e5335ef9752e72fa7bde9b17dc8d46de723d20651c8"
+    },
+    {
+      "itemId": "atlas-u4eba",
+      "kind": "word",
+      "text": "人人",
+      "file": "atlas-u4eba-word.mp3",
+      "sha256": "fc1b59e201ad114ba3e01e5335ef9752e72fa7bde9b17dc8d46de723d20651c8"
+    },
+    {
+      "itemId": "atlas-u4ed6",
+      "kind": "sentence",
+      "text": "他们",
+      "file": "atlas-u4ed6-sentence.mp3",
+      "sha256": "8a5e883b5e4590970f856410ecb5bd5ae2fe14f035222bf26397606f98e7de11"
+    },
+    {
+      "itemId": "atlas-u4ed6",
+      "kind": "word",
+      "text": "他们",
+      "file": "atlas-u4ed6-word.mp3",
+      "sha256": "8a5e883b5e4590970f856410ecb5bd5ae2fe14f035222bf26397606f98e7de11"
+    },
+    {
+      "itemId": "atlas-u4eec",
+      "kind": "sentence",
+      "text": "我们",
+      "file": "atlas-u4eec-sentence.mp3",
+      "sha256": "e088f6f09fd9a76d82bba0d37e127d24d9b188d1ccce086bca3ad6960c1394bc"
+    },
+    {
+      "itemId": "atlas-u4eec",
+      "kind": "word",
+      "text": "我们",
+      "file": "atlas-u4eec-word.mp3",
+      "sha256": "dec842e846998f2c526b7541b79dd50fdeb7fe4a2688a91f5b6c6eebd6d03854"
+    },
+    {
+      "itemId": "atlas-u4f4f",
+      "kind": "sentence",
+      "text": "居住",
+      "file": "atlas-u4f4f-sentence.mp3",
+      "sha256": "e055918c278e2570638d8525f1650dfb1df1383d7f71616febb81337469b25be"
+    },
+    {
+      "itemId": "atlas-u4f4f",
+      "kind": "word",
+      "text": "居住",
+      "file": "atlas-u4f4f-word.mp3",
+      "sha256": "014eb8e0dc19cec6badfcd9839cc7490c17463ebff325f46dd69c18df4a26ceb"
+    },
+    {
+      "itemId": "atlas-u4f53",
+      "kind": "sentence",
+      "text": "体育",
+      "file": "atlas-u4f53-sentence.mp3",
+      "sha256": "1db9b12184a9f933ae887eba94f537d5dfdd280d40cbd86cff10c78553a2d76e"
+    },
+    {
+      "itemId": "atlas-u4f53",
+      "kind": "word",
+      "text": "体育",
+      "file": "atlas-u4f53-word.mp3",
+      "sha256": "a8a3ad81f9061677110d4d30514eb7af7f1b362c1017fdd40c11353173986777"
+    },
+    {
+      "itemId": "atlas-u4f60",
+      "kind": "sentence",
+      "text": "你好",
+      "file": "atlas-u4f60-sentence.mp3",
+      "sha256": "9f3faba786d30f93d9635723d45f68108377a65fc98cda86a58f9e5704827b03"
+    },
+    {
+      "itemId": "atlas-u4f60",
+      "kind": "word",
+      "text": "你好",
+      "file": "atlas-u4f60-word.mp3",
+      "sha256": "4d0b4f18c47f331983ec78b039c849207a67e8d0a1df4a28872a0fbafd39acea"
+    },
+    {
+      "itemId": "atlas-u5305",
+      "kind": "sentence",
+      "text": "书包",
+      "file": "atlas-u5305-sentence.mp3",
+      "sha256": "9c1d2093d1ae5b9701cebad96fd972891b61a32c6c9fcbaad85543d0ea46ef0a"
+    },
+    {
+      "itemId": "atlas-u5305",
+      "kind": "word",
+      "text": "书包",
+      "file": "atlas-u5305-word.mp3",
+      "sha256": "ae78faf5e2535f53dd103f646f26b65657dabcdc2cd71ce92dd4d38b80de4ccd"
+    },
+    {
+      "itemId": "atlas-u53e3",
+      "kind": "sentence",
+      "text": "人口",
+      "file": "atlas-u53e3-sentence.mp3",
+      "sha256": "e208777fdebce804cda7d7debb2beea62d2065c69930e785ba5f9afcd576605a"
+    },
+    {
+      "itemId": "atlas-u53e3",
+      "kind": "word",
+      "text": "人口",
+      "file": "atlas-u53e3-word.mp3",
+      "sha256": "3f0daf4b0e25232b4f3b86c496dc61eb6c449d41bcaa258ba29bdf06be4490d9"
+    },
+    {
+      "itemId": "atlas-u53eb",
+      "kind": "sentence",
+      "text": "叫声",
+      "file": "atlas-u53eb-sentence.mp3",
+      "sha256": "6e1a79172fbc68cb0322306c085ca20324b128aea23c2658cb3d30307d39581b"
+    },
+    {
+      "itemId": "atlas-u53eb",
+      "kind": "word",
+      "text": "叫声",
+      "file": "atlas-u53eb-word.mp3",
+      "sha256": "a1b875c8d136a037dded97040685f82bee45e09ccdc7a167740d10636f0f20db"
+    },
+    {
+      "itemId": "atlas-u5403",
+      "kind": "sentence",
+      "text": "吃饭",
+      "file": "atlas-u5403-sentence.mp3",
+      "sha256": "2d7e987c6f9f608fbf5ad0eae09f8fc3e205397eea640da6913324f479ca90ef"
+    },
+    {
+      "itemId": "atlas-u5403",
+      "kind": "word",
+      "text": "吃饭",
+      "file": "atlas-u5403-word.mp3",
+      "sha256": "f27044932dffbc9d6fd221487e9206c3c1d65899e28bd88b3aa0eb1baf2fe6fa"
+    },
+    {
+      "itemId": "atlas-u540d",
+      "kind": "sentence",
+      "text": "名字",
+      "file": "atlas-u540d-sentence.mp3",
+      "sha256": "d75b8346ac7bd5574df1d3d584566df4d05f58cf4c33ec61981d36f8aff97b83"
+    },
+    {
+      "itemId": "atlas-u540d",
+      "kind": "word",
+      "text": "名字",
+      "file": "atlas-u540d-word.mp3",
+      "sha256": "6ed04858e79f2bbb26cea5d7568c59f4e8c4a781ff2cd4744e317cd76a84a557"
+    },
+    {
+      "itemId": "atlas-u5417",
+      "kind": "sentence",
+      "text": "好吗？",
+      "file": "atlas-u5417-sentence.mp3",
+      "sha256": "23047248a2d48ce0de091b3e09f99cfd9838e2b805bc10ed8ee09f4648804fc1"
+    },
+    {
+      "itemId": "atlas-u5417",
+      "kind": "word",
+      "text": "好吗？",
+      "file": "atlas-u5417-word.mp3",
+      "sha256": "8c1db54c29ae25161d72b762b0f3dbd22a75694cdd389ebe77abbc4f9661d1e5"
+    },
+    {
+      "itemId": "atlas-u542c",
+      "kind": "sentence",
+      "text": "听见",
+      "file": "atlas-u542c-sentence.mp3",
+      "sha256": "957511edde74d7a9eb620e99c8b77fc2e89fc8bb1fa136f1888b7ea4ac8f5fc4"
+    },
+    {
+      "itemId": "atlas-u542c",
+      "kind": "word",
+      "text": "听见",
+      "file": "atlas-u542c-word.mp3",
+      "sha256": "37317227d9a0913212f9df3339d006ac39d1bc6050ccd0656b1c92ffb6e80155"
+    },
+    {
+      "itemId": "atlas-u559d",
+      "kind": "sentence",
+      "text": "喝茶",
+      "file": "atlas-u559d-sentence.mp3",
+      "sha256": "8c2ba52f8f15db26b41e669476cebb4cb253e9fde228cb2d766a4b6a8019eb2a"
+    },
+    {
+      "itemId": "atlas-u559d",
+      "kind": "word",
+      "text": "喝茶",
+      "file": "atlas-u559d-word.mp3",
+      "sha256": "283e95d79769c30a6540a7d2b1f8773c3dfa3a8d176d9db0024c9ba7892efe8b"
+    },
+    {
+      "itemId": "atlas-u56db",
+      "kind": "sentence",
+      "text": "四月",
+      "file": "atlas-u56db-sentence.mp3",
+      "sha256": "bfb618d151cb6caf370fca0c6db595feeb390009e417fdaf0f2c563f9262c48b"
+    },
+    {
+      "itemId": "atlas-u56db",
+      "kind": "word",
+      "text": "四月",
+      "file": "atlas-u56db-word.mp3",
+      "sha256": "db6a024030831500bb857314fe37a287eacbbde6d889b8b4c7cf5383999a1d9c"
+    },
+    {
+      "itemId": "atlas-u5927",
+      "kind": "sentence",
+      "text": "大人",
+      "file": "atlas-u5927-sentence.mp3",
+      "sha256": "87e64fe2663b4b765fdf7d8e1704152dd6f45924e200422cba7a6ff011ad04a2"
+    },
+    {
+      "itemId": "atlas-u5927",
+      "kind": "word",
+      "text": "大人",
+      "file": "atlas-u5927-word.mp3",
+      "sha256": "714b21150acc977882c75b71fb3cef83fefc09f3d5cca21c190d2592f885c38f"
+    },
+    {
+      "itemId": "atlas-u5934",
+      "kind": "sentence",
+      "text": "头发",
+      "file": "atlas-u5934-sentence.mp3",
+      "sha256": "5f716f4e0c36285ab5c71ec6f04498e55568a7f7834e3ff5988f690b51aa5bdb"
+    },
+    {
+      "itemId": "atlas-u5934",
+      "kind": "word",
+      "text": "头发",
+      "file": "atlas-u5934-word.mp3",
+      "sha256": "bce1000e9bf8f2b24aa7c86ebf76e54faacfab65b17b1fb19cc0c1ecbe3ea827"
+    },
+    {
+      "itemId": "atlas-u5973",
+      "kind": "sentence",
+      "text": "女儿",
+      "file": "atlas-u5973-sentence.mp3",
+      "sha256": "b118e5cb03cd6c2b376d0f4ccff276b4ace3612102bc6f0816f0f1b5e498e743"
+    },
+    {
+      "itemId": "atlas-u5973",
+      "kind": "word",
+      "text": "女儿",
+      "file": "atlas-u5973-word.mp3",
+      "sha256": "d573ed61aca3dbd0816477d7004d6680811c660c4bfe893e3aba8f836b08f142"
+    },
+    {
+      "itemId": "atlas-u597d",
+      "kind": "sentence",
+      "text": "好人",
+      "file": "atlas-u597d-sentence.mp3",
+      "sha256": "68337c39f00c1e6ae5beba1f3fd2b76589ca5418a8a7b99a86a04cf98f0ae65d"
+    },
+    {
+      "itemId": "atlas-u597d",
+      "kind": "word",
+      "text": "好人",
+      "file": "atlas-u597d-word.mp3",
+      "sha256": "a0794ea0fb06ff210c71485250daa446a0cb5ff3d7a19cb639213500e11bf1ae"
+    },
+    {
+      "itemId": "atlas-u5988",
+      "kind": "sentence",
+      "text": "妈妈",
+      "file": "atlas-u5988-sentence.mp3",
+      "sha256": "ff880c6acd976503a8faf6133f5942828a54579067dd9954229322e5f22eb3ca"
+    },
+    {
+      "itemId": "atlas-u5988",
+      "kind": "word",
+      "text": "妈妈",
+      "file": "atlas-u5988-word.mp3",
+      "sha256": "46fc3b77d84b5eb2532fc2c2eb37f6579de80820a427f0a621dc5d6038ef8c96"
+    },
+    {
+      "itemId": "atlas-u5b50",
+      "kind": "sentence",
+      "text": "子女",
+      "file": "atlas-u5b50-sentence.mp3",
+      "sha256": "e078cdffe7686bb1315216017b6cb148b91ab1ff21d4ba67b9bd596d636e4568"
+    },
+    {
+      "itemId": "atlas-u5b50",
+      "kind": "word",
+      "text": "子女",
+      "file": "atlas-u5b50-word.mp3",
+      "sha256": "7559bff1158262d0a52875b9b66097ca91409a471a39f0890c7df0f777617dd6"
+    },
+    {
+      "itemId": "atlas-u5b57",
+      "kind": "sentence",
+      "text": "汉字",
+      "file": "atlas-u5b57-sentence.mp3",
+      "sha256": "67f7c8d9516cd5b79b4b6cb6883e54f4df67f49bc924f072effe4f206567cb30"
+    },
+    {
+      "itemId": "atlas-u5b57",
+      "kind": "word",
+      "text": "汉字",
+      "file": "atlas-u5b57-word.mp3",
+      "sha256": "9c0498dfb287832537e913a7f2b2f512a806a0496c2591545d663e0dbcf29f6e"
+    },
+    {
+      "itemId": "atlas-u5b66",
+      "kind": "sentence",
+      "text": "学习",
+      "file": "atlas-u5b66-sentence.mp3",
+      "sha256": "fc851fa28f77e59a4e1a1942d3aefff38273ab446ed1220c4a9ef46a872641a2"
+    },
+    {
+      "itemId": "atlas-u5b66",
+      "kind": "word",
+      "text": "学习",
+      "file": "atlas-u5b66-word.mp3",
+      "sha256": "b6efb233caa1c65040bf1e1e7b05cd5c11dff692a68cb347d1f8c4a953df24d3"
+    },
+    {
+      "itemId": "atlas-u5b89",
+      "kind": "sentence",
+      "text": "安全",
+      "file": "atlas-u5b89-sentence.mp3",
+      "sha256": "a2133e70ecfb6aab5be261569abf9c4aaecb02531c947afef0f47db66f029ecf"
+    },
+    {
+      "itemId": "atlas-u5b89",
+      "kind": "word",
+      "text": "安全",
+      "file": "atlas-u5b89-word.mp3",
+      "sha256": "ceffd4dfd70a82e806bbf0135a5e0a4aef61a9868d8ea3014a20e3699275f8af"
+    },
+    {
+      "itemId": "atlas-u5ba2",
+      "kind": "sentence",
+      "text": "客人",
+      "file": "atlas-u5ba2-sentence.mp3",
+      "sha256": "d2d87afebe4cfb9f23b0cb23a1c329ead96c1feb7b0c4f21763881e0ee0d9041"
+    },
+    {
+      "itemId": "atlas-u5ba2",
+      "kind": "word",
+      "text": "客人",
+      "file": "atlas-u5ba2-word.mp3",
+      "sha256": "7492d9e2d983d0be4c5958173f8b08f58f6a037dc3de8c57414087a9b8963753"
+    },
+    {
+      "itemId": "atlas-u5ba4",
+      "kind": "sentence",
+      "text": "教室",
+      "file": "atlas-u5ba4-sentence.mp3",
+      "sha256": "cd1fccf54790d23e4d66e6724c5e3bdd49821a21acccbae66cc84399a97783a1"
+    },
+    {
+      "itemId": "atlas-u5ba4",
+      "kind": "word",
+      "text": "教室",
+      "file": "atlas-u5ba4-word.mp3",
+      "sha256": "cd1fccf54790d23e4d66e6724c5e3bdd49821a21acccbae66cc84399a97783a1"
+    },
+    {
+      "itemId": "atlas-u5bb6",
+      "kind": "sentence",
+      "text": "回家",
+      "file": "atlas-u5bb6-sentence.mp3",
+      "sha256": "135552e6162ca163cb551caa08746e2c4a2dabf0e2be73d5c49a05e8341cc489"
+    },
+    {
+      "itemId": "atlas-u5bb6",
+      "kind": "word",
+      "text": "回家",
+      "file": "atlas-u5bb6-word.mp3",
+      "sha256": "3c95844a9814b03e82f4ae91096c7a70fb33764099c9f0c6d20c5f57da74081f"
+    },
+    {
+      "itemId": "atlas-u5c0f",
+      "kind": "sentence",
+      "text": "小孩",
+      "file": "atlas-u5c0f-sentence.mp3",
+      "sha256": "be7020699fc6585ee794f1d105236db7a0e71108c0ad283dcdd916b30819fbab"
+    },
+    {
+      "itemId": "atlas-u5c0f",
+      "kind": "word",
+      "text": "小孩",
+      "file": "atlas-u5c0f-word.mp3",
+      "sha256": "03e0a576a9f7b1d69e83ceff587f4d1605e43e81b81d8b00c7460949031e84de"
+    },
+    {
+      "itemId": "atlas-u5fc3",
+      "kind": "sentence",
+      "text": "小心",
+      "file": "atlas-u5fc3-sentence.mp3",
+      "sha256": "2a127f846b6797e74fda760f5af84240c71ed31ead720f4422770573e4a7052b"
+    },
+    {
+      "itemId": "atlas-u5fc3",
+      "kind": "word",
+      "text": "小心",
+      "file": "atlas-u5fc3-word.mp3",
+      "sha256": "2a127f846b6797e74fda760f5af84240c71ed31ead720f4422770573e4a7052b"
+    },
+    {
+      "itemId": "atlas-u5fd8",
+      "kind": "sentence",
+      "text": "忘记",
+      "file": "atlas-u5fd8-sentence.mp3",
+      "sha256": "2916738b3be331a87f0aa90bc09a8ba185758523c4f213257e427ef1ac84b323"
+    },
+    {
+      "itemId": "atlas-u5fd8",
+      "kind": "word",
+      "text": "忘记",
+      "file": "atlas-u5fd8-word.mp3",
+      "sha256": "a36c948b0af55ab5357eaed4f2456b1f324e77fdb41170776edf3f64b288a3b4"
+    },
+    {
+      "itemId": "atlas-u5fd9",
+      "kind": "sentence",
+      "text": "帮忙",
+      "file": "atlas-u5fd9-sentence.mp3",
+      "sha256": "f2c220ea6e259c769e69aa6686f28ab57c583e87205c304b3f1e213a596de76b"
+    },
+    {
+      "itemId": "atlas-u5fd9",
+      "kind": "word",
+      "text": "帮忙",
+      "file": "atlas-u5fd9-word.mp3",
+      "sha256": "db774cf72c74fbe6b82eea17d91cf5d5d060677899dd90e72a42ccc37b3cdcf2"
+    },
+    {
+      "itemId": "atlas-u6015",
+      "kind": "sentence",
+      "text": "害怕",
+      "file": "atlas-u6015-sentence.mp3",
+      "sha256": "75293e184082e6d83e59b977795dd5ab168ce33231ce38ba3b7420db1fc3c576"
+    },
+    {
+      "itemId": "atlas-u6015",
+      "kind": "word",
+      "text": "害怕",
+      "file": "atlas-u6015-word.mp3",
+      "sha256": "a8cb3b98b16cb7a69a4be8c283b929f638ece9115f0360145b2a541c1522a2f8"
+    },
+    {
+      "itemId": "atlas-u60c5",
+      "kind": "sentence",
+      "text": "心情",
+      "file": "atlas-u60c5-sentence.mp3",
+      "sha256": "d1ad7f4958927baea95978a0f2da7292d95e0b99adf6dcbc74a9e139c93cd946"
+    },
+    {
+      "itemId": "atlas-u60c5",
+      "kind": "word",
+      "text": "心情",
+      "file": "atlas-u60c5-word.mp3",
+      "sha256": "3a4bf14c32d0f7b5882ca190cf675aa7868f0ba3948efb77997736c8adb58bbe"
+    },
+    {
+      "itemId": "atlas-u60f3",
+      "kind": "sentence",
+      "text": "想念",
+      "file": "atlas-u60f3-sentence.mp3",
+      "sha256": "1a362c0a37ea13757e2e00368622bd5c149b6ddb0ebbd577622183994b747234"
+    },
+    {
+      "itemId": "atlas-u60f3",
+      "kind": "word",
+      "text": "想念",
+      "file": "atlas-u60f3-word.mp3",
+      "sha256": "dccbce4ca600ba2bae241dcfed930d7bb9a4d8d3519f1b62643615f2335fe9d5"
+    },
+    {
+      "itemId": "atlas-u623f",
+      "kind": "sentence",
+      "text": "房间",
+      "file": "atlas-u623f-sentence.mp3",
+      "sha256": "8888912be9ec2b995940361f3ead656f3fc6222b62720e71c3c96e36d3df3158"
+    },
+    {
+      "itemId": "atlas-u623f",
+      "kind": "word",
+      "text": "房间",
+      "file": "atlas-u623f-word.mp3",
+      "sha256": "21cdcabe0f3b08f2114eb4c248bca8ba519ea8b8063903ad144594948a6e43ef"
+    },
+    {
+      "itemId": "atlas-u624b",
+      "kind": "sentence",
+      "text": "手机",
+      "file": "atlas-u624b-sentence.mp3",
+      "sha256": "26a73e0ac5304d2baf4f45fab24c967eb8d6efed980f86ec0130c9fdf8652b9e"
+    },
+    {
+      "itemId": "atlas-u624b",
+      "kind": "word",
+      "text": "手机",
+      "file": "atlas-u624b-word.mp3",
+      "sha256": "d2a6e300167ec791b11957dbd514d77928f6beb90fb88b98de2ee622414e3969"
+    },
+    {
+      "itemId": "atlas-u6253",
+      "kind": "sentence",
+      "text": "打开",
+      "file": "atlas-u6253-sentence.mp3",
+      "sha256": "764f435267486729c38a706eaa11049ea8004abffabac35fe034abf178d398f8"
+    },
+    {
+      "itemId": "atlas-u6253",
+      "kind": "word",
+      "text": "打开",
+      "file": "atlas-u6253-word.mp3",
+      "sha256": "0915d73d0bd17d646ccb24a5f42e2b5b905cac088d16e85c8a57cc1f0dbf2a74"
+    },
+    {
+      "itemId": "atlas-u627e",
+      "kind": "sentence",
+      "text": "找到",
+      "file": "atlas-u627e-sentence.mp3",
+      "sha256": "83b5c3f8e78816d119579e7223ca7092d8689bedae159bb203d44f4eb0e2ef3b"
+    },
+    {
+      "itemId": "atlas-u627e",
+      "kind": "word",
+      "text": "找到",
+      "file": "atlas-u627e-word.mp3",
+      "sha256": "4ea5ff3efb78c096d706be256b17521f646c55d10a8e8b64604211e908a28513"
+    },
+    {
+      "itemId": "atlas-u628a",
+      "kind": "sentence",
+      "text": "把手",
+      "file": "atlas-u628a-sentence.mp3",
+      "sha256": "d976062e5fda5943c93ae35889a6dab1c9e06b45f56f7f03868048250cc2cafb"
+    },
+    {
+      "itemId": "atlas-u628a",
+      "kind": "word",
+      "text": "把手",
+      "file": "atlas-u628a-word.mp3",
+      "sha256": "adc444661a6bced54bdf9944e75215965eed931a6d3dc32e105f1b14a0f703f6"
+    },
+    {
+      "itemId": "atlas-u62b1",
+      "kind": "sentence",
+      "text": "拥抱",
+      "file": "atlas-u62b1-sentence.mp3",
+      "sha256": "0e2396064c1fd0cd7cf578c4b207fd2666327d98c946be6edce4da6b55ffcecc"
+    },
+    {
+      "itemId": "atlas-u62b1",
+      "kind": "word",
+      "text": "拥抱",
+      "file": "atlas-u62b1-word.mp3",
+      "sha256": "0e2396064c1fd0cd7cf578c4b207fd2666327d98c946be6edce4da6b55ffcecc"
+    },
+    {
+      "itemId": "atlas-u62c9",
+      "kind": "sentence",
+      "text": "拉开",
+      "file": "atlas-u62c9-sentence.mp3",
+      "sha256": "a3f74a70f5f406b3a26a807ceb4a2622bf8f65112a2ac403ee75a0ef0eb019f3"
+    },
+    {
+      "itemId": "atlas-u62c9",
+      "kind": "word",
+      "text": "拉开",
+      "file": "atlas-u62c9-word.mp3",
+      "sha256": "13945749c242afb56d8d308a12c3ef27831992cbc89c4fee6102d8567ef83e28"
+    },
+    {
+      "itemId": "atlas-u653e",
+      "kind": "sentence",
+      "text": "放下",
+      "file": "atlas-u653e-sentence.mp3",
+      "sha256": "04a74eb84ee0a51baef1ee798c96670d63a84a3f19b9c01c0e081375964da0cf"
+    },
+    {
+      "itemId": "atlas-u653e",
+      "kind": "word",
+      "text": "放下",
+      "file": "atlas-u653e-word.mp3",
+      "sha256": "04a74eb84ee0a51baef1ee798c96670d63a84a3f19b9c01c0e081375964da0cf"
+    },
+    {
+      "itemId": "atlas-u6587",
+      "kind": "sentence",
+      "text": "中文",
+      "file": "atlas-u6587-sentence.mp3",
+      "sha256": "2a18f7c10399c62962df079f58cacf72880018aa073adfa4e1180dcd42115b96"
+    },
+    {
+      "itemId": "atlas-u6587",
+      "kind": "word",
+      "text": "中文",
+      "file": "atlas-u6587-word.mp3",
+      "sha256": "2a18f7c10399c62962df079f58cacf72880018aa073adfa4e1180dcd42115b96"
+    },
+    {
+      "itemId": "atlas-u65b9",
+      "kind": "sentence",
+      "text": "方向",
+      "file": "atlas-u65b9-sentence.mp3",
+      "sha256": "91e68f5cb5261f6e7be3ec40a040423ea8d072ccb9f4ed66aaf5882d12803b8e"
+    },
+    {
+      "itemId": "atlas-u65b9",
+      "kind": "word",
+      "text": "方向",
+      "file": "atlas-u65b9-word.mp3",
+      "sha256": "603f0a557124272e9102b52c371bcf2ded4264c20061fb3f35ab18545d097453"
+    },
+    {
+      "itemId": "atlas-u65e5",
+      "kind": "sentence",
+      "text": "日子",
+      "file": "atlas-u65e5-sentence.mp3",
+      "sha256": "1c2c6c50aa6a2c11892ff5cd36b92d51da046159562a5648859d92d52e60dce7"
+    },
+    {
+      "itemId": "atlas-u65e5",
+      "kind": "word",
+      "text": "日子",
+      "file": "atlas-u65e5-word.mp3",
+      "sha256": "fd837cac63ede78e146e26daca845bf085beaba2823cf955c24febe75fd46aea"
+    },
+    {
+      "itemId": "atlas-u65e9",
+      "kind": "sentence",
+      "text": "早上",
+      "file": "atlas-u65e9-sentence.mp3",
+      "sha256": "6e96b375e84e99845ddab05d1f514065ad07498f94c6664c6b8fa5bfea3df1e9"
+    },
+    {
+      "itemId": "atlas-u65e9",
+      "kind": "word",
+      "text": "早上",
+      "file": "atlas-u65e9-word.mp3",
+      "sha256": "3d62aed0d4b239d2707d774bbc1a0e335c6080fe6d3d933f41cbe5fd7d7c265d"
+    },
+    {
+      "itemId": "atlas-u65f6",
+      "kind": "sentence",
+      "text": "时间",
+      "file": "atlas-u65f6-sentence.mp3",
+      "sha256": "e3886ed097bdd3a5f7c21aa84640d6ddfe1da6fada62be2042659e43f79e474b"
+    },
+    {
+      "itemId": "atlas-u65f6",
+      "kind": "word",
+      "text": "时间",
+      "file": "atlas-u65f6-word.mp3",
+      "sha256": "051f45084dd5e97322d27ec137e1d933ca6ce5176e32f38bec7a9f66d4099812"
+    },
+    {
+      "itemId": "atlas-u660e",
+      "kind": "sentence",
+      "text": "明天",
+      "file": "atlas-u660e-sentence.mp3",
+      "sha256": "53b074e8c5660fa797943225a3e2e8f96750ae62402f446df8ef0405b1eae66e"
+    },
+    {
+      "itemId": "atlas-u660e",
+      "kind": "word",
+      "text": "明天",
+      "file": "atlas-u660e-word.mp3",
+      "sha256": "eb2dfd2294092e21322b08a9b39c441e207e1426f5a2e0d58ba9fd121cc7bca0"
+    },
+    {
+      "itemId": "atlas-u661f",
+      "kind": "sentence",
+      "text": "星星",
+      "file": "atlas-u661f-sentence.mp3",
+      "sha256": "b8c64024ab537531956825fdf0da7e046ed531d1cbff0bd94810458d67955040"
+    },
+    {
+      "itemId": "atlas-u661f",
+      "kind": "word",
+      "text": "星星",
+      "file": "atlas-u661f-word.mp3",
+      "sha256": "2874e4b3823399b0901ba463071d8ec1204c3264f70347bb12e31c37e49e281c"
+    },
+    {
+      "itemId": "atlas-u6625",
+      "kind": "sentence",
+      "text": "春天",
+      "file": "atlas-u6625-sentence.mp3",
+      "sha256": "06f0b98d0dafa7556f6cca61a1b22965e941214a8b24ad864784a13a7f6dc820"
+    },
+    {
+      "itemId": "atlas-u6625",
+      "kind": "word",
+      "text": "春天",
+      "file": "atlas-u6625-word.mp3",
+      "sha256": "39c84deba61be01f85026f65ad89098db5dcecc1ed4bf2ced5b7075af6a4751d"
+    },
+    {
+      "itemId": "atlas-u6628",
+      "kind": "sentence",
+      "text": "昨天",
+      "file": "atlas-u6628-sentence.mp3",
+      "sha256": "2184207632e7afa5ee0f69cdf14792ce5cb9af1d2243836449d9461b295ae235"
+    },
+    {
+      "itemId": "atlas-u6628",
+      "kind": "word",
+      "text": "昨天",
+      "file": "atlas-u6628-word.mp3",
+      "sha256": "49fe524d1290dea0a5bac77739457c7bf8ff5a677872b60545697cf609776bee"
+    },
+    {
+      "itemId": "atlas-u662f",
+      "kind": "sentence",
+      "text": "是的",
+      "file": "atlas-u662f-sentence.mp3",
+      "sha256": "e8b21ca938e86ee9793088ff075dfdaa4c9d20cd1807c5a2943871696eedc27d"
+    },
+    {
+      "itemId": "atlas-u662f",
+      "kind": "word",
+      "text": "是的",
+      "file": "atlas-u662f-word.mp3",
+      "sha256": "4d65f2d42224921a686d52235329b500dbd3231496d455d26ecb80a846906270"
+    },
+    {
+      "itemId": "atlas-u665a",
+      "kind": "sentence",
+      "text": "晚上",
+      "file": "atlas-u665a-sentence.mp3",
+      "sha256": "bd3fc1f4b52ba727a82110bc6284247d3df521e6650655e1598b109273f45da8"
+    },
+    {
+      "itemId": "atlas-u665a",
+      "kind": "word",
+      "text": "晚上",
+      "file": "atlas-u665a-word.mp3",
+      "sha256": "b27455c2898b308049dd8d2b7a5b5bee77b44f832917b4df48b70409b5e716ab"
+    },
+    {
+      "itemId": "atlas-u6674",
+      "kind": "sentence",
+      "text": "晴天",
+      "file": "atlas-u6674-sentence.mp3",
+      "sha256": "22685691bb95d4023de52055f71bc37b617726c4ca7e6bf1e4d474fdf292a3fe"
+    },
+    {
+      "itemId": "atlas-u6674",
+      "kind": "word",
+      "text": "晴天",
+      "file": "atlas-u6674-word.mp3",
+      "sha256": "22685691bb95d4023de52055f71bc37b617726c4ca7e6bf1e4d474fdf292a3fe"
+    },
+    {
+      "itemId": "atlas-u6696",
+      "kind": "sentence",
+      "text": "暖和",
+      "file": "atlas-u6696-sentence.mp3",
+      "sha256": "61361eaf94009fe2c61b36a51c90a6043e31eec13e51cb2795311547adb5001b"
+    },
+    {
+      "itemId": "atlas-u6696",
+      "kind": "word",
+      "text": "暖和",
+      "file": "atlas-u6696-word.mp3",
+      "sha256": "61361eaf94009fe2c61b36a51c90a6043e31eec13e51cb2795311547adb5001b"
+    },
+    {
+      "itemId": "atlas-u6728",
+      "kind": "sentence",
+      "text": "木头",
+      "file": "atlas-u6728-sentence.mp3",
+      "sha256": "7e335aef932ef905743a73d6a5154f05db51d46d077e6b4997d349c2366c20b3"
+    },
+    {
+      "itemId": "atlas-u6728",
+      "kind": "word",
+      "text": "木头",
+      "file": "atlas-u6728-word.mp3",
+      "sha256": "ddb37fb22ff0950c6b68f15180096f565f2d2c702587f82cfd2c026f71240b25"
+    },
+    {
+      "itemId": "atlas-u672c",
+      "kind": "sentence",
+      "text": "本子",
+      "file": "atlas-u672c-sentence.mp3",
+      "sha256": "d1ec6072219b77c6ee9e43c0ad73f73bb274350dc976c3273e46260284719c88"
+    },
+    {
+      "itemId": "atlas-u672c",
+      "kind": "word",
+      "text": "本子",
+      "file": "atlas-u672c-word.mp3",
+      "sha256": "b1ac7e56e7193a430ad718e25ef634d922d74764f3dabb7505d7e78f5a2b1256"
+    },
+    {
+      "itemId": "atlas-u6797",
+      "kind": "sentence",
+      "text": "树林",
+      "file": "atlas-u6797-sentence.mp3",
+      "sha256": "52bd1328833338422aee805aec5f2ef44aa315dc60e32e3fa6eaa5eea4751e49"
+    },
+    {
+      "itemId": "atlas-u6797",
+      "kind": "word",
+      "text": "树林",
+      "file": "atlas-u6797-word.mp3",
+      "sha256": "52bd1328833338422aee805aec5f2ef44aa315dc60e32e3fa6eaa5eea4751e49"
+    },
+    {
+      "itemId": "atlas-u6811",
+      "kind": "sentence",
+      "text": "树木",
+      "file": "atlas-u6811-sentence.mp3",
+      "sha256": "ac745fa42231a6fc48b6e9a7435e2ea95c3c2d5882d9a4e508e892dab51c782d"
+    },
+    {
+      "itemId": "atlas-u6811",
+      "kind": "word",
+      "text": "树木",
+      "file": "atlas-u6811-word.mp3",
+      "sha256": "75c0ad213324b50ef8189ae8a2f810eecc2249d33e666a118bf73b83cdd45033"
+    },
+    {
+      "itemId": "atlas-u68ee",
+      "kind": "sentence",
+      "text": "森林",
+      "file": "atlas-u68ee-sentence.mp3",
+      "sha256": "3f5ed4debd3574e2daa88d311d5621e435a1123d762e6ca20fd8b73b317752a8"
+    },
+    {
+      "itemId": "atlas-u68ee",
+      "kind": "word",
+      "text": "森林",
+      "file": "atlas-u68ee-word.mp3",
+      "sha256": "c8344ed34457e3beefd6fb469c8498cc1295168156e5cfdf64b5cde7a928e22d"
+    },
+    {
+      "itemId": "atlas-u6c34",
+      "kind": "sentence",
+      "text": "水果",
+      "file": "atlas-u6c34-sentence.mp3",
+      "sha256": "33a84c33263ebee0e06d93be033a0bf9998f32667266abd1f0b5ce92be9f1fff"
+    },
+    {
+      "itemId": "atlas-u6c34",
+      "kind": "word",
+      "text": "水果",
+      "file": "atlas-u6c34-word.mp3",
+      "sha256": "167cbab66105dbc55e1200457ca680fd87cd0845c45e0bc36e7f1c94124d9c0e"
+    },
+    {
+      "itemId": "atlas-u6cb3",
+      "kind": "sentence",
+      "text": "河水",
+      "file": "atlas-u6cb3-sentence.mp3",
+      "sha256": "37eb690ff40078fe73fd7477588ca19764d1ebec1fb1fe37f259ed5d58a2d30c"
+    },
+    {
+      "itemId": "atlas-u6cb3",
+      "kind": "word",
+      "text": "河水",
+      "file": "atlas-u6cb3-word.mp3",
+      "sha256": "86020a97bb7ad678855b20b3356dc1925299a4b7bc3045984af36474991d5f4a"
+    },
+    {
+      "itemId": "atlas-u6ce1",
+      "kind": "sentence",
+      "text": "泡茶",
+      "file": "atlas-u6ce1-sentence.mp3",
+      "sha256": "8546dc0dce53002605823867114b28a498f65b96880440117de2f86c1e176b7a"
+    },
+    {
+      "itemId": "atlas-u6ce1",
+      "kind": "word",
+      "text": "泡茶",
+      "file": "atlas-u6ce1-word.mp3",
+      "sha256": "ace70e918a65de7e02a8447e8cb80ea55bdbbad3dfb669e5820cc1f66d184566"
+    },
+    {
+      "itemId": "atlas-u6d17",
+      "kind": "sentence",
+      "text": "洗手",
+      "file": "atlas-u6d17-sentence.mp3",
+      "sha256": "2090038575ad3a2a6d771c7d85ab1e1ebf708b56b0e36e35eef3289eb7f4243a"
+    },
+    {
+      "itemId": "atlas-u6d17",
+      "kind": "word",
+      "text": "洗手",
+      "file": "atlas-u6d17-word.mp3",
+      "sha256": "2090038575ad3a2a6d771c7d85ab1e1ebf708b56b0e36e35eef3289eb7f4243a"
+    },
+    {
+      "itemId": "atlas-u6d77",
+      "kind": "sentence",
+      "text": "大海",
+      "file": "atlas-u6d77-sentence.mp3",
+      "sha256": "64ae409a25c8a3fa3414f655a83b3cf5bf4177c6ceefcb98b5fd6ff1f0c0e945"
+    },
+    {
+      "itemId": "atlas-u6d77",
+      "kind": "word",
+      "text": "大海",
+      "file": "atlas-u6d77-word.mp3",
+      "sha256": "6a7ec66dc39584a9d16b51b00dede85741351ad16712199c618b2949b464eb2d"
+    },
+    {
+      "itemId": "atlas-u6e05",
+      "kind": "sentence",
+      "text": "清水",
+      "file": "atlas-u6e05-sentence.mp3",
+      "sha256": "2505103cb752327f17b3fa7616b8fa684cc3b3e857c160b60d10c7e2267bb041"
+    },
+    {
+      "itemId": "atlas-u6e05",
+      "kind": "word",
+      "text": "清水",
+      "file": "atlas-u6e05-word.mp3",
+      "sha256": "9db87c075fbdf23acf5099c7546ba709a429a5b5e0766cfd8571e6c6d9d88484"
+    },
+    {
+      "itemId": "atlas-u7238",
+      "kind": "sentence",
+      "text": "爸爸",
+      "file": "atlas-u7238-sentence.mp3",
+      "sha256": "eab45647d2223384e0db3f3d06172d51face33f9e23a98f8f9b4f0bd548e0d6f"
+    },
+    {
+      "itemId": "atlas-u7238",
+      "kind": "word",
+      "text": "爸爸",
+      "file": "atlas-u7238-word.mp3",
+      "sha256": "250c899773f2007a999442e9cab3a8314a6ff87b0784b070952f68424a208f1e"
+    },
+    {
+      "itemId": "atlas-u751f",
+      "kind": "sentence",
+      "text": "学生",
+      "file": "atlas-u751f-sentence.mp3",
+      "sha256": "c6fffbd13b4208d94405cef97147bff8cb17e3a270c683d2d0e942552aaa2347"
+    },
+    {
+      "itemId": "atlas-u751f",
+      "kind": "word",
+      "text": "学生",
+      "file": "atlas-u751f-word.mp3",
+      "sha256": "f76ec1cf620a1c113106c21ddfdbde34379d2bdc2fd2364bcb5206e3fde8d959"
+    },
+    {
+      "itemId": "atlas-u7537",
+      "kind": "sentence",
+      "text": "男人",
+      "file": "atlas-u7537-sentence.mp3",
+      "sha256": "6b2e09e7bf3e5d2981747706edc3ccc6b6e5857fbc739f08e04d43b436802574"
+    },
+    {
+      "itemId": "atlas-u7537",
+      "kind": "word",
+      "text": "男人",
+      "file": "atlas-u7537-word.mp3",
+      "sha256": "d2b5780ad25ed872491d7a2a822165bf4c240ee1bbc6da2b8492e3a739d72983"
+    },
+    {
+      "itemId": "atlas-u773c",
+      "kind": "sentence",
+      "text": "眼睛",
+      "file": "atlas-u773c-sentence.mp3",
+      "sha256": "e60f49cf86fc926690a572bcde19a9ec88e22cb8ab0ae3f374760d2900c1a8d1"
+    },
+    {
+      "itemId": "atlas-u773c",
+      "kind": "word",
+      "text": "眼睛",
+      "file": "atlas-u773c-word.mp3",
+      "sha256": "67801b95380e49d1700dc076a3401a50929941ddd9049209fd7f6e0c5e5ce617"
+    },
+    {
+      "itemId": "atlas-u7801",
+      "kind": "sentence",
+      "text": "号码",
+      "file": "atlas-u7801-sentence.mp3",
+      "sha256": "773af5bfa49102303a218c4d22a6d50d20cc483ed993c59c80000a20ac794a75"
+    },
+    {
+      "itemId": "atlas-u7801",
+      "kind": "word",
+      "text": "号码",
+      "file": "atlas-u7801-word.mp3",
+      "sha256": "773af5bfa49102303a218c4d22a6d50d20cc483ed993c59c80000a20ac794a75"
+    },
+    {
+      "itemId": "atlas-u7c73",
+      "kind": "sentence",
+      "text": "大米",
+      "file": "atlas-u7c73-sentence.mp3",
+      "sha256": "923c693d5ddcb0d51ce708affa167f423f93464686a035d279f58352784a4c7c"
+    },
+    {
+      "itemId": "atlas-u7c73",
+      "kind": "word",
+      "text": "大米",
+      "file": "atlas-u7c73-word.mp3",
+      "sha256": "f1d8a095e07ffa54ff87666257aa17ef02c9ff41247bd9cabb8e259e7e0fe411"
+    },
+    {
+      "itemId": "atlas-u8033",
+      "kind": "sentence",
+      "text": "耳朵",
+      "file": "atlas-u8033-sentence.mp3",
+      "sha256": "2ca605649e702f51d6b123e481ec5c19df3a7b084b179c75ec8cd8bb7a073986"
+    },
+    {
+      "itemId": "atlas-u8033",
+      "kind": "word",
+      "text": "耳朵",
+      "file": "atlas-u8033-word.mp3",
+      "sha256": "2ca605649e702f51d6b123e481ec5c19df3a7b084b179c75ec8cd8bb7a073986"
+    },
+    {
+      "itemId": "atlas-u82b1",
+      "kind": "sentence",
+      "text": "花园",
+      "file": "atlas-u82b1-sentence.mp3",
+      "sha256": "8c5719e6c9f78aa087ffa8ee7ddd2dc48ea428ab23dcf0061a6be6498aaaf153"
+    },
+    {
+      "itemId": "atlas-u82b1",
+      "kind": "word",
+      "text": "花园",
+      "file": "atlas-u82b1-word.mp3",
+      "sha256": "d59c334afb318c84c63283cf7ec504df61960690ba996450667e23bf360e943b"
+    },
+    {
+      "itemId": "atlas-u8336",
+      "kind": "sentence",
+      "text": "红茶",
+      "file": "atlas-u8336-sentence.mp3",
+      "sha256": "7255789229612090d45d7c1786410d7b64965cdba37a3b419305a88febf25e1f"
+    },
+    {
+      "itemId": "atlas-u8336",
+      "kind": "word",
+      "text": "红茶",
+      "file": "atlas-u8336-word.mp3",
+      "sha256": "9c530ba49d7eb73d80d7b278abe70c1934626c2b3514aee6247d04e84a0d83d5"
+    },
+    {
+      "itemId": "atlas-u83dc",
+      "kind": "sentence",
+      "text": "蔬菜",
+      "file": "atlas-u83dc-sentence.mp3",
+      "sha256": "afabbcb6de3f3b310b379a031d2c5ef5f6c6ccae6e490afd07f8e974d5843993"
+    },
+    {
+      "itemId": "atlas-u83dc",
+      "kind": "word",
+      "text": "蔬菜",
+      "file": "atlas-u83dc-word.mp3",
+      "sha256": "3f039fbd7f8f1166625c21ed4b476bdaba73af52a470d1e242e046015dbf82a4"
+    },
+    {
+      "itemId": "atlas-u8682",
+      "kind": "sentence",
+      "text": "蚂蚁",
+      "file": "atlas-u8682-sentence.mp3",
+      "sha256": "bbe4626d2f917011855c11f35c3aab1170bc627becb981b2e25c60dd3bbb7d1e"
+    },
+    {
+      "itemId": "atlas-u8682",
+      "kind": "word",
+      "text": "蚂蚁",
+      "file": "atlas-u8682-word.mp3",
+      "sha256": "bbe4626d2f917011855c11f35c3aab1170bc627becb981b2e25c60dd3bbb7d1e"
+    },
+    {
+      "itemId": "atlas-u8bbf",
+      "kind": "sentence",
+      "text": "访问",
+      "file": "atlas-u8bbf-sentence.mp3",
+      "sha256": "10e1c529a63dca6de2edb6fdf5e2a772038c0e06724a7b7476d3ca0d581d1a3f"
+    },
+    {
+      "itemId": "atlas-u8bbf",
+      "kind": "word",
+      "text": "访问",
+      "file": "atlas-u8bbf-word.mp3",
+      "sha256": "7b8409813592dd5f1a566d1b7579c53aec66ed43f8b373d9d51075c480fa3402"
+    },
+    {
+      "itemId": "atlas-u8bcd",
+      "kind": "sentence",
+      "text": "词语",
+      "file": "atlas-u8bcd-sentence.mp3",
+      "sha256": "9794b2b00ea6feaa236f43ea0e0df0eca5f320e085e2a82ed772dfbd7dd2a01f"
+    },
+    {
+      "itemId": "atlas-u8bcd",
+      "kind": "word",
+      "text": "词语",
+      "file": "atlas-u8bcd-word.mp3",
+      "sha256": "743ff5fd86320a69b9a68cdbf05abfe0b8b49434a34e0f075db08f0f42587b0d"
+    },
+    {
+      "itemId": "atlas-u8bdd",
+      "kind": "sentence",
+      "text": "电话",
+      "file": "atlas-u8bdd-sentence.mp3",
+      "sha256": "b307307ce0b450d7c610d93780baac309ab9fdc905a9238f726b450afabfba38"
+    },
+    {
+      "itemId": "atlas-u8bdd",
+      "kind": "word",
+      "text": "电话",
+      "file": "atlas-u8bdd-word.mp3",
+      "sha256": "a8131810c63bd24b893683331c8abc6ee8c539b0fa7dba328b4948dd4faaa663"
+    },
+    {
+      "itemId": "atlas-u8bed",
+      "kind": "sentence",
+      "text": "汉语",
+      "file": "atlas-u8bed-sentence.mp3",
+      "sha256": "343fc23a4c3daaf424aad96bf4d487c313535f1eef8bedc9782b314027c958c1"
+    },
+    {
+      "itemId": "atlas-u8bed",
+      "kind": "word",
+      "text": "汉语",
+      "file": "atlas-u8bed-word.mp3",
+      "sha256": "95d33cfabac589703a690029e538e3ed7d349d511daf875288167bdf7a1c17ac"
+    },
+    {
+      "itemId": "atlas-u8bf4",
+      "kind": "sentence",
+      "text": "说话",
+      "file": "atlas-u8bf4-sentence.mp3",
+      "sha256": "65bfd68c637021b84b04da9f0833cc8ad3a06e273b1ca8212a7b3465baee250d"
+    },
+    {
+      "itemId": "atlas-u8bf4",
+      "kind": "word",
+      "text": "说话",
+      "file": "atlas-u8bf4-word.mp3",
+      "sha256": "65bfd68c637021b84b04da9f0833cc8ad3a06e273b1ca8212a7b3465baee250d"
+    },
+    {
+      "itemId": "atlas-u8bf7",
+      "kind": "sentence",
+      "text": "请问",
+      "file": "atlas-u8bf7-sentence.mp3",
+      "sha256": "e0d96f56f1c598a67f975a13dfdcc02a70d2c59b495d5375cca450ae0c896da3"
+    },
+    {
+      "itemId": "atlas-u8bf7",
+      "kind": "word",
+      "text": "请问",
+      "file": "atlas-u8bf7-word.mp3",
+      "sha256": "e5e0f0013468cd81ed3b8ca043327066349f89ed732e38647ac5fb8f0f8292f2"
+    },
+    {
+      "itemId": "atlas-u8bfb",
+      "kind": "sentence",
+      "text": "读书",
+      "file": "atlas-u8bfb-sentence.mp3",
+      "sha256": "66c0fd11abe66838524e7646920cc0fe3ef7e81cf18f0ffb73a7bc613de921f0"
+    },
+    {
+      "itemId": "atlas-u8bfb",
+      "kind": "word",
+      "text": "读书",
+      "file": "atlas-u8bfb-word.mp3",
+      "sha256": "66c0fd11abe66838524e7646920cc0fe3ef7e81cf18f0ffb73a7bc613de921f0"
+    },
+    {
+      "itemId": "atlas-u8d70",
+      "kind": "sentence",
+      "text": "走路",
+      "file": "atlas-u8d70-sentence.mp3",
+      "sha256": "753061d42cb889103edb18566c28eabccc74fa158521f79bb25a10a9ecdb3749"
+    },
+    {
+      "itemId": "atlas-u8d70",
+      "kind": "word",
+      "text": "走路",
+      "file": "atlas-u8d70-word.mp3",
+      "sha256": "b83cf85623f68b41e72552af91f33c760bf5c10edfb72ebff3953265b1c283d3"
+    },
+    {
+      "itemId": "atlas-u8dd1",
+      "kind": "sentence",
+      "text": "跑步",
+      "file": "atlas-u8dd1-sentence.mp3",
+      "sha256": "ad5665be0fcb1af5b5b1529ff6fb38ea4024e04f94210c2d473cd0e81e9b2087"
+    },
+    {
+      "itemId": "atlas-u8dd1",
+      "kind": "word",
+      "text": "跑步",
+      "file": "atlas-u8dd1-word.mp3",
+      "sha256": "b936604c65a5de1920ec622be84b5d3e337660e5a875d7249ac543f6e69189be"
+    },
+    {
+      "itemId": "atlas-u8eab",
+      "kind": "sentence",
+      "text": "身体",
+      "file": "atlas-u8eab-sentence.mp3",
+      "sha256": "e7d8249d4196632ca4c2b2aaec40cf06863288f4f18e61f9aad24a1b14b837f9"
+    },
+    {
+      "itemId": "atlas-u8eab",
+      "kind": "word",
+      "text": "身体",
+      "file": "atlas-u8eab-word.mp3",
+      "sha256": "66357a167578f8a15b1e569bf5cf9d0b467d1e6a075b17479025bb0d07659c14"
+    },
+    {
+      "itemId": "atlas-u8fc7",
+      "kind": "sentence",
+      "text": "经过",
+      "file": "atlas-u8fc7-sentence.mp3",
+      "sha256": "897b2a838898bff19067c2a9dc433fcc84c1f23a66aab4b1db4c3ec4c337debf"
+    },
+    {
+      "itemId": "atlas-u8fc7",
+      "kind": "word",
+      "text": "经过",
+      "file": "atlas-u8fc7-word.mp3",
+      "sha256": "2b2eedf4e93fb9043b426fd2756da70dafe8a9c2559325b0c87a3b3ee469841b"
+    },
+    {
+      "itemId": "atlas-u8fd1",
+      "kind": "sentence",
+      "text": "最近",
+      "file": "atlas-u8fd1-sentence.mp3",
+      "sha256": "dcfe3628e6a051e1d47c6d149d061c3f887c71a9a6b1d99eaed841832e6f6f2e"
+    },
+    {
+      "itemId": "atlas-u8fd1",
+      "kind": "word",
+      "text": "最近",
+      "file": "atlas-u8fd1-word.mp3",
+      "sha256": "db975c4f653d769a4d647eed5e7a3f1b1cd34d3071e51b2e1fed3eb526bbb13a"
+    },
+    {
+      "itemId": "atlas-u8fdb",
+      "kind": "sentence",
+      "text": "进门",
+      "file": "atlas-u8fdb-sentence.mp3",
+      "sha256": "b5c5ee8b955b528d0fdbfd3448f6d1294509a62c82424a70db9268036701b1b0"
+    },
+    {
+      "itemId": "atlas-u8fdb",
+      "kind": "word",
+      "text": "进门",
+      "file": "atlas-u8fdb-word.mp3",
+      "sha256": "bded8c3fe2de75cf2c3163b1599157d4030671977563f85b5821278f92ec79f4"
+    },
+    {
+      "itemId": "atlas-u8fdc",
+      "kind": "sentence",
+      "text": "远方",
+      "file": "atlas-u8fdc-sentence.mp3",
+      "sha256": "b313ccb10fc4de8c61e5aa51f88a3fc09abde066b9f44affdeb3b4881dd6534b"
+    },
+    {
+      "itemId": "atlas-u8fdc",
+      "kind": "word",
+      "text": "远方",
+      "file": "atlas-u8fdc-word.mp3",
+      "sha256": "b313ccb10fc4de8c61e5aa51f88a3fc09abde066b9f44affdeb3b4881dd6534b"
+    },
+    {
+      "itemId": "atlas-u9152",
+      "kind": "sentence",
+      "text": "啤酒",
+      "file": "atlas-u9152-sentence.mp3",
+      "sha256": "3497b8aeab093f73a418f8cec573442226e4779c746dcff57ecc508c7e6c5b99"
+    },
+    {
+      "itemId": "atlas-u9152",
+      "kind": "word",
+      "text": "啤酒",
+      "file": "atlas-u9152-word.mp3",
+      "sha256": "4dd3edd59f271c9413df8954659ffe56b4aefb8c7fda064cd9a9af01d2234bca"
+    },
+    {
+      "itemId": "atlas-u95f4",
+      "kind": "sentence",
+      "text": "房间",
+      "file": "atlas-u95f4-sentence.mp3",
+      "sha256": "21cdcabe0f3b08f2114eb4c248bca8ba519ea8b8063903ad144594948a6e43ef"
+    },
+    {
+      "itemId": "atlas-u95f4",
+      "kind": "word",
+      "text": "房间",
+      "file": "atlas-u95f4-word.mp3",
+      "sha256": "21cdcabe0f3b08f2114eb4c248bca8ba519ea8b8063903ad144594948a6e43ef"
+    },
+    {
+      "itemId": "atlas-u9632",
+      "kind": "sentence",
+      "text": "预防",
+      "file": "atlas-u9632-sentence.mp3",
+      "sha256": "834af5bb2e27cfa2f991eee7e237144a8487d48ee816a46127a1ac2e713bef0b"
+    },
+    {
+      "itemId": "atlas-u9632",
+      "kind": "word",
+      "text": "预防",
+      "file": "atlas-u9632-word.mp3",
+      "sha256": "c0162b854f85fd2cb26a9b1c404699bcf8d6da8b019cb9f572c39a400f74cf93"
+    },
+    {
+      "itemId": "atlas-u9752",
+      "kind": "sentence",
+      "text": "青草",
+      "file": "atlas-u9752-sentence.mp3",
+      "sha256": "d8a1d53ce79f9df0be1ed8f1c9ff587402f7a17451364e86f820b0868b578997"
+    },
+    {
+      "itemId": "atlas-u9752",
+      "kind": "word",
+      "text": "青草",
+      "file": "atlas-u9752-word.mp3",
+      "sha256": "b37c60c131982f8de492c71ffa1839f60a86abd9b27c8c5c712d1c997690eac0"
+    },
+    {
+      "itemId": "atlas-u996d",
+      "kind": "sentence",
+      "text": "米饭",
+      "file": "atlas-u996d-sentence.mp3",
+      "sha256": "ab1c14632d0c94cd8559f723f867931b9fdb70af2f923c93382b856882426c4c"
+    },
+    {
+      "itemId": "atlas-u996d",
+      "kind": "word",
+      "text": "米饭",
+      "file": "atlas-u996d-word.mp3",
+      "sha256": "0e6f45404c9fc5255821719a77a9a6913c0a3cb1adf9812da4cef91b74dda0c8"
+    },
+    {
+      "itemId": "atlas-u9971",
+      "kind": "sentence",
+      "text": "吃饱",
+      "file": "atlas-u9971-sentence.mp3",
+      "sha256": "1b8d6020a7bd1fad80660120aa2fa20937a7d5864206857088bb84fefca8ff8c"
+    },
+    {
+      "itemId": "atlas-u9971",
+      "kind": "word",
+      "text": "吃饱",
+      "file": "atlas-u9971-word.mp3",
+      "sha256": "44ecc0cd7985c9d54b7cf0da8533ca30bbab8cba054cac2ceebf3b552b7b390a"
+    },
+    {
+      "itemId": "atlas-u9a6c",
+      "kind": "sentence",
+      "text": "马上",
+      "file": "atlas-u9a6c-sentence.mp3",
+      "sha256": "96ad4467f0dbb406e419699301af2d9bedd86fb196351bb385577023fdd8434f"
+    },
+    {
+      "itemId": "atlas-u9a6c",
+      "kind": "word",
+      "text": "马上",
+      "file": "atlas-u9a6c-word.mp3",
+      "sha256": "67948ff0f98462142acfcb76d07bd289c00c68ed1b4b9bdfcbf2f40cd031ef0d"
+    }
+  ]
+}

@@ -61,3 +61,17 @@ The experience topic includes an interactive two-scene map comparing 过 and 了
 Course activities have their own account-scoped event table, local offline queue and FSRS schedule. Reading, guided copying, revealed answers and corrected retries never advance independent recall. The course overview counts distinct activities attempted, not mastery. Handwriting is self-assessed; drafts remain on the current device. Existing HSK words reuse their original writing identity; their guided course practice can appear in both histories.
 
 See [COURSE_AUTHORING.md](COURSE_AUTHORING.md) for source review, lesson structure and the next-lesson workflow.
+
+## Atlas chmur
+
+A separate **Atlas** navigation entry adds a connection-based learning route alongside HSK vocabulary and the intensive course. It starts with 100 targets in 20 constellations from the supplied Atlas PDF, plus six discovery entries (星、时、春、是、间、暖). All teaching text is available in English, French and Russian. Existing word IDs, histories and course content remain unchanged.
+
+Click a component to see every indexed match, including matches across teaching groups and selected nested forms. For example, 日 lists 12 entries; 晴 bridges 日 → 青, and 情 bridges 青 → 心. The radial map previews ten neighbours; the grid always lists every result. Group membership and component membership are separate: a family/body theme does not imply a common shape. Back restores both the previous constellation and selected target. URLs retain the component/group and target for sharing.
+
+Compare pairs, listen to contextual example words, practise four skills, and use the existing Notebook worksheet or independent handwriting Recall. Contextual recordings avoid ambiguous isolated readings and homophones. There are 212 bundled recordings, generated with the existing Xiaoxiao Mandarin voice. Handwriting Recall is self-assessed after writing and revealing the model; there is no automatic handwriting recognition.
+
+Atlas events use their own owner-scoped IndexedDB and `atlas_events` D1 table/API. Meaning, listening, components and writing each have a separate FSRS schedule. Exploration, copying, hints and guided constellation practice do not advance independent recall. Anonymous practice stays on the device; authenticated history syncs with the current account. Account generation guards stop a completed request from writing into another account's notebook. History can be exported from Materials.
+
+This is a curated index of 106 entries, not a whole-language dictionary or an exhaustive decomposition into arbitrary stroke fragments. Extra discovery entries have a partial component inventory and are excluded from component-choice grading. Component colours use verified stroke mappings; four unmapped combinations (洗/⺧, 喝/勹, 喝/人, 走/龰) show the full character with an explicit notice rather than guessed highlighting. Meanings, sounds, shapes and themes are labelled as different types of connection, not historical etymology. Materials includes the supplied English PDF and source/license notices.
+
+Checks: `npm test`, `npm run typecheck`, the Sites build helper, and the isolated local Worker checks in `tests/atlas-api-integration.py`. The latter must never run against a production Site. Asset verification runs in prebuild, checking contextual audio hashes, writing data, component mapping bounds, licenses and the original PDF.
