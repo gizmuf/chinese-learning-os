@@ -76,8 +76,10 @@ export default function StudyApp({
   onSignIn,
   onSignOut,
   onManageAccount,
+  localOnly = false,
 }: {
   user: User;
+  localOnly?: boolean;
   onSignIn: () => void;
   onSignOut: () => void;
   onManageAccount: () => void;
@@ -141,7 +143,7 @@ export default function StudyApp({
   }, []);
   useEffect(() => {
     let alive = true;
-    openStore(user?.id ?? "guest")
+    openStore(localOnly ? "teacher-demo" : user?.id ?? "guest")
       .then(async (store) => {
         if (!alive) {
           store.close();
@@ -176,7 +178,7 @@ export default function StudyApp({
     return () => {
       alive = false;
     };
-  }, [user?.id, notify]);
+  }, [user?.id, localOnly, notify]);
   useEffect(() => {
     if (db && isReady)
       saveDraft(db, "settings", {
@@ -188,7 +190,7 @@ export default function StudyApp({
       }).catch(() => notify("Could not save preferences."));
   }, [db, isReady, penOnly, slowAudio, left, minutes, level, notify]);
   const synchronize = useCallback(async () => {
-    if (!db || !user || syncLock.current) return;
+    if (localOnly || !db || !user || syncLock.current) return;
     syncLock.current = true;
     try {
       if (!navigator.onLine) throw Error("offline");
@@ -247,9 +249,9 @@ export default function StudyApp({
     } finally {
       syncLock.current = false;
     }
-  }, [db, user?.id]);
+  }, [db, user?.id, localOnly]);
   useEffect(() => {
-    if (!db) return;
+    if (!db || localOnly) return;
     void synchronize();
     const resume = () => {
       if (document.visibilityState === "visible") void synchronize();
@@ -262,7 +264,7 @@ export default function StudyApp({
       document.removeEventListener("visibilitychange", resume);
       clearInterval(timer);
     };
-  }, [db, synchronize]);
+  }, [db, synchronize, localOnly]);
   const cards = useMemo(() => getCards(events), [events]);
   const today = new Date().toLocaleDateString();
   const todays = events.filter(
@@ -438,10 +440,10 @@ export default function StudyApp({
           <div>
             <strong>{user?.name ?? "Your notebook"}</strong>
             <small>
-              {user ? "Personal learning account" : "Try it as a guest"}
+              {localOnly ? "Teacher demo · local only" : user ? "Personal learning account" : "Try it as a guest"}
             </small>
           </div>
-          {!user && (
+          {!user && !localOnly && (
             <a
               href="#account"
               onClick={(event) => {
@@ -459,7 +461,7 @@ export default function StudyApp({
       <main className="main">
         <header className="topbar">
           <span>
-            <span className="breadcrumb">My study space</span>
+            <span className="breadcrumb">{localOnly ? "Teacher demo" : "My study space"}</span>
             <ChevronRight size={13} />
             {view === "practice"
               ? "Writing studio"
@@ -484,7 +486,7 @@ export default function StudyApp({
               <option value="hsk2">HSK2 · {curriculum.hsk2}</option>
               <option value="bonus">Extras · {curriculum.extras}</option>
             </select>
-            {!user && (
+            {!user && !localOnly && (
               <a
                 className="signin-link"
                 href="#account"
@@ -505,7 +507,7 @@ export default function StudyApp({
               <Settings2 size={16} />
             </button>
             <button className="sync-state" onClick={() => void synchronize()}>
-              {sync.includes("pending") || sync.includes("Offline") ? (
+              {localOnly || sync.includes("pending") || sync.includes("Offline") ? (
                 <CloudOff size={15} />
               ) : sync === "Syncing…" ? (
                 <LoaderCircle className="spin" size={15} />
@@ -998,7 +1000,7 @@ export default function StudyApp({
                 {skill === "writing" && !session && (
                   <div className="notebook-layout-switch" role="group" aria-label="Writing layout">
                     <button className={writingLayout === "studio" ? "selected" : ""} aria-pressed={writingLayout === "studio"} onClick={() => setWritingLayout("studio")}>Single character</button>
-                    <button className={writingLayout === "notebook" ? "selected" : ""} aria-pressed={writingLayout === "notebook"} onClick={() => setWritingLayout("notebook")}><BookOpen size={16} /> Notebook · Zeszyt</button>
+                    <button className={writingLayout === "notebook" ? "selected" : ""} aria-pressed={writingLayout === "notebook"} onClick={() => setWritingLayout("notebook")}><BookOpen size={16} /> Practice notebook</button>
                   </div>
                 )}
                 {skill === "writing" && writingLayout === "notebook" && !session ? (
@@ -1158,11 +1160,13 @@ export default function StudyApp({
               <div className="tip-strip">
                 <Cloud size={21} />
                 <p>
-                  {user
+                  {localOnly
+                    ? "Teacher demo: progress stays in this browser on this demo address. Clearing browser data removes it. Use Export my history to keep a copy."
+                    : user
                     ? "Your records are private to your account. Repeated offline uploads are deduplicated, and review order is rebuilt from your history."
                     : "Guest progress stays in this browser. Sign in to keep a separate notebook across your devices."}
                 </p>
-                {!user && (
+                {!user && !localOnly && (
                   <a
                     href="#account"
                     onClick={(event) => {
@@ -1255,10 +1259,11 @@ export default function StudyApp({
               </button>
             )}
             <p className="muted">
-              Guest and signed-in notebooks are separate. Pronunciation uses
-              bundled Mandarin recordings.
+              {localOnly
+                ? "Teacher demo: no accounts or cloud sync. Progress stays in this browser on this demo address. Pronunciation uses bundled Mandarin recordings."
+                : "Guest and signed-in notebooks are separate. Pronunciation uses bundled Mandarin recordings."}
             </p>
-            {!user ? (
+            {!localOnly && (!user ? (
               <a
                 className="primary"
                 href="#account"
@@ -1282,7 +1287,7 @@ export default function StudyApp({
               >
                 Sign out
               </a>
-            )}
+            ))}
           </section>
         </div>
       )}

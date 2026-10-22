@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { assetPath } from "./asset-path";
 import HanziWriter, { type CharacterJson } from "hanzi-writer";
 export default function Guided({
   character,
@@ -42,7 +43,7 @@ export default function Guided({
       delayBetweenStrokes: 160,
       charDataLoader: async (char): Promise<CharacterJson> => {
         const r = await fetch(
-          "/characters/" + encodeURIComponent(char) + ".json",
+          assetPath("/characters/" + encodeURIComponent(char) + ".json"),
           { cache: "force-cache" },
         );
         if (!r.ok) throw Error("Missing character data");

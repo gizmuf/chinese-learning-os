@@ -1,4 +1,5 @@
 "use client";
+import { assetPath } from "./asset-path";
 import type { Item } from "./content";
 let current: HTMLAudioElement | null = null;
 let playbackRate = 1;
@@ -18,7 +19,7 @@ export function speak(
   notify: (message: string) => void,
   item: Item,
 ) {
-  const source = `/audio/${encodeURIComponent(item.id)}-${text === item.hanzi ? "word" : "sentence"}.mp3`;
+  const source = assetPath(`/audio/${encodeURIComponent(item.id)}-${text === item.hanzi ? "word" : "sentence"}.mp3`);
   stopAudio();
   const audio = new Audio(source);
   current = audio;
