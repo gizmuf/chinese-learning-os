@@ -40,6 +40,8 @@ import {
 } from "./course-learning";
 import { useCourseProgress } from "./course-store";
 import { speak, stopAudio } from "./audio";
+import CourseLab from "./course-lab";
+import {labExtraTerms} from "./course-lab-data";
 import Notebook from "./notebook";
 import CourseStory from "./course-story";
 import CourseBreakfastStory from "./course-breakfast-story";
@@ -47,7 +49,7 @@ import Ink from "./ink";
 import { readDraft, saveDraft } from "./local-store";
 import type { Item } from "./content";
 import type { LearningEvent, Stroke } from "./learning";
-type Tab = "overview" | "learn" | "practice" | "writing" | "materials";
+type Tab = "lab" | "overview" | "learn" | "practice" | "writing" | "materials";
 const topics = Object.keys(topicInfo) as Topic[];
 export default function IntensiveCourse({
   owner,
@@ -68,6 +70,7 @@ export default function IntensiveCourse({
 }) {
   const { t, locale } = useI18n();
   const progress = useCourseProgress(owner);
+  const [labWriting,setLabWriting]=useState(false);
   const [open, setOpen] = useState(false);
   const [tab, setTab] = useState<Tab>("overview");
   const [topic, setTopic] = useState<Topic>("time");
@@ -84,6 +87,7 @@ export default function IntensiveCourse({
   useEffect(() => {
     if (new URLSearchParams(window.location.search).get("lesson") === "3")
       setOpen(true);
+    if (new URLSearchParams(window.location.search).get("lab") === "1") setTab("lab");
     return () => stopAudio();
   }, []);
   function openLesson() {
@@ -115,12 +119,13 @@ export default function IntensiveCourse({
     }
   }
   function write(id: string) {
+    setLabWriting(false);
     stopAudio();
     setWritingId(id);
     setWritingMode("notebook");
     setTab("writing");
   }
-  const chosenTerm = terms.find((term) => term.id === writingId);
+  const chosenTerm = [...terms,...labExtraTerms].find((term) => term.id === writingId);
   const chosenSentence = sentences.find((s) => s.id === writingId);
   const writingItem = chosenTerm
     ? termItem(chosenTerm, locale)
@@ -259,7 +264,7 @@ export default function IntensiveCourse({
             aria-label={t("Course sections")}
           >
             {(
-              ["overview", "learn", "practice", "writing", "materials"] as Tab[]
+              ["overview", "learn", "lab", "practice", "writing", "materials"] as Tab[]
             ).map((value, i) => (
               <button
                 key={value}
@@ -267,6 +272,7 @@ export default function IntensiveCourse({
                 className={tab === value ? "selected" : ""}
                 onClick={() => {
                   stopAudio();
+                  setLabWriting(false);
                   setTab(value);
                 }}
               >
@@ -274,6 +280,7 @@ export default function IntensiveCourse({
                   [
                     "Overview",
                     "Learn the patterns",
+                    "Practice lab",
                     "Practice",
                     "Writing",
                     "Class materials",
@@ -282,6 +289,8 @@ export default function IntensiveCourse({
               </button>
             ))}
           </div>
+          {(tab==="lab"||labWriting)&&<div hidden={tab!=="lab"}><CourseLab events={progress.events} ready={progress.ready} record={progress.record} onWrite={id=>{write(id);setLabWriting(true);}} notify={notify} penOnly={penOnly}/></div>}
+          {tab==="writing"&&labWriting&&<button className="secondary lesson-lab-back" onClick={()=>{stopAudio();setTab("lab");setLabWriting(false);}}><ArrowLeft size={16}/>{t("Back to practice lab")}</button>}
           {tab === "overview" && (
             <>
               <div className="course-summary">
@@ -314,6 +323,7 @@ export default function IntensiveCourse({
                     {t("Explore the lesson")}
                     <ArrowRight size={16} />
                   </button>
+                  <button className="secondary" onClick={()=>setTab("lab")}>{t("Blocks, families & no-pinyin checks")}<ArrowRight size={16}/></button>
                   <button
                     className="secondary"
                     disabled={!progress.ready}
@@ -606,7 +616,7 @@ export default function IntensiveCourse({
                     }}
                   >
                     <optgroup label={t("Words and complete expressions")}>
-                      {terms.map((value) => (
+                      {[...terms,...labExtraTerms].map((value) => (
                         <option key={value.id} value={value.id}>
                           {value.hanzi} · {value.pinyin} ·{" "}
                           {value.meaning[locale]}

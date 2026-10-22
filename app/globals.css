@@ -4244,3 +4244,48 @@ html[lang="ru"] .nav-item, html[lang="fr"] .nav-item { font-size: 12px; }
 .atlas-story .icon-button { min-width:44px; min-height:44px; }
 @media(max-width:600px){.atlas-story {padding:16px;} .atlas-story-layout {grid-template-columns:1fr;gap:4px;} .atlas-story-art {max-height:170px;} .atlas-story .eyebrow {font-size:9px;} .atlas-session-nav {gap:8px;} .atlas-session-nav .secondary{padding:10px;}}
 @media(prefers-reduced-motion:reduce){.atlas-story-art *{transition:none!important;}}
+
+/* Lesson 03: an additive practice lab, using the existing paper/green language. */
+.lesson-lab-intro {padding:26px;margin-bottom:20px;}
+.lesson-lab-intro h3 {font-size:26px;margin:10px 0;}
+.lesson-lab-intro p {line-height:1.65;}
+.lesson-lab-summary {font-weight:600;color:var(--green);}
+.lesson-lab-tabs {display:flex;flex-wrap:wrap;gap:8px;margin:18px 0;}
+.lesson-lab-tabs button {padding:12px 18px;border:1px solid var(--border);border-radius:30px;background:white;min-height:44px;}
+.lesson-lab-tabs button.selected {background:var(--green);color:white;}
+.lesson-lab-activity {padding:28px;}
+.lesson-lab-nav {display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:28px;}
+.lesson-lab-nav button {min-height:44px;}
+.lesson-lab-nav>span {font-size:13px;color:var(--muted);}
+.lesson-lab-activity h3 {font-size:25px;line-height:1.4;}
+.lesson-lab-activity>p {line-height:1.65;}
+.lesson-lab-assembly {display:flex;align-items:center;flex-wrap:wrap;gap:9px;border:2px dashed var(--border);border-radius:14px;min-height:96px;padding:16px;margin:20px 0;}
+.lesson-lab-assembly>span {color:var(--muted);}
+.lesson-lab-assembly button,.lesson-lab-blocks button {min-width:64px;min-height:58px;padding:12px 18px;border:1px solid var(--border);border-radius:12px;font-size:25px;background:var(--sage);}
+.lesson-lab-blocks {display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 24px;}
+.lesson-lab-blocks button {background:var(--paper);}
+.lesson-lab-blocks button.selected,.lesson-lab-options button.selected {border-color:var(--green);background:var(--sage);box-shadow:inset 0 0 0 1px var(--green);}
+.lesson-lab-feedback {background:var(--paper);border:1px solid var(--border);border-radius:14px;padding:20px;margin:20px 0;}
+.lesson-lab-feedback>p[lang=zh-Hans] {font-size:32px;margin:12px 0;}
+.lesson-lab-feedback>button {display:inline-flex;align-items:center;gap:6px;min-height:44px;margin:4px 12px 4px 0;}
+.lesson-lab-feedback.correct {border-color:#a2b69b;}
+.lesson-lab-assisted {color:var(--muted);font-size:13px;}
+.lesson-family-anchor {font-size:48px;color:var(--green);margin:15px 0;}
+.lesson-family-members {display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:20px 0 28px;}
+.lesson-family-members article {padding:18px;border:1px solid var(--border);border-radius:14px;background:var(--paper);}
+.lesson-family-members strong {font-size:29px;font-weight:500;}
+.lesson-family-members p {line-height:1.5;}
+.lesson-family-members .course-actions {gap:6px;}
+.lesson-family-members button {min-height:44px;}
+.lesson-lab-read {font-size:48px;text-align:center;padding:28px 8px;}
+.lesson-lab-options {display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;}
+.lesson-lab-options button {min-height:72px;border:1px solid var(--border);border-radius:12px;background:var(--paper);padding:16px;text-align:center;}
+.lesson-lab-prompt {font-size:22px;font-weight:500;}
+.lesson-recall-input {display:flex;flex-direction:column;gap:10px;margin:20px 0;font-size:13px;}
+.lesson-recall-input input {width:100%;border:1px solid var(--border);background:white;padding:15px;border-radius:10px;font-size:30px;min-height:66px;color:var(--ink);}
+.lesson-lab-ink {position:relative;width:min(100%,280px);aspect-ratio:1;border:1px solid var(--border);background:white;margin:18px 0;}
+.lesson-lab-self-check {display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:20px 0;}
+.lesson-lab-self-check>strong {font-size:46px;flex-basis:100%;font-weight:500;}
+.lesson-lab-back {margin:0 0 20px;}
+@media(max-width:600px){.lesson-lab-intro,.lesson-lab-activity{padding:18px;}.lesson-lab-options{grid-template-columns:1fr;}.lesson-lab-read{font-size:38px;}.lesson-lab-blocks button{min-width:54px;padding:10px 14px;}.lesson-lab-nav{gap:8px;}.lesson-lab-nav button{padding:10px;}}
+.lesson-lab .muted {color:var(--muted);font-size:13px;line-height:1.65;}
