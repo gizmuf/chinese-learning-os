@@ -124,7 +124,7 @@ function StoryPlayer({ id, onComponent, notify }: { id: "sun" | "wood"; onCompon
         <button className="story-play" onClick={toggle}>{playing ? <Pause size={17}/> : <Play size={17}/>}<span>{playing ? c.pause : progress > 0 && progress < 1 ? c.resume : c.play}</span></button>
         <button className="story-icon" onClick={() => seek(0)} aria-label={c.replay} title={c.replay}><RotateCcw size={18}/></button>
         <span className="story-drag-hint">{reducedMotion ? c.reduced : c.drag}</span>
-        <button className="story-sound" aria-pressed={narration} onClick={() => { seek(position.current); setNarration(!narration); }}>{narration ? <Volume2 size={18}/> : <VolumeX size={18}/>}<span>{narration ? c.sound : c.mute}</span></button>
+        <button className="story-sound" aria-label={narration ? c.sound : c.mute} aria-pressed={narration} onClick={() => { seek(position.current); setNarration(!narration); }}>{narration ? <Volume2 size={18}/> : <VolumeX size={18}/>}<span>{narration ? c.sound : c.mute}</span></button>
       </div>
       <input className="story-scrubber" type="range" min="0" max="1000" step="1" value={Math.round(progress * 1000)} onChange={e => seek(Number(e.target.value) / 1000)} aria-label={c.drag} aria-valuetext={`${Math.round(progress * 100)}% · ${current.label[locale]}`} style={{ "--story-progress": `${progress * 100}%` } as React.CSSProperties}/>
       <div className="story-chapters" role="group" aria-label={t("Story steps")}>
