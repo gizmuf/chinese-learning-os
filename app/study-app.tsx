@@ -56,6 +56,7 @@ import {
 } from "./local-store";
 import Ink from "./ink";
 import Guided from "./guided";
+import Notebook from "./notebook";
 import { progressSchema } from "./event-schema";
 import { speak, setSpeechRate, stopAudio } from "./audio";
 import { authenticatedFetch } from "./auth-client";
@@ -89,6 +90,7 @@ export default function StudyApp({
   const [selected, setSelected] = useState(items[0]);
   const [skill, setSkill] = useState<Skill>("writing");
   const [mode, setMode] = useState<Mode>("trace");
+  const [writingLayout, setWritingLayout] = useState<"studio" | "notebook">("studio");
   const [search, setSearch] = useState("");
   const [lesson, setLesson] = useState("all");
   const [level, setLevel] = useState<StudyLevel>("hsk1");
@@ -993,7 +995,16 @@ export default function StudyApp({
                     </select>
                   )}
                 </div>
-                {skill === "writing" ? (
+                {skill === "writing" && !session && (
+                  <div className="notebook-layout-switch" role="group" aria-label="Writing layout">
+                    <button className={writingLayout === "studio" ? "selected" : ""} aria-pressed={writingLayout === "studio"} onClick={() => setWritingLayout("studio")}>Single character</button>
+                    <button className={writingLayout === "notebook" ? "selected" : ""} aria-pressed={writingLayout === "notebook"} onClick={() => setWritingLayout("notebook")}><BookOpen size={16} /> Notebook · Zeszyt</button>
+                  </div>
+                )}
+                {skill === "writing" && writingLayout === "notebook" && !session ? (
+                  <Notebook key={selected.id} item={selected} db={db} penOnly={penOnly} setPenOnly={setPenOnly} record={record} notify={notify} next={next}
+                    onRecall={() => { setWritingLayout("studio"); setMode("recall"); }} />
+                ) : skill === "writing" ? (
                   <Writing
                     key={
                       selected.id +

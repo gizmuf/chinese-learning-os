@@ -10,6 +10,8 @@ A calm daily Chinese practice space for beginner classmates. Works in a browser 
 4. Use **Review** for separate recognition, listening and writing queues. Choose an estimated 5, 10 or 20 minute session; the displayed duration is a workload estimate, not a countdown.
 5. **My progress** shows attempts and each skill's next review. Export your history as JSON for a personal backup.
 
+The optional **Notebook · Zeszyt** layout in Writing studio adds worksheet practice without replacing Watch, Trace, Copy or Recall. Each character has cumulative stroke-order diagrams (the new stroke is orange), selectable enlarged steps with a start dot, a model, two trace boxes and three empty copy boxes, plus a final whole-word row. Hide guides removes models and stroke diagrams; it remains assisted practice. Save requires at least one empty copy box per character. Worksheets and drawings persist locally per account and word; the saved practice event syncs with account history as assisted copying and never advances the independent FSRS schedule. The existing Recall mode remains the route for self-assessed memory reviews. Worksheets adapt to HSK1, HSK2 and extras and use the existing bundled character data.
+
 **Pencil only** rejects finger/mouse drawing inside the writing surface. Turn it off for finger practice. The left-handed layout moves the reference away from the writing hand. Undo, Clear, Hint, Replay and Next character remain available in the studio. Completed free-writing strokes and drafts survive page refresh and screen rotation.
 
 ## Learning rules
