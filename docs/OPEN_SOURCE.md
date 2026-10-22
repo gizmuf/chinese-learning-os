@@ -16,3 +16,11 @@ This release adds content, not another learning engine. A future Anki export cou
 ## Atlas component mappings
 
 The Atlas reuses Make Me a Hanzi's **dictionary** decomposition/matches in addition to the existing graphic strokes. Dictionary data is LGPL-3.0-or-later; graphics derive from Arphic fonts and retain their separate notices. The generated mapping artifact records upstream URL and input SHA256. The derivation script is `scripts/author-atlas-structure.mjs`; no runtime dictionary service or new application dependency is introduced. License texts are shipped as `makemeahanzi-COPYING.txt`, `makemeahanzi-dictionary-LGPL.txt` and `makemeahanzi-GPL-3.0.txt`, alongside the existing graphic notices. Teaching translations, grouping navigation and six discovery entries are authored application content; the original supplied Atlas PDF is downloadable from Materials.
+
+## Interactive Atlas and handwriting (22 October 2026)
+
+- **perfect-freehand** (Stephen Ruiz Ltd, MIT): original TypeScript algorithm vendored in `app/vendor/perfect-freehand/`. `PROVENANCE.json` records exact upstream blob hashes; source license and a public copy are retained. Wrapper rendering and pointer lifecycle are application code. No runtime CDN or service is involved.
+- **Dong Chinese Character Wiki** (CC BY-SA 4.0): researched Moon, Water, Fire, Mountain, woods/rest and the qīng sound family; adapted EN/FR/RU teaching notes retain source links and attribution. See `public/licenses/atlas-teaching-notes.txt`. SVG scenes and morphs are teaching illustrations, not reproductions of historical inscriptions.
+- **CC-CEDICT via Dong Chinese dictionary**: checked the six whole-word readings/definitions. Individual character glosses are contextual cues, never a claim that every compound is a literal sum of independent meanings.
+
+Keep the existing Hanzi Writer and FSRS engines. The workshop is a guided association layer, not evidence of independent recall. Follow it with pronunciation, writing from memory and spaced review. Future UX candidates: a single “next useful activity” action after each completed assembly; downloadable lesson packs; teacher-selected family sequences drawn from each week's course vocabulary. These are proposals, not implemented features.

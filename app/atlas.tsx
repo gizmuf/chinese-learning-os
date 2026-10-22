@@ -12,7 +12,7 @@ import {
   Search,
   Volume2,
 } from "lucide-react";
-import AtlasStory from "./atlas-story";
+import AtlasWorkshop from "./atlas-workshop";
 import {
   emptyAnswer,
   sessionTotals,
@@ -603,7 +603,8 @@ export default function Atlas({
                   </div>
                 </div>
                 <div className="atlas-bridges">
-                  <AtlasStory
+                  <AtlasWorkshop
+                    onCharacter={(hanzi) => { const c = atlasCharacters.find(c => c.hanzi === hanzi); if (c) setSelected(c.id); }}
                     notify={notify}
                     character={character.hanzi}
                     onComponent={(id) => navigate({ kind: "component", id })}
