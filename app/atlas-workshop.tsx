@@ -8,9 +8,9 @@ import AtlasStory from "./atlas-story";
 import AtlasWordScene, { extendedScenes } from "./atlas-word-scenes";
 import { extraAnchors } from "./atlas-workshop-content";
 import { familyIds, wordFamilies, assemblies, wordBuilds, checkAssemblyChoice, type Assembly, type WordBuild, type WordScene } from "./atlas-workshop-data";
-import { items } from "./content";
 import { atlasByHanzi, atlasItem } from "./atlas-model";
-import { speak } from "./audio";
+import { speak, playRecording } from "./audio";
+import { workshopRecording } from "./atlas-workshop-audio";
 import "./atlas-workshop.css";
 import anchorWood from "../public/characters/木.json";
 import anchorQing from "../public/characters/青.json";
@@ -33,6 +33,7 @@ const copy = {
  wood:A("Trees","Arbres","Деревья"),qing:A("A sound family","Une famille sonore","Семейство звучаний"),light:A("Sun & moon","Soleil et lune","Солнце и луна"),
  source:A("Sources & teaching notes","Sources et notes pédagogiques","Источники и пояснения"),
  mnemonic:A("Word memory scene · learn the whole meaning","Image pour retenir le mot · apprenez son sens entier","Образ для слова · учите полное значение"),
+ hearSentence:A("Hear the sentence","Écouter la phrase","Слушать предложение"),
  hear:A("Hear the word","Écouter le mot","Слушать слово"),open:A("Open character","Ouvrir le caractère","Открыть иероглиф"),
 };
 type Mode="story"|"family"|"words";
@@ -137,8 +138,8 @@ export function WordSceneArt({scene,active=false}:{scene:WordScene;active?:boole
 function WordBuilder({entry,notify}:{entry:WordBuild;notify:(message:string)=>void}){
  const {locale}=useI18n();const reduced=useReducedMotion();
  const [joined,setJoined]=useState(false),[quiz,setQuiz]=useState(false),[placed,setPlaced]=useState(0),[message,setMessage]=useState<Feedback>("");
- const atlasAudio=[...atlasByHanzi.values()].find(c=>c.word===entry.hanzi);
- const item=items.find(i=>i.hanzi===entry.hanzi)??(atlasAudio?{...atlasItem(atlasAudio,locale),hanzi:entry.hanzi}:undefined);
+ const wordRecording=workshopRecording(entry,"word")!;
+ const sentenceRecording=workshopRecording(entry,"sentence");
  const choices=[...new Map([...entry.parts,{hanzi:"木",pinyin:"mù"},{hanzi:"日",pinyin:"rì"}].map(p=>[p.hanzi,p])).values()].sort((a,b)=>a.hanzi.localeCompare(b.hanzi));
  return <div className="workshop-build">
   <div className="workshop-result"><strong lang="zh-Hans">{entry.hanzi}</strong><span>{entry.pinyin}</span><p>{entry.meaning[locale]}</p></div>
@@ -149,7 +150,7 @@ function WordBuilder({entry,notify}:{entry:WordBuild;notify:(message:string)=>vo
   <div className="workshop-parts word-parts">{entry.parts.map(p=><div key={p.hanzi}><strong>{p.hanzi}</strong><span>{p.pinyin}</span><small>{p.meaning[locale]}</small></div>)}</div>
   <p className="workshop-note">{entry.note[locale]}</p>
   {entry.example&&<div className="workshop-note"><strong lang="zh-Hans">{entry.example.hanzi}</strong><p>{entry.example.pinyin}</p><p>{entry.example.meaning[locale]}</p></div>}
-  <div className="workshop-actions"><button className="workshop-primary" onClick={()=>{setQuiz(false);setJoined(!joined);}}>{joined?copy.split[locale]:copy.join[locale]}<ArrowRight size={16}/></button><button onClick={()=>{setQuiz(!quiz);setPlaced(0);setJoined(false);setMessage("");}}>{quiz?copy.watch[locale]:copy.try[locale]}</button>{item&&<button onClick={()=>speak(item.hanzi,notify,item)}><Volume2 size={16}/>{copy.hear[locale]}</button>}</div>
+  <div className="workshop-actions"><button className="workshop-primary" onClick={()=>{setQuiz(false);setJoined(!joined);}}>{joined?copy.split[locale]:copy.join[locale]}<ArrowRight size={16}/></button><button onClick={()=>{setQuiz(!quiz);setPlaced(0);setJoined(false);setMessage("");}}>{quiz?copy.watch[locale]:copy.try[locale]}</button><button onClick={()=>playRecording(wordRecording,notify)}><Volume2 size={16}/>{copy.hear[locale]}</button>{sentenceRecording&&<button onClick={()=>playRecording(sentenceRecording,notify)}><Volume2 size={16}/>{copy.hearSentence[locale]}</button>}</div>
   {quiz&&<div className="workshop-quiz"><p>{copy.wordPrompt[locale]}</p><div className="workshop-choices">{choices.map(p=><button key={p.hanzi} disabled={placed===entry.parts.length} onClick={()=>{if(entry.parts[placed]?.hanzi===p.hanzi){setPlaced(placed+1);setMessage(placed+1===entry.parts.length?"correct":"picked");}else setMessage("retry");}}><strong>{p.hanzi}</strong><span>{p.pinyin}</span></button>)}</div><p role="status">{message ? copy[message][locale] : ""}</p><small>{copy.practice[locale]}</small></div>}
   <details className="workshop-source"><summary>{copy.source[locale]}</summary><p>{copy.mnemonic[locale]}</p><a href={entry.source} target="_blank" rel="noreferrer">Dong Chinese · {entry.hanzi} · {entry.pinyin} ↗</a></details>
  </div>;
