@@ -13,6 +13,11 @@ export function stopAudio() {
   current.load();
   current = null;
 }
+// Release only this player's recording, preserving a later pronunciation.
+export function releaseRecording(audio: HTMLAudioElement) {
+  if (current === audio) stopAudio();
+  else { audio.pause(); audio.removeAttribute("src"); audio.load(); }
+}
 export function speak(
   text: string,
   notify: (message: string) => void,
@@ -44,4 +49,5 @@ export function playRecording(source:string,notify:(message:string)=>void) {
       return;
     notify("Tap the speaker again to play the pronunciation.");
   });
+  return audio;
 }
