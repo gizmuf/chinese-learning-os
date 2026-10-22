@@ -6,10 +6,13 @@ import {
   type Grade,
 } from "ts-fsrs";
 import { z } from "zod";
+import { labActivityIds, labExtraTerms } from "./course-lab-data";
 import { exercises } from "./course-exercises";
 import { terms, sentences, topicInfo, course } from "./course-data";
 export const activityIds = [
   ...exercises.map((e) => e.id),
+  ...labActivityIds,
+  ...labExtraTerms.map(t=>"write:"+t.id),
   ...Object.keys(topicInfo).map((t) => "study:" + t),
   ...terms.map((t) => "write:" + t.id),
   ...sentences.map((s) => "write:" + s.id),
@@ -26,6 +29,7 @@ export const courseEventSchema = z
     rating: z.number().int().min(0).max(4).optional(),
   })
   .superRefine((event, ctx) => {
+    if(event.activityId.startsWith("lab-family-")&&!event.assisted) ctx.addIssue({code:"custom",message:"Visible family examples require assisted practice"});
     const expected = event.activityId.startsWith("study:")
       ? "study"
       : event.activityId.startsWith("write:")
@@ -66,7 +70,7 @@ export function courseCards(events: CourseEvent[]) {
   return cards;
 }
 export function courseSummary(events: CourseEvent[], now = Date.now()) {
-  const answers = events.filter((e) => e.kind === "answer");
+  const answers = events.filter((e) => e.kind === "answer" && exercises.some(activity=>activity.id===e.activityId));
   const independent = answers.filter((e) => !e.assisted);
   const cards = courseCards(events);
   const attempted = new Set(answers.map((e) => e.activityId));

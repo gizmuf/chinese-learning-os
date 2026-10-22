@@ -2175,6 +2175,206 @@
     "No answers were recorded.": {
       "fr": "Aucune réponse n’a été enregistrée.",
       "ru": "Ответы не были записаны."
+    },
+    "Practice lab": {
+      "fr": "Atelier de pratique",
+      "ru": "Практическая мастерская"
+    },
+    "Back to practice lab": {
+      "fr": "Retour à l’atelier de pratique",
+      "ru": "Вернуться в практическую мастерскую"
+    },
+    "Blocks, families & no-pinyin checks": {
+      "fr": "Blocs, familles et tests sans pinyin",
+      "ru": "Блоки, семейства и проверки без пиньиня"
+    },
+    "Lesson 3 practice lab": {
+      "fr": "Atelier de pratique de la leçon 3",
+      "ru": "Практическая мастерская урока 3"
+    },
+    "BUILD · CONNECT · REMEMBER": {
+      "fr": "CONSTRUIRE · RELIER · RETENIR",
+      "ru": "СОБИРАЙТЕ · СВЯЗЫВАЙТЕ · ЗАПОМИНАЙТЕ"
+    },
+    "Make the patterns your own.": {
+      "fr": "Appropriez-vous les structures.",
+      "ru": "Освойте языковые модели."
+    },
+    "Build complete expressions, discover word families, then try short checks without pinyin.": {
+      "fr": "Construisez des expressions complètes, découvrez des familles de mots, puis faites de courts tests sans pinyin.",
+      "ru": "Собирайте полные выражения, изучайте семейства слов и проходите короткие проверки без пиньиня."
+    },
+    "independent successes": {
+      "fr": "réussites autonomes",
+      "ru": "самостоятельных успехов"
+    },
+    "due for review": {
+      "fr": "à réviser",
+      "ru": "пора повторить"
+    },
+    "The original 24 activities keep their own completion count. Guided family practice does not advance independent recall.": {
+      "fr": "Les 24 activités initiales gardent leur propre compteur. La pratique guidée des familles ne fait pas avancer le rappel autonome.",
+      "ru": "У исходных 24 заданий остаётся свой счётчик. Практика семейств с подсказками не продвигает самостоятельное повторение."
+    },
+    "Practice lab sections": {
+      "fr": "Sections de l’atelier de pratique",
+      "ru": "Разделы практической мастерской"
+    },
+    "Expression blocks": {
+      "fr": "Blocs d’expressions",
+      "ru": "Блоки выражений"
+    },
+    "Word families": {
+      "fr": "Familles de mots",
+      "ru": "Семейства слов"
+    },
+    "No-pinyin checks": {
+      "fr": "Tests sans pinyin",
+      "ru": "Проверки без пиньиня"
+    },
+    "Current lab activity": {
+      "fr": "Activité actuelle de l’atelier",
+      "ru": "Текущее задание мастерской"
+    },
+    "Previous lab activity": {
+      "fr": "Activité précédente de l’atelier",
+      "ru": "Предыдущее задание мастерской"
+    },
+    "Next lab activity": {
+      "fr": "Activité suivante de l’atelier",
+      "ru": "Следующее задание мастерской"
+    },
+    "BUILD THE FULL CLASSROOM FORM": {
+      "fr": "CONSTRUISEZ LA FORME COMPLÈTE DU COURS",
+      "ru": "СОБЕРИТЕ ПОЛНУЮ ФОРМУ ИЗ УРОКА"
+    },
+    "Tap blocks in order. Tap an assembled block to remove it. You can skip and return without recording an answer.": {
+      "fr": "Touchez les blocs dans l’ordre. Touchez un bloc assemblé pour le retirer. Vous pouvez passer et revenir sans enregistrer de réponse.",
+      "ru": "Нажимайте блоки по порядку. Нажмите собранный блок, чтобы убрать его. Можно пропустить задание и вернуться без записи ответа."
+    },
+    "Your expression": {
+      "fr": "Votre expression",
+      "ru": "Ваше выражение"
+    },
+    "Remove block": {
+      "fr": "Retirer le bloc",
+      "ru": "Убрать блок"
+    },
+    "Build here": {
+      "fr": "Assemblez ici",
+      "ru": "Соберите здесь"
+    },
+    "Available blocks": {
+      "fr": "Blocs disponibles",
+      "ru": "Доступные блоки"
+    },
+    "Compare the classroom form.": {
+      "fr": "Comparez avec la forme du cours.",
+      "ru": "Сравните с формой из урока."
+    },
+    "Hide pronunciation": {
+      "fr": "Masquer la prononciation",
+      "ru": "Скрыть произношение"
+    },
+    "Reveal pronunciation": {
+      "fr": "Afficher la prononciation",
+      "ru": "Показать произношение"
+    },
+    "Swap the time unit": {
+      "fr": "Changer l’unité de temps",
+      "ru": "Заменить единицу времени"
+    },
+    "Character component": {
+      "fr": "Composant de caractère",
+      "ru": "Компонент иероглифа"
+    },
+    "Repeated whole character": {
+      "fr": "Caractère entier répété",
+      "ru": "Повторяющийся целый иероглиф"
+    },
+    "Repeated word": {
+      "fr": "Mot répété",
+      "ru": "Повторяющееся слово"
+    },
+    "Guided family check": {
+      "fr": "Test guidé de la famille",
+      "ru": "Проверка семейства с подсказками"
+    },
+    "Which part repeats? The examples stay visible, so this is assisted practice.": {
+      "fr": "Quelle partie se répète ? Les exemples restent visibles : c’est une pratique guidée.",
+      "ru": "Какая часть повторяется? Примеры остаются видимыми, поэтому это практика с подсказками."
+    },
+    "Compare the shared part.": {
+      "fr": "Comparez la partie commune.",
+      "ru": "Сравните общую часть."
+    },
+    "READ WITHOUT PINYIN": {
+      "fr": "LIRE SANS PINYIN",
+      "ru": "ЧИТАЙТЕ БЕЗ ПИНЬИНЯ"
+    },
+    "RECALL WITHOUT A MODEL": {
+      "fr": "RAPPEL SANS MODÈLE",
+      "ru": "ВОСПРОИЗВЕДИТЕ БЕЗ ОБРАЗЦА"
+    },
+    "Choose the meaning.": {
+      "fr": "Choisissez le sens.",
+      "ru": "Выберите значение."
+    },
+    "Write the Chinese expression from memory.": {
+      "fr": "Écrivez l’expression chinoise de mémoire.",
+      "ru": "Напишите китайское выражение по памяти."
+    },
+    "No pinyin or audio clues before checking. Browse freely; only checked answers are recorded.": {
+      "fr": "Aucun indice en pinyin ni audio avant la vérification. Parcourez librement ; seules les réponses vérifiées sont enregistrées.",
+      "ru": "До проверки нет подсказок пиньинем или звуком. Просматривайте свободно: записываются только проверенные ответы."
+    },
+    "Recall input method": {
+      "fr": "Méthode de saisie du rappel",
+      "ru": "Способ ввода ответа по памяти"
+    },
+    "Type Chinese": {
+      "fr": "Saisir en chinois",
+      "ru": "Ввести китайский текст"
+    },
+    "Write by hand": {
+      "fr": "Écrire à la main",
+      "ru": "Написать от руки"
+    },
+    "Your Chinese answer": {
+      "fr": "Votre réponse en chinois",
+      "ru": "Ваш ответ на китайском"
+    },
+    "Handwriting is self-assessed. Draw first, reveal the model, then rate what you remembered.": {
+      "fr": "L’écriture est autoévaluée. Écrivez d’abord, révélez le modèle, puis évaluez ce que vous aviez retenu.",
+      "ru": "Рукопись оцениваете вы сами. Сначала напишите, затем откройте образец и оцените, что вспомнили."
+    },
+    "Need more practice": {
+      "fr": "Encore besoin de pratique",
+      "ru": "Нужно ещё потренироваться"
+    },
+    "I remembered it": {
+      "fr": "Je m’en suis souvenu",
+      "ru": "Я вспомнил"
+    },
+    "Next review": {
+      "fr": "Prochaine révision",
+      "ru": "Следующее повторение"
+    },
+    "Review due activity": {
+      "fr": "Réviser une activité arrivée à échéance",
+      "ru": "Повторить задание по расписанию"
+    },
+    "Checkpoint type": {
+      "fr": "Type de test",
+      "ru": "Тип проверки"
+    },
+    "Reading check": {
+      "fr": "Test de lecture",
+      "ru": "Проверка чтения"
+    },
+    "Written recall": {
+      "fr": "Rappel écrit",
+      "ru": "Письменное воспроизведение"
     }
   },
   "vocabulary": {
