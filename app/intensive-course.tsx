@@ -41,6 +41,7 @@ import {
 import { useCourseProgress } from "./course-store";
 import { speak, stopAudio } from "./audio";
 import Notebook from "./notebook";
+import CourseStory from "./course-story";
 import Ink from "./ink";
 import { readDraft, saveDraft } from "./local-store";
 import type { Item } from "./content";
@@ -440,6 +441,7 @@ export default function IntensiveCourse({
                   </button>
                 </div>
                 <p className="course-rule">{topicInfo[topic].note[locale]}</p>
+                {topic === "experience" && <CourseStory notify={notify} />}
                 {(topic === "time" || topic === "rhythm") &&
                   Object.entries(timelines)
                     .filter(([key]) =>

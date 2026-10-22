@@ -30,6 +30,7 @@ The supplied `SKILL.md` and `HANZI_PDF_TEMPLATE_SPEC.md` are reference material 
 - `app/course-data.ts`: lesson metadata, trilingual expressions/sentences, source-board mapping and HSK identity links.
 - `app/course-exercises.ts`: stable activity IDs, distractors, accepted token sequences, hints and feedback. Shuffle choices without changing the answer key. Support tapping and keyboard operation, not drag-only tasks.
 - `app/intensive-course.tsx`: additive course UI; shared notebook remains the writing tool.
+- `app/course-story.tsx`: interactive earlier/now scenes for 过 vs 了. Treat the route as one possible story; use the separate location sentence as evidence for where the character is now. Respect reduced-motion preferences.
 - `app/course-learning.ts`: schema and independent course scheduling. Hints and corrected retries are assisted; copying is practice, not recall. Free writing uses explicit self-assessment.
 - `app/course-store.ts` / `/api/course-progress`: account-separated offline queue and authenticated sync. Reuse server identity and notebook-owner checks; never trust a user ID in JSON. Duplicate event UUIDs are idempotent per account.
 - `course_events`: additive D1 migration. Existing `learning_events` is untouched. Draft ink stays in the existing per-owner device store; course events have a separate store.

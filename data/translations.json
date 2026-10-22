@@ -1699,6 +1699,46 @@
     "Sync course progress": {
       "fr": "Synchroniser la progression du cours",
       "ru": "Синхронизировать прогресс курса"
+    },
+    "Two stories on the map": {
+      "fr": "Deux histoires sur la carte",
+      "ru": "Две истории на карте"
+    },
+    "Where is he now? See the whole story.": {
+      "fr": "Où est-il maintenant ? Voyez toute l’histoire.",
+      "ru": "Где он сейчас? Посмотрите всю историю."
+    },
+    "Switch the story, then move between the earlier scene and now.": {
+      "fr": "Changez d’histoire, puis passez de la scène précédente à maintenant.",
+      "ru": "Выберите историю, затем переключайтесь между прошлой сценой и настоящим."
+    },
+    "Choose a story": {
+      "fr": "Choisir une histoire",
+      "ru": "Выбрать историю"
+    },
+    "Now scene": {
+      "fr": "Maintenant",
+      "ru": "Сейчас"
+    },
+    "Earlier scene": {
+      "fr": "Avant",
+      "ru": "Раньше"
+    },
+    "Move through the story": {
+      "fr": "Parcourir l’histoire",
+      "ru": "Перемещаться по истории"
+    },
+    "The experience or event": {
+      "fr": "L’expérience ou l’événement",
+      "ru": "Опыт или событие"
+    },
+    "Current location, stated explicitly": {
+      "fr": "La position actuelle, précisée explicitement",
+      "ru": "Нынешнее место, указанное прямо"
+    },
+    "This is one possible story. The second sentence explicitly gives the current location. 过 or 了 alone does not establish where someone is now.": {
+      "fr": "C’est une histoire possible. La deuxième phrase précise la position actuelle. 过 ou 了 ne suffit pas à indiquer où quelqu’un est maintenant.",
+      "ru": "Это одна из возможных историй. Второе предложение прямо указывает нынешнее место. Само по себе 过 или 了 не определяет, где человек сейчас."
     }
   },
   "vocabulary": {

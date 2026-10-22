@@ -56,6 +56,8 @@ Production uses a Sites runtime variable `FIREBASE_WEB_CONFIG`, containing the F
 
 The existing study space now includes a separate **Intensive course** with 60 lesson slots. Only lesson 03 is published; other numbers await real class material. Lesson 03 contains six topics, 58 expressions, 22 sentences, 24 interactive activities, six classroom-board photos and the nine supplied EN/FR/RU documents. HSK1, HSK2, extra cards and their identifiers stay unchanged.
 
+The experience topic includes an interactive two-scene map comparing 过 and 了, with explicit sentences establishing the current location.
+
 Course activities have their own account-scoped event table, local offline queue and FSRS schedule. Reading, guided copying, revealed answers and corrected retries never advance independent recall. The course overview counts distinct activities attempted, not mastery. Handwriting is self-assessed; drafts remain on the current device. Existing HSK words reuse their original writing identity; their guided course practice can appear in both histories.
 
 See [COURSE_AUTHORING.md](COURSE_AUTHORING.md) for source review, lesson structure and the next-lesson workflow.

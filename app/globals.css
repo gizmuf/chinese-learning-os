@@ -3112,3 +3112,189 @@ html[lang="ru"] .nav-item, html[lang="fr"] .nav-item { font-size: 12px; }
   cursor: pointer;
   padding: 0;
 }
+.course-story {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--paper);
+  padding: 24px;
+  margin: 26px 0;
+}
+.course-story h4 {
+  font-size: 18px;
+  margin: 0;
+}
+.course-story > p {
+  line-height: 1.8;
+}
+.course-story-choices,
+.course-story-phases {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+.course-story-choices button,
+.course-story-phases button {
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 10px 16px;
+  background: white;
+}
+.course-story-map {
+  height: 245px;
+  position: relative;
+  isolation: isolate;
+  max-width: 700px;
+  margin: 25px auto;
+}
+.course-story-road {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  top: 108px;
+  border-bottom: 2px dashed #b8c9b5;
+}
+.course-story-direction {
+  position: absolute;
+  left: calc(50% - 12px);
+  top: 77px;
+  background: var(--paper);
+  padding: 8px;
+  font-size: 28px;
+  color: var(--orange);
+}
+.course-story-person {
+  position: absolute;
+  top: 12px;
+  width: 60px;
+  transform: translateX(-50%);
+  transition: left 0.8s ease;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.course-story-person.in-suzhou {
+  left: 15%;
+}
+.course-story-person.in-shanghai {
+  left: 85%;
+}
+.course-story-person > span {
+  font-size: 10px;
+  white-space: nowrap;
+  border-radius: 12px;
+  background: var(--sage);
+  padding: 4px 10px;
+  margin-bottom: 8px;
+  color: var(--green);
+}
+.course-story-person > svg {
+  width: 45px;
+  height: 68px;
+  fill: var(--green);
+}
+.course-story-city {
+  position: absolute;
+  top: 135px;
+  width: 135px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transform: translateX(-50%);
+}
+.city-suzhou {
+  left: 15%;
+}
+.city-shanghai {
+  left: 85%;
+}
+.course-story-city svg {
+  width: 70px;
+  height: 35px;
+  fill: none;
+  stroke: var(--green);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+.course-story-city strong {
+  font-size: 24px;
+  font-weight: 500;
+}
+.course-story-city span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.course-story-phases {
+  justify-content: center;
+}
+.course-story-explanation {
+  border-left: 3px solid var(--orange);
+  padding: 12px 16px;
+  background: var(--peach);
+  border-radius: 5px;
+}
+.course-story-sentences {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.course-story-sentences article {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+.course-story-sentences strong {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.course-story-sentences p {
+  margin: 0;
+  line-height: 1.7;
+}
+.course-story-caution {
+  font-size: 12px;
+  color: #667266;
+  margin-bottom: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .course-story-person {
+    transition: none;
+  }
+}
+@media (max-width: 600px) {
+  .course-story {
+    padding: 16px;
+  }
+  .course-story-map {
+    margin-top: 20px;
+    height: 235px;
+  }
+  .course-story-sentences {
+    grid-template-columns: 1fr;
+  }
+  .course-story-city {
+    width: 110px;
+  }
+  .course-story-city span {
+    font-size: 9px;
+  }
+  .course-story h4 {
+    font-size: 17px;
+  }
+  .course-story-choices button {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .course-story-person {
+    transition-duration: 0.5s;
+  }
+}
