@@ -11,3 +11,20 @@
 .atlas-workshop button{touch-action:manipulation}.atlas-workshop button:focus-visible,.atlas-workshop summary:focus-visible{outline:3px solid #b18b59;outline-offset:3px}
 @container(max-width:480px){.workshop-intro{padding:20px}.workshop-intro h3{font-size:26px}.workshop-tabs{padding:0 10px 12px}.workshop-tabs button{font-size:11px}.workshop-choices{padding:14px 14px;gap:6px}.workshop-choices button{padding:9px;min-width:62px}.workshop-choices strong{font-size:27px}.workshop-parts{padding:14px;gap:6px}.workshop-parts>button,.workshop-parts>div{min-width:90px;padding:9px;column-gap:6px}.workshop-parts strong{font-size:26px}.workshop-note{padding:0 18px 16px;font-size:13px}.workshop-actions{padding:0 14px 16px}.workshop-result{gap:9px}.workshop-result p{flex-basis:100%;text-align:center}.workshop-quiz{margin:0 14px 16px;padding:13px}.workshop-families{padding:14px 14px 4px}.workshop-instruction{padding:10px 18px 0}}
 @media(prefers-reduced-motion:reduce){.atlas-workshop *{animation:none!important;transition:none!important}}
+/* Scene motion starts with the same Bring together / assembly action. */
+.scene-active .scene-line,.scene-active .scene-past,.scene-active .scene-water-path{stroke-dasharray:450;animation:atlas-scene-trace 1.6s ease-out both;}
+.scene-active .scene-drop{animation:atlas-scene-drop 1.4s ease-out both;}
+.scene-active .scene-drop-1{animation-delay:.15s;}.scene-active .scene-drop-2{animation-delay:.3s;}
+.scene-active .scene-clock-hand{transform-origin:320px 174px;animation:atlas-scene-clock 1.6s ease-out both;}
+.scene-active .scene-cup{animation:atlas-scene-cup 1.4s ease-out both;}
+.scene-active .scene-rise{animation:atlas-scene-rise 1.5s ease-out both;}
+.scene-active .scene-wave{animation:atlas-scene-wave 1.6s ease-out both;}
+.scene-active .scene-star,.scene-active .scene-eye,.scene-active .scene-smile{animation:atlas-scene-appear 1.5s ease-out both;}
+@keyframes atlas-scene-trace{from{stroke-dashoffset:450}to{stroke-dashoffset:0}}
+@keyframes atlas-scene-drop{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes atlas-scene-clock{from{transform:rotate(-90deg)}to{transform:rotate(0)}}
+@keyframes atlas-scene-cup{from{transform:translate(18px,20px)}to{transform:translate(-15px,-12px)}}
+@keyframes atlas-scene-rise{from{transform:translateY(22px);opacity:.2}to{transform:translateY(0);opacity:1}}
+@keyframes atlas-scene-wave{from{transform:translateX(-12px);opacity:.2}to{transform:translateX(0);opacity:1}}
+@keyframes atlas-scene-appear{from{opacity:.1}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.scene-active *{animation:none!important;}}

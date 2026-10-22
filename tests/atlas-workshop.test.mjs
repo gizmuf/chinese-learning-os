@@ -13,7 +13,8 @@ test('Authored assemblies cover each real stroke exactly once; no missing or ove
   for(const p of entry.parts){assert.ok(p.pinyin);assert.ok(p.strokes.length);}
   for(const locale of ['en','fr','ru'])assert.ok(entry.meaning[locale]&&entry.note[locale]);
   if(entry.family==='qing'){
-    const mapping=structure.mappings['u'+entry.hanzi.codePointAt(0).toString(16)];
+    const mapping=structure.mappings['u'+entry.hanzi.codePointAt(0).toString(16)] ?? (entry.hanzi==='睛'?{qing:[5,6,7,8,9,10,11,12]}:undefined);
+    assert.ok(mapping,entry.hanzi);
     assert.deepEqual(entry.parts.find(p=>p.anchor).strokes,mapping.qing);
     assert.equal(entry.parts.find(p=>p.anchor).role,'sound');
   }
@@ -36,4 +37,20 @@ test('Pressure-sensitive ink stays finite for dots, repeated points, corners and
  const line=p=>Array.from({length:20},(_,i)=>({x:.1+i*.04,y:.5,p,t:i}));
  const height=points=>Math.max(...points.map(p=>p[1]))-Math.min(...points.map(p=>p[1]));
  assert.ok(height(ink.inkOutline(line(.95),300,300))>height(ink.inkOutline(line(.1),300,300)));
+});
+
+test('Expanded workshop keeps six usable families, unique choices and contextual examples without changing the core index',()=>{
+ assert.deepEqual(w.familyIds,['wood','light','water','person','mouth','qing']);
+ assert.equal(w.assemblies.length,33);assert.equal(new Set(w.assemblies.map(a=>a.family+':'+a.hanzi)).size,33);
+ for(const family of w.familyIds){assert.ok(w.assemblies.filter(a=>a.family===family).length>=5);assert.ok(w.wordBuilds.some(word=>w.wordFamilies(word).includes(family)));}
+ assert.equal(w.wordBuilds.length,30);assert.equal(new Set(w.wordBuilds.map(word=>word.hanzi)).size,30);
+ for(const word of w.wordBuilds){assert.ok(w.wordFamilies(word).every(f=>w.familyIds.includes(f)));if(word.example){assert.ok(word.example.hanzi.includes(word.hanzi)||['洗手','喝水'].includes(word.hanzi));assert.ok(word.example.pinyin);for(const lang of ['en','fr','ru'])assert.ok(word.example.meaning[lang]);}}
+ for(const [family,char,glyph] of [['water','清','氵'],['qing','清','青'],['wood','休','木'],['person','休','亻'],['mouth','问','口'],['light','朋','月']])assert.equal(w.assemblies.find(a=>a.family===family&&a.hanzi===char).parts.find(p=>p.anchor).glyph,glyph);
+});
+test('Authored fragments retain actual stroke positions, including enclosed mouth and extra eye stroke',()=>{
+ assert.deepEqual(w.assemblies.find(a=>a.hanzi==='问').parts.find(p=>p.anchor).strokes,[3,4,5]);
+ assert.deepEqual(w.assemblies.find(a=>a.family==='mouth'&&a.hanzi==='喝').parts.find(p=>p.anchor).strokes,[0,1,2]);
+ assert.equal(w.assemblies.find(a=>a.hanzi==='睛').parts.find(p=>p.glyph==='目').strokes.length,5);
+ assert.equal(w.assemblies.find(a=>a.hanzi==='晴').parts.find(p=>p.glyph==='日').strokes.length,4);
+ const friends=w.assemblies.find(a=>a.hanzi==='朋');assert.ok(friends.parts.every(p=>p.role==='shape'));
 });
