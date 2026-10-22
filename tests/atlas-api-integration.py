@@ -21,7 +21,7 @@ suffix=uuid.uuid4().hex[:8];a='atlas-alice-'+suffix;b='atlas-bob-'+suffix
 event={'version':1,'id':str(uuid.uuid4()),'targetId':'u6674','skill':'meaning','mode':'choice','rating':3,'assisted':False,'at':int(time.time()*1000)}
 assert call()[0]==401;checks.append('anonymous atlas read rejected')
 assert call('POST',body={'events':[event]})[0]==401;checks.append('anonymous atlas write rejected')
-assert call('POST',a,{'events':[event],'userId':'qa-'+b})[0]==200;checks.append('atlas identity resolved by server')
+response=call('POST',a,{'events':[event],'userId':'qa-'+b});assert response[0]==200,response;checks.append('atlas identity resolved by server')
 assert call('POST',a,{'events':[event]})[0]==200
 status,payload,headers=call(user=a);assert status==200 and len(payload['events'])==1;checks.append('atlas replay idempotent')
 assert headers.get('Cache-Control')=='no-store';checks.append('atlas data never cached')
@@ -40,6 +40,16 @@ assert call(user=a,extra={'X-Notebook-Owner':'qa-'+a})[0]==200;checks.append('at
 assert call(user=a,path='/api/progress')[1]['events']==[];checks.append('atlas results absent from HSK API')
 assert call('POST',a,{'events':[event]},path='/api/progress')[0]==400;checks.append('atlas events cannot enter HSK API')
 assert call(user=a,path='/api/course-progress')[1]['events']==[];checks.append('Atlas results absent from course API')
+listening_word={**event,'id':str(uuid.uuid4()),'targetId':'atlas-workshop-u6d17-u624b-word','skill':'sound'}
+listening_sentence={**listening_word,'id':str(uuid.uuid4()),'targetId':'atlas-workshop-u6d17-u624b-sentence'}
+response=call('POST',a,{'events':[listening_word,listening_sentence]});assert response[0]==200,response;checks.append('workshop words and sentences accepted as separate sound targets')
+assert call('POST',a,{'events':[listening_word,listening_sentence]})[0]==200
+own=call(user=a)[1]['events'];assert len(own)==3;checks.append('workshop replay remains idempotent')
+assert not any(e['targetId'].startswith('atlas-workshop-') for e in call(user=b)[1]['events']);checks.append('workshop listening history remains owner scoped')
+for patch in [{'skill':'meaning'},{'skill':'writing','mode':'recall'},{'targetId':listening_word['targetId']+'-forged'}]:assert call('POST',a,{'events':[{**listening_word,**patch}]})[0]==400
+checks.append('forged workshop target and skill mismatches rejected')
+assert call(user=a,path='/api/progress')[1]['events']==[] and call(user=a,path='/api/course-progress')[1]['events']==[];checks.append('workshop listening does not leak into HSK or course histories')
+# Run the transport-limit probe after payload validation and persistence checks.
 assert call('POST',a,'x'*100001)[0]==413;checks.append('atlas body size bounded')
 for check in checks:print('PASS',check)
 print(f'{len(checks)} atlas API integration checks passed')

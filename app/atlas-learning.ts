@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { isAtlasListeningTarget } from "./atlas-listening-targets";
 import {
   createEmptyCard,
   fsrs,
@@ -11,7 +12,7 @@ export const atlasEventSchema = z
   .object({
     version: z.literal(1),
     id: z.string().uuid(),
-    targetId: z.string().refine((id) => atlasById.has(id)),
+    targetId: z.string().refine((id) => atlasById.has(id) || isAtlasListeningTarget(id)),
     skill: z.enum(["meaning", "sound", "component", "writing"]),
     mode: z.enum(["explore", "choice", "recall", "copy"]),
     assisted: z.boolean(),
@@ -19,6 +20,8 @@ export const atlasEventSchema = z
     at: z.number().int().nonnegative(),
   })
   .superRefine((e, ctx) => {
+    if(isAtlasListeningTarget(e.targetId) && (e.skill!=="sound" || e.mode!=="choice"))
+      ctx.addIssue({code:"custom",message:"Workshop listening accepts sound choices only"});
     if (
       (e.mode === "explore" || e.mode === "copy") &&
       (!e.assisted || e.rating !== 0)
