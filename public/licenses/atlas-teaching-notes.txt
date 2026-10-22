@@ -1,0 +1,7 @@
+Atlas visual teaching notes, 2026-10-22
+
+The new Moon, Water, Fire and Mountain explanations and the character assembly notes are adapted from Dong Chinese Character Wiki (https://www.dong-chinese.com/wiki), with original EN/FR/RU wording and original teaching illustrations. These adapted notes are provided under CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/ . Source links are shown per character in the interface. Character outline data retain their existing Arphic Public License. Software licenses are separate.
+
+Reviewed entries: 月, 水, 火, 山, 林, 森, 休, 明, 清, 晴, 情, 请.
+Word definitions checked against Dong Chinese dictionary (CC-CEDICT source): 森林, 火山, 清水, 明天, 手机, 电脑.
+The scenes are mnemonic illustrations, not historical facsimiles. In particular, the modern sun/moon analysis of 明 is labelled a mnemonic, not its historical derivation. Component-form labels are readings of their parent forms, not independent pronunciation rules.
