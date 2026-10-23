@@ -158,3 +158,19 @@ Use concise Polish, lead with what is actually ready. Do not ask again for permi
 Canonical v18 is merged. Technical fixes cover deep draft validation, matching persisted-result gating, playback/session/task guards, review cooldown availability, safe synchronous IndexedDB read failures and deduplicated character candidates. 83 unit tests pass; TypeScript and official Sites build pass. Real-app QA and isolated harness checks are recorded in PRODUCT.md. Synthetic harness controls (`Writes` and `Malformed draft`) affect only the harness, never production. Full routes/inspector/focus/feedback/handwriting QA were independently reported by the release architect. No Sites deployment or auth/audience changes were performed by the technical executor.
 
 Release owner: use the final `codex/learning-lab` branch head and attached draft PR; verify its exact SHA before integrating. Next lesson-04 work belongs in a separate branch/worktree, preserving this completed release input.
+
+## Publication receipt — 23 October 2026
+
+The release architect published **version 19**, preserving the public audience and existing D1 binding. Deployment completed with terminal status `succeeded` at **15:29:59 Asia/Shanghai**.
+
+- Deployed source: `25f3e0eaae43c40e4b81c4c6ac58676d4c84a4d7` (includes all v18 content).
+- Saved version: `appgprj_6ad7885e92708191a9ed6016b15c91ba~appgver_ae685cf597d48191948e8350ab9dc40f`.
+- Deployment: `appgdep_6adb0ce1baf08191ab875a2483a79f76`.
+- Live Lab: https://chinese-os-study.gizmuf.chatgpt.site/?atlas=1&lab=connections
+- Source handoff: https://github.com/gizmuf/chinese-learning-os/pull/3 (draft).
+
+The official source helper opened the existing Sites repository, fast-forwarded the verified source, built and packaged it, and verified the pushed source SHA. The release build retained the existing nonfatal large-chunk warning. No source reconstruction, account/access change or study-data migration occurred.
+
+Post-deployment browser checks confirmed the Lab loads and starts a session, the deduplicated character selection is live, Listening opens, the story trail retains all eleven entries, and lesson 3 retains its 24 activities and the additive new-tab Lab link. Both full Lab routes, handwriting/Undo/Clear, pause/reload/resume with visible ink, inspector focus and feedback had already been checked on the exact application code locally. EN/FR/RU were visually inspected. Physical iPad/Apple Pencil and full VoiceOver acceptance remain unverified; local owner-isolation fixtures are not a real cross-device account test.
+
+The publication is pinned to the source SHA above. Subsequent handoff and UX-review documentation commits do not represent a new deployed application version. See `UX_UI_REVIEW_2026-10-23.md` for the proposed navigation and focused-session design; those wider UI changes have not been implemented or deployed. Lesson 4 is being prepared separately from this release.
