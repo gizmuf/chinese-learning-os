@@ -13,6 +13,7 @@ import {
   Volume2,
 } from "lucide-react";
 import AtlasWorkshop from "./atlas-workshop";
+const AtlasStudio = lazy(() => import("./atlas-studio"));
 const ConnectionLab = lazy(() => import("./connection-lab"));
 import { L as labCopy } from "./connection-lab-copy";
 import AtlasListening from "./atlas-listening";
@@ -77,6 +78,7 @@ export default function Atlas({
 }) {
   const { t, locale } = useI18n();
   const progress = useAtlasProgress(owner);
+  const [studio, setStudio] = useState(false);
   const [scope, setScope] = useState<Scope>(null);
   const [trail, setTrail] = useState<{ scope: Scope; target: string }[]>([]);
   const [selected, setSelected] = useState("u6674");
@@ -90,6 +92,7 @@ export default function Atlas({
   const [run, setRun] = useState(0);
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
+    setStudio(params.get("studio") === "1");
     const component = params.get("component");
     const group = params.get("group");
     const target = params.get("target");
@@ -262,6 +265,7 @@ export default function Atlas({
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
+  if (studio) return <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><AtlasStudio owner={owner} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} progress={progress}/></Suspense>;
   return (
     <div className="atlas-space">
       <div className="page-heading">
@@ -306,6 +310,7 @@ export default function Atlas({
           </button>
         ))}
       </div>
+      {tab === "lab" && <div className="panel" style={{padding:24,marginBottom:24}}><h2>{({en:"A quieter way to explore",fr:"Une façon plus calme d’explorer",ru:"Более спокойное изучение"})[locale]}</h2><p>{({en:"Try the new Atlas workspace. The original Lab remains below.",fr:"Essayez le nouvel espace Atlas. Le Lab d’origine reste ci-dessous.",ru:"Попробуйте новое пространство Атласа. Прежний Lab остаётся ниже."})[locale]}</p><a className="primary" href="?atlas=1&studio=1">{({en:"Preview the new Learning Lab",fr:"Découvrir le nouveau Learning Lab",ru:"Открыть новый Learning Lab"})[locale]} →</a></div>}
       {tab === "lab" && <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><ConnectionLab owner={owner} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify}/></Suspense>}
       {(tab === "explore" || tab === "compare") && (
         <div className="atlas-search-row">
@@ -968,9 +973,7 @@ export default function Atlas({
         <section className="panel atlas-materials">
           <h2>{t("Your Atlas, connected to real practice.")}</h2>
           <p>
-            {t(
-              "The original English PDF contains 100 targets in 20 groups. The app adds six discovery extensions, interactive connections and translations in English, French and Russian.",
-            )}
+            {({en:`The original English PDF contains 100 targets in 20 groups. The app adds ${atlasCharacters.length-coreIds.size} discovery extensions, interactive connections and translations in English, French and Russian.`,fr:`Le PDF original anglais contient 100 cibles en 20 groupes. L’application ajoute ${atlasCharacters.length-coreIds.size} découvertes, des liens interactifs et des traductions en anglais, français et russe.`,ru:`Исходный английский PDF содержит 100 целей в 20 группах. Приложение добавляет ${atlasCharacters.length-coreIds.size} дополнительных знаков, интерактивные связи и переводы на английский, французский и русский.`})[locale]}
           </p>
           <div className="atlas-actions">
             <a
