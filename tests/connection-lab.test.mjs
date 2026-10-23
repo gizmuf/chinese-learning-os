@@ -57,3 +57,10 @@ test('A just-revealed due character waits before another independent review is o
  assert.deepEqual(m.dueLabTasks(records,now).map(t=>t.targetId),['u68ee']);
  assert.equal(m.dueLabTasks(records,now+1800001).length,2);
 });
+
+test('Review availability includes the exposure cooldown rather than a past due date',()=>{
+ const now=at+86400001, recent=event({skill:'watch',rating:0,at:now});
+ assert.equal(m.nextLabReview([event(),recent],now),now+1800000);
+ assert.equal(m.nextLabReview([],now),null);
+ assert.equal(m.nextLabReview([event()],now),now);
+});

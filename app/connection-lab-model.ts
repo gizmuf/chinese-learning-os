@@ -67,3 +67,12 @@ export function recentlyExposed(records: LabRecord[], targetId: string, now = Da
 export function labQuestion(targetId: string, skill: 'meaning' | 'sound', locale: Locale, seed: number) {
     return { ...seededQuestion(targetId, 'meaning', locale, seed), skill };
 }
+
+// A scheduled card is available only after its latest exposure cooldown ends.
+export function nextLabReview(records: LabRecord[], now = Date.now()): number | null {
+    const times = labSchedules(records).map(s => {
+        const exposed = records.reduce((at, r) => r.kind === 'attempt' && r.targetId === s.targetId ? Math.max(at, r.at) : at, 0);
+        return Math.max(s.due, exposed + 1800000);
+    });
+    return times.length ? Math.max(now, Math.min(...times)) : null;
+}

@@ -31,7 +31,9 @@ export function useLabStore(owner: string | null) {
                 setReady(false);
                 setError(true);
             } };
-            const read = db.transaction('records').objectStore('records').getAll();
+            let read: IDBRequest<unknown[]>;
+            try { read = db.transaction('records').objectStore('records').getAll(); }
+            catch { setError(true); return; }
             read.onsuccess = () => { if (token !== generation.current)
                 return; try {
                 setRecords(read.result.map(parse));

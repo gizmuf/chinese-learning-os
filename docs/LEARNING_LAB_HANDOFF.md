@@ -152,3 +152,9 @@ These are scope limits or review points, not confirmed production failures:
 ## Communication to Robert
 
 Use concise Polish, lead with what is actually ready. Do not ask again for permission already granted to finish/test/deploy. State specific blockers and unfinished verification plainly. He is frustrated by repeated handoffs and unverified “done” claims; the purpose of this file is to make the next session operational without reconstructing the conversation. Do not request unrelated accounts, re-create the site, publish a competing app, or remove existing learning paths.
+
+## Technical completion — 23 October 2026
+
+Canonical v18 is merged. Technical fixes cover deep draft validation, matching persisted-result gating, playback/session/task guards, review cooldown availability, safe synchronous IndexedDB read failures and deduplicated character candidates. 83 unit tests pass; TypeScript and official Sites build pass. Real-app QA and isolated harness checks are recorded in PRODUCT.md. Synthetic harness controls (`Writes` and `Malformed draft`) affect only the harness, never production. Full routes/inspector/focus/feedback/handwriting QA were independently reported by the release architect. No Sites deployment or auth/audience changes were performed by the technical executor.
+
+Release owner: use the final `codex/learning-lab` branch head and attached draft PR; verify its exact SHA before integrating. Next lesson-04 work belongs in a separate branch/worktree, preserving this completed release input.
