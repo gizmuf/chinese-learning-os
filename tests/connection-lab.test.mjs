@@ -39,3 +39,21 @@ test('Malformed events are rejected; negative durations and unknown targets neve
  assert.throws(()=>m.labEventSchema.parse(event({durationMs:-1})));
  assert.throws(()=>m.labEventSchema.parse(event({skill:'writing',rating:0})));
 });
+
+test('Listening asks for meaning without exposing written Chinese or pinyin in any locale',()=>{
+ for(const locale of ['en','fr','ru'])for(const targetId of ['u6797','u68ee','u6728']){
+  const q=m.labQuestion(targetId,'sound',locale,3);
+  const meaning=m.labQuestion(targetId,'meaning',locale,3);
+  assert.equal(q.skill,'sound');assert.equal(q.answer,targetId);
+  assert.equal(q.options.length,4);assert.equal(new Set(q.options.map(o=>o.label)).size,4);
+  assert.deepEqual(q.options,meaning.options);
+  assert.ok(q.options.every(o=>!/[\u3400-\u9fff]/u.test(o.label)));
+  assert.ok(q.options.every(o=>Object.keys(o).join(',')==='id,label'));
+ }
+});
+test('A just-revealed due character waits before another independent review is offered',()=>{
+ const now=at+86400001;
+ const records=[event(),event({skill:'sound'}),event({targetId:'u68ee'}),event({skill:'watch',rating:0,at:now})];
+ assert.deepEqual(m.dueLabTasks(records,now).map(t=>t.targetId),['u68ee']);
+ assert.equal(m.dueLabTasks(records,now+1800001).length,2);
+});

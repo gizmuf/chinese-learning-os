@@ -1,0 +1,10 @@
+import { build } from 'esbuild';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import path from 'node:path';
+const output = process.argv[2];
+if (!output || !path.isAbsolute(output)) throw Error('Supply an absolute output JSON path.');
+const result = await build({stdin:{contents:"import {wordBuilds} from './app/atlas-workshop-data';import {workshopAudioEntries} from './app/atlas-workshop-audio';export const entries=workshopAudioEntries(wordBuilds);",resolveDir:process.cwd(),loader:'ts'},bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent'});
+const { entries } = await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
+mkdirSync(path.dirname(output), { recursive:true });
+writeFileSync(output, JSON.stringify(entries, null, 2)+'\n');
+console.log(`Exported ${entries.filter(r=>r.kind==='word').length} words and ${entries.filter(r=>r.kind==='sentence').length} sentences.`);

@@ -1,6 +1,8 @@
 import { z } from 'zod';
 import { createEmptyCard, fsrs, generatorParameters, type Card, type Grade } from 'ts-fsrs';
 import { atlasById } from './atlas-model';
+import { seededQuestion } from './atlas-session';
+import type { Locale } from './translate';
 export const LAB_VERSION = 'connections-v1';
 export const routes = ['connections', 'recall'] as const;
 export type LabRoute = typeof routes[number];
@@ -50,7 +52,7 @@ export function labSchedules(records: LabRecord[]) {
 // One skill per character in a review run: earlier answers cannot cue later tests.
 export function dueLabTasks(records: LabRecord[], now = Date.now()) {
     const seen = new Set<string>();
-    return labSchedules(records).filter(s => { if (s.due > now || seen.has(s.targetId))
+    return labSchedules(records).filter(s => { if (s.due > now || seen.has(s.targetId) || recentlyExposed(records, s.targetId, now))
         return false; seen.add(s.targetId); return true; }).slice(0, 6);
 }
 export function labStats(records: LabRecord[], route: LabRoute, skill: LabSkill) {
@@ -60,3 +62,8 @@ export function labStats(records: LabRecord[], route: LabRoute, skill: LabSkill)
     return { guided: unique.length - independent.length, independent: independent.length, remembered: independent.filter(e => e.rating >= 3).length };
 }
 export function recentlyExposed(records: LabRecord[], targetId: string, now = Date.now()) { return records.some(e => e.kind === 'attempt' && e.targetId === targetId && e.at > now - 30 * 60 * 1000); }
+
+// Meaning-only options also for listening: neither written Chinese nor pinyin can cue the answer.
+export function labQuestion(targetId: string, skill: 'meaning' | 'sound', locale: Locale, seed: number) {
+    return { ...seededQuestion(targetId, 'meaning', locale, seed), skill };
+}

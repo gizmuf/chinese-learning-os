@@ -7,7 +7,7 @@ import type { AtlasCharacter } from './atlas-data';
 import { assemblies, checkAssemblyChoice } from './atlas-workshop-data';
 import AtlasWorkshop from './atlas-workshop';
 import { atlasStories } from './atlas-stories';
-import { seededQuestion } from './atlas-session';
+import { labQuestion } from './connection-lab-model';
 import { playRecording, speak, stopAudio } from './audio';
 import Ink from './ink';
 import { compactStrokes, type Stroke } from './learning';
@@ -15,6 +15,7 @@ import { LAB_VERSION, routes, skills, taskOrder, labSchedules, dueLabTasks, labS
 import { useLabStore } from './connection-lab-store';
 import { L } from './connection-lab-copy';
 import './connection-lab.css';
+import { useSwipeNavigation } from './use-swipe-navigation';
 type Answer = {
     pick: string;
     placed: number[];
@@ -114,7 +115,7 @@ function LabNotebook({ owner, penOnly, setPenOnly, notify }: {
     const task = session?.tasks[session.index], answer = task && session?.answers[task.id];
     const current = task ? atlasById.get(task.targetId)! : undefined;
     const entry = current ? assemblies.find(a => a.hanzi === current.hanzi) : undefined;
-    const question = useMemo(() => task && (task.skill === 'meaning' || task.skill === 'sound') ? seededQuestion(task.targetId, task.skill, locale, Number.parseInt(task.id.replaceAll('-', '').slice(0, 6), 16)) : null, [task, locale]);
+    const question = useMemo(() => task && (task.skill === 'meaning' || task.skill === 'sound') ? labQuestion(task.targetId, task.skill, locale, Number.parseInt(task.id.replaceAll('-', '').slice(0, 6), 16)) : null, [task, locale]);
     const schedules = useMemo(() => labSchedules(store.records), [store.records]);
     const due = dueLabTasks(store.records);
     const feedbackCounts = routes.map(route => ({ route, values: store.records.filter(r => r.kind === 'feedback' && r.route === route) }));
@@ -182,9 +183,13 @@ function LabNotebook({ owner, penOnly, setPenOnly, notify }: {
     } }
     function exportHistory() { const blob = new Blob([JSON.stringify({ experiment: LAB_VERSION, exportedAt: new Date().toISOString(), records: store.records }, null, 2)], { type: 'application/json' }); const url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = 'Chinese-OS-Learning-Lab.json'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); }
     function pause() { stopAudio(); setActive(false); }
+    const swipe = useSwipeNavigation(delta => {
+        if (!session || (delta < 0 && session.index === 0) || (delta > 0 && !displayedSaved)) return;
+        move(delta);
+    }, !active || !!session?.done || saving || !!inspected || task?.skill === 'watch');
     const canAnswer = store.ready && !saving && !displayedSaved && answer?.rating === null;
     function showContext(char: AtlasCharacter) { return <div className="cl-context"><span>{c('context')}</span><p><strong lang="zh-Hans">{char.word}</strong> <span className="pinyin">{char.wordPinyin}</span></p><p>{char.wordMeaning[locale]}</p><div className="cl-actions">{Array.from(new Set(char.word)).map(h => { const member = atlasByHanzi.get(h); return member ? <button key={h} className="cl-chip" onClick={() => inspect(h)}><strong>{h}</strong><span>{member.pinyin}</span></button> : null; })}<button className="secondary" onClick={() => speak(char.word, notify, atlasItem(char, locale))}><Volume2 size={16}/>{c('hear')}</button></div></div>; }
-    return <section className="connection-lab" aria-label={c('title')}>
+    return <section className="connection-lab" {...swipe} aria-label={c('title')}>
   <header className="cl-header"><p className="eyebrow"><FlaskConical size={16}/>{c('badge')}</p><h2 ref={heading} tabIndex={-1}>{active && session ? session.done ? c('completed') : c(task!.skill) : c('title')}</h2><p>{active && session ? c(session.route) : c('intro')}</p></header>
   {!store.ready && <p role="status">{store.error ? c('unavailable') : c('loading')}</p>}
   {draftError && <p role="status">{c('draftError')}</p>}
@@ -227,8 +232,8 @@ function LabNotebook({ owner, penOnly, setPenOnly, notify }: {
     {!answer.revealed ? <div className="cl-actions"><button className="secondary" onClick={() => update({ ink: answer.ink.slice(0, -1) })} disabled={!answer.ink.length}>{c('undo')}</button><button className="secondary" onClick={() => update({ ink: [] })} disabled={!answer.ink.length}>{c('clear')}</button><button className="primary" disabled={!store.ready || !answer.ink.length} onClick={() => { update({ revealed: true, assisted: session.exposed || answer.hinted }); expose(); }}>{c('compare')}</button></div> : <><p className="cl-model"><strong>{current.hanzi}</strong><span>{current.pinyin}</span></p><p>{c('self')}</p><div className="cl-actions">{(['again', 'hard', 'good', 'easy'] as const).map((key, i) => <button key={key} className="secondary" disabled={answer.rating !== null || displayedSaved} onClick={() => update({ rating: i + 1, at: Date.now(), durationMs: Math.min(3600000, Math.max(0, Date.now() - answer.started)) })}>{c(key)}</button>)}</div></>}
    </> : question ? <>
     <h3>{c(task.skill === 'meaning' ? 'meaningPrompt' : 'soundPrompt')}</h3>
-    {task.skill === 'meaning' ? <p className="cl-model"><strong lang="zh-Hans">{current.word}</strong><span>{current.wordPinyin}</span></p> : <button className="primary" onClick={() => { const audio = playRecording('/atlas/audio/atlas-' + current.id + '-sentence.mp3', notify); audio.onplaying = () => update({ listened: true }); }}><Volume2 size={18}/>{c('hear')}</button>}
-    <div className="cl-options">{question.options.map(o => <button key={o.id} className={'secondary ' + (answer.pick === o.id ? 'picked' : '')} disabled={!canAnswer || (task.skill === 'sound' && !answer.listened)} onClick={() => { update({ pick: o.id }); lockAnswer(o.id === question.answer ? 3 : 1); }}>{o.label}{task.skill === 'sound' && <span>{atlasById.get(o.id)?.wordPinyin}</span>}</button>)}</div>
+    {task.skill === 'meaning' ? <p className="cl-model"><strong lang="zh-Hans">{current.word}</strong><span>{current.wordPinyin}</span></p> : <button className="primary" onClick={() => { const audio = playRecording('/atlas/audio/atlas-' + current.id + '-word.mp3', notify); audio.onplaying = () => update({ listened: true }); }}><Volume2 size={18}/>{c('hear')}</button>}
+    <div className="cl-options">{question.options.map(o => <button key={o.id} className={'secondary ' + (answer.pick === o.id ? 'picked' : '')} disabled={!canAnswer || (task.skill === 'sound' && !answer.listened)} onClick={() => { update({ pick: o.id }); lockAnswer(o.id === question.answer ? 3 : 1); }}>{o.label}</button>)}</div>
     {answer.rating !== null && <div role="status"><p>{c(answer.rating >= 3 ? 'correct' : 'incorrect')}</p>{showContext(current)}</div>}
    </> : null}
    {task.skill !== 'watch' && answer.rating === null && !answer.revealed && <button className="text-button" onClick={() => { update({ hinted: true }); expose(); inspect(current.hanzi); }}>{c('hint')}</button>}
@@ -238,7 +243,7 @@ function LabNotebook({ owner, penOnly, setPenOnly, notify }: {
   </> : null}
   {error && <p role="alert">{c('saveError')}</p>}
   <p className="cl-device">{c('device')}</p>
-  <dialog ref={dialog} aria-label={c('inspect')} className="cl-dialog" onCancel={() => { stopAudio(); setInspected(null); }} onClose={() => { stopAudio(); setInspected(null); }}>
+  <dialog data-swipe-ignore ref={dialog} aria-label={c('inspect')} className="cl-dialog" onCancel={() => { stopAudio(); setInspected(null); }} onClose={() => { stopAudio(); setInspected(null); }}>
    <button className="secondary cl-close" onClick={() => { stopAudio(); setInspected(null); }}><X size={18}/>{c('close')}</button>
    {inspectedCharacter && <><h2>{inspectedCharacter.hanzi} <span className="pinyin">{inspectedCharacter.pinyin}</span></h2><p>{inspectedCharacter.meaning[locale]}</p>{showContext(inspectedCharacter)}{(assemblies.some(a => a.hanzi === inspectedCharacter.hanzi) || Object.values(atlasStories).some(s => s.character === inspectedCharacter.hanzi)) ? <AtlasWorkshop character={inspectedCharacter.hanzi} onComponent={id => { const char = containing(id)[0]; if (char)
         inspect(char.hanzi); }} onCharacter={inspect} notify={notify}/> : <p>{inspectedCharacter.note[locale]}</p>}<h3>{c('family')}</h3><div className="cl-targets">{[...new Map(inspectedCharacter.components.flatMap(id => containing(id)).map(c => [c.id, c])).values()].slice(0, 12).map(char => <button key={char.id} className="cl-chip" onClick={() => inspect(char.hanzi)}><strong>{char.hanzi}</strong><span>{char.pinyin}</span><small>{char.meaning[locale]}</small></button>)}</div></>}

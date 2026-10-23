@@ -1,3 +1,5 @@
+import { moreAssemblies } from "./atlas-workshop-content";
+import { moreWordBuilds } from "./atlas-word-content";
 import { A, type AtlasCopy } from "./atlas-data";
 import lin from "../public/characters/林.json";
 import sen from "../public/characters/森.json";
@@ -19,7 +21,9 @@ import electricity from "../public/characters/电.json";
 import brain from "../public/characters/脑.json";
 export type GlyphData = { strokes: string[]; medians: number[][][] };
 export type Part = { glyph: string; pinyin: string; name: AtlasCopy; role: "meaning" | "sound" | "shape"; strokes: number[]; anchor?: boolean };
-export type Assembly = { hanzi: string; pinyin: string; meaning: AtlasCopy; family: "wood" | "qing" | "light"; data: GlyphData; parts: Part[]; note: AtlasCopy; source: string };
+export const familyIds = ["wood", "light", "water", "person", "mouth", "qing"] as const;
+export type FamilyId = typeof familyIds[number];
+export type Assembly = { hanzi: string; pinyin: string; meaning: AtlasCopy; family: FamilyId; data: GlyphData; parts: Part[]; note: AtlasCopy; source: string };
 const range = (start:number, length:number) => Array.from({length},(_,i)=>start+i);
 const tree = (start:number, anchor=false):Part => ({glyph:"木",pinyin:"mù",name:A("tree","arbre","дерево"),role:"meaning",strokes:range(start,4),anchor});
 const sound = (start:number):Part => ({glyph:"青",pinyin:"qīng",name:A("sound clue","indice sonore","подсказка звучания"),role:"sound",strokes:range(start,8),anchor:true});
@@ -37,8 +41,9 @@ export const assemblies: Assembly[] = [
  ].map(c=>({hanzi:c.hanzi,pinyin:c.pinyin,meaning:c.meaning,family:"qing" as const,data:c.data,parts:[{glyph:c.glyph,pinyin:c.reading,name:c.name,role:"meaning" as const,strokes:range(0,c.count)},sound(c.count)],note:soundNote,source:source(c.hanzi)})),
  {hanzi:"明",pinyin:"míng",meaning:A("bright","lumineux","светлый"),family:"light",data:ming,parts:[{glyph:"日",pinyin:"rì",name:A("sun","soleil","солнце"),role:"shape",strokes:range(0,4),anchor:true},{glyph:"月",pinyin:"yuè",name:A("moon","lune","луна"),role:"shape",strokes:range(4,4)}],note:A("Sun plus moon makes a useful memory image for brightness. This is a mnemonic for the modern shape; early forms have a more complex history.","Soleil et lune aident à retenir l’idée de clarté. C’est un moyen mnémotechnique de la forme moderne ; l’histoire des formes anciennes est plus complexe.","Солнце и луна помогают запомнить свет. Это подсказка для современной формы; история древних форм сложнее."),source:source("明")},
 ];
-export type WordScene = "forest"|"volcano"|"water"|"tomorrow"|"phone"|"computer";
-export type WordBuild = {hanzi:string;pinyin:string;meaning:AtlasCopy;scene:WordScene;parts:{hanzi:string;pinyin:string;meaning:AtlasCopy;data:GlyphData}[];note:AtlasCopy;source:string};
+assemblies.push(...moreAssemblies);
+export type WordScene = "forest"|"volcano"|"water"|"tomorrow"|"phone"|"computer"|"timber"|"notebook"|"rest"|"morning"|"yesterday"|"evening"|"clock"|"moon"|"friends"|"river"|"sea"|"washing"|"group"|"house"|"eating"|"drinking"|"listening"|"greeting"|"weather"|"mood"|"question"|"eyes";
+export type WordBuild = {hanzi:string;pinyin:string;meaning:AtlasCopy;scene:WordScene;families?:FamilyId[];example?:{hanzi:string;pinyin:string;meaning:AtlasCopy};parts:{hanzi:string;pinyin:string;meaning:AtlasCopy;data:GlyphData}[];note:AtlasCopy;source:string};
 export const wordBuilds:WordBuild[]=[
  {hanzi:"森林",pinyin:"sēnlín",meaning:A("forest","forêt","лес"),scene:"forest",parts:[{hanzi:"森",pinyin:"sēn",meaning:A("dense trees","arbres denses","густые деревья"),data:sen},{hanzi:"林",pinyin:"lín",meaning:A("woods","bois","роща"),data:lin}],note:A("Two related meanings reinforce one word: forest. Say sēnlín as a whole word.","Deux sens proches forment un mot : forêt. Prononcez sēnlín comme un mot entier.","Два близких значения образуют слово «лес». Произносите sēnlín целиком."),source:source("林")},
  {hanzi:"火山",pinyin:"huǒshān",meaning:A("volcano","volcan","вулкан"),scene:"volcano",parts:[{hanzi:"火",pinyin:"huǒ",meaning:A("fire","feu","огонь"),data:fire},{hanzi:"山",pinyin:"shān",meaning:A("mountain","montagne","гора"),data:mountain}],note:A("Fire + mountain: picture a volcano. This literal association helps you remember the whole word.","Feu + montagne : imaginez un volcan. Cette association aide à retenir le mot entier.","Огонь + гора: представьте вулкан. Эта ассоциация помогает запомнить слово целиком."),source:"https://www.dong-chinese.com/dictionary/火山"},
@@ -47,6 +52,10 @@ export const wordBuilds:WordBuild[]=[
  {hanzi:"手机",pinyin:"shǒujī",meaning:A("mobile phone","téléphone portable","мобильный телефон"),scene:"phone",parts:[{hanzi:"手",pinyin:"shǒu",meaning:A("hand","main","рука"),data:hand},{hanzi:"机",pinyin:"jī",meaning:A("machine","machine","машина"),data:machine}],note:A("A machine that fits in your hand: a memory image for a mobile phone. Learn shǒujī together.","Une machine dans la main : une image pour retenir téléphone portable. Apprenez shǒujī ensemble.","Машина в руке — образ мобильного телефона. Учите shǒujī как одно слово."),source:"https://www.dong-chinese.com/dictionary/手机"},
  {hanzi:"电脑",pinyin:"diànnǎo",meaning:A("computer","ordinateur","компьютер"),scene:"computer",parts:[{hanzi:"电",pinyin:"diàn",meaning:A("electricity","électricité","электричество"),data:electricity},{hanzi:"脑",pinyin:"nǎo",meaning:A("brain","cerveau","мозг"),data:brain}],note:A("Electricity + brain: picture a computer. This is a word-level association, not the origin of either character.","Électricité + cerveau : imaginez un ordinateur. C’est une association du mot, pas l’origine des caractères.","Электричество + мозг: представьте компьютер. Это ассоциация для слова, а не происхождение отдельных знаков."),source:"https://www.dong-chinese.com/dictionary/电脑"},
 ];
+wordBuilds.push(...moreWordBuilds);
+export function wordFamilies(word:WordBuild):FamilyId[]{
+ return word.families ?? familyIds.filter(family => assemblies.some(a=>a.family===family && word.hanzi.includes(a.hanzi)) || ({wood:"木林森树机",light:"日月明天",water:"水清",person:"人亻",mouth:"口",qing:"青清晴情请睛"}[family].split("").some(h=>word.hanzi.includes(h))));
+}
 export const workshopGlyphs = {wood,sun,water};
 export function checkAssemblyChoice(parts:readonly {glyph:string}[], placed:readonly number[], glyph:string):number {
  return parts.findIndex((part,i)=>part.glyph===glyph&&!placed.includes(i));

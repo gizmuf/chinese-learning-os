@@ -1,0 +1,167 @@
+{
+  "provider": "Microsoft Edge Read Aloud via edge-tts",
+  "edgeTtsVersion": "7.3.1",
+  "recordings": [
+    {
+      "file": "mo-en.mp3",
+      "text": "The sun slips behind a thicket. Its light disappears among the plants. Hold that little scene in your mind. Early forms of 莫 pictured the sun among vegetation: dusk. The lower part later changed into a shape resembling 大; it was not originally a person. 莫 was later borrowed for grammatical uses, including negation. It also became a sound component. Follow it into four new characters; the picture does not predict every meaning.",
+      "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
+      "sha256": "8ea2e72af3d87117d6f0aebcd79611e372d18e45b33285884e28b797bb1f4f24"
+    },
+    {
+      "file": "mo-fr.mp3",
+      "text": "Le soleil descend derrière un bosquet. Sa lumière disparaît parmi les plantes. Gardez cette petite scène en mémoire. Les formes anciennes de 莫 représentaient le soleil parmi les végétaux : le crépuscule. Le bas a ensuite pris une forme ressemblant à 大 ; ce n’était pas une personne à l’origine. 莫 a ensuite été emprunté pour des emplois grammaticaux, dont la négation. Il sert aussi de composant phonétique. Suivez-le dans quatre autres caractères ; l’image ne prédit pas tous leurs sens.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "sha256": "6d6dc535ad569d09f7543726ae4dff68c0c975650d964c14aea34492e69ea5d7"
+    },
+    {
+      "file": "mo-ru.mp3",
+      "text": "Солнце опускается за заросли. Его свет исчезает среди растений. Запомните эту маленькую сцену. Ранние формы 莫 изображали солнце среди растений: сумерки. Нижняя часть позже стала похожа на 大; изначально это не был человек. Позже 莫 стали заимствовать для грамматических значений, включая отрицание. Он также стал звуковым компонентом. Проследите за ним в четырёх новых знаках; картинка не предсказывает все значения.",
+      "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
+      "sha256": "5bc81783caca4cabbd61867800b4eb91ccf03ec3a1308ba1222150b9be840202"
+    },
+    {
+      "file": "mu-dusk-en.mp3",
+      "text": "You return to the same thicket at the end of the day. The sun sinks, and the path grows dark: dusk. An extra 日 was added beneath 莫 to write its original dusk meaning more clearly, after 莫 had acquired other uses. Notice the two suns in the modern shape. 暮色 is the light and colour of dusk. Remember the scene, then recall the word without looking. Here mù differs from the usual standalone reading mò of 莫.",
+      "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
+      "sha256": "3b5de68c8bf90471d85477709aa2afc6f102dd9661abe09661e2b1da67e06476"
+    },
+    {
+      "file": "mu-dusk-fr.mp3",
+      "text": "Vous retrouvez le même bosquet à la fin de la journée. Le soleil descend et le chemin s’assombrit : c’est le crépuscule. Un 日 supplémentaire a été ajouté sous 莫 pour distinguer son sens originel de crépuscule, après l’apparition d’autres emplois de 莫. Repérez les deux soleils dans la forme moderne. 暮色 désigne la lumière et les couleurs du crépuscule. Retenez la scène, puis retrouvez le mot sans regarder. Ici, mù diffère de la lecture isolée habituelle mò de 莫.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "sha256": "72d7ee11d38177cf3c96ee0df5cc0392483468b9c3352a7e8fa835b5fb8555a9"
+    },
+    {
+      "file": "mu-dusk-ru.mp3",
+      "text": "Вы возвращаетесь к тем же зарослям в конце дня. Солнце садится, тропинка темнеет: наступают сумерки. Под 莫 добавили ещё один 日, чтобы отдельно записывать исходное значение сумерек, когда у 莫 появились другие употребления. Найдите два солнца в современной форме. 暮色 — сумеречный свет и краски заката. Запомните сцену, затем вспомните слово, не подглядывая. Здесь mù отличается от обычного отдельного чтения 莫 — mò.",
+      "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
+      "sha256": "4116fcc3379babf362ab8fdd9bf7e32b011972e38a0e77fa4ed5ab8c2d49a10c"
+    },
+    {
+      "file": "mu-dusk-word.mp3",
+      "text": "暮色",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "1790f8130a6d9ffbf5ab998f98dae1d32ede212a667297ee564d83cf1e7d6ca4"
+    },
+    {
+      "file": "mu-dusk-sentence.mp3",
+      "text": "暮色中，山很美。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "a48b219e653bf36e7cc3d31738867cc7eecd5044f9b5069cbe1c667a77cb1857"
+    },
+    {
+      "file": "mu-curtain-en.mp3",
+      "text": "A curtain slides across a tiny theatre. Imagine the night drawing a great curtain across the sky. That is our memory scene. In 幕, 巾 points to cloth and 莫 is a sound clue. The historical dictionary describes a covering of cloth. Our theatre scene illustrates the meaning; it is not an ancient drawing. 夜幕 means the curtain of night, or nightfall. Compare 暮, dusk, with 幕, a curtain: the small component changes the clue.",
+      "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
+      "sha256": "cee65f8d4ad6f640061ff7d1fddc1b4cf062e1ca8823a5b0cd71a5a2e0a821b1"
+    },
+    {
+      "file": "mu-curtain-fr.mp3",
+      "text": "Un rideau se ferme sur un petit théâtre. Imaginez la nuit tirant un grand rideau sur le ciel. C’est notre image pour retenir le mot. Dans 幕, 巾 évoque le tissu et 莫 donne un indice sonore. Le dictionnaire historique décrit une couverture en tissu. Notre théâtre illustre le sens ; ce n’est pas un dessin ancien. 夜幕 signifie le rideau de la nuit, ou la tombée de la nuit. Comparez 暮, le crépuscule, et 幕, un rideau : le petit composant change l’indice.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "sha256": "29084baf2b6ddc08ca39668d389207b1d90b622a2443922301a8b9c96845afab"
+    },
+    {
+      "file": "mu-curtain-ru.mp3",
+      "text": "Занавес закрывает маленький театр. Представьте, как ночь занавешивает небо огромной тканью. Это наш образ для запоминания. В 幕 компонент 巾 указывает на ткань, а 莫 подсказывает звучание. Исторический словарь описывает тканевое покрытие. Наш театр иллюстрирует значение, а не древнее начертание. 夜幕 — ночной покров, наступление ночи. Сравните 暮, сумерки, и 幕, занавес: маленький компонент меняет подсказку.",
+      "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
+      "sha256": "44bf1a90ce2043afd41169530c96a398eeabba3498cace42e58fb9d65d19c514"
+    },
+    {
+      "file": "mu-curtain-word.mp3",
+      "text": "夜幕",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "2cd262268c2e0a2e3472b9a55290cbb4eebe37e356bc4c15db589203c41a3bb9"
+    },
+    {
+      "file": "mu-curtain-sentence.mp3",
+      "text": "夜幕降临了。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "60650a8004c8ad08e7c13ea3ae30395306211461b8d0caca4cde1c44d9602102"
+    },
+    {
+      "file": "mo-touch-en.mp3",
+      "text": "Your eyes are closed. You reach out and feel the shape of a smooth stone. One hand is doing the exploring. 扌 is the hand component; 莫 supplies a sound clue. Together they form 摸, to touch or feel. This imagined action helps you remember the hand on the left. 摸摸 means to give something a little touch or feel. Say mōmo: the first syllable is first tone, and the repeated syllable is light. Similar shapes do not guarantee the same tone.",
+      "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
+      "sha256": "ac6d1161f743b2d97e90edd3605bd867628bf74ccc81dc0c17d40eebe6b39b7c"
+    },
+    {
+      "file": "mo-touch-fr.mp3",
+      "text": "Les yeux fermés, vous tendez la main et reconnaissez la forme d’un galet lisse. C’est la main qui explore. 扌 est le composant de la main ; 莫 fournit un indice sonore. Ensemble, ils forment 摸, toucher ou tâter. Cette action imaginée aide à retenir la main à gauche. 摸摸 signifie toucher ou tâter un peu. Dites mōmo : la première syllabe est au premier ton, la répétition est légère. Des formes proches ne garantissent pas le même ton.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "sha256": "9f8a103eb45fdf60b12b76ae31f9629b38d9b9b71db4cb4cd9e47566e589852f"
+    },
+    {
+      "file": "mo-touch-ru.mp3",
+      "text": "Вы закрыли глаза, протянули руку и ощупываете гладкий камень. Форму исследует рука. 扌 — компонент руки; 莫 даёт звуковую подсказку. Вместе они образуют 摸, трогать или ощупывать. Воображаемое действие помогает запомнить руку слева. 摸摸 — слегка потрогать или пощупать. Произнесите mōmo: первый слог имеет первый тон, повторный — нейтральный. Похожие формы не гарантируют одинаковый тон.",
+      "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
+      "sha256": "e6f501700e861b38909e2e587a5a5c62df3bb0aa8e11e2ea7d677b40e3fbd65d"
+    },
+    {
+      "file": "mo-touch-word.mp3",
+      "text": "摸摸",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "468223cd7b74916c59da50408a6bcfa99d2218884ec7b3c466cee18babceb212"
+    },
+    {
+      "file": "mo-touch-sentence.mp3",
+      "text": "你摸摸这块石头。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "82d51fcf97c4cce30c09aef3dd57d36bd86f584b12f776aca1b3e98e1a56ac70"
+    },
+    {
+      "file": "mo-model-en.mp3",
+      "text": "A maker puts a wooden pattern beside a small house. The pattern helps make another house like the first. Picture the original and its copy side by side. 木 points to wood and 莫 is a sound clue. The historical dictionary links 模 to a model for making things. Our little houses are a modern memory scene for that idea. 模型 is a model, pronounced móxíng. 模 also has the reading mú in words such as 模具, a mould. Learn the pronunciation with the whole word.",
+      "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
+      "sha256": "a94c1a4e6e74e5f7c9038e98df28090db476d982ec481eaa52260bd89285a095"
+    },
+    {
+      "file": "mo-model-fr.mp3",
+      "text": "Un artisan pose un modèle en bois à côté d’une petite maison. Le modèle permet d’en fabriquer une semblable. Imaginez l’original et sa copie côte à côte. 木 évoque le bois et 莫 est un indice sonore. Le dictionnaire historique relie 模 à un modèle servant à fabriquer des objets. Nos petites maisons sont une image moderne pour retenir cette idée. 模型 signifie modèle et se prononce móxíng. 模 se lit aussi mú dans des mots comme 模具, moule. Apprenez la prononciation avec le mot entier.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "sha256": "1b7670d224fd31767e5a4487c509a92bbd47d0afd91ebf664493e494de568ae4"
+    },
+    {
+      "file": "mo-model-ru.mp3",
+      "text": "Мастер кладёт деревянный образец рядом с маленьким домом. По нему можно сделать похожий дом. Представьте оригинал и копию рядом. 木 указывает на дерево, а 莫 подсказывает звучание. Исторический словарь связывает 模 с образцом для изготовления предметов. Наши домики — современный образ для запоминания этой идеи. 模型 — модель, произносится móxíng. У 模 есть и чтение mú, например в 模具, форма для отливки. Учите произношение вместе с целым словом.",
+      "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
+      "sha256": "0f159003c5a8fcdafeebf4df13b7e2775f01c6b740e48c6d1f57b1040bbf10e0"
+    },
+    {
+      "file": "mo-model-word.mp3",
+      "text": "模型",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "c5fc53cec1977eef30686dfdfa889f6a809966bb0cb4faf759afcbd33f0e3dd1"
+    },
+    {
+      "file": "mo-model-sentence.mp3",
+      "text": "这是一个房子的模型。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "c440d18a42c700625a57e071f53cd77b796d4923e56d4317da239529829cfe1d"
+    }
+  ]
+}

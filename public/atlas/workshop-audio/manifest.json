@@ -1,0 +1,387 @@
+{
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "language": "zh-CN",
+  "generationRate": "-10%",
+  "provider": "Microsoft Edge Read Aloud via edge-tts",
+  "edgeTtsVersion": "7.3.1",
+  "recordings": [
+    {
+      "itemId": "atlas-workshop-u4ed6-u4eec",
+      "kind": "sentence",
+      "text": "他们是学生。",
+      "file": "atlas-workshop-u4ed6-u4eec-sentence.mp3",
+      "sha256": "61a442f1463e9f83c6f5430e47d30a5fb798f7ef05f11f7ce92c27c712e8b26e"
+    },
+    {
+      "itemId": "atlas-workshop-u4ed6-u4eec",
+      "kind": "word",
+      "text": "他们",
+      "file": "atlas-workshop-u4ed6-u4eec-word.mp3",
+      "sha256": "5082449f4db12db3e00bf352724e1facca073997f5d49b5dacc20c91199d9d8b"
+    },
+    {
+      "itemId": "atlas-workshop-u4f11-u606f",
+      "kind": "sentence",
+      "text": "我们休息一下。",
+      "file": "atlas-workshop-u4f11-u606f-sentence.mp3",
+      "sha256": "9f21d6498ef6167008552dec4125006732fdee803b0c71d14b1031bd35cfa823"
+    },
+    {
+      "itemId": "atlas-workshop-u4f11-u606f",
+      "kind": "word",
+      "text": "休息",
+      "file": "atlas-workshop-u4f11-u606f-word.mp3",
+      "sha256": "b950dbfa43c9c107e44c3ca5e32acbd4efff4eba66927a12c10fe2b11c26b412"
+    },
+    {
+      "itemId": "atlas-workshop-u4f4f-u623f",
+      "kind": "sentence",
+      "text": "他有住房。",
+      "file": "atlas-workshop-u4f4f-u623f-sentence.mp3",
+      "sha256": "ea5fdeda6e50eea68f47f1ce49d8dba0d864124280532f56ae6b416f11015cf9"
+    },
+    {
+      "itemId": "atlas-workshop-u4f4f-u623f",
+      "kind": "word",
+      "text": "住房",
+      "file": "atlas-workshop-u4f4f-u623f-word.mp3",
+      "sha256": "87386e491e47971e1361e23e92fc09409aa5aaf9e2e242e606a4b0da38f9e129"
+    },
+    {
+      "itemId": "atlas-workshop-u4f60-u4eec",
+      "kind": "sentence",
+      "text": "你们好！",
+      "file": "atlas-workshop-u4f60-u4eec-sentence.mp3",
+      "sha256": "a55544642e91838d7c743f80205939866eaa909ee8c75a61e0c628239e2829ab"
+    },
+    {
+      "itemId": "atlas-workshop-u4f60-u4eec",
+      "kind": "word",
+      "text": "你们",
+      "file": "atlas-workshop-u4f60-u4eec-word.mp3",
+      "sha256": "4b7c2d8712fe40017ebe10a8a3bd5cae52762d96a12cb6abcc913128d9c39df3"
+    },
+    {
+      "itemId": "atlas-workshop-u5403-u996d",
+      "kind": "sentence",
+      "text": "我们一起吃饭。",
+      "file": "atlas-workshop-u5403-u996d-sentence.mp3",
+      "sha256": "d318e51b1fd24286c51fa276325260e3f7b85d2a23f39b95d25bbb9bce0408d9"
+    },
+    {
+      "itemId": "atlas-workshop-u5403-u996d",
+      "kind": "word",
+      "text": "吃饭",
+      "file": "atlas-workshop-u5403-u996d-word.mp3",
+      "sha256": "2d7e987c6f9f608fbf5ad0eae09f8fc3e205397eea640da6913324f479ca90ef"
+    },
+    {
+      "itemId": "atlas-workshop-u542c-u8bf4",
+      "kind": "sentence",
+      "text": "听说他来了。",
+      "file": "atlas-workshop-u542c-u8bf4-sentence.mp3",
+      "sha256": "b65ddef11902aac8108b3bf5422e0727d8fc73c87fea161bd5b8379a64b507b5"
+    },
+    {
+      "itemId": "atlas-workshop-u542c-u8bf4",
+      "kind": "word",
+      "text": "听说",
+      "file": "atlas-workshop-u542c-u8bf4-word.mp3",
+      "sha256": "f33271cbf041efefde9d9fb30f860a712a3369d64e74a411b77276078dbd16bf"
+    },
+    {
+      "itemId": "atlas-workshop-u559d-u6c34",
+      "kind": "sentence",
+      "text": "请喝水。",
+      "file": "atlas-workshop-u559d-u6c34-sentence.mp3",
+      "sha256": "6a6874b450ef72538dba4b0fe0b2f85fd14a1a18f9f95724d65d2a52bbc46b15"
+    },
+    {
+      "itemId": "atlas-workshop-u559d-u6c34",
+      "kind": "word",
+      "text": "喝水",
+      "file": "atlas-workshop-u559d-u6c34-word.mp3",
+      "sha256": "49e0c2a4ab06d95a8fe1591a6a8d706d98445d172da779c2f0a1a112e0badae5"
+    },
+    {
+      "itemId": "atlas-workshop-u5927-u6d77",
+      "kind": "sentence",
+      "text": "我喜欢大海。",
+      "file": "atlas-workshop-u5927-u6d77-sentence.mp3",
+      "sha256": "706095ce08d686f7e0af258e2a8330a9d941813c28ff77d720b7133200119c71"
+    },
+    {
+      "itemId": "atlas-workshop-u5927-u6d77",
+      "kind": "word",
+      "text": "大海",
+      "file": "atlas-workshop-u5927-u6d77-word.mp3",
+      "sha256": "64ae409a25c8a3fa3414f655a83b3cf5bf4177c6ceefcb98b5fd6ff1f0c0e945"
+    },
+    {
+      "itemId": "atlas-workshop-u5929-u6c14",
+      "kind": "sentence",
+      "text": "今天天气很好。",
+      "file": "atlas-workshop-u5929-u6c14-sentence.mp3",
+      "sha256": "3493ba783246842c80814b856c631854094c6e3cd024d0a00e0c05d19e3d5df6"
+    },
+    {
+      "itemId": "atlas-workshop-u5929-u6c14",
+      "kind": "word",
+      "text": "天气",
+      "file": "atlas-workshop-u5929-u6c14-word.mp3",
+      "sha256": "a5be6becb506d2d3d7c0976072b5204b685844866345a28e6fe79dcdf82de6ef"
+    },
+    {
+      "itemId": "atlas-workshop-u5fc3-u60c5",
+      "kind": "sentence",
+      "text": "我今天心情很好。",
+      "file": "atlas-workshop-u5fc3-u60c5-sentence.mp3",
+      "sha256": "acea0c5c61df09ba839de9f728b301c7b9900881a056a2f4664cea28ee5cc7a2"
+    },
+    {
+      "itemId": "atlas-workshop-u5fc3-u60c5",
+      "kind": "word",
+      "text": "心情",
+      "file": "atlas-workshop-u5fc3-u60c5-word.mp3",
+      "sha256": "d1ad7f4958927baea95978a0f2da7292d95e0b99adf6dcbc74a9e139c93cd946"
+    },
+    {
+      "itemId": "atlas-workshop-u624b-u673a",
+      "kind": "word",
+      "text": "手机",
+      "file": "atlas-workshop-u624b-u673a-word.mp3",
+      "sha256": "a580500b3c20de9637473ead5faf08160c9cc5bd4f8740e381abb221a36e67aa"
+    },
+    {
+      "itemId": "atlas-workshop-u65e9-u4e0a",
+      "kind": "sentence",
+      "text": "我早上喝水。",
+      "file": "atlas-workshop-u65e9-u4e0a-sentence.mp3",
+      "sha256": "66b281db31f422e7a911edfe1566e1925473811a10267cae208a66996cbbde7c"
+    },
+    {
+      "itemId": "atlas-workshop-u65e9-u4e0a",
+      "kind": "word",
+      "text": "早上",
+      "file": "atlas-workshop-u65e9-u4e0a-word.mp3",
+      "sha256": "903519f3acb67a351b2ea6af910fc2c8f4d5c259fc40ff32e6a8b63138b0113d"
+    },
+    {
+      "itemId": "atlas-workshop-u65f6-u95f4",
+      "kind": "sentence",
+      "text": "你有时间吗？",
+      "file": "atlas-workshop-u65f6-u95f4-sentence.mp3",
+      "sha256": "d56ab5ab6b3910e9227c2ee45a6a1e11bc89b30e74d755c5bf8b4a918fbbf6a9"
+    },
+    {
+      "itemId": "atlas-workshop-u65f6-u95f4",
+      "kind": "word",
+      "text": "时间",
+      "file": "atlas-workshop-u65f6-u95f4-word.mp3",
+      "sha256": "6791c191335ac02e09878b68a0039a95c28e38c2ae04019e17b639028c9dd7ee"
+    },
+    {
+      "itemId": "atlas-workshop-u660e-u5929",
+      "kind": "word",
+      "text": "明天",
+      "file": "atlas-workshop-u660e-u5929-word.mp3",
+      "sha256": "ef572cc4a258d3ef24bbaf9e4106b2b95ef912227b22c8ed2a08e90aab2b57b8"
+    },
+    {
+      "itemId": "atlas-workshop-u6628-u5929",
+      "kind": "sentence",
+      "text": "我昨天去了学校。",
+      "file": "atlas-workshop-u6628-u5929-sentence.mp3",
+      "sha256": "568e51d34d438aab9042f3521fb35d3e5945dc1cfed03f9b7a7b140eb1c4902b"
+    },
+    {
+      "itemId": "atlas-workshop-u6628-u5929",
+      "kind": "word",
+      "text": "昨天",
+      "file": "atlas-workshop-u6628-u5929-word.mp3",
+      "sha256": "e098d11f60220b4fa538a04cee099baf3e1aaa68839d67ed96a22442a7281100"
+    },
+    {
+      "itemId": "atlas-workshop-u665a-u4e0a",
+      "kind": "sentence",
+      "text": "我晚上看书。",
+      "file": "atlas-workshop-u665a-u4e0a-sentence.mp3",
+      "sha256": "d7fa2385ce28633bb1e19bad2a4c9e66a9c031b06052c5551e3b8bef4484d7ec"
+    },
+    {
+      "itemId": "atlas-workshop-u665a-u4e0a",
+      "kind": "word",
+      "text": "晚上",
+      "file": "atlas-workshop-u665a-u4e0a-word.mp3",
+      "sha256": "09e73d5324fc0227c0ee2b6efd80d2c9738d5b3de54cc60db8f28583c02a4fb5"
+    },
+    {
+      "itemId": "atlas-workshop-u6708-u4eae",
+      "kind": "sentence",
+      "text": "月亮出来了。",
+      "file": "atlas-workshop-u6708-u4eae-sentence.mp3",
+      "sha256": "6833ddcc293834b7edef66290ce715f90291e503406e7fa56187eee4df6411cc"
+    },
+    {
+      "itemId": "atlas-workshop-u6708-u4eae",
+      "kind": "word",
+      "text": "月亮",
+      "file": "atlas-workshop-u6708-u4eae-word.mp3",
+      "sha256": "e8de8bffe0dd4e5a5c57b6aeef3192d64e14648b0ea47b6230d8bd36f64afae1"
+    },
+    {
+      "itemId": "atlas-workshop-u670b-u53cb",
+      "kind": "sentence",
+      "text": "他是我的朋友。",
+      "file": "atlas-workshop-u670b-u53cb-sentence.mp3",
+      "sha256": "4207eed2a5c76b31e7053c0b2d8f525b85f5530787eaab48dc11d6246cc0cdf4"
+    },
+    {
+      "itemId": "atlas-workshop-u670b-u53cb",
+      "kind": "word",
+      "text": "朋友",
+      "file": "atlas-workshop-u670b-u53cb-word.mp3",
+      "sha256": "d646c7d9aabc5faa0e2bb323655a848f1ff7e6d8807e82cdeaa91227f19a3c7d"
+    },
+    {
+      "itemId": "atlas-workshop-u6728-u5934",
+      "kind": "sentence",
+      "text": "这是木头。",
+      "file": "atlas-workshop-u6728-u5934-sentence.mp3",
+      "sha256": "7f8d1a09f275dc0c64ba45fd00cd12511d661266b9a4605ba53b3d4e38d9c1bc"
+    },
+    {
+      "itemId": "atlas-workshop-u6728-u5934",
+      "kind": "word",
+      "text": "木头",
+      "file": "atlas-workshop-u6728-u5934-word.mp3",
+      "sha256": "7e335aef932ef905743a73d6a5154f05db51d46d077e6b4997d349c2366c20b3"
+    },
+    {
+      "itemId": "atlas-workshop-u672c-u5b50",
+      "kind": "sentence",
+      "text": "我有一个本子。",
+      "file": "atlas-workshop-u672c-u5b50-sentence.mp3",
+      "sha256": "2d7b94fe0ff7f7c25e9a0b93258eb848e0a3251653ba6aaa9156190657c9270b"
+    },
+    {
+      "itemId": "atlas-workshop-u672c-u5b50",
+      "kind": "word",
+      "text": "本子",
+      "file": "atlas-workshop-u672c-u5b50-word.mp3",
+      "sha256": "755ab3cd4df49bde963f8ae5bfe2fe4d8c5e0925e425dee89857fe795b421b06"
+    },
+    {
+      "itemId": "atlas-workshop-u6811-u6797",
+      "kind": "sentence",
+      "text": "树林里有鸟。",
+      "file": "atlas-workshop-u6811-u6797-sentence.mp3",
+      "sha256": "1ecbb3e424c4e03ea55152367e5e169cab24f29aaba30a8337a7aa2048dd25e2"
+    },
+    {
+      "itemId": "atlas-workshop-u6811-u6797",
+      "kind": "word",
+      "text": "树林",
+      "file": "atlas-workshop-u6811-u6797-word.mp3",
+      "sha256": "52bd1328833338422aee805aec5f2ef44aa315dc60e32e3fa6eaa5eea4751e49"
+    },
+    {
+      "itemId": "atlas-workshop-u68ee-u6797",
+      "kind": "word",
+      "text": "森林",
+      "file": "atlas-workshop-u68ee-u6797-word.mp3",
+      "sha256": "3f5ed4debd3574e2daa88d311d5621e435a1123d762e6ca20fd8b73b317752a8"
+    },
+    {
+      "itemId": "atlas-workshop-u6cb3-u6c34",
+      "kind": "sentence",
+      "text": "河水很清。",
+      "file": "atlas-workshop-u6cb3-u6c34-sentence.mp3",
+      "sha256": "d5ced7ab671d13c8cd3a32ed6160f2d61a0decf101f6340d95916f22b8bea255"
+    },
+    {
+      "itemId": "atlas-workshop-u6cb3-u6c34",
+      "kind": "word",
+      "text": "河水",
+      "file": "atlas-workshop-u6cb3-u6c34-word.mp3",
+      "sha256": "37eb690ff40078fe73fd7477588ca19764d1ebec1fb1fe37f259ed5d58a2d30c"
+    },
+    {
+      "itemId": "atlas-workshop-u6d17-u624b",
+      "kind": "sentence",
+      "text": "吃饭前要洗手。",
+      "file": "atlas-workshop-u6d17-u624b-sentence.mp3",
+      "sha256": "2363e9fb7000f910d0d9392b5290b6077cb8e4193b6246914ac1452636a448f8"
+    },
+    {
+      "itemId": "atlas-workshop-u6d17-u624b",
+      "kind": "word",
+      "text": "洗手",
+      "file": "atlas-workshop-u6d17-u624b-word.mp3",
+      "sha256": "2090038575ad3a2a6d771c7d85ab1e1ebf708b56b0e36e35eef3289eb7f4243a"
+    },
+    {
+      "itemId": "atlas-workshop-u6e05-u6c34",
+      "kind": "word",
+      "text": "清水",
+      "file": "atlas-workshop-u6e05-u6c34-word.mp3",
+      "sha256": "2505103cb752327f17b3fa7616b8fa684cc3b3e857c160b60d10c7e2267bb041"
+    },
+    {
+      "itemId": "atlas-workshop-u706b-u5c71",
+      "kind": "word",
+      "text": "火山",
+      "file": "atlas-workshop-u706b-u5c71-word.mp3",
+      "sha256": "e7fb07e2fbfb2ab83c2819457286dca8fbea5ce797d189ecda9fd1be7ed7ccfa"
+    },
+    {
+      "itemId": "atlas-workshop-u7535-u8111",
+      "kind": "word",
+      "text": "电脑",
+      "file": "atlas-workshop-u7535-u8111-word.mp3",
+      "sha256": "7c1cc7426c3c272d13b4e5ff41bb3f62d7b87f969d26a7dd34ac62f2e523ff5f"
+    },
+    {
+      "itemId": "atlas-workshop-u773c-u775b",
+      "kind": "sentence",
+      "text": "他的眼睛很大。",
+      "file": "atlas-workshop-u773c-u775b-sentence.mp3",
+      "sha256": "8299208bb0079e070d6a73bb3fa1befe27524021de78697e93d252be2ded34e2"
+    },
+    {
+      "itemId": "atlas-workshop-u773c-u775b",
+      "kind": "word",
+      "text": "眼睛",
+      "file": "atlas-workshop-u773c-u775b-word.mp3",
+      "sha256": "51575379bebf62f6b9ef6e36554616740b1f0a4fd839a44f18d1bd6a1775e5a8"
+    },
+    {
+      "itemId": "atlas-workshop-u8bf7-u95ee",
+      "kind": "sentence",
+      "text": "请问，学校在哪儿？",
+      "file": "atlas-workshop-u8bf7-u95ee-sentence.mp3",
+      "sha256": "629030b4ea99e8e2ec71b745f1e68b86442b9f9386682506fafc71cec27bb26f"
+    },
+    {
+      "itemId": "atlas-workshop-u8bf7-u95ee",
+      "kind": "word",
+      "text": "请问",
+      "file": "atlas-workshop-u8bf7-u95ee-word.mp3",
+      "sha256": "f581c429a202fc7eea6975f50947cb2b2fc81684832e8db2baa32f41ca71167d"
+    },
+    {
+      "itemId": "atlas-workshop-u95ee-u597d",
+      "kind": "sentence",
+      "text": "请向老师问好。",
+      "file": "atlas-workshop-u95ee-u597d-sentence.mp3",
+      "sha256": "ed119f1370866b13fdd0c600cc8188dbb74c29fefd452122c1f94f0ed206867e"
+    },
+    {
+      "itemId": "atlas-workshop-u95ee-u597d",
+      "kind": "word",
+      "text": "问好",
+      "file": "atlas-workshop-u95ee-u597d-word.mp3",
+      "sha256": "f7b73357f001b15d9f556c3741be3b9609bbc8aa31075e247cd58bcb71af12f8"
+    }
+  ]
+}

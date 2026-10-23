@@ -3,3 +3,5 @@
 @media(prefers-reduced-motion:reduce){.cl-part{transition:none}}
 
 .cl-chip .cl-target-meaning{font:600 15px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:140px;text-align:center}
+
+.connection-lab { touch-action: pan-y; }

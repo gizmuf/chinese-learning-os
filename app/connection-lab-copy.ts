@@ -22,7 +22,7 @@ export const L = {
     buildDone: A('All parts connected. Notice their proportions in the complete character.', 'Toutes les parties sont assemblées. Observez leurs proportions dans le caractère.', 'Все части на месте. Посмотрите на их пропорции в целом знаке.'),
     wrongPiece: A('That part does not fit. Try another.', 'Cette partie ne convient pas. Essayez une autre.', 'Эта часть не подходит. Попробуйте другую.'),
     meaningPrompt: A('What does this whole word mean?', 'Que signifie ce mot entier ?', 'Что означает это слово целиком?'),
-    soundPrompt: A('Listen, then choose the word you heard.', 'Écoutez, puis choisissez le mot entendu.', 'Послушайте и выберите услышанное слово.'),
+    soundPrompt: A('Listen, then choose the meaning of the word.', 'Écoutez, puis choisissez le sens du mot.', 'Послушайте и выберите значение слова.'),
     writePrompt: A('Write the character from memory, then compare.', 'Écrivez le caractère de mémoire, puis comparez.', 'Напишите иероглиф по памяти, затем сравните.'),
     compare: A('Compare answer', 'Comparer la réponse', 'Сравнить ответ'), hint: A('Show a hint', 'Afficher un indice', 'Показать подсказку'),
     inspect: A('Explore this character', 'Explorer ce caractère', 'Изучить этот знак'), close: A('Close and return', 'Fermer et revenir', 'Закрыть и вернуться'),
