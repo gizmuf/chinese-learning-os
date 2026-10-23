@@ -1,6 +1,6 @@
 import{build}from'esbuild';import{readFileSync,copyFileSync,mkdirSync}from'node:fs';import{createHash}from'node:crypto';
 const output=await build({entryPoints:['app/atlas-model.ts'],bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent'});const{atlasCharacters,componentById,coreIds}=await import('data:text/javascript;base64,'+Buffer.from(output.outputFiles[0].text).toString('base64'));
-if(coreIds.size!==100||atlasCharacters.length!==106)throw Error('Unexpected Atlas inventory');mkdirSync('public/characters',{recursive:true});
+if(coreIds.size!==100||atlasCharacters.length!==121)throw Error('Unexpected Atlas inventory');mkdirSync('public/characters',{recursive:true});
 const workshopOutput=await build({entryPoints:['app/atlas-workshop-data.ts'],bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent'});const workshop=await import('data:text/javascript;base64,'+Buffer.from(workshopOutput.outputFiles[0].text).toString('base64'));
 const workshopChars=workshop.assemblies.map(a=>a.hanzi).join('')+workshop.wordBuilds.map(w=>w.hanzi).join('')+'氵亻口月';
 const chars=new Set([...workshopChars,'山', ...atlasCharacters.flatMap(c=>Array.from(c.hanzi+c.word).filter(c=>/[\u3400-\u9fff]/.test(c)))]);for(const char of chars)copyFileSync('node_modules/hanzi-writer-data/'+char+'.json','public/characters/'+char+'.json');
@@ -10,7 +10,7 @@ for(const c of atlasCharacters){const data=JSON.parse(readFileSync('public/chara
 }
 for(const name of ['makemeahanzi-COPYING.txt','makemeahanzi-dictionary-LGPL.txt','makemeahanzi-GPL-3.0.txt'])if(readFileSync('public/licenses/'+name).length<500)throw Error('Missing licence');
 if(readFileSync('public/atlas/Hanzi_Connections_Atlas_v2_100_EN.pdf').subarray(0,4).toString()!=='%PDF')throw Error('Missing Atlas PDF');
-console.log(`Verified Atlas: 100 core + 6 discovery entries, ${chars.size} writing/example glyphs, 212 contextual recordings and component mappings.`);
+console.log(`Verified Atlas: 100 core + 21 discovery entries, ${chars.size} writing/example glyphs, 242 contextual recordings and component mappings.`);
 const storyBuild=await build({entryPoints:['app/atlas-stories.ts'],bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent'});const{atlasStories}=await import('data:text/javascript;base64,'+Buffer.from(storyBuild.outputFiles[0].text).toString('base64'));
 const storyManifest=JSON.parse(readFileSync('public/atlas/stories/manifest.json','utf8'));const voices={en:'en-GB-SoniaNeural',fr:'fr-FR-DeniseNeural',ru:'ru-RU-SvetlanaNeural'};
 if(storyManifest.recordings.length!==18)throw Error('Unexpected story narration inventory');

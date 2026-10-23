@@ -118,6 +118,20 @@
       "sha256": "2d3c1b00b60b8dfb6d9b70358d7a66b6b88df5e7d47650162ffe20dcb50837c0"
     },
     {
+      "itemId": "atlas-u4eae",
+      "kind": "sentence",
+      "text": "月亮",
+      "file": "atlas-u4eae-sentence.mp3",
+      "sha256": "f610e63134f1afd4238b9e26ca99312db07c37eda8a18a93014dc0eca0c30452"
+    },
+    {
+      "itemId": "atlas-u4eae",
+      "kind": "word",
+      "text": "月亮",
+      "file": "atlas-u4eae-word.mp3",
+      "sha256": "f610e63134f1afd4238b9e26ca99312db07c37eda8a18a93014dc0eca0c30452"
+    },
+    {
       "itemId": "atlas-u4eba",
       "kind": "sentence",
       "text": "人人",
@@ -158,6 +172,20 @@
       "text": "我们",
       "file": "atlas-u4eec-word.mp3",
       "sha256": "dec842e846998f2c526b7541b79dd50fdeb7fe4a2688a91f5b6c6eebd6d03854"
+    },
+    {
+      "itemId": "atlas-u4f11",
+      "kind": "sentence",
+      "text": "休息",
+      "file": "atlas-u4f11-sentence.mp3",
+      "sha256": "e4f75d892864585f35f2358cb3d137343a6a2156c93f8954293638016bec2ee5"
+    },
+    {
+      "itemId": "atlas-u4f11",
+      "kind": "word",
+      "text": "休息",
+      "file": "atlas-u4f11-word.mp3",
+      "sha256": "23376431ffe901dcb3d76c4659f69b95c38a3fa1f5d0428f01dbf16c9f8f1a21"
     },
     {
       "itemId": "atlas-u4f4f",
@@ -214,6 +242,20 @@
       "text": "书包",
       "file": "atlas-u5305-word.mp3",
       "sha256": "ae78faf5e2535f53dd103f646f26b65657dabcdc2cd71ce92dd4d38b80de4ccd"
+    },
+    {
+      "itemId": "atlas-u53cb",
+      "kind": "sentence",
+      "text": "朋友",
+      "file": "atlas-u53cb-sentence.mp3",
+      "sha256": "857aac8eb66dee86b6ffc0cd77d398097155bed53bd65d0998aca052737e18fa"
+    },
+    {
+      "itemId": "atlas-u53cb",
+      "kind": "word",
+      "text": "朋友",
+      "file": "atlas-u53cb-word.mp3",
+      "sha256": "857aac8eb66dee86b6ffc0cd77d398097155bed53bd65d0998aca052737e18fa"
     },
     {
       "itemId": "atlas-u53e3",
@@ -340,6 +382,20 @@
       "text": "大人",
       "file": "atlas-u5927-word.mp3",
       "sha256": "714b21150acc977882c75b71fb3cef83fefc09f3d5cca21c190d2592f885c38f"
+    },
+    {
+      "itemId": "atlas-u5929",
+      "kind": "sentence",
+      "text": "天气",
+      "file": "atlas-u5929-sentence.mp3",
+      "sha256": "19dbb02542589493ef2a64bed8ea29f8b16654334a14c5798c139bb979396eb1"
+    },
+    {
+      "itemId": "atlas-u5929",
+      "kind": "word",
+      "text": "天气",
+      "file": "atlas-u5929-word.mp3",
+      "sha256": "19dbb02542589493ef2a64bed8ea29f8b16654334a14c5798c139bb979396eb1"
     },
     {
       "itemId": "atlas-u5934",
@@ -510,6 +566,20 @@
       "sha256": "03e0a576a9f7b1d69e83ceff587f4d1605e43e81b81d8b00c7460949031e84de"
     },
     {
+      "itemId": "atlas-u5c71",
+      "kind": "sentence",
+      "text": "火山",
+      "file": "atlas-u5c71-sentence.mp3",
+      "sha256": "a006332ad844eb68554aec648a199eb2d77734ccee3373dc97d20d35005949c8"
+    },
+    {
+      "itemId": "atlas-u5c71",
+      "kind": "word",
+      "text": "火山",
+      "file": "atlas-u5c71-word.mp3",
+      "sha256": "a006332ad844eb68554aec648a199eb2d77734ccee3373dc97d20d35005949c8"
+    },
+    {
       "itemId": "atlas-u5fc3",
       "kind": "sentence",
       "text": "小心",
@@ -564,6 +634,20 @@
       "text": "害怕",
       "file": "atlas-u6015-word.mp3",
       "sha256": "a8cb3b98b16cb7a69a4be8c283b929f638ece9115f0360145b2a541c1522a2f8"
+    },
+    {
+      "itemId": "atlas-u606f",
+      "kind": "sentence",
+      "text": "休息",
+      "file": "atlas-u606f-sentence.mp3",
+      "sha256": "e4f75d892864585f35f2358cb3d137343a6a2156c93f8954293638016bec2ee5"
+    },
+    {
+      "itemId": "atlas-u606f",
+      "kind": "word",
+      "text": "休息",
+      "file": "atlas-u606f-word.mp3",
+      "sha256": "e4f75d892864585f35f2358cb3d137343a6a2156c93f8954293638016bec2ee5"
     },
     {
       "itemId": "atlas-u60c5",
@@ -888,6 +972,34 @@
       "sha256": "61361eaf94009fe2c61b36a51c90a6043e31eec13e51cb2795311547adb5001b"
     },
     {
+      "itemId": "atlas-u6708",
+      "kind": "sentence",
+      "text": "月亮",
+      "file": "atlas-u6708-sentence.mp3",
+      "sha256": "1b24751efd76e938daed05c0be1209e9f4ff6fb4f1e244a8eea4e40809c1e8a5"
+    },
+    {
+      "itemId": "atlas-u6708",
+      "kind": "word",
+      "text": "月亮",
+      "file": "atlas-u6708-word.mp3",
+      "sha256": "f610e63134f1afd4238b9e26ca99312db07c37eda8a18a93014dc0eca0c30452"
+    },
+    {
+      "itemId": "atlas-u670b",
+      "kind": "sentence",
+      "text": "朋友",
+      "file": "atlas-u670b-sentence.mp3",
+      "sha256": "957aef974402233804c4f89ad2474e40621d7f93fc135803caabe484e49c59d0"
+    },
+    {
+      "itemId": "atlas-u670b",
+      "kind": "word",
+      "text": "朋友",
+      "file": "atlas-u670b-word.mp3",
+      "sha256": "0392c49844700da21c5d7510d4ca3eb69e286f006ebd06e51dcdd1efcab21955"
+    },
+    {
       "itemId": "atlas-u6728",
       "kind": "sentence",
       "text": "木头",
@@ -914,6 +1026,20 @@
       "text": "本子",
       "file": "atlas-u672c-word.mp3",
       "sha256": "b1ac7e56e7193a430ad718e25ef634d922d74764f3dabb7505d7e78f5a2b1256"
+    },
+    {
+      "itemId": "atlas-u673a",
+      "kind": "sentence",
+      "text": "手机",
+      "file": "atlas-u673a-sentence.mp3",
+      "sha256": "d2a6e300167ec791b11957dbd514d77928f6beb90fb88b98de2ee622414e3969"
+    },
+    {
+      "itemId": "atlas-u673a",
+      "kind": "word",
+      "text": "手机",
+      "file": "atlas-u673a-word.mp3",
+      "sha256": "d2a6e300167ec791b11957dbd514d77928f6beb90fb88b98de2ee622414e3969"
     },
     {
       "itemId": "atlas-u6797",
@@ -956,6 +1082,20 @@
       "text": "森林",
       "file": "atlas-u68ee-word.mp3",
       "sha256": "c8344ed34457e3beefd6fb469c8498cc1295168156e5cfdf64b5cde7a928e22d"
+    },
+    {
+      "itemId": "atlas-u6c14",
+      "kind": "sentence",
+      "text": "天气",
+      "file": "atlas-u6c14-sentence.mp3",
+      "sha256": "19dbb02542589493ef2a64bed8ea29f8b16654334a14c5798c139bb979396eb1"
+    },
+    {
+      "itemId": "atlas-u6c14",
+      "kind": "word",
+      "text": "天气",
+      "file": "atlas-u6c14-word.mp3",
+      "sha256": "19dbb02542589493ef2a64bed8ea29f8b16654334a14c5798c139bb979396eb1"
     },
     {
       "itemId": "atlas-u6c34",
@@ -1042,6 +1182,20 @@
       "sha256": "9db87c075fbdf23acf5099c7546ba709a429a5b5e0766cfd8571e6c6d9d88484"
     },
     {
+      "itemId": "atlas-u706b",
+      "kind": "sentence",
+      "text": "火山",
+      "file": "atlas-u706b-sentence.mp3",
+      "sha256": "78dfd78bdba4deec2615b964fcad6406c53b259ca468da8f000c80477ccf63cf"
+    },
+    {
+      "itemId": "atlas-u706b",
+      "kind": "word",
+      "text": "火山",
+      "file": "atlas-u706b-word.mp3",
+      "sha256": "32a086b4cf137e68724f78173f06896096a3d010eb2762ea6f9c879aea4d3e1b"
+    },
+    {
       "itemId": "atlas-u7238",
       "kind": "sentence",
       "text": "爸爸",
@@ -1070,6 +1224,20 @@
       "sha256": "f76ec1cf620a1c113106c21ddfdbde34379d2bdc2fd2364bcb5206e3fde8d959"
     },
     {
+      "itemId": "atlas-u7535",
+      "kind": "sentence",
+      "text": "电脑",
+      "file": "atlas-u7535-sentence.mp3",
+      "sha256": "b5882920c28fdbc4ca2d942bc0864a665de33086ded42f1a2febd95883087d14"
+    },
+    {
+      "itemId": "atlas-u7535",
+      "kind": "word",
+      "text": "电脑",
+      "file": "atlas-u7535-word.mp3",
+      "sha256": "03936e403fc1e0b2f3988681f2fccc540b5104235169dba48fd9c647a39c8a92"
+    },
+    {
       "itemId": "atlas-u7537",
       "kind": "sentence",
       "text": "男人",
@@ -1095,6 +1263,20 @@
       "kind": "word",
       "text": "眼睛",
       "file": "atlas-u773c-word.mp3",
+      "sha256": "67801b95380e49d1700dc076a3401a50929941ddd9049209fd7f6e0c5e5ce617"
+    },
+    {
+      "itemId": "atlas-u775b",
+      "kind": "sentence",
+      "text": "眼睛",
+      "file": "atlas-u775b-sentence.mp3",
+      "sha256": "67801b95380e49d1700dc076a3401a50929941ddd9049209fd7f6e0c5e5ce617"
+    },
+    {
+      "itemId": "atlas-u775b",
+      "kind": "word",
+      "text": "眼睛",
+      "file": "atlas-u775b-word.mp3",
       "sha256": "67801b95380e49d1700dc076a3401a50929941ddd9049209fd7f6e0c5e5ce617"
     },
     {
@@ -1138,6 +1320,20 @@
       "text": "耳朵",
       "file": "atlas-u8033-word.mp3",
       "sha256": "2ca605649e702f51d6b123e481ec5c19df3a7b084b179c75ec8cd8bb7a073986"
+    },
+    {
+      "itemId": "atlas-u8111",
+      "kind": "sentence",
+      "text": "电脑",
+      "file": "atlas-u8111-sentence.mp3",
+      "sha256": "03936e403fc1e0b2f3988681f2fccc540b5104235169dba48fd9c647a39c8a92"
+    },
+    {
+      "itemId": "atlas-u8111",
+      "kind": "word",
+      "text": "电脑",
+      "file": "atlas-u8111-word.mp3",
+      "sha256": "1f5482781e5826bcfe43f77edb39788f1ce894b9707d20eec6faff634fcadc81"
     },
     {
       "itemId": "atlas-u82b1",
@@ -1404,6 +1600,20 @@
       "text": "啤酒",
       "file": "atlas-u9152-word.mp3",
       "sha256": "4dd3edd59f271c9413df8954659ffe56b4aefb8c7fda064cd9a9af01d2234bca"
+    },
+    {
+      "itemId": "atlas-u95ee",
+      "kind": "sentence",
+      "text": "请问",
+      "file": "atlas-u95ee-sentence.mp3",
+      "sha256": "e5e0f0013468cd81ed3b8ca043327066349f89ed732e38647ac5fb8f0f8292f2"
+    },
+    {
+      "itemId": "atlas-u95ee",
+      "kind": "word",
+      "text": "请问",
+      "file": "atlas-u95ee-word.mp3",
+      "sha256": "e5e0f0013468cd81ed3b8ca043327066349f89ed732e38647ac5fb8f0f8292f2"
     },
     {
       "itemId": "atlas-u95f4",
