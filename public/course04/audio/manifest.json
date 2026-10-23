@@ -1,0 +1,1421 @@
+{
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "generationRate": "-10%",
+  "provider": "Microsoft Edge Read Aloud via edge-tts",
+  "recordings": [
+    {
+      "itemId": "course04-c04-s01",
+      "kind": "sentence",
+      "text": "你叫什么名字？",
+      "file": "course04-c04-s01-sentence.mp3",
+      "sha256": "7ec550ecef6c33d4c602111899ee147d93415789206829c59d9a54c7c9878615"
+    },
+    {
+      "itemId": "course04-c04-s01",
+      "kind": "word",
+      "text": "你叫什么名字？",
+      "file": "course04-c04-s01-word.mp3",
+      "sha256": "7ec550ecef6c33d4c602111899ee147d93415789206829c59d9a54c7c9878615"
+    },
+    {
+      "itemId": "course04-c04-s02",
+      "kind": "sentence",
+      "text": "你姓什么？",
+      "file": "course04-c04-s02-sentence.mp3",
+      "sha256": "92870494d98ffa43f0d11248af1f218f89f9d3b4cf529801bc5f7a5c8f283a51"
+    },
+    {
+      "itemId": "course04-c04-s02",
+      "kind": "word",
+      "text": "你姓什么？",
+      "file": "course04-c04-s02-word.mp3",
+      "sha256": "92870494d98ffa43f0d11248af1f218f89f9d3b4cf529801bc5f7a5c8f283a51"
+    },
+    {
+      "itemId": "course04-c04-s03",
+      "kind": "sentence",
+      "text": "您贵姓？",
+      "file": "course04-c04-s03-sentence.mp3",
+      "sha256": "dc677ffacf6a1d24cc5870af93d3cc7945e21f483ed5c85dce96932829a7f51b"
+    },
+    {
+      "itemId": "course04-c04-s03",
+      "kind": "word",
+      "text": "您贵姓？",
+      "file": "course04-c04-s03-word.mp3",
+      "sha256": "dc677ffacf6a1d24cc5870af93d3cc7945e21f483ed5c85dce96932829a7f51b"
+    },
+    {
+      "itemId": "course04-c04-s04",
+      "kind": "sentence",
+      "text": "你多大了？",
+      "file": "course04-c04-s04-sentence.mp3",
+      "sha256": "4cc8ba2fcb0b78116e5fe269deaac66d64f2b68c55efa7ce396fbf818e6b2ebd"
+    },
+    {
+      "itemId": "course04-c04-s04",
+      "kind": "word",
+      "text": "你多大了？",
+      "file": "course04-c04-s04-word.mp3",
+      "sha256": "4cc8ba2fcb0b78116e5fe269deaac66d64f2b68c55efa7ce396fbf818e6b2ebd"
+    },
+    {
+      "itemId": "course04-c04-s05",
+      "kind": "sentence",
+      "text": "你几岁？",
+      "file": "course04-c04-s05-sentence.mp3",
+      "sha256": "f9e4bd8c585431ff8947e68239f1760a0fd958ead66be84565cfe76afafad0ee"
+    },
+    {
+      "itemId": "course04-c04-s05",
+      "kind": "word",
+      "text": "你几岁？",
+      "file": "course04-c04-s05-word.mp3",
+      "sha256": "f9e4bd8c585431ff8947e68239f1760a0fd958ead66be84565cfe76afafad0ee"
+    },
+    {
+      "itemId": "course04-c04-s06",
+      "kind": "sentence",
+      "text": "您贵庚？",
+      "file": "course04-c04-s06-sentence.mp3",
+      "sha256": "7f1eb2809df499eff2694e038f64f3a5ffce7cad60c10d9919bc917a1feb1bf3"
+    },
+    {
+      "itemId": "course04-c04-s06",
+      "kind": "word",
+      "text": "您贵庚？",
+      "file": "course04-c04-s06-word.mp3",
+      "sha256": "7f1eb2809df499eff2694e038f64f3a5ffce7cad60c10d9919bc917a1feb1bf3"
+    },
+    {
+      "itemId": "course04-c04-s07",
+      "kind": "sentence",
+      "text": "你是哪国人？",
+      "file": "course04-c04-s07-sentence.mp3",
+      "sha256": "ac113f7ef879ba7cb9c1fe325f5417fb1b1b2a5c5c55dfe2be736d24f7a642e2"
+    },
+    {
+      "itemId": "course04-c04-s07",
+      "kind": "word",
+      "text": "你是哪国人？",
+      "file": "course04-c04-s07-word.mp3",
+      "sha256": "ac113f7ef879ba7cb9c1fe325f5417fb1b1b2a5c5c55dfe2be736d24f7a642e2"
+    },
+    {
+      "itemId": "course04-c04-s08",
+      "kind": "sentence",
+      "text": "你在哪里？",
+      "file": "course04-c04-s08-sentence.mp3",
+      "sha256": "4936d93e9e59dcbc28edfa1c920c7e69f2871d94a81f7e152613181df558f486"
+    },
+    {
+      "itemId": "course04-c04-s08",
+      "kind": "word",
+      "text": "你在哪里？",
+      "file": "course04-c04-s08-word.mp3",
+      "sha256": "4936d93e9e59dcbc28edfa1c920c7e69f2871d94a81f7e152613181df558f486"
+    },
+    {
+      "itemId": "course04-c04-s09",
+      "kind": "sentence",
+      "text": "你在哪儿？",
+      "file": "course04-c04-s09-sentence.mp3",
+      "sha256": "8e894f37af75247d9b532687325bd5b9d4f32c95d1ac30603acca844d6d6d27e"
+    },
+    {
+      "itemId": "course04-c04-s09",
+      "kind": "word",
+      "text": "你在哪儿？",
+      "file": "course04-c04-s09-word.mp3",
+      "sha256": "8e894f37af75247d9b532687325bd5b9d4f32c95d1ac30603acca844d6d6d27e"
+    },
+    {
+      "itemId": "course04-c04-s10",
+      "kind": "sentence",
+      "text": "我在家。",
+      "file": "course04-c04-s10-sentence.mp3",
+      "sha256": "7c99cb40a4609d30106b9d9ccde043a8943631f23f953c2a417abe10c18c9184"
+    },
+    {
+      "itemId": "course04-c04-s10",
+      "kind": "word",
+      "text": "我在家。",
+      "file": "course04-c04-s10-word.mp3",
+      "sha256": "7c99cb40a4609d30106b9d9ccde043a8943631f23f953c2a417abe10c18c9184"
+    },
+    {
+      "itemId": "course04-c04-s11",
+      "kind": "sentence",
+      "text": "你做作业吗？",
+      "file": "course04-c04-s11-sentence.mp3",
+      "sha256": "2a608be46a2cf4dbbf2b5d5cac9a94b650b6c0a7026c11ff9169c95a4e26ae75"
+    },
+    {
+      "itemId": "course04-c04-s11",
+      "kind": "word",
+      "text": "你做作业吗？",
+      "file": "course04-c04-s11-word.mp3",
+      "sha256": "2a608be46a2cf4dbbf2b5d5cac9a94b650b6c0a7026c11ff9169c95a4e26ae75"
+    },
+    {
+      "itemId": "course04-c04-s12",
+      "kind": "sentence",
+      "text": "你工作吗？",
+      "file": "course04-c04-s12-sentence.mp3",
+      "sha256": "298c468eadd0842ec9c0e2578aa2a95c972e4495ee133c2e192276f41a9afa1f"
+    },
+    {
+      "itemId": "course04-c04-s12",
+      "kind": "word",
+      "text": "你工作吗？",
+      "file": "course04-c04-s12-word.mp3",
+      "sha256": "298c468eadd0842ec9c0e2578aa2a95c972e4495ee133c2e192276f41a9afa1f"
+    },
+    {
+      "itemId": "course04-c04-s13",
+      "kind": "sentence",
+      "text": "我不工作。我是学生。",
+      "file": "course04-c04-s13-sentence.mp3",
+      "sha256": "5a3cc26ee543054484b92b9c1143d46ee25fce0fc39a086115a81e4f7535e22c"
+    },
+    {
+      "itemId": "course04-c04-s13",
+      "kind": "word",
+      "text": "我不工作。我是学生。",
+      "file": "course04-c04-s13-word.mp3",
+      "sha256": "5a3cc26ee543054484b92b9c1143d46ee25fce0fc39a086115a81e4f7535e22c"
+    },
+    {
+      "itemId": "course04-c04-s14",
+      "kind": "sentence",
+      "text": "你做什么工作？",
+      "file": "course04-c04-s14-sentence.mp3",
+      "sha256": "ad5075307d73ec33fbb3484b6944e38728d60097dcccb6548b0366cc6391333e"
+    },
+    {
+      "itemId": "course04-c04-s14",
+      "kind": "word",
+      "text": "你做什么工作？",
+      "file": "course04-c04-s14-word.mp3",
+      "sha256": "ad5075307d73ec33fbb3484b6944e38728d60097dcccb6548b0366cc6391333e"
+    },
+    {
+      "itemId": "course04-c04-s15",
+      "kind": "sentence",
+      "text": "我是公司老板。",
+      "file": "course04-c04-s15-sentence.mp3",
+      "sha256": "2bf489c45f56f3d4be622e7aa3a884625286dd062770b1937a17bbdae2967038"
+    },
+    {
+      "itemId": "course04-c04-s15",
+      "kind": "word",
+      "text": "我是公司老板。",
+      "file": "course04-c04-s15-word.mp3",
+      "sha256": "2bf489c45f56f3d4be622e7aa3a884625286dd062770b1937a17bbdae2967038"
+    },
+    {
+      "itemId": "course04-c04-s16",
+      "kind": "sentence",
+      "text": "你在哪里工作？",
+      "file": "course04-c04-s16-sentence.mp3",
+      "sha256": "f28784c7ac9fea35f6eda867e85a4a5baa5a20e9a1d08cbe6576c05c56557539"
+    },
+    {
+      "itemId": "course04-c04-s16",
+      "kind": "word",
+      "text": "你在哪里工作？",
+      "file": "course04-c04-s16-word.mp3",
+      "sha256": "f28784c7ac9fea35f6eda867e85a4a5baa5a20e9a1d08cbe6576c05c56557539"
+    },
+    {
+      "itemId": "course04-c04-s17",
+      "kind": "sentence",
+      "text": "我在学校工作。",
+      "file": "course04-c04-s17-sentence.mp3",
+      "sha256": "45316bddfeb3d24f0a8e615e7e9957fcdf3e8ed5e51cb9752cfd3a8bc34eade8"
+    },
+    {
+      "itemId": "course04-c04-s17",
+      "kind": "word",
+      "text": "我在学校工作。",
+      "file": "course04-c04-s17-word.mp3",
+      "sha256": "45316bddfeb3d24f0a8e615e7e9957fcdf3e8ed5e51cb9752cfd3a8bc34eade8"
+    },
+    {
+      "itemId": "course04-c04-s18",
+      "kind": "sentence",
+      "text": "你的公司在哪儿？",
+      "file": "course04-c04-s18-sentence.mp3",
+      "sha256": "c77fd5e0dd49933944d767d3858b3138dc530b8e024558bab4fdb29473f38992"
+    },
+    {
+      "itemId": "course04-c04-s18",
+      "kind": "word",
+      "text": "你的公司在哪儿？",
+      "file": "course04-c04-s18-word.mp3",
+      "sha256": "c77fd5e0dd49933944d767d3858b3138dc530b8e024558bab4fdb29473f38992"
+    },
+    {
+      "itemId": "course04-c04-s19",
+      "kind": "sentence",
+      "text": "在上海。",
+      "file": "course04-c04-s19-sentence.mp3",
+      "sha256": "9370c04c1e35ec67ca91a721de908d7e2717cad635786532ea6908c620f0fcf3"
+    },
+    {
+      "itemId": "course04-c04-s19",
+      "kind": "word",
+      "text": "在上海。",
+      "file": "course04-c04-s19-word.mp3",
+      "sha256": "9370c04c1e35ec67ca91a721de908d7e2717cad635786532ea6908c620f0fcf3"
+    },
+    {
+      "itemId": "course04-c04-s20",
+      "kind": "sentence",
+      "text": "明天我在苏州工作。",
+      "file": "course04-c04-s20-sentence.mp3",
+      "sha256": "8cfbb819ee11c8a3c63a5d6b80df4efa17f53dbe1d852a5dc9d94897c2bf9ac9"
+    },
+    {
+      "itemId": "course04-c04-s20",
+      "kind": "word",
+      "text": "明天我在苏州工作。",
+      "file": "course04-c04-s20-word.mp3",
+      "sha256": "8cfbb819ee11c8a3c63a5d6b80df4efa17f53dbe1d852a5dc9d94897c2bf9ac9"
+    },
+    {
+      "itemId": "course04-c04-s21",
+      "kind": "sentence",
+      "text": "昨天我没工作。",
+      "file": "course04-c04-s21-sentence.mp3",
+      "sha256": "9257147ecb23e24981fdcf3d908527b0487076e10eec8e943884d20c3ff29ad1"
+    },
+    {
+      "itemId": "course04-c04-s21",
+      "kind": "word",
+      "text": "昨天我没工作。",
+      "file": "course04-c04-s21-word.mp3",
+      "sha256": "9257147ecb23e24981fdcf3d908527b0487076e10eec8e943884d20c3ff29ad1"
+    },
+    {
+      "itemId": "course04-c04-s22",
+      "kind": "sentence",
+      "text": "我在教室学习。",
+      "file": "course04-c04-s22-sentence.mp3",
+      "sha256": "4e4abccc41038ed132fe11334094703c63c9fe67f13cdba590f16b53cfa226c0"
+    },
+    {
+      "itemId": "course04-c04-s22",
+      "kind": "word",
+      "text": "我在教室学习。",
+      "file": "course04-c04-s22-word.mp3",
+      "sha256": "4e4abccc41038ed132fe11334094703c63c9fe67f13cdba590f16b53cfa226c0"
+    },
+    {
+      "itemId": "course04-c04-s23",
+      "kind": "sentence",
+      "text": "我在咖啡店看书。",
+      "file": "course04-c04-s23-sentence.mp3",
+      "sha256": "ea4f0e97ddc9e8852698f427ac4ab3af2f1611b23a9ba2ce6d3aa8c6b4d566a6"
+    },
+    {
+      "itemId": "course04-c04-s23",
+      "kind": "word",
+      "text": "我在咖啡店看书。",
+      "file": "course04-c04-s23-word.mp3",
+      "sha256": "ea4f0e97ddc9e8852698f427ac4ab3af2f1611b23a9ba2ce6d3aa8c6b4d566a6"
+    },
+    {
+      "itemId": "course04-c04-s24",
+      "kind": "sentence",
+      "text": "你喜欢什么运动？",
+      "file": "course04-c04-s24-sentence.mp3",
+      "sha256": "3f061e306e31d3ec9118413022524e7e9e16a3c87881f5bb8964da0fa618112d"
+    },
+    {
+      "itemId": "course04-c04-s24",
+      "kind": "word",
+      "text": "你喜欢什么运动？",
+      "file": "course04-c04-s24-word.mp3",
+      "sha256": "3f061e306e31d3ec9118413022524e7e9e16a3c87881f5bb8964da0fa618112d"
+    },
+    {
+      "itemId": "course04-c04-s25",
+      "kind": "sentence",
+      "text": "我喜欢打篮球。",
+      "file": "course04-c04-s25-sentence.mp3",
+      "sha256": "87b04c46daff98993304382d5cd0d5daaf436c7327fee3a22e49323ead276502"
+    },
+    {
+      "itemId": "course04-c04-s25",
+      "kind": "word",
+      "text": "我喜欢打篮球。",
+      "file": "course04-c04-s25-word.mp3",
+      "sha256": "87b04c46daff98993304382d5cd0d5daaf436c7327fee3a22e49323ead276502"
+    },
+    {
+      "itemId": "course04-c04-s26",
+      "kind": "sentence",
+      "text": "我喜欢蓝色。",
+      "file": "course04-c04-s26-sentence.mp3",
+      "sha256": "b96bab16c4c46da29b90697e6b88d1300730f7e42ccde58e09aef16a160436b7"
+    },
+    {
+      "itemId": "course04-c04-s26",
+      "kind": "word",
+      "text": "我喜欢蓝色。",
+      "file": "course04-c04-s26-word.mp3",
+      "sha256": "b96bab16c4c46da29b90697e6b88d1300730f7e42ccde58e09aef16a160436b7"
+    },
+    {
+      "itemId": "course04-c04-s27",
+      "kind": "sentence",
+      "text": "我喜欢吃牛肉。",
+      "file": "course04-c04-s27-sentence.mp3",
+      "sha256": "bc42576ee87132f4d75ed51261bb1f3244ed1a0d299fa5be0d386e3960f2cbc7"
+    },
+    {
+      "itemId": "course04-c04-s27",
+      "kind": "word",
+      "text": "我喜欢吃牛肉。",
+      "file": "course04-c04-s27-word.mp3",
+      "sha256": "bc42576ee87132f4d75ed51261bb1f3244ed1a0d299fa5be0d386e3960f2cbc7"
+    },
+    {
+      "itemId": "course04-c04-s28",
+      "kind": "sentence",
+      "text": "我的汉语越来越好。",
+      "file": "course04-c04-s28-sentence.mp3",
+      "sha256": "6ee8f7b517a0d6fa1869280c3b6b6141fd5038a104a89667e0731aa60f0ab1d9"
+    },
+    {
+      "itemId": "course04-c04-s28",
+      "kind": "word",
+      "text": "我的汉语越来越好。",
+      "file": "course04-c04-s28-word.mp3",
+      "sha256": "6ee8f7b517a0d6fa1869280c3b6b6141fd5038a104a89667e0731aa60f0ab1d9"
+    },
+    {
+      "itemId": "course04-c04-t01",
+      "kind": "sentence",
+      "text": "名字",
+      "file": "course04-c04-t01-sentence.mp3",
+      "sha256": "6ed04858e79f2bbb26cea5d7568c59f4e8c4a781ff2cd4744e317cd76a84a557"
+    },
+    {
+      "itemId": "course04-c04-t01",
+      "kind": "word",
+      "text": "名字",
+      "file": "course04-c04-t01-word.mp3",
+      "sha256": "6ed04858e79f2bbb26cea5d7568c59f4e8c4a781ff2cd4744e317cd76a84a557"
+    },
+    {
+      "itemId": "course04-c04-t02",
+      "kind": "sentence",
+      "text": "什么",
+      "file": "course04-c04-t02-sentence.mp3",
+      "sha256": "8c9d93f3b47d564f17be45adc6f42895e268e641af5a9500b09f81de532a0933"
+    },
+    {
+      "itemId": "course04-c04-t02",
+      "kind": "word",
+      "text": "什么",
+      "file": "course04-c04-t02-word.mp3",
+      "sha256": "8c9d93f3b47d564f17be45adc6f42895e268e641af5a9500b09f81de532a0933"
+    },
+    {
+      "itemId": "course04-c04-t03",
+      "kind": "sentence",
+      "text": "姓",
+      "file": "course04-c04-t03-sentence.mp3",
+      "sha256": "670140f371fb6755560a712007cc2e2fe482f5c112fad588a31e27f4cd5a5637"
+    },
+    {
+      "itemId": "course04-c04-t03",
+      "kind": "word",
+      "text": "姓",
+      "file": "course04-c04-t03-word.mp3",
+      "sha256": "670140f371fb6755560a712007cc2e2fe482f5c112fad588a31e27f4cd5a5637"
+    },
+    {
+      "itemId": "course04-c04-t04",
+      "kind": "sentence",
+      "text": "贵姓",
+      "file": "course04-c04-t04-sentence.mp3",
+      "sha256": "50b1ed31e68eac1ff8fb15d20cd4fecb6f226a2c96a03fbfb10dc884e6adb334"
+    },
+    {
+      "itemId": "course04-c04-t04",
+      "kind": "word",
+      "text": "贵姓",
+      "file": "course04-c04-t04-word.mp3",
+      "sha256": "50b1ed31e68eac1ff8fb15d20cd4fecb6f226a2c96a03fbfb10dc884e6adb334"
+    },
+    {
+      "itemId": "course04-c04-t05",
+      "kind": "sentence",
+      "text": "多大",
+      "file": "course04-c04-t05-sentence.mp3",
+      "sha256": "243b97e92e8a1dbf828b6db1858e4013c56647a65cd208daf0a24d5e63f16740"
+    },
+    {
+      "itemId": "course04-c04-t05",
+      "kind": "word",
+      "text": "多大",
+      "file": "course04-c04-t05-word.mp3",
+      "sha256": "243b97e92e8a1dbf828b6db1858e4013c56647a65cd208daf0a24d5e63f16740"
+    },
+    {
+      "itemId": "course04-c04-t06",
+      "kind": "sentence",
+      "text": "几岁",
+      "file": "course04-c04-t06-sentence.mp3",
+      "sha256": "60c0bae75c986a7a59dd37d7eaabb2bcf719bf5db837c1a22f01c8bbbe92a93e"
+    },
+    {
+      "itemId": "course04-c04-t06",
+      "kind": "word",
+      "text": "几岁",
+      "file": "course04-c04-t06-word.mp3",
+      "sha256": "60c0bae75c986a7a59dd37d7eaabb2bcf719bf5db837c1a22f01c8bbbe92a93e"
+    },
+    {
+      "itemId": "course04-c04-t07",
+      "kind": "sentence",
+      "text": "贵庚",
+      "file": "course04-c04-t07-sentence.mp3",
+      "sha256": "cdb27e1141185653e964e8e3ed7fec1197f722043414038d806bb944146faa14"
+    },
+    {
+      "itemId": "course04-c04-t07",
+      "kind": "word",
+      "text": "贵庚",
+      "file": "course04-c04-t07-word.mp3",
+      "sha256": "cdb27e1141185653e964e8e3ed7fec1197f722043414038d806bb944146faa14"
+    },
+    {
+      "itemId": "course04-c04-t08",
+      "kind": "sentence",
+      "text": "哪国人",
+      "file": "course04-c04-t08-sentence.mp3",
+      "sha256": "bb26f12672fb660822a1bb508277627089132bbc8b84b5eaef449e0f5c0639d8"
+    },
+    {
+      "itemId": "course04-c04-t08",
+      "kind": "word",
+      "text": "哪国人",
+      "file": "course04-c04-t08-word.mp3",
+      "sha256": "bb26f12672fb660822a1bb508277627089132bbc8b84b5eaef449e0f5c0639d8"
+    },
+    {
+      "itemId": "course04-c04-t09",
+      "kind": "sentence",
+      "text": "这",
+      "file": "course04-c04-t09-sentence.mp3",
+      "sha256": "0dc43625434a330a36e7516b817c13df179db63872ad1b5df5907023334c673e"
+    },
+    {
+      "itemId": "course04-c04-t09",
+      "kind": "word",
+      "text": "这",
+      "file": "course04-c04-t09-word.mp3",
+      "sha256": "0dc43625434a330a36e7516b817c13df179db63872ad1b5df5907023334c673e"
+    },
+    {
+      "itemId": "course04-c04-t10",
+      "kind": "sentence",
+      "text": "那",
+      "file": "course04-c04-t10-sentence.mp3",
+      "sha256": "62afc170afab6441cf49c3b17162ddd34e713dba143bdd3fb64ee843dcadcf8c"
+    },
+    {
+      "itemId": "course04-c04-t10",
+      "kind": "word",
+      "text": "那",
+      "file": "course04-c04-t10-word.mp3",
+      "sha256": "62afc170afab6441cf49c3b17162ddd34e713dba143bdd3fb64ee843dcadcf8c"
+    },
+    {
+      "itemId": "course04-c04-t11",
+      "kind": "sentence",
+      "text": "哪",
+      "file": "course04-c04-t11-sentence.mp3",
+      "sha256": "8bbe3feda34271a3ee0ebe44d40719adeaebeb386446a01325b7b73013a60e2a"
+    },
+    {
+      "itemId": "course04-c04-t11",
+      "kind": "word",
+      "text": "哪",
+      "file": "course04-c04-t11-word.mp3",
+      "sha256": "8bbe3feda34271a3ee0ebe44d40719adeaebeb386446a01325b7b73013a60e2a"
+    },
+    {
+      "itemId": "course04-c04-t12",
+      "kind": "sentence",
+      "text": "哪里",
+      "file": "course04-c04-t12-sentence.mp3",
+      "sha256": "0f943e0e1bf4d5a8771121888e1119fa4a7fd030efdc867d72a69988a01ee838"
+    },
+    {
+      "itemId": "course04-c04-t12",
+      "kind": "word",
+      "text": "哪里",
+      "file": "course04-c04-t12-word.mp3",
+      "sha256": "0f943e0e1bf4d5a8771121888e1119fa4a7fd030efdc867d72a69988a01ee838"
+    },
+    {
+      "itemId": "course04-c04-t13",
+      "kind": "sentence",
+      "text": "哪儿",
+      "file": "course04-c04-t13-sentence.mp3",
+      "sha256": "d978ed632d4200509b1a1cec3cb0b0031a479af5401bb19756cfc2bb5c68afb5"
+    },
+    {
+      "itemId": "course04-c04-t13",
+      "kind": "word",
+      "text": "哪儿",
+      "file": "course04-c04-t13-word.mp3",
+      "sha256": "d978ed632d4200509b1a1cec3cb0b0031a479af5401bb19756cfc2bb5c68afb5"
+    },
+    {
+      "itemId": "course04-c04-t14",
+      "kind": "sentence",
+      "text": "家",
+      "file": "course04-c04-t14-sentence.mp3",
+      "sha256": "d1e48f2af730d001962dad035c14099876bae14330ea37ceea04eb89780c9206"
+    },
+    {
+      "itemId": "course04-c04-t14",
+      "kind": "word",
+      "text": "家",
+      "file": "course04-c04-t14-word.mp3",
+      "sha256": "d1e48f2af730d001962dad035c14099876bae14330ea37ceea04eb89780c9206"
+    },
+    {
+      "itemId": "course04-c04-t15",
+      "kind": "sentence",
+      "text": "超市",
+      "file": "course04-c04-t15-sentence.mp3",
+      "sha256": "46fbb8291664d5631508f0a8a7f978fb2383c461b93915fed21be46c7ca820b7"
+    },
+    {
+      "itemId": "course04-c04-t15",
+      "kind": "word",
+      "text": "超市",
+      "file": "course04-c04-t15-word.mp3",
+      "sha256": "46fbb8291664d5631508f0a8a7f978fb2383c461b93915fed21be46c7ca820b7"
+    },
+    {
+      "itemId": "course04-c04-t16",
+      "kind": "sentence",
+      "text": "教室",
+      "file": "course04-c04-t16-sentence.mp3",
+      "sha256": "cd1fccf54790d23e4d66e6724c5e3bdd49821a21acccbae66cc84399a97783a1"
+    },
+    {
+      "itemId": "course04-c04-t16",
+      "kind": "word",
+      "text": "教室",
+      "file": "course04-c04-t16-word.mp3",
+      "sha256": "cd1fccf54790d23e4d66e6724c5e3bdd49821a21acccbae66cc84399a97783a1"
+    },
+    {
+      "itemId": "course04-c04-t17",
+      "kind": "sentence",
+      "text": "宿舍",
+      "file": "course04-c04-t17-sentence.mp3",
+      "sha256": "ff0954f7b90a7e3900dccc7cca135eaf291f73e43e42511c3c728b993fe3f4cf"
+    },
+    {
+      "itemId": "course04-c04-t17",
+      "kind": "word",
+      "text": "宿舍",
+      "file": "course04-c04-t17-word.mp3",
+      "sha256": "ff0954f7b90a7e3900dccc7cca135eaf291f73e43e42511c3c728b993fe3f4cf"
+    },
+    {
+      "itemId": "course04-c04-t18",
+      "kind": "sentence",
+      "text": "学校",
+      "file": "course04-c04-t18-sentence.mp3",
+      "sha256": "010b0a4b821a0916d0c6ed0e5cc7daec1652681023e922987d16267a5df56d54"
+    },
+    {
+      "itemId": "course04-c04-t18",
+      "kind": "word",
+      "text": "学校",
+      "file": "course04-c04-t18-word.mp3",
+      "sha256": "010b0a4b821a0916d0c6ed0e5cc7daec1652681023e922987d16267a5df56d54"
+    },
+    {
+      "itemId": "course04-c04-t19",
+      "kind": "sentence",
+      "text": "公司",
+      "file": "course04-c04-t19-sentence.mp3",
+      "sha256": "0924bf2639a63da77fa35309fe34115f9181e6ac1e3736a2031cb257aaad4fe4"
+    },
+    {
+      "itemId": "course04-c04-t19",
+      "kind": "word",
+      "text": "公司",
+      "file": "course04-c04-t19-word.mp3",
+      "sha256": "0924bf2639a63da77fa35309fe34115f9181e6ac1e3736a2031cb257aaad4fe4"
+    },
+    {
+      "itemId": "course04-c04-t20",
+      "kind": "sentence",
+      "text": "咖啡店",
+      "file": "course04-c04-t20-sentence.mp3",
+      "sha256": "1aafaed46d823faa1eab81d88cb908624db5dd7a4644390e2252ce8679681679"
+    },
+    {
+      "itemId": "course04-c04-t20",
+      "kind": "word",
+      "text": "咖啡店",
+      "file": "course04-c04-t20-word.mp3",
+      "sha256": "1aafaed46d823faa1eab81d88cb908624db5dd7a4644390e2252ce8679681679"
+    },
+    {
+      "itemId": "course04-c04-t21",
+      "kind": "sentence",
+      "text": "上海",
+      "file": "course04-c04-t21-sentence.mp3",
+      "sha256": "3d4f62f24bbdfce656c8401594c8d035ab7b13bb926d1caf393c53fd2862cacb"
+    },
+    {
+      "itemId": "course04-c04-t21",
+      "kind": "word",
+      "text": "上海",
+      "file": "course04-c04-t21-word.mp3",
+      "sha256": "3d4f62f24bbdfce656c8401594c8d035ab7b13bb926d1caf393c53fd2862cacb"
+    },
+    {
+      "itemId": "course04-c04-t22",
+      "kind": "sentence",
+      "text": "苏州",
+      "file": "course04-c04-t22-sentence.mp3",
+      "sha256": "605651e54eac57a961d612056a672e36aa8aa2773d433c6ad404d8bd69b05241"
+    },
+    {
+      "itemId": "course04-c04-t22",
+      "kind": "word",
+      "text": "苏州",
+      "file": "course04-c04-t22-word.mp3",
+      "sha256": "605651e54eac57a961d612056a672e36aa8aa2773d433c6ad404d8bd69b05241"
+    },
+    {
+      "itemId": "course04-c04-t23",
+      "kind": "sentence",
+      "text": "工作",
+      "file": "course04-c04-t23-sentence.mp3",
+      "sha256": "1d339905d5f2b8cb151aabe936c1b2cad0a96a3e522ce772c59a28ca75a77369"
+    },
+    {
+      "itemId": "course04-c04-t23",
+      "kind": "word",
+      "text": "工作",
+      "file": "course04-c04-t23-word.mp3",
+      "sha256": "1d339905d5f2b8cb151aabe936c1b2cad0a96a3e522ce772c59a28ca75a77369"
+    },
+    {
+      "itemId": "course04-c04-t24",
+      "kind": "sentence",
+      "text": "做作业",
+      "file": "course04-c04-t24-sentence.mp3",
+      "sha256": "08373031a56bd3e8d5443ff75da36128711cfcec5f91f078b99304903726872d"
+    },
+    {
+      "itemId": "course04-c04-t24",
+      "kind": "word",
+      "text": "做作业",
+      "file": "course04-c04-t24-word.mp3",
+      "sha256": "08373031a56bd3e8d5443ff75da36128711cfcec5f91f078b99304903726872d"
+    },
+    {
+      "itemId": "course04-c04-t25",
+      "kind": "sentence",
+      "text": "学生",
+      "file": "course04-c04-t25-sentence.mp3",
+      "sha256": "f76ec1cf620a1c113106c21ddfdbde34379d2bdc2fd2364bcb5206e3fde8d959"
+    },
+    {
+      "itemId": "course04-c04-t25",
+      "kind": "word",
+      "text": "学生",
+      "file": "course04-c04-t25-word.mp3",
+      "sha256": "f76ec1cf620a1c113106c21ddfdbde34379d2bdc2fd2364bcb5206e3fde8d959"
+    },
+    {
+      "itemId": "course04-c04-t26",
+      "kind": "sentence",
+      "text": "老板",
+      "file": "course04-c04-t26-sentence.mp3",
+      "sha256": "124186fb992a706373f5063344bb60bc95aad7d80c06323e87313018e776eee4"
+    },
+    {
+      "itemId": "course04-c04-t26",
+      "kind": "word",
+      "text": "老板",
+      "file": "course04-c04-t26-word.mp3",
+      "sha256": "124186fb992a706373f5063344bb60bc95aad7d80c06323e87313018e776eee4"
+    },
+    {
+      "itemId": "course04-c04-t27",
+      "kind": "sentence",
+      "text": "工人",
+      "file": "course04-c04-t27-sentence.mp3",
+      "sha256": "ad510ee3a6bafce24e613ea46743da61605603564af347a5206bf3b7fa527898"
+    },
+    {
+      "itemId": "course04-c04-t27",
+      "kind": "word",
+      "text": "工人",
+      "file": "course04-c04-t27-word.mp3",
+      "sha256": "ad510ee3a6bafce24e613ea46743da61605603564af347a5206bf3b7fa527898"
+    },
+    {
+      "itemId": "course04-c04-t28",
+      "kind": "sentence",
+      "text": "老师",
+      "file": "course04-c04-t28-sentence.mp3",
+      "sha256": "8bc522fe77965788cf0c9fdae72e3cb17bc478b10ae907c0f46294178ac800c8"
+    },
+    {
+      "itemId": "course04-c04-t28",
+      "kind": "word",
+      "text": "老师",
+      "file": "course04-c04-t28-word.mp3",
+      "sha256": "8bc522fe77965788cf0c9fdae72e3cb17bc478b10ae907c0f46294178ac800c8"
+    },
+    {
+      "itemId": "course04-c04-t29",
+      "kind": "sentence",
+      "text": "医生",
+      "file": "course04-c04-t29-sentence.mp3",
+      "sha256": "da03862bf0cfb550275213647d90240c965a29b32eb1807cc81244b30427a3ca"
+    },
+    {
+      "itemId": "course04-c04-t29",
+      "kind": "word",
+      "text": "医生",
+      "file": "course04-c04-t29-word.mp3",
+      "sha256": "da03862bf0cfb550275213647d90240c965a29b32eb1807cc81244b30427a3ca"
+    },
+    {
+      "itemId": "course04-c04-t30",
+      "kind": "sentence",
+      "text": "大夫",
+      "file": "course04-c04-t30-sentence.mp3",
+      "sha256": "57fd61e38eb57d9b3fdaf1fa9976a500318868936013c97e9290bf1b5e36cd86"
+    },
+    {
+      "itemId": "course04-c04-t30",
+      "kind": "word",
+      "text": "大夫",
+      "file": "course04-c04-t30-word.mp3",
+      "sha256": "57fd61e38eb57d9b3fdaf1fa9976a500318868936013c97e9290bf1b5e36cd86"
+    },
+    {
+      "itemId": "course04-c04-t31",
+      "kind": "sentence",
+      "text": "律师",
+      "file": "course04-c04-t31-sentence.mp3",
+      "sha256": "789774fbc91737c2bddb322bbafacc053f9418da11af4a1ee9359763e450d9a9"
+    },
+    {
+      "itemId": "course04-c04-t31",
+      "kind": "word",
+      "text": "律师",
+      "file": "course04-c04-t31-word.mp3",
+      "sha256": "789774fbc91737c2bddb322bbafacc053f9418da11af4a1ee9359763e450d9a9"
+    },
+    {
+      "itemId": "course04-c04-t32",
+      "kind": "sentence",
+      "text": "律师事务所",
+      "file": "course04-c04-t32-sentence.mp3",
+      "sha256": "909525878531cbebfe38d82374c1da2e4c916b04ce0aec58779ff0a93e904db1"
+    },
+    {
+      "itemId": "course04-c04-t32",
+      "kind": "word",
+      "text": "律师事务所",
+      "file": "course04-c04-t32-word.mp3",
+      "sha256": "909525878531cbebfe38d82374c1da2e4c916b04ce0aec58779ff0a93e904db1"
+    },
+    {
+      "itemId": "course04-c04-t33",
+      "kind": "sentence",
+      "text": "学习",
+      "file": "course04-c04-t33-sentence.mp3",
+      "sha256": "b6efb233caa1c65040bf1e1e7b05cd5c11dff692a68cb347d1f8c4a953df24d3"
+    },
+    {
+      "itemId": "course04-c04-t33",
+      "kind": "word",
+      "text": "学习",
+      "file": "course04-c04-t33-word.mp3",
+      "sha256": "b6efb233caa1c65040bf1e1e7b05cd5c11dff692a68cb347d1f8c4a953df24d3"
+    },
+    {
+      "itemId": "course04-c04-t34",
+      "kind": "sentence",
+      "text": "看书",
+      "file": "course04-c04-t34-sentence.mp3",
+      "sha256": "2c2c759f61afd8238abcce4d40397ae23ec4e38bc2edd34b18519cb0551c69ad"
+    },
+    {
+      "itemId": "course04-c04-t34",
+      "kind": "word",
+      "text": "看书",
+      "file": "course04-c04-t34-word.mp3",
+      "sha256": "2c2c759f61afd8238abcce4d40397ae23ec4e38bc2edd34b18519cb0551c69ad"
+    },
+    {
+      "itemId": "course04-c04-t35",
+      "kind": "sentence",
+      "text": "喜欢",
+      "file": "course04-c04-t35-sentence.mp3",
+      "sha256": "b75d8efd5a81f86ef5760a3cd3c3027f8badb9046ed391e6c3344919ac0ec95f"
+    },
+    {
+      "itemId": "course04-c04-t35",
+      "kind": "word",
+      "text": "喜欢",
+      "file": "course04-c04-t35-word.mp3",
+      "sha256": "b75d8efd5a81f86ef5760a3cd3c3027f8badb9046ed391e6c3344919ac0ec95f"
+    },
+    {
+      "itemId": "course04-c04-t36",
+      "kind": "sentence",
+      "text": "运动",
+      "file": "course04-c04-t36-sentence.mp3",
+      "sha256": "9b680e8cf32c68b767d899c70f9b857cc13fc9049a3b87255b64acf5ca6b911e"
+    },
+    {
+      "itemId": "course04-c04-t36",
+      "kind": "word",
+      "text": "运动",
+      "file": "course04-c04-t36-word.mp3",
+      "sha256": "9b680e8cf32c68b767d899c70f9b857cc13fc9049a3b87255b64acf5ca6b911e"
+    },
+    {
+      "itemId": "course04-c04-t37",
+      "kind": "sentence",
+      "text": "打篮球",
+      "file": "course04-c04-t37-sentence.mp3",
+      "sha256": "8a79b17aa361f7e0d6b0c4a94ac036b98e3859db4781624e1620e0c7edf557a0"
+    },
+    {
+      "itemId": "course04-c04-t37",
+      "kind": "word",
+      "text": "打篮球",
+      "file": "course04-c04-t37-word.mp3",
+      "sha256": "8a79b17aa361f7e0d6b0c4a94ac036b98e3859db4781624e1620e0c7edf557a0"
+    },
+    {
+      "itemId": "course04-c04-t38",
+      "kind": "sentence",
+      "text": "打网球",
+      "file": "course04-c04-t38-sentence.mp3",
+      "sha256": "561718b7342fd10c4e224e3ca996a4eaf50fba28993c279371fd6f1755394c62"
+    },
+    {
+      "itemId": "course04-c04-t38",
+      "kind": "word",
+      "text": "打网球",
+      "file": "course04-c04-t38-word.mp3",
+      "sha256": "561718b7342fd10c4e224e3ca996a4eaf50fba28993c279371fd6f1755394c62"
+    },
+    {
+      "itemId": "course04-c04-t39",
+      "kind": "sentence",
+      "text": "打乒乓球",
+      "file": "course04-c04-t39-sentence.mp3",
+      "sha256": "986104af72574cb6b5325bb3ab9307f1f799c4672a2d333d456ff67b25bb84a5"
+    },
+    {
+      "itemId": "course04-c04-t39",
+      "kind": "word",
+      "text": "打乒乓球",
+      "file": "course04-c04-t39-word.mp3",
+      "sha256": "986104af72574cb6b5325bb3ab9307f1f799c4672a2d333d456ff67b25bb84a5"
+    },
+    {
+      "itemId": "course04-c04-t40",
+      "kind": "sentence",
+      "text": "颜色",
+      "file": "course04-c04-t40-sentence.mp3",
+      "sha256": "cee8c4fa208bf9817e1c629cbb6b91ccde2571c32941e299f44b1e52a0d42f7a"
+    },
+    {
+      "itemId": "course04-c04-t40",
+      "kind": "word",
+      "text": "颜色",
+      "file": "course04-c04-t40-word.mp3",
+      "sha256": "cee8c4fa208bf9817e1c629cbb6b91ccde2571c32941e299f44b1e52a0d42f7a"
+    },
+    {
+      "itemId": "course04-c04-t41",
+      "kind": "sentence",
+      "text": "彩虹",
+      "file": "course04-c04-t41-sentence.mp3",
+      "sha256": "c4de02e77a6d907790cb3cc8dcbcd7eccc0c48b7a1ebb3d821f88c5d5f08248a"
+    },
+    {
+      "itemId": "course04-c04-t41",
+      "kind": "word",
+      "text": "彩虹",
+      "file": "course04-c04-t41-word.mp3",
+      "sha256": "c4de02e77a6d907790cb3cc8dcbcd7eccc0c48b7a1ebb3d821f88c5d5f08248a"
+    },
+    {
+      "itemId": "course04-c04-t42",
+      "kind": "sentence",
+      "text": "红色",
+      "file": "course04-c04-t42-sentence.mp3",
+      "sha256": "f2c36337944869b3cc46cace83f8de1f61d7fbd72799047f9875198a9a1efe9d"
+    },
+    {
+      "itemId": "course04-c04-t42",
+      "kind": "word",
+      "text": "红色",
+      "file": "course04-c04-t42-word.mp3",
+      "sha256": "f2c36337944869b3cc46cace83f8de1f61d7fbd72799047f9875198a9a1efe9d"
+    },
+    {
+      "itemId": "course04-c04-t43",
+      "kind": "sentence",
+      "text": "橙色",
+      "file": "course04-c04-t43-sentence.mp3",
+      "sha256": "8921090861ec604be922bbb8702afbc4174b95ef0dd0915fd6d84f5d7acf25a2"
+    },
+    {
+      "itemId": "course04-c04-t43",
+      "kind": "word",
+      "text": "橙色",
+      "file": "course04-c04-t43-word.mp3",
+      "sha256": "8921090861ec604be922bbb8702afbc4174b95ef0dd0915fd6d84f5d7acf25a2"
+    },
+    {
+      "itemId": "course04-c04-t44",
+      "kind": "sentence",
+      "text": "黄色",
+      "file": "course04-c04-t44-sentence.mp3",
+      "sha256": "4eb988b291e81226947b0110f5d1aeba1b83b756943223d3bdfe395d1319faa7"
+    },
+    {
+      "itemId": "course04-c04-t44",
+      "kind": "word",
+      "text": "黄色",
+      "file": "course04-c04-t44-word.mp3",
+      "sha256": "4eb988b291e81226947b0110f5d1aeba1b83b756943223d3bdfe395d1319faa7"
+    },
+    {
+      "itemId": "course04-c04-t45",
+      "kind": "sentence",
+      "text": "绿色",
+      "file": "course04-c04-t45-sentence.mp3",
+      "sha256": "ed225405a4e548b47bd274f7696cd734ae5f08ecd462b410d2273b1dae833ff3"
+    },
+    {
+      "itemId": "course04-c04-t45",
+      "kind": "word",
+      "text": "绿色",
+      "file": "course04-c04-t45-word.mp3",
+      "sha256": "ed225405a4e548b47bd274f7696cd734ae5f08ecd462b410d2273b1dae833ff3"
+    },
+    {
+      "itemId": "course04-c04-t46",
+      "kind": "sentence",
+      "text": "青色",
+      "file": "course04-c04-t46-sentence.mp3",
+      "sha256": "bd1edc84eb80b40a91a2a0f751cc6d2e1143938f086de3f5a543aea73a0cc9cb"
+    },
+    {
+      "itemId": "course04-c04-t46",
+      "kind": "word",
+      "text": "青色",
+      "file": "course04-c04-t46-word.mp3",
+      "sha256": "bd1edc84eb80b40a91a2a0f751cc6d2e1143938f086de3f5a543aea73a0cc9cb"
+    },
+    {
+      "itemId": "course04-c04-t47",
+      "kind": "sentence",
+      "text": "蓝色",
+      "file": "course04-c04-t47-sentence.mp3",
+      "sha256": "b5cdd2fc616369b452ce272507bf982b4302dcbdfaa01dbb0aa094f25c82b19d"
+    },
+    {
+      "itemId": "course04-c04-t47",
+      "kind": "word",
+      "text": "蓝色",
+      "file": "course04-c04-t47-word.mp3",
+      "sha256": "b5cdd2fc616369b452ce272507bf982b4302dcbdfaa01dbb0aa094f25c82b19d"
+    },
+    {
+      "itemId": "course04-c04-t48",
+      "kind": "sentence",
+      "text": "紫色",
+      "file": "course04-c04-t48-sentence.mp3",
+      "sha256": "f78a69372e651470d7cc79baebf1e6cdd2aab9a2e5795a5ffdf203bb277c1260"
+    },
+    {
+      "itemId": "course04-c04-t48",
+      "kind": "word",
+      "text": "紫色",
+      "file": "course04-c04-t48-word.mp3",
+      "sha256": "f78a69372e651470d7cc79baebf1e6cdd2aab9a2e5795a5ffdf203bb277c1260"
+    },
+    {
+      "itemId": "course04-c04-t49",
+      "kind": "sentence",
+      "text": "黑色",
+      "file": "course04-c04-t49-sentence.mp3",
+      "sha256": "5fab3cb383d2399796c6a24aac8c44a7a1e67bdfc365e0d575933dce6a45a13d"
+    },
+    {
+      "itemId": "course04-c04-t49",
+      "kind": "word",
+      "text": "黑色",
+      "file": "course04-c04-t49-word.mp3",
+      "sha256": "5fab3cb383d2399796c6a24aac8c44a7a1e67bdfc365e0d575933dce6a45a13d"
+    },
+    {
+      "itemId": "course04-c04-t50",
+      "kind": "sentence",
+      "text": "白色",
+      "file": "course04-c04-t50-sentence.mp3",
+      "sha256": "0051d7240a36a47d57905909875ffbf7c24d5f3fbba1b91618f52f95b180225a"
+    },
+    {
+      "itemId": "course04-c04-t50",
+      "kind": "word",
+      "text": "白色",
+      "file": "course04-c04-t50-word.mp3",
+      "sha256": "0051d7240a36a47d57905909875ffbf7c24d5f3fbba1b91618f52f95b180225a"
+    },
+    {
+      "itemId": "course04-c04-t51",
+      "kind": "sentence",
+      "text": "粉色",
+      "file": "course04-c04-t51-sentence.mp3",
+      "sha256": "2eae0f3fb4d2272d24bda95fc19c7fbb0536306d4e872d5f4d7791c2372efe10"
+    },
+    {
+      "itemId": "course04-c04-t51",
+      "kind": "word",
+      "text": "粉色",
+      "file": "course04-c04-t51-word.mp3",
+      "sha256": "2eae0f3fb4d2272d24bda95fc19c7fbb0536306d4e872d5f4d7791c2372efe10"
+    },
+    {
+      "itemId": "course04-c04-t52",
+      "kind": "sentence",
+      "text": "鸡蛋",
+      "file": "course04-c04-t52-sentence.mp3",
+      "sha256": "f3b68f6524370eef434b5b1788b7604edc43199c189a0f8b45c57fc29dc9c842"
+    },
+    {
+      "itemId": "course04-c04-t52",
+      "kind": "word",
+      "text": "鸡蛋",
+      "file": "course04-c04-t52-word.mp3",
+      "sha256": "f3b68f6524370eef434b5b1788b7604edc43199c189a0f8b45c57fc29dc9c842"
+    },
+    {
+      "itemId": "course04-c04-t53",
+      "kind": "sentence",
+      "text": "鸡肉",
+      "file": "course04-c04-t53-sentence.mp3",
+      "sha256": "24e996721f9d6c9902270e6510cfaa276843476b58ebb4e672ff8b496fcc4c36"
+    },
+    {
+      "itemId": "course04-c04-t53",
+      "kind": "word",
+      "text": "鸡肉",
+      "file": "course04-c04-t53-word.mp3",
+      "sha256": "24e996721f9d6c9902270e6510cfaa276843476b58ebb4e672ff8b496fcc4c36"
+    },
+    {
+      "itemId": "course04-c04-t54",
+      "kind": "sentence",
+      "text": "牛肉",
+      "file": "course04-c04-t54-sentence.mp3",
+      "sha256": "78e1e4a7cf73a6f7825e0417f50d4144e718d732e01a6f681267b9ce99cfce1e"
+    },
+    {
+      "itemId": "course04-c04-t54",
+      "kind": "word",
+      "text": "牛肉",
+      "file": "course04-c04-t54-word.mp3",
+      "sha256": "78e1e4a7cf73a6f7825e0417f50d4144e718d732e01a6f681267b9ce99cfce1e"
+    },
+    {
+      "itemId": "course04-c04-t55",
+      "kind": "sentence",
+      "text": "羊肉",
+      "file": "course04-c04-t55-sentence.mp3",
+      "sha256": "251dd846e07ef870d016da173a8f1be30d44f6b94abaed75c760c5c5d9208ea3"
+    },
+    {
+      "itemId": "course04-c04-t55",
+      "kind": "word",
+      "text": "羊肉",
+      "file": "course04-c04-t55-word.mp3",
+      "sha256": "251dd846e07ef870d016da173a8f1be30d44f6b94abaed75c760c5c5d9208ea3"
+    },
+    {
+      "itemId": "course04-c04-t56",
+      "kind": "sentence",
+      "text": "猪肉",
+      "file": "course04-c04-t56-sentence.mp3",
+      "sha256": "7704b44de86db6e01c5b325a6ed3a2dd9034ad7c794de235144be39bc523b52d"
+    },
+    {
+      "itemId": "course04-c04-t56",
+      "kind": "word",
+      "text": "猪肉",
+      "file": "course04-c04-t56-word.mp3",
+      "sha256": "7704b44de86db6e01c5b325a6ed3a2dd9034ad7c794de235144be39bc523b52d"
+    },
+    {
+      "itemId": "course04-c04-t57",
+      "kind": "sentence",
+      "text": "鸭肉",
+      "file": "course04-c04-t57-sentence.mp3",
+      "sha256": "706d098a40cbf62479cdaecabccb2e950c76fb0bc4462d4f1c7b7af3999f436c"
+    },
+    {
+      "itemId": "course04-c04-t57",
+      "kind": "word",
+      "text": "鸭肉",
+      "file": "course04-c04-t57-word.mp3",
+      "sha256": "706d098a40cbf62479cdaecabccb2e950c76fb0bc4462d4f1c7b7af3999f436c"
+    },
+    {
+      "itemId": "course04-c04-t58",
+      "kind": "sentence",
+      "text": "面粉",
+      "file": "course04-c04-t58-sentence.mp3",
+      "sha256": "e28bac2096f7fafff1b7753456746073ffc6e5f3f65be7086d41d25d8456462f"
+    },
+    {
+      "itemId": "course04-c04-t58",
+      "kind": "word",
+      "text": "面粉",
+      "file": "course04-c04-t58-word.mp3",
+      "sha256": "e28bac2096f7fafff1b7753456746073ffc6e5f3f65be7086d41d25d8456462f"
+    },
+    {
+      "itemId": "course04-c04-t59",
+      "kind": "sentence",
+      "text": "奶粉",
+      "file": "course04-c04-t59-sentence.mp3",
+      "sha256": "7d591a9aee284ca9698fb04b059e0a7a542092249bc6b07cc3ef6c227ff243e5"
+    },
+    {
+      "itemId": "course04-c04-t59",
+      "kind": "word",
+      "text": "奶粉",
+      "file": "course04-c04-t59-word.mp3",
+      "sha256": "7d591a9aee284ca9698fb04b059e0a7a542092249bc6b07cc3ef6c227ff243e5"
+    },
+    {
+      "itemId": "course04-c04-t60",
+      "kind": "sentence",
+      "text": "蛋白粉",
+      "file": "course04-c04-t60-sentence.mp3",
+      "sha256": "7e0c5e33bcf99e245dc77679d60d65995d82b620a5ae095b893918d7f4d640b1"
+    },
+    {
+      "itemId": "course04-c04-t60",
+      "kind": "word",
+      "text": "蛋白粉",
+      "file": "course04-c04-t60-word.mp3",
+      "sha256": "7e0c5e33bcf99e245dc77679d60d65995d82b620a5ae095b893918d7f4d640b1"
+    },
+    {
+      "itemId": "course04-c04-t61",
+      "kind": "sentence",
+      "text": "江",
+      "file": "course04-c04-t61-sentence.mp3",
+      "sha256": "d1c1bfb1d0e1f2c4162c9658ce426969694a06e52181f0d5a5644497c3e1eea4"
+    },
+    {
+      "itemId": "course04-c04-t61",
+      "kind": "word",
+      "text": "江",
+      "file": "course04-c04-t61-word.mp3",
+      "sha256": "d1c1bfb1d0e1f2c4162c9658ce426969694a06e52181f0d5a5644497c3e1eea4"
+    },
+    {
+      "itemId": "course04-c04-t62",
+      "kind": "sentence",
+      "text": "河",
+      "file": "course04-c04-t62-sentence.mp3",
+      "sha256": "196daf6ee412556904c4f70fd9cf3d8e9733f900038d6713c58f9754c3e58446"
+    },
+    {
+      "itemId": "course04-c04-t62",
+      "kind": "word",
+      "text": "河",
+      "file": "course04-c04-t62-word.mp3",
+      "sha256": "196daf6ee412556904c4f70fd9cf3d8e9733f900038d6713c58f9754c3e58446"
+    },
+    {
+      "itemId": "course04-c04-t63",
+      "kind": "sentence",
+      "text": "湖",
+      "file": "course04-c04-t63-sentence.mp3",
+      "sha256": "46fdb35fbe572ddf34670faec3e9d17c5999c8b5fe34d06e497a8c2e22b24d7b"
+    },
+    {
+      "itemId": "course04-c04-t63",
+      "kind": "word",
+      "text": "湖",
+      "file": "course04-c04-t63-word.mp3",
+      "sha256": "46fdb35fbe572ddf34670faec3e9d17c5999c8b5fe34d06e497a8c2e22b24d7b"
+    },
+    {
+      "itemId": "course04-c04-t64",
+      "kind": "sentence",
+      "text": "海",
+      "file": "course04-c04-t64-sentence.mp3",
+      "sha256": "abd25311f8229e73bc75e4e8fa0a991755ba4be8085496787ea53939c8156c1d"
+    },
+    {
+      "itemId": "course04-c04-t64",
+      "kind": "word",
+      "text": "海",
+      "file": "course04-c04-t64-word.mp3",
+      "sha256": "abd25311f8229e73bc75e4e8fa0a991755ba4be8085496787ea53939c8156c1d"
+    },
+    {
+      "itemId": "course04-c04-t65",
+      "kind": "sentence",
+      "text": "手",
+      "file": "course04-c04-t65-sentence.mp3",
+      "sha256": "76add1015991afba709d96768e5adda3342a952e26d4f6227508055a39f13a5e"
+    },
+    {
+      "itemId": "course04-c04-t65",
+      "kind": "word",
+      "text": "手",
+      "file": "course04-c04-t65-word.mp3",
+      "sha256": "76add1015991afba709d96768e5adda3342a952e26d4f6227508055a39f13a5e"
+    },
+    {
+      "itemId": "course04-c04-t66",
+      "kind": "sentence",
+      "text": "竹",
+      "file": "course04-c04-t66-sentence.mp3",
+      "sha256": "0e7138008ef4fbd1f50f3c4035f96ffec7d87ab7a1e7c79f7234b1379b52e0ff"
+    },
+    {
+      "itemId": "course04-c04-t66",
+      "kind": "word",
+      "text": "竹",
+      "file": "course04-c04-t66-word.mp3",
+      "sha256": "0e7138008ef4fbd1f50f3c4035f96ffec7d87ab7a1e7c79f7234b1379b52e0ff"
+    },
+    {
+      "itemId": "course04-c04-t67",
+      "kind": "sentence",
+      "text": "笔",
+      "file": "course04-c04-t67-sentence.mp3",
+      "sha256": "19a11c404d13d63b9eef73dae0305dbd0fe27c1a9056ea8acf8b60057bd08215"
+    },
+    {
+      "itemId": "course04-c04-t67",
+      "kind": "word",
+      "text": "笔",
+      "file": "course04-c04-t67-word.mp3",
+      "sha256": "19a11c404d13d63b9eef73dae0305dbd0fe27c1a9056ea8acf8b60057bd08215"
+    },
+    {
+      "itemId": "course04-c04-t68",
+      "kind": "sentence",
+      "text": "篮",
+      "file": "course04-c04-t68-sentence.mp3",
+      "sha256": "867d6b2bb744174f77d17ad4b38f1d535104fb63725921c30ffadd278deaa993"
+    },
+    {
+      "itemId": "course04-c04-t68",
+      "kind": "word",
+      "text": "篮",
+      "file": "course04-c04-t68-word.mp3",
+      "sha256": "867d6b2bb744174f77d17ad4b38f1d535104fb63725921c30ffadd278deaa993"
+    },
+    {
+      "itemId": "course04-c04-t69",
+      "kind": "sentence",
+      "text": "行",
+      "file": "course04-c04-t69-sentence.mp3",
+      "sha256": "d2cfbac0e590badcdf5a0bc0d83ed9aa8234739b20291963b9abe4cd9a01e78f"
+    },
+    {
+      "itemId": "course04-c04-t69",
+      "kind": "word",
+      "text": "行",
+      "file": "course04-c04-t69-word.mp3",
+      "sha256": "d2cfbac0e590badcdf5a0bc0d83ed9aa8234739b20291963b9abe4cd9a01e78f"
+    },
+    {
+      "itemId": "course04-c04-t70",
+      "kind": "sentence",
+      "text": "走",
+      "file": "course04-c04-t70-sentence.mp3",
+      "sha256": "433dff01e76fc6a48ee6d9088149b3aef577a0aff68c9b94c36575f0ac5f100e"
+    },
+    {
+      "itemId": "course04-c04-t70",
+      "kind": "word",
+      "text": "走",
+      "file": "course04-c04-t70-word.mp3",
+      "sha256": "433dff01e76fc6a48ee6d9088149b3aef577a0aff68c9b94c36575f0ac5f100e"
+    },
+    {
+      "itemId": "course04-c04-t71",
+      "kind": "sentence",
+      "text": "超",
+      "file": "course04-c04-t71-sentence.mp3",
+      "sha256": "b8bbca0c1ba352af036ff8e7322152fd9eb2441f8af0a19d2413fdb690d36da3"
+    },
+    {
+      "itemId": "course04-c04-t71",
+      "kind": "word",
+      "text": "超",
+      "file": "course04-c04-t71-word.mp3",
+      "sha256": "b8bbca0c1ba352af036ff8e7322152fd9eb2441f8af0a19d2413fdb690d36da3"
+    },
+    {
+      "itemId": "course04-c04-t72",
+      "kind": "sentence",
+      "text": "越",
+      "file": "course04-c04-t72-sentence.mp3",
+      "sha256": "28ba4714bbea04beba8584c8261661a8ab317607aff8ec76fdfefeb496e4453f"
+    },
+    {
+      "itemId": "course04-c04-t72",
+      "kind": "word",
+      "text": "越",
+      "file": "course04-c04-t72-word.mp3",
+      "sha256": "28ba4714bbea04beba8584c8261661a8ab317607aff8ec76fdfefeb496e4453f"
+    },
+    {
+      "itemId": "course04-c04-t73",
+      "kind": "sentence",
+      "text": "越来越",
+      "file": "course04-c04-t73-sentence.mp3",
+      "sha256": "c9d9a7770d2de4c709a6092a4de287be3f1269d06c866b8a7d8f0bc4059811e0"
+    },
+    {
+      "itemId": "course04-c04-t73",
+      "kind": "word",
+      "text": "越来越",
+      "file": "course04-c04-t73-word.mp3",
+      "sha256": "c9d9a7770d2de4c709a6092a4de287be3f1269d06c866b8a7d8f0bc4059811e0"
+    }
+  ]
+}

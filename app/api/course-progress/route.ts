@@ -6,7 +6,7 @@ import { z } from "zod";
 import { courseEventSchema } from "../../course-learning";
 export const dynamic = "force-dynamic";
 const headers = { "Cache-Control": "no-store" };
-export async function GET() {
+export async function GET(request: Request) {
   const user = await getRequestUser();
   if (!user)
     return Response.json(
@@ -18,7 +18,7 @@ export async function GET() {
     .from(courseEvents)
     .where(eq(courseEvents.userId, user.userId));
   return Response.json(
-    { events: rows.map((r) => JSON.parse(r.payload)) },
+    { events: rows.map((r) => JSON.parse(r.payload)).filter(e => new URL(request.url).searchParams.get('lessons') === 'all' || e.lessonId === 'intensive-03') },
     { headers },
   );
 }

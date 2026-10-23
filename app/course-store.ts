@@ -93,7 +93,7 @@ export function useCourseProgress(owner: string | null) {
         pending = (await read(db)).filter((e) => !e.synced);
       }
       const r = await authenticatedFetch(
-        "/api/course-progress",
+        "/api/course-progress?lessons=all",
         { cache: "no-store" },
         owner,
       );
