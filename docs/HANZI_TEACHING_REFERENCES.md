@@ -30,13 +30,30 @@ Conclusion for content authoring: adopt verified explanations and useful teachin
 
 Apply these as original teaching designs: scene → component contrast → whole word and sentence → guided retrieval. Learn exact word readings and tones rather than guessing them from a family resemblance. A short pilot lets learners judge clarity and integration before larger content expansion.
 
-## Shipped pilot: 莫 story trail
+## 莫 story trail
 
-Five cards: 莫, 暮, 幕, 摸, 模. Four contextual words: 暮色, 夜幕, 摸摸, 模型, each with a sentence. All explanations, prompts, feedback and narration are in EN/FR/RU. The Mandarin word and sentence recordings use the existing Xiaoxiao voice. 模's alternate mú reading in 模具 is explained, without inventing an identical pronunciation across the family.
+Eleven cards: 莫, 暮, 幕, 摸, 模, 墓, 漠, 膜, 募, 摹, 慕. Ten contextual words: 暮色, 夜幕, 摸摸, 模型, 墓地, 沙漠, 薄膜, 招募, 临摹, 羡慕, each with a sentence. All explanations, prompts, feedback and narration are in EN/FR/RU. The Mandarin word and sentence recordings use the existing Xiaoxiao voice. 模's alternate mú reading in 模具 is explained, without inventing an identical pronunciation across the family.
 
 Chinese OS scenes and copy are original. Do not copy channel artwork, narration or transcript into assets. Early-image schematics are labelled as explanatory illustrations, not inscription facsimiles. Origin accounts and memory scenes have separate labels and per-character source links.
 
 This optional trail does not expand core Atlas/HSK targets, change existing lesson schedules or award FSRS credit. Existing picture stories, family assemblies, writing and listening remain available.
+
+## Six additional members: checked explanations
+
+All six were checked in the CUHK database on 23 October 2026. In each entry 莫 is identified as the sound component. The added scenes are original modern mnemonics, with explicit component roles rather than a universal historical “cover” derivation.
+
+| Character | Meaning clue and source | Scene and contextual practice |
+| --- | --- | --- |
+| 墓 mù | [土 earth; original grave sense](https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=墓). The older distinction between a flat burial and a raised 墳 is not imposed on modern 墓地. | A flower placed beside a gravestone; 墓地. Contrast 墓 / 暮 / 幕 / 募. |
+| 漠 mò | [氵 water; desert](https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=漠). Scarce-water imagery is a mnemonic, not evidence that 莫 historically means hidden water. | Dunes, wind and a water bottle; 沙漠. Contrast 漠 / 膜 / 模 / 幕. |
+| 膜 mó | [肉 flesh; thin bodily tissue](https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=膜). The 月-shaped component is flesh, not moon. | A thin film settling over a cup illustrates the extended film sense; 薄膜. Contrast 膜 / 漠 / 模 / 慕. |
+| 募 mù | [力 effort; seeking or gathering widely](https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=募). | A notice gathers volunteers; 招募. Contrast 募 / 墓 / 慕 / 幕. |
+| 摹 mó | [手 hand; an earlier standard/rule sense, later copying](https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=摹). Modern 摹 and 摸 are distinct despite older interchange. | A sheet, model and pencil illustrate copying; 临摹. Contrast 摹 / 摸 / 模 / 幕. |
+| 慕 mù | [心 heart; longing/admiration](https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=慕). The lower marks are a form of 心. | A learner admires a friend's Chinese; 羡慕. Contrast 慕 / 募 / 墓 / 暮. |
+
+Word readings were cross-checked with the Taiwan Ministry of Education's Concised Mandarin Dictionary: [薄膜](https://dict.concised.moe.edu.tw/search.jsp?word=薄膜), [墓地](https://dict.concised.moe.edu.tw/dictView.jsp?ID=5078&la=1&powerMode=0), [沙漠](https://dict.concised.moe.edu.tw/dictView.jsp?ID=33785&la=0&powerMode=0), [招募](https://dict.concised.moe.edu.tw/dictView.jsp?ID=29593&la=1&powerMode=0), [臨摹](https://dict.concised.moe.edu.tw/dictView.jsp?ID=14881&la=0&powerMode=0), [羨慕](https://dict.concised.moe.edu.tw/dictView.jsp?ID=27526&la=0&powerMode=0). The app uses simplified forms and authored example sentences. It keeps bómó, línmó, zhāomù, mùdì, shāmò and xiànmù as whole-word readings; isolated-component sound resemblance is approximate.
+
+The trail now has 53 recordings: 33 EN/FR/RU narrations and twenty Mandarin word/sentence recordings. Existing story IDs and guided/no-credit behavior remain stable. Each new check uses four curated same-family choices so the exercise does not become a ten-option grid. Touch swipes, desktop controls, replay, reduced motion and the existing layout are reused.
 
 ## Authoring and verification
 
