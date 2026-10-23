@@ -78,7 +78,7 @@ export default function AtlasWorkshop({character,onComponent,onCharacter,notify}
  </section>;
 }
 function useReducedMotion(){const [reduced,setReduced]=useState(false);useEffect(()=>{const m=matchMedia("(prefers-reduced-motion: reduce)");const f=()=>setReduced(m.matches);f();m.addEventListener("change",f);return()=>m.removeEventListener("change",f);},[]);return reduced;}
-function CharacterBuild({entry,notify,onCharacter}:{entry:Assembly;notify:(message:string)=>void;onCharacter:(hanzi:string)=>void}){
+export function CharacterBuild({entry,notify,onCharacter}:{entry:Assembly;notify:(message:string)=>void;onCharacter:(hanzi:string)=>void}){
  const {locale}=useI18n();const reduced=useReducedMotion();
  const [joined,setJoined]=useState(true),[quiz,setQuiz]=useState(false),[placed,setPlaced]=useState<number[]>([]),[hint,setHint]=useState(false),[message,setMessage]=useState<Feedback>("");
  const [settled,setSettled]=useState(false);
@@ -138,7 +138,7 @@ export function WordSceneArt({scene,active=false}:{scene:WordScene;active?:boole
   <><rect x="218" y="89" width="204" height="146" rx="12" fill="#c3d5cc" stroke="#6a8d7d" strokeWidth="4"/><path d="M213 235L190 265Q320 282 450 265L427 235Z" fill="#aebfa6"/><path d="M322 118L294 161H322L310 203L350 150H325Z" fill="#e7c681"/></>}
  </g>;
 }
-function WordBuilder({entry,notify}:{entry:WordBuild;notify:(message:string)=>void}){
+export function WordBuilder({entry,notify}:{entry:WordBuild;notify:(message:string)=>void}){
  const {locale}=useI18n();const reduced=useReducedMotion();
  const [joined,setJoined]=useState(false),[quiz,setQuiz]=useState(false),[placed,setPlaced]=useState(0),[message,setMessage]=useState<Feedback>("");
  const wordRecording=workshopRecording(entry,"word")!;
