@@ -67,3 +67,11 @@ node scripts/verify-atlas-family-stories.mjs
 ```
 
 Generation is authoring-only and sends authored text, never learner data. Exact text/voice/rate, SHA-256 and MP3 decoding gate reuse; bounded retries write a temporary recording before replacing the prior file. Prebuild verifies the checked-in inventory and hashes. Changes to captions require regenerated matching narration.
+
+## Catalogue-wide transcript completion — 23 October 2026
+
+The live [Chinese.Decoded catalogue](https://www.youtube.com/@Chinese.Decoded/videos) and [Shorts list](https://www.youtube.com/@Chinese.Decoded/shorts) still contain eight long films and 23 Shorts. The follow-up read all 31 saved English transcripts in full; no excerpt-only items remain. This is full transcript coverage, zero end-to-end video viewings in that pass, and selected checks against 16 CUHK entries; it is not exhaustive verification of every assertion or every displayed graph. Private transcript files are not part of this repository.
+
+Additional findings: a left-position 月 is not always flesh ([朦](https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=朦) uses moon); “little water” is not a settled formation account for [沙](https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=沙). The 巠 film explicitly labels its organizing/silk interpretation as the author's hypothesis. [玩](https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=玩) does not establish a jade-reset-to-beginning origin, while [弄](https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=弄) supports hands holding jade. Use “sound clue” and “meaning clue”; the channel's voiced/unvoiced terminology should not be copied as phonetic voicing. Cultural generalizations, Japanese readings and the full derivative families remain separate verification tasks.
+
+The transferable teaching sequence remains an original scene, an explicit component contrast, exact whole-word pronunciation, a sentence, then retrieval. Historical formation, present-day component function and an invented mnemonic must remain distinct. This audit does not itself add universal Atlas targets or change classroom lesson order.

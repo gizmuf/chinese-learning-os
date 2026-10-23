@@ -41,6 +41,8 @@ import {
 import { useCourseProgress } from "./course-store";
 import { speak, stopAudio } from "./audio";
 import CourseLab from "./course-lab";
+import Lesson04 from "./lesson04";
+import {lesson04} from "./lesson04-data";
 import {labExtraTerms} from "./course-lab-data";
 import Notebook from "./notebook";
 import CourseStory from "./course-story";
@@ -72,6 +74,7 @@ export default function IntensiveCourse({
   const progress = useCourseProgress(owner);
   const [labWriting,setLabWriting]=useState(false);
   const [open, setOpen] = useState(false);
+  const [lessonNumber,setLessonNumber]=useState(3);
   const [tab, setTab] = useState<Tab>("overview");
   const [topic, setTopic] = useState<Topic>("time");
   const [queue, setQueue] = useState(exercises.map((e) => e.id));
@@ -85,6 +88,7 @@ export default function IntensiveCourse({
     [progress.events],
   );
   useEffect(() => {
+    if (new URLSearchParams(window.location.search).get("lesson") === "4") {setLessonNumber(4);setOpen(true);}
     if (new URLSearchParams(window.location.search).get("lesson") === "3")
       setOpen(true);
     if (new URLSearchParams(window.location.search).get("lab") === "1") setTab("lab");
@@ -169,6 +173,8 @@ export default function IntensiveCourse({
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
+  if(open&&lessonNumber===4) return <Lesson04 {...{owner,db,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"",window.location.pathname+"?course=intensive");}}/>;
+  function openLesson04(){stopAudio();setLessonNumber(4);setOpen(true);window.history.replaceState(null,"",window.location.pathname+"?course=intensive&lesson=4");window.scrollTo({top:0,behavior:"instant"});}
   return (
     <div className="course-space">
       <div className="page-heading">
@@ -206,21 +212,22 @@ export default function IntensiveCourse({
               </button>
             </div>
           </section>
+          <section className="panel course-feature"><img src="/course04/boards/9974.jpg" alt={lesson04.title[locale]}/><div><span className="pill">{t("Lesson")} 04 / 60</span><h2>{lesson04.title[locale]}</h2><p>23.10.2026</p><button className="primary" onClick={openLesson04}>{t("Lesson")} 04<ArrowRight size={17}/></button></div></section>
           <details className="course-calendar panel">
             <summary>
-              {t("All 60 lessons")} · {t("One lesson ready")}
+              {t("All 60 lessons")} · {({en:"Two lessons ready",fr:"Deux leçons disponibles",ru:"Два урока доступны"})[locale]}
             </summary>
             <div className="course-lesson-grid">
               {Array.from({ length: 60 }, (_, i) => (
                 <button
                   key={i}
-                  disabled={i !== 2}
-                  className={i === 2 ? "available" : ""}
-                  onClick={openLesson}
+                  disabled={i !== 2 && i !== 3}
+                  className={i === 2 || i === 3 ? "available" : ""}
+                  onClick={i===3?openLesson04:openLesson}
                 >
                   <strong>{String(i + 1).padStart(2, "0")}</strong>
                   <small>
-                    {i === 2
+                    {i === 2 || i === 3
                       ? t("Ready to practice")
                       : t("Awaiting class material")}
                   </small>

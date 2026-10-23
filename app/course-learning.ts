@@ -9,6 +9,7 @@ import { z } from "zod";
 import { labActivityIds, labExtraTerms } from "./course-lab-data";
 import { exercises } from "./course-exercises";
 import { terms, sentences, topicInfo, course } from "./course-data";
+import { lesson04ActivityIds } from './lesson04-data';
 export const activityIds = [
   ...exercises.map((e) => e.id),
   ...labActivityIds,
@@ -20,8 +21,8 @@ export const activityIds = [
 export const courseEventSchema = z
   .object({
     id: z.string().uuid(),
-    lessonId: z.literal("intensive-03"),
-    activityId: z.string().refine((id) => activityIds.includes(id)),
+    lessonId: z.enum(["intensive-03", "intensive-04"]),
+    activityId: z.string(),
     kind: z.enum(["answer", "study", "writing"]),
     correct: z.boolean().nullable(),
     assisted: z.boolean(),
@@ -29,6 +30,8 @@ export const courseEventSchema = z
     rating: z.number().int().min(0).max(4).optional(),
   })
   .superRefine((event, ctx) => {
+    if (!(event.lessonId === 'intensive-04' ? lesson04ActivityIds : activityIds).includes(event.activityId)) ctx.addIssue({code:'custom',message:'Unknown activity for this lesson'});
+    if(event.activityId.startsWith('c04-build-')&&!event.assisted)ctx.addIssue({code:'custom',message:'Expression builders are supported practice'});
     if(event.activityId.startsWith("lab-family-")&&!event.assisted) ctx.addIssue({code:"custom",message:"Visible family examples require assisted practice"});
     const expected = event.activityId.startsWith("study:")
       ? "study"
@@ -72,7 +75,7 @@ export function courseCards(events: CourseEvent[]) {
 export function courseSummary(events: CourseEvent[], now = Date.now()) {
   const answers = events.filter((e) => e.kind === "answer" && exercises.some(activity=>activity.id===e.activityId));
   const independent = answers.filter((e) => !e.assisted);
-  const cards = courseCards(events);
+  const cards = courseCards(events.filter(e=>e.lessonId === "intensive-03"));
   const attempted = new Set(answers.map((e) => e.activityId));
   return {
     attempted: attempted.size,

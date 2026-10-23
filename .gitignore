@@ -56,3 +56,6 @@ next-env.d.ts
 /work/
 
 /.dev.vars*
+
+# Generated local review/download copies; public originals are tracked.
+/output/
