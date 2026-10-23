@@ -4,24 +4,24 @@
   "recordings": [
     {
       "file": "mo-en.mp3",
-      "text": "The sun slips behind a thicket. Its light disappears among the plants. Hold that little scene in your mind. Early forms of 莫 pictured the sun among vegetation: dusk. The lower part later changed into a shape resembling 大; it was not originally a person. 莫 was later borrowed for grammatical uses, including negation. It also became a sound component. Follow it into four new characters; the picture does not predict every meaning.",
+      "text": "The sun slips behind a thicket. Its light disappears among the plants. Hold that little scene in your mind. Early forms of 莫 pictured the sun among vegetation: dusk. The lower part later changed into a shape resembling 大; it was not originally a person. 莫 was later borrowed for grammatical uses, including negation. It also became a sound component. Follow it into ten related characters; the picture does not predict every meaning.",
       "voice": "en-GB-SoniaNeural",
       "rate": "-5%",
-      "sha256": "8ea2e72af3d87117d6f0aebcd79611e372d18e45b33285884e28b797bb1f4f24"
+      "sha256": "44d6b01420b0cea389e6f96b3f2c762e3b78989adfed6c2c944ec390c106031f"
     },
     {
       "file": "mo-fr.mp3",
-      "text": "Le soleil descend derrière un bosquet. Sa lumière disparaît parmi les plantes. Gardez cette petite scène en mémoire. Les formes anciennes de 莫 représentaient le soleil parmi les végétaux : le crépuscule. Le bas a ensuite pris une forme ressemblant à 大 ; ce n’était pas une personne à l’origine. 莫 a ensuite été emprunté pour des emplois grammaticaux, dont la négation. Il sert aussi de composant phonétique. Suivez-le dans quatre autres caractères ; l’image ne prédit pas tous leurs sens.",
+      "text": "Le soleil descend derrière un bosquet. Sa lumière disparaît parmi les plantes. Gardez cette petite scène en mémoire. Les formes anciennes de 莫 représentaient le soleil parmi les végétaux : le crépuscule. Le bas a ensuite pris une forme ressemblant à 大 ; ce n’était pas une personne à l’origine. 莫 a ensuite été emprunté pour des emplois grammaticaux, dont la négation. Il sert aussi de composant phonétique. Suivez-le dans dix caractères apparentés ; l’image ne prédit pas tous leurs sens.",
       "voice": "fr-FR-DeniseNeural",
       "rate": "-5%",
-      "sha256": "6d6dc535ad569d09f7543726ae4dff68c0c975650d964c14aea34492e69ea5d7"
+      "sha256": "887728fd3d914f6fbb6a1d529e61e36d2eb628f8ca297d5e38483ab80b8b0312"
     },
     {
       "file": "mo-ru.mp3",
-      "text": "Солнце опускается за заросли. Его свет исчезает среди растений. Запомните эту маленькую сцену. Ранние формы 莫 изображали солнце среди растений: сумерки. Нижняя часть позже стала похожа на 大; изначально это не был человек. Позже 莫 стали заимствовать для грамматических значений, включая отрицание. Он также стал звуковым компонентом. Проследите за ним в четырёх новых знаках; картинка не предсказывает все значения.",
+      "text": "Солнце опускается за заросли. Его свет исчезает среди растений. Запомните эту маленькую сцену. Ранние формы 莫 изображали солнце среди растений: сумерки. Нижняя часть позже стала похожа на 大; изначально это не был человек. Позже 莫 стали заимствовать для грамматических значений, включая отрицание. Он также стал звуковым компонентом. Проследите за ним в десяти родственных знаках; картинка не предсказывает все значения.",
       "voice": "ru-RU-SvetlanaNeural",
       "rate": "-5%",
-      "sha256": "5bc81783caca4cabbd61867800b4eb91ccf03ec3a1308ba1222150b9be840202"
+      "sha256": "acf6a40d4d5d0e41b8a4a7ccd9cdfa4acad1ff7454896de21348595f8813a951"
     },
     {
       "file": "mu-dusk-en.mp3",
@@ -162,6 +162,216 @@
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-10%",
       "sha256": "c440d18a42c700625a57e071f53cd77b796d4923e56d4317da239529829cfe1d"
+    },
+    {
+      "file": "mu-grave-en.mp3",
+      "text": "A quiet path leads to a grave beneath a tree. Someone leaves a flower by the stone. Connect this resting place with the earth below it. In 墓, 土 gives the earth clue and 莫 gives a sound clue. The dictionary identifies a grave as its original meaning. Our flower and stone are a memory scene, not an ancient inscription. 墓地 means a cemetery or burial ground. Compare 墓 with 暮: both are mù, but earth points to a grave and sun to dusk. The tone alone cannot tell them apart.",
+      "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
+      "sha256": "54e84df4633915fef2260d0b616ba7d7685080b4acf9f406617abdaa3dd2727b"
+    },
+    {
+      "file": "mu-grave-fr.mp3",
+      "text": "Un chemin paisible mène à une tombe sous un arbre. Une personne dépose une fleur près de la pierre. Associez ce lieu de repos à la terre qui le porte. Dans 墓, 土 donne l’indice de la terre et 莫 un indice sonore. Le dictionnaire donne la tombe comme sens originel. Notre fleur et notre pierre sont une image mémoire, pas une inscription ancienne. 墓地 signifie cimetière ou lieu de sépulture. Comparez 墓 et 暮 : tous deux se lisent mù, mais la terre indique une tombe et le soleil le crépuscule. Le ton seul ne suffit pas à les distinguer.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "sha256": "72854c6446a10c7b4f2460b1f547a1e59758251d01d1003936709e2468a307f4"
+    },
+    {
+      "file": "mu-grave-ru.mp3",
+      "text": "Тихая тропинка ведёт к могиле под деревом. Кто-то оставляет цветок у камня. Свяжите это место покоя с землёй под ним. В 墓 компонент 土 даёт подсказку земли, а 莫 — звучания. Словарь указывает могилу как исходное значение. Цветок и камень — наш образ для памяти, а не древняя надпись. 墓地 означает кладбище или место захоронения. Сравните 墓 и 暮: оба читаются mù, но земля указывает на могилу, а солнце — на сумерки. Одного тона недостаточно, чтобы их различить.",
+      "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
+      "sha256": "15816214d35438df1f7d41678ad8db803331ddf65a849d17b8f8cd50fa7d523d"
+    },
+    {
+      "file": "mu-grave-word.mp3",
+      "text": "墓地",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "4fe5750f248a1b8cbf4c85eab7f226f38f656b5464bef9dd193e6f89a13a64cd"
+    },
+    {
+      "file": "mu-grave-sentence.mp3",
+      "text": "墓地旁边有一棵树。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "2ef2498e321d70dd105c0395ba1a155d98a396663909cb1647eab53417765525"
+    },
+    {
+      "file": "mo-desert-en.mp3",
+      "text": "Wind moves sand across a wide desert. The dunes stretch to the horizon. Imagine walking there with a water bottle: the contrast helps this scene stay in memory. 漠 contains the water component 氵 and the sound component 莫. The dictionary gives desert as its original meaning. The picture of scarce water is our memory hook; it does not prove that 莫 means hidden water. 沙漠 is the everyday word for desert. Both characters have 氵. Learn shāmò as a whole word and remember the falling fourth tone of mò, unlike the second tone of 膜, mó.",
+      "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
+      "sha256": "77959b47f91ba4850af3745b64d2ef117c8b5afe29445b2d672d0af192bf2a58"
+    },
+    {
+      "file": "mo-desert-fr.mp3",
+      "text": "Le vent déplace le sable dans un vaste désert. Les dunes s’étendent jusqu’à l’horizon. Imaginez y marcher avec une gourde : ce contraste aide à retenir la scène. 漠 contient le composant de l’eau 氵 et le composant sonore 莫. Le dictionnaire donne désert comme sens originel. L’image de l’eau rare est notre aide mémoire ; elle ne prouve pas que 莫 signifie eau cachée. 沙漠 est le mot courant pour désert. Les deux caractères contiennent 氵. Apprenez le mot entier shāmò et le quatrième ton descendant de mò, différent du deuxième ton de 膜, mó.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "sha256": "068ff04d3476a011b4d331e6ccdeb23737ebd4bab65354399a76ac9dd5754c25"
+    },
+    {
+      "file": "mo-desert-ru.mp3",
+      "text": "Ветер переносит песок по широкой пустыне. Дюны тянутся до горизонта. Представьте, что идёте там с бутылкой воды: контраст поможет запомнить сцену. 漠 состоит из компонента воды 氵 и звукового компонента 莫. Словарь даёт пустыню как исходное значение. Образ нехватки воды помогает запомнить знак, но не доказывает, что 莫 означает скрытую воду. 沙漠 — обычное слово для пустыни. В обоих знаках есть 氵. Учите слово shāmò целиком и запомните нисходящий четвёртый тон mò, в отличие от второго тона 膜, mó.",
+      "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
+      "sha256": "639258cf02f8117c6f7d871c83828c45a083ff7f523effd9be9b38816900ebf5"
+    },
+    {
+      "file": "mo-desert-word.mp3",
+      "text": "沙漠",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "bc6e6d2d69e89597dbeabbb2f8171c476fcd863f7318aba0c7517b4eafa725f9"
+    },
+    {
+      "file": "mo-desert-sentence.mp3",
+      "text": "沙漠里很少下雨。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "2be1a0e06c8b983953c2130899411bb56f1e5f29ca6646b352fb1fd2e64bc26d"
+    },
+    {
+      "file": "mo-membrane-en.mp3",
+      "text": "A thin, almost transparent film settles over a cup. It is a layer, not a curtain or a solid lid. Imagine how light it feels between your fingers. The 月-shaped part of 膜 comes from flesh, 肉, not the moon. 莫 gives a sound clue. The historical meaning concerns thin bodily tissue; our cup illustrates the modern film meaning. 薄膜 means a thin film or membrane, pronounced bómó. Compare 膜 with 幕: both can be a covering, but a thin layer is not a cloth curtain. Learn the material and the tone together.",
+      "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
+      "sha256": "b5c546b8002c4414fa85fdf8711d394145fa2495027c9ea9abb950f1b0d1b0be"
+    },
+    {
+      "file": "mo-membrane-fr.mp3",
+      "text": "Une pellicule fine, presque transparente, se pose sur une tasse. C’est une couche, pas un rideau ni un couvercle rigide. Imaginez sa légèreté entre vos doigts. La partie de 膜 en forme de 月 vient de la chair, 肉, et non de la lune. 莫 donne un indice sonore. Le sens historique concerne un tissu corporel mince ; notre tasse illustre le sens moderne de pellicule. 薄膜 signifie pellicule fine ou membrane et se prononce bómó. Comparez 膜 et 幕 : les deux peuvent couvrir, mais une fine couche n’est pas un rideau en tissu. Retenez ensemble la matière et le ton.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "sha256": "2a2dc34e6b89d1eac78cfb297729204ba88f5690c6396d43204c40228709b3ff"
+    },
+    {
+      "file": "mo-membrane-ru.mp3",
+      "text": "Тонкая, почти прозрачная плёнка ложится на чашку. Это слой, а не занавес и не твёрдая крышка. Представьте, какая она лёгкая между пальцами. Часть 膜 в форме 月 происходит от плоти, 肉, а не от луны. 莫 подсказывает звучание. Историческое значение связано с тонкой тканью тела; чашка иллюстрирует современное значение плёнки. 薄膜 — тонкая плёнка или мембрана, произносится bómó. Сравните 膜 и 幕: оба могут что-то покрывать, но тонкий слой — не тканевый занавес. Запоминайте материал вместе с тоном.",
+      "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
+      "sha256": "2c71175a62200530a373f923150f41d0511db5e9c7faae34ba3524d84a2bb445"
+    },
+    {
+      "file": "mo-membrane-word.mp3",
+      "text": "薄膜",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "897e23405583cce74cab6908c98df1c96c0333bcfc9b5b4f86117143b626df70"
+    },
+    {
+      "file": "mo-membrane-sentence.mp3",
+      "text": "杯子上有一层薄膜。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "830328f9535adedd713965625fa982c3168e50003017e8807c0b10d37dccb174"
+    },
+    {
+      "file": "mu-recruit-en.mp3",
+      "text": "A school needs volunteers. A notice invites people to help, and students gather around it. Someone is making an effort to bring helpers together. 募 combines 力, strength or effort, with 莫 as a sound clue. The dictionary describes seeking or gathering widely. Our volunteer notice illustrates recruiting; the effort clue helps you remember the invitation to help. 招募 means to recruit. A school can 招募 volunteers; a project can 招募 participants. Compare 募, seeking helpers, with 慕, admiring someone: effort below, or heart below?",
+      "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
+      "sha256": "bd5dc8a369d354454a602636f421fa6891217f9b8196f9958145d887831a1395"
+    },
+    {
+      "file": "mu-recruit-fr.mp3",
+      "text": "Une école cherche des bénévoles. Une affiche invite à aider et des élèves se rassemblent autour. Quelqu’un fait l’effort de réunir des volontaires. 募 associe 力, force ou effort, à 莫 comme indice sonore. Le dictionnaire décrit une recherche ou une collecte étendue. Notre affiche illustre le recrutement ; l’indice de l’effort aide à retenir cette invitation à participer. 招募 signifie recruter. Une école peut 招募 des bénévoles ; un projet peut 招募 des participants. Comparez 募, chercher de l’aide, et 慕, admirer quelqu’un : l’effort en bas ou le cœur en bas ?",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "sha256": "c23edfe142fe82200c1b5bf4a3a7302c8e271e4cc7274708f296263cec969c90"
+    },
+    {
+      "file": "mu-recruit-ru.mp3",
+      "text": "Школе нужны добровольцы. Объявление приглашает помочь, и ученики собираются рядом. Кто-то старается привлечь людей к общему делу. В 募 компонент 力 означает силу или усилие, а 莫 подсказывает звук. Словарь описывает широкий поиск или сбор. Наше объявление показывает набор добровольцев, а подсказка усилия помогает запомнить приглашение помочь. 招募 означает набирать. Школа может 招募 добровольцев, а проект — участников. Сравните 募, привлекать помощников, и 慕, восхищаться кем-то: внизу усилие или сердце?",
+      "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
+      "sha256": "cbc5cc851f6f2763cc1360ecba9a99ce764f029139687d7da37ed0f38cf8ce24"
+    },
+    {
+      "file": "mu-recruit-word.mp3",
+      "text": "招募",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "c68953ae4d27a5a21af6dfddc8dfdec2d30da3caaa87f9ab4ab8d8bf370fe0f3"
+    },
+    {
+      "file": "mu-recruit-sentence.mp3",
+      "text": "学校正在招募志愿者。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "39b53a558e3e63627db2e103a513521b8ac4054910924890cffedb0c15aedd94"
+    },
+    {
+      "file": "mo-trace-en.mp3",
+      "text": "A sheet rests over a mountain drawing. A pencil follows the outline and a copy appears. Think of the hand carefully following a model. 摹 has 手 below 莫, the sound clue. The dictionary records an earlier sense of standard or rule and later senses of imitating and copying. Tracing is our scene for that later use; distinguish 摹 from modern 摸, touch. 临摹 means copying from a model, by looking at it or tracing it. Contrast 摸, mō, feeling a shape, with 摹, mó, copying it, and 模, mó, a model. Placement, material and tone keep the three apart.",
+      "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
+      "sha256": "c48a8c0f5963a49fb281487cd6ca44a83f8ec921e023e9e9d7d8a8fa26db34ca"
+    },
+    {
+      "file": "mo-trace-fr.mp3",
+      "text": "Une feuille repose sur un dessin de montagne. Un crayon suit le contour et une copie apparaît. Pensez à la main qui suit soigneusement un modèle. 摹 a 手 sous 莫, l’indice sonore. Le dictionnaire relève un sens ancien de norme ou règle, puis l’imitation et la copie. Le calque illustre cet usage ultérieur ; distinguez 摹 du caractère moderne 摸, toucher. 临摹 signifie copier d’après un modèle, en l’observant ou en le calquant. Comparez 摸, mō, toucher une forme, 摹, mó, la copier, et 模, mó, un modèle. La position, la matière et le ton distinguent les trois.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "sha256": "644ca42ebb2eb61be56f378714a8180653d57ff25f3ef25c4346ea23cbfd3393"
+    },
+    {
+      "file": "mo-trace-ru.mp3",
+      "text": "Лист лежит поверх рисунка горы. Карандаш повторяет контур, и появляется копия. Представьте руку, которая внимательно следует образцу. В 摹 компонент 手 стоит под 莫, звуковой подсказкой. Словарь отмечает раннее значение нормы или правила, затем подражание и копирование. Обводка показывает позднее употребление; отличайте 摹 от современного 摸, трогать. 临摹 — копировать по образцу, глядя на него или обводя. Сравните 摸, mō, ощупывать форму, 摹, mó, копировать её, и 模, mó, модель. Положение, материал и тон помогают различать эти три знака.",
+      "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
+      "sha256": "645d18bddde56fa45e0dc5479a8dbe4dd4cf28e5b24f1f1b6e90ae8f5e98465d"
+    },
+    {
+      "file": "mo-trace-word.mp3",
+      "text": "临摹",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "45221abb8a6d5f5dc22fbf91f1ef0c3f85396f63ec75f35551c81b52640bfe3b"
+    },
+    {
+      "file": "mo-trace-sentence.mp3",
+      "text": "我在临摹这幅画。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "575b42eaa6c9122d942c5b82a64200035ce756e5d8dce2624afc8d2324d3be44"
+    },
+    {
+      "file": "mu-admire-en.mp3",
+      "text": "A learner listens to a friend speaking Chinese with ease. A little heart rises: I wish I could do that too. This scene connects admiration with a feeling inside. The small marks below 莫 in 慕 are a form of 心, heart. 莫 gives a sound clue. The historical explanation connects the character with longing and admiration; the heart is the meaning clue. 羡慕 means to envy or admire something someone has. Here it is admiration for a friend's language skill, without hostility. Compare 慕 with 募: a heart feels admiration; recruiting takes effort.",
+      "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
+      "sha256": "613e7609081931767b22ee91fb5282548131ab0fc6bb3c7947109897579c3b92"
+    },
+    {
+      "file": "mu-admire-fr.mp3",
+      "text": "Une personne écoute un ami parler chinois avec aisance. Un petit cœur apparaît : j’aimerais savoir faire cela aussi. La scène relie l’admiration à un sentiment intérieur. Les petites marques sous 莫 dans 慕 sont une forme de 心, le cœur. 莫 donne un indice sonore. L’explication historique relie le caractère au désir et à l’admiration ; le cœur donne l’indice de sens. 羡慕 signifie envier ou admirer ce qu’une personne possède. Ici, on admire les compétences linguistiques d’un ami, sans hostilité. Comparez 慕 et 募 : le cœur admire ; recruter demande un effort.",
+      "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
+      "sha256": "8678c46f5957ae73977e265649732c2c96538b773fdc14493ab4ebaf40b35b8b"
+    },
+    {
+      "file": "mu-admire-ru.mp3",
+      "text": "Ученик слушает друга, который свободно говорит по-китайски. Появляется маленькое сердце: я тоже хотел бы так уметь. Сцена связывает восхищение с внутренним чувством. Маленькие черты под 莫 в 慕 — форма 心, сердца. 莫 подсказывает звучание. Историческое объяснение связывает знак со стремлением и восхищением; сердце даёт смысловую подсказку. 羡慕 означает завидовать тому, что есть у другого, или восхищаться этим. Здесь это доброе восхищение языковыми навыками друга. Сравните 慕 и 募: сердце восхищается, а набор людей требует усилий.",
+      "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
+      "sha256": "039895f9576b6366babb5740842c435f114d9e39cf299a7b20a4b60d04520c6a"
+    },
+    {
+      "file": "mu-admire-word.mp3",
+      "text": "羡慕",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "6ff3e9df03b6ac7174ff2f78b86967ed4c2b80c0361d61acdd5a655aaeb8299a"
+    },
+    {
+      "file": "mu-admire-sentence.mp3",
+      "text": "我很羡慕你的中文水平。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-10%",
+      "sha256": "bf4c0c8bc79cc291fa2a133e76d6e73b8ad3da5f57dee6187aebaf011c0a9de8"
     }
   ]
 }
