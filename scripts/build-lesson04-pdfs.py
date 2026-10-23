@@ -107,7 +107,7 @@ for lang in ['en','fr','ru']:
  p=page(doc,lang,'guide',lab['read']);box(p,(39.7,115,555.5,155),E(lab['instruction']));y=170
  for i,v in enumerate(testrows):box(p,(39.7,y,555.5,y+45),str(i+1)+'.　<span class="hz">'+E(v['hanzi'])+'</span>');y+=53
  p=page(doc,lang,'guide',lab['answers']);y=118
- for i,v in enumerate(testrows):box(p,(39.7,y,555.5,y+59),str(i+1)+'.　'+E(v['hanzi'])+'<br><span class="py">'+E(v['pinyin'])+'</span><br>'+E(v['meaning'][lang]),9);y+=64
+ for i,v in enumerate(testrows):box(p,(39.7,y,555.5,y+59),str(i+1)+'.　<span class="hz">'+E(v['hanzi'])+'</span><br><span class="py">'+E(v['pinyin'])+'</span><br>'+E(v['meaning'][lang]),9);y+=64
  finish(doc,OUT/f'guide-{lang}.pdf',lang,'guide')
  doc=f.open();p=page(doc,lang,'workbook');box(p,(39.7,116,555.5,230),'<p class="hz">工作　颜色　牛肉</p><p class="py">gōngzuò　yánsè　niúròu</p><p>'+E(lab['start'])+'</p><p>'+E(lab['practice'])+'</p>');box(p,(39.7,260,555.5,310),E(lab['name'])+' ____________________　'+E(lab['date'])+' __________');box(p,(39.7,330,555.5,400),E(lab['steps']));
  p=None;y=0
