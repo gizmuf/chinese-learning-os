@@ -43,3 +43,20 @@ The designated architect owns creative UX and the next Sites release. Review thi
 The lesson now uses a compact focused header for building, short checks and writing. The section is retained in the URL on refresh, with a direct return to the lesson overview. Builders have a labelled answer tray, larger character blocks, a reduced-motion-aware placement transition and a next action after saving. Topic previews and writing selections include pinyin; lesson 04 is first in the course list. All existing learning paths remain.
 
 Architect browser acceptance covered a correct builder/save/next, reload restoring the build section and second card, section switching, overview return and EN/FR/RU. Layouts at 390 × 844 and 1024 × 768 had no horizontal overflow; the initial builder fits on the phone screen. The final source passed TypeScript and all 88 tests. Isolated backend and PDF evidence above remains applicable because these UX changes do not alter backend or materials.
+
+## Production receipt — version 20
+
+Published to the existing public [Chinese OS](https://chinese-os-study.gizmuf.chatgpt.site/?course=intensive&lesson=4) on 23 October 2026 at 16:38:19 Asia/Shanghai. Sites reported `succeeded`.
+
+- Deployed source: `a36042aed91daa09ee65d5d2c80f057d51411f5e` (also verified on GitHub).
+- Project: `appgprj_6ad7885e92708191a9ed6016b15c91ba`.
+- Saved version: `appgprj_6ad7885e92708191a9ed6016b15c91ba~appgver_e6ed017222b481918be0f40c8b123bcc` (20).
+- Deployment: `appgdep_6adb1ce734508191a71b4220202adc20`.
+- Archive SHA-256: `dc7cc54dbacddc475b036e7f36184920afbe43ff795a6c41d75cdc20823bf10c`.
+- Source review: draft [PR 4](https://github.com/gizmuf/chinese-learning-os/pull/4).
+
+The final official build and pinned-source packaging passed. Sites Git encountered a transient source fetch error and then a failed receive-pack; retry succeeded without changing the reviewed source. The first browser load immediately after deployment failed to fetch the new auth-shell chunk. Reload recovered; subsequent navigation and a direct exercise reload worked, with no further console errors observed.
+
+Production browser acceptance: lesson-04 builder correct answer and guest save, explicit next, reload preserving build mode and card 2/12; lesson-03 overview/practice; Listening start; story trail next scene; Learning Lab start/pause. Public guest progress was exercised; authenticated cross-device writes and physical iPad/Pencil acceptance remain unverified. No access-policy or database migration changes were made.
+
+All six public PDF downloads were verified byte-for-byte against the materials manifest SHA-256 hashes, and a bundled lesson-04 MP3 matched its source hash. Initial generic HTTP-client requests returned 403 and two short download deadlines expired; ordinary curl downloads with sufficient time completed. This is file-integrity evidence, not a network-performance benchmark.
