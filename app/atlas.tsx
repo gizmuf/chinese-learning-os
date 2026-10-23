@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -13,6 +13,8 @@ import {
   Volume2,
 } from "lucide-react";
 import AtlasWorkshop from "./atlas-workshop";
+const ConnectionLab = lazy(() => import("./connection-lab"));
+import { L as labCopy } from "./connection-lab-copy";
 import AtlasListening from "./atlas-listening";
 import {
   emptyAnswer,
@@ -51,7 +53,7 @@ import Notebook from "./notebook";
 import type { Item } from "./content";
 import type { LearningEvent } from "./learning";
 type Scope = { kind: "group" | "component"; id: string } | null;
-type Tab = "explore" | "compare" | "practice" | "writing" | "materials" | "listening";
+type Tab = "explore" | "compare" | "practice" | "writing" | "materials" | "listening" | "lab";
 type Task = { targetId: string; skill: Exclude<AtlasSkill, "writing"> };
 const normalize = (s: string) =>
   s
@@ -91,7 +93,8 @@ export default function Atlas({
     const component = params.get("component");
     const group = params.get("group");
     const target = params.get("target");
-    if(params.get("listen")==="1")setTab("listening");
+    if (params.get("lab") === "connections") setTab("lab");
+    else if (params.get("listen") === "1") setTab("listening");
     if (component && componentById.has(component))
       setScope({ kind: "component", id: component });
     else if (group && groupById.has(group))
@@ -282,7 +285,7 @@ export default function Atlas({
       </div>
       <div className="atlas-tabs" role="group" aria-label={t("Atlas sections")}>
         {(
-          ["explore", "compare", "practice", "listening", "writing", "materials"] as Tab[]
+          ["explore", "compare", "practice", "listening", "writing", "materials", "lab"] as Tab[]
         ).map((value, i) => (
           <button
             key={value}
@@ -291,17 +294,19 @@ export default function Atlas({
             onClick={() => {
               stopAudio();
               setTab(value);
-              const params=new URLSearchParams(window.location.search);
-              if(value==="listening")params.set("listen","1");else params.delete("listen");
-              window.history.replaceState(null,"",window.location.pathname+"?"+params);
+              const params = new URLSearchParams(window.location.search);
+              if (value === "lab") params.set("lab", "connections"); else params.delete("lab");
+              if (value === "listening") params.set("listen", "1"); else params.delete("listen");
+              window.history.replaceState(null, "", window.location.pathname + "?" + params);
             }}
           >
-            {t(
+            {value === "lab" ? labCopy.title[locale] : t(
               ["Explore", "Compare", "Mixed recall", "Listening", "Writing", "Materials"][i],
             )}
           </button>
         ))}
       </div>
+      {tab === "lab" && <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><ConnectionLab owner={owner} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify}/></Suspense>}
       {(tab === "explore" || tab === "compare") && (
         <div className="atlas-search-row">
           <label className="atlas-search">

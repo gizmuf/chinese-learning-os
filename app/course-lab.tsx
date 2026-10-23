@@ -8,6 +8,7 @@ import {
   Volume2,
   PenLine,
 } from "lucide-react";
+import { L as labCopy } from "./connection-lab-copy";
 import { useSwipeNavigation } from "./use-swipe-navigation";
 import { useI18n } from "./i18n";
 import {
@@ -218,6 +219,7 @@ export default function CourseLab({
       <div className="panel lesson-lab-intro">
         <p className="eyebrow">{t("BUILD · CONNECT · REMEMBER")}</p>
         <h3>{t("Make the patterns your own.")}</h3>
+        <a className="text-button" href="/?atlas=1&lab=connections" target="_blank" rel="noreferrer">{labCopy.title[locale]} · {labCopy.newTab[locale]} <ArrowRight size={16}/></a>
         <p>
           {t(
             "Build complete expressions, discover word families, then try short checks without pinyin.",
