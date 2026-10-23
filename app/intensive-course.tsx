@@ -196,6 +196,7 @@ export default function IntensiveCourse({
       </div>
       {!open ? (
         <>
+          <section className="panel course-feature"><img src="/course04/boards/9974.jpg" alt={lesson04.title[locale]}/><div><span className="pill">{t("Lesson")} 04 / 60</span><h2>{lesson04.title[locale]}</h2><p>23.10.2026</p><button className="primary" onClick={openLesson04}>{t("Lesson")} 04<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature">
             <img
               src="/course03/boards/9912.jpg"
@@ -212,7 +213,7 @@ export default function IntensiveCourse({
               </button>
             </div>
           </section>
-          <section className="panel course-feature"><img src="/course04/boards/9974.jpg" alt={lesson04.title[locale]}/><div><span className="pill">{t("Lesson")} 04 / 60</span><h2>{lesson04.title[locale]}</h2><p>23.10.2026</p><button className="primary" onClick={openLesson04}>{t("Lesson")} 04<ArrowRight size={17}/></button></div></section>
+
           <details className="course-calendar panel">
             <summary>
               {t("All 60 lessons")} · {({en:"Two lessons ready",fr:"Deux leçons disponibles",ru:"Два урока доступны"})[locale]}
