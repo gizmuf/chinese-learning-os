@@ -10,7 +10,7 @@ The architect owns this interaction/frontend/motion. The existing SOL executor o
 
 Four persistent spatial zones: parts on the left, the whole matching character family and larger selected centre, lexical words on the right, and a sentence below. Clicking a part recentres its family; clicking a character changes the centre and words while retaining the family when applicable. Clicking a word promotes the whole word to the centre, with each constituent clickable. Sentence links lead back into lexical navigation. Pinyin and meaning accompany characters and words. Different roles distinguish meaning clues, sound clues and modern visual membership, including nested parts; a shared shape does not prove shared etymology or meaning.
 
-Stable 2D positions were chosen for this first prototype instead of a rotating 3D globe: labels should stay upright, nodes should remain selectable, and the route should stay comprehensible. A short entrance motion tracks a clicked character into the centre; reduced-motion disables it. Buttons and a horizontal swipe on the central card support family traversal. Families above twelve nodes use a grid automatically to prevent overlap; all results are available, with scrolling when they exceed the viewport. The Grid control allows a compact alternative. Expand map provides a single-screen layout on a tablet in landscape; phone layout stacks the same four zones.
+Stable 2D positions were chosen for this first prototype instead of a rotating 3D globe: labels should stay upright, nodes should remain selectable, and the route should stay comprehensible. A short entrance motion tracks a clicked character into the centre; reduced-motion disables it. Family tiles are the direct navigation controls. Redundant previous/next character arrows and the central swipe handler were removed; the history back button still restores an actual previous map. Families above twelve nodes use a grid automatically to prevent overlap; all results are available, with scrolling when they exceed the viewport. The Grid control allows a compact alternative. Expand map provides a single-screen layout on a tablet in landscape; phone layout stacks the same four zones.
 
 Component intersection shows real indexed characters containing every selected part. It is a search, not a claim that the selected parts exhaust a character's decomposition or may be arbitrarily assembled into new characters. Variants such as 人/亻 are displayed explicitly.
 
@@ -20,7 +20,7 @@ HSK scopes are cumulative and belong to vocabulary entries, not to components. S
 
 Whole-word writing calls the existing `onWord` flow with the canonical Item; its existing return preserves the mounted map and exact route. Reviewed Atlas character writing opens the existing Notebook in a modal and records only against the existing Atlas ID. Memory practice immediately after seeing the model is marked assisted. New structure-index IDs must never be passed to the Atlas progress API. Map browsing, selection and combination are not learning-completion events. No authentication, storage schema or progress migration is part of the experiment.
 
-URL state stores selected character, family, word, focus kind, vocabulary scope and component intersection. Back/refresh restore the visible material. Search accepts hanzi, pinyin without tone marks and localized meanings. Transient exercise state is still owned by existing practice components.
+URL state stores selected character, family, word, focus kind, vocabulary scope, component intersection and the active family/character/word/sentence stage. Back/refresh restore the visible material. Search accepts hanzi, pinyin without tone marks and localized meanings. Transient exercise state is still owned by existing practice components.
 
 ## Research and rationale
 
@@ -66,3 +66,29 @@ Atlas **Write** now opens animated HanziWriter guidance inside the map; the orig
 Reproduce structure generation with the exact Make Me a Hanzi dictionary snapshot declared in `data/hanzi-structure.json`. Reproduce fallback fonts with `scripts/prepare-atlas-structure-font.py`, using the two original TTFs whose digests are recorded in `public/fonts/atlas-structure-shapes.json`; the script rejects missing glyphs and an unpinned PUA source. It does not require network access at runtime.
 
 Validation for this update: 111 tests and TypeScript pass. Browser QA exercised EN/FR/RU, exact named glyph loading, source details, map → animated writing → Notebook → map, default reset after reopening, and canonical word Studio reset after a prior Notebook selection. A real four-stroke 木 trace through SVG mouse events enabled Save, then persisted exactly one assisted copy event with rating 0 and disabled repeat Save; watching alone kept Save disabled. At 1024×768 the canvas fits and there is no horizontal overflow. This is browser/device-size QA, not a physical Apple Pencil acceptance claim. Existing lesson, grammar and vocabulary suites remain green.
+
+## Guided family navigation and shared strokes
+
+The next Lab-only update starts from published v25 `9c0f1e0eff33c6c935635688c22ff08ab17f2c55`, preserving its full structure resolutions, named shape fonts and animated writing defaults. No other menu or progress schema changes.
+
+A persistent clickable path shows family → character → word → sentence. The optional four-step tutorial follows 人 → 你 → 你好 → 你好，很高兴认识你。 in the actual map. It supports both its labelled next actions and direct character/word clicks. Closing restores the prior route; finishing leaves the example available for exploration. Starting a tutorial deliberately uses All vocabulary and restores the prior scope on cancellation. Tutorial steps are transient and award no learning credit.
+
+Every family member remains available in the same map; ordering and labelled dots distinguish reviewed meaning clues, reviewed sound clues and structural links. Shape-only links do not gain invented functional explanations. Small families retain the orbit; larger families retain the scrollable grid, with compact full-screen cells. Filtering by relation is intentionally absent so the family is not silently reduced.
+
+Shared strokes use a red accent only when a validated stroke mapping exists, including aliases. Remaining strokes use the normal ink color. Missing/invalid mappings show a neutral complete glyph. Character occurrences in words and the selected word's sentence are highlighted at their own level. This preserves the distinction between a shared component and a whole character in vocabulary.
+
+The architect owns interaction and motion in `atlas-cloud.tsx/css`; the designated SOL executor owns the pure relation/highlight helpers and their validation. Validation: 116 tests and TypeScript pass. The helpers exercise all 121 mapped characters / 263 stroke relationships, repeated components, aliases, unknowns and invalid-index fallback. Browser QA confirmed exact red 亻 strokes in 你 (2 red / 5 normal), mixed SVG/text alignment in 你好, all 30 direct person-family nodes visible without internal scrolling in expanded desktop/tablet views, no centre collisions in the 10-node Atlas collection, and zero console errors. Both tutorial-button and direct-node paths advance correctly; cancellation restores the exact prior HSK-filtered URL, finish/reload preserves the sentence stage, and both character/word writing retain v25 defaults and map return. EN/FR/RU phone layout stays within 390px; larger families remain scrollable rather than omitted. No public learning progress was written.
+
+Collection changes now retain the current family when supported, instead of jumping to Sun. A vocabulary filter selects an in-scope family member when necessary, retaining a selected word only if still in scope. Base forms have a concise label and omit empty combination/role controls. These refinements are scoped to the Lab.
+
+### Guided Lab publication receipt — v26
+
+- Published 24 October 2026 at `2026-10-24T09:19:19.515618Z` (17:19 Shanghai), terminal status `succeeded`.
+- Deployed source `17ed50362a40398271880ec76d56eba9792a4c8a`, branch `codex/atlas-guided-families`, remote SHA verified.
+- Saved version `appgprj_6ad7885e92708191a9ed6016b15c91ba~appgver_d96d48309c808191a55a6c7d9d885e55`; deployment `appgdep_6adc780e377481918c2d3fe688464f17`.
+- Archive `/tmp/chinese-os-guided-families-v26.tar`, SHA256 `43c3d5a2b09a27a9a5ccb8739d463e7f354f5f91edb185509440cd917ce11395`.
+- Same public site/audience, environment revision 1. Review: https://github.com/gizmuf/chinese-learning-os/pull/8 .
+- Public smoke passed: all four tutorial stages, clickable path, 30 family nodes visible together at 1280×900, exact 2 red / 5 normal strokes in 你, one Write button and no redundant traversal arrows, zero console errors. Browser progress was not saved.
+- Live example: https://chinese-os-study.gizmuf.chatgpt.site/?atlas=1&cloud=1&hanzi=%E4%BD%A0&part=person .
+
+This receipt is a later documentation-only commit, not the deployed source revision.
