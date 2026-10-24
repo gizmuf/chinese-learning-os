@@ -1,8 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {build} from 'esbuild';
-const result=await build({stdin:{contents:"export * from './app/atlas-cloud-route';export {extendedFamily} from './app/atlas-cloud-extended';",resolveDir:process.cwd()},bundle:true,platform:'node',format:'esm',write:false});
+const result=await build({stdin:{contents:"export * from './app/atlas-cloud-route';export * from './app/atlas-cloud-entry';export {extendedFamily} from './app/atlas-cloud-extended';",resolveDir:process.cwd()},bundle:true,platform:'node',format:'esm',write:false});
 const m=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
+
+test('Clean Atlas entries use the new layout while existing deep links retain their tools',()=>{
+  for(const query of ['', '?atlas=1','?atlas=1&hanzi=你&part=person&layout=path'])assert.equal(m.isCloudAtlasEntry(new URLSearchParams(query)),true);
+  for(const query of ['classic=1','studio=1','lab=connections','listen=1','story=mo','story=mo&listen=1','component=wood','group=forest','target=u68ee','cloud=0']){
+    assert.equal(m.isCloudAtlasEntry(new URLSearchParams(query)),false,query);
+    const explicit=new URLSearchParams(query);explicit.set('cloud','1');assert.equal(m.isCloudAtlasEntry(explicit),true,'explicit cloud wins: '+query);
+  }
+});
 
 test('Existing Atlas links default to Family + context without losing the selected vocabulary or family',()=>{
   const route=m.readCloudRoute('?atlas=1&cloud=1&hanzi=你&part=person&word=hello&focus=word');

@@ -86,3 +86,7 @@
 
 .cloud-back-family{display:none}
 @media(max-width:760px){.cloud-family-context{display:flex;flex-direction:column}.cloud-family-context>.cloud-context-surface{order:-1;width:100%}.cloud-family-context>.cloud-family-panel{width:100%}.cloud-back-family{display:block;border:0;background:transparent;color:var(--cl-ink);font-size:12px;margin:18px auto 0;padding:10px;min-height:42px}.cloud-context-surface,.cloud-full-path>section,#cloud-family-title{scroll-margin-top:18px}}
+.cloud-context-surface:has(.cloud-character-parts[open]){position:static}
+
+.cloud-family-picker{min-width:130px}.cloud-family-picker select{max-width:180px}
+@media(max-width:760px){.cloud-family-picker{min-width:0;max-width:100%;flex-basis:100%}.cloud-family-picker select{flex:1;max-width:none}.cloud-family-picker>span{font-size:12px}.cloud-context-layout .cloud-family-picker{display:flex;gap:10px}}

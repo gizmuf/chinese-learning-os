@@ -53,6 +53,7 @@ import AtlasGlyph from "./atlas-glyph";
 import AtlasRecall from "./atlas-recall";
 import Notebook from "./notebook";
 import AtlasGuidedWriting from "./atlas-guided-writing";
+import {isCloudAtlasEntry} from "./atlas-cloud-entry";
 import type { Item } from "./content";
 import type { LearningEvent } from "./learning";
 type Scope = { kind: "group" | "component"; id: string } | null;
@@ -96,7 +97,7 @@ export default function Atlas({
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     setStudio(params.get("studio") === "1");
-    setCloud(params.get("cloud") === "1" || (!params.has("cloud") && !params.has("studio") && !params.has("lab") && params.get("classic") !== "1"));
+    setCloud(isCloudAtlasEntry(params));
     const component = params.get("component");
     const group = params.get("group");
     const target = params.get("target");
