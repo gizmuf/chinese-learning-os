@@ -246,6 +246,8 @@ def main() -> None:
             complete_count += 1
         parsed[character] = {
             "hanzi": character,
+            "readings": row.get("pinyin", []) if row else [],
+            "definition": row.get("definition", "") if row else "",
             "decomposition": decomposition,
             "radical": radical if isinstance(radical, str) and radical else None,
             "decompositionTree": structure["tree"],
