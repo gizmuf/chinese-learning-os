@@ -16,4 +16,6 @@ Browser checks cover selecting HSK3 (500), filtering words, FR/RU cards, both ch
 
 A source audit also corrected HSK2 entry 486 站1 to the official noun station/stop, distinct from HSK3 966 站2 (stand). Its ID and historical events are retained, while its teaching example, translations and sentence recording are corrected. Indexed HSK3 pinyin readings distinguish contextual 得, 还, 长, 教 and neutral syllables without rewriting earlier level pinyin.
 
-No database migration or authentication/access change is required. Publication receipt follows after the existing Site reports success.
+No database migration or authentication/access change is required. Published successfully to the existing public Chinese OS on 24 October 2026 at 12:46:54 Asia/Shanghai (04:46:54 UTC). Sites version 22: `appgprj_6ad7885e92708191a9ed6016b15c91ba~appgver_6944b629baec8191b94473aaae9a5460`. Deployment: `appgdep_6adc38289f0c81918c33b24564856c53`, status `succeeded`. Deployed source: `90c8a065d0a21449e8431470f9302f9b15f9db31`, branch `codex/hsk3`, checkout `_worktrees/chinese-os/hsk3`. URL: https://chinese-os-study.gizmuf.chatgpt.site. The subsequent documentation receipt commit does not change deployed application source.
+
+Post-publication browser verification: the public Site exposes HSK3 · 500, its filtered 阿姨 card and both audio buttons; no console errors were observed. Fourteen public word/example MP3 samples spanning IDs 501–1000 match the local release manifest byte-for-byte (SHA-256). Existing account providers and public audience are unchanged.
