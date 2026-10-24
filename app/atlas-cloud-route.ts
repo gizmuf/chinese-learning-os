@@ -5,9 +5,9 @@ import type { CloudLevel } from './atlas-cloud-model';
 export type CloudRoute = {
   hanzi:string; component:string; word:string; kind:'character'|'word'; level:CloudLevel;
   parts:string[]; collection:'library'|'atlas'; nested:boolean;
-  stage:'family'|'character'|'word'|'sentence'; layout:'family'|'path'|'cloud'; relation:'all'|CloudRelation;
+  stage:'family'|'character'|'word'|'sentence'; layout:'family'|'path'|'cloud'|'space'; cards:'focus'|'compare'; relation:'all'|CloudRelation;
 };
-export const initialCloudRoute:CloudRoute = {hanzi:'明',component:'sun',word:'',kind:'character',level:'all',parts:[],collection:'library',nested:false,stage:'character',layout:'family',relation:'all'};
+export const initialCloudRoute:CloudRoute = {hanzi:'明',component:'sun',word:'',kind:'character',level:'all',parts:[],collection:'library',nested:false,stage:'character',layout:'family',cards:'focus',relation:'all'};
 
 export function readCloudRoute(search:string):CloudRoute {
   const p=new URLSearchParams(search),h=p.get('hanzi')??'明',l=p.get('hsk');
@@ -17,7 +17,7 @@ export function readCloudRoute(search:string):CloudRoute {
   return {hanzi:/^[\u3400-\u9fff]$/.test(h)?h:'明',component:extendedComponent(p.get('part')??'')?p.get('part')!:'sun',word:p.get('word')??'',kind,
     level:l==='1'?1:l==='2'?2:l==='3'?3:'all',parts:[...new Set((p.get('with')??'').split(',').filter(id=>extendedComponent(id)))].slice(0,3),
     collection:p.get('collection')==='atlas'?'atlas':'library',nested:p.get('deep')==='1',stage,
-    layout:p.get('layout')==='cloud'?'cloud':p.get('layout')==='path'?'path':'family',relation:relation==='meaning'||relation==='sound'||relation==='shape'?relation:'all'};
+    cards:p.get('cards')==='compare'?'compare':'focus',layout:p.get('layout')==='space'?'space':p.get('layout')==='cloud'?'cloud':p.get('layout')==='path'?'path':'family',relation:relation==='meaning'||relation==='sound'||relation==='shape'?relation:'all'};
 }
 export function cloudRouteHref(route:CloudRoute):string {
   const p=new URLSearchParams({atlas:'1',cloud:'1',hanzi:route.hanzi,part:route.component});
@@ -25,7 +25,7 @@ export function cloudRouteHref(route:CloudRoute):string {
   if(route.nested)p.set('deep','1');if(route.collection==='atlas')p.set('collection','atlas');
   if(route.word)p.set('word',route.word);if(route.kind==='word')p.set('focus','word');
   if(route.level!=='all')p.set('hsk',String(route.level));if(route.parts.length)p.set('with',route.parts.join(','));
-  if(route.layout!=='family')p.set('layout',route.layout);if(route.relation!=='all')p.set('relation',route.relation);
+  if(route.cards==='compare')p.set('cards','compare');if(route.layout!=='family')p.set('layout',route.layout);if(route.relation!=='all')p.set('relation',route.relation);
   return '?'+p;
 }
 export function cloudFamilyGroups<T extends {hanzi:string}>(family:readonly T[],component:string):Record<CloudRelation,T[]> {

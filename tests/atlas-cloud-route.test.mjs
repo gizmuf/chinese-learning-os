@@ -18,7 +18,7 @@ test('Existing Atlas links default to Family + context without losing the select
   assert.deepEqual(m.readCloudRoute(''),m.initialCloudRoute);
 });
 test('Both layouts preserve exact context, source parts, filters and sentence stage through a URL roundtrip',()=>{
-  for(const layout of ['family','path','cloud'])for(const relation of ['all','meaning','sound','shape']){
+  for(const layout of ['family','path','cloud','space'])for(const relation of ['all','meaning','sound','shape']){
     const route={...m.initialCloudRoute,hanzi:'北',component:'\uf5fb',parts:['spoon'],collection:'library',nested:true,level:3,kind:'word',word:'hsk3-501',stage:'sentence',layout,relation};
     assert.deepEqual(m.readCloudRoute(m.cloudRouteHref(route)),route);
   }
@@ -51,5 +51,11 @@ test('Choosing a relation keeps a valid selected context or clears a stale word 
 test('Cloud map is a separately addressable view and never overwrites either newer layout',()=>{
  const before=m.readCloudRoute('?atlas=1&cloud=1&hanzi=你&part=person&word=hello&focus=word&layout=cloud');
  assert.equal(before.layout,'cloud');
- for(const layout of ['family','path','cloud']){const next=m.readCloudRoute(m.cloudRouteHref({...before,layout}));assert.equal(next.layout,layout);assert.equal(next.hanzi,'你');assert.equal(next.word,'hello');assert.equal(next.component,'person');}
+ for(const layout of ['family','path','cloud','space']){const next=m.readCloudRoute(m.cloudRouteHref({...before,layout}));assert.equal(next.layout,layout);assert.equal(next.hanzi,'你');assert.equal(next.word,'hello');assert.equal(next.component,'person');}
+});
+
+test('Spatial compare mode survives layout switches and reload without changing learning context',()=>{
+ const route={...m.initialCloudRoute,hanzi:'休',component:'wood',cards:'compare',layout:'space'};
+ for(const layout of ['space','cloud','family','path'])assert.deepEqual(m.readCloudRoute(m.cloudRouteHref({...route,layout})),{...route,layout});
+ assert.equal(m.readCloudRoute('?layout=space&cards=unknown').cards,'focus');
 });
