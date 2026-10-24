@@ -80,3 +80,15 @@ Shared strokes use a red accent only when a validated stroke mapping exists, inc
 The architect owns interaction and motion in `atlas-cloud.tsx/css`; the designated SOL executor owns the pure relation/highlight helpers and their validation. Validation: 116 tests and TypeScript pass. The helpers exercise all 121 mapped characters / 263 stroke relationships, repeated components, aliases, unknowns and invalid-index fallback. Browser QA confirmed exact red 亻 strokes in 你 (2 red / 5 normal), mixed SVG/text alignment in 你好, all 30 direct person-family nodes visible without internal scrolling in expanded desktop/tablet views, no centre collisions in the 10-node Atlas collection, and zero console errors. Both tutorial-button and direct-node paths advance correctly; cancellation restores the exact prior HSK-filtered URL, finish/reload preserves the sentence stage, and both character/word writing retain v25 defaults and map return. EN/FR/RU phone layout stays within 390px; larger families remain scrollable rather than omitted. No public learning progress was written.
 
 Collection changes now retain the current family when supported, instead of jumping to Sun. A vocabulary filter selects an in-scope family member when necessary, retaining a selected word only if still in scope. Base forms have a concise label and omit empty combination/role controls. These refinements are scoped to the Lab.
+
+### Guided Lab publication receipt — v26
+
+- Published 24 October 2026 at `2026-10-24T09:19:19.515618Z` (17:19 Shanghai), terminal status `succeeded`.
+- Deployed source `17ed50362a40398271880ec76d56eba9792a4c8a`, branch `codex/atlas-guided-families`, remote SHA verified.
+- Saved version `appgprj_6ad7885e92708191a9ed6016b15c91ba~appgver_d96d48309c808191a55a6c7d9d885e55`; deployment `appgdep_6adc780e377481918c2d3fe688464f17`.
+- Archive `/tmp/chinese-os-guided-families-v26.tar`, SHA256 `43c3d5a2b09a27a9a5ccb8739d463e7f354f5f91edb185509440cd917ce11395`.
+- Same public site/audience, environment revision 1. Review: https://github.com/gizmuf/chinese-learning-os/pull/8 .
+- Public smoke passed: all four tutorial stages, clickable path, 30 family nodes visible together at 1280×900, exact 2 red / 5 normal strokes in 你, one Write button and no redundant traversal arrows, zero console errors. Browser progress was not saved.
+- Live example: https://chinese-os-study.gizmuf.chatgpt.site/?atlas=1&cloud=1&hanzi=%E4%BD%A0&part=person .
+
+This receipt is a later documentation-only commit, not the deployed source revision.
