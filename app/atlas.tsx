@@ -81,7 +81,7 @@ export default function Atlas({
   const { t, locale } = useI18n();
   const progress = useAtlasProgress(owner);
   const [studio, setStudio] = useState(false);
-  const [cloud, setCloud] = useState(false);
+  const [cloud, setCloud] = useState(true);
   const [scope, setScope] = useState<Scope>(null);
   const [trail, setTrail] = useState<{ scope: Scope; target: string }[]>([]);
   const [selected, setSelected] = useState("u6674");
@@ -96,7 +96,7 @@ export default function Atlas({
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     setStudio(params.get("studio") === "1");
-    setCloud(params.get("cloud") === "1");
+    setCloud(params.get("cloud") === "1" || (!params.has("cloud") && !params.has("studio") && !params.has("lab") && params.get("classic") !== "1"));
     const component = params.get("component");
     const group = params.get("group");
     const target = params.get("target");

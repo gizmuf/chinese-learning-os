@@ -1,0 +1,88 @@
+/* The two approved layouts are scoped to Atlas; the application shell is unchanged. */
+.cloud-context-layout{container-type:inline-size;--context-surface:#fffefb;--context-line:#dce3d6;--context-selected:#e6eddf}
+.cloud-view-switch{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 18px}
+.cloud-view-switch button{border:1px solid var(--context-line);background:var(--context-surface);color:var(--cl-ink);border-radius:10px;padding:10px 16px;min-height:44px;font-size:13px}
+.cloud-view-switch button[aria-pressed=true]{background:#315f50;color:#fff;border-color:#315f50}
+.cloud-context-layout .cloud-toolbar{margin-bottom:6px;flex-wrap:wrap}
+.cloud-context-layout .cloud-path{display:grid;grid-template-columns:1fr 14px 1fr 14px 1fr 14px 1fr;gap:5px;margin:12px 0 22px;padding-bottom:16px;border-bottom:1px solid var(--context-line)}
+.cloud-context-layout .cloud-path button{display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-width:0;min-height:67px;padding:9px 12px;text-align:left;overflow-wrap:anywhere}
+.cloud-context-layout .cloud-path button small{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--cl-muted)}
+.cloud-context-layout .cloud-path button b{font-size:27px;font-weight:400;font-family:ChineseOSNamedShapes,ChineseOSStructureShapes,'Noto Serif SC','Songti SC',serif}
+.cloud-context-layout .cloud-path button>span{font-size:14px;line-height:30px}
+.cloud-family-context{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,1fr);align-items:start;gap:24px}
+.cloud-family-panel{min-width:0;padding:2px 0 8px}
+.cloud-family-panel-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:7px}
+.cloud-family-panel-heading h2{font-size:19px;font-weight:500;line-height:1.4;margin:4px 0;color:var(--cl-ink)}
+.cloud-component-label{font:27px/1 ChineseOSNamedShapes,ChineseOSStructureShapes,'Noto Serif SC','Songti SC',serif;margin-right:5px}
+.cloud-family-total{font-size:11px;color:var(--cl-muted);white-space:nowrap}
+.cloud-family-description{font-size:12px;line-height:1.55;color:var(--cl-muted);margin:6px 0 16px}
+.cloud-relation-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:15px}
+.cloud-relation-filters button{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--context-line);background:var(--context-surface);border-radius:9px;padding:8px 10px;min-height:40px;color:var(--cl-ink);font-size:11px}
+.cloud-relation-filters button[aria-pressed=true]{background:var(--context-selected);border-color:#8da58b}
+.cloud-relation-filters button b{font-size:10px;font-weight:500;color:var(--cl-muted)}
+.cloud-relation-filters i{display:block;width:6px;height:6px;border-radius:50%;background:#658b98}
+.cloud-relation-filters .relation-meaning i{background:#547c59}.cloud-relation-filters .relation-sound i{background:#a77d3c}
+.cloud-family-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(94px,1fr));gap:12px;align-content:start}
+.cloud-relative{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-width:0;min-height:146px;border:1px solid var(--context-line);border-radius:13px;padding:13px 8px 9px;background:var(--context-surface);color:var(--cl-ink);text-align:center}
+.cloud-relative:hover{background:#f0f4e9}.cloud-relative.is-selected{background:var(--context-selected);border:1.5px solid #64836a;box-shadow:none}
+.cloud-relative strong{display:flex;align-items:center;justify-content:center;font:42px/1 'Noto Serif SC','Songti SC',serif;width:1em;height:1em;flex:none;margin-bottom:8px}
+.cloud-relative strong>span,.cloud-relative strong svg{width:1em;height:1em;display:block}
+.cloud-relative>span{font-size:12px;line-height:1.3;color:#7a6b45;overflow-wrap:anywhere}
+.cloud-relative p{font-size:11px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:5px 0;overflow-wrap:anywhere}
+.cloud-relative small{font-size:9px;line-height:1.3;color:var(--cl-muted);margin-top:auto;padding-top:3px}
+.cloud-relative small.relation-meaning{color:#547c59}.cloud-relative small.relation-sound{color:#896831}.cloud-relative small.relation-shape{color:#547b87}
+.cloud-family-grid.is-compact{grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:7px}
+.cloud-family-grid.is-compact .cloud-relative{min-height:123px;padding:9px 5px 7px}.cloud-family-grid.is-compact .cloud-relative strong{font-size:33px}
+.cloud-group-heading{grid-column:1/-1;font-size:12px;font-weight:500;padding:10px 0 2px;margin:0;border-top:1px solid var(--context-line);display:flex;gap:8px;align-items:center}
+.cloud-group-heading:first-child{border:0;padding-top:0}.cloud-group-heading span{font-size:10px;font-weight:400;color:var(--cl-muted)}
+.cloud-family-caption-new{display:flex;align-items:center;gap:7px;font-size:11px;line-height:1.5;color:var(--cl-muted);margin:16px 0 7px}
+.cloud-family-caption-new>span{display:block;flex:none;height:3px;width:16px;background:var(--cloud-shared)}
+.cloud-context-surface{position:sticky;top:18px;min-width:0;border:1px solid var(--context-line);border-radius:17px;background:var(--context-surface);padding:25px 22px;text-align:center}
+.cloud-context-step{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--cl-muted);margin-bottom:16px}
+.cloud-context-glyph{display:flex;justify-content:center;align-items:center;font:88px/1.2 'Noto Serif SC','Songti SC',serif;margin:8px 0 14px;font-weight:400}
+.cloud-context-glyph>span{display:flex!important;justify-content:center;flex-wrap:wrap;max-width:100%}
+.cloud-context-glyph svg{display:block}.cloud-context-word{font-size:64px}
+.cloud-context-reading{font-size:14px;line-height:1.6;overflow-wrap:anywhere;color:#8b744b;display:block;margin:5px 0}
+.cloud-context-meaning{font-size:16px;line-height:1.5;margin:9px 0 14px;overflow-wrap:anywhere}
+.cloud-context-relation{display:inline-block;font-size:11px;color:var(--cl-muted);margin:4px 0 10px}.cloud-context-relation.relation-meaning{color:#547c59}.cloud-context-relation.relation-sound{color:#896831}.cloud-context-relation.relation-shape{color:#547b87}
+.cloud-context-note{font-size:12px;line-height:1.6;color:var(--cl-muted);margin:12px 0;overflow-wrap:anywhere}
+.cloud-context-actions{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin:15px 0 10px}
+.cloud-context-actions button,.cloud-context-next{display:inline-flex;justify-content:center;align-items:center;gap:7px;background:#f5f7ef;border:1px solid var(--context-line);color:var(--cl-ink);border-radius:10px;padding:10px 12px;min-height:42px;font-size:12px}
+.cloud-context-next{width:100%;margin-top:22px;border-color:#b9c7ae}
+.cloud-word-picker{display:block;text-align:left;margin:0 0 22px;font-size:11px;color:var(--cl-muted)}
+.cloud-word-picker>span{display:block;margin-bottom:6px}.cloud-word-picker select{border:1px solid var(--context-line);background:#f8faf4;width:100%;max-width:100%;padding:9px 8px;border-radius:9px;min-height:42px;color:var(--cl-ink);font-size:12px}
+.cloud-context-layout .cloud-word-parts{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:14px}
+.cloud-context-layout .cloud-word-parts button{border:1px solid var(--context-line);border-radius:8px;background:#f7f9f1;min-width:44px;min-height:44px;font:25px serif;color:var(--cl-ink);padding:6px 10px}
+.cloud-component-glyph{display:block;font:76px/1.3 ChineseOSNamedShapes,ChineseOSStructureShapes,'Noto Serif SC','Songti SC',serif;color:var(--cloud-shared);font-weight:400;overflow-wrap:anywhere}
+.cloud-component-context>p{font-size:15px;line-height:1.5}.cloud-component-context>.cloud-context-note{font-size:12px}
+.cloud-character-parts{margin-top:20px;border-top:1px solid var(--context-line);padding-top:13px;text-align:left;font-size:12px}
+.cloud-character-parts>summary,.cloud-family-tools>summary{cursor:pointer;min-height:34px;line-height:1.5;padding:7px 0;color:var(--cl-ink)}
+.cloud-context-layout .cloud-parts{padding:13px 0 0;border:0;min-height:0}
+.cloud-context-layout .cloud-parts .cloud-zone-title{padding:0}.cloud-context-layout .cloud-parts .cloud-zone-title h2{font-size:13px}
+.cloud-context-layout .cloud-part{min-height:52px;font-size:12px}.cloud-context-layout .cloud-legend{position:static;font-size:10px;margin-top:12px;flex-wrap:wrap}
+.cloud-context-layout .cloud-source-note{font-size:11px}.cloud-context-layout .cloud-source-detail{font-size:12px}
+.cloud-sentence-context{min-width:0}.cloud-context-sentence{font:29px/1.8 'Noto Serif SC','Songti SC',serif;margin:12px 0;overflow-wrap:anywhere}
+.cloud-context-sentence button{border:0;border-bottom:2px solid #bac8ab;background:#f0f3e7;padding:1px 3px;color:var(--cl-ink);font:inherit;border-radius:3px}
+.cloud-sentence-context>p:not(.cloud-context-sentence):not(.cloud-context-reading){font-size:14px;line-height:1.6}
+.cloud-context-layout .cloud-sentence-links{flex-wrap:wrap;justify-content:center}.cloud-context-layout .cloud-sentence-links button{min-height:40px}
+.cloud-family-tools{margin:22px 0 14px;border-top:1px solid var(--context-line);border-bottom:1px solid var(--context-line);padding:10px 0;font-size:12px}
+.cloud-family-tools .cloud-seeds{flex-wrap:wrap;overflow:visible}.cloud-family-tools .cloud-depth{margin-top:12px}
+.cloud-experiment-links{display:flex;flex-wrap:wrap;gap:18px;padding:12px 0;color:var(--cl-muted)}.cloud-experiment-links a{color:inherit}
+.cloud-full-path{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));background:var(--context-surface);border:1px solid var(--context-line);border-radius:17px;margin-bottom:28px;overflow:clip}
+.cloud-full-path>section{padding:21px 18px;min-width:0;text-align:center;border-bottom:1px solid var(--context-line)}
+.cloud-full-path>section:nth-child(odd){border-right:1px solid var(--context-line)}.cloud-full-path>section:nth-last-child(-n+2){border-bottom:0}
+.cloud-full-path>section>h2{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cl-muted);font-weight:400;margin:0 0 22px}
+.cloud-full-path .cloud-context-glyph{font-size:64px}.cloud-full-path .cloud-context-word{font-size:48px}.cloud-full-path .cloud-context-reading{font-size:12px}.cloud-full-path .cloud-context-meaning{font-size:14px}
+.cloud-full-path .cloud-component-glyph{font-size:64px}.cloud-full-path .cloud-context-sentence{font-size:24px}.cloud-full-path .cloud-component-context>p{font-size:13px}
+.cloud-full-path .cloud-context-actions button{font-size:11px;padding:8px;min-height:40px}
+.layout-path>.cloud-family-panel .cloud-family-grid{grid-template-columns:repeat(auto-fill,minmax(108px,1fr))}
+.cloud-full .cloud-context-layout{padding:20px 30px}.cloud-full .cloud-context-layout .cloud-heading{margin-bottom:15px}.cloud-full .cloud-context-layout .cloud-eyebrow{display:block}
+.cloud-full .cloud-context-layout .cloud-path{margin:10px 0 18px;min-height:0}.cloud-full .cloud-context-layout .cloud-path button{min-height:62px;padding:8px 10px}
+@container(min-width:900px){.cloud-full-path{grid-template-columns:.85fr 1fr 1.15fr 1.5fr}.cloud-full-path>section{border-bottom:0;border-right:1px solid var(--context-line)}.cloud-full-path>section:last-child{border-right:0}.cloud-full-path .cloud-context-glyph{font-size:61px}.cloud-full-path .cloud-context-word{font-size:43px}}
+@media(max-width:1000px){.cloud-family-context{grid-template-columns:minmax(0,1fr) minmax(260px,1fr);gap:18px}.cloud-context-surface{padding:22px 16px}.cloud-family-grid{grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:9px}.cloud-context-layout .cloud-heading{align-items:flex-start;gap:10px}.cloud-context-layout .cloud-header-actions{flex-wrap:wrap;justify-content:flex-end}.cloud-family-panel-heading{flex-wrap:wrap}.cloud-relative{min-height:140px}}
+@media(max-width:760px){.cloud-context-layout{padding:20px 18px}.cloud-family-context{grid-template-columns:1fr}.cloud-context-surface{position:static}.cloud-family-grid{grid-template-columns:repeat(auto-fill,minmax(96px,1fr))}.cloud-context-layout .cloud-toolbar .cloud-search{flex-basis:100%}.cloud-context-layout .cloud-path button{padding:7px;min-width:0;align-items:flex-start}.cloud-context-layout .cloud-path button small{font-size:9px}.cloud-context-layout .cloud-path button b{font-size:25px}.cloud-context-layout .cloud-path button>span{font-size:12px}.cloud-context-layout .cloud-header-actions{max-width:175px}.cloud-context-layout .cloud-heading h1{font-size:25px}.cloud-context-layout .cloud-tour-launch{font-size:11px!important;max-width:none!important;min-height:38px}.cloud-family-tools .cloud-depth{flex-wrap:wrap}.cloud-full .cloud-context-layout{padding:16px 18px}.cloud-full .cloud-context-layout .cloud-path button{min-height:65px}.cloud-family-context .cloud-context-surface{margin-top:3px}.cloud-relation-filters button{min-height:44px}}
+@media(max-width:440px){.cloud-context-layout{padding:17px 14px}.cloud-view-switch button{flex:1;font-size:12px;padding:10px 8px}.cloud-context-layout .cloud-heading h1{font-size:21px}.cloud-context-layout .cloud-header-actions{max-width:132px}.cloud-context-layout .cloud-eyebrow{font-size:8px}.cloud-context-layout .cloud-toolbar{gap:8px}.cloud-context-layout .cloud-collection{max-width:55%}.cloud-context-layout .cloud-level select{max-width:100%;font-size:12px}.cloud-context-layout .cloud-level>span{font-size:10px}.cloud-context-layout .cloud-layout{font-size:11px}.cloud-context-layout .cloud-path{grid-template-columns:1fr 13px 1fr;row-gap:8px}.cloud-context-layout .cloud-path>svg:nth-of-type(2){display:none}.cloud-context-layout .cloud-path button small{font-size:10px}.cloud-context-layout .cloud-path button{min-height:65px}.cloud-family-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.cloud-relative strong{font-size:36px}.cloud-relative{min-height:137px;padding:12px 6px 8px}.cloud-relative small{font-size:9px}.cloud-full-path{grid-template-columns:1fr}.cloud-full-path>section{border-right:0!important;border-bottom:1px solid var(--context-line)!important}.cloud-full-path>section:last-child{border-bottom:0!important}.cloud-full-path .cloud-context-glyph{font-size:70px}.cloud-full-path .cloud-context-word{font-size:56px}.cloud-context-layout .cloud-map-footer{gap:8px;flex-wrap:wrap}.cloud-context-layout .cloud-map-footer button{text-align:left}.cloud-family-panel-heading h2{font-size:17px}.cloud-family-tools .cloud-seeds button{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.cloud-context-layout *{scroll-behavior:auto!important}}
+
+.cloud-back-family{display:none}
+@media(max-width:760px){.cloud-family-context{display:flex;flex-direction:column}.cloud-family-context>.cloud-context-surface{order:-1;width:100%}.cloud-family-context>.cloud-family-panel{width:100%}.cloud-back-family{display:block;border:0;background:transparent;color:var(--cl-ink);font-size:12px;margin:18px auto 0;padding:10px;min-height:42px}.cloud-context-surface,.cloud-full-path>section,#cloud-family-title{scroll-margin-top:18px}}
