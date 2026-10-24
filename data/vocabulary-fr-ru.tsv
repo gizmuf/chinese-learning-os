@@ -503,7 +503,7 @@ hsk2-482	côté droit	правая сторона	L’hôpital est à droite.	Б
 hsk2-483	poisson	рыба	J’aime manger du poisson.	Я люблю есть рыбу.
 hsk2-484	loin / éloigné	далёкий / далеко	Ma maison est loin de l’aéroport.	Мой дом далеко от аэропорта.
 hsk2-485	sport / exercice physique	спорт / физические упражнения	Je fais du sport chaque jour.	Я каждый день занимаюсь спортом.
-hsk2-486	se tenir debout	стоять	Placez-vous ici, s’il vous plaît.	Встаньте здесь, пожалуйста.
+hsk2-486	station / arrêt	станция / остановка	Nous descendons au prochain arrêt.	Мы выходим на следующей остановке.
 hsk2-487	mari / époux	муж	Son mari travaille à l’hôpital.	Её муж работает в больнице.
 hsk2-488	si / tellement (degré)	так / настолько	Pourquoi fait-il si chaud aujourd’hui ?	Почему сегодня так жарко?
 hsk2-489	comme ceci / de cette façon	так / таким образом	Est-ce correct d’écrire ainsi ?	Так писать правильно?
@@ -518,3 +518,503 @@ hsk2-497	football	футбол	Il aime jouer au football.	Он любит игр
 hsk2-498	le plus / superlatif	самый / наиболее	C’est le livre le plus agréable à lire.	Эту книгу читать интереснее всего.
 hsk2-499	gauche (direction)	левый / налево	Allez à gauche, s’il vous plaît.	Идите налево, пожалуйста.
 hsk2-500	côté gauche	левая сторона	L’école est à gauche.	Школа слева.
+hsk3-501	tante ; terme d’adresse poli pour une femme plus âgée	тётя; вежливое обращение к женщине старшего возраста	La tante Wang vient dîner chez nous aujourd’hui.	Тётя Ван сегодня придёт к нам на ужин.
+hsk3-502	petit ; de petite taille	низкий; невысокого роста	Mon petit frère est un peu plus petit que moi.	Мой младший брат немного ниже меня.
+hsk3-503	conjoint ; partenaire	супруг; спутник жизни	Mon conjoint et moi prenons le métro pour aller au travail tous les jours.	Мы с супругом каждый день ездим на работу на метро.
+hsk3-504	calme ; silencieux	тихий; спокойный	La bibliothèque est calme et tout le monde lit.	В библиотеке тихо, все читают.
+hsk3-505	sûr ; sans danger	безопасный	Il n’est pas très sûr de marcher seul sur cette route la nuit.	Ночью идти одному по этой дороге не очень безопасно.
+hsk3-506	marqueur de l’objet dans la construction en 把	показатель объекта в конструкции с 把	Ferme la porte, s’il te plaît ; il fait froid dehors.	Пожалуйста, закрой дверь, на улице холодно.
+hsk3-507	déplacer ; porter	переносить; передвигать	Cette table est trop lourde ; déplaçons-la ensemble.	Этот стол слишком тяжёлый, давай перенесём его вместе.
+hsk3-508	classe ; groupe-classe	класс; учебная группа	Il y a plus de vingt élèves dans cette classe.	В этом классе больше двадцати учеников.
+hsk3-509	déménager	переезжать	Ils déménagent le mois prochain et veulent demander de l’aide à quelques amis.	В следующем месяце они переезжают и хотят попросить нескольких друзей помочь.
+hsk3-510	s’occuper de ; régler	заниматься; уладить	Je vais m’occuper de ça ; va d’abord te reposer.	Я сам займусь этим, а ты пока отдохни.
+hsk3-511	moyen ; solution	способ; решение	Il pleut ; il faut trouver un moyen de rentrer.	Идёт дождь, нам нужно придумать, как добраться домой.
+hsk3-512	bureau	кабинет; офис	Le bureau du professeur est au troisième étage.	Кабинет учителя находится на третьем этаже.
+hsk3-513	une demi-journée ; longtemps	полдня; долгое время	J’ai cherché longtemps avant de trouver ce dictionnaire.	Я долго искал этот словарь и наконец нашёл его.
+hsk3-514	aider ; aide	помогать; помощь	Merci de m’avoir aidé à préparer cet examen.	Спасибо, что помог мне подготовиться к этому экзамену.
+hsk3-515	rassasié ; repu	сытый	J’ai déjà assez mangé et je ne veux plus de gâteau.	Я уже наелся и больше не хочу торт.
+hsk3-516	journal	газета	Mon grand-père lit le journal tous les matins.	Дедушка каждое утро читает газету.
+hsk3-517	nord	север	L’école se trouve au nord de la gare.	Школа находится к северу от вокзала.
+hsk3-518	le nord ; région du nord	север; северный регион	Il neige souvent dans le nord en hiver.	Зимой на севере часто идёт снег.
+hsk3-519	marqueur du passif	показатель пассивной конструкции	Mon petit frère est parti sur mon vélo.	Мой младший брат уехал на моём велосипеде.
+hsk3-520	notes ; prise de notes	заметки; записи	Pendant le cours, je note les choses importantes.	На уроке я записываю важные вещи.
+hsk3-521	comparer	сравнивать	Comparons d’abord les prix de ces deux hôtels.	Сначала сравним цены в этих двух гостиницах.
+hsk3-522	cahier ; carnet	тетрадь; блокнот	Mets le cahier dans ton sac, s’il te plaît.	Положи тетрадь в рюкзак, пожалуйста.
+hsk3-523	par exemple	например	J’aime les fruits, par exemple les pommes et les oranges.	Я люблю фрукты, например яблоки и апельсины.
+hsk3-524	compétition ; participer à une compétition	соревнование; соревноваться	Ma petite sœur a participé à la compétition de natation de l’école.	Моя младшая сестра участвовала в школьных соревнованиях по плаванию.
+hsk3-525	devoir ; falloir	должен; необходимо	Il faut éteindre son téléphone en entrant dans la salle de classe.	Войдя в класс, нужно выключить телефон.
+hsk3-526	changer ; devenir	меняться; становиться	Il fait plus froid ; pense à mettre une couche de plus.	Похолодало, не забудь одеться потеплее.
+hsk3-527	classificateur d’une action accomplie une fois	счётное слово для одного полного действия	J’ai écouté cette chanson une fois et je veux la réécouter.	Я послушал эту песню один раз и хочу послушать ещё раз.
+hsk3-528	devenir ; se transformer en	становиться; превращаться в	Le printemps est arrivé et les feuilles des arbres sont devenues vertes.	Наступила весна, и листья на деревьях стали зелёными.
+hsk3-529	changement ; évolution	изменение; перемена	Notre école a beaucoup changé ces dernières années.	За последние годы наша школа сильно изменилась.
+hsk3-530	se produire ; présenter un spectacle	выступать; показывать представление	Les enfants vont présenter un spectacle ce soir.	Вечером дети покажут представление.
+hsk3-531	autre ; autre chose	другой; что-нибудь ещё	Cette chemise est trop chère ; je voudrais en voir une autre.	Эта рубашка слишком дорогая, я хотел бы посмотреть что-нибудь другое.
+hsk3-532	les autres	другие люди	Les autres sont déjà arrivés ; entrons aussi.	Остальные уже пришли, давай тоже войдём.
+hsk3-533	hôtel	гостиница	Nous avons passé trois jours à l’hôtel et nous partons aujourd’hui.	Мы прожили в гостинице три дня, а сегодня уезжаем.
+hsk3-534	glace	лёд	Il fait très chaud ; je voudrais un verre d’eau avec des glaçons.	Очень жарко, я хочу выпить воды со льдом.
+hsk3-535	glace ; crème glacée	мороженое	Quand il fait chaud, j’aime manger une glace.	В жаркую погоду я люблю есть мороженое.
+hsk3-536	réfrigérateur ; frigo	холодильник	Le lait est dans le réfrigérateur ; réchauffe-le avant de le boire.	Молоко в холодильнике, перед тем как пить, подогрей его.
+hsk3-537	patient ; malade	пациент; больной	L’infirmière s’occupe de ce patient.	Медсестра ухаживает за этим пациентом.
+hsk3-538	non seulement	не только	Il sait non seulement cuisiner, mais il le fait très bien.	Он не только умеет готовить, но и готовит очень хорошо.
+hsk3-539	être introuvable ; disparaître	пропасть; потеряться	Mes clés ont disparu ; peux-tu m’aider à les chercher ?	Мои ключи пропали, поможешь их поискать?
+hsk3-540	inutile de ; ne pas avoir besoin de	не нужно; нет необходимости	Pas besoin d’emporter un parapluie, il ne pleut pas.	Зонт брать не нужно, на улице не идёт дождь.
+hsk3-541	différent ; distinct	разный; отличающийся	Les menus de ces deux restaurants sont différents, tout comme leurs prix.	В этих двух ресторанах разные меню и цены.
+hsk3-542	peu après ; bientôt	вскоре; через недолгое время	Mon ami m’a appelé peu après la fin du film.	Вскоре после окончания фильма мне позвонил друг.
+hsk3-543	ça ne va pas ; ça ne marche pas	не годится; не получится	Cette solution ne marche pas ; cherchons-en une autre.	Этот способ не годится, давай придумаем другой.
+hsk3-544	ne… que ; seulement alors	только; лишь после этого	Il s’est levé tard aujourd’hui et n’est arrivé à l’école qu’à neuf heures.	Сегодня он поздно встал и пришёл в школу только в девять.
+hsk3-545	menu	меню	Montrez-nous le menu, s’il vous plaît ; nous n’avons pas encore choisi.	Покажите нам меню, пожалуйста, мы ещё не решили, что заказать.
+hsk3-546	participer à	участвовать в	Je veux participer au tournoi de basket de l’école ce week-end.	В эти выходные я хочу участвовать в школьном соревновании по баскетболу.
+hsk3-547	herbe	трава	Le chaton s’est endormi dans l’herbe.	Котёнок уснул в траве.
+hsk3-548	pelouse ; terrain herbeux	лужайка; травяная площадка	Les enfants jouent au ballon sur la pelouse.	Дети играют в мяч на лужайке.
+hsk3-549	classificateur d’étages ou de couches	счётное слово для этажей или слоёв	Nous habitons au huitième étage de cet immeuble.	Мы живём на восьмом этаже этого здания.
+hsk3-550	vérifier ; consulter	проверять; искать сведения	Je vais d’abord vérifier l’heure de départ du train.	Сначала я проверю, когда отправляется поезд.
+hsk3-551	être moins bon ; être inférieur	быть хуже; уступать	Mon résultat en compréhension orale est un peu moins bon que la dernière fois.	В этот раз результат по аудированию немного хуже, чем в прошлый.
+hsk3-552	presque ; à peu près pareil	почти; примерно одинаково	Nous sommes rentrés presque en même temps.	Мы пришли домой почти одновременно.
+hsk3-553	goûter	пробовать на вкус	Goûte cette soupe ; tu la trouves salée ?	Попробуй этот суп, как думаешь, он солёный?
+hsk3-554	souvent ; habituellement	часто; обычно	Je vais souvent lire à la bibliothèque, où il fait très calme.	Я часто хожу читать в библиотеку, там тихо.
+hsk3-555	courant ; fréquent	обычный; часто встречающийся	Cet oiseau est courant dans les parcs du nord.	Эта птица часто встречается в парках на севере.
+hsk3-556	d’usage courant ; souvent employé	общеупотребительный; часто используемый	Ce mot est très courant dans les conversations de tous les jours.	Это слово часто используется в повседневных разговорах.
+hsk3-557	souvent ; fréquemment	часто; нередко	Ma grande sœur appelle souvent la maison.	Старшая сестра часто звонит домой.
+hsk3-558	chemise	рубашка	Il est allé au travail avec une chemise blanche.	Он пошёл на работу в белой рубашке.
+hsk3-559	note ; résultat scolaire	оценка; результат	Son résultat à l’examen de mathématiques s’est amélioré.	Её результат по математике на этот раз улучшился.
+hsk3-560	ville	город	Cette ville compte beaucoup de parcs et d’hôtels.	В этом городе много парков и гостиниц.
+hsk3-561	être en retard	опаздывать	Dépêchons-nous, sinon nous serons en retard en cours.	Давай быстрее, иначе мы опоздаем на урок.
+hsk3-562	partir ; se mettre en route	отправляться; выезжать	Nous partons à six heures du matin et arrivons à Pékin le soir.	Мы выезжаем в шесть утра и вечером приезжаем в Пекин.
+hsk3-563	naître	родиться	Je suis né dans une petite ville du nord.	Я родился в небольшом городе на севере.
+hsk3-564	sortir de l’hôpital	выписаться из больницы	Ma grand-mère va beaucoup mieux et pourra sortir de l’hôpital demain.	Бабушке намного лучше, завтра её могут выписать из больницы.
+hsk3-565	collège ; premier cycle du secondaire	средняя школа	Ma cousine enseigne l’anglais au collège.	Моя двоюродная сестра преподаёт английский в средней школе.
+hsk3-566	sauf ; à l’exception de	кроме; за исключением	Tout le monde est déjà arrivé, sauf Xiao Wang.	Все уже пришли, кроме Сяо Вана.
+hsk3-567	bateau	лодка; корабль	Nous avons traversé la rivière en bateau et sommes vite arrivés sur l’autre rive.	Мы переправились через реку на лодке и скоро оказались на другом берегу.
+hsk3-568	printemps	весна	Le printemps est arrivé et toutes les fleurs du parc sont ouvertes.	Наступила весна, и в парке распустились все цветы.
+hsk3-569	dictionnaire	словарь	J’ai consulté le dictionnaire pour trouver le sens de ce mot.	Я посмотрел значение этого слова в словаре.
+hsk3-570	intelligent ; malin	умный; сообразительный	Elle est intelligente et a compris la question dès la première fois.	Она умная и с первого раза поняла вопрос.
+hsk3-571	nettoyer ; faire le ménage	убирать; делать уборку	Le samedi, nous faisons le ménage ensemble.	По субботам мы вместе убираем комнату.
+hsk3-572	prévoir ; avoir l’intention de	планировать; намереваться	Je prévois d’aller au bord de la mer après les vacances.	Я планирую после каникул поехать к морю.
+hsk3-573	probablement ; environ	вероятно; примерно	Il faut environ dix minutes pour venir à pied de l’école.	От школы сюда идти пешком примерно десять минут.
+hsk3-574	adulte	взрослый	Les enfants doivent traverser la rue avec un adulte.	Детям нужно переходить дорогу вместе со взрослыми.
+hsk3-575	taille ; dimensions	размер; величина	Ces deux pièces ont à peu près la même taille.	Эти две комнаты примерно одинакового размера.
+hsk3-576	panda géant	большая панда	Nous avons vu deux pandas géants au zoo.	В зоопарке мы увидели двух больших панд.
+hsk3-577	manteau	пальто	Il fait très froid dehors ; mets un manteau avant de sortir.	На улице очень холодно, перед выходом надень пальто.
+hsk3-578	emporter ; apporter	брать с собой; приносить	Demain, nous allons à la mer ; n’oublie pas d’emporter de l’eau et une carte.	Завтра едем к морю, не забудь взять с собой воду и карту.
+hsk3-579	s’inquiéter	беспокоиться	Ne t’inquiète pas, j’ai déjà appelé mon conjoint.	Не волнуйся, я уже позвонил супругу.
+hsk3-580	gâteau	торт	Pour mon anniversaire, mes amis m’ont acheté un gâteau.	На день рождения друзья купили мне торт.
+hsk3-581	bien sûr ; certainement	конечно	Bien sûr ; tu préfères du thé ou du café ?	Конечно. Ты хочешь чай или кофе?
+hsk3-582	partout	повсюду; везде	Après la pluie, il y avait de l’eau partout dans le parc.	После дождя в парке повсюду была вода.
+hsk3-583	obtenir ; recevoir	получить; удостоиться	Il a remporté le premier prix au concours.	Он получил первую премию на соревновании.
+hsk3-584	obtenir ; recevoir	получить; обрести	J’ai enfin reçu l’aide du professeur.	Наконец я получил помощь учителя.
+hsk3-585	marquer ; score	набирать очки; счёт	Il a marqué le plus de points au concours et a remporté la première place.	Он набрал больше всех очков на соревновании и занял первое место.
+hsk3-586	si ; au cas où	если; в случае если	Si tu as le temps, accompagne-moi acheter un dictionnaire.	Если у тебя будет время, сходи со мной купить словарь.
+hsk3-587	devoir ; falloir	нужно; придётся	J’ai un examen demain, alors je dois réviser ce soir.	Завтра экзамен, поэтому сегодня вечером мне нужно заниматься.
+hsk3-588	lampe ; lumière	лампа; свет	Il fait nuit ; allume la lumière du salon, s’il te plaît.	Стемнело, пожалуйста, включи свет в гостиной.
+hsk3-589	sol ; terre	земля; пол	Après la pluie, il y a beaucoup d’eau par terre.	После дождя на земле много воды.
+hsk3-590	lieu ; emplacement	место; местоположение	Indique le lieu de l’examen sur le formulaire d’inscription.	Укажи место проведения экзамена в регистрационной форме.
+hsk3-591	endroit ; lieu	место; местность	Cet endroit est tout près de l’école ; on peut y aller à pied.	Это место совсем рядом со школой, туда можно дойти пешком.
+hsk3-592	carte ; plan	карта	Nous avons trouvé un parc à proximité en regardant la carte.	По карте мы нашли неподалёку парк.
+hsk3-593	électricité ; courant électrique	электричество	Il n’y a plus d’électricité chez nous aujourd’hui, et le réfrigérateur ne marche pas non plus.	Сегодня дома отключили электричество, и холодильник тоже не работает.
+hsk3-594	ascenseur	лифт	Il n’y a pas d’ascenseur dans cet immeuble ; il faut prendre les escaliers.	В этом доме нет лифта, придётся идти по лестнице.
+hsk3-595	livre électronique ; e-book	электронная книга	Je lis des livres électroniques sur mon téléphone, sans devoir emporter beaucoup de livres.	Я читаю электронные книги на телефоне, поэтому не нужно брать с собой много книг.
+hsk3-596	perdre ; égarer	потерять; забыть где-либо	J’ai oublié mes clés au bureau ; je vais y retourner les chercher.	Я оставил ключи в офисе, вернусь за ними.
+hsk3-597	est	восток	Continue vers l’est et tu verras ce pont.	Иди всё время на восток, и увидишь этот мост.
+hsk3-598	nord-est	северо-восток	J’habite au nord-est de la ville, un peu loin de la mer.	Мой дом находится на северо-востоке города, немного далеко от моря.
+hsk3-599	l’est ; région orientale	восток; восточная сторона	Le soleil se lève à l’est chaque matin.	Солнце каждое утро встаёт на востоке.
+hsk3-600	sud-est	юго-восток	La gare se trouve au sud-est du parc.	Вокзал находится к юго-востоку от парка.
+hsk3-601	hiver	зима	Ici, l’hiver est très froid et il neige souvent la nuit.	Зимой здесь очень холодно, и по ночам часто идёт снег.
+hsk3-602	comprendre ; savoir comment faire	понимать; знать, как	Après avoir appris cette méthode, je sais consulter un dictionnaire.	После изучения этого способа я понял, как искать слова в словаре.
+hsk3-603	animal	животное	Cet animal se repose le jour et sort chercher à manger la nuit.	Это животное отдыхает днём, а ночью выходит искать еду.
+hsk3-604	zoo	зоопарк	Ce week-end, nous emmenons les enfants au zoo voir les pandas géants.	В выходные мы поведём детей в зоопарк посмотреть на больших панд.
+hsk3-605	court ; bref	короткий; недлинный	Cette jupe est un peu courte ; je voudrais en essayer une plus longue.	Эта юбка немного короткая, я хочу примерить подлиннее.
+hsk3-606	short ; bermuda	шорты	Il fait chaud, alors il est allé au parc en short.	Жарко, поэтому он пошёл в парк в шортах.
+hsk3-607	segment ; période	отрезок; период	Je consacre chaque jour un moment à l’écriture des caractères chinois.	Каждый день я уделяю некоторое время практике письма китайских иероглифов.
+hsk3-608	faire de l’exercice ; s’entraîner	тренироваться; заниматься физкультурой	Mon père va faire de l’exercice au parc chaque matin.	Папа каждое утро ходит заниматься в парк.
+hsk3-609	dialogue ; conversation	диалог; разговор	Nous avons répété un dialogue à deux.	Мы вдвоём потренировались разыгрывать диалог.
+hsk3-610	affamé ; avoir faim	голодный	J’ai un peu faim ; mangeons d’abord quelques fruits.	Я немного проголодался, давай сначала поедим фруктов.
+hsk3-611	et ; de plus	к тому же; более того	Ce restaurant est près de chez moi et, en plus, il n’est pas cher.	Этот ресторан рядом с домом, к тому же цены там невысокие.
+hsk3-612	oreille	ухо	Le chiot a l’ouïe fine et entend même les sons lointains.	У щенка чуткий слух, он слышит даже отдалённые звуки.
+hsk3-613	écouteurs ; casque	наушники	Dans le métro, j’aime écouter de la musique avec des écouteurs.	В метро я люблю слушать музыку в наушниках.
+hsk3-614	envoyer ; émettre	отправлять; посылать	J’enverrai un courriel au professeur cet après-midi.	Сегодня днём я отправлю учителю письмо.
+hsk3-615	avoir de la fièvre	иметь температуру; лихорадить	Mon petit frère a de la fièvre ; maman l’emmène chez le médecin.	У младшего брата температура, мама ведёт его к врачу.
+hsk3-616	se produire ; arriver	происходить; случаться	Sais-tu ce qui s’est passé hier soir ?	Ты знаешь, что произошло вчера вечером?
+hsk3-617	découvrir ; remarquer	обнаружить; заметить	En cherchant la carte, j’ai remarqué qu’elle était sous la table.	Когда я искал карту, я заметил, что она лежит под столом.
+hsk3-618	se développer ; développement	развиваться; развитие	Cette ville s’est développée rapidement ces dernières années.	В последние годы этот город быстро развивается.
+hsk3-619	pratique ; commode	удобный; практичный	Acheter les billets en ligne est pratique et évite de faire la queue.	Покупать билеты в интернете удобно, не нужно стоять в очереди.
+hsk3-620	nouilles instantanées	лапша быстрого приготовления	Il est trop tard ; préparons des nouilles instantanées.	Уже поздно, давай приготовим лапшу быстрого приготовления.
+hsk3-621	méthode ; manière	метод; способ	Lis le texte une fois par jour ; c’est une bonne méthode.	Читай текст по одному разу в день, это хороший способ.
+hsk3-622	direction ; sens	направление	On dirait que nous avons pris la mauvaise direction ; nous devrions aller vers le nord.	Похоже, мы пошли не в ту сторону; нужно идти на север.
+hsk3-623	maison	дом; жилище	Leur nouvelle maison a trois pièces et une petite cour.	В их новом доме три комнаты и небольшой двор.
+hsk3-624	poser ; mettre	класть; ставить	Pose les fruits sur la table pour que tout le monde en mange.	Положи фрукты на стол, чтобы все могли угоститься.
+hsk3-625	être en vacances	быть на каникулах; отдыхать	L’école sera en vacances la semaine prochaine ; nous pourrons aller à la mer.	На следующей неделе в школе каникулы, мы сможем поехать к морю.
+hsk3-626	être rassuré ; ne pas s’inquiéter	успокоиться; не беспокоиться	Rassure-toi, les enfants sont bien rentrés.	Не волнуйся, дети уже благополучно добрались домой.
+hsk3-627	la fin des cours	окончание уроков	Retrouvons-nous au parc après les cours.	Давай встретимся в парке после уроков.
+hsk3-628	séparer ; à part	разделять; отдельно	Sépare les chemises blanches et noires, s’il te plaît.	Пожалуйста, положи белые и чёрные рубашки отдельно.
+hsk3-629	vent	ветер	Il y a beaucoup de vent aujourd’hui ; ferme bien les fenêtres avant de sortir.	Сегодня сильный ветер, перед выходом хорошо закрой окна.
+hsk3-630	classificateur pour les lettres	счётное слово для писем	J’ai écrit une lettre à ma grand-mère et je l’enverrai demain.	Я написал бабушке письмо и завтра его отправлю.
+hsk3-631	couple marié ; époux	супружеская пара	Ce couple marié se promène ensemble tous les soirs.	Эта супружеская пара каждый вечер гуляет вместе.
+hsk3-632	service ; servir	обслуживание; обслуживать	Le service de cet hôtel est excellent et le personnel très accueillant.	В этой гостинице хорошее обслуживание и приветливый персонал.
+hsk3-633	à proximité ; environs	поблизости; окрестности	Il y a un parc et un petit restaurant près de chez moi.	Рядом с моим домом есть парк и небольшой ресторан.
+hsk3-634	réviser	повторять; готовиться	Avant les examens, je révise deux heures chaque soir.	Перед экзаменами я каждый вечер занимаюсь по два часа.
+hsk3-635	devoir ; il faudrait	следует; надо	Il fait froid ; tu devrais mettre ton manteau.	Похолодало, тебе следует надеть пальто.
+hsk3-636	propre ; net	чистый; опрятный	La cuisine est propre maintenant ; on peut cuisiner.	Кухня уже убрана, можно готовить.
+hsk3-637	s’intéresser à	интересоваться	Je m’intéresse beaucoup à l’histoire de la Chine et je lis souvent des livres sur le sujet.	Я очень интересуюсь историей Китая и часто читаю книги на эту тему.
+hsk3-638	se sentir ; éprouver	чувствовать; ощущать	J’ai été très heureux en apprenant cette bonne nouvelle.	Услышав эту хорошую новость, я очень обрадовался.
+hsk3-639	attraper un rhume	простудиться	J’ai attrapé un rhume hier et je me repose à la maison aujourd’hui.	Вчера я простудился и сегодня отдыхаю дома.
+hsk3-640	faire ; exercer un métier	работать; заниматься чем-либо	Quel travail ta grande sœur fait-elle à l’hôpital ?	Кем работает твоя старшая сестра в больнице?
+hsk3-641	juste ; à l’instant	только что; недавно	Je viens d’arriver ; je vais boire un peu d’eau avant de cuisiner.	Я только что пришёл домой, сначала выпью воды, потом приготовлю.
+hsk3-642	tout à l’heure ; à l’instant	только что; минуту назад	J’étais au bureau tout à l’heure et je n’ai pas entendu le téléphone.	Я только что был в офисе и не услышал звонка.
+hsk3-643	à l’instant ; tout juste	только что; совсем недавно	Elle vient de partir ; elle n’est probablement pas encore arrivée à la gare.	Она только что уехала, наверное, ещё не добралась до вокзала.
+hsk3-644	train à grande vitesse	скоростная железная дорога; скоростной поезд	Nous avons pris le train à grande vitesse pour Pékin et sommes arrivés en deux heures.	Мы поехали в Пекин на скоростном поезде и добрались за два часа.
+hsk3-645	d’après ; selon	согласно; на основании	D’après la carte, nous devrions aller vers l’est.	Согласно карте, нам нужно идти на восток.
+hsk3-646	encore plus ; davantage	ещё; ещё больше	Il fait encore plus froid qu’hier ; mets un manteau pour sortir.	Сегодня ещё холоднее, чем вчера, надень пальто, когда выйдешь.
+hsk3-647	kilogramme	килограмм	Ce gâteau pèse deux kilogrammes ; nous pouvons le partager avec tout le monde.	Этот торт весит два килограмма, мы можем разделить его на всех.
+hsk3-648	parc	парк	Quand il fait beau, mon grand-père m’emmène souvent me promener au parc.	В хорошую погоду дедушка часто берёт меня гулять в парк.
+hsk3-649	jour ouvrable ; jour de semaine	рабочий день; будний день	En semaine, je prends le métro pour aller travailler ; le week-end, je me repose souvent chez moi.	В будни я езжу на работу на метро, а по выходным часто отдыхаю дома.
+hsk3-650	histoire ; récit	рассказ; история	Mon grand-père me raconte une histoire chaque soir.	Дедушка каждый вечер рассказывает мне историю.
+hsk3-651	souffler (en parlant du vent)	дуть (о ветре)	Le vent commence à souffler dehors ; fermons la fenêtre.	На улице начинает дуть ветер, давай закроем окно.
+hsk3-652	fermer ; clore	закрывать	Avant de sortir, n’oublie pas de bien fermer la porte.	Перед выходом не забудь закрыть дверь.
+hsk3-653	éteindre un appareil	выключить устройство	Éteins ton téléphone pendant le cours, s’il te plaît.	Пожалуйста, выключи телефон на уроке.
+hsk3-654	relation ; lien	отношения; связь	Mes relations avec mon nouveau camarade s’améliorent de jour en jour.	Мои отношения с новым одноклассником становятся всё лучше.
+hsk3-655	s’intéresser à ; se soucier de	заботиться; интересоваться	Ma grand-mère s’intéresse beaucoup à mes études et me demande souvent si je suis fatigué.	Бабушка заботится о моей учёбе и часто спрашивает, не устал ли я.
+hsk3-656	à propos de ; concernant	о; относительно	Le professeur nous a présenté un livre sur l’histoire de la Chine.	Учитель рассказал нам о книге по истории Китая.
+hsk3-657	suivre ; prêter attention à	следить за; уделять внимание	Je suis la météo chaque jour pour choisir mes vêtements.	Я каждый день слежу за прогнозом погоды, чтобы решить, что надеть.
+hsk3-658	pays ; nation	страна; государство	La Chine est un très grand pays qui compte beaucoup de villes.	Китай — очень большая страна со множеством городов.
+hsk3-659	célébrer une fête	праздновать праздник	Pendant les fêtes, toute notre famille se retrouve autour d’un repas.	Во время праздников вся наша семья собирается за столом.
+hsk3-660	le passé ; autrefois	прошлое; раньше	Autrefois, les gens traversaient souvent les rivières en bateau.	В прошлом люди часто переправлялись через реку на лодке.
+hsk3-661	mer	море	En été, nous allons souvent nous baigner au bord de la mer.	Летом мы часто ездим купаться на море.
+hsk3-662	avoir peur ; craindre	бояться	L’enfant a un peu peur de marcher seul la nuit.	Ребёнок немного боится идти ночью один.
+hsk3-663	beaucoup ; nombreux	много; множество	Il y a beaucoup de fruits sur la table ; partageons-les.	На столе много фруктов, давайте все угостимся.
+hsk3-664	ça fait longtemps	давно	Ça fait longtemps qu’on ne s’est pas vus ! Comment vas-tu ?	Давно не виделись! Как ты?
+hsk3-665	sembler ; avoir l’air de	казаться; похоже	On dirait qu’il pleut ; prends un parapluie.	Похоже, на улице дождь, возьми зонт.
+hsk3-666	numéro ; numéro de référence	номер	Donne-moi ton numéro de téléphone, je vais le noter.	Скажи свой номер телефона, я его запишу.
+hsk3-667	rivière ; fleuve	река	Cette rivière est très large ; traversons-la en bateau.	Эта река очень широкая, давай переправимся на лодке на другой берег.
+hsk3-668	approprié ; qui convient	подходящий; удобный	Cette paire de chaussures me va bien ; je peux marcher toute la journée sans me fatiguer.	Эта пара обуви мне подходит; в ней можно ходить весь день и не уставать.
+hsk3-669	tableau noir	доска	Le professeur a écrit les nouveaux mots au tableau.	Преподаватель написал новые слова на доске.
+hsk3-670	feu tricolore	светофор	Passez le feu tricolore devant vous, puis tournez à droite.	Проедьте перекрёсток со светофором впереди, затем поверните направо.
+hsk3-671	plus tard ; ensuite	позже; потом	Ce n’est que plus tard que j’ai appris qu’elle avait déjà déménagé à Shanghai.	Позже я узнал, что она уже переехала в Шанхай.
+hsk3-672	dans deux ans	через два года	Nous comptons rendre visite à des amis en France dans deux ans.	Мы собираемся через два года навестить друзей во Франции.
+hsk3-673	après-demain matin	послезавтра утром	Après-demain matin, je serai libre et pourrai t’accompagner à l’hôpital.	Послезавтра утром я свободен и могу сходить с тобой в больницу.
+hsk3-674	passeport	паспорт	Avant de partir, n’oublie pas de vérifier ton passeport et ton billet.	Перед выходом не забудь проверить паспорт и билет.
+hsk3-675	jardin	сад	Dans la résidence, il y a un jardin qui se couvre de fleurs au printemps.	В жилом комплексе есть сад, который весной весь покрывается цветами.
+hsk3-676	peintre	художник	Ce peintre peint souvent des paysages au bord de la rivière.	Этот художник часто пишет пейзажи у реки.
+hsk3-677	accueillir ; bienvenue	приветствовать; добро пожаловать	Nous sommes heureux d’accueillir les nouveaux élèves dans le cours de chinois.	Мы рады приветствовать новых учеников на занятиях по китайскому языку.
+hsk3-678	rendre ; rapporter	возвращать; отдавать обратно	Quand tu auras fini ce livre, rapporte-le à la bibliothèque, s’il te plaît.	Когда дочитаешь эту книгу, пожалуйста, верни её в библиотеку.
+hsk3-679	environnement ; cadre	окружающая обстановка; среда	Le cadre de cet hôtel est calme ; la nuit, on n’entend même pas les voitures.	В этой гостинице тихо, и даже ночью машин не слышно.
+hsk3-680	changer ; échanger	менять; обменивать	Cette chemise est trop grande ; je voudrais l’échanger contre une plus petite.	Эта рубашка слишком большая, я хочу обменять её на размер поменьше.
+hsk3-681	jaune	жёлтый	Elle a choisi une écharpe jaune, parfaite pour l’hiver.	Она выбрала жёлтый шарф, как раз подходящий для зимы.
+hsk3-682	répondre	отвечать	L’élève a répondu avec attention à la question du professeur.	Ученик внимательно ответил на вопрос преподавателя.
+hsk3-683	réunion (familier)	встреча; собрание (разговорное)	Nous avons une réunion à quinze heures.	У нас в три часа дня встреча.
+hsk3-684	réunion	совещание; собрание	Le directeur a fixé la réunion à vendredi après-midi.	Руководитель назначил совещание на пятницу после обеда.
+hsk3-685	ou (registre soutenu)	или (книжное)	On peut suivre cette route à pied ou à vélo ; dans les deux cas, l’école est proche.	По этой дороге можно идти пешком или ехать на велосипеде — школа недалеко.
+hsk3-686	ou bien	или; либо	Tu peux venir ce soir ou bien demain matin.	Ты можешь прийти сегодня вечером или завтра утром.
+hsk3-687	poulet	курица	Le poulet de ce restaurant est très tendre et le riz est bon aussi.	В этом ресторане курица очень нежная, и рис тоже вкусный.
+hsk3-688	presque	почти	J’ai failli être en retard, car le bus avait presque une demi-heure de retard.	Я чуть не опоздал, потому что автобус задержался почти на полчаса.
+hsk3-689	occasion	возможность	C’est une belle occasion de pratiquer l’oral, ne la rate pas.	Это хорошая возможность потренировать устную речь — не упусти её.
+hsk3-690	extrêmement	чрезвычайно; крайне	Le vent soufflait très fort au sommet de la montagne, alors nous sommes redescendus rapidement.	На вершине горы был чрезвычайно сильный ветер, поэтому мы быстро спустились.
+hsk3-691	pressé ; urgent	спешащий; срочный	Je suis pressé d’aller à la gare, alors je pars maintenant.	Я спешу на вокзал, поэтому сейчас пойду.
+hsk3-692	retenir ; noter	запоминать; записывать	Quand j’ai entendu la nouvelle adresse, je l’ai aussitôt notée sur mon téléphone.	Услышав новый адрес, я сразу записал его в телефон.
+hsk3-693	saison	сезон; время года	Il pleut beaucoup en cette saison ; mieux vaut prendre un parapluie en sortant.	В это время года часто идут дожди, поэтому лучше брать с собой зонт.
+hsk3-694	saison	время года; сезон	Le printemps est ma saison préférée : il ne fait ni froid ni chaud.	Весна — моё любимое время года: не холодно и не жарко.
+hsk3-695	ajouter	добавлять	La soupe est un peu fade ; ajoutons encore un peu de sel.	Суп немного пресный, давай добавим ещё соли.
+hsk3-696	vacances	каникулы; отпуск	Le dernier jour des vacances, je vais préparer ma valise à la maison.	В последний день отпуска я собираюсь собрать вещи дома.
+hsk3-697	persévérer	продолжать; упорно заниматься	S’entraîner à l’écoute dix minutes par jour n’est pas difficile ; le plus dur, c’est de persévérer.	Десять минут аудирования в день — это нетрудно, труднее всего заниматься регулярно.
+hsk3-698	vérifier ; examiner	проверять	Avant de partir, j’ai vérifié les portes et les fenêtres pour m’assurer qu’elles étaient fermées.	Перед уходом я проверил двери и окна, чтобы убедиться, что они закрыты.
+hsk3-699	simple ; facile	простой; несложный	Cette méthode est très simple ; il te suffira de regarder une fois.	Этот способ очень простой, достаточно один раз посмотреть — и ты поймёшь.
+hsk3-700	contrôler les billets	проверять билеты	Le contrôle des billets se trouve à droite ; veuillez préparer votre billet.	Пункт проверки билетов справа, пожалуйста, приготовьте билет.
+hsk3-701	en bonne santé	здоровье; здоровый	Le médecin a dit qu’elle était en bonne santé et pouvait reprendre le travail normalement.	Врач сказал, что она здорова и может вернуться к обычной работе.
+hsk3-702	se rencontrer	встречаться	Après le diplôme, nous trouvons chaque année un jour pour nous revoir.	После выпуска мы каждый год находим день, чтобы встретиться.
+hsk3-703	expliquer ; parler	говорить; объяснять	Le professeur a d’abord expliqué les mots nouveaux, puis a lu le texte avec tout le monde.	Сначала преподаватель объяснил новые слова, а затем прочитал текст вместе со всеми.
+hsk3-704	jiao ; un dixième de yuan	цзяо; одна десятая юаня	Ce crayon coûte cinq jiao (un demi-yuan).	Этот карандаш стоит пять цзяо (пол-юаня).
+hsk3-705	pied	нога; ступня	Il a couru deux kilomètres et il a un peu mal au pied.	Он пробежал два километра, и у него немного болит нога.
+hsk3-706	aller chercher	встречать; забирать	Après le travail, je vais chercher ma sœur aînée à l’aéroport.	После работы я поеду встречать старшую сестру в аэропорт.
+hsk3-707	rue	улица	Il y a une vieille librairie et deux cafés dans cette rue.	На этой улице есть старый книжный магазин и два кафе.
+hsk3-708	heure de cours ; période	урок; занятие	Le premier cours de l’après-midi est le chinois.	Первым уроком после обеда будет китайский.
+hsk3-709	se marier	жениться; выйти замуж	Ils prévoient de se marier l’année prochaine, et le mariage est presque prêt.	Они собираются пожениться в следующем году, и свадьба почти готова.
+hsk3-710	émission ; spectacle	программа; передача	Après le dîner, nous avons regardé ensemble une émission intéressante.	После ужина мы вместе посмотрели интересную передачу.
+hsk3-711	fête ; jour férié	праздник	La fête du Printemps est l’une des fêtes les plus importantes de Chine.	Праздник Весны — один из самых важных праздников в Китае.
+hsk3-712	se terminer ; finir	заканчиваться; завершать	Après la fin du film, nous sommes rentrés en métro.	После окончания фильма мы поехали домой на метро.
+hsk3-713	résoudre	решать; устранять	Nous avons cherché une solution ensemble et avons fini par régler le problème de l’ordinateur.	Мы вместе придумали решение и наконец устранили проблему с компьютером.
+hsk3-714	sœurs	сёстры	Les deux sœurs sont allées à l’école ensemble et vivent toujours dans la même ville.	Две сестры с детства ходили в одну школу и до сих пор живут в одном городе.
+hsk3-715	emprunter ; prêter	брать взаймы; одалживать	J’ai oublié mon stylo ; est-ce que je peux emprunter le tien un instant ?	Я забыл ручку. Можно ненадолго взять твою?
+hsk3-716	jin (environ 500 g)	цзинь (около 500 г)	J’ai acheté un kilo de pommes, assez pour que toute la famille en mange pendant deux jours.	Я купил килограмм яблок, семье хватит на два дня.
+hsk3-717	passer par ; traverser	проходить через; переживать	En passant sur ce pont, nous avons aperçu le coucher du soleil.	Когда мы проезжали по тому мосту, как раз увидели закат.
+hsk3-718	directeur ; responsable	руководитель; менеджер	Le directeur n’est pas au bureau aujourd’hui ; en cas de besoin, envoyez-lui un courriel.	Сегодня руководителя нет в офисе; если что-то понадобится, напишите ему.
+hsk3-719	longtemps	долго	J’ai attendu longtemps avant de voir arriver le bus.	Я долго ждал, прежде чем увидел подъезжающий автобус.
+hsk3-720	alcool	алкоголь	Les conducteurs ne doivent pas boire d’alcool ; on peut rentrer en métro.	Тому, кто за рулём, нельзя пить алкоголь; домой можно доехать на метро.
+hsk3-721	vieux ; usagé	старый; бывший в употреблении	Cette vieille chaise n’est pas très jolie, mais elle est confortable.	Этот старый стул не очень красивый, зато на нём удобно сидеть.
+hsk3-722	classificateur de phrase	счётное слово для предложений	Relis la dernière phrase, s’il te plaît.	Пожалуйста, прочитай последнее предложение ещё раз.
+hsk3-723	phrase	предложение	Cette phrase est trop longue ; séparons-la en deux phrases.	Это предложение слишком длинное, давай разделим его на два.
+hsk3-724	décider	решать; принимать решение	J’ai décidé de ne pas faire d’heures supplémentaires ce week-end et d’emmener les enfants au parc.	Я решил не работать сверхурочно в эти выходные и сводить детей в парк.
+hsk3-725	carte	карта	Avant d’entrer dans le métro, recharge ta carte de transport à la borne.	Перед входом в метро пополни транспортную карту в автомате.
+hsk3-726	fleurir	цвести	Le pêcher de la cour est en fleurs, et l’air est parfumé.	Персиковое дерево во дворе зацвело, и воздух наполнен ароматом цветов.
+hsk3-727	tenir une réunion	проводить собрание	Nous tenons une réunion chaque lundi matin pour parler du travail de la semaine.	Каждый понедельник утром мы проводим собрание и обсуждаем планы на неделю.
+hsk3-728	allumer ; démarrer	включать (устройство)	Avant de dormir, pense à éteindre la lumière ; rallume l’ordinateur le matin.	Перед сном не забудь выключить свет, а утром включи компьютер.
+hsk3-729	content ; heureux	радостный; счастливый	En recevant la carte postale de son amie, elle a souri de joie.	Получив открытку от подруги, она радостно улыбнулась.
+hsk3-730	on dirait ; apparemment	похоже; судя по всему	On dirait que le train d’aujourd’hui aura du retard ; allons prendre un thé en attendant.	Похоже, сегодня поезд задержится; давай пока выпьем чаю.
+hsk3-731	vraiment ; absolument (insistance)	действительно; уж точно (усиление)	Cette affaire, il ne faut surtout pas la raconter à qui que ce soit ; c’est un secret entre nous.	Об этом уж точно нельзя никому рассказывать, это наш общий секрет.
+hsk3-732	avoir soif	хотеть пить	Après avoir marché si longtemps, j’ai soif et j’aimerais boire un peu d’eau.	Мы так долго шли, что я захотел пить и хочу воды.
+hsk3-733	mignon ; adorable	милый; очаровательный	Ce petit chaton est adorable, et tous les enfants veulent le prendre dans leurs bras.	Этот котёнок очень милый, и все дети хотят взять его на руки.
+hsk3-734	mais	но; однако	Je voulais prendre le train, mais finalement je n’ai pas réussi à acheter de billet.	Я хотел поехать на поезде, но в итоге не смог купить билет.
+hsk3-735	quart d’heure ; quart	четверть часа; четверть	Il est huit heures et quart ; le film ne commence qu’à neuf heures.	Сейчас четверть девятого, а фильм начнётся только в девять.
+hsk3-736	manuel scolaire	учебник	Pendant le cours, veuillez ouvrir votre manuel à la page trente.	На занятии откройте учебник на тридцатой странице.
+hsk3-737	invité	гость	Les invités sont arrivés ; invite-les vite à entrer et à s’asseoir.	Гости уже пришли, скорее пригласи их войти и присесть.
+hsk3-738	texte de la leçon	текст урока	Le texte de la leçon d’aujourd’hui est court ; je l’ai retenu après deux lectures.	Текст сегодняшнего урока короткий, я запомнил его после двух прочтений.
+hsk3-739	climatiseur	кондиционер	Il fait trop chaud ; allumons la climatisation un moment.	Слишком жарко, давай ненадолго включим кондиционер.
+hsk3-740	pleurer	плакать	Le petit garçon ne trouvait pas sa mère et s’est mis à pleurer d’inquiétude.	Мальчик не мог найти маму и от волнения заплакал.
+hsk3-741	baguettes	палочки для еды	Les baguettes de ce restaurant sont posées à gauche sur la table.	В этом ресторане палочки для еды лежат слева на столе.
+hsk3-742	eau minérale	минеральная вода	Mieux vaut emporter une bouteille d’eau minérale pour la randonnée : il n’y a pas de magasin sur le chemin.	В поход лучше взять бутылку минеральной воды: по дороге магазинов нет.
+hsk3-743	venir de ; être originaire de	быть родом из; происходить из	Ce nouvel élève vient du Canada et parle très bien chinois.	Этот новый ученик из Канады и очень хорошо говорит по-китайски.
+hsk3-744	bleu	синий; голубой	Le ciel est bleu par la fenêtre, et on aperçoit encore les montagnes au loin.	За окном голубое небо, и вдали всё ещё видны горы.
+hsk3-745	ancien ; établi depuis longtemps	старый; давно работающий	Cette ancienne boutique existe depuis plus de trente ans, et les gens du quartier aiment y venir.	Этот старый магазин работает уже больше тридцати лет, и местные жители любят сюда приходить.
+hsk3-746	personne âgée	пожилой человек	Dans le parc, quelques personnes âgées pratiquent le tai-chi ensemble tous les matins.	Несколько пожилых людей в парке каждое утро вместе занимаются тайцзи.
+hsk3-747	quitter ; partir	уезжать; покидать	Nous quittons Pékin tôt demain et arriverons à Xi’an le soir.	Завтра рано утром мы уезжаем из Пекина и вечером прибудем в Сиань.
+hsk3-748	cadeau	подарок	Grand-mère était si heureuse de recevoir le cadeau de sa petite-fille qu’elle n’arrêtait pas de sourire.	Бабушка так обрадовалась подарку от внучки, что не могла перестать улыбаться.
+hsk3-749	histoire	история	Il s’intéresse beaucoup à l’histoire de la Chine et va souvent au musée voir des expositions.	Он очень интересуется историей Китая и часто ходит в музеи на выставки.
+hsk3-750	visage	лицо	Après s’être lavé le visage, elle est allée aider sa mère à préparer le petit-déjeuner.	Умывшись, она пошла на кухню помогать маме готовить завтрак.
+hsk3-751	s’entraîner ; pratiquer	тренироваться; упражняться	Je fais une demi-heure de piano chaque jour et je m’entraîne plus longtemps le week-end.	Я занимаюсь на пианино по полчаса каждый день, а в выходные дольше.
+hsk3-752	exercice ; pratique	упражнение; практика	Je ne maîtrise pas encore cet exercice ; je vais le refaire quelques fois ce soir.	Я ещё не освоил это задание, поэтому вечером нужно ещё несколько раз его потренировать.
+hsk3-753	frais ; agréablement frais	прохладный; приятный по прохладе	Après la pluie, il a fait bien plus frais ; c’est agréable pour se promener.	После дождя стало намного прохладнее, приятно прогуляться.
+hsk3-754	classificateur pour les véhicules	счётное слово для транспорта	Trois taxis sont arrêtés devant l’entrée, tous disponibles.	У входа стоят три такси, все свободны.
+hsk3-755	bavarder ; discuter	болтать; разговаривать	Nous avons bavardé une demi-heure au café avant de nous rappeler que nous avions un autre rendez-vous.	Мы проболтали в кафе полчаса и только потом вспомнили, что у нас ещё встреча.
+hsk3-756	bavarder (familier, nord de la Chine)	болтать (разг., северный вариант)	Grand-père aime bavarder avec les voisins après le dîner et ne rentre qu’à la tombée de la nuit.	Дедушка любит болтать с соседями после ужина и возвращается домой только в сумерках.
+hsk3-757	connaître ; comprendre	знать; понимать	Je connais bien cette ville, car j’y ai vécu quatre ans pendant mes études.	Я хорошо знаю этот город, потому что четыре года жил здесь во время учёбы.
+hsk3-758	voisin ; voisine	сосед; соседка	Après son emménagement, notre nouveau voisin nous a apporté une boîte de fruits.	После переезда новый сосед принёс нам коробку фруктов.
+hsk3-759	étudier à l’étranger	учиться за границей	Après son diplôme, elle veut étudier en France et s’est d’abord inscrite à des cours de français.	После выпуска она хочет учиться во Франции и сначала записалась на курсы французского.
+hsk3-760	étudiant étranger	иностранный студент	Cet étudiant étranger a trouvé un journal chinois à la bibliothèque.	Иностранный студент нашёл китайскую газету в библиотеке.
+hsk3-761	escalier	лестница	L’escalier vient d’être nettoyé ; fais attention en passant.	Лестницу только что помыли, будь осторожен.
+hsk3-762	bord de la route	обочина; у дороги	Il y a une petite boutique au bord de la route où l’on peut acheter de l’eau.	У дороги есть небольшой магазин, где можно купить воды.
+hsk3-763	croisement ; carrefour	перекрёсток	Au prochain carrefour, tournez à gauche et vous verrez l’école.	На следующем перекрёстке поверни налево, и увидишь школу.
+hsk3-764	cheval	лошадь	L’enfant était un peu nerveux mais ravi de monter à cheval pour la première fois.	Ребёнок впервые ехал верхом и немного нервничал, но был в восторге.
+hsk3-765	route ; chaussée	дорога; улица	La route est glissante après la pluie ; roule plus lentement à vélo.	После дождя дорога скользкая, поэтому на велосипеде нужно ехать медленнее.
+hsk3-766	tout de suite ; immédiatement	сразу; немедленно	Le médecin arrive tout de suite ; veuillez patienter ici un instant.	Врач сейчас придёт, пожалуйста, немного подождите здесь.
+hsk3-767	satisfait ; content	довольный	Les clients sont très satisfaits de la chambre et ont dit qu’ils reviendraient.	Гости остались очень довольны номером и сказали, что приедут ещё.
+hsk3-768	mao (un dixième de yuan)	мао (одна десятая юаня)	Ce crayon coûte cinquante fen ; j’en ai acheté trois.	Этот карандаш стоит пятьдесят фэней, я купил три.
+hsk3-769	mètre	метр	Ce mur fait trois mètres de haut, l’étagère y tient parfaitement.	Эта стена высотой три метра, книжный шкаф как раз помещается.
+hsk3-770	devant ; en face de	перед; напротив	Devant la bibliothèque, il y a un espace libre où les étudiants se reposent souvent.	Перед библиотекой есть свободная площадка, где студенты часто отдыхают.
+hsk3-771	comprendre ; clair	понимать; ясный	Tu as parlé trop vite ; je n’ai pas compris la dernière phrase.	Ты говорил слишком быстро, и я не понял последнюю фразу.
+hsk3-772	liste ; liste de noms	список; список имён	Le professeur a inscrit sur la liste les élèves qui participeront au concours demain.	Преподаватель записал в список учеников, которые завтра участвуют в соревновании.
+hsk3-773	personnalité connue	знаменитость; известная личность	Cette personnalité vient souvent lire des histoires aux enfants de la bibliothèque du quartier.	Эта знаменитость часто приходит в районную библиотеку читать детям.
+hsk3-774	sud	юг	En hiver, il fait généralement plus doux quand on voyage vers le sud.	Зимой на юге во время путешествий обычно теплее.
+hsk3-775	difficile	трудный; сложный	Cet examen n’est pas difficile ; il suffit de bien réviser les textes.	Этот экзамен несложный, нужно только хорошо повторить тексты.
+hsk3-776	sud ; région du sud	юг; южный регион	Il neige rarement dans le sud, et beaucoup de gens aiment y passer le Nouvel An.	На юге редко идёт снег, и многие любят встречать там Новый год.
+hsk3-777	triste ; peiné	грустный; расстроенный	Elle était un peu triste en apprenant que son amie allait déménager.	Она немного расстроилась, узнав, что подруга переезжает.
+hsk3-778	laid ; peu esthétique	некрасивый; неприятный на вид	La couleur de ce vêtement est jolie, mais sa coupe est un peu laide.	Цвет у этой одежды хороший, только выглядит она немного некрасиво.
+hsk3-779	homme	мужчина	Cet homme court au bord du lac tous les matins.	Этот мужчина каждое утро бегает у озера.
+hsk3-780	élève ; garçon	ученик; мальчик	Notre classe compte douze garçons, et il y a deux filles de plus.	В нашем классе двенадцать мальчиков и на две девочки больше.
+hsk3-781	problème difficile	трудная задача	Le professeur a expliqué ce problème difficile en trois étapes, et tout le monde a compris.	Преподаватель разобрал эту сложную задачу в три шага, и все поняли.
+hsk3-782	désagréable à entendre	неприятный на слух	La musique de l’étage est si désagréable que je dois fermer la fenêtre.	Музыка сверху звучит так неприятно, что мне приходится закрывать окно.
+hsk3-783	classe ; niveau scolaire	класс; год обучения	Ma petite sœur est en sixième cette année et entrera au collège l’an prochain.	Моя младшая сестра сейчас в шестом классе, а в следующем году пойдёт в среднюю школу.
+hsk3-784	jeune	молодой	Même s’il est jeune, il sait déjà s’occuper de lui-même.	Хотя он молод, он уже умеет самостоятельно о себе заботиться.
+hsk3-785	vache ; bœuf	корова; бык	Les vaches sur la montagne broutent lentement dans le pré.	Коровы на горе медленно пасутся на лугу.
+hsk3-786	faire des efforts ; travailler dur	стараться; усердно работать	Elle travaille dur chaque jour pour entrer dans l’université de son choix.	Она каждый день усердно занимается, чтобы поступить в выбранный университет.
+hsk3-787	femme	женщина	Cette femme tenait un enfant dans ses bras et attendait sa famille à la gare.	Женщина держала ребёнка на руках и ждала родных на вокзале.
+hsk3-788	élève ; fille	ученица; школьница	Il y a beaucoup de filles dans notre école, y compris dans l’équipe de football.	В нашей школе много девочек, и в футбольной команде их тоже немало.
+hsk3-789	grimper ; ramper	ползти; взбираться	Le petit s’est accroché à la chaise et a grimpé doucement sur le canapé.	Малыш держался за стул и медленно забрался на диван.
+hsk3-790	avoir peur de	бояться	Elle a peur du noir ; elle laisse donc une petite lampe allumée la nuit.	Она боится темноты, поэтому ночью оставляет включённым маленький свет.
+hsk3-791	prendre une photo	фотографироваться; фотографировать	Il y a beaucoup de monde qui prend des photos près de l’ancienne porte de la ville ; mieux vaut y aller tôt.	У старых городских ворот много желающих сфотографироваться, поэтому лучше прийти пораньше.
+hsk3-792	assiette ; plat	тарелка; блюдо	Après le repas, mets les assiettes dans l’évier de la cuisine, s’il te plaît.	После еды, пожалуйста, поставь тарелки в кухонную раковину.
+hsk3-793	gros ; en surpoids	толстый; полный	Ce chat mange trop ces derniers temps et a l’air d’avoir grossi.	Эта кошка в последнее время слишком много ест и заметно поправилась.
+hsk3-794	bière	пиво	Ce petit magasin propose de la bière locale, ainsi que du jus et du thé.	В этом небольшом магазине есть местное пиво, а также сок и чай.
+hsk3-795	d’habitude ; en temps normal	обычно; в повседневной жизни	D’habitude, je vais au travail en bus et ne prends un taxi que lorsqu’il pleut.	Обычно я езжу на работу на автобусе и беру такси только в дождь.
+hsk3-796	bouteille	бутылка	Il y a deux bouteilles sur la table, l’une contient de l’eau et l’autre du lait.	На столе стоят две бутылки: одна с водой, другая с молоком.
+hsk3-797	faire du vélo ; monter à	ехать верхом; ехать на велосипеде	Le temps sera beau ce week-end ; nous irons à vélo à la campagne voir les fleurs.	В выходные будет хорошая погода, поэтому мы поедем на велосипедах за город смотреть на цветы.
+hsk3-798	étrange ; bizarre	странный; необычный	C’est étrange : la porte était bien fermée à clé, mais le chat a disparu.	Странно: дверь точно была заперта, а кота нигде нет.
+hsk3-799	en fait ; en réalité	на самом деле; в действительности	Il a l’air calme, mais en fait il adore raconter des blagues.	Он выглядит спокойным, но на самом деле очень любит рассказывать шутки.
+hsk3-800	autre ; les autres	другой; остальные	À part ce livre, j’ai déjà terminé tous les autres.	Кроме этой книги, остальные я уже прочитал.
+hsk3-801	se lever	вставать; подниматься	Je me lève à six heures chaque jour, bois un verre d’eau, puis je sors.	Каждый день я встаю в шесть, выпиваю стакан воды и выхожу.
+hsk3-802	décoller	взлетать	L’avion décolle à dix heures ; nous devons arriver à l’aéroport avant neuf heures.	Самолёт вылетает в десять, поэтому нам нужно быть в аэропорту до девяти.
+hsk3-803	voiture	автомобиль; машина	Quand il pleut, il y a beaucoup de voitures sur la route ; conduis lentement.	В дождь на дорогах много машин, поэтому нужно ехать медленнее.
+hsk3-804	crayon	карандаш	Pendant l’examen, il faut remplir ce formulaire avec un crayon noir uniquement.	На экзамене эту форму нужно заполнять только чёрным карандашом.
+hsk3-805	l’année avant-dernière	позапрошлый год	L’hiver d’il y a deux ans, nous avons vu beaucoup de neige à Harbin.	Позапрошлой зимой мы увидели много снега в Харбине.
+hsk3-806	avant-hier	позавчера	Avant-hier, j’ai croisé mon ancien professeur de chinois à la librairie.	Позавчера я встретил в книжном магазине своего бывшего преподавателя китайского.
+hsk3-807	clair ; clairement	ясный; ясно	La carte est très claire, nous avons trouvé notre chemin facilement.	На карте всё хорошо обозначено, поэтому мы легко нашли дорогу.
+hsk3-808	demander un congé	просить об освобождении от занятий	Elle a de la fièvre et a appelé son professeur pour demander un jour de congé.	У неё температура, и она позвонила преподавателю, чтобы отпроситься на день.
+hsk3-809	inviter ; régaler	угощать; приглашать за свой счёт	C’est moi qui régale cette fois ; commandez ce que vous voulez.	В этот раз угощаю я, заказывайте что хотите.
+hsk3-810	automne	осень	En automne, les matinées et les soirées sont fraîches ; mieux vaut prendre une veste.	Осенью утром и вечером прохладно, поэтому лучше взять с собой куртку.
+hsk3-811	terrain de sport ; terrain de jeu	спортивная площадка; поле	Après les cours, les enfants jouent au football sur le terrain jusqu’à la tombée de la nuit.	После уроков дети играют в футбол на площадке и возвращаются домой только к темноте.
+hsk3-812	jupe	юбка	Elle portait une jupe bleue pour aller à l’anniversaire de son amie.	Она надела синюю юбку на день рождения подруги.
+hsk3-813	ensuite	затем; потом	Lave d’abord les légumes, puis coupe-les en petits morceaux.	Сначала вымой овощи, затем нарежь их небольшими кусочками.
+hsk3-814	chaleureux ; accueillant	радушный; приветливый	L’hôte de cette maison d’hôtes est très accueillant et nous a même préparé du thé le soir.	Хозяин гостевого дома очень радушный и вечером даже заварил нам чай.
+hsk3-815	reconnaître	узнавать; знать в лицо	Je reconnais ce médecin ; il m’a déjà soigné.	Я знаю этого врача в лицо, он раньше меня лечил.
+hsk3-816	penser ; estimer	считать; полагать	Je pense qu’il vaut mieux bien comprendre la question avant de répondre.	Я считаю, что сначала нужно понять вопрос, а потом отвечать.
+hsk3-817	sérieux ; appliqué	серьёзный; старательный	Il prépare son examen avec sérieux et révise chaque jour selon son programme.	Он серьёзно готовится к экзамену и каждый день повторяет материал по плану.
+hsk3-818	facile ; simple	лёгкий; простой	Ce plat est facile à préparer et peut être prêt en une demi-heure.	Это блюдо легко приготовить, оно будет готово за полчаса.
+hsk3-819	si	если	S’il ne pleut pas demain, nous monterons à la montagne pour voir le lever du soleil.	Если завтра не будет дождя, мы поднимемся в горы смотреть на восход.
+hsk3-820	parapluie	зонт	Il y a un parapluie près de la porte ; prends-le en sortant.	У двери стоит зонт, возьми его, когда пойдёшь.
+hsk3-821	balayer ; nettoyer	подметать; убирать	Après le petit-déjeuner, j’ai balayé le sol avant de sortir.	После завтрака я подмёл пол и только потом вышел.
+hsk3-822	canapé	диван	Le canapé du salon est moelleux ; grand-père s’y assied souvent pour lire le journal.	Диван в гостиной мягкий, дедушка часто сидит на нём и читает газету.
+hsk3-823	montagne	гора	Par temps clair, on peut voir toute la ville depuis la montagne.	В ясную погоду с горы виден весь город.
+hsk3-824	vêtement du haut	верхняя одежда; верх	Elle a plié son haut et l’a rangé dans l’armoire.	Она сложила верхнюю одежду и убрала её в шкаф.
+hsk3-825	cuillère	ложка	Cette soupe est trop chaude ; bois-la doucement avec une cuillère.	Этот суп слишком горячий, ешь его медленно ложкой.
+hsk3-826	à ses côtés ; tout près	рядом; подле	Après mon déménagement dans une nouvelle ville, mon ami était toujours à mes côtés pour m’aider.	После переезда в новый город друг всегда был рядом и помогал мне.
+hsk3-827	taille ; stature	рост	Il mesure un mètre quatre-vingts et est très agile quand il joue au basket.	Его рост — метр восемьдесят, и он очень ловко играет в баскетбол.
+hsk3-828	bruit ; son	звук; один звук	Un coup a retenti à la porte ; j’ai cru que mon ami était arrivé.	За дверью раздался стук, и я подумал, что пришёл друг.
+hsk3-829	vie ; vivre	жизнь; жить	Après quelques années de vie à l’étranger, son chinois s’est beaucoup amélioré.	После нескольких лет жизни за границей её китайский быстро улучшился.
+hsk3-830	se fâcher ; être en colère	сердиться; злиться	Ne te fâche pas ; je n’ai pas oublié ton anniversaire exprès.	Не сердись, я не специально забыл о твоём дне рождения.
+hsk3-831	voix ; son	звук; голос	Sa voix était douce, et tout le monde s’est tu pour l’écouter.	У неё был тихий голос, и все замолчали, чтобы её послушать.
+hsk3-832	ville ; municipalité	город; муниципалитет	La ville de Suzhou compte de nombreux jardins classiques qui attirent beaucoup de visiteurs.	В Сучжоу много классических садов, которые привлекают немало туристов.
+hsk3-833	essayer ; tester	пробовать; примерять	Je vais d’abord essayer ce manteau pour vérifier la taille ; je l’achèterai s’il me va.	Я сначала примерю это пальто, а если подойдёт — куплю.
+hsk3-834	salle ; pièce (suffixe)	комната; помещение (в сложных словах)	Notre école a une salle de lecture qui ferme à neuf heures du soir.	В нашей школе есть читальный зал, который закрывается в девять вечера.
+hsk3-835	monde	мир	Les gens du monde entier aiment écouter de la musique.	Люди во всём мире любят слушать музыку.
+hsk3-836	ramasser; ranger	собирать; убирать	Après l’examen, le professeur a ramassé toutes les copies.	После экзамена учитель собрал все экзаменационные листы.
+hsk3-837	recevoir	получить	J’ai reçu hier une carte postale de ma grande sœur.	Вчера я получил открытку от старшей сестры.
+hsk3-838	supporter; endurer	выносить; терпеть	Il ne supportait pas la chaleur dans la pièce, alors il a ouvert la fenêtre.	Он не выдержал такой жары в комнате и открыл окно.
+hsk3-839	mince; maigrir	худой; похудеть	Elle a un peu maigri depuis qu’elle mange moins de sucreries.	Она немного похудела, потому что стала есть меньше сладкого.
+hsk3-840	recevoir; être l’objet de	получать; подвергаться	Cette petite ville est appréciée des touristes.	Этот небольшой город пользуется популярностью у туристов.
+hsk3-841	oncle	дядя	Mon oncle m’emmène nager chaque semaine.	Дядя каждую неделю водит меня плавать.
+hsk3-842	arbre	дерево	L’arbre de la cour fleurit au printemps et donne des fruits en automne.	Дерево во дворе цветёт весной и приносит плоды осенью.
+hsk3-843	mathématiques	математика	Ma petite sœur préfère les mathématiques, car elle aime résoudre des problèmes.	Моя младшая сестра больше всего любит математику, потому что ей нравится решать задачи.
+hsk3-844	brosser	чистить щёткой	N’oublie pas de te brosser les dents avant de dormir.	Не забудь почистить зубы перед сном.
+hsk3-845	paire	пара	Une paire de baguettes propres est posée sur la table.	На столе лежит чистая пара палочек для еды.
+hsk3-846	niveau	уровень	Écouter plus souvent la radio en chinois peut améliorer ton niveau de compréhension orale.	Если чаще слушать китайское радио, можно улучшить понимание на слух.
+hsk3-847	conducteur; chauffeur	водитель	Le chauffeur nous a rappelé d’attacher nos ceintures.	Водитель напомнил нам пристегнуть ремни безопасности.
+hsk3-848	quatre saisons	четыре времени года	Les quatre saisons sont bien marquées dans cette ville, et le printemps est particulièrement agréable.	В этом городе хорошо различаются четыре времени года, а весной здесь особенно приятно.
+hsk3-849	soleil	солнце	Le soleil est sorti et le linge a vite séché.	Вышло солнце, и одежда быстро высохла.
+hsk3-850	sucre	сахар	Je bois mon café sans sucre.	Я пью кофе без сахара.
+hsk3-851	particulièrement; spécial	особенно; особенный	Le dîner sentait particulièrement bon aujourd’hui, alors j’ai repris un bol.	Сегодня ужин особенно аппетитно пах, и я съел ещё одну порцию.
+hsk3-852	améliorer; augmenter	повышать; улучшать	Répéter à voix haute pendant dix minutes par jour peut améliorer ta prononciation.	Повторение вслух по десять минут в день может улучшить произношение.
+hsk3-853	sport; éducation physique	спорт; физкультура	À l’école, il y a deux cours de sport par semaine.	В школе каждую неделю проходят два урока физкультуры.
+hsk3-854	salle de sport; gymnase	спортивный зал; спорткомплекс	Le match a eu lieu dans le nouveau gymnase, et les spectateurs ont rempli les gradins.	Матч проходил в новом спорткомплексе, и зрители заняли все трибуны.
+hsk3-855	sucré	сладкий	Ce lait de soja est un peu sucré, inutile d’ajouter du sucre.	Это соевое молоко немного сладкое, сахар добавлять не нужно.
+hsk3-856	sauter	прыгать	Le chaton a sauté d’un coup sur le rebord de la fenêtre.	Котёнок одним прыжком забрался на подоконник.
+hsk3-857	entendre dire	слышать, что	J’ai entendu dire que cette échoppe est réputée pour ses nouilles au bœuf.	Я слышал, что эта лапшичная славится говяжьей лапшой.
+hsk3-858	plutôt; assez	довольно; весьма	Cette rue est assez calme et convient bien à une promenade le soir.	Эта улица довольно тихая и хорошо подходит для вечерней прогулки.
+hsk3-859	collègue	коллега	À midi, je descends manger avec mes collègues.	В полдень мы с коллегами спускаемся пообедать.
+hsk3-860	être d’accord; approuver	соглашаться; одобрять	Le responsable a accepté que je prenne un jour de congé la semaine prochaine.	Руководитель разрешил мне взять выходной на следующей неделе.
+hsk3-861	cheveux	волосы	Il a tellement plu que mes cheveux sont trempés.	Дождь был такой сильный, что у меня промокли волосы.
+hsk3-862	soudain; tout à coup	внезапно	Nous allions sortir quand le courant a soudainement été coupé.	Мы уже собирались выходить, как вдруг отключили электричество.
+hsk3-863	bibliothèque	библиотека	Avant les examens, je révise souvent à la bibliothèque jusqu’à neuf heures.	Перед экзаменами я часто занимаюсь в библиотеке до девяти.
+hsk3-864	jambe	нога	Après deux heures de vélo, j’ai un peu mal aux jambes.	После двух часов на велосипеде у меня немного болят ноги.
+hsk3-865	une autre région; ailleurs	другой город; другая местность	Elle vient d’arriver à Pékin depuis une autre ville pour travailler et ne connaît pas encore bien les environs.	Она недавно приехала в Пекин на работу из другого города и пока плохо знает окрестности.
+hsk3-866	plats à emporter; livraison de repas	еда на вынос; доставка еды	Nous étions trop occupés aujourd’hui, alors nous avons commandé à emporter.	Сегодня мы были слишком заняты, поэтому заказали еду с доставкой.
+hsk3-867	langue étrangère	иностранный язык	Quand il apprend une langue étrangère, il préfère d’abord écouter, puis parler.	Изучая иностранный язык, он предпочитает сначала слушать, а потом говорить.
+hsk3-868	terminer; achever	закончить; выполнить	Je vais d’abord terminer le rapport, puis aller chercher l’enfant.	Сначала я закончу отчёт, а потом заберу ребёнка.
+hsk3-869	bol	миска; чаша	Mets ce bol dans le placard, s’il te plaît.	Пожалуйста, поставь эту миску в шкаф.
+hsk3-870	en retard	опаздывать; задерживаться	Le train avait vingt minutes de retard, alors nous avons attendu sur le quai.	Поезд задержался на двадцать минут, и мы ждали на платформе.
+hsk3-871	soirée; fête	вечер; праздничный концерт	À la fête du Nouvel An de l’école, il y aura des chants et des danses.	На школьном новогоднем вечере будут песни и танцы.
+hsk3-872	tennis	теннис	Ce week-end, j’ai joué au tennis avec ma cousine et perdu deux sets.	В выходные я играл в теннис с двоюродной сестрой и проиграл два сета.
+hsk3-873	site internet	веб-сайт	J’ai trouvé l’emploi du temps sur le site de l’école.	Я нашёл расписание занятий на сайте школы.
+hsk3-874	oublier	забыть	N’oublie pas tes clés en partant.	Не забудь взять ключи, когда будешь выходить.
+hsk3-875	pour; destiné à	для; ради	Cette table a été conçue pour les jeunes enfants.	Этот стол был сделан для маленьких детей.
+hsk3-876	pour; afin de	чтобы; ради	Je me suis levé à six heures afin de prendre le bus du matin.	Чтобы успеть на ранний автобус, я встал в шесть.
+hsk3-877	toilettes; salle de bains	туалет; ванная комната	La lumière des toilettes est en panne ; aide-moi à changer l’ampoule, s’il te plaît.	В ванной не работает свет; помоги мне заменить лампочку, пожалуйста.
+hsk3-878	culture	культура	Se renseigner sur la culture locale avant un voyage facilite les échanges avec les habitants.	Если перед поездкой узнать о местной культуре, будет легче общаться с людьми.
+hsk3-879	pièce; maison	комната; дом	La pièce n’est pas grande, mais elle est très ensoleillée.	Комната небольшая, зато в ней много солнца.
+hsk3-880	ouest; vers l’ouest	запад; к западу	Nous sommes allés vers l’ouest depuis l’école et sommes arrivés après deux carrefours.	Мы пошли от школы на запад и дошли после двух перекрёстков.
+hsk3-881	nord-ouest	северо-запад	J’habite au nord-ouest de la ville, non loin de la gare.	Я живу на северо-западе города, недалеко от вокзала.
+hsk3-882	Occident; occidental	Запад; западный	La musique occidentale l’intéresse beaucoup.	Он очень интересуется западной музыкой.
+hsk3-883	pastèque	арбуз	Quand il fait chaud, ma famille aime manger de la pastèque bien fraîche.	В жару наша семья любит есть охлаждённый арбуз.
+hsk3-884	sud-ouest	юго-запад	Ce village se trouve au sud-ouest de la capitale provinciale, à trois heures de route.	Эта деревня находится к юго-западу от столицы провинции, в трёх часах езды.
+hsk3-885	avoir l’habitude de; s’habituer à	привыкнуть; привычка	J’ai l’habitude de me lever tôt et je cours à six heures tous les jours.	Я привык рано вставать и каждый день бегаю в шесть утра.
+hsk3-886	aimer beaucoup; affectionner	любить; обожать	Ma grand-mère aime beaucoup cultiver des fleurs ; le balcon est rempli de plantes en pot.	Бабушка очень любит выращивать цветы; весь балкон заставлен горшками.
+hsk3-887	machine à laver	стиральная машина	La machine à laver tourne ; ouvre-la un peu plus tard.	Стиральная машина стирает; открой её немного позже.
+hsk3-888	se laver; prendre une douche	мыться; принимать душ	Après le sport, je prends d’abord une douche, puis je mange.	После тренировки я сначала принимаю душ, а потом ем.
+hsk3-889	été	лето	En été, le soleil se couche tard et les enfants jouent souvent dehors.	Летом солнце садится поздно, и дети часто играют на улице.
+hsk3-890	d’abord; en premier	сначала; прежде	Commande d’abord, je vais nous trouver une place.	Сначала закажи, а я найду нам место.
+hsk3-891	banane	банан	Ces bananes ne sont pas encore mûres ; mangeons-les demain.	Эта связка бананов ещё не созрела, давай съедим её завтра.
+hsk3-892	croire; faire confiance	верить; доверять	Je crois qu’il rendra le livre à temps.	Я верю, что он вовремя вернёт книгу.
+hsk3-893	boîte; valise	коробка; чемодан	Avant de partir, elle a mis ses vêtements dans la valise.	Перед отъездом она положила одежду в чемодан.
+hsk3-894	vers; à; auprès de	к; у (кого-либо)	J’ai emprunté un parapluie à mon voisin.	Я одолжил зонт у соседа.
+hsk3-895	ressembler à	быть похожим на	Ce petit garçon ressemble à son père.	Этот мальчик похож на своего отца.
+hsk3-896	appareil photo	фотоаппарат	Range ton appareil photo avant d’entrer dans le musée.	Перед входом в музей убери фотоаппарат.
+hsk3-897	résidence; quartier résidentiel	жилой комплекс; жилой район	Une nouvelle boulangerie a ouvert à l’entrée du quartier résidentiel.	У входа в жилой комплекс открылась новая пекарня.
+hsk3-898	faire attention; prudent	быть осторожным; внимательный	Il y a de l’eau par terre ; fais attention en marchant.	На полу вода, будь осторожен.
+hsk3-899	campus	кампус; территория школы	Au printemps, le campus est couvert de fleurs.	Весной территория кампуса вся в цветах.
+hsk3-900	directeur; proviseur	директор школы	Le directeur a accueilli les nouveaux élèves à la cérémonie de rentrée.	Директор приветствовал новых учеников на церемонии открытия учебного года.
+hsk3-901	chaussure	обувь; туфля	Ces chaussures sont confortables ; je compte les porter en voyage.	Эта обувь удобная, я собираюсь надеть её в поездку.
+hsk3-902	dans son cœur; intérieurement	в душе; про себя	Même si elle ne l’a pas dit, elle était quand même très contente au fond d’elle-même.	Хотя она этого не сказала, в душе она всё равно была очень рада.
+hsk3-903	Nouvel An	Новый год	Le jour du Nouvel An, toute ma famille mange des raviolis chinois ensemble.	В Новый год вся наша семья вместе ест пельмени.
+hsk3-904	informations; actualités	новости	Chaque matin, papa regarde les informations en prenant son petit-déjeuner.	Каждое утро папа смотрит новости за завтраком.
+hsk3-905	frais	свежий	Le poisson n’est bon que lorsqu’il est frais.	Рыба вкусная, только если она свежая.
+hsk3-906	lettre	письмо	Dès qu’elle a reçu ma lettre, mamie m’a téléphoné.	Получив моё письмо, бабушка сразу мне позвонила.
+hsk3-907	carte de crédit	кредитная карта	Cette petite boutique n’accepte pas les cartes de crédit, seulement les espèces.	В этом небольшом магазине не принимают кредитные карты, только наличные.
+hsk3-908	convenir; ça marche	подходить; годиться	Cette organisation peut aussi convenir pour aujourd’hui.	Такой план подойдёт и на сегодня.
+hsk3-909	bagages	багаж	Avant d’embarquer, vérifie tes bagages.	Перед посадкой проверь багаж.
+hsk3-910	intérêt; passe-temps	интерес; увлечение	La photographie l’intéresse beaucoup ; le week-end, elle va souvent prendre des photos au parc.	Она очень интересуется фотографией и по выходным часто снимает в парке.
+hsk3-911	prendre des congés; vacances	взять отпуск; отдых	Papa sera en congé le mois prochain ; nous avons prévu d’aller au bord de la mer.	В следующем месяце папа берёт отпуск, и мы собираемся поехать к морю.
+hsk3-912	avoir besoin de; nécessiter	нуждаться; требоваться	Si tu as besoin d’aide, tu peux m’appeler.	Если тебе понадобится помощь, позвони мне.
+hsk3-913	choisir	выбирать	Tu peux d’abord choisir la couleur, puis décider lequel acheter.	Сначала выбери цвет, а потом реши, какую вещь купить.
+hsk3-914	choisir; choix	выбирать; выбор	Après avoir visité trois hôtels, nous avons choisi celui qui était le plus près de la gare.	Осмотрев три гостиницы, мы выбрали ту, что ближе всего к вокзалу.
+hsk3-915	trimestre; semestre	учебный семестр	J’ai choisi deux cours de langue étrangère ce semestre.	В этом семестре я выбрал два занятия по иностранному языку.
+hsk3-916	dent	зуб	Je suis allé chez le dentiste hier ; il m’a dit que cette dent allait bien.	Вчера я был у стоматолога, и он сказал, что с этим зубом всё в порядке.
+hsk3-917	brosse à dents	зубная щётка	Cette brosse à dents est trop vieille ; je veux la remplacer.	Эта зубная щётка слишком старая, я хочу купить новую.
+hsk3-918	mouton; brebis	овца; баран	Les moutons de la montagne broutent dans le pré.	Овцы на горе пасутся на лугу.
+hsk3-919	élever; garder	выращивать; держать	Elle a deux chats et leur donne à manger chaque matin.	Она держит двух кошек и кормит их каждое утро.
+hsk3-920	demander; exiger	требовать; просить	Le professeur nous a demandé de rendre les devoirs demain.	Учитель попросил нас сдать домашнее задание завтра.
+hsk3-921	page	страница	Ce livre compte trois cents pages, et j’en suis déjà à la page quatre-vingt.	В этой книге триста страниц, а я уже дошёл до восьмидесятой.
+hsk3-922	certainement; devoir absolument	обязательно; непременно	N’oublie surtout pas ta carte d’étudiant ; tu en auras besoin pour entrer à la bibliothèque.	Обязательно возьми студенческий билет, он понадобится для входа в библиотеку.
+hsk3-923	en tout; au total	всего; в общей сложности	Nous avons acheté six billets en tout.	Всего мы купили шесть билетов.
+hsk3-924	ensemble	вместе	Après le cours, allons prendre un café ensemble.	После занятий давай вместе пойдём выпьем кофе.
+hsk3-925	identique; pareil	одинаковый; такой же	Ces deux vêtements sont de la même couleur ; seule la taille diffère.	Эти две вещи одного цвета, отличается только размер.
+hsk3-926	après; plus tard	после; позже	Après le dîner, je vais souvent me promener.	После ужина я часто выхожу на прогулку.
+hsk3-927	avant; autrefois	раньше; прежде	J’habitais autrefois à Shanghai, mais j’ai déménagé à Hangzhou.	Раньше я жил в Шанхае, а теперь переехал в Ханчжоу.
+hsk3-928	à partir de; au-dessus de	старше; не менее	Les enfants de dix ans et plus peuvent participer à ce concours.	Дети от десяти лет могут участвовать в этом соревновании.
+hsk3-929	en plus de; à part	кроме; помимо	En plus du chinois, elle parle aussi français.	Помимо китайского, она говорит и по-французски.
+hsk3-930	croire; penser à tort	думать; ошибочно полагать	Je croyais qu’on était vendredi ; en fait, on est déjà samedi.	Я думал, что сегодня пятница, а оказалось, что уже суббота.
+hsk3-931	moins de; en dessous de	младше; ниже	L’entrée au musée est gratuite pour les enfants de moins de dix ans.	Дети младше десяти лет могут бесплатно посетить музей.
+hsk3-932	ordinaire; en général	обычный; в целом	La cuisine de ce restaurant est assez ordinaire, mais les prix sont très bas.	Еда в этом ресторане обычная, зато цены низкие.
+hsk3-933	tout en; en même temps	одновременно; в то время как	Il écoute les informations tout en faisant la cuisine.	Он слушает новости, пока готовит.
+hsk3-934	sans arrêt; tout le temps	всё время; непрерывно	Je t’ai attendu une demi-heure à l’entrée sans jamais te voir.	Я полчаса ждал тебя у входа и всё это время тебя не видел.
+hsk3-935	musique	музыка	J’aime écouter de la musique classique et je sais aussi jouer quelques morceaux.	Моя младшая сестра каждый день по часу занимается музыкой.
+hsk3-936	banque	банк	Je suis allé à la banque pour faire de la monnaie.	Я сходил в банк разменять деньги.
+hsk3-937	carte bancaire	банковская карта	Pense à mettre ta carte bancaire dans ton portefeuille avant de partir.	Перед выходом не забудь положить банковскую карту в кошелёк.
+hsk3-938	boisson	напиток	Cette boutique propose du thé chaud, du jus et d’autres boissons.	В этом магазине есть горячий чай, сок и другие напитки.
+hsk3-939	devoir; il faudrait	следует; нужно	Il pleut dehors, tu devrais prendre un parapluie.	На улице дождь, тебе следует взять зонт.
+hsk3-940	influencer; effet	влиять; влияние	Boire trop de café le soir peut nuire au sommeil.	Если вечером выпить слишком много кофе, это может повлиять на сон.
+hsk3-941	utiliser; avec	использовать; при помощи	Écris avec ce stylo, la couleur se voit mieux.	Пиши этой ручкой, так цвет будет заметнее.
+hsk3-942	courriel; e-mail	электронное письмо	Je viens de recevoir un courriel de l’école.	Я только что получил письмо от школы.
+hsk3-943	touriste	турист	Cette vieille ville accueille beaucoup de touristes chaque été.	Каждое лето в этот старинный город приезжает много туристов.
+hsk3-944	jeu	игра	Quand il pleut, les enfants jouent à des jeux à la maison.	Когда идёт дождь, дети играют дома.
+hsk3-945	boîte mail; boîte de réception	почтовый ящик; электронная почта	Envoie les photos dans ma boîte mail, s’il te plaît.	Пожалуйста, отправь фотографии мне на электронную почту.
+hsk3-946	lié à; concernant	связанный с; относящийся к	Ces règles sont toutes liées à la sécurité.	Все эти правила связаны с безопасностью.
+hsk3-947	célèbre; réputé	известный; знаменитый	Ce restaurant est réputé pour sa soupe ; beaucoup de gens viennent exprès pour la goûter.	Это место славится супом, и многие приходят специально его попробовать.
+hsk3-948	utile	полезный	Cette carte est très utile ; les nouveaux visiteurs risquent moins de se perdre.	Эта карта очень полезна: тем, кто пришёл впервые, будет труднее заблудиться.
+hsk3-949	encore; de nouveau	снова; опять	La pluie s’est arrêtée et le soleil est réapparu.	Дождь закончился, и солнце снова вышло.
+hsk3-950	badminton	бадминтон	Je joue au badminton avec un ami deux fois par semaine.	Я играю с другом в бадминтон два раза в неделю.
+hsk3-951	langue	язык	Apprendre une nouvelle langue demande de la patience et de la pratique.	Чтобы выучить новый язык, нужны терпение и практика.
+hsk3-952	imperméable	дождевик	La météo annonce de la pluie cet après-midi ; prends un imperméable avant de sortir.	По прогнозу после обеда будет дождь, возьми дождевик перед выходом.
+hsk3-953	rencontrer; tomber sur	встретить; столкнуться с	J’ai croisé un ancien camarade au supermarché.	В супермаркете я встретил бывшего одноклассника.
+hsk3-954	rencontrer par hasard	встретить случайно	En descendant, je suis justement tombé sur le propriétaire.	Спускаясь вниз, я случайно встретил хозяина квартиры.
+hsk3-955	jardin; parc	сад; парк	Les enfants courent après un ballon dans le parc.	Дети бегают по парку за мячом.
+hsk3-956	membre; employé	участник; сотрудник	Tout le monde a aidé chaleureusement le nouvel employé pour son premier jour.	В первый рабочий день все очень тепло помогали новому сотруднику.
+hsk3-957	être prêt à; vouloir bien	быть готовым; хотеть	Si tu le veux, nous pouvons pratiquer l’expression orale ensemble.	Если ты не против, мы можем вместе потренировать разговорную речь.
+hsk3-958	plus… plus…; de plus en plus	чем… тем…; всё более	Plus il se fait tard, moins il y a de voitures dans la rue.	Чем позже становится, тем меньше машин на улице.
+hsk3-959	lune	луна	La lune est grande et brillante ce soir.	Сегодня луна большая и яркая.
+hsk3-960	rencontre sportive; jeux sportifs	спортивные соревнования	La rencontre sportive de l’école a lieu la semaine prochaine ; notre classe participera au relais.	Школьные спортивные соревнования пройдут на следующей неделе, и наш класс примет участие в эстафете.
+hsk3-961	athlète; sportif	спортсмен	Cet athlète s’entraîne six heures par jour.	Этот спортсмен тренируется по шесть часов каждый день.
+hsk3-962	nous (toi compris)	мы (включая собеседника)	Mangeons d’abord, puis allons voir un film ensemble.	Давай сначала поедим, а потом вместе пойдём в кино.
+hsk3-963	sale	грязный	Tes chaussures sont sales ; essuie-les avant d’entrer.	У тебя грязная обувь, вытри её перед входом.
+hsk3-964	qu’est-ce qu’on fait ?	что нам делать?	Il n’y a plus de billets de train. Qu’est-ce qu’on fait maintenant ?	Билеты на поезд распроданы. Что нам теперь делать?
+hsk3-965	comment; de quelle manière	как; каким образом	Comment penses-tu qu’on pourrait mieux préparer ce plat ?	Как, по-твоему, лучше приготовить это блюдо?
+hsk3-966	se tenir debout; rester debout	стоять; оставаться стоя	Reste debout près de la porte un instant, je reviens tout de suite.	Постой у двери немного, я сейчас вернусь.
+hsk3-967	classificateur pour objets plats	счётное слово для плоских предметов	Donne-moi deux feuilles de papier, s’il te plaît, je vais noter l’adresse.	Дай мне, пожалуйста, два листа бумаги, я запишу адрес.
+hsk3-968	grandir; pousser	расти; вырастать	L’enfant grandit vite ; les vêtements achetés l’an dernier sont déjà trop petits.	Ребёнок быстро растёт: одежда, купленная в прошлом году, ему уже мала.
+hsk3-969	s’inquiéter; être pressé	волноваться; торопиться	Ne t’inquiète pas, le bus n’arrivera que dans cinq minutes.	Не волнуйся, автобус будет только через пять минут.
+hsk3-970	éclairer; briller sur	освещать; светить на	Le soleil du matin entre dans la pièce et éclaire la table.	Утреннее солнце заглядывает в комнату и освещает стол.
+hsk3-971	s’occuper de; prendre soin de	присматривать; заботиться	Pendant mon déplacement professionnel, mon voisin s’est occupé du chaton.	Пока я был в командировке, сосед присматривал за котёнком.
+hsk3-972	photo; photographie	фотография; снимок	Cette photo a été prise au bord de la mer l’an dernier.	Эту фотографию сделали на берегу моря в прошлом году.
+hsk3-973	prendre une photo	фотографироваться; делать снимок	Les touristes prennent des photos devant la porte de la vieille ville ; une longue file s’est formée derrière eux.	Туристы делают фотографии у ворот старого города, а за ними выстроилась длинная очередь.
+hsk3-974	jusqu’à; jusqu’au moment où	до; вплоть до	Le médecin n’a terminé sa journée qu’à huit heures du soir.	Врач закончил работу только в восемь вечера.
+hsk3-975	seulement; ne… que	только; лишь	Je n’ai pris qu’un livre ; tout le reste est resté à la maison.	Я взял только одну книгу, всё остальное осталось дома.
+hsk3-976	papier	бумага	Il y a du papier et un stylo sur la table ; tu peux le noter.	На столе есть бумага и ручка, можешь записать.
+hsk3-977	ne pouvoir que; être limité à	мочь только; быть вынужденным	Il pleut aujourd’hui, alors nous ne pouvons regarder un film qu’à la maison.	Сегодня дождь, поэтому мы можем посмотреть фильм только дома.
+hsk3-978	simplement; seulement	просто; всего лишь	Je voulais simplement poser une question, je ne suis pas venu me plaindre.	Я просто хотел спросить, а не пожаловаться.
+hsk3-979	tant que; à condition que	если; при условии что	À condition de t’entraîner chaque jour, ta prononciation s’améliorera.	Если будешь заниматься каждый день, твоё произношение улучшится.
+hsk3-980	il n’y a que; seulement	только; всего	Il n’y a que trois personnes dans la salle ; les autres élèves ne sont pas encore arrivés.	В классе только три человека, остальные ещё не пришли.
+hsk3-981	pendant; au cours de	во время; в ходе	J’ai appris cette nouvelle pendant la réunion.	Я услышал эту новость во время собрания.
+hsk3-982	milieu; entre	середина; между	La poste se trouve entre l’école et la banque.	Почта находится между школой и банком.
+hsk3-983	enfin; finalement	наконец; в конце концов	Après l’avoir cherchée longtemps, nous avons enfin trouvé ce livre sur l’étagère.	Мы долго искали и наконец нашли эту книгу на полке.
+hsk3-984	sorte; type	вид; сорт	Veux-tu goûter cette sorte de thé ?	Хочешь попробовать этот сорт чая?
+hsk3-985	important	важный	Dormir huit heures est très important pour les enfants.	Детям очень важно спать по восемь часов.
+hsk3-986	week-end	выходные	Ce week-end, je compte aller voir ma grand-mère.	В эти выходные я собираюсь навестить бабушку.
+hsk3-987	principal; essentiel	главный; основной	Les principaux magasins de cette rue ouvrent à neuf heures.	Основные магазины на этой улице открываются в девять.
+hsk3-988	faire attention; noter	обращать внимание; следить	Fais attention aux voitures quand tu traverses la rue.	Переходя улицу, следи за машинами.
+hsk3-989	être hospitalisé	лечь в больницу; быть госпитализированным	Depuis que grand-père est à l’hôpital, la famille va le voir à tour de rôle chaque jour.	После того как дедушку положили в больницу, родные каждый день ходили к нему по очереди.
+hsk3-990	dictionnaire	словарь	Je ne connais pas ce caractère ; je dois le chercher dans le dictionnaire.	Я не знаю этот иероглиф, нужно посмотреть его в словаре.
+hsk3-991	vélo; bicyclette	велосипед	Il fait beau ; allons à vélo au bord de la rivière.	Погода хорошая, давай поедем к реке на велосипедах.
+hsk3-992	suffixe nominal (comme dans 桌子)	суффикс существительного (как в 桌子)	Mets la table près de la fenêtre, s’il te plaît.	Пожалуйста, поставь стол рядом с окном.
+hsk3-993	toujours; en tout	всегда; всего	J’oublie toujours mon parapluie au bureau.	Я всегда забываю зонт в офисе.
+hsk3-994	toujours; systématiquement	всегда; неизменно	Le bus est toujours à l’heure.	Автобус всегда ходит вовремя.
+hsk3-995	bouche	рот	Quand elle rit, elle se couvre la bouche avec la main.	Когда она смеётся, то прикрывает рот рукой.
+hsk3-996	le mieux; ferait mieux de	лучше всего; лучше бы	Il vaut mieux ne pas boire trop de café le soir.	Вечером лучше не пить слишком много кофе.
+hsk3-997	dernier; finalement	последний; в итоге	Après le vote de tous, c’est finalement l’option rouge qui a été choisie.	После голосования все в итоге выбрали красный вариант.
+hsk3-998	récemment; ces derniers temps	недавно; в последнее время	Le temps s’est réchauffé récemment ; je vais souvent courir au parc le matin.	В последнее время потеплело, и я часто бегаю по утрам в парке.
+hsk3-999	être reçu comme invité; rendre visite	гостить; быть в гостях	Dimanche, je vais rendre visite au professeur Wang chez lui.	В воскресенье я пойду в гости к учителю Вану.
+hsk3-1000	devoirs	домашнее задание	Après le dîner, mon petit frère s’est assis pour faire ses devoirs.	После ужина младший брат сел делать домашнее задание.

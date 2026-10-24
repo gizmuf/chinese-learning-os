@@ -1,8 +1,8 @@
 """Run against an isolated built Worker with local D1, never a live Site."""
-import json,time,uuid
+import json,time,uuid,os
 from urllib.request import Request,urlopen
 from urllib.error import HTTPError
-BASE='http://127.0.0.1:8788'
+BASE=os.environ.get('CHINESE_OS_QA_URL','http://127.0.0.1:8788')
 checks=[]
 def call(method='GET',user=None,body=None,origin=BASE,extra=None):
     headers={}
@@ -33,8 +33,6 @@ assert call(user=b)[1]['events'][0]['itemId']=='water' and call(user=a)[1]['even
 assert call('POST',a,{'events':[event]},origin='https://other.example')[0]==403;checks.append('cross-origin write rejected')
 assert call('POST',a,{'events':[{**event,'itemId':'unknown'}]})[0]==400;checks.append('unknown learning item rejected')
 assert call('POST',a,'{bad')[0]==400;checks.append('malformed JSON rejected')
-large_status,large_body,_=call('POST',a,'x'*1000001)
-assert large_status==413,(large_status,large_body);checks.append('oversized upload rejected')
 assert call(user=a,extra={'X-Notebook-Owner':'qa-'+b})[0]==401;checks.append('switched notebook owner rejected')
 assert call(user=a,extra={'Authorization':'Bearer invalid'})[0]==401;checks.append('invalid bearer cannot fall back to ChatGPT')
 assert call(user=a,extra={'X-Notebook-Owner':'qa-'+a})[0]==200;checks.append('matching notebook owner accepted')
@@ -45,5 +43,16 @@ level2={**event,'id':str(uuid.uuid4()),'itemId':'hsk2-500'}
 assert call('POST',a,{'events':[level2]})[0]==200;checks.append('HSK2 event accepted')
 ids={e['id'] for e in call(user=a)[1]['events']};assert {event['id'],expanded['id'],level2['id']} <= ids;checks.append('HSK1 history preserved alongside HSK2')
 assert all(e['id']!=level2['id'] for e in call(user=b)[1]['events']);checks.append('HSK2 account isolation preserved')
+level3={**event,'id':str(uuid.uuid4()),'itemId':'hsk3-1000'}
+assert call('POST',a,{'events':[level3]})[0]==200;checks.append('HSK3 event accepted')
+ids={e['id'] for e in call(user=a)[1]['events']};assert {event['id'],expanded['id'],level2['id'],level3['id']} <= ids;checks.append('HSK1 and HSK2 history preserved alongside HSK3')
+assert all(e['id']!=level3['id'] for e in call(user=b)[1]['events']);checks.append('HSK3 account isolation preserved')
+# This destructive local transport probe stays last: Wrangler can restart mid-body.
+# Skip explicitly only for local functional tests; never report it as passed.
+if os.environ.get('CHINESE_OS_QA_SKIP_OVERSIZE')=='1':
+    print('SKIP oversized-body transport probe: local Wrangler may restart or hang after responding 413')
+else:
+    large_status,large_body,_=call('POST',a,'x'*1000001)
+    assert large_status==413,(large_status,large_body);checks.append('oversized upload rejected')
 for check in checks:print('PASS',check)
 print(f'{len(checks)} API integration checks passed')

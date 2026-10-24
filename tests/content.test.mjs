@@ -20,9 +20,9 @@ const reference = JSON.parse(
 const starter = JSON.parse(
   readFileSync("data/starter-vocabulary.json", "utf8"),
 );
-test("all 300 HSK1 entries and 200 HSK2 entries remain separate, plus 20 extras", () => {
-  assert.equal(items.length, 520);
-  assert.equal(new Set(items.map((x) => x.id)).size, 520);
+test("all 300 HSK1, 200 HSK2 and 500 HSK3 entries remain separate, plus 20 extras", () => {
+  assert.equal(items.length, 1020);
+  assert.equal(new Set(items.map((x) => x.id)).size, 1020);
   assert.equal(
     new Set(items.filter((x) => x.hskLevel === 1).map((x) => x.hanzi)).size,
     300,
@@ -104,4 +104,31 @@ test("library filtering distinguishes syllabus words, extras and thematic lesson
   );
   assert.ok(!items.some((x) => matchesItem(x, "咖啡", "hsk1")));
   assert.ok(items.some((x) => matchesItem(x, "咖啡", "bonus")));
+});
+
+test("HSK3 exactly matches all official entries with original examples and isolated search", () => {
+  const ref3=JSON.parse(readFileSync("data/hsk3-reference.json","utf8")).entries;
+  const pool=items.filter(item=>isInLevel(item,"hsk3"));
+  assert.equal(pool.length,500);
+  assert.deepEqual(pool.map(item=>[item.hskEntry,item.hanzi,item.pinyin]),ref3.map(item=>[item.id,item.hanzi,item.pinyin]));
+  assert.deepEqual(pool.map(item=>item.hskEntry),Array.from({length:500},(_,i)=>i+501));
+  for(const item of pool){
+    assert.ok(item.sentence.includes(item.hanzi),item.id);
+    assert.ok(item.english&&item.translation&&item.sentencePinyin,item.id);
+    assert.ok(matchesItem(item,"","hsk3"));
+    assert.ok(!matchesItem(item,"","hsk1")&&!matchesItem(item,"","hsk2")&&!matchesItem(item,"","bonus"));
+  }
+  assert.equal(items.filter(item=>matchesItem(item,"","hsk3")).length,500);
+});
+test("polyphonic HSK3 readings and syllabus senses are explicit",()=>{
+ const byId=Object.fromEntries(items.map(item=>[item.id,item]));
+ assert.match(byId['hsk3-587'].sentencePinyin,/děi fù xí/);
+ assert.match(byId['hsk3-678'].sentencePinyin,/huán dào/);
+ assert.match(byId['hsk3-968'].sentencePinyin,/zhǎng de/);
+ assert.match(byId['hsk3-605'].sentencePinyin,/cháng/);
+ assert.match(byId['hsk3-565'].sentencePinyin,/jiāo yīng/);
+ assert.match(byId['hsk3-683'].english,/meeting/);
+ assert.match(byId['hsk3-704'].english,/tenth.*yuan/);
+ assert.match(byId['hsk2-486'].english,/station/);
+ assert.match(byId['hsk3-966'].english,/stand/);
 });

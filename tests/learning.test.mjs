@@ -132,12 +132,13 @@ const { items, isInLevel } = await import(
   "data:text/javascript;base64," +
     Buffer.from(contentOutput.outputFiles[0].text).toString("base64")
 );
-test("review pools never mix HSK1, HSK2 and extra cards, even with due cards from another level", () => {
+test("review pools never mix HSK1, HSK2, HSK3 and extra cards, even with due cards from another level", () => {
   const events = [
     base,
     { ...base, id: "00000000-0000-4000-8000-000000000002", itemId: "hsk2-351" },
+    { ...base, id: "00000000-0000-4000-8000-000000000003", itemId: "hsk3-501" },
   ];
-  for (const level of ["hsk1", "hsk2", "bonus"]) {
+  for (const level of ["hsk1", "hsk2", "hsk3", "bonus"]) {
     const pool = items.filter((item) => isInLevel(item, level));
     const queue = makeQueue(events, "writing", pool);
     assert.equal(queue.length, pool.length);

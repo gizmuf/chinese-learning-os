@@ -1,0 +1,4502 @@
+{
+  "edition": "HSK examination syllabus, November 2025; effective July 2026",
+  "officialSource": "https://hsk.cn-bj.ufileos.com/3.0/%E6%96%B0%E7%89%88HSK%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B21219.pdf",
+  "sourceSha256": "ec74ce0439e837bbb15154be13e747ae798903b2fd3a331629df6c3b45504941",
+  "status": "Official vocabulary facts used by the HSK3 application curriculum; original teaching examples are in hsk3-authoring.json.",
+  "entries": [
+    {
+      "id": 501,
+      "hanzi": "阿姨",
+      "syllabusForm": "阿姨",
+      "pinyin": "āyí",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 502,
+      "hanzi": "矮",
+      "syllabusForm": "矮",
+      "pinyin": "ǎi",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 503,
+      "hanzi": "爱人",
+      "syllabusForm": "爱人",
+      "pinyin": "àiren",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 504,
+      "hanzi": "安静",
+      "syllabusForm": "安静",
+      "pinyin": "ānjìng",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 505,
+      "hanzi": "安全",
+      "syllabusForm": "安全",
+      "pinyin": "ānquán",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 506,
+      "hanzi": "把",
+      "syllabusForm": "把",
+      "pinyin": "bǎ",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "量、介"
+    },
+    {
+      "id": 507,
+      "hanzi": "搬",
+      "syllabusForm": "搬",
+      "pinyin": "bān",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 508,
+      "hanzi": "班级",
+      "syllabusForm": "班级",
+      "pinyin": "bānjí",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 509,
+      "hanzi": "搬家",
+      "syllabusForm": "搬家",
+      "pinyin": "bānjiā",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 510,
+      "hanzi": "办",
+      "syllabusForm": "办",
+      "pinyin": "bàn",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 511,
+      "hanzi": "办法",
+      "syllabusForm": "办法",
+      "pinyin": "bànfǎ",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 512,
+      "hanzi": "办公室",
+      "syllabusForm": "办公室",
+      "pinyin": "bàngōngshì",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 513,
+      "hanzi": "半天",
+      "syllabusForm": "半天",
+      "pinyin": "bàntiān",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "数量"
+    },
+    {
+      "id": 514,
+      "hanzi": "帮助",
+      "syllabusForm": "帮助",
+      "pinyin": "bāngzhù",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 515,
+      "hanzi": "饱",
+      "syllabusForm": "饱",
+      "pinyin": "bǎo",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 516,
+      "hanzi": "报纸",
+      "syllabusForm": "报纸",
+      "pinyin": "bàozhǐ",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 517,
+      "hanzi": "北",
+      "syllabusForm": "北",
+      "pinyin": "běi",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 518,
+      "hanzi": "北方",
+      "syllabusForm": "北方",
+      "pinyin": "běifāng",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 519,
+      "hanzi": "被",
+      "syllabusForm": "被",
+      "pinyin": "bèi",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "介"
+    },
+    {
+      "id": 520,
+      "hanzi": "笔记",
+      "syllabusForm": "笔记",
+      "pinyin": "bǐjì",
+      "levelAnnotations": "3",
+      "sourcePage": 92,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 521,
+      "hanzi": "比较",
+      "syllabusForm": "比较",
+      "pinyin": "bǐjiào",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "动、介、副"
+    },
+    {
+      "id": 522,
+      "hanzi": "笔记本",
+      "syllabusForm": "笔记本",
+      "pinyin": "bǐjìběn",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 523,
+      "hanzi": "比如",
+      "syllabusForm": "比如",
+      "pinyin": "bǐrú",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 524,
+      "hanzi": "比赛",
+      "syllabusForm": "比赛",
+      "pinyin": "bǐsài",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "动、名"
+    },
+    {
+      "id": 525,
+      "hanzi": "必须",
+      "syllabusForm": "必须",
+      "pinyin": "bìxū",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 526,
+      "hanzi": "变",
+      "syllabusForm": "变",
+      "pinyin": "biàn",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 527,
+      "hanzi": "遍",
+      "syllabusForm": "遍",
+      "pinyin": "biàn",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "量"
+    },
+    {
+      "id": 528,
+      "hanzi": "变成",
+      "syllabusForm": "变成",
+      "pinyin": "biànchéng",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 529,
+      "hanzi": "变化",
+      "syllabusForm": "变化",
+      "pinyin": "biànhuà",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "动、名"
+    },
+    {
+      "id": 530,
+      "hanzi": "表演",
+      "syllabusForm": "表演",
+      "pinyin": "biǎoyǎn",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 531,
+      "hanzi": "别的",
+      "syllabusForm": "别的",
+      "pinyin": "biéde",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "代"
+    },
+    {
+      "id": 532,
+      "hanzi": "别人",
+      "syllabusForm": "别人",
+      "pinyin": "biérén",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "代"
+    },
+    {
+      "id": 533,
+      "hanzi": "宾馆",
+      "syllabusForm": "宾馆",
+      "pinyin": "bīnguǎn",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 534,
+      "hanzi": "冰",
+      "syllabusForm": "冰",
+      "pinyin": "bīng",
+      "levelAnnotations": "3（5）",
+      "sourcePage": 93,
+      "partOfSpeech": "名、（动）"
+    },
+    {
+      "id": 535,
+      "hanzi": "冰激凌",
+      "syllabusForm": "冰激凌",
+      "pinyin": "bīngjīlíng",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 536,
+      "hanzi": "冰箱",
+      "syllabusForm": "冰箱",
+      "pinyin": "bīngxiāng",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 537,
+      "hanzi": "病人",
+      "syllabusForm": "病人",
+      "pinyin": "bìngrén",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 538,
+      "hanzi": "不但",
+      "syllabusForm": "不但",
+      "pinyin": "búdàn",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "连"
+    },
+    {
+      "id": 539,
+      "hanzi": "不见",
+      "syllabusForm": "不见",
+      "pinyin": "bújiàn",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 540,
+      "hanzi": "不用",
+      "syllabusForm": "不用",
+      "pinyin": "búyòng",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 541,
+      "hanzi": "不同",
+      "syllabusForm": "不同",
+      "pinyin": "bù tóng",
+      "levelAnnotations": "3",
+      "sourcePage": 93
+    },
+    {
+      "id": 542,
+      "hanzi": "不久",
+      "syllabusForm": "不久",
+      "pinyin": "bùjiǔ",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 543,
+      "hanzi": "不行",
+      "syllabusForm": "不行",
+      "pinyin": "bùxíng",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "动、形"
+    },
+    {
+      "id": 544,
+      "hanzi": "才",
+      "syllabusForm": "才1",
+      "pinyin": "cái",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 545,
+      "hanzi": "菜单",
+      "syllabusForm": "菜单",
+      "pinyin": "càidān",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 546,
+      "hanzi": "参加",
+      "syllabusForm": "参加",
+      "pinyin": "cānjiā",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 547,
+      "hanzi": "草",
+      "syllabusForm": "草",
+      "pinyin": "cǎo",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 548,
+      "hanzi": "草地",
+      "syllabusForm": "草地",
+      "pinyin": "cǎodì",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 549,
+      "hanzi": "层",
+      "syllabusForm": "层",
+      "pinyin": "céng",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "量"
+    },
+    {
+      "id": 550,
+      "hanzi": "查",
+      "syllabusForm": "查",
+      "pinyin": "chá",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 551,
+      "hanzi": "差",
+      "syllabusForm": "差",
+      "pinyin": "chà",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "形、动"
+    },
+    {
+      "id": 552,
+      "hanzi": "差不多",
+      "syllabusForm": "差不多",
+      "pinyin": "chàbuduō",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "形、副"
+    },
+    {
+      "id": 553,
+      "hanzi": "尝",
+      "syllabusForm": "尝",
+      "pinyin": "cháng",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 554,
+      "hanzi": "常",
+      "syllabusForm": "常",
+      "pinyin": "cháng",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 555,
+      "hanzi": "常见",
+      "syllabusForm": "常见",
+      "pinyin": "cháng jiàn",
+      "levelAnnotations": "3",
+      "sourcePage": 93
+    },
+    {
+      "id": 556,
+      "hanzi": "常用",
+      "syllabusForm": "常用",
+      "pinyin": "cháng yòng",
+      "levelAnnotations": "3",
+      "sourcePage": 93
+    },
+    {
+      "id": 557,
+      "hanzi": "常常",
+      "syllabusForm": "常常",
+      "pinyin": "chángcháng",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 558,
+      "hanzi": "衬衫",
+      "syllabusForm": "衬衫",
+      "pinyin": "chènshān",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 559,
+      "hanzi": "成绩",
+      "syllabusForm": "成绩",
+      "pinyin": "chéngjì",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 560,
+      "hanzi": "城市",
+      "syllabusForm": "城市",
+      "pinyin": "chéngshì",
+      "levelAnnotations": "3",
+      "sourcePage": 93,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 561,
+      "hanzi": "迟到",
+      "syllabusForm": "迟到",
+      "pinyin": "chídào",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 562,
+      "hanzi": "出发",
+      "syllabusForm": "出发",
+      "pinyin": "chūfā",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 563,
+      "hanzi": "出生",
+      "syllabusForm": "出生",
+      "pinyin": "chūshēng",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 564,
+      "hanzi": "出院",
+      "syllabusForm": "出院",
+      "pinyin": "chūyuàn",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 565,
+      "hanzi": "初中",
+      "syllabusForm": "初中",
+      "pinyin": "chūzhōng",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 566,
+      "hanzi": "除了",
+      "syllabusForm": "除了",
+      "pinyin": "chúle",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "介"
+    },
+    {
+      "id": 567,
+      "hanzi": "船",
+      "syllabusForm": "船",
+      "pinyin": "chuán",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 568,
+      "hanzi": "春天",
+      "syllabusForm": "春天",
+      "pinyin": "chūntiān",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 569,
+      "hanzi": "词典",
+      "syllabusForm": "词典",
+      "pinyin": "cídiǎn",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 570,
+      "hanzi": "聪明",
+      "syllabusForm": "聪明",
+      "pinyin": "cōngmíng",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 571,
+      "hanzi": "打扫",
+      "syllabusForm": "打扫",
+      "pinyin": "dǎsǎo",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 572,
+      "hanzi": "打算",
+      "syllabusForm": "打算",
+      "pinyin": "dǎsuàn",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "动、名"
+    },
+    {
+      "id": 573,
+      "hanzi": "大概",
+      "syllabusForm": "大概",
+      "pinyin": "dàgài",
+      "levelAnnotations": "3（6）",
+      "sourcePage": 94,
+      "partOfSpeech": "形、副、（名）"
+    },
+    {
+      "id": 574,
+      "hanzi": "大人",
+      "syllabusForm": "大人",
+      "pinyin": "dàren",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 575,
+      "hanzi": "大小",
+      "syllabusForm": "大小",
+      "pinyin": "dàxiǎo",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 576,
+      "hanzi": "大熊猫",
+      "syllabusForm": "大熊猫",
+      "pinyin": "dàxióngmāo",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 577,
+      "hanzi": "大衣",
+      "syllabusForm": "大衣",
+      "pinyin": "dàyī",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 578,
+      "hanzi": "带",
+      "syllabusForm": "带",
+      "pinyin": "dài",
+      "levelAnnotations": "3（5）",
+      "sourcePage": 94,
+      "partOfSpeech": "动、（名）"
+    },
+    {
+      "id": 579,
+      "hanzi": "担心",
+      "syllabusForm": "担心",
+      "pinyin": "dānxīn",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 580,
+      "hanzi": "蛋糕",
+      "syllabusForm": "蛋糕",
+      "pinyin": "dàngāo",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 581,
+      "hanzi": "当然",
+      "syllabusForm": "当然",
+      "pinyin": "dāngrán",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 582,
+      "hanzi": "到处",
+      "syllabusForm": "到处",
+      "pinyin": "dàochù",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 583,
+      "hanzi": "得",
+      "syllabusForm": "得",
+      "pinyin": "dé",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 584,
+      "hanzi": "得到",
+      "syllabusForm": "得到",
+      "pinyin": "dédào",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 585,
+      "hanzi": "得分",
+      "syllabusForm": "得分",
+      "pinyin": "défēn",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "动、名"
+    },
+    {
+      "id": 586,
+      "hanzi": "的话",
+      "syllabusForm": "的话",
+      "pinyin": "dehuà",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "助"
+    },
+    {
+      "id": 587,
+      "hanzi": "得",
+      "syllabusForm": "得",
+      "pinyin": "děi",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 588,
+      "hanzi": "灯",
+      "syllabusForm": "灯",
+      "pinyin": "dēng",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 589,
+      "hanzi": "地",
+      "syllabusForm": "地",
+      "pinyin": "dì",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 590,
+      "hanzi": "地点",
+      "syllabusForm": "地点",
+      "pinyin": "dìdiǎn",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 591,
+      "hanzi": "地方",
+      "syllabusForm": "地方",
+      "pinyin": "dìfang",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 592,
+      "hanzi": "地图",
+      "syllabusForm": "地图",
+      "pinyin": "dìtú",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 593,
+      "hanzi": "电",
+      "syllabusForm": "电",
+      "pinyin": "diàn",
+      "levelAnnotations": "3（5）",
+      "sourcePage": 94,
+      "partOfSpeech": "名、（动）"
+    },
+    {
+      "id": 594,
+      "hanzi": "电梯",
+      "syllabusForm": "电梯",
+      "pinyin": "diàntī",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 595,
+      "hanzi": "电子书",
+      "syllabusForm": "电子书",
+      "pinyin": "diànzǐshū",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 596,
+      "hanzi": "丢",
+      "syllabusForm": "丢",
+      "pinyin": "diū",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 597,
+      "hanzi": "东",
+      "syllabusForm": "东",
+      "pinyin": "dōng",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 598,
+      "hanzi": "东北",
+      "syllabusForm": "东北",
+      "pinyin": "dōngběi",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 599,
+      "hanzi": "东方",
+      "syllabusForm": "东方",
+      "pinyin": "dōngfāng",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 600,
+      "hanzi": "东南",
+      "syllabusForm": "东南",
+      "pinyin": "dōngnán",
+      "levelAnnotations": "3",
+      "sourcePage": 94,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 601,
+      "hanzi": "冬天",
+      "syllabusForm": "冬天",
+      "pinyin": "dōngtiān",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 602,
+      "hanzi": "懂得",
+      "syllabusForm": "懂得",
+      "pinyin": "dǒngde",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 603,
+      "hanzi": "动物",
+      "syllabusForm": "动物",
+      "pinyin": "dòngwù",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 604,
+      "hanzi": "动物园",
+      "syllabusForm": "动物园",
+      "pinyin": "dòngwùyuán",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 605,
+      "hanzi": "短",
+      "syllabusForm": "短",
+      "pinyin": "duǎn",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 606,
+      "hanzi": "短裤",
+      "syllabusForm": "短裤",
+      "pinyin": "duǎnkù",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 607,
+      "hanzi": "段",
+      "syllabusForm": "段",
+      "pinyin": "duàn",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "量"
+    },
+    {
+      "id": 608,
+      "hanzi": "锻炼",
+      "syllabusForm": "锻炼",
+      "pinyin": "duànliàn",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 609,
+      "hanzi": "对话",
+      "syllabusForm": "对话",
+      "pinyin": "duìhuà",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 610,
+      "hanzi": "饿",
+      "syllabusForm": "饿",
+      "pinyin": "è",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 611,
+      "hanzi": "而且",
+      "syllabusForm": "而且",
+      "pinyin": "érqiě",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "连"
+    },
+    {
+      "id": 612,
+      "hanzi": "耳朵",
+      "syllabusForm": "耳朵",
+      "pinyin": "ěrduo",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 613,
+      "hanzi": "耳机",
+      "syllabusForm": "耳机",
+      "pinyin": "ěrjī",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 614,
+      "hanzi": "发",
+      "syllabusForm": "发",
+      "pinyin": "fā",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 615,
+      "hanzi": "发烧",
+      "syllabusForm": "发烧",
+      "pinyin": "fāshāo",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 616,
+      "hanzi": "发生",
+      "syllabusForm": "发生",
+      "pinyin": "fāshēng",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 617,
+      "hanzi": "发现",
+      "syllabusForm": "发现",
+      "pinyin": "fāxiàn",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 618,
+      "hanzi": "发展",
+      "syllabusForm": "发展",
+      "pinyin": "fāzhǎn",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 619,
+      "hanzi": "方便",
+      "syllabusForm": "方便",
+      "pinyin": "fāngbiàn",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 620,
+      "hanzi": "方便面",
+      "syllabusForm": "方便面",
+      "pinyin": "fāngbiànmiàn",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 621,
+      "hanzi": "方法",
+      "syllabusForm": "方法",
+      "pinyin": "fāngfǎ",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 622,
+      "hanzi": "方向",
+      "syllabusForm": "方向",
+      "pinyin": "fāngxiàng",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 623,
+      "hanzi": "房子",
+      "syllabusForm": "房子",
+      "pinyin": "fángzi",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 624,
+      "hanzi": "放",
+      "syllabusForm": "放",
+      "pinyin": "fàng",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 625,
+      "hanzi": "放假",
+      "syllabusForm": "放假",
+      "pinyin": "fàngjià",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 626,
+      "hanzi": "放心",
+      "syllabusForm": "放心",
+      "pinyin": "fàngxīn",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 627,
+      "hanzi": "放学",
+      "syllabusForm": "放学",
+      "pinyin": "fàngxué",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 628,
+      "hanzi": "分开",
+      "syllabusForm": "分开",
+      "pinyin": "fēnkāi",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 629,
+      "hanzi": "风",
+      "syllabusForm": "风",
+      "pinyin": "fēng",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 630,
+      "hanzi": "封",
+      "syllabusForm": "封",
+      "pinyin": "fēng",
+      "levelAnnotations": "3（6）",
+      "sourcePage": 95,
+      "partOfSpeech": "量、（动）"
+    },
+    {
+      "id": 631,
+      "hanzi": "夫妻",
+      "syllabusForm": "夫妻",
+      "pinyin": "fūqī",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 632,
+      "hanzi": "服务",
+      "syllabusForm": "服务",
+      "pinyin": "fúwù",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 633,
+      "hanzi": "附近",
+      "syllabusForm": "附近",
+      "pinyin": "fùjìn",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 634,
+      "hanzi": "复习",
+      "syllabusForm": "复习",
+      "pinyin": "fùxí",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 635,
+      "hanzi": "该",
+      "syllabusForm": "该1",
+      "pinyin": "gāi",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 636,
+      "hanzi": "干净",
+      "syllabusForm": "干净",
+      "pinyin": "gānjìng",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 637,
+      "hanzi": "感兴趣",
+      "syllabusForm": "感兴趣",
+      "pinyin": "gǎn xìngqù",
+      "levelAnnotations": "3",
+      "sourcePage": 95
+    },
+    {
+      "id": 638,
+      "hanzi": "感到",
+      "syllabusForm": "感到",
+      "pinyin": "gǎndào",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 639,
+      "hanzi": "感冒",
+      "syllabusForm": "感冒",
+      "pinyin": "gǎnmào",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "名、动"
+    },
+    {
+      "id": 640,
+      "hanzi": "干",
+      "syllabusForm": "干",
+      "pinyin": "gàn",
+      "levelAnnotations": "3",
+      "sourcePage": 95,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 641,
+      "hanzi": "刚",
+      "syllabusForm": "刚",
+      "pinyin": "gāng",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 642,
+      "hanzi": "刚才",
+      "syllabusForm": "刚才",
+      "pinyin": "gāngcái",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 643,
+      "hanzi": "刚刚",
+      "syllabusForm": "刚刚",
+      "pinyin": "gānggāng",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 644,
+      "hanzi": "高铁",
+      "syllabusForm": "高铁",
+      "pinyin": "gāotiě",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 645,
+      "hanzi": "根据",
+      "syllabusForm": "根据",
+      "pinyin": "gēnjù",
+      "levelAnnotations": "3（5）",
+      "sourcePage": 96,
+      "partOfSpeech": "动、介、（名）"
+    },
+    {
+      "id": 646,
+      "hanzi": "更",
+      "syllabusForm": "更",
+      "pinyin": "gèng",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 647,
+      "hanzi": "公斤",
+      "syllabusForm": "公斤",
+      "pinyin": "gōngjīn",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "量"
+    },
+    {
+      "id": 648,
+      "hanzi": "公园",
+      "syllabusForm": "公园",
+      "pinyin": "gōngyuán",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 649,
+      "hanzi": "工作日",
+      "syllabusForm": "工作日",
+      "pinyin": "gōngzuòrì",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 650,
+      "hanzi": "故事",
+      "syllabusForm": "故事",
+      "pinyin": "gùshi",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 651,
+      "hanzi": "刮",
+      "syllabusForm": "刮",
+      "pinyin": "guā",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 652,
+      "hanzi": "关",
+      "syllabusForm": "关",
+      "pinyin": "guān",
+      "levelAnnotations": "3（5）",
+      "sourcePage": 96,
+      "partOfSpeech": "动、（名）"
+    },
+    {
+      "id": 653,
+      "hanzi": "关机",
+      "syllabusForm": "关机",
+      "pinyin": "guānjī",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 654,
+      "hanzi": "关系",
+      "syllabusForm": "关系",
+      "pinyin": "guānxì",
+      "levelAnnotations": "3（4）",
+      "sourcePage": 96,
+      "partOfSpeech": "名、（动）"
+    },
+    {
+      "id": 655,
+      "hanzi": "关心",
+      "syllabusForm": "关心",
+      "pinyin": "guānxīn",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 656,
+      "hanzi": "关于",
+      "syllabusForm": "关于",
+      "pinyin": "guānyú",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "介"
+    },
+    {
+      "id": 657,
+      "hanzi": "关注",
+      "syllabusForm": "关注",
+      "pinyin": "guānzhù",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 658,
+      "hanzi": "国家",
+      "syllabusForm": "国家",
+      "pinyin": "guójiā",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 659,
+      "hanzi": "过节",
+      "syllabusForm": "过节",
+      "pinyin": "guòjié",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 660,
+      "hanzi": "过去",
+      "syllabusForm": "过去2",
+      "pinyin": "guòqù",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 661,
+      "hanzi": "海",
+      "syllabusForm": "海",
+      "pinyin": "hǎi",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 662,
+      "hanzi": "害怕",
+      "syllabusForm": "害怕",
+      "pinyin": "hàipà",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 663,
+      "hanzi": "好多",
+      "syllabusForm": "好多",
+      "pinyin": "hǎoduō",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "数"
+    },
+    {
+      "id": 664,
+      "hanzi": "好久",
+      "syllabusForm": "好久",
+      "pinyin": "hǎojiǔ",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 665,
+      "hanzi": "好像",
+      "syllabusForm": "好像",
+      "pinyin": "hǎoxiàng",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "动、副"
+    },
+    {
+      "id": 666,
+      "hanzi": "号码",
+      "syllabusForm": "号码",
+      "pinyin": "hàomǎ",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 667,
+      "hanzi": "河",
+      "syllabusForm": "河",
+      "pinyin": "hé",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 668,
+      "hanzi": "合适",
+      "syllabusForm": "合适",
+      "pinyin": "héshì",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 669,
+      "hanzi": "黑板",
+      "syllabusForm": "黑板",
+      "pinyin": "hēibǎn",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 670,
+      "hanzi": "红绿灯",
+      "syllabusForm": "红绿灯",
+      "pinyin": "hóng-lǜdēng",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 671,
+      "hanzi": "后来",
+      "syllabusForm": "后来",
+      "pinyin": "hòulái",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 672,
+      "hanzi": "后年",
+      "syllabusForm": "后年",
+      "pinyin": "hòunián",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 673,
+      "hanzi": "后天",
+      "syllabusForm": "后天",
+      "pinyin": "hòutiān",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 674,
+      "hanzi": "护照",
+      "syllabusForm": "护照",
+      "pinyin": "hùzhào",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 675,
+      "hanzi": "花园",
+      "syllabusForm": "花园",
+      "pinyin": "huāyuán",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 676,
+      "hanzi": "画家",
+      "syllabusForm": "画家",
+      "pinyin": "huàjiā",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 677,
+      "hanzi": "欢迎",
+      "syllabusForm": "欢迎",
+      "pinyin": "huānyíng",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 678,
+      "hanzi": "还",
+      "syllabusForm": "还",
+      "pinyin": "huán",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 679,
+      "hanzi": "环境",
+      "syllabusForm": "环境",
+      "pinyin": "huánjìng",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 680,
+      "hanzi": "换",
+      "syllabusForm": "换",
+      "pinyin": "huàn",
+      "levelAnnotations": "3",
+      "sourcePage": 96,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 681,
+      "hanzi": "黄色",
+      "syllabusForm": "黄色",
+      "pinyin": "huángsè",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 682,
+      "hanzi": "回答",
+      "syllabusForm": "回答",
+      "pinyin": "huídá",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 683,
+      "hanzi": "会",
+      "syllabusForm": "会2",
+      "pinyin": "huì",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 684,
+      "hanzi": "会议",
+      "syllabusForm": "会议",
+      "pinyin": "huìyì",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 685,
+      "hanzi": "或",
+      "syllabusForm": "或",
+      "pinyin": "huò",
+      "levelAnnotations": "3（6）",
+      "sourcePage": 97,
+      "partOfSpeech": "连、（副）"
+    },
+    {
+      "id": 686,
+      "hanzi": "或者",
+      "syllabusForm": "或者",
+      "pinyin": "huòzhě",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "连"
+    },
+    {
+      "id": 687,
+      "hanzi": "鸡",
+      "syllabusForm": "鸡",
+      "pinyin": "jī",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 688,
+      "hanzi": "几乎",
+      "syllabusForm": "几乎",
+      "pinyin": "jīhū",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 689,
+      "hanzi": "机会",
+      "syllabusForm": "机会",
+      "pinyin": "jīhuì",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 690,
+      "hanzi": "极",
+      "syllabusForm": "极",
+      "pinyin": "jí",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 691,
+      "hanzi": "急",
+      "syllabusForm": "急",
+      "pinyin": "jí",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "形、动"
+    },
+    {
+      "id": 692,
+      "hanzi": "记",
+      "syllabusForm": "记",
+      "pinyin": "jì",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 693,
+      "hanzi": "季",
+      "syllabusForm": "季",
+      "pinyin": "jì",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 694,
+      "hanzi": "季节",
+      "syllabusForm": "季节",
+      "pinyin": "jìjié",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 695,
+      "hanzi": "加",
+      "syllabusForm": "加",
+      "pinyin": "jiā",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 696,
+      "hanzi": "假期",
+      "syllabusForm": "假期",
+      "pinyin": "jiàqī",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 697,
+      "hanzi": "坚持",
+      "syllabusForm": "坚持",
+      "pinyin": "jiānchí",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 698,
+      "hanzi": "检查",
+      "syllabusForm": "检查",
+      "pinyin": "jiǎnchá",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 699,
+      "hanzi": "简单",
+      "syllabusForm": "简单",
+      "pinyin": "jiǎndān",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 700,
+      "hanzi": "检票",
+      "syllabusForm": "检票",
+      "pinyin": "jiǎnpiào",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 701,
+      "hanzi": "健康",
+      "syllabusForm": "健康",
+      "pinyin": "jiànkāng",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 702,
+      "hanzi": "见面",
+      "syllabusForm": "见面",
+      "pinyin": "jiànmiàn",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 703,
+      "hanzi": "讲",
+      "syllabusForm": "讲",
+      "pinyin": "jiǎng",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 704,
+      "hanzi": "角",
+      "syllabusForm": "角",
+      "pinyin": "jiǎo",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "量"
+    },
+    {
+      "id": 705,
+      "hanzi": "脚",
+      "syllabusForm": "脚",
+      "pinyin": "jiǎo",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 706,
+      "hanzi": "接",
+      "syllabusForm": "接",
+      "pinyin": "jiē",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 707,
+      "hanzi": "街",
+      "syllabusForm": "街",
+      "pinyin": "jiē",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 708,
+      "hanzi": "节",
+      "syllabusForm": "节",
+      "pinyin": "jié",
+      "levelAnnotations": "3（4）",
+      "sourcePage": 97,
+      "partOfSpeech": "量、名、（动）"
+    },
+    {
+      "id": 709,
+      "hanzi": "结婚",
+      "syllabusForm": "结婚",
+      "pinyin": "jiéhūn",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 710,
+      "hanzi": "节目",
+      "syllabusForm": "节目",
+      "pinyin": "jiémù",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 711,
+      "hanzi": "节日",
+      "syllabusForm": "节日",
+      "pinyin": "jiérì",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 712,
+      "hanzi": "结束",
+      "syllabusForm": "结束",
+      "pinyin": "jiéshù",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 713,
+      "hanzi": "解决",
+      "syllabusForm": "解决",
+      "pinyin": "jiějué",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 714,
+      "hanzi": "姐妹",
+      "syllabusForm": "姐妹",
+      "pinyin": "jiěmèi",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 715,
+      "hanzi": "借",
+      "syllabusForm": "借",
+      "pinyin": "jiè",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 716,
+      "hanzi": "斤",
+      "syllabusForm": "斤",
+      "pinyin": "jīn",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "量"
+    },
+    {
+      "id": 717,
+      "hanzi": "经过",
+      "syllabusForm": "经过",
+      "pinyin": "jīngguò",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "动、名"
+    },
+    {
+      "id": 718,
+      "hanzi": "经理",
+      "syllabusForm": "经理",
+      "pinyin": "jīnglǐ",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 719,
+      "hanzi": "久",
+      "syllabusForm": "久",
+      "pinyin": "jiǔ",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 720,
+      "hanzi": "酒",
+      "syllabusForm": "酒",
+      "pinyin": "jiǔ",
+      "levelAnnotations": "3",
+      "sourcePage": 97,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 721,
+      "hanzi": "旧",
+      "syllabusForm": "旧",
+      "pinyin": "jiù",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 722,
+      "hanzi": "句",
+      "syllabusForm": "句",
+      "pinyin": "jù",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "量"
+    },
+    {
+      "id": 723,
+      "hanzi": "句子",
+      "syllabusForm": "句子",
+      "pinyin": "jùzi",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 724,
+      "hanzi": "决定",
+      "syllabusForm": "决定",
+      "pinyin": "juédìng",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "动、名"
+    },
+    {
+      "id": 725,
+      "hanzi": "卡",
+      "syllabusForm": "卡",
+      "pinyin": "kǎ",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 726,
+      "hanzi": "开花",
+      "syllabusForm": "开花",
+      "pinyin": "kāihuā",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 727,
+      "hanzi": "开会",
+      "syllabusForm": "开会",
+      "pinyin": "kāihuì",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 728,
+      "hanzi": "开机",
+      "syllabusForm": "开机",
+      "pinyin": "kāijī",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 729,
+      "hanzi": "开心",
+      "syllabusForm": "开心",
+      "pinyin": "kāixīn",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 730,
+      "hanzi": "看来",
+      "syllabusForm": "看来",
+      "pinyin": "kànlái",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 731,
+      "hanzi": "可",
+      "syllabusForm": "可",
+      "pinyin": "kě",
+      "levelAnnotations": "3（5）",
+      "sourcePage": 98,
+      "partOfSpeech": "连、（副）"
+    },
+    {
+      "id": 732,
+      "hanzi": "渴",
+      "syllabusForm": "渴",
+      "pinyin": "kě",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 733,
+      "hanzi": "可爱",
+      "syllabusForm": "可爱",
+      "pinyin": "kě’ài",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 734,
+      "hanzi": "可是",
+      "syllabusForm": "可是",
+      "pinyin": "kěshì",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "连"
+    },
+    {
+      "id": 735,
+      "hanzi": "刻",
+      "syllabusForm": "刻",
+      "pinyin": "kè",
+      "levelAnnotations": "3（5）",
+      "sourcePage": 98,
+      "partOfSpeech": "量、（动）"
+    },
+    {
+      "id": 736,
+      "hanzi": "课本",
+      "syllabusForm": "课本",
+      "pinyin": "kèběn",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 737,
+      "hanzi": "客人",
+      "syllabusForm": "客人",
+      "pinyin": "kèrén",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 738,
+      "hanzi": "课文",
+      "syllabusForm": "课文",
+      "pinyin": "kèwén",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 739,
+      "hanzi": "空调",
+      "syllabusForm": "空调",
+      "pinyin": "kōngtiáo",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 740,
+      "hanzi": "哭",
+      "syllabusForm": "哭",
+      "pinyin": "kū",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 741,
+      "hanzi": "筷子",
+      "syllabusForm": "筷子",
+      "pinyin": "kuàizi",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 742,
+      "hanzi": "矿泉水",
+      "syllabusForm": "矿泉水",
+      "pinyin": "kuàngquánshuǐ",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 743,
+      "hanzi": "来自",
+      "syllabusForm": "来自",
+      "pinyin": "láizì",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 744,
+      "hanzi": "蓝",
+      "syllabusForm": "蓝",
+      "pinyin": "lán",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 745,
+      "hanzi": "老",
+      "syllabusForm": "老",
+      "pinyin": "lǎo",
+      "levelAnnotations": "3（4）",
+      "sourcePage": 98,
+      "partOfSpeech": "形、前缀、（副）"
+    },
+    {
+      "id": 746,
+      "hanzi": "老人",
+      "syllabusForm": "老人",
+      "pinyin": "lǎorén",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 747,
+      "hanzi": "离开",
+      "syllabusForm": "离开",
+      "pinyin": "líkāi",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 748,
+      "hanzi": "礼物",
+      "syllabusForm": "礼物",
+      "pinyin": "lǐwù",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 749,
+      "hanzi": "历史",
+      "syllabusForm": "历史",
+      "pinyin": "lìshǐ",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 750,
+      "hanzi": "脸",
+      "syllabusForm": "脸",
+      "pinyin": "liǎn",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 751,
+      "hanzi": "练",
+      "syllabusForm": "练",
+      "pinyin": "liàn",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 752,
+      "hanzi": "练习",
+      "syllabusForm": "练习",
+      "pinyin": "liànxí",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "动、名"
+    },
+    {
+      "id": 753,
+      "hanzi": "凉快",
+      "syllabusForm": "凉快",
+      "pinyin": "liángkuai",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 754,
+      "hanzi": "辆",
+      "syllabusForm": "辆",
+      "pinyin": "liàng",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "量"
+    },
+    {
+      "id": 755,
+      "hanzi": "聊",
+      "syllabusForm": "聊",
+      "pinyin": "liáo",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 756,
+      "hanzi": "聊天儿",
+      "syllabusForm": "聊天儿",
+      "pinyin": "liáotiānr",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 757,
+      "hanzi": "了解",
+      "syllabusForm": "了解",
+      "pinyin": "liǎojiě",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 758,
+      "hanzi": "邻居",
+      "syllabusForm": "邻居",
+      "pinyin": "línjū",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 759,
+      "hanzi": "留学",
+      "syllabusForm": "留学",
+      "pinyin": "liúxué",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 760,
+      "hanzi": "留学生",
+      "syllabusForm": "留学生",
+      "pinyin": "liúxuéshēng",
+      "levelAnnotations": "3",
+      "sourcePage": 98,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 761,
+      "hanzi": "楼梯",
+      "syllabusForm": "楼梯",
+      "pinyin": "lóutī",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 762,
+      "hanzi": "路边",
+      "syllabusForm": "路边",
+      "pinyin": "lùbiān",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 763,
+      "hanzi": "路口",
+      "syllabusForm": "路口",
+      "pinyin": "lùkǒu",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 764,
+      "hanzi": "马",
+      "syllabusForm": "马",
+      "pinyin": "mǎ",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 765,
+      "hanzi": "马路",
+      "syllabusForm": "马路",
+      "pinyin": "mǎlù",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 766,
+      "hanzi": "马上",
+      "syllabusForm": "马上",
+      "pinyin": "mǎshàng",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 767,
+      "hanzi": "满意",
+      "syllabusForm": "满意",
+      "pinyin": "mǎnyì",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 768,
+      "hanzi": "毛",
+      "syllabusForm": "毛",
+      "pinyin": "máo",
+      "levelAnnotations": "3（5）",
+      "sourcePage": 99,
+      "partOfSpeech": "量、（名）"
+    },
+    {
+      "id": 769,
+      "hanzi": "米",
+      "syllabusForm": "米",
+      "pinyin": "mǐ",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "量"
+    },
+    {
+      "id": 770,
+      "hanzi": "面前",
+      "syllabusForm": "面前",
+      "pinyin": "miànqián",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 771,
+      "hanzi": "明白",
+      "syllabusForm": "明白",
+      "pinyin": "míngbai",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "形、动"
+    },
+    {
+      "id": 772,
+      "hanzi": "名单",
+      "syllabusForm": "名单",
+      "pinyin": "míngdān",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 773,
+      "hanzi": "名人",
+      "syllabusForm": "名人",
+      "pinyin": "míngrén",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 774,
+      "hanzi": "南",
+      "syllabusForm": "南",
+      "pinyin": "nán",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 775,
+      "hanzi": "难",
+      "syllabusForm": "难",
+      "pinyin": "nán",
+      "levelAnnotations": "3（6）",
+      "sourcePage": 99,
+      "partOfSpeech": "形、（动）"
+    },
+    {
+      "id": 776,
+      "hanzi": "南方",
+      "syllabusForm": "南方",
+      "pinyin": "nánfāng",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 777,
+      "hanzi": "难过",
+      "syllabusForm": "难过",
+      "pinyin": "nánguò",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 778,
+      "hanzi": "难看",
+      "syllabusForm": "难看",
+      "pinyin": "nánkàn",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 779,
+      "hanzi": "男人",
+      "syllabusForm": "男人",
+      "pinyin": "nánrén",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 780,
+      "hanzi": "男生",
+      "syllabusForm": "男生",
+      "pinyin": "nánshēng",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 781,
+      "hanzi": "难题",
+      "syllabusForm": "难题",
+      "pinyin": "nántí",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 782,
+      "hanzi": "难听",
+      "syllabusForm": "难听",
+      "pinyin": "nántīng",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 783,
+      "hanzi": "年级",
+      "syllabusForm": "年级",
+      "pinyin": "niánjí",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 784,
+      "hanzi": "年轻",
+      "syllabusForm": "年轻",
+      "pinyin": "niánqīng",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 785,
+      "hanzi": "牛",
+      "syllabusForm": "牛",
+      "pinyin": "niú",
+      "levelAnnotations": "3（5）",
+      "sourcePage": 99,
+      "partOfSpeech": "名、（形）"
+    },
+    {
+      "id": 786,
+      "hanzi": "努力",
+      "syllabusForm": "努力",
+      "pinyin": "nǔlì",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "动、形"
+    },
+    {
+      "id": 787,
+      "hanzi": "女人",
+      "syllabusForm": "女人",
+      "pinyin": "nǚrén",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 788,
+      "hanzi": "女生",
+      "syllabusForm": "女生",
+      "pinyin": "nǚshēng",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 789,
+      "hanzi": "爬",
+      "syllabusForm": "爬",
+      "pinyin": "pá",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 790,
+      "hanzi": "怕",
+      "syllabusForm": "怕",
+      "pinyin": "pà",
+      "levelAnnotations": "3（4）",
+      "sourcePage": 99,
+      "partOfSpeech": "动、（副）"
+    },
+    {
+      "id": 791,
+      "hanzi": "拍照",
+      "syllabusForm": "拍照",
+      "pinyin": "pāizhào",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 792,
+      "hanzi": "盘子",
+      "syllabusForm": "盘子",
+      "pinyin": "pánzi",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 793,
+      "hanzi": "胖",
+      "syllabusForm": "胖",
+      "pinyin": "pàng",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 794,
+      "hanzi": "啤酒",
+      "syllabusForm": "啤酒",
+      "pinyin": "píjiǔ",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 795,
+      "hanzi": "平时",
+      "syllabusForm": "平时",
+      "pinyin": "píngshí",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 796,
+      "hanzi": "瓶子",
+      "syllabusForm": "瓶子",
+      "pinyin": "píngzi",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 797,
+      "hanzi": "骑",
+      "syllabusForm": "骑",
+      "pinyin": "qí",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 798,
+      "hanzi": "奇怪",
+      "syllabusForm": "奇怪",
+      "pinyin": "qíguài",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 799,
+      "hanzi": "其实",
+      "syllabusForm": "其实",
+      "pinyin": "qíshí",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 800,
+      "hanzi": "其他",
+      "syllabusForm": "其他",
+      "pinyin": "qítā",
+      "levelAnnotations": "3",
+      "sourcePage": 99,
+      "partOfSpeech": "代"
+    },
+    {
+      "id": 801,
+      "hanzi": "起",
+      "syllabusForm": "起",
+      "pinyin": "qǐ",
+      "levelAnnotations": "3（5）",
+      "sourcePage": 100,
+      "partOfSpeech": "动、（量）"
+    },
+    {
+      "id": 802,
+      "hanzi": "起飞",
+      "syllabusForm": "起飞",
+      "pinyin": "qǐfēi",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 803,
+      "hanzi": "汽车",
+      "syllabusForm": "汽车",
+      "pinyin": "qìchē",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 804,
+      "hanzi": "铅笔",
+      "syllabusForm": "铅笔",
+      "pinyin": "qiānbǐ",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 805,
+      "hanzi": "前年",
+      "syllabusForm": "前年",
+      "pinyin": "qiánnián",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 806,
+      "hanzi": "前天",
+      "syllabusForm": "前天",
+      "pinyin": "qiántiān",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 807,
+      "hanzi": "清楚",
+      "syllabusForm": "清楚",
+      "pinyin": "qīngchu",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "形、动"
+    },
+    {
+      "id": 808,
+      "hanzi": "请假",
+      "syllabusForm": "请假",
+      "pinyin": "qǐngjià",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 809,
+      "hanzi": "请客",
+      "syllabusForm": "请客",
+      "pinyin": "qǐngkè",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 810,
+      "hanzi": "秋天",
+      "syllabusForm": "秋天",
+      "pinyin": "qiūtiān",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 811,
+      "hanzi": "球场",
+      "syllabusForm": "球场",
+      "pinyin": "qiúchǎng",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 812,
+      "hanzi": "裙子",
+      "syllabusForm": "裙子",
+      "pinyin": "qúnzi",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 813,
+      "hanzi": "然后",
+      "syllabusForm": "然后",
+      "pinyin": "ránhòu",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "连"
+    },
+    {
+      "id": 814,
+      "hanzi": "热情",
+      "syllabusForm": "热情",
+      "pinyin": "rèqíng",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 815,
+      "hanzi": "认得",
+      "syllabusForm": "认得",
+      "pinyin": "rènde",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 816,
+      "hanzi": "认为",
+      "syllabusForm": "认为",
+      "pinyin": "rènwéi",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 817,
+      "hanzi": "认真",
+      "syllabusForm": "认真",
+      "pinyin": "rènzhēn",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 818,
+      "hanzi": "容易",
+      "syllabusForm": "容易",
+      "pinyin": "róngyì",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 819,
+      "hanzi": "如果",
+      "syllabusForm": "如果",
+      "pinyin": "rúguǒ",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "连"
+    },
+    {
+      "id": 820,
+      "hanzi": "伞",
+      "syllabusForm": "伞",
+      "pinyin": "sǎn",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 821,
+      "hanzi": "扫",
+      "syllabusForm": "扫",
+      "pinyin": "sǎo",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 822,
+      "hanzi": "沙发",
+      "syllabusForm": "沙发",
+      "pinyin": "shāfā",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 823,
+      "hanzi": "山",
+      "syllabusForm": "山",
+      "pinyin": "shān",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 824,
+      "hanzi": "上衣",
+      "syllabusForm": "上衣",
+      "pinyin": "shàngyī",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 825,
+      "hanzi": "勺子",
+      "syllabusForm": "勺子",
+      "pinyin": "sháozi",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 826,
+      "hanzi": "身边",
+      "syllabusForm": "身边",
+      "pinyin": "shēnbiān",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 827,
+      "hanzi": "身高",
+      "syllabusForm": "身高",
+      "pinyin": "shēngāo",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 828,
+      "hanzi": "声",
+      "syllabusForm": "声",
+      "pinyin": "shēng",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名、量"
+    },
+    {
+      "id": 829,
+      "hanzi": "生活",
+      "syllabusForm": "生活",
+      "pinyin": "shēnghuó",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名、动"
+    },
+    {
+      "id": 830,
+      "hanzi": "生气",
+      "syllabusForm": "生气",
+      "pinyin": "shēngqì",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 831,
+      "hanzi": "声音",
+      "syllabusForm": "声音",
+      "pinyin": "shēngyīn",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 832,
+      "hanzi": "市",
+      "syllabusForm": "市",
+      "pinyin": "shì",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 833,
+      "hanzi": "试",
+      "syllabusForm": "试",
+      "pinyin": "shì",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 834,
+      "hanzi": "室",
+      "syllabusForm": "室",
+      "pinyin": "shì",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 835,
+      "hanzi": "世界",
+      "syllabusForm": "世界",
+      "pinyin": "shìjiè",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 836,
+      "hanzi": "收",
+      "syllabusForm": "收",
+      "pinyin": "shōu",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 837,
+      "hanzi": "收到",
+      "syllabusForm": "收到",
+      "pinyin": "shōudào",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 838,
+      "hanzi": "受",
+      "syllabusForm": "受",
+      "pinyin": "shòu",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 839,
+      "hanzi": "瘦",
+      "syllabusForm": "瘦",
+      "pinyin": "shòu",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 840,
+      "hanzi": "受到",
+      "syllabusForm": "受到",
+      "pinyin": "shòudào",
+      "levelAnnotations": "3",
+      "sourcePage": 100,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 841,
+      "hanzi": "叔叔",
+      "syllabusForm": "叔叔",
+      "pinyin": "shūshu",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 842,
+      "hanzi": "树",
+      "syllabusForm": "树",
+      "pinyin": "shù",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 843,
+      "hanzi": "数学",
+      "syllabusForm": "数学",
+      "pinyin": "shùxué",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 844,
+      "hanzi": "刷",
+      "syllabusForm": "刷",
+      "pinyin": "shuā",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 845,
+      "hanzi": "双",
+      "syllabusForm": "双",
+      "pinyin": "shuāng",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "量"
+    },
+    {
+      "id": 846,
+      "hanzi": "水平",
+      "syllabusForm": "水平",
+      "pinyin": "shuǐpíng",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 847,
+      "hanzi": "司机",
+      "syllabusForm": "司机",
+      "pinyin": "sījī",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 848,
+      "hanzi": "四季",
+      "syllabusForm": "四季",
+      "pinyin": "sìjì",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 849,
+      "hanzi": "太阳",
+      "syllabusForm": "太阳",
+      "pinyin": "tàiyáng",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 850,
+      "hanzi": "糖",
+      "syllabusForm": "糖",
+      "pinyin": "táng",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 851,
+      "hanzi": "特别",
+      "syllabusForm": "特别",
+      "pinyin": "tèbié",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "形、副"
+    },
+    {
+      "id": 852,
+      "hanzi": "提高",
+      "syllabusForm": "提高",
+      "pinyin": "tígāo",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 853,
+      "hanzi": "体育",
+      "syllabusForm": "体育",
+      "pinyin": "tǐyù",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 854,
+      "hanzi": "体育馆",
+      "syllabusForm": "体育馆",
+      "pinyin": "tǐyùguǎn",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 855,
+      "hanzi": "甜",
+      "syllabusForm": "甜",
+      "pinyin": "tián",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 856,
+      "hanzi": "跳",
+      "syllabusForm": "跳",
+      "pinyin": "tiào",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 857,
+      "hanzi": "听说",
+      "syllabusForm": "听说",
+      "pinyin": "tīngshuō",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 858,
+      "hanzi": "挺",
+      "syllabusForm": "挺",
+      "pinyin": "tǐng",
+      "levelAnnotations": "3（7-9）",
+      "sourcePage": 101,
+      "partOfSpeech": "副、（动）"
+    },
+    {
+      "id": 859,
+      "hanzi": "同事",
+      "syllabusForm": "同事",
+      "pinyin": "tóngshì",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 860,
+      "hanzi": "同意",
+      "syllabusForm": "同意",
+      "pinyin": "tóngyì",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 861,
+      "hanzi": "头发",
+      "syllabusForm": "头发",
+      "pinyin": "tóufa",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 862,
+      "hanzi": "突然",
+      "syllabusForm": "突然",
+      "pinyin": "tūrán",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 863,
+      "hanzi": "图书馆",
+      "syllabusForm": "图书馆",
+      "pinyin": "túshūguǎn",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 864,
+      "hanzi": "腿",
+      "syllabusForm": "腿",
+      "pinyin": "tuǐ",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 865,
+      "hanzi": "外地",
+      "syllabusForm": "外地",
+      "pinyin": "wàidì",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 866,
+      "hanzi": "外卖",
+      "syllabusForm": "外卖",
+      "pinyin": "wàimài",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "动、名"
+    },
+    {
+      "id": 867,
+      "hanzi": "外语",
+      "syllabusForm": "外语",
+      "pinyin": "wàiyǔ",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 868,
+      "hanzi": "完成",
+      "syllabusForm": "完成",
+      "pinyin": "wánchéng",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 869,
+      "hanzi": "碗",
+      "syllabusForm": "碗",
+      "pinyin": "wǎn",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 870,
+      "hanzi": "晚点",
+      "syllabusForm": "晚点",
+      "pinyin": "wǎndiǎn",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 871,
+      "hanzi": "晚会",
+      "syllabusForm": "晚会",
+      "pinyin": "wǎnhuì",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 872,
+      "hanzi": "网球",
+      "syllabusForm": "网球",
+      "pinyin": "wǎngqiú",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 873,
+      "hanzi": "网站",
+      "syllabusForm": "网站",
+      "pinyin": "wǎngzhàn",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 874,
+      "hanzi": "忘记",
+      "syllabusForm": "忘记",
+      "pinyin": "wàngjì",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 875,
+      "hanzi": "为",
+      "syllabusForm": "为",
+      "pinyin": "wèi",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "介"
+    },
+    {
+      "id": 876,
+      "hanzi": "为了",
+      "syllabusForm": "为了",
+      "pinyin": "wèile",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "介"
+    },
+    {
+      "id": 877,
+      "hanzi": "卫生间",
+      "syllabusForm": "卫生间",
+      "pinyin": "wèishēngjiān",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 878,
+      "hanzi": "文化",
+      "syllabusForm": "文化",
+      "pinyin": "wénhuà",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 879,
+      "hanzi": "屋子",
+      "syllabusForm": "屋子",
+      "pinyin": "wūzi",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 880,
+      "hanzi": "西",
+      "syllabusForm": "西",
+      "pinyin": "xī",
+      "levelAnnotations": "3",
+      "sourcePage": 101,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 881,
+      "hanzi": "西北",
+      "syllabusForm": "西北",
+      "pinyin": "xīběi",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 882,
+      "hanzi": "西方",
+      "syllabusForm": "西方",
+      "pinyin": "xīfāng",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 883,
+      "hanzi": "西瓜",
+      "syllabusForm": "西瓜",
+      "pinyin": "xīguā",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 884,
+      "hanzi": "西南",
+      "syllabusForm": "西南",
+      "pinyin": "xīnán",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 885,
+      "hanzi": "习惯",
+      "syllabusForm": "习惯",
+      "pinyin": "xíguàn",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "动、名"
+    },
+    {
+      "id": 886,
+      "hanzi": "喜爱",
+      "syllabusForm": "喜爱",
+      "pinyin": "xǐ’ài",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 887,
+      "hanzi": "洗衣机",
+      "syllabusForm": "洗衣机",
+      "pinyin": "xǐyījī",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 888,
+      "hanzi": "洗澡",
+      "syllabusForm": "洗澡",
+      "pinyin": "xǐzǎo",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 889,
+      "hanzi": "夏天",
+      "syllabusForm": "夏天",
+      "pinyin": "xiàtiān",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 890,
+      "hanzi": "先",
+      "syllabusForm": "先",
+      "pinyin": "xiān",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 891,
+      "hanzi": "香蕉",
+      "syllabusForm": "香蕉",
+      "pinyin": "xiāngjiāo",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 892,
+      "hanzi": "相信",
+      "syllabusForm": "相信",
+      "pinyin": "xiāngxìn",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 893,
+      "hanzi": "箱子",
+      "syllabusForm": "箱子",
+      "pinyin": "xiāngzi",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 894,
+      "hanzi": "向",
+      "syllabusForm": "向",
+      "pinyin": "xiàng",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "动、介"
+    },
+    {
+      "id": 895,
+      "hanzi": "像",
+      "syllabusForm": "像",
+      "pinyin": "xiàng",
+      "levelAnnotations": "3（4）（7-9）",
+      "sourcePage": 102,
+      "partOfSpeech": "动、（副）、（名）"
+    },
+    {
+      "id": 896,
+      "hanzi": "相机",
+      "syllabusForm": "相机",
+      "pinyin": "xiàngjī",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 897,
+      "hanzi": "小区",
+      "syllabusForm": "小区",
+      "pinyin": "xiǎoqū",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 898,
+      "hanzi": "小心",
+      "syllabusForm": "小心",
+      "pinyin": "xiǎoxīn",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "动、形"
+    },
+    {
+      "id": 899,
+      "hanzi": "校园",
+      "syllabusForm": "校园",
+      "pinyin": "xiàoyuán",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 900,
+      "hanzi": "校长",
+      "syllabusForm": "校长",
+      "pinyin": "xiàozhǎng",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 901,
+      "hanzi": "鞋",
+      "syllabusForm": "鞋",
+      "pinyin": "xié",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 902,
+      "hanzi": "心里",
+      "syllabusForm": "心里",
+      "pinyin": "xīnlǐ",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 903,
+      "hanzi": "新年",
+      "syllabusForm": "新年",
+      "pinyin": "xīnnián",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 904,
+      "hanzi": "新闻",
+      "syllabusForm": "新闻",
+      "pinyin": "xīnwén",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 905,
+      "hanzi": "新鲜",
+      "syllabusForm": "新鲜",
+      "pinyin": "xīnxiān",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 906,
+      "hanzi": "信",
+      "syllabusForm": "信",
+      "pinyin": "xìn",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "动、名"
+    },
+    {
+      "id": 907,
+      "hanzi": "信用卡",
+      "syllabusForm": "信用卡",
+      "pinyin": "xìnyòngkǎ",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 908,
+      "hanzi": "行",
+      "syllabusForm": "行",
+      "pinyin": "xíng",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "动、形"
+    },
+    {
+      "id": 909,
+      "hanzi": "行李",
+      "syllabusForm": "行李",
+      "pinyin": "xíngli",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 910,
+      "hanzi": "兴趣",
+      "syllabusForm": "兴趣",
+      "pinyin": "xìngqù",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 911,
+      "hanzi": "休假",
+      "syllabusForm": "休假",
+      "pinyin": "xiūjià",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 912,
+      "hanzi": "需要",
+      "syllabusForm": "需要",
+      "pinyin": "xūyào",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "动、名"
+    },
+    {
+      "id": 913,
+      "hanzi": "选",
+      "syllabusForm": "选",
+      "pinyin": "xuǎn",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 914,
+      "hanzi": "选择",
+      "syllabusForm": "选择",
+      "pinyin": "xuǎnzé",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 915,
+      "hanzi": "学期",
+      "syllabusForm": "学期",
+      "pinyin": "xuéqī",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 916,
+      "hanzi": "牙",
+      "syllabusForm": "牙",
+      "pinyin": "yá",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 917,
+      "hanzi": "牙刷",
+      "syllabusForm": "牙刷",
+      "pinyin": "yáshuā",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 918,
+      "hanzi": "羊",
+      "syllabusForm": "羊",
+      "pinyin": "yáng",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 919,
+      "hanzi": "养",
+      "syllabusForm": "养",
+      "pinyin": "yǎng",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 920,
+      "hanzi": "要求",
+      "syllabusForm": "要求",
+      "pinyin": "yāoqiú",
+      "levelAnnotations": "3",
+      "sourcePage": 102,
+      "partOfSpeech": "动、名"
+    },
+    {
+      "id": 921,
+      "hanzi": "页",
+      "syllabusForm": "页",
+      "pinyin": "yè",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "量"
+    },
+    {
+      "id": 922,
+      "hanzi": "一定",
+      "syllabusForm": "一定",
+      "pinyin": "yídìng",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "形、副"
+    },
+    {
+      "id": 923,
+      "hanzi": "一共",
+      "syllabusForm": "一共",
+      "pinyin": "yígòng",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 924,
+      "hanzi": "一块儿",
+      "syllabusForm": "一块儿",
+      "pinyin": "yíkuàir",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名、副"
+    },
+    {
+      "id": 925,
+      "hanzi": "一样",
+      "syllabusForm": "一样",
+      "pinyin": "yíyàng",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 926,
+      "hanzi": "以后",
+      "syllabusForm": "以后",
+      "pinyin": "yǐhòu",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 927,
+      "hanzi": "以前",
+      "syllabusForm": "以前",
+      "pinyin": "yǐqián",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 928,
+      "hanzi": "以上",
+      "syllabusForm": "以上",
+      "pinyin": "yǐshàng",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 929,
+      "hanzi": "以外",
+      "syllabusForm": "以外",
+      "pinyin": "yǐwài",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 930,
+      "hanzi": "以为",
+      "syllabusForm": "以为",
+      "pinyin": "yǐwéi",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 931,
+      "hanzi": "以下",
+      "syllabusForm": "以下",
+      "pinyin": "yǐxià",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 932,
+      "hanzi": "一般",
+      "syllabusForm": "一般",
+      "pinyin": "yìbān",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 933,
+      "hanzi": "一边",
+      "syllabusForm": "一边",
+      "pinyin": "yìbiān",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 934,
+      "hanzi": "一直",
+      "syllabusForm": "一直",
+      "pinyin": "yìzhí",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 935,
+      "hanzi": "音乐",
+      "syllabusForm": "音乐",
+      "pinyin": "yīnyuè",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 936,
+      "hanzi": "银行",
+      "syllabusForm": "银行",
+      "pinyin": "yínháng",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 937,
+      "hanzi": "银行卡",
+      "syllabusForm": "银行卡",
+      "pinyin": "yínhángkǎ",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 938,
+      "hanzi": "饮料",
+      "syllabusForm": "饮料",
+      "pinyin": "yǐnliào",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 939,
+      "hanzi": "应该",
+      "syllabusForm": "应该",
+      "pinyin": "yīnggāi",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 940,
+      "hanzi": "影响",
+      "syllabusForm": "影响",
+      "pinyin": "yǐngxiǎng",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "动、名"
+    },
+    {
+      "id": 941,
+      "hanzi": "用",
+      "syllabusForm": "用",
+      "pinyin": "yòng",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 942,
+      "hanzi": "邮件",
+      "syllabusForm": "邮件",
+      "pinyin": "yóujiàn",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 943,
+      "hanzi": "游客",
+      "syllabusForm": "游客",
+      "pinyin": "yóukè",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 944,
+      "hanzi": "游戏",
+      "syllabusForm": "游戏",
+      "pinyin": "yóuxì",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 945,
+      "hanzi": "邮箱",
+      "syllabusForm": "邮箱",
+      "pinyin": "yóuxiāng",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 946,
+      "hanzi": "有关",
+      "syllabusForm": "有关",
+      "pinyin": "yǒuguān",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "动、介"
+    },
+    {
+      "id": 947,
+      "hanzi": "有名",
+      "syllabusForm": "有名",
+      "pinyin": "yǒumíng",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 948,
+      "hanzi": "有用",
+      "syllabusForm": "有用",
+      "pinyin": "yǒuyòng",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 949,
+      "hanzi": "又",
+      "syllabusForm": "又",
+      "pinyin": "yòu",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 950,
+      "hanzi": "羽毛球",
+      "syllabusForm": "羽毛球",
+      "pinyin": "yǔmáoqiú",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 951,
+      "hanzi": "语言",
+      "syllabusForm": "语言",
+      "pinyin": "yǔyán",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 952,
+      "hanzi": "雨衣",
+      "syllabusForm": "雨衣",
+      "pinyin": "yǔyī",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 953,
+      "hanzi": "遇到",
+      "syllabusForm": "遇到",
+      "pinyin": "yùdào",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 954,
+      "hanzi": "遇见",
+      "syllabusForm": "遇见",
+      "pinyin": "yùjiàn",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 955,
+      "hanzi": "园",
+      "syllabusForm": "园",
+      "pinyin": "yuán",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 956,
+      "hanzi": "员",
+      "syllabusForm": "员",
+      "pinyin": "yuán",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "后缀"
+    },
+    {
+      "id": 957,
+      "hanzi": "愿意",
+      "syllabusForm": "愿意",
+      "pinyin": "yuànyì",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 958,
+      "hanzi": "越",
+      "syllabusForm": "越",
+      "pinyin": "yuè",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 959,
+      "hanzi": "月亮",
+      "syllabusForm": "月亮",
+      "pinyin": "yuèliang",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 960,
+      "hanzi": "运动会",
+      "syllabusForm": "运动会",
+      "pinyin": "yùndònghuì",
+      "levelAnnotations": "3",
+      "sourcePage": 103,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 961,
+      "hanzi": "运动员",
+      "syllabusForm": "运动员",
+      "pinyin": "yùndòngyuán",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 962,
+      "hanzi": "咱们",
+      "syllabusForm": "咱们",
+      "pinyin": "zánmen",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "代"
+    },
+    {
+      "id": 963,
+      "hanzi": "脏",
+      "syllabusForm": "脏",
+      "pinyin": "zāng",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 964,
+      "hanzi": "怎么办",
+      "syllabusForm": "怎么办",
+      "pinyin": "zěnme bàn",
+      "levelAnnotations": "3",
+      "sourcePage": 104
+    },
+    {
+      "id": 965,
+      "hanzi": "怎样",
+      "syllabusForm": "怎样",
+      "pinyin": "zěnyàng",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "代"
+    },
+    {
+      "id": 966,
+      "hanzi": "站",
+      "syllabusForm": "站2",
+      "pinyin": "zhàn",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 967,
+      "hanzi": "张",
+      "syllabusForm": "张",
+      "pinyin": "zhāng",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "动、量"
+    },
+    {
+      "id": 968,
+      "hanzi": "长",
+      "syllabusForm": "长",
+      "pinyin": "zhǎng",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "动、后缀"
+    },
+    {
+      "id": 969,
+      "hanzi": "着急",
+      "syllabusForm": "着急",
+      "pinyin": "zháojí",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 970,
+      "hanzi": "照",
+      "syllabusForm": "照",
+      "pinyin": "zhào",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 971,
+      "hanzi": "照顾",
+      "syllabusForm": "照顾",
+      "pinyin": "zhàogù",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 972,
+      "hanzi": "照片",
+      "syllabusForm": "照片",
+      "pinyin": "zhàopiàn",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 973,
+      "hanzi": "照相",
+      "syllabusForm": "照相",
+      "pinyin": "zhàoxiàng",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 974,
+      "hanzi": "直到",
+      "syllabusForm": "直到",
+      "pinyin": "zhídào",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 975,
+      "hanzi": "只",
+      "syllabusForm": "只",
+      "pinyin": "zhǐ",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 976,
+      "hanzi": "纸",
+      "syllabusForm": "纸",
+      "pinyin": "zhǐ",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 977,
+      "hanzi": "只能",
+      "syllabusForm": "只能",
+      "pinyin": "zhǐ néng",
+      "levelAnnotations": "3",
+      "sourcePage": 104
+    },
+    {
+      "id": 978,
+      "hanzi": "只是",
+      "syllabusForm": "只是",
+      "pinyin": "zhǐshì",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "副、连"
+    },
+    {
+      "id": 979,
+      "hanzi": "只要",
+      "syllabusForm": "只要",
+      "pinyin": "zhǐyào",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "连"
+    },
+    {
+      "id": 980,
+      "hanzi": "只有",
+      "syllabusForm": "只有",
+      "pinyin": "zhǐyǒu",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "连"
+    },
+    {
+      "id": 981,
+      "hanzi": "中",
+      "syllabusForm": "中",
+      "pinyin": "zhōng",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 982,
+      "hanzi": "中间",
+      "syllabusForm": "中间",
+      "pinyin": "zhōngjiān",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 983,
+      "hanzi": "终于",
+      "syllabusForm": "终于",
+      "pinyin": "zhōngyú",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 984,
+      "hanzi": "种",
+      "syllabusForm": "种",
+      "pinyin": "zhǒng",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "量"
+    },
+    {
+      "id": 985,
+      "hanzi": "重要",
+      "syllabusForm": "重要",
+      "pinyin": "zhòngyào",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 986,
+      "hanzi": "周末",
+      "syllabusForm": "周末",
+      "pinyin": "zhōumò",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 987,
+      "hanzi": "主要",
+      "syllabusForm": "主要",
+      "pinyin": "zhǔyào",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "形"
+    },
+    {
+      "id": 988,
+      "hanzi": "注意",
+      "syllabusForm": "注意",
+      "pinyin": "zhùyì",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 989,
+      "hanzi": "住院",
+      "syllabusForm": "住院",
+      "pinyin": "zhùyuàn",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 990,
+      "hanzi": "字典",
+      "syllabusForm": "字典",
+      "pinyin": "zìdiǎn",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 991,
+      "hanzi": "自行车",
+      "syllabusForm": "自行车",
+      "pinyin": "zìxíngchē",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 992,
+      "hanzi": "子",
+      "syllabusForm": "子",
+      "pinyin": "zi",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "后缀"
+    },
+    {
+      "id": 993,
+      "hanzi": "总",
+      "syllabusForm": "总",
+      "pinyin": "zǒng",
+      "levelAnnotations": "3（5）",
+      "sourcePage": 104,
+      "partOfSpeech": "副、（动、形）"
+    },
+    {
+      "id": 994,
+      "hanzi": "总是",
+      "syllabusForm": "总是",
+      "pinyin": "zǒngshì",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 995,
+      "hanzi": "嘴",
+      "syllabusForm": "嘴",
+      "pinyin": "zuǐ",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 996,
+      "hanzi": "最好",
+      "syllabusForm": "最好",
+      "pinyin": "zuìhǎo",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "副"
+    },
+    {
+      "id": 997,
+      "hanzi": "最后",
+      "syllabusForm": "最后",
+      "pinyin": "zuìhòu",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 998,
+      "hanzi": "最近",
+      "syllabusForm": "最近",
+      "pinyin": "zuìjìn",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "名"
+    },
+    {
+      "id": 999,
+      "hanzi": "做客",
+      "syllabusForm": "做客",
+      "pinyin": "zuòkè",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "动"
+    },
+    {
+      "id": 1000,
+      "hanzi": "作业",
+      "syllabusForm": "作业",
+      "pinyin": "zuòyè",
+      "levelAnnotations": "3",
+      "sourcePage": 104,
+      "partOfSpeech": "名"
+    }
+  ]
+}

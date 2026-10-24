@@ -7434,12 +7434,12 @@
     },
     "hsk2-486": {
       "fr": {
-        "english": "se tenir debout",
-        "translation": "Placez-vous ici, s’il vous plaît."
+        "english": "station / arrêt",
+        "translation": "Nous descendons au prochain arrêt."
       },
       "ru": {
-        "english": "стоять",
-        "translation": "Встаньте здесь, пожалуйста."
+        "english": "станция / остановка",
+        "translation": "Мы выходим на следующей остановке."
       }
     },
     "hsk2-487": {
@@ -7580,6 +7580,5006 @@
       "ru": {
         "english": "левая сторона",
         "translation": "Школа слева."
+      }
+    },
+    "hsk3-501": {
+      "fr": {
+        "english": "tante ; terme d’adresse poli pour une femme plus âgée",
+        "translation": "La tante Wang vient dîner chez nous aujourd’hui."
+      },
+      "ru": {
+        "english": "тётя; вежливое обращение к женщине старшего возраста",
+        "translation": "Тётя Ван сегодня придёт к нам на ужин."
+      }
+    },
+    "hsk3-502": {
+      "fr": {
+        "english": "petit ; de petite taille",
+        "translation": "Mon petit frère est un peu plus petit que moi."
+      },
+      "ru": {
+        "english": "низкий; невысокого роста",
+        "translation": "Мой младший брат немного ниже меня."
+      }
+    },
+    "hsk3-503": {
+      "fr": {
+        "english": "conjoint ; partenaire",
+        "translation": "Mon conjoint et moi prenons le métro pour aller au travail tous les jours."
+      },
+      "ru": {
+        "english": "супруг; спутник жизни",
+        "translation": "Мы с супругом каждый день ездим на работу на метро."
+      }
+    },
+    "hsk3-504": {
+      "fr": {
+        "english": "calme ; silencieux",
+        "translation": "La bibliothèque est calme et tout le monde lit."
+      },
+      "ru": {
+        "english": "тихий; спокойный",
+        "translation": "В библиотеке тихо, все читают."
+      }
+    },
+    "hsk3-505": {
+      "fr": {
+        "english": "sûr ; sans danger",
+        "translation": "Il n’est pas très sûr de marcher seul sur cette route la nuit."
+      },
+      "ru": {
+        "english": "безопасный",
+        "translation": "Ночью идти одному по этой дороге не очень безопасно."
+      }
+    },
+    "hsk3-506": {
+      "fr": {
+        "english": "marqueur de l’objet dans la construction en 把",
+        "translation": "Ferme la porte, s’il te plaît ; il fait froid dehors."
+      },
+      "ru": {
+        "english": "показатель объекта в конструкции с 把",
+        "translation": "Пожалуйста, закрой дверь, на улице холодно."
+      }
+    },
+    "hsk3-507": {
+      "fr": {
+        "english": "déplacer ; porter",
+        "translation": "Cette table est trop lourde ; déplaçons-la ensemble."
+      },
+      "ru": {
+        "english": "переносить; передвигать",
+        "translation": "Этот стол слишком тяжёлый, давай перенесём его вместе."
+      }
+    },
+    "hsk3-508": {
+      "fr": {
+        "english": "classe ; groupe-classe",
+        "translation": "Il y a plus de vingt élèves dans cette classe."
+      },
+      "ru": {
+        "english": "класс; учебная группа",
+        "translation": "В этом классе больше двадцати учеников."
+      }
+    },
+    "hsk3-509": {
+      "fr": {
+        "english": "déménager",
+        "translation": "Ils déménagent le mois prochain et veulent demander de l’aide à quelques amis."
+      },
+      "ru": {
+        "english": "переезжать",
+        "translation": "В следующем месяце они переезжают и хотят попросить нескольких друзей помочь."
+      }
+    },
+    "hsk3-510": {
+      "fr": {
+        "english": "s’occuper de ; régler",
+        "translation": "Je vais m’occuper de ça ; va d’abord te reposer."
+      },
+      "ru": {
+        "english": "заниматься; уладить",
+        "translation": "Я сам займусь этим, а ты пока отдохни."
+      }
+    },
+    "hsk3-511": {
+      "fr": {
+        "english": "moyen ; solution",
+        "translation": "Il pleut ; il faut trouver un moyen de rentrer."
+      },
+      "ru": {
+        "english": "способ; решение",
+        "translation": "Идёт дождь, нам нужно придумать, как добраться домой."
+      }
+    },
+    "hsk3-512": {
+      "fr": {
+        "english": "bureau",
+        "translation": "Le bureau du professeur est au troisième étage."
+      },
+      "ru": {
+        "english": "кабинет; офис",
+        "translation": "Кабинет учителя находится на третьем этаже."
+      }
+    },
+    "hsk3-513": {
+      "fr": {
+        "english": "une demi-journée ; longtemps",
+        "translation": "J’ai cherché longtemps avant de trouver ce dictionnaire."
+      },
+      "ru": {
+        "english": "полдня; долгое время",
+        "translation": "Я долго искал этот словарь и наконец нашёл его."
+      }
+    },
+    "hsk3-514": {
+      "fr": {
+        "english": "aider ; aide",
+        "translation": "Merci de m’avoir aidé à préparer cet examen."
+      },
+      "ru": {
+        "english": "помогать; помощь",
+        "translation": "Спасибо, что помог мне подготовиться к этому экзамену."
+      }
+    },
+    "hsk3-515": {
+      "fr": {
+        "english": "rassasié ; repu",
+        "translation": "J’ai déjà assez mangé et je ne veux plus de gâteau."
+      },
+      "ru": {
+        "english": "сытый",
+        "translation": "Я уже наелся и больше не хочу торт."
+      }
+    },
+    "hsk3-516": {
+      "fr": {
+        "english": "journal",
+        "translation": "Mon grand-père lit le journal tous les matins."
+      },
+      "ru": {
+        "english": "газета",
+        "translation": "Дедушка каждое утро читает газету."
+      }
+    },
+    "hsk3-517": {
+      "fr": {
+        "english": "nord",
+        "translation": "L’école se trouve au nord de la gare."
+      },
+      "ru": {
+        "english": "север",
+        "translation": "Школа находится к северу от вокзала."
+      }
+    },
+    "hsk3-518": {
+      "fr": {
+        "english": "le nord ; région du nord",
+        "translation": "Il neige souvent dans le nord en hiver."
+      },
+      "ru": {
+        "english": "север; северный регион",
+        "translation": "Зимой на севере часто идёт снег."
+      }
+    },
+    "hsk3-519": {
+      "fr": {
+        "english": "marqueur du passif",
+        "translation": "Mon petit frère est parti sur mon vélo."
+      },
+      "ru": {
+        "english": "показатель пассивной конструкции",
+        "translation": "Мой младший брат уехал на моём велосипеде."
+      }
+    },
+    "hsk3-520": {
+      "fr": {
+        "english": "notes ; prise de notes",
+        "translation": "Pendant le cours, je note les choses importantes."
+      },
+      "ru": {
+        "english": "заметки; записи",
+        "translation": "На уроке я записываю важные вещи."
+      }
+    },
+    "hsk3-521": {
+      "fr": {
+        "english": "comparer",
+        "translation": "Comparons d’abord les prix de ces deux hôtels."
+      },
+      "ru": {
+        "english": "сравнивать",
+        "translation": "Сначала сравним цены в этих двух гостиницах."
+      }
+    },
+    "hsk3-522": {
+      "fr": {
+        "english": "cahier ; carnet",
+        "translation": "Mets le cahier dans ton sac, s’il te plaît."
+      },
+      "ru": {
+        "english": "тетрадь; блокнот",
+        "translation": "Положи тетрадь в рюкзак, пожалуйста."
+      }
+    },
+    "hsk3-523": {
+      "fr": {
+        "english": "par exemple",
+        "translation": "J’aime les fruits, par exemple les pommes et les oranges."
+      },
+      "ru": {
+        "english": "например",
+        "translation": "Я люблю фрукты, например яблоки и апельсины."
+      }
+    },
+    "hsk3-524": {
+      "fr": {
+        "english": "compétition ; participer à une compétition",
+        "translation": "Ma petite sœur a participé à la compétition de natation de l’école."
+      },
+      "ru": {
+        "english": "соревнование; соревноваться",
+        "translation": "Моя младшая сестра участвовала в школьных соревнованиях по плаванию."
+      }
+    },
+    "hsk3-525": {
+      "fr": {
+        "english": "devoir ; falloir",
+        "translation": "Il faut éteindre son téléphone en entrant dans la salle de classe."
+      },
+      "ru": {
+        "english": "должен; необходимо",
+        "translation": "Войдя в класс, нужно выключить телефон."
+      }
+    },
+    "hsk3-526": {
+      "fr": {
+        "english": "changer ; devenir",
+        "translation": "Il fait plus froid ; pense à mettre une couche de plus."
+      },
+      "ru": {
+        "english": "меняться; становиться",
+        "translation": "Похолодало, не забудь одеться потеплее."
+      }
+    },
+    "hsk3-527": {
+      "fr": {
+        "english": "classificateur d’une action accomplie une fois",
+        "translation": "J’ai écouté cette chanson une fois et je veux la réécouter."
+      },
+      "ru": {
+        "english": "счётное слово для одного полного действия",
+        "translation": "Я послушал эту песню один раз и хочу послушать ещё раз."
+      }
+    },
+    "hsk3-528": {
+      "fr": {
+        "english": "devenir ; se transformer en",
+        "translation": "Le printemps est arrivé et les feuilles des arbres sont devenues vertes."
+      },
+      "ru": {
+        "english": "становиться; превращаться в",
+        "translation": "Наступила весна, и листья на деревьях стали зелёными."
+      }
+    },
+    "hsk3-529": {
+      "fr": {
+        "english": "changement ; évolution",
+        "translation": "Notre école a beaucoup changé ces dernières années."
+      },
+      "ru": {
+        "english": "изменение; перемена",
+        "translation": "За последние годы наша школа сильно изменилась."
+      }
+    },
+    "hsk3-530": {
+      "fr": {
+        "english": "se produire ; présenter un spectacle",
+        "translation": "Les enfants vont présenter un spectacle ce soir."
+      },
+      "ru": {
+        "english": "выступать; показывать представление",
+        "translation": "Вечером дети покажут представление."
+      }
+    },
+    "hsk3-531": {
+      "fr": {
+        "english": "autre ; autre chose",
+        "translation": "Cette chemise est trop chère ; je voudrais en voir une autre."
+      },
+      "ru": {
+        "english": "другой; что-нибудь ещё",
+        "translation": "Эта рубашка слишком дорогая, я хотел бы посмотреть что-нибудь другое."
+      }
+    },
+    "hsk3-532": {
+      "fr": {
+        "english": "les autres",
+        "translation": "Les autres sont déjà arrivés ; entrons aussi."
+      },
+      "ru": {
+        "english": "другие люди",
+        "translation": "Остальные уже пришли, давай тоже войдём."
+      }
+    },
+    "hsk3-533": {
+      "fr": {
+        "english": "hôtel",
+        "translation": "Nous avons passé trois jours à l’hôtel et nous partons aujourd’hui."
+      },
+      "ru": {
+        "english": "гостиница",
+        "translation": "Мы прожили в гостинице три дня, а сегодня уезжаем."
+      }
+    },
+    "hsk3-534": {
+      "fr": {
+        "english": "glace",
+        "translation": "Il fait très chaud ; je voudrais un verre d’eau avec des glaçons."
+      },
+      "ru": {
+        "english": "лёд",
+        "translation": "Очень жарко, я хочу выпить воды со льдом."
+      }
+    },
+    "hsk3-535": {
+      "fr": {
+        "english": "glace ; crème glacée",
+        "translation": "Quand il fait chaud, j’aime manger une glace."
+      },
+      "ru": {
+        "english": "мороженое",
+        "translation": "В жаркую погоду я люблю есть мороженое."
+      }
+    },
+    "hsk3-536": {
+      "fr": {
+        "english": "réfrigérateur ; frigo",
+        "translation": "Le lait est dans le réfrigérateur ; réchauffe-le avant de le boire."
+      },
+      "ru": {
+        "english": "холодильник",
+        "translation": "Молоко в холодильнике, перед тем как пить, подогрей его."
+      }
+    },
+    "hsk3-537": {
+      "fr": {
+        "english": "patient ; malade",
+        "translation": "L’infirmière s’occupe de ce patient."
+      },
+      "ru": {
+        "english": "пациент; больной",
+        "translation": "Медсестра ухаживает за этим пациентом."
+      }
+    },
+    "hsk3-538": {
+      "fr": {
+        "english": "non seulement",
+        "translation": "Il sait non seulement cuisiner, mais il le fait très bien."
+      },
+      "ru": {
+        "english": "не только",
+        "translation": "Он не только умеет готовить, но и готовит очень хорошо."
+      }
+    },
+    "hsk3-539": {
+      "fr": {
+        "english": "être introuvable ; disparaître",
+        "translation": "Mes clés ont disparu ; peux-tu m’aider à les chercher ?"
+      },
+      "ru": {
+        "english": "пропасть; потеряться",
+        "translation": "Мои ключи пропали, поможешь их поискать?"
+      }
+    },
+    "hsk3-540": {
+      "fr": {
+        "english": "inutile de ; ne pas avoir besoin de",
+        "translation": "Pas besoin d’emporter un parapluie, il ne pleut pas."
+      },
+      "ru": {
+        "english": "не нужно; нет необходимости",
+        "translation": "Зонт брать не нужно, на улице не идёт дождь."
+      }
+    },
+    "hsk3-541": {
+      "fr": {
+        "english": "différent ; distinct",
+        "translation": "Les menus de ces deux restaurants sont différents, tout comme leurs prix."
+      },
+      "ru": {
+        "english": "разный; отличающийся",
+        "translation": "В этих двух ресторанах разные меню и цены."
+      }
+    },
+    "hsk3-542": {
+      "fr": {
+        "english": "peu après ; bientôt",
+        "translation": "Mon ami m’a appelé peu après la fin du film."
+      },
+      "ru": {
+        "english": "вскоре; через недолгое время",
+        "translation": "Вскоре после окончания фильма мне позвонил друг."
+      }
+    },
+    "hsk3-543": {
+      "fr": {
+        "english": "ça ne va pas ; ça ne marche pas",
+        "translation": "Cette solution ne marche pas ; cherchons-en une autre."
+      },
+      "ru": {
+        "english": "не годится; не получится",
+        "translation": "Этот способ не годится, давай придумаем другой."
+      }
+    },
+    "hsk3-544": {
+      "fr": {
+        "english": "ne… que ; seulement alors",
+        "translation": "Il s’est levé tard aujourd’hui et n’est arrivé à l’école qu’à neuf heures."
+      },
+      "ru": {
+        "english": "только; лишь после этого",
+        "translation": "Сегодня он поздно встал и пришёл в школу только в девять."
+      }
+    },
+    "hsk3-545": {
+      "fr": {
+        "english": "menu",
+        "translation": "Montrez-nous le menu, s’il vous plaît ; nous n’avons pas encore choisi."
+      },
+      "ru": {
+        "english": "меню",
+        "translation": "Покажите нам меню, пожалуйста, мы ещё не решили, что заказать."
+      }
+    },
+    "hsk3-546": {
+      "fr": {
+        "english": "participer à",
+        "translation": "Je veux participer au tournoi de basket de l’école ce week-end."
+      },
+      "ru": {
+        "english": "участвовать в",
+        "translation": "В эти выходные я хочу участвовать в школьном соревновании по баскетболу."
+      }
+    },
+    "hsk3-547": {
+      "fr": {
+        "english": "herbe",
+        "translation": "Le chaton s’est endormi dans l’herbe."
+      },
+      "ru": {
+        "english": "трава",
+        "translation": "Котёнок уснул в траве."
+      }
+    },
+    "hsk3-548": {
+      "fr": {
+        "english": "pelouse ; terrain herbeux",
+        "translation": "Les enfants jouent au ballon sur la pelouse."
+      },
+      "ru": {
+        "english": "лужайка; травяная площадка",
+        "translation": "Дети играют в мяч на лужайке."
+      }
+    },
+    "hsk3-549": {
+      "fr": {
+        "english": "classificateur d’étages ou de couches",
+        "translation": "Nous habitons au huitième étage de cet immeuble."
+      },
+      "ru": {
+        "english": "счётное слово для этажей или слоёв",
+        "translation": "Мы живём на восьмом этаже этого здания."
+      }
+    },
+    "hsk3-550": {
+      "fr": {
+        "english": "vérifier ; consulter",
+        "translation": "Je vais d’abord vérifier l’heure de départ du train."
+      },
+      "ru": {
+        "english": "проверять; искать сведения",
+        "translation": "Сначала я проверю, когда отправляется поезд."
+      }
+    },
+    "hsk3-551": {
+      "fr": {
+        "english": "être moins bon ; être inférieur",
+        "translation": "Mon résultat en compréhension orale est un peu moins bon que la dernière fois."
+      },
+      "ru": {
+        "english": "быть хуже; уступать",
+        "translation": "В этот раз результат по аудированию немного хуже, чем в прошлый."
+      }
+    },
+    "hsk3-552": {
+      "fr": {
+        "english": "presque ; à peu près pareil",
+        "translation": "Nous sommes rentrés presque en même temps."
+      },
+      "ru": {
+        "english": "почти; примерно одинаково",
+        "translation": "Мы пришли домой почти одновременно."
+      }
+    },
+    "hsk3-553": {
+      "fr": {
+        "english": "goûter",
+        "translation": "Goûte cette soupe ; tu la trouves salée ?"
+      },
+      "ru": {
+        "english": "пробовать на вкус",
+        "translation": "Попробуй этот суп, как думаешь, он солёный?"
+      }
+    },
+    "hsk3-554": {
+      "fr": {
+        "english": "souvent ; habituellement",
+        "translation": "Je vais souvent lire à la bibliothèque, où il fait très calme."
+      },
+      "ru": {
+        "english": "часто; обычно",
+        "translation": "Я часто хожу читать в библиотеку, там тихо."
+      }
+    },
+    "hsk3-555": {
+      "fr": {
+        "english": "courant ; fréquent",
+        "translation": "Cet oiseau est courant dans les parcs du nord."
+      },
+      "ru": {
+        "english": "обычный; часто встречающийся",
+        "translation": "Эта птица часто встречается в парках на севере."
+      }
+    },
+    "hsk3-556": {
+      "fr": {
+        "english": "d’usage courant ; souvent employé",
+        "translation": "Ce mot est très courant dans les conversations de tous les jours."
+      },
+      "ru": {
+        "english": "общеупотребительный; часто используемый",
+        "translation": "Это слово часто используется в повседневных разговорах."
+      }
+    },
+    "hsk3-557": {
+      "fr": {
+        "english": "souvent ; fréquemment",
+        "translation": "Ma grande sœur appelle souvent la maison."
+      },
+      "ru": {
+        "english": "часто; нередко",
+        "translation": "Старшая сестра часто звонит домой."
+      }
+    },
+    "hsk3-558": {
+      "fr": {
+        "english": "chemise",
+        "translation": "Il est allé au travail avec une chemise blanche."
+      },
+      "ru": {
+        "english": "рубашка",
+        "translation": "Он пошёл на работу в белой рубашке."
+      }
+    },
+    "hsk3-559": {
+      "fr": {
+        "english": "note ; résultat scolaire",
+        "translation": "Son résultat à l’examen de mathématiques s’est amélioré."
+      },
+      "ru": {
+        "english": "оценка; результат",
+        "translation": "Её результат по математике на этот раз улучшился."
+      }
+    },
+    "hsk3-560": {
+      "fr": {
+        "english": "ville",
+        "translation": "Cette ville compte beaucoup de parcs et d’hôtels."
+      },
+      "ru": {
+        "english": "город",
+        "translation": "В этом городе много парков и гостиниц."
+      }
+    },
+    "hsk3-561": {
+      "fr": {
+        "english": "être en retard",
+        "translation": "Dépêchons-nous, sinon nous serons en retard en cours."
+      },
+      "ru": {
+        "english": "опаздывать",
+        "translation": "Давай быстрее, иначе мы опоздаем на урок."
+      }
+    },
+    "hsk3-562": {
+      "fr": {
+        "english": "partir ; se mettre en route",
+        "translation": "Nous partons à six heures du matin et arrivons à Pékin le soir."
+      },
+      "ru": {
+        "english": "отправляться; выезжать",
+        "translation": "Мы выезжаем в шесть утра и вечером приезжаем в Пекин."
+      }
+    },
+    "hsk3-563": {
+      "fr": {
+        "english": "naître",
+        "translation": "Je suis né dans une petite ville du nord."
+      },
+      "ru": {
+        "english": "родиться",
+        "translation": "Я родился в небольшом городе на севере."
+      }
+    },
+    "hsk3-564": {
+      "fr": {
+        "english": "sortir de l’hôpital",
+        "translation": "Ma grand-mère va beaucoup mieux et pourra sortir de l’hôpital demain."
+      },
+      "ru": {
+        "english": "выписаться из больницы",
+        "translation": "Бабушке намного лучше, завтра её могут выписать из больницы."
+      }
+    },
+    "hsk3-565": {
+      "fr": {
+        "english": "collège ; premier cycle du secondaire",
+        "translation": "Ma cousine enseigne l’anglais au collège."
+      },
+      "ru": {
+        "english": "средняя школа",
+        "translation": "Моя двоюродная сестра преподаёт английский в средней школе."
+      }
+    },
+    "hsk3-566": {
+      "fr": {
+        "english": "sauf ; à l’exception de",
+        "translation": "Tout le monde est déjà arrivé, sauf Xiao Wang."
+      },
+      "ru": {
+        "english": "кроме; за исключением",
+        "translation": "Все уже пришли, кроме Сяо Вана."
+      }
+    },
+    "hsk3-567": {
+      "fr": {
+        "english": "bateau",
+        "translation": "Nous avons traversé la rivière en bateau et sommes vite arrivés sur l’autre rive."
+      },
+      "ru": {
+        "english": "лодка; корабль",
+        "translation": "Мы переправились через реку на лодке и скоро оказались на другом берегу."
+      }
+    },
+    "hsk3-568": {
+      "fr": {
+        "english": "printemps",
+        "translation": "Le printemps est arrivé et toutes les fleurs du parc sont ouvertes."
+      },
+      "ru": {
+        "english": "весна",
+        "translation": "Наступила весна, и в парке распустились все цветы."
+      }
+    },
+    "hsk3-569": {
+      "fr": {
+        "english": "dictionnaire",
+        "translation": "J’ai consulté le dictionnaire pour trouver le sens de ce mot."
+      },
+      "ru": {
+        "english": "словарь",
+        "translation": "Я посмотрел значение этого слова в словаре."
+      }
+    },
+    "hsk3-570": {
+      "fr": {
+        "english": "intelligent ; malin",
+        "translation": "Elle est intelligente et a compris la question dès la première fois."
+      },
+      "ru": {
+        "english": "умный; сообразительный",
+        "translation": "Она умная и с первого раза поняла вопрос."
+      }
+    },
+    "hsk3-571": {
+      "fr": {
+        "english": "nettoyer ; faire le ménage",
+        "translation": "Le samedi, nous faisons le ménage ensemble."
+      },
+      "ru": {
+        "english": "убирать; делать уборку",
+        "translation": "По субботам мы вместе убираем комнату."
+      }
+    },
+    "hsk3-572": {
+      "fr": {
+        "english": "prévoir ; avoir l’intention de",
+        "translation": "Je prévois d’aller au bord de la mer après les vacances."
+      },
+      "ru": {
+        "english": "планировать; намереваться",
+        "translation": "Я планирую после каникул поехать к морю."
+      }
+    },
+    "hsk3-573": {
+      "fr": {
+        "english": "probablement ; environ",
+        "translation": "Il faut environ dix minutes pour venir à pied de l’école."
+      },
+      "ru": {
+        "english": "вероятно; примерно",
+        "translation": "От школы сюда идти пешком примерно десять минут."
+      }
+    },
+    "hsk3-574": {
+      "fr": {
+        "english": "adulte",
+        "translation": "Les enfants doivent traverser la rue avec un adulte."
+      },
+      "ru": {
+        "english": "взрослый",
+        "translation": "Детям нужно переходить дорогу вместе со взрослыми."
+      }
+    },
+    "hsk3-575": {
+      "fr": {
+        "english": "taille ; dimensions",
+        "translation": "Ces deux pièces ont à peu près la même taille."
+      },
+      "ru": {
+        "english": "размер; величина",
+        "translation": "Эти две комнаты примерно одинакового размера."
+      }
+    },
+    "hsk3-576": {
+      "fr": {
+        "english": "panda géant",
+        "translation": "Nous avons vu deux pandas géants au zoo."
+      },
+      "ru": {
+        "english": "большая панда",
+        "translation": "В зоопарке мы увидели двух больших панд."
+      }
+    },
+    "hsk3-577": {
+      "fr": {
+        "english": "manteau",
+        "translation": "Il fait très froid dehors ; mets un manteau avant de sortir."
+      },
+      "ru": {
+        "english": "пальто",
+        "translation": "На улице очень холодно, перед выходом надень пальто."
+      }
+    },
+    "hsk3-578": {
+      "fr": {
+        "english": "emporter ; apporter",
+        "translation": "Demain, nous allons à la mer ; n’oublie pas d’emporter de l’eau et une carte."
+      },
+      "ru": {
+        "english": "брать с собой; приносить",
+        "translation": "Завтра едем к морю, не забудь взять с собой воду и карту."
+      }
+    },
+    "hsk3-579": {
+      "fr": {
+        "english": "s’inquiéter",
+        "translation": "Ne t’inquiète pas, j’ai déjà appelé mon conjoint."
+      },
+      "ru": {
+        "english": "беспокоиться",
+        "translation": "Не волнуйся, я уже позвонил супругу."
+      }
+    },
+    "hsk3-580": {
+      "fr": {
+        "english": "gâteau",
+        "translation": "Pour mon anniversaire, mes amis m’ont acheté un gâteau."
+      },
+      "ru": {
+        "english": "торт",
+        "translation": "На день рождения друзья купили мне торт."
+      }
+    },
+    "hsk3-581": {
+      "fr": {
+        "english": "bien sûr ; certainement",
+        "translation": "Bien sûr ; tu préfères du thé ou du café ?"
+      },
+      "ru": {
+        "english": "конечно",
+        "translation": "Конечно. Ты хочешь чай или кофе?"
+      }
+    },
+    "hsk3-582": {
+      "fr": {
+        "english": "partout",
+        "translation": "Après la pluie, il y avait de l’eau partout dans le parc."
+      },
+      "ru": {
+        "english": "повсюду; везде",
+        "translation": "После дождя в парке повсюду была вода."
+      }
+    },
+    "hsk3-583": {
+      "fr": {
+        "english": "obtenir ; recevoir",
+        "translation": "Il a remporté le premier prix au concours."
+      },
+      "ru": {
+        "english": "получить; удостоиться",
+        "translation": "Он получил первую премию на соревновании."
+      }
+    },
+    "hsk3-584": {
+      "fr": {
+        "english": "obtenir ; recevoir",
+        "translation": "J’ai enfin reçu l’aide du professeur."
+      },
+      "ru": {
+        "english": "получить; обрести",
+        "translation": "Наконец я получил помощь учителя."
+      }
+    },
+    "hsk3-585": {
+      "fr": {
+        "english": "marquer ; score",
+        "translation": "Il a marqué le plus de points au concours et a remporté la première place."
+      },
+      "ru": {
+        "english": "набирать очки; счёт",
+        "translation": "Он набрал больше всех очков на соревновании и занял первое место."
+      }
+    },
+    "hsk3-586": {
+      "fr": {
+        "english": "si ; au cas où",
+        "translation": "Si tu as le temps, accompagne-moi acheter un dictionnaire."
+      },
+      "ru": {
+        "english": "если; в случае если",
+        "translation": "Если у тебя будет время, сходи со мной купить словарь."
+      }
+    },
+    "hsk3-587": {
+      "fr": {
+        "english": "devoir ; falloir",
+        "translation": "J’ai un examen demain, alors je dois réviser ce soir."
+      },
+      "ru": {
+        "english": "нужно; придётся",
+        "translation": "Завтра экзамен, поэтому сегодня вечером мне нужно заниматься."
+      }
+    },
+    "hsk3-588": {
+      "fr": {
+        "english": "lampe ; lumière",
+        "translation": "Il fait nuit ; allume la lumière du salon, s’il te plaît."
+      },
+      "ru": {
+        "english": "лампа; свет",
+        "translation": "Стемнело, пожалуйста, включи свет в гостиной."
+      }
+    },
+    "hsk3-589": {
+      "fr": {
+        "english": "sol ; terre",
+        "translation": "Après la pluie, il y a beaucoup d’eau par terre."
+      },
+      "ru": {
+        "english": "земля; пол",
+        "translation": "После дождя на земле много воды."
+      }
+    },
+    "hsk3-590": {
+      "fr": {
+        "english": "lieu ; emplacement",
+        "translation": "Indique le lieu de l’examen sur le formulaire d’inscription."
+      },
+      "ru": {
+        "english": "место; местоположение",
+        "translation": "Укажи место проведения экзамена в регистрационной форме."
+      }
+    },
+    "hsk3-591": {
+      "fr": {
+        "english": "endroit ; lieu",
+        "translation": "Cet endroit est tout près de l’école ; on peut y aller à pied."
+      },
+      "ru": {
+        "english": "место; местность",
+        "translation": "Это место совсем рядом со школой, туда можно дойти пешком."
+      }
+    },
+    "hsk3-592": {
+      "fr": {
+        "english": "carte ; plan",
+        "translation": "Nous avons trouvé un parc à proximité en regardant la carte."
+      },
+      "ru": {
+        "english": "карта",
+        "translation": "По карте мы нашли неподалёку парк."
+      }
+    },
+    "hsk3-593": {
+      "fr": {
+        "english": "électricité ; courant électrique",
+        "translation": "Il n’y a plus d’électricité chez nous aujourd’hui, et le réfrigérateur ne marche pas non plus."
+      },
+      "ru": {
+        "english": "электричество",
+        "translation": "Сегодня дома отключили электричество, и холодильник тоже не работает."
+      }
+    },
+    "hsk3-594": {
+      "fr": {
+        "english": "ascenseur",
+        "translation": "Il n’y a pas d’ascenseur dans cet immeuble ; il faut prendre les escaliers."
+      },
+      "ru": {
+        "english": "лифт",
+        "translation": "В этом доме нет лифта, придётся идти по лестнице."
+      }
+    },
+    "hsk3-595": {
+      "fr": {
+        "english": "livre électronique ; e-book",
+        "translation": "Je lis des livres électroniques sur mon téléphone, sans devoir emporter beaucoup de livres."
+      },
+      "ru": {
+        "english": "электронная книга",
+        "translation": "Я читаю электронные книги на телефоне, поэтому не нужно брать с собой много книг."
+      }
+    },
+    "hsk3-596": {
+      "fr": {
+        "english": "perdre ; égarer",
+        "translation": "J’ai oublié mes clés au bureau ; je vais y retourner les chercher."
+      },
+      "ru": {
+        "english": "потерять; забыть где-либо",
+        "translation": "Я оставил ключи в офисе, вернусь за ними."
+      }
+    },
+    "hsk3-597": {
+      "fr": {
+        "english": "est",
+        "translation": "Continue vers l’est et tu verras ce pont."
+      },
+      "ru": {
+        "english": "восток",
+        "translation": "Иди всё время на восток, и увидишь этот мост."
+      }
+    },
+    "hsk3-598": {
+      "fr": {
+        "english": "nord-est",
+        "translation": "J’habite au nord-est de la ville, un peu loin de la mer."
+      },
+      "ru": {
+        "english": "северо-восток",
+        "translation": "Мой дом находится на северо-востоке города, немного далеко от моря."
+      }
+    },
+    "hsk3-599": {
+      "fr": {
+        "english": "l’est ; région orientale",
+        "translation": "Le soleil se lève à l’est chaque matin."
+      },
+      "ru": {
+        "english": "восток; восточная сторона",
+        "translation": "Солнце каждое утро встаёт на востоке."
+      }
+    },
+    "hsk3-600": {
+      "fr": {
+        "english": "sud-est",
+        "translation": "La gare se trouve au sud-est du parc."
+      },
+      "ru": {
+        "english": "юго-восток",
+        "translation": "Вокзал находится к юго-востоку от парка."
+      }
+    },
+    "hsk3-601": {
+      "fr": {
+        "english": "hiver",
+        "translation": "Ici, l’hiver est très froid et il neige souvent la nuit."
+      },
+      "ru": {
+        "english": "зима",
+        "translation": "Зимой здесь очень холодно, и по ночам часто идёт снег."
+      }
+    },
+    "hsk3-602": {
+      "fr": {
+        "english": "comprendre ; savoir comment faire",
+        "translation": "Après avoir appris cette méthode, je sais consulter un dictionnaire."
+      },
+      "ru": {
+        "english": "понимать; знать, как",
+        "translation": "После изучения этого способа я понял, как искать слова в словаре."
+      }
+    },
+    "hsk3-603": {
+      "fr": {
+        "english": "animal",
+        "translation": "Cet animal se repose le jour et sort chercher à manger la nuit."
+      },
+      "ru": {
+        "english": "животное",
+        "translation": "Это животное отдыхает днём, а ночью выходит искать еду."
+      }
+    },
+    "hsk3-604": {
+      "fr": {
+        "english": "zoo",
+        "translation": "Ce week-end, nous emmenons les enfants au zoo voir les pandas géants."
+      },
+      "ru": {
+        "english": "зоопарк",
+        "translation": "В выходные мы поведём детей в зоопарк посмотреть на больших панд."
+      }
+    },
+    "hsk3-605": {
+      "fr": {
+        "english": "court ; bref",
+        "translation": "Cette jupe est un peu courte ; je voudrais en essayer une plus longue."
+      },
+      "ru": {
+        "english": "короткий; недлинный",
+        "translation": "Эта юбка немного короткая, я хочу примерить подлиннее."
+      }
+    },
+    "hsk3-606": {
+      "fr": {
+        "english": "short ; bermuda",
+        "translation": "Il fait chaud, alors il est allé au parc en short."
+      },
+      "ru": {
+        "english": "шорты",
+        "translation": "Жарко, поэтому он пошёл в парк в шортах."
+      }
+    },
+    "hsk3-607": {
+      "fr": {
+        "english": "segment ; période",
+        "translation": "Je consacre chaque jour un moment à l’écriture des caractères chinois."
+      },
+      "ru": {
+        "english": "отрезок; период",
+        "translation": "Каждый день я уделяю некоторое время практике письма китайских иероглифов."
+      }
+    },
+    "hsk3-608": {
+      "fr": {
+        "english": "faire de l’exercice ; s’entraîner",
+        "translation": "Mon père va faire de l’exercice au parc chaque matin."
+      },
+      "ru": {
+        "english": "тренироваться; заниматься физкультурой",
+        "translation": "Папа каждое утро ходит заниматься в парк."
+      }
+    },
+    "hsk3-609": {
+      "fr": {
+        "english": "dialogue ; conversation",
+        "translation": "Nous avons répété un dialogue à deux."
+      },
+      "ru": {
+        "english": "диалог; разговор",
+        "translation": "Мы вдвоём потренировались разыгрывать диалог."
+      }
+    },
+    "hsk3-610": {
+      "fr": {
+        "english": "affamé ; avoir faim",
+        "translation": "J’ai un peu faim ; mangeons d’abord quelques fruits."
+      },
+      "ru": {
+        "english": "голодный",
+        "translation": "Я немного проголодался, давай сначала поедим фруктов."
+      }
+    },
+    "hsk3-611": {
+      "fr": {
+        "english": "et ; de plus",
+        "translation": "Ce restaurant est près de chez moi et, en plus, il n’est pas cher."
+      },
+      "ru": {
+        "english": "к тому же; более того",
+        "translation": "Этот ресторан рядом с домом, к тому же цены там невысокие."
+      }
+    },
+    "hsk3-612": {
+      "fr": {
+        "english": "oreille",
+        "translation": "Le chiot a l’ouïe fine et entend même les sons lointains."
+      },
+      "ru": {
+        "english": "ухо",
+        "translation": "У щенка чуткий слух, он слышит даже отдалённые звуки."
+      }
+    },
+    "hsk3-613": {
+      "fr": {
+        "english": "écouteurs ; casque",
+        "translation": "Dans le métro, j’aime écouter de la musique avec des écouteurs."
+      },
+      "ru": {
+        "english": "наушники",
+        "translation": "В метро я люблю слушать музыку в наушниках."
+      }
+    },
+    "hsk3-614": {
+      "fr": {
+        "english": "envoyer ; émettre",
+        "translation": "J’enverrai un courriel au professeur cet après-midi."
+      },
+      "ru": {
+        "english": "отправлять; посылать",
+        "translation": "Сегодня днём я отправлю учителю письмо."
+      }
+    },
+    "hsk3-615": {
+      "fr": {
+        "english": "avoir de la fièvre",
+        "translation": "Mon petit frère a de la fièvre ; maman l’emmène chez le médecin."
+      },
+      "ru": {
+        "english": "иметь температуру; лихорадить",
+        "translation": "У младшего брата температура, мама ведёт его к врачу."
+      }
+    },
+    "hsk3-616": {
+      "fr": {
+        "english": "se produire ; arriver",
+        "translation": "Sais-tu ce qui s’est passé hier soir ?"
+      },
+      "ru": {
+        "english": "происходить; случаться",
+        "translation": "Ты знаешь, что произошло вчера вечером?"
+      }
+    },
+    "hsk3-617": {
+      "fr": {
+        "english": "découvrir ; remarquer",
+        "translation": "En cherchant la carte, j’ai remarqué qu’elle était sous la table."
+      },
+      "ru": {
+        "english": "обнаружить; заметить",
+        "translation": "Когда я искал карту, я заметил, что она лежит под столом."
+      }
+    },
+    "hsk3-618": {
+      "fr": {
+        "english": "se développer ; développement",
+        "translation": "Cette ville s’est développée rapidement ces dernières années."
+      },
+      "ru": {
+        "english": "развиваться; развитие",
+        "translation": "В последние годы этот город быстро развивается."
+      }
+    },
+    "hsk3-619": {
+      "fr": {
+        "english": "pratique ; commode",
+        "translation": "Acheter les billets en ligne est pratique et évite de faire la queue."
+      },
+      "ru": {
+        "english": "удобный; практичный",
+        "translation": "Покупать билеты в интернете удобно, не нужно стоять в очереди."
+      }
+    },
+    "hsk3-620": {
+      "fr": {
+        "english": "nouilles instantanées",
+        "translation": "Il est trop tard ; préparons des nouilles instantanées."
+      },
+      "ru": {
+        "english": "лапша быстрого приготовления",
+        "translation": "Уже поздно, давай приготовим лапшу быстрого приготовления."
+      }
+    },
+    "hsk3-621": {
+      "fr": {
+        "english": "méthode ; manière",
+        "translation": "Lis le texte une fois par jour ; c’est une bonne méthode."
+      },
+      "ru": {
+        "english": "метод; способ",
+        "translation": "Читай текст по одному разу в день, это хороший способ."
+      }
+    },
+    "hsk3-622": {
+      "fr": {
+        "english": "direction ; sens",
+        "translation": "On dirait que nous avons pris la mauvaise direction ; nous devrions aller vers le nord."
+      },
+      "ru": {
+        "english": "направление",
+        "translation": "Похоже, мы пошли не в ту сторону; нужно идти на север."
+      }
+    },
+    "hsk3-623": {
+      "fr": {
+        "english": "maison",
+        "translation": "Leur nouvelle maison a trois pièces et une petite cour."
+      },
+      "ru": {
+        "english": "дом; жилище",
+        "translation": "В их новом доме три комнаты и небольшой двор."
+      }
+    },
+    "hsk3-624": {
+      "fr": {
+        "english": "poser ; mettre",
+        "translation": "Pose les fruits sur la table pour que tout le monde en mange."
+      },
+      "ru": {
+        "english": "класть; ставить",
+        "translation": "Положи фрукты на стол, чтобы все могли угоститься."
+      }
+    },
+    "hsk3-625": {
+      "fr": {
+        "english": "être en vacances",
+        "translation": "L’école sera en vacances la semaine prochaine ; nous pourrons aller à la mer."
+      },
+      "ru": {
+        "english": "быть на каникулах; отдыхать",
+        "translation": "На следующей неделе в школе каникулы, мы сможем поехать к морю."
+      }
+    },
+    "hsk3-626": {
+      "fr": {
+        "english": "être rassuré ; ne pas s’inquiéter",
+        "translation": "Rassure-toi, les enfants sont bien rentrés."
+      },
+      "ru": {
+        "english": "успокоиться; не беспокоиться",
+        "translation": "Не волнуйся, дети уже благополучно добрались домой."
+      }
+    },
+    "hsk3-627": {
+      "fr": {
+        "english": "la fin des cours",
+        "translation": "Retrouvons-nous au parc après les cours."
+      },
+      "ru": {
+        "english": "окончание уроков",
+        "translation": "Давай встретимся в парке после уроков."
+      }
+    },
+    "hsk3-628": {
+      "fr": {
+        "english": "séparer ; à part",
+        "translation": "Sépare les chemises blanches et noires, s’il te plaît."
+      },
+      "ru": {
+        "english": "разделять; отдельно",
+        "translation": "Пожалуйста, положи белые и чёрные рубашки отдельно."
+      }
+    },
+    "hsk3-629": {
+      "fr": {
+        "english": "vent",
+        "translation": "Il y a beaucoup de vent aujourd’hui ; ferme bien les fenêtres avant de sortir."
+      },
+      "ru": {
+        "english": "ветер",
+        "translation": "Сегодня сильный ветер, перед выходом хорошо закрой окна."
+      }
+    },
+    "hsk3-630": {
+      "fr": {
+        "english": "classificateur pour les lettres",
+        "translation": "J’ai écrit une lettre à ma grand-mère et je l’enverrai demain."
+      },
+      "ru": {
+        "english": "счётное слово для писем",
+        "translation": "Я написал бабушке письмо и завтра его отправлю."
+      }
+    },
+    "hsk3-631": {
+      "fr": {
+        "english": "couple marié ; époux",
+        "translation": "Ce couple marié se promène ensemble tous les soirs."
+      },
+      "ru": {
+        "english": "супружеская пара",
+        "translation": "Эта супружеская пара каждый вечер гуляет вместе."
+      }
+    },
+    "hsk3-632": {
+      "fr": {
+        "english": "service ; servir",
+        "translation": "Le service de cet hôtel est excellent et le personnel très accueillant."
+      },
+      "ru": {
+        "english": "обслуживание; обслуживать",
+        "translation": "В этой гостинице хорошее обслуживание и приветливый персонал."
+      }
+    },
+    "hsk3-633": {
+      "fr": {
+        "english": "à proximité ; environs",
+        "translation": "Il y a un parc et un petit restaurant près de chez moi."
+      },
+      "ru": {
+        "english": "поблизости; окрестности",
+        "translation": "Рядом с моим домом есть парк и небольшой ресторан."
+      }
+    },
+    "hsk3-634": {
+      "fr": {
+        "english": "réviser",
+        "translation": "Avant les examens, je révise deux heures chaque soir."
+      },
+      "ru": {
+        "english": "повторять; готовиться",
+        "translation": "Перед экзаменами я каждый вечер занимаюсь по два часа."
+      }
+    },
+    "hsk3-635": {
+      "fr": {
+        "english": "devoir ; il faudrait",
+        "translation": "Il fait froid ; tu devrais mettre ton manteau."
+      },
+      "ru": {
+        "english": "следует; надо",
+        "translation": "Похолодало, тебе следует надеть пальто."
+      }
+    },
+    "hsk3-636": {
+      "fr": {
+        "english": "propre ; net",
+        "translation": "La cuisine est propre maintenant ; on peut cuisiner."
+      },
+      "ru": {
+        "english": "чистый; опрятный",
+        "translation": "Кухня уже убрана, можно готовить."
+      }
+    },
+    "hsk3-637": {
+      "fr": {
+        "english": "s’intéresser à",
+        "translation": "Je m’intéresse beaucoup à l’histoire de la Chine et je lis souvent des livres sur le sujet."
+      },
+      "ru": {
+        "english": "интересоваться",
+        "translation": "Я очень интересуюсь историей Китая и часто читаю книги на эту тему."
+      }
+    },
+    "hsk3-638": {
+      "fr": {
+        "english": "se sentir ; éprouver",
+        "translation": "J’ai été très heureux en apprenant cette bonne nouvelle."
+      },
+      "ru": {
+        "english": "чувствовать; ощущать",
+        "translation": "Услышав эту хорошую новость, я очень обрадовался."
+      }
+    },
+    "hsk3-639": {
+      "fr": {
+        "english": "attraper un rhume",
+        "translation": "J’ai attrapé un rhume hier et je me repose à la maison aujourd’hui."
+      },
+      "ru": {
+        "english": "простудиться",
+        "translation": "Вчера я простудился и сегодня отдыхаю дома."
+      }
+    },
+    "hsk3-640": {
+      "fr": {
+        "english": "faire ; exercer un métier",
+        "translation": "Quel travail ta grande sœur fait-elle à l’hôpital ?"
+      },
+      "ru": {
+        "english": "работать; заниматься чем-либо",
+        "translation": "Кем работает твоя старшая сестра в больнице?"
+      }
+    },
+    "hsk3-641": {
+      "fr": {
+        "english": "juste ; à l’instant",
+        "translation": "Je viens d’arriver ; je vais boire un peu d’eau avant de cuisiner."
+      },
+      "ru": {
+        "english": "только что; недавно",
+        "translation": "Я только что пришёл домой, сначала выпью воды, потом приготовлю."
+      }
+    },
+    "hsk3-642": {
+      "fr": {
+        "english": "tout à l’heure ; à l’instant",
+        "translation": "J’étais au bureau tout à l’heure et je n’ai pas entendu le téléphone."
+      },
+      "ru": {
+        "english": "только что; минуту назад",
+        "translation": "Я только что был в офисе и не услышал звонка."
+      }
+    },
+    "hsk3-643": {
+      "fr": {
+        "english": "à l’instant ; tout juste",
+        "translation": "Elle vient de partir ; elle n’est probablement pas encore arrivée à la gare."
+      },
+      "ru": {
+        "english": "только что; совсем недавно",
+        "translation": "Она только что уехала, наверное, ещё не добралась до вокзала."
+      }
+    },
+    "hsk3-644": {
+      "fr": {
+        "english": "train à grande vitesse",
+        "translation": "Nous avons pris le train à grande vitesse pour Pékin et sommes arrivés en deux heures."
+      },
+      "ru": {
+        "english": "скоростная железная дорога; скоростной поезд",
+        "translation": "Мы поехали в Пекин на скоростном поезде и добрались за два часа."
+      }
+    },
+    "hsk3-645": {
+      "fr": {
+        "english": "d’après ; selon",
+        "translation": "D’après la carte, nous devrions aller vers l’est."
+      },
+      "ru": {
+        "english": "согласно; на основании",
+        "translation": "Согласно карте, нам нужно идти на восток."
+      }
+    },
+    "hsk3-646": {
+      "fr": {
+        "english": "encore plus ; davantage",
+        "translation": "Il fait encore plus froid qu’hier ; mets un manteau pour sortir."
+      },
+      "ru": {
+        "english": "ещё; ещё больше",
+        "translation": "Сегодня ещё холоднее, чем вчера, надень пальто, когда выйдешь."
+      }
+    },
+    "hsk3-647": {
+      "fr": {
+        "english": "kilogramme",
+        "translation": "Ce gâteau pèse deux kilogrammes ; nous pouvons le partager avec tout le monde."
+      },
+      "ru": {
+        "english": "килограмм",
+        "translation": "Этот торт весит два килограмма, мы можем разделить его на всех."
+      }
+    },
+    "hsk3-648": {
+      "fr": {
+        "english": "parc",
+        "translation": "Quand il fait beau, mon grand-père m’emmène souvent me promener au parc."
+      },
+      "ru": {
+        "english": "парк",
+        "translation": "В хорошую погоду дедушка часто берёт меня гулять в парк."
+      }
+    },
+    "hsk3-649": {
+      "fr": {
+        "english": "jour ouvrable ; jour de semaine",
+        "translation": "En semaine, je prends le métro pour aller travailler ; le week-end, je me repose souvent chez moi."
+      },
+      "ru": {
+        "english": "рабочий день; будний день",
+        "translation": "В будни я езжу на работу на метро, а по выходным часто отдыхаю дома."
+      }
+    },
+    "hsk3-650": {
+      "fr": {
+        "english": "histoire ; récit",
+        "translation": "Mon grand-père me raconte une histoire chaque soir."
+      },
+      "ru": {
+        "english": "рассказ; история",
+        "translation": "Дедушка каждый вечер рассказывает мне историю."
+      }
+    },
+    "hsk3-651": {
+      "fr": {
+        "english": "souffler (en parlant du vent)",
+        "translation": "Le vent commence à souffler dehors ; fermons la fenêtre."
+      },
+      "ru": {
+        "english": "дуть (о ветре)",
+        "translation": "На улице начинает дуть ветер, давай закроем окно."
+      }
+    },
+    "hsk3-652": {
+      "fr": {
+        "english": "fermer ; clore",
+        "translation": "Avant de sortir, n’oublie pas de bien fermer la porte."
+      },
+      "ru": {
+        "english": "закрывать",
+        "translation": "Перед выходом не забудь закрыть дверь."
+      }
+    },
+    "hsk3-653": {
+      "fr": {
+        "english": "éteindre un appareil",
+        "translation": "Éteins ton téléphone pendant le cours, s’il te plaît."
+      },
+      "ru": {
+        "english": "выключить устройство",
+        "translation": "Пожалуйста, выключи телефон на уроке."
+      }
+    },
+    "hsk3-654": {
+      "fr": {
+        "english": "relation ; lien",
+        "translation": "Mes relations avec mon nouveau camarade s’améliorent de jour en jour."
+      },
+      "ru": {
+        "english": "отношения; связь",
+        "translation": "Мои отношения с новым одноклассником становятся всё лучше."
+      }
+    },
+    "hsk3-655": {
+      "fr": {
+        "english": "s’intéresser à ; se soucier de",
+        "translation": "Ma grand-mère s’intéresse beaucoup à mes études et me demande souvent si je suis fatigué."
+      },
+      "ru": {
+        "english": "заботиться; интересоваться",
+        "translation": "Бабушка заботится о моей учёбе и часто спрашивает, не устал ли я."
+      }
+    },
+    "hsk3-656": {
+      "fr": {
+        "english": "à propos de ; concernant",
+        "translation": "Le professeur nous a présenté un livre sur l’histoire de la Chine."
+      },
+      "ru": {
+        "english": "о; относительно",
+        "translation": "Учитель рассказал нам о книге по истории Китая."
+      }
+    },
+    "hsk3-657": {
+      "fr": {
+        "english": "suivre ; prêter attention à",
+        "translation": "Je suis la météo chaque jour pour choisir mes vêtements."
+      },
+      "ru": {
+        "english": "следить за; уделять внимание",
+        "translation": "Я каждый день слежу за прогнозом погоды, чтобы решить, что надеть."
+      }
+    },
+    "hsk3-658": {
+      "fr": {
+        "english": "pays ; nation",
+        "translation": "La Chine est un très grand pays qui compte beaucoup de villes."
+      },
+      "ru": {
+        "english": "страна; государство",
+        "translation": "Китай — очень большая страна со множеством городов."
+      }
+    },
+    "hsk3-659": {
+      "fr": {
+        "english": "célébrer une fête",
+        "translation": "Pendant les fêtes, toute notre famille se retrouve autour d’un repas."
+      },
+      "ru": {
+        "english": "праздновать праздник",
+        "translation": "Во время праздников вся наша семья собирается за столом."
+      }
+    },
+    "hsk3-660": {
+      "fr": {
+        "english": "le passé ; autrefois",
+        "translation": "Autrefois, les gens traversaient souvent les rivières en bateau."
+      },
+      "ru": {
+        "english": "прошлое; раньше",
+        "translation": "В прошлом люди часто переправлялись через реку на лодке."
+      }
+    },
+    "hsk3-661": {
+      "fr": {
+        "english": "mer",
+        "translation": "En été, nous allons souvent nous baigner au bord de la mer."
+      },
+      "ru": {
+        "english": "море",
+        "translation": "Летом мы часто ездим купаться на море."
+      }
+    },
+    "hsk3-662": {
+      "fr": {
+        "english": "avoir peur ; craindre",
+        "translation": "L’enfant a un peu peur de marcher seul la nuit."
+      },
+      "ru": {
+        "english": "бояться",
+        "translation": "Ребёнок немного боится идти ночью один."
+      }
+    },
+    "hsk3-663": {
+      "fr": {
+        "english": "beaucoup ; nombreux",
+        "translation": "Il y a beaucoup de fruits sur la table ; partageons-les."
+      },
+      "ru": {
+        "english": "много; множество",
+        "translation": "На столе много фруктов, давайте все угостимся."
+      }
+    },
+    "hsk3-664": {
+      "fr": {
+        "english": "ça fait longtemps",
+        "translation": "Ça fait longtemps qu’on ne s’est pas vus ! Comment vas-tu ?"
+      },
+      "ru": {
+        "english": "давно",
+        "translation": "Давно не виделись! Как ты?"
+      }
+    },
+    "hsk3-665": {
+      "fr": {
+        "english": "sembler ; avoir l’air de",
+        "translation": "On dirait qu’il pleut ; prends un parapluie."
+      },
+      "ru": {
+        "english": "казаться; похоже",
+        "translation": "Похоже, на улице дождь, возьми зонт."
+      }
+    },
+    "hsk3-666": {
+      "fr": {
+        "english": "numéro ; numéro de référence",
+        "translation": "Donne-moi ton numéro de téléphone, je vais le noter."
+      },
+      "ru": {
+        "english": "номер",
+        "translation": "Скажи свой номер телефона, я его запишу."
+      }
+    },
+    "hsk3-667": {
+      "fr": {
+        "english": "rivière ; fleuve",
+        "translation": "Cette rivière est très large ; traversons-la en bateau."
+      },
+      "ru": {
+        "english": "река",
+        "translation": "Эта река очень широкая, давай переправимся на лодке на другой берег."
+      }
+    },
+    "hsk3-668": {
+      "fr": {
+        "english": "approprié ; qui convient",
+        "translation": "Cette paire de chaussures me va bien ; je peux marcher toute la journée sans me fatiguer."
+      },
+      "ru": {
+        "english": "подходящий; удобный",
+        "translation": "Эта пара обуви мне подходит; в ней можно ходить весь день и не уставать."
+      }
+    },
+    "hsk3-669": {
+      "fr": {
+        "english": "tableau noir",
+        "translation": "Le professeur a écrit les nouveaux mots au tableau."
+      },
+      "ru": {
+        "english": "доска",
+        "translation": "Преподаватель написал новые слова на доске."
+      }
+    },
+    "hsk3-670": {
+      "fr": {
+        "english": "feu tricolore",
+        "translation": "Passez le feu tricolore devant vous, puis tournez à droite."
+      },
+      "ru": {
+        "english": "светофор",
+        "translation": "Проедьте перекрёсток со светофором впереди, затем поверните направо."
+      }
+    },
+    "hsk3-671": {
+      "fr": {
+        "english": "plus tard ; ensuite",
+        "translation": "Ce n’est que plus tard que j’ai appris qu’elle avait déjà déménagé à Shanghai."
+      },
+      "ru": {
+        "english": "позже; потом",
+        "translation": "Позже я узнал, что она уже переехала в Шанхай."
+      }
+    },
+    "hsk3-672": {
+      "fr": {
+        "english": "dans deux ans",
+        "translation": "Nous comptons rendre visite à des amis en France dans deux ans."
+      },
+      "ru": {
+        "english": "через два года",
+        "translation": "Мы собираемся через два года навестить друзей во Франции."
+      }
+    },
+    "hsk3-673": {
+      "fr": {
+        "english": "après-demain matin",
+        "translation": "Après-demain matin, je serai libre et pourrai t’accompagner à l’hôpital."
+      },
+      "ru": {
+        "english": "послезавтра утром",
+        "translation": "Послезавтра утром я свободен и могу сходить с тобой в больницу."
+      }
+    },
+    "hsk3-674": {
+      "fr": {
+        "english": "passeport",
+        "translation": "Avant de partir, n’oublie pas de vérifier ton passeport et ton billet."
+      },
+      "ru": {
+        "english": "паспорт",
+        "translation": "Перед выходом не забудь проверить паспорт и билет."
+      }
+    },
+    "hsk3-675": {
+      "fr": {
+        "english": "jardin",
+        "translation": "Dans la résidence, il y a un jardin qui se couvre de fleurs au printemps."
+      },
+      "ru": {
+        "english": "сад",
+        "translation": "В жилом комплексе есть сад, который весной весь покрывается цветами."
+      }
+    },
+    "hsk3-676": {
+      "fr": {
+        "english": "peintre",
+        "translation": "Ce peintre peint souvent des paysages au bord de la rivière."
+      },
+      "ru": {
+        "english": "художник",
+        "translation": "Этот художник часто пишет пейзажи у реки."
+      }
+    },
+    "hsk3-677": {
+      "fr": {
+        "english": "accueillir ; bienvenue",
+        "translation": "Nous sommes heureux d’accueillir les nouveaux élèves dans le cours de chinois."
+      },
+      "ru": {
+        "english": "приветствовать; добро пожаловать",
+        "translation": "Мы рады приветствовать новых учеников на занятиях по китайскому языку."
+      }
+    },
+    "hsk3-678": {
+      "fr": {
+        "english": "rendre ; rapporter",
+        "translation": "Quand tu auras fini ce livre, rapporte-le à la bibliothèque, s’il te plaît."
+      },
+      "ru": {
+        "english": "возвращать; отдавать обратно",
+        "translation": "Когда дочитаешь эту книгу, пожалуйста, верни её в библиотеку."
+      }
+    },
+    "hsk3-679": {
+      "fr": {
+        "english": "environnement ; cadre",
+        "translation": "Le cadre de cet hôtel est calme ; la nuit, on n’entend même pas les voitures."
+      },
+      "ru": {
+        "english": "окружающая обстановка; среда",
+        "translation": "В этой гостинице тихо, и даже ночью машин не слышно."
+      }
+    },
+    "hsk3-680": {
+      "fr": {
+        "english": "changer ; échanger",
+        "translation": "Cette chemise est trop grande ; je voudrais l’échanger contre une plus petite."
+      },
+      "ru": {
+        "english": "менять; обменивать",
+        "translation": "Эта рубашка слишком большая, я хочу обменять её на размер поменьше."
+      }
+    },
+    "hsk3-681": {
+      "fr": {
+        "english": "jaune",
+        "translation": "Elle a choisi une écharpe jaune, parfaite pour l’hiver."
+      },
+      "ru": {
+        "english": "жёлтый",
+        "translation": "Она выбрала жёлтый шарф, как раз подходящий для зимы."
+      }
+    },
+    "hsk3-682": {
+      "fr": {
+        "english": "répondre",
+        "translation": "L’élève a répondu avec attention à la question du professeur."
+      },
+      "ru": {
+        "english": "отвечать",
+        "translation": "Ученик внимательно ответил на вопрос преподавателя."
+      }
+    },
+    "hsk3-683": {
+      "fr": {
+        "english": "réunion (familier)",
+        "translation": "Nous avons une réunion à quinze heures."
+      },
+      "ru": {
+        "english": "встреча; собрание (разговорное)",
+        "translation": "У нас в три часа дня встреча."
+      }
+    },
+    "hsk3-684": {
+      "fr": {
+        "english": "réunion",
+        "translation": "Le directeur a fixé la réunion à vendredi après-midi."
+      },
+      "ru": {
+        "english": "совещание; собрание",
+        "translation": "Руководитель назначил совещание на пятницу после обеда."
+      }
+    },
+    "hsk3-685": {
+      "fr": {
+        "english": "ou (registre soutenu)",
+        "translation": "On peut suivre cette route à pied ou à vélo ; dans les deux cas, l’école est proche."
+      },
+      "ru": {
+        "english": "или (книжное)",
+        "translation": "По этой дороге можно идти пешком или ехать на велосипеде — школа недалеко."
+      }
+    },
+    "hsk3-686": {
+      "fr": {
+        "english": "ou bien",
+        "translation": "Tu peux venir ce soir ou bien demain matin."
+      },
+      "ru": {
+        "english": "или; либо",
+        "translation": "Ты можешь прийти сегодня вечером или завтра утром."
+      }
+    },
+    "hsk3-687": {
+      "fr": {
+        "english": "poulet",
+        "translation": "Le poulet de ce restaurant est très tendre et le riz est bon aussi."
+      },
+      "ru": {
+        "english": "курица",
+        "translation": "В этом ресторане курица очень нежная, и рис тоже вкусный."
+      }
+    },
+    "hsk3-688": {
+      "fr": {
+        "english": "presque",
+        "translation": "J’ai failli être en retard, car le bus avait presque une demi-heure de retard."
+      },
+      "ru": {
+        "english": "почти",
+        "translation": "Я чуть не опоздал, потому что автобус задержался почти на полчаса."
+      }
+    },
+    "hsk3-689": {
+      "fr": {
+        "english": "occasion",
+        "translation": "C’est une belle occasion de pratiquer l’oral, ne la rate pas."
+      },
+      "ru": {
+        "english": "возможность",
+        "translation": "Это хорошая возможность потренировать устную речь — не упусти её."
+      }
+    },
+    "hsk3-690": {
+      "fr": {
+        "english": "extrêmement",
+        "translation": "Le vent soufflait très fort au sommet de la montagne, alors nous sommes redescendus rapidement."
+      },
+      "ru": {
+        "english": "чрезвычайно; крайне",
+        "translation": "На вершине горы был чрезвычайно сильный ветер, поэтому мы быстро спустились."
+      }
+    },
+    "hsk3-691": {
+      "fr": {
+        "english": "pressé ; urgent",
+        "translation": "Je suis pressé d’aller à la gare, alors je pars maintenant."
+      },
+      "ru": {
+        "english": "спешащий; срочный",
+        "translation": "Я спешу на вокзал, поэтому сейчас пойду."
+      }
+    },
+    "hsk3-692": {
+      "fr": {
+        "english": "retenir ; noter",
+        "translation": "Quand j’ai entendu la nouvelle adresse, je l’ai aussitôt notée sur mon téléphone."
+      },
+      "ru": {
+        "english": "запоминать; записывать",
+        "translation": "Услышав новый адрес, я сразу записал его в телефон."
+      }
+    },
+    "hsk3-693": {
+      "fr": {
+        "english": "saison",
+        "translation": "Il pleut beaucoup en cette saison ; mieux vaut prendre un parapluie en sortant."
+      },
+      "ru": {
+        "english": "сезон; время года",
+        "translation": "В это время года часто идут дожди, поэтому лучше брать с собой зонт."
+      }
+    },
+    "hsk3-694": {
+      "fr": {
+        "english": "saison",
+        "translation": "Le printemps est ma saison préférée : il ne fait ni froid ni chaud."
+      },
+      "ru": {
+        "english": "время года; сезон",
+        "translation": "Весна — моё любимое время года: не холодно и не жарко."
+      }
+    },
+    "hsk3-695": {
+      "fr": {
+        "english": "ajouter",
+        "translation": "La soupe est un peu fade ; ajoutons encore un peu de sel."
+      },
+      "ru": {
+        "english": "добавлять",
+        "translation": "Суп немного пресный, давай добавим ещё соли."
+      }
+    },
+    "hsk3-696": {
+      "fr": {
+        "english": "vacances",
+        "translation": "Le dernier jour des vacances, je vais préparer ma valise à la maison."
+      },
+      "ru": {
+        "english": "каникулы; отпуск",
+        "translation": "В последний день отпуска я собираюсь собрать вещи дома."
+      }
+    },
+    "hsk3-697": {
+      "fr": {
+        "english": "persévérer",
+        "translation": "S’entraîner à l’écoute dix minutes par jour n’est pas difficile ; le plus dur, c’est de persévérer."
+      },
+      "ru": {
+        "english": "продолжать; упорно заниматься",
+        "translation": "Десять минут аудирования в день — это нетрудно, труднее всего заниматься регулярно."
+      }
+    },
+    "hsk3-698": {
+      "fr": {
+        "english": "vérifier ; examiner",
+        "translation": "Avant de partir, j’ai vérifié les portes et les fenêtres pour m’assurer qu’elles étaient fermées."
+      },
+      "ru": {
+        "english": "проверять",
+        "translation": "Перед уходом я проверил двери и окна, чтобы убедиться, что они закрыты."
+      }
+    },
+    "hsk3-699": {
+      "fr": {
+        "english": "simple ; facile",
+        "translation": "Cette méthode est très simple ; il te suffira de regarder une fois."
+      },
+      "ru": {
+        "english": "простой; несложный",
+        "translation": "Этот способ очень простой, достаточно один раз посмотреть — и ты поймёшь."
+      }
+    },
+    "hsk3-700": {
+      "fr": {
+        "english": "contrôler les billets",
+        "translation": "Le contrôle des billets se trouve à droite ; veuillez préparer votre billet."
+      },
+      "ru": {
+        "english": "проверять билеты",
+        "translation": "Пункт проверки билетов справа, пожалуйста, приготовьте билет."
+      }
+    },
+    "hsk3-701": {
+      "fr": {
+        "english": "en bonne santé",
+        "translation": "Le médecin a dit qu’elle était en bonne santé et pouvait reprendre le travail normalement."
+      },
+      "ru": {
+        "english": "здоровье; здоровый",
+        "translation": "Врач сказал, что она здорова и может вернуться к обычной работе."
+      }
+    },
+    "hsk3-702": {
+      "fr": {
+        "english": "se rencontrer",
+        "translation": "Après le diplôme, nous trouvons chaque année un jour pour nous revoir."
+      },
+      "ru": {
+        "english": "встречаться",
+        "translation": "После выпуска мы каждый год находим день, чтобы встретиться."
+      }
+    },
+    "hsk3-703": {
+      "fr": {
+        "english": "expliquer ; parler",
+        "translation": "Le professeur a d’abord expliqué les mots nouveaux, puis a lu le texte avec tout le monde."
+      },
+      "ru": {
+        "english": "говорить; объяснять",
+        "translation": "Сначала преподаватель объяснил новые слова, а затем прочитал текст вместе со всеми."
+      }
+    },
+    "hsk3-704": {
+      "fr": {
+        "english": "jiao ; un dixième de yuan",
+        "translation": "Ce crayon coûte cinq jiao (un demi-yuan)."
+      },
+      "ru": {
+        "english": "цзяо; одна десятая юаня",
+        "translation": "Этот карандаш стоит пять цзяо (пол-юаня)."
+      }
+    },
+    "hsk3-705": {
+      "fr": {
+        "english": "pied",
+        "translation": "Il a couru deux kilomètres et il a un peu mal au pied."
+      },
+      "ru": {
+        "english": "нога; ступня",
+        "translation": "Он пробежал два километра, и у него немного болит нога."
+      }
+    },
+    "hsk3-706": {
+      "fr": {
+        "english": "aller chercher",
+        "translation": "Après le travail, je vais chercher ma sœur aînée à l’aéroport."
+      },
+      "ru": {
+        "english": "встречать; забирать",
+        "translation": "После работы я поеду встречать старшую сестру в аэропорт."
+      }
+    },
+    "hsk3-707": {
+      "fr": {
+        "english": "rue",
+        "translation": "Il y a une vieille librairie et deux cafés dans cette rue."
+      },
+      "ru": {
+        "english": "улица",
+        "translation": "На этой улице есть старый книжный магазин и два кафе."
+      }
+    },
+    "hsk3-708": {
+      "fr": {
+        "english": "heure de cours ; période",
+        "translation": "Le premier cours de l’après-midi est le chinois."
+      },
+      "ru": {
+        "english": "урок; занятие",
+        "translation": "Первым уроком после обеда будет китайский."
+      }
+    },
+    "hsk3-709": {
+      "fr": {
+        "english": "se marier",
+        "translation": "Ils prévoient de se marier l’année prochaine, et le mariage est presque prêt."
+      },
+      "ru": {
+        "english": "жениться; выйти замуж",
+        "translation": "Они собираются пожениться в следующем году, и свадьба почти готова."
+      }
+    },
+    "hsk3-710": {
+      "fr": {
+        "english": "émission ; spectacle",
+        "translation": "Après le dîner, nous avons regardé ensemble une émission intéressante."
+      },
+      "ru": {
+        "english": "программа; передача",
+        "translation": "После ужина мы вместе посмотрели интересную передачу."
+      }
+    },
+    "hsk3-711": {
+      "fr": {
+        "english": "fête ; jour férié",
+        "translation": "La fête du Printemps est l’une des fêtes les plus importantes de Chine."
+      },
+      "ru": {
+        "english": "праздник",
+        "translation": "Праздник Весны — один из самых важных праздников в Китае."
+      }
+    },
+    "hsk3-712": {
+      "fr": {
+        "english": "se terminer ; finir",
+        "translation": "Après la fin du film, nous sommes rentrés en métro."
+      },
+      "ru": {
+        "english": "заканчиваться; завершать",
+        "translation": "После окончания фильма мы поехали домой на метро."
+      }
+    },
+    "hsk3-713": {
+      "fr": {
+        "english": "résoudre",
+        "translation": "Nous avons cherché une solution ensemble et avons fini par régler le problème de l’ordinateur."
+      },
+      "ru": {
+        "english": "решать; устранять",
+        "translation": "Мы вместе придумали решение и наконец устранили проблему с компьютером."
+      }
+    },
+    "hsk3-714": {
+      "fr": {
+        "english": "sœurs",
+        "translation": "Les deux sœurs sont allées à l’école ensemble et vivent toujours dans la même ville."
+      },
+      "ru": {
+        "english": "сёстры",
+        "translation": "Две сестры с детства ходили в одну школу и до сих пор живут в одном городе."
+      }
+    },
+    "hsk3-715": {
+      "fr": {
+        "english": "emprunter ; prêter",
+        "translation": "J’ai oublié mon stylo ; est-ce que je peux emprunter le tien un instant ?"
+      },
+      "ru": {
+        "english": "брать взаймы; одалживать",
+        "translation": "Я забыл ручку. Можно ненадолго взять твою?"
+      }
+    },
+    "hsk3-716": {
+      "fr": {
+        "english": "jin (environ 500 g)",
+        "translation": "J’ai acheté un kilo de pommes, assez pour que toute la famille en mange pendant deux jours."
+      },
+      "ru": {
+        "english": "цзинь (около 500 г)",
+        "translation": "Я купил килограмм яблок, семье хватит на два дня."
+      }
+    },
+    "hsk3-717": {
+      "fr": {
+        "english": "passer par ; traverser",
+        "translation": "En passant sur ce pont, nous avons aperçu le coucher du soleil."
+      },
+      "ru": {
+        "english": "проходить через; переживать",
+        "translation": "Когда мы проезжали по тому мосту, как раз увидели закат."
+      }
+    },
+    "hsk3-718": {
+      "fr": {
+        "english": "directeur ; responsable",
+        "translation": "Le directeur n’est pas au bureau aujourd’hui ; en cas de besoin, envoyez-lui un courriel."
+      },
+      "ru": {
+        "english": "руководитель; менеджер",
+        "translation": "Сегодня руководителя нет в офисе; если что-то понадобится, напишите ему."
+      }
+    },
+    "hsk3-719": {
+      "fr": {
+        "english": "longtemps",
+        "translation": "J’ai attendu longtemps avant de voir arriver le bus."
+      },
+      "ru": {
+        "english": "долго",
+        "translation": "Я долго ждал, прежде чем увидел подъезжающий автобус."
+      }
+    },
+    "hsk3-720": {
+      "fr": {
+        "english": "alcool",
+        "translation": "Les conducteurs ne doivent pas boire d’alcool ; on peut rentrer en métro."
+      },
+      "ru": {
+        "english": "алкоголь",
+        "translation": "Тому, кто за рулём, нельзя пить алкоголь; домой можно доехать на метро."
+      }
+    },
+    "hsk3-721": {
+      "fr": {
+        "english": "vieux ; usagé",
+        "translation": "Cette vieille chaise n’est pas très jolie, mais elle est confortable."
+      },
+      "ru": {
+        "english": "старый; бывший в употреблении",
+        "translation": "Этот старый стул не очень красивый, зато на нём удобно сидеть."
+      }
+    },
+    "hsk3-722": {
+      "fr": {
+        "english": "classificateur de phrase",
+        "translation": "Relis la dernière phrase, s’il te plaît."
+      },
+      "ru": {
+        "english": "счётное слово для предложений",
+        "translation": "Пожалуйста, прочитай последнее предложение ещё раз."
+      }
+    },
+    "hsk3-723": {
+      "fr": {
+        "english": "phrase",
+        "translation": "Cette phrase est trop longue ; séparons-la en deux phrases."
+      },
+      "ru": {
+        "english": "предложение",
+        "translation": "Это предложение слишком длинное, давай разделим его на два."
+      }
+    },
+    "hsk3-724": {
+      "fr": {
+        "english": "décider",
+        "translation": "J’ai décidé de ne pas faire d’heures supplémentaires ce week-end et d’emmener les enfants au parc."
+      },
+      "ru": {
+        "english": "решать; принимать решение",
+        "translation": "Я решил не работать сверхурочно в эти выходные и сводить детей в парк."
+      }
+    },
+    "hsk3-725": {
+      "fr": {
+        "english": "carte",
+        "translation": "Avant d’entrer dans le métro, recharge ta carte de transport à la borne."
+      },
+      "ru": {
+        "english": "карта",
+        "translation": "Перед входом в метро пополни транспортную карту в автомате."
+      }
+    },
+    "hsk3-726": {
+      "fr": {
+        "english": "fleurir",
+        "translation": "Le pêcher de la cour est en fleurs, et l’air est parfumé."
+      },
+      "ru": {
+        "english": "цвести",
+        "translation": "Персиковое дерево во дворе зацвело, и воздух наполнен ароматом цветов."
+      }
+    },
+    "hsk3-727": {
+      "fr": {
+        "english": "tenir une réunion",
+        "translation": "Nous tenons une réunion chaque lundi matin pour parler du travail de la semaine."
+      },
+      "ru": {
+        "english": "проводить собрание",
+        "translation": "Каждый понедельник утром мы проводим собрание и обсуждаем планы на неделю."
+      }
+    },
+    "hsk3-728": {
+      "fr": {
+        "english": "allumer ; démarrer",
+        "translation": "Avant de dormir, pense à éteindre la lumière ; rallume l’ordinateur le matin."
+      },
+      "ru": {
+        "english": "включать (устройство)",
+        "translation": "Перед сном не забудь выключить свет, а утром включи компьютер."
+      }
+    },
+    "hsk3-729": {
+      "fr": {
+        "english": "content ; heureux",
+        "translation": "En recevant la carte postale de son amie, elle a souri de joie."
+      },
+      "ru": {
+        "english": "радостный; счастливый",
+        "translation": "Получив открытку от подруги, она радостно улыбнулась."
+      }
+    },
+    "hsk3-730": {
+      "fr": {
+        "english": "on dirait ; apparemment",
+        "translation": "On dirait que le train d’aujourd’hui aura du retard ; allons prendre un thé en attendant."
+      },
+      "ru": {
+        "english": "похоже; судя по всему",
+        "translation": "Похоже, сегодня поезд задержится; давай пока выпьем чаю."
+      }
+    },
+    "hsk3-731": {
+      "fr": {
+        "english": "vraiment ; absolument (insistance)",
+        "translation": "Cette affaire, il ne faut surtout pas la raconter à qui que ce soit ; c’est un secret entre nous."
+      },
+      "ru": {
+        "english": "действительно; уж точно (усиление)",
+        "translation": "Об этом уж точно нельзя никому рассказывать, это наш общий секрет."
+      }
+    },
+    "hsk3-732": {
+      "fr": {
+        "english": "avoir soif",
+        "translation": "Après avoir marché si longtemps, j’ai soif et j’aimerais boire un peu d’eau."
+      },
+      "ru": {
+        "english": "хотеть пить",
+        "translation": "Мы так долго шли, что я захотел пить и хочу воды."
+      }
+    },
+    "hsk3-733": {
+      "fr": {
+        "english": "mignon ; adorable",
+        "translation": "Ce petit chaton est adorable, et tous les enfants veulent le prendre dans leurs bras."
+      },
+      "ru": {
+        "english": "милый; очаровательный",
+        "translation": "Этот котёнок очень милый, и все дети хотят взять его на руки."
+      }
+    },
+    "hsk3-734": {
+      "fr": {
+        "english": "mais",
+        "translation": "Je voulais prendre le train, mais finalement je n’ai pas réussi à acheter de billet."
+      },
+      "ru": {
+        "english": "но; однако",
+        "translation": "Я хотел поехать на поезде, но в итоге не смог купить билет."
+      }
+    },
+    "hsk3-735": {
+      "fr": {
+        "english": "quart d’heure ; quart",
+        "translation": "Il est huit heures et quart ; le film ne commence qu’à neuf heures."
+      },
+      "ru": {
+        "english": "четверть часа; четверть",
+        "translation": "Сейчас четверть девятого, а фильм начнётся только в девять."
+      }
+    },
+    "hsk3-736": {
+      "fr": {
+        "english": "manuel scolaire",
+        "translation": "Pendant le cours, veuillez ouvrir votre manuel à la page trente."
+      },
+      "ru": {
+        "english": "учебник",
+        "translation": "На занятии откройте учебник на тридцатой странице."
+      }
+    },
+    "hsk3-737": {
+      "fr": {
+        "english": "invité",
+        "translation": "Les invités sont arrivés ; invite-les vite à entrer et à s’asseoir."
+      },
+      "ru": {
+        "english": "гость",
+        "translation": "Гости уже пришли, скорее пригласи их войти и присесть."
+      }
+    },
+    "hsk3-738": {
+      "fr": {
+        "english": "texte de la leçon",
+        "translation": "Le texte de la leçon d’aujourd’hui est court ; je l’ai retenu après deux lectures."
+      },
+      "ru": {
+        "english": "текст урока",
+        "translation": "Текст сегодняшнего урока короткий, я запомнил его после двух прочтений."
+      }
+    },
+    "hsk3-739": {
+      "fr": {
+        "english": "climatiseur",
+        "translation": "Il fait trop chaud ; allumons la climatisation un moment."
+      },
+      "ru": {
+        "english": "кондиционер",
+        "translation": "Слишком жарко, давай ненадолго включим кондиционер."
+      }
+    },
+    "hsk3-740": {
+      "fr": {
+        "english": "pleurer",
+        "translation": "Le petit garçon ne trouvait pas sa mère et s’est mis à pleurer d’inquiétude."
+      },
+      "ru": {
+        "english": "плакать",
+        "translation": "Мальчик не мог найти маму и от волнения заплакал."
+      }
+    },
+    "hsk3-741": {
+      "fr": {
+        "english": "baguettes",
+        "translation": "Les baguettes de ce restaurant sont posées à gauche sur la table."
+      },
+      "ru": {
+        "english": "палочки для еды",
+        "translation": "В этом ресторане палочки для еды лежат слева на столе."
+      }
+    },
+    "hsk3-742": {
+      "fr": {
+        "english": "eau minérale",
+        "translation": "Mieux vaut emporter une bouteille d’eau minérale pour la randonnée : il n’y a pas de magasin sur le chemin."
+      },
+      "ru": {
+        "english": "минеральная вода",
+        "translation": "В поход лучше взять бутылку минеральной воды: по дороге магазинов нет."
+      }
+    },
+    "hsk3-743": {
+      "fr": {
+        "english": "venir de ; être originaire de",
+        "translation": "Ce nouvel élève vient du Canada et parle très bien chinois."
+      },
+      "ru": {
+        "english": "быть родом из; происходить из",
+        "translation": "Этот новый ученик из Канады и очень хорошо говорит по-китайски."
+      }
+    },
+    "hsk3-744": {
+      "fr": {
+        "english": "bleu",
+        "translation": "Le ciel est bleu par la fenêtre, et on aperçoit encore les montagnes au loin."
+      },
+      "ru": {
+        "english": "синий; голубой",
+        "translation": "За окном голубое небо, и вдали всё ещё видны горы."
+      }
+    },
+    "hsk3-745": {
+      "fr": {
+        "english": "ancien ; établi depuis longtemps",
+        "translation": "Cette ancienne boutique existe depuis plus de trente ans, et les gens du quartier aiment y venir."
+      },
+      "ru": {
+        "english": "старый; давно работающий",
+        "translation": "Этот старый магазин работает уже больше тридцати лет, и местные жители любят сюда приходить."
+      }
+    },
+    "hsk3-746": {
+      "fr": {
+        "english": "personne âgée",
+        "translation": "Dans le parc, quelques personnes âgées pratiquent le tai-chi ensemble tous les matins."
+      },
+      "ru": {
+        "english": "пожилой человек",
+        "translation": "Несколько пожилых людей в парке каждое утро вместе занимаются тайцзи."
+      }
+    },
+    "hsk3-747": {
+      "fr": {
+        "english": "quitter ; partir",
+        "translation": "Nous quittons Pékin tôt demain et arriverons à Xi’an le soir."
+      },
+      "ru": {
+        "english": "уезжать; покидать",
+        "translation": "Завтра рано утром мы уезжаем из Пекина и вечером прибудем в Сиань."
+      }
+    },
+    "hsk3-748": {
+      "fr": {
+        "english": "cadeau",
+        "translation": "Grand-mère était si heureuse de recevoir le cadeau de sa petite-fille qu’elle n’arrêtait pas de sourire."
+      },
+      "ru": {
+        "english": "подарок",
+        "translation": "Бабушка так обрадовалась подарку от внучки, что не могла перестать улыбаться."
+      }
+    },
+    "hsk3-749": {
+      "fr": {
+        "english": "histoire",
+        "translation": "Il s’intéresse beaucoup à l’histoire de la Chine et va souvent au musée voir des expositions."
+      },
+      "ru": {
+        "english": "история",
+        "translation": "Он очень интересуется историей Китая и часто ходит в музеи на выставки."
+      }
+    },
+    "hsk3-750": {
+      "fr": {
+        "english": "visage",
+        "translation": "Après s’être lavé le visage, elle est allée aider sa mère à préparer le petit-déjeuner."
+      },
+      "ru": {
+        "english": "лицо",
+        "translation": "Умывшись, она пошла на кухню помогать маме готовить завтрак."
+      }
+    },
+    "hsk3-751": {
+      "fr": {
+        "english": "s’entraîner ; pratiquer",
+        "translation": "Je fais une demi-heure de piano chaque jour et je m’entraîne plus longtemps le week-end."
+      },
+      "ru": {
+        "english": "тренироваться; упражняться",
+        "translation": "Я занимаюсь на пианино по полчаса каждый день, а в выходные дольше."
+      }
+    },
+    "hsk3-752": {
+      "fr": {
+        "english": "exercice ; pratique",
+        "translation": "Je ne maîtrise pas encore cet exercice ; je vais le refaire quelques fois ce soir."
+      },
+      "ru": {
+        "english": "упражнение; практика",
+        "translation": "Я ещё не освоил это задание, поэтому вечером нужно ещё несколько раз его потренировать."
+      }
+    },
+    "hsk3-753": {
+      "fr": {
+        "english": "frais ; agréablement frais",
+        "translation": "Après la pluie, il a fait bien plus frais ; c’est agréable pour se promener."
+      },
+      "ru": {
+        "english": "прохладный; приятный по прохладе",
+        "translation": "После дождя стало намного прохладнее, приятно прогуляться."
+      }
+    },
+    "hsk3-754": {
+      "fr": {
+        "english": "classificateur pour les véhicules",
+        "translation": "Trois taxis sont arrêtés devant l’entrée, tous disponibles."
+      },
+      "ru": {
+        "english": "счётное слово для транспорта",
+        "translation": "У входа стоят три такси, все свободны."
+      }
+    },
+    "hsk3-755": {
+      "fr": {
+        "english": "bavarder ; discuter",
+        "translation": "Nous avons bavardé une demi-heure au café avant de nous rappeler que nous avions un autre rendez-vous."
+      },
+      "ru": {
+        "english": "болтать; разговаривать",
+        "translation": "Мы проболтали в кафе полчаса и только потом вспомнили, что у нас ещё встреча."
+      }
+    },
+    "hsk3-756": {
+      "fr": {
+        "english": "bavarder (familier, nord de la Chine)",
+        "translation": "Grand-père aime bavarder avec les voisins après le dîner et ne rentre qu’à la tombée de la nuit."
+      },
+      "ru": {
+        "english": "болтать (разг., северный вариант)",
+        "translation": "Дедушка любит болтать с соседями после ужина и возвращается домой только в сумерках."
+      }
+    },
+    "hsk3-757": {
+      "fr": {
+        "english": "connaître ; comprendre",
+        "translation": "Je connais bien cette ville, car j’y ai vécu quatre ans pendant mes études."
+      },
+      "ru": {
+        "english": "знать; понимать",
+        "translation": "Я хорошо знаю этот город, потому что четыре года жил здесь во время учёбы."
+      }
+    },
+    "hsk3-758": {
+      "fr": {
+        "english": "voisin ; voisine",
+        "translation": "Après son emménagement, notre nouveau voisin nous a apporté une boîte de fruits."
+      },
+      "ru": {
+        "english": "сосед; соседка",
+        "translation": "После переезда новый сосед принёс нам коробку фруктов."
+      }
+    },
+    "hsk3-759": {
+      "fr": {
+        "english": "étudier à l’étranger",
+        "translation": "Après son diplôme, elle veut étudier en France et s’est d’abord inscrite à des cours de français."
+      },
+      "ru": {
+        "english": "учиться за границей",
+        "translation": "После выпуска она хочет учиться во Франции и сначала записалась на курсы французского."
+      }
+    },
+    "hsk3-760": {
+      "fr": {
+        "english": "étudiant étranger",
+        "translation": "Cet étudiant étranger a trouvé un journal chinois à la bibliothèque."
+      },
+      "ru": {
+        "english": "иностранный студент",
+        "translation": "Иностранный студент нашёл китайскую газету в библиотеке."
+      }
+    },
+    "hsk3-761": {
+      "fr": {
+        "english": "escalier",
+        "translation": "L’escalier vient d’être nettoyé ; fais attention en passant."
+      },
+      "ru": {
+        "english": "лестница",
+        "translation": "Лестницу только что помыли, будь осторожен."
+      }
+    },
+    "hsk3-762": {
+      "fr": {
+        "english": "bord de la route",
+        "translation": "Il y a une petite boutique au bord de la route où l’on peut acheter de l’eau."
+      },
+      "ru": {
+        "english": "обочина; у дороги",
+        "translation": "У дороги есть небольшой магазин, где можно купить воды."
+      }
+    },
+    "hsk3-763": {
+      "fr": {
+        "english": "croisement ; carrefour",
+        "translation": "Au prochain carrefour, tournez à gauche et vous verrez l’école."
+      },
+      "ru": {
+        "english": "перекрёсток",
+        "translation": "На следующем перекрёстке поверни налево, и увидишь школу."
+      }
+    },
+    "hsk3-764": {
+      "fr": {
+        "english": "cheval",
+        "translation": "L’enfant était un peu nerveux mais ravi de monter à cheval pour la première fois."
+      },
+      "ru": {
+        "english": "лошадь",
+        "translation": "Ребёнок впервые ехал верхом и немного нервничал, но был в восторге."
+      }
+    },
+    "hsk3-765": {
+      "fr": {
+        "english": "route ; chaussée",
+        "translation": "La route est glissante après la pluie ; roule plus lentement à vélo."
+      },
+      "ru": {
+        "english": "дорога; улица",
+        "translation": "После дождя дорога скользкая, поэтому на велосипеде нужно ехать медленнее."
+      }
+    },
+    "hsk3-766": {
+      "fr": {
+        "english": "tout de suite ; immédiatement",
+        "translation": "Le médecin arrive tout de suite ; veuillez patienter ici un instant."
+      },
+      "ru": {
+        "english": "сразу; немедленно",
+        "translation": "Врач сейчас придёт, пожалуйста, немного подождите здесь."
+      }
+    },
+    "hsk3-767": {
+      "fr": {
+        "english": "satisfait ; content",
+        "translation": "Les clients sont très satisfaits de la chambre et ont dit qu’ils reviendraient."
+      },
+      "ru": {
+        "english": "довольный",
+        "translation": "Гости остались очень довольны номером и сказали, что приедут ещё."
+      }
+    },
+    "hsk3-768": {
+      "fr": {
+        "english": "mao (un dixième de yuan)",
+        "translation": "Ce crayon coûte cinquante fen ; j’en ai acheté trois."
+      },
+      "ru": {
+        "english": "мао (одна десятая юаня)",
+        "translation": "Этот карандаш стоит пятьдесят фэней, я купил три."
+      }
+    },
+    "hsk3-769": {
+      "fr": {
+        "english": "mètre",
+        "translation": "Ce mur fait trois mètres de haut, l’étagère y tient parfaitement."
+      },
+      "ru": {
+        "english": "метр",
+        "translation": "Эта стена высотой три метра, книжный шкаф как раз помещается."
+      }
+    },
+    "hsk3-770": {
+      "fr": {
+        "english": "devant ; en face de",
+        "translation": "Devant la bibliothèque, il y a un espace libre où les étudiants se reposent souvent."
+      },
+      "ru": {
+        "english": "перед; напротив",
+        "translation": "Перед библиотекой есть свободная площадка, где студенты часто отдыхают."
+      }
+    },
+    "hsk3-771": {
+      "fr": {
+        "english": "comprendre ; clair",
+        "translation": "Tu as parlé trop vite ; je n’ai pas compris la dernière phrase."
+      },
+      "ru": {
+        "english": "понимать; ясный",
+        "translation": "Ты говорил слишком быстро, и я не понял последнюю фразу."
+      }
+    },
+    "hsk3-772": {
+      "fr": {
+        "english": "liste ; liste de noms",
+        "translation": "Le professeur a inscrit sur la liste les élèves qui participeront au concours demain."
+      },
+      "ru": {
+        "english": "список; список имён",
+        "translation": "Преподаватель записал в список учеников, которые завтра участвуют в соревновании."
+      }
+    },
+    "hsk3-773": {
+      "fr": {
+        "english": "personnalité connue",
+        "translation": "Cette personnalité vient souvent lire des histoires aux enfants de la bibliothèque du quartier."
+      },
+      "ru": {
+        "english": "знаменитость; известная личность",
+        "translation": "Эта знаменитость часто приходит в районную библиотеку читать детям."
+      }
+    },
+    "hsk3-774": {
+      "fr": {
+        "english": "sud",
+        "translation": "En hiver, il fait généralement plus doux quand on voyage vers le sud."
+      },
+      "ru": {
+        "english": "юг",
+        "translation": "Зимой на юге во время путешествий обычно теплее."
+      }
+    },
+    "hsk3-775": {
+      "fr": {
+        "english": "difficile",
+        "translation": "Cet examen n’est pas difficile ; il suffit de bien réviser les textes."
+      },
+      "ru": {
+        "english": "трудный; сложный",
+        "translation": "Этот экзамен несложный, нужно только хорошо повторить тексты."
+      }
+    },
+    "hsk3-776": {
+      "fr": {
+        "english": "sud ; région du sud",
+        "translation": "Il neige rarement dans le sud, et beaucoup de gens aiment y passer le Nouvel An."
+      },
+      "ru": {
+        "english": "юг; южный регион",
+        "translation": "На юге редко идёт снег, и многие любят встречать там Новый год."
+      }
+    },
+    "hsk3-777": {
+      "fr": {
+        "english": "triste ; peiné",
+        "translation": "Elle était un peu triste en apprenant que son amie allait déménager."
+      },
+      "ru": {
+        "english": "грустный; расстроенный",
+        "translation": "Она немного расстроилась, узнав, что подруга переезжает."
+      }
+    },
+    "hsk3-778": {
+      "fr": {
+        "english": "laid ; peu esthétique",
+        "translation": "La couleur de ce vêtement est jolie, mais sa coupe est un peu laide."
+      },
+      "ru": {
+        "english": "некрасивый; неприятный на вид",
+        "translation": "Цвет у этой одежды хороший, только выглядит она немного некрасиво."
+      }
+    },
+    "hsk3-779": {
+      "fr": {
+        "english": "homme",
+        "translation": "Cet homme court au bord du lac tous les matins."
+      },
+      "ru": {
+        "english": "мужчина",
+        "translation": "Этот мужчина каждое утро бегает у озера."
+      }
+    },
+    "hsk3-780": {
+      "fr": {
+        "english": "élève ; garçon",
+        "translation": "Notre classe compte douze garçons, et il y a deux filles de plus."
+      },
+      "ru": {
+        "english": "ученик; мальчик",
+        "translation": "В нашем классе двенадцать мальчиков и на две девочки больше."
+      }
+    },
+    "hsk3-781": {
+      "fr": {
+        "english": "problème difficile",
+        "translation": "Le professeur a expliqué ce problème difficile en trois étapes, et tout le monde a compris."
+      },
+      "ru": {
+        "english": "трудная задача",
+        "translation": "Преподаватель разобрал эту сложную задачу в три шага, и все поняли."
+      }
+    },
+    "hsk3-782": {
+      "fr": {
+        "english": "désagréable à entendre",
+        "translation": "La musique de l’étage est si désagréable que je dois fermer la fenêtre."
+      },
+      "ru": {
+        "english": "неприятный на слух",
+        "translation": "Музыка сверху звучит так неприятно, что мне приходится закрывать окно."
+      }
+    },
+    "hsk3-783": {
+      "fr": {
+        "english": "classe ; niveau scolaire",
+        "translation": "Ma petite sœur est en sixième cette année et entrera au collège l’an prochain."
+      },
+      "ru": {
+        "english": "класс; год обучения",
+        "translation": "Моя младшая сестра сейчас в шестом классе, а в следующем году пойдёт в среднюю школу."
+      }
+    },
+    "hsk3-784": {
+      "fr": {
+        "english": "jeune",
+        "translation": "Même s’il est jeune, il sait déjà s’occuper de lui-même."
+      },
+      "ru": {
+        "english": "молодой",
+        "translation": "Хотя он молод, он уже умеет самостоятельно о себе заботиться."
+      }
+    },
+    "hsk3-785": {
+      "fr": {
+        "english": "vache ; bœuf",
+        "translation": "Les vaches sur la montagne broutent lentement dans le pré."
+      },
+      "ru": {
+        "english": "корова; бык",
+        "translation": "Коровы на горе медленно пасутся на лугу."
+      }
+    },
+    "hsk3-786": {
+      "fr": {
+        "english": "faire des efforts ; travailler dur",
+        "translation": "Elle travaille dur chaque jour pour entrer dans l’université de son choix."
+      },
+      "ru": {
+        "english": "стараться; усердно работать",
+        "translation": "Она каждый день усердно занимается, чтобы поступить в выбранный университет."
+      }
+    },
+    "hsk3-787": {
+      "fr": {
+        "english": "femme",
+        "translation": "Cette femme tenait un enfant dans ses bras et attendait sa famille à la gare."
+      },
+      "ru": {
+        "english": "женщина",
+        "translation": "Женщина держала ребёнка на руках и ждала родных на вокзале."
+      }
+    },
+    "hsk3-788": {
+      "fr": {
+        "english": "élève ; fille",
+        "translation": "Il y a beaucoup de filles dans notre école, y compris dans l’équipe de football."
+      },
+      "ru": {
+        "english": "ученица; школьница",
+        "translation": "В нашей школе много девочек, и в футбольной команде их тоже немало."
+      }
+    },
+    "hsk3-789": {
+      "fr": {
+        "english": "grimper ; ramper",
+        "translation": "Le petit s’est accroché à la chaise et a grimpé doucement sur le canapé."
+      },
+      "ru": {
+        "english": "ползти; взбираться",
+        "translation": "Малыш держался за стул и медленно забрался на диван."
+      }
+    },
+    "hsk3-790": {
+      "fr": {
+        "english": "avoir peur de",
+        "translation": "Elle a peur du noir ; elle laisse donc une petite lampe allumée la nuit."
+      },
+      "ru": {
+        "english": "бояться",
+        "translation": "Она боится темноты, поэтому ночью оставляет включённым маленький свет."
+      }
+    },
+    "hsk3-791": {
+      "fr": {
+        "english": "prendre une photo",
+        "translation": "Il y a beaucoup de monde qui prend des photos près de l’ancienne porte de la ville ; mieux vaut y aller tôt."
+      },
+      "ru": {
+        "english": "фотографироваться; фотографировать",
+        "translation": "У старых городских ворот много желающих сфотографироваться, поэтому лучше прийти пораньше."
+      }
+    },
+    "hsk3-792": {
+      "fr": {
+        "english": "assiette ; plat",
+        "translation": "Après le repas, mets les assiettes dans l’évier de la cuisine, s’il te plaît."
+      },
+      "ru": {
+        "english": "тарелка; блюдо",
+        "translation": "После еды, пожалуйста, поставь тарелки в кухонную раковину."
+      }
+    },
+    "hsk3-793": {
+      "fr": {
+        "english": "gros ; en surpoids",
+        "translation": "Ce chat mange trop ces derniers temps et a l’air d’avoir grossi."
+      },
+      "ru": {
+        "english": "толстый; полный",
+        "translation": "Эта кошка в последнее время слишком много ест и заметно поправилась."
+      }
+    },
+    "hsk3-794": {
+      "fr": {
+        "english": "bière",
+        "translation": "Ce petit magasin propose de la bière locale, ainsi que du jus et du thé."
+      },
+      "ru": {
+        "english": "пиво",
+        "translation": "В этом небольшом магазине есть местное пиво, а также сок и чай."
+      }
+    },
+    "hsk3-795": {
+      "fr": {
+        "english": "d’habitude ; en temps normal",
+        "translation": "D’habitude, je vais au travail en bus et ne prends un taxi que lorsqu’il pleut."
+      },
+      "ru": {
+        "english": "обычно; в повседневной жизни",
+        "translation": "Обычно я езжу на работу на автобусе и беру такси только в дождь."
+      }
+    },
+    "hsk3-796": {
+      "fr": {
+        "english": "bouteille",
+        "translation": "Il y a deux bouteilles sur la table, l’une contient de l’eau et l’autre du lait."
+      },
+      "ru": {
+        "english": "бутылка",
+        "translation": "На столе стоят две бутылки: одна с водой, другая с молоком."
+      }
+    },
+    "hsk3-797": {
+      "fr": {
+        "english": "faire du vélo ; monter à",
+        "translation": "Le temps sera beau ce week-end ; nous irons à vélo à la campagne voir les fleurs."
+      },
+      "ru": {
+        "english": "ехать верхом; ехать на велосипеде",
+        "translation": "В выходные будет хорошая погода, поэтому мы поедем на велосипедах за город смотреть на цветы."
+      }
+    },
+    "hsk3-798": {
+      "fr": {
+        "english": "étrange ; bizarre",
+        "translation": "C’est étrange : la porte était bien fermée à clé, mais le chat a disparu."
+      },
+      "ru": {
+        "english": "странный; необычный",
+        "translation": "Странно: дверь точно была заперта, а кота нигде нет."
+      }
+    },
+    "hsk3-799": {
+      "fr": {
+        "english": "en fait ; en réalité",
+        "translation": "Il a l’air calme, mais en fait il adore raconter des blagues."
+      },
+      "ru": {
+        "english": "на самом деле; в действительности",
+        "translation": "Он выглядит спокойным, но на самом деле очень любит рассказывать шутки."
+      }
+    },
+    "hsk3-800": {
+      "fr": {
+        "english": "autre ; les autres",
+        "translation": "À part ce livre, j’ai déjà terminé tous les autres."
+      },
+      "ru": {
+        "english": "другой; остальные",
+        "translation": "Кроме этой книги, остальные я уже прочитал."
+      }
+    },
+    "hsk3-801": {
+      "fr": {
+        "english": "se lever",
+        "translation": "Je me lève à six heures chaque jour, bois un verre d’eau, puis je sors."
+      },
+      "ru": {
+        "english": "вставать; подниматься",
+        "translation": "Каждый день я встаю в шесть, выпиваю стакан воды и выхожу."
+      }
+    },
+    "hsk3-802": {
+      "fr": {
+        "english": "décoller",
+        "translation": "L’avion décolle à dix heures ; nous devons arriver à l’aéroport avant neuf heures."
+      },
+      "ru": {
+        "english": "взлетать",
+        "translation": "Самолёт вылетает в десять, поэтому нам нужно быть в аэропорту до девяти."
+      }
+    },
+    "hsk3-803": {
+      "fr": {
+        "english": "voiture",
+        "translation": "Quand il pleut, il y a beaucoup de voitures sur la route ; conduis lentement."
+      },
+      "ru": {
+        "english": "автомобиль; машина",
+        "translation": "В дождь на дорогах много машин, поэтому нужно ехать медленнее."
+      }
+    },
+    "hsk3-804": {
+      "fr": {
+        "english": "crayon",
+        "translation": "Pendant l’examen, il faut remplir ce formulaire avec un crayon noir uniquement."
+      },
+      "ru": {
+        "english": "карандаш",
+        "translation": "На экзамене эту форму нужно заполнять только чёрным карандашом."
+      }
+    },
+    "hsk3-805": {
+      "fr": {
+        "english": "l’année avant-dernière",
+        "translation": "L’hiver d’il y a deux ans, nous avons vu beaucoup de neige à Harbin."
+      },
+      "ru": {
+        "english": "позапрошлый год",
+        "translation": "Позапрошлой зимой мы увидели много снега в Харбине."
+      }
+    },
+    "hsk3-806": {
+      "fr": {
+        "english": "avant-hier",
+        "translation": "Avant-hier, j’ai croisé mon ancien professeur de chinois à la librairie."
+      },
+      "ru": {
+        "english": "позавчера",
+        "translation": "Позавчера я встретил в книжном магазине своего бывшего преподавателя китайского."
+      }
+    },
+    "hsk3-807": {
+      "fr": {
+        "english": "clair ; clairement",
+        "translation": "La carte est très claire, nous avons trouvé notre chemin facilement."
+      },
+      "ru": {
+        "english": "ясный; ясно",
+        "translation": "На карте всё хорошо обозначено, поэтому мы легко нашли дорогу."
+      }
+    },
+    "hsk3-808": {
+      "fr": {
+        "english": "demander un congé",
+        "translation": "Elle a de la fièvre et a appelé son professeur pour demander un jour de congé."
+      },
+      "ru": {
+        "english": "просить об освобождении от занятий",
+        "translation": "У неё температура, и она позвонила преподавателю, чтобы отпроситься на день."
+      }
+    },
+    "hsk3-809": {
+      "fr": {
+        "english": "inviter ; régaler",
+        "translation": "C’est moi qui régale cette fois ; commandez ce que vous voulez."
+      },
+      "ru": {
+        "english": "угощать; приглашать за свой счёт",
+        "translation": "В этот раз угощаю я, заказывайте что хотите."
+      }
+    },
+    "hsk3-810": {
+      "fr": {
+        "english": "automne",
+        "translation": "En automne, les matinées et les soirées sont fraîches ; mieux vaut prendre une veste."
+      },
+      "ru": {
+        "english": "осень",
+        "translation": "Осенью утром и вечером прохладно, поэтому лучше взять с собой куртку."
+      }
+    },
+    "hsk3-811": {
+      "fr": {
+        "english": "terrain de sport ; terrain de jeu",
+        "translation": "Après les cours, les enfants jouent au football sur le terrain jusqu’à la tombée de la nuit."
+      },
+      "ru": {
+        "english": "спортивная площадка; поле",
+        "translation": "После уроков дети играют в футбол на площадке и возвращаются домой только к темноте."
+      }
+    },
+    "hsk3-812": {
+      "fr": {
+        "english": "jupe",
+        "translation": "Elle portait une jupe bleue pour aller à l’anniversaire de son amie."
+      },
+      "ru": {
+        "english": "юбка",
+        "translation": "Она надела синюю юбку на день рождения подруги."
+      }
+    },
+    "hsk3-813": {
+      "fr": {
+        "english": "ensuite",
+        "translation": "Lave d’abord les légumes, puis coupe-les en petits morceaux."
+      },
+      "ru": {
+        "english": "затем; потом",
+        "translation": "Сначала вымой овощи, затем нарежь их небольшими кусочками."
+      }
+    },
+    "hsk3-814": {
+      "fr": {
+        "english": "chaleureux ; accueillant",
+        "translation": "L’hôte de cette maison d’hôtes est très accueillant et nous a même préparé du thé le soir."
+      },
+      "ru": {
+        "english": "радушный; приветливый",
+        "translation": "Хозяин гостевого дома очень радушный и вечером даже заварил нам чай."
+      }
+    },
+    "hsk3-815": {
+      "fr": {
+        "english": "reconnaître",
+        "translation": "Je reconnais ce médecin ; il m’a déjà soigné."
+      },
+      "ru": {
+        "english": "узнавать; знать в лицо",
+        "translation": "Я знаю этого врача в лицо, он раньше меня лечил."
+      }
+    },
+    "hsk3-816": {
+      "fr": {
+        "english": "penser ; estimer",
+        "translation": "Je pense qu’il vaut mieux bien comprendre la question avant de répondre."
+      },
+      "ru": {
+        "english": "считать; полагать",
+        "translation": "Я считаю, что сначала нужно понять вопрос, а потом отвечать."
+      }
+    },
+    "hsk3-817": {
+      "fr": {
+        "english": "sérieux ; appliqué",
+        "translation": "Il prépare son examen avec sérieux et révise chaque jour selon son programme."
+      },
+      "ru": {
+        "english": "серьёзный; старательный",
+        "translation": "Он серьёзно готовится к экзамену и каждый день повторяет материал по плану."
+      }
+    },
+    "hsk3-818": {
+      "fr": {
+        "english": "facile ; simple",
+        "translation": "Ce plat est facile à préparer et peut être prêt en une demi-heure."
+      },
+      "ru": {
+        "english": "лёгкий; простой",
+        "translation": "Это блюдо легко приготовить, оно будет готово за полчаса."
+      }
+    },
+    "hsk3-819": {
+      "fr": {
+        "english": "si",
+        "translation": "S’il ne pleut pas demain, nous monterons à la montagne pour voir le lever du soleil."
+      },
+      "ru": {
+        "english": "если",
+        "translation": "Если завтра не будет дождя, мы поднимемся в горы смотреть на восход."
+      }
+    },
+    "hsk3-820": {
+      "fr": {
+        "english": "parapluie",
+        "translation": "Il y a un parapluie près de la porte ; prends-le en sortant."
+      },
+      "ru": {
+        "english": "зонт",
+        "translation": "У двери стоит зонт, возьми его, когда пойдёшь."
+      }
+    },
+    "hsk3-821": {
+      "fr": {
+        "english": "balayer ; nettoyer",
+        "translation": "Après le petit-déjeuner, j’ai balayé le sol avant de sortir."
+      },
+      "ru": {
+        "english": "подметать; убирать",
+        "translation": "После завтрака я подмёл пол и только потом вышел."
+      }
+    },
+    "hsk3-822": {
+      "fr": {
+        "english": "canapé",
+        "translation": "Le canapé du salon est moelleux ; grand-père s’y assied souvent pour lire le journal."
+      },
+      "ru": {
+        "english": "диван",
+        "translation": "Диван в гостиной мягкий, дедушка часто сидит на нём и читает газету."
+      }
+    },
+    "hsk3-823": {
+      "fr": {
+        "english": "montagne",
+        "translation": "Par temps clair, on peut voir toute la ville depuis la montagne."
+      },
+      "ru": {
+        "english": "гора",
+        "translation": "В ясную погоду с горы виден весь город."
+      }
+    },
+    "hsk3-824": {
+      "fr": {
+        "english": "vêtement du haut",
+        "translation": "Elle a plié son haut et l’a rangé dans l’armoire."
+      },
+      "ru": {
+        "english": "верхняя одежда; верх",
+        "translation": "Она сложила верхнюю одежду и убрала её в шкаф."
+      }
+    },
+    "hsk3-825": {
+      "fr": {
+        "english": "cuillère",
+        "translation": "Cette soupe est trop chaude ; bois-la doucement avec une cuillère."
+      },
+      "ru": {
+        "english": "ложка",
+        "translation": "Этот суп слишком горячий, ешь его медленно ложкой."
+      }
+    },
+    "hsk3-826": {
+      "fr": {
+        "english": "à ses côtés ; tout près",
+        "translation": "Après mon déménagement dans une nouvelle ville, mon ami était toujours à mes côtés pour m’aider."
+      },
+      "ru": {
+        "english": "рядом; подле",
+        "translation": "После переезда в новый город друг всегда был рядом и помогал мне."
+      }
+    },
+    "hsk3-827": {
+      "fr": {
+        "english": "taille ; stature",
+        "translation": "Il mesure un mètre quatre-vingts et est très agile quand il joue au basket."
+      },
+      "ru": {
+        "english": "рост",
+        "translation": "Его рост — метр восемьдесят, и он очень ловко играет в баскетбол."
+      }
+    },
+    "hsk3-828": {
+      "fr": {
+        "english": "bruit ; son",
+        "translation": "Un coup a retenti à la porte ; j’ai cru que mon ami était arrivé."
+      },
+      "ru": {
+        "english": "звук; один звук",
+        "translation": "За дверью раздался стук, и я подумал, что пришёл друг."
+      }
+    },
+    "hsk3-829": {
+      "fr": {
+        "english": "vie ; vivre",
+        "translation": "Après quelques années de vie à l’étranger, son chinois s’est beaucoup amélioré."
+      },
+      "ru": {
+        "english": "жизнь; жить",
+        "translation": "После нескольких лет жизни за границей её китайский быстро улучшился."
+      }
+    },
+    "hsk3-830": {
+      "fr": {
+        "english": "se fâcher ; être en colère",
+        "translation": "Ne te fâche pas ; je n’ai pas oublié ton anniversaire exprès."
+      },
+      "ru": {
+        "english": "сердиться; злиться",
+        "translation": "Не сердись, я не специально забыл о твоём дне рождения."
+      }
+    },
+    "hsk3-831": {
+      "fr": {
+        "english": "voix ; son",
+        "translation": "Sa voix était douce, et tout le monde s’est tu pour l’écouter."
+      },
+      "ru": {
+        "english": "звук; голос",
+        "translation": "У неё был тихий голос, и все замолчали, чтобы её послушать."
+      }
+    },
+    "hsk3-832": {
+      "fr": {
+        "english": "ville ; municipalité",
+        "translation": "La ville de Suzhou compte de nombreux jardins classiques qui attirent beaucoup de visiteurs."
+      },
+      "ru": {
+        "english": "город; муниципалитет",
+        "translation": "В Сучжоу много классических садов, которые привлекают немало туристов."
+      }
+    },
+    "hsk3-833": {
+      "fr": {
+        "english": "essayer ; tester",
+        "translation": "Je vais d’abord essayer ce manteau pour vérifier la taille ; je l’achèterai s’il me va."
+      },
+      "ru": {
+        "english": "пробовать; примерять",
+        "translation": "Я сначала примерю это пальто, а если подойдёт — куплю."
+      }
+    },
+    "hsk3-834": {
+      "fr": {
+        "english": "salle ; pièce (suffixe)",
+        "translation": "Notre école a une salle de lecture qui ferme à neuf heures du soir."
+      },
+      "ru": {
+        "english": "комната; помещение (в сложных словах)",
+        "translation": "В нашей школе есть читальный зал, который закрывается в девять вечера."
+      }
+    },
+    "hsk3-835": {
+      "fr": {
+        "english": "monde",
+        "translation": "Les gens du monde entier aiment écouter de la musique."
+      },
+      "ru": {
+        "english": "мир",
+        "translation": "Люди во всём мире любят слушать музыку."
+      }
+    },
+    "hsk3-836": {
+      "fr": {
+        "english": "ramasser; ranger",
+        "translation": "Après l’examen, le professeur a ramassé toutes les copies."
+      },
+      "ru": {
+        "english": "собирать; убирать",
+        "translation": "После экзамена учитель собрал все экзаменационные листы."
+      }
+    },
+    "hsk3-837": {
+      "fr": {
+        "english": "recevoir",
+        "translation": "J’ai reçu hier une carte postale de ma grande sœur."
+      },
+      "ru": {
+        "english": "получить",
+        "translation": "Вчера я получил открытку от старшей сестры."
+      }
+    },
+    "hsk3-838": {
+      "fr": {
+        "english": "supporter; endurer",
+        "translation": "Il ne supportait pas la chaleur dans la pièce, alors il a ouvert la fenêtre."
+      },
+      "ru": {
+        "english": "выносить; терпеть",
+        "translation": "Он не выдержал такой жары в комнате и открыл окно."
+      }
+    },
+    "hsk3-839": {
+      "fr": {
+        "english": "mince; maigrir",
+        "translation": "Elle a un peu maigri depuis qu’elle mange moins de sucreries."
+      },
+      "ru": {
+        "english": "худой; похудеть",
+        "translation": "Она немного похудела, потому что стала есть меньше сладкого."
+      }
+    },
+    "hsk3-840": {
+      "fr": {
+        "english": "recevoir; être l’objet de",
+        "translation": "Cette petite ville est appréciée des touristes."
+      },
+      "ru": {
+        "english": "получать; подвергаться",
+        "translation": "Этот небольшой город пользуется популярностью у туристов."
+      }
+    },
+    "hsk3-841": {
+      "fr": {
+        "english": "oncle",
+        "translation": "Mon oncle m’emmène nager chaque semaine."
+      },
+      "ru": {
+        "english": "дядя",
+        "translation": "Дядя каждую неделю водит меня плавать."
+      }
+    },
+    "hsk3-842": {
+      "fr": {
+        "english": "arbre",
+        "translation": "L’arbre de la cour fleurit au printemps et donne des fruits en automne."
+      },
+      "ru": {
+        "english": "дерево",
+        "translation": "Дерево во дворе цветёт весной и приносит плоды осенью."
+      }
+    },
+    "hsk3-843": {
+      "fr": {
+        "english": "mathématiques",
+        "translation": "Ma petite sœur préfère les mathématiques, car elle aime résoudre des problèmes."
+      },
+      "ru": {
+        "english": "математика",
+        "translation": "Моя младшая сестра больше всего любит математику, потому что ей нравится решать задачи."
+      }
+    },
+    "hsk3-844": {
+      "fr": {
+        "english": "brosser",
+        "translation": "N’oublie pas de te brosser les dents avant de dormir."
+      },
+      "ru": {
+        "english": "чистить щёткой",
+        "translation": "Не забудь почистить зубы перед сном."
+      }
+    },
+    "hsk3-845": {
+      "fr": {
+        "english": "paire",
+        "translation": "Une paire de baguettes propres est posée sur la table."
+      },
+      "ru": {
+        "english": "пара",
+        "translation": "На столе лежит чистая пара палочек для еды."
+      }
+    },
+    "hsk3-846": {
+      "fr": {
+        "english": "niveau",
+        "translation": "Écouter plus souvent la radio en chinois peut améliorer ton niveau de compréhension orale."
+      },
+      "ru": {
+        "english": "уровень",
+        "translation": "Если чаще слушать китайское радио, можно улучшить понимание на слух."
+      }
+    },
+    "hsk3-847": {
+      "fr": {
+        "english": "conducteur; chauffeur",
+        "translation": "Le chauffeur nous a rappelé d’attacher nos ceintures."
+      },
+      "ru": {
+        "english": "водитель",
+        "translation": "Водитель напомнил нам пристегнуть ремни безопасности."
+      }
+    },
+    "hsk3-848": {
+      "fr": {
+        "english": "quatre saisons",
+        "translation": "Les quatre saisons sont bien marquées dans cette ville, et le printemps est particulièrement agréable."
+      },
+      "ru": {
+        "english": "четыре времени года",
+        "translation": "В этом городе хорошо различаются четыре времени года, а весной здесь особенно приятно."
+      }
+    },
+    "hsk3-849": {
+      "fr": {
+        "english": "soleil",
+        "translation": "Le soleil est sorti et le linge a vite séché."
+      },
+      "ru": {
+        "english": "солнце",
+        "translation": "Вышло солнце, и одежда быстро высохла."
+      }
+    },
+    "hsk3-850": {
+      "fr": {
+        "english": "sucre",
+        "translation": "Je bois mon café sans sucre."
+      },
+      "ru": {
+        "english": "сахар",
+        "translation": "Я пью кофе без сахара."
+      }
+    },
+    "hsk3-851": {
+      "fr": {
+        "english": "particulièrement; spécial",
+        "translation": "Le dîner sentait particulièrement bon aujourd’hui, alors j’ai repris un bol."
+      },
+      "ru": {
+        "english": "особенно; особенный",
+        "translation": "Сегодня ужин особенно аппетитно пах, и я съел ещё одну порцию."
+      }
+    },
+    "hsk3-852": {
+      "fr": {
+        "english": "améliorer; augmenter",
+        "translation": "Répéter à voix haute pendant dix minutes par jour peut améliorer ta prononciation."
+      },
+      "ru": {
+        "english": "повышать; улучшать",
+        "translation": "Повторение вслух по десять минут в день может улучшить произношение."
+      }
+    },
+    "hsk3-853": {
+      "fr": {
+        "english": "sport; éducation physique",
+        "translation": "À l’école, il y a deux cours de sport par semaine."
+      },
+      "ru": {
+        "english": "спорт; физкультура",
+        "translation": "В школе каждую неделю проходят два урока физкультуры."
+      }
+    },
+    "hsk3-854": {
+      "fr": {
+        "english": "salle de sport; gymnase",
+        "translation": "Le match a eu lieu dans le nouveau gymnase, et les spectateurs ont rempli les gradins."
+      },
+      "ru": {
+        "english": "спортивный зал; спорткомплекс",
+        "translation": "Матч проходил в новом спорткомплексе, и зрители заняли все трибуны."
+      }
+    },
+    "hsk3-855": {
+      "fr": {
+        "english": "sucré",
+        "translation": "Ce lait de soja est un peu sucré, inutile d’ajouter du sucre."
+      },
+      "ru": {
+        "english": "сладкий",
+        "translation": "Это соевое молоко немного сладкое, сахар добавлять не нужно."
+      }
+    },
+    "hsk3-856": {
+      "fr": {
+        "english": "sauter",
+        "translation": "Le chaton a sauté d’un coup sur le rebord de la fenêtre."
+      },
+      "ru": {
+        "english": "прыгать",
+        "translation": "Котёнок одним прыжком забрался на подоконник."
+      }
+    },
+    "hsk3-857": {
+      "fr": {
+        "english": "entendre dire",
+        "translation": "J’ai entendu dire que cette échoppe est réputée pour ses nouilles au bœuf."
+      },
+      "ru": {
+        "english": "слышать, что",
+        "translation": "Я слышал, что эта лапшичная славится говяжьей лапшой."
+      }
+    },
+    "hsk3-858": {
+      "fr": {
+        "english": "plutôt; assez",
+        "translation": "Cette rue est assez calme et convient bien à une promenade le soir."
+      },
+      "ru": {
+        "english": "довольно; весьма",
+        "translation": "Эта улица довольно тихая и хорошо подходит для вечерней прогулки."
+      }
+    },
+    "hsk3-859": {
+      "fr": {
+        "english": "collègue",
+        "translation": "À midi, je descends manger avec mes collègues."
+      },
+      "ru": {
+        "english": "коллега",
+        "translation": "В полдень мы с коллегами спускаемся пообедать."
+      }
+    },
+    "hsk3-860": {
+      "fr": {
+        "english": "être d’accord; approuver",
+        "translation": "Le responsable a accepté que je prenne un jour de congé la semaine prochaine."
+      },
+      "ru": {
+        "english": "соглашаться; одобрять",
+        "translation": "Руководитель разрешил мне взять выходной на следующей неделе."
+      }
+    },
+    "hsk3-861": {
+      "fr": {
+        "english": "cheveux",
+        "translation": "Il a tellement plu que mes cheveux sont trempés."
+      },
+      "ru": {
+        "english": "волосы",
+        "translation": "Дождь был такой сильный, что у меня промокли волосы."
+      }
+    },
+    "hsk3-862": {
+      "fr": {
+        "english": "soudain; tout à coup",
+        "translation": "Nous allions sortir quand le courant a soudainement été coupé."
+      },
+      "ru": {
+        "english": "внезапно",
+        "translation": "Мы уже собирались выходить, как вдруг отключили электричество."
+      }
+    },
+    "hsk3-863": {
+      "fr": {
+        "english": "bibliothèque",
+        "translation": "Avant les examens, je révise souvent à la bibliothèque jusqu’à neuf heures."
+      },
+      "ru": {
+        "english": "библиотека",
+        "translation": "Перед экзаменами я часто занимаюсь в библиотеке до девяти."
+      }
+    },
+    "hsk3-864": {
+      "fr": {
+        "english": "jambe",
+        "translation": "Après deux heures de vélo, j’ai un peu mal aux jambes."
+      },
+      "ru": {
+        "english": "нога",
+        "translation": "После двух часов на велосипеде у меня немного болят ноги."
+      }
+    },
+    "hsk3-865": {
+      "fr": {
+        "english": "une autre région; ailleurs",
+        "translation": "Elle vient d’arriver à Pékin depuis une autre ville pour travailler et ne connaît pas encore bien les environs."
+      },
+      "ru": {
+        "english": "другой город; другая местность",
+        "translation": "Она недавно приехала в Пекин на работу из другого города и пока плохо знает окрестности."
+      }
+    },
+    "hsk3-866": {
+      "fr": {
+        "english": "plats à emporter; livraison de repas",
+        "translation": "Nous étions trop occupés aujourd’hui, alors nous avons commandé à emporter."
+      },
+      "ru": {
+        "english": "еда на вынос; доставка еды",
+        "translation": "Сегодня мы были слишком заняты, поэтому заказали еду с доставкой."
+      }
+    },
+    "hsk3-867": {
+      "fr": {
+        "english": "langue étrangère",
+        "translation": "Quand il apprend une langue étrangère, il préfère d’abord écouter, puis parler."
+      },
+      "ru": {
+        "english": "иностранный язык",
+        "translation": "Изучая иностранный язык, он предпочитает сначала слушать, а потом говорить."
+      }
+    },
+    "hsk3-868": {
+      "fr": {
+        "english": "terminer; achever",
+        "translation": "Je vais d’abord terminer le rapport, puis aller chercher l’enfant."
+      },
+      "ru": {
+        "english": "закончить; выполнить",
+        "translation": "Сначала я закончу отчёт, а потом заберу ребёнка."
+      }
+    },
+    "hsk3-869": {
+      "fr": {
+        "english": "bol",
+        "translation": "Mets ce bol dans le placard, s’il te plaît."
+      },
+      "ru": {
+        "english": "миска; чаша",
+        "translation": "Пожалуйста, поставь эту миску в шкаф."
+      }
+    },
+    "hsk3-870": {
+      "fr": {
+        "english": "en retard",
+        "translation": "Le train avait vingt minutes de retard, alors nous avons attendu sur le quai."
+      },
+      "ru": {
+        "english": "опаздывать; задерживаться",
+        "translation": "Поезд задержался на двадцать минут, и мы ждали на платформе."
+      }
+    },
+    "hsk3-871": {
+      "fr": {
+        "english": "soirée; fête",
+        "translation": "À la fête du Nouvel An de l’école, il y aura des chants et des danses."
+      },
+      "ru": {
+        "english": "вечер; праздничный концерт",
+        "translation": "На школьном новогоднем вечере будут песни и танцы."
+      }
+    },
+    "hsk3-872": {
+      "fr": {
+        "english": "tennis",
+        "translation": "Ce week-end, j’ai joué au tennis avec ma cousine et perdu deux sets."
+      },
+      "ru": {
+        "english": "теннис",
+        "translation": "В выходные я играл в теннис с двоюродной сестрой и проиграл два сета."
+      }
+    },
+    "hsk3-873": {
+      "fr": {
+        "english": "site internet",
+        "translation": "J’ai trouvé l’emploi du temps sur le site de l’école."
+      },
+      "ru": {
+        "english": "веб-сайт",
+        "translation": "Я нашёл расписание занятий на сайте школы."
+      }
+    },
+    "hsk3-874": {
+      "fr": {
+        "english": "oublier",
+        "translation": "N’oublie pas tes clés en partant."
+      },
+      "ru": {
+        "english": "забыть",
+        "translation": "Не забудь взять ключи, когда будешь выходить."
+      }
+    },
+    "hsk3-875": {
+      "fr": {
+        "english": "pour; destiné à",
+        "translation": "Cette table a été conçue pour les jeunes enfants."
+      },
+      "ru": {
+        "english": "для; ради",
+        "translation": "Этот стол был сделан для маленьких детей."
+      }
+    },
+    "hsk3-876": {
+      "fr": {
+        "english": "pour; afin de",
+        "translation": "Je me suis levé à six heures afin de prendre le bus du matin."
+      },
+      "ru": {
+        "english": "чтобы; ради",
+        "translation": "Чтобы успеть на ранний автобус, я встал в шесть."
+      }
+    },
+    "hsk3-877": {
+      "fr": {
+        "english": "toilettes; salle de bains",
+        "translation": "La lumière des toilettes est en panne ; aide-moi à changer l’ampoule, s’il te plaît."
+      },
+      "ru": {
+        "english": "туалет; ванная комната",
+        "translation": "В ванной не работает свет; помоги мне заменить лампочку, пожалуйста."
+      }
+    },
+    "hsk3-878": {
+      "fr": {
+        "english": "culture",
+        "translation": "Se renseigner sur la culture locale avant un voyage facilite les échanges avec les habitants."
+      },
+      "ru": {
+        "english": "культура",
+        "translation": "Если перед поездкой узнать о местной культуре, будет легче общаться с людьми."
+      }
+    },
+    "hsk3-879": {
+      "fr": {
+        "english": "pièce; maison",
+        "translation": "La pièce n’est pas grande, mais elle est très ensoleillée."
+      },
+      "ru": {
+        "english": "комната; дом",
+        "translation": "Комната небольшая, зато в ней много солнца."
+      }
+    },
+    "hsk3-880": {
+      "fr": {
+        "english": "ouest; vers l’ouest",
+        "translation": "Nous sommes allés vers l’ouest depuis l’école et sommes arrivés après deux carrefours."
+      },
+      "ru": {
+        "english": "запад; к западу",
+        "translation": "Мы пошли от школы на запад и дошли после двух перекрёстков."
+      }
+    },
+    "hsk3-881": {
+      "fr": {
+        "english": "nord-ouest",
+        "translation": "J’habite au nord-ouest de la ville, non loin de la gare."
+      },
+      "ru": {
+        "english": "северо-запад",
+        "translation": "Я живу на северо-западе города, недалеко от вокзала."
+      }
+    },
+    "hsk3-882": {
+      "fr": {
+        "english": "Occident; occidental",
+        "translation": "La musique occidentale l’intéresse beaucoup."
+      },
+      "ru": {
+        "english": "Запад; западный",
+        "translation": "Он очень интересуется западной музыкой."
+      }
+    },
+    "hsk3-883": {
+      "fr": {
+        "english": "pastèque",
+        "translation": "Quand il fait chaud, ma famille aime manger de la pastèque bien fraîche."
+      },
+      "ru": {
+        "english": "арбуз",
+        "translation": "В жару наша семья любит есть охлаждённый арбуз."
+      }
+    },
+    "hsk3-884": {
+      "fr": {
+        "english": "sud-ouest",
+        "translation": "Ce village se trouve au sud-ouest de la capitale provinciale, à trois heures de route."
+      },
+      "ru": {
+        "english": "юго-запад",
+        "translation": "Эта деревня находится к юго-западу от столицы провинции, в трёх часах езды."
+      }
+    },
+    "hsk3-885": {
+      "fr": {
+        "english": "avoir l’habitude de; s’habituer à",
+        "translation": "J’ai l’habitude de me lever tôt et je cours à six heures tous les jours."
+      },
+      "ru": {
+        "english": "привыкнуть; привычка",
+        "translation": "Я привык рано вставать и каждый день бегаю в шесть утра."
+      }
+    },
+    "hsk3-886": {
+      "fr": {
+        "english": "aimer beaucoup; affectionner",
+        "translation": "Ma grand-mère aime beaucoup cultiver des fleurs ; le balcon est rempli de plantes en pot."
+      },
+      "ru": {
+        "english": "любить; обожать",
+        "translation": "Бабушка очень любит выращивать цветы; весь балкон заставлен горшками."
+      }
+    },
+    "hsk3-887": {
+      "fr": {
+        "english": "machine à laver",
+        "translation": "La machine à laver tourne ; ouvre-la un peu plus tard."
+      },
+      "ru": {
+        "english": "стиральная машина",
+        "translation": "Стиральная машина стирает; открой её немного позже."
+      }
+    },
+    "hsk3-888": {
+      "fr": {
+        "english": "se laver; prendre une douche",
+        "translation": "Après le sport, je prends d’abord une douche, puis je mange."
+      },
+      "ru": {
+        "english": "мыться; принимать душ",
+        "translation": "После тренировки я сначала принимаю душ, а потом ем."
+      }
+    },
+    "hsk3-889": {
+      "fr": {
+        "english": "été",
+        "translation": "En été, le soleil se couche tard et les enfants jouent souvent dehors."
+      },
+      "ru": {
+        "english": "лето",
+        "translation": "Летом солнце садится поздно, и дети часто играют на улице."
+      }
+    },
+    "hsk3-890": {
+      "fr": {
+        "english": "d’abord; en premier",
+        "translation": "Commande d’abord, je vais nous trouver une place."
+      },
+      "ru": {
+        "english": "сначала; прежде",
+        "translation": "Сначала закажи, а я найду нам место."
+      }
+    },
+    "hsk3-891": {
+      "fr": {
+        "english": "banane",
+        "translation": "Ces bananes ne sont pas encore mûres ; mangeons-les demain."
+      },
+      "ru": {
+        "english": "банан",
+        "translation": "Эта связка бананов ещё не созрела, давай съедим её завтра."
+      }
+    },
+    "hsk3-892": {
+      "fr": {
+        "english": "croire; faire confiance",
+        "translation": "Je crois qu’il rendra le livre à temps."
+      },
+      "ru": {
+        "english": "верить; доверять",
+        "translation": "Я верю, что он вовремя вернёт книгу."
+      }
+    },
+    "hsk3-893": {
+      "fr": {
+        "english": "boîte; valise",
+        "translation": "Avant de partir, elle a mis ses vêtements dans la valise."
+      },
+      "ru": {
+        "english": "коробка; чемодан",
+        "translation": "Перед отъездом она положила одежду в чемодан."
+      }
+    },
+    "hsk3-894": {
+      "fr": {
+        "english": "vers; à; auprès de",
+        "translation": "J’ai emprunté un parapluie à mon voisin."
+      },
+      "ru": {
+        "english": "к; у (кого-либо)",
+        "translation": "Я одолжил зонт у соседа."
+      }
+    },
+    "hsk3-895": {
+      "fr": {
+        "english": "ressembler à",
+        "translation": "Ce petit garçon ressemble à son père."
+      },
+      "ru": {
+        "english": "быть похожим на",
+        "translation": "Этот мальчик похож на своего отца."
+      }
+    },
+    "hsk3-896": {
+      "fr": {
+        "english": "appareil photo",
+        "translation": "Range ton appareil photo avant d’entrer dans le musée."
+      },
+      "ru": {
+        "english": "фотоаппарат",
+        "translation": "Перед входом в музей убери фотоаппарат."
+      }
+    },
+    "hsk3-897": {
+      "fr": {
+        "english": "résidence; quartier résidentiel",
+        "translation": "Une nouvelle boulangerie a ouvert à l’entrée du quartier résidentiel."
+      },
+      "ru": {
+        "english": "жилой комплекс; жилой район",
+        "translation": "У входа в жилой комплекс открылась новая пекарня."
+      }
+    },
+    "hsk3-898": {
+      "fr": {
+        "english": "faire attention; prudent",
+        "translation": "Il y a de l’eau par terre ; fais attention en marchant."
+      },
+      "ru": {
+        "english": "быть осторожным; внимательный",
+        "translation": "На полу вода, будь осторожен."
+      }
+    },
+    "hsk3-899": {
+      "fr": {
+        "english": "campus",
+        "translation": "Au printemps, le campus est couvert de fleurs."
+      },
+      "ru": {
+        "english": "кампус; территория школы",
+        "translation": "Весной территория кампуса вся в цветах."
+      }
+    },
+    "hsk3-900": {
+      "fr": {
+        "english": "directeur; proviseur",
+        "translation": "Le directeur a accueilli les nouveaux élèves à la cérémonie de rentrée."
+      },
+      "ru": {
+        "english": "директор школы",
+        "translation": "Директор приветствовал новых учеников на церемонии открытия учебного года."
+      }
+    },
+    "hsk3-901": {
+      "fr": {
+        "english": "chaussure",
+        "translation": "Ces chaussures sont confortables ; je compte les porter en voyage."
+      },
+      "ru": {
+        "english": "обувь; туфля",
+        "translation": "Эта обувь удобная, я собираюсь надеть её в поездку."
+      }
+    },
+    "hsk3-902": {
+      "fr": {
+        "english": "dans son cœur; intérieurement",
+        "translation": "Même si elle ne l’a pas dit, elle était quand même très contente au fond d’elle-même."
+      },
+      "ru": {
+        "english": "в душе; про себя",
+        "translation": "Хотя она этого не сказала, в душе она всё равно была очень рада."
+      }
+    },
+    "hsk3-903": {
+      "fr": {
+        "english": "Nouvel An",
+        "translation": "Le jour du Nouvel An, toute ma famille mange des raviolis chinois ensemble."
+      },
+      "ru": {
+        "english": "Новый год",
+        "translation": "В Новый год вся наша семья вместе ест пельмени."
+      }
+    },
+    "hsk3-904": {
+      "fr": {
+        "english": "informations; actualités",
+        "translation": "Chaque matin, papa regarde les informations en prenant son petit-déjeuner."
+      },
+      "ru": {
+        "english": "новости",
+        "translation": "Каждое утро папа смотрит новости за завтраком."
+      }
+    },
+    "hsk3-905": {
+      "fr": {
+        "english": "frais",
+        "translation": "Le poisson n’est bon que lorsqu’il est frais."
+      },
+      "ru": {
+        "english": "свежий",
+        "translation": "Рыба вкусная, только если она свежая."
+      }
+    },
+    "hsk3-906": {
+      "fr": {
+        "english": "lettre",
+        "translation": "Dès qu’elle a reçu ma lettre, mamie m’a téléphoné."
+      },
+      "ru": {
+        "english": "письмо",
+        "translation": "Получив моё письмо, бабушка сразу мне позвонила."
+      }
+    },
+    "hsk3-907": {
+      "fr": {
+        "english": "carte de crédit",
+        "translation": "Cette petite boutique n’accepte pas les cartes de crédit, seulement les espèces."
+      },
+      "ru": {
+        "english": "кредитная карта",
+        "translation": "В этом небольшом магазине не принимают кредитные карты, только наличные."
+      }
+    },
+    "hsk3-908": {
+      "fr": {
+        "english": "convenir; ça marche",
+        "translation": "Cette organisation peut aussi convenir pour aujourd’hui."
+      },
+      "ru": {
+        "english": "подходить; годиться",
+        "translation": "Такой план подойдёт и на сегодня."
+      }
+    },
+    "hsk3-909": {
+      "fr": {
+        "english": "bagages",
+        "translation": "Avant d’embarquer, vérifie tes bagages."
+      },
+      "ru": {
+        "english": "багаж",
+        "translation": "Перед посадкой проверь багаж."
+      }
+    },
+    "hsk3-910": {
+      "fr": {
+        "english": "intérêt; passe-temps",
+        "translation": "La photographie l’intéresse beaucoup ; le week-end, elle va souvent prendre des photos au parc."
+      },
+      "ru": {
+        "english": "интерес; увлечение",
+        "translation": "Она очень интересуется фотографией и по выходным часто снимает в парке."
+      }
+    },
+    "hsk3-911": {
+      "fr": {
+        "english": "prendre des congés; vacances",
+        "translation": "Papa sera en congé le mois prochain ; nous avons prévu d’aller au bord de la mer."
+      },
+      "ru": {
+        "english": "взять отпуск; отдых",
+        "translation": "В следующем месяце папа берёт отпуск, и мы собираемся поехать к морю."
+      }
+    },
+    "hsk3-912": {
+      "fr": {
+        "english": "avoir besoin de; nécessiter",
+        "translation": "Si tu as besoin d’aide, tu peux m’appeler."
+      },
+      "ru": {
+        "english": "нуждаться; требоваться",
+        "translation": "Если тебе понадобится помощь, позвони мне."
+      }
+    },
+    "hsk3-913": {
+      "fr": {
+        "english": "choisir",
+        "translation": "Tu peux d’abord choisir la couleur, puis décider lequel acheter."
+      },
+      "ru": {
+        "english": "выбирать",
+        "translation": "Сначала выбери цвет, а потом реши, какую вещь купить."
+      }
+    },
+    "hsk3-914": {
+      "fr": {
+        "english": "choisir; choix",
+        "translation": "Après avoir visité trois hôtels, nous avons choisi celui qui était le plus près de la gare."
+      },
+      "ru": {
+        "english": "выбирать; выбор",
+        "translation": "Осмотрев три гостиницы, мы выбрали ту, что ближе всего к вокзалу."
+      }
+    },
+    "hsk3-915": {
+      "fr": {
+        "english": "trimestre; semestre",
+        "translation": "J’ai choisi deux cours de langue étrangère ce semestre."
+      },
+      "ru": {
+        "english": "учебный семестр",
+        "translation": "В этом семестре я выбрал два занятия по иностранному языку."
+      }
+    },
+    "hsk3-916": {
+      "fr": {
+        "english": "dent",
+        "translation": "Je suis allé chez le dentiste hier ; il m’a dit que cette dent allait bien."
+      },
+      "ru": {
+        "english": "зуб",
+        "translation": "Вчера я был у стоматолога, и он сказал, что с этим зубом всё в порядке."
+      }
+    },
+    "hsk3-917": {
+      "fr": {
+        "english": "brosse à dents",
+        "translation": "Cette brosse à dents est trop vieille ; je veux la remplacer."
+      },
+      "ru": {
+        "english": "зубная щётка",
+        "translation": "Эта зубная щётка слишком старая, я хочу купить новую."
+      }
+    },
+    "hsk3-918": {
+      "fr": {
+        "english": "mouton; brebis",
+        "translation": "Les moutons de la montagne broutent dans le pré."
+      },
+      "ru": {
+        "english": "овца; баран",
+        "translation": "Овцы на горе пасутся на лугу."
+      }
+    },
+    "hsk3-919": {
+      "fr": {
+        "english": "élever; garder",
+        "translation": "Elle a deux chats et leur donne à manger chaque matin."
+      },
+      "ru": {
+        "english": "выращивать; держать",
+        "translation": "Она держит двух кошек и кормит их каждое утро."
+      }
+    },
+    "hsk3-920": {
+      "fr": {
+        "english": "demander; exiger",
+        "translation": "Le professeur nous a demandé de rendre les devoirs demain."
+      },
+      "ru": {
+        "english": "требовать; просить",
+        "translation": "Учитель попросил нас сдать домашнее задание завтра."
+      }
+    },
+    "hsk3-921": {
+      "fr": {
+        "english": "page",
+        "translation": "Ce livre compte trois cents pages, et j’en suis déjà à la page quatre-vingt."
+      },
+      "ru": {
+        "english": "страница",
+        "translation": "В этой книге триста страниц, а я уже дошёл до восьмидесятой."
+      }
+    },
+    "hsk3-922": {
+      "fr": {
+        "english": "certainement; devoir absolument",
+        "translation": "N’oublie surtout pas ta carte d’étudiant ; tu en auras besoin pour entrer à la bibliothèque."
+      },
+      "ru": {
+        "english": "обязательно; непременно",
+        "translation": "Обязательно возьми студенческий билет, он понадобится для входа в библиотеку."
+      }
+    },
+    "hsk3-923": {
+      "fr": {
+        "english": "en tout; au total",
+        "translation": "Nous avons acheté six billets en tout."
+      },
+      "ru": {
+        "english": "всего; в общей сложности",
+        "translation": "Всего мы купили шесть билетов."
+      }
+    },
+    "hsk3-924": {
+      "fr": {
+        "english": "ensemble",
+        "translation": "Après le cours, allons prendre un café ensemble."
+      },
+      "ru": {
+        "english": "вместе",
+        "translation": "После занятий давай вместе пойдём выпьем кофе."
+      }
+    },
+    "hsk3-925": {
+      "fr": {
+        "english": "identique; pareil",
+        "translation": "Ces deux vêtements sont de la même couleur ; seule la taille diffère."
+      },
+      "ru": {
+        "english": "одинаковый; такой же",
+        "translation": "Эти две вещи одного цвета, отличается только размер."
+      }
+    },
+    "hsk3-926": {
+      "fr": {
+        "english": "après; plus tard",
+        "translation": "Après le dîner, je vais souvent me promener."
+      },
+      "ru": {
+        "english": "после; позже",
+        "translation": "После ужина я часто выхожу на прогулку."
+      }
+    },
+    "hsk3-927": {
+      "fr": {
+        "english": "avant; autrefois",
+        "translation": "J’habitais autrefois à Shanghai, mais j’ai déménagé à Hangzhou."
+      },
+      "ru": {
+        "english": "раньше; прежде",
+        "translation": "Раньше я жил в Шанхае, а теперь переехал в Ханчжоу."
+      }
+    },
+    "hsk3-928": {
+      "fr": {
+        "english": "à partir de; au-dessus de",
+        "translation": "Les enfants de dix ans et plus peuvent participer à ce concours."
+      },
+      "ru": {
+        "english": "старше; не менее",
+        "translation": "Дети от десяти лет могут участвовать в этом соревновании."
+      }
+    },
+    "hsk3-929": {
+      "fr": {
+        "english": "en plus de; à part",
+        "translation": "En plus du chinois, elle parle aussi français."
+      },
+      "ru": {
+        "english": "кроме; помимо",
+        "translation": "Помимо китайского, она говорит и по-французски."
+      }
+    },
+    "hsk3-930": {
+      "fr": {
+        "english": "croire; penser à tort",
+        "translation": "Je croyais qu’on était vendredi ; en fait, on est déjà samedi."
+      },
+      "ru": {
+        "english": "думать; ошибочно полагать",
+        "translation": "Я думал, что сегодня пятница, а оказалось, что уже суббота."
+      }
+    },
+    "hsk3-931": {
+      "fr": {
+        "english": "moins de; en dessous de",
+        "translation": "L’entrée au musée est gratuite pour les enfants de moins de dix ans."
+      },
+      "ru": {
+        "english": "младше; ниже",
+        "translation": "Дети младше десяти лет могут бесплатно посетить музей."
+      }
+    },
+    "hsk3-932": {
+      "fr": {
+        "english": "ordinaire; en général",
+        "translation": "La cuisine de ce restaurant est assez ordinaire, mais les prix sont très bas."
+      },
+      "ru": {
+        "english": "обычный; в целом",
+        "translation": "Еда в этом ресторане обычная, зато цены низкие."
+      }
+    },
+    "hsk3-933": {
+      "fr": {
+        "english": "tout en; en même temps",
+        "translation": "Il écoute les informations tout en faisant la cuisine."
+      },
+      "ru": {
+        "english": "одновременно; в то время как",
+        "translation": "Он слушает новости, пока готовит."
+      }
+    },
+    "hsk3-934": {
+      "fr": {
+        "english": "sans arrêt; tout le temps",
+        "translation": "Je t’ai attendu une demi-heure à l’entrée sans jamais te voir."
+      },
+      "ru": {
+        "english": "всё время; непрерывно",
+        "translation": "Я полчаса ждал тебя у входа и всё это время тебя не видел."
+      }
+    },
+    "hsk3-935": {
+      "fr": {
+        "english": "musique",
+        "translation": "J’aime écouter de la musique classique et je sais aussi jouer quelques morceaux."
+      },
+      "ru": {
+        "english": "музыка",
+        "translation": "Моя младшая сестра каждый день по часу занимается музыкой."
+      }
+    },
+    "hsk3-936": {
+      "fr": {
+        "english": "banque",
+        "translation": "Je suis allé à la banque pour faire de la monnaie."
+      },
+      "ru": {
+        "english": "банк",
+        "translation": "Я сходил в банк разменять деньги."
+      }
+    },
+    "hsk3-937": {
+      "fr": {
+        "english": "carte bancaire",
+        "translation": "Pense à mettre ta carte bancaire dans ton portefeuille avant de partir."
+      },
+      "ru": {
+        "english": "банковская карта",
+        "translation": "Перед выходом не забудь положить банковскую карту в кошелёк."
+      }
+    },
+    "hsk3-938": {
+      "fr": {
+        "english": "boisson",
+        "translation": "Cette boutique propose du thé chaud, du jus et d’autres boissons."
+      },
+      "ru": {
+        "english": "напиток",
+        "translation": "В этом магазине есть горячий чай, сок и другие напитки."
+      }
+    },
+    "hsk3-939": {
+      "fr": {
+        "english": "devoir; il faudrait",
+        "translation": "Il pleut dehors, tu devrais prendre un parapluie."
+      },
+      "ru": {
+        "english": "следует; нужно",
+        "translation": "На улице дождь, тебе следует взять зонт."
+      }
+    },
+    "hsk3-940": {
+      "fr": {
+        "english": "influencer; effet",
+        "translation": "Boire trop de café le soir peut nuire au sommeil."
+      },
+      "ru": {
+        "english": "влиять; влияние",
+        "translation": "Если вечером выпить слишком много кофе, это может повлиять на сон."
+      }
+    },
+    "hsk3-941": {
+      "fr": {
+        "english": "utiliser; avec",
+        "translation": "Écris avec ce stylo, la couleur se voit mieux."
+      },
+      "ru": {
+        "english": "использовать; при помощи",
+        "translation": "Пиши этой ручкой, так цвет будет заметнее."
+      }
+    },
+    "hsk3-942": {
+      "fr": {
+        "english": "courriel; e-mail",
+        "translation": "Je viens de recevoir un courriel de l’école."
+      },
+      "ru": {
+        "english": "электронное письмо",
+        "translation": "Я только что получил письмо от школы."
+      }
+    },
+    "hsk3-943": {
+      "fr": {
+        "english": "touriste",
+        "translation": "Cette vieille ville accueille beaucoup de touristes chaque été."
+      },
+      "ru": {
+        "english": "турист",
+        "translation": "Каждое лето в этот старинный город приезжает много туристов."
+      }
+    },
+    "hsk3-944": {
+      "fr": {
+        "english": "jeu",
+        "translation": "Quand il pleut, les enfants jouent à des jeux à la maison."
+      },
+      "ru": {
+        "english": "игра",
+        "translation": "Когда идёт дождь, дети играют дома."
+      }
+    },
+    "hsk3-945": {
+      "fr": {
+        "english": "boîte mail; boîte de réception",
+        "translation": "Envoie les photos dans ma boîte mail, s’il te plaît."
+      },
+      "ru": {
+        "english": "почтовый ящик; электронная почта",
+        "translation": "Пожалуйста, отправь фотографии мне на электронную почту."
+      }
+    },
+    "hsk3-946": {
+      "fr": {
+        "english": "lié à; concernant",
+        "translation": "Ces règles sont toutes liées à la sécurité."
+      },
+      "ru": {
+        "english": "связанный с; относящийся к",
+        "translation": "Все эти правила связаны с безопасностью."
+      }
+    },
+    "hsk3-947": {
+      "fr": {
+        "english": "célèbre; réputé",
+        "translation": "Ce restaurant est réputé pour sa soupe ; beaucoup de gens viennent exprès pour la goûter."
+      },
+      "ru": {
+        "english": "известный; знаменитый",
+        "translation": "Это место славится супом, и многие приходят специально его попробовать."
+      }
+    },
+    "hsk3-948": {
+      "fr": {
+        "english": "utile",
+        "translation": "Cette carte est très utile ; les nouveaux visiteurs risquent moins de se perdre."
+      },
+      "ru": {
+        "english": "полезный",
+        "translation": "Эта карта очень полезна: тем, кто пришёл впервые, будет труднее заблудиться."
+      }
+    },
+    "hsk3-949": {
+      "fr": {
+        "english": "encore; de nouveau",
+        "translation": "La pluie s’est arrêtée et le soleil est réapparu."
+      },
+      "ru": {
+        "english": "снова; опять",
+        "translation": "Дождь закончился, и солнце снова вышло."
+      }
+    },
+    "hsk3-950": {
+      "fr": {
+        "english": "badminton",
+        "translation": "Je joue au badminton avec un ami deux fois par semaine."
+      },
+      "ru": {
+        "english": "бадминтон",
+        "translation": "Я играю с другом в бадминтон два раза в неделю."
+      }
+    },
+    "hsk3-951": {
+      "fr": {
+        "english": "langue",
+        "translation": "Apprendre une nouvelle langue demande de la patience et de la pratique."
+      },
+      "ru": {
+        "english": "язык",
+        "translation": "Чтобы выучить новый язык, нужны терпение и практика."
+      }
+    },
+    "hsk3-952": {
+      "fr": {
+        "english": "imperméable",
+        "translation": "La météo annonce de la pluie cet après-midi ; prends un imperméable avant de sortir."
+      },
+      "ru": {
+        "english": "дождевик",
+        "translation": "По прогнозу после обеда будет дождь, возьми дождевик перед выходом."
+      }
+    },
+    "hsk3-953": {
+      "fr": {
+        "english": "rencontrer; tomber sur",
+        "translation": "J’ai croisé un ancien camarade au supermarché."
+      },
+      "ru": {
+        "english": "встретить; столкнуться с",
+        "translation": "В супермаркете я встретил бывшего одноклассника."
+      }
+    },
+    "hsk3-954": {
+      "fr": {
+        "english": "rencontrer par hasard",
+        "translation": "En descendant, je suis justement tombé sur le propriétaire."
+      },
+      "ru": {
+        "english": "встретить случайно",
+        "translation": "Спускаясь вниз, я случайно встретил хозяина квартиры."
+      }
+    },
+    "hsk3-955": {
+      "fr": {
+        "english": "jardin; parc",
+        "translation": "Les enfants courent après un ballon dans le parc."
+      },
+      "ru": {
+        "english": "сад; парк",
+        "translation": "Дети бегают по парку за мячом."
+      }
+    },
+    "hsk3-956": {
+      "fr": {
+        "english": "membre; employé",
+        "translation": "Tout le monde a aidé chaleureusement le nouvel employé pour son premier jour."
+      },
+      "ru": {
+        "english": "участник; сотрудник",
+        "translation": "В первый рабочий день все очень тепло помогали новому сотруднику."
+      }
+    },
+    "hsk3-957": {
+      "fr": {
+        "english": "être prêt à; vouloir bien",
+        "translation": "Si tu le veux, nous pouvons pratiquer l’expression orale ensemble."
+      },
+      "ru": {
+        "english": "быть готовым; хотеть",
+        "translation": "Если ты не против, мы можем вместе потренировать разговорную речь."
+      }
+    },
+    "hsk3-958": {
+      "fr": {
+        "english": "plus… plus…; de plus en plus",
+        "translation": "Plus il se fait tard, moins il y a de voitures dans la rue."
+      },
+      "ru": {
+        "english": "чем… тем…; всё более",
+        "translation": "Чем позже становится, тем меньше машин на улице."
+      }
+    },
+    "hsk3-959": {
+      "fr": {
+        "english": "lune",
+        "translation": "La lune est grande et brillante ce soir."
+      },
+      "ru": {
+        "english": "луна",
+        "translation": "Сегодня луна большая и яркая."
+      }
+    },
+    "hsk3-960": {
+      "fr": {
+        "english": "rencontre sportive; jeux sportifs",
+        "translation": "La rencontre sportive de l’école a lieu la semaine prochaine ; notre classe participera au relais."
+      },
+      "ru": {
+        "english": "спортивные соревнования",
+        "translation": "Школьные спортивные соревнования пройдут на следующей неделе, и наш класс примет участие в эстафете."
+      }
+    },
+    "hsk3-961": {
+      "fr": {
+        "english": "athlète; sportif",
+        "translation": "Cet athlète s’entraîne six heures par jour."
+      },
+      "ru": {
+        "english": "спортсмен",
+        "translation": "Этот спортсмен тренируется по шесть часов каждый день."
+      }
+    },
+    "hsk3-962": {
+      "fr": {
+        "english": "nous (toi compris)",
+        "translation": "Mangeons d’abord, puis allons voir un film ensemble."
+      },
+      "ru": {
+        "english": "мы (включая собеседника)",
+        "translation": "Давай сначала поедим, а потом вместе пойдём в кино."
+      }
+    },
+    "hsk3-963": {
+      "fr": {
+        "english": "sale",
+        "translation": "Tes chaussures sont sales ; essuie-les avant d’entrer."
+      },
+      "ru": {
+        "english": "грязный",
+        "translation": "У тебя грязная обувь, вытри её перед входом."
+      }
+    },
+    "hsk3-964": {
+      "fr": {
+        "english": "qu’est-ce qu’on fait ?",
+        "translation": "Il n’y a plus de billets de train. Qu’est-ce qu’on fait maintenant ?"
+      },
+      "ru": {
+        "english": "что нам делать?",
+        "translation": "Билеты на поезд распроданы. Что нам теперь делать?"
+      }
+    },
+    "hsk3-965": {
+      "fr": {
+        "english": "comment; de quelle manière",
+        "translation": "Comment penses-tu qu’on pourrait mieux préparer ce plat ?"
+      },
+      "ru": {
+        "english": "как; каким образом",
+        "translation": "Как, по-твоему, лучше приготовить это блюдо?"
+      }
+    },
+    "hsk3-966": {
+      "fr": {
+        "english": "se tenir debout; rester debout",
+        "translation": "Reste debout près de la porte un instant, je reviens tout de suite."
+      },
+      "ru": {
+        "english": "стоять; оставаться стоя",
+        "translation": "Постой у двери немного, я сейчас вернусь."
+      }
+    },
+    "hsk3-967": {
+      "fr": {
+        "english": "classificateur pour objets plats",
+        "translation": "Donne-moi deux feuilles de papier, s’il te plaît, je vais noter l’adresse."
+      },
+      "ru": {
+        "english": "счётное слово для плоских предметов",
+        "translation": "Дай мне, пожалуйста, два листа бумаги, я запишу адрес."
+      }
+    },
+    "hsk3-968": {
+      "fr": {
+        "english": "grandir; pousser",
+        "translation": "L’enfant grandit vite ; les vêtements achetés l’an dernier sont déjà trop petits."
+      },
+      "ru": {
+        "english": "расти; вырастать",
+        "translation": "Ребёнок быстро растёт: одежда, купленная в прошлом году, ему уже мала."
+      }
+    },
+    "hsk3-969": {
+      "fr": {
+        "english": "s’inquiéter; être pressé",
+        "translation": "Ne t’inquiète pas, le bus n’arrivera que dans cinq minutes."
+      },
+      "ru": {
+        "english": "волноваться; торопиться",
+        "translation": "Не волнуйся, автобус будет только через пять минут."
+      }
+    },
+    "hsk3-970": {
+      "fr": {
+        "english": "éclairer; briller sur",
+        "translation": "Le soleil du matin entre dans la pièce et éclaire la table."
+      },
+      "ru": {
+        "english": "освещать; светить на",
+        "translation": "Утреннее солнце заглядывает в комнату и освещает стол."
+      }
+    },
+    "hsk3-971": {
+      "fr": {
+        "english": "s’occuper de; prendre soin de",
+        "translation": "Pendant mon déplacement professionnel, mon voisin s’est occupé du chaton."
+      },
+      "ru": {
+        "english": "присматривать; заботиться",
+        "translation": "Пока я был в командировке, сосед присматривал за котёнком."
+      }
+    },
+    "hsk3-972": {
+      "fr": {
+        "english": "photo; photographie",
+        "translation": "Cette photo a été prise au bord de la mer l’an dernier."
+      },
+      "ru": {
+        "english": "фотография; снимок",
+        "translation": "Эту фотографию сделали на берегу моря в прошлом году."
+      }
+    },
+    "hsk3-973": {
+      "fr": {
+        "english": "prendre une photo",
+        "translation": "Les touristes prennent des photos devant la porte de la vieille ville ; une longue file s’est formée derrière eux."
+      },
+      "ru": {
+        "english": "фотографироваться; делать снимок",
+        "translation": "Туристы делают фотографии у ворот старого города, а за ними выстроилась длинная очередь."
+      }
+    },
+    "hsk3-974": {
+      "fr": {
+        "english": "jusqu’à; jusqu’au moment où",
+        "translation": "Le médecin n’a terminé sa journée qu’à huit heures du soir."
+      },
+      "ru": {
+        "english": "до; вплоть до",
+        "translation": "Врач закончил работу только в восемь вечера."
+      }
+    },
+    "hsk3-975": {
+      "fr": {
+        "english": "seulement; ne… que",
+        "translation": "Je n’ai pris qu’un livre ; tout le reste est resté à la maison."
+      },
+      "ru": {
+        "english": "только; лишь",
+        "translation": "Я взял только одну книгу, всё остальное осталось дома."
+      }
+    },
+    "hsk3-976": {
+      "fr": {
+        "english": "papier",
+        "translation": "Il y a du papier et un stylo sur la table ; tu peux le noter."
+      },
+      "ru": {
+        "english": "бумага",
+        "translation": "На столе есть бумага и ручка, можешь записать."
+      }
+    },
+    "hsk3-977": {
+      "fr": {
+        "english": "ne pouvoir que; être limité à",
+        "translation": "Il pleut aujourd’hui, alors nous ne pouvons regarder un film qu’à la maison."
+      },
+      "ru": {
+        "english": "мочь только; быть вынужденным",
+        "translation": "Сегодня дождь, поэтому мы можем посмотреть фильм только дома."
+      }
+    },
+    "hsk3-978": {
+      "fr": {
+        "english": "simplement; seulement",
+        "translation": "Je voulais simplement poser une question, je ne suis pas venu me plaindre."
+      },
+      "ru": {
+        "english": "просто; всего лишь",
+        "translation": "Я просто хотел спросить, а не пожаловаться."
+      }
+    },
+    "hsk3-979": {
+      "fr": {
+        "english": "tant que; à condition que",
+        "translation": "À condition de t’entraîner chaque jour, ta prononciation s’améliorera."
+      },
+      "ru": {
+        "english": "если; при условии что",
+        "translation": "Если будешь заниматься каждый день, твоё произношение улучшится."
+      }
+    },
+    "hsk3-980": {
+      "fr": {
+        "english": "il n’y a que; seulement",
+        "translation": "Il n’y a que trois personnes dans la salle ; les autres élèves ne sont pas encore arrivés."
+      },
+      "ru": {
+        "english": "только; всего",
+        "translation": "В классе только три человека, остальные ещё не пришли."
+      }
+    },
+    "hsk3-981": {
+      "fr": {
+        "english": "pendant; au cours de",
+        "translation": "J’ai appris cette nouvelle pendant la réunion."
+      },
+      "ru": {
+        "english": "во время; в ходе",
+        "translation": "Я услышал эту новость во время собрания."
+      }
+    },
+    "hsk3-982": {
+      "fr": {
+        "english": "milieu; entre",
+        "translation": "La poste se trouve entre l’école et la banque."
+      },
+      "ru": {
+        "english": "середина; между",
+        "translation": "Почта находится между школой и банком."
+      }
+    },
+    "hsk3-983": {
+      "fr": {
+        "english": "enfin; finalement",
+        "translation": "Après l’avoir cherchée longtemps, nous avons enfin trouvé ce livre sur l’étagère."
+      },
+      "ru": {
+        "english": "наконец; в конце концов",
+        "translation": "Мы долго искали и наконец нашли эту книгу на полке."
+      }
+    },
+    "hsk3-984": {
+      "fr": {
+        "english": "sorte; type",
+        "translation": "Veux-tu goûter cette sorte de thé ?"
+      },
+      "ru": {
+        "english": "вид; сорт",
+        "translation": "Хочешь попробовать этот сорт чая?"
+      }
+    },
+    "hsk3-985": {
+      "fr": {
+        "english": "important",
+        "translation": "Dormir huit heures est très important pour les enfants."
+      },
+      "ru": {
+        "english": "важный",
+        "translation": "Детям очень важно спать по восемь часов."
+      }
+    },
+    "hsk3-986": {
+      "fr": {
+        "english": "week-end",
+        "translation": "Ce week-end, je compte aller voir ma grand-mère."
+      },
+      "ru": {
+        "english": "выходные",
+        "translation": "В эти выходные я собираюсь навестить бабушку."
+      }
+    },
+    "hsk3-987": {
+      "fr": {
+        "english": "principal; essentiel",
+        "translation": "Les principaux magasins de cette rue ouvrent à neuf heures."
+      },
+      "ru": {
+        "english": "главный; основной",
+        "translation": "Основные магазины на этой улице открываются в девять."
+      }
+    },
+    "hsk3-988": {
+      "fr": {
+        "english": "faire attention; noter",
+        "translation": "Fais attention aux voitures quand tu traverses la rue."
+      },
+      "ru": {
+        "english": "обращать внимание; следить",
+        "translation": "Переходя улицу, следи за машинами."
+      }
+    },
+    "hsk3-989": {
+      "fr": {
+        "english": "être hospitalisé",
+        "translation": "Depuis que grand-père est à l’hôpital, la famille va le voir à tour de rôle chaque jour."
+      },
+      "ru": {
+        "english": "лечь в больницу; быть госпитализированным",
+        "translation": "После того как дедушку положили в больницу, родные каждый день ходили к нему по очереди."
+      }
+    },
+    "hsk3-990": {
+      "fr": {
+        "english": "dictionnaire",
+        "translation": "Je ne connais pas ce caractère ; je dois le chercher dans le dictionnaire."
+      },
+      "ru": {
+        "english": "словарь",
+        "translation": "Я не знаю этот иероглиф, нужно посмотреть его в словаре."
+      }
+    },
+    "hsk3-991": {
+      "fr": {
+        "english": "vélo; bicyclette",
+        "translation": "Il fait beau ; allons à vélo au bord de la rivière."
+      },
+      "ru": {
+        "english": "велосипед",
+        "translation": "Погода хорошая, давай поедем к реке на велосипедах."
+      }
+    },
+    "hsk3-992": {
+      "fr": {
+        "english": "suffixe nominal (comme dans 桌子)",
+        "translation": "Mets la table près de la fenêtre, s’il te plaît."
+      },
+      "ru": {
+        "english": "суффикс существительного (как в 桌子)",
+        "translation": "Пожалуйста, поставь стол рядом с окном."
+      }
+    },
+    "hsk3-993": {
+      "fr": {
+        "english": "toujours; en tout",
+        "translation": "J’oublie toujours mon parapluie au bureau."
+      },
+      "ru": {
+        "english": "всегда; всего",
+        "translation": "Я всегда забываю зонт в офисе."
+      }
+    },
+    "hsk3-994": {
+      "fr": {
+        "english": "toujours; systématiquement",
+        "translation": "Le bus est toujours à l’heure."
+      },
+      "ru": {
+        "english": "всегда; неизменно",
+        "translation": "Автобус всегда ходит вовремя."
+      }
+    },
+    "hsk3-995": {
+      "fr": {
+        "english": "bouche",
+        "translation": "Quand elle rit, elle se couvre la bouche avec la main."
+      },
+      "ru": {
+        "english": "рот",
+        "translation": "Когда она смеётся, то прикрывает рот рукой."
+      }
+    },
+    "hsk3-996": {
+      "fr": {
+        "english": "le mieux; ferait mieux de",
+        "translation": "Il vaut mieux ne pas boire trop de café le soir."
+      },
+      "ru": {
+        "english": "лучше всего; лучше бы",
+        "translation": "Вечером лучше не пить слишком много кофе."
+      }
+    },
+    "hsk3-997": {
+      "fr": {
+        "english": "dernier; finalement",
+        "translation": "Après le vote de tous, c’est finalement l’option rouge qui a été choisie."
+      },
+      "ru": {
+        "english": "последний; в итоге",
+        "translation": "После голосования все в итоге выбрали красный вариант."
+      }
+    },
+    "hsk3-998": {
+      "fr": {
+        "english": "récemment; ces derniers temps",
+        "translation": "Le temps s’est réchauffé récemment ; je vais souvent courir au parc le matin."
+      },
+      "ru": {
+        "english": "недавно; в последнее время",
+        "translation": "В последнее время потеплело, и я часто бегаю по утрам в парке."
+      }
+    },
+    "hsk3-999": {
+      "fr": {
+        "english": "être reçu comme invité; rendre visite",
+        "translation": "Dimanche, je vais rendre visite au professeur Wang chez lui."
+      },
+      "ru": {
+        "english": "гостить; быть в гостях",
+        "translation": "В воскресенье я пойду в гости к учителю Вану."
+      }
+    },
+    "hsk3-1000": {
+      "fr": {
+        "english": "devoirs",
+        "translation": "Après le dîner, mon petit frère s’est assis pour faire ses devoirs."
+      },
+      "ru": {
+        "english": "домашнее задание",
+        "translation": "После ужина младший брат сел делать домашнее задание."
       }
     }
   }
