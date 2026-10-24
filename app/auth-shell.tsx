@@ -27,6 +27,7 @@ import {
   X,
 } from "lucide-react";
 import StudyApp from "./study-app";
+import {AccountDialogContext} from "./account-dialog-context";
 import { getAuthClient } from "./auth-client";
 export type StudyUser = {
   id: string;
@@ -121,6 +122,7 @@ export default function AuthShell({ initialUser }: { initialUser: StudyUser }) {
       </div>
     );
   return (
+    <AccountDialogContext.Provider value={() => setOpen(true)}>
     <>
       {account && !account.verified && (
         <div className="account-banner">
@@ -150,6 +152,7 @@ export default function AuthShell({ initialUser }: { initialUser: StudyUser }) {
         />
       )}
     </>
+    </AccountDialogContext.Provider>
   );
 }
 function AccountDialog({

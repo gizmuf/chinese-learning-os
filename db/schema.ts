@@ -30,3 +30,6 @@ export const courseEvents = sqliteTable("course_events", {
 
 // Independent Atlas character/skill history; no HSK word or course events are reused.
 export const atlasEvents = sqliteTable("atlas_events", {userId:text("user_id").notNull(),id:text("id").notNull(),at:integer("at").notNull(),payload:text("payload").notNull()},t=>[primaryKey({columns:[t.userId,t.id]}),index("atlas_events_user_at").on(t.userId,t.at)]);
+
+// Spatial recognition is independent of legacy Atlas targets, words and course grades.
+export const recognitionEvents=sqliteTable('recognition_events',{userId:text('user_id').notNull(),id:text('id').notNull(),at:integer('at').notNull(),payload:text('payload').notNull()},t=>[primaryKey({columns:[t.userId,t.id]}),index('recognition_events_user_at').on(t.userId,t.at)]);
