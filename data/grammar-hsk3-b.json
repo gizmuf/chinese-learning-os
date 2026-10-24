@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "hsk3-grammar-phrase-patterns",
+    "title": {
+      "en": "Useful reusable phrase frames",
+      "fr": "Structures réutilisables",
+      "ru": "Полезные модели словосочетаний"
+    },
+    "cards": [
+      {
+        "id": "phrases-compact-structures",
+        "pattern": "同位短语；动补短语；数词 + 量词 + 数词 + 量词",
+        "explanation": {
+          "en": "An appositive phrase renames the same person or thing, as in 同学李明. A verb-complement phrase adds a result or direction, as in 听清楚. Repeating a number-classifier pair, as in 一个一个, can mean one at a time.",
+          "fr": "Un groupe en apposition précise la même personne ou chose, comme 同学李明. Un groupe verbe-complément ajoute un résultat ou une direction, comme 听清楚. La répétition d’un couple nombre-classificateur, comme 一个一个, peut signifier un par un.",
+          "ru": "Приложение называет того же человека или предмет точнее, например 同学李明. Глагол с дополнением результата уточняет итог или направление, например 听清楚. Повтор числа и счётного слова, как в 一个一个, может означать «по одному»."
+        },
+        "example": {
+          "hanzi": "同学李明把意思说明白了。",
+          "pinyin": "Tóngxué Lǐ Míng bǎ yìsi shuō míngbai le.",
+          "meaning": {
+            "en": "Classmate Li Ming explained the meaning clearly.",
+            "fr": "Li Ming, mon camarade de classe, a expliqué clairement le sens.",
+            "ru": "Одноклассник Ли Мин ясно объяснил смысл."
+          }
+        },
+        "exercises": [
+          {
+            "id": "phrases-compact-structures-e1",
+            "prompt": {
+              "en": "My classmate Li Ming heard the sentence clearly.",
+              "fr": "Mon camarade Li Ming a bien entendu cette phrase.",
+              "ru": "Мой одноклассник Ли Мин хорошо расслышал это предложение."
+            },
+            "sentence": "我的同学李明___了这句话。",
+            "options": [
+              "听清楚",
+              "听着清楚",
+              "清楚了"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "听清楚 combines the action 听 with its result 清楚.",
+              "fr": "听清楚 associe l’action 听 à son résultat 清楚.",
+              "ru": "听清楚 соединяет действие 听 с результатом 清楚."
+            }
+          },
+          {
+            "id": "phrases-compact-structures-e2",
+            "prompt": {
+              "en": "The teacher asked everyone to read the text one by one.",
+              "fr": "Le professeur a demandé à chacun de lire le texte à tour de rôle.",
+              "ru": "Учитель попросил всех читать текст по одному."
+            },
+            "sentence": "老师让大家___地读课文。",
+            "options": [
+              "一本书",
+              "一个一个",
+              "一两本"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "一个一个 repeats number plus classifier and means one by one here.",
+              "fr": "一个一个 répète le nombre et le classificateur et signifie ici un par un.",
+              "ru": "一个一个 повторяет числительное со счётным словом и здесь означает «по одному»."
+            }
+          }
+        ]
+      },
+      {
+        "id": "phrases-viewpoints",
+        "pattern": "看来；在……看来；看起来 / 看上去；对……来说；在……上 / 下 / 中；一般来说",
+        "explanation": {
+          "en": "看来 often introduces an inference; 在……看来 and 对……来说 mark a viewpoint or perspective. 看起来 and 看上去 describe an appearance. 在……上/下/中 can set a domain or context, while 一般来说 introduces a generalization.",
+          "fr": "看来 introduit souvent une déduction ; 在……看来 et 对……来说 marquent un point de vue. 看起来 et 看上去 décrivent une apparence. 在……上/下/中 peut préciser un domaine, et 一般来说 introduit une généralité.",
+          "ru": "看来 часто вводит вывод; 在……看来 и 对……来说 обозначают точку зрения. 看起来 и 看上去 описывают впечатление. 在……上/下/中 задаёт область или контекст, а 一般来说 вводит обобщение."
+        },
+        "example": {
+          "hanzi": "对我来说，每天读一点儿中文很重要。",
+          "pinyin": "Duì wǒ lái shuō, měitiān dú yìdiǎnr Zhōngwén hěn zhòngyào.",
+          "meaning": {
+            "en": "For me, reading a little Chinese every day is important.",
+            "fr": "Pour moi, lire un peu de chinois chaque jour est important.",
+            "ru": "Для меня важно каждый день немного читать по-китайски."
+          }
+        },
+        "exercises": [
+          {
+            "id": "phrases-viewpoints-e1",
+            "prompt": {
+              "en": "In my view, this plan is practical.",
+              "fr": "À mon avis, ce plan est pratique.",
+              "ru": "На мой взгляд, этот план практичен."
+            },
+            "sentence": "___我看来，这个计划很实际。",
+            "options": [
+              "在",
+              "对",
+              "关于"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "在我看来 means from my point of view.",
+              "fr": "在我看来 signifie de mon point de vue.",
+              "ru": "在我看来 означает «на мой взгляд»."
+            }
+          },
+          {
+            "id": "phrases-viewpoints-e2",
+            "prompt": {
+              "en": "This dish looks delicious.",
+              "fr": "Ce plat a l’air délicieux.",
+              "ru": "Это блюдо выглядит вкусным."
+            },
+            "sentence": "这道菜___很好吃。",
+            "options": [
+              "从起",
+              "对来说",
+              "看起来"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "看起来 describes how the dish appears.",
+              "fr": "看起来 décrit l’impression que donne le plat.",
+              "ru": "看起来 описывает впечатление, которое производит блюдо."
+            }
+          }
+        ]
+      },
+      {
+        "id": "phrases-degree-and-negation",
+        "pattern": "越来越；越……越……；不A不B；一……也 / 都 + 不 / 没……；一点儿也不",
+        "explanation": {
+          "en": "越来越 describes a gradual change. 越……越…… links two changes that intensify together. 不A不B can describe a middle or balanced state, such as 不咸不淡. 一……也/都 + 不/没…… and 一点儿也不 emphasize a complete negative.",
+          "fr": "越来越 décrit une évolution progressive. 越……越…… relie deux évolutions qui s’intensifient ensemble. 不A不B peut exprimer un état intermédiaire, comme 不咸不淡. 一……也/都 + 不/没…… et 一点儿也不 renforcent une négation totale.",
+          "ru": "越来越 обозначает постепенное изменение. 越……越…… связывает два одновременно усиливающихся изменения. 不A不B может описывать среднее состояние, например 不咸不淡. 一……也/都 + 不/没…… и 一点儿也不 усиливают полное отрицание."
+        },
+        "example": {
+          "hanzi": "这道菜不咸不淡，刚好合我的口味。",
+          "pinyin": "Zhè dào cài bù xián bù dàn, gānghǎo hé wǒ de kǒuwèi.",
+          "meaning": {
+            "en": "This dish is neither too salty nor too bland; it is just right for me.",
+            "fr": "Ce plat n’est ni trop salé ni fade ; il est juste à mon goût.",
+            "ru": "Это блюдо не слишком солёное и не пресное; оно как раз по моему вкусу."
+          }
+        },
+        "exercises": [
+          {
+            "id": "phrases-degree-and-negation-e1",
+            "prompt": {
+              "en": "The weather is getting colder and colder.",
+              "fr": "Il fait de plus en plus froid.",
+              "ru": "Погода становится всё холоднее."
+            },
+            "sentence": "天气___冷了。",
+            "options": [
+              "越来越",
+              "不冷不热",
+              "越冷越"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "越来越 before the adjective describes a gradual increase in degree.",
+              "fr": "越来越 placé avant l’adjectif exprime une évolution progressive.",
+              "ru": "越来越 перед прилагательным обозначает постепенное усиление признака."
+            }
+          },
+          {
+            "id": "phrases-degree-and-negation-e2",
+            "prompt": {
+              "en": "I did not eat even one bite.",
+              "fr": "Je n’ai pas mangé une seule bouchée.",
+              "ru": "Я не съел ни кусочка."
+            },
+            "sentence": "我___吃。",
+            "options": [
+              "不一不",
+              "一点儿也不",
+              "一口也没"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "一口也没 + verb says not even one bite was eaten.",
+              "fr": "一口也没 + verbe signifie qu’on n’a pas mangé une seule bouchée.",
+              "ru": "一口也没 + глагол означает, что не съели ни одного кусочка."
+            }
+          }
+        ]
+      },
+      {
+        "id": "phrases-time-and-exceptions",
+        "pattern": "除了……（以外），……还 / 也 / 都……；从……起；（在）……以前 / 以后 / 前 / 后；不一会儿；该……了",
+        "explanation": {
+          "en": "除了……以外 sets an exception and may be followed by 还/也 for an addition or 都 for a general statement. 从……起 marks a starting point. 以前/以后/前/后 place events in time; 不一会儿 means soon, and 该……了 says it is time for something.",
+          "fr": "除了……以外 marque une exception ; 还/也 ajoutent un élément et 都 convient à une généralité. 从……起 indique un point de départ. 以前/以后/前/后 situent les événements ; 不一会儿 signifie bientôt, et 该……了 indique qu’il est temps d’agir.",
+          "ru": "除了……以外 задаёт исключение; 还/也 добавляют ещё один элемент, а 都 подходит для общего утверждения. 从……起 обозначает начало. 以前/以后/前/后 задают время; 不一会儿 означает «вскоре», а 该……了 — «пора»."
+        },
+        "example": {
+          "hanzi": "除了周日以外，我从早上八点起都在学校。",
+          "pinyin": "Chúle zhōurì yǐwài, wǒ cóng zǎoshang bā diǎn qǐ dōu zài xuéxiào.",
+          "meaning": {
+            "en": "Except on Sunday, I am at school from eight in the morning.",
+            "fr": "Sauf le dimanche, je suis à l’école à partir de huit heures du matin.",
+            "ru": "Кроме воскресенья, я бываю в школе с восьми утра."
+          }
+        },
+        "exercises": [
+          {
+            "id": "phrases-time-and-exceptions-e1",
+            "prompt": {
+              "en": "Except on Sunday, I go there every day.",
+              "fr": "Sauf le dimanche, j’y vais tous les jours.",
+              "ru": "Кроме воскресенья, я хожу туда каждый день."
+            },
+            "sentence": "除了周日以外，我每天___去。",
+            "options": [
+              "从",
+              "都",
+              "才"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "都 marks the repeated action as applying to all the remaining days.",
+              "fr": "都 indique que l’action s’applique à tous les autres jours.",
+              "ru": "都 показывает, что действие относится ко всем остальным дням."
+            }
+          },
+          {
+            "id": "phrases-time-and-exceptions-e2",
+            "prompt": {
+              "en": "Starting next month, the shop will open at nine.",
+              "fr": "À partir du mois prochain, le magasin ouvrira à neuf heures.",
+              "ru": "Со следующего месяца магазин будет открываться в девять."
+            },
+            "sentence": "___下个月起，商店九点开门。",
+            "options": [
+              "在",
+              "从",
+              "到"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "从……起 marks next month as the starting point.",
+              "fr": "从……起 indique que le changement commence le mois prochain.",
+              "ru": "从……起 обозначает следующий месяц как момент начала."
+            }
+          }
+        ]
+      },
+      {
+        "id": "phrases-everyday-evaluation",
+        "pattern": "一般来说；不怎么样；X什么（啊）",
+        "explanation": {
+          "en": "一般来说 introduces a broad generalization. 不怎么样 gives a modestly negative evaluation, often meaning not very good. In conversation, X什么（啊） can question or challenge an action or statement; the tone depends on context.",
+          "fr": "一般来说 introduit une généralité. 不怎么样 exprime une appréciation plutôt négative, souvent « pas très bon ». À l’oral, X什么（啊） peut questionner ou contester une action ou une parole ; le ton dépend du contexte.",
+          "ru": "一般来说 вводит обобщение. 不怎么样 выражает скорее отрицательную оценку, часто «не очень хороший». В разговоре X什么（啊） может переспрашивать или оспаривать действие или слова; оттенок зависит от контекста."
+        },
+        "example": {
+          "hanzi": "这家饭馆不怎么样，我们换一家吧。",
+          "pinyin": "Zhè jiā fànguǎn bù zěnmeyàng, wǒmen huàn yì jiā ba.",
+          "meaning": {
+            "en": "This restaurant is not very good; let us try another.",
+            "fr": "Ce restaurant n’est pas terrible ; allons-en essayer un autre.",
+            "ru": "Этот ресторан так себе; давай пойдём в другой."
+          }
+        },
+        "exercises": [
+          {
+            "id": "phrases-everyday-evaluation-e1",
+            "prompt": {
+              "en": "This film is not very good; I do not want to watch it again.",
+              "fr": "Ce film n’est pas terrible ; je ne veux pas le revoir.",
+              "ru": "Фильм так себе; я не хочу смотреть его снова."
+            },
+            "sentence": "这部电影___，我不想再看一次。",
+            "options": [
+              "不怎么样",
+              "不一会儿",
+              "不一定"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "不怎么样 gives the negative evaluation that matches the prompt.",
+              "fr": "不怎么样 exprime l’appréciation négative demandée.",
+              "ru": "不怎么样 выражает нужную отрицательную оценку."
+            }
+          },
+          {
+            "id": "phrases-everyday-evaluation-e2",
+            "prompt": {
+              "en": "What are you saying? I did not hear clearly.",
+              "fr": "Qu’est-ce que tu dis ? Je n’ai pas bien entendu.",
+              "ru": "Что ты говоришь? Я не расслышал."
+            },
+            "sentence": "你___，我没听清楚。",
+            "options": [
+              "该说了",
+              "说清楚",
+              "说什么啊"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "说什么啊 asks what the person is saying; the following clause explains why.",
+              "fr": "说什么啊 demande ce que dit la personne ; la proposition suivante en donne la raison.",
+              "ru": "说什么啊 переспрашивает, что говорит собеседник; следующая часть объясняет почему."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hsk3-grammar-complements",
+    "title": {
+      "en": "Results, direction, possibility and degree",
+      "fr": "Résultat, direction, possibilité et degré",
+      "ru": "Результат, направление, возможность и степень"
+    },
+    "cards": [
+      {
+        "id": "complements-result",
+        "pattern": "动词 + 到 / 住 / 走 / 上",
+        "explanation": {
+          "en": "These result complements show what an action achieves: 到 reaching or finding, 住 holding or remembering, 走 taking something away, and 上 fastening or closing. The meaning depends on the verb-complement pair.",
+          "fr": "Ces compléments de résultat précisent ce que produit l’action : 到 indique qu’on atteint ou trouve, 住 qu’on retient ou garde, 走 qu’on emporte, et 上 qu’on ferme ou fixe. Le sens dépend du couple verbe-complément.",
+          "ru": "Эти дополнения результата показывают итог действия: 到 — достижение или нахождение, 住 — удерживание или запоминание, 走 — унесение, 上 — закрытие или закрепление. Значение зависит от сочетания."
+        },
+        "example": {
+          "hanzi": "我终于找到手机了。",
+          "pinyin": "Wǒ zhōngyú zhǎodào shǒujī le.",
+          "meaning": {
+            "en": "I finally found my phone.",
+            "fr": "J’ai enfin retrouvé mon téléphone.",
+            "ru": "Я наконец нашёл телефон."
+          }
+        },
+        "exercises": [
+          {
+            "id": "complements-result-e1",
+            "prompt": {
+              "en": "I finally found my keys.",
+              "fr": "J’ai enfin retrouvé mes clés.",
+              "ru": "Я наконец нашёл ключи."
+            },
+            "sentence": "我终于___钥匙了。",
+            "options": [
+              "走到",
+              "找到",
+              "找到过"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "找到 means to search and succeed in finding.",
+              "fr": "找到 signifie chercher et réussir à trouver.",
+              "ru": "找到 означает найти в результате поиска."
+            }
+          },
+          {
+            "id": "complements-result-e2",
+            "prompt": {
+              "en": "Please remember this number.",
+              "fr": "Veuillez retenir ce numéro.",
+              "ru": "Пожалуйста, запомните этот номер."
+            },
+            "sentence": "请把这个号码___。",
+            "options": [
+              "记走",
+              "住记",
+              "记住"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "记住 means to remember and retain the information.",
+              "fr": "记住 signifie mémoriser et retenir l’information.",
+              "ru": "记住 означает запомнить и удержать информацию в памяти."
+            }
+          }
+        ]
+      },
+      {
+        "id": "complements-extended-results",
+        "pattern": "动词 + 出 / 起 / 下",
+        "explanation": {
+          "en": "In extended result uses, 出 can mark producing or working something out, 起 can mark recalling or beginning, and 下 can mark keeping or storing something. Learn each common verb-complement pair as a unit.",
+          "fr": "Dans leurs emplois de résultat, 出 peut marquer une production ou une solution trouvée, 起 un souvenir ou un début, et 下 le fait de garder ou de ranger. Il est utile d’apprendre chaque association verbe-complément.",
+          "ru": "В переносных значениях 出 может обозначать получение результата или придуманный выход, 起 — воспоминание или начало, а 下 — сохранение или помещение. Полезно запоминать такие сочетания целиком."
+        },
+        "example": {
+          "hanzi": "她想出了一个好办法，又想起了老师的话。",
+          "pinyin": "Tā xiǎngchū le yí ge hǎo bànfǎ, yòu xiǎngqǐ le lǎoshī de huà.",
+          "meaning": {
+            "en": "She thought of a good solution and remembered the teacher’s words.",
+            "fr": "Elle a trouvé une bonne solution et s’est rappelé les paroles du professeur.",
+            "ru": "Она придумала хорошее решение и вспомнила слова учителя."
+          }
+        },
+        "exercises": [
+          {
+            "id": "complements-extended-results-e1",
+            "prompt": {
+              "en": "She came up with a good idea.",
+              "fr": "Elle a trouvé une bonne idée.",
+              "ru": "Она придумала хорошую идею."
+            },
+            "sentence": "她___了一个好办法。",
+            "options": [
+              "想下",
+              "想起",
+              "想出"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "想出 means to work out or come up with an idea.",
+              "fr": "想出 signifie trouver ou concevoir une idée.",
+              "ru": "想出 означает придумать идею или найти решение."
+            }
+          },
+          {
+            "id": "complements-extended-results-e2",
+            "prompt": {
+              "en": "He suddenly remembered the teacher’s name.",
+              "fr": "Il s’est soudain rappelé le nom du professeur.",
+              "ru": "Он вдруг вспомнил имя учителя."
+            },
+            "sentence": "他突然___老师的名字了。",
+            "options": [
+              "想下",
+              "想出",
+              "想起"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "想起 means to recall something.",
+              "fr": "想起 signifie se rappeler quelque chose.",
+              "ru": "想起 означает вспомнить что-либо."
+            }
+          }
+        ]
+      },
+      {
+        "id": "complements-phase-and-time",
+        "pattern": "动词 + 上 / 起来；动词 + 下去 / 下来；动词 + 时量 + 了",
+        "explanation": {
+          "en": "Directional complements can mark a beginning, as in 笑起来, or continuation, as in 讲下去; 下来 can also describe a downward movement or settling. Separately, a completed event followed by a duration and 了 can say how much time has passed since it happened: 他毕业三年了.",
+          "fr": "Les compléments directionnels peuvent marquer un début, comme 笑起来, ou la poursuite d’une action, comme 讲下去 ; 下来 peut aussi indiquer un mouvement vers le bas ou un apaisement. Par ailleurs, après un événement terminé, une durée suivie de 了 peut indiquer le temps écoulé depuis : 他毕业三年了.",
+          "ru": "Направительные дополнения могут обозначать начало, как в 笑起来, или продолжение, как в 讲下去; 下来 также указывает движение вниз или успокоение. Отдельно: после завершённого события длительность с 了 может обозначать, сколько времени прошло с тех пор: 他毕业三年了."
+        },
+        "example": {
+          "hanzi": "雨下起来后，我们还是继续走下去。",
+          "pinyin": "Yǔ xiàqǐlái hòu, wǒmen háishi jìxù zǒu xiàqù.",
+          "meaning": {
+            "en": "After it started raining, we still kept walking.",
+            "fr": "Après le début de la pluie, nous avons continué à marcher.",
+            "ru": "Когда начался дождь, мы всё равно продолжили идти."
+          }
+        },
+        "exercises": [
+          {
+            "id": "complements-phase-and-time-e1",
+            "prompt": {
+              "en": "It started raining outside.",
+              "fr": "Il s’est mis à pleuvoir dehors.",
+              "ru": "На улице начался дождь."
+            },
+            "sentence": "外面___雨来了。",
+            "options": [
+              "下起",
+              "起下",
+              "下去"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "下起来 marks the beginning of the rain.",
+              "fr": "下起来 marque le début de la pluie.",
+              "ru": "下起来 обозначает начало дождя."
+            }
+          },
+          {
+            "id": "complements-phase-and-time-e2",
+            "prompt": {
+              "en": "He graduated three years ago; three years have passed since then.",
+              "fr": "Il a terminé ses études il y a trois ans ; trois ans se sont écoulés depuis.",
+              "ru": "Он окончил учёбу три года назад; с тех пор прошло три года."
+            },
+            "sentence": "他毕业___了。",
+            "options": [
+              "三年后",
+              "三年",
+              "三年前"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "毕业三年了 gives the duration that has elapsed since graduation.",
+              "fr": "毕业三年了 indique la durée écoulée depuis la fin des études.",
+              "ru": "毕业三年了 указывает, сколько времени прошло после окончания учёбы."
+            }
+          }
+        ]
+      },
+      {
+        "id": "complements-possibility",
+        "pattern": "动词 + 得 / 不 + 动词或形容词",
+        "explanation": {
+          "en": "A potential complement with 得 says an action can achieve the result; 不 says it cannot. Place 得/不 between the verb and the result complement: 听得懂, 拿不动.",
+          "fr": "Le complément potentiel avec 得 indique que l’action peut atteindre le résultat ; 不 indique qu’elle ne le peut pas. 得/不 se place entre le verbe et le complément : 听得懂, 拿不动.",
+          "ru": "Потенциальное дополнение с 得 означает, что действие может привести к результату; 不 — что не может. 得/不 ставится между глаголом и дополнением результата: 听得懂, 拿不动."
+        },
+        "example": {
+          "hanzi": "这个箱子太重了，我一个人拿不动。",
+          "pinyin": "Zhège xiāngzi tài zhòng le, wǒ yí ge rén ná bú dòng.",
+          "meaning": {
+            "en": "This suitcase is too heavy; I cannot lift it by myself.",
+            "fr": "Cette valise est trop lourde ; je ne peux pas la porter seul.",
+            "ru": "Этот чемодан слишком тяжёлый, я один не могу его поднять."
+          }
+        },
+        "exercises": [
+          {
+            "id": "complements-possibility-e1",
+            "prompt": {
+              "en": "I can understand what the teacher says.",
+              "fr": "Je comprends ce que dit le professeur.",
+              "ru": "Я понимаю, что говорит учитель."
+            },
+            "sentence": "我___老师的话。",
+            "options": [
+              "听起来",
+              "听得懂",
+              "听不懂"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "听得懂 means the listener is able to understand by hearing.",
+              "fr": "听得懂 indique que l’on peut comprendre en écoutant.",
+              "ru": "听得懂 означает, что слушатель может понять услышанное."
+            }
+          },
+          {
+            "id": "complements-possibility-e2",
+            "prompt": {
+              "en": "This Chinese character is too hard; I cannot write it well.",
+              "fr": "Ce caractère chinois est trop difficile ; je n’arrive pas à bien l’écrire.",
+              "ru": "Этот китайский иероглиф слишком трудный; я не могу написать его хорошо."
+            },
+            "sentence": "这个字太难了，我___。",
+            "options": [
+              "写不住",
+              "写不好",
+              "写不完"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "写不好 means being unable to write it well; 写不完 means not being able to finish writing it.",
+              "fr": "写不好 signifie ne pas réussir à bien l’écrire ; 写不完 signifie ne pas pouvoir finir de l’écrire.",
+              "ru": "写不好 означает не суметь написать хорошо; 写不完 — не суметь дописать до конца."
+            }
+          }
+        ]
+      },
+      {
+        "id": "complements-degree",
+        "pattern": "形容词 + 得很；形容词 / 动词 + 极了 / 坏了",
+        "explanation": {
+          "en": "得很 follows an adjective to give a strong degree. 极了 is a very common emphatic degree complement after adjectives. 坏了 can also express an extreme state with suitable words, such as 忙坏了; it does not fit every adjective.",
+          "fr": "得很 suit un adjectif pour en renforcer le degré. 极了 est un complément d’intensité fréquent après un adjectif. 坏了 peut aussi marquer un état extrême avec certains mots, comme 忙坏了, mais ne convient pas à tous les adjectifs.",
+          "ru": "得很 ставится после прилагательного и усиливает признак. 极了 — частое дополнение степени после прилагательных. 坏了 тоже может обозначать крайнее состояние в подходящих сочетаниях, например 忙坏了, но подходит не к каждому прилагательному."
+        },
+        "example": {
+          "hanzi": "这件衣服漂亮极了。",
+          "pinyin": "Zhè jiàn yīfu piàoliang jí le.",
+          "meaning": {
+            "en": "This piece of clothing is extremely beautiful.",
+            "fr": "Ce vêtement est vraiment très beau.",
+            "ru": "Эта одежда очень красивая."
+          }
+        },
+        "exercises": [
+          {
+            "id": "complements-degree-e1",
+            "prompt": {
+              "en": "Use the 得很 pattern: This room is very quiet.",
+              "fr": "Utilisez la structure 得很 : cette pièce est très calme.",
+              "ru": "Используйте конструкцию 得很: в этой комнате очень тихо."
+            },
+            "sentence": "这个房间安静___。",
+            "options": [
+              "得很",
+              "安静地",
+              "很得"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "得很 follows 安静 to express a strong degree.",
+              "fr": "得很 suit 安静 pour exprimer un degré élevé.",
+              "ru": "得很 ставится после 安静 и усиливает признак."
+            }
+          },
+          {
+            "id": "complements-degree-e2",
+            "prompt": {
+              "en": "Use 极了: This dress is extremely pretty.",
+              "fr": "Utilisez 极了 : cette robe est vraiment très jolie.",
+              "ru": "Используйте 极了: это платье чрезвычайно красивое."
+            },
+            "sentence": "这条裙子漂亮___。",
+            "options": [
+              "坏了",
+              "下去",
+              "极了"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "极了 is the requested degree complement after 漂亮.",
+              "fr": "极了 est le complément de degré demandé après 漂亮.",
+              "ru": "极了 — требуемое дополнение степени после 漂亮."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hsk3-grammar-sentence-parts",
+    "title": {
+      "en": "Building a subject and adding modifiers",
+      "fr": "Construire un sujet et ajouter des déterminants",
+      "ru": "Построение подлежащего и определений"
+    },
+    "cards": [
+      {
+        "id": "sentence-parts-verb-subject",
+        "pattern": "动词或动词性短语作主语",
+        "explanation": {
+          "en": "A verb or verb phrase can fill the subject position and be discussed as an activity. It commonly takes the place before the predicate, as in 每天散步对身体有好处.",
+          "fr": "Un verbe ou un groupe verbal peut occuper la place du sujet et désigner une activité dont on parle. Il se place souvent avant le prédicat, comme dans 每天散步对身体有好处.",
+          "ru": "Глагол или глагольная группа может занимать позицию подлежащего и называть обсуждаемое действие. Обычно она стоит перед сказуемым, как в 每天散步对身体有好处."
+        },
+        "example": {
+          "hanzi": "每天散步对身体有好处。",
+          "pinyin": "Měitiān sànbù duì shēntǐ yǒu hǎochu.",
+          "meaning": {
+            "en": "Walking every day is good for your health.",
+            "fr": "Marcher chaque jour est bon pour la santé.",
+            "ru": "Ежедневная ходьба полезна для здоровья."
+          }
+        },
+        "exercises": [
+          {
+            "id": "sentence-parts-verb-subject-e1",
+            "prompt": {
+              "en": "Walking every day is good for your health.",
+              "fr": "Marcher chaque jour est bon pour la santé.",
+              "ru": "Ежедневная ходьба полезна для здоровья."
+            },
+            "sentence": "___对身体有好处。",
+            "options": [
+              "每天散步的",
+              "每天散步",
+              "散步着"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "每天散步 is a verb phrase used as the subject.",
+              "fr": "每天散步 est un groupe verbal employé comme sujet.",
+              "ru": "每天散步 — глагольная группа в роли подлежащего."
+            }
+          },
+          {
+            "id": "sentence-parts-verb-subject-e2",
+            "prompt": {
+              "en": "Cooking at home can save money.",
+              "fr": "Cuisiner à la maison permet d’économiser.",
+              "ru": "Домашняя готовка помогает экономить."
+            },
+            "sentence": "___可以省钱。",
+            "options": [
+              "在家做饭的",
+              "在家做饭",
+              "在家做饭了"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "在家做饭 is the activity being described as a way to save money.",
+              "fr": "在家做饭 désigne l’activité présentée comme un moyen d’économiser.",
+              "ru": "在家做饭 называет действие, которое помогает экономить."
+            }
+          }
+        ]
+      },
+      {
+        "id": "sentence-parts-adjective-subject",
+        "pattern": "形容词或形容词性短语作主语",
+        "explanation": {
+          "en": "An adjective or adjective phrase can be used as a subject, often with 的 when it means people or things that have that quality: 简单的 means the simple one(s).",
+          "fr": "Un adjectif ou groupe adjectival peut être sujet ; 的 est souvent ajouté lorsqu’il désigne les personnes ou les choses qui ont cette qualité : 简单的 signifie la ou les choses simples.",
+          "ru": "Прилагательное или группа прилагательных может быть подлежащим; 的 часто добавляется, если речь о людях или предметах с этим признаком: 简单的 — «простое/простые»."
+        },
+        "example": {
+          "hanzi": "简单的更容易记住。",
+          "pinyin": "Jiǎndān de gèng róngyì jìzhù.",
+          "meaning": {
+            "en": "The simple ones are easier to remember.",
+            "fr": "Les choses simples sont plus faciles à retenir.",
+            "ru": "Простое легче запомнить."
+          }
+        },
+        "exercises": [
+          {
+            "id": "sentence-parts-adjective-subject-e1",
+            "prompt": {
+              "en": "The simple ones are easier to remember.",
+              "fr": "Les choses simples sont plus faciles à retenir.",
+              "ru": "Простое легче запомнить."
+            },
+            "sentence": "___更容易记住。",
+            "options": [
+              "简单了",
+              "简单地",
+              "简单的"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "简单的 is a nominalized adjective phrase acting as the subject.",
+              "fr": "简单的 est un groupe adjectival substantivé employé comme sujet.",
+              "ru": "简单的 — субстантивированная группа прилагательного в роли подлежащего."
+            }
+          },
+          {
+            "id": "sentence-parts-adjective-subject-e2",
+            "prompt": {
+              "en": "The blue ones are easier to find.",
+              "fr": "Les bleus sont plus faciles à trouver.",
+              "ru": "Синие легче найти."
+            },
+            "sentence": "___更容易找到。",
+            "options": [
+              "蓝色的",
+              "蓝色地",
+              "蓝色得"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "蓝色的 means the blue ones, so the adjective phrase is the subject.",
+              "fr": "蓝色的 signifie les bleus ; le groupe adjectival est donc le sujet.",
+              "ru": "蓝色的 означает «синие», поэтому группа прилагательного здесь — подлежащее."
+            }
+          }
+        ]
+      },
+      {
+        "id": "sentence-parts-clause-subject",
+        "pattern": "主谓短语作主语",
+        "explanation": {
+          "en": "A small subject-predicate phrase can itself be the subject of a larger sentence. Here the complete idea before 让 is what causes the following feeling or result.",
+          "fr": "Un petit groupe sujet-prédicat peut lui-même être le sujet d’une phrase plus grande. Ici, l’idée complète placée avant 让 provoque le sentiment ou le résultat qui suit.",
+          "ru": "Небольшая конструкция «подлежащее + сказуемое» может сама быть подлежащим более крупного предложения. Здесь целая мысль перед 让 вызывает последующее чувство или результат."
+        },
+        "example": {
+          "hanzi": "你能来让我很高兴。",
+          "pinyin": "Nǐ néng lái ràng wǒ hěn gāoxìng.",
+          "meaning": {
+            "en": "Your being able to come makes me very happy.",
+            "fr": "Le fait que tu puisses venir me rend très heureux.",
+            "ru": "То, что ты можешь прийти, очень меня радует."
+          }
+        },
+        "exercises": [
+          {
+            "id": "sentence-parts-clause-subject-e1",
+            "prompt": {
+              "en": "His not coming today makes me a little disappointed.",
+              "fr": "Le fait qu’il ne vienne pas aujourd’hui me déçoit un peu.",
+              "ru": "То, что он сегодня не придёт, немного меня расстраивает."
+            },
+            "sentence": "他今天不来___我有点儿失望。",
+            "options": [
+              "把我",
+              "让我",
+              "对我"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "The clause 他今天不来 is the idea that makes the speaker disappointed.",
+              "fr": "La proposition 他今天不来 exprime ce qui déçoit le locuteur.",
+              "ru": "Часть 他今天不来 называет причину разочарования говорящего."
+            }
+          },
+          {
+            "id": "sentence-parts-clause-subject-e2",
+            "prompt": {
+              "en": "Your being able to finish the work on time reassures the manager.",
+              "fr": "Le fait que tu puisses terminer le travail à temps rassure le responsable.",
+              "ru": "То, что ты можешь закончить работу вовремя, успокаивает руководителя."
+            },
+            "sentence": "你能按时完成工作___老板很放心。",
+            "options": [
+              "被",
+              "让",
+              "把"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "The clause 你能按时完成工作 acts as the subject of 让老板很放心.",
+              "fr": "La proposition 你能按时完成工作 est le sujet de 让老板很放心.",
+              "ru": "Часть 你能按时完成工作 служит подлежащим для 让老板很放心."
+            }
+          }
+        ]
+      },
+      {
+        "id": "sentence-parts-multiple-modifiers",
+        "pattern": "多项定语：指示词 / 数量词 + 修饰语 + 名词；主谓短语 + 的 + 数量词 + 名词",
+        "explanation": {
+          "en": "Several modifiers can appear before a noun. A relative clause commonly comes before 的, followed by the classifier phrase and noun, as in 你昨天推荐的那本中文书. The exact order depends on the type of modifier.",
+          "fr": "Plusieurs déterminants peuvent précéder un nom. Une proposition relative se place souvent avant 的, puis vient le groupe classificateur-nom, comme dans 你昨天推荐的那本中文书. L’ordre précis dépend du type de déterminant.",
+          "ru": "Перед существительным может стоять несколько определений. Относительная часть обычно ставится перед 的, затем идут счётное сочетание и существительное, как в 你昨天推荐的那本中文书. Точный порядок зависит от типа определения."
+        },
+        "example": {
+          "hanzi": "我买了你昨天推荐的那本中文书。",
+          "pinyin": "Wǒ mǎi le nǐ zuótiān tuījiàn de nà běn Zhōngwén shū.",
+          "meaning": {
+            "en": "I bought that Chinese book you recommended yesterday.",
+            "fr": "J’ai acheté ce livre de chinois que tu m’as recommandé hier.",
+            "ru": "Я купил ту книгу по китайскому, которую ты вчера рекомендовал."
+          }
+        },
+        "exercises": [
+          {
+            "id": "sentence-parts-multiple-modifiers-e1",
+            "prompt": {
+              "en": "I bought two Chinese books.",
+              "fr": "J’ai acheté deux livres de chinois.",
+              "ru": "Я купил две книги по китайскому языку."
+            },
+            "sentence": "我买了___。",
+            "options": [
+              "两本书中文",
+              "两本中文书",
+              "中文两本本书"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "The number and classifier 两本 come before the modifier 中文 and noun 书.",
+              "fr": "Le nombre et le classificateur 两本 précèdent le déterminant 中文 et le nom 书.",
+              "ru": "Число со счётным словом 两本 ставится перед определением 中文 и существительным 书."
+            }
+          },
+          {
+            "id": "sentence-parts-multiple-modifiers-e2",
+            "prompt": {
+              "en": "I bought that Chinese book you recommended yesterday.",
+              "fr": "J’ai acheté le livre de chinois que tu m’as recommandé hier.",
+              "ru": "Я купил ту книгу по китайскому, которую ты вчера рекомендовал."
+            },
+            "sentence": "我买了你昨天推荐的___。",
+            "options": [
+              "那本中文书",
+              "中文那本书",
+              "书那本中文"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "The relative clause precedes 那本中文书, the classifier phrase and noun.",
+              "fr": "La proposition relative précède 那本中文书, le groupe classificateur-nom.",
+              "ru": "Относительная часть стоит перед 那本中文书 — счётным сочетанием с существительным."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hsk3-grammar-sentence-types",
+    "title": {
+      "en": "Questions, 把, 被 and accompanying actions",
+      "fr": "Questions, 把, 被 et actions simultanées",
+      "ru": "Вопросы, 把, 被 и сопутствующие действия"
+    },
+    "cards": [
+      {
+        "id": "sentence-types-questions",
+        "pattern": "怎样 + 动词；不是……吗？",
+        "explanation": {
+          "en": "怎样 asks how an action is done. 不是……吗？ is a rhetorical confirmation question: the speaker expects the listener to agree with the stated fact.",
+          "fr": "怎样 demande comment se fait une action. 不是……吗？ est une question rhétorique de confirmation : le locuteur s’attend à ce que l’interlocuteur confirme le fait énoncé.",
+          "ru": "怎样 спрашивает, как выполняется действие. 不是……吗？ — риторический вопрос-подтверждение: говорящий ожидает согласия с уже названным фактом."
+        },
+        "example": {
+          "hanzi": "你不是已经吃过早饭了吗？",
+          "pinyin": "Nǐ bú shì yǐjīng chī guo zǎofàn le ma?",
+          "meaning": {
+            "en": "You have already had breakfast, haven’t you?",
+            "fr": "Tu as déjà pris le petit-déjeuner, n’est-ce pas ?",
+            "ru": "Ты ведь уже позавтракал, правда?"
+          }
+        },
+        "exercises": [
+          {
+            "id": "sentence-types-questions-e1",
+            "prompt": {
+              "en": "How do we get to the station?",
+              "fr": "Comment va-t-on à la gare ?",
+              "ru": "Как нам добраться до вокзала?"
+            },
+            "sentence": "我们___去车站？",
+            "options": [
+              "哪儿",
+              "什么时候",
+              "怎样"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "怎样 comes before the verb 去 to ask how the trip is made.",
+              "fr": "怎样 précède le verbe 去 pour demander comment effectuer le trajet.",
+              "ru": "怎样 стоит перед глаголом 去 и спрашивает, как совершить поездку."
+            }
+          },
+          {
+            "id": "sentence-types-questions-e2",
+            "prompt": {
+              "en": "You have already read this book, haven’t you?",
+              "fr": "Tu as déjà lu ce livre, n’est-ce pas ?",
+              "ru": "Ты ведь уже читал эту книгу?"
+            },
+            "sentence": "你___已经看过这本书了吗？",
+            "options": [
+              "有没有",
+              "不是",
+              "有不是"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "不是……吗？ frames the known fact as a request for confirmation.",
+              "fr": "不是……吗？ présente le fait connu comme une demande de confirmation.",
+              "ru": "不是……吗？ оформляет известный факт как просьбу подтвердить его."
+            }
+          }
+        ]
+      },
+      {
+        "id": "sentence-types-ba-result-place",
+        "pattern": "主语 + 把 + 宾语 + 动词 + 在 / 到 + 处所；把 + 宾语 + 动词 + 结果 / 趋向补语",
+        "explanation": {
+          "en": "In these 把 sentences, put the affected object after 把, then state its resulting location or the result/direction of the action. A clear outcome makes this pattern natural.",
+          "fr": "Dans ces phrases en 把, placez l’objet affecté après 把, puis indiquez sa destination ou le résultat/la direction de l’action. Un résultat clair rend cette structure naturelle.",
+          "ru": "В таких предложениях с 把 после него ставят объект действия, затем указывают его новое место или результат/направление действия. Конструкция естественна, когда результат понятен."
+        },
+        "example": {
+          "hanzi": "我把杯子放在桌子上了。",
+          "pinyin": "Wǒ bǎ bēizi fàng zài zhuōzi shang le.",
+          "meaning": {
+            "en": "I put the cup on the table.",
+            "fr": "J’ai posé la tasse sur la table.",
+            "ru": "Я поставил чашку на стол."
+          }
+        },
+        "exercises": [
+          {
+            "id": "sentence-types-ba-result-place-e1",
+            "prompt": {
+              "en": "I put the cup on the table.",
+              "fr": "Je pose la tasse sur la table.",
+              "ru": "Я ставлю чашку на стол."
+            },
+            "sentence": "我___杯子放在桌子上。",
+            "options": [
+              "向",
+              "被",
+              "把"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "把 places the affected object 杯子 before the verb phrase.",
+              "fr": "把 place l’objet affecté 杯子 avant le groupe verbal.",
+              "ru": "把 ставит объект действия 杯子 перед глагольной группой."
+            }
+          },
+          {
+            "id": "sentence-types-ba-result-place-e2",
+            "prompt": {
+              "en": "He closed the window.",
+              "fr": "Il a fermé la fenêtre.",
+              "ru": "Он закрыл окно."
+            },
+            "sentence": "他把窗户关___了。",
+            "options": [
+              "到",
+              "上",
+              "走"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "关上 states the completed result of closing the window.",
+              "fr": "关上 indique que la fenêtre est maintenant fermée.",
+              "ru": "关上 обозначает достигнутый результат: окно закрыто."
+            }
+          }
+        ]
+      },
+      {
+        "id": "sentence-types-ba-recipient",
+        "pattern": "主语 + 把 + 宾语1 + 动词 +（给）+ 宾语2",
+        "explanation": {
+          "en": "This 把 pattern places the thing being transferred after 把 and the recipient after the verb. 给 can mark the recipient, especially with verbs such as 交.",
+          "fr": "Dans cette structure en 把, l’objet transmis vient après 把 et le destinataire après le verbe. 给 peut marquer le destinataire, notamment avec des verbes comme 交.",
+          "ru": "В этой конструкции с 把 перед глаголом ставят передаваемый предмет, а после глагола — получателя. 给 может обозначать получателя, особенно с глаголами вроде 交."
+        },
+        "example": {
+          "hanzi": "爸爸把钥匙交给了我。",
+          "pinyin": "Bàba bǎ yàoshi jiāo gěi le wǒ.",
+          "meaning": {
+            "en": "Dad handed the keys to me.",
+            "fr": "Papa m’a remis les clés.",
+            "ru": "Папа передал мне ключи."
+          }
+        },
+        "exercises": [
+          {
+            "id": "sentence-types-ba-recipient-e1",
+            "prompt": {
+              "en": "Mom gave the phone to me.",
+              "fr": "Maman m’a donné le téléphone.",
+              "ru": "Мама дала мне телефон."
+            },
+            "sentence": "妈妈___。",
+            "options": [
+              "被手机给我",
+              "向手机给我",
+              "把手机给了我"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "手机 is the transferred object and 我 is the recipient.",
+              "fr": "手机 est l’objet transmis et 我 le destinataire.",
+              "ru": "手机 — передаваемый предмет, а 我 — получатель."
+            }
+          },
+          {
+            "id": "sentence-types-ba-recipient-e2",
+            "prompt": {
+              "en": "He handed the document to the manager.",
+              "fr": "Il a remis le document au responsable.",
+              "ru": "Он передал документ руководителю."
+            },
+            "sentence": "他___。",
+            "options": [
+              "把文件交给了经理",
+              "被文件交给经理",
+              "把经理交给了文件"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "文件 is the object handed over; 经理 is the recipient after 交给.",
+              "fr": "文件 est le document remis ; 经理 est le destinataire après 交给.",
+              "ru": "文件 — передаваемый документ; 经理 — получатель после 交给."
+            }
+          }
+        ]
+      },
+      {
+        "id": "sentence-types-passive",
+        "pattern": "主语 + 被 +（施事）+ 动词 + 其他成分",
+        "explanation": {
+          "en": "被 marks a passive event in which the subject receives the action. The agent can follow 被 or be omitted. Result, direction, or another detail commonly completes the verb.",
+          "fr": "被 marque un événement passif dans lequel le sujet subit l’action. L’agent peut suivre 被 ou être omis. Un résultat, une direction ou un autre détail complète souvent le verbe.",
+          "ru": "被 обозначает пассивное действие, которое испытывает подлежащее. Исполнитель может стоять после 被 или опускаться. Глагол часто дополняется результатом, направлением или другой деталью."
+        },
+        "example": {
+          "hanzi": "我的自行车被人骑走了。",
+          "pinyin": "Wǒ de zìxíngchē bèi rén qí zǒu le.",
+          "meaning": {
+            "en": "Someone rode my bicycle away.",
+            "fr": "Quelqu’un est parti avec mon vélo.",
+            "ru": "Кто-то уехал на моём велосипеде."
+          }
+        },
+        "exercises": [
+          {
+            "id": "sentence-types-passive-e1",
+            "prompt": {
+              "en": "My bicycle was ridden away by my younger brother.",
+              "fr": "Mon petit frère est parti avec mon vélo.",
+              "ru": "Мой младший брат уехал на моём велосипеде."
+            },
+            "sentence": "我的自行车___弟弟骑走了。",
+            "options": [
+              "被",
+              "向",
+              "把"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "The bicycle receives the action, and 弟弟 names the agent after 被.",
+              "fr": "Le vélo subit l’action ; 弟弟 indique l’agent après 被.",
+              "ru": "Велосипед испытывает действие, а 弟弟 назван исполнителем после 被."
+            }
+          },
+          {
+            "id": "sentence-types-passive-e2",
+            "prompt": {
+              "en": "The door was closed; the agent is not stated.",
+              "fr": "La porte a été fermée ; on ne précise pas par qui.",
+              "ru": "Дверь закрыли; исполнитель не указан."
+            },
+            "sentence": "门___关上了。",
+            "options": [
+              "向",
+              "被",
+              "把"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "The passive sentence leaves the agent unmentioned.",
+              "fr": "La phrase passive ne mentionne pas l’agent.",
+              "ru": "В пассивном предложении исполнитель не упоминается."
+            }
+          }
+        ]
+      },
+      {
+        "id": "sentence-types-accompanying-and-repeated-verb",
+        "pattern": "动词1 + 着 + 动词2；主语 + 动词 + 宾语 + 动词 + 补语",
+        "explanation": {
+          "en": "Verb + 着 + verb shows an action accompanying the main action, as in 笑着说. In a repeated-verb sentence, the verb appears again after its object so it can take a complement: 她说汉语说得很流利.",
+          "fr": "Verbe + 着 + verbe présente une action qui accompagne l’action principale, comme dans 笑着说. Dans une phrase à verbe répété, le verbe revient après son objet pour recevoir un complément : 她说汉语说得很流利.",
+          "ru": "Глагол + 着 + глагол показывает сопутствующее действие, например 笑着说. В конструкции с повтором глагол повторяется после объекта, чтобы принять дополнение: 她说汉语说得很流利."
+        },
+        "example": {
+          "hanzi": "他笑着说完了这个故事。",
+          "pinyin": "Tā xiào zhe shuō wán le zhège gùshi.",
+          "meaning": {
+            "en": "He finished telling the story with a smile.",
+            "fr": "Il a fini de raconter l’histoire en souriant.",
+            "ru": "Он закончил рассказывать эту историю с улыбкой."
+          }
+        },
+        "exercises": [
+          {
+            "id": "sentence-types-accompanying-and-repeated-verb-e1",
+            "prompt": {
+              "en": "He told me the news with a smile.",
+              "fr": "Il m’a annoncé la nouvelle en souriant.",
+              "ru": "Он улыбаясь сообщил мне эту новость."
+            },
+            "sentence": "他___告诉我这个消息。",
+            "options": [
+              "笑了",
+              "笑着",
+              "笑得"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "笑着 shows that smiling accompanies the act of telling.",
+              "fr": "笑着 indique que le sourire accompagne l’annonce.",
+              "ru": "笑着 показывает, что улыбка сопровождает сообщение."
+            }
+          },
+          {
+            "id": "sentence-types-accompanying-and-repeated-verb-e2",
+            "prompt": {
+              "en": "She speaks Chinese very fluently.",
+              "fr": "Elle parle chinois très couramment.",
+              "ru": "Она очень бегло говорит по-китайски."
+            },
+            "sentence": "她说汉语说___。",
+            "options": [
+              "得很流利",
+              "很流利地",
+              "流利了"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "The second 说 takes the degree complement 得很流利.",
+              "fr": "Le second 说 reçoit le complément de degré 得很流利.",
+              "ru": "Второй глагол 说 принимает дополнение степени 得很流利."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hsk3-grammar-compare-existence",
+    "title": {
+      "en": "Comparisons, appearance and disappearance",
+      "fr": "Comparaison, apparition et disparition",
+      "ru": "Сравнение, появление и исчезновение"
+    },
+    "cards": [
+      {
+        "id": "compare-degree",
+        "pattern": "A 比 B + 更 / 还 + 形容词；A 不比 B + 形容词",
+        "explanation": {
+          "en": "比 compares a quality; 更 or 还 can emphasize a greater degree. 不比 denies that A exceeds B on that quality, but it does not by itself prove that A is less.",
+          "fr": "比 compare une qualité ; 更 ou 还 peuvent renforcer le degré. 不比 nie que A dépasse B pour cette qualité, mais ne prouve pas à lui seul que A est inférieur.",
+          "ru": "比 сравнивает признак; 更 или 还 могут усилить степень. 不比 отрицает, что A превосходит B по этому признаку, но само по себе не доказывает, что A хуже или меньше."
+        },
+        "example": {
+          "hanzi": "今年的冬天比去年更冷。",
+          "pinyin": "Jīnnián de dōngtiān bǐ qùnián gèng lěng.",
+          "meaning": {
+            "en": "This winter is even colder than last year.",
+            "fr": "Cet hiver est encore plus froid que l’an dernier.",
+            "ru": "Эта зима ещё холоднее прошлогодней."
+          }
+        },
+        "exercises": [
+          {
+            "id": "compare-degree-e1",
+            "prompt": {
+              "en": "This winter is even colder than last year.",
+              "fr": "Cet hiver est encore plus froid que l’an dernier.",
+              "ru": "Эта зима ещё холоднее прошлогодней."
+            },
+            "sentence": "今年的冬天比去年___冷。",
+            "options": [
+              "更",
+              "最",
+              "一样"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "更 emphasizes the higher degree of cold compared with last year.",
+              "fr": "更 renforce le degré de froid par rapport à l’an dernier.",
+              "ru": "更 усиливает степень холода по сравнению с прошлым годом."
+            }
+          },
+          {
+            "id": "compare-degree-e2",
+            "prompt": {
+              "en": "This shop is not cheaper than that one.",
+              "fr": "Ce magasin n’est pas moins cher que l’autre.",
+              "ru": "Этот магазин не дешевле того."
+            },
+            "sentence": "这家店不比那家___。",
+            "options": [
+              "高",
+              "便宜",
+              "安静"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "不比那家便宜 says this shop is not cheaper; it may be equally or more expensive.",
+              "fr": "不比那家便宜 signifie que ce magasin n’est pas moins cher ; il peut être aussi cher ou plus cher.",
+              "ru": "不比那家便宜 означает, что этот магазин не дешевле; он может быть таким же дорогим или дороже."
+            }
+          }
+        ]
+      },
+      {
+        "id": "compare-equality",
+        "pattern": "A 跟 B 一样；A 跟 B 一样 + 形容词",
+        "explanation": {
+          "en": "跟……一样 states that two people or things are the same in the respect supplied. Add an adjective after 一样 when naming the shared quality: 跟我一样高.",
+          "fr": "跟……一样 indique que deux personnes ou choses sont identiques sur le point évoqué. On ajoute un adjectif après 一样 pour nommer la qualité commune : 跟我一样高.",
+          "ru": "跟……一样 указывает на равенство двух людей или предметов по заданному признаку. Прилагательное после 一样 уточняет общий признак: 跟我一样高."
+        },
+        "example": {
+          "hanzi": "她跟姐姐一样高。",
+          "pinyin": "Tā gēn jiějie yíyàng gāo.",
+          "meaning": {
+            "en": "She is as tall as her older sister.",
+            "fr": "Elle est aussi grande que sa sœur aînée.",
+            "ru": "Она такого же роста, как старшая сестра."
+          }
+        },
+        "exercises": [
+          {
+            "id": "compare-equality-e1",
+            "prompt": {
+              "en": "The new school is the same as the old school.",
+              "fr": "La nouvelle école est identique à l’ancienne.",
+              "ru": "Новая школа такая же, как старая."
+            },
+            "sentence": "新学校跟旧学校___。",
+            "options": [
+              "多",
+              "更",
+              "一样"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "一样 completes the equality frame 跟……一样.",
+              "fr": "一样 complète la structure d’égalité 跟……一样.",
+              "ru": "一样 завершает конструкцию равенства 跟……一样."
+            }
+          },
+          {
+            "id": "compare-equality-e2",
+            "prompt": {
+              "en": "Her room is as large as mine.",
+              "fr": "Sa chambre est aussi grande que la mienne.",
+              "ru": "Её комната такая же большая, как моя."
+            },
+            "sentence": "她的房间跟我的___大。",
+            "options": [
+              "一样",
+              "不比",
+              "更"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "一样大 means equal in size.",
+              "fr": "一样大 signifie de même taille.",
+              "ru": "一样大 означает одинаковый размер."
+            }
+          }
+        ]
+      },
+      {
+        "id": "compare-amount-of-action",
+        "pattern": "A 比 B + 多 / 少 / 早 / 晚 + 动词 + 数量短语",
+        "explanation": {
+          "en": "Put 多、少、早 or 晚 before the verb to compare the amount, timing, or duration of an action. The quantity phrase states the difference.",
+          "fr": "多、少、早 ou 晚 se place avant le verbe pour comparer la quantité ou le moment d’une action. Le groupe de quantité indique l’écart.",
+          "ru": "多、少、早 или 晚 ставятся перед глаголом, чтобы сравнить объём или время действия. Счётное сочетание показывает разницу."
+        },
+        "example": {
+          "hanzi": "我比弟弟早到学校十分钟。",
+          "pinyin": "Wǒ bǐ dìdi zǎo dào xuéxiào shí fēnzhōng.",
+          "meaning": {
+            "en": "I get to school ten minutes earlier than my younger brother.",
+            "fr": "J’arrive à l’école dix minutes avant mon petit frère.",
+            "ru": "Я прихожу в школу на десять минут раньше младшего брата."
+          }
+        },
+        "exercises": [
+          {
+            "id": "compare-amount-of-action-e1",
+            "prompt": {
+              "en": "I get to school ten minutes earlier than my younger brother.",
+              "fr": "J’arrive à l’école dix minutes avant mon petit frère.",
+              "ru": "Я прихожу в школу на десять минут раньше младшего брата."
+            },
+            "sentence": "我比弟弟___到学校十分钟。",
+            "options": [
+              "早",
+              "晚",
+              "多"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "早到……十分钟 means arriving ten minutes earlier.",
+              "fr": "早到……十分钟 signifie arriver dix minutes plus tôt.",
+              "ru": "早到……十分钟 означает прийти на десять минут раньше."
+            }
+          },
+          {
+            "id": "compare-amount-of-action-e2",
+            "prompt": {
+              "en": "My older sister bought two more books than I did.",
+              "fr": "Ma sœur aînée a acheté deux livres de plus que moi.",
+              "ru": "Старшая сестра купила на две книги больше, чем я."
+            },
+            "sentence": "姐姐比我___买了两本书。",
+            "options": [
+              "多",
+              "少",
+              "晚"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "多买了两本 means buying two more books.",
+              "fr": "多买了两本 signifie acheter deux livres de plus.",
+              "ru": "多买了两本 означает купить на две книги больше."
+            }
+          }
+        ]
+      },
+      {
+        "id": "existence-appearance-disappearance",
+        "pattern": "处所 + 动词 + 趋向 / 结果补语 +（了）+ 数量短语 + 人 / 物",
+        "explanation": {
+          "en": "An existential sentence can present something appearing or disappearing at a place. The place comes first; the verb and result/directional complement describe the event, followed by the newly present or missing person or thing.",
+          "fr": "Une phrase existentielle peut présenter l’apparition ou la disparition de quelque chose dans un lieu. Le lieu vient d’abord ; le verbe et son complément de résultat ou de direction décrivent l’événement, puis vient la personne ou la chose concernée.",
+          "ru": "Экзистенциальное предложение может сообщать о появлении или исчезновении предмета в месте. Сначала ставится место, затем глагол с дополнением результата или направления, а в конце — появившийся или исчезнувший предмет."
+        },
+        "example": {
+          "hanzi": "门口走进来一个人。",
+          "pinyin": "Ménkǒu zǒu jìnlái yí ge rén.",
+          "meaning": {
+            "en": "A person walked in through the doorway.",
+            "fr": "Quelqu’un est entré par la porte.",
+            "ru": "В дверь вошёл человек."
+          }
+        },
+        "exercises": [
+          {
+            "id": "existence-appearance-disappearance-e1",
+            "prompt": {
+              "en": "Three people walked in through the doorway.",
+              "fr": "Trois personnes sont entrées par la porte.",
+              "ru": "В дверь вошли три человека."
+            },
+            "sentence": "门口___三个人。",
+            "options": [
+              "走进来",
+              "少了",
+              "走出去"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "走进来 describes people entering; the new people appear after the verb.",
+              "fr": "走进来 décrit l’entrée ; les personnes qui apparaissent suivent le verbe.",
+              "ru": "走进来 описывает вход; появившиеся люди стоят после глагола."
+            }
+          },
+          {
+            "id": "existence-appearance-disappearance-e2",
+            "prompt": {
+              "en": "A table was moved out of the room.",
+              "fr": "Une table a été sortie de la pièce.",
+              "ru": "Из комнаты вынесли стол."
+            },
+            "sentence": "房间里___一张桌子。",
+            "options": [
+              "搬走了",
+              "搬进来",
+              "看见"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "搬走了 describes the table disappearing from the room through removal.",
+              "fr": "搬走了 indique que la table a quitté la pièce parce qu’on l’a déplacée.",
+              "ru": "搬走了 показывает, что стол вынесли из комнаты."
+            }
+          }
+        ]
+      },
+      {
+        "id": "compare-attitude-shide",
+        "pattern": "是……的：强调说话人的看法或态度",
+        "explanation": {
+          "en": "In this syllabus use, 是……的 presents an evaluation or confident stance, as in 这个办法是不错的. Context carries the attitude; this is distinct from the familiar 是……的 pattern that highlights details of a past event.",
+          "fr": "Dans cet emploi du programme, 是……的 présente une appréciation ou une position affirmée, comme dans 这个办法是不错的. Le contexte porte l’attitude ; cet emploi se distingue de la structure 是……的 qui souligne les détails d’un événement passé.",
+          "ru": "В этом пункте 是……的 передаёт оценку или уверенную позицию, например 这个办法是不错的. Оттенок задаёт контекст; это отличается от знакомой конструкции 是……的, выделяющей детали прошлого события."
+        },
+        "example": {
+          "hanzi": "这个办法是不错的，我们可以试试。",
+          "pinyin": "Zhège bànfǎ shì búcuò de, wǒmen kěyǐ shìshi.",
+          "meaning": {
+            "en": "This method is indeed good; we can try it.",
+            "fr": "Cette méthode est effectivement bonne ; nous pouvons l’essayer.",
+            "ru": "Этот способ и правда неплохой; можно попробовать."
+          }
+        },
+        "exercises": [
+          {
+            "id": "compare-attitude-shide-e1",
+            "prompt": {
+              "en": "I do think this arrangement is suitable; everyone can relax.",
+              "fr": "Je trouve que cet arrangement convient bien ; tout le monde peut être rassuré.",
+              "ru": "Я считаю, что этот вариант вполне подходит; все могут быть спокойны."
+            },
+            "sentence": "这个安排___合适的，大家可以放心。",
+            "options": [
+              "把",
+              "在",
+              "是"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "是……的 frames the speaker’s firm positive evaluation.",
+              "fr": "是……的 encadre ici l’appréciation positive et assurée du locuteur.",
+              "ru": "是……的 оформляет здесь уверенную положительную оценку говорящего."
+            }
+          },
+          {
+            "id": "compare-attitude-shide-e2",
+            "prompt": {
+              "en": "I am sure he will not forget your help.",
+              "fr": "Je suis sûr qu’il n’oubliera pas ton aide.",
+              "ru": "Я уверен, что он не забудет твою помощь."
+            },
+            "sentence": "他___不会忘记你的帮助。",
+            "options": [
+              "被",
+              "把",
+              "是"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "是 makes the prediction sound like the speaker’s confident stance.",
+              "fr": "是 donne à la prédiction le ton d’une conviction du locuteur.",
+              "ru": "是 придаёт высказыванию оттенок уверенной позиции говорящего."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hsk3-grammar-clauses",
+    "title": {
+      "en": "Connecting ideas and expressing conditions",
+      "fr": "Relier les idées et exprimer des conditions",
+      "ru": "Связь идей и выражение условий"
+    },
+    "cards": [
+      {
+        "id": "clauses-choice",
+        "pattern": "或 / 或者；或者……，或者……",
+        "explanation": {
+          "en": "或 and 或者 connect alternatives. The paired frame 或者……，或者…… explicitly presents two possible choices.",
+          "fr": "或 et 或者 relient des possibilités. La structure répétée 或者……，或者…… présente explicitement deux choix.",
+          "ru": "或 и 或者 соединяют варианты. Повторяющаяся модель 或者……，或者…… явно предлагает два возможных выбора."
+        },
+        "example": {
+          "hanzi": "你可以喝茶或者咖啡。",
+          "pinyin": "Nǐ kěyǐ hē chá huòzhě kāfēi.",
+          "meaning": {
+            "en": "You can have tea or coffee.",
+            "fr": "Tu peux prendre du thé ou du café.",
+            "ru": "Ты можешь выпить чай или кофе."
+          }
+        },
+        "exercises": [
+          {
+            "id": "clauses-choice-e1",
+            "prompt": {
+              "en": "You can choose tea or coffee.",
+              "fr": "Tu peux choisir du thé ou du café.",
+              "ru": "Ты можешь выбрать чай или кофе."
+            },
+            "sentence": "你可以选茶___咖啡。",
+            "options": [
+              "或者",
+              "然后",
+              "虽然"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "或者 links the two choices, tea and coffee.",
+              "fr": "或者 relie les deux choix : le thé et le café.",
+              "ru": "或者 соединяет два варианта: чай и кофе."
+            }
+          },
+          {
+            "id": "clauses-choice-e2",
+            "prompt": {
+              "en": "On the weekend, we can either rest at home or go to the park.",
+              "fr": "Le week-end, nous pouvons soit nous reposer à la maison, soit aller au parc.",
+              "ru": "В выходные мы можем либо отдохнуть дома, либо пойти в парк."
+            },
+            "sentence": "周末我们___。",
+            "options": [
+              "虽然在家休息，或者去公园",
+              "或者在家休息，或者去公园",
+              "然后在家休息，因为去公园"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "The paired 或者……，或者…… frame presents the two alternatives.",
+              "fr": "La structure répétée 或者……，或者…… présente les deux possibilités.",
+              "ru": "Повторяющаяся модель 或者……，或者…… задаёт два варианта."
+            }
+          }
+        ]
+      },
+      {
+        "id": "clauses-order-and-purpose",
+        "pattern": "先……，再 / 然后……；为了……，……；……了……（就）……",
+        "explanation": {
+          "en": "先……再/然后…… orders actions. 为了…… gives the purpose of the next action. A completed event followed by 就 can introduce what happens right after, as in 下课了我就回家.",
+          "fr": "先……再/然后…… ordonne les actions. 为了…… indique le but de l’action qui suit. Un événement terminé suivi de 就 peut introduire ce qui arrive juste après, comme dans 下课了我就回家.",
+          "ru": "先……再/然后…… задаёт порядок действий. 为了…… вводит цель следующего действия. За завершённым событием может следовать 就, обозначающее то, что происходит сразу после него, как в 下课了我就回家."
+        },
+        "example": {
+          "hanzi": "我们先买票，买了票就进电影院。",
+          "pinyin": "Wǒmen xiān mǎi piào, mǎi le piào jiù jìn diànyǐngyuàn.",
+          "meaning": {
+            "en": "We buy the tickets first and go into the cinema as soon as we have them.",
+            "fr": "Nous achetons d’abord les billets, puis nous entrons au cinéma dès que nous les avons.",
+            "ru": "Сначала мы покупаем билеты, а как только купим, сразу входим в кинотеатр."
+          }
+        },
+        "exercises": [
+          {
+            "id": "clauses-order-and-purpose-e1",
+            "prompt": {
+              "en": "Wash your hands first, then eat.",
+              "fr": "Lave-toi d’abord les mains, puis mange.",
+              "ru": "Сначала вымой руки, потом ешь."
+            },
+            "sentence": "先洗手，___吃饭。",
+            "options": [
+              "再",
+              "虽然",
+              "只有"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "再 marks the next action after washing hands.",
+              "fr": "再 indique l’action qui suit le lavage des mains.",
+              "ru": "再 обозначает действие, следующее за мытьём рук."
+            }
+          },
+          {
+            "id": "clauses-order-and-purpose-e2",
+            "prompt": {
+              "en": "To catch the plane, we set off before dawn.",
+              "fr": "Pour prendre l’avion, nous sommes partis avant l’aube.",
+              "ru": "Чтобы успеть на самолёт, мы выехали до рассвета."
+            },
+            "sentence": "___赶上飞机，我们天没亮就出发了。",
+            "options": [
+              "或者",
+              "为了",
+              "虽然"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "为了 introduces the goal of setting off early.",
+              "fr": "为了 introduit le but du départ matinal.",
+              "ru": "为了 вводит цель раннего отъезда."
+            }
+          }
+        ]
+      },
+      {
+        "id": "clauses-simultaneous-alternating",
+        "pattern": "一边……，一边……；一会儿……，一会儿……；又……，又……",
+        "explanation": {
+          "en": "一边……一边…… describes two actions happening at the same time. 一会儿……一会儿…… alternates between states or actions. 又……又…… can present two qualities or actions together.",
+          "fr": "一边……一边…… décrit deux actions simultanées. 一会儿……一会儿…… alterne entre des états ou des actions. 又……又…… peut présenter ensemble deux qualités ou actions.",
+          "ru": "一边……一边…… описывает два одновременных действия. 一会儿……一会儿…… чередует состояния или действия. 又……又…… может объединять два признака или действия."
+        },
+        "example": {
+          "hanzi": "孩子一会儿唱歌，一会儿跳舞。",
+          "pinyin": "Háizi yíhuìr chànggē, yíhuìr tiàowǔ.",
+          "meaning": {
+            "en": "The child sings for a while, then dances for a while.",
+            "fr": "L’enfant chante un moment, puis danse un moment.",
+            "ru": "Ребёнок то поёт, то танцует."
+          }
+        },
+        "exercises": [
+          {
+            "id": "clauses-simultaneous-alternating-e1",
+            "prompt": {
+              "en": "She does her homework while listening to music.",
+              "fr": "Elle fait ses devoirs tout en écoutant de la musique.",
+              "ru": "Она делает уроки, слушая музыку."
+            },
+            "sentence": "她___做作业。",
+            "options": [
+              "一边听音乐，一边",
+              "先听音乐，再",
+              "然后听音乐，再"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "一边……一边…… marks listening and doing homework as simultaneous actions.",
+              "fr": "一边……一边…… présente l’écoute et les devoirs comme des actions simultanées.",
+              "ru": "一边……一边…… показывает, что музыка и уроки происходят одновременно."
+            }
+          },
+          {
+            "id": "clauses-simultaneous-alternating-e2",
+            "prompt": {
+              "en": "This room is both clean and bright.",
+              "fr": "Cette pièce est à la fois propre et lumineuse.",
+              "ru": "Эта комната и чистая, и светлая."
+            },
+            "sentence": "这间屋子___。",
+            "options": [
+              "一边干净一边明亮",
+              "一会儿干净一会儿明亮",
+              "又干净又明亮"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "又……又…… combines the room’s two qualities.",
+              "fr": "又……又…… associe les deux qualités de la pièce.",
+              "ru": "又……又…… объединяет два признака комнаты."
+            }
+          }
+        ]
+      },
+      {
+        "id": "clauses-addition-and-contrast",
+        "pattern": "不但……，而且……；虽然……，可是……",
+        "explanation": {
+          "en": "不但……而且…… adds a second, stronger or further point. 虽然……可是…… introduces a contrast: the second clause still holds despite the first.",
+          "fr": "不但……而且…… ajoute un second point, souvent plus marqué. 虽然……可是…… exprime un contraste : la seconde proposition reste vraie malgré la première.",
+          "ru": "不但……而且…… добавляет второй, часто более важный довод. 虽然……可是…… вводит противопоставление: вторая часть остаётся верной несмотря на первую."
+        },
+        "example": {
+          "hanzi": "她不但会说英语，而且会说中文。",
+          "pinyin": "Tā búdàn huì shuō Yīngyǔ, érqiě huì shuō Zhōngwén.",
+          "meaning": {
+            "en": "She can speak not only English but also Chinese.",
+            "fr": "Elle sait parler non seulement anglais, mais aussi chinois.",
+            "ru": "Она говорит не только по-английски, но и по-китайски."
+          }
+        },
+        "exercises": [
+          {
+            "id": "clauses-addition-and-contrast-e1",
+            "prompt": {
+              "en": "He not only speaks Chinese but also speaks English.",
+              "fr": "Il parle non seulement chinois, mais aussi anglais.",
+              "ru": "Он говорит не только по-китайски, но и по-английски."
+            },
+            "sentence": "他___会说中文，而且会说英文。",
+            "options": [
+              "不但",
+              "虽然",
+              "为了"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "不但 pairs with 而且 to add the second ability.",
+              "fr": "不但 s’associe à 而且 pour ajouter la seconde capacité.",
+              "ru": "不但 сочетается с 而且 и добавляет второе умение."
+            }
+          },
+          {
+            "id": "clauses-addition-and-contrast-e2",
+            "prompt": {
+              "en": "Although she was a little tired, she still finished the work.",
+              "fr": "Bien qu’elle soit un peu fatiguée, elle a quand même terminé le travail.",
+              "ru": "Хотя она немного устала, она всё же закончила работу."
+            },
+            "sentence": "___有点儿累，可是她还是做完了工作。",
+            "options": [
+              "不但",
+              "为了",
+              "虽然"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "虽然 introduces the tiredness that contrasts with her finishing the work.",
+              "fr": "虽然 introduit la fatigue, mise en contraste avec le fait qu’elle termine le travail.",
+              "ru": "虽然 вводит усталость, которой противопоставлено завершение работы."
+            }
+          }
+        ]
+      },
+      {
+        "id": "clauses-conditions",
+        "pattern": "如果……，就……；……的话，就……；只有……，才……；只要……，就……",
+        "explanation": {
+          "en": "如果 and ……的话 set up a possible condition. 只有……才…… means the first part is necessary for the result; 只要……就…… means it is sufficient. Keep the paired words matched: 只有 with 才, 只要 with 就.",
+          "fr": "如果 et ……的话 introduisent une condition possible. 只有……才…… signifie que la première partie est nécessaire au résultat ; 只要……就…… signifie qu’elle suffit. Gardez les couples : 只有 avec 才, 只要 avec 就.",
+          "ru": "如果 и ……的话 вводят возможное условие. 只有……才…… означает, что первая часть необходима для результата; 只要……就…… — что её достаточно. Сочетайте слова правильно: 只有 с 才, 只要 с 就."
+        },
+        "example": {
+          "hanzi": "如果明天下雨，我们就不去。",
+          "pinyin": "Rúguǒ míngtiān xià yǔ, wǒmen jiù bú qù.",
+          "meaning": {
+            "en": "If it rains tomorrow, we will not go.",
+            "fr": "S’il pleut demain, nous n’irons pas.",
+            "ru": "Если завтра пойдёт дождь, мы не пойдём."
+          }
+        },
+        "exercises": [
+          {
+            "id": "clauses-conditions-e1",
+            "prompt": {
+              "en": "You may play games only if you finish your homework first.",
+              "fr": "Tu peux jouer seulement si tu termines d’abord tes devoirs.",
+              "ru": "Ты можешь играть только если сначала закончишь домашнее задание."
+            },
+            "sentence": "___你先完成作业，才可以玩游戏。",
+            "options": [
+              "如果",
+              "只有",
+              "只要"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "只有……才…… marks finishing the homework as a necessary condition for playing.",
+              "fr": "只有……才…… indique que finir les devoirs est une condition nécessaire pour jouer.",
+              "ru": "只有……才…… показывает, что завершение домашнего задания — необходимое условие для игры."
+            }
+          },
+          {
+            "id": "clauses-conditions-e2",
+            "prompt": {
+              "en": "As long as you practise every day, you can learn this song.",
+              "fr": "À condition de t’entraîner chaque jour, tu peux apprendre cette chanson.",
+              "ru": "Если ты будешь заниматься каждый день, то сможешь выучить эту песню."
+            },
+            "sentence": "___你每天练习，就能学会这首歌。",
+            "options": [
+              "虽然",
+              "只要",
+              "只有"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "只要……就…… presents daily practice as sufficient for learning the song.",
+              "fr": "只要……就…… présente l’entraînement quotidien comme suffisant pour apprendre la chanson.",
+              "ru": "只要……就…… показывает, что ежедневных занятий достаточно, чтобы выучить песню."
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -158,10 +158,10 @@ export const items: Item[] = [
     "lesson": "first",
     "id": "student",
     "hanzi": "学生",
-    "pinyin": "xuésheng",
+    "pinyin": "xuéshēng",
     "english": "student",
     "sentence": "我是学生。",
-    "sentencePinyin": "Wǒ shì xuésheng.",
+    "sentencePinyin": "Wǒ shì xuéshēng.",
     "translation": "I am a student.",
     "hskEntry": 248,
     "hskLevel": 1

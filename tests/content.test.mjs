@@ -132,3 +132,6 @@ test("polyphonic HSK3 readings and syllabus senses are explicit",()=>{
  assert.match(byId['hsk2-486'].english,/station/);
  assert.match(byId['hsk3-966'].english,/stand/);
 });
+test('Every syllabus word retains the official hanzi and citation pinyin across all 1000 entries',()=>{
+ for(const level of [1,2,3])for(const entry of JSON.parse(readFileSync(`data/hsk${level}-reference.json`,'utf8')).entries){const item=items.find(i=>i.hskLevel===level&&i.hskEntry===entry.id);assert.ok(item);assert.equal(item.hanzi,entry.hanzi);assert.equal(item.pinyin,entry.pinyin);}
+});
