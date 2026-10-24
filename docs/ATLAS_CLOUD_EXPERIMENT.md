@@ -49,3 +49,19 @@ Default families match direct IDS decomposition parts, including shape variants.
 - 1024×768 expanded map: all four zones fit; tested six-node ring has zero centre collisions. 390×844 Russian layout has no horizontal overflow. Larger families use scrollable grids; a phone stacks zones rather than compressing the entire map illegibly.
 - Reduced-motion disabled animations; no console errors in tested states. Horizontal pointer swipe is implemented, but native iPad touch acceptance remains unverified because this browser surface does not support raw touch dispatch. No test progress was written to the public account.
 - Executor separately verified the grammar interactions and full audio index; final public smoke checks and immutable publication receipt follow below.
+
+## Publication receipt — 24 October 2026
+
+- Final production version: **24**, succeeded at `2026-10-24T05:17:12.198810Z` (13:17 Shanghai).
+- Exact deployed source: `89c2e36120164425925a30d5c3e31743757d17a7` on `codex/atlas-clouds` (GitHub remote SHA verified).
+- Project: `appgprj_6ad7885e92708191a9ed6016b15c91ba`; public audience and existing runtime bindings preserved, environment revision 1.
+- Saved version: `appgprj_6ad7885e92708191a9ed6016b15c91ba~appgver_cb9d6b40df448191a8423830060cbbe9`.
+- Deployment: `appgdep_6adc3f4ee9608191a14cf3c440fc62f2`.
+- Artifact: `/tmp/chinese-os-cloud-map-v24.tar`, SHA256 `a9884d4a3942d98e722049695bfc0a491ecfd4548bb33b8ab33c671dbb54ac46`.
+- Live map: https://chinese-os-study.gizmuf.chatgpt.site/?atlas=1&cloud=1
+- Live grammar: https://chinese-os-study.gizmuf.chatgpt.site/?grammar=hsk3
+- Draft review: https://github.com/gizmuf/chinese-learning-os/pull/7
+
+Version 23 introduced the combined implementation; version 24 fixes only orbit label clipping/spacing. The final geometry was checked at 1024×768: full label line height, zero focus collisions and the sentence section ends within the viewport. The executor independently checked public grammar EN/FR/RU and map coverage without recording answers; no console errors. User acceptance and physical iPad testing remain separate from successful publication.
+
+This receipt is a later documentation-only commit; it is not the deployed source SHA.
