@@ -20,4 +20,6 @@
 @media(max-width:820px){.cloud-full .cloud-universe{height:360px}.cloud-full .cloud-word-list{max-height:150px}}
 @media(min-width:821px) and (max-width:1100px){.cloud-full .cloud-focus{padding:6px;width:130px}.cloud-full .cloud-focus-glyph{font-size:48px;margin:4px 0}.cloud-full .cloud-focus-pinyin{font-size:13px}.cloud-full .cloud-focus-content p{font-size:10px;margin:4px 0}.cloud-full .cloud-focus-tools button{min-height:26px;padding:3px}.cloud-full .cloud-focus-tools{margin-top:3px}}
 
-.is-orbit .cloud-node{height:54px;padding:4px 6px;justify-content:center}.is-orbit .cloud-node>b{font-size:26px}
+.is-orbit .cloud-node{height:58px;padding:4px 6px;justify-content:center}.is-orbit .cloud-node>b{font-size:26px}
+
+.is-orbit .cloud-node>*{flex-shrink:0}
