@@ -90,3 +90,8 @@
 
 .cloud-family-picker{min-width:130px}.cloud-family-picker select{max-width:180px}
 @media(max-width:760px){.cloud-family-picker{min-width:0;max-width:100%;flex-basis:100%}.cloud-family-picker select{flex:1;max-width:none}.cloud-family-picker>span{font-size:12px}.cloud-context-layout .cloud-family-picker{display:flex;gap:10px}}
+
+/* Restored v26 cloud is an additional presentation of the same route. */
+.cloud-restored-layout .cloud-family-picker{display:none}.cloud-restored-layout .cloud-seeds{flex-wrap:wrap;overflow:visible}.cloud-restored-layout .cloud-family .cloud-relation-filters{justify-content:center;padding:8px 8px 2px;margin-bottom:4px}.cloud-restored-layout .cloud-sentence-context{padding:8px 0}.cloud-restored-layout .cloud-sentence-context .cloud-context-sentence{margin:5px 0}.cloud-restored-layout .cloud-word-list p{overflow-wrap:anywhere}
+.cloud-restored-layout .cloud-family-total{font-size:11px}.cloud-restored-layout .cloud-family-foot{font-size:11px;padding:10px}.cloud-restored-layout .cloud-family-title>span{font-size:11px}
+@media(max-width:820px){.cloud-restored-layout .cloud-seeds{gap:8px}.cloud-restored-layout .cloud-seeds button{min-height:44px}.cloud-restored-layout .cloud-family .cloud-relation-filters button{min-height:42px}}
