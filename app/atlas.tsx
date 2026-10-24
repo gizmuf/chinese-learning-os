@@ -13,6 +13,7 @@ import {
   Volume2,
 } from "lucide-react";
 import AtlasWorkshop from "./atlas-workshop";
+const AtlasCloud = lazy(() => import("./atlas-cloud"));
 const AtlasStudio = lazy(() => import("./atlas-studio"));
 const ConnectionLab = lazy(() => import("./connection-lab"));
 import { L as labCopy } from "./connection-lab-copy";
@@ -79,6 +80,7 @@ export default function Atlas({
   const { t, locale } = useI18n();
   const progress = useAtlasProgress(owner);
   const [studio, setStudio] = useState(false);
+  const [cloud, setCloud] = useState(false);
   const [scope, setScope] = useState<Scope>(null);
   const [trail, setTrail] = useState<{ scope: Scope; target: string }[]>([]);
   const [selected, setSelected] = useState("u6674");
@@ -93,6 +95,7 @@ export default function Atlas({
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     setStudio(params.get("studio") === "1");
+    setCloud(params.get("cloud") === "1");
     const component = params.get("component");
     const group = params.get("group");
     const target = params.get("target");
@@ -265,6 +268,7 @@ export default function Atlas({
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
+  if (cloud) return <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><AtlasCloud owner={owner} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} progress={progress} onWord={onWord}/></Suspense>;
   if (studio) return <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><AtlasStudio owner={owner} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} progress={progress}/></Suspense>;
   return (
     <div className="atlas-space">
@@ -311,6 +315,7 @@ export default function Atlas({
         ))}
       </div>
       {tab === "lab" && <div className="panel" style={{padding:24,marginBottom:24}}><h2>{({en:"A quieter way to explore",fr:"Une façon plus calme d’explorer",ru:"Более спокойное изучение"})[locale]}</h2><p>{({en:"Try the new Atlas workspace. The original Lab remains below.",fr:"Essayez le nouvel espace Atlas. Le Lab d’origine reste ci-dessous.",ru:"Попробуйте новое пространство Атласа. Прежний Lab остаётся ниже."})[locale]}</p><a className="primary" href="?atlas=1&studio=1">{({en:"Preview the new Learning Lab",fr:"Découvrir le nouveau Learning Lab",ru:"Открыть новый Learning Lab"})[locale]} →</a></div>}
+      {tab === "lab" && <div className="panel" style={{padding:24,marginBottom:24}}><h2>{({en:"Lab 02 · Follow the whole family",fr:"Lab 02 · Suivre toute la famille",ru:"Lab 02 · Всё семейство на карте"})[locale]}</h2><p>{({en:"A connected map: parts, characters, words and sentences together.",fr:"Une carte reliée : composants, caractères, mots et phrases ensemble.",ru:"Связанная карта: части, знаки, слова и предложения вместе."})[locale]}</p><a className="primary" href="?atlas=1&cloud=1">{({en:"Explore the cloud map",fr:"Explorer la carte en nuages",ru:"Открыть облачную карту"})[locale]} →</a></div>}
       {tab === "lab" && <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><ConnectionLab owner={owner} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify}/></Suspense>}
       {(tab === "explore" || tab === "compare") && (
         <div className="atlas-search-row">
