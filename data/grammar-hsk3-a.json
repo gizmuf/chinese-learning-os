@@ -1,0 +1,1742 @@
+[
+  {
+    "id": "hsk3-grammar-word-building",
+    "title": {
+      "en": "Word building and directions",
+      "fr": "Formation des mots et directions",
+      "ru": "Словообразование и направления"
+    },
+    "cards": [
+      {
+        "id": "hsk3-grammar-word-building-lao-prefix",
+        "pattern": "老+姓氏",
+        "explanation": {
+          "en": "Before a surname, 老 can be a familiar or respectful way to refer to an adult. It does not simply mean that the person is old.",
+          "fr": "Devant un nom de famille, 老 peut servir à désigner un adulte de façon familière ou respectueuse. Cela ne signifie pas simplement que la personne est âgée.",
+          "ru": "Перед фамилией 老 может служить привычным или уважительным обращением к взрослому человеку. Это не означает просто, что человек пожилой."
+        },
+        "example": {
+          "hanzi": "老王今天不在办公室。",
+          "pinyin": "Lǎo Wáng jīntiān bú zài bàngōngshì.",
+          "meaning": {
+            "en": "Wang is not in the office today.",
+            "fr": "Wang n’est pas au bureau aujourd’hui.",
+            "ru": "Ван сегодня не в офисе."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-word-building-lao-prefix-01",
+            "prompt": {
+              "en": "Use the familiar prefix before the surname Wang.",
+              "fr": "Employez le préfixe familier devant le nom de famille Wang.",
+              "ru": "Поставьте привычное обращение перед фамилией Ван."
+            },
+            "sentence": "___今天不在家。",
+            "options": [
+              "王老",
+              "老王",
+              "老员"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "老 comes before the surname: 老王.",
+              "fr": "老 se place devant le nom de famille : 老王.",
+              "ru": "老 ставится перед фамилией: 老王."
+            }
+          },
+          {
+            "id": "hsk3-grammar-word-building-lao-prefix-02",
+            "prompt": {
+              "en": "Refer to an adult surnamed Chen in a familiar way.",
+              "fr": "Désignez familièrement un adulte qui s’appelle Chen.",
+              "ru": "Назовите взрослого человека с фамилией Чэнь в привычной форме."
+            },
+            "sentence": "___每天早上去公园散步。",
+            "options": [
+              "老陈",
+              "陈家",
+              "陈老"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "The familiar form is 老陈, with 老 before the surname.",
+              "fr": "La forme familière est 老陈, avec 老 devant le nom.",
+              "ru": "Привычная форма — 老陈: 老 стоит перед фамилией."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-word-building-suffixes",
+        "pattern": "后缀：—家、—子、—员",
+        "explanation": {
+          "en": "These endings occur in established words: 家 often names a specialist, 子 appears in many everyday nouns, and 员 can name a worker or member. They do not attach freely to every word.",
+          "fr": "Ces finales apparaissent dans des mots établis : 家 désigne souvent un spécialiste, 子 figure dans de nombreux noms courants et 员 peut désigner un employé ou un membre. Elles ne s’ajoutent pas librement à tous les mots.",
+          "ru": "Эти суффиксы встречаются в закрепившихся словах: 家 часто обозначает специалиста, 子 входит во многие бытовые существительные, а 员 может обозначать работника или участника. Их нельзя свободно добавлять к любому слову."
+        },
+        "example": {
+          "hanzi": "服务员给我们送来了菜单。",
+          "pinyin": "Fúwùyuán gěi wǒmen sòng lái le càidān.",
+          "meaning": {
+            "en": "The server brought us the menu.",
+            "fr": "Le serveur nous a apporté le menu.",
+            "ru": "Официант принёс нам меню."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-word-building-suffixes-01",
+            "prompt": {
+              "en": "He is a painter and often paints for us.",
+              "fr": "C’est un peintre qui peint souvent pour nous.",
+              "ru": "Он художник и часто рисует для нас."
+            },
+            "sentence": "他是一位___，常常给我们画画。",
+            "options": [
+              "服务员",
+              "桌子",
+              "画家"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "画家 means painter; 家 forms a word for a specialist here.",
+              "fr": "画家 signifie « peintre » ; 家 forme ici un nom de spécialiste.",
+              "ru": "画家 значит «художник»; здесь 家 входит в название профессии."
+            }
+          },
+          {
+            "id": "hsk3-grammar-word-building-suffixes-02",
+            "prompt": {
+              "en": "This table is made of wood.",
+              "fr": "Cette table est en bois.",
+              "ru": "Этот стол сделан из дерева."
+            },
+            "sentence": "这张___是木头做的。",
+            "options": [
+              "桌子",
+              "作家",
+              "服务员"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "桌子 is the everyday word for a table; 子 is part of this established noun.",
+              "fr": "桌子 est le mot courant pour « table » ; 子 fait partie de ce nom établi.",
+              "ru": "桌子 — обычное слово «стол»; 子 входит в состав этого существительного."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-word-building-cardinal-directions",
+        "pattern": "方位名词：东、南、西、北",
+        "explanation": {
+          "en": "东、南、西、北 name the four directions. In place descriptions they commonly combine with 边 or 面, as in 东边; the surrounding location tells you which side is meant.",
+          "fr": "东、南、西、北 désignent les quatre points cardinaux. Pour situer un lieu, ils se combinent souvent avec 边 ou 面, comme dans 东边 ; le contexte indique le côté visé.",
+          "ru": "东、南、西、北 обозначают стороны света. При описании места к ним часто добавляют 边 или 面, например 东边; нужная сторона понятна из контекста."
+        },
+        "example": {
+          "hanzi": "太阳从东方升起。",
+          "pinyin": "Tàiyáng cóng dōngfāng shēngqǐ.",
+          "meaning": {
+            "en": "The sun rises in the east.",
+            "fr": "Le soleil se lève à l’est.",
+            "ru": "Солнце встаёт на востоке."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-word-building-cardinal-directions-01",
+            "prompt": {
+              "en": "The library is east of the school.",
+              "fr": "La bibliothèque se trouve à l’est de l’école.",
+              "ru": "Библиотека находится к востоку от школы."
+            },
+            "sentence": "图书馆在学校的___。",
+            "options": [
+              "西边",
+              "北边",
+              "东边"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "东边 means the east side of a place.",
+              "fr": "东边 désigne le côté est d’un lieu.",
+              "ru": "东边 означает восточную сторону места."
+            }
+          },
+          {
+            "id": "hsk3-grammar-word-building-cardinal-directions-02",
+            "prompt": {
+              "en": "On a map, south is opposite north.",
+              "fr": "Sur une carte, le sud est à l’opposé du nord.",
+              "ru": "На карте юг находится напротив севера."
+            },
+            "sentence": "在地图上，北的反方向是___。",
+            "options": [
+              "西",
+              "南",
+              "东"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "南 is south, the direction opposite 北 (north).",
+              "fr": "南 signifie sud, la direction opposée à 北 (nord).",
+              "ru": "南 — юг, направление, противоположное 北 (северу)."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-word-building-regions-middle",
+        "pattern": "北方、东方、南方、西方、中间",
+        "explanation": {
+          "en": "方 compounds can name broad regions or directions, such as 南方 (the south). 中间 means the middle or a position between things. These words describe context, not a fixed global location.",
+          "fr": "Les composés en 方 peuvent désigner de grandes régions ou directions, comme 南方 (« le sud »). 中间 signifie le milieu ou une position entre plusieurs choses. Le contexte précise le lieu.",
+          "ru": "Слова с 方 могут обозначать обширные регионы или направления, например 南方 — юг. 中间 означает середину или положение между предметами; конкретное место задаёт контекст."
+        },
+        "example": {
+          "hanzi": "我的家乡在中国北方。",
+          "pinyin": "Wǒ de jiāxiāng zài Zhōngguó běifāng.",
+          "meaning": {
+            "en": "My hometown is in northern China.",
+            "fr": "Ma ville natale se trouve dans le nord de la Chine.",
+            "ru": "Мой родной город находится на севере Китая."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-word-building-regions-middle-01",
+            "prompt": {
+              "en": "The meeting room is in the middle of this building.",
+              "fr": "La salle de réunion se trouve au milieu de ce bâtiment.",
+              "ru": "Переговорная находится в середине этого здания."
+            },
+            "sentence": "会议室在这栋楼的___。",
+            "options": [
+              "东方",
+              "中间",
+              "西方"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "中间 means the middle or centre of the building.",
+              "fr": "中间 signifie le milieu ou le centre du bâtiment.",
+              "ru": "中间 означает середину или центр здания."
+            }
+          },
+          {
+            "id": "hsk3-grammar-word-building-regions-middle-02",
+            "prompt": {
+              "en": "Guangzhou is in southern China.",
+              "fr": "Guangzhou se trouve dans le sud de la Chine.",
+              "ru": "Гуанчжоу находится на юге Китая."
+            },
+            "sentence": "广州在中国的___。",
+            "options": [
+              "北方",
+              "南方",
+              "西方"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "南方 means the southern region; 北方 and 西方 mean the north and west.",
+              "fr": "南方 signifie la région du sud ; 北方 et 西方 désignent le nord et l’ouest.",
+              "ru": "南方 означает южный регион; 北方 и 西方 — север и запад."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hsk3-grammar-modals-separable",
+    "title": {
+      "en": "Needs, choices and separable verbs",
+      "fr": "Besoins, choix et verbes séparables",
+      "ru": "Необходимость, выбор и раздельные глаголы"
+    },
+    "cards": [
+      {
+        "id": "hsk3-grammar-modals-separable-need-should",
+        "pattern": "能愿动词：需要、该、应该+动词短语",
+        "explanation": {
+          "en": "需要 expresses a need. 该 and 应该 commonly give advice or say what is expected; place the verb phrase after them.",
+          "fr": "需要 exprime un besoin. 该 et 应该 servent souvent à donner un conseil ou à exprimer ce qu’il convient de faire ; ils précèdent le groupe verbal.",
+          "ru": "需要 выражает необходимость. 该 и 应该 обычно дают совет или обозначают то, что следует сделать; после них ставится глагольная группа."
+        },
+        "example": {
+          "hanzi": "你应该多喝水，早点儿休息。",
+          "pinyin": "Nǐ yīnggāi duō hē shuǐ, zǎodiǎnr xiūxi.",
+          "meaning": {
+            "en": "You should drink more water and rest earlier.",
+            "fr": "Tu devrais boire plus d’eau et te reposer plus tôt.",
+            "ru": "Тебе следует пить больше воды и пораньше отдыхать."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-modals-separable-need-should-01",
+            "prompt": {
+              "en": "We need a little more time to finish this task.",
+              "fr": "Il nous faut encore un peu de temps pour terminer cette tâche.",
+              "ru": "Нам нужно ещё немного времени, чтобы закончить эту работу."
+            },
+            "sentence": "我们还___一点儿时间完成这项工作。",
+            "options": [
+              "放假",
+              "需要",
+              "愿意"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "需要 expresses the need for more time.",
+              "fr": "需要 exprime le besoin de disposer de plus de temps.",
+              "ru": "需要 выражает необходимость в дополнительном времени."
+            }
+          },
+          {
+            "id": "hsk3-grammar-modals-separable-need-should-02",
+            "prompt": {
+              "en": "You should go to bed earlier because you must get up early tomorrow.",
+              "fr": "Tu devrais te coucher plus tôt, car tu dois te lever tôt demain.",
+              "ru": "Тебе следует лечь пораньше, потому что завтра нужно рано вставать."
+            },
+            "sentence": "你___早点儿睡觉，明天要早起。",
+            "options": [
+              "完成",
+              "见面",
+              "应该"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "应该 introduces the advice to go to bed earlier.",
+              "fr": "应该 introduit le conseil de se coucher plus tôt.",
+              "ru": "应该 вводит совет лечь спать пораньше."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-modals-separable-willing-must",
+        "pattern": "能愿动词：愿意、得+动词短语",
+        "explanation": {
+          "en": "愿意 means to be willing to do something. In this modal use, 得 means have to or need to and is pronounced děi; distinguish it from the structural particle de.",
+          "fr": "愿意 signifie accepter volontiers de faire quelque chose. Dans cet emploi modal, 得 signifie devoir ou avoir besoin de et se prononce děi ; ne le confondez pas avec la particule structurale de.",
+          "ru": "愿意 означает быть готовым что-либо сделать. В модальном значении 得 (произносится děi) означает «нужно», «приходится»; не путайте его со структурной частицей de."
+        },
+        "example": {
+          "hanzi": "我得现在回家，不能再等了。",
+          "pinyin": "Wǒ děi xiànzài huí jiā, bù néng zài děng le.",
+          "meaning": {
+            "en": "I have to go home now; I cannot wait any longer.",
+            "fr": "Je dois rentrer maintenant ; je ne peux plus attendre.",
+            "ru": "Мне нужно сейчас идти домой; я больше не могу ждать."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-modals-separable-willing-must-01",
+            "prompt": {
+              "en": "I am willing to help you move these books.",
+              "fr": "Je veux bien t’aider à déplacer ces livres.",
+              "ru": "Я готов помочь тебе перенести эти книги."
+            },
+            "sentence": "我___帮你搬这些书。",
+            "options": [
+              "愿意",
+              "离开",
+              "得"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "愿意 expresses willingness to help.",
+              "fr": "愿意 exprime la volonté d’aider.",
+              "ru": "愿意 выражает готовность помочь."
+            }
+          },
+          {
+            "id": "hsk3-grammar-modals-separable-willing-must-02",
+            "prompt": {
+              "en": "I have to withdraw money at the bank first and then come back.",
+              "fr": "Je dois d’abord retirer de l’argent à la banque, puis revenir.",
+              "ru": "Мне нужно сначала снять деньги в банке, а потом вернуться."
+            },
+            "sentence": "我___先去银行取钱，然后再来。",
+            "options": [
+              "得",
+              "愿意",
+              "结婚"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "得 here means that the speaker has to go to the bank first.",
+              "fr": "得 signifie ici que la personne doit d’abord aller à la banque.",
+              "ru": "Здесь 得 означает, что сначала нужно сходить в банк."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-modals-separable-object-compounds",
+        "pattern": "动宾式离合词：放假、见面、结婚、洗澡",
+        "explanation": {
+          "en": "These common verb–object compounds can separate when aspect or a quantity is added between the verb and noun: 见了面, 放三天假, 洗个澡. Learn each natural pattern; the parts do not split arbitrarily.",
+          "fr": "Ces composés verbe–nom courants peuvent se séparer lorsqu’un marqueur d’aspect ou une quantité s’insère entre le verbe et le nom : 见了面, 放三天假, 洗个澡. Chaque emploi suit un modèle naturel ; les éléments ne se séparent pas au hasard.",
+          "ru": "Эти распространённые сочетания «глагол + существительное» могут разделяться, когда между частями ставится показатель аспекта или количества: 见了面, 放三天假, 洗个澡. Используйте закреплённые модели; произвольно разделять их нельзя."
+        },
+        "example": {
+          "hanzi": "他们结了婚以后，一起住在这里。",
+          "pinyin": "Tāmen jié le hūn yǐhòu, yìqǐ zhù zài zhèlǐ.",
+          "meaning": {
+            "en": "After they got married, they lived here together.",
+            "fr": "Après leur mariage, ils ont vécu ici ensemble.",
+            "ru": "После свадьбы они жили здесь вместе."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-modals-separable-object-compounds-01",
+            "prompt": {
+              "en": "We will meet with the teacher tomorrow.",
+              "fr": "Nous rencontrerons le professeur demain.",
+              "ru": "Завтра мы встретимся с учителем."
+            },
+            "sentence": "我们明天跟老师___。",
+            "options": [
+              "见面",
+              "洗澡",
+              "放假"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "跟老师见面 means to meet with the teacher.",
+              "fr": "跟老师见面 signifie rencontrer le professeur.",
+              "ru": "跟老师见面 означает встретиться с учителем."
+            }
+          },
+          {
+            "id": "hsk3-grammar-modals-separable-object-compounds-02",
+            "prompt": {
+              "en": "We will have three days off next month.",
+              "fr": "Nous aurons trois jours de congé le mois prochain.",
+              "ru": "В следующем месяце у нас будет три выходных дня."
+            },
+            "sentence": "下个月我们可以放三天___。",
+            "options": [
+              "婚",
+              "假",
+              "澡"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "The duration 三天 goes between 放 and 假: 放三天假.",
+              "fr": "La durée 三天 se place entre 放 et 假 : 放三天假.",
+              "ru": "Длительность 三天 ставится между 放 и 假: 放三天假."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-modals-separable-result-compounds",
+        "pattern": "动补式离合词：离开、完成、分开",
+        "explanation": {
+          "en": "Learn 离开, 完成 and 分开 as complete verb–complement compounds before their objects; aspect 了 commonly follows the full compound, as in 完成了任务. Terminology for separable compounds varies, so do not split these forms freely.",
+          "fr": "Apprenez 离开, 完成 et 分开 comme des composés verbe–complément complets, placés avant leur complément d’objet ; 了 suit souvent le composé entier, comme dans 完成了任务. Les analyses de ces composés varient : ne les séparez pas librement.",
+          "ru": "Учите 离开, 完成 и 分开 как цельные глагольно-комплементные сочетания перед дополнением; показатель 了 обычно ставится после всего сочетания, например 完成了任务. Терминология для таких форм различается, поэтому не разделяйте их произвольно."
+        },
+        "example": {
+          "hanzi": "请先完成这部分工作，再离开教室。",
+          "pinyin": "Qǐng xiān wánchéng zhè bùfen gōngzuò, zài líkāi jiàoshì.",
+          "meaning": {
+            "en": "Please finish this part of the work before leaving the classroom.",
+            "fr": "Terminez cette partie du travail avant de quitter la salle de classe.",
+            "ru": "Сначала закончите эту часть работы, а потом выходите из класса."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-modals-separable-result-compounds-01",
+            "prompt": {
+              "en": "She finished her homework and then went to sleep.",
+              "fr": "Elle a terminé ses devoirs, puis elle est allée se coucher.",
+              "ru": "Она закончила домашнее задание, а потом легла спать."
+            },
+            "sentence": "她___作业以后，就去睡觉了。",
+            "options": [
+              "分开了",
+              "放假了",
+              "完成了"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "完成了作业 means finished the homework; 了 follows 完成.",
+              "fr": "完成了作业 signifie « terminer les devoirs » ; 了 suit 完成.",
+              "ru": "完成了作业 означает «закончить задание»; 了 стоит после 完成."
+            }
+          },
+          {
+            "id": "hsk3-grammar-modals-separable-result-compounds-02",
+            "prompt": {
+              "en": "The friends separated for a while.",
+              "fr": "Les amis se sont séparés pour un moment.",
+              "ru": "Друзья ненадолго разошлись."
+            },
+            "sentence": "朋友们暂时___了。",
+            "options": [
+              "见面",
+              "分开",
+              "洗澡"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "暂时分开 means to be apart temporarily.",
+              "fr": "暂时分开 signifie être séparés temporairement.",
+              "ru": "暂时分开 означает временно разойтись."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hsk3-grammar-pronouns",
+    "title": {
+      "en": "Questions, anyone and other people",
+      "fr": "Questions, indéfinis et autres personnes",
+      "ru": "Вопросы, неопределённость и другие люди"
+    },
+    "cards": [
+      {
+        "id": "hsk3-grammar-pronouns-zenyang",
+        "pattern": "怎样+动词",
+        "explanation": {
+          "en": "怎样 asks about the way or manner in which an action is done. It normally appears before the verb and makes a how-question.",
+          "fr": "怎样 demande de quelle manière une action est réalisée. Il se place normalement avant le verbe et forme une question en « comment ».",
+          "ru": "怎样 спрашивает о способе или образе действия. Обычно оно стоит перед глаголом и образует вопрос «как?»."
+        },
+        "example": {
+          "hanzi": "你怎样去火车站？",
+          "pinyin": "Nǐ zěnyàng qù huǒchēzhàn?",
+          "meaning": {
+            "en": "How will you get to the train station?",
+            "fr": "Comment iras-tu à la gare ?",
+            "ru": "Как ты доберёшься до вокзала?"
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-pronouns-zenyang-01",
+            "prompt": {
+              "en": "How will you get to the train station?",
+              "fr": "Comment iras-tu à la gare ?",
+              "ru": "Как ты доберёшься до вокзала?"
+            },
+            "sentence": "你___去火车站？",
+            "options": [
+              "咱们",
+              "别人",
+              "怎样"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "怎样 goes before 去 to ask how someone will go.",
+              "fr": "怎样 se place devant 去 pour demander comment quelqu’un s’y rendra.",
+              "ru": "怎样 стоит перед 去 и спрашивает, как человек доберётся."
+            }
+          },
+          {
+            "id": "hsk3-grammar-pronouns-zenyang-02",
+            "prompt": {
+              "en": "How do we make this dish?",
+              "fr": "Comment prépare-t-on ce plat ?",
+              "ru": "Как приготовить это блюдо?"
+            },
+            "sentence": "我们___做这道菜？",
+            "options": [
+              "怎样",
+              "别的",
+              "北方"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "怎样 asks about the method of making the dish.",
+              "fr": "怎样 demande la manière de préparer le plat.",
+              "ru": "怎样 спрашивает о способе приготовления блюда."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-pronouns-anyone-with-dou",
+        "pattern": "疑问代词+都",
+        "explanation": {
+          "en": "A question word such as 谁 or 什么 followed by 都 can mean anyone or anything, rather than asking a question. The surrounding sentence supplies the unrestricted meaning.",
+          "fr": "Un mot interrogatif comme 谁 ou 什么 suivi de 都 peut signifier « n’importe qui » ou « n’importe quoi », sans poser de question. La phrase précise le sens général.",
+          "ru": "Вопросительное слово, например 谁 или 什么, перед 都 может означать «любой» или «что угодно», а не задавать вопрос. Общий смысл задаёт всё предложение."
+        },
+        "example": {
+          "hanzi": "这些问题谁都可以回答。",
+          "pinyin": "Zhèxiē wèntí shéi dōu kěyǐ huídá.",
+          "meaning": {
+            "en": "Anyone can answer these questions.",
+            "fr": "N’importe qui peut répondre à ces questions.",
+            "ru": "На эти вопросы может ответить любой."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-pronouns-anyone-with-dou-01",
+            "prompt": {
+              "en": "Anyone in the class can be the group leader.",
+              "fr": "N’importe qui dans la classe peut être responsable du groupe.",
+              "ru": "Любой ученик в классе может стать старостой."
+            },
+            "sentence": "班里___都可以当组长。",
+            "options": [
+              "谁",
+              "哪儿",
+              "怎样"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "谁都 means anyone or everyone in this affirmative sentence.",
+              "fr": "谁都 signifie ici « n’importe qui » ou « tout le monde ».",
+              "ru": "谁都 в этом утвердительном предложении означает «любой»."
+            }
+          },
+          {
+            "id": "hsk3-grammar-pronouns-anyone-with-dou-02",
+            "prompt": {
+              "en": "She wants to taste every kind of dish.",
+              "fr": "Elle veut goûter toutes sortes de plats.",
+              "ru": "Она хочет попробовать все виды блюд."
+            },
+            "sentence": "她___菜都想尝一尝。",
+            "options": [
+              "什么",
+              "怎样",
+              "谁"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "什么菜都 means dishes of every kind; the question word is not asking a question.",
+              "fr": "什么菜都 signifie « des plats de toutes sortes » ; le mot interrogatif ne pose pas de question.",
+              "ru": "什么菜都 означает «любые блюда»; вопросительное слово здесь не задаёт вопрос."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-pronouns-matched-question-words",
+        "pattern": "疑问代词+疑问代词",
+        "explanation": {
+          "en": "A question word can be repeated across two linked clauses: the second instance matches the choice left open by the first, as in 想去哪儿，就去哪儿. The clauses express a free choice, not a real question.",
+          "fr": "Un mot interrogatif peut se répéter dans deux propositions liées : le second reprend le choix laissé ouvert par le premier, comme dans 想去哪儿，就去哪儿. Les propositions expriment un choix libre, pas une vraie question.",
+          "ru": "Вопросительное слово может повторяться в двух связанных частях: во второй части оно соответствует выбору, открытому в первой, как в 想去哪儿，就去哪儿. Это свободный выбор, а не настоящий вопрос."
+        },
+        "example": {
+          "hanzi": "你想去哪儿，我们就去哪儿。",
+          "pinyin": "Nǐ xiǎng qù nǎr, wǒmen jiù qù nǎr.",
+          "meaning": {
+            "en": "We will go wherever you want to go.",
+            "fr": "Nous irons où tu veux aller.",
+            "ru": "Мы пойдём туда, куда ты захочешь."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-pronouns-matched-question-words-01",
+            "prompt": {
+              "en": "I will buy whatever you want to drink.",
+              "fr": "J’achèterai ce que tu veux boire.",
+              "ru": "Я куплю то, что ты захочешь выпить."
+            },
+            "sentence": "你想喝什么，我就给你买___。",
+            "options": [
+              "什么",
+              "谁",
+              "怎样"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "The second 什么 matches the open choice in 你想喝什么.",
+              "fr": "Le second 什么 reprend le choix ouvert dans 你想喝什么.",
+              "ru": "Второе 什么 соответствует выбору в части 你想喝什么."
+            }
+          },
+          {
+            "id": "hsk3-grammar-pronouns-matched-question-words-02",
+            "prompt": {
+              "en": "The children may sit wherever they like.",
+              "fr": "Les enfants peuvent s’asseoir où ils veulent.",
+              "ru": "Дети могут сесть где захотят."
+            },
+            "sentence": "孩子想坐在哪儿，就可以坐在___。",
+            "options": [
+              "谁",
+              "哪儿",
+              "什么"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "The second 哪儿 matches the location choice in the first clause.",
+              "fr": "Le second 哪儿 reprend le choix du lieu dans la première proposition.",
+              "ru": "Второе 哪儿 соответствует выбору места в первой части."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-pronouns-indefinite-use",
+        "pattern": "疑问代词的不定指用法",
+        "explanation": {
+          "en": "In an affirmative statement, a question word can refer to something unspecified when context makes that clear, often with 点儿. It then means something or somewhere, not what or where as a question.",
+          "fr": "Dans une phrase affirmative, un mot interrogatif peut désigner quelque chose d’indéterminé lorsque le contexte le montre, souvent avec 点儿. Il signifie alors « quelque chose » ou « quelque part », sans poser de question.",
+          "ru": "В утвердительном предложении вопросительное слово может обозначать что-то неопределённое, если это ясно из контекста; часто рядом стоит 点儿. Тогда оно означает «что-нибудь» или «где-нибудь», а не задаёт вопрос."
+        },
+        "example": {
+          "hanzi": "我想吃点儿什么热的。",
+          "pinyin": "Wǒ xiǎng chī diǎnr shénme rè de.",
+          "meaning": {
+            "en": "I would like to eat something warm.",
+            "fr": "J’aimerais manger quelque chose de chaud.",
+            "ru": "Я хотел бы съесть что-нибудь горячее."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-pronouns-indefinite-use-01",
+            "prompt": {
+              "en": "I want to buy something to eat.",
+              "fr": "Je veux acheter quelque chose à manger.",
+              "ru": "Я хочу купить что-нибудь поесть."
+            },
+            "sentence": "我想买点儿___吃。",
+            "options": [
+              "谁",
+              "哪儿",
+              "什么"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "买点儿什么吃 means to buy something to eat; 什么 is indefinite here.",
+              "fr": "买点儿什么吃 signifie acheter quelque chose à manger ; 什么 est indéfini ici.",
+              "ru": "买点儿什么吃 означает купить что-нибудь поесть; здесь 什么 имеет неопределённое значение."
+            }
+          },
+          {
+            "id": "hsk3-grammar-pronouns-indefinite-use-02",
+            "prompt": {
+              "en": "I would like to do something today.",
+              "fr": "J’aimerais faire quelque chose aujourd’hui.",
+              "ru": "Сегодня я хотел бы чем-нибудь заняться."
+            },
+            "sentence": "我今天想做点儿___。",
+            "options": [
+              "哪里",
+              "什么",
+              "谁"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "做点儿什么 means to do something unspecified.",
+              "fr": "做点儿什么 signifie faire quelque chose d’indéterminé.",
+              "ru": "做点儿什么 означает заняться чем-то неопределённым."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-pronouns-other-people-things",
+        "pattern": "咱们、别人、别的、其他",
+        "explanation": {
+          "en": "咱们 includes the listener; 我们 may include the listener or refer only to the speaker's group. 别人 means other people. 别的 and 其他 mean other and usually modify a noun, as in 别的办法 or 其他办法.",
+          "fr": "咱们 inclut la personne à qui l’on parle ; 我们 peut l’inclure ou désigner seulement le groupe du locuteur. 别人 signifie « les autres ». 别的 et 其他 signifient « autre » et précèdent généralement un nom, comme dans 别的办法 ou 其他办法.",
+          "ru": "咱们 включает собеседника; 我们 может включать его или обозначать только группу говорящего. 别人 означает «другие люди». 别的 и 其他 значат «другой» и обычно стоят перед существительным: 别的办法 или 其他办法."
+        },
+        "example": {
+          "hanzi": "咱们可以先听听别人的意见。",
+          "pinyin": "Zánmen kěyǐ xiān tīngting biérén de yìjiàn.",
+          "meaning": {
+            "en": "Let's listen to other people's opinions first.",
+            "fr": "Écoutons d’abord l’avis des autres.",
+            "ru": "Давайте сначала послушаем мнение других."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-pronouns-other-people-things-01",
+            "prompt": {
+              "en": "Let's ask other people first.",
+              "fr": "Demandons d’abord aux autres.",
+              "ru": "Давайте сначала спросим других."
+            },
+            "sentence": "咱们先问问___吧。",
+            "options": [
+              "别人",
+              "其他",
+              "别的"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "别人 means other people and can be the object of 问问.",
+              "fr": "别人 signifie « les autres » et peut être le complément de 问问.",
+              "ru": "别人 означает «других людей» и может быть дополнением к 问问."
+            }
+          },
+          {
+            "id": "hsk3-grammar-pronouns-other-people-things-02",
+            "prompt": {
+              "en": "We have another method as well.",
+              "fr": "Nous avons aussi une autre méthode.",
+              "ru": "У нас есть и другой способ."
+            },
+            "sentence": "我们还有___办法。",
+            "options": [
+              "咱们",
+              "别的",
+              "别人"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "别的 modifies the noun 办法 (method).",
+              "fr": "别的 détermine le nom 办法 (« méthode »).",
+              "ru": "别的 определяет существительное 办法 («способ»)."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hsk3-grammar-measure",
+    "title": {
+      "en": "Counting things, actions and approximate amounts",
+      "fr": "Compter les objets, les actions et les quantités approximatives",
+      "ru": "Счёт предметов, действий и примерных количеств"
+    },
+    "cards": [
+      {
+        "id": "hsk3-grammar-measure-object-classifiers",
+        "pattern": "名量词：把、双、张、辆",
+        "explanation": {
+          "en": "Use the classifier that fits the object: 把 for many handled items, 双 for a pair, 张 for flat objects, and 辆 for vehicles. The classifier sits between the number and noun.",
+          "fr": "Choisissez le classificateur adapté : 把 pour de nombreux objets munis d’un manche, 双 pour une paire, 张 pour les objets plats et 辆 pour les véhicules. Il se place entre le nombre et le nom.",
+          "ru": "Выбирайте подходящий счётный классификатор: 把 — для многих предметов с ручкой, 双 — для пары, 张 — для плоских предметов, 辆 — для транспорта. Классификатор ставится между числом и существительным."
+        },
+        "example": {
+          "hanzi": "门口停着两辆自行车。",
+          "pinyin": "Ménkǒu tíngzhe liǎng liàng zìxíngchē.",
+          "meaning": {
+            "en": "Two bicycles are parked at the entrance.",
+            "fr": "Deux vélos sont garés à l’entrée.",
+            "ru": "У входа стоят два велосипеда."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-measure-object-classifiers-01",
+            "prompt": {
+              "en": "A sheet of paper is on the table.",
+              "fr": "Une feuille de papier est sur la table.",
+              "ru": "На столе лежит лист бумаги."
+            },
+            "sentence": "桌子上放着一___纸。",
+            "options": [
+              "张",
+              "辆",
+              "双"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "张 counts flat items such as sheets of paper.",
+              "fr": "张 compte les objets plats, comme les feuilles de papier.",
+              "ru": "张 используется для плоских предметов, например листов бумаги."
+            }
+          },
+          {
+            "id": "hsk3-grammar-measure-object-classifiers-02",
+            "prompt": {
+              "en": "He is wearing a pair of shoes.",
+              "fr": "Il porte une paire de chaussures.",
+              "ru": "На нём пара обуви."
+            },
+            "sentence": "他穿着一___鞋子。",
+            "options": [
+              "辆",
+              "双",
+              "张"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "双 counts a pair, including a pair of shoes.",
+              "fr": "双 compte une paire, notamment une paire de chaussures.",
+              "ru": "双 считает пары, в том числе пару обуви."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-measure-category-classifiers",
+        "pattern": "名量词：种、层、封、页、节、所、班、段、头、句",
+        "explanation": {
+          "en": "Many nouns take a conventional classifier: 一种办法 (a kind of method), 一层楼 (a floor), 一封信 (a letter), 一页纸 (a page), 一节课 (a class), 一所学校 (a school), 一班学生 (a class of students), 一段话 (a passage), 一头牛 (a cow), 一句话 (a sentence/remark). Learn the common pairings.",
+          "fr": "De nombreux noms ont un classificateur conventionnel : 一种办法 (une sorte de méthode), 一层楼 (un étage), 一封信 (une lettre), 一页纸 (une page), 一节课 (un cours), 一所学校 (une école), 一班学生 (une classe d’élèves), 一段话 (un passage), 一头牛 (une vache), 一句话 (une phrase/remarque). Apprenez les associations courantes.",
+          "ru": "У многих существительных есть обычный классификатор: 一种办法 — один способ, 一层楼 — этаж, 一封信 — письмо, 一页纸 — страница, 一节课 — занятие, 一所学校 — школа, 一班学生 — класс учеников, 一段话 — отрывок, 一头牛 — корова, 一句话 — фраза. Учите распространённые сочетания."
+        },
+        "example": {
+          "hanzi": "我们上了一节课，还写了两段话。",
+          "pinyin": "Wǒmen shàng le yì jié kè, hái xiě le liǎng duàn huà.",
+          "meaning": {
+            "en": "We had one class and also wrote two short passages.",
+            "fr": "Nous avons suivi un cours et écrit deux petits passages.",
+            "ru": "Мы провели одно занятие и написали два небольших отрывка."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-measure-category-classifiers-01",
+            "prompt": {
+              "en": "She wrote a letter to her friend.",
+              "fr": "Elle a écrit une lettre à son amie.",
+              "ru": "Она написала подруге письмо."
+            },
+            "sentence": "她给朋友写了一___信。",
+            "options": [
+              "页",
+              "句",
+              "封"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "封 is the classifier used with 信 (letter).",
+              "fr": "封 est le classificateur employé avec 信 (« lettre »).",
+              "ru": "封 — классификатор для 信 («письмо»)."
+            }
+          },
+          {
+            "id": "hsk3-grammar-measure-category-classifiers-02",
+            "prompt": {
+              "en": "Please turn to page twelve.",
+              "fr": "Veuillez passer à la page douze.",
+              "ru": "Пожалуйста, откройте страницу двенадцать."
+            },
+            "sentence": "请翻到第十二___。",
+            "options": [
+              "节",
+              "头",
+              "页"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "页 is used for a page in a book or document.",
+              "fr": "页 s’emploie pour une page de livre ou de document.",
+              "ru": "页 используется для страницы книги или документа."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-measure-quantity-units",
+        "pattern": "计量单位：公斤、斤、角、毛、刻、米",
+        "explanation": {
+          "en": "These words name units for weight, money, time and length. A 公斤 is two 斤; one 斤 is 500 grams. In prices, one 角 and one 毛 are both one tenth of a yuan. A 刻 on the clock is a quarter hour; 米 means metre.",
+          "fr": "Ces mots désignent des unités de poids, de monnaie, de temps et de longueur. Un 公斤 vaut deux 斤 ; un 斤 vaut 500 grammes. Pour les prix, 角 et 毛 valent chacun un dixième de yuan. Une 刻 sur l’horloge correspond à un quart d’heure ; 米 signifie mètre.",
+          "ru": "Эти слова обозначают единицы веса, денег, времени и длины. Один 公斤 равен двум 斤; один 斤 — 500 граммам. В цене один 角 и один 毛 равны одной десятой юаня. 刻 на часах — четверть часа; 米 означает метр."
+        },
+        "example": {
+          "hanzi": "这袋米重两公斤，差不多四斤。",
+          "pinyin": "Zhè dài mǐ zhòng liǎng gōngjīn, chàbuduō sì jīn.",
+          "meaning": {
+            "en": "This bag of rice weighs two kilograms, about four jin.",
+            "fr": "Ce sac de riz pèse deux kilos, soit environ quatre jin.",
+            "ru": "Этот мешок риса весит два килограмма, примерно четыре цзиня."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-measure-quantity-units-01",
+            "prompt": {
+              "en": "This bag of rice weighs two kilograms.",
+              "fr": "Ce sac de riz pèse deux kilogrammes.",
+              "ru": "Этот мешок риса весит два килограмма."
+            },
+            "sentence": "这袋米有两___重。",
+            "options": [
+              "刻",
+              "公斤",
+              "毛"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "公斤 is the unit kilogram; two 公斤 equal four 斤.",
+              "fr": "公斤 est l’unité « kilogramme » ; deux 公斤 valent quatre 斤.",
+              "ru": "公斤 — килограмм; два 公斤 равны четырём 斤."
+            }
+          },
+          {
+            "id": "hsk3-grammar-measure-quantity-units-02",
+            "prompt": {
+              "en": "It is quarter past three.",
+              "fr": "Il est trois heures et quart.",
+              "ru": "Сейчас четверть четвёртого."
+            },
+            "sentence": "现在三点一___。",
+            "options": [
+              "斤",
+              "米",
+              "刻"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "一刻 means a quarter of an hour in a clock-time expression.",
+              "fr": "一刻 désigne un quart d’heure dans une expression de l’heure.",
+              "ru": "一刻 означает четверть часа в обозначении времени."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-measure-bowl-plate",
+        "pattern": "借用名量词：碗、盘",
+        "explanation": {
+          "en": "A container word can count what it holds: 一碗面 is a bowl of noodles, and 一盘菜 is a plate of food. The classifier describes the serving or container, not the shape of the food.",
+          "fr": "Un nom de contenant peut compter son contenu : 一碗面 est un bol de nouilles et 一盘菜 une assiette de plats. Le classificateur décrit le contenant ou la portion, pas la forme de l’aliment.",
+          "ru": "Слово-контейнер может считать содержимое: 一碗面 — миска лапши, 一盘菜 — тарелка блюда. Классификатор указывает на посуду или порцию, а не на форму еды."
+        },
+        "example": {
+          "hanzi": "我给你点了一碗面和一盘青菜。",
+          "pinyin": "Wǒ gěi nǐ diǎn le yì wǎn miàn hé yì pán qīngcài.",
+          "meaning": {
+            "en": "I ordered you a bowl of noodles and a plate of greens.",
+            "fr": "Je t’ai commandé un bol de nouilles et une assiette de légumes verts.",
+            "ru": "Я заказал тебе миску лапши и тарелку зелени."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-measure-bowl-plate-01",
+            "prompt": {
+              "en": "I ate a bowl of noodles for lunch.",
+              "fr": "J’ai mangé un bol de nouilles au déjeuner.",
+              "ru": "На обед я съел миску лапши."
+            },
+            "sentence": "我中午吃了一___面。",
+            "options": [
+              "碗",
+              "张",
+              "辆"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "碗 counts a bowl serving of noodles.",
+              "fr": "碗 compte un bol de nouilles.",
+              "ru": "碗 обозначает миску лапши."
+            }
+          },
+          {
+            "id": "hsk3-grammar-measure-bowl-plate-02",
+            "prompt": {
+              "en": "There is a plate of fruit on the table.",
+              "fr": "Il y a une assiette de fruits sur la table.",
+              "ru": "На столе стоит тарелка фруктов."
+            },
+            "sentence": "桌上有一___水果。",
+            "options": [
+              "口",
+              "页",
+              "盘"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "盘 counts a plate or dish of food.",
+              "fr": "盘 compte une assiette ou un plat de nourriture.",
+              "ru": "盘 обозначает тарелку или блюдо еды."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-measure-actions-approximation",
+        "pattern": "动量词：口、回、遍、声；量词重叠：个个、张张；概数：大概、相邻数词连用",
+        "explanation": {
+          "en": "口 counts a mouthful, 回 a time or visit, 遍 one complete pass through an action, and 声 a call or sound. Repeated classifiers such as 个个 and 张张 mean each one. 大概 and adjacent numerals such as 三四个人 give an approximate amount.",
+          "fr": "口 compte une gorgée ou bouchée, 回 une fois ou une visite, 遍 un parcours complet de l’action et 声 un appel ou un son. Les classificateurs répétés comme 个个 et 张张 signifient « chaque ». 大概 et deux nombres voisins, comme 三四个人, donnent une quantité approximative.",
+          "ru": "口 считает глоток или кусочек, 回 — случай или посещение, 遍 — полный проход действия, 声 — возглас или звук. Повтор классификатора, например 个个 или 张张, означает «каждый». 大概 и соседние числа, например 三四个人, обозначают приблизительное количество."
+        },
+        "example": {
+          "hanzi": "老师把这句话说了两遍，学生们个个都听懂了。",
+          "pinyin": "Lǎoshī bǎ zhè jù huà shuō le liǎng biàn, xuéshengmen gègè dōu tīngdǒng le.",
+          "meaning": {
+            "en": "The teacher said the sentence twice, and every student understood it.",
+            "fr": "Le professeur a répété la phrase deux fois et tous les élèves l’ont comprise.",
+            "ru": "Учитель дважды произнёс это предложение, и каждый ученик его понял."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-measure-actions-approximation-01",
+            "prompt": {
+              "en": "Please read the whole sentence through once more.",
+              "fr": "Veuillez relire toute la phrase une fois de plus.",
+              "ru": "Пожалуйста, прочитайте всё предложение ещё раз."
+            },
+            "sentence": "请把这句话再读一___。",
+            "options": [
+              "遍",
+              "口",
+              "声"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "遍 counts one complete pass through reading the sentence.",
+              "fr": "遍 compte un parcours complet de la lecture de la phrase.",
+              "ru": "遍 считает полное прочтение предложения."
+            }
+          },
+          {
+            "id": "hsk3-grammar-measure-actions-approximation-02",
+            "prompt": {
+              "en": "There are roughly thirty or forty people in the meeting room.",
+              "fr": "Il y a environ trente ou quarante personnes dans la salle de réunion.",
+              "ru": "В переговорной примерно тридцать или сорок человек."
+            },
+            "sentence": "会议室里大概有___个人。",
+            "options": [
+              "两公斤",
+              "三四十",
+              "一封"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "三四十 combines adjacent numerals for an approximate range; 大概 also signals approximation.",
+              "fr": "三四十 associe des nombres voisins pour donner une fourchette approximative ; 大概 marque aussi l’approximation.",
+              "ru": "三四十 сочетает соседние числа для приблизительного диапазона; 大概 тоже указывает на примерность."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hsk3-grammar-adverbs",
+    "title": {
+      "en": "Degree, timing, repetition and certainty",
+      "fr": "Degré, moment, répétition et certitude",
+      "ru": "Степень, время, повторение и уверенность"
+    },
+    "cards": [
+      {
+        "id": "hsk3-grammar-adverbs-degree",
+        "pattern": "程度副词：比较、还、更、特别、挺、有些、越、极",
+        "explanation": {
+          "en": "比较 means relatively; 更 and 还 can increase a comparison, while 特别, 挺 and 有些 mark different degrees. 极 marks an extreme degree, often in 极好 or 好极了. 越 often signals increasing degree in a pattern such as 越来越; it is not simply interchangeable with 更.",
+          "fr": "比较 signifie « relativement » ; 更 et 还 peuvent renforcer une comparaison, tandis que 特别, 挺 et 有些 indiquent des degrés différents. 极 marque un degré extrême, souvent dans 极好 ou 好极了. 越 indique souvent une progression, comme dans 越来越 ; il ne remplace pas simplement 更.",
+          "ru": "比较 означает «сравнительно»; 更 и 还 могут усиливать сравнение, а 特别, 挺 и 有些 выражают разные степени. 极 обозначает крайнюю степень, часто в 极好 или 好极了. 越 обычно показывает нарастание, например 越来越, и не является простой заменой 更."
+        },
+        "example": {
+          "hanzi": "今天比昨天更冷，风也挺大。",
+          "pinyin": "Jīntiān bǐ zuótiān gèng lěng, fēng yě tǐng dà.",
+          "meaning": {
+            "en": "It is colder today than yesterday, and the wind is quite strong too.",
+            "fr": "Il fait plus froid aujourd’hui qu’hier, et le vent est assez fort aussi.",
+            "ru": "Сегодня холоднее, чем вчера, и ветер тоже довольно сильный."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-adverbs-degree-01",
+            "prompt": {
+              "en": "This room is bigger than that one.",
+              "fr": "Cette pièce est plus grande que celle-là.",
+              "ru": "Эта комната больше той."
+            },
+            "sentence": "这个房间比那个房间___大。",
+            "options": [
+              "一共",
+              "刚刚",
+              "更"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "更 can emphasize the higher degree in a 比 comparison.",
+              "fr": "更 peut renforcer le degré supérieur dans une comparaison avec 比.",
+              "ru": "更 может подчёркивать большую степень признака в сравнении с 比."
+            }
+          },
+          {
+            "id": "hsk3-grammar-adverbs-degree-02",
+            "prompt": {
+              "en": "I was extremely happy when I heard the news.",
+              "fr": "J’étais extrêmement heureux en apprenant la nouvelle.",
+              "ru": "Я был очень рад, когда услышал эту новость."
+            },
+            "sentence": "听到这个消息，我高兴___。",
+            "options": [
+              "到处",
+              "一会儿",
+              "极了"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "高兴极了 is a common way to say extremely happy.",
+              "fr": "高兴极了 est une tournure courante pour dire « extrêmement heureux ».",
+              "ru": "高兴极了 — распространённый способ сказать «очень рад»."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-adverbs-scope",
+        "pattern": "范围副词：就、一块儿、一共、只、到处、只是",
+        "explanation": {
+          "en": "These adverbs limit or frame an action: 一共 gives a total, 只 means only, 到处 means everywhere, and 只是 often introduces a qualification. 就 has several context-dependent uses; 一块儿 means together.",
+          "fr": "Ces adverbes limitent ou cadrent une action : 一共 indique un total, 只 signifie « seulement », 到处 « partout » et 只是 introduit souvent une réserve. 就 a plusieurs emplois selon le contexte ; 一块儿 signifie « ensemble ».",
+          "ru": "Эти наречия ограничивают или уточняют действие: 一共 обозначает итог, 只 — «только», 到处 — «везде», а 只是 часто вводит оговорку. У 就 несколько значений в зависимости от контекста; 一块儿 означает «вместе»."
+        },
+        "example": {
+          "hanzi": "我和妹妹一块儿回家，一共买了两本书。",
+          "pinyin": "Wǒ hé mèimei yíkuàir huí jiā, yígòng mǎi le liǎng běn shū.",
+          "meaning": {
+            "en": "My younger sister and I went home together and bought two books in total.",
+            "fr": "Ma petite sœur et moi sommes rentrées ensemble et avons acheté deux livres en tout.",
+            "ru": "Мы с младшей сестрой вместе пошли домой и купили всего две книги."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-adverbs-scope-01",
+            "prompt": {
+              "en": "We bought five tickets in total.",
+              "fr": "Nous avons acheté cinq billets en tout.",
+              "ru": "Всего мы купили пять билетов."
+            },
+            "sentence": "我们___买了五张票。",
+            "options": [
+              "极了",
+              "刚刚",
+              "一共"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "一共 marks the total number of tickets.",
+              "fr": "一共 indique le nombre total de billets.",
+              "ru": "一共 обозначает общее количество билетов."
+            }
+          },
+          {
+            "id": "hsk3-grammar-adverbs-scope-02",
+            "prompt": {
+              "en": "I only bought one notebook.",
+              "fr": "Je n’ai acheté qu’un seul cahier.",
+              "ru": "Я купил только одну тетрадь."
+            },
+            "sentence": "我___买了一本笔记本。",
+            "options": [
+              "到处",
+              "只",
+              "一边"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "只 limits the purchase to one notebook.",
+              "fr": "只 limite l’achat à un seul cahier.",
+              "ru": "只 ограничивает покупку одной тетрадью."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-adverbs-time",
+        "pattern": "时间副词：才、马上、先、一会儿、刚、刚刚、一直",
+        "explanation": {
+          "en": "先 marks what happens first; 马上 means very soon; 刚 and 刚刚 mean just now; 一会儿 refers to a short while. 一直 means continuously or all along. 才 is context-sensitive and often marks lateness or a later-than-expected time.",
+          "fr": "先 marque ce qui se passe d’abord ; 马上 signifie « très bientôt » ; 刚 et 刚刚 signifient « à l’instant » ; 一会儿 désigne un court moment. 一直 signifie « sans interruption » ou « depuis tout ce temps ». 才 dépend du contexte et marque souvent un moment tardif ou plus tardif que prévu.",
+          "ru": "先 отмечает первое действие; 马上 означает «скоро»; 刚 и 刚刚 — «только что»; 一会儿 — «через некоторое время/недолго». 一直 означает «непрерывно», «всё это время». Значение 才 зависит от контекста и часто указывает на позднее или более позднее, чем ожидалось, время."
+        },
+        "example": {
+          "hanzi": "他刚刚到家，马上就要吃饭了。",
+          "pinyin": "Tā gānggāng dào jiā, mǎshàng jiù yào chīfàn le.",
+          "meaning": {
+            "en": "He has just arrived home and is about to eat.",
+            "fr": "Il vient d’arriver chez lui et va bientôt manger.",
+            "ru": "Он только что пришёл домой и скоро будет есть."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-adverbs-time-01",
+            "prompt": {
+              "en": "He has just arrived at the station.",
+              "fr": "Il vient d’arriver à la gare.",
+              "ru": "Он только что приехал на станцию."
+            },
+            "sentence": "他___到车站。",
+            "options": [
+              "刚刚",
+              "到处",
+              "一直"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "刚刚 means that the arrival happened only a short time ago.",
+              "fr": "刚刚 indique que l’arrivée vient d’avoir lieu.",
+              "ru": "刚刚 показывает, что прибытие произошло совсем недавно."
+            }
+          },
+          {
+            "id": "hsk3-grammar-adverbs-time-02",
+            "prompt": {
+              "en": "We should eat first and then go shopping.",
+              "fr": "Nous devrions d’abord manger, puis faire les courses.",
+              "ru": "Сначала нам следует поесть, а потом пойти за покупками."
+            },
+            "sentence": "我们___吃饭，然后去买东西。",
+            "options": [
+              "刚",
+              "先",
+              "才"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "先 marks eating as the first action in the sequence.",
+              "fr": "先 marque le repas comme première étape de la séquence.",
+              "ru": "先 обозначает еду как первое действие в последовательности."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-adverbs-frequency-simultaneous",
+        "pattern": "频率副词：总、总是、又、常常；关联副词：一边……一边……",
+        "explanation": {
+          "en": "总 and 总是 describe what someone habitually does; 常常 means often, and 又 can mark a repeated event. 一边……一边…… links two actions happening at the same time, usually with the same subject.",
+          "fr": "总 et 总是 décrivent une habitude ; 常常 signifie « souvent » et 又 peut marquer une répétition. 一边……一边…… relie deux actions simultanées, généralement accomplies par le même sujet.",
+          "ru": "总 и 总是 обозначают привычное действие; 常常 значит «часто», а 又 может указывать на повтор. 一边……一边…… связывает два одновременных действия, обычно с одним и тем же субъектом."
+        },
+        "example": {
+          "hanzi": "她一边听音乐，一边做作业。",
+          "pinyin": "Tā yìbiān tīng yīnyuè, yìbiān zuò zuòyè.",
+          "meaning": {
+            "en": "She does her homework while listening to music.",
+            "fr": "Elle fait ses devoirs tout en écoutant de la musique.",
+            "ru": "Она делает домашнее задание, слушая музыку."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-adverbs-frequency-simultaneous-01",
+            "prompt": {
+              "en": "She does homework while listening to music.",
+              "fr": "Elle fait ses devoirs tout en écoutant de la musique.",
+              "ru": "Она делает домашнее задание, слушая музыку."
+            },
+            "sentence": "她一边听音乐，一边___作业。",
+            "options": [
+              "做",
+              "总是",
+              "只"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "一边……一边…… links the simultaneous actions of listening and doing homework.",
+              "fr": "一边……一边…… relie les actions simultanées d’écouter et de faire ses devoirs.",
+              "ru": "一边……一边…… связывает одновременные действия: слушать музыку и делать уроки."
+            }
+          },
+          {
+            "id": "hsk3-grammar-adverbs-frequency-simultaneous-02",
+            "prompt": {
+              "en": "I often take this bus; I have taken it many times.",
+              "fr": "Je prends souvent ce bus ; je l’ai pris de nombreuses fois.",
+              "ru": "Я часто езжу на этом автобусе; я много раз на нём ездил."
+            },
+            "sentence": "我___坐这班车，已经坐了很多次。",
+            "options": [
+              "一边",
+              "才",
+              "常常"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "常常 means often and fits the repeated habit.",
+              "fr": "常常 signifie « souvent » et convient à cette habitude répétée.",
+              "ru": "常常 означает «часто» и подходит для повторяющейся привычки."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-adverbs-certainty-necessity",
+        "pattern": "情态副词：大概、必须、差不多、一定、好像、几乎；语气副词：当然、其实、终于；否定副词：不必、不用",
+        "explanation": {
+          "en": "These words express estimates, confidence, appearance, emphasis or necessity: 大概 and 好像 can soften certainty; 一定 is confident; 必须 means must; 不必 and 不用 mean there is no need. 当然, 其实 and 终于 add stance or mark a result after waiting.",
+          "fr": "Ces mots expriment une estimation, une certitude, une apparence, une insistance ou une nécessité : 大概 et 好像 nuancent la certitude ; 一定 exprime une forte assurance ; 必须 signifie « devoir » ; 不必 et 不用 signifient qu’il n’y a pas besoin. 当然, 其实 et 终于 ajoutent une prise de position ou marquent un résultat attendu.",
+          "ru": "Эти слова выражают предположение, уверенность, видимость, акцент или необходимость: 大概 и 好像 смягчают уверенность; 一定 выражает твёрдую уверенность; 必须 означает «обязан»; 不必 и 不用 — «не нужно». 当然, 其实 и 终于 добавляют отношение или отмечают долгожданный результат."
+        },
+        "example": {
+          "hanzi": "他终于完成了工作，其实很早就开始了。",
+          "pinyin": "Tā zhōngyú wánchéng le gōngzuò, qíshí hěn zǎo jiù kāishǐ le.",
+          "meaning": {
+            "en": "He finally finished the work; actually, he started quite early.",
+            "fr": "Il a enfin terminé le travail ; en fait, il l’avait commencé assez tôt.",
+            "ru": "Он наконец закончил работу; на самом деле он начал довольно рано."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-adverbs-certainty-necessity-01",
+            "prompt": {
+              "en": "You do not need to come again tonight; I am already ready.",
+              "fr": "Tu n’as pas besoin de revenir ce soir ; je suis déjà prêt.",
+              "ru": "Тебе не нужно приходить сегодня вечером снова; я уже готов."
+            },
+            "sentence": "今晚你___再来，我已经准备好了。",
+            "options": [
+              "必须",
+              "差不多",
+              "不必"
+            ],
+            "answer": 2,
+            "explanation": {
+              "en": "不必 says that coming again is unnecessary.",
+              "fr": "不必 indique qu’il n’est pas nécessaire de revenir.",
+              "ru": "不必 означает, что возвращаться не нужно."
+            }
+          },
+          {
+            "id": "hsk3-grammar-adverbs-certainty-necessity-02",
+            "prompt": {
+              "en": "He seems to have arrived home already.",
+              "fr": "Il semble déjà arrivé chez lui.",
+              "ru": "Кажется, он уже пришёл домой."
+            },
+            "sentence": "他___已经到家了。",
+            "options": [
+              "好像",
+              "必须",
+              "当然"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "好像 marks an impression or tentative belief.",
+              "fr": "好像 marque une impression ou une supposition prudente.",
+              "ru": "好像 обозначает впечатление или неуверенное предположение."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hsk3-grammar-prepositions",
+    "title": {
+      "en": "Who, where, why and according to what",
+      "fr": "Qui, où, pourquoi et selon quoi",
+      "ru": "Кто, куда, зачем и на каком основании"
+    },
+    "cards": [
+      {
+        "id": "hsk3-grammar-prepositions-wei-xiang",
+        "pattern": "介词：为、向（引出对象、方向或路径）",
+        "explanation": {
+          "en": "向 commonly marks the person addressed or the direction of an action. 为 can mean for or on behalf of someone. The exact relation depends on the verb and context.",
+          "fr": "向 indique souvent la personne à qui l’on s’adresse ou la direction de l’action. 为 peut signifier « pour » ou « au nom de ». Le rapport exact dépend du verbe et du contexte.",
+          "ru": "向 часто обозначает адресата или направление действия. 为 может означать «для» или «ради кого-то». Точное отношение зависит от глагола и контекста."
+        },
+        "example": {
+          "hanzi": "我为老师准备了材料，然后向前走去。",
+          "pinyin": "Wǒ wèi lǎoshī zhǔnbèi le cáiliào, ránhòu xiàng qián zǒu qù.",
+          "meaning": {
+            "en": "I prepared materials for the teacher and then walked forward.",
+            "fr": "J’ai préparé des documents pour le professeur, puis j’ai avancé.",
+            "ru": "Я подготовил материалы для учителя, а затем пошёл вперёд."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-prepositions-wei-xiang-01",
+            "prompt": {
+              "en": "He asked the teacher a question.",
+              "fr": "Il a posé une question au professeur.",
+              "ru": "Он задал учителю вопрос."
+            },
+            "sentence": "他___老师问了一个问题。",
+            "options": [
+              "被",
+              "向",
+              "根据"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "向 marks the teacher as the person he addressed.",
+              "fr": "向 désigne le professeur comme la personne à qui il s’adresse.",
+              "ru": "向 обозначает учителя как адресата вопроса."
+            }
+          },
+          {
+            "id": "hsk3-grammar-prepositions-wei-xiang-02",
+            "prompt": {
+              "en": "I am happy for you.",
+              "fr": "Je suis heureux pour toi.",
+              "ru": "Я рад за тебя."
+            },
+            "sentence": "我___你感到高兴。",
+            "options": [
+              "向",
+              "为",
+              "关于"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "为你 means for you in this expression of shared happiness.",
+              "fr": "为你 signifie « pour toi » dans cette expression de joie partagée.",
+              "ru": "为你 означает «за тебя» в выражении радости за другого."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-prepositions-about-according-to",
+        "pattern": "介词：关于、根据",
+        "explanation": {
+          "en": "关于 introduces a topic, often at the start of a sentence. 根据 introduces a source, rule or basis for what follows. They answer different questions: what the statement is about versus what it relies on.",
+          "fr": "关于 introduit un sujet, souvent en début de phrase. 根据 introduit une source, une règle ou un fondement. Ils répondent à des questions différentes : de quoi parle-t-on, et sur quoi s’appuie-t-on ?",
+          "ru": "关于 вводит тему, часто в начале предложения. 根据 указывает на источник, правило или основание последующего высказывания. Первое отвечает на вопрос «о чём?», второе — «на основании чего?»."
+        },
+        "example": {
+          "hanzi": "关于这本书，我想再问一个问题。",
+          "pinyin": "Guānyú zhè běn shū, wǒ xiǎng zài wèn yí ge wèntí.",
+          "meaning": {
+            "en": "I would like to ask another question about this book.",
+            "fr": "Je voudrais poser une autre question au sujet de ce livre.",
+            "ru": "Я хотел бы задать ещё один вопрос об этой книге."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-prepositions-about-according-to-01",
+            "prompt": {
+              "en": "According to the weather forecast, it will rain tomorrow.",
+              "fr": "Selon les prévisions météo, il pleuvra demain.",
+              "ru": "Согласно прогнозу погоды, завтра будет дождь."
+            },
+            "sentence": "___天气预报，明天会下雨。",
+            "options": [
+              "根据",
+              "关于",
+              "为了"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "根据 introduces the forecast as the basis for the statement.",
+              "fr": "根据 présente les prévisions comme fondement de l’affirmation.",
+              "ru": "根据 указывает прогноз как основание утверждения."
+            }
+          },
+          {
+            "id": "hsk3-grammar-prepositions-about-according-to-02",
+            "prompt": {
+              "en": "As for this trip, we have not decided the date yet.",
+              "fr": "Pour ce voyage, nous n’avons pas encore fixé la date.",
+              "ru": "Что касается этой поездки, мы ещё не решили, когда ехать."
+            },
+            "sentence": "___这次旅行，我们还没有决定日期。",
+            "options": [
+              "根据",
+              "关于",
+              "向"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "关于 introduces the trip as the topic of the sentence.",
+              "fr": "关于 introduit le voyage comme sujet de la phrase.",
+              "ru": "关于 вводит поездку как тему предложения."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-prepositions-purpose",
+        "pattern": "介词：为了（引出目的）",
+        "explanation": {
+          "en": "为了 introduces the goal that motivates the following action. The purpose phrase commonly comes before the main clause; it does not by itself state whether the goal was achieved.",
+          "fr": "为了 introduit l’objectif qui motive l’action suivante. Le groupe de but précède souvent la proposition principale ; il n’indique pas à lui seul si l’objectif a été atteint.",
+          "ru": "为了 вводит цель, ради которой совершается последующее действие. Оборот цели обычно стоит перед главной частью и сам по себе не говорит, была ли цель достигнута."
+        },
+        "example": {
+          "hanzi": "为了不迟到，我每天早点儿出门。",
+          "pinyin": "Wèile bù chídào, wǒ měitiān zǎodiǎnr chūmén.",
+          "meaning": {
+            "en": "To avoid being late, I leave home a little earlier every day.",
+            "fr": "Pour ne pas être en retard, je pars un peu plus tôt chaque jour.",
+            "ru": "Чтобы не опаздывать, я каждый день выхожу немного раньше."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-prepositions-purpose-01",
+            "prompt": {
+              "en": "She studies Chinese in order to work in China.",
+              "fr": "Elle étudie le chinois afin de travailler en Chine.",
+              "ru": "Она учит китайский, чтобы работать в Китае."
+            },
+            "sentence": "___在中国工作，她认真学习中文。",
+            "options": [
+              "为了",
+              "被",
+              "根据"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "为了 introduces the goal of working in China.",
+              "fr": "为了 introduit l’objectif de travailler en Chine.",
+              "ru": "为了 вводит цель — работать в Китае."
+            }
+          },
+          {
+            "id": "hsk3-grammar-prepositions-purpose-02",
+            "prompt": {
+              "en": "Please speak slowly so that everyone can hear clearly.",
+              "fr": "Parlez lentement afin que tout le monde entende bien.",
+              "ru": "Пожалуйста, говорите медленно, чтобы все хорошо слышали."
+            },
+            "sentence": "___让大家听清楚，请说慢一点儿。",
+            "options": [
+              "为了",
+              "向",
+              "关于"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "为了让大家听清楚 states the purpose of speaking slowly.",
+              "fr": "为了让大家听清楚 indique le but de parler lentement.",
+              "ru": "为了让大家听清楚 объясняет, зачем нужно говорить медленно."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-prepositions-ba",
+        "pattern": "把字句：主语+把+宾语+动词+在/到+处所或补语",
+        "explanation": {
+          "en": "把 places an affected object before the verb so the sentence can describe what is done to it. The verb normally has a result, direction, location or other completion; a bare verb is usually not enough.",
+          "fr": "把 place l’objet concerné avant le verbe afin d’indiquer ce qu’on lui fait. Le verbe est normalement suivi d’un résultat, d’une direction, d’un lieu ou d’une autre précision ; un verbe nu ne suffit généralement pas.",
+          "ru": "把 ставит объект, на который воздействуют, перед глаголом и показывает, что с ним делают. После глагола обычно указывается результат, направление, место или другое завершение; одного глагола обычно недостаточно."
+        },
+        "example": {
+          "hanzi": "请把杯子放在桌子上。",
+          "pinyin": "Qǐng bǎ bēizi fàng zài zhuōzi shàng.",
+          "meaning": {
+            "en": "Please put the cup on the table.",
+            "fr": "Veuillez poser la tasse sur la table.",
+            "ru": "Пожалуйста, поставьте чашку на стол."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-prepositions-ba-01",
+            "prompt": {
+              "en": "Please close the door.",
+              "fr": "Veuillez fermer la porte.",
+              "ru": "Пожалуйста, закройте дверь."
+            },
+            "sentence": "请把门___。",
+            "options": [
+              "关上",
+              "关于",
+              "被关上"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "关上 gives the result needed after 把门: the door ends up closed.",
+              "fr": "关上 apporte le résultat attendu après 把门 : la porte se retrouve fermée.",
+              "ru": "关上 указывает результат после 把门: дверь оказывается закрытой."
+            }
+          },
+          {
+            "id": "hsk3-grammar-prepositions-ba-02",
+            "prompt": {
+              "en": "I finished the homework.",
+              "fr": "J’ai terminé mes devoirs.",
+              "ru": "Я закончил домашнее задание."
+            },
+            "sentence": "我把作业___了。",
+            "options": [
+              "做完",
+              "根据",
+              "向"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "做完 states the result of the action on the homework: it is finished.",
+              "fr": "做完 indique le résultat de l’action sur les devoirs : ils sont terminés.",
+              "ru": "做完 указывает результат действия с заданием: оно закончено."
+            }
+          }
+        ]
+      },
+      {
+        "id": "hsk3-grammar-prepositions-bei",
+        "pattern": "被动句：主语+被（+施事）+动词+其他成分",
+        "explanation": {
+          "en": "被 introduces a passive event: the subject is affected by the action. The agent may follow 被 or be left out; the verb phrase supplies the action and often its result.",
+          "fr": "被 introduit un événement passif : le sujet subit l’action. L’agent peut suivre 被 ou être omis ; le groupe verbal indique l’action et souvent son résultat.",
+          "ru": "被 вводит пассивную конструкцию: субъект испытывает на себе действие. После 被 можно назвать исполнителя или опустить его; глагольная часть обозначает действие и часто его результат."
+        },
+        "example": {
+          "hanzi": "我的自行车被弟弟骑走了。",
+          "pinyin": "Wǒ de zìxíngchē bèi dìdi qí zǒu le.",
+          "meaning": {
+            "en": "My younger brother rode my bicycle away.",
+            "fr": "Mon petit frère est parti avec mon vélo.",
+            "ru": "Младший брат уехал на моём велосипеде."
+          }
+        },
+        "exercises": [
+          {
+            "id": "hsk3-grammar-prepositions-bei-01",
+            "prompt": {
+              "en": "My phone was taken away by a classmate.",
+              "fr": "Mon téléphone a été emporté par un camarade de classe.",
+              "ru": "Одноклассник унёс мой телефон."
+            },
+            "sentence": "我的手机被同学___了。",
+            "options": [
+              "了解",
+              "拿走",
+              "为了"
+            ],
+            "answer": 1,
+            "explanation": {
+              "en": "拿走 describes the action and result in this passive sentence.",
+              "fr": "拿走 décrit l’action et son résultat dans cette phrase passive.",
+              "ru": "拿走 обозначает действие и его результат в пассивном предложении."
+            }
+          },
+          {
+            "id": "hsk3-grammar-prepositions-bei-02",
+            "prompt": {
+              "en": "The window got broken.",
+              "fr": "La fenêtre a été cassée.",
+              "ru": "Окно разбили."
+            },
+            "sentence": "窗户___打破了。",
+            "options": [
+              "被",
+              "向",
+              "把"
+            ],
+            "answer": 0,
+            "explanation": {
+              "en": "被 marks the window as the subject affected by 打破; no agent is stated.",
+              "fr": "被 marque la fenêtre comme sujet qui subit 打破 ; l’agent n’est pas indiqué.",
+              "ru": "被 показывает, что окно подверглось действию 打破; исполнитель не назван."
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
