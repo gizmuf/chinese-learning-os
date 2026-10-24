@@ -47,6 +47,10 @@
   "characters": [
     {
       "hanzi": "一",
+      "readings": [
+        "yī"
+      ],
+      "definition": "one; a, an; alone",
       "decomposition": "？",
       "radical": "一",
       "decompositionTree": {
@@ -79,6 +83,10 @@
     },
     {
       "hanzi": "七",
+      "readings": [
+        "qī"
+      ],
+      "definition": "seven",
       "decomposition": "⿻一乚",
       "radical": "一",
       "decompositionTree": {
@@ -110,6 +118,10 @@
     },
     {
       "hanzi": "万",
+      "readings": [
+        "wàn"
+      ],
+      "definition": "ten thousand; innumerable",
       "decomposition": "⿱一？",
       "radical": "一",
       "decompositionTree": {
@@ -141,6 +153,10 @@
     },
     {
       "hanzi": "丈",
+      "readings": [
+        "zhàng"
+      ],
+      "definition": "gentleman, man, husband; unit of length equal to 3.3 meters",
       "decomposition": "⿻一又",
       "radical": "一",
       "decompositionTree": {
@@ -172,6 +188,10 @@
     },
     {
       "hanzi": "三",
+      "readings": [
+        "sān"
+      ],
+      "definition": "three",
       "decomposition": "⿱一二",
       "radical": "一",
       "decompositionTree": {
@@ -203,6 +223,10 @@
     },
     {
       "hanzi": "上",
+      "readings": [
+        "shàng"
+      ],
+      "definition": "above, on top, superior; to go up; to attend; previous",
       "decomposition": "⿱⺊一",
       "radical": "一",
       "decompositionTree": {
@@ -250,6 +274,10 @@
     },
     {
       "hanzi": "下",
+      "readings": [
+        "xià"
+      ],
+      "definition": "below, underneath; inferior; to bring down; next",
       "decomposition": "⿱一卜",
       "radical": "一",
       "decompositionTree": {
@@ -292,6 +320,10 @@
     },
     {
       "hanzi": "不",
+      "readings": [
+        "bù"
+      ],
+      "definition": "no, not, un-; negative prefix",
       "decomposition": "⿱一？",
       "radical": "一",
       "decompositionTree": {
@@ -335,6 +367,10 @@
     },
     {
       "hanzi": "且",
+      "readings": [
+        "qiě"
+      ],
+      "definition": "moreover, also (post-subject); about to, will soon (pre-verb)",
       "decomposition": "⿱月一",
       "radical": "一",
       "decompositionTree": {
@@ -369,6 +405,10 @@
     },
     {
       "hanzi": "世",
+      "readings": [
+        "shì"
+      ],
+      "definition": "generation, era, age; world",
       "decomposition": "⿻廿？",
       "radical": "一",
       "decompositionTree": {
@@ -402,6 +442,10 @@
     },
     {
       "hanzi": "业",
+      "readings": [
+        "yè"
+      ],
+      "definition": "business, profession; to study, to work",
       "decomposition": "⿱？一",
       "radical": "一",
       "decompositionTree": {
@@ -433,6 +477,10 @@
     },
     {
       "hanzi": "东",
+      "readings": [
+        "dōng"
+      ],
+      "definition": "east, eastern, eastward",
       "decomposition": "⿻七小",
       "radical": "一",
       "decompositionTree": {
@@ -472,6 +520,10 @@
     },
     {
       "hanzi": "丢",
+      "readings": [
+        "diū"
+      ],
+      "definition": "to lose; to discard",
       "decomposition": "⿱王厶",
       "radical": "一",
       "decompositionTree": {
@@ -507,6 +559,10 @@
     },
     {
       "hanzi": "两",
+      "readings": [
+        "liǎng"
+      ],
+      "definition": "two, both, pair, couple; ounce",
       "decomposition": "⿱一⿻冂从",
       "radical": "一",
       "decompositionTree": {
@@ -550,6 +606,10 @@
     },
     {
       "hanzi": "个",
+      "readings": [
+        "gè"
+      ],
+      "definition": "this, that; single; measure word for individuals",
       "decomposition": "⿱人丨",
       "radical": "丨",
       "decompositionTree": {
@@ -585,6 +645,10 @@
     },
     {
       "hanzi": "中",
+      "readings": [
+        "zhōng"
+      ],
+      "definition": "central; center, middle; amidst; to hit (target), to attain; China; Chinese",
       "decomposition": "⿻口丨",
       "radical": "丨",
       "decompositionTree": {
@@ -626,6 +690,10 @@
     },
     {
       "hanzi": "为",
+      "readings": [
+        "wèi"
+      ],
+      "definition": "to do, to act; to handle, to govern; to be",
       "decomposition": "⿻丶⿴力丶",
       "radical": "丶",
       "decompositionTree": {
@@ -672,6 +740,10 @@
     },
     {
       "hanzi": "主",
+      "readings": [
+        "zhǔ"
+      ],
+      "definition": "to own; to host; master; host; lord",
       "decomposition": "⿱丶王",
       "radical": "丶",
       "decompositionTree": {
@@ -707,6 +779,10 @@
     },
     {
       "hanzi": "久",
+      "readings": [
+        "jiǔ"
+      ],
+      "definition": "long ago; a long time",
       "decomposition": "⿻勹？",
       "radical": "丿",
       "decompositionTree": {
@@ -741,6 +817,10 @@
     },
     {
       "hanzi": "么",
+      "readings": [
+        "me"
+      ],
+      "definition": "interrogative particle",
       "decomposition": "⿱丿厶",
       "radical": "丿",
       "decompositionTree": {
@@ -778,6 +858,10 @@
     },
     {
       "hanzi": "乎",
+      "readings": [
+        "hū"
+      ],
+      "definition": "interrogative or exclamatory final particle",
       "decomposition": "⿻丿⿻？丷",
       "radical": "丿",
       "decompositionTree": {
@@ -820,6 +904,10 @@
     },
     {
       "hanzi": "乐",
+      "readings": [
+        "lè"
+      ],
+      "definition": "cheerful, happy, laughing; music",
       "decomposition": "⿻⿱丿？小",
       "radical": "丿",
       "decompositionTree": {
@@ -864,6 +952,10 @@
     },
     {
       "hanzi": "九",
+      "readings": [
+        "jiǔ"
+      ],
+      "definition": "nine",
       "decomposition": "⿻丿乙",
       "radical": "乙",
       "decompositionTree": {
@@ -895,6 +987,10 @@
     },
     {
       "hanzi": "也",
+      "readings": [
+        "yě"
+      ],
+      "definition": "also, too",
       "decomposition": "⿻？乚",
       "radical": "乚",
       "decompositionTree": {
@@ -926,6 +1022,10 @@
     },
     {
       "hanzi": "习",
+      "readings": [
+        "xí"
+      ],
+      "definition": "to study, to practice; habit",
       "decomposition": "⿹？冫",
       "radical": "冫",
       "decompositionTree": {
@@ -961,6 +1061,10 @@
     },
     {
       "hanzi": "书",
+      "readings": [
+        "shū"
+      ],
+      "definition": "book, letter, document; writing",
       "decomposition": "⿻？丨",
       "radical": "丨",
       "decompositionTree": {
@@ -997,6 +1101,10 @@
     },
     {
       "hanzi": "买",
+      "readings": [
+        "mǎi"
+      ],
+      "definition": "to buy, to purchase; to bribe, to persuade",
       "decomposition": "⿱乛头",
       "radical": "大",
       "decompositionTree": {
@@ -1032,6 +1140,11 @@
     },
     {
       "hanzi": "了",
+      "readings": [
+        "le",
+        "liǎo"
+      ],
+      "definition": "clear; to finish; particle of completed action",
       "decomposition": "⿱乛亅",
       "radical": "亅",
       "decompositionTree": {
@@ -1066,6 +1179,10 @@
     },
     {
       "hanzi": "事",
+      "readings": [
+        "shì"
+      ],
+      "definition": "affair, matter, business; to serve; accident, incident",
       "decomposition": "⿻⿳一口彐亅",
       "radical": "亅",
       "decompositionTree": {
@@ -1119,6 +1236,10 @@
     },
     {
       "hanzi": "二",
+      "readings": [
+        "èr"
+      ],
+      "definition": "two; twice",
       "decomposition": "⿱一一",
       "radical": "二",
       "decompositionTree": {
@@ -1149,6 +1270,10 @@
     },
     {
       "hanzi": "于",
+      "readings": [
+        "yú"
+      ],
+      "definition": "at, in, on; to, from; alas!",
       "decomposition": "⿻二亅",
       "radical": "二",
       "decompositionTree": {
@@ -1182,6 +1307,10 @@
     },
     {
       "hanzi": "五",
+      "readings": [
+        "wǔ"
+      ],
+      "definition": "five; surname",
       "decomposition": "⿴二？",
       "radical": "二",
       "decompositionTree": {
@@ -1214,6 +1343,10 @@
     },
     {
       "hanzi": "些",
+      "readings": [
+        "xiē"
+      ],
+      "definition": "little, few; rather, somewhat",
       "decomposition": "⿱此二",
       "radical": "二",
       "decompositionTree": {
@@ -1258,6 +1391,10 @@
     },
     {
       "hanzi": "交",
+      "readings": [
+        "jiāo"
+      ],
+      "definition": "to connect; to deliver, to exchange; to intersect; to mix",
       "decomposition": "⿱六乂",
       "radical": "亠",
       "decompositionTree": {
@@ -1294,6 +1431,10 @@
     },
     {
       "hanzi": "亮",
+      "readings": [
+        "liàng"
+      ],
+      "definition": "bright, brilliant, radiant, light",
       "decomposition": "⿳亠口⿱冖几",
       "radical": "亠",
       "decompositionTree": {
@@ -1347,6 +1488,10 @@
     },
     {
       "hanzi": "人",
+      "readings": [
+        "rén"
+      ],
+      "definition": "man, person; people",
       "decomposition": "？",
       "radical": "人",
       "decompositionTree": {
@@ -1376,6 +1521,10 @@
     },
     {
       "hanzi": "什",
+      "readings": [
+        "shén"
+      ],
+      "definition": "what? mixed, miscellaneous",
       "decomposition": "⿰亻十",
       "radical": "亻",
       "decompositionTree": {
@@ -1410,6 +1559,10 @@
     },
     {
       "hanzi": "今",
+      "readings": [
+        "jīn"
+      ],
+      "definition": "modern, current; today, now",
       "decomposition": "⿱人？",
       "radical": "人",
       "decompositionTree": {
@@ -1442,6 +1595,10 @@
     },
     {
       "hanzi": "介",
+      "readings": [
+        "jiè"
+      ],
+      "definition": "agent, go-between, intermediary; to introduce; shell, armor",
       "decomposition": "⿱人？",
       "radical": "人",
       "decompositionTree": {
@@ -1473,6 +1630,10 @@
     },
     {
       "hanzi": "从",
+      "readings": [
+        "cóng"
+      ],
+      "definition": "from, by, since, whence, through",
       "decomposition": "⿰人人",
       "radical": "人",
       "decompositionTree": {
@@ -1504,6 +1665,10 @@
     },
     {
       "hanzi": "他",
+      "readings": [
+        "tā"
+      ],
+      "definition": "other, another; he, she, it",
       "decomposition": "⿰亻也",
       "radical": "亻",
       "decompositionTree": {
@@ -1538,6 +1703,10 @@
     },
     {
       "hanzi": "以",
+      "readings": [
+        "yǐ"
+      ],
+      "definition": "according to; so as to; because of; then",
       "decomposition": "⿰？人",
       "radical": "人",
       "decompositionTree": {
@@ -1576,6 +1745,10 @@
     },
     {
       "hanzi": "们",
+      "readings": [
+        "men"
+      ],
+      "definition": "plural marker for pronouns and some nouns",
       "decomposition": "⿰亻门",
       "radical": "亻",
       "decompositionTree": {
@@ -1615,6 +1788,10 @@
     },
     {
       "hanzi": "件",
+      "readings": [
+        "jiàn"
+      ],
+      "definition": "item, matter; component, part; measure word for events",
       "decomposition": "⿰亻牛",
       "radical": "亻",
       "decompositionTree": {
@@ -1647,6 +1824,10 @@
     },
     {
       "hanzi": "休",
+      "readings": [
+        "xiū"
+      ],
+      "definition": "to rest; to stop; to retire",
       "decomposition": "⿰亻木",
       "radical": "亻",
       "decompositionTree": {
@@ -1683,6 +1864,10 @@
     },
     {
       "hanzi": "会",
+      "readings": [
+        "huì"
+      ],
+      "definition": "to assemble, to meet; meeting; association, group",
       "decomposition": "⿱人云",
       "radical": "人",
       "decompositionTree": {
@@ -1724,6 +1909,10 @@
     },
     {
       "hanzi": "伞",
+      "readings": [
+        "sǎn"
+      ],
+      "definition": "umbrella, parasol, parachute",
       "decomposition": "⿱人？",
       "radical": "人",
       "decompositionTree": {
@@ -1755,6 +1944,10 @@
     },
     {
       "hanzi": "但",
+      "readings": [
+        "dàn"
+      ],
+      "definition": "only; but, however, yet, still",
       "decomposition": "⿰亻旦",
       "radical": "亻",
       "decompositionTree": {
@@ -1793,6 +1986,10 @@
     },
     {
       "hanzi": "位",
+      "readings": [
+        "wèi"
+      ],
+      "definition": "seat, throne; rank, status; position, location",
       "decomposition": "⿰亻立",
       "radical": "亻",
       "decompositionTree": {
@@ -1828,6 +2025,10 @@
     },
     {
       "hanzi": "住",
+      "readings": [
+        "zhù"
+      ],
+      "definition": "to reside, to live at, to dwell, to lodge; to stop",
       "decomposition": "⿰亻主",
       "radical": "亻",
       "decompositionTree": {
@@ -1866,6 +2067,10 @@
     },
     {
       "hanzi": "体",
+      "readings": [
+        "tǐ"
+      ],
+      "definition": "body; group, class; form, style, system",
       "decomposition": "⿰亻本",
       "radical": "亻",
       "decompositionTree": {
@@ -1904,6 +2109,10 @@
     },
     {
       "hanzi": "作",
+      "readings": [
+        "zuò"
+      ],
+      "definition": "to make; to write, to compose; to act, to perform",
       "decomposition": "⿰亻乍",
       "radical": "亻",
       "decompositionTree": {
@@ -1943,6 +2152,10 @@
     },
     {
       "hanzi": "你",
+      "readings": [
+        "nǐ"
+      ],
+      "definition": "you, second person pronoun",
       "decomposition": "⿰亻尔",
       "radical": "亻",
       "decompositionTree": {
@@ -1980,6 +2193,10 @@
     },
     {
       "hanzi": "便",
+      "readings": [
+        "biàn"
+      ],
+      "definition": "easy, convenient; expedient",
       "decomposition": "⿰亻更",
       "radical": "亻",
       "decompositionTree": {
@@ -2020,6 +2237,10 @@
     },
     {
       "hanzi": "信",
+      "readings": [
+        "xìn"
+      ],
+      "definition": "to trust, to believe; letter, sign",
       "decomposition": "⿰亻言",
       "radical": "亻",
       "decompositionTree": {
@@ -2060,6 +2281,10 @@
     },
     {
       "hanzi": "候",
+      "readings": [
+        "hòu"
+      ],
+      "definition": "to wait, to expect; to visit; to greet",
       "decomposition": "⿰亻矦",
       "radical": "亻",
       "decompositionTree": {
@@ -2101,6 +2326,10 @@
     },
     {
       "hanzi": "借",
+      "readings": [
+        "jiè"
+      ],
+      "definition": "to borrow; to lend; excuse, pretext",
       "decomposition": "⿰亻昔",
       "radical": "亻",
       "decompositionTree": {
@@ -2139,6 +2368,10 @@
     },
     {
       "hanzi": "假",
+      "readings": [
+        "jiǎ"
+      ],
+      "definition": "fake, false, deceitful; vacation",
       "decomposition": "⿰亻叚",
       "radical": "亻",
       "decompositionTree": {
@@ -2174,6 +2407,10 @@
     },
     {
       "hanzi": "做",
+      "readings": [
+        "zuò"
+      ],
+      "definition": "to work, to make; to act",
       "decomposition": "⿰亻故",
       "radical": "亻",
       "decompositionTree": {
@@ -2216,6 +2453,10 @@
     },
     {
       "hanzi": "健",
+      "readings": [
+        "jiàn"
+      ],
+      "definition": "strong, robust, healthy; strength",
       "decomposition": "⿰亻建",
       "radical": "亻",
       "decompositionTree": {
@@ -2254,6 +2495,10 @@
     },
     {
       "hanzi": "像",
+      "readings": [
+        "xiàng"
+      ],
+      "definition": "picture, image, figure; to resemble",
       "decomposition": "⿰亻象",
       "radical": "亻",
       "decompositionTree": {
@@ -2295,6 +2540,10 @@
     },
     {
       "hanzi": "儿",
+      "readings": [
+        "ér"
+      ],
+      "definition": "son, child",
       "decomposition": "⿰丿乚",
       "radical": "儿",
       "decompositionTree": {
@@ -2340,6 +2589,10 @@
     },
     {
       "hanzi": "元",
+      "readings": [
+        "yuán"
+      ],
+      "definition": "first; dollar; origin; head",
       "decomposition": "⿱二儿",
       "radical": "儿",
       "decompositionTree": {
@@ -2374,6 +2627,10 @@
     },
     {
       "hanzi": "先",
+      "readings": [
+        "xiān"
+      ],
+      "definition": "first, former, previous",
       "decomposition": "⿱⿰？土儿",
       "radical": "儿",
       "decompositionTree": {
@@ -2421,6 +2678,10 @@
     },
     {
       "hanzi": "全",
+      "readings": [
+        "quán"
+      ],
+      "definition": "whole, entire, complete; to preserve",
       "decomposition": "⿱入玉",
       "radical": "入",
       "decompositionTree": {
@@ -2458,6 +2719,10 @@
     },
     {
       "hanzi": "八",
+      "readings": [
+        "bā"
+      ],
+      "definition": "eight; all around, all sides",
       "decomposition": "？",
       "radical": "八",
       "decompositionTree": {
@@ -2477,6 +2742,10 @@
     },
     {
       "hanzi": "公",
+      "readings": [
+        "gōng"
+      ],
+      "definition": "fair, equitable; public; duke",
       "decomposition": "⿱八厶",
       "radical": "八",
       "decompositionTree": {
@@ -2512,6 +2781,10 @@
     },
     {
       "hanzi": "六",
+      "readings": [
+        "liù"
+      ],
+      "definition": "six",
       "decomposition": "⿱亠八",
       "radical": "八",
       "decompositionTree": {
@@ -2545,6 +2818,10 @@
     },
     {
       "hanzi": "共",
+      "readings": [
+        "gòng"
+      ],
+      "definition": "all, total; together; to share",
       "decomposition": "⿳廾一八",
       "radical": "八",
       "decompositionTree": {
@@ -2581,6 +2858,10 @@
     },
     {
       "hanzi": "关",
+      "readings": [
+        "guān"
+      ],
+      "definition": "frontier pass; to close, to shut; relation",
       "decomposition": "⿱丷天",
       "radical": "丷",
       "decompositionTree": {
@@ -2623,6 +2904,10 @@
     },
     {
       "hanzi": "兴",
+      "readings": [
+        "xìng"
+      ],
+      "definition": "to thrive, to prosper, to flourish",
       "decomposition": "⿳⺍一八",
       "radical": "八",
       "decompositionTree": {
@@ -2661,6 +2946,10 @@
     },
     {
       "hanzi": "其",
+      "readings": [
+        "qí"
+      ],
+      "definition": "his, her, its, their; that",
       "decomposition": "⿱甘⿱一八",
       "radical": "八",
       "decompositionTree": {
@@ -2707,6 +2996,10 @@
     },
     {
       "hanzi": "典",
+      "readings": [
+        "diǎn"
+      ],
+      "definition": "law, canon; scripture, classic; documentation",
       "decomposition": "⿱曲八",
       "radical": "八",
       "decompositionTree": {
@@ -2744,6 +3037,10 @@
     },
     {
       "hanzi": "养",
+      "readings": [
+        "yǎng"
+      ],
+      "definition": "to raise, to rear, to bring up; to support",
       "decomposition": "⿱羊儿",
       "radical": "丷",
       "decompositionTree": {
@@ -2779,6 +3076,10 @@
     },
     {
       "hanzi": "再",
+      "readings": [
+        "zài"
+      ],
+      "definition": "again, twice, re-",
       "decomposition": "⿱一冉",
       "radical": "冂",
       "decompositionTree": {
@@ -2815,6 +3116,10 @@
     },
     {
       "hanzi": "冒",
+      "readings": [
+        "mào"
+      ],
+      "definition": "to risk, to brave, to dare",
       "decomposition": "⿱日目",
       "radical": "冂",
       "decompositionTree": {
@@ -2851,6 +3156,10 @@
     },
     {
       "hanzi": "写",
+      "readings": [
+        "xiě"
+      ],
+      "definition": "to write; to draw, to sketch; to compose",
       "decomposition": "⿱冖与",
       "radical": "冖",
       "decompositionTree": {
@@ -2883,6 +3192,10 @@
     },
     {
       "hanzi": "冬",
+      "readings": [
+        "dōng"
+      ],
+      "definition": "winter, 11th lunar month",
       "decomposition": "⿱夂⺀",
       "radical": "⺀",
       "decompositionTree": {
@@ -2916,6 +3229,10 @@
     },
     {
       "hanzi": "冰",
+      "readings": [
+        "bīng"
+      ],
+      "definition": "ice; ice-cold",
       "decomposition": "⿰冫水",
       "radical": "冫",
       "decompositionTree": {
@@ -2951,6 +3268,10 @@
     },
     {
       "hanzi": "决",
+      "readings": [
+        "jué"
+      ],
+      "definition": "to decide, to determine, to judge",
       "decomposition": "⿰冫夬",
       "radical": "冫",
       "decompositionTree": {
@@ -2987,6 +3308,10 @@
     },
     {
       "hanzi": "冷",
+      "readings": [
+        "lěng"
+      ],
+      "definition": "cold, cool; lonely",
       "decomposition": "⿰冫令",
       "radical": "冫",
       "decompositionTree": {
@@ -3020,6 +3345,10 @@
     },
     {
       "hanzi": "净",
+      "readings": [
+        "jìng"
+      ],
+      "definition": "clean, pure; to cleanse",
       "decomposition": "⿰冫争",
       "radical": "冫",
       "decompositionTree": {
@@ -3057,6 +3386,10 @@
     },
     {
       "hanzi": "准",
+      "readings": [
+        "zhǔn"
+      ],
+      "definition": "standard, accurate; to permit, to approve, to allow",
       "decomposition": "⿰冫隹",
       "radical": "冫",
       "decompositionTree": {
@@ -3090,6 +3423,10 @@
     },
     {
       "hanzi": "凉",
+      "readings": [
+        "liáng"
+      ],
+      "definition": "cool, cold; disheartened",
       "decomposition": "⿰冫京",
       "radical": "冫",
       "decompositionTree": {
@@ -3130,6 +3467,10 @@
     },
     {
       "hanzi": "凌",
+      "readings": [
+        "líng"
+      ],
+      "definition": "pure; virtuous; to insult; to maltreat",
       "decomposition": "⿰冫夌",
       "radical": "冫",
       "decompositionTree": {
@@ -3170,6 +3511,10 @@
     },
     {
       "hanzi": "几",
+      "readings": [
+        "jǐ"
+      ],
+      "definition": "small table; how many; a few, some",
       "decomposition": "⿰丿乙",
       "radical": "几",
       "decompositionTree": {
@@ -3202,6 +3547,10 @@
     },
     {
       "hanzi": "出",
+      "readings": [
+        "chū"
+      ],
+      "definition": "to go out, to send out; stand; produce",
       "decomposition": "⿱屮凵",
       "radical": "凵",
       "decompositionTree": {
@@ -3242,6 +3591,10 @@
     },
     {
       "hanzi": "分",
+      "readings": [
+        "fēn"
+      ],
+      "definition": "to divide, to allocate; fraction; small unit of time or other quantity",
       "decomposition": "⿱八刀",
       "radical": "刀",
       "decompositionTree": {
@@ -3277,6 +3630,10 @@
     },
     {
       "hanzi": "刚",
+      "readings": [
+        "gāng"
+      ],
+      "definition": "hard, strong, tough; just, barely",
       "decomposition": "⿰冈刂",
       "radical": "刂",
       "decompositionTree": {
@@ -3315,6 +3672,10 @@
     },
     {
       "hanzi": "初",
+      "readings": [
+        "chū"
+      ],
+      "definition": "beginning, initial, primary",
       "decomposition": "⿰衤刀",
       "radical": "刀",
       "decompositionTree": {
@@ -3347,6 +3708,10 @@
     },
     {
       "hanzi": "别",
+      "readings": [
+        "bié"
+      ],
+      "definition": "to separate, to distinguish, to classify; to leave; other; do not, must not",
       "decomposition": "⿰另刂",
       "radical": "刂",
       "decompositionTree": {
@@ -3388,6 +3753,10 @@
     },
     {
       "hanzi": "刮",
+      "readings": [
+        "guā"
+      ],
+      "definition": "to shave; to scrape; to blow",
       "decomposition": "⿰舌刂",
       "radical": "刂",
       "decompositionTree": {
@@ -3427,6 +3796,10 @@
     },
     {
       "hanzi": "到",
+      "readings": [
+        "dào"
+      ],
+      "definition": "to go to, to arrive",
       "decomposition": "⿰至刂",
       "radical": "刂",
       "decompositionTree": {
@@ -3472,6 +3845,10 @@
     },
     {
       "hanzi": "刷",
+      "readings": [
+        "shuā"
+      ],
+      "definition": "brush; to clean, to scrub",
       "decomposition": "⿰⿸尸巾刂",
       "radical": "刂",
       "decompositionTree": {
@@ -3518,6 +3895,10 @@
     },
     {
       "hanzi": "刻",
+      "readings": [
+        "kè"
+      ],
+      "definition": "to carve, to engrave; a quarter hour; a moment",
       "decomposition": "⿰亥刂",
       "radical": "刂",
       "decompositionTree": {
@@ -3554,6 +3935,10 @@
     },
     {
       "hanzi": "前",
+      "readings": [
+        "qián"
+      ],
+      "definition": "in front, forward; former, preceding",
       "decomposition": "⿱⿱丷一刖",
       "radical": "刂",
       "decompositionTree": {
@@ -3607,6 +3992,10 @@
     },
     {
       "hanzi": "力",
+      "readings": [
+        "lì"
+      ],
+      "definition": "strength, power; capability, influence",
       "decomposition": "⿻丿？",
       "radical": "力",
       "decompositionTree": {
@@ -3638,6 +4027,10 @@
     },
     {
       "hanzi": "办",
+      "readings": [
+        "bàn"
+      ],
+      "definition": "to set up; to manage, to run; to deal with, to handle",
       "decomposition": "⿻力八",
       "radical": "力",
       "decompositionTree": {
@@ -3673,6 +4066,10 @@
     },
     {
       "hanzi": "加",
+      "readings": [
+        "jiā"
+      ],
+      "definition": "to add to, to increase, to augment",
       "decomposition": "⿰力口",
       "radical": "力",
       "decompositionTree": {
@@ -3709,6 +4106,10 @@
     },
     {
       "hanzi": "务",
+      "readings": [
+        "wù"
+      ],
+      "definition": "affairs, business; should; must",
       "decomposition": "⿱夂力",
       "radical": "夂",
       "decompositionTree": {
@@ -3742,6 +4143,10 @@
     },
     {
       "hanzi": "动",
+      "readings": [
+        "dòng"
+      ],
+      "definition": "to move, to happen; movement, action",
       "decomposition": "⿰云力",
       "radical": "力",
       "decompositionTree": {
@@ -3782,6 +4187,10 @@
     },
     {
       "hanzi": "助",
+      "readings": [
+        "zhù"
+      ],
+      "definition": "to help, to aid, to assist",
       "decomposition": "⿰且力",
       "radical": "力",
       "decompositionTree": {
@@ -3819,6 +4228,10 @@
     },
     {
       "hanzi": "努",
+      "readings": [
+        "nǔ"
+      ],
+      "definition": "to exert, to strive, to make an effort; to pout",
       "decomposition": "⿱奴力",
       "radical": "力",
       "decompositionTree": {
@@ -3853,6 +4266,10 @@
     },
     {
       "hanzi": "勺",
+      "readings": [
+        "sháo"
+      ],
+      "definition": "spoon, ladle; unit of volume",
       "decomposition": "⿹勹丶",
       "radical": "勹",
       "decompositionTree": {
@@ -3885,6 +4302,10 @@
     },
     {
       "hanzi": "包",
+      "readings": [
+        "bāo"
+      ],
+      "definition": "wrap, pack, bundle; package",
       "decomposition": "⿹勹巳",
       "radical": "勹",
       "decompositionTree": {
@@ -3921,6 +4342,10 @@
     },
     {
       "hanzi": "化",
+      "readings": [
+        "huà"
+      ],
+      "definition": "to change, to convert, to reform; -ize",
       "decomposition": "⿰亻匕",
       "radical": "匕",
       "decompositionTree": {
@@ -3955,6 +4380,10 @@
     },
     {
       "hanzi": "北",
+      "readings": [
+        "běi"
+      ],
+      "definition": "north; northern; northward",
       "decomposition": "⿰？匕",
       "radical": "匕",
       "decompositionTree": {
@@ -3991,6 +4420,10 @@
     },
     {
       "hanzi": "区",
+      "readings": [
+        "qū"
+      ],
+      "definition": "area, district, region, ward; surname",
       "decomposition": "⿷匸乂",
       "radical": "匸",
       "decompositionTree": {
@@ -4023,6 +4456,10 @@
     },
     {
       "hanzi": "医",
+      "readings": [
+        "yī"
+      ],
+      "definition": "to cure, to heal, to treat; doctor; medicine",
       "decomposition": "⿷匸矢",
       "radical": "匸",
       "decompositionTree": {
@@ -4060,6 +4497,10 @@
     },
     {
       "hanzi": "十",
+      "readings": [
+        "shí"
+      ],
+      "definition": "ten, tenth; complete; perfect",
       "decomposition": "⿻一丨",
       "radical": "十",
       "decompositionTree": {
@@ -4091,6 +4532,10 @@
     },
     {
       "hanzi": "千",
+      "readings": [
+        "qiān"
+      ],
+      "definition": "thousand; many, numerous; very",
       "decomposition": "⿱丿十",
       "radical": "十",
       "decompositionTree": {
@@ -4124,6 +4569,10 @@
     },
     {
       "hanzi": "午",
+      "readings": [
+        "wǔ"
+      ],
+      "definition": "noon; 7th terrestrial branch",
       "decomposition": "⿻丿干",
       "radical": "十",
       "decompositionTree": {
@@ -4161,6 +4610,10 @@
     },
     {
       "hanzi": "半",
+      "readings": [
+        "bàn"
+      ],
+      "definition": "half; semi-, incomplete",
       "decomposition": "⿻丷牛",
       "radical": "十",
       "decompositionTree": {
@@ -4195,6 +4648,10 @@
     },
     {
       "hanzi": "单",
+      "readings": [
+        "dān"
+      ],
+      "definition": "single, individual, only; lone",
       "decomposition": "⿱丷？",
       "radical": "丷",
       "decompositionTree": {
@@ -4229,6 +4686,10 @@
     },
     {
       "hanzi": "卖",
+      "readings": [
+        "mài"
+      ],
+      "definition": "to sell; to betray; to show off",
       "decomposition": "⿱十买",
       "radical": "十",
       "decompositionTree": {
@@ -4268,6 +4729,10 @@
     },
     {
       "hanzi": "南",
+      "readings": [
+        "nán"
+      ],
+      "definition": "south; southern; southward",
       "decomposition": "⿱十⿵冂⿱丷干",
       "radical": "十",
       "decompositionTree": {
@@ -4325,6 +4790,10 @@
     },
     {
       "hanzi": "卡",
+      "readings": [
+        "kǎ"
+      ],
+      "definition": "card, punch card; calorie",
       "decomposition": "⿱上卜",
       "radical": "卜",
       "decompositionTree": {
@@ -4362,6 +4831,10 @@
     },
     {
       "hanzi": "卫",
+      "readings": [
+        "wèi"
+      ],
+      "definition": "to guard, to protect, to defend",
       "decomposition": "⿱乛一",
       "radical": "乛",
       "decompositionTree": {
@@ -4393,6 +4866,10 @@
     },
     {
       "hanzi": "历",
+      "readings": [
+        "lì"
+      ],
+      "definition": "history; calendar",
       "decomposition": "⿸厂力",
       "radical": "厂",
       "decompositionTree": {
@@ -4425,6 +4902,10 @@
     },
     {
       "hanzi": "去",
+      "readings": [
+        "qù"
+      ],
+      "definition": "to go away, to leave, to depart",
       "decomposition": "⿱土厶",
       "radical": "厶",
       "decompositionTree": {
@@ -4467,6 +4948,10 @@
     },
     {
       "hanzi": "参",
+      "readings": [
+        "cān"
+      ],
+      "definition": "to take part in, to intervene; ginseng",
       "decomposition": "⿱⿱厶大彡",
       "radical": "厶",
       "decompositionTree": {
@@ -4511,6 +4996,10 @@
     },
     {
       "hanzi": "又",
+      "readings": [
+        "yòu"
+      ],
+      "definition": "and, also, again, in addition",
       "decomposition": "？",
       "radical": "又",
       "decompositionTree": {
@@ -4530,6 +5019,10 @@
     },
     {
       "hanzi": "友",
+      "readings": [
+        "yǒu"
+      ],
+      "definition": "friend, companion; fraternity",
       "decomposition": "⿸？又",
       "radical": "又",
       "decompositionTree": {
@@ -4564,6 +5057,10 @@
     },
     {
       "hanzi": "双",
+      "readings": [
+        "shuāng"
+      ],
+      "definition": "pair, couple; both; measure word for things that come in pairs",
       "decomposition": "⿰又又",
       "radical": "又",
       "decompositionTree": {
@@ -4594,6 +5091,10 @@
     },
     {
       "hanzi": "发",
+      "readings": [
+        "fā"
+      ],
+      "definition": "to issue, to dispatch, to send out; hair",
       "decomposition": "⿸？又",
       "radical": "又",
       "decompositionTree": {
@@ -4632,6 +5133,10 @@
     },
     {
       "hanzi": "叔",
+      "readings": [
+        "shū"
+      ],
+      "definition": "uncle; father's younger brother",
       "decomposition": "⿰⿱上小又",
       "radical": "又",
       "decompositionTree": {
@@ -4678,6 +5183,10 @@
     },
     {
       "hanzi": "受",
+      "readings": [
+        "shòu"
+      ],
+      "definition": "to receive, to get, to accept; to bear",
       "decomposition": "⿳爫冖又",
       "radical": "又",
       "decompositionTree": {
@@ -4715,6 +5224,10 @@
     },
     {
       "hanzi": "变",
+      "readings": [
+        "biàn"
+      ],
+      "definition": "to change, to transform, to alter; rebel",
       "decomposition": "⿱亦又",
       "radical": "又",
       "decompositionTree": {
@@ -4751,6 +5264,10 @@
     },
     {
       "hanzi": "口",
+      "readings": [
+        "kǒu"
+      ],
+      "definition": "mouth; entrance, gate, opening",
       "decomposition": "⿱冂一",
       "radical": "口",
       "decompositionTree": {
@@ -4785,6 +5302,11 @@
     },
     {
       "hanzi": "句",
+      "readings": [
+        "jù",
+        "gōu"
+      ],
+      "definition": "sentence, clause, phrase, paragraph; stanza",
       "decomposition": "⿹勹口",
       "radical": "口",
       "decompositionTree": {
@@ -4821,6 +5343,10 @@
     },
     {
       "hanzi": "只",
+      "readings": [
+        "zhī"
+      ],
+      "definition": "only, merely, just",
       "decomposition": "⿱口八",
       "radical": "口",
       "decompositionTree": {
@@ -4860,6 +5386,10 @@
     },
     {
       "hanzi": "叫",
+      "readings": [
+        "jiào"
+      ],
+      "definition": "cry, shout; to call, to greet, to hail",
       "decomposition": "⿰口丩",
       "radical": "口",
       "decompositionTree": {
@@ -4894,6 +5424,10 @@
     },
     {
       "hanzi": "可",
+      "readings": [
+        "kě"
+      ],
+      "definition": "may, can, -able; possibly",
       "decomposition": "⿻丁口",
       "radical": "口",
       "decompositionTree": {
@@ -4932,6 +5466,10 @@
     },
     {
       "hanzi": "史",
+      "readings": [
+        "shǐ"
+      ],
+      "definition": "history, chronicle, annals",
       "decomposition": "⿻口乂",
       "radical": "口",
       "decompositionTree": {
@@ -4967,6 +5505,10 @@
     },
     {
       "hanzi": "右",
+      "readings": [
+        "yòu"
+      ],
+      "definition": "right; right-wing",
       "decomposition": "⿸？口",
       "radical": "口",
       "decompositionTree": {
@@ -5002,6 +5544,10 @@
     },
     {
       "hanzi": "号",
+      "readings": [
+        "hào"
+      ],
+      "definition": "mark, sign; symbol; number; to call, to cry, to roar",
       "decomposition": "⿱口丂",
       "radical": "口",
       "decompositionTree": {
@@ -5037,6 +5583,10 @@
     },
     {
       "hanzi": "司",
+      "readings": [
+        "sī"
+      ],
+      "definition": "to take charge of, to control, to manage; officer",
       "decomposition": "⿹？口",
       "radical": "口",
       "decompositionTree": {
@@ -5072,6 +5622,10 @@
     },
     {
       "hanzi": "吃",
+      "readings": [
+        "chī"
+      ],
+      "definition": "to eat; to drink; to suffer, to endure, to bear",
       "decomposition": "⿰口乞",
       "radical": "口",
       "decompositionTree": {
@@ -5108,6 +5662,10 @@
     },
     {
       "hanzi": "合",
+      "readings": [
+        "hé"
+      ],
+      "definition": "to combine, to join, to unite; to gather",
       "decomposition": "⿱亼口",
       "radical": "口",
       "decompositionTree": {
@@ -5143,6 +5701,10 @@
     },
     {
       "hanzi": "同",
+      "readings": [
+        "tóng"
+      ],
+      "definition": "same, similar; together with, alike",
       "decomposition": "⿵凡口",
       "radical": "口",
       "decompositionTree": {
@@ -5184,6 +5746,10 @@
     },
     {
       "hanzi": "名",
+      "readings": [
+        "míng"
+      ],
+      "definition": "name; position, rank, title",
       "decomposition": "⿸夕口",
       "radical": "口",
       "decompositionTree": {
@@ -5226,6 +5792,10 @@
     },
     {
       "hanzi": "后",
+      "readings": [
+        "hòu"
+      ],
+      "definition": "after; behind, rear; descendants",
       "decomposition": "⿸？口",
       "radical": "口",
       "decompositionTree": {
@@ -5267,6 +5837,10 @@
     },
     {
       "hanzi": "向",
+      "readings": [
+        "xiàng"
+      ],
+      "definition": "towards; direction, trend",
       "decomposition": "⿵？口",
       "radical": "口",
       "decompositionTree": {
@@ -5302,6 +5876,10 @@
     },
     {
       "hanzi": "吗",
+      "readings": [
+        "ma"
+      ],
+      "definition": "final interrogative particle",
       "decomposition": "⿰口马",
       "radical": "口",
       "decompositionTree": {
@@ -5336,6 +5914,10 @@
     },
     {
       "hanzi": "吧",
+      "readings": [
+        "bā"
+      ],
+      "definition": "emphatic final particle",
       "decomposition": "⿰口巴",
       "radical": "口",
       "decompositionTree": {
@@ -5372,6 +5954,10 @@
     },
     {
       "hanzi": "听",
+      "readings": [
+        "tīng"
+      ],
+      "definition": "to hear, to listen; to understand; to obey",
       "decomposition": "⿰口斤",
       "radical": "口",
       "decompositionTree": {
@@ -5414,6 +6000,10 @@
     },
     {
       "hanzi": "告",
+      "readings": [
+        "gào"
+      ],
+      "definition": "to tell, to inform, to announce; to accuse",
       "decomposition": "⿱牛口",
       "radical": "口",
       "decompositionTree": {
@@ -5448,6 +6038,10 @@
     },
     {
       "hanzi": "员",
+      "readings": [
+        "yuán"
+      ],
+      "definition": "employee; member; personnel, staff",
       "decomposition": "⿱口贝",
       "radical": "口",
       "decompositionTree": {
@@ -5484,6 +6078,11 @@
     },
     {
       "hanzi": "呢",
+      "readings": [
+        "né",
+        "ne"
+      ],
+      "definition": "wool; interrogative or emphatic final particle",
       "decomposition": "⿰口尼",
       "radical": "口",
       "decompositionTree": {
@@ -5522,6 +6121,10 @@
     },
     {
       "hanzi": "周",
+      "readings": [
+        "zhōu"
+      ],
+      "definition": "Zhou dynasty; circumference",
       "decomposition": "⿵冂⿱土口",
       "radical": "口",
       "decompositionTree": {
@@ -5567,6 +6170,10 @@
     },
     {
       "hanzi": "和",
+      "readings": [
+        "hé"
+      ],
+      "definition": "harmony, peace; calm, peaceful",
       "decomposition": "⿰禾口",
       "radical": "口",
       "decompositionTree": {
@@ -5605,6 +6212,10 @@
     },
     {
       "hanzi": "咖",
+      "readings": [
+        "kā"
+      ],
+      "definition": "coffee; used in transliterations",
       "decomposition": "⿰口加",
       "radical": "口",
       "decompositionTree": {
@@ -5641,6 +6252,10 @@
     },
     {
       "hanzi": "咱",
+      "readings": [
+        "zán"
+      ],
+      "definition": "we, us",
       "decomposition": "⿰口自",
       "radical": "口",
       "decompositionTree": {
@@ -5677,6 +6292,10 @@
     },
     {
       "hanzi": "响",
+      "readings": [
+        "xiǎng"
+      ],
+      "definition": "to make noise, to make sound; sound",
       "decomposition": "⿰口向",
       "radical": "口",
       "decompositionTree": {
@@ -5711,6 +6330,10 @@
     },
     {
       "hanzi": "哥",
+      "readings": [
+        "gē"
+      ],
+      "definition": "elder brother",
       "decomposition": "⿱可可",
       "radical": "口",
       "decompositionTree": {
@@ -5746,6 +6369,10 @@
     },
     {
       "hanzi": "哪",
+      "readings": [
+        "nǎ"
+      ],
+      "definition": "which? where? how?",
       "decomposition": "⿰口那",
       "radical": "口",
       "decompositionTree": {
@@ -5785,6 +6412,10 @@
     },
     {
       "hanzi": "哭",
+      "readings": [
+        "kū"
+      ],
+      "definition": "to weep, to cry, to wail",
       "decomposition": "⿱⿰口口犬",
       "radical": "口",
       "decompositionTree": {
@@ -5831,6 +6462,10 @@
     },
     {
       "hanzi": "唱",
+      "readings": [
+        "chàng"
+      ],
+      "definition": "to sing, to chant, to call; ditty, song",
       "decomposition": "⿰口昌",
       "radical": "口",
       "decompositionTree": {
@@ -5867,6 +6502,10 @@
     },
     {
       "hanzi": "商",
+      "readings": [
+        "shāng"
+      ],
+      "definition": "commerce, business, trade",
       "decomposition": "⿱⿱亠丷冏",
       "radical": "口",
       "decompositionTree": {
@@ -5915,6 +6554,10 @@
     },
     {
       "hanzi": "啊",
+      "readings": [
+        "a"
+      ],
+      "definition": "ah, exclamatory particle",
       "decomposition": "⿰口阿",
       "radical": "口",
       "decompositionTree": {
@@ -5952,6 +6595,10 @@
     },
     {
       "hanzi": "啡",
+      "readings": [
+        "fēi"
+      ],
+      "definition": "coffee; morphine",
       "decomposition": "⿰口非",
       "radical": "口",
       "decompositionTree": {
@@ -5986,6 +6633,10 @@
     },
     {
       "hanzi": "啤",
+      "readings": [
+        "pí"
+      ],
+      "definition": "beer",
       "decomposition": "⿰口卑",
       "radical": "口",
       "decompositionTree": {
@@ -6023,6 +6674,10 @@
     },
     {
       "hanzi": "喂",
+      "readings": [
+        "wèi"
+      ],
+      "definition": "interjection used to call attention",
       "decomposition": "⿰口畏",
       "radical": "口",
       "decompositionTree": {
@@ -6060,6 +6715,10 @@
     },
     {
       "hanzi": "喜",
+      "readings": [
+        "xǐ"
+      ],
+      "definition": "to love; to enjoy, to be happy; joyful, glad",
       "decomposition": "⿱壴口",
       "radical": "口",
       "decompositionTree": {
@@ -6097,6 +6756,10 @@
     },
     {
       "hanzi": "喝",
+      "readings": [
+        "hē"
+      ],
+      "definition": "to drink; to shout, to call out",
       "decomposition": "⿰口曷",
       "radical": "口",
       "decompositionTree": {
@@ -6132,6 +6795,10 @@
     },
     {
       "hanzi": "嘴",
+      "readings": [
+        "zuǐ"
+      ],
+      "definition": "mouth, lips",
       "decomposition": "⿰口觜",
       "radical": "口",
       "decompositionTree": {
@@ -6176,6 +6843,10 @@
     },
     {
       "hanzi": "四",
+      "readings": [
+        "sì"
+      ],
+      "definition": "four",
       "decomposition": "⿴囗儿",
       "radical": "囗",
       "decompositionTree": {
@@ -6213,6 +6884,10 @@
     },
     {
       "hanzi": "回",
+      "readings": [
+        "huí"
+      ],
+      "definition": "to return, to turn around; a time",
       "decomposition": "⿴囗口",
       "radical": "囗",
       "decompositionTree": {
@@ -6250,6 +6925,10 @@
     },
     {
       "hanzi": "因",
+      "readings": [
+        "yīn"
+      ],
+      "definition": "cause, reason; by; because",
       "decomposition": "⿴囗大",
       "radical": "囗",
       "decompositionTree": {
@@ -6285,6 +6964,10 @@
     },
     {
       "hanzi": "园",
+      "readings": [
+        "yuán"
+      ],
+      "definition": "garden, park; orchard",
       "decomposition": "⿴囗元",
       "radical": "囗",
       "decompositionTree": {
@@ -6327,6 +7010,10 @@
     },
     {
       "hanzi": "国",
+      "readings": [
+        "guó"
+      ],
+      "definition": "country, nation, state; national",
       "decomposition": "⿴囗玉",
       "radical": "囗",
       "decompositionTree": {
@@ -6369,6 +7056,10 @@
     },
     {
       "hanzi": "图",
+      "readings": [
+        "tú"
+      ],
+      "definition": "diagram, chart, map, picture; to plan",
       "decomposition": "⿴囗冬",
       "radical": "囗",
       "decompositionTree": {
@@ -6408,6 +7099,10 @@
     },
     {
       "hanzi": "在",
+      "readings": [
+        "zài"
+      ],
+      "definition": "at, in, on; to exist; used to indicate the present progressive tense",
       "decomposition": "⿸才土",
       "radical": "土",
       "decompositionTree": {
@@ -6447,6 +7142,10 @@
     },
     {
       "hanzi": "地",
+      "readings": [
+        "de"
+      ],
+      "definition": "earth, ground, soil; land, region; structural particle used before a verb",
       "decomposition": "⿰土也",
       "radical": "土",
       "decompositionTree": {
@@ -6489,6 +7188,10 @@
     },
     {
       "hanzi": "场",
+      "readings": [
+        "chǎng"
+      ],
+      "definition": "field, open space; market, square; stage",
       "decomposition": "⿰土勿",
       "radical": "土",
       "decompositionTree": {
@@ -6527,6 +7230,10 @@
     },
     {
       "hanzi": "坏",
+      "readings": [
+        "huài"
+      ],
+      "definition": "bad, rotten, spoiled; to break down",
       "decomposition": "⿰土不",
       "radical": "土",
       "decompositionTree": {
@@ -6561,6 +7268,10 @@
     },
     {
       "hanzi": "坐",
+      "readings": [
+        "zuò"
+      ],
+      "definition": "seat; to sit; to ride, to travel by",
       "decomposition": "⿻从土",
       "radical": "土",
       "decompositionTree": {
@@ -6596,6 +7307,10 @@
     },
     {
       "hanzi": "块",
+      "readings": [
+        "kuài"
+      ],
+      "definition": "piece, lump, chunk; dollar; measure word for currency",
       "decomposition": "⿰土夬",
       "radical": "土",
       "decompositionTree": {
@@ -6633,6 +7348,10 @@
     },
     {
       "hanzi": "坚",
+      "readings": [
+        "jiān"
+      ],
+      "definition": "hard, strong; firm, resolute",
       "decomposition": "⿱⿰？又土",
       "radical": "土",
       "decompositionTree": {
@@ -6677,6 +7396,10 @@
     },
     {
       "hanzi": "城",
+      "readings": [
+        "chéng"
+      ],
+      "definition": "castle, city, town; municipality",
       "decomposition": "⿰土成",
       "radical": "土",
       "decompositionTree": {
@@ -6713,6 +7436,10 @@
     },
     {
       "hanzi": "境",
+      "readings": [
+        "jìng"
+      ],
+      "definition": "boundary, frontier; area, region",
       "decomposition": "⿰土竟",
       "radical": "土",
       "decompositionTree": {
@@ -6758,6 +7485,10 @@
     },
     {
       "hanzi": "士",
+      "readings": [
+        "shì"
+      ],
+      "definition": "scholar, gentleman; soldier",
       "decomposition": "？",
       "radical": "士",
       "decompositionTree": {
@@ -6777,6 +7508,10 @@
     },
     {
       "hanzi": "声",
+      "readings": [
+        "shēng"
+      ],
+      "definition": "sound, noise; voice, tone, music",
       "decomposition": "⿱士？",
       "radical": "士",
       "decompositionTree": {
@@ -6809,6 +7544,10 @@
     },
     {
       "hanzi": "处",
+      "readings": [
+        "chù"
+      ],
+      "definition": "to reside at, to live in; place, locale; department",
       "decomposition": "⿺夂卜",
       "radical": "夂",
       "decompositionTree": {
@@ -6844,6 +7583,10 @@
     },
     {
       "hanzi": "备",
+      "readings": [
+        "bèi"
+      ],
+      "definition": "to prepare; to get ready, to equip; ready; perfect",
       "decomposition": "⿱夂田",
       "radical": "夂",
       "decompositionTree": {
@@ -6882,6 +7625,10 @@
     },
     {
       "hanzi": "复",
+      "readings": [
+        "fù"
+      ],
+      "definition": "again, repeatedly; copy, duplicate; to restore, to return",
       "decomposition": "⿱亻⿱日夂",
       "radical": "夊",
       "decompositionTree": {
@@ -6929,6 +7676,10 @@
     },
     {
       "hanzi": "夏",
+      "readings": [
+        "xià"
+      ],
+      "definition": "summer; the Xia or Hsia dynasty",
       "decomposition": "⿳一自夂",
       "radical": "夊",
       "decompositionTree": {
@@ -6972,6 +7723,10 @@
     },
     {
       "hanzi": "外",
+      "readings": [
+        "wài"
+      ],
+      "definition": "out, outside, external; foreign; in addition",
       "decomposition": "⿰夕卜",
       "radical": "夕",
       "decompositionTree": {
@@ -7014,6 +7769,10 @@
     },
     {
       "hanzi": "多",
+      "readings": [
+        "duō"
+      ],
+      "definition": "much, many, multi-; more than, over",
       "decomposition": "⿱夕夕",
       "radical": "夕",
       "decompositionTree": {
@@ -7050,6 +7809,10 @@
     },
     {
       "hanzi": "大",
+      "readings": [
+        "dà"
+      ],
+      "definition": "big, great, vast, high, deep",
       "decomposition": "⿻一人",
       "radical": "大",
       "decompositionTree": {
@@ -7089,6 +7852,10 @@
     },
     {
       "hanzi": "天",
+      "readings": [
+        "tiān"
+      ],
+      "definition": "sky, heaven; god, celestial",
       "decomposition": "⿱一大",
       "radical": "大",
       "decompositionTree": {
@@ -7135,6 +7902,10 @@
     },
     {
       "hanzi": "太",
+      "readings": [
+        "tài"
+      ],
+      "definition": "very, too much; big; extreme",
       "decomposition": "⿵大丶",
       "radical": "大",
       "decompositionTree": {
@@ -7169,6 +7940,10 @@
     },
     {
       "hanzi": "夫",
+      "readings": [
+        "fū"
+      ],
+      "definition": "man, husband; worker; those",
       "decomposition": "⿻一大",
       "radical": "大",
       "decompositionTree": {
@@ -7202,6 +7977,10 @@
     },
     {
       "hanzi": "头",
+      "readings": [
+        "tóu"
+      ],
+      "definition": "head; chief, boss; first, top",
       "decomposition": "⿻⺀大",
       "radical": "大",
       "decompositionTree": {
@@ -7236,6 +8015,10 @@
     },
     {
       "hanzi": "奇",
+      "readings": [
+        "qí"
+      ],
+      "definition": "strange, unusual, odd; uncanny, occult",
       "decomposition": "⿱大可",
       "radical": "大",
       "decompositionTree": {
@@ -7273,6 +8056,10 @@
     },
     {
       "hanzi": "女",
+      "readings": [
+        "nǚ"
+      ],
+      "definition": "woman, girl; female",
       "decomposition": "？",
       "radical": "女",
       "decompositionTree": {
@@ -7298,6 +8085,10 @@
     },
     {
       "hanzi": "奶",
+      "readings": [
+        "nǎi"
+      ],
+      "definition": "milk; breasts; nurse, grandmother",
       "decomposition": "⿰女乃",
       "radical": "女",
       "decompositionTree": {
@@ -7332,6 +8123,10 @@
     },
     {
       "hanzi": "她",
+      "readings": [
+        "tā"
+      ],
+      "definition": "she, her",
       "decomposition": "⿰女也",
       "radical": "女",
       "decompositionTree": {
@@ -7365,6 +8160,10 @@
     },
     {
       "hanzi": "好",
+      "readings": [
+        "hǎo"
+      ],
+      "definition": "good, excellent, fine; proper, suitable; well",
       "decomposition": "⿰女子",
       "radical": "女",
       "decompositionTree": {
@@ -7411,6 +8210,10 @@
     },
     {
       "hanzi": "如",
+      "readings": [
+        "rú"
+      ],
+      "definition": "as, as if, like, such as, supposing",
       "decomposition": "⿰女口",
       "radical": "女",
       "decompositionTree": {
@@ -7446,6 +8249,10 @@
     },
     {
       "hanzi": "妈",
+      "readings": [
+        "mā"
+      ],
+      "definition": "mother, mama",
       "decomposition": "⿰女马",
       "radical": "女",
       "decompositionTree": {
@@ -7478,6 +8285,10 @@
     },
     {
       "hanzi": "妹",
+      "readings": [
+        "mèi"
+      ],
+      "definition": "younger sister",
       "decomposition": "⿰女未",
       "radical": "女",
       "decompositionTree": {
@@ -7515,6 +8326,10 @@
     },
     {
       "hanzi": "妻",
+      "readings": [
+        "qī"
+      ],
+      "definition": "wife",
       "decomposition": "⿱⿻十彐女",
       "radical": "女",
       "decompositionTree": {
@@ -7560,6 +8375,10 @@
     },
     {
       "hanzi": "始",
+      "readings": [
+        "shǐ"
+      ],
+      "definition": "to begin, to start; beginning",
       "decomposition": "⿰女台",
       "radical": "女",
       "decompositionTree": {
@@ -7596,6 +8415,10 @@
     },
     {
       "hanzi": "姐",
+      "readings": [
+        "jiě"
+      ],
+      "definition": "elder sister; miss, young lady",
       "decomposition": "⿰女且",
       "radical": "女",
       "decompositionTree": {
@@ -7633,6 +8456,10 @@
     },
     {
       "hanzi": "姓",
+      "readings": [
+        "xìng"
+      ],
+      "definition": "name, family name, surname; clan, people",
       "decomposition": "⿰女生",
       "radical": "女",
       "decompositionTree": {
@@ -7669,6 +8496,10 @@
     },
     {
       "hanzi": "姨",
+      "readings": [
+        "yí"
+      ],
+      "definition": "aunt, mother's sister",
       "decomposition": "⿰女夷",
       "radical": "女",
       "decompositionTree": {
@@ -7704,6 +8535,10 @@
     },
     {
       "hanzi": "婚",
+      "readings": [
+        "hūn"
+      ],
+      "definition": "to get married; marriage, wedding",
       "decomposition": "⿰女昏",
       "radical": "女",
       "decompositionTree": {
@@ -7741,6 +8576,10 @@
     },
     {
       "hanzi": "子",
+      "readings": [
+        "zi"
+      ],
+      "definition": "son, child; seed, egg; fruit; small thing",
       "decomposition": "⿻了一",
       "radical": "子",
       "decompositionTree": {
@@ -7795,6 +8634,10 @@
     },
     {
       "hanzi": "字",
+      "readings": [
+        "zì"
+      ],
+      "definition": "character, letter, symbol, word",
       "decomposition": "⿱宀子",
       "radical": "子",
       "decompositionTree": {
@@ -7835,6 +8678,10 @@
     },
     {
       "hanzi": "季",
+      "readings": [
+        "jì"
+      ],
+      "definition": "a quarter-year, a season; surname",
       "decomposition": "⿱禾子",
       "radical": "子",
       "decompositionTree": {
@@ -7877,6 +8724,10 @@
     },
     {
       "hanzi": "学",
+      "readings": [
+        "xué"
+      ],
+      "definition": "learning, knowledge, science; to study, to go to school; -ology",
       "decomposition": "⿱⿱⺍冖子",
       "radical": "子",
       "decompositionTree": {
@@ -7939,6 +8790,10 @@
     },
     {
       "hanzi": "孩",
+      "readings": [
+        "hái"
+      ],
+      "definition": "baby, child; children",
       "decomposition": "⿰子亥",
       "radical": "子",
       "decompositionTree": {
@@ -7979,6 +8834,10 @@
     },
     {
       "hanzi": "它",
+      "readings": [
+        "tā"
+      ],
+      "definition": "it; other",
       "decomposition": "⿱宀匕",
       "radical": "宀",
       "decompositionTree": {
@@ -8015,6 +8874,10 @@
     },
     {
       "hanzi": "安",
+      "readings": [
+        "ān"
+      ],
+      "definition": "peaceful, tranquil, quiet",
       "decomposition": "⿱宀女",
       "radical": "宀",
       "decompositionTree": {
@@ -8049,6 +8912,10 @@
     },
     {
       "hanzi": "完",
+      "readings": [
+        "wán"
+      ],
+      "definition": "to complete, to finish, to settle; whole",
       "decomposition": "⿱宀元",
       "radical": "宀",
       "decompositionTree": {
@@ -8088,6 +8955,10 @@
     },
     {
       "hanzi": "定",
+      "readings": [
+        "dìng"
+      ],
+      "definition": "to decide, to fix, to settle; to order; definite, fixed, sure",
       "decomposition": "⿱宀疋",
       "radical": "宀",
       "decompositionTree": {
@@ -8122,6 +8993,10 @@
     },
     {
       "hanzi": "宜",
+      "readings": [
+        "yí"
+      ],
+      "definition": "fitting, proper, right; what one should do",
       "decomposition": "⿱宀且",
       "radical": "宀",
       "decompositionTree": {
@@ -8160,6 +9035,10 @@
     },
     {
       "hanzi": "实",
+      "readings": [
+        "shí"
+      ],
+      "definition": "real, true; honest, sincere",
       "decomposition": "⿱宀头",
       "radical": "宀",
       "decompositionTree": {
@@ -8197,6 +9076,10 @@
     },
     {
       "hanzi": "客",
+      "readings": [
+        "kè"
+      ],
+      "definition": "guest, traveller; customer",
       "decomposition": "⿱宀各",
       "radical": "宀",
       "decompositionTree": {
@@ -8241,6 +9124,10 @@
     },
     {
       "hanzi": "室",
+      "readings": [
+        "shì"
+      ],
+      "definition": "house, home; room, chamber",
       "decomposition": "⿱宀至",
       "radical": "宀",
       "decompositionTree": {
@@ -8281,6 +9168,10 @@
     },
     {
       "hanzi": "害",
+      "readings": [
+        "hài"
+      ],
+      "definition": "to injure, to harm; to destroy, to kill",
       "decomposition": "⿱宀⿱丰口",
       "radical": "宀",
       "decompositionTree": {
@@ -8329,6 +9220,10 @@
     },
     {
       "hanzi": "家",
+      "readings": [
+        "jiā"
+      ],
+      "definition": "house, home, residence; family",
       "decomposition": "⿱宀豕",
       "radical": "宀",
       "decompositionTree": {
@@ -8371,6 +9266,10 @@
     },
     {
       "hanzi": "容",
+      "readings": [
+        "róng"
+      ],
+      "definition": "appearance, looks; form, figure; to contain, to hold",
       "decomposition": "⿱宀谷",
       "radical": "宀",
       "decompositionTree": {
@@ -8410,6 +9309,10 @@
     },
     {
       "hanzi": "宾",
+      "readings": [
+        "bīn"
+      ],
+      "definition": "guest, visitor; surname; submit",
       "decomposition": "⿱宀兵",
       "radical": "宀",
       "decompositionTree": {
@@ -8451,6 +9354,10 @@
     },
     {
       "hanzi": "对",
+      "readings": [
+        "duì"
+      ],
+      "definition": "correct, right; facing, opposed",
       "decomposition": "⿰又寸",
       "radical": "寸",
       "decompositionTree": {
@@ -8484,6 +9391,10 @@
     },
     {
       "hanzi": "封",
+      "readings": [
+        "fēng"
+      ],
+      "definition": "envelope, letter; to confer, to grant; feudal",
       "decomposition": "⿰圭寸",
       "radical": "寸",
       "decompositionTree": {
@@ -8519,6 +9430,10 @@
     },
     {
       "hanzi": "小",
+      "readings": [
+        "xiǎo"
+      ],
+      "definition": "small, tiny, insignificant",
       "decomposition": "⿻亅八",
       "radical": "小",
       "decompositionTree": {
@@ -8560,6 +9475,10 @@
     },
     {
       "hanzi": "少",
+      "readings": [
+        "shǎo"
+      ],
+      "definition": "few, little; less; inadequate",
       "decomposition": "⿱小丿",
       "radical": "小",
       "decompositionTree": {
@@ -8594,6 +9513,10 @@
     },
     {
       "hanzi": "尝",
+      "readings": [
+        "cháng"
+      ],
+      "definition": "to taste; to experience, to experiment with",
       "decomposition": "⿱尚云",
       "radical": "⺌",
       "decompositionTree": {
@@ -8632,6 +9555,10 @@
     },
     {
       "hanzi": "就",
+      "readings": [
+        "jiù"
+      ],
+      "definition": "just, simply; to go to; to approach, near",
       "decomposition": "⿰京尤",
       "radical": "尢",
       "decompositionTree": {
@@ -8674,6 +9601,10 @@
     },
     {
       "hanzi": "层",
+      "readings": [
+        "céng"
+      ],
+      "definition": "layer, floor, story, stratum",
       "decomposition": "⿸尸云",
       "radical": "尸",
       "decompositionTree": {
@@ -8709,6 +9640,10 @@
     },
     {
       "hanzi": "居",
+      "readings": [
+        "jū"
+      ],
+      "definition": "to live, to reside; to dwell; to sit",
       "decomposition": "⿸户古",
       "radical": "户",
       "decompositionTree": {
@@ -8748,6 +9683,10 @@
     },
     {
       "hanzi": "屋",
+      "readings": [
+        "wū"
+      ],
+      "definition": "building, house, shelter; room",
       "decomposition": "⿸尸至",
       "radical": "尸",
       "decompositionTree": {
@@ -8785,6 +9724,10 @@
     },
     {
       "hanzi": "展",
+      "readings": [
+        "zhǎn"
+      ],
+      "definition": "to open, to unfold; to extend, to stretch",
       "decomposition": "⿸尸⿻？衣",
       "radical": "尸",
       "decompositionTree": {
@@ -8830,6 +9773,10 @@
     },
     {
       "hanzi": "山",
+      "readings": [
+        "shān"
+      ],
+      "definition": "mountain, hill, peak",
       "decomposition": "⿶凵丨",
       "radical": "山",
       "decompositionTree": {
@@ -8861,6 +9808,10 @@
     },
     {
       "hanzi": "岁",
+      "readings": [
+        "suì"
+      ],
+      "definition": "year; years old, age; harvest",
       "decomposition": "⿱山夕",
       "radical": "山",
       "decompositionTree": {
@@ -8897,6 +9848,10 @@
     },
     {
       "hanzi": "工",
+      "readings": [
+        "gōng"
+      ],
+      "definition": "labor, work; laborer, worker",
       "decomposition": "⿱一丄",
       "radical": "工",
       "decompositionTree": {
@@ -8930,6 +9885,10 @@
     },
     {
       "hanzi": "左",
+      "readings": [
+        "zuǒ"
+      ],
+      "definition": "left; unorthodox, improper",
       "decomposition": "⿸？工",
       "radical": "工",
       "decompositionTree": {
@@ -8965,6 +9924,10 @@
     },
     {
       "hanzi": "差",
+      "readings": [
+        "chà"
+      ],
+      "definition": "difference, gap; almost, nearly; in error; an officer",
       "decomposition": "⿸羊工",
       "radical": "工",
       "decompositionTree": {
@@ -9002,6 +9965,10 @@
     },
     {
       "hanzi": "己",
+      "readings": [
+        "jǐ"
+      ],
+      "definition": "self, oneself; personal, private; 6th heavenly stem",
       "decomposition": "⿱？乚",
       "radical": "己",
       "decompositionTree": {
@@ -9033,6 +10000,10 @@
     },
     {
       "hanzi": "已",
+      "readings": [
+        "yǐ"
+      ],
+      "definition": "already; finished; to stop; then, afterwards",
       "decomposition": "？",
       "radical": "己",
       "decompositionTree": {
@@ -9052,6 +10023,10 @@
     },
     {
       "hanzi": "市",
+      "readings": [
+        "shì"
+      ],
+      "definition": "city, town; market, fair; to trade",
       "decomposition": "⿱亠巾",
       "radical": "巾",
       "decompositionTree": {
@@ -9089,6 +10064,10 @@
     },
     {
       "hanzi": "师",
+      "readings": [
+        "shī"
+      ],
+      "definition": "teacher, professional, master",
       "decomposition": "⿰刂帀",
       "radical": "巾",
       "decompositionTree": {
@@ -9125,6 +10104,10 @@
     },
     {
       "hanzi": "希",
+      "readings": [
+        "xī"
+      ],
+      "definition": "rare; to hope for, to strive for; to expect",
       "decomposition": "⿱乂布",
       "radical": "巾",
       "decompositionTree": {
@@ -9160,6 +10143,10 @@
     },
     {
       "hanzi": "带",
+      "readings": [
+        "dài"
+      ],
+      "definition": "belt, strap; band, ribbon; area, zone; to carry, to raise, to wear",
       "decomposition": "⿱卅⿱冖巾",
       "radical": "巾",
       "decompositionTree": {
@@ -9206,6 +10193,10 @@
     },
     {
       "hanzi": "帮",
+      "readings": [
+        "bāng"
+      ],
+      "definition": "to help, to assist; to support, to defend; party; gang",
       "decomposition": "⿱邦巾",
       "radical": "巾",
       "decompositionTree": {
@@ -9246,6 +10237,10 @@
     },
     {
       "hanzi": "常",
+      "readings": [
+        "cháng"
+      ],
+      "definition": "common, general, normal; always, frequently, regularly",
       "decomposition": "⿱尚巾",
       "radical": "巾",
       "decompositionTree": {
@@ -9287,6 +10282,10 @@
     },
     {
       "hanzi": "干",
+      "readings": [
+        "gàn"
+      ],
+      "definition": "arid, dry; to oppose; to offend; to invade",
       "decomposition": "⿱一十",
       "radical": "十",
       "decompositionTree": {
@@ -9320,6 +10319,10 @@
     },
     {
       "hanzi": "平",
+      "readings": [
+        "píng"
+      ],
+      "definition": "flat, level, even; peaceful",
       "decomposition": "⿻干丷",
       "radical": "广",
       "decompositionTree": {
@@ -9356,6 +10359,10 @@
     },
     {
       "hanzi": "年",
+      "readings": [
+        "nián"
+      ],
+      "definition": "year; anniversary; a person's age",
       "decomposition": "⿻干？",
       "radical": "干",
       "decompositionTree": {
@@ -9399,6 +10406,10 @@
     },
     {
       "hanzi": "床",
+      "readings": [
+        "chuáng"
+      ],
+      "definition": "bed, couch; framework, chassis",
       "decomposition": "⿸广木",
       "radical": "广",
       "decompositionTree": {
@@ -9437,6 +10448,10 @@
     },
     {
       "hanzi": "应",
+      "readings": [
+        "yīng"
+      ],
+      "definition": "should, must; to respond, to handle; to deal with, to cope",
       "decomposition": "⿸广⿱⺍一",
       "radical": "广",
       "decompositionTree": {
@@ -9480,6 +10495,10 @@
     },
     {
       "hanzi": "店",
+      "readings": [
+        "diàn"
+      ],
+      "definition": "shop, store; inn, hotel",
       "decomposition": "⿸广占",
       "radical": "广",
       "decompositionTree": {
@@ -9523,6 +10542,10 @@
     },
     {
       "hanzi": "康",
+      "readings": [
+        "kāng"
+      ],
+      "definition": "health; peace, quiet",
       "decomposition": "⿸广隶",
       "radical": "广",
       "decompositionTree": {
@@ -9561,6 +10584,10 @@
     },
     {
       "hanzi": "开",
+      "readings": [
+        "kāi"
+      ],
+      "definition": "to open; to start, to initiate, to begin",
       "decomposition": "⿱一廾",
       "radical": "廾",
       "decompositionTree": {
@@ -9602,6 +10629,10 @@
     },
     {
       "hanzi": "弟",
+      "readings": [
+        "dì"
+      ],
+      "definition": "young brother, junior",
       "decomposition": "⿱丷⿻弓？",
       "radical": "弓",
       "decompositionTree": {
@@ -9644,6 +10675,10 @@
     },
     {
       "hanzi": "张",
+      "readings": [
+        "zhāng"
+      ],
+      "definition": "to display; to expand, to open; to stretch; a sheet of paper",
       "decomposition": "⿰弓长",
       "radical": "弓",
       "decompositionTree": {
@@ -9676,6 +10711,10 @@
     },
     {
       "hanzi": "当",
+      "readings": [
+        "dāng"
+      ],
+      "definition": "appropriate, timely; to act, to serve; the sound of bells",
       "decomposition": "⿱⺌彐",
       "radical": "⺌",
       "decompositionTree": {
@@ -9709,6 +10748,10 @@
     },
     {
       "hanzi": "影",
+      "readings": [
+        "yǐng"
+      ],
+      "definition": "shadow; image, reflection; photograph",
       "decomposition": "⿰景彡",
       "radical": "彡",
       "decompositionTree": {
@@ -9754,6 +10797,10 @@
     },
     {
       "hanzi": "往",
+      "readings": [
+        "wǎng"
+      ],
+      "definition": "to go, to depart; past, former",
       "decomposition": "⿰彳⿱？王",
       "radical": "彳",
       "decompositionTree": {
@@ -9799,6 +10846,10 @@
     },
     {
       "hanzi": "很",
+      "readings": [
+        "hěn"
+      ],
+      "definition": "very, quite, much",
       "decomposition": "⿰彳艮",
       "radical": "彳",
       "decompositionTree": {
@@ -9831,6 +10882,10 @@
     },
     {
       "hanzi": "得",
+      "readings": [
+        "dé"
+      ],
+      "definition": "to obtain, to get, to acquire; suitable, proper; ready",
       "decomposition": "⿰彳⿱旦寸",
       "radical": "彳",
       "decompositionTree": {
@@ -9885,6 +10940,10 @@
     },
     {
       "hanzi": "心",
+      "readings": [
+        "xīn"
+      ],
+      "definition": "heart; mind; soul",
       "decomposition": "？",
       "radical": "心",
       "decompositionTree": {
@@ -9909,6 +10968,10 @@
     },
     {
       "hanzi": "必",
+      "readings": [
+        "bì"
+      ],
+      "definition": "surely, certainly; must; will",
       "decomposition": "⿻心丿",
       "radical": "心",
       "decompositionTree": {
@@ -9940,6 +11003,10 @@
     },
     {
       "hanzi": "忘",
+      "readings": [
+        "wàng"
+      ],
+      "definition": "to forget, to miss, to neglect, to overlook",
       "decomposition": "⿱亡心",
       "radical": "心",
       "decompositionTree": {
@@ -9975,6 +11042,10 @@
     },
     {
       "hanzi": "忙",
+      "readings": [
+        "máng"
+      ],
+      "definition": "busy, hurried, pressed for time",
       "decomposition": "⿰忄亡",
       "radical": "忄",
       "decompositionTree": {
@@ -10012,6 +11083,10 @@
     },
     {
       "hanzi": "快",
+      "readings": [
+        "kuài"
+      ],
+      "definition": "speedy, rapid, quick; soon",
       "decomposition": "⿰忄夬",
       "radical": "忄",
       "decompositionTree": {
@@ -10051,6 +11126,10 @@
     },
     {
       "hanzi": "怎",
+      "readings": [
+        "zěn"
+      ],
+      "definition": "what? why? how?",
       "decomposition": "⿱乍心",
       "radical": "心",
       "decompositionTree": {
@@ -10091,6 +11170,10 @@
     },
     {
       "hanzi": "怕",
+      "readings": [
+        "pà"
+      ],
+      "definition": "to fear, to be afraid of; apprehensive",
       "decomposition": "⿰忄白",
       "radical": "忄",
       "decompositionTree": {
@@ -10129,6 +11212,10 @@
     },
     {
       "hanzi": "思",
+      "readings": [
+        "sī"
+      ],
+      "definition": "to think, to ponder, to consider; final particle",
       "decomposition": "⿱田心",
       "radical": "心",
       "decompositionTree": {
@@ -10168,6 +11255,10 @@
     },
     {
       "hanzi": "急",
+      "readings": [
+        "jí"
+      ],
+      "definition": "anxious, worried; hasty, quick; pressing, urgent",
       "decomposition": "⿱刍心",
       "radical": "心",
       "decompositionTree": {
@@ -10204,6 +11295,10 @@
     },
     {
       "hanzi": "怪",
+      "readings": [
+        "guài"
+      ],
+      "definition": "unusual, strange, peculiar",
       "decomposition": "⿰忄圣",
       "radical": "忄",
       "decompositionTree": {
@@ -10241,6 +11336,10 @@
     },
     {
       "hanzi": "总",
+      "readings": [
+        "zǒng"
+      ],
+      "definition": "to gather, to collect; overall, altogether",
       "decomposition": "⿳丷口心",
       "radical": "心",
       "decompositionTree": {
@@ -10282,6 +11381,10 @@
     },
     {
       "hanzi": "息",
+      "readings": [
+        "xī"
+      ],
+      "definition": "to end, to cease, to put a stop to; pause, breath, rest; news",
       "decomposition": "⿱自心",
       "radical": "心",
       "decompositionTree": {
@@ -10319,6 +11422,10 @@
     },
     {
       "hanzi": "您",
+      "readings": [
+        "nín"
+      ],
+      "definition": "honorific for 'you'",
       "decomposition": "⿱你心",
       "radical": "心",
       "decompositionTree": {
@@ -10356,6 +11463,10 @@
     },
     {
       "hanzi": "情",
+      "readings": [
+        "qíng"
+      ],
+      "definition": "emotion, feeling, sentiment",
       "decomposition": "⿰忄青",
       "radical": "忄",
       "decompositionTree": {
@@ -10395,6 +11506,10 @@
     },
     {
       "hanzi": "惯",
+      "readings": [
+        "guàn"
+      ],
+      "definition": "habit, custom; habitual, usual",
       "decomposition": "⿰忄贯",
       "radical": "忄",
       "decompositionTree": {
@@ -10434,6 +11549,10 @@
     },
     {
       "hanzi": "想",
+      "readings": [
+        "xiǎng"
+      ],
+      "definition": "to believe, to wish for; to consider, to plan, to think",
       "decomposition": "⿱相心",
       "radical": "心",
       "decompositionTree": {
@@ -10474,6 +11593,10 @@
     },
     {
       "hanzi": "意",
+      "readings": [
+        "yì"
+      ],
+      "definition": "thought, idea, opinion; desire, wish; meaning, intention",
       "decomposition": "⿱音心",
       "radical": "心",
       "decompositionTree": {
@@ -10521,6 +11644,10 @@
     },
     {
       "hanzi": "感",
+      "readings": [
+        "gǎn"
+      ],
+      "definition": "to affect, to move, to touch; to perceive, to sense",
       "decomposition": "⿱咸心",
       "radical": "心",
       "decompositionTree": {
@@ -10561,6 +11688,10 @@
     },
     {
       "hanzi": "愿",
+      "readings": [
+        "yuàn"
+      ],
+      "definition": "desire, wish; honest, virtuous; ready, willing",
       "decomposition": "⿸原心",
       "radical": "心",
       "decompositionTree": {
@@ -10602,6 +11733,10 @@
     },
     {
       "hanzi": "慢",
+      "readings": [
+        "màn"
+      ],
+      "definition": "slowly, leisurely; sluggish",
       "decomposition": "⿰忄曼",
       "radical": "忄",
       "decompositionTree": {
@@ -10641,6 +11776,10 @@
     },
     {
       "hanzi": "懂",
+      "readings": [
+        "dǒng"
+      ],
+      "definition": "to understand, to know",
       "decomposition": "⿰忄董",
       "radical": "忄",
       "decompositionTree": {
@@ -10685,6 +11824,10 @@
     },
     {
       "hanzi": "戏",
+      "readings": [
+        "xì"
+      ],
+      "definition": "play, show, theater",
       "decomposition": "⿰又戈",
       "radical": "戈",
       "decompositionTree": {
@@ -10716,6 +11859,10 @@
     },
     {
       "hanzi": "成",
+      "readings": [
+        "chéng"
+      ],
+      "definition": "to accomplish; to become; to complete, to finish; to succeed",
       "decomposition": "⿰丁戈",
       "radical": "戈",
       "decompositionTree": {
@@ -10750,6 +11897,10 @@
     },
     {
       "hanzi": "我",
+      "readings": [
+        "wǒ"
+      ],
+      "definition": "I, me, my; our, us",
       "decomposition": "⿰扌戈",
       "radical": "戈",
       "decompositionTree": {
@@ -10785,6 +11936,10 @@
     },
     {
       "hanzi": "或",
+      "readings": [
+        "huò"
+      ],
+      "definition": "or, either, else; maybe, perhaps, possibly",
       "decomposition": "⿹戈⿱口一",
       "radical": "戈",
       "decompositionTree": {
@@ -10829,6 +11984,10 @@
     },
     {
       "hanzi": "房",
+      "readings": [
+        "fáng"
+      ],
+      "definition": "building, house, room",
       "decomposition": "⿸户方",
       "radical": "户",
       "decompositionTree": {
@@ -10866,6 +12025,10 @@
     },
     {
       "hanzi": "所",
+      "readings": [
+        "suǒ"
+      ],
+      "definition": "place, location; \"that which\", a particle introducing a passive clause",
       "decomposition": "⿰户斤",
       "radical": "户",
       "decompositionTree": {
@@ -10905,6 +12068,10 @@
     },
     {
       "hanzi": "手",
+      "readings": [
+        "shǒu"
+      ],
+      "definition": "hand",
       "decomposition": "？",
       "radical": "手",
       "decompositionTree": {
@@ -10927,6 +12094,10 @@
     },
     {
       "hanzi": "才",
+      "readings": [
+        "cái"
+      ],
+      "definition": "ability, talent, gift; just, only",
       "decomposition": "⿻扌？",
       "radical": "扌",
       "decompositionTree": {
@@ -10962,6 +12133,10 @@
     },
     {
       "hanzi": "打",
+      "readings": [
+        "dǎ"
+      ],
+      "definition": "to attack, to beat, to hit, to strike",
       "decomposition": "⿰扌丁",
       "radical": "扌",
       "decompositionTree": {
@@ -11001,6 +12176,10 @@
     },
     {
       "hanzi": "扫",
+      "readings": [
+        "sǎo"
+      ],
+      "definition": "to clean, to sweep, to wipe away; to weed out; to wipe out",
       "decomposition": "⿰扌彐",
       "radical": "扌",
       "decompositionTree": {
@@ -11036,6 +12215,10 @@
     },
     {
       "hanzi": "找",
+      "readings": [
+        "zhǎo"
+      ],
+      "definition": "to search for, to look for, to find; change (as in money)",
       "decomposition": "⿰扌戈",
       "radical": "扌",
       "decompositionTree": {
@@ -11070,6 +12253,10 @@
     },
     {
       "hanzi": "把",
+      "readings": [
+        "bǎ"
+      ],
+      "definition": "to grasp, to hold; to guard, to take; handle",
       "decomposition": "⿰扌巴",
       "radical": "扌",
       "decompositionTree": {
@@ -11106,6 +12293,10 @@
     },
     {
       "hanzi": "护",
+      "readings": [
+        "hù"
+      ],
+      "definition": "to defend, to guard, to protect; shelter; endorse",
       "decomposition": "⿰扌户",
       "radical": "扌",
       "decompositionTree": {
@@ -11143,6 +12334,10 @@
     },
     {
       "hanzi": "报",
+      "readings": [
+        "bào"
+      ],
+      "definition": "to announce, to report; newspaper; payback, revenge",
       "decomposition": "⿰扌⿸卩又",
       "radical": "扌",
       "decompositionTree": {
@@ -11188,6 +12383,10 @@
     },
     {
       "hanzi": "担",
+      "readings": [
+        "dān"
+      ],
+      "definition": "to bear, to carry; burden, responsibility",
       "decomposition": "⿰扌旦",
       "radical": "扌",
       "decompositionTree": {
@@ -11226,6 +12425,10 @@
     },
     {
       "hanzi": "拍",
+      "readings": [
+        "pāi"
+      ],
+      "definition": "to clap, to tap; to hit, to beat, to slap; beat, rhythm",
       "decomposition": "⿰扌白",
       "radical": "扌",
       "decompositionTree": {
@@ -11264,6 +12467,10 @@
     },
     {
       "hanzi": "择",
+      "readings": [
+        "zé"
+      ],
+      "definition": "to select, to choose",
       "decomposition": "⿰扌？",
       "radical": "扌",
       "decompositionTree": {
@@ -11298,6 +12505,10 @@
     },
     {
       "hanzi": "拿",
+      "readings": [
+        "ná"
+      ],
+      "definition": "to bring, to grasp, to hold, to take",
       "decomposition": "⿱合手",
       "radical": "手",
       "decompositionTree": {
@@ -11335,6 +12546,10 @@
     },
     {
       "hanzi": "持",
+      "readings": [
+        "chí"
+      ],
+      "definition": "to hold, to support, to sustain",
       "decomposition": "⿰扌寺",
       "radical": "扌",
       "decompositionTree": {
@@ -11373,6 +12588,10 @@
     },
     {
       "hanzi": "挺",
+      "readings": [
+        "tǐng"
+      ],
+      "definition": "to straighten, to stand upright; rigid, stiff",
       "decomposition": "⿰扌廷",
       "radical": "扌",
       "decompositionTree": {
@@ -11411,6 +12630,10 @@
     },
     {
       "hanzi": "换",
+      "readings": [
+        "huàn"
+      ],
+      "definition": "to change; to exchange, to swap, to trade",
       "decomposition": "⿰扌奂",
       "radical": "扌",
       "decompositionTree": {
@@ -11451,6 +12674,10 @@
     },
     {
       "hanzi": "据",
+      "readings": [
+        "jù"
+      ],
+      "definition": "to possess, to occupy; position; base",
       "decomposition": "⿰扌居",
       "radical": "扌",
       "decompositionTree": {
@@ -11494,6 +12721,10 @@
     },
     {
       "hanzi": "接",
+      "readings": [
+        "jiē"
+      ],
+      "definition": "to connect, to join; to receive, to meet, to answer the phone",
       "decomposition": "⿰扌妾",
       "radical": "扌",
       "decompositionTree": {
@@ -11536,6 +12767,10 @@
     },
     {
       "hanzi": "提",
+      "readings": [
+        "tí"
+      ],
+      "definition": "to hold in the hand; to lift, to raise",
       "decomposition": "⿰扌是",
       "radical": "扌",
       "decompositionTree": {
@@ -11575,6 +12810,10 @@
     },
     {
       "hanzi": "搬",
+      "readings": [
+        "bān"
+      ],
+      "definition": "to move, to remove, to shift, to transfer",
       "decomposition": "⿰扌般",
       "radical": "扌",
       "decompositionTree": {
@@ -11616,6 +12855,10 @@
     },
     {
       "hanzi": "收",
+      "readings": [
+        "shōu"
+      ],
+      "definition": "to collect, to gather, to harvest",
       "decomposition": "⿰丩攵",
       "radical": "攵",
       "decompositionTree": {
@@ -11651,6 +12894,10 @@
     },
     {
       "hanzi": "放",
+      "readings": [
+        "fàng"
+      ],
+      "definition": "to release, to liberate, to free",
       "decomposition": "⿰方攵",
       "radical": "攵",
       "decompositionTree": {
@@ -11690,6 +12937,10 @@
     },
     {
       "hanzi": "故",
+      "readings": [
+        "gù"
+      ],
+      "definition": "reason, cause; happening, instance",
       "decomposition": "⿰古攵",
       "radical": "攵",
       "decompositionTree": {
@@ -11728,6 +12979,10 @@
     },
     {
       "hanzi": "教",
+      "readings": [
+        "jiào"
+      ],
+      "definition": "school, education",
       "decomposition": "⿰孝攵",
       "radical": "攵",
       "decompositionTree": {
@@ -11771,6 +13026,10 @@
     },
     {
       "hanzi": "数",
+      "readings": [
+        "shù"
+      ],
+      "definition": "count, number, several",
       "decomposition": "⿰娄攵",
       "radical": "攵",
       "decompositionTree": {
@@ -11813,6 +13072,10 @@
     },
     {
       "hanzi": "文",
+      "readings": [
+        "wén"
+      ],
+      "definition": "culture, literature, writing",
       "decomposition": "⿱亠乂",
       "radical": "文",
       "decompositionTree": {
@@ -11849,6 +13112,10 @@
     },
     {
       "hanzi": "料",
+      "readings": [
+        "liào"
+      ],
+      "definition": "ingredients, materials; to conjecture, to guess",
       "decomposition": "⿰米斗",
       "radical": "斗",
       "decompositionTree": {
@@ -11887,6 +13154,10 @@
     },
     {
       "hanzi": "斤",
+      "readings": [
+        "jīn"
+      ],
+      "definition": "a catty (about 500 grams); an axe; keen, shrewd",
       "decomposition": "⿸厂下",
       "radical": "斤",
       "decompositionTree": {
@@ -11923,6 +13194,10 @@
     },
     {
       "hanzi": "新",
+      "readings": [
+        "xīn"
+      ],
+      "definition": "new, recent, fresh, modern",
       "decomposition": "⿰亲斤",
       "radical": "斤",
       "decompositionTree": {
@@ -11969,6 +13244,10 @@
     },
     {
       "hanzi": "方",
+      "readings": [
+        "fāng"
+      ],
+      "definition": "square, rectangle; side; region; flag",
       "decomposition": "⿱亠？",
       "radical": "方",
       "decompositionTree": {
@@ -12010,6 +13289,10 @@
     },
     {
       "hanzi": "旁",
+      "readings": [
+        "páng"
+      ],
+      "definition": "side; beside, close, nearby",
       "decomposition": "⿱立方",
       "radical": "方",
       "decompositionTree": {
@@ -12045,6 +13328,10 @@
     },
     {
       "hanzi": "旅",
+      "readings": [
+        "lǚ"
+      ],
+      "definition": "journey, trip; to travel",
       "decomposition": "⿰方⿱？氏",
       "radical": "方",
       "decompositionTree": {
@@ -12089,6 +13376,10 @@
     },
     {
       "hanzi": "日",
+      "readings": [
+        "rì"
+      ],
+      "definition": "sun; day; daytime",
       "decomposition": "⿴口一",
       "radical": "日",
       "decompositionTree": {
@@ -12126,6 +13417,10 @@
     },
     {
       "hanzi": "旧",
+      "readings": [
+        "jiù"
+      ],
+      "definition": "old, ancient; former, past",
       "decomposition": "⿰丨日",
       "radical": "日",
       "decompositionTree": {
@@ -12160,6 +13455,10 @@
     },
     {
       "hanzi": "早",
+      "readings": [
+        "zǎo"
+      ],
+      "definition": "early; soon; morning",
       "decomposition": "⿱日十",
       "radical": "日",
       "decompositionTree": {
@@ -12197,6 +13496,10 @@
     },
     {
       "hanzi": "时",
+      "readings": [
+        "shí"
+      ],
+      "definition": "time, season; period, era, age",
       "decomposition": "⿰日寸",
       "radical": "日",
       "decompositionTree": {
@@ -12238,6 +13541,10 @@
     },
     {
       "hanzi": "明",
+      "readings": [
+        "míng"
+      ],
+      "definition": "bright, clear; to explain, to understand, to shed light",
       "decomposition": "⿰日月",
       "radical": "日",
       "decompositionTree": {
@@ -12277,6 +13584,10 @@
     },
     {
       "hanzi": "易",
+      "readings": [
+        "yì"
+      ],
+      "definition": "to change; to exchange, to trade; simple, easy",
       "decomposition": "⿱日勿",
       "radical": "日",
       "decompositionTree": {
@@ -12314,6 +13625,10 @@
     },
     {
       "hanzi": "星",
+      "readings": [
+        "xīng"
+      ],
+      "definition": "star, planet; a point of light",
       "decomposition": "⿱日生",
       "radical": "日",
       "decompositionTree": {
@@ -12353,6 +13668,10 @@
     },
     {
       "hanzi": "春",
+      "readings": [
+        "chūn"
+      ],
+      "definition": "springtime; joyful, lustful, wanton",
       "decomposition": "⿱？日",
       "radical": "日",
       "decompositionTree": {
@@ -12388,6 +13707,10 @@
     },
     {
       "hanzi": "昨",
+      "readings": [
+        "zuó"
+      ],
+      "definition": "yesterday; formerly, in the past",
       "decomposition": "⿰日乍",
       "radical": "日",
       "decompositionTree": {
@@ -12427,6 +13750,10 @@
     },
     {
       "hanzi": "是",
+      "readings": [
+        "shì"
+      ],
+      "definition": "to be; indeed, right, yes; okay",
       "decomposition": "⿱日疋",
       "radical": "日",
       "decompositionTree": {
@@ -12467,6 +13794,10 @@
     },
     {
       "hanzi": "晚",
+      "readings": [
+        "wǎn"
+      ],
+      "definition": "night, evening; late",
       "decomposition": "⿰日免",
       "radical": "日",
       "decompositionTree": {
@@ -12510,6 +13841,10 @@
     },
     {
       "hanzi": "晴",
+      "readings": [
+        "qíng"
+      ],
+      "definition": "clear weather, fine weather",
       "decomposition": "⿰日青",
       "radical": "日",
       "decompositionTree": {
@@ -12548,6 +13883,10 @@
     },
     {
       "hanzi": "更",
+      "readings": [
+        "gèng"
+      ],
+      "definition": "more, further; to shift, to alternate; to modify",
       "decomposition": "⿱一⿻曰乂",
       "radical": "曰",
       "decompositionTree": {
@@ -12593,6 +13932,10 @@
     },
     {
       "hanzi": "最",
+      "readings": [
+        "zuì"
+      ],
+      "definition": "most, extremely, exceedingly; superlative",
       "decomposition": "⿱日取",
       "radical": "曰",
       "decompositionTree": {
@@ -12634,6 +13977,10 @@
     },
     {
       "hanzi": "月",
+      "readings": [
+        "yuè"
+      ],
+      "definition": "moon; month",
       "decomposition": "⿵冂二",
       "radical": "月",
       "decompositionTree": {
@@ -12668,6 +14015,10 @@
     },
     {
       "hanzi": "有",
+      "readings": [
+        "yǒu"
+      ],
+      "definition": "to have, to own, to possess; to exist",
       "decomposition": "⿸？月",
       "radical": "月",
       "decompositionTree": {
@@ -12713,6 +14064,10 @@
     },
     {
       "hanzi": "朋",
+      "readings": [
+        "péng"
+      ],
+      "definition": "friend, pal, acquaintance",
       "decomposition": "⿰月月",
       "radical": "月",
       "decompositionTree": {
@@ -12750,6 +14105,10 @@
     },
     {
       "hanzi": "服",
+      "readings": [
+        "fú"
+      ],
+      "definition": "clothes; to dress, to wear; to take medicine",
       "decomposition": "⿰月⿸卩又",
       "radical": "月",
       "decompositionTree": {
@@ -12797,6 +14156,10 @@
     },
     {
       "hanzi": "望",
+      "readings": [
+        "wàng"
+      ],
+      "definition": "to expect, to hope, to look forward to",
       "decomposition": "⿱⿰亡月王",
       "radical": "月",
       "decompositionTree": {
@@ -12846,6 +14209,10 @@
     },
     {
       "hanzi": "期",
+      "readings": [
+        "qī"
+      ],
+      "definition": "a period of time; date, time; phase",
       "decomposition": "⿰其月",
       "radical": "月",
       "decompositionTree": {
@@ -12889,6 +14256,10 @@
     },
     {
       "hanzi": "末",
+      "readings": [
+        "mò"
+      ],
+      "definition": "end, final, last; insignificant",
       "decomposition": "⿻木一",
       "radical": "木",
       "decompositionTree": {
@@ -12923,6 +14294,10 @@
     },
     {
       "hanzi": "本",
+      "readings": [
+        "běn"
+      ],
+      "definition": "root, origin, source; basis",
       "decomposition": "⿻木一",
       "radical": "木",
       "decompositionTree": {
@@ -12960,6 +14335,10 @@
     },
     {
       "hanzi": "朵",
+      "readings": [
+        "duǒ"
+      ],
+      "definition": "cluster of flowers; earlobe; an item on both sides",
       "decomposition": "⿱几木",
       "radical": "木",
       "decompositionTree": {
@@ -12997,6 +14376,10 @@
     },
     {
       "hanzi": "机",
+      "readings": [
+        "jī"
+      ],
+      "definition": "desk; machine; moment, opportunity",
       "decomposition": "⿰木几",
       "radical": "木",
       "decompositionTree": {
@@ -13044,6 +14427,10 @@
     },
     {
       "hanzi": "李",
+      "readings": [
+        "lǐ"
+      ],
+      "definition": "plum; luggage; surname",
       "decomposition": "⿱木子",
       "radical": "木",
       "decompositionTree": {
@@ -13082,6 +14469,10 @@
     },
     {
       "hanzi": "束",
+      "readings": [
+        "shù"
+      ],
+      "definition": "to bind, to control, to restrain; bale",
       "decomposition": "⿻木口",
       "radical": "木",
       "decompositionTree": {
@@ -13118,6 +14509,10 @@
     },
     {
       "hanzi": "条",
+      "readings": [
+        "tiáo"
+      ],
+      "definition": "clause, condition; string, stripe",
       "decomposition": "⿱夂木",
       "radical": "木",
       "decompositionTree": {
@@ -13156,6 +14551,10 @@
     },
     {
       "hanzi": "来",
+      "readings": [
+        "lái"
+      ],
+      "definition": "to arrive, to come, to return; in the future, later on",
       "decomposition": "⿻未丷",
       "radical": "木",
       "decompositionTree": {
@@ -13203,6 +14602,10 @@
     },
     {
       "hanzi": "杯",
+      "readings": [
+        "bēi"
+      ],
+      "definition": "cup, glass; measure word for liquids",
       "decomposition": "⿰木不",
       "radical": "木",
       "decompositionTree": {
@@ -13238,6 +14641,10 @@
     },
     {
       "hanzi": "板",
+      "readings": [
+        "bǎn"
+      ],
+      "definition": "board, plank; plate, slab; unnatural, stiff",
       "decomposition": "⿰木反",
       "radical": "木",
       "decompositionTree": {
@@ -13275,6 +14682,10 @@
     },
     {
       "hanzi": "极",
+      "readings": [
+        "jí"
+      ],
+      "definition": "extreme, top; final, furthest, utmost; pole",
       "decomposition": "⿰木及",
       "radical": "木",
       "decompositionTree": {
@@ -13311,6 +14722,10 @@
     },
     {
       "hanzi": "果",
+      "readings": [
+        "guǒ"
+      ],
+      "definition": "fruit, nut; result",
       "decomposition": "⿱田木",
       "radical": "木",
       "decompositionTree": {
@@ -13350,6 +14765,10 @@
     },
     {
       "hanzi": "查",
+      "readings": [
+        "chá"
+      ],
+      "definition": "to investigate, to examine, to look into",
       "decomposition": "⿱木旦",
       "radical": "木",
       "decompositionTree": {
@@ -13389,6 +14808,10 @@
     },
     {
       "hanzi": "树",
+      "readings": [
+        "shù"
+      ],
+      "definition": "tree; to plant; to set up, to establish",
       "decomposition": "⿰木对",
       "radical": "木",
       "decompositionTree": {
@@ -13426,6 +14849,10 @@
     },
     {
       "hanzi": "校",
+      "readings": [
+        "xiào"
+      ],
+      "definition": "school; military field officer",
       "decomposition": "⿰木交",
       "radical": "木",
       "decompositionTree": {
@@ -13468,6 +14895,10 @@
     },
     {
       "hanzi": "样",
+      "readings": [
+        "yàng"
+      ],
+      "definition": "form, pattern, shape, style",
       "decomposition": "⿰木羊",
       "radical": "木",
       "decompositionTree": {
@@ -13509,6 +14940,10 @@
     },
     {
       "hanzi": "根",
+      "readings": [
+        "gēn"
+      ],
+      "definition": "root, basis, foundation",
       "decomposition": "⿰木艮",
       "radical": "木",
       "decompositionTree": {
@@ -13544,6 +14979,10 @@
     },
     {
       "hanzi": "桌",
+      "readings": [
+        "zhuō"
+      ],
+      "definition": "table, stand, desk, counter",
       "decomposition": "⿱卓木",
       "radical": "木",
       "decompositionTree": {
@@ -13584,6 +15023,10 @@
     },
     {
       "hanzi": "梯",
+      "readings": [
+        "tī"
+      ],
+      "definition": "ladder, steps, stairs",
       "decomposition": "⿰木弟",
       "radical": "木",
       "decompositionTree": {
@@ -13623,6 +15066,10 @@
     },
     {
       "hanzi": "检",
+      "readings": [
+        "jiǎn"
+      ],
+      "definition": "to check, to examine, to inspect",
       "decomposition": "⿰木佥",
       "radical": "木",
       "decompositionTree": {
@@ -13662,6 +15109,10 @@
     },
     {
       "hanzi": "椅",
+      "readings": [
+        "yǐ"
+      ],
+      "definition": "chair, seat",
       "decomposition": "⿰木奇",
       "radical": "木",
       "decompositionTree": {
@@ -13703,6 +15154,10 @@
     },
     {
       "hanzi": "楚",
+      "readings": [
+        "chǔ"
+      ],
+      "definition": "clear, distinct; pain, suffering; surname",
       "decomposition": "⿱林疋",
       "radical": "木",
       "decompositionTree": {
@@ -13739,6 +15194,10 @@
     },
     {
       "hanzi": "楼",
+      "readings": [
+        "lóu"
+      ],
+      "definition": "multi-story building; floor",
       "decomposition": "⿰木娄",
       "radical": "木",
       "decompositionTree": {
@@ -13779,6 +15238,10 @@
     },
     {
       "hanzi": "概",
+      "readings": [
+        "gài"
+      ],
+      "definition": "generally, probably, approximately",
       "decomposition": "⿰木既",
       "radical": "木",
       "decompositionTree": {
@@ -13815,6 +15278,10 @@
     },
     {
       "hanzi": "次",
+      "readings": [
+        "cì"
+      ],
+      "definition": "order, sequence; second, next; one after the other",
       "decomposition": "⿰冫欠",
       "radical": "欠",
       "decompositionTree": {
@@ -13849,6 +15316,10 @@
     },
     {
       "hanzi": "欢",
+      "readings": [
+        "huān"
+      ],
+      "definition": "happy, glad, joyful",
       "decomposition": "⿰又欠",
       "radical": "欠",
       "decompositionTree": {
@@ -13883,6 +15354,10 @@
     },
     {
       "hanzi": "歌",
+      "readings": [
+        "gē"
+      ],
+      "definition": "song, lyrics; to sing, to chant",
       "decomposition": "⿰哥欠",
       "radical": "欠",
       "decompositionTree": {
@@ -13922,6 +15397,10 @@
     },
     {
       "hanzi": "正",
+      "readings": [
+        "zhèng"
+      ],
+      "definition": "straight, right, proper, correct, just, true",
       "decomposition": "⿱一止",
       "radical": "止",
       "decompositionTree": {
@@ -13957,6 +15436,10 @@
     },
     {
       "hanzi": "步",
+      "readings": [
+        "bù"
+      ],
+      "definition": "walk, stroll, pace, march; to make progress",
       "decomposition": "⿱止？",
       "radical": "止",
       "decompositionTree": {
@@ -13992,6 +15475,10 @@
     },
     {
       "hanzi": "段",
+      "readings": [
+        "duàn"
+      ],
+      "definition": "section, piece, division",
       "decomposition": "⿰？殳",
       "radical": "殳",
       "decompositionTree": {
@@ -14027,6 +15514,10 @@
     },
     {
       "hanzi": "每",
+      "readings": [
+        "měi"
+      ],
+      "definition": "each, every",
       "decomposition": "⿱？母",
       "radical": "母",
       "decompositionTree": {
@@ -14058,6 +15549,10 @@
     },
     {
       "hanzi": "比",
+      "readings": [
+        "bǐ"
+      ],
+      "definition": "to compare, liken; comparison; than",
       "decomposition": "⿰匕匕",
       "radical": "比",
       "decompositionTree": {
@@ -14093,6 +15588,10 @@
     },
     {
       "hanzi": "毛",
+      "readings": [
+        "máo"
+      ],
+      "definition": "hair, fur, feathers; coarse",
       "decomposition": "⿻乇一",
       "radical": "毛",
       "decompositionTree": {
@@ -14128,6 +15627,10 @@
     },
     {
       "hanzi": "气",
+      "readings": [
+        "qì"
+      ],
+      "definition": "air, gas; steam, vapor; anger",
       "decomposition": "⿱亻？",
       "radical": "气",
       "decompositionTree": {
@@ -14161,6 +15664,10 @@
     },
     {
       "hanzi": "水",
+      "readings": [
+        "shuǐ"
+      ],
+      "definition": "water, liquid, lotion, juice",
       "decomposition": "⿻亅？",
       "radical": "水",
       "decompositionTree": {
@@ -14195,6 +15702,10 @@
     },
     {
       "hanzi": "求",
+      "readings": [
+        "qiú"
+      ],
+      "definition": "to seek; to request, to demand; to beseech, to beg for",
       "decomposition": "⿻一氺",
       "radical": "氺",
       "decompositionTree": {
@@ -14227,6 +15738,10 @@
     },
     {
       "hanzi": "汉",
+      "readings": [
+        "hàn"
+      ],
+      "definition": "Chinese people; Chinese language",
       "decomposition": "⿰氵又",
       "radical": "氵",
       "decompositionTree": {
@@ -14259,6 +15774,10 @@
     },
     {
       "hanzi": "汽",
+      "readings": [
+        "qì"
+      ],
+      "definition": "gasoline; steam, vapor",
       "decomposition": "⿰氵气",
       "radical": "氵",
       "decompositionTree": {
@@ -14291,6 +15810,10 @@
     },
     {
       "hanzi": "沙",
+      "readings": [
+        "shā"
+      ],
+      "definition": "sand, gravel, pebbles; granulated",
       "decomposition": "⿰氵少",
       "radical": "氵",
       "decompositionTree": {
@@ -14326,6 +15849,10 @@
     },
     {
       "hanzi": "没",
+      "readings": [
+        "méi"
+      ],
+      "definition": "not, none, gone; to bury; to sink, to drown",
       "decomposition": "⿰氵殳",
       "radical": "氵",
       "decompositionTree": {
@@ -14364,6 +15891,10 @@
     },
     {
       "hanzi": "河",
+      "readings": [
+        "hé"
+      ],
+      "definition": "river, stream; the Yellow river",
       "decomposition": "⿰氵可",
       "radical": "氵",
       "decompositionTree": {
@@ -14400,6 +15931,10 @@
     },
     {
       "hanzi": "泉",
+      "readings": [
+        "quán"
+      ],
+      "definition": "spring, fountain; wealth, money",
       "decomposition": "⿱白水",
       "radical": "水",
       "decompositionTree": {
@@ -14437,6 +15972,10 @@
     },
     {
       "hanzi": "法",
+      "readings": [
+        "fǎ"
+      ],
+      "definition": "law, rule, statute; method, way; French",
       "decomposition": "⿰氵去",
       "radical": "氵",
       "decompositionTree": {
@@ -14474,6 +16013,10 @@
     },
     {
       "hanzi": "注",
+      "readings": [
+        "zhù"
+      ],
+      "definition": "to concentrate, to focus",
       "decomposition": "⿰氵主",
       "radical": "氵",
       "decompositionTree": {
@@ -14512,6 +16055,10 @@
     },
     {
       "hanzi": "泳",
+      "readings": [
+        "yǒng"
+      ],
+      "definition": "to swim, to dive",
       "decomposition": "⿰氵永",
       "radical": "氵",
       "decompositionTree": {
@@ -14545,6 +16092,10 @@
     },
     {
       "hanzi": "洗",
+      "readings": [
+        "xǐ"
+      ],
+      "definition": "to bathe, to rinse, to wash",
       "decomposition": "⿰氵先",
       "radical": "氵",
       "decompositionTree": {
@@ -14586,6 +16137,10 @@
     },
     {
       "hanzi": "活",
+      "readings": [
+        "huó"
+      ],
+      "definition": "to exist, to live, to survive; living, working",
       "decomposition": "⿰氵舌",
       "radical": "氵",
       "decompositionTree": {
@@ -14624,6 +16179,10 @@
     },
     {
       "hanzi": "海",
+      "readings": [
+        "hǎi"
+      ],
+      "definition": "sea, ocean; maritime",
       "decomposition": "⿰氵每",
       "radical": "氵",
       "decompositionTree": {
@@ -14656,6 +16215,10 @@
     },
     {
       "hanzi": "清",
+      "readings": [
+        "qīng"
+      ],
+      "definition": "clean, pure; clear, distinct; peaceful",
       "decomposition": "⿰氵青",
       "radical": "氵",
       "decompositionTree": {
@@ -14693,6 +16256,10 @@
     },
     {
       "hanzi": "渴",
+      "readings": [
+        "kě"
+      ],
+      "definition": "thirsty, parched; to yearn, to pine for",
       "decomposition": "⿰氵曷",
       "radical": "氵",
       "decompositionTree": {
@@ -14729,6 +16296,10 @@
     },
     {
       "hanzi": "游",
+      "readings": [
+        "yóu"
+      ],
+      "definition": "to wander, to travel, to tour, to roam",
       "decomposition": "⿰氵斿",
       "radical": "氵",
       "decompositionTree": {
@@ -14772,6 +16343,10 @@
     },
     {
       "hanzi": "满",
+      "readings": [
+        "mǎn"
+      ],
+      "definition": "to fill; full, packed; satisfied",
       "decomposition": "⿰氵⿱艹两",
       "radical": "氵",
       "decompositionTree": {
@@ -14818,6 +16393,10 @@
     },
     {
       "hanzi": "漂",
+      "readings": [
+        "piào"
+      ],
+      "definition": "to drift, to float; to be tossed about; bleach",
       "decomposition": "⿰氵票",
       "radical": "氵",
       "decompositionTree": {
@@ -14856,6 +16435,10 @@
     },
     {
       "hanzi": "演",
+      "readings": [
+        "yǎn"
+      ],
+      "definition": "to perform, to act, to put on a play",
       "decomposition": "⿰氵寅",
       "radical": "氵",
       "decompositionTree": {
@@ -14898,6 +16481,10 @@
     },
     {
       "hanzi": "澡",
+      "readings": [
+        "zǎo"
+      ],
+      "definition": "to wash, to bathe",
       "decomposition": "⿰氵喿",
       "radical": "氵",
       "decompositionTree": {
@@ -14937,6 +16524,10 @@
     },
     {
       "hanzi": "激",
+      "readings": [
+        "jī"
+      ],
+      "definition": "to arouse, to incite; acute, sharp; fierce, violent",
       "decomposition": "⿰氵敫",
       "radical": "氵",
       "decompositionTree": {
@@ -14980,6 +16571,10 @@
     },
     {
       "hanzi": "火",
+      "readings": [
+        "huǒ"
+      ],
+      "definition": "fire, flame; to burn; anger, rage",
       "decomposition": "⿻丷人",
       "radical": "火",
       "decompositionTree": {
@@ -15012,6 +16607,10 @@
     },
     {
       "hanzi": "灯",
+      "readings": [
+        "dēng"
+      ],
+      "definition": "lamp, lantern, light",
       "decomposition": "⿰火丁",
       "radical": "火",
       "decompositionTree": {
@@ -15048,6 +16647,10 @@
     },
     {
       "hanzi": "点",
+      "readings": [
+        "diǎn"
+      ],
+      "definition": "dot, point, speck",
       "decomposition": "⿱占灬",
       "radical": "灬",
       "decompositionTree": {
@@ -15089,6 +16692,10 @@
     },
     {
       "hanzi": "炼",
+      "readings": [
+        "liàn"
+      ],
+      "definition": "to smelt, to refine; to distill, to condense",
       "decomposition": "⿰火柬",
       "radical": "火",
       "decompositionTree": {
@@ -15131,6 +16738,10 @@
     },
     {
       "hanzi": "烧",
+      "readings": [
+        "shāo"
+      ],
+      "definition": "to burn, to bake; to heat, to roast",
       "decomposition": "⿰火尧",
       "radical": "火",
       "decompositionTree": {
@@ -15171,6 +16782,10 @@
     },
     {
       "hanzi": "热",
+      "readings": [
+        "rè"
+      ],
+      "definition": "heat, fever, zeal",
       "decomposition": "⿱执灬",
       "radical": "灬",
       "decompositionTree": {
@@ -15212,6 +16827,10 @@
     },
     {
       "hanzi": "然",
+      "readings": [
+        "rán"
+      ],
+      "definition": "certainly; naturally; suddenly",
       "decomposition": "⿱肰灬",
       "radical": "灬",
       "decompositionTree": {
@@ -15252,6 +16871,10 @@
     },
     {
       "hanzi": "照",
+      "readings": [
+        "zhào"
+      ],
+      "definition": "to shine, to reflect, to illuminate",
       "decomposition": "⿱昭灬",
       "radical": "灬",
       "decompositionTree": {
@@ -15296,6 +16919,10 @@
     },
     {
       "hanzi": "熊",
+      "readings": [
+        "xióng"
+      ],
+      "definition": "a bear; brilliant; surname",
       "decomposition": "⿱能灬",
       "radical": "灬",
       "decompositionTree": {
@@ -15332,6 +16959,10 @@
     },
     {
       "hanzi": "爬",
+      "readings": [
+        "pá"
+      ],
+      "definition": "to climb, to scramble; to crawl, to creep",
       "decomposition": "⿺爪巴",
       "radical": "爪",
       "decompositionTree": {
@@ -15366,6 +16997,10 @@
     },
     {
       "hanzi": "爱",
+      "readings": [
+        "ài"
+      ],
+      "definition": "to love, to like, to be fond of; love, affection",
       "decomposition": "⿱⿱爫冖友",
       "radical": "爫",
       "decompositionTree": {
@@ -15412,6 +17047,10 @@
     },
     {
       "hanzi": "爷",
+      "readings": [
+        "yé"
+      ],
+      "definition": "grandfather, old man",
       "decomposition": "⿱父卩",
       "radical": "父",
       "decompositionTree": {
@@ -15447,6 +17086,10 @@
     },
     {
       "hanzi": "爸",
+      "readings": [
+        "bà"
+      ],
+      "definition": "father, papa",
       "decomposition": "⿱父巴",
       "radical": "父",
       "decompositionTree": {
@@ -15483,6 +17126,10 @@
     },
     {
       "hanzi": "片",
+      "readings": [
+        "piàn"
+      ],
+      "definition": "slice, splinter; page, strip",
       "decomposition": "⿸？？",
       "radical": "片",
       "decompositionTree": {
@@ -15510,6 +17157,10 @@
     },
     {
       "hanzi": "牙",
+      "readings": [
+        "yá"
+      ],
+      "definition": "tooth, molar; fang, tusk; serrated",
       "decomposition": "？",
       "radical": "牙",
       "decompositionTree": {
@@ -15530,6 +17181,10 @@
     },
     {
       "hanzi": "牛",
+      "readings": [
+        "niú"
+      ],
+      "definition": "ox, cow, bull",
       "decomposition": "？",
       "radical": "牛",
       "decompositionTree": {
@@ -15550,6 +17205,10 @@
     },
     {
       "hanzi": "物",
+      "readings": [
+        "wù"
+      ],
+      "definition": "thing, substance, matter; creature",
       "decomposition": "⿰牛勿",
       "radical": "牛",
       "decompositionTree": {
@@ -15585,6 +17244,10 @@
     },
     {
       "hanzi": "特",
+      "readings": [
+        "tè"
+      ],
+      "definition": "special, unique, distinguished",
       "decomposition": "⿰牛寺",
       "radical": "牛",
       "decompositionTree": {
@@ -15621,6 +17284,10 @@
     },
     {
       "hanzi": "狗",
+      "readings": [
+        "gǒu"
+      ],
+      "definition": "dog",
       "decomposition": "⿰犭句",
       "radical": "犭",
       "decompositionTree": {
@@ -15658,6 +17325,10 @@
     },
     {
       "hanzi": "猫",
+      "readings": [
+        "māo"
+      ],
+      "definition": "cat",
       "decomposition": "⿰犭苗",
       "radical": "犭",
       "decompositionTree": {
@@ -15697,6 +17368,10 @@
     },
     {
       "hanzi": "玩",
+      "readings": [
+        "wán"
+      ],
+      "definition": "to play with, to joke, to entertain",
       "decomposition": "⿰王元",
       "radical": "王",
       "decompositionTree": {
@@ -15737,6 +17412,10 @@
     },
     {
       "hanzi": "环",
+      "readings": [
+        "huán"
+      ],
+      "definition": "bracelet, ring; to surround, to loop",
       "decomposition": "⿰王不",
       "radical": "王",
       "decompositionTree": {
@@ -15772,6 +17451,10 @@
     },
     {
       "hanzi": "现",
+      "readings": [
+        "xiàn"
+      ],
+      "definition": "to appear, to manifest; current, now",
       "decomposition": "⿰王见",
       "radical": "王",
       "decompositionTree": {
@@ -15812,6 +17495,10 @@
     },
     {
       "hanzi": "班",
+      "readings": [
+        "bān"
+      ],
+      "definition": "class, squad, team, work shift",
       "decomposition": "⿲王刂王",
       "radical": "王",
       "decompositionTree": {
@@ -15855,6 +17542,10 @@
     },
     {
       "hanzi": "球",
+      "readings": [
+        "qiú"
+      ],
+      "definition": "ball, globe, sphere; round",
       "decomposition": "⿰王求",
       "radical": "王",
       "decompositionTree": {
@@ -15897,6 +17588,10 @@
     },
     {
       "hanzi": "理",
+      "readings": [
+        "lǐ"
+      ],
+      "definition": "science, reason, logic; to manage",
       "decomposition": "⿰王里",
       "radical": "王",
       "decompositionTree": {
@@ -15934,6 +17629,10 @@
     },
     {
       "hanzi": "瓜",
+      "readings": [
+        "guā"
+      ],
+      "definition": "melon, gourd, squash, cucumber",
       "decomposition": "⿵？厶",
       "radical": "瓜",
       "decompositionTree": {
@@ -15965,6 +17664,10 @@
     },
     {
       "hanzi": "瓶",
+      "readings": [
+        "píng"
+      ],
+      "definition": "bottle, jug, pitcher, vase",
       "decomposition": "⿰并瓦",
       "radical": "瓦",
       "decompositionTree": {
@@ -16001,6 +17704,10 @@
     },
     {
       "hanzi": "甜",
+      "readings": [
+        "tián"
+      ],
+      "definition": "sweet, sweetness",
       "decomposition": "⿰舌甘",
       "radical": "甘",
       "decompositionTree": {
@@ -16041,6 +17748,10 @@
     },
     {
       "hanzi": "生",
+      "readings": [
+        "shēng"
+      ],
+      "definition": "life, lifetime; birth; growth",
       "decomposition": "⿻一土",
       "radical": "生",
       "decompositionTree": {
@@ -16089,6 +17800,10 @@
     },
     {
       "hanzi": "用",
+      "readings": [
+        "yòng"
+      ],
+      "definition": "to use, to employ, to apply; use",
       "decomposition": "⿵冂？",
       "radical": "用",
       "decompositionTree": {
@@ -16125,6 +17840,10 @@
     },
     {
       "hanzi": "电",
+      "readings": [
+        "diàn"
+      ],
+      "definition": "electricity; electric; lightning",
       "decomposition": "⿻曰乚",
       "radical": "曰",
       "decompositionTree": {
@@ -16168,6 +17887,10 @@
     },
     {
       "hanzi": "男",
+      "readings": [
+        "nán"
+      ],
+      "definition": "man, boy; male; baron; surname",
       "decomposition": "⿱田力",
       "radical": "田",
       "decompositionTree": {
@@ -16209,6 +17932,10 @@
     },
     {
       "hanzi": "画",
+      "readings": [
+        "huà"
+      ],
+      "definition": "picture, painting, drawing; to draw",
       "decomposition": "⿱一⿶凵田",
       "radical": "田",
       "decompositionTree": {
@@ -16255,6 +17982,10 @@
     },
     {
       "hanzi": "界",
+      "readings": [
+        "jiè"
+      ],
+      "definition": "boundary, limit; domain; society, the world",
       "decomposition": "⿱田介",
       "radical": "田",
       "decompositionTree": {
@@ -16292,6 +18023,10 @@
     },
     {
       "hanzi": "留",
+      "readings": [
+        "liú"
+      ],
+      "definition": "to stay, to remain; to preserve, to keep; to leave a message; ",
       "decomposition": "⿱卯田",
       "radical": "田",
       "decompositionTree": {
@@ -16330,6 +18065,10 @@
     },
     {
       "hanzi": "疼",
+      "readings": [
+        "téng"
+      ],
+      "definition": "ache, pain; to love dearly",
       "decomposition": "⿸疒冬",
       "radical": "疒",
       "decompositionTree": {
@@ -16369,6 +18108,10 @@
     },
     {
       "hanzi": "病",
+      "readings": [
+        "bìng"
+      ],
+      "definition": "sickness, illness, disease",
       "decomposition": "⿸疒丙",
       "radical": "疒",
       "decompositionTree": {
@@ -16412,6 +18155,10 @@
     },
     {
       "hanzi": "瘦",
+      "readings": [
+        "shòu"
+      ],
+      "definition": "thin, lean, emaciated; meager",
       "decomposition": "⿸疒叟",
       "radical": "疒",
       "decompositionTree": {
@@ -16450,6 +18197,10 @@
     },
     {
       "hanzi": "白",
+      "readings": [
+        "bái"
+      ],
+      "definition": "white; clear, pure, unblemished; bright",
       "decomposition": "⿻？日",
       "radical": "白",
       "decompositionTree": {
@@ -16487,6 +18238,10 @@
     },
     {
       "hanzi": "百",
+      "readings": [
+        "bǎi"
+      ],
+      "definition": "one hundred; numerous, many",
       "decomposition": "⿱一白",
       "radical": "白",
       "decompositionTree": {
@@ -16522,6 +18277,10 @@
     },
     {
       "hanzi": "的",
+      "readings": [
+        "de"
+      ],
+      "definition": "aim, goal; of; possessive particle; -self suffix",
       "decomposition": "⿰白勺",
       "radical": "白",
       "decompositionTree": {
@@ -16564,6 +18323,10 @@
     },
     {
       "hanzi": "盘",
+      "readings": [
+        "pán"
+      ],
+      "definition": "tray, plate, dish; to examine",
       "decomposition": "⿱舟皿",
       "radical": "皿",
       "decompositionTree": {
@@ -16596,6 +18359,10 @@
     },
     {
       "hanzi": "目",
+      "readings": [
+        "mù"
+      ],
+      "definition": "eye; to look, to see; division, topic",
       "decomposition": "⿴口二",
       "radical": "目",
       "decompositionTree": {
@@ -16630,6 +18397,10 @@
     },
     {
       "hanzi": "直",
+      "readings": [
+        "zhí"
+      ],
+      "definition": "straight, vertical; candid, direct, frank",
       "decomposition": "⿳十目一",
       "radical": "目",
       "decompositionTree": {
@@ -16671,6 +18442,10 @@
     },
     {
       "hanzi": "相",
+      "readings": [
+        "xiāng"
+      ],
+      "definition": "mutual, reciprocal; equal; each other",
       "decomposition": "⿰木目",
       "radical": "目",
       "decompositionTree": {
@@ -16711,6 +18486,10 @@
     },
     {
       "hanzi": "看",
+      "readings": [
+        "kàn"
+      ],
+      "definition": "to look, to see; to examine, to scrutinize",
       "decomposition": "⿱手目",
       "radical": "目",
       "decompositionTree": {
@@ -16752,6 +18531,10 @@
     },
     {
       "hanzi": "真",
+      "readings": [
+        "zhēn"
+      ],
+      "definition": "real, actual, true, genuine",
       "decomposition": "⿱直几",
       "radical": "目",
       "decompositionTree": {
@@ -16793,6 +18576,10 @@
     },
     {
       "hanzi": "眼",
+      "readings": [
+        "yǎn"
+      ],
+      "definition": "eyelet, hole, opening",
       "decomposition": "⿰目艮",
       "radical": "目",
       "decompositionTree": {
@@ -16829,6 +18616,10 @@
     },
     {
       "hanzi": "着",
+      "readings": [
+        "zhe"
+      ],
+      "definition": "to make a move, to take action",
       "decomposition": "⿸羊目",
       "radical": "目",
       "decompositionTree": {
@@ -16868,6 +18659,10 @@
     },
     {
       "hanzi": "睛",
+      "readings": [
+        "jīng"
+      ],
+      "definition": "eyeball; pupil",
       "decomposition": "⿰目青",
       "radical": "目",
       "decompositionTree": {
@@ -16906,6 +18701,10 @@
     },
     {
       "hanzi": "睡",
+      "readings": [
+        "shuì"
+      ],
+      "definition": "to sleep, to doze",
       "decomposition": "⿰目垂",
       "radical": "目",
       "decompositionTree": {
@@ -16946,6 +18745,10 @@
     },
     {
       "hanzi": "知",
+      "readings": [
+        "zhī"
+      ],
+      "definition": "to know, to perceive, to comprehend",
       "decomposition": "⿰矢口",
       "radical": "矢",
       "decompositionTree": {
@@ -16984,6 +18787,10 @@
     },
     {
       "hanzi": "短",
+      "readings": [
+        "duǎn"
+      ],
+      "definition": "brief, short; deficient, lacking",
       "decomposition": "⿰矢豆",
       "radical": "矢",
       "decompositionTree": {
@@ -17026,6 +18833,10 @@
     },
     {
       "hanzi": "矮",
+      "readings": [
+        "ǎi"
+      ],
+      "definition": "short, low; dwarf",
       "decomposition": "⿰矢委",
       "radical": "矢",
       "decompositionTree": {
@@ -17068,6 +18879,10 @@
     },
     {
       "hanzi": "矿",
+      "readings": [
+        "kuàng"
+      ],
+      "definition": "mine; mineral, ore",
       "decomposition": "⿰石广",
       "radical": "石",
       "decompositionTree": {
@@ -17105,6 +18920,10 @@
     },
     {
       "hanzi": "码",
+      "readings": [
+        "mǎ"
+      ],
+      "definition": "number, numeral, symbol; yard",
       "decomposition": "⿰石马",
       "radical": "石",
       "decompositionTree": {
@@ -17141,6 +18960,10 @@
     },
     {
       "hanzi": "碗",
+      "readings": [
+        "wǎn"
+      ],
+      "definition": "bowl, small dish",
       "decomposition": "⿰石宛",
       "radical": "石",
       "decompositionTree": {
@@ -17185,6 +19008,10 @@
     },
     {
       "hanzi": "礼",
+      "readings": [
+        "lǐ"
+      ],
+      "definition": "courtesy, manners, social customs",
       "decomposition": "⿰礻乚",
       "radical": "礻",
       "decompositionTree": {
@@ -17219,6 +19046,10 @@
     },
     {
       "hanzi": "票",
+      "readings": [
+        "piào"
+      ],
+      "definition": "bank note; ticket; vote; a slip of paper",
       "decomposition": "⿱覀示",
       "radical": "示",
       "decompositionTree": {
@@ -17258,6 +19089,10 @@
     },
     {
       "hanzi": "离",
+      "readings": [
+        "lí"
+      ],
+      "definition": "rare beast; strange; elegant",
       "decomposition": "⿱⿱亠凶禸",
       "radical": "禸",
       "decompositionTree": {
@@ -17308,6 +19143,10 @@
     },
     {
       "hanzi": "秋",
+      "readings": [
+        "qiū"
+      ],
+      "definition": "autumn, fall; year",
       "decomposition": "⿰禾火",
       "radical": "禾",
       "decompositionTree": {
@@ -17348,6 +19187,10 @@
     },
     {
       "hanzi": "种",
+      "readings": [
+        "zhǒng"
+      ],
+      "definition": "race, kind, breed; seed; to plant",
       "decomposition": "⿰禾中",
       "radical": "禾",
       "decompositionTree": {
@@ -17387,6 +19230,10 @@
     },
     {
       "hanzi": "租",
+      "readings": [
+        "zū"
+      ],
+      "definition": "to rent, to lease; tax, rent",
       "decomposition": "⿰禾且",
       "radical": "禾",
       "decompositionTree": {
@@ -17427,6 +19274,10 @@
     },
     {
       "hanzi": "空",
+      "readings": [
+        "kōng"
+      ],
+      "definition": "hollow, empty, deserted, bare",
       "decomposition": "⿱穴工",
       "radical": "穴",
       "decompositionTree": {
@@ -17465,6 +19316,10 @@
     },
     {
       "hanzi": "穿",
+      "readings": [
+        "chuān"
+      ],
+      "definition": "to drill, to pierce; to dress, to wear",
       "decomposition": "⿱穴牙",
       "radical": "穴",
       "decompositionTree": {
@@ -17500,6 +19355,10 @@
     },
     {
       "hanzi": "突",
+      "readings": [
+        "tū"
+      ],
+      "definition": "sudden, abrupt, unexpected",
       "decomposition": "⿱穴犬",
       "radical": "穴",
       "decompositionTree": {
@@ -17538,6 +19397,10 @@
     },
     {
       "hanzi": "站",
+      "readings": [
+        "zhàn"
+      ],
+      "definition": "stand, station; to halt, to stand; website; measure word for stands and stations",
       "decomposition": "⿰立占",
       "radical": "立",
       "decompositionTree": {
@@ -17580,6 +19443,10 @@
     },
     {
       "hanzi": "笑",
+      "readings": [
+        "xiào"
+      ],
+      "definition": "to smile, to laugh; to giggle; to snicker",
       "decomposition": "⿱⺮夭",
       "radical": "⺮",
       "decompositionTree": {
@@ -17615,6 +19482,10 @@
     },
     {
       "hanzi": "笔",
+      "readings": [
+        "bǐ"
+      ],
+      "definition": "pen, pencil, writing brush; to compose, to write; Hanzi stroke",
       "decomposition": "⿱⺮毛",
       "radical": "⺮",
       "decompositionTree": {
@@ -17654,6 +19525,10 @@
     },
     {
       "hanzi": "第",
+      "readings": [
+        "dì"
+      ],
+      "definition": "sequence, number; grade, degree; particle prefacing an ordinal",
       "decomposition": "⿱⺮弟",
       "radical": "⺮",
       "decompositionTree": {
@@ -17688,6 +19563,10 @@
     },
     {
       "hanzi": "等",
+      "readings": [
+        "děng"
+      ],
+      "definition": "rank, grade; same, equal; to wait",
       "decomposition": "⿱⺮寺",
       "radical": "⺮",
       "decompositionTree": {
@@ -17724,6 +19603,10 @@
     },
     {
       "hanzi": "答",
+      "readings": [
+        "dá"
+      ],
+      "definition": "answer, reply; to return; to assent to",
       "decomposition": "⿱⺮合",
       "radical": "⺮",
       "decompositionTree": {
@@ -17761,6 +19644,10 @@
     },
     {
       "hanzi": "筷",
+      "readings": [
+        "kuài"
+      ],
+      "definition": "chopsticks",
       "decomposition": "⿱⺮快",
       "radical": "⺮",
       "decompositionTree": {
@@ -17799,6 +19686,10 @@
     },
     {
       "hanzi": "简",
+      "readings": [
+        "jiǎn"
+      ],
+      "definition": "simple, succinct, terse; a letter",
       "decomposition": "⿱⺮间",
       "radical": "⺮",
       "decompositionTree": {
@@ -17837,6 +19728,10 @@
     },
     {
       "hanzi": "算",
+      "readings": [
+        "suàn"
+      ],
+      "definition": "to calculate, to count; to figure, to plan",
       "decomposition": "⿱⺮具",
       "radical": "⺮",
       "decompositionTree": {
@@ -17875,6 +19770,10 @@
     },
     {
       "hanzi": "箱",
+      "readings": [
+        "xiāng"
+      ],
+      "definition": "box, case; chest, trunk",
       "decomposition": "⿱⺮相",
       "radical": "⺮",
       "decompositionTree": {
@@ -17917,6 +19816,10 @@
     },
     {
       "hanzi": "篮",
+      "readings": [
+        "lán"
+      ],
+      "definition": "basket; goal",
       "decomposition": "⿱⺮监",
       "radical": "⺮",
       "decompositionTree": {
@@ -17950,6 +19853,10 @@
     },
     {
       "hanzi": "米",
+      "readings": [
+        "mǐ"
+      ],
+      "definition": "rice, millet, grain",
       "decomposition": "⿻丷木",
       "radical": "米",
       "decompositionTree": {
@@ -17987,6 +19894,10 @@
     },
     {
       "hanzi": "糕",
+      "readings": [
+        "gāo"
+      ],
+      "definition": "cake, pastry",
       "decomposition": "⿰米羔",
       "radical": "米",
       "decompositionTree": {
@@ -18027,6 +19938,10 @@
     },
     {
       "hanzi": "糖",
+      "readings": [
+        "táng"
+      ],
+      "definition": "candy, sugar, sweets",
       "decomposition": "⿰米唐",
       "radical": "米",
       "decompositionTree": {
@@ -18072,6 +19987,10 @@
     },
     {
       "hanzi": "系",
+      "readings": [
+        "xì"
+      ],
+      "definition": "system; line, link, connection",
       "decomposition": "⿱丿糸",
       "radical": "糸",
       "decompositionTree": {
@@ -18108,6 +20027,10 @@
     },
     {
       "hanzi": "累",
+      "readings": [
+        "lèi"
+      ],
+      "definition": "tired; to accumulate; to involve; bother, nuisance",
       "decomposition": "⿱田糸",
       "radical": "糸",
       "decompositionTree": {
@@ -18148,6 +20071,10 @@
     },
     {
       "hanzi": "红",
+      "readings": [
+        "hóng"
+      ],
+      "definition": "red, vermillion; to blush, to flush; popular",
       "decomposition": "⿰纟工",
       "radical": "纟",
       "decompositionTree": {
@@ -18184,6 +20111,10 @@
     },
     {
       "hanzi": "级",
+      "readings": [
+        "jí"
+      ],
+      "definition": "level, rank; class, grade",
       "decomposition": "⿰纟及",
       "radical": "纟",
       "decompositionTree": {
@@ -18218,6 +20149,10 @@
     },
     {
       "hanzi": "纸",
+      "readings": [
+        "zhǐ"
+      ],
+      "definition": "paper",
       "decomposition": "⿰纟氏",
       "radical": "纟",
       "decompositionTree": {
@@ -18251,6 +20186,10 @@
     },
     {
       "hanzi": "练",
+      "readings": [
+        "liàn"
+      ],
+      "definition": "to drill, to exercise; to practice, to train",
       "decomposition": "⿰纟柬",
       "radical": "纟",
       "decompositionTree": {
@@ -18291,6 +20230,10 @@
     },
     {
       "hanzi": "终",
+      "readings": [
+        "zhōng"
+      ],
+      "definition": "end; finally, in the end",
       "decomposition": "⿰纟冬",
       "radical": "纟",
       "decompositionTree": {
@@ -18327,6 +20270,10 @@
     },
     {
       "hanzi": "绍",
+      "readings": [
+        "shào"
+      ],
+      "definition": "to connect; to introduce",
       "decomposition": "⿰纟召",
       "radical": "纟",
       "decompositionTree": {
@@ -18364,6 +20311,10 @@
     },
     {
       "hanzi": "经",
+      "readings": [
+        "jīng"
+      ],
+      "definition": "the classics; to experience, to undergo",
       "decomposition": "⿰纟⿱？工",
       "radical": "纟",
       "decompositionTree": {
@@ -18411,6 +20362,10 @@
     },
     {
       "hanzi": "结",
+      "readings": [
+        "jié"
+      ],
+      "definition": "knot, tie; to connect, to join",
       "decomposition": "⿰纟吉",
       "radical": "纟",
       "decompositionTree": {
@@ -18448,6 +20403,10 @@
     },
     {
       "hanzi": "给",
+      "readings": [
+        "gěi"
+      ],
+      "definition": "to give, to lend; for, by",
       "decomposition": "⿰纟合",
       "radical": "纟",
       "decompositionTree": {
@@ -18485,6 +20444,10 @@
     },
     {
       "hanzi": "绩",
+      "readings": [
+        "jī"
+      ],
+      "definition": "achievements, merit",
       "decomposition": "⿰纟责",
       "radical": "纟",
       "decompositionTree": {
@@ -18522,6 +20485,10 @@
     },
     {
       "hanzi": "绿",
+      "readings": [
+        "lǜ"
+      ],
+      "definition": "green; chlorine",
       "decomposition": "⿰纟录",
       "radical": "纟",
       "decompositionTree": {
@@ -18560,6 +20527,10 @@
     },
     {
       "hanzi": "网",
+      "readings": [
+        "wǎng"
+      ],
+      "definition": "net; network",
       "decomposition": "⿵冂⿰乂乂",
       "radical": "网",
       "decompositionTree": {
@@ -18605,6 +20576,10 @@
     },
     {
       "hanzi": "羊",
+      "readings": [
+        "yáng"
+      ],
+      "definition": "sheep, goat",
       "decomposition": "⿱丷？",
       "radical": "羊",
       "decompositionTree": {
@@ -18637,6 +20612,10 @@
     },
     {
       "hanzi": "羽",
+      "readings": [
+        "yǔ"
+      ],
+      "definition": "feather, plume; wings",
       "decomposition": "⿰习习",
       "radical": "羽",
       "decompositionTree": {
@@ -18669,6 +20648,10 @@
     },
     {
       "hanzi": "老",
+      "readings": [
+        "lǎo"
+      ],
+      "definition": "old, aged; experienced",
       "decomposition": "⿱耂匕",
       "radical": "老",
       "decompositionTree": {
@@ -18708,6 +20691,10 @@
     },
     {
       "hanzi": "考",
+      "readings": [
+        "kǎo"
+      ],
+      "definition": "to test, to investigate, to examine",
       "decomposition": "⿸耂丂",
       "radical": "耂",
       "decompositionTree": {
@@ -18745,6 +20732,10 @@
     },
     {
       "hanzi": "者",
+      "readings": [
+        "zhě"
+      ],
+      "definition": "that which; they who; those who",
       "decomposition": "⿸耂日",
       "radical": "耂",
       "decompositionTree": {
@@ -18783,6 +20774,10 @@
     },
     {
       "hanzi": "而",
+      "readings": [
+        "ér"
+      ],
+      "definition": "and, and then, and yet; but",
       "decomposition": "？",
       "radical": "而",
       "decompositionTree": {
@@ -18802,6 +20797,10 @@
     },
     {
       "hanzi": "耳",
+      "readings": [
+        "ěr"
+      ],
+      "definition": "ear; to hear, to hear of; handle",
       "decomposition": "⿻？二",
       "radical": "耳",
       "decompositionTree": {
@@ -18835,6 +20834,10 @@
     },
     {
       "hanzi": "聊",
+      "readings": [
+        "liáo"
+      ],
+      "definition": "somewhat, slightly, at least",
       "decomposition": "⿰耳卯",
       "radical": "耳",
       "decompositionTree": {
@@ -18871,6 +20874,10 @@
     },
     {
       "hanzi": "聪",
+      "readings": [
+        "cōng"
+      ],
+      "definition": "sharp (of sight and hearing); intelligent, clever, bright",
       "decomposition": "⿰耳总",
       "radical": "耳",
       "decompositionTree": {
@@ -18910,6 +20917,10 @@
     },
     {
       "hanzi": "肉",
+      "readings": [
+        "ròu"
+      ],
+      "definition": "meat; flesh",
       "decomposition": "⿻冂仌",
       "radical": "肉",
       "decompositionTree": {
@@ -18943,6 +20954,10 @@
     },
     {
       "hanzi": "育",
+      "readings": [
+        "yù"
+      ],
+      "definition": "to produce, to give birth to; to educate",
       "decomposition": "⿱⿱亠厶⺼",
       "radical": "⺼",
       "decompositionTree": {
@@ -18987,6 +21002,10 @@
     },
     {
       "hanzi": "胖",
+      "readings": [
+        "pàng"
+      ],
+      "definition": "fat, plump, obese; a fat person",
       "decomposition": "⿰⺼半",
       "radical": "⺼",
       "decompositionTree": {
@@ -19021,6 +21040,10 @@
     },
     {
       "hanzi": "能",
+      "readings": [
+        "néng"
+      ],
+      "definition": "can, may; capable, full of energy",
       "decomposition": "⿰⿱厶⺼⿱匕匕",
       "radical": "⺼",
       "decompositionTree": {
@@ -19075,6 +21098,10 @@
     },
     {
       "hanzi": "脏",
+      "readings": [
+        "zàng"
+      ],
+      "definition": "organs, viscera; dirty, filthy",
       "decomposition": "⿰⺼庄",
       "radical": "⺼",
       "decompositionTree": {
@@ -19113,6 +21140,10 @@
     },
     {
       "hanzi": "脑",
+      "readings": [
+        "nǎo"
+      ],
+      "definition": "brain",
       "decomposition": "⿰⺼⿱亠凶",
       "radical": "⺼",
       "decompositionTree": {
@@ -19159,6 +21190,10 @@
     },
     {
       "hanzi": "脚",
+      "readings": [
+        "jiǎo"
+      ],
+      "definition": "leg, foot; foundation, base",
       "decomposition": "⿰⺼却",
       "radical": "⺼",
       "decompositionTree": {
@@ -19197,6 +21232,10 @@
     },
     {
       "hanzi": "脸",
+      "readings": [
+        "liǎn"
+      ],
+      "definition": "face, cheek; reputation",
       "decomposition": "⿰⺼佥",
       "radical": "⺼",
       "decompositionTree": {
@@ -19232,6 +21271,10 @@
     },
     {
       "hanzi": "腿",
+      "readings": [
+        "tuǐ"
+      ],
+      "definition": "legs, thighs",
       "decomposition": "⿰⺼退",
       "radical": "⺼",
       "decompositionTree": {
@@ -19265,6 +21308,10 @@
     },
     {
       "hanzi": "自",
+      "readings": [
+        "zì"
+      ],
+      "definition": "self; private, personal; from",
       "decomposition": "⿻目？",
       "radical": "自",
       "decompositionTree": {
@@ -19303,6 +21350,10 @@
     },
     {
       "hanzi": "舒",
+      "readings": [
+        "shū"
+      ],
+      "definition": "relaxed, comfortable; to unfold, to stretch out",
       "decomposition": "⿰舍予",
       "radical": "舌",
       "decompositionTree": {
@@ -19344,6 +21395,10 @@
     },
     {
       "hanzi": "舞",
+      "readings": [
+        "wǔ"
+      ],
+      "definition": "to dance; to brandish",
       "decomposition": "⿱無舛",
       "radical": "舛",
       "decompositionTree": {
@@ -19380,6 +21435,10 @@
     },
     {
       "hanzi": "般",
+      "readings": [
+        "bān"
+      ],
+      "definition": "sort, manner, kind, class",
       "decomposition": "⿰舟殳",
       "radical": "舟",
       "decompositionTree": {
@@ -19415,6 +21474,10 @@
     },
     {
       "hanzi": "船",
+      "readings": [
+        "chuán"
+      ],
+      "definition": "ship, boat, vessel",
       "decomposition": "⿰舟⿱几口",
       "radical": "舟",
       "decompositionTree": {
@@ -19461,6 +21524,10 @@
     },
     {
       "hanzi": "色",
+      "readings": [
+        "sè"
+      ],
+      "definition": "color, tint, hue, shade; beauty, form; sex",
       "decomposition": "⿱⺈巴",
       "radical": "色",
       "decompositionTree": {
@@ -19499,6 +21566,10 @@
     },
     {
       "hanzi": "节",
+      "readings": [
+        "jié"
+      ],
+      "definition": "festival; knot, joint; segment; to economize, to save",
       "decomposition": "⿱艹？",
       "radical": "艹",
       "decompositionTree": {
@@ -19534,6 +21605,10 @@
     },
     {
       "hanzi": "花",
+      "readings": [
+        "huā"
+      ],
+      "definition": "flower, blossom; to spend (time or money)",
       "decomposition": "⿱艹化",
       "radical": "艹",
       "decompositionTree": {
@@ -19572,6 +21647,10 @@
     },
     {
       "hanzi": "苹",
+      "readings": [
+        "píng"
+      ],
+      "definition": "apple; duckweed, Artemisia",
       "decomposition": "⿱艹平",
       "radical": "艹",
       "decompositionTree": {
@@ -19609,6 +21688,10 @@
     },
     {
       "hanzi": "茶",
+      "readings": [
+        "chá"
+      ],
+      "definition": "tea; tea leaves; tea plant",
       "decomposition": "⿱艹⿱人木",
       "radical": "艹",
       "decompositionTree": {
@@ -19657,6 +21740,10 @@
     },
     {
       "hanzi": "草",
+      "readings": [
+        "cǎo"
+      ],
+      "definition": "grass, herbs; straw, thatch",
       "decomposition": "⿱艹早",
       "radical": "艹",
       "decompositionTree": {
@@ -19695,6 +21782,10 @@
     },
     {
       "hanzi": "药",
+      "readings": [
+        "yào"
+      ],
+      "definition": "drugs, medicine; the leaf of the Dahurian angelica plant",
       "decomposition": "⿱艹约",
       "radical": "艹",
       "decompositionTree": {
@@ -19733,6 +21824,10 @@
     },
     {
       "hanzi": "菜",
+      "readings": [
+        "cài"
+      ],
+      "definition": "vegetables; order, dish; food",
       "decomposition": "⿱艹采",
       "radical": "艹",
       "decompositionTree": {
@@ -19771,6 +21866,10 @@
     },
     {
       "hanzi": "蓝",
+      "readings": [
+        "lán"
+      ],
+      "definition": "blue; indigo plant; surname",
       "decomposition": "⿱艹监",
       "radical": "艹",
       "decompositionTree": {
@@ -19804,6 +21903,10 @@
     },
     {
       "hanzi": "蕉",
+      "readings": [
+        "jiāo"
+      ],
+      "definition": "banana, plantain",
       "decomposition": "⿱艹焦",
       "radical": "艹",
       "decompositionTree": {
@@ -19838,6 +21941,10 @@
     },
     {
       "hanzi": "虽",
+      "readings": [
+        "suī"
+      ],
+      "definition": "although, even though",
       "decomposition": "⿱口虫",
       "radical": "虫",
       "decompositionTree": {
@@ -19873,6 +21980,10 @@
     },
     {
       "hanzi": "蛋",
+      "readings": [
+        "dàn"
+      ],
+      "definition": "egg",
       "decomposition": "⿱疋虫",
       "radical": "虫",
       "decompositionTree": {
@@ -19910,6 +22021,10 @@
     },
     {
       "hanzi": "行",
+      "readings": [
+        "xíng"
+      ],
+      "definition": "to go, to walk, to move; professional",
       "decomposition": "⿰彳亍",
       "radical": "行",
       "decompositionTree": {
@@ -19949,6 +22064,10 @@
     },
     {
       "hanzi": "街",
+      "readings": [
+        "jiē"
+      ],
+      "definition": "street, road, thoroughfare",
       "decomposition": "⿻行圭",
       "radical": "行",
       "decompositionTree": {
@@ -19987,6 +22106,10 @@
     },
     {
       "hanzi": "衣",
+      "readings": [
+        "yī"
+      ],
+      "definition": "cloth; clothes, apparel; dress, coat",
       "decomposition": "⿱亠？",
       "radical": "衣",
       "decompositionTree": {
@@ -20024,6 +22147,10 @@
     },
     {
       "hanzi": "表",
+      "readings": [
+        "biǎo"
+      ],
+      "definition": "to show, to express, to display; outside, appearance; a watch",
       "decomposition": "⿱毛衣",
       "radical": "衣",
       "decompositionTree": {
@@ -20063,6 +22190,10 @@
     },
     {
       "hanzi": "衫",
+      "readings": [
+        "shān"
+      ],
+      "definition": "shirt, robe, jacket, gown",
       "decomposition": "⿰衤彡",
       "radical": "衤",
       "decompositionTree": {
@@ -20095,6 +22226,10 @@
     },
     {
       "hanzi": "衬",
+      "readings": [
+        "chèn"
+      ],
+      "definition": "underwear, lining; in contrast",
       "decomposition": "⿰衤寸",
       "radical": "衤",
       "decompositionTree": {
@@ -20126,6 +22261,10 @@
     },
     {
       "hanzi": "被",
+      "readings": [
+        "bèi"
+      ],
+      "definition": "bedding; a passive particle meaning \"by\"",
       "decomposition": "⿰衤皮",
       "radical": "衤",
       "decompositionTree": {
@@ -20161,6 +22300,10 @@
     },
     {
       "hanzi": "裙",
+      "readings": [
+        "qún"
+      ],
+      "definition": "skirt, petticoat, apron",
       "decomposition": "⿰衤君",
       "radical": "衤",
       "decompositionTree": {
@@ -20199,6 +22342,10 @@
     },
     {
       "hanzi": "裤",
+      "readings": [
+        "kù"
+      ],
+      "definition": "pants, trousers",
       "decomposition": "⿰衤库",
       "radical": "衤",
       "decompositionTree": {
@@ -20240,6 +22387,10 @@
     },
     {
       "hanzi": "西",
+      "readings": [
+        "xī"
+      ],
+      "definition": "west, western, westward",
       "decomposition": "⿻兀囗",
       "radical": "西",
       "decompositionTree": {
@@ -20282,6 +22433,10 @@
     },
     {
       "hanzi": "要",
+      "readings": [
+        "yào"
+      ],
+      "definition": "essential, necessary; to ask for; to coerce; to demand",
       "decomposition": "⿱覀女",
       "radical": "覀",
       "decompositionTree": {
@@ -20320,6 +22475,10 @@
     },
     {
       "hanzi": "见",
+      "readings": [
+        "jiàn"
+      ],
+      "definition": "to see, to observe, to meet, to appear",
       "decomposition": "⿵冂儿",
       "radical": "见",
       "decompositionTree": {
@@ -20361,6 +22520,10 @@
     },
     {
       "hanzi": "视",
+      "readings": [
+        "shì"
+      ],
+      "definition": "to look at, to inspect, to observe, to regard",
       "decomposition": "⿰礻见",
       "radical": "见",
       "decompositionTree": {
@@ -20399,6 +22562,10 @@
     },
     {
       "hanzi": "觉",
+      "readings": [
+        "jué"
+      ],
+      "definition": "conscious; to nap, to sleep; to wake up",
       "decomposition": "⿳⺍冖见",
       "radical": "见",
       "decompositionTree": {
@@ -20441,6 +22608,10 @@
     },
     {
       "hanzi": "角",
+      "readings": [
+        "jiǎo"
+      ],
+      "definition": "angle, corner; horn, horn-shaped",
       "decomposition": "⿱⺈用",
       "radical": "角",
       "decompositionTree": {
@@ -20474,6 +22645,10 @@
     },
     {
       "hanzi": "解",
+      "readings": [
+        "jiě"
+      ],
+      "definition": "to explain; to loosen; to unfasten, to untie",
       "decomposition": "⿰角⿱刀牛",
       "radical": "角",
       "decompositionTree": {
@@ -20521,6 +22696,10 @@
     },
     {
       "hanzi": "言",
+      "readings": [
+        "yán"
+      ],
+      "definition": "words, speech; to speak, to say",
       "decomposition": "⿱亠⿱二口",
       "radical": "言",
       "decompositionTree": {
@@ -20566,6 +22745,10 @@
     },
     {
       "hanzi": "认",
+      "readings": [
+        "rèn"
+      ],
+      "definition": "to know, to recognize, to understand",
       "decomposition": "⿰讠人",
       "radical": "讠",
       "decompositionTree": {
@@ -20600,6 +22783,10 @@
     },
     {
       "hanzi": "让",
+      "readings": [
+        "ràng"
+      ],
+      "definition": "to allow, to permit, to yield",
       "decomposition": "⿰讠上",
       "radical": "讠",
       "decompositionTree": {
@@ -20634,6 +22821,10 @@
     },
     {
       "hanzi": "议",
+      "readings": [
+        "yì"
+      ],
+      "definition": "to consult, to talk over; to criticize, to discuss",
       "decomposition": "⿰讠义",
       "radical": "讠",
       "decompositionTree": {
@@ -20668,6 +22859,10 @@
     },
     {
       "hanzi": "记",
+      "readings": [
+        "jì"
+      ],
+      "definition": "mark, sign; to note, to record",
       "decomposition": "⿰讠己",
       "radical": "讠",
       "decompositionTree": {
@@ -20704,6 +22899,10 @@
     },
     {
       "hanzi": "讲",
+      "readings": [
+        "jiǎng"
+      ],
+      "definition": "talk, speech, lecture; to speak, to explain",
       "decomposition": "⿰讠井",
       "radical": "讠",
       "decompositionTree": {
@@ -20737,6 +22936,10 @@
     },
     {
       "hanzi": "识",
+      "readings": [
+        "shí"
+      ],
+      "definition": "knowledge; to understand, to recognize, to know",
       "decomposition": "⿰讠只",
       "radical": "讠",
       "decompositionTree": {
@@ -20773,6 +22976,10 @@
     },
     {
       "hanzi": "诉",
+      "readings": [
+        "sù"
+      ],
+      "definition": "to accuse, to sue; to inform; to narrate",
       "decomposition": "⿰讠斥",
       "radical": "讠",
       "decompositionTree": {
@@ -20811,6 +23018,10 @@
     },
     {
       "hanzi": "词",
+      "readings": [
+        "cí"
+      ],
+      "definition": "phrase, expression; words, speech",
       "decomposition": "⿰讠司",
       "radical": "讠",
       "decompositionTree": {
@@ -20847,6 +23058,10 @@
     },
     {
       "hanzi": "试",
+      "readings": [
+        "shì"
+      ],
+      "definition": "to try, to experiment; exam, test",
       "decomposition": "⿰讠式",
       "radical": "讠",
       "decompositionTree": {
@@ -20884,6 +23099,10 @@
     },
     {
       "hanzi": "话",
+      "readings": [
+        "huà"
+      ],
+      "definition": "talk, speech; language, dialect",
       "decomposition": "⿰讠舌",
       "radical": "讠",
       "decompositionTree": {
@@ -20926,6 +23145,10 @@
     },
     {
       "hanzi": "该",
+      "readings": [
+        "gāi"
+      ],
+      "definition": "should, ought to, must",
       "decomposition": "⿰讠亥",
       "radical": "讠",
       "decompositionTree": {
@@ -20961,6 +23184,10 @@
     },
     {
       "hanzi": "语",
+      "readings": [
+        "yǔ"
+      ],
+      "definition": "words, language; saying, expression",
       "decomposition": "⿰讠吾",
       "radical": "讠",
       "decompositionTree": {
@@ -21000,6 +23227,10 @@
     },
     {
       "hanzi": "说",
+      "readings": [
+        "shuō"
+      ],
+      "definition": "to speak, to say; to scold, to upbraid",
       "decomposition": "⿰讠兑",
       "radical": "讠",
       "decompositionTree": {
@@ -21043,6 +23274,10 @@
     },
     {
       "hanzi": "请",
+      "readings": [
+        "qǐng"
+      ],
+      "definition": "to ask, to request; to invite; please",
       "decomposition": "⿰讠青",
       "radical": "讠",
       "decompositionTree": {
@@ -21083,6 +23318,10 @@
     },
     {
       "hanzi": "读",
+      "readings": [
+        "dú"
+      ],
+      "definition": "to study, to learn; to read, to pronounce",
       "decomposition": "⿰讠卖",
       "radical": "讠",
       "decompositionTree": {
@@ -21124,6 +23363,10 @@
     },
     {
       "hanzi": "课",
+      "readings": [
+        "kè"
+      ],
+      "definition": "subject, lesson, course; classwork",
       "decomposition": "⿰讠果",
       "radical": "讠",
       "decompositionTree": {
@@ -21167,6 +23410,10 @@
     },
     {
       "hanzi": "谁",
+      "readings": [
+        "shuí"
+      ],
+      "definition": "who? whom? whose? anyone?",
       "decomposition": "⿰讠隹",
       "radical": "讠",
       "decompositionTree": {
@@ -21199,6 +23446,10 @@
     },
     {
       "hanzi": "调",
+      "readings": [
+        "diào"
+      ],
+      "definition": "tune, melody, key; to transfer, to exchange",
       "decomposition": "⿰讠周",
       "radical": "讠",
       "decompositionTree": {
@@ -21236,6 +23487,10 @@
     },
     {
       "hanzi": "谢",
+      "readings": [
+        "xiè"
+      ],
+      "definition": "to thank; to refuse politely",
       "decomposition": "⿰讠射",
       "radical": "讠",
       "decompositionTree": {
@@ -21269,6 +23524,10 @@
     },
     {
       "hanzi": "贵",
+      "readings": [
+        "guì"
+      ],
+      "definition": "expensive, costly; valuable, precious",
       "decomposition": "⿱⿱中一贝",
       "radical": "贝",
       "decompositionTree": {
@@ -21314,6 +23573,10 @@
     },
     {
       "hanzi": "赛",
+      "readings": [
+        "sài"
+      ],
+      "definition": "to compete, to contend; contest, race",
       "decomposition": "⿱宀⿱？贝",
       "radical": "贝",
       "decompositionTree": {
@@ -21360,6 +23623,10 @@
     },
     {
       "hanzi": "走",
+      "readings": [
+        "zǒu"
+      ],
+      "definition": "to walk, to run, to flee",
       "decomposition": "⿱土止",
       "radical": "走",
       "decompositionTree": {
@@ -21397,6 +23664,10 @@
     },
     {
       "hanzi": "起",
+      "readings": [
+        "qǐ"
+      ],
+      "definition": "to begin, to initiate; to rise, to stand up",
       "decomposition": "⿺走己",
       "radical": "走",
       "decompositionTree": {
@@ -21441,6 +23712,10 @@
     },
     {
       "hanzi": "超",
+      "readings": [
+        "chāo"
+      ],
+      "definition": "to jump over, to leap over; to overtake, to surpass",
       "decomposition": "⿺走召",
       "radical": "走",
       "decompositionTree": {
@@ -21483,6 +23758,10 @@
     },
     {
       "hanzi": "越",
+      "readings": [
+        "yuè"
+      ],
+      "definition": "to exceed, to surpass, to transcend",
       "decomposition": "⿺走戉",
       "radical": "走",
       "decompositionTree": {
@@ -21522,6 +23801,10 @@
     },
     {
       "hanzi": "趣",
+      "readings": [
+        "qù"
+      ],
+      "definition": "interest; interesting; what attracts one's attention",
       "decomposition": "⿺走取",
       "radical": "走",
       "decompositionTree": {
@@ -21564,6 +23847,10 @@
     },
     {
       "hanzi": "足",
+      "readings": [
+        "zú"
+      ],
+      "definition": "foot; to attain, to satisfy; enough",
       "decomposition": "⿱口？",
       "radical": "足",
       "decompositionTree": {
@@ -21598,6 +23885,10 @@
     },
     {
       "hanzi": "跑",
+      "readings": [
+        "pǎo"
+      ],
+      "definition": "to run, to flee, to escape",
       "decomposition": "⿰足包",
       "radical": "足",
       "decompositionTree": {
@@ -21638,6 +23929,10 @@
     },
     {
       "hanzi": "跟",
+      "readings": [
+        "gēn"
+      ],
+      "definition": "heel; to accompany, to follow; with",
       "decomposition": "⿰足艮",
       "radical": "足",
       "decompositionTree": {
@@ -21673,6 +23968,10 @@
     },
     {
       "hanzi": "路",
+      "readings": [
+        "lù"
+      ],
+      "definition": "road, path, street; journey",
       "decomposition": "⿰足各",
       "radical": "足",
       "decompositionTree": {
@@ -21716,6 +24015,10 @@
     },
     {
       "hanzi": "跳",
+      "readings": [
+        "tiào"
+      ],
+      "definition": "to hop, to skip; to jump, to leap; to vault; to dance",
       "decomposition": "⿰足兆",
       "radical": "足",
       "decompositionTree": {
@@ -21755,6 +24058,10 @@
     },
     {
       "hanzi": "踢",
+      "readings": [
+        "tī"
+      ],
+      "definition": "to kick",
       "decomposition": "⿰足易",
       "radical": "足",
       "decompositionTree": {
@@ -21794,6 +24101,10 @@
     },
     {
       "hanzi": "身",
+      "readings": [
+        "shēn"
+      ],
+      "definition": "body, torso; person; pregnancy",
       "decomposition": "？",
       "radical": "身",
       "decompositionTree": {
@@ -21815,6 +24126,10 @@
     },
     {
       "hanzi": "车",
+      "readings": [
+        "chē"
+      ],
+      "definition": "cart, vehicle; to move in a cart",
       "decomposition": "⿻七十",
       "radical": "车",
       "decompositionTree": {
@@ -21857,6 +24172,10 @@
     },
     {
       "hanzi": "轻",
+      "readings": [
+        "qīng"
+      ],
+      "definition": "light, gentle; simple, easy",
       "decomposition": "⿰车⿱又工",
       "radical": "车",
       "decompositionTree": {
@@ -21904,6 +24223,10 @@
     },
     {
       "hanzi": "较",
+      "readings": [
+        "jiào"
+      ],
+      "definition": "to compare; relatively; more",
       "decomposition": "⿰车交",
       "radical": "车",
       "decompositionTree": {
@@ -21946,6 +24269,10 @@
     },
     {
       "hanzi": "辆",
+      "readings": [
+        "liàng"
+      ],
+      "definition": "measure word for vehicles",
       "decomposition": "⿰车两",
       "radical": "车",
       "decompositionTree": {
@@ -21985,6 +24312,10 @@
     },
     {
       "hanzi": "边",
+      "readings": [
+        "biān"
+      ],
+      "definition": "border, edge, margin, side",
       "decomposition": "⿺辶力",
       "radical": "辶",
       "decompositionTree": {
@@ -22026,6 +24357,10 @@
     },
     {
       "hanzi": "过",
+      "readings": [
+        "guò"
+      ],
+      "definition": "pass; to go across, to pass through",
       "decomposition": "⿺辶寸",
       "radical": "辶",
       "decompositionTree": {
@@ -22065,6 +24400,10 @@
     },
     {
       "hanzi": "迎",
+      "readings": [
+        "yíng"
+      ],
+      "definition": "to welcome, to receive, to greet",
       "decomposition": "⿺辶卬",
       "radical": "辶",
       "decompositionTree": {
@@ -22101,6 +24440,10 @@
     },
     {
       "hanzi": "运",
+      "readings": [
+        "yùn"
+      ],
+      "definition": "to run; ship, transport; fortune, luck",
       "decomposition": "⿺辶云",
       "radical": "辶",
       "decompositionTree": {
@@ -22137,6 +24480,10 @@
     },
     {
       "hanzi": "近",
+      "readings": [
+        "jìn"
+      ],
+      "definition": "to approach; near, close; intimate",
       "decomposition": "⿺辶斤",
       "radical": "辶",
       "decompositionTree": {
@@ -22176,6 +24523,10 @@
     },
     {
       "hanzi": "还",
+      "readings": [
+        "hái"
+      ],
+      "definition": "also, besides; still, yet; to return",
       "decomposition": "⿺辶不",
       "radical": "辶",
       "decompositionTree": {
@@ -22210,6 +24561,10 @@
     },
     {
       "hanzi": "这",
+      "readings": [
+        "zhè"
+      ],
+      "definition": "this, these; such; here",
       "decomposition": "⿺辶文",
       "radical": "辶",
       "decompositionTree": {
@@ -22253,6 +24608,10 @@
     },
     {
       "hanzi": "进",
+      "readings": [
+        "jìn"
+      ],
+      "definition": "to advance, to make progress; to come in, to enter",
       "decomposition": "⿺辶井",
       "radical": "辶",
       "decompositionTree": {
@@ -22288,6 +24647,10 @@
     },
     {
       "hanzi": "远",
+      "readings": [
+        "yuǎn"
+      ],
+      "definition": "distant, remote, far; profound",
       "decomposition": "⿺辶元",
       "radical": "辶",
       "decompositionTree": {
@@ -22324,6 +24687,10 @@
     },
     {
       "hanzi": "迟",
+      "readings": [
+        "chí"
+      ],
+      "definition": "tardy, slow, late; to delay",
       "decomposition": "⿺辶尺",
       "radical": "辶",
       "decompositionTree": {
@@ -22358,6 +24725,10 @@
     },
     {
       "hanzi": "送",
+      "readings": [
+        "sòng"
+      ],
+      "definition": "to see off, to send off, to dispatch; to give",
       "decomposition": "⿺辶关",
       "radical": "辶",
       "decompositionTree": {
@@ -22395,6 +24766,10 @@
     },
     {
       "hanzi": "适",
+      "readings": [
+        "shì"
+      ],
+      "definition": "match, comfortable; just",
       "decomposition": "⿺辶舌",
       "radical": "辶",
       "decompositionTree": {
@@ -22433,6 +24808,10 @@
     },
     {
       "hanzi": "选",
+      "readings": [
+        "xuǎn"
+      ],
+      "definition": "to select, to elect, to choose; election",
       "decomposition": "⿺辶先",
       "radical": "辶",
       "decompositionTree": {
@@ -22472,6 +24851,10 @@
     },
     {
       "hanzi": "遇",
+      "readings": [
+        "yù"
+      ],
+      "definition": "to meet, to encounter, to come across",
       "decomposition": "⿺辶禺",
       "radical": "辶",
       "decompositionTree": {
@@ -22511,6 +24894,10 @@
     },
     {
       "hanzi": "遍",
+      "readings": [
+        "biàn"
+      ],
+      "definition": "everywhere, all over, throughout",
       "decomposition": "⿺辶扁",
       "radical": "辶",
       "decompositionTree": {
@@ -22546,6 +24933,10 @@
     },
     {
       "hanzi": "道",
+      "readings": [
+        "dào"
+      ],
+      "definition": "method, way; path, road",
       "decomposition": "⿺辶首",
       "radical": "辶",
       "decompositionTree": {
@@ -22586,6 +24977,10 @@
     },
     {
       "hanzi": "那",
+      "readings": [
+        "nà"
+      ],
+      "definition": "that, that one, those",
       "decomposition": "⿰⿹？？阝",
       "radical": "阝",
       "decompositionTree": {
@@ -22633,6 +25028,10 @@
     },
     {
       "hanzi": "邮",
+      "readings": [
+        "yóu"
+      ],
+      "definition": "mail; post office",
       "decomposition": "⿰由阝",
       "radical": "阝",
       "decompositionTree": {
@@ -22671,6 +25070,10 @@
     },
     {
       "hanzi": "邻",
+      "readings": [
+        "lín"
+      ],
+      "definition": "neighbor; neighborhood",
       "decomposition": "⿰令阝",
       "radical": "阝",
       "decompositionTree": {
@@ -22704,6 +25107,10 @@
     },
     {
       "hanzi": "都",
+      "readings": [
+        "dōu"
+      ],
+      "definition": "all, each, entirely, whole; metropolis; capital",
       "decomposition": "⿰者阝",
       "radical": "阝",
       "decompositionTree": {
@@ -22744,6 +25151,10 @@
     },
     {
       "hanzi": "酒",
+      "readings": [
+        "jiǔ"
+      ],
+      "definition": "wine, spirits, liquor, alcohol",
       "decomposition": "⿰氵酉",
       "radical": "酉",
       "decompositionTree": {
@@ -22786,6 +25197,10 @@
     },
     {
       "hanzi": "里",
+      "readings": [
+        "lǐ"
+      ],
+      "definition": "unit of distance equal to 0.5km; village; lane",
       "decomposition": "⿱田土",
       "radical": "里",
       "decompositionTree": {
@@ -22826,6 +25241,10 @@
     },
     {
       "hanzi": "重",
+      "readings": [
+        "zhòng"
+      ],
+      "definition": "heavy, weighty; to double, to repeat",
       "decomposition": "⿻千里",
       "radical": "里",
       "decompositionTree": {
@@ -22864,6 +25283,10 @@
     },
     {
       "hanzi": "钟",
+      "readings": [
+        "zhōng"
+      ],
+      "definition": "clock; bell",
       "decomposition": "⿰钅中",
       "radical": "钅",
       "decompositionTree": {
@@ -22899,6 +25322,10 @@
     },
     {
       "hanzi": "钱",
+      "readings": [
+        "qián"
+      ],
+      "definition": "money, currency, coins",
       "decomposition": "⿰钅戋",
       "radical": "钅",
       "decompositionTree": {
@@ -22932,6 +25359,10 @@
     },
     {
       "hanzi": "铁",
+      "readings": [
+        "tiě"
+      ],
+      "definition": "iron; strong, solid, firm",
       "decomposition": "⿰钅失",
       "radical": "钅",
       "decompositionTree": {
@@ -22969,6 +25400,10 @@
     },
     {
       "hanzi": "铅",
+      "readings": [
+        "qiān"
+      ],
+      "definition": "lead",
       "decomposition": "⿰钅⿱几口",
       "radical": "钅",
       "decompositionTree": {
@@ -23015,6 +25450,10 @@
     },
     {
       "hanzi": "银",
+      "readings": [
+        "yín"
+      ],
+      "definition": "silver; cash, money, wealth",
       "decomposition": "⿰钅艮",
       "radical": "钅",
       "decompositionTree": {
@@ -23047,6 +25486,10 @@
     },
     {
       "hanzi": "错",
+      "readings": [
+        "cuò"
+      ],
+      "definition": "error, mistake; incorrect, wrong",
       "decomposition": "⿰钅昔",
       "radical": "钅",
       "decompositionTree": {
@@ -23086,6 +25529,10 @@
     },
     {
       "hanzi": "锻",
+      "readings": [
+        "duàn"
+      ],
+      "definition": "to temper, to refine; to forge metal",
       "decomposition": "⿰钅段",
       "radical": "钅",
       "decompositionTree": {
@@ -23122,6 +25569,10 @@
     },
     {
       "hanzi": "长",
+      "readings": [
+        "zhǎng"
+      ],
+      "definition": "long, lasting; to excel in",
       "decomposition": "⿻？一",
       "radical": "长",
       "decompositionTree": {
@@ -23155,6 +25606,10 @@
     },
     {
       "hanzi": "门",
+      "readings": [
+        "mén"
+      ],
+      "definition": "gate, door, entrance, opening",
       "decomposition": "⿰⿱丶丨？",
       "radical": "门",
       "decompositionTree": {
@@ -23199,6 +25654,10 @@
     },
     {
       "hanzi": "问",
+      "readings": [
+        "wèn"
+      ],
+      "definition": "to ask about, to inquire after",
       "decomposition": "⿵门口",
       "radical": "门",
       "decompositionTree": {
@@ -23236,6 +25695,10 @@
     },
     {
       "hanzi": "间",
+      "readings": [
+        "jiān"
+      ],
+      "definition": "between, among; midpoint; space, place, locality",
       "decomposition": "⿵门日",
       "radical": "门",
       "decompositionTree": {
@@ -23277,6 +25740,10 @@
     },
     {
       "hanzi": "闻",
+      "readings": [
+        "wén"
+      ],
+      "definition": "news; to hear, to smell; to make known",
       "decomposition": "⿵门耳",
       "radical": "门",
       "decompositionTree": {
@@ -23312,6 +25779,10 @@
     },
     {
       "hanzi": "阳",
+      "readings": [
+        "yáng"
+      ],
+      "definition": "the male principle; bright, sunny; clear, lit, open",
       "decomposition": "⿰阝日",
       "radical": "阝",
       "decompositionTree": {
@@ -23347,6 +25818,10 @@
     },
     {
       "hanzi": "阴",
+      "readings": [
+        "yīn"
+      ],
+      "definition": "the female principle; dark, shaded; hidden, implicit, secret",
       "decomposition": "⿰阝月",
       "radical": "阝",
       "decompositionTree": {
@@ -23382,6 +25857,10 @@
     },
     {
       "hanzi": "阿",
+      "readings": [
+        "ā"
+      ],
+      "definition": "an initial particle, a prefix used for names; used in transliterations",
       "decomposition": "⿰阝可",
       "radical": "阝",
       "decompositionTree": {
@@ -23418,6 +25897,10 @@
     },
     {
       "hanzi": "附",
+      "readings": [
+        "fù"
+      ],
+      "definition": "nearby; to adhere to, to attach; to rely on",
       "decomposition": "⿰阝付",
       "radical": "阝",
       "decompositionTree": {
@@ -23452,6 +25935,10 @@
     },
     {
       "hanzi": "院",
+      "readings": [
+        "yuàn"
+      ],
+      "definition": "court, yard, courtyard; school",
       "decomposition": "⿰阝完",
       "radical": "阝",
       "decompositionTree": {
@@ -23496,6 +25983,10 @@
     },
     {
       "hanzi": "除",
+      "readings": [
+        "chú"
+      ],
+      "definition": "to eliminate, to remove, to wipe out",
       "decomposition": "⿰阝余",
       "radical": "阝",
       "decompositionTree": {
@@ -23529,6 +26020,10 @@
     },
     {
       "hanzi": "难",
+      "readings": [
+        "nán"
+      ],
+      "definition": "hard, difficult, arduous; unable",
       "decomposition": "⿰又隹",
       "radical": "又",
       "decompositionTree": {
@@ -23565,6 +26060,10 @@
     },
     {
       "hanzi": "雨",
+      "readings": [
+        "yǔ"
+      ],
+      "definition": "rain",
       "decomposition": "⿻帀？",
       "radical": "雨",
       "decompositionTree": {
@@ -23602,6 +26101,10 @@
     },
     {
       "hanzi": "雪",
+      "readings": [
+        "xuě"
+      ],
+      "definition": "snow; wipe away shame, avenge",
       "decomposition": "⿱雨彐",
       "radical": "雨",
       "decompositionTree": {
@@ -23639,6 +26142,10 @@
     },
     {
       "hanzi": "零",
+      "readings": [
+        "líng"
+      ],
+      "definition": "zero; fragment, fraction",
       "decomposition": "⿱雨令",
       "radical": "雨",
       "decompositionTree": {
@@ -23676,6 +26183,10 @@
     },
     {
       "hanzi": "需",
+      "readings": [
+        "xū"
+      ],
+      "definition": "to need, to require; must",
       "decomposition": "⿱雨而",
       "radical": "雨",
       "decompositionTree": {
@@ -23712,6 +26223,10 @@
     },
     {
       "hanzi": "静",
+      "readings": [
+        "jìng"
+      ],
+      "definition": "still, quiet, motionless, gentle",
       "decomposition": "⿰青争",
       "radical": "青",
       "decompositionTree": {
@@ -23752,6 +26267,10 @@
     },
     {
       "hanzi": "非",
+      "readings": [
+        "fēi"
+      ],
+      "definition": "not, negative, non-; to oppose",
       "decomposition": "⿰？？",
       "radical": "非",
       "decompositionTree": {
@@ -23779,6 +26298,10 @@
     },
     {
       "hanzi": "面",
+      "readings": [
+        "miàn"
+      ],
+      "definition": "face; surface, side; plane, dimension",
       "decomposition": "⿱？？",
       "radical": "面",
       "decompositionTree": {
@@ -23817,6 +26340,10 @@
     },
     {
       "hanzi": "鞋",
+      "readings": [
+        "xié"
+      ],
+      "definition": "shoes, footwear in general",
       "decomposition": "⿰革圭",
       "radical": "革",
       "decompositionTree": {
@@ -23854,6 +26381,10 @@
     },
     {
       "hanzi": "音",
+      "readings": [
+        "yīn"
+      ],
+      "definition": "sound, tone, pitch, pronunciation",
       "decomposition": "⿱立日",
       "radical": "音",
       "decompositionTree": {
@@ -23893,6 +26424,10 @@
     },
     {
       "hanzi": "页",
+      "readings": [
+        "yè"
+      ],
+      "definition": "page, sheet, leaf",
       "decomposition": "⿱？贝",
       "radical": "页",
       "decompositionTree": {
@@ -23927,6 +26462,10 @@
     },
     {
       "hanzi": "须",
+      "readings": [
+        "xū"
+      ],
+      "definition": "beard; must; necessary",
       "decomposition": "⿰彡页",
       "radical": "彡",
       "decompositionTree": {
@@ -23963,6 +26502,10 @@
     },
     {
       "hanzi": "顾",
+      "readings": [
+        "gù"
+      ],
+      "definition": "to look back; to look at; to look after",
       "decomposition": "⿰厄页",
       "radical": "页",
       "decompositionTree": {
@@ -24000,6 +26543,10 @@
     },
     {
       "hanzi": "题",
+      "readings": [
+        "tí"
+      ],
+      "definition": "forehead; headline, title; theme",
       "decomposition": "⿺是页",
       "radical": "页",
       "decompositionTree": {
@@ -24041,6 +26588,10 @@
     },
     {
       "hanzi": "颜",
+      "readings": [
+        "yán"
+      ],
+      "definition": "face, facial appearance",
       "decomposition": "⿰彦页",
       "radical": "页",
       "decompositionTree": {
@@ -24084,6 +26635,10 @@
     },
     {
       "hanzi": "风",
+      "readings": [
+        "fēng"
+      ],
+      "definition": "wind; air; customs, manners; news",
       "decomposition": "⿵几乂",
       "radical": "风",
       "decompositionTree": {
@@ -24117,6 +26672,10 @@
     },
     {
       "hanzi": "飞",
+      "readings": [
+        "fēi"
+      ],
+      "definition": "to fly, to dart; high",
       "decomposition": "⿻？？",
       "radical": "飞",
       "decompositionTree": {
@@ -24146,6 +26705,10 @@
     },
     {
       "hanzi": "饭",
+      "readings": [
+        "fàn"
+      ],
+      "definition": "meal, food; cooked rice",
       "decomposition": "⿰饣反",
       "radical": "饣",
       "decompositionTree": {
@@ -24187,6 +26750,10 @@
     },
     {
       "hanzi": "饮",
+      "readings": [
+        "yǐn"
+      ],
+      "definition": "to swallow, to drink; a kind of drink",
       "decomposition": "⿰饣欠",
       "radical": "饣",
       "decompositionTree": {
@@ -24221,6 +26788,10 @@
     },
     {
       "hanzi": "饱",
+      "readings": [
+        "bǎo"
+      ],
+      "definition": "satisfied; to eat one's fill",
       "decomposition": "⿰饣包",
       "radical": "饣",
       "decompositionTree": {
@@ -24256,6 +26827,10 @@
     },
     {
       "hanzi": "饺",
+      "readings": [
+        "jiǎo"
+      ],
+      "definition": "stuffed dumplings",
       "decomposition": "⿰饣交",
       "radical": "饣",
       "decompositionTree": {
@@ -24295,6 +26870,10 @@
     },
     {
       "hanzi": "饿",
+      "readings": [
+        "è"
+      ],
+      "definition": "hungry; greedy",
       "decomposition": "⿰饣我",
       "radical": "饣",
       "decompositionTree": {
@@ -24332,6 +26911,10 @@
     },
     {
       "hanzi": "馆",
+      "readings": [
+        "guǎn"
+      ],
+      "definition": "public building; shop, house, establishment",
       "decomposition": "⿰饣官",
       "radical": "饣",
       "decompositionTree": {
@@ -24372,6 +26955,10 @@
     },
     {
       "hanzi": "香",
+      "readings": [
+        "xiāng"
+      ],
+      "definition": "incense; fragrant, aromatic",
       "decomposition": "⿱禾日",
       "radical": "香",
       "decompositionTree": {
@@ -24411,6 +26998,10 @@
     },
     {
       "hanzi": "马",
+      "readings": [
+        "mǎ"
+      ],
+      "definition": "horse; surname",
       "decomposition": "⿹？一",
       "radical": "马",
       "decompositionTree": {
@@ -24444,6 +27035,10 @@
     },
     {
       "hanzi": "骑",
+      "readings": [
+        "qí"
+      ],
+      "definition": "to ride, to mount; cavalry",
       "decomposition": "⿰马奇",
       "radical": "马",
       "decompositionTree": {
@@ -24483,6 +27078,10 @@
     },
     {
       "hanzi": "高",
+      "readings": [
+        "gāo"
+      ],
+      "definition": "tall, lofty; high, elevated",
       "decomposition": "⿳亠口冋",
       "radical": "高",
       "decompositionTree": {
@@ -24528,6 +27127,10 @@
     },
     {
       "hanzi": "鱼",
+      "readings": [
+        "yú"
+      ],
+      "definition": "fish",
       "decomposition": "⿱⿱⺈田一",
       "radical": "鱼",
       "decompositionTree": {
@@ -24573,6 +27176,10 @@
     },
     {
       "hanzi": "鲜",
+      "readings": [
+        "xiān"
+      ],
+      "definition": "fresh; delicious; attractive",
       "decomposition": "⿰鱼羊",
       "radical": "鱼",
       "decompositionTree": {
@@ -24613,6 +27220,10 @@
     },
     {
       "hanzi": "鸟",
+      "readings": [
+        "niǎo"
+      ],
+      "definition": "bird",
       "decomposition": "？",
       "radical": "鸟",
       "decompositionTree": {
@@ -24632,6 +27243,10 @@
     },
     {
       "hanzi": "鸡",
+      "readings": [
+        "jī"
+      ],
+      "definition": "chicken",
       "decomposition": "⿰又鸟",
       "radical": "鸟",
       "decompositionTree": {
@@ -24664,6 +27279,10 @@
     },
     {
       "hanzi": "黄",
+      "readings": [
+        "huáng"
+      ],
+      "definition": "yellow; surname",
       "decomposition": "⿱？⿱由八",
       "radical": "黄",
       "decompositionTree": {
@@ -24711,6 +27330,10 @@
     },
     {
       "hanzi": "黑",
+      "readings": [
+        "hēi"
+      ],
+      "definition": "black; dark; evil, sinister",
       "decomposition": "⿱？灬",
       "radical": "黑",
       "decompositionTree": {
