@@ -1,0 +1,12 @@
+'use client';
+import {useState} from 'react';
+import Guided from './guided';
+import './atlas-guided-writing.css';
+import {useI18n} from './i18n';
+export default function AtlasGuidedWriting({character,penOnly,onSave}:{character:string;penOnly:boolean;onSave:()=>Promise<void>}){
+ const{locale}=useI18n();const c=(en:string,fr:string,ru:string)=>({en,fr,ru})[locale];
+ const[mode,setMode]=useState<'watch'|'trace'>('watch'),[replay,setReplay]=useState(0),[complete,setComplete]=useState(false),[saved,setSaved]=useState(false),[saving,setSaving]=useState(false),[error,setError]=useState(false);
+ function start(next:'watch'|'trace'){setMode(next);setReplay(n=>n+1);setComplete(false);setSaved(false);setError(false);}
+ async function save(){if(saving||saved||!complete)return;setSaving(true);setError(false);try{await onSave();setSaved(true);}catch{setError(true);}finally{setSaving(false);}}
+ return <section className="atlas-guided-writing"><h2>{character}</h2><div className="atlas-writing-modes"><button disabled={saving} aria-pressed={mode==='watch'} onClick={()=>start('watch')}>{c('Watch animation','Voir l’animation','Смотреть анимацию')}</button><button disabled={saving} aria-pressed={mode==='trace'} onClick={()=>start('trace')}>{c('Practice strokes','Pratiquer les traits','Практика черт')}</button></div><p>{mode==='watch'?c('Watch the strokes, then try writing.','Observez les traits, puis essayez d’écrire.','Посмотрите порядок черт, затем попробуйте написать.'):c('Follow the outline. The next stroke is demonstrated when you need help.','Suivez le contour. Le trait suivant est montré si vous avez besoin d’aide.','Следуйте контуру. Следующая черта показывается, когда нужна помощь.')}</p><div style={{position:'relative',aspectRatio:'1',width:'min(100%, 320px, 42dvh)',margin:'12px auto',border:'1px solid #dbe1d7',borderRadius:16,overflow:'hidden'}}><Guided character={character} mode={mode} replay={replay} penOnly={penOnly} onMistake={()=>{}} onComplete={()=>{if(mode==='trace')setComplete(true);}}/></div><button disabled={!complete||saved||saving} onClick={()=>void save()}>{saving?c('Saving…','Enregistrement…','Сохранение…'):saved?c('Practice saved','Pratique enregistrée','Практика сохранена'):c('Save supported practice','Enregistrer la pratique guidée','Сохранить практику с подсказками')}</button>{error&&<p role="alert">{c('Practice could not be saved. Please try again.','La pratique n’a pas pu être enregistrée. Réessayez.','Не удалось сохранить практику. Попробуйте ещё раз.')}</p>}</section>;
+}

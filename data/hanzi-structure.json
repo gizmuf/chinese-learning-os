@@ -1,11 +1,164 @@
 {
   "schemaVersion": 1,
   "title": "HSK 1-3 modern structural component index",
-  "source": "makemeahanzi",
+  "source": "makemeahanzi-with-babelstone-ids-review",
   "sourceStatus": "dataset-derived-modern-structure",
   "epistemicNotice": "Dataset-derived modern structural decomposition only. This is not historical etymology, a curated teaching map, or a certified linguistic classification.",
   "sourceUrl": "https://github.com/skishore/makemeahanzi/blob/master/dictionary.txt",
   "sourceSha256": "744bb05d5b0742e9ee35c37791f94d56a173349b3367569e7ca11e510364d203",
+  "additionalStructureSource": {
+    "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+    "sourceSha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+    "sourceDate": "2025-06-27",
+    "fontActualVersion": "1.472",
+    "fontSourceSha256": "92e7155bd28f5570449f4dc71e9bb6fa919f67ef0120d4f83b58c61bed3ed4dc"
+  },
+  "namedComponents": {
+    "": {
+      "glyph": "",
+      "description": "left of 段",
+      "sourceHeaderLine": 82,
+      "id": "babelstone-part-6",
+      "number": 6,
+      "label": {
+        "en": "Left part of 段",
+        "fr": "Partie gauche de 段",
+        "ru": "Левая часть 段"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "bottom-right of 旅",
+      "sourceHeaderLine": 91,
+      "id": "babelstone-part-15",
+      "number": 15,
+      "label": {
+        "en": "Lower-right part of 旅",
+        "fr": "Partie inférieure droite de 旅",
+        "ru": "Нижняя правая часть 旅"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "right of 水",
+      "sourceHeaderLine": 100,
+      "id": "babelstone-part-24",
+      "number": 24,
+      "label": {
+        "en": "Right arm of 水",
+        "fr": "Branche droite de 水",
+        "ru": "Правая ветвь 水"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "bottom (legs) of 喪",
+      "sourceHeaderLine": 101,
+      "id": "babelstone-part-25",
+      "number": 25,
+      "label": {
+        "en": "Lower part of 喪 / 展",
+        "fr": "Partie inférieure de 喪 / 展",
+        "ru": "Нижняя часть 喪 / 展"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "left of 北 [G source glyph]",
+      "sourceHeaderLine": 121,
+      "id": "babelstone-part-45",
+      "number": 45,
+      "label": {
+        "en": "Left part of 北",
+        "fr": "Partie gauche de 北",
+        "ru": "Левая часть 北"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "bottom of 年 [J-form of 㐄]",
+      "sourceHeaderLine": 124,
+      "id": "babelstone-part-48",
+      "number": 48,
+      "label": {
+        "en": "Lower part of 年",
+        "fr": "Partie inférieure de 年",
+        "ru": "Нижняя часть 年"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "outside of 马",
+      "sourceHeaderLine": 128,
+      "id": "babelstone-part-52",
+      "number": 52,
+      "label": {
+        "en": "Outer part of 马",
+        "fr": "Partie extérieure de 马",
+        "ru": "Внешняя часть 马"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "outside of 鸟岛",
+      "sourceHeaderLine": 129,
+      "id": "babelstone-part-53",
+      "number": 53,
+      "label": {
+        "en": "Outer part of 鸟",
+        "fr": "Partie extérieure de 鸟",
+        "ru": "Внешняя часть 鸟"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "top of 黑",
+      "sourceHeaderLine": 144,
+      "id": "babelstone-part-68",
+      "number": 68,
+      "label": {
+        "en": "Upper part of 黑",
+        "fr": "Partie supérieure de 黑",
+        "ru": "Верхняя часть 黑"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    }
+  },
   "wordIdSource": "canonical app/content.ts item IDs filtered to HSK levels 1-3",
   "wordIdSourceSha256": "8b8d4ec6145d73fdedf074ca360898f49266c70da0437cda82043a8db5028ed5",
   "license": "LGPL-3.0-or-later",
@@ -30,14 +183,17 @@
     "characterCount": 655,
     "dictionaryEntryCount": 9574,
     "charactersMissingFromDictionary": 0,
-    "decompositionCompleteCount": 574,
-    "decompositionIncompleteCount": 81,
+    "decompositionCompleteCount": 655,
+    "decompositionIncompleteCount": 0,
+    "reviewedReplacements": 81,
+    "sourceTerminalCount": 9,
+    "namedTerminalComponentCount": 9,
     "missingDecompositionCount": 0,
-    "unknownMarkerCount": 86,
+    "unknownMarkerCount": 0,
     "invalidIDSCount": 0,
     "cycleEdgesSkipped": 0,
-    "reverseIndexComponentCount": 431,
-    "reverseIndexRelationshipCount": 4204
+    "reverseIndexComponentCount": 485,
+    "reverseIndexRelationshipCount": 4594
   },
   "componentSemantics": {
     "leafComponents": "Parsed IDS terminal glyphs in source order; unknown markers are listed separately.",
@@ -51,18 +207,16 @@
         "yī"
       ],
       "definition": "one; a, an; alone",
-      "decomposition": "？",
+      "decomposition": "一",
       "radical": "一",
       "decompositionTree": {
-        "unknown": "？"
+        "component": "一"
       },
       "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-254",
@@ -79,7 +233,17 @@
         "hsk3-932",
         "hsk3-933",
         "hsk3-934"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 324,
+        "ids": "^一$(GHTJKPV)",
+        "region": "G",
+        "terminal": true,
+        "namedTerminalComponents": [],
+        "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility."
+      }
     },
     {
       "hanzi": "七",
@@ -122,34 +286,44 @@
         "wàn"
       ],
       "definition": "ten thousand; innumerable",
-      "decomposition": "⿱一？",
+      "decomposition": "⿸丆𠃌",
       "radical": "一",
       "decompositionTree": {
-        "operator": "⿱",
+        "operator": "⿸",
         "operands": [
           {
-            "component": "一"
+            "component": "丆"
           },
           {
-            "unknown": "？"
+            "component": "𠃌"
           }
         ]
       },
       "leafComponents": [
-        "一"
+        "丆",
+        "𠃌"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "一"
+        "丆",
+        "𠃌"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-449"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 331,
+        "ids": "^⿸丆𠃌$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "丈",
@@ -324,30 +498,40 @@
         "bù"
       ],
       "definition": "no, not, un-; negative prefix",
-      "decomposition": "⿱一？",
+      "decomposition": "⿸丆⿰丨丶",
       "radical": "一",
       "decompositionTree": {
-        "operator": "⿱",
+        "operator": "⿸",
         "operands": [
           {
-            "component": "一"
+            "component": "丆"
           },
           {
-            "unknown": "？"
+            "operator": "⿰",
+            "operands": [
+              {
+                "component": "丨"
+              },
+              {
+                "component": "丶"
+              }
+            ]
           }
         ]
       },
       "leafComponents": [
-        "一"
+        "丆",
+        "丨",
+        "丶"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "一"
+        "丆",
+        "丨",
+        "丶"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "no",
@@ -363,7 +547,17 @@
         "hsk3-542",
         "hsk3-543",
         "hsk3-552"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 337,
+        "ids": "^⿸丆⿰丨丶$(GHTJKP)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "且",
@@ -409,7 +603,7 @@
         "shì"
       ],
       "definition": "generation, era, age; world",
-      "decomposition": "⿻廿？",
+      "decomposition": "⿻廿𠃊",
       "radical": "一",
       "decompositionTree": {
         "operator": "⿻",
@@ -418,27 +612,37 @@
             "component": "廿"
           },
           {
-            "unknown": "？"
+            "component": "𠃊"
           }
         ]
       },
       "leafComponents": [
-        "廿"
+        "廿",
+        "𠃊"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
         "廿",
         "廾",
-        "一"
+        "一",
+        "𠃊"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-835"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 346,
+        "ids": "^⿻廿𠃊$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "业",
@@ -446,13 +650,29 @@
         "yè"
       ],
       "definition": "business, profession; to study, to work",
-      "decomposition": "⿱？一",
+      "decomposition": "⿱⿻⿰丨丨丷一",
       "radical": "一",
       "decompositionTree": {
         "operator": "⿱",
         "operands": [
           {
-            "unknown": "？"
+            "operator": "⿻",
+            "operands": [
+              {
+                "operator": "⿰",
+                "operands": [
+                  {
+                    "component": "丨"
+                  },
+                  {
+                    "component": "丨"
+                  }
+                ]
+              },
+              {
+                "component": "丷"
+              }
+            ]
           },
           {
             "component": "一"
@@ -460,20 +680,34 @@
         ]
       },
       "leafComponents": [
+        "丨",
+        "丨",
+        "丷",
         "一"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "丨",
+        "丷",
+        "丶",
         "一"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-1000"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 350,
+        "ids": "^⿱⿻⿰丨丨丷一$(GH)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "东",
@@ -505,7 +739,9 @@
         "乚",
         "小",
         "亅",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -724,6 +960,7 @@
       "recursiveComponents": [
         "丶",
         "力",
+        "𠃌",
         "丿"
       ],
       "decompositionComplete": true,
@@ -783,37 +1020,32 @@
         "jiǔ"
       ],
       "definition": "long ago; a long time",
-      "decomposition": "⿻勹？",
+      "decomposition": "久",
       "radical": "丿",
       "decompositionTree": {
-        "operator": "⿻",
-        "operands": [
-          {
-            "component": "勹"
-          },
-          {
-            "unknown": "？"
-          }
-        ]
+        "component": "久"
       },
-      "leafComponents": [
-        "勹"
-      ],
-      "unresolvedComponents": [
-        "？"
-      ],
-      "recursiveComponents": [
-        "勹",
-        "丿"
-      ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "leafComponents": [],
+      "unresolvedComponents": [],
+      "recursiveComponents": [],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-542",
         "hsk3-664",
         "hsk3-719"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 393,
+        "ids": "^久$(GHTJKPV)",
+        "region": "G",
+        "terminal": true,
+        "namedTerminalComponents": [],
+        "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility."
+      }
     },
     {
       "hanzi": "么",
@@ -862,45 +1094,45 @@
         "hū"
       ],
       "definition": "interrogative or exclamatory final particle",
-      "decomposition": "⿻丿⿻？丷",
+      "decomposition": "⿻𠂌丷",
       "radical": "丿",
       "decompositionTree": {
         "operator": "⿻",
         "operands": [
           {
-            "component": "丿"
+            "component": "𠂌"
           },
           {
-            "operator": "⿻",
-            "operands": [
-              {
-                "unknown": "？"
-              },
-              {
-                "component": "丷"
-              }
-            ]
+            "component": "丷"
           }
         ]
       },
       "leafComponents": [
-        "丿",
+        "𠂌",
         "丷"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "丿",
+        "𠂌",
         "丷",
         "丶"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-688"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 402,
+        "ids": "^⿻𠂌丷$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "乐",
@@ -908,7 +1140,7 @@
         "lè"
       ],
       "definition": "cheerful, happy, laughing; music",
-      "decomposition": "⿻⿱丿？小",
+      "decomposition": "⿻⿱㇒𠃋小",
       "radical": "丿",
       "decompositionTree": {
         "operator": "⿻",
@@ -917,10 +1149,10 @@
             "operator": "⿱",
             "operands": [
               {
-                "component": "丿"
+                "component": "㇒"
               },
               {
-                "unknown": "？"
+                "component": "𠃋"
               }
             ]
           },
@@ -930,25 +1162,37 @@
         ]
       },
       "leafComponents": [
-        "丿",
+        "㇒",
+        "𠃋",
         "小"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "丿",
+        "㇒",
+        "𠃋",
         "小",
         "亅",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-385",
         "hsk3-935"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 404,
+        "ids": "^⿻⿱㇒𠃋小$(G)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "九",
@@ -991,87 +1235,13 @@
         "yě"
       ],
       "definition": "also, too",
-      "decomposition": "⿻？乚",
+      "decomposition": "⿻乜丨",
       "radical": "乚",
       "decompositionTree": {
         "operator": "⿻",
         "operands": [
           {
-            "unknown": "？"
-          },
-          {
-            "component": "乚"
-          }
-        ]
-      },
-      "leafComponents": [
-        "乚"
-      ],
-      "unresolvedComponents": [
-        "？"
-      ],
-      "recursiveComponents": [
-        "乚"
-      ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
-      "sourceStatus": "dataset-derived-modern-structure",
-      "wordIds": [
-        "hsk1-253"
-      ]
-    },
-    {
-      "hanzi": "习",
-      "readings": [
-        "xí"
-      ],
-      "definition": "to study, to practice; habit",
-      "decomposition": "⿹？冫",
-      "radical": "冫",
-      "decompositionTree": {
-        "operator": "⿹",
-        "operands": [
-          {
-            "unknown": "？"
-          },
-          {
-            "component": "冫"
-          }
-        ]
-      },
-      "leafComponents": [
-        "冫"
-      ],
-      "unresolvedComponents": [
-        "？"
-      ],
-      "recursiveComponents": [
-        "冫",
-        "丶"
-      ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
-      "sourceStatus": "dataset-derived-modern-structure",
-      "wordIds": [
-        "hsk1-249",
-        "hsk3-634",
-        "hsk3-752",
-        "hsk3-885"
-      ]
-    },
-    {
-      "hanzi": "书",
-      "readings": [
-        "shū"
-      ],
-      "definition": "book, letter, document; writing",
-      "decomposition": "⿻？丨",
-      "radical": "丨",
-      "decompositionTree": {
-        "operator": "⿻",
-        "operands": [
-          {
-            "unknown": "？"
+            "component": "乜"
           },
           {
             "component": "丨"
@@ -1079,16 +1249,131 @@
         ]
       },
       "leafComponents": [
+        "乜",
         "丨"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "乜",
+        "乚",
         "丨"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
+      "sourceStatus": "dataset-derived-modern-structure",
+      "wordIds": [
+        "hsk1-253"
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 419,
+        "ids": "^⿻乜丨$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
+    },
+    {
+      "hanzi": "习",
+      "readings": [
+        "xí"
+      ],
+      "definition": "to study, to practice; habit",
+      "decomposition": "⿹𠃌冫",
+      "radical": "冫",
+      "decompositionTree": {
+        "operator": "⿹",
+        "operands": [
+          {
+            "component": "𠃌"
+          },
+          {
+            "component": "冫"
+          }
+        ]
+      },
+      "leafComponents": [
+        "𠃌",
+        "冫"
+      ],
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "𠃌",
+        "冫",
+        "丶"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
+      "sourceStatus": "dataset-derived-modern-structure",
+      "wordIds": [
+        "hsk1-249",
+        "hsk3-634",
+        "hsk3-752",
+        "hsk3-885"
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 420,
+        "ids": "^⿹𠃌冫$(G)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
+    },
+    {
+      "hanzi": "书",
+      "readings": [
+        "shū"
+      ],
+      "definition": "book, letter, document; writing",
+      "decomposition": "⿺⿻⿱𠃍𠃌丨丶",
+      "radical": "丨",
+      "decompositionTree": {
+        "operator": "⿺",
+        "operands": [
+          {
+            "operator": "⿻",
+            "operands": [
+              {
+                "operator": "⿱",
+                "operands": [
+                  {
+                    "component": "𠃍"
+                  },
+                  {
+                    "component": "𠃌"
+                  }
+                ]
+              },
+              {
+                "component": "丨"
+              }
+            ]
+          },
+          {
+            "component": "丶"
+          }
+        ]
+      },
+      "leafComponents": [
+        "𠃍",
+        "𠃌",
+        "丨",
+        "丶"
+      ],
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "𠃍",
+        "𠃌",
+        "丨",
+        "丶"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-043",
@@ -1097,7 +1382,17 @@
         "hsk2-435",
         "hsk3-595",
         "hsk3-863"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 426,
+        "ids": "^⿺⿻⿱𠃍𠃌丨丶$(G)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "买",
@@ -1311,35 +1606,44 @@
         "wǔ"
       ],
       "definition": "five; surname",
-      "decomposition": "⿴二？",
+      "decomposition": "⿱一𫝀",
       "radical": "二",
       "decompositionTree": {
-        "operator": "⿴",
+        "operator": "⿱",
         "operands": [
           {
-            "component": "二"
+            "component": "一"
           },
           {
-            "unknown": "？"
+            "component": "𫝀"
           }
         ]
       },
       "leafComponents": [
-        "二"
+        "一",
+        "𫝀"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "二",
-        "一"
+        "一",
+        "𫝀"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-223"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 472,
+        "ids": "^⿱一𫝀$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "些",
@@ -1419,8 +1723,9 @@
         "丶",
         "一",
         "八",
-        "乂",
-        "丿"
+        "丿",
+        "㇏",
+        "乂"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -1492,18 +1797,16 @@
         "rén"
       ],
       "definition": "man, person; people",
-      "decomposition": "？",
+      "decomposition": "人",
       "radical": "人",
       "decompositionTree": {
-        "unknown": "？"
+        "component": "人"
       },
       "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-087",
@@ -1517,7 +1820,17 @@
         "hsk3-773",
         "hsk3-779",
         "hsk3-787"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 510,
+        "ids": "^人$(GHTJKPV)",
+        "region": "G",
+        "terminal": true,
+        "namedTerminalComponents": [],
+        "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility."
+      }
     },
     {
       "hanzi": "什",
@@ -1563,35 +1876,55 @@
         "jīn"
       ],
       "definition": "modern, current; today, now",
-      "decomposition": "⿱人？",
+      "decomposition": "⿱⿵𠆢丶乛",
       "radical": "人",
       "decompositionTree": {
         "operator": "⿱",
         "operands": [
           {
-            "component": "人"
+            "operator": "⿵",
+            "operands": [
+              {
+                "component": "𠆢"
+              },
+              {
+                "component": "丶"
+              }
+            ]
           },
           {
-            "unknown": "？"
+            "component": "乛"
           }
         ]
       },
       "leafComponents": [
-        "人"
+        "𠆢",
+        "丶",
+        "乛"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "人"
+        "𠆢",
+        "丶",
+        "乛"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "today",
         "hsk1-093"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 526,
+        "ids": "^⿱⿵𠆢丶乛$(G[P][U][B])",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "介",
@@ -1599,34 +1932,54 @@
         "jiè"
       ],
       "definition": "agent, go-between, intermediary; to introduce; shell, armor",
-      "decomposition": "⿱人？",
+      "decomposition": "⿱𠆢⿰丿丨",
       "radical": "人",
       "decompositionTree": {
         "operator": "⿱",
         "operands": [
           {
-            "component": "人"
+            "component": "𠆢"
           },
           {
-            "unknown": "？"
+            "operator": "⿰",
+            "operands": [
+              {
+                "component": "丿"
+              },
+              {
+                "component": "丨"
+              }
+            ]
           }
         ]
       },
       "leafComponents": [
-        "人"
+        "𠆢",
+        "丿",
+        "丨"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "人"
+        "𠆢",
+        "丿",
+        "丨"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-369"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 527,
+        "ids": "^⿱𠆢⿰丿丨$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "从",
@@ -1690,7 +2043,9 @@
       "recursiveComponents": [
         "亻",
         "也",
-        "乚"
+        "乜",
+        "乚",
+        "丨"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -1707,30 +2062,40 @@
         "yǐ"
       ],
       "definition": "according to; so as to; because of; then",
-      "decomposition": "⿰？人",
+      "decomposition": "⿽人⿰𠄌丶",
       "radical": "人",
       "decompositionTree": {
-        "operator": "⿰",
+        "operator": "⿽",
         "operands": [
           {
-            "unknown": "？"
+            "component": "人"
           },
           {
-            "component": "人"
+            "operator": "⿰",
+            "operands": [
+              {
+                "component": "𠄌"
+              },
+              {
+                "component": "丶"
+              }
+            ]
           }
         ]
       },
       "leafComponents": [
-        "人"
+        "人",
+        "𠄌",
+        "丶"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "人"
+        "人",
+        "𠄌",
+        "丶"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "can",
@@ -1741,7 +2106,17 @@
         "hsk3-929",
         "hsk3-930",
         "hsk3-931"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 553,
+        "ids": "^⿽人⿰𠄌丶$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "们",
@@ -1770,8 +2145,9 @@
       "recursiveComponents": [
         "亻",
         "门",
+        "丨",
         "丶",
-        "丨"
+        "𠃌"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -1812,7 +2188,9 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "亻",
-        "牛"
+        "牛",
+        "㇒",
+        "𰀁"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -1852,7 +2230,9 @@
         "十",
         "一",
         "丨",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -1913,34 +2293,57 @@
         "sǎn"
       ],
       "definition": "umbrella, parasol, parachute",
-      "decomposition": "⿱人？",
+      "decomposition": "⿱𠆢⿻丷十",
       "radical": "人",
       "decompositionTree": {
         "operator": "⿱",
         "operands": [
           {
-            "component": "人"
+            "component": "𠆢"
           },
           {
-            "unknown": "？"
+            "operator": "⿻",
+            "operands": [
+              {
+                "component": "丷"
+              },
+              {
+                "component": "十"
+              }
+            ]
           }
         ]
       },
       "leafComponents": [
-        "人"
+        "𠆢",
+        "丷",
+        "十"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "人"
+        "𠆢",
+        "丷",
+        "丶",
+        "十",
+        "一",
+        "丨"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-820"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 610,
+        "ids": "^⿱𠆢⿻丷十$(G)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "但",
@@ -2096,7 +2499,9 @@
         "十",
         "一",
         "丨",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -2180,7 +2585,9 @@
         "⺈",
         "小",
         "亅",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -2631,21 +3038,13 @@
         "xiān"
       ],
       "definition": "first, former, previous",
-      "decomposition": "⿱⿰？土儿",
+      "decomposition": "⿱𠂒儿",
       "radical": "儿",
       "decompositionTree": {
         "operator": "⿱",
         "operands": [
           {
-            "operator": "⿰",
-            "operands": [
-              {
-                "unknown": "？"
-              },
-              {
-                "component": "土"
-              }
-            ]
+            "component": "𠂒"
           },
           {
             "component": "儿"
@@ -2653,28 +3052,33 @@
         ]
       },
       "leafComponents": [
-        "土",
+        "𠂒",
         "儿"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "土",
-        "十",
-        "一",
-        "丨",
+        "𠂒",
         "儿",
         "丿",
         "乚"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-231",
         "hsk3-890"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 1164,
+        "ids": "^⿱𠂒儿$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "全",
@@ -2723,22 +3127,44 @@
         "bā"
       ],
       "definition": "eight; all around, all sides",
-      "decomposition": "？",
+      "decomposition": "⿰丿㇏",
       "radical": "八",
       "decompositionTree": {
-        "unknown": "？"
+        "operator": "⿰",
+        "operands": [
+          {
+            "component": "丿"
+          },
+          {
+            "component": "㇏"
+          }
+        ]
       },
-      "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
+      "leafComponents": [
+        "丿",
+        "㇏"
       ],
-      "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "丿",
+        "㇏"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-002"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 1199,
+        "ids": "^⿰丿㇏$(GHT)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "公",
@@ -2766,6 +3192,8 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "八",
+        "丿",
+        "㇏",
         "厶"
       ],
       "decompositionComplete": true,
@@ -2807,7 +3235,9 @@
         "亠",
         "丶",
         "一",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -2847,7 +3277,9 @@
       "recursiveComponents": [
         "廾",
         "一",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -2933,7 +3365,9 @@
       "recursiveComponents": [
         "⺍",
         "一",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -2984,7 +3418,9 @@
         "一",
         "丨",
         "二",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -3025,7 +3461,9 @@
         "冂",
         "丨",
         "一",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -3061,8 +3499,8 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "羊",
-        "丷",
-        "丶",
+        "䒑",
+        "𰀁",
         "儿",
         "丿",
         "乚"
@@ -3255,7 +3693,8 @@
         "冫",
         "丶",
         "水",
-        "亅"
+        "㇇",
+        "𰛅"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -3456,7 +3895,9 @@
         "丨",
         "小",
         "亅",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -3498,8 +3939,9 @@
         "一",
         "丨",
         "八",
-        "夂",
         "丿",
+        "㇏",
+        "夂",
         "又"
       ],
       "decompositionComplete": true,
@@ -3615,8 +4057,9 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "八",
-        "刀",
-        "丿"
+        "丿",
+        "㇏",
+        "刀"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -3737,6 +4180,7 @@
         "丨",
         "一",
         "力",
+        "𠃌",
         "丿",
         "刂",
         "亅"
@@ -3996,34 +4440,44 @@
         "lì"
       ],
       "definition": "strength, power; capability, influence",
-      "decomposition": "⿻丿？",
+      "decomposition": "⿻𠃌丿",
       "radical": "力",
       "decompositionTree": {
         "operator": "⿻",
         "operands": [
           {
-            "component": "丿"
+            "component": "𠃌"
           },
           {
-            "unknown": "？"
+            "component": "丿"
           }
         ]
       },
       "leafComponents": [
+        "𠃌",
         "丿"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "𠃌",
         "丿"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-786"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 1503,
+        "ids": "^⿻𠃌丿$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "办",
@@ -4051,8 +4505,10 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "力",
+        "𠃌",
         "丿",
-        "八"
+        "八",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -4090,6 +4546,7 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "力",
+        "𠃌",
         "丿",
         "口",
         "冂",
@@ -4132,7 +4589,8 @@
         "夂",
         "丿",
         "又",
-        "力"
+        "力",
+        "𠃌"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -4171,6 +4629,7 @@
         "一",
         "厶",
         "力",
+        "𠃌",
         "丿"
       ],
       "decompositionComplete": true,
@@ -4217,6 +4676,7 @@
         "二",
         "一",
         "力",
+        "𠃌",
         "丿"
       ],
       "decompositionComplete": true,
@@ -4255,6 +4715,7 @@
         "女",
         "又",
         "力",
+        "𠃌",
         "丿"
       ],
       "decompositionComplete": true,
@@ -4384,13 +4845,13 @@
         "běi"
       ],
       "definition": "north; northern; northward",
-      "decomposition": "⿰？匕",
+      "decomposition": "⿰匕",
       "radical": "匕",
       "decompositionTree": {
         "operator": "⿰",
         "operands": [
           {
-            "unknown": "？"
+            "component": ""
           },
           {
             "component": "匕"
@@ -4398,25 +4859,37 @@
         ]
       },
       "leafComponents": [
+        "",
         "匕"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "",
         "匕",
         "乚",
         "丿"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-517",
         "hsk3-518",
         "hsk3-598",
         "hsk3-881"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 1627,
+        "ids": "^⿰{45}匕$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [
+          ""
+        ],
+        "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred."
+      }
     },
     {
       "hanzi": "区",
@@ -4635,7 +5108,9 @@
       "recursiveComponents": [
         "丷",
         "丶",
-        "牛"
+        "牛",
+        "㇒",
+        "𰀁"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -4652,7 +5127,7 @@
         "dān"
       ],
       "definition": "single, individual, only; lone",
-      "decomposition": "⿱丷？",
+      "decomposition": "⿱丷⿻甲一",
       "radical": "丷",
       "decompositionTree": {
         "operator": "⿱",
@@ -4661,28 +5136,50 @@
             "component": "丷"
           },
           {
-            "unknown": "？"
+            "operator": "⿻",
+            "operands": [
+              {
+                "component": "甲"
+              },
+              {
+                "component": "一"
+              }
+            ]
           }
         ]
       },
       "leafComponents": [
-        "丷"
+        "丷",
+        "甲",
+        "一"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
         "丷",
-        "丶"
+        "丶",
+        "甲",
+        "冂",
+        "丨",
+        "一"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-545",
         "hsk3-699",
         "hsk3-772"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 1689,
+        "ids": "^⿱丷⿻甲一$(GT)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "卖",
@@ -4891,6 +5388,7 @@
       "recursiveComponents": [
         "厂",
         "力",
+        "𠃌",
         "丿"
       ],
       "decompositionComplete": true,
@@ -5000,22 +5498,30 @@
         "yòu"
       ],
       "definition": "and, also, again, in addition",
-      "decomposition": "？",
+      "decomposition": "又",
       "radical": "又",
       "decompositionTree": {
-        "unknown": "？"
+        "component": "又"
       },
       "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-949"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 1804,
+        "ids": "^又$(GHTJKPV)",
+        "region": "G",
+        "terminal": true,
+        "namedTerminalComponents": [],
+        "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility."
+      }
     },
     {
       "hanzi": "友",
@@ -5023,13 +5529,13 @@
         "yǒu"
       ],
       "definition": "friend, companion; fraternity",
-      "decomposition": "⿸？又",
+      "decomposition": "⿸𠂇又",
       "radical": "又",
       "decompositionTree": {
         "operator": "⿸",
         "operands": [
           {
-            "unknown": "？"
+            "component": "𠂇"
           },
           {
             "component": "又"
@@ -5037,23 +5543,33 @@
         ]
       },
       "leafComponents": [
+        "𠂇",
         "又"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "𠂇",
         "又"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-143",
         "hsk1-154",
         "hsk1-156",
         "hsk1-235"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 1807,
+        "ids": "^⿸𠂇又$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "双",
@@ -5095,30 +5611,50 @@
         "fā"
       ],
       "definition": "to issue, to dispatch, to send out; hair",
-      "decomposition": "⿸？又",
+      "decomposition": "⿺⿸⿻𠃋丿又丶",
       "radical": "又",
       "decompositionTree": {
-        "operator": "⿸",
+        "operator": "⿺",
         "operands": [
           {
-            "unknown": "？"
+            "operator": "⿸",
+            "operands": [
+              {
+                "operator": "⿻",
+                "operands": [
+                  {
+                    "component": "𠃋"
+                  },
+                  {
+                    "component": "丿"
+                  }
+                ]
+              },
+              {
+                "component": "又"
+              }
+            ]
           },
           {
-            "component": "又"
+            "component": "丶"
           }
         ]
       },
       "leafComponents": [
-        "又"
+        "𠃋",
+        "丿",
+        "又",
+        "丶"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "又"
+        "𠃋",
+        "丿",
+        "又",
+        "丶"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-562",
@@ -5129,7 +5665,17 @@
         "hsk3-618",
         "hsk3-822",
         "hsk3-861"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 1813,
+        "ids": "^⿺⿸⿻𠃋丿又丶$(GH)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "叔",
@@ -5172,6 +5718,8 @@
         "小",
         "亅",
         "八",
+        "丿",
+        "㇏",
         "又"
       ],
       "decompositionComplete": true,
@@ -5370,7 +5918,9 @@
         "冂",
         "丨",
         "一",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -5509,13 +6059,13 @@
         "yòu"
       ],
       "definition": "right; right-wing",
-      "decomposition": "⿸？口",
+      "decomposition": "⿸𠂇口",
       "radical": "口",
       "decompositionTree": {
         "operator": "⿸",
         "operands": [
           {
-            "unknown": "？"
+            "component": "𠂇"
           },
           {
             "component": "口"
@@ -5523,24 +6073,34 @@
         ]
       },
       "leafComponents": [
+        "𠂇",
         "口"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "𠂇",
         "口",
         "冂",
         "丨",
         "一"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-481",
         "hsk2-482"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 1847,
+        "ids": "^⿸𠂇口$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "号",
@@ -5587,38 +6147,45 @@
         "sī"
       ],
       "definition": "to take charge of, to control, to manage; officer",
-      "decomposition": "⿹？口",
+      "decomposition": "⿹𠃌𠮛",
       "radical": "口",
       "decompositionTree": {
         "operator": "⿹",
         "operands": [
           {
-            "unknown": "？"
+            "component": "𠃌"
           },
           {
-            "component": "口"
+            "component": "𠮛"
           }
         ]
       },
       "leafComponents": [
-        "口"
+        "𠃌",
+        "𠮛"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "口",
-        "冂",
-        "丨",
-        "一"
+        "𠃌",
+        "𠮛"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-062",
         "hsk3-847"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 1852,
+        "ids": "^⿹𠃌𠮛$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "吃",
@@ -5796,13 +6363,13 @@
         "hòu"
       ],
       "definition": "after; behind, rear; descendants",
-      "decomposition": "⿸？口",
+      "decomposition": "⿸𠂋口",
       "radical": "口",
       "decompositionTree": {
         "operator": "⿸",
         "operands": [
           {
-            "unknown": "？"
+            "component": "𠂋"
           },
           {
             "component": "口"
@@ -5810,19 +6377,19 @@
         ]
       },
       "leafComponents": [
+        "𠂋",
         "口"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "𠂋",
         "口",
         "冂",
         "丨",
         "一"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-080",
@@ -5833,7 +6400,17 @@
         "hsk3-813",
         "hsk3-926",
         "hsk3-997"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 1874,
+        "ids": "^⿸𠂋口$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "向",
@@ -5841,38 +6418,49 @@
         "xiàng"
       ],
       "definition": "towards; direction, trend",
-      "decomposition": "⿵？口",
+      "decomposition": "⿱㇒冋",
       "radical": "口",
       "decompositionTree": {
-        "operator": "⿵",
+        "operator": "⿱",
         "operands": [
           {
-            "unknown": "？"
+            "component": "㇒"
           },
           {
-            "component": "口"
+            "component": "冋"
           }
         ]
       },
       "leafComponents": [
-        "口"
+        "㇒",
+        "冋"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "口",
+        "㇒",
+        "冋",
         "冂",
         "丨",
+        "口",
         "一"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-622",
         "hsk3-894"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 1877,
+        "ids": "^⿱㇒冋$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "吗",
@@ -5903,7 +6491,8 @@
         "冂",
         "丨",
         "一",
-        "马"
+        "马",
+        ""
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -6024,6 +6613,8 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "牛",
+        "㇒",
+        "𰀁",
         "口",
         "冂",
         "丨",
@@ -6200,6 +6791,7 @@
         "一",
         "丨",
         "八",
+        "㇏",
         "口",
         "冂"
       ],
@@ -6241,6 +6833,7 @@
         "一",
         "加",
         "力",
+        "𠃌",
         "丿"
       ],
       "decompositionComplete": true,
@@ -6280,6 +6873,7 @@
         "丨",
         "一",
         "自",
+        "㇒",
         "目",
         "二"
       ],
@@ -6319,7 +6913,9 @@
         "冂",
         "丨",
         "一",
-        "向"
+        "向",
+        "㇒",
+        "冋"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -6397,6 +6993,7 @@
         "丨",
         "一",
         "那",
+        "𭃂",
         "阝"
       ],
       "decompositionComplete": true,
@@ -6542,6 +7139,8 @@
         "冂",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "口"
       ],
       "decompositionComplete": true,
@@ -6622,7 +7221,9 @@
         "冂",
         "丨",
         "一",
-        "非"
+        "非",
+        "三",
+        "二"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -6662,6 +7263,7 @@
         "一",
         "卑",
         "白",
+        "㇒",
         "日",
         "十"
       ],
@@ -6832,7 +7434,9 @@
         "丿",
         "角",
         "⺈",
-        "用"
+        "用",
+        "⺆",
+        "𰀁"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -7123,12 +7727,11 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "才",
-        "扌",
-        "二",
-        "一",
-        "亅",
+        "𬺰",
+        "㇒",
         "土",
         "十",
+        "一",
         "丨"
       ],
       "decompositionComplete": true,
@@ -7170,6 +7773,7 @@
         "一",
         "丨",
         "也",
+        "乜",
         "乚"
       ],
       "decompositionComplete": true,
@@ -7257,7 +7861,9 @@
         "十",
         "一",
         "丨",
-        "不"
+        "不",
+        "丆",
+        "丶"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -7352,21 +7958,13 @@
         "jiān"
       ],
       "definition": "hard, strong; firm, resolute",
-      "decomposition": "⿱⿰？又土",
+      "decomposition": "⿱𰀡土",
       "radical": "土",
       "decompositionTree": {
         "operator": "⿱",
         "operands": [
           {
-            "operator": "⿰",
-            "operands": [
-              {
-                "unknown": "？"
-              },
-              {
-                "component": "又"
-              }
-            ]
+            "component": "𰀡"
           },
           {
             "component": "土"
@@ -7374,25 +7972,33 @@
         ]
       },
       "leafComponents": [
-        "又",
+        "𰀡",
         "土"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "又",
+        "𰀡",
         "土",
         "十",
         "一",
         "丨"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-697"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 2718,
+        "ids": "^⿱𰀡土$(G)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "城",
@@ -7489,22 +8095,45 @@
         "shì"
       ],
       "definition": "scholar, gentleman; soldier",
-      "decomposition": "？",
+      "decomposition": "⿻一丄",
       "radical": "士",
       "decompositionTree": {
-        "unknown": "？"
+        "operator": "⿻",
+        "operands": [
+          {
+            "component": "一"
+          },
+          {
+            "component": "丄"
+          }
+        ]
       },
-      "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
+      "leafComponents": [
+        "一",
+        "丄"
       ],
-      "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "一",
+        "丄",
+        "丨"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-155"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 3119,
+        "ids": "^⿻一丄$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "声",
@@ -7512,7 +8141,7 @@
         "shēng"
       ],
       "definition": "sound, noise; voice, tone, music",
-      "decomposition": "⿱士？",
+      "decomposition": "⿱士𠃜",
       "radical": "士",
       "decompositionTree": {
         "operator": "⿱",
@@ -7521,26 +8150,39 @@
             "component": "士"
           },
           {
-            "unknown": "？"
+            "component": "𠃜"
           }
         ]
       },
       "leafComponents": [
-        "士"
+        "士",
+        "𠃜"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "士"
+        "士",
+        "一",
+        "丄",
+        "丨",
+        "𠃜"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-828",
         "hsk3-831"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 3124,
+        "ids": "^⿱士𠃜$(GHTJKP)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "处",
@@ -7705,6 +8347,7 @@
       "recursiveComponents": [
         "一",
         "自",
+        "㇒",
         "目",
         "口",
         "冂",
@@ -8060,18 +8703,16 @@
         "nǚ"
       ],
       "definition": "woman, girl; female",
-      "decomposition": "？",
+      "decomposition": "女",
       "radical": "女",
       "decompositionTree": {
-        "unknown": "？"
+        "component": "女"
       },
       "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-152",
@@ -8081,7 +8722,17 @@
         "hsk2-412",
         "hsk3-787",
         "hsk3-788"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 3255,
+        "ids": "^女$(GHTJKPV)",
+        "region": "G",
+        "terminal": true,
+        "namedTerminalComponents": [],
+        "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility."
+      }
     },
     {
       "hanzi": "奶",
@@ -8148,7 +8799,9 @@
       "recursiveComponents": [
         "女",
         "也",
-        "乚"
+        "乜",
+        "乚",
+        "丨"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -8274,6 +8927,7 @@
       "recursiveComponents": [
         "女",
         "马",
+        "",
         "一"
       ],
       "decompositionComplete": true,
@@ -8314,7 +8968,9 @@
         "木",
         "十",
         "丨",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -8708,6 +9364,7 @@
         "一",
         "丨",
         "八",
+        "㇏",
         "子",
         "了",
         "乛",
@@ -9294,6 +9951,8 @@
         "冖",
         "谷",
         "八",
+        "丿",
+        "㇏",
         "人",
         "口",
         "冂",
@@ -9343,7 +10002,9 @@
         "一",
         "卜",
         "丨",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -9454,7 +10115,9 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "亅",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -9501,7 +10164,8 @@
         "小",
         "亅",
         "八",
-        "丿"
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -9588,6 +10252,8 @@
         "小",
         "亅",
         "八",
+        "丿",
+        "㇏",
         "尤",
         "尢",
         "乚"
@@ -9728,7 +10394,7 @@
         "zhǎn"
       ],
       "definition": "to open, to unfold; to extend, to stretch",
-      "decomposition": "⿸尸⿻？衣",
+      "decomposition": "⿸尸⿱龷",
       "radical": "尸",
       "decompositionTree": {
         "operator": "⿸",
@@ -9737,13 +10403,13 @@
             "component": "尸"
           },
           {
-            "operator": "⿻",
+            "operator": "⿱",
             "operands": [
               {
-                "unknown": "？"
+                "component": "龷"
               },
               {
-                "component": "衣"
+                "component": ""
               }
             ]
           }
@@ -9751,25 +10417,34 @@
       },
       "leafComponents": [
         "尸",
-        "衣"
+        "龷",
+        ""
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
         "尸",
         "丿",
-        "衣",
-        "亠",
-        "丶",
-        "一"
+        "龷",
+        ""
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-618"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 3993,
+        "ids": "^⿸尸⿱龷{25}$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [
+          ""
+        ],
+        "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred."
+      }
     },
     {
       "hanzi": "山",
@@ -9889,13 +10564,13 @@
         "zuǒ"
       ],
       "definition": "left; unorthodox, improper",
-      "decomposition": "⿸？工",
+      "decomposition": "⿸𠂇工",
       "radical": "工",
       "decompositionTree": {
         "operator": "⿸",
         "operands": [
           {
-            "unknown": "？"
+            "component": "𠂇"
           },
           {
             "component": "工"
@@ -9903,24 +10578,34 @@
         ]
       },
       "leafComponents": [
+        "𠂇",
         "工"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "𠂇",
         "工",
         "一",
         "丄",
         "丨"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-499",
         "hsk2-500"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 4394,
+        "ids": "^⿸𠂇工$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "差",
@@ -9948,8 +10633,8 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "羊",
-        "丷",
-        "丶",
+        "䒑",
+        "𰀁",
         "工",
         "一",
         "丄",
@@ -9969,34 +10654,30 @@
         "jǐ"
       ],
       "definition": "self, oneself; personal, private; 6th heavenly stem",
-      "decomposition": "⿱？乚",
+      "decomposition": "己",
       "radical": "己",
       "decompositionTree": {
-        "operator": "⿱",
-        "operands": [
-          {
-            "unknown": "？"
-          },
-          {
-            "component": "乚"
-          }
-        ]
+        "component": "己"
       },
-      "leafComponents": [
-        "乚"
-      ],
-      "unresolvedComponents": [
-        "？"
-      ],
-      "recursiveComponents": [
-        "乚"
-      ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "leafComponents": [],
+      "unresolvedComponents": [],
+      "recursiveComponents": [],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-494"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 4405,
+        "ids": "^己$(GHTJKPV)",
+        "region": "G",
+        "terminal": true,
+        "namedTerminalComponents": [],
+        "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility."
+      }
     },
     {
       "hanzi": "已",
@@ -10004,22 +10685,30 @@
         "yǐ"
       ],
       "definition": "already; finished; to stop; then, afterwards",
-      "decomposition": "？",
+      "decomposition": "已",
       "radical": "己",
       "decompositionTree": {
-        "unknown": "？"
+        "component": "已"
       },
       "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-472"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 4406,
+        "ids": "^已$(GHTJKPV)",
+        "region": "G",
+        "terminal": true,
+        "namedTerminalComponents": [],
+        "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility."
+      }
     },
     {
       "hanzi": "市",
@@ -10363,33 +11052,30 @@
         "nián"
       ],
       "definition": "year; anniversary; a person's age",
-      "decomposition": "⿻干？",
+      "decomposition": "⿱𠂉",
       "radical": "干",
       "decompositionTree": {
-        "operator": "⿻",
+        "operator": "⿱",
         "operands": [
           {
-            "component": "干"
+            "component": "𠂉"
           },
           {
-            "unknown": "？"
+            "component": ""
           }
         ]
       },
       "leafComponents": [
-        "干"
+        "𠂉",
+        ""
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "干",
-        "一",
-        "十",
-        "丨"
+        "𠂉",
+        ""
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-093",
@@ -10402,7 +11088,19 @@
         "hsk3-784",
         "hsk3-805",
         "hsk3-903"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 4536,
+        "ids": "^⿱𠂉{48}$(GHTKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [
+          ""
+        ],
+        "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred."
+      }
     },
     {
       "hanzi": "床",
@@ -10436,7 +11134,9 @@
         "十",
         "一",
         "丨",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -10633,7 +11333,7 @@
         "dì"
       ],
       "definition": "young brother, junior",
-      "decomposition": "⿱丷⿻弓？",
+      "decomposition": "⿱丷𢎨",
       "radical": "弓",
       "decompositionTree": {
         "operator": "⿱",
@@ -10642,36 +11342,36 @@
             "component": "丷"
           },
           {
-            "operator": "⿻",
-            "operands": [
-              {
-                "component": "弓"
-              },
-              {
-                "unknown": "？"
-              }
-            ]
+            "component": "𢎨"
           }
         ]
       },
       "leafComponents": [
         "丷",
-        "弓"
+        "𢎨"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
         "丷",
         "丶",
-        "弓"
+        "𢎨"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-032"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 4707,
+        "ids": "^⿱丷𢎨$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "张",
@@ -10700,7 +11400,10 @@
       "recursiveComponents": [
         "弓",
         "长",
-        "一"
+        "一",
+        "𠄌",
+        "㇒",
+        "乀"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -10783,8 +11486,9 @@
         "小",
         "亅",
         "八",
-        "彡",
-        "丿"
+        "丿",
+        "㇏",
+        "彡"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -10801,7 +11505,7 @@
         "wǎng"
       ],
       "definition": "to go, to depart; past, former",
-      "decomposition": "⿰彳⿱？王",
+      "decomposition": "⿰彳主",
       "radical": "彳",
       "decompositionTree": {
         "operator": "⿰",
@@ -10810,39 +11514,41 @@
             "component": "彳"
           },
           {
-            "operator": "⿱",
-            "operands": [
-              {
-                "unknown": "？"
-              },
-              {
-                "component": "王"
-              }
-            ]
+            "component": "主"
           }
         ]
       },
       "leafComponents": [
         "彳",
-        "王"
+        "主"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
         "彳",
         "丨",
+        "主",
+        "丶",
         "王",
         "一",
         "土",
         "十"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-450"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 4804,
+        "ids": "^⿰彳主$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "很",
@@ -10944,18 +11650,49 @@
         "xīn"
       ],
       "definition": "heart; mind; soul",
-      "decomposition": "？",
+      "decomposition": "⿰㇒⿻乚⿰丶丶",
       "radical": "心",
       "decompositionTree": {
-        "unknown": "？"
+        "operator": "⿰",
+        "operands": [
+          {
+            "component": "㇒"
+          },
+          {
+            "operator": "⿻",
+            "operands": [
+              {
+                "component": "乚"
+              },
+              {
+                "operator": "⿰",
+                "operands": [
+                  {
+                    "component": "丶"
+                  },
+                  {
+                    "component": "丶"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
-      "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
+      "leafComponents": [
+        "㇒",
+        "乚",
+        "丶",
+        "丶"
       ],
-      "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "㇒",
+        "乚",
+        "丶"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-579",
@@ -10964,7 +11701,17 @@
         "hsk3-729",
         "hsk3-898",
         "hsk3-902"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 4871,
+        "ids": "^⿰㇒⿻乚⿰丶丶$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "必",
@@ -10992,6 +11739,9 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "心",
+        "㇒",
+        "乚",
+        "丶",
         "丿"
       ],
       "decompositionComplete": true,
@@ -11030,7 +11780,9 @@
         "亠",
         "丶",
         "一",
-        "心"
+        "心",
+        "㇒",
+        "乚"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -11067,6 +11819,8 @@
       "recursiveComponents": [
         "忄",
         "八",
+        "丿",
+        "㇏",
         "丨",
         "亡",
         "亠",
@@ -11108,6 +11862,8 @@
       "recursiveComponents": [
         "忄",
         "八",
+        "丿",
+        "㇏",
         "丨",
         "夬",
         "大",
@@ -11156,7 +11912,9 @@
         "卜",
         "丨",
         "丶",
-        "心"
+        "心",
+        "㇒",
+        "乚"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -11195,8 +11953,11 @@
       "recursiveComponents": [
         "忄",
         "八",
+        "丿",
+        "㇏",
         "丨",
         "白",
+        "㇒",
         "日",
         "口",
         "冂",
@@ -11241,7 +12002,10 @@
         "土",
         "十",
         "一",
-        "心"
+        "心",
+        "㇒",
+        "乚",
+        "丶"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -11283,7 +12047,10 @@
         "彐",
         "二",
         "一",
-        "心"
+        "心",
+        "㇒",
+        "乚",
+        "丶"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -11320,6 +12087,8 @@
       "recursiveComponents": [
         "忄",
         "八",
+        "丿",
+        "㇏",
         "丨",
         "圣",
         "又",
@@ -11369,7 +12138,9 @@
         "冂",
         "丨",
         "一",
-        "心"
+        "心",
+        "㇒",
+        "乚"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -11405,13 +12176,16 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "自",
+        "㇒",
         "目",
         "口",
         "冂",
         "丨",
         "一",
         "二",
-        "心"
+        "心",
+        "乚",
+        "丶"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -11452,7 +12226,12 @@
         "小",
         "亅",
         "八",
-        "心"
+        "丿",
+        "㇏",
+        "心",
+        "㇒",
+        "乚",
+        "丶"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -11488,6 +12267,8 @@
       "recursiveComponents": [
         "忄",
         "八",
+        "丿",
+        "㇏",
         "丨",
         "青",
         "龶",
@@ -11531,6 +12312,8 @@
       "recursiveComponents": [
         "忄",
         "八",
+        "丿",
+        "㇏",
         "丨",
         "贯",
         "毌",
@@ -11578,11 +12361,16 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "目",
         "口",
         "冂",
         "二",
-        "心"
+        "心",
+        "㇒",
+        "乚",
+        "丶"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -11626,7 +12414,9 @@
         "口",
         "冂",
         "丨",
-        "心"
+        "心",
+        "㇒",
+        "乚"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -11675,7 +12465,10 @@
         "口",
         "冂",
         "丨",
-        "心"
+        "心",
+        "㇒",
+        "乚",
+        "丶"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -11715,14 +12508,18 @@
         "厂",
         "泉",
         "白",
+        "㇒",
         "日",
         "口",
         "冂",
         "丨",
         "一",
         "水",
-        "亅",
-        "心"
+        "㇇",
+        "𰛅",
+        "心",
+        "乚",
+        "丶"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -11758,6 +12555,8 @@
       "recursiveComponents": [
         "忄",
         "八",
+        "丿",
+        "㇏",
         "丨",
         "曼",
         "日",
@@ -11801,12 +12600,13 @@
       "recursiveComponents": [
         "忄",
         "八",
+        "丿",
+        "㇏",
         "丨",
         "董",
         "艹",
         "重",
         "千",
-        "丿",
         "十",
         "一",
         "里",
@@ -12012,8 +12812,9 @@
         "尸",
         "丿",
         "方",
-        "亠",
-        "一"
+        "万",
+        "丆",
+        "𠃌"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -12072,25 +12873,58 @@
         "shǒu"
       ],
       "definition": "hand",
-      "decomposition": "？",
+      "decomposition": "⿱㇒⿻二亅",
       "radical": "手",
       "decompositionTree": {
-        "unknown": "？"
+        "operator": "⿱",
+        "operands": [
+          {
+            "component": "㇒"
+          },
+          {
+            "operator": "⿻",
+            "operands": [
+              {
+                "component": "二"
+              },
+              {
+                "component": "亅"
+              }
+            ]
+          }
+        ]
       },
-      "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
+      "leafComponents": [
+        "㇒",
+        "二",
+        "亅"
       ],
-      "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "㇒",
+        "二",
+        "一",
+        "亅"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-189",
         "hsk2-433",
         "hsk2-434",
         "hsk2-457"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 5519,
+        "ids": "^⿱㇒⿻二亅$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "才",
@@ -12098,38 +12932,45 @@
         "cái"
       ],
       "definition": "ability, talent, gift; just, only",
-      "decomposition": "⿻扌？",
+      "decomposition": "⿹𬺰㇒",
       "radical": "扌",
       "decompositionTree": {
-        "operator": "⿻",
+        "operator": "⿹",
         "operands": [
           {
-            "component": "扌"
+            "component": "𬺰"
           },
           {
-            "unknown": "？"
+            "component": "㇒"
           }
         ]
       },
       "leafComponents": [
-        "扌"
+        "𬺰",
+        "㇒"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "扌",
-        "二",
-        "一",
-        "亅"
+        "𬺰",
+        "㇒"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-544",
         "hsk3-642"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 5521,
+        "ids": "^⿹𬺰㇒$(GHTPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "打",
@@ -12453,6 +13294,7 @@
         "一",
         "亅",
         "白",
+        "㇒",
         "日",
         "口",
         "冂",
@@ -12471,7 +13313,7 @@
         "zé"
       ],
       "definition": "to select, to choose",
-      "decomposition": "⿰扌？",
+      "decomposition": "⿰扌𠬤",
       "radical": "扌",
       "decompositionTree": {
         "operator": "⿰",
@@ -12480,28 +13322,38 @@
             "component": "扌"
           },
           {
-            "unknown": "？"
+            "component": "𠬤"
           }
         ]
       },
       "leafComponents": [
-        "扌"
+        "扌",
+        "𠬤"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
         "扌",
         "二",
         "一",
-        "亅"
+        "亅",
+        "𠬤"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-914"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 5677,
+        "ids": "^⿰扌𠬤$(G)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "拿",
@@ -12535,7 +13387,10 @@
         "口",
         "冂",
         "丨",
-        "手"
+        "手",
+        "㇒",
+        "二",
+        "亅"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -12619,7 +13474,9 @@
         "廴",
         "壬",
         "丿",
-        "士"
+        "士",
+        "丄",
+        "丨"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -12918,9 +13775,10 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "方",
-        "亠",
         "丶",
-        "一",
+        "万",
+        "丆",
+        "𠃌",
         "攵",
         "乂",
         "丿"
@@ -13058,10 +13916,11 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "女",
         "攵",
-        "乂",
-        "丿"
+        "乂"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -13143,6 +14002,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "斗"
       ],
       "decompositionComplete": true,
@@ -13226,6 +14087,8 @@
         "小",
         "亅",
         "八",
+        "丿",
+        "㇏",
         "斤",
         "厂",
         "下",
@@ -13248,32 +14111,32 @@
         "fāng"
       ],
       "definition": "square, rectangle; side; region; flag",
-      "decomposition": "⿱亠？",
+      "decomposition": "⿱丶万",
       "radical": "方",
       "decompositionTree": {
         "operator": "⿱",
         "operands": [
           {
-            "component": "亠"
+            "component": "丶"
           },
           {
-            "unknown": "？"
+            "component": "万"
           }
         ]
       },
       "leafComponents": [
-        "亠"
-      ],
-      "unresolvedComponents": [
-        "？"
-      ],
-      "recursiveComponents": [
-        "亠",
         "丶",
-        "一"
+        "万"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "丶",
+        "万",
+        "丆",
+        "𠃌"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-518",
@@ -13285,7 +14148,17 @@
         "hsk3-622",
         "hsk3-776",
         "hsk3-882"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 6397,
+        "ids": "^⿱丶万$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "旁",
@@ -13317,7 +14190,10 @@
         "丶",
         "一",
         "丷",
-        "方"
+        "方",
+        "万",
+        "丆",
+        "𠃌"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -13332,7 +14208,7 @@
         "lǚ"
       ],
       "definition": "journey, trip; to travel",
-      "decomposition": "⿰方⿱？氏",
+      "decomposition": "⿰方⿱𠂉",
       "radical": "方",
       "decompositionTree": {
         "operator": "⿰",
@@ -13344,10 +14220,10 @@
             "operator": "⿱",
             "operands": [
               {
-                "unknown": "？"
+                "component": "𠂉"
               },
               {
-                "component": "氏"
+                "component": ""
               }
             ]
           }
@@ -13355,24 +14231,37 @@
       },
       "leafComponents": [
         "方",
-        "氏"
+        "𠂉",
+        ""
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
         "方",
-        "亠",
         "丶",
-        "一",
-        "氏"
+        "万",
+        "丆",
+        "𠃌",
+        "𠂉",
+        ""
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-394"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 6409,
+        "ids": "^⿰方⿱𠂉{15}$(GHTKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [
+          ""
+        ],
+        "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred."
+      }
     },
     {
       "hanzi": "日",
@@ -13672,13 +14561,13 @@
         "chūn"
       ],
       "definition": "springtime; joyful, lustful, wanton",
-      "decomposition": "⿱？日",
+      "decomposition": "⿱𡗗日",
       "radical": "日",
       "decompositionTree": {
         "operator": "⿱",
         "operands": [
           {
-            "unknown": "？"
+            "component": "𡗗"
           },
           {
             "component": "日"
@@ -13686,24 +14575,34 @@
         ]
       },
       "leafComponents": [
+        "𡗗",
         "日"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "𡗗",
         "日",
         "口",
         "冂",
         "丨",
         "一"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-568"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 6505,
+        "ids": "^⿱𡗗日$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "昨",
@@ -13962,7 +14861,6 @@
         "一",
         "取",
         "耳",
-        "二",
         "又"
       ],
       "decompositionComplete": true,
@@ -14019,34 +14917,30 @@
         "yǒu"
       ],
       "definition": "to have, to own, to possess; to exist",
-      "decomposition": "⿸？月",
+      "decomposition": "⿸𠂇⺝",
       "radical": "月",
       "decompositionTree": {
         "operator": "⿸",
         "operands": [
           {
-            "unknown": "？"
+            "component": "𠂇"
           },
           {
-            "component": "月"
+            "component": "⺝"
           }
         ]
       },
       "leafComponents": [
-        "月"
+        "𠂇",
+        "⺝"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "月",
-        "冂",
-        "丨",
-        "二",
-        "一"
+        "𠂇",
+        "⺝"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "have",
@@ -14060,7 +14954,17 @@
         "hsk3-947",
         "hsk3-948",
         "hsk3-980"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 6733,
+        "ids": "^⿸𠂇⺝$(GHJKPV[S])",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "朋",
@@ -14240,6 +15144,8 @@
         "丨",
         "二",
         "八",
+        "丿",
+        "㇏",
         "月",
         "冂"
       ],
@@ -14283,7 +15189,9 @@
         "十",
         "一",
         "丨",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -14321,7 +15229,9 @@
         "十",
         "一",
         "丨",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -14365,7 +15275,8 @@
         "十",
         "一",
         "丨",
-        "八"
+        "八",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -14404,8 +15315,9 @@
         "一",
         "丨",
         "八",
-        "几",
         "丿",
+        "㇏",
+        "几",
         "乙"
       ],
       "decompositionComplete": true,
@@ -14455,6 +15367,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "子",
         "了",
         "乛",
@@ -14497,6 +15411,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "口",
         "冂"
       ],
@@ -14539,7 +15455,8 @@
         "十",
         "一",
         "丨",
-        "八"
+        "八",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -14580,6 +15497,8 @@
         "十",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "丷",
         "丶"
       ],
@@ -14630,7 +15549,11 @@
         "一",
         "丨",
         "八",
-        "不"
+        "丿",
+        "㇏",
+        "不",
+        "丆",
+        "丶"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -14669,6 +15592,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "反",
         "厂",
         "又"
@@ -14710,6 +15635,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "及",
         "又"
       ],
@@ -14752,7 +15679,9 @@
         "十",
         "一",
         "木",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -14793,6 +15722,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "旦",
         "日",
         "口",
@@ -14836,6 +15767,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "对",
         "又",
         "寸"
@@ -14877,12 +15810,13 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "交",
         "六",
         "亠",
         "丶",
-        "乂",
-        "丿"
+        "乂"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -14923,9 +15857,11 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "羊",
-        "丷",
-        "丶"
+        "䒑",
+        "𰀁"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -14968,6 +15904,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "艮"
       ],
       "decompositionComplete": true,
@@ -15012,7 +15950,9 @@
         "一",
         "十",
         "木",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -15051,10 +15991,12 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "弟",
         "丷",
         "丶",
-        "弓"
+        "𢎨"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -15094,6 +16036,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "佥",
         "亼",
         "人",
@@ -15137,6 +16081,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "奇",
         "大",
         "人",
@@ -15183,6 +16129,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "疋"
       ],
       "decompositionComplete": true,
@@ -15222,6 +16170,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "娄",
         "米",
         "丷",
@@ -15266,6 +16216,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "既",
         "旡"
       ],
@@ -15440,7 +16392,7 @@
         "bù"
       ],
       "definition": "walk, stroll, pace, march; to make progress",
-      "decomposition": "⿱止？",
+      "decomposition": "⿱止𣥂",
       "radical": "止",
       "decompositionTree": {
         "operator": "⿱",
@@ -15449,29 +16401,39 @@
             "component": "止"
           },
           {
-            "unknown": "？"
+            "component": "𣥂"
           }
         ]
       },
       "leafComponents": [
-        "止"
+        "止",
+        "𣥂"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
         "止",
         "上",
         "⺊",
         "丨",
-        "一"
+        "一",
+        "𣥂"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-415"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 7849,
+        "ids": "^⿱止𣥂$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "段",
@@ -15479,13 +16441,13 @@
         "duàn"
       ],
       "definition": "section, piece, division",
-      "decomposition": "⿰？殳",
+      "decomposition": "⿰殳",
       "radical": "殳",
       "decompositionTree": {
         "operator": "⿰",
         "operands": [
           {
-            "unknown": "？"
+            "component": ""
           },
           {
             "component": "殳"
@@ -15493,24 +16455,36 @@
         ]
       },
       "leafComponents": [
+        "",
         "殳"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "",
         "殳",
         "几",
         "丿",
         "乙",
         "又"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-607"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 7929,
+        "ids": "^⿰{6}殳$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [
+          ""
+        ],
+        "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred."
+      }
     },
     {
       "hanzi": "每",
@@ -15518,13 +16492,13 @@
         "měi"
       ],
       "definition": "each, every",
-      "decomposition": "⿱？母",
+      "decomposition": "⿱𠂉母",
       "radical": "母",
       "decompositionTree": {
         "operator": "⿱",
         "operands": [
           {
-            "unknown": "？"
+            "component": "𠂉"
           },
           {
             "component": "母"
@@ -15532,20 +16506,30 @@
         ]
       },
       "leafComponents": [
+        "𠂉",
         "母"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "𠂉",
         "母"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-399"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 7955,
+        "ids": "^⿱𠂉母$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "比",
@@ -15631,36 +16615,51 @@
         "qì"
       ],
       "definition": "air, gas; steam, vapor; anger",
-      "decomposition": "⿱亻？",
+      "decomposition": "⿳𠂉一⺄",
       "radical": "气",
       "decompositionTree": {
-        "operator": "⿱",
+        "operator": "⿳",
         "operands": [
           {
-            "component": "亻"
+            "component": "𠂉"
           },
           {
-            "unknown": "？"
+            "component": "一"
+          },
+          {
+            "component": "⺄"
           }
         ]
       },
       "leafComponents": [
-        "亻"
+        "𠂉",
+        "一",
+        "⺄"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "亻"
+        "𠂉",
+        "一",
+        "⺄"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-014",
         "hsk1-208",
         "hsk3-830"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 8024,
+        "ids": "^⿳𠂉一⺄$(GHTJKP)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "水",
@@ -15668,37 +16667,47 @@
         "shuǐ"
       ],
       "definition": "water, liquid, lotion, juice",
-      "decomposition": "⿻亅？",
+      "decomposition": "⿰㇇𰛅",
       "radical": "水",
       "decompositionTree": {
-        "operator": "⿻",
+        "operator": "⿰",
         "operands": [
           {
-            "component": "亅"
+            "component": "㇇"
           },
           {
-            "unknown": "？"
+            "component": "𰛅"
           }
         ]
       },
       "leafComponents": [
-        "亅"
+        "㇇",
+        "𰛅"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "亅"
+        "㇇",
+        "𰛅"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "water",
         "hsk1-193",
         "hsk3-742",
         "hsk3-846"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 8056,
+        "ids": "^⿰㇇𰛅$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "求",
@@ -15799,7 +16808,9 @@
       "recursiveComponents": [
         "氵",
         "气",
-        "亻"
+        "𠂉",
+        "一",
+        "⺄"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -15838,7 +16849,8 @@
         "小",
         "亅",
         "八",
-        "丿"
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -15955,13 +16967,15 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "白",
+        "㇒",
         "日",
         "口",
         "冂",
         "丨",
         "一",
         "水",
-        "亅"
+        "㇇",
+        "𰛅"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -16081,7 +17095,8 @@
         "氵",
         "永",
         "水",
-        "亅"
+        "㇇",
+        "𰛅"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -16117,10 +17132,7 @@
       "recursiveComponents": [
         "氵",
         "先",
-        "土",
-        "十",
-        "一",
-        "丨",
+        "𠂒",
         "儿",
         "丿",
         "乚"
@@ -16204,6 +17216,7 @@
       "recursiveComponents": [
         "氵",
         "每",
+        "𠂉",
         "母"
       ],
       "decompositionComplete": true,
@@ -16322,13 +17335,15 @@
         "氵",
         "斿",
         "方",
-        "亠",
         "丶",
-        "一",
+        "万",
+        "丆",
+        "𠃌",
         "子",
         "了",
         "乛",
-        "亅"
+        "亅",
+        "一"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -16424,7 +17439,9 @@
         "一",
         "小",
         "亅",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -16470,7 +17487,9 @@
         "丨",
         "土",
         "十",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -16513,7 +17532,9 @@
         "一",
         "木",
         "十",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -16550,14 +17571,17 @@
         "氵",
         "敫",
         "白",
+        "㇒",
         "日",
         "口",
         "冂",
         "丨",
         "一",
         "方",
-        "亠",
         "丶",
+        "万",
+        "丆",
+        "𠃌",
         "攵",
         "乂",
         "丿"
@@ -16726,6 +17750,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "口",
         "冂"
       ],
@@ -17032,6 +18058,7 @@
         "爫",
         "冖",
         "友",
+        "𠂇",
         "又"
       ],
       "decompositionComplete": true,
@@ -17072,8 +18099,9 @@
       "recursiveComponents": [
         "父",
         "八",
-        "乂",
         "丿",
+        "㇏",
+        "乂",
         "卩",
         "丨"
       ],
@@ -17111,8 +18139,9 @@
       "recursiveComponents": [
         "父",
         "八",
-        "乂",
         "丿",
+        "㇏",
+        "乂",
         "巴",
         "巳",
         "乚"
@@ -17130,30 +18159,56 @@
         "piàn"
       ],
       "definition": "slice, splinter; page, strip",
-      "decomposition": "⿸？？",
+      "decomposition": "⿰丿⿱丄𠃍",
       "radical": "片",
       "decompositionTree": {
-        "operator": "⿸",
+        "operator": "⿰",
         "operands": [
           {
-            "unknown": "？"
+            "component": "丿"
           },
           {
-            "unknown": "？"
+            "operator": "⿱",
+            "operands": [
+              {
+                "component": "丄"
+              },
+              {
+                "component": "𠃍"
+              }
+            ]
           }
         ]
       },
-      "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
+      "leafComponents": [
+        "丿",
+        "丄",
+        "𠃍"
       ],
-      "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "丿",
+        "丄",
+        "丨",
+        "一",
+        "𠃍"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-972"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 9611,
+        "ids": "^⿰丿⿱丄𠃍$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "牙",
@@ -17161,23 +18216,56 @@
         "yá"
       ],
       "definition": "tooth, molar; fang, tusk; serrated",
-      "decomposition": "？",
+      "decomposition": "⿹⿻丁𠃋㇒",
       "radical": "牙",
       "decompositionTree": {
-        "unknown": "？"
+        "operator": "⿹",
+        "operands": [
+          {
+            "operator": "⿻",
+            "operands": [
+              {
+                "component": "丁"
+              },
+              {
+                "component": "𠃋"
+              }
+            ]
+          },
+          {
+            "component": "㇒"
+          }
+        ]
       },
-      "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
+      "leafComponents": [
+        "丁",
+        "𠃋",
+        "㇒"
       ],
-      "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "丁",
+        "一",
+        "𠃋",
+        "㇒"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-916",
         "hsk3-917"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 9629,
+        "ids": "^⿹⿻丁𠃋㇒$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "牛",
@@ -17185,23 +18273,45 @@
         "niú"
       ],
       "definition": "ox, cow, bull",
-      "decomposition": "？",
+      "decomposition": "⿰㇒𰀁",
       "radical": "牛",
       "decompositionTree": {
-        "unknown": "？"
+        "operator": "⿰",
+        "operands": [
+          {
+            "component": "㇒"
+          },
+          {
+            "component": "𰀁"
+          }
+        ]
       },
-      "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
+      "leafComponents": [
+        "㇒",
+        "𰀁"
       ],
-      "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "㇒",
+        "𰀁"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-151",
         "hsk3-785"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 9631,
+        "ids": "^⿰㇒𰀁$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "物",
@@ -17229,6 +18339,8 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "牛",
+        "㇒",
+        "𰀁",
         "勿",
         "勹",
         "丿"
@@ -17268,6 +18380,8 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "牛",
+        "㇒",
+        "𰀁",
         "寺",
         "土",
         "十",
@@ -17440,7 +18554,9 @@
         "土",
         "十",
         "丨",
-        "不"
+        "不",
+        "丆",
+        "丶"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -17633,34 +18749,30 @@
         "guā"
       ],
       "definition": "melon, gourd, squash, cucumber",
-      "decomposition": "⿵？厶",
+      "decomposition": "瓜",
       "radical": "瓜",
       "decompositionTree": {
-        "operator": "⿵",
-        "operands": [
-          {
-            "unknown": "？"
-          },
-          {
-            "component": "厶"
-          }
-        ]
+        "component": "瓜"
       },
-      "leafComponents": [
-        "厶"
-      ],
-      "unresolvedComponents": [
-        "？"
-      ],
-      "recursiveComponents": [
-        "厶"
-      ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "leafComponents": [],
+      "unresolvedComponents": [],
+      "recursiveComponents": [],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-883"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 10272,
+        "ids": "^瓜$(GHTJKPV)",
+        "region": "G",
+        "terminal": true,
+        "namedTerminalComponents": [],
+        "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility."
+      }
     },
     {
       "hanzi": "瓶",
@@ -17804,31 +18916,30 @@
         "yòng"
       ],
       "definition": "to use, to employ, to apply; use",
-      "decomposition": "⿵冂？",
+      "decomposition": "⿵⺆𰀁",
       "radical": "用",
       "decompositionTree": {
         "operator": "⿵",
         "operands": [
           {
-            "component": "冂"
+            "component": "⺆"
           },
           {
-            "unknown": "？"
+            "component": "𰀁"
           }
         ]
       },
       "leafComponents": [
-        "冂"
+        "⺆",
+        "𰀁"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "冂",
-        "丨"
+        "⺆",
+        "𰀁"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-540",
@@ -17836,7 +18947,17 @@
         "hsk3-907",
         "hsk3-941",
         "hsk3-948"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 10348,
+        "ids": "^⿵⺆𰀁$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "电",
@@ -17917,6 +19038,7 @@
         "十",
         "一",
         "力",
+        "𠃌",
         "丿"
       ],
       "decompositionComplete": true,
@@ -18012,7 +19134,8 @@
         "十",
         "一",
         "介",
-        "人"
+        "𠆢",
+        "丿"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -18201,13 +19324,13 @@
         "bái"
       ],
       "definition": "white; clear, pure, unblemished; bright",
-      "decomposition": "⿻？日",
+      "decomposition": "⿱㇒日",
       "radical": "白",
       "decompositionTree": {
-        "operator": "⿻",
+        "operator": "⿱",
         "operands": [
           {
-            "unknown": "？"
+            "component": "㇒"
           },
           {
             "component": "日"
@@ -18215,26 +19338,36 @@
         ]
       },
       "leafComponents": [
+        "㇒",
         "日"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "㇒",
         "日",
         "口",
         "冂",
         "丨",
         "一"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-005",
         "hsk2-303",
         "hsk3-771"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 10689,
+        "ids": "^⿱㇒日$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "百",
@@ -18263,6 +19396,7 @@
       "recursiveComponents": [
         "一",
         "白",
+        "㇒",
         "日",
         "口",
         "冂",
@@ -18301,6 +19435,7 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "白",
+        "㇒",
         "日",
         "口",
         "冂",
@@ -18470,6 +19605,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "目",
         "口",
         "冂",
@@ -18510,12 +19647,14 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "手",
+        "㇒",
+        "二",
+        "一",
+        "亅",
         "目",
         "口",
         "冂",
-        "丨",
-        "一",
-        "二"
+        "丨"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -18640,8 +19779,8 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "羊",
-        "丷",
-        "丶",
+        "䒑",
+        "𰀁",
         "目",
         "口",
         "冂",
@@ -18732,6 +19871,7 @@
         "二",
         "垂",
         "士",
+        "丄",
         "卄",
         "十"
       ],
@@ -18868,6 +20008,7 @@
         "十",
         "丨",
         "八",
+        "㇏",
         "女"
       ],
       "decompositionComplete": true,
@@ -18949,7 +20090,8 @@
         "冂",
         "丨",
         "一",
-        "马"
+        "马",
+        ""
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -19075,7 +20217,9 @@
         "一",
         "小",
         "亅",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -19173,6 +20317,7 @@
         "一",
         "丨",
         "八",
+        "㇏",
         "火",
         "丷",
         "丶",
@@ -19217,6 +20362,7 @@
         "一",
         "丨",
         "八",
+        "㇏",
         "中",
         "口",
         "冂"
@@ -19260,6 +20406,7 @@
         "一",
         "丨",
         "八",
+        "㇏",
         "且",
         "月",
         "冂",
@@ -19302,6 +20449,8 @@
         "丶",
         "冖",
         "八",
+        "丿",
+        "㇏",
         "工",
         "一",
         "丄",
@@ -19344,7 +20493,13 @@
         "丶",
         "冖",
         "八",
-        "牙"
+        "丿",
+        "㇏",
+        "牙",
+        "丁",
+        "一",
+        "𠃋",
+        "㇒"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -19383,6 +20538,8 @@
         "丶",
         "冖",
         "八",
+        "丿",
+        "㇏",
         "犬",
         "大",
         "一",
@@ -19552,7 +20709,7 @@
         "弟",
         "丷",
         "丶",
-        "弓"
+        "𢎨"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -19671,6 +20828,8 @@
         "快",
         "忄",
         "八",
+        "丿",
+        "㇏",
         "丨",
         "夬",
         "大",
@@ -19712,8 +20871,9 @@
         "⺮",
         "间",
         "门",
-        "丶",
         "丨",
+        "丶",
+        "𠃌",
         "日",
         "口",
         "冂",
@@ -19759,7 +20919,9 @@
         "丨",
         "一",
         "二",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -19800,6 +20962,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "目",
         "口",
         "冂",
@@ -19882,7 +21046,9 @@
         "十",
         "一",
         "丨",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -19925,8 +21091,12 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "羔",
         "羊",
+        "䒑",
+        "𰀁",
         "灬"
       ],
       "decompositionComplete": true,
@@ -19969,6 +21139,8 @@
         "一",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "唐",
         "广",
         "厂",
@@ -20015,7 +21187,8 @@
         "幺",
         "小",
         "亅",
-        "八"
+        "八",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -20060,7 +21233,9 @@
         "幺",
         "小",
         "亅",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -20217,6 +21392,8 @@
         "十",
         "丨",
         "八",
+        "丿",
+        "㇏",
         "口",
         "冂"
       ],
@@ -20315,7 +21492,7 @@
         "jīng"
       ],
       "definition": "the classics; to experience, to undergo",
-      "decomposition": "⿰纟⿱？工",
+      "decomposition": "⿰纟𢀖",
       "radical": "纟",
       "decompositionTree": {
         "operator": "⿰",
@@ -20324,41 +21501,39 @@
             "component": "纟"
           },
           {
-            "operator": "⿱",
-            "operands": [
-              {
-                "unknown": "？"
-              },
-              {
-                "component": "工"
-              }
-            ]
+            "component": "𢀖"
           }
         ]
       },
       "leafComponents": [
         "纟",
-        "工"
+        "𢀖"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
         "纟",
         "一",
-        "工",
-        "丄",
-        "丨"
+        "𢀖"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-374",
         "hsk2-472",
         "hsk3-717",
         "hsk3-718"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 12819,
+        "ids": "^⿰纟𢀖$(GH)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "结",
@@ -20389,9 +21564,10 @@
         "一",
         "吉",
         "士",
+        "丄",
+        "丨",
         "口",
-        "冂",
-        "丨"
+        "冂"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -20580,35 +21756,44 @@
         "yáng"
       ],
       "definition": "sheep, goat",
-      "decomposition": "⿱丷？",
+      "decomposition": "⿱䒑𰀁",
       "radical": "羊",
       "decompositionTree": {
         "operator": "⿱",
         "operands": [
           {
-            "component": "丷"
+            "component": "䒑"
           },
           {
-            "unknown": "？"
+            "component": "𰀁"
           }
         ]
       },
       "leafComponents": [
-        "丷"
+        "䒑",
+        "𰀁"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "丷",
-        "丶"
+        "䒑",
+        "𰀁"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-918"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 13006,
+        "ids": "^⿱䒑𰀁$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "羽",
@@ -20636,6 +21821,7 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "习",
+        "𠃌",
         "冫",
         "丶"
       ],
@@ -20778,22 +21964,44 @@
         "ér"
       ],
       "definition": "and, and then, and yet; but",
-      "decomposition": "？",
+      "decomposition": "⿱一𦓐",
       "radical": "而",
       "decompositionTree": {
-        "unknown": "？"
+        "operator": "⿱",
+        "operands": [
+          {
+            "component": "一"
+          },
+          {
+            "component": "𦓐"
+          }
+        ]
       },
-      "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
+      "leafComponents": [
+        "一",
+        "𦓐"
       ],
-      "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "一",
+        "𦓐"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-611"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 13136,
+        "ids": "^⿱一𦓐$(GHTJKP)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "耳",
@@ -20801,36 +22009,31 @@
         "ěr"
       ],
       "definition": "ear; to hear, to hear of; handle",
-      "decomposition": "⿻？二",
+      "decomposition": "耳",
       "radical": "耳",
       "decompositionTree": {
-        "operator": "⿻",
-        "operands": [
-          {
-            "unknown": "？"
-          },
-          {
-            "component": "二"
-          }
-        ]
+        "component": "耳"
       },
-      "leafComponents": [
-        "二"
-      ],
-      "unresolvedComponents": [
-        "？"
-      ],
-      "recursiveComponents": [
-        "二",
-        "一"
-      ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "leafComponents": [],
+      "unresolvedComponents": [],
+      "recursiveComponents": [],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-612",
         "hsk3-613"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 13175,
+        "ids": "^耳$(GHTJKPV)",
+        "region": "G",
+        "terminal": true,
+        "namedTerminalComponents": [],
+        "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility."
+      }
     },
     {
       "hanzi": "聊",
@@ -20858,8 +22061,6 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "耳",
-        "二",
-        "一",
         "卯",
         "卩",
         "丨"
@@ -20898,15 +22099,16 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "耳",
-        "二",
-        "一",
         "总",
         "丷",
         "丶",
         "口",
         "冂",
         "丨",
-        "心"
+        "一",
+        "心",
+        "㇒",
+        "乚"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -21029,7 +22231,9 @@
         "半",
         "丷",
         "丶",
-        "牛"
+        "牛",
+        "㇒",
+        "𰀁"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -21312,26 +22516,26 @@
         "zì"
       ],
       "definition": "self; private, personal; from",
-      "decomposition": "⿻目？",
+      "decomposition": "⿱㇒目",
       "radical": "自",
       "decompositionTree": {
-        "operator": "⿻",
+        "operator": "⿱",
         "operands": [
           {
-            "component": "目"
+            "component": "㇒"
           },
           {
-            "unknown": "？"
+            "component": "目"
           }
         ]
       },
       "leafComponents": [
+        "㇒",
         "目"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "㇒",
         "目",
         "口",
         "冂",
@@ -21339,14 +22543,24 @@
         "一",
         "二"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-494",
         "hsk3-743",
         "hsk3-991"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 13614,
+        "ids": "^⿱㇒目$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "舒",
@@ -21570,7 +22784,7 @@
         "jié"
       ],
       "definition": "festival; knot, joint; segment; to economize, to save",
-      "decomposition": "⿱艹？",
+      "decomposition": "⿱艹𰆊",
       "radical": "艹",
       "decompositionTree": {
         "operator": "⿱",
@@ -21579,21 +22793,21 @@
             "component": "艹"
           },
           {
-            "unknown": "？"
+            "component": "𰆊"
           }
         ]
       },
       "leafComponents": [
-        "艹"
+        "艹",
+        "𰆊"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "艹"
+        "艹",
+        "𰆊"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-659",
@@ -21601,7 +22815,17 @@
         "hsk3-708",
         "hsk3-710",
         "hsk3-711"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 13766,
+        "ids": "^⿱艹𰆊$(G)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "花",
@@ -21726,7 +22950,9 @@
         "十",
         "一",
         "丨",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -21854,7 +23080,9 @@
         "十",
         "一",
         "丨",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -22110,7 +23338,7 @@
         "yī"
       ],
       "definition": "cloth; clothes, apparel; dress, coat",
-      "decomposition": "⿱亠？",
+      "decomposition": "⿱亠𧘇",
       "radical": "衣",
       "decompositionTree": {
         "operator": "⿱",
@@ -22119,23 +23347,23 @@
             "component": "亠"
           },
           {
-            "unknown": "？"
+            "component": "𧘇"
           }
         ]
       },
       "leafComponents": [
-        "亠"
+        "亠",
+        "𧘇"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
         "亠",
         "丶",
-        "一"
+        "一",
+        "𧘇"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-255",
@@ -22143,7 +23371,17 @@
         "hsk3-824",
         "hsk3-887",
         "hsk3-952"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 15271,
+        "ids": "^⿱亠𧘇$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "表",
@@ -22178,7 +23416,8 @@
         "乚",
         "衣",
         "亠",
-        "丶"
+        "丶",
+        "𧘇"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -22633,8 +23872,8 @@
       "recursiveComponents": [
         "⺈",
         "用",
-        "冂",
-        "丨"
+        "⺆",
+        "𰀁"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -22680,11 +23919,12 @@
         "角",
         "⺈",
         "用",
-        "冂",
-        "丨",
+        "⺆",
+        "𰀁",
         "刀",
         "丿",
-        "牛"
+        "牛",
+        "㇒"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -22883,8 +24123,7 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "讠",
-        "己",
-        "乚"
+        "己"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -22965,7 +24204,9 @@
         "冂",
         "丨",
         "一",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -23043,10 +24284,8 @@
       "recursiveComponents": [
         "讠",
         "司",
-        "口",
-        "冂",
-        "丨",
-        "一"
+        "𠃌",
+        "𠮛"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -23210,8 +24449,8 @@
         "讠",
         "吾",
         "五",
-        "二",
         "一",
+        "𫝀",
         "口",
         "冂",
         "丨"
@@ -23395,7 +24634,9 @@
         "十",
         "一",
         "木",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -23513,6 +24754,8 @@
         "讠",
         "射",
         "身",
+        "𨈑",
+        "㇒",
         "寸"
       ],
       "decompositionComplete": true,
@@ -23577,49 +24820,47 @@
         "sài"
       ],
       "definition": "to compete, to contend; contest, race",
-      "decomposition": "⿱宀⿱？贝",
+      "decomposition": "⿱𡨄贝",
       "radical": "贝",
       "decompositionTree": {
         "operator": "⿱",
         "operands": [
           {
-            "component": "宀"
+            "component": "𡨄"
           },
           {
-            "operator": "⿱",
-            "operands": [
-              {
-                "unknown": "？"
-              },
-              {
-                "component": "贝"
-              }
-            ]
+            "component": "贝"
           }
         ]
       },
       "leafComponents": [
-        "宀",
+        "𡨄",
         "贝"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "宀",
-        "丶",
-        "冖",
+        "𡨄",
         "贝",
         "冂",
         "丨",
         "人"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-524"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 16543,
+        "ids": "^⿱𡨄贝$(G)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "走",
@@ -23695,8 +24936,7 @@
         "止",
         "上",
         "⺊",
-        "己",
-        "乚"
+        "己"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -23834,7 +25074,6 @@
         "⺊",
         "取",
         "耳",
-        "二",
         "又"
       ],
       "decompositionComplete": true,
@@ -23851,7 +25090,7 @@
         "zú"
       ],
       "definition": "foot; to attain, to satisfy; enough",
-      "decomposition": "⿱口？",
+      "decomposition": "⿱口龰",
       "radical": "足",
       "decompositionTree": {
         "operator": "⿱",
@@ -23860,28 +25099,38 @@
             "component": "口"
           },
           {
-            "unknown": "？"
+            "component": "龰"
           }
         ]
       },
       "leafComponents": [
-        "口"
+        "口",
+        "龰"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
         "口",
         "冂",
         "丨",
-        "一"
+        "一",
+        "龰"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-497"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 16631,
+        "ids": "^⿱口龰$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "跑",
@@ -23913,6 +25162,7 @@
         "冂",
         "丨",
         "一",
+        "龰",
         "包",
         "勹",
         "丿",
@@ -23957,6 +25207,7 @@
         "冂",
         "丨",
         "一",
+        "龰",
         "艮"
       ],
       "decompositionComplete": true,
@@ -23996,6 +25247,7 @@
         "冂",
         "丨",
         "一",
+        "龰",
         "各",
         "夂",
         "丿",
@@ -24043,6 +25295,7 @@
         "冂",
         "丨",
         "一",
+        "龰",
         "兆",
         "儿",
         "丿",
@@ -24086,6 +25339,7 @@
         "冂",
         "丨",
         "一",
+        "龰",
         "易",
         "日",
         "勿",
@@ -24105,24 +25359,46 @@
         "shēn"
       ],
       "definition": "body, torso; person; pregnancy",
-      "decomposition": "？",
+      "decomposition": "⿻𨈑㇒",
       "radical": "身",
       "decompositionTree": {
-        "unknown": "？"
+        "operator": "⿻",
+        "operands": [
+          {
+            "component": "𨈑"
+          },
+          {
+            "component": "㇒"
+          }
+        ]
       },
-      "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
+      "leafComponents": [
+        "𨈑",
+        "㇒"
       ],
-      "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "𨈑",
+        "㇒"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-429",
         "hsk3-826",
         "hsk3-827"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 16879,
+        "ids": "^⿻𨈑㇒$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "车",
@@ -24257,8 +25533,9 @@
         "亠",
         "丶",
         "八",
-        "乂",
-        "丿"
+        "丿",
+        "㇏",
+        "乂"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -24337,6 +25614,7 @@
       "recursiveComponents": [
         "辶",
         "力",
+        "𠃌",
         "丿"
       ],
       "decompositionComplete": true,
@@ -24548,7 +25826,9 @@
       "recursiveComponents": [
         "辶",
         "不",
-        "一"
+        "丆",
+        "丨",
+        "丶"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -24833,10 +26113,7 @@
       "recursiveComponents": [
         "辶",
         "先",
-        "土",
-        "十",
-        "一",
-        "丨",
+        "𠂒",
         "儿",
         "丿",
         "乚"
@@ -24961,6 +26238,7 @@
         "丷",
         "丶",
         "自",
+        "㇒",
         "目",
         "口",
         "冂",
@@ -24981,21 +26259,13 @@
         "nà"
       ],
       "definition": "that, that one, those",
-      "decomposition": "⿰⿹？？阝",
+      "decomposition": "⿰𭃂阝",
       "radical": "阝",
       "decompositionTree": {
         "operator": "⿰",
         "operands": [
           {
-            "operator": "⿹",
-            "operands": [
-              {
-                "unknown": "？"
-              },
-              {
-                "unknown": "？"
-              }
-            ]
+            "component": "𭃂"
           },
           {
             "component": "阝"
@@ -25003,17 +26273,17 @@
         ]
       },
       "leafComponents": [
+        "𭃂",
         "阝"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "𭃂",
         "阝",
         "丨"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-136",
@@ -25024,7 +26294,17 @@
         "hsk1-141",
         "hsk2-406",
         "hsk2-407"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 17383,
+        "ids": "^⿰𭃂阝$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "邮",
@@ -25554,6 +26834,7 @@
       "recursiveComponents": [
         "钅",
         "段",
+        "",
         "殳",
         "几",
         "丿",
@@ -25573,36 +26854,66 @@
         "zhǎng"
       ],
       "definition": "long, lasting; to excel in",
-      "decomposition": "⿻？一",
+      "decomposition": "⿸⿺⿻一𠄌㇒乀",
       "radical": "长",
       "decompositionTree": {
-        "operator": "⿻",
+        "operator": "⿸",
         "operands": [
           {
-            "unknown": "？"
+            "operator": "⿺",
+            "operands": [
+              {
+                "operator": "⿻",
+                "operands": [
+                  {
+                    "component": "一"
+                  },
+                  {
+                    "component": "𠄌"
+                  }
+                ]
+              },
+              {
+                "component": "㇒"
+              }
+            ]
           },
           {
-            "component": "一"
+            "component": "乀"
           }
         ]
       },
       "leafComponents": [
-        "一"
+        "一",
+        "𠄌",
+        "㇒",
+        "乀"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
-        "一"
+        "一",
+        "𠄌",
+        "㇒",
+        "乀"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-314",
         "hsk3-900",
         "hsk3-968"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 18627,
+        "ids": "^⿸⿺⿻一𠄌㇒乀$(GH)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "门",
@@ -25610,47 +26921,52 @@
         "mén"
       ],
       "definition": "gate, door, entrance, opening",
-      "decomposition": "⿰⿱丶丨？",
+      "decomposition": "⿲丨丶𠃌",
       "radical": "门",
       "decompositionTree": {
-        "operator": "⿰",
+        "operator": "⿲",
         "operands": [
           {
-            "operator": "⿱",
-            "operands": [
-              {
-                "component": "丶"
-              },
-              {
-                "component": "丨"
-              }
-            ]
+            "component": "丨"
           },
           {
-            "unknown": "？"
+            "component": "丶"
+          },
+          {
+            "component": "𠃌"
           }
         ]
       },
       "leafComponents": [
+        "丨",
         "丶",
-        "丨"
+        "𠃌"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "丨",
         "丶",
-        "丨"
+        "𠃌"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-319",
         "hsk2-400",
         "hsk2-401",
         "hsk2-402"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 18732,
+        "ids": "^⿲丨丶𠃌$(GH)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "问",
@@ -25678,8 +26994,9 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "门",
-        "丶",
         "丨",
+        "丶",
+        "𠃌",
         "口",
         "冂",
         "一"
@@ -25719,8 +27036,9 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "门",
-        "丶",
         "丨",
+        "丶",
+        "𠃌",
         "日",
         "口",
         "冂",
@@ -25764,11 +27082,10 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "门",
-        "丶",
         "丨",
-        "耳",
-        "二",
-        "一"
+        "丶",
+        "𠃌",
+        "耳"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -26064,40 +27381,84 @@
         "yǔ"
       ],
       "definition": "rain",
-      "decomposition": "⿻帀？",
+      "decomposition": "⿻丅⿵冂⿰⿱丶丶⿱丶丶",
       "radical": "雨",
       "decompositionTree": {
         "operator": "⿻",
         "operands": [
           {
-            "component": "帀"
+            "component": "丅"
           },
           {
-            "unknown": "？"
+            "operator": "⿵",
+            "operands": [
+              {
+                "component": "冂"
+              },
+              {
+                "operator": "⿰",
+                "operands": [
+                  {
+                    "operator": "⿱",
+                    "operands": [
+                      {
+                        "component": "丶"
+                      },
+                      {
+                        "component": "丶"
+                      }
+                    ]
+                  },
+                  {
+                    "operator": "⿱",
+                    "operands": [
+                      {
+                        "component": "丶"
+                      },
+                      {
+                        "component": "丶"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
       "leafComponents": [
-        "帀"
-      ],
-      "unresolvedComponents": [
-        "？"
-      ],
-      "recursiveComponents": [
-        "帀",
-        "一",
-        "巾",
+        "丅",
         "冂",
-        "丨"
+        "丶",
+        "丶",
+        "丶",
+        "丶"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "丅",
+        "冂",
+        "丨",
+        "丶"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-227",
         "hsk1-267",
         "hsk3-952"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 18988,
+        "ids": "^⿻丅⿵冂⿰⿱丶丶⿱丶丶$(GJKP)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "雪",
@@ -26125,13 +27486,13 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "雨",
-        "帀",
-        "一",
-        "巾",
+        "丅",
         "冂",
         "丨",
+        "丶",
         "彐",
-        "二"
+        "二",
+        "一"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -26166,11 +27527,10 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "雨",
-        "帀",
-        "一",
-        "巾",
+        "丅",
         "冂",
         "丨",
+        "丶",
         "令",
         "人"
       ],
@@ -26207,12 +27567,13 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "雨",
-        "帀",
-        "一",
-        "巾",
+        "丅",
         "冂",
         "丨",
-        "而"
+        "丶",
+        "而",
+        "一",
+        "𦓐"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -26271,30 +27632,64 @@
         "fēi"
       ],
       "definition": "not, negative, non-; to oppose",
-      "decomposition": "⿰？？",
+      "decomposition": "⿰⿰三丨⿰丨三",
       "radical": "非",
       "decompositionTree": {
         "operator": "⿰",
         "operands": [
           {
-            "unknown": "？"
+            "operator": "⿰",
+            "operands": [
+              {
+                "component": "三"
+              },
+              {
+                "component": "丨"
+              }
+            ]
           },
           {
-            "unknown": "？"
+            "operator": "⿰",
+            "operands": [
+              {
+                "component": "丨"
+              },
+              {
+                "component": "三"
+              }
+            ]
           }
         ]
       },
-      "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
+      "leafComponents": [
+        "三",
+        "丨",
+        "丨",
+        "三"
       ],
-      "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "三",
+        "一",
+        "二",
+        "丨"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-053"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 19106,
+        "ids": "^⿰⿰三丨⿰丨三$(G)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "面",
@@ -26302,26 +27697,30 @@
         "miàn"
       ],
       "definition": "face; surface, side; plane, dimension",
-      "decomposition": "⿱？？",
+      "decomposition": "⿱丆囬",
       "radical": "面",
       "decompositionTree": {
         "operator": "⿱",
         "operands": [
           {
-            "unknown": "？"
+            "component": "丆"
           },
           {
-            "unknown": "？"
+            "component": "囬"
           }
         ]
       },
-      "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
+      "leafComponents": [
+        "丆",
+        "囬"
       ],
-      "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "丆",
+        "囬"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-126",
@@ -26336,7 +27735,17 @@
         "hsk3-620",
         "hsk3-702",
         "hsk3-770"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 19110,
+        "ids": "^⿱丆囬$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "鞋",
@@ -26428,13 +27837,13 @@
         "yè"
       ],
       "definition": "page, sheet, leaf",
-      "decomposition": "⿱？贝",
+      "decomposition": "⿱丆贝",
       "radical": "页",
       "decompositionTree": {
         "operator": "⿱",
         "operands": [
           {
-            "unknown": "？"
+            "component": "丆"
           },
           {
             "component": "贝"
@@ -26442,23 +27851,33 @@
         ]
       },
       "leafComponents": [
+        "丆",
         "贝"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "丆",
         "贝",
         "冂",
         "丨",
         "人"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-921"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 19385,
+        "ids": "^⿱丆贝$(GH)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "须",
@@ -26488,6 +27907,7 @@
         "彡",
         "丿",
         "页",
+        "丆",
         "贝",
         "冂",
         "丨",
@@ -26529,6 +27949,7 @@
         "厂",
         "㔾",
         "页",
+        "丆",
         "贝",
         "冂",
         "丨",
@@ -26574,6 +27995,7 @@
         "一",
         "疋",
         "页",
+        "丆",
         "贝",
         "人"
       ],
@@ -26621,6 +28043,7 @@
         "彡",
         "丿",
         "页",
+        "丆",
         "贝",
         "冂",
         "丨",
@@ -26676,32 +28099,48 @@
         "fēi"
       ],
       "definition": "to fly, to dart; high",
-      "decomposition": "⿻？？",
+      "decomposition": "⿰⺄",
       "radical": "飞",
       "decompositionTree": {
-        "operator": "⿻",
+        "operator": "⿰",
         "operands": [
           {
-            "unknown": "？"
+            "component": "⺄"
           },
           {
-            "unknown": "？"
+            "component": ""
           }
         ]
       },
-      "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
+      "leafComponents": [
+        "⺄",
+        ""
       ],
-      "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "⺄",
+        ""
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk1-054",
         "hsk2-340",
         "hsk3-802"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 19490,
+        "ids": "^⿰⺄{24}$(G)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [
+          ""
+        ],
+        "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred."
+      }
     },
     {
       "hanzi": "饭",
@@ -26858,8 +28297,9 @@
         "丶",
         "一",
         "八",
-        "乂",
-        "丿"
+        "丿",
+        "㇏",
+        "乂"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -26985,6 +28425,7 @@
         "一",
         "丨",
         "八",
+        "㇏",
         "日",
         "口",
         "冂"
@@ -27002,13 +28443,13 @@
         "mǎ"
       ],
       "definition": "horse; surname",
-      "decomposition": "⿹？一",
+      "decomposition": "⿹一",
       "radical": "马",
       "decompositionTree": {
         "operator": "⿹",
         "operands": [
           {
-            "unknown": "？"
+            "component": ""
           },
           {
             "component": "一"
@@ -27016,22 +28457,34 @@
         ]
       },
       "leafComponents": [
+        "",
         "一"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "",
         "一"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-764",
         "hsk3-765",
         "hsk3-766"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 19888,
+        "ids": "^⿹{52}一$(GH)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [
+          ""
+        ],
+        "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred."
+      }
     },
     {
       "hanzi": "骑",
@@ -27059,6 +28512,7 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "马",
+        "",
         "一",
         "奇",
         "大",
@@ -27208,8 +28662,8 @@
         "十",
         "一",
         "羊",
-        "丷",
-        "丶"
+        "䒑",
+        "𰀁"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -27224,22 +28678,46 @@
         "niǎo"
       ],
       "definition": "bird",
-      "decomposition": "？",
+      "decomposition": "⿹一",
       "radical": "鸟",
       "decompositionTree": {
-        "unknown": "？"
+        "operator": "⿹",
+        "operands": [
+          {
+            "component": ""
+          },
+          {
+            "component": "一"
+          }
+        ]
       },
-      "leafComponents": [],
-      "unresolvedComponents": [
-        "？"
+      "leafComponents": [
+        "",
+        "一"
       ],
-      "recursiveComponents": [],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "unresolvedComponents": [],
+      "recursiveComponents": [
+        "",
+        "一"
+      ],
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-411"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 20835,
+        "ids": "^⿹{53}一$(GH)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [
+          ""
+        ],
+        "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred."
+      }
     },
     {
       "hanzi": "鸡",
@@ -27267,7 +28745,9 @@
       "unresolvedComponents": [],
       "recursiveComponents": [
         "又",
-        "鸟"
+        "鸟",
+        "",
+        "一"
       ],
       "decompositionComplete": true,
       "source": "makemeahanzi",
@@ -27283,35 +28763,30 @@
         "huáng"
       ],
       "definition": "yellow; surname",
-      "decomposition": "⿱？⿱由八",
+      "decomposition": "⿳龷由八",
       "radical": "黄",
       "decompositionTree": {
-        "operator": "⿱",
+        "operator": "⿳",
         "operands": [
           {
-            "unknown": "？"
+            "component": "龷"
           },
           {
-            "operator": "⿱",
-            "operands": [
-              {
-                "component": "由"
-              },
-              {
-                "component": "八"
-              }
-            ]
+            "component": "由"
+          },
+          {
+            "component": "八"
           }
         ]
       },
       "leafComponents": [
+        "龷",
         "由",
         "八"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "龷",
         "由",
         "田",
         "冂",
@@ -27319,14 +28794,26 @@
         "土",
         "十",
         "一",
-        "八"
+        "八",
+        "丿",
+        "㇏"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk3-681"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 21000,
+        "ids": "^⿳龷由八$(GHJV[B])",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [],
+        "notes": "Exact China-tagged source IDS; modern graphical structure only."
+      }
     },
     {
       "hanzi": "黑",
@@ -27334,13 +28821,13 @@
         "hēi"
       ],
       "definition": "black; dark; evil, sinister",
-      "decomposition": "⿱？灬",
+      "decomposition": "⿱灬",
       "radical": "黑",
       "decompositionTree": {
         "operator": "⿱",
         "operands": [
           {
-            "unknown": "？"
+            "component": ""
           },
           {
             "component": "灬"
@@ -27348,21 +28835,33 @@
         ]
       },
       "leafComponents": [
+        "",
         "灬"
       ],
-      "unresolvedComponents": [
-        "？"
-      ],
+      "unresolvedComponents": [],
       "recursiveComponents": [
+        "",
         "灬"
       ],
-      "decompositionComplete": false,
-      "source": "makemeahanzi",
+      "decompositionComplete": true,
+      "source": "babelstone-ids",
       "sourceStatus": "dataset-derived-modern-structure",
       "wordIds": [
         "hsk2-353",
         "hsk3-669"
-      ]
+      ],
+      "structureSource": {
+        "url": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+        "sha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+        "line": 21013,
+        "ids": "^⿱{68}灬$(GHTJKPV)",
+        "region": "G",
+        "terminal": false,
+        "namedTerminalComponents": [
+          ""
+        ],
+        "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred."
+      }
     }
   ],
   "reverseIndex": {
@@ -27376,6 +28875,17 @@
       "疼",
       "终",
       "读"
+    ],
+    "⺄": [
+      "气",
+      "汽",
+      "飞"
+    ],
+    "⺆": [
+      "嘴",
+      "用",
+      "角",
+      "解"
     ],
     "⺈": [
       "你",
@@ -27431,6 +28941,9 @@
       "脸",
       "觉"
     ],
+    "⺝": [
+      "有"
+    ],
     "⺮": [
       "笑",
       "笔",
@@ -27455,6 +28968,166 @@
       "脸",
       "腿"
     ],
+    "㇇": [
+      "冰",
+      "愿",
+      "水",
+      "泉",
+      "泳"
+    ],
+    "㇏": [
+      "东",
+      "乐",
+      "交",
+      "休",
+      "体",
+      "你",
+      "八",
+      "公",
+      "六",
+      "共",
+      "兴",
+      "其",
+      "典",
+      "凉",
+      "凌",
+      "分",
+      "办",
+      "叔",
+      "只",
+      "和",
+      "商",
+      "妹",
+      "季",
+      "容",
+      "宾",
+      "小",
+      "少",
+      "就",
+      "床",
+      "影",
+      "忙",
+      "快",
+      "怕",
+      "怪",
+      "您",
+      "情",
+      "惯",
+      "想",
+      "慢",
+      "懂",
+      "数",
+      "料",
+      "新",
+      "期",
+      "末",
+      "本",
+      "朵",
+      "机",
+      "李",
+      "束",
+      "条",
+      "来",
+      "杯",
+      "板",
+      "极",
+      "果",
+      "查",
+      "树",
+      "校",
+      "样",
+      "根",
+      "桌",
+      "梯",
+      "检",
+      "椅",
+      "楚",
+      "楼",
+      "概",
+      "沙",
+      "漂",
+      "演",
+      "澡",
+      "炼",
+      "爷",
+      "爸",
+      "相",
+      "矮",
+      "票",
+      "秋",
+      "种",
+      "租",
+      "空",
+      "穿",
+      "突",
+      "筷",
+      "算",
+      "箱",
+      "米",
+      "糕",
+      "糖",
+      "系",
+      "累",
+      "练",
+      "茶",
+      "菜",
+      "识",
+      "课",
+      "较",
+      "饺",
+      "香",
+      "黄"
+    ],
+    "㇒": [
+      "乐",
+      "件",
+      "半",
+      "向",
+      "告",
+      "咱",
+      "响",
+      "啤",
+      "在",
+      "夏",
+      "张",
+      "心",
+      "必",
+      "忘",
+      "怎",
+      "怕",
+      "思",
+      "急",
+      "总",
+      "息",
+      "您",
+      "想",
+      "意",
+      "感",
+      "愿",
+      "手",
+      "才",
+      "拍",
+      "拿",
+      "泉",
+      "激",
+      "牙",
+      "牛",
+      "物",
+      "特",
+      "白",
+      "百",
+      "的",
+      "看",
+      "穿",
+      "聪",
+      "胖",
+      "自",
+      "解",
+      "谢",
+      "身",
+      "道",
+      "长"
+    ],
     "㔾": [
       "碗",
       "顾"
@@ -27462,14 +29135,21 @@
     "㠯": [
       "馆"
     ],
+    "䒑": [
+      "养",
+      "差",
+      "样",
+      "着",
+      "糕",
+      "羊",
+      "鲜"
+    ],
     "一": [
       "七",
-      "万",
       "丈",
       "三",
       "上",
       "下",
-      "不",
       "且",
       "世",
       "业",
@@ -27489,6 +29169,7 @@
       "什",
       "休",
       "会",
+      "伞",
       "但",
       "位",
       "住",
@@ -27502,7 +29183,6 @@
       "健",
       "像",
       "元",
-      "先",
       "全",
       "六",
       "共",
@@ -27529,6 +29209,7 @@
       "十",
       "千",
       "午",
+      "单",
       "卖",
       "南",
       "卡",
@@ -27545,7 +29226,6 @@
       "史",
       "右",
       "号",
-      "司",
       "吃",
       "合",
       "同",
@@ -27590,6 +29270,8 @@
       "坚",
       "城",
       "境",
+      "士",
+      "声",
       "备",
       "复",
       "夏",
@@ -27629,7 +29311,6 @@
       "层",
       "居",
       "屋",
-      "展",
       "工",
       "左",
       "差",
@@ -27640,7 +29321,6 @@
       "常",
       "干",
       "平",
-      "年",
       "床",
       "应",
       "店",
@@ -27672,9 +29352,8 @@
       "成",
       "我",
       "或",
-      "房",
       "所",
-      "才",
+      "手",
       "打",
       "扫",
       "找",
@@ -27692,7 +29371,6 @@
       "接",
       "提",
       "搬",
-      "放",
       "故",
       "教",
       "数",
@@ -27700,9 +29378,7 @@
       "料",
       "斤",
       "新",
-      "方",
       "旁",
-      "旅",
       "日",
       "旧",
       "早",
@@ -27718,7 +29394,6 @@
       "更",
       "最",
       "月",
-      "有",
       "朋",
       "服",
       "望",
@@ -27751,12 +29426,13 @@
       "正",
       "步",
       "毛",
+      "气",
       "求",
+      "汽",
       "河",
       "泉",
       "法",
       "注",
-      "洗",
       "活",
       "清",
       "渴",
@@ -27773,6 +29449,8 @@
       "热",
       "然",
       "照",
+      "片",
+      "牙",
       "特",
       "狗",
       "猫",
@@ -27816,6 +29494,7 @@
       "种",
       "租",
       "空",
+      "穿",
       "突",
       "站",
       "笑",
@@ -27845,8 +29524,7 @@
       "老",
       "考",
       "者",
-      "耳",
-      "聊",
+      "而",
       "聪",
       "育",
       "脏",
@@ -27876,7 +29554,6 @@
       "讲",
       "识",
       "诉",
-      "词",
       "试",
       "话",
       "该",
@@ -27904,13 +29581,11 @@
       "辆",
       "运",
       "近",
-      "还",
       "这",
       "进",
       "远",
       "送",
       "适",
-      "选",
       "遇",
       "道",
       "邮",
@@ -27926,16 +29601,14 @@
       "长",
       "问",
       "间",
-      "闻",
       "阳",
       "阴",
       "阿",
       "院",
-      "雨",
       "雪",
-      "零",
       "需",
       "静",
+      "非",
       "鞋",
       "音",
       "题",
@@ -27948,6 +29621,8 @@
       "高",
       "鱼",
       "鲜",
+      "鸟",
+      "鸡",
       "黄"
     ],
     "丁": [
@@ -27962,6 +29637,8 @@
       "歌",
       "河",
       "灯",
+      "牙",
+      "穿",
       "舒",
       "行",
       "街",
@@ -27984,18 +29661,61 @@
       "辆"
     ],
     "丄": [
+      "士",
+      "声",
       "工",
       "左",
       "差",
+      "挺",
+      "片",
+      "睡",
       "空",
       "红",
-      "经",
+      "结",
       "试",
       "轻"
     ],
+    "丅": [
+      "雨",
+      "雪",
+      "零",
+      "需"
+    ],
+    "丆": [
+      "万",
+      "不",
+      "坏",
+      "房",
+      "放",
+      "方",
+      "旁",
+      "旅",
+      "杯",
+      "游",
+      "激",
+      "环",
+      "还",
+      "面",
+      "页",
+      "须",
+      "顾",
+      "题",
+      "颜"
+    ],
+    "万": [
+      "房",
+      "放",
+      "方",
+      "旁",
+      "旅",
+      "游",
+      "激"
+    ],
     "三": [
+      "啡",
       "害",
-      "帮"
+      "帮",
+      "非"
     ],
     "上": [
       "些",
@@ -28051,19 +29771,25 @@
     "丨": [
       "上",
       "下",
+      "不",
       "且",
+      "业",
       "丢",
       "两",
       "个",
       "中",
       "主",
+      "也",
       "书",
       "事",
       "些",
       "亮",
       "什",
+      "介",
+      "他",
       "们",
       "休",
+      "伞",
       "但",
       "住",
       "体",
@@ -28074,7 +29800,6 @@
       "做",
       "健",
       "像",
-      "先",
       "全",
       "其",
       "典",
@@ -28095,6 +29820,7 @@
       "十",
       "千",
       "午",
+      "单",
       "卖",
       "南",
       "卡",
@@ -28108,7 +29834,6 @@
       "史",
       "右",
       "号",
-      "司",
       "吃",
       "合",
       "同",
@@ -28153,12 +29878,15 @@
       "坚",
       "城",
       "境",
+      "士",
+      "声",
       "处",
       "备",
       "复",
       "夏",
       "外",
       "奇",
+      "她",
       "如",
       "妹",
       "妻",
@@ -28191,7 +29919,6 @@
       "常",
       "干",
       "平",
-      "年",
       "床",
       "店",
       "影",
@@ -28221,6 +29948,7 @@
       "拍",
       "拿",
       "持",
+      "挺",
       "换",
       "据",
       "接",
@@ -28247,7 +29975,6 @@
       "更",
       "最",
       "月",
-      "有",
       "朋",
       "服",
       "望",
@@ -28283,7 +30010,6 @@
       "泉",
       "法",
       "注",
-      "洗",
       "活",
       "清",
       "渴",
@@ -28296,6 +30022,7 @@
       "照",
       "爬",
       "爷",
+      "片",
       "特",
       "狗",
       "猫",
@@ -28307,7 +30034,6 @@
       "理",
       "甜",
       "生",
-      "用",
       "电",
       "男",
       "画",
@@ -28353,7 +30079,6 @@
       "红",
       "练",
       "绍",
-      "经",
       "结",
       "给",
       "绩",
@@ -28384,13 +30109,10 @@
       "见",
       "视",
       "觉",
-      "角",
-      "解",
       "言",
       "让",
       "识",
       "诉",
-      "词",
       "试",
       "话",
       "语",
@@ -28418,8 +30140,8 @@
       "辆",
       "迎",
       "近",
+      "还",
       "适",
-      "选",
       "遇",
       "道",
       "那",
@@ -28447,6 +30169,7 @@
       "零",
       "需",
       "静",
+      "非",
       "鞋",
       "音",
       "页",
@@ -28478,13 +30201,19 @@
     ],
     "丶": [
       "下",
+      "不",
+      "业",
       "为",
       "主",
       "乎",
       "习",
+      "书",
       "交",
       "亮",
+      "今",
+      "以",
       "们",
+      "伞",
       "位",
       "住",
       "作",
@@ -28492,7 +30221,6 @@
       "全",
       "六",
       "关",
-      "养",
       "冰",
       "决",
       "冷",
@@ -28507,6 +30235,7 @@
       "单",
       "南",
       "卡",
+      "发",
       "变",
       "同",
       "名",
@@ -28514,6 +30243,7 @@
       "哭",
       "商",
       "国",
+      "坏",
       "境",
       "处",
       "外",
@@ -28535,9 +30265,7 @@
       "宾",
       "就",
       "居",
-      "展",
       "岁",
-      "差",
       "市",
       "平",
       "床",
@@ -28546,11 +30274,21 @@
       "康",
       "弟",
       "影",
+      "往",
+      "心",
+      "必",
       "忘",
       "忙",
       "怎",
+      "思",
+      "急",
       "总",
+      "息",
+      "您",
+      "想",
       "意",
+      "感",
+      "愿",
       "房",
       "所",
       "护",
@@ -28568,8 +30306,8 @@
       "昨",
       "望",
       "来",
+      "杯",
       "校",
-      "样",
       "梯",
       "楼",
       "次",
@@ -28583,12 +30321,12 @@
       "烧",
       "热",
       "然",
+      "环",
       "瓶",
       "疼",
       "病",
       "瘦",
       "的",
-      "着",
       "短",
       "矿",
       "碗",
@@ -28604,7 +30342,6 @@
       "米",
       "糕",
       "糖",
-      "羊",
       "羽",
       "聪",
       "育",
@@ -28623,9 +30360,9 @@
       "诉",
       "该",
       "说",
-      "赛",
       "较",
       "近",
+      "还",
       "这",
       "送",
       "遍",
@@ -28635,25 +30372,28 @@
       "间",
       "闻",
       "院",
+      "雨",
+      "雪",
+      "零",
+      "需",
       "音",
       "颜",
       "饺",
       "馆",
-      "高",
-      "鲜"
+      "高"
     ],
     "丷": [
+      "业",
       "乎",
+      "伞",
       "位",
       "关",
-      "养",
       "前",
       "半",
       "单",
       "南",
       "商",
       "境",
-      "差",
       "平",
       "弟",
       "总",
@@ -28664,7 +30404,6 @@
       "新",
       "旁",
       "来",
-      "样",
       "梯",
       "楼",
       "火",
@@ -28672,7 +30411,6 @@
       "炼",
       "烧",
       "瓶",
-      "着",
       "短",
       "秋",
       "站",
@@ -28680,7 +30418,6 @@
       "米",
       "糕",
       "糖",
-      "羊",
       "聪",
       "胖",
       "苹",
@@ -28688,27 +30425,30 @@
       "送",
       "道",
       "音",
-      "颜",
-      "鲜"
+      "颜"
     ],
     "丸": [
       "热"
     ],
     "主": [
       "住",
+      "往",
       "注"
     ],
     "丿": [
+      "东",
       "为",
-      "久",
       "么",
-      "乎",
       "乐",
       "九",
       "些",
       "交",
       "亮",
+      "介",
+      "休",
+      "体",
       "作",
+      "你",
       "便",
       "候",
       "做",
@@ -28716,8 +30456,16 @@
       "儿",
       "元",
       "先",
+      "八",
+      "公",
+      "六",
+      "共",
+      "兴",
+      "其",
+      "典",
       "养",
       "冬",
+      "凉",
       "凌",
       "几",
       "分",
@@ -28743,13 +30491,17 @@
       "午",
       "历",
       "参",
+      "发",
+      "叔",
       "句",
+      "只",
       "史",
       "同",
       "名",
       "呢",
       "和",
       "咖",
+      "商",
       "嘴",
       "四",
       "园",
@@ -28763,12 +30515,17 @@
       "外",
       "多",
       "奶",
+      "妹",
       "季",
       "它",
       "完",
       "客",
       "家",
+      "容",
+      "宾",
+      "小",
       "少",
+      "就",
       "层",
       "居",
       "屋",
@@ -28776,10 +30533,20 @@
       "岁",
       "希",
       "带",
+      "床",
       "影",
       "必",
+      "忙",
+      "快",
       "怎",
+      "怕",
+      "怪",
+      "您",
+      "情",
+      "惯",
+      "想",
       "感",
+      "慢",
       "懂",
       "房",
       "所",
@@ -28793,14 +30560,37 @@
       "教",
       "数",
       "文",
+      "料",
+      "新",
       "易",
       "昨",
       "晚",
       "更",
+      "期",
+      "末",
+      "本",
       "朵",
       "机",
+      "李",
+      "束",
       "条",
+      "来",
+      "杯",
+      "板",
+      "极",
+      "果",
+      "查",
+      "树",
       "校",
+      "样",
+      "根",
+      "桌",
+      "梯",
+      "检",
+      "椅",
+      "楚",
+      "楼",
+      "概",
       "段",
       "比",
       "毛",
@@ -28808,33 +30598,52 @@
       "没",
       "洗",
       "活",
+      "漂",
+      "演",
+      "澡",
       "激",
+      "炼",
       "烧",
       "热",
       "照",
       "熊",
       "爷",
       "爸",
+      "片",
       "物",
       "狗",
       "玩",
       "现",
       "甜",
       "男",
+      "界",
       "疼",
       "的",
+      "相",
       "真",
       "知",
       "短",
       "矮",
       "碗",
+      "票",
       "离",
       "秋",
       "种",
       "租",
+      "空",
+      "穿",
+      "突",
       "笑",
       "笔",
+      "筷",
+      "算",
+      "箱",
+      "米",
+      "糕",
+      "糖",
       "系",
+      "累",
+      "练",
       "终",
       "绍",
       "网",
@@ -28848,7 +30657,9 @@
       "般",
       "船",
       "花",
+      "茶",
       "药",
+      "菜",
       "表",
       "衫",
       "裙",
@@ -28858,8 +30669,10 @@
       "觉",
       "解",
       "议",
+      "识",
       "话",
       "说",
+      "课",
       "超",
       "跑",
       "路",
@@ -28886,7 +30699,12 @@
       "风",
       "饱",
       "饺",
-      "香"
+      "香",
+      "黄"
+    ],
+    "乀": [
+      "张",
+      "长"
     ],
     "乂": [
       "交",
@@ -28975,7 +30793,19 @@
       "它",
       "完",
       "就",
-      "己",
+      "心",
+      "必",
+      "忘",
+      "怎",
+      "思",
+      "急",
+      "总",
+      "息",
+      "您",
+      "想",
+      "意",
+      "感",
+      "愿",
       "把",
       "晚",
       "比",
@@ -28991,6 +30821,7 @@
       "礼",
       "笔",
       "老",
+      "聪",
       "能",
       "色",
       "花",
@@ -29000,9 +30831,7 @@
       "见",
       "视",
       "觉",
-      "记",
       "说",
-      "起",
       "跑",
       "跳",
       "车",
@@ -29025,6 +30854,7 @@
     "乛": [
       "买",
       "了",
+      "今",
       "卖",
       "卫",
       "好",
@@ -29037,6 +30867,12 @@
       "李",
       "游",
       "读"
+    ],
+    "乜": [
+      "也",
+      "他",
+      "地",
+      "她"
     ],
     "九": [
       "热"
@@ -29063,7 +30899,6 @@
       "事",
       "于",
       "你",
-      "冰",
       "净",
       "凉",
       "刚",
@@ -29074,7 +30909,6 @@
       "刻",
       "前",
       "叔",
-      "在",
       "好",
       "子",
       "字",
@@ -29088,9 +30922,8 @@
       "康",
       "影",
       "您",
-      "愿",
       "我",
-      "才",
+      "手",
       "打",
       "扫",
       "找",
@@ -29100,6 +30933,7 @@
       "担",
       "拍",
       "择",
+      "拿",
       "持",
       "挺",
       "换",
@@ -29110,16 +30944,14 @@
       "教",
       "新",
       "李",
-      "水",
       "求",
       "沙",
-      "泉",
-      "泳",
       "游",
       "漂",
       "热",
       "班",
       "球",
+      "看",
       "票",
       "系",
       "累",
@@ -29150,7 +30982,6 @@
       "且",
       "事",
       "于",
-      "五",
       "些",
       "会",
       "信",
@@ -29163,8 +30994,8 @@
       "动",
       "助",
       "咱",
+      "啡",
       "园",
-      "在",
       "夏",
       "妻",
       "姐",
@@ -29181,7 +31012,7 @@
       "情",
       "想",
       "我",
-      "才",
+      "手",
       "打",
       "扫",
       "找",
@@ -29191,6 +31022,7 @@
       "担",
       "拍",
       "择",
+      "拿",
       "持",
       "挺",
       "换",
@@ -29200,9 +31032,7 @@
       "搬",
       "明",
       "晴",
-      "最",
       "月",
-      "有",
       "朋",
       "服",
       "望",
@@ -29227,24 +31057,19 @@
       "箱",
       "糖",
       "绿",
-      "耳",
-      "聊",
-      "聪",
       "自",
       "言",
       "讲",
-      "语",
       "请",
-      "趣",
       "运",
       "进",
       "远",
       "道",
-      "闻",
       "阴",
       "院",
       "雪",
       "静",
+      "非",
       "饿"
     ],
     "亍": [
@@ -29278,24 +31103,17 @@
       "境",
       "孩",
       "就",
-      "展",
       "市",
       "影",
       "忘",
       "忙",
       "意",
-      "房",
       "接",
-      "放",
       "文",
       "新",
-      "方",
       "旁",
-      "旅",
       "望",
       "校",
-      "游",
-      "激",
       "离",
       "站",
       "育",
@@ -29344,12 +31162,9 @@
       "两",
       "个",
       "买",
-      "今",
-      "介",
       "从",
       "以",
       "会",
-      "伞",
       "候",
       "关",
       "决",
@@ -29387,7 +31202,6 @@
       "炼",
       "烧",
       "然",
-      "界",
       "病",
       "知",
       "短",
@@ -29445,8 +31259,6 @@
       "化",
       "复",
       "您",
-      "气",
-      "汽",
       "花",
       "蕉",
       "谁",
@@ -29689,6 +31501,7 @@
       "前",
       "加",
       "助",
+      "单",
       "南",
       "口",
       "句",
@@ -29698,7 +31511,6 @@
       "史",
       "右",
       "号",
-      "司",
       "吃",
       "合",
       "同",
@@ -29794,7 +31606,6 @@
       "更",
       "最",
       "月",
-      "有",
       "朋",
       "服",
       "望",
@@ -29822,7 +31633,6 @@
       "现",
       "理",
       "甜",
-      "用",
       "电",
       "男",
       "画",
@@ -29876,11 +31686,8 @@
       "见",
       "视",
       "觉",
-      "角",
-      "解",
       "言",
       "识",
-      "词",
       "话",
       "语",
       "说",
@@ -29941,6 +31748,8 @@
       "再"
     ],
     "冋": [
+      "向",
+      "响",
       "高"
     ],
     "冏": [
@@ -29972,7 +31781,6 @@
       "穿",
       "突",
       "觉",
-      "赛",
       "院",
       "馆"
     ],
@@ -30069,7 +31877,6 @@
       "咖"
     ],
     "勹": [
-      "久",
       "像",
       "勺",
       "包",
@@ -30133,10 +31940,10 @@
       "主",
       "什",
       "休",
+      "伞",
       "住",
       "体",
       "做",
-      "先",
       "全",
       "其",
       "再",
@@ -30174,7 +31981,6 @@
       "屋",
       "干",
       "平",
-      "年",
       "床",
       "往",
       "思",
@@ -30219,7 +32025,6 @@
       "概",
       "法",
       "注",
-      "洗",
       "活",
       "演",
       "澡",
@@ -30279,7 +32084,6 @@
       "较",
       "辆",
       "适",
-      "选",
       "邮",
       "都",
       "里",
@@ -30417,7 +32221,6 @@
       "屋",
       "法",
       "熊",
-      "瓜",
       "离",
       "育",
       "能",
@@ -30443,7 +32246,6 @@
       "受",
       "变",
       "图",
-      "坚",
       "处",
       "备",
       "复",
@@ -30524,7 +32326,6 @@
       "史",
       "右",
       "号",
-      "司",
       "吃",
       "合",
       "同",
@@ -30657,7 +32458,6 @@
       "裙",
       "言",
       "识",
-      "词",
       "话",
       "语",
       "说",
@@ -30772,11 +32572,13 @@
       "图",
       "西"
     ],
+    "囬": [
+      "面"
+    ],
     "土": [
       "丢",
       "主",
       "住",
-      "先",
       "全",
       "再",
       "凌",
@@ -30811,7 +32613,6 @@
       "果",
       "法",
       "注",
-      "洗",
       "演",
       "特",
       "猫",
@@ -30841,7 +32642,6 @@
       "超",
       "越",
       "趣",
-      "选",
       "邮",
       "都",
       "里",
@@ -31045,7 +32845,6 @@
       "空",
       "穿",
       "突",
-      "赛",
       "院",
       "馆"
     ],
@@ -31164,7 +32963,6 @@
       "差",
       "空",
       "红",
-      "经",
       "试",
       "轻"
     ],
@@ -31197,18 +32995,10 @@
       "希",
       "带",
       "帮",
-      "常",
-      "雨",
-      "雪",
-      "零",
-      "需"
+      "常"
     ],
     "帀": [
-      "师",
-      "雨",
-      "雪",
-      "零",
-      "需"
+      "师"
     ],
     "布": [
       "希"
@@ -31217,7 +33007,6 @@
       "午",
       "南",
       "平",
-      "年",
       "苹"
     ],
     "平": [
@@ -31285,10 +33074,7 @@
     ],
     "弓": [
       "姨",
-      "弟",
-      "张",
-      "梯",
-      "第"
+      "张"
     ],
     "弟": [
       "梯",
@@ -31404,9 +33190,7 @@
       "看"
     ],
     "扌": [
-      "在",
       "我",
-      "才",
       "打",
       "扫",
       "找",
@@ -31600,7 +33384,6 @@
       "情",
       "明",
       "晴",
-      "有",
       "朋",
       "服",
       "望",
@@ -31731,7 +33514,6 @@
     ],
     "氏": [
       "婚",
-      "旅",
       "纸"
     ],
     "气": [
@@ -31899,6 +33681,9 @@
       "演",
       "邮",
       "黄"
+    ],
+    "甲": [
+      "单"
     ],
     "畏": [
       "喂"
@@ -32172,7 +33957,6 @@
       "街"
     ],
     "衣": [
-      "展",
       "表"
     ],
     "衤": [
@@ -32423,6 +34207,14 @@
     "鸟": [
       "鸡"
     ],
+    "龰": [
+      "足",
+      "跑",
+      "跟",
+      "路",
+      "跳",
+      "踢"
+    ],
     "龶": [
       "情",
       "晴",
@@ -32431,6 +34223,211 @@
       "绩",
       "请",
       "静"
+    ],
+    "龷": [
+      "展",
+      "黄"
+    ],
+    "": [
+      "段",
+      "锻"
+    ],
+    "": [
+      "旅"
+    ],
+    "": [
+      "鸟",
+      "鸡"
+    ],
+    "": [
+      "吗",
+      "妈",
+      "码",
+      "马",
+      "骑"
+    ],
+    "": [
+      "飞"
+    ],
+    "": [
+      "展"
+    ],
+    "": [
+      "黑"
+    ],
+    "": [
+      "北"
+    ],
+    "": [
+      "年"
+    ],
+    "𠂇": [
+      "友",
+      "右",
+      "左",
+      "有",
+      "爱"
+    ],
+    "𠂉": [
+      "年",
+      "旅",
+      "每",
+      "气",
+      "汽",
+      "海"
+    ],
+    "𠂋": [
+      "后"
+    ],
+    "𠂌": [
+      "乎"
+    ],
+    "𠂒": [
+      "先",
+      "洗",
+      "选"
+    ],
+    "𠃊": [
+      "世"
+    ],
+    "𠃋": [
+      "乐",
+      "发",
+      "牙",
+      "穿"
+    ],
+    "𠃌": [
+      "万",
+      "为",
+      "习",
+      "书",
+      "们",
+      "别",
+      "力",
+      "办",
+      "加",
+      "务",
+      "动",
+      "助",
+      "努",
+      "历",
+      "司",
+      "咖",
+      "房",
+      "放",
+      "方",
+      "旁",
+      "旅",
+      "游",
+      "激",
+      "男",
+      "简",
+      "羽",
+      "词",
+      "边",
+      "门",
+      "问",
+      "间",
+      "闻"
+    ],
+    "𠃍": [
+      "书",
+      "片"
+    ],
+    "𠃜": [
+      "声"
+    ],
+    "𠄌": [
+      "以",
+      "张",
+      "长"
+    ],
+    "𠆢": [
+      "今",
+      "介",
+      "伞",
+      "界"
+    ],
+    "𠬤": [
+      "择"
+    ],
+    "𠮛": [
+      "司",
+      "词"
+    ],
+    "𡗗": [
+      "春"
+    ],
+    "𡨄": [
+      "赛"
+    ],
+    "𢀖": [
+      "经"
+    ],
+    "𢎨": [
+      "弟",
+      "梯",
+      "第"
+    ],
+    "𣥂": [
+      "步"
+    ],
+    "𦓐": [
+      "而",
+      "需"
+    ],
+    "𧘇": [
+      "衣",
+      "表"
+    ],
+    "𨈑": [
+      "谢",
+      "身"
+    ],
+    "𫝀": [
+      "五",
+      "语"
+    ],
+    "𬺰": [
+      "在",
+      "才"
+    ],
+    "𭃂": [
+      "哪",
+      "那"
+    ],
+    "𰀁": [
+      "件",
+      "养",
+      "半",
+      "告",
+      "嘴",
+      "差",
+      "样",
+      "牛",
+      "物",
+      "特",
+      "用",
+      "着",
+      "糕",
+      "羊",
+      "胖",
+      "角",
+      "解",
+      "鲜"
+    ],
+    "𰀡": [
+      "坚"
+    ],
+    "𰆊": [
+      "节"
+    ],
+    "𰛅": [
+      "冰",
+      "愿",
+      "水",
+      "泉",
+      "泳"
     ]
   }
 }

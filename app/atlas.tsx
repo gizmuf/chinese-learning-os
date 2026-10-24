@@ -52,6 +52,7 @@ import { stopAudio, speak } from "./audio";
 import AtlasGlyph from "./atlas-glyph";
 import AtlasRecall from "./atlas-recall";
 import Notebook from "./notebook";
+import AtlasGuidedWriting from "./atlas-guided-writing";
 import type { Item } from "./content";
 import type { LearningEvent } from "./learning";
 type Scope = { kind: "group" | "component"; id: string } | null;
@@ -88,7 +89,7 @@ export default function Atlas({
   const [search, setSearch] = useState("");
   const [compare, setCompare] = useState(["u6e05", "u6674"]);
   const [parts, setParts] = useState(true);
-  const [writing, setWriting] = useState<"notebook" | "recall">("notebook");
+  const [writing, setWriting] = useState<"animated" | "notebook" | "recall">("animated");
   const [queue, setQueue] = useState<Task[] | null>(null);
   const [guided, setGuided] = useState(false);
   const [run, setRun] = useState(0);
@@ -195,7 +196,7 @@ export default function Atlas({
   function choose(c: AtlasCharacter) {
     stopAudio();
     setSelected(c.id);
-    setWriting("notebook");
+    setWriting("animated");
     url(scope, c.id);
   }
   function write(c = character) {
@@ -922,7 +923,7 @@ export default function Atlas({
                 value={selected}
                 onChange={(e) => {
                   setSelected(e.target.value);
-                  setWriting("notebook");
+                  setWriting("animated");
                   url(scope, e.target.value);
                 }}
               >
@@ -939,7 +940,8 @@ export default function Atlas({
               )}
             </p>
           </div>
-          {writing === "notebook" ? (
+          <div className="atlas-writing-modes"><button aria-pressed={writing==='animated'} onClick={()=>setWriting('animated')}>{({en:'Animated writing',fr:'Écriture animée',ru:'Анимированное письмо'})[locale]}</button><button aria-pressed={writing==='notebook'} onClick={()=>setWriting('notebook')}>{({en:'Notebook / PDF layout',fr:'Cahier / format PDF',ru:'Тетрадь / формат PDF'})[locale]}</button></div>
+          {writing === "animated" ? <div className="panel"><AtlasGuidedWriting key={selected} character={character.hanzi} penOnly={penOnly} onSave={()=>progress.record(newAtlasEvent(character.id,'writing','copy',0,true))}/></div> : writing === "notebook" ? (
             <Notebook
               key={selected}
               item={item}
@@ -957,7 +959,7 @@ export default function Atlas({
                       atlasCharacters.length
                   ].id,
                 );
-                setWriting("notebook");
+                setWriting("animated");
               }}
             />
           ) : (
@@ -968,7 +970,7 @@ export default function Atlas({
               penOnly={penOnly}
               notify={notify}
               record={progress.record}
-              onBack={() => setWriting("notebook")}
+              onBack={() => setWriting("animated")}
             />
           )}
         </>

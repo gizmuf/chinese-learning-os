@@ -23,3 +23,12 @@
 .is-orbit .cloud-node{height:58px;padding:4px 6px;justify-content:center}.is-orbit .cloud-node>b{font-size:26px}
 
 .is-orbit .cloud-node>*{flex-shrink:0}
+
+@font-face{font-family:ChineseOSStructureShapes;src:url('/fonts/ChineseOSStructureShapes.woff') format('woff');font-display:swap;unicode-range:U+2E80-2FFF,U+31C0-31EF,U+3400-4DBF,U+10000-10FFFF}
+@font-face{font-family:ChineseOSNamedShapes;src:url('/fonts/ChineseOSNamedShapes.woff') format('woff');font-display:block;unicode-range:U+E000-F8FF}
+.cloud-part b,.cloud-family-caption b,.cloud-source-ids{font-family:ChineseOSNamedShapes,ChineseOSStructureShapes,serif}
+.cloud-source-detail{font-size:11px;line-height:1.5;margin:12px 0;color:var(--cl-muted)}.cloud-source-detail summary{cursor:pointer}.cloud-source-detail a{color:var(--cl-ink)}.cloud-source-ids{font-size:24px;overflow-wrap:anywhere}
+
+.cloud-writing-dialog{max-height:calc(100dvh - 32px);overflow:auto}
+
+.cloud-writing-dialog{margin:auto}

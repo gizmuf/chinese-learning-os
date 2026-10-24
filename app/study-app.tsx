@@ -377,6 +377,7 @@ export default function StudyApp({
     requestAnimationFrame(()=>window.scrollTo({top:scroll,behavior:"instant"}));
   }
   function openAtlasWord(item: Item) {
+    setWritingLayout("studio");
     const origin={url:window.location.pathname+window.location.search,scroll:window.scrollY};
     setLevel(item.hskLevel===3?"hsk3":item.hskLevel===2?"hsk2":item.hskLevel===1?"hsk1":"bonus");
     openPractice(item); setAtlasReturn(origin);

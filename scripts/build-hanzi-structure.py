@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Build a reproducible, dataset-derived IDS index for the HSK vocabulary.
 
-The output describes modern structural decompositions from Make Me a Hanzi. It
+The output describes modern structural decompositions from Make Me a Hanzi,
+with exact China-form BabelStone IDS replacements for 81 partial entries. It
 does not assert historical etymology or curated/certified component membership.
 Run with the exact dictionary snapshot and exported app content used for a build:
 
@@ -42,6 +43,8 @@ IDS_ARITY = {
     "⿹": 2,
     "⿺": 2,
     "⿻": 2,
+    "⿼": 2,
+    "⿽": 2,
 }
 UNKNOWN_MARKERS = {"？", "?"}
 IDS_OPERATOR_RANGE = range(0x2FF0, 0x3000)
@@ -154,6 +157,27 @@ def main() -> None:
             raise FileNotFoundError(path)
 
     source_records = load_dictionary(dictionary_path)
+    review = json.loads((ROOT / "data/structure-resolutions.json").read_text(encoding="utf-8"))
+    resolutions = {row["hanzi"]: row for row in review["resolutions"]}
+    if len(resolutions) != 81:
+        raise ValueError("Expected exactly 81 reviewed source replacements")
+    excerpt = (ROOT / review["sourceExcerpt"]).read_text(encoding="utf-8")
+    for character, resolution in resolutions.items():
+        original = source_records[character]
+        if "？" not in original["decomposition"]:
+            raise ValueError(f"Unexpected replacement of complete source IDS: {character}")
+        variant = resolution["sourceIds"][0]
+        if not any(line.startswith(f"U+{ord(character):04X}\t{character}\t") and variant in line.split("\t")[2:] for line in excerpt.splitlines()):
+            raise ValueError(f"Missing exact source evidence for {character}")
+        region = variant.split("$(", 1)[1].split(")", 1)[0]
+        if "G" not in region or "[G]" in region:
+            raise ValueError(f"Not a current China source form: {character}")
+        normalized = variant[1:variant.index("$")]
+        for glyph, part in review["namedComponents"].items():
+            normalized = normalized.replace("{" + str(part["number"]) + "}", glyph)
+        if normalized != resolution["decomposition"] or resolution["approximate"]:
+            raise ValueError(f"Non-exact normalized source IDS: {character}")
+        source_records[character] = {**original, "decomposition": normalized}
     items = load_items(content_path)
     counts_by_level = {level: 0 for level in (1, 2, 3)}
     word_ids_by_character: dict[str, list[str]] = {}
@@ -208,6 +232,9 @@ def main() -> None:
         if isinstance(decomposition, str) and decomposition:
             try:
                 tree, leaves, unresolved = parse_ids(decomposition)
+                # A source self-IDS is an explicit terminal, never a self edge.
+                if decomposition == character:
+                    leaves = []
             except IDSParseError as error:
                 parse_error = str(error)
         structures[character] = {
@@ -260,6 +287,18 @@ def main() -> None:
             "sourceStatus": "dataset-derived-modern-structure",
             "wordIds": word_ids_by_character[character],
         }
+        if character in resolutions:
+            resolution = resolutions[character]
+            parsed[character].update({
+                "source": "babelstone-ids",
+                "structureSource": {
+                    "url": review["sourceUrl"], "sha256": review["sourceSha256"],
+                    "line": resolution["sourceLine"], "ids": resolution["sourceIds"][0],
+                    "region": "G", "terminal": resolution["status"] == "atomic",
+                    "namedTerminalComponents": [g for g in structure["leaves"] if g in review["namedComponents"]],
+                    "notes": resolution["notes"],
+                },
+            })
         if structure["parseError"]:
             parsed[character]["decompositionParseError"] = structure["parseError"]
 
@@ -312,7 +351,14 @@ def main() -> None:
         "GNU Lesser General Public License version 3 or (at your option) any later version. "
         "The accompanying COPYING, LGPL, and GPL texts preserve the upstream notices. "
         "Decompositions are dataset-derived modern structure; they are not historical etymology, "
-        "a curated teaching map, or a certified linguistic classification."
+        "a curated teaching map, or a certified linguistic classification. "
+        "81 formerly partial entries use exact G-region BabelStone IDS by Andrew West; "
+        "the selected source rows, hash, and named unencoded terminal references are "
+        "preserved in data/structure-resolutions.json and data/sources/babelstone-ids-review.txt. "
+        "BabelStone IDS permits personal and commercial reuse. Named PUA glyphs are pinned "
+        "to the downloaded source font version 1.472 and hash; they are not standard Unicode "
+        "characters or semantic/etymological claims. Bundled renamed font subsets retain "
+        "the original Arphic Public License in their separate notices."
     )
     (license_dir / "hanzi-structure-SOURCE.txt").write_text(
         f"{source_note}\n\n"
@@ -330,7 +376,7 @@ def main() -> None:
     output = {
         "schemaVersion": 1,
         "title": "HSK 1-3 modern structural component index",
-        "source": "makemeahanzi",
+        "source": "makemeahanzi-with-babelstone-ids-review",
         "sourceStatus": "dataset-derived-modern-structure",
         "epistemicNotice": (
             "Dataset-derived modern structural decomposition only. This is not historical "
@@ -338,6 +384,8 @@ def main() -> None:
         ),
         "sourceUrl": source_url,
         "sourceSha256": dictionary_sha,
+        "additionalStructureSource": {key: review[key] for key in ("sourceUrl", "sourceSha256", "sourceDate", "fontActualVersion", "fontSourceSha256")},
+        "namedComponents": review["namedComponents"],
         "wordIdSource": "canonical app/content.ts item IDs filtered to HSK levels 1-3",
         "wordIdSourceSha256": canonical_content_sha,
         "license": "LGPL-3.0-or-later",
@@ -360,6 +408,9 @@ def main() -> None:
             "charactersMissingFromDictionary": sum(c not in source_records for c in characters),
             "decompositionCompleteCount": complete_count,
             "decompositionIncompleteCount": len(records) - complete_count,
+            "reviewedReplacements": len(resolutions),
+            "sourceTerminalCount": sum(r["status"] == "atomic" for r in resolutions.values()),
+            "namedTerminalComponentCount": len(review["namedComponents"]),
             "missingDecompositionCount": missing_decomposition_count,
             "unknownMarkerCount": unknown_marker_count,
             "invalidIDSCount": parse_error_count,
