@@ -32,3 +32,5 @@ export function recognitionReviewQuestions(events:readonly RecognitionAttempt[],
  const summary=recognitionSummary(events,now),localized=wordMap(locale);return summary[kind].flatMap(ch=>{const e=ch.latest,word=localized.get(e.wordId);return word?[{id:e.target+'|'+e.wordId,target:e.target,partId:e.partId,word,masked:word.hanzi.split(e.target).join('□'),choices:e.choices}]:[]});
 }
 export function localizeRecognitionQuestion(question:PracticeQuestion,locale:Locale):PracticeQuestion{const word=wordMap(locale).get(question.word.id);return word?{...question,word}:question}
+/** A late sync snapshot must not discard a just-checked local result or downgrade an acknowledgement. */
+export function mergeRecognitionAttempts(current:readonly StoredRecognitionAttempt[],incoming:readonly StoredRecognitionAttempt[]){const merged=new Map(current.map(e=>[e.id,e]));for(const event of incoming){const previous=merged.get(event.id);if(previous&&!sameRecognitionAttempt(previous,event))throw Error('Recognition event conflict');merged.set(event.id,{...event,synced:event.synced||previous?.synced===true})}return [...merged.values()]}

@@ -4,6 +4,7 @@ import { authenticatedFetch } from "./auth-client";
 import {
   recognitionAttemptSchema,
   sameRecognitionAttempt,
+  mergeRecognitionAttempts,
   type RecognitionAttempt,
   type StoredRecognitionAttempt,
 } from "./recognition-history";
@@ -47,6 +48,7 @@ export function useRecognitionProgress(owner: string | null) {
   } | null>(null);
   const [events, setEvents] = useState<StoredRecognitionAttempt[]>([]);
   const [status, setStatus] = useState("Loading your notebook…");
+  const latestRows = useRef<StoredRecognitionAttempt[]>([]);
   const generation = useRef(0);
   const lock = useRef<number | null>(null);
   const db = connection?.owner === owner ? connection.db : null;
@@ -54,6 +56,7 @@ export function useRecognitionProgress(owner: string | null) {
     const token = ++generation.current;
     let opened: IDBDatabase | undefined;
     setConnection(null);
+    latestRows.current=[];
     setEvents([]);
     setStatus("Loading your notebook…");
     open(owner ?? "guest")
@@ -65,6 +68,7 @@ export function useRecognitionProgress(owner: string | null) {
         }
         const rows = await read(value);
         if (generation.current === token) {
+          latestRows.current=rows;
           setEvents(rows);
           setConnection({ db: value, owner, token });
           setStatus(owner ? "Ready to sync" : "Guest · saved on this device");
@@ -112,9 +116,11 @@ export function useRecognitionProgress(owner: string | null) {
           ),
       });
       if (merged && current()) {
-        setEvents(merged);
+        const combined=mergeRecognitionAttempts(latestRows.current,merged);
+        latestRows.current=combined;
+        setEvents(combined);
         setStatus(
-          merged.some((e) => !e.synced)
+          combined.some((e) => !e.synced)
             ? "Saved here · sync pending"
             : "All progress synced",
         );
@@ -147,9 +153,11 @@ export function useRecognitionProgress(owner: string | null) {
       if (generation.current !== token) return;
       const rows = await read(db);
       if (generation.current === token) {
-        setEvents(rows);
+        const combined=mergeRecognitionAttempts(latestRows.current,rows);
+        latestRows.current=combined;
+        setEvents(combined);
         setStatus(
-          owner ? "Saved here · syncing…" : "Guest · saved on this device",
+          owner ? combined.some(e=>!e.synced)?"Saved here · syncing…":"All progress synced" : "Guest · saved on this device",
         );
       }
     },
