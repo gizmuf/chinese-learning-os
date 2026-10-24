@@ -1,0 +1,9 @@
+This index is derived from Make Me a Hanzi dictionary.txt. The upstream COPYING notice says dictionary.txt is derived from Unihan and CJKlib and is distributable under the GNU Lesser General Public License version 3 or (at your option) any later version. The accompanying COPYING, LGPL, and GPL texts preserve the upstream notices. Decompositions are dataset-derived modern structure; they are not historical etymology, a curated teaching map, or a certified linguistic classification.
+
+Dictionary URL: https://github.com/skishore/makemeahanzi/blob/master/dictionary.txt
+Dictionary SHA-256: 744bb05d5b0742e9ee35c37791f94d56a173349b3367569e7ca11e510364d203
+Upstream COPYING URL: https://github.com/skishore/makemeahanzi/blob/master/COPYING
+Upstream LGPL URL: https://github.com/skishore/makemeahanzi/blob/master/LGPL
+Bundled COPYING SHA-256: 26fa6b699b32401de4b75a4af574c2e0a99b3df6cb12df9313d257ee4634359c
+Bundled LGPL SHA-256: eeb6fd06beac4a94a12ffb66876ecd6af68d5b6f38650d5f11aa90125933098b
+Bundled GPL-3.0 SHA-256: 3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986
