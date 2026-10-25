@@ -44,6 +44,10 @@ Real Apple Pencil pressure, palm rejection, device speakers and installed browse
 
 Edit the authoring files in `data/` and run `scripts/build-hsk-content.py` to regenerate `app/content.ts`. Each item needs a stable unique ID, full word, tone-marked pinyin, English meaning, Chinese example, example pinyin and translation. Never repurpose an existing ID: historical reviews depend on it. Generate bundled audio for the new text and run `npm run prebuild` to add character data. Run the documented checks and deploy an updated version of the same Site.
 
+## Whole-word families
+
+Atlas also has an additive **Word families** view: an aligned whole-family board, actual 哪/那 comparisons and two synchronized difference-training reels around a fixed shared anchor. It uses the canonical vocabulary and existing audio/writing tools, with EN/FR/RU and no new grading or progress identities. The original component/character layouts remain available. See [WORD_FAMILIES.md](WORD_FAMILIES.md) for scope, routes, authoring and verification.
+
 ## Account identity and deployment
 
 Firebase Authentication is isolated in `chinese-os-gizmuf-auth` (Chinese OS Auth); it stores credentials, not learning records. Google and Email/Password are enabled. Passwords need at least 8 characters; email enumeration protection is enabled. Google support contact: gizmuf@gmail.com. Only verified Firebase ID tokens issued by this exact project are accepted. The server verifies RS256 signatures, issuer, audience, expiry, subject, and verification status. Learning records remain in the existing Sites D1 database under `firebase:<uid>`.
