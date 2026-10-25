@@ -19,7 +19,7 @@
 
 .layout-space .cloud-family-picker,.layout-space .cloud-toolbar>.cloud-layout{display:none}.layout-space .cloud-seeds{flex-wrap:wrap;overflow:visible;margin:14px 0 20px}.layout-space .cloud-seeds button{min-height:44px}
 
-.sp-sphere{max-width:400px;margin-inline:auto;width:100%}.sp-family-tools{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;margin:6px 0}.sp-family-tools .sp-family-label,.sp-family-tools .cloud-relation-filters{margin:0}.sp-card.is-active{transform:none!important}.sp-family-controls{min-height:30px}
+.sp-sphere{max-width:400px;margin-inline:auto;width:100%}.sp-family-tools{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;margin:6px 0}.sp-family-tools .sp-family-label,.sp-family-tools .cloud-relation-filters{margin:0}.sp-card.is-active{transform:none}.sp-family-controls{min-height:30px}
 
 .sp-speaker.is-compact.is-context{width:auto;max-width:100%;font-size:13px}.sp-speaker.is-compact.is-context span{overflow-wrap:anywhere}
 /* Recognition, coverage and explanatory audio stay inside the spatial view. */
@@ -37,3 +37,8 @@
 @media(max-width:760px){.sp-detail,.sp-recognition{grid-column:1;grid-row:1;border-top:0;padding-top:0}.sp-cloud-section{grid-column:1;grid-row:2;border-top:1px solid var(--sp-line);padding-top:14px}}
 .sp-personal>summary>strong{display:flex;align-items:center;gap:6px}.sp-personal>summary>strong svg{transition:transform .18s}.sp-personal[open]>summary>strong svg{transform:rotate(180deg)}
 .sp-progress-signin{display:inline;padding:0!important;border:0!important;background:transparent!important;text-decoration:underline;font-size:inherit;color:var(--sp-ink)}
+
+/* During direct manipulation the front card, rather than the deck, follows the pointer. */
+.sp-deck[data-deck-moving] .sp-card{transition:none;will-change:transform}.sp-deck:not(.is-comparison){overflow-x:clip;overflow-y:clip}
+
+.sp-card-audio{max-width:100%}.sp-deck.is-comparison .sp-card-audio{margin-top:auto}

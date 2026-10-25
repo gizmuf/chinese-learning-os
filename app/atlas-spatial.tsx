@@ -15,6 +15,7 @@ import {recognitionSummary,recognitionReviewQuestions,type PracticeQuestion} fro
 import type {useRecognitionProgress} from './recognition-store';
 import AtlasFamilyDirectory from './atlas-family-directory';
 import {useSpatialMotion} from './atlas-spatial-motion';
+import {useDeckMotion} from './atlas-deck-motion';
 import './atlas-spatial.css';
 type Props={family:SpatialCharacter[];total:number;hanzi:string;component:string;familyLabel:string;mode:CardMode;word?:CloudWord;words:CloudWord[];onMode:(mode:CardMode)=>void;onCharacter:(h:string)=>void;onWord:(word:CloudWord)=>void;onWrite:(trigger:HTMLButtonElement)=>void;canWrite:boolean;notify:(message:string)=>void;collection:'library'|'atlas';level:'all'|1|2|3;relation:'all'|'meaning'|'sound'|'shape';counts:{meaning:number;sound:number;shape:number};onRelation:(relation:'all'|'meaning'|'sound'|'shape')=>void;onHskFamily:(id?:string)=>void;recognition:ReturnType<typeof useRecognitionProgress>;navigationRevision:number;owner:string|null;onReviewStart:()=>void;onReviewContext:(question:PracticeQuestion)=>void;onReviewEnd:(restore:boolean)=>void;parts:ReactNode};
 export default function AtlasSpatial(p:Props){
@@ -30,7 +31,9 @@ export default function AtlasSpatial(p:Props){
  function exitPractice(){setSession(null);p.onReviewEnd(true)}
  const coverage=useMemo(()=>extendedCoverage(3),[]),questions=useMemo(()=>recognitionQuestions(p.family,locale),[p.family,locale]);
  const directory=useRef<HTMLDialogElement>(null),directoryTrigger=useRef<HTMLElement|null>(null);
- const motion=useSpatialMotion(p.mode+'|'+p.hanzi+'|'+p.component);
+ const groupMotion=useSpatialMotion(p.mode+'|'+p.hanzi+'|'+p.component);
+ const deckMotion=useDeckMotion(p.mode+'|'+p.hanzi+'|'+p.component);
+ const motion=p.mode==='focus'?deckMotion:groupMotion;
  const [page,setPage]=useState(0),[overview,setOverview]=useState(false),[moreWords,setMoreWords]=useState(false),[entry,setEntry]=useState<DictionaryEntry|null>(null),[playing,setPlaying]=useState<string|null>(null);
  const dialog=useRef<HTMLDialogElement>(null),opener=useRef<HTMLElement|null>(null),audioRef=useRef<HTMLAudioElement|null>(null);
  const familyKey=p.family.map(ch=>ch.hanzi).join('');
@@ -63,9 +66,9 @@ export default function AtlasSpatial(p:Props){
     {p.mode==='compare'&&questions.length>0&&<button type="button" className="sp-start-practice" onClick={()=>{if(audioRef.current){releaseRecording(audioRef.current);audioRef.current=null;setPlaying(null)}setPracticing(true)}}>{c('Practise recognition · hide hints','Reconnaissance · masquer les indices','Распознавание · скрыть подсказки')}</button>}
     <p className="sp-position" aria-live="polite">{selectedIndex<0?c('Choose a character in the family','Choisissez un caractère de la famille','Выберите знак семейства'):p.mode==='compare'?`${cards[0]+1}–${cards.at(-1)!+1} / ${p.family.length}`:`${selectedIndex+1} / ${p.family.length} · ${p.hanzi}`}</p>
     <div ref={motion.ref} className={'sp-deck'+(p.mode==='compare'?' is-comparison':'')} onPointerDown={motion.pointerDown} onPointerMove={motion.pointerMove} onPointerUp={e=>motion.pointerUp(e,move)} onPointerCancel={motion.pointerCancel} onDragStart={e=>e.preventDefault()} onClickCapture={motion.clickCapture} onKeyDown={e=>{if(e.altKey||e.ctrlKey||e.metaKey)return;if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();move(e.key==='ArrowLeft'?-1:1)}}} aria-label={c('Swipe character cards','Balayer les cartes','Листайте карточки')}>
-     {cards.map(i=>{const ch=p.family[i],distance=i-selectedIndex,back=Math.abs(distance),isActive=i===selectedIndex,style=p.mode==='focus'?{transform:`translateX(${distance*35}px) translateY(${back*13}px) translateZ(${-back*90}px) rotateY(${-distance*14}deg)`,zIndex:5-back} as CSSProperties:undefined;return <article key={ch.hanzi} className={'sp-card'+(isActive?' is-active':'')} style={style} aria-label={ch.hanzi+' · '+ch.meaning[locale]}>
+     {cards.map(i=>{const ch=p.family[i],distance=i-selectedIndex,back=Math.abs(distance),isActive=i===selectedIndex,style=p.mode==='focus'?{transform:`translateX(${distance*35}px) translateY(${back*13}px) translateZ(${-back*90}px) rotateY(${-distance*14}deg)`,zIndex:5-back} as CSSProperties:undefined;return <article key={ch.hanzi} data-deck-hanzi={ch.hanzi} data-deck-offset={distance} className={'sp-card'+(isActive?' is-active':'')} style={style} aria-label={ch.hanzi+' · '+ch.meaning[locale]}>
       <span className="sp-card-relation">{relation(ch.hanzi)}</span><button type="button" className="sp-card-select" onClick={e=>isActive?lookup(ch.hanzi,e.currentTarget):p.onCharacter(ch.hanzi)} aria-label={(isActive?c('Definition of ','Définition de ','Значение '):c('Select ','Choisir ','Выбрать '))+ch.hanzi} tabIndex={p.mode==='focus'&&!isActive?-1:0} aria-pressed={isActive}><CloudHighlight hanzi={ch.hanzi} component={p.component}/><span className="sp-reading">{ch.pinyin}</span><span className="sp-meaning">{ch.meaning[locale]}</span></button>
-      {(p.mode==='compare'||isActive)&&speaker(characterPronunciation(ch.hanzi,locale),p.mode==='compare',ch.hanzi)}
+      <div className="sp-card-audio" inert={p.mode==='focus'&&!isActive} aria-hidden={p.mode==='focus'&&!isActive}>{speaker(characterPronunciation(ch.hanzi,locale),p.mode==='compare',ch.hanzi)}</div>
      </article>})}
      {selectedIndex<0&&p.family.length>0&&<button type="button" className="sp-choose-first" onClick={()=>p.onCharacter(p.family[0].hanzi)}>{c('Start with ','Commencer par ','Начать с ')}{p.family[0].hanzi}</button>}
     </div>
