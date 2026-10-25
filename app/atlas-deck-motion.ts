@@ -1,6 +1,6 @@
 'use client';
 import {useEffect,useLayoutEffect,useRef,type PointerEvent,type MouseEvent} from 'react';
-import {spatialSwipe} from './atlas-spatial-model';
+import {deckSwipe,deckWheel,type WheelGesture} from './atlas-deck-gesture';
 import {settleDeckFlight} from './atlas-deck-flight';
 
 export const deckTransform=(offset:number,progress=0)=>{
@@ -8,9 +8,12 @@ export const deckTransform=(offset:number,progress=0)=>{
  return `translateX(${offset*35*remaining}px) translateY(${Math.abs(offset)*13*remaining}px) translateZ(${-Math.abs(offset)*90*remaining}px) rotateY(${-offset*14*remaining}deg)`;
 };
 /** The deck stays still. Only the front card follows the pointer; its successor rises underneath. */
-export function useDeckMotion(key:string){
+export function useDeckMotion(key:string,navigate:(direction:-1|1)=>boolean){
  const ref=useRef<HTMLDivElement>(null),animations=useRef<Animation[]>([]),locked=useRef(false),mounted=useRef(true),suppress=useRef(0);
- const gesture=useRef<{id:number;x:number;y:number;dx:number;horizontal:boolean}|null>(null),flight=useRef<ReturnType<typeof settleDeckFlight>|null>(null);
+ const gesture=useRef<{id:number;x:number;y:number;dx:number;horizontal:boolean;motionAt:number;lastX:number;lastAt:number;velocity:number}|null>(null),flight=useRef<ReturnType<typeof settleDeckFlight>|null>(null);
+ const navigateRef=useRef(navigate),wheel=useRef<WheelGesture>({at:0,distance:0,handled:false});
+ useLayoutEffect(()=>{navigateRef.current=navigate},[navigate]);
+ useEffect(()=>{const root=ref.current;if(!root)return;const onWheel=(e:WheelEvent)=>{if(e.ctrlKey||e.metaKey)return;const scale=e.deltaMode===1?16:e.deltaMode===2?root.clientWidth:1;const result=deckWheel(wheel.current,e.deltaX*scale,e.deltaY*scale,performance.now());wheel.current=result.state;if(!result.consume)return;e.preventDefault();if(result.direction)navigateRef.current(result.direction)};root.addEventListener('wheel',onWheel,{passive:false});return()=>root.removeEventListener('wheel',onWheel)},[key]);
  const previous=useRef(key),snapshots=useRef<Map<string,{transform:string;opacity:string}>|null>(null);
  const reduced=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
  const cards=()=>Array.from(ref.current?.querySelectorAll<HTMLElement>('.sp-card')??[]);
@@ -57,8 +60,8 @@ export function useDeckMotion(key:string){
   flight.current=settleDeckFlight(outgoing.finished,()=>{if(!mounted.current||animations.current[0]!==outgoing)return;snapshots.current=new Map(cards().map(card=>[card.dataset.deckHanzi??'',{transform:getComputedStyle(card).transform,opacity:getComputedStyle(card).opacity}]));locked.current=false;commit()},abort,()=>{outgoing.finish();incoming.finish()});
   return true;
  }
- function pointerDown(e:PointerEvent<HTMLElement>){if(e.button!==0||!e.isPrimary||locked.current)return;if(gesture.current)abort();stop();suppress.current=0;gesture.current={id:e.pointerId,x:e.clientX,y:e.clientY,dx:0,horizontal:false}}
- function pointerMove(e:PointerEvent<HTMLElement>){const g=gesture.current;if(!g||g.id!==e.pointerId||locked.current)return;if(e.pointerType==='mouse'&&e.buttons===0){abort();return}const dx=e.clientX-g.x,dy=e.clientY-g.y;if(!g.horizontal){if(Math.abs(dy)>9&&Math.abs(dy)>Math.abs(dx)){gesture.current=null;return}if(Math.abs(dx)<=9||Math.abs(dx)<=Math.abs(dy)*1.3)return;g.horizontal=true;try{e.currentTarget.setPointerCapture(e.pointerId)}catch{abort();return}}g.dx=dx;suppress.current=Date.now()+500;if(!reduced())paint(dx)}
- function pointerUp(e:PointerEvent<HTMLElement>,navigate:(d:-1|1)=>boolean){const g=gesture.current;if(!g||g.id!==e.pointerId)return;gesture.current=null;if(!g.horizontal)return;const direction=spatialSwipe(e.clientX-g.x,e.clientY-g.y);e.preventDefault();suppress.current=Date.now()+500;try{if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId)}catch{}if(!direction||!navigate(direction))snapBack()}
+ function pointerDown(e:PointerEvent<HTMLElement>){if(e.button!==0||!e.isPrimary||locked.current)return;if(gesture.current)abort();stop();suppress.current=0;const now=performance.now();gesture.current={id:e.pointerId,x:e.clientX,y:e.clientY,dx:0,horizontal:false,motionAt:now,lastAt:now,lastX:e.clientX,velocity:0}}
+ function pointerMove(e:PointerEvent<HTMLElement>){const g=gesture.current;if(!g||g.id!==e.pointerId||locked.current)return;if(e.pointerType==='mouse'&&e.buttons===0){abort();return}const dx=e.clientX-g.x,dy=e.clientY-g.y,now=performance.now();if(!g.horizontal){if(Math.abs(dy)>9&&Math.abs(dy)>Math.abs(dx)){gesture.current=null;return}if(Math.abs(dx)<=9||Math.abs(dx)<=Math.abs(dy)*1.3)return;g.horizontal=true;g.motionAt=now;try{e.currentTarget.setPointerCapture(e.pointerId)}catch{abort();return}}g.velocity=(e.clientX-g.lastX)/Math.max(8,now-g.lastAt);g.lastX=e.clientX;g.lastAt=now;g.dx=dx;suppress.current=Date.now()+500;if(!reduced())paint(dx)}
+ function pointerUp(e:PointerEvent<HTMLElement>,navigate:(d:-1|1)=>boolean){const g=gesture.current;if(!g||g.id!==e.pointerId)return;gesture.current=null;if(!g.horizontal)return;const now=performance.now(),direction=deckSwipe(e.clientX-g.x,e.clientY-g.y,now-g.motionAt,now-g.lastAt<=100?g.velocity:0);e.preventDefault();suppress.current=Date.now()+500;try{if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId)}catch{}if(!direction||!navigate(direction))snapBack()}
  return {ref,transition,pointerDown,pointerMove,pointerUp,pointerCancel:abort,lostPointerCapture:(e:PointerEvent<HTMLElement>)=>{if(gesture.current?.id===e.pointerId)abort()},clickCapture:(e:MouseEvent)=>{if(Date.now()<suppress.current){e.preventDefault();e.stopPropagation()}}};
 }

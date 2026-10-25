@@ -32,7 +32,7 @@ export default function AtlasSpatial(p:Props){
  const coverage=useMemo(()=>extendedCoverage(3),[]),questions=useMemo(()=>recognitionQuestions(p.family,locale),[p.family,locale]);
  const directory=useRef<HTMLDialogElement>(null),directoryTrigger=useRef<HTMLElement|null>(null);
  const groupMotion=useSpatialMotion(p.mode+'|'+p.hanzi+'|'+p.component);
- const deckMotion=useDeckMotion(p.mode+'|'+p.hanzi+'|'+p.component);
+ const deckMotion=useDeckMotion(p.mode+'|'+p.hanzi+'|'+p.component,move);
  const motion=p.mode==='focus'?deckMotion:groupMotion;
  const [page,setPage]=useState(0),[overview,setOverview]=useState(false),[moreWords,setMoreWords]=useState(false),[entry,setEntry]=useState<DictionaryEntry|null>(null),[playing,setPlaying]=useState<string|null>(null);
  const dialog=useRef<HTMLDialogElement>(null),opener=useRef<HTMLElement|null>(null),audioRef=useRef<HTMLAudioElement|null>(null);
