@@ -42,3 +42,6 @@
 .sp-deck[data-deck-moving] .sp-card{transition:none;will-change:transform}.sp-deck:not(.is-comparison){overflow-x:clip;overflow-y:clip}
 
 .sp-card-audio{max-width:100%}.sp-deck.is-comparison .sp-card-audio{margin-top:auto}
+
+/* The visible corners are part of the same card button, on both sides. */
+.sp-deck:not(.is-comparison) .sp-card:not(.is-active) .sp-card-select{position:static}.sp-deck:not(.is-comparison) .sp-card:not(.is-active) .sp-card-select::after{content:"";position:absolute;inset:0;z-index:2;border-radius:20px;cursor:pointer}
