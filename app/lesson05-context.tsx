@@ -1,16 +1,22 @@
 'use client';
-import {useMemo,useState} from 'react';
-import {Volume2,X} from 'lucide-react';
+import {useEffect,useId,useMemo,useRef,useState} from 'react';
+import {Volume2} from 'lucide-react';
 import {useI18n} from './i18n';
 import {L} from './course-data';
-import {studyDictionary,dictionaryTokens,type DictionaryEntry} from './atlas-spatial-model';
+import {DictionaryWords,DictionaryAudio,StudyDictionaryDialog} from './study-dictionary';
+import {studyDictionary,type DictionaryEntry,type Pronunciation} from './atlas-spatial-model';
 import {lesson05All,lesson05Terms,lesson05Item,lesson05Paths,lesson05Connections} from './lesson05-data';
-import {playRecording,speak} from './audio';
+import {playRecording,releaseRecording,speak} from './audio';
 export function Lesson05Gloss({text,notify}:{text:string;notify:(v:string)=>void}){
- const {locale,t}=useI18n();const [selected,setSelected]=useState<DictionaryEntry|null>(null);
- const dictionary=useMemo(()=>{const d=new Map(studyDictionary(locale));for(const v of lesson05Terms)d.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],audio:{text:v.hanzi,pinyin:v.pinyin,context:false,source:'/course05/audio/course05-'+v.id+'-word.mp3'}});return d;},[locale]);
- const tokens=dictionaryTokens(text,dictionary);
- return <div className="lesson05-gloss"><span className="lesson05-hanzi" lang="zh-Hans">{tokens.map((v,i)=>v.chinese&&dictionary.has(v.text)?<button key={i} className="lesson05-word" onClick={()=>setSelected(dictionary.get(v.text)!)} aria-label={v.text+' · '+t('Meaning')}>{v.text}</button>:<span key={i}>{v.text}</span>)}</span>{selected&&<aside className="lesson05-definition" aria-live="polite"><div><strong lang="zh-Hans">{selected.text}</strong><span className="pinyin">{selected.pinyin}</span><span>{selected.meaning}</span></div><button className="audio-button" aria-label={t('Listen')} onClick={()=>{if(selected.audio)playRecording(selected.audio.source,notify);}} disabled={!selected.audio}><Volume2 size={18}/></button><button className="text-button" aria-label={t('Close')} onClick={()=>setSelected(null)}><X size={18}/></button></aside>}</div>;
+ const {locale,t}=useI18n();const [selected,setSelected]=useState<DictionaryEntry|null>(null),[playing,setPlaying]=useState<string|null>(null);
+ const dialog=useRef<HTMLDialogElement>(null),opener=useRef<HTMLElement|null>(null),audio=useRef<HTMLAudioElement|null>(null),headingId=useId();
+ const dictionary=useMemo(()=>{const d=new Map(studyDictionary(locale));for(const v of lesson05Terms)d.set(v.hanzi,{...d.get(v.hanzi),text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],audio:{text:v.hanzi,pinyin:v.pinyin,context:false,source:'/course05/audio/course05-'+v.id+'-word.mp3'}});return d;},[locale]);
+ function stop(){if(audio.current){releaseRecording(audio.current);audio.current=null;}setPlaying(null);}
+ function close(){stop();setSelected(null);requestAnimationFrame(()=>opener.current?.isConnected&&opener.current.focus());}
+ function lookup(value:string,trigger:HTMLButtonElement){if(!dialog.current?.open)opener.current=trigger;stop();setSelected(dictionary.get(value)??{text:value,pinyin:'',meaning:t('Not yet in this study dictionary.')});}
+ function listen(recording:Pronunciation){stop();const player=playRecording(recording.source,notify);audio.current=player;setPlaying(recording.source);player.addEventListener('ended',()=>{if(audio.current===player){audio.current=null;setPlaying(null);}},{once:true});}
+ useEffect(()=>{setSelected(null);setPlaying(null);return()=>{if(audio.current){releaseRecording(audio.current);audio.current=null;}};},[locale,text]);
+ return <div className="lesson05-gloss sp-atlas"><span className="lesson05-hanzi" lang="zh-Hans"><DictionaryWords text={text} dictionary={dictionary} onLookup={lookup}/></span><StudyDictionaryDialog entry={selected} dialog={dialog} opener={opener} headingId={headingId} onClose={close} onLookup={lookup} speaker={recording=><DictionaryAudio recording={recording} playing={playing} onPlay={listen}/>} onExplore={entry=>{close();const params=new URLSearchParams({atlas:'1',cloud:'1',layout:'space',hanzi:entry.character??Array.from(entry.text)[0]});if(entry.word)params.set('word',entry.word.id);window.open('/?'+params,'_blank','noopener,noreferrer');}}/></div>;
 }
 export function Lesson05Paths({topic,notify}:{topic:string;notify:(v:string)=>void}){
  const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>L(en,fr,ru)[locale];
