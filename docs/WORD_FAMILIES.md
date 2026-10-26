@@ -10,7 +10,7 @@ Examples in HSK1: 学 12, 电 6, 大 4, 哪 5, 那 6, 学生 4 and 电影 2. The
 
 ## Board and comparison
 
-The dark study surface is scoped to this view. Rows align the first shared occurrence in a fixed column; every occurrence is highlighted, including repeats in prefixes or suffixes. Words with the same prefix stay together, preserving constructive pairs such as 大学/大学生. Pinyin and localized full-word meanings sit beside the hanzi. The expanded tablet view fits all twelve 学 rows at 1024×768; exiting restores normal Atlas navigation. On phones the reading and meaning wrap beside the same aligned hanzi.
+The study surface uses the original Chinese OS light palette, shared with the three hybrid views. Rows align the first shared occurrence in a fixed column; every occurrence is highlighted, including repeats in prefixes or suffixes. Words with the same prefix stay together, preserving constructive pairs such as 大学/大学生. Pinyin and localized full-word meanings sit beside the hanzi. The expanded tablet view fits all twelve 学 rows at 1024×768; exiting restores normal Atlas navigation. On phones the reading and meaning wrap beside the same aligned hanzi.
 
 The 哪/那 comparison matches actual prefix/suffix contexts in the selected corpus. Missing counterparts say they are unavailable; no hypothetical word is constructed. Selecting a row retains the family and shows its existing sentence, pronunciation and writing entry. HSK writing uses the canonical Studio and its existing return path. Unlevelled Atlas examples explicitly offer their linked character's existing writing branch.
 
