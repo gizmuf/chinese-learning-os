@@ -46,6 +46,8 @@ Edit the authoring files in `data/` and run `scripts/build-hsk-content.py` to re
 
 ## Whole-word families
 
+Atlas also offers three additive hybrid layouts: **Layer map**, **Family constellations** and **Repetition matrix** (EN/FR/RU). They share canonical vocabulary, selection and URL state, with a shared-character family, the first 100 curriculum entries in the selected scope, or the entire selected vocabulary. Counts distinguish entries/readings, unique hanzi and character occurrences; the full index and bounded pages expose all entries. Modern structural links are explicitly distinct from literal character-in-word membership. Existing audio and animated writing remain available from the selected word. Browsing is read-only and does not award mastery. See [ATLAS_HYBRID.md](ATLAS_HYBRID.md).
+
 Atlas also has an additive **Word families** view: an aligned whole-family board, actual 哪/那 comparisons and two synchronized difference-training reels around a fixed shared anchor. It uses the canonical vocabulary and existing audio/writing tools, with EN/FR/RU and no new grading or progress identities. The original component/character layouts remain available. See [WORD_FAMILIES.md](WORD_FAMILIES.md) for scope, routes, authoring and verification.
 
 ## Account identity and deployment
