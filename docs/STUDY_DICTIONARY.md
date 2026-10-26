@@ -15,3 +15,9 @@ A dictionary help event is handled by each opted-in exercise's existing assisted
 ## Validation
 
 Focused tests cover the reported `请从这个门出。` example, word/character targets, punctuation hit rejection, localized metadata, source audio paths, shared-character highlights, and absence of nested buttons. Browser checks cover Journey → 门 → mén/door, FR/RU/TR variants, word → character → writing → return, passive text outside Atlas, and a real assisted HSK recall result (one supported attempt, zero independent reviews). Existing lessons, PDFs, Atlas views and deck-motion code are retained.
+
+## Pinyin audit: Layer map and Family constellations
+
+All characters in the complete HSK 1–3 map inventory have visible source-backed pinyin. Layer-map components now expose reviewed/core readings first and source dictionary readings second. Graphical fragments for which the source supplies no standalone reading are explicitly labeled as shapes; a reading is not invented. Related-character results, the character index and family shortcuts also display readings. Word meanings and readings remain on the word cards.
+
+The public copy of the earlier three-variant prototype now exposes the pinyin already stored in its sample data (word cards, orbit, matrix and character index). Source-backed component labels are included there too. The original conversation visualization file is preserved outside the public copy. Adding interactive text must retain its host heading size; a specific CSS inheritance rule prevents metadata-span styles from shrinking hanzi.
