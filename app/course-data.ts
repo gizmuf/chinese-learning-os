@@ -1,8 +1,9 @@
 import { items, type Item } from "./content";
 import type { Locale } from "./translate";
 import { localizeItem } from "./translate";
+import {turkishText} from "./turkish";
 export type Copy = Record<Locale, string>;
-export const L = (en: string, fr: string, ru: string): Copy => ({ en, fr, ru });
+export const L = (en: string, fr: string, ru: string): Copy => ({ en, fr, ru, tr:turkishText(en) });
 export type Topic =
   | "time"
   | "rhythm"

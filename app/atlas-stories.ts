@@ -1,5 +1,6 @@
+import {withTurkish} from "./turkish";
 import type { AtlasCopy } from "./atlas-data";
-const A = (en: string, fr: string, ru: string): AtlasCopy => ({ en, fr, ru });
+const A = (en: string, fr: string, ru: string): AtlasCopy => (withTurkish({ en, fr, ru }));
 const narratedStories = {
   sun: {
     character: "日",

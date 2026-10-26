@@ -1,4 +1,5 @@
 'use client';
+import {withTurkish} from "./turkish";
 import {useEffect,useMemo,useRef,useState,type CSSProperties} from 'react';
 import {ArrowLeft,ArrowRight,PenLine,Volume2,Search,Maximize2,Minimize2} from 'lucide-react';
 import {useI18n} from './i18n';
@@ -13,7 +14,7 @@ import {wordPronunciation,sentencePronunciation} from './atlas-spatial-model';
 import './word-families.css';
 type Props={route:CloudRoute;onChange:(patch:Partial<CloudRoute>)=>void;onWrite:(word:CloudWord,trigger:HTMLButtonElement)=>void;notify:(message:string)=>void;expanded:boolean;onExpand:()=>void};
 export default function WordFamilies(p:Props){
- const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>({en,fr,ru})[locale];
+ const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>(withTurkish({en,fr,ru}))[locale];
  const anchor=p.route.anchor,scope=p.route.level,mode=p.route.wordView;
  const words=useMemo(()=>familyWords(anchor,locale,scope),[anchor,locale,scope]);
  const anchors=useMemo(()=>familyAnchors(locale,scope),[locale,scope]);

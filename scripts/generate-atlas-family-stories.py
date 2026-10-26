@@ -13,12 +13,14 @@ import edge_tts
 async def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--content', type=Path, required=True)
+    parser.add_argument('--output', type=Path, default=Path('public/atlas/family-stories'))
     args = parser.parse_args()
     rows = json.loads(args.content.read_text())
-    out = Path('public/atlas/family-stories')
+    out = args.output
     out.mkdir(parents=True, exist_ok=True)
     manifest = out / 'manifest.json'
-    old = {r['file']: r for r in json.loads(manifest.read_text())['recordings']} if manifest.exists() else {}
+    old_manifest = json.loads(manifest.read_text()) if manifest.exists() else {}
+    old = {r['file']: {**r, 'rate': r.get('rate', old_manifest.get('generationRate'))} for r in old_manifest.get('recordings',[])}
     sem = asyncio.Semaphore(3)
 
     def decodes(path):

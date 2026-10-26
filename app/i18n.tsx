@@ -4,7 +4,7 @@ import { translate, localeNames, type Locale } from "./translate";
 const LanguageContext = createContext({locale:"en" as Locale, setLocale: (_:Locale)=>{}, t:(text:string,values?: (string|number|null|undefined)[])=>translate(text,"en",values)});
 export function I18nProvider({children}:{children:React.ReactNode}) {
   const [locale,setLanguage] = useState<Locale>("en");
-  useEffect(()=>{try {const saved=localStorage.getItem("chinese-os-language");if(saved==="en"||saved==="fr"||saved==="ru")setLanguage(saved);} catch {}},[]);
+  useEffect(()=>{try {const saved=localStorage.getItem("chinese-os-language");if(saved==="en"||saved==="fr"||saved==="ru"||saved==="tr")setLanguage(saved);} catch {}},[]);
   const setLocale = useCallback((value:Locale)=>{setLanguage(value);try{localStorage.setItem("chinese-os-language",value);}catch{}},[]);
   useEffect(()=>{document.documentElement.lang=locale;},[locale]);
   const t=useCallback((text:string,values?: (string|number|null|undefined)[])=>translate(text,locale,values),[locale]);

@@ -1,12 +1,12 @@
 {
   "provider": "Microsoft Edge Read Aloud via edge-tts",
   "edgeTtsVersion": "7.3.1",
-  "generationRate": "-5%",
   "recordings": [
     {
       "file": "sun-en-0.mp3",
       "text": "The sun: a round shape in the sky.",
       "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
       "locale": "en",
       "sha256": "d3109711e973883f44ae37c4fd85ffcfbb1969d88db6cee160be2bd8f78806d7"
     },
@@ -14,6 +14,7 @@
       "file": "sun-en-1.mp3",
       "text": "Early forms pictured the sun, often with an inner mark. This is a teaching sketch.",
       "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
       "locale": "en",
       "sha256": "1c1de8ef25cbb87b1054033d1256c0ea71109e25fc5decbe24641d80ccd6a8e9"
     },
@@ -21,6 +22,7 @@
       "file": "sun-en-2.mp3",
       "text": "Today, this character means sun or day. Notice its rectangular outline and central stroke.",
       "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
       "locale": "en",
       "sha256": "a964a4ef0da73fbfd1216d473b63717e5485748608ce48b42dd6d62a61640c3f"
     },
@@ -28,6 +30,7 @@
       "file": "sun-fr-0.mp3",
       "text": "Le soleil : une forme ronde dans le ciel.",
       "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
       "locale": "fr",
       "sha256": "c584bad0e437fe1020f06d5bc1de8773fb7f8e7804b4d9c5e0d2e0c6ce451cc0"
     },
@@ -35,6 +38,7 @@
       "file": "sun-fr-1.mp3",
       "text": "Les formes anciennes représentaient le soleil, souvent avec une marque intérieure. Ceci est un schéma pédagogique.",
       "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
       "locale": "fr",
       "sha256": "d177bec71fe12cdfc267174efbce08fa09e32e55db8b97859b2f9444396d7ec4"
     },
@@ -42,6 +46,7 @@
       "file": "sun-fr-2.mp3",
       "text": "Aujourd’hui, ce caractère signifie soleil ou jour. Observez son contour rectangulaire et son trait central.",
       "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
       "locale": "fr",
       "sha256": "894fe9eac95246275574903b58d734b2d90313dbab8fe1cf398d7757ffa86492"
     },
@@ -49,6 +54,7 @@
       "file": "sun-ru-0.mp3",
       "text": "Солнце — круглая форма в небе.",
       "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
       "locale": "ru",
       "sha256": "40a6955f93c3cb7632841ce1e804b2810857336b4c6ba7a4765469d78460ebdb"
     },
@@ -56,6 +62,7 @@
       "file": "sun-ru-1.mp3",
       "text": "Ранние формы изображали солнце, часто с отметкой внутри. Это учебная схема.",
       "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
       "locale": "ru",
       "sha256": "dbb9af2108e7b35e4db4c7cc1f313f9ee622c2c6ac8cf6bd59edcbfb7cba6b87"
     },
@@ -63,13 +70,39 @@
       "file": "sun-ru-2.mp3",
       "text": "Сегодня этот иероглиф означает солнце или день. Обратите внимание на прямоугольный контур и среднюю черту.",
       "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
       "locale": "ru",
       "sha256": "af64f81f5aab0343788932d19997b61d3540e2ce7048cfe0a99adcbd0b5f2cf5"
+    },
+    {
+      "file": "sun-tr-0.mp3",
+      "text": "Güneş: gökyüzünde yuvarlak bir şekil.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "locale": "tr",
+      "sha256": "d42873827215b4402ab4742d8c9dc9a2c6926a75db50fddacaaa50ed9e2a2109"
+    },
+    {
+      "file": "sun-tr-1.mp3",
+      "text": "İlk biçimler güneşi, çoğunlukla içindeki bir işaretle resmediyordu. Bu bir öğretim çizimidir.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "locale": "tr",
+      "sha256": "264f43bc1534352b9fa1b6f086e1289346b3d575a4f6aa98e4c3ce8c57745e0c"
+    },
+    {
+      "file": "sun-tr-2.mp3",
+      "text": "Bugün bu karakter güneş veya gün demektir. Dikdörtgen ana hattına ve ortadaki çizgisine dikkat edin.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "locale": "tr",
+      "sha256": "2f6e8b8aeb4c236155f2196294c6cef181ef48d3ca4423f3a78898ad50e57ae7"
     },
     {
       "file": "wood-en-0.mp3",
       "text": "A tree: branches above, a trunk, and roots below.",
       "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
       "locale": "en",
       "sha256": "5b8b6d65f30fea785397059f9a194063bba08c725a90b686f24eff0e6c6fc7ef"
     },
@@ -77,6 +110,7 @@
       "file": "wood-en-1.mp3",
       "text": "Early forms pictured a tree. This sketch highlights its branches, trunk and roots.",
       "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
       "locale": "en",
       "sha256": "dc243924990ed8d6bc76904ba2c2bbea13332f5cdd87d245e0d8531000b685e9"
     },
@@ -84,6 +118,7 @@
       "file": "wood-en-2.mp3",
       "text": "Today, this character means tree or wood. Follow this component into other characters.",
       "voice": "en-GB-SoniaNeural",
+      "rate": "-5%",
       "locale": "en",
       "sha256": "77ecad8cdc31639bd79c00ce5d13a8d29349a93b522c00c4a87d08cb9e22eb1e"
     },
@@ -91,6 +126,7 @@
       "file": "wood-fr-0.mp3",
       "text": "Un arbre : des branches en haut, un tronc et des racines en bas.",
       "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
       "locale": "fr",
       "sha256": "e8ff419b36fa07eb2727b3c6dcbac7e874f253db3c064722857d6ecff210cda4"
     },
@@ -98,6 +134,7 @@
       "file": "wood-fr-1.mp3",
       "text": "Les formes anciennes représentaient un arbre. Ce schéma souligne les branches, le tronc et les racines.",
       "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
       "locale": "fr",
       "sha256": "511b53337ea2285d982a81a14428bafa65b3e9c5319e4b6e6c60a912280ae984"
     },
@@ -105,6 +142,7 @@
       "file": "wood-fr-2.mp3",
       "text": "Aujourd’hui, ce caractère signifie arbre ou bois. Suivez ce composant dans d’autres caractères.",
       "voice": "fr-FR-DeniseNeural",
+      "rate": "-5%",
       "locale": "fr",
       "sha256": "3455f9d9be86af8598d85d8348291b478b4985d71e8bbb9f8889429c457a81ae"
     },
@@ -112,6 +150,7 @@
       "file": "wood-ru-0.mp3",
       "text": "Дерево: ветви вверху, ствол и корни внизу.",
       "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
       "locale": "ru",
       "sha256": "07393b78a284bc1f6f851befab703854862c8c678dd59dfb383f1ed06983e29e"
     },
@@ -119,6 +158,7 @@
       "file": "wood-ru-1.mp3",
       "text": "Ранние формы изображали дерево. Эта схема выделяет ветви, ствол и корни.",
       "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
       "locale": "ru",
       "sha256": "857c042bc877bbaca050c6fac0c7f66fdee1d0b9c72394004d5c315d0eb57c2b"
     },
@@ -126,8 +166,33 @@
       "file": "wood-ru-2.mp3",
       "text": "Сегодня этот иероглиф означает дерево или древесину. Найдите этот компонент в других иероглифах.",
       "voice": "ru-RU-SvetlanaNeural",
+      "rate": "-5%",
       "locale": "ru",
       "sha256": "6a550c7d173bc93239fe81283a93d75f0b733f1daefb0a6601a7fbe3d215c0c5"
+    },
+    {
+      "file": "wood-tr-0.mp3",
+      "text": "Bir ağaç: üstte dallar, bir gövde ve altta kökler.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "locale": "tr",
+      "sha256": "f929f27b5d23bece6b1000ead65733d4748de40bd36536d38a34adb835cad286"
+    },
+    {
+      "file": "wood-tr-1.mp3",
+      "text": "İlk biçimler bir ağacı resmediyordu. Bu çizim dalları, gövdeyi ve kökleri vurgular.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "locale": "tr",
+      "sha256": "94de5399e6a92835dc7671537748359a9b4c9b3f52740f82567454d0ceba1544"
+    },
+    {
+      "file": "wood-tr-2.mp3",
+      "text": "Bugün bu karakter ağaç veya ahşap demektir. Bu bileşeni başka karakterlerde takip edin.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "locale": "tr",
+      "sha256": "3147e11509c2dbbb194943f5bbeb5aa5e23046e99bb97215a840f3de6a1eed01"
     }
   ]
 }

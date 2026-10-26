@@ -1,16 +1,17 @@
 'use client';
+import {withTurkish} from "./turkish";
 import {useEffect,useRef,useState} from 'react';
 import {useI18n} from './i18n';
 import batchA from '../data/grammar-hsk3-a.json';
 import batchB from '../data/grammar-hsk3-b.json';
 import {readDraft,saveDraft} from './local-store';
 import './hsk3-grammar.css';
-type Copy=Record<'en'|'fr'|'ru',string>;
+type Copy=Record<'en'|'fr'|'ru'|'tr',string>;
 type Exercise={id:string;prompt:Copy;sentence:string;options:string[];answer:number;explanation:Copy};
 type Card={id:string;pattern:string;explanation:Copy;example:{hanzi:string;pinyin:string;meaning:Copy};exercises:Exercise[]};
 type Unit={id:string;title:Copy;cards:Card[]};
-export const grammarUnits:Unit[]=[...batchA,...batchB];
-const copy={title:{en:'HSK3 grammar',fr:'Grammaire HSK3',ru:'Грамматика HSK3'},intro:{en:'Small patterns. Useful sentences. Learn one idea, then try it.',fr:'Des structures simples, des phrases utiles. Apprenez une idée, puis pratiquez.',ru:'Простые конструкции и полезные фразы. Изучите правило и попробуйте его применить.'},back:{en:'All topics',fr:'Tous les thèmes',ru:'Все темы'},check:{en:'Check answer',fr:'Vérifier',ru:'Проверить'},retry:{en:'Try again',fr:'Réessayer',ru:'Попробовать снова'},next:{en:'Next',fr:'Suivant',ru:'Далее'},prev:{en:'Previous',fr:'Précédent',ru:'Назад'},yes:{en:'Correct',fr:'Correct',ru:'Правильно'},no:{en:'Not quite — compare the explanation.',fr:'Pas tout à fait — comparez avec l’explication.',ru:'Не совсем — сравните с объяснением.'},practice:{en:'Guided practice · saved on this device in your notebook. This does not award independent recall credit.',fr:'Pratique guidée · enregistrée dans votre carnet sur cet appareil. Aucun crédit de rappel autonome.',ru:'Практика с подсказками · сохраняется в вашей тетради на этом устройстве. Самостоятельное воспроизведение не засчитывается.'},count:{en:'exercises checked',fr:'exercices vérifiés',ru:'упражнений проверено'}};
+export const grammarUnits:Unit[]=withTurkish([...batchA,...batchB]);
+const copy={title:withTurkish({en:'HSK3 grammar',fr:'Grammaire HSK3',ru:'Грамматика HSK3'}),intro:withTurkish({en:'Small patterns. Useful sentences. Learn one idea, then try it.',fr:'Des structures simples, des phrases utiles. Apprenez une idée, puis pratiquez.',ru:'Простые конструкции и полезные фразы. Изучите правило и попробуйте его применить.'}),back:withTurkish({en:'All topics',fr:'Tous les thèmes',ru:'Все темы'}),check:withTurkish({en:'Check answer',fr:'Vérifier',ru:'Проверить'}),retry:withTurkish({en:'Try again',fr:'Réessayer',ru:'Попробовать снова'}),next:withTurkish({en:'Next',fr:'Suivant',ru:'Далее'}),prev:withTurkish({en:'Previous',fr:'Précédent',ru:'Назад'}),yes:withTurkish({en:'Correct',fr:'Correct',ru:'Правильно'}),no:withTurkish({en:'Not quite — compare the explanation.',fr:'Pas tout à fait — comparez avec l’explication.',ru:'Не совсем — сравните с объяснением.'}),practice:withTurkish({en:'Guided practice · saved on this device in your notebook. This does not award independent recall credit.',fr:'Pratique guidée · enregistrée dans votre carnet sur cet appareil. Aucun crédit de rappel autonome.',ru:'Практика с подсказками · сохраняется в вашей тетради на этом устройстве. Самостоятельное воспроизведение не засчитывается.'}),count:withTurkish({en:'exercises checked',fr:'exercices vérifiés',ru:'упражнений проверено'})};
 type Answers=Record<string,{picked:number;checked:boolean}>;
 export default function HSK3Grammar({db}:{db:IDBDatabase|null}){
  const {locale}=useI18n();const t=(key:keyof typeof copy)=>copy[key][locale];

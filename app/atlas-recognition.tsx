@@ -1,4 +1,5 @@
 'use client';
+import {withTurkish} from "./turkish";
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {ArrowLeft,ArrowRight,Check,Volume2,X} from 'lucide-react';
 import {useI18n} from './i18n';
@@ -9,7 +10,7 @@ import type {CloudWord} from './atlas-cloud-model';
 type Props={exitLabel?:string;questions:PracticeQuestion[];initialIndex:number;kind:'family'|'difficult'|'due';onExit:()=>void;onListen:(word:CloudWord)=>void;onStop:()=>void;onSave:(event:RecognitionAttempt)=>Promise<void>;onQuestion:(question:PracticeQuestion)=>void};
 type Attempt={choice?:string;answer?:RecognitionAnswer;event?:RecognitionAttempt;saving?:'saving'|'saved'|'error'};
 export default function AtlasRecognition(p:Props){
- const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>({en,fr,ru})[locale];const questions=useMemo(()=>p.questions.map(q=>localizeRecognitionQuestion(q,locale)),[p.questions,locale]);
+ const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>(withTurkish({en,fr,ru}))[locale];const questions=useMemo(()=>p.questions.map(q=>localizeRecognitionQuestion(q,locale)),[p.questions,locale]);
  const [index,setIndex]=useState(p.initialIndex),[attempts,setAttempts]=useState<Record<string,Attempt>>({});const attemptsRef=useRef(attempts),alive=useRef(true),questionHandler=useRef(p.onQuestion);questionHandler.current=p.onQuestion;
  useEffect(()=>{alive.current=true;return()=>{alive.current=false}},[]);
  const question=questions[index],attempt=question?attempts[question.id]:undefined,answer=attempt?.answer;

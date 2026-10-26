@@ -24,6 +24,13 @@
       "sha256": "acf6a40d4d5d0e41b8a4a7ccd9cdfa4acad1ff7454896de21348595f8813a951"
     },
     {
+      "file": "mo-tr.mp3",
+      "text": "Güneş bir çalılığın arkasına kayar. Işığı bitkilerin arasında kaybolur. Bu küçük sahneyi zihninizde tutun. 莫 karakterinin eski biçimleri güneşi bitkiler arasında resmediyordu: alacakaranlık. Alt kısım daha sonra 大 karakterine benzeyen bir biçime dönüştü; başlangıçta bir insan değildi. 莫 daha sonra olumsuzluk dâhil dil bilgisel kullanımlar için ödünç alındı. Ayrıca bir ses bileşeni oldu. Onu ilişkili on karakterde izleyin; resim her anlamı öngörmez.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "sha256": "652e0d2eff17347865836e41ebee796a2e38a31d8a02ee05f4d6b2105a3a951d"
+    },
+    {
       "file": "mu-dusk-en.mp3",
       "text": "You return to the same thicket at the end of the day. The sun sinks, and the path grows dark: dusk. An extra 日 was added beneath 莫 to write its original dusk meaning more clearly, after 莫 had acquired other uses. Notice the two suns in the modern shape. 暮色 is the light and colour of dusk. Remember the scene, then recall the word without looking. Here mù differs from the usual standalone reading mò of 莫.",
       "voice": "en-GB-SoniaNeural",
@@ -43,6 +50,13 @@
       "voice": "ru-RU-SvetlanaNeural",
       "rate": "-5%",
       "sha256": "4116fcc3379babf362ab8fdd9bf7e32b011972e38a0e77fa4ed5ab8c2d49a10c"
+    },
+    {
+      "file": "mu-dusk-tr.mp3",
+      "text": "Günün sonunda aynı çalılığa dönersiniz. Güneş alçalır ve patika kararır: alacakaranlık. 莫 başka kullanımlar kazandıktan sonra, ilk alacakaranlık anlamını daha açık yazmak için 莫 altına ek bir 日 eklendi. Modern biçimdeki iki güneşe dikkat edin. 暮色 alacakaranlığın ışığı ve rengidir. Sahneyi hatırlayın, ardından bakmadan sözcüğü hatırlayın. Buradaki mù, 莫 karakterinin olağan tek başına okunuşu mò'dan farklıdır.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "sha256": "257b51699bbbc1b2e238ca7d3165e6ce338c70c1a533fc6906ef18986582394a"
     },
     {
       "file": "mu-dusk-word.mp3",
@@ -80,6 +94,13 @@
       "sha256": "44bf1a90ce2043afd41169530c96a398eeabba3498cace42e58fb9d65d19c514"
     },
     {
+      "file": "mu-curtain-tr.mp3",
+      "text": "Küçük bir tiyatronun önünde bir perde kayar. Gecenin gökyüzüne kocaman bir perde çektiğini hayal edin. Hafıza sahnemiz budur. 幕 içinde 巾 kumaşa işaret eder, 莫 ise ses ipucudur. Tarihsel sözlük kumaş bir örtüyü anlatır. Tiyatro sahnemiz anlamı örnekler; eski bir çizim değildir. 夜幕 gecenin perdesi veya gecenin çökmesi demektir. Alacakaranlık 暮 ile perde 幕 karakterini karşılaştırın: küçük bileşen ipucunu değiştirir.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "sha256": "af72f66942393ef24f1042958c0aec7ca3c7241eec0e660c7edd15ea96d16113"
+    },
+    {
       "file": "mu-curtain-word.mp3",
       "text": "夜幕",
       "voice": "zh-CN-XiaoxiaoNeural",
@@ -113,6 +134,13 @@
       "voice": "ru-RU-SvetlanaNeural",
       "rate": "-5%",
       "sha256": "e6f501700e861b38909e2e587a5a5c62df3bb0aa8e11e2ea7d677b40e3fbd65d"
+    },
+    {
+      "file": "mo-touch-tr.mp3",
+      "text": "Gözleriniz kapalı. Elinizi uzatıp pürüzsüz bir taşın biçimini hissedersiniz. Bir el keşfediyor. 扌 el bileşenidir; 莫 bir ses ipucu sağlar. Birlikte dokunmak veya hissetmek anlamındaki 摸 karakterini oluştururlar. Hayal edilen bu hareket, soldaki eli hatırlamanıza yardımcı olur. 摸摸 bir şeye hafifçe dokunmak veya yoklamak demektir. mōmo deyin: ilk hece birinci tondadır, tekrarlanan hece ise hafiftir. Benzer biçimler aynı tonu garanti etmez.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "sha256": "1e36cc80191bbabb529879f25b67e99c2a39dab11db75ae1ba987a4d109e1556"
     },
     {
       "file": "mo-touch-word.mp3",
@@ -150,6 +178,13 @@
       "sha256": "0f159003c5a8fcdafeebf4df13b7e2775f01c6b740e48c6d1f57b1040bbf10e0"
     },
     {
+      "file": "mo-model-tr.mp3",
+      "text": "Bir usta küçük bir evin yanına ahşap bir kalıp koyar. Kalıp, ilkine benzeyen başka bir ev yapmaya yardım eder. Aslı ile kopyasını yan yana hayal edin. 木 ahşaba işaret eder, 莫 ise bir ses ipucudur. Tarihsel sözlük 模 karakterini bir şeyler yapmaya yarayan modelle ilişkilendirir. Küçük evlerimiz bu fikir için modern bir hafıza sahnesidir. 模型 model demektir ve móxíng diye okunur. 模, kalıp anlamındaki 模具 gibi sözcüklerde mú diye de okunur. Okunuşu sözcüğün tamamıyla birlikte öğrenin.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "sha256": "2d56e0cc2d37e552e7b3a1e6f02f4b79a00103954254a2ca757c91e5d803886d"
+    },
+    {
       "file": "mo-model-word.mp3",
       "text": "模型",
       "voice": "zh-CN-XiaoxiaoNeural",
@@ -183,6 +218,13 @@
       "voice": "ru-RU-SvetlanaNeural",
       "rate": "-5%",
       "sha256": "15816214d35438df1f7d41678ad8db803331ddf65a849d17b8f8cd50fa7d523d"
+    },
+    {
+      "file": "mu-grave-tr.mp3",
+      "text": "Sessiz bir yol, ağacın altındaki bir mezara uzanır. Biri taşın yanına bir çiçek bırakır. Bu dinlenme yerini altındaki toprakla ilişkilendirin. 墓 içinde 土 toprak ipucunu, 莫 ses ipucunu verir. Sözlük özgün anlamını mezar olarak belirtir. Çiçek ve taşımız bir bellek sahnesidir, eski bir yazıt değildir. 墓地 mezarlık veya defin alanı demektir. 墓 ile 暮 karakterlerini karşılaştırın: ikisi de mù olarak okunur, ancak toprak mezara, güneş alacakaranlığa işaret eder. Yalnızca ton onları ayırt etmez.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "sha256": "6a453bbd9691ca5fdeb6cd826f9aaf6d469e12e51af6cd51f254224de56b603e"
     },
     {
       "file": "mu-grave-word.mp3",
@@ -220,6 +262,13 @@
       "sha256": "639258cf02f8117c6f7d871c83828c45a083ff7f523effd9be9b38816900ebf5"
     },
     {
+      "file": "mo-desert-tr.mp3",
+      "text": "Rüzgâr geniş çölde kumları savurur. Kum tepeleri ufka uzanır. Orada bir su şişesiyle yürüdüğünüzü hayal edin: karşıtlık bu sahneyi bellekte tutmaya yardımcı olur. 漠 su bileşeni 氵 ile ses bileşeni 莫 içerir. Sözlük özgün anlamını çöl olarak verir. Az su imgesi bizim bellek ipucumuzdur; 莫 karakterinin gizli su anlamına geldiğini kanıtlamaz. 沙漠 çöl için günlük kelimedir. İki karakterde de 氵 vardır. shāmò sözcüğünü bütün olarak öğrenin ve 膜, mó ikinci tonundan farklı olarak mò hecesinin düşen dördüncü tonunu hatırlayın.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "sha256": "9e51739dc01978266a619a57bb1a0b822193a636af71b49a03587b4a1978a0ff"
+    },
+    {
       "file": "mo-desert-word.mp3",
       "text": "沙漠",
       "voice": "zh-CN-XiaoxiaoNeural",
@@ -253,6 +302,13 @@
       "voice": "ru-RU-SvetlanaNeural",
       "rate": "-5%",
       "sha256": "2c71175a62200530a373f923150f41d0511db5e9c7faae34ba3524d84a2bb445"
+    },
+    {
+      "file": "mo-membrane-tr.mp3",
+      "text": "Bir fincanın üzerine ince, neredeyse saydam bir film yerleşir. Bu bir katmandır; perde veya sert kapak değildir. Parmaklarınızın arasında ne kadar hafif olduğunu hayal edin. 膜 içindeki 月 biçimli parça aydan değil, et anlamındaki 肉 karakterinden gelir. 莫 ses ipucu verir. Tarihsel anlam ince vücut dokusuyla ilgilidir; fincanımız modern film anlamını gösterir. 薄膜, bómó olarak okunan ince film veya zar demektir. 膜 ile 幕 karakterlerini karşılaştırın: ikisi de bir örtü olabilir, ancak ince bir katman kumaş perde değildir. Malzemeyi ve tonu birlikte öğrenin.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "sha256": "9b6c91cc63d4b532a78bbf1ccf17f074302a70a9d7f49c739dd7835c788e76d4"
     },
     {
       "file": "mo-membrane-word.mp3",
@@ -290,6 +346,13 @@
       "sha256": "cbc5cc851f6f2763cc1360ecba9a99ce764f029139687d7da37ed0f38cf8ce24"
     },
     {
+      "file": "mu-recruit-tr.mp3",
+      "text": "Bir okulun gönüllülere ihtiyacı var. Bir duyuru insanları yardıma çağırır ve öğrenciler etrafında toplanır. Biri yardımcıları bir araya getirmek için çaba gösterir. 募, güç veya çaba anlamındaki 力 ile ses ipucu olan 莫 parçalarını birleştirir. Sözlük geniş çapta aramayı veya toplamayı anlatır. Gönüllü duyurumuz katılımcı toplamayı gösterir; çaba ipucu yardım davetini hatırlatır. 招募 katılımcı toplamak demektir. Bir okul gönüllüleri 招募 edebilir; bir proje katılımcıları 招募 edebilir. Yardımcı arayan 募 ile birine hayran olan 慕 karakterlerini karşılaştırın: altta çaba mı, kalp mi var?",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "sha256": "9e42c7a628acd9154a2b38c0dd3dc30c2ccf1fcd91cfc3b4d0057b39720d8b0b"
+    },
+    {
       "file": "mu-recruit-word.mp3",
       "text": "招募",
       "voice": "zh-CN-XiaoxiaoNeural",
@@ -325,6 +388,13 @@
       "sha256": "645d18bddde56fa45e0dc5479a8dbe4dd4cf28e5b24f1f1b6e90ae8f5e98465d"
     },
     {
+      "file": "mo-trace-tr.mp3",
+      "text": "Bir dağ çiziminin üzerinde bir kâğıt durur. Kalem ana hattı izler ve bir kopya ortaya çıkar. Örneği dikkatle takip eden eli düşünün. 摹 içinde ses ipucu 莫 altında 手 bulunur. Sözlük önceki standart veya kural anlamını, sonraki taklit ve kopyalama anlamlarını kaydeder. Üzerinden geçmek, sonraki kullanım için sahnemizdir; 摹 ile modern 摸, dokunmak, karakterini ayırt edin. 临摹 örneğe bakarak veya üzerinden geçerek kopyalamaktır. Şekli dokunarak hisseden 摸, mō ile kopyalayan 摹, mó ve örnek anlamındaki 模, mó karakterlerini karşılaştırın. Konum, malzeme ve ton üçünü ayırır.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "sha256": "5d1b8a9986b6445a66f4f79e0a2e575b5bca93c9483c0ce15e6aa08fe6da1bda"
+    },
+    {
       "file": "mo-trace-word.mp3",
       "text": "临摹",
       "voice": "zh-CN-XiaoxiaoNeural",
@@ -358,6 +428,13 @@
       "voice": "ru-RU-SvetlanaNeural",
       "rate": "-5%",
       "sha256": "039895f9576b6366babb5740842c435f114d9e39cf299a7b20a4b60d04520c6a"
+    },
+    {
+      "file": "mu-admire-tr.mp3",
+      "text": "Bir öğrenci, rahatça Çince konuşan arkadaşını dinler. Küçük bir kalp yükselir: keşke ben de yapabilsem. Bu sahne hayranlığı içsel bir duyguyla bağlar. 慕 içinde 莫 altındaki küçük işaretler, kalp anlamındaki 心 biçimidir. 莫 ses ipucu verir. Tarihsel açıklama karakteri özlem ve hayranlıkla ilişkilendirir; kalp anlam ipucudur. 羡慕 birinin sahip olduğu şeye imrenmek veya hayran olmak demektir. Burada bir arkadaşın dil becerisine düşmanlık olmadan hayranlık vardır. 慕 ile 募 karakterlerini karşılaştırın: kalp hayranlık duyar; katılımcı toplamak çaba ister.",
+      "voice": "tr-TR-EmelNeural",
+      "rate": "-5%",
+      "sha256": "b317d9d7d2f9f283e05c43cef60427a21b61681da02b8ae70f5e15ff0fb7c8c9"
     },
     {
       "file": "mu-admire-word.mp3",

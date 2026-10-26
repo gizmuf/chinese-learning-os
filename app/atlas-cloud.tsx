@@ -1,4 +1,5 @@
 "use client";
+import {withTurkish} from "./turkish";
 import {Fragment,useEffect,useMemo,useRef,useState,type CSSProperties} from 'react';
 import {ArrowLeft,ChevronRight,Cloud,Grid2X2,Info,Maximize2,Minimize2,PenLine,Search,Volume2,X} from 'lucide-react';
 import {useI18n} from './i18n';
@@ -37,21 +38,21 @@ const href=cloudRouteHref;
 const partId=(glyph:string)=>[...componentById.values()].find(p=>p.glyph===glyph||p.aliases.includes(glyph))?.id??glyph;
 function libraryView(node:ExtendedCharacter){
  const parts=[...new Set(node.leafComponents.map(partId))].filter(id=>extendedComponent(id));
- return {id:node.id,hanzi:node.hanzi,pinyin:node.reviewed?.pinyin??node.readings.join(' / '),meaning:{en:node.meaning,fr:node.meaning,ru:node.meaning},components:parts,semantic:node.reviewed?.semantic,phonetic:node.reviewed?.phonetic,word:node.reviewed?.word,complete:node.complete,structureSource:node.structureSource,decomposition:node.decomposition,reviewed:node.reviewed};
+ return {id:node.id,hanzi:node.hanzi,pinyin:node.reviewed?.pinyin??node.readings.join(' / '),meaning:withTurkish({en:node.meaning,fr:node.meaning,ru:node.meaning}),components:parts,semantic:node.reviewed?.semantic,phonetic:node.reviewed?.phonetic,word:node.reviewed?.word,complete:node.complete,structureSource:node.structureSource,decomposition:node.decomposition,reviewed:node.reviewed};
 }
-const grammar:Record<string,{pattern:string;en:string;fr:string;ru:string}>={
- 'tomorrow':{pattern:'明天 + 见',en:'A time expression can come first. In this short farewell, the subject is understood.',fr:'Le moment peut venir en tête. Dans cette formule courte, le sujet est sous-entendu.',ru:'Время может стоять в начале. В этой краткой формуле прощания подлежащее подразумевается.'},
- 'hsk1-071':{pattern:'今天 + 天气 + 很 + 好',en:'Time + subject + 很 + adjective. Here 很 links the adjective to its subject; it need not mean “very”.',fr:'Moment + sujet + 很 + adjectif. Ici, 很 relie l’adjectif au sujet sans forcément signifier « très ».',ru:'Время + подлежащее + 很 + прилагательное. Здесь 很 не обязательно означает «очень».'},
- 'hsk1-208':{pattern:'今天 + 天气 + 怎么样？',en:'Time + topic + 怎么样 asks what something is like. The topic stays before the question expression.',fr:'Moment + thème + 怎么样 permet de demander comment est quelque chose.',ru:'Время + тема + 怎么样: вопрос о том, каково что-либо. Тема стоит перед вопросительным выражением.'},
- 'hsk2-420':{pattern:'明天 + 天气 + 晴',en:'Time + subject + adjective: the adjective describes the weather directly, without 是.',fr:'Moment + sujet + adjectif : l’adjectif décrit directement le temps, sans 是.',ru:'Время + подлежащее + прилагательное: описание погоды без 是.'},
- 'hsk2-377':{pattern:'这 + 杯 + 咖啡 / 很 + 好喝',en:'这 + measure word + noun identifies this cup of coffee. 好喝 describes something pleasant to drink.',fr:'这 + classificateur + nom désigne cette tasse de café. 好喝 décrit une boisson agréable.',ru:'这 + счётное слово + существительное: эта чашка кофе. 好喝 означает приятный вкус напитка.'},
- 'bonus-04':{pattern:'我 + 想 + 喝 / 一 + 杯 + 咖啡',en:'Subject + 想 + verb expresses a wish. 一 + 杯 + 咖啡 is a number + measure word + noun.',fr:'Sujet + 想 + verbe exprime un souhait. 一 + 杯 + 咖啡 : nombre + classificateur + nom.',ru:'Подлежащее + 想 + глагол выражает желание. 一 + 杯 + 咖啡: число + счётное слово + существительное.'}
+const grammar:Record<string,{pattern:string;en:string;fr:string;ru:string;tr:string}>={
+ 'tomorrow':withTurkish({pattern:'明天 + 见',en:'A time expression can come first. In this short farewell, the subject is understood.',fr:'Le moment peut venir en tête. Dans cette formule courte, le sujet est sous-entendu.',ru:'Время может стоять в начале. В этой краткой формуле прощания подлежащее подразумевается.'}),
+ 'hsk1-071':withTurkish({pattern:'今天 + 天气 + 很 + 好',en:'Time + subject + 很 + adjective. Here 很 links the adjective to its subject; it need not mean “very”.',fr:'Moment + sujet + 很 + adjectif. Ici, 很 relie l’adjectif au sujet sans forcément signifier « très ».',ru:'Время + подлежащее + 很 + прилагательное. Здесь 很 не обязательно означает «очень».'}),
+ 'hsk1-208':withTurkish({pattern:'今天 + 天气 + 怎么样？',en:'Time + topic + 怎么样 asks what something is like. The topic stays before the question expression.',fr:'Moment + thème + 怎么样 permet de demander comment est quelque chose.',ru:'Время + тема + 怎么样: вопрос о том, каково что-либо. Тема стоит перед вопросительным выражением.'}),
+ 'hsk2-420':withTurkish({pattern:'明天 + 天气 + 晴',en:'Time + subject + adjective: the adjective describes the weather directly, without 是.',fr:'Moment + sujet + adjectif : l’adjectif décrit directement le temps, sans 是.',ru:'Время + подлежащее + прилагательное: описание погоды без 是.'}),
+ 'hsk2-377':withTurkish({pattern:'这 + 杯 + 咖啡 / 很 + 好喝',en:'这 + measure word + noun identifies this cup of coffee. 好喝 describes something pleasant to drink.',fr:'这 + classificateur + nom désigne cette tasse de café. 好喝 décrit une boisson agréable.',ru:'这 + счётное слово + существительное: эта чашка кофе. 好喝 означает приятный вкус напитка.'}),
+ 'bonus-04':withTurkish({pattern:'我 + 想 + 喝 / 一 + 杯 + 咖啡',en:'Subject + 想 + verb expresses a wish. 一 + 杯 + 咖啡 is a number + measure word + noun.',fr:'Sujet + 想 + verbe exprime un souhait. 一 + 杯 + 咖啡 : nombre + classificateur + nom.',ru:'Подлежащее + 想 + глагол выражает желание. 一 + 杯 + 咖啡: число + счётное слово + существительное.'})
 };
 export default function AtlasCloud(props:Props){return <CloudMap key={props.owner??'guest'} {...props}/>}
 function CloudMap({owner,db,penOnly,setPenOnly,notify,progress,onWord}:Props){
  const recognition=useRecognitionProgress(owner),recognitionOrigin=useRef<Route|null>(null);
  const [navigationRevision,setNavigationRevision]=useState(0);
- const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>({en,fr,ru})[locale];
+ const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>(withTurkish({en,fr,ru}))[locale];
  const [route,setRoute]=useState<Route>(initial),[trail,setTrail]=useState<Route[]>([]),[query,setQuery]=useState(''),[dense,setDense]=useState(false),[full,setFull]=useState(false),[combine,setCombine]=useState(false),[about,setAbout]=useState(false),[writing,setWriting]=useState(false),[showGrammar,setShowGrammar]=useState(false),[recall,setRecall]=useState(false),[flight,setFlight]=useState({x:0,y:12});
  const [writingLayout,setWritingLayout]=useState<'animated'|'notebook'>('animated');
  const [cloudGrid,setCloudGrid]=useState(false);

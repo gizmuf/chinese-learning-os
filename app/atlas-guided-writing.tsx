@@ -1,10 +1,11 @@
 'use client';
+import {withTurkish} from "./turkish";
 import {useState} from 'react';
 import Guided from './guided';
 import './atlas-guided-writing.css';
 import {useI18n} from './i18n';
 export default function AtlasGuidedWriting({character,penOnly,onSave}:{character:string;penOnly:boolean;onSave:()=>Promise<void>}){
- const{locale}=useI18n();const c=(en:string,fr:string,ru:string)=>({en,fr,ru})[locale];
+ const{locale}=useI18n();const c=(en:string,fr:string,ru:string)=>(withTurkish({en,fr,ru}))[locale];
  const[mode,setMode]=useState<'watch'|'trace'>('watch'),[replay,setReplay]=useState(0),[complete,setComplete]=useState(false),[saved,setSaved]=useState(false),[saving,setSaving]=useState(false),[error,setError]=useState(false);
  function start(next:'watch'|'trace'){setMode(next);setReplay(n=>n+1);setComplete(false);setSaved(false);setError(false);}
  async function save(){if(saving||saved||!complete)return;setSaving(true);setError(false);try{await onSave();setSaved(true);}catch{setError(true);}finally{setSaving(false);}}

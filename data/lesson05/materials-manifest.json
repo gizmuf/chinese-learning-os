@@ -1,0 +1,73 @@
+{
+  "sourceSha256": "86b1d970e5f588afbc9b585dafee646685602362d2f10e32e5142af811d120e2",
+  "generatorSha256": "d65fc1fff35817054e95a4af19e2d031fe296529f6f9b920c19036f9d1d00b17",
+  "translationSources": {
+    "data/turkish-course.json": "d8bd49eb7f70600d8daea790d6edbdcc681e525e119d6ff8f5c2b843be47b99c",
+    "data/turkish-extra.json": "a80fb8bc8dd5d15a8edd7ce8085050b62a66f88b0846ef6ecf5ec1429a589eaa",
+    "data/turkish-lesson05.json": "49b74c3940787d7e676423ccd6312a9d26de9262b38a367e6762e0b720112709",
+    "data/turkish-ui.json": "795aba7dbaa5da20e2ec2fc43fd5c121464cfeb7873c51fd1ff3b8666ffb9bce",
+    "data/turkish-vocabulary.json": "ef37db283c3f8f6b3bc38fcce979db3db4b68e09283976dce5a558f07ad1f916"
+  },
+  "documents": [
+    {
+      "file": "guide-en.pdf",
+      "pages": 19,
+      "sha256": "49f7a0417bd3ef27fcc907ea7d8e4ecce6a5a2cdef88ba6e19903f18b905e0ee"
+    },
+    {
+      "file": "guide-fr.pdf",
+      "pages": 19,
+      "sha256": "206533df033ec32509dbd0daa1224d48935d81f88f2a898a4802d55924edf79d"
+    },
+    {
+      "file": "guide-ru.pdf",
+      "pages": 19,
+      "sha256": "7790177a613268fc417b555be1127059402152842cf617b51f30435713f1e178"
+    },
+    {
+      "file": "guide-tr.pdf",
+      "pages": 19,
+      "sha256": "58f91882be982a565aba07298b149ac055ae4ed254d7b07ea3e90e48e33083c7"
+    },
+    {
+      "file": "quick-reference-en.pdf",
+      "pages": 1,
+      "sha256": "0bcf87381cd0992d5ad4d44eb6df3c5f6a0b1450a2a2bdcddb9c57a696aba75c"
+    },
+    {
+      "file": "quick-reference-fr.pdf",
+      "pages": 1,
+      "sha256": "526c5ebfc7f9bdb9ea83032173cce89330ffbe3a75a4225e0e408a0546ba8e90"
+    },
+    {
+      "file": "quick-reference-ru.pdf",
+      "pages": 1,
+      "sha256": "4a423bbd8e2cc2ec9d3cd3cf190e89e1532c7ab2ccf6dbc6740291acaeb9e63f"
+    },
+    {
+      "file": "quick-reference-tr.pdf",
+      "pages": 1,
+      "sha256": "4d3db54b792d2719614041a42cb4c2dd485b18a24c6a91156f0e422c978d0864"
+    },
+    {
+      "file": "workbook-en.pdf",
+      "pages": 32,
+      "sha256": "8592ad7a68eb62a1403f720afdd230651c90b6db72482625a88875ea965c4d44"
+    },
+    {
+      "file": "workbook-fr.pdf",
+      "pages": 32,
+      "sha256": "37d295ce3cbdfcdf400bf4d1c14f012ab591b748a56bd28b1a236391c6a6d839"
+    },
+    {
+      "file": "workbook-ru.pdf",
+      "pages": 32,
+      "sha256": "a34d63bacbd80ce16ae81047c6e215c820502024aeb3d1fee1ea3f587c74aea6"
+    },
+    {
+      "file": "workbook-tr.pdf",
+      "pages": 32,
+      "sha256": "dc9bb5752ef821d1de2b992ebab5f21ce34d9cd81345b484264135f420c6f13b"
+    }
+  ]
+}

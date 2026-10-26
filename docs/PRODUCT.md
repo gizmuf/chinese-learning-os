@@ -1,6 +1,10 @@
 # Chinese OS
 
-A calm daily Chinese practice space for beginner classmates. Works in a browser on iPad, iPhone and desktop; no Xcode or native app installation is required. The interface and learning translations are available in English, French and Russian. Learning material pairs simplified characters with tone-marked pinyin and translations.
+A calm daily Chinese practice space for beginner classmates. Works in a browser on iPad, iPhone and desktop; no Xcode or native app installation is required. The interface and learning translations are available in English, French, Russian and Turkish. Learning material pairs simplified characters with tone-marked pinyin and translations.
+
+## Current course additions
+
+**Lesson 05** (26 October 2026) adds 65 expressions, 34 sentences, six topic groups, clickable definitions, grammar paths, 16 builders, 198 reading/listening checks, animated writing and a twelve-document EN/FR/RU/TR offline pack. **Türkçe** is the fourth application language, including all 1,020 vocabulary cards and Atlas/course explanations. See [Lesson 05, sources and spaced-repetition audit](LESSON05.md) for the current scope and remaining standalone HSK3 grammar scheduling gap. Existing lesson screens and Atlas layouts are retained.
 
 ## Daily use
 

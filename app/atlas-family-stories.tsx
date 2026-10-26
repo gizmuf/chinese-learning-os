@@ -1,4 +1,5 @@
 "use client";
+import {withTurkish} from "./turkish";
 import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Play, RotateCcw, Volume2 } from "lucide-react";
 import { A } from "./atlas-data";
@@ -20,7 +21,7 @@ export default function AtlasFamilyStories({notify,compact=false}:{notify:(messa
  useEffect(()=>{if(new URLSearchParams(window.location.search).get("story")==="mo")document.getElementById("atlas-story-trail")?.scrollIntoView({block:"start"});},[]);
  return <div id="atlas-story-trail" className="family-stories" {...swipe}>
   <div className="workshop-intro"><h3>{copy.title[locale]}</h3><p>{copy.intro[locale]}</p></div>
-  {compact?<label className="studio-choice">{({en:"Choose a story",fr:"Choisir une histoire",ru:"Выбрать историю"})[locale]}<select value={index} onChange={e=>move(Number(e.target.value)-index)}>{familyStories.map((s,i)=><option key={s.id} value={i}>{s.hanzi} · {s.pinyin} · {s.meaning[locale]}</option>)}</select></label>:<div className="workshop-choices" aria-label={copy.title[locale]}>{familyStories.map((s,i)=><button key={s.id} aria-pressed={index===i} onClick={()=>move(i-index)}><strong lang="zh-Hans">{s.hanzi}</strong><span>{s.pinyin}</span></button>)}</div>}
+  {compact?<label className="studio-choice">{(withTurkish({en:"Choose a story",fr:"Choisir une histoire",ru:"Выбрать историю"}))[locale]}<select value={index} onChange={e=>move(Number(e.target.value)-index)}>{familyStories.map((s,i)=><option key={s.id} value={i}>{s.hanzi} · {s.pinyin} · {s.meaning[locale]}</option>)}</select></label>:<div className="workshop-choices" aria-label={copy.title[locale]}>{familyStories.map((s,i)=><button key={s.id} aria-pressed={index===i} onClick={()=>move(i-index)}><strong lang="zh-Hans">{s.hanzi}</strong><span>{s.pinyin}</span></button>)}</div>}
   <div className="workshop-actions family-story-nav"><button disabled={index===0} onClick={()=>move(-1)} aria-label={copy.previous[locale]}><ArrowLeft size={16}/>{copy.previous[locale]}</button><span aria-live="polite" aria-atomic="true">{index+1} / {familyStories.length}</span><button disabled={index===familyStories.length-1} onClick={()=>move(1)} aria-label={copy.next[locale]}>{copy.next[locale]}<ArrowRight size={16}/></button></div>
   <div className="workshop-tabs">{(["scene","parts","use"] as const).map((k,i)=><button key={k} aria-pressed={step===i} onClick={()=>{setStep(i);setQuiz(false);setAnswer(null);}}>{i+1}. {copy[k][locale]}</button>)}</div>
   {!quiz&&<>

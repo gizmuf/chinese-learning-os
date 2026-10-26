@@ -1,4 +1,5 @@
 "use client";
+import {withTurkish} from "./turkish";
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
@@ -316,8 +317,8 @@ export default function Atlas({
           </button>
         ))}
       </div>
-      {tab === "lab" && <div className="panel" style={{padding:24,marginBottom:24}}><h2>{({en:"A quieter way to explore",fr:"Une façon plus calme d’explorer",ru:"Более спокойное изучение"})[locale]}</h2><p>{({en:"Try the new Atlas workspace. The original Lab remains below.",fr:"Essayez le nouvel espace Atlas. Le Lab d’origine reste ci-dessous.",ru:"Попробуйте новое пространство Атласа. Прежний Lab остаётся ниже."})[locale]}</p><a className="primary" href="?atlas=1&studio=1">{({en:"Preview the new Learning Lab",fr:"Découvrir le nouveau Learning Lab",ru:"Открыть новый Learning Lab"})[locale]} →</a></div>}
-      {tab === "lab" && <div className="panel" style={{padding:24,marginBottom:24}}><h2>{({en:"Lab 02 · Follow the whole family",fr:"Lab 02 · Suivre toute la famille",ru:"Lab 02 · Всё семейство на карте"})[locale]}</h2><p>{({en:"A connected map: parts, characters, words and sentences together.",fr:"Une carte reliée : composants, caractères, mots et phrases ensemble.",ru:"Связанная карта: части, знаки, слова и предложения вместе."})[locale]}</p><a className="primary" href="?atlas=1&cloud=1">{({en:"Explore the cloud map",fr:"Explorer la carte en nuages",ru:"Открыть облачную карту"})[locale]} →</a></div>}
+      {tab === "lab" && <div className="panel" style={{padding:24,marginBottom:24}}><h2>{(withTurkish({en:"A quieter way to explore",fr:"Une façon plus calme d’explorer",ru:"Более спокойное изучение"}))[locale]}</h2><p>{(withTurkish({en:"Try the new Atlas workspace. The original Lab remains below.",fr:"Essayez le nouvel espace Atlas. Le Lab d’origine reste ci-dessous.",ru:"Попробуйте новое пространство Атласа. Прежний Lab остаётся ниже."}))[locale]}</p><a className="primary" href="?atlas=1&studio=1">{(withTurkish({en:"Preview the new Learning Lab",fr:"Découvrir le nouveau Learning Lab",ru:"Открыть новый Learning Lab"}))[locale]} →</a></div>}
+      {tab === "lab" && <div className="panel" style={{padding:24,marginBottom:24}}><h2>{(withTurkish({en:"Lab 02 · Follow the whole family",fr:"Lab 02 · Suivre toute la famille",ru:"Lab 02 · Всё семейство на карте"}))[locale]}</h2><p>{(withTurkish({en:"A connected map: parts, characters, words and sentences together.",fr:"Une carte reliée : composants, caractères, mots et phrases ensemble.",ru:"Связанная карта: части, знаки, слова и предложения вместе."}))[locale]}</p><a className="primary" href="?atlas=1&cloud=1">{(withTurkish({en:"Explore the cloud map",fr:"Explorer la carte en nuages",ru:"Открыть облачную карту"}))[locale]} →</a></div>}
       {tab === "lab" && <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><ConnectionLab owner={owner} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify}/></Suspense>}
       {(tab === "explore" || tab === "compare") && (
         <div className="atlas-search-row">
@@ -941,7 +942,7 @@ export default function Atlas({
               )}
             </p>
           </div>
-          <div className="atlas-writing-modes"><button aria-pressed={writing==='animated'} onClick={()=>setWriting('animated')}>{({en:'Animated writing',fr:'Écriture animée',ru:'Анимированное письмо'})[locale]}</button><button aria-pressed={writing==='notebook'} onClick={()=>setWriting('notebook')}>{({en:'Notebook / PDF layout',fr:'Cahier / format PDF',ru:'Тетрадь / формат PDF'})[locale]}</button></div>
+          <div className="atlas-writing-modes"><button aria-pressed={writing==='animated'} onClick={()=>setWriting('animated')}>{(withTurkish({en:'Animated writing',fr:'Écriture animée',ru:'Анимированное письмо'}))[locale]}</button><button aria-pressed={writing==='notebook'} onClick={()=>setWriting('notebook')}>{(withTurkish({en:'Notebook / PDF layout',fr:'Cahier / format PDF',ru:'Тетрадь / формат PDF'}))[locale]}</button></div>
           {writing === "animated" ? <div className="panel"><AtlasGuidedWriting key={selected} character={character.hanzi} penOnly={penOnly} onSave={()=>progress.record(newAtlasEvent(character.id,'writing','copy',0,true))}/></div> : writing === "notebook" ? (
             <Notebook
               key={selected}
@@ -981,7 +982,7 @@ export default function Atlas({
         <section className="panel atlas-materials">
           <h2>{t("Your Atlas, connected to real practice.")}</h2>
           <p>
-            {({en:`The original English PDF contains 100 targets in 20 groups. The app adds ${atlasCharacters.length-coreIds.size} discovery extensions, interactive connections and translations in English, French and Russian.`,fr:`Le PDF original anglais contient 100 cibles en 20 groupes. L’application ajoute ${atlasCharacters.length-coreIds.size} découvertes, des liens interactifs et des traductions en anglais, français et russe.`,ru:`Исходный английский PDF содержит 100 целей в 20 группах. Приложение добавляет ${atlasCharacters.length-coreIds.size} дополнительных знаков, интерактивные связи и переводы на английский, французский и русский.`})[locale]}
+            {(withTurkish({tr:`Özgün İngilizce PDF, 20 grupta 100 hedef içerir. Uygulama ${atlasCharacters.length-coreIds.size} ek keşif, etkileşimli bağlantılar ve İngilizce, Fransızca, Rusça ve Türkçe çeviriler sunar.`,en:`The original English PDF contains 100 targets in 20 groups. The app adds ${atlasCharacters.length-coreIds.size} discovery extensions, interactive connections and translations in English, French and Russian.`,fr:`Le PDF original anglais contient 100 cibles en 20 groupes. L’application ajoute ${atlasCharacters.length-coreIds.size} découvertes, des liens interactifs et des traductions en anglais, français et russe.`,ru:`Исходный английский PDF содержит 100 целей в 20 группах. Приложение добавляет ${atlasCharacters.length-coreIds.size} дополнительных знаков, интерактивные связи и переводы на английский, французский и русский.`}))[locale]}
           </p>
           <div className="atlas-actions">
             <a

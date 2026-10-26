@@ -1,4 +1,5 @@
 'use client';
+import {withTurkish} from "./turkish";
 import {useEffect,useLayoutEffect,useRef,useState,type PointerEvent,type CSSProperties} from 'react';
 import type {CloudWord} from './atlas-cloud-model';
 import {boundedFamilyIndex,splitFamilyWord} from './word-family-model';
@@ -7,7 +8,7 @@ import {SharedText} from './word-family-text';
 type Props={words:CloudWord[];anchor:string;index:number;memory:boolean;revealed:boolean;onSelect:(index:number)=>void};
 /** Both scroll surfaces are views of one canonical word index. They cannot form invented combinations. */
 export default function WordFamilyReels(p:Props){
- const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>({en,fr,ru})[locale];
+ const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>(withTurkish({en,fr,ru}))[locale];
  const left=useRef<HTMLDivElement>(null),right=useRef<HTMLDivElement>(null),active=useRef<HTMLDivElement|null>(null),timer=useRef<ReturnType<typeof setTimeout>|null>(null),suppress=useRef(0);
  const drag=useRef<{node:HTMLDivElement;id:number;y:number;top:number;moved:boolean}|null>(null);
  const [rowHeight,setRowHeight]=useState(144),layout=useRef<{key:string;rowHeight:number;index:number}|null>(null),current=useRef(p);

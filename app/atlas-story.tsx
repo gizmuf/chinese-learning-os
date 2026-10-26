@@ -1,4 +1,5 @@
 "use client";
+import {withTurkish} from "./turkish";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowRight, Play, Pause, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import { atlasStories, storyPinyin, storyMeaning, hasNarration, type StoryId } from "./atlas-stories";
@@ -8,11 +9,11 @@ import AtlasStoryArt from "./atlas-story-art";
 import { clamp, progressForAudio, stageAt, STORY_DURATION } from "./atlas-story-motion";
 import "./atlas-story.css";
 
-const copy = {
+const copy = withTurkish({
   en: { eyebrow: "A CHARACTER, DISCOVERED", sun: "A little sunlight. A lasting shape.", wood: "Find the tree inside the character.", sunMeaning: "sun · day", woodMeaning: "tree · wood", drag: "Drag to explore the transformation", play: "Play story", resume: "Continue", pause: "Pause", replay: "Start again", sound: "Narration on", mute: "Narration off", note: "A visual memory aid. The middle drawing is an illustration, not a historical inscription.", explore: "Find this shape in other characters", reduced: "Reduced motion: three still frames" },
   fr: { eyebrow: "UN CARACTÈRE À DÉCOUVRIR", sun: "Un peu de soleil. Une forme qui reste.", wood: "Retrouvez l’arbre dans le caractère.", sunMeaning: "soleil · jour", woodMeaning: "arbre · bois", drag: "Faites glisser pour explorer la transformation", play: "Lire l’histoire", resume: "Continuer", pause: "Pause", replay: "Recommencer", sound: "Narration activée", mute: "Narration désactivée", note: "Une aide visuelle à la mémorisation. Le dessin intermédiaire est une illustration, pas une inscription historique.", explore: "Retrouver cette forme dans d’autres caractères", reduced: "Mouvement réduit : trois images fixes" },
   ru: { eyebrow: "ОТКРЫВАЕМ ИЕРОГЛИФ", sun: "Немного солнца. Запоминающийся образ.", wood: "Найдите дерево в иероглифе.", sunMeaning: "солнце · день", woodMeaning: "дерево · древесина", drag: "Перемещайте ползунок, чтобы изучить переход", play: "Смотреть историю", resume: "Продолжить", pause: "Пауза", replay: "Сначала", sound: "Озвучка включена", mute: "Озвучка выключена", note: "Образ для запоминания. Промежуточный рисунок — иллюстрация, а не историческая надпись.", explore: "Найти эту форму в других иероглифах", reduced: "Меньше движения: три неподвижных кадра" },
-};
+});
 
 export default function AtlasStory(props: { character: string; onComponent: (id: string) => void; notify: (message: string) => void }) {
   const { locale } = useI18n();
