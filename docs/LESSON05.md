@@ -6,7 +6,7 @@ Thirty supplied photographs (`IMG_0072`–`IMG_0101`) were read locally, compare
 ## Study sequence
 
 1. Pick one of six groups: introductions; two qualities; sensory impressions; feelings/readiness; time/generations; classroom conversation.
-2. Read each complete word with pinyin and meaning. Tap an underlined word for an inline definition and pronunciation, without leaving the sentence.
+2. Read each complete word with pinyin and meaning. Tap an underlined word for the shared Atlas dictionary popup: meaning, pinyin, pronunciation and individual-character buttons, without leaving the sentence. Atlas and this lesson use the same word renderer, popup and audio control in `app/study-dictionary.tsx`.
 3. Follow the grammar blocks and the link to a familiar Lesson 03/04 construction. Change one block in the expression builder.
 4. Try reading or listening without pinyin. Every one of the 65 expressions and 34 sentences has both modes: 198 checks, with topic filtering. Sixteen expression builders are guided practice.
 5. Watch and trace animated strokes, or choose the optional paper-style notebook. A separate memory-writing activity is available; it honestly records supported self-assessment because its model was accessible in the worksheet.
