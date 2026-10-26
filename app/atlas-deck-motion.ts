@@ -9,7 +9,7 @@ export const deckTransform=(offset:number,progress=0)=>{
 /** Navigation commits on release. Animation only presents the selected state. */
 export function useDeckMotion(key:string,navigate:(direction:-1|1)=>boolean){
  const ref=useRef<HTMLDivElement>(null),animations=useRef<Animation[]>([]),suppress=useRef(0);
- const gesture=useRef<{id:number;x:number;y:number;at:number;lastX:number;lastAt:number;velocity:number;horizontal:boolean}|null>(null);
+ const gesture=useRef<{id:number;x:number;y:number;horizontal:boolean}|null>(null);
  const navigateRef=useRef(navigate),wheel=useRef<WheelGesture>({at:0,distance:0,handled:false});
  const previous=useRef(key),snapshots=useRef<Map<string,string>|null>(null);
  const reduced=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -48,21 +48,20 @@ export function useDeckMotion(key:string,navigate:(direction:-1|1)=>boolean){
  function pointerDown(e:PointerEvent<HTMLElement>){
   if(e.button!==0||!e.isPrimary)return;
   if(gesture.current)abort();stop();suppress.current=0;
-  const now=performance.now();gesture.current={id:e.pointerId,x:e.clientX,y:e.clientY,at:now,lastX:e.clientX,lastAt:now,velocity:0,horizontal:false};
+  gesture.current={id:e.pointerId,x:e.clientX,y:e.clientY,horizontal:false};
   // Keep the original button as the capture target, including a release outside the deck.
   const target=(e.target as Element).closest('button')??e.currentTarget;
   target.setPointerCapture(e.pointerId);
  }
  function pointerMove(e:PointerEvent<HTMLElement>){
   const g=gesture.current;if(!g||g.id!==e.pointerId)return;
-  const dx=e.clientX-g.x,dy=e.clientY-g.y,now=performance.now();
+  const dx=e.clientX-g.x,dy=e.clientY-g.y;
   if(!g.horizontal){if(Math.abs(dy)>9&&Math.abs(dy)>Math.abs(dx)){gesture.current=null;return}if(Math.abs(dx)<=9||Math.abs(dx)<=Math.abs(dy)*1.3)return;g.horizontal=true}
-  g.velocity=(e.clientX-g.lastX)/Math.max(8,now-g.lastAt);g.lastX=e.clientX;g.lastAt=now;
   suppress.current=Date.now()+500;if(!reduced())paint(dx);
  }
  function pointerUp(e:PointerEvent<HTMLElement>,move:(d:-1|1)=>boolean){
   const g=gesture.current;if(!g||g.id!==e.pointerId)return;gesture.current=null;
-  const now=performance.now(),direction=deckSwipe(e.clientX-g.x,e.clientY-g.y,now-g.at,now-g.lastAt<=100?g.velocity:0);
+  const direction=deckSwipe(e.clientX-g.x,e.clientY-g.y);
   if(g.horizontal||direction){e.preventDefault();suppress.current=Date.now()+500}
   if(!direction||!move(direction))snapBack();
  }

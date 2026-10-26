@@ -1,9 +1,7 @@
-/** A short flick is intentional by speed; a slow drag is intentional by distance. */
-export function deckSwipe(dx:number,dy:number,durationMs:number,velocity=0):-1|0|1{
- if(![dx,dy,durationMs,velocity].every(Number.isFinite))return 0;
- const distance=Math.abs(dx);if(distance<16||distance<=Math.abs(dy)*1.3)return 0;
- const sameDirection=velocity*dx>0;
- return distance>=36||distance/Math.max(16,durationMs)>=.25||(sameDirection&&Math.abs(velocity)>=.25)?dx<0?1:-1:0;
+/** A deliberate short horizontal drag turns one card, independent of speed or hold time. */
+export function deckSwipe(dx:number,dy:number):-1|0|1{
+ if(![dx,dy].every(Number.isFinite))return 0;
+ return Math.abs(dx)>=18&&Math.abs(dx)>Math.abs(dy)*1.3?(dx<0?1:-1):0;
 }
 export type WheelGesture={at:number;distance:number;handled:boolean};
 /** Trackpad momentum belongs to one gesture, rather than a stream of card turns. */

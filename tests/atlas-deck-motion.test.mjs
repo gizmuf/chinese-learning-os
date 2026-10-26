@@ -17,12 +17,12 @@ test('A drag commits on mouse release without waiting for animation completion',
   const hook=useDeckMotion('日',()=>true);hook.ref.current=root;
   const event=(x,buttons=1)=>({button:0,isPrimary:true,pointerType:'mouse',pointerId:7,clientX:x,clientY:10,buttons,target:{closest:()=>button},currentTarget:root,preventDefault(){prevented++}});
   hook.pointerDown(event(200));assert.equal(capture,7);
-  hook.pointerMove(event(100));
+  hook.pointerMove(event(176));
   // Some mouse paths report the released buttons before delivering pointerup.
-  hook.pointerMove(event(99,0));
-  hook.pointerUp(event(99,0),d=>{assert.equal(d,1);return hook.transition(d,()=>commits++)});
+  hook.pointerMove(event(176,0));
+  hook.pointerUp(event(176,0),d=>{assert.equal(d,1);return hook.transition(d,()=>commits++)});
   assert.equal(commits,1);assert.equal(prevented,1);
-  hook.lostPointerCapture(event(99,0));assert.equal(commits,1);
+  hook.lostPointerCapture(event(176,0));assert.equal(commits,1);
   let suppressed=0;hook.clickCapture({preventDefault(){suppressed++},stopPropagation(){}});assert.equal(suppressed,1);
  }finally{for(const [key,value] of Object.entries(saved)){if(value===undefined)delete globalThis[key];else globalThis[key]=value}}
 });
