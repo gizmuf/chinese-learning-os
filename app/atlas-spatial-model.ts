@@ -14,7 +14,7 @@ export function spatialNext(total:number,index:number,mode:CardMode,direction:-1
 export function spatialSwipe(dx:number,dy:number):-1|0|1{return Math.abs(dx)>=54&&Math.abs(dx)>Math.abs(dy)*1.3?(dx<0?1:-1):0}
 export function wordPronunciation(word:CloudWord):Pronunciation{
  const id=word.item?.id??'atlas-'+word.atlasCharacterId;
- const prefix=id.startsWith('atlas-')?'/atlas/audio':id.startsWith('course04-')?'/course04/audio':id.startsWith('course03-')?'/course03/audio':'/audio';
+ const prefix=id.startsWith('atlas-')?'/atlas/audio':id.startsWith('course05-')?'/course05/audio':id.startsWith('course04-')?'/course04/audio':id.startsWith('course03-')?'/course03/audio':'/audio';
  return {text:word.hanzi,pinyin:word.pinyin,source:prefix+'/'+encodeURIComponent(id)+'-word.mp3',context:false,kind:'word'};
 }
 export function sentencePronunciation(word:CloudWord):Pronunciation|undefined{if(!word.item)return;const audio=wordPronunciation(word);return {text:word.item.sentence,pinyin:word.item.sentencePinyin,source:audio.source.replace(/-word\.mp3$/,'-sentence.mp3'),context:false,kind:'sentence'}}

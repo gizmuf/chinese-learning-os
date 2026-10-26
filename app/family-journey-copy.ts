@@ -1,3 +1,4 @@
+import {turkishText} from "./turkish";
 import type {Locale} from './translate';
 export const journeyCopy={
  other:['More useful words','Autres mots utiles','Другие полезные слова'],
@@ -10,4 +11,4 @@ export const journeyCopy={
  completed:['End of this vocabulary journey','Fin de ce parcours de vocabulaire','Конец этого словарного пути'],note:['Every entry appears once in this journey. Browsing and listening do not record mastery.','Chaque entrée apparaît une fois. Parcourir et écouter ne valide pas la maîtrise.','Каждая запись встречается один раз. Просмотр и прослушивание не засчитывают освоение.'],
  backTop:['Back to journey start','Revenir au début du parcours','Вернуться к началу пути'],expand:['Expand journey','Agrandir le parcours','Развернуть путь'],collapse:['Exit expanded view','Réduire la vue','Выйти из полного вида'],
 } as const;
-export function journeyText(locale:Locale,key:keyof typeof journeyCopy):string{return journeyCopy[key][locale==='en'?0:locale==='fr'?1:2]}
+export function journeyText(locale:Locale,key:keyof typeof journeyCopy):string{return locale==='tr'?turkishText(journeyCopy[key][0]):journeyCopy[key][locale==='en'?0:locale==='fr'?1:2]}

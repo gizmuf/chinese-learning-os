@@ -26,7 +26,7 @@ export const familyStories:FamilyStory[] = [
 ];
 export const storySource=(hanzi:string)=>"https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word="+encodeURIComponent(hanzi);
 export function familyStoryAudio(){return familyStories.flatMap(s=>[
- ...(["en","fr","ru"] as const).map(locale=>({file:`${s.id}-${locale}.mp3`,text:s.captions.map(c=>c[locale]).join(" "),voice:locale==="en"?"en-GB-SoniaNeural":locale==="fr"?"fr-FR-DeniseNeural":"ru-RU-SvetlanaNeural",rate:"-5%"})),
+ ...(["en","fr","ru","tr"] as const).map(locale=>({file:`${s.id}-${locale}.mp3`,text:s.captions.map(c=>c[locale]).join(" "),voice:locale==="en"?"en-GB-SoniaNeural":locale==="fr"?"fr-FR-DeniseNeural":locale==="tr"?"tr-TR-EmelNeural":"ru-RU-SvetlanaNeural",rate:"-5%"})),
  ...(s.word?[{file:`${s.id}-word.mp3`,text:s.word.hanzi,voice:"zh-CN-XiaoxiaoNeural",rate:"-10%"},{file:`${s.id}-sentence.mp3`,text:s.word.sentence,voice:"zh-CN-XiaoxiaoNeural",rate:"-10%"}]:[])
 ]);}
 

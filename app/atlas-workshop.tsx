@@ -1,4 +1,5 @@
 "use client";
+import {turkishText} from "./turkish";
 import { useEffect, useState } from "react";
 import { ArrowRight, RotateCcw, Volume2 } from "lucide-react";
 import { useI18n } from "./i18n";
@@ -113,8 +114,8 @@ export function CharacterBuild({entry,notify,onCharacter}:{entry:Assembly;notify
    {audio&&<button onClick={()=>{const item=atlasItem(audio,locale);speak(item.sentence,notify,item);}}><Volume2 size={16}/>{copy.hear[locale]}</button>}
    {audio&&<button onClick={()=>onCharacter(entry.hanzi)}>{copy.open[locale]}<ArrowRight size={16}/></button>}
   </div>
-  {quiz&&<div className="workshop-quiz"><p>{copy.prompt[locale]}</p><div className="workshop-choices">{choices.map(p=><button key={p.glyph} disabled={completed} onClick={()=>choose(p.glyph)}><strong>{p.glyph}</strong><span>{p.pinyin}</span></button>)}</div><div className="workshop-actions"><button onClick={()=>setHint(!hint)}>{hint?copy.hide[locale]:copy.hint[locale]}</button><button onClick={()=>{setPlaced([]);setMessage("");setHint(false);}}><RotateCcw size={16}/>{locale==="fr"?"Recommencer":locale==="ru"?"Сначала":"Start again"}</button><span>{placed.length} / {entry.parts.length}</span></div><p role="status">{message ? copy[message][locale] : ""}</p><small>{copy.practice[locale]}</small></div>}
-  <details className="workshop-source"><summary>{copy.source[locale]}</summary><p><a href={entry.source} target="_blank" rel="noreferrer">Dong Chinese · {entry.hanzi} · {entry.pinyin} ↗</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a></p><p>{locale==="fr"?"Notes adaptées ; illustrations pédagogiques originales.":locale==="ru"?"Адаптированные пояснения; оригинальные учебные иллюстрации.":"Adapted notes; original teaching illustrations."}</p></details>
+  {quiz&&<div className="workshop-quiz"><p>{copy.prompt[locale]}</p><div className="workshop-choices">{choices.map(p=><button key={p.glyph} disabled={completed} onClick={()=>choose(p.glyph)}><strong>{p.glyph}</strong><span>{p.pinyin}</span></button>)}</div><div className="workshop-actions"><button onClick={()=>setHint(!hint)}>{hint?copy.hide[locale]:copy.hint[locale]}</button><button onClick={()=>{setPlaced([]);setMessage("");setHint(false);}}><RotateCcw size={16}/>{locale==="tr"?turkishText("Start again"):locale==="fr"?"Recommencer":locale==="ru"?"Сначала":"Start again"}</button><span>{placed.length} / {entry.parts.length}</span></div><p role="status">{message ? copy[message][locale] : ""}</p><small>{copy.practice[locale]}</small></div>}
+  <details className="workshop-source"><summary>{copy.source[locale]}</summary><p><a href={entry.source} target="_blank" rel="noreferrer">Dong Chinese · {entry.hanzi} · {entry.pinyin} ↗</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a></p><p>{locale==="tr"?turkishText("Adapted notes; original teaching illustrations."):locale==="fr"?"Notes adaptées ; illustrations pédagogiques originales.":locale==="ru"?"Адаптированные пояснения; оригинальные учебные иллюстрации.":"Adapted notes; original teaching illustrations."}</p></details>
  </div>;
 }
 // A stable canonical component moves/resizes between family members. Once it

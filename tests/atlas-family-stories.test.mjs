@@ -12,7 +12,18 @@ test('Story pilot preserves origin, sound and memory distinctions across three l
  assert.match(familyStories.find(s=>s.hanzi==='莫').captions[2].en,/borrowed/);
 });
 test('Every story and whole word has the established locale or Mandarin voice',async()=>{
- const rows=familyStoryAudio();assert.equal(rows.length,53);assert.equal(new Set(rows.map(r=>r.file)).size,rows.length);
+ const rows=familyStoryAudio();assert.equal(rows.length,64);assert.equal(new Set(rows.map(r=>r.file)).size,rows.length);
+ const turkish=rows.filter(r=>r.file.endsWith('-tr.mp3'));
+ assert.equal(turkish.length,11);
+ assert.ok(turkish.every(r=>r.voice==='tr-TR-EmelNeural'&&r.rate==='-5%'&&r.text.trim()));
+ assert.equal(rows.filter(r=>r.voice==='tr-TR-EmelNeural').length,11);
+ const established=rows.filter(r=>!r.file.endsWith('-tr.mp3'));
+ assert.equal(established.length,53);
+ for(const [locale,voice] of [['en','en-GB-SoniaNeural'],['fr','fr-FR-DeniseNeural'],['ru','ru-RU-SvetlanaNeural']]){
+  const narrations=established.filter(r=>r.file.endsWith('-'+locale+'.mp3'));
+  assert.equal(narrations.length,11);
+  assert.ok(narrations.every(r=>r.voice===voice&&r.rate==='-5%'));
+ }
  assert.equal(rows.filter(r=>r.voice==='zh-CN-XiaoxiaoNeural'&&r.rate==='-10%').length,20);
  await import('../scripts/verify-atlas-family-stories.mjs');
 });

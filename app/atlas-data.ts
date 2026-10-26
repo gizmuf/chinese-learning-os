@@ -1,11 +1,12 @@
+import {withTurkish} from "./turkish";
 // Curated from Hanzi Connections Atlas v2, target pages 5–24.
 // Component membership describes recognizable modern forms, not etymology.
-export type AtlasCopy = Record<"en" | "fr" | "ru", string>;
-export const A = (en: string, fr: string, ru: string): AtlasCopy => ({
+export type AtlasCopy = Record<"en" | "fr" | "ru" | "tr", string>;
+export const A = (en: string, fr: string, ru: string): AtlasCopy => (withTurkish({
   en,
   fr,
   ru,
-});
+}));
 export type AtlasComponent = {
   id: string;
   glyph: string;
@@ -39,1041 +40,1041 @@ export const components: AtlasComponent[] = [
   {
     id: "sun",
     glyph: "日",
-    label: {
+    label: withTurkish({
       en: "Sun / day",
       fr: "Soleil / jour",
       ru: "Солнце / день",
-    },
+    }),
     aliases: [],
   },
   {
     id: "water",
     glyph: "水",
-    label: {
+    label: withTurkish({
       en: "Water",
       fr: "Eau",
       ru: "Вода",
-    },
+    }),
     aliases: ["氵"],
   },
   {
     id: "wood",
     glyph: "木",
-    label: {
+    label: withTurkish({
       en: "Wood / tree",
       fr: "Bois / arbre",
       ru: "Дерево",
-    },
+    }),
     aliases: ["朩"],
   },
   {
     id: "person",
     glyph: "人",
-    label: {
+    label: withTurkish({
       en: "Person",
       fr: "Personne",
       ru: "Человек",
-    },
+    }),
     aliases: ["亻"],
   },
   {
     id: "hand",
     glyph: "手",
-    label: {
+    label: withTurkish({
       en: "Hand",
       fr: "Main",
       ru: "Рука",
-    },
+    }),
     aliases: ["扌"],
   },
   {
     id: "mouth",
     glyph: "口",
-    label: {
+    label: withTurkish({
       en: "Mouth",
       fr: "Bouche",
       ru: "Рот",
-    },
+    }),
     aliases: [],
   },
   {
     id: "speech",
     glyph: "言",
-    label: {
+    label: withTurkish({
       en: "Speech",
       fr: "Parole",
       ru: "Речь",
-    },
+    }),
     aliases: ["讠"],
   },
   {
     id: "heart",
     glyph: "心",
-    label: {
+    label: withTurkish({
       en: "Heart / mind",
       fr: "Cœur / esprit",
       ru: "Сердце / мысли",
-    },
+    }),
     aliases: ["忄"],
   },
   {
     id: "roof",
     glyph: "宀",
-    label: {
+    label: withTurkish({
       en: "Roof",
       fr: "Toit",
       ru: "Крыша",
-    },
+    }),
     aliases: [],
   },
   {
     id: "walk",
     glyph: "辶",
-    label: {
+    label: withTurkish({
       en: "Walking component",
       fr: "Composant du déplacement",
       ru: "Компонент движения",
-    },
+    }),
     aliases: [],
   },
   {
     id: "grass",
     glyph: "艹",
-    label: {
+    label: withTurkish({
       en: "Grass",
       fr: "Herbe",
       ru: "Трава",
-    },
+    }),
     aliases: [],
   },
   {
     id: "moon",
     glyph: "月",
-    label: {
+    label: withTurkish({
       en: "Moon-shaped component",
       fr: "Forme de la lune",
       ru: "Компонент в форме луны",
-    },
+    }),
     aliases: [],
   },
   {
     id: "qing",
     glyph: "青",
-    label: {
+    label: withTurkish({
       en: "Qing",
       fr: "Qing",
       ru: "Цин",
-    },
+    }),
     aliases: [],
   },
   {
     id: "horse",
     glyph: "马",
-    label: {
+    label: withTurkish({
       en: "Horse",
       fr: "Cheval",
       ru: "Лошадь",
-    },
+    }),
     aliases: [],
   },
   {
     id: "fang",
     glyph: "方",
-    label: {
+    label: withTurkish({
       en: "Direction / square",
       fr: "Direction / carré",
       ru: "Направление / квадрат",
-    },
+    }),
     aliases: [],
   },
   {
     id: "bao",
     glyph: "包",
-    label: {
+    label: withTurkish({
       en: "Wrap / bag",
       fr: "Envelopper / sac",
       ru: "Заворачивать / сумка",
-    },
+    }),
     aliases: [],
   },
   {
     id: "food",
     glyph: "食",
-    label: {
+    label: withTurkish({
       en: "Food",
       fr: "Nourriture",
       ru: "Еда",
-    },
+    }),
     aliases: ["饣"],
   },
   {
     id: "foot",
     glyph: "足",
-    label: {
+    label: withTurkish({
       en: "Foot",
       fr: "Pied",
       ru: "Стопа",
-    },
+    }),
     aliases: ["⻊"],
   },
   {
     id: "woman",
     glyph: "女",
-    label: {
+    label: withTurkish({
       en: "Woman",
       fr: "Femme",
       ru: "Женщина",
-    },
+    }),
     aliases: [],
   },
   {
     id: "child",
     glyph: "子",
-    label: {
+    label: withTurkish({
       en: "Child",
       fr: "Enfant",
       ru: "Ребёнок",
-    },
+    }),
     aliases: [],
   },
   {
     id: "eye",
     glyph: "目",
-    label: {
+    label: withTurkish({
       en: "Eye",
       fr: "Œil",
       ru: "Глаз",
-    },
+    }),
     aliases: [],
   },
   {
     id: "ear",
     glyph: "耳",
-    label: {
+    label: withTurkish({
       en: "Ear",
       fr: "Oreille",
       ru: "Ухо",
-    },
+    }),
     aliases: [],
   },
   {
     id: "field",
     glyph: "田",
-    label: {
+    label: withTurkish({
       en: "Field",
       fr: "Champ",
       ru: "Поле",
-    },
+    }),
     aliases: [],
   },
   {
     id: "strength",
     glyph: "力",
-    label: {
+    label: withTurkish({
       en: "Strength",
       fr: "Force",
       ru: "Сила",
-    },
+    }),
     aliases: [],
   },
   {
     id: "stone",
     glyph: "石",
-    label: {
+    label: withTurkish({
       en: "Stone",
       fr: "Pierre",
       ru: "Камень",
-    },
+    }),
     aliases: [],
   },
   {
     id: "insect",
     glyph: "虫",
-    label: {
+    label: withTurkish({
       en: "Insect",
       fr: "Insecte",
       ru: "Насекомое",
-    },
+    }),
     aliases: [],
   },
   {
     id: "door",
     glyph: "户",
-    label: {
+    label: withTurkish({
       en: "Door component",
       fr: "Composant de la porte",
       ru: "Компонент двери",
-    },
+    }),
     aliases: [],
   },
   {
     id: "action",
     glyph: "攵",
-    label: {
+    label: withTurkish({
       en: "Action component",
       fr: "Composant de l’action",
       ru: "Компонент действия",
-    },
+    }),
     aliases: [],
   },
   {
     id: "mound",
     glyph: "阝",
-    label: {
+    label: withTurkish({
       en: "Left mound component",
       fr: "Composant de la colline à gauche",
       ru: "Левый компонент холма",
-    },
+    }),
     aliases: [],
   },
   {
     id: "gate",
     glyph: "门",
-    label: {
+    label: withTurkish({
       en: "Gate",
       fr: "Portail",
       ru: "Ворота",
-    },
+    }),
     aliases: [],
   },
   {
     id: "root",
     glyph: "本",
-    label: {
+    label: withTurkish({
       en: "Root / basis",
       fr: "Racine / base",
       ru: "Корень / основа",
-    },
+    }),
     aliases: [],
   },
   {
     id: "think",
     glyph: "相",
-    label: {
+    label: withTurkish({
       en: "Wood and eye shape",
       fr: "Bois et œil",
       ru: "Дерево и глаз",
-    },
+    }),
     aliases: [],
   },
   {
     id: "lost",
     glyph: "亡",
-    label: {
+    label: withTurkish({
       en: "Lost",
       fr: "Perdu",
       ru: "Утрата",
-    },
+    }),
     aliases: [],
   },
   {
     id: "white",
     glyph: "白",
-    label: {
+    label: withTurkish({
       en: "White",
       fr: "Blanc",
       ru: "Белый",
-    },
+    }),
     aliases: [],
   },
   {
     id: "ten",
     glyph: "十",
-    label: {
+    label: withTurkish({
       en: "Ten",
       fr: "Dix",
       ru: "Десять",
-    },
+    }),
     aliases: [],
   },
   {
     id: "axe",
     glyph: "斤",
-    label: {
+    label: withTurkish({
       en: "Axe shape",
       fr: "Forme de la hache",
       ru: "Форма топора",
-    },
+    }),
     aliases: [],
   },
   {
     id: "inch",
     glyph: "寸",
-    label: {
+    label: withTurkish({
       en: "Inch component",
       fr: "Composant du pouce",
       ru: "Компонент цунь",
-    },
+    }),
     aliases: [],
   },
   {
     id: "well",
     glyph: "井",
-    label: {
+    label: withTurkish({
       en: "Well",
       fr: "Puits",
       ru: "Колодец",
-    },
+    }),
     aliases: [],
   },
   {
     id: "origin",
     glyph: "元",
-    label: {
+    label: withTurkish({
       en: "Origin",
       fr: "Origine",
       ru: "Начало",
-    },
+    }),
     aliases: [],
   },
   {
     id: "father",
     glyph: "父",
-    label: {
+    label: withTurkish({
       en: "Father",
       fr: "Père",
       ru: "Отец",
-    },
+    }),
     aliases: [],
   },
   {
     id: "ba",
     glyph: "巴",
-    label: {
+    label: withTurkish({
       en: "Ba shape",
       fr: "Forme ba",
       ru: "Форма ба",
-    },
+    }),
     aliases: [],
   },
   {
     id: "pig",
     glyph: "豕",
-    label: {
+    label: withTurkish({
       en: "Pig component",
       fr: "Composant du porc",
       ru: "Компонент свиньи",
-    },
+    }),
     aliases: [],
   },
   {
     id: "arrive",
     glyph: "至",
-    label: {
+    label: withTurkish({
       en: "Arrive",
       fr: "Arriver",
       ru: "Прибывать",
-    },
+    }),
     aliases: [],
   },
   {
     id: "each",
     glyph: "各",
-    label: {
+    label: withTurkish({
       en: "Each",
       fr: "Chaque",
       ru: "Каждый",
-    },
+    }),
     aliases: [],
   },
   {
     id: "winter",
     glyph: "夂",
-    label: {
+    label: withTurkish({
       en: "Descending component",
       fr: "Composant descendant",
       ru: "Нисходящий компонент",
-    },
+    }),
     aliases: [],
   },
   {
     id: "evening",
     glyph: "夕",
-    label: {
+    label: withTurkish({
       en: "Evening",
       fr: "Soir",
       ru: "Вечер",
-    },
+    }),
     aliases: [],
   },
   {
     id: "rice",
     glyph: "米",
-    label: {
+    label: withTurkish({
       en: "Rice",
       fr: "Riz",
       ru: "Рис",
-    },
+    }),
     aliases: [],
   },
   {
     id: "pick",
     glyph: "采",
-    label: {
+    label: withTurkish({
       en: "Pick / gather shape",
       fr: "Forme cueillir",
       ru: "Форма собирать",
-    },
+    }),
     aliases: [],
   },
   {
     id: "claw",
     glyph: "爪",
-    label: {
+    label: withTurkish({
       en: "Claw / hand above",
       fr: "Griffe / main en haut",
       ru: "Коготь / рука сверху",
-    },
+    }),
     aliases: ["爫"],
   },
   {
     id: "transform",
     glyph: "化",
-    label: {
+    label: withTurkish({
       en: "Transform",
       fr: "Transformer",
       ru: "Превращать",
-    },
+    }),
     aliases: [],
   },
   {
     id: "spoon",
     glyph: "匕",
-    label: {
+    label: withTurkish({
       en: "Spoon shape",
       fr: "Forme de cuillère",
       ru: "Форма ложки",
-    },
+    }),
     aliases: [],
   },
   {
     id: "reverse",
     glyph: "反",
-    label: {
+    label: withTurkish({
       en: "Reverse",
       fr: "Inverser",
       ru: "Обратный",
-    },
+    }),
     aliases: [],
   },
   {
     id: "right-hand",
     glyph: "又",
-    label: {
+    label: withTurkish({
       en: "Right-hand shape",
       fr: "Forme de main droite",
       ru: "Форма правой руки",
-    },
+    }),
     aliases: [],
   },
   {
     id: "cliff",
     glyph: "厂",
-    label: {
+    label: withTurkish({
       en: "Cliff shape",
       fr: "Forme de falaise",
       ru: "Форма обрыва",
-    },
+    }),
     aliases: [],
   },
   {
     id: "wine",
     glyph: "酉",
-    label: {
+    label: withTurkish({
       en: "Wine-vessel shape",
       fr: "Forme de vase à vin",
       ru: "Форма винного сосуда",
-    },
+    }),
     aliases: [],
   },
   {
     id: "first",
     glyph: "先",
-    label: {
+    label: withTurkish({
       en: "First",
       fr: "Premier",
       ru: "Первый",
-    },
+    }),
     aliases: [],
   },
   {
     id: "legs",
     glyph: "儿",
-    label: {
+    label: withTurkish({
       en: "Legs shape",
       fr: "Forme de jambes",
       ru: "Форма ног",
-    },
+    }),
     aliases: [],
   },
   {
     id: "can",
     glyph: "可",
-    label: {
+    label: withTurkish({
       en: "Can",
       fr: "Pouvoir",
       ru: "Мочь",
-    },
+    }),
     aliases: [],
   },
   {
     id: "every",
     glyph: "每",
-    label: {
+    label: withTurkish({
       en: "Every",
       fr: "Chaque",
       ru: "Каждый",
-    },
+    }),
     aliases: [],
   },
   {
     id: "mother",
     glyph: "母",
-    label: {
+    label: withTurkish({
       en: "Mother shape",
       fr: "Forme mère",
       ru: "Форма мать",
-    },
+    }),
     aliases: [],
   },
   {
     id: "ding",
     glyph: "丁",
-    label: {
+    label: withTurkish({
       en: "Ding shape",
       fr: "Forme ding",
       ru: "Форма дин",
-    },
+    }),
     aliases: [],
   },
   {
     id: "halberd",
     glyph: "戈",
-    label: {
+    label: withTurkish({
       en: "Halberd",
       fr: "Hallebarde",
       ru: "Алебарда",
-    },
+    }),
     aliases: [],
   },
   {
     id: "stand",
     glyph: "立",
-    label: {
+    label: withTurkish({
       en: "Stand",
       fr: "Se tenir debout",
       ru: "Стоять",
-    },
+    }),
     aliases: [],
   },
   {
     id: "er",
     glyph: "尔",
-    label: {
+    label: withTurkish({
       en: "Er shape",
       fr: "Forme er",
       ru: "Форма эр",
-    },
+    }),
     aliases: [],
   },
   {
     id: "small",
     glyph: "小",
-    label: {
+    label: withTurkish({
       en: "Small",
       fr: "Petit",
       ru: "Маленький",
-    },
+    }),
     aliases: [],
   },
   {
     id: "ye",
     glyph: "也",
-    label: {
+    label: withTurkish({
       en: "Ye shape",
       fr: "Forme ye",
       ru: "Форма е",
-    },
+    }),
     aliases: [],
   },
   {
     id: "master",
     glyph: "主",
-    label: {
+    label: withTurkish({
       en: "Master",
       fr: "Maître",
       ru: "Хозяин",
-    },
+    }),
     aliases: [],
   },
   {
     id: "king",
     glyph: "王",
-    label: {
+    label: withTurkish({
       en: "King",
       fr: "Roi",
       ru: "Король",
-    },
+    }),
     aliases: [],
   },
   {
     id: "beg",
     glyph: "乞",
-    label: {
+    label: withTurkish({
       en: "Beg",
       fr: "Mendier",
       ru: "Просить",
-    },
+    }),
     aliases: [],
   },
   {
     id: "he",
     glyph: "曷",
-    label: {
+    label: withTurkish({
       en: "He shape",
       fr: "Forme he",
       ru: "Форма хэ",
-    },
+    }),
     aliases: [],
   },
   {
     id: "wrap",
     glyph: "勹",
-    label: {
+    label: withTurkish({
       en: "Wrapping shape",
       fr: "Forme enveloppante",
       ru: "Охватывающая форма",
-    },
+    }),
     aliases: [],
   },
   {
     id: "join",
     glyph: "丩",
-    label: {
+    label: withTurkish({
       en: "Joining shape",
       fr: "Forme d’assemblage",
       ru: "Соединяющая форма",
-    },
+    }),
     aliases: [],
   },
   {
     id: "tongue",
     glyph: "舌",
-    label: {
+    label: withTurkish({
       en: "Tongue",
       fr: "Langue (organe)",
       ru: "Язык (орган)",
-    },
+    }),
     aliases: [],
   },
   {
     id: "five",
     glyph: "五",
-    label: {
+    label: withTurkish({
       en: "Five",
       fr: "Cinq",
       ru: "Пять",
-    },
+    }),
     aliases: [],
   },
   {
     id: "wu",
     glyph: "吾",
-    label: {
+    label: withTurkish({
       en: "Wu shape",
       fr: "Forme wu",
       ru: "Форма у",
-    },
+    }),
     aliases: [],
   },
   {
     id: "exchange",
     glyph: "兑",
-    label: {
+    label: withTurkish({
       en: "Dui shape",
       fr: "Forme dui",
       ru: "Форма дуй",
-    },
+    }),
     aliases: [],
   },
   {
     id: "sell",
     glyph: "卖",
-    label: {
+    label: withTurkish({
       en: "Sell",
       fr: "Vendre",
       ru: "Продавать",
-    },
+    }),
     aliases: [],
   },
   {
     id: "head",
     glyph: "头",
-    label: {
+    label: withTurkish({
       en: "Head",
       fr: "Tête",
       ru: "Голова",
-    },
+    }),
     aliases: [],
   },
   {
     id: "si",
     glyph: "司",
-    label: {
+    label: withTurkish({
       en: "Si shape",
       fr: "Forme si",
       ru: "Форма сы",
-    },
+    }),
     aliases: [],
   },
   {
     id: "zha",
     glyph: "乍",
-    label: {
+    label: withTurkish({
       en: "Zha shape",
       fr: "Forme zha",
       ru: "Форма чжа",
-    },
+    }),
     aliases: [],
   },
   {
     id: "avoid",
     glyph: "免",
-    label: {
+    label: withTurkish({
       en: "Mian shape",
       fr: "Forme mian",
       ru: "Форма мянь",
-    },
+    }),
     aliases: [],
   },
   {
     id: "gen",
     glyph: "艮",
-    label: {
+    label: withTurkish({
       en: "Gen shape",
       fr: "Forme gen",
       ru: "Форма гэнь",
-    },
+    }),
     aliases: [],
   },
   {
     id: "body",
     glyph: "身",
-    label: {
+    label: withTurkish({
       en: "Body",
       fr: "Corps",
       ru: "Тело",
-    },
+    }),
     aliases: [],
   },
   {
     id: "one",
     glyph: "一",
-    label: {
+    label: withTurkish({
       en: "One",
       fr: "Un",
       ru: "Один",
-    },
+    }),
     aliases: [],
   },
   {
     id: "two",
     glyph: "二",
-    label: {
+    label: withTurkish({
       en: "Two",
       fr: "Deux",
       ru: "Два",
-    },
+    }),
     aliases: [],
   },
   {
     id: "three",
     glyph: "三",
-    label: {
+    label: withTurkish({
       en: "Three",
       fr: "Trois",
       ru: "Три",
-    },
+    }),
     aliases: [],
   },
   {
     id: "enclosure",
     glyph: "囗",
-    label: {
+    label: withTurkish({
       en: "Enclosure",
       fr: "Enclos",
       ru: "Ограда",
-    },
+    }),
     aliases: [],
   },
   {
     id: "big",
     glyph: "大",
-    label: {
+    label: withTurkish({
       en: "Big",
       fr: "Grand",
       ru: "Большой",
-    },
+    }),
     aliases: [],
   },
   {
     id: "up",
     glyph: "上",
-    label: {
+    label: withTurkish({
       en: "Above",
       fr: "Au-dessus",
       ru: "Вверху",
-    },
+    }),
     aliases: [],
   },
   {
     id: "down",
     glyph: "下",
-    label: {
+    label: withTurkish({
       en: "Below",
       fr: "Au-dessous",
       ru: "Внизу",
-    },
+    }),
     aliases: [],
   },
   {
     id: "middle",
     glyph: "中",
-    label: {
+    label: withTurkish({
       en: "Middle",
       fr: "Milieu",
       ru: "Середина",
-    },
+    }),
     aliases: [],
   },
   {
     id: "life",
     glyph: "生",
-    label: {
+    label: withTurkish({
       en: "Life / grow",
       fr: "Vie / pousser",
       ru: "Жизнь / расти",
-    },
+    }),
     aliases: [],
   },
   {
     id: "book",
     glyph: "书",
-    label: {
+    label: withTurkish({
       en: "Book",
       fr: "Livre",
       ru: "Книга",
-    },
+    }),
     aliases: [],
   },
   {
     id: "writing",
     glyph: "文",
-    label: {
+    label: withTurkish({
       en: "Writing",
       fr: "Écriture",
       ru: "Письменность",
-    },
+    }),
     aliases: [],
   },
   {
     id: "study-top",
     glyph: "⺍",
-    label: {
+    label: withTurkish({
       en: "Learn top shape",
       fr: "Forme supérieure de apprendre",
       ru: "Верхняя форма в 学",
-    },
+    }),
     aliases: [],
   },
   {
     id: "cover",
     glyph: "冖",
-    label: {
+    label: withTurkish({
       en: "Cover",
       fr: "Couverture",
       ru: "Покрытие",
-    },
+    }),
     aliases: [],
   },
   {
     id: "walk-character",
     glyph: "走",
-    label: {
+    label: withTurkish({
       en: "Walk (whole character)",
       fr: "Marcher (caractère entier)",
       ru: "Идти (целый иероглиф)",
-    },
+    }),
     aliases: [],
   },
   {
     id: "si-wrap",
     glyph: "巳",
-    label: {
+    label: withTurkish({
       en: "Si shape inside 包",
       fr: "Forme si dans 包",
       ru: "Форма сы внутри 包",
-    },
+    }),
     aliases: [],
   },
   {
     id: "qing-top",
     glyph: "龶",
-    label: {
+    label: withTurkish({
       en: "Top shape of 青",
       fr: "Forme supérieure de 青",
       ru: "Верхняя форма 青",
-    },
+    }),
     aliases: [],
   },
   {
     id: "earth",
     glyph: "土",
-    label: {
+    label: withTurkish({
       en: "Earth",
       fr: "Terre",
       ru: "Земля",
-    },
+    }),
     aliases: [],
   },
   {
     id: "private",
     glyph: "厶",
-    label: {
+    label: withTurkish({
       en: "Si shape",
       fr: "Forme si",
       ru: "Форма сы",
-    },
+    }),
     aliases: [],
   },
   {
     id: "foot-bottom",
     glyph: "龰",
-    label: {
+    label: withTurkish({
       en: "Lower foot shape",
       fr: "Forme inférieure du pied",
       ru: "Нижняя форма стопы",
-    },
+    }),
     aliases: [],
   },
   {
     id: "thousand",
     glyph: "千",
-    label: {
+    label: withTurkish({
       en: "Thousand",
       fr: "Mille",
       ru: "Тысяча",
-    },
+    }),
     aliases: [],
   },
   {
     id: "cow-top",
     glyph: "⺧",
-    label: {
+    label: withTurkish({
       en: "Top shape of 先",
       fr: "Forme supérieure de 先",
       ru: "Верхняя форма 先",
-    },
+    }),
     aliases: [],
   },
 ];
@@ -1081,323 +1082,323 @@ export const components: AtlasComponent[] = [
 export const groups: AtlasGroup[] = [
   {
     id: "qing",
-    title: {
+    title: withTurkish({
       en: "Qing connections",
       fr: "Liens de Qing",
       ru: "Связи Цин",
-    },
+    }),
     kind: "phonetic",
     anchor: "青",
     characters: ["青", "清", "晴", "情", "请"],
-    note: {
+    note: withTurkish({
       en: "The 青 sound clue links these readings; learn each tone.",
       fr: "L’indice sonore 青 relie ces lectures ; apprenez chaque ton.",
       ru: "Компонент 青 связывает звучание; учите каждый тон.",
-    },
+    }),
   },
   {
     id: "ma",
-    title: {
+    title: withTurkish({
       en: "Ma connections",
       fr: "Liens de Ma",
       ru: "Связи Ма",
-    },
+    }),
     kind: "phonetic",
     anchor: "马",
     characters: ["马", "妈", "吗", "码", "蚂"],
-    note: {
+    note: withTurkish({
       en: "马 links the sounds; 吗 has neutral tone in this question.",
       fr: "马 relie les sons ; 吗 a un ton neutre dans cette question.",
       ru: "马 связывает звучание; в этом вопросе 吗 имеет нейтральный тон.",
-    },
+    }),
   },
   {
     id: "fang",
-    title: {
+    title: withTurkish({
       en: "Fang connections",
       fr: "Liens de Fang",
       ru: "Связи Фан",
-    },
+    }),
     kind: "phonetic",
     anchor: "方",
     characters: ["方", "房", "放", "防", "访"],
-    note: {
+    note: withTurkish({
       en: "The final -ang recurs; tones vary. Meaning clues can be broad.",
       fr: "La finale -ang revient ; les tons varient. Les indices de sens restent larges.",
       ru: "Финаль -ang повторяется; тоны различаются. Смысловые подсказки широки.",
-    },
+    }),
   },
   {
     id: "bao",
-    title: {
+    title: withTurkish({
       en: "Bao connections",
       fr: "Liens de Bao",
       ru: "Связи Бао",
-    },
+    }),
     kind: "phonetic",
     anchor: "包",
     characters: ["包", "抱", "饱", "泡", "跑"],
-    note: {
+    note: withTurkish({
       en: "包 links b- and p- readings; use the selected word to learn the sense.",
       fr: "包 relie des lectures en b- et p- ; le mot précise le sens.",
       ru: "包 связывает чтения с b- и p-; слово уточняет значение.",
-    },
+    }),
   },
   {
     id: "water",
-    title: {
+    title: withTurkish({
       en: "Water connections",
       fr: "Liens de l’eau",
       ru: "Связи воды",
-    },
+    }),
     kind: "semantic",
     anchor: "水",
     characters: ["水", "河", "海", "洗", "酒"],
-    note: {
+    note: withTurkish({
       en: "氵 is the left form of 水. Shared meaning clues do not fix pronunciation.",
       fr: "氵 est la forme gauche de 水. L’indice de sens ne fixe pas la prononciation.",
       ru: "氵 — левая форма 水. Общая смысловая подсказка не задаёт произношение.",
-    },
+    }),
   },
   {
     id: "wood",
-    title: {
+    title: withTurkish({
       en: "Wood connections",
       fr: "Liens du bois",
       ru: "Связи дерева",
-    },
+    }),
     kind: "structure",
     anchor: "木",
     characters: ["木", "林", "森", "树", "本"],
-    note: {
+    note: withTurkish({
       en: "Notice repeated 木 and the extra stroke in 本; these are shape links.",
       fr: "Repérez 木 répété et le trait ajouté dans 本 ; ce sont des liens de forme.",
       ru: "Замечайте повторение 木 и добавленную черту в 本; это связи формы.",
-    },
+    }),
   },
   {
     id: "person",
-    title: {
+    title: withTurkish({
       en: "Person connections",
       fr: "Liens de la personne",
       ru: "Связи человека",
-    },
+    }),
     kind: "semantic",
     anchor: "人",
     characters: ["人", "你", "他", "们", "住"],
-    note: {
+    note: withTurkish({
       en: "亻 is the left form of 人. 们 marks pronouns and people, not all objects.",
       fr: "亻 est la forme gauche de 人. 们 marque les pronoms et les personnes.",
       ru: "亻 — левая форма 人. 们 относится к местоимениям и людям, а не ко всем предметам.",
-    },
+    }),
   },
   {
     id: "hand",
-    title: {
+    title: withTurkish({
       en: "Hand connections",
       fr: "Liens de la main",
       ru: "Связи руки",
-    },
+    }),
     kind: "semantic",
     anchor: "手",
     characters: ["手", "打", "找", "把", "拉"],
-    note: {
+    note: withTurkish({
       en: "扌 links hand actions; the whole characters have different sounds.",
       fr: "扌 relie des actions de la main ; les caractères ont des sons différents.",
       ru: "扌 связывает действия рукой; иероглифы звучат по-разному.",
-    },
+    }),
   },
   {
     id: "mouth",
-    title: {
+    title: withTurkish({
       en: "Mouth connections",
       fr: "Liens de la bouche",
       ru: "Связи рта",
-    },
+    }),
     kind: "semantic",
     anchor: "口",
     characters: ["口", "吃", "喝", "叫", "听"],
-    note: {
+    note: withTurkish({
       en: "口 recurs on the left. In 听 this describes the simplified shape.",
       fr: "口 revient à gauche. Pour 听, cela décrit la forme simplifiée.",
       ru: "口 повторяется слева. Для 听 это описание упрощённой формы.",
-    },
+    }),
   },
   {
     id: "speech",
-    title: {
+    title: withTurkish({
       en: "Speech connections",
       fr: "Liens de la parole",
       ru: "Связи речи",
-    },
+    }),
     kind: "semantic",
     anchor: "说",
     characters: ["说", "话", "语", "读", "词"],
-    note: {
+    note: withTurkish({
       en: "讠 is the simplified Speech component; learn five different readings.",
       fr: "讠 est le composant simplifié de la parole ; apprenez cinq lectures différentes.",
       ru: "讠 — упрощённый компонент речи; учите пять разных чтений.",
-    },
+    }),
   },
   {
     id: "heart",
-    title: {
+    title: withTurkish({
       en: "Heart connections",
       fr: "Liens du cœur",
       ru: "Связи сердца",
-    },
+    }),
     kind: "semantic",
     anchor: "心",
     characters: ["心", "想", "忘", "忙", "怕"],
-    note: {
+    note: withTurkish({
       en: "心 sits below in 想 and 忘, and appears as 忄 on the left.",
       fr: "心 est en bas dans 想 et 忘 et devient 忄 à gauche.",
       ru: "心 стоит внизу в 想 и 忘, а слева принимает форму 忄.",
-    },
+    }),
   },
   {
     id: "sun",
-    title: {
+    title: withTurkish({
       en: "Sun and time",
       fr: "Soleil et temps",
       ru: "Солнце и время",
-    },
+    }),
     kind: "structure",
     anchor: "日",
     characters: ["日", "早", "明", "昨", "晚"],
-    note: {
+    note: withTurkish({
       en: "All five contain 日. 明 shows 日 beside 月 in the modern shape.",
       fr: "Les cinq contiennent 日. La forme moderne de 明 juxtapose 日 et 月.",
       ru: "Все пять содержат 日. В современной форме 明 рядом стоят 日 и 月.",
-    },
+    }),
   },
   {
     id: "body",
-    title: {
+    title: withTurkish({
       en: "Body words",
       fr: "Mots du corps",
       ru: "Слова о теле",
-    },
+    }),
     kind: "theme",
     anchor: "身",
     characters: ["身", "体", "头", "眼", "耳"],
-    note: {
+    note: withTurkish({
       en: "A vocabulary theme: these characters do not share one component.",
       fr: "Un thème de vocabulaire : ces caractères n’ont pas un composant commun.",
       ru: "Это словарная тема: у этих иероглифов нет одного общего компонента.",
-    },
+    }),
   },
   {
     id: "roof",
-    title: {
+    title: withTurkish({
       en: "Roof connections",
       fr: "Liens du toit",
       ru: "Связи крыши",
-    },
+    }),
     kind: "structure",
     anchor: "家",
     characters: ["家", "安", "字", "室", "客"],
-    note: {
+    note: withTurkish({
       en: "宀 appears on top in all five; the complete meanings still differ.",
       fr: "宀 figure en haut des cinq ; les sens complets restent différents.",
       ru: "宀 стоит сверху во всех пяти; полные значения различаются.",
-    },
+    }),
   },
   {
     id: "movement",
-    title: {
+    title: withTurkish({
       en: "Movement connections",
       fr: "Liens du déplacement",
       ru: "Связи движения",
-    },
+    }),
     kind: "semantic",
     anchor: "走",
     characters: ["走", "进", "过", "近", "远"],
-    note: {
+    note: withTurkish({
       en: "进、过、近、远 contain 辶. 走 is a separate whole character.",
       fr: "进、过、近、远 contiennent 辶. 走 est un caractère entier distinct.",
       ru: "进、过、近、远 содержат 辶. 走 — отдельный целый иероглиф.",
-    },
+    }),
   },
   {
     id: "numbers",
-    title: {
+    title: withTurkish({
       en: "Numbers",
       fr: "Nombres",
       ru: "Числа",
-    },
+    }),
     kind: "theme",
     anchor: "一",
     characters: ["一", "二", "三", "四", "五"],
-    note: {
+    note: withTurkish({
       en: "Count strokes for 一、二、三; learn 四 and 五 as separate shapes.",
       fr: "Comptez les traits de 一、二、三 ; apprenez 四 et 五 séparément.",
       ru: "Считайте черты в 一、二、三; формы 四 и 五 учите отдельно.",
-    },
+    }),
   },
   {
     id: "size",
-    title: {
+    title: withTurkish({
       en: "Size and place",
       fr: "Taille et position",
       ru: "Размер и положение",
-    },
+    }),
     kind: "theme",
     anchor: "大",
     characters: ["大", "小", "上", "下", "中"],
-    note: {
+    note: withTurkish({
       en: "Compare the meanings big/small and above/below; no common component is implied.",
       fr: "Comparez grand/petit et dessus/dessous ; cela n’implique aucun composant commun.",
       ru: "Сравнивайте большой/маленький и верх/низ; общий компонент не подразумевается.",
-    },
+    }),
   },
   {
     id: "family",
-    title: {
+    title: withTurkish({
       en: "Family and people",
       fr: "Famille et personnes",
       ru: "Семья и люди",
-    },
+    }),
     kind: "theme",
     anchor: "女",
     characters: ["女", "子", "好", "爸", "男"],
-    note: {
+    note: withTurkish({
       en: "好 contains 女 and 子; 男 contains 田 and 力. These are shape observations.",
       fr: "好 contient 女 et 子 ; 男 contient 田 et 力. Ce sont des observations de forme.",
       ru: "好 содержит 女 и 子; 男 содержит 田 и 力. Это наблюдения о форме.",
-    },
+    }),
   },
   {
     id: "learning",
-    title: {
+    title: withTurkish({
       en: "Learning words",
       fr: "Mots de l’apprentissage",
       ru: "Слова об учёбе",
-    },
+    }),
     kind: "theme",
     anchor: "学",
     characters: ["学", "生", "书", "文", "名"],
-    note: {
+    note: withTurkish({
       en: "学 contains 子 below, but its top is not 宀. 生 is neutral in 学生.",
       fr: "学 contient 子 en bas, mais son haut n’est pas 宀. 生 est neutre dans 学生.",
       ru: "В 学 снизу стоит 子, но верх — не 宀. В 学生 слог 生 нейтральный.",
-    },
+    }),
   },
   {
     id: "food",
-    title: {
+    title: withTurkish({
       en: "Food and plants",
       fr: "Aliments et plantes",
       ru: "Еда и растения",
-    },
+    }),
     kind: "theme",
     anchor: "米",
     characters: ["米", "饭", "菜", "茶", "花"],
-    note: {
+    note: withTurkish({
       en: "菜、茶、花 share 艹; 米 and 饭 belong by topic, not that component.",
       fr: "菜、茶、花 partagent 艹 ; 米 et 饭 sont liés par le thème.",
       ru: "菜、茶、花 имеют 艹; 米 и 饭 связаны с ними темой.",
-    },
+    }),
   },
 ];
 
@@ -1406,48 +1407,48 @@ export const characters: AtlasCharacter[] = [
     id: "u9752",
     hanzi: "青",
     pinyin: "qīng",
-    meaning: {
+    meaning: withTurkish({
       en: "blue / green",
       fr: "bleu / vert",
       ru: "синий / зелёный",
-    },
+    }),
     word: "青草",
     wordPinyin: "qīngcǎo",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "green grass",
       fr: "herbe verte",
       ru: "зелёная трава",
-    },
+    }),
     components: ["qing", "moon", "qing-top"],
-    note: {
+    note: withTurkish({
       en: "The lower shape resembles 月; this is a shape link, not a claim that 青 means moon.",
       fr: "La partie basse ressemble à 月 ; ce lien de forme ne signifie pas que 青 veut dire lune.",
       ru: "Нижняя часть похожа на 月; это связь формы, а не значение «луна».",
-    },
+    }),
     sourcePage: 5,
   },
   {
     id: "u6e05",
     hanzi: "清",
     pinyin: "qīng",
-    meaning: {
+    meaning: withTurkish({
       en: "clear / pure",
       fr: "clair / pur",
       ru: "чистый / прозрачный",
-    },
+    }),
     word: "清水",
     wordPinyin: "qīngshuǐ",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "clear water",
       fr: "eau claire",
       ru: "чистая вода",
-    },
+    }),
     components: ["water", "qing", "moon", "qing-top"],
-    note: {
+    note: withTurkish({
       en: "The 青 sound clue links these readings; learn each tone.",
       fr: "L’indice sonore 青 relie ces lectures ; apprenez chaque ton.",
       ru: "Компонент 青 связывает звучание; учите каждый тон.",
-    },
+    }),
     sourcePage: 5,
     phonetic: "qing",
     semantic: "water",
@@ -1456,24 +1457,24 @@ export const characters: AtlasCharacter[] = [
     id: "u6674",
     hanzi: "晴",
     pinyin: "qíng",
-    meaning: {
+    meaning: withTurkish({
       en: "sunny",
       fr: "ensoleillé",
       ru: "солнечный",
-    },
+    }),
     word: "晴天",
     wordPinyin: "qíngtiān",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "sunny day",
       fr: "journée ensoleillée",
       ru: "солнечный день",
-    },
+    }),
     components: ["sun", "qing", "moon", "qing-top"],
-    note: {
+    note: withTurkish({
       en: "The 青 sound clue links these readings; learn each tone.",
       fr: "L’indice sonore 青 relie ces lectures ; apprenez chaque ton.",
       ru: "Компонент 青 связывает звучание; учите каждый тон.",
-    },
+    }),
     sourcePage: 5,
     phonetic: "qing",
     semantic: "sun",
@@ -1482,24 +1483,24 @@ export const characters: AtlasCharacter[] = [
     id: "u60c5",
     hanzi: "情",
     pinyin: "qíng",
-    meaning: {
+    meaning: withTurkish({
       en: "feeling",
       fr: "sentiment",
       ru: "чувство",
-    },
+    }),
     word: "心情",
     wordPinyin: "xīnqíng",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "mood",
       fr: "humeur",
       ru: "настроение",
-    },
+    }),
     components: ["heart", "qing", "moon", "qing-top"],
-    note: {
+    note: withTurkish({
       en: "The 青 sound clue links these readings; learn each tone.",
       fr: "L’indice sonore 青 relie ces lectures ; apprenez chaque ton.",
       ru: "Компонент 青 связывает звучание; учите каждый тон.",
-    },
+    }),
     sourcePage: 5,
     phonetic: "qing",
     semantic: "heart",
@@ -1508,24 +1509,24 @@ export const characters: AtlasCharacter[] = [
     id: "u8bf7",
     hanzi: "请",
     pinyin: "qǐng",
-    meaning: {
+    meaning: withTurkish({
       en: "please / ask",
       fr: "s’il vous plaît / demander",
       ru: "пожалуйста / просить",
-    },
+    }),
     word: "请问",
     wordPinyin: "qǐngwèn",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "excuse me; may I ask",
       fr: "excusez-moi ; puis-je demander",
       ru: "извините, можно спросить",
-    },
+    }),
     components: ["speech", "qing", "moon", "qing-top"],
-    note: {
+    note: withTurkish({
       en: "The 青 sound clue links these readings; learn each tone.",
       fr: "L’indice sonore 青 relie ces lectures ; apprenez chaque ton.",
       ru: "Компонент 青 связывает звучание; учите каждый тон.",
-    },
+    }),
     sourcePage: 5,
     phonetic: "qing",
     semantic: "speech",
@@ -1534,48 +1535,48 @@ export const characters: AtlasCharacter[] = [
     id: "u9a6c",
     hanzi: "马",
     pinyin: "mǎ",
-    meaning: {
+    meaning: withTurkish({
       en: "horse",
       fr: "cheval",
       ru: "лошадь",
-    },
+    }),
     word: "马上",
     wordPinyin: "mǎshàng",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "right away",
       fr: "tout de suite",
       ru: "сразу",
-    },
+    }),
     components: ["horse"],
-    note: {
+    note: withTurkish({
       en: "马 links the sounds; 吗 has neutral tone in this question.",
       fr: "马 relie les sons ; 吗 a un ton neutre dans cette question.",
       ru: "马 связывает звучание; в этом вопросе 吗 имеет нейтральный тон.",
-    },
+    }),
     sourcePage: 6,
   },
   {
     id: "u5988",
     hanzi: "妈",
     pinyin: "mā",
-    meaning: {
+    meaning: withTurkish({
       en: "mother",
       fr: "mère",
       ru: "мама",
-    },
+    }),
     word: "妈妈",
     wordPinyin: "māma",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "mum / mom",
       fr: "maman",
       ru: "мама",
-    },
+    }),
     components: ["woman", "horse"],
-    note: {
+    note: withTurkish({
       en: "In māma the second syllable is neutral.",
       fr: "Dans māma, la deuxième syllabe est neutre.",
       ru: "В māma второй слог нейтральный.",
-    },
+    }),
     sourcePage: 6,
     phonetic: "horse",
     semantic: "woman",
@@ -1584,24 +1585,24 @@ export const characters: AtlasCharacter[] = [
     id: "u5417",
     hanzi: "吗",
     pinyin: "ma",
-    meaning: {
+    meaning: withTurkish({
       en: "question particle",
       fr: "particule interrogative",
       ru: "вопросительная частица",
-    },
+    }),
     word: "好吗？",
     wordPinyin: "hǎo ma?",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "is it OK?",
       fr: "ça va ?",
       ru: "хорошо?",
-    },
+    }),
     components: ["mouth", "horse"],
-    note: {
+    note: withTurkish({
       en: "Neutral ma marks a question in 好吗？",
       fr: "Le ma neutre marque une question dans 好吗？",
       ru: "Нейтральное ma обозначает вопрос в 好吗？",
-    },
+    }),
     sourcePage: 6,
     phonetic: "horse",
     semantic: "mouth",
@@ -1610,24 +1611,24 @@ export const characters: AtlasCharacter[] = [
     id: "u7801",
     hanzi: "码",
     pinyin: "mǎ",
-    meaning: {
+    meaning: withTurkish({
       en: "code / number",
       fr: "code / numéro",
       ru: "код / номер",
-    },
+    }),
     word: "号码",
     wordPinyin: "hàomǎ",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "number",
       fr: "numéro",
       ru: "номер",
-    },
+    }),
     components: ["stone", "horse", "mouth"],
-    note: {
+    note: withTurkish({
       en: "马 links the sounds; 吗 has neutral tone in this question.",
       fr: "马 relie les sons ; 吗 a un ton neutre dans cette question.",
       ru: "马 связывает звучание; в этом вопросе 吗 имеет нейтральный тон.",
-    },
+    }),
     sourcePage: 6,
     phonetic: "horse",
     semantic: "stone",
@@ -1636,24 +1637,24 @@ export const characters: AtlasCharacter[] = [
     id: "u8682",
     hanzi: "蚂",
     pinyin: "mǎ",
-    meaning: {
+    meaning: withTurkish({
       en: "ant (in this word)",
       fr: "fourmi (dans ce mot)",
       ru: "муравей (в этом слове)",
-    },
+    }),
     word: "蚂蚁",
     wordPinyin: "mǎyǐ",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "ant",
       fr: "fourmi",
       ru: "муравей",
-    },
+    }),
     components: ["insect", "horse"],
-    note: {
+    note: withTurkish({
       en: "Use mǎ in 蚂蚁; this character has other readings in other words.",
       fr: "Employez mǎ dans 蚂蚁 ; ce caractère a d’autres lectures dans d’autres mots.",
       ru: "В 蚂蚁 читайте mǎ; в других словах есть другие чтения.",
-    },
+    }),
     sourcePage: 6,
     phonetic: "horse",
     semantic: "insect",
@@ -1662,48 +1663,48 @@ export const characters: AtlasCharacter[] = [
     id: "u65b9",
     hanzi: "方",
     pinyin: "fāng",
-    meaning: {
+    meaning: withTurkish({
       en: "direction / square",
       fr: "direction / carré",
       ru: "направление / квадрат",
-    },
+    }),
     word: "方向",
     wordPinyin: "fāngxiàng",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "direction",
       fr: "direction",
       ru: "направление",
-    },
+    }),
     components: ["fang"],
-    note: {
+    note: withTurkish({
       en: "The final -ang recurs; tones vary. Meaning clues can be broad.",
       fr: "La finale -ang revient ; les tons varient. Les indices de sens restent larges.",
       ru: "Финаль -ang повторяется; тоны различаются. Смысловые подсказки широки.",
-    },
+    }),
     sourcePage: 7,
   },
   {
     id: "u623f",
     hanzi: "房",
     pinyin: "fáng",
-    meaning: {
+    meaning: withTurkish({
       en: "house / room",
       fr: "maison / pièce",
       ru: "дом / комната",
-    },
+    }),
     word: "房间",
     wordPinyin: "fángjiān",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "room",
       fr: "pièce",
       ru: "комната",
-    },
+    }),
     components: ["door", "fang"],
-    note: {
+    note: withTurkish({
       en: "The final -ang recurs; tones vary. Meaning clues can be broad.",
       fr: "La finale -ang revient ; les tons varient. Les indices de sens restent larges.",
       ru: "Финаль -ang повторяется; тоны различаются. Смысловые подсказки широки.",
-    },
+    }),
     sourcePage: 7,
     phonetic: "fang",
     semantic: "door",
@@ -1712,24 +1713,24 @@ export const characters: AtlasCharacter[] = [
     id: "u653e",
     hanzi: "放",
     pinyin: "fàng",
-    meaning: {
+    meaning: withTurkish({
       en: "put / release",
       fr: "poser / libérer",
       ru: "класть / отпускать",
-    },
+    }),
     word: "放下",
     wordPinyin: "fàngxià",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "put down",
       fr: "poser",
       ru: "положить",
-    },
+    }),
     components: ["fang", "action"],
-    note: {
+    note: withTurkish({
       en: "The final -ang recurs; tones vary. Meaning clues can be broad.",
       fr: "La finale -ang revient ; les tons varient. Les indices de sens restent larges.",
       ru: "Финаль -ang повторяется; тоны различаются. Смысловые подсказки широки.",
-    },
+    }),
     sourcePage: 7,
     phonetic: "fang",
     semantic: "action",
@@ -1738,24 +1739,24 @@ export const characters: AtlasCharacter[] = [
     id: "u9632",
     hanzi: "防",
     pinyin: "fáng",
-    meaning: {
+    meaning: withTurkish({
       en: "guard against",
       fr: "se prémunir contre",
       ru: "предотвращать",
-    },
+    }),
     word: "预防",
     wordPinyin: "yùfáng",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "prevent",
       fr: "prévenir",
       ru: "предотвращать",
-    },
+    }),
     components: ["mound", "fang"],
-    note: {
+    note: withTurkish({
       en: "The final -ang recurs; tones vary. Meaning clues can be broad.",
       fr: "La finale -ang revient ; les tons varient. Les indices de sens restent larges.",
       ru: "Финаль -ang повторяется; тоны различаются. Смысловые подсказки широки.",
-    },
+    }),
     sourcePage: 7,
     phonetic: "fang",
     semantic: "mound",
@@ -1764,24 +1765,24 @@ export const characters: AtlasCharacter[] = [
     id: "u8bbf",
     hanzi: "访",
     pinyin: "fǎng",
-    meaning: {
+    meaning: withTurkish({
       en: "visit / interview",
       fr: "visiter / interviewer",
       ru: "посещать / брать интервью",
-    },
+    }),
     word: "访问",
     wordPinyin: "fǎngwèn",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "visit",
       fr: "visiter",
       ru: "посещать",
-    },
+    }),
     components: ["speech", "fang"],
-    note: {
+    note: withTurkish({
       en: "The final -ang recurs; tones vary. Meaning clues can be broad.",
       fr: "La finale -ang revient ; les tons varient. Les indices de sens restent larges.",
       ru: "Финаль -ang повторяется; тоны различаются. Смысловые подсказки широки.",
-    },
+    }),
     sourcePage: 7,
     phonetic: "fang",
     semantic: "speech",
@@ -1790,48 +1791,48 @@ export const characters: AtlasCharacter[] = [
     id: "u5305",
     hanzi: "包",
     pinyin: "bāo",
-    meaning: {
+    meaning: withTurkish({
       en: "bag / wrap",
       fr: "sac / envelopper",
       ru: "сумка / заворачивать",
-    },
+    }),
     word: "书包",
     wordPinyin: "shūbāo",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "schoolbag",
       fr: "cartable",
       ru: "школьная сумка",
-    },
+    }),
     components: ["bao", "wrap", "si-wrap"],
-    note: {
+    note: withTurkish({
       en: "包 links b- and p- readings; use the selected word to learn the sense.",
       fr: "包 relie des lectures en b- et p- ; le mot précise le sens.",
       ru: "包 связывает чтения с b- и p-; слово уточняет значение.",
-    },
+    }),
     sourcePage: 8,
   },
   {
     id: "u62b1",
     hanzi: "抱",
     pinyin: "bào",
-    meaning: {
+    meaning: withTurkish({
       en: "hold / hug",
       fr: "tenir / serrer dans les bras",
       ru: "держать / обнимать",
-    },
+    }),
     word: "拥抱",
     wordPinyin: "yōngbào",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "embrace / hug",
       fr: "étreindre",
       ru: "обнимать",
-    },
+    }),
     components: ["hand", "bao", "wrap", "si-wrap"],
-    note: {
+    note: withTurkish({
       en: "包 links b- and p- readings; use the selected word to learn the sense.",
       fr: "包 relie des lectures en b- et p- ; le mot précise le sens.",
       ru: "包 связывает чтения с b- и p-; слово уточняет значение.",
-    },
+    }),
     sourcePage: 8,
     phonetic: "bao",
     semantic: "hand",
@@ -1840,24 +1841,24 @@ export const characters: AtlasCharacter[] = [
     id: "u9971",
     hanzi: "饱",
     pinyin: "bǎo",
-    meaning: {
+    meaning: withTurkish({
       en: "full after eating",
       fr: "rassasié",
       ru: "сытый",
-    },
+    }),
     word: "吃饱",
     wordPinyin: "chībǎo",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "eat until full",
       fr: "manger à sa faim",
       ru: "наесться",
-    },
+    }),
     components: ["food", "bao", "wrap", "si-wrap"],
-    note: {
+    note: withTurkish({
       en: "包 links b- and p- readings; use the selected word to learn the sense.",
       fr: "包 relie des lectures en b- et p- ; le mot précise le sens.",
       ru: "包 связывает чтения с b- и p-; слово уточняет значение.",
-    },
+    }),
     sourcePage: 8,
     phonetic: "bao",
     semantic: "food",
@@ -1866,24 +1867,24 @@ export const characters: AtlasCharacter[] = [
     id: "u6ce1",
     hanzi: "泡",
     pinyin: "pào",
-    meaning: {
+    meaning: withTurkish({
       en: "bubble / soak",
       fr: "bulle / faire tremper",
       ru: "пузырь / замачивать",
-    },
+    }),
     word: "泡茶",
     wordPinyin: "pàochá",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "make tea by steeping",
       fr: "faire infuser du thé",
       ru: "заваривать чай",
-    },
+    }),
     components: ["water", "bao", "wrap", "si-wrap"],
-    note: {
+    note: withTurkish({
       en: "包 links b- and p- readings; use the selected word to learn the sense.",
       fr: "包 relie des lectures en b- et p- ; le mot précise le sens.",
       ru: "包 связывает чтения с b- и p-; слово уточняет значение.",
-    },
+    }),
     sourcePage: 8,
     phonetic: "bao",
     semantic: "water",
@@ -1892,24 +1893,24 @@ export const characters: AtlasCharacter[] = [
     id: "u8dd1",
     hanzi: "跑",
     pinyin: "pǎo",
-    meaning: {
+    meaning: withTurkish({
       en: "run",
       fr: "courir",
       ru: "бежать",
-    },
+    }),
     word: "跑步",
     wordPinyin: "pǎobù",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "run / jog",
       fr: "courir / faire du jogging",
       ru: "бегать",
-    },
+    }),
     components: ["foot", "bao", "wrap", "mouth", "si-wrap"],
-    note: {
+    note: withTurkish({
       en: "包 links b- and p- readings; use the selected word to learn the sense.",
       fr: "包 relie des lectures en b- et p- ; le mot précise le sens.",
       ru: "包 связывает чтения с b- и p-; слово уточняет значение.",
-    },
+    }),
     sourcePage: 8,
     phonetic: "bao",
     semantic: "foot",
@@ -1918,48 +1919,48 @@ export const characters: AtlasCharacter[] = [
     id: "u6c34",
     hanzi: "水",
     pinyin: "shuǐ",
-    meaning: {
+    meaning: withTurkish({
       en: "water",
       fr: "eau",
       ru: "вода",
-    },
+    }),
     word: "水果",
     wordPinyin: "shuǐguǒ",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "fruit",
       fr: "fruit",
       ru: "фрукты",
-    },
+    }),
     components: ["water"],
-    note: {
+    note: withTurkish({
       en: "氵 is the left form of 水. Shared meaning clues do not fix pronunciation.",
       fr: "氵 est la forme gauche de 水. L’indice de sens ne fixe pas la prononciation.",
       ru: "氵 — левая форма 水. Общая смысловая подсказка не задаёт произношение.",
-    },
+    }),
     sourcePage: 9,
   },
   {
     id: "u6cb3",
     hanzi: "河",
     pinyin: "hé",
-    meaning: {
+    meaning: withTurkish({
       en: "river",
       fr: "rivière",
       ru: "река",
-    },
+    }),
     word: "河水",
     wordPinyin: "héshuǐ",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "river water",
       fr: "eau de rivière",
       ru: "речная вода",
-    },
+    }),
     components: ["water", "can", "mouth", "ding"],
-    note: {
+    note: withTurkish({
       en: "氵 is the left form of 水. Shared meaning clues do not fix pronunciation.",
       fr: "氵 est la forme gauche de 水. L’indice de sens ne fixe pas la prononciation.",
       ru: "氵 — левая форма 水. Общая смысловая подсказка не задаёт произношение.",
-    },
+    }),
     sourcePage: 9,
     semantic: "water",
   },
@@ -1967,24 +1968,24 @@ export const characters: AtlasCharacter[] = [
     id: "u6d77",
     hanzi: "海",
     pinyin: "hǎi",
-    meaning: {
+    meaning: withTurkish({
       en: "sea",
       fr: "mer",
       ru: "море",
-    },
+    }),
     word: "大海",
     wordPinyin: "dàhǎi",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "the sea",
       fr: "la mer",
       ru: "море",
-    },
+    }),
     components: ["water", "every", "mother"],
-    note: {
+    note: withTurkish({
       en: "氵 is the left form of 水. Shared meaning clues do not fix pronunciation.",
       fr: "氵 est la forme gauche de 水. L’indice de sens ne fixe pas la prononciation.",
       ru: "氵 — левая форма 水. Общая смысловая подсказка не задаёт произношение.",
-    },
+    }),
     sourcePage: 9,
     semantic: "water",
   },
@@ -1992,24 +1993,24 @@ export const characters: AtlasCharacter[] = [
     id: "u6d17",
     hanzi: "洗",
     pinyin: "xǐ",
-    meaning: {
+    meaning: withTurkish({
       en: "wash",
       fr: "laver",
       ru: "мыть",
-    },
+    }),
     word: "洗手",
     wordPinyin: "xǐshǒu",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "wash hands",
       fr: "se laver les mains",
       ru: "мыть руки",
-    },
+    }),
     components: ["water", "first", "legs", "cow-top"],
-    note: {
+    note: withTurkish({
       en: "氵 is the left form of 水. Shared meaning clues do not fix pronunciation.",
       fr: "氵 est la forme gauche de 水. L’indice de sens ne fixe pas la prononciation.",
       ru: "氵 — левая форма 水. Общая смысловая подсказка не задаёт произношение.",
-    },
+    }),
     sourcePage: 9,
     semantic: "water",
   },
@@ -2017,24 +2018,24 @@ export const characters: AtlasCharacter[] = [
     id: "u9152",
     hanzi: "酒",
     pinyin: "jiǔ",
-    meaning: {
+    meaning: withTurkish({
       en: "alcohol / wine",
       fr: "alcool / vin",
       ru: "алкоголь / вино",
-    },
+    }),
     word: "啤酒",
     wordPinyin: "píjiǔ",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "beer",
       fr: "bière",
       ru: "пиво",
-    },
+    }),
     components: ["water", "wine"],
-    note: {
+    note: withTurkish({
       en: "氵 is the left form of 水. Shared meaning clues do not fix pronunciation.",
       fr: "氵 est la forme gauche de 水. L’indice de sens ne fixe pas la prononciation.",
       ru: "氵 — левая форма 水. Общая смысловая подсказка не задаёт произношение.",
-    },
+    }),
     sourcePage: 9,
     semantic: "water",
   },
@@ -2042,168 +2043,168 @@ export const characters: AtlasCharacter[] = [
     id: "u6728",
     hanzi: "木",
     pinyin: "mù",
-    meaning: {
+    meaning: withTurkish({
       en: "wood / tree",
       fr: "bois / arbre",
       ru: "дерево / древесина",
-    },
+    }),
     word: "木头",
     wordPinyin: "mùtou",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "wood",
       fr: "bois",
       ru: "древесина",
-    },
+    }),
     components: ["wood"],
-    note: {
+    note: withTurkish({
       en: "Notice repeated 木 and the extra stroke in 本; these are shape links.",
       fr: "Repérez 木 répété et le trait ajouté dans 本 ; ce sont des liens de forme.",
       ru: "Замечайте повторение 木 и добавленную черту в 本; это связи формы.",
-    },
+    }),
     sourcePage: 10,
   },
   {
     id: "u6797",
     hanzi: "林",
     pinyin: "lín",
-    meaning: {
+    meaning: withTurkish({
       en: "woods / grove",
       fr: "bois / bosquet",
       ru: "лес / роща",
-    },
+    }),
     word: "树林",
     wordPinyin: "shùlín",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "woods / grove",
       fr: "bois / bosquet",
       ru: "лес / роща",
-    },
+    }),
     components: ["wood"],
-    note: {
+    note: withTurkish({
       en: "Notice repeated 木 and the extra stroke in 本; these are shape links.",
       fr: "Repérez 木 répété et le trait ajouté dans 本 ; ce sont des liens de forme.",
       ru: "Замечайте повторение 木 и добавленную черту в 本; это связи формы.",
-    },
+    }),
     sourcePage: 10,
   },
   {
     id: "u68ee",
     hanzi: "森",
     pinyin: "sēn",
-    meaning: {
+    meaning: withTurkish({
       en: "dense trees",
       fr: "arbres touffus",
       ru: "густой лес",
-    },
+    }),
     word: "森林",
     wordPinyin: "sēnlín",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "forest",
       fr: "forêt",
       ru: "лес",
-    },
+    }),
     components: ["wood"],
-    note: {
+    note: withTurkish({
       en: "Notice repeated 木 and the extra stroke in 本; these are shape links.",
       fr: "Repérez 木 répété et le trait ajouté dans 本 ; ce sont des liens de forme.",
       ru: "Замечайте повторение 木 и добавленную черту в 本; это связи формы.",
-    },
+    }),
     sourcePage: 10,
   },
   {
     id: "u6811",
     hanzi: "树",
     pinyin: "shù",
-    meaning: {
+    meaning: withTurkish({
       en: "tree",
       fr: "arbre",
       ru: "дерево",
-    },
+    }),
     word: "树木",
     wordPinyin: "shùmù",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "trees",
       fr: "arbres",
       ru: "деревья",
-    },
+    }),
     components: ["wood", "right-hand", "inch"],
-    note: {
+    note: withTurkish({
       en: "Notice repeated 木 and the extra stroke in 本; these are shape links.",
       fr: "Repérez 木 répété et le trait ajouté dans 本 ; ce sont des liens de forme.",
       ru: "Замечайте повторение 木 и добавленную черту в 本; это связи формы.",
-    },
+    }),
     sourcePage: 10,
   },
   {
     id: "u672c",
     hanzi: "本",
     pinyin: "běn",
-    meaning: {
+    meaning: withTurkish({
       en: "root / basis; book classifier",
       fr: "racine / base ; classificateur de livres",
       ru: "корень / основа; счётное слово для книг",
-    },
+    }),
     word: "本子",
     wordPinyin: "běnzi",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "notebook",
       fr: "cahier",
       ru: "тетрадь",
-    },
+    }),
     components: ["root", "wood"],
-    note: {
+    note: withTurkish({
       en: "Notice repeated 木 and the extra stroke in 本; these are shape links.",
       fr: "Repérez 木 répété et le trait ajouté dans 本 ; ce sont des liens de forme.",
       ru: "Замечайте повторение 木 и добавленную черту в 本; это связи формы.",
-    },
+    }),
     sourcePage: 10,
   },
   {
     id: "u4eba",
     hanzi: "人",
     pinyin: "rén",
-    meaning: {
+    meaning: withTurkish({
       en: "person / people",
       fr: "personne / gens",
       ru: "человек / люди",
-    },
+    }),
     word: "人人",
     wordPinyin: "rénrén",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "everyone",
       fr: "tout le monde",
       ru: "каждый",
-    },
+    }),
     components: ["person"],
-    note: {
+    note: withTurkish({
       en: "亻 is the left form of 人. 们 marks pronouns and people, not all objects.",
       fr: "亻 est la forme gauche de 人. 们 marque les pronoms et les personnes.",
       ru: "亻 — левая форма 人. 们 относится к местоимениям и людям, а не ко всем предметам.",
-    },
+    }),
     sourcePage: 11,
   },
   {
     id: "u4f60",
     hanzi: "你",
     pinyin: "nǐ",
-    meaning: {
+    meaning: withTurkish({
       en: "you",
       fr: "tu / vous",
       ru: "ты / вы",
-    },
+    }),
     word: "你好",
     wordPinyin: "nǐ hǎo",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "hello",
       fr: "bonjour",
       ru: "здравствуйте",
-    },
+    }),
     components: ["person", "er", "small"],
-    note: {
+    note: withTurkish({
       en: "亻 is the left form of 人. 们 marks pronouns and people, not all objects.",
       fr: "亻 est la forme gauche de 人. 们 marque les pronoms et les personnes.",
       ru: "亻 — левая форма 人. 们 относится к местоимениям и людям, а не ко всем предметам.",
-    },
+    }),
     sourcePage: 11,
     semantic: "person",
   },
@@ -2211,24 +2212,24 @@ export const characters: AtlasCharacter[] = [
     id: "u4ed6",
     hanzi: "他",
     pinyin: "tā",
-    meaning: {
+    meaning: withTurkish({
       en: "he / him",
       fr: "il / lui",
       ru: "он / его",
-    },
+    }),
     word: "他们",
     wordPinyin: "tāmen",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "they / them",
       fr: "ils / eux",
       ru: "они / их",
-    },
+    }),
     components: ["person", "ye"],
-    note: {
+    note: withTurkish({
       en: "亻 is the left form of 人. 们 marks pronouns and people, not all objects.",
       fr: "亻 est la forme gauche de 人. 们 marque les pronoms et les personnes.",
       ru: "亻 — левая форма 人. 们 относится к местоимениям и людям, а не ко всем предметам.",
-    },
+    }),
     sourcePage: 11,
     semantic: "person",
   },
@@ -2236,24 +2237,24 @@ export const characters: AtlasCharacter[] = [
     id: "u4eec",
     hanzi: "们",
     pinyin: "men",
-    meaning: {
+    meaning: withTurkish({
       en: "plural marker for people",
       fr: "marque du pluriel pour les personnes",
       ru: "показатель множественного числа для людей",
-    },
+    }),
     word: "我们",
     wordPinyin: "wǒmen",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "we / us",
       fr: "nous",
       ru: "мы / нас",
-    },
+    }),
     components: ["person", "gate"],
-    note: {
+    note: withTurkish({
       en: "亻 is the left form of 人. 们 marks pronouns and people, not all objects.",
       fr: "亻 est la forme gauche de 人. 们 marque les pronoms et les personnes.",
       ru: "亻 — левая форма 人. 们 относится к местоимениям и людям, а не ко всем предметам.",
-    },
+    }),
     sourcePage: 11,
     semantic: "person",
   },
@@ -2261,24 +2262,24 @@ export const characters: AtlasCharacter[] = [
     id: "u4f4f",
     hanzi: "住",
     pinyin: "zhù",
-    meaning: {
+    meaning: withTurkish({
       en: "live / stay",
       fr: "habiter / séjourner",
       ru: "жить / останавливаться",
-    },
+    }),
     word: "居住",
     wordPinyin: "jūzhù",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "live / reside",
       fr: "habiter / résider",
       ru: "проживать",
-    },
+    }),
     components: ["person", "master", "king"],
-    note: {
+    note: withTurkish({
       en: "亻 is the left form of 人. 们 marks pronouns and people, not all objects.",
       fr: "亻 est la forme gauche de 人. 们 marque les pronoms et les personnes.",
       ru: "亻 — левая форма 人. 们 относится к местоимениям и людям, а не ко всем предметам.",
-    },
+    }),
     sourcePage: 11,
     semantic: "person",
   },
@@ -2286,48 +2287,48 @@ export const characters: AtlasCharacter[] = [
     id: "u624b",
     hanzi: "手",
     pinyin: "shǒu",
-    meaning: {
+    meaning: withTurkish({
       en: "hand",
       fr: "main",
       ru: "рука",
-    },
+    }),
     word: "手机",
     wordPinyin: "shǒujī",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "mobile phone",
       fr: "téléphone portable",
       ru: "мобильный телефон",
-    },
+    }),
     components: ["hand"],
-    note: {
+    note: withTurkish({
       en: "扌 links hand actions; the whole characters have different sounds.",
       fr: "扌 relie des actions de la main ; les caractères ont des sons différents.",
       ru: "扌 связывает действия рукой; иероглифы звучат по-разному.",
-    },
+    }),
     sourcePage: 12,
   },
   {
     id: "u6253",
     hanzi: "打",
     pinyin: "dǎ",
-    meaning: {
+    meaning: withTurkish({
       en: "hit; do an action",
       fr: "frapper ; effectuer une action",
       ru: "ударять; выполнять действие",
-    },
+    }),
     word: "打开",
     wordPinyin: "dǎkāi",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "open / switch on",
       fr: "ouvrir / allumer",
       ru: "открывать / включать",
-    },
+    }),
     components: ["hand", "ding"],
-    note: {
+    note: withTurkish({
       en: "扌 links hand actions; the whole characters have different sounds.",
       fr: "扌 relie des actions de la main ; les caractères ont des sons différents.",
       ru: "扌 связывает действия рукой; иероглифы звучат по-разному.",
-    },
+    }),
     sourcePage: 12,
     semantic: "hand",
   },
@@ -2335,24 +2336,24 @@ export const characters: AtlasCharacter[] = [
     id: "u627e",
     hanzi: "找",
     pinyin: "zhǎo",
-    meaning: {
+    meaning: withTurkish({
       en: "look for / find",
       fr: "chercher / trouver",
       ru: "искать / находить",
-    },
+    }),
     word: "找到",
     wordPinyin: "zhǎodào",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "find",
       fr: "trouver",
       ru: "найти",
-    },
+    }),
     components: ["hand", "halberd"],
-    note: {
+    note: withTurkish({
       en: "扌 links hand actions; the whole characters have different sounds.",
       fr: "扌 relie des actions de la main ; les caractères ont des sons différents.",
       ru: "扌 связывает действия рукой; иероглифы звучат по-разному.",
-    },
+    }),
     sourcePage: 12,
     semantic: "hand",
   },
@@ -2360,24 +2361,24 @@ export const characters: AtlasCharacter[] = [
     id: "u628a",
     hanzi: "把",
     pinyin: "bǎ",
-    meaning: {
+    meaning: withTurkish({
       en: "hold / grasp",
       fr: "tenir / saisir",
       ru: "держать / хватать",
-    },
+    }),
     word: "把手",
     wordPinyin: "bǎshou",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "handle / grip",
       fr: "poignée",
       ru: "ручка / рукоять",
-    },
+    }),
     components: ["hand", "ba"],
-    note: {
+    note: withTurkish({
       en: "扌 links hand actions; the whole characters have different sounds.",
       fr: "扌 relie des actions de la main ; les caractères ont des sons différents.",
       ru: "扌 связывает действия рукой; иероглифы звучат по-разному.",
-    },
+    }),
     sourcePage: 12,
     semantic: "hand",
   },
@@ -2385,24 +2386,24 @@ export const characters: AtlasCharacter[] = [
     id: "u62c9",
     hanzi: "拉",
     pinyin: "lā",
-    meaning: {
+    meaning: withTurkish({
       en: "pull",
       fr: "tirer",
       ru: "тянуть",
-    },
+    }),
     word: "拉开",
     wordPinyin: "lākāi",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "pull open / pull apart",
       fr: "ouvrir en tirant / écarter",
       ru: "открывать / раздвигать",
-    },
+    }),
     components: ["hand", "stand"],
-    note: {
+    note: withTurkish({
       en: "扌 links hand actions; the whole characters have different sounds.",
       fr: "扌 relie des actions de la main ; les caractères ont des sons différents.",
       ru: "扌 связывает действия рукой; иероглифы звучат по-разному.",
-    },
+    }),
     sourcePage: 12,
     semantic: "hand",
   },
@@ -2410,48 +2411,48 @@ export const characters: AtlasCharacter[] = [
     id: "u53e3",
     hanzi: "口",
     pinyin: "kǒu",
-    meaning: {
+    meaning: withTurkish({
       en: "mouth",
       fr: "bouche",
       ru: "рот",
-    },
+    }),
     word: "人口",
     wordPinyin: "rénkǒu",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "population",
       fr: "population",
       ru: "население",
-    },
+    }),
     components: ["mouth"],
-    note: {
+    note: withTurkish({
       en: "口 recurs on the left. In 听 this describes the simplified shape.",
       fr: "口 revient à gauche. Pour 听, cela décrit la forme simplifiée.",
       ru: "口 повторяется слева. Для 听 это описание упрощённой формы.",
-    },
+    }),
     sourcePage: 13,
   },
   {
     id: "u5403",
     hanzi: "吃",
     pinyin: "chī",
-    meaning: {
+    meaning: withTurkish({
       en: "eat",
       fr: "manger",
       ru: "есть",
-    },
+    }),
     word: "吃饭",
     wordPinyin: "chīfàn",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "eat / have a meal",
       fr: "manger / prendre un repas",
       ru: "есть / принимать пищу",
-    },
+    }),
     components: ["mouth", "beg"],
-    note: {
+    note: withTurkish({
       en: "口 recurs on the left. In 听 this describes the simplified shape.",
       fr: "口 revient à gauche. Pour 听, cela décrit la forme simplifiée.",
       ru: "口 повторяется слева. Для 听 это описание упрощённой формы.",
-    },
+    }),
     sourcePage: 13,
     semantic: "mouth",
   },
@@ -2459,24 +2460,24 @@ export const characters: AtlasCharacter[] = [
     id: "u559d",
     hanzi: "喝",
     pinyin: "hē",
-    meaning: {
+    meaning: withTurkish({
       en: "drink",
       fr: "boire",
       ru: "пить",
-    },
+    }),
     word: "喝茶",
     wordPinyin: "hēchá",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "drink tea",
       fr: "boire du thé",
       ru: "пить чай",
-    },
+    }),
     components: ["mouth", "he", "wrap", "person"],
-    note: {
+    note: withTurkish({
       en: "口 recurs on the left. In 听 this describes the simplified shape.",
       fr: "口 revient à gauche. Pour 听, cela décrit la forme simplifiée.",
       ru: "口 повторяется слева. Для 听 это описание упрощённой формы.",
-    },
+    }),
     sourcePage: 13,
     semantic: "mouth",
   },
@@ -2484,24 +2485,24 @@ export const characters: AtlasCharacter[] = [
     id: "u53eb",
     hanzi: "叫",
     pinyin: "jiào",
-    meaning: {
+    meaning: withTurkish({
       en: "call / be called",
       fr: "appeler / s’appeler",
       ru: "звать / называться",
-    },
+    }),
     word: "叫声",
     wordPinyin: "jiàoshēng",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "call / cry (sound)",
       fr: "cri / appel",
       ru: "крик / зов",
-    },
+    }),
     components: ["mouth", "join"],
-    note: {
+    note: withTurkish({
       en: "口 recurs on the left. In 听 this describes the simplified shape.",
       fr: "口 revient à gauche. Pour 听, cela décrit la forme simplifiée.",
       ru: "口 повторяется слева. Для 听 это описание упрощённой формы.",
-    },
+    }),
     sourcePage: 13,
     semantic: "mouth",
   },
@@ -2509,24 +2510,24 @@ export const characters: AtlasCharacter[] = [
     id: "u542c",
     hanzi: "听",
     pinyin: "tīng",
-    meaning: {
+    meaning: withTurkish({
       en: "listen / hear",
       fr: "écouter / entendre",
       ru: "слушать / слышать",
-    },
+    }),
     word: "听见",
     wordPinyin: "tīngjiàn",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "hear",
       fr: "entendre",
       ru: "услышать",
-    },
+    }),
     components: ["mouth", "axe"],
-    note: {
+    note: withTurkish({
       en: "口 recurs on the left. In 听 this describes the simplified shape.",
       fr: "口 revient à gauche. Pour 听, cela décrit la forme simplifiée.",
       ru: "口 повторяется слева. Для 听 это описание упрощённой формы.",
-    },
+    }),
     sourcePage: 13,
     semantic: "mouth",
   },
@@ -2534,24 +2535,24 @@ export const characters: AtlasCharacter[] = [
     id: "u8bf4",
     hanzi: "说",
     pinyin: "shuō",
-    meaning: {
+    meaning: withTurkish({
       en: "say / speak",
       fr: "dire / parler",
       ru: "говорить",
-    },
+    }),
     word: "说话",
     wordPinyin: "shuōhuà",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "speak / talk",
       fr: "parler",
       ru: "разговаривать",
-    },
+    }),
     components: ["speech", "exchange", "mouth", "legs"],
-    note: {
+    note: withTurkish({
       en: "讠 is the simplified Speech component; learn five different readings.",
       fr: "讠 est le composant simplifié de la parole ; apprenez cinq lectures différentes.",
       ru: "讠 — упрощённый компонент речи; учите пять разных чтений.",
-    },
+    }),
     sourcePage: 14,
     semantic: "speech",
   },
@@ -2559,24 +2560,24 @@ export const characters: AtlasCharacter[] = [
     id: "u8bdd",
     hanzi: "话",
     pinyin: "huà",
-    meaning: {
+    meaning: withTurkish({
       en: "words / speech",
       fr: "paroles / discours",
       ru: "слова / речь",
-    },
+    }),
     word: "电话",
     wordPinyin: "diànhuà",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "telephone / phone call",
       fr: "téléphone / appel",
       ru: "телефон / звонок",
-    },
+    }),
     components: ["speech", "tongue", "mouth", "thousand"],
-    note: {
+    note: withTurkish({
       en: "讠 is the simplified Speech component; learn five different readings.",
       fr: "讠 est le composant simplifié de la parole ; apprenez cinq lectures différentes.",
       ru: "讠 — упрощённый компонент речи; учите пять разных чтений.",
-    },
+    }),
     sourcePage: 14,
     semantic: "speech",
   },
@@ -2584,24 +2585,24 @@ export const characters: AtlasCharacter[] = [
     id: "u8bed",
     hanzi: "语",
     pinyin: "yǔ",
-    meaning: {
+    meaning: withTurkish({
       en: "language",
       fr: "langue",
       ru: "язык",
-    },
+    }),
     word: "汉语",
     wordPinyin: "hànyǔ",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "Chinese language",
       fr: "langue chinoise",
       ru: "китайский язык",
-    },
+    }),
     components: ["speech", "wu", "five", "mouth"],
-    note: {
+    note: withTurkish({
       en: "讠 is the simplified Speech component; learn five different readings.",
       fr: "讠 est le composant simplifié de la parole ; apprenez cinq lectures différentes.",
       ru: "讠 — упрощённый компонент речи; учите пять разных чтений.",
-    },
+    }),
     sourcePage: 14,
     semantic: "speech",
   },
@@ -2609,24 +2610,24 @@ export const characters: AtlasCharacter[] = [
     id: "u8bfb",
     hanzi: "读",
     pinyin: "dú",
-    meaning: {
+    meaning: withTurkish({
       en: "read",
       fr: "lire",
       ru: "читать",
-    },
+    }),
     word: "读书",
     wordPinyin: "dúshū",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "read / study",
       fr: "lire / étudier",
       ru: "читать / учиться",
-    },
+    }),
     components: ["speech", "sell", "ten", "head"],
-    note: {
+    note: withTurkish({
       en: "讠 is the simplified Speech component; learn five different readings.",
       fr: "讠 est le composant simplifié de la parole ; apprenez cinq lectures différentes.",
       ru: "讠 — упрощённый компонент речи; учите пять разных чтений.",
-    },
+    }),
     sourcePage: 14,
     semantic: "speech",
   },
@@ -2634,24 +2635,24 @@ export const characters: AtlasCharacter[] = [
     id: "u8bcd",
     hanzi: "词",
     pinyin: "cí",
-    meaning: {
+    meaning: withTurkish({
       en: "word / term",
       fr: "mot / terme",
       ru: "слово / термин",
-    },
+    }),
     word: "词语",
     wordPinyin: "cíyǔ",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "word / expression",
       fr: "mot / expression",
       ru: "слово / выражение",
-    },
+    }),
     components: ["speech", "si", "mouth"],
-    note: {
+    note: withTurkish({
       en: "讠 is the simplified Speech component; learn five different readings.",
       fr: "讠 est le composant simplifié de la parole ; apprenez cinq lectures différentes.",
       ru: "讠 — упрощённый компонент речи; учите пять разных чтений.",
-    },
+    }),
     sourcePage: 14,
     semantic: "speech",
   },
@@ -2659,48 +2660,48 @@ export const characters: AtlasCharacter[] = [
     id: "u5fc3",
     hanzi: "心",
     pinyin: "xīn",
-    meaning: {
+    meaning: withTurkish({
       en: "heart / mind",
       fr: "cœur / esprit",
       ru: "сердце / мысли",
-    },
+    }),
     word: "小心",
     wordPinyin: "xiǎoxīn",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "be careful",
       fr: "faire attention",
       ru: "быть осторожным",
-    },
+    }),
     components: ["heart"],
-    note: {
+    note: withTurkish({
       en: "心 sits below in 想 and 忘, and appears as 忄 on the left.",
       fr: "心 est en bas dans 想 et 忘 et devient 忄 à gauche.",
       ru: "心 стоит внизу в 想 и 忘, а слева принимает форму 忄.",
-    },
+    }),
     sourcePage: 15,
   },
   {
     id: "u60f3",
     hanzi: "想",
     pinyin: "xiǎng",
-    meaning: {
+    meaning: withTurkish({
       en: "think / want / miss",
       fr: "penser / vouloir / regretter l’absence",
       ru: "думать / хотеть / скучать",
-    },
+    }),
     word: "想念",
     wordPinyin: "xiǎngniàn",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "miss someone",
       fr: "ressentir l’absence de quelqu’un",
       ru: "скучать по кому-либо",
-    },
+    }),
     components: ["heart", "think", "wood", "eye"],
-    note: {
+    note: withTurkish({
       en: "木 and 目 form 相 above 心; 目 is Eye, not Sun 日.",
       fr: "木 et 目 forment 相 au-dessus de 心 ; 目 est l’œil, distinct de 日.",
       ru: "木 и 目 образуют 相 над 心; 目 — глаз, а не солнце 日.",
-    },
+    }),
     sourcePage: 15,
     semantic: "heart",
   },
@@ -2708,24 +2709,24 @@ export const characters: AtlasCharacter[] = [
     id: "u5fd8",
     hanzi: "忘",
     pinyin: "wàng",
-    meaning: {
+    meaning: withTurkish({
       en: "forget",
       fr: "oublier",
       ru: "забывать",
-    },
+    }),
     word: "忘记",
     wordPinyin: "wàngjì",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "forget",
       fr: "oublier",
       ru: "забывать",
-    },
+    }),
     components: ["heart", "lost"],
-    note: {
+    note: withTurkish({
       en: "心 sits below in 想 and 忘, and appears as 忄 on the left.",
       fr: "心 est en bas dans 想 et 忘 et devient 忄 à gauche.",
       ru: "心 стоит внизу в 想 и 忘, а слева принимает форму 忄.",
-    },
+    }),
     sourcePage: 15,
     semantic: "heart",
   },
@@ -2733,24 +2734,24 @@ export const characters: AtlasCharacter[] = [
     id: "u5fd9",
     hanzi: "忙",
     pinyin: "máng",
-    meaning: {
+    meaning: withTurkish({
       en: "busy",
       fr: "occupé",
       ru: "занятый",
-    },
+    }),
     word: "帮忙",
     wordPinyin: "bāngmáng",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "help / lend a hand",
       fr: "aider / donner un coup de main",
       ru: "помогать",
-    },
+    }),
     components: ["heart", "lost"],
-    note: {
+    note: withTurkish({
       en: "心 sits below in 想 and 忘, and appears as 忄 on the left.",
       fr: "心 est en bas dans 想 et 忘 et devient 忄 à gauche.",
       ru: "心 стоит внизу в 想 и 忘, а слева принимает форму 忄.",
-    },
+    }),
     sourcePage: 15,
     semantic: "heart",
   },
@@ -2758,24 +2759,24 @@ export const characters: AtlasCharacter[] = [
     id: "u6015",
     hanzi: "怕",
     pinyin: "pà",
-    meaning: {
+    meaning: withTurkish({
       en: "fear / be afraid",
       fr: "craindre / avoir peur",
       ru: "бояться",
-    },
+    }),
     word: "害怕",
     wordPinyin: "hàipà",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "be afraid",
       fr: "avoir peur",
       ru: "бояться",
-    },
+    }),
     components: ["heart", "white"],
-    note: {
+    note: withTurkish({
       en: "心 sits below in 想 and 忘, and appears as 忄 on the left.",
       fr: "心 est en bas dans 想 et 忘 et devient 忄 à gauche.",
       ru: "心 стоит внизу в 想 и 忘, а слева принимает форму 忄.",
-    },
+    }),
     sourcePage: 15,
     semantic: "heart",
   },
@@ -2783,408 +2784,408 @@ export const characters: AtlasCharacter[] = [
     id: "u65e5",
     hanzi: "日",
     pinyin: "rì",
-    meaning: {
+    meaning: withTurkish({
       en: "sun / day",
       fr: "soleil / jour",
       ru: "солнце / день",
-    },
+    }),
     word: "日子",
     wordPinyin: "rìzi",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "day / date",
       fr: "jour / date",
       ru: "день / дата",
-    },
+    }),
     components: ["sun"],
-    note: {
+    note: withTurkish({
       en: "All five contain 日. 明 shows 日 beside 月 in the modern shape.",
       fr: "Les cinq contiennent 日. La forme moderne de 明 juxtapose 日 et 月.",
       ru: "Все пять содержат 日. В современной форме 明 рядом стоят 日 и 月.",
-    },
+    }),
     sourcePage: 16,
   },
   {
     id: "u65e9",
     hanzi: "早",
     pinyin: "zǎo",
-    meaning: {
+    meaning: withTurkish({
       en: "early / morning",
       fr: "tôt / matin",
       ru: "рано / утро",
-    },
+    }),
     word: "早上",
     wordPinyin: "zǎoshang",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "morning",
       fr: "matin",
       ru: "утро",
-    },
+    }),
     components: ["sun", "ten"],
-    note: {
+    note: withTurkish({
       en: "All five contain 日. 明 shows 日 beside 月 in the modern shape.",
       fr: "Les cinq contiennent 日. La forme moderne de 明 juxtapose 日 et 月.",
       ru: "Все пять содержат 日. В современной форме 明 рядом стоят 日 и 月.",
-    },
+    }),
     sourcePage: 16,
   },
   {
     id: "u660e",
     hanzi: "明",
     pinyin: "míng",
-    meaning: {
+    meaning: withTurkish({
       en: "bright; next (day)",
       fr: "clair ; suivant (jour)",
       ru: "светлый; следующий (день)",
-    },
+    }),
     word: "明天",
     wordPinyin: "míngtiān",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "tomorrow",
       fr: "demain",
       ru: "завтра",
-    },
+    }),
     components: ["sun", "moon"],
-    note: {
+    note: withTurkish({
       en: "All five contain 日. 明 shows 日 beside 月 in the modern shape.",
       fr: "Les cinq contiennent 日. La forme moderne de 明 juxtapose 日 et 月.",
       ru: "Все пять содержат 日. В современной форме 明 рядом стоят 日 и 月.",
-    },
+    }),
     sourcePage: 16,
   },
   {
     id: "u6628",
     hanzi: "昨",
     pinyin: "zuó",
-    meaning: {
+    meaning: withTurkish({
       en: "yesterday",
       fr: "hier",
       ru: "вчера",
-    },
+    }),
     word: "昨天",
     wordPinyin: "zuótiān",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "yesterday",
       fr: "hier",
       ru: "вчера",
-    },
+    }),
     components: ["sun", "zha"],
-    note: {
+    note: withTurkish({
       en: "All five contain 日. 明 shows 日 beside 月 in the modern shape.",
       fr: "Les cinq contiennent 日. La forme moderne de 明 juxtapose 日 et 月.",
       ru: "Все пять содержат 日. В современной форме 明 рядом стоят 日 и 月.",
-    },
+    }),
     sourcePage: 16,
   },
   {
     id: "u665a",
     hanzi: "晚",
     pinyin: "wǎn",
-    meaning: {
+    meaning: withTurkish({
       en: "evening / late",
       fr: "soir / tard",
       ru: "вечер / поздно",
-    },
+    }),
     word: "晚上",
     wordPinyin: "wǎnshang",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "evening / night",
       fr: "soir / nuit",
       ru: "вечер / ночь",
-    },
+    }),
     components: ["sun", "avoid", "legs"],
-    note: {
+    note: withTurkish({
       en: "All five contain 日. 明 shows 日 beside 月 in the modern shape.",
       fr: "Les cinq contiennent 日. La forme moderne de 明 juxtapose 日 et 月.",
       ru: "Все пять содержат 日. В современной форме 明 рядом стоят 日 и 月.",
-    },
+    }),
     sourcePage: 16,
   },
   {
     id: "u8eab",
     hanzi: "身",
     pinyin: "shēn",
-    meaning: {
+    meaning: withTurkish({
       en: "body",
       fr: "corps",
       ru: "тело",
-    },
+    }),
     word: "身体",
     wordPinyin: "shēntǐ",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "body / health",
       fr: "corps / santé",
       ru: "тело / здоровье",
-    },
+    }),
     components: ["body"],
-    note: {
+    note: withTurkish({
       en: "A vocabulary theme: these characters do not share one component.",
       fr: "Un thème de vocabulaire : ces caractères n’ont pas un composant commun.",
       ru: "Это словарная тема: у этих иероглифов нет одного общего компонента.",
-    },
+    }),
     sourcePage: 17,
   },
   {
     id: "u4f53",
     hanzi: "体",
     pinyin: "tǐ",
-    meaning: {
+    meaning: withTurkish({
       en: "body / form",
       fr: "corps / forme",
       ru: "тело / форма",
-    },
+    }),
     word: "体育",
     wordPinyin: "tǐyù",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "sport / physical education",
       fr: "sport / éducation physique",
       ru: "спорт / физкультура",
-    },
+    }),
     components: ["person", "root", "wood"],
-    note: {
+    note: withTurkish({
       en: "亻 is beside 本, which visibly contains 木.",
       fr: "亻 est à côté de 本, où l’on reconnaît 木.",
       ru: "亻 стоит рядом с 本, в котором виден 木.",
-    },
+    }),
     sourcePage: 17,
   },
   {
     id: "u5934",
     hanzi: "头",
     pinyin: "tóu",
-    meaning: {
+    meaning: withTurkish({
       en: "head",
       fr: "tête",
       ru: "голова",
-    },
+    }),
     word: "头发",
     wordPinyin: "tóufa",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "hair (on the head)",
       fr: "cheveux",
       ru: "волосы на голове",
-    },
+    }),
     components: ["head", "big"],
-    note: {
+    note: withTurkish({
       en: "A vocabulary theme: these characters do not share one component.",
       fr: "Un thème de vocabulaire : ces caractères n’ont pas un composant commun.",
       ru: "Это словарная тема: у этих иероглифов нет одного общего компонента.",
-    },
+    }),
     sourcePage: 17,
   },
   {
     id: "u773c",
     hanzi: "眼",
     pinyin: "yǎn",
-    meaning: {
+    meaning: withTurkish({
       en: "eye",
       fr: "œil",
       ru: "глаз",
-    },
+    }),
     word: "眼睛",
     wordPinyin: "yǎnjing",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "eye / eyes",
       fr: "œil / yeux",
       ru: "глаз / глаза",
-    },
+    }),
     components: ["eye", "gen"],
-    note: {
+    note: withTurkish({
       en: "A vocabulary theme: these characters do not share one component.",
       fr: "Un thème de vocabulaire : ces caractères n’ont pas un composant commun.",
       ru: "Это словарная тема: у этих иероглифов нет одного общего компонента.",
-    },
+    }),
     sourcePage: 17,
   },
   {
     id: "u8033",
     hanzi: "耳",
     pinyin: "ěr",
-    meaning: {
+    meaning: withTurkish({
       en: "ear",
       fr: "oreille",
       ru: "ухо",
-    },
+    }),
     word: "耳朵",
     wordPinyin: "ěrduo",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "ear / ears",
       fr: "oreille / oreilles",
       ru: "ухо / уши",
-    },
+    }),
     components: ["ear"],
-    note: {
+    note: withTurkish({
       en: "A vocabulary theme: these characters do not share one component.",
       fr: "Un thème de vocabulaire : ces caractères n’ont pas un composant commun.",
       ru: "Это словарная тема: у этих иероглифов нет одного общего компонента.",
-    },
+    }),
     sourcePage: 17,
   },
   {
     id: "u5bb6",
     hanzi: "家",
     pinyin: "jiā",
-    meaning: {
+    meaning: withTurkish({
       en: "home / family",
       fr: "maison / famille",
       ru: "дом / семья",
-    },
+    }),
     word: "回家",
     wordPinyin: "huíjiā",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "go home",
       fr: "rentrer chez soi",
       ru: "идти домой",
-    },
+    }),
     components: ["roof", "pig"],
-    note: {
+    note: withTurkish({
       en: "宀 appears on top in all five; the complete meanings still differ.",
       fr: "宀 figure en haut des cinq ; les sens complets restent différents.",
       ru: "宀 стоит сверху во всех пяти; полные значения различаются.",
-    },
+    }),
     sourcePage: 18,
   },
   {
     id: "u5b89",
     hanzi: "安",
     pinyin: "ān",
-    meaning: {
+    meaning: withTurkish({
       en: "safe / peaceful",
       fr: "sûr / paisible",
       ru: "безопасный / спокойный",
-    },
+    }),
     word: "安全",
     wordPinyin: "ānquán",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "safe / safety",
       fr: "sûr / sécurité",
       ru: "безопасный / безопасность",
-    },
+    }),
     components: ["roof", "woman"],
-    note: {
+    note: withTurkish({
       en: "宀 appears on top in all five; the complete meanings still differ.",
       fr: "宀 figure en haut des cinq ; les sens complets restent différents.",
       ru: "宀 стоит сверху во всех пяти; полные значения различаются.",
-    },
+    }),
     sourcePage: 18,
   },
   {
     id: "u5b57",
     hanzi: "字",
     pinyin: "zì",
-    meaning: {
+    meaning: withTurkish({
       en: "written character",
       fr: "caractère écrit",
       ru: "письменный знак",
-    },
+    }),
     word: "汉字",
     wordPinyin: "hànzì",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "Chinese character",
       fr: "caractère chinois",
       ru: "китайский иероглиф",
-    },
+    }),
     components: ["roof", "child"],
-    note: {
+    note: withTurkish({
       en: "宀 appears on top in all five; the complete meanings still differ.",
       fr: "宀 figure en haut des cinq ; les sens complets restent différents.",
       ru: "宀 стоит сверху во всех пяти; полные значения различаются.",
-    },
+    }),
     sourcePage: 18,
   },
   {
     id: "u5ba4",
     hanzi: "室",
     pinyin: "shì",
-    meaning: {
+    meaning: withTurkish({
       en: "room",
       fr: "pièce",
       ru: "комната",
-    },
+    }),
     word: "教室",
     wordPinyin: "jiàoshì",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "classroom",
       fr: "salle de classe",
       ru: "классная комната",
-    },
+    }),
     components: ["roof", "arrive", "earth", "private"],
-    note: {
+    note: withTurkish({
       en: "宀 appears on top in all five; the complete meanings still differ.",
       fr: "宀 figure en haut des cinq ; les sens complets restent différents.",
       ru: "宀 стоит сверху во всех пяти; полные значения различаются.",
-    },
+    }),
     sourcePage: 18,
   },
   {
     id: "u5ba2",
     hanzi: "客",
     pinyin: "kè",
-    meaning: {
+    meaning: withTurkish({
       en: "guest / customer",
       fr: "invité / client",
       ru: "гость / клиент",
-    },
+    }),
     word: "客人",
     wordPinyin: "kèrén",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "guest / customer",
       fr: "invité / client",
       ru: "гость / клиент",
-    },
+    }),
     components: ["roof", "each", "winter", "mouth"],
-    note: {
+    note: withTurkish({
       en: "宀 appears on top in all five; the complete meanings still differ.",
       fr: "宀 figure en haut des cinq ; les sens complets restent différents.",
       ru: "宀 стоит сверху во всех пяти; полные значения различаются.",
-    },
+    }),
     sourcePage: 18,
   },
   {
     id: "u8d70",
     hanzi: "走",
     pinyin: "zǒu",
-    meaning: {
+    meaning: withTurkish({
       en: "walk / leave",
       fr: "marcher / partir",
       ru: "идти / уходить",
-    },
+    }),
     word: "走路",
     wordPinyin: "zǒulù",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "walk / go on foot",
       fr: "marcher / aller à pied",
       ru: "идти пешком",
-    },
+    }),
     components: ["walk-character", "earth", "foot-bottom"],
-    note: {
+    note: withTurkish({
       en: "进、过、近、远 contain 辶. 走 is a separate whole character.",
       fr: "进、过、近、远 contiennent 辶. 走 est un caractère entier distinct.",
       ru: "进、过、近、远 содержат 辶. 走 — отдельный целый иероглиф.",
-    },
+    }),
     sourcePage: 19,
   },
   {
     id: "u8fdb",
     hanzi: "进",
     pinyin: "jìn",
-    meaning: {
+    meaning: withTurkish({
       en: "enter / advance",
       fr: "entrer / avancer",
       ru: "входить / продвигаться",
-    },
+    }),
     word: "进门",
     wordPinyin: "jìnmén",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "go in / enter a door",
       fr: "entrer / franchir la porte",
       ru: "войти в дверь",
-    },
+    }),
     components: ["walk", "well"],
-    note: {
+    note: withTurkish({
       en: "进、过、近、远 contain 辶. 走 is a separate whole character.",
       fr: "进、过、近、远 contiennent 辶. 走 est un caractère entier distinct.",
       ru: "进、过、近、远 содержат 辶. 走 — отдельный целый иероглиф.",
-    },
+    }),
     sourcePage: 19,
     semantic: "walk",
   },
@@ -3192,24 +3193,24 @@ export const characters: AtlasCharacter[] = [
     id: "u8fc7",
     hanzi: "过",
     pinyin: "guò",
-    meaning: {
+    meaning: withTurkish({
       en: "pass / cross",
       fr: "passer / traverser",
       ru: "проходить / пересекать",
-    },
+    }),
     word: "经过",
     wordPinyin: "jīngguò",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "pass through / go through",
       fr: "passer par / traverser",
       ru: "проходить через",
-    },
+    }),
     components: ["walk", "inch"],
-    note: {
+    note: withTurkish({
       en: "Here guò means pass in 经过; learn this word’s selected reading.",
       fr: "Ici guò signifie passer dans 经过 ; retenez la lecture de ce mot.",
       ru: "Здесь guò означает проходить в 经过; учите выбранное чтение слова.",
-    },
+    }),
     sourcePage: 19,
     semantic: "walk",
   },
@@ -3217,24 +3218,24 @@ export const characters: AtlasCharacter[] = [
     id: "u8fd1",
     hanzi: "近",
     pinyin: "jìn",
-    meaning: {
+    meaning: withTurkish({
       en: "near",
       fr: "proche",
       ru: "близкий",
-    },
+    }),
     word: "最近",
     wordPinyin: "zuìjìn",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "recently; nearest",
       fr: "récemment ; le plus proche",
       ru: "недавно; ближайший",
-    },
+    }),
     components: ["walk", "axe"],
-    note: {
+    note: withTurkish({
       en: "进、过、近、远 contain 辶. 走 is a separate whole character.",
       fr: "进、过、近、远 contiennent 辶. 走 est un caractère entier distinct.",
       ru: "进、过、近、远 содержат 辶. 走 — отдельный целый иероглиф.",
-    },
+    }),
     sourcePage: 19,
     semantic: "walk",
   },
@@ -3242,24 +3243,24 @@ export const characters: AtlasCharacter[] = [
     id: "u8fdc",
     hanzi: "远",
     pinyin: "yuǎn",
-    meaning: {
+    meaning: withTurkish({
       en: "far / distant",
       fr: "loin / éloigné",
       ru: "далёкий",
-    },
+    }),
     word: "远方",
     wordPinyin: "yuǎnfāng",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "a distant place / far away",
       fr: "un lieu lointain / au loin",
       ru: "далёкое место / вдали",
-    },
+    }),
     components: ["walk", "origin", "legs", "two"],
-    note: {
+    note: withTurkish({
       en: "进、过、近、远 contain 辶. 走 is a separate whole character.",
       fr: "进、过、近、远 contiennent 辶. 走 est un caractère entier distinct.",
       ru: "进、过、近、远 содержат 辶. 走 — отдельный целый иероглиф.",
-    },
+    }),
     sourcePage: 19,
     semantic: "walk",
   },
@@ -3267,600 +3268,600 @@ export const characters: AtlasCharacter[] = [
     id: "u4e00",
     hanzi: "一",
     pinyin: "yī",
-    meaning: {
+    meaning: withTurkish({
       en: "one",
       fr: "un",
       ru: "один",
-    },
+    }),
     word: "第一",
     wordPinyin: "dìyī",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "first",
       fr: "premier",
       ru: "первый",
-    },
+    }),
     components: ["one"],
-    note: {
+    note: withTurkish({
       en: "Count strokes for 一、二、三; learn 四 and 五 as separate shapes.",
       fr: "Comptez les traits de 一、二、三 ; apprenez 四 et 五 séparément.",
       ru: "Считайте черты в 一、二、三; формы 四 и 五 учите отдельно.",
-    },
+    }),
     sourcePage: 20,
   },
   {
     id: "u4e8c",
     hanzi: "二",
     pinyin: "èr",
-    meaning: {
+    meaning: withTurkish({
       en: "two",
       fr: "deux",
       ru: "два",
-    },
+    }),
     word: "二月",
     wordPinyin: "èryuè",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "February",
       fr: "février",
       ru: "февраль",
-    },
+    }),
     components: ["two"],
-    note: {
+    note: withTurkish({
       en: "Count strokes for 一、二、三; learn 四 and 五 as separate shapes.",
       fr: "Comptez les traits de 一、二、三 ; apprenez 四 et 五 séparément.",
       ru: "Считайте черты в 一、二、三; формы 四 и 五 учите отдельно.",
-    },
+    }),
     sourcePage: 20,
   },
   {
     id: "u4e09",
     hanzi: "三",
     pinyin: "sān",
-    meaning: {
+    meaning: withTurkish({
       en: "three",
       fr: "trois",
       ru: "три",
-    },
+    }),
     word: "三月",
     wordPinyin: "sānyuè",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "March",
       fr: "mars",
       ru: "март",
-    },
+    }),
     components: ["three"],
-    note: {
+    note: withTurkish({
       en: "Count strokes for 一、二、三; learn 四 and 五 as separate shapes.",
       fr: "Comptez les traits de 一、二、三 ; apprenez 四 et 五 séparément.",
       ru: "Считайте черты в 一、二、三; формы 四 и 五 учите отдельно.",
-    },
+    }),
     sourcePage: 20,
   },
   {
     id: "u56db",
     hanzi: "四",
     pinyin: "sì",
-    meaning: {
+    meaning: withTurkish({
       en: "four",
       fr: "quatre",
       ru: "четыре",
-    },
+    }),
     word: "四月",
     wordPinyin: "sìyuè",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "April",
       fr: "avril",
       ru: "апрель",
-    },
+    }),
     components: ["enclosure", "legs"],
-    note: {
+    note: withTurkish({
       en: "Count strokes for 一、二、三; learn 四 and 五 as separate shapes.",
       fr: "Comptez les traits de 一、二、三 ; apprenez 四 et 五 séparément.",
       ru: "Считайте черты в 一、二、三; формы 四 и 五 учите отдельно.",
-    },
+    }),
     sourcePage: 20,
   },
   {
     id: "u4e94",
     hanzi: "五",
     pinyin: "wǔ",
-    meaning: {
+    meaning: withTurkish({
       en: "five",
       fr: "cinq",
       ru: "пять",
-    },
+    }),
     word: "五月",
     wordPinyin: "wǔyuè",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "May",
       fr: "mai",
       ru: "май",
-    },
+    }),
     components: ["five"],
-    note: {
+    note: withTurkish({
       en: "Count strokes for 一、二、三; learn 四 and 五 as separate shapes.",
       fr: "Comptez les traits de 一、二、三 ; apprenez 四 et 五 séparément.",
       ru: "Считайте черты в 一、二、三; формы 四 и 五 учите отдельно.",
-    },
+    }),
     sourcePage: 20,
   },
   {
     id: "u5927",
     hanzi: "大",
     pinyin: "dà",
-    meaning: {
+    meaning: withTurkish({
       en: "big / large",
       fr: "grand / gros",
       ru: "большой",
-    },
+    }),
     word: "大人",
     wordPinyin: "dàren",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "adult",
       fr: "adulte",
       ru: "взрослый",
-    },
+    }),
     components: ["big"],
-    note: {
+    note: withTurkish({
       en: "Compare the meanings big/small and above/below; no common component is implied.",
       fr: "Comparez grand/petit et dessus/dessous ; cela n’implique aucun composant commun.",
       ru: "Сравнивайте большой/маленький и верх/низ; общий компонент не подразумевается.",
-    },
+    }),
     sourcePage: 21,
   },
   {
     id: "u5c0f",
     hanzi: "小",
     pinyin: "xiǎo",
-    meaning: {
+    meaning: withTurkish({
       en: "small / little",
       fr: "petit",
       ru: "маленький",
-    },
+    }),
     word: "小孩",
     wordPinyin: "xiǎohái",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "child",
       fr: "enfant",
       ru: "ребёнок",
-    },
+    }),
     components: ["small"],
-    note: {
+    note: withTurkish({
       en: "Compare the meanings big/small and above/below; no common component is implied.",
       fr: "Comparez grand/petit et dessus/dessous ; cela n’implique aucun composant commun.",
       ru: "Сравнивайте большой/маленький и верх/низ; общий компонент не подразумевается.",
-    },
+    }),
     sourcePage: 21,
   },
   {
     id: "u4e0a",
     hanzi: "上",
     pinyin: "shàng",
-    meaning: {
+    meaning: withTurkish({
       en: "up / above",
       fr: "en haut / au-dessus",
       ru: "вверх / над",
-    },
+    }),
     word: "上面",
     wordPinyin: "shàngmiàn",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "above / on top",
       fr: "au-dessus / sur",
       ru: "сверху / наверху",
-    },
+    }),
     components: ["up"],
-    note: {
+    note: withTurkish({
       en: "Compare the meanings big/small and above/below; no common component is implied.",
       fr: "Comparez grand/petit et dessus/dessous ; cela n’implique aucun composant commun.",
       ru: "Сравнивайте большой/маленький и верх/низ; общий компонент не подразумевается.",
-    },
+    }),
     sourcePage: 21,
   },
   {
     id: "u4e0b",
     hanzi: "下",
     pinyin: "xià",
-    meaning: {
+    meaning: withTurkish({
       en: "down / below",
       fr: "en bas / au-dessous",
       ru: "вниз / под",
-    },
+    }),
     word: "下面",
     wordPinyin: "xiàmiàn",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "below / underneath",
       fr: "en dessous / sous",
       ru: "снизу / внизу",
-    },
+    }),
     components: ["down"],
-    note: {
+    note: withTurkish({
       en: "Compare the meanings big/small and above/below; no common component is implied.",
       fr: "Comparez grand/petit et dessus/dessous ; cela n’implique aucun composant commun.",
       ru: "Сравнивайте большой/маленький и верх/низ; общий компонент не подразумевается.",
-    },
+    }),
     sourcePage: 21,
   },
   {
     id: "u4e2d",
     hanzi: "中",
     pinyin: "zhōng",
-    meaning: {
+    meaning: withTurkish({
       en: "middle / centre",
       fr: "milieu / centre",
       ru: "середина / центр",
-    },
+    }),
     word: "中间",
     wordPinyin: "zhōngjiān",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "middle / between",
       fr: "au milieu / entre",
       ru: "посередине / между",
-    },
+    }),
     components: ["middle", "mouth"],
-    note: {
+    note: withTurkish({
       en: "Compare the meanings big/small and above/below; no common component is implied.",
       fr: "Comparez grand/petit et dessus/dessous ; cela n’implique aucun composant commun.",
       ru: "Сравнивайте большой/маленький и верх/низ; общий компонент не подразумевается.",
-    },
+    }),
     sourcePage: 21,
   },
   {
     id: "u5973",
     hanzi: "女",
     pinyin: "nǚ",
-    meaning: {
+    meaning: withTurkish({
       en: "female / woman",
       fr: "féminin / femme",
       ru: "женский / женщина",
-    },
+    }),
     word: "女儿",
     wordPinyin: "nǚ'ér",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "daughter",
       fr: "fille",
       ru: "дочь",
-    },
+    }),
     components: ["woman"],
-    note: {
+    note: withTurkish({
       en: "好 contains 女 and 子; 男 contains 田 and 力. These are shape observations.",
       fr: "好 contient 女 et 子 ; 男 contient 田 et 力. Ce sont des observations de forme.",
       ru: "好 содержит 女 и 子; 男 содержит 田 и 力. Это наблюдения о форме.",
-    },
+    }),
     sourcePage: 22,
   },
   {
     id: "u5b50",
     hanzi: "子",
     pinyin: "zǐ",
-    meaning: {
+    meaning: withTurkish({
       en: "child / son",
       fr: "enfant / fils",
       ru: "ребёнок / сын",
-    },
+    }),
     word: "子女",
     wordPinyin: "zǐnǚ",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "children / sons and daughters",
       fr: "enfants / fils et filles",
       ru: "дети / сыновья и дочери",
-    },
+    }),
     components: ["child"],
-    note: {
+    note: withTurkish({
       en: "好 contains 女 and 子; 男 contains 田 and 力. These are shape observations.",
       fr: "好 contient 女 et 子 ; 男 contient 田 et 力. Ce sont des observations de forme.",
       ru: "好 содержит 女 и 子; 男 содержит 田 и 力. Это наблюдения о форме.",
-    },
+    }),
     sourcePage: 22,
   },
   {
     id: "u597d",
     hanzi: "好",
     pinyin: "hǎo",
-    meaning: {
+    meaning: withTurkish({
       en: "good / well",
       fr: "bon / bien",
       ru: "хороший / хорошо",
-    },
+    }),
     word: "好人",
     wordPinyin: "hǎorén",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "good person",
       fr: "bonne personne",
       ru: "хороший человек",
-    },
+    }),
     components: ["woman", "child"],
-    note: {
+    note: withTurkish({
       en: "好 contains 女 and 子; 男 contains 田 and 力. These are shape observations.",
       fr: "好 contient 女 et 子 ; 男 contient 田 et 力. Ce sont des observations de forme.",
       ru: "好 содержит 女 и 子; 男 содержит 田 и 力. Это наблюдения о форме.",
-    },
+    }),
     sourcePage: 22,
   },
   {
     id: "u7238",
     hanzi: "爸",
     pinyin: "bà",
-    meaning: {
+    meaning: withTurkish({
       en: "father / dad",
       fr: "père / papa",
       ru: "отец / папа",
-    },
+    }),
     word: "爸爸",
     wordPinyin: "bàba",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "dad / father",
       fr: "papa / père",
       ru: "папа / отец",
-    },
+    }),
     components: ["father", "ba"],
-    note: {
+    note: withTurkish({
       en: "好 contains 女 and 子; 男 contains 田 and 力. These are shape observations.",
       fr: "好 contient 女 et 子 ; 男 contient 田 et 力. Ce sont des observations de forme.",
       ru: "好 содержит 女 и 子; 男 содержит 田 и 力. Это наблюдения о форме.",
-    },
+    }),
     sourcePage: 22,
   },
   {
     id: "u7537",
     hanzi: "男",
     pinyin: "nán",
-    meaning: {
+    meaning: withTurkish({
       en: "male / man",
       fr: "masculin / homme",
       ru: "мужской / мужчина",
-    },
+    }),
     word: "男人",
     wordPinyin: "nánrén",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "man",
       fr: "homme",
       ru: "мужчина",
-    },
+    }),
     components: ["field", "strength"],
-    note: {
+    note: withTurkish({
       en: "好 contains 女 and 子; 男 contains 田 and 力. These are shape observations.",
       fr: "好 contient 女 et 子 ; 男 contient 田 et 力. Ce sont des observations de forme.",
       ru: "好 содержит 女 и 子; 男 содержит 田 и 力. Это наблюдения о форме.",
-    },
+    }),
     sourcePage: 22,
   },
   {
     id: "u5b66",
     hanzi: "学",
     pinyin: "xué",
-    meaning: {
+    meaning: withTurkish({
       en: "learn / study",
       fr: "apprendre / étudier",
       ru: "учиться / изучать",
-    },
+    }),
     word: "学习",
     wordPinyin: "xuéxí",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "learn / study",
       fr: "apprendre / étudier",
       ru: "учиться / изучать",
-    },
+    }),
     components: ["study-top", "cover", "child"],
-    note: {
+    note: withTurkish({
       en: "学 contains 子 below, but its top is not 宀. 生 is neutral in 学生.",
       fr: "学 contient 子 en bas, mais son haut n’est pas 宀. 生 est neutre dans 学生.",
       ru: "В 学 снизу стоит 子, но верх — не 宀. В 学生 слог 生 нейтральный.",
-    },
+    }),
     sourcePage: 23,
   },
   {
     id: "u751f",
     hanzi: "生",
     pinyin: "shēng",
-    meaning: {
+    meaning: withTurkish({
       en: "life / grow; student suffix",
       fr: "vie / pousser ; suffixe d’élève",
       ru: "жизнь / расти; суффикс учащегося",
-    },
+    }),
     word: "学生",
     wordPinyin: "xuésheng",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "student",
       fr: "élève / étudiant",
       ru: "ученик / студент",
-    },
+    }),
     components: ["life"],
-    note: {
+    note: withTurkish({
       en: "学 contains 子 below, but its top is not 宀. 生 is neutral in 学生.",
       fr: "学 contient 子 en bas, mais son haut n’est pas 宀. 生 est neutre dans 学生.",
       ru: "В 学 снизу стоит 子, но верх — не 宀. В 学生 слог 生 нейтральный.",
-    },
+    }),
     sourcePage: 23,
   },
   {
     id: "u4e66",
     hanzi: "书",
     pinyin: "shū",
-    meaning: {
+    meaning: withTurkish({
       en: "book / writing",
       fr: "livre / écriture",
       ru: "книга / письмо",
-    },
+    }),
     word: "书店",
     wordPinyin: "shūdiàn",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "bookshop / bookstore",
       fr: "librairie",
       ru: "книжный магазин",
-    },
+    }),
     components: ["book"],
-    note: {
+    note: withTurkish({
       en: "学 contains 子 below, but its top is not 宀. 生 is neutral in 学生.",
       fr: "学 contient 子 en bas, mais son haut n’est pas 宀. 生 est neutre dans 学生.",
       ru: "В 学 снизу стоит 子, но верх — не 宀. В 学生 слог 生 нейтральный.",
-    },
+    }),
     sourcePage: 23,
   },
   {
     id: "u6587",
     hanzi: "文",
     pinyin: "wén",
-    meaning: {
+    meaning: withTurkish({
       en: "writing / language",
       fr: "écriture / langue",
       ru: "письменность / язык",
-    },
+    }),
     word: "中文",
     wordPinyin: "zhōngwén",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "Chinese language",
       fr: "langue chinoise",
       ru: "китайский язык",
-    },
+    }),
     components: ["writing"],
-    note: {
+    note: withTurkish({
       en: "学 contains 子 below, but its top is not 宀. 生 is neutral in 学生.",
       fr: "学 contient 子 en bas, mais son haut n’est pas 宀. 生 est neutre dans 学生.",
       ru: "В 学 снизу стоит 子, но верх — не 宀. В 学生 слог 生 нейтральный.",
-    },
+    }),
     sourcePage: 23,
   },
   {
     id: "u540d",
     hanzi: "名",
     pinyin: "míng",
-    meaning: {
+    meaning: withTurkish({
       en: "name",
       fr: "nom",
       ru: "имя",
-    },
+    }),
     word: "名字",
     wordPinyin: "míngzi",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "name",
       fr: "nom",
       ru: "имя",
-    },
+    }),
     components: ["evening", "mouth"],
-    note: {
+    note: withTurkish({
       en: "学 contains 子 below, but its top is not 宀. 生 is neutral in 学生.",
       fr: "学 contient 子 en bas, mais son haut n’est pas 宀. 生 est neutre dans 学生.",
       ru: "В 学 снизу стоит 子, но верх — не 宀. В 学生 слог 生 нейтральный.",
-    },
+    }),
     sourcePage: 23,
   },
   {
     id: "u7c73",
     hanzi: "米",
     pinyin: "mǐ",
-    meaning: {
+    meaning: withTurkish({
       en: "rice (uncooked)",
       fr: "riz (non cuit)",
       ru: "рис (сырой)",
-    },
+    }),
     word: "大米",
     wordPinyin: "dàmǐ",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "rice (uncooked)",
       fr: "riz (non cuit)",
       ru: "рис (сырой)",
-    },
+    }),
     components: ["rice"],
-    note: {
+    note: withTurkish({
       en: "菜、茶、花 share 艹; 米 and 饭 belong by topic, not that component.",
       fr: "菜、茶、花 partagent 艹 ; 米 et 饭 sont liés par le thème.",
       ru: "菜、茶、花 имеют 艹; 米 и 饭 связаны с ними темой.",
-    },
+    }),
     sourcePage: 24,
   },
   {
     id: "u996d",
     hanzi: "饭",
     pinyin: "fàn",
-    meaning: {
+    meaning: withTurkish({
       en: "cooked rice / meal",
       fr: "riz cuit / repas",
       ru: "варёный рис / еда",
-    },
+    }),
     word: "米饭",
     wordPinyin: "mǐfàn",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "cooked rice",
       fr: "riz cuit",
       ru: "варёный рис",
-    },
+    }),
     components: ["food", "reverse", "cliff", "right-hand"],
-    note: {
+    note: withTurkish({
       en: "菜、茶、花 share 艹; 米 and 饭 belong by topic, not that component.",
       fr: "菜、茶、花 partagent 艹 ; 米 et 饭 sont liés par le thème.",
       ru: "菜、茶、花 имеют 艹; 米 и 饭 связаны с ними темой.",
-    },
+    }),
     sourcePage: 24,
   },
   {
     id: "u83dc",
     hanzi: "菜",
     pinyin: "cài",
-    meaning: {
+    meaning: withTurkish({
       en: "vegetable / dish",
       fr: "légume / plat",
       ru: "овощ / блюдо",
-    },
+    }),
     word: "蔬菜",
     wordPinyin: "shūcài",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "vegetables",
       fr: "légumes",
       ru: "овощи",
-    },
+    }),
     components: ["grass", "pick", "claw", "wood"],
-    note: {
+    note: withTurkish({
       en: "菜、茶、花 share 艹; 米 and 饭 belong by topic, not that component.",
       fr: "菜、茶、花 partagent 艹 ; 米 et 饭 sont liés par le thème.",
       ru: "菜、茶、花 имеют 艹; 米 и 饭 связаны с ними темой.",
-    },
+    }),
     sourcePage: 24,
   },
   {
     id: "u8336",
     hanzi: "茶",
     pinyin: "chá",
-    meaning: {
+    meaning: withTurkish({
       en: "tea",
       fr: "thé",
       ru: "чай",
-    },
+    }),
     word: "红茶",
     wordPinyin: "hóngchá",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "black tea",
       fr: "thé noir",
       ru: "чёрный чай",
-    },
+    }),
     components: ["grass", "person", "wood"],
-    note: {
+    note: withTurkish({
       en: "The lower tree-like form is a modern shape connection, not a complete origin story.",
       fr: "La forme basse évoque un arbre : c’est un lien visuel, pas une origine complète.",
       ru: "Нижняя древовидная форма — визуальная связь, а не полная история происхождения.",
-    },
+    }),
     sourcePage: 24,
   },
   {
     id: "u82b1",
     hanzi: "花",
     pinyin: "huā",
-    meaning: {
+    meaning: withTurkish({
       en: "flower",
       fr: "fleur",
       ru: "цветок",
-    },
+    }),
     word: "花园",
     wordPinyin: "huāyuán",
-    wordMeaning: {
+    wordMeaning: withTurkish({
       en: "garden",
       fr: "jardin",
       ru: "сад",
-    },
+    }),
     components: ["grass", "transform", "person", "spoon"],
-    note: {
+    note: withTurkish({
       en: "菜、茶、花 share 艹; 米 and 饭 belong by topic, not that component.",
       fr: "菜、茶、花 partagent 艹 ; 米 et 饭 sont liés par le thème.",
       ru: "菜、茶、花 имеют 艹; 米 и 饭 связаны с ними темой.",
-    },
+    }),
     sourcePage: 24,
   },
 ];

@@ -1,3 +1,4 @@
+import {turkishText} from "./turkish";
 import type {Locale} from './translate';
 export const hybridCopy = {
  layers:['Layer map','Carte en couches','Карта слоёв'],
@@ -15,4 +16,4 @@ export const hybridCopy = {
  empty:['No words in this selection. Try another family or a wider vocabulary.','Aucun mot dans cette sélection. Essayez une autre famille ou un vocabulaire plus large.','В этом наборе нет слов. Выберите другое семейство или расширьте словарь.'],note:['Browsing this map does not record mastery. Character counts describe this selection, not a learning guarantee.','Explorer cette carte ne valide pas la maîtrise. Les nombres décrivent cette sélection, sans garantir l’apprentissage.','Просмотр карты не засчитывает освоение. Числа описывают выбранный набор, а не гарантируют результат обучения.'],
  expand:['Expand this view','Agrandir cette vue','Развернуть этот вид'],collapse:['Exit expanded view','Réduire la vue','Выйти из полного вида'],
 } as const;
-export function hybridText(locale:Locale,key:keyof typeof hybridCopy):string{return hybridCopy[key][locale==='en'?0:locale==='fr'?1:2]}
+export function hybridText(locale:Locale,key:keyof typeof hybridCopy):string{return locale==='tr'?turkishText(hybridCopy[key][0]):hybridCopy[key][locale==='en'?0:locale==='fr'?1:2]}

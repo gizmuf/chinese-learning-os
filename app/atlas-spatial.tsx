@@ -1,4 +1,5 @@
 'use client';
+import {withTurkish} from "./turkish";
 import {useEffect,useMemo,useRef,useState,type CSSProperties,type ReactNode} from 'react';
 import {ArrowLeft,ArrowRight,ChevronLeft,ChevronRight,Grid2X2,Layers,PenLine,Volume2,X} from 'lucide-react';
 import {useI18n} from './i18n';
@@ -19,7 +20,7 @@ import {useDeckMotion} from './atlas-deck-motion';
 import './atlas-spatial.css';
 type Props={family:SpatialCharacter[];total:number;hanzi:string;component:string;familyLabel:string;mode:CardMode;word?:CloudWord;words:CloudWord[];onMode:(mode:CardMode)=>void;onCharacter:(h:string)=>void;onWord:(word:CloudWord)=>void;onWrite:(trigger:HTMLButtonElement)=>void;canWrite:boolean;notify:(message:string)=>void;collection:'library'|'atlas';level:'all'|1|2|3;relation:'all'|'meaning'|'sound'|'shape';counts:{meaning:number;sound:number;shape:number};onRelation:(relation:'all'|'meaning'|'sound'|'shape')=>void;onHskFamily:(id?:string)=>void;recognition:ReturnType<typeof useRecognitionProgress>;navigationRevision:number;owner:string|null;onReviewStart:()=>void;onReviewContext:(question:PracticeQuestion)=>void;onReviewEnd:(restore:boolean)=>void;parts:ReactNode};
 export default function AtlasSpatial(p:Props){
- const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>({en,fr,ru})[locale];
+ const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>(withTurkish({en,fr,ru}))[locale];
  const dictionary=useMemo(()=>studyDictionary(locale),[locale]);
  const selectedIndex=p.family.findIndex(ch=>ch.hanzi===p.hanzi);
  const [session,setSession]=useState<{id:string;kind:'family'|'difficult'|'due';questions:PracticeQuestion[];initialIndex:number}|null>(null),[directoryOpen,setDirectoryOpen]=useState(false),[now,setNow]=useState(()=>Date.now());

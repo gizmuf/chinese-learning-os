@@ -1,5 +1,7 @@
+import {turkishText,withTurkish} from "./turkish";
 /** Dataset-derived structural browsing, distinct from the 121 curated/gradable Atlas targets. */
-import data from '../data/hanzi-structure.json';
+import rawData from '../data/hanzi-structure.json';
+const data=withTurkish(rawData);
 import {atlasByHanzi,componentById} from './atlas-model';
 import {items,type Item} from './content';
 import {localizeItem,type Locale} from './translate';
@@ -12,7 +14,7 @@ export function extendedCharacters(locale:Locale,scope:ExtendedScope='all'){
  return rows.filter(row=>allowed.has(row.hanzi)).map(row=>{
   const reviewed=atlasByHanzi.get(row.hanzi);
   return {id:'structure-u'+row.hanzi.codePointAt(0)!.toString(16),hanzi:row.hanzi,
-   readings:row.readings,meaning:reviewed?.meaning[locale]??row.definition,meaningLocale:reviewed?locale:'en' as Locale,
+   readings:row.readings,meaning:reviewed?.meaning[locale]??(locale==='tr'?turkishText(row.definition):row.definition),meaningLocale:reviewed||locale==='tr'&&turkishText(row.definition)!==row.definition?locale:'en' as Locale,
    sourceStatus:'dataset-derived-modern-structure' as const,complete:row.decompositionComplete,structureSource:'structureSource' in row?row.structureSource:null,
    decomposition:row.decomposition,radical:row.radical,unresolved:row.unresolvedComponents,
    components:row.recursiveComponents as string[],leafComponents:row.leafComponents,wordIds:row.wordIds,reviewed};
@@ -27,7 +29,7 @@ export function extendedComponent(idOrGlyph:string){
  const valid=variants.some(glyph=>Object.hasOwn(data.reverseIndex,glyph)||rows.some(row=>row.hanzi===glyph));
  const glyph=curated?.glyph??idOrGlyph;const definition=rows.find(row=>row.hanzi===glyph)?.definition??glyph;
  const named=(data.namedComponents as Record<string,{label:Record<Locale,string>}>)[glyph];
- return valid?{id:idOrGlyph,glyph,variants,aliases:variants.filter(value=>value!==glyph),label:curated?.label??named?.label??{en:definition,fr:definition,ru:definition},labelLocale:curated||named?null:"en",curated:curated??null}:null;
+ return valid?{id:idOrGlyph,glyph,variants,aliases:variants.filter(value=>value!==glyph),label:curated?.label??named?.label??withTurkish({en:definition,fr:definition,ru:definition}),labelLocale:curated||named?null:"en",curated:curated??null}:null;
 }
 export function extendedFamily(componentIds:string[],locale:Locale,scope:ExtendedScope='all'){
  const components=[...new Set(componentIds)].map(extendedComponent);

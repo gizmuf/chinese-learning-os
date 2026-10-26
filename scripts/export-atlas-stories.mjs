@@ -8,7 +8,7 @@ const r = await build({
   write: false,
   logLevel: "silent",
 });
-const { atlasStories } = await import(
+const { atlasStories,hasNarration } = await import(
   "data:text/javascript;base64," +
     Buffer.from(r.outputFiles[0].text).toString("base64")
 );
@@ -16,13 +16,15 @@ const voices = {
   en: "en-GB-SoniaNeural",
   fr: "fr-FR-DeniseNeural",
   ru: "ru-RU-SvetlanaNeural",
+  tr: "tr-TR-EmelNeural",
 };
-const rows = Object.entries(atlasStories).flatMap(([id, story]) =>
+const rows = Object.entries(atlasStories).filter(([id])=>hasNarration(id)).flatMap(([id, story]) =>
   Object.entries(voices).flatMap(([locale, voice]) =>
     story.steps.map((step, index) => ({
       file: `${id}-${locale}-${index}.mp3`,
       text: step.caption[locale],
       voice,
+      rate: "-5%",
       locale,
     })),
   ),

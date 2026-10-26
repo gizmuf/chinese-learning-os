@@ -1,4 +1,5 @@
 'use client';
+import {withTurkish} from "./turkish";
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {ArrowRight,RotateCcw} from 'lucide-react';
 import {useI18n} from './i18n';
@@ -12,7 +13,7 @@ import './atlas-spatial.css';
 import './today-recognition.css';
 
 export default function TodayRecognition({owner}:{owner:string|null}){
- const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>({en,fr,ru})[locale];
+ const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>(withTurkish({en,fr,ru}))[locale];
  const progress=useRecognitionProgress(owner),[now,setNow]=useState(()=>Date.now());
  const summary=useMemo(()=>recognitionSummary(progress.events,now),[progress.events,now]);
  const [session,setSession]=useState<{id:string;kind:'difficult'|'due';questions:PracticeQuestion[];initialIndex:number}|null>(null);

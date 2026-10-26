@@ -1,8 +1,12 @@
 """Only for an isolated local Worker/D1; never a production Site."""
 import json,time,uuid,os
 from urllib.request import Request,urlopen
+from urllib.parse import urlsplit
 from urllib.error import HTTPError
 BASE=os.environ.get('CHINESE_OS_TEST_BASE','http://127.0.0.1:8788')
+parsed_base=urlsplit(BASE)
+if parsed_base.scheme!='http' or parsed_base.hostname not in ('127.0.0.1','localhost','::1'):
+    raise SystemExit('Course API integration tests require an isolated local HTTP Worker/D1.')
 checks=[]
 def call(method='GET',user=None,body=None,origin=BASE,extra=None,path='/api/course-progress?lessons=all'):
     headers={}
@@ -53,6 +57,26 @@ assert call('POST',a,{'events':[{**builder,'assisted':True}]})[0]==200;checks.ap
 writing={**lesson4,'id':str(uuid.uuid4()),'activityId':'write:c04-t01','kind':'writing','rating':3}
 assert call('POST',a,{'events':[writing]})[0]==200;checks.append('lesson04 handwriting result accepted')
 assert call(user=a,path='/api/progress')[1]['events']==[];checks.append('lesson04 never enters HSK history')
+lesson5={**event,'id':str(uuid.uuid4()),'lessonId':'intensive-05','activityId':'c05-check-c05-t01-read'}
+for _ in range(2):
+    result=call('POST',a,{'events':[lesson5]});assert result[0]==200,result[:2]
+assert sum(e['id']==lesson5['id'] for e in call(user=a)[1]['events'])==1;checks.append('lesson05 independent result syncs idempotently')
+assert not any(e['lessonId']=='intensive-05' for e in call(user=b)[1]['events']);checks.append('lesson05 account isolation')
+result=call('POST',b,{'events':[{**lesson5,'correct':False}]});assert result[0]==200,result[:2]
+assert next(e for e in call(user=b)[1]['events'] if e['id']==lesson5['id'])['correct']==False
+assert next(e for e in call(user=a)[1]['events'] if e['id']==lesson5['id'])['correct']==True;checks.append('lesson05 replay UUID remains scoped by account')
+for wrong_lesson,wrong_activity in [('intensive-03',lesson5['activityId']),('intensive-04',lesson5['activityId']),('intensive-05','time-days'),('intensive-05',lesson4['activityId'])]:
+    result=call('POST',a,{'events':[{**lesson5,'id':str(uuid.uuid4()),'lessonId':wrong_lesson,'activityId':wrong_activity}]})
+    assert result[0]==400,result[:2]
+checks.append('lesson05 cross-lesson activity forgery rejected against lessons03 and04')
+builder5={**lesson5,'id':str(uuid.uuid4()),'activityId':'c05-build-1'}
+assert call('POST',a,{'events':[builder5]})[0]==400
+assert call('POST',a,{'events':[{**builder5,'assisted':True}]})[0]==200;checks.append('lesson05 builders require supported scoring')
+writing5={**lesson5,'id':str(uuid.uuid4()),'activityId':'write:c05-t01','kind':'writing','rating':3}
+assert call('POST',a,{'events':[writing5]})[0]==200;checks.append('lesson05 handwriting result accepted')
+legacy=call(user=a,path='/api/course-progress')[1]['events'];assert legacy and all(e['lessonId']=='intensive-03' for e in legacy);checks.append('legacy lesson03 clients exclude lesson05 events')
+assert call(user=a,path='/api/progress')[1]['events']==[];checks.append('lesson05 never enters HSK history')
+assert call('POST',a,{'events':[lesson5]},path='/api/progress')[0]==400;checks.append('HSK API rejects lesson05 events')
 assert call('POST',a,'x'*100001)[0]==413;checks.append('course body size bounded')
 for check in checks:print('PASS',check)
 print(f'{len(checks)} course API integration checks passed')

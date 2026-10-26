@@ -1,7 +1,9 @@
-import source from '../data/lesson04/content.json';
+import {withTurkish} from "./turkish";
+import rawSource from '../data/lesson04/content.json';
 import { L, type Copy } from './course-data';
 import type { Locale } from './translate';
 import type { Item } from './content';
+const source=withTurkish(rawSource);
 export const lesson04 = {id:'intensive-04' as const,number:4,date:source.date,title:L('People, places & the parts of words','Personnes, lieux et composants des mots','Люди, места и части слов')};
 export type Lesson04Entry = {id:string;topic:string;hanzi:string;pinyin:string;meaning:Copy;source:string};
 export const lesson04Terms:Lesson04Entry[]=source.terms;
