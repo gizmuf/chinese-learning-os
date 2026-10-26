@@ -61,6 +61,7 @@ import Ink from "./ink";
 import Guided from "./guided";
 import Notebook from "./notebook";
 import IntensiveCourse from "./intensive-course";
+import StudyLookupProvider, {useDictionaryAssistance,StudyText} from "./study-lookup";
 import PdfExport from "./pdf-export";
 import { LanguagePicker, useI18n } from "./i18n";
 import { localizeItem } from "./translate";
@@ -493,7 +494,7 @@ export default function StudyApp({
           )}
         </div>
       </aside>
-      <main className="main">
+      <StudyLookupProvider notify={notify} penOnly={penOnly} setPenOnly={setPenOnly}><main className="main">
         <header className="topbar">
           <span>
             <span className="breadcrumb">{t("My study space")}</span>
@@ -847,7 +848,7 @@ export default function StudyApp({
                     </span>
                     <div className="word-heading">
                       <div>
-                        <span className="hanzi">{i.hanzi}</span>
+                        <span className="hanzi"><StudyText text={i.hanzi} whole/></span>
                         <p className="pinyin">{i.pinyin}</p>
                       </div>
                       <button
@@ -860,7 +861,7 @@ export default function StudyApp({
                     </div>
                     <h3>{i.english}</h3>
                     <div className="sentence">
-                      <span>{i.sentence}</span>
+                      <span><StudyText text={i.sentence}/></span>
                       <span className="pinyin">{i.sentencePinyin}</span>
                       <small>{i.translation}</small>
                       <button
@@ -1202,7 +1203,7 @@ export default function StudyApp({
             {t("Small steps. Lasting connections.")}<span>{t("CHINESE OS · MADE FOR YOUR EVERYDAY")}</span>
           </footer>
         </div>
-      </main>
+      </main></StudyLookupProvider>
       {pdfSelection && <PdfExport key={level} level={level} initialIds={pdfSelection} onClose={() => setPdfSelection(null)} />}
       {toast && (
         <div className="toast" role="status">
@@ -1374,6 +1375,7 @@ function Recall({
 }) {
   const { t, locale } = useI18n();
   const [revealed, setRevealed] = useState(false);
+  const assisted=useRef(false);const [lookedUp,setLookedUp]=useState(false);const dictionaryHelp=useDictionaryAssistance(()=>{assisted.current=true;setLookedUp(true);});
   const [saving, setSaving] = useState(false);
   const [done, setDone] = useState(false);
   const started = useRef(Date.now());
@@ -1382,7 +1384,7 @@ function Recall({
     setSaving(true);
     try {
       await record(
-        newEvent(item, skill, "recall", r, false, {
+        newEvent(item, skill, "recall", r, assisted.current, {
           duration: Date.now() - started.current,
         }),
       );
@@ -1394,11 +1396,11 @@ function Recall({
     }
   }
   return (
-    <section className="recall-card panel">
-      <span className="pill">{t(sourceSkillNames[skill])} {t("· INDEPENDENT RECALL")}</span>
+    <section ref={dictionaryHelp} data-study-assessment={revealed?"complete":"supported"} className="recall-card panel">
+      <span className="pill">{t(sourceSkillNames[skill])} {t(lookedUp?"Guided / assisted practice":"· INDEPENDENT RECALL")}</span>
       {skill === "meaning" ? (
         <>
-          <div className="recall-hanzi">{item.hanzi}</div>
+          <div className="recall-hanzi"><StudyText text={item.hanzi} whole/></div>
           <p className="pinyin">{item.pinyin}</p>
           <p>{t("What does this word mean?")}</p>
         </>
