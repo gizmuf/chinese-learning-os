@@ -1,4 +1,4 @@
-"""Build vector, searchable EN/FR/RU PDFs from the same dataset as the app.
+"""Build vector, searchable EN/FR/RU/TR PDFs from the same dataset as the app.
 Preserves the supplied Lesson 03 A4/navy/pale-blue/56.1pt handwriting design.
 Fonts are authoring inputs, not distributed as standalone files.
 """
@@ -8,7 +8,7 @@ import pymupdf as f
 from fontTools.ttLib import TTFont
 from fontTools.pens.boundsPen import BoundsPen
 from fontTools import subset
-P=argparse.ArgumentParser();P.add_argument('--content',required=True);P.add_argument('--cjk-font',required=True);args=P.parse_args()
+P=argparse.ArgumentParser();P.add_argument('--content',required=True);P.add_argument('--cjk-font',required=True);P.add_argument('--languages',nargs='+',choices=['en','fr','ru','tr'],default=['en','fr','ru','tr']);args=P.parse_args()
 data=json.loads(Path(args.content).read_text());fontpath=Path(args.cjk_font)
 # Pre-subset CFF locally: MuPDF cannot subset this original CJK face itself.
 subsetfont=TTFont(str(fontpath));options=subset.Options();options.retain_gids=True;subsetter=subset.Subsetter(options=options);subsetter.populate(text=json.dumps(data,ensure_ascii=False)+'准备兴奋苹果包子');subsetter.subset(subsetfont)
@@ -24,6 +24,7 @@ LABEL={
 'en':dict(workbook='Hanzi practice workbook',guide='Study guide',lesson='LESSON 05 / 26 OCTOBER 2026',practice='Read the complete expression. Trace it, then write it without the model.',model='Model + trace',blank='Write from memory',source='From the classroom board',extra='Additional practice example',read='Short reading check - without pinyin',answers='Answer key - check after trying',name='Name:',date='Date:',steps='New stroke highlighted; diagrams are writing guides, not an origin story.',start='Study a pattern, change one block, recall it, then write it.',materials='65 expressions, 34 sentences. Six groups from today’s class.',contrast='Compare before memorising',instruction='Try saying the meaning and reading aloud. Cover the answer key until finished.'),
 'fr':dict(workbook='Cahier de pratique des hanzi',guide='Guide d’étude',lesson='LEÇON 05 / 26 OCTOBRE 2026',practice='Lire l’expression entière. La tracer, puis l’écrire sans le modèle.',model='Modèle + tracé',blank='Écrire de mémoire',source='Du tableau du cours',extra='Exemple d’entraînement ajouté',read='Petite vérification de lecture - sans pinyin',answers='Corrigé - à consulter après avoir essayé',name='Nom :',date='Date :',steps='Nouveau trait en couleur ; les schémas guident l’écriture, pas l’étymologie.',start='Étudier un modèle, changer un bloc, se rappeler, puis écrire.',materials='65 expressions, 34 phrases. Six groupes du cours.',contrast='Comparer avant de mémoriser',instruction='Dire le sens et lire à voix haute. Cacher le corrigé avant de terminer.'),
 'ru':dict(workbook='Прописи и практика иероглифов',guide='Учебное пособие',lesson='УРОК 05 / 26 ОКТЯБРЯ 2026',practice='Прочитайте целое выражение. Обведите его, затем напишите без образца.',model='Образец и обводка',blank='Напишите по памяти',source='С доски на занятии',extra='Дополнительный учебный пример',read='Короткая проверка чтения - без пиньиня',answers='Ответы - проверьте после самостоятельной попытки',name='Имя:',date='Дата:',steps='Новый штрих выделен; схема помогает писать, а не объясняет происхождение.',start='Изучите образец, измените один блок, вспомните, затем напишите.',materials='65 выражений, 34 предложения. Шесть групп сегодняшнего урока.',contrast='Сначала сравните, затем запоминайте',instruction='Назовите значение и прочитайте вслух. До конца задания закройте ответы.')}
+LABEL['tr']=dict(workbook='Hanzi çalışma defteri',guide='Çalışma kılavuzu',lesson='DERS 05 / 26 EKİM 2026',practice='İfadenin tamamını okuyun. Üzerinden geçin, ardından modele bakmadan yazın.',model='Model ve üzerinden geçme',blank='Bellekten yazın',source='Sınıf tahtasından',extra='Ek alıştırma örneği',read='Kısa okuma kontrolü - pinyin olmadan',answers='Yanıt anahtarı - önce kendiniz deneyin',name='Ad:',date='Tarih:',steps='Yeni çizgi renkle vurgulanmıştır; şemalar yazı rehberidir, köken açıklaması değildir.',start='Bir yapıyı inceleyin, bir bloğu değiştirin, hatırlayın ve yazın.',materials='65 ifade, 34 cümle. Bugünkü dersten altı grup.',contrast='Ezberlemeden önce karşılaştırın',instruction='Anlamı söyleyin ve sesli okuyun. Bitirene kadar yanıt anahtarını kapalı tutun.')
 def E(s):return html.escape(str(s))
 def box(p,rect,content,size=10):
  spare,scale=p.insert_htmlbox(f.Rect(rect),content,css=CSS+f'body{{font-size:{size}pt}}',archive=archive,scale_low=1)
@@ -79,7 +80,7 @@ for topic in data['topics']:
  note_heights[topic['id']]=math.ceil(max(heights)/10)*10+5
  probe.close()
 
-for lang in ['en','fr','ru']:
+for lang in args.languages:
  lab=LABEL[lang];doc=f.open();p=page(doc,lang,'guide');y=120
  box(p,(39.7,y,555.5,y+100),'<p class="hz">认识　又　看起来　准备好</p><p class="py">rènshi　yòu　kàn qǐlái　zhǔnbèi hǎo</p><p>'+E(lab['start'])+'</p><p>'+E(lab['materials'])+'</p>');y+=120
  for i,topic in enumerate(data['topics']):
@@ -110,7 +111,7 @@ for lang in ['en','fr','ru']:
  for i,v in enumerate(testrows):box(p,(39.7,y,555.5,y+59),str(i+1)+'.　<span class="hz">'+E(v['hanzi'])+'</span><br><span class="py">'+E(v['pinyin'])+'</span><br>'+E(v['meaning'][lang]),9);y+=64
  # Grammar paths make the same building blocks visible offline.
  for offset in range(0,len(data.get('paths',[])),2):
-  p=page(doc,lang,'guide',{'en':'Sentence building blocks','fr':'Les blocs des phrases','ru':'Из чего строится предложение'}[lang]);y=116
+  p=page(doc,lang,'guide',{'en':'Sentence building blocks','fr':'Les blocs des phrases','ru':'Из чего строится предложение','tr':'Cümlenin yapı taşları'}[lang]);y=116
   for path in data['paths'][offset:offset+2]:
    row=lookup[path['target']]
    box(p,(39.7,y,555.5,y+66),'<span class="hz">'+E(row['hanzi'])+'</span><br><span class="py">'+E(row['pinyin'])+'</span><br>'+E(row['meaning'][lang]),9);y+=72
@@ -119,7 +120,7 @@ for lang in ['en','fr','ru']:
    y+=12
  finish(doc,OUT/f'guide-{lang}.pdf',lang,'guide')
  # One-page reminder is optional; the two main documents stay separate.
- quick=f.open();q=page(quick,lang,'guide',{'en':'Lesson 05 - quick reference','fr':'Leçon 05 - mémo','ru':'Урок 05 - краткая памятка'}[lang]);yy=116
+ quick=f.open();q=page(quick,lang,'guide',{'en':'Lesson 05 - quick reference','fr':'Leçon 05 - mémo','ru':'Урок 05 - краткая памятка','tr':'Ders 05 - kısa başvuru'}[lang]);yy=116
  for path in data.get('paths',[]):
   row=lookup[path['target']]
   box(q,(39.7,yy,555.5,yy+89),'<span class="hz">'+E(row['hanzi'])+'</span><br><span class="py">'+E(row['pinyin'])+'</span><br>'+E(row['meaning'][lang]),9);yy+=96
@@ -138,14 +139,14 @@ for lang in ['en','fr','ru']:
    cells(p,chars*repeats,y,empty=True);y+=72
  # Whole-sentence practice keeps the full expression and reading above all cells.
  for row in [lookup[x] for x in ['c05-s01','c05-s04','c05-s08','c05-s12','c05-s13','c05-s20','c05-s23','c05-s27']]:
-  p=page(doc,lang,'workbook',{'en':'Whole-sentence practice','fr':'Pratique des phrases entières','ru':'Практика целых предложений'}[lang]);box(p,(39.7,116,555.5,195),'<p class="hz">'+E(row['hanzi'])+'</p><p class="py">'+E(row['pinyin'])+'</p><p>'+E(row['meaning'][lang])+'</p>',10);y=213;chars=re.findall('[\u3400-\u9fff]',row['hanzi'])
+  p=page(doc,lang,'workbook',{'en':'Whole-sentence practice','fr':'Pratique des phrases entières','ru':'Практика целых предложений','tr':'Tam cümle yazma alıştırması'}[lang]);box(p,(39.7,116,555.5,195),'<p class="hz">'+E(row['hanzi'])+'</p><p class="py">'+E(row['pinyin'])+'</p><p>'+E(row['meaning'][lang])+'</p>',10);y=213;chars=re.findall('[\u3400-\u9fff]',row['hanzi'])
   for start in range(0,len(chars),8):
    part=chars[start:start+8];cells(p,part,y);cells(p,part,y+64);cells(p,part,y+128,empty=True);y+=198
   box(p,(39.7,740,555.5,785),E(lab['blank'])+' ________________________________',9)
  finish(doc,OUT/f'workbook-{lang}.pdf',lang,'workbook')
  print(lang,'PDFs ready',flush=True)
 
-manifest={'sourceSha256':hashlib.sha256(Path('data/lesson05/content.json').read_bytes()+Path('app/lesson05-data.ts').read_bytes()).hexdigest(),'documents':[]}
+manifest={'sourceSha256':hashlib.sha256(Path('data/lesson05/content.json').read_bytes()+Path('app/lesson05-data.ts').read_bytes()).hexdigest(),'generatorSha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'translationSources':{str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(Path('data').glob('turkish-*.json'))},'documents':[]}
 for path in sorted(OUT.glob('*.pdf')):
  document=f.open(path);manifest['documents'].append({'file':path.name,'pages':len(document),'sha256':hashlib.sha256(path.read_bytes()).hexdigest()});document.close()
 Path('data/lesson05/materials-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')

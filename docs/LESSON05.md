@@ -28,9 +28,9 @@ Grammar cross-checks:
 
 ## Offline pack
 
-The EN/FR/RU pack contains a 19-page study guide, 32-page Hanzi workbook and one-page quick reference per language. The workbook preserves the established A4 white/navy design, 56.1-point writing cells, pale tracing models, cumulative stroke diagrams and blank recall space. Complete words have pinyin and meanings; writing cells contain individual glyphs.
+The EN/FR/RU/TR pack contains a 19-page study guide, 32-page Hanzi workbook and one-page quick reference per language. The workbook preserves the established A4 white/navy design, 56.1-point writing cells, pale tracing models, cumulative stroke diagrams and blank recall space. Complete words have pinyin and meanings; writing cells contain individual glyphs.
 
-`scripts/build-lesson05-pdfs.py` takes the exported content and an authoring-only Source Han Serif font; the font is not distributed separately. Vector strokes reuse the existing licensed Hanzi Writer data. `scripts/verify-lesson05.mjs` rejects missing or stale PDFs, audio and writing data. Rendering and pagination are checked in all three languages; representative pages are cross-checked with MuPDF and Poppler.
+`scripts/build-lesson05-pdfs.py` takes the exported content and an authoring-only Source Han Serif font; the font is not distributed separately. Vector strokes reuse the existing licensed Hanzi Writer data. `scripts/verify-lesson05.mjs` rejects missing or stale PDFs, audio and writing data. Rendering and pagination are checked in all four languages; representative pages are cross-checked with MuPDF and Poppler.
 
 Audio uses the existing Mandarin voice `zh-CN-XiaoxiaoNeural` at `-10%`. Exact-text clips are reused where possible. The 198 bundled word/sentence files represent 99 teaching entries; no learner data is sent to the speech service, and no speech is generated at runtime.
 
@@ -40,6 +40,6 @@ Vocabulary, independent Atlas activities, family-character recognition and cours
 
 ## Turkish
 
-Türkçe is the fourth application language. Local dictionaries cover navigation, all 1,020 existing vocabulary cards, course content, HSK3 grammar, Atlas explanations/definitions and Lesson 05. Chinese text, pinyin, Mandarin voice, target IDs and saved progress are preserved. Turkish narration for the existing voiced Atlas stories uses `tr-TR-EmelNeural`; prior EN/FR/RU and Mandarin recordings remain intact. The supplied classroom PDF pack remains available in EN/FR/RU, with each download clearly labelled.
+Türkçe is the fourth application language. Local dictionaries cover navigation, all 1,020 existing vocabulary cards, course content, HSK3 grammar, Atlas explanations/definitions and Lesson 05. Chinese text, pinyin, Mandarin voice, target IDs and saved progress are preserved. Turkish narration for the existing voiced Atlas stories uses `tr-TR-EmelNeural`; prior EN/FR/RU and Mandarin recordings remain intact. The supplied classroom PDF pack is available in EN/FR/RU/TR, with each download clearly labelled.
 
 Translation sources are `data/turkish-{ui,vocabulary,course,lesson05,extra}.json`; `scripts/verify-turkish.mjs` checks literal source coverage, Hanzi, placeholders and pinyin. Translations have automated checks and an application review, not a native-teacher certification.
