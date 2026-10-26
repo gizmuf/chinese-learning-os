@@ -1,0 +1,66 @@
+{
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "generationRate": "-10%",
+  "recordings": [
+    {
+      "text": "临",
+      "file": "char-4e34.mp3",
+      "sha256": "9632350e59e7fdc1ddc0ce4b7bf0d8e8c19181e4aaaed37d3ee6020b1ead1ca7"
+    },
+    {
+      "text": "代",
+      "file": "char-4ee3.mp3",
+      "sha256": "05b74bd6da6f7b4220bf3d043dc813f8345af86d57086ae3c32782b97be117c3"
+    },
+    {
+      "text": "光",
+      "file": "char-5149.mp3",
+      "sha256": "4730d2b722d1cc3c89df5327dc816fd2d47ad56c1efd3558df8378f6924a1e4a"
+    },
+    {
+      "text": "堂",
+      "file": "char-5802.mp3",
+      "sha256": "93c9b56e44ee82208663fbb19005175b8f074ed8e914aae20888fe187f0480df"
+    },
+    {
+      "text": "奋",
+      "file": "char-594b.mp3",
+      "sha256": "3469ef084b4d38152e7d339ef325810eb08e04b5db8aa6dc93b56030ae5a50f7"
+    },
+    {
+      "text": "既",
+      "file": "char-65e2.mp3",
+      "sha256": "1529dc66ec757f85a29b03c1a16722ec53946df3e5587ec5bf87cb56cff84a83"
+    },
+    {
+      "text": "腐",
+      "file": "char-8150.mp3",
+      "sha256": "b7d2a78d08a902de80b8cf38567d669c2560bbd1e611e31ed419533c27df96d1"
+    },
+    {
+      "text": "臭",
+      "file": "char-81ed.mp3",
+      "sha256": "d398dd082974cc08651133b573a4d86d6b0d6e89fc676e501de9978be7232d5b"
+    },
+    {
+      "text": "落",
+      "file": "char-843d.mp3",
+      "sha256": "dc17dd13aa3d31d91e0c208775d53174f5e10f2fb0cb831d9345ab398f46ef19"
+    },
+    {
+      "text": "谈",
+      "file": "char-8c08.mp3",
+      "sha256": "30ba5a84f2f474f25200a88d9c6993c28f0284913a8f827afd2dce55e01db177"
+    },
+    {
+      "text": "豆",
+      "file": "char-8c46.mp3",
+      "sha256": "97affbbc039af52ef49cdba5f92c3cdcaf15cfb9511793a0e8124c452f17e57c"
+    },
+    {
+      "text": "首",
+      "file": "char-9996.mp3",
+      "sha256": "0c22cbb61942ad4a00d12aa6d2712b6ba3ea539f96fb0ba594979527da669f3c"
+    }
+  ]
+}

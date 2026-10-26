@@ -11,6 +11,7 @@ import { exercises } from "./course-exercises";
 import { terms, sentences, topicInfo, course } from "./course-data";
 import { lesson04ActivityIds } from './lesson04-data';
 import { lesson05ActivityIds } from './lesson05-data';
+import {videoActivityIds} from './video-study-data';
 export const activityIds = [
   ...exercises.map((e) => e.id),
   ...labActivityIds,
@@ -22,7 +23,7 @@ export const activityIds = [
 export const courseEventSchema = z
   .object({
     id: z.string().uuid(),
-    lessonId: z.enum(["intensive-03", "intensive-04", "intensive-05"]),
+    lessonId: z.enum(["intensive-03", "intensive-04", "intensive-05", "video-self-introduction"]),
     activityId: z.string(),
     kind: z.enum(["answer", "study", "writing"]),
     correct: z.boolean().nullable(),
@@ -31,9 +32,10 @@ export const courseEventSchema = z
     rating: z.number().int().min(0).max(4).optional(),
   })
   .superRefine((event, ctx) => {
-    if (!(event.lessonId === 'intensive-05' ? lesson05ActivityIds : event.lessonId === 'intensive-04' ? lesson04ActivityIds : activityIds).includes(event.activityId)) ctx.addIssue({code:'custom',message:'Unknown activity for this lesson'});
+    if (!(event.lessonId === 'video-self-introduction' ? videoActivityIds : event.lessonId === 'intensive-05' ? lesson05ActivityIds : event.lessonId === 'intensive-04' ? lesson04ActivityIds : activityIds).includes(event.activityId)) ctx.addIssue({code:'custom',message:'Unknown activity for this lesson'});
     if((event.activityId.startsWith('c04-build-')||event.activityId.startsWith('c05-build-'))&&!event.assisted)ctx.addIssue({code:'custom',message:'Expression builders are supported practice'});
     if(event.activityId.startsWith("lab-family-")&&!event.assisted) ctx.addIssue({code:"custom",message:"Visible family examples require assisted practice"});
+    if(event.lessonId==='video-self-introduction'&&event.kind==='writing'&&!event.assisted)ctx.addIssue({code:'custom',message:'Video guided writing requires supported scoring'});
     const expected = event.activityId.startsWith("study:")
       ? "study"
       : event.activityId.startsWith("write:")

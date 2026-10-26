@@ -2,6 +2,7 @@
 import { useI18n } from "./i18n";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Point, Stroke } from "./learning";
+import {acceptWritingPointer} from "./writing-pointer";
 import { paintInk } from "./ink-render";
 export default function Ink({ strokes, onChange, penOnly, disabled = false }: {
   strokes: Stroke[]; onChange: (s: Stroke[]) => void; penOnly: boolean; disabled?: boolean;
@@ -9,8 +10,9 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false }: {
   const { t } = useI18n();
   const ref = useRef<HTMLCanvasElement>(null);
   const cache = useRef<HTMLCanvasElement | null>(null);
-  const active = useRef<{ id: number; points: Stroke; rect: DOMRect } | null>(null);
+  const active = useRef<{ id: number; type: string; points: Stroke; rect: DOMRect } | null>(null);
   const current = useRef(strokes);
+  const penSeen=useRef(false);
   const size = useRef({ w: 0, h: 0, dpr: 1 });
   const frame = useRef(0);
   const [touchNotice, setTouchNotice] = useState(false);
@@ -53,7 +55,7 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false }: {
     window.addEventListener("resize", rebuild);
     return () => { obs.disconnect(); window.removeEventListener("resize", rebuild); cancelAnimationFrame(frame.current); active.current = null; };
   }, [rebuild]);
-  useEffect(() => { active.current = null; schedule(); }, [disabled, penOnly, schedule]);
+  useEffect(() => { active.current = null; penSeen.current=false; schedule(); }, [disabled, penOnly, schedule]);
   function point(e: PointerEvent | React.PointerEvent, rect: DOMRect): Point {
     return { x: Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width)), y: Math.min(1, Math.max(0, (e.clientY - rect.top) / rect.height)), p: e.pointerType === "pen" ? Math.max(0, Math.min(1, e.pressure)) : .5, t: e.timeStamp };
   }
@@ -76,13 +78,16 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false }: {
   }
   return <>
     <canvas aria-label={t("Write a character here using a pencil, finger or mouse")} ref={ref} className="ink-canvas"
+      onContextMenu={e=>e.preventDefault()}
       onPointerDown={e => {
-        if (disabled || active.current || current.current.length >= 50 || (e.pointerType === "mouse" && e.button !== 0)) return;
-        if (penOnly && e.pointerType !== "pen") { setTouchNotice(true); return; }
+        if (disabled || current.current.length >= 50) return;
+        if(!acceptWritingPointer(e,penOnly,penSeen.current,active.current)){if(penOnly&&e.pointerType!=="pen")setTouchNotice(true);return;}
+        if(e.pointerType==="pen")penSeen.current=true;
+        if(active.current){const id=active.current.id;active.current=null;if(e.currentTarget.hasPointerCapture(id))e.currentTarget.releasePointerCapture(id);schedule();}
         const rect = e.currentTarget.getBoundingClientRect();
         if (!rect.width || !rect.height) return;
         setTouchNotice(false); e.preventDefault(); e.currentTarget.setPointerCapture(e.pointerId);
-        active.current = { id: e.pointerId, points: [point(e, rect)], rect }; schedule();
+        active.current = { id: e.pointerId, type:e.pointerType, points: [point(e, rect)], rect }; schedule();
       }}
       onPointerMove={e => {
         const stroke = active.current;

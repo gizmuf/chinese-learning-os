@@ -77,6 +77,17 @@ assert call('POST',a,{'events':[writing5]})[0]==200;checks.append('lesson05 hand
 legacy=call(user=a,path='/api/course-progress')[1]['events'];assert legacy and all(e['lessonId']=='intensive-03' for e in legacy);checks.append('legacy lesson03 clients exclude lesson05 events')
 assert call(user=a,path='/api/progress')[1]['events']==[];checks.append('lesson05 never enters HSK history')
 assert call('POST',a,{'events':[lesson5]},path='/api/progress')[0]==400;checks.append('HSK API rejects lesson05 events')
+video={**event,'id':str(uuid.uuid4()),'lessonId':'video-self-introduction','activityId':'video-check-q001-read'}
+for _ in range(2):
+    result=call('POST',a,{'events':[video]});assert result[0]==200,result[:2]
+assert sum(e['id']==video['id'] for e in call(user=a)[1]['events'])==1;checks.append('independent video results sync idempotently')
+assert not any(e['lessonId']=='video-self-introduction' for e in call(user=b)[1]['events']);checks.append('video material account isolation')
+listening={**video,'id':str(uuid.uuid4()),'activityId':'video-check-q001-listen'}
+assert call('POST',a,{'events':[listening]})[0]==200;checks.append('video listening has independent activity identity')
+for lesson,activity in [('intensive-05',video['activityId']),('video-self-introduction','c05-check-c05-t01-read'),('video-self-introduction','video-check-unknown-read')]:
+ assert call('POST',a,{'events':[{**video,'id':str(uuid.uuid4()),'lessonId':lesson,'activityId':activity}]})[0]==400
+checks.append('video registry rejects cross-material activities')
+assert all(e['lessonId']=='intensive-03' for e in call(user=a,path='/api/course-progress')[1]['events']);checks.append('video material preserves legacy lesson clients')
 assert call('POST',a,'x'*100001)[0]==413;checks.append('course body size bounded')
 for check in checks:print('PASS',check)
 print(f'{len(checks)} course API integration checks passed')

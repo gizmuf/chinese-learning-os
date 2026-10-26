@@ -29,3 +29,8 @@ test('The shared Atlas definition lets the learner inspect every character of a 
 test('A selected character shows its own reading and pronunciation instead of retaining the full expression',()=>{
  const html=m.definition('久');assert.match(html,/jiǔ/);assert.match(html,/a long time/);assert.match(html,/Whole word: 久/);assert.doesNotMatch(html,/好久不见/);
 });
+test('Every Lesson 5 writing character has adjacent reading and meaning, including source-backed additions',async()=>{
+ const result=await build({stdin:{contents:`import {createElement as h} from 'react';import {renderToStaticMarkup} from 'react-dom/server';import {WritingCharacterContext} from './app/writing-context';import {lesson05All} from './app/lesson05-data';export const contexts=[...new Set(lesson05All.flatMap(v=>Array.from(v.hanzi).filter(c=>/[\\u3400-\\u9fff]/u.test(c))))].map(ch=>({ch,html:renderToStaticMarkup(h(WritingCharacterContext,{character:ch}))}));`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,format:'cjs',platform:'node',write:false,loader:{'.css':'empty'},logLevel:'silent'});
+ const output={exports:{}};new Function('require','module','exports',result.outputFiles[0].text)(createRequire(import.meta.url),output,output.exports);
+ for(const {ch,html} of output.exports.contexts){assert.ok(!html.includes('Not yet in this study dictionary'),ch);assert.match(html,/class="pinyin">[^<]+<\/p>/,ch);assert.ok(!html.includes('<p></p>'),ch);}
+});

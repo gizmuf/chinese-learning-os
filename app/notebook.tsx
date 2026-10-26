@@ -1,4 +1,5 @@
 "use client";
+import WritingHelp from "./writing-help";
 import { useI18n } from "./i18n";
 import { useEffect, useRef, useState } from "react";
 import { Check, ChevronLeft, ChevronRight, RotateCcw, Undo2, Volume2 } from "lucide-react";
@@ -7,6 +8,7 @@ import type { LearningEvent, Stroke } from "./learning";
 import { readDraft, saveDraft } from "./local-store";
 import { speak } from "./audio";
 import Ink from "./ink";
+import {WritingCharacterContext} from "./writing-context";
 
 type CharacterData = { strokes: string[]; medians: number[][][] };
 type Sheet = { cells: Record<string, Stroke[]>; hidden: boolean; attemptId: string };
@@ -29,9 +31,9 @@ function Glyph({ data, through, active, direction = false }: {
   </svg>;
 }
 
-function CharacterRow({ character, position, sheet, change, penOnly, disabled }: {
+function CharacterRow({ character, position, sheet, change, penOnly, disabled, notify }: {
   character: string; position: number; sheet: Sheet;
-  change: (key: string, strokes: Stroke[]) => void; penOnly: boolean; disabled: boolean;
+  change: (key: string, strokes: Stroke[]) => void; penOnly: boolean; disabled: boolean; notify:(message:string)=>void;
 }) {
   const { t, locale } = useI18n();
   const [data, setData] = useState<CharacterData | null>(null);
@@ -64,7 +66,7 @@ function CharacterRow({ character, position, sheet, change, penOnly, disabled }:
   }
   return <section className="notebook-character" aria-label={t("Character {0} practice", [position + 1])}>
     <h3>{sheet.hidden ? t("Character {0}", [position + 1]) : character}</h3>
-    {!sheet.hidden && <>
+    {!sheet.hidden && <><WritingCharacterContext character={character} notify={notify}/>
       {data ? <>
         <div className="notebook-steps" aria-label={t("Stroke order for {0}", [character])}>
           {data.strokes.map((_, i) => <button key={i} aria-label={t("{0} stroke {1}", [character, i + 1])} aria-pressed={step === i}
@@ -135,14 +137,14 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
     <div className="notebook-header"><div><span className="eyebrow">{t("YOUR PRACTICE NOTEBOOK")}</span><h2>{item.english}</h2><p className="pinyin">{item.pinyin}</p></div>
       <label className="pencil-toggle"><input type="checkbox" checked={penOnly} onChange={e => setPenOnly(e.target.checked)} /> {t("Pencil only")}</label>
     </div>
-    <div className="notebook-actions">
+    <WritingHelp/><div className="notebook-actions">
       <button className="secondary" onClick={() => setSheet(s => ({ ...s, hidden: !s.hidden }))}>{sheet.hidden ? t("Show guides & compare") : t("Hide guides")}</button>
       {!contextAudioOnly && <button className="audio-button" onClick={() => speak(item.hanzi, notify, item)}><Volume2 size={17} /> {t("Hear word")}</button>}
       <button className="text-button" onClick={() => speak(item.sentence, notify, item)}><Volume2 size={16} /> {t("Hear example")}</button>
     </div>
     <p className="notebook-intro">{t("Follow the steps, trace twice, then write in the empty boxes. Your worksheet stays on this device; saved practice syncs with your account.")}</p>
     {!ready ? <p role="status">{t("Loading your worksheet…")}</p> : <>
-      {characters.map((character, position) => <CharacterRow key={`${position}:${character}`} {...{ character, position, sheet, change, penOnly }} disabled={saved} />)}
+      {characters.map((character, position) => <CharacterRow key={`${position}:${character}`} {...{ character, position, sheet, change, penOnly, notify }} disabled={saved} />)}
       <section className="notebook-character"><h3>{t("Write the whole word")}</h3><p>{sheet.hidden ? t("Write the characters together from memory.") : item.hanzi}</p>
         <div className="notebook-cells notebook-whole-word">{characters.map((_, i) => <div className="notebook-cell" key={i}>
           <div className="notebook-square"><Grid /><Ink strokes={sheet.cells[`word:${i}`] ?? []} onChange={s => change(`word:${i}`, s)} penOnly={penOnly} disabled={saved} /></div>
