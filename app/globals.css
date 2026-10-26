@@ -4292,3 +4292,12 @@ html[lang="ru"] .nav-item, html[lang="fr"] .nav-item { font-size: 12px; }
 .lesson-lab-activity {touch-action:pan-y;}
 .lesson-lab-swipe-hint {display:none;font-size:12px;color:var(--muted);}
 @media(hover:none),(pointer:coarse){.lesson-lab-swipe-hint {display:block;margin:-12px 0 22px;}}
+
+/* Drawing surfaces own their gestures; Safari must not select glyphs or show a callout. */
+.ink-canvas,.guided-host,.guided-host *, .notebook-square,.notebook-square * {user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:none;}
+.notebook-panel,.lesson05-guided{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+.writing-context{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:14px 18px;background:#f3f6ee;border-radius:14px;margin:16px 0;}
+.writing-context strong{font-size:44px;line-height:1.2;}
+.writing-context p{margin:3px 0;}
+.writing-context .pinyin{font-size:18px;}
+.writing-input-help{font-size:14px;color:#586d5f;line-height:1.6;}

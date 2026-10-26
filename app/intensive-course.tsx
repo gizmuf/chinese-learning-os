@@ -44,6 +44,9 @@ import { speak, stopAudio } from "./audio";
 import CourseLab from "./course-lab";
 import Lesson04 from "./lesson04";
 import Lesson05 from "./lesson05";
+import VideoStudy from "./video-study";
+import {videoStudy} from "./video-study-data";
+import {videoCopy} from "./video-study-copy";
 import {lesson05} from "./lesson05-data";
 import {lesson04} from "./lesson04-data";
 import {labExtraTerms} from "./course-lab-data";
@@ -77,6 +80,7 @@ export default function IntensiveCourse({
   const progress = useCourseProgress(owner);
   const [labWriting,setLabWriting]=useState(false);
   const [open, setOpen] = useState(false);
+  const [videoOpen,setVideoOpen]=useState(false);
   const [lessonNumber,setLessonNumber]=useState(3);
   const [tab, setTab] = useState<Tab>("overview");
   const [topic, setTopic] = useState<Topic>("time");
@@ -91,6 +95,7 @@ export default function IntensiveCourse({
     [progress.events],
   );
   useEffect(() => {
+    if(new URLSearchParams(window.location.search).get("material")==="self-introduction")setVideoOpen(true);
     if (new URLSearchParams(window.location.search).get("lesson") === "5") {setLessonNumber(5);setOpen(true);}
     if (new URLSearchParams(window.location.search).get("lesson") === "4") {setLessonNumber(4);setOpen(true);}
     if (new URLSearchParams(window.location.search).get("lesson") === "3")
@@ -177,6 +182,7 @@ export default function IntensiveCourse({
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
+  if(videoOpen)return <VideoStudy {...{owner,penOnly,setPenOnly,notify}} onBack={()=>{setVideoOpen(false);window.history.replaceState(null,"","/?course=intensive");}}/>;
   if(open&&lessonNumber===5) return <Lesson05 {...{owner,db,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"",window.location.pathname+"?course=intensive");}}/>;
   function openLesson05(){stopAudio();setLessonNumber(5);setOpen(true);window.history.replaceState(null,"",window.location.pathname+"?course=intensive&lesson=5");window.scrollTo({top:0,behavior:"instant"});}
   if(open&&lessonNumber===4) return <Lesson04 {...{owner,db,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"",window.location.pathname+"?course=intensive");}}/>;
@@ -202,6 +208,7 @@ export default function IntensiveCourse({
       </div>
       {!open ? (
         <>
+          <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">你 · 自己</div><div><span className="pill">{videoCopy[locale].independent}</span><h2>{videoStudy.title[locale]}</h2><p>{videoCopy[locale].intro}</p><button className="primary" onClick={()=>{stopAudio();setVideoOpen(true);window.history.replaceState(null,'','/?course=intensive&material=self-introduction');window.scrollTo({top:0,behavior:'instant'});}}>{videoCopy[locale].read}<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">又 · 起来 · 好</div><div><span className="pill">{t("Lesson")} 05 / 60</span><h2>{lesson05.title[locale]}</h2><p>26.10.2026</p><button className="primary" onClick={openLesson05}>{t("Lesson")} 05<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><img src="/course04/boards/9974.jpg" alt={lesson04.title[locale]}/><div><span className="pill">{t("Lesson")} 04 / 60</span><h2>{lesson04.title[locale]}</h2><p>23.10.2026</p><button className="primary" onClick={openLesson04}>{t("Lesson")} 04<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature">

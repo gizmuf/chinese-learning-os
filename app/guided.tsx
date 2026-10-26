@@ -1,6 +1,7 @@
 "use client";
 import { useI18n } from "./i18n";
 import { useEffect, useRef, useState } from "react";
+import { WritingSvgTarget } from "./writing-pointer";
 import HanziWriter, { type CharacterJson } from "hanzi-writer";
 export default function Guided({
   character,
@@ -19,6 +20,7 @@ export default function Guided({
 }) {
   const { t, locale } = useI18n();
   const host = useRef<HTMLDivElement>(null);
+  const penPreference=useRef(penOnly);penPreference.current=penOnly;
   const callbacks = useRef({ onComplete, onMistake });
   callbacks.current = { onComplete, onMistake };
   const [error, setError] = useState(false);
@@ -26,10 +28,12 @@ export default function Guided({
     const node = host.current!;
     let cancelled = false;
     let writer: HanziWriter | undefined;
+    let pointerTarget:WritingSvgTarget|undefined;
     setError(false);
     node.replaceChildren();
     const size = node.getBoundingClientRect().width;
     writer = HanziWriter.create(node, character, {
+      rendererOverride:{createRenderTarget:()=>pointerTarget=WritingSvgTarget.create(node,()=>penPreference.current,size,size)},
       width: size,
       height: size,
       padding: 28,
@@ -76,6 +80,7 @@ export default function Guided({
       cancelled = true;
       resize.disconnect();
       writer?.cancelQuiz();
+      pointerTarget?.dispose();
       node.replaceChildren();
     };
   }, [character, mode, replay]);
@@ -84,24 +89,7 @@ export default function Guided({
       <div
         className="guided-host"
         ref={host}
-        onTouchStartCapture={(e) => {
-          if (
-            penOnly &&
-            !Array.from(e.touches).some(
-              (t) =>
-                (t as Touch & { touchType?: string }).touchType === "stylus",
-            )
-          ) {
-            e.stopPropagation();
-            e.preventDefault();
-          }
-        }}
-        onPointerDownCapture={(e) => {
-          if (penOnly && e.pointerType !== "pen") {
-            e.stopPropagation();
-            e.preventDefault();
-          }
-        }}
+        onContextMenu={e=>e.preventDefault()}
       />
       {error && (
         <div className="canvas-notice">

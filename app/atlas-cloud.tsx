@@ -1,4 +1,5 @@
 "use client";
+import AtlasViewGuide from "./atlas-view-guide";
 import {withTurkish} from "./turkish";
 import {Fragment,useEffect,useMemo,useRef,useState,type CSSProperties} from 'react';
 import {ArrowLeft,ChevronRight,Cloud,Grid2X2,Info,Maximize2,Minimize2,PenLine,Search,Volume2,X} from 'lucide-react';
@@ -154,7 +155,7 @@ function CloudMap({owner,db,penOnly,setPenOnly,notify,progress,onWord}:Props){
 <section className="cloud-sentence"><div className="cloud-zone-title"><span>04</span><h2>{c('In a sentence','Dans une phrase','В предложении')}</h2></div>{sentenceContent}</section></>);
  return <section className={'cloud-lab '+(route.layout==='cloud'?'cloud-restored-layout':'cloud-context-layout')+' layout-'+route.layout+(tour!==null?' cloud-tour-active':'')} aria-label={c('Cloud Atlas','Atlas en nuages','Облачный Атлас')}>
   <header className="cloud-heading"><div><span className="cloud-eyebrow">{c('FOLLOW ONE CONNECTION','SUIVRE UN LIEN','СЛЕДУЕМ ЗА СВЯЗЬЮ')}</span><h1><Cloud size={27}/>{c('Cloud Atlas','Atlas en nuages','Облачный Атлас')}<span>。</span></h1></div><div className="cloud-header-actions"><button ref={tourLauncher} className="cloud-tour-launch" onClick={startTour}>{c('Try 人 → 你好','Essayer 人 → 你好','Пройти 人 → 你好')}</button><button onClick={()=>setAbout(!about)} aria-label={c('About this map','À propos de cette carte','Об этой карте')} aria-expanded={about}><Info size={18}/></button><button onClick={()=>setFull(!full)} aria-label={full?c('Exit expanded map','Réduire la carte','Уменьшить карту'):c('Expand map','Agrandir la carte','Развернуть карту')}>{full?<Minimize2 size={18}/>:<Maximize2 size={18}/>}</button></div></header>
-  <div className="cloud-view-switch" role="group" aria-label={c('Atlas layout','Disposition de l’Atlas','Вид Атласа')}>{(['journey','cloud','family','path','space','words','layers','constellations','matrix'] as const).map(layout=><button key={layout} aria-pressed={route.layout===layout} onClick={()=>go({layout,...(layout==='journey'&&route.level==='all'?{level:3 as const}:{})})}>{layoutName(layout)}</button>)}</div>
+  <div className="cloud-view-switch" role="group" aria-label={c('Atlas layout','Disposition de l’Atlas','Вид Атласа')}>{(['journey','cloud','family','path','space','words','layers','constellations','matrix'] as const).map(layout=><button key={layout} aria-pressed={route.layout===layout} onClick={()=>go({layout,...(layout==='journey'&&route.level==='all'?{level:3 as const}:{})})}>{layoutName(layout)}</button>)}</div><AtlasViewGuide layout={route.layout} name={layoutName(route.layout)} onChange={layout=>go({layout})}/>
   {aboutContent}
   {toolbarContent}
   {route.layout!=='space'&&route.layout!=='words'&&route.layout!=='journey'&&!isHybridLayout(route.layout)&&pathContent}
