@@ -1,0 +1,1146 @@
+{
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "generationRate": "-10%",
+  "recordings": [
+    {
+      "id": "c06-t01",
+      "text": "春天",
+      "file": "c06-t01.mp3",
+      "sha256": "39c84deba61be01f85026f65ad89098db5dcecc1ed4bf2ced5b7075af6a4751d"
+    },
+    {
+      "id": "c06-t02",
+      "text": "夏天",
+      "file": "c06-t02.mp3",
+      "sha256": "c346df09cc1ffc4ee4929b850862430d6fba1ee9989ee293a2a8a5ca3ef3b8ab"
+    },
+    {
+      "id": "c06-t03",
+      "text": "秋天",
+      "file": "c06-t03.mp3",
+      "sha256": "bd55e4cd203387cfa09295df559ac9aa6d442b347c43e941eeb6e2880578ada9"
+    },
+    {
+      "id": "c06-t04",
+      "text": "冬天",
+      "file": "c06-t04.mp3",
+      "sha256": "5c47a197e3e0c4905c0212f54e2ed2b10e439a4d43e60441c04ab284cae707db"
+    },
+    {
+      "id": "c06-t06",
+      "text": "炎热",
+      "file": "c06-t06.mp3",
+      "sha256": "a7e9c77ad6f2c5bcce988337a44731c1bc6c1f51e1a7c9872c2f181933353275"
+    },
+    {
+      "id": "c06-t07",
+      "text": "凉爽",
+      "file": "c06-t07.mp3",
+      "sha256": "51a887d627fa7179ec5448b1804e43d885f24b4c1a9bac179a1b31b0dcd5b190"
+    },
+    {
+      "id": "c06-t09",
+      "text": "冰水",
+      "file": "c06-t09.mp3",
+      "sha256": "5565d7ba3cbf343cec589a670e37b4362c2d86cb133af68c9e32bcd1885dc75e"
+    },
+    {
+      "id": "c06-t10",
+      "text": "常温水",
+      "file": "c06-t10.mp3",
+      "sha256": "2f33595edb924837b79d22333e004b0e8f5ae487b6bdc3b0e5324307eec052de"
+    },
+    {
+      "id": "c06-t08",
+      "text": "寒冷",
+      "file": "c06-t08.mp3",
+      "sha256": "3cc9f38aeeca0f605bc0a72a2b8712dee14ac298a564bb210dc66f8e73535e86"
+    },
+    {
+      "id": "c06-t11",
+      "text": "温水",
+      "file": "c06-t11.mp3",
+      "sha256": "d67f9909946c72fe4d55de6f9e3461b615b1ae30768e37e7164f422bafa01e9f"
+    },
+    {
+      "id": "c06-t05",
+      "text": "温暖",
+      "file": "c06-t05.mp3",
+      "sha256": "10408aaabdf0ea9b0b16fd8192466247a9fc1dbe31695eacf727072d0366ef90"
+    },
+    {
+      "id": "c06-t12",
+      "text": "热水",
+      "file": "c06-t12.mp3",
+      "sha256": "6cc892c4c84256a7605ed2024a44dd781b79b3706c8d723f04f63bad3edc82bf"
+    },
+    {
+      "id": "c06-t15",
+      "text": "请问",
+      "file": "c06-t15.mp3",
+      "sha256": "e5e0f0013468cd81ed3b8ca043327066349f89ed732e38647ac5fb8f0f8292f2"
+    },
+    {
+      "id": "c06-t13",
+      "text": "湿巾",
+      "file": "c06-t13.mp3",
+      "sha256": "306c0a5655582cf88d873c74e89bf84affbc10d0c3f693d9eac69d9f12c92342"
+    },
+    {
+      "id": "c06-t16",
+      "text": "请讲",
+      "file": "c06-t16.mp3",
+      "sha256": "4c83f37a1360022cdf0291463690c662b0403556141ecede0b509590c67ce5fd"
+    },
+    {
+      "id": "c06-t18",
+      "text": "起床",
+      "file": "c06-t18.mp3",
+      "sha256": "36fa41b61a1a8826c6454c642710f027054bc5a27ef4f691d27a86017c775e91"
+    },
+    {
+      "id": "c06-t19",
+      "text": "醒了",
+      "file": "c06-t19.mp3",
+      "sha256": "3d48ec3c7f472245eb188c5581a0de8157a518201ac54722ead06477c8c2b275"
+    },
+    {
+      "id": "c06-t20",
+      "text": "切",
+      "file": "c06-t20.mp3",
+      "sha256": "dfc9fdf00a23104f83a357c04637eb5f9be198af5812d33446760ef47b83a0f7"
+    },
+    {
+      "id": "c06-t14",
+      "text": "抽纸",
+      "file": "c06-t14.mp3",
+      "sha256": "1fadd7ed53765b5111e9faee06cc1cdc88a313058beb5230ccac60e7fa41bc24"
+    },
+    {
+      "id": "c06-t17",
+      "text": "起立",
+      "file": "c06-t17.mp3",
+      "sha256": "4b5ca6e54996527c9425efcfe1ea35eeddc30c6f035bb733d5322b66298c97ae"
+    },
+    {
+      "id": "c06-t22",
+      "text": "家乡",
+      "file": "c06-t22.mp3",
+      "sha256": "554dd44fddd77bf0ff2704cca2f4bf0e43457b23c1266ea9fdb40e9097f5c838"
+    },
+    {
+      "id": "c06-t21",
+      "text": "够了",
+      "file": "c06-t21.mp3",
+      "sha256": "42dc2cb2533cdb6abb19db930ee9f46e74f555a7e590379b6a65c7383d295e02"
+    },
+    {
+      "id": "c06-t25",
+      "text": "还是",
+      "file": "c06-t25.mp3",
+      "sha256": "ff772efafe7b9af359de7dc8c1b4208edba51c519c223980b59ca785ccb3f2ea"
+    },
+    {
+      "id": "c06-t26",
+      "text": "里面",
+      "file": "c06-t26.mp3",
+      "sha256": "9f26560973868fd3be30d0c495c1a588772f08123c54f844d15a7663c2d87fbf"
+    },
+    {
+      "id": "c06-t27",
+      "text": "外面",
+      "file": "c06-t27.mp3",
+      "sha256": "362c27fec4b3937f86f919971c62fe472d53ad4278445de365bf43d8a263933c"
+    },
+    {
+      "id": "c06-t28",
+      "text": "中间",
+      "file": "c06-t28.mp3",
+      "sha256": "b517871699f43b9e939268a56c695ad676979fc857cb0aaa01fbb562653e5e85"
+    },
+    {
+      "id": "c06-t23",
+      "text": "租房",
+      "file": "c06-t23.mp3",
+      "sha256": "793e78ed981eadcd386e96bd8ab3aba07fbe1b40b3e2dec493f7e7b03d9d3ea6"
+    },
+    {
+      "id": "c06-t24",
+      "text": "冰淇淋",
+      "file": "c06-t24.mp3",
+      "sha256": "23613fb120247b735b548baac08ac36fd5746d8b731c2bcfe15eb2293a939813"
+    },
+    {
+      "id": "c06-t30",
+      "text": "南边",
+      "file": "c06-t30.mp3",
+      "sha256": "43a19dabe6c6b55282d7fd7116a61ebeaafd0674acb250cd768436fa3db72d39"
+    },
+    {
+      "id": "c06-t31",
+      "text": "东边",
+      "file": "c06-t31.mp3",
+      "sha256": "2975017be67e1beb8d613ea6accafe362752f2254a25edb968e8f53de4416f70"
+    },
+    {
+      "id": "c06-t33",
+      "text": "西北",
+      "file": "c06-t33.mp3",
+      "sha256": "b3e87f69540243a45d451e277b17e7661b39624fdd7ca54f900c48f247c9bf67"
+    },
+    {
+      "id": "c06-t34",
+      "text": "东南",
+      "file": "c06-t34.mp3",
+      "sha256": "3edf05935d1032e3b7419d8670ac757f4f608ee51e364cbbc114145a1ff9eaee"
+    },
+    {
+      "id": "c06-t35",
+      "text": "一点儿",
+      "file": "c06-t35.mp3",
+      "sha256": "71d777979906fd20cef904c85be5d659cbdcda96cb5d8ae1c8dd0359e915461c"
+    },
+    {
+      "id": "c06-t36",
+      "text": "一些",
+      "file": "c06-t36.mp3",
+      "sha256": "a1b24a387c53504048f150a086772636606ab3b1c1f193df8bb6d9d0a7dd43e6"
+    },
+    {
+      "id": "c06-t37",
+      "text": "有点儿",
+      "file": "c06-t37.mp3",
+      "sha256": "9c39401844a3ff74db878cd1272a4b09d2a468676d0a3ea4e5461995320fc9c6"
+    },
+    {
+      "id": "c06-t38",
+      "text": "很多",
+      "file": "c06-t38.mp3",
+      "sha256": "d3620972174dc49b5f6fb46dec0e1957952ff9d3392cd900d6594fa06a5310c7"
+    },
+    {
+      "id": "c06-t32",
+      "text": "西边",
+      "file": "c06-t32.mp3",
+      "sha256": "27420547b7add71a12c7988d1e3790ba393e0d392b7c3cac1d08364de9d14763"
+    },
+    {
+      "id": "c06-t29",
+      "text": "北边",
+      "file": "c06-t29.mp3",
+      "sha256": "e341023ffda082422118bdf6dbb217c7d99b8f25992547e71f7e20c9b094968d"
+    },
+    {
+      "id": "c06-t39",
+      "text": "一把钥匙",
+      "file": "c06-t39.mp3",
+      "sha256": "dcf45bd6806c8e7566029e266e07f3f932ff5f39f2e862fe41d4512c54099559"
+    },
+    {
+      "id": "c06-t42",
+      "text": "给",
+      "file": "c06-t42.mp3",
+      "sha256": "83c3b61cb332d1c2c461bad96cba4987111193b190f2d35472ba5d29421d633f"
+    },
+    {
+      "id": "c06-t43",
+      "text": "能",
+      "file": "c06-t43.mp3",
+      "sha256": "d8133e24e9520d1c692054aec647afc5473d6aa44de9aac753c1bfd4d2b280b3"
+    },
+    {
+      "id": "c06-t40",
+      "text": "一本书",
+      "file": "c06-t40.mp3",
+      "sha256": "df88c06e595e7c8550c1716ef95351e766aceb60481ed1d6d05b74b08ed6745c"
+    },
+    {
+      "id": "c06-t45",
+      "text": "不太难",
+      "file": "c06-t45.mp3",
+      "sha256": "ef10581dd9d288e7943fd1581c07cd55e4986a6b566899fa22f1140547f5045c"
+    },
+    {
+      "id": "c06-t41",
+      "text": "两辆汽车",
+      "file": "c06-t41.mp3",
+      "sha256": "717fdfaa26511d7fe06c8bde951d63594cb52c45c4cb9f0da22ed397ef10f762"
+    },
+    {
+      "id": "c06-t46",
+      "text": "有点儿难",
+      "file": "c06-t46.mp3",
+      "sha256": "daf54f7ef1427baef47462eeb232a53f801b6ccd0a217bf4b78f546091c87c9b"
+    },
+    {
+      "id": "c06-t47",
+      "text": "很难",
+      "file": "c06-t47.mp3",
+      "sha256": "febcabb4485e6bb46016e5ebcc253de2a034e35443de6176dfd297c330baeb3b"
+    },
+    {
+      "id": "c06-t48",
+      "text": "太难了",
+      "file": "c06-t48.mp3",
+      "sha256": "90a59adc23bd170421eaa006812a2925ac7ac6aea13e33e989198d2d8744071a"
+    },
+    {
+      "id": "c06-t49",
+      "text": "难极了",
+      "file": "c06-t49.mp3",
+      "sha256": "f843674514008d615f35a4212a6fd34bfa2707c695ecef27c81ba346c5e5331a"
+    },
+    {
+      "id": "c06-t44",
+      "text": "不难",
+      "file": "c06-t44.mp3",
+      "sha256": "54c7b3a5c7aef3c11b95c7305d502ddfb6df5560b11745d23f57105082afb3b7"
+    },
+    {
+      "id": "c06-t52",
+      "text": "但是",
+      "file": "c06-t52.mp3",
+      "sha256": "f7b2c286dddd1405aad9caf03ffd7577bfcb9b2c62e40297502f2a5201fb1b82"
+    },
+    {
+      "id": "c06-t53",
+      "text": "看起来",
+      "file": "c06-t53.mp3",
+      "sha256": "d005caa24ba46e19dbfad992423bf1d0b909167362196cba2be072d04485fc82"
+    },
+    {
+      "id": "c06-t54",
+      "text": "累",
+      "file": "c06-t54.mp3",
+      "sha256": "7cc5a038003dac1a29b4c57b7c5eed4575a8563abeebe359932dded276812534"
+    },
+    {
+      "id": "c06-t51",
+      "text": "很有意思",
+      "file": "c06-t51.mp3",
+      "sha256": "e88ae0b36352dd73b160cbb8a7dcf8997f7f6d5aef2e2c76e7ba29c5d20870db"
+    },
+    {
+      "id": "c06-t56",
+      "text": "介绍",
+      "file": "c06-t56.mp3",
+      "sha256": "d6a04f4fd60ef1728fe388637109a8645143ee5a09fb038b35e11e70149e9dd7"
+    },
+    {
+      "id": "c06-t57",
+      "text": "自己",
+      "file": "c06-t57.mp3",
+      "sha256": "50f1fa3a06ca27e9ccaabf8accbda240f2862e0f6698f72327c77a76d3e3af61"
+    },
+    {
+      "id": "c06-t58",
+      "text": "先",
+      "file": "c06-t58.mp3",
+      "sha256": "de6192f2ddf62045a0900b8c149b6905bd509518fbbc043c248f680563c8dc5d"
+    },
+    {
+      "id": "c06-t59",
+      "text": "开始",
+      "file": "c06-t59.mp3",
+      "sha256": "3c86ec87a12b789b09b49bbe1e3332fbf981d4a3dbe9422dfa5605c899f0d2f4"
+    },
+    {
+      "id": "c06-t50",
+      "text": "非常难",
+      "file": "c06-t50.mp3",
+      "sha256": "d1c7abe7a27a64a728d30508baf93ffe114f86ccbab6298dde4d7cfa405ea532"
+    },
+    {
+      "id": "c06-t55",
+      "text": "困",
+      "file": "c06-t55.mp3",
+      "sha256": "a35acdfd3d7ef93be126f8f5989f7fe051df0045ee0fdb0137467e2c083791b9"
+    },
+    {
+      "id": "c06-t60",
+      "text": "要不",
+      "file": "c06-t60.mp3",
+      "sha256": "a4b295528dc7ae3dbbeacdcecb929d7309f5cbd9082d3618cb3d43ef42db830d"
+    },
+    {
+      "id": "c06-s-spring",
+      "text": "春天很温暖。",
+      "file": "c06-s-spring.mp3",
+      "sha256": "ce9afe7a0fc53060f52911135359e30ebf46a0e23fbfb770540c69cf2cbf6017"
+    },
+    {
+      "id": "c06-s-waterchoice",
+      "text": "你想要温水还是冰水？",
+      "file": "c06-s-waterchoice.mp3",
+      "sha256": "bacc41b7f7ceca866297bd4b92646c6f84d5adca7e13831b43c01c451adf92be"
+    },
+    {
+      "id": "c06-s-living",
+      "text": "你住在学校里面还是学校外面？",
+      "file": "c06-s-living.mp3",
+      "sha256": "3e48c70622e06f97d8523dfd45d01c4e98b58de47518c6287113d70bce5fd75b"
+    },
+    {
+      "id": "c06-s-coffee",
+      "text": "你喝咖啡还是茶？",
+      "file": "c06-s-coffee.mp3",
+      "sha256": "8c439315c09c357bd8fa0c3ed44283efffe65ccb2c655a3fc295bf16f2f21e7f"
+    },
+    {
+      "id": "c06-s-home",
+      "text": "你的家乡冷吗？",
+      "file": "c06-s-home.mp3",
+      "sha256": "7862889aa6b4f86318608a593ce287089378b01b7fc584786240df9d77ff202c"
+    },
+    {
+      "id": "c06-s-money",
+      "text": "我能给你一些钱。",
+      "file": "c06-s-money.mp3",
+      "sha256": "ee1dc7a171ee1a98ad5bf3f6001a71b43269c5bf4f6c5491ff896bcd0ffdd56f"
+    },
+    {
+      "id": "c06-s-today",
+      "text": "你今天看起来有点儿累。",
+      "file": "c06-s-today.mp3",
+      "sha256": "1c017ce961d53f9132dc08bea77cb5ef696545926f85f93202009811ba0a0e4a"
+    },
+    {
+      "id": "c06-s-water",
+      "text": "你能给我一点儿水吗？",
+      "file": "c06-s-water.mp3",
+      "sha256": "5a17486553225c0f465520ad0175bbc6f0fb216d74c095c1522d0cf0abb3bf19"
+    },
+    {
+      "id": "c06-s-hard",
+      "text": "汉语有点儿难。",
+      "file": "c06-s-hard.mp3",
+      "sha256": "ad8e9424c1cb51f676be73c311345627ee6177971562d3274a77514509bb87a3"
+    },
+    {
+      "id": "c06-s-interesting",
+      "text": "汉语不太难，但是很有意思。",
+      "file": "c06-s-interesting.mp3",
+      "sha256": "1ba42213575f92a51a4e3dc2e81cfb45c3e208372236116ee276b11c30980cd6"
+    },
+    {
+      "id": "c06-s-sleepy",
+      "text": "我今天有点儿困。",
+      "file": "c06-s-sleepy.mp3",
+      "sha256": "0f2437a9505ce7da28bf32e053c3fbdd2a49eb516d9ed8d6e0e7ad53c37ae29a"
+    },
+    {
+      "id": "c06-s-difficult",
+      "text": "汉语很难，但是很有意思。",
+      "file": "c06-s-difficult.mp3",
+      "sha256": "a2b1b5fa71bd8a8afa1cac4558ffb501bc34c3f929bb6afba2ded3af4030d780"
+    },
+    {
+      "id": "c06-dialogue-1",
+      "text": "请介绍一下你自己。",
+      "file": "c06-dialogue-1.mp3",
+      "sha256": "12dcc4806d57b0e276fecf0a54f9f87d8b583e4b4f58e383c15301dc956d6c4c"
+    },
+    {
+      "id": "c06-s-wake",
+      "text": "我醒了。",
+      "file": "c06-s-wake.mp3",
+      "sha256": "97371c8ce2e326526fc8f768d5abf54b6bd58d479b2b6bd7bca6a2b32dadadbf"
+    },
+    {
+      "id": "c06-s-hot",
+      "text": "今天有点儿热。",
+      "file": "c06-s-hot.mp3",
+      "sha256": "426f0260cf02d393b239ba1a657bfb9f5dcb731d72a619304986e5435eb6fc4e"
+    },
+    {
+      "id": "c06-dialogue-2",
+      "text": "听起来太好了。那么谁先开始？",
+      "file": "c06-dialogue-2.mp3",
+      "sha256": "a98d36df269253f857b9d40d724b0cdfc210f0a12d5c961b9a235fe9ca7935b2"
+    },
+    {
+      "id": "char-4e00",
+      "text": "一",
+      "file": "char-4e00.mp3",
+      "sha256": "3a3841e33e0388b65fe1b2e59e4ec2f05fdabcfeb15086e7e4127354b7c1dc9e"
+    },
+    {
+      "id": "char-4e0b",
+      "text": "下",
+      "file": "char-4e0b.mp3",
+      "sha256": "f6ac37502be6232b4ce04c559b0f489005d00ae75cae14db03f1cf44c0a2bf88"
+    },
+    {
+      "id": "char-4e0d",
+      "text": "不",
+      "file": "char-4e0d.mp3",
+      "sha256": "15c47418467d0112d1760db37fb07af2c06e7ca72e3e65017919bdb2bdc18689"
+    },
+    {
+      "id": "char-4e1c",
+      "text": "东",
+      "file": "char-4e1c.mp3",
+      "sha256": "6832ce7dbe6d951b62a013ca612829a98a2a43285a2d3c409cd5b810f1ce4b22"
+    },
+    {
+      "id": "char-4e24",
+      "text": "两",
+      "file": "char-4e24.mp3",
+      "sha256": "5acabbd3a1707c36cbe78669c301132d28f6f47f552d161ed72d4a30553b6184"
+    },
+    {
+      "id": "char-4e2d",
+      "text": "中",
+      "file": "char-4e2d.mp3",
+      "sha256": "8c48c197c0af0807988ec059794d9c48c79ee1b750a4d2307ed3d2d15c789582"
+    },
+    {
+      "id": "char-4e48",
+      "text": "么",
+      "file": "char-4e48.mp3",
+      "sha256": "f3c1224e072a8812635d47763a723ecee54aefa2814062844ceaf6d30691a4d2"
+    },
+    {
+      "id": "c06-dialogue-3",
+      "text": "你还是我？",
+      "file": "c06-dialogue-3.mp3",
+      "sha256": "09d9edbae8a9c108fe2f09e7b3ca540e36fa32ee6411439629ec6baa5625eca1"
+    },
+    {
+      "id": "char-4e66",
+      "text": "书",
+      "file": "char-4e66.mp3",
+      "sha256": "994ff681f7d360e5337e58c28d815ae7fe9d305184768e5f1befb3041c38b771"
+    },
+    {
+      "id": "char-4e86",
+      "text": "了",
+      "file": "char-4e86.mp3",
+      "sha256": "2a6662bae6bdc7635711f67bf17d08541b28072c2b835bca13a931a4cddc383e"
+    },
+    {
+      "id": "char-4e9b",
+      "text": "些",
+      "file": "char-4e9b.mp3",
+      "sha256": "324323e7267155e7cc5ab4de22d2cbd944c39f41f39c02cea8886cfa8e66655d"
+    },
+    {
+      "id": "char-4eca",
+      "text": "今",
+      "file": "char-4eca.mp3",
+      "sha256": "6d6ec2620b119bebfbbfc82d247abe7f770de4533d3c30735d2cdc1bc1d9b130"
+    },
+    {
+      "id": "char-4ecb",
+      "text": "介",
+      "file": "char-4ecb.mp3",
+      "sha256": "19851bb2eaa7063d3b3d56eeb0a3cca5880c8950d2115a116577f1f0c6579022"
+    },
+    {
+      "id": "char-4f46",
+      "text": "但",
+      "file": "char-4f46.mp3",
+      "sha256": "13a596b8b77116732673bbcbe33fae79e909bc8916998932e822f3202bfc8357"
+    },
+    {
+      "id": "char-4f4f",
+      "text": "住",
+      "file": "char-4f4f.mp3",
+      "sha256": "676c113c5256a7f6f6e76b86bf39be979ea3fb79e044910130f40f09d0c90133"
+    },
+    {
+      "id": "char-4f60",
+      "text": "你",
+      "file": "char-4f60.mp3",
+      "sha256": "541bb788548e7ae0a828d8a57a3b693dde2c6d704145ae9d606f768ab32edb16"
+    },
+    {
+      "id": "char-4e61",
+      "text": "乡",
+      "file": "char-4e61.mp3",
+      "sha256": "4c0251122706cb00a710c9c9e7c10ef9eb9378528ad7e15f2bff747e8400819c"
+    },
+    {
+      "id": "char-5148",
+      "text": "先",
+      "file": "char-5148.mp3",
+      "sha256": "de6192f2ddf62045a0900b8c149b6905bd509518fbbc043c248f680563c8dc5d"
+    },
+    {
+      "id": "char-513f",
+      "text": "儿",
+      "file": "char-513f.mp3",
+      "sha256": "cd157b3ebe6bf200ddb15c1a8eefe925438b7835a212143e39c8919c5d5b8ef8"
+    },
+    {
+      "id": "char-51b0",
+      "text": "冰",
+      "file": "char-51b0.mp3",
+      "sha256": "f1cb37e7224648b45cd809a3ca73b495f89b0a99df8d48b0c8621ac6e3200687"
+    },
+    {
+      "id": "char-51b7",
+      "text": "冷",
+      "file": "char-51b7.mp3",
+      "sha256": "357fa82b4f9866478f5d47a4d5e29035346ba988375b6df6f9d9ee73567f81e3"
+    },
+    {
+      "id": "char-51c9",
+      "text": "凉",
+      "file": "char-51c9.mp3",
+      "sha256": "f1c91fad9938a8778774e697ec8cbc4fd6252dce6448b9c3f7f1697113b4d3b2"
+    },
+    {
+      "id": "char-5207",
+      "text": "切",
+      "file": "char-5207.mp3",
+      "sha256": "dfc9fdf00a23104f83a357c04637eb5f9be198af5812d33446760ef47b83a0f7"
+    },
+    {
+      "id": "char-5317",
+      "text": "北",
+      "file": "char-5317.mp3",
+      "sha256": "155ee13916e6636d2a4db805bb7e9c17e4d5572a50332d33157d9b2404f9ab6b"
+    },
+    {
+      "id": "char-51ac",
+      "text": "冬",
+      "file": "char-51ac.mp3",
+      "sha256": "653eb7ce5f8d6a722f61ec1e478243889fca88f7a2cd3e290b2dc49c4e1e04dc"
+    },
+    {
+      "id": "char-5357",
+      "text": "南",
+      "file": "char-5357.mp3",
+      "sha256": "4e8d8ff79c3045afb2e32813ef148893c82cc74db66457d14d4b3bffb94c480b"
+    },
+    {
+      "id": "char-5417",
+      "text": "吗",
+      "file": "char-5417.mp3",
+      "sha256": "c00d9b5c6dd92315a1cdf7f597c9c8f9d375290ecd460daad930370610056dac"
+    },
+    {
+      "id": "char-5427",
+      "text": "吧",
+      "file": "char-5427.mp3",
+      "sha256": "1243c17654d973236ea30b66e6b7cb86ea43be0e686dd82a7e8e713cabaacae5"
+    },
+    {
+      "id": "char-542c",
+      "text": "听",
+      "file": "char-542c.mp3",
+      "sha256": "e48474e545cb957e1dc486d972236edfdfabacd3d2120613d062b3d9b370c360"
+    },
+    {
+      "id": "char-5319",
+      "text": "匙",
+      "file": "char-5319.mp3",
+      "sha256": "c87a7dbed161da2f2ccd713387f52b6a5b5e8915d3508dce6096561008a386b8"
+    },
+    {
+      "id": "c06-dialogue-4",
+      "text": "要不你先开始吧，小明？",
+      "file": "c06-dialogue-4.mp3",
+      "sha256": "84d2c126740a820eb49c392c0e663126d35cb93d6e349f10e7b428f3bc9b868a"
+    },
+    {
+      "id": "char-559d",
+      "text": "喝",
+      "file": "char-559d.mp3",
+      "sha256": "1c1b94af762e4f84d2163ff063339f804b6ba2a2d08b7a9643c0cfaaa2876e7e"
+    },
+    {
+      "id": "char-56f0",
+      "text": "困",
+      "file": "char-56f0.mp3",
+      "sha256": "a35acdfd3d7ef93be126f8f5989f7fe051df0045ee0fdb0137467e2c083791b9"
+    },
+    {
+      "id": "char-5728",
+      "text": "在",
+      "file": "char-5728.mp3",
+      "sha256": "1c53df1860e89251106b671810997af71059cb57e684b710dcce80b59bf9381d"
+    },
+    {
+      "id": "char-5496",
+      "text": "咖",
+      "file": "char-5496.mp3",
+      "sha256": "7869bb65936e0a6cb077b6c65e744df49075f3cbd84faa1021fee5b93ab5a608"
+    },
+    {
+      "id": "char-5916",
+      "text": "外",
+      "file": "char-5916.mp3",
+      "sha256": "cbbc576bcdf98a5f6e45b6a803a4c03c598bdba94f70b0bdb55136c4942a7712"
+    },
+    {
+      "id": "char-591a",
+      "text": "多",
+      "file": "char-591a.mp3",
+      "sha256": "7ca5567c05245362e30a22af59309011eac5581ec136c030f2e006815e3915ed"
+    },
+    {
+      "id": "char-590f",
+      "text": "夏",
+      "file": "char-590f.mp3",
+      "sha256": "a9c744489e00c40f4211c251ea378507cb3d2e5168b7cbc9efc4091c36d502b2"
+    },
+    {
+      "id": "char-5929",
+      "text": "天",
+      "file": "char-5929.mp3",
+      "sha256": "09493b661faaace3b5c3f7cae95d2853aba68a21f81d7820a9ce1b0e503e5664"
+    },
+    {
+      "id": "char-592a",
+      "text": "太",
+      "file": "char-592a.mp3",
+      "sha256": "a2c1088d8e87dc9de4863913f986923a39a1e4ad2a0f26481fc34c4be8f37175"
+    },
+    {
+      "id": "char-597d",
+      "text": "好",
+      "file": "char-597d.mp3",
+      "sha256": "2052b0b04a4f0a997924084f90234badca9e4d10950c95c13816ce08daf319ed"
+    },
+    {
+      "id": "char-59cb",
+      "text": "始",
+      "file": "char-59cb.mp3",
+      "sha256": "e01e6f1df1d559aa4e86e2e6165c5b507f78482c4b65079ae06b68bfd3ab5760"
+    },
+    {
+      "id": "char-5b66",
+      "text": "学",
+      "file": "char-5b66.mp3",
+      "sha256": "e5f09368619e2aa1751f6bfb2f17b88897565f9ff44ec0b8cfb6ffc8afe1a4e2"
+    },
+    {
+      "id": "char-5bb6",
+      "text": "家",
+      "file": "char-5bb6.mp3",
+      "sha256": "d1e48f2af730d001962dad035c14099876bae14330ea37ceea04eb89780c9206"
+    },
+    {
+      "id": "char-591f",
+      "text": "够",
+      "file": "char-591f.mp3",
+      "sha256": "57193367c546f89a2cefca8a0b10fc128dd9971543b8386a9b90bdf0cd7b8d6f"
+    },
+    {
+      "id": "char-5c0f",
+      "text": "小",
+      "file": "char-5c0f.mp3",
+      "sha256": "9b6589f3bc28c6e9929df80882666541a0f0c33d05524a289a500ce5eb294647"
+    },
+    {
+      "id": "char-5df1",
+      "text": "己",
+      "file": "char-5df1.mp3",
+      "sha256": "d9ea700ec2f519a50271f60687e91d96bbebae23e892b68c5db7e5b7d505fe46"
+    },
+    {
+      "id": "char-5bd2",
+      "text": "寒",
+      "file": "char-5bd2.mp3",
+      "sha256": "de5614a02aed455fb1a1ef94e068b031bd027b35ccea48e89b006f0373d0085c"
+    },
+    {
+      "id": "char-5e38",
+      "text": "常",
+      "file": "char-5e38.mp3",
+      "sha256": "b901d2e62c6c7d7028fd6debd8773ce339a0c14fe68b03abc2b905f5d2eb24c4"
+    },
+    {
+      "id": "char-5e8a",
+      "text": "床",
+      "file": "char-5e8a.mp3",
+      "sha256": "314a03631a95db750d0618639e1e53a2d87493bfd6e0df6af82de9680c669860"
+    },
+    {
+      "id": "char-5f00",
+      "text": "开",
+      "file": "char-5f00.mp3",
+      "sha256": "bc4c5ddf404b30368ebd57054c06a9bcac7b2413752ea198ef947e435adbac2e"
+    },
+    {
+      "id": "char-5f88",
+      "text": "很",
+      "file": "char-5f88.mp3",
+      "sha256": "2b05dedfa4bbf8c8f454766c10856136865c1fb0cf44b3dda06666f5a7d9fbd3"
+    },
+    {
+      "id": "char-601d",
+      "text": "思",
+      "file": "char-601d.mp3",
+      "sha256": "c4debb97f2ab1e8036985cc19d0fa929f4d9fe5cc60edeb0e86f7b87586796b3"
+    },
+    {
+      "id": "char-60f3",
+      "text": "想",
+      "file": "char-60f3.mp3",
+      "sha256": "c67ec0676c1f2ae61405ba34cec936f46f1d3edc0fa5a1dcd137822b8226b905"
+    },
+    {
+      "id": "char-610f",
+      "text": "意",
+      "file": "char-610f.mp3",
+      "sha256": "ebd387ee00c31743f930063e8f21307ea2b70f16686737b6fcb0f3e0d72522b4"
+    },
+    {
+      "id": "char-6211",
+      "text": "我",
+      "file": "char-6211.mp3",
+      "sha256": "9af66368d6f5fd7ec00cc2d9b8c62917dd113630088ed37a043b371b2df97e68"
+    },
+    {
+      "id": "char-623f",
+      "text": "房",
+      "file": "char-623f.mp3",
+      "sha256": "8a48b4d7c4331de1ba560e1b6dc2aeb7515e0f95630f84be6a08b338a97068c3"
+    },
+    {
+      "id": "char-628a",
+      "text": "把",
+      "file": "char-628a.mp3",
+      "sha256": "ae8efe780f34141f6eef3aa31adb366def32400554efd68a4dbbb1f4e0ce5e45"
+    },
+    {
+      "id": "char-5561",
+      "text": "啡",
+      "file": "char-5561.mp3",
+      "sha256": "25fd445203b2265bf8a0364b73d585dd39b8b96dc75af40d66242c032aada3d3"
+    },
+    {
+      "id": "char-660e",
+      "text": "明",
+      "file": "char-660e.mp3",
+      "sha256": "44545eb71024abca8fc9e0a730dd28a7eb95523925f621950ce27fa081aee591"
+    },
+    {
+      "id": "char-62bd",
+      "text": "抽",
+      "file": "char-62bd.mp3",
+      "sha256": "62a24af84df65b8bbc2b477267bc627aac527fd09f6e14eaf20424a975a7123c"
+    },
+    {
+      "id": "char-662f",
+      "text": "是",
+      "file": "char-662f.mp3",
+      "sha256": "4ce14f174a28e632ec16f4ede3d799c196fc9e5b46bd9334444c089689c193a0"
+    },
+    {
+      "id": "char-5dfe",
+      "text": "巾",
+      "file": "char-5dfe.mp3",
+      "sha256": "ee4bd139275009564da5078468b378e1d8f65a3e7433706af0401783bfb504b9"
+    },
+    {
+      "id": "char-6709",
+      "text": "有",
+      "file": "char-6709.mp3",
+      "sha256": "8258b09a4d71128b39a1e3b11905b406f655d40d7792b9cc7349a1272df178e6"
+    },
+    {
+      "id": "char-672c",
+      "text": "本",
+      "file": "char-672c.mp3",
+      "sha256": "f9cb4730f1158bfdaa161d7fca3dd9575347857d9c24d7eda22e1f39b756229a"
+    },
+    {
+      "id": "char-6765",
+      "text": "来",
+      "file": "char-6765.mp3",
+      "sha256": "b51614c30c78f5d90f98b0aee6fa4375ebad0a23546666bfd90091c47938c801"
+    },
+    {
+      "id": "char-6781",
+      "text": "极",
+      "file": "char-6781.mp3",
+      "sha256": "48643c6ece0d1e88b12dabd54c7366965ab282d0e59f5eccfd5f7e8a1bd16c2e"
+    },
+    {
+      "id": "char-6625",
+      "text": "春",
+      "file": "char-6625.mp3",
+      "sha256": "cc53c91c507872d27b996893d618bc77bfd3b269deb6d3e645411b49790611f2"
+    },
+    {
+      "id": "char-6c34",
+      "text": "水",
+      "file": "char-6c34.mp3",
+      "sha256": "f1f7b75774462bb8dfb7813f8eabb6d8578f763d67ff074d99ed145275d9cb18"
+    },
+    {
+      "id": "char-6696",
+      "text": "暖",
+      "file": "char-6696.mp3",
+      "sha256": "6024a79f42bc7c80ce0bf606db84bd5fc9c88b193f3674516a16edda8218677c"
+    },
+    {
+      "id": "char-6c49",
+      "text": "汉",
+      "file": "char-6c49.mp3",
+      "sha256": "eb99aee531e5d242f072fae6444f2f294dbec03ebac44e9ab15f7b82aa99eae8"
+    },
+    {
+      "id": "char-6821",
+      "text": "校",
+      "file": "char-6821.mp3",
+      "sha256": "5a7cf8c1c5e978aaea359064ac5614c9497e9ba7f000438657d6a7a82004bd1e"
+    },
+    {
+      "id": "char-6dcb",
+      "text": "淋",
+      "file": "char-6dcb.mp3",
+      "sha256": "e3d709d212827563f73dcfa972f77e3f172c0e0f85bb02bc516b0ccd16cd5d10"
+    },
+    {
+      "id": "char-6dc7",
+      "text": "淇",
+      "file": "char-6dc7.mp3",
+      "sha256": "6f44df171664b047e07c89741cc3d19244f0c778e0f0c2e7decb36a0491378a6"
+    },
+    {
+      "id": "char-6e29",
+      "text": "温",
+      "file": "char-6e29.mp3",
+      "sha256": "4975820b0eade2f9e89b2f9268b2605007345024a7bfc0200a09440c0691a616"
+    },
+    {
+      "id": "char-6c7d",
+      "text": "汽",
+      "file": "char-6c7d.mp3",
+      "sha256": "836564b2c28b17758172d80b362997d11a6be83596da287aea80fea26ab9a116"
+    },
+    {
+      "id": "char-70b9",
+      "text": "点",
+      "file": "char-70b9.mp3",
+      "sha256": "580306b1e3985c3ef60d2903c173aefb47704bc6aa5fb7f1ef5f5cf01af1b8a9"
+    },
+    {
+      "id": "char-70ed",
+      "text": "热",
+      "file": "char-70ed.mp3",
+      "sha256": "dfe36a41c8331693e6db7012996b9e0f022e091fc4fdd6ddca46be88b29f1a46"
+    },
+    {
+      "id": "char-708e",
+      "text": "炎",
+      "file": "char-708e.mp3",
+      "sha256": "f7f67ec708159d2d63b2d547c63f92dbd724abfaf27827acd63faa043ca24d94"
+    },
+    {
+      "id": "char-7684",
+      "text": "的",
+      "file": "char-7684.mp3",
+      "sha256": "89a975d9ee9f4d8a6b04f873359735c78f2103a7b5e45527a10b0bdc820301ff"
+    },
+    {
+      "id": "char-770b",
+      "text": "看",
+      "file": "char-770b.mp3",
+      "sha256": "ddd91a620261ba7babf72074d1731576b14f7fcdcfda95e26d44d20da772d72e"
+    },
+    {
+      "id": "char-723d",
+      "text": "爽",
+      "file": "char-723d.mp3",
+      "sha256": "3ab53981b1b76006300aeca9ba2ddf99d524a889e450c04a80be8de511d28c83"
+    },
+    {
+      "id": "char-6e7f",
+      "text": "湿",
+      "file": "char-6e7f.mp3",
+      "sha256": "f8f47a98a697b19dd3376d5ad4be00f81fd0b065e8714c2c150b950f92c30c78"
+    },
+    {
+      "id": "char-7acb",
+      "text": "立",
+      "file": "char-7acb.mp3",
+      "sha256": "db84017e41946364bde39587d28fdd25b73e2e99fee5c6c8f9e5280f19ba235f"
+    },
+    {
+      "id": "char-7d2f",
+      "text": "累",
+      "file": "char-7d2f.mp3",
+      "sha256": "7cc5a038003dac1a29b4c57b7c5eed4575a8563abeebe359932dded276812534"
+    },
+    {
+      "id": "char-7eb8",
+      "text": "纸",
+      "file": "char-7eb8.mp3",
+      "sha256": "ef93b538e7708deb294feb76e5f9a776bbc74afab3260723909361e171d54572"
+    },
+    {
+      "id": "char-7ecd",
+      "text": "绍",
+      "file": "char-7ecd.mp3",
+      "sha256": "edaaf0e7a5ef0f78186c38c961cef88805c5d33e0c28df46281aee0f3f5a1b37"
+    },
+    {
+      "id": "char-7ed9",
+      "text": "给",
+      "file": "char-7ed9.mp3",
+      "sha256": "83c3b61cb332d1c2c461bad96cba4987111193b190f2d35472ba5d29421d633f"
+    },
+    {
+      "id": "char-80fd",
+      "text": "能",
+      "file": "char-80fd.mp3",
+      "sha256": "d8133e24e9520d1c692054aec647afc5473d6aa44de9aac753c1bfd4d2b280b3"
+    },
+    {
+      "id": "char-81ea",
+      "text": "自",
+      "file": "char-81ea.mp3",
+      "sha256": "ff9a480682f6f84b099068647041b3c84e4083ebeb012f95d7cf0fc8c2a8b807"
+    },
+    {
+      "id": "char-8336",
+      "text": "茶",
+      "file": "char-8336.mp3",
+      "sha256": "e497084c2822b2f70bc29cb727d90206f0e81b736845195f2c8fcf6f18cf662a"
+    },
+    {
+      "id": "char-897f",
+      "text": "西",
+      "file": "char-897f.mp3",
+      "sha256": "14a091b0e8e34278e8782d2c01017fb136fc4e928ba993b926bdb39b5f985e18"
+    },
+    {
+      "id": "char-8981",
+      "text": "要",
+      "file": "char-8981.mp3",
+      "sha256": "8c94658ce59e2d3dbd623229998685feac08d0e814ad0d14283447105a01246f"
+    },
+    {
+      "id": "char-8bb2",
+      "text": "讲",
+      "file": "char-8bb2.mp3",
+      "sha256": "62ccd4001261351a250ed08fac25458ddf7ac27647d9041948921fa3fba2a24c"
+    },
+    {
+      "id": "char-8bed",
+      "text": "语",
+      "file": "char-8bed.mp3",
+      "sha256": "d0d8325965abbb0b338861975c3ff34f9a72c85e9a3a2a4f6dadfced1ecbfa7c"
+    },
+    {
+      "id": "char-8bf7",
+      "text": "请",
+      "file": "char-8bf7.mp3",
+      "sha256": "f7bc2461afb0f0ebcc6da4f963788239b58df8c15224ea2ceb6998d7e82265f8"
+    },
+    {
+      "id": "char-8c01",
+      "text": "谁",
+      "file": "char-8c01.mp3",
+      "sha256": "38484075033644931e4218913dcc90ac71d693385a8cdf7928b3dba65d3727ec"
+    },
+    {
+      "id": "char-8d77",
+      "text": "起",
+      "file": "char-8d77.mp3",
+      "sha256": "f0fc61740e3a14e93eb976693787c4693555322b125550d712eb839a4de1f83c"
+    },
+    {
+      "id": "char-8f66",
+      "text": "车",
+      "file": "char-8f66.mp3",
+      "sha256": "a3e762feaafcd75a595d62f74c2db5801f554780053a3a0eacf9bb4c1ca5530c"
+    },
+    {
+      "id": "char-8f86",
+      "text": "辆",
+      "file": "char-8f86.mp3",
+      "sha256": "fc0a9088b09aeecf346a870707c0bdd0485eb75b76001e907f97bc7be59f23d6"
+    },
+    {
+      "id": "char-8fb9",
+      "text": "边",
+      "file": "char-8fb9.mp3",
+      "sha256": "61c0b7e1dfd1f9b7c56f205922fa7f63ec33e0762323b04f38670eefa9a4a7d5"
+    },
+    {
+      "id": "char-8fd8",
+      "text": "还",
+      "file": "char-8fd8.mp3",
+      "sha256": "9d57175e2509a563a6fe684b485fcadfc8b3b813030920339e092adcd31c8ba1"
+    },
+    {
+      "id": "char-90a3",
+      "text": "那",
+      "file": "char-90a3.mp3",
+      "sha256": "62afc170afab6441cf49c3b17162ddd34e713dba143bdd3fb64ee843dcadcf8c"
+    },
+    {
+      "id": "char-79df",
+      "text": "租",
+      "file": "char-79df.mp3",
+      "sha256": "44c060eaa61bd86e1680413226ff978b708712bed7adeef84714d07d6984c7e0"
+    },
+    {
+      "id": "char-91cc",
+      "text": "里",
+      "file": "char-91cc.mp3",
+      "sha256": "a8a5ce74f12a547a91c5b2848593d53ed453a52e77e59f5d46ff6db07b816c45"
+    },
+    {
+      "id": "char-79cb",
+      "text": "秋",
+      "file": "char-79cb.mp3",
+      "sha256": "ea94940456d16979cf2039fd910d82504cb0014b89c4780a730c9bef6dfddb71"
+    },
+    {
+      "id": "char-94b1",
+      "text": "钱",
+      "file": "char-94b1.mp3",
+      "sha256": "c162a380910ffca53092221637c4b8a57f620aef80d489d321432040d5061447"
+    },
+    {
+      "id": "char-95ee",
+      "text": "问",
+      "file": "char-95ee.mp3",
+      "sha256": "4be4cf584fcc7028d7aebebd636c3410ed20076f7cd62120d3121f2d4f5f4a45"
+    },
+    {
+      "id": "char-95f4",
+      "text": "间",
+      "file": "char-95f4.mp3",
+      "sha256": "656ebaddc50725cb04573ac9c12d3da086a0c4fbe66d0d8cccfdbe2335e50dc5"
+    },
+    {
+      "id": "char-96be",
+      "text": "难",
+      "file": "char-96be.mp3",
+      "sha256": "4e8d8ff79c3045afb2e32813ef148893c82cc74db66457d14d4b3bffb94c480b"
+    },
+    {
+      "id": "char-975e",
+      "text": "非",
+      "file": "char-975e.mp3",
+      "sha256": "0a0e688b3405be59015fa67d5d22c1923cc6c4057ff57e6f87aae2982a51e4e8"
+    },
+    {
+      "id": "char-9762",
+      "text": "面",
+      "file": "char-9762.mp3",
+      "sha256": "34faf6f3c84d7002451c3785439b0b624f3265a10e76f5764d62ffae1cbf3dcf"
+    },
+    {
+      "id": "char-94a5",
+      "text": "钥",
+      "file": "char-94a5.mp3",
+      "sha256": "5f5608c48a05a712de64a961d7ff7c6492945ec09da0027e2c743d1720d43d76"
+    },
+    {
+      "id": "char-9192",
+      "text": "醒",
+      "file": "char-9192.mp3",
+      "sha256": "5b566e7b193bfd09389821de42ec0e7470c96046e9f21f6cb6711e6f28f5972c"
+    }
+  ]
+}

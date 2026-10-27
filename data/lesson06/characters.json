@@ -1,0 +1,86 @@
+{
+  "source": "https://github.com/skishore/makemeahanzi/blob/master/dictionary.txt",
+  "license": "LGPL-3.0; existing bundled notices retained",
+  "characters": [
+    {
+      "text": "温",
+      "pinyin": "wēn",
+      "meaning": {
+        "en": "warm; temperature",
+        "fr": "chaud ; température",
+        "ru": "тёплый; температура",
+        "tr": "ılık; sıcaklık"
+      }
+    },
+    {
+      "text": "炎",
+      "pinyin": "yán",
+      "meaning": {
+        "en": "flame; hot",
+        "fr": "flamme ; brûlant",
+        "ru": "пламя; жаркий",
+        "tr": "alev; sıcak"
+      }
+    },
+    {
+      "text": "爽",
+      "pinyin": "shuǎng",
+      "meaning": {
+        "en": "refreshing; clear",
+        "fr": "rafraîchissant ; clair",
+        "ru": "освежающий; ясный",
+        "tr": "ferahlatıcı; açık"
+      }
+    },
+    {
+      "text": "寒",
+      "pinyin": "hán",
+      "meaning": {
+        "en": "cold; chilly",
+        "fr": "froid ; glacial",
+        "ru": "холодный; зябкий",
+        "tr": "soğuk; üşütücü"
+      }
+    },
+    {
+      "text": "抽",
+      "pinyin": "chōu",
+      "meaning": {
+        "en": "pull out; draw out",
+        "fr": "tirer ; extraire",
+        "ru": "вытягивать; извлекать",
+        "tr": "çekip çıkarmak"
+      }
+    },
+    {
+      "text": "乡",
+      "pinyin": "xiāng",
+      "meaning": {
+        "en": "countryside; village",
+        "fr": "campagne ; village",
+        "ru": "деревня; сельская местность",
+        "tr": "kırsal; köy"
+      }
+    },
+    {
+      "text": "淇",
+      "pinyin": "qí",
+      "meaning": {
+        "en": "name of the Qi River; a sound in 冰淇淋",
+        "fr": "nom de la rivière Qi ; un son dans 冰淇淋",
+        "ru": "название реки Ци; звук в 冰淇淋",
+        "tr": "Qi Nehri adı; 冰淇淋 içinde bir ses"
+      }
+    },
+    {
+      "text": "淋",
+      "pinyin": "lín",
+      "meaning": {
+        "en": "drench; soak; a sound in 冰淇淋",
+        "fr": "tremper ; arroser ; un son dans 冰淇淋",
+        "ru": "промокать; обливать; звук в 冰淇淋",
+        "tr": "sırılsıklam etmek; 冰淇淋 içinde bir ses"
+      }
+    }
+  ]
+}
