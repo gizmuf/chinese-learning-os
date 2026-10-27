@@ -103,6 +103,19 @@ for changed in [{'lessonId':'intensive-05'},{'activityId':'c05-build-1'},{'activ
 checks.append('lesson06 cross-lesson registry enforced')
 assert all(e['lessonId']=='intensive-03' for e in call(user=a,path='/api/course-progress')[1]['events']);checks.append('lesson06 preserves old lesson clients')
 assert call('POST',a,{'events':[lesson6]},path='/api/progress')[0]==400;checks.append('lesson06 cannot contaminate HSK history')
+chunk={**event,'id':str(uuid.uuid4()),'lessonId':'speaking-chunks','activityId':'chunk-recall-request-1'}
+for _ in range(2):
+ result=call('POST',a,{'events':[chunk]});assert result[0]==200,result[:2]
+assert sum(e['id']==chunk['id'] for e in call(user=a)[1]['events'])==1;checks.append('chunks syncs idempotently')
+assert not any(e['lessonId']=='speaking-chunks' for e in call(user=b)[1]['events']);checks.append('chunks account isolation')
+assert call('POST',b,{'events':[{**chunk,'correct':False}]})[0]==200
+assert next(e for e in call(user=a)[1]['events'] if e['id']==chunk['id'])['correct']==True;checks.append('chunks replay UUID remains scoped to student')
+for patch in [{'lessonId':'intensive-06'},{'activityId':'c06-build-1'},{'activityId':'chunk-recall-unknown'},{'kind':'writing'}]:
+ assert call('POST',a,{'events':[{**chunk,**patch,'id':str(uuid.uuid4())}]})[0]==400
+checks.append('chunks cross-material and kind validation enforced')
+assert call('POST',a,{'events':[{**chunk,'id':str(uuid.uuid4()),'assisted':True}]})[0]==200;checks.append('chunks assisted records can sync without independent scheduling')
+assert all(e['lessonId']=='intensive-03' for e in call(user=a,path='/api/course-progress')[1]['events']);checks.append('chunks hidden from legacy lesson clients')
+assert call('POST',a,{'events':[chunk]},path='/api/progress')[0]==400;checks.append('chunks never enters HSK event registry')
 assert call('POST',a,'x'*100001)[0]==413;checks.append('course body size bounded')
 for check in checks:print('PASS',check)
 print(f'{len(checks)} course API integration checks passed')

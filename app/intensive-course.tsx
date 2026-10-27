@@ -48,6 +48,8 @@ import Lesson06 from "./lesson06";
 import {lesson06} from "./lesson06-data";
 import Lesson05 from "./lesson05";
 import VideoStudy from "./video-study";
+import SpeakingChunks from "./speaking-chunks";
+import {chunkCopy} from "./speaking-chunks-copy";
 import {videoStudy} from "./video-study-data";
 import {videoCopy} from "./video-study-copy";
 import {lesson05} from "./lesson05-data";
@@ -84,6 +86,7 @@ export default function IntensiveCourse({
   const [labWriting,setLabWriting]=useState(false);
   const [open, setOpen] = useState(false);
   const [videoOpen,setVideoOpen]=useState(false);
+  const [chunksOpen,setChunksOpen]=useState(false);
   const [lessonNumber,setLessonNumber]=useState(3);
   const [tab, setTab] = useState<Tab>("overview");
   const [topic, setTopic] = useState<Topic>("time");
@@ -99,6 +102,7 @@ export default function IntensiveCourse({
   );
   useEffect(() => {
     if(new URLSearchParams(window.location.search).get("material")==="self-introduction")setVideoOpen(true);
+    if(new URLSearchParams(window.location.search).get("material")==="speaking-chunks")setChunksOpen(true);
     if (new URLSearchParams(window.location.search).get("lesson") === "6") {setLessonNumber(6);setOpen(true);}
     if (new URLSearchParams(window.location.search).get("lesson") === "5") {setLessonNumber(5);setOpen(true);}
     if (new URLSearchParams(window.location.search).get("lesson") === "4") {setLessonNumber(4);setOpen(true);}
@@ -188,6 +192,7 @@ export default function IntensiveCourse({
   }
   if(open&&lessonNumber===6)return <Lesson06 {...{owner,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"","/?course=intensive");}}/>;
   function openLesson06(){stopAudio();setLessonNumber(6);setOpen(true);window.history.replaceState(null,"","/?course=intensive&lesson=6");window.scrollTo({top:0,behavior:"instant"});}
+  if(chunksOpen)return <SpeakingChunks owner={owner} notify={notify} onBack={()=>{setChunksOpen(false);window.history.replaceState(null,"","/?course=intensive");}}/>;
   if(videoOpen)return <VideoStudy {...{owner,penOnly,setPenOnly,notify}} onBack={()=>{setVideoOpen(false);window.history.replaceState(null,"","/?course=intensive");}}/>;
   if(open&&lessonNumber===5) return <Lesson05 {...{owner,db,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"",window.location.pathname+"?course=intensive");}}/>;
   function openLesson05(){stopAudio();setLessonNumber(5);setOpen(true);window.history.replaceState(null,"",window.location.pathname+"?course=intensive&lesson=5");window.scrollTo({top:0,behavior:"instant"});}
@@ -214,6 +219,7 @@ export default function IntensiveCourse({
       </div>
       {!open ? (
         <>
+          <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">你能给我 · … · 吗</div><div><span className="pill">CHUNKS</span><h2>{chunkCopy.title[locale]}</h2><p>{chunkCopy.intro[locale]}</p><p>{chunkCopy.subtitle[locale]}</p><button className="primary" onClick={()=>{stopAudio();setChunksOpen(true);window.history.replaceState(null,"","/?course=intensive&material=speaking-chunks");window.scrollTo({top:0,behavior:"instant"});}}>{chunkCopy.open[locale]}<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">你 · 自己</div><div><span className="pill">{videoCopy[locale].independent}</span><h2>{videoStudy.title[locale]}</h2><p>{videoCopy[locale].intro}</p><button className="primary" onClick={()=>{stopAudio();setVideoOpen(true);window.history.replaceState(null,'','/?course=intensive&material=self-introduction');window.scrollTo({top:0,behavior:'instant'});}}>{videoCopy[locale].read}<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">天 · 水 · 还是</div><div><span className="pill">{t("Lesson")} 06 / 60</span><h2>{lesson06.title[locale]}</h2><p>27.10.2026</p><button className="primary" onClick={openLesson06}>{t("Lesson")} 06<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">又 · 起来 · 好</div><div><span className="pill">{t("Lesson")} 05 / 60</span><h2>{lesson05.title[locale]}</h2><p>26.10.2026</p><button className="primary" onClick={openLesson05}>{t("Lesson")} 05<ArrowRight size={17}/></button></div></section>

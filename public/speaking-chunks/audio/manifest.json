@@ -1,0 +1,420 @@
+{
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "generationRate": "-10%",
+  "recordings": [
+    {
+      "id": "request-1",
+      "text": "你能给我一点儿水吗？",
+      "file": "request-1.mp3",
+      "sha256": "5a17486553225c0f465520ad0175bbc6f0fb216d74c095c1522d0cf0abb3bf19"
+    },
+    {
+      "id": "request-2",
+      "text": "你能给我一本书吗？",
+      "file": "request-2.mp3",
+      "sha256": "98fa70f992e9ad012444fcb1e134f6deae8ff57843a826c764276931533d2bc4"
+    },
+    {
+      "id": "choice-1",
+      "text": "你想喝咖啡还是茶？",
+      "file": "choice-1.mp3",
+      "sha256": "a7beceba8ae5caa6f29f67f6596accde1f600e3c427b1de92cb73ce3f75e0ef2"
+    },
+    {
+      "id": "choice-2",
+      "text": "你想喝温水还是冰水？",
+      "file": "choice-2.mp3",
+      "sha256": "153939b4d488467163cb7bb7288c6b6ee3775ec32513e08c53a9e24759c6bfd0"
+    },
+    {
+      "id": "choice-3",
+      "text": "你想喝茶还是水？",
+      "file": "choice-3.mp3",
+      "sha256": "b1b27c5320f605a7d8aed23fb4c7f55096869ee4f90c5107ffa4fd2c664ab385"
+    },
+    {
+      "id": "request-3",
+      "text": "你能给我一把钥匙吗？",
+      "file": "request-3.mp3",
+      "sha256": "27da95bed7cecabcdf0af373a248a3755da7fd8d67ee9018bbc5d6c766798d97"
+    },
+    {
+      "id": "time-1",
+      "text": "你今天有时间吗？",
+      "file": "time-1.mp3",
+      "sha256": "642d4d6a07827f2a5ec4f98417d5e160074d523cf8374809332ad4a329cc31b0"
+    },
+    {
+      "id": "time-3",
+      "text": "你下午有时间吗？",
+      "file": "time-3.mp3",
+      "sha256": "82a9d91a85f98b7bb6d035ea707e8f806062769f3b9f57c4d24ba56c6b28d85f"
+    },
+    {
+      "id": "time-2",
+      "text": "你明天有时间吗？",
+      "file": "time-2.mp3",
+      "sha256": "fff421759745503c352b022c8416bb71c0de8165fc32375d11aa05c152f190be"
+    },
+    {
+      "id": "place-2",
+      "text": "我在宿舍学习中文。",
+      "file": "place-2.mp3",
+      "sha256": "e2c66d27c8e0d6aac23797c753ed6c3900071d46da49c81a9311d16559e29044"
+    },
+    {
+      "id": "place-1",
+      "text": "我在学校学习中文。",
+      "file": "place-1.mp3",
+      "sha256": "61eb79068b8d5607d5c51fbe7fcfb77105c589b0265778fb4ee33b96e5b8d8a0"
+    },
+    {
+      "id": "place-3",
+      "text": "我在家学习中文。",
+      "file": "place-3.mp3",
+      "sha256": "3634f0bb74af9db5ab8d340c5cf5ff0e456e19f68e17d0149930d6dc052db4e6"
+    },
+    {
+      "id": "plan-2",
+      "text": "我明天想去学校。",
+      "file": "plan-2.mp3",
+      "sha256": "c0b910ead96a16129f86919eeba3535d45cac1334840fb9600dd2f6e51a3a555"
+    },
+    {
+      "id": "plan-1",
+      "text": "我明天想去上海。",
+      "file": "plan-1.mp3",
+      "sha256": "badc5a6538207a1a3232b33df1cbbf4a62e9f9878736f490d718541dc8cfc0ef"
+    },
+    {
+      "id": "past-1",
+      "text": "我昨天没吃早饭。",
+      "file": "past-1.mp3",
+      "sha256": "4596f65b649154aa01205ae0327fda6375e722d8a903e0da560e55f04dbfaca4"
+    },
+    {
+      "id": "plan-3",
+      "text": "我明天想去超市。",
+      "file": "plan-3.mp3",
+      "sha256": "b811be5e8514a75cc8916350816c30b319d56269b7281cefd9a0a2ff955b3efd"
+    },
+    {
+      "id": "past-3",
+      "text": "我昨天没去学校。",
+      "file": "past-3.mp3",
+      "sha256": "0b31d35acaf4a3927b1db6049be0dbd8e41266eb6ce55025f68fddef496cddc9"
+    },
+    {
+      "id": "habit-1",
+      "text": "我早上不喝咖啡。",
+      "file": "habit-1.mp3",
+      "sha256": "dc5b915354d96759dbb2331a07667994544ce11f6aa220edd3e1345fc8857627"
+    },
+    {
+      "id": "past-2",
+      "text": "我昨天没喝咖啡。",
+      "file": "past-2.mp3",
+      "sha256": "9f1d83a064fcd09b94aa983c4796b3b2fdb72b5910fc85a530105c2fb2623315"
+    },
+    {
+      "id": "when-1",
+      "text": "你什么时候去学校？",
+      "file": "when-1.mp3",
+      "sha256": "27c29f17b10fb450a45770eddd4e9f5fb38f8a0992c96f80277b220fef5715b0"
+    },
+    {
+      "id": "habit-2",
+      "text": "我早上不喝茶。",
+      "file": "habit-2.mp3",
+      "sha256": "ee8e9f25931d08960e630ae4e4ed96f6060d4ad0c59a9388360d2f368df3e9ac"
+    },
+    {
+      "id": "when-3",
+      "text": "你什么时候起床？",
+      "file": "when-3.mp3",
+      "sha256": "188f7b78b19fdb97979392ebfd17c317bc361486b49cff87a014e7c9b65ed646"
+    },
+    {
+      "id": "habit-3",
+      "text": "我早上不吃早饭。",
+      "file": "habit-3.mp3",
+      "sha256": "656a738bb5c309726c22d97cd6d15a255c2142a9d8c2f90d146dcccbc68e7e19"
+    },
+    {
+      "id": "reason-1",
+      "text": "因为今天下雨所以我不去公园。",
+      "file": "reason-1.mp3",
+      "sha256": "7678589920223b4eeee101c6193f1712d626aaacf4686f2b097c662aeaeee919"
+    },
+    {
+      "id": "reason-2",
+      "text": "因为我很忙所以我不去公园。",
+      "file": "reason-2.mp3",
+      "sha256": "0cdf8d8498577531d2d2eb7278b28090a59ca7e45ba2fac0b28d0d2a41399a5d"
+    },
+    {
+      "id": "when-2",
+      "text": "你什么时候去上海？",
+      "file": "when-2.mp3",
+      "sha256": "06be919a1bc3ffd4757528a6008009b3dc3f8695982bcc403baf7517bbeb4f02"
+    },
+    {
+      "id": "reason-3",
+      "text": "因为我有点儿累所以我不去公园。",
+      "file": "reason-3.mp3",
+      "sha256": "a8c6415a111c295db5f1e8ad4a39552ad9e1f1fa7eb8c1939cc8b1dbcb3aa1ff"
+    },
+    {
+      "id": "experience-2",
+      "text": "我以前去过北京。",
+      "file": "experience-2.mp3",
+      "sha256": "2ce4c56c4666a4ea0c66b8a271afeeaa7bdb9940dbd7b09b79a8f23a873ff56a"
+    },
+    {
+      "id": "experience-1",
+      "text": "我以前去过上海。",
+      "file": "experience-1.mp3",
+      "sha256": "89e94c120907ccfaacd45332a86fc677bfaa0607ff2c96f702f640bc5b19b04e"
+    },
+    {
+      "id": "experience-3",
+      "text": "我以前去过苏州。",
+      "file": "experience-3.mp3",
+      "sha256": "6b12d1f101cd0439b0d9bab356c8afcc3cfe96051d204fc9c9d4705f5cc01ced"
+    },
+    {
+      "id": "chunk-5ac1612110de",
+      "text": "吗",
+      "file": "chunk-5ac1612110de.mp3",
+      "sha256": "c00d9b5c6dd92315a1cdf7f597c9c8f9d375290ecd460daad930370610056dac"
+    },
+    {
+      "id": "chunk-ddb133631c60",
+      "text": "一本书",
+      "file": "chunk-ddb133631c60.mp3",
+      "sha256": "df88c06e595e7c8550c1716ef95351e766aceb60481ed1d6d05b74b08ed6745c"
+    },
+    {
+      "id": "chunk-bc711c746d30",
+      "text": "一把钥匙",
+      "file": "chunk-bc711c746d30.mp3",
+      "sha256": "dcf45bd6806c8e7566029e266e07f3f932ff5f39f2e862fe41d4512c54099559"
+    },
+    {
+      "id": "chunk-d345fb0fca5d",
+      "text": "你想喝",
+      "file": "chunk-d345fb0fca5d.mp3",
+      "sha256": "b9476167093c96cfba803fddb5178674a068fc816ba3f44ad370b011bcc68e06"
+    },
+    {
+      "id": "chunk-517da41a56bc",
+      "text": "一点儿水",
+      "file": "chunk-517da41a56bc.mp3",
+      "sha256": "79c8216e18c41388f6e77489d22898c3a51437a467b154c2e49d21e9b9b3c62c"
+    },
+    {
+      "id": "chunk-caa7a1c8a0b5",
+      "text": "温水还是冰水",
+      "file": "chunk-caa7a1c8a0b5.mp3",
+      "sha256": "100a43bf0e0b22b8d2b7626c018d6b6b886c9bc286400a7a5030c44d1c70b327"
+    },
+    {
+      "id": "chunk-4ffd58f97dcf",
+      "text": "你能给我",
+      "file": "chunk-4ffd58f97dcf.mp3",
+      "sha256": "4ec36032bebe45624fbb18c59da86967c72dc5f34fcea6e88ccff0152c3575ff"
+    },
+    {
+      "id": "chunk-a0c7716669b5",
+      "text": "你",
+      "file": "chunk-a0c7716669b5.mp3",
+      "sha256": "541bb788548e7ae0a828d8a57a3b693dde2c6d704145ae9d606f768ab32edb16"
+    },
+    {
+      "id": "chunk-0e8ff5ecf1c9",
+      "text": "今天有时间",
+      "file": "chunk-0e8ff5ecf1c9.mp3",
+      "sha256": "54d11fd3dda8a1fe78cfc9c688af39638d7576cd944f4f23bc4db4646e379023"
+    },
+    {
+      "id": "chunk-176d0d5cc48e",
+      "text": "明天有时间",
+      "file": "chunk-176d0d5cc48e.mp3",
+      "sha256": "62bab62ae7b3a8096e9a03a8126e1dc94c2b6bfac51f8b9305cef2224a55de41"
+    },
+    {
+      "id": "chunk-bcf731607bdc",
+      "text": "茶还是水",
+      "file": "chunk-bcf731607bdc.mp3",
+      "sha256": "34c5ad207b42da91f658424244df22cc63ee8ace7aaaffcc66f264cadb8208ef"
+    },
+    {
+      "id": "chunk-b70bb4acc048",
+      "text": "我",
+      "file": "chunk-b70bb4acc048.mp3",
+      "sha256": "9af66368d6f5fd7ec00cc2d9b8c62917dd113630088ed37a043b371b2df97e68"
+    },
+    {
+      "id": "chunk-e396c9f059af",
+      "text": "咖啡还是茶",
+      "file": "chunk-e396c9f059af.mp3",
+      "sha256": "1c55cb8fdc0a8123025e7c9fb8d2bd35f627603912798c57d14a047387eae8f3"
+    },
+    {
+      "id": "chunk-ef08cbdc739c",
+      "text": "在学校",
+      "file": "chunk-ef08cbdc739c.mp3",
+      "sha256": "f761be14485ae01eaa6b2c82cec27fbccfb8dfb83716da8c188ef17888fec5b7"
+    },
+    {
+      "id": "chunk-0a5db27f707d",
+      "text": "下午有时间",
+      "file": "chunk-0a5db27f707d.mp3",
+      "sha256": "a8d0d142672f24c6ee7abde53f4b9fae51ac86a63e3e87772e5d3dddd3c5415d"
+    },
+    {
+      "id": "chunk-67e94dcbdc44",
+      "text": "在宿舍",
+      "file": "chunk-67e94dcbdc44.mp3",
+      "sha256": "cef82d9be7dcd608d66b8c4aa198f394a18cb599b5a6e6256ec7fc9377cbd338"
+    },
+    {
+      "id": "chunk-bfe07125e7b4",
+      "text": "学习中文",
+      "file": "chunk-bfe07125e7b4.mp3",
+      "sha256": "c98d41008831e3d043e34b8b40fb4f991680aa0a1109426318e2521c25bde7df"
+    },
+    {
+      "id": "chunk-4906a49adc5c",
+      "text": "上海",
+      "file": "chunk-4906a49adc5c.mp3",
+      "sha256": "3d4f62f24bbdfce656c8401594c8d035ab7b13bb926d1caf393c53fd2862cacb"
+    },
+    {
+      "id": "chunk-dc6e2aafeb9e",
+      "text": "学校",
+      "file": "chunk-dc6e2aafeb9e.mp3",
+      "sha256": "010b0a4b821a0916d0c6ed0e5cc7daec1652681023e922987d16267a5df56d54"
+    },
+    {
+      "id": "chunk-fc63db3dd422",
+      "text": "超市",
+      "file": "chunk-fc63db3dd422.mp3",
+      "sha256": "46fbb8291664d5631508f0a8a7f978fb2383c461b93915fed21be46c7ca820b7"
+    },
+    {
+      "id": "chunk-4d3a8efb294f",
+      "text": "我明天想去",
+      "file": "chunk-4d3a8efb294f.mp3",
+      "sha256": "b5595f30e9c04b1678e1e8564b76d8ac28ed5551b9de18a774dfaaf9edd35d37"
+    },
+    {
+      "id": "chunk-3bec204bbf54",
+      "text": "我昨天没",
+      "file": "chunk-3bec204bbf54.mp3",
+      "sha256": "e616838e51967e3c5ac191a8cbc13e6bd0d0ebcfff589aa3bd25a2e49a5a6af0"
+    },
+    {
+      "id": "chunk-9a0f8d2ad3e6",
+      "text": "吃早饭",
+      "file": "chunk-9a0f8d2ad3e6.mp3",
+      "sha256": "dbd4fcceb103169358329afb2e31f441d995f05f409a6c930b3d5473d69801c4"
+    },
+    {
+      "id": "chunk-5879c0bf32bb",
+      "text": "在家",
+      "file": "chunk-5879c0bf32bb.mp3",
+      "sha256": "e7d5dbfe9652b7e0a077bbe0393bdc365d5a4ac742e745603d053379dbcf1c75"
+    },
+    {
+      "id": "chunk-bca9f5c6acff",
+      "text": "喝咖啡",
+      "file": "chunk-bca9f5c6acff.mp3",
+      "sha256": "047fd226677304b0c25542eb9acd6aafc9cfa2107c875d370cdb2cef21c8e25b"
+    },
+    {
+      "id": "chunk-cb79e0cecd8e",
+      "text": "喝茶",
+      "file": "chunk-cb79e0cecd8e.mp3",
+      "sha256": "283e95d79769c30a6540a7d2b1f8773c3dfa3a8d176d9db0024c9ba7892efe8b"
+    },
+    {
+      "id": "chunk-f95cac149ad8",
+      "text": "我早上不",
+      "file": "chunk-f95cac149ad8.mp3",
+      "sha256": "112a76ff901f25470cd5fa89a90b9fd0fa2821e43ff2384b979adb4e066d5ba4"
+    },
+    {
+      "id": "chunk-f0e6aa434f09",
+      "text": "去上海",
+      "file": "chunk-f0e6aa434f09.mp3",
+      "sha256": "10eb2b2834869237ae16b8ae21d585558f04dad1777e32e6a2a51527a230f5fe"
+    },
+    {
+      "id": "chunk-96f512f98004",
+      "text": "起床",
+      "file": "chunk-96f512f98004.mp3",
+      "sha256": "36fa41b61a1a8826c6454c642710f027054bc5a27ef4f691d27a86017c775e91"
+    },
+    {
+      "id": "chunk-2b5b7b03da37",
+      "text": "去学校",
+      "file": "chunk-2b5b7b03da37.mp3",
+      "sha256": "2672452a77e80c33a4d1eb8033040131abf7c1cb46973b5bc2136e93dc210d9a"
+    },
+    {
+      "id": "chunk-43a188d1cb55",
+      "text": "什么时候",
+      "file": "chunk-43a188d1cb55.mp3",
+      "sha256": "440e8b76d7c8eab82a580fdf1700d370767ee69cc0a1d4f8bc5878729eec1482"
+    },
+    {
+      "id": "chunk-eeca357e5af0",
+      "text": "所以我不去公园",
+      "file": "chunk-eeca357e5af0.mp3",
+      "sha256": "afcdaec36bb1fc1aa1e4f08a3577c51e3da7354f4e464fbb6f6ae1647af5f585"
+    },
+    {
+      "id": "chunk-c003fcaac477",
+      "text": "因为我很忙",
+      "file": "chunk-c003fcaac477.mp3",
+      "sha256": "7358e18dbef0f63defac9a30eaed8f0b8e99f32f4a421682146e702d3e97b364"
+    },
+    {
+      "id": "chunk-fe8e94de5d0a",
+      "text": "因为我有点儿累",
+      "file": "chunk-fe8e94de5d0a.mp3",
+      "sha256": "d6db2ab1c1ea7164690ecc3fc37bf4dfead4599002c83373c72e75faa45e3bc9"
+    },
+    {
+      "id": "chunk-9a0eed346881",
+      "text": "因为今天下雨",
+      "file": "chunk-9a0eed346881.mp3",
+      "sha256": "e0b0598dfea396ed13707ff3469f2e7c2a416010ec4dcd0ef1f3c597c9e6073a"
+    },
+    {
+      "id": "chunk-b82245564747",
+      "text": "去过北京",
+      "file": "chunk-b82245564747.mp3",
+      "sha256": "8e934cf72344bb144f9c8d86ada95afa296e384bc07f2c9e9f89c40fd0b37b63"
+    },
+    {
+      "id": "chunk-59c009f6245c",
+      "text": "去过上海",
+      "file": "chunk-59c009f6245c.mp3",
+      "sha256": "9a2c52cc0d8352b09c744103596ac1be13731c9beeda9aa7258eab651749c5e8"
+    },
+    {
+      "id": "chunk-2e54bf42f588",
+      "text": "去过苏州",
+      "file": "chunk-2e54bf42f588.mp3",
+      "sha256": "7abba8778069f5b879f858c479b5ea1c53204bb8bb3b8cdefd4ab80d080979e0"
+    },
+    {
+      "id": "chunk-b8a5db31175c",
+      "text": "我以前",
+      "file": "chunk-b8a5db31175c.mp3",
+      "sha256": "439d7b858164ca68ed0b0e03996ab2043607d3f6e61169fd59d7681208a2eb56"
+    }
+  ]
+}
