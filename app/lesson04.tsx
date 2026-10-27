@@ -44,12 +44,12 @@ function Lesson04Notebook({owner,db,penOnly,setPenOnly,notify,onBack}:Props){
 }
 type Answer={pick:string[];hint:boolean;listened:boolean;revealed:boolean;correct:boolean;eventId:string;saved:boolean};
 const blank=():Answer=>({pick:[],hint:false,listened:false,revealed:false,correct:false,eventId:crypto.randomUUID(),saved:false});
-function Lesson04Practice({owner,mode,record,ready,notify,checkIds,onComplete}:{onComplete:()=>void;checkIds:string[]|null;owner:string|null;mode:'build'|'check';record:(e:CourseEvent)=>Promise<void>;ready:boolean;notify:(s:string)=>void}){
+export function Lesson04Practice({sessionKey,owner,mode,record,ready,notify,checkIds,onComplete}:{sessionKey?:string;onComplete:()=>void;checkIds:string[]|null;owner:string|null;mode:'build'|'check';record:(e:CourseEvent)=>Promise<void>;ready:boolean;notify:(s:string)=>void}){
  const {locale,t}=useI18n(),c=(en:string,fr:string,ru:string)=>L(en,fr,ru)[locale];
  const checkQueue=checkIds?lesson04Checks.filter(q=>checkIds.includes(q.id)):lesson04Checks;
  const total=mode==='build'?lesson04Builders.length:checkQueue.length,[index,setIndex]=useState(0),[answers,setAnswers]=useState<Record<number,Answer>>({}),[saving,setSaving]=useState(false);
  const lock=useRef(false),audio=useRef<HTMLAudioElement|null>(null),generation=useRef(0),[draftReady,setDraftReady]=useState(false);
- const key='chinese-os-course04-'+mode+'-'+(owner??'guest')+'-'+(checkIds?.join(',')??'all');
+ const key='chinese-os-course04-'+mode+'-'+(owner??'guest')+'-'+(checkIds?.join(',')??'all')+(sessionKey?'-today-'+sessionKey:'');
  const taskId=mode==='build'?lesson04Builders[index].id:checkQueue[index].id;
  const answer=answers[index]??blank();
  const dictionaryHelp=useDictionaryAssistance(()=>update({hint:true}));

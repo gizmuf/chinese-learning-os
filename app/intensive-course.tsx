@@ -767,7 +767,7 @@ function SentenceCard({
 }: {
   value: Sentence;
   notify: (s: string) => void;
-  onWrite: () => void;
+  onWrite?: () => void;
 }) {
   const { t, locale } = useI18n();
   return (
@@ -790,10 +790,10 @@ function SentenceCard({
           <Volume2 size={16} />
           {t("Listen to example")}
         </button>
-        <button className="text-button" onClick={onWrite}>
+        {onWrite&&<button className="text-button" onClick={onWrite}>
           {t("Practice writing")}
           <ChevronRight size={15} />
-        </button>
+        </button>}
       </div>
     </article>
   );
@@ -815,7 +815,7 @@ function OptionText({
     </>
   );
 }
-function CoursePractice({
+export function CoursePractice({
   ids,
   record,
   ready,
@@ -823,7 +823,7 @@ function CoursePractice({
   onFinish,
   onWrite,
 }: {
-  onWrite: (id: string) => void;
+  onWrite?: (id: string) => void;
   ids: string[];
   record: (e: CourseEvent) => Promise<void>;
   ready: boolean;
@@ -1103,7 +1103,7 @@ function CoursePractice({
             <SentenceCard
               value={sentences.find((s) => s.id === exercise.example)!}
               notify={notify}
-              onWrite={() => onWrite(exercise.example!)}
+              onWrite={onWrite?() => onWrite(exercise.example!):undefined}
             />
           )}
         </div>

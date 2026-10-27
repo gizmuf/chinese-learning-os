@@ -174,3 +174,8 @@ pinyin and EN/FR/RU/TR examples, reusing authored course/HSK sentences and 19
 additional teaching examples in `data/lesson06/usage-examples.json`. Audio appears
 only where a bundled recording exists. Looking up text never awards recall credit;
 independent grammar answers keep lookup blocked until a hint or saved feedback.
+### Today — lesson 3–6 reviews
+
+Today includes an account-scoped lesson review panel, separate from the existing HSK and Atlas panels. It derives due dates from the existing course FSRS history and offers per-lesson due and difficult queues for independently scored lesson checks. Unseen checks, study events, guided builders, assisted answers and handwriting are not added to this check queue. A successful independent retry resolves difficulty; a hint-assisted answer does not erase an earlier independent failure. Future due dates are displayed without prematurely counting them as due.
+
+Starting a queue snapshots its IDs and reuses the exact lesson 3/4/5/6 practice component, recording to the same course store/API with the same activity IDs. Lesson 4/5 Today sessions have a fresh draft scope so a later repeat cannot reopen an already-saved answer. Back to Today updates counts; the clock also updates every 30 seconds and returning to the tab refreshes account sync. Guests remain device-local. EN/FR/RU/TR copy is included; no existing course routes, Atlas views or HSK review behavior are replaced.

@@ -71,6 +71,7 @@ import { authenticatedFetch } from "./auth-client";
 import type { StudyUser as User } from "./auth-shell";
 const HSK3Grammar = lazy(() => import("./hsk3-grammar"));
 const Atlas = lazy(() => import("./atlas"));
+const TodayCourseReviews = lazy(() => import("./today-course-reviews"));
 const TodayRecognition = lazy(() => import("./today-recognition"));
 type View = "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
 type Draft = {
@@ -648,6 +649,7 @@ export default function StudyApp({
                   </small>
                 </section>
               </div>
+              <Suspense fallback={null}><TodayCourseReviews key={user?.id ?? "guest"} owner={user?.id ?? null} notify={notify}/></Suspense>
               <Suspense fallback={null}><TodayRecognition key={user?.id ?? "guest"} owner={user?.id ?? null}/></Suspense>
               <div className="stats-row">
                 <div>
