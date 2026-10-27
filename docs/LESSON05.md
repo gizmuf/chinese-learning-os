@@ -36,7 +36,7 @@ Audio uses the existing Mandarin voice `zh-CN-XiaoxiaoNeural` at `-10%`. Exact-t
 
 ## Spaced-repetition audit
 
-Vocabulary, independent Atlas activities, family-character recognition and course lessons 03–05 use FSRS, with separate targets/skills and a 90% scheduling retention setting. Reading maps, listening to examples and guided writing are study, not proof of recall. The standalone HSK3 grammar page currently stores guided exercise drafts but does **not** schedule FSRS reviews; it is a remaining separate integration, not counted as implemented here. Lesson 05 grammar checks participate through its course activity IDs.
+Vocabulary, independent Atlas activities, family-character recognition and course lessons 03–05 use FSRS, with separate targets/skills and a 90% scheduling retention setting. Reading maps, listening to examples and guided writing are study, not proof of recall. The standalone HSK3 grammar page retains its guided exercise drafts and now has a separate independent-review mode using the shared course FSRS and account-scoped sync. Existing guided answers are not migrated or credited; hints mark the new answer as assisted. See [HSK3 grammar reviews](HSK3_GRAMMAR_REVIEWS.md) for validation and deployment status. Lesson 05 grammar checks participate through its course activity IDs.
 
 ## Turkish
 
