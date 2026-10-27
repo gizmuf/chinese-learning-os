@@ -23,7 +23,7 @@ test('actual review component hides hints, persists one answer for double click,
  globalThis.grammarFetch=async()=>Response.json({events:[]});
  const root=await mount();
  await m.act(async()=>button(root,'Start new reviews').props.onClick());
- assert.equal(root.root.findAllByType('aside').length,0);
+ assert.equal(root.root.findAllByType('aside').length,0);assert.equal(root.root.findByType('article').props['data-study-assessment'],'blocked');
  const option=root.root.findAllByType('button').find(b=>b.props['aria-pressed']===false);
  await m.act(async()=>option.props.onClick());
  const check=button(root,'Check answer');await m.act(async()=>{check.props.onClick();check.props.onClick();await tick();});

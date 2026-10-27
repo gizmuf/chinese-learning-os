@@ -1,0 +1,21 @@
+[
+ ["炎热","夏天的天气很炎热。","Xiàtiān de tiānqì hěn yánrè.","The weather is very hot in summer.","Il fait très chaud en été.","Летом погода очень жаркая.","Yazın hava çok sıcaktır."],
+ ["凉爽","秋天很凉爽。","Qiūtiān hěn liángshuǎng.","Autumn is pleasantly cool.","L’automne est agréablement frais.","Осенью приятно прохладно.","Sonbahar hoş ve serindir."],
+ ["寒冷","冬天的北京很寒冷。","Dōngtiān de Běijīng hěn hánlěng.","Beijing is very cold in winter.","Il fait très froid à Pékin en hiver.","Зимой в Пекине очень холодно.","Pekin kışın çok soğuktur."],
+ ["常温水","我想要一杯常温水。","Wǒ xiǎng yào yì bēi chángwēn shuǐ.","I would like a glass of room-temperature water.","Je voudrais un verre d’eau à température ambiante.","Я хочу стакан воды комнатной температуры.","Bir bardak oda sıcaklığında su istiyorum."],
+ ["热水","请给我一杯热水。","Qǐng gěi wǒ yì bēi rè shuǐ.","Please give me a glass of hot water.","Donnez-moi un verre d’eau chaude, s’il vous plaît.","Дайте мне, пожалуйста, стакан горячей воды.","Lütfen bana bir bardak sıcak su verin."],
+ ["湿巾","我用湿巾擦手。","Wǒ yòng shījīn cā shǒu.","I wipe my hands with a wet wipe.","Je m’essuie les mains avec une lingette humide.","Я вытираю руки влажной салфеткой.","Ellerimi ıslak mendille siliyorum."],
+ ["抽纸","桌上有一盒抽纸。","Zhuō shàng yǒu yì hé chōuzhǐ.","There is a box of tissues on the table.","Il y a une boîte de mouchoirs sur la table.","На столе стоит коробка бумажных салфеток.","Masanın üzerinde bir kutu kâğıt mendil var."],
+ ["请讲","我在听，请讲。","Wǒ zài tīng, qǐng jiǎng.","I am listening; please go ahead.","Je vous écoute, allez-y.","Я слушаю, говорите, пожалуйста.","Dinliyorum, lütfen devam edin."],
+ ["起立","老师来了，请起立。","Lǎoshī lái le, qǐng qǐlì.","The teacher is here; please stand up.","Le professeur est arrivé, levez-vous, s’il vous plaît.","Учитель пришёл, встаньте, пожалуйста.","Öğretmen geldi, lütfen ayağa kalkın."],
+ ["够了","这些水够了，谢谢。","Zhèxiē shuǐ gòu le, xièxie.","This is enough water, thank you.","Cette quantité d’eau suffit, merci.","Этой воды достаточно, спасибо.","Bu kadar su yeterli, teşekkürler."],
+ ["租房","我想在学校附近租房。","Wǒ xiǎng zài xuéxiào fùjìn zū fáng.","I want to rent a home near the school.","Je veux louer un logement près de l’école.","Я хочу снять жильё рядом со школой.","Okulun yakınında ev kiralamak istiyorum."],
+ ["冰淇淋","我想吃一个冰淇淋。","Wǒ xiǎng chī yí ge bīngqílín.","I would like an ice cream.","J’aimerais manger une glace.","Я хочу съесть мороженое.","Bir dondurma yemek istiyorum."],
+ ["东边","学校在公园的东边。","Xuéxiào zài gōngyuán de dōngbian.","The school is east of the park.","L’école est à l’est du parc.","Школа находится к востоку от парка.","Okul parkın doğusunda."],
+ ["西边","我家在学校的西边。","Wǒ jiā zài xuéxiào de xībian.","My home is west of the school.","Ma maison est à l’ouest de l’école.","Мой дом находится к западу от школы.","Evim okulun batısında."],
+ ["一把钥匙","我有一把钥匙。","Wǒ yǒu yì bǎ yàoshi.","I have one key.","J’ai une clé.","У меня есть один ключ.","Bir anahtarım var."],
+ ["两辆汽车","门口停着两辆汽车。","Ménkǒu tíngzhe liǎng liàng qìchē.","Two cars are parked by the entrance.","Deux voitures sont garées à l’entrée.","У входа стоят две машины.","Girişte iki araba park edilmiş."],
+ ["太难了","这道题太难了。","Zhè dào tí tài nán le.","This question is too difficult.","Cette question est trop difficile.","Это задание слишком трудное.","Bu soru çok zor."],
+ ["难极了","这次考试难极了。","Zhè cì kǎoshì nán jí le.","This exam is extremely difficult.","Cet examen est extrêmement difficile.","Этот экзамен чрезвычайно трудный.","Bu sınav son derece zor."],
+ ["非常难","这个汉字非常难写。","Zhè ge Hànzì fēicháng nán xiě.","This Chinese character is very difficult to write.","Ce caractère chinois est très difficile à écrire.","Этот иероглиф очень трудно писать.","Bu Çince karakteri yazmak çok zor." ]
+]

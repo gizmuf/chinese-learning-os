@@ -25,7 +25,7 @@ export function characterPronunciation(hanzi:string,locale:Locale):Pronunciation
  return word?{...wordPronunciation(word),context:word.hanzi!==hanzi}:undefined;
 }
 export function componentPronunciation(id:string,locale:Locale):Pronunciation|undefined{const part=extendedComponent(id);if(!part)return;for(const h of [part.glyph,...part.variants,...(componentById.get(id)?.aliases??[])]){const audio=characterPronunciation(h,locale);if(audio)return audio}}
-export type DictionaryEntry={text:string;pinyin:string;meaning:string;word?:CloudWord;character?:string;audio?:Pronunciation};
+export type DictionaryEntry={phrase?:boolean;text:string;pinyin:string;meaning:string;word?:CloudWord;character?:string;audio?:Pronunciation};
 export type StudyDictionary=Map<string,DictionaryEntry>;
 export function studyDictionary(locale:Locale):StudyDictionary{
  const dictionary:StudyDictionary=new Map();
@@ -35,7 +35,7 @@ export function studyDictionary(locale:Locale):StudyDictionary{
  for(const word of cloudWords(locale)){const existing=dictionary.get(word.hanzi);if(existing?.word)continue;dictionary.set(word.hanzi,{text:word.hanzi,pinyin:word.pinyin,meaning:word.meaning,word,character:Array.from(word.hanzi).length===1?word.hanzi:undefined,audio:wordPronunciation(word)})}
  return dictionary;
 }
-export function dictionaryTokens(text:string,dictionary:StudyDictionary){const tokens:{text:string;chinese:boolean}[]=[];let pos=0;const max=Math.max(1,...Array.from(dictionary.keys(),s=>s.length));while(pos<text.length){const point=String.fromCodePoint(text.codePointAt(pos)!);if(!/[\p{Script=Han}]/u.test(point)){const last=tokens.at(-1);if(last&&!last.chinese)last.text+=point;else tokens.push({text:point,chinese:false});pos+=point.length;continue}let found='';for(let length=Math.min(max,text.length-pos);length>0;length--){const candidate=text.slice(pos,pos+length);if(dictionary.has(candidate)){found=candidate;break}}const token=found||point;tokens.push({text:token,chinese:true});pos+=token.length}return tokens}
+export function dictionaryTokens(text:string,dictionary:StudyDictionary){const tokens:{text:string;chinese:boolean}[]=[];let pos=0;const max=Math.max(1,...Array.from(dictionary.keys(),s=>s.length));while(pos<text.length){const point=String.fromCodePoint(text.codePointAt(pos)!);if(!/[\p{Script=Han}]/u.test(point)){const last=tokens.at(-1);if(last&&!last.chinese)last.text+=point;else tokens.push({text:point,chinese:false});pos+=point.length;continue}let found='';for(let length=Math.min(max,text.length-pos);length>0;length--){const candidate=text.slice(pos,pos+length);if(dictionary.has(candidate)&&!dictionary.get(candidate)?.phrase){found=candidate;break}}const token=found||point;tokens.push({text:token,chinese:true});pos+=token.length}return tokens}
 
 export type RecognitionQuestion={id:string;target:string;word:CloudWord;masked:string;choices:string[]};
 /** Short local recognition only: no server target IDs or independent-recall grades. */

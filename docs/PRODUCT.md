@@ -158,3 +158,19 @@ Every term/example uses the shared dictionary and exact-text Xiaoxiao audio. Wri
 Seven context comparisons resolve actual stored examples in lessons 3–5, with pinyin, translation and a link back to the original lesson. These are context reminders, not automatic mastery scores. Seven expression builders record supported practice. 156 reading/listening checks preserve drafts and hints while swiping, hide pinyin (and Chinese text for listening) until help/reveal, and use the existing account-scoped course store/API. Only independent checks feed FSRS. Due and difficult-item queues are available in the lesson overview. Guest results remain on the device. The existing lessons and all Atlas layouts are retained.
 
 Grammar explanations are newly written for the supplied examples; the quantity/degree distinction was checked against Mango Languages, “How to use small quantity words in Mandarin Chinese?” (Grace Zhang): https://www.mangolanguages.com/resources/learn/grammar/mandarin-chinese/how-to-use-small-quantity-words-in-mandarin-chinese . Teacher/source packet remains authority for the classroom selection; no claim of a complete HSK syllabus. Physical iPad/Pencil acceptance remains a device check, distinct from browser and pointer-policy verification.
+
+## Shared text details and usage examples
+
+The shared dictionary follows sentence → words → individual characters. Expression
+panels show annotated character rows immediately, with reading and meaning, and
+context-specific notes for 点/儿 in 一点儿 and 有点儿. Each deeper selection offers
+Back navigation; the current expression is highlighted rather than reopening
+itself in its own examples. The same panel serves Atlas, lesson context and the
+site-wide text lookup. Unknown separate meanings remain explicit.
+
+Lesson 06 shows up to two usage sentences beside each expression by default;
+Show sentence examples hides or restores them. All 60 expressions have Chinese,
+pinyin and EN/FR/RU/TR examples, reusing authored course/HSK sentences and 19
+additional teaching examples in `data/lesson06/usage-examples.json`. Audio appears
+only where a bundled recording exists. Looking up text never awards recall credit;
+independent grammar answers keep lookup blocked until a hint or saved feedback.

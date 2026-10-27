@@ -11,7 +11,7 @@ const result=await build({stdin:{contents:`
  const dictionary=studyDictionary('en');
  for(const v of lesson05Terms)dictionary.set(v.hanzi,{...dictionary.get(v.hanzi),text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning.en,audio:{text:v.hanzi,pinyin:v.pinyin,context:false,source:'/course05/audio/course05-'+v.id+'-word.mp3'}});
  export const words=text=>renderToStaticMarkup(h(DictionaryWords,{text,dictionary,onLookup:()=>{}}));
- export const definition=text=>renderToStaticMarkup(h(StudyDictionaryDialog,{entry:dictionary.get(text),dialog:createRef(),opener:createRef(),headingId:'lesson-word',onClose:()=>{},onLookup:()=>{},speaker:recording=>h(DictionaryAudio,{recording,playing:null,onPlay:()=>{}})}));
+ export const definition=text=>renderToStaticMarkup(h(StudyDictionaryDialog,{entry:dictionary.get(text),dictionary,dialog:createRef(),opener:createRef(),headingId:'lesson-word',onClose:()=>{},onLookup:()=>{},speaker:recording=>h(DictionaryAudio,{recording,playing:null,onPlay:()=>{}})}));
  `,resolveDir:process.cwd(),loader:'tsx'},bundle:true,format:'cjs',platform:'node',write:false,loader:{'.css':'empty'},logLevel:'silent'});
 const module={exports:{}};new Function('require','module','exports',result.outputFiles[0].text)(createRequire(import.meta.url),module,module.exports);
 const m=module.exports;
@@ -22,12 +22,12 @@ test('Lesson sentence exposes individual word buttons rather than one sentence a
 });
 test('The shared Atlas definition lets the learner inspect every character of a lesson expression',()=>{
  const html=m.definition('好久不见');
- assert.match(html,/aria-labelledby="lesson-word"/);assert.match(html,/long time no see/);assert.match(html,/Characters/);
- for(const ch of ['好','久','不','见'])assert.match(html,new RegExp('>'+ch+'</button>'));
+ assert.match(html,/aria-labelledby="lesson-word"/);assert.match(html,/long time no see/);assert.match(html,/Inside this expression/);
+ for(const ch of ['好','久','不','见'])assert.match(html,new RegExp('>'+ch+'</strong>'));
  assert.match(html,/Whole word: 好久不见/);
 });
 test('A selected character shows its own reading and pronunciation instead of retaining the full expression',()=>{
- const html=m.definition('久');assert.match(html,/jiǔ/);assert.match(html,/a long time/);assert.match(html,/Whole word: 久/);assert.doesNotMatch(html,/好久不见/);
+ const html=m.definition('久');assert.match(html,/jiǔ/);assert.match(html,/a long time/);assert.match(html,/Whole word: 久/);assert.doesNotMatch(html,/<h2[^>]*>好久不见<\/h2>/);
 });
 test('Every Lesson 5 writing character has adjacent reading and meaning, including source-backed additions',async()=>{
  const result=await build({stdin:{contents:`import {createElement as h} from 'react';import {renderToStaticMarkup} from 'react-dom/server';import {WritingCharacterContext} from './app/writing-context';import {lesson05All} from './app/lesson05-data';export const contexts=[...new Set(lesson05All.flatMap(v=>Array.from(v.hanzi).filter(c=>/[\\u3400-\\u9fff]/u.test(c))))].map(ch=>({ch,html:renderToStaticMarkup(h(WritingCharacterContext,{character:ch}))}));`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,format:'cjs',platform:'node',write:false,loader:{'.css':'empty'},logLevel:'silent'});

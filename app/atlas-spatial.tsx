@@ -9,7 +9,7 @@ import {atlasByHanzi} from './atlas-model';
 import {cloudRelation} from './atlas-cloud-connections';
 import CloudHighlight from './atlas-cloud-highlight';
 import {playRecording,releaseRecording} from './audio';
-import {characterPronunciation,componentPronunciation,sentencePronunciation,spatialCards,spatialNext,spatialPage,recognitionQuestions,studyDictionary,wordPronunciation,type CardMode,type DictionaryEntry,type Pronunciation,type SpatialCharacter} from './atlas-spatial-model';
+import {characterPronunciation,componentPronunciation,sentencePronunciation,spatialCards,spatialNext,spatialPage,recognitionQuestions,wordPronunciation,type CardMode,type DictionaryEntry,type Pronunciation,type SpatialCharacter} from './atlas-spatial-model';
 import AtlasRecognition from './atlas-recognition';
 import RecognitionDashboard from './recognition-dashboard';
 import {recognitionSummary,recognitionReviewQuestions,type PracticeQuestion} from './recognition-history';
@@ -17,12 +17,13 @@ import type {useRecognitionProgress} from './recognition-store';
 import AtlasFamilyDirectory from './atlas-family-directory';
 import {useSpatialMotion} from './atlas-spatial-motion';
 import {useDeckMotion} from './atlas-deck-motion';
+import {appStudyDictionary} from './study-lookup-model';
 import './atlas-spatial.css';
 import {DictionaryWords,DictionaryAudio,StudyDictionaryDialog} from './study-dictionary';
 type Props={family:SpatialCharacter[];total:number;hanzi:string;component:string;familyLabel:string;mode:CardMode;word?:CloudWord;words:CloudWord[];onMode:(mode:CardMode)=>void;onCharacter:(h:string)=>void;onWord:(word:CloudWord)=>void;onWrite:(trigger:HTMLButtonElement)=>void;canWrite:boolean;notify:(message:string)=>void;collection:'library'|'atlas';level:'all'|1|2|3;relation:'all'|'meaning'|'sound'|'shape';counts:{meaning:number;sound:number;shape:number};onRelation:(relation:'all'|'meaning'|'sound'|'shape')=>void;onHskFamily:(id?:string)=>void;recognition:ReturnType<typeof useRecognitionProgress>;navigationRevision:number;owner:string|null;onReviewStart:()=>void;onReviewContext:(question:PracticeQuestion)=>void;onReviewEnd:(restore:boolean)=>void;parts:ReactNode};
 export default function AtlasSpatial(p:Props){
  const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>(withTurkish({en,fr,ru}))[locale];
- const dictionary=useMemo(()=>studyDictionary(locale),[locale]);
+ const dictionary=useMemo(()=>appStudyDictionary(locale),[locale]);
  const selectedIndex=p.family.findIndex(ch=>ch.hanzi===p.hanzi);
  const [session,setSession]=useState<{id:string;kind:'family'|'difficult'|'due';questions:PracticeQuestion[];initialIndex:number}|null>(null),[directoryOpen,setDirectoryOpen]=useState(false),[now,setNow]=useState(()=>Date.now());
  useEffect(()=>{setSession(null);p.onReviewEnd(false)},[p.navigationRevision]);
@@ -100,6 +101,6 @@ export default function AtlasSpatial(p:Props){
   </section>
   <details className="sp-parts"><summary>{c('Parts & sources','Composants et sources','Части и источники')}</summary>{p.parts}</details></>}
   <dialog className="sp-directory" ref={directory} aria-labelledby="sp-directory-title" onCancel={e=>{e.preventDefault();closeDirectory()}} onClick={e=>{if(e.target===directory.current){const r=directory.current.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeDirectory()}}}>{directoryOpen&&<AtlasFamilyDirectory onClose={closeDirectory} onSelect={id=>{closeDirectory();setPracticing(false);p.onHskFamily(id)}}/>}</dialog>
-  <StudyDictionaryDialog entry={entry} dialog={dialog} opener={opener} onClose={closeDictionary} onLookup={lookup} speaker={speaker} onExplore={entry=>{closeDictionary();if(entry.word)p.onWord(entry.word);else if(entry.character)p.onCharacter(entry.character)}}/>
+  <StudyDictionaryDialog dictionary={dictionary} entry={entry} dialog={dialog} opener={opener} onClose={closeDictionary} onLookup={lookup} speaker={speaker} onExplore={entry=>{closeDictionary();if(entry.word)p.onWord(entry.word);else if(entry.character)p.onCharacter(entry.character)}}/>
  </div>
 }

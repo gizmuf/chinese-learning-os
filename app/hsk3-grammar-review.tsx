@@ -37,7 +37,7 @@ export default function GrammarReview({owner,onBack}:{owner:string|null;onBack:(
   {!queue?<><p>{t.due}: {available.due.length} · {t.new}: {available.unseen.length}</p>
    <button disabled={!progress.ready||!available.due.length} onClick={()=>start(available.due.map(q=>q.ex.id))}>{t.start}</button>
    <button disabled={!progress.ready||!available.unseen.length} onClick={()=>start(available.unseen.slice(0,10).map(q=>q.ex.id))}>{t.learn}</button>
-   {!available.due.length&&<p>{t.empty}</p>}</>:!current?<><p role="status">{t.finish}</p><button onClick={()=>setQueue(null)}>{t.next}</button></>:<article className="grammar-card">
+   {!available.due.length&&<p>{t.empty}</p>}</>:!current?<><p role="status">{t.finish}</p><button onClick={()=>setQueue(null)}>{t.next}</button></>:<article className="grammar-card" data-study-assessment={result?'revealed':hint?'supported':'blocked'}>
    <p>{index+1} / {queue.length}</p><p>{current.ex.prompt[locale]}</p><h3 className="grammar-question" lang="zh-Hans">{current.ex.sentence}</h3>
    <div className="grammar-options">{current.ex.options.map((option,i)=><button key={i} lang="zh-Hans" aria-pressed={picked===i} disabled={saving||!!result||error} onClick={()=>setPicked(i)}>{option}</button>)}</div>
    {!result&&!hint&&<button disabled={saving||error} onClick={()=>{assisted.current=true;setHint(true);}}>{t.hint}</button>}
