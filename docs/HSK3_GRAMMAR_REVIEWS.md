@@ -69,9 +69,13 @@ stale-owner rejection, and supported-result roundtrips.
 
 ## Rollout review — 27 October 2026
 
-The patch was reviewed against the current Sites source at `2184bda`. Repeated
-validation passed: 210 tests, TypeScript checking, the production build, and 8
-grammar plus 38 course API checks against an isolated local Worker/D1. The local
+The patch was reviewed against Sites source `2184bda`, then integrated with the
+newly published Lesson 06 source `2128039`. The shared event registry retains both
+Lesson 06 and grammar IDs, including supported-only scoring for Lesson 06 builders.
+The integrated suite passed 215 tests, TypeScript checking, the production build
+and 8 grammar plus 45 course API checks against isolated local D1. The first
+integrated API run timed out on an anonymous request; a full repeat against a
+fresh local Worker/D1 passed all 53 API checks. The local
 API runner now invokes `python3` so it also runs on this Mac without a `python`
 alias.
 
