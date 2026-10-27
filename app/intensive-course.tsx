@@ -1,4 +1,5 @@
 "use client";
+import {useDictionaryAssistance} from "./study-lookup";
 import {withTurkish} from "./turkish";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -830,6 +831,7 @@ function CoursePractice({
   const [picked, setPicked] = useState<string[]>([]);
   const [checked, setChecked] = useState<boolean | null>(null);
   const [assisted, setAssisted] = useState(false);
+  const dictionaryHelp=useDictionaryAssistance(()=>setAssisted(true));
   const [saving, setSaving] = useState(false);
   const [played, setPlayed] = useState(false);
   const [retry, setRetry] = useState(0);
@@ -920,7 +922,7 @@ function CoursePractice({
       </section>
     );
   return (
-    <section className="panel course-exercise">
+    <section ref={dictionaryHelp} data-study-assessment={checked!==null?"complete":"supported"} className="panel course-exercise">
       <div className="section-top">
         <span className="eyebrow">
           {topicInfo[exercise.topic].title[locale]}

@@ -58,7 +58,7 @@ export default function AtlasListening({events,ready,record,notify}:{events:Atla
   finally{lock.current=false;if(mounted.current)setSaving(false);}
  }
  if(done)return <section className="panel atlas-quiz-complete"><Check size={32}/><h2>{c("summary")}</h2><p>{totals.score}/{tasks.length} {c("correct")}</p><p>{totals.independent} {c("independent")}</p><p>{totals.answered}/{tasks.length} {c("answered")} · {tasks.length-totals.answered} {c("unanswered")}</p>{totals.answered<tasks.length&&<button className="secondary" onClick={()=>{setIndex(answers.findIndex(a=>a.result===null));setDone(false);}}>{c("return")}</button>}<button className="primary" onClick={reset}>{c("restart")}</button></section>;
- return <section className="panel atlas-quiz" {...swipe} aria-label={t("Listening")}>
+ return <section data-study-assessment={answer.result!==null?"complete":"blocked"} className="panel atlas-quiz" {...swipe} aria-label={t("Listening")}>
   <p className="eyebrow">{c(kind)}</p><div className="atlas-session-nav"><button className="text-button" disabled={saving||index===0} aria-label={t("Previous activity")} onClick={()=>go(-1)}><ArrowLeft size={16}/>{t("Previous")}</button><span>{index+1}/{tasks.length}</span><button className="text-button" disabled={saving||index===tasks.length-1} aria-label={t("Next activity")} onClick={()=>go(1)}>{t("Next")}<ArrowRight size={16}/></button></div>
   <h2>{c("question")}</h2><p>{c("instruction")}</p><p className="atlas-swipe-note">{c("swipe")}</p>
   <button className="primary atlas-listen" disabled={saving} onClick={play}><Volume2 size={24}/>{c("play")}</button>

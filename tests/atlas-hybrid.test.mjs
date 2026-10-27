@@ -67,3 +67,9 @@ test('Hybrid swipe changes pages only for a deliberate horizontal gesture',()=>{
  assert.equal(m.hybridSwipe(-60,4),1);assert.equal(m.hybridSwipe(60,-4),-1);
  for(const [dx,dy] of [[43,0],[0,90],[50,70],[20,5]])assert.equal(m.hybridSwipe(dx,dy),0);
 });
+
+test('All HSK 1–3 map characters expose pinyin; component readings distinguish phonetic readings from shapes',async()=>{
+ const r=await build({entryPoints:['app/atlas-hybrid-model.ts'],bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent'});const data=await import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));
+ const words=data.hybridWords('scope','学','en',3),inventory=data.hybridInventory(words,'en');assert.ok(words.length>=1000);assert.equal(inventory.characters.length,new Set(words.flatMap(word=>Array.from(word.hanzi).filter(data.isHanzi))).size);assert.deepEqual(inventory.characters.filter(c=>!c.pinyin.trim()).map(c=>c.hanzi),[]);
+ assert.equal(data.hybridComponentReading('氵'),'shuǐ');assert.equal(data.hybridComponentReading('亻'),'rén');assert.equal(data.hybridComponentReading('扌'),'shǒu');assert.equal(data.hybridComponentReading('子'),'zǐ');assert.equal(data.hybridComponentReading('⺍'),'');assert.ok(data.hybridTextReading('学生').includes('xué'));
+});

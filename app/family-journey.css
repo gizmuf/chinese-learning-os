@@ -14,3 +14,5 @@
 .family-journey .fj-end{display:block;text-align:left}.family-journey .fj-end>button{white-space:normal}
 .family-journey .fj-controls>label{min-width:0;max-width:100%}.family-journey .fj-controls select{min-width:0;width:100%}.family-journey .fj-heading>div{min-width:0}.family-journey .fj-heading h2{overflow-wrap:anywhere}
 .layout-journey>.cloud-heading{display:none}.layout-journey .cloud-view-switch{margin-bottom:12px}.layout-journey .family-journey{margin-top:0;padding-top:18px}.family-journey .fj-heading{margin-bottom:10px}.family-journey .fj-tracks{margin:12px 0 5px}.family-journey .fj-directory{margin-bottom:12px}.family-journey .fj-group:first-of-type{margin-top:12px}.family-journey .fj-open{min-height:48px;padding-block:7px}
+
+.family-journey .fj-column-labels{padding-right:104px}.family-journey .fj-row>.study-lookup-button{padding:6px;min-width:36px;width:36px;border:0;background:transparent}.family-journey .fj-row>.study-lookup-button:hover{background:var(--fj-wash)}@media(max-width:600px){.family-journey .fj-column-labels{padding-right:93px}}

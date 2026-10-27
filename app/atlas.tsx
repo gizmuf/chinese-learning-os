@@ -25,6 +25,7 @@ import {
   swipeStep,
   seededQuestion,
 } from "./atlas-session";
+import {useDictionaryAssistance} from "./study-lookup";
 import { useI18n } from "./i18n";
 import { characters, groups, type AtlasCharacter } from "./atlas-data";
 import {
@@ -1141,6 +1142,7 @@ function AtlasQuiz({
   );
   const item = atlasItem(c, locale);
   const assisted = guided || hint || retry;
+  const dictionaryHelp=useDictionaryAssistance(()=>update({hint:true}));
   const { score, independent, answered } = sessionTotals(answers);
   const missed = answers.filter((a) => a.result === false);
   function update(patch: Partial<ReturnType<typeof emptyAnswer>>) {
@@ -1229,6 +1231,7 @@ function AtlasQuiz({
     );
   return (
     <section
+      ref={dictionaryHelp} data-study-assessment={result!==null?"complete":"supported"}
       className="panel atlas-quiz"
       aria-label={t("Atlas practice session")}
       onPointerDown={(e) => {

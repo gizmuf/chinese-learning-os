@@ -1,0 +1,4846 @@
+{
+  "source": "https://github.com/skishore/makemeahanzi",
+  "license": "LGPL-3.0; see public/licenses/hanzi-structure-*",
+  "characters": [
+    {
+      "text": "一",
+      "pinyin": "yī",
+      "meaning": "one; a, an; alone"
+    },
+    {
+      "text": "七",
+      "pinyin": "qī",
+      "meaning": "seven"
+    },
+    {
+      "text": "万",
+      "pinyin": "wàn",
+      "meaning": "ten thousand; innumerable"
+    },
+    {
+      "text": "丈",
+      "pinyin": "zhàng",
+      "meaning": "gentleman, man, husband; unit of length equal to 3.3 meters"
+    },
+    {
+      "text": "三",
+      "pinyin": "sān",
+      "meaning": "three"
+    },
+    {
+      "text": "上",
+      "pinyin": "shàng",
+      "meaning": "above, on top, superior; to go up; to attend; previous"
+    },
+    {
+      "text": "下",
+      "pinyin": "xià",
+      "meaning": "below, underneath; inferior; to bring down; next"
+    },
+    {
+      "text": "不",
+      "pinyin": "bù",
+      "meaning": "no, not, un-; negative prefix"
+    },
+    {
+      "text": "专",
+      "pinyin": "zhuān",
+      "meaning": "concentrated, specialized; to monopolize"
+    },
+    {
+      "text": "且",
+      "pinyin": "qiě",
+      "meaning": "moreover, also (post-subject); about to, will soon (pre-verb)"
+    },
+    {
+      "text": "世",
+      "pinyin": "shì",
+      "meaning": "generation, era, age; world"
+    },
+    {
+      "text": "业",
+      "pinyin": "yè",
+      "meaning": "business, profession; to study, to work"
+    },
+    {
+      "text": "丛",
+      "pinyin": "cóng",
+      "meaning": "bush, shrub; thicket; collection"
+    },
+    {
+      "text": "东",
+      "pinyin": "dōng",
+      "meaning": "east, eastern, eastward"
+    },
+    {
+      "text": "丢",
+      "pinyin": "diū",
+      "meaning": "to lose; to discard"
+    },
+    {
+      "text": "两",
+      "pinyin": "liǎng",
+      "meaning": "two, both, pair, couple; ounce"
+    },
+    {
+      "text": "个",
+      "pinyin": "gè",
+      "meaning": "this, that; single; measure word for individuals"
+    },
+    {
+      "text": "中",
+      "pinyin": "zhōng",
+      "meaning": "central; center, middle; amidst; to hit (target), to attain; China; Chinese"
+    },
+    {
+      "text": "临",
+      "pinyin": "lín",
+      "meaning": "to draw near, to approach; to descend"
+    },
+    {
+      "text": "为",
+      "pinyin": "wèi",
+      "meaning": "to do, to act; to handle, to govern; to be"
+    },
+    {
+      "text": "主",
+      "pinyin": "zhǔ",
+      "meaning": "to own; to host; master; host; lord"
+    },
+    {
+      "text": "丽",
+      "pinyin": "lì",
+      "meaning": "beautiful, elegant, magnificent"
+    },
+    {
+      "text": "举",
+      "pinyin": "jǔ",
+      "meaning": "to raise; to recommend; to praise"
+    },
+    {
+      "text": "久",
+      "pinyin": "jiǔ",
+      "meaning": "long ago; a long time"
+    },
+    {
+      "text": "么",
+      "pinyin": "me",
+      "meaning": "interrogative particle"
+    },
+    {
+      "text": "之",
+      "pinyin": "zhī",
+      "meaning": "marks preceding phrase as modifier of following phrase; it, him her, them; to go to"
+    },
+    {
+      "text": "乎",
+      "pinyin": "hū",
+      "meaning": "interrogative or exclamatory final particle"
+    },
+    {
+      "text": "乐",
+      "pinyin": "lè",
+      "meaning": "cheerful, happy, laughing; music"
+    },
+    {
+      "text": "乒",
+      "pinyin": "pīng",
+      "meaning": "used with pong for ping pong"
+    },
+    {
+      "text": "乓",
+      "pinyin": "pāng",
+      "meaning": "used with ping for ping pong"
+    },
+    {
+      "text": "九",
+      "pinyin": "jiǔ",
+      "meaning": "nine"
+    },
+    {
+      "text": "也",
+      "pinyin": "yě",
+      "meaning": "also, too"
+    },
+    {
+      "text": "习",
+      "pinyin": "xí",
+      "meaning": "to study, to practice; habit"
+    },
+    {
+      "text": "书",
+      "pinyin": "shū",
+      "meaning": "book, letter, document; writing"
+    },
+    {
+      "text": "买",
+      "pinyin": "mǎi",
+      "meaning": "to buy, to purchase; to bribe, to persuade"
+    },
+    {
+      "text": "了",
+      "pinyin": "le / liǎo",
+      "meaning": "clear; to finish; particle of completed action"
+    },
+    {
+      "text": "事",
+      "pinyin": "shì",
+      "meaning": "affair, matter, business; to serve; accident, incident"
+    },
+    {
+      "text": "二",
+      "pinyin": "èr",
+      "meaning": "two; twice"
+    },
+    {
+      "text": "于",
+      "pinyin": "yú",
+      "meaning": "at, in, on; to, from; alas!"
+    },
+    {
+      "text": "五",
+      "pinyin": "wǔ",
+      "meaning": "five; surname"
+    },
+    {
+      "text": "些",
+      "pinyin": "xiē",
+      "meaning": "little, few; rather, somewhat"
+    },
+    {
+      "text": "交",
+      "pinyin": "jiāo",
+      "meaning": "to connect; to deliver, to exchange; to intersect; to mix"
+    },
+    {
+      "text": "享",
+      "pinyin": "xiǎng",
+      "meaning": "to share; to enjoy; to benefit from"
+    },
+    {
+      "text": "京",
+      "pinyin": "jīng",
+      "meaning": "capital city"
+    },
+    {
+      "text": "亮",
+      "pinyin": "liàng",
+      "meaning": "bright, brilliant, radiant, light"
+    },
+    {
+      "text": "亲",
+      "pinyin": "qīn",
+      "meaning": "relatives, parents; intimate; the hazelnut tree"
+    },
+    {
+      "text": "人",
+      "pinyin": "rén",
+      "meaning": "man, person; people"
+    },
+    {
+      "text": "亻",
+      "pinyin": "rén",
+      "meaning": "man, person; people"
+    },
+    {
+      "text": "什",
+      "pinyin": "shén",
+      "meaning": "what? mixed, miscellaneous"
+    },
+    {
+      "text": "今",
+      "pinyin": "jīn",
+      "meaning": "modern, current; today, now"
+    },
+    {
+      "text": "介",
+      "pinyin": "jiè",
+      "meaning": "agent, go-between, intermediary; to introduce; shell, armor"
+    },
+    {
+      "text": "从",
+      "pinyin": "cóng",
+      "meaning": "from, by, since, whence, through"
+    },
+    {
+      "text": "他",
+      "pinyin": "tā",
+      "meaning": "other, another; he, she, it"
+    },
+    {
+      "text": "代",
+      "pinyin": "dài",
+      "meaning": "era, generation; to substitute for, to replace"
+    },
+    {
+      "text": "以",
+      "pinyin": "yǐ",
+      "meaning": "according to; so as to; because of; then"
+    },
+    {
+      "text": "们",
+      "pinyin": "men",
+      "meaning": "plural marker for pronouns and some nouns"
+    },
+    {
+      "text": "件",
+      "pinyin": "jiàn",
+      "meaning": "item, matter; component, part; measure word for events"
+    },
+    {
+      "text": "价",
+      "pinyin": "jià",
+      "meaning": "price, value"
+    },
+    {
+      "text": "份",
+      "pinyin": "fèn",
+      "meaning": "job, part, role; duty"
+    },
+    {
+      "text": "休",
+      "pinyin": "xiū",
+      "meaning": "to rest; to stop; to retire"
+    },
+    {
+      "text": "众",
+      "pinyin": "zhòng",
+      "meaning": "multitude, crowd; masses, public"
+    },
+    {
+      "text": "优",
+      "pinyin": "yōu",
+      "meaning": "superior; elegant"
+    },
+    {
+      "text": "会",
+      "pinyin": "huì",
+      "meaning": "to assemble, to meet; meeting; association, group"
+    },
+    {
+      "text": "伞",
+      "pinyin": "sǎn",
+      "meaning": "umbrella, parasol, parachute"
+    },
+    {
+      "text": "传",
+      "pinyin": "chuán",
+      "meaning": "to pass on; to propagate; to transmit; summons"
+    },
+    {
+      "text": "但",
+      "pinyin": "dàn",
+      "meaning": "only; but, however, yet, still"
+    },
+    {
+      "text": "位",
+      "pinyin": "wèi",
+      "meaning": "seat, throne; rank, status; position, location"
+    },
+    {
+      "text": "住",
+      "pinyin": "zhù",
+      "meaning": "to reside, to live at, to dwell, to lodge; to stop"
+    },
+    {
+      "text": "体",
+      "pinyin": "tǐ",
+      "meaning": "body; group, class; form, style, system"
+    },
+    {
+      "text": "作",
+      "pinyin": "zuò",
+      "meaning": "to make; to write, to compose; to act, to perform"
+    },
+    {
+      "text": "你",
+      "pinyin": "nǐ",
+      "meaning": "you, second person pronoun"
+    },
+    {
+      "text": "例",
+      "pinyin": "lì",
+      "meaning": "precedent, example, case; regulation"
+    },
+    {
+      "text": "便",
+      "pinyin": "biàn",
+      "meaning": "easy, convenient; expedient"
+    },
+    {
+      "text": "保",
+      "pinyin": "bǎo",
+      "meaning": "to safeguard, to protect, to defend, to care for"
+    },
+    {
+      "text": "信",
+      "pinyin": "xìn",
+      "meaning": "to trust, to believe; letter, sign"
+    },
+    {
+      "text": "俩",
+      "pinyin": "liǎ",
+      "meaning": "two, a pair, a couple"
+    },
+    {
+      "text": "候",
+      "pinyin": "hòu",
+      "meaning": "to wait, to expect; to visit; to greet"
+    },
+    {
+      "text": "借",
+      "pinyin": "jiè",
+      "meaning": "to borrow; to lend; excuse, pretext"
+    },
+    {
+      "text": "值",
+      "pinyin": "zhí",
+      "meaning": "price, value, worth"
+    },
+    {
+      "text": "假",
+      "pinyin": "jiǎ",
+      "meaning": "fake, false, deceitful; vacation"
+    },
+    {
+      "text": "做",
+      "pinyin": "zuò",
+      "meaning": "to work, to make; to act"
+    },
+    {
+      "text": "停",
+      "pinyin": "tíng",
+      "meaning": "to suspend, to halt, to delay; suitable"
+    },
+    {
+      "text": "健",
+      "pinyin": "jiàn",
+      "meaning": "strong, robust, healthy; strength"
+    },
+    {
+      "text": "像",
+      "pinyin": "xiàng",
+      "meaning": "picture, image, figure; to resemble"
+    },
+    {
+      "text": "儿",
+      "pinyin": "ér",
+      "meaning": "son, child"
+    },
+    {
+      "text": "元",
+      "pinyin": "yuán",
+      "meaning": "first; dollar; origin; head"
+    },
+    {
+      "text": "兄",
+      "pinyin": "xiōng",
+      "meaning": "elder brother"
+    },
+    {
+      "text": "充",
+      "pinyin": "chōng",
+      "meaning": "to fill, to supply; to be full"
+    },
+    {
+      "text": "先",
+      "pinyin": "xiān",
+      "meaning": "first, former, previous"
+    },
+    {
+      "text": "光",
+      "pinyin": "guāng",
+      "meaning": "light; bright, brilliant; only, merely"
+    },
+    {
+      "text": "免",
+      "pinyin": "miǎn",
+      "meaning": "to spare, to excuse from; to evade"
+    },
+    {
+      "text": "入",
+      "pinyin": "rù",
+      "meaning": "to enter, to come in; to join"
+    },
+    {
+      "text": "全",
+      "pinyin": "quán",
+      "meaning": "whole, entire, complete; to preserve"
+    },
+    {
+      "text": "八",
+      "pinyin": "bā",
+      "meaning": "eight; all around, all sides"
+    },
+    {
+      "text": "公",
+      "pinyin": "gōng",
+      "meaning": "fair, equitable; public; duke"
+    },
+    {
+      "text": "六",
+      "pinyin": "liù",
+      "meaning": "six"
+    },
+    {
+      "text": "共",
+      "pinyin": "gòng",
+      "meaning": "all, total; together; to share"
+    },
+    {
+      "text": "关",
+      "pinyin": "guān",
+      "meaning": "frontier pass; to close, to shut; relation"
+    },
+    {
+      "text": "兴",
+      "pinyin": "xìng",
+      "meaning": "to thrive, to prosper, to flourish"
+    },
+    {
+      "text": "其",
+      "pinyin": "qí",
+      "meaning": "his, her, its, their; that"
+    },
+    {
+      "text": "典",
+      "pinyin": "diǎn",
+      "meaning": "law, canon; scripture, classic; documentation"
+    },
+    {
+      "text": "养",
+      "pinyin": "yǎng",
+      "meaning": "to raise, to rear, to bring up; to support"
+    },
+    {
+      "text": "内",
+      "pinyin": "nèi",
+      "meaning": "inside"
+    },
+    {
+      "text": "再",
+      "pinyin": "zài",
+      "meaning": "again, twice, re-"
+    },
+    {
+      "text": "冒",
+      "pinyin": "mào",
+      "meaning": "to risk, to brave, to dare"
+    },
+    {
+      "text": "写",
+      "pinyin": "xiě",
+      "meaning": "to write; to draw, to sketch; to compose"
+    },
+    {
+      "text": "冬",
+      "pinyin": "dōng",
+      "meaning": "winter, 11th lunar month"
+    },
+    {
+      "text": "冰",
+      "pinyin": "bīng",
+      "meaning": "ice; ice-cold"
+    },
+    {
+      "text": "决",
+      "pinyin": "jué",
+      "meaning": "to decide, to determine, to judge"
+    },
+    {
+      "text": "况",
+      "pinyin": "kuàng",
+      "meaning": "condition, situation; furthermore"
+    },
+    {
+      "text": "冷",
+      "pinyin": "lěng",
+      "meaning": "cold, cool; lonely"
+    },
+    {
+      "text": "净",
+      "pinyin": "jìng",
+      "meaning": "clean, pure; to cleanse"
+    },
+    {
+      "text": "准",
+      "pinyin": "zhǔn",
+      "meaning": "standard, accurate; to permit, to approve, to allow"
+    },
+    {
+      "text": "凉",
+      "pinyin": "liáng",
+      "meaning": "cool, cold; disheartened"
+    },
+    {
+      "text": "凌",
+      "pinyin": "líng",
+      "meaning": "pure; virtuous; to insult; to maltreat"
+    },
+    {
+      "text": "几",
+      "pinyin": "jǐ",
+      "meaning": "small table; how many; a few, some"
+    },
+    {
+      "text": "出",
+      "pinyin": "chū",
+      "meaning": "to go out, to send out; stand; produce"
+    },
+    {
+      "text": "分",
+      "pinyin": "fēn",
+      "meaning": "to divide, to allocate; fraction; small unit of time or other quantity"
+    },
+    {
+      "text": "切",
+      "pinyin": "qiè",
+      "meaning": "to cut, to mince, to slice, to carve; close to; eager"
+    },
+    {
+      "text": "划",
+      "pinyin": "huà",
+      "meaning": "to row or paddle a boat; to scratch; to plan; profitable"
+    },
+    {
+      "text": "刚",
+      "pinyin": "gāng",
+      "meaning": "hard, strong, tough; just, barely"
+    },
+    {
+      "text": "创",
+      "pinyin": "chuàng",
+      "meaning": "to establish, to create; cut, wound, trauma"
+    },
+    {
+      "text": "初",
+      "pinyin": "chū",
+      "meaning": "beginning, initial, primary"
+    },
+    {
+      "text": "利",
+      "pinyin": "lì",
+      "meaning": "gains, advantage, profit, merit"
+    },
+    {
+      "text": "别",
+      "pinyin": "bié",
+      "meaning": "to separate, to distinguish, to classify; to leave; other; do not, must not"
+    },
+    {
+      "text": "刮",
+      "pinyin": "guā",
+      "meaning": "to shave; to scrape; to blow"
+    },
+    {
+      "text": "到",
+      "pinyin": "dào",
+      "meaning": "to go to, to arrive"
+    },
+    {
+      "text": "刷",
+      "pinyin": "shuā",
+      "meaning": "brush; to clean, to scrub"
+    },
+    {
+      "text": "刺",
+      "pinyin": "cì",
+      "meaning": "to stab; to prick, to irritate; to prod"
+    },
+    {
+      "text": "刻",
+      "pinyin": "kè",
+      "meaning": "to carve, to engrave; a quarter hour; a moment"
+    },
+    {
+      "text": "前",
+      "pinyin": "qián",
+      "meaning": "in front, forward; former, preceding"
+    },
+    {
+      "text": "剧",
+      "pinyin": "jù",
+      "meaning": "theatrical plays, opera, drama; severe, acute"
+    },
+    {
+      "text": "力",
+      "pinyin": "lì",
+      "meaning": "strength, power; capability, influence"
+    },
+    {
+      "text": "办",
+      "pinyin": "bàn",
+      "meaning": "to set up; to manage, to run; to deal with, to handle"
+    },
+    {
+      "text": "功",
+      "pinyin": "gōng",
+      "meaning": "achievement, good work; merit; service"
+    },
+    {
+      "text": "加",
+      "pinyin": "jiā",
+      "meaning": "to add to, to increase, to augment"
+    },
+    {
+      "text": "务",
+      "pinyin": "wù",
+      "meaning": "affairs, business; should; must"
+    },
+    {
+      "text": "动",
+      "pinyin": "dòng",
+      "meaning": "to move, to happen; movement, action"
+    },
+    {
+      "text": "助",
+      "pinyin": "zhù",
+      "meaning": "to help, to aid, to assist"
+    },
+    {
+      "text": "努",
+      "pinyin": "nǔ",
+      "meaning": "to exert, to strive, to make an effort; to pout"
+    },
+    {
+      "text": "勺",
+      "pinyin": "sháo",
+      "meaning": "spoon, ladle; unit of volume"
+    },
+    {
+      "text": "包",
+      "pinyin": "bāo",
+      "meaning": "wrap, pack, bundle; package"
+    },
+    {
+      "text": "化",
+      "pinyin": "huà",
+      "meaning": "to change, to convert, to reform; -ize"
+    },
+    {
+      "text": "北",
+      "pinyin": "běi",
+      "meaning": "north; northern; northward"
+    },
+    {
+      "text": "匙",
+      "pinyin": "chí / shī",
+      "meaning": "spoon; surname"
+    },
+    {
+      "text": "区",
+      "pinyin": "qū",
+      "meaning": "area, district, region, ward; surname"
+    },
+    {
+      "text": "医",
+      "pinyin": "yī",
+      "meaning": "to cure, to heal, to treat; doctor; medicine"
+    },
+    {
+      "text": "十",
+      "pinyin": "shí",
+      "meaning": "ten, tenth; complete; perfect"
+    },
+    {
+      "text": "千",
+      "pinyin": "qiān",
+      "meaning": "thousand; many, numerous; very"
+    },
+    {
+      "text": "升",
+      "pinyin": "shēng",
+      "meaning": "to advance; to arise; to hoist, to raise"
+    },
+    {
+      "text": "午",
+      "pinyin": "wǔ",
+      "meaning": "noon; 7th terrestrial branch"
+    },
+    {
+      "text": "半",
+      "pinyin": "bàn",
+      "meaning": "half; semi-, incomplete"
+    },
+    {
+      "text": "单",
+      "pinyin": "dān",
+      "meaning": "single, individual, only; lone"
+    },
+    {
+      "text": "卖",
+      "pinyin": "mài",
+      "meaning": "to sell; to betray; to show off"
+    },
+    {
+      "text": "南",
+      "pinyin": "nán",
+      "meaning": "south; southern; southward"
+    },
+    {
+      "text": "博",
+      "pinyin": "bó",
+      "meaning": "to gamble, to play games; to win; rich, plentiful, extensive; wide, broad"
+    },
+    {
+      "text": "卡",
+      "pinyin": "kǎ",
+      "meaning": "card, punch card; calorie"
+    },
+    {
+      "text": "卫",
+      "pinyin": "wèi",
+      "meaning": "to guard, to protect, to defend"
+    },
+    {
+      "text": "却",
+      "pinyin": "què",
+      "meaning": "still, but; decline; retreat"
+    },
+    {
+      "text": "卷",
+      "pinyin": "juǎn",
+      "meaning": "book, scroll, volume; curled up; to curl, to roll"
+    },
+    {
+      "text": "厅",
+      "pinyin": "tīng",
+      "meaning": "hall, central room"
+    },
+    {
+      "text": "历",
+      "pinyin": "lì",
+      "meaning": "history; calendar"
+    },
+    {
+      "text": "厉",
+      "pinyin": "lì",
+      "meaning": "whetstone; to grind, to sharpen, to whet"
+    },
+    {
+      "text": "厕",
+      "pinyin": "cè",
+      "meaning": "toilet, washroom; to mingle"
+    },
+    {
+      "text": "原",
+      "pinyin": "yuán",
+      "meaning": "source, origin, beginning"
+    },
+    {
+      "text": "厨",
+      "pinyin": "chú",
+      "meaning": "kitchen; closet, cupboard"
+    },
+    {
+      "text": "去",
+      "pinyin": "qù",
+      "meaning": "to go away, to leave, to depart"
+    },
+    {
+      "text": "参",
+      "pinyin": "cān",
+      "meaning": "to take part in, to intervene; ginseng"
+    },
+    {
+      "text": "又",
+      "pinyin": "yòu",
+      "meaning": "and, also, again, in addition"
+    },
+    {
+      "text": "友",
+      "pinyin": "yǒu",
+      "meaning": "friend, companion; fraternity"
+    },
+    {
+      "text": "双",
+      "pinyin": "shuāng",
+      "meaning": "pair, couple; both; measure word for things that come in pairs"
+    },
+    {
+      "text": "发",
+      "pinyin": "fā",
+      "meaning": "to issue, to dispatch, to send out; hair"
+    },
+    {
+      "text": "叔",
+      "pinyin": "shū",
+      "meaning": "uncle; father's younger brother"
+    },
+    {
+      "text": "受",
+      "pinyin": "shòu",
+      "meaning": "to receive, to get, to accept; to bear"
+    },
+    {
+      "text": "变",
+      "pinyin": "biàn",
+      "meaning": "to change, to transform, to alter; rebel"
+    },
+    {
+      "text": "叠",
+      "pinyin": "dié",
+      "meaning": "pile; layer; to fold up; to repeat, to duplicate"
+    },
+    {
+      "text": "口",
+      "pinyin": "kǒu",
+      "meaning": "mouth; entrance, gate, opening"
+    },
+    {
+      "text": "古",
+      "pinyin": "gǔ",
+      "meaning": "old, classic, ancient"
+    },
+    {
+      "text": "句",
+      "pinyin": "jù / gōu",
+      "meaning": "sentence, clause, phrase, paragraph; stanza"
+    },
+    {
+      "text": "只",
+      "pinyin": "zhī",
+      "meaning": "only, merely, just"
+    },
+    {
+      "text": "叫",
+      "pinyin": "jiào",
+      "meaning": "cry, shout; to call, to greet, to hail"
+    },
+    {
+      "text": "可",
+      "pinyin": "kě",
+      "meaning": "may, can, -able; possibly"
+    },
+    {
+      "text": "台",
+      "pinyin": "tái",
+      "meaning": "platform; unit; term of address"
+    },
+    {
+      "text": "史",
+      "pinyin": "shǐ",
+      "meaning": "history, chronicle, annals"
+    },
+    {
+      "text": "右",
+      "pinyin": "yòu",
+      "meaning": "right; right-wing"
+    },
+    {
+      "text": "叶",
+      "pinyin": "yè",
+      "meaning": "leaf, page; surname"
+    },
+    {
+      "text": "号",
+      "pinyin": "hào",
+      "meaning": "mark, sign; symbol; number; to call, to cry, to roar"
+    },
+    {
+      "text": "司",
+      "pinyin": "sī",
+      "meaning": "to take charge of, to control, to manage; officer"
+    },
+    {
+      "text": "吃",
+      "pinyin": "chī",
+      "meaning": "to eat; to drink; to suffer, to endure, to bear"
+    },
+    {
+      "text": "各",
+      "pinyin": "gè",
+      "meaning": "individual; each, every; all"
+    },
+    {
+      "text": "合",
+      "pinyin": "hé",
+      "meaning": "to combine, to join, to unite; to gather"
+    },
+    {
+      "text": "同",
+      "pinyin": "tóng",
+      "meaning": "same, similar; together with, alike"
+    },
+    {
+      "text": "名",
+      "pinyin": "míng",
+      "meaning": "name; position, rank, title"
+    },
+    {
+      "text": "后",
+      "pinyin": "hòu",
+      "meaning": "after; behind, rear; descendants"
+    },
+    {
+      "text": "向",
+      "pinyin": "xiàng",
+      "meaning": "towards; direction, trend"
+    },
+    {
+      "text": "吗",
+      "pinyin": "ma",
+      "meaning": "final interrogative particle"
+    },
+    {
+      "text": "吧",
+      "pinyin": "bā",
+      "meaning": "emphatic final particle"
+    },
+    {
+      "text": "听",
+      "pinyin": "tīng",
+      "meaning": "to hear, to listen; to understand; to obey"
+    },
+    {
+      "text": "吵",
+      "pinyin": "chǎo",
+      "meaning": "to argue, to dispute; to annoy, to disturb"
+    },
+    {
+      "text": "吸",
+      "pinyin": "xī",
+      "meaning": "to inhale, to suck in; to absorb; to attract"
+    },
+    {
+      "text": "告",
+      "pinyin": "gào",
+      "meaning": "to tell, to inform, to announce; to accuse"
+    },
+    {
+      "text": "员",
+      "pinyin": "yuán",
+      "meaning": "employee; member; personnel, staff"
+    },
+    {
+      "text": "呢",
+      "pinyin": "né / ne",
+      "meaning": "wool; interrogative or emphatic final particle"
+    },
+    {
+      "text": "周",
+      "pinyin": "zhōu",
+      "meaning": "Zhou dynasty; circumference"
+    },
+    {
+      "text": "味",
+      "pinyin": "wèi",
+      "meaning": "taste; smell, odor; delicacy"
+    },
+    {
+      "text": "呵",
+      "pinyin": "hē",
+      "meaning": "to scold; to yawn; the sound of someone laughing (when repeated)"
+    },
+    {
+      "text": "和",
+      "pinyin": "hé",
+      "meaning": "harmony, peace; calm, peaceful"
+    },
+    {
+      "text": "咖",
+      "pinyin": "kā",
+      "meaning": "coffee; used in transliterations"
+    },
+    {
+      "text": "咪",
+      "pinyin": "mī",
+      "meaning": "a cat's meow; a meter"
+    },
+    {
+      "text": "咱",
+      "pinyin": "zán",
+      "meaning": "we, us"
+    },
+    {
+      "text": "咸",
+      "pinyin": "xián",
+      "meaning": "all, together, united; salted"
+    },
+    {
+      "text": "哇",
+      "pinyin": "wa",
+      "meaning": "to vomit; an infant's cry"
+    },
+    {
+      "text": "哈",
+      "pinyin": "hā",
+      "meaning": "the sound of laughter"
+    },
+    {
+      "text": "响",
+      "pinyin": "xiǎng",
+      "meaning": "to make noise, to make sound; sound"
+    },
+    {
+      "text": "哥",
+      "pinyin": "gē",
+      "meaning": "elder brother"
+    },
+    {
+      "text": "哦",
+      "pinyin": "ó",
+      "meaning": "oh? really? is that so?"
+    },
+    {
+      "text": "哪",
+      "pinyin": "nǎ",
+      "meaning": "which? where? how?"
+    },
+    {
+      "text": "哭",
+      "pinyin": "kū",
+      "meaning": "to weep, to cry, to wail"
+    },
+    {
+      "text": "唱",
+      "pinyin": "chàng",
+      "meaning": "to sing, to chant, to call; ditty, song"
+    },
+    {
+      "text": "商",
+      "pinyin": "shāng",
+      "meaning": "commerce, business, trade"
+    },
+    {
+      "text": "啊",
+      "pinyin": "a",
+      "meaning": "ah, exclamatory particle"
+    },
+    {
+      "text": "啡",
+      "pinyin": "fēi",
+      "meaning": "coffee; morphine"
+    },
+    {
+      "text": "啤",
+      "pinyin": "pí",
+      "meaning": "beer"
+    },
+    {
+      "text": "啦",
+      "pinyin": "la",
+      "meaning": "final particle of an assertion"
+    },
+    {
+      "text": "喂",
+      "pinyin": "wèi",
+      "meaning": "interjection used to call attention"
+    },
+    {
+      "text": "喜",
+      "pinyin": "xǐ",
+      "meaning": "to love; to enjoy, to be happy; joyful, glad"
+    },
+    {
+      "text": "喝",
+      "pinyin": "hē",
+      "meaning": "to drink; to shout, to call out"
+    },
+    {
+      "text": "嗨",
+      "pinyin": "hāi",
+      "meaning": "an exclamation"
+    },
+    {
+      "text": "嗯",
+      "pinyin": "en",
+      "meaning": "interjection indicating agreement or appreciation"
+    },
+    {
+      "text": "嘴",
+      "pinyin": "zuǐ",
+      "meaning": "mouth, lips"
+    },
+    {
+      "text": "器",
+      "pinyin": "qì",
+      "meaning": "device, instrument, tool; receptacle, vessel"
+    },
+    {
+      "text": "四",
+      "pinyin": "sì",
+      "meaning": "four"
+    },
+    {
+      "text": "回",
+      "pinyin": "huí",
+      "meaning": "to return, to turn around; a time"
+    },
+    {
+      "text": "因",
+      "pinyin": "yīn",
+      "meaning": "cause, reason; by; because"
+    },
+    {
+      "text": "园",
+      "pinyin": "yuán",
+      "meaning": "garden, park; orchard"
+    },
+    {
+      "text": "围",
+      "pinyin": "wéi",
+      "meaning": "to surround, to encircle, to corral"
+    },
+    {
+      "text": "国",
+      "pinyin": "guó",
+      "meaning": "country, nation, state; national"
+    },
+    {
+      "text": "图",
+      "pinyin": "tú",
+      "meaning": "diagram, chart, map, picture; to plan"
+    },
+    {
+      "text": "圈",
+      "pinyin": "quān",
+      "meaning": "circle, ring, loop; to encircle"
+    },
+    {
+      "text": "土",
+      "pinyin": "tǔ",
+      "meaning": "soil, earth; items made of earth"
+    },
+    {
+      "text": "在",
+      "pinyin": "zài",
+      "meaning": "at, in, on; to exist; used to indicate the present progressive tense"
+    },
+    {
+      "text": "地",
+      "pinyin": "de",
+      "meaning": "earth, ground, soil; land, region; structural particle used before a verb"
+    },
+    {
+      "text": "场",
+      "pinyin": "chǎng",
+      "meaning": "field, open space; market, square; stage"
+    },
+    {
+      "text": "址",
+      "pinyin": "zhǐ",
+      "meaning": "location, site; the foundation of a house"
+    },
+    {
+      "text": "坏",
+      "pinyin": "huài",
+      "meaning": "bad, rotten, spoiled; to break down"
+    },
+    {
+      "text": "坐",
+      "pinyin": "zuò",
+      "meaning": "seat; to sit; to ride, to travel by"
+    },
+    {
+      "text": "块",
+      "pinyin": "kuài",
+      "meaning": "piece, lump, chunk; dollar; measure word for currency"
+    },
+    {
+      "text": "坚",
+      "pinyin": "jiān",
+      "meaning": "hard, strong; firm, resolute"
+    },
+    {
+      "text": "型",
+      "pinyin": "xíng",
+      "meaning": "pattern, model, type; mold; law"
+    },
+    {
+      "text": "城",
+      "pinyin": "chéng",
+      "meaning": "castle, city, town; municipality"
+    },
+    {
+      "text": "堂",
+      "pinyin": "táng",
+      "meaning": "hall, large room; government office; cousins"
+    },
+    {
+      "text": "填",
+      "pinyin": "tián",
+      "meaning": "to fill, to pad, to stuff"
+    },
+    {
+      "text": "境",
+      "pinyin": "jìng",
+      "meaning": "boundary, frontier; area, region"
+    },
+    {
+      "text": "墙",
+      "pinyin": "qiáng",
+      "meaning": "wall"
+    },
+    {
+      "text": "士",
+      "pinyin": "shì",
+      "meaning": "scholar, gentleman; soldier"
+    },
+    {
+      "text": "声",
+      "pinyin": "shēng",
+      "meaning": "sound, noise; voice, tone, music"
+    },
+    {
+      "text": "处",
+      "pinyin": "chù",
+      "meaning": "to reside at, to live in; place, locale; department"
+    },
+    {
+      "text": "备",
+      "pinyin": "bèi",
+      "meaning": "to prepare; to get ready, to equip; ready; perfect"
+    },
+    {
+      "text": "复",
+      "pinyin": "fù",
+      "meaning": "again, repeatedly; copy, duplicate; to restore, to return"
+    },
+    {
+      "text": "夏",
+      "pinyin": "xià",
+      "meaning": "summer; the Xia or Hsia dynasty"
+    },
+    {
+      "text": "夕",
+      "pinyin": "xī",
+      "meaning": "evening, night, dusk; slanted"
+    },
+    {
+      "text": "外",
+      "pinyin": "wài",
+      "meaning": "out, outside, external; foreign; in addition"
+    },
+    {
+      "text": "多",
+      "pinyin": "duō",
+      "meaning": "much, many, multi-; more than, over"
+    },
+    {
+      "text": "夜",
+      "pinyin": "yè",
+      "meaning": "night, dark; under cover of night"
+    },
+    {
+      "text": "够",
+      "pinyin": "gòu",
+      "meaning": "enough, adequate; to reach, to attain; to pass muster"
+    },
+    {
+      "text": "大",
+      "pinyin": "dà",
+      "meaning": "big, great, vast, high, deep"
+    },
+    {
+      "text": "天",
+      "pinyin": "tiān",
+      "meaning": "sky, heaven; god, celestial"
+    },
+    {
+      "text": "太",
+      "pinyin": "tài",
+      "meaning": "very, too much; big; extreme"
+    },
+    {
+      "text": "夫",
+      "pinyin": "fū",
+      "meaning": "man, husband; worker; those"
+    },
+    {
+      "text": "头",
+      "pinyin": "tóu",
+      "meaning": "head; chief, boss; first, top"
+    },
+    {
+      "text": "奇",
+      "pinyin": "qí",
+      "meaning": "strange, unusual, odd; uncanny, occult"
+    },
+    {
+      "text": "奋",
+      "pinyin": "fèn",
+      "meaning": "to strive, to exert effort; to arouse"
+    },
+    {
+      "text": "奖",
+      "pinyin": "jiǎng",
+      "meaning": "prize, reward; to award"
+    },
+    {
+      "text": "套",
+      "pinyin": "tào",
+      "meaning": "case, cover, envelope, wrapper"
+    },
+    {
+      "text": "女",
+      "pinyin": "nǚ",
+      "meaning": "woman, girl; female"
+    },
+    {
+      "text": "奶",
+      "pinyin": "nǎi",
+      "meaning": "milk; breasts; nurse, grandmother"
+    },
+    {
+      "text": "她",
+      "pinyin": "tā",
+      "meaning": "she, her"
+    },
+    {
+      "text": "好",
+      "pinyin": "hǎo",
+      "meaning": "good, excellent, fine; proper, suitable; well"
+    },
+    {
+      "text": "如",
+      "pinyin": "rú",
+      "meaning": "as, as if, like, such as, supposing"
+    },
+    {
+      "text": "妈",
+      "pinyin": "mā",
+      "meaning": "mother, mama"
+    },
+    {
+      "text": "妒",
+      "pinyin": "dù",
+      "meaning": "jealous, envious"
+    },
+    {
+      "text": "妹",
+      "pinyin": "mèi",
+      "meaning": "younger sister"
+    },
+    {
+      "text": "妻",
+      "pinyin": "qī",
+      "meaning": "wife"
+    },
+    {
+      "text": "始",
+      "pinyin": "shǐ",
+      "meaning": "to begin, to start; beginning"
+    },
+    {
+      "text": "姐",
+      "pinyin": "jiě",
+      "meaning": "elder sister; miss, young lady"
+    },
+    {
+      "text": "姓",
+      "pinyin": "xìng",
+      "meaning": "name, family name, surname; clan, people"
+    },
+    {
+      "text": "姨",
+      "pinyin": "yí",
+      "meaning": "aunt, mother's sister"
+    },
+    {
+      "text": "婆",
+      "pinyin": "pó",
+      "meaning": "old woman; grandmother"
+    },
+    {
+      "text": "婚",
+      "pinyin": "hūn",
+      "meaning": "to get married; marriage, wedding"
+    },
+    {
+      "text": "嫉",
+      "pinyin": "jí",
+      "meaning": "jealous, envious"
+    },
+    {
+      "text": "嫩",
+      "pinyin": "nèn",
+      "meaning": "soft, delicate; young, tender"
+    },
+    {
+      "text": "子",
+      "pinyin": "zi",
+      "meaning": "son, child; seed, egg; fruit; small thing"
+    },
+    {
+      "text": "字",
+      "pinyin": "zì",
+      "meaning": "character, letter, symbol, word"
+    },
+    {
+      "text": "孙",
+      "pinyin": "sūn",
+      "meaning": "grandchild, descendent; surname"
+    },
+    {
+      "text": "季",
+      "pinyin": "jì",
+      "meaning": "a quarter-year, a season; surname"
+    },
+    {
+      "text": "学",
+      "pinyin": "xué",
+      "meaning": "learning, knowledge, science; to study, to go to school; -ology"
+    },
+    {
+      "text": "孩",
+      "pinyin": "hái",
+      "meaning": "baby, child; children"
+    },
+    {
+      "text": "它",
+      "pinyin": "tā",
+      "meaning": "it; other"
+    },
+    {
+      "text": "安",
+      "pinyin": "ān",
+      "meaning": "peaceful, tranquil, quiet"
+    },
+    {
+      "text": "完",
+      "pinyin": "wán",
+      "meaning": "to complete, to finish, to settle; whole"
+    },
+    {
+      "text": "定",
+      "pinyin": "dìng",
+      "meaning": "to decide, to fix, to settle; to order; definite, fixed, sure"
+    },
+    {
+      "text": "宜",
+      "pinyin": "yí",
+      "meaning": "fitting, proper, right; what one should do"
+    },
+    {
+      "text": "实",
+      "pinyin": "shí",
+      "meaning": "real, true; honest, sincere"
+    },
+    {
+      "text": "宠",
+      "pinyin": "chǒng",
+      "meaning": "to love; to favor, to pamper, to spoil; concubine"
+    },
+    {
+      "text": "客",
+      "pinyin": "kè",
+      "meaning": "guest, traveller; customer"
+    },
+    {
+      "text": "室",
+      "pinyin": "shì",
+      "meaning": "house, home; room, chamber"
+    },
+    {
+      "text": "害",
+      "pinyin": "hài",
+      "meaning": "to injure, to harm; to destroy, to kill"
+    },
+    {
+      "text": "家",
+      "pinyin": "jiā",
+      "meaning": "house, home, residence; family"
+    },
+    {
+      "text": "容",
+      "pinyin": "róng",
+      "meaning": "appearance, looks; form, figure; to contain, to hold"
+    },
+    {
+      "text": "宽",
+      "pinyin": "kuān",
+      "meaning": "broad, spacious, vast, wide"
+    },
+    {
+      "text": "宾",
+      "pinyin": "bīn",
+      "meaning": "guest, visitor; surname; submit"
+    },
+    {
+      "text": "宿",
+      "pinyin": "sù / xiù",
+      "meaning": "to stop, to rest, to lodge; constellation"
+    },
+    {
+      "text": "寄",
+      "pinyin": "jì",
+      "meaning": "to mail, to send, to transit; to deposit, to entrust; to rely on"
+    },
+    {
+      "text": "密",
+      "pinyin": "mì",
+      "meaning": "secret, confidential; intimate, close; dense, thick"
+    },
+    {
+      "text": "寓",
+      "pinyin": "yù",
+      "meaning": "residence, lodge, dwelling"
+    },
+    {
+      "text": "对",
+      "pinyin": "duì",
+      "meaning": "correct, right; facing, opposed"
+    },
+    {
+      "text": "封",
+      "pinyin": "fēng",
+      "meaning": "envelope, letter; to confer, to grant; feudal"
+    },
+    {
+      "text": "小",
+      "pinyin": "xiǎo",
+      "meaning": "small, tiny, insignificant"
+    },
+    {
+      "text": "少",
+      "pinyin": "shǎo",
+      "meaning": "few, little; less; inadequate"
+    },
+    {
+      "text": "尔",
+      "pinyin": "ěr",
+      "meaning": "you; that, those; final particle"
+    },
+    {
+      "text": "尖",
+      "pinyin": "jiān",
+      "meaning": "sharp, pointed, acute; keen, shrewd"
+    },
+    {
+      "text": "尝",
+      "pinyin": "cháng",
+      "meaning": "to taste; to experience, to experiment with"
+    },
+    {
+      "text": "尤",
+      "pinyin": "yóu",
+      "meaning": "especially, particularly"
+    },
+    {
+      "text": "就",
+      "pinyin": "jiù",
+      "meaning": "just, simply; to go to; to approach, near"
+    },
+    {
+      "text": "尽",
+      "pinyin": "jǐn",
+      "meaning": "to exhaust, to use up, to deplete"
+    },
+    {
+      "text": "局",
+      "pinyin": "jú",
+      "meaning": "bureau, office; circumstance, game, situation"
+    },
+    {
+      "text": "层",
+      "pinyin": "céng",
+      "meaning": "layer, floor, story, stratum"
+    },
+    {
+      "text": "居",
+      "pinyin": "jū",
+      "meaning": "to live, to reside; to dwell; to sit"
+    },
+    {
+      "text": "屋",
+      "pinyin": "wū",
+      "meaning": "building, house, shelter; room"
+    },
+    {
+      "text": "展",
+      "pinyin": "zhǎn",
+      "meaning": "to open, to unfold; to extend, to stretch"
+    },
+    {
+      "text": "山",
+      "pinyin": "shān",
+      "meaning": "mountain, hill, peak"
+    },
+    {
+      "text": "岁",
+      "pinyin": "suì",
+      "meaning": "year; years old, age; harvest"
+    },
+    {
+      "text": "岛",
+      "pinyin": "dǎo",
+      "meaning": "island"
+    },
+    {
+      "text": "岸",
+      "pinyin": "àn",
+      "meaning": "beach, coast, shore"
+    },
+    {
+      "text": "州",
+      "pinyin": "zhōu",
+      "meaning": "state, province, prefecture"
+    },
+    {
+      "text": "工",
+      "pinyin": "gōng",
+      "meaning": "labor, work; laborer, worker"
+    },
+    {
+      "text": "左",
+      "pinyin": "zuǒ",
+      "meaning": "left; unorthodox, improper"
+    },
+    {
+      "text": "差",
+      "pinyin": "chà",
+      "meaning": "difference, gap; almost, nearly; in error; an officer"
+    },
+    {
+      "text": "己",
+      "pinyin": "jǐ",
+      "meaning": "self, oneself; personal, private; 6th heavenly stem"
+    },
+    {
+      "text": "已",
+      "pinyin": "yǐ",
+      "meaning": "already; finished; to stop; then, afterwards"
+    },
+    {
+      "text": "巾",
+      "pinyin": "jīn",
+      "meaning": "cloth, curtain, handkerchief, towel"
+    },
+    {
+      "text": "市",
+      "pinyin": "shì",
+      "meaning": "city, town; market, fair; to trade"
+    },
+    {
+      "text": "师",
+      "pinyin": "shī",
+      "meaning": "teacher, professional, master"
+    },
+    {
+      "text": "希",
+      "pinyin": "xī",
+      "meaning": "rare; to hope for, to strive for; to expect"
+    },
+    {
+      "text": "带",
+      "pinyin": "dài",
+      "meaning": "belt, strap; band, ribbon; area, zone; to carry, to raise, to wear"
+    },
+    {
+      "text": "帮",
+      "pinyin": "bāng",
+      "meaning": "to help, to assist; to support, to defend; party; gang"
+    },
+    {
+      "text": "常",
+      "pinyin": "cháng",
+      "meaning": "common, general, normal; always, frequently, regularly"
+    },
+    {
+      "text": "干",
+      "pinyin": "gàn",
+      "meaning": "arid, dry; to oppose; to offend; to invade"
+    },
+    {
+      "text": "平",
+      "pinyin": "píng",
+      "meaning": "flat, level, even; peaceful"
+    },
+    {
+      "text": "年",
+      "pinyin": "nián",
+      "meaning": "year; anniversary; a person's age"
+    },
+    {
+      "text": "并",
+      "pinyin": "bìng",
+      "meaning": "to combine, to annex; also, what's more"
+    },
+    {
+      "text": "幸",
+      "pinyin": "xìng",
+      "meaning": "favor, fortune, luck; surname"
+    },
+    {
+      "text": "广",
+      "pinyin": "guǎng",
+      "meaning": "broad, vast, wide; building, house"
+    },
+    {
+      "text": "床",
+      "pinyin": "chuáng",
+      "meaning": "bed, couch; framework, chassis"
+    },
+    {
+      "text": "应",
+      "pinyin": "yīng",
+      "meaning": "should, must; to respond, to handle; to deal with, to cope"
+    },
+    {
+      "text": "店",
+      "pinyin": "diàn",
+      "meaning": "shop, store; inn, hotel"
+    },
+    {
+      "text": "庚",
+      "pinyin": "gēng",
+      "meaning": "age; 7th heavenly stem"
+    },
+    {
+      "text": "度",
+      "pinyin": "dù",
+      "meaning": "degree, system; manner; to consider"
+    },
+    {
+      "text": "座",
+      "pinyin": "zuò",
+      "meaning": "seat; stand, base"
+    },
+    {
+      "text": "庭",
+      "pinyin": "tíng",
+      "meaning": "court; courtyard; spacious hall or yard"
+    },
+    {
+      "text": "康",
+      "pinyin": "kāng",
+      "meaning": "health; peace, quiet"
+    },
+    {
+      "text": "建",
+      "pinyin": "jiàn",
+      "meaning": "to build, to erect; to establish, to found"
+    },
+    {
+      "text": "开",
+      "pinyin": "kāi",
+      "meaning": "to open; to start, to initiate, to begin"
+    },
+    {
+      "text": "引",
+      "pinyin": "yǐn",
+      "meaning": "to pull, to stretch; to draw; to attract"
+    },
+    {
+      "text": "弟",
+      "pinyin": "dì",
+      "meaning": "young brother, junior"
+    },
+    {
+      "text": "张",
+      "pinyin": "zhāng",
+      "meaning": "to display; to expand, to open; to stretch; a sheet of paper"
+    },
+    {
+      "text": "弹",
+      "pinyin": "dàn",
+      "meaning": "bullet, pellet, shell; elastic, springy"
+    },
+    {
+      "text": "当",
+      "pinyin": "dāng",
+      "meaning": "appropriate, timely; to act, to serve; the sound of bells"
+    },
+    {
+      "text": "形",
+      "pinyin": "xíng",
+      "meaning": "form, shape; to appear; to describe; to look"
+    },
+    {
+      "text": "彩",
+      "pinyin": "cǎi",
+      "meaning": "color, hue; prize; brilliant; variegated"
+    },
+    {
+      "text": "影",
+      "pinyin": "yǐng",
+      "meaning": "shadow; image, reflection; photograph"
+    },
+    {
+      "text": "彳",
+      "pinyin": "chì",
+      "meaning": "to step with the left foot"
+    },
+    {
+      "text": "彼",
+      "pinyin": "bǐ",
+      "meaning": "that, those, the other"
+    },
+    {
+      "text": "往",
+      "pinyin": "wǎng",
+      "meaning": "to go, to depart; past, former"
+    },
+    {
+      "text": "很",
+      "pinyin": "hěn",
+      "meaning": "very, quite, much"
+    },
+    {
+      "text": "律",
+      "pinyin": "lǜ",
+      "meaning": "statute, principle, regulation"
+    },
+    {
+      "text": "得",
+      "pinyin": "dé",
+      "meaning": "to obtain, to get, to acquire; suitable, proper; ready"
+    },
+    {
+      "text": "微",
+      "pinyin": "wēi",
+      "meaning": "small, tiny, trifling; micro-"
+    },
+    {
+      "text": "心",
+      "pinyin": "xīn",
+      "meaning": "heart; mind; soul"
+    },
+    {
+      "text": "必",
+      "pinyin": "bì",
+      "meaning": "surely, certainly; must; will"
+    },
+    {
+      "text": "忘",
+      "pinyin": "wàng",
+      "meaning": "to forget, to miss, to neglect, to overlook"
+    },
+    {
+      "text": "忙",
+      "pinyin": "máng",
+      "meaning": "busy, hurried, pressed for time"
+    },
+    {
+      "text": "忠",
+      "pinyin": "zhōng",
+      "meaning": "loyalty, devotion, fidelity"
+    },
+    {
+      "text": "快",
+      "pinyin": "kuài",
+      "meaning": "speedy, rapid, quick; soon"
+    },
+    {
+      "text": "念",
+      "pinyin": "niàn",
+      "meaning": "to think of, to recall; to study"
+    },
+    {
+      "text": "怎",
+      "pinyin": "zěn",
+      "meaning": "what? why? how?"
+    },
+    {
+      "text": "怕",
+      "pinyin": "pà",
+      "meaning": "to fear, to be afraid of; apprehensive"
+    },
+    {
+      "text": "思",
+      "pinyin": "sī",
+      "meaning": "to think, to ponder, to consider; final particle"
+    },
+    {
+      "text": "急",
+      "pinyin": "jí",
+      "meaning": "anxious, worried; hasty, quick; pressing, urgent"
+    },
+    {
+      "text": "性",
+      "pinyin": "xìng",
+      "meaning": "sex, nature, character; suffix converting a verb to an adjective"
+    },
+    {
+      "text": "怪",
+      "pinyin": "guài",
+      "meaning": "unusual, strange, peculiar"
+    },
+    {
+      "text": "总",
+      "pinyin": "zǒng",
+      "meaning": "to gather, to collect; overall, altogether"
+    },
+    {
+      "text": "息",
+      "pinyin": "xī",
+      "meaning": "to end, to cease, to put a stop to; pause, breath, rest; news"
+    },
+    {
+      "text": "悉",
+      "pinyin": "xī",
+      "meaning": "to know, to learn about, to comprehend"
+    },
+    {
+      "text": "您",
+      "pinyin": "nín",
+      "meaning": "honorific for 'you'"
+    },
+    {
+      "text": "情",
+      "pinyin": "qíng",
+      "meaning": "emotion, feeling, sentiment"
+    },
+    {
+      "text": "惯",
+      "pinyin": "guàn",
+      "meaning": "habit, custom; habitual, usual"
+    },
+    {
+      "text": "想",
+      "pinyin": "xiǎng",
+      "meaning": "to believe, to wish for; to consider, to plan, to think"
+    },
+    {
+      "text": "意",
+      "pinyin": "yì",
+      "meaning": "thought, idea, opinion; desire, wish; meaning, intention"
+    },
+    {
+      "text": "感",
+      "pinyin": "gǎn",
+      "meaning": "to affect, to move, to touch; to perceive, to sense"
+    },
+    {
+      "text": "愿",
+      "pinyin": "yuàn",
+      "meaning": "desire, wish; honest, virtuous; ready, willing"
+    },
+    {
+      "text": "慢",
+      "pinyin": "màn",
+      "meaning": "slowly, leisurely; sluggish"
+    },
+    {
+      "text": "懂",
+      "pinyin": "dǒng",
+      "meaning": "to understand, to know"
+    },
+    {
+      "text": "戏",
+      "pinyin": "xì",
+      "meaning": "play, show, theater"
+    },
+    {
+      "text": "成",
+      "pinyin": "chéng",
+      "meaning": "to accomplish; to become; to complete, to finish; to succeed"
+    },
+    {
+      "text": "我",
+      "pinyin": "wǒ",
+      "meaning": "I, me, my; our, us"
+    },
+    {
+      "text": "或",
+      "pinyin": "huò",
+      "meaning": "or, either, else; maybe, perhaps, possibly"
+    },
+    {
+      "text": "戴",
+      "pinyin": "dài",
+      "meaning": "to support; to respect; to put on, to wear; surname"
+    },
+    {
+      "text": "户",
+      "pinyin": "hù",
+      "meaning": "door; family"
+    },
+    {
+      "text": "房",
+      "pinyin": "fáng",
+      "meaning": "building, house, room"
+    },
+    {
+      "text": "所",
+      "pinyin": "suǒ",
+      "meaning": "place, location; \"that which\", a particle introducing a passive clause"
+    },
+    {
+      "text": "手",
+      "pinyin": "shǒu",
+      "meaning": "hand"
+    },
+    {
+      "text": "扌",
+      "pinyin": "shǒu",
+      "meaning": "hand"
+    },
+    {
+      "text": "才",
+      "pinyin": "cái",
+      "meaning": "ability, talent, gift; just, only"
+    },
+    {
+      "text": "打",
+      "pinyin": "dǎ",
+      "meaning": "to attack, to beat, to hit, to strike"
+    },
+    {
+      "text": "扫",
+      "pinyin": "sǎo",
+      "meaning": "to clean, to sweep, to wipe away; to weed out; to wipe out"
+    },
+    {
+      "text": "扶",
+      "pinyin": "fú",
+      "meaning": "to support, to protect, to help"
+    },
+    {
+      "text": "找",
+      "pinyin": "zhǎo",
+      "meaning": "to search for, to look for, to find; change (as in money)"
+    },
+    {
+      "text": "把",
+      "pinyin": "bǎ",
+      "meaning": "to grasp, to hold; to guard, to take; handle"
+    },
+    {
+      "text": "投",
+      "pinyin": "tóu",
+      "meaning": "to pitch, to throw; to bid, to invest"
+    },
+    {
+      "text": "护",
+      "pinyin": "hù",
+      "meaning": "to defend, to guard, to protect; shelter; endorse"
+    },
+    {
+      "text": "报",
+      "pinyin": "bào",
+      "meaning": "to announce, to report; newspaper; payback, revenge"
+    },
+    {
+      "text": "披",
+      "pinyin": "pī",
+      "meaning": "to wear; to split, to crack"
+    },
+    {
+      "text": "抱",
+      "pinyin": "bào",
+      "meaning": "to embrace, to hold in one's arms; to enfold"
+    },
+    {
+      "text": "担",
+      "pinyin": "dān",
+      "meaning": "to bear, to carry; burden, responsibility"
+    },
+    {
+      "text": "拉",
+      "pinyin": "lā",
+      "meaning": "to pull, to drag; to seize, to hold; to lengthen; to play (a violin)"
+    },
+    {
+      "text": "拍",
+      "pinyin": "pāi",
+      "meaning": "to clap, to tap; to hit, to beat, to slap; beat, rhythm"
+    },
+    {
+      "text": "拐",
+      "pinyin": "guǎi",
+      "meaning": "to kidnap, to abduct; to turn; crutch"
+    },
+    {
+      "text": "拢",
+      "pinyin": "lǒng",
+      "meaning": "to collect, to bring together"
+    },
+    {
+      "text": "拥",
+      "pinyin": "yōng",
+      "meaning": "to have, to hold; to embrace, to hug; to flock, to throng"
+    },
+    {
+      "text": "择",
+      "pinyin": "zé",
+      "meaning": "to select, to choose"
+    },
+    {
+      "text": "拳",
+      "pinyin": "quán",
+      "meaning": "fist; various forms of boxing"
+    },
+    {
+      "text": "拾",
+      "pinyin": "shí",
+      "meaning": "to collect, to pick up, to tidy up; ten (bankers' anti-fraud numeral)"
+    },
+    {
+      "text": "拿",
+      "pinyin": "ná",
+      "meaning": "to bring, to grasp, to hold, to take"
+    },
+    {
+      "text": "持",
+      "pinyin": "chí",
+      "meaning": "to hold, to support, to sustain"
+    },
+    {
+      "text": "按",
+      "pinyin": "àn",
+      "meaning": "to check, to control, to push, to restrain"
+    },
+    {
+      "text": "挺",
+      "pinyin": "tǐng",
+      "meaning": "to straighten, to stand upright; rigid, stiff"
+    },
+    {
+      "text": "捂",
+      "pinyin": "wǔ",
+      "meaning": "to resist"
+    },
+    {
+      "text": "换",
+      "pinyin": "huàn",
+      "meaning": "to change; to exchange, to swap, to trade"
+    },
+    {
+      "text": "据",
+      "pinyin": "jù",
+      "meaning": "to possess, to occupy; position; base"
+    },
+    {
+      "text": "掉",
+      "pinyin": "diào",
+      "meaning": "to drop, to fall, to remove"
+    },
+    {
+      "text": "排",
+      "pinyin": "pái",
+      "meaning": "row, rank, file; to eliminate, to remove"
+    },
+    {
+      "text": "接",
+      "pinyin": "jiē",
+      "meaning": "to connect, to join; to receive, to meet, to answer the phone"
+    },
+    {
+      "text": "描",
+      "pinyin": "miáo",
+      "meaning": "to copy, to depict, to sketch, to trace"
+    },
+    {
+      "text": "提",
+      "pinyin": "tí",
+      "meaning": "to hold in the hand; to lift, to raise"
+    },
+    {
+      "text": "搬",
+      "pinyin": "bān",
+      "meaning": "to move, to remove, to shift, to transfer"
+    },
+    {
+      "text": "搭",
+      "pinyin": "dā",
+      "meaning": "to attach, to build, to join"
+    },
+    {
+      "text": "摄",
+      "pinyin": "shè",
+      "meaning": "to absorb, to take in; to photograph; to act on behalf of"
+    },
+    {
+      "text": "摇",
+      "pinyin": "yáo",
+      "meaning": "to rock, to shake; to swing, to wave"
+    },
+    {
+      "text": "播",
+      "pinyin": "bō",
+      "meaning": "to sow seeds, to scatter; to broadcast, to spread"
+    },
+    {
+      "text": "擦",
+      "pinyin": "cā",
+      "meaning": "to clean, to erase, to polish; a brush"
+    },
+    {
+      "text": "支",
+      "pinyin": "zhī",
+      "meaning": "to support, to sustain; to withdraw, to pay; a branch (of a bank)"
+    },
+    {
+      "text": "收",
+      "pinyin": "shōu",
+      "meaning": "to collect, to gather, to harvest"
+    },
+    {
+      "text": "放",
+      "pinyin": "fàng",
+      "meaning": "to release, to liberate, to free"
+    },
+    {
+      "text": "故",
+      "pinyin": "gù",
+      "meaning": "reason, cause; happening, instance"
+    },
+    {
+      "text": "教",
+      "pinyin": "jiào",
+      "meaning": "school, education"
+    },
+    {
+      "text": "散",
+      "pinyin": "sàn",
+      "meaning": "to scatter, to disperse, to break up"
+    },
+    {
+      "text": "数",
+      "pinyin": "shù",
+      "meaning": "count, number, several"
+    },
+    {
+      "text": "敲",
+      "pinyin": "qiāo",
+      "meaning": "to hammer, to pound, to strike"
+    },
+    {
+      "text": "整",
+      "pinyin": "zhěng",
+      "meaning": "neat, orderly, whole; to repair, to mend"
+    },
+    {
+      "text": "文",
+      "pinyin": "wén",
+      "meaning": "culture, literature, writing"
+    },
+    {
+      "text": "料",
+      "pinyin": "liào",
+      "meaning": "ingredients, materials; to conjecture, to guess"
+    },
+    {
+      "text": "斤",
+      "pinyin": "jīn",
+      "meaning": "a catty (about 500 grams); an axe; keen, shrewd"
+    },
+    {
+      "text": "新",
+      "pinyin": "xīn",
+      "meaning": "new, recent, fresh, modern"
+    },
+    {
+      "text": "方",
+      "pinyin": "fāng",
+      "meaning": "square, rectangle; side; region; flag"
+    },
+    {
+      "text": "旁",
+      "pinyin": "páng",
+      "meaning": "side; beside, close, nearby"
+    },
+    {
+      "text": "旅",
+      "pinyin": "lǚ",
+      "meaning": "journey, trip; to travel"
+    },
+    {
+      "text": "无",
+      "pinyin": "wú",
+      "meaning": "no, not; lacking, -less"
+    },
+    {
+      "text": "既",
+      "pinyin": "jì",
+      "meaning": "already, since, then; both; de facto"
+    },
+    {
+      "text": "日",
+      "pinyin": "rì",
+      "meaning": "sun; day; daytime"
+    },
+    {
+      "text": "旧",
+      "pinyin": "jiù",
+      "meaning": "old, ancient; former, past"
+    },
+    {
+      "text": "早",
+      "pinyin": "zǎo",
+      "meaning": "early; soon; morning"
+    },
+    {
+      "text": "时",
+      "pinyin": "shí",
+      "meaning": "time, season; period, era, age"
+    },
+    {
+      "text": "明",
+      "pinyin": "míng",
+      "meaning": "bright, clear; to explain, to understand, to shed light"
+    },
+    {
+      "text": "易",
+      "pinyin": "yì",
+      "meaning": "to change; to exchange, to trade; simple, easy"
+    },
+    {
+      "text": "星",
+      "pinyin": "xīng",
+      "meaning": "star, planet; a point of light"
+    },
+    {
+      "text": "春",
+      "pinyin": "chūn",
+      "meaning": "springtime; joyful, lustful, wanton"
+    },
+    {
+      "text": "昨",
+      "pinyin": "zuó",
+      "meaning": "yesterday; formerly, in the past"
+    },
+    {
+      "text": "是",
+      "pinyin": "shì",
+      "meaning": "to be; indeed, right, yes; okay"
+    },
+    {
+      "text": "晚",
+      "pinyin": "wǎn",
+      "meaning": "night, evening; late"
+    },
+    {
+      "text": "景",
+      "pinyin": "jǐng",
+      "meaning": "scenery, view; conditions, circumstances"
+    },
+    {
+      "text": "晴",
+      "pinyin": "qíng",
+      "meaning": "clear weather, fine weather"
+    },
+    {
+      "text": "暂",
+      "pinyin": "zàn",
+      "meaning": "temporary"
+    },
+    {
+      "text": "暖",
+      "pinyin": "nuǎn",
+      "meaning": "warm, genial"
+    },
+    {
+      "text": "曲",
+      "pinyin": "qū",
+      "meaning": "crooked, bent; wrong, false"
+    },
+    {
+      "text": "更",
+      "pinyin": "gèng",
+      "meaning": "more, further; to shift, to alternate; to modify"
+    },
+    {
+      "text": "最",
+      "pinyin": "zuì",
+      "meaning": "most, extremely, exceedingly; superlative"
+    },
+    {
+      "text": "月",
+      "pinyin": "yuè",
+      "meaning": "moon; month"
+    },
+    {
+      "text": "有",
+      "pinyin": "yǒu",
+      "meaning": "to have, to own, to possess; to exist"
+    },
+    {
+      "text": "朋",
+      "pinyin": "péng",
+      "meaning": "friend, pal, acquaintance"
+    },
+    {
+      "text": "服",
+      "pinyin": "fú",
+      "meaning": "clothes; to dress, to wear; to take medicine"
+    },
+    {
+      "text": "朗",
+      "pinyin": "lǎng",
+      "meaning": "bright, clear, distinct"
+    },
+    {
+      "text": "望",
+      "pinyin": "wàng",
+      "meaning": "to expect, to hope, to look forward to"
+    },
+    {
+      "text": "期",
+      "pinyin": "qī",
+      "meaning": "a period of time; date, time; phase"
+    },
+    {
+      "text": "木",
+      "pinyin": "mù",
+      "meaning": "tree; wood, lumber; wooden"
+    },
+    {
+      "text": "末",
+      "pinyin": "mò",
+      "meaning": "end, final, last; insignificant"
+    },
+    {
+      "text": "本",
+      "pinyin": "běn",
+      "meaning": "root, origin, source; basis"
+    },
+    {
+      "text": "术",
+      "pinyin": "shù",
+      "meaning": "skill, art; method, technique; trick"
+    },
+    {
+      "text": "朵",
+      "pinyin": "duǒ",
+      "meaning": "cluster of flowers; earlobe; an item on both sides"
+    },
+    {
+      "text": "机",
+      "pinyin": "jī",
+      "meaning": "desk; machine; moment, opportunity"
+    },
+    {
+      "text": "李",
+      "pinyin": "lǐ",
+      "meaning": "plum; luggage; surname"
+    },
+    {
+      "text": "村",
+      "pinyin": "cūn",
+      "meaning": "village, hamlet; vulgar, uncouth"
+    },
+    {
+      "text": "束",
+      "pinyin": "shù",
+      "meaning": "to bind, to control, to restrain; bale"
+    },
+    {
+      "text": "条",
+      "pinyin": "tiáo",
+      "meaning": "clause, condition; string, stripe"
+    },
+    {
+      "text": "来",
+      "pinyin": "lái",
+      "meaning": "to arrive, to come, to return; in the future, later on"
+    },
+    {
+      "text": "杭",
+      "pinyin": "háng",
+      "meaning": "ford; surname"
+    },
+    {
+      "text": "杯",
+      "pinyin": "bēi",
+      "meaning": "cup, glass; measure word for liquids"
+    },
+    {
+      "text": "松",
+      "pinyin": "sōng",
+      "meaning": "pine tree; fir tree"
+    },
+    {
+      "text": "板",
+      "pinyin": "bǎn",
+      "meaning": "board, plank; plate, slab; unnatural, stiff"
+    },
+    {
+      "text": "极",
+      "pinyin": "jí",
+      "meaning": "extreme, top; final, furthest, utmost; pole"
+    },
+    {
+      "text": "林",
+      "pinyin": "lín",
+      "meaning": "forest, grove; surname"
+    },
+    {
+      "text": "果",
+      "pinyin": "guǒ",
+      "meaning": "fruit, nut; result"
+    },
+    {
+      "text": "架",
+      "pinyin": "jià",
+      "meaning": "frame, rack, stand; to prop up"
+    },
+    {
+      "text": "柜",
+      "pinyin": "guì",
+      "meaning": "cabinet, cupboard, wardrobe; shop counter"
+    },
+    {
+      "text": "查",
+      "pinyin": "chá",
+      "meaning": "to investigate, to examine, to look into"
+    },
+    {
+      "text": "标",
+      "pinyin": "biāo",
+      "meaning": "mark, sign, symbol; bid, prize"
+    },
+    {
+      "text": "栋",
+      "pinyin": "dòng",
+      "meaning": "ridge-beam; the main support of a house"
+    },
+    {
+      "text": "树",
+      "pinyin": "shù",
+      "meaning": "tree; to plant; to set up, to establish"
+    },
+    {
+      "text": "校",
+      "pinyin": "xiào",
+      "meaning": "school; military field officer"
+    },
+    {
+      "text": "样",
+      "pinyin": "yàng",
+      "meaning": "form, pattern, shape, style"
+    },
+    {
+      "text": "根",
+      "pinyin": "gēn",
+      "meaning": "root, basis, foundation"
+    },
+    {
+      "text": "格",
+      "pinyin": "gé",
+      "meaning": "form, pattern, standard"
+    },
+    {
+      "text": "栽",
+      "pinyin": "zāi",
+      "meaning": "to cultivate, to plant, to tend"
+    },
+    {
+      "text": "桃",
+      "pinyin": "táo",
+      "meaning": "peach; marriage; surname"
+    },
+    {
+      "text": "案",
+      "pinyin": "àn",
+      "meaning": "file, legal case; bench, table"
+    },
+    {
+      "text": "桌",
+      "pinyin": "zhuō",
+      "meaning": "table, stand, desk, counter"
+    },
+    {
+      "text": "档",
+      "pinyin": "dàng",
+      "meaning": "shelve, frame; files, records; grade, level"
+    },
+    {
+      "text": "桥",
+      "pinyin": "qiáo",
+      "meaning": "bridge; beam, crosspiece"
+    },
+    {
+      "text": "梯",
+      "pinyin": "tī",
+      "meaning": "ladder, steps, stairs"
+    },
+    {
+      "text": "检",
+      "pinyin": "jiǎn",
+      "meaning": "to check, to examine, to inspect"
+    },
+    {
+      "text": "棒",
+      "pinyin": "bàng",
+      "meaning": "stick, club; strong, smart; to hit"
+    },
+    {
+      "text": "棕",
+      "pinyin": "zōng",
+      "meaning": "hemp palm; palm tree"
+    },
+    {
+      "text": "森",
+      "pinyin": "sēn",
+      "meaning": "forest; luxuriant vegetation"
+    },
+    {
+      "text": "椅",
+      "pinyin": "yǐ",
+      "meaning": "chair, seat"
+    },
+    {
+      "text": "椒",
+      "pinyin": "jiāo",
+      "meaning": "pepper, spice"
+    },
+    {
+      "text": "楚",
+      "pinyin": "chǔ",
+      "meaning": "clear, distinct; pain, suffering; surname"
+    },
+    {
+      "text": "楼",
+      "pinyin": "lóu",
+      "meaning": "multi-story building; floor"
+    },
+    {
+      "text": "概",
+      "pinyin": "gài",
+      "meaning": "generally, probably, approximately"
+    },
+    {
+      "text": "榄",
+      "pinyin": "lǎn",
+      "meaning": "olive"
+    },
+    {
+      "text": "橄",
+      "pinyin": "gǎn",
+      "meaning": "olive"
+    },
+    {
+      "text": "橙",
+      "pinyin": "chéng",
+      "meaning": "orange"
+    },
+    {
+      "text": "次",
+      "pinyin": "cì",
+      "meaning": "order, sequence; second, next; one after the other"
+    },
+    {
+      "text": "欢",
+      "pinyin": "huān",
+      "meaning": "happy, glad, joyful"
+    },
+    {
+      "text": "歌",
+      "pinyin": "gē",
+      "meaning": "song, lyrics; to sing, to chant"
+    },
+    {
+      "text": "正",
+      "pinyin": "zhèng",
+      "meaning": "straight, right, proper, correct, just, true"
+    },
+    {
+      "text": "此",
+      "pinyin": "cǐ",
+      "meaning": "this, these; in this case, then"
+    },
+    {
+      "text": "步",
+      "pinyin": "bù",
+      "meaning": "walk, stroll, pace, march; to make progress"
+    },
+    {
+      "text": "段",
+      "pinyin": "duàn",
+      "meaning": "section, piece, division"
+    },
+    {
+      "text": "母",
+      "pinyin": "mǔ",
+      "meaning": "mother; female elders; female"
+    },
+    {
+      "text": "每",
+      "pinyin": "měi",
+      "meaning": "each, every"
+    },
+    {
+      "text": "比",
+      "pinyin": "bǐ",
+      "meaning": "to compare, liken; comparison; than"
+    },
+    {
+      "text": "毕",
+      "pinyin": "bì",
+      "meaning": "to finish, to conclude, to end; completed"
+    },
+    {
+      "text": "毛",
+      "pinyin": "máo",
+      "meaning": "hair, fur, feathers; coarse"
+    },
+    {
+      "text": "民",
+      "pinyin": "mín",
+      "meaning": "citizens, subjects; a nation's people"
+    },
+    {
+      "text": "气",
+      "pinyin": "qì",
+      "meaning": "air, gas; steam, vapor; anger"
+    },
+    {
+      "text": "水",
+      "pinyin": "shuǐ",
+      "meaning": "water, liquid, lotion, juice"
+    },
+    {
+      "text": "氵",
+      "pinyin": "shuǐ",
+      "meaning": "water"
+    },
+    {
+      "text": "汁",
+      "pinyin": "zhī",
+      "meaning": "juice, liquor, fluid; sap; gravy, sauce"
+    },
+    {
+      "text": "求",
+      "pinyin": "qiú",
+      "meaning": "to seek; to request, to demand; to beseech, to beg for"
+    },
+    {
+      "text": "汉",
+      "pinyin": "hàn",
+      "meaning": "Chinese people; Chinese language"
+    },
+    {
+      "text": "江",
+      "pinyin": "jiāng",
+      "meaning": "large river; the Yangtze; surname"
+    },
+    {
+      "text": "池",
+      "pinyin": "chí",
+      "meaning": "pool, pond; moat; cistern"
+    },
+    {
+      "text": "汤",
+      "pinyin": "tāng",
+      "meaning": "soup, gravy, broth; hot water"
+    },
+    {
+      "text": "汽",
+      "pinyin": "qì",
+      "meaning": "gasoline; steam, vapor"
+    },
+    {
+      "text": "沙",
+      "pinyin": "shā",
+      "meaning": "sand, gravel, pebbles; granulated"
+    },
+    {
+      "text": "没",
+      "pinyin": "méi",
+      "meaning": "not, none, gone; to bury; to sink, to drown"
+    },
+    {
+      "text": "河",
+      "pinyin": "hé",
+      "meaning": "river, stream; the Yellow river"
+    },
+    {
+      "text": "泉",
+      "pinyin": "quán",
+      "meaning": "spring, fountain; wealth, money"
+    },
+    {
+      "text": "法",
+      "pinyin": "fǎ",
+      "meaning": "law, rule, statute; method, way; French"
+    },
+    {
+      "text": "泡",
+      "pinyin": "pào",
+      "meaning": "bubble, blister; swollen, puffed up"
+    },
+    {
+      "text": "注",
+      "pinyin": "zhù",
+      "meaning": "to concentrate, to focus"
+    },
+    {
+      "text": "泳",
+      "pinyin": "yǒng",
+      "meaning": "to swim, to dive"
+    },
+    {
+      "text": "洋",
+      "pinyin": "yáng",
+      "meaning": "sea, ocean; western, foreign"
+    },
+    {
+      "text": "洗",
+      "pinyin": "xǐ",
+      "meaning": "to bathe, to rinse, to wash"
+    },
+    {
+      "text": "活",
+      "pinyin": "huó",
+      "meaning": "to exist, to live, to survive; living, working"
+    },
+    {
+      "text": "派",
+      "pinyin": "pài",
+      "meaning": "clique, faction, group, sect"
+    },
+    {
+      "text": "流",
+      "pinyin": "liú",
+      "meaning": "to flow, to drift, to circulate; class"
+    },
+    {
+      "text": "浆",
+      "pinyin": "jiāng",
+      "meaning": "pulp, starch, syrup; a thick fluid"
+    },
+    {
+      "text": "海",
+      "pinyin": "hǎi",
+      "meaning": "sea, ocean; maritime"
+    },
+    {
+      "text": "消",
+      "pinyin": "xiāo",
+      "meaning": "news, rumors; to die out, to melt away, to vanish"
+    },
+    {
+      "text": "淡",
+      "pinyin": "dàn",
+      "meaning": "watery, dilute; insipid, tasteless"
+    },
+    {
+      "text": "清",
+      "pinyin": "qīng",
+      "meaning": "clean, pure; clear, distinct; peaceful"
+    },
+    {
+      "text": "渴",
+      "pinyin": "kě",
+      "meaning": "thirsty, parched; to yearn, to pine for"
+    },
+    {
+      "text": "游",
+      "pinyin": "yóu",
+      "meaning": "to wander, to travel, to tour, to roam"
+    },
+    {
+      "text": "湖",
+      "pinyin": "hú",
+      "meaning": "lake; Hubei, Hunan; bluish-green"
+    },
+    {
+      "text": "湿",
+      "pinyin": "shī",
+      "meaning": "wet, moist, humid, damp; illness"
+    },
+    {
+      "text": "滑",
+      "pinyin": "huá",
+      "meaning": "to slip, to slide; slippery, polished"
+    },
+    {
+      "text": "滚",
+      "pinyin": "gǔn",
+      "meaning": "to boil, to roll, to turn"
+    },
+    {
+      "text": "满",
+      "pinyin": "mǎn",
+      "meaning": "to fill; full, packed; satisfied"
+    },
+    {
+      "text": "滨",
+      "pinyin": "bīn",
+      "meaning": "beach, coast, river bank"
+    },
+    {
+      "text": "漂",
+      "pinyin": "piào",
+      "meaning": "to drift, to float; to be tossed about; bleach"
+    },
+    {
+      "text": "演",
+      "pinyin": "yǎn",
+      "meaning": "to perform, to act, to put on a play"
+    },
+    {
+      "text": "澡",
+      "pinyin": "zǎo",
+      "meaning": "to wash, to bathe"
+    },
+    {
+      "text": "激",
+      "pinyin": "jī",
+      "meaning": "to arouse, to incite; acute, sharp; fierce, violent"
+    },
+    {
+      "text": "火",
+      "pinyin": "huǒ",
+      "meaning": "fire, flame; to burn; anger, rage"
+    },
+    {
+      "text": "灯",
+      "pinyin": "dēng",
+      "meaning": "lamp, lantern, light"
+    },
+    {
+      "text": "灵",
+      "pinyin": "líng",
+      "meaning": "spirit, soul; spiritual world"
+    },
+    {
+      "text": "点",
+      "pinyin": "diǎn",
+      "meaning": "dot, point, speck"
+    },
+    {
+      "text": "炼",
+      "pinyin": "liàn",
+      "meaning": "to smelt, to refine; to distill, to condense"
+    },
+    {
+      "text": "烧",
+      "pinyin": "shāo",
+      "meaning": "to burn, to bake; to heat, to roast"
+    },
+    {
+      "text": "热",
+      "pinyin": "rè",
+      "meaning": "heat, fever, zeal"
+    },
+    {
+      "text": "然",
+      "pinyin": "rán",
+      "meaning": "certainly; naturally; suddenly"
+    },
+    {
+      "text": "照",
+      "pinyin": "zhào",
+      "meaning": "to shine, to reflect, to illuminate"
+    },
+    {
+      "text": "煮",
+      "pinyin": "zhǔ",
+      "meaning": "to boil, to cook"
+    },
+    {
+      "text": "熊",
+      "pinyin": "xióng",
+      "meaning": "a bear; brilliant; surname"
+    },
+    {
+      "text": "熟",
+      "pinyin": "shú",
+      "meaning": "well-cooked; ripe, mature; familiar with"
+    },
+    {
+      "text": "爬",
+      "pinyin": "pá",
+      "meaning": "to climb, to scramble; to crawl, to creep"
+    },
+    {
+      "text": "爱",
+      "pinyin": "ài",
+      "meaning": "to love, to like, to be fond of; love, affection"
+    },
+    {
+      "text": "父",
+      "pinyin": "fù",
+      "meaning": "father, dad"
+    },
+    {
+      "text": "爷",
+      "pinyin": "yé",
+      "meaning": "grandfather, old man"
+    },
+    {
+      "text": "爸",
+      "pinyin": "bà",
+      "meaning": "father, papa"
+    },
+    {
+      "text": "片",
+      "pinyin": "piàn",
+      "meaning": "slice, splinter; page, strip"
+    },
+    {
+      "text": "牙",
+      "pinyin": "yá",
+      "meaning": "tooth, molar; fang, tusk; serrated"
+    },
+    {
+      "text": "牛",
+      "pinyin": "niú",
+      "meaning": "ox, cow, bull"
+    },
+    {
+      "text": "物",
+      "pinyin": "wù",
+      "meaning": "thing, substance, matter; creature"
+    },
+    {
+      "text": "特",
+      "pinyin": "tè",
+      "meaning": "special, unique, distinguished"
+    },
+    {
+      "text": "狗",
+      "pinyin": "gǒu",
+      "meaning": "dog"
+    },
+    {
+      "text": "独",
+      "pinyin": "dú",
+      "meaning": "alone, independent, only, single, solitary"
+    },
+    {
+      "text": "猪",
+      "pinyin": "zhū",
+      "meaning": "pig, hog, wild boar"
+    },
+    {
+      "text": "猫",
+      "pinyin": "māo",
+      "meaning": "cat"
+    },
+    {
+      "text": "王",
+      "pinyin": "wáng",
+      "meaning": "king, ruler; royal; surname"
+    },
+    {
+      "text": "玛",
+      "pinyin": "mǎ",
+      "meaning": "agate, cornelian"
+    },
+    {
+      "text": "玩",
+      "pinyin": "wán",
+      "meaning": "to play with, to joke, to entertain"
+    },
+    {
+      "text": "环",
+      "pinyin": "huán",
+      "meaning": "bracelet, ring; to surround, to loop"
+    },
+    {
+      "text": "现",
+      "pinyin": "xiàn",
+      "meaning": "to appear, to manifest; current, now"
+    },
+    {
+      "text": "班",
+      "pinyin": "bān",
+      "meaning": "class, squad, team, work shift"
+    },
+    {
+      "text": "球",
+      "pinyin": "qiú",
+      "meaning": "ball, globe, sphere; round"
+    },
+    {
+      "text": "理",
+      "pinyin": "lǐ",
+      "meaning": "science, reason, logic; to manage"
+    },
+    {
+      "text": "琴",
+      "pinyin": "qín",
+      "meaning": "Chinese lute or guitar, string instrument"
+    },
+    {
+      "text": "瓜",
+      "pinyin": "guā",
+      "meaning": "melon, gourd, squash, cucumber"
+    },
+    {
+      "text": "瓶",
+      "pinyin": "píng",
+      "meaning": "bottle, jug, pitcher, vase"
+    },
+    {
+      "text": "甜",
+      "pinyin": "tián",
+      "meaning": "sweet, sweetness"
+    },
+    {
+      "text": "生",
+      "pinyin": "shēng",
+      "meaning": "life, lifetime; birth; growth"
+    },
+    {
+      "text": "用",
+      "pinyin": "yòng",
+      "meaning": "to use, to employ, to apply; use"
+    },
+    {
+      "text": "电",
+      "pinyin": "diàn",
+      "meaning": "electricity; electric; lightning"
+    },
+    {
+      "text": "男",
+      "pinyin": "nán",
+      "meaning": "man, boy; male; baron; surname"
+    },
+    {
+      "text": "画",
+      "pinyin": "huà",
+      "meaning": "picture, painting, drawing; to draw"
+    },
+    {
+      "text": "界",
+      "pinyin": "jiè",
+      "meaning": "boundary, limit; domain; society, the world"
+    },
+    {
+      "text": "留",
+      "pinyin": "liú",
+      "meaning": "to stay, to remain; to preserve, to keep; to leave a message; "
+    },
+    {
+      "text": "疼",
+      "pinyin": "téng",
+      "meaning": "ache, pain; to love dearly"
+    },
+    {
+      "text": "病",
+      "pinyin": "bìng",
+      "meaning": "sickness, illness, disease"
+    },
+    {
+      "text": "瘦",
+      "pinyin": "shòu",
+      "meaning": "thin, lean, emaciated; meager"
+    },
+    {
+      "text": "白",
+      "pinyin": "bái",
+      "meaning": "white; clear, pure, unblemished; bright"
+    },
+    {
+      "text": "百",
+      "pinyin": "bǎi",
+      "meaning": "one hundred; numerous, many"
+    },
+    {
+      "text": "的",
+      "pinyin": "de",
+      "meaning": "aim, goal; of; possessive particle; -self suffix"
+    },
+    {
+      "text": "盆",
+      "pinyin": "pén",
+      "meaning": "basin, bowl, pot, tub"
+    },
+    {
+      "text": "盏",
+      "pinyin": "zhǎn",
+      "meaning": "small cup or container"
+    },
+    {
+      "text": "盐",
+      "pinyin": "yán",
+      "meaning": "salt"
+    },
+    {
+      "text": "监",
+      "pinyin": "jiān",
+      "meaning": "to supervise, to direct, to control; to inspect; prison, jail"
+    },
+    {
+      "text": "盒",
+      "pinyin": "hé",
+      "meaning": "small box or case; casket"
+    },
+    {
+      "text": "盘",
+      "pinyin": "pán",
+      "meaning": "tray, plate, dish; to examine"
+    },
+    {
+      "text": "目",
+      "pinyin": "mù",
+      "meaning": "eye; to look, to see; division, topic"
+    },
+    {
+      "text": "直",
+      "pinyin": "zhí",
+      "meaning": "straight, vertical; candid, direct, frank"
+    },
+    {
+      "text": "相",
+      "pinyin": "xiāng",
+      "meaning": "mutual, reciprocal; equal; each other"
+    },
+    {
+      "text": "省",
+      "pinyin": "shěng",
+      "meaning": "province; frugal; to save, to leave out"
+    },
+    {
+      "text": "看",
+      "pinyin": "kàn",
+      "meaning": "to look, to see; to examine, to scrutinize"
+    },
+    {
+      "text": "真",
+      "pinyin": "zhēn",
+      "meaning": "real, actual, true, genuine"
+    },
+    {
+      "text": "眠",
+      "pinyin": "mián",
+      "meaning": "sleep, shut-eye, hibernatation"
+    },
+    {
+      "text": "眼",
+      "pinyin": "yǎn",
+      "meaning": "eyelet, hole, opening"
+    },
+    {
+      "text": "着",
+      "pinyin": "zhe",
+      "meaning": "to make a move, to take action"
+    },
+    {
+      "text": "睛",
+      "pinyin": "jīng",
+      "meaning": "eyeball; pupil"
+    },
+    {
+      "text": "睡",
+      "pinyin": "shuì",
+      "meaning": "to sleep, to doze"
+    },
+    {
+      "text": "知",
+      "pinyin": "zhī",
+      "meaning": "to know, to perceive, to comprehend"
+    },
+    {
+      "text": "短",
+      "pinyin": "duǎn",
+      "meaning": "brief, short; deficient, lacking"
+    },
+    {
+      "text": "矮",
+      "pinyin": "ǎi",
+      "meaning": "short, low; dwarf"
+    },
+    {
+      "text": "矿",
+      "pinyin": "kuàng",
+      "meaning": "mine; mineral, ore"
+    },
+    {
+      "text": "码",
+      "pinyin": "mǎ",
+      "meaning": "number, numeral, symbol; yard"
+    },
+    {
+      "text": "确",
+      "pinyin": "què",
+      "meaning": "certain, sure; definite, exact; real, true"
+    },
+    {
+      "text": "碗",
+      "pinyin": "wǎn",
+      "meaning": "bowl, small dish"
+    },
+    {
+      "text": "碰",
+      "pinyin": "pèng",
+      "meaning": "to touch; to meet with; to collide, to bump into"
+    },
+    {
+      "text": "示",
+      "pinyin": "shì",
+      "meaning": "altar; ceremony; to show, to demonstrate"
+    },
+    {
+      "text": "礼",
+      "pinyin": "lǐ",
+      "meaning": "courtesy, manners, social customs"
+    },
+    {
+      "text": "社",
+      "pinyin": "shè",
+      "meaning": "group, organization, society; a god of the soil"
+    },
+    {
+      "text": "祝",
+      "pinyin": "zhù",
+      "meaning": "to pray; to wish well; surname"
+    },
+    {
+      "text": "票",
+      "pinyin": "piào",
+      "meaning": "bank note; ticket; vote; a slip of paper"
+    },
+    {
+      "text": "离",
+      "pinyin": "lí",
+      "meaning": "rare beast; strange; elegant"
+    },
+    {
+      "text": "秋",
+      "pinyin": "qiū",
+      "meaning": "autumn, fall; year"
+    },
+    {
+      "text": "种",
+      "pinyin": "zhǒng",
+      "meaning": "race, kind, breed; seed; to plant"
+    },
+    {
+      "text": "秘",
+      "pinyin": "mì",
+      "meaning": "secret, mysterious, abstruse"
+    },
+    {
+      "text": "租",
+      "pinyin": "zū",
+      "meaning": "to rent, to lease; tax, rent"
+    },
+    {
+      "text": "程",
+      "pinyin": "chéng",
+      "meaning": "process, rules; journey, trip; agenda, schedule"
+    },
+    {
+      "text": "空",
+      "pinyin": "kōng",
+      "meaning": "hollow, empty, deserted, bare"
+    },
+    {
+      "text": "穿",
+      "pinyin": "chuān",
+      "meaning": "to drill, to pierce; to dress, to wear"
+    },
+    {
+      "text": "突",
+      "pinyin": "tū",
+      "meaning": "sudden, abrupt, unexpected"
+    },
+    {
+      "text": "窗",
+      "pinyin": "chuāng",
+      "meaning": "window"
+    },
+    {
+      "text": "立",
+      "pinyin": "lì",
+      "meaning": "to stand; to establish, to set up"
+    },
+    {
+      "text": "站",
+      "pinyin": "zhàn",
+      "meaning": "stand, station; to halt, to stand; website; measure word for stands and stations"
+    },
+    {
+      "text": "竹",
+      "pinyin": "zhú",
+      "meaning": "bamboo; flute"
+    },
+    {
+      "text": "笑",
+      "pinyin": "xiào",
+      "meaning": "to smile, to laugh; to giggle; to snicker"
+    },
+    {
+      "text": "笔",
+      "pinyin": "bǐ",
+      "meaning": "pen, pencil, writing brush; to compose, to write; Hanzi stroke"
+    },
+    {
+      "text": "第",
+      "pinyin": "dì",
+      "meaning": "sequence, number; grade, degree; particle prefacing an ordinal"
+    },
+    {
+      "text": "等",
+      "pinyin": "děng",
+      "meaning": "rank, grade; same, equal; to wait"
+    },
+    {
+      "text": "答",
+      "pinyin": "dá",
+      "meaning": "answer, reply; to return; to assent to"
+    },
+    {
+      "text": "筷",
+      "pinyin": "kuài",
+      "meaning": "chopsticks"
+    },
+    {
+      "text": "简",
+      "pinyin": "jiǎn",
+      "meaning": "simple, succinct, terse; a letter"
+    },
+    {
+      "text": "算",
+      "pinyin": "suàn",
+      "meaning": "to calculate, to count; to figure, to plan"
+    },
+    {
+      "text": "箱",
+      "pinyin": "xiāng",
+      "meaning": "box, case; chest, trunk"
+    },
+    {
+      "text": "篮",
+      "pinyin": "lán",
+      "meaning": "basket; goal"
+    },
+    {
+      "text": "米",
+      "pinyin": "mǐ",
+      "meaning": "rice, millet, grain"
+    },
+    {
+      "text": "类",
+      "pinyin": "lèi",
+      "meaning": "category, class, group, kind; similar to; to resemble"
+    },
+    {
+      "text": "粉",
+      "pinyin": "fěn",
+      "meaning": "powder, flour, cosmetic powder; plaster"
+    },
+    {
+      "text": "糕",
+      "pinyin": "gāo",
+      "meaning": "cake, pastry"
+    },
+    {
+      "text": "糖",
+      "pinyin": "táng",
+      "meaning": "candy, sugar, sweets"
+    },
+    {
+      "text": "系",
+      "pinyin": "xì",
+      "meaning": "system; line, link, connection"
+    },
+    {
+      "text": "素",
+      "pinyin": "sù",
+      "meaning": "plain; white; vegetarian; formerly; normally"
+    },
+    {
+      "text": "紧",
+      "pinyin": "jǐn",
+      "meaning": "tense, tight, taut; firm, secure"
+    },
+    {
+      "text": "紫",
+      "pinyin": "zǐ",
+      "meaning": "purple, violet; amethyst; surname"
+    },
+    {
+      "text": "累",
+      "pinyin": "lèi",
+      "meaning": "tired; to accumulate; to involve; bother, nuisance"
+    },
+    {
+      "text": "红",
+      "pinyin": "hóng",
+      "meaning": "red, vermillion; to blush, to flush; popular"
+    },
+    {
+      "text": "约",
+      "pinyin": "yuē",
+      "meaning": "treaty, covenant, agreement"
+    },
+    {
+      "text": "级",
+      "pinyin": "jí",
+      "meaning": "level, rank; class, grade"
+    },
+    {
+      "text": "纪",
+      "pinyin": "jì",
+      "meaning": "discipline, age; period, era; record, annal"
+    },
+    {
+      "text": "纸",
+      "pinyin": "zhǐ",
+      "meaning": "paper"
+    },
+    {
+      "text": "练",
+      "pinyin": "liàn",
+      "meaning": "to drill, to exercise; to practice, to train"
+    },
+    {
+      "text": "终",
+      "pinyin": "zhōng",
+      "meaning": "end; finally, in the end"
+    },
+    {
+      "text": "绍",
+      "pinyin": "shào",
+      "meaning": "to connect; to introduce"
+    },
+    {
+      "text": "经",
+      "pinyin": "jīng",
+      "meaning": "the classics; to experience, to undergo"
+    },
+    {
+      "text": "结",
+      "pinyin": "jié",
+      "meaning": "knot, tie; to connect, to join"
+    },
+    {
+      "text": "给",
+      "pinyin": "gěi",
+      "meaning": "to give, to lend; for, by"
+    },
+    {
+      "text": "继",
+      "pinyin": "jì",
+      "meaning": "to continue, to carry on; to succeed, to inherit"
+    },
+    {
+      "text": "绩",
+      "pinyin": "jī",
+      "meaning": "achievements, merit"
+    },
+    {
+      "text": "续",
+      "pinyin": "xù",
+      "meaning": "continuous, serial"
+    },
+    {
+      "text": "绿",
+      "pinyin": "lǜ",
+      "meaning": "green; chlorine"
+    },
+    {
+      "text": "网",
+      "pinyin": "wǎng",
+      "meaning": "net; network"
+    },
+    {
+      "text": "羊",
+      "pinyin": "yáng",
+      "meaning": "sheep, goat"
+    },
+    {
+      "text": "美",
+      "pinyin": "měi",
+      "meaning": "beautiful, pretty; pleasing"
+    },
+    {
+      "text": "羞",
+      "pinyin": "xiū",
+      "meaning": "shame, disgrace; shy, ashamed"
+    },
+    {
+      "text": "羽",
+      "pinyin": "yǔ",
+      "meaning": "feather, plume; wings"
+    },
+    {
+      "text": "翻",
+      "pinyin": "fān",
+      "meaning": "to upset, to capsize, to flip over"
+    },
+    {
+      "text": "老",
+      "pinyin": "lǎo",
+      "meaning": "old, aged; experienced"
+    },
+    {
+      "text": "考",
+      "pinyin": "kǎo",
+      "meaning": "to test, to investigate, to examine"
+    },
+    {
+      "text": "者",
+      "pinyin": "zhě",
+      "meaning": "that which; they who; those who"
+    },
+    {
+      "text": "而",
+      "pinyin": "ér",
+      "meaning": "and, and then, and yet; but"
+    },
+    {
+      "text": "耍",
+      "pinyin": "shuǎ",
+      "meaning": "to play, to frolic, to amuse"
+    },
+    {
+      "text": "耐",
+      "pinyin": "nài",
+      "meaning": "to resist, to bear; patient, enduring"
+    },
+    {
+      "text": "耳",
+      "pinyin": "ěr",
+      "meaning": "ear; to hear, to hear of; handle"
+    },
+    {
+      "text": "聊",
+      "pinyin": "liáo",
+      "meaning": "somewhat, slightly, at least"
+    },
+    {
+      "text": "聪",
+      "pinyin": "cōng",
+      "meaning": "sharp (of sight and hearing); intelligent, clever, bright"
+    },
+    {
+      "text": "肉",
+      "pinyin": "ròu",
+      "meaning": "meat; flesh"
+    },
+    {
+      "text": "育",
+      "pinyin": "yù",
+      "meaning": "to produce, to give birth to; to educate"
+    },
+    {
+      "text": "胖",
+      "pinyin": "pàng",
+      "meaning": "fat, plump, obese; a fat person"
+    },
+    {
+      "text": "能",
+      "pinyin": "néng",
+      "meaning": "can, may; capable, full of energy"
+    },
+    {
+      "text": "脏",
+      "pinyin": "zàng",
+      "meaning": "organs, viscera; dirty, filthy"
+    },
+    {
+      "text": "脑",
+      "pinyin": "nǎo",
+      "meaning": "brain"
+    },
+    {
+      "text": "脚",
+      "pinyin": "jiǎo",
+      "meaning": "leg, foot; foundation, base"
+    },
+    {
+      "text": "脸",
+      "pinyin": "liǎn",
+      "meaning": "face, cheek; reputation"
+    },
+    {
+      "text": "腐",
+      "pinyin": "fǔ",
+      "meaning": "to spoil, to rot, to decay; rotten"
+    },
+    {
+      "text": "腿",
+      "pinyin": "tuǐ",
+      "meaning": "legs, thighs"
+    },
+    {
+      "text": "自",
+      "pinyin": "zì",
+      "meaning": "self; private, personal; from"
+    },
+    {
+      "text": "臭",
+      "pinyin": "chòu",
+      "meaning": "to reek, to smell, to stink"
+    },
+    {
+      "text": "舍",
+      "pinyin": "shě",
+      "meaning": "house, dwelling; to reside, to dwell; to abandon, to give up"
+    },
+    {
+      "text": "舒",
+      "pinyin": "shū",
+      "meaning": "relaxed, comfortable; to unfold, to stretch out"
+    },
+    {
+      "text": "舞",
+      "pinyin": "wǔ",
+      "meaning": "to dance; to brandish"
+    },
+    {
+      "text": "般",
+      "pinyin": "bān",
+      "meaning": "sort, manner, kind, class"
+    },
+    {
+      "text": "船",
+      "pinyin": "chuán",
+      "meaning": "ship, boat, vessel"
+    },
+    {
+      "text": "色",
+      "pinyin": "sè",
+      "meaning": "color, tint, hue, shade; beauty, form; sex"
+    },
+    {
+      "text": "艹",
+      "pinyin": "cǎo",
+      "meaning": "grass, weed, plant, herb"
+    },
+    {
+      "text": "艺",
+      "pinyin": "yì",
+      "meaning": "art; talent, ability; craft"
+    },
+    {
+      "text": "节",
+      "pinyin": "jié",
+      "meaning": "festival; knot, joint; segment; to economize, to save"
+    },
+    {
+      "text": "花",
+      "pinyin": "huā",
+      "meaning": "flower, blossom; to spend (time or money)"
+    },
+    {
+      "text": "苏",
+      "pinyin": "sū",
+      "meaning": "to awaken, to revive, to resurrect; used in transliterations"
+    },
+    {
+      "text": "英",
+      "pinyin": "yīng",
+      "meaning": "petal, flower, leaf; brave, heroic; English"
+    },
+    {
+      "text": "苹",
+      "pinyin": "píng",
+      "meaning": "apple; duckweed, Artemisia"
+    },
+    {
+      "text": "茶",
+      "pinyin": "chá",
+      "meaning": "tea; tea leaves; tea plant"
+    },
+    {
+      "text": "草",
+      "pinyin": "cǎo",
+      "meaning": "grass, herbs; straw, thatch"
+    },
+    {
+      "text": "荣",
+      "pinyin": "róng",
+      "meaning": "glory, honor; to flourish, to prosper"
+    },
+    {
+      "text": "药",
+      "pinyin": "yào",
+      "meaning": "drugs, medicine; the leaf of the Dahurian angelica plant"
+    },
+    {
+      "text": "菜",
+      "pinyin": "cài",
+      "meaning": "vegetables; order, dish; food"
+    },
+    {
+      "text": "萨",
+      "pinyin": "sà",
+      "meaning": "Buddhist diety; used in transliterations"
+    },
+    {
+      "text": "落",
+      "pinyin": "luò",
+      "meaning": "to fall, to drop; surplus, net income"
+    },
+    {
+      "text": "葱",
+      "pinyin": "cōng",
+      "meaning": "scallions, leeks, green onions"
+    },
+    {
+      "text": "蓝",
+      "pinyin": "lán",
+      "meaning": "blue; indigo plant; surname"
+    },
+    {
+      "text": "蔬",
+      "pinyin": "shū",
+      "meaning": "vegetables, greens"
+    },
+    {
+      "text": "蕉",
+      "pinyin": "jiāo",
+      "meaning": "banana, plantain"
+    },
+    {
+      "text": "虹",
+      "pinyin": "hóng",
+      "meaning": "rainbow"
+    },
+    {
+      "text": "虽",
+      "pinyin": "suī",
+      "meaning": "although, even though"
+    },
+    {
+      "text": "蚁",
+      "pinyin": "yǐ",
+      "meaning": "ant"
+    },
+    {
+      "text": "蚂",
+      "pinyin": "mǎ",
+      "meaning": "ant; leech"
+    },
+    {
+      "text": "蛋",
+      "pinyin": "dàn",
+      "meaning": "egg"
+    },
+    {
+      "text": "行",
+      "pinyin": "xíng",
+      "meaning": "to go, to walk, to move; professional"
+    },
+    {
+      "text": "街",
+      "pinyin": "jiē",
+      "meaning": "street, road, thoroughfare"
+    },
+    {
+      "text": "衣",
+      "pinyin": "yī",
+      "meaning": "cloth; clothes, apparel; dress, coat"
+    },
+    {
+      "text": "表",
+      "pinyin": "biǎo",
+      "meaning": "to show, to express, to display; outside, appearance; a watch"
+    },
+    {
+      "text": "衫",
+      "pinyin": "shān",
+      "meaning": "shirt, robe, jacket, gown"
+    },
+    {
+      "text": "衬",
+      "pinyin": "chèn",
+      "meaning": "underwear, lining; in contrast"
+    },
+    {
+      "text": "被",
+      "pinyin": "bèi",
+      "meaning": "bedding; a passive particle meaning \"by\""
+    },
+    {
+      "text": "装",
+      "pinyin": "zhuāng",
+      "meaning": "dress, clothes, attire; to wear, to install"
+    },
+    {
+      "text": "裙",
+      "pinyin": "qún",
+      "meaning": "skirt, petticoat, apron"
+    },
+    {
+      "text": "裤",
+      "pinyin": "kù",
+      "meaning": "pants, trousers"
+    },
+    {
+      "text": "西",
+      "pinyin": "xī",
+      "meaning": "west, western, westward"
+    },
+    {
+      "text": "要",
+      "pinyin": "yào",
+      "meaning": "essential, necessary; to ask for; to coerce; to demand"
+    },
+    {
+      "text": "见",
+      "pinyin": "jiàn",
+      "meaning": "to see, to observe, to meet, to appear"
+    },
+    {
+      "text": "观",
+      "pinyin": "guān",
+      "meaning": "to observe, to spectate; appearance, view"
+    },
+    {
+      "text": "规",
+      "pinyin": "guī",
+      "meaning": "rules, regulations, customs, law"
+    },
+    {
+      "text": "视",
+      "pinyin": "shì",
+      "meaning": "to look at, to inspect, to observe, to regard"
+    },
+    {
+      "text": "览",
+      "pinyin": "lǎn",
+      "meaning": "to look over, to inspect, to view, to perceive"
+    },
+    {
+      "text": "觉",
+      "pinyin": "jué",
+      "meaning": "conscious; to nap, to sleep; to wake up"
+    },
+    {
+      "text": "角",
+      "pinyin": "jiǎo",
+      "meaning": "angle, corner; horn, horn-shaped"
+    },
+    {
+      "text": "解",
+      "pinyin": "jiě",
+      "meaning": "to explain; to loosen; to unfasten, to untie"
+    },
+    {
+      "text": "言",
+      "pinyin": "yán",
+      "meaning": "words, speech; to speak, to say"
+    },
+    {
+      "text": "计",
+      "pinyin": "jì",
+      "meaning": "to calculate, to count; to plan, to reckon; plot, scheme"
+    },
+    {
+      "text": "订",
+      "pinyin": "dìng",
+      "meaning": "to make an order; to draw up an agreement"
+    },
+    {
+      "text": "认",
+      "pinyin": "rèn",
+      "meaning": "to know, to recognize, to understand"
+    },
+    {
+      "text": "讨",
+      "pinyin": "tǎo",
+      "meaning": "to haggle, to discuss; to demand, to ask for"
+    },
+    {
+      "text": "让",
+      "pinyin": "ràng",
+      "meaning": "to allow, to permit, to yield"
+    },
+    {
+      "text": "训",
+      "pinyin": "xùn",
+      "meaning": "to teach, to instruct; pattern, example; exegesis"
+    },
+    {
+      "text": "议",
+      "pinyin": "yì",
+      "meaning": "to consult, to talk over; to criticize, to discuss"
+    },
+    {
+      "text": "记",
+      "pinyin": "jì",
+      "meaning": "mark, sign; to note, to record"
+    },
+    {
+      "text": "讲",
+      "pinyin": "jiǎng",
+      "meaning": "talk, speech, lecture; to speak, to explain"
+    },
+    {
+      "text": "许",
+      "pinyin": "xǔ",
+      "meaning": "to consent, to permit; to promise, to betroth"
+    },
+    {
+      "text": "论",
+      "pinyin": "lùn",
+      "meaning": "debate; discussion"
+    },
+    {
+      "text": "设",
+      "pinyin": "shè",
+      "meaning": "to build, to design; to establish; to offer"
+    },
+    {
+      "text": "访",
+      "pinyin": "fǎng",
+      "meaning": "to visit; to inquire, to ask"
+    },
+    {
+      "text": "证",
+      "pinyin": "zhèng",
+      "meaning": "to prove, to verify; certificate, proof"
+    },
+    {
+      "text": "评",
+      "pinyin": "píng",
+      "meaning": "to appraise, to criticize, to evaluate"
+    },
+    {
+      "text": "识",
+      "pinyin": "shí",
+      "meaning": "knowledge; to understand, to recognize, to know"
+    },
+    {
+      "text": "诉",
+      "pinyin": "sù",
+      "meaning": "to accuse, to sue; to inform; to narrate"
+    },
+    {
+      "text": "词",
+      "pinyin": "cí",
+      "meaning": "phrase, expression; words, speech"
+    },
+    {
+      "text": "试",
+      "pinyin": "shì",
+      "meaning": "to try, to experiment; exam, test"
+    },
+    {
+      "text": "诚",
+      "pinyin": "chéng",
+      "meaning": "honest, sincere, true; actually, really"
+    },
+    {
+      "text": "话",
+      "pinyin": "huà",
+      "meaning": "talk, speech; language, dialect"
+    },
+    {
+      "text": "该",
+      "pinyin": "gāi",
+      "meaning": "should, ought to, must"
+    },
+    {
+      "text": "语",
+      "pinyin": "yǔ",
+      "meaning": "words, language; saying, expression"
+    },
+    {
+      "text": "说",
+      "pinyin": "shuō",
+      "meaning": "to speak, to say; to scold, to upbraid"
+    },
+    {
+      "text": "请",
+      "pinyin": "qǐng",
+      "meaning": "to ask, to request; to invite; please"
+    },
+    {
+      "text": "读",
+      "pinyin": "dú",
+      "meaning": "to study, to learn; to read, to pronounce"
+    },
+    {
+      "text": "课",
+      "pinyin": "kè",
+      "meaning": "subject, lesson, course; classwork"
+    },
+    {
+      "text": "谁",
+      "pinyin": "shuí",
+      "meaning": "who? whom? whose? anyone?"
+    },
+    {
+      "text": "调",
+      "pinyin": "diào",
+      "meaning": "tune, melody, key; to transfer, to exchange"
+    },
+    {
+      "text": "谈",
+      "pinyin": "tán",
+      "meaning": "to talk, to chat; conversation; surname"
+    },
+    {
+      "text": "谊",
+      "pinyin": "yì",
+      "meaning": "friendship; appropriate, suitable"
+    },
+    {
+      "text": "谢",
+      "pinyin": "xiè",
+      "meaning": "to thank; to refuse politely"
+    },
+    {
+      "text": "豆",
+      "pinyin": "dòu",
+      "meaning": "beans, peas; bean-shaped"
+    },
+    {
+      "text": "象",
+      "pinyin": "xiàng",
+      "meaning": "elephant; ivory; figure, image"
+    },
+    {
+      "text": "贵",
+      "pinyin": "guì",
+      "meaning": "expensive, costly; valuable, precious"
+    },
+    {
+      "text": "费",
+      "pinyin": "fèi",
+      "meaning": "expenses, fees; to cost, to spend; wasteful"
+    },
+    {
+      "text": "赛",
+      "pinyin": "sài",
+      "meaning": "to compete, to contend; contest, race"
+    },
+    {
+      "text": "赞",
+      "pinyin": "zàn",
+      "meaning": "to help, to support; to laud, to praise"
+    },
+    {
+      "text": "走",
+      "pinyin": "zǒu",
+      "meaning": "to walk, to run, to flee"
+    },
+    {
+      "text": "赶",
+      "pinyin": "gǎn",
+      "meaning": "to pursue, to overtake; to hurry; to expel"
+    },
+    {
+      "text": "起",
+      "pinyin": "qǐ",
+      "meaning": "to begin, to initiate; to rise, to stand up"
+    },
+    {
+      "text": "超",
+      "pinyin": "chāo",
+      "meaning": "to jump over, to leap over; to overtake, to surpass"
+    },
+    {
+      "text": "越",
+      "pinyin": "yuè",
+      "meaning": "to exceed, to surpass, to transcend"
+    },
+    {
+      "text": "趣",
+      "pinyin": "qù",
+      "meaning": "interest; interesting; what attracts one's attention"
+    },
+    {
+      "text": "足",
+      "pinyin": "zú",
+      "meaning": "foot; to attain, to satisfy; enough"
+    },
+    {
+      "text": "跑",
+      "pinyin": "pǎo",
+      "meaning": "to run, to flee, to escape"
+    },
+    {
+      "text": "跟",
+      "pinyin": "gēn",
+      "meaning": "heel; to accompany, to follow; with"
+    },
+    {
+      "text": "路",
+      "pinyin": "lù",
+      "meaning": "road, path, street; journey"
+    },
+    {
+      "text": "跳",
+      "pinyin": "tiào",
+      "meaning": "to hop, to skip; to jump, to leap; to vault; to dance"
+    },
+    {
+      "text": "踢",
+      "pinyin": "tī",
+      "meaning": "to kick"
+    },
+    {
+      "text": "蹈",
+      "pinyin": "dǎo",
+      "meaning": "to dance, to stamp the feet"
+    },
+    {
+      "text": "身",
+      "pinyin": "shēn",
+      "meaning": "body, torso; person; pregnancy"
+    },
+    {
+      "text": "车",
+      "pinyin": "chē",
+      "meaning": "cart, vehicle; to move in a cart"
+    },
+    {
+      "text": "轮",
+      "pinyin": "lún",
+      "meaning": "wheel; to turn, to revolve; to recur"
+    },
+    {
+      "text": "软",
+      "pinyin": "ruǎn",
+      "meaning": "soft, pliable, flexible; weak"
+    },
+    {
+      "text": "轻",
+      "pinyin": "qīng",
+      "meaning": "light, gentle; simple, easy"
+    },
+    {
+      "text": "较",
+      "pinyin": "jiào",
+      "meaning": "to compare; relatively; more"
+    },
+    {
+      "text": "辆",
+      "pinyin": "liàng",
+      "meaning": "measure word for vehicles"
+    },
+    {
+      "text": "输",
+      "pinyin": "shū",
+      "meaning": "to carry, to haul, to transport"
+    },
+    {
+      "text": "辣",
+      "pinyin": "là",
+      "meaning": "pepper; hot, spicy; cruel"
+    },
+    {
+      "text": "边",
+      "pinyin": "biān",
+      "meaning": "border, edge, margin, side"
+    },
+    {
+      "text": "过",
+      "pinyin": "guò",
+      "meaning": "pass; to go across, to pass through"
+    },
+    {
+      "text": "迎",
+      "pinyin": "yíng",
+      "meaning": "to welcome, to receive, to greet"
+    },
+    {
+      "text": "运",
+      "pinyin": "yùn",
+      "meaning": "to run; ship, transport; fortune, luck"
+    },
+    {
+      "text": "近",
+      "pinyin": "jìn",
+      "meaning": "to approach; near, close; intimate"
+    },
+    {
+      "text": "还",
+      "pinyin": "hái",
+      "meaning": "also, besides; still, yet; to return"
+    },
+    {
+      "text": "这",
+      "pinyin": "zhè",
+      "meaning": "this, these; such; here"
+    },
+    {
+      "text": "进",
+      "pinyin": "jìn",
+      "meaning": "to advance, to make progress; to come in, to enter"
+    },
+    {
+      "text": "远",
+      "pinyin": "yuǎn",
+      "meaning": "distant, remote, far; profound"
+    },
+    {
+      "text": "迟",
+      "pinyin": "chí",
+      "meaning": "tardy, slow, late; to delay"
+    },
+    {
+      "text": "述",
+      "pinyin": "shù",
+      "meaning": "to express, to state; to narrate, to tell"
+    },
+    {
+      "text": "迷",
+      "pinyin": "mí",
+      "meaning": "to bewitch, to charm; a fan of; infatuated"
+    },
+    {
+      "text": "追",
+      "pinyin": "zhuī",
+      "meaning": "to pursue, to chase after; to expel"
+    },
+    {
+      "text": "送",
+      "pinyin": "sòng",
+      "meaning": "to see off, to send off, to dispatch; to give"
+    },
+    {
+      "text": "适",
+      "pinyin": "shì",
+      "meaning": "match, comfortable; just"
+    },
+    {
+      "text": "选",
+      "pinyin": "xuǎn",
+      "meaning": "to select, to elect, to choose; election"
+    },
+    {
+      "text": "通",
+      "pinyin": "tōng",
+      "meaning": "to pass through, to open, to connect; to communicate; common"
+    },
+    {
+      "text": "遇",
+      "pinyin": "yù",
+      "meaning": "to meet, to encounter, to come across"
+    },
+    {
+      "text": "遍",
+      "pinyin": "biàn",
+      "meaning": "everywhere, all over, throughout"
+    },
+    {
+      "text": "道",
+      "pinyin": "dào",
+      "meaning": "method, way; path, road"
+    },
+    {
+      "text": "邀",
+      "pinyin": "yāo",
+      "meaning": "to invite, to welcome; to intercept, to meet"
+    },
+    {
+      "text": "那",
+      "pinyin": "nà",
+      "meaning": "that, that one, those"
+    },
+    {
+      "text": "邮",
+      "pinyin": "yóu",
+      "meaning": "mail; post office"
+    },
+    {
+      "text": "邻",
+      "pinyin": "lín",
+      "meaning": "neighbor; neighborhood"
+    },
+    {
+      "text": "郊",
+      "pinyin": "jiāo",
+      "meaning": "suburbs, outskirts; wasteland, open space"
+    },
+    {
+      "text": "部",
+      "pinyin": "bù",
+      "meaning": "department, ministry; division, unit; part, section"
+    },
+    {
+      "text": "都",
+      "pinyin": "dōu",
+      "meaning": "all, each, entirely, whole; metropolis; capital"
+    },
+    {
+      "text": "酒",
+      "pinyin": "jiǔ",
+      "meaning": "wine, spirits, liquor, alcohol"
+    },
+    {
+      "text": "酷",
+      "pinyin": "kù",
+      "meaning": "strong, stimulating; ruthless, intense"
+    },
+    {
+      "text": "酸",
+      "pinyin": "suān",
+      "meaning": "tart, sour; spoiled; acid"
+    },
+    {
+      "text": "醒",
+      "pinyin": "xǐng",
+      "meaning": "to wake up, to startle; to sober up"
+    },
+    {
+      "text": "里",
+      "pinyin": "lǐ",
+      "meaning": "unit of distance equal to 0.5km; village; lane"
+    },
+    {
+      "text": "重",
+      "pinyin": "zhòng",
+      "meaning": "heavy, weighty; to double, to repeat"
+    },
+    {
+      "text": "量",
+      "pinyin": "liàng",
+      "meaning": "measure, volume; amount, quantity"
+    },
+    {
+      "text": "金",
+      "pinyin": "jīn",
+      "meaning": "gold, metal; money"
+    },
+    {
+      "text": "钟",
+      "pinyin": "zhōng",
+      "meaning": "clock; bell"
+    },
+    {
+      "text": "钢",
+      "pinyin": "gāng",
+      "meaning": "steel; hard, strong, tough"
+    },
+    {
+      "text": "钥",
+      "pinyin": "yào",
+      "meaning": "lock, key"
+    },
+    {
+      "text": "钱",
+      "pinyin": "qián",
+      "meaning": "money, currency, coins"
+    },
+    {
+      "text": "铁",
+      "pinyin": "tiě",
+      "meaning": "iron; strong, solid, firm"
+    },
+    {
+      "text": "铅",
+      "pinyin": "qiān",
+      "meaning": "lead"
+    },
+    {
+      "text": "银",
+      "pinyin": "yín",
+      "meaning": "silver; cash, money, wealth"
+    },
+    {
+      "text": "锁",
+      "pinyin": "suǒ",
+      "meaning": "lock, padlock; chains, shackles"
+    },
+    {
+      "text": "错",
+      "pinyin": "cuò",
+      "meaning": "error, mistake; incorrect, wrong"
+    },
+    {
+      "text": "锻",
+      "pinyin": "duàn",
+      "meaning": "to temper, to refine; to forge metal"
+    },
+    {
+      "text": "镇",
+      "pinyin": "zhèn",
+      "meaning": "calm, composed; to control, to suppress"
+    },
+    {
+      "text": "长",
+      "pinyin": "zhǎng",
+      "meaning": "long, lasting; to excel in"
+    },
+    {
+      "text": "门",
+      "pinyin": "mén",
+      "meaning": "gate, door, entrance, opening"
+    },
+    {
+      "text": "问",
+      "pinyin": "wèn",
+      "meaning": "to ask about, to inquire after"
+    },
+    {
+      "text": "间",
+      "pinyin": "jiān",
+      "meaning": "between, among; midpoint; space, place, locality"
+    },
+    {
+      "text": "闻",
+      "pinyin": "wén",
+      "meaning": "news; to hear, to smell; to make known"
+    },
+    {
+      "text": "阅",
+      "pinyin": "yuè",
+      "meaning": "to examine, to inspect; to read, to review"
+    },
+    {
+      "text": "队",
+      "pinyin": "duì",
+      "meaning": "team, group, band, army unit; measure word for groups of people"
+    },
+    {
+      "text": "防",
+      "pinyin": "fáng",
+      "meaning": "to protect, to defend, to guard against"
+    },
+    {
+      "text": "阳",
+      "pinyin": "yáng",
+      "meaning": "the male principle; bright, sunny; clear, lit, open"
+    },
+    {
+      "text": "阴",
+      "pinyin": "yīn",
+      "meaning": "the female principle; dark, shaded; hidden, implicit, secret"
+    },
+    {
+      "text": "阿",
+      "pinyin": "ā",
+      "meaning": "an initial particle, a prefix used for names; used in transliterations"
+    },
+    {
+      "text": "附",
+      "pinyin": "fù",
+      "meaning": "nearby; to adhere to, to attach; to rely on"
+    },
+    {
+      "text": "院",
+      "pinyin": "yuàn",
+      "meaning": "court, yard, courtyard; school"
+    },
+    {
+      "text": "除",
+      "pinyin": "chú",
+      "meaning": "to eliminate, to remove, to wipe out"
+    },
+    {
+      "text": "险",
+      "pinyin": "xiǎn",
+      "meaning": "narrow pass, strategic point"
+    },
+    {
+      "text": "陪",
+      "pinyin": "péi",
+      "meaning": "to accompany, to be with, to keep company"
+    },
+    {
+      "text": "难",
+      "pinyin": "nán",
+      "meaning": "hard, difficult, arduous; unable"
+    },
+    {
+      "text": "雅",
+      "pinyin": "yǎ",
+      "meaning": "elegant, graceful, refined"
+    },
+    {
+      "text": "雨",
+      "pinyin": "yǔ",
+      "meaning": "rain"
+    },
+    {
+      "text": "雪",
+      "pinyin": "xuě",
+      "meaning": "snow; wipe away shame, avenge"
+    },
+    {
+      "text": "零",
+      "pinyin": "líng",
+      "meaning": "zero; fragment, fraction"
+    },
+    {
+      "text": "需",
+      "pinyin": "xū",
+      "meaning": "to need, to require; must"
+    },
+    {
+      "text": "青",
+      "pinyin": "qīng",
+      "meaning": "nature's color; blue, green, black; young"
+    },
+    {
+      "text": "静",
+      "pinyin": "jìng",
+      "meaning": "still, quiet, motionless, gentle"
+    },
+    {
+      "text": "非",
+      "pinyin": "fēi",
+      "meaning": "not, negative, non-; to oppose"
+    },
+    {
+      "text": "面",
+      "pinyin": "miàn",
+      "meaning": "face; surface, side; plane, dimension"
+    },
+    {
+      "text": "鞋",
+      "pinyin": "xié",
+      "meaning": "shoes, footwear in general"
+    },
+    {
+      "text": "音",
+      "pinyin": "yīn",
+      "meaning": "sound, tone, pitch, pronunciation"
+    },
+    {
+      "text": "页",
+      "pinyin": "yè",
+      "meaning": "page, sheet, leaf"
+    },
+    {
+      "text": "顶",
+      "pinyin": "dǐng",
+      "meaning": "top, summit, peak; to carry on the head"
+    },
+    {
+      "text": "须",
+      "pinyin": "xū",
+      "meaning": "beard; must; necessary"
+    },
+    {
+      "text": "顾",
+      "pinyin": "gù",
+      "meaning": "to look back; to look at; to look after"
+    },
+    {
+      "text": "预",
+      "pinyin": "yù",
+      "meaning": "to prepare, to arrange; in advance"
+    },
+    {
+      "text": "频",
+      "pinyin": "pín",
+      "meaning": "frequency; repeatedly, again and again"
+    },
+    {
+      "text": "颗",
+      "pinyin": "kē",
+      "meaning": "grain, kernel"
+    },
+    {
+      "text": "题",
+      "pinyin": "tí",
+      "meaning": "forehead; headline, title; theme"
+    },
+    {
+      "text": "颜",
+      "pinyin": "yán",
+      "meaning": "face, facial appearance"
+    },
+    {
+      "text": "风",
+      "pinyin": "fēng",
+      "meaning": "wind; air; customs, manners; news"
+    },
+    {
+      "text": "飞",
+      "pinyin": "fēi",
+      "meaning": "to fly, to dart; high"
+    },
+    {
+      "text": "食",
+      "pinyin": "shí",
+      "meaning": "food; to eat"
+    },
+    {
+      "text": "餐",
+      "pinyin": "cān",
+      "meaning": "to eat, to dine; meal, food"
+    },
+    {
+      "text": "饭",
+      "pinyin": "fàn",
+      "meaning": "meal, food; cooked rice"
+    },
+    {
+      "text": "饮",
+      "pinyin": "yǐn",
+      "meaning": "to swallow, to drink; a kind of drink"
+    },
+    {
+      "text": "饱",
+      "pinyin": "bǎo",
+      "meaning": "satisfied; to eat one's fill"
+    },
+    {
+      "text": "饺",
+      "pinyin": "jiǎo",
+      "meaning": "stuffed dumplings"
+    },
+    {
+      "text": "饿",
+      "pinyin": "è",
+      "meaning": "hungry; greedy"
+    },
+    {
+      "text": "馆",
+      "pinyin": "guǎn",
+      "meaning": "public building; shop, house, establishment"
+    },
+    {
+      "text": "首",
+      "pinyin": "shǒu",
+      "meaning": "chief, head, leader"
+    },
+    {
+      "text": "香",
+      "pinyin": "xiāng",
+      "meaning": "incense; fragrant, aromatic"
+    },
+    {
+      "text": "马",
+      "pinyin": "mǎ",
+      "meaning": "horse; surname"
+    },
+    {
+      "text": "骑",
+      "pinyin": "qí",
+      "meaning": "to ride, to mount; cavalry"
+    },
+    {
+      "text": "高",
+      "pinyin": "gāo",
+      "meaning": "tall, lofty; high, elevated"
+    },
+    {
+      "text": "鱼",
+      "pinyin": "yú",
+      "meaning": "fish"
+    },
+    {
+      "text": "鲜",
+      "pinyin": "xiān",
+      "meaning": "fresh; delicious; attractive"
+    },
+    {
+      "text": "鳜",
+      "pinyin": "guì",
+      "meaning": "mandarin fish"
+    },
+    {
+      "text": "鸟",
+      "pinyin": "niǎo",
+      "meaning": "bird"
+    },
+    {
+      "text": "鸡",
+      "pinyin": "jī",
+      "meaning": "chicken"
+    },
+    {
+      "text": "鸭",
+      "pinyin": "yā",
+      "meaning": "duck; Anas species (various)"
+    },
+    {
+      "text": "黄",
+      "pinyin": "huáng",
+      "meaning": "yellow; surname"
+    },
+    {
+      "text": "黑",
+      "pinyin": "hēi",
+      "meaning": "black; dark; evil, sinister"
+    },
+    {
+      "text": "鼠",
+      "pinyin": "shǔ",
+      "meaning": "rat, mouse"
+    },
+    {
+      "text": "龄",
+      "pinyin": "líng",
+      "meaning": "age; years"
+    }
+  ]
+}

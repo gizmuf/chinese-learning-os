@@ -1,9 +1,16 @@
+import componentReadings from '../data/study-component-readings.json';
+import dictionaryCharacters from '../data/study-dictionary-characters.json';
 import {cloudWords, type CloudLevel, type CloudWord} from './atlas-cloud-model';
 import {extendedCharacters} from './atlas-cloud-extended';
 import {atlasByHanzi, componentById} from './atlas-model';
 import {familyWords} from './word-family-model';
 import type {Locale} from './translate';
 
+const readingsByGlyph=new Map(componentReadings.components.map(r=>[r.glyph,r.pinyin]));
+const characterDefinitions=new Map(dictionaryCharacters.characters.map(r=>[r.text,r]));
+const canonicalReadings=new Map(extendedCharacters('en',3).map(ch=>[ch.hanzi,ch.reviewed?.pinyin||ch.readings.join(' / ')]));
+export const hybridComponentReading=(glyph:string)=>canonicalReadings.get(glyph)||readingsByGlyph.get(glyph)||'';
+export const hybridTextReading=(text:string)=>Array.from(text).length===1?hybridComponentReading(text):cloudWords('en').find(word=>word.hanzi===text)?.pinyin||'';
 export type HybridLayout = 'layers' | 'constellations' | 'matrix';
 export type HybridSet = 'family' | 'hundred' | 'scope';
 export const isHybridLayout = (value:string): value is HybridLayout => ['layers','constellations','matrix'].includes(value);
@@ -25,11 +32,11 @@ export function hybridInventory(words:readonly CloudWord[],locale:Locale){
  const members=new Map<string,string[]>();let occurrences=0;
  for(const word of words){const glyphs=Array.from(word.hanzi).filter(isHanzi);occurrences+=glyphs.length;for(const h of new Set(glyphs)){const ids=members.get(h)??[];ids.push(word.id);members.set(h,ids)}}
  const characters:HybridCharacter[]=[...members].map(([hanzi,wordIds])=>{
-  const node=source.get(hanzi),reviewed=atlasByHanzi.get(hanzi);
+  const node=source.get(hanzi),reviewed=atlasByHanzi.get(hanzi),definition=characterDefinitions.get(hanzi);
   const fallback=reviewed?.components.map(id=>componentById.get(id)!.glyph)??[];
   const raw=node?.leafComponents??fallback;
   const parts=[...new Set(raw.filter(p=>p!==hanzi&&readableComponent(p)))];
-  return {hanzi,pinyin:reviewed?.pinyin??node?.readings.join(' / ')??'',meaning:reviewed?.meaning[locale],parts,
+  return {hanzi,pinyin:reviewed?.pinyin||node?.readings.join(' / ')||definition?.pinyin||'',meaning:reviewed?.meaning[locale]??node?.meaning??definition?.meaning,parts,
    components:node?.components??fallback,complete:Boolean(node?.complete??reviewed)&&raw.every(readableComponent),wordIds};
  }).sort((a,b)=>b.wordIds.length-a.wordIds.length||a.hanzi.localeCompare(b.hanzi,'zh'));
  return {characters,occurrences,wordCount:words.length,characterCount:characters.length};
