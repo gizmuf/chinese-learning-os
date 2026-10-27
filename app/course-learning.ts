@@ -1,3 +1,4 @@
+import {chunkActivityIds} from './speaking-chunks-data';
 import {
   createEmptyCard,
   fsrs,
@@ -25,7 +26,7 @@ export const activityIds = [
 export const courseEventSchema = z
   .object({
     id: z.string().uuid(),
-    lessonId: z.enum(["intensive-03", "intensive-04", "intensive-05", "intensive-06", "video-self-introduction", "grammar-hsk3"]),
+    lessonId: z.enum(["intensive-03", "intensive-04", "intensive-05", "intensive-06", "video-self-introduction", "grammar-hsk3", "speaking-chunks"]),
     activityId: z.string(),
     kind: z.enum(["answer", "study", "writing"]),
     correct: z.boolean().nullable(),
@@ -34,7 +35,7 @@ export const courseEventSchema = z
     rating: z.number().int().min(0).max(4).optional(),
   })
   .superRefine((event, ctx) => {
-    if (!(event.lessonId === 'grammar-hsk3' ? grammarActivityIds : event.lessonId === 'intensive-06' ? lesson06ActivityIds : event.lessonId === 'video-self-introduction' ? videoActivityIds : event.lessonId === 'intensive-05' ? lesson05ActivityIds : event.lessonId === 'intensive-04' ? lesson04ActivityIds : activityIds).includes(event.activityId)) ctx.addIssue({code:'custom',message:'Unknown activity for this lesson'});
+    if (!(event.lessonId === 'speaking-chunks' ? chunkActivityIds : event.lessonId === 'grammar-hsk3' ? grammarActivityIds : event.lessonId === 'intensive-06' ? lesson06ActivityIds : event.lessonId === 'video-self-introduction' ? videoActivityIds : event.lessonId === 'intensive-05' ? lesson05ActivityIds : event.lessonId === 'intensive-04' ? lesson04ActivityIds : activityIds).includes(event.activityId)) ctx.addIssue({code:'custom',message:'Unknown activity for this lesson'});
     if((event.activityId.startsWith('c04-build-')||event.activityId.startsWith('c05-build-')||event.activityId.startsWith('c06-build-'))&&!event.assisted)ctx.addIssue({code:'custom',message:'Expression builders are supported practice'});
     if(event.activityId.startsWith("lab-family-")&&!event.assisted) ctx.addIssue({code:"custom",message:"Visible family examples require assisted practice"});
     if(event.lessonId==='video-self-introduction'&&event.kind==='writing'&&!event.assisted)ctx.addIssue({code:'custom',message:'Video guided writing requires supported scoring'});
