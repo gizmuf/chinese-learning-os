@@ -67,11 +67,21 @@ The separate API checks exercise the real built route and D1, including UUID
 replay, matching UUIDs under different owners, malformed/cross-lesson events,
 stale-owner rejection, and supported-result roundtrips.
 
-## Delivery status
+## Rollout review — 27 October 2026
 
-This is a source patch, not a Sites deployment. No production database migration,
-production account writes, merge or publishing was performed. No physical iPad,
-Apple Pencil, Safari or real multi-device sign-in session was tested. Before a
-Sites rollout, perform a preview smoke test with two actual accounts and an
-actual offline/reconnect cycle. Existing clients must receive the updated shared
-event schema when using the new grammar events.
+The patch was reviewed against the current Sites source at `2184bda`. Repeated
+validation passed: 210 tests, TypeScript checking, the production build, and 8
+grammar plus 38 course API checks against an isolated local Worker/D1. The local
+API runner now invokes `python3` so it also runs on this Mac without a `python`
+alias.
+
+Browser verification covered hidden examples before answering, saved feedback,
+refresh persistence, and the distinction between independent and hinted answers:
+one independent answer reduced new exercises from 114 to 113, while a subsequent
+hinted answer left the count at 113. Existing guided drafts remained present.
+
+Sites records are the authority for the published version and deployment status.
+No production database migration is required. Account switching and offline retry
+were exercised by the automated persistence and local API tests; two real signed-in
+browser accounts, real-device offline/reconnect, physical iPad, Apple Pencil and
+Safari remain outside this verification.

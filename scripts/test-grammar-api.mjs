@@ -19,7 +19,7 @@ try{
  }
  if(!ready)throw Error('Worker did not become ready: '+output.slice(-2000));
  for(const file of ['tests/grammar-api-integration.py','tests/course-api-integration.py']){
-  const child=spawn('python',[file],{stdio:'inherit',env:{...process.env,CHINESE_OS_TEST_BASE:'http://127.0.0.1:8788'}});
+  const child=spawn('python3',[file],{stdio:'inherit',env:{...process.env,CHINESE_OS_TEST_BASE:'http://127.0.0.1:8788'}});
   process.exitCode=await new Promise(resolve=>child.on('exit',resolve));
   if(process.exitCode)break;
  }
