@@ -45,7 +45,7 @@ assert all(e['lessonId']=='intensive-03' for e in call(user=a,path='/api/course-
 checks.append('grammar does not break legacy course GET')
 assert not any(e['id']==event['id'] for e in call(user=a,path='/api/progress')[1]['events'])
 checks.append('grammar absent from vocabulary progress')
-for patch in [{'lessonId':'intensive-05'},{'lessonId':'intensive-03'},{'activityId':'time-days'},{'activityId':'unknown'},{'kind':'writing'},{'kind':'study'},{'correct':None}]:
+for patch in [{'lessonId':'intensive-06'},{'lessonId':'intensive-05'},{'lessonId':'intensive-03'},{'activityId':'time-days'},{'activityId':'unknown'},{'kind':'writing'},{'kind':'study'},{'correct':None}]:
     assert call('POST',a,{'events':[{**event,**patch,'id':str(uuid.uuid4())}]})[0]==400
 checks.append('grammar invalid activity, lesson and kind rejected by real API')
 assert call('POST',a,{'events':[event]},extra={'X-Notebook-Owner':'qa-'+b})[0]==401

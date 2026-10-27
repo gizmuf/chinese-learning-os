@@ -11,7 +11,7 @@ const open=()=>m.openCourseStore(crypto.randomUUID());
 test('114 authored IDs use the shared registry; invalid lesson, activity and kind are rejected',()=>{
  assert.equal(m.grammarQuestions.length,114);assert.equal(new Set(m.grammarActivityIds).size,114);
  for(const {ex} of m.grammarQuestions)assert.ok(m.courseEventSchema.safeParse(m.grammarReviewEvent(ex.id,ex.answer,false)).success);
- for(const patch of [{lessonId:'intensive-03'},{activityId:'unknown'},{activityId:'study:'+first.id},{kind:'writing'},{correct:null}])assert.equal(m.courseEventSchema.safeParse(event(patch)).success,false);
+ for(const patch of [{lessonId:'intensive-06'},{lessonId:'intensive-03'},{activityId:'unknown'},{activityId:'study:'+first.id},{kind:'writing'},{correct:null}])assert.equal(m.courseEventSchema.safeParse(event(patch)).success,false);
  assert.throws(()=>m.grammarReviewEvent(first.id,-1,false));
 });
 test('new, due and future reviews reuse course FSRS; assisted and duplicate events earn no extra credit',()=>{
