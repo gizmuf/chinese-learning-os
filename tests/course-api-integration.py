@@ -88,6 +88,21 @@ for lesson,activity in [('intensive-05',video['activityId']),('video-self-introd
  assert call('POST',a,{'events':[{**video,'id':str(uuid.uuid4()),'lessonId':lesson,'activityId':activity}]})[0]==400
 checks.append('video registry rejects cross-material activities')
 assert all(e['lessonId']=='intensive-03' for e in call(user=a,path='/api/course-progress')[1]['events']);checks.append('video material preserves legacy lesson clients')
+lesson6={**event,'id':str(uuid.uuid4()),'lessonId':'intensive-06','activityId':'c06-check-c06-t01-read'}
+assert call('POST',a,{'events':[lesson6]})[0]==200
+assert call('POST',a,{'events':[lesson6]})[0]==200
+assert sum(e['id']==lesson6['id'] for e in call(user=a)[1]['events'])==1;checks.append('lesson06 answer sync idempotent')
+assert not any(e['lessonId']=='intensive-06' for e in call(user=b)[1]['events']);checks.append('lesson06 account isolation')
+listen6={**lesson6,'id':str(uuid.uuid4()),'activityId':'c06-check-c06-t01-listen'}
+assert call('POST',a,{'events':[listen6]})[0]==200;checks.append('lesson06 separate listening record')
+build6={**lesson6,'id':str(uuid.uuid4()),'activityId':'c06-build-1'}
+assert call('POST',a,{'events':[build6]})[0]==400
+assert call('POST',a,{'events':[{**build6,'assisted':True}]})[0]==200;checks.append('lesson06 builders cannot score independently')
+for changed in [{'lessonId':'intensive-05'},{'activityId':'c05-build-1'},{'activityId':'c06-unknown'}]:
+ assert call('POST',a,{'events':[{**lesson6,**changed,'id':str(uuid.uuid4())}]})[0]==400
+checks.append('lesson06 cross-lesson registry enforced')
+assert all(e['lessonId']=='intensive-03' for e in call(user=a,path='/api/course-progress')[1]['events']);checks.append('lesson06 preserves old lesson clients')
+assert call('POST',a,{'events':[lesson6]},path='/api/progress')[0]==400;checks.append('lesson06 cannot contaminate HSK history')
 assert call('POST',a,'x'*100001)[0]==413;checks.append('course body size bounded')
 for check in checks:print('PASS',check)
 print(f'{len(checks)} course API integration checks passed')

@@ -44,6 +44,8 @@ import { useCourseProgress } from "./course-store";
 import { speak, stopAudio } from "./audio";
 import CourseLab from "./course-lab";
 import Lesson04 from "./lesson04";
+import Lesson06 from "./lesson06";
+import {lesson06} from "./lesson06-data";
 import Lesson05 from "./lesson05";
 import VideoStudy from "./video-study";
 import {videoStudy} from "./video-study-data";
@@ -97,6 +99,7 @@ export default function IntensiveCourse({
   );
   useEffect(() => {
     if(new URLSearchParams(window.location.search).get("material")==="self-introduction")setVideoOpen(true);
+    if (new URLSearchParams(window.location.search).get("lesson") === "6") {setLessonNumber(6);setOpen(true);}
     if (new URLSearchParams(window.location.search).get("lesson") === "5") {setLessonNumber(5);setOpen(true);}
     if (new URLSearchParams(window.location.search).get("lesson") === "4") {setLessonNumber(4);setOpen(true);}
     if (new URLSearchParams(window.location.search).get("lesson") === "3")
@@ -183,6 +186,8 @@ export default function IntensiveCourse({
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
+  if(open&&lessonNumber===6)return <Lesson06 {...{owner,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"","/?course=intensive");}}/>;
+  function openLesson06(){stopAudio();setLessonNumber(6);setOpen(true);window.history.replaceState(null,"","/?course=intensive&lesson=6");window.scrollTo({top:0,behavior:"instant"});}
   if(videoOpen)return <VideoStudy {...{owner,penOnly,setPenOnly,notify}} onBack={()=>{setVideoOpen(false);window.history.replaceState(null,"","/?course=intensive");}}/>;
   if(open&&lessonNumber===5) return <Lesson05 {...{owner,db,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"",window.location.pathname+"?course=intensive");}}/>;
   function openLesson05(){stopAudio();setLessonNumber(5);setOpen(true);window.history.replaceState(null,"",window.location.pathname+"?course=intensive&lesson=5");window.scrollTo({top:0,behavior:"instant"});}
@@ -210,6 +215,7 @@ export default function IntensiveCourse({
       {!open ? (
         <>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">你 · 自己</div><div><span className="pill">{videoCopy[locale].independent}</span><h2>{videoStudy.title[locale]}</h2><p>{videoCopy[locale].intro}</p><button className="primary" onClick={()=>{stopAudio();setVideoOpen(true);window.history.replaceState(null,'','/?course=intensive&material=self-introduction');window.scrollTo({top:0,behavior:'instant'});}}>{videoCopy[locale].read}<ArrowRight size={17}/></button></div></section>
+          <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">天 · 水 · 还是</div><div><span className="pill">{t("Lesson")} 06 / 60</span><h2>{lesson06.title[locale]}</h2><p>27.10.2026</p><button className="primary" onClick={openLesson06}>{t("Lesson")} 06<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">又 · 起来 · 好</div><div><span className="pill">{t("Lesson")} 05 / 60</span><h2>{lesson05.title[locale]}</h2><p>26.10.2026</p><button className="primary" onClick={openLesson05}>{t("Lesson")} 05<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><img src="/course04/boards/9974.jpg" alt={lesson04.title[locale]}/><div><span className="pill">{t("Lesson")} 04 / 60</span><h2>{lesson04.title[locale]}</h2><p>23.10.2026</p><button className="primary" onClick={openLesson04}>{t("Lesson")} 04<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature">
@@ -231,19 +237,19 @@ export default function IntensiveCourse({
 
           <details className="course-calendar panel">
             <summary>
-              {t("All 60 lessons")} · {(withTurkish({en:"Three lessons ready",fr:"Trois leçons disponibles",ru:"Три урока доступны"}))[locale]}
+              {t("All 60 lessons")} · {({en:"Four lessons ready",fr:"Quatre leçons disponibles",ru:"Четыре урока доступны",tr:"Dört ders hazır"})[locale]}
             </summary>
             <div className="course-lesson-grid">
               {Array.from({ length: 60 }, (_, i) => (
                 <button
                   key={i}
-                  disabled={i !== 2 && i !== 3 && i !== 4}
-                  className={i === 2 || i === 3 || i === 4 ? "available" : ""}
-                  onClick={i===4?openLesson05:i===3?openLesson04:openLesson}
+                  disabled={i !== 2 && i !== 3 && i !== 4 && i !== 5}
+                  className={i === 2 || i === 3 || i === 4 || i === 5 ? "available" : ""}
+                  onClick={i===5?openLesson06:i===4?openLesson05:i===3?openLesson04:openLesson}
                 >
                   <strong>{String(i + 1).padStart(2, "0")}</strong>
                   <small>
-                    {i === 2 || i === 3 || i === 4
+                    {i === 2 || i === 3 || i === 4 || i === 5
                       ? t("Ready to practice")
                       : t("Awaiting class material")}
                   </small>
