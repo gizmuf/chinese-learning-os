@@ -1,0 +1,1476 @@
+{
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "generationRate": "-10%",
+  "recordings": [
+    {
+      "id": "c07-t01",
+      "text": "比",
+      "file": "c07-t01.mp3",
+      "sha256": "2a414960eada8b0e2f5b6c6e68f718c9843ca1cdfab3a97d32bbc9f740668dfc"
+    },
+    {
+      "id": "c07-t02",
+      "text": "高",
+      "file": "c07-t02.mp3",
+      "sha256": "74aa01d5dd2cdd8fc254245027dec1499456908eef2a852904a11ce11bfc6e5a"
+    },
+    {
+      "id": "c07-t03",
+      "text": "身高",
+      "file": "c07-t03.mp3",
+      "sha256": "e5e81570c93ae7e028850c4df40dd9553822cabdf15a3499be2afb54167bc437"
+    },
+    {
+      "id": "c07-t04",
+      "text": "矮",
+      "file": "c07-t04.mp3",
+      "sha256": "a7195c30d8ed7c5b90b97528a225cccb74736551bfbe1c7e7979fd56b5ae8087"
+    },
+    {
+      "id": "c07-t05",
+      "text": "没有",
+      "file": "c07-t05.mp3",
+      "sha256": "e75633101a5d90077241e43e7a07177887ea4a6a8f52514d220c65b17319e7e9"
+    },
+    {
+      "id": "c07-t07",
+      "text": "一点儿",
+      "file": "c07-t07.mp3",
+      "sha256": "71d777979906fd20cef904c85be5d659cbdcda96cb5d8ae1c8dd0359e915461c"
+    },
+    {
+      "id": "c07-t09",
+      "text": "高得多",
+      "file": "c07-t09.mp3",
+      "sha256": "becf3ac3ccc31825e92456348dfae473f7e26d748482d6b6b5e5ca61da249c99"
+    },
+    {
+      "id": "c07-t08",
+      "text": "高多了",
+      "file": "c07-t08.mp3",
+      "sha256": "5d2a73b09fdb80cfca8c7e956eb5940db233ac9d8f18c0b418be52944da3a663"
+    },
+    {
+      "id": "c07-t11",
+      "text": "高多了",
+      "file": "c07-t11.mp3",
+      "sha256": "5d2a73b09fdb80cfca8c7e956eb5940db233ac9d8f18c0b418be52944da3a663"
+    },
+    {
+      "id": "c07-t12",
+      "text": "高得多",
+      "file": "c07-t12.mp3",
+      "sha256": "becf3ac3ccc31825e92456348dfae473f7e26d748482d6b6b5e5ca61da249c99"
+    },
+    {
+      "id": "c07-t06",
+      "text": "不比",
+      "file": "c07-t06.mp3",
+      "sha256": "484df75f0295b0c175743cfb785c028b3cac8bc5a25cdb8e06790a78e74b5c68"
+    },
+    {
+      "id": "c07-t13",
+      "text": "体重",
+      "file": "c07-t13.mp3",
+      "sha256": "d6f05b6924f380bbaadb09083e08380388c0436b7f52dd3373074998a166fefb"
+    },
+    {
+      "id": "c07-t15",
+      "text": "米",
+      "file": "c07-t15.mp3",
+      "sha256": "ddb7a84c53b3dd12fb50491ce88806dff5e05c2cc7c020b7aeccd8fc2f55447a"
+    },
+    {
+      "id": "c07-t16",
+      "text": "公斤",
+      "file": "c07-t16.mp3",
+      "sha256": "d564f374a8fe6e95dbef6998af0a249f2876b516a927b9676740a09c58923bac"
+    },
+    {
+      "id": "c07-t14",
+      "text": "厘米",
+      "file": "c07-t14.mp3",
+      "sha256": "70b79b74da99826723ff322ede2e687b559fb37cf1b6493ba190b2107e09bf83"
+    },
+    {
+      "id": "c07-t17",
+      "text": "八十公斤",
+      "file": "c07-t17.mp3",
+      "sha256": "14f1d07d29907d792e844234ccc662fa39911d5ad8456f938cdbd1768e70b2ba"
+    },
+    {
+      "id": "c07-t10",
+      "text": "高一点儿",
+      "file": "c07-t10.mp3",
+      "sha256": "ee6c2d312023dd5cbee62caf9d569fcbb06f4247d8e1d25b3b9f121e179eada1"
+    },
+    {
+      "id": "c07-t18",
+      "text": "一百八十厘米",
+      "file": "c07-t18.mp3",
+      "sha256": "5500f2684c7b52f8d5d6ffec438c6f2aaa910f9082368fd6801948b1dbe7810a"
+    },
+    {
+      "id": "c07-t21",
+      "text": "一百八十五厘米",
+      "file": "c07-t21.mp3",
+      "sha256": "a5e43bb1a6b649efcb6cad4dcc61149eac0b4b821f22090ae81c956f48ff8a1f"
+    },
+    {
+      "id": "c07-t20",
+      "text": "一百七十九厘米",
+      "file": "c07-t20.mp3",
+      "sha256": "144acf50c6d36f619cfb8f6168a4a95eaf2dabc736fab8cb81c77bc93c3790b4"
+    },
+    {
+      "id": "c07-t19",
+      "text": "一百七十五厘米",
+      "file": "c07-t19.mp3",
+      "sha256": "595db858182011b28fccb18ae8dc0ece25077c628041bb8ed537c5c25a043ae5"
+    },
+    {
+      "id": "c07-t23",
+      "text": "一米八",
+      "file": "c07-t23.mp3",
+      "sha256": "5e771c27cc5dac5a57d0a7302b35080475840c74ae30dd7458f7a1861054869f"
+    },
+    {
+      "id": "c07-t25",
+      "text": "重",
+      "file": "c07-t25.mp3",
+      "sha256": "4c34a20ab91abefef5d8444005d7d15e0e1b027e9c1024f103e6b8b3117d4310"
+    },
+    {
+      "id": "c07-t24",
+      "text": "五厘米",
+      "file": "c07-t24.mp3",
+      "sha256": "c0fe408b727d1bccaa82dc4549ab264fb79dece134ff7dc8d47f43af5e561368"
+    },
+    {
+      "id": "c07-t27",
+      "text": "手机",
+      "file": "c07-t27.mp3",
+      "sha256": "d2a6e300167ec791b11957dbd514d77928f6beb90fb88b98de2ee622414e3969"
+    },
+    {
+      "id": "c07-t28",
+      "text": "这个手机",
+      "file": "c07-t28.mp3",
+      "sha256": "e11d2602a561dfed9d262f9775a1946931f5e3453d9f7f4f97fa43ce8543a0ea"
+    },
+    {
+      "id": "c07-t26",
+      "text": "轻",
+      "file": "c07-t26.mp3",
+      "sha256": "0f49e5e4d7d6c7471f300a08b6d7393b0a9e1b5d9fce31b9054118e82b7336e1"
+    },
+    {
+      "id": "c07-t30",
+      "text": "贵",
+      "file": "c07-t30.mp3",
+      "sha256": "ec29a0e999faa9f34ae41940d275e9d73e6294ffe23830e63e7c60c280640bdd"
+    },
+    {
+      "id": "c07-t31",
+      "text": "便宜",
+      "file": "c07-t31.mp3",
+      "sha256": "9fbbfb03f16c5225880b20e25f4a39b918eebbffc9ed41995efccf2fb0d11aa7"
+    },
+    {
+      "id": "c07-t32",
+      "text": "很便宜",
+      "file": "c07-t32.mp3",
+      "sha256": "cd4b4876ba2bb940364b3a433eccde6d13ed08e117248db6741a34a0d3db943d"
+    },
+    {
+      "id": "c07-t33",
+      "text": "便宜多了",
+      "file": "c07-t33.mp3",
+      "sha256": "94dab28aa0425bdffe97cdd56ffe4a621748397a02450ea478795ea7947424de"
+    },
+    {
+      "id": "c07-t22",
+      "text": "一百六十三厘米",
+      "file": "c07-t22.mp3",
+      "sha256": "e47b25497abc58cd90bf168ea74f12bb0d4ef33aa0067949bbce991850fbf10e"
+    },
+    {
+      "id": "c07-t35",
+      "text": "汉语",
+      "file": "c07-t35.mp3",
+      "sha256": "95d33cfabac589703a690029e538e3ed7d349d511daf875288167bdf7a1c17ac"
+    },
+    {
+      "id": "c07-t36",
+      "text": "难",
+      "file": "c07-t36.mp3",
+      "sha256": "4e8d8ff79c3045afb2e32813ef148893c82cc74db66457d14d4b3bffb94c480b"
+    },
+    {
+      "id": "c07-t37",
+      "text": "医生",
+      "file": "c07-t37.mp3",
+      "sha256": "da03862bf0cfb550275213647d90240c965a29b32eb1807cc81244b30427a3ca"
+    },
+    {
+      "id": "c07-t38",
+      "text": "大夫",
+      "file": "c07-t38.mp3",
+      "sha256": "57fd61e38eb57d9b3fdaf1fa9976a500318868936013c97e9290bf1b5e36cd86"
+    },
+    {
+      "id": "c07-t29",
+      "text": "那个手机",
+      "file": "c07-t29.mp3",
+      "sha256": "ffe8f63e23d4911377e799e017a484c89372f5cc87606d199043e9256bddbacd"
+    },
+    {
+      "id": "c07-t40",
+      "text": "重要",
+      "file": "c07-t40.mp3",
+      "sha256": "daaa512ab4d3eb5e03299ef5a4e464907525f2fb1cc12f34e522cb02e5a363ad"
+    },
+    {
+      "id": "c07-t41",
+      "text": "公园",
+      "file": "c07-t41.mp3",
+      "sha256": "0a95fe6defa6d40726cc7ea883ad39ad98279c1144caa509330933f1b81f858c"
+    },
+    {
+      "id": "c07-t42",
+      "text": "大公园",
+      "file": "c07-t42.mp3",
+      "sha256": "f4730d8502341f4c5c1d54711405a07534369eb1521e7035bc79146a0950ac94"
+    },
+    {
+      "id": "c07-t34",
+      "text": "英语",
+      "file": "c07-t34.mp3",
+      "sha256": "35e5c631fcac73fbdea675dd30b892de336c7b6a84cde684c5924844a590a516"
+    },
+    {
+      "id": "c07-t39",
+      "text": "护士",
+      "file": "c07-t39.mp3",
+      "sha256": "033d5d3bc614662a667feb284e7d2220a03665a2002178f01b943f3687e68526"
+    },
+    {
+      "id": "c07-t43",
+      "text": "桂花公园",
+      "file": "c07-t43.mp3",
+      "sha256": "444e4497c07dbb7d8cf04dd5f24bdf582b41eae6169c752ee7de89811a0aa192"
+    },
+    {
+      "id": "c07-t45",
+      "text": "桂花",
+      "file": "c07-t45.mp3",
+      "sha256": "010e303b6f37215dc472e478dc01fbb8f4e1b960696bf50dd52f6825d144950f"
+    },
+    {
+      "id": "c07-t44",
+      "text": "人民公园",
+      "file": "c07-t44.mp3",
+      "sha256": "3a946a096f109f5b746c5c4e3636efd20c0c24616d7a5c257372f0eb064dc3fd"
+    },
+    {
+      "id": "c07-t46",
+      "text": "人民",
+      "file": "c07-t46.mp3",
+      "sha256": "15d2ae719cdff69816a8978a0ed9eec7cb730579f1fa56a9fdbd413a2630c9c1"
+    },
+    {
+      "id": "c07-t47",
+      "text": "池塘",
+      "file": "c07-t47.mp3",
+      "sha256": "ad7d6f4aed05723352b4fad74840a0e41311c1736551c67a86bb5ca770397465"
+    },
+    {
+      "id": "c07-t50",
+      "text": "单身",
+      "file": "c07-t50.mp3",
+      "sha256": "2c34fea0577372dee356a8922202febb469e180d0b09d9a7f7ad380db149cc95"
+    },
+    {
+      "id": "c07-t49",
+      "text": "食物",
+      "file": "c07-t49.mp3",
+      "sha256": "8261d668f62a76b915f4b67725fac75bd0ebe3506125531527e7164e87e14afe"
+    },
+    {
+      "id": "c07-t52",
+      "text": "每",
+      "file": "c07-t52.mp3",
+      "sha256": "f7a597a6ae2cf2464c42b65ea9f438a0c1b50b3485806535c89455831202d046"
+    },
+    {
+      "id": "c07-t53",
+      "text": "星期六",
+      "file": "c07-t53.mp3",
+      "sha256": "fdc377766390d571c0a8dc1f711ca834e90325868c9f8621ded0482f0a69c245"
+    },
+    {
+      "id": "c07-t54",
+      "text": "上午",
+      "file": "c07-t54.mp3",
+      "sha256": "3e51d56f43406846a5a4bb9aafd25508503941b8b900a006f38708782ed32ca6"
+    },
+    {
+      "id": "c07-t55",
+      "text": "十一月十一号",
+      "file": "c07-t55.mp3",
+      "sha256": "a525ca9c2ddc8f90760d9a9d6c3069c0d9f869d1708594951cb09d6b263f8f49"
+    },
+    {
+      "id": "c07-t51",
+      "text": "相亲",
+      "file": "c07-t51.mp3",
+      "sha256": "4cef8d7372f5fd4b538a7bf98855c4718b76b02d2d2ad98f805a655b8c202992"
+    },
+    {
+      "id": "c07-t57",
+      "text": "可乐",
+      "file": "c07-t57.mp3",
+      "sha256": "b58e8a027cf00ad6911cbadff70e62f9c018415feb8b30ca8b8f65cf800ff846"
+    },
+    {
+      "id": "c07-t48",
+      "text": "食堂",
+      "file": "c07-t48.mp3",
+      "sha256": "5bfaa702a369673cf7a2298bf6c978c8e3a669295fda57fd9b655b420db60534"
+    },
+    {
+      "id": "c07-t59",
+      "text": "糖",
+      "file": "c07-t59.mp3",
+      "sha256": "64007cd4202e936d766b0c28580ed4ce40908c4bbc5a589593be7d57df48b550"
+    },
+    {
+      "id": "c07-t60",
+      "text": "冰",
+      "file": "c07-t60.mp3",
+      "sha256": "f1cb37e7224648b45cd809a3ca73b495f89b0a99df8d48b0c8621ac6e3200687"
+    },
+    {
+      "id": "c07-t61",
+      "text": "可口可乐",
+      "file": "c07-t61.mp3",
+      "sha256": "ed71e4b1d7eb5e242ede70793f32035d68571c14b6a74289923d80793ba57156"
+    },
+    {
+      "id": "c07-t56",
+      "text": "每星期六上午",
+      "file": "c07-t56.mp3",
+      "sha256": "920911f4c32c0a8b4c925a8f1cec93d45923c60090c418f1dbcbb8c75adb4219"
+    },
+    {
+      "id": "c07-t63",
+      "text": "不要糖",
+      "file": "c07-t63.mp3",
+      "sha256": "65e5720145f5c6962666048e60aaa5df8bdae2de72045ac01d302943406d41ff"
+    },
+    {
+      "id": "c07-t58",
+      "text": "无糖可乐",
+      "file": "c07-t58.mp3",
+      "sha256": "f90d74b87c8582d72ad4c9be141957dabd6f43f7edc57b48ab7f119fb0bb7d2a"
+    },
+    {
+      "id": "c07-t65",
+      "text": "电",
+      "file": "c07-t65.mp3",
+      "sha256": "6023c056272f0b604fb140bbccafbcc0cb02bcbddca3b28487a56d5672d2e7fa"
+    },
+    {
+      "id": "c07-t62",
+      "text": "百事可乐",
+      "file": "c07-t62.mp3",
+      "sha256": "5c03f4e415163e13cfe4ace41dc1758d5cf77ea300c2094e660b148f608f6873"
+    },
+    {
+      "id": "c07-t66",
+      "text": "电气工程",
+      "file": "c07-t66.mp3",
+      "sha256": "78c5afc050f626d6265d2f329c4b8299d0997e8b23c77b327d32e3ae8588e4c6"
+    },
+    {
+      "id": "c07-t64",
+      "text": "不要冰",
+      "file": "c07-t64.mp3",
+      "sha256": "451520cccfc0699e3a8a40df704048bd2cdfd90711de6f058cb48963218f17cb"
+    },
+    {
+      "id": "c07-t69",
+      "text": "电子工程",
+      "file": "c07-t69.mp3",
+      "sha256": "eae14f756ba580a017add500178f2afdf690e9ae7273a1d6811c4def2872999b"
+    },
+    {
+      "id": "c07-t68",
+      "text": "电工",
+      "file": "c07-t68.mp3",
+      "sha256": "c7f407d68da25da478df3c07bbfc7f013559c9ad08febbb1561f9c4f98097967"
+    },
+    {
+      "id": "c07-t70",
+      "text": "工程",
+      "file": "c07-t70.mp3",
+      "sha256": "692872397d4631d4908cb0a8a2827c4c1afcad9f6c4c475bd4f9d20007ab7398"
+    },
+    {
+      "id": "c07-t71",
+      "text": "工程师",
+      "file": "c07-t71.mp3",
+      "sha256": "3bd6c6422916f8b6351965330a793b85b713f6350c74ec28d704cadd4d6de367"
+    },
+    {
+      "id": "c07-t67",
+      "text": "电气工程师",
+      "file": "c07-t67.mp3",
+      "sha256": "d13d713cd3a27273c5d076329376ac266fa8afa4bf1624c44ab19e90e0ffceb8"
+    },
+    {
+      "id": "c07-s01",
+      "text": "A比B高。",
+      "file": "c07-s01.mp3",
+      "sha256": "a0bcb11ae5b36b7839d2e19c9bda40b19920c098cee0ea3690f26b6ed8351788"
+    },
+    {
+      "id": "c07-s02",
+      "text": "我比你高。",
+      "file": "c07-s02.mp3",
+      "sha256": "2d87ca0feb1c9467862c246cb4edc926d59c005a7b66bfb2605f44770d7540ca"
+    },
+    {
+      "id": "c07-t72",
+      "text": "天才",
+      "file": "c07-t72.mp3",
+      "sha256": "f3cbc1622694c8c47405074ff5d242dcb43d429903358b8fed1b9ce7cec8749d"
+    },
+    {
+      "id": "c07-s03",
+      "text": "B比A矮。",
+      "file": "c07-s03.mp3",
+      "sha256": "18c634ddf9e2c802d93a8f542b8f8ca6a34ad70eb7bf49c5942ddb689586360a"
+    },
+    {
+      "id": "c07-s04",
+      "text": "我没有你高。",
+      "file": "c07-s04.mp3",
+      "sha256": "78bba01d747932d148dacb90597586b82d951310a088af64996a1a26541ae43c"
+    },
+    {
+      "id": "c07-s06",
+      "text": "A比B高一点儿。",
+      "file": "c07-s06.mp3",
+      "sha256": "22a1238f4f88db090c35e93bdf8831b9e162684159b8ae51ae62620887f8ce8d"
+    },
+    {
+      "id": "c07-s05",
+      "text": "我不比你高。",
+      "file": "c07-s05.mp3",
+      "sha256": "6992535a9d13180023090e3bcea5a1b01d881c1e90ce13f6663b4793f6c82a52"
+    },
+    {
+      "id": "c07-s07",
+      "text": "Robert比我高多了。",
+      "file": "c07-s07.mp3",
+      "sha256": "929287b53fdae9f56a3e0553803a0ae4ad9608a97f1c7be1b560ef91b6c67696"
+    },
+    {
+      "id": "c07-s09",
+      "text": "我的身高是一米八。",
+      "file": "c07-s09.mp3",
+      "sha256": "cc12ec63314f213d6f250b0ad1dfe007fc8feac5add84e9404aed7b6987de35f"
+    },
+    {
+      "id": "c07-s10",
+      "text": "我的体重是八十公斤。",
+      "file": "c07-s10.mp3",
+      "sha256": "be6c4e7cab413c6bcd979db0724b9d7ecb4b0b2dae5dfbca9203ddbfde487cea"
+    },
+    {
+      "id": "c07-s08",
+      "text": "Robert比我高得多。",
+      "file": "c07-s08.mp3",
+      "sha256": "105cab564299d7d836c8bb9a75aee7c77ac87d05778c3e29e92e15fa235e222d"
+    },
+    {
+      "id": "c07-s12",
+      "text": "那个手机比这个手机贵多了。",
+      "file": "c07-s12.mp3",
+      "sha256": "63c673259ea8f07946a86c98ca7418334654ed2042c43d6a425de267173cc79b"
+    },
+    {
+      "id": "c07-s13",
+      "text": "这个手机很便宜。",
+      "file": "c07-s13.mp3",
+      "sha256": "dc591ab702814464a8c8dcf515a09ffb4bc4815e4ac6152679b872c72a8a26c6"
+    },
+    {
+      "id": "c07-s14",
+      "text": "这个手机比那个手机便宜多了。",
+      "file": "c07-s14.mp3",
+      "sha256": "bb4c58e2fb6e55ddb812d2a38ee75b81a90bc4b08bf0fc6d5b1ab0b049c3fc4f"
+    },
+    {
+      "id": "c07-s11",
+      "text": "A比B高五厘米。",
+      "file": "c07-s11.mp3",
+      "sha256": "68d82212094384b050f83d9c99e9125ec91c695366ddd43c46f02838be3828bb"
+    },
+    {
+      "id": "c07-s16",
+      "text": "这个手机比那个手机贵吗？",
+      "file": "c07-s16.mp3",
+      "sha256": "777967d2cc2f48a8d93d9004e3ce53e0e92993a325cf53126454eab2ab3f9370"
+    },
+    {
+      "id": "c07-s15",
+      "text": "这个手机比那个手机便宜一点儿。",
+      "file": "c07-s15.mp3",
+      "sha256": "962a9e75d9d72aa5aa2dd2b3dc9af047f74c0d5ac87de57766877abe569e1ed6"
+    },
+    {
+      "id": "c07-s18",
+      "text": "医生比护士重要多了！",
+      "file": "c07-s18.mp3",
+      "sha256": "a5f769d6e8f13ea83951aacdb8f2fcb08bd79c178b3130a29e8311f8381a73cc"
+    },
+    {
+      "id": "c07-s19",
+      "text": "大夫比护士重要多了！",
+      "file": "c07-s19.mp3",
+      "sha256": "5a723e671970e611ef6a3813de827f6680ca6405410137ed13bd797f9eaf20e1"
+    },
+    {
+      "id": "c07-s21",
+      "text": "我们去桂花公园吧。",
+      "file": "c07-s21.mp3",
+      "sha256": "0f833269ff4c897db83bc25814d186d5b4ff609e08cf4e673c93108733c423ff"
+    },
+    {
+      "id": "c07-s20",
+      "text": "这个公园很大。",
+      "file": "c07-s20.mp3",
+      "sha256": "8450f67b2011ee9828359e1c089dfe26b17d5d9ffe863d730f6adc04c2db333b"
+    },
+    {
+      "id": "c07-s17",
+      "text": "英语比汉语难多了。",
+      "file": "c07-s17.mp3",
+      "sha256": "14d04ae7a6e458eeee9f08d117238d94d429916085f9c30618ded83948a7e35d"
+    },
+    {
+      "id": "c07-s22",
+      "text": "公园里有一个池塘。",
+      "file": "c07-s22.mp3",
+      "sha256": "3a1cdb248d6636b4e54aaa4d71ac0352077db643812ee83102b3782fa1e572d8"
+    },
+    {
+      "id": "c07-s24",
+      "text": "食堂的食物很便宜。",
+      "file": "c07-s24.mp3",
+      "sha256": "b4afe64d3a05161c5aac48be285dffece9ecc1a8c62721b2edba292f4a740bfc"
+    },
+    {
+      "id": "c07-s23",
+      "text": "我在食堂吃饭。",
+      "file": "c07-s23.mp3",
+      "sha256": "fe319d6a48df09664e50fb59bcc669f55349b782f56e3699aab3db3db02fcab2"
+    },
+    {
+      "id": "c07-s27",
+      "text": "不要糖。",
+      "file": "c07-s27.mp3",
+      "sha256": "aec1141aed30b248132812dd3b20effcb656ee3f54053b0f4b6c59ff5775972e"
+    },
+    {
+      "id": "c07-s26",
+      "text": "他是单身。",
+      "file": "c07-s26.mp3",
+      "sha256": "a689b64682364c2e9d5a67615d43313f4ca13398fe41885d520c5ad9ab42f998"
+    },
+    {
+      "id": "c07-s25",
+      "text": "我每星期六上午去公园。",
+      "file": "c07-s25.mp3",
+      "sha256": "8e692d202a4dd7a48708d835c990f2cde0f7ee417a707fbdf2d65a258f7d9c3d"
+    },
+    {
+      "id": "c07-s30",
+      "text": "你要可口可乐还是百事可乐？",
+      "file": "c07-s30.mp3",
+      "sha256": "0f929a6a9a2591f5382d293dd1459f1412b794cd3e6fdab7087f4badf109c9e9"
+    },
+    {
+      "id": "c07-s28",
+      "text": "不要冰。",
+      "file": "c07-s28.mp3",
+      "sha256": "969fcea09ee37d0608d888175b0742c0c61c6a1c57dc9f3cc825bff181a71bef"
+    },
+    {
+      "id": "c07-s29",
+      "text": "我要无糖可乐，不要冰。",
+      "file": "c07-s29.mp3",
+      "sha256": "70ed0b9aa97874aa3d0c03f273d5970585188f8cfab3ecf01cfdb49774031d83"
+    },
+    {
+      "id": "c07-s31",
+      "text": "我要百事可乐。",
+      "file": "c07-s31.mp3",
+      "sha256": "3e6b33cacbd608959f5e0fee1ee6d86ad3b1926744261779d021f4dc925ec163"
+    },
+    {
+      "id": "c07-s33",
+      "text": "他是电气工程师。",
+      "file": "c07-s33.mp3",
+      "sha256": "a04c7a0db40a946851e9e518767662b5226919855c9bd3a98f86adc8bafdeba1"
+    },
+    {
+      "id": "c07-s32",
+      "text": "我学电气工程。",
+      "file": "c07-s32.mp3",
+      "sha256": "9c8de6b318f1e0106cafa6bb143a361e53536621216306f2a395d34f623601f9"
+    },
+    {
+      "id": "c07-s36",
+      "text": "我想买这个手机。",
+      "file": "c07-s36.mp3",
+      "sha256": "04511b9e36c8a596315cef9edc997ab8677970dfc528066726e42bef10842e02"
+    },
+    {
+      "id": "c07-s35",
+      "text": "这个手机一千八百元，那个手机一万元。",
+      "file": "c07-s35.mp3",
+      "sha256": "9fd9f5634d0781e7ac53e514d9c47cc13201a42ec88770d8df75e4a75a41a81c"
+    },
+    {
+      "id": "c07-s37",
+      "text": "我每星期六上午去桂花公园。",
+      "file": "c07-s37.mp3",
+      "sha256": "ae313f103f94b406e61dda9cf75c324315ba4a7ea6b281da771305fa0ad6f435"
+    },
+    {
+      "id": "c07-s34",
+      "text": "他是天才。",
+      "file": "c07-s34.mp3",
+      "sha256": "796d839f679df7612a9dac2b88af986cb671df088b15bf00376f67be2c4ea644"
+    },
+    {
+      "id": "c07-s38",
+      "text": "中午，我去食堂吃饭。",
+      "file": "c07-s38.mp3",
+      "sha256": "e232f592f95671a1d74f9e58c1865a6cb23cdc4ada4a7efca4a8a2c5c073e4fe"
+    },
+    {
+      "id": "c07-s39",
+      "text": "我的朋友是电工。",
+      "file": "c07-s39.mp3",
+      "sha256": "00a0a8a0e4b66294e1ce9414edc841292535fe33fd17482f73f27b4a2d5e2211"
+    },
+    {
+      "id": "c07-s42",
+      "text": "他是大夫。",
+      "file": "c07-s42.mp3",
+      "sha256": "b2400daff5da3e6b91a3fe1ce9adc0fdb0b6c21d5e975290bf2f7ca24de4bff1"
+    },
+    {
+      "id": "c07-s40",
+      "text": "我们去买可乐。",
+      "file": "c07-s40.mp3",
+      "sha256": "8801ab1c1ba20115c35577457f7fb516dc82b98daf170b38c9b0de194f3b154c"
+    },
+    {
+      "id": "c07-s41",
+      "text": "她是医生。",
+      "file": "c07-s41.mp3",
+      "sha256": "c340e8fdc7b9253ea4e61005131561bb50ff4d9bbc2a77a69e0782391dca17d2"
+    },
+    {
+      "id": "c07-s44",
+      "text": "健康很重要。",
+      "file": "c07-s44.mp3",
+      "sha256": "f4cf5e3f080332402308d92f5ed135d428987542736319d4900610fba17e64cb"
+    },
+    {
+      "id": "c07-s45",
+      "text": "我学英语。",
+      "file": "c07-s45.mp3",
+      "sha256": "266bdd35e4d9fa54b521f854b60977e5995a3bd26dc7fd56a5b10c2aeef679db"
+    },
+    {
+      "id": "c07-s46",
+      "text": "我学汉语。",
+      "file": "c07-s46.mp3",
+      "sha256": "7614afbfb45700a589cc7843189c9e68a21cec06a912660fe4e50b8070af7f65"
+    },
+    {
+      "id": "c07-s48",
+      "text": "这个包比那个包轻。",
+      "file": "c07-s48.mp3",
+      "sha256": "673db67a79adfbb3be811bbc6727897d9db77dd350cfac1686403dc42c7c6b82"
+    },
+    {
+      "id": "c07-s43",
+      "text": "她是护士。",
+      "file": "c07-s43.mp3",
+      "sha256": "0214b9036557e8e6d4aeccf6316f8a945c773bfdf51ecb3c2fd85f0cec67be76"
+    },
+    {
+      "id": "c07-s49",
+      "text": "桂花公园是一个大公园。",
+      "file": "c07-s49.mp3",
+      "sha256": "196146152649d59f1a48daa84103cca8d0a042122b3df6c36416e877c2ed2df0"
+    },
+    {
+      "id": "c07-s50",
+      "text": "我们去人民公园吧。",
+      "file": "c07-s50.mp3",
+      "sha256": "672ccc9eb0dc41bf70252597423702226d4f92c835b196a5891afcb5a9c90227"
+    },
+    {
+      "id": "c07-s52",
+      "text": "今天是十一月十一号。",
+      "file": "c07-s52.mp3",
+      "sha256": "0477fdc6dd56db318893830a5b8d61f1ec1a056d57e333f1ed21938ba109c19e"
+    },
+    {
+      "id": "c07-s51",
+      "text": "我不想去相亲。",
+      "file": "c07-s51.mp3",
+      "sha256": "f807fde95dd984de728f49235826de04a85e129b42fcef4e5bc49c6a42e3a8ee"
+    },
+    {
+      "id": "c07-s53",
+      "text": "我学电子工程。",
+      "file": "c07-s53.mp3",
+      "sha256": "8f3982a2cc07354fd61c297108e1057e3559c3f3ed0bf42efd769deed6f5c4a8"
+    },
+    {
+      "id": "c07-s47",
+      "text": "他比我重。",
+      "file": "c07-s47.mp3",
+      "sha256": "52a21650d00a1be0db9af03bc75fdc9ff655456d22529dac1b2a98c60aa1e7ef"
+    },
+    {
+      "id": "c07-s56",
+      "text": "他的身高是一百七十五厘米。",
+      "file": "c07-s56.mp3",
+      "sha256": "e324ebf320ba8d1f218e8dca1297e6a1e92f9137363c7ebe3bceecc74cf95624"
+    },
+    {
+      "id": "c07-s55",
+      "text": "他的身高是一百八十厘米。",
+      "file": "c07-s55.mp3",
+      "sha256": "7dd1eff6ae85f3bb2384634f6a744d260412d1a5b8b5e8b6e4f4ec77c73c63cf"
+    },
+    {
+      "id": "c07-s57",
+      "text": "他的身高是一百七十九厘米。",
+      "file": "c07-s57.mp3",
+      "sha256": "68f2ac7a436ec6cbe272c630839e55a820a586578e56783fbfaa1921736e4dbd"
+    },
+    {
+      "id": "c07-s59",
+      "text": "他的身高是一百六十三厘米。",
+      "file": "c07-s59.mp3",
+      "sha256": "8bc1f84cd2b807d1a048a084ed534b6013af74905a6514a0b1ba1b12a76807ea"
+    },
+    {
+      "id": "c07-s60",
+      "text": "我要一杯茶，不要糖。",
+      "file": "c07-s60.mp3",
+      "sha256": "09336ce633e5df4725ab6a59fe569ac9f7fc5d4fc455b32a3791c3fce2acabe9"
+    },
+    {
+      "id": "char-4e00",
+      "text": "一",
+      "file": "char-4e00.mp3",
+      "sha256": "3a3841e33e0388b65fe1b2e59e4ec2f05fdabcfeb15086e7e4127354b7c1dc9e"
+    },
+    {
+      "id": "char-4e03",
+      "text": "七",
+      "file": "char-4e03.mp3",
+      "sha256": "cafdad8526cddf203a794f9d1bdb8805fa97f89a6d2dfac94ef79a766302eab9"
+    },
+    {
+      "id": "char-4e07",
+      "text": "万",
+      "file": "char-4e07.mp3",
+      "sha256": "e98940d83664fb8e556c009e731fd2061f86428ec8a5200c6b56bed08b48c4cb"
+    },
+    {
+      "id": "char-4e09",
+      "text": "三",
+      "file": "char-4e09.mp3",
+      "sha256": "f8f9fce460cacc0cfeeaacc9caafa78e9f35a313b0c92a23d229e13718339517"
+    },
+    {
+      "id": "char-4e0a",
+      "text": "上",
+      "file": "char-4e0a.mp3",
+      "sha256": "70d1ef8318e97f87130e24f7190b193cd3a7881249ac8acf648fd820ff0c325c"
+    },
+    {
+      "id": "char-4e0d",
+      "text": "不",
+      "file": "char-4e0d.mp3",
+      "sha256": "15c47418467d0112d1760db37fb07af2c06e7ca72e3e65017919bdb2bdc18689"
+    },
+    {
+      "id": "char-4e2a",
+      "text": "个",
+      "file": "char-4e2a.mp3",
+      "sha256": "7533be65b64361a19c20245e3ed9d7a1c41c8c657552e8bc0bf97a02de467f1f"
+    },
+    {
+      "id": "char-4e2d",
+      "text": "中",
+      "file": "char-4e2d.mp3",
+      "sha256": "8c48c197c0af0807988ec059794d9c48c79ee1b750a4d2307ed3d2d15c789582"
+    },
+    {
+      "id": "char-4e50",
+      "text": "乐",
+      "file": "char-4e50.mp3",
+      "sha256": "c9ceab4ae35e7d42d553db40e89993356d17193d67aeb7fceb5e94c5fcd37f9f"
+    },
+    {
+      "id": "char-4e5d",
+      "text": "九",
+      "file": "char-4e5d.mp3",
+      "sha256": "0d424a46827b72308e85899bc318cf9cf337d892e6e1c40056981f9c01d7e980"
+    },
+    {
+      "id": "char-4e70",
+      "text": "买",
+      "file": "char-4e70.mp3",
+      "sha256": "0e3763d92a8c1df9dc7476bdc616e9a6a18e47a17a5c8294e760d321444a803d"
+    },
+    {
+      "id": "char-4e86",
+      "text": "了",
+      "file": "char-4e86.mp3",
+      "sha256": "2a6662bae6bdc7635711f67bf17d08541b28072c2b835bca13a931a4cddc383e"
+    },
+    {
+      "id": "char-4e8b",
+      "text": "事",
+      "file": "char-4e8b.mp3",
+      "sha256": "e19b68038f925cc2226c14717c1028c1ed3c656b3ac6dac0d2f778ef483147b5"
+    },
+    {
+      "id": "char-4e94",
+      "text": "五",
+      "file": "char-4e94.mp3",
+      "sha256": "912abd23cbe506f9f7b7c296ef85033737c347114eab5c8ba5ac63a8e19b91c2"
+    },
+    {
+      "id": "char-4eb2",
+      "text": "亲",
+      "file": "char-4eb2.mp3",
+      "sha256": "f0d3aabf39eb398ad545535ab5e137c9d06b86dd467be7c4425f8db2c79778f5"
+    },
+    {
+      "id": "char-4eba",
+      "text": "人",
+      "file": "char-4eba.mp3",
+      "sha256": "c5cdf4560953312f767dbf324b3807a14d0480dbec23aa92411c4c756f0a6be4"
+    },
+    {
+      "id": "char-4eca",
+      "text": "今",
+      "file": "char-4eca.mp3",
+      "sha256": "6d6ec2620b119bebfbbfc82d247abe7f770de4533d3c30735d2cdc1bc1d9b130"
+    },
+    {
+      "id": "char-4ed6",
+      "text": "他",
+      "file": "char-4ed6.mp3",
+      "sha256": "0887b738e1bf3fb8be7d15d1bb24cda49bb689f805f4d33e09ed538fd54f60cc"
+    },
+    {
+      "id": "char-4eec",
+      "text": "们",
+      "file": "char-4eec.mp3",
+      "sha256": "b6eec3f197878fdc3a546e1d40061ad9bf64d0aef4ed4c37da5be4285b331dec"
+    },
+    {
+      "id": "c07-s54",
+      "text": "这里没有电。",
+      "file": "c07-s54.mp3",
+      "sha256": "821f7d3867161a81aea5d19f7fec8d86e6f582d0227d623c0ea703f62c8112b8"
+    },
+    {
+      "id": "char-4f60",
+      "text": "你",
+      "file": "char-4f60.mp3",
+      "sha256": "541bb788548e7ae0a828d8a57a3b693dde2c6d704145ae9d606f768ab32edb16"
+    },
+    {
+      "id": "char-4f53",
+      "text": "体",
+      "file": "char-4f53.mp3",
+      "sha256": "43c97495e43e948c17c4efb991bf191ac1858ba24190130a91e92627223fb4b6"
+    },
+    {
+      "id": "char-5065",
+      "text": "健",
+      "file": "char-5065.mp3",
+      "sha256": "989e826f63b474f127cf83809300c80816d32de48a70b8c6c172695736906b0e"
+    },
+    {
+      "id": "char-513f",
+      "text": "儿",
+      "file": "char-513f.mp3",
+      "sha256": "cd157b3ebe6bf200ddb15c1a8eefe925438b7835a212143e39c8919c5d5b8ef8"
+    },
+    {
+      "id": "char-5143",
+      "text": "元",
+      "file": "char-5143.mp3",
+      "sha256": "ed6f653e72535c8066d7a406699b8aeca97ead40ade7788fc59936debee67f28"
+    },
+    {
+      "id": "char-516b",
+      "text": "八",
+      "file": "char-516b.mp3",
+      "sha256": "a3e30e7decbf05b1c5d7460d2b8b744f9aa7780634b5ea8bbd56778097cd340d"
+    },
+    {
+      "id": "char-516c",
+      "text": "公",
+      "file": "char-516c.mp3",
+      "sha256": "92762f6b53d101a3b5a4b6109e54b0c2b9539e004b92460cff823ce6d0664f52"
+    },
+    {
+      "id": "char-516d",
+      "text": "六",
+      "file": "char-516d.mp3",
+      "sha256": "1faec8396c31a5ae00ddd620314337a06ffa30f139b0714990b71c64a9f0760f"
+    },
+    {
+      "id": "char-51b0",
+      "text": "冰",
+      "file": "char-51b0.mp3",
+      "sha256": "f1cb37e7224648b45cd809a3ca73b495f89b0a99df8d48b0c8621ac6e3200687"
+    },
+    {
+      "id": "char-5305",
+      "text": "包",
+      "file": "char-5305.mp3",
+      "sha256": "c4c76a9952f25f2141a3176c67f226832ae78db229a279030f11771012a0c491"
+    },
+    {
+      "id": "char-533b",
+      "text": "医",
+      "file": "char-533b.mp3",
+      "sha256": "4ffda30834163a994e8bcf610b452dadc5d476819f3674e0f8329c003cf6c026"
+    },
+    {
+      "id": "c07-s58",
+      "text": "他的身高是一百八十五厘米。",
+      "file": "c07-s58.mp3",
+      "sha256": "3ea508e79fde5df70c74e0fe9fe3028a761733f64d2634238d5cb97d363f695c"
+    },
+    {
+      "id": "char-5341",
+      "text": "十",
+      "file": "char-5341.mp3",
+      "sha256": "b7ca95151f423573c797ed1cf6fad4ec6e8effcbe53318579459de3807e0c876"
+    },
+    {
+      "id": "char-5343",
+      "text": "千",
+      "file": "char-5343.mp3",
+      "sha256": "0fa0a3bcfe7e42d9234e86e10415216f8311c12877cd8d0c9898efd143bb37a7"
+    },
+    {
+      "id": "char-5355",
+      "text": "单",
+      "file": "char-5355.mp3",
+      "sha256": "7b70798004c6ec96b32b0609e1a095c2bcaf771428168c1aa41fd5ac9e4b65e7"
+    },
+    {
+      "id": "char-5348",
+      "text": "午",
+      "file": "char-5348.mp3",
+      "sha256": "c2a911ca01aa8c74d66ff43baee87a51f29c911cd05bfbad77b6d47407de1b07"
+    },
+    {
+      "id": "char-53bb",
+      "text": "去",
+      "file": "char-53bb.mp3",
+      "sha256": "7f10e3fc935bb60cc61bd3878a951c3089c2214b440a923f615bdfe1a38884b6"
+    },
+    {
+      "id": "char-53cb",
+      "text": "友",
+      "file": "char-53cb.mp3",
+      "sha256": "420772ff0071bc17666ed8c68dc7e7c01ddebfcb217978c92343becf350064a8"
+    },
+    {
+      "id": "char-53e3",
+      "text": "口",
+      "file": "char-53e3.mp3",
+      "sha256": "4f8d3723f02a876a81ef047274a4dae26b33f4e9e7750aff7f7453a3e9bfadd1"
+    },
+    {
+      "id": "char-53ef",
+      "text": "可",
+      "file": "char-53ef.mp3",
+      "sha256": "16fb229a8d9a2b4ff491a4d16a6b6f285886e86d101d7665ba29dfab4203f014"
+    },
+    {
+      "id": "char-53f7",
+      "text": "号",
+      "file": "char-53f7.mp3",
+      "sha256": "44ce77fea3b677f79f9c2b66cb98c8b22d9ab78674de14a8ea49a63902e69e6d"
+    },
+    {
+      "id": "char-5403",
+      "text": "吃",
+      "file": "char-5403.mp3",
+      "sha256": "f58a32ed69bc5896a09e67e2312fe1fd8255cf80c79969b31558608fa7841e8d"
+    },
+    {
+      "id": "char-5417",
+      "text": "吗",
+      "file": "char-5417.mp3",
+      "sha256": "c00d9b5c6dd92315a1cdf7f597c9c8f9d375290ecd460daad930370610056dac"
+    },
+    {
+      "id": "char-5427",
+      "text": "吧",
+      "file": "char-5427.mp3",
+      "sha256": "1243c17654d973236ea30b66e6b7cb86ea43be0e686dd82a7e8e713cabaacae5"
+    },
+    {
+      "id": "char-56ed",
+      "text": "园",
+      "file": "char-56ed.mp3",
+      "sha256": "6a9a44bb4f84bf455fc624e1b07792abc229ad66ec7e241e753a5afee66d3480"
+    },
+    {
+      "id": "char-5728",
+      "text": "在",
+      "file": "char-5728.mp3",
+      "sha256": "1c53df1860e89251106b671810997af71059cb57e684b710dcce80b59bf9381d"
+    },
+    {
+      "id": "char-5802",
+      "text": "堂",
+      "file": "char-5802.mp3",
+      "sha256": "93c9b56e44ee82208663fbb19005175b8f074ed8e914aae20888fe187f0480df"
+    },
+    {
+      "id": "char-5398",
+      "text": "厘",
+      "file": "char-5398.mp3",
+      "sha256": "cbe4fb7b74ad7e22a6529b64147b2770c5b11c473d1a582cd0a9e64132f9b0ed"
+    },
+    {
+      "id": "char-4fbf",
+      "text": "便",
+      "file": "char-4fbf.mp3",
+      "sha256": "8c140fc5060a7e2ddb2ce92becf31387bf1d1cfd1b76598adaf99dd2a9dd0367"
+    },
+    {
+      "id": "char-591a",
+      "text": "多",
+      "file": "char-591a.mp3",
+      "sha256": "7ca5567c05245362e30a22af59309011eac5581ec136c030f2e006815e3915ed"
+    },
+    {
+      "id": "char-5927",
+      "text": "大",
+      "file": "char-5927.mp3",
+      "sha256": "89fbe2d5991b5b908e985a4a4814e2e6c6c673b741806f896fc2b8518f1c5747"
+    },
+    {
+      "id": "char-5929",
+      "text": "天",
+      "file": "char-5929.mp3",
+      "sha256": "09493b661faaace3b5c3f7cae95d2853aba68a21f81d7820a9ce1b0e503e5664"
+    },
+    {
+      "id": "char-58eb",
+      "text": "士",
+      "file": "char-58eb.mp3",
+      "sha256": "026e8e9faecd6c0c8cefb17968590d3b5d8ce99925e1a5d5c5b543c5a2b73f16"
+    },
+    {
+      "id": "char-5979",
+      "text": "她",
+      "file": "char-5979.mp3",
+      "sha256": "b930f793528a9288e12cd87acf5e598467177a18bcdddf7ff809486a6165e4b4"
+    },
+    {
+      "id": "char-5b50",
+      "text": "子",
+      "file": "char-5b50.mp3",
+      "sha256": "f0c97bdcc1725ceadc85bce3a093c6ebe36196e2230780278b0507ba35f87ddc"
+    },
+    {
+      "id": "char-5b66",
+      "text": "学",
+      "file": "char-5b66.mp3",
+      "sha256": "e5f09368619e2aa1751f6bfb2f17b88897565f9ff44ec0b8cfb6ffc8afe1a4e2"
+    },
+    {
+      "id": "char-5858",
+      "text": "塘",
+      "file": "char-5858.mp3",
+      "sha256": "77819ecf07d922b34d431fded2fcb23ee5d72850ee6a95db54376f239eb8a083"
+    },
+    {
+      "id": "char-5de5",
+      "text": "工",
+      "file": "char-5de5.mp3",
+      "sha256": "7608e5da80fb725e9836544886323eb5c03facab68eaca2b91e99c5b90e44bfa"
+    },
+    {
+      "id": "char-5e08",
+      "text": "师",
+      "file": "char-5e08.mp3",
+      "sha256": "4c772c364f63667e786343d38373c1a6fce486aaebe2b421388fb804b3c0ea48"
+    },
+    {
+      "id": "char-5eb7",
+      "text": "康",
+      "file": "char-5eb7.mp3",
+      "sha256": "9e91df195904240427a1edf33f57ec2dec93fb50daf24ba4dbc73d181e9409e1"
+    },
+    {
+      "id": "char-5f88",
+      "text": "很",
+      "file": "char-5f88.mp3",
+      "sha256": "2b05dedfa4bbf8c8f454766c10856136865c1fb0cf44b3dda06666f5a7d9fbd3"
+    },
+    {
+      "id": "char-5f97",
+      "text": "得",
+      "file": "char-5f97.mp3",
+      "sha256": "9419e906f15f91e4d325a916d3d78f2678b7232a8e521a17b6c95694c251034e"
+    },
+    {
+      "id": "char-60f3",
+      "text": "想",
+      "file": "char-60f3.mp3",
+      "sha256": "c67ec0676c1f2ae61405ba34cec936f46f1d3edc0fa5a1dcd137822b8226b905"
+    },
+    {
+      "id": "char-6211",
+      "text": "我",
+      "file": "char-6211.mp3",
+      "sha256": "9af66368d6f5fd7ec00cc2d9b8c62917dd113630088ed37a043b371b2df97e68"
+    },
+    {
+      "id": "char-624b",
+      "text": "手",
+      "file": "char-624b.mp3",
+      "sha256": "76add1015991afba709d96768e5adda3342a952e26d4f6227508055a39f13a5e"
+    },
+    {
+      "id": "char-624d",
+      "text": "才",
+      "file": "char-624d.mp3",
+      "sha256": "19bf24670d5ec00fda14c2cebb0a091c203e6e26ecb73ca5753ae88b9aa7b0e9"
+    },
+    {
+      "id": "char-592b",
+      "text": "夫",
+      "file": "char-592b.mp3",
+      "sha256": "1eba3b0f490aa0ef73dc015ff2acec3514e2e5616f371747ac0609d05e9e974b"
+    },
+    {
+      "id": "char-65a4",
+      "text": "斤",
+      "file": "char-65a4.mp3",
+      "sha256": "4d04a44e48afeca9983011cf75f3cf09ac5573bff1d82718bff2844f4e7e8520"
+    },
+    {
+      "id": "char-65e0",
+      "text": "无",
+      "file": "char-65e0.mp3",
+      "sha256": "64246be8395577093339f7fbac2947d2157f4d003075ac972e05f4b566b35b59"
+    },
+    {
+      "id": "char-661f",
+      "text": "星",
+      "file": "char-661f.mp3",
+      "sha256": "c0246c355f33dd5dcb656f3f861115236e2646967ad804721e8ad7721554d961"
+    },
+    {
+      "id": "char-662f",
+      "text": "是",
+      "file": "char-662f.mp3",
+      "sha256": "4ce14f174a28e632ec16f4ede3d799c196fc9e5b46bd9334444c089689c193a0"
+    },
+    {
+      "id": "char-6708",
+      "text": "月",
+      "file": "char-6708.mp3",
+      "sha256": "2791b2a2e52a97ee7e80ce319282352a5eab55e3464ea0b82c0b4526f7625d09"
+    },
+    {
+      "id": "char-6709",
+      "text": "有",
+      "file": "char-6709.mp3",
+      "sha256": "8258b09a4d71128b39a1e3b11905b406f655d40d7792b9cc7349a1272df178e6"
+    },
+    {
+      "id": "char-670b",
+      "text": "朋",
+      "file": "char-670b.mp3",
+      "sha256": "cf175cea8f424d174a266a2aefa60c9cf25d0966d3884fb498ef1d9c9dd8703d"
+    },
+    {
+      "id": "char-671f",
+      "text": "期",
+      "file": "char-671f.mp3",
+      "sha256": "ef4a410b02010405d244b3a9ce80c64d4957e5a7fe92e10b3604ff0616b83290"
+    },
+    {
+      "id": "char-5b9c",
+      "text": "宜",
+      "file": "char-5b9c.mp3",
+      "sha256": "ead6c43d6ac9122345c5969b642681a815e92514d36063c91fe43259e4b91dac"
+    },
+    {
+      "id": "char-676f",
+      "text": "杯",
+      "file": "char-676f.mp3",
+      "sha256": "e1c26691d44104a78e305d79f3ab71bcd482b0681994c1daf84df600ecf74084"
+    },
+    {
+      "id": "char-673a",
+      "text": "机",
+      "file": "char-673a.mp3",
+      "sha256": "1e4e462756d229d5b37c3a55aa779d9799a7f8ae1623dd16c966b5315d17a275"
+    },
+    {
+      "id": "char-6bcf",
+      "text": "每",
+      "file": "char-6bcf.mp3",
+      "sha256": "f7a597a6ae2cf2464c42b65ea9f438a0c1b50b3485806535c89455831202d046"
+    },
+    {
+      "id": "char-6bd4",
+      "text": "比",
+      "file": "char-6bd4.mp3",
+      "sha256": "2a414960eada8b0e2f5b6c6e68f718c9843ca1cdfab3a97d32bbc9f740668dfc"
+    },
+    {
+      "id": "char-6842",
+      "text": "桂",
+      "file": "char-6842.mp3",
+      "sha256": "59c5aae70088f935873549d858c78dc87f96e69ef63003cedcc7797e9ab17ad5"
+    },
+    {
+      "id": "char-6c14",
+      "text": "气",
+      "file": "char-6c14.mp3",
+      "sha256": "7f5664bf171af59f542846a1b7a93d44383c6764a99ad7ca1117f9a2edbc3860"
+    },
+    {
+      "id": "char-6c49",
+      "text": "汉",
+      "file": "char-6c49.mp3",
+      "sha256": "eb99aee531e5d242f072fae6444f2f294dbec03ebac44e9ab15f7b82aa99eae8"
+    },
+    {
+      "id": "char-62a4",
+      "text": "护",
+      "file": "char-62a4.mp3",
+      "sha256": "6672eaf8d861df489091e7ab36a42c8c5c0fa2b301aaba4da60204edc7148094"
+    },
+    {
+      "id": "char-6ca1",
+      "text": "没",
+      "file": "char-6ca1.mp3",
+      "sha256": "7be16a1d8a0f4456d0c0e9b3d68a71d07eb85b5f1c5397c5f43abaa8dcc35645"
+    },
+    {
+      "id": "char-70b9",
+      "text": "点",
+      "file": "char-70b9.mp3",
+      "sha256": "580306b1e3985c3ef60d2903c173aefb47704bc6aa5fb7f1ef5f5cf01af1b8a9"
+    },
+    {
+      "id": "char-7269",
+      "text": "物",
+      "file": "char-7269.mp3",
+      "sha256": "053c39a00150a4de02d4067e59f1a697058fa26ba6d59e37995915ff2e02ad63"
+    },
+    {
+      "id": "char-751f",
+      "text": "生",
+      "file": "char-751f.mp3",
+      "sha256": "af60f28ef19c459ebce0e0f61f78a9906619b12bcd8c1a5859010bc7d2b92bf7"
+    },
+    {
+      "id": "char-7535",
+      "text": "电",
+      "file": "char-7535.mp3",
+      "sha256": "6023c056272f0b604fb140bbccafbcc0cb02bcbddca3b28487a56d5672d2e7fa"
+    },
+    {
+      "id": "char-767e",
+      "text": "百",
+      "file": "char-767e.mp3",
+      "sha256": "fbe53ec0a2788eb14cc44b77f1f978d5c288633ed7fe9f3b9ced9fc522057662"
+    },
+    {
+      "id": "char-7684",
+      "text": "的",
+      "file": "char-7684.mp3",
+      "sha256": "89a975d9ee9f4d8a6b04f873359735c78f2103a7b5e45527a10b0bdc820301ff"
+    },
+    {
+      "id": "char-76f8",
+      "text": "相",
+      "file": "char-76f8.mp3",
+      "sha256": "ae574126682ff1ce4e79aa09109b1dfc9f771a66d7d791806cf7919e2a9e98c5"
+    },
+    {
+      "id": "char-77ee",
+      "text": "矮",
+      "file": "char-77ee.mp3",
+      "sha256": "a7195c30d8ed7c5b90b97528a225cccb74736551bfbe1c7e7979fd56b5ae8087"
+    },
+    {
+      "id": "char-6c11",
+      "text": "民",
+      "file": "char-6c11.mp3",
+      "sha256": "93735e61da64d4dd464c932013311fe1dd003896a126d824443bed8bd6d27fd5"
+    },
+    {
+      "id": "char-7c73",
+      "text": "米",
+      "file": "char-7c73.mp3",
+      "sha256": "ddb7a84c53b3dd12fb50491ce88806dff5e05c2cc7c020b7aeccd8fc2f55447a"
+    },
+    {
+      "id": "char-7cd6",
+      "text": "糖",
+      "file": "char-7cd6.mp3",
+      "sha256": "64007cd4202e936d766b0c28580ed4ce40908c4bbc5a589593be7d57df48b550"
+    },
+    {
+      "id": "char-82b1",
+      "text": "花",
+      "file": "char-82b1.mp3",
+      "sha256": "23101d0d1d51454d5a0e4ec86764361534329b3ed14afcce4061b1676751765e"
+    },
+    {
+      "id": "char-7a0b",
+      "text": "程",
+      "file": "char-7a0b.mp3",
+      "sha256": "51c555732ec63b5023373edc389d750e521f1f3d698bf7750e9dcac99f284721"
+    },
+    {
+      "id": "char-8336",
+      "text": "茶",
+      "file": "char-8336.mp3",
+      "sha256": "e497084c2822b2f70bc29cb727d90206f0e81b736845195f2c8fcf6f18cf662a"
+    },
+    {
+      "id": "char-8981",
+      "text": "要",
+      "file": "char-8981.mp3",
+      "sha256": "8c94658ce59e2d3dbd623229998685feac08d0e814ad0d14283447105a01246f"
+    },
+    {
+      "id": "char-8bed",
+      "text": "语",
+      "file": "char-8bed.mp3",
+      "sha256": "d0d8325965abbb0b338861975c3ff34f9a72c85e9a3a2a4f6dadfced1ecbfa7c"
+    },
+    {
+      "id": "char-8d35",
+      "text": "贵",
+      "file": "char-8d35.mp3",
+      "sha256": "ec29a0e999faa9f34ae41940d275e9d73e6294ffe23830e63e7c60c280640bdd"
+    },
+    {
+      "id": "char-6c60",
+      "text": "池",
+      "file": "char-6c60.mp3",
+      "sha256": "c5d1b7012d4ef6837e2bc4b3b9019688be1ebbfbfadbe65dcbc39d60bfe4ee27"
+    },
+    {
+      "id": "char-8f7b",
+      "text": "轻",
+      "file": "char-8f7b.mp3",
+      "sha256": "0f49e5e4d7d6c7471f300a08b6d7393b0a9e1b5d9fce31b9054118e82b7336e1"
+    },
+    {
+      "id": "char-8fd8",
+      "text": "还",
+      "file": "char-8fd8.mp3",
+      "sha256": "9d57175e2509a563a6fe684b485fcadfc8b3b813030920339e092adcd31c8ba1"
+    },
+    {
+      "id": "char-8fd9",
+      "text": "这",
+      "file": "char-8fd9.mp3",
+      "sha256": "0dc43625434a330a36e7516b817c13df179db63872ad1b5df5907023334c673e"
+    },
+    {
+      "id": "char-90a3",
+      "text": "那",
+      "file": "char-90a3.mp3",
+      "sha256": "62afc170afab6441cf49c3b17162ddd34e713dba143bdd3fb64ee843dcadcf8c"
+    },
+    {
+      "id": "char-91cc",
+      "text": "里",
+      "file": "char-91cc.mp3",
+      "sha256": "a8a5ce74f12a547a91c5b2848593d53ed453a52e77e59f5d46ff6db07b816c45"
+    },
+    {
+      "id": "char-91cd",
+      "text": "重",
+      "file": "char-91cd.mp3",
+      "sha256": "4c34a20ab91abefef5d8444005d7d15e0e1b027e9c1024f103e6b8b3117d4310"
+    },
+    {
+      "id": "char-96be",
+      "text": "难",
+      "file": "char-96be.mp3",
+      "sha256": "4e8d8ff79c3045afb2e32813ef148893c82cc74db66457d14d4b3bffb94c480b"
+    },
+    {
+      "id": "char-98df",
+      "text": "食",
+      "file": "char-98df.mp3",
+      "sha256": "92ff1d5c675417c175040c76522af3d031c308428e94e0accc32e622be42a0b0"
+    },
+    {
+      "id": "char-996d",
+      "text": "饭",
+      "file": "char-996d.mp3",
+      "sha256": "1e1d7a7657cc0620fb2eef4c49b1e55a9297d2fe9687a8980fcdefb8fbc89d11"
+    },
+    {
+      "id": "char-9ad8",
+      "text": "高",
+      "file": "char-9ad8.mp3",
+      "sha256": "74aa01d5dd2cdd8fc254245027dec1499456908eef2a852904a11ce11bfc6e5a"
+    },
+    {
+      "id": "char-82f1",
+      "text": "英",
+      "file": "char-82f1.mp3",
+      "sha256": "beb3cf35189828ac8ea0818cf9b37a04a2988fd57679a5aeb6811a6643270d57"
+    },
+    {
+      "id": "char-8eab",
+      "text": "身",
+      "file": "char-8eab.mp3",
+      "sha256": "603a6705cbcad0dfe8e4496b608058c390971f461e44475a3a0cdc7603490a21"
+    }
+  ]
+}

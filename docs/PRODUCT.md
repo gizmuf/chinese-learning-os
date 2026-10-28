@@ -174,11 +174,11 @@ pinyin and EN/FR/RU/TR examples, reusing authored course/HSK sentences and 19
 additional teaching examples in `data/lesson06/usage-examples.json`. Audio appears
 only where a bundled recording exists. Looking up text never awards recall credit;
 independent grammar answers keep lookup blocked until a hint or saved feedback.
-### Today — lesson 3–6 reviews
+### Today — lesson 3–7 reviews
 
 Today includes an account-scoped lesson review panel, separate from the existing HSK and Atlas panels. It derives due dates from the existing course FSRS history and offers per-lesson due and difficult queues for independently scored lesson checks. Unseen checks, study events, guided builders, assisted answers and handwriting are not added to this check queue. A successful independent retry resolves difficulty; a hint-assisted answer does not erase an earlier independent failure. Future due dates are displayed without prematurely counting them as due.
 
-Starting a queue snapshots its IDs and reuses the exact lesson 3/4/5/6 practice component, recording to the same course store/API with the same activity IDs. Lesson 4/5 Today sessions have a fresh draft scope so a later repeat cannot reopen an already-saved answer. Back to Today updates counts; the clock also updates every 30 seconds and returning to the tab refreshes account sync. Guests remain device-local. EN/FR/RU/TR copy is included; no existing course routes, Atlas views or HSK review behavior are replaced.
+Starting a queue snapshots its IDs and reuses the exact lesson 3/4/5/6/7 practice component, recording to the same course store/API with the same activity IDs. Lesson 4/5 Today sessions have a fresh draft scope so a later repeat cannot reopen an already-saved answer. Back to Today updates counts; the clock also updates every 30 seconds and returning to the tab refreshes account sync. Guests remain device-local. EN/FR/RU/TR copy is included; no existing course routes, Atlas views or HSK review behavior are replaced.
 
 ### Speaking chunks — functional phrases, separate from character families
 
@@ -189,3 +189,10 @@ Independent checks require typed Mandarin using the practised wording; normaliza
 Results use the existing account-scoped course store/API and FSRS, under `speaking-chunks` and thirty allowlisted `chunk-recall-*` activities. Independent failures remain difficult until an independent success; hint-assisted work neither schedules nor clears independent recall. Reviews snapshot their queue, protect in-flight writes, and retry failed saves with the same UUID. Guest progress remains device-local. No database migration or access change.
 
 Method inspiration: [Chunking Chinese's public app introduction](https://www.chunkingchinese.com/app/) and [Will Hart's video, Stop Learning Words. Start Speaking Mandarin With Chunks](https://www.youtube.com/watch?v=aPH1c7WU3KQ). Reviewed the public product description and video chapter/description UI on 2026-10-27; YouTube's transcript did not finish loading. Adopted reusable phrase frames, recombination, shadowing and retrieval practice. Content, notes, role labels, styling and recordings are Chinese OS's own; no third-party course assets or code imported. No claim of placement testing or automatic speech scoring.
+
+
+### Lesson 07 — 28 October 2026
+
+`?course=intensive&lesson=7` follows Lesson 06 with nine steps: comparisons, degree, measurements, phone prices, difficulty/professions, parks/canteen, routines/dates, drinks and engineering. The supplied 24-page English PDF is preserved unchanged. `data/lesson07/source.json` records its hash and the fourteen classroom-photo hashes; raw photos remain local. Content and explanations are EN/FR/RU/TR: 72 expressions and 60 example sentences, with added practice distinguished from the source material. Different board price/height stages are retained; a doctor's/nurse's importance comparison is identified as a speaker's opinion and excluded from independent checks.
+
+Examples are shown beside words by default and use the shared word-to-character drilldown. All 113 characters have local stroke data and Mandarin clips. There are 132 term/sentence recordings; suffixes 多了 and 得多 explicitly use a larger pronunciation context. Nine guided builders, three readings and six speaking situations with expandable model answers reuse the lesson tools. The 258 independent read/listen checks use the existing course progress and Today FSRS queues; supported practice does not award independent recall. There is no additional progress store or fabricated speech grade.

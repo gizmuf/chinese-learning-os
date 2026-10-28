@@ -103,6 +103,21 @@ for changed in [{'lessonId':'intensive-05'},{'activityId':'c05-build-1'},{'activ
 checks.append('lesson06 cross-lesson registry enforced')
 assert all(e['lessonId']=='intensive-03' for e in call(user=a,path='/api/course-progress')[1]['events']);checks.append('lesson06 preserves old lesson clients')
 assert call('POST',a,{'events':[lesson6]},path='/api/progress')[0]==400;checks.append('lesson06 cannot contaminate HSK history')
+lesson7={**event,'id':str(uuid.uuid4()),'lessonId':'intensive-07','activityId':'c07-check-c07-t01-read'}
+assert call('POST',a,{'events':[lesson7]})[0]==200
+assert call('POST',a,{'events':[lesson7]})[0]==200
+assert sum(e['id']==lesson7['id'] for e in call(user=a)[1]['events'])==1;checks.append('lesson07 answer sync idempotent')
+assert not any(e['lessonId']=='intensive-07' for e in call(user=b)[1]['events']);checks.append('lesson07 account isolation')
+listen7={**lesson7,'id':str(uuid.uuid4()),'activityId':'c07-check-c07-t01-listen'}
+assert call('POST',a,{'events':[listen7]})[0]==200;checks.append('lesson07 separate listening record')
+build7={**lesson7,'id':str(uuid.uuid4()),'activityId':'c07-build-1'}
+assert call('POST',a,{'events':[build7]})[0]==400
+assert call('POST',a,{'events':[{**build7,'assisted':True}]})[0]==200;checks.append('lesson07 builders cannot score independently')
+for changed in [{'lessonId':'intensive-05'},{'activityId':'c05-build-1'},{'activityId':'c07-unknown'}]:
+ assert call('POST',a,{'events':[{**lesson7,**changed,'id':str(uuid.uuid4())}]})[0]==400
+checks.append('lesson07 cross-lesson registry enforced')
+assert all(e['lessonId']=='intensive-03' for e in call(user=a,path='/api/course-progress')[1]['events']);checks.append('lesson07 preserves old lesson clients')
+assert call('POST',a,{'events':[lesson7]},path='/api/progress')[0]==400;checks.append('lesson07 cannot contaminate HSK history')
 chunk={**event,'id':str(uuid.uuid4()),'lessonId':'speaking-chunks','activityId':'chunk-recall-request-1'}
 for _ in range(2):
  result=call('POST',a,{'events':[chunk]});assert result[0]==200,result[:2]

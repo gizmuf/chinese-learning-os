@@ -1,0 +1,34 @@
+{
+  "characters": [
+    {
+      "text": "厘",
+      "pinyin": "lí",
+      "meaning": {
+        "en": "one hundredth; in 厘米: centimetre",
+        "fr": "un centième ; dans 厘米 : centimètre",
+        "ru": "одна сотая; в 厘米: сантиметр",
+        "tr": "yüzde bir; 厘米 içinde: santimetre"
+      }
+    },
+    {
+      "text": "桂",
+      "pinyin": "guì",
+      "meaning": {
+        "en": "osmanthus; surname Gui",
+        "fr": "osmanthe ; nom de famille Gui",
+        "ru": "османтус; фамилия Гуй",
+        "tr": "osmanthus; Gui soyadı"
+      }
+    },
+    {
+      "text": "塘",
+      "pinyin": "táng",
+      "meaning": {
+        "en": "pond; embankment",
+        "fr": "étang ; digue",
+        "ru": "пруд; дамба",
+        "tr": "gölet; set"
+      }
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import {lesson07,lesson07Checks} from './lesson07-data';
 import {course} from './course-data';
 import {exercises} from './course-exercises';
 import {lesson04,lesson04Checks} from './lesson04-data';
@@ -9,6 +10,7 @@ export const reviewableCourseLessons=[
  {id:'intensive-04',number:4,title:lesson04.title,activities:lesson04Checks.map(q=>q.id)},
  {id:'intensive-05',number:5,title:lesson05.title,activities:lesson05Checks.map(q=>q.id)},
  {id:'intensive-06',number:6,title:lesson06.title,activities:lesson06Checks.map(q=>q.id)},
+ {id:'intensive-07',number:7,title:lesson07.title,activities:lesson07Checks.map(q=>q.id)},
 ] as const;
 export type CourseReviewKind='due'|'difficult';
 /** Only independently scored lesson checks are reviewable here. Each caller supplies one student's events. */

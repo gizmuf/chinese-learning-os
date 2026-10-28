@@ -1,3 +1,4 @@
+import {lesson07Sentences,lesson07Audio} from './lesson07-data';
 import type {Locale} from './translate';
 import {cloudWords} from './atlas-cloud-model';
 import {sentencePronunciation,type DictionaryEntry,type StudyDictionary,type Pronunciation,dictionaryTokens} from './atlas-spatial-model';
@@ -12,6 +13,7 @@ function examples(locale:Locale){
  let pool=pools.get(locale);if(pool)return pool;
  const row=(v:{id:string;hanzi:string;pinyin:string;meaning:Record<Locale,string>},source:string):StudyExample=>({id:v.id,text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],audio:{text:v.hanzi,pinyin:v.pinyin,source,context:false,kind:'sentence'}});
  pool=[...lesson06Sentences.map(v=>row(v,lesson06Audio(v))),
+  ...lesson07Sentences.filter(v=>v.origin!=='board-opinion'&&!v.excludeFromChecks).map(v=>row(v,lesson07Audio(v))),
   ...extra.map(([word,text,pinyin,en,fr,ru,tr])=>({id:'usage:'+word,text,pinyin,meaning:{en,fr,ru,tr}[locale]})),
   ...lesson05Sentences.map(v=>row(v,'/course05/audio/course05-'+v.id+'-word.mp3')),
   ...lesson04Sentences.map(v=>row(v,'/course04/audio/course04-'+v.id+'-word.mp3')),
@@ -20,11 +22,11 @@ function examples(locale:Locale){
  pools.set(locale,pool);return pool;
 }
 /** Real authored sentences only: never use the isolated expression as its own example. */
-export function studyExamples(text:string,locale:Locale,limit=2):StudyExample[]{
+export function studyExamples(text:string,locale:Locale,limit=2,priority=''):StudyExample[]{
  if(!text||limit<1)return [];
  const normalized=(value:string)=>value.replace(/[\s\p{P}]/gu,'');
  const seen=new Set<string>(),result:StudyExample[]=[];
- for(const value of examples(locale)){
+ for(const value of [...examples(locale)].sort((a,b)=>priority?Number(b.id.startsWith(priority))-Number(a.id.startsWith(priority)):0)){
   if(!value.text.includes(text)||normalized(value.text)===normalized(text)||!/[。！？!?]/u.test(value.text)||seen.has(value.text))continue;
   seen.add(value.text);result.push(value);if(result.length>=limit)break;
  }

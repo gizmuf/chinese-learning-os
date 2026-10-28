@@ -1,7 +1,7 @@
 import {readFile,mkdir,copyFile,readdir,writeFile} from 'node:fs/promises';
 import path from 'node:path';
 const root=process.cwd();
-const source=(await Promise.all(['app/content.ts','app/course-data.ts','app/lesson04-data.ts','data/lesson04/content.json','app/lesson05-data.ts','data/lesson05/content.json','data/lesson06/content.json','data/video-self-introduction/content.json'].map(file=>readFile(path.join(root,file),'utf8')))).join('\n');
+const source=(await Promise.all(['app/content.ts','app/course-data.ts','app/lesson04-data.ts','data/lesson04/content.json','app/lesson05-data.ts','data/lesson05/content.json','data/lesson06/content.json','data/lesson07/content.json','data/video-self-introduction/content.json'].map(file=>readFile(path.join(root,file),'utf8')))).join('\n');
 const chars=[...new Set(source.match(/[\u3400-\u9fff]/gu))];
 const target=path.join(root,'public/characters');
 await mkdir(target,{recursive:true});
