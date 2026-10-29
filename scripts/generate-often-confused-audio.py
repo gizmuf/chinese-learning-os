@@ -46,10 +46,11 @@ async def main():
    rows[name]={'id':item['id']+'-'+kind,'text':text,'file':name,'sha256':sha(dest)}
    if context:rows[name]['pronunciationContext']=context
    save()
- items=json.loads(Path('data/often-confused.json').read_text())['items']
- results=await asyncio.gather(*(one(item,kind) for item in items for kind in ['word','sentence']),return_exceptions=True)
+ data=json.loads(Path('data/often-confused.json').read_text());items=data['items'];lookup=data.get('lookup',[])
+ tasks=[(item,kind) for item in items for kind in ['word','sentence']]+[(item,'word') for item in lookup]
+ results=await asyncio.gather(*(one(item,kind) for item,kind in tasks),return_exceptions=True)
  failures=[str(r) for r in results if isinstance(r,BaseException)];save()
  invalid=[r['file'] for r in rows.values() if not valid(OUT/r['file']) or sha(OUT/r['file'])!=r['sha256']]
  print(json.dumps({'recordings':len(rows),'failures':failures,'invalid':invalid},ensure_ascii=False),flush=True)
- if failures or invalid or len(rows)!=len(items)*2:raise SystemExit(1)
+ if failures or invalid or len(rows)!=len(tasks):raise SystemExit(1)
 if __name__=='__main__':asyncio.run(main())

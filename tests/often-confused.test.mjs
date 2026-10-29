@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 
-const result=await build({stdin:{contents:`export * from './app/often-confused-data';export {default as OftenConfused,ContrastPicture,confusionCopy} from './app/often-confused';export {createElement} from 'react';export {renderToStaticMarkup} from 'react-dom/server';export {setLocale} from './i18n';export {matchesContrast} from './app/often-confused';`,resolveDir:process.cwd()},jsx:'automatic',bundle:true,platform:'node',format:'esm',write:false,loader:{'.css':'empty'},logLevel:'silent',banner:{js:"import{createRequire}from'node:module';const require=createRequire(process.cwd()+'/package.json');"},plugins:[{name:'locale',setup(b){b.onResolve({filter:/^\.\/i18n$/},()=>({path:'mock',namespace:'locale'}));b.onLoad({filter:/.*/,namespace:'locale'},()=>({contents:`let locale='en';export const setLocale=value=>{locale=value};export const useI18n=()=>({locale,t:text=>text});`,loader:'js'}));}}]});
+const result=await build({stdin:{contents:`export * from './app/often-confused-data';export {default as OftenConfused,ContrastPicture,confusionCopy} from './app/often-confused';export {appStudyDictionary} from './app/study-lookup-model';export {dictionaryTokens} from './app/atlas-spatial-model';export {createElement} from 'react';export {renderToStaticMarkup} from 'react-dom/server';export {setLocale} from './i18n';export {matchesContrast} from './app/often-confused';`,resolveDir:process.cwd()},jsx:'automatic',bundle:true,platform:'node',format:'esm',write:false,loader:{'.css':'empty'},logLevel:'silent',banner:{js:"import{createRequire}from'node:module';const require=createRequire(process.cwd()+'/package.json');"},plugins:[{name:'locale',setup(b){b.onResolve({filter:/^\.\/i18n$/},()=>({path:'mock',namespace:'locale'}));b.onLoad({filter:/.*/,namespace:'locale'},()=>({contents:`let locale='en';export const setLocale=value=>{locale=value};export const useI18n=()=>({locale,t:text=>text});`,loader:'js'}));}}]});
 const m=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 
 test('Visual pilot offers 24 compact contrast sets with complete four-language meanings and examples',()=>{
@@ -14,9 +14,10 @@ test('Visual pilot offers 24 compact contrast sets with complete four-language m
 });
 
 test('Exact word and sentence audio is bundled, hash-verified, and preserves the contextual dǎo reading',()=>{
- const manifest=JSON.parse(fs.readFileSync('public/often-confused/audio/manifest.json'));assert.equal(manifest.voice,'zh-CN-XiaoxiaoNeural');assert.equal(manifest.generationRate,'-10%');assert.equal(manifest.recordings.length,108);
+ const manifest=JSON.parse(fs.readFileSync('public/often-confused/audio/manifest.json'));assert.equal(manifest.voice,'zh-CN-XiaoxiaoNeural');assert.equal(manifest.generationRate,'-10%');assert.equal(manifest.recordings.length,110);
  for(const item of m.confusionItems)for(const kind of ['word','sentence']){const clip=m.confusionRecording(item.id,kind),row=manifest.recordings.find(r=>r.id===item.id+'-'+kind);assert.equal(row.text,clip.text);const bytes=fs.readFileSync('public'+clip.source);assert.equal(createHash('sha256').update(bytes).digest('hex'),row.sha256);assert.ok(bytes.length>1000);}
  assert.equal(manifest.recordings.find(r=>r.id==='fall-word').pronunciationContext,'杯子倒了。');assert.equal(manifest.recordings.find(r=>r.id==='all-word').pronunciationContext,'我们都去。');
+ for(const item of m.confusionLookup){const row=manifest.recordings.find(r=>r.id===item.id+'-word');assert.equal(row.text,item.hanzi);assert.equal(createHash('sha256').update(fs.readFileSync('public/often-confused/audio/'+row.file)).digest('hex'),row.sha256);}
 });
 
 test('Contrast senses are local: fall dǎo does not overwrite a base dictionary pour dào entry',()=>{
@@ -32,4 +33,8 @@ test('Each meaning has visible vector artwork and learning stays readable before
 test('Stroke display includes every comparison and sentence without changing any older outlines',()=>{
  const font=JSON.parse(fs.readFileSync('public/fonts/hanzi-display.json'));
  for(const item of m.confusionItems)for(const ch of item.hanzi+item.sentence){if(/[\p{Script=Han}]/u.test(ch))assert.ok(font.characters.includes(ch),ch);}
+});
+
+test('Every Chinese token in all example sentences has a clickable definition and pinyin in four languages',()=>{
+ for(const locale of ['en','fr','ru','tr']){const dictionary=m.confusionDictionary(m.appStudyDictionary(locale),locale);for(const item of m.confusionItems)for(const token of m.dictionaryTokens(item.sentence,dictionary)){if(token.chinese){const entry=dictionary.get(token.text);assert.ok(entry?.pinyin&&entry?.meaning,locale+': '+token.text);}}assert.equal(dictionary.get('绳子').audio.source,'/often-confused/audio/rope-word.mp3');}
 });

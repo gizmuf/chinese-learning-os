@@ -1649,5 +1649,29 @@
         "tr": "Kitap orada."
       }
     }
+  ],
+  "lookup": [
+    {
+      "id": "rope",
+      "hanzi": "绳子",
+      "pinyin": "shéngzi",
+      "meaning": {
+        "en": "rope",
+        "fr": "corde",
+        "ru": "верёвка",
+        "tr": "ip"
+      }
+    },
+    {
+      "id": "rope-char",
+      "hanzi": "绳",
+      "pinyin": "shéng",
+      "meaning": {
+        "en": "rope; cord",
+        "fr": "corde ; cordon",
+        "ru": "верёвка; шнур",
+        "tr": "ip; kordon"
+      }
+    }
   ]
 }

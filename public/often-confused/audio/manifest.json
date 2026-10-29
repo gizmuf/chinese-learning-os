@@ -414,6 +414,18 @@
       "sha256": "4297aa7e5e1931eeb91f8fe74093d6e0dbd2e155bb1604c8d27bf9643d92233f"
     },
     {
+      "id": "rope-char-word",
+      "text": "绳",
+      "file": "rope-char-word.mp3",
+      "sha256": "e37c902c0d7a3f6943ee1ab1fb6559e7f6ad14e473ffd0c15f05a6dfc0cb0c70"
+    },
+    {
+      "id": "rope-word",
+      "text": "绳子",
+      "file": "rope-word.mp3",
+      "sha256": "116a48552ca48cf0cf49f7e0617f135356f47c9741bf9f208515ef589478c0be"
+    },
+    {
       "id": "scold-sentence",
       "text": "别骂他。",
       "file": "scold-sentence.mp3",

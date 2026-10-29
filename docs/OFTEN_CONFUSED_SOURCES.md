@@ -85,3 +85,5 @@ Selected claims: 厕所 cèsuǒ is the complete word for toilet; 所 alone is no
 
 
 Root editorial checks: 找 is taught as look for, without claiming that the object has been found; the illustration has no success checkmark. 粗 uses a thick-rope example to match its image. 元 uses an explicit cup-of-tea price sentence.
+
+Auxiliary clickable vocabulary: 绳子 shéngzi (rope) and 绳 shéng (rope/cord), checked against the same CC-CEDICT entries. Both have local four-language definitions and individual recordings; these support the thick-rope sentence and are not counted as additional comparison cards.
