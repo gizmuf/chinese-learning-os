@@ -34,7 +34,7 @@ assert call('POST',b,{'events':[{**event,'correct':False}]})[0]==200
 assert call(user=b)[1]['events'][0]['correct']==False and call(user=a)[1]['events'][0]['correct']==True;checks.append('course UUID scoped by account')
 assert call('POST',a,{'events':[event]},origin='https://other.example')[0]==403;checks.append('course foreign origin rejected')
 for key,value in [('activityId','unknown'),('kind','study'),('lessonId','intensive-04'),('at',int(time.time()*1000)+600000)]:
-    assert call('POST',a,{'events':[{**event,key:value}]})[0]==400
+    response=call('POST',a,{'events':[{**event,key:value}]});assert response[0]==400,(key,response[:2])
 checks.append('course registry, kind, lesson and future timestamp checked')
 assert call('POST',a,'{bad')[0]==400;checks.append('course malformed body rejected')
 batch_response=call('POST',a,{'events':[event]*21});assert batch_response[0]==400,batch_response;checks.append('course sync batches bounded')
@@ -146,6 +146,15 @@ checks.append('chunks cross-material and kind validation enforced')
 assert call('POST',a,{'events':[{**chunk,'id':str(uuid.uuid4()),'assisted':True}]})[0]==200;checks.append('chunks assisted records can sync without independent scheduling')
 assert all(e['lessonId']=='intensive-03' for e in call(user=a,path='/api/course-progress')[1]['events']);checks.append('chunks hidden from legacy lesson clients')
 assert call('POST',a,{'events':[chunk]},path='/api/progress')[0]==400;checks.append('chunks never enters HSK event registry')
+for activity in ['chunk-gap-hsk3-1000','chunk-gap-request-1','chunk-frame-attitude-interest-1']:
+ cloze={**chunk,'id':str(uuid.uuid4()),'activityId':activity}
+ result=call('POST',a,{'events':[cloze]});assert result[0]==200,result[:2]
+ assert call('POST',a,{'events':[cloze]})[0]==200
+ assert sum(e['id']==cloze['id'] for e in call(user=a)[1]['events'])==1
+ assert not any(e['activityId']==activity for e in call(user=b)[1]['events'])
+ assert call('POST',a,{'events':[{**cloze,'id':str(uuid.uuid4()),'lessonId':'intensive-08'}]})[0]==400
+ checks.append('cloze account isolation, idempotency and material validation: '+activity)
+assert call('POST',a,{'events':[{**chunk,'id':str(uuid.uuid4()),'activityId':'chunk-frame-unknown'}]})[0]==400;checks.append('unknown cloze rejected')
 assert call('POST',a,'x'*100001)[0]==413;checks.append('course body size bounded')
 for check in checks:print('PASS',check)
 print(f'{len(checks)} course API integration checks passed')

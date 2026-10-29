@@ -3,7 +3,7 @@ const C=(en:string,fr:string,ru:string,tr:string):Copy=>({en,fr,ru,tr});
 export const chunkCopy={
  title:C('Speaking chunks','Parler par blocs','Говорим фразовыми блоками','Kalıplarla konuş'),
  intro:C('Keep a useful phrase. Change one piece. Say something new.','Gardez une expression utile. Changez un élément. Dites autre chose.','Сохраните полезную фразу. Замените часть. Скажите что-то новое.','Kullanışlı bir kalıbı koru. Bir parçayı değiştir. Yeni bir şey söyle.'),
- subtitle:C('10 patterns · 30 examples · connected to lessons 3–6','10 structures · 30 exemples · liens avec les leçons 3–6','10 моделей · 30 примеров · связь с уроками 3–6','10 kalıp · 30 örnek · 3–6. derslerle bağlantılı'),
+ subtitle:C('Original patterns · 1,000 HSK1–3 words · grammar frames','Structures d’origine · 1 000 mots HSK1–3 · structures grammaticales','Исходные модели · 1 000 слов HSK1–3 · грамматические рамки','İlk kalıplar · 1.000 HSK1–3 kelimesi · dil bilgisi kalıpları'),
  open:C('Explore speaking chunks','Découvrir les blocs','Открыть фразовые блоки','Konuşma kalıplarını keşfet'),
  back:C('Back to course','Retour au cours','Вернуться к курсу','Kursa dön'),
  learn:C('Learn & swap','Apprendre et remplacer','Изучать и заменять','Öğren ve değiştir'),

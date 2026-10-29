@@ -19,6 +19,11 @@ async def main():
  items=[v for u in data['units'] for v in u['variants']]
  chunks={c['audioId']:c['text'] for v in items for c in v['chunks']}
  tasks=[(v['id'],v['hanzi']) for v in items]+list(chunks.items())
+ frames=json.loads(Path('data/speaking-chunks/grammar-frames.json').read_text())
+ for frame in frames:
+  for ex in frame['examples']:
+   tasks.append(('frame-'+ex['id'],ex['hanzi']))
+   tasks.extend(('frame-'+ex['id']+'-'+str(t),ex['parts'][t]) for t in ex['targets'])
  print('Tasks',len(items),'sentences',len(chunks),'chunks',flush=True)
  sem=asyncio.Semaphore(3);counts={'cached':0,'generated':0}
  def save():
