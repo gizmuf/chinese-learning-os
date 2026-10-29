@@ -1,0 +1,3588 @@
+[
+  {
+    "id": "adv-even-if",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "即使…也…",
+    "title": {
+      "en": "Even if",
+      "fr": "Même si",
+      "ru": "Даже если",
+      "tr": "Olsa bile"
+    },
+    "note": {
+      "en": "Put the hypothetical difficulty first, then the unchanged outcome after the subject.",
+      "fr": "Placez la difficulté hypothétique en premier, puis le résultat inchangé après le sujet.",
+      "ru": "Сначала назовите предполагаемую трудность, затем неизменный результат после подлежащего.",
+      "tr": "Önce varsayılan zorluğu, sonra özneden sonra değişmeyen sonucu belirtin."
+    },
+    "sources": [
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf",
+      "https://www.learn-chinese.com/pdf/chinese-grammar/33-chinese-conjunctions.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-even-if-1",
+        "hanzi": "即使明天下雨，我也会去上课。",
+        "pinyin": "Jíshǐ míngtiān xiàyǔ, wǒ yě huì qù shàngkè.",
+        "meaning": {
+          "en": "Even if it rains tomorrow, I will go to class.",
+          "fr": "Même s’il pleut demain, j’irai en cours.",
+          "ru": "Даже если завтра пойдёт дождь, я пойду на занятия.",
+          "tr": "Yarın yağmur yağsa bile derse gideceğim."
+        },
+        "parts": [
+          "即使",
+          "明天下雨",
+          "，",
+          "我",
+          "也",
+          "会去上课",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "Put the hypothetical difficulty first, then the unchanged outcome after the subject.",
+          "fr": "Placez la difficulté hypothétique en premier, puis le résultat inchangé après le sujet.",
+          "ru": "Сначала назовите предполагаемую трудность, затем неизменный результат после подлежащего.",
+          "tr": "Önce varsayılan zorluğu, sonra özneden sonra değişmeyen sonucu belirtin."
+        }
+      },
+      {
+        "id": "adv-even-if-2",
+        "hanzi": "即使只有十分钟，我们也可以练习中文。",
+        "pinyin": "Jíshǐ zhǐ yǒu shí fēnzhōng, wǒmen yě kěyǐ liànxí Zhōngwén.",
+        "meaning": {
+          "en": "Even if we only have ten minutes, we can practise Chinese.",
+          "fr": "Même si nous n’avons que dix minutes, nous pouvons pratiquer le chinois.",
+          "ru": "Даже если у нас всего десять минут, мы можем позаниматься китайским.",
+          "tr": "Sadece on dakikamız olsa bile Çince çalışabiliriz."
+        },
+        "parts": [
+          "即使",
+          "只有十分钟",
+          "，",
+          "我们",
+          "也",
+          "可以练习中文",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "Put the hypothetical difficulty first, then the unchanged outcome after the subject.",
+          "fr": "Placez la difficulté hypothétique en premier, puis le résultat inchangé après le sujet.",
+          "ru": "Сначала назовите предполагаемую трудность, затем неизменный результат после подлежащего.",
+          "tr": "Önce varsayılan zorluğu, sonra özneden sonra değişmeyen sonucu belirtin."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Picture tomorrow’s rain, then yourself arriving for class anyway.",
+        "fr": "Imaginez la pluie demain, puis votre arrivée en cours malgré tout.",
+        "ru": "Представьте завтрашний дождь и себя на занятиях вопреки ему.",
+        "tr": "Yarının yağmurunu, ardından yine de derse gidişinizi hayal edin."
+      },
+      "explanation": {
+        "en": "Put the hypothetical difficulty first, then the unchanged outcome after the subject.",
+        "fr": "Placez la difficulté hypothétique en premier, puis le résultat inchangé après le sujet.",
+        "ru": "Сначала назовите предполагаемую трудность, затем неизменный результат после подлежащего.",
+        "tr": "Önce varsayılan zorluğu, sonra özneden sonra değişmeyen sonucu belirtin."
+      },
+      "contrast": {
+        "en": "Unlike ordinary if, this pattern says the difficulty will not change the outcome.",
+        "fr": "Contrairement à une condition simple, la difficulté ne change pas le résultat.",
+        "ru": "В отличие от обычного условия, здесь трудность не меняет результат.",
+        "tr": "Sıradan bir koşulun aksine, bu zorluk sonucu değiştirmez."
+      },
+      "visual": "condition",
+      "labels": [
+        {
+          "en": "Rain tomorrow",
+          "fr": "Pluie demain",
+          "ru": "Завтра дождь",
+          "tr": "Yarın yağmur"
+        },
+        {
+          "en": "Go to class anyway",
+          "fr": "Aller quand même en cours",
+          "ru": "Всё равно идти на занятия",
+          "tr": "Yine de derse git"
+        }
+      ],
+      "icons": [
+        "rain",
+        "school"
+      ]
+    }
+  },
+  {
+    "id": "adv-since",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "既然…就…",
+    "title": {
+      "en": "Since that is the case",
+      "fr": "Puisque c’est le cas",
+      "ru": "Раз уж это так",
+      "tr": "Madem öyle"
+    },
+    "note": {
+      "en": "Start with an accepted fact, then draw a conclusion or suggestion.",
+      "fr": "Commencez par un fait admis, puis tirez une conclusion ou faites une proposition.",
+      "ru": "Начните с признанного факта, затем сделайте вывод или предложение.",
+      "tr": "Kabul edilen bir durumla başlayıp sonuç veya öneri belirtin."
+    },
+    "sources": [
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf",
+      "https://qualifications.pearson.com/content/dam/pdf/A%20Level/Chinese/2013/Specification%20and%20sample%20assessments/UA035223_GCE_Lin_Chinese.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-since-1",
+        "hanzi": "既然你有空，我们就一起喝茶吧。",
+        "pinyin": "Jìrán nǐ yǒu kòng, wǒmen jiù yìqǐ hē chá ba.",
+        "meaning": {
+          "en": "Since you are free, let’s have tea together.",
+          "fr": "Puisque tu es libre, prenons un thé ensemble.",
+          "ru": "Раз ты свободен, давай выпьем чаю.",
+          "tr": "Madem boşsun, birlikte çay içelim."
+        },
+        "parts": [
+          "既然",
+          "你有空",
+          "，",
+          "我们",
+          "就",
+          "一起喝茶吧",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "Start with an accepted fact, then draw a conclusion or suggestion.",
+          "fr": "Commencez par un fait admis, puis tirez une conclusion ou faites une proposition.",
+          "ru": "Начните с признанного факта, затем сделайте вывод или предложение.",
+          "tr": "Kabul edilen bir durumla başlayıp sonuç veya öneri belirtin."
+        }
+      },
+      {
+        "id": "adv-since-2",
+        "hanzi": "既然已经买了票，我们就早点出发吧。",
+        "pinyin": "Jìrán yǐjīng mǎi le piào, wǒmen jiù zǎodiǎn chūfā ba.",
+        "meaning": {
+          "en": "Since we have already bought the tickets, let’s leave early.",
+          "fr": "Puisque nous avons déjà acheté les billets, partons tôt.",
+          "ru": "Раз билеты уже куплены, давай выедем пораньше.",
+          "tr": "Madem biletleri aldık, erken yola çıkalım."
+        },
+        "parts": [
+          "既然",
+          "已经买了票",
+          "，",
+          "我们",
+          "就",
+          "早点出发吧",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "Start with an accepted fact, then draw a conclusion or suggestion.",
+          "fr": "Commencez par un fait admis, puis tirez une conclusion ou faites une proposition.",
+          "ru": "Начните с признанного факта, затем сделайте вывод или предложение.",
+          "tr": "Kabul edilen bir durumla başlayıp sonuç veya öneri belirtin."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Your friend has free time, so you invite them to have tea together.",
+        "fr": "Votre ami a du temps libre ; vous proposez de prendre un thé ensemble.",
+        "ru": "У друга есть свободное время, и вы предлагаете вместе выпить чаю.",
+        "tr": "Arkadaşınızın boş vakti var; birlikte çay içmeyi öneriyorsunuz."
+      },
+      "explanation": {
+        "en": "Start with an accepted fact, then draw a conclusion or suggestion.",
+        "fr": "Commencez par un fait admis, puis tirez une conclusion ou faites une proposition.",
+        "ru": "Начните с признанного факта, затем сделайте вывод или предложение.",
+        "tr": "Kabul edilen bir durumla başlayıp sonuç veya öneri belirtin."
+      },
+      "contrast": {
+        "en": "Use an accepted premise here; ordinary if can describe an uncertain possibility.",
+        "fr": "La prémisse est admise ici ; une condition simple peut rester incertaine.",
+        "ru": "Здесь условие принято как факт; обычное «если» допускает неопределённость.",
+        "tr": "Burada durum kabul edilir; sıradan bir koşul belirsiz bir olasılık olabilir."
+      },
+      "visual": "cause",
+      "labels": [
+        {
+          "en": "Free time",
+          "fr": "Du temps libre",
+          "ru": "Свободное время",
+          "tr": "Boş vakit"
+        },
+        {
+          "en": "Tea together",
+          "fr": "Un thé ensemble",
+          "ru": "Вместе выпить чаю",
+          "tr": "Birlikte çay"
+        }
+      ],
+      "icons": [
+        "clock",
+        "tea"
+      ]
+    }
+  },
+  {
+    "id": "adv-despite",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "尽管…还是…",
+    "title": {
+      "en": "Despite that, still",
+      "fr": "Malgré cela",
+      "ru": "Несмотря на это",
+      "tr": "Buna rağmen"
+    },
+    "note": {
+      "en": "State a real obstacle first; place the persistence marker after the second subject.",
+      "fr": "Énoncez un obstacle réel ; placez le marqueur de persistance après le second sujet.",
+      "ru": "Сначала назовите реальное препятствие; показатель сохранения действия ставьте после второго подлежащего.",
+      "tr": "Önce gerçek engeli belirtin; devamlılık sözcüğünü ikinci özneden sonra koyun."
+    },
+    "sources": [
+      "https://eastasiastudent.net/china/mandarin/even-though-even-if/",
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf",
+      "https://www.learn-chinese.com/pdf/chinese-grammar/33-chinese-conjunctions.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-despite-1",
+        "hanzi": "尽管今天很累，我还是做完了作业。",
+        "pinyin": "Jǐnguǎn jīntiān hěn lèi, wǒ háishi zuò wán le zuòyè.",
+        "meaning": {
+          "en": "Although I was very tired today, I still finished my homework.",
+          "fr": "Malgré ma fatigue aujourd’hui, j’ai quand même terminé mes devoirs.",
+          "ru": "Несмотря на сильную усталость сегодня, я всё-таки закончил домашнее задание.",
+          "tr": "Bugün çok yorgun olmama rağmen ödevimi bitirdim."
+        },
+        "parts": [
+          "尽管",
+          "今天很累",
+          "，",
+          "我",
+          "还是",
+          "做完了作业",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "State a real obstacle first; place the persistence marker after the second subject.",
+          "fr": "Énoncez un obstacle réel ; placez le marqueur de persistance après le second sujet.",
+          "ru": "Сначала назовите реальное препятствие; показатель сохранения действия ставьте после второго подлежащего.",
+          "tr": "Önce gerçek engeli belirtin; devamlılık sözcüğünü ikinci özneden sonra koyun."
+        }
+      },
+      {
+        "id": "adv-despite-2",
+        "hanzi": "尽管路上很堵，她还是准时到了。",
+        "pinyin": "Jǐnguǎn lùshang hěn dǔ, tā háishi zhǔnshí dào le.",
+        "meaning": {
+          "en": "Despite the heavy traffic, she still arrived on time.",
+          "fr": "Malgré les embouteillages, elle est arrivée à l’heure.",
+          "ru": "Несмотря на пробки, она всё же приехала вовремя.",
+          "tr": "Trafik sıkışık olmasına rağmen zamanında geldi."
+        },
+        "parts": [
+          "尽管",
+          "路上很堵",
+          "，",
+          "她",
+          "还是",
+          "准时到了",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "State a real obstacle first; place the persistence marker after the second subject.",
+          "fr": "Énoncez un obstacle réel ; placez le marqueur de persistance après le second sujet.",
+          "ru": "Сначала назовите реальное препятствие; показатель сохранения действия ставьте после второго подлежащего.",
+          "tr": "Önce gerçek engeli belirtin; devamlılık sözcüğünü ikinci özneden sonra koyun."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Picture yourself tired today, with your homework still finished in front of you.",
+        "fr": "Imaginez votre fatigue aujourd’hui, mais vos devoirs terminés devant vous.",
+        "ru": "Представьте: сегодня вы устали, но домашнее задание всё-таки выполнено.",
+        "tr": "Bugün yorgun olduğunuzu ama önünüzde bitmiş ödevinizin durduğunu hayal edin."
+      },
+      "explanation": {
+        "en": "State a real obstacle first; place the persistence marker after the second subject.",
+        "fr": "Énoncez un obstacle réel ; placez le marqueur de persistance après le second sujet.",
+        "ru": "Сначала назовите реальное препятствие; показатель сохранения действия ставьте после второго подлежащего.",
+        "tr": "Önce gerçek engeli belirtin; devamlılık sözcüğünü ikinci özneden sonra koyun."
+      },
+      "contrast": {
+        "en": "This concedes a real fact; even if can introduce a hypothetical obstacle.",
+        "fr": "On admet un fait réel ; même si peut introduire un obstacle hypothétique.",
+        "ru": "Здесь признаётся реальный факт; «даже если» может вводить предполагаемую трудность.",
+        "tr": "Bu kalıp gerçek bir durumu kabul eder; varsayımsal engelden farklıdır."
+      },
+      "visual": "contrast",
+      "labels": [
+        {
+          "en": "Tired today",
+          "fr": "Fatigué aujourd’hui",
+          "ru": "Сегодня устали",
+          "tr": "Bugün yorgun"
+        },
+        {
+          "en": "Homework finished",
+          "fr": "Devoirs terminés",
+          "ru": "Задание выполнено",
+          "tr": "Ödev bitti"
+        }
+      ],
+      "icons": [
+        "person",
+        "book"
+      ]
+    }
+  },
+  {
+    "id": "adv-no-matter",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "无论…都…",
+    "title": {
+      "en": "No matter which",
+      "fr": "Quel que soit",
+      "ru": "Независимо от выбора",
+      "tr": "Hangisi olursa olsun"
+    },
+    "note": {
+      "en": "Follow the opener with a question word or alternatives; the outcome remains the same.",
+      "fr": "Après l’ouverture, utilisez un interrogatif ou des alternatives ; le résultat reste identique.",
+      "ru": "После первого показателя используйте вопросительное слово или варианты; результат неизменен.",
+      "tr": "İlk sözcükten sonra soru sözcüğü veya seçenekler kullanın; sonuç değişmez."
+    },
+    "sources": [
+      "https://learn.digmandarin.com/wp-content/uploads/2021/09/Lesson-11-Notes-4B.pdf",
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf",
+      "https://www.learn-chinese.com/pdf/chinese-grammar/33-chinese-conjunctions.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-no-matter-1",
+        "hanzi": "无论你坐哪班车，我都会在车站等你。",
+        "pinyin": "Wúlùn nǐ zuò nǎ bān chē, wǒ dōu huì zài chēzhàn děng nǐ.",
+        "meaning": {
+          "en": "Whichever bus you take, I will wait for you at the station.",
+          "fr": "Quel que soit le bus que tu prends, je t’attendrai à la gare.",
+          "ru": "На каком бы автобусе ты ни приехал, я буду ждать тебя на станции.",
+          "tr": "Hangi otobüse binersen bin, seni istasyonda bekleyeceğim."
+        },
+        "parts": [
+          "无论",
+          "你坐哪班车",
+          "，",
+          "我",
+          "都",
+          "会在车站等你",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "Follow the opener with a question word or alternatives; the outcome remains the same.",
+          "fr": "Après l’ouverture, utilisez un interrogatif ou des alternatives ; le résultat reste identique.",
+          "ru": "После первого показателя используйте вопросительное слово или варианты; результат неизменен.",
+          "tr": "İlk sözcükten sonra soru sözcüğü veya seçenekler kullanın; sonuç değişmez."
+        }
+      },
+      {
+        "id": "adv-no-matter-2",
+        "hanzi": "无论天气怎么样，这家店都开门。",
+        "pinyin": "Wúlùn tiānqì zěnmeyàng, zhè jiā diàn dōu kāimén.",
+        "meaning": {
+          "en": "Whatever the weather is like, this shop opens.",
+          "fr": "Quel que soit le temps, ce magasin ouvre.",
+          "ru": "Какая бы ни была погода, этот магазин открывается.",
+          "tr": "Hava nasıl olursa olsun bu dükkân açılır."
+        },
+        "parts": [
+          "无论",
+          "天气怎么样",
+          "，",
+          "这家店",
+          "都",
+          "开门",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "Follow the opener with a question word or alternatives; the outcome remains the same.",
+          "fr": "Après l’ouverture, utilisez un interrogatif ou des alternatives ; le résultat reste identique.",
+          "ru": "После первого показателя используйте вопросительное слово или варианты; результат неизменен.",
+          "tr": "İlk sözcükten sonra soru sözcüğü veya seçenekler kullanın; sonuç değişmez."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Your friend can take any bus; you will still wait at the station.",
+        "fr": "Votre ami peut prendre n’importe quel bus ; vous l’attendrez à la gare.",
+        "ru": "Друг может выбрать любой автобус; вы всё равно будете ждать на станции.",
+        "tr": "Arkadaşınız hangi otobüse binerse binsin, siz istasyonda bekleyeceksiniz."
+      },
+      "explanation": {
+        "en": "Follow the opener with a question word or alternatives; the outcome remains the same.",
+        "fr": "Après l’ouverture, utilisez un interrogatif ou des alternatives ; le résultat reste identique.",
+        "ru": "После первого показателя используйте вопросительное слово или варианты; результат неизменен.",
+        "tr": "İlk sözcükten sonra soru sözcüğü veya seçenekler kullanın; sonuç değişmez."
+      },
+      "contrast": {
+        "en": "This is a more formal alternative to the everyday no-matter pattern, not a question.",
+        "fr": "C’est une variante plus formelle du tour courant, pas une question.",
+        "ru": "Это более формальный вариант обычного оборота «неважно»; вопроса здесь нет.",
+        "tr": "Bu, günlük eşdeğerinin daha resmî biçimidir; soru sormaz."
+      },
+      "visual": "condition",
+      "labels": [
+        {
+          "en": "Any bus",
+          "fr": "N’importe quel bus",
+          "ru": "Любой автобус",
+          "tr": "Hangi otobüs olursa olsun"
+        },
+        {
+          "en": "Wait at the station",
+          "fr": "Attendre à la gare",
+          "ru": "Ждать на станции",
+          "tr": "İstasyonda bekle"
+        }
+      ],
+      "icons": [
+        "bus",
+        "person"
+      ]
+    }
+  },
+  {
+    "id": "adv-rather-than",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "与其…不如…",
+    "title": {
+      "en": "Rather than, better to",
+      "fr": "Plutôt que…mieux vaut",
+      "ru": "Вместо…лучше",
+      "tr": "Yerine…daha iyi"
+    },
+    "note": {
+      "en": "Put the less preferred action first and the recommended action second.",
+      "fr": "Placez l’action moins souhaitable en premier, puis l’action recommandée.",
+      "ru": "Сначала назовите менее желательное действие, затем рекомендуемое.",
+      "tr": "Önce daha az tercih edilen, sonra önerilen eylemi söyleyin."
+    },
+    "sources": [
+      "https://www.mangolanguages.com/resources/learn/grammar/mandarin-chinese/how-to-use-buru-not-as-as-to-make-comparisons-in-mandarin-chinese",
+      "https://www.chinesepod.com/lesson/4424/%E8%AF%AD%E6%B3%95%E8%AF%BE%E7%A8%8B%EF%BC%9A%E4%B8%8E%E5%85%B6%E2%80%A6%E2%80%A6%E4%B8%8D%E5%A6%82"
+    ],
+    "examples": [
+      {
+        "id": "adv-rather-than-1",
+        "hanzi": "与其等公共汽车，不如走路去。",
+        "pinyin": "Yǔqí děng gōnggòngqìchē, bùrú zǒulù qù.",
+        "meaning": {
+          "en": "Rather than wait for the bus, we might as well walk.",
+          "fr": "Plutôt que d’attendre le bus, autant y aller à pied.",
+          "ru": "Вместо того чтобы ждать автобус, лучше пойти пешком.",
+          "tr": "Otobüs beklemektense yürüyerek gitmek daha iyi."
+        },
+        "parts": [
+          "与其",
+          "等公共汽车",
+          "，",
+          "不如",
+          "走路去",
+          "。"
+        ],
+        "targets": [
+          0,
+          3
+        ],
+        "hint": {
+          "en": "Put the less preferred action first and the recommended action second.",
+          "fr": "Placez l’action moins souhaitable en premier, puis l’action recommandée.",
+          "ru": "Сначала назовите менее желательное действие, затем рекомендуемое.",
+          "tr": "Önce daha az tercih edilen, sonra önerilen eylemi söyleyin."
+        }
+      },
+      {
+        "id": "adv-rather-than-2",
+        "hanzi": "与其一直担心，不如先问问老师。",
+        "pinyin": "Yǔqí yìzhí dānxīn, bùrú xiān wènwen lǎoshī.",
+        "meaning": {
+          "en": "Rather than keep worrying, it is better to ask the teacher first.",
+          "fr": "Plutôt que de continuer à s’inquiéter, mieux vaut demander au professeur.",
+          "ru": "Вместо постоянных тревог лучше сначала спросить учителя.",
+          "tr": "Sürekli endişelenmektense önce öğretmene sormak daha iyi."
+        },
+        "parts": [
+          "与其",
+          "一直担心",
+          "，",
+          "不如",
+          "先问问老师",
+          "。"
+        ],
+        "targets": [
+          0,
+          3
+        ],
+        "hint": {
+          "en": "Put the less preferred action first and the recommended action second.",
+          "fr": "Placez l’action moins souhaitable en premier, puis l’action recommandée.",
+          "ru": "Сначала назовите менее желательное действие, затем рекомендуемое.",
+          "tr": "Önce daha az tercih edilen, sonra önerilen eylemi söyleyin."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "At the bus stop, choose walking instead of waiting for the bus.",
+        "fr": "À l’arrêt, choisissez de marcher plutôt que d’attendre le bus.",
+        "ru": "На остановке выберите прогулку вместо ожидания автобуса.",
+        "tr": "Durakta otobüs beklemek yerine yürümeyi seçin."
+      },
+      "explanation": {
+        "en": "Put the less preferred action first and the recommended action second.",
+        "fr": "Placez l’action moins souhaitable en premier, puis l’action recommandée.",
+        "ru": "Сначала назовите менее желательное действие, затем рекомендуемое.",
+        "tr": "Önce daha az tercih edilen, sonra önerilen eylemi söyleyin."
+      },
+      "contrast": {
+        "en": "The second option is preferred; the strong would-rather pattern prefers its first option.",
+        "fr": "La seconde option est préférée ; le tour « préférer…plutôt que » choisit la première.",
+        "ru": "Здесь выбирают второй вариант; в обороте «предпочту…но не…» выбирают первый.",
+        "tr": "Burada ikinci seçenek tercih edilir; kararlı tercih kalıbında ilk seçenek seçilir."
+      },
+      "visual": "choice",
+      "labels": [
+        {
+          "en": "Wait for the bus",
+          "fr": "Attendre le bus",
+          "ru": "Ждать автобус",
+          "tr": "Otobüs bekle"
+        },
+        {
+          "en": "Walk instead",
+          "fr": "Y aller plutôt à pied",
+          "ru": "Лучше пойти пешком",
+          "tr": "Onun yerine yürü"
+        }
+      ],
+      "icons": [
+        "bus",
+        "walk"
+      ]
+    }
+  },
+  {
+    "id": "adv-would-rather",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "宁可…也不…",
+    "title": {
+      "en": "A firm preference",
+      "fr": "Une préférence ferme",
+      "ru": "Твёрдое предпочтение",
+      "tr": "Kesin tercih"
+    },
+    "note": {
+      "en": "State the cost you accept first, then the option you firmly reject.",
+      "fr": "Énoncez d’abord le coût accepté, puis l’option fermement refusée.",
+      "ru": "Сначала назовите приемлемую жертву, затем решительно отвергаемый вариант.",
+      "tr": "Önce kabul ettiğiniz bedeli, sonra kesinlikle reddettiğiniz seçeneği belirtin."
+    },
+    "sources": [
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf",
+      "https://www.chinesepod.com/dictionary/%E5%AE%81%E5%8F%AF"
+    ],
+    "examples": [
+      {
+        "id": "adv-would-rather-1",
+        "hanzi": "我宁可走路去，也不坐这么挤的车。",
+        "pinyin": "Wǒ nìngkě zǒulù qù, yě bú zuò zhème jǐ de chē.",
+        "meaning": {
+          "en": "I would rather walk than take such a crowded bus.",
+          "fr": "Je préfère y aller à pied plutôt que de prendre un bus aussi bondé.",
+          "ru": "Я лучше пойду пешком, чем поеду в таком переполненном автобусе.",
+          "tr": "Bu kadar kalabalık bir otobüse binmektense yürümeyi tercih ederim."
+        },
+        "parts": [
+          "我",
+          "宁可",
+          "走路去",
+          "，",
+          "也不",
+          "坐这么挤的车",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "State the cost you accept first, then the option you firmly reject.",
+          "fr": "Énoncez d’abord le coût accepté, puis l’option fermement refusée.",
+          "ru": "Сначала назовите приемлемую жертву, затем решительно отвергаемый вариант.",
+          "tr": "Önce kabul ettiğiniz bedeli, sonra kesinlikle reddettiğiniz seçeneği belirtin."
+        }
+      },
+      {
+        "id": "adv-would-rather-2",
+        "hanzi": "她宁可多等十分钟，也不打断别人。",
+        "pinyin": "Tā nìngkě duō děng shí fēnzhōng, yě bù dǎduàn biéren.",
+        "meaning": {
+          "en": "She would rather wait ten more minutes than interrupt someone.",
+          "fr": "Elle préfère attendre dix minutes de plus plutôt que d’interrompre quelqu’un.",
+          "ru": "Она лучше подождёт ещё десять минут, чем перебьёт кого-то.",
+          "tr": "Birinin sözünü kesmektense on dakika daha beklemeyi tercih eder."
+        },
+        "parts": [
+          "她",
+          "宁可",
+          "多等十分钟",
+          "，",
+          "也不",
+          "打断别人",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "State the cost you accept first, then the option you firmly reject.",
+          "fr": "Énoncez d’abord le coût accepté, puis l’option fermement refusée.",
+          "ru": "Сначала назовите приемлемую жертву, затем решительно отвергаемый вариант.",
+          "tr": "Önce kabul ettiğiniz bedeli, sonra kesinlikle reddettiğiniz seçeneği belirtin."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Picture the crowded vehicle you refuse, then yourself choosing to walk.",
+        "fr": "Imaginez le véhicule bondé que vous refusez, puis votre choix de marcher.",
+        "ru": "Представьте переполненный транспорт, в который не хотите садиться, и выберите идти пешком.",
+        "tr": "Binmek istemediğiniz kalabalık aracı, ardından yürümeyi seçtiğinizi hayal edin."
+      },
+      "explanation": {
+        "en": "State the cost you accept first, then the option you firmly reject.",
+        "fr": "Énoncez d’abord le coût accepté, puis l’option fermement refusée.",
+        "ru": "Сначала назовите приемлемую жертву, затем решительно отвергаемый вариант.",
+        "tr": "Önce kabul ettiğiniz bedeli, sonra kesinlikle reddettiğiniz seçeneği belirtin."
+      },
+      "contrast": {
+        "en": "The first option is chosen; rather-than…better-to chooses its second option.",
+        "fr": "La première option est choisie ; le tour « plutôt que…mieux vaut » choisit la seconde.",
+        "ru": "Здесь выбирают первый вариант; в обороте «вместо…лучше» выбирают второй.",
+        "tr": "Burada ilk seçenek seçilir; diğer karşılaştırmalı tercih kalıbında ikinci seçenek seçilir."
+      },
+      "visual": "choice",
+      "labels": [
+        {
+          "en": "Choose to walk",
+          "fr": "Choisir de marcher",
+          "ru": "Выбрать идти пешком",
+          "tr": "Yürümeyi seç"
+        },
+        {
+          "en": "Refuse the crowded ride",
+          "fr": "Refuser le trajet bondé",
+          "ru": "Не ехать в тесноте",
+          "tr": "Kalabalık araca binme"
+        }
+      ],
+      "icons": [
+        "walk",
+        "bus"
+      ]
+    }
+  },
+  {
+    "id": "adv-not-only",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "不仅…还…",
+    "title": {
+      "en": "Adding a further strength",
+      "fr": "Ajouter un autre atout",
+      "ru": "Добавляем ещё одно достоинство",
+      "tr": "Bir başka özellik ekleme"
+    },
+    "note": {
+      "en": "Keep the shared subject first; add a second fact after the second marker.",
+      "fr": "Gardez le sujet commun au début ; ajoutez un second fait après le second marqueur.",
+      "ru": "Поставьте общее подлежащее в начале, затем добавьте второй факт.",
+      "tr": "Ortak özneyi başa koyun; ikinci sözcükten sonra bir başka bilgi ekleyin."
+    },
+    "sources": [
+      "https://www.learn-chinese.com/pdf/chinese-grammar/33-chinese-conjunctions.pdf",
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-not-only-1",
+        "hanzi": "这家咖啡馆不仅卖咖啡，还卖三明治。",
+        "pinyin": "Zhè jiā kāfēiguǎn bùjǐn mài kāfēi, hái mài sānmíngzhì.",
+        "meaning": {
+          "en": "This café sells not only coffee but also sandwiches.",
+          "fr": "Ce café vend non seulement du café, mais aussi des sandwichs.",
+          "ru": "В этом кафе продают не только кофе, но и сэндвичи.",
+          "tr": "Bu kafe sadece kahve değil, sandviç de satıyor."
+        },
+        "parts": [
+          "这家咖啡馆",
+          "不仅",
+          "卖咖啡",
+          "，",
+          "还",
+          "卖三明治",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Keep the shared subject first; add a second fact after the second marker.",
+          "fr": "Gardez le sujet commun au début ; ajoutez un second fait après le second marqueur.",
+          "ru": "Поставьте общее подлежащее в начале, затем добавьте второй факт.",
+          "tr": "Ortak özneyi başa koyun; ikinci sözcükten sonra bir başka bilgi ekleyin."
+        }
+      },
+      {
+        "id": "adv-not-only-2",
+        "hanzi": "他不仅帮我搬了桌子，还打扫了房间。",
+        "pinyin": "Tā bùjǐn bāng wǒ bān le zhuōzi, hái dǎsǎo le fángjiān.",
+        "meaning": {
+          "en": "He not only helped me move the table but also cleaned the room.",
+          "fr": "Il m’a aidé à déplacer la table et a aussi nettoyé la pièce.",
+          "ru": "Он не только помог мне передвинуть стол, но и убрал комнату.",
+          "tr": "Masayı taşımama yardım etmekle kalmadı, odayı da temizledi."
+        },
+        "parts": [
+          "他",
+          "不仅",
+          "帮我搬了桌子",
+          "，",
+          "还",
+          "打扫了房间",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Keep the shared subject first; add a second fact after the second marker.",
+          "fr": "Gardez le sujet commun au début ; ajoutez un second fait après le second marqueur.",
+          "ru": "Поставьте общее подлежащее в начале, затем добавьте второй факт.",
+          "tr": "Ortak özneyi başa koyun; ikinci sözcükten sonra bir başka bilgi ekleyin."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "At this café, picture coffee on the counter and sandwiches beside it.",
+        "fr": "Dans ce café, imaginez du café au comptoir et des sandwichs à côté.",
+        "ru": "В этом кафе представьте кофе на стойке и сэндвичи рядом.",
+        "tr": "Bu kafede tezgahtaki kahveyi ve yanındaki sandviçleri hayal edin."
+      },
+      "explanation": {
+        "en": "Keep the shared subject first; add a second fact after the second marker.",
+        "fr": "Gardez le sujet commun au début ; ajoutez un second fait après le second marqueur.",
+        "ru": "Поставьте общее подлежащее в начале, затем добавьте второй факт.",
+        "tr": "Ortak özneyi başa koyun; ikinci sözcükten sonra bir başka bilgi ekleyin."
+      },
+      "contrast": {
+        "en": "This is an alternative to not-only…but-also, not a contrast between opposite claims.",
+        "fr": "C’est une variante de « non seulement…mais aussi », sans opposition.",
+        "ru": "Это вариант «не только…но и», а не противопоставление утверждений.",
+        "tr": "Bu ek bilgi verir; birbirine zıt iki iddiayı karşılaştırmaz."
+      },
+      "visual": "focus",
+      "labels": [
+        {
+          "en": "Sells coffee",
+          "fr": "Vend du café",
+          "ru": "Продают кофе",
+          "tr": "Kahve satıyor"
+        },
+        {
+          "en": "Sells sandwiches too",
+          "fr": "Vend aussi des sandwichs",
+          "ru": "Ещё и сэндвичи",
+          "tr": "Sandviç de satıyor"
+        }
+      ],
+      "icons": [
+        "cup",
+        "food"
+      ]
+    }
+  },
+  {
+    "id": "adv-both-and",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "既…又…",
+    "title": {
+      "en": "Both qualities at once",
+      "fr": "Deux qualités à la fois",
+      "ru": "Два свойства одновременно",
+      "tr": "Aynı anda iki özellik"
+    },
+    "note": {
+      "en": "Place one marker before each parallel quality or action of the same subject.",
+      "fr": "Placez un marqueur avant chaque qualité ou action parallèle du même sujet.",
+      "ru": "Поставьте по показателю перед каждым параллельным свойством или действием одного лица.",
+      "tr": "Aynı öznenin paralel özellik veya eylemlerinin önüne birer sözcük koyun."
+    },
+    "sources": [
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf",
+      "https://www.learn-chinese.com/pdf/chinese-grammar/33-chinese-conjunctions.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-both-and-1",
+        "hanzi": "这个房间既安静又明亮。",
+        "pinyin": "Zhège fángjiān jì ānjìng yòu míngliàng.",
+        "meaning": {
+          "en": "This room is both quiet and bright.",
+          "fr": "Cette pièce est à la fois calme et lumineuse.",
+          "ru": "Эта комната и тихая, и светлая.",
+          "tr": "Bu oda hem sessiz hem aydınlık."
+        },
+        "parts": [
+          "这个房间",
+          "既",
+          "安静",
+          "又",
+          "明亮",
+          "。"
+        ],
+        "targets": [
+          1,
+          3
+        ],
+        "hint": {
+          "en": "Place one marker before each parallel quality or action of the same subject.",
+          "fr": "Placez un marqueur avant chaque qualité ou action parallèle du même sujet.",
+          "ru": "Поставьте по показателю перед каждым параллельным свойством или действием одного лица.",
+          "tr": "Aynı öznenin paralel özellik veya eylemlerinin önüne birer sözcük koyun."
+        }
+      },
+      {
+        "id": "adv-both-and-2",
+        "hanzi": "她既会做饭又会修电脑。",
+        "pinyin": "Tā jì huì zuòfàn yòu huì xiū diànnǎo.",
+        "meaning": {
+          "en": "She can both cook and repair computers.",
+          "fr": "Elle sait à la fois cuisiner et réparer des ordinateurs.",
+          "ru": "Она умеет и готовить, и ремонтировать компьютеры.",
+          "tr": "Hem yemek yapabiliyor hem de bilgisayar tamir edebiliyor."
+        },
+        "parts": [
+          "她",
+          "既",
+          "会做饭",
+          "又",
+          "会修电脑",
+          "。"
+        ],
+        "targets": [
+          1,
+          3
+        ],
+        "hint": {
+          "en": "Place one marker before each parallel quality or action of the same subject.",
+          "fr": "Placez un marqueur avant chaque qualité ou action parallèle du même sujet.",
+          "ru": "Поставьте по показателю перед каждым параллельным свойством или действием одного лица.",
+          "tr": "Aynı öznenin paralel özellik veya eylemlerinin önüne birer sözcük koyun."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Step into this room: it is quiet, and light fills it too.",
+        "fr": "Entrez dans cette pièce : elle est calme et lumineuse à la fois.",
+        "ru": "Войдите в эту комнату: в ней одновременно тихо и светло.",
+        "tr": "Bu odaya girin: hem sessiz hem de aydınlık."
+      },
+      "explanation": {
+        "en": "Place one marker before each parallel quality or action of the same subject.",
+        "fr": "Placez un marqueur avant chaque qualité ou action parallèle du même sujet.",
+        "ru": "Поставьте по показателю перед каждым параллельным свойством или действием одного лица.",
+        "tr": "Aynı öznenin paralel özellik veya eylemlerinin önüne birer sözcük koyun."
+      },
+      "contrast": {
+        "en": "These facts coexist; first…then instead places actions in time order.",
+        "fr": "Ces faits coexistent ; « d’abord…ensuite » ordonne les actions dans le temps.",
+        "ru": "Эти признаки сосуществуют; «сначала…потом» задаёт последовательность.",
+        "tr": "Özellikler birlikte bulunur; önce…sonra ise zaman sırası belirtir."
+      },
+      "visual": "focus",
+      "labels": [
+        {
+          "en": "Quiet room",
+          "fr": "Pièce calme",
+          "ru": "Тихая комната",
+          "tr": "Sessiz oda"
+        },
+        {
+          "en": "Bright room too",
+          "fr": "Pièce aussi lumineuse",
+          "ru": "Ещё и светлая",
+          "tr": "Üstelik aydınlık"
+        }
+      ],
+      "icons": [
+        "home",
+        "sun"
+      ]
+    }
+  },
+  {
+    "id": "adv-correction",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "不是…而是…",
+    "title": {
+      "en": "Correcting an assumption",
+      "fr": "Corriger une supposition",
+      "ru": "Исправляем предположение",
+      "tr": "Varsayımı düzeltme"
+    },
+    "note": {
+      "en": "Reject the mistaken item first, then supply the correct item in the same grammatical role.",
+      "fr": "Rejetez l’élément erroné, puis donnez le bon dans la même fonction grammaticale.",
+      "ru": "Сначала отвергните ошибочный вариант, затем дайте верный в той же грамматической роли.",
+      "tr": "Önce yanlış ögeyi reddedin, sonra aynı dilbilgisel görevde doğru ögeyi verin."
+    },
+    "sources": [
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf",
+      "https://bpb-us-e2.wpmucdn.com/sites.middlebury.edu/dist/5/3176/files/2011/07/Yinshiyujiankang-jiangyi-jt-2016.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-correction-1",
+        "hanzi": "我想喝的不是咖啡，而是茶。",
+        "pinyin": "Wǒ xiǎng hē de bú shì kāfēi, ér shì chá.",
+        "meaning": {
+          "en": "What I want to drink is tea, not coffee.",
+          "fr": "Ce que je veux boire, c’est du thé, pas du café.",
+          "ru": "Я хочу выпить не кофе, а чай.",
+          "tr": "İçmek istediğim kahve değil, çay."
+        },
+        "parts": [
+          "我想喝的",
+          "不是",
+          "咖啡",
+          "，",
+          "而是",
+          "茶",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Reject the mistaken item first, then supply the correct item in the same grammatical role.",
+          "fr": "Rejetez l’élément erroné, puis donnez le bon dans la même fonction grammaticale.",
+          "ru": "Сначала отвергните ошибочный вариант, затем дайте верный в той же грамматической роли.",
+          "tr": "Önce yanlış ögeyi reddedin, sonra aynı dilbilgisel görevde doğru ögeyi verin."
+        }
+      },
+      {
+        "id": "adv-correction-2",
+        "hanzi": "她不是不想去，而是没有时间。",
+        "pinyin": "Tā bú shì bù xiǎng qù, ér shì méiyǒu shíjiān.",
+        "meaning": {
+          "en": "It is not that she does not want to go; she has no time.",
+          "fr": "Ce n’est pas qu’elle ne veut pas y aller ; elle n’a pas le temps.",
+          "ru": "Она не потому не идёт, что не хочет, а потому, что нет времени.",
+          "tr": "Gitmek istemediğinden değil, vakti olmadığından gidemiyor."
+        },
+        "parts": [
+          "她",
+          "不是",
+          "不想去",
+          "，",
+          "而是",
+          "没有时间",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Reject the mistaken item first, then supply the correct item in the same grammatical role.",
+          "fr": "Rejetez l’élément erroné, puis donnez le bon dans la même fonction grammaticale.",
+          "ru": "Сначала отвергните ошибочный вариант, затем дайте верный в той же грамматической роли.",
+          "tr": "Önce yanlış ögeyi reddedin, sonra aynı dilbilgisel görevde doğru ögeyi verin."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Someone offers coffee; correct the drink choice to tea.",
+        "fr": "On vous propose du café ; précisez que vous voulez du thé.",
+        "ru": "Вам предлагают кофе; уточните, что хотите чай.",
+        "tr": "Size kahve sunuluyor; istediğiniz içeceğin çay olduğunu açıklayın."
+      },
+      "explanation": {
+        "en": "Reject the mistaken item first, then supply the correct item in the same grammatical role.",
+        "fr": "Rejetez l’élément erroné, puis donnez le bon dans la même fonction grammaticale.",
+        "ru": "Сначала отвергните ошибочный вариант, затем дайте верный в той же грамматической роли.",
+        "tr": "Önce yanlış ögeyi reddedin, sonra aynı dilbilgisel görevde doğru ögeyi verin."
+      },
+      "contrast": {
+        "en": "The first claim is rejected; although…but accepts the first claim as true.",
+        "fr": "La première idée est rejetée ; « bien que…mais » l’accepte comme vraie.",
+        "ru": "Первое утверждение отвергается; оборот «хотя…но» признаёт его истинным.",
+        "tr": "İlk iddia reddedilir; ödünleme kalıbında ilk iddia doğru kabul edilir."
+      },
+      "visual": "contrast",
+      "labels": [
+        {
+          "en": "Not coffee",
+          "fr": "Pas du café",
+          "ru": "Не кофе",
+          "tr": "Kahve değil"
+        },
+        {
+          "en": "Tea instead",
+          "fr": "Du thé plutôt",
+          "ru": "А чай",
+          "tr": "Çay"
+        }
+      ],
+      "icons": [
+        "cup",
+        "tea"
+      ]
+    }
+  },
+  {
+    "id": "adv-either-or",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "要么…要么…",
+    "title": {
+      "en": "Either option",
+      "fr": "L’une ou l’autre option",
+      "ru": "Либо один вариант, либо другой",
+      "tr": "Ya biri ya diğeri"
+    },
+    "note": {
+      "en": "Put the repeated marker before each alternative action or outcome.",
+      "fr": "Placez le marqueur répété devant chaque action ou résultat possible.",
+      "ru": "Поставьте повторяющийся показатель перед каждым альтернативным действием или результатом.",
+      "tr": "Tekrarlanan sözcüğü her alternatif eylem veya sonuçtan önce koyun."
+    },
+    "sources": [
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf",
+      "https://www.learn-chinese.com/pdf/chinese-grammar/33-chinese-conjunctions.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-either-or-1",
+        "hanzi": "我们要么在家做饭，要么出去吃。",
+        "pinyin": "Wǒmen yàome zài jiā zuòfàn, yàome chūqù chī.",
+        "meaning": {
+          "en": "We will either cook at home or eat out.",
+          "fr": "Soit nous cuisinerons chez nous, soit nous mangerons dehors.",
+          "ru": "Мы либо приготовим дома, либо поедим где-нибудь.",
+          "tr": "Ya evde yemek yapacağız ya dışarıda yiyeceğiz."
+        },
+        "parts": [
+          "我们",
+          "要么",
+          "在家做饭",
+          "，",
+          "要么",
+          "出去吃",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Put the repeated marker before each alternative action or outcome.",
+          "fr": "Placez le marqueur répété devant chaque action ou résultat possible.",
+          "ru": "Поставьте повторяющийся показатель перед каждым альтернативным действием или результатом.",
+          "tr": "Tekrarlanan sözcüğü her alternatif eylem veya sonuçtan önce koyun."
+        }
+      },
+      {
+        "id": "adv-either-or-2",
+        "hanzi": "周末要么去看展览，要么去爬山。",
+        "pinyin": "Zhōumò yàome qù kàn zhǎnlǎn, yàome qù páshān.",
+        "meaning": {
+          "en": "At the weekend, we will either visit an exhibition or go hiking.",
+          "fr": "Ce week-end, nous irons soit voir une exposition, soit faire une randonnée.",
+          "ru": "На выходных мы либо пойдём на выставку, либо отправимся в горы.",
+          "tr": "Hafta sonu ya sergiye gideceğiz ya da doğa yürüyüşüne çıkacağız."
+        },
+        "parts": [
+          "周末",
+          "要么",
+          "去看展览",
+          "，",
+          "要么",
+          "去爬山",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Put the repeated marker before each alternative action or outcome.",
+          "fr": "Placez le marqueur répété devant chaque action ou résultat possible.",
+          "ru": "Поставьте повторяющийся показатель перед каждым альтернативным действием или результатом.",
+          "tr": "Tekrarlanan sözcüğü her alternatif eylem veya sonuçtan önce koyun."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "For your meal, picture two choices: cook at home or go out to eat.",
+        "fr": "Pour le repas, imaginez deux possibilités : cuisiner chez vous ou manger dehors.",
+        "ru": "Для еды представьте два варианта: приготовить дома или пойти поесть вне дома.",
+        "tr": "Yemek için iki seçenek hayal edin: evde pişirmek veya dışarıda yemek."
+      },
+      "explanation": {
+        "en": "Put the repeated marker before each alternative action or outcome.",
+        "fr": "Placez le marqueur répété devant chaque action ou résultat possible.",
+        "ru": "Поставьте повторяющийся показатель перед каждым альтернативным действием или результатом.",
+        "tr": "Tekrarlanan sözcüğü her alternatif eylem veya sonuçtan önce koyun."
+      },
+      "contrast": {
+        "en": "This presents alternatives; the ordinary question-word for or asks someone to choose.",
+        "fr": "Ce tour expose des options ; le « ou » interrogatif demande un choix.",
+        "ru": "Здесь перечисляют варианты; вопросительный союз «или» запрашивает выбор.",
+        "tr": "Bu kalıp seçenekleri sunar; soru bağlacı ise seçim yapmanızı ister."
+      },
+      "visual": "choice",
+      "labels": [
+        {
+          "en": "Cook at home",
+          "fr": "Cuisiner chez soi",
+          "ru": "Готовить дома",
+          "tr": "Evde yemek yap"
+        },
+        {
+          "en": "Eat out",
+          "fr": "Manger dehors",
+          "ru": "Поесть вне дома",
+          "tr": "Dışarıda ye"
+        }
+      ],
+      "icons": [
+        "home",
+        "food"
+      ]
+    }
+  },
+  {
+    "id": "adv-two-aspects",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "一方面…另一方面…",
+    "title": {
+      "en": "Two sides of a situation",
+      "fr": "Deux aspects d’une situation",
+      "ru": "Две стороны ситуации",
+      "tr": "Durumun iki yönü"
+    },
+    "note": {
+      "en": "Introduce one relevant aspect, then another; the aspects may support or oppose each other.",
+      "fr": "Présentez un aspect, puis un autre ; ils peuvent se compléter ou s’opposer.",
+      "ru": "Назовите один аспект, затем другой; они могут дополнять друг друга или противоречить.",
+      "tr": "Önce bir yönü, sonra diğerini belirtin; bunlar uyumlu veya karşıt olabilir."
+    },
+    "sources": [
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf",
+      "https://chinesepod.com/dictionary/%E5%8F%A6%E4%B8%80%E6%96%B9%E9%9D%A2"
+    ],
+    "examples": [
+      {
+        "id": "adv-two-aspects-1",
+        "hanzi": "这个房子一方面租金便宜，另一方面离公司很远。",
+        "pinyin": "Zhège fángzi yì fāngmiàn zūjīn piányi, lìng yì fāngmiàn lí gōngsī hěn yuǎn.",
+        "meaning": {
+          "en": "On one hand, this apartment has cheap rent; on the other, it is far from work.",
+          "fr": "Cet appartement a un loyer bas, mais il est loin du travail.",
+          "ru": "С одной стороны, эта квартира недорогая, с другой — далеко от работы.",
+          "tr": "Bu evin bir yandan kirası ucuz, diğer yandan iş yerine uzak."
+        },
+        "parts": [
+          "这个房子",
+          "一方面",
+          "租金便宜",
+          "，",
+          "另一方面",
+          "离公司很远",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Introduce one relevant aspect, then another; the aspects may support or oppose each other.",
+          "fr": "Présentez un aspect, puis un autre ; ils peuvent se compléter ou s’opposer.",
+          "ru": "Назовите один аспект, затем другой; они могут дополнять друг друга или противоречить.",
+          "tr": "Önce bir yönü, sonra diğerini belirtin; bunlar uyumlu veya karşıt olabilir."
+        }
+      },
+      {
+        "id": "adv-two-aspects-2",
+        "hanzi": "学做饭一方面能省钱，另一方面也很有意思。",
+        "pinyin": "Xué zuòfàn yì fāngmiàn néng shěng qián, lìng yì fāngmiàn yě hěn yǒu yìsi.",
+        "meaning": {
+          "en": "Learning to cook both saves money and is interesting.",
+          "fr": "Apprendre à cuisiner permet d’économiser et c’est aussi intéressant.",
+          "ru": "Учиться готовить, с одной стороны, экономно, а с другой — интересно.",
+          "tr": "Yemek yapmayı öğrenmek bir yandan tasarruf sağlar, diğer yandan da ilginçtir."
+        },
+        "parts": [
+          "学做饭",
+          "一方面",
+          "能省钱",
+          "，",
+          "另一方面",
+          "也很有意思",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Introduce one relevant aspect, then another; the aspects may support or oppose each other.",
+          "fr": "Présentez un aspect, puis un autre ; ils peuvent se compléter ou s’opposer.",
+          "ru": "Назовите один аспект, затем другой; они могут дополнять друг друга или противоречить.",
+          "tr": "Önce bir yönü, sonra diğerini belirtin; bunlar uyumlu veya karşıt olabilir."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Picture this apartment’s low rent beside the long distance to the workplace.",
+        "fr": "Imaginez le loyer bas de cet appartement, puis la grande distance du travail.",
+        "ru": "Представьте низкую аренду этой квартиры и большое расстояние до работы.",
+        "tr": "Bu evin düşük kirasını ve iş yerine olan uzaklığını yan yana hayal edin."
+      },
+      "explanation": {
+        "en": "Introduce one relevant aspect, then another; the aspects may support or oppose each other.",
+        "fr": "Présentez un aspect, puis un autre ; ils peuvent se compléter ou s’opposer.",
+        "ru": "Назовите один аспект, затем другой; они могут дополнять друг друга или противоречить.",
+        "tr": "Önce bir yönü, sonra diğerini belirtin; bunlar uyumlu veya karşıt olabilir."
+      },
+      "contrast": {
+        "en": "This organizes two viewpoints; simultaneous-action markers describe actions happening together.",
+        "fr": "Ce tour organise deux points de vue ; il ne décrit pas deux actions simultanées.",
+        "ru": "Здесь организуют две точки зрения, а не описывают одновременные действия.",
+        "tr": "Bu, iki bakış açısını düzenler; aynı anda yapılan iki eylemi anlatmaz."
+      },
+      "visual": "contrast",
+      "labels": [
+        {
+          "en": "Low rent",
+          "fr": "Loyer bas",
+          "ru": "Низкая аренда",
+          "tr": "Düşük kira"
+        },
+        {
+          "en": "Far from work",
+          "fr": "Loin du travail",
+          "ru": "Далеко от работы",
+          "tr": "İşe uzak"
+        }
+      ],
+      "icons": [
+        "home",
+        "map"
+      ]
+    }
+  },
+  {
+    "id": "adv-due-therefore",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "由于…因此…",
+    "title": {
+      "en": "Due to this, therefore",
+      "fr": "De ce fait, par conséquent",
+      "ru": "По этой причине",
+      "tr": "Bu nedenle"
+    },
+    "note": {
+      "en": "Introduce a cause before the first clause and its consequence before the second.",
+      "fr": "Introduisez la cause dans la première proposition, puis sa conséquence dans la seconde.",
+      "ru": "В первой части укажите причину, во второй — её следствие.",
+      "tr": "İlk bölümde nedeni, ikinci bölümde sonucunu belirtin."
+    },
+    "sources": [
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf",
+      "https://www.learn-chinese.com/pdf/chinese-grammar/33-chinese-conjunctions.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-due-therefore-1",
+        "hanzi": "由于天气不好，因此今天的活动取消了。",
+        "pinyin": "Yóuyú tiānqì bù hǎo, yīncǐ jīntiān de huódòng qǔxiāo le.",
+        "meaning": {
+          "en": "Due to the bad weather, today’s activity has been cancelled.",
+          "fr": "En raison du mauvais temps, l’activité d’aujourd’hui est annulée.",
+          "ru": "Из-за плохой погоды сегодняшнее мероприятие отменили.",
+          "tr": "Kötü hava nedeniyle bugünkü etkinlik iptal edildi."
+        },
+        "parts": [
+          "由于",
+          "天气不好",
+          "，",
+          "因此",
+          "今天的活动取消了",
+          "。"
+        ],
+        "targets": [
+          0,
+          3
+        ],
+        "hint": {
+          "en": "Introduce a cause before the first clause and its consequence before the second.",
+          "fr": "Introduisez la cause dans la première proposition, puis sa conséquence dans la seconde.",
+          "ru": "В первой части укажите причину, во второй — её следствие.",
+          "tr": "İlk bölümde nedeni, ikinci bölümde sonucunu belirtin."
+        }
+      },
+      {
+        "id": "adv-due-therefore-2",
+        "hanzi": "由于教室在维修，因此这周我们上网课。",
+        "pinyin": "Yóuyú jiàoshì zài wéixiū, yīncǐ zhè zhōu wǒmen shàng wǎngkè.",
+        "meaning": {
+          "en": "Because the classroom is being repaired, we have online classes this week.",
+          "fr": "La salle étant en travaux, nous avons cours en ligne cette semaine.",
+          "ru": "Поскольку аудиторию ремонтируют, на этой неделе у нас занятия онлайн.",
+          "tr": "Sınıf onarıldığı için bu hafta çevrim içi ders yapıyoruz."
+        },
+        "parts": [
+          "由于",
+          "教室在维修",
+          "，",
+          "因此",
+          "这周我们上网课",
+          "。"
+        ],
+        "targets": [
+          0,
+          3
+        ],
+        "hint": {
+          "en": "Introduce a cause before the first clause and its consequence before the second.",
+          "fr": "Introduisez la cause dans la première proposition, puis sa conséquence dans la seconde.",
+          "ru": "В первой части укажите причину, во второй — её следствие.",
+          "tr": "İlk bölümde nedeni, ikinci bölümde sonucunu belirtin."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Bad weather appears, and today’s activity is crossed off the plan.",
+        "fr": "Le mauvais temps arrive et l’activité d’aujourd’hui est annulée.",
+        "ru": "Погода портится, и сегодняшнее мероприятие вычёркивают из плана.",
+        "tr": "Hava kötüleşiyor ve bugünkü etkinlik plandan çıkarılıyor."
+      },
+      "explanation": {
+        "en": "Introduce a cause before the first clause and its consequence before the second.",
+        "fr": "Introduisez la cause dans la première proposition, puis sa conséquence dans la seconde.",
+        "ru": "В первой части укажите причину, во второй — её следствие.",
+        "tr": "İlk bölümde nedeni, ikinci bölümde sonucunu belirtin."
+      },
+      "contrast": {
+        "en": "This suits explanatory writing; since…then often draws advice from an accepted fact.",
+        "fr": "Ce tour convient à l’explication écrite ; « puisque…alors » peut introduire un conseil.",
+        "ru": "Этот оборот подходит для письменного объяснения; «раз уж…то» часто вводит совет.",
+        "tr": "Bu kalıp açıklayıcı yazıya uygundur; kabul edilen durumdan öneri çıkaran kalıptan farklıdır."
+      },
+      "visual": "cause",
+      "labels": [
+        {
+          "en": "Bad weather",
+          "fr": "Mauvais temps",
+          "ru": "Плохая погода",
+          "tr": "Kötü hava"
+        },
+        {
+          "en": "Today’s activity cancelled",
+          "fr": "Activité du jour annulée",
+          "ru": "Мероприятие отменено",
+          "tr": "Bugünkü etkinlik iptal"
+        }
+      ],
+      "icons": [
+        "rain",
+        "person"
+      ]
+    }
+  },
+  {
+    "id": "adv-so-that",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "action + 以便 + purpose",
+    "title": {
+      "en": "So that it is easier to",
+      "fr": "Afin de pouvoir",
+      "ru": "Чтобы можно было",
+      "tr": "Böylece yapabilmek için"
+    },
+    "note": {
+      "en": "State a practical action first; introduce its intended benefit in the following clause.",
+      "fr": "Énoncez d’abord une action pratique, puis le bénéfice recherché dans la proposition suivante.",
+      "ru": "Сначала назовите практическое действие, затем его предполагаемую пользу.",
+      "tr": "Önce pratik eylemi, sonraki bölümde amaçlanan faydayı belirtin."
+    },
+    "sources": [
+      "https://dictionary.cambridge.org/dictionary/chinese-simplified-english/%E4%BB%A5%E4%BE%BF",
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-so-that-1",
+        "hanzi": "请把地址发给我，以便我提前查路线。",
+        "pinyin": "Qǐng bǎ dìzhǐ fā gěi wǒ, yǐbiàn wǒ tíqián chá lùxiàn.",
+        "meaning": {
+          "en": "Please send me the address so I can check the route in advance.",
+          "fr": "Envoie-moi l’adresse pour que je puisse vérifier le trajet à l’avance.",
+          "ru": "Пришли мне адрес, чтобы я заранее посмотрел маршрут.",
+          "tr": "Rotaya önceden bakabilmem için lütfen adresi bana gönder."
+        },
+        "parts": [
+          "请把地址发给我",
+          "，",
+          "以便",
+          "我提前查路线",
+          "。"
+        ],
+        "targets": [
+          2
+        ],
+        "hint": {
+          "en": "State a practical action first; introduce its intended benefit in the following clause.",
+          "fr": "Énoncez d’abord une action pratique, puis le bénéfice recherché dans la proposition suivante.",
+          "ru": "Сначала назовите практическое действие, затем его предполагаемую пользу.",
+          "tr": "Önce pratik eylemi, sonraki bölümde amaçlanan faydayı belirtin."
+        }
+      },
+      {
+        "id": "adv-so-that-2",
+        "hanzi": "我把生词写在本子上，以便以后复习。",
+        "pinyin": "Wǒ bǎ shēngcí xiě zài běnzi shàng, yǐbiàn yǐhòu fùxí.",
+        "meaning": {
+          "en": "I write new words in a notebook so that I can review them later.",
+          "fr": "Je note les mots nouveaux dans un carnet pour les réviser plus tard.",
+          "ru": "Я записываю новые слова в тетрадь, чтобы потом повторять.",
+          "tr": "Yeni kelimeleri daha sonra tekrar edebilmek için deftere yazıyorum."
+        },
+        "parts": [
+          "我把生词写在本子上",
+          "，",
+          "以便",
+          "以后复习",
+          "。"
+        ],
+        "targets": [
+          2
+        ],
+        "hint": {
+          "en": "State a practical action first; introduce its intended benefit in the following clause.",
+          "fr": "Énoncez d’abord une action pratique, puis le bénéfice recherché dans la proposition suivante.",
+          "ru": "Сначала назовите практическое действие, затем его предполагаемую пользу.",
+          "tr": "Önce pratik eylemi, sonraki bölümde amaçlanan faydayı belirtin."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Ask for the address, then picture checking the route before leaving.",
+        "fr": "Demandez l’adresse, puis imaginez vérifier le trajet avant de partir.",
+        "ru": "Попросите адрес и представьте, как заранее смотрите маршрут.",
+        "tr": "Adresi isteyin; ardından yola çıkmadan rotaya baktığınızı hayal edin."
+      },
+      "explanation": {
+        "en": "State a practical action first; introduce its intended benefit in the following clause.",
+        "fr": "Énoncez d’abord une action pratique, puis le bénéfice recherché dans la proposition suivante.",
+        "ru": "Сначала назовите практическое действие, затем его предполагаемую пользу.",
+        "tr": "Önce pratik eylemi, sonraki bölümde amaçlanan faydayı belirtin."
+      },
+      "contrast": {
+        "en": "This introduces a purpose, not proof that the desired result already happened.",
+        "fr": "Ce tour exprime un objectif, pas un résultat déjà réalisé.",
+        "ru": "Это цель, а не подтверждение уже достигнутого результата.",
+        "tr": "Bu amaç belirtir; istenen sonucun gerçekleştiğini kanıtlamaz."
+      },
+      "visual": "cause",
+      "labels": [
+        {
+          "en": "Send me the address",
+          "fr": "M’envoyer l’adresse",
+          "ru": "Пришлите мне адрес",
+          "tr": "Adresi bana gönder"
+        },
+        {
+          "en": "Check the route early",
+          "fr": "Vérifier le trajet à l’avance",
+          "ru": "Заранее узнать маршрут",
+          "tr": "Rotaya önceden bak"
+        }
+      ],
+      "icons": [
+        "chat",
+        "map"
+      ]
+    }
+  },
+  {
+    "id": "adv-purpose",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "为了 + purpose, subject + action",
+    "title": {
+      "en": "Acting with a purpose",
+      "fr": "Agir dans un but",
+      "ru": "Действуем ради цели",
+      "tr": "Bir amaçla hareket etme"
+    },
+    "note": {
+      "en": "Put the purpose phrase before the main action; it can also precede the subject.",
+      "fr": "Placez le but avant l’action principale ; il peut aussi précéder le sujet.",
+      "ru": "Поставьте цель перед основным действием; она может стоять и перед подлежащим.",
+      "tr": "Amaç ifadesini ana eylemden önce koyun; özneden önce de gelebilir."
+    },
+    "sources": [
+      "https://www.digmandarin.com/overview-of-chinese-prepositions.html",
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-purpose-1",
+        "hanzi": "为了准时到学校，我今天早点出门。",
+        "pinyin": "Wèile zhǔnshí dào xuéxiào, wǒ jīntiān zǎodiǎn chūmén.",
+        "meaning": {
+          "en": "To get to school on time, I am leaving early today.",
+          "fr": "Pour arriver à l’heure à l’école, je pars tôt aujourd’hui.",
+          "ru": "Чтобы вовремя прийти в школу, сегодня я выхожу пораньше.",
+          "tr": "Okula zamanında varmak için bugün erken çıkıyorum."
+        },
+        "parts": [
+          "为了",
+          "准时到学校",
+          "，",
+          "我今天早点出门",
+          "。"
+        ],
+        "targets": [
+          0
+        ],
+        "hint": {
+          "en": "Put the purpose phrase before the main action; it can also precede the subject.",
+          "fr": "Placez le but avant l’action principale ; il peut aussi précéder le sujet.",
+          "ru": "Поставьте цель перед основным действием; она может стоять и перед подлежащим.",
+          "tr": "Amaç ifadesini ana eylemden önce koyun; özneden önce de gelebilir."
+        }
+      },
+      {
+        "id": "adv-purpose-2",
+        "hanzi": "为了练习口语，她每天和同学聊天。",
+        "pinyin": "Wèile liànxí kǒuyǔ, tā měitiān hé tóngxué liáotiān.",
+        "meaning": {
+          "en": "To practise speaking, she chats with classmates every day.",
+          "fr": "Pour pratiquer l’oral, elle discute chaque jour avec ses camarades.",
+          "ru": "Чтобы практиковать разговорную речь, она каждый день общается с однокурсниками.",
+          "tr": "Konuşma pratiği yapmak için her gün sınıf arkadaşlarıyla sohbet ediyor."
+        },
+        "parts": [
+          "为了",
+          "练习口语",
+          "，",
+          "她每天和同学聊天",
+          "。"
+        ],
+        "targets": [
+          0
+        ],
+        "hint": {
+          "en": "Put the purpose phrase before the main action; it can also precede the subject.",
+          "fr": "Placez le but avant l’action principale ; il peut aussi précéder le sujet.",
+          "ru": "Поставьте цель перед основным действием; она может стоять и перед подлежащим.",
+          "tr": "Amaç ifadesini ana eylemden önce koyun; özneden önce de gelebilir."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Picture leaving home early today so you reach school on time.",
+        "fr": "Imaginez partir tôt de chez vous aujourd’hui pour arriver à l’heure à l’école.",
+        "ru": "Представьте, как сегодня выходите пораньше, чтобы вовремя прийти в школу.",
+        "tr": "Okula zamanında varmak için bugün evden erken çıktığınızı hayal edin."
+      },
+      "explanation": {
+        "en": "Put the purpose phrase before the main action; it can also precede the subject.",
+        "fr": "Placez le but avant l’action principale ; il peut aussi précéder le sujet.",
+        "ru": "Поставьте цель перед основным действием; она может стоять и перед подлежащим.",
+        "tr": "Amaç ifadesini ana eylemden önce koyun; özneden önce de gelebilir."
+      },
+      "contrast": {
+        "en": "A purpose motivates an action; because gives the reason a situation occurred.",
+        "fr": "Un but motive une action ; une cause explique pourquoi une situation a eu lieu.",
+        "ru": "Цель мотивирует действие; причина объясняет, почему возникла ситуация.",
+        "tr": "Amaç, eylemin hedefidir; neden ise durumun niçin oluştuğunu açıklar."
+      },
+      "visual": "cause",
+      "labels": [
+        {
+          "en": "Leave early today",
+          "fr": "Partir tôt aujourd’hui",
+          "ru": "Сегодня выйти пораньше",
+          "tr": "Bugün erken çık"
+        },
+        {
+          "en": "Reach school on time",
+          "fr": "Arriver à l’heure à l’école",
+          "ru": "Вовремя прийти в школу",
+          "tr": "Okula zamanında var"
+        }
+      ],
+      "icons": [
+        "clock",
+        "school"
+      ]
+    }
+  },
+  {
+    "id": "adv-through",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "通过 + method/channel + action",
+    "title": {
+      "en": "Through a method or channel",
+      "fr": "Par un moyen ou un canal",
+      "ru": "С помощью способа или канала",
+      "tr": "Bir yöntem veya kanal aracılığıyla"
+    },
+    "note": {
+      "en": "Place the means or channel before the main verb to show how a result is reached.",
+      "fr": "Placez le moyen avant le verbe principal pour montrer comment le résultat est obtenu.",
+      "ru": "Поставьте средство перед основным глаголом, чтобы показать путь к результату.",
+      "tr": "Sonuca nasıl ulaşıldığını belirtmek için araç ifadesini ana fiilden önce koyun."
+    },
+    "sources": [
+      "https://www.digmandarin.com/overview-of-chinese-prepositions.html"
+    ],
+    "examples": [
+      {
+        "id": "adv-through-1",
+        "hanzi": "我通过看视频学会了做这道菜。",
+        "pinyin": "Wǒ tōngguò kàn shìpín xuéhuì le zuò zhè dào cài.",
+        "meaning": {
+          "en": "I learned to cook this dish by watching videos.",
+          "fr": "J’ai appris à préparer ce plat en regardant des vidéos.",
+          "ru": "Я научился готовить это блюдо, посмотрев видео.",
+          "tr": "Video izleyerek bu yemeği yapmayı öğrendim."
+        },
+        "parts": [
+          "我",
+          "通过",
+          "看视频",
+          "学会了做这道菜",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Place the means or channel before the main verb to show how a result is reached.",
+          "fr": "Placez le moyen avant le verbe principal pour montrer comment le résultat est obtenu.",
+          "ru": "Поставьте средство перед основным глаголом, чтобы показать путь к результату.",
+          "tr": "Sonuca nasıl ulaşıldığını belirtmek için araç ifadesini ana fiilden önce koyun."
+        }
+      },
+      {
+        "id": "adv-through-2",
+        "hanzi": "我们通过学校的网站报名。",
+        "pinyin": "Wǒmen tōngguò xuéxiào de wǎngzhàn bàomíng.",
+        "meaning": {
+          "en": "We register through the school’s website.",
+          "fr": "Nous nous inscrivons sur le site de l’école.",
+          "ru": "Мы записываемся через сайт школы.",
+          "tr": "Okulun internet sitesi üzerinden kayıt oluyoruz."
+        },
+        "parts": [
+          "我们",
+          "通过",
+          "学校的网站",
+          "报名",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Place the means or channel before the main verb to show how a result is reached.",
+          "fr": "Placez le moyen avant le verbe principal pour montrer comment le résultat est obtenu.",
+          "ru": "Поставьте средство перед основным глаголом, чтобы показать путь к результату.",
+          "tr": "Sonuca nasıl ulaşıldığını belirtmek için araç ifadesini ana fiilden önce koyun."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Watch a cooking video, then picture yourself able to make that dish.",
+        "fr": "Regardez une vidéo de cuisine, puis imaginez savoir préparer ce plat.",
+        "ru": "Посмотрите кулинарное видео и представьте, что научились готовить это блюдо.",
+        "tr": "Bir yemek videosu izleyin, sonra o yemeği yapabildiğinizi hayal edin."
+      },
+      "explanation": {
+        "en": "Place the means or channel before the main verb to show how a result is reached.",
+        "fr": "Placez le moyen avant le verbe principal pour montrer comment le résultat est obtenu.",
+        "ru": "Поставьте средство перед основным глаголом, чтобы показать путь к результату.",
+        "tr": "Sonuca nasıl ulaşıldığını belirtmek için araç ifadesini ana fiilden önce koyun."
+      },
+      "contrast": {
+        "en": "This identifies a route or method; according-to identifies the basis for a judgment.",
+        "fr": "Ce tour indique un moyen ; « selon » donne la base d’un jugement.",
+        "ru": "Здесь указывают способ; «согласно» указывает основание суждения.",
+        "tr": "Bu kalıp yöntem belirtir; dayanak bildiren kalıptan farklıdır."
+      },
+      "visual": "result",
+      "labels": [
+        {
+          "en": "Watch videos",
+          "fr": "Regarder des vidéos",
+          "ru": "Смотреть видео",
+          "tr": "Video izle"
+        },
+        {
+          "en": "Learn to cook this dish",
+          "fr": "Apprendre à préparer ce plat",
+          "ru": "Научиться готовить блюдо",
+          "tr": "Bu yemeği yapmayı öğren"
+        }
+      ],
+      "icons": [
+        "computer",
+        "food"
+      ]
+    }
+  },
+  {
+    "id": "adv-according-to",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "根据 + basis + statement",
+    "title": {
+      "en": "According to a basis",
+      "fr": "Selon un élément de référence",
+      "ru": "На основании данных",
+      "tr": "Bir dayanağa göre"
+    },
+    "note": {
+      "en": "Place the evidence or rule before the main statement to identify its basis.",
+      "fr": "Placez la preuve ou la règle avant l’énoncé principal pour en indiquer la base.",
+      "ru": "Назовите данные или правило перед основным утверждением, обозначив его основание.",
+      "tr": "Dayanağını göstermek için kanıt veya kuralı ana ifadeden önce koyun."
+    },
+    "sources": [
+      "https://www.digmandarin.com/overview-of-chinese-prepositions.html"
+    ],
+    "examples": [
+      {
+        "id": "adv-according-to-1",
+        "hanzi": "根据天气预报，明天会下雨。",
+        "pinyin": "Gēnjù tiānqì yùbào, míngtiān huì xiàyǔ.",
+        "meaning": {
+          "en": "According to the weather forecast, it will rain tomorrow.",
+          "fr": "Selon les prévisions météo, il pleuvra demain.",
+          "ru": "Согласно прогнозу погоды, завтра будет дождь.",
+          "tr": "Hava tahminine göre yarın yağmur yağacak."
+        },
+        "parts": [
+          "根据",
+          "天气预报",
+          "，",
+          "明天会下雨",
+          "。"
+        ],
+        "targets": [
+          0
+        ],
+        "hint": {
+          "en": "Place the evidence or rule before the main statement to identify its basis.",
+          "fr": "Placez la preuve ou la règle avant l’énoncé principal pour en indiquer la base.",
+          "ru": "Назовите данные или правило перед основным утверждением, обозначив его основание.",
+          "tr": "Dayanağını göstermek için kanıt veya kuralı ana ifadeden önce koyun."
+        }
+      },
+      {
+        "id": "adv-according-to-2",
+        "hanzi": "请根据自己的时间选择课程。",
+        "pinyin": "Qǐng gēnjù zìjǐ de shíjiān xuǎnzé kèchéng.",
+        "meaning": {
+          "en": "Please choose courses according to your own schedule.",
+          "fr": "Choisissez vos cours en fonction de votre emploi du temps.",
+          "ru": "Пожалуйста, выбирайте курсы с учётом своего расписания.",
+          "tr": "Lütfen kendi programınıza göre ders seçin."
+        },
+        "parts": [
+          "请",
+          "根据",
+          "自己的时间",
+          "选择课程",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Place the evidence or rule before the main statement to identify its basis.",
+          "fr": "Placez la preuve ou la règle avant l’énoncé principal pour en indiquer la base.",
+          "ru": "Назовите данные или правило перед основным утверждением, обозначив его основание.",
+          "tr": "Dayanağını göstermek için kanıt veya kuralı ana ifadeden önce koyun."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Look at the weather forecast and its prediction of rain tomorrow.",
+        "fr": "Regardez les prévisions météo : elles annoncent de la pluie demain.",
+        "ru": "Посмотрите прогноз погоды: в нём обещают дождь завтра.",
+        "tr": "Hava tahminine bakın: yarın yağmur bekleniyor."
+      },
+      "explanation": {
+        "en": "Place the evidence or rule before the main statement to identify its basis.",
+        "fr": "Placez la preuve ou la règle avant l’énoncé principal pour en indiquer la base.",
+        "ru": "Назовите данные или правило перед основным утверждением, обозначив его основание.",
+        "tr": "Dayanağını göstermek için kanıt veya kuralı ana ifadeden önce koyun."
+      },
+      "contrast": {
+        "en": "This marks a basis for a conclusion; through marks a channel or method.",
+        "fr": "Ce tour donne une base de conclusion ; « par » indique un moyen.",
+        "ru": "Здесь указывают основание вывода; «через» обозначает канал или способ.",
+        "tr": "Bu, sonucun dayanağını belirtir; araç veya yöntem bildirmez."
+      },
+      "visual": "cause",
+      "labels": [
+        {
+          "en": "Weather forecast",
+          "fr": "Prévisions météo",
+          "ru": "Прогноз погоды",
+          "tr": "Hava tahmini"
+        },
+        {
+          "en": "Rain tomorrow",
+          "fr": "Pluie demain",
+          "ru": "Завтра дождь",
+          "tr": "Yarın yağmur"
+        }
+      ],
+      "icons": [
+        "news",
+        "rain"
+      ]
+    }
+  },
+  {
+    "id": "adv-regarding",
+    "topic": "attitude",
+    "level": "extension",
+    "pattern": "对于 + topic, subject + attitude",
+    "title": {
+      "en": "Regarding a topic",
+      "fr": "À propos d’un sujet",
+      "ru": "Отношение к теме",
+      "tr": "Bir konuya ilişkin"
+    },
+    "note": {
+      "en": "Introduce the topic before stating someone’s attitude, evaluation, or response.",
+      "fr": "Introduisez le sujet avant l’attitude, l’évaluation ou la réaction d’une personne.",
+      "ru": "Сначала обозначьте тему, затем отношение, оценку или реакцию человека.",
+      "tr": "Önce konuyu, sonra kişinin tutumunu, değerlendirmesini veya tepkisini belirtin."
+    },
+    "sources": [
+      "https://www.digmandarin.com/overview-of-chinese-prepositions.html",
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-regarding-1",
+        "hanzi": "对于这个计划，我还有几个问题。",
+        "pinyin": "Duìyú zhège jìhuà, wǒ hái yǒu jǐ ge wèntí.",
+        "meaning": {
+          "en": "Regarding this plan, I still have a few questions.",
+          "fr": "Concernant ce projet, j’ai encore quelques questions.",
+          "ru": "По поводу этого плана у меня ещё есть несколько вопросов.",
+          "tr": "Bu planla ilgili hâlâ birkaç sorum var."
+        },
+        "parts": [
+          "对于",
+          "这个计划",
+          "，",
+          "我还有几个问题",
+          "。"
+        ],
+        "targets": [
+          0
+        ],
+        "hint": {
+          "en": "Introduce the topic before stating someone’s attitude, evaluation, or response.",
+          "fr": "Introduisez le sujet avant l’attitude, l’évaluation ou la réaction d’une personne.",
+          "ru": "Сначала обозначьте тему, затем отношение, оценку или реакцию человека.",
+          "tr": "Önce konuyu, sonra kişinin tutumunu, değerlendirmesini veya tepkisini belirtin."
+        }
+      },
+      {
+        "id": "adv-regarding-2",
+        "hanzi": "对于这门课，她很有信心。",
+        "pinyin": "Duìyú zhè mén kè, tā hěn yǒu xìnxīn.",
+        "meaning": {
+          "en": "She feels confident about this course.",
+          "fr": "Elle se sent confiante pour ce cours.",
+          "ru": "Она уверена, что справится с этим курсом.",
+          "tr": "Bu ders konusunda kendine çok güveniyor."
+        },
+        "parts": [
+          "对于",
+          "这门课",
+          "，",
+          "她很有信心",
+          "。"
+        ],
+        "targets": [
+          0
+        ],
+        "hint": {
+          "en": "Introduce the topic before stating someone’s attitude, evaluation, or response.",
+          "fr": "Introduisez le sujet avant l’attitude, l’évaluation ou la réaction d’une personne.",
+          "ru": "Сначала обозначьте тему, затем отношение, оценку или реакцию человека.",
+          "tr": "Önce konuyu, sonra kişinin tutumunu, değerlendirmesini veya tepkisini belirtin."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Put this plan in front of you, then picture the questions you still have.",
+        "fr": "Placez ce projet devant vous, puis imaginez les questions qu’il vous reste.",
+        "ru": "Положите перед собой этот план и представьте оставшиеся вопросы.",
+        "tr": "Bu planı önünüze koyun ve hâlâ sormak istediğiniz soruları düşünün."
+      },
+      "explanation": {
+        "en": "Introduce the topic before stating someone’s attitude, evaluation, or response.",
+        "fr": "Introduisez le sujet avant l’attitude, l’évaluation ou la réaction d’une personne.",
+        "ru": "Сначала обозначьте тему, затем отношение, оценку или реакцию человека.",
+        "tr": "Önce konuyu, sonra kişinin tutumunu, değerlendirmesini veya tepkisini belirtin."
+      },
+      "contrast": {
+        "en": "This introduces a target of evaluation; about can simply announce a subject of discussion.",
+        "fr": "Ce tour introduit l’objet d’une évaluation ; « au sujet de » peut annoncer un thème.",
+        "ru": "Здесь вводится объект оценки; «о» может просто обозначать тему разговора.",
+        "tr": "Bu, değerlendirmenin konusunu belirtir; yalnızca konuşma başlığını duyurmaktan farklıdır."
+      },
+      "visual": "focus",
+      "labels": [
+        {
+          "en": "This plan",
+          "fr": "Ce projet",
+          "ru": "Этот план",
+          "tr": "Bu plan"
+        },
+        {
+          "en": "A few questions remain",
+          "fr": "Encore quelques questions",
+          "ru": "Ещё несколько вопросов",
+          "tr": "Birkaç soru daha var"
+        }
+      ],
+      "icons": [
+        "book",
+        "chat"
+      ]
+    }
+  },
+  {
+    "id": "adv-even-lian",
+    "topic": "attitude",
+    "level": "extension",
+    "pattern": "连 + surprising item + 都 + predicate",
+    "title": {
+      "en": "Even this unexpected case",
+      "fr": "Même ce cas inattendu",
+      "ru": "Даже этот неожиданный случай",
+      "tr": "Bu beklenmedik durum bile"
+    },
+    "note": {
+      "en": "Place the surprising person or item between the two markers, before the predicate.",
+      "fr": "Placez la personne ou l’élément surprenant entre les deux marqueurs, avant le prédicat.",
+      "ru": "Поместите неожиданное лицо или предмет между двумя показателями перед сказуемым.",
+      "tr": "Şaşırtıcı kişi veya ögeyi iki sözcüğün arasına, yüklemden önce koyun."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-even-lian-1",
+        "hanzi": "连平时不爱说话的小王都唱歌了。",
+        "pinyin": "Lián píngshí bú ài shuōhuà de Xiǎo Wáng dōu chànggē le.",
+        "meaning": {
+          "en": "Even Xiao Wang, who is usually quiet, sang.",
+          "fr": "Même Xiao Wang, d’habitude peu bavard, a chanté.",
+          "ru": "Даже обычно молчаливый Сяо Ван спел.",
+          "tr": "Genellikle konuşmayı sevmeyen Xiao Wang bile şarkı söyledi."
+        },
+        "parts": [
+          "连",
+          "平时不爱说话的小王",
+          "都",
+          "唱歌了",
+          "。"
+        ],
+        "targets": [
+          0,
+          2
+        ],
+        "hint": {
+          "en": "Place the surprising person or item between the two markers, before the predicate.",
+          "fr": "Placez la personne ou l’élément surprenant entre les deux marqueurs, avant le prédicat.",
+          "ru": "Поместите неожиданное лицо или предмет между двумя показателями перед сказуемым.",
+          "tr": "Şaşırtıcı kişi veya ögeyi iki sözcüğün arasına, yüklemden önce koyun."
+        }
+      },
+      {
+        "id": "adv-even-lian-2",
+        "hanzi": "我连这家店的名字都忘了。",
+        "pinyin": "Wǒ lián zhè jiā diàn de míngzi dōu wàng le.",
+        "meaning": {
+          "en": "I have even forgotten the name of this shop.",
+          "fr": "J’ai même oublié le nom de ce magasin.",
+          "ru": "Я даже забыл название этого магазина.",
+          "tr": "Bu dükkânın adını bile unuttum."
+        },
+        "parts": [
+          "我",
+          "连",
+          "这家店的名字",
+          "都",
+          "忘了",
+          "。"
+        ],
+        "targets": [
+          1,
+          3
+        ],
+        "hint": {
+          "en": "Place the surprising person or item between the two markers, before the predicate.",
+          "fr": "Placez la personne ou l’élément surprenant entre les deux marqueurs, avant le prédicat.",
+          "ru": "Поместите неожиданное лицо или предмет между двумя показателями перед сказуемым.",
+          "tr": "Şaşırtıcı kişi veya ögeyi iki sözcüğün arasına, yüklemden önce koyun."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Picture usually quiet Xiao Wang surprising everyone by singing.",
+        "fr": "Imaginez Xiao Wang, d’habitude réservé, surprendre tout le monde en chantant.",
+        "ru": "Представьте, как обычно молчаливый Сяо Ван неожиданно поёт.",
+        "tr": "Genellikle sessiz olan Xiao Wang’ın şarkı söyleyerek herkesi şaşırttığını hayal edin."
+      },
+      "explanation": {
+        "en": "Place the surprising person or item between the two markers, before the predicate.",
+        "fr": "Placez la personne ou l’élément surprenant entre les deux marqueurs, avant le prédicat.",
+        "ru": "Поместите неожиданное лицо или предмет между двумя показателями перед сказуемым.",
+        "tr": "Şaşırtıcı kişi veya ögeyi iki sözcüğün arasına, yüklemden önce koyun."
+      },
+      "contrast": {
+        "en": "Unlike ordinary also, this highlights an extreme or unexpected member of a set.",
+        "fr": "Contrairement à « aussi », ce tour souligne un cas extrême ou inattendu.",
+        "ru": "В отличие от обычного «тоже», здесь выделяют крайний или неожиданный случай.",
+        "tr": "Sıradan bir eklemeden farklı olarak uç veya beklenmedik bir örneği vurgular."
+      },
+      "visual": "focus",
+      "labels": [
+        {
+          "en": "Usually quiet Xiao Wang",
+          "fr": "Xiao Wang, réservé d’habitude",
+          "ru": "Обычно тихий Сяо Ван",
+          "tr": "Genellikle sessiz Xiao Wang"
+        },
+        {
+          "en": "Even he sang",
+          "fr": "Même lui a chanté",
+          "ru": "Даже он спел",
+          "tr": "O bile şarkı söyledi"
+        }
+      ],
+      "icons": [
+        "person",
+        "music"
+      ]
+    }
+  },
+  {
+    "id": "adv-even-shenzhi",
+    "topic": "attitude",
+    "level": "extension",
+    "pattern": "甚至 + surprising further statement",
+    "title": {
+      "en": "Going as far as even",
+      "fr": "Aller jusqu’à",
+      "ru": "Доходит даже до",
+      "tr": "Hatta daha da ötesi"
+    },
+    "note": {
+      "en": "Add the marker before a further fact that goes beyond the listener’s expectation.",
+      "fr": "Ajoutez le marqueur avant un fait supplémentaire qui dépasse les attentes.",
+      "ru": "Поставьте показатель перед дополнительным фактом, превосходящим ожидания слушателя.",
+      "tr": "Dinleyicinin beklentisini aşan ek bilgiden önce bu sözcüğü koyun."
+    },
+    "sources": [
+      "https://www.chinesepod.com/dictionary/%E7%94%9A%E8%87%B3",
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-even-shenzhi-1",
+        "hanzi": "她每天都练习中文，甚至午休的时候也在听录音。",
+        "pinyin": "Tā měitiān dōu liànxí Zhōngwén, shènzhì wǔxiū de shíhou yě zài tīng lùyīn.",
+        "meaning": {
+          "en": "She practises Chinese every day and even listens to recordings during her lunch break.",
+          "fr": "Elle pratique le chinois tous les jours et écoute même des enregistrements à la pause de midi.",
+          "ru": "Она каждый день занимается китайским и даже в обеденный перерыв слушает записи.",
+          "tr": "Her gün Çince çalışıyor, hatta öğle arasında bile kayıt dinliyor."
+        },
+        "parts": [
+          "她每天都练习中文",
+          "，",
+          "甚至",
+          "午休的时候也在听录音",
+          "。"
+        ],
+        "targets": [
+          2
+        ],
+        "hint": {
+          "en": "Add the marker before a further fact that goes beyond the listener’s expectation.",
+          "fr": "Ajoutez le marqueur avant un fait supplémentaire qui dépasse les attentes.",
+          "ru": "Поставьте показатель перед дополнительным фактом, превосходящим ожидания слушателя.",
+          "tr": "Dinleyicinin beklentisini aşan ek bilgiden önce bu sözcüğü koyun."
+        }
+      },
+      {
+        "id": "adv-even-shenzhi-2",
+        "hanzi": "这家店很受欢迎，甚至下雨天也要排队。",
+        "pinyin": "Zhè jiā diàn hěn shòu huānyíng, shènzhì xiàyǔ tiān yě yào páiduì.",
+        "meaning": {
+          "en": "This shop is so popular that people even have to queue on rainy days.",
+          "fr": "Ce magasin est très apprécié ; il faut même faire la queue les jours de pluie.",
+          "ru": "Этот магазин очень популярен; даже в дождь приходится стоять в очереди.",
+          "tr": "Bu dükkân çok popüler; yağmurlu günlerde bile sıraya girmek gerekiyor."
+        },
+        "parts": [
+          "这家店很受欢迎",
+          "，",
+          "甚至",
+          "下雨天也要排队",
+          "。"
+        ],
+        "targets": [
+          2
+        ],
+        "hint": {
+          "en": "Add the marker before a further fact that goes beyond the listener’s expectation.",
+          "fr": "Ajoutez le marqueur avant un fait supplémentaire qui dépasse les attentes.",
+          "ru": "Поставьте показатель перед дополнительным фактом, превосходящим ожидания слушателя.",
+          "tr": "Dinleyicinin beklentisini aşan ek bilgiden önce bu sözcüğü koyun."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "She studies Chinese daily; picture her listening to recordings even at lunch break.",
+        "fr": "Elle pratique le chinois chaque jour ; imaginez-la écouter des enregistrements même à midi.",
+        "ru": "Она ежедневно занимается китайским; представьте записи даже в её обеденный перерыв.",
+        "tr": "Her gün Çince çalışıyor; öğle arasında bile kayıt dinlediğini hayal edin."
+      },
+      "explanation": {
+        "en": "Add the marker before a further fact that goes beyond the listener’s expectation.",
+        "fr": "Ajoutez le marqueur avant un fait supplémentaire qui dépasse les attentes.",
+        "ru": "Поставьте показатель перед дополнительным фактом, превосходящим ожидания слушателя.",
+        "tr": "Dinleyicinin beklentisini aşan ek bilgiden önce bu sözcüğü koyun."
+      },
+      "contrast": {
+        "en": "This increases surprise; ordinary also merely adds another fact.",
+        "fr": "Ce tour renforce la surprise ; « aussi » ajoute simplement un fait.",
+        "ru": "Здесь усиливают неожиданность; обычное «также» просто добавляет факт.",
+        "tr": "Bu şaşkınlığı artırır; sıradan ekleme yalnızca başka bir bilgi verir."
+      },
+      "visual": "focus",
+      "labels": [
+        {
+          "en": "Chinese practice every day",
+          "fr": "Chinois tous les jours",
+          "ru": "Китайский каждый день",
+          "tr": "Her gün Çince çalış"
+        },
+        {
+          "en": "Recordings even at lunch",
+          "fr": "Enregistrements même à midi",
+          "ru": "Записи даже в обед",
+          "tr": "Öğle arasında bile kayıt dinle"
+        }
+      ],
+      "icons": [
+        "book",
+        "music"
+      ]
+    }
+  },
+  {
+    "id": "adv-almost",
+    "topic": "time",
+    "level": "extension",
+    "pattern": "差点儿 + unwanted event",
+    "title": {
+      "en": "A near miss",
+      "fr": "Un incident évité de peu",
+      "ru": "Едва не случилось",
+      "tr": "Az kalsın"
+    },
+    "note": {
+      "en": "Put the marker before an event that nearly happened but did not.",
+      "fr": "Placez le marqueur avant un événement qui a failli se produire sans se réaliser.",
+      "ru": "Поставьте показатель перед событием, которое едва не произошло.",
+      "tr": "Neredeyse gerçekleşen ama gerçekleşmeyen olaydan önce bu sözcüğü koyun."
+    },
+    "sources": [
+      "https://www.digmandarin.com/three-words-for-almost-in-chinese.html"
+    ],
+    "examples": [
+      {
+        "id": "adv-almost-1",
+        "hanzi": "我差点儿把手机忘在车上。",
+        "pinyin": "Wǒ chàdiǎnr bǎ shǒujī wàng zài chē shàng.",
+        "meaning": {
+          "en": "I almost left my phone in the vehicle.",
+          "fr": "J’ai failli oublier mon téléphone dans le véhicule.",
+          "ru": "Я чуть не забыл телефон в машине.",
+          "tr": "Telefonumu az kalsın araçta unutuyordum."
+        },
+        "parts": [
+          "我",
+          "差点儿",
+          "把手机忘在车上",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put the marker before an event that nearly happened but did not.",
+          "fr": "Placez le marqueur avant un événement qui a failli se produire sans se réaliser.",
+          "ru": "Поставьте показатель перед событием, которое едва не произошло.",
+          "tr": "Neredeyse gerçekleşen ama gerçekleşmeyen olaydan önce bu sözcüğü koyun."
+        }
+      },
+      {
+        "id": "adv-almost-2",
+        "hanzi": "刚才地上有水，她差点儿摔倒。",
+        "pinyin": "Gāngcái dìshang yǒu shuǐ, tā chàdiǎnr shuāidǎo.",
+        "meaning": {
+          "en": "There was water on the floor just now, and she almost fell.",
+          "fr": "Il y avait de l’eau par terre ; elle a failli tomber.",
+          "ru": "Только что на полу была вода, и она чуть не упала.",
+          "tr": "Az önce yerde su vardı; az kalsın düşüyordu."
+        },
+        "parts": [
+          "刚才地上有水",
+          "，",
+          "她",
+          "差点儿",
+          "摔倒",
+          "。"
+        ],
+        "targets": [
+          3
+        ],
+        "hint": {
+          "en": "Put the marker before an event that nearly happened but did not.",
+          "fr": "Placez le marqueur avant un événement qui a failli se produire sans se réaliser.",
+          "ru": "Поставьте показатель перед событием, которое едва не произошло.",
+          "tr": "Neredeyse gerçekleşen ama gerçekleşmeyen olaydan önce bu sözcüğü koyun."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Picture your phone in the vehicle: you almost leave it behind, but do not.",
+        "fr": "Imaginez votre téléphone dans le véhicule : vous manquez de l’y oublier.",
+        "ru": "Представьте телефон в машине: вы едва не оставили его там.",
+        "tr": "Telefonunuzu araçta hayal edin: az kalsın orada unutuyordunuz."
+      },
+      "explanation": {
+        "en": "Put the marker before an event that nearly happened but did not.",
+        "fr": "Placez le marqueur avant un événement qui a failli se produire sans se réaliser.",
+        "ru": "Поставьте показатель перед событием, которое едва не произошло.",
+        "tr": "Neredeyse gerçekleşen ama gerçekleşmeyen olaydan önce bu sözcüğü koyun."
+      },
+      "contrast": {
+        "en": "Use this for a near event, not an approximate quantity; negative forms need extra care.",
+        "fr": "Utilisez-le pour un événement évité, pas une quantité approximative ; attention aux négations.",
+        "ru": "Это почти случившееся событие, не приблизительное количество; отрицательные формы требуют осторожности.",
+        "tr": "Bu yakın bir olay içindir, yaklaşık miktar için değil; olumsuz biçimlere dikkat edin."
+      },
+      "visual": "sequence",
+      "labels": [
+        {
+          "en": "Phone in the vehicle",
+          "fr": "Téléphone dans le véhicule",
+          "ru": "Телефон в машине",
+          "tr": "Telefon araçta"
+        },
+        {
+          "en": "Almost left behind",
+          "fr": "Failli être oublié",
+          "ru": "Едва не забыли",
+          "tr": "Az kalsın unutuluyordu"
+        }
+      ],
+      "icons": [
+        "phone",
+        "person"
+      ]
+    }
+  },
+  {
+    "id": "adv-too-late",
+    "topic": "time",
+    "level": "extension",
+    "pattern": "来不及 + verb phrase",
+    "title": {
+      "en": "Not enough time left",
+      "fr": "Ne plus avoir le temps",
+      "ru": "Не успеть",
+      "tr": "Vakit yetmemesi"
+    },
+    "note": {
+      "en": "Place the fixed expression before an action that the remaining time cannot accommodate.",
+      "fr": "Placez l’expression avant une action impossible dans le temps restant.",
+      "ru": "Поставьте устойчивое выражение перед действием, на которое уже не хватает времени.",
+      "tr": "Kalan süreye sığmayan eylemden önce bu kalıbı koyun."
+    },
+    "sources": [
+      "https://blogs.transparent.com/chinese/chinese-time-phrases/",
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-too-late-1",
+        "hanzi": "快上课了，我来不及吃早饭了。",
+        "pinyin": "Kuài shàngkè le, wǒ lái bu jí chī zǎofàn le.",
+        "meaning": {
+          "en": "Class is about to start; I no longer have time for breakfast.",
+          "fr": "Le cours va commencer ; je n’ai plus le temps de prendre mon petit-déjeuner.",
+          "ru": "Занятие скоро начнётся; я уже не успею позавтракать.",
+          "tr": "Ders başlamak üzere; kahvaltı yapmaya vaktim kalmadı."
+        },
+        "parts": [
+          "快上课了",
+          "，",
+          "我",
+          "来不及",
+          "吃早饭了",
+          "。"
+        ],
+        "targets": [
+          3
+        ],
+        "hint": {
+          "en": "Place the fixed expression before an action that the remaining time cannot accommodate.",
+          "fr": "Placez l’expression avant une action impossible dans le temps restant.",
+          "ru": "Поставьте устойчивое выражение перед действием, на которое уже не хватает времени.",
+          "tr": "Kalan süreye sığmayan eylemden önce bu kalıbı koyun."
+        }
+      },
+      {
+        "id": "adv-too-late-2",
+        "hanzi": "现在出发也来不及赶上那班火车。",
+        "pinyin": "Xiànzài chūfā yě lái bu jí gǎn shàng nà bān huǒchē.",
+        "meaning": {
+          "en": "Even if we leave now, there is not enough time to catch that train.",
+          "fr": "Même en partant maintenant, nous n’avons plus le temps de prendre ce train.",
+          "ru": "Даже если выехать сейчас, на тот поезд уже не успеть.",
+          "tr": "Şimdi yola çıksak da o trene yetişmeye vaktimiz yetmez."
+        },
+        "parts": [
+          "现在出发也",
+          "来不及",
+          "赶上那班火车",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Place the fixed expression before an action that the remaining time cannot accommodate.",
+          "fr": "Placez l’expression avant une action impossible dans le temps restant.",
+          "ru": "Поставьте устойчивое выражение перед действием, на которое уже не хватает времени.",
+          "tr": "Kalan süreye sığmayan eylemden önce bu kalıbı koyun."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Class is about to start; picture breakfast you no longer have time to eat.",
+        "fr": "Le cours va commencer ; imaginez le petit-déjeuner que vous n’avez plus le temps de prendre.",
+        "ru": "Занятие вот-вот начнётся; представьте завтрак, который уже не успеть съесть.",
+        "tr": "Ders başlamak üzere; yemeye vaktiniz kalmayan kahvaltıyı hayal edin."
+      },
+      "explanation": {
+        "en": "Place the fixed expression before an action that the remaining time cannot accommodate.",
+        "fr": "Placez l’expression avant une action impossible dans le temps restant.",
+        "ru": "Поставьте устойчивое выражение перед действием, на которое уже не хватает времени.",
+        "tr": "Kalan süreye sığmayan eylemden önce bu kalıbı koyun."
+      },
+      "contrast": {
+        "en": "This is lack of time; a negative ability complement can indicate lack of skill or conditions.",
+        "fr": "Il manque du temps ; une impossibilité peut aussi venir du niveau ou des conditions.",
+        "ru": "Здесь не хватает времени; невозможность действия бывает связана и с навыками или условиями.",
+        "tr": "Burada zaman yetersizdir; yapamama ise beceri veya koşullardan da kaynaklanabilir."
+      },
+      "visual": "sequence",
+      "labels": [
+        {
+          "en": "Class starts soon",
+          "fr": "Le cours commence bientôt",
+          "ru": "Занятие скоро начнётся",
+          "tr": "Ders yakında başlıyor"
+        },
+        {
+          "en": "No time for breakfast",
+          "fr": "Plus le temps de déjeuner",
+          "ru": "Не успеть позавтракать",
+          "tr": "Kahvaltıya vakit yok"
+        }
+      ],
+      "icons": [
+        "school",
+        "food"
+      ]
+    }
+  },
+  {
+    "id": "adv-seems",
+    "topic": "complement",
+    "level": "extension",
+    "pattern": "perception verb + 起来 + evaluation",
+    "title": {
+      "en": "How something seems",
+      "fr": "L’impression donnée",
+      "ru": "Как это кажется",
+      "tr": "Nasıl göründüğü veya duyulduğu"
+    },
+    "note": {
+      "en": "After a perception verb, use the complement before an evaluation based on that impression.",
+      "fr": "Après un verbe de perception, placez le complément avant l’évaluation de l’impression.",
+      "ru": "После глагола восприятия поставьте дополнение перед оценкой впечатления.",
+      "tr": "Algı fiilinden sonra, izlenime dayanan değerlendirmeden önce tamamlayıcıyı kullanın."
+    },
+    "sources": [
+      "https://www.uv.es/confucio/revista19/files/assets/common/downloads/publication.pdf",
+      "https://www.digmandarin.com/qilai-xiaqu.html"
+    ],
+    "examples": [
+      {
+        "id": "adv-seems-1",
+        "hanzi": "这个计划听起来不错。",
+        "pinyin": "Zhège jìhuà tīng qǐlai búcuò.",
+        "meaning": {
+          "en": "This plan sounds good.",
+          "fr": "Ce projet a l’air bien.",
+          "ru": "Этот план звучит неплохо.",
+          "tr": "Bu plan kulağa iyi geliyor."
+        },
+        "parts": [
+          "这个计划听",
+          "起来",
+          "不错",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "After a perception verb, use the complement before an evaluation based on that impression.",
+          "fr": "Après un verbe de perception, placez le complément avant l’évaluation de l’impression.",
+          "ru": "После глагола восприятия поставьте дополнение перед оценкой впечатления.",
+          "tr": "Algı fiilinden sonra, izlenime dayanan değerlendirmeden önce tamamlayıcıyı kullanın."
+        }
+      },
+      {
+        "id": "adv-seems-2",
+        "hanzi": "这件外套看起来很暖和。",
+        "pinyin": "Zhè jiàn wàitào kàn qǐlai hěn nuǎnhuo.",
+        "meaning": {
+          "en": "This coat looks very warm.",
+          "fr": "Ce manteau a l’air bien chaud.",
+          "ru": "Это пальто выглядит очень тёплым.",
+          "tr": "Bu mont çok sıcak tutacak gibi görünüyor."
+        },
+        "parts": [
+          "这件外套看",
+          "起来",
+          "很暖和",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "After a perception verb, use the complement before an evaluation based on that impression.",
+          "fr": "Après un verbe de perception, placez le complément avant l’évaluation de l’impression.",
+          "ru": "После глагола восприятия поставьте дополнение перед оценкой впечатления.",
+          "tr": "Algı fiilinden sonra, izlenime dayanan değerlendirmeden önce tamamlayıcıyı kullanın."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Hear someone explain this plan and picture yourself thinking it sounds good.",
+        "fr": "Écoutez ce projet et imaginez votre réaction : il semble bien.",
+        "ru": "Послушайте этот план и представьте свою реакцию: звучит неплохо.",
+        "tr": "Bu planı dinleyip kulağa iyi geldiğini düşündüğünüzü hayal edin."
+      },
+      "explanation": {
+        "en": "After a perception verb, use the complement before an evaluation based on that impression.",
+        "fr": "Après un verbe de perception, placez le complément avant l’évaluation de l’impression.",
+        "ru": "После глагола восприятия поставьте дополнение перед оценкой впечатления.",
+        "tr": "Algı fiilinden sonra, izlenime dayanan değerlendirmeden önce tamamlayıcıyı kullanın."
+      },
+      "contrast": {
+        "en": "Here the complement marks an impression, not upward movement or an action beginning.",
+        "fr": "Ici le complément exprime une impression, pas un mouvement vers le haut ni un début.",
+        "ru": "Здесь выражено впечатление, а не движение вверх или начало действия.",
+        "tr": "Burada izlenim belirtilir; yukarı hareket veya eylemin başlangıcı anlatılmaz."
+      },
+      "visual": "comparison",
+      "labels": [
+        {
+          "en": "Hear this plan",
+          "fr": "Écouter ce projet",
+          "ru": "Услышать этот план",
+          "tr": "Bu planı dinle"
+        },
+        {
+          "en": "It sounds good",
+          "fr": "Ça semble bien",
+          "ru": "Звучит неплохо",
+          "tr": "Kulağa iyi geliyor"
+        }
+      ],
+      "icons": [
+        "chat",
+        "person"
+      ]
+    }
+  },
+  {
+    "id": "adv-continue",
+    "topic": "complement",
+    "level": "extension",
+    "pattern": "verb + 下去",
+    "title": {
+      "en": "Keeping an action going",
+      "fr": "Poursuivre une action",
+      "ru": "Продолжаем действие",
+      "tr": "Eylemi sürdürme"
+    },
+    "note": {
+      "en": "Add the complement after an ongoing action to extend it into the future.",
+      "fr": "Ajoutez le complément après une action en cours pour la prolonger.",
+      "ru": "Добавьте дополнение после продолжающегося действия, чтобы продлить его в будущее.",
+      "tr": "Devam eden eylemi geleceğe uzatmak için tamamlayıcıyı fiilden sonra ekleyin."
+    },
+    "sources": [
+      "https://www.uv.es/confucio/revista19/files/assets/common/downloads/publication.pdf",
+      "https://www.digmandarin.com/qilai-xiaqu.html"
+    ],
+    "examples": [
+      {
+        "id": "adv-continue-1",
+        "hanzi": "这个故事很有意思，请继续说下去。",
+        "pinyin": "Zhège gùshi hěn yǒu yìsi, qǐng jìxù shuō xiàqu.",
+        "meaning": {
+          "en": "This story is very interesting; please keep telling it.",
+          "fr": "Cette histoire est très intéressante ; continuez, s’il vous plaît.",
+          "ru": "Эта история очень интересная; пожалуйста, продолжайте рассказывать.",
+          "tr": "Bu hikâye çok ilginç; lütfen anlatmaya devam edin."
+        },
+        "parts": [
+          "这个故事很有意思",
+          "，",
+          "请继续说",
+          "下去",
+          "。"
+        ],
+        "targets": [
+          3
+        ],
+        "hint": {
+          "en": "Add the complement after an ongoing action to extend it into the future.",
+          "fr": "Ajoutez le complément après une action en cours pour la prolonger.",
+          "ru": "Добавьте дополнение после продолжающегося действия, чтобы продлить его в будущее.",
+          "tr": "Devam eden eylemi geleceğe uzatmak için tamamlayıcıyı fiilden sonra ekleyin."
+        }
+      },
+      {
+        "id": "adv-continue-2",
+        "hanzi": "虽然很难，我还是想学下去。",
+        "pinyin": "Suīrán hěn nán, wǒ háishi xiǎng xué xiàqu.",
+        "meaning": {
+          "en": "Although it is difficult, I still want to keep studying.",
+          "fr": "Même si c’est difficile, je veux continuer à apprendre.",
+          "ru": "Хотя это трудно, я всё же хочу продолжать учиться.",
+          "tr": "Zor olsa da öğrenmeye devam etmek istiyorum."
+        },
+        "parts": [
+          "虽然很难",
+          "，",
+          "我还是想学",
+          "下去",
+          "。"
+        ],
+        "targets": [
+          3
+        ],
+        "hint": {
+          "en": "Add the complement after an ongoing action to extend it into the future.",
+          "fr": "Ajoutez le complément après une action en cours pour la prolonger.",
+          "ru": "Добавьте дополнение после продолжающегося действия, чтобы продлить его в будущее.",
+          "tr": "Devam eden eylemi geleceğe uzatmak için tamamlayıcıyı fiilden sonra ekleyin."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "An interesting story is being told; ask the speaker to keep telling it.",
+        "fr": "Une histoire intéressante est racontée ; demandez à la personne de poursuivre.",
+        "ru": "Вам рассказывают интересную историю; попросите продолжить.",
+        "tr": "İlginç bir hikâye anlatılıyor; anlatandan devam etmesini isteyin."
+      },
+      "explanation": {
+        "en": "Add the complement after an ongoing action to extend it into the future.",
+        "fr": "Ajoutez le complément après une action en cours pour la prolonger.",
+        "ru": "Добавьте дополнение после продолжающегося действия, чтобы продлить его в будущее.",
+        "tr": "Devam eden eylemi geleceğe uzatmak için tamamlayıcıyı fiilden sonra ekleyin."
+      },
+      "contrast": {
+        "en": "This means continuation here; it need not describe physical downward movement.",
+        "fr": "Ici il s’agit de continuité, pas nécessairement d’un mouvement descendant.",
+        "ru": "Здесь это продолжение, а не обязательно физическое движение вниз.",
+        "tr": "Burada devamlılık anlamı vardır; fiziksel olarak aşağı hareket etmek gerekmez."
+      },
+      "visual": "sequence",
+      "labels": [
+        {
+          "en": "An interesting story",
+          "fr": "Une histoire intéressante",
+          "ru": "Интересная история",
+          "tr": "İlginç hikâye"
+        },
+        {
+          "en": "Keep telling it",
+          "fr": "Continuer le récit",
+          "ru": "Продолжайте рассказывать",
+          "tr": "Anlatmaya devam et"
+        }
+      ],
+      "icons": [
+        "book",
+        "chat"
+      ]
+    }
+  },
+  {
+    "id": "adv-recognize-result",
+    "topic": "complement",
+    "level": "extension",
+    "pattern": "perception verb + 出来",
+    "title": {
+      "en": "Recognizing a result",
+      "fr": "Parvenir à reconnaître",
+      "ru": "Удалось распознать",
+      "tr": "Fark edip anlama"
+    },
+    "note": {
+      "en": "Put the complement after a perception verb to show successful recognition or discovery.",
+      "fr": "Placez le complément après un verbe de perception pour exprimer une reconnaissance réussie.",
+      "ru": "Поставьте дополнение после глагола восприятия, чтобы выразить успешное распознавание.",
+      "tr": "Tanıma veya keşfin gerçekleştiğini göstermek için tamamlayıcıyı algı fiilinden sonra koyun."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf",
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-recognize-result-1",
+        "hanzi": "我听出来了，这是小王的声音。",
+        "pinyin": "Wǒ tīng chūlai le, zhè shì Xiǎo Wáng de shēngyīn.",
+        "meaning": {
+          "en": "I recognized it: this is Xiao Wang’s voice.",
+          "fr": "J’ai reconnu la voix : c’est celle de Xiao Wang.",
+          "ru": "Я узнал: это голос Сяо Вана.",
+          "tr": "Sesinden anladım, bu Xiao Wang’ın sesi."
+        },
+        "parts": [
+          "我听",
+          "出来",
+          "了",
+          "，",
+          "这是小王的声音",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put the complement after a perception verb to show successful recognition or discovery.",
+          "fr": "Placez le complément après un verbe de perception pour exprimer une reconnaissance réussie.",
+          "ru": "Поставьте дополнение после глагола восприятия, чтобы выразить успешное распознавание.",
+          "tr": "Tanıma veya keşfin gerçekleştiğini göstermek için tamamlayıcıyı algı fiilinden sonra koyun."
+        }
+      },
+      {
+        "id": "adv-recognize-result-2",
+        "hanzi": "她看出来我很紧张。",
+        "pinyin": "Tā kàn chūlai wǒ hěn jǐnzhāng.",
+        "meaning": {
+          "en": "She could tell that I was very nervous.",
+          "fr": "Elle a remarqué que j’étais très nerveux.",
+          "ru": "Она заметила, что я очень нервничаю.",
+          "tr": "Çok gergin olduğumu fark etti."
+        },
+        "parts": [
+          "她看",
+          "出来",
+          "我很紧张",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put the complement after a perception verb to show successful recognition or discovery.",
+          "fr": "Placez le complément après un verbe de perception pour exprimer une reconnaissance réussie.",
+          "ru": "Поставьте дополнение после глагола восприятия, чтобы выразить успешное распознавание.",
+          "tr": "Tanıma veya keşfin gerçekleştiğini göstermek için tamamlayıcıyı algı fiilinden sonra koyun."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Hear a voice, then recognize it as Xiao Wang’s.",
+        "fr": "Entendez une voix, puis reconnaissez celle de Xiao Wang.",
+        "ru": "Услышьте голос и узнайте в нём голос Сяо Вана.",
+        "tr": "Bir ses duyun, sonra bunun Xiao Wang’ın sesi olduğunu anlayın."
+      },
+      "explanation": {
+        "en": "Put the complement after a perception verb to show successful recognition or discovery.",
+        "fr": "Placez le complément après un verbe de perception pour exprimer une reconnaissance réussie.",
+        "ru": "Поставьте дополнение после глагола восприятия, чтобы выразить успешное распознавание.",
+        "tr": "Tanıma veya keşfin gerçekleştiğini göstermek için tamamlayıcıyı algı fiilinden sonra koyun."
+      },
+      "contrast": {
+        "en": "This shows a recognition result; it does not mean literal movement out of a place.",
+        "fr": "Ce tour indique une reconnaissance, pas une sortie physique.",
+        "ru": "Здесь выражен результат распознавания, а не выход из помещения.",
+        "tr": "Bu tanıma sonucudur; bir yerden fiziksel olarak çıkmak anlamına gelmez."
+      },
+      "visual": "result",
+      "labels": [
+        {
+          "en": "Hear the voice",
+          "fr": "Entendre la voix",
+          "ru": "Услышать голос",
+          "tr": "Sesi duy"
+        },
+        {
+          "en": "Recognize Xiao Wang",
+          "fr": "Reconnaître Xiao Wang",
+          "ru": "Узнать Сяо Вана",
+          "tr": "Xiao Wang’ı tanı"
+        }
+      ],
+      "icons": [
+        "chat",
+        "person"
+      ]
+    }
+  },
+  {
+    "id": "adv-potential",
+    "topic": "complement",
+    "level": "extension",
+    "pattern": "verb + 得 / 不 + result complement",
+    "title": {
+      "en": "Can the result be achieved?",
+      "fr": "Le résultat est-il possible ?",
+      "ru": "Возможен ли результат?",
+      "tr": "Sonuç elde edilebilir mi?"
+    },
+    "note": {
+      "en": "Insert the positive or negative link between the verb and its result complement.",
+      "fr": "Insérez le lien positif ou négatif entre le verbe et son complément de résultat.",
+      "ru": "Вставьте положительный или отрицательный показатель между глаголом и результативным дополнением.",
+      "tr": "Olumlu veya olumsuz bağlantıyı fiille sonuç tamamlayıcısının arasına koyun."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-potential-1",
+        "hanzi": "这些字我看得懂。",
+        "pinyin": "Zhèxiē zì wǒ kàn de dǒng.",
+        "meaning": {
+          "en": "I can understand these characters when I read them.",
+          "fr": "Je peux comprendre ces caractères en les lisant.",
+          "ru": "Эти иероглифы я могу понять при чтении.",
+          "tr": "Bu karakterleri okuyup anlayabiliyorum."
+        },
+        "parts": [
+          "这些字我看",
+          "得",
+          "懂",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Insert the positive or negative link between the verb and its result complement.",
+          "fr": "Insérez le lien positif ou négatif entre le verbe et son complément de résultat.",
+          "ru": "Вставьте положительный или отрицательный показатель между глаголом и результативным дополнением.",
+          "tr": "Olumlu veya olumsuz bağlantıyı fiille sonuç tamamlayıcısının arasına koyun."
+        }
+      },
+      {
+        "id": "adv-potential-2",
+        "hanzi": "这里太吵，我听不清楚。",
+        "pinyin": "Zhèlǐ tài chǎo, wǒ tīng bu qīngchu.",
+        "meaning": {
+          "en": "It is too noisy here; I cannot hear clearly.",
+          "fr": "Il y a trop de bruit ici ; je n’entends pas clairement.",
+          "ru": "Здесь слишком шумно; я не могу расслышать.",
+          "tr": "Burası çok gürültülü; net duyamıyorum."
+        },
+        "parts": [
+          "这里太吵",
+          "，",
+          "我听",
+          "不",
+          "清楚",
+          "。"
+        ],
+        "targets": [
+          3
+        ],
+        "hint": {
+          "en": "Insert the positive or negative link between the verb and its result complement.",
+          "fr": "Insérez le lien positif ou négatif entre le verbe et son complément de résultat.",
+          "ru": "Вставьте положительный или отрицательный показатель между глаголом и результативным дополнением.",
+          "tr": "Olumlu veya olumsuz bağlantıyı fiille sonuç tamamlayıcısının arasına koyun."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Look at these characters and picture being able to understand them when reading.",
+        "fr": "Regardez ces caractères et imaginez pouvoir les comprendre en les lisant.",
+        "ru": "Посмотрите на эти иероглифы и представьте, что можете понять их при чтении.",
+        "tr": "Bu karakterlere bakın ve okuyunca anlayabildiğinizi hayal edin."
+      },
+      "explanation": {
+        "en": "Insert the positive or negative link between the verb and its result complement.",
+        "fr": "Insérez le lien positif ou négatif entre le verbe et son complément de résultat.",
+        "ru": "Вставьте положительный или отрицательный показатель между глаголом и результативным дополнением.",
+        "tr": "Olumlu veya olumsuz bağlantıyı fiille sonuç tamamlayıcısının arasına koyun."
+      },
+      "contrast": {
+        "en": "This concerns ability or conditions; did-not-understand reports a past result instead.",
+        "fr": "Il s’agit de capacité ou de conditions ; « ne pas avoir compris » décrit un résultat passé.",
+        "ru": "Это возможность при данных условиях; «не понял» сообщает о результате в прошлом.",
+        "tr": "Bu beceri veya koşullarla ilgilidir; geçmişte anlamamış olmak farklıdır."
+      },
+      "visual": "result",
+      "labels": [
+        {
+          "en": "Read these characters",
+          "fr": "Lire ces caractères",
+          "ru": "Читать эти иероглифы",
+          "tr": "Bu karakterleri oku"
+        },
+        {
+          "en": "Can understand them",
+          "fr": "Pouvoir les comprendre",
+          "ru": "Можете их понять",
+          "tr": "Onları anlayabiliyor"
+        }
+      ],
+      "icons": [
+        "book",
+        "person"
+      ]
+    }
+  },
+  {
+    "id": "adv-less-than",
+    "topic": "compare",
+    "level": "extension",
+    "pattern": "A 不如 B + adjective",
+    "title": {
+      "en": "Not as good on a quality",
+      "fr": "Moins bien sur un critère",
+      "ru": "Уступает по признаку",
+      "tr": "Bir özellikte geride kalma"
+    },
+    "note": {
+      "en": "Put the less successful item first, then the reference and optional quality.",
+      "fr": "Placez d’abord l’élément moins performant, puis la référence et éventuellement la qualité.",
+      "ru": "Сначала назовите уступающий объект, затем ориентир и при необходимости признак.",
+      "tr": "Önce geride kalan ögeyi, sonra referansı ve gerekirse özelliği belirtin."
+    },
+    "sources": [
+      "https://www.mangolanguages.com/resources/learn/grammar/mandarin-chinese/how-to-use-buru-not-as-as-to-make-comparisons-in-mandarin-chinese"
+    ],
+    "examples": [
+      {
+        "id": "adv-less-than-1",
+        "hanzi": "今天的天气不如昨天好。",
+        "pinyin": "Jīntiān de tiānqì bùrú zuótiān hǎo.",
+        "meaning": {
+          "en": "Today’s weather is not as good as yesterday’s.",
+          "fr": "Le temps est moins beau aujourd’hui qu’hier.",
+          "ru": "Сегодня погода хуже, чем вчера.",
+          "tr": "Bugünkü hava dünkü kadar iyi değil."
+        },
+        "parts": [
+          "今天的天气",
+          "不如",
+          "昨天",
+          "好",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put the less successful item first, then the reference and optional quality.",
+          "fr": "Placez d’abord l’élément moins performant, puis la référence et éventuellement la qualité.",
+          "ru": "Сначала назовите уступающий объект, затем ориентир и при необходимости признак.",
+          "tr": "Önce geride kalan ögeyi, sonra referansı ve gerekirse özelliği belirtin."
+        }
+      },
+      {
+        "id": "adv-less-than-2",
+        "hanzi": "我做的面条不如你做的好吃。",
+        "pinyin": "Wǒ zuò de miàntiáo bùrú nǐ zuò de hǎochī.",
+        "meaning": {
+          "en": "The noodles I make are not as tasty as yours.",
+          "fr": "Mes nouilles sont moins bonnes que les tiennes.",
+          "ru": "Моя лапша не такая вкусная, как твоя.",
+          "tr": "Benim yaptığım erişte seninki kadar lezzetli değil."
+        },
+        "parts": [
+          "我做的面条",
+          "不如",
+          "你做的",
+          "好吃",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put the less successful item first, then the reference and optional quality.",
+          "fr": "Placez d’abord l’élément moins performant, puis la référence et éventuellement la qualité.",
+          "ru": "Сначала назовите уступающий объект, затем ориентир и при необходимости признак.",
+          "tr": "Önce geride kalan ögeyi, sonra referansı ve gerekirse özelliği belirtin."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Put yesterday’s better weather beside today’s less pleasant weather.",
+        "fr": "Comparez le meilleur temps d’hier au temps moins agréable d’aujourd’hui.",
+        "ru": "Сопоставьте вчерашнюю более хорошую погоду с сегодняшней менее приятной.",
+        "tr": "Dünkü daha güzel havayı bugünkü daha kötü havayla karşılaştırın."
+      },
+      "explanation": {
+        "en": "Put the less successful item first, then the reference and optional quality.",
+        "fr": "Placez d’abord l’élément moins performant, puis la référence et éventuellement la qualité.",
+        "ru": "Сначала назовите уступающий объект, затем ориентир и при необходимости признак.",
+        "tr": "Önce geride kalan ögeyi, sonra referansı ve gerekirse özelliği belirtin."
+      },
+      "contrast": {
+        "en": "This judges a lower degree; the full rather-than pattern recommends an alternative action.",
+        "fr": "Ce tour évalue un degré inférieur ; le tour complet recommande une autre action.",
+        "ru": "Это меньшая степень признака; полный оборот «вместо…лучше» рекомендует действие.",
+        "tr": "Bu düşük derece bildirir; tam tercih kalıbı başka bir eylemi önerir."
+      },
+      "visual": "comparison",
+      "labels": [
+        {
+          "en": "Yesterday’s weather",
+          "fr": "Le temps d’hier",
+          "ru": "Вчерашняя погода",
+          "tr": "Dünkü hava"
+        },
+        {
+          "en": "Today is not as good",
+          "fr": "Moins beau aujourd’hui",
+          "ru": "Сегодня хуже",
+          "tr": "Bugün o kadar iyi değil"
+        }
+      ],
+      "icons": [
+        "sun",
+        "sun"
+      ]
+    }
+  },
+  {
+    "id": "adv-more-than",
+    "topic": "compare",
+    "level": "extension",
+    "pattern": "A 比 B 更 / 还 + adjective",
+    "title": {
+      "en": "A stronger comparison",
+      "fr": "Une comparaison renforcée",
+      "ru": "Усиленное сравнение",
+      "tr": "Vurgulu karşılaştırma"
+    },
+    "note": {
+      "en": "Place the degree adverb after the comparison reference and directly before the adjective.",
+      "fr": "Placez l’adverbe de degré après la référence et juste avant l’adjectif.",
+      "ru": "Поставьте наречие степени после объекта сравнения и прямо перед прилагательным.",
+      "tr": "Derece zarfını karşılaştırma referansından sonra, sıfattan hemen önce koyun."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf",
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-more-than-1",
+        "hanzi": "这家咖啡馆比那家更安静。",
+        "pinyin": "Zhè jiā kāfēiguǎn bǐ nà jiā gèng ānjìng.",
+        "meaning": {
+          "en": "This café is quieter than that one.",
+          "fr": "Ce café est plus calme que celui-là.",
+          "ru": "Это кафе тише того.",
+          "tr": "Bu kafe diğerinden daha sessiz."
+        },
+        "parts": [
+          "这家咖啡馆",
+          "比",
+          "那家",
+          "更",
+          "安静",
+          "。"
+        ],
+        "targets": [
+          1,
+          3
+        ],
+        "hint": {
+          "en": "Place the degree adverb after the comparison reference and directly before the adjective.",
+          "fr": "Placez l’adverbe de degré après la référence et juste avant l’adjectif.",
+          "ru": "Поставьте наречие степени после объекта сравнения и прямо перед прилагательным.",
+          "tr": "Derece zarfını karşılaştırma referansından sonra, sıfattan hemen önce koyun."
+        }
+      },
+      {
+        "id": "adv-more-than-2",
+        "hanzi": "今天比昨天还热。",
+        "pinyin": "Jīntiān bǐ zuótiān hái rè.",
+        "meaning": {
+          "en": "Today is even hotter than yesterday.",
+          "fr": "Il fait encore plus chaud aujourd’hui qu’hier.",
+          "ru": "Сегодня ещё жарче, чем вчера.",
+          "tr": "Bugün dünden bile sıcak."
+        },
+        "parts": [
+          "今天",
+          "比",
+          "昨天",
+          "还",
+          "热",
+          "。"
+        ],
+        "targets": [
+          1,
+          3
+        ],
+        "hint": {
+          "en": "Place the degree adverb after the comparison reference and directly before the adjective.",
+          "fr": "Placez l’adverbe de degré après la référence et juste avant l’adjectif.",
+          "ru": "Поставьте наречие степени после объекта сравнения и прямо перед прилагательным.",
+          "tr": "Derece zarfını karşılaştırma referansından sonra, sıfattan hemen önce koyun."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Picture two cafés, with this one quieter than the other.",
+        "fr": "Imaginez deux cafés : celui-ci est plus calme que l’autre.",
+        "ru": "Представьте два кафе: это тише другого.",
+        "tr": "İki kafe hayal edin: bu kafe diğerinden daha sessiz."
+      },
+      "explanation": {
+        "en": "Place the degree adverb after the comparison reference and directly before the adjective.",
+        "fr": "Placez l’adverbe de degré après la référence et juste avant l’adjectif.",
+        "ru": "Поставьте наречие степени после объекта сравнения и прямо перед прилагательным.",
+        "tr": "Derece zarfını karşılaştırma referansından sonra, sıfattan hemen önce koyun."
+      },
+      "contrast": {
+        "en": "Use the comparative degree adverb here, not the ordinary very before the adjective.",
+        "fr": "Utilisez ici un adverbe comparatif, pas le simple « très » avant l’adjectif.",
+        "ru": "Здесь нужно сравнительное наречие степени, а не обычное «очень».",
+        "tr": "Burada sıradan çok yerine karşılaştırma derecesi bildiren zarf gerekir."
+      },
+      "visual": "comparison",
+      "labels": [
+        {
+          "en": "That café",
+          "fr": "L’autre café",
+          "ru": "То кафе",
+          "tr": "O kafe"
+        },
+        {
+          "en": "This café is quieter",
+          "fr": "Ce café est plus calme",
+          "ru": "Это кафе тише",
+          "tr": "Bu kafe daha sessiz"
+        }
+      ],
+      "icons": [
+        "shop",
+        "shop"
+      ]
+    }
+  },
+  {
+    "id": "adv-transform-result",
+    "topic": "complement",
+    "level": "extension",
+    "pattern": "把 + object + verb + 成 + result",
+    "title": {
+      "en": "Turning something into a result",
+      "fr": "Transformer un objet",
+      "ru": "Превращаем предмет в результат",
+      "tr": "Bir şeyi bir sonuca dönüştürme"
+    },
+    "note": {
+      "en": "Introduce the known object before the verb, then mark its resulting form or category.",
+      "fr": "Placez l’objet connu avant le verbe, puis indiquez sa forme ou catégorie finale.",
+      "ru": "Поставьте известный предмет перед глаголом, затем обозначьте итоговую форму или категорию.",
+      "tr": "Bilinen nesneyi fiilden önce, oluşan biçim veya türü ise fiilden sonra belirtin."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf",
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-transform-result-1",
+        "hanzi": "请把苹果切成小块。",
+        "pinyin": "Qǐng bǎ píngguǒ qiē chéng xiǎo kuài.",
+        "meaning": {
+          "en": "Please cut the apple into small pieces.",
+          "fr": "Coupe la pomme en petits morceaux, s’il te plaît.",
+          "ru": "Нарежь яблоко небольшими кусочками, пожалуйста.",
+          "tr": "Lütfen elmayı küçük parçalara kes."
+        },
+        "parts": [
+          "请",
+          "把",
+          "苹果",
+          "切",
+          "成",
+          "小块",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Introduce the known object before the verb, then mark its resulting form or category.",
+          "fr": "Placez l’objet connu avant le verbe, puis indiquez sa forme ou catégorie finale.",
+          "ru": "Поставьте известный предмет перед глаголом, затем обозначьте итоговую форму или категорию.",
+          "tr": "Bilinen nesneyi fiilden önce, oluşan biçim veya türü ise fiilden sonra belirtin."
+        }
+      },
+      {
+        "id": "adv-transform-result-2",
+        "hanzi": "她把这篇文章翻译成了法语。",
+        "pinyin": "Tā bǎ zhè piān wénzhāng fānyì chéng le Fǎyǔ.",
+        "meaning": {
+          "en": "She translated this article into French.",
+          "fr": "Elle a traduit cet article en français.",
+          "ru": "Она перевела эту статью на французский.",
+          "tr": "Bu makaleyi Fransızcaya çevirdi."
+        },
+        "parts": [
+          "她",
+          "把",
+          "这篇文章",
+          "翻译",
+          "成",
+          "了法语",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Introduce the known object before the verb, then mark its resulting form or category.",
+          "fr": "Placez l’objet connu avant le verbe, puis indiquez sa forme ou catégorie finale.",
+          "ru": "Поставьте известный предмет перед глаголом, затем обозначьте итоговую форму или категорию.",
+          "tr": "Bilinen nesneyi fiilden önce, oluşan biçim veya türü ise fiilden sonra belirtin."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Picture an apple, then the small pieces you cut it into.",
+        "fr": "Imaginez une pomme, puis les petits morceaux obtenus en la coupant.",
+        "ru": "Представьте яблоко, а затем небольшие кусочки, на которые его нарезали.",
+        "tr": "Bir elmayı, sonra onu kestiğiniz küçük parçaları hayal edin."
+      },
+      "explanation": {
+        "en": "Introduce the known object before the verb, then mark its resulting form or category.",
+        "fr": "Placez l’objet connu avant le verbe, puis indiquez sa forme ou catégorie finale.",
+        "ru": "Поставьте известный предмет перед глаголом, затем обозначьте итоговую форму или категорию.",
+        "tr": "Bilinen nesneyi fiilden önce, oluşan biçim veya türü ise fiilden sonra belirtin."
+      },
+      "contrast": {
+        "en": "The result marker describes transformation; putting an object somewhere needs a location phrase instead.",
+        "fr": "Le marqueur exprime une transformation ; placer un objet exige plutôt un lieu.",
+        "ru": "Показатель выражает превращение; размещение предмета требует обозначения места.",
+        "tr": "Sonuç sözcüğü dönüşüm bildirir; bir yere koymak için yer ifadesi gerekir."
+      },
+      "visual": "result",
+      "labels": [
+        {
+          "en": "Cut the apple",
+          "fr": "Couper la pomme",
+          "ru": "Нарезать яблоко",
+          "tr": "Elmayı kes"
+        },
+        {
+          "en": "Into small pieces",
+          "fr": "En petits morceaux",
+          "ru": "На маленькие кусочки",
+          "tr": "Küçük parçalara"
+        }
+      ],
+      "icons": [
+        "apple",
+        "food"
+      ]
+    }
+  },
+  {
+    "id": "adv-causative",
+    "topic": "complement",
+    "level": "extension",
+    "pattern": "cause + 使 / 让 + affected person + result",
+    "title": {
+      "en": "Causing someone to feel or act",
+      "fr": "Provoquer une réaction",
+      "ru": "Вызываем чувство или действие",
+      "tr": "Bir duyguya veya eyleme yol açma"
+    },
+    "note": {
+      "en": "Put the cause first, then the affected person, then the resulting feeling or action.",
+      "fr": "Placez la cause, puis la personne touchée, puis le sentiment ou l’action qui en résulte.",
+      "ru": "Сначала назовите причину, затем затронутого человека и возникшее чувство или действие.",
+      "tr": "Önce nedeni, sonra etkilenen kişiyi ve oluşan duygu veya eylemi belirtin."
+    },
+    "sources": [
+      "https://chinesepod.com/7163/making-people-do-things-with-%E8%AE%A9%EF%BC%8C%E4%BB%A4%EF%BC%8Cand-%E4%BD%BF",
+      "https://coehuman.uodiyala.edu.iq/uploads/Coehuman%20library%20pdf/English%20library%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B2%D9%8A/linguistics/Comprehensive_Grammar.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-causative-1",
+        "hanzi": "这个好消息使大家很高兴。",
+        "pinyin": "Zhège hǎo xiāoxi shǐ dàjiā hěn gāoxìng.",
+        "meaning": {
+          "en": "This good news made everyone very happy.",
+          "fr": "Cette bonne nouvelle a réjoui tout le monde.",
+          "ru": "Эта хорошая новость всех очень обрадовала.",
+          "tr": "Bu iyi haber herkesi çok mutlu etti."
+        },
+        "parts": [
+          "这个好消息",
+          "使",
+          "大家",
+          "很高兴",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put the cause first, then the affected person, then the resulting feeling or action.",
+          "fr": "Placez la cause, puis la personne touchée, puis le sentiment ou l’action qui en résulte.",
+          "ru": "Сначала назовите причину, затем затронутого человека и возникшее чувство или действие.",
+          "tr": "Önce nedeni, sonra etkilenen kişiyi ve oluşan duygu veya eylemi belirtin."
+        }
+      },
+      {
+        "id": "adv-causative-2",
+        "hanzi": "这首歌让我想起了家乡。",
+        "pinyin": "Zhè shǒu gē ràng wǒ xiǎngqǐ le jiāxiāng.",
+        "meaning": {
+          "en": "This song reminded me of my hometown.",
+          "fr": "Cette chanson m’a rappelé ma ville natale.",
+          "ru": "Эта песня напомнила мне о родном городе.",
+          "tr": "Bu şarkı bana memleketimi hatırlattı."
+        },
+        "parts": [
+          "这首歌",
+          "让",
+          "我",
+          "想起了家乡",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put the cause first, then the affected person, then the resulting feeling or action.",
+          "fr": "Placez la cause, puis la personne touchée, puis le sentiment ou l’action qui en résulte.",
+          "ru": "Сначала назовите причину, затем затронутого человека и возникшее чувство или действие.",
+          "tr": "Önce nedeni, sonra etkilenen kişiyi ve oluşan duygu veya eylemi belirtin."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Picture good news reaching everyone and making them happy.",
+        "fr": "Imaginez une bonne nouvelle qui arrive et réjouit tout le monde.",
+        "ru": "Представьте хорошую новость, которая радует всех.",
+        "tr": "İyi haberin herkese ulaşıp onları mutlu ettiğini hayal edin."
+      },
+      "explanation": {
+        "en": "Put the cause first, then the affected person, then the resulting feeling or action.",
+        "fr": "Placez la cause, puis la personne touchée, puis le sentiment ou l’action qui en résulte.",
+        "ru": "Сначала назовите причину, затем затронутого человека и возникшее чувство или действие.",
+        "tr": "Önce nedeni, sonra etkilenen kişiyi ve oluşan duygu veya eylemi belirtin."
+      },
+      "contrast": {
+        "en": "One marker is more formal; the everyday alternative can also mean permission in other contexts.",
+        "fr": "Un marqueur est plus formel ; l’autre peut aussi exprimer la permission selon le contexte.",
+        "ru": "Один показатель формальнее; разговорный вариант в другом контексте может означать разрешение.",
+        "tr": "Bir sözcük daha resmîdir; günlük alternatif başka bağlamlarda izin de bildirebilir."
+      },
+      "visual": "cause",
+      "labels": [
+        {
+          "en": "Good news",
+          "fr": "Bonne nouvelle",
+          "ru": "Хорошая новость",
+          "tr": "İyi haber"
+        },
+        {
+          "en": "Everyone feels happy",
+          "fr": "Tout le monde est content",
+          "ru": "Все рады",
+          "tr": "Herkes mutlu"
+        }
+      ],
+      "icons": [
+        "news",
+        "person"
+      ]
+    }
+  },
+  {
+    "id": "adv-past-focus",
+    "topic": "attitude",
+    "level": "extension",
+    "pattern": "subject + 是 + focused detail + past action + 的",
+    "title": {
+      "en": "Focusing on a past detail",
+      "fr": "Souligner un détail passé",
+      "ru": "Выделяем деталь прошлого",
+      "tr": "Geçmiş bir ayrıntıyı vurgulama"
+    },
+    "note": {
+      "en": "For a known completed event, frame the time, manner, or agent you want to emphasize.",
+      "fr": "Pour un événement passé connu, encadrez le moment, la manière ou l’agent à souligner.",
+      "ru": "Для известного завершённого события выделите время, способ или исполнителя действия.",
+      "tr": "Bilinen tamamlanmış olayda vurgulanan zamanı, biçimi veya kişiyi çerçeveleyin."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "adv-past-focus-1",
+        "hanzi": "我是昨天到苏州的。",
+        "pinyin": "Wǒ shì zuótiān dào Sūzhōu de.",
+        "meaning": {
+          "en": "It was yesterday that I arrived in Suzhou.",
+          "fr": "C’est hier que je suis arrivé à Suzhou.",
+          "ru": "Я приехал в Сучжоу именно вчера.",
+          "tr": "Suzhou’ya dün vardım."
+        },
+        "parts": [
+          "我",
+          "是",
+          "昨天",
+          "到苏州",
+          "的",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "For a known completed event, frame the time, manner, or agent you want to emphasize.",
+          "fr": "Pour un événement passé connu, encadrez le moment, la manière ou l’agent à souligner.",
+          "ru": "Для известного завершённого события выделите время, способ или исполнителя действия.",
+          "tr": "Bilinen tamamlanmış olayda vurgulanan zamanı, biçimi veya kişiyi çerçeveleyin."
+        }
+      },
+      {
+        "id": "adv-past-focus-2",
+        "hanzi": "我们是坐地铁来的。",
+        "pinyin": "Wǒmen shì zuò dìtiě lái de.",
+        "meaning": {
+          "en": "We came by metro.",
+          "fr": "C’est en métro que nous sommes venus.",
+          "ru": "Мы приехали именно на метро.",
+          "tr": "Biz metroyla geldik."
+        },
+        "parts": [
+          "我们",
+          "是",
+          "坐地铁",
+          "来",
+          "的",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "For a known completed event, frame the time, manner, or agent you want to emphasize.",
+          "fr": "Pour un événement passé connu, encadrez le moment, la manière ou l’agent à souligner.",
+          "ru": "Для известного завершённого события выделите время, способ или исполнителя действия.",
+          "tr": "Bilinen tamamlanmış olayda vurgulanan zamanı, biçimi veya kişiyi çerçeveleyin."
+        }
+      }
+    ],
+    "learning": {
+      "scene": {
+        "en": "Your arrival in Suzhou is known; point to yesterday as the day it happened.",
+        "fr": "Votre arrivée à Suzhou est connue ; soulignez qu’elle a eu lieu hier.",
+        "ru": "О вашем приезде в Сучжоу уже знают; подчеркните, что это было вчера.",
+        "tr": "Suzhou’ya vardığınız biliniyor; bunun dün olduğunu vurgulayın."
+      },
+      "explanation": {
+        "en": "For a known completed event, frame the time, manner, or agent you want to emphasize.",
+        "fr": "Pour un événement passé connu, encadrez le moment, la manière ou l’agent à souligner.",
+        "ru": "Для известного завершённого события выделите время, способ или исполнителя действия.",
+        "tr": "Bilinen tamamlanmış olayda vurgulanan zamanı, biçimi veya kişiyi çerçeveleyin."
+      },
+      "contrast": {
+        "en": "This use emphasizes an event detail; it is not a general replacement for past-tense marking.",
+        "fr": "Ce tour souligne un détail ; il ne remplace pas tous les marqueurs du passé.",
+        "ru": "Этот оборот выделяет деталь события, а не заменяет любые средства выражения прошлого.",
+        "tr": "Bu kullanım olay ayrıntısını vurgular; geçmiş anlatımının genel bir karşılığı değildir."
+      },
+      "visual": "focus",
+      "labels": [
+        {
+          "en": "Arrived in Suzhou",
+          "fr": "Arrivée à Suzhou",
+          "ru": "Приезд в Сучжоу",
+          "tr": "Suzhou’ya varış"
+        },
+        {
+          "en": "It was yesterday",
+          "fr": "C’était hier",
+          "ru": "Именно вчера",
+          "tr": "Dün oldu"
+        }
+      ],
+      "icons": [
+        "map",
+        "clock"
+      ]
+    }
+  }
+]

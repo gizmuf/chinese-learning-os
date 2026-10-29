@@ -2,6 +2,7 @@
 
 import { useEffect, useState, type CSSProperties } from 'react';
 import { cloudHighlightAvailability, cloudHighlightStrokes } from './atlas-cloud-connections';
+import {useHanziStyle} from './hanzi-style';
 
 type GlyphData = { strokes: string[] };
 const glyphRequests = new Map<string, Promise<GlyphData | null>>();
@@ -34,23 +35,24 @@ function fallbackFont(hanzi: string): CSSProperties | undefined {
 }
 
 function Character({ hanzi, component }: { hanzi: string; component?: string }) {
+  const {style,highlight}=useHanziStyle();
   const availability = cloudHighlightAvailability(hanzi, component);
   const [loaded, setLoaded] = useState<{ hanzi: string; data: GlyphData | null } | null>(null);
   useEffect(() => {
     let active = true;
-    if (availability !== 'mapped') return;
+    if (style !== 'strokes') return;
     // Requests are shared by nodes/focus/word chunks. Do not abort another consumer's
     // request on unmount; the guard prevents stale updates after navigation/unmount.
     void loadGlyph(hanzi).then(data => { if (active) setLoaded({ hanzi, data }); });
     return () => { active = false; };
-  }, [hanzi, availability]);
+  }, [hanzi, style]);
 
   const data = loaded?.hanzi === hanzi ? loaded.data : null;
   const selected = data && availability === 'mapped' ? cloudHighlightStrokes(hanzi, component, data.strokes.length) : null;
-  if (availability === 'whole') return <span aria-hidden="true" data-cloud-highlight="whole" style={{ ...fallbackFont(hanzi), color: 'var(--cloud-shared,#b4423c)' }}>{hanzi}</span>;
-  if (!data || !selected) return <span aria-hidden="true" data-cloud-highlight="none" style={fallbackFont(hanzi)}>{hanzi}</span>;
-  const indices = new Set(selected);
-  return <svg aria-hidden="true" focusable="false" viewBox="0 0 1024 1024" data-cloud-highlight="strokes" style={{ display: 'inline-block', width: '1em', height: '1em', verticalAlign: '-0.12em', flex: '0 0 1em' }}>
+  if (style==='print') return <span aria-hidden="true" data-cloud-highlight="none" data-hanzi-render="print" style={fallbackFont(hanzi)}>{hanzi}</span>;
+  if (!data) return <span aria-hidden="true" data-cloud-highlight={availability==='whole'&&highlight?'whole':'none'} data-hanzi-render="stroke-font" style={{...fallbackFont(hanzi),...(availability==='whole'&&highlight?{color:'var(--cloud-shared,#b4423c)'}:{})}}>{hanzi}</span>;
+  const indices = new Set(highlight?(availability==='whole'?data.strokes.map((_,i)=>i):selected??[]):[]);
+  return <svg aria-hidden="true" focusable="false" viewBox="0 0 1024 1024" data-cloud-highlight={indices.size?'strokes':'none'} data-hanzi-render="stroke-svg" style={{ display: 'inline-block', width: '1em', height: '1em', verticalAlign: '-0.12em', flex: '0 0 1em' }}>
     <g transform="scale(1,-1) translate(0,-900)">
       {data.strokes.map((path, index) => <path key={index} d={path} style={{ fill: indices.has(index) ? 'var(--cloud-shared,#b4423c)' : 'currentColor' }} />)}
     </g>

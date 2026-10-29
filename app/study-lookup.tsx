@@ -4,7 +4,7 @@ import {BookOpen,Volume2,X} from 'lucide-react';
 import {useI18n} from './i18n';
 import {DictionaryAudio,StudyDictionaryDialog} from './study-dictionary';
 import {dictionaryTokens,type DictionaryEntry,type Pronunciation,type StudyDictionary} from './atlas-spatial-model';
-import {appStudyDictionary,lookupAtOffset,studyAssessmentSelector,studyFeedbackSelector} from './study-lookup-model';
+import {appStudyDictionary,studyLookupEntry,lookupAtOffset,studyAssessmentSelector,studyFeedbackSelector} from './study-lookup-model';
 import {playRecording,releaseRecording,stopAudio} from './audio';
 import Guided from './guided';
 import WritingHelp from './writing-help';
@@ -38,7 +38,7 @@ export default function StudyLookupProvider({children,notify,penOnly,setPenOnly}
  const root=useRef<HTMLDivElement>(null),dialog=useRef<HTMLDialogElement>(null),opener=useRef<HTMLElement|null>(null),audio=useRef<HTMLAudioElement|null>(null),writer=useRef<HTMLDialogElement>(null),heading=useId();
  function stop(){if(audio.current){releaseRecording(audio.current);audio.current=null;}setPlaying(null);}
  function close(){stop();setEntry(null);requestAnimationFrame(()=>opener.current?.isConnected&&opener.current.focus({preventScroll:true}));}
- const open=useCallback((text:string,trigger:HTMLElement)=>{if(!assessmentAllows(trigger))return;if(!dialog.current?.open)opener.current=trigger;stopAudio();stop();setEntry(dictionary.get(text)??{text,pinyin:'',meaning:t('Not yet in this study dictionary.')});},[dictionary,t]);
+ const open=useCallback((text:string,trigger:HTMLElement)=>{if(!assessmentAllows(trigger))return;if(!dialog.current?.open)opener.current=trigger;stopAudio();stop();setEntry(studyLookupEntry(dictionary,text,locale,!!trigger.closest('[data-grammar-frame]'))??{text,pinyin:'',meaning:t('Not yet in this study dictionary.')});},[dictionary,t,locale]);
  function listen(recording:Pronunciation){stop();const player=playRecording(recording.source,notify);audio.current=player;setPlaying(recording.source);player.addEventListener('ended',()=>{if(audio.current===player){audio.current=null;setPlaying(null);}},{once:true});}
  useEffect(()=>{setEntry(null);setWriting('');stop();return()=>{if(audio.current)releaseRecording(audio.current);};},[locale]);
  useEffect(()=>{if(writing){if(!writer.current?.open)writer.current?.showModal();}else writer.current?.close();},[writing]);

@@ -1,4 +1,5 @@
 "use client";
+import {HanziDisplayControls} from './hanzi-style';
 import {libraryCopy} from './chunk-library-copy';
 import AtlasViewGuide from "./atlas-view-guide";
 import {withTurkish} from "./turkish";
@@ -158,6 +159,7 @@ function CloudMap({owner,db,penOnly,setPenOnly,notify,progress,onWord}:Props){
   <header className="cloud-heading"><div><span className="cloud-eyebrow">{c('FOLLOW ONE CONNECTION','SUIVRE UN LIEN','СЛЕДУЕМ ЗА СВЯЗЬЮ')}</span><h1><Cloud size={27}/>{c('Cloud Atlas','Atlas en nuages','Облачный Атлас')}<span>。</span></h1></div><div className="cloud-header-actions"><button ref={tourLauncher} className="cloud-tour-launch" onClick={startTour}>{c('Try 人 → 你好','Essayer 人 → 你好','Пройти 人 → 你好')}</button><button onClick={()=>setAbout(!about)} aria-label={c('About this map','À propos de cette carte','Об этой карте')} aria-expanded={about}><Info size={18}/></button><button onClick={()=>setFull(!full)} aria-label={full?c('Exit expanded map','Réduire la carte','Уменьшить карту'):c('Expand map','Agrandir la carte','Развернуть карту')}>{full?<Minimize2 size={18}/>:<Maximize2 size={18}/>}</button></div></header>
   <a className="text-button" href={'/?course=intensive&material=speaking-chunks&chunks=words&q='+encodeURIComponent(selected?.hanzi??route.hanzi)}>{libraryCopy.words[locale]} · {libraryCopy.grammar[locale]} →</a>
   <div className="cloud-view-switch" role="group" aria-label={c('Atlas layout','Disposition de l’Atlas','Вид Атласа')}>{(['journey','cloud','family','path','space','words','layers','constellations','matrix'] as const).map(layout=><button key={layout} aria-pressed={route.layout===layout} onClick={()=>go({layout,...(layout==='journey'&&route.level==='all'?{level:3 as const}:{})})}>{layoutName(layout)}</button>)}</div><AtlasViewGuide layout={route.layout} name={layoutName(route.layout)} onChange={layout=>go({layout})}/>
+  <HanziDisplayControls compact/>
   {aboutContent}
   {toolbarContent}
   {route.layout!=='space'&&route.layout!=='words'&&route.layout!=='journey'&&!isHybridLayout(route.layout)&&pathContent}

@@ -61,6 +61,7 @@ import Ink from "./ink";
 import Guided from "./guided";
 import Notebook from "./notebook";
 import IntensiveCourse from "./intensive-course";
+import {useHanziStyle,HanziDisplayControls,type HanziStyle} from './hanzi-style';
 import StudyLookupProvider, {useDictionaryAssistance,StudyText} from "./study-lookup";
 import PdfExport from "./pdf-export";
 import { LanguagePicker, useI18n } from "./i18n";
@@ -95,6 +96,7 @@ export default function StudyApp({
   onManageAccount: () => void;
 }) {
   const { locale, t } = useI18n();
+  const hanziAppearance=useHanziStyle();
   const items = useMemo(() => sourceItems.map(item => localizeItem(item, locale)), [locale]);
   const lessons = sourceLessons.map(lesson => ({...lesson, title: t(lesson.title), subtitle: t(lesson.subtitle)}));
   const skillNames = Object.fromEntries(Object.entries(sourceSkillNames).map(([key,value]) => [key,t(value)])) as typeof sourceSkillNames;
@@ -172,11 +174,15 @@ export default function StudyApp({
         setSync(user ? t("Ready to sync") : t("Guest · saved on this device"));
         const prefs = await readDraft<{
           penOnly: boolean;
+          hanziStyle?: HanziStyle;
+          highlightComponents?: boolean;
           slowAudio?: boolean;
           level?: StudyLevel;
           left: boolean;
           minutes: number;
         }>(store, "settings");
+        hanziAppearance.setStyle(prefs?.hanziStyle==='print'?'print':'strokes');
+        hanziAppearance.setHighlight(prefs?.highlightComponents??true);
         if (prefs) {
           setPenOnly(prefs.penOnly);
           setSlowAudio(prefs.slowAudio ?? false);
@@ -201,12 +207,14 @@ export default function StudyApp({
     if (db && isReady)
       saveDraft(db, "settings", {
         penOnly,
+        hanziStyle:hanziAppearance.style,
+        highlightComponents:hanziAppearance.highlight,
         slowAudio,
         left,
         minutes,
         level,
       }).catch(() => notify(t("Could not save preferences.")));
-  }, [db, isReady, penOnly, slowAudio, left, minutes, level, notify]);
+  }, [db, isReady, penOnly, slowAudio, left, minutes, level, notify,hanziAppearance.style,hanziAppearance.highlight]);
   const synchronize = useCallback(async () => {
     if (!db || !user || syncLock.current) return;
     syncLock.current = true;
@@ -1234,6 +1242,7 @@ export default function StudyApp({
                 <X size={20} />
               </button>
             </div>
+            <HanziDisplayControls/>
             <label className="setting-row">
               <span>
                 <strong>{t("Slower pronunciation")}</strong>

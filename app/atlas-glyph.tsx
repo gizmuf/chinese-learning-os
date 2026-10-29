@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useI18n } from "./i18n";
 import type { AtlasCharacter } from "./atlas-data";
+import {useHanziStyle} from './hanzi-style';
 type Structure = { mappings: Record<string, Record<string, number[]>> };
 type Data = { strokes: string[] };
 let mappingPromise: Promise<Structure> | null = null;
@@ -28,6 +29,7 @@ export default function AtlasGlyph({
   showParts?: boolean;
 }) {
   const { t } = useI18n();
+  const appearance=useHanziStyle();
   const [state, setState] = useState<{
     data: Data;
     mapping: Record<string, number[]>;
@@ -59,6 +61,7 @@ export default function AtlasGlyph({
       controller.abort();
     };
   }, [character.id, character.hanzi, retry]);
+  if (appearance.style==='print') return <div className="atlas-glyph-fallback"><span lang="zh-Hans">{character.hanzi}</span></div>;
   if (!state)
     return (
       <div className="atlas-glyph-fallback">
@@ -77,7 +80,7 @@ export default function AtlasGlyph({
   const semantic = new Set(state.mapping[character.semantic ?? ""] ?? []);
   const phonetic = new Set(state.mapping[character.phonetic ?? ""] ?? []);
   function color(index: number) {
-    if (!showParts) return "var(--ink)";
+    if (!showParts||!appearance.highlight) return "var(--ink)";
     if (selected)
       return selected.has(index)
         ? "var(--atlas-shape)"

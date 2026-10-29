@@ -146,7 +146,7 @@ checks.append('chunks cross-material and kind validation enforced')
 assert call('POST',a,{'events':[{**chunk,'id':str(uuid.uuid4()),'assisted':True}]})[0]==200;checks.append('chunks assisted records can sync without independent scheduling')
 assert all(e['lessonId']=='intensive-03' for e in call(user=a,path='/api/course-progress')[1]['events']);checks.append('chunks hidden from legacy lesson clients')
 assert call('POST',a,{'events':[chunk]},path='/api/progress')[0]==400;checks.append('chunks never enters HSK event registry')
-for activity in ['chunk-gap-hsk3-1000','chunk-gap-request-1','chunk-frame-attitude-interest-1']:
+for activity in ['chunk-gap-hsk3-1000','chunk-gap-request-1','chunk-frame-attitude-interest-1','chunk-frame-adv-even-if-1','chunk-frame-adv-past-focus-2']:
  cloze={**chunk,'id':str(uuid.uuid4()),'activityId':activity}
  result=call('POST',a,{'events':[cloze]});assert result[0]==200,result[:2]
  assert call('POST',a,{'events':[cloze]})[0]==200
