@@ -174,11 +174,11 @@ pinyin and EN/FR/RU/TR examples, reusing authored course/HSK sentences and 19
 additional teaching examples in `data/lesson06/usage-examples.json`. Audio appears
 only where a bundled recording exists. Looking up text never awards recall credit;
 independent grammar answers keep lookup blocked until a hint or saved feedback.
-### Today — lesson 3–7 reviews
+### Today — lesson 3–8 reviews
 
 Today includes an account-scoped lesson review panel, separate from the existing HSK and Atlas panels. It derives due dates from the existing course FSRS history and offers per-lesson due and difficult queues for independently scored lesson checks. Unseen checks, study events, guided builders, assisted answers and handwriting are not added to this check queue. A successful independent retry resolves difficulty; a hint-assisted answer does not erase an earlier independent failure. Future due dates are displayed without prematurely counting them as due.
 
-Starting a queue snapshots its IDs and reuses the exact lesson 3/4/5/6/7 practice component, recording to the same course store/API with the same activity IDs. Lesson 4/5 Today sessions have a fresh draft scope so a later repeat cannot reopen an already-saved answer. Back to Today updates counts; the clock also updates every 30 seconds and returning to the tab refreshes account sync. Guests remain device-local. EN/FR/RU/TR copy is included; no existing course routes, Atlas views or HSK review behavior are replaced.
+Starting a queue snapshots its IDs and reuses the exact lesson 3/4/5/6/7/8 practice component, recording to the same course store/API with the same activity IDs. Lesson 4/5 Today sessions have a fresh draft scope so a later repeat cannot reopen an already-saved answer. Back to Today updates counts; the clock also updates every 30 seconds and returning to the tab refreshes account sync. Guests remain device-local. EN/FR/RU/TR copy is included; no existing course routes, Atlas views or HSK review behavior are replaced.
 
 ### Speaking chunks — functional phrases, separate from character families
 
@@ -196,3 +196,10 @@ Method inspiration: [Chunking Chinese's public app introduction](https://www.chu
 `?course=intensive&lesson=7` follows Lesson 06 with nine steps: comparisons, degree, measurements, phone prices, difficulty/professions, parks/canteen, routines/dates, drinks and engineering. The supplied 24-page English PDF is preserved unchanged. `data/lesson07/source.json` records its hash and the fourteen classroom-photo hashes; raw photos remain local. Content and explanations are EN/FR/RU/TR: 72 expressions and 60 example sentences, with added practice distinguished from the source material. Different board price/height stages are retained; a doctor's/nurse's importance comparison is identified as a speaker's opinion and excluded from independent checks.
 
 Examples are shown beside words by default and use the shared word-to-character drilldown. All 113 characters have local stroke data and Mandarin clips. There are 132 term/sentence recordings; suffixes 多了 and 得多 explicitly use a larger pronunciation context. Nine guided builders, three readings and six speaking situations with expandable model answers reuse the lesson tools. The 258 independent read/listen checks use the existing course progress and Today FSRS queues; supported practice does not award independent recall. There is no additional progress store or fabricated speech grade.
+
+
+### Lesson 08 — 29 October 2026
+
+`?course=intensive&lesson=8` turns eleven overlapping classroom photographs into eight groups covering class/work/breaks, clock time, ranges, distance, classmates/colleagues, character-shape contrasts, objects/classifiers and two extra board words. The app and the PDF builder share `data/lesson08/content.json`: 69 expressions, 47 contextual sentences, EN/FR/RU/TR explanations, eight supported builders, three readings, six speaking prompts and 220 independent read/listen checks. Existing account-scoped progress and Today reviews are reused; hints/builders remain supported and do not award independent recall. Equivalent 2:15/2:45/2:55 readings are not quiz distractors for one another.
+
+Four 25-page hybrid PDFs combine summary, examples, a horizontal time diagram, exercises, delayed answers and meaningful-word handwriting practice. The approved serif font, navy/pale-blue layout and 56.1 pt white grids with glyph-centred pale models follow the supplied template. RGB flattened delivery PDFs avoid font substitution; vector authoring intermediates remain local. PDF generation is reproducible with `scripts/build-lesson08-pdfs.py` and the approved Source Han Serif font. Photo hashes/provenance are retained in `data/lesson08/source.json`; raw photos are not published. The board's 08:40–12:00 and 12:00–13:00 intervals and colloquial key sentence are explicitly preserved/normalised. The clipped distance heading is not given an invented continuation or author.

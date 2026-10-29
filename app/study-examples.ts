@@ -1,3 +1,4 @@
+import {lesson08Sentences,lesson08Audio} from './lesson08-data';
 import {lesson07Sentences,lesson07Audio} from './lesson07-data';
 import type {Locale} from './translate';
 import {cloudWords} from './atlas-cloud-model';
@@ -14,6 +15,7 @@ function examples(locale:Locale){
  const row=(v:{id:string;hanzi:string;pinyin:string;meaning:Record<Locale,string>},source:string):StudyExample=>({id:v.id,text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],audio:{text:v.hanzi,pinyin:v.pinyin,source,context:false,kind:'sentence'}});
  pool=[...lesson06Sentences.map(v=>row(v,lesson06Audio(v))),
   ...lesson07Sentences.filter(v=>v.origin!=='board-opinion'&&!v.excludeFromChecks).map(v=>row(v,lesson07Audio(v))),
+  ...lesson08Sentences.map(v=>row(v,lesson08Audio(v))),
   ...extra.map(([word,text,pinyin,en,fr,ru,tr])=>({id:'usage:'+word,text,pinyin,meaning:{en,fr,ru,tr}[locale]})),
   ...lesson05Sentences.map(v=>row(v,'/course05/audio/course05-'+v.id+'-word.mp3')),
   ...lesson04Sentences.map(v=>row(v,'/course04/audio/course04-'+v.id+'-word.mp3')),
@@ -47,9 +49,10 @@ export function dictionaryBreakdown(entry:DictionaryEntry,dictionary:StudyDictio
     '一把钥匙|把':{en:'classifier for keys and handled objects here',fr:'classificateur des clés et objets à manche ici',ru:'Здесь счётное слово для ключей и предметов с ручкой',tr:'Burada anahtar ve saplı nesneler için sayma sözcüğü'},
     '一本书|本':{en:'classifier for books here',fr:'classificateur des livres ici',ru:'Здесь счётное слово для книг',tr:'Burada kitaplar için sayma sözcüğü'},
     '两辆汽车|辆':{en:'classifier for vehicles here',fr:'classificateur des véhicules ici',ru:'Здесь счётное слово для транспорта',tr:'Burada taşıtlar için sayma sözcüğü'},
+    '萝卜|卜':{en:'neutral-tone bo in 萝卜 (radish)',fr:'bo au ton neutre dans 萝卜 (radis)',ru:'Нейтральное bo в 萝卜 (редька)',tr:'萝卜 (turp) içinde nötr tonlu bo'},
     '钥匙|匙':{en:'part of 钥匙 (key); not “spoon” here',fr:'dans 钥匙 (clé) ; pas « cuillère » ici',ru:'Часть слова 钥匙 (ключ); здесь не «ложка»',tr:'钥匙 (anahtar) sözcüğünün parçası; burada “kaşık” değil'},
    };
-   const role=roles[entry.text+'|'+t.text];if(role)detail={...detail,pinyin:entry.text==='钥匙'&&t.text==='匙'?'shi':detail.pinyin,meaning:role[locale]};
+   const role=roles[entry.text+'|'+t.text];if(entry.text==='萝卜'&&t.text==='卜')detail={...detail,pinyin:'bo',audio:entry.audio?{...entry.audio,context:true}:undefined};if(role)detail={...detail,pinyin:entry.text==='钥匙'&&t.text==='匙'?'shi':detail.pinyin,meaning:role[locale]};
   }
   return {text:t.text,entry:detail};
  })};

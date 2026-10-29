@@ -1,0 +1,44 @@
+{
+  "characters": [
+    {
+      "text": "距",
+      "pinyin": "jù",
+      "meaning": {
+        "en": "distance; be apart",
+        "fr": "distance ; être éloigné",
+        "ru": "расстояние; отстоять",
+        "tr": "mesafe; uzak olmak"
+      }
+    },
+    {
+      "text": "萝",
+      "pinyin": "luó",
+      "meaning": {
+        "en": "part of 萝卜 (radish); also creeping plants",
+        "fr": "dans 萝卜 (radis) ; plantes grimpantes",
+        "ru": "часть 萝卜 (редька); вьющиеся растения",
+        "tr": "萝卜 (turp) sözcüğünün parçası; sarmaşık bitkileri"
+      }
+    },
+    {
+      "text": "卜",
+      "pinyin": "bǔ",
+      "meaning": {
+        "en": "neutral-tone part of 萝卜 (radish); bǔ in divination words",
+        "fr": "syllabe neutre dans 萝卜 ; bǔ dans les mots de divination",
+        "ru": "нейтральное bo в 萝卜; bǔ в словах о гадании",
+        "tr": "萝卜 içinde nötr bo; fal sözcüklerinde bǔ"
+      }
+    },
+    {
+      "text": "罗",
+      "pinyin": "luó",
+      "meaning": {
+        "en": "net; surname Luo; part of 罗汉果",
+        "fr": "filet ; nom Luo ; dans 罗汉果",
+        "ru": "сеть; фамилия Ло; часть 罗汉果",
+        "tr": "ağ; Luo soyadı; 罗汉果 sözcüğünün parçası"
+      }
+    }
+  ]
+}

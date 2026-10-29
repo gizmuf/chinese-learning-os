@@ -1,4 +1,6 @@
 "use client";
+import Lesson08 from './lesson08';
+import {lesson08} from './lesson08-data';
 import Lesson07 from './lesson07';
 import {lesson07} from './lesson07-data';
 import {useDictionaryAssistance} from "./study-lookup";
@@ -105,6 +107,7 @@ export default function IntensiveCourse({
   useEffect(() => {
     if(new URLSearchParams(window.location.search).get("material")==="self-introduction")setVideoOpen(true);
     if(new URLSearchParams(window.location.search).get("material")==="speaking-chunks")setChunksOpen(true);
+    if (new URLSearchParams(window.location.search).get("lesson") === "8") {setLessonNumber(8);setOpen(true);}
     if (new URLSearchParams(window.location.search).get("lesson") === "7") {setLessonNumber(7);setOpen(true);}
     if (new URLSearchParams(window.location.search).get("lesson") === "6") {setLessonNumber(6);setOpen(true);}
     if (new URLSearchParams(window.location.search).get("lesson") === "5") {setLessonNumber(5);setOpen(true);}
@@ -193,6 +196,8 @@ export default function IntensiveCourse({
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
+  if(open&&lessonNumber===8)return <Lesson08 {...{owner,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"","/?course=intensive");}}/>;
+  function openLesson08(){stopAudio();setLessonNumber(8);setOpen(true);window.history.replaceState(null,"","/?course=intensive&lesson=8");window.scrollTo({top:0,behavior:"instant"});}
   if(open&&lessonNumber===7)return <Lesson07 {...{owner,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"","/?course=intensive");}}/>;
   function openLesson07(){stopAudio();setLessonNumber(7);setOpen(true);window.history.replaceState(null,"","/?course=intensive&lesson=7");window.scrollTo({top:0,behavior:"instant"});}
   if(open&&lessonNumber===6)return <Lesson06 {...{owner,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"","/?course=intensive");}}/>;
@@ -226,6 +231,7 @@ export default function IntensiveCourse({
         <>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">你能给我 · … · 吗</div><div><span className="pill">CHUNKS</span><h2>{chunkCopy.title[locale]}</h2><p>{chunkCopy.intro[locale]}</p><p>{chunkCopy.subtitle[locale]}</p><button className="primary" onClick={()=>{stopAudio();setChunksOpen(true);window.history.replaceState(null,"","/?course=intensive&material=speaking-chunks");window.scrollTo({top:0,behavior:"instant"});}}>{chunkCopy.open[locale]}<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">你 · 自己</div><div><span className="pill">{videoCopy[locale].independent}</span><h2>{videoStudy.title[locale]}</h2><p>{videoCopy[locale].intro}</p><button className="primary" onClick={()=>{stopAudio();setVideoOpen(true);window.history.replaceState(null,'','/?course=intensive&material=self-introduction');window.scrollTo({top:0,behavior:'instant'});}}>{videoCopy[locale].read}<ArrowRight size={17}/></button></div></section>
+          <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">时间 · 从 · 同</div><div><span className="pill">{t("Lesson")} 08 / 60</span><h2>{lesson08.title[locale]}</h2><p>29.10.2026</p><button className="primary" onClick={openLesson08}>{t("Lesson")} 08<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">比 · 池塘 · 工程</div><div><span className="pill">{t("Lesson")} 07 / 60</span><h2>{lesson07.title[locale]}</h2><p>28.10.2026</p><button className="primary" onClick={openLesson07}>{t("Lesson")} 07<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">天 · 水 · 还是</div><div><span className="pill">{t("Lesson")} 06 / 60</span><h2>{lesson06.title[locale]}</h2><p>27.10.2026</p><button className="primary" onClick={openLesson06}>{t("Lesson")} 06<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">又 · 起来 · 好</div><div><span className="pill">{t("Lesson")} 05 / 60</span><h2>{lesson05.title[locale]}</h2><p>26.10.2026</p><button className="primary" onClick={openLesson05}>{t("Lesson")} 05<ArrowRight size={17}/></button></div></section>
@@ -249,19 +255,19 @@ export default function IntensiveCourse({
 
           <details className="course-calendar panel">
             <summary>
-              {t("All 60 lessons")} · {({en:"Five lessons ready",fr:"Cinq leçons disponibles",ru:"Пять уроков доступны",tr:"Beş ders hazır"})[locale]}
+              {t("All 60 lessons")} · {({en:"Six lessons ready",fr:"Six leçons disponibles",ru:"Шесть уроков доступны",tr:"Altı ders hazır"})[locale]}
             </summary>
             <div className="course-lesson-grid">
               {Array.from({ length: 60 }, (_, i) => (
                 <button
                   key={i}
-                  disabled={i !== 2 && i !== 3 && i !== 4 && i !== 5 && i !== 6}
-                  className={i === 2 || i === 3 || i === 4 || i === 5 || i === 6 ? "available" : ""}
-                  onClick={i===6?openLesson07:i===5?openLesson06:i===4?openLesson05:i===3?openLesson04:openLesson}
+                  disabled={i !== 2 && i !== 3 && i !== 4 && i !== 5 && i !== 6 && i !== 7}
+                  className={i === 2 || i === 3 || i === 4 || i === 5 || i === 6 || i === 7 ? "available" : ""}
+                  onClick={i===7?openLesson08:i===6?openLesson07:i===5?openLesson06:i===4?openLesson05:i===3?openLesson04:openLesson}
                 >
                   <strong>{String(i + 1).padStart(2, "0")}</strong>
                   <small>
-                    {i === 2 || i === 3 || i === 4 || i === 5 || i === 6
+                    {i === 2 || i === 3 || i === 4 || i === 5 || i === 6 || i === 7
                       ? t("Ready to practice")
                       : t("Awaiting class material")}
                   </small>
