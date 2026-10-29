@@ -75,4 +75,4 @@ async def main():
     await asyncio.gather(*(generate(item,field,suffix) for item in items for field,suffix in [('hanzi','word'),('sentence','sentence')]))
     save();print(f"Complete: {len(wanted)} recordings",flush=True)
 
-asyncio.run(main())
+if __name__=='__main__':asyncio.run(main())

@@ -1,0 +1,657 @@
+{
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "generationRate": "-10%",
+  "provider": "Microsoft Edge Read Aloud via edge-tts",
+  "recordings": [
+    {
+      "id": "again-sentence",
+      "text": "他又来了。",
+      "file": "again-sentence.mp3",
+      "sha256": "8b948bc60f39a5040cc4264d8d86ee42ecb186c73ecbffa703794a1bd4276d5d"
+    },
+    {
+      "id": "again-word",
+      "text": "又",
+      "file": "again-word.mp3",
+      "sha256": "8a66c2c4101d4466994507e329aa7cf941dab7ece4f5d541e826116710a5a01e"
+    },
+    {
+      "id": "all-sentence",
+      "text": "我们都去。",
+      "file": "all-sentence.mp3",
+      "sha256": "c2f4bbf19eb6f43f9c42e9ab0af599e6ebefed8ad2582fb640b48a3b6ce572ae"
+    },
+    {
+      "id": "all-word",
+      "text": "都",
+      "file": "all-word.mp3",
+      "sha256": "bb34b90b9da1df982938b6db9a626d3cb1bc812e1d318a10bceff2a39dd43ad2",
+      "pronunciationContext": "我们都去。"
+    },
+    {
+      "id": "also-sentence",
+      "text": "我也去。",
+      "file": "also-sentence.mp3",
+      "sha256": "c7758493a316610e5aff1caae68dea37029b693f61a27fef4f19c1d331ffac79"
+    },
+    {
+      "id": "also-word",
+      "text": "也",
+      "file": "also-word.mp3",
+      "sha256": "b94e346ba162d1fa5adacd25d696b7feb90f05b5dfabe3bfd1462b5e95144b8b"
+    },
+    {
+      "id": "arrive-sentence",
+      "text": "我到了。",
+      "file": "arrive-sentence.mp3",
+      "sha256": "5037df28f972fa27c298093de70c95dcff9ea16cdb40cf0fa9dc59236fa0a68b"
+    },
+    {
+      "id": "arrive-word",
+      "text": "到",
+      "file": "arrive-word.mp3",
+      "sha256": "0f1c17382afb23a0799ceae7f31f7b53ca1f31f81c262d2bb40f0ac11e44403e"
+    },
+    {
+      "id": "bag-sentence",
+      "text": "这是我的包。",
+      "file": "bag-sentence.mp3",
+      "sha256": "2cac312209c2fe15246133e7ce65853819f63d47802c11391da6819258c4d84b"
+    },
+    {
+      "id": "bag-word",
+      "text": "包",
+      "file": "bag-word.mp3",
+      "sha256": "c4c76a9952f25f2141a3176c67f226832ae78db229a279030f11771012a0c491"
+    },
+    {
+      "id": "be-sentence",
+      "text": "他是老师。",
+      "file": "be-sentence.mp3",
+      "sha256": "62fc271b1985785451a9379c63274dce07f062b221679129d9d30c1f24c6b7ad"
+    },
+    {
+      "id": "be-word",
+      "text": "是",
+      "file": "be-word.mp3",
+      "sha256": "4ce14f174a28e632ec16f4ede3d799c196fc9e5b46bd9334444c089689c193a0"
+    },
+    {
+      "id": "boat-sentence",
+      "text": "船在河上。",
+      "file": "boat-sentence.mp3",
+      "sha256": "666090877eaf6e46031a0b28958343acf0d7f61ac41a8b7851e29d2c5744ce92"
+    },
+    {
+      "id": "boat-word",
+      "text": "船",
+      "file": "boat-word.mp3",
+      "sha256": "3f3e6e5be23591682d23e46e56eacfe8792664eccad65037b96b19c60f01c203"
+    },
+    {
+      "id": "book-sentence",
+      "text": "这是我的书。",
+      "file": "book-sentence.mp3",
+      "sha256": "82ed758847a492767f7eac294dc830bf00ead089c19d3de585e5284c9e08d432"
+    },
+    {
+      "id": "book-word",
+      "text": "书",
+      "file": "book-word.mp3",
+      "sha256": "994ff681f7d360e5337e58c28d815ae7fe9d305184768e5f1befb3041c38b771"
+    },
+    {
+      "id": "buy-sentence",
+      "text": "我买茶。",
+      "file": "buy-sentence.mp3",
+      "sha256": "00e1763b8852bd46cc32d9499e65974f3354bc883665093ee577cfedc89eda47"
+    },
+    {
+      "id": "buy-word",
+      "text": "买",
+      "file": "buy-word.mp3",
+      "sha256": "0e3763d92a8c1df9dc7476bdc616e9a6a18e47a17a5c8294e760d321444a803d"
+    },
+    {
+      "id": "chicken-sentence",
+      "text": "鸡在这里。",
+      "file": "chicken-sentence.mp3",
+      "sha256": "ab323b448db70eed804364c13a1a636baf652485b65a0cabce828231c7528deb"
+    },
+    {
+      "id": "chicken-word",
+      "text": "鸡",
+      "file": "chicken-word.mp3",
+      "sha256": "fc22ab57ab175160da49768351b6e2b69bf31a666d8ac071194cccc29f1f5a62"
+    },
+    {
+      "id": "clear-sentence",
+      "text": "水很清。",
+      "file": "clear-sentence.mp3",
+      "sha256": "b325737a61371989d7ac35fb6f70167e00a225463b6ec38358e5871047b6a2d6"
+    },
+    {
+      "id": "clear-word",
+      "text": "清",
+      "file": "clear-word.mp3",
+      "sha256": "421daf8488503400b886680eaf320eb2578f3e3afa101f6e5b0bb0f4ff264811"
+    },
+    {
+      "id": "coarse-sentence",
+      "text": "这根绳子很粗。",
+      "file": "coarse-sentence.mp3",
+      "sha256": "7fcc1ba3cb6422cb7a139219a4f8f08a708a6cc33ff0d10aeb24042d9d834c32"
+    },
+    {
+      "id": "coarse-word",
+      "text": "粗",
+      "file": "coarse-word.mp3",
+      "sha256": "c49f09543e472a70b894b7e9c6568c190ffa3a4cb5a9d20d9e3dc40a435ecfdd"
+    },
+    {
+      "id": "cup-sentence",
+      "text": "杯子里有水。",
+      "file": "cup-sentence.mp3",
+      "sha256": "5ff1d10633ff224c7bd8fab65768b2a2bd99cc95b027873e19f646b799ad5350"
+    },
+    {
+      "id": "cup-word",
+      "text": "杯子",
+      "file": "cup-word.mp3",
+      "sha256": "2da7037b02b7207dad0778a2932b1d42853e76923486a6571ba633ebdc0d0a61"
+    },
+    {
+      "id": "do-sentence",
+      "text": "我做饭。",
+      "file": "do-sentence.mp3",
+      "sha256": "3de600d37a20bff5608b88fee937ca2770c6204e21e90a224908a42e00820c22"
+    },
+    {
+      "id": "do-word",
+      "text": "做",
+      "file": "do-word.mp3",
+      "sha256": "8763f8a60508f1cbe9c03d50deace176c41e9abcbd6a44a2df836a55d436b2b2"
+    },
+    {
+      "id": "early-sentence",
+      "text": "你来得很早。",
+      "file": "early-sentence.mp3",
+      "sha256": "3f4f755fa651f952b404a1a3b1f09ba68467b2e2f706a9ccc293fa199fd4c8eb"
+    },
+    {
+      "id": "early-word",
+      "text": "早",
+      "file": "early-word.mp3",
+      "sha256": "901f494fa69286d14532853237a8934cd4278ec512d4800bdb25537f7edccecb"
+    },
+    {
+      "id": "enter-sentence",
+      "text": "请进。",
+      "file": "enter-sentence.mp3",
+      "sha256": "8b23f314b28a4fb22789dccd6d5def97ab9588421fa5174bfd616fdd0b1eae24"
+    },
+    {
+      "id": "enter-word",
+      "text": "进",
+      "file": "enter-word.mp3",
+      "sha256": "53f8dfad8fcddc6f80455ebe279b517b9b7cf6aac24d31ece4ef57997f9d653a"
+    },
+    {
+      "id": "exit-sentence",
+      "text": "我出门了。",
+      "file": "exit-sentence.mp3",
+      "sha256": "7a1fc46e86a08e6ba613a12dd66aa17af45ed5ab144d1a5fcff370686893646a"
+    },
+    {
+      "id": "exit-word",
+      "text": "出",
+      "file": "exit-word.mp3",
+      "sha256": "46955e34465f8ee7b41db5f815d1756258ca091044daa803df8cac6b8e80f951"
+    },
+    {
+      "id": "fall-sentence",
+      "text": "杯子倒了。",
+      "file": "fall-sentence.mp3",
+      "sha256": "b464aacc57ac5a61b14b3709f9116251625e34b79bfc56fd782d4db4058ce6cf"
+    },
+    {
+      "id": "fall-word",
+      "text": "倒",
+      "file": "fall-word.mp3",
+      "sha256": "087a666257e327f96fb46499dee096f42fe72e9b4c45d889bd6a7041ed01648f",
+      "pronunciationContext": "杯子倒了。"
+    },
+    {
+      "id": "far-sentence",
+      "text": "学校很远。",
+      "file": "far-sentence.mp3",
+      "sha256": "34c6095ff5128a800bdaafbf40520dc47c233423ff54e41c6ef475e9f3cb16db"
+    },
+    {
+      "id": "far-word",
+      "text": "远",
+      "file": "far-word.mp3",
+      "sha256": "77533fc8defabea05a55cb53c828beaedcedc0c1f13d3036859ae19c79adf1f7"
+    },
+    {
+      "id": "find-sentence",
+      "text": "我找书。",
+      "file": "find-sentence.mp3",
+      "sha256": "fe5e61cbc258d7a9cf664cd6a3df21b8d264c416ba38dc2211c95debcb91f74e"
+    },
+    {
+      "id": "find-word",
+      "text": "找",
+      "file": "find-word.mp3",
+      "sha256": "087bf5e7453a7d91669648528ca9935d7901972025d62151dc84519a2631f879"
+    },
+    {
+      "id": "four-sentence",
+      "text": "我有四本书。",
+      "file": "four-sentence.mp3",
+      "sha256": "ed50d39a79855fee83f587783db4ce65f37aeb7486e9b071a5213e117bdf4370"
+    },
+    {
+      "id": "four-word",
+      "text": "四",
+      "file": "four-word.mp3",
+      "sha256": "3c90f3532014e1fefa66d42ce3eca3e18ca0f1aace23e46f1024cc73e1ebaefd"
+    },
+    {
+      "id": "full-sentence",
+      "text": "我吃饱了。",
+      "file": "full-sentence.mp3",
+      "sha256": "0847a34d8f9b955ebf8f9e913f8a504917f900a2f76a45b51b1276c44de45b8b"
+    },
+    {
+      "id": "full-word",
+      "text": "饱",
+      "file": "full-word.mp3",
+      "sha256": "c7214b214abc2026fa87e184311779ce7d17df53cbce787d290de762d0b1fae5"
+    },
+    {
+      "id": "grass-sentence",
+      "text": "草很绿。",
+      "file": "grass-sentence.mp3",
+      "sha256": "58ceb51fed81b86ad318afe53a1a2e0faa92f4622c5ea9bca54be5a814577cfa"
+    },
+    {
+      "id": "grass-word",
+      "text": "草",
+      "file": "grass-word.mp3",
+      "sha256": "2c3084a60dce55632512741b50e1daf6bbccf36d06935408e7c7ae9e8c56bef0"
+    },
+    {
+      "id": "have-sentence",
+      "text": "我有书。",
+      "file": "have-sentence.mp3",
+      "sha256": "326d51b4a1a20e28462733ed28f63ac7e0de37646cba25692ac67182a48ae366"
+    },
+    {
+      "id": "have-word",
+      "text": "有",
+      "file": "have-word.mp3",
+      "sha256": "8258b09a4d71128b39a1e3b11905b406f655d40d7792b9cc7349a1272df178e6"
+    },
+    {
+      "id": "horse-sentence",
+      "text": "马在吃草。",
+      "file": "horse-sentence.mp3",
+      "sha256": "18f92c123e9c90504f543ccc735f1fdcf8e3add8bdce9e190a7f891744c23c30"
+    },
+    {
+      "id": "horse-word",
+      "text": "马",
+      "file": "horse-word.mp3",
+      "sha256": "bf1a7d2104f8785add68b58107c9d374e0ba1a07b6597562dd9865b4e6f9864b"
+    },
+    {
+      "id": "listen-sentence",
+      "text": "我听音乐。",
+      "file": "listen-sentence.mp3",
+      "sha256": "d6c711083703910a634e535628b584ae0e87f860ca36556391347fd4ca6e8a13"
+    },
+    {
+      "id": "listen-word",
+      "text": "听",
+      "file": "listen-word.mp3",
+      "sha256": "e48474e545cb957e1dc486d972236edfdfabacd3d2120613d062b3d9b370c360"
+    },
+    {
+      "id": "many-sentence",
+      "text": "人很多。",
+      "file": "many-sentence.mp3",
+      "sha256": "93113bbbec4005eefc9cb4b55959841c5165d8f7c28e0cbd05e38a0614b5ba15"
+    },
+    {
+      "id": "many-word",
+      "text": "多",
+      "file": "many-word.mp3",
+      "sha256": "7ca5567c05245362e30a22af59309011eac5581ec136c030f2e006815e3915ed"
+    },
+    {
+      "id": "month-sentence",
+      "text": "今天是五月三日。",
+      "file": "month-sentence.mp3",
+      "sha256": "ec411c10f49dc5c0e36210dea59195cf65a92b490647c20bf6cbb354088e735c"
+    },
+    {
+      "id": "month-word",
+      "text": "月",
+      "file": "month-word.mp3",
+      "sha256": "2791b2a2e52a97ee7e80ce319282352a5eab55e3464ea0b82c0b4526f7625d09"
+    },
+    {
+      "id": "mother-sentence",
+      "text": "妈在家。",
+      "file": "mother-sentence.mp3",
+      "sha256": "7fa6c76011f1389d45e29ed4d9e50deed8aa49899a949a17253b556cda0ff12c"
+    },
+    {
+      "id": "mother-word",
+      "text": "妈",
+      "file": "mother-word.mp3",
+      "sha256": "3a377d244b3e7e7e7930af1f00d15bed27dec0c9e481279d8117003ea15824ac"
+    },
+    {
+      "id": "near-sentence",
+      "text": "学校很近。",
+      "file": "near-sentence.mp3",
+      "sha256": "7444239c11bd568c00f61ef0bddd07644e3b66d9e9e3f1e32e593239c95f3126"
+    },
+    {
+      "id": "near-word",
+      "text": "近",
+      "file": "near-word.mp3",
+      "sha256": "1e6e845a74e3c65a1bd7a9e0de9f4620626ab453adb4b629c68dc792b191dc64"
+    },
+    {
+      "id": "please-sentence",
+      "text": "请喝茶。",
+      "file": "please-sentence.mp3",
+      "sha256": "e1f99e8df45f8a2eab65e183c3512c6cd0a939423ed587aacfd080225640096b"
+    },
+    {
+      "id": "please-word",
+      "text": "请",
+      "file": "please-word.mp3",
+      "sha256": "f7bc2461afb0f0ebcc6da4f963788239b58df8c15224ea2ceb6998d7e82265f8"
+    },
+    {
+      "id": "quilt-sentence",
+      "text": "被子很暖和。",
+      "file": "quilt-sentence.mp3",
+      "sha256": "0484db3bffa784e112da1bd5c823d8f9e011e4beadcb332b99a0cf31975c941e"
+    },
+    {
+      "id": "quilt-word",
+      "text": "被子",
+      "file": "quilt-word.mp3",
+      "sha256": "3591e6f99ce9814cff15b929a785518dd2269d7a307064d64431dbc01cd0bd45"
+    },
+    {
+      "id": "rain-sentence",
+      "text": "雨很大。",
+      "file": "rain-sentence.mp3",
+      "sha256": "24c1dcdd076fec0acc338d9d4c1aa5dee7204a0230369ef528c9fa1647c5830f"
+    },
+    {
+      "id": "rain-word",
+      "text": "雨",
+      "file": "rain-word.mp3",
+      "sha256": "370007766f3d92cd2a42e2302021b31b2c7cd7550289034f2bbdfb5ae5b42757"
+    },
+    {
+      "id": "right-sentence",
+      "text": "向右走。",
+      "file": "right-sentence.mp3",
+      "sha256": "45356149ecf2115b24a8235f13a841a3bc5218149a6670d9d5ca740d6bf275b2"
+    },
+    {
+      "id": "right-word",
+      "text": "右",
+      "file": "right-word.mp3",
+      "sha256": "4297aa7e5e1931eeb91f8fe74093d6e0dbd2e155bb1604c8d27bf9643d92233f"
+    },
+    {
+      "id": "scold-sentence",
+      "text": "别骂他。",
+      "file": "scold-sentence.mp3",
+      "sha256": "7c785c9f0a847b5612d7dfcdc6e0d9f6507501b28aa050c8e9651d8cc0128238"
+    },
+    {
+      "id": "scold-word",
+      "text": "骂",
+      "file": "scold-word.mp3",
+      "sha256": "668a10cdedb5608108d31f2e3cf0c2eeb238d4e78079751f7d372a97709ee881"
+    },
+    {
+      "id": "search-sentence",
+      "text": "我在网上搜。",
+      "file": "search-sentence.mp3",
+      "sha256": "10efb0c57aa3270579a97f9c97f13ec0c1a9e6e10a31bed3f28fe044cd3f55ed"
+    },
+    {
+      "id": "search-word",
+      "text": "搜",
+      "file": "search-word.mp3",
+      "sha256": "6bafb50a16e9497f6a9c93e27f789b7419982f093aab192983857b8f6fcbbb15"
+    },
+    {
+      "id": "sell-sentence",
+      "text": "他卖茶。",
+      "file": "sell-sentence.mp3",
+      "sha256": "bf6fe9bac6534365cb35c583000818858456a6919ddebd92855ffbed7f3ff588"
+    },
+    {
+      "id": "sell-word",
+      "text": "卖",
+      "file": "sell-word.mp3",
+      "sha256": "c1a2f2a73b106fb997ef23850722b49ab42740ba43f1a1f84cbcc9e7290b2f92"
+    },
+    {
+      "id": "seven-sentence",
+      "text": "我有七本书。",
+      "file": "seven-sentence.mp3",
+      "sha256": "53ae30063eb3146ba36f54e205c9e8d57b3c848e37bbc25d69338b1c28f56df2"
+    },
+    {
+      "id": "seven-word",
+      "text": "七",
+      "file": "seven-word.mp3",
+      "sha256": "cafdad8526cddf203a794f9d1bdb8805fa97f89a6d2dfac94ef79a766302eab9"
+    },
+    {
+      "id": "sit-sentence",
+      "text": "请坐。",
+      "file": "sit-sentence.mp3",
+      "sha256": "d105714d3c586c66d49254eb6b2d59b34e30b82dde0be41633f3cdd988a6daf8"
+    },
+    {
+      "id": "sit-word",
+      "text": "坐",
+      "file": "sit-word.mp3",
+      "sha256": "56049d9574e703a3f458c5e396cf164446fd4f96905c54bd864a8c9fc98f4f14"
+    },
+    {
+      "id": "sleep-sentence",
+      "text": "孩子睡了。",
+      "file": "sleep-sentence.mp3",
+      "sha256": "581086a773a4e8b4b2446230d649bc2e6038e6c3f56b6240aae91da38841b089"
+    },
+    {
+      "id": "sleep-word",
+      "text": "睡",
+      "file": "sleep-word.mp3",
+      "sha256": "bda6c87924289a515b24bfa6872a3dec577b738b44f2085ab652aba41fcc046d"
+    },
+    {
+      "id": "soup-sentence",
+      "text": "汤很热。",
+      "file": "soup-sentence.mp3",
+      "sha256": "3460b9ac48350303219ec6ef4573dfd6d9986fb1dd09d57435878a5a0101c953"
+    },
+    {
+      "id": "soup-word",
+      "text": "汤",
+      "file": "soup-word.mp3",
+      "sha256": "0a75525ab7413bbdc31230c321fb4e81ea67a07ced4be269acfb6984dd04d6a3"
+    },
+    {
+      "id": "stop-sentence",
+      "text": "车停了。",
+      "file": "stop-sentence.mp3",
+      "sha256": "dbab1b3f787ced9a1562eaf523ba37030bc28d26e6e200a6fb281e2caefe382a"
+    },
+    {
+      "id": "stop-word",
+      "text": "停",
+      "file": "stop-word.mp3",
+      "sha256": "ba003ee1a6543fc278f7e4744ef61870dff1ec233fd9bbf1599e0df42dd416f5"
+    },
+    {
+      "id": "sugar-sentence",
+      "text": "我喝茶，不加糖。",
+      "file": "sugar-sentence.mp3",
+      "sha256": "e87526b8f941aefaded229d0daa17a237dbc016458727374e9a38772327e01dc"
+    },
+    {
+      "id": "sugar-word",
+      "text": "糖",
+      "file": "sugar-word.mp3",
+      "sha256": "64007cd4202e936d766b0c28580ed4ce40908c4bbc5a589593be7d57df48b550"
+    },
+    {
+      "id": "there-sentence",
+      "text": "书在那里。",
+      "file": "there-sentence.mp3",
+      "sha256": "a5fb73bf15d19a59eaaee38e1b2008194fa8f866c6181152c857bd0b11658eff"
+    },
+    {
+      "id": "there-word",
+      "text": "那里",
+      "file": "there-word.mp3",
+      "sha256": "bfdecf9a7f8cb451fea9caaa404d763f0a0d812279d326566567a799ada01f75"
+    },
+    {
+      "id": "toilet-sentence",
+      "text": "厕所在哪里？",
+      "file": "toilet-sentence.mp3",
+      "sha256": "ef9d7f098ba6fef34ebab5a046ed02e82eceda56b3f1913678e6e191a76dbc9f"
+    },
+    {
+      "id": "toilet-word",
+      "text": "厕所",
+      "file": "toilet-word.mp3",
+      "sha256": "6584ca0954681785b9c46d076cf0fd3a52ef5d988670e79e28a9cc02e52ccde5"
+    },
+    {
+      "id": "tree-sentence",
+      "text": "树很高。",
+      "file": "tree-sentence.mp3",
+      "sha256": "466606266dfabe22569409c953be37a74b5c256300fb413f08af15f612df4f7c"
+    },
+    {
+      "id": "tree-word",
+      "text": "树",
+      "file": "tree-word.mp3",
+      "sha256": "aa1f4fae24452328ee9dcd11b4d3b5e080a78080707fa1fb939daba71df508e9"
+    },
+    {
+      "id": "walk-sentence",
+      "text": "我走了。",
+      "file": "walk-sentence.mp3",
+      "sha256": "f493c21d1aca5fb70e899ed0a777637294014c02863f4f930cf38fd5316a7c43"
+    },
+    {
+      "id": "walk-word",
+      "text": "走",
+      "file": "walk-word.mp3",
+      "sha256": "433dff01e76fc6a48ee6d9088149b3aef577a0aff68c9b94c36575f0ac5f100e"
+    },
+    {
+      "id": "want-sentence",
+      "text": "我要茶。",
+      "file": "want-sentence.mp3",
+      "sha256": "cb1f193cb6935f4842f4d515ff2c7dfc652467eb0594f923b436ca772e793e41"
+    },
+    {
+      "id": "want-word",
+      "text": "要",
+      "file": "want-word.mp3",
+      "sha256": "8c94658ce59e2d3dbd623229998685feac08d0e814ad0d14283447105a01246f"
+    },
+    {
+      "id": "wash-sentence",
+      "text": "我洗手。",
+      "file": "wash-sentence.mp3",
+      "sha256": "cd575eed2eed1b8a7883b107662f41cc2ca2a8f42f59fd3a9c7d703895b93bfc"
+    },
+    {
+      "id": "wash-word",
+      "text": "洗",
+      "file": "wash-word.mp3",
+      "sha256": "042379486e6faa842f86f155d344f0b06a3463c09da104082f0e40c3f2577b7d"
+    },
+    {
+      "id": "water-sentence",
+      "text": "我喝水。",
+      "file": "water-sentence.mp3",
+      "sha256": "dfb769275bff4800e36f9a660f34ea5cf34d34a92faa4d9704108804d567f7d8"
+    },
+    {
+      "id": "water-word",
+      "text": "水",
+      "file": "water-word.mp3",
+      "sha256": "f1f7b75774462bb8dfb7813f8eabb6d8578f763d67ff074d99ed145275d9cb18"
+    },
+    {
+      "id": "wear-sentence",
+      "text": "我穿新衣服。",
+      "file": "wear-sentence.mp3",
+      "sha256": "aee0420ed1bd0ce63ab5ed3ef89c0b32218c7d0a3736c381147b167ac4828601"
+    },
+    {
+      "id": "wear-word",
+      "text": "穿",
+      "file": "wear-word.mp3",
+      "sha256": "325aba8f4c9eab0754410a8a84d4bac68710d425fdb573267734d51a8fceb138"
+    },
+    {
+      "id": "west-sentence",
+      "text": "向西走。",
+      "file": "west-sentence.mp3",
+      "sha256": "49b173b2148fa0487895d1adb99d38efc212f3e33084f5c66695f5c1e83b9c88"
+    },
+    {
+      "id": "west-word",
+      "text": "西",
+      "file": "west-word.mp3",
+      "sha256": "14a091b0e8e34278e8782d2c01017fb136fc4e928ba993b926bdb39b5f985e18"
+    },
+    {
+      "id": "where-sentence",
+      "text": "你在哪里？",
+      "file": "where-sentence.mp3",
+      "sha256": "4936d93e9e59dcbc28edfa1c920c7e69f2871d94a81f7e152613181df558f486"
+    },
+    {
+      "id": "where-word",
+      "text": "哪里",
+      "file": "where-word.mp3",
+      "sha256": "0f943e0e1bf4d5a8771121888e1119fa4a7fd030efdc867d72a69988a01ee838"
+    },
+    {
+      "id": "yuan-sentence",
+      "text": "这杯茶十元。",
+      "file": "yuan-sentence.mp3",
+      "sha256": "aac7c5074c6d8a88455d81dfa70ed4d296729536346bde6a32cdad7e8e7e16c9"
+    },
+    {
+      "id": "yuan-word",
+      "text": "元",
+      "file": "yuan-word.mp3",
+      "sha256": "ed6f653e72535c8066d7a406699b8aeca97ead40ade7788fc59936debee67f28"
+    }
+  ]
+}
