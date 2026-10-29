@@ -33,4 +33,3 @@ test('Stroke display includes every comparison and sentence without changing any
  const font=JSON.parse(fs.readFileSync('public/fonts/hanzi-display.json'));
  for(const item of m.confusionItems)for(const ch of item.hanzi+item.sentence){if(/[\p{Script=Han}]/u.test(ch))assert.ok(font.characters.includes(ch),ch);}
 });
-

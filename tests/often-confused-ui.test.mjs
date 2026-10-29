@@ -22,4 +22,3 @@ test('Cover/reveal self-check hides both Chinese and pinyin, resets between sets
  await m.act(async()=>root.root.findByType('input').props.onChange({target:{value:''}}));await m.act(async()=>button('Same sound').props.onClick());assert.equal(root.root.findByProps({className:'oc-library-grid'}).findAllByType('button').length,3);
  await m.act(async()=>button('Back to my cards').props.onClick());assert.equal(closed,1);await m.act(async()=>root.unmount());
 });
-
