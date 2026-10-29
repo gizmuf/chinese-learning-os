@@ -1,4 +1,4 @@
-@font-face{font-family:'Chinese OS Stroke';src:url('/fonts/ChineseOSStroke.woff') format('woff');font-display:swap;font-weight:100 900;unicode-range:U+2E80-9FFF,U+F900-FAFF,U+20000-3134F}
+@font-face{font-family:'Chinese OS Stroke';src:url('/fonts/ChineseOSStroke.woff?v=a9a63c07d7f2') format('woff');font-display:swap;font-weight:100 900;unicode-range:U+2E80-9FFF,U+F900-FAFF,U+20000-3134F}
 :root{--font-hanzi:'Chinese OS Stroke';--font-chinese:var(--font-hanzi)}
 html[data-hanzi-style=print]{--font-hanzi:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif}
 body{font-family:var(--font-hanzi),-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif}

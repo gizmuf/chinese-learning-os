@@ -1,0 +1,1677 @@
+{
+  "groups": [
+    {
+      "id": "all-many",
+      "title": {
+        "en": "All or many?",
+        "fr": "Tous ou beaucoup ?",
+        "ru": "Все или много?",
+        "tr": "Hepsi mi, çok mu?"
+      },
+      "items": [
+        "all",
+        "many"
+      ],
+      "note": {
+        "en": "都 dōu includes every member of a group. 多 duō describes a large amount. Listen for ou versus uo.",
+        "fr": "都 dōu inclut chaque membre du groupe. 多 duō indique une grande quantité. Écoutez ou et uo.",
+        "ru": "都 dōu охватывает всех в группе. 多 duō означает большое количество. Слушайте различие ou и uo.",
+        "tr": "都 dōu grubun tamamını kapsar. 多 duō çok miktar belirtir. ou ile uo farkını dinleyin."
+      },
+      "category": "sound",
+      "categories": [
+        "sound",
+        "meaning"
+      ]
+    },
+    {
+      "id": "arrive-fall",
+      "title": {
+        "en": "Arrive or fall?",
+        "fr": "Arriver ou tomber ?",
+        "ru": "Прибыть или упасть?",
+        "tr": "Varmak mı, devrilmek mi?"
+      },
+      "items": [
+        "arrive",
+        "fall"
+      ],
+      "note": {
+        "en": "Same syllable, different tone: dào falls; dǎo is tone 3. Here 倒 means fall over; its reading dào has other uses, such as pouring.",
+        "fr": "Même syllabe, ton différent : dào descend ; dǎo est au ton 3. Ici 倒 signifie se renverser ; la lecture dào a d’autres emplois, dont verser.",
+        "ru": "Один слог, разные тоны: dào — нисходящий, dǎo — третий. Здесь 倒 значит «опрокинуться»; чтение dào используется, например, для «наливать».",
+        "tr": "Aynı hece, farklı ton: dào düşen tondur; dǎo üçüncü tondur. Burada 倒 devrilmek demektir; dào okunuşu dökmek gibi başka anlamlarda kullanılır."
+      },
+      "category": "tone",
+      "categories": [
+        "tone"
+      ]
+    },
+    {
+      "id": "do-sit-walk",
+      "title": {
+        "en": "Do, sit or leave?",
+        "fr": "Faire, s’asseoir ou partir ?",
+        "ru": "Делать, сидеть или уходить?",
+        "tr": "Yapmak, oturmak, gitmek?"
+      },
+      "items": [
+        "do",
+        "sit",
+        "walk"
+      ],
+      "note": {
+        "en": "做 and 坐 are both zuò. A single sound cannot tell them apart: use the picture or whole sentence. 走 zǒu has a different ending and tone.",
+        "fr": "做 et 坐 se prononcent tous deux zuò : utilisez l’image ou la phrase entière pour les distinguer. 走 zǒu a une autre finale et un autre ton.",
+        "ru": "做 и 坐 звучат одинаково: zuò. Различайте их по картинке или целому предложению. У 走 zǒu другая финаль и другой тон.",
+        "tr": "做 ve 坐 aynı okunur: zuò. Ayırmak için görsele veya tüm cümleye bakın. 走 zǒu farklı bir hece sonuna ve tona sahiptir."
+      },
+      "category": "homophone",
+      "categories": [
+        "homophone",
+        "sound"
+      ]
+    },
+    {
+      "id": "near-enter-far",
+      "title": {
+        "en": "Near, enter or far?",
+        "fr": "Près, entrer ou loin ?",
+        "ru": "Близко, входить или далеко?",
+        "tr": "Yakın, girmek, uzak?"
+      },
+      "items": [
+        "near",
+        "enter",
+        "far"
+      ],
+      "note": {
+        "en": "近 and 进 are both jìn. Short distance versus crossing a doorway: the sentence gives the meaning. 远 yuǎn is the opposite of near, with a different sound.",
+        "fr": "近 et 进 se prononcent tous deux jìn : petite distance ou passage d’une porte, c’est la phrase qui précise le sens. 远 yuǎn est l’opposé de près et se prononce autrement.",
+        "ru": "近 и 进 звучат одинаково: jìn. Короткое расстояние или вход в дверь — смысл задаёт предложение. 远 yuǎn противоположно «близко» и звучит иначе.",
+        "tr": "近 ve 进 aynı okunur: jìn. Kısa mesafe mi, kapıdan giriş mi? Anlamı cümle belirler. 远 yuǎn yakının zıddıdır ve farklı okunur."
+      },
+      "category": "sound",
+      "categories": [
+        "homophone",
+        "meaning"
+      ]
+    },
+    {
+      "id": "buy-sell",
+      "title": {
+        "en": "Buy or sell?",
+        "fr": "Acheter ou vendre ?",
+        "ru": "Покупать или продавать?",
+        "tr": "Almak mı, satmak mı?"
+      },
+      "items": [
+        "buy",
+        "sell"
+      ],
+      "note": {
+        "en": "买 mǎi: the item comes to you. 卖 mài: the item goes away from you. Same syllable, tone 3 versus tone 4.",
+        "fr": "买 mǎi : l’objet vient vers vous. 卖 mài : l’objet vous quitte. Même syllabe, ton 3 contre ton 4.",
+        "ru": "买 mǎi: предмет приходит к вам. 卖 mài: предмет уходит от вас. Один слог, третий и четвёртый тоны.",
+        "tr": "买 mǎi: eşya sana gelir. 卖 mài: eşya senden gider. Aynı hece; üçüncü ve dördüncü ton."
+      },
+      "category": "tone",
+      "categories": [
+        "tone",
+        "meaning"
+      ]
+    },
+    {
+      "id": "have-again-right",
+      "category": "sound",
+      "title": {
+        "en": "Have, again or right?",
+        "fr": "Avoir, encore ou droite ?",
+        "ru": "Иметь, снова или направо?",
+        "tr": "Sahip olmak, yine, sağ?"
+      },
+      "items": [
+        "have",
+        "again",
+        "right"
+      ],
+      "note": {
+        "en": "有 yǒu differs in tone from 又 and 右 yòu. 又 and 右 are homophones; context tells them apart.",
+        "fr": "有 yǒu se distingue par le ton de 又 et 右 yòu. 又 et 右 sont homophones ; le contexte les distingue.",
+        "ru": "有 yǒu отличается тоном от 又 и 右 yòu. 又 и 右 — омонимы по звучанию; различайте их по контексту.",
+        "tr": "有 yǒu, 又 ve 右 yòu ile ton bakımından farklıdır. 又 ile 右 eş seslidir; anlamı bağlam belirler."
+      },
+      "categories": [
+        "homophone",
+        "tone"
+      ]
+    },
+    {
+      "id": "want-have",
+      "category": "meaning",
+      "title": {
+        "en": "Want or have?",
+        "fr": "Vouloir ou avoir ?",
+        "ru": "Хотеть или иметь?",
+        "tr": "İstemek mi, sahip olmak mı?"
+      },
+      "items": [
+        "want",
+        "have"
+      ],
+      "note": {
+        "en": "要 yào expresses wanting here; 有 yǒu expresses possession. This is a meaning contrast, and the vowels and tones also differ.",
+        "fr": "Ici 要 yào exprime un souhait ; 有 yǒu exprime la possession. Le sens, les voyelles et les tons diffèrent.",
+        "ru": "Здесь 要 yào выражает желание, а 有 yǒu — обладание. Различаются значение, гласные и тоны.",
+        "tr": "Burada 要 yào istek, 有 yǒu sahiplik belirtir. Anlamları, ünlüleri ve tonları farklıdır."
+      },
+      "categories": [
+        "meaning",
+        "sound"
+      ]
+    },
+    {
+      "id": "also-rain-month-money",
+      "category": "sound",
+      "title": {
+        "en": "Also, rain, month or yuan?",
+        "fr": "Aussi, pluie, mois ou yuan ?",
+        "ru": "Тоже, дождь, месяц или юань?",
+        "tr": "De, yağmur, ay, yuan?"
+      },
+      "items": [
+        "also",
+        "rain",
+        "month",
+        "yuan"
+      ],
+      "note": {
+        "en": "也 yě, 雨 yǔ, 月 yuè and 元 yuán have different finals; 月 is tone 4 and 元 tone 2. 元 here is the currency unit, not money in general.",
+        "fr": "也 yě, 雨 yǔ, 月 yuè et 元 yuán ont des finales différentes ; 月 est au ton 4 et 元 au ton 2. Ici 元 est l’unité monétaire.",
+        "ru": "У 也 yě, 雨 yǔ, 月 yuè и 元 yuán разные финали; 月 имеет четвёртый тон, 元 — второй. Здесь 元 — денежная единица.",
+        "tr": "也 yě, 雨 yǔ, 月 yuè ve 元 yuán farklı hece sonlarına sahiptir; 月 dördüncü, 元 ikinci tondur. 元 burada para birimidir."
+      },
+      "categories": [
+        "sound"
+      ]
+    },
+    {
+      "id": "search-grass-toilet",
+      "category": "sound",
+      "title": {
+        "en": "Search, grass or toilet?",
+        "fr": "Chercher, herbe ou toilettes ?",
+        "ru": "Искать, трава или туалет?",
+        "tr": "Aramak, çimen, tuvalet?"
+      },
+      "items": [
+        "search",
+        "grass",
+        "toilet"
+      ],
+      "note": {
+        "en": "搜 sōu, 草 cǎo and 厕所 cèsuǒ differ in initials, finals and tones. 厕所 is a two-syllable word; 所 alone does not mean toilet.",
+        "fr": "搜 sōu, 草 cǎo et 厕所 cèsuǒ diffèrent par les initiales, les finales et les tons. 厕所 a deux syllabes ; 所 seul ne signifie pas toilettes.",
+        "ru": "搜 sōu, 草 cǎo и 厕所 cèsuǒ различаются инициалями, финалями и тонами. В 厕所 два слога; 所 отдельно не значит «туалет».",
+        "tr": "搜 sōu, 草 cǎo ve 厕所 cèsuǒ başlangıç, hece sonu ve ton bakımından farklıdır. 厕所 iki hecelidir; 所 tek başına tuvalet demek değildir."
+      },
+      "categories": [
+        "sound"
+      ]
+    },
+    {
+      "id": "early-find",
+      "category": "sound",
+      "title": {
+        "en": "Early or look for?",
+        "fr": "Tôt ou chercher ?",
+        "ru": "Рано или искать?",
+        "tr": "Erken mi, aramak mı?"
+      },
+      "items": [
+        "early",
+        "find"
+      ],
+      "note": {
+        "en": "早 zǎo and 找 zhǎo share tone 3 and the final ao; listen for z versus zh.",
+        "fr": "早 zǎo et 找 zhǎo ont le ton 3 et la finale ao ; écoutez z et zh.",
+        "ru": "早 zǎo и 找 zhǎo имеют третий тон и финаль ao; слушайте различие z и zh.",
+        "tr": "早 zǎo ile 找 zhǎo üçüncü tonu ve ao sonunu paylaşır; z ile zh farkını dinleyin."
+      },
+      "categories": [
+        "sound"
+      ]
+    },
+    {
+      "id": "coarse-exit",
+      "category": "sound",
+      "title": {
+        "en": "Coarse or go out?",
+        "fr": "Grossier ou sortir ?",
+        "ru": "Крупный помол или выходить?",
+        "tr": "İri taneli mi, çıkmak mı?"
+      },
+      "items": [
+        "coarse",
+        "exit"
+      ],
+      "note": {
+        "en": "粗 cū and 出 chū share tone 1 and u; their initials c and ch differ. 粗 describes texture here.",
+        "fr": "粗 cū et 出 chū ont le ton 1 et u ; leurs initiales c et ch diffèrent. Ici 粗 décrit la texture.",
+        "ru": "粗 cū и 出 chū имеют первый тон и u; различаются инициали c и ch. Здесь 粗 описывает структуру соли.",
+        "tr": "粗 cū ile 出 chū birinci tonu ve u sesini paylaşır; c ile ch farklıdır. 粗 burada tane yapısını anlatır."
+      },
+      "categories": [
+        "sound"
+      ]
+    },
+    {
+      "id": "four-be",
+      "category": "sound",
+      "title": {
+        "en": "Four or be?",
+        "fr": "Quatre ou être ?",
+        "ru": "Четыре или быть?",
+        "tr": "Dört mü, olmak mı?"
+      },
+      "items": [
+        "four",
+        "be"
+      ],
+      "note": {
+        "en": "四 sì and 是 shì share tone 4. Their initials and the vowel sounds written i differ; use the audio.",
+        "fr": "四 sì et 是 shì ont le ton 4. Leurs initiales et les sons écrits i diffèrent ; écoutez l’audio.",
+        "ru": "四 sì и 是 shì имеют четвёртый тон. Различаются инициали и гласные, записанные буквой i; слушайте аудио.",
+        "tr": "四 sì ile 是 shì dördüncü tondur. Başlangıçları ve i ile yazılan ünlü sesleri farklıdır; sesi dinleyin."
+      },
+      "categories": [
+        "sound"
+      ]
+    },
+    {
+      "id": "jqx",
+      "category": "sound",
+      "title": {
+        "en": "Chicken, seven or west?",
+        "fr": "Poule, sept ou ouest ?",
+        "ru": "Курица, семь или запад?",
+        "tr": "Tavuk, yedi, batı?"
+      },
+      "items": [
+        "chicken",
+        "seven",
+        "west"
+      ],
+      "note": {
+        "en": "鸡 jī, 七 qī and 西 xī share tone 1 and the final i. Practise the three distinct initials j, q and x.",
+        "fr": "鸡 jī, 七 qī et 西 xī ont le ton 1 et la finale i. Travaillez les trois initiales distinctes j, q et x.",
+        "ru": "鸡 jī, 七 qī и 西 xī имеют первый тон и финаль i. Тренируйте разные инициали j, q и x.",
+        "tr": "鸡 jī, 七 qī ve 西 xī birinci tonu ve i sonunu paylaşır. Farklı j, q ve x başlangıçlarını çalışın."
+      },
+      "categories": [
+        "sound"
+      ]
+    },
+    {
+      "id": "please-clear",
+      "category": "tone",
+      "title": {
+        "en": "Please or clear?",
+        "fr": "S’il vous plaît ou limpide ?",
+        "ru": "Пожалуйста или прозрачный?",
+        "tr": "Lütfen mi, berrak mı?"
+      },
+      "items": [
+        "please",
+        "clear"
+      ],
+      "note": {
+        "en": "请 qǐng is tone 3; 清 qīng is tone 1. The syllable is otherwise the same. 清 describes clear water here.",
+        "fr": "请 qǐng est au ton 3 ; 清 qīng au ton 1. Le reste de la syllabe est identique. 清 décrit ici l’eau limpide.",
+        "ru": "请 qǐng имеет третий тон, 清 qīng — первый. Остальная часть слога совпадает. Здесь 清 описывает прозрачную воду.",
+        "tr": "请 qǐng üçüncü, 清 qīng birinci tondur. Hecenin kalanı aynıdır. 清 burada berrak suyu anlatır."
+      },
+      "categories": [
+        "tone"
+      ]
+    },
+    {
+      "id": "west-wash",
+      "category": "tone",
+      "title": {
+        "en": "West or wash?",
+        "fr": "Ouest ou laver ?",
+        "ru": "Запад или мыть?",
+        "tr": "Batı mı, yıkamak mı?"
+      },
+      "items": [
+        "west",
+        "wash"
+      ],
+      "note": {
+        "en": "西 xī: tone 1; 洗 xǐ: tone 3. Listen to the tone contrast in the first syllable.",
+        "fr": "西 xī : ton 1 ; 洗 xǐ : ton 3. Écoutez le contraste tonal de la première syllabe.",
+        "ru": "西 xī: тон 1; 洗 xǐ: тон 3. Слушайте различие тонов первого слога.",
+        "tr": "西 xī: 1. ton; 洗 xǐ: 3. ton. İlk hecedeki ton farkını dinleyin."
+      },
+      "categories": [
+        "tone"
+      ]
+    },
+    {
+      "id": "listen-stop",
+      "category": "tone",
+      "title": {
+        "en": "Listen or stop?",
+        "fr": "Écouter ou s’arrêter ?",
+        "ru": "Слушать или остановиться?",
+        "tr": "Dinlemek mi, durmak mı?"
+      },
+      "items": [
+        "listen",
+        "stop"
+      ],
+      "note": {
+        "en": "听 tīng: tone 1; 停 tíng: tone 2. Listen to the tone contrast in the first syllable.",
+        "fr": "听 tīng : ton 1 ; 停 tíng : ton 2. Écoutez le contraste tonal de la première syllabe.",
+        "ru": "听 tīng: тон 1; 停 tíng: тон 2. Слушайте различие тонов первого слога.",
+        "tr": "听 tīng: 1. ton; 停 tíng: 2. ton. İlk hecedeki ton farkını dinleyin."
+      },
+      "categories": [
+        "tone"
+      ]
+    },
+    {
+      "id": "wear-boat",
+      "category": "tone",
+      "title": {
+        "en": "Wear or boat?",
+        "fr": "Porter ou bateau ?",
+        "ru": "Носить или лодка?",
+        "tr": "Giymek mi, tekne mi?"
+      },
+      "items": [
+        "wear",
+        "boat"
+      ],
+      "note": {
+        "en": "穿 chuān: tone 1; 船 chuán: tone 2. Listen to the tone contrast in the first syllable.",
+        "fr": "穿 chuān : ton 1 ; 船 chuán : ton 2. Écoutez le contraste tonal de la première syllabe.",
+        "ru": "穿 chuān: тон 1; 船 chuán: тон 2. Слушайте различие тонов первого слога.",
+        "tr": "穿 chuān: 1. ton; 船 chuán: 2. ton. İlk hecedeki ton farkını dinleyin."
+      },
+      "categories": [
+        "tone"
+      ]
+    },
+    {
+      "id": "book-tree",
+      "category": "tone",
+      "title": {
+        "en": "Book or tree?",
+        "fr": "Livre ou arbre ?",
+        "ru": "Книга или дерево?",
+        "tr": "Kitap mı, ağaç mı?"
+      },
+      "items": [
+        "book",
+        "tree"
+      ],
+      "note": {
+        "en": "书 shū: tone 1; 树 shù: tone 4. Listen to the tone contrast in the first syllable.",
+        "fr": "书 shū : ton 1 ; 树 shù : ton 4. Écoutez le contraste tonal de la première syllabe.",
+        "ru": "书 shū: тон 1; 树 shù: тон 4. Слушайте различие тонов первого слога.",
+        "tr": "书 shū: 1. ton; 树 shù: 4. ton. İlk hecedeki ton farkını dinleyin."
+      },
+      "categories": [
+        "tone"
+      ]
+    },
+    {
+      "id": "mother-horse-scold",
+      "category": "tone",
+      "title": {
+        "en": "Mum, horse or scold?",
+        "fr": "Maman, cheval ou gronder ?",
+        "ru": "Мама, лошадь или ругать?",
+        "tr": "Anne, at, azarlamak?"
+      },
+      "items": [
+        "mother",
+        "horse",
+        "scold"
+      ],
+      "note": {
+        "en": "妈 mā, 马 mǎ and 骂 mà share ma: tone 1, tone 3 and tone 4. The meanings are unrelated.",
+        "fr": "妈 mā, 马 mǎ et 骂 mà partagent ma : tons 1, 3 et 4. Les sens ne sont pas liés.",
+        "ru": "妈 mā, 马 mǎ и 骂 mà имеют слог ma: тоны 1, 3 и 4. Значения не связаны.",
+        "tr": "妈 mā, 马 mǎ ve 骂 mà aynı ma hecesini paylaşır: birinci, üçüncü ve dördüncü ton. Anlamları ilişkili değildir."
+      },
+      "categories": [
+        "tone"
+      ]
+    },
+    {
+      "id": "water-sleep",
+      "category": "tone",
+      "title": {
+        "en": "Water or sleep?",
+        "fr": "Eau ou dormir ?",
+        "ru": "Вода или спать?",
+        "tr": "Su mu, uyumak mı?"
+      },
+      "items": [
+        "water",
+        "sleep"
+      ],
+      "note": {
+        "en": "水 shuǐ: tone 3; 睡 shuì: tone 4. Listen to the tone contrast in the first syllable.",
+        "fr": "水 shuǐ : ton 3 ; 睡 shuì : ton 4. Écoutez le contraste tonal de la première syllabe.",
+        "ru": "水 shuǐ: тон 3; 睡 shuì: тон 4. Слушайте различие тонов первого слога.",
+        "tr": "水 shuǐ: 3. ton; 睡 shuì: 4. ton. İlk hecedeki ton farkını dinleyin."
+      },
+      "categories": [
+        "tone"
+      ]
+    },
+    {
+      "id": "soup-sugar",
+      "category": "tone",
+      "title": {
+        "en": "Soup or sugar?",
+        "fr": "Soupe ou sucre ?",
+        "ru": "Суп или сахар?",
+        "tr": "Çorba mı, şeker mi?"
+      },
+      "items": [
+        "soup",
+        "sugar"
+      ],
+      "note": {
+        "en": "汤 tāng: tone 1; 糖 táng: tone 2. Listen to the tone contrast in the first syllable.",
+        "fr": "汤 tāng : ton 1 ; 糖 táng : ton 2. Écoutez le contraste tonal de la première syllabe.",
+        "ru": "汤 tāng: тон 1; 糖 táng: тон 2. Слушайте различие тонов первого слога.",
+        "tr": "汤 tāng: 1. ton; 糖 táng: 2. ton. İlk hecedeki ton farkını dinleyin."
+      },
+      "categories": [
+        "tone"
+      ]
+    },
+    {
+      "id": "bag-full",
+      "category": "tone",
+      "title": {
+        "en": "Bag or full?",
+        "fr": "Sac ou rassasié ?",
+        "ru": "Сумка или сытый?",
+        "tr": "Çanta mı, tok mu?"
+      },
+      "items": [
+        "bag",
+        "full"
+      ],
+      "note": {
+        "en": "包 bāo: tone 1; 饱 bǎo: tone 3. Listen to the tone contrast in the first syllable.",
+        "fr": "包 bāo : ton 1 ; 饱 bǎo : ton 3. Écoutez le contraste tonal de la première syllabe.",
+        "ru": "包 bāo: тон 1; 饱 bǎo: тон 3. Слушайте различие тонов первого слога.",
+        "tr": "包 bāo: 1. ton; 饱 bǎo: 3. ton. İlk hecedeki ton farkını dinleyin."
+      },
+      "categories": [
+        "tone"
+      ]
+    },
+    {
+      "id": "cup-quilt",
+      "category": "tone",
+      "title": {
+        "en": "Cup or quilt?",
+        "fr": "Tasse ou couette ?",
+        "ru": "Чашка или одеяло?",
+        "tr": "Fincan mı, yorgan mı?"
+      },
+      "items": [
+        "cup",
+        "quilt"
+      ],
+      "note": {
+        "en": "杯子 bēizi: tone 1; 被子 bèizi: tone 4. Listen to the tone contrast in the first syllable.",
+        "fr": "杯子 bēizi : ton 1 ; 被子 bèizi : ton 4. Écoutez le contraste tonal de la première syllabe.",
+        "ru": "杯子 bēizi: тон 1; 被子 bèizi: тон 4. Слушайте различие тонов первого слога.",
+        "tr": "杯子 bēizi: 1. ton; 被子 bèizi: 4. ton. İlk hecedeki ton farkını dinleyin."
+      },
+      "categories": [
+        "tone"
+      ]
+    },
+    {
+      "id": "where-there",
+      "category": "tone",
+      "title": {
+        "en": "Where or there?",
+        "fr": "Où ou là-bas ?",
+        "ru": "Где или там?",
+        "tr": "Nerede mi, orada mı?"
+      },
+      "items": [
+        "where",
+        "there"
+      ],
+      "note": {
+        "en": "哪里 nǎlǐ asks where; 那里 nàli means there. The first syllable contrasts tone 3 with tone 4. Here 那里 follows the dictionary’s neutral li; full-tone nàlǐ also occurs and is not an error.",
+        "fr": "哪里 nǎlǐ demande où ; 那里 nàli signifie là-bas. La première syllabe oppose les tons 3 et 4. Ici 那里 suit le li neutre du dictionnaire ; la forme à ton plein nàlǐ existe aussi et n’est pas une erreur.",
+        "ru": "哪里 nǎlǐ означает «где?», 那里 nàli — «там». В первом слоге различаются третий и четвёртый тоны. Здесь li в 那里 нейтральный, как в словаре; вариант nàlǐ с полным тоном тоже допустим.",
+        "tr": "哪里 nǎlǐ nerede diye sorar; 那里 nàli orada demektir. İlk hece üçüncü ve dördüncü tonla ayrılır. Burada 那里 sözlükteki nötr li ile verilir; tam tonlu nàlǐ biçimi de kullanılır ve yanlış değildir."
+      },
+      "categories": [
+        "tone",
+        "meaning"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "all",
+      "hanzi": "都",
+      "pinyin": "dōu",
+      "scene": "all",
+      "meaning": {
+        "en": "all; everyone",
+        "fr": "tous ; tout le monde",
+        "ru": "все",
+        "tr": "hepsi; herkes"
+      },
+      "sentence": "我们都去。",
+      "sentencePinyin": "Wǒmen dōu qù.",
+      "translation": {
+        "en": "We are all going.",
+        "fr": "Nous y allons tous.",
+        "ru": "Мы все идём.",
+        "tr": "Hepimiz gidiyoruz."
+      }
+    },
+    {
+      "id": "many",
+      "hanzi": "多",
+      "pinyin": "duō",
+      "scene": "many",
+      "meaning": {
+        "en": "many; much",
+        "fr": "beaucoup",
+        "ru": "много",
+        "tr": "çok"
+      },
+      "sentence": "人很多。",
+      "sentencePinyin": "Rén hěn duō.",
+      "translation": {
+        "en": "There are many people.",
+        "fr": "Il y a beaucoup de monde.",
+        "ru": "Людей много.",
+        "tr": "Çok insan var."
+      }
+    },
+    {
+      "id": "arrive",
+      "hanzi": "到",
+      "pinyin": "dào",
+      "scene": "arrive",
+      "meaning": {
+        "en": "arrive; reach",
+        "fr": "arriver ; atteindre",
+        "ru": "прибыть; достичь",
+        "tr": "varmak; ulaşmak"
+      },
+      "sentence": "我到了。",
+      "sentencePinyin": "Wǒ dào le.",
+      "translation": {
+        "en": "I have arrived.",
+        "fr": "Je suis arrivé(e).",
+        "ru": "Я уже на месте.",
+        "tr": "Vardım."
+      }
+    },
+    {
+      "id": "fall",
+      "hanzi": "倒",
+      "pinyin": "dǎo",
+      "scene": "fall",
+      "meaning": {
+        "en": "fall over",
+        "fr": "se renverser ; tomber",
+        "ru": "опрокинуться; упасть",
+        "tr": "devrilmek"
+      },
+      "sentence": "杯子倒了。",
+      "sentencePinyin": "Bēizi dǎo le.",
+      "translation": {
+        "en": "The cup fell over.",
+        "fr": "Le verre s’est renversé.",
+        "ru": "Стакан опрокинулся.",
+        "tr": "Bardak devrildi."
+      }
+    },
+    {
+      "id": "do",
+      "hanzi": "做",
+      "pinyin": "zuò",
+      "scene": "cook",
+      "meaning": {
+        "en": "do; make",
+        "fr": "faire",
+        "ru": "делать",
+        "tr": "yapmak"
+      },
+      "sentence": "我做饭。",
+      "sentencePinyin": "Wǒ zuò fàn.",
+      "translation": {
+        "en": "I cook.",
+        "fr": "Je fais la cuisine.",
+        "ru": "Я готовлю еду.",
+        "tr": "Yemek yapıyorum."
+      }
+    },
+    {
+      "id": "sit",
+      "hanzi": "坐",
+      "pinyin": "zuò",
+      "scene": "sit",
+      "meaning": {
+        "en": "sit",
+        "fr": "s’asseoir ; être assis",
+        "ru": "сидеть; садиться",
+        "tr": "oturmak"
+      },
+      "sentence": "请坐。",
+      "sentencePinyin": "Qǐng zuò.",
+      "translation": {
+        "en": "Please sit down.",
+        "fr": "Asseyez-vous, s’il vous plaît.",
+        "ru": "Садитесь, пожалуйста.",
+        "tr": "Lütfen oturun."
+      }
+    },
+    {
+      "id": "walk",
+      "hanzi": "走",
+      "pinyin": "zǒu",
+      "scene": "walk",
+      "meaning": {
+        "en": "walk; leave",
+        "fr": "marcher ; partir",
+        "ru": "идти; уходить",
+        "tr": "yürümek; ayrılmak"
+      },
+      "sentence": "我走了。",
+      "sentencePinyin": "Wǒ zǒu le.",
+      "translation": {
+        "en": "I’m leaving.",
+        "fr": "Je m’en vais.",
+        "ru": "Я ухожу.",
+        "tr": "Ben gidiyorum."
+      }
+    },
+    {
+      "id": "near",
+      "hanzi": "近",
+      "pinyin": "jìn",
+      "scene": "near",
+      "meaning": {
+        "en": "near",
+        "fr": "près",
+        "ru": "близко",
+        "tr": "yakın"
+      },
+      "sentence": "学校很近。",
+      "sentencePinyin": "Xuéxiào hěn jìn.",
+      "translation": {
+        "en": "The school is very near.",
+        "fr": "L’école est tout près.",
+        "ru": "Школа очень близко.",
+        "tr": "Okul çok yakın."
+      }
+    },
+    {
+      "id": "enter",
+      "hanzi": "进",
+      "pinyin": "jìn",
+      "scene": "enter",
+      "meaning": {
+        "en": "enter; go in",
+        "fr": "entrer",
+        "ru": "входить",
+        "tr": "girmek"
+      },
+      "sentence": "请进。",
+      "sentencePinyin": "Qǐng jìn.",
+      "translation": {
+        "en": "Please come in.",
+        "fr": "Entrez, s’il vous plaît.",
+        "ru": "Входите, пожалуйста.",
+        "tr": "Lütfen içeri girin."
+      }
+    },
+    {
+      "id": "far",
+      "hanzi": "远",
+      "pinyin": "yuǎn",
+      "scene": "far",
+      "meaning": {
+        "en": "far",
+        "fr": "loin",
+        "ru": "далеко",
+        "tr": "uzak"
+      },
+      "sentence": "学校很远。",
+      "sentencePinyin": "Xuéxiào hěn yuǎn.",
+      "translation": {
+        "en": "The school is far away.",
+        "fr": "L’école est loin.",
+        "ru": "Школа далеко.",
+        "tr": "Okul çok uzak."
+      }
+    },
+    {
+      "id": "buy",
+      "hanzi": "买",
+      "pinyin": "mǎi",
+      "scene": "buy",
+      "meaning": {
+        "en": "buy",
+        "fr": "acheter",
+        "ru": "покупать",
+        "tr": "satın almak"
+      },
+      "sentence": "我买茶。",
+      "sentencePinyin": "Wǒ mǎi chá.",
+      "translation": {
+        "en": "I buy tea.",
+        "fr": "J’achète du thé.",
+        "ru": "Я покупаю чай.",
+        "tr": "Çay satın alıyorum."
+      }
+    },
+    {
+      "id": "sell",
+      "hanzi": "卖",
+      "pinyin": "mài",
+      "scene": "sell",
+      "meaning": {
+        "en": "sell",
+        "fr": "vendre",
+        "ru": "продавать",
+        "tr": "satmak"
+      },
+      "sentence": "他卖茶。",
+      "sentencePinyin": "Tā mài chá.",
+      "translation": {
+        "en": "He sells tea.",
+        "fr": "Il vend du thé.",
+        "ru": "Он продаёт чай.",
+        "tr": "O çay satıyor."
+      }
+    },
+    {
+      "id": "have",
+      "hanzi": "有",
+      "pinyin": "yǒu",
+      "scene": "have",
+      "meaning": {
+        "en": "have",
+        "fr": "avoir",
+        "ru": "иметь",
+        "tr": "sahip olmak"
+      },
+      "sentence": "我有书。",
+      "sentencePinyin": "Wǒ yǒu shū.",
+      "translation": {
+        "en": "I have a book.",
+        "fr": "J’ai un livre.",
+        "ru": "У меня есть книга.",
+        "tr": "Bir kitabım var."
+      }
+    },
+    {
+      "id": "again",
+      "hanzi": "又",
+      "pinyin": "yòu",
+      "scene": "again",
+      "meaning": {
+        "en": "again",
+        "fr": "encore",
+        "ru": "снова",
+        "tr": "yine"
+      },
+      "sentence": "他又来了。",
+      "sentencePinyin": "Tā yòu lái le.",
+      "translation": {
+        "en": "He came again.",
+        "fr": "Il est revenu.",
+        "ru": "Он снова пришёл.",
+        "tr": "O yine geldi."
+      }
+    },
+    {
+      "id": "right",
+      "hanzi": "右",
+      "pinyin": "yòu",
+      "scene": "right",
+      "meaning": {
+        "en": "right (direction)",
+        "fr": "droite (direction)",
+        "ru": "право (направление)",
+        "tr": "sağ (yön)"
+      },
+      "sentence": "向右走。",
+      "sentencePinyin": "Xiàng yòu zǒu.",
+      "translation": {
+        "en": "Go right.",
+        "fr": "Allez à droite.",
+        "ru": "Идите направо.",
+        "tr": "Sağa gidin."
+      }
+    },
+    {
+      "id": "want",
+      "hanzi": "要",
+      "pinyin": "yào",
+      "scene": "want",
+      "meaning": {
+        "en": "want",
+        "fr": "vouloir",
+        "ru": "хотеть",
+        "tr": "istemek"
+      },
+      "sentence": "我要茶。",
+      "sentencePinyin": "Wǒ yào chá.",
+      "translation": {
+        "en": "I want tea.",
+        "fr": "Je veux du thé.",
+        "ru": "Я хочу чаю.",
+        "tr": "Çay istiyorum."
+      }
+    },
+    {
+      "id": "also",
+      "hanzi": "也",
+      "pinyin": "yě",
+      "scene": "also",
+      "meaning": {
+        "en": "also; too",
+        "fr": "aussi",
+        "ru": "тоже",
+        "tr": "de; da"
+      },
+      "sentence": "我也去。",
+      "sentencePinyin": "Wǒ yě qù.",
+      "translation": {
+        "en": "I’m going too.",
+        "fr": "J’y vais aussi.",
+        "ru": "Я тоже иду.",
+        "tr": "Ben de gidiyorum."
+      }
+    },
+    {
+      "id": "rain",
+      "hanzi": "雨",
+      "pinyin": "yǔ",
+      "scene": "rain",
+      "meaning": {
+        "en": "rain",
+        "fr": "pluie",
+        "ru": "дождь",
+        "tr": "yağmur"
+      },
+      "sentence": "雨很大。",
+      "sentencePinyin": "Yǔ hěn dà.",
+      "translation": {
+        "en": "The rain is heavy.",
+        "fr": "Il pleut fort.",
+        "ru": "Идёт сильный дождь.",
+        "tr": "Şiddetli yağmur yağıyor."
+      }
+    },
+    {
+      "id": "month",
+      "hanzi": "月",
+      "pinyin": "yuè",
+      "scene": "month",
+      "meaning": {
+        "en": "month",
+        "fr": "mois",
+        "ru": "месяц",
+        "tr": "ay"
+      },
+      "sentence": "今天是五月三日。",
+      "sentencePinyin": "Jīntiān shì wǔ yuè sān rì.",
+      "translation": {
+        "en": "Today is May 3.",
+        "fr": "Aujourd’hui, c’est le 3 mai.",
+        "ru": "Сегодня третье мая.",
+        "tr": "Bugün 3 Mayıs."
+      }
+    },
+    {
+      "id": "yuan",
+      "hanzi": "元",
+      "pinyin": "yuán",
+      "scene": "yuan",
+      "meaning": {
+        "en": "yuan (currency unit)",
+        "fr": "yuan (unité monétaire)",
+        "ru": "юань (денежная единица)",
+        "tr": "yuan (para birimi)"
+      },
+      "sentence": "这杯茶十元。",
+      "sentencePinyin": "Zhè bēi chá shí yuán.",
+      "translation": {
+        "en": "This cup of tea costs ten yuan.",
+        "fr": "Cette tasse de thé coûte dix yuans.",
+        "ru": "Эта чашка чая стоит десять юаней.",
+        "tr": "Bu fincan çay on yuan."
+      }
+    },
+    {
+      "id": "search",
+      "hanzi": "搜",
+      "pinyin": "sōu",
+      "scene": "search",
+      "meaning": {
+        "en": "search",
+        "fr": "chercher",
+        "ru": "искать",
+        "tr": "aramak"
+      },
+      "sentence": "我在网上搜。",
+      "sentencePinyin": "Wǒ zài wǎngshàng sōu.",
+      "translation": {
+        "en": "I’m searching online.",
+        "fr": "Je cherche sur Internet.",
+        "ru": "Я ищу в интернете.",
+        "tr": "İnternette arıyorum."
+      }
+    },
+    {
+      "id": "grass",
+      "hanzi": "草",
+      "pinyin": "cǎo",
+      "scene": "grass",
+      "meaning": {
+        "en": "grass",
+        "fr": "herbe",
+        "ru": "трава",
+        "tr": "çimen"
+      },
+      "sentence": "草很绿。",
+      "sentencePinyin": "Cǎo hěn lǜ.",
+      "translation": {
+        "en": "The grass is very green.",
+        "fr": "L’herbe est très verte.",
+        "ru": "Трава очень зелёная.",
+        "tr": "Çimen çok yeşil."
+      }
+    },
+    {
+      "id": "toilet",
+      "hanzi": "厕所",
+      "pinyin": "cèsuǒ",
+      "scene": "toilet",
+      "meaning": {
+        "en": "toilet; restroom",
+        "fr": "toilettes",
+        "ru": "туалет",
+        "tr": "tuvalet"
+      },
+      "sentence": "厕所在哪里？",
+      "sentencePinyin": "Cèsuǒ zài nǎlǐ?",
+      "translation": {
+        "en": "Where is the restroom?",
+        "fr": "Où sont les toilettes ?",
+        "ru": "Где туалет?",
+        "tr": "Tuvalet nerede?"
+      }
+    },
+    {
+      "id": "early",
+      "hanzi": "早",
+      "pinyin": "zǎo",
+      "scene": "early",
+      "meaning": {
+        "en": "early",
+        "fr": "tôt",
+        "ru": "рано",
+        "tr": "erken"
+      },
+      "sentence": "你来得很早。",
+      "sentencePinyin": "Nǐ lái de hěn zǎo.",
+      "translation": {
+        "en": "You came very early.",
+        "fr": "Tu es arrivé(e) très tôt.",
+        "ru": "Ты пришёл очень рано.",
+        "tr": "Çok erken geldin."
+      }
+    },
+    {
+      "id": "find",
+      "hanzi": "找",
+      "pinyin": "zhǎo",
+      "scene": "find",
+      "meaning": {
+        "en": "look for",
+        "fr": "chercher",
+        "ru": "искать",
+        "tr": "aramak"
+      },
+      "sentence": "我找书。",
+      "sentencePinyin": "Wǒ zhǎo shū.",
+      "translation": {
+        "en": "I’m looking for a book.",
+        "fr": "Je cherche un livre.",
+        "ru": "Я ищу книгу.",
+        "tr": "Bir kitap arıyorum."
+      }
+    },
+    {
+      "id": "coarse",
+      "hanzi": "粗",
+      "pinyin": "cū",
+      "scene": "coarse",
+      "meaning": {
+        "en": "thick; coarse",
+        "fr": "épais ; grossier",
+        "ru": "толстый; грубый",
+        "tr": "kalın; kaba"
+      },
+      "sentence": "这根绳子很粗。",
+      "sentencePinyin": "Zhè gēn shéngzi hěn cū.",
+      "translation": {
+        "en": "This rope is very thick.",
+        "fr": "Cette corde est très épaisse.",
+        "ru": "Эта верёвка очень толстая.",
+        "tr": "Bu ip çok kalın."
+      }
+    },
+    {
+      "id": "exit",
+      "hanzi": "出",
+      "pinyin": "chū",
+      "scene": "exit",
+      "meaning": {
+        "en": "go out; exit",
+        "fr": "sortir",
+        "ru": "выходить",
+        "tr": "çıkmak"
+      },
+      "sentence": "我出门了。",
+      "sentencePinyin": "Wǒ chū mén le.",
+      "translation": {
+        "en": "I’ve gone out.",
+        "fr": "Je suis sorti(e).",
+        "ru": "Я вышел из дома.",
+        "tr": "Evden çıktım."
+      }
+    },
+    {
+      "id": "four",
+      "hanzi": "四",
+      "pinyin": "sì",
+      "scene": "four",
+      "meaning": {
+        "en": "four",
+        "fr": "quatre",
+        "ru": "четыре",
+        "tr": "dört"
+      },
+      "sentence": "我有四本书。",
+      "sentencePinyin": "Wǒ yǒu sì běn shū.",
+      "translation": {
+        "en": "I have four books.",
+        "fr": "J’ai quatre livres.",
+        "ru": "У меня четыре книги.",
+        "tr": "Dört kitabım var."
+      }
+    },
+    {
+      "id": "be",
+      "hanzi": "是",
+      "pinyin": "shì",
+      "scene": "be",
+      "meaning": {
+        "en": "be (identity)",
+        "fr": "être (identité)",
+        "ru": "быть (тождество)",
+        "tr": "olmak (kimlik)"
+      },
+      "sentence": "他是老师。",
+      "sentencePinyin": "Tā shì lǎoshī.",
+      "translation": {
+        "en": "He is a teacher.",
+        "fr": "Il est professeur.",
+        "ru": "Он учитель.",
+        "tr": "O öğretmen."
+      }
+    },
+    {
+      "id": "chicken",
+      "hanzi": "鸡",
+      "pinyin": "jī",
+      "scene": "chicken",
+      "meaning": {
+        "en": "chicken (bird)",
+        "fr": "poule",
+        "ru": "курица",
+        "tr": "tavuk"
+      },
+      "sentence": "鸡在这里。",
+      "sentencePinyin": "Jī zài zhèlǐ.",
+      "translation": {
+        "en": "The chicken is here.",
+        "fr": "La poule est ici.",
+        "ru": "Курица здесь.",
+        "tr": "Tavuk burada."
+      }
+    },
+    {
+      "id": "seven",
+      "hanzi": "七",
+      "pinyin": "qī",
+      "scene": "seven",
+      "meaning": {
+        "en": "seven",
+        "fr": "sept",
+        "ru": "семь",
+        "tr": "yedi"
+      },
+      "sentence": "我有七本书。",
+      "sentencePinyin": "Wǒ yǒu qī běn shū.",
+      "translation": {
+        "en": "I have seven books.",
+        "fr": "J’ai sept livres.",
+        "ru": "У меня семь книг.",
+        "tr": "Yedi kitabım var."
+      }
+    },
+    {
+      "id": "west",
+      "hanzi": "西",
+      "pinyin": "xī",
+      "scene": "west",
+      "meaning": {
+        "en": "west",
+        "fr": "ouest",
+        "ru": "запад",
+        "tr": "batı"
+      },
+      "sentence": "向西走。",
+      "sentencePinyin": "Xiàng xī zǒu.",
+      "translation": {
+        "en": "Go west.",
+        "fr": "Allez vers l’ouest.",
+        "ru": "Идите на запад.",
+        "tr": "Batıya gidin."
+      }
+    },
+    {
+      "id": "please",
+      "hanzi": "请",
+      "pinyin": "qǐng",
+      "scene": "please",
+      "meaning": {
+        "en": "please",
+        "fr": "s’il vous plaît",
+        "ru": "пожалуйста",
+        "tr": "lütfen"
+      },
+      "sentence": "请喝茶。",
+      "sentencePinyin": "Qǐng hē chá.",
+      "translation": {
+        "en": "Please have some tea.",
+        "fr": "Prenez du thé, s’il vous plaît.",
+        "ru": "Пейте чай, пожалуйста.",
+        "tr": "Lütfen çay için."
+      }
+    },
+    {
+      "id": "clear",
+      "hanzi": "清",
+      "pinyin": "qīng",
+      "scene": "clear",
+      "meaning": {
+        "en": "clear (water)",
+        "fr": "limpide (eau)",
+        "ru": "прозрачный (о воде)",
+        "tr": "berrak (su)"
+      },
+      "sentence": "水很清。",
+      "sentencePinyin": "Shuǐ hěn qīng.",
+      "translation": {
+        "en": "The water is clear.",
+        "fr": "L’eau est limpide.",
+        "ru": "Вода прозрачная.",
+        "tr": "Su berrak."
+      }
+    },
+    {
+      "id": "wash",
+      "hanzi": "洗",
+      "pinyin": "xǐ",
+      "scene": "wash",
+      "meaning": {
+        "en": "wash",
+        "fr": "laver",
+        "ru": "мыть",
+        "tr": "yıkamak"
+      },
+      "sentence": "我洗手。",
+      "sentencePinyin": "Wǒ xǐ shǒu.",
+      "translation": {
+        "en": "I wash my hands.",
+        "fr": "Je me lave les mains.",
+        "ru": "Я мою руки.",
+        "tr": "Ellerimi yıkıyorum."
+      }
+    },
+    {
+      "id": "listen",
+      "hanzi": "听",
+      "pinyin": "tīng",
+      "scene": "listen",
+      "meaning": {
+        "en": "listen",
+        "fr": "écouter",
+        "ru": "слушать",
+        "tr": "dinlemek"
+      },
+      "sentence": "我听音乐。",
+      "sentencePinyin": "Wǒ tīng yīnyuè.",
+      "translation": {
+        "en": "I listen to music.",
+        "fr": "J’écoute de la musique.",
+        "ru": "Я слушаю музыку.",
+        "tr": "Müzik dinliyorum."
+      }
+    },
+    {
+      "id": "stop",
+      "hanzi": "停",
+      "pinyin": "tíng",
+      "scene": "stop",
+      "meaning": {
+        "en": "stop",
+        "fr": "s’arrêter",
+        "ru": "останавливаться",
+        "tr": "durmak"
+      },
+      "sentence": "车停了。",
+      "sentencePinyin": "Chē tíng le.",
+      "translation": {
+        "en": "The car stopped.",
+        "fr": "La voiture s’est arrêtée.",
+        "ru": "Машина остановилась.",
+        "tr": "Araba durdu."
+      }
+    },
+    {
+      "id": "wear",
+      "hanzi": "穿",
+      "pinyin": "chuān",
+      "scene": "wear",
+      "meaning": {
+        "en": "wear (clothes)",
+        "fr": "porter (un vêtement)",
+        "ru": "носить (одежду)",
+        "tr": "giymek"
+      },
+      "sentence": "我穿新衣服。",
+      "sentencePinyin": "Wǒ chuān xīn yīfu.",
+      "translation": {
+        "en": "I’m wearing new clothes.",
+        "fr": "Je porte des vêtements neufs.",
+        "ru": "Я ношу новую одежду.",
+        "tr": "Yeni kıyafetler giyiyorum."
+      }
+    },
+    {
+      "id": "boat",
+      "hanzi": "船",
+      "pinyin": "chuán",
+      "scene": "boat",
+      "meaning": {
+        "en": "boat",
+        "fr": "bateau",
+        "ru": "лодка",
+        "tr": "tekne"
+      },
+      "sentence": "船在河上。",
+      "sentencePinyin": "Chuán zài hé shàng.",
+      "translation": {
+        "en": "The boat is on the river.",
+        "fr": "Le bateau est sur la rivière.",
+        "ru": "Лодка на реке.",
+        "tr": "Tekne nehirde."
+      }
+    },
+    {
+      "id": "book",
+      "hanzi": "书",
+      "pinyin": "shū",
+      "scene": "book",
+      "meaning": {
+        "en": "book",
+        "fr": "livre",
+        "ru": "книга",
+        "tr": "kitap"
+      },
+      "sentence": "这是我的书。",
+      "sentencePinyin": "Zhè shì wǒ de shū.",
+      "translation": {
+        "en": "This is my book.",
+        "fr": "C’est mon livre.",
+        "ru": "Это моя книга.",
+        "tr": "Bu benim kitabım."
+      }
+    },
+    {
+      "id": "tree",
+      "hanzi": "树",
+      "pinyin": "shù",
+      "scene": "tree",
+      "meaning": {
+        "en": "tree",
+        "fr": "arbre",
+        "ru": "дерево",
+        "tr": "ağaç"
+      },
+      "sentence": "树很高。",
+      "sentencePinyin": "Shù hěn gāo.",
+      "translation": {
+        "en": "The tree is tall.",
+        "fr": "L’arbre est grand.",
+        "ru": "Дерево высокое.",
+        "tr": "Ağaç uzun."
+      }
+    },
+    {
+      "id": "mother",
+      "hanzi": "妈",
+      "pinyin": "mā",
+      "scene": "mother",
+      "meaning": {
+        "en": "mum; mom",
+        "fr": "maman",
+        "ru": "мама",
+        "tr": "anne"
+      },
+      "sentence": "妈在家。",
+      "sentencePinyin": "Mā zài jiā.",
+      "translation": {
+        "en": "Mum is at home.",
+        "fr": "Maman est à la maison.",
+        "ru": "Мама дома.",
+        "tr": "Annem evde."
+      }
+    },
+    {
+      "id": "horse",
+      "hanzi": "马",
+      "pinyin": "mǎ",
+      "scene": "horse",
+      "meaning": {
+        "en": "horse",
+        "fr": "cheval",
+        "ru": "лошадь",
+        "tr": "at"
+      },
+      "sentence": "马在吃草。",
+      "sentencePinyin": "Mǎ zài chī cǎo.",
+      "translation": {
+        "en": "The horse is eating grass.",
+        "fr": "Le cheval mange de l’herbe.",
+        "ru": "Лошадь ест траву.",
+        "tr": "At çimen yiyor."
+      }
+    },
+    {
+      "id": "scold",
+      "hanzi": "骂",
+      "pinyin": "mà",
+      "scene": "scold",
+      "meaning": {
+        "en": "scold",
+        "fr": "gronder",
+        "ru": "ругать",
+        "tr": "azarlamak"
+      },
+      "sentence": "别骂他。",
+      "sentencePinyin": "Bié mà tā.",
+      "translation": {
+        "en": "Don’t scold him.",
+        "fr": "Ne le gronde pas.",
+        "ru": "Не ругай его.",
+        "tr": "Onu azarlama."
+      }
+    },
+    {
+      "id": "water",
+      "hanzi": "水",
+      "pinyin": "shuǐ",
+      "scene": "water",
+      "meaning": {
+        "en": "water",
+        "fr": "eau",
+        "ru": "вода",
+        "tr": "su"
+      },
+      "sentence": "我喝水。",
+      "sentencePinyin": "Wǒ hē shuǐ.",
+      "translation": {
+        "en": "I drink water.",
+        "fr": "Je bois de l’eau.",
+        "ru": "Я пью воду.",
+        "tr": "Su içiyorum."
+      }
+    },
+    {
+      "id": "sleep",
+      "hanzi": "睡",
+      "pinyin": "shuì",
+      "scene": "sleep",
+      "meaning": {
+        "en": "sleep",
+        "fr": "dormir",
+        "ru": "спать",
+        "tr": "uyumak"
+      },
+      "sentence": "孩子睡了。",
+      "sentencePinyin": "Háizi shuì le.",
+      "translation": {
+        "en": "The child has gone to sleep.",
+        "fr": "L’enfant s’est endormi.",
+        "ru": "Ребёнок уснул.",
+        "tr": "Çocuk uyudu."
+      }
+    },
+    {
+      "id": "soup",
+      "hanzi": "汤",
+      "pinyin": "tāng",
+      "scene": "soup",
+      "meaning": {
+        "en": "soup",
+        "fr": "soupe",
+        "ru": "суп",
+        "tr": "çorba"
+      },
+      "sentence": "汤很热。",
+      "sentencePinyin": "Tāng hěn rè.",
+      "translation": {
+        "en": "The soup is hot.",
+        "fr": "La soupe est chaude.",
+        "ru": "Суп горячий.",
+        "tr": "Çorba sıcak."
+      }
+    },
+    {
+      "id": "sugar",
+      "hanzi": "糖",
+      "pinyin": "táng",
+      "scene": "sugar",
+      "meaning": {
+        "en": "sugar",
+        "fr": "sucre",
+        "ru": "сахар",
+        "tr": "şeker"
+      },
+      "sentence": "我喝茶，不加糖。",
+      "sentencePinyin": "Wǒ hē chá, bù jiā táng.",
+      "translation": {
+        "en": "I drink tea without sugar.",
+        "fr": "Je bois du thé sans sucre.",
+        "ru": "Я пью чай без сахара.",
+        "tr": "Çayı şekersiz içiyorum."
+      }
+    },
+    {
+      "id": "bag",
+      "hanzi": "包",
+      "pinyin": "bāo",
+      "scene": "bag",
+      "meaning": {
+        "en": "bag",
+        "fr": "sac",
+        "ru": "сумка",
+        "tr": "çanta"
+      },
+      "sentence": "这是我的包。",
+      "sentencePinyin": "Zhè shì wǒ de bāo.",
+      "translation": {
+        "en": "This is my bag.",
+        "fr": "C’est mon sac.",
+        "ru": "Это моя сумка.",
+        "tr": "Bu benim çantam."
+      }
+    },
+    {
+      "id": "full",
+      "hanzi": "饱",
+      "pinyin": "bǎo",
+      "scene": "full",
+      "meaning": {
+        "en": "full (after eating)",
+        "fr": "rassasié",
+        "ru": "сытый",
+        "tr": "tok"
+      },
+      "sentence": "我吃饱了。",
+      "sentencePinyin": "Wǒ chī bǎo le.",
+      "translation": {
+        "en": "I’m full.",
+        "fr": "J’ai assez mangé.",
+        "ru": "Я сыт.",
+        "tr": "Doydum."
+      }
+    },
+    {
+      "id": "cup",
+      "hanzi": "杯子",
+      "pinyin": "bēizi",
+      "scene": "cup",
+      "meaning": {
+        "en": "cup",
+        "fr": "tasse",
+        "ru": "чашка",
+        "tr": "fincan"
+      },
+      "sentence": "杯子里有水。",
+      "sentencePinyin": "Bēizi lǐ yǒu shuǐ.",
+      "translation": {
+        "en": "There is water in the cup.",
+        "fr": "Il y a de l’eau dans la tasse.",
+        "ru": "В чашке есть вода.",
+        "tr": "Fincanda su var."
+      }
+    },
+    {
+      "id": "quilt",
+      "hanzi": "被子",
+      "pinyin": "bèizi",
+      "scene": "quilt",
+      "meaning": {
+        "en": "quilt",
+        "fr": "couette",
+        "ru": "стёганое одеяло",
+        "tr": "yorgan"
+      },
+      "sentence": "被子很暖和。",
+      "sentencePinyin": "Bèizi hěn nuǎnhuo.",
+      "translation": {
+        "en": "The quilt is warm.",
+        "fr": "La couette est bien chaude.",
+        "ru": "Одеяло тёплое.",
+        "tr": "Yorgan sıcak tutuyor."
+      }
+    },
+    {
+      "id": "where",
+      "hanzi": "哪里",
+      "pinyin": "nǎlǐ",
+      "scene": "where",
+      "meaning": {
+        "en": "where",
+        "fr": "où",
+        "ru": "где",
+        "tr": "nerede"
+      },
+      "sentence": "你在哪里？",
+      "sentencePinyin": "Nǐ zài nǎlǐ?",
+      "translation": {
+        "en": "Where are you?",
+        "fr": "Où es-tu ?",
+        "ru": "Где ты?",
+        "tr": "Neredesin?"
+      }
+    },
+    {
+      "id": "there",
+      "hanzi": "那里",
+      "pinyin": "nàli",
+      "scene": "there",
+      "meaning": {
+        "en": "there",
+        "fr": "là-bas",
+        "ru": "там",
+        "tr": "orada"
+      },
+      "sentence": "书在那里。",
+      "sentencePinyin": "Shū zài nàli.",
+      "translation": {
+        "en": "The book is over there.",
+        "fr": "Le livre est là-bas.",
+        "ru": "Книга там.",
+        "tr": "Kitap orada."
+      }
+    }
+  ],
+  "lookup": [
+    {
+      "id": "rope",
+      "hanzi": "绳子",
+      "pinyin": "shéngzi",
+      "meaning": {
+        "en": "rope",
+        "fr": "corde",
+        "ru": "верёвка",
+        "tr": "ip"
+      }
+    },
+    {
+      "id": "rope-char",
+      "hanzi": "绳",
+      "pinyin": "shéng",
+      "meaning": {
+        "en": "rope; cord",
+        "fr": "corde ; cordon",
+        "ru": "верёвка; шнур",
+        "tr": "ip; kordon"
+      }
+    }
+  ]
+}
