@@ -1,0 +1,4 @@
+import type {CloudWord} from './atlas-cloud-model';
+import {AlignedWord} from './word-family-text';
+export type FamilyBoardCopy={all:string;word:string;pinyin:string;meaning:string};
+export function WordFamilyBoard({words,anchor,selectedId,onChoose,copy}:{words:CloudWord[];anchor:string;selectedId?:string;onChoose:(word:CloudWord)=>void;copy:FamilyBoardCopy}){return <div className="wf-board" aria-label={copy.all}><div className="wf-table-head"><span>{copy.word} · <b lang="zh-Hans">{anchor}</b></span><span>{copy.pinyin}</span><span>{copy.meaning}</span></div>{words.map(word=><button type="button" key={word.id} className="wf-row" data-word-id={word.id} aria-pressed={selectedId===word.id} aria-label={word.hanzi+' · '+word.pinyin+' · '+word.meaning} onClick={()=>onChoose(word)}><AlignedWord word={word.hanzi} anchor={anchor}/><span className="wf-reading">{word.pinyin}</span><span className="wf-meaning">{word.meaning}</span></button>)}</div>;}
