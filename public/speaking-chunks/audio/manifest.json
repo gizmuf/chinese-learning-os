@@ -1183,6 +1183,918 @@
       "text": "我一到家就给你打电话。",
       "file": "frame-time-as-soon-1.mp3",
       "sha256": "ada3c7cbaeace9599f8e57e35bce4b68f2614c740767e3a2106ca75ec231cc95"
+    },
+    {
+      "id": "frame-adv-even-if-1-4",
+      "text": "也",
+      "file": "frame-adv-even-if-1-4.mp3",
+      "sha256": "b94e346ba162d1fa5adacd25d696b7feb90f05b5dfabe3bfd1462b5e95144b8b"
+    },
+    {
+      "id": "frame-adv-even-if-1-0",
+      "text": "即使",
+      "file": "frame-adv-even-if-1-0.mp3",
+      "sha256": "42b18dfc288927a08805453345d28b9fd5f190433a0ff314ee889fed9fc83603"
+    },
+    {
+      "id": "frame-adv-even-if-2-0",
+      "text": "即使",
+      "file": "frame-adv-even-if-2-0.mp3",
+      "sha256": "42b18dfc288927a08805453345d28b9fd5f190433a0ff314ee889fed9fc83603"
+    },
+    {
+      "id": "frame-adv-even-if-2-4",
+      "text": "也",
+      "file": "frame-adv-even-if-2-4.mp3",
+      "sha256": "b94e346ba162d1fa5adacd25d696b7feb90f05b5dfabe3bfd1462b5e95144b8b"
+    },
+    {
+      "id": "frame-adv-even-if-2",
+      "text": "即使只有十分钟，我们也可以练习中文。",
+      "file": "frame-adv-even-if-2.mp3",
+      "sha256": "7687aac063bb4966bcbf37808b29ff0e94c3bf95c1d5f3294f2a36ac8dd08807"
+    },
+    {
+      "id": "frame-adv-even-if-1",
+      "text": "即使明天下雨，我也会去上课。",
+      "file": "frame-adv-even-if-1.mp3",
+      "sha256": "04bf1f07fa75a0802b23e927d2c0de6e5353c98ece6869ad57b1ebc21f9c8232"
+    },
+    {
+      "id": "frame-adv-since-1-4",
+      "text": "就",
+      "file": "frame-adv-since-1-4.mp3",
+      "sha256": "5195558d38c671aa4c6dc365aad09655c1c9e18f6f856415fbc8cb44e6ff9455"
+    },
+    {
+      "id": "frame-adv-since-1",
+      "text": "既然你有空，我们就一起喝茶吧。",
+      "file": "frame-adv-since-1.mp3",
+      "sha256": "8bb2cfe0249ea096d35498d01ad18b5401f717b3fde52136761603efc338f6a5"
+    },
+    {
+      "id": "frame-adv-since-1-0",
+      "text": "既然",
+      "file": "frame-adv-since-1-0.mp3",
+      "sha256": "41881fec6a0e6ea658a6b48db1cda1c8b7c85df3828e28425d3eea6ca4762baa"
+    },
+    {
+      "id": "frame-adv-since-2-4",
+      "text": "就",
+      "file": "frame-adv-since-2-4.mp3",
+      "sha256": "5195558d38c671aa4c6dc365aad09655c1c9e18f6f856415fbc8cb44e6ff9455"
+    },
+    {
+      "id": "frame-adv-since-2",
+      "text": "既然已经买了票，我们就早点出发吧。",
+      "file": "frame-adv-since-2.mp3",
+      "sha256": "b61f93f019ec6f540bd5cf95d88955ba5032138bec4b51eedadfd7e53bf1fbc9"
+    },
+    {
+      "id": "frame-adv-despite-1",
+      "text": "尽管今天很累，我还是做完了作业。",
+      "file": "frame-adv-despite-1.mp3",
+      "sha256": "784c06273575fde0202db855df8225f93824973673f3c92b64014756f412c6b1"
+    },
+    {
+      "id": "frame-adv-despite-1-4",
+      "text": "还是",
+      "file": "frame-adv-despite-1-4.mp3",
+      "sha256": "ff772efafe7b9af359de7dc8c1b4208edba51c519c223980b59ca785ccb3f2ea"
+    },
+    {
+      "id": "frame-adv-since-2-0",
+      "text": "既然",
+      "file": "frame-adv-since-2-0.mp3",
+      "sha256": "8cc2886ed159875c353c3171956cc52b918ea7f9155d20b32052488b32daf322"
+    },
+    {
+      "id": "frame-adv-despite-1-0",
+      "text": "尽管",
+      "file": "frame-adv-despite-1-0.mp3",
+      "sha256": "77e44e6c8665cf95a2ffd6a64161759965f01e2ab3d880ef87f064285a96384e"
+    },
+    {
+      "id": "frame-adv-despite-2-4",
+      "text": "还是",
+      "file": "frame-adv-despite-2-4.mp3",
+      "sha256": "ff772efafe7b9af359de7dc8c1b4208edba51c519c223980b59ca785ccb3f2ea"
+    },
+    {
+      "id": "frame-adv-no-matter-1",
+      "text": "无论你坐哪班车，我都会在车站等你。",
+      "file": "frame-adv-no-matter-1.mp3",
+      "sha256": "44edeb084467bb99d001761b2e3bd93a3dbcdb99caa9ceb4f085fe0e5cda3d72"
+    },
+    {
+      "id": "frame-adv-despite-2-0",
+      "text": "尽管",
+      "file": "frame-adv-despite-2-0.mp3",
+      "sha256": "b0b7de38eff416e7f664a94824d05ed75b7670f31d0e5a4b5bfec86608292b24"
+    },
+    {
+      "id": "frame-adv-no-matter-1-4",
+      "text": "都",
+      "file": "frame-adv-no-matter-1-4.mp3",
+      "sha256": "a4ade13b6c65dd71842df5869f8b541027e8cd1b728e7474123cc523150243b2"
+    },
+    {
+      "id": "frame-adv-no-matter-1-0",
+      "text": "无论",
+      "file": "frame-adv-no-matter-1-0.mp3",
+      "sha256": "8c7861fbd3885345c372c206206fc04f9d30a552b4be462a15d96ff86600e92d"
+    },
+    {
+      "id": "frame-adv-no-matter-2-0",
+      "text": "无论",
+      "file": "frame-adv-no-matter-2-0.mp3",
+      "sha256": "8c7861fbd3885345c372c206206fc04f9d30a552b4be462a15d96ff86600e92d"
+    },
+    {
+      "id": "frame-adv-no-matter-2-4",
+      "text": "都",
+      "file": "frame-adv-no-matter-2-4.mp3",
+      "sha256": "a4ade13b6c65dd71842df5869f8b541027e8cd1b728e7474123cc523150243b2"
+    },
+    {
+      "id": "frame-adv-despite-2",
+      "text": "尽管路上很堵，她还是准时到了。",
+      "file": "frame-adv-despite-2.mp3",
+      "sha256": "90edd49ead48151a289a8bffc6d11303a16a9c8410a6a2d5ce73cea23906b626"
+    },
+    {
+      "id": "frame-adv-rather-than-1",
+      "text": "与其等公共汽车，不如走路去。",
+      "file": "frame-adv-rather-than-1.mp3",
+      "sha256": "039a07a72c729b7679c5d22b7331d61e8b4439b4d89e8d5261e74cc0ec845241"
+    },
+    {
+      "id": "frame-adv-rather-than-1-0",
+      "text": "与其",
+      "file": "frame-adv-rather-than-1-0.mp3",
+      "sha256": "3a0cebecaf3ee570d2fac0290ac95b0400f09530b9b9e0fefa9486729017e146"
+    },
+    {
+      "id": "frame-adv-no-matter-2",
+      "text": "无论天气怎么样，这家店都开门。",
+      "file": "frame-adv-no-matter-2.mp3",
+      "sha256": "5c1955599771c1cadbe25b2c590a7c02598482174b8a12977430ef186bd4481c"
+    },
+    {
+      "id": "frame-adv-rather-than-2-0",
+      "text": "与其",
+      "file": "frame-adv-rather-than-2-0.mp3",
+      "sha256": "3a0cebecaf3ee570d2fac0290ac95b0400f09530b9b9e0fefa9486729017e146"
+    },
+    {
+      "id": "frame-adv-rather-than-1-3",
+      "text": "不如",
+      "file": "frame-adv-rather-than-1-3.mp3",
+      "sha256": "6d3930339d4320ce45206734aae37180170541cb2883b78bd24a75ef582364b6"
+    },
+    {
+      "id": "frame-adv-rather-than-2-3",
+      "text": "不如",
+      "file": "frame-adv-rather-than-2-3.mp3",
+      "sha256": "cac3730ba6c5fe414b520baa3fc8d41ba24d9032d51ae4d85b701229d35b5f8c"
+    },
+    {
+      "id": "frame-adv-would-rather-1",
+      "text": "我宁可走路去，也不坐这么挤的车。",
+      "file": "frame-adv-would-rather-1.mp3",
+      "sha256": "c18c3c8ab1cb7045482b0f31a11c03439209e64b15bb46bf5e070860690e5c8a"
+    },
+    {
+      "id": "frame-adv-rather-than-2",
+      "text": "与其一直担心，不如先问问老师。",
+      "file": "frame-adv-rather-than-2.mp3",
+      "sha256": "4a8a67ff761426c9e05edd8ffebf384e2817f00905188d807b5b9fbb085b2109"
+    },
+    {
+      "id": "frame-adv-would-rather-1-1",
+      "text": "宁可",
+      "file": "frame-adv-would-rather-1-1.mp3",
+      "sha256": "c0424cd9ee0f262eeb33a0d2da5ff3914e205142332060d8131c0d541469dd42"
+    },
+    {
+      "id": "frame-adv-would-rather-2-1",
+      "text": "宁可",
+      "file": "frame-adv-would-rather-2-1.mp3",
+      "sha256": "c0424cd9ee0f262eeb33a0d2da5ff3914e205142332060d8131c0d541469dd42"
+    },
+    {
+      "id": "frame-adv-would-rather-2",
+      "text": "她宁可多等十分钟，也不打断别人。",
+      "file": "frame-adv-would-rather-2.mp3",
+      "sha256": "04d4231ca44bf6f690b506fb2f070de87056e560f53f4ad7da033ca885efd28c"
+    },
+    {
+      "id": "frame-adv-would-rather-2-4",
+      "text": "也不",
+      "file": "frame-adv-would-rather-2-4.mp3",
+      "sha256": "62dbfd5cfcf9119125142365272de98aeaed119d19ecc5de6ebaf3e4d5587106"
+    },
+    {
+      "id": "frame-adv-not-only-1",
+      "text": "这家咖啡馆不仅卖咖啡，还卖三明治。",
+      "file": "frame-adv-not-only-1.mp3",
+      "sha256": "05b97a06b4e9aa37c6286a566d6bb131bf6e8dd784f7a441a28ef464cc25554d"
+    },
+    {
+      "id": "frame-adv-not-only-1-4",
+      "text": "还",
+      "file": "frame-adv-not-only-1-4.mp3",
+      "sha256": "9d57175e2509a563a6fe684b485fcadfc8b3b813030920339e092adcd31c8ba1"
+    },
+    {
+      "id": "frame-adv-not-only-2",
+      "text": "他不仅帮我搬了桌子，还打扫了房间。",
+      "file": "frame-adv-not-only-2.mp3",
+      "sha256": "9b530b6aff13aad40596a943ae660ca27691b62e58769b406b1bd82d17f00385"
+    },
+    {
+      "id": "frame-adv-not-only-1-1",
+      "text": "不仅",
+      "file": "frame-adv-not-only-1-1.mp3",
+      "sha256": "0faac20b233a440d0b268dec1b106d95e3f7ddfc560855f4b551e81ca547974a"
+    },
+    {
+      "id": "frame-adv-not-only-2-4",
+      "text": "还",
+      "file": "frame-adv-not-only-2-4.mp3",
+      "sha256": "9d57175e2509a563a6fe684b485fcadfc8b3b813030920339e092adcd31c8ba1"
+    },
+    {
+      "id": "frame-adv-not-only-2-1",
+      "text": "不仅",
+      "file": "frame-adv-not-only-2-1.mp3",
+      "sha256": "5eb440a3ec0b4a8cc067f3f6bb365118ef0b3aed74b300930513888053e4d70f"
+    },
+    {
+      "id": "frame-adv-both-and-1-1",
+      "text": "既",
+      "file": "frame-adv-both-and-1-1.mp3",
+      "sha256": "1529dc66ec757f85a29b03c1a16722ec53946df3e5587ec5bf87cb56cff84a83"
+    },
+    {
+      "id": "frame-adv-both-and-1-3",
+      "text": "又",
+      "file": "frame-adv-both-and-1-3.mp3",
+      "sha256": "8a66c2c4101d4466994507e329aa7cf941dab7ece4f5d541e826116710a5a01e"
+    },
+    {
+      "id": "frame-adv-would-rather-1-4",
+      "text": "也不",
+      "file": "frame-adv-would-rather-1-4.mp3",
+      "sha256": "6854fd14911254f97f2b5fa0c1c403154c62709d72e44cc38f0b22df4cb041d1"
+    },
+    {
+      "id": "frame-adv-both-and-2-1",
+      "text": "既",
+      "file": "frame-adv-both-and-2-1.mp3",
+      "sha256": "1529dc66ec757f85a29b03c1a16722ec53946df3e5587ec5bf87cb56cff84a83"
+    },
+    {
+      "id": "frame-adv-both-and-2-3",
+      "text": "又",
+      "file": "frame-adv-both-and-2-3.mp3",
+      "sha256": "8a66c2c4101d4466994507e329aa7cf941dab7ece4f5d541e826116710a5a01e"
+    },
+    {
+      "id": "frame-adv-correction-1",
+      "text": "我想喝的不是咖啡，而是茶。",
+      "file": "frame-adv-correction-1.mp3",
+      "sha256": "6561fb26b72d4f85215de8a4721147deba2ae2cf10a6da74cd9d28ade5039a76"
+    },
+    {
+      "id": "frame-adv-both-and-2",
+      "text": "她既会做饭又会修电脑。",
+      "file": "frame-adv-both-and-2.mp3",
+      "sha256": "2f4dfb1eef9da80a59d19283aa1c88b59ad6672db110e92b4f874e80c4b754e4"
+    },
+    {
+      "id": "frame-adv-both-and-1",
+      "text": "这个房间既安静又明亮。",
+      "file": "frame-adv-both-and-1.mp3",
+      "sha256": "2b0104e890757fbc89e782469b69496db437e7597210ebac1b3c36c705beed3b"
+    },
+    {
+      "id": "frame-adv-correction-1-4",
+      "text": "而是",
+      "file": "frame-adv-correction-1-4.mp3",
+      "sha256": "033c9bdeab15bf66d7e11973dddba57dd5f8ae0958d64f3ea182a0f01749b95f"
+    },
+    {
+      "id": "frame-adv-correction-2-1",
+      "text": "不是",
+      "file": "frame-adv-correction-2-1.mp3",
+      "sha256": "a65ffb667c3f758758d404e78af6e1268cfcfd050754526a389cf70f366bfa4d"
+    },
+    {
+      "id": "frame-adv-correction-2-4",
+      "text": "而是",
+      "file": "frame-adv-correction-2-4.mp3",
+      "sha256": "033c9bdeab15bf66d7e11973dddba57dd5f8ae0958d64f3ea182a0f01749b95f"
+    },
+    {
+      "id": "frame-adv-correction-1-1",
+      "text": "不是",
+      "file": "frame-adv-correction-1-1.mp3",
+      "sha256": "c2012046c7fe9022a9b98b45f6a4e507e5e8ed87a84fdda779541ccca5d77913"
+    },
+    {
+      "id": "frame-adv-either-or-1-1",
+      "text": "要么",
+      "file": "frame-adv-either-or-1-1.mp3",
+      "sha256": "d771444ab3a87f49ee243e210a0cb85c56c561cc186bfbbdebf3d47d74b8fb2e"
+    },
+    {
+      "id": "frame-adv-either-or-1-4",
+      "text": "要么",
+      "file": "frame-adv-either-or-1-4.mp3",
+      "sha256": "d771444ab3a87f49ee243e210a0cb85c56c561cc186bfbbdebf3d47d74b8fb2e"
+    },
+    {
+      "id": "frame-adv-either-or-1",
+      "text": "我们要么在家做饭，要么出去吃。",
+      "file": "frame-adv-either-or-1.mp3",
+      "sha256": "842d50e160e5b8d9ba571d08348d8cc2d4def20692a89404d2d81df123899fd4"
+    },
+    {
+      "id": "frame-adv-either-or-2-1",
+      "text": "要么",
+      "file": "frame-adv-either-or-2-1.mp3",
+      "sha256": "d771444ab3a87f49ee243e210a0cb85c56c561cc186bfbbdebf3d47d74b8fb2e"
+    },
+    {
+      "id": "frame-adv-either-or-2-4",
+      "text": "要么",
+      "file": "frame-adv-either-or-2-4.mp3",
+      "sha256": "d771444ab3a87f49ee243e210a0cb85c56c561cc186bfbbdebf3d47d74b8fb2e"
+    },
+    {
+      "id": "frame-adv-either-or-2",
+      "text": "周末要么去看展览，要么去爬山。",
+      "file": "frame-adv-either-or-2.mp3",
+      "sha256": "2803d3181ebba05090c75f760cc77891631684e3d4e71f98fccfa28add3d44e6"
+    },
+    {
+      "id": "frame-adv-correction-2",
+      "text": "她不是不想去，而是没有时间。",
+      "file": "frame-adv-correction-2.mp3",
+      "sha256": "d8f8475cf059ee3b5626def3cd4ac9c15556974604dfd09737db5a9ddaba2b4a"
+    },
+    {
+      "id": "frame-adv-two-aspects-1-4",
+      "text": "另一方面",
+      "file": "frame-adv-two-aspects-1-4.mp3",
+      "sha256": "851370cd311a726664dbb2c6e12c7f9432d286847850714ace04e37b93bfe4bb"
+    },
+    {
+      "id": "frame-adv-two-aspects-1-1",
+      "text": "一方面",
+      "file": "frame-adv-two-aspects-1-1.mp3",
+      "sha256": "76c46dd7db6275a2b01ced2cecd090484a4c869fac5ec4070e306375be2094a6"
+    },
+    {
+      "id": "frame-adv-two-aspects-2-1",
+      "text": "一方面",
+      "file": "frame-adv-two-aspects-2-1.mp3",
+      "sha256": "76c46dd7db6275a2b01ced2cecd090484a4c869fac5ec4070e306375be2094a6"
+    },
+    {
+      "id": "frame-adv-two-aspects-2-4",
+      "text": "另一方面",
+      "file": "frame-adv-two-aspects-2-4.mp3",
+      "sha256": "851370cd311a726664dbb2c6e12c7f9432d286847850714ace04e37b93bfe4bb"
+    },
+    {
+      "id": "frame-adv-two-aspects-1",
+      "text": "这个房子一方面租金便宜，另一方面离公司很远。",
+      "file": "frame-adv-two-aspects-1.mp3",
+      "sha256": "6651a46cd04aef7e95d9bfc464923c13a7158361581e24c1a5c959f51b1ec156"
+    },
+    {
+      "id": "frame-adv-two-aspects-2",
+      "text": "学做饭一方面能省钱，另一方面也很有意思。",
+      "file": "frame-adv-two-aspects-2.mp3",
+      "sha256": "0953fe87330d2e77ba5cc0f829f309ca9aa854134cc065147521e56f0d12247f"
+    },
+    {
+      "id": "frame-adv-due-therefore-1-0",
+      "text": "由于",
+      "file": "frame-adv-due-therefore-1-0.mp3",
+      "sha256": "a78944beafffe2c07078493c8701f9e51a17d26b4f2e62e887ee18504560afb0"
+    },
+    {
+      "id": "frame-adv-due-therefore-1-3",
+      "text": "因此",
+      "file": "frame-adv-due-therefore-1-3.mp3",
+      "sha256": "fc4960e085f738b39a67412028916d7aa8011a9a3db91c08b69e1a814032431a"
+    },
+    {
+      "id": "frame-adv-due-therefore-2-0",
+      "text": "由于",
+      "file": "frame-adv-due-therefore-2-0.mp3",
+      "sha256": "a78944beafffe2c07078493c8701f9e51a17d26b4f2e62e887ee18504560afb0"
+    },
+    {
+      "id": "frame-adv-due-therefore-2-3",
+      "text": "因此",
+      "file": "frame-adv-due-therefore-2-3.mp3",
+      "sha256": "fc4960e085f738b39a67412028916d7aa8011a9a3db91c08b69e1a814032431a"
+    },
+    {
+      "id": "frame-adv-due-therefore-2",
+      "text": "由于教室在维修，因此这周我们上网课。",
+      "file": "frame-adv-due-therefore-2.mp3",
+      "sha256": "abaa5cf96f5e3aa4b7469241ddedac3f73def5005cf097bb58449db053c48ef2"
+    },
+    {
+      "id": "frame-adv-due-therefore-1",
+      "text": "由于天气不好，因此今天的活动取消了。",
+      "file": "frame-adv-due-therefore-1.mp3",
+      "sha256": "a947ffc1f6b6d0d716ab4ac2471800e373e46f01dd845a51cdab67ca4415d8a7"
+    },
+    {
+      "id": "frame-adv-so-that-1",
+      "text": "请把地址发给我，以便我提前查路线。",
+      "file": "frame-adv-so-that-1.mp3",
+      "sha256": "0c00ca8e4307ee1d63159e6c077ee78e80b42790e1d3f372d8eec0a654c311c3"
+    },
+    {
+      "id": "frame-adv-so-that-1-2",
+      "text": "以便",
+      "file": "frame-adv-so-that-1-2.mp3",
+      "sha256": "6fb7ad720ad279e12ca3c11b47686127745f3cca0f9a8949ac01277b12788386"
+    },
+    {
+      "id": "frame-adv-purpose-1",
+      "text": "为了准时到学校，我今天早点出门。",
+      "file": "frame-adv-purpose-1.mp3",
+      "sha256": "eeeab30b1f14c9638d82bd99881527f90dd5ab6899007fb4d7326d28474e10f3"
+    },
+    {
+      "id": "frame-adv-purpose-1-0",
+      "text": "为了",
+      "file": "frame-adv-purpose-1-0.mp3",
+      "sha256": "ac921973485c167be1af01bcc23b615709277f89844adf6f2431b91430540325"
+    },
+    {
+      "id": "frame-adv-so-that-2",
+      "text": "我把生词写在本子上，以便以后复习。",
+      "file": "frame-adv-so-that-2.mp3",
+      "sha256": "d5553c997b4cf73b004d7dc0b5fa3f2d8dace72a3107818ababe02bd9501caa6"
+    },
+    {
+      "id": "frame-adv-purpose-2-0",
+      "text": "为了",
+      "file": "frame-adv-purpose-2-0.mp3",
+      "sha256": "ac921973485c167be1af01bcc23b615709277f89844adf6f2431b91430540325"
+    },
+    {
+      "id": "frame-adv-through-1",
+      "text": "我通过看视频学会了做这道菜。",
+      "file": "frame-adv-through-1.mp3",
+      "sha256": "74028d204ab59cee32510da430a4c4fc84bde103610190458b3c9af5aa6edc4e"
+    },
+    {
+      "id": "frame-adv-purpose-2",
+      "text": "为了练习口语，她每天和同学聊天。",
+      "file": "frame-adv-purpose-2.mp3",
+      "sha256": "94b4f5fc232662a92565e2b4d32a8705d2eb483e2fd0afbf6e6b388b85196258"
+    },
+    {
+      "id": "frame-adv-through-1-1",
+      "text": "通过",
+      "file": "frame-adv-through-1-1.mp3",
+      "sha256": "29dff55dada97d90bcb111310969574abfeecd3a93b5f21869ea9993bd95498f"
+    },
+    {
+      "id": "frame-adv-through-2-1",
+      "text": "通过",
+      "file": "frame-adv-through-2-1.mp3",
+      "sha256": "29dff55dada97d90bcb111310969574abfeecd3a93b5f21869ea9993bd95498f"
+    },
+    {
+      "id": "frame-adv-according-to-1",
+      "text": "根据天气预报，明天会下雨。",
+      "file": "frame-adv-according-to-1.mp3",
+      "sha256": "e2829c71f7cf9e303a294f1b9bf9e817702b309a44feb1d9f63296e18264f19a"
+    },
+    {
+      "id": "frame-adv-according-to-1-0",
+      "text": "根据",
+      "file": "frame-adv-according-to-1-0.mp3",
+      "sha256": "a8d515fd6ddd33ed94eec7e86c252aea61ba43c5a0d0312f92f6e4618ae560f0"
+    },
+    {
+      "id": "frame-adv-through-2",
+      "text": "我们通过学校的网站报名。",
+      "file": "frame-adv-through-2.mp3",
+      "sha256": "2e72211e0d8aa376ebf430c4d6e799b50a2d7d3044742bbf43696b2adcb1ee29"
+    },
+    {
+      "id": "frame-adv-according-to-2-1",
+      "text": "根据",
+      "file": "frame-adv-according-to-2-1.mp3",
+      "sha256": "a8d515fd6ddd33ed94eec7e86c252aea61ba43c5a0d0312f92f6e4618ae560f0"
+    },
+    {
+      "id": "frame-adv-regarding-1",
+      "text": "对于这个计划，我还有几个问题。",
+      "file": "frame-adv-regarding-1.mp3",
+      "sha256": "f0cbd3617de2e9cdd300fbbb7ee80ba6c4836a370627041a1984bef1ae57bc3d"
+    },
+    {
+      "id": "frame-adv-according-to-2",
+      "text": "请根据自己的时间选择课程。",
+      "file": "frame-adv-according-to-2.mp3",
+      "sha256": "cf79e6fe79368f63be3140f922d47fcc14739fc6382f8d52fd963a719d8a661a"
+    },
+    {
+      "id": "frame-adv-regarding-1-0",
+      "text": "对于",
+      "file": "frame-adv-regarding-1-0.mp3",
+      "sha256": "04b8bd448fb46e219a209b67687fa7fce0d0e1ded933ad82cdffea9821b94c3e"
+    },
+    {
+      "id": "frame-adv-regarding-2-0",
+      "text": "对于",
+      "file": "frame-adv-regarding-2-0.mp3",
+      "sha256": "04b8bd448fb46e219a209b67687fa7fce0d0e1ded933ad82cdffea9821b94c3e"
+    },
+    {
+      "id": "frame-adv-regarding-2",
+      "text": "对于这门课，她很有信心。",
+      "file": "frame-adv-regarding-2.mp3",
+      "sha256": "0b6d78491f60811e91db51dd8cfe3aa3d7609a7a5d68248a0341403529a7363f"
+    },
+    {
+      "id": "frame-adv-so-that-2-2",
+      "text": "以便",
+      "file": "frame-adv-so-that-2-2.mp3",
+      "sha256": "852048180cf0ff86cb1d253b66bbc965a99c4279c18ac9abd2f0ba32d11f92de"
+    },
+    {
+      "id": "frame-adv-even-lian-1-2",
+      "text": "都",
+      "file": "frame-adv-even-lian-1-2.mp3",
+      "sha256": "a4ade13b6c65dd71842df5869f8b541027e8cd1b728e7474123cc523150243b2"
+    },
+    {
+      "id": "frame-adv-even-lian-1-0",
+      "text": "连",
+      "file": "frame-adv-even-lian-1-0.mp3",
+      "sha256": "547d26aadacd63269887715e65dc57b287a2533780c092d3be70e0b1054b57db"
+    },
+    {
+      "id": "frame-adv-even-lian-2-1",
+      "text": "连",
+      "file": "frame-adv-even-lian-2-1.mp3",
+      "sha256": "547d26aadacd63269887715e65dc57b287a2533780c092d3be70e0b1054b57db"
+    },
+    {
+      "id": "frame-adv-even-lian-2-3",
+      "text": "都",
+      "file": "frame-adv-even-lian-2-3.mp3",
+      "sha256": "a4ade13b6c65dd71842df5869f8b541027e8cd1b728e7474123cc523150243b2"
+    },
+    {
+      "id": "frame-adv-even-lian-1",
+      "text": "连平时不爱说话的小王都唱歌了。",
+      "file": "frame-adv-even-lian-1.mp3",
+      "sha256": "1787179a272878a20676fab04e4953078bd8b53745b79e5731fbecbf4c1ec54a"
+    },
+    {
+      "id": "frame-adv-even-shenzhi-1-2",
+      "text": "甚至",
+      "file": "frame-adv-even-shenzhi-1-2.mp3",
+      "sha256": "6633bb4d42917f9a85c88cdb55693997ad3dded28dbaa53237b47fbf9be222b6"
+    },
+    {
+      "id": "frame-adv-even-lian-2",
+      "text": "我连这家店的名字都忘了。",
+      "file": "frame-adv-even-lian-2.mp3",
+      "sha256": "3f02fc8885b6a33ca0ac9fa1ea1a2cab051f8a2b95c21fe473d9dca49a50269f"
+    },
+    {
+      "id": "frame-adv-even-shenzhi-2-2",
+      "text": "甚至",
+      "file": "frame-adv-even-shenzhi-2-2.mp3",
+      "sha256": "6633bb4d42917f9a85c88cdb55693997ad3dded28dbaa53237b47fbf9be222b6"
+    },
+    {
+      "id": "frame-adv-even-shenzhi-2",
+      "text": "这家店很受欢迎，甚至下雨天也要排队。",
+      "file": "frame-adv-even-shenzhi-2.mp3",
+      "sha256": "fd70d74e145a393de22104ca69ab6b545bf3a707deeb6f226a895e585b48a629"
+    },
+    {
+      "id": "frame-adv-almost-1",
+      "text": "我差点儿把手机忘在车上。",
+      "file": "frame-adv-almost-1.mp3",
+      "sha256": "5f9c7757fbb0d0f73ad9243ae0dc7addba6ef485734a1f62e21bfe4e229e7c13"
+    },
+    {
+      "id": "frame-adv-even-shenzhi-1",
+      "text": "她每天都练习中文，甚至午休的时候也在听录音。",
+      "file": "frame-adv-even-shenzhi-1.mp3",
+      "sha256": "513b00827102574edb194ce4c45b2fafda84564b53d221b9b93d90e8fad51f09"
+    },
+    {
+      "id": "frame-adv-almost-1-1",
+      "text": "差点儿",
+      "file": "frame-adv-almost-1-1.mp3",
+      "sha256": "aa6bb0e354cc757167390625ed6b951105ce3f1bb0093b719bcd4134724cd582"
+    },
+    {
+      "id": "frame-adv-almost-2-3",
+      "text": "差点儿",
+      "file": "frame-adv-almost-2-3.mp3",
+      "sha256": "a075b6c0b6031639ea5001a663a2f2ac04275a5ae54fab8433949a7594c865d4"
+    },
+    {
+      "id": "frame-adv-too-late-1",
+      "text": "快上课了，我来不及吃早饭了。",
+      "file": "frame-adv-too-late-1.mp3",
+      "sha256": "741085956370da8d05a5b701d886429e5ed41fd5acd9b6271080d85d05d2d3fd"
+    },
+    {
+      "id": "frame-adv-too-late-1-3",
+      "text": "来不及",
+      "file": "frame-adv-too-late-1-3.mp3",
+      "sha256": "89019c7998b6c8b1c3100961ef7c7151d3389a33ada3d6b0a0e913a150a080b5"
+    },
+    {
+      "id": "frame-adv-too-late-2-1",
+      "text": "来不及",
+      "file": "frame-adv-too-late-2-1.mp3",
+      "sha256": "89019c7998b6c8b1c3100961ef7c7151d3389a33ada3d6b0a0e913a150a080b5"
+    },
+    {
+      "id": "frame-adv-almost-2",
+      "text": "刚才地上有水，她差点儿摔倒。",
+      "file": "frame-adv-almost-2.mp3",
+      "sha256": "78fc4484ad90abd279c6398af1dab391ad1b1312815e9bf29da8d22b0a7b1b6c"
+    },
+    {
+      "id": "frame-adv-seems-1-1",
+      "text": "起来",
+      "file": "frame-adv-seems-1-1.mp3",
+      "sha256": "0b3f0d932689baae79d11aba4dc6062a98468440084d22dc8c8dd55a0d0d1776"
+    },
+    {
+      "id": "frame-adv-seems-1",
+      "text": "这个计划听起来不错。",
+      "file": "frame-adv-seems-1.mp3",
+      "sha256": "70323599347a2f1d544649134139bac3efb91f366e36c3de64ec9a7ae6ff49cb"
+    },
+    {
+      "id": "frame-adv-seems-2-1",
+      "text": "起来",
+      "file": "frame-adv-seems-2-1.mp3",
+      "sha256": "0b3f0d932689baae79d11aba4dc6062a98468440084d22dc8c8dd55a0d0d1776"
+    },
+    {
+      "id": "frame-adv-continue-1",
+      "text": "这个故事很有意思，请继续说下去。",
+      "file": "frame-adv-continue-1.mp3",
+      "sha256": "96875ad5cb081b8015015c1ad3f411c85cc95011b3826e4f59afc849b0c13810"
+    },
+    {
+      "id": "frame-adv-continue-1-3",
+      "text": "下去",
+      "file": "frame-adv-continue-1-3.mp3",
+      "sha256": "2ddab4699173633bf77f6fc1c2f0097805283281ff24c71bd05ebec5dca0521f"
+    },
+    {
+      "id": "frame-adv-continue-2",
+      "text": "虽然很难，我还是想学下去。",
+      "file": "frame-adv-continue-2.mp3",
+      "sha256": "2fc2d429be3f800936f17b698a6d78ae301462763cc8d073cf6d0bc23596f655"
+    },
+    {
+      "id": "frame-adv-continue-2-3",
+      "text": "下去",
+      "file": "frame-adv-continue-2-3.mp3",
+      "sha256": "2ddab4699173633bf77f6fc1c2f0097805283281ff24c71bd05ebec5dca0521f"
+    },
+    {
+      "id": "frame-adv-recognize-result-1",
+      "text": "我听出来了，这是小王的声音。",
+      "file": "frame-adv-recognize-result-1.mp3",
+      "sha256": "e0f12d37a21b709b4a2ce79b4e341b81ba6c37410f581384a62d46a0ad2723d8"
+    },
+    {
+      "id": "frame-adv-recognize-result-1-1",
+      "text": "出来",
+      "file": "frame-adv-recognize-result-1-1.mp3",
+      "sha256": "f791f171d0dc054b94fff67cee257a51f2a91cd90e059c350814ddcd66a5589f"
+    },
+    {
+      "id": "frame-adv-recognize-result-2",
+      "text": "她看出来我很紧张。",
+      "file": "frame-adv-recognize-result-2.mp3",
+      "sha256": "f2d5a1dcf3ec8f82eab96b538cef3f00a86f0ba6e0a0a6a5fb843d5682c6cf7c"
+    },
+    {
+      "id": "frame-adv-recognize-result-2-1",
+      "text": "出来",
+      "file": "frame-adv-recognize-result-2-1.mp3",
+      "sha256": "f791f171d0dc054b94fff67cee257a51f2a91cd90e059c350814ddcd66a5589f"
+    },
+    {
+      "id": "frame-adv-seems-2",
+      "text": "这件外套看起来很暖和。",
+      "file": "frame-adv-seems-2.mp3",
+      "sha256": "04102bb2dec988ad5bec0c58be2d32c628c2bf7eb740d3a8a0f4a2fb9d11660e"
+    },
+    {
+      "id": "frame-adv-potential-1-1",
+      "text": "得",
+      "file": "frame-adv-potential-1-1.mp3",
+      "sha256": "9419e906f15f91e4d325a916d3d78f2678b7232a8e521a17b6c95694c251034e"
+    },
+    {
+      "id": "frame-adv-potential-1",
+      "text": "这些字我看得懂。",
+      "file": "frame-adv-potential-1.mp3",
+      "sha256": "7dab43a68936eae8d43656133447bc0a6ecd3524d3d777128ec5b434b9fb76c7"
+    },
+    {
+      "id": "frame-adv-potential-2-3",
+      "text": "不",
+      "file": "frame-adv-potential-2-3.mp3",
+      "sha256": "15c47418467d0112d1760db37fb07af2c06e7ca72e3e65017919bdb2bdc18689"
+    },
+    {
+      "id": "frame-adv-potential-2",
+      "text": "这里太吵，我听不清楚。",
+      "file": "frame-adv-potential-2.mp3",
+      "sha256": "51e1d1c06dda1bfd6d1a500c4c4d50653e281c5e7cb0e622e9ba15378339c006"
+    },
+    {
+      "id": "frame-adv-less-than-1-1",
+      "text": "不如",
+      "file": "frame-adv-less-than-1-1.mp3",
+      "sha256": "cac3730ba6c5fe414b520baa3fc8d41ba24d9032d51ae4d85b701229d35b5f8c"
+    },
+    {
+      "id": "frame-adv-less-than-2",
+      "text": "我做的面条不如你做的好吃。",
+      "file": "frame-adv-less-than-2.mp3",
+      "sha256": "456c602dff7da38fbe9edaddf22ea4073930c9f04451a77afe82192289e2a7bd"
+    },
+    {
+      "id": "frame-adv-less-than-2-1",
+      "text": "不如",
+      "file": "frame-adv-less-than-2-1.mp3",
+      "sha256": "cac3730ba6c5fe414b520baa3fc8d41ba24d9032d51ae4d85b701229d35b5f8c"
+    },
+    {
+      "id": "frame-adv-more-than-1",
+      "text": "这家咖啡馆比那家更安静。",
+      "file": "frame-adv-more-than-1.mp3",
+      "sha256": "a781514c9b1f41972fd2286af9b9023f1df4b3233c21059ea566e21e64a34489"
+    },
+    {
+      "id": "frame-adv-more-than-1-1",
+      "text": "比",
+      "file": "frame-adv-more-than-1-1.mp3",
+      "sha256": "2a414960eada8b0e2f5b6c6e68f718c9843ca1cdfab3a97d32bbc9f740668dfc"
+    },
+    {
+      "id": "frame-adv-more-than-1-3",
+      "text": "更",
+      "file": "frame-adv-more-than-1-3.mp3",
+      "sha256": "b8180b99fb4b22fba4f2eb0ed46d8c366500a17cff9f38a371258d89dd7d4e7f"
+    },
+    {
+      "id": "frame-adv-too-late-2",
+      "text": "现在出发也来不及赶上那班火车。",
+      "file": "frame-adv-too-late-2.mp3",
+      "sha256": "bee164adcbe197a5230991aee8a8312332735045bec2f0ba34b6a7c40de0c570"
+    },
+    {
+      "id": "frame-adv-more-than-2-1",
+      "text": "比",
+      "file": "frame-adv-more-than-2-1.mp3",
+      "sha256": "2a414960eada8b0e2f5b6c6e68f718c9843ca1cdfab3a97d32bbc9f740668dfc"
+    },
+    {
+      "id": "frame-adv-more-than-2-3",
+      "text": "还",
+      "file": "frame-adv-more-than-2-3.mp3",
+      "sha256": "9d57175e2509a563a6fe684b485fcadfc8b3b813030920339e092adcd31c8ba1"
+    },
+    {
+      "id": "frame-adv-less-than-1",
+      "text": "今天的天气不如昨天好。",
+      "file": "frame-adv-less-than-1.mp3",
+      "sha256": "10e9ac3b871bb2b8f03d2d68e64341df00908ace6eee79491f9284c1fcca803c"
+    },
+    {
+      "id": "frame-adv-transform-result-1-1",
+      "text": "把",
+      "file": "frame-adv-transform-result-1-1.mp3",
+      "sha256": "ae8efe780f34141f6eef3aa31adb366def32400554efd68a4dbbb1f4e0ce5e45"
+    },
+    {
+      "id": "frame-adv-transform-result-1-4",
+      "text": "成",
+      "file": "frame-adv-transform-result-1-4.mp3",
+      "sha256": "15a0ec3d2087a2b4ff9459bb1e207bb968b94fbebeede321ae4910ffd5a10a22"
+    },
+    {
+      "id": "frame-adv-transform-result-1",
+      "text": "请把苹果切成小块。",
+      "file": "frame-adv-transform-result-1.mp3",
+      "sha256": "e6ecb7993877a5edb3b53880f5872074a409b33bd945e771de657fe027f679d9"
+    },
+    {
+      "id": "frame-adv-transform-result-2-1",
+      "text": "把",
+      "file": "frame-adv-transform-result-2-1.mp3",
+      "sha256": "ae8efe780f34141f6eef3aa31adb366def32400554efd68a4dbbb1f4e0ce5e45"
+    },
+    {
+      "id": "frame-adv-transform-result-2-4",
+      "text": "成",
+      "file": "frame-adv-transform-result-2-4.mp3",
+      "sha256": "15a0ec3d2087a2b4ff9459bb1e207bb968b94fbebeede321ae4910ffd5a10a22"
+    },
+    {
+      "id": "frame-adv-more-than-2",
+      "text": "今天比昨天还热。",
+      "file": "frame-adv-more-than-2.mp3",
+      "sha256": "e43b63da99293dd284881f708a0d5e99b02f844831ed065b58c06fd77783f014"
+    },
+    {
+      "id": "frame-adv-transform-result-2",
+      "text": "她把这篇文章翻译成了法语。",
+      "file": "frame-adv-transform-result-2.mp3",
+      "sha256": "8326793120a43baf1b1c37c05a33bfb0442daaedec78a755988d49401f0053f0"
+    },
+    {
+      "id": "frame-adv-causative-1",
+      "text": "这个好消息使大家很高兴。",
+      "file": "frame-adv-causative-1.mp3",
+      "sha256": "c2a4c9b4756a5ab8b7c4dd9d4903bac96ad90b36f2044b62547302cc6778187e"
+    },
+    {
+      "id": "frame-adv-causative-2-1",
+      "text": "让",
+      "file": "frame-adv-causative-2-1.mp3",
+      "sha256": "c18b710591deca93642f184571a9268487380a004a66d6828616f6259d65af8d"
+    },
+    {
+      "id": "frame-adv-causative-1-1",
+      "text": "使",
+      "file": "frame-adv-causative-1-1.mp3",
+      "sha256": "04cb0d594a41002b6ebb5d9b4330a5e142f7a86bce04b7e277986a5f129b4dab"
+    },
+    {
+      "id": "frame-adv-past-focus-1-1",
+      "text": "是",
+      "file": "frame-adv-past-focus-1-1.mp3",
+      "sha256": "4ce14f174a28e632ec16f4ede3d799c196fc9e5b46bd9334444c089689c193a0"
+    },
+    {
+      "id": "frame-adv-past-focus-1-4",
+      "text": "的",
+      "file": "frame-adv-past-focus-1-4.mp3",
+      "sha256": "89a975d9ee9f4d8a6b04f873359735c78f2103a7b5e45527a10b0bdc820301ff"
+    },
+    {
+      "id": "frame-adv-causative-2",
+      "text": "这首歌让我想起了家乡。",
+      "file": "frame-adv-causative-2.mp3",
+      "sha256": "50300b02a39daa619f3e51541f0509788bbe24181b5dd87ed33ef6fbaef3fddd"
+    },
+    {
+      "id": "frame-adv-past-focus-2-1",
+      "text": "是",
+      "file": "frame-adv-past-focus-2-1.mp3",
+      "sha256": "4ce14f174a28e632ec16f4ede3d799c196fc9e5b46bd9334444c089689c193a0"
+    },
+    {
+      "id": "frame-adv-past-focus-2-4",
+      "text": "的",
+      "file": "frame-adv-past-focus-2-4.mp3",
+      "sha256": "89a975d9ee9f4d8a6b04f873359735c78f2103a7b5e45527a10b0bdc820301ff"
+    },
+    {
+      "id": "frame-adv-past-focus-1",
+      "text": "我是昨天到苏州的。",
+      "file": "frame-adv-past-focus-1.mp3",
+      "sha256": "7fbfd66b97402ffa0d33cf30cd6f0dbf209cf1282d5a23a9056e5544dd727819"
+    },
+    {
+      "id": "frame-adv-past-focus-2",
+      "text": "我们是坐地铁来的。",
+      "file": "frame-adv-past-focus-2.mp3",
+      "sha256": "3285643e7c94ef06c29dc219be879f6f332579b8e9316d8ab72aa7fbcfc96ba0"
     }
   ]
 }

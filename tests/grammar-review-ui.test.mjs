@@ -18,6 +18,7 @@ globalThis.window=new EventTarget();Object.defineProperty(navigator,'onLine',{va
 const tick=()=>new Promise(r=>setTimeout(r,10));
 const button=(node,label)=>node.root.findAllByType('button').find(b=>b.children.join('')===label);
 async function settle(){await m.act(async()=>{await tick();});}
+async function waitForRender(predicate){for(let i=0;i<100;i++){if(predicate())return;await settle();}assert.fail('Timed out waiting for the persisted answer feedback');}
 async function mount(owner=null){let root;await m.act(async()=>{root=m.renderer.create(m.createElement(m.Review,{owner,onBack(){}}));});await settle();return root;}
 test('actual review component hides hints, persists one answer for double click, without duplicate credit',async()=>{
  globalThis.grammarFetch=async()=>Response.json({events:[]});
@@ -27,6 +28,7 @@ test('actual review component hides hints, persists one answer for double click,
  const option=root.root.findAllByType('button').find(b=>b.props['aria-pressed']===false);
  await m.act(async()=>option.props.onClick());
  const check=button(root,'Check answer');await m.act(async()=>{check.props.onClick();check.props.onClick();await tick();});
+ await waitForRender(()=>root.root.findAllByType('aside').length===1);
  assert.equal(root.root.findAllByType('aside').length,1);
  const db=await indexedDB.open('chinese-os-course-v1-guest');
  // Read through a separate normal IDB connection.

@@ -1,0 +1,762 @@
+[
+  {
+    "text": "比",
+    "pinyin": "bǐ",
+    "meaning": {
+      "en": "than; compared with",
+      "fr": "que ; par rapport à",
+      "ru": "чем; по сравнению с",
+      "tr": "…den daha; ile karşılaştırıldığında"
+    }
+  },
+  {
+    "text": "没有",
+    "pinyin": "méiyǒu",
+    "meaning": {
+      "en": "not as; not have",
+      "fr": "pas aussi ; ne pas avoir",
+      "ru": "не такой…как; не иметь",
+      "tr": "…kadar değil; sahip olmamak"
+    }
+  },
+  {
+    "text": "那么",
+    "pinyin": "nàme",
+    "meaning": {
+      "en": "that; to that degree",
+      "fr": "aussi ; à ce point",
+      "ru": "так; настолько",
+      "tr": "o kadar; öyle"
+    }
+  },
+  {
+    "text": "跟",
+    "pinyin": "gēn",
+    "meaning": {
+      "en": "with; compared with",
+      "fr": "avec ; par rapport à",
+      "ru": "с; по сравнению с",
+      "tr": "ile; ile karşılaştırıldığında"
+    }
+  },
+  {
+    "text": "一样",
+    "pinyin": "yīyàng",
+    "meaning": {
+      "en": "the same; equally",
+      "fr": "pareil ; aussi",
+      "ru": "одинаковый; одинаково",
+      "tr": "aynı; eşit derecede"
+    }
+  },
+  {
+    "text": "离",
+    "pinyin": "lí",
+    "meaning": {
+      "en": "from; at a distance from",
+      "fr": "à une distance de",
+      "ru": "от; на расстоянии от",
+      "tr": "…den; …e uzaklıkta"
+    }
+  },
+  {
+    "text": "近",
+    "pinyin": "jìn",
+    "meaning": {
+      "en": "near; close",
+      "fr": "près ; proche",
+      "ru": "близко; близкий",
+      "tr": "yakın"
+    }
+  },
+  {
+    "text": "远",
+    "pinyin": "yuǎn",
+    "meaning": {
+      "en": "far; distant",
+      "fr": "loin ; éloigné",
+      "ru": "далеко; далёкий",
+      "tr": "uzak"
+    }
+  },
+  {
+    "text": "越来越",
+    "pinyin": "yuèláiyuè",
+    "meaning": {
+      "en": "more and more; increasingly",
+      "fr": "de plus en plus",
+      "ru": "всё более; всё…и…",
+      "tr": "giderek daha; gittikçe"
+    }
+  },
+  {
+    "text": "越",
+    "pinyin": "yuè",
+    "meaning": {
+      "en": "the more…; to a greater degree",
+      "fr": "plus… ; à un degré croissant",
+      "ru": "чем…; тем…",
+      "tr": "ne kadar…; o kadar…"
+    }
+  },
+  {
+    "text": "先",
+    "pinyin": "xiān",
+    "meaning": {
+      "en": "first; beforehand",
+      "fr": "d’abord ; au préalable",
+      "ru": "сначала; заранее",
+      "tr": "önce; önceden"
+    }
+  },
+  {
+    "text": "再",
+    "pinyin": "zài",
+    "meaning": {
+      "en": "then; again",
+      "fr": "puis ; à nouveau",
+      "ru": "затем; снова",
+      "tr": "sonra; yeniden"
+    }
+  },
+  {
+    "text": "以后",
+    "pinyin": "yǐhòu",
+    "meaning": {
+      "en": "after; later",
+      "fr": "après ; plus tard",
+      "ru": "после; позже",
+      "tr": "sonra; daha sonra"
+    }
+  },
+  {
+    "text": "以前",
+    "pinyin": "yǐqián",
+    "meaning": {
+      "en": "before; previously",
+      "fr": "avant ; auparavant",
+      "ru": "до; раньше",
+      "tr": "önce; daha önce"
+    }
+  },
+  {
+    "text": "一边",
+    "pinyin": "yībiān",
+    "meaning": {
+      "en": "while; at the same time",
+      "fr": "tout en ; en même temps",
+      "ru": "одновременно; в то время как",
+      "tr": "…iken; aynı anda"
+    }
+  },
+  {
+    "text": "因为",
+    "pinyin": "yīnwèi",
+    "meaning": {
+      "en": "because",
+      "fr": "parce que",
+      "ru": "потому что",
+      "tr": "çünkü"
+    }
+  },
+  {
+    "text": "所以",
+    "pinyin": "suǒyǐ",
+    "meaning": {
+      "en": "so; therefore",
+      "fr": "donc ; c’est pourquoi",
+      "ru": "поэтому; так что",
+      "tr": "bu yüzden; dolayısıyla"
+    }
+  },
+  {
+    "text": "虽然",
+    "pinyin": "suīrán",
+    "meaning": {
+      "en": "although",
+      "fr": "bien que ; même si",
+      "ru": "хотя",
+      "tr": "her ne kadar; …olsa da"
+    }
+  },
+  {
+    "text": "但是",
+    "pinyin": "dànshì",
+    "meaning": {
+      "en": "but; however",
+      "fr": "mais ; cependant",
+      "ru": "но; однако",
+      "tr": "ama; ancak"
+    }
+  },
+  {
+    "text": "如果",
+    "pinyin": "rúguǒ",
+    "meaning": {
+      "en": "if",
+      "fr": "si",
+      "ru": "если",
+      "tr": "eğer"
+    }
+  },
+  {
+    "text": "就",
+    "pinyin": "jiù",
+    "meaning": {
+      "en": "then; right away",
+      "fr": "alors ; aussitôt",
+      "ru": "тогда; сразу",
+      "tr": "o zaman; hemen"
+    }
+  },
+  {
+    "text": "只要",
+    "pinyin": "zhǐyào",
+    "meaning": {
+      "en": "as long as; provided that",
+      "fr": "du moment que ; pourvu que",
+      "ru": "при условии что; достаточно, чтобы",
+      "tr": "yeter ki; …olması yeterli"
+    }
+  },
+  {
+    "text": "只有",
+    "pinyin": "zhǐyǒu",
+    "meaning": {
+      "en": "only if; only",
+      "fr": "seulement si ; seulement",
+      "ru": "только если; только",
+      "tr": "ancak …ise; yalnızca"
+    }
+  },
+  {
+    "text": "才",
+    "pinyin": "cái",
+    "meaning": {
+      "en": "only then; not until",
+      "fr": "seulement alors ; pas avant",
+      "ru": "только тогда; лишь после",
+      "tr": "ancak o zaman; ancak …sonra"
+    }
+  },
+  {
+    "text": "不但",
+    "pinyin": "bùdàn",
+    "meaning": {
+      "en": "not only",
+      "fr": "non seulement",
+      "ru": "не только",
+      "tr": "yalnızca …değil"
+    }
+  },
+  {
+    "text": "而且",
+    "pinyin": "érqiě",
+    "meaning": {
+      "en": "but also; moreover",
+      "fr": "mais aussi ; de plus",
+      "ru": "но и; к тому же",
+      "tr": "aynı zamanda; üstelik"
+    }
+  },
+  {
+    "text": "除了",
+    "pinyin": "chúle",
+    "meaning": {
+      "en": "besides; except for",
+      "fr": "en plus de ; sauf",
+      "ru": "кроме; помимо",
+      "tr": "yanı sıra; dışında"
+    }
+  },
+  {
+    "text": "还",
+    "pinyin": "hái",
+    "meaning": {
+      "en": "also; still; even more",
+      "fr": "aussi ; encore ; encore plus",
+      "ru": "ещё; также; ещё более",
+      "tr": "de/da; hâlâ; daha da"
+    }
+  },
+  {
+    "text": "不管",
+    "pinyin": "bùguǎn",
+    "meaning": {
+      "en": "no matter; regardless of",
+      "fr": "peu importe ; quel que soit",
+      "ru": "независимо от; несмотря на",
+      "tr": "ne olursa olsun; …e bakmaksızın"
+    }
+  },
+  {
+    "text": "都",
+    "pinyin": "dōu",
+    "meaning": {
+      "en": "all; in every case",
+      "fr": "tous ; dans tous les cas",
+      "ru": "все; в любом случае",
+      "tr": "hepsi; her durumda"
+    }
+  },
+  {
+    "text": "对",
+    "pinyin": "duì",
+    "meaning": {
+      "en": "toward; regarding",
+      "fr": "envers ; à l’égard de",
+      "ru": "к; по отношению к",
+      "tr": "…e karşı; …e yönelik"
+    }
+  },
+  {
+    "text": "感兴趣",
+    "pinyin": "gǎn xìngqù",
+    "meaning": {
+      "en": "be interested",
+      "fr": "s’intéresser",
+      "ru": "интересоваться",
+      "tr": "ilgi duymak"
+    }
+  },
+  {
+    "text": "把",
+    "pinyin": "bǎ",
+    "meaning": {
+      "en": "marks the thing acted on",
+      "fr": "introduit l’objet sur lequel on agit",
+      "ru": "выделяет предмет действия",
+      "tr": "eylemin etkilediği nesneyi belirtir"
+    }
+  },
+  {
+    "text": "被",
+    "pinyin": "bèi",
+    "meaning": {
+      "en": "by; marks a passive action",
+      "fr": "par ; marque une action subie",
+      "ru": "кем-то; показатель страдательного действия",
+      "tr": "tarafından; edilgen eylem belirtir"
+    }
+  },
+  {
+    "text": "得",
+    "pinyin": "de",
+    "meaning": {
+      "en": "links an action to its description or possible result",
+      "fr": "relie une action à sa description ou à un résultat possible",
+      "ru": "связывает действие с его описанием или возможным результатом",
+      "tr": "eylemi açıklamasına veya mümkün sonucuna bağlar"
+    }
+  },
+  {
+    "text": "过",
+    "pinyin": "guo",
+    "meaning": {
+      "en": "marks past experience",
+      "fr": "marque une expérience vécue",
+      "ru": "обозначает прошлый опыт",
+      "tr": "geçmiş deneyim belirtir"
+    }
+  },
+  {
+    "text": "一",
+    "pinyin": "yī",
+    "meaning": {
+      "en": "one; as soon as (in 一…就…)",
+      "fr": "un ; dès que (dans 一…就…)",
+      "ru": "один; как только (в 一…就…)",
+      "tr": "bir; …yapar yapmaz (一…就… yapısında)"
+    }
+  },
+  {
+    "text": "即使",
+    "pinyin": "jíshǐ",
+    "meaning": {
+      "en": "even if",
+      "fr": "même si",
+      "ru": "даже если",
+      "tr": "…olsa bile"
+    }
+  },
+  {
+    "text": "也",
+    "pinyin": "yě",
+    "meaning": {
+      "en": "also; even so",
+      "fr": "aussi ; quand même",
+      "ru": "тоже; всё равно",
+      "tr": "de/da; yine de"
+    }
+  },
+  {
+    "text": "既然",
+    "pinyin": "jìrán",
+    "meaning": {
+      "en": "since; given that",
+      "fr": "puisque ; étant donné que",
+      "ru": "раз; поскольку",
+      "tr": "madem; …olduğuna göre"
+    }
+  },
+  {
+    "text": "尽管",
+    "pinyin": "jǐnguǎn",
+    "meaning": {
+      "en": "although; despite",
+      "fr": "bien que ; malgré",
+      "ru": "хотя; несмотря на",
+      "tr": "…olmasına rağmen"
+    }
+  },
+  {
+    "text": "还是",
+    "pinyin": "háishi",
+    "meaning": {
+      "en": "still; nevertheless",
+      "fr": "quand même ; malgré tout",
+      "ru": "всё же; тем не менее",
+      "tr": "yine de; buna rağmen"
+    }
+  },
+  {
+    "text": "无论",
+    "pinyin": "wúlùn",
+    "meaning": {
+      "en": "no matter; regardless of",
+      "fr": "quel que soit ; peu importe",
+      "ru": "независимо от; какой бы ни",
+      "tr": "ne olursa olsun; …e bakmaksızın"
+    }
+  },
+  {
+    "text": "与其",
+    "pinyin": "yǔqí",
+    "meaning": {
+      "en": "rather than",
+      "fr": "plutôt que de",
+      "ru": "вместо того чтобы; чем",
+      "tr": "…mektense; …yerine"
+    }
+  },
+  {
+    "text": "不如",
+    "pinyin": "bùrú",
+    "meaning": {
+      "en": "not as good as; better to",
+      "fr": "moins bien que ; mieux vaut",
+      "ru": "уступать; лучше бы",
+      "tr": "…kadar iyi değil; …daha iyi olur"
+    }
+  },
+  {
+    "text": "宁可",
+    "pinyin": "nìngkě",
+    "meaning": {
+      "en": "would rather; prefer to",
+      "fr": "préférer ; aimer mieux",
+      "ru": "предпочитать; лучше уж",
+      "tr": "…meyi tercih etmek"
+    }
+  },
+  {
+    "text": "也不",
+    "pinyin": "yě bù",
+    "meaning": {
+      "en": "rather than; still not",
+      "fr": "plutôt que de ; ne pas…non plus",
+      "ru": "но не; всё равно не",
+      "tr": "…mektense; yine de …değil"
+    }
+  },
+  {
+    "text": "不仅",
+    "pinyin": "bùjǐn",
+    "meaning": {
+      "en": "not only",
+      "fr": "non seulement",
+      "ru": "не только",
+      "tr": "yalnızca …değil"
+    }
+  },
+  {
+    "text": "既",
+    "pinyin": "jì",
+    "meaning": {
+      "en": "both; not only (in 既…又…)",
+      "fr": "à la fois ; aussi bien (dans 既…又…)",
+      "ru": "и; как…так и (в 既…又…)",
+      "tr": "hem (既…又… yapısında)"
+    }
+  },
+  {
+    "text": "又",
+    "pinyin": "yòu",
+    "meaning": {
+      "en": "and also; again",
+      "fr": "et aussi ; de nouveau",
+      "ru": "и ещё; снова",
+      "tr": "hem de; yeniden"
+    }
+  },
+  {
+    "text": "不是",
+    "pinyin": "bù shì",
+    "meaning": {
+      "en": "is not",
+      "fr": "ne pas être ; ce n’est pas",
+      "ru": "не является; это не",
+      "tr": "…değil"
+    }
+  },
+  {
+    "text": "而是",
+    "pinyin": "ér shì",
+    "meaning": {
+      "en": "but rather; instead it is",
+      "fr": "mais plutôt ; mais bien",
+      "ru": "а именно; а является",
+      "tr": "aksine; asıl …olan"
+    }
+  },
+  {
+    "text": "要么",
+    "pinyin": "yàome",
+    "meaning": {
+      "en": "either; or",
+      "fr": "soit ; ou bien",
+      "ru": "либо; или",
+      "tr": "ya; ya da"
+    }
+  },
+  {
+    "text": "一方面",
+    "pinyin": "yī fāngmiàn",
+    "meaning": {
+      "en": "on the one hand",
+      "fr": "d’une part",
+      "ru": "с одной стороны",
+      "tr": "bir yandan"
+    }
+  },
+  {
+    "text": "另一方面",
+    "pinyin": "lìng yī fāngmiàn",
+    "meaning": {
+      "en": "on the other hand",
+      "fr": "d’autre part",
+      "ru": "с другой стороны",
+      "tr": "öte yandan"
+    }
+  },
+  {
+    "text": "由于",
+    "pinyin": "yóuyú",
+    "meaning": {
+      "en": "because of; due to",
+      "fr": "en raison de ; du fait de",
+      "ru": "из-за; вследствие",
+      "tr": "…nedeniyle; …den dolayı"
+    }
+  },
+  {
+    "text": "因此",
+    "pinyin": "yīncǐ",
+    "meaning": {
+      "en": "therefore; as a result",
+      "fr": "par conséquent ; de ce fait",
+      "ru": "поэтому; вследствие этого",
+      "tr": "bu nedenle; bunun sonucunda"
+    }
+  },
+  {
+    "text": "以便",
+    "pinyin": "yǐbiàn",
+    "meaning": {
+      "en": "so that; in order to",
+      "fr": "afin de ; pour que",
+      "ru": "чтобы; с тем чтобы",
+      "tr": "…mesi için; …ebilmek için"
+    }
+  },
+  {
+    "text": "为了",
+    "pinyin": "wèile",
+    "meaning": {
+      "en": "in order to; for the sake of",
+      "fr": "pour ; dans le but de",
+      "ru": "для того чтобы; ради",
+      "tr": "…mek için; …uğruna"
+    }
+  },
+  {
+    "text": "通过",
+    "pinyin": "tōngguò",
+    "meaning": {
+      "en": "through; by means of",
+      "fr": "par ; au moyen de",
+      "ru": "через; посредством",
+      "tr": "aracılığıyla; yoluyla"
+    }
+  },
+  {
+    "text": "根据",
+    "pinyin": "gēnjù",
+    "meaning": {
+      "en": "according to; based on",
+      "fr": "selon ; en fonction de",
+      "ru": "согласно; на основании",
+      "tr": "…e göre; …e dayanarak"
+    }
+  },
+  {
+    "text": "对于",
+    "pinyin": "duìyú",
+    "meaning": {
+      "en": "regarding; as for",
+      "fr": "concernant ; quant à",
+      "ru": "относительно; что касается",
+      "tr": "…hakkında; …e gelince"
+    }
+  },
+  {
+    "text": "连",
+    "pinyin": "lián",
+    "meaning": {
+      "en": "even (in 连…都…)",
+      "fr": "même (dans 连…都…)",
+      "ru": "даже (в 连…都…)",
+      "tr": "bile (连…都… yapısında)"
+    }
+  },
+  {
+    "text": "甚至",
+    "pinyin": "shènzhì",
+    "meaning": {
+      "en": "even; to the extent that",
+      "fr": "même ; au point de",
+      "ru": "даже; вплоть до того что",
+      "tr": "hatta; …bile"
+    }
+  },
+  {
+    "text": "差点儿",
+    "pinyin": "chàdiǎnr",
+    "meaning": {
+      "en": "almost; nearly",
+      "fr": "presque ; avoir failli",
+      "ru": "чуть не; едва не",
+      "tr": "az kalsın; neredeyse"
+    }
+  },
+  {
+    "text": "来不及",
+    "pinyin": "lái bu jí",
+    "meaning": {
+      "en": "not have enough time; be too late",
+      "fr": "ne pas avoir le temps ; être trop tard",
+      "ru": "не успевать; быть слишком поздно",
+      "tr": "vakti yetmemek; yetişememek"
+    }
+  },
+  {
+    "text": "起来",
+    "pinyin": "qǐlai",
+    "meaning": {
+      "en": "seem when seen or heard; rise up",
+      "fr": "sembler à la vue ou à l’écoute ; se lever",
+      "ru": "казаться на вид или на слух; подниматься",
+      "tr": "görünmek veya kulağa …gelmek; ayağa kalkmak"
+    }
+  },
+  {
+    "text": "下去",
+    "pinyin": "xiàqu",
+    "meaning": {
+      "en": "continue; go down",
+      "fr": "continuer ; descendre",
+      "ru": "продолжать; спускаться",
+      "tr": "devam etmek; aşağı gitmek"
+    }
+  },
+  {
+    "text": "出来",
+    "pinyin": "chūlai",
+    "meaning": {
+      "en": "discern; come out",
+      "fr": "discerner ; sortir",
+      "ru": "распознать; выйти наружу",
+      "tr": "ayırt etmek; dışarı çıkmak"
+    }
+  },
+  {
+    "text": "不",
+    "pinyin": "bù",
+    "meaning": {
+      "en": "not; cannot (in a potential result)",
+      "fr": "ne…pas ; ne pas pouvoir (devant un résultat possible)",
+      "ru": "не; не мочь (перед возможным результатом)",
+      "tr": "değil; …ememek (olası sonuç yapısında)"
+    }
+  },
+  {
+    "text": "更",
+    "pinyin": "gèng",
+    "meaning": {
+      "en": "more; even more",
+      "fr": "plus ; encore plus",
+      "ru": "более; ещё более",
+      "tr": "daha; daha da"
+    }
+  },
+  {
+    "text": "成",
+    "pinyin": "chéng",
+    "meaning": {
+      "en": "into; become",
+      "fr": "en ; devenir",
+      "ru": "в; становиться",
+      "tr": "…hâline; dönüşmek"
+    }
+  },
+  {
+    "text": "使",
+    "pinyin": "shǐ",
+    "meaning": {
+      "en": "make; cause",
+      "fr": "faire ; rendre",
+      "ru": "заставлять; делать таким",
+      "tr": "…mesine yol açmak; …hâle getirmek"
+    }
+  },
+  {
+    "text": "让",
+    "pinyin": "ràng",
+    "meaning": {
+      "en": "let; make; cause",
+      "fr": "laisser ; faire",
+      "ru": "позволять; заставлять; вызывать",
+      "tr": "izin vermek; …mesine neden olmak"
+    }
+  },
+  {
+    "text": "是",
+    "pinyin": "shì",
+    "meaning": {
+      "en": "be; marks emphasis in 是…的",
+      "fr": "être ; marque l’insistance dans 是…的",
+      "ru": "быть; выделяет обстоятельство в 是…的",
+      "tr": "olmak; 是…的 yapısında vurgu belirtir"
+    }
+  },
+  {
+    "text": "的",
+    "pinyin": "de",
+    "meaning": {
+      "en": "links a description to a noun; ends 是…的 focus",
+      "fr": "relie une description à un nom ; termine la mise en relief 是…的",
+      "ru": "связывает определение с существительным; завершает выделение 是…的",
+      "tr": "açıklamayı isme bağlar; 是…的 vurgusunu tamamlar"
+    }
+  }
+]

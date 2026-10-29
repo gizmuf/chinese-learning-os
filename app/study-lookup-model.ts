@@ -10,6 +10,8 @@ import {lesson06Terms,lesson06Audio} from './lesson06-data';
 import lesson06AudioManifest from '../public/course06/audio/manifest.json';
 import {terms,termItem} from './course-data';
 import {lesson04Terms} from './lesson04-data';
+import grammarLookup from '../data/speaking-chunks/grammar-lookup.json';
+import {grammarChunkTasks} from './chunk-library-data';
 import extraCharacters from '../data/study-dictionary-characters.json';
 import writingContext from '../data/writing-character-context.json';
 import {dictionaryTokens,type StudyDictionary} from './atlas-spatial-model';
@@ -37,6 +39,8 @@ export function appStudyDictionary(locale:Locale):StudyDictionary{
   ['非常','fēicháng','very / extremely','très / extrêmement','очень / чрезвычайно','çok / son derece'],
   ['有意思','yǒuyìsi','interesting','intéressant','интересный','ilginç'],
  ])if(!dictionary.has(text))dictionary.set(text,{text,pinyin,meaning:{en,fr,ru,tr}[locale]});
+ // Grammar expressions share the same dictionary and exact retained fragment audio.
+ for(const term of grammarLookup){const old=dictionary.get(term.text),meaning=term.meaning[locale];const task=grammarChunkTasks.find(t=>t.targets.some(i=>t.parts[i]===term.text)),index=task?.targets.find(i=>task.parts[i]===term.text);dictionary.set(term.text,{...old,text:term.text,pinyin:old?.pinyin||term.pinyin,meaning:old?.meaning||meaning,...(!old?.audio&&task&&index!==undefined?{audio:{text:term.text,pinyin:term.pinyin,context:false,source:task.pieceAudio![index]}}:{})});}
  // Individual characters can have senses beyond their first HSK vocabulary entry.
  for(const [text,meaning] of Object.entries({
   点:{en:"dot / point; a little; o’clock",fr:"point ; un peu ; heure",ru:"точка; немного; час (время)",tr:"nokta; biraz; saat"},
@@ -52,3 +56,8 @@ export function lookupAtOffset(text:string,offset:number,dictionary:StudyDiction
 }
 export const studyAssessmentSelector='.course-exercise,.recall-card,.course-free-recall,.atlas-quiz,.sp-recognition,.video-check';
 export const studyFeedbackSelector='.lesson04-feedback,.course-feedback,.atlas-answer,.atlas-feedback,.sp-quiz-feedback,[data-study-revealed]';
+/** A grammar example may need senses absent from an earlier lesson's narrower gloss. */
+export function studyLookupEntry(dictionary:StudyDictionary,text:string,locale:Locale,grammarContext=false){
+ const existing=dictionary.get(text),gloss=grammarContext?grammarLookup.find(term=>term.text===text):undefined;
+ return gloss?{...existing,text,pinyin:gloss.pinyin,meaning:gloss.meaning[locale]}:existing;
+}

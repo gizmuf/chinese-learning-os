@@ -19,7 +19,7 @@ async def main():
  items=[v for u in data['units'] for v in u['variants']]
  chunks={c['audioId']:c['text'] for v in items for c in v['chunks']}
  tasks=[(v['id'],v['hanzi']) for v in items]+list(chunks.items())
- frames=json.loads(Path('data/speaking-chunks/grammar-frames.json').read_text())
+ frames=json.loads(Path('data/speaking-chunks/grammar-frames.json').read_text())+json.loads(Path('data/speaking-chunks/grammar-frames-advanced.json').read_text())
  for frame in frames:
   for ex in frame['examples']:
    tasks.append(('frame-'+ex['id'],ex['hanzi']))

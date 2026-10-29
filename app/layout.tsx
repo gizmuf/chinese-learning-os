@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./hanzi-style.css";
 import { I18nProvider } from "./i18n";
+import {HanziStyleProvider} from './hanzi-style';
 
 export const metadata: Metadata = {
   title: "Chinese OS · A little Chinese, every day",
@@ -19,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased"><I18nProvider>{children}</I18nProvider></body>
+      <body className="antialiased"><I18nProvider><HanziStyleProvider>{children}</HanziStyleProvider></I18nProvider></body>
     </html>
   );
 }

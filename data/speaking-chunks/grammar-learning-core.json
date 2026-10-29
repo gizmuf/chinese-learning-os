@@ -1,0 +1,842 @@
+{
+  "compare-bi": {
+    "scene": {
+      "en": "You compare the prices of two cups of tea before ordering.",
+      "fr": "Vous comparez le prix de deux thés avant de commander.",
+      "ru": "Перед заказом вы сравниваете цены двух чашек чая.",
+      "tr": "Sipariş vermeden önce iki fincan çayın fiyatını karşılaştırıyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 比 to say that A has more of a quality than B. Say A, then 比 B, then the adjective: 这杯茶比那杯茶便宜.",
+      "fr": "Utilisez 比 pour dire que A possède une qualité à un degré supérieur à B. Placez A, puis 比 B, puis l’adjectif : 这杯茶比那杯茶便宜.",
+      "ru": "Используйте 比, когда признак у A выражен сильнее, чем у B. Порядок: A, затем 比 B, затем прилагательное: 这杯茶比那杯茶便宜.",
+      "tr": "A bir özelliğe B’den daha fazla sahipse 比 kullanın. Sıralama A, ardından 比 B ve sıfattır: 这杯茶比那杯茶便宜."
+    },
+    "contrast": {
+      "en": "In this basic comparison, put the adjective directly after B; do not add 是 or 很 before it.",
+      "fr": "Dans cette comparaison simple, placez l’adjectif juste après B, sans ajouter 是 ou 很.",
+      "ru": "В таком простом сравнении прилагательное идёт сразу после B, без 是 и 很.",
+      "tr": "Bu temel karşılaştırmada sıfat B’den hemen sonra gelir; önüne 是 veya 很 eklemeyin."
+    },
+    "visual": "comparison",
+    "labels": [
+      {
+        "en": "This tea",
+        "fr": "Ce thé",
+        "ru": "Этот чай",
+        "tr": "Bu çay"
+      },
+      {
+        "en": "That tea",
+        "fr": "Ce thé-là",
+        "ru": "Тот чай",
+        "tr": "O çay"
+      }
+    ]
+  },
+  "compare-meiyou": {
+    "scene": {
+      "en": "You choose the narrower of two roads on a map.",
+      "fr": "Vous choisissez la plus étroite de deux routes sur une carte.",
+      "ru": "На карте вы выбираете более узкую из двух дорог.",
+      "tr": "Haritada iki yoldan daha dar olanını seçiyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 没有…那么 to say that A does not reach B’s degree of a quality. Put A first, then 没有 B 那么 and the adjective.",
+      "fr": "Utilisez 没有…那么 pour dire que A n’atteint pas le même degré que B. Placez A, puis 没有 B 那么 et l’adjectif.",
+      "ru": "Используйте 没有…那么, когда у A признак выражен слабее, чем у B. Сначала назовите A, затем 没有 B 那么 и прилагательное.",
+      "tr": "A’nın bir özelliği B’ninki kadar değilse 没有…那么 kullanın. Önce A, ardından 没有 B 那么 ve sıfat gelir."
+    },
+    "contrast": {
+      "en": "Here 没有 means “not as”, not “does not have”; keep the adjective at the end.",
+      "fr": "Ici, 没有 signifie « pas aussi », et non « ne pas avoir » ; gardez l’adjectif à la fin.",
+      "ru": "Здесь 没有 означает «не такой…, как», а не «не иметь»; прилагательное ставится в конце.",
+      "tr": "Burada 没有 “sahip değil” değil, “o kadar değil” anlamındadır; sıfat sonda kalır."
+    },
+    "visual": "comparison",
+    "labels": [
+      {
+        "en": "This road",
+        "fr": "Cette route",
+        "ru": "Эта дорога",
+        "tr": "Bu yol"
+      },
+      {
+        "en": "Reference road",
+        "fr": "Route de référence",
+        "ru": "Дорога для сравнения",
+        "tr": "Karşılaştırılan yol"
+      }
+    ]
+  },
+  "compare-same": {
+    "scene": {
+      "en": "You hold your cup beside a friend’s and notice they are the same size.",
+      "fr": "Vous placez votre tasse à côté de celle d’un ami : elles ont la même taille.",
+      "ru": "Вы ставите свою чашку рядом с чашкой друга: они одинакового размера.",
+      "tr": "Fincanınızı arkadaşınızınkinin yanına koyup aynı büyüklükte olduklarını görüyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 跟…一样 to give two things the same degree of a quality. Say A 跟 B 一样, then name the quality with an adjective.",
+      "fr": "Utilisez 跟…一样 pour exprimer une qualité au même degré. Dites A 跟 B 一样, puis ajoutez l’adjectif qui nomme cette qualité.",
+      "ru": "Используйте 跟…一样, когда признак у двух предметов выражен одинаково. После A 跟 B 一样 поставьте прилагательное с нужным признаком.",
+      "tr": "İki şey bir özelliği aynı derecede taşıyorsa 跟…一样 kullanın. A 跟 B 一样 dedikten sonra özelliği belirten sıfatı ekleyin."
+    },
+    "contrast": {
+      "en": "一样大 means “equally big”; it does not mean that the two cups are the very same object.",
+      "fr": "一样大 signifie « de même taille » ; les deux tasses ne sont pas un seul et même objet.",
+      "ru": "一样大 означает «одинакового размера», а не то, что это одна и та же чашка.",
+      "tr": "一样大 “aynı büyüklükte” demektir; iki fincanın tek bir nesne olduğu anlamına gelmez."
+    },
+    "visual": "comparison",
+    "labels": [
+      {
+        "en": "My cup",
+        "fr": "Ma tasse",
+        "ru": "Моя чашка",
+        "tr": "Benim fincanım"
+      },
+      {
+        "en": "Your cup",
+        "fr": "Ta tasse",
+        "ru": "Твоя чашка",
+        "tr": "Senin fincanın"
+      }
+    ]
+  },
+  "distance-li": {
+    "scene": {
+      "en": "You tell a friend that your home is near the metro station.",
+      "fr": "Vous dites à un ami que vous habitez près du métro.",
+      "ru": "Вы объясняете другу, что ваш дом рядом со станцией метро.",
+      "tr": "Arkadaşınıza evinizin metro istasyonuna yakın olduğunu söylüyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 离 to measure the distance from one place to another. Put the first place before 离 and the reference place after it, then say 很近 or 很远.",
+      "fr": "Utilisez 离 pour situer un lieu par rapport à un autre. Placez le premier lieu avant 离 et le lieu de référence après, puis ajoutez 很近 ou 很远.",
+      "ru": "Используйте 离, чтобы описать расстояние между местами. Первое место ставьте перед 离, ориентир — после, затем добавьте 很近 или 很远.",
+      "tr": "Bir yerin başka bir yere uzaklığını anlatmak için 离 kullanın. İlk yer 离’den önce, referans yer sonra gelir; ardından 很近 veya 很远 ekleyin."
+    },
+    "contrast": {
+      "en": "离 marks distance; use 在 to say where something is located.",
+      "fr": "离 indique une distance ; utilisez 在 pour dire où se trouve quelque chose.",
+      "ru": "离 обозначает расстояние; для местонахождения используйте 在.",
+      "tr": "离 uzaklık belirtir; bir şeyin nerede bulunduğunu söylemek için 在 kullanın."
+    },
+    "visual": "comparison",
+    "labels": [
+      {
+        "en": "My home",
+        "fr": "Chez moi",
+        "ru": "Мой дом",
+        "tr": "Evim"
+      },
+      {
+        "en": "Metro station",
+        "fr": "Station de métro",
+        "ru": "Станция метро",
+        "tr": "Metro istasyonu"
+      }
+    ]
+  },
+  "change-more": {
+    "scene": {
+      "en": "Each day feels hotter as summer arrives.",
+      "fr": "Chaque jour, il fait plus chaud à l’approche de l’été.",
+      "ru": "С приближением лета каждый день становится жарче.",
+      "tr": "Yaz yaklaşırken her gün havanın daha sıcak olduğunu hissediyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 越来越 for one quality that keeps changing over time. Put it directly before the adjective, as in 越来越热.",
+      "fr": "Utilisez 越来越 pour une qualité qui évolue au fil du temps. Placez-le juste avant l’adjectif, comme dans 越来越热.",
+      "ru": "Используйте 越来越 для признака, который постепенно меняется со временем. Ставьте его прямо перед прилагательным: 越来越热.",
+      "tr": "Zamanla giderek değişen bir özellik için 越来越 kullanın. 越来越热 örneğindeki gibi sıfatın hemen önüne koyun."
+    },
+    "contrast": {
+      "en": "越来越 describes one changing trend; 越…越… links two changing things.",
+      "fr": "越来越 décrit une seule évolution ; 越…越… relie deux évolutions.",
+      "ru": "越来越 описывает одну тенденцию, а 越…越… связывает два изменения.",
+      "tr": "越来越 tek bir değişimi anlatır; 越…越… iki değişimi birbirine bağlar."
+    },
+    "visual": "sequence",
+    "labels": [
+      {
+        "en": "Earlier: warm",
+        "fr": "Avant : doux",
+        "ru": "Раньше: тепло",
+        "tr": "Önce: ılık"
+      },
+      {
+        "en": "Now: hotter",
+        "fr": "Maintenant : plus chaud",
+        "ru": "Сейчас: жарче",
+        "tr": "Şimdi: daha sıcak"
+      }
+    ]
+  },
+  "change-correlated": {
+    "scene": {
+      "en": "After more practice, ordering food in Chinese feels easier.",
+      "fr": "Avec davantage de pratique, commander en chinois devient plus facile.",
+      "ru": "Чем больше вы тренируетесь, тем легче заказывать еду по-китайски.",
+      "tr": "Daha çok alıştırma yaptıkça Çince yemek sipariş etmek kolaylaşıyor."
+    },
+    "explanation": {
+      "en": "Use 越…越… when a change in one thing goes with a change in another. Put 越 before each changing action or quality: 越练习，越熟练.",
+      "fr": "Utilisez 越…越… quand deux évolutions vont ensemble. Placez 越 avant chaque action ou qualité qui évolue : 越练习，越熟练.",
+      "ru": "Используйте 越…越…, когда одно изменение связано с другим. Ставьте 越 перед каждым действием или признаком: 越练习，越熟练.",
+      "tr": "Bir şeydeki değişim başka bir değişimle birlikte ilerliyorsa 越…越… kullanın. Değişen her eylem veya özelliğin önüne 越 koyun: 越练习，越熟练."
+    },
+    "contrast": {
+      "en": "The two 越 parts mean “the more…, the more…”; they do not mark two actions happening at the same time.",
+      "fr": "Les deux 越 signifient « plus…, plus… » ; ils n’indiquent pas simplement deux actions simultanées.",
+      "ru": "Две части с 越 означают «чем…, тем…», а не просто одновременность действий.",
+      "tr": "İki 越 bölümü “ne kadar…, o kadar…” anlamındadır; yalnızca iki eylemin aynı anda yapıldığını belirtmez."
+    },
+    "visual": "cause",
+    "labels": [
+      {
+        "en": "More practice",
+        "fr": "Plus de pratique",
+        "ru": "Больше практики",
+        "tr": "Daha çok alıştırma"
+      },
+      {
+        "en": "Greater ease",
+        "fr": "Plus d’aisance",
+        "ru": "Больше уверенности",
+        "tr": "Daha fazla rahatlık"
+      }
+    ]
+  },
+  "time-first-then": {
+    "scene": {
+      "en": "You wash your hands and then eat fruit.",
+      "fr": "Vous vous lavez les mains, puis vous mangez des fruits.",
+      "ru": "Вы моете руки, а потом едите фрукты.",
+      "tr": "Önce ellerinizi yıkıyor, sonra meyve yiyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 先…再… to put actions in a planned order. Put 先 before the first action and 再 before the next one.",
+      "fr": "Utilisez 先…再… pour annoncer des actions dans l’ordre prévu. Placez 先 avant la première action et 再 avant la suivante.",
+      "ru": "Используйте 先…再…, чтобы задать порядок действий. Ставьте 先 перед первым действием, а 再 — перед следующим.",
+      "tr": "Yapılacak eylemleri sıraya koymak için 先…再… kullanın. İlk eylemden önce 先, sonraki eylemden önce 再 gelir."
+    },
+    "contrast": {
+      "en": "再 here means “then”; do not read it as “again” when it introduces the next step.",
+      "fr": "Ici, 再 signifie « puis » ; il n’indique pas une répétition lorsqu’il introduit l’étape suivante.",
+      "ru": "Здесь 再 означает «затем», а не «снова»: оно вводит следующий шаг.",
+      "tr": "Burada 再 sonraki adımı tanıtır ve “sonra” demektir; “yeniden” diye anlamayın."
+    },
+    "visual": "sequence",
+    "labels": [
+      {
+        "en": "Wash hands",
+        "fr": "Se laver les mains",
+        "ru": "Вымыть руки",
+        "tr": "Elleri yıka"
+      },
+      {
+        "en": "Eat fruit",
+        "fr": "Manger des fruits",
+        "ru": "Съесть фрукты",
+        "tr": "Meyve ye"
+      }
+    ]
+  },
+  "time-after": {
+    "scene": {
+      "en": "Class ends, and you head to the library.",
+      "fr": "Le cours se termine et vous allez à la bibliothèque.",
+      "ru": "Занятие заканчивается, и вы идёте в библиотеку.",
+      "tr": "Ders bitiyor, ardından kütüphaneye gidiyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 以后 to place something after an event. Put the event before 以后, then say what happens afterwards: 下课以后，我去图书馆.",
+      "fr": "Utilisez 以后 pour situer une action après un événement. Placez l’événement avant 以后, puis dites ce qui suit : 下课以后，我去图书馆.",
+      "ru": "Используйте 以后, чтобы сказать, что происходит после события. Назовите событие перед 以后, а затем следующее действие: 下课以后，我去图书馆.",
+      "tr": "Bir olaydan sonrasını anlatmak için 以后 kullanın. Olayı 以后’dan önce söyleyin, ardından ne olduğunu ekleyin: 下课以后，我去图书馆."
+    },
+    "contrast": {
+      "en": "Put 以后 after the event, unlike English “after class”; 以前 would reverse the timing.",
+      "fr": "Placez 以后 après l’événement, contrairement au français « après le cours » ; 以前 inverse l’ordre temporel.",
+      "ru": "以后 стоит после события, в отличие от русского «после занятия»; 以前 меняет время на «до».",
+      "tr": "Türkçedeki “dersten sonra” gibi olay önce gelir; 以前 kullanırsanız anlam “önce” olur."
+    },
+    "visual": "sequence",
+    "labels": [
+      {
+        "en": "Class ends",
+        "fr": "Fin du cours",
+        "ru": "Конец занятия",
+        "tr": "Ders biter"
+      },
+      {
+        "en": "Library visit",
+        "fr": "Aller à la bibliothèque",
+        "ru": "Поход в библиотеку",
+        "tr": "Kütüphaneye git"
+      }
+    ]
+  },
+  "time-before": {
+    "scene": {
+      "en": "You check the weather before leaving home.",
+      "fr": "Vous regardez la météo avant de sortir.",
+      "ru": "Перед выходом из дома вы проверяете погоду.",
+      "tr": "Evden çıkmadan önce hava durumuna bakıyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 以前 to place something before an event. Put the reference event before 以前, then describe what you do earlier: 出门以前，请看看天气.",
+      "fr": "Utilisez 以前 pour situer une action avant un événement. Placez l’événement de référence avant 以前, puis l’action à faire auparavant : 出门以前，请看看天气.",
+      "ru": "Используйте 以前, чтобы сказать, что нужно сделать до события. Назовите это событие перед 以前, а затем более раннее действие: 出门以前，请看看天气.",
+      "tr": "Bir olaydan önce yapılan şeyi anlatmak için 以前 kullanın. Referans olayı 以前’dan önce, daha erken yapılan eylemi ardından söyleyin: 出门以前，请看看天气."
+    },
+    "contrast": {
+      "en": "The event beside 以前 is the later reference point; the weather check happens first.",
+      "fr": "L’événement placé devant 以前 est le repère ultérieur ; consulter la météo vient en premier.",
+      "ru": "Событие перед 以前 — более поздний ориентир; сначала нужно проверить погоду.",
+      "tr": "以前’ın önündeki olay daha sonraki referans noktasıdır; hava durumuna bakmak önce gerçekleşir."
+    },
+    "visual": "sequence",
+    "labels": [
+      {
+        "en": "Check weather",
+        "fr": "Regarder la météo",
+        "ru": "Проверить погоду",
+        "tr": "Hava durumuna bak"
+      },
+      {
+        "en": "Leave home",
+        "fr": "Sortir de chez soi",
+        "ru": "Выйти из дома",
+        "tr": "Evden çık"
+      }
+    ]
+  },
+  "time-simultaneous": {
+    "scene": {
+      "en": "You listen to music while cooking dinner.",
+      "fr": "Vous écoutez de la musique en préparant le dîner.",
+      "ru": "Вы слушаете музыку, пока готовите ужин.",
+      "tr": "Akşam yemeği hazırlarken müzik dinliyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 一边…一边… for two actions happening at the same time. Put 一边 before each action, usually with one shared subject.",
+      "fr": "Utilisez 一边…一边… pour deux actions simultanées. Placez 一边 avant chaque action, généralement avec un même sujet.",
+      "ru": "Используйте 一边…一边… для двух одновременных действий. Ставьте 一边 перед каждым действием; обычно их выполняет один человек.",
+      "tr": "Aynı anda yapılan iki eylem için 一边…一边… kullanın. Her eylemden önce 一边 gelir; genellikle ikisini de aynı kişi yapar."
+    },
+    "contrast": {
+      "en": "Use this for actions such as cooking and listening, not two static qualities such as cheap and clean.",
+      "fr": "Utilisez cette structure pour des actions comme cuisiner et écouter, pas pour deux qualités comme bon marché et propre.",
+      "ru": "Это сочетание подходит для действий, например готовить и слушать, а не для качеств «дешёвый» и «чистый».",
+      "tr": "Bu yapı yemek yapmak ve dinlemek gibi eylemler içindir; ucuz ve temiz gibi iki özellik için kullanılmaz."
+    },
+    "visual": "sequence",
+    "labels": [
+      {
+        "en": "Cook dinner",
+        "fr": "Préparer le dîner",
+        "ru": "Готовить ужин",
+        "tr": "Yemek hazırla"
+      },
+      {
+        "en": "Listen to music",
+        "fr": "Écouter de la musique",
+        "ru": "Слушать музыку",
+        "tr": "Müzik dinle"
+      }
+    ]
+  },
+  "connect-cause": {
+    "scene": {
+      "en": "Rain changes your plan, so you eat at home.",
+      "fr": "La pluie change vos plans : vous mangez chez vous.",
+      "ru": "Из-за дождя планы меняются, и вы едите дома.",
+      "tr": "Yağmur planınızı değiştiriyor, bu yüzden evde yemek yiyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 因为…所以… to explain a reason and its result. Put 因为 before the reason and 所以 before what follows from it.",
+      "fr": "Utilisez 因为…所以… pour donner une raison et son résultat. Placez 因为 avant la raison et 所以 avant sa conséquence.",
+      "ru": "Используйте 因为…所以…, чтобы связать причину и результат. Перед причиной ставьте 因为, а перед следствием — 所以.",
+      "tr": "Bir neden ve sonucunu açıklamak için 因为…所以… kullanın. Nedenden önce 因为, sonuçtan önce 所以 gelir."
+    },
+    "contrast": {
+      "en": "Chinese can use both words in one sentence, even when your language would use only “because” or “so”.",
+      "fr": "Le chinois peut employer les deux mots ensemble, même si le français choisit généralement « parce que » ou « donc ».",
+      "ru": "В китайском оба слова могут стоять в одном предложении: «потому что…, поэтому…».",
+      "tr": "Çincede iki sözcük aynı cümlede kullanılabilir; Türkçede “çünkü” veya “bu yüzden” tek başına yeterli olabilir."
+    },
+    "visual": "cause",
+    "labels": [
+      {
+        "en": "Rain",
+        "fr": "Pluie",
+        "ru": "Дождь",
+        "tr": "Yağmur"
+      },
+      {
+        "en": "Meal at home",
+        "fr": "Repas à la maison",
+        "ru": "Еда дома",
+        "tr": "Evde yemek"
+      }
+    ]
+  },
+  "connect-although": {
+    "scene": {
+      "en": "A tiny restaurant surprises you with delicious food.",
+      "fr": "Un tout petit restaurant vous surprend avec de délicieux plats.",
+      "ru": "Крошечный ресторан удивляет вас вкусной едой.",
+      "tr": "Küçücük bir restoran lezzetli yemekleriyle sizi şaşırtıyor."
+    },
+    "explanation": {
+      "en": "Use 虽然…但是… when the second fact goes against an expectation raised by the first. Put 虽然 before the first fact and 但是 before the surprising fact.",
+      "fr": "Utilisez 虽然…但是… quand le second fait contredit l’attente créée par le premier. Placez 虽然 avant le premier fait et 但是 avant le fait surprenant.",
+      "ru": "Используйте 虽然…但是…, когда второй факт не соответствует ожиданию от первого. Ставьте 虽然 перед первым фактом, а 但是 — перед неожиданным.",
+      "tr": "İkinci durum, ilkinin yarattığı beklentiye ters düşüyorsa 虽然…但是… kullanın. İlk durumdan önce 虽然, şaşırtıcı durumdan önce 但是 gelir."
+    },
+    "contrast": {
+      "en": "Both facts are true; 如果 would instead introduce a condition that may or may not happen.",
+      "fr": "Les deux faits sont vrais ; 如果 introduirait une condition qui peut se réaliser ou non.",
+      "ru": "Оба факта верны; 如果 вводило бы условие, которое может исполниться или нет.",
+      "tr": "İki durum da gerçektir; 如果 ise gerçekleşip gerçekleşmeyeceği belli olmayan bir koşul getirir."
+    },
+    "visual": "contrast",
+    "labels": [
+      {
+        "en": "Small restaurant",
+        "fr": "Petit restaurant",
+        "ru": "Маленький ресторан",
+        "tr": "Küçük restoran"
+      },
+      {
+        "en": "Delicious food",
+        "fr": "Plats délicieux",
+        "ru": "Вкусная еда",
+        "tr": "Lezzetli yemek"
+      }
+    ]
+  },
+  "connect-if": {
+    "scene": {
+      "en": "You plan to take the metro if it rains tomorrow.",
+      "fr": "Vous prévoyez de prendre le métro s’il pleut demain.",
+      "ru": "Если завтра пойдёт дождь, вы поедете на метро.",
+      "tr": "Yarın yağmur yağarsa metroya binmeyi planlıyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 如果…就… to give a condition and what you will do if it holds. Put 如果 before the condition and 就 before the action in the second part.",
+      "fr": "Utilisez 如果…就… pour poser une condition et dire ce qui suivra. Placez 如果 avant la condition et 就 avant l’action de la seconde partie.",
+      "ru": "Используйте 如果…就…, чтобы назвать условие и действие при его выполнении. Ставьте 如果 перед условием, а 就 — перед действием во второй части.",
+      "tr": "Bir koşulu ve gerçekleşirse ne yapacağınızı söylemek için 如果…就… kullanın. Koşuldan önce 如果, ikinci bölümdeki eylemden önce 就 gelir."
+    },
+    "contrast": {
+      "en": "If the second part has a subject, put it before 就: 我就坐地铁, not 就我坐地铁.",
+      "fr": "Si la seconde partie a un sujet, placez-le avant 就 : 我就坐地铁, et non 就我坐地铁.",
+      "ru": "Если во второй части есть подлежащее, ставьте его перед 就: 我就坐地铁, а не 就我坐地铁.",
+      "tr": "İkinci bölümde özne varsa 就’dan önce gelir: 我就坐地铁; 就我坐地铁 değil."
+    },
+    "visual": "condition",
+    "labels": [
+      {
+        "en": "Rain tomorrow",
+        "fr": "Pluie demain",
+        "ru": "Завтра дождь",
+        "tr": "Yarın yağmur"
+      },
+      {
+        "en": "Take the metro",
+        "fr": "Prendre le métro",
+        "ru": "Поехать на метро",
+        "tr": "Metroya bin"
+      }
+    ]
+  },
+  "connect-provided": {
+    "scene": {
+      "en": "A student card is all you need to buy the student ticket.",
+      "fr": "Votre carte étudiante suffit pour acheter le billet étudiant.",
+      "ru": "Для покупки студенческого билета достаточно студенческого удостоверения.",
+      "tr": "Öğrenci bileti almak için öğrenci kartınızın olması yeterli."
+    },
+    "explanation": {
+      "en": "Use 只要…就… when fulfilling a condition is enough for the result. Put 只要 before that sufficient condition and 就 before the result.",
+      "fr": "Utilisez 只要…就… quand une condition suffit à obtenir un résultat. Placez 只要 avant cette condition suffisante et 就 avant le résultat.",
+      "ru": "Используйте 只要…就…, когда выполнения условия достаточно для результата. Ставьте 只要 перед достаточным условием, а 就 — перед результатом.",
+      "tr": "Bir koşulun gerçekleşmesi sonuç için yeterliyse 只要…就… kullanın. Yeterli koşuldan önce 只要, sonuçtan önce 就 gelir."
+    },
+    "contrast": {
+      "en": "只要 says “this is enough”; 只有 says “this is required”, without promising it is enough by itself.",
+      "fr": "只要 signifie « cela suffit » ; 只有 signifie « c’est nécessaire », sans garantir que cela suffise à lui seul.",
+      "ru": "只要 означает «этого достаточно», а 只有 — «это необходимо», но не обязательно достаточно само по себе.",
+      "tr": "只要 “bu yeterli” der; 只有 “bu gerekli” der, tek başına yeterli olduğunu garanti etmez."
+    },
+    "visual": "condition",
+    "labels": [
+      {
+        "en": "Bring student card",
+        "fr": "Apporter sa carte étudiante",
+        "ru": "Взять студенческий",
+        "tr": "Öğrenci kartını getir"
+      },
+      {
+        "en": "Buy student ticket",
+        "fr": "Acheter le billet étudiant",
+        "ru": "Купить студенческий билет",
+        "tr": "Öğrenci bileti al"
+      }
+    ]
+  },
+  "connect-only-if": {
+    "scene": {
+      "en": "At an exhibition entrance, you must have bought a ticket to enter.",
+      "fr": "À l’entrée d’une exposition, il faut avoir acheté un billet pour entrer.",
+      "ru": "На входе на выставку проверяют: для входа нужно купить билет.",
+      "tr": "Bir serginin girişindesiniz; içeri girmek için bilet almış olmanız gerekiyor."
+    },
+    "explanation": {
+      "en": "Use 只有…才… to say that a condition is required before a result is possible. Put 只有 before the necessary condition and 才 before the result.",
+      "fr": "Utilisez 只有…才… pour dire qu’une condition est indispensable à un résultat. Placez 只有 avant cette condition nécessaire et 才 avant le résultat.",
+      "ru": "Используйте 只有…才…, когда без условия результат невозможен. Ставьте 只有 перед необходимым условием, а 才 — перед результатом.",
+      "tr": "Bir sonuç ancak belirli bir koşulla mümkünse 只有…才… kullanın. Gerekli koşuldan önce 只有, sonuçtan önce 才 gelir."
+    },
+    "contrast": {
+      "en": "只有 makes the condition necessary; do not swap it with 只要, which presents a condition as sufficient.",
+      "fr": "只有 rend la condition nécessaire ; ne le remplacez pas par 只要, qui la présente comme suffisante.",
+      "ru": "只有 обозначает необходимое условие; не заменяйте его на 只要, обозначающее достаточное.",
+      "tr": "只有 koşulun gerekli olduğunu belirtir; onu, koşulun yeterli olduğunu belirten 只要 ile değiştirmeyin."
+    },
+    "visual": "condition",
+    "labels": [
+      {
+        "en": "Ticket required",
+        "fr": "Billet obligatoire",
+        "ru": "Нужен билет",
+        "tr": "Bilet gerekli"
+      },
+      {
+        "en": "Entry possible",
+        "fr": "Entrée possible",
+        "ru": "Вход возможен",
+        "tr": "Giriş mümkün"
+      }
+    ]
+  },
+  "connect-not-only": {
+    "scene": {
+      "en": "A restaurant wins you over because it is both cheap and clean.",
+      "fr": "Un restaurant vous plaît : il est à la fois bon marché et propre.",
+      "ru": "Ресторан вам нравится: он и недорогой, и чистый.",
+      "tr": "Bir restoran hem ucuz hem temiz olduğu için hoşunuza gidiyor."
+    },
+    "explanation": {
+      "en": "Use 不但…而且… to add a second positive point or fact with emphasis. With one subject, put it first, then 不但 before the first point and 而且 before the second.",
+      "fr": "Utilisez 不但…而且… pour ajouter un second point ou fait en le soulignant. Avec un seul sujet, placez-le d’abord, puis 不但 avant le premier point et 而且 avant le second.",
+      "ru": "Используйте 不但…而且…, чтобы с усилением добавить второй факт или достоинство. При общем подлежащем ставьте его первым, затем 不但 перед первым фактом и 而且 — перед вторым.",
+      "tr": "İkinci bir olumlu özellik veya bilgiyi vurgulayarak eklemek için 不但…而且… kullanın. Tek özne varsa başa koyun; ilk bilgiden önce 不但, ikinciden önce 而且 gelir."
+    },
+    "contrast": {
+      "en": "不但 does not deny the first point; it means “not only”, so both points apply.",
+      "fr": "不但 ne nie pas le premier point : il signifie « non seulement », donc les deux sont vrais.",
+      "ru": "不但 не отрицает первый факт: оно означает «не только», поэтому верны оба факта.",
+      "tr": "不但 ilk bilgiyi reddetmez; “yalnızca … değil” demektir, yani iki bilgi de geçerlidir."
+    },
+    "visual": "focus",
+    "labels": [
+      {
+        "en": "Low price",
+        "fr": "Petit prix",
+        "ru": "Низкая цена",
+        "tr": "Düşük fiyat"
+      },
+      {
+        "en": "Clean space",
+        "fr": "Lieu propre",
+        "ru": "Чистое помещение",
+        "tr": "Temiz ortam"
+      }
+    ]
+  },
+  "connect-besides": {
+    "scene": {
+      "en": "You tell a friend you like tea as well as coffee.",
+      "fr": "Vous dites à un ami que vous aimez le thé en plus du café.",
+      "ru": "Вы говорите другу, что любите не только кофе, но и чай.",
+      "tr": "Arkadaşınıza kahvenin yanı sıra çayı da sevdiğinizi söylüyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 除了…还… to add something to what is already included. Put the known item after 除了 and the extra item in the part with 还.",
+      "fr": "Utilisez 除了…还… pour ajouter quelque chose à un ensemble déjà inclus. Placez l’élément connu après 除了 et l’ajout dans la partie avec 还.",
+      "ru": "Используйте 除了…还…, чтобы добавить что-то к уже включённому. После 除了 назовите известное, а в части с 还 — дополнительное.",
+      "tr": "Zaten dahil olan bir şeye başka bir şey eklemek için 除了…还… kullanın. Bilinen öğeyi 除了’dan sonra, ek öğeyi 还 bulunan bölümde söyleyin."
+    },
+    "contrast": {
+      "en": "With 还 this is addition: coffee is included too; 除了 can express an exception in other patterns.",
+      "fr": "Avec 还, il s’agit d’un ajout : le café est inclus aussi ; dans d’autres structures, 除了 peut marquer une exception.",
+      "ru": "С 还 это добавление: кофе тоже включён; в других сочетаниях 除了 может обозначать исключение.",
+      "tr": "还 ile bu bir eklemedir; kahve de dahildir. 除了 başka yapılarda istisna bildirebilir."
+    },
+    "visual": "focus",
+    "labels": [
+      {
+        "en": "Coffee already included",
+        "fr": "Café déjà inclus",
+        "ru": "Кофе уже включён",
+        "tr": "Kahve zaten dahil"
+      },
+      {
+        "en": "Tea added",
+        "fr": "Thé en plus",
+        "ru": "Добавляется чай",
+        "tr": "Çay da eklenir"
+      }
+    ]
+  },
+  "connect-no-matter": {
+    "scene": {
+      "en": "Rain or sunshine, your library plan stays the same.",
+      "fr": "Pluie ou soleil, vous maintenez votre sortie à la bibliothèque.",
+      "ru": "Дождь или солнце — ваш план пойти в библиотеку не меняется.",
+      "tr": "Yağmur da yağsa güneş de açsa kütüphane planınız değişmiyor."
+    },
+    "explanation": {
+      "en": "Use 不管…都… when the result stays the same across different possibilities. Put the alternatives or a question word after 不管, then put 都 before the unchanged action.",
+      "fr": "Utilisez 不管…都… quand le résultat reste le même dans plusieurs cas. Après 不管, mettez des alternatives ou un mot interrogatif, puis 都 avant l’action qui ne change pas.",
+      "ru": "Используйте 不管…都…, когда результат одинаков при разных вариантах. После 不管 ставьте варианты или вопросительное слово, а 都 — перед неизменным действием.",
+      "tr": "Farklı olasılıklarda sonuç değişmiyorsa 不管…都… kullanın. 不管’dan sonra seçenekler veya bir soru sözcüğü, değişmeyen eylemden önce 都 gelir."
+    },
+    "contrast": {
+      "en": "下不下雨 presents both possibilities here; it is not a question asking someone whether it will rain.",
+      "fr": "Ici, 下不下雨 présente les deux possibilités ; ce n’est pas une question adressée à quelqu’un.",
+      "ru": "Здесь 下不下雨 охватывает оба варианта, а не задаёт собеседнику вопрос о дожде.",
+      "tr": "Burada 下不下雨 iki olasılığı kapsar; birine yağmur yağıp yağmayacağını soran bir soru değildir."
+    },
+    "visual": "condition",
+    "labels": [
+      {
+        "en": "Any weather",
+        "fr": "Quel que soit le temps",
+        "ru": "Любая погода",
+        "tr": "Hava nasıl olursa olsun"
+      },
+      {
+        "en": "Same library plan",
+        "fr": "Même sortie à la bibliothèque",
+        "ru": "Тот же план: библиотека",
+        "tr": "Aynı kütüphane planı"
+      }
+    ]
+  },
+  "attitude-interest": {
+    "scene": {
+      "en": "A museum visit makes you want to learn about Chinese history.",
+      "fr": "Une visite au musée vous donne envie de découvrir l’histoire chinoise.",
+      "ru": "После музея вам хочется узнать больше об истории Китая.",
+      "tr": "Bir müze gezisi Çin tarihi hakkında daha çok öğrenmek istemenizi sağlıyor."
+    },
+    "explanation": {
+      "en": "Use 对…感兴趣 to say what interests someone. Put the person first, then 对 and the topic, then 感兴趣; 很 can come before 感兴趣.",
+      "fr": "Utilisez 对…感兴趣 pour dire ce qui intéresse quelqu’un. Placez la personne, puis 对 et le sujet, puis 感兴趣 ; 很 peut précéder 感兴趣.",
+      "ru": "Используйте 对…感兴趣, чтобы сказать, что кому-то интересно. Порядок: человек, 对 и тема, затем 感兴趣; перед 感兴趣 можно поставить 很.",
+      "tr": "Birinin neye ilgi duyduğunu söylemek için 对…感兴趣 kullanın. Önce kişi, sonra 对 ve konu, ardından 感兴趣 gelir; 很, 感兴趣’den önce gelebilir."
+    },
+    "contrast": {
+      "en": "对 introduces the topic; 感兴趣 expresses the interest, so 对 alone does not mean “like”.",
+      "fr": "对 introduit le sujet ; 感兴趣 exprime l’intérêt, donc 对 seul ne signifie pas « aimer ».",
+      "ru": "对 вводит тему, а 感兴趣 выражает интерес; само по себе 对 не означает «нравиться».",
+      "tr": "对 konuyu tanıtır, 感兴趣 ise ilgiyi ifade eder; 对 tek başına “sevmek” demek değildir."
+    },
+    "visual": "focus",
+    "labels": [
+      {
+        "en": "Interested person",
+        "fr": "Personne intéressée",
+        "ru": "Кому интересно",
+        "tr": "İlgi duyan kişi"
+      },
+      {
+        "en": "Chinese history",
+        "fr": "Histoire chinoise",
+        "ru": "История Китая",
+        "tr": "Çin tarihi"
+      }
+    ]
+  },
+  "complement-ba": {
+    "scene": {
+      "en": "You ask someone to put a cup on the table.",
+      "fr": "Vous demandez à quelqu’un de poser une tasse sur la table.",
+      "ru": "Вы просите поставить чашку на стол.",
+      "tr": "Birinden fincanı masanın üzerine koymasını istiyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 把 to highlight what happens to a specific thing. Put that thing after 把, then give the action and its result or destination: 把杯子放在桌子上.",
+      "fr": "Utilisez 把 pour souligner ce qui arrive à un objet précis. Placez cet objet après 把, puis l’action et son résultat ou sa destination : 把杯子放在桌子上.",
+      "ru": "Используйте 把, чтобы выделить, что происходит с конкретным предметом. После 把 назовите предмет, затем действие и его результат или место назначения: 把杯子放在桌子上.",
+      "tr": "Belirli bir nesneye ne olduğunu öne çıkarmak için 把 kullanın. Nesne 把’dan sonra gelir; ardından eylem ve sonucu ya da hedef yeri söylenir: 把杯子放在桌子上."
+    },
+    "contrast": {
+      "en": "In this pattern, do not stop at a bare verb such as 放; say where the cup goes or what result is reached.",
+      "fr": "Dans cette structure, ne vous arrêtez pas à un verbe seul comme 放 ; précisez où va la tasse ou le résultat obtenu.",
+      "ru": "В этой конструкции не заканчивайте одним глаголом вроде 放; укажите, куда ставят чашку или каков результат.",
+      "tr": "Bu yapıda 放 gibi yalın bir fiille bitirmeyin; fincanın nereye konduğunu veya elde edilen sonucu söyleyin."
+    },
+    "visual": "result",
+    "labels": [
+      {
+        "en": "The cup",
+        "fr": "La tasse",
+        "ru": "Чашка",
+        "tr": "Fincan"
+      },
+      {
+        "en": "On the table",
+        "fr": "Sur la table",
+        "ru": "На столе",
+        "tr": "Masanın üzerinde"
+      }
+    ]
+  },
+  "complement-bei": {
+    "scene": {
+      "en": "You find your cup knocked over by the kitten.",
+      "fr": "Vous trouvez votre tasse renversée par le chaton.",
+      "ru": "Вы видите, что котёнок опрокинул вашу чашку.",
+      "tr": "Yavru kedinin fincanınızı devirdiğini görüyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 被 to start with the person or thing affected by an action. Put 被 before the doer, then describe the action and result: 我的杯子被小猫碰倒了.",
+      "fr": "Utilisez 被 pour commencer par la personne ou l’objet qui subit l’action. Placez 被 avant celui qui agit, puis décrivez l’action et son résultat : 我的杯子被小猫碰倒了.",
+      "ru": "Используйте 被, чтобы начать с того, кто или что подверглось действию. После 被 назовите исполнителя, затем действие и результат: 我的杯子被小猫碰倒了.",
+      "tr": "Eylemden etkilenen kişi veya nesneyle başlamak için 被 kullanın. 被’den sonra yapan kişi veya varlık, ardından eylem ve sonucu gelir: 我的杯子被小猫碰倒了."
+    },
+    "contrast": {
+      "en": "The cup before 被 receives the action; it is the kitten after 被 that does it.",
+      "fr": "La tasse avant 被 subit l’action ; c’est le chaton après 被 qui l’accomplit.",
+      "ru": "Чашка перед 被 подвергается действию; выполняет его котёнок после 被.",
+      "tr": "被’den önceki fincan eylemden etkilenir; eylemi yapan, 被’den sonraki yavru kedidir."
+    },
+    "visual": "result",
+    "labels": [
+      {
+        "en": "Cup affected",
+        "fr": "Tasse renversée",
+        "ru": "Пострадавшая чашка",
+        "tr": "Etkilenen fincan"
+      },
+      {
+        "en": "Kitten causes it",
+        "fr": "Le chaton agit",
+        "ru": "Действует котёнок",
+        "tr": "Yapan yavru kedi"
+      }
+    ]
+  },
+  "complement-de": {
+    "scene": {
+      "en": "You understand a speaker easily because he speaks clearly.",
+      "fr": "Vous comprenez facilement quelqu’un parce qu’il parle clairement.",
+      "ru": "Вам легко понимать человека: он говорит ясно.",
+      "tr": "Açık konuştuğu için konuşmacıyı kolayca anlıyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 得 after a verb to describe how well or in what way the action happens. Put the description after 得: 说得很清楚 means speaking clearly.",
+      "fr": "Utilisez 得 après un verbe pour décrire la manière ou la qualité de l’action. Placez la description après 得 : 说得很清楚 signifie parler clairement.",
+      "ru": "Используйте 得 после глагола, чтобы описать, как выполняется действие. Описание ставьте после 得: 说得很清楚 означает «говорить очень понятно».",
+      "tr": "Bir eylemin nasıl veya ne kadar iyi yapıldığını anlatmak için fiilden sonra 得 kullanın. Açıklama 得’den sonra gelir: 说得很清楚 açık konuşmayı anlatır."
+    },
+    "contrast": {
+      "en": "得 links a verb to its description; 的 usually links a description or owner to a noun, as in 我的杯子.",
+      "fr": "得 relie un verbe à sa description ; 的 relie généralement une description ou un possesseur à un nom, comme dans 我的杯子.",
+      "ru": "得 связывает глагол с описанием; 的 обычно связывает определение или владельца с существительным, как в 我的杯子.",
+      "tr": "得 fiili açıklamasına bağlar; 的 ise 我的杯子 örneğindeki gibi genellikle bir tanımı veya sahibi isme bağlar."
+    },
+    "visual": "focus",
+    "labels": [
+      {
+        "en": "Speaking",
+        "fr": "Parler",
+        "ru": "Говорить",
+        "tr": "Konuşmak"
+      },
+      {
+        "en": "Clearly",
+        "fr": "Clairement",
+        "ru": "Понятно",
+        "tr": "Açıkça"
+      }
+    ]
+  },
+  "aspect-experience": {
+    "scene": {
+      "en": "A friend asks whether you have ever tried a kind of noodles.",
+      "fr": "Un ami vous demande si vous avez déjà goûté un type de nouilles.",
+      "ru": "Друг спрашивает, пробовали ли вы когда-нибудь такую лапшу.",
+      "tr": "Arkadaşınız bu tür erişteyi daha önce deneyip denemediğinizi soruyor."
+    },
+    "explanation": {
+      "en": "Use 过 to say an action has been part of someone’s experience. Put 过 immediately after the verb and before the object: 吃过这种面条.",
+      "fr": "Utilisez 过 pour dire qu’une action fait partie de l’expérience de quelqu’un. Placez 过 juste après le verbe et avant le complément : 吃过这种面条.",
+      "ru": "Используйте 过, чтобы сказать, что у человека был такой опыт. Ставьте 过 сразу после глагола и перед дополнением: 吃过这种面条.",
+      "tr": "Bir eylemin kişinin geçmiş deneyimleri arasında olduğunu söylemek için 过 kullanın. 过 fiilden hemen sonra, nesneden önce gelir: 吃过这种面条."
+    },
+    "contrast": {
+      "en": "过 highlights “ever done”; 了 often marks a completed event or new situation, so it is not an interchangeable past-tense ending.",
+      "fr": "过 souligne l’expérience vécue ; 了 marque souvent un événement accompli ou une situation nouvelle : ce ne sont pas des terminaisons du passé interchangeables.",
+      "ru": "过 выделяет опыт, а 了 часто отмечает завершённое событие или новую ситуацию; это не взаимозаменяемые окончания прошедшего времени.",
+      "tr": "过 “daha önce yapmış olmayı” vurgular; 了 çoğu zaman tamamlanmış bir olayı veya yeni durumu belirtir. Bunlar birbirinin yerine geçen geçmiş zaman ekleri değildir."
+    },
+    "visual": "focus",
+    "labels": [
+      {
+        "en": "Past experience",
+        "fr": "Expérience vécue",
+        "ru": "Прошлый опыт",
+        "tr": "Geçmiş deneyim"
+      },
+      {
+        "en": "Have you tried it?",
+        "fr": "Avez-vous déjà goûté ?",
+        "ru": "Вы уже пробовали?",
+        "tr": "Hiç denedin mi?"
+      }
+    ]
+  },
+  "time-as-soon": {
+    "scene": {
+      "en": "You promise to call the moment you arrive home.",
+      "fr": "Vous promettez d’appeler dès votre arrivée à la maison.",
+      "ru": "Вы обещаете позвонить сразу, как придёте домой.",
+      "tr": "Eve varır varmaz arayacağınıza söz veriyorsunuz."
+    },
+    "explanation": {
+      "en": "Use 一…就… when one action triggers another immediately. Put 一 before the first action and 就 before the action that follows: 一到家就给你打电话.",
+      "fr": "Utilisez 一…就… quand une action en déclenche immédiatement une autre. Placez 一 avant la première et 就 avant celle qui suit : 一到家就给你打电话.",
+      "ru": "Используйте 一…就…, когда за одним действием сразу следует другое. Ставьте 一 перед первым действием, а 就 — перед следующим: 一到家就给你打电话.",
+      "tr": "Bir eylemin hemen ardından diğeri gerçekleşiyorsa 一…就… kullanın. İlk eylemden önce 一, ardından gelen eylemden önce 就 koyun: 一到家就给你打电话."
+    },
+    "contrast": {
+      "en": "Here 一 is part of “as soon as”, not the number one; 先…再… gives an order without the same immediacy.",
+      "fr": "Ici, 一 fait partie de « dès que », ce n’est pas le nombre un ; 先…再… donne un ordre sans la même immédiateté.",
+      "ru": "Здесь 一 входит в значение «как только», а не обозначает число один; 先…再… задаёт порядок без такой немедленности.",
+      "tr": "Burada 一 “varır varmaz” anlamındaki yapının parçasıdır, bir sayısı değildir; 先…再… aynı anındalık olmadan sıra belirtir."
+    },
+    "visual": "sequence",
+    "labels": [
+      {
+        "en": "Arrive home",
+        "fr": "Arriver à la maison",
+        "ru": "Прийти домой",
+        "tr": "Eve var"
+      },
+      {
+        "en": "Call immediately",
+        "fr": "Appeler aussitôt",
+        "ru": "Сразу позвонить",
+        "tr": "Hemen ara"
+      }
+    ]
+  }
+}
