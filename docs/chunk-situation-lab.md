@@ -1,6 +1,6 @@
 # Situation Lab — optional preview
 
-Base: `ac42802e7d011b56e82f8d45b550d6327dc62358`. Branch: `codex/chunk-situation-lab`. Isolated checkout: `_worktrees/chinese-os/chunk-situation-lab`. No release integration, PR or deployment is included.
+Approved source: `804b2d7b71149a18f0d348582e0fe6716816433c`, based on `ac42802e7d011b56e82f8d45b550d6327dc62358`. Source branch: `codex/chunk-situation-lab`. Integration branch `codex/situation-lab-integration` merges the whole feature onto live v55 source `f390264dbd15f7942828937d1f14be605ced18db`, preserving Family practice Lab and Often confused.
 
 Preview: `http://127.0.0.1:5189/?course=intensive&material=speaking-chunks&chunks=words&chunklab=1`.
 An optional Situation Lab entry appears inside the existing chunks navigation. Only `chunklab=1` is added/removed; Back retains the course, material, collection, search/filter context, hash and the mounted original collection/lesson/recall state. The old tabs, exercises, activity IDs, history and progress implementation are unchanged.
@@ -28,3 +28,11 @@ Design hypothesis: reuse a known construction under a changed communicative purp
 - Preview returned HTTP 200. Worker-owned source dev server: port 5189, initially PID 29694, execution session 28726; verify ownership again before reusing/stopping.
 - Browser acceptance is pending. The required CUA connection failed before Chrome inspection (`transport closed before response`), and one inventory retry failed identically. No browser screenshots were produced. Desktop/mobile layout, real audio playback, focus, IME and Back interactions must be checked through the live preview once browser tooling is available. Component tests are not a substitute for those checks.
 - No speech, handwriting, learning-effectiveness, global mastery or production acceptance claim is made.
+
+## Integration verification, 2026-10-30
+
+The first integrated browser run reproduced a Back regression: Words in context lost its HSK filter and unsaved search when the Lab unmounted the original collection. The original view now remains mounted but hidden while the optional Lab is open. A regression test verifies retained component state and forbids progress writes. Chrome confirmed HSK2 + 学, grammar extension/search filters and an open 即使…也… explanation survive the round trip. Existing exercise state is retained by the same boundary; no old event IDs or progress implementation changed.
+
+The IME guard additionally handles candidate-confirmation Enter with keyCode 229; its test failed before the fix. The answer input follows the global Hanzi font preference. All 285 application tests passed, including nine Situation Lab/integration tests, and TypeScript passed. Chrome completed all six situations with a 1 typed / 4 spoken self-check / 1 assisted summary and a one-item retry. EN/FR/RU/TR copy was inspected. Desktop and 1024 × 768 tablet layout were checked with no horizontal overflow. Existing example and target audio returned 206 audio responses in the local development preview. No console errors were observed. Physical iPad, hardware IME and subjective audio-quality acceptance remain separate.
+
+The first official integration build hit ENOSPC on the Mac. Only this executor's incomplete build and temporary bundles were removed. Release building and packaging use an isolated copy of the exact committed source on ORICO_APFS; other projects and owners' artifacts are untouched. Native publication and public smoke receipts are recorded outside source after deployment.
