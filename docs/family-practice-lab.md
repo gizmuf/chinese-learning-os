@@ -1,6 +1,6 @@
 # Family practice · Lab
 
-An isolated, opt-in experiment built from base `4be1bd642a7e74fab1448c1d343206ecc54d34aa` on branch `codex/family-transfer-lab`. No deployment or integration into the release branch is included.
+An opt-in experiment authored at `ce5750570f0f9da5524c650a75e46e2de164ad9b` from base `4be1bd642a7e74fab1448c1d343206ecc54d34aa`. The approved branch is merged onto Sites v54 source `0d66c204105ffcc9478b55252dda49461776edf4` on `codex/family-lab-integration`, preserving Often confused and every existing Atlas view.
 
 Open `?atlas=1&cloud=1&layout=words&familylab=1&anchor=学&hsk=1`. The optional entry appears only inside Word families. Back to family removes the lab flag and retains the selected anchor, scope, canonical word identity, Board/Difference training mode, memory flag and comparison state. Changing family/scope/locale or leaving the lab starts a fresh practice session.
 
@@ -23,3 +23,9 @@ Open `?atlas=1&cloud=1&layout=words&familylab=1&anchor=学&hsk=1`. The optional 
 
 Local preview: `http://127.0.0.1:5187/?atlas=1&cloud=1&layout=words&familylab=1&anchor=%E5%AD%A6&hsk=1`.
 The worker-owned dev process uses this isolated checkout. A local review screenshot is retained at `outputs/family-practice-lab-compare.png` (ignored build evidence).
+
+## Integration safeguards, 2026-10-30
+
+Chinese IME composition cannot submit a provisional candidate; Enter during composition is reserved for selecting the character. Lab flags are read/emitted only for Word families, and explicit Atlas layout navigation exits the opt-in experiment. The new contrast/input typography follows the existing Print / Stroke shapes setting. The optional entry keeps a 44px touch target. No API, event identity, storage schema, existing progress or scoring migration is introduced.
+
+Integrated verification: 276 application tests passed, including nine focused Lab tests; TypeScript and the official Sites build passed. The new tests reproduced and now prevent premature IME submission and a Lab flag leaking into other layouts. Chrome verified all three stages, correct/incorrect/assisted answers, a 4/6 independent-recall summary and retrying exactly the two missed/assisted cues. EN/FR/RU/TR navigation and vocabulary were inspected. The expanded 1024 × 768 board shows all twelve rows (last row bottom 688); the 390 × 844 contrast view has no horizontal overflow. Back preserves the original Difference training mode and selected `student` entry; explicit Space → Word families returns outside the Lab. Both Hanzi appearance modes render through the existing preference. No console errors were observed in this local run. Physical iPad/IME hardware acceptance remains separate from browser and automated composition tests.
