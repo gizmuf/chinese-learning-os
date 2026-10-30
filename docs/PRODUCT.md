@@ -203,6 +203,12 @@ Per-example target readings and a 76-fragment glossary live beside the authored 
 
 Study preferences and Cloud Atlas share a Print / Stroke shapes setting, persisted in the existing per-owner local settings notebook. The selected typeface applies across reading surfaces, including words, sentences and the shared dictionary. A derived 1,016-glyph, 403,196-byte WOFF uses the existing licensed Hanzi Writer outlines; Latin text, pinyin, content identities and grading are unchanged. This is a display-style choice, not simplified/traditional conversion. Historical drawings and active writing/animation retain their teaching geometry.
 
+### Family practice · Lab
+
+An additional opt-in route inside Word families (`layout=words&familylab=1&anchor=学&hsk=1`) reuses the existing whole-family board, then compares 大学/大学生, 小学/小学生 and 中学/中学生, and offers six typed-Hanzi recall cues. EN/FR/RU/TR, canonical vocabulary/audio, correction, assisted reveals and a bounded retry are included. Back to family preserves anchor, scope, selected canonical entry, Board/Difference training mode and memory/comparison flags. Other families truthfully show that a contrast set has not been authored. Existing Board, reels, Atlas views and Often confused remain available.
+
+Results are session-only: no progress/SRS/mastery writes or storage migrations. Reveals and consulting the family before an answer cannot count as independent recall. Chinese IME submission and stale-route guards protect input/navigation; new typography follows the shared Hanzi appearance setting. See [Family practice Lab](family-practice-lab.md) for scope and verification.
+
 ### Often confused: separate visual comparison library
 
 Space + cards places **Often confused** beside Compare 4. It opens a separate, dismissible comparison without changing the selected family, card mode, character, URL or progress. The EN/FR/RU/TR library contains 24 sets and 54 distinct items: all 35 entries from the supplied sound-recall PDF plus 19 additions, including 听/停, 穿/船, 书/树, 妈/马/骂, 水/睡, 汤/糖, 包/饱, 杯子/被子 and 哪里/那里. Two to four original SVG meaning cues appear together with Hanzi, pinyin, brief meanings, an example each and exact word/sentence audio in the existing Xiaoxiao voice. Browse all sets supports accent-insensitive search and overlapping sound/tone/homophone/meaning categories. Previous/next and the shared swipe handler browse sets.
