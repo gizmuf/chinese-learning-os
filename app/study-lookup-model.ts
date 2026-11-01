@@ -1,3 +1,6 @@
+import lesson09Characters from '../data/lesson09/characters.json';
+import {lesson09Terms,lesson09Pronunciation} from './lesson09-data';
+import lesson09AudioManifest from '../public/course09/audio/manifest.json';
 import lesson08Characters from '../data/lesson08/characters.json';
 import {lesson08Terms,lesson08Pronunciation} from './lesson08-data';
 import lesson08AudioManifest from '../public/course08/audio/manifest.json';
@@ -32,6 +35,9 @@ export function appStudyDictionary(locale:Locale):StudyDictionary{
  for(const v of lesson08Terms)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],phrase:v.phrase,audio:lesson08Pronunciation(v)});
  for(const v of lesson08Characters.characters)dictionary.set(v.text,{...dictionary.get(v.text),text:v.text,pinyin:v.pinyin,meaning:v.meaning[locale],character:v.text});
  for(const clip of (lesson08AudioManifest.recordings as {id:string;text:string;file:string}[]).filter(v=>v.id.startsWith('char-'))){const entry=dictionary.get(clip.text);if(entry&&!entry.audio)dictionary.set(clip.text,{...entry,audio:{text:clip.text,pinyin:entry.pinyin,context:false,source:'/course08/audio/'+clip.file}});}
+ for(const v of lesson09Terms)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],phrase:v.phrase,audio:lesson09Pronunciation(v)});
+ for(const v of lesson09Characters.characters)dictionary.set(v.text,{...dictionary.get(v.text),text:v.text,pinyin:v.pinyin,meaning:v.meaning[locale],character:v.text});
+ for(const clip of (lesson09AudioManifest.recordings as {id:string;text:string;file:string}[]).filter(v=>v.id.startsWith('char-'))){const entry=dictionary.get(clip.text);if(entry&&!entry.audio)dictionary.set(clip.text,{...entry,audio:{text:clip.text,pinyin:entry.pinyin,context:false,source:'/course09/audio/'+clip.file}});}
  // The lesson also teaches complete phrases; retain their actual constituent words.
  for(const [text,pinyin,en,fr,ru,tr] of [
   ['钥匙','yàoshi','key','clé','ключ','anahtar'],

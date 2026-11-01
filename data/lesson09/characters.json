@@ -1,0 +1,44 @@
+{
+  "characters": [
+    {
+      "text": "云",
+      "pinyin": "yún",
+      "meaning": {
+        "en": "cloud",
+        "fr": "nuage",
+        "ru": "облако",
+        "tr": "bulut"
+      }
+    },
+    {
+      "text": "雾",
+      "pinyin": "wù",
+      "meaning": {
+        "en": "fog / mist",
+        "fr": "brouillard / brume",
+        "ru": "туман / дымка",
+        "tr": "sis / pus"
+      }
+    },
+    {
+      "text": "款",
+      "pinyin": "kuǎn",
+      "meaning": {
+        "en": "sum of money; part of 贷款 (loan)",
+        "fr": "somme d’argent ; dans 贷款 (prêt)",
+        "ru": "денежная сумма; часть 贷款 (кредит)",
+        "tr": "para tutarı; 贷款 (kredi) sözcüğünün parçası"
+      }
+    },
+    {
+      "text": "趟",
+      "pinyin": "tàng",
+      "meaning": {
+        "en": "classifier for trips and transport services",
+        "fr": "classificateur des trajets et services de transport",
+        "ru": "счётное слово для поездок и рейсов",
+        "tr": "yolculuk ve seferler için sayma sözcüğü"
+      }
+    }
+  ]
+}

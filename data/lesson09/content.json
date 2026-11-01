@@ -1,0 +1,2231 @@
+{
+  "lesson_id": "intensive-09",
+  "date": "2026-10-30",
+  "words": [
+    {
+      "id": "c09-t01",
+      "hanzi": "预习",
+      "pinyin": "yùxí",
+      "meaning": {
+        "en": "prepare a lesson in advance",
+        "fr": "préparer un cours à l’avance",
+        "ru": "готовиться к уроку заранее",
+        "tr": "derse önceden hazırlanmak"
+      },
+      "family": "study",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t02",
+      "hanzi": "学习",
+      "pinyin": "xuéxí",
+      "meaning": {
+        "en": "study / learn",
+        "fr": "étudier / apprendre",
+        "ru": "учиться / изучать",
+        "tr": "öğrenmek / çalışmak"
+      },
+      "family": "study",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t03",
+      "hanzi": "复习",
+      "pinyin": "fùxí",
+      "meaning": {
+        "en": "review / revise",
+        "fr": "réviser",
+        "ru": "повторять изученное",
+        "tr": "tekrar etmek"
+      },
+      "family": "study",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t04",
+      "hanzi": "练习",
+      "pinyin": "liànxí",
+      "meaning": {
+        "en": "practise / practice",
+        "fr": "s’exercer / exercice",
+        "ru": "практиковаться / упражнение",
+        "tr": "alıştırma yapmak / alıştırma"
+      },
+      "family": "study",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t05",
+      "hanzi": "帮",
+      "pinyin": "bāng",
+      "meaning": {
+        "en": "help",
+        "fr": "aider",
+        "ru": "помогать",
+        "tr": "yardım etmek"
+      },
+      "family": "study",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t06",
+      "hanzi": "准备",
+      "pinyin": "zhǔnbèi",
+      "meaning": {
+        "en": "prepare / get ready",
+        "fr": "préparer / se préparer",
+        "ru": "готовить / готовиться",
+        "tr": "hazırlamak / hazırlanmak"
+      },
+      "family": "study",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t07",
+      "hanzi": "听写",
+      "pinyin": "tīngxiě",
+      "meaning": {
+        "en": "dictation",
+        "fr": "dictée",
+        "ru": "диктант",
+        "tr": "dikte"
+      },
+      "family": "study",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t08",
+      "hanzi": "干杯",
+      "pinyin": "gānbēi",
+      "meaning": {
+        "en": "cheers!",
+        "fr": "santé !",
+        "ru": "за здоровье!",
+        "tr": "şerefe!"
+      },
+      "family": "study",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t09",
+      "hanzi": "丝",
+      "pinyin": "sī",
+      "meaning": {
+        "en": "silk",
+        "fr": "soie",
+        "ru": "шёлк",
+        "tr": "ipek"
+      },
+      "family": "study",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t10",
+      "hanzi": "练",
+      "pinyin": "liàn",
+      "meaning": {
+        "en": "practise / train",
+        "fr": "s’exercer / s’entraîner",
+        "ru": "тренироваться",
+        "tr": "alıştırma yapmak"
+      },
+      "family": "study",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "练习汉语",
+      "audioPinyin": "liànxí Hànyǔ"
+    },
+    {
+      "id": "c09-t11",
+      "hanzi": "亮",
+      "pinyin": "liàng",
+      "meaning": {
+        "en": "bright / light",
+        "fr": "brillant / lumineux",
+        "ru": "яркий / светлый",
+        "tr": "parlak / aydınlık"
+      },
+      "family": "study",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t12",
+      "hanzi": "今天",
+      "pinyin": "jīntiān",
+      "meaning": {
+        "en": "today",
+        "fr": "aujourd’hui",
+        "ru": "сегодня",
+        "tr": "bugün"
+      },
+      "family": "dates",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t13",
+      "hanzi": "几月几号",
+      "pinyin": "jǐ yuè jǐ hào",
+      "meaning": {
+        "en": "what month and day?",
+        "fr": "quel mois et quel jour ?",
+        "ru": "какое число и месяц?",
+        "tr": "hangi ayın kaçı?"
+      },
+      "family": "dates",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t14",
+      "hanzi": "星期五",
+      "pinyin": "xīngqīwǔ",
+      "meaning": {
+        "en": "Friday",
+        "fr": "vendredi",
+        "ru": "пятница",
+        "tr": "cuma"
+      },
+      "family": "dates",
+      "origin": "source",
+      "phrase": false,
+      "equivalence": "friday"
+    },
+    {
+      "id": "c09-t15",
+      "hanzi": "周五",
+      "pinyin": "zhōuwǔ",
+      "meaning": {
+        "en": "Friday (short form)",
+        "fr": "vendredi (forme courte)",
+        "ru": "пятница (краткая форма)",
+        "tr": "cuma (kısa biçim)"
+      },
+      "family": "dates",
+      "origin": "source",
+      "phrase": false,
+      "equivalence": "friday"
+    },
+    {
+      "id": "c09-t16",
+      "hanzi": "星期六",
+      "pinyin": "xīngqīliù",
+      "meaning": {
+        "en": "Saturday",
+        "fr": "samedi",
+        "ru": "суббота",
+        "tr": "cumartesi"
+      },
+      "family": "dates",
+      "origin": "source",
+      "phrase": false,
+      "equivalence": "saturday"
+    },
+    {
+      "id": "c09-t17",
+      "hanzi": "周六",
+      "pinyin": "zhōuliù",
+      "meaning": {
+        "en": "Saturday (short form)",
+        "fr": "samedi (forme courte)",
+        "ru": "суббота (краткая форма)",
+        "tr": "cumartesi (kısa biçim)"
+      },
+      "family": "dates",
+      "origin": "source",
+      "phrase": false,
+      "equivalence": "saturday"
+    },
+    {
+      "id": "c09-t18",
+      "hanzi": "怎么样",
+      "pinyin": "zěnmeyàng",
+      "meaning": {
+        "en": "how is it? / what is it like?",
+        "fr": "comment est-ce ?",
+        "ru": "как? / какой?",
+        "tr": "nasıl?"
+      },
+      "family": "dates",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t19",
+      "hanzi": "谁",
+      "pinyin": "shéi / shuí",
+      "meaning": {
+        "en": "who?",
+        "fr": "qui ?",
+        "ru": "кто?",
+        "tr": "kim?"
+      },
+      "family": "dates",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "你是谁？",
+      "audioPinyin": "Nǐ shì shéi?"
+    },
+    {
+      "id": "c09-t20",
+      "hanzi": "天气",
+      "pinyin": "tiānqì",
+      "meaning": {
+        "en": "weather",
+        "fr": "temps (météo)",
+        "ru": "погода",
+        "tr": "hava durumu"
+      },
+      "family": "weather",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t21",
+      "hanzi": "晴",
+      "pinyin": "qíng",
+      "meaning": {
+        "en": "sunny / clear",
+        "fr": "ensoleillé / dégagé",
+        "ru": "солнечно / ясно",
+        "tr": "güneşli / açık"
+      },
+      "family": "weather",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t22",
+      "hanzi": "阴",
+      "pinyin": "yīn",
+      "meaning": {
+        "en": "overcast",
+        "fr": "couvert",
+        "ru": "пасмурно",
+        "tr": "kapalı hava"
+      },
+      "family": "weather",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t23",
+      "hanzi": "多云",
+      "pinyin": "duōyún",
+      "meaning": {
+        "en": "cloudy",
+        "fr": "nuageux",
+        "ru": "облачно",
+        "tr": "bulutlu"
+      },
+      "family": "weather",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t24",
+      "hanzi": "有风",
+      "pinyin": "yǒu fēng",
+      "meaning": {
+        "en": "windy / there is wind",
+        "fr": "il y a du vent",
+        "ru": "ветрено / есть ветер",
+        "tr": "rüzgârlı / rüzgâr var"
+      },
+      "family": "weather",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t25",
+      "hanzi": "有雨",
+      "pinyin": "yǒu yǔ",
+      "meaning": {
+        "en": "there is rain",
+        "fr": "il y a de la pluie",
+        "ru": "есть дождь / дождливо",
+        "tr": "yağmur var"
+      },
+      "family": "weather",
+      "origin": "source",
+      "phrase": false,
+      "equivalence": "rain"
+    },
+    {
+      "id": "c09-t26",
+      "hanzi": "下雨",
+      "pinyin": "xià yǔ",
+      "meaning": {
+        "en": "rain / be raining",
+        "fr": "pleuvoir",
+        "ru": "идёт дождь",
+        "tr": "yağmur yağmak"
+      },
+      "family": "weather",
+      "origin": "source",
+      "phrase": false,
+      "equivalence": "rain"
+    },
+    {
+      "id": "c09-t27",
+      "hanzi": "有雪",
+      "pinyin": "yǒu xuě",
+      "meaning": {
+        "en": "there is snow",
+        "fr": "il y a de la neige",
+        "ru": "есть снег",
+        "tr": "kar var"
+      },
+      "family": "weather",
+      "origin": "source",
+      "phrase": false,
+      "equivalence": "snow"
+    },
+    {
+      "id": "c09-t28",
+      "hanzi": "下雪",
+      "pinyin": "xià xuě",
+      "meaning": {
+        "en": "snow / be snowing",
+        "fr": "neiger",
+        "ru": "идёт снег",
+        "tr": "kar yağmak"
+      },
+      "family": "weather",
+      "origin": "source",
+      "phrase": false,
+      "equivalence": "snow"
+    },
+    {
+      "id": "c09-t29",
+      "hanzi": "有雾",
+      "pinyin": "yǒu wù",
+      "meaning": {
+        "en": "foggy / there is fog",
+        "fr": "il y a du brouillard",
+        "ru": "туманно / есть туман",
+        "tr": "sisli / sis var"
+      },
+      "family": "weather",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t30",
+      "hanzi": "小雨",
+      "pinyin": "xiǎoyǔ",
+      "meaning": {
+        "en": "light rain",
+        "fr": "pluie faible",
+        "ru": "небольшой дождь",
+        "tr": "hafif yağmur"
+      },
+      "family": "weather",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t31",
+      "hanzi": "中雨",
+      "pinyin": "zhōngyǔ",
+      "meaning": {
+        "en": "moderate rain",
+        "fr": "pluie modérée",
+        "ru": "умеренный дождь",
+        "tr": "orta şiddette yağmur"
+      },
+      "family": "weather",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t32",
+      "hanzi": "大雨",
+      "pinyin": "dàyǔ",
+      "meaning": {
+        "en": "heavy rain",
+        "fr": "forte pluie",
+        "ru": "сильный дождь",
+        "tr": "şiddetli yağmur"
+      },
+      "family": "weather",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t33",
+      "hanzi": "不冷不热",
+      "pinyin": "bù lěng bú rè",
+      "meaning": {
+        "en": "neither cold nor hot",
+        "fr": "ni froid ni chaud",
+        "ru": "ни холодно ни жарко",
+        "tr": "ne soğuk ne sıcak"
+      },
+      "family": "weather",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t34",
+      "hanzi": "青",
+      "pinyin": "qīng",
+      "meaning": {
+        "en": "blue-green; part of 青-family characters",
+        "fr": "bleu-vert ; composant de la famille 青",
+        "ru": "сине-зелёный; часть знаков с 青",
+        "tr": "mavi-yeşil; 青 ailesindeki parça"
+      },
+      "family": "shapes",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t35",
+      "hanzi": "请",
+      "pinyin": "qǐng",
+      "meaning": {
+        "en": "please / invite",
+        "fr": "s’il vous plaît / inviter",
+        "ru": "пожалуйста / приглашать",
+        "tr": "lütfen / davet etmek"
+      },
+      "family": "shapes",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t36",
+      "hanzi": "清",
+      "pinyin": "qīng",
+      "meaning": {
+        "en": "clear / pure",
+        "fr": "clair / pur",
+        "ru": "чистый / прозрачный",
+        "tr": "berrak / temiz"
+      },
+      "family": "shapes",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t37",
+      "hanzi": "绿水",
+      "pinyin": "lǜ shuǐ",
+      "meaning": {
+        "en": "green water",
+        "fr": "eau verte",
+        "ru": "зелёная вода",
+        "tr": "yeşil su"
+      },
+      "family": "shapes",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t38",
+      "hanzi": "带",
+      "pinyin": "dài",
+      "meaning": {
+        "en": "bring / carry / wear",
+        "fr": "apporter / porter",
+        "ru": "приносить / носить",
+        "tr": "getirmek / taşımak / takmak"
+      },
+      "family": "shapes",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t39",
+      "hanzi": "代",
+      "pinyin": "dài",
+      "meaning": {
+        "en": "replace / generation",
+        "fr": "remplacer / génération",
+        "ru": "заменять / поколение",
+        "tr": "yerine geçmek / nesil"
+      },
+      "family": "shapes",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t40",
+      "hanzi": "贷",
+      "pinyin": "dài",
+      "meaning": {
+        "en": "lend / loan",
+        "fr": "prêter / prêt",
+        "ru": "давать взаймы / заём",
+        "tr": "borç vermek / kredi"
+      },
+      "family": "shapes",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "贷款",
+      "audioPinyin": "dàikuǎn"
+    },
+    {
+      "id": "c09-t41",
+      "hanzi": "贱",
+      "pinyin": "jiàn",
+      "meaning": {
+        "en": "cheap / low-valued (often derogatory)",
+        "fr": "bon marché / de faible valeur (souvent péjoratif)",
+        "ru": "дешёвый (часто неодобрительно)",
+        "tr": "ucuz / değersiz (çoğu kez küçümseyici)"
+      },
+      "family": "shapes",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "贱和贵",
+      "audioPinyin": "jiàn hé guì"
+    },
+    {
+      "id": "c09-t42",
+      "hanzi": "贵",
+      "pinyin": "guì",
+      "meaning": {
+        "en": "expensive / valuable",
+        "fr": "cher / précieux",
+        "ru": "дорогой / ценный",
+        "tr": "pahalı / değerli"
+      },
+      "family": "shapes",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t43",
+      "hanzi": "贝",
+      "pinyin": "bèi",
+      "meaning": {
+        "en": "shell / cowrie",
+        "fr": "coquillage / cauri",
+        "ru": "раковина / каури",
+        "tr": "kabuk / deniz kabuğu"
+      },
+      "family": "shapes",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t44",
+      "hanzi": "便宜",
+      "pinyin": "piányi",
+      "meaning": {
+        "en": "inexpensive / cheap",
+        "fr": "bon marché",
+        "ru": "недорогой",
+        "tr": "ucuz"
+      },
+      "family": "shapes",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t45",
+      "hanzi": "太有意思了",
+      "pinyin": "tài yǒu yìsi le",
+      "meaning": {
+        "en": "so interesting!",
+        "fr": "tellement intéressant !",
+        "ru": "как интересно!",
+        "tr": "çok ilginç!"
+      },
+      "family": "degree",
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c09-t46",
+      "hanzi": "太难了",
+      "pinyin": "tài nán le",
+      "meaning": {
+        "en": "too difficult / so difficult!",
+        "fr": "trop difficile !",
+        "ru": "слишком трудно!",
+        "tr": "çok zor!"
+      },
+      "family": "degree",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t47",
+      "hanzi": "太多了",
+      "pinyin": "tài duō le",
+      "meaning": {
+        "en": "too many / too much",
+        "fr": "trop / trop nombreux",
+        "ru": "слишком много",
+        "tr": "çok fazla"
+      },
+      "family": "degree",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t48",
+      "hanzi": "太热了",
+      "pinyin": "tài rè le",
+      "meaning": {
+        "en": "too hot / so hot!",
+        "fr": "trop chaud !",
+        "ru": "слишком жарко!",
+        "tr": "çok sıcak!"
+      },
+      "family": "degree",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t49",
+      "hanzi": "汉语",
+      "pinyin": "Hànyǔ",
+      "meaning": {
+        "en": "Chinese (language)",
+        "fr": "chinois (langue)",
+        "ru": "китайский язык",
+        "tr": "Çince"
+      },
+      "family": "degree",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t50",
+      "hanzi": "汉字",
+      "pinyin": "hànzì",
+      "meaning": {
+        "en": "Chinese character(s)",
+        "fr": "caractère(s) chinois",
+        "ru": "китайский иероглиф / иероглифы",
+        "tr": "Çin karakteri / karakterleri"
+      },
+      "family": "degree",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t51",
+      "hanzi": "会",
+      "pinyin": "huì",
+      "meaning": {
+        "en": "can / know how (a learned skill)",
+        "fr": "savoir faire (une compétence apprise)",
+        "ru": "уметь (приобретённый навык)",
+        "tr": "bilmek / yapabilmek (öğrenilmiş beceri)"
+      },
+      "family": "skills",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "我会游泳",
+      "audioPinyin": "wǒ huì yóuyǒng"
+    },
+    {
+      "id": "c09-t52",
+      "hanzi": "不会",
+      "pinyin": "bú huì",
+      "meaning": {
+        "en": "cannot / do not know how",
+        "fr": "ne pas savoir faire",
+        "ru": "не уметь",
+        "tr": "yapamamak / nasıl yapılacağını bilmemek"
+      },
+      "family": "skills",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "我不会游泳",
+      "audioPinyin": "wǒ bú huì yóuyǒng"
+    },
+    {
+      "id": "c09-t53",
+      "hanzi": "游泳",
+      "pinyin": "yóuyǒng",
+      "meaning": {
+        "en": "swim",
+        "fr": "nager",
+        "ru": "плавать",
+        "tr": "yüzmek"
+      },
+      "family": "skills",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t54",
+      "hanzi": "打篮球",
+      "pinyin": "dǎ lánqiú",
+      "meaning": {
+        "en": "play basketball",
+        "fr": "jouer au basket",
+        "ru": "играть в баскетбол",
+        "tr": "basketbol oynamak"
+      },
+      "family": "skills",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t55",
+      "hanzi": "跑步",
+      "pinyin": "pǎo bù",
+      "meaning": {
+        "en": "run / go running",
+        "fr": "courir / faire du jogging",
+        "ru": "бегать",
+        "tr": "koşmak"
+      },
+      "family": "skills",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t56",
+      "hanzi": "打乒乓球",
+      "pinyin": "dǎ pīngpāngqiú",
+      "meaning": {
+        "en": "play table tennis",
+        "fr": "jouer au tennis de table",
+        "ru": "играть в настольный теннис",
+        "tr": "masa tenisi oynamak"
+      },
+      "family": "skills",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t57",
+      "hanzi": "打网球",
+      "pinyin": "dǎ wǎngqiú",
+      "meaning": {
+        "en": "play tennis",
+        "fr": "jouer au tennis",
+        "ru": "играть в теннис",
+        "tr": "tenis oynamak"
+      },
+      "family": "skills",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t58",
+      "hanzi": "上网",
+      "pinyin": "shàng wǎng",
+      "meaning": {
+        "en": "go online",
+        "fr": "aller sur Internet",
+        "ru": "выходить в интернет",
+        "tr": "internete girmek"
+      },
+      "family": "skills",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t59",
+      "hanzi": "踢足球",
+      "pinyin": "tī zúqiú",
+      "meaning": {
+        "en": "play football / soccer",
+        "fr": "jouer au football",
+        "ru": "играть в футбол",
+        "tr": "futbol oynamak"
+      },
+      "family": "skills",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t60",
+      "hanzi": "做饭",
+      "pinyin": "zuò fàn",
+      "meaning": {
+        "en": "cook / prepare a meal",
+        "fr": "cuisiner / préparer un repas",
+        "ru": "готовить еду",
+        "tr": "yemek pişirmek"
+      },
+      "family": "skills",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t61",
+      "hanzi": "吃饭",
+      "pinyin": "chī fàn",
+      "meaning": {
+        "en": "eat / have a meal",
+        "fr": "manger / prendre un repas",
+        "ru": "есть / принимать пищу",
+        "tr": "yemek yemek"
+      },
+      "family": "skills",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t62",
+      "hanzi": "起床",
+      "pinyin": "qǐ chuáng",
+      "meaning": {
+        "en": "get up",
+        "fr": "se lever",
+        "ru": "вставать с постели",
+        "tr": "yataktan kalkmak"
+      },
+      "family": "routine",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t63",
+      "hanzi": "做早饭",
+      "pinyin": "zuò zǎofàn",
+      "meaning": {
+        "en": "make breakfast",
+        "fr": "préparer le petit-déjeuner",
+        "ru": "готовить завтрак",
+        "tr": "kahvaltı hazırlamak"
+      },
+      "family": "routine",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t64",
+      "hanzi": "送孩子",
+      "pinyin": "sòng háizi",
+      "meaning": {
+        "en": "take / accompany a child somewhere",
+        "fr": "accompagner un enfant",
+        "ru": "отводить / отвозить ребёнка",
+        "tr": "çocuğu bir yere götürmek"
+      },
+      "family": "routine",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t65",
+      "hanzi": "来学校",
+      "pinyin": "lái xuéxiào",
+      "meaning": {
+        "en": "come to school",
+        "fr": "venir à l’école",
+        "ru": "приходить в школу",
+        "tr": "okula gelmek"
+      },
+      "family": "routine",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t66",
+      "hanzi": "出门",
+      "pinyin": "chū mén",
+      "meaning": {
+        "en": "leave home / go out",
+        "fr": "sortir de chez soi",
+        "ru": "выходить из дома",
+        "tr": "evden çıkmak"
+      },
+      "family": "routine",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t67",
+      "hanzi": "出校门",
+      "pinyin": "chū xiàomén",
+      "meaning": {
+        "en": "leave through the school gate",
+        "fr": "sortir par le portail de l’école",
+        "ru": "выходить за школьные ворота",
+        "tr": "okul kapısından çıkmak"
+      },
+      "family": "routine",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t68",
+      "hanzi": "到家",
+      "pinyin": "dào jiā",
+      "meaning": {
+        "en": "arrive home",
+        "fr": "arriver chez soi",
+        "ru": "прибывать домой",
+        "tr": "eve varmak"
+      },
+      "family": "routine",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t69",
+      "hanzi": "晚上十一点半",
+      "pinyin": "wǎnshang shíyī diǎn bàn",
+      "meaning": {
+        "en": "11:30 at night / 23:30",
+        "fr": "onze heures et demie du soir / 23 h 30",
+        "ru": "половина двенадцатого ночи / 23:30",
+        "tr": "gece on bir buçuk / 23:30"
+      },
+      "family": "routine",
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c09-t70",
+      "hanzi": "开车",
+      "pinyin": "kāi chē",
+      "meaning": {
+        "en": "drive a car",
+        "fr": "conduire une voiture",
+        "ru": "водить машину",
+        "tr": "araba sürmek"
+      },
+      "family": "transport",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t71",
+      "hanzi": "坐",
+      "pinyin": "zuò",
+      "meaning": {
+        "en": "take / ride (transport)",
+        "fr": "prendre (un transport)",
+        "ru": "ехать на (транспорте)",
+        "tr": "binmek (taşıta)"
+      },
+      "family": "transport",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "坐火车",
+      "audioPinyin": "zuò huǒchē"
+    },
+    {
+      "id": "c09-t72",
+      "hanzi": "火车",
+      "pinyin": "huǒchē",
+      "meaning": {
+        "en": "train",
+        "fr": "train",
+        "ru": "поезд",
+        "tr": "tren"
+      },
+      "family": "transport",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t73",
+      "hanzi": "地铁",
+      "pinyin": "dìtiě",
+      "meaning": {
+        "en": "metro / underground",
+        "fr": "métro",
+        "ru": "метро",
+        "tr": "metro"
+      },
+      "family": "transport",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t74",
+      "hanzi": "高铁",
+      "pinyin": "gāotiě",
+      "meaning": {
+        "en": "high-speed rail",
+        "fr": "train à grande vitesse",
+        "ru": "высокоскоростная железная дорога",
+        "tr": "yüksek hızlı tren"
+      },
+      "family": "transport",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t75",
+      "hanzi": "出租车",
+      "pinyin": "chūzūchē",
+      "meaning": {
+        "en": "taxi",
+        "fr": "taxi",
+        "ru": "такси",
+        "tr": "taksi"
+      },
+      "family": "transport",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t76",
+      "hanzi": "公共汽车",
+      "pinyin": "gōnggòng qìchē",
+      "meaning": {
+        "en": "bus",
+        "fr": "bus",
+        "ru": "автобус",
+        "tr": "otobüs"
+      },
+      "family": "transport",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t77",
+      "hanzi": "动车",
+      "pinyin": "dòngchē",
+      "meaning": {
+        "en": "multiple-unit train (board label)",
+        "fr": "train automoteur (terme du tableau)",
+        "ru": "моторвагонный поезд (термин с доски)",
+        "tr": "motorlu tren seti (tahtadaki terim)"
+      },
+      "family": "transport",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t78",
+      "hanzi": "特快",
+      "pinyin": "tèkuài",
+      "meaning": {
+        "en": "express (board train label)",
+        "fr": "express (terme ferroviaire du tableau)",
+        "ru": "экспресс (название с доски)",
+        "tr": "ekspres (tahtadaki tren terimi)"
+      },
+      "family": "transport",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t79",
+      "hanzi": "快",
+      "pinyin": "kuài",
+      "meaning": {
+        "en": "fast",
+        "fr": "rapide",
+        "ru": "быстрый",
+        "tr": "hızlı"
+      },
+      "family": "transport",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t80",
+      "hanzi": "半小时",
+      "pinyin": "bàn xiǎoshí",
+      "meaning": {
+        "en": "half an hour",
+        "fr": "une demi-heure",
+        "ru": "полчаса",
+        "tr": "yarım saat"
+      },
+      "family": "duration",
+      "origin": "source",
+      "phrase": false,
+      "equivalence": "half-hour"
+    },
+    {
+      "id": "c09-t81",
+      "hanzi": "三十分钟",
+      "pinyin": "sānshí fēnzhōng",
+      "meaning": {
+        "en": "thirty minutes",
+        "fr": "trente minutes",
+        "ru": "тридцать минут",
+        "tr": "otuz dakika"
+      },
+      "family": "duration",
+      "origin": "source",
+      "phrase": false,
+      "equivalence": "half-hour"
+    },
+    {
+      "id": "c09-t82",
+      "hanzi": "六十分钟",
+      "pinyin": "liùshí fēnzhōng",
+      "meaning": {
+        "en": "sixty minutes",
+        "fr": "soixante minutes",
+        "ru": "шестьдесят минут",
+        "tr": "altmış dakika"
+      },
+      "family": "duration",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t83",
+      "hanzi": "九十分钟",
+      "pinyin": "jiǔshí fēnzhōng",
+      "meaning": {
+        "en": "ninety minutes",
+        "fr": "quatre-vingt-dix minutes",
+        "ru": "девяносто минут",
+        "tr": "doksan dakika"
+      },
+      "family": "duration",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c09-t84",
+      "hanzi": "后",
+      "pinyin": "hòu",
+      "meaning": {
+        "en": "after / later",
+        "fr": "après / plus tard",
+        "ru": "после / позже",
+        "tr": "sonra"
+      },
+      "family": "duration",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "半小时后",
+      "audioPinyin": "bàn xiǎoshí hòu"
+    },
+    {
+      "id": "c09-t85",
+      "hanzi": "半小时后",
+      "pinyin": "bàn xiǎoshí hòu",
+      "meaning": {
+        "en": "half an hour later",
+        "fr": "une demi-heure plus tard",
+        "ru": "через полчаса",
+        "tr": "yarım saat sonra"
+      },
+      "family": "duration",
+      "origin": "source",
+      "phrase": false
+    }
+  ],
+  "sentences": [
+    {
+      "id": "c09-s01",
+      "hanzi": "我帮你复习。",
+      "pinyin": "Wǒ bāng nǐ fùxí.",
+      "meaning": {
+        "en": "I will help you review.",
+        "fr": "Je t’aide à réviser.",
+        "ru": "Я помогу тебе повторить.",
+        "tr": "Tekrar yapmana yardım ederim."
+      },
+      "topic": "study",
+      "origin": "source"
+    },
+    {
+      "id": "c09-s02",
+      "hanzi": "他帮我练习汉语。",
+      "pinyin": "Tā bāng wǒ liànxí Hànyǔ.",
+      "meaning": {
+        "en": "He helps me practise Chinese.",
+        "fr": "Il m’aide à pratiquer le chinois.",
+        "ru": "Он помогает мне практиковать китайский.",
+        "tr": "Çince alıştırması yapmama yardım ediyor."
+      },
+      "topic": "study",
+      "origin": "source"
+    },
+    {
+      "id": "c09-s03",
+      "hanzi": "请准备听写。",
+      "pinyin": "Qǐng zhǔnbèi tīngxiě.",
+      "meaning": {
+        "en": "Please get ready for dictation.",
+        "fr": "Préparez-vous à la dictée, s’il vous plaît.",
+        "ru": "Пожалуйста, приготовьтесь к диктанту.",
+        "tr": "Lütfen dikteye hazırlanın."
+      },
+      "topic": "study",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s04",
+      "hanzi": "我先预习，再学习，最后复习。",
+      "pinyin": "Wǒ xiān yùxí, zài xuéxí, zuìhòu fùxí.",
+      "meaning": {
+        "en": "I prepare in advance, then study, and finally review.",
+        "fr": "Je prépare d’abord le cours, puis j’étudie et enfin je révise.",
+        "ru": "Сначала я готовлюсь заранее, затем учусь и наконец повторяю.",
+        "tr": "Önce ön hazırlık yapar, sonra öğrenir, en son tekrar ederim."
+      },
+      "topic": "study",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s05",
+      "hanzi": "我们每天练习汉语。",
+      "pinyin": "Wǒmen měitiān liànxí Hànyǔ.",
+      "meaning": {
+        "en": "We practise Chinese every day.",
+        "fr": "Nous pratiquons le chinois chaque jour.",
+        "ru": "Мы каждый день практикуем китайский.",
+        "tr": "Her gün Çince alıştırması yaparız."
+      },
+      "topic": "study",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s06",
+      "hanzi": "干杯！",
+      "pinyin": "Gānbēi!",
+      "meaning": {
+        "en": "Cheers!",
+        "fr": "Santé !",
+        "ru": "За здоровье!",
+        "tr": "Şerefe!"
+      },
+      "topic": "study",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s07",
+      "hanzi": "这是丝。",
+      "pinyin": "Zhè shì sī.",
+      "meaning": {
+        "en": "This is silk.",
+        "fr": "C’est de la soie.",
+        "ru": "Это шёлк.",
+        "tr": "Bu ipek."
+      },
+      "topic": "study",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s08",
+      "hanzi": "这个房间很亮。",
+      "pinyin": "Zhè ge fángjiān hěn liàng.",
+      "meaning": {
+        "en": "This room is bright.",
+        "fr": "Cette pièce est lumineuse.",
+        "ru": "Эта комната светлая.",
+        "tr": "Bu oda aydınlık."
+      },
+      "topic": "study",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s09",
+      "hanzi": "今天几月几号？",
+      "pinyin": "Jīntiān jǐ yuè jǐ hào?",
+      "meaning": {
+        "en": "What is today’s month and date?",
+        "fr": "Quel mois et quel jour sommes-nous ?",
+        "ru": "Какое сегодня число и месяц?",
+        "tr": "Bugün hangi ayın kaçı?"
+      },
+      "topic": "dates",
+      "origin": "source-normalized"
+    },
+    {
+      "id": "c09-s10",
+      "hanzi": "今天星期几？",
+      "pinyin": "Jīntiān xīngqījǐ?",
+      "meaning": {
+        "en": "What day of the week is it today?",
+        "fr": "Quel jour de la semaine sommes-nous ?",
+        "ru": "Какой сегодня день недели?",
+        "tr": "Bugün günlerden ne?"
+      },
+      "topic": "dates",
+      "origin": "source-normalized"
+    },
+    {
+      "id": "c09-s11",
+      "hanzi": "今天是十月三十号，星期五，也可以说周五。",
+      "pinyin": "Jīntiān shì shí yuè sānshí hào, xīngqīwǔ, yě kěyǐ shuō zhōuwǔ.",
+      "meaning": {
+        "en": "In this lesson, today is October 30, Friday; 周五 is the short form.",
+        "fr": "Dans cette leçon, nous sommes le 30 octobre, vendredi ; 周五 est la forme courte.",
+        "ru": "В этом уроке сегодня 30 октября, пятница; 周五 — краткая форма.",
+        "tr": "Bu derste bugün 30 Ekim, cuma; 周五 kısa biçimidir."
+      },
+      "topic": "dates",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s12",
+      "hanzi": "明天是十月三十一号，星期六，也可以说周六。",
+      "pinyin": "Míngtiān shì shí yuè sānshíyī hào, xīngqīliù, yě kěyǐ shuō zhōuliù.",
+      "meaning": {
+        "en": "In this lesson, tomorrow is October 31, Saturday; 周六 is the short form.",
+        "fr": "Dans cette leçon, demain est le 31 octobre, samedi ; 周六 est la forme courte.",
+        "ru": "В этом уроке завтра 31 октября, суббота; 周六 — краткая форма.",
+        "tr": "Bu derste yarın 31 Ekim, cumartesi; 周六 kısa biçimidir."
+      },
+      "topic": "dates",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s13",
+      "hanzi": "你觉得怎么样？",
+      "pinyin": "Nǐ juéde zěnmeyàng?",
+      "meaning": {
+        "en": "What do you think of it?",
+        "fr": "Qu’en penses-tu ?",
+        "ru": "Что ты об этом думаешь?",
+        "tr": "Sence nasıl?"
+      },
+      "topic": "dates",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s14",
+      "hanzi": "你是谁？",
+      "pinyin": "Nǐ shì shéi?",
+      "meaning": {
+        "en": "Who are you?",
+        "fr": "Qui es-tu ?",
+        "ru": "Кто ты?",
+        "tr": "Sen kimsin?"
+      },
+      "topic": "dates",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s15",
+      "hanzi": "今天天气怎么样？",
+      "pinyin": "Jīntiān tiānqì zěnmeyàng?",
+      "meaning": {
+        "en": "What is the weather like today?",
+        "fr": "Quel temps fait-il aujourd’hui ?",
+        "ru": "Какая сегодня погода?",
+        "tr": "Bugün hava nasıl?"
+      },
+      "topic": "weather",
+      "origin": "source"
+    },
+    {
+      "id": "c09-s16",
+      "hanzi": "今天晴，不冷不热。",
+      "pinyin": "Jīntiān qíng, bù lěng bú rè.",
+      "meaning": {
+        "en": "In this example it is sunny, neither cold nor hot.",
+        "fr": "Dans cet exemple, il fait beau, ni froid ni chaud.",
+        "ru": "В этом примере ясно, ни холодно ни жарко.",
+        "tr": "Bu örnekte hava güneşli, ne soğuk ne sıcak."
+      },
+      "topic": "weather",
+      "origin": "source"
+    },
+    {
+      "id": "c09-s17",
+      "hanzi": "今天阴，明天多云。",
+      "pinyin": "Jīntiān yīn, míngtiān duōyún.",
+      "meaning": {
+        "en": "In this example it is overcast today and cloudy tomorrow.",
+        "fr": "Dans cet exemple, le ciel est couvert aujourd’hui et nuageux demain.",
+        "ru": "В этом примере сегодня пасмурно, завтра облачно.",
+        "tr": "Bu örnekte bugün hava kapalı, yarın bulutlu."
+      },
+      "topic": "weather",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s18",
+      "hanzi": "今天有风。",
+      "pinyin": "Jīntiān yǒu fēng.",
+      "meaning": {
+        "en": "In this example it is windy today.",
+        "fr": "Dans cet exemple, il y a du vent aujourd’hui.",
+        "ru": "В этом примере сегодня ветрено.",
+        "tr": "Bu örnekte bugün rüzgâr var."
+      },
+      "topic": "weather",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s19",
+      "hanzi": "今天有雨，现在下雨了。",
+      "pinyin": "Jīntiān yǒu yǔ, xiànzài xià yǔ le.",
+      "meaning": {
+        "en": "There is rain today in this example; it has started raining now.",
+        "fr": "Dans cet exemple, il y a de la pluie aujourd’hui ; il pleut maintenant.",
+        "ru": "В этом примере сегодня дождь; сейчас он начался.",
+        "tr": "Bu örnekte bugün yağmur var; şimdi yağmaya başladı."
+      },
+      "topic": "weather",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s20",
+      "hanzi": "这里有雪，现在下雪了。",
+      "pinyin": "Zhèlǐ yǒu xuě, xiànzài xià xuě le.",
+      "meaning": {
+        "en": "There is snow here; it has started snowing now.",
+        "fr": "Il y a de la neige ici ; il neige maintenant.",
+        "ru": "Здесь есть снег; сейчас пошёл снег.",
+        "tr": "Burada kar var; şimdi kar yağmaya başladı."
+      },
+      "topic": "weather",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s21",
+      "hanzi": "今天有雾。",
+      "pinyin": "Jīntiān yǒu wù.",
+      "meaning": {
+        "en": "In this example there is fog today.",
+        "fr": "Dans cet exemple, il y a du brouillard aujourd’hui.",
+        "ru": "В этом примере сегодня туман.",
+        "tr": "Bu örnekte bugün sis var."
+      },
+      "topic": "weather",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s22",
+      "hanzi": "上午下小雨，中午下中雨，晚上下大雨。",
+      "pinyin": "Shàngwǔ xià xiǎoyǔ, zhōngwǔ xià zhōngyǔ, wǎnshang xià dàyǔ.",
+      "meaning": {
+        "en": "In this example the rain is light in the morning, moderate at noon and heavy in the evening.",
+        "fr": "Dans cet exemple, pluie faible le matin, modérée à midi et forte le soir.",
+        "ru": "В этом примере утром небольшой дождь, в полдень умеренный, вечером сильный.",
+        "tr": "Bu örnekte sabah hafif, öğlen orta şiddette, akşam şiddetli yağmur yağıyor."
+      },
+      "topic": "weather",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s23",
+      "hanzi": "青和晴不是同一个字。",
+      "pinyin": "Qīng hé qíng bú shì tóng yí ge zì.",
+      "meaning": {
+        "en": "青 and 晴 are different characters.",
+        "fr": "青 et 晴 sont des caractères différents.",
+        "ru": "青 и 晴 — разные иероглифы.",
+        "tr": "青 ve 晴 farklı karakterlerdir."
+      },
+      "topic": "shapes",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s24",
+      "hanzi": "请看这杯清水。",
+      "pinyin": "Qǐng kàn zhè bēi qīngshuǐ.",
+      "meaning": {
+        "en": "Please look at this glass of clear water.",
+        "fr": "Regardez ce verre d’eau claire, s’il vous plaît.",
+        "ru": "Посмотрите, пожалуйста, на этот стакан чистой воды.",
+        "tr": "Lütfen bu bardaktaki berrak suya bakın."
+      },
+      "topic": "shapes",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s25",
+      "hanzi": "山下有绿水。",
+      "pinyin": "Shān xià yǒu lǜ shuǐ.",
+      "meaning": {
+        "en": "There is green water below the mountain.",
+        "fr": "Il y a de l’eau verte au pied de la montagne.",
+        "ru": "Под горой зелёная вода.",
+        "tr": "Dağın aşağısında yeşil su var."
+      },
+      "topic": "shapes",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s26",
+      "hanzi": "请带一本书来。",
+      "pinyin": "Qǐng dài yì běn shū lái.",
+      "meaning": {
+        "en": "Please bring a book.",
+        "fr": "Apportez un livre, s’il vous plaît.",
+        "ru": "Принесите, пожалуйста, книгу.",
+        "tr": "Lütfen bir kitap getirin."
+      },
+      "topic": "shapes",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s27",
+      "hanzi": "这代人学习汉语。",
+      "pinyin": "Zhè dài rén xuéxí Hànyǔ.",
+      "meaning": {
+        "en": "This generation studies Chinese.",
+        "fr": "Cette génération étudie le chinois.",
+        "ru": "Это поколение изучает китайский.",
+        "tr": "Bu nesil Çince öğreniyor."
+      },
+      "topic": "shapes",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s28",
+      "hanzi": "他在银行办贷款。",
+      "pinyin": "Tā zài yínháng bàn dàikuǎn.",
+      "meaning": {
+        "en": "He is arranging a loan at the bank.",
+        "fr": "Il fait une demande de prêt à la banque.",
+        "ru": "Он оформляет кредит в банке.",
+        "tr": "Bankada kredi işlemi yapıyor."
+      },
+      "topic": "shapes",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s29",
+      "hanzi": "贱和贵都有贝。",
+      "pinyin": "Jiàn hé guì dōu yǒu bèi.",
+      "meaning": {
+        "en": "Both 贱 and 贵 contain 贝.",
+        "fr": "贱 et 贵 contiennent tous deux 贝.",
+        "ru": "В 贱 и 贵 есть 贝.",
+        "tr": "贱 ve 贵 karakterlerinin ikisinde de 贝 var."
+      },
+      "topic": "shapes",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s30",
+      "hanzi": "这个东西很便宜，那个很贵。",
+      "pinyin": "Zhè ge dōngxi hěn piányi, nà ge hěn guì.",
+      "meaning": {
+        "en": "This thing is inexpensive; that one is expensive.",
+        "fr": "Cet objet est bon marché ; l’autre est cher.",
+        "ru": "Эта вещь недорогая, а та дорогая.",
+        "tr": "Bu şey ucuz, öteki pahalı."
+      },
+      "topic": "shapes",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s31",
+      "hanzi": "汉语太有意思了！",
+      "pinyin": "Hànyǔ tài yǒu yìsi le!",
+      "meaning": {
+        "en": "Chinese is so interesting!",
+        "fr": "Le chinois est tellement intéressant !",
+        "ru": "Какой интересный китайский язык!",
+        "tr": "Çince çok ilginç!"
+      },
+      "topic": "degree",
+      "origin": "source"
+    },
+    {
+      "id": "c09-s32",
+      "hanzi": "太难了！",
+      "pinyin": "Tài nán le!",
+      "meaning": {
+        "en": "It is too difficult!",
+        "fr": "C’est trop difficile !",
+        "ru": "Слишком трудно!",
+        "tr": "Çok zor!"
+      },
+      "topic": "degree",
+      "origin": "source"
+    },
+    {
+      "id": "c09-s33",
+      "hanzi": "汉字太多了。",
+      "pinyin": "Hànzì tài duō le.",
+      "meaning": {
+        "en": "There are so many Chinese characters.",
+        "fr": "Il y a tellement de caractères chinois.",
+        "ru": "Иероглифов так много.",
+        "tr": "Çin karakteri çok fazla."
+      },
+      "topic": "degree",
+      "origin": "source"
+    },
+    {
+      "id": "c09-s34",
+      "hanzi": "今天太热了。",
+      "pinyin": "Jīntiān tài rè le.",
+      "meaning": {
+        "en": "In this example it is too hot today.",
+        "fr": "Dans cet exemple, il fait trop chaud aujourd’hui.",
+        "ru": "В этом примере сегодня слишком жарко.",
+        "tr": "Bu örnekte bugün hava çok sıcak."
+      },
+      "topic": "degree",
+      "origin": "source"
+    },
+    {
+      "id": "c09-s35",
+      "hanzi": "我学游泳。",
+      "pinyin": "Wǒ xué yóuyǒng.",
+      "meaning": {
+        "en": "I am learning to swim.",
+        "fr": "J’apprends à nager.",
+        "ru": "Я учусь плавать.",
+        "tr": "Yüzmeyi öğreniyorum."
+      },
+      "topic": "skills",
+      "origin": "source"
+    },
+    {
+      "id": "c09-s36",
+      "hanzi": "我会游泳。",
+      "pinyin": "Wǒ huì yóuyǒng.",
+      "meaning": {
+        "en": "I can swim.",
+        "fr": "Je sais nager.",
+        "ru": "Я умею плавать.",
+        "tr": "Yüzme biliyorum."
+      },
+      "topic": "skills",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s37",
+      "hanzi": "我不会游泳。",
+      "pinyin": "Wǒ bú huì yóuyǒng.",
+      "meaning": {
+        "en": "I cannot swim.",
+        "fr": "Je ne sais pas nager.",
+        "ru": "Я не умею плавать.",
+        "tr": "Yüzme bilmiyorum."
+      },
+      "topic": "skills",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s38",
+      "hanzi": "你会打篮球吗？",
+      "pinyin": "Nǐ huì dǎ lánqiú ma?",
+      "meaning": {
+        "en": "Can you play basketball?",
+        "fr": "Sais-tu jouer au basket ?",
+        "ru": "Ты умеешь играть в баскетбол?",
+        "tr": "Basketbol oynamayı biliyor musun?"
+      },
+      "topic": "skills",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s39",
+      "hanzi": "我每天跑步。",
+      "pinyin": "Wǒ měitiān pǎo bù.",
+      "meaning": {
+        "en": "I run every day.",
+        "fr": "Je cours tous les jours.",
+        "ru": "Я каждый день бегаю.",
+        "tr": "Her gün koşarım."
+      },
+      "topic": "skills",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s40",
+      "hanzi": "他会打乒乓球，也会打网球。",
+      "pinyin": "Tā huì dǎ pīngpāngqiú, yě huì dǎ wǎngqiú.",
+      "meaning": {
+        "en": "He can play table tennis and tennis.",
+        "fr": "Il sait jouer au tennis de table et au tennis.",
+        "ru": "Он умеет играть в настольный теннис и в теннис.",
+        "tr": "Masa tenisi ve tenis oynamayı biliyor."
+      },
+      "topic": "skills",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s41",
+      "hanzi": "我会上网。",
+      "pinyin": "Wǒ huì shàng wǎng.",
+      "meaning": {
+        "en": "I know how to go online.",
+        "fr": "Je sais aller sur Internet.",
+        "ru": "Я умею пользоваться интернетом.",
+        "tr": "İnternete girmeyi biliyorum."
+      },
+      "topic": "skills",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s42",
+      "hanzi": "我们下午踢足球。",
+      "pinyin": "Wǒmen xiàwǔ tī zúqiú.",
+      "meaning": {
+        "en": "We play football in the afternoon.",
+        "fr": "Nous jouons au football l’après-midi.",
+        "ru": "Мы играем в футбол после обеда.",
+        "tr": "Öğleden sonra futbol oynarız."
+      },
+      "topic": "skills",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s43",
+      "hanzi": "我会做饭，也喜欢吃饭。",
+      "pinyin": "Wǒ huì zuò fàn, yě xǐhuan chī fàn.",
+      "meaning": {
+        "en": "I can cook, and I also enjoy eating.",
+        "fr": "Je sais cuisiner et j’aime aussi manger.",
+        "ru": "Я умею готовить и люблю поесть.",
+        "tr": "Yemek pişirmeyi bilirim, yemek yemeyi de severim."
+      },
+      "topic": "skills",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s44",
+      "hanzi": "我早上七点半出门。",
+      "pinyin": "Wǒ zǎoshang qī diǎn bàn chū mén.",
+      "meaning": {
+        "en": "I leave home at 7:30 in the morning.",
+        "fr": "Je pars de chez moi à 7 h 30 du matin.",
+        "ru": "Я выхожу из дома в 7:30 утра.",
+        "tr": "Sabah 7.30’da evden çıkarım."
+      },
+      "topic": "routine",
+      "origin": "source"
+    },
+    {
+      "id": "c09-s45",
+      "hanzi": "晚上六点出校门。",
+      "pinyin": "Wǎnshang liù diǎn chū xiàomén.",
+      "meaning": {
+        "en": "I leave through the school gate at six in the evening.",
+        "fr": "Je sors par le portail de l’école à six heures du soir.",
+        "ru": "Я выхожу за школьные ворота в шесть вечера.",
+        "tr": "Akşam altıda okul kapısından çıkarım."
+      },
+      "topic": "routine",
+      "origin": "source"
+    },
+    {
+      "id": "c09-s46",
+      "hanzi": "开车半小时后到家。",
+      "pinyin": "Kāi chē bàn xiǎoshí hòu dào jiā.",
+      "meaning": {
+        "en": "I arrive home after half an hour of driving.",
+        "fr": "J’arrive chez moi après une demi-heure de route.",
+        "ru": "Я приезжаю домой через полчаса езды на машине.",
+        "tr": "Yarım saat araba sürdükten sonra eve varırım."
+      },
+      "topic": "routine",
+      "origin": "source"
+    },
+    {
+      "id": "c09-s47",
+      "hanzi": "我六点半起床，然后做早饭。",
+      "pinyin": "Wǒ liù diǎn bàn qǐ chuáng, ránhòu zuò zǎofàn.",
+      "meaning": {
+        "en": "I get up at 6:30 and then make breakfast.",
+        "fr": "Je me lève à 6 h 30, puis je prépare le petit-déjeuner.",
+        "ru": "Я встаю в 6:30, затем готовлю завтрак.",
+        "tr": "6.30’da kalkar, sonra kahvaltı hazırlarım."
+      },
+      "topic": "routine",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s48",
+      "hanzi": "我七点半送孩子，七点四十来学校。",
+      "pinyin": "Wǒ qī diǎn bàn sòng háizi, qī diǎn sìshí lái xuéxiào.",
+      "meaning": {
+        "en": "I take the child at 7:30 and come to school at 7:40.",
+        "fr": "J’accompagne l’enfant à 7 h 30 et viens à l’école à 7 h 40.",
+        "ru": "В 7:30 я отвожу ребёнка, в 7:40 прихожу в школу.",
+        "tr": "7.30’da çocuğu götürür, 7.40’ta okula gelirim."
+      },
+      "topic": "routine",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s49",
+      "hanzi": "二十三点三十分，也可以说晚上十一点半。",
+      "pinyin": "Èrshísān diǎn sānshí fēn, yě kěyǐ shuō wǎnshang shíyī diǎn bàn.",
+      "meaning": {
+        "en": "23:30 can also be said as eleven thirty at night.",
+        "fr": "23 h 30 peut aussi se dire onze heures et demie du soir.",
+        "ru": "23:30 можно также сказать как «половина двенадцатого ночи».",
+        "tr": "23:30, gece on bir buçuk diye de söylenebilir."
+      },
+      "topic": "routine",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s50",
+      "hanzi": "你的家远吗？",
+      "pinyin": "Nǐ de jiā yuǎn ma?",
+      "meaning": {
+        "en": "Is your home far away?",
+        "fr": "Ta maison est-elle loin ?",
+        "ru": "Твой дом далеко?",
+        "tr": "Evin uzak mı?"
+      },
+      "topic": "transport",
+      "origin": "source"
+    },
+    {
+      "id": "c09-s51",
+      "hanzi": "不远，很近。",
+      "pinyin": "Bù yuǎn, hěn jìn.",
+      "meaning": {
+        "en": "Not far; it is nearby.",
+        "fr": "Ce n’est pas loin, c’est tout près.",
+        "ru": "Недалеко, близко.",
+        "tr": "Uzak değil, çok yakın."
+      },
+      "topic": "transport",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s52",
+      "hanzi": "我坐火车去。",
+      "pinyin": "Wǒ zuò huǒchē qù.",
+      "meaning": {
+        "en": "I go by train.",
+        "fr": "J’y vais en train.",
+        "ru": "Я еду поездом.",
+        "tr": "Trenle giderim."
+      },
+      "topic": "transport",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s53",
+      "hanzi": "你坐地铁还是坐公共汽车？",
+      "pinyin": "Nǐ zuò dìtiě háishi zuò gōnggòng qìchē?",
+      "meaning": {
+        "en": "Do you take the metro or the bus?",
+        "fr": "Tu prends le métro ou le bus ?",
+        "ru": "Ты едешь на метро или автобусе?",
+        "tr": "Metroya mı otobüse mi biniyorsun?"
+      },
+      "topic": "transport",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s54",
+      "hanzi": "我坐出租车到家。",
+      "pinyin": "Wǒ zuò chūzūchē dào jiā.",
+      "meaning": {
+        "en": "I take a taxi home.",
+        "fr": "Je rentre en taxi.",
+        "ru": "Я приезжаю домой на такси.",
+        "tr": "Taksiyle eve varırım."
+      },
+      "topic": "transport",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s55",
+      "hanzi": "这趟高铁很快。",
+      "pinyin": "Zhè tàng gāotiě hěn kuài.",
+      "meaning": {
+        "en": "This high-speed train is fast.",
+        "fr": "Ce train à grande vitesse est rapide.",
+        "ru": "Этот скоростной поезд быстрый.",
+        "tr": "Bu yüksek hızlı tren hızlı."
+      },
+      "topic": "transport",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s56",
+      "hanzi": "请看动车和特快这两个词。",
+      "pinyin": "Qǐng kàn dòngchē hé tèkuài zhè liǎng ge cí.",
+      "meaning": {
+        "en": "Look at the two terms 动车 and 特快.",
+        "fr": "Regardez les deux termes 动车 et 特快.",
+        "ru": "Посмотрите на два слова: 动车 и 特快.",
+        "tr": "动车 ve 特快 terimlerine bakın."
+      },
+      "topic": "transport",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s57",
+      "hanzi": "半小时是三十分钟。",
+      "pinyin": "Bàn xiǎoshí shì sānshí fēnzhōng.",
+      "meaning": {
+        "en": "Half an hour is thirty minutes.",
+        "fr": "Une demi-heure fait trente minutes.",
+        "ru": "Полчаса — тридцать минут.",
+        "tr": "Yarım saat otuz dakikadır."
+      },
+      "topic": "duration",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s58",
+      "hanzi": "一个小时是六十分钟。",
+      "pinyin": "Yí ge xiǎoshí shì liùshí fēnzhōng.",
+      "meaning": {
+        "en": "One hour is sixty minutes.",
+        "fr": "Une heure fait soixante minutes.",
+        "ru": "Один час — шестьдесят минут.",
+        "tr": "Bir saat altmış dakikadır."
+      },
+      "topic": "duration",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s59",
+      "hanzi": "九十分钟是一个半小时。",
+      "pinyin": "Jiǔshí fēnzhōng shì yí ge bàn xiǎoshí.",
+      "meaning": {
+        "en": "Ninety minutes is an hour and a half.",
+        "fr": "Quatre-vingt-dix minutes font une heure et demie.",
+        "ru": "Девяносто минут — полтора часа.",
+        "tr": "Doksan dakika bir buçuk saattir."
+      },
+      "topic": "duration",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s60",
+      "hanzi": "半小时后，我们到家。",
+      "pinyin": "Bàn xiǎoshí hòu, wǒmen dào jiā.",
+      "meaning": {
+        "en": "Half an hour later we arrive home.",
+        "fr": "Une demi-heure plus tard, nous arrivons chez nous.",
+        "ru": "Через полчаса мы приезжаем домой.",
+        "tr": "Yarım saat sonra eve varırız."
+      },
+      "topic": "duration",
+      "origin": "app-added"
+    },
+    {
+      "id": "c09-s61",
+      "hanzi": "我们一起干杯吧！",
+      "pinyin": "Wǒmen yìqǐ gānbēi ba!",
+      "meaning": {
+        "en": "Let us raise a toast together!",
+        "fr": "Trinquons ensemble !",
+        "ru": "Давайте вместе поднимем бокалы!",
+        "tr": "Birlikte kadeh kaldıralım!"
+      },
+      "topic": "study",
+      "origin": "app-added"
+    }
+  ],
+  "dialogue": [],
+  "topics": [
+    {
+      "id": "study",
+      "anchor": "习",
+      "pattern": "预习 → 学习 → 复习 · 帮 + person + action",
+      "title": {
+        "en": "Prepare, learn & review",
+        "fr": "Préparer, apprendre et réviser",
+        "ru": "Подготовка, учёба и повторение",
+        "tr": "Hazırlan, öğren ve tekrar et"
+      },
+      "note": {
+        "en": "预习 prepares before class; 学习 is learning; 复习 reviews learned material. 练习 is practice. Use 帮 + person + action: 我帮你复习. 听写 means dictation. 丝 / 纟 is a visible component connection in 练, not the complete meaning of the word.",
+        "fr": "预习 : préparation avant le cours ; 学习 : apprentissage ; 复习 : révision ; 练习 : pratique. Structure : 帮 + personne + action, comme 我帮你复习. 听写 : dictée. 丝 / 纟 est un lien graphique dans 练, pas le sens complet du mot.",
+        "ru": "预习 — готовиться до занятия; 学习 — учиться; 复习 — повторять изученное; 练习 — практиковаться. Модель 帮 + человек + действие: 我帮你复习. 听写 — диктант. 丝 / 纟 — графическая связь в 练, не полное значение слова.",
+        "tr": "预习 ders öncesi hazırlık, 学习 öğrenme, 复习 tekrar, 练习 alıştırmadır. 帮 + kişi + eylem: 我帮你复习. 听写 diktedir. 丝 / 纟, 练 içindeki görsel bağlantıdır; bütün anlam değildir."
+      },
+      "target": "c09-s01",
+      "blocks": [
+        "我",
+        "帮",
+        "你",
+        "复习"
+      ]
+    },
+    {
+      "id": "dates",
+      "anchor": "几",
+      "pattern": "几月几号？ · 星期几？ · 周五 = 星期五",
+      "title": {
+        "en": "Ask the date & day",
+        "fr": "Demander la date et le jour",
+        "ru": "Дата и день недели",
+        "tr": "Tarihi ve günü sor"
+      },
+      "note": {
+        "en": "The lesson date is Friday, 30 October 2026; tomorrow is Saturday, 31 October. 周五 = 星期五 and 周六 = 星期六. Ask 今天星期几？ without 吗: 几 already requests the missing information. 谁 has two accepted readings, shéi and shuí.",
+        "fr": "La leçon est datée du vendredi 30 octobre 2026 ; le lendemain est samedi 31. 周五 = 星期五 ; 周六 = 星期六. Demandez 今天星期几？ sans 吗 : 几 demande déjà l’information. 谁 se lit shéi ou shuí.",
+        "ru": "Дата урока — пятница, 30 октября 2026; завтра суббота, 31 октября. 周五 = 星期五; 周六 = 星期六. Вопрос 今天星期几？ не требует 吗: 几 уже запрашивает информацию. 谁 читается shéi или shuí.",
+        "tr": "Ders tarihi 30 Ekim 2026 Cuma; ertesi gün 31 Ekim Cumartesi. 周五 = 星期五; 周六 = 星期六. 今天星期几？ sorusuna 吗 eklemeyin: bilgiyi 几 sorar. 谁, shéi veya shuí okunur."
+      },
+      "target": "c09-s10",
+      "blocks": [
+        "今天",
+        "星期几"
+      ]
+    },
+    {
+      "id": "weather",
+      "anchor": "雨",
+      "pattern": "天气 + 怎么样？ · 有 + noun · 下雨 / 下雪",
+      "title": {
+        "en": "Describe the weather",
+        "fr": "Décrire le temps",
+        "ru": "Описываем погоду",
+        "tr": "Havayı anlat"
+      },
+      "note": {
+        "en": "Compare 晴 sunny, 阴 overcast and 多云 cloudy. 有风 / 有雾 describe wind or fog. 有雨 / 有雪 state the presence of rain or snow; 下雨 / 下雪 describe it falling. 小雨 / 中雨 / 大雨 increase rain intensity. These are separate classroom scenarios, not a current forecast.",
+        "fr": "晴 : ensoleillé ; 阴 : couvert ; 多云 : nuageux. 有风 / 有雾 : vent / brouillard. 有雨 / 有雪 indiquent la présence de pluie / neige ; 下雨 / 下雪, leur chute. 小雨 / 中雨 / 大雨 : intensité croissante. Ce sont des situations de cours, pas une prévision actuelle.",
+        "ru": "晴 — ясно, 阴 — пасмурно, 多云 — облачно. 有风 / 有雾 — ветер / туман. 有雨 / 有雪 — наличие дождя / снега; 下雨 / 下雪 — их выпадение. 小雨 / 中雨 / 大雨 — усиление дождя. Это отдельные учебные ситуации, не прогноз.",
+        "tr": "晴 güneşli, 阴 kapalı, 多云 bulutludur. 有风 / 有雾 rüzgârı veya sisi anlatır. 有雨 / 有雪 yağış varlığını; 下雨 / 下雪 yağmasını anlatır. 小雨 / 中雨 / 大雨 şiddeti artırır. Bunlar güncel tahmin değil, ayrı sınıf örnekleridir."
+      },
+      "target": "c09-s15",
+      "blocks": [
+        "今天",
+        "天气",
+        "怎么样"
+      ]
+    },
+    {
+      "id": "shapes",
+      "anchor": "青",
+      "pattern": "青 qīng · 晴 qíng · 请 qǐng · 清 qīng",
+      "title": {
+        "en": "Similar shapes, different words",
+        "fr": "Formes proches, mots différents",
+        "ru": "Похожая форма, разные слова",
+        "tr": "Benzer şekiller, farklı kelimeler"
+      },
+      "note": {
+        "en": "Read the whole character and tone. Shared 青 is a sound/shape cue, not a complete definition. 带 and 代 both sound dài; 贷 adds 贝 under 代. 贵 and 贱 also contain 贝. The board uses 贱 for comparison; neutral everyday “inexpensive” is 便宜. These are modern shape observations, not origin stories.",
+        "fr": "Lisez le caractère entier et son ton. 青 aide à comparer son et forme, sans remplacer le sens. 带 et 代 se lisent dài ; 贷 ajoute 贝 sous 代. 贵 et 贱 contiennent aussi 贝. Pour « bon marché » de façon neutre, utilisez 便宜. Ce sont des observations graphiques, pas une étymologie.",
+        "ru": "Различайте весь знак и тон. Общий 青 — подсказка о форме и звуке, не полное значение. 带 и 代 звучат dài; в 贷 под 代 есть 贝. В 贵 и 贱 тоже есть 贝. Нейтральное «недорогой» — 便宜. Это наблюдения о современной форме, не этимология.",
+        "tr": "Karakterin tamamını ve tonunu okuyun. 青 ses ve şekil ipucudur, tam anlam değildir. 带 ile 代 dài okunur; 贷 içinde 代 altında 贝 vardır. 贵 ile 贱 içinde de 贝 vardır. Nötr “ucuz” için 便宜 kullanın. Bunlar modern şekil gözlemleridir, köken öyküsü değildir."
+      },
+      "target": "c09-s24",
+      "blocks": [
+        "请",
+        "看",
+        "这杯",
+        "清水"
+      ]
+    },
+    {
+      "id": "degree",
+      "anchor": "太",
+      "pattern": "太 + description + 了",
+      "title": {
+        "en": "Emphasise with 太…了",
+        "fr": "Souligner avec 太…了",
+        "ru": "Усиление с 太…了",
+        "tr": "太…了 ile vurgula"
+      },
+      "note": {
+        "en": "太…了 can express excess (“too difficult”) or a strong feeling (“so interesting!”). Here 了 is part of the degree pattern, not automatically past tense. 汉语 is the language; 汉字 are characters. The unlabelled board numbers are not a universal character count.",
+        "fr": "太…了 exprime un excès (« trop difficile ») ou une forte impression (« tellement intéressant ! »). Ici, 了 ne marque pas automatiquement le passé. 汉语 : la langue ; 汉字 : les caractères. Les nombres non précisés du tableau ne sont pas un total universel.",
+        "ru": "太…了 — избыток («слишком трудно») или сильное впечатление («так интересно!»). Здесь 了 не означает автоматически прошлое. 汉语 — язык; 汉字 — иероглифы. Числа без пояснения на доске не выдаются за общее число иероглифов.",
+        "tr": "太…了 aşırılık (“çok zor”) veya güçlü duygu (“çok ilginç!”) anlatır. Buradaki 了 otomatik olarak geçmiş zaman değildir. 汉语 dil, 汉字 karakterdir. Tahtadaki açıklamasız sayılar evrensel karakter sayısı değildir."
+      },
+      "target": "c09-s31",
+      "blocks": [
+        "汉语",
+        "太",
+        "有意思",
+        "了"
+      ]
+    },
+    {
+      "id": "skills",
+      "anchor": "会",
+      "pattern": "我会 / 我不会 + skill · 你会…吗？",
+      "title": {
+        "en": "Say what you can do",
+        "fr": "Dire ce qu’on sait faire",
+        "ru": "Что вы умеете делать",
+        "tr": "Neyi yapabildiğini söyle"
+      },
+      "note": {
+        "en": "会 is a learned ability; 不会 means not knowing how. 学游泳 is learning to swim; 会游泳 says the skill has been acquired. Use 打 with basketball, table tennis and tennis; 踢 with football. 做饭 means cook; 吃饭 means eat.",
+        "fr": "会 : capacité apprise ; 不会 : ne pas savoir faire. 学游泳 : apprendre à nager ; 会游泳 : savoir nager. Employez 打 pour basket, tennis de table et tennis ; 踢 pour football. 做饭 : cuisiner ; 吃饭 : manger.",
+        "ru": "会 — приобретённое умение; 不会 — не уметь. 学游泳 — учиться плавать, 会游泳 — уже уметь. С баскетболом и теннисом используется 打; с футболом — 踢. 做饭 — готовить, 吃饭 — есть.",
+        "tr": "会 öğrenilmiş beceri, 不会 nasıl yapılacağını bilmemektir. 学游泳 yüzmeyi öğrenmek, 会游泳 yüzmeyi bilmektir. Basketbol ve tenisle 打; futbolla 踢 kullanın. 做饭 yemek pişirmek, 吃饭 yemek yemektir."
+      },
+      "target": "c09-s37",
+      "blocks": [
+        "我",
+        "不会",
+        "游泳"
+      ]
+    },
+    {
+      "id": "routine",
+      "anchor": "半",
+      "pattern": "time + action · duration + 后 + result",
+      "title": {
+        "en": "Build a daily timeline",
+        "fr": "Construire sa journée",
+        "ru": "План дня по времени",
+        "tr": "Günlük zaman çizelgesi kur"
+      },
+      "note": {
+        "en": "Keep two examples separate: one has 6:30 起床, 7:30 送孩子 and 7:40 来学校. Another has 7:30 出门, 18:00 出校门, then arrival after half an hour of driving. 23:30 = 晚上十一点半. Put the clock time before the action, and 后 after a duration.",
+        "fr": "Distinguez les exemples : l’un a 6 h 30 起床, 7 h 30 送孩子, 7 h 40 来学校 ; l’autre, 7 h 30 出门, 18 h 出校门, puis l’arrivée après une demi-heure de route. 23 h 30 = 晚上十一点半. L’heure précède l’action ; 后 suit la durée.",
+        "ru": "Не смешивайте примеры: в одном 6:30 起床, 7:30 送孩子, 7:40 来学校; в другом 7:30 出门, 18:00 出校门, затем приезд через полчаса езды. 23:30 — 晚上十一点半. Время ставится до действия, 后 — после длительности.",
+        "tr": "Örnekleri ayrı tutun: birinde 6:30 起床, 7:30 送孩子, 7:40 来学校; diğerinde 7:30 出门, 18:00 出校门 ve yarım saat sürüş sonrası varış vardır. 23:30 = 晚上十一点半. Saat eylemden önce, 后 süreden sonra gelir."
+      },
+      "target": "c09-s44",
+      "blocks": [
+        "我",
+        "早上",
+        "七点半",
+        "出门"
+      ]
+    },
+    {
+      "id": "transport",
+      "anchor": "车",
+      "pattern": "开车 · 坐 + vehicle · 去 / 到家",
+      "title": {
+        "en": "Drive or take transport",
+        "fr": "Conduire ou prendre un transport",
+        "ru": "За рулём или на транспорте",
+        "tr": "Sürmek veya taşıta binmek"
+      },
+      "note": {
+        "en": "开车 means drive. 坐火车 / 坐地铁 / 坐出租车 / 坐公共汽车 mean travel by that vehicle, not necessarily drive it. K318, T214, D8, G9001 and the 90/60/30-minute notes have no specified route: they are classroom examples, not a live timetable or service promise.",
+        "fr": "开车 : conduire. 坐火车 / 坐地铁 / 坐出租车 / 坐公共汽车 : prendre ce transport, pas forcément le conduire. K318, T214, D8, G9001 et 90/60/30 minutes n’ont pas de trajet précisé : ce sont des exemples de cours, pas un horaire actuel.",
+        "ru": "开车 — вести машину. 坐火车 / 坐地铁 / 坐出租车 / 坐公共汽车 — ехать этим транспортом, не обязательно за рулём. У K318, T214, D8, G9001 и 90/60/30 минут не указан маршрут: это учебные примеры, не расписание.",
+        "tr": "开车 araba sürmektir. 坐火车 / 坐地铁 / 坐出租车 / 坐公共汽车 o taşıtla gitmektir; sürmek zorunlu değildir. K318, T214, D8, G9001 ve 90/60/30 dakika için rota yoktur; güncel tarife değil, sınıf örnekleridir."
+      },
+      "target": "c09-s52",
+      "blocks": [
+        "我",
+        "坐",
+        "火车",
+        "去"
+      ]
+    },
+    {
+      "id": "duration",
+      "anchor": "分钟",
+      "pattern": "30 分钟 = 半小时 · 60 分钟 = 1 小时",
+      "title": {
+        "en": "Minutes, hours & later",
+        "fr": "Minutes, heures et plus tard",
+        "ru": "Минуты, часы и «позже»",
+        "tr": "Dakikalar, saatler ve sonrası"
+      },
+      "note": {
+        "en": "三十分钟 is the same duration as 半小时. 六十分钟 is an hour; 九十分钟 is an hour and a half. 后 locates an event after a duration: 半小时后到家. A duration is different from a clock time such as 六点半.",
+        "fr": "三十分钟 : même durée que 半小时. 六十分钟 : une heure ; 九十分钟 : une heure et demie. 后 situe l’événement après la durée : 半小时后到家. Une durée diffère d’une heure sur l’horloge, comme 六点半.",
+        "ru": "三十分钟 — столько же, сколько 半小时. 六十分钟 — час, 九十分钟 — полтора часа. 后 указывает событие после длительности: 半小时后到家. Длительность отличается от времени на часах, например 六点半.",
+        "tr": "三十分钟, 半小时 ile aynı süredir. 六十分钟 bir saat, 九十分钟 bir buçuk saattir. 后 olayı sürenin sonrasına koyar: 半小时后到家. Süre, 六点半 gibi saatten farklıdır."
+      },
+      "target": "c09-s57",
+      "blocks": [
+        "半小时",
+        "是",
+        "三十分钟"
+      ]
+    }
+  ]
+}
