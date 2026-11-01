@@ -57,8 +57,12 @@ import {
   readDraft,
   saveDraft,
 } from "./local-store";
-import Ink from "./ink";
-import Guided from "./guided";
+import Writing from "./writing-practice";
+import SharedWriting, {WritingPracticeProvider} from "./shared-writing";
+import Ratings from "./review-ratings";
+import {newEvent} from "./learning-event";
+import RecognitionReview, {recognitionDraftKey, validRecognitionDraft} from "./recognition-review";
+
 import Notebook from "./notebook";
 import IntensiveCourse from "./intensive-course";
 import {useHanziStyle,HanziDisplayControls,type HanziStyle} from './hanzi-style';
@@ -75,15 +79,6 @@ const Atlas = lazy(() => import("./atlas"));
 const TodayCourseReviews = lazy(() => import("./today-course-reviews"));
 const TodayRecognition = lazy(() => import("./today-recognition"));
 type View = "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
-type Draft = {
-  strokes: Stroke[][];
-  index: number;
-  assisted: boolean;
-  hints: number;
-  revealed?: boolean;
-  completed?: number[];
-  attemptId?: string;
-};
 export default function StudyApp({
   user,
   onSignIn,
@@ -154,6 +149,11 @@ export default function StudyApp({
   const [minutes, setMinutes] = useState(10);
   const [session, setSession] = useState<Item[] | null>(null);
   const [sessionIndex, setSessionIndex] = useState(0);
+  const [recognitionRun, setRecognitionRun] = useState("");
+  const [recognitionPractice,setRecognitionPractice] = useState(false);
+  const [recognitionWriting,setRecognitionWriting] = useState<Item|null>(null);
+  const recognitionWriter=useRef<HTMLDialogElement>(null);
+  useEffect(()=>{if(recognitionWriting) recognitionWriter.current?.showModal();else recognitionWriter.current?.close();},[recognitionWriting]);
   const [finished, setFinished] = useState(false);
   const [isReady, setIsReady] = useState(false);
   const [backup, setBackup] = useState(false);
@@ -191,6 +191,15 @@ export default function StudyApp({
           if (prefs.level && ["hsk1", "hsk2", "hsk3", "bonus"].includes(prefs.level)) {
             setLevel(prefs.level);
             setSelected(items.find((item) => isInLevel(item, prefs.level!))!);
+          }
+        }
+        const recognition = await readDraft(store, recognitionDraftKey);
+        if (alive && validRecognitionDraft(recognition) && !window.location.search && !window.location.hash) {
+          const queue = recognition.itemIds.map(id => sourceItems.find(i => i.id === id)).filter((i): i is Item => !!i);
+          if (queue.length === recognition.itemIds.length) {
+            const index = Math.min(recognition.index, queue.length - 1);
+            setRecognitionRun(recognition.id); setRecognitionPractice(!!recognition.practice); setSession(queue); setSessionIndex(index);
+            setSelected(queue[index]); setSkill("meaning"); setMode("recall"); setFinished(false); setView("practice");
           }
         }
         setIsReady(true);
@@ -337,18 +346,19 @@ export default function StudyApp({
     setView("practice");
     window.scrollTo({ top: 0, behavior: "instant" });
   }
-  function startReview(s: Skill) {
+  function startReview(s: Skill, extra = false) {
     const count = Math.max(
       1,
       Math.floor((minutes * 60) / (s === "writing" ? 90 : 25)),
     );
-    const queue = makeQueue(events, s, studyItems).slice(0, count);
+    const queue = (extra ? studyItems : makeQueue(events, s, studyItems)).slice(0, count);
     if (!queue.length) {
       notify(
         t("You are all caught up for this skill. Try another skill or practice a lesson."),
       );
       return;
     }
+    if (s === "meaning") {setRecognitionRun(crypto.randomUUID());setRecognitionPractice(extra);}
     setSkill(s);
     setMode("recall");
     setSession(queue);
@@ -503,7 +513,7 @@ export default function StudyApp({
           )}
         </div>
       </aside>
-      <StudyLookupProvider notify={notify} penOnly={penOnly} setPenOnly={setPenOnly}><main className="main">
+      <WritingPracticeProvider value={{db:db?.name === "chinese-os-v1-" + (user?.id??"guest") ? db : null,record,notify,penOnly,setPenOnly}}><StudyLookupProvider notify={notify} penOnly={penOnly} setPenOnly={setPenOnly}><main className="main">
         <header className="topbar">
           <span>
             <span className="breadcrumb">{t("My study space")}</span>
@@ -960,6 +970,7 @@ export default function StudyApp({
                           {t("Start")} {skillNames[s].toLowerCase()}{" "}
                           <ArrowRight size={17} />
                         </button>
+                        {s === "meaning" && <button className="secondary" onClick={()=>startReview("meaning",true)}>{t("Extra recognition practice")}</button>}
                       </section>
                     );
                   },
@@ -1059,6 +1070,13 @@ export default function StudyApp({
                     notify={notify}
                     session={!!session}
                   />
+                ) : skill === "meaning" ? (
+                  <RecognitionReview key={(user?.id ?? "guest") + ":" + recognitionRun}
+                    db={db?.name === "chinese-os-v1-" + (user?.id ?? "guest") ? db : null}
+                    runId={recognitionRun} queue={(session ?? [selected]).map(i => sourceItems.find(source => source.id === i.id)!)}
+                    record={record} notify={notify} practice={recognitionPractice} onWrite={setRecognitionWriting} onPosition={index => {
+                      if (session) {setSessionIndex(index); setSelected(session[index]);}
+                    }}/>
                 ) : (
                   <Recall
                     key={selected.id + skill}
@@ -1213,7 +1231,10 @@ export default function StudyApp({
             {t("Small steps. Lasting connections.")}<span>{t("CHINESE OS · MADE FOR YOUR EVERYDAY")}</span>
           </footer>
         </div>
-      </main></StudyLookupProvider>
+      <dialog ref={recognitionWriter} className="study-writing-dialog" aria-label={t("Practice writing")} onCancel={e=>{e.preventDefault();setRecognitionWriting(null);}} onClose={()=>setRecognitionWriting(null)}>
+        <header><h2>{t("Practice writing")}</h2><button className="secondary" onClick={()=>setRecognitionWriting(null)} aria-label={t("Back to recognition")}><X size={20}/></button></header>
+        {recognitionWriting&&<SharedWriting key={recognitionWriting.id} hanzi={recognitionWriting.hanzi} item={recognitionWriting} onBack={()=>setRecognitionWriting(null)}/>}
+      </dialog></main></StudyLookupProvider></WritingPracticeProvider>
       {pdfSelection && <PdfExport key={level} level={level} initialIds={pdfSelection} onClose={() => setPdfSelection(null)} />}
       {toast && (
         <div className="toast" role="status">
@@ -1320,57 +1341,6 @@ export default function StudyApp({
   );
 }
 
-function newEvent(
-  item: Item,
-  skill: Skill,
-  mode: Mode,
-  rating: LearningEvent["rating"],
-  assisted: boolean,
-  detail: LearningEvent["detail"] = {},
-): LearningEvent {
-  return {
-    id: crypto.randomUUID(),
-    itemId: item.id,
-    skill,
-    mode,
-    rating,
-    assisted,
-    at: Date.now(),
-    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-    detail,
-  };
-}
-function Ratings({
-  onRate,
-  disabled,
-}: {
-  onRate: (r: 1 | 2 | 3 | 4) => void;
-  disabled: boolean;
-}) {
-  const { t, locale } = useI18n();
-  return (
-    <div className="ratings">
-      {(
-        [
-          { r: 1, title: t("Again"), help: t("Could not recall") },
-          { r: 2, title: t("Hard"), help: t("Correct, with effort") },
-          { r: 3, title: t("Good"), help: t("Recalled correctly") },
-          { r: 4, title: t("Easy"), help: t("Quick & confident") },
-        ] as const
-      ).map((b) => (
-        <button
-          key={b.r}
-          disabled={disabled}
-          className={"rating rating-" + b.r}
-          onClick={() => onRate(b.r)}
-        >
-          <strong>{b.title}</strong>
-          <small>{b.help}</small>
-        </button>
-      ))}
-    </div>
-  );
-}
 function Recall({
   item,
   skill,
@@ -1465,382 +1435,5 @@ function Recall({
         </>
       )}
     </section>
-  );
-}
-
-function Writing({
-  item,
-  mode,
-  setMode,
-  db,
-  record,
-  next,
-  penOnly,
-  setPenOnly,
-  left,
-  notify,
-  session,
-}: {
-  item: Item;
-  mode: Mode;
-  setMode: (m: Mode) => void;
-  db: IDBDatabase | null;
-  record: (e: LearningEvent) => Promise<void>;
-  next: () => void;
-  penOnly: boolean;
-  setPenOnly: (v: boolean) => void;
-  left: boolean;
-  notify: (m: string) => void;
-  session: boolean;
-}) {
-  const { t, locale } = useI18n();
-  const [strokes, setStrokes] = useState<Stroke[][]>(
-    Array.from(item.hanzi, () => []),
-  );
-  const [index, setIndex] = useState(0);
-  const [assisted, setAssisted] = useState(false);
-  const [hints, setHints] = useState(0);
-  const [mistakes, setMistakes] = useState(0);
-  const [revealed, setRevealed] = useState(false);
-  const [replay, setReplay] = useState(0);
-  const [completed, setCompleted] = useState<Set<number>>(new Set());
-  const [saved, setSaved] = useState(false);
-  const [saving, setSaving] = useState(false);
-  const [ready, setReady] = useState(false);
-  const started = useRef(Date.now());
-  const attemptId = useRef(crypto.randomUUID());
-  const key = "writing:" + item.id + ":" + mode;
-  useEffect(() => {
-    let alive = true;
-    if (!db) return;
-    readDraft<Draft>(db, key)
-      .then((d) => {
-        if (!alive) return;
-        if (d) {
-          setStrokes(d.strokes);
-          setIndex(d.index);
-          setAssisted(d.assisted);
-          setHints(d.hints);
-          setRevealed(d.revealed ?? false);
-          setCompleted(new Set(d.completed ?? []));
-          if (d.attemptId) attemptId.current = d.attemptId;
-        }
-        setReady(true);
-      })
-      .catch(() => {
-        setReady(true);
-        notify(
-          t("Could not restore the last drawing. You can still start a new attempt."),
-        );
-      });
-    return () => {
-      alive = false;
-    };
-  }, [db, key, notify]);
-  useEffect(() => {
-    if (db && ready && !saved)
-      saveDraft(db, key, {
-        strokes,
-        index,
-        assisted,
-        hints,
-        revealed,
-        completed: [...completed],
-        attemptId: attemptId.current,
-      }).catch(() => notify(t("Could not save this drawing on your device.")));
-  }, [
-    db,
-    ready,
-    saved,
-    key,
-    strokes,
-    index,
-    assisted,
-    hints,
-    revealed,
-    completed,
-    notify,
-  ]);
-  const characters = Array.from(item.hanzi);
-  const free = mode === "copy" || mode === "recall";
-  const allWritten = free
-    ? strokes.every((s) => s.length > 0)
-    : completed.size === characters.length;
-  function changeStrokes(s: Stroke[]) {
-    setStrokes((old) => old.map((v, i) => (i === index ? s : v)));
-  }
-  async function save(r: LearningEvent["rating"]) {
-    if (saved || saving) return;
-    setSaving(true);
-    try {
-      const event = newEvent(
-        item,
-        "writing",
-        mode,
-        r,
-        assisted || mode !== "recall",
-        {
-          strokes: compactStrokes(strokes),
-          hints,
-          mistakes,
-          duration: Date.now() - started.current,
-          input: penOnly ? "pen" : "mixed",
-        },
-      );
-      event.id = attemptId.current;
-      await record(event);
-      setSaved(true);
-      if (db) await saveDraft(db, key, undefined);
-      notify(
-        mode === "recall" && !assisted
-          ? t("Review saved. Your next writing review is scheduled.")
-          : t("Practice saved. Independent recall has its own schedule."),
-      );
-    } catch {
-      notify(t("Could not save. Keep this page open and try again."));
-    } finally {
-      setSaving(false);
-    }
-  }
-  return (
-    <div className={"studio-grid " + (left ? "left-handed" : "")}>
-      <section className="writing-panel panel">
-        <div className="studio-top">
-          <div className="mode-tabs">
-            {(["watch", "trace", "copy", "recall"] as Mode[]).map((m, i) => (
-              <button
-                disabled={session && m !== "recall"}
-                key={m}
-                className={mode === m ? "selected" : ""}
-                onClick={() => setMode(m)}
-              >
-                <span>{i + 1}</span>
-                {t(m[0].toUpperCase() + m.slice(1))}
-              </button>
-            ))}
-          </div>
-          <label className="pencil-toggle">
-            <input
-              type="checkbox"
-              checked={penOnly}
-              onChange={(e) => setPenOnly(e.target.checked)}
-            />
-            {t("Pencil only")}</label>
-        </div>
-        <div className="writing-prompt">
-          <span className="eyebrow">
-            {mode === "recall"
-              ? t("WRITE FROM MEMORY")
-              : t("LET YOUR HAND LEARN THE SHAPE")}
-          </span>
-          <h2>{item.english}</h2>
-          <span className="pinyin">{item.pinyin}</span>
-        </div>
-        <div className="character-tabs">
-          {characters.map((c, i) => (
-            <button
-              key={i}
-              className={index === i ? "selected" : ""}
-              onClick={() => setIndex(i)}
-              aria-label={t("Character {0}", [i + 1])}
-            >
-              {mode === "recall" && !revealed ? i + 1 : c}
-              {completed.has(i) && <Check size={11} />}
-            </button>
-          ))}
-        </div>
-        <div className="writing-grid">
-          <div className="grid-line horizontal" />
-          <div className="grid-line vertical" />
-          <div className="grid-line diagonal-one" />
-          <div className="grid-line diagonal-two" />
-          {free ? (
-            ready ? (
-              <Ink
-                key={index}
-                disabled={saved}
-                strokes={strokes[index] ?? []}
-                onChange={changeStrokes}
-                penOnly={penOnly}
-              />
-            ) : (
-              <span className="canvas-notice">{t("Loading your saved drawing…")}</span>
-            )
-          ) : (
-            <Guided
-              key={index}
-              character={characters[index]}
-              mode={mode as "watch" | "trace"}
-              penOnly={penOnly}
-              replay={replay}
-              onMistake={() => setMistakes((n) => n + 1)}
-              onComplete={() =>
-                setCompleted((prev) => new Set([...prev, index]))
-              }
-            />
-          )}
-        </div>
-        <p className="canvas-caption">
-          {completed.has(index) && !free
-            ? t("✓ Character complete. Choose the next cell.")
-            : mode === "watch"
-              ? t("Follow the stroke order. Replay whenever you like.")
-              : mode === "trace"
-                ? t("Follow the outline, one stroke at a time.")
-                : mode === "copy"
-                  ? t("Look at the reference. Write in the empty grid.")
-                  : t("Write the whole word, then compare your answer.")}
-        </p>
-        <div className="writing-tools">
-          <button
-            disabled={!free || saved || !strokes[index]?.length}
-            onClick={() => changeStrokes(strokes[index].slice(0, -1))}
-          >
-            <Undo2 size={17} />
-            {t("Undo")}</button>
-          <button
-            disabled={saved}
-            onClick={() => {
-              if (free) changeStrokes([]);
-              else {
-                setReplay((r) => r + 1);
-                setCompleted((p) => {
-                  const n = new Set(p);
-                  n.delete(index);
-                  return n;
-                });
-              }
-            }}
-          >
-            <Trash2 size={17} />
-            {t("Clear")}</button>
-          <button
-            disabled={saved || revealed}
-            onClick={() => {
-              setAssisted(true);
-              setHints((n) => n + 1);
-              setRevealed(true);
-            }}
-          >
-            <Lightbulb size={17} />
-            {t("Hint")}</button>
-          <button
-            disabled={saved}
-            onClick={() => {
-              if (free) {
-                setAssisted(true);
-                setHints((n) => n + 1);
-                setRevealed(true);
-                speak(item.hanzi, notify, item);
-              } else setReplay((r) => r + 1);
-            }}
-          >
-            <Play size={17} />
-            {t("Replay")}</button>
-        </div>
-        <div className="writing-bottom">
-          <span>
-            {t("Character")} {t("{0} of {1}", [index + 1, characters.length])}
-          </span>
-          {index < characters.length - 1 ? (
-            <button
-              className="secondary"
-              onClick={() => setIndex((i) => i + 1)}
-            >
-              {t("Next character")}<ChevronRight size={16} />
-            </button>
-          ) : !revealed && mode === "recall" ? (
-            <button
-              className="primary"
-              disabled={!allWritten}
-              onClick={() => setRevealed(true)}
-            >
-              {t("Compare answer")}<ArrowRight size={16} />
-            </button>
-          ) : null}
-        </div>
-      </section>
-      <aside className="reference-panel">
-        <section className="panel reference-card">
-          <span className="eyebrow">
-            {mode === "recall" && !revealed ? t("YOUR PROMPT") : t("WORD IN FOCUS")}
-          </span>
-          {mode === "recall" && !revealed ? (
-            <div className="hidden-answer">
-              <PenLine size={33} />
-              <h3>{t("Trust your memory.")}</h3>
-              <p>
-                {t("The answer stays hidden until you finish. A hint counts as assisted practice.")}</p>
-            </div>
-          ) : (
-            <>
-              <div className="reference-hanzi">{item.hanzi}</div>
-              <p className="pinyin">{item.pinyin}</p>
-              <h3>{item.english}</h3>
-              <button
-                className="audio-button"
-                onClick={() => speak(item.hanzi, notify, item)}
-              >
-                <Volume2 size={17} /> {t("Hear pronunciation")}</button>
-              <div className="reference-example">
-                <span className="eyebrow">{t("IN EVERYDAY LIFE")}</span>
-                <p>{item.sentence}</p>
-                <p className="pinyin">{item.sentencePinyin}</p>
-                <small>{item.translation}</small>
-                <button
-                  className="text-button"
-                  onClick={() => speak(item.sentence, notify, item)}
-                >
-                  <Volume2 size={14} /> {t("Listen to example")}</button>
-              </div>
-            </>
-          )}
-        </section>
-        <section className="practice-feedback">
-          <span className="soft-icon">
-            <Sparkles size={18} />
-          </span>
-          <h3>
-            {saved
-              ? t("A small step, saved.")
-              : mode === "recall"
-                ? t("Recall first. Refine second.")
-                : t("Familiarity comes with practice.")}
-          </h3>
-          <p>
-            {mode === "recall"
-              ? t("Compare your completed word and rate your memory. This exercise uses self-assessment; free writing is not automatically graded.")
-              : t("Watching, tracing and copying help your hand learn. Try recall next to check your memory.")}
-          </p>
-          {mode === "recall" && revealed && !saved && (
-            <>
-              <p className="rating-instruction">
-                {assisted
-                  ? t("You used help. This saves practice only.")
-                  : t("How well did you remember before comparing?")}
-              </p>
-              <Ratings
-                onRate={(r) => void save(r)}
-                disabled={saving || !allWritten}
-              />
-            </>
-          )}
-          {mode !== "recall" && !saved && (
-            <button
-              className="secondary"
-              disabled={!allWritten || saving || !ready}
-              onClick={() => void save(0)}
-            >
-              {t("Save practice")}<Check size={16} />
-            </button>
-          )}
-          {saved && (
-            <button className="primary" onClick={next}>
-              {t("Next word")}<ArrowRight size={17} />
-            </button>
-          )}
-        </section>
-      </aside>
-    </div>
   );
 }

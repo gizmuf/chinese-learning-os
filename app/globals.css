@@ -4301,3 +4301,10 @@ html[lang="ru"] .nav-item, html[lang="fr"] .nav-item { font-size: 12px; }
 .writing-context p{margin:3px 0;}
 .writing-context .pinyin{font-size:18px;}
 .writing-input-help{font-size:14px;color:#586d5f;line-height:1.6;}
+
+.recognition-navigation {display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+
+.shared-writing-exercise .studio-grid {grid-template-columns:minmax(0,1fr);margin-top:1rem;}
+.shared-writing-exercise .writing-panel {min-width:0;}
+.shared-writing-exercise .writing-grid {width:min(100%,480px);margin-inline:auto;}
+.study-writing-dialog:has(.shared-writing-exercise),.l06-dialog:has(.shared-writing-exercise),.video-writing-dialog:has(.shared-writing-exercise) {max-height:92dvh;overflow:auto;}

@@ -1,0 +1,17 @@
+{
+  "Show pinyin": "Pinyin göster",
+  "Show English meaning": "İngilizce anlamı göster",
+  "Self-assessed recall": "Öz değerlendirmeli hatırlama",
+  "Already rated · viewing only": "Zaten değerlendirildi · yalnızca görüntüleme",
+  "Retry saving review": "Tekrarı kaydetmeyi yeniden dene",
+  "Could not load this review. Please try again.": "Bu tekrar yüklenemedi. Lütfen yeniden deneyin.",
+  "Try writing": "Yazmayı dene",
+  "Back to recognition": "Kartlara dön",
+  "Extra recognition practice": "Ek kart alıştırması",
+  "Supported memory practice · writing has its own progress.": "Destekli hafıza alıştırması · yazma ilerlemesi ayrıdır.",
+  "Extra practice · your review schedule stays unchanged.": "Ek alıştırma · tekrar programınız değişmez.",
+  "Review schedule unchanged": "Tekrar programı değişmedi",
+  "Next review: {0}": "Sonraki tekrar: {0}",
+  "Back": "Geri",
+  "Practice again": "Yeniden çalış"
+}
