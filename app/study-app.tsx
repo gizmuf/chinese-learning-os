@@ -77,9 +77,10 @@ import type { StudyUser as User } from "./auth-shell";
 const HSK3Grammar = lazy(() => import("./hsk3-grammar"));
 const Atlas = lazy(() => import("./atlas"));
 const StudyStudio = lazy(() => import("./study-studio"));
+const MyDayLesson = lazy(() => import("./my-day-lesson"));
 const TodayCourseReviews = lazy(() => import("./today-course-reviews"));
 const TodayRecognition = lazy(() => import("./today-recognition"));
-type View = "studio" | "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
+type View = "myday" | "studio" | "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
 export default function StudyApp({
   user,
   onSignIn,
@@ -97,10 +98,11 @@ export default function StudyApp({
   const lessons = sourceLessons.map(lesson => ({...lesson, title: t(lesson.title), subtitle: t(lesson.subtitle)}));
   const skillNames = Object.fromEntries(Object.entries(sourceSkillNames).map(([key,value]) => [key,t(value)])) as typeof sourceSkillNames;
   const [view, setView] = useState<View>("today");
+  const [myDayOrigin,setMyDayOrigin] = useState<View>("lessons");
   const [studioVisited,setStudioVisited] = useState(false);
   const [studioMenu,setStudioMenu] = useState(false);
   const [atlasReturn, setAtlasReturn] = useState<{url:string;scroll:number}|null>(null);
-  useEffect(() => { if (new URLSearchParams(window.location.search).get("study") === "studio") {setView("studio");setStudioVisited(true);} else if (new URLSearchParams(window.location.search).get("grammar") === "hsk3") setView("grammar"); else if (new URLSearchParams(window.location.search).get("atlas") === "1") setView("atlas"); else if (new URLSearchParams(window.location.search).get("course") === "intensive") setView("course"); }, []);
+  useEffect(() => { if (new URLSearchParams(window.location.search).get("rehearsal") === "my-day-01-v2") setView("myday"); else if (new URLSearchParams(window.location.search).get("study") === "studio") {setView("studio");setStudioVisited(true);} else if (new URLSearchParams(window.location.search).get("grammar") === "hsk3") setView("grammar"); else if (new URLSearchParams(window.location.search).get("atlas") === "1") setView("atlas"); else if (new URLSearchParams(window.location.search).get("course") === "intensive") setView("course"); }, []);
   const [notebookEvents, setEvents] = useState<LearningEvent[]>([]);
   const [sync, setSync] = useState(t("Loading your notebook…"));
   const [db, setDb] = useState<IDBDatabase | null>(null);
@@ -406,11 +408,12 @@ export default function StudyApp({
     setLevel(item.hskLevel===3?"hsk3":item.hskLevel===2?"hsk2":item.hskLevel===1?"hsk1":"bonus");
     openPractice(item); setAtlasReturn(origin);
   }
+  function openMyDay(){setMyDayOrigin(view==="studio"?"studio":"lessons");changeView("myday");}
   function changeView(v: View) {
     if(v==="atlas"&&atlasReturn){returnToAtlas();return;}
     setAtlasReturn(null);
     if(v==="studio")setStudioVisited(true);
-    window.history.replaceState(null, "", window.location.pathname + (v === "studio" ? "?study=studio" : v === "grammar" ? "?grammar=hsk3" : v === "atlas" ? "?atlas=1" : v === "course" ? "?course=intensive" : ""));
+    window.history.replaceState(null, "", window.location.pathname + (v === "myday" ? "?rehearsal=my-day-01-v2" : v === "studio" ? "?study=studio" : v === "grammar" ? "?grammar=hsk3" : v === "atlas" ? "?atlas=1" : v === "course" ? "?course=intensive" : ""));
     stopAudio();
     if (v === "practice") {
       setSkill("writing");
@@ -524,7 +527,7 @@ export default function StudyApp({
           <span>
             <span className="breadcrumb">{t("My study space")}</span>
             <ChevronRight size={13} />
-            {view === "studio" ? "StudyStudio" : view === "grammar" ? t("HSK3 grammar") : view === "atlas" ? t("Cloud Atlas") : view === "course" ? t("Intensive course") : view === "practice"
+            {view === "myday" ? "My day · Day 01 V2" : view === "studio" ? "StudyStudio" : view === "grammar" ? t("HSK3 grammar") : view === "atlas" ? t("Cloud Atlas") : view === "course" ? t("Intensive course") : view === "practice"
               ? t("Writing studio")
               : view === "today"
                 ? t("Today")
@@ -536,7 +539,7 @@ export default function StudyApp({
           </span>
           <div className="topbar-actions">
             <LanguagePicker />
-            {view !== "studio" && view !== "grammar" && view !== "course" && view !== "atlas" && <select
+            {view !== "myday" && view !== "studio" && view !== "grammar" && view !== "course" && view !== "atlas" && <select
               className="study-level"
               aria-label={t("Study level")}
               value={level}
@@ -581,7 +584,8 @@ export default function StudyApp({
           </div>
         </header>
         <div className="page-content">
-          {studioVisited&&<div hidden={view!=="studio"}><Suspense fallback={<p role="status">Opening StudyStudio…</p>}><StudyStudio key={user?.id??"guest"} owner={user?.id??null} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} record={record} onExit={()=>changeView("today")} menuOpen={studioMenu} onMenu={()=>setStudioMenu(v=>!v)}/></Suspense></div>}
+          {view==="myday"&&<Suspense fallback={<p role="status">Opening your lesson…</p>}><MyDayLesson key={user?.id??"guest"} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} record={record} notify={notify} onBack={()=>changeView(myDayOrigin)}/></Suspense>}
+          {studioVisited&&<div hidden={view!=="studio"}><Suspense fallback={<p role="status">Opening StudyStudio…</p>}><StudyStudio key={user?.id??"guest"} owner={user?.id??null} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} record={record} onExit={()=>changeView("today")} onMyDay={openMyDay} menuOpen={studioMenu} onMenu={()=>setStudioMenu(v=>!v)}/></Suspense></div>}
           {(view === "atlas" || atlasReturn) && <div hidden={view!=="atlas"}><Suspense fallback={<p role="status">{t("Loading your notebook…")}</p>}><Atlas owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} onWord={openAtlasWord}/></Suspense></div>}
           {view==="practice" && atlasReturn && <button className="secondary atlas-return-button" onClick={returnToAtlas}><ArrowRight size={16} style={{transform:"rotate(180deg)"}}/>{t("Back to Cloud Atlas")}</button>}
           {view === "grammar" && <Suspense fallback={<p>{t("Loading your notebook…")}</p>}><HSK3Grammar key={user?.id ?? "guest"} owner={user?.id ?? null} db={db?.name === "chinese-os-v1-"+(user?.id ?? "guest") ? db : null}/></Suspense>}
@@ -837,6 +841,7 @@ export default function StudyApp({
                   </p>
                 </div>
               </div>
+              <article className="personal-lesson-entry panel"><div><p className="eyebrow">PERSONAL LESSON · SPEAKING REHEARSAL</p><h2>我的一天 · My day</h2><p>Day 01 · Version 2 · 26 sentences · Hanzi, pinyin & English</p></div><button className="primary" onClick={openMyDay}>Open My day lesson<ArrowRight size={16}/></button></article>
               <button className="secondary pdf-library-button" onClick={() => setPdfSelection(filtered.map(item => item.id))}><Download size={16} /> {t("Print notebook PDF")}</button>
               <div className="library-controls">
                 <label className="search-field">
