@@ -17,9 +17,9 @@ export function WritingPracticeProvider({value,children}:{value:WritingContext;c
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }
 /** Contextual entry to the existing full studio; its scores can never become recognition recall. */
-export default function SharedWriting({hanzi,item: supplied,pinyin,meaning,penOnly: explicitPen,setPenOnly: explicitSetPen,notify: explicitNotify,onSave,onBack,initialMode='watch',onModeChange}: {
+export default function SharedWriting({hanzi,item: supplied,pinyin,meaning,penOnly: explicitPen,setPenOnly: explicitSetPen,notify: explicitNotify,onSave,onBack,initialMode='watch',onModeChange,audio:explicitAudio}: {
   hanzi: string; item?: Item; pinyin?: string; meaning?: string; penOnly?: boolean; setPenOnly?:(value:boolean)=>void;
-  notify?:(message:string)=>void; onSave?:()=>Promise<void>; onBack?:()=>void; initialMode?:Mode; onModeChange?:(mode:Mode)=>void;
+  notify?:(message:string)=>void; onSave?:()=>Promise<void>; onBack?:()=>void; initialMode?:Mode; onModeChange?:(mode:Mode)=>void; audio?:{word?:string;sentence?:string};
 }) {
   const context = useContext(Context), {locale,t} = useI18n();
   const [mode,setLocalMode] = useState<Mode>(initialMode);
@@ -51,7 +51,7 @@ export default function SharedWriting({hanzi,item: supplied,pinyin,meaning,penOn
   return <section className="shared-writing-exercise">
     <p>{t('Supported memory practice · writing has its own progress.')}</p>
     <Writing key={item.id+':'+mode+':'+attemptRun} item={item} mode={mode} setMode={setMode} db={context?.db??null}
-      record={record} supported audio={known||supplied?undefined:{word:definition?.audio?.source,sentence:example?.audio?.source}} nextLabel={t(onBack?'Back':'Practice again')} next={onBack??(()=>{setMode('watch');setAttemptRun(n=>n+1);})}
+      record={record} supported audio={explicitAudio??(known||supplied?undefined:{word:definition?.audio?.source,sentence:example?.audio?.source})} nextLabel={t(onBack?'Back':'Practice again')} next={onBack??(()=>{setMode('watch');setAttemptRun(n=>n+1);})}
       penOnly={explicitPen??context?.penOnly??localPen} setPenOnly={explicitSetPen??context?.setPenOnly??setLocalPen}
       left={false} notify={notify} session={false}/>
   </section>;
