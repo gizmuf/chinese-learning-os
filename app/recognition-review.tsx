@@ -154,7 +154,7 @@ export default function RecognitionReview({db, runId, queue, record, notify, onP
     {draft.practice && <p>{t('Extra practice · your review schedule stays unchanged.')}</p>}
     {draft.last && <p role="status">{draft.last.hanzi} · {draft.practice ? t('Review schedule unchanged') :
       draft.last.due ? t('Next review: {0}', [new Date(draft.last.due).toLocaleString(locale)]) : t('Guided / assisted practice')}</p>}
-    {finished ? <><h2>{t('Session complete')}</h2><p>{t('words reviewed. Your next reviews are scheduled.')}</p></> : item && a && <>
+    {finished ? <><h2>{t('Session complete')}</h2><p>{draft.itemIds.length} {t('words reviewed. Your next reviews are scheduled.')}</p></> : item && a && <>
       <span className="pill">{t(a.assisted || draft.practice ? 'Guided / assisted practice' : 'Self-assessed recall')}</span>
       <div className="recall-hanzi"><StudyText text={item.hanzi} whole/></div>
       {a.phase >= 2 && <p className="pinyin">{item.pinyin}</p>}

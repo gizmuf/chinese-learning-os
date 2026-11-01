@@ -75,3 +75,11 @@ test('extra practice preserves an existing FSRS due date and repetition history 
  const root=await mount({...env,runId:'existing-extra',practice:true});await reveal(root);await click(root,'EasyQuick & confident');
  assert.deepEqual(m.getCards(await m.allEvents(env.db)),before);assert.equal((await m.allEvents(env.db)).length,2);await unmount(root);
 });
+
+test('the final rating completes a finite session and its last card remains read-only on Back',async()=>{
+ const env=await setup('finish');const root=await mount({...env,runId:'finish'});
+ await reveal(root);await click(root,'GoodRecalled correctly');await reveal(root);await click(root,'HardCorrect, with effort');
+ assert.ok(text(root).includes('Session complete'));assert.equal((await m.allEvents(env.db)).length,2);
+ await click(root,'Previous');assert.ok(text(root).includes('Already rated · viewing only'));assert.ok(!button(root,'HardCorrect, with effort'));
+ await click(root,'Next');assert.ok(text(root).includes('Session complete'));assert.equal((await m.allEvents(env.db)).length,2);await unmount(root);
+});
