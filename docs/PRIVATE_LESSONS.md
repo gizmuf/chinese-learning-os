@@ -1,0 +1,13 @@
+# Device-local private lesson import
+
+Open `/?private=1`, or use the entries in My lessons and StudyStudio. Sign in with the existing account, choose a JSON file, review its title/counts, then explicitly import. Guests cannot import. The account selects a separate existing IndexedDB notebook; this is device-local separation, not encryption or cloud synchronization.
+
+The strict version-1 manifest is defined by `privateLessonSchema` in `app/private-lessons-model.ts`. It accepts at most 1 MB UTF-8 input, 200 ordered source segments and 200 sentence groups. Raw segment IDs must be contiguous from 1, covered exactly once in order, and each sentence's Hanzi must equal the exact concatenation of its raw sources. Source/content SHA-256 hashes use recursively sorted compact JSON. Exact vocabulary IDs are accepted only for identical complete expressions.
+
+Imported values render as React text, with global dictionary lookup disabled for the private surface. They are not sent to APIs, audio generation, analytics, logs, or URLs. The only imported external link is a strictly allowlisted YouTube video, opened explicitly by the learner. Public source, tests and bundles contain no private lesson payload. Test content is synthetic.
+
+The existing owner-specific `drafts` store holds a catalogue and immutable-content-keyed lesson records. Import/selection use catalogue revision comparison; reading uses revision plus per-opening lease comparison. Duplicate imports preserve reading state. New content revisions retain older records, and reimporting an older exact file restores its prior checkpoint. Account changes/unmount cancel outstanding reads and writes. No learning events, FSRS grades, database version changes or server tables are added.
+
+Reading reveals Hanzi → pinyin → English, saves the position/reveal state, and exposes raw IDs, source text and uncertainty notes. It is ungraded rehearsal. Export downloads content JSON only; it does not export the reading checkpoint. Keep the original file as backup. Clearing website storage removes local imports; import separately in each device/browser. For iPhone/iPad: save the JSON in Files, open the existing HTTPS site in Safari, sign in, choose that file and confirm the preview.
+
+Validation covers parsing/integrity/bounds, unsafe URLs, exact identity, dedup/revision restoration, stale writes, owner guards, async cancellation, preview cancellation, reveal order, Back/reload and zero learning events. Physical iOS file selection/QuickLook and browser visual QA are not verified in this release. Existing StudyStudio, My Day V2 and the limited Shuoshuo companion remain available. The separately documented recognition-event 39/30 validation issue is not changed.
