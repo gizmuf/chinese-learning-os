@@ -1,3 +1,4 @@
+import {lesson09Sentences,lesson09Audio} from './lesson09-data';
 import {lesson08Sentences,lesson08Audio} from './lesson08-data';
 import {lesson07Sentences,lesson07Audio} from './lesson07-data';
 import type {Locale} from './translate';
@@ -16,6 +17,7 @@ function examples(locale:Locale){
  pool=[...lesson06Sentences.map(v=>row(v,lesson06Audio(v))),
   ...lesson07Sentences.filter(v=>v.origin!=='board-opinion'&&!v.excludeFromChecks).map(v=>row(v,lesson07Audio(v))),
   ...lesson08Sentences.map(v=>row(v,lesson08Audio(v))),
+  ...lesson09Sentences.map(v=>row(v,lesson09Audio(v))),
   ...extra.map(([word,text,pinyin,en,fr,ru,tr])=>({id:'usage:'+word,text,pinyin,meaning:{en,fr,ru,tr}[locale]})),
   ...lesson05Sentences.map(v=>row(v,'/course05/audio/course05-'+v.id+'-word.mp3')),
   ...lesson04Sentences.map(v=>row(v,'/course04/audio/course04-'+v.id+'-word.mp3')),

@@ -1,0 +1,34 @@
+{
+  "version": "approved-classroom-v2",
+  "date": "2026-10-30",
+  "files": [
+    {
+      "locale": "en",
+      "file": "workbook-en.pdf",
+      "sourceFile": "Chinese_Hybrid_2026-10-30_L09_v2_EN_iPad_SAFE.pdf",
+      "sha256": "b32e67b3283f09c6282eb38df64cb9e978eb62c0c793e8f90591ef90c520c52c",
+      "bytes": 13181238
+    },
+    {
+      "locale": "fr",
+      "file": "workbook-fr.pdf",
+      "sourceFile": "Chinese_Hybrid_2026-10-30_L09_v2_FR_iPad_SAFE.pdf",
+      "sha256": "0823500a273bff4b064f3fa296b6b6ae153b91c64c956949a748b8a3860fa26b",
+      "bytes": 13158811
+    },
+    {
+      "locale": "ru",
+      "file": "workbook-ru.pdf",
+      "sourceFile": "Chinese_Hybrid_2026-10-30_L09_v2_RU_iPad_SAFE.pdf",
+      "sha256": "e1f204aa0e4b7d10d658394ba71d44084ca1e36303123de0725a034788a971cd",
+      "bytes": 13192418
+    },
+    {
+      "locale": "tr",
+      "file": "workbook-tr.pdf",
+      "sourceFile": "Chinese_Hybrid_2026-10-30_L09_v2_TR_iPad_SAFE.pdf",
+      "sha256": "06a3a16a602451746cc29b00e380373746796b636afbabee4accf17e35eaacbe",
+      "bytes": 12744567
+    }
+  ]
+}
