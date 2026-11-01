@@ -1,0 +1,1279 @@
+{
+  "schemaVersion": 1,
+  "title": "我的早晨 · Private sentence practice",
+  "source": {
+    "kind": "user-provided",
+    "videoUrl": "https://youtu.be/V6SrjHDisDs",
+    "verificationAgainstAudio": false,
+    "notes": [
+      "Personal study transformation of the 65 Hanzi segments supplied by the user. Pinyin and English are generated study aids, not verified creator subtitles.",
+      "Grouped sentences retain all original Hanzi and punctuation. Every source ID 1–65 appears exactly once in the merge mapping.",
+      "No video, audio, images or paid materials are included. The video link opens the original source.",
+      "Thirty additional exact vocabulary targets were selected from data/video-shuoshuo-vlog/vocabulary.csv at gizmuf/chinese-learning-os commit 3edd44de6448acbf5028014710ba99e3d004d2d7. English gloss source: CC-CEDICT, MDBG, CC-BY-SA 4.0 (https://www.mdbg.net/chinese/dictionary?page=cedict ; https://creativecommons.org/licenses/by-sa/4.0/), with context-specific editorial glosses. Original CSV and attribution README are retained unchanged.",
+      "The CSV has 237 distinct expressions and 553 occurrences; only 30 new targets were context-reviewed and added, not 237 scored cards. The original ten references remain intact (six have no exact canonical ID). Additional targets use only clear source references outside disfluent segments 46–50. 水泡 is excluded as a segmentation join in 热水泡咖啡; 泡 is brew/steep in source 10. 得/画饼 in source 48 and supplied 嗯 ǹg remain uncertain and are not new writing targets. 咖啡 is an additional independently segmented word, not a replacement for the retained full phrase 泡咖啡."
+    ]
+  },
+  "sources": [
+    {
+      "id": 1,
+      "hanzi": "如果我早上有什么习惯，",
+      "rawPinyin": null
+    },
+    {
+      "id": 2,
+      "hanzi": "我必须要先说我下午的习惯。",
+      "rawPinyin": null
+    },
+    {
+      "id": 3,
+      "hanzi": "我下午的习惯很简单：睡觉、玩手机、看电视。",
+      "rawPinyin": null
+    },
+    {
+      "id": 4,
+      "hanzi": "我知道很多成功的人都喜欢很早起床，",
+      "rawPinyin": null
+    },
+    {
+      "id": 5,
+      "hanzi": "但这并不是我早起床的原因。",
+      "rawPinyin": null
+    },
+    {
+      "id": 6,
+      "hanzi": "我每天早上五点半起床的原因很简单，",
+      "rawPinyin": null
+    },
+    {
+      "id": 7,
+      "hanzi": "就是我吃了午饭以后，就不能工作，不能学习，",
+      "rawPinyin": null
+    },
+    {
+      "id": 8,
+      "hanzi": "不能看书，什么事都不能做。",
+      "rawPinyin": null
+    },
+    {
+      "id": 9,
+      "hanzi": "我在厕所刷牙，我在厕所洗脸，我在厕所上厕所。",
+      "rawPinyin": null
+    },
+    {
+      "id": 10,
+      "hanzi": "现在我要烧水，泡咖啡。",
+      "rawPinyin": null
+    },
+    {
+      "id": 11,
+      "hanzi": "我不用咖啡机做咖啡，因为我觉得很麻烦，",
+      "rawPinyin": null
+    },
+    {
+      "id": 12,
+      "hanzi": "所以我直接用热水泡咖啡。",
+      "rawPinyin": null
+    },
+    {
+      "id": 13,
+      "hanzi": "我很喜欢“水开了”这三个字，很有意思。",
+      "rawPinyin": null
+    },
+    {
+      "id": 14,
+      "hanzi": "水开了，就是水很热很热了，一百度了。",
+      "rawPinyin": null
+    },
+    {
+      "id": 15,
+      "hanzi": "你看水开了的样子，",
+      "rawPinyin": null
+    },
+    {
+      "id": 16,
+      "hanzi": "像不像是很多很多花开的样子？",
+      "rawPinyin": null
+    },
+    {
+      "id": 17,
+      "hanzi": "所以我觉得这个词特别有意思。",
+      "rawPinyin": null
+    },
+    {
+      "id": 18,
+      "hanzi": "早上好呀，这是我一天中最喜欢的时候。",
+      "rawPinyin": null
+    },
+    {
+      "id": 19,
+      "hanzi": "坐在阳台上，一边喝咖啡，一边看书。",
+      "rawPinyin": null
+    },
+    {
+      "id": 20,
+      "hanzi": "现在我的家外面是很多高楼，很高的楼。",
+      "rawPinyin": null
+    },
+    {
+      "id": 21,
+      "hanzi": "以前我住在别的地方，我的家外是一座山，",
+      "rawPinyin": null
+    },
+    {
+      "id": 22,
+      "hanzi": "我很喜欢那个地方。",
+      "rawPinyin": null
+    },
+    {
+      "id": 23,
+      "hanzi": "你呢？",
+      "rawPinyin": null
+    },
+    {
+      "id": 24,
+      "hanzi": "如果你坐在阳台上，你想看到高楼，还是看到山？",
+      "rawPinyin": null
+    },
+    {
+      "id": 25,
+      "hanzi": "这个房间是我的工作室。",
+      "rawPinyin": null
+    },
+    {
+      "id": 26,
+      "hanzi": "这里以前是一个卧室，你看，这里还有一个衣柜，",
+      "rawPinyin": null
+    },
+    {
+      "id": 27,
+      "hanzi": "就是放衣服的柜子。",
+      "rawPinyin": null
+    },
+    {
+      "id": 28,
+      "hanzi": "但是现在呢，它是我的工作室。",
+      "rawPinyin": null
+    },
+    {
+      "id": 29,
+      "hanzi": "我每天在这里工作、上课、拍视频、剪视频。",
+      "rawPinyin": null
+    },
+    {
+      "id": 30,
+      "hanzi": "每天早上呢，是我的脑子最好的时候，",
+      "rawPinyin": null
+    },
+    {
+      "id": 31,
+      "hanzi": "所以早上我会做需要想、需要创造的工作。",
+      "rawPinyin": null
+    },
+    {
+      "id": 32,
+      "hanzi": "比如想一想我的视频要拍什么，",
+      "rawPinyin": null
+    },
+    {
+      "id": 33,
+      "hanzi": "比如设计我的课程。",
+      "rawPinyin": null
+    },
+    {
+      "id": 34,
+      "hanzi": "怎么让我的课又有用又有趣？",
+      "rawPinyin": null
+    },
+    {
+      "id": 35,
+      "hanzi": "嗯，换了一件衣服，现在呢是早上七点零七分，",
+      "rawPinyin": "ǹg"
+    },
+    {
+      "id": 36,
+      "hanzi": "早上八点半我有一节课，",
+      "rawPinyin": null
+    },
+    {
+      "id": 37,
+      "hanzi": "所以从现在到八点半就是我的工作时间。",
+      "rawPinyin": null
+    },
+    {
+      "id": 38,
+      "hanzi": "今天早上我要完成这些工作。",
+      "rawPinyin": null
+    },
+    {
+      "id": 39,
+      "hanzi": "现在我在用这个番茄工作法，",
+      "rawPinyin": null
+    },
+    {
+      "id": 40,
+      "hanzi": "就是我会工作三十五分钟，然后我会休息五分钟。",
+      "rawPinyin": null
+    },
+    {
+      "id": 41,
+      "hanzi": "可以站起来走一走，可以运动，或者看着外面发呆。",
+      "rawPinyin": null
+    },
+    {
+      "id": 42,
+      "hanzi": "现在是八点二十五，",
+      "rawPinyin": null
+    },
+    {
+      "id": 43,
+      "hanzi": "还有五分钟我就要开始上课了。",
+      "rawPinyin": null
+    },
+    {
+      "id": 44,
+      "hanzi": "这是一节中高级水平的课，",
+      "rawPinyin": null
+    },
+    {
+      "id": 45,
+      "hanzi": "我的学生他们大概在HSK五、HSK六左右。",
+      "rawPinyin": null
+    },
+    {
+      "id": 46,
+      "hanzi": "这老板啊，然后你想让你的员工更努力一点，",
+      "rawPinyin": null
+    },
+    {
+      "id": 47,
+      "hanzi": "然后所以你会说一些你可以得到的东西，",
+      "rawPinyin": null
+    },
+    {
+      "id": 48,
+      "hanzi": "比如说你成功之后你可以得画饼。",
+      "rawPinyin": null
+    },
+    {
+      "id": 49,
+      "hanzi": "啊，他画的是一块饼还是一块冰？",
+      "rawPinyin": null
+    },
+    {
+      "id": 50,
+      "hanzi": "饼干的饼，画饼。",
+      "rawPinyin": null
+    },
+    {
+      "id": 51,
+      "hanzi": "下课了，我现在要马上去咖啡店工作，",
+      "rawPinyin": null
+    },
+    {
+      "id": 52,
+      "hanzi": "因为如果我在家工作，我就会想要休息。",
+      "rawPinyin": null
+    },
+    {
+      "id": 53,
+      "hanzi": "如果我休息，我今天就不能工作了，",
+      "rawPinyin": null
+    },
+    {
+      "id": 54,
+      "hanzi": "所以我要马上收拾东西，出发去咖啡店工作。",
+      "rawPinyin": null
+    },
+    {
+      "id": 55,
+      "hanzi": "现在是上午十点二十七，",
+      "rawPinyin": null
+    },
+    {
+      "id": 56,
+      "hanzi": "我要在这里工作到十二点半，",
+      "rawPinyin": null
+    },
+    {
+      "id": 57,
+      "hanzi": "然后我就可以休息了。",
+      "rawPinyin": null
+    },
+    {
+      "id": 58,
+      "hanzi": "那这就是我从早上五点到上午十二点的习惯。",
+      "rawPinyin": null
+    },
+    {
+      "id": 59,
+      "hanzi": "你呢？",
+      "rawPinyin": null
+    },
+    {
+      "id": 60,
+      "hanzi": "你的习惯和我一样不一样？",
+      "rawPinyin": null
+    },
+    {
+      "id": 61,
+      "hanzi": "你喜欢早上把所有的事情都做完，",
+      "rawPinyin": null
+    },
+    {
+      "id": 62,
+      "hanzi": "还是喜欢慢慢的上午做一点，下午做一点，",
+      "rawPinyin": null
+    },
+    {
+      "id": 63,
+      "hanzi": "晚上再做一点？",
+      "rawPinyin": null
+    },
+    {
+      "id": 64,
+      "hanzi": "欢迎你在评论区跟我们分享，",
+      "rawPinyin": null
+    },
+    {
+      "id": 65,
+      "hanzi": "那我们就下个视频见吧，再见。",
+      "rawPinyin": null
+    }
+  ],
+  "sentences": [
+    {
+      "id": "s001",
+      "sourceIds": [
+        1,
+        2
+      ],
+      "hanzi": "如果我早上有什么习惯，我必须要先说我下午的习惯。",
+      "pinyin": "Rúguǒ wǒ zǎoshang yǒu shénme xíguàn, wǒ bìxū yào xiān shuō wǒ xiàwǔ de xíguàn.",
+      "english": "If I have any morning habits, I first have to talk about my afternoon habits.",
+      "notes": [
+        "Opening 如果 is conditional and awkward in the supplied text. It is retained without supplying missing words."
+      ],
+      "uncertain": true
+    },
+    {
+      "id": "s002",
+      "sourceIds": [
+        3
+      ],
+      "hanzi": "我下午的习惯很简单：睡觉、玩手机、看电视。",
+      "pinyin": "Wǒ xiàwǔ de xíguàn hěn jiǎndān: shuìjiào, wán shǒujī, kàn diànshì.",
+      "english": "My afternoon habits are simple: sleeping, using my phone and watching TV.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s003",
+      "sourceIds": [
+        4,
+        5
+      ],
+      "hanzi": "我知道很多成功的人都喜欢很早起床，但这并不是我早起床的原因。",
+      "pinyin": "Wǒ zhīdào hěn duō chénggōng de rén dōu xǐhuan hěn zǎo qǐchuáng, dàn zhè bìng bú shì wǒ zǎo qǐchuáng de yuányīn.",
+      "english": "I know that many successful people like to get up very early, but that is not why I get up early.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s004",
+      "sourceIds": [
+        6,
+        7,
+        8
+      ],
+      "hanzi": "我每天早上五点半起床的原因很简单，就是我吃了午饭以后，就不能工作，不能学习，不能看书，什么事都不能做。",
+      "pinyin": "Wǒ měitiān zǎoshang wǔ diǎn bàn qǐchuáng de yuányīn hěn jiǎndān, jiù shì wǒ chī le wǔfàn yǐhòu, jiù bù néng gōngzuò, bù néng xuéxí, bù néng kànshū, shénme shì dōu bù néng zuò.",
+      "english": "The reason I get up at 5:30 every morning is simple: after I eat lunch, I cannot work or study, read books or do anything at all.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s005",
+      "sourceIds": [
+        9
+      ],
+      "hanzi": "我在厕所刷牙，我在厕所洗脸，我在厕所上厕所。",
+      "pinyin": "Wǒ zài cèsuǒ shuāyá, wǒ zài cèsuǒ xǐliǎn, wǒ zài cèsuǒ shàng cèsuǒ.",
+      "english": "I brush my teeth in the bathroom, wash my face in the bathroom and use the toilet there.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s006",
+      "sourceIds": [
+        10
+      ],
+      "hanzi": "现在我要烧水，泡咖啡。",
+      "pinyin": "Xiànzài wǒ yào shāoshuǐ, pào kāfēi.",
+      "english": "Now I am going to boil water and make coffee.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s007",
+      "sourceIds": [
+        11,
+        12
+      ],
+      "hanzi": "我不用咖啡机做咖啡，因为我觉得很麻烦，所以我直接用热水泡咖啡。",
+      "pinyin": "Wǒ bú yòng kāfēijī zuò kāfēi, yīnwèi wǒ juéde hěn máfan, suǒyǐ wǒ zhíjiē yòng rèshuǐ pào kāfēi.",
+      "english": "I do not use a coffee machine because I find it troublesome, so I make coffee directly with hot water.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s008",
+      "sourceIds": [
+        13
+      ],
+      "hanzi": "我很喜欢“水开了”这三个字，很有意思。",
+      "pinyin": "Wǒ hěn xǐhuan “shuǐ kāi le” zhè sān ge zì, hěn yǒu yìsi.",
+      "english": "I really like the three Chinese characters 水开了, meaning that the water has boiled. They are interesting.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s009",
+      "sourceIds": [
+        14
+      ],
+      "hanzi": "水开了，就是水很热很热了，一百度了。",
+      "pinyin": "Shuǐ kāi le, jiù shì shuǐ hěn rè hěn rè le, yì bǎi dù le.",
+      "english": "When the water has boiled, it is very, very hot: one hundred degrees.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s010",
+      "sourceIds": [
+        15,
+        16
+      ],
+      "hanzi": "你看水开了的样子，像不像是很多很多花开的样子？",
+      "pinyin": "Nǐ kàn shuǐ kāi le de yàngzi, xiàng bu xiàng shì hěn duō hěn duō huā kāi de yàngzi?",
+      "english": "Look at what boiling water looks like: does it look like lots and lots of flowers blooming?",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s011",
+      "sourceIds": [
+        17
+      ],
+      "hanzi": "所以我觉得这个词特别有意思。",
+      "pinyin": "Suǒyǐ wǒ juéde zhè ge cí tèbié yǒu yìsi.",
+      "english": "That is why I find this expression especially interesting.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s012",
+      "sourceIds": [
+        18
+      ],
+      "hanzi": "早上好呀，这是我一天中最喜欢的时候。",
+      "pinyin": "Zǎoshang hǎo ya, zhè shì wǒ yì tiān zhōng zuì xǐhuan de shíhou.",
+      "english": "Good morning! This is my favorite part of the day.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s013",
+      "sourceIds": [
+        19
+      ],
+      "hanzi": "坐在阳台上，一边喝咖啡，一边看书。",
+      "pinyin": "Zuò zài yángtái shang, yìbiān hē kāfēi, yìbiān kànshū.",
+      "english": "Sitting on the balcony, drinking coffee while reading.",
+      "notes": [
+        "The source is a subjectless fragment. No subject has been added."
+      ],
+      "uncertain": true
+    },
+    {
+      "id": "s014",
+      "sourceIds": [
+        20
+      ],
+      "hanzi": "现在我的家外面是很多高楼，很高的楼。",
+      "pinyin": "Xiànzài wǒ de jiā wàimian shì hěn duō gāolóu, hěn gāo de lóu.",
+      "english": "Outside my home now there are lots of tall buildings, very tall buildings.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s015",
+      "sourceIds": [
+        21,
+        22
+      ],
+      "hanzi": "以前我住在别的地方，我的家外是一座山，我很喜欢那个地方。",
+      "pinyin": "Yǐqián wǒ zhù zài bié de dìfang, wǒ de jiā wài shì yí zuò shān, wǒ hěn xǐhuan nà ge dìfang.",
+      "english": "I used to live somewhere else, with a mountain outside my home, and I really liked that place.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s016",
+      "sourceIds": [
+        23
+      ],
+      "hanzi": "你呢？",
+      "pinyin": "Nǐ ne?",
+      "english": "How about you?",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s017",
+      "sourceIds": [
+        24
+      ],
+      "hanzi": "如果你坐在阳台上，你想看到高楼，还是看到山？",
+      "pinyin": "Rúguǒ nǐ zuò zài yángtái shang, nǐ xiǎng kàndào gāolóu, háishi kàndào shān?",
+      "english": "If you were sitting on a balcony, would you want to see tall buildings or a mountain?",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s018",
+      "sourceIds": [
+        25
+      ],
+      "hanzi": "这个房间是我的工作室。",
+      "pinyin": "Zhè ge fángjiān shì wǒ de gōngzuòshì.",
+      "english": "This room is my studio.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s019",
+      "sourceIds": [
+        26,
+        27
+      ],
+      "hanzi": "这里以前是一个卧室，你看，这里还有一个衣柜，就是放衣服的柜子。",
+      "pinyin": "Zhèli yǐqián shì yí ge wòshì, nǐ kàn, zhèli hái yǒu yí ge yīguì, jiù shì fàng yīfu de guìzi.",
+      "english": "This used to be a bedroom. Look, there is still a wardrobe here: a cabinet for storing clothes.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s020",
+      "sourceIds": [
+        28
+      ],
+      "hanzi": "但是现在呢，它是我的工作室。",
+      "pinyin": "Dànshì xiànzài ne, tā shì wǒ de gōngzuòshì.",
+      "english": "But now it is my studio.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s021",
+      "sourceIds": [
+        29
+      ],
+      "hanzi": "我每天在这里工作、上课、拍视频、剪视频。",
+      "pinyin": "Wǒ měitiān zài zhèli gōngzuò, shàngkè, pāi shìpín, jiǎn shìpín.",
+      "english": "Every day I work, have or teach classes, shoot videos and edit videos here.",
+      "notes": [
+        "上课 is rendered generically here. Later references to students indicate a class context, but no missing words are supplied."
+      ],
+      "uncertain": true
+    },
+    {
+      "id": "s022",
+      "sourceIds": [
+        30,
+        31
+      ],
+      "hanzi": "每天早上呢，是我的脑子最好的时候，所以早上我会做需要想、需要创造的工作。",
+      "pinyin": "Měitiān zǎoshang ne, shì wǒ de nǎozi zuì hǎo de shíhou, suǒyǐ zǎoshang wǒ huì zuò xūyào xiǎng, xūyào chuàngzào de gōngzuò.",
+      "english": "Every morning is when my mind works best, so in the morning I do work that requires thinking and creativity.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s023",
+      "sourceIds": [
+        32,
+        33
+      ],
+      "hanzi": "比如想一想我的视频要拍什么，比如设计我的课程。",
+      "pinyin": "Bǐrú xiǎng yi xiǎng wǒ de shìpín yào pāi shénme, bǐrú shèjì wǒ de kèchéng.",
+      "english": "For example, thinking about what to film for my videos, or designing my courses.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s024",
+      "sourceIds": [
+        34
+      ],
+      "hanzi": "怎么让我的课又有用又有趣？",
+      "pinyin": "Zěnme ràng wǒ de kè yòu yǒuyòng yòu yǒuqù?",
+      "english": "How can I make my classes both useful and interesting?",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s025",
+      "sourceIds": [
+        35,
+        36,
+        37
+      ],
+      "hanzi": "嗯，换了一件衣服，现在呢是早上七点零七分，早上八点半我有一节课，所以从现在到八点半就是我的工作时间。",
+      "pinyin": "Ǹg, huàn le yí jiàn yīfu, xiànzài ne shì zǎoshang qī diǎn líng qī fēn, zǎoshang bā diǎn bàn wǒ yǒu yì jié kè, suǒyǐ cóng xiànzài dào bā diǎn bàn jiù shì wǒ de gōngzuò shíjiān.",
+      "english": "Mm, I have changed into another outfit. It is now 7:07 a.m., and I have a class at 8:30 a.m., so the time from now until 8:30 is my work time.",
+      "notes": [
+        "嗯 has the supplied raw pinyin ǹg. Its pronunciation remains uncertain; no audio verification was performed."
+      ],
+      "uncertain": true
+    },
+    {
+      "id": "s026",
+      "sourceIds": [
+        38
+      ],
+      "hanzi": "今天早上我要完成这些工作。",
+      "pinyin": "Jīntiān zǎoshang wǒ yào wánchéng zhèxiē gōngzuò.",
+      "english": "This morning I need to finish this work.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s027",
+      "sourceIds": [
+        39,
+        40
+      ],
+      "hanzi": "现在我在用这个番茄工作法，就是我会工作三十五分钟，然后我会休息五分钟。",
+      "pinyin": "Xiànzài wǒ zài yòng zhè ge fānqié gōngzuòfǎ, jiù shì wǒ huì gōngzuò sānshíwǔ fēnzhōng, ránhòu wǒ huì xiūxi wǔ fēnzhōng.",
+      "english": "I am now using this Pomodoro method: I work for thirty-five minutes and then rest for five minutes.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s028",
+      "sourceIds": [
+        41
+      ],
+      "hanzi": "可以站起来走一走，可以运动，或者看着外面发呆。",
+      "pinyin": "Kěyǐ zhàn qǐlai zǒu yi zǒu, kěyǐ yùndòng, huòzhě kàn zhe wàimian fādāi.",
+      "english": "You can stand up and walk around, exercise or gaze outside and let your mind wander.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s029",
+      "sourceIds": [
+        42,
+        43
+      ],
+      "hanzi": "现在是八点二十五，还有五分钟我就要开始上课了。",
+      "pinyin": "Xiànzài shì bā diǎn èrshíwǔ, hái yǒu wǔ fēnzhōng wǒ jiù yào kāishǐ shàngkè le.",
+      "english": "It is now 8:25, and I will start class in five minutes.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s030",
+      "sourceIds": [
+        44,
+        45
+      ],
+      "hanzi": "这是一节中高级水平的课，我的学生他们大概在HSK五、HSK六左右。",
+      "pinyin": "Zhè shì yì jié zhōng-gāojí shuǐpíng de kè, wǒ de xuésheng tāmen dàgài zài HSK wǔ, HSK liù zuǒyòu.",
+      "english": "This is an upper-intermediate class, and my students are around HSK 5 or HSK 6.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s031",
+      "sourceIds": [
+        46,
+        47,
+        48
+      ],
+      "hanzi": "这老板啊，然后你想让你的员工更努力一点，然后所以你会说一些你可以得到的东西，比如说你成功之后你可以得画饼。",
+      "pinyin": "Zhè lǎobǎn a, ránhòu nǐ xiǎng ràng nǐ de yuángōng gèng nǔlì yìdiǎn, ránhòu suǒyǐ nǐ huì shuō yìxiē nǐ kěyǐ dédào de dōngxi, bǐrú shuō nǐ chénggōng zhīhòu nǐ kěyǐ dé huà bǐng.",
+      "english": "This boss, ah... then you want your employees to work a little harder, and then, so, you will talk about some things you can get, for example, after you succeed you can get... draw a pie. [Disfluent source; meaning uncertain.]",
+      "notes": [
+        "Sources 46–50 are disfluent. Raw wording and tentative literal translation are retained without silently repairing them.",
+        "Disfluent continuation; translation is tentative.",
+        "The exact unusual phrase 你可以得画饼 is retained. 得 is tentatively read dé; the missing/unclear connection is not reconstructed."
+      ],
+      "uncertain": true
+    },
+    {
+      "id": "s032",
+      "sourceIds": [
+        49
+      ],
+      "hanzi": "啊，他画的是一块饼还是一块冰？",
+      "pinyin": "A, tā huà de shì yí kuài bǐng háishi yí kuài bīng?",
+      "english": "Ah, is what he draws a piece of flatbread or a piece of ice?",
+      "notes": [
+        "The distinction 饼 bǐng versus 冰 bīng is retained."
+      ],
+      "uncertain": true
+    },
+    {
+      "id": "s033",
+      "sourceIds": [
+        50
+      ],
+      "hanzi": "饼干的饼，画饼。",
+      "pinyin": "Bǐnggān de bǐng, huà bǐng.",
+      "english": "The bǐng in bǐnggān, biscuit: huà bǐng, draw a pie.",
+      "notes": [
+        "画饼 can refer idiomatically to making enticing promises, but the preceding disfluent source is not rewritten."
+      ],
+      "uncertain": true
+    },
+    {
+      "id": "s034",
+      "sourceIds": [
+        51,
+        52
+      ],
+      "hanzi": "下课了，我现在要马上去咖啡店工作，因为如果我在家工作，我就会想要休息。",
+      "pinyin": "Xiàkè le, wǒ xiànzài yào mǎshàng qù kāfēidiàn gōngzuò, yīnwèi rúguǒ wǒ zài jiā gōngzuò, wǒ jiù huì xiǎng yào xiūxi.",
+      "english": "Class is over. I need to go to a café to work right away, because if I work at home, I will want to rest.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s035",
+      "sourceIds": [
+        53,
+        54
+      ],
+      "hanzi": "如果我休息，我今天就不能工作了，所以我要马上收拾东西，出发去咖啡店工作。",
+      "pinyin": "Rúguǒ wǒ xiūxi, wǒ jīntiān jiù bù néng gōngzuò le, suǒyǐ wǒ yào mǎshàng shōushi dōngxi, chūfā qù kāfēidiàn gōngzuò.",
+      "english": "If I rest, I will not be able to work today, so I need to pack my things and head to the café to work immediately.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s036",
+      "sourceIds": [
+        55,
+        56,
+        57
+      ],
+      "hanzi": "现在是上午十点二十七，我要在这里工作到十二点半，然后我就可以休息了。",
+      "pinyin": "Xiànzài shì shàngwǔ shí diǎn èrshíqī, wǒ yào zài zhèli gōngzuò dào shí'èr diǎn bàn, ránhòu wǒ jiù kěyǐ xiūxi le.",
+      "english": "It is now 10:27 a.m., and I will work here until 12:30, then I can rest.",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s037",
+      "sourceIds": [
+        58
+      ],
+      "hanzi": "那这就是我从早上五点到上午十二点的习惯。",
+      "pinyin": "Nà zhè jiù shì wǒ cóng zǎoshang wǔ diǎn dào shàngwǔ shí'èr diǎn de xíguàn.",
+      "english": "So these are my habits from five in the morning until twelve noon.",
+      "notes": [
+        "This summary says 5:00 to noon, whereas sources 6 and 56 say 5:30 and 12:30. Both versions are retained, not harmonized."
+      ],
+      "uncertain": true
+    },
+    {
+      "id": "s038",
+      "sourceIds": [
+        59
+      ],
+      "hanzi": "你呢？",
+      "pinyin": "Nǐ ne?",
+      "english": "How about you?",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s039",
+      "sourceIds": [
+        60
+      ],
+      "hanzi": "你的习惯和我一样不一样？",
+      "pinyin": "Nǐ de xíguàn hé wǒ yíyàng bu yíyàng?",
+      "english": "Are your habits the same as mine or different?",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s040",
+      "sourceIds": [
+        61,
+        62,
+        63
+      ],
+      "hanzi": "你喜欢早上把所有的事情都做完，还是喜欢慢慢的上午做一点，下午做一点，晚上再做一点？",
+      "pinyin": "Nǐ xǐhuan zǎoshang bǎ suǒyǒu de shìqing dōu zuò wán, háishi xǐhuan mànmàn de shàngwǔ zuò yìdiǎn, xiàwǔ zuò yìdiǎn, wǎnshang zài zuò yìdiǎn?",
+      "english": "Do you like to finish everything in the morning, or do you prefer to take it slowly, doing a little in the morning and a little in the afternoon, and then a little more in the evening?",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s041",
+      "sourceIds": [
+        64
+      ],
+      "hanzi": "欢迎你在评论区跟我们分享，",
+      "pinyin": "Huānyíng nǐ zài pínglùnqū gēn wǒmen fēnxiǎng,",
+      "english": "You are welcome to share with us in the comments,",
+      "notes": [],
+      "uncertain": false
+    },
+    {
+      "id": "s042",
+      "sourceIds": [
+        65
+      ],
+      "hanzi": "那我们就下个视频见吧，再见。",
+      "pinyin": "Nà wǒmen jiù xià ge shìpín jiàn ba, zàijiàn.",
+      "english": "and we will see you in the next video. Goodbye.",
+      "notes": [],
+      "uncertain": false
+    }
+  ],
+  "practiceTargets": [
+    {
+      "text": "起床",
+      "pinyin": "qǐchuáng",
+      "english": "get out of bed",
+      "canonicalItemId": "hsk1-161",
+      "sourceIds": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "text": "刷牙",
+      "pinyin": "shuāyá",
+      "english": "brush teeth",
+      "canonicalItemId": null,
+      "sourceIds": [
+        9
+      ]
+    },
+    {
+      "text": "洗脸",
+      "pinyin": "xǐliǎn",
+      "english": "wash face",
+      "canonicalItemId": null,
+      "sourceIds": [
+        9
+      ]
+    },
+    {
+      "text": "烧水",
+      "pinyin": "shāoshuǐ",
+      "english": "boil water",
+      "canonicalItemId": null,
+      "sourceIds": [
+        10
+      ]
+    },
+    {
+      "text": "泡咖啡",
+      "pinyin": "pào kāfēi",
+      "english": "brew coffee",
+      "canonicalItemId": null,
+      "sourceIds": [
+        10,
+        12
+      ]
+    },
+    {
+      "text": "阳台",
+      "pinyin": "yángtái",
+      "english": "balcony",
+      "canonicalItemId": null,
+      "sourceIds": [
+        19,
+        24
+      ]
+    },
+    {
+      "text": "看书",
+      "pinyin": "kànshū",
+      "english": "read books",
+      "canonicalItemId": null,
+      "sourceIds": [
+        8,
+        19
+      ]
+    },
+    {
+      "text": "工作",
+      "pinyin": "gōngzuò",
+      "english": "work",
+      "canonicalItemId": "hsk1-063",
+      "sourceIds": [
+        7,
+        25,
+        28,
+        29,
+        31,
+        37,
+        38,
+        39,
+        40,
+        51,
+        52,
+        53,
+        54,
+        56
+      ]
+    },
+    {
+      "text": "上课",
+      "pinyin": "shàngkè",
+      "english": "have or teach class, depending on context",
+      "canonicalItemId": "hsk1-177",
+      "sourceIds": [
+        29,
+        43
+      ]
+    },
+    {
+      "text": "休息",
+      "pinyin": "xiūxi",
+      "english": "rest",
+      "canonicalItemId": "hsk1-246",
+      "sourceIds": [
+        40,
+        52,
+        53,
+        57
+      ]
+    },
+    {
+      "text": "早上",
+      "pinyin": "zǎoshang",
+      "english": "morning",
+      "canonicalItemId": "hsk1-275",
+      "sourceIds": [
+        1,
+        6,
+        30,
+        31,
+        35,
+        36,
+        38,
+        58,
+        61
+      ]
+    },
+    {
+      "text": "习惯",
+      "pinyin": "xíguàn",
+      "english": "habit; routine",
+      "canonicalItemId": "hsk3-885",
+      "sourceIds": [
+        1,
+        2,
+        3,
+        58,
+        60
+      ]
+    },
+    {
+      "text": "下午",
+      "pinyin": "xiàwǔ",
+      "english": "afternoon",
+      "canonicalItemId": "hsk1-230",
+      "sourceIds": [
+        2,
+        3,
+        62
+      ]
+    },
+    {
+      "text": "简单",
+      "pinyin": "jiǎndān",
+      "english": "simple; uncomplicated",
+      "canonicalItemId": "hsk3-699",
+      "sourceIds": [
+        3,
+        6
+      ]
+    },
+    {
+      "text": "手机",
+      "pinyin": "shǒujī",
+      "english": "mobile phone",
+      "canonicalItemId": "hsk1-189",
+      "sourceIds": [
+        3
+      ]
+    },
+    {
+      "text": "睡觉",
+      "pinyin": "shuìjiào",
+      "english": "sleep; go to bed",
+      "canonicalItemId": "hsk1-195",
+      "sourceIds": [
+        3
+      ]
+    },
+    {
+      "text": "喜欢",
+      "pinyin": "xǐhuan",
+      "english": "like; enjoy",
+      "canonicalItemId": "hsk1-225",
+      "sourceIds": [
+        4,
+        13,
+        18,
+        22,
+        61,
+        62
+      ]
+    },
+    {
+      "text": "知道",
+      "pinyin": "zhīdào",
+      "english": "know; be aware",
+      "canonicalItemId": "hsk1-288",
+      "sourceIds": [
+        4
+      ]
+    },
+    {
+      "text": "学习",
+      "pinyin": "xuéxí",
+      "english": "study; learn",
+      "canonicalItemId": "hsk1-249",
+      "sourceIds": [
+        7
+      ]
+    },
+    {
+      "text": "午饭",
+      "pinyin": "wǔfàn",
+      "english": "lunch",
+      "canonicalItemId": "hsk1-224",
+      "sourceIds": [
+        7
+      ]
+    },
+    {
+      "text": "吃",
+      "pinyin": "chī",
+      "english": "eat",
+      "canonicalItemId": "eat",
+      "sourceIds": [
+        7
+      ]
+    },
+    {
+      "text": "现在",
+      "pinyin": "xiànzài",
+      "english": "now; at present",
+      "canonicalItemId": "now",
+      "sourceIds": [
+        10,
+        20,
+        28,
+        35,
+        37,
+        39,
+        42,
+        51,
+        55
+      ]
+    },
+    {
+      "text": "咖啡",
+      "pinyin": "kāfēi",
+      "english": "coffee",
+      "canonicalItemId": "hsk2-377",
+      "sourceIds": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "text": "因为",
+      "pinyin": "yīnwèi",
+      "english": "because",
+      "canonicalItemId": "hsk2-476",
+      "sourceIds": [
+        11,
+        52
+      ]
+    },
+    {
+      "text": "觉得",
+      "pinyin": "juéde",
+      "english": "think; feel",
+      "canonicalItemId": "hsk1-096",
+      "sourceIds": [
+        11,
+        17
+      ]
+    },
+    {
+      "text": "所以",
+      "pinyin": "suǒyǐ",
+      "english": "so; therefore",
+      "canonicalItemId": "hsk2-439",
+      "sourceIds": [
+        12,
+        17,
+        31,
+        37,
+        54
+      ]
+    },
+    {
+      "text": "水",
+      "pinyin": "shuǐ",
+      "english": "water",
+      "canonicalItemId": "water",
+      "sourceIds": [
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "text": "时间",
+      "pinyin": "shíjiān",
+      "english": "time",
+      "canonicalItemId": "time",
+      "sourceIds": [
+        37
+      ]
+    },
+    {
+      "text": "今天",
+      "pinyin": "jīntiān",
+      "english": "today",
+      "canonicalItemId": "today",
+      "sourceIds": [
+        38,
+        53
+      ]
+    },
+    {
+      "text": "完成",
+      "pinyin": "wánchéng",
+      "english": "complete; finish",
+      "canonicalItemId": "hsk3-868",
+      "sourceIds": [
+        38
+      ]
+    },
+    {
+      "text": "然后",
+      "pinyin": "ránhòu",
+      "english": "then; after that",
+      "canonicalItemId": "hsk3-813",
+      "sourceIds": [
+        40,
+        57
+      ]
+    },
+    {
+      "text": "可以",
+      "pinyin": "kěyǐ",
+      "english": "can; be able to",
+      "canonicalItemId": "can",
+      "sourceIds": [
+        41,
+        57
+      ]
+    },
+    {
+      "text": "开始",
+      "pinyin": "kāishǐ",
+      "english": "begin; start",
+      "canonicalItemId": "hsk2-378",
+      "sourceIds": [
+        43
+      ]
+    },
+    {
+      "text": "下课",
+      "pinyin": "xiàkè",
+      "english": "finish class; class ends",
+      "canonicalItemId": "hsk1-229",
+      "sourceIds": [
+        51
+      ]
+    },
+    {
+      "text": "上午",
+      "pinyin": "shàngwǔ",
+      "english": "morning; before noon",
+      "canonicalItemId": "hsk1-178",
+      "sourceIds": [
+        55,
+        58,
+        62
+      ]
+    },
+    {
+      "text": "晚上",
+      "pinyin": "wǎnshang",
+      "english": "evening; night",
+      "canonicalItemId": "hsk1-217",
+      "sourceIds": [
+        63
+      ]
+    },
+    {
+      "text": "我们",
+      "pinyin": "wǒmen",
+      "english": "we; us",
+      "canonicalItemId": "hsk1-222",
+      "sourceIds": [
+        64,
+        65
+      ]
+    },
+    {
+      "text": "欢迎",
+      "pinyin": "huānyíng",
+      "english": "welcome",
+      "canonicalItemId": "hsk3-677",
+      "sourceIds": [
+        64
+      ]
+    },
+    {
+      "text": "马上",
+      "pinyin": "mǎshàng",
+      "english": "right away; immediately",
+      "canonicalItemId": "hsk3-766",
+      "sourceIds": [
+        51,
+        54
+      ]
+    },
+    {
+      "text": "东西",
+      "pinyin": "dōngxi",
+      "english": "things; belongings",
+      "canonicalItemId": "hsk1-040",
+      "sourceIds": [
+        54
+      ]
+    }
+  ],
+  "sourceHash": "52e98d4097de1a6238596df3bae626652800e736b740014adb99fcaa18840ba3",
+  "contentHash": "04f28068d13d327506c177e4771fa952ecc7e3ddb67611f42fc10d1b96f3d19f"
+}

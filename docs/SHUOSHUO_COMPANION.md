@@ -46,3 +46,5 @@ Proposed separate bounded repair: use a <=30-character marker for new events and
 Focused tests exercise the real companion with fake owner notebooks: exact content/mapping, no shorter-ID substitution, local glyph availability, reveal ordering, Back, reload/writing-mode restore, stale writes, owner switches and zero learning events. A real RecognitionReview fixture is driven through reveal/rating with canonical IDs in assisted and independent modes; the actual emitted event fails the real validator, while a writing fixture passes and a mixed batch fails. This test documents the gate rather than fixing it.
 
 Browser/mobile interaction acceptance is unavailable because the latest supported CUA check reported the Mac locked; no unlock, alternate DOM/browser path or retry was attempted. React interaction tests, responsive CSS review, type checking, production build and native Sites publication are distinct from real browser/iPad/Pencil acceptance.
+
+The complete user-supplied morning lesson is now a separate built-in lesson at `/?lesson=shuoshuo-morning`; see SHUOSHUO_LESSON.md. This limited 10-word companion remains available separately.

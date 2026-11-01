@@ -16,10 +16,10 @@ import {applyStudioCommand,backStudio,claimStudio,dayItemIds,fixtureCommand,stud
 import './study-studio.css';
 const AtlasCloud=lazy(()=>import('./atlas-cloud'));
 const paneNames:Record<StudioPane,string>={atlas:'Character atlas',writing:'Writing',vocabulary:'Vocabulary',cards:'Flashcards',day:'My day'};
-type Props={owner:string|null;db:IDBDatabase|null;penOnly:boolean;setPenOnly:(value:boolean)=>void;notify:(message:string)=>void;record:(event:LearningEvent)=>Promise<void>;onExit:()=>void;onMyDay?:()=>void;onCompanion?:()=>void;onPrivate?:()=>void;menuOpen:boolean;onMenu:()=>void};
+type Props={owner:string|null;db:IDBDatabase|null;penOnly:boolean;setPenOnly:(value:boolean)=>void;notify:(message:string)=>void;record:(event:LearningEvent)=>Promise<void>;onExit:()=>void;onMyDay?:()=>void;onCompanion?:()=>void;onPrivate?:()=>void;onShuoshuoLesson?:()=>void;menuOpen:boolean;onMenu:()=>void};
 
 /** Additive workspace: all learning and ink still belong to the existing modules. */
-export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,onExit,onMyDay,onCompanion,onPrivate,menuOpen,onMenu}:Props){
+export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,onExit,onMyDay,onCompanion,onPrivate,onShuoshuoLesson,menuOpen,onMenu}:Props){
   const {locale}=useI18n();
   const progress=useAtlasProgress(owner);
   const [state,setState]=useState<StudioCheckpoint|null>(null),current=useRef<StudioCheckpoint|null>(null);
@@ -85,6 +85,7 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
     <div className="ss-heading"><div><p className="ss-eyebrow">A CONNECTED WAY TO LEARN</p><h1>One connection at a time.</h1><p>Your atlas, writing and words, together.</p></div>
       <button className="ss-companion-toggle" onClick={()=>setOpen(!open)} aria-expanded={open} aria-controls="ss-companion"><MessageCircle size={17}/>Study companion</button></div>
     {onMyDay&&<button className="ss-personal-lesson" onClick={onMyDay} disabled={busy||atlasAssessment}><BookOpen size={16}/>My day · Day 01 V2 · Open lesson<ArrowRight size={15}/></button>}
+    {onShuoshuoLesson&&<button className="ss-personal-lesson" onClick={onShuoshuoLesson} disabled={busy||atlasAssessment}><BookOpen size={16}/>A morning with Shuoshuo · Full lesson · 42 groups<ArrowRight size={15}/></button>}
     {onCompanion&&<button className="ss-personal-lesson" onClick={onCompanion} disabled={busy||atlasAssessment}><BookOpen size={16}/>Shuoshuo · 10-word vocabulary companion<ArrowRight size={15}/></button>}
     {onPrivate&&<button className="ss-personal-lesson" onClick={onPrivate} disabled={busy||atlasAssessment}><BookOpen size={16}/>Private lessons · Import local JSON<ArrowRight size={15}/></button>}
     <nav className="ss-tabs" aria-label="StudyStudio tools">{(Object.keys(paneNames) as StudioPane[]).map(pane=><button key={pane} aria-current={state.pane===pane?'page':undefined} disabled={busy||atlasAssessment} onClick={()=>navigate(pane)}>{paneNames[pane]}</button>)}</nav>
