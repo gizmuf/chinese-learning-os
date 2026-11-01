@@ -1,0 +1,218 @@
+{
+  "id": "shuoshuo-day-companion-01",
+  "title": "跟 Shuo 学中文 · A Day with Shuo",
+  "subtitle": "Video companion · Hanzi recognition · self-paced speaking",
+  "source": {
+    "author": "ShuoshuoChinese说说中文",
+    "videoId": "V6SrjHDisDs",
+    "url": "https://www.youtube.com/watch?v=V6SrjHDisDs",
+    "verifiedTranscript": false,
+    "sourceNote": "The supplied YouTube URL could not be read as a transcript in this session. All practice sentences below are newly authored, NOT quotations, captions, or a reconstruction of the creator's story. Do not label them as words spoken in the video."
+  },
+  "scenes": [
+    {
+      "id": "morning",
+      "title": "Morning · 早上",
+      "cue": "Imagine waking up and deciding what to do first.",
+      "hanzi": "我早上先起床，然后喝水。",
+      "pinyin": "Wǒ zǎoshang xiān qǐchuáng, ránhòu hē shuǐ.",
+      "english": "In the morning I get up first, then drink water.",
+      "words": [
+        "早上",
+        "先",
+        "起床",
+        "然后",
+        "喝水"
+      ]
+    },
+    {
+      "id": "breakfast",
+      "title": "Breakfast · 早饭",
+      "cue": "Describe your breakfast and what you drink.",
+      "hanzi": "我吃早饭的时候，喜欢喝热茶。",
+      "pinyin": "Wǒ chī zǎofàn de shíhou, xǐhuan hē rè chá.",
+      "english": "When I eat breakfast, I like drinking hot tea.",
+      "words": [
+        "早饭",
+        "时候",
+        "喜欢",
+        "热茶"
+      ]
+    },
+    {
+      "id": "outside",
+      "title": "Going out · 出去",
+      "cue": "Say what happens after breakfast.",
+      "hanzi": "吃完早饭，我出去走走。",
+      "pinyin": "Chī wán zǎofàn, wǒ chūqù zǒuzou.",
+      "english": "After finishing breakfast, I go out for a walk.",
+      "words": [
+        "早饭",
+        "出去",
+        "走走"
+      ]
+    },
+    {
+      "id": "shop",
+      "title": "Shopping nearby · 附近",
+      "cue": "Think of a small purchase in your neighborhood.",
+      "hanzi": "我去附近的商店买一点儿东西。",
+      "pinyin": "Wǒ qù fùjìn de shāngdiàn mǎi yìdiǎnr dōngxi.",
+      "english": "I go to a nearby shop to buy a few things.",
+      "words": [
+        "附近",
+        "商店",
+        "一点儿",
+        "东西"
+      ]
+    },
+    {
+      "id": "afternoon",
+      "title": "Back home · 回家",
+      "cue": "Describe what you do once you get home.",
+      "hanzi": "回家以后，我先工作，然后练习中文。",
+      "pinyin": "Huí jiā yǐhòu, wǒ xiān gōngzuò, ránhòu liànxí Zhōngwén.",
+      "english": "After I get home, I work first, then practise Chinese.",
+      "words": [
+        "回家",
+        "以后",
+        "先",
+        "工作",
+        "然后",
+        "练习"
+      ]
+    },
+    {
+      "id": "evening",
+      "title": "Evening · 晚上",
+      "cue": "Finish your story with what you do before bed.",
+      "hanzi": "晚上我休息一下，然后睡觉。",
+      "pinyin": "Wǎnshang wǒ xiūxi yíxià, ránhòu shuìjiào.",
+      "english": "In the evening I rest a little, then go to sleep.",
+      "words": [
+        "晚上",
+        "休息",
+        "一下",
+        "然后",
+        "睡觉"
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "hanzi": "早上",
+      "pinyin": "zǎoshang",
+      "english": "morning"
+    },
+    {
+      "hanzi": "先",
+      "pinyin": "xiān",
+      "english": "first / before doing something else"
+    },
+    {
+      "hanzi": "起床",
+      "pinyin": "qǐchuáng",
+      "english": "get out of bed"
+    },
+    {
+      "hanzi": "然后",
+      "pinyin": "ránhòu",
+      "english": "then / after that"
+    },
+    {
+      "hanzi": "喝水",
+      "pinyin": "hē shuǐ",
+      "english": "drink water"
+    },
+    {
+      "hanzi": "早饭",
+      "pinyin": "zǎofàn",
+      "english": "breakfast"
+    },
+    {
+      "hanzi": "时候",
+      "pinyin": "shíhou",
+      "english": "when; time"
+    },
+    {
+      "hanzi": "喜欢",
+      "pinyin": "xǐhuan",
+      "english": "like"
+    },
+    {
+      "hanzi": "热茶",
+      "pinyin": "rè chá",
+      "english": "hot tea"
+    },
+    {
+      "hanzi": "出去",
+      "pinyin": "chūqù",
+      "english": "go out"
+    },
+    {
+      "hanzi": "走走",
+      "pinyin": "zǒuzou",
+      "english": "take a short walk"
+    },
+    {
+      "hanzi": "附近",
+      "pinyin": "fùjìn",
+      "english": "nearby"
+    },
+    {
+      "hanzi": "商店",
+      "pinyin": "shāngdiàn",
+      "english": "shop"
+    },
+    {
+      "hanzi": "一点儿",
+      "pinyin": "yìdiǎnr",
+      "english": "a little"
+    },
+    {
+      "hanzi": "东西",
+      "pinyin": "dōngxi",
+      "english": "things"
+    },
+    {
+      "hanzi": "回家",
+      "pinyin": "huí jiā",
+      "english": "go home"
+    },
+    {
+      "hanzi": "以后",
+      "pinyin": "yǐhòu",
+      "english": "afterwards"
+    },
+    {
+      "hanzi": "工作",
+      "pinyin": "gōngzuò",
+      "english": "work"
+    },
+    {
+      "hanzi": "练习",
+      "pinyin": "liànxí",
+      "english": "practice"
+    },
+    {
+      "hanzi": "晚上",
+      "pinyin": "wǎnshang",
+      "english": "evening"
+    },
+    {
+      "hanzi": "休息",
+      "pinyin": "xiūxi",
+      "english": "rest"
+    },
+    {
+      "hanzi": "一下",
+      "pinyin": "yíxià",
+      "english": "briefly"
+    },
+    {
+      "hanzi": "睡觉",
+      "pinyin": "shuìjiào",
+      "english": "sleep"
+    }
+  ]
+}
