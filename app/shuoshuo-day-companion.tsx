@@ -1,6 +1,6 @@
 'use client';
 import {useEffect,useMemo,useRef,useState} from 'react';
-import {ArrowLeft,ArrowRight,BookOpen,ExternalLink,PenLine,Volume2,X} from 'lucide-react';
+import {ArrowLeft,ArrowRight,BookOpen,ExternalLink,PenLine,X} from 'lucide-react';
 import source from '../data/shuoshuo-day-companion-01.json';
 import {items,type Item} from './content';
 import {StudyText} from './study-lookup';
@@ -10,6 +10,7 @@ import RecognitionReview from './recognition-review';
 import type {LearningEvent} from './learning';
 import {stopAudio} from './audio';
 import './shuoshuo-day-companion.css';
+import './my-day-lesson.css';
 
 type Props={
   db:IDBDatabase|null;
@@ -96,7 +97,7 @@ export default function ShuoshuoDayCompanion({db,record,notify,onBack,onMyDay}:P
     <section className="shuo-panel shuo-existing">
       <h2>Continue in Chinese OS</h2>
       <p>{linked.length} of {source.vocabulary.length} target words already have an exact canonical Chinese OS vocabulary card. These can be practised using the existing writing and supported recognition tools. Unmatched words are not silently registered as new SRS cards.</p>
-      <div className="shuo-actions"><button className="secondary" onClick={onMyDay}>Open 我的⼀天 · My Day</button>
+      <div className="shuo-actions"><button className="secondary" onClick={onMyDay}>Open 我的一天 · My Day</button>
       <button className="primary" disabled={!db||!linked.length||!!practice} onClick={()=>setPractice(crypto.randomUUID())}>Practise matched words</button></div>
       {practice&&<><p>Supported extra practice · the independent FSRS schedule is unchanged.</p><RecognitionReview db={db} runId={practice} queue={linked} practice record={record} notify={notify} onPosition={()=>{}} onWrite={item=>{opener.current=null;setWriting(item);}}/><button className="secondary" onClick={()=>setPractice(null)}>Close word practice</button></>}
     </section>
