@@ -594,3 +594,19 @@ Reading check	Test de lecture	Проверка чтения
 Written recall	Rappel écrit	Письменное воспроизведение
 Swipe left/right to browse. Drawing and text fields stay in place.	Balayez vers la gauche ou la droite. Les zones de dessin et de saisie restent fixes.	Листайте влево или вправо. Области рисования и ввода текста не переключают задания.
 HSK3 grammar	Grammaire HSK3	Грамматика HSK3
+Show pinyin	Afficher le pinyin	Показать пиньинь
+Show English meaning	Afficher le sens en anglais	Показать английское значение
+Self-assessed recall	Rappel autoévalué	Самооценка воспроизведения
+Already rated · viewing only	Déjà évalué · consultation seule	Уже оценено · только просмотр
+Retry saving review	Réessayer l’enregistrement	Повторить сохранение
+Could not load this review. Please try again.	Impossible de charger cette révision. Réessayez.	Не удалось загрузить повторение. Попробуйте снова.
+Session complete	Session terminée	Занятие завершено
+Try writing	Essayer d’écrire	Попробовать написать
+Back to recognition	Retour aux fiches	Назад к карточкам
+Extra recognition practice	Entraînement supplémentaire avec les fiches	Дополнительная практика с карточками
+Supported memory practice · writing has its own progress.	Pratique de mémoire accompagnée · l’écriture a sa propre progression.	Практика памяти с поддержкой · письмо имеет отдельный прогресс.
+Extra practice · your review schedule stays unchanged.	Entraînement supplémentaire · votre calendrier de révision reste inchangé.	Дополнительная практика · расписание повторений не меняется.
+Review schedule unchanged	Calendrier de révision inchangé	Расписание повторений не изменено
+Next review: {0}	Prochaine révision : {0}	Следующее повторение: {0}
+Back	Retour	Назад
+Practice again	Recommencer	Ещё раз

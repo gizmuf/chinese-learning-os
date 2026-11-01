@@ -2383,6 +2383,70 @@
     "HSK3 grammar": {
       "fr": "Grammaire HSK3",
       "ru": "Грамматика HSK3"
+    },
+    "Show pinyin": {
+      "fr": "Afficher le pinyin",
+      "ru": "Показать пиньинь"
+    },
+    "Show English meaning": {
+      "fr": "Afficher le sens en anglais",
+      "ru": "Показать английское значение"
+    },
+    "Self-assessed recall": {
+      "fr": "Rappel autoévalué",
+      "ru": "Самооценка воспроизведения"
+    },
+    "Already rated · viewing only": {
+      "fr": "Déjà évalué · consultation seule",
+      "ru": "Уже оценено · только просмотр"
+    },
+    "Retry saving review": {
+      "fr": "Réessayer l’enregistrement",
+      "ru": "Повторить сохранение"
+    },
+    "Could not load this review. Please try again.": {
+      "fr": "Impossible de charger cette révision. Réessayez.",
+      "ru": "Не удалось загрузить повторение. Попробуйте снова."
+    },
+    "Session complete": {
+      "fr": "Session terminée",
+      "ru": "Занятие завершено"
+    },
+    "Try writing": {
+      "fr": "Essayer d’écrire",
+      "ru": "Попробовать написать"
+    },
+    "Back to recognition": {
+      "fr": "Retour aux fiches",
+      "ru": "Назад к карточкам"
+    },
+    "Extra recognition practice": {
+      "fr": "Entraînement supplémentaire avec les fiches",
+      "ru": "Дополнительная практика с карточками"
+    },
+    "Supported memory practice · writing has its own progress.": {
+      "fr": "Pratique de mémoire accompagnée · l’écriture a sa propre progression.",
+      "ru": "Практика памяти с поддержкой · письмо имеет отдельный прогресс."
+    },
+    "Extra practice · your review schedule stays unchanged.": {
+      "fr": "Entraînement supplémentaire · votre calendrier de révision reste inchangé.",
+      "ru": "Дополнительная практика · расписание повторений не меняется."
+    },
+    "Review schedule unchanged": {
+      "fr": "Calendrier de révision inchangé",
+      "ru": "Расписание повторений не изменено"
+    },
+    "Next review: {0}": {
+      "fr": "Prochaine révision : {0}",
+      "ru": "Следующее повторение: {0}"
+    },
+    "Back": {
+      "fr": "Retour",
+      "ru": "Назад"
+    },
+    "Practice again": {
+      "fr": "Recommencer",
+      "ru": "Ещё раз"
     }
   },
   "vocabulary": {
