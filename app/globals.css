@@ -4308,3 +4308,5 @@ html[lang="ru"] .nav-item, html[lang="fr"] .nav-item { font-size: 12px; }
 .shared-writing-exercise .writing-panel {min-width:0;}
 .shared-writing-exercise .writing-grid {width:min(100%,480px);margin-inline:auto;}
 .study-writing-dialog:has(.shared-writing-exercise),.l06-dialog:has(.shared-writing-exercise),.video-writing-dialog:has(.shared-writing-exercise) {max-height:92dvh;overflow:auto;}
+
+.personal-lesson-entry{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px;margin:0 0 24px;flex-wrap:wrap}.personal-lesson-entry h2{font-size:24px;margin:8px 0}.personal-lesson-entry p:not(.eyebrow){font-size:13px;color:var(--muted)}

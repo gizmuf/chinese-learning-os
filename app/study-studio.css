@@ -86,3 +86,5 @@
   .ss-word-list{padding:0 16px}.ss-word label{gap:12px}.ss-word label>span[lang]{font-size:29px;min-width:35px}
   .ss-panel>header,.ss-panel-foot{padding:18px}.ss-day article{padding:18px}
 }
+
+.ss-personal-lesson{background:white;border:1px solid var(--ss-line);border-radius:10px;padding:10px 14px;color:var(--ss-blue);font-size:13px!important;margin-bottom:18px;flex-wrap:wrap;text-align:left}
