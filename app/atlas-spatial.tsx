@@ -21,7 +21,7 @@ import {appStudyDictionary} from './study-lookup-model';
 import './atlas-spatial.css';
 import {DictionaryWords,DictionaryAudio,StudyDictionaryDialog} from './study-dictionary';
 import OftenConfused,{confusionCopy} from './often-confused';
-type Props={family:SpatialCharacter[];total:number;hanzi:string;component:string;familyLabel:string;mode:CardMode;word?:CloudWord;words:CloudWord[];onMode:(mode:CardMode)=>void;onCharacter:(h:string)=>void;onWord:(word:CloudWord)=>void;onWrite:(trigger:HTMLButtonElement)=>void;canWrite:boolean;notify:(message:string)=>void;collection:'library'|'atlas';level:'all'|1|2|3;relation:'all'|'meaning'|'sound'|'shape';counts:{meaning:number;sound:number;shape:number};onRelation:(relation:'all'|'meaning'|'sound'|'shape')=>void;onHskFamily:(id?:string)=>void;recognition:ReturnType<typeof useRecognitionProgress>;navigationRevision:number;owner:string|null;onReviewStart:()=>void;onReviewContext:(question:PracticeQuestion)=>void;onReviewEnd:(restore:boolean)=>void;parts:ReactNode};
+type Props={family:SpatialCharacter[];total:number;hanzi:string;component:string;familyLabel:string;mode:CardMode;word?:CloudWord;words:CloudWord[];onMode:(mode:CardMode)=>void;onCharacter:(h:string)=>void;onWord:(word:CloudWord)=>void;onWrite:(trigger:HTMLButtonElement)=>void;canWrite:boolean;notify:(message:string)=>void;collection:'library'|'atlas';level:'all'|1|2|3;relation:'all'|'meaning'|'sound'|'shape';counts:{meaning:number;sound:number;shape:number};onRelation:(relation:'all'|'meaning'|'sound'|'shape')=>void;onHskFamily:(id?:string)=>void;recognition:ReturnType<typeof useRecognitionProgress>;navigationRevision:number;owner:string|null;onReviewStart:()=>void;onReviewContext:(question:PracticeQuestion)=>void;onReviewEnd:(restore:boolean)=>void;parts:ReactNode;onAssessmentChange?:(active:boolean)=>void};
 export default function AtlasSpatial(p:Props){
  const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>(withTurkish({en,fr,ru}))[locale];
  const [confusedOpen,setConfusedOpen]=useState(false),[confusedIndex,setConfusedIndex]=useState(0),confusedTrigger=useRef<HTMLButtonElement|null>(null);
@@ -29,6 +29,7 @@ export default function AtlasSpatial(p:Props){
  const selectedIndex=p.family.findIndex(ch=>ch.hanzi===p.hanzi);
  const [session,setSession]=useState<{id:string;kind:'family'|'difficult'|'due';questions:PracticeQuestion[];initialIndex:number}|null>(null),[directoryOpen,setDirectoryOpen]=useState(false),[now,setNow]=useState(()=>Date.now());
  useEffect(()=>{setSession(null);p.onReviewEnd(false)},[p.navigationRevision]);
+ useEffect(()=>{p.onAssessmentChange?.(!!session);return()=>p.onAssessmentChange?.(false)},[!!session,p.onAssessmentChange]);
  const practicing=!!session,summary=useMemo(()=>recognitionSummary(p.recognition.events,now),[p.recognition.events,now]);
  useEffect(()=>{const timer=setInterval(()=>setNow(Date.now()),30000);return()=>clearInterval(timer)},[]);
  function setPracticing(value:boolean){if(!value){setSession(null);p.onReviewEnd(false);return}const group=Math.floor(Math.max(0,selectedIndex)/4);const initialIndex=Math.max(0,questions.findIndex(q=>Math.floor(p.family.findIndex(ch=>ch.hanzi===q.target)/4)===group));setSession({id:crypto.randomUUID(),kind:'family',questions:questions.map(q=>({...q,partId:p.component})),initialIndex})}

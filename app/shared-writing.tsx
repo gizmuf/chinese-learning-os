@@ -1,5 +1,5 @@
 "use client";
-import {createContext,useContext,useMemo,useState,type ReactNode} from 'react';
+import {createContext,useContext,useMemo,useState,useEffect,type ReactNode} from 'react';
 import type {Item,Mode} from './content';
 import {items} from './content';
 import type {LearningEvent} from './learning';
@@ -17,12 +17,14 @@ export function WritingPracticeProvider({value,children}:{value:WritingContext;c
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }
 /** Contextual entry to the existing full studio; its scores can never become recognition recall. */
-export default function SharedWriting({hanzi,item: supplied,pinyin,meaning,penOnly: explicitPen,setPenOnly: explicitSetPen,notify: explicitNotify,onSave,onBack}: {
+export default function SharedWriting({hanzi,item: supplied,pinyin,meaning,penOnly: explicitPen,setPenOnly: explicitSetPen,notify: explicitNotify,onSave,onBack,initialMode='watch',onModeChange}: {
   hanzi: string; item?: Item; pinyin?: string; meaning?: string; penOnly?: boolean; setPenOnly?:(value:boolean)=>void;
-  notify?:(message:string)=>void; onSave?:()=>Promise<void>; onBack?:()=>void;
+  notify?:(message:string)=>void; onSave?:()=>Promise<void>; onBack?:()=>void; initialMode?:Mode; onModeChange?:(mode:Mode)=>void;
 }) {
   const context = useContext(Context), {locale,t} = useI18n();
-  const [mode,setMode] = useState<Mode>('watch');
+  const [mode,setLocalMode] = useState<Mode>(initialMode);
+  const setMode=(next:Mode)=>{setLocalMode(next);onModeChange?.(next);};
+  useEffect(()=>setLocalMode(initialMode),[initialMode]);
   const [attemptRun,setAttemptRun] = useState(0);
   const [localPen,setLocalPen] = useState(false);
   const known = items.find(i=>i.hanzi===hanzi);
