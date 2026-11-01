@@ -10,7 +10,7 @@ import type {LearningEvent} from './learning';
 import {speak,stopAudio} from './audio';
 import './my-day-lesson.css';
 
-export default function MyDayLesson({db,record,notify,onBack}:{db:IDBDatabase|null;record:(event:LearningEvent)=>Promise<void>;notify:(message:string)=>void;onBack:()=>void}){
+export default function MyDayLesson({db,record,notify,onBack,onShuo}:{db:IDBDatabase|null;record:(event:LearningEvent)=>Promise<void>;notify:(message:string)=>void;onBack:()=>void;onShuo?:()=>void}){
   const [hanzi,setHanzi]=useState(true),[pinyin,setPinyin]=useState(true),[english,setEnglish]=useState(true);
   const [single,setSingle]=useState(false),[index,setIndex]=useState(0),[writing,setWriting]=useState<Item|null>(null);
   const [practice,setPractice]=useState<string|null>(null);
@@ -48,6 +48,7 @@ export default function MyDayLesson({db,record,notify,onBack}:{db:IDBDatabase|nu
       <button className="primary" disabled={!db||!!practice} onClick={()=>setPractice(crypto.randomUUID())}>Practise these known words</button>
       {practice&&<><p>Extra supported practice · your independent review schedule stays unchanged.</p><RecognitionReview db={db} runId={practice} queue={myDayVocabulary} practice record={record} notify={notify} onPosition={()=>{}} onWrite={item=>write(item)}/><button className="secondary" onClick={()=>{stopAudio();setPractice(null);}}>Close word practice</button></>}
     </section>
+    {onShuo&&<section className="md-section"><h2>Video companion · A Day with Shuo</h2><p>Watch the original ShuoshuoChinese video, read six independent daily-life examples and practise Hanzi-first recognition. These new practice sentences are not a transcript of Shuo’s video.</p><button className="primary" onClick={onShuo}>Open A Day with Shuo<ArrowRight size={16}/></button></section>}
     <dialog className="md-writing-dialog" ref={writer} aria-labelledby="md-writing-title" onCancel={closeWriting} onClose={()=>setWriting(null)}><header><h2 id="md-writing-title">Supported writing practice</h2><button className="secondary" aria-label="Close writing" onClick={closeWriting}><X size={18}/></button></header>{writing&&<SharedWriting key={writing.id} item={writing} hanzi={writing.hanzi} onBack={closeWriting}/>}</dialog>
   </section>;
 }
