@@ -7,7 +7,7 @@ function label(n){return n.children.map(v=>typeof v==='string'?v:label(v)).join(
 async function click(r,n){assert.ok(button(r,n),n);await m.act(async()=>{button(r,n).props.onClick();await tick()});}
 async function ready(){await settle();await settle();}
 const ink=[{x:.1,y:.1,p:.5,t:0},{x:.8,y:.9,p:.7,t:20}];
-async function mount(hanzi){const db=await m.openStore('shared-writing-'+hanzi);const events=[],pens=[];let r;await m.act(async()=>{r=m.renderer.create(m.createElement(m.Provider,{value:{db,record:async e=>{events.push(e)},penOnly:true,setPenOnly:v=>pens.push(v),notify(){}}},m.createElement(m.Writing,{hanzi})))});await ready();return {r,db,events,pens};}
+async function mount(hanzi,options={}){const db=await m.openStore('shared-writing-'+hanzi);const events=[],pens=[];let r;await m.act(async()=>{r=m.renderer.create(m.createElement(m.Provider,{value:{db,record:async e=>{events.push(e)},penOnly:true,setPenOnly:v=>pens.push(v),notify(){}}},m.createElement(m.Writing,{hanzi,...options})))});await ready();return {r,db,events,pens};}
 
 test('one existing studio serves animation, trace, copy and blank memory; compounds retain ordered character slots, pen mode, reset and draft',async()=>{
  const {r,db}=await mount('学习');assert.equal(r.root.findByType('guided-stub').props.mode,'watch');
@@ -35,4 +35,11 @@ test('every former guided writing entry uses the same full studio; the stroke an
   const source=readFileSync(path,'utf8');assert.ok(source.includes('SharedWriting'),path);assert.ok(!source.includes('<Guided'),path);
  }
  assert.ok(readFileSync('app/writing-practice.tsx','utf8').includes('<Guided'));
+});
+
+test('workspace can restore Recall directly without exposing the model, then change the existing mode',async()=>{
+ const modes=[];const {r,db}=await mount('回',{initialMode:'recall',onModeChange:m=>modes.push(m)});
+ assert.equal(r.root.findAllByType('guided-stub').length,0);assert.ok(!JSON.stringify(r.toJSON()).includes('回'));
+ await click(r,'3Copy');await ready();assert.ok(r.root.findByType('ink-stub'));assert.ok(JSON.stringify(r.toJSON()).includes('回'));assert.deepEqual(modes,['copy']);
+ await m.act(()=>r.unmount());db.close();
 });
