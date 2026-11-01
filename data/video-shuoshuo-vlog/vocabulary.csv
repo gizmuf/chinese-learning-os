@@ -1,0 +1,238 @@
+hanzi,pinyin,english,frequency,first_segment,all_segments
+我,wǒ,I; me; my,45,1,"1,2,3,4,5,6,7,9,10,11,12,13,17,18,20,21,22,25,28,29,30,32,33,34,36,37,38,39,43,45,51,52,53,54,56,57,58,60"
+早上,zǎo shàng,early morning,9,1,"1,6,30,31,35,36,38,58,61"
+习惯,xí guàn,habit,5,1,"1,2,3,58,60"
+如果,rú guǒ,if; in case; in the event that,4,1,"1,24,52,53"
+什么,shén me,what?,3,1,"1,8,32"
+有,yǒu,to have; there is,2,1,"1,36"
+的,de,of; ~'s (possessive particle),31,2,"2,3,4,5,6,15,16,18,20,21,25,27,28,30,31,32,33,34,37,44,45,46,47,49,50,58,60,61,62"
+要,yào,to want; to need; to ask for,7,2,"2,10,32,38,51,54,56"
+下午,xià wǔ,afternoon,3,2,"2,3,62"
+说,shuō,variant of 說|说[shuo1],2,2,"2,47"
+先,xiān,beforehand; first; earlier,1,2,2
+必须,bì xū,must; to have to,1,2,2
+很,hěn,very; quite,9,3,"3,6,11,13,14,20,22"
+简单,jiǎn dān,simple; not complicated,2,3,"3,6"
+手机,shǒu jī,cell phone; mobile phone,1,3,3
+玩,wán,to play,1,3,3
+看电视,kàn diàn shì,watch television,1,3,3
+睡觉,shuì jiào,sleep,1,3,3
+喜欢,xǐ huan,to like; to be fond of,6,4,"4,13,18,22,61,62"
+起床,qǐ chuáng,to get out of bed; to get up,3,4,"4,5,6"
+都,dōu,all; both; entirely,3,4,"4,8,61"
+很多,hěn duō,many; a lot of,2,4,"4,20"
+成功,chéng gōng,to succeed,2,4,"4,48"
+人,rén,person; people,1,4,4
+很早,hěn zǎo,very early,1,4,4
+知道,zhī dào,to know; to become aware of,1,4,4
+这,zhè,(pronoun) this; these,6,5,"5,13,18,44,46,58"
+原因,yuán yīn,cause,2,5,"5,6"
+不是,bú shì,no,1,5,5
+但,dàn,but; yet; however; still,1,5,5
+并,bìng,and,1,5,5
+早,zǎo,early,1,5,5
+每天,měi tiān,every day,3,6,"6,29,30"
+五点,wǔ diǎn,five o’clock,2,6,"6,58"
+半,bàn,half,2,6,"6,56"
+工作,gōng zuò,to work,12,7,"7,29,31,37,38,39,40,51,52,53,54,56"
+了,le,(completed action marker),11,7,"7,13,14,15,35,43,51,53,57"
+就是,jiù shì,exactly; precisely,6,7,"7,14,27,37,40,58"
+不能,bù néng,cannot,5,7,"7,8,53"
+就,jiù,(after a suppositional clause) in that case; then,5,7,"7,52,53,57,65"
+以后,yǐ hòu,after,1,7,7
+午饭,wǔ fàn,lunch,1,7,7
+吃,chī,to eat; to consume,1,7,7
+学习,xué xí,to learn; to study,1,7,7
+做,zuò,to make; to produce,7,8,"8,11,31,61,62,63"
+看书,kàn shū,to read,2,8,"8,19"
+事,shì,matter,1,8,8
+在,zài,to exist; to be alive,9,9,"9,21,29,39,45,56,64"
+厕所,cè suǒ,toilet; lavatory,4,9,9
+上,shàng,used in 上聲|上声[shang3 sheng1],3,9,"9,19,24"
+刷牙,shuā yá,to brush one's teeth,1,9,9
+洗脸,xǐ liǎn,to wash the face,1,9,9
+现在,xiàn zài,now; at present; currently,9,10,"10,20,28,35,37,39,42,51,55"
+咖啡,kā fēi,(loanword) coffee,3,10,"10,11,12"
+泡,pào,bubble; foam,1,10,10
+烧水,shāo shuǐ,to heat water,1,10,10
+因为,yīn wèi,because; owing to; on account of,2,11,"11,52"
+觉得,jué de,to think that ...; to feel that ...,2,11,"11,17"
+不用,bú yòng,need not,1,11,11
+咖啡机,kā fēi jī,coffee machine; coffee maker,1,11,11
+麻烦,má fán,trouble; inconvenience,1,11,11
+所以,suǒ yǐ,therefore,6,12,"12,17,31,37,47,54"
+热,rè,to warm up,3,12,"12,14"
+用,yòng,to use; to make use of; to employ,2,12,"12,39"
+水泡,shuǐ pào,water + brew (tokenization merges 水 and 泡),1,12,12
+直接,zhí jiē,directly,1,12,12
+开,kāi,open; turn on (device),4,13,"13,14,15,16"
+水,shuǐ,water,4,13,"13,14,15"
+有意思,yǒu yì sī,interesting,2,13,"13,17"
+三个,sān gè,three (items),1,13,13
+字,zì,letter,1,13,13
+一,yi,one,2,14,"14,41"
+百度,bǎi dù,"Baidu, Chinese internet company and search engine",1,14,14
+你,nǐ,"you (informal, as opposed to courteous 您[nin2])",15,15,"15,23,24,26,46,47,48,59,60,61,64"
+样子,yàng zi,appearance,2,15,"15,16"
+看,kàn,to look after,2,15,"15,26"
+是,shì,variant of 是[shi4],13,16,"16,18,20,21,25,26,28,30,35,42,44,49,55"
+像不像,xiàng bu xiàng,does it look like...?,1,16,16
+很多很多,hěn duō hěn duō,"very, very many",1,16,16
+花,huā,flower,1,16,16
+这个,zhè ge,(pronoun) this,3,17,"17,25,39"
+特别,tè bié,unusual; special,1,17,17
+词,cí,word,1,17,17
+时候,shí hòu,time,2,18,"18,30"
+一天,yì tiān,one day,1,18,18
+中,zhōng,within; among; in,1,18,18
+呀,ya,ah (used to express surprise),1,18,18
+早上好,zǎo shàng hǎo,Good morning!,1,18,18
+最,zuì,variant of 最[zui4],1,18,18
+一边,yì biān,one side,2,19,19
+坐在,zuò zài,sit at/on/in,2,19,"19,24"
+阳台,yáng tái,balcony,2,19,"19,24"
+喝咖啡,hē kā fēi,drink coffee,1,19,19
+外面,wài miàn,outside (also pr. [wai4 mian5] for this sense),2,20,"20,41"
+家,jiā,home,2,20,"20,21"
+高楼,gāo lóu,high building,2,20,"20,24"
+楼,lóu,surname Lou,1,20,20
+高,gāo,high,1,20,20
+以前,yǐ qián,before,2,21,"21,26"
+地方,dì fāng,region,2,21,"21,22"
+山,shān,surname Shan,2,21,"21,24"
+一座,yí zuò,one (for a building or mountain),1,21,21
+住,zhù,to live; to reside; to stay,1,21,21
+别的,bié de,else,1,21,21
+外,wài,outside,1,21,21
+那个,nà ge,that one,1,22,22
+呢,ne,"(sentence-final particle) used in questions to link back to prior discourse or context (""what about...?"", ""and...?"")",5,23,"23,28,30,35,59"
+想,xiǎng,to think (about),3,24,"24,31,46"
+还是,hái shì,still (as before),3,24,"24,49,62"
+看到,kàn dào,to see,2,24,24
+工作室,gōng zuò shì,studio,2,25,"25,28"
+房间,fáng jiān,room,1,25,25
+这里,zhè lǐ,here,4,26,"26,29,56"
+一个,yí gè,a; an; one,2,26,26
+还有,hái yǒu,there still remain(s); there is (or are) still,2,26,"26,43"
+卧室,wò shì,bedroom,1,26,26
+衣柜,yī guì,wardrobe,1,26,26
+衣服,yī fu,clothes,2,27,"27,35"
+放,fàng,to put,1,27,27
+柜子,guì zi,cupboard,1,27,27
+但是,dàn shì,but; however,1,28,28
+它,tā,it,1,28,28
+视频,shì pín,video,4,29,"29,32,65"
+上课,shàng kè,attend/teach a class,2,29,"29,43"
+拍,pāi,to pat,2,29,"29,32"
+剪,jiǎn,surname Jian,1,29,29
+最好,zuì hǎo,best,1,30,30
+脑子,nǎo zǐ,brains,1,30,30
+我会,wǒ huì,I can / I will,3,31,"31,40"
+需要,xū yào,to need; to want; to demand; to require,2,31,31
+创造,chuàng zào,to create,1,31,31
+比如,bǐ rú,see 比如縣|比如县[Bi3 ru2 Xian4],2,32,"32,33"
+想一想,xiǎng yi xiǎng,think it over,1,32,32
+设计,shè jì,to design; to plan,1,33,33
+课程,kè chéng,course; academic program,1,33,33
+又,yòu,(once) again,2,34,34
+让,ràng,to yield,2,34,"34,46"
+课,kè,subject,2,34,"34,44"
+怎么,zěn me,how?,1,34,34
+有用,yǒu yòng,useful,1,34,34
+有趣,yǒu qù,interesting; fascinating; amusing,1,34,34
+一件,yí jiàn,one (for clothing or matters),1,35,35
+七分,qī fēn,seven minutes,1,35,35
+七点,qī diǎn,seven o’clock,1,35,35
+嗯,ǹg,mm; uh-huh (filler),1,35,35
+换,huàn,to exchange,1,35,35
+零,líng,zero,1,35,35
+八点半,bā diǎn bàn,8:30,2,36,"36,37"
+一节课,yì jié kè,one class session,1,36,36
+到,dào,to reach; to arrive,3,37,"37,56,58"
+从,cóng,surname Cong,2,37,"37,58"
+时间,shí jiān,(concept of) time,1,37,37
+今天,jīn tiān,today,2,38,"38,53"
+完成,wán chéng,to complete; to accomplish,1,38,38
+这些,zhè xiē,these,1,38,38
+法,fǎ,law,1,39,39
+番茄,fān qié,tomato,1,39,39
+休息,xiū xi,rest,4,40,"40,52,53,57"
+然后,rán hòu,then; after that; afterwards,4,40,"40,46,47,57"
+五分钟,wǔ fēn zhōng,five minutes,2,40,"40,43"
+三,sān,three,1,40,40
+十五分钟,shí wǔ fēn zhōng,fifteen minutes,1,40,40
+可以,kě yǐ,can; may; to be able to,5,41,"41,47,48,57"
+走,zǒu,to walk,2,41,41
+发呆,fā dāi,space out; stare into space,1,41,41
+或者,huò zhě,or,1,41,41
+看着,kàn zhe,look at; watch (ongoing),1,41,41
+站,zhàn,station,1,41,41
+起来,qǐ lái,to stand up; to get up,1,41,41
+运动,yùn dòng,to move,1,41,41
+二十五,èr shí wǔ,twenty-five,1,42,42
+八点,bā diǎn,eight o’clock,1,42,42
+就要,jiù yào,will,1,43,43
+开始,kāi shǐ,to begin; to start,1,43,43
+一节,yì jié,one class/section,1,44,44
+中高级,zhōng gāo jí,intermediate to advanced,1,44,44
+水平,shuǐ píng,horizontal; level,1,44,44
+五,wǔ,five,1,45,45
+他们,tā men,they; them,1,45,45
+六,liù,six,1,45,45
+大概,dà gài,roughly,1,45,45
+学生,xué shēng,student,1,45,45
+左右,zuǒ yòu,left and right,1,45,45
+一点,yì diǎn,a bit; a little bit,4,46,"46,62,63"
+啊,a,interjection of surprise,2,46,"46,49"
+努力,nǔ lì,to make an effort; to try hard; to strive,1,46,46
+员工,yuán gōng,staff; personnel; employee,1,46,46
+更,gèng,more,1,46,46
+老板,lǎo bǎn,Robam (brand),1,46,46
+东西,dōng xī,thing,2,47,"47,54"
+会,huì,can; to have the skill; to know how to,2,47,"47,52"
+一些,yì xiē,some; a few; a little; (following an adjective) slightly ...er,1,47,47
+得到,dé dào,to get; to obtain; to receive,1,47,47
+画饼,huà bǐng,paint an unrealistic promise; literally draw a pancake,2,48,"48,50"
+之后,zhī hòu,after; behind,1,48,48
+得,dé,to obtain,1,48,48
+比如说,bǐ rú shuō,for example,1,48,48
+一块,yí kuài,a piece; a chunk,2,49,49
+饼,bǐng,round flat cake,2,49,"49,50"
+他,tā,"(third-person singular) (since the early 20th century, usu. male) he; him; his",1,49,49
+冰,bīng,ice,1,49,49
+画,huà,to draw; to paint,1,49,49
+饼干,bǐng gān,biscuit; cracker; cookie,1,50,50
+去,qù,to go,2,51,"51,54"
+咖啡店,kā fēi diàn,café,2,51,"51,54"
+马上,mǎ shàng,at once,2,51,"51,54"
+下课,xià kè,to finish class,1,51,51
+在家,zài jiā,to be at home,1,52,52
+想要,xiǎng yào,to want to,1,52,52
+出发,chū fā,to set off; to start (on a journey),1,54,54
+收拾,shōu shí,to put in order,1,54,54
+上午,shàng wǔ,morning,3,55,"55,58,62"
+二十七,èr shí qī,twenty-seven,1,55,55
+十点,shí diǎn,ten o’clock,1,55,55
+十二点,shí èr diǎn,twelve o’clock,2,56,"56,58"
+那,nà,surname Na,2,58,"58,65"
+一样,yí yàng,same,2,60,60
+不,bù,no; not so,1,60,60
+和,hé,surname He,1,60,60
+事情,shì qíng,affair; matter; thing; business,1,61,61
+完,wán,to finish,1,61,61
+所有,suǒ yǒu,all,1,61,61
+把,bǎ,handle,1,61,61
+慢慢,màn màn,slowly; gradually,1,62,62
+再,zài,again; once more; re-,1,63,63
+晚上,wǎn shàng,evening,1,63,63
+我们,wǒ men,we; us; ourselves,2,64,"64,65"
+分享,fēn xiǎng,"to share (esp. sth enjoyable, useful or beneficial)",1,64,64
+区,qū,area,1,64,64
+欢迎,huān yíng,to welcome,1,64,64
+评论,píng lùn,to comment on,1,64,64
+跟,gēn,heel,1,64,64
+下,xià,down,1,65,65
+个,gè,variant of 個|个[ge4],1,65,65
+再见,zài jiàn,goodbye,1,65,65
+吧,ba,(modal particle indicating suggestion or surmise),1,65,65
+见,jiàn,to see,1,65,65
