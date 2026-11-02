@@ -7,6 +7,14 @@ const bundle=await build({stdin:{contents:`export * from './app/api/lesson10-mat
 const m=await import('data:text/javascript;base64,'+Buffer.from(bundle.outputFiles[0].text).toString('base64'));
 const files=new Map(m.lesson10Materials.map(file=>[file.id,fs.readFileSync(file.path)]));
 const request=id=>new Request('https://example.test'+m.lesson10MaterialHref(id));
+test('the complete package retains all four 46-page hybrid workbooks and both existing supplemental endpoints',()=>{
+ const full=m.lesson10Materials.filter(file=>file.kind==='hybrid');
+ assert.deepEqual(full.map(file=>file.locale),['en','fr','ru','tr']);
+ assert.ok(full.every(file=>file.pages===46));
+ assert.ok(m.lesson10Materials.some(file=>file.id==='study-en'));
+ assert.ok(m.lesson10Materials.some(file=>file.id==='writing-en'));
+ for(const file of m.lesson10Materials)assert.match(file.commit,/^[a-f0-9]{40}$/,'every download must pin a real source commit');
+});
 test('public download route serves the exact approved PDF bytes with download headers, without authentication',async()=>{
  const calls=[];globalThis.fetch=async url=>{calls.push(String(url));const file=m.lesson10Materials.find(file=>String(url).endsWith('/'+file.path));return new Response(files.get(file.id));};
  for(const file of m.lesson10Materials){

@@ -22,21 +22,18 @@ source. No TTS requests or provider changes are part of this integration.
 Listening checks exist only for these recordings. Missing clips are not exposed
 as playable controls.
 
-The approved compact 11-page English study PDF and 36-page English handwriting
-PDF are available from the lesson's PDF materials tab. The two verified originals
-are retained under `resources/lesson10` in the existing public source repository;
-they are not copied into the already near-capacity Sites archive. The same-site
-download route uses an explicit file manifest, a pinned public source commit,
-exact size/SHA-256 verification and PDF download headers. No learner authentication
-or private chat attachment is required. It reuses the public repository source
-pattern already used by the dictionary; it creates no R2 binding or provider key.
+The PDF materials tab offers four complete 46-page hybrid workbooks in English,
+French, Russian and Turkish, following Lesson 09's approved four-language baseline.
+Each includes guidance, all 104 expressions and 39 examples, exercises, 26 pages of
+Hanzi/pinyin writing and delayed answers. The existing compact 11-page English
+reference and 36-page English writing workbook remain supplemental downloads.
 
-The manifest supports additional reviewed language/type entries without another
-route. This English pair is not the complete standard four-language package.
-Lesson 09's actual approved baseline is four hybrid workbooks in EN/FR/RU/TR;
-the remaining Lesson 10 language outputs are being prepared by the existing PDF
-author. Existing course PDFs/audio and their URLs remain unchanged. See
-`SITES_RELEASE.md` for the expanded-size release gate.
+Verified originals are retained under `resources/lesson10` in the existing public
+source repository, outside the near-capacity Sites archive. The unchanged same-site
+route uses the strict file manifest, pinned asset commits, exact size/SHA-256 checks
+and PDF download headers. No login or private chat link is required; no new route,
+R2 binding, provider key or paid API was added. Existing course PDFs/audio and URLs
+remain unchanged. See `SITES_RELEASE.md` for the expanded-size release gate.
 
 Source readiness, automated checks, browser checks and native production
 publication must be recorded separately in the release receipt.
