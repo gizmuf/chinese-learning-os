@@ -1,0 +1,26 @@
+{
+  "c10-t15": {
+    "text": "便宜",
+    "pinyin": "piányi",
+    "source": "/audio/qwen-curriculum/b78b13c6cf8a5293294447a5a9b5977fc824111d8930ab23556f2ba0067c78d3.mp3",
+    "sha256": "ba61d464200c852597c51a999838c7d961a5ce04fb950393250ba839a869d617"
+  },
+  "c10-t16": {
+    "text": "贵",
+    "pinyin": "guì",
+    "source": "/audio/qwen-curriculum/f8757380d0e8f8830fd49de47d4c27eb664e361a1fabb949dd77c1442c611069.mp3",
+    "sha256": "deec969bc9d1d02c44c110c877f0449e456e4ac234a9c48a2cc2604fa24e94c2"
+  },
+  "c10-t45": {
+    "text": "今天",
+    "pinyin": "jīntiān",
+    "source": "/audio/qwen-curriculum/281cc71fd8eb804d8058c585fdd1ea717450eed175561311dad34107e6a144c6.mp3",
+    "sha256": "dc74dc37815762bb61617e9f3cb5610037358e7d3ce81f71ec3fc39b29b66377"
+  },
+  "c10-t76": {
+    "text": "学习",
+    "pinyin": "xuéxí",
+    "source": "/audio/qwen-curriculum/ef1fd9a3664d07ba74c3757ca071c9d8d29397ffb91e9277ac76b8aeaf2dab92.mp3",
+    "sha256": "d200ea8e6ef61352b51814fcedd28d5a7eece0df636cc292e070e5ac5b6f7fdc"
+  }
+}

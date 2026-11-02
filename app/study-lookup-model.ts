@@ -1,3 +1,5 @@
+import lesson10Characters from '../data/lesson10/characters.json';
+import {lesson10Terms,lesson10Pronunciation} from './lesson10-data';
 import shuoshuoLookup from '../data/shuoshuo-morning-lookup.json';
 import {extendedComponent} from './atlas-cloud-extended';
 import {atlasByHanzi} from './atlas-model';
@@ -44,6 +46,8 @@ export function appStudyDictionary(locale:Locale):StudyDictionary{
  for(const v of lesson09Terms)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],phrase:v.phrase,audio:lesson09Pronunciation(v)});
  for(const v of lesson09Characters.characters)dictionary.set(v.text,{...dictionary.get(v.text),text:v.text,pinyin:v.pinyin,meaning:v.meaning[locale],character:v.text});
  for(const clip of (lesson09AudioManifest.recordings as {id:string;text:string;file:string}[]).filter(v=>v.id.startsWith('char-'))){const entry=dictionary.get(clip.text);if(entry&&!entry.audio)dictionary.set(clip.text,{...entry,audio:{text:clip.text,pinyin:entry.pinyin,context:false,source:lesson09Recording(clip.id)??'/course09/audio/'+clip.file}});}
+ for(const v of lesson10Terms)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],phrase:v.phrase,audio:lesson10Pronunciation(v)});
+ for(const v of lesson10Characters.characters)if(!dictionary.has(v.text))dictionary.set(v.text,{text:v.text,pinyin:v.pinyin,meaning:v.meaning.en,character:v.text});
  // The lesson also teaches complete phrases; retain their actual constituent words.
  for(const [text,pinyin,en,fr,ru,tr] of [
   ['钥匙','yàoshi','key','clé','ключ','anahtar'],

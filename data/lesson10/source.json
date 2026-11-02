@@ -1,0 +1,1047 @@
+{
+  "lessonId": "intensive-10",
+  "appNumber": 10,
+  "textbookChapter": null,
+  "date": "2026-11-02",
+  "dateEvidence": "Intake date plus board 11月2号 / 星期一; year not written on board.",
+  "files": [
+    {
+      "file": "IMG_0390.heic",
+      "bytes": 1450821,
+      "sha256": "805a277fed61df47980ecb183593e88657ddaae011ccb47308be71d6774af532"
+    },
+    {
+      "file": "IMG_0391.heic",
+      "bytes": 1059746,
+      "sha256": "5caefbe39f82bede43012ff81254243dd3abbaa00362931779415ba856cd2ea2"
+    },
+    {
+      "file": "IMG_0392.heic",
+      "bytes": 1661470,
+      "sha256": "212292da370ec8312a0aea9ea9eead9a5014c84c9469cdb98439d257fbf22250"
+    },
+    {
+      "file": "IMG_0393.heic",
+      "bytes": 1945470,
+      "sha256": "f44f57f70127aa42bd9e024daee49f6747e496cc7f7445e5f4287a55183ff32d"
+    },
+    {
+      "file": "IMG_0394.heic",
+      "bytes": 1901134,
+      "sha256": "c6efd9adb3d28a6e47470ebd16622aceedc02da318dc28e0801626f4d5f599fb"
+    },
+    {
+      "file": "IMG_0395.heic",
+      "bytes": 1116857,
+      "sha256": "d81ae2f388942ad2e44cc3c74dd1fffcae6faf25fbb4282f7a169fa1c03e551f"
+    },
+    {
+      "file": "IMG_0396.heic",
+      "bytes": 870971,
+      "sha256": "87c9be39e9f8f3729d138e977bb2859bcccfc029bf6b8f42db179a8798ce324b"
+    },
+    {
+      "file": "IMG_0397.heic",
+      "bytes": 1501852,
+      "sha256": "35f330e85f93882a60333ab1bd6e1f2438821dcb5ee45bc3038985981d428dbd"
+    },
+    {
+      "file": "IMG_0398.mov",
+      "bytes": 4567264,
+      "sha256": "5efc94c3df39ff0b96fd77eeecee4e1882dbcc9a8da1bc739046b6992c2f612a"
+    },
+    {
+      "file": "IMG_0399.heic",
+      "bytes": 980853,
+      "sha256": "43e56882017447762fe0ba688cf5869cc0fa36ac07000e34cf62b7e571a7c9dd"
+    },
+    {
+      "file": "IMG_0400.heic",
+      "bytes": 1206958,
+      "sha256": "cb054cb95c5185342c88d9eb7f0a1a4a6f2da55e9e0388e56ca19ec0d6eb3900"
+    },
+    {
+      "file": "IMG_0401.heic",
+      "bytes": 1043535,
+      "sha256": "dbfc2a56d9246a1c544caf8895021018a48366e06ce94cc02d535506df8e2833"
+    }
+  ],
+  "photos": [
+    {
+      "file": "IMG_0390.heic",
+      "read": true,
+      "lines": [
+        {
+          "id": "IMG_0390:L01",
+          "raw": "大脑",
+          "contentIds": [
+            "c10-t01"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0390:L02",
+          "raw": "电脑",
+          "contentIds": [
+            "c10-t02"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0390:L03",
+          "raw": "台式机",
+          "contentIds": [
+            "c10-t03"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0390:L04",
+          "raw": "笔记本电脑",
+          "contentIds": [
+            "c10-t02",
+            "c10-t04"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0390:L05",
+          "raw": "电话",
+          "contentIds": [
+            "c10-t05"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0390:L06",
+          "raw": "电视",
+          "contentIds": [
+            "c10-t06"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0390:L07",
+          "raw": "(电)冰箱",
+          "contentIds": [
+            "c10-t07",
+            "c10-t08"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0390:L08",
+          "raw": "¥9/L 汽油",
+          "contentIds": [
+            "c10-t10"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0390:L09",
+          "raw": "¥0.58/1° 电车",
+          "contentIds": [
+            "c10-t13"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0390:L10",
+          "raw": "¥0.5/L",
+          "contentIds": [],
+          "disposition": "annotation, source formula or uncertainty retained; no invented drill"
+        },
+        {
+          "id": "IMG_0390:L11",
+          "raw": "电车比油车便宜 / 贵 / 漂亮",
+          "contentIds": [
+            "c10-t13",
+            "c10-t14",
+            "c10-t15",
+            "c10-t16",
+            "c10-t17",
+            "c10-s01",
+            "c10-s02",
+            "c10-s03"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0390:L12",
+          "raw": "A 比 B + adj",
+          "contentIds": [
+            "c10-t09"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0390:L13",
+          "raw": "油比电贵",
+          "contentIds": [
+            "c10-t11",
+            "c10-t12",
+            "c10-s04"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0390:L14",
+          "raw": "美国比土耳其远",
+          "contentIds": [
+            "c10-t18",
+            "c10-t19",
+            "c10-t20",
+            "c10-s05"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0390:L15",
+          "raw": "世界杯",
+          "contentIds": [
+            "c10-t33"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        }
+      ]
+    },
+    {
+      "file": "IMG_0391.heic",
+      "read": true,
+      "lines": [
+        {
+          "id": "IMG_0391:L01",
+          "raw": "大脑 / 电脑",
+          "contentIds": [
+            "c10-t01",
+            "c10-t02"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0391:L02",
+          "raw": "台式机 / 笔记本电脑",
+          "contentIds": [
+            "c10-t02",
+            "c10-t03",
+            "c10-t04"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0391:L03",
+          "raw": "电话",
+          "contentIds": [
+            "c10-t05"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0391:L04",
+          "raw": "电视",
+          "contentIds": [
+            "c10-t06"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0391:L05",
+          "raw": "(电)冰箱",
+          "contentIds": [
+            "c10-t07"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0391:L06",
+          "raw": "11 / 12 / 13 / 18",
+          "contentIds": [],
+          "disposition": "annotation, source formula or uncertainty retained; no invented drill"
+        },
+        {
+          "id": "IMG_0391:L07",
+          "raw": "秘密",
+          "contentIds": [
+            "c10-t28"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0391:L08",
+          "raw": "你猜一猜",
+          "contentIds": [
+            "c10-t29",
+            "c10-t30",
+            "c10-s07"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        }
+      ]
+    },
+    {
+      "file": "IMG_0392.heic",
+      "read": true,
+      "lines": [
+        {
+          "id": "IMG_0392:L01",
+          "raw": "大脑 / 电脑 / 电话 / 电视 / (电)冰箱 / 台式机 / 笔记本电脑",
+          "contentIds": [
+            "c10-t01",
+            "c10-t02",
+            "c10-t03",
+            "c10-t04",
+            "c10-t05",
+            "c10-t06",
+            "c10-t07"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0392:L02",
+          "raw": "汽油 ¥9/L；电车 ¥0.58/1°；¥0.5/L",
+          "contentIds": [
+            "c10-t10",
+            "c10-t13"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0392:L03",
+          "raw": "电车比油车便宜 / 贵 / 漂亮；A 比 B + adj + 多了 / 得多 / 两倍 / 一点儿",
+          "contentIds": [
+            "c10-t13",
+            "c10-t14",
+            "c10-t15",
+            "c10-t17",
+            "c10-t23",
+            "c10-t24",
+            "c10-t25",
+            "c10-t26",
+            "c10-t27"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0392:L04",
+          "raw": "油比电贵",
+          "contentIds": [],
+          "disposition": "annotation, source formula or uncertainty retained; no invented drill"
+        },
+        {
+          "id": "IMG_0392:L05",
+          "raw": "美国比土耳其远",
+          "contentIds": [
+            "c10-t19",
+            "c10-t20"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0392:L06",
+          "raw": "你的头发比我的长多了",
+          "contentIds": [
+            "c10-t21",
+            "c10-t22",
+            "c10-t23",
+            "c10-s06"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0392:L07",
+          "raw": "世界杯",
+          "contentIds": [
+            "c10-t33"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0392:L08",
+          "raw": "男人四十一枝花",
+          "contentIds": [
+            "c10-t43",
+            "c10-opt-source-saying"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0392:L09",
+          "raw": "女人；[crossed/overwritten character below 男人 not securely identified]",
+          "contentIds": [
+            "c10-t43",
+            "c10-t44"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0392:L10",
+          "raw": "你猜一猜 / 我猜你30岁",
+          "contentIds": [
+            "c10-t30"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        }
+      ]
+    },
+    {
+      "file": "IMG_0393.heic",
+      "read": true,
+      "lines": [
+        {
+          "id": "IMG_0393:L01",
+          "raw": "大脑 / 电脑 / 电话 / 电视 / (电)冰箱 / 台式机 / 笔记本电脑",
+          "contentIds": [
+            "c10-t01",
+            "c10-t02",
+            "c10-t03",
+            "c10-t04",
+            "c10-t05",
+            "c10-t06",
+            "c10-t07"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0393:L02",
+          "raw": "秘密",
+          "contentIds": [
+            "c10-t28"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0393:L03",
+          "raw": "你猜一猜",
+          "contentIds": [
+            "c10-t30"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0393:L04",
+          "raw": "我猜你30岁",
+          "contentIds": [
+            "c10-t31",
+            "c10-t32",
+            "c10-s08"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0393:L05",
+          "raw": "11 / 12 / 13 / 18；partial comparison board at right",
+          "contentIds": [],
+          "disposition": "annotation, source formula or uncertainty retained; no invented drill"
+        }
+      ]
+    },
+    {
+      "file": "IMG_0394.heic",
+      "read": true,
+      "lines": [
+        {
+          "id": "IMG_0394:L01",
+          "raw": "汽油 ¥9/L；电车 ¥0.58/1°；¥0.5/L",
+          "contentIds": [
+            "c10-t10",
+            "c10-t13"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0394:L02",
+          "raw": "电车比油车便宜 / 贵 / 漂亮；多了 / 得多 / 两倍 / 一点儿",
+          "contentIds": [
+            "c10-t13",
+            "c10-t14",
+            "c10-t15",
+            "c10-t17",
+            "c10-t23",
+            "c10-t24",
+            "c10-t25",
+            "c10-t26"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0394:L03",
+          "raw": "油比电贵",
+          "contentIds": [],
+          "disposition": "annotation, source formula or uncertainty retained; no invented drill"
+        },
+        {
+          "id": "IMG_0394:L04",
+          "raw": "美国比土耳其远",
+          "contentIds": [
+            "c10-t19",
+            "c10-t20"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0394:L05",
+          "raw": "你的头发比我的长多了",
+          "contentIds": [
+            "c10-t21",
+            "c10-t23"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0394:L06",
+          "raw": "世界杯",
+          "contentIds": [
+            "c10-t33"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0394:L07",
+          "raw": "前天 / 昨天",
+          "contentIds": [
+            "c10-t46",
+            "c10-t47"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0394:L08",
+          "raw": "你家有几口人？",
+          "contentIds": [
+            "c10-t34",
+            "c10-t35",
+            "c10-t36",
+            "c10-t37",
+            "c10-s09"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0394:L09",
+          "raw": "他们是____、两个姐姐和我",
+          "contentIds": [
+            "c10-t38",
+            "c10-t39",
+            "c10-t40",
+            "c10-t42"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0394:L10",
+          "raw": "三个姐姐",
+          "contentIds": [
+            "c10-t39",
+            "c10-t41"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0394:L11",
+          "raw": "今天几月几号星期几？",
+          "contentIds": [
+            "c10-t45",
+            "c10-t50",
+            "c10-t51",
+            "c10-t52",
+            "c10-s10"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0394:L12",
+          "raw": "今天11月2号 星期一；明天11 [月] 3 [号] [星期]二；后天 [11月] 4 [号] [星期]三",
+          "contentIds": [
+            "c10-t45",
+            "c10-t48",
+            "c10-t49",
+            "c10-t52",
+            "c10-t53",
+            "c10-t54",
+            "c10-t55",
+            "c10-s11",
+            "c10-s12",
+            "c10-s13"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0394:L13",
+          "raw": "日 / 天 [Sunday alternatives next to 星期]",
+          "contentIds": [
+            "c10-t52",
+            "c10-t56",
+            "c10-t57"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0394:L14",
+          "raw": "1978～2016；2～3；10.30 六 24° [unexplained numeric annotations]",
+          "contentIds": [],
+          "disposition": "annotation, source formula or uncertainty retained; no invented drill"
+        }
+      ]
+    },
+    {
+      "file": "IMG_0395.heic",
+      "read": true,
+      "lines": [
+        {
+          "id": "IMG_0395:L01",
+          "raw": "在；① 在 + place",
+          "contentIds": [
+            "c10-t58"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0395:L02",
+          "raw": "你在哪儿 / 哪里？",
+          "contentIds": [
+            "c10-t59",
+            "c10-t60",
+            "c10-s14",
+            "c10-s15"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0395:L03",
+          "raw": "我在超市 / 家 / 书店 / 教室",
+          "contentIds": [
+            "c10-t34",
+            "c10-t61",
+            "c10-t62",
+            "c10-t63",
+            "c10-s16",
+            "c10-s17",
+            "c10-s18",
+            "c10-s19"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0395:L04",
+          "raw": "花店",
+          "contentIds": [
+            "c10-t64"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0395:L05",
+          "raw": "饭店 / 饭馆儿",
+          "contentIds": [
+            "c10-t65",
+            "c10-t66"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0395:L06",
+          "raw": "咖啡店",
+          "contentIds": [
+            "c10-t67"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0395:L07",
+          "raw": "酒店 hotel",
+          "contentIds": [
+            "c10-t68"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        }
+      ]
+    },
+    {
+      "file": "IMG_0396.heic",
+      "read": true,
+      "lines": [
+        {
+          "id": "IMG_0396:L01",
+          "raw": "世界杯",
+          "contentIds": [
+            "c10-t33"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0396:L02",
+          "raw": "一直 / 总是 [teacher partially occludes right edge]",
+          "contentIds": [
+            "c10-t82",
+            "c10-t83"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0396:L03",
+          "raw": "[partial] 写；听 / 读",
+          "contentIds": [],
+          "disposition": "annotation, source formula or uncertainty retained; no invented drill"
+        }
+      ]
+    },
+    {
+      "file": "IMG_0397.heic",
+      "read": true,
+      "lines": [
+        {
+          "id": "IMG_0397:L01",
+          "raw": "一直 / 总是",
+          "contentIds": [
+            "c10-t82",
+            "c10-t83"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0397:L02",
+          "raw": "老师在写",
+          "contentIds": [
+            "c10-t77",
+            "c10-t79",
+            "c10-s25"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0397:L03",
+          "raw": "学生在听 / 读",
+          "contentIds": [
+            "c10-t78",
+            "c10-t80",
+            "c10-t81",
+            "c10-s26",
+            "c10-s27"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0397:L04",
+          "raw": "衣 ↔ 一 [same-sound classroom observation, not etymology]",
+          "contentIds": [
+            "c10-opt-source-yi"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0397:L05",
+          "raw": "裤子 / 被子",
+          "contentIds": [
+            "c10-t93",
+            "c10-t94"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0397:L06",
+          "raw": "袜子",
+          "contentIds": [
+            "c10-t95"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0397:L07",
+          "raw": "衬衫",
+          "contentIds": [
+            "c10-t97"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0397:L08",
+          "raw": "裙子",
+          "contentIds": [
+            "c10-t98"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0397:L09",
+          "raw": "世界杯；前天 / 昨天；location board partly cropped",
+          "contentIds": [
+            "c10-t33",
+            "c10-t46",
+            "c10-t47"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        }
+      ]
+    },
+    {
+      "file": "IMG_0399.heic",
+      "read": true,
+      "lines": [
+        {
+          "id": "IMG_0399:L01",
+          "raw": "世界杯",
+          "contentIds": [
+            "c10-t33"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0399:L02",
+          "raw": "一直 / 总是",
+          "contentIds": [
+            "c10-t82",
+            "c10-t83"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0399:L03",
+          "raw": "一条裤子 / 被子",
+          "contentIds": [
+            "c10-t86",
+            "c10-t87",
+            "c10-t93",
+            "c10-t94",
+            "c10-s28",
+            "c10-s29"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0399:L04",
+          "raw": "一双袜子 / 鞋子",
+          "contentIds": [
+            "c10-t88",
+            "c10-t95",
+            "c10-t96",
+            "c10-s30",
+            "c10-s31"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0399:L05",
+          "raw": "一件衬衫",
+          "contentIds": [
+            "c10-t89",
+            "c10-t97",
+            "c10-s32"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0399:L06",
+          "raw": "一条裙子",
+          "contentIds": [
+            "c10-t98",
+            "c10-s33"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0399:L07",
+          "raw": "前天 / 昨天；10.30 六 24° [unexplained]",
+          "contentIds": [
+            "c10-t46",
+            "c10-t47"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        }
+      ]
+    },
+    {
+      "file": "IMG_0400.heic",
+      "read": true,
+      "lines": [
+        {
+          "id": "IMG_0400:L01",
+          "raw": "一辆汽车",
+          "contentIds": [
+            "c10-t90",
+            "c10-t99",
+            "c10-s34"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0400:L02",
+          "raw": "一本书 / 词典",
+          "contentIds": [
+            "c10-t91",
+            "c10-t100",
+            "c10-t101",
+            "c10-s35",
+            "c10-s36"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0400:L03",
+          "raw": "一张纸 / 桌子 / 床",
+          "contentIds": [
+            "c10-t92",
+            "c10-t102",
+            "c10-t103",
+            "c10-t104",
+            "c10-s37",
+            "c10-s38",
+            "c10-s39"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0400:L04",
+          "raw": "一直 / 总是；世界杯",
+          "contentIds": [
+            "c10-t33",
+            "c10-t82",
+            "c10-t83"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0400:L05",
+          "raw": "一条裤子 / 被子；一双袜子 / 鞋子；一件衬衫；一条裙子",
+          "contentIds": [
+            "c10-t93",
+            "c10-t94",
+            "c10-t95",
+            "c10-t96",
+            "c10-t97",
+            "c10-t98",
+            "c10-s28",
+            "c10-s30",
+            "c10-s32",
+            "c10-s33"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        }
+      ]
+    },
+    {
+      "file": "IMG_0401.heic",
+      "read": true,
+      "lines": [
+        {
+          "id": "IMG_0401:L01",
+          "raw": "在；① 在 + place；你在哪儿 / 哪里？我在超市 / 家 [right edge cropped]",
+          "contentIds": [
+            "c10-t59",
+            "c10-t60",
+            "c10-t61"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0401:L02",
+          "raw": "② 在 + V →",
+          "contentIds": [
+            "c10-t58"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0401:L03",
+          "raw": "(现在) 他在睡觉",
+          "contentIds": [
+            "c10-t69",
+            "c10-t70",
+            "c10-t71",
+            "c10-s20",
+            "c10-s21"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0401:L04",
+          "raw": "(现在) 你在做什么？",
+          "contentIds": [
+            "c10-t69",
+            "c10-t72",
+            "c10-t73",
+            "c10-s22"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0401:L05",
+          "raw": "我们在上课 / 学习",
+          "contentIds": [
+            "c10-t74",
+            "c10-t75",
+            "c10-t76",
+            "c10-s23",
+            "c10-s24"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0401:L06",
+          "raw": "干 gān dry / gàn do",
+          "contentIds": [
+            "c10-t84",
+            "c10-t85"
+          ],
+          "disposition": "mapped/corroborating teaching source"
+        },
+        {
+          "id": "IMG_0401:L07",
+          "raw": "[small component-like chalk mark below 干 not securely identified]",
+          "contentIds": [],
+          "disposition": "annotation, source formula or uncertainty retained; no invented drill"
+        }
+      ]
+    }
+  ],
+  "video": {
+    "file": "IMG_0398.mov",
+    "seconds": 2.331667,
+    "decodedFrames": 70,
+    "visuallyReviewedFrames": "all 70 in contact sheet; early board corroborates photos, camera then pans to desk",
+    "hasAudio": true,
+    "audioTranscriptVerified": false,
+    "livePhotoIdentifierPresent": false,
+    "classification": "short camera-movement clip; cannot certify Live Photo or accidental intent; not a twelfth still",
+    "newDistinctBoardTextEstablished": false,
+    "followUp": "Local owner can listen to original short clip; no unheard words invented."
+  },
+  "uncertainties": [
+    {
+      "sourceIds": [
+        "IMG_0392:L09"
+      ],
+      "note": "Crossed/overwritten character below 男人 is not securely identifiable; not converted into a teaching item."
+    },
+    {
+      "sourceIds": [
+        "IMG_0394:L14",
+        "IMG_0399:L07"
+      ],
+      "note": "10.30 六 24° and 1978～2016 / 2～3 lack secure context. Do not infer historical policy or temperature facts; 10/30 is not silently changed to 10/31."
+    },
+    {
+      "sourceIds": [
+        "IMG_0390:L09",
+        "IMG_0390:L10"
+      ],
+      "note": "Power-cost line uses 1° notation; ¥0.5/L has no secure label. No unit conversion or current-price claim."
+    },
+    {
+      "sourceIds": [
+        "IMG_0394:L09"
+      ],
+      "note": "Family answer has an unfilled slot, retained as an incomplete classroom prompt."
+    },
+    {
+      "sourceIds": [
+        "IMG_0401:L07"
+      ],
+      "note": "Small chalk mark is not securely identified; no character/etymology/pronunciation invented."
+    }
+  ],
+  "normalizations": [
+    "Slash alternatives expanded as separate phrases/sentences; omitted common table headings expanded explicitly.",
+    "30 -> 三十; 11月2号 etc -> 十一月二号; punctuation normalized.",
+    "Full simplified forms retained. Tone-marked readings checked by context; neutral syllables and erhua are not assigned invented lexical tones."
+  ]
+}
