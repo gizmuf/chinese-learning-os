@@ -29,7 +29,8 @@ export const eventSchema = z.object({
     hints: z.number().int().nonnegative().optional(),
     mistakes: z.number().int().nonnegative().optional(),
     duration: z.number().nonnegative().optional(),
-    input: z.string().max(30).optional(),
+    // Accept this exact historical marker without changing queued events.
+    input: z.union([z.string().max(30),z.literal('hanzi > pinyin > English; self-assessed')]).optional(),
   }),
 });
 

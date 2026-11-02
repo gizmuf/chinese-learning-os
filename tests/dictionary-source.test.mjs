@@ -25,7 +25,7 @@ test('real modern IDS operators become readable layout names without tofu or inv
 });
 test('bundled data covers the reported missing character and a broad, licensed non-HSK lexicon',()=>{
  const words=JSON.parse(gunzipSync(readFileSync('public/dictionary/headwords.json.gz'))),characters=JSON.parse(gunzipSync(readFileSync('public/dictionary/characters.json.gz')));
- assert.ok(words.length>190000);assert.ok(words.includes('樱花'));assert.ok(words.includes('人工智能'));assert.ok(Object.keys(characters).length>9500);assert.equal(characters['旦'].radical,'日');assert.equal(characters['旦'].pinyin[0],'dàn');
+ assert.ok(words.length>120000);assert.ok(!words.includes('輕易'));assert.ok(words.includes('轻易'));assert.ok(words.includes('樱花'));assert.ok(words.includes('人工智能'));assert.ok(Object.keys(characters).length>9500);assert.equal(characters['旦'].radical,'日');assert.equal(characters['旦'].pinyin[0],'dàn');
 });
 test('movable popup bounds and normalized persistence survive resize, rotation and corrupt state',()=>{
  const b={left:0,top:0,width:390,height:844},s={width:304,height:520};assert.deepEqual(w.clampDictionaryPosition({x:-500,y:10000},b,s),{x:12,y:312});

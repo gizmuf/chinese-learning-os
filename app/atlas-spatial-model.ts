@@ -25,7 +25,7 @@ export function characterPronunciation(hanzi:string,locale:Locale):Pronunciation
  return word?{...wordPronunciation(word),context:word.hanzi!==hanzi}:undefined;
 }
 export function componentPronunciation(id:string,locale:Locale):Pronunciation|undefined{const part=extendedComponent(id);if(!part)return;for(const h of [part.glyph,...part.variants,...(componentById.get(id)?.aliases??[])]){const audio=characterPronunciation(h,locale);if(audio)return audio}}
-export type DictionaryEntry={lookupStatus?:'loading'|'error'|'not-found';sourceName?:string;sourceURL?:string;senses?:{pinyin:string;meaning:string}[];contextual?:import('./dictionary-source-model').DictionaryContext;structure?:{radical:string;decomposition:string};atlasAvailable?:boolean;phrase?:boolean;text:string;pinyin:string;meaning:string;word?:CloudWord;character?:string;audio?:Pronunciation};
+export type DictionaryEntry={lookupStatus?:'loading'|'error'|'not-found';sourceName?:string;sourceURL?:string;senses?:{pinyin:string;meaning:string;kind?:'name'|'variant'|'rare'}[];contextual?:import('./dictionary-source-model').DictionaryContext;structure?:{radical:string;decomposition:string};atlasAvailable?:boolean;phrase?:boolean;text:string;pinyin:string;meaning:string;word?:CloudWord;character?:string;audio?:Pronunciation};
 export type StudyDictionary=Map<string,DictionaryEntry>;
 export function studyDictionary(locale:Locale):StudyDictionary{
  const dictionary:StudyDictionary=new Map();

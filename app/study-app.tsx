@@ -66,6 +66,8 @@ import RecognitionReview, {recognitionDraftKey, validRecognitionDraft} from "./r
 import Notebook from "./notebook";
 import IntensiveCourse from "./intensive-course";
 import {useHanziStyle,HanziDisplayControls,type HanziStyle} from './hanzi-style';
+import {buildReviewQueue,allReviewLevel,allReviewHref} from './review-queue';
+import './recognition-review.css';
 import StudyLookupProvider, {useDictionaryAssistance,StudyText} from "./study-lookup";
 import PdfExport from "./pdf-export";
 import { LanguagePicker, useI18n } from "./i18n";
@@ -96,6 +98,8 @@ export default function StudyApp({
   onManageAccount: () => void;
 }) {
   const { locale, t } = useI18n();
+  const allWordsCopy={en:'Practise all {0} words',fr:'Pratiquer les {0} mots',ru:'Практиковать все слова: {0}',tr:'Tüm {0} kelimeyi çalış'}[locale];
+  const allWordsNote={en:'All words · extra practice. Your spaced-review schedule stays unchanged.',fr:'Tous les mots · entraînement libre. Le calendrier des révisions reste inchangé.',ru:'Все слова · дополнительная практика. Расписание интервальных повторений не меняется.',tr:'Tüm kelimeler · ek çalışma. Aralıklı tekrar programınız değişmez.'}[locale];
   const hanziAppearance=useHanziStyle();
   const items = useMemo(() => sourceItems.map(item => localizeItem(item, locale)), [locale]);
   const lessons = sourceLessons.map(lesson => ({...lesson, title: t(lesson.title), subtitle: t(lesson.subtitle)}));
@@ -204,7 +208,13 @@ export default function StudyApp({
           }
         }
         const recognition = await readDraft(store, recognitionDraftKey);
-        if (alive && validRecognitionDraft(recognition) && !window.location.search && !window.location.hash) {
+        const requestedAll=allReviewLevel(window.location.search);
+        if(alive&&requestedAll){
+          const queue=items.filter(item=>isInLevel(item,requestedAll));
+          const previous=validRecognitionDraft(recognition)&&recognition.practice&&JSON.stringify(recognition.itemIds)===JSON.stringify(queue.map(i=>i.id))?recognition:null;
+          const index=Math.min(previous?.index??0,queue.length-1);
+          setLevel(requestedAll);setRecognitionRun(previous?.id??crypto.randomUUID());setRecognitionPractice(true);setSession(queue);setSessionIndex(index);setSelected(queue[index]);setSkill('meaning');setMode('recall');setFinished(false);setView('practice');
+        }else if (alive && validRecognitionDraft(recognition) && !window.location.search && !window.location.hash) {
           const queue = recognition.itemIds.map(id => sourceItems.find(i => i.id === id)).filter((i): i is Item => !!i);
           if (queue.length === recognition.itemIds.length) {
             const index = Math.min(recognition.index, queue.length - 1);
@@ -356,19 +366,16 @@ export default function StudyApp({
     setView("practice");
     window.scrollTo({ top: 0, behavior: "instant" });
   }
-  function startReview(s: Skill, extra = false) {
-    const count = Math.max(
-      1,
-      Math.floor((minutes * 60) / (s === "writing" ? 90 : 25)),
-    );
-    const queue = (extra ? studyItems : makeQueue(events, s, studyItems)).slice(0, count);
+  function startReview(s: Skill, extra: boolean|'all' = false) {
+    const queue=buildReviewQueue(events,s,studyItems,minutes,extra==='all'?'all':extra?'extra':'scheduled');
     if (!queue.length) {
       notify(
         t("You are all caught up for this skill. Try another skill or practice a lesson."),
       );
       return;
     }
-    if (s === "meaning") {setRecognitionRun(crypto.randomUUID());setRecognitionPractice(extra);}
+    if (s === "meaning") {setRecognitionRun(crypto.randomUUID());setRecognitionPractice(!!extra);}
+    if(extra==='all'){const href=allReviewHref(level);if(href)window.history.replaceState(null,'',window.location.pathname+href);}
     setSkill(s);
     setMode("recall");
     setSession(queue);
@@ -481,7 +488,7 @@ export default function StudyApp({
           ).map((n) => (
             <button
               key={n.id}
-              className={view === n.id ? "nav-item active" : "nav-item"}
+              className={(view==='practice'&&skill==='meaning'?'reviews':view) === n.id ? "nav-item active" : "nav-item"}
               title={n.title}
               onClick={() => changeView(n.id)}
             >
@@ -536,7 +543,7 @@ export default function StudyApp({
             <span className="breadcrumb">{t("My study space")}</span>
             <ChevronRight size={13} />
             {view === "shuoshuo-lesson" ? "A morning with Shuoshuo" : view === "private-lessons" ? "Private lessons" : view === "shuoshuo" ? "Shuoshuo · Vocabulary companion" : view === "myday" ? "My day · Day 01 V2" : view === "studio" ? "StudyStudio" : view === "grammar" ? t("HSK3 grammar") : view === "atlas" ? t("Cloud Atlas") : view === "course" ? t("Intensive course") : view === "practice"
-              ? t("Writing studio")
+              ? skill==='meaning'?t('Flashcards'):t("Writing studio")
               : view === "today"
                 ? t("Today")
                 : view === "lessons"
@@ -546,7 +553,7 @@ export default function StudyApp({
                     : t("My progress")}
           </span>
           <div className="topbar-actions">
-            <LanguagePicker />
+            <div className="topbar-language-stack"><LanguagePicker /><HanziDisplayControls compact/></div>
             {view !== "shuoshuo-lesson" && view !== "private-lessons" && view !== "shuoshuo" && view !== "myday" && view !== "studio" && view !== "grammar" && view !== "course" && view !== "atlas" && <select
               className="study-level"
               aria-label={t("Study level")}
@@ -995,6 +1002,7 @@ export default function StudyApp({
                           <ArrowRight size={17} />
                         </button>
                         {s === "meaning" && <button className="secondary" onClick={()=>startReview("meaning",true)}>{t("Extra recognition practice")}</button>}
+                        {s === "meaning" && <><button className="secondary" onClick={()=>startReview('meaning','all')}>{allWordsCopy.replace('{0}',String(studyItems.length))}</button><small className="review-all-note">{allWordsNote}</small></>}
                       </section>
                     );
                   },
@@ -1099,7 +1107,7 @@ export default function StudyApp({
                     db={db?.name === "chinese-os-v1-" + (user?.id ?? "guest") ? db : null}
                     runId={recognitionRun} queue={(session ?? [selected]).map(i => sourceItems.find(source => source.id === i.id)!)}
                     record={record} notify={notify} practice={recognitionPractice} onWrite={setRecognitionWriting} onPosition={index => {
-                      if (session) {setSessionIndex(index); setSelected(session[index]);}
+                      if (session) {setSessionIndex(index); if(session[index])setSelected(session[index]);}
                     }}/>
                 ) : (
                   <Recall

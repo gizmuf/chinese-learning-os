@@ -1,6 +1,6 @@
 "use client";
-import {useEffect, useRef, useState} from 'react';
-import {ArrowLeft, ArrowRight, Volume2} from 'lucide-react';
+import {useEffect, useRef, useState, type MouseEvent} from 'react';
+import {ArrowLeft, ArrowRight, BookOpen, Volume2} from 'lucide-react';
 import type {Item} from './content';
 import {getCards, type LearningEvent} from './learning';
 import {allEvents, readDraft} from './local-store';
@@ -47,10 +47,14 @@ export default function RecognitionReview({db, runId, queue, record, notify, onP
   practice?: boolean; onWrite?: (item: Item) => void; draftKey?:string; inputLabel?:string;
 }) {
   const {t, locale} = useI18n();
+  const copy={en:{lookup:'Look up',tap:'Tap the card to reveal the next step'},fr:{lookup:'Consulter',tap:'Touchez la carte pour révéler la suite'},ru:{lookup:'Посмотреть значение',tap:'Нажмите на карточку, чтобы открыть следующий шаг'},tr:{lookup:'Anlamına bak',tap:'Sonraki adımı görmek için karta dokunun'}}[locale];
   const [draft, setDraft] = useState<RecognitionDraft|null>(null);
   const current = useRef<RecognitionDraft|null>(null);
   const [busy, setBusy] = useState(false);
   const lock = useRef(false), alive = useRef(true), helped = useRef(false);
+  const pointer=useRef({id:-1,x:0,y:0,moved:false});
+  const firstRating=useRef<HTMLButtonElement|null>(null),ratingFocus=useRef<string|null>(null);
+  useEffect(()=>{const id=draft?.itemIds[draft.index];if(ratingFocus.current&&ratingFocus.current!==id)ratingFocus.current=null;if(id&&ratingFocus.current===id&&draft?.attempts[id]?.phase===3){ratingFocus.current=null;firstRating.current?.focus({preventScroll:true});}},[draft]);
   const position = useRef(onPosition); position.current = onPosition;
   const storage = useRef(db); storage.current = db;
   const dictionaryHelp = useDictionaryAssistance(() => {
@@ -105,6 +109,13 @@ export default function RecognitionReview({db, runId, queue, record, notify, onP
     catch {if (alive.current) notify(t('Could not save this review. Please try again.'));}
     finally {lock.current = false; if (alive.current) setBusy(false);}
   }
+  async function reveal(e?:MouseEvent<HTMLElement>) {
+    if(e?.detail&&pointer.current.moved)return;
+    const d=current.current;if(!d||lock.current)return;
+    const id=d.itemIds[d.index],a=d.attempts[id];if(!a||a.saved||a.phase===3)return;
+    if(a.phase===2&&e?.detail===0)ratingFocus.current=id;
+    await update({...d,attempts:{...d.attempts,[id]:{...a,assisted:a.assisted||helped.current,phase:a.phase===1?2:3}}});
+  }
   function move(delta: number) {
     const d = current.current;
     if (!d) return;
@@ -123,7 +134,7 @@ export default function RecognitionReview({db, runId, queue, record, notify, onP
     lock.current = true; setBusy(true);
     const event = a.event ?? {id: crypto.randomUUID(), itemId: id, skill: 'meaning', mode: 'recall', rating,
       assisted: !!d.practice || a.assisted || helped.current, at: Date.now(), timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      detail: {duration: Date.now() - a.started, input: inputLabel ?? 'hanzi > pinyin > English; self-assessed'}} satisfies LearningEvent;
+      detail: {duration: Date.now() - a.started, input: inputLabel ?? 'self-assessed recall'}} satisfies LearningEvent;
     const pending = {...d, attempts: {...d.attempts, [id]: {...a, event}}};
     try {
       // Persist the UUID, rating and timestamp before attempting the event write.
@@ -145,7 +156,11 @@ export default function RecognitionReview({db, runId, queue, record, notify, onP
   if (!draft) return <section ref={dictionaryHelp} className="panel" role="status">{t('Loading your notebook…')}</section>;
   const id = draft.itemIds[draft.index], item = queue.find(i => i.id === id), a = draft.attempts[id];
   const finished = draft.index === draft.itemIds.length;
-  return <section ref={dictionaryHelp} className="recall-card panel" data-study-assessment={a?.phase === 3 ? 'complete' : 'supported'} aria-busy={busy}>
+  return <section ref={dictionaryHelp} className="recall-card panel" data-study-assessment={a?.phase === 3 ? 'complete' : 'supported'} aria-busy={busy}
+    onPointerDownCapture={e=>{if(e.isPrimary!==false)pointer.current={id:e.pointerId,x:e.clientX,y:e.clientY,moved:false};}}
+    onPointerMoveCapture={e=>{const p=pointer.current;if(p.id===e.pointerId&&Math.hypot(e.clientX-p.x,e.clientY-p.y)>10)p.moved=true;}}
+    onPointerCancelCapture={()=>{pointer.current.moved=true;}}
+    onClick={e=>{const target=e.target as Element;if(target.closest?.('button,a,input,select,textarea,summary,canvas,svg,[role="button"],[contenteditable="true"]'))return;void reveal(e);}}>
     <div className="recognition-navigation">
       <button className="secondary" disabled={busy || draft.index === 0} onClick={() => move(-1)}><ArrowLeft size={16}/>{t('Previous')}</button>
       <span>{Math.min(draft.index + 1, draft.itemIds.length)} / {draft.itemIds.length}</span>
@@ -155,21 +170,21 @@ export default function RecognitionReview({db, runId, queue, record, notify, onP
     {draft.last && <p role="status">{draft.last.hanzi} · {draft.practice ? t('Review schedule unchanged') :
       draft.last.due ? t('Next review: {0}', [new Date(draft.last.due).toLocaleString(locale)]) : t('Guided / assisted practice')}</p>}
     {finished ? <><h2>{t('Session complete')}</h2><p>{draft.itemIds.length} {draft.practice ? t('words practised. Review schedule unchanged.') : t('words reviewed. Your next reviews are scheduled.')}</p></> : item && a && <>
-      <span className="pill">{t(a.assisted || draft.practice ? 'Guided / assisted practice' : 'Self-assessed recall')}</span>
-      <div className="recall-hanzi"><StudyText text={item.hanzi} whole/></div>
-      {a.phase >= 2 && <p className="pinyin">{item.pinyin}</p>}
-      {a.phase < 3 ? <button className="primary" disabled={busy} onClick={() => void update({...draft, attempts: {...draft.attempts,
-        [id]: {...a, assisted: a.assisted || helped.current, phase: a.phase === 1 ? 2 : 3}}})}>
-        {t(a.phase === 1 ? 'Show pinyin' : 'Show English meaning')}<ArrowRight size={16}/></button> : <>
-        <div className="revealed-answer"><h2>{item.english}</h2><p>{item.sentence}</p><p className="pinyin">{item.sentencePinyin}</p><small>{item.translation}</small>
+      <div className="recognition-tools"><span className="pill">{t(a.assisted || draft.practice ? 'Guided / assisted practice' : 'Self-assessed recall')}</span><span className="recognition-lookup"><BookOpen size={16} aria-hidden="true"/>{copy.lookup} <StudyText text={item.hanzi} whole/></span></div>
+      {a.phase < 3 ? <button type="button" className="recall-reveal" disabled={busy} aria-label={t(a.phase===1?'Show pinyin':'Show English meaning')} onClick={e=>void reveal(e)}>
+        <span className="recall-hanzi" lang="zh-Hans">{item.hanzi}</span>{a.phase===2&&<span className="pinyin">{item.pinyin}</span>}
+        <span className="recall-action-label">{t(a.phase===1?'Show pinyin':'Show English meaning')}<ArrowRight size={16}/></span><small>{copy.tap}</small>
+      </button> : <>
+        <div className="recall-face"><div className="recall-hanzi"><StudyText text={item.hanzi} whole/></div><p className="pinyin">{item.pinyin}</p><p className="recognition-meaning" role="status">{item.english}</p></div>
+        <div className="revealed-answer"><div className="recognition-example" data-study-source-id={'vocabulary:'+item.id+':sentence'} data-study-sentence={item.sentence} data-study-pinyin={item.sentencePinyin} data-study-meaning={item.translation}><p lang="zh-Hans"><StudyText text={item.sentence} pinyin={item.sentencePinyin}/></p><p className="pinyin">{item.sentencePinyin}</p><p>{item.translation}</p></div>
           <button className="text-button" onClick={() => speak(item.sentence, notify, item)}><Volume2 size={14}/>{t('Listen to example')}</button>
         </div>
         {onWrite && <button className="secondary" disabled={busy} onClick={() => onWrite(item)}>{t('Try writing')}</button>}
         {a.saved ? <><p role="status">{t('Already rated · viewing only')} · {t(ratingNames[a.event!.rating - 1])}</p>
           {a.due && <p>{t('Next review: {0}', [new Date(a.due).toLocaleString(locale)])}</p>}</> : <>
-          <p className="rating-instruction">{t('Rate what you remembered before revealing.')}</p>
+          <div className="recognition-rating-zone"><p className="rating-instruction">{t('Rate what you remembered before revealing.')}</p>
           {a.event ? <button className="primary" disabled={busy} onClick={() => void rate(a.event!.rating as 1|2|3|4)}>{t('Retry saving review')}</button> :
-            <div className="ratings">{ratingNames.map((name, i) => <button key={name} disabled={busy} className={'rating rating-' + (i + 1)} onClick={() => void rate((i + 1) as 1|2|3|4)}><strong>{t(name)}</strong><small>{t(ratingHelp[i])}</small></button>)}</div>}
+            <div className="ratings">{ratingNames.map((name, i) => <button key={name} ref={i===0?firstRating:undefined} disabled={busy} className={'rating rating-' + (i + 1)} onClick={() => void rate((i + 1) as 1|2|3|4)}><strong>{t(name)}</strong><small>{t(ratingHelp[i])}</small></button>)}</div>}</div>
         </>}
       </>}
     </>}

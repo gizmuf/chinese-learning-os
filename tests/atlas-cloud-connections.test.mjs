@@ -71,9 +71,9 @@ test('Renderer is accessible inline content with neutral full-glyph fallbacks, n
   const render = props => m.renderToStaticMarkup(m.createElement(m.CloudHighlight, props));
   const whole = render({ hanzi: '亻', component: 'person', className: 'test-highlight' });
   assert.match(whole, /role="img"/); assert.match(whole, /aria-label="亻"/); assert.match(whole, /class="test-highlight"/);
-  assert.match(whole, /data-cloud-highlight="whole"/); assert.match(whole, /var\(--cloud-shared,#b4423c\)/);
+  assert.match(whole, /data-cloud-highlight="whole"/); assert.match(whole, /var\(--cloud-shared,#557761\)/);
   const neutral = render({ hanzi: '北', component: 'spoon' });
-  assert.match(neutral, /data-cloud-highlight="none"/); assert.match(neutral, />北<\/span>/); assert.doesNotMatch(neutral, /<svg|<path|b4423c/);
+  assert.match(neutral, /data-cloud-highlight="none"/); assert.match(neutral, />北<\/span>/); assert.doesNotMatch(neutral, /<svg|<path|557761/);
   const word = render({ hanzi: '你好', component: 'person' });
   assert.match(word, /aria-label="你好"/); assert.match(word, />你<\/span>/); assert.match(word, />好<\/span>/);
   const named = render({ hanzi: '\uf5fb', component: '\uf5fb' });

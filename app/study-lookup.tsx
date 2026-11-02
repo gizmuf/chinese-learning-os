@@ -1,4 +1,5 @@
 'use client';
+import {canonicalDictionaryText,isSimplifiedHeadword,simplifiedDisplayText} from './simplified-chinese';
 import {lazy,Suspense,useCallback,useEffect,useId,useMemo,useRef,useState,type ReactNode,type RefObject} from 'react';
 import {Volume2,X} from 'lucide-react';
 import {useI18n} from './i18n';
@@ -35,7 +36,7 @@ function assessmentAllows(trigger:Element,mark=true){
 export default function StudyLookupProvider({children,notify,penOnly,setPenOnly,owner=null,db=null}:{owner?:string|null;db?:IDBDatabase|null;children:ReactNode;notify:(s:string)=>void;penOnly:boolean;setPenOnly:(v:boolean)=>void}){
  const {locale,t}=useI18n(),baseDictionary=useMemo(()=>appStudyDictionary(locale),[locale]);
  const [resources,setResources]=useState<Awaited<ReturnType<typeof loadDictionaryResources>>|null>(null),[extra,setExtra]=useState<Map<string,DictionaryEntry>>(()=>new Map());
- const dictionary=useMemo(()=>{const result=new Map(baseDictionary);if(resources)for(const [text,entry] of resources.characters){const old=result.get(text);result.set(text,{...entry,...old,pinyin:old?.pinyin||entry.pinyin,meaning:old?.meaning&&!/not recorded|not.*dictionary/i.test(old.meaning)?old.meaning:entry.meaning,structure:old?.structure??entry.structure});}for(const [text,entry] of extra){const old=result.get(text);result.set(text,{...entry,...old,senses:entry.senses,pinyin:old?.pinyin||entry.pinyin,meaning:old?.meaning&&!/not recorded|not.*dictionary/i.test(old.meaning)?old.meaning:entry.meaning});}if(resources)registerDictionaryLexicon(result,resources.headwords);return result;},[baseDictionary,resources,extra]);
+ const dictionary=useMemo(()=>{const result=new Map([...baseDictionary].filter(([text])=>isSimplifiedHeadword(text)));if(resources)for(const [text,entry] of resources.characters){const old=result.get(text);result.set(text,{...entry,...old,pinyin:old?.pinyin||entry.pinyin,meaning:old?.meaning&&!/not recorded|not.*dictionary/i.test(old.meaning)?old.meaning:entry.meaning,structure:old?.structure??entry.structure});}for(const [text,entry] of extra){const old=result.get(text);result.set(text,{...entry,...old,senses:entry.senses,pinyin:old?.pinyin||entry.pinyin,meaning:old?.meaning&&!/not recorded|not.*dictionary/i.test(old.meaning)?old.meaning:entry.meaning});}if(resources)registerDictionaryLexicon(result,resources.headwords);return result;},[baseDictionary,resources,extra]);
  const latestDictionary=useRef(dictionary);latestDictionary.current=dictionary;
  const requests=useRef(0),activeContext=useRef<DictionaryContext|undefined>(undefined);
  useEffect(()=>{let alive=true;void loadDictionaryResources().then(value=>{if(alive)setResources(value);}).catch(()=>{});return()=>{alive=false;requests.current++;};},[]);
@@ -50,22 +51,23 @@ export default function StudyLookupProvider({children,notify,penOnly,setPenOnly,
  function close(){requests.current++;activeContext.current=undefined;stop();setEntry(null);requestAnimationFrame(()=>opener.current?.isConnected&&opener.current.focus({preventScroll:true}));}
  const open=useCallback((text:string,trigger:HTMLElement)=>{
   if(!assessmentAllows(trigger))return;
+  const canonical=canonicalDictionaryText(text);if(!canonical){notify(({en:'No unambiguous simplified dictionary entry is available.',fr:'Aucune entrée simplifiée non ambiguë n’est disponible.',ru:'Нет однозначной статьи в упрощённом написании.',tr:'Belirsiz olmayan bir basitleştirilmiş sözlük maddesi bulunamadı.'}[locale]));return;}text=canonical;
   const fromAtlas=!!trigger.closest('.context-atlas-dialog');
   const inside=!!dialog.current?.open;
   if(fromAtlas){opener.current=trigger;activeContext.current=sourceContext(trigger)??atlasRef.current?.entry.contextual;dialog.current?.close();requestAnimationFrame(()=>{if(dialog.current&&!dialog.current.open)dialog.current.showModal();});}
   if(!inside){opener.current=trigger;activeContext.current=sourceContext(trigger)??atlasRef.current?.entry.contextual;}
   const nestedSource=sourceContext(trigger);if(nestedSource)activeContext.current=nestedSource;
   stopAudio();stop();const token=++requests.current,context=activeContext.current;
-  const present=(value:DictionaryEntry)=>{let selected=contextualDictionaryEntry(value,context);if(Array.from(selected.text).length===1&&!studyAtlasHref(selected))selected.atlasAvailable=false;selected=contextualAudio(selected,selected.contextual?qwenCurriculumClip('my-day-01-v2',selected.contextual.text):undefined);return selected;};
+  const present=(value:DictionaryEntry)=>{let selected=contextualDictionaryEntry({...value,meaning:simplifiedDisplayText(value.meaning)},context);if(Array.from(selected.text).length===1&&!studyAtlasHref(selected))selected.atlasAvailable=false;selected=contextualAudio(selected,selected.contextual?qwenCurriculumClip('my-day-01-v2',selected.contextual.text):undefined);return selected;};
   const localEntry=()=>studyLookupEntry(latestDictionary.current,text,locale,!!trigger.closest('[data-grammar-frame]'))??(context?.text===text?{text,pinyin:context.pinyin,meaning:context.meaning,phrase:true}:undefined);
   const local=localEntry();
   setEntry(present(local?{...local,...(!local.meaning?{lookupStatus:'loading' as const}:{})}:{text,pinyin:'',meaning:'',lookupStatus:validDictionaryText(text)?'loading':'not-found'}));
   if(!validDictionaryText(text))return;
   void fetchDictionaryEntry(text).then(remote=>{if(token!==requests.current)return;const available=localEntry();if(remote){setExtra(old=>new Map(old).set(text,remote));setEntry(present({...remote,...available,senses:remote.senses,pinyin:available?.pinyin||remote.pinyin,meaning:available?.meaning&&!/not recorded|not.*dictionary/i.test(available.meaning)?available.meaning:remote.meaning}));}else setEntry(present(available?.meaning?available:{...available,text,pinyin:available?.pinyin??'',meaning:'',lookupStatus:'not-found'}));}).catch(()=>{if(token!==requests.current)return;const available=localEntry();setEntry(present(available?.meaning?available:{...available,text,pinyin:available?.pinyin??'',meaning:'',lookupStatus:'error'}));});
- },[dictionary,locale]);
+ },[dictionary,locale,notify]);
  function listen(recording:Pronunciation){stop();const player=playRecording(recording.source,notify);audio.current=player;setPlaying(recording.source);player.addEventListener('ended',()=>{if(audio.current===player){audio.current=null;setPlaying(null);}},{once:true});}
  useEffect(()=>{requests.current++;setEntry(null);setWriting('');setAtlas(null);stop();return()=>{if(audio.current)releaseRecording(audio.current);};},[locale,owner]);
- useEffect(()=>{hydratingUI.current=true;try{const saved=restoreContextSession(sessionStorage.getItem(contextSessionKey(owner,locale)),location.pathname+location.search,locale);if(saved){activeContext.current=saved.entry.contextual;setEntry(saved.entry);setAtlas(saved);}}catch{}restoredUI.current=true;},[owner,locale]);
+ useEffect(()=>{hydratingUI.current=true;try{const saved=restoreContextSession(sessionStorage.getItem(contextSessionKey(owner,locale)),location.pathname+location.search,locale);if(saved&&isSimplifiedHeadword(saved.entry.text)){activeContext.current=saved.entry.contextual;setEntry(saved.entry);setAtlas(saved);}}catch{}restoredUI.current=true;},[owner,locale]);
  useEffect(()=>{if(!restoredUI.current)return;if(hydratingUI.current){hydratingUI.current=false;return;}try{const key=contextSessionKey(owner,locale);if(atlas)sessionStorage.setItem(key,JSON.stringify(atlas));else sessionStorage.removeItem(key);}catch{}},[atlas,owner,locale]);
  useEffect(()=>{if(writing){if(!writer.current?.open)writer.current?.showModal();}else writer.current?.close();},[writing]);
  function closeWriting(){setWriting('');stopAudio();requestAnimationFrame(()=>writingTrigger.current?.isConnected&&writingTrigger.current.focus({preventScroll:true}));}

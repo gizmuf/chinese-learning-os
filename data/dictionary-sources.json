@@ -6,7 +6,10 @@
     "license": "CC BY-SA 4.0",
     "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
     "sha256": "31b9443682a1c0da94f8d4d296f58c2f989313ee26e64fb862336e6d3c84c486",
-    "headwords": 197154
+    "headwords": 120774,
+    "rawHeadwordForms": 197154,
+    "simplifiedOnly": true,
+    "policySHA256": "700c70049222409aaac77b513202499035da2a0e486f8bcbc5b90758d9ea4410"
   },
   "characters": {
     "name": "Make Me a Hanzi",
@@ -15,5 +18,5 @@
     "sha256": "744bb05d5b0742e9ee35c37791f94d56a173349b3367569e7ca11e510364d203",
     "characters": 9574
   },
-  "changes": "Han-only headword index and selected character fields, gzip-compressed. Modern structure, not historical etymology."
+  "changes": "Canonical simplified Han-only headwords; exact whole-entry aliases and reading-aware ambiguous aliases derived from pinned CC-CEDICT. Raw source and factual modern IDS remain unchanged. No curriculum identities added."
 }

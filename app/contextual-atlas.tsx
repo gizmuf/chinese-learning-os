@@ -4,6 +4,7 @@ import type {Item} from './content';
 import type {DictionaryEntry} from './atlas-spatial-model';
 import {readCloudRoute,cloudRouteHref,type CloudRoute} from './atlas-cloud-route';
 import {useAtlasProgress} from './atlas-store';
+import {HanziDisplayControls} from './hanzi-style';
 import {StudyText} from './study-lookup-context';
 import {atlasWritingEntry} from './writing-context-model';
 import {studyAtlasHref} from './study-lookup-model';
@@ -21,7 +22,7 @@ export default function ContextualAtlas({visit,owner,db,penOnly,setPenOnly,notif
  const embedded=useMemo(()=>({route,contextEntry:visit.entry,onRoute:navigate,onAssessmentChange:setAssessment,onContextWrite:(item:Item)=>onWrite(atlasWritingEntry(visit.entry,item,route.kind))}),[route,source]);
  return <dialog ref={modal} className="context-atlas-dialog" aria-label="Atlas alongside your lesson" onScroll={rememberScroll} onCancel={event=>{event.preventDefault();if(!assessment)onClose();}}>
   <header className="context-atlas-top"><button className="secondary" disabled={assessment} onClick={onClose}>← Back to definition</button><strong>Character connections</strong><button className="secondary" disabled={assessment||!trail.length} onClick={()=>{const previous=trail.at(-1);if(previous){setTrail(old=>old.slice(0,-1));setRoute(previous);onChange(previous,trail.slice(0,-1).map(cloudRouteHref),modal.current?.scrollTop??0);}}}>Previous connection</button></header>
-  <details className="context-atlas-views"><summary>Other views · {route.layout}</summary><div className="cloud-view-switch" role="group" aria-label="Context Atlas views">{(['space','family','path','journey','cloud','words','layers','constellations','matrix'] as const).map(layout=><button key={layout} aria-pressed={route.layout===layout} onClick={()=>navigate({...route,layout})}>{({space:'Space + cards',family:'Family + context',path:'Complete path',journey:'Family journey',cloud:'Cloud',words:'Word families',layers:'Layer map',constellations:'Constellations',matrix:'Repetition matrix'})[layout]}</button>)}</div></details>
+  <section className="context-atlas-views" aria-label="Atlas views"><div className="cloud-view-switch" role="group" aria-label="Context Atlas views">{(['space','family','path','journey','cloud','words','layers','constellations','matrix'] as const).map(layout=><button key={layout} aria-pressed={route.layout===layout} onClick={()=>navigate({...route,layout})}>{({space:'3D cards',family:'Family + context',path:'Complete path',journey:'Family journey',cloud:'Cloud',words:'Word families',layers:'Layer map',constellations:'Constellations',matrix:'Repetition matrix'})[layout]}</button>)}</div><HanziDisplayControls compact/></section>
   {source&&<details open className="context-atlas-origin"><summary>Your source sentence</summary><div data-study-sentence={source.text} data-study-pinyin={source.pinyin} data-study-meaning={source.meaning} data-study-source-id={source.sourceId}><p lang="zh-Hans"><StudyText text={source.text} pinyin={source.pinyin}/></p><p className="pinyin">{source.pinyin}</p><p>{source.meaning}</p></div></details>}
   <Suspense fallback={<p role="status">Opening your character connections…</p>}><AtlasCloud owner={owner} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} progress={progress} onWord={embedded.onContextWrite} embedded={embedded}/></Suspense>
  </dialog>;

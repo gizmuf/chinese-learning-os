@@ -50,13 +50,14 @@ test('owner switch cannot expose a former owner checkpoint',async()=>{
  const {r,db}=await mount('companion-owner-one');await click(r,'Show pinyin');const other=await m.openStore('companion-owner-two');
  await m.act(()=>r.update(m.createElement(m.Companion,{owner:'companion-owner-two',db:other,notify(){},onBack(){}})));await settle();assert.ok(button(r,'Show pinyin'));assert.equal((await m.readDraft(db,m.companionDraftKey)).phases[0],2);assert.equal((await m.readDraft(other,m.companionDraftKey)).phases[0],1);await m.act(()=>r.unmount());db.close();other.close();
 });
-test('actual RecognitionReview producer fails the existing server validator in assisted and independent runs; writing fixture remains valid',async()=>{
+test('actual RecognitionReview producer and exact legacy events pass the server validator without changing identity or loosening arbitrary input bounds',async()=>{
  for(const practice of [true,false]){
   const db=await m.openStore('known-gate-'+practice),captured=[],queue=[m.items.find(i=>i.id==='hsk1-161')];let r;
   await m.act(()=>{r=m.renderer.create(m.createElement(m.Review,{db,runId:crypto.randomUUID(),queue,practice,notify(){},onPosition(){},record:async e=>{captured.push(e);await m.putEvents(db,[{...e,synced:false}]);}}));});await settle();
-  await click(r,'Show pinyin');await click(r,'Show English meaning');await click(r,'GoodRecalled correctly');assert.equal(captured.length,1);const e=captured[0];assert.equal(e.assisted,practice);assert.equal(e.detail.input,'hanzi > pinyin > English; self-assessed');assert.equal(e.detail.input.length,39);assert.equal(m.eventSchema.safeParse(e).success,false);
+  await click(r,'Show pinyin');await click(r,'Show English meaning');await click(r,'GoodRecalled correctly');assert.equal(captured.length,1);const e=captured[0];assert.equal(e.assisted,practice);assert.equal(e.detail.input,'self-assessed recall');assert.ok(e.detail.input.length<=30);assert.equal(m.eventSchema.safeParse(e).success,true);
+  const legacy={...e,detail:{...e.detail,input:'hanzi > pinyin > English; self-assessed'}};assert.equal(legacy.detail.input.length,39);assert.deepEqual(m.eventSchema.parse(legacy),legacy);assert.equal(m.eventSchema.safeParse({...e,detail:{...e.detail,input:'x'.repeat(39)}}).success,false);
   assert.equal((await m.allEvents(db))[0].id,e.id);assert.equal((await m.allEvents(db))[0].synced,false);assert.equal(Object.keys(m.getCards(captured)).length,practice?0:1);
-  const writing=m.newEvent(queue[0],'writing','recall',3,true,{input:'pen'});assert.equal(m.eventSchema.safeParse(writing).success,true);assert.equal(m.progressSchema.safeParse({events:[writing,e]}).success,false);
+  const writing=m.newEvent(queue[0],'writing','recall',3,true,{input:'pen'});assert.equal(m.eventSchema.safeParse(writing).success,true);assert.equal(m.progressSchema.safeParse({events:[writing,e,legacy]}).success,true);
   await m.act(()=>r.unmount());db.close();
  }
 });

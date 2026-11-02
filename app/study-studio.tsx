@@ -73,7 +73,7 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
   const examples=studyExamples(item.hanzi,locale,3);
   const selected=state.selected.map(id=>localized.find(item=>item.id===id)!);
   const reviewQueue=state.review?.itemIds.map(id=>localized.find(item=>item.id===id)!)??[];
-  return <section className="study-studio" aria-label="StudyStudio">
+  return <section className={'study-studio'+(state.pane==='cards'?' is-reviewing':'')} aria-label="StudyStudio">
     <div className="ss-toolbar">
       <button onClick={onMenu} aria-expanded={menuOpen} aria-label="Toggle study menu"><Menu size={18}/></button>
       <button disabled={busy||atlasAssessment||!state.trail.length} onClick={()=>{stopAudio();void dispatch(backStudio);}}><ArrowLeft size={15}/>Back</button>

@@ -1,7 +1,8 @@
+import {canonicalDictionaryText,simplifiedDisplayText} from './simplified-chinese';
 import {authoredCharacterReadings} from './pinyin-boundaries';
 import type {Pronunciation,DictionaryEntry} from './atlas-spatial-model';
 export type DictionaryContext={text:string;pinyin:string;meaning:string;sourceId?:string;audio?:Pronunciation};
-export type SourceSense={pinyin:string;meaning:string};
+export type SourceSense={pinyin:string;meaning:string;kind?:'name'|'variant'|'rare'};
 export type SourceCharacter={definition?:string;pinyin?:string[];radical?:string;decomposition?:string};
 export const validDictionaryText=(text:string)=>Array.from(text).length<=40&&/^[\p{Script=Han}]+$/u.test(text);
 export function tonePinyin(value:string){
@@ -14,21 +15,23 @@ export function tonePinyin(value:string){
 }
 export function cedictEntry(source:string,text:string):DictionaryEntry|undefined {
  if(!validDictionaryText(text))return;
+ const canonical=canonicalDictionaryText(text);if(!canonical)return;
  const senses:SourceSense[]=[];
  for(const raw of source.split('\n')){
   const line=raw.trimEnd();
   if(line.startsWith('#'))continue;const first=line.indexOf(' '),second=line.indexOf(' ',first+1);
-  if(line.slice(0,first)!==text&&line.slice(first+1,second)!==text)continue;
+  if(line.slice(first+1,second)!==canonical)continue;
   const match=line.match(/\[([^\]]+)\] \/(.+)\/$/);if(!match)continue;
-  const sense={pinyin:tonePinyin(match[1]),meaning:match[2].split('/').join('; ')};
+  const rawMeaning=match[2].split('/').join('; '),kind=/^[A-Z]/.test(match[1])?'name':/^(old |archaic )?variant of /i.test(rawMeaning)?'variant':/\(rare\)|\(archaic\)/i.test(rawMeaning)?'rare':undefined;
+  const sense:SourceSense={pinyin:tonePinyin(match[1]),meaning:simplifiedDisplayText(rawMeaning),...(kind?{kind}: {})};
   if(!senses.some(s=>s.pinyin===sense.pinyin&&s.meaning===sense.meaning))senses.push(sense);
  }
  if(!senses.length)return;
  const readings=[...new Map(senses.map(s=>[s.pinyin.toLowerCase(),s.pinyin.toLowerCase()])).values()];
- return {text,pinyin:readings.join(' / '),meaning:senses.map(s=>s.meaning).join(' · '),senses,sourceName:'CC-CEDICT · English',sourceURL:'https://www.mdbg.net/chinese/dictionary?page=cedict',...(Array.from(text).length===1?{character:text}:{})};
+ return {text:canonical,pinyin:readings.join(' / '),meaning:senses.map(s=>s.meaning).join(' · '),senses,sourceName:'CC-CEDICT · English',sourceURL:'https://www.mdbg.net/chinese/dictionary?page=cedict',...(Array.from(canonical).length===1?{character:canonical}:{})};
 }
 export function sourceCharacterEntry(text:string,source:SourceCharacter):DictionaryEntry{
- return {text,pinyin:source.pinyin?.join(' / ')??'',meaning:source.definition??'',character:text,sourceName:'Make Me a Hanzi · English',sourceURL:'https://github.com/skishore/makemeahanzi',structure:source.radical&&source.decomposition?{radical:source.radical,decomposition:source.decomposition}:undefined};
+ return {text,pinyin:source.pinyin?.join(' / ')??'',meaning:simplifiedDisplayText(source.definition??''),character:text,sourceName:'Make Me a Hanzi · English',sourceURL:'https://github.com/skishore/makemeahanzi',structure:source.radical&&source.decomposition?{radical:source.radical,decomposition:source.decomposition}:undefined};
 }
 /** Authored alignment may select one attested reading; ambiguous contexts retain all senses. */
 export function contextualDictionaryEntry(entry:DictionaryEntry,context?:DictionaryContext):DictionaryEntry{

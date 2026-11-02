@@ -20,7 +20,7 @@ test('broader rows distinguish missing entry from resource failure and support r
  assert.ok(text(r.toJSON()).includes('diàn yǐ'));assert.ok(text(r.toJSON()).includes('fixture meaning'));await m.act(()=>r.unmount());
 });
 test('only visible rows load, concurrency is bounded, and late responses cannot alter the next page',async()=>{
- const words=Array.from({length:20},(_,i)=>'电'+String.fromCodePoint(0x4e10+i)),r=await mount(words,false,[]);await click(r,'Broader dictionary');assert.equal(m.inspect().requests.length,3);assert.equal(m.inspect().peak,3);
+ const words=Array.from('甲乙丙丁戊己庚辛壬癸子丑寅卯辰巳午未申酉',glyph=>'电'+glyph),r=await mount(words,false,[]);await click(r,'Broader dictionary');assert.equal(m.inspect().requests.length,3);assert.equal(m.inspect().peak,3);
  const old=m.inspect().requests.slice();await click(r,'Next words');assert.equal(m.inspect().requests.length,3);
  await m.act(()=>{for(const word of old)m.complete(word,{text:word,pinyin:'old',meaning:'stale previous page'});});await settle();
  const current=m.inspect().requests.filter(w=>!old.includes(w));assert.equal(current.length,2);assert.equal(m.inspect().peak,3);

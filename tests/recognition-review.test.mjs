@@ -13,7 +13,7 @@ const file=join(mkdtempSync(join(tmpdir(),'recognition-ui-')),'bundle.mjs');writ
 const queue=[{id:'test-1',hanzi:'半',pinyin:'bàn',english:'half',sentence:'现在三点半。',sentencePinyin:'Xiànzài sān diǎn bàn.',translation:'It is half past three now.'},{id:'test-2',hanzi:'水',pinyin:'shuǐ',english:'water',sentence:'我喝水。',sentencePinyin:'Wǒ hē shuǐ.',translation:'I drink water.'}];
 const text=r=>JSON.stringify(r.toJSON());
 function label(node){return node.children.map(v=>typeof v==='string'?v:label(v)).join('');}
-const button=(r,name)=>r.root.findAllByType('button').find(b=>label(b)===name);
+const button=(r,name)=>r.root.findAllByType('button').find(b=>label(b)===name||b.props['aria-label']===name);
 const tick=()=>new Promise(r=>setTimeout(r,5));
 async function settle(){await m.act(async()=>{await tick()});}
 async function until(fn){for(let i=0;i<100;i++){if(fn())return;await settle();}assert.fail('UI did not reach expected state');}
@@ -22,6 +22,22 @@ async function mount({db,runId,record,practice=false}){let root;await m.act(asyn
 async function reveal(r){await click(r,'Show pinyin');await click(r,'Show English meaning');}
 async function unmount(r){await m.act(()=>r.unmount());}
 async function setup(name){const db=await m.openStore('recognition-test-'+name);return {db,record:async e=>m.putEvents(db,[{...e,synced:false}])};}
+
+test('whole card reveals one stage per tap, never rates, and leaves controls and drag gestures alone',async()=>{
+ const env=await setup('whole-card'),root=await mount({...env,runId:'whole-card'});
+ const card=()=>root.root.findByProps({className:'recall-card panel'});
+ const tap={detail:1,target:{closest:()=>null}};
+ assert.equal(typeof card().props.onClick,'function');
+ await m.act(async()=>{await card().props.onClick({...tap,target:{closest:()=>({})}});await tick()});
+ assert.ok(button(root,'Show pinyin'));
+ await m.act(async()=>{card().props.onPointerDownCapture({pointerId:1,clientX:100,clientY:100});card().props.onPointerMoveCapture({pointerId:1,clientX:160,clientY:102});await card().props.onClick(tap);await tick()});
+ assert.ok(button(root,'Show pinyin'));
+ await m.act(async()=>{card().props.onPointerDownCapture({pointerId:2,clientX:100,clientY:100});await card().props.onClick(tap);await tick()});await until(()=>!!button(root,'Show English meaning'));
+ assert.ok(text(root).includes('bàn'));assert.ok(!text(root).includes('half'));assert.equal((await m.allEvents(env.db)).length,0);
+ await click(root,'Show English meaning');assert.ok(text(root).includes('half'));
+ await m.act(async()=>{await card().props.onClick(tap);await tick()});assert.equal((await m.allEvents(env.db)).length,0);
+ await unmount(root);env.db.close();
+});
 
 test('actual card stages hide pinyin, meaning and example until requested; one double-tap rating advances after commit and Back is read-only',async()=>{
  const env=await setup('stages');let release,calls=0;const gate=new Promise(r=>release=r);

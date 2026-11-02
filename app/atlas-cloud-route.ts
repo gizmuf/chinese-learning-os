@@ -1,3 +1,4 @@
+import {canonicalDictionaryText} from './simplified-chinese';
 import {validWordAnchor} from './word-family-model';
 import { extendedComponent } from './atlas-cloud-extended';
 import { cloudRelation, type CloudRelation } from './atlas-cloud-connections';
@@ -13,7 +14,7 @@ export type CloudRoute = {
 export const initialCloudRoute:CloudRoute = {familyLab:false,hanzi:'明',component:'sun',word:'',kind:'character',level:'all',parts:[],collection:'library',nested:false,stage:'character',layout:'family',cards:'focus',relation:'all',anchor:'学',wordView:'board',familyEntry:'',wordCompare:false,wordMemory:false,mapSet:'family',mapPart:'',mapWordPage:0,mapCharPage:0};
 
 export function readCloudRoute(search:string):CloudRoute {
-  const p=new URLSearchParams(search),h=p.get('hanzi')??'明',l=p.get('hsk');
+  const p=new URLSearchParams(search),h=canonicalDictionaryText(p.get('hanzi')??'明')??'明',l=p.get('hsk');
   const requested=p.get('stage'),kind=p.get('focus')==='word'?'word':'character',layout=p.get('layout')??'';
   const page=(key:string)=>{const n=Number(p.get(key));return Number.isSafeInteger(n)&&n>=0?Math.min(n,100000):0};
   const stage=requested==='family'||requested==='sentence'?requested:kind==='word'?'word':'character';
@@ -21,7 +22,7 @@ export function readCloudRoute(search:string):CloudRoute {
   return {familyLab:layout==='words'&&p.get('familylab')==='1',hanzi:/^[\u3400-\u9fff]$/.test(h)?h:'明',component:extendedComponent(p.get('part')??'')?p.get('part')!:'sun',word:p.get('word')??'',kind,
     level:l==='1'?1:l==='2'?2:l==='3'?3:'all',parts:[...new Set((p.get('with')??'').split(',').filter(id=>extendedComponent(id)))].slice(0,3),
     collection:p.get('collection')==='atlas'?'atlas':'library',nested:p.get('deep')==='1',stage,
-    anchor:wordCompare?'哪':validWordAnchor(p.get('anchor')??'')?p.get('anchor')!:'学',wordView,familyEntry:(p.get('entry')??'').slice(0,100),wordCompare,wordMemory:p.get('memory')==='1',cards:p.get('cards')==='compare'?'compare':'focus',layout:isHybridLayout(layout)?layout:layout==='journey'?'journey':layout==='words'?'words':layout==='space'?'space':layout==='cloud'?'cloud':layout==='path'?'path':'family',relation:relation==='meaning'||relation==='sound'||relation==='shape'?relation:'all',
+    anchor:wordCompare?'哪':validWordAnchor(canonicalDictionaryText(p.get('anchor')??'')??'')?canonicalDictionaryText(p.get('anchor')!)!:'学',wordView,familyEntry:(p.get('entry')??'').slice(0,100),wordCompare,wordMemory:p.get('memory')==='1',cards:p.get('cards')==='compare'?'compare':'focus',layout:isHybridLayout(layout)?layout:layout==='journey'?'journey':layout==='words'?'words':layout==='space'?'space':layout==='cloud'?'cloud':layout==='path'?'path':'family',relation:relation==='meaning'||relation==='sound'||relation==='shape'?relation:'all',
     mapSet:p.get('mapset')==='hundred'?'hundred':p.get('mapset')==='scope'?'scope':'family',mapPart:Array.from(p.get('mappart')??'').length===1?p.get('mappart')!:'',mapWordPage:page('wordpage'),mapCharPage:page('charpage')};
 }
 export function cloudRouteHref(route:CloudRoute):string {
