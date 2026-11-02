@@ -66,7 +66,7 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
   function navigate(pane:StudioPane){
     if(atlasAssessment)return;
     stopAudio();
-    if(pane==='cards'){command('Ćwicz fiszki');return;}
+    if(pane==='cards'){command('Practise flashcards');return;}
     void dispatch(s=>visitStudio(s,{pane}));
   }
   function write(item:Item){if(!atlasAssessment)void dispatch(s=>visitStudio(s,{pane:'writing',itemId:item.id,mode:'watch'}));}

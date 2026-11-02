@@ -40,8 +40,8 @@ async function click(r,text){const b=button(r,text);assert.ok(b,text);await m.ac
 test('reading toggles and sentence rehearsal never record events; optional writing and practice use canonical words',async()=>{
  const events=[];let r;await m.act(()=>{r=m.renderer.create(m.createElement(m.Lesson,{db:{},record:async e=>events.push(e),notify(){},onBack(){}}));});
  const checkbox=r.root.findAllByType('input');
- assert.ok(JSON.stringify(r.toJSON()).includes(canonical[0]));
- await m.act(()=>checkbox[0].props.onChange({target:{checked:false}}));assert.ok(!JSON.stringify(r.toJSON()).includes(canonical[0]));
+ assert.ok(label(r.root).includes(canonical[0]));
+ await m.act(()=>checkbox[0].props.onChange({target:{checked:false}}));assert.ok(!label(r.root).includes(canonical[0]));
  await m.act(()=>checkbox[1].props.onChange({target:{checked:false}}));await m.act(()=>checkbox[2].props.onChange({target:{checked:false}}));
  assert.ok(r.root.findAllByProps({role:'status'}).length);
  await click(r,'One sentence at a time');assert.ok(label(r.root.findByProps({'aria-live':'polite'}))==='Sentence 1 / 26');

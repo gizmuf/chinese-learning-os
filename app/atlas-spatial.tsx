@@ -1,4 +1,5 @@
 'use client';
+import {useStudyLookup} from './study-lookup-context';
 import {withTurkish} from "./turkish";
 import {useEffect,useMemo,useRef,useState,type CSSProperties,type ReactNode} from 'react';
 import {ArrowLeft,ArrowRight,ChevronLeft,ChevronRight,Grid2X2,Layers,PenLine,Volume2,X} from 'lucide-react';
@@ -40,6 +41,7 @@ export default function AtlasSpatial(p:Props){
  const groupMotion=useSpatialMotion(p.mode+'|'+p.hanzi+'|'+p.component);
  const deckMotion=useDeckMotion(p.mode+'|'+p.hanzi+'|'+p.component,move);
  const motion=p.mode==='focus'?deckMotion:groupMotion;
+ const sharedLookup=useStudyLookup();
  const [page,setPage]=useState(0),[overview,setOverview]=useState(false),[moreWords,setMoreWords]=useState(false),[entry,setEntry]=useState<DictionaryEntry|null>(null),[playing,setPlaying]=useState<string|null>(null);
  const dialog=useRef<HTMLDialogElement>(null),opener=useRef<HTMLElement|null>(null),audioRef=useRef<HTMLAudioElement|null>(null);
  const familyKey=p.family.map(ch=>ch.hanzi).join('');
@@ -57,7 +59,7 @@ export default function AtlasSpatial(p:Props){
  function closeDirectory(){setDirectoryOpen(false);requestAnimationFrame(()=>directoryTrigger.current?.isConnected&&directoryTrigger.current.focus())}
 
  function closeDictionary(){setEntry(null);if(audioRef.current){releaseRecording(audioRef.current);audioRef.current=null;setPlaying(null)}requestAnimationFrame(()=>opener.current?.isConnected&&opener.current.focus())}
- function lookup(text:string,trigger:HTMLElement){if(!dialog.current?.open)opener.current=trigger;setEntry(dictionary.get(text)??{text,pinyin:'',meaning:c('Not yet in this study dictionary.','Pas encore dans ce dictionnaire d’étude.','Пока нет в учебном словаре.')})}
+ function lookup(text:string,trigger:HTMLElement){if(sharedLookup){sharedLookup.open(text,trigger);return;}if(!dialog.current?.open)opener.current=trigger;setEntry(dictionary.get(text)??{text,pinyin:'',meaning:c('Not yet in this study dictionary.','Pas encore dans ce dictionnaire d’étude.','Пока нет в учебном словаре.')})}
  function text(text:string){return <DictionaryWords text={text} dictionary={dictionary} onLookup={lookup}/>;}
  function move(direction:-1|1){const next=spatialNext(p.family.length,selectedIndex,p.mode,direction);if(next<0||next===selectedIndex)return false;return motion.transition(direction,()=>p.onCharacter(p.family[next].hanzi))}
  const relationLabels={all:c('All connections','Tous les liens','Все связи'),meaning:c('Meaning clue','Indice de sens','Подсказка смысла'),sound:c('Sound clue','Indice sonore','Подсказка звучания'),shape:c('Shape / unreviewed','Forme / non vérifié','Форма / не проверено')};

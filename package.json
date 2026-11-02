@@ -15,7 +15,8 @@
     "prebuild": "node scripts/build-translations.mjs && node scripts/prepare-learning-assets.mjs",
     "predev": "node scripts/build-translations.mjs && node scripts/prepare-learning-assets.mjs",
     "test": "node --test tests/*.test.mjs",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "postbuild": "node scripts/finalize-client-assets.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

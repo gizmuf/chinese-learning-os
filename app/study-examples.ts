@@ -4,7 +4,7 @@ import {lesson08Sentences,lesson08Audio} from './lesson08-data';
 import {lesson07Sentences,lesson07Audio} from './lesson07-data';
 import type {Locale} from './translate';
 import {cloudWords} from './atlas-cloud-model';
-import {sentencePronunciation,type DictionaryEntry,type StudyDictionary,type Pronunciation,dictionaryTokens} from './atlas-spatial-model';
+import {sentencePronunciation,type DictionaryEntry,type StudyDictionary,type Pronunciation,dictionaryTokens,inheritDictionaryLexicon} from './atlas-spatial-model';
 import {sentences} from './course-data';
 import {lesson04Sentences} from './lesson04-data';
 import {lesson05Sentences} from './lesson05-data';
@@ -40,7 +40,7 @@ export function studyExamples(text:string,locale:Locale,limit=2,priority=''):Stu
 }
 export function dictionaryBreakdown(entry:DictionaryEntry,dictionary:StudyDictionary,locale:Locale='en'){
  const sentence=/[。！？!?，,；;]/u.test(entry.text),phrase=entry.phrase===true;
- const tokens=sentence||phrase?dictionaryTokens(entry.text,new Map([...dictionary].filter(([text])=>text!==entry.text))):Array.from(entry.text).map(text=>({text,chinese:/\p{Script=Han}/u.test(text)}));
+ const tokens=sentence||phrase?dictionaryTokens(entry.text,inheritDictionaryLexicon(dictionary,new Map([...dictionary].filter(([text])=>text!==entry.text))),entry.text):Array.from(entry.text).map(text=>({text,chinese:/\p{Script=Han}/u.test(text)}));
  return {sentence,phrase,parts:tokens.filter(t=>t.chinese).map(t=>{
   let detail=dictionary.get(t.text);
   const ending=new Set(['一点儿','有点儿','哪儿','这儿','那儿','玩儿']);

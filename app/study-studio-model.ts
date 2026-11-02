@@ -18,11 +18,11 @@ const panes = new Set(['atlas','writing','vocabulary','cards','day']);
 const modes = new Set(['watch','trace','copy','recall']);
 export const dayItemIds = ['hsk1-167','hsk1-081','hsk1-086','hsk1-250'];
 export const studioFixtures = [
-  {label:'Pokaż rodzinę znaków z 木', command:{tool:'atlas.open',itemId:'hsk1-081',character:'林',component:'wood'}},
-  {label:'Chcę poćwiczyć pisanie 回', command:{tool:'writing.open',itemId:'hsk1-081',mode:'watch'}},
-  {label:'Dodaj słowa do ćwiczeń', command:{tool:'vocabulary.select',itemIds:dayItemIds}},
-  {label:'Mój dzień', command:{tool:'examples.open'}},
-  {label:'Ćwicz fiszki', command:{tool:'flashcards.open'}},
+  {label:'Explore the 木 character family', command:{tool:'atlas.open',itemId:'hsk1-081',character:'林',component:'wood'}},
+  {label:'Practise writing 回', command:{tool:'writing.open',itemId:'hsk1-081',mode:'watch'}},
+  {label:'Add words to practice', command:{tool:'vocabulary.select',itemIds:dayItemIds}},
+  {label:'My day', command:{tool:'examples.open'}},
+  {label:'Practise flashcards', command:{tool:'flashcards.open'}},
 ] as const;
 export function fixtureCommand(text:string,actionId:string):StudioCommand|null {
   const fixture=studioFixtures.find(f=>f.label.toLocaleLowerCase()===text.trim().toLocaleLowerCase());

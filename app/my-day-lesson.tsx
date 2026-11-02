@@ -25,9 +25,9 @@ export default function MyDayLesson({db,record,notify,onBack}:{db:IDBDatabase|nu
   function renderRow(row:{hanzi:string;pinyin:string;english:string},number?:number){
     const audio=number!==undefined?myDaySentenceAudio(row.hanzi):undefined;
     const qwen=number!==undefined?qwenCurriculumClip('my-day-01-v2',row.hanzi):undefined;
-    return <article key={row.hanzi} className="md-sentence">
+    return <article key={row.hanzi} className="md-sentence" data-study-sentence={row.hanzi} data-study-pinyin={row.pinyin} data-study-meaning={row.english}>
       {number!==undefined&&<span className="md-number">{String(number+1).padStart(2,'0')}</span>}
-      {hanzi&&<div className="md-hanzi" lang="zh-Hans"><StudyText text={row.hanzi}/></div>}
+      {hanzi&&<div className="md-hanzi" lang="zh-Hans"><StudyText text={row.hanzi} pinyin={row.pinyin}/></div>}
       {pinyin&&<p className="md-pinyin" lang="zh-Latn-pinyin">{row.pinyin}</p>}
       {english&&<p className="md-english" lang="en">{row.english}</p>}
       {(qwen||audio)&&<button className="text-button" aria-pressed={!!qwen&&recording.playing===qwen.source} onClick={()=>qwen?recording.play(qwen.source):audio&&speak(row.hanzi,notify,audio)}><Volume2 size={15}/>Listen to this sentence</button>}
