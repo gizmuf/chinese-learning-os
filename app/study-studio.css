@@ -59,15 +59,12 @@
 .ss-companion>header>svg{color:var(--ss-blue)}
 .ss-companion strong{font-size:13px}
 .ss-companion>header button{margin-left:auto;background:none;border:0;padding:0;min-height:28px}
+.ss-fixture-note{padding:12px 18px;margin:0;border-bottom:1px solid var(--ss-line);font-size:12px;line-height:1.5;color:var(--ss-muted)}
 .ss-context{padding:12px 18px;background:#f8faff;border-bottom:1px solid var(--ss-line);font-size:11px;color:var(--ss-muted);margin:0}
 .ss-companion-body{padding:18px}
 .ss-companion-body>p{font-size:13px;line-height:1.65;color:#52647e;margin:0 0 18px}
 .ss-suggestions{display:flex;flex-direction:column;gap:7px}
 .ss-suggestions button{justify-content:space-between;text-align:left;padding:10px 12px;border:1px solid var(--ss-line);border-radius:8px;background:white;color:#335b9d;font-size:12px}
-.ss-companion form{display:flex;gap:6px;padding:12px;border-top:1px solid var(--ss-line)}
-.ss-companion input{width:100%;min-width:0;border:0;background:#f3f6fb;padding:10px;border-radius:6px;font-size:12px}
-.ss-companion form button{padding:6px 11px;background:var(--ss-blue);border:0;color:white;border-radius:6px}
-.ss-companion>small{display:block;text-align:center;font-size:10px;padding:0 10px 14px;color:var(--ss-muted)}
 .ss-error{padding:14px;background:#fff2e9;border:1px solid #e5bfa7;border-radius:10px}
 .ss-assessment-note{font-size:13px;color:var(--ss-muted)}
 @media(min-width:1200px){.ss-with-companion{grid-template-columns:minmax(0,1fr) 300px}.ss-companion{position:sticky;top:20px}}

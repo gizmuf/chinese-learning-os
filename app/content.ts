@@ -4285,7 +4285,7 @@ export const items: Item[] = [
     "pinyin": "de",
     "english": "complement particle (de)",
     "sentence": "她说得很好。",
-    "sentencePinyin": "Tā shuō dé hěn hǎo。",
+    "sentencePinyin": "Tā shuō de hěn hǎo。",
     "translation": "She speaks very well.",
     "hskEntry": 332,
     "hskLevel": 2

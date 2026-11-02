@@ -6,6 +6,8 @@ import json,re
 from pathlib import Path
 from pypinyin import lazy_pinyin,Style,load_phrases_dict
 # Common unstressed syllables are written without a tone mark.
+# 得 introducing the degree complement in this authored example is neutral de.
+load_phrases_dict({"她说得很好":[["tā"],["shuō"],["de"],["hěn"],["hǎo"]]})
 load_phrases_dict({"教我们":[["jiāo"],["wǒ"],["men"]],"去过":[["qù"],["guo"]],"吃过":[["chī"],["guo"]],"不客气":[["bù"],["kè"],["qi"]],"不好意思":[["bù"],["hǎo"],["yì"],["si"]],"多少":[["duō"],["shao"]],"时候":[["shí"],["hou"]]})
 ROOT=Path(__file__).resolve().parents[1]
 def load(name):return json.loads((ROOT/'data'/name).read_text())

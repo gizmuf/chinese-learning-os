@@ -15,7 +15,7 @@ import type {LearningEvent} from './learning';
 import {applyStudioCommand,backStudio,claimStudio,dayItemIds,fixtureCommand,studioFixtures,visitStudio,writeStudio,type StudioCheckpoint,type StudioPane} from './study-studio-model';
 import './study-studio.css';
 const AtlasCloud=lazy(()=>import('./atlas-cloud'));
-const paneNames:Record<StudioPane,string>={atlas:'Character atlas',writing:'Writing',vocabulary:'Vocabulary',cards:'Flashcards',day:'My day'};
+const paneNames:Record<StudioPane,string>={atlas:'Character atlas',writing:'Writing',vocabulary:'Vocabulary',cards:'Flashcards',day:'Movement examples'};
 type Props={owner:string|null;db:IDBDatabase|null;penOnly:boolean;setPenOnly:(value:boolean)=>void;notify:(message:string)=>void;record:(event:LearningEvent)=>Promise<void>;onExit:()=>void;onMyDay?:()=>void;onCompanion?:()=>void;onPrivate?:()=>void;onShuoshuoLesson?:()=>void;menuOpen:boolean;onMenu:()=>void};
 
 /** Additive workspace: all learning and ink still belong to the existing modules. */
@@ -23,7 +23,7 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
   const {locale}=useI18n();
   const progress=useAtlasProgress(owner);
   const [state,setState]=useState<StudioCheckpoint|null>(null),current=useRef<StudioCheckpoint|null>(null);
-  const [busy,setBusy]=useState(false),[error,setError]=useState(''),[open,setOpen]=useState(false),[prompt,setPrompt]=useState(''),[reply,setReply]=useState('Choose a suggested command to connect your study tools.');
+  const [busy,setBusy]=useState(false),[error,setError]=useState(''),[open,setOpen]=useState(false),[reply,setReply]=useState('Choose one of the five predefined actions below.');
   const [atlasAssessment,setAtlasAssessment]=useState(false);
   const [writerVisited,setWriterVisited]=useState(false),[atlasVisited,setAtlasVisited]=useState(false);
   const generation=useRef(0),alive=useRef(false),tasks=useRef(Promise.resolve()),pending=useRef(0);
@@ -58,10 +58,9 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
   function command(text:string){
     if(atlasAssessment)return;
     const input=fixtureCommand(text,crypto.randomUUID());
-    if(!input){setReply('These are example commands, without live AI. Choose one of the suggestions below.');return;}
+    if(!input){setReply('Choose one of the five predefined actions below. No live AI is connected.');return;}
     void dispatch(s=>applyStudioCommand(s,input,crypto.randomUUID()));
     setReply(input.tool==='flashcards.open'?'Selected words use extra practice. Your independent review schedule stays unchanged.':input.tool==='atlas.open'?'Explore the real Atlas. Shared shapes are not automatically shared meanings or sounds.':input.tool==='writing.open'?'Watch, trace, copy, then write from memory. Your drawing stays saved when you leave.':'Using the existing course vocabulary and authored examples.');
-    setPrompt('');
   }
   function navigate(pane:StudioPane){
     if(atlasAssessment)return;
@@ -84,7 +83,7 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
     {error&&<p className="ss-error" role="alert">{error}</p>}
     <div className="ss-heading"><div><p className="ss-eyebrow">A CONNECTED WAY TO LEARN</p><h1>One connection at a time.</h1><p>Your atlas, writing and words, together.</p></div>
       <button className="ss-companion-toggle" onClick={()=>setOpen(!open)} aria-expanded={open} aria-controls="ss-companion"><MessageCircle size={17}/>Study companion</button></div>
-    {onMyDay&&<button className="ss-personal-lesson" onClick={onMyDay} disabled={busy||atlasAssessment}><BookOpen size={16}/>My day · Day 01 V2 · Open lesson<ArrowRight size={15}/></button>}
+    {onMyDay&&<button className="ss-personal-lesson" onClick={onMyDay} disabled={busy||atlasAssessment}><BookOpen size={16}/>My Day · Day 01 V2 · 26 sentences · Open lesson<ArrowRight size={15}/></button>}
     {onShuoshuoLesson&&<button className="ss-personal-lesson" onClick={onShuoshuoLesson} disabled={busy||atlasAssessment}><BookOpen size={16}/>A morning with Shuoshuo · Full lesson · 42 groups<ArrowRight size={15}/></button>}
     <nav className="ss-tabs" aria-label="StudyStudio tools">{(Object.keys(paneNames) as StudioPane[]).map(pane=><button key={pane} aria-current={state.pane===pane?'page':undefined} disabled={busy||atlasAssessment} onClick={()=>navigate(pane)}>{paneNames[pane]}</button>)}</nav>
     {atlasAssessment&&<p className="ss-assessment-note" role="status">Atlas quiz in progress. Finish or cancel it in the Atlas before opening another tool.</p>}
@@ -100,18 +99,17 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
           }}>Practice selected words<ArrowRight size={16}/></button></div>
         </div>
         {state.review&&<div hidden={state.pane!=='cards'} className="ss-cards"><RecognitionReview key={state.review.id} db={db} runId={state.review.id} queue={reviewQueue} practice record={record} notify={notify} onPosition={()=>{}} onWrite={write}/></div>}
-        <div hidden={state.pane!=='day'} className="ss-panel ss-day"><header><h2>From home to school, and back</h2><span>Existing lesson examples</span></header>
+        <div hidden={state.pane!=='day'} className="ss-panel ss-day"><header><h2>Movement examples</h2><span>4 existing course examples · 去, 回, 家, 学校</span></header>
           {dayItemIds.map(id=>localized.find(i=>i.id===id)!).map(word=><article key={word.id}><p className="ss-eyebrow">{word.english}</p><div lang="zh-Hans" className="ss-sentence"><StudyText text={word.sentence}/></div><p>{word.sentencePinyin}</p><p>{word.translation}</p><div className="ss-row-actions"><button onClick={()=>speak(word.sentence,notify,word)}><Volume2 size={16}/>Listen</button><button onClick={()=>write(word)}><PenLine size={16}/>Write {word.hanzi}</button></div></article>)}
         </div>
         {state.pane==='writing'&&state.mode!=='recall'&&<div className="ss-examples">{examples.map(example=><article key={example.id}><div lang="zh-Hans"><StudyText text={example.text}/></div><p>{example.pinyin}</p><p>{example.meaning}</p></article>)}</div>}
       </div>
       {open&&<aside className="ss-companion" id="ss-companion" aria-label="Study companion" onKeyDown={e=>{if(e.key==='Escape'){setOpen(false);e.stopPropagation();}}}>
         <header><Sparkles size={18}/><strong>Study companion</strong><button aria-label="Close companion" onClick={()=>setOpen(false)}><X size={18}/></button></header>
+        <p className="ss-fixture-note">Five predefined actions · no live AI connected</p>
         <p className="ss-context">Working in <b>{paneNames[state.pane]}</b></p>
         <div className="ss-companion-body"><p role="status">{atlasAssessment?'Focus on your quiz. Study commands are paused until you finish or cancel it.':reply}</p>
           <div className="ss-suggestions">{studioFixtures.map(f=><button key={f.label} disabled={busy||atlasAssessment} onClick={()=>command(f.label)}>{f.label}<ArrowRight size={14}/></button>)}</div></div>
-        <form onSubmit={e=>{e.preventDefault();command(prompt);}}><input value={prompt} onChange={e=>setPrompt(e.target.value)} aria-label="Example study command" placeholder="Choose or type an example command" maxLength={160}/><button disabled={busy||atlasAssessment||!prompt.trim()} aria-label="Run example command"><ArrowRight size={17}/></button></form>
-        <small>Example commands · no live AI connected</small>
       </aside>}
     </div>
   </section>;

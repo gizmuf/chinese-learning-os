@@ -35,6 +35,7 @@ export default function Writing({
   audio,
   supported = false,
   nextLabel,
+  contextExample = false,
 }: {
   item: Item;
   mode: Mode;
@@ -50,6 +51,7 @@ export default function Writing({
   audio?: {word?:string;sentence?:string};
   supported?: boolean;
   nextLabel?: string;
+  contextExample?: boolean;
 }) {
   const { t, locale } = useI18n();
   function listen(kind:'word'|'sentence') {
@@ -66,6 +68,7 @@ export default function Writing({
   const [revealed, setRevealed] = useState(false);
   const [replay, setReplay] = useState(0);
   const [completed, setCompleted] = useState<Set<number>>(new Set());
+  const [unavailable,setUnavailable]=useState<Set<number>>(new Set());
   const [saved, setSaved] = useState(false);
   const [saving, setSaving] = useState(false);
   const saveLock=useRef(false);
@@ -128,7 +131,7 @@ export default function Writing({
   const free = mode === "copy" || mode === "recall";
   const allWritten = free
     ? strokes.every((s) => s.length > 0)
-    : completed.size === characters.length;
+    : completed.size === characters.length&&unavailable.size===0;
   function changeStrokes(s: Stroke[]) {
     setStrokes((old) => old.map((v, i) => (i === index ? s : v)));
   }
@@ -237,6 +240,7 @@ export default function Writing({
               penOnly={penOnly}
               replay={replay}
               onMistake={() => setMistakes((n) => n + 1)}
+              onAvailabilityChange={available=>setUnavailable(previous=>{const next=new Set(previous);if(available)next.delete(index);else next.add(index);return next;})}
               onComplete={() =>
                 setCompleted((prev) => new Set([...prev, index]))
               }
@@ -244,7 +248,7 @@ export default function Writing({
           )}
         </div>
         <p className="canvas-caption">
-          {completed.has(index) && !free
+          {completed.has(index) && !unavailable.has(index) && !free
             ? t("✓ Character complete. Choose the next cell.")
             : mode === "watch"
               ? t("Follow the stroke order. Replay whenever you like.")
@@ -347,7 +351,7 @@ export default function Writing({
               >
                 <Volume2 size={17} /> {t("Hear pronunciation")}</button>
               {item.sentence && <div className="reference-example">
-                <span className="eyebrow">{t("IN EVERYDAY LIFE")}</span>
+                <span className="eyebrow">{contextExample?"IN YOUR SOURCE SENTENCE":t("IN EVERYDAY LIFE")}</span>
                 <p>{item.sentence}</p>
                 <p className="pinyin">{item.sentencePinyin}</p>
                 <small>{item.translation}</small>

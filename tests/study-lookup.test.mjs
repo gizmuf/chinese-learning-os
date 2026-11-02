@@ -24,3 +24,5 @@ test('Journey context provides separate keyboard-accessible word targets and pre
  assert.match(module.exports.word,/>出国<\/button>/);assert.match(module.exports.lookup,/aria-label="Definition: 出国"/);
  assert.doesNotMatch(html,/<button[^>]*>(?:(?!<\/button>)[\s\S])*<button/);
 });
+
+test("degree-complement example uses neutral de while keeping the original curriculum identity",()=>{const entry=d.get("得");assert.equal(entry.word.item.id,"hsk2-332");assert.equal(entry.word.item.sentence,"她说得很好。");assert.equal(entry.word.item.sentencePinyin,"Tā shuō de hěn hǎo。");});

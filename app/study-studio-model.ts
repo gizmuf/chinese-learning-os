@@ -21,11 +21,13 @@ export const studioFixtures = [
   {label:'Explore the 木 character family', command:{tool:'atlas.open',itemId:'hsk1-081',character:'林',component:'wood'}},
   {label:'Practise writing 回', command:{tool:'writing.open',itemId:'hsk1-081',mode:'watch'}},
   {label:'Add words to practice', command:{tool:'vocabulary.select',itemIds:dayItemIds}},
-  {label:'My day', command:{tool:'examples.open'}},
+  {label:'Movement examples', command:{tool:'examples.open'}},
   {label:'Practise flashcards', command:{tool:'flashcards.open'}},
 ] as const;
 export function fixtureCommand(text:string,actionId:string):StudioCommand|null {
-  const fixture=studioFixtures.find(f=>f.label.toLocaleLowerCase()===text.trim().toLocaleLowerCase());
+  // Keep the old fixture name compatible; stored checkpoint pane/IDs are unchanged.
+  const label=text.trim().toLocaleLowerCase();
+  const fixture=studioFixtures.find(f=>f.label.toLocaleLowerCase()===(label==='my day'?'movement examples':label));
   return fixture ? {...fixture.command,actionId} as StudioCommand : null;
 }
 export function initialStudio():StudioCheckpoint {

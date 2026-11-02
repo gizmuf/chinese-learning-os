@@ -14,10 +14,10 @@ test('licensed dictionary parsing supports CRLF, compounds, traditional forms an
  assert.equal(m.tonePinyin('nu:3 peng2 you5 xue2 xiao4 lv4 shui3'), 'nǚ péng you xué xiào lǜ shuǐ');
 });
 test('authored MyDay source selects děi, removes mismatched isolated audio, and does not invent other contexts',()=>{
- const row=JSON.parse(readFileSync('data/my-day-01-v2.json')).sections.flatMap(s=>s.rows)[5],entry={...m.cedictEntry(fixture,'得'),audio:{source:'wrong-de.mp3'}};
- const selected=m.contextualDictionaryEntry(entry,{text:row.hanzi,pinyin:row.pinyin,meaning:row.english});assert.equal(selected.pinyin,'děi');assert.match(selected.meaning,/must/);assert.equal(selected.audio,undefined);
+ const row=JSON.parse(readFileSync('data/my-day-01-v2.json')).sections.flatMap(s=>s.rows)[5],entry={...m.cedictEntry(fixture,'得'),audio:{source:'wrong-de.mp3'},word:{id:'particle-de',pinyin:'de'}};
+ const selected=m.contextualDictionaryEntry(entry,{text:row.hanzi,pinyin:row.pinyin,meaning:row.english});assert.equal(selected.pinyin,'děi');assert.match(selected.meaning,/must/);assert.equal(selected.audio,undefined);assert.equal(selected.word,undefined);
  const particle=m.contextualDictionaryEntry(entry,{text:'他跑得快。',pinyin:'Tā pǎo de kuài.',meaning:'He runs fast.'});assert.equal(particle.pinyin,'de');assert.equal(particle.meaning,'structural particle');
- const ambiguous=m.contextualDictionaryEntry(entry,{text:'我觉得我得去学校。',pinyin:'Wǒ juéde wǒ děi qù xuéxiào.',meaning:'I think I must go to school.'});assert.equal(ambiguous,entry);
+ const ambiguous=m.contextualDictionaryEntry(entry,{text:'我觉得我得去学校。',pinyin:'Wǒ juéde wǒ děi qù xuéxiào.',meaning:'I think I must go to school.'});assert.equal(ambiguous.pinyin,entry.pinyin);assert.deepEqual(ambiguous.senses,entry.senses);assert.equal(ambiguous.contextual.text,'我觉得我得去学校。');
 });
 test('real modern IDS operators become readable layout names without tofu or invented origins',()=>{
  assert.deepEqual(m.describeStructure('⿰彳⿱旦寸'),{description:'Left–right: (彳 + Top–bottom: (旦 + 寸))',parts:['彳','旦','寸']});

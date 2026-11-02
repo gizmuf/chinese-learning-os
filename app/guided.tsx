@@ -10,6 +10,7 @@ export default function Guided({
   replay,
   onComplete,
   onMistake,
+  onAvailabilityChange,
 }: {
   character: string;
   mode: "watch" | "trace";
@@ -17,16 +18,18 @@ export default function Guided({
   replay: number;
   onComplete: () => void;
   onMistake: () => void;
+  onAvailabilityChange?: (available:boolean) => void;
 }) {
   const { t, locale } = useI18n();
   const host = useRef<HTMLDivElement>(null);
   const penPreference=useRef(penOnly);penPreference.current=penOnly;
-  const callbacks = useRef({ onComplete, onMistake });
-  callbacks.current = { onComplete, onMistake };
-  const [error, setError] = useState(false);
+  const callbacks = useRef({ onComplete, onMistake, onAvailabilityChange });
+  callbacks.current = { onComplete, onMistake, onAvailabilityChange };
+  const [error, setError] = useState(false),[retry,setRetry]=useState(0);
   useEffect(() => {
     const node = host.current!;
-    let cancelled = false;
+    let cancelled = false,loaded=false;
+    callbacks.current.onAvailabilityChange?.(false);
     let writer: HanziWriter | undefined;
     let pointerTarget:WritingSvgTarget|undefined;
     setError(false);
@@ -53,9 +56,12 @@ export default function Guided({
         );
         if(r.status===404)r=await fetch("/api/character-data?"+new URLSearchParams({character:char}),{cache:"force-cache"});
         if (!r.ok) throw Error("Missing character data");
-        return (await r.json()) as CharacterJson;
+        const data=await r.json() as CharacterJson;
+        if(!Array.isArray(data.strokes)||!data.strokes.length||!Array.isArray(data.medians)||data.strokes.length!==data.medians.length)throw Error('Invalid character data');
+        if(!cancelled){loaded=true;callbacks.current.onAvailabilityChange?.(true);}
+        return data;
       },
-      onLoadCharDataError: () => setError(true),
+      onLoadCharDataError: () => {loaded=false;if(!cancelled){setError(true);callbacks.current.onAvailabilityChange?.(false);}},
     });
     const resize = new ResizeObserver(() => {
       const width = node.getBoundingClientRect().width;
@@ -67,15 +73,15 @@ export default function Guided({
       writer
         .animateCharacter()
         .then(() => {
-          if (!cancelled) callbacks.current.onComplete();
+          if (!cancelled&&loaded) callbacks.current.onComplete();
         })
         .catch(() => {
-          if (!cancelled) setError(true);
+          if (!cancelled){loaded=false;setError(true);callbacks.current.onAvailabilityChange?.(false);}
         });
     else
       writer.quiz({
-        onMistake: () => callbacks.current.onMistake(),
-        onComplete: () => callbacks.current.onComplete(),
+        onMistake: () => {if(!cancelled&&loaded)callbacks.current.onMistake();},
+        onComplete: () => {if(!cancelled&&loaded)callbacks.current.onComplete();},
       });
     return () => {
       cancelled = true;
@@ -84,7 +90,7 @@ export default function Guided({
       pointerTarget?.dispose();
       node.replaceChildren();
     };
-  }, [character, mode, replay]);
+  }, [character, mode, replay,retry]);
   return (
     <>
       <div
@@ -94,7 +100,7 @@ export default function Guided({
       />
       {error && (
         <div className="canvas-notice">
-          {t("Character data unavailable. Reconnect and retry.")}</div>
+          {t("Character data unavailable. Reconnect and retry.")}<button type="button" className="secondary" onClick={()=>setRetry(value=>value+1)}>Retry character data</button></div>
       )}
     </>
   );

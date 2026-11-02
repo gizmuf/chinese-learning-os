@@ -54,6 +54,22 @@ test('reading toggles and sentence rehearsal never record events; optional writi
 });
 test('lesson has both catalog entry points and a separate rehearsal route, without changing canonical curriculum',()=>{
  const shell=readFileSync('app/study-app.tsx','utf8'),studio=readFileSync('app/study-studio.tsx','utf8');
- assert.ok(shell.includes('rehearsal=my-day-01-v2'));assert.ok(shell.includes('Open My day lesson'));assert.ok(studio.includes('Day 01 V2 · Open lesson'));
+ assert.ok(shell.includes('rehearsal=my-day-01-v2'));assert.ok(shell.includes('Open My day lesson'));assert.ok(studio.includes('26 sentences · Open lesson'));
  assert.ok(!readFileSync('app/content.ts','utf8').includes('my-day-01-v2'));
+});
+test('meaning groups retain all source identities, contextual text and reveal layers without learning writes',async()=>{
+ const events=[];let r;await m.act(()=>{r=m.renderer.create(m.createElement(m.Lesson,{db:null,record:async e=>events.push(e),notify(){},onBack(){}}));});
+ await click(r,'Meaning groups');
+ const rows=r.root.findAll(n=>n.props.className==='md-sentence'&&n.props['data-study-source-id']);
+ assert.equal(rows.length,26);
+ for(const [i,row] of rows.entries()){
+  assert.equal(row.props['data-study-source-id'],'my-day-01-v2:'+(i+1));
+  assert.equal(row.props['data-study-sentence'],canonical[i]);
+  assert.ok(row.props['data-study-pinyin']);assert.ok(row.props['data-study-meaning']);
+  const groups=row.findAll(n=>n.props.className==='md-chunk');assert.ok(groups.length>0);assert.equal(groups.map(label).join(''),canonical[i]);
+ }
+ const layers=r.root.findAllByType('input');await m.act(()=>layers[1].props.onChange({target:{checked:false}}));
+ await click(r,'Plain sentence');assert.equal(r.root.findAllByType('input')[1].props.checked,false);
+ await click(r,'One sentence at a time');assert.equal(r.root.findAll(n=>n.props['data-study-source-id']==='my-day-01-v2:1').length,1);
+ assert.deepEqual(events,[]);await m.act(()=>r.unmount());
 });

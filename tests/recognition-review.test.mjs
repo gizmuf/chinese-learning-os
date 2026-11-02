@@ -17,7 +17,7 @@ const button=(r,name)=>r.root.findAllByType('button').find(b=>label(b)===name);
 const tick=()=>new Promise(r=>setTimeout(r,5));
 async function settle(){await m.act(async()=>{await tick()});}
 async function until(fn){for(let i=0;i<100;i++){if(fn())return;await settle();}assert.fail('UI did not reach expected state');}
-async function click(r,name){assert.ok(button(r,name),name);await m.act(async()=>{await button(r,name).props.onClick();await tick()});await until(()=>!r.root.findByType('section').props['aria-busy']);}
+async function click(r,name){await until(()=>!!button(r,name)&&!button(r,name).props.disabled&&!r.root.findByType('section').props['aria-busy']);assert.ok(button(r,name),name);await m.act(async()=>{await button(r,name).props.onClick();await tick()});await until(()=>!r.root.findByType('section').props['aria-busy']);}
 async function mount({db,runId,record,practice=false}){let root;await m.act(async()=>{root=m.renderer.create(m.createElement(m.Review,{db,runId,queue,record,practice,notify(){},onPosition(){}}))});await until(()=>button(root,'Show pinyin')||button(root,'Previous')&&!text(root).includes('Loading your notebook'));return root;}
 async function reveal(r){await click(r,'Show pinyin');await click(r,'Show English meaning');}
 async function unmount(r){await m.act(()=>r.unmount());}

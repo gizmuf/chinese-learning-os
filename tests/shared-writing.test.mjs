@@ -50,3 +50,24 @@ test('explicit silent companion audio and ungraded save adapter preserve the exi
  await click(r,'4Recall');await ready();await m.act(async()=>r.root.findByType('ink-stub').props.onChange([ink]));await settle();await click(r,'Compare answer');await click(r,'GoodRecalled correctly');await ready();
  assert.equal(saves,1);assert.equal(events.length,0);await m.act(()=>r.unmount());db.close();
 });
+
+test('selected contextual sense keeps the exact source example and sentence audio through writing modes',async()=>{
+ const contextual={sourceId:'my-day-01-v2:6',text:'早饭后，我准备出门，因为我得去学校。',pinyin:'Zǎofàn hòu, wǒ zhǔnbèi chūmén, yīnwèi wǒ děi qù xuéxiào.',meaning:'After breakfast, I get ready to leave home because I have to go to school.',audio:{text:'早饭后，我准备出门，因为我得去学校。',pinyin:'Zǎofàn hòu, wǒ zhǔnbèi chūmén, yīnwèi wǒ děi qù xuéxiào.',source:'/exact-source.mp3',context:true,kind:'sentence'}};
+ const {r,db,events}=await mount('得',{pinyin:'děi',meaning:'must / have to',contextual});
+ assert.ok(JSON.stringify(r.toJSON()).includes(contextual.text));assert.ok(!JSON.stringify(r.toJSON()).includes('她说得很好'));
+ const examples=r.root.findAllByType('button').filter(b=>label(b).trim()==='Listen to example');assert.equal(examples.length,1);assert.equal(examples[0].props.disabled,false);
+ await click(r,'3Copy');await ready();assert.ok(JSON.stringify(r.toJSON()).includes(contextual.text));
+ await click(r,'4Recall');await ready();assert.ok(!JSON.stringify(r.toJSON()).includes(contextual.text));
+ await m.act(async()=>r.root.findByType('ink-stub').props.onChange([ink]));await settle();await click(r,'Compare answer');await click(r,'GoodRecalled correctly');await ready();assert.equal(events.length,0,'context-specific sense must not be graded as the canonical particle');
+ await m.act(async()=>r.unmount());db.close();
+});
+
+test('a supplied reviewed polyphonic word keeps its own ID instead of the first spelling match',async()=>{
+ const item={id:'hsk3-678',lesson:'travel',hanzi:'还',pinyin:'huán',english:'to return; give back',sentence:'看完这本书以后，请还到图书馆。',sentencePinyin:'Kàn wán zhè běn shū yǐ hòu， qǐng huán dào tú shū guǎn。',translation:'After you finish this book, please return it to the library.'};
+ const {r,db,events}=await mount('还',{item});await click(r,'4Recall');await ready();await m.act(async()=>r.root.findByType('ink-stub').props.onChange([ink]));await settle();await click(r,'Compare answer');await click(r,'GoodRecalled correctly');await ready();assert.equal(events.length,1);assert.equal(events[0].itemId,'hsk3-678');assert.equal(events[0].assisted,true);await m.act(async()=>r.unmount());db.close();
+});
+
+test('unavailable guided data disables saving and clears a stale complete caption',async()=>{
+ const {r,db}=await mount('呆');const guided=()=>r.root.findByType('guided-stub');await m.act(async()=>{guided().props.onAvailabilityChange(true);guided().props.onComplete();});await ready();assert.equal(button(r,'Save practice').props.disabled,false);assert.ok(JSON.stringify(r.toJSON()).includes('Character complete'));
+ await m.act(async()=>guided().props.onAvailabilityChange(false));await ready();assert.equal(button(r,'Save practice').props.disabled,true);assert.ok(!JSON.stringify(r.toJSON()).includes('Character complete'));await m.act(async()=>r.unmount());db.close();
+});
