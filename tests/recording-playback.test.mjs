@@ -1,0 +1,23 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {build} from 'esbuild';
+import {createRequire} from 'node:module';
+import {writeFileSync,mkdtempSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {pathToFileURL} from 'node:url';
+const require=createRequire(import.meta.url);globalThis.require=require;globalThis.IS_REACT_ACT_ENVIRONMENT=true;
+const result=await build({stdin:{contents:`import React from 'react';import {useRecordingPlayback} from './app/use-recording-playback';export const Harness=()=>React.createElement('playback',useRecordingPlayback(()=>{}));export {createElement} from 'react';export {default as renderer,act} from 'react-test-renderer';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent',plugins:[{name:'mock-player',setup(b){b.onResolve({filter:/^(react|react-test-renderer)$/},a=>({path:require.resolve(a.path),external:true}));b.onResolve({filter:/^\.\/audio$/},a=>({path:a.path,namespace:'mock'}));b.onLoad({filter:/.*/,namespace:'mock'},()=>({contents:'export const playRecording=(...args)=>globalThis.playbackTest(...args);'}));}}]});
+const path=join(mkdtempSync(join(tmpdir(),'recording-playback-')),'test.mjs');writeFileSync(path,result.outputFiles[0].text);const m=await import(pathToFileURL(path));
+test('speaker state starts on real playing, resets on errors and ignores stale clip events',async()=>{
+ const players=[];globalThis.playbackTest=()=>{const player=new EventTarget();players.push(player);return player;};
+ let r;await m.act(()=>{r=m.renderer.create(m.createElement(m.Harness));});
+ const props=()=>r.root.findByType('playback').props;
+ await m.act(()=>props().play('/first.wav'));assert.equal(props().playing,null);
+ await m.act(()=>players[0].dispatchEvent(new Event('playing')));assert.equal(props().playing,'/first.wav');
+ await m.act(()=>props().play('/second.wav'));assert.equal(props().playing,null);
+ await m.act(()=>players[1].dispatchEvent(new Event('playing')));assert.equal(props().playing,'/second.wav');
+ await m.act(()=>players[0].dispatchEvent(new Event('ended')));assert.equal(props().playing,'/second.wav');
+ await m.act(()=>players[1].dispatchEvent(new Event('error')));assert.equal(props().playing,null);
+ await m.act(()=>r.unmount());players[1].dispatchEvent(new Event('playing'));delete globalThis.playbackTest;
+});

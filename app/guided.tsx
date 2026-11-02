@@ -47,10 +47,11 @@ export default function Guided({
       strokeAnimationSpeed: 0.7,
       delayBetweenStrokes: 160,
       charDataLoader: async (char): Promise<CharacterJson> => {
-        const r = await fetch(
+        let r = await fetch(
           "/characters/" + encodeURIComponent(char) + ".json",
           { cache: "force-cache" },
         );
+        if(r.status===404)r=await fetch("/api/character-data?"+new URLSearchParams({character:char}),{cache:"force-cache"});
         if (!r.ok) throw Error("Missing character data");
         return (await r.json()) as CharacterJson;
       },

@@ -1,0 +1,19 @@
+{
+  "cedict": {
+    "name": "CC-CEDICT",
+    "url": "https://www.mdbg.net/chinese/dictionary?page=cedict",
+    "download": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz",
+    "license": "CC BY-SA 4.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sha256": "31b9443682a1c0da94f8d4d296f58c2f989313ee26e64fb862336e6d3c84c486",
+    "headwords": 197154
+  },
+  "characters": {
+    "name": "Make Me a Hanzi",
+    "url": "https://github.com/skishore/makemeahanzi",
+    "license": "LGPL; existing notices in /licenses/",
+    "sha256": "744bb05d5b0742e9ee35c37791f94d56a173349b3367569e7ca11e510364d203",
+    "characters": 9574
+  },
+  "changes": "Han-only headword index and selected character fields, gzip-compressed. Modern structure, not historical etymology."
+}

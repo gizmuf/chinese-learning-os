@@ -33,11 +33,11 @@ test('allowlisted commands reject invented tools, IDs and modes; exact fixtures 
  assert.equal(m.validStudio({...s,itemId:'unknown'}),false);
 });
 test('commands are idempotent, Back preserves selection and review identity without emitting grades',()=>{
- const c=m.fixtureCommand('Chcę poćwiczyć pisanie 回','write-1');
+ const c=m.fixtureCommand('Practise writing 回','write-1');
  const w=m.applyStudioCommand(m.initialStudio(),c,'run');assert.equal(w.pane,'writing');assert.strictEqual(m.applyStudioCommand(w,c,'run-2'),w);
- const cards=m.applyStudioCommand(w,m.fixtureCommand('Ćwicz fiszki','cards-1'),'pinned-run');
+ const cards=m.applyStudioCommand(w,m.fixtureCommand('Practise flashcards','cards-1'),'pinned-run');
  assert.equal(cards.review.id,'pinned-run');const previous=m.backStudio(cards);assert.equal(previous.pane,'writing');assert.deepEqual(previous.selected,w.selected);assert.equal(previous.review.id,'pinned-run');
- assert.throws(()=>m.applyStudioCommand({...w,selected:[]},m.fixtureCommand('Ćwicz fiszki','empty'),'run'));
+ assert.throws(()=>m.applyStudioCommand({...w,selected:[]},m.fixtureCommand('Practise flashcards','empty'),'run'));
 });
 test('checkpoint restores pane/mode/selection and rejects stale tab writes; owners have separate storage',async()=>{
  const db=await m.openStore('studio-model-a'),other=await m.openStore('studio-model-b');
@@ -52,7 +52,7 @@ test('real workspace retains mounted ink on navigation, restores checkpoint, and
  const db=await m.openStore('studio-component');const events=[],notifications=[];
  const props={owner:null,db,penOnly:true,setPenOnly(){},notify:s=>notifications.push(s),record:async e=>events.push(e),onExit(){},menuOpen:false,onMenu(){}};
  let r;await m.act(async()=>{r=m.renderer.create(m.createElement(m.Studio,props));});await settle();
- await click(r,'Study companion');await click(r,'Chcę poćwiczyć pisanie 回');
+ await click(r,'Study companion');await click(r,'Practise writing 回');
  await m.act(async()=>r.root.findByType('writing-stub').props.setInk('saved strokes'));await settle();
  await m.act(async()=>r.root.findByType('writing-stub').props.onModeChange('recall'));await settle();
  await click(r,'My day');assert.equal(r.root.findByType('writing-stub').props.ink,'saved strokes');
@@ -69,7 +69,7 @@ test('Atlas assessment pauses external commands and Close; failed checkpoint wri
  await m.act(async()=>{r=m.renderer.create(m.createElement(m.Studio,{owner:null,db,penOnly:false,setPenOnly(){},notify(){},record:async()=>{},onExit(){},menuOpen:false,onMenu(){}}));});await settle();
  await click(r,'Study companion');
  const atlas=r.root.findByType('atlas-stub');await m.act(()=>atlas.props.embedded.onAssessmentChange(true));
- assert.equal(button(r,'Writing').props.disabled,true);assert.equal(button(r,'Close').props.disabled,true);assert.equal(button(r,'Mój dzień').props.disabled,true);
+ assert.equal(button(r,'Writing').props.disabled,true);assert.equal(button(r,'Close').props.disabled,true);assert.equal(button(r,'My day').props.disabled,true);
  await m.act(()=>atlas.props.embedded.onAssessmentChange(false));
  await m.claimStudio(db,'takeover');await click(r,'My day');
  assert.ok(r.root.findAllByProps({role:'alert'}).length);assert.equal(r.root.findByProps({className:'ss-atlas'}).props.hidden,false);

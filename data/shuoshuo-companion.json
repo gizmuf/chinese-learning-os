@@ -1,0 +1,28 @@
+{
+  "id": "shuoshuo-vocabulary-companion",
+  "title": "Dzień z Shuoshuo · Vocabulary companion",
+  "scope": "Limited vocabulary companion practice · 10 words and phrases",
+  "source": {
+    "videoId": "V6SrjHDisDs",
+    "videoUrl": "https://youtu.be/V6SrjHDisDs",
+    "authorName": "ShuoshuoChinese",
+    "textEvidenceUrl": "https://baolingo.app/speaking/86a14977f3f626a7",
+    "verificationBasis": "Selected vocabulary identified in third-party Baolingo text associated with this exact YouTube video ID.",
+    "verificationAgainstAudio": false,
+    "timestampsVerified": false,
+    "relationship": "Independent study companion. No partnership or sponsorship is claimed.",
+    "exampleAuthorship": "ChineseOS original practice examples; not quotations from the creator or a reconstruction of the vlog."
+  },
+  "terms": [
+    {"id":"get-up","hanzi":"起床","pinyin":"qǐchuáng","english":"get out of bed","canonicalItemId":"hsk1-161","example":{"hanzi":"我明天七点起床。","pinyin":"Wǒ míngtiān qī diǎn qǐchuáng.","english":"I will get up at seven tomorrow."}},
+    {"id":"brush-teeth","hanzi":"刷牙","pinyin":"shuāyá","english":"brush teeth","canonicalItemId":null,"example":{"hanzi":"我每天都刷牙。","pinyin":"Wǒ měitiān dōu shuāyá.","english":"I brush my teeth every day."}},
+    {"id":"wash-face","hanzi":"洗脸","pinyin":"xǐliǎn","english":"wash face","canonicalItemId":null,"example":{"hanzi":"请先洗脸。","pinyin":"Qǐng xiān xǐliǎn.","english":"Please wash your face first."}},
+    {"id":"boil-water","hanzi":"烧水","pinyin":"shāoshuǐ","english":"boil water","canonicalItemId":null,"example":{"hanzi":"我在厨房烧水。","pinyin":"Wǒ zài chúfáng shāoshuǐ.","english":"I boil water in the kitchen."}},
+    {"id":"brew-coffee","hanzi":"泡咖啡","pinyin":"pào kāfēi","english":"brew coffee","canonicalItemId":null,"example":{"hanzi":"我想给朋友泡咖啡。","pinyin":"Wǒ xiǎng gěi péngyou pào kāfēi.","english":"I want to make coffee for a friend."}},
+    {"id":"balcony","hanzi":"阳台","pinyin":"yángtái","english":"balcony","canonicalItemId":null,"example":{"hanzi":"阳台上有两盆花。","pinyin":"Yángtái shang yǒu liǎng pén huā.","english":"There are two potted plants on the balcony."}},
+    {"id":"read-books","hanzi":"看书","pinyin":"kànshū","english":"read books","canonicalItemId":null,"example":{"hanzi":"我喜欢在图书馆看书。","pinyin":"Wǒ xǐhuan zài túshūguǎn kànshū.","english":"I like reading in the library."}},
+    {"id":"work","hanzi":"工作","pinyin":"gōngzuò","english":"work","canonicalItemId":"hsk1-063","example":{"hanzi":"她今天在家工作。","pinyin":"Tā jīntiān zài jiā gōngzuò.","english":"She is working at home today."}},
+    {"id":"have-class","hanzi":"上课","pinyin":"shàngkè","english":"have or teach class, depending on context","canonicalItemId":"hsk1-177","usageNote":"No speaker role or exact intended sense in the video is inferred here.","example":{"hanzi":"我们星期一上课。","pinyin":"Wǒmen xīngqīyī shàngkè.","english":"We have class on Monday."}},
+    {"id":"rest","hanzi":"休息","pinyin":"xiūxi","english":"rest","canonicalItemId":"hsk1-246","example":{"hanzi":"累了就休息一会儿。","pinyin":"Lèi le jiù xiūxi yíhuìr.","english":"If you are tired, rest for a while."}}
+  ]
+}

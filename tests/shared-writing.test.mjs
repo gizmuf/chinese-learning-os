@@ -43,3 +43,10 @@ test('workspace can restore Recall directly without exposing the model, then cha
  await click(r,'3Copy');await ready();assert.ok(r.root.findByType('ink-stub'));assert.ok(JSON.stringify(r.toJSON()).includes('回'));assert.deepEqual(modes,['copy']);
  await m.act(()=>r.unmount());db.close();
 });
+
+test('explicit silent companion audio and ungraded save adapter preserve the existing full writer without emitting a learning event',async()=>{
+ let saves=0;const {r,db,events}=await mount('水',{audio:{},onSave:async()=>{saves++;}});
+ const pronunciation=r.root.findAllByType('button').find(b=>label(b).trim()==='Hear pronunciation');assert.ok(pronunciation);assert.equal(pronunciation.props.disabled,true);
+ await click(r,'4Recall');await ready();await m.act(async()=>r.root.findByType('ink-stub').props.onChange([ink]));await settle();await click(r,'Compare answer');await click(r,'GoodRecalled correctly');await ready();
+ assert.equal(saves,1);assert.equal(events.length,0);await m.act(()=>r.unmount());db.close();
+});

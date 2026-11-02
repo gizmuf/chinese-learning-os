@@ -1,14 +1,19 @@
 'use client';
-import {createContext,useCallback,useContext,useEffect,useId,useMemo,useRef,useState,type ReactNode,type RefObject} from 'react';
-import {BookOpen,Volume2,X} from 'lucide-react';
+import {useCallback,useEffect,useId,useMemo,useRef,useState,type ReactNode,type RefObject} from 'react';
+import {Volume2,X} from 'lucide-react';
 import {useI18n} from './i18n';
 import {DictionaryAudio,StudyDictionaryDialog} from './study-dictionary';
 import {dictionaryTokens,type DictionaryEntry,type Pronunciation,type StudyDictionary} from './atlas-spatial-model';
-import {appStudyDictionary,studyLookupEntry,lookupAtOffset,studyAssessmentSelector,studyFeedbackSelector} from './study-lookup-model';
+import {appStudyDictionary,studyLookupEntry,lookupAtOffset,studyAssessmentSelector,studyFeedbackSelector,studyAtlasHref} from './study-lookup-model';
+import {loadDictionaryResources,fetchDictionaryEntry} from './dictionary-client';
+import {contextualDictionaryEntry,validDictionaryText,type DictionaryContext} from './dictionary-source-model';
+import {registerDictionaryLexicon} from './atlas-spatial-model';
+import {qwenCurriculumClip} from './qwen-curriculum-audio';
 import {playRecording,releaseRecording,stopAudio} from './audio';
 import SharedWriting from './shared-writing';
 import './study-lookup.css';
-const LookupContext=createContext<{dictionary:StudyDictionary;open:(text:string,trigger:HTMLElement)=>void}|null>(null);
+import {LookupContext} from './study-lookup-context';
+export {StudyText,StudyLookupButton,useStudyLookup} from './study-lookup-context';
 const helpEvent='chinese-os:dictionary-help';
 /** Existing quizzes opt into the dictionary through their existing assisted/hint state. */
 export function useDictionaryAssistance(onHelp:()=>void){
@@ -16,13 +21,6 @@ export function useDictionaryAssistance(onHelp:()=>void){
  useEffect(()=>{const node=ref.current;if(!node)return;const listener=()=>handler.current();node.addEventListener(helpEvent,listener);return()=>node.removeEventListener(helpEvent,listener);},[]);
  return ref;
 }
-export function StudyText({text,anchor='',whole=false}:{text:string;anchor?:string;whole?:boolean}){
- const lookup=useContext(LookupContext);if(!lookup)return <>{text}</>;
- const tokens=whole?[{text,chinese:/\p{Script=Han}/u.test(text)}]:dictionaryTokens(text,lookup.dictionary);
- const marked=(value:string)=>anchor?value.split(anchor).map((part,i)=><span key={i}>{i>0&&<span className="wf-shared">{anchor}</span>}{part}</span>):value;
- return <span className="study-text">{tokens.map((token,i)=>token.chinese?<button type="button" className="study-word" key={i} lang="zh-Hans" onClick={e=>{e.stopPropagation();lookup.open(token.text,e.currentTarget);}}>{marked(token.text)}</button>:<span key={i}>{token.text}</span>)}</span>;
-}
-export function StudyLookupButton({text}:{text:string}){const value=useContext(LookupContext),{locale}=useI18n();return value?<button type="button" className="study-lookup-button" aria-label={({en:'Definition',fr:'Définition',ru:'Значение',tr:'Anlam'})[locale]+': '+text} onClick={e=>{e.stopPropagation();value.open(text,e.currentTarget);}}><BookOpen size={17}/></button>:null;}
 function assessmentAllows(trigger:Element,mark=true){
  const assessment=trigger.closest('[data-study-assessment]');
  if(assessment){if(assessment.getAttribute('data-study-assessment')==='blocked')return false;if(assessment.getAttribute('data-study-assessment')==='supported'&&mark)assessment.dispatchEvent(new Event(helpEvent));return true;}
@@ -31,14 +29,31 @@ function assessmentAllows(trigger:Element,mark=true){
 /** Passive text across every screen uses one shared dialog, without rewriting React's DOM.
  * Existing buttons, answer choices, maps, canvases and writing gestures keep their actions. */
 export default function StudyLookupProvider({children,notify,penOnly,setPenOnly}:{children:ReactNode;notify:(s:string)=>void;penOnly:boolean;setPenOnly:(v:boolean)=>void}){
- const {locale,t}=useI18n(),dictionary=useMemo(()=>appStudyDictionary(locale),[locale]);
+ const {locale,t}=useI18n(),baseDictionary=useMemo(()=>appStudyDictionary(locale),[locale]);
+ const [resources,setResources]=useState<Awaited<ReturnType<typeof loadDictionaryResources>>|null>(null),[extra,setExtra]=useState<Map<string,DictionaryEntry>>(()=>new Map());
+ const dictionary=useMemo(()=>{const result=new Map(baseDictionary);if(resources)for(const [text,entry] of resources.characters){const old=result.get(text);result.set(text,{...entry,...old,pinyin:old?.pinyin||entry.pinyin,meaning:old?.meaning&&!/not recorded|not.*dictionary/i.test(old.meaning)?old.meaning:entry.meaning,structure:old?.structure??entry.structure});}for(const [text,entry] of extra){const old=result.get(text);result.set(text,{...entry,...old,senses:entry.senses,pinyin:old?.pinyin||entry.pinyin,meaning:old?.meaning&&!/not recorded|not.*dictionary/i.test(old.meaning)?old.meaning:entry.meaning});}if(resources)registerDictionaryLexicon(result,resources.headwords);return result;},[baseDictionary,resources,extra]);
+ const latestDictionary=useRef(dictionary);latestDictionary.current=dictionary;
+ const requests=useRef(0),activeContext=useRef<DictionaryContext|undefined>(undefined);
+ useEffect(()=>{let alive=true;void loadDictionaryResources().then(value=>{if(alive)setResources(value);}).catch(()=>{});return()=>{alive=false;requests.current++;};},[]);
  const [entry,setEntry]=useState<DictionaryEntry|null>(null),[playing,setPlaying]=useState<string|null>(null),[writing,setWriting]=useState('');
+ const writingDetail=useRef<DictionaryEntry|null>(null);
  const root=useRef<HTMLDivElement>(null),dialog=useRef<HTMLDialogElement>(null),opener=useRef<HTMLElement|null>(null),audio=useRef<HTMLAudioElement|null>(null),writer=useRef<HTMLDialogElement>(null),heading=useId();
  function stop(){if(audio.current){releaseRecording(audio.current);audio.current=null;}setPlaying(null);}
- function close(){stop();setEntry(null);requestAnimationFrame(()=>opener.current?.isConnected&&opener.current.focus({preventScroll:true}));}
- const open=useCallback((text:string,trigger:HTMLElement)=>{if(!assessmentAllows(trigger))return;if(!dialog.current?.open)opener.current=trigger;stopAudio();stop();setEntry(studyLookupEntry(dictionary,text,locale,!!trigger.closest('[data-grammar-frame]'))??{text,pinyin:'',meaning:t('Not yet in this study dictionary.')});},[dictionary,t,locale]);
+ function close(){requests.current++;activeContext.current=undefined;stop();setEntry(null);requestAnimationFrame(()=>opener.current?.isConnected&&opener.current.focus({preventScroll:true}));}
+ const open=useCallback((text:string,trigger:HTMLElement)=>{
+  if(!assessmentAllows(trigger))return;
+  const inside=!!dialog.current?.open;
+  if(!inside){opener.current=trigger;const source=trigger.closest<HTMLElement>('[data-study-sentence]');activeContext.current=source?{text:source.dataset.studySentence??'',pinyin:source.dataset.studyPinyin??'',meaning:source.dataset.studyMeaning??''}:undefined;}
+  stopAudio();stop();const token=++requests.current,context=activeContext.current;
+  const present=(value:DictionaryEntry)=>{const selected=contextualDictionaryEntry(value,context);if(Array.from(selected.text).length===1&&!studyAtlasHref(selected))selected.atlasAvailable=false;if(selected.contextual){const clip=qwenCurriculumClip('my-day-01-v2',selected.contextual.text);if(clip&&!selected.audio)selected.audio={text:selected.contextual.text,pinyin:selected.contextual.pinyin,source:clip.source,context:true,kind:'sentence'};}return selected;};
+  const localEntry=()=>studyLookupEntry(latestDictionary.current,text,locale,!!trigger.closest('[data-grammar-frame]'))??(context?.text===text?{text,pinyin:context.pinyin,meaning:context.meaning,phrase:true}:undefined);
+  const local=localEntry();
+  setEntry(present(local?{...local,...(!local.meaning?{lookupStatus:'loading' as const}:{})}:{text,pinyin:'',meaning:'',lookupStatus:validDictionaryText(text)?'loading':'not-found'}));
+  if(!validDictionaryText(text))return;
+  void fetchDictionaryEntry(text).then(remote=>{if(token!==requests.current)return;const available=localEntry();if(remote){setExtra(old=>new Map(old).set(text,remote));setEntry(present({...remote,...available,senses:remote.senses,pinyin:available?.pinyin||remote.pinyin,meaning:available?.meaning&&!/not recorded|not.*dictionary/i.test(available.meaning)?available.meaning:remote.meaning}));}else setEntry(present(available?.meaning?available:{...available,text,pinyin:available?.pinyin??'',meaning:'',lookupStatus:'not-found'}));}).catch(()=>{if(token!==requests.current)return;const available=localEntry();setEntry(present(available?.meaning?available:{...available,text,pinyin:available?.pinyin??'',meaning:'',lookupStatus:'error'}));});
+ },[dictionary,locale]);
  function listen(recording:Pronunciation){stop();const player=playRecording(recording.source,notify);audio.current=player;setPlaying(recording.source);player.addEventListener('ended',()=>{if(audio.current===player){audio.current=null;setPlaying(null);}},{once:true});}
- useEffect(()=>{setEntry(null);setWriting('');stop();return()=>{if(audio.current)releaseRecording(audio.current);};},[locale]);
+ useEffect(()=>{requests.current++;setEntry(null);setWriting('');stop();return()=>{if(audio.current)releaseRecording(audio.current);};},[locale]);
  useEffect(()=>{if(writing){if(!writer.current?.open)writer.current?.showModal();}else writer.current?.close();},[writing]);
  function closeWriting(){setWriting('');stopAudio();requestAnimationFrame(()=>opener.current?.isConnected&&opener.current.focus({preventScroll:true}));}
  function passiveClick(e:React.MouseEvent<HTMLDivElement>){
@@ -55,5 +70,5 @@ export default function StudyLookupProvider({children,notify,penOnly,setPenOnly}
  }
  const context=useMemo(()=>({dictionary,open}),[dictionary,open]);
  const copy={en:['Practice writing','Close writing','Pencil only','Replay','Watch animation','Trace this character'],fr:['Pratiquer l’écriture','Fermer l’écriture','Stylet uniquement','Rejouer','Voir l’animation','Tracer ce caractère'],ru:['Тренировать письмо','Закрыть письмо','Только стилус','Повторить','Смотреть анимацию','Обвести знак'],tr:['Yazma alıştırması','Yazmayı kapat','Yalnızca kalem','Tekrar oynat','Animasyonu izle','Karakterin üzerinden geç']}[locale];
- return <LookupContext.Provider value={context}><div className="study-lookup-scope" ref={root} onClick={passiveClick}>{children}</div><StudyDictionaryDialog dictionary={dictionary} entry={entry} dialog={dialog} opener={opener} headingId={heading} onClose={close} onLookup={open} speaker={clip=><DictionaryAudio recording={clip} playing={playing} onPlay={listen}/>} onWrite={selected=>{close();requestAnimationFrame(()=>{setWriting(selected.text);});}} onExplore={selected=>{close();const p=new URLSearchParams({atlas:'1',cloud:'1',layout:'space',hanzi:selected.character??Array.from(selected.text)[0]});if(selected.word)p.set('word',selected.word.id);window.open('/?'+p,'_blank','noopener,noreferrer');}}/><dialog ref={writer} className="study-writing-dialog" aria-labelledby={heading+'-writing'} onCancel={e=>{e.preventDefault();closeWriting();}} onClose={()=>{setWriting('');stopAudio();}}><header><h2 id={heading+'-writing'}>{copy[0]}</h2><button className="secondary" aria-label={copy[1]} onClick={closeWriting}><X size={20}/></button></header>{writing&&<SharedWriting key={writing} hanzi={writing} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} onBack={closeWriting}/>}</dialog></LookupContext.Provider>;
+ return <LookupContext.Provider value={context}><div className="study-lookup-scope" ref={root} onClick={passiveClick}>{children}</div><StudyDictionaryDialog dictionary={dictionary} entry={entry} dialog={dialog} opener={opener} headingId={heading} onClose={close} onLookup={open} onRetry={()=>{if(entry&&opener.current)open(entry.text,opener.current);}} speaker={clip=><DictionaryAudio recording={clip} playing={playing} onPlay={listen}/>} onWrite={selected=>{writingDetail.current=selected;close();requestAnimationFrame(()=>{setWriting(selected.text);});}} onExplore={selected=>{close();const href=studyAtlasHref(selected);if(href)window.open(href,'_blank','noopener,noreferrer');}}/><dialog ref={writer} className="study-writing-dialog" aria-labelledby={heading+'-writing'} onCancel={e=>{e.preventDefault();closeWriting();}} onClose={()=>{setWriting('');stopAudio();}}><header><h2 id={heading+'-writing'}>{copy[0]}</h2><button className="secondary" aria-label={copy[1]} onClick={closeWriting}><X size={20}/></button></header>{writing&&<SharedWriting key={writing} hanzi={writing} pinyin={writingDetail.current?.text===writing?writingDetail.current.pinyin:undefined} meaning={writingDetail.current?.text===writing?writingDetail.current.meaning:undefined} audio={{word:writingDetail.current?.audio?.text===writing&&!writingDetail.current.audio.context?writingDetail.current.audio.source:undefined}} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} onBack={closeWriting}/>}</dialog></LookupContext.Provider>;
 }

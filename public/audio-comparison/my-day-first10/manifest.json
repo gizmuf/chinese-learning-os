@@ -1,0 +1,157 @@
+{
+  "model": "qwen-audio-3.1-tts-plus",
+  "voice": "longanhuan_v3.1",
+  "rows": [
+    {
+      "id": 1,
+      "text": "我每天八点左右醒来。",
+      "pinyin": "Wǒ měitiān bā diǎn zuǒyòu xǐnglái.",
+      "english": "I wake up at around eight every day.",
+      "A": {
+        "source": "/audio/qwen-curriculum/5417c1f69c3d1dd25992e58e6b628daae27101a94a44a8aee2130656da59844e.mp3",
+        "sha256": "926888a7f74af5b0dc58886a36906925dd542f38335a3b7335851126c69ed7ec"
+      },
+      "B": {
+        "source": "/audio-comparison/my-day-first10/159b487dbea33e957076063c5aab0b4a29b1c328578a9fd06685998948911fd8.mp3",
+        "sha256": "920e18d30f788d6f5d337654960964688b543a975aba5ff2ff5351116e0e221a",
+        "durationSeconds": 1.92
+      }
+    },
+    {
+      "id": 2,
+      "text": "二十到三十分钟后，我起床。",
+      "pinyin": "Èrshí dào sānshí fēnzhōng hòu, wǒ qǐchuáng.",
+      "english": "Twenty to thirty minutes later, I get out of bed.",
+      "A": {
+        "source": "/audio/qwen-curriculum/265c802147b4ba15517122ad7587a6d4b057305f8086a143488a1ee42b2e6bf7.mp3",
+        "sha256": "e84ef48f0ee7fead1249a24f48f0b896f999835457cf343c88ef651f6c3672ae"
+      },
+      "B": {
+        "source": "/audio-comparison/my-day-first10/7945705d149c18acc04298863f45cd9cb9c0c66f1b3fe411430630a2941ede03.mp3",
+        "sha256": "fa634800e391dfe524c6158599e3ff14ce43a4e2aa3011c3aa2c881f1a8bd652",
+        "durationSeconds": 3.3
+      }
+    },
+    {
+      "id": 3,
+      "text": "然后我去厨房做早饭。",
+      "pinyin": "Ránhòu wǒ qù chúfáng zuò zǎofàn.",
+      "english": "Then I go to the kitchen and make breakfast.",
+      "A": {
+        "source": "/audio/qwen-curriculum/94b498b65db499db96d501d33e5fda395aebfb77ddff018c80e8848e3f76c577.mp3",
+        "sha256": "bf464cfa1f30235c412291ee3e420452088733e65e7412bd9f7a31e8068342a1"
+      },
+      "B": {
+        "source": "/audio-comparison/my-day-first10/ea9a6f81f919c9e0dddeb401a435a5479934ddd3b268ba9a7f116eb5ee7b43a0.mp3",
+        "sha256": "a2b433a256d02c81e0324e4820294f8f1f469cc9dd08a421bfffe7a9fb5f1728",
+        "durationSeconds": 1.6
+      }
+    },
+    {
+      "id": 4,
+      "text": "因为我不吃肉，所以早饭我做素菜。",
+      "pinyin": "Yīnwèi wǒ bù chī ròu, suǒyǐ zǎofàn wǒ zuò sùcài.",
+      "english": "Because I don't eat meat, I make vegetarian dishes for breakfast.",
+      "A": {
+        "source": "/audio/qwen-curriculum/6e989bd5709b7e88efccdad3ed7bf92b6ad101ece97b0fee45533cdc826a9740.mp3",
+        "sha256": "f6e4c5750be3f97caf37136d43cc479e1db95b487e196c44c4df42050fa767db"
+      },
+      "B": {
+        "source": "/audio-comparison/my-day-first10/69dcce80c4464b35860b339f3804fbc67b150d1422839dcb11c9ca4180fe724c.mp3",
+        "sha256": "c67d498a4c74feb10d5f9b0635a5f60079aa11d42c8d506b2a1ce703cf5112d5",
+        "durationSeconds": 3.54
+      }
+    },
+    {
+      "id": 5,
+      "text": "然后我吃早饭。",
+      "pinyin": "Ránhòu wǒ chī zǎofàn.",
+      "english": "Then I eat breakfast.",
+      "A": {
+        "source": "/audio/qwen-curriculum/d7ed37d71bff0a30a6bfa73afb76b60bcc2388c5d73f70b562ba881f4aabe437.mp3",
+        "sha256": "cba624f246270c7aa144df69d46da70fc4a0d3d8bb770ab05007f31c19ddec9e"
+      },
+      "B": {
+        "source": "/audio-comparison/my-day-first10/563b152077a672c2c85dab325669b496a720e9068309d03a65d92ffaaf0ce609.mp3",
+        "sha256": "63854ff6b48f9ddb80ac3fb6c97b9db9e5dd093ac7085c70e8d5e09bb2b3bedc",
+        "durationSeconds": 1.36
+      }
+    },
+    {
+      "id": 6,
+      "text": "早饭后，我准备出门，因为我得去学校。",
+      "pinyin": "Zǎofàn hòu, wǒ zhǔnbèi chūmén, yīnwèi wǒ děi qù xuéxiào.",
+      "english": "After breakfast, I get ready to leave home because I have to go to school.",
+      "A": {
+        "source": "/audio/qwen-curriculum/8310514ca502f78900c0a917adb121b8fed29363e016511242efed972cfda0c9.mp3",
+        "sha256": "5c601c7aac48449141f2947a7dfe6b201e2cb03eda6666b75d265e84921010ae"
+      },
+      "B": {
+        "source": "/audio-comparison/my-day-first10/708b7a81fd528c8fdb33084837e29f6377d8f639351ec0c9645593e0dd5897d6.mp3",
+        "sha256": "4f3570d8987e3d74edbc0694b65a8d0f3ce37438a81c8c932de09a3637c55f20",
+        "durationSeconds": 3.72
+      }
+    },
+    {
+      "id": 7,
+      "text": "我走出家门，走路去学校。",
+      "pinyin": "Wǒ zǒuchū jiāmén, zǒulù qù xuéxiào.",
+      "english": "I walk out of my home and walk to school.",
+      "A": {
+        "source": "/audio/qwen-curriculum/81da0044d0b6d138a04d86d8ec222f8afb8bd7a62fa48682096680257e29ce09.mp3",
+        "sha256": "3b4967eb20311762fcef0a3ed65e0853d6ab2a525cca157b668aea6d75e8d9e2"
+      },
+      "B": {
+        "source": "/audio-comparison/my-day-first10/caf7d32d0deb6c90cd5621dba6adbb626d6c0934da83b3ceb4bbd096abbfe50c.mp3",
+        "sha256": "2efa3cb4b9699e943f659622cbedb2377d1c3e94a18b9f3760c060f0677b53ab",
+        "durationSeconds": 2.82
+      }
+    },
+    {
+      "id": 8,
+      "text": "我家离学校很近，走路只要十分钟。",
+      "pinyin": "Wǒ jiā lí xuéxiào hěn jìn, zǒulù zhǐ yào shí fēnzhōng.",
+      "english": "My home is close to school; the walk takes only ten minutes.",
+      "A": {
+        "source": "/audio/qwen-curriculum/52a046418b17e330f521ed5bab01e5669db72528277ce0f026aaaa71c284d658.mp3",
+        "sha256": "94dc21b2547f250934c352c797797a3593e01afdc10cb570cca7c1411367b510"
+      },
+      "B": {
+        "source": "/audio-comparison/my-day-first10/c87125f6f472f526d573a55b6a34fde31260a8c9217ad2d500da0c5455b93902.mp3",
+        "sha256": "3e41fa13c2ce341acc2ea0b059eeaa3827927975018cbb6f61f6d2df503cf516",
+        "durationSeconds": 3.14
+      }
+    },
+    {
+      "id": 9,
+      "text": "路上，我用微信点一杯咖啡。",
+      "pinyin": "Lùshang, wǒ yòng Wēixìn diǎn yì bēi kāfēi.",
+      "english": "On the way, I order a coffee using WeChat.",
+      "A": {
+        "source": "/audio/qwen-curriculum/9c2f2bb2d85eb2844e12a48edd37797810922f450dddc5ed1de673689c8236c8.mp3",
+        "sha256": "d14e2f912a2b3dd64bc498c48d99bf77cc6f14dddf6aebe92548859c6a508057"
+      },
+      "B": {
+        "source": "/audio-comparison/my-day-first10/c266befc77fedbeaba5bb2a0fed236e2a82628e201a8cb50b1b2db2b5e81710d.mp3",
+        "sha256": "57662ff581cd466fc1e0c61909cc8e75d0f813f243a90fdf59147ccba09db5c2",
+        "durationSeconds": 2.82
+      }
+    },
+    {
+      "id": 10,
+      "text": "到学校以后，我在楼下取咖啡。",
+      "pinyin": "Dào xuéxiào yǐhòu, wǒ zài lóuxià qǔ kāfēi.",
+      "english": "After arriving at school, I pick up my coffee downstairs.",
+      "A": {
+        "source": "/audio/qwen-curriculum/64bcdfb78a05d2ce72ee7a9f90bda50dab4f3ec14aeb5a8b56c299a3b8055893.mp3",
+        "sha256": "d0159a1de2758dcfd62dc0183cc3f0469bf62a2e0db9494b79619381f55b146d"
+      },
+      "B": {
+        "source": "/audio-comparison/my-day-first10/25c1d180be1917b96055152cd6bb4ce09d59f2fb77570d81883390b880a2da2b.mp3",
+        "sha256": "df9cee38c18328e7c7c0220d0e4ea68a4d982b2734d0c6b611c3c663e82792ac",
+        "durationSeconds": 2.98
+      }
+    }
+  ],
+  "currentLessonUnchanged": true
+}
