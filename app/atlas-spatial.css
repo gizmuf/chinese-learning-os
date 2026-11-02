@@ -84,3 +84,6 @@
 .sp-dictionary-resize-w{width:16px;left:-8px;top:48px;bottom:16px;cursor:ew-resize}
 .sp-dictionary-resize-se{width:44px;height:44px;right:-8px;bottom:-8px;cursor:nwse-resize;display:flex;align-items:center;justify-content:center;color:#809375;font-size:17px}
 .sp-dictionary-movebar:focus-visible,.sp-dictionary-resize:focus-visible{outline:3px solid #b9976f;outline-offset:2px}
+/* The title can scroll for long entries: its own touch policy must also block
+   native panning, which otherwise cancels a header drag at that scroll boundary. */
+.sp-dictionary .sp-dictionary-movebar *{touch-action:none}
