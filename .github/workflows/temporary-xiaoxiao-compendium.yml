@@ -1,0 +1,60 @@
+name: Temporary XiaoXiao compendium audio
+on:
+  push:
+    branches:
+      - artifact/xiaoxiao-compendium-20261102
+    paths:
+      - .github/workflows/temporary-xiaoxiao-compendium.yml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/temporary-xiaoxiao-compendium.yml
+permissions:
+  contents: read
+jobs:
+  synthesize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install edge-tts==7.3.1
+      - name: Generate Microsoft XiaoXiao Mandarin MP3
+        shell: bash
+        run: |
+          python - <<'PY'
+          import asyncio,json,hashlib
+          from pathlib import Path
+          import edge_tts
+          cfg=json.loads(Path('artifacts/xiaoxiao-compendium/phrases.json').read_text())
+          out=Path('output');out.mkdir(exist_ok=True)
+          rows=cfg['phrases']; sem=asyncio.Semaphore(3)
+          async def generate(row):
+              path=out/(row['id']+'.mp3')
+              async with sem:
+                  for attempt in range(5):
+                      try:
+                          await asyncio.wait_for(edge_tts.Communicate(row['text'], cfg['voice'],rate=cfg['rate']).save(str(path)),timeout=120)
+                          if path.stat().st_size<1000: raise ValueError('Empty audio file')
+                          print('Generated',row['id'],row['text'],path.stat().st_size,flush=True)
+                          break
+                      except Exception as e:
+                          if attempt==4:raise
+                          await asyncio.sleep(3*(attempt+1))
+          async def main():
+              await asyncio.gather(*(generate(row) for row in rows))
+              manifest={**cfg,'files':[{'id':x['id'],'file':x['id']+'.mp3','bytes':(out/(x['id']+'.mp3')).stat().st_size,
+                 'sha256':hashlib.sha256((out/(x['id']+'.mp3')).read_bytes()).hexdigest()} for x in rows]}
+              (out/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
+              print('DONE',len(rows),'XiaoXiao MP3s')
+          asyncio.run(main())
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: xiaoxiao-compendium-audio
+          path: output/
+          retention-days: 3
+          compression-level: 0
