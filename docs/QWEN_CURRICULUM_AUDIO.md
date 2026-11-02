@@ -2,7 +2,8 @@
 
 The offline recordings use Alibaba Qwen `qwen-audio-3.1-tts-plus`, system voice
 `longanhuan_v3.1`, Beijing, natural speed (1.0), pitch 1.0, seed 0, mono 24 kHz
-WAV. They are synthetic study recordings, not recordings of a teacher.
+WAV originals. Web delivery uses 96 kbps MP3 at the same sample rate and speed.
+They are synthetic study recordings, not recordings of a teacher.
 
 The source scope is exactly the 26 sentence rows in `data/my-day-01-v2.json`
 and the 322 recording references in `public/course09/audio/manifest.json`.
@@ -24,6 +25,7 @@ fresh account quota observation and the provider's free-only stop switch on.
 Unknown synthesis outcomes must be reconciled before any retry.
 
 The local batch receipts retain request IDs, usage, exact text mappings, WAV
-checksums and decoded PCM checksums. WAV length headers may be repaired without
+checksums and decoded PCM checksums. Delivery MP3 files are separately decoded
+and hashed. WAV length headers may be repaired without
 changing PCM, tempo, pitch or voice. Playback uses the existing local audio
 player. This does not create curriculum cards, review credit or learner events.
