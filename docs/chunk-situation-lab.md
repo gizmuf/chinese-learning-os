@@ -1,5 +1,15 @@
 # Situation Lab — optional preview
 
+## Current content expansion — 2 November 2026
+
+Based on live v70 source `90b6ab854133af3a3afbc907e01799923b84c2a2`. All original 26 situations remain. Another 28 situations adapt the remaining fourteen core Grammar & frames constructions: 越来越, 越…越…, 以后, 以前, 一边…一边…, 只要…就…, 只有…才…, 不但…而且…, 除了…还…, 不管…都…, 把, 被, 得 and experiential 过. This covers all 24 core frames; the separate 30 advanced frames are not included in this Situation Lab expansion.
+
+The existing selector now offers 54 situations in total: everyday requests/plans (6), comparison/location/change (12), connecting ideas (16), time/sequence/simultaneous actions (10), interests (2), and actions/results/experience (8). New scenario instructions are authored in English, French, Russian and Turkish. Canonical examples, translations, explanations, connected readings and sentence/marker audio remain owned by Grammar & frames. No new audio generation or second content database is used.
+
+Only the situation inventory, its selector labels and tests change. The Lab's existing example → communicative task → staged hints → model comparison → local retry flow is retained. Original course/Atlas/writing views, record identities, account data, FSRS and storage contracts are unchanged. Lab results still exist only for the current local session and do not award mastery or independent recall credit.
+
+Validation: 28 focused tests passed across Situation Lab, integration, speaking-chunks and chunk-library suites; TypeScript and the official Sites build passed. Coverage includes all 54 canonical situation identities, every existing sentence/marker audio file, four-language scenario completeness, every new target's hidden answer and assisted retry classification, IME guards, and preservation of the mounted original collection. Chrome checked the new 把 flow and dictionary, sentence and hint playback (206 audio/mpeg responses), EN/FR/RU/TR switching, 1024×768 and 390×844 layouts without horizontal overflow, and a Grammar & frames search retained on the Lab round trip. No browser console errors were observed. Physical iPad/Pencil and subjective pronunciation acceptance remain separate from these browser checks.
+
 Current extension: `codex/situation-grammar-expansion`, based on production v56 source `7ddac33bfca76ceb4a10a390c8d5820ec1a4ae8f`. This keeps the original six cases and adds twenty situations adapted from ten existing Grammar & frames constructions. The selector offers all 26, everyday requests/plans (6), comparison/distance (8), connecting ideas (6), sequence/immediate actions (4), and interests (2). Switching sets explicitly starts a fresh local round. No other view or progress contract changes.
 
 Approved source: `804b2d7b71149a18f0d348582e0fe6716816433c`, based on `ac42802e7d011b56e82f8d45b550d6327dc62358`. Source branch: `codex/chunk-situation-lab`. Integration branch `codex/situation-lab-integration` merges the whole feature onto live v55 source `f390264dbd15f7942828937d1f14be605ced18db`, preserving Family practice Lab and Often confused.

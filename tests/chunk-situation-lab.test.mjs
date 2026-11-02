@@ -14,10 +14,10 @@ test('typed IME composition does not submit; exact pattern feedback does not jud
 test('spoken self-check is not auto-assessed, reveal is assisted and bounded retry resets hints',async()=>{const root=await mount();for(let i=0;i<6;i++){await click(root,'Try a new situation');if(i===0){await click(root,'I’ve said it · compare');await click(root,'I expressed the idea')}else{await click(root,'Show the model with help');await click(root,'Next situation')}}const value=text(root.toJSON());assert.ok(value.includes('Unaided spoken self-checks1'));assert.ok(value.includes('Unaided typed model matches0'));assert.ok(value.includes('Assisted attempts5'));await click(root,'Retry with a new attempt · 5');assert.ok(text(root.toJSON()).includes('Situation 1 of 5'));await click(root,'Try a new situation');assert.ok(!text(root.toJSON()).includes('Pattern support'));assert.equal(button(root,'Hint 1 · show the pattern').props.disabled,false);await m.act(()=>root.unmount())});
 test('four locales have complete UI/scenario copy and scenarios are context rather than literal model translation',()=>{for(const locale of ['en','fr','ru','tr']){assert.deepEqual(Object.keys(m.situationCopy[locale]),Object.keys(m.situationCopy.en));for(const s of m.situationRound()){const cue=m.situationScenarios[s.id][locale];assert.ok(cue.length>40);assert.notEqual(cue,s.target.meaning[locale]);assert.ok(!cue.includes(s.target.hanzi))}}const source=readFileSync('app/chunk-situation-lab.tsx','utf8');assert.ok(!/useCourseProgress|\.record\(|localStorage|fetch\(/.test(source))});
 test('IME candidate-confirmation Enter with keyCode 229 is not a typed answer submission',async()=>{const root=await mount();await click(root,'Try a new situation');let prevented=false;root.root.findByType('input').props.onKeyDown({key:'Enter',nativeEvent:{isComposing:false,keyCode:229},preventDefault(){prevented=true}});assert.equal(prevented,true);await m.act(()=>root.unmount())});
-test('all 26 situations include 20 canonical grammar cases with connected readings and existing audio',()=>{
- const all=m.situationRound('all');assert.equal(all.length,26);assert.equal(new Set(all.map(s=>s.id)).size,26);
- for(const [set,count] of Object.entries({everyday:6,compare:8,connect:6,time:4,attitude:2}))assert.equal(m.situationRound(set).length,count);
- const grammar=all.filter(s=>s.grammar);assert.equal(grammar.length,20);assert.equal(new Set(grammar.map(s=>s.unit.id)).size,10);
+test('all 54 situations include 48 canonical grammar cases with connected readings and existing audio',()=>{
+ const all=m.situationRound('all');assert.equal(all.length,54);assert.equal(new Set(all.map(s=>s.id)).size,54);
+ for(const [set,count] of Object.entries({everyday:6,compare:12,connect:16,time:10,attitude:2,complement:8}))assert.equal(m.situationRound(set).length,count);
+ const grammar=all.filter(s=>s.grammar);assert.equal(grammar.length,48);assert.equal(new Set(grammar.map(s=>s.unit.id)).size,24);
  for(const s of grammar){assert.equal(s.grammar.frame,m.grammarFrames.find(f=>f.id===s.unit.id));assert.equal(s.target.hanzi,s.grammar.target.hanzi);assert.equal(s.target.pinyin,s.grammar.target.pinyin);assert.equal(s.target.meaning,s.grammar.target.meaning);assert.notEqual(s.example.id,s.target.id);assert.ok(situationHasSupport(s));for(const ex of [s.example,s.target])for(const id of [ex.id,...ex.chunks.map(c=>c.audioId)]){const bytes=readFileSync('public'+m.chunkAudio(id));assert.ok(bytes.length>1000);assert.ok(bytes.toString('ascii',0,3)==='ID3'||bytes[0]===255);}}
  function situationHasSupport(s){return m.situationHintChunks(s).every(c=>c.text&&c.pinyin&&['en','fr','ru','tr'].every(l=>c.meaning[l]))}
  assert.equal(m.situationRound('time').find(s=>s.id==='time-as-soon-1').target.chunks[0].pinyin,'yí');
@@ -35,9 +35,42 @@ test('grammar flow hides models, offers marker hints with audio, and does not cr
  await m.act(()=>root.root.findByType('select').props.onChange({target:{value:'attitude'}}));assert.ok(text(root.toJSON()).includes('Situation 1 of 2'));await click(root,'Try a new situation');assert.equal(button(root,'Hint 1 · show the pattern').props.disabled,false);await m.act(()=>root.unmount());
 });
 test('default all-set and complete interest round keep self-check, retry and fresh-set state separate',async()=>{
- const root=await mount('all');assert.ok(text(root.toJSON()).includes('Situation 1 of 26'));assert.equal(root.root.findAllByType('option').length,6);
+ const root=await mount('all');assert.ok(text(root.toJSON()).includes('Situation 1 of 54'));assert.equal(root.root.findAllByType('option').length,7);
  await m.act(()=>root.root.findByType('select').props.onChange({target:{value:'attitude'}}));
  await click(root,'Try a new situation');await click(root,'I’ve said it · compare');await click(root,'I expressed the idea');await click(root,'Try a new situation');await click(root,'Show the model with help');await click(root,'Next situation');
  assert.ok(text(root.toJSON()).includes('Unaided spoken self-checks1'));assert.ok(text(root.toJSON()).includes('Assisted attempts1'));await click(root,'Retry with a new attempt · 1');assert.ok(text(root.toJSON()).includes('Situation 1 of 1'));
- await m.act(()=>root.root.findByType('select').props.onChange({target:{value:'time'}}));assert.ok(text(root.toJSON()).includes('Situation 1 of 4'));await m.act(()=>root.unmount());
+ await m.act(()=>root.root.findByType('select').props.onChange({target:{value:'time'}}));assert.ok(text(root.toJSON()).includes('Situation 1 of 10'));await m.act(()=>root.unmount());
+});
+test('new constructions keep answers hidden until comparison and preserve assisted retry classification',async()=>{
+ const original=new Set(['compare-bi','compare-meiyou','compare-same','distance-li','connect-cause','connect-although','connect-if','time-first-then','time-as-soon','attitude-interest']);
+ const added=m.situationRound('all').filter(s=>s.grammar&&!original.has(s.unit.id));
+ assert.equal(added.length,28);
+ // Exercise the real UI for every target, including the second half of split frames.
+ const root=await mount('all');
+ for(let index=0;index<m.situationRound('all').length;index++){
+  const situation=m.situationRound('all')[index];
+  await click(root,'Try a new situation');
+  if(situation.grammar&&!original.has(situation.unit.id)){
+   assert.equal(root.root.findAll(x=>x.props['data-example']).length,0);
+   assert.ok(!text(root.toJSON()).includes(situation.target.hanzi));
+   assert.ok(!text(root.toJSON()).includes(situation.target.pinyin));
+   await click(root,'Hint 1 · show the pattern');
+   assert.ok(text(root.toJSON()).includes(situation.grammar.frame.pattern));
+   await click(root,'Hint 2 · useful chunks');
+   for(const chunk of situation.target.chunks){
+    assert.ok(text(root.toJSON()).includes(chunk.pinyin));
+    assert.equal(root.root.findAll(x=>x.props['aria-label']==='Listen to model: '+chunk.text).length,situation.target.chunks.filter(c=>c.text===chunk.text).length);
+   }
+   await click(root,'I’ve said it · compare');
+   assert.ok(text(root.toJSON()).includes(situation.target.hanzi));
+   assert.ok(text(root.toJSON()).includes('With help'));
+  }else await click(root,'I’ve said it · compare');
+  await click(root,'I expressed the idea');
+ }
+ assert.ok(text(root.toJSON()).includes('Assisted attempts28'));
+ await click(root,'Retry with a new attempt · 28');
+ assert.ok(text(root.toJSON()).includes('Situation 1 of 28'));
+ await click(root,'Try a new situation');
+ assert.equal(button(root,'Hint 1 · show the pattern').props.disabled,false);
+ await m.act(()=>root.unmount());
 });
