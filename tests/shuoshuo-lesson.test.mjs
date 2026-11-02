@@ -51,8 +51,8 @@ test('full-reading layer switches work in both directions; focused rehearsal own
  const control=name=>r.root.findAllByType('label').find(n=>label(n)===name)?.findByType('input');
  for(const name of ['Pinyin','English']){
   assert.equal(control(name).props.checked,true);
-  await m.act(()=>control(name).props.onChange({target:{checked:false}}));await settle();assert.equal(control(name).props.checked,false);
-  await m.act(()=>control(name).props.onChange({target:{checked:true}}));await settle();assert.equal(control(name).props.checked,true);
+  const off={target:{checked:false}};await m.act(()=>{control(name).props.onChange(off);off.target.checked=true;});await settle();assert.equal(control(name).props.checked,false);
+  const on={target:{checked:true}};await m.act(()=>{control(name).props.onChange(on);on.target.checked=false;});await settle();assert.equal(control(name).props.checked,true);
  }
  await m.act(()=>control('Pinyin').props.onChange({target:{checked:false}}));await settle();
  await click(r,'One sentence at a time');assert.equal(control('Pinyin'),undefined);assert.equal(control('English'),undefined);
