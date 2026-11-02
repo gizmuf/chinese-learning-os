@@ -8,3 +8,13 @@ test('a failed loader with a resolved animation promise cannot complete; an actu
  assert.equal(completions,0,'HanziWriter can resolve after a failed loader; this is not successful completion');assert.ok(JSON.stringify(r.toJSON()).includes('Character data unavailable'));assert.equal(availability.at(-1),false);
  fail=false;const retry=r.root.findAllByType('button').find(b=>b.children.join('').includes('Retry'));assert.ok(retry,'Real retry control');await act(()=>retry.props.onClick());assert.equal(completions,1);assert.equal(availability.at(-1),true);await act(()=>r.unmount());
 });
+test('empty 200 static responses use one validated API fallback; invalid fallback never unlocks writing',async()=>{
+ for(const valid of [true,false]){
+  const urls=[];let completions=0;const availability=[];
+  globalThis.fetch=async url=>{urls.push(url);return {ok:true,status:200,json:async()=>{if(url.startsWith('/characters/'))throw new SyntaxError('Unexpected end of JSON input');return valid?{strokes:['M0 0'],medians:[[[0,0],[1,1]]]}:{strokes:[],medians:[]};}};};
+  let r;await act(()=>{r=m.renderer.create(m.createElement(m.Guided,{character:'脑',mode:'watch',replay:0,penOnly:false,onComplete:()=>completions++,onMistake(){},onAvailabilityChange:value=>availability.push(value)}),{createNodeMock:()=>({replaceChildren(){},getBoundingClientRect(){return {width:300}}})});});
+  assert.deepEqual(urls,['/characters/%E8%84%91.json','/api/character-data?character=%E8%84%91']);
+  assert.equal(completions,valid?1:0);assert.equal(availability.at(-1),valid);
+  await act(()=>r.unmount());
+ }
+});

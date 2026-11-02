@@ -50,14 +50,18 @@ export default function Guided({
       strokeAnimationSpeed: 0.7,
       delayBetweenStrokes: 160,
       charDataLoader: async (char): Promise<CharacterJson> => {
-        let r = await fetch(
-          "/characters/" + encodeURIComponent(char) + ".json",
-          { cache: "force-cache" },
-        );
-        if(r.status===404)r=await fetch("/api/character-data?"+new URLSearchParams({character:char}),{cache:"force-cache"});
-        if (!r.ok) throw Error("Missing character data");
-        const data=await r.json() as CharacterJson;
-        if(!Array.isArray(data.strokes)||!data.strokes.length||!Array.isArray(data.medians)||data.strokes.length!==data.medians.length)throw Error('Invalid character data');
+        const read=async(url:string):Promise<CharacterJson>=>{
+          const response=await fetch(url,{cache:'force-cache'});
+          if(!response.ok)throw Error('Missing character data');
+          const data=await response.json() as CharacterJson;
+          if(!Array.isArray(data.strokes)||!data.strokes.length||data.strokes.length>100||!data.strokes.every(stroke=>typeof stroke==='string')||!Array.isArray(data.medians)||data.strokes.length!==data.medians.length)throw Error('Invalid character data');
+          return data;
+        };
+        // Some static routing failures return an empty 200 instead of a 404.
+        // Only validated stroke data can unlock practice; retry the existing API once.
+        let data:CharacterJson;
+        try{data=await read('/characters/'+encodeURIComponent(char)+'.json');}
+        catch{data=await read('/api/character-data?'+new URLSearchParams({character:char}));}
         if(!cancelled){loaded=true;callbacks.current.onAvailabilityChange?.(true);}
         return data;
       },
