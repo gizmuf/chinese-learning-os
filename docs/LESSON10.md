@@ -22,10 +22,21 @@ source. No TTS requests or provider changes are part of this integration.
 Listening checks exist only for these recordings. Missing clips are not exposed
 as playable controls.
 
-The 29-page English study PDF and 36-page English handwriting PDF are delivered
-as private chat attachments. They are not added to this already near-capacity
-Sites archive. Existing course PDFs/audio remain unchanged and available at
-their original paths. See `SITES_RELEASE.md` for the expanded-size release gate.
+The approved compact 11-page English study PDF and 36-page English handwriting
+PDF are available from the lesson's PDF materials tab. The two verified originals
+are retained under `resources/lesson10` in the existing public source repository;
+they are not copied into the already near-capacity Sites archive. The same-site
+download route uses an explicit file manifest, a pinned public source commit,
+exact size/SHA-256 verification and PDF download headers. No learner authentication
+or private chat attachment is required. It reuses the public repository source
+pattern already used by the dictionary; it creates no R2 binding or provider key.
+
+The manifest supports additional reviewed language/type entries without another
+route. This English pair is not the complete standard four-language package.
+Lesson 09's actual approved baseline is four hybrid workbooks in EN/FR/RU/TR;
+the remaining Lesson 10 language outputs are being prepared by the existing PDF
+author. Existing course PDFs/audio and their URLs remain unchanged. See
+`SITES_RELEASE.md` for the expanded-size release gate.
 
 Source readiness, automated checks, browser checks and native production
 publication must be recorded separately in the release receipt.
