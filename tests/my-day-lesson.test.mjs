@@ -13,7 +13,7 @@ const b=await build({stdin:{contents:`export * from './app/my-day-lesson-model';
  b.onResolve({filter:/^\.\/(study-lookup|audio|shared-writing|recognition-review)$/},a=>({path:a.path,namespace:'mock'}));
  b.onLoad({filter:/.*/,namespace:'mock'},a=>({contents:({
  './study-lookup':`export const StudyText=({text})=>text;`,
- './audio':`export const speak=()=>{};export const stopAudio=()=>{};`,
+ './audio':`export const speak=()=>{};export const stopAudio=()=>{};export const playRecording=()=>{};`,
  './shared-writing':`import {createElement} from 'react';export default props=>createElement('writing-stub',props);`,
  './recognition-review':`import {createElement} from 'react';export default props=>createElement('review-stub',props);`,
  })[a.path],loader:'js'}));

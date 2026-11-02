@@ -46,3 +46,19 @@ test('optional chunk display preserves every original character and persists the
  const chunks=JSON.parse(readFileSync('data/shuoshuo-morning-chunks.json'));for(const row of m.shuoshuoMorning.sentences)assert.equal(chunks[row.id].join(''),row.hanzi);
  const {db,r}=await mount('integrated-chunks');assert.equal(r.root.findAllByProps({className:'sl-chunk'}).length,0);await click(r,'Chunks');assert.ok(r.root.findAllByProps({className:'sl-chunk'}).length>42);const first=r.root.findByProps({'aria-label':'Sentence 1'}).findByProps({className:'pl-hanzi'});assert.equal(label(first),m.shuoshuoMorning.sentences[0].hanzi);await click(r,'Sentence');assert.equal(r.root.findAllByProps({className:'sl-chunk'}).length,0);await click(r,'Chunks');await m.act(()=>r.unmount());let reload;await m.act(()=>{reload=m.renderer.create(m.createElement(m.Lesson,{owner:'integrated-chunks',db,onBack(){}}));});await settle();assert.ok(reload.root.findAllByProps({className:'sl-chunk'}).length>42);assert.deepEqual(await m.allEvents(db),[]);await m.act(()=>reload.unmount());db.close();
 });
+test('full-reading layer switches work in both directions; focused rehearsal owns its staged reveal',async()=>{
+ const {db,r}=await mount('layer-controls');
+ const control=name=>r.root.findAllByType('label').find(n=>label(n)===name)?.findByType('input');
+ for(const name of ['Pinyin','English']){
+  assert.equal(control(name).props.checked,true);
+  await m.act(()=>control(name).props.onChange({target:{checked:false}}));await settle();assert.equal(control(name).props.checked,false);
+  await m.act(()=>control(name).props.onChange({target:{checked:true}}));await settle();assert.equal(control(name).props.checked,true);
+ }
+ await m.act(()=>control('Pinyin').props.onChange({target:{checked:false}}));await settle();
+ await click(r,'One sentence at a time');assert.equal(control('Pinyin'),undefined);assert.equal(control('English'),undefined);
+ assert.ok(label(r.root).includes('Reveal pinyin and English step by step'));
+ await click(r,'Show pinyin');await click(r,'Show English');await click(r,'Hide reading and meaning');
+ assert.ok(r.root.findAllByType('button').some(b=>label(b)==='Show pinyin'));
+ await click(r,'Show full lesson');assert.equal(control('Pinyin').props.checked,false);assert.equal(control('English').props.checked,true);
+ assert.deepEqual(await m.allEvents(db),[]);await m.act(()=>r.unmount());db.close();
+});

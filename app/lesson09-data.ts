@@ -1,4 +1,6 @@
 import source from '../data/lesson09/content.json';
+import audioManifest from '../public/course09/audio/manifest.json';
+import {qwenCurriculumClip} from './qwen-curriculum-audio';
 import {C} from './lesson07-data';
 import type {Copy} from './course-data';
 import type {Pronunciation} from './atlas-spatial-model';
@@ -10,7 +12,9 @@ export const lesson09Sentences:Lesson09Entry[]=source.sentences;
 export const lesson09All=[...lesson09Terms,...lesson09Sentences];
 export const lesson09ById=new Map(lesson09All.map(v=>[v.id,v]));
 export const lesson09Topics=source.topics;
-export const lesson09Audio=(v:Pick<Lesson09Entry,'id'>)=>'/course09/audio/'+v.id+'.mp3';
+const recordingById=new Map(audioManifest.recordings.map(clip=>[clip.id,clip]));
+export const lesson09Recording=(id:string)=>{const original=recordingById.get(id);return original?(qwenCurriculumClip('lesson09',original.text,id)?.source??'/course09/audio/'+original.file):undefined;};
+export const lesson09Audio=(v:Pick<Lesson09Entry,'id'>)=>lesson09Recording(v.id)??'/course09/audio/'+v.id+'.mp3';
 export const lesson09Pronunciation=(v:Lesson09Entry):Pronunciation=>({text:v.audioText??v.hanzi,pinyin:v.audioPinyin??v.pinyin,source:lesson09Audio(v),context:!!v.audioText,kind:v.topic?'sentence':'word'});
 export const lesson09Builders=lesson09Topics.map((v,i)=>({id:'c09-build-'+(i+1),blocks:v.blocks,targetId:v.target}));
 export const lesson09Checks=lesson09All.flatMap((v,i)=>{
