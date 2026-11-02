@@ -11,6 +11,7 @@ const result=await build({stdin:{contents:`
  const dictionary=studyDictionary('en');
  for(const v of lesson05Terms)dictionary.set(v.hanzi,{...dictionary.get(v.hanzi),text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning.en,audio:{text:v.hanzi,pinyin:v.pinyin,context:false,source:'/course05/audio/course05-'+v.id+'-word.mp3'}});
  export const words=text=>renderToStaticMarkup(h(DictionaryWords,{text,dictionary,onLookup:()=>{}}));
+ export const contextualDefinition=(entry)=>renderToStaticMarkup(h(StudyDictionaryDialog,{entry,dictionary,dialog:createRef(),opener:createRef(),onClose:()=>{},onLookup:()=>{},speaker:recording=>h(DictionaryAudio,{recording,playing:null,onPlay:()=>{}})}));
  export const definition=text=>renderToStaticMarkup(h(StudyDictionaryDialog,{entry:dictionary.get(text),dictionary,dialog:createRef(),opener:createRef(),headingId:'lesson-word',onClose:()=>{},onLookup:()=>{},speaker:recording=>h(DictionaryAudio,{recording,playing:null,onPlay:()=>{}})}));
  `,resolveDir:process.cwd(),loader:'tsx'},bundle:true,format:'cjs',platform:'node',write:false,loader:{'.css':'empty'},logLevel:'silent'});
 const module={exports:{}};new Function('require','module','exports',result.outputFiles[0].text)(createRequire(import.meta.url),module,module.exports);
@@ -33,4 +34,13 @@ test('Every Lesson 5 writing character has adjacent reading and meaning, includi
  const result=await build({stdin:{contents:`import {createElement as h} from 'react';import {renderToStaticMarkup} from 'react-dom/server';import {WritingCharacterContext} from './app/writing-context';import {lesson05All} from './app/lesson05-data';export const contexts=[...new Set(lesson05All.flatMap(v=>Array.from(v.hanzi).filter(c=>/[\\u3400-\\u9fff]/u.test(c))))].map(ch=>({ch,html:renderToStaticMarkup(h(WritingCharacterContext,{character:ch}))}));`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,format:'cjs',platform:'node',write:false,loader:{'.css':'empty'},logLevel:'silent'});
  const output={exports:{}};new Function('require','module','exports',result.outputFiles[0].text)(createRequire(import.meta.url),output,output.exports);
  for(const {ch,html} of output.exports.contexts){assert.ok(!html.includes('Not yet in this study dictionary'),ch);assert.match(html,/class="pinyin">[^<]+<\/p>/,ch);assert.ok(!html.includes('<p></p>'),ch);}
+});
+
+test('source sentence recording stays with its source while isolated headword audio remains separate',()=>{
+ const sentence={text:'我每天八点左右醒来。',pinyin:'Wǒ měitiān bā diǎn zuǒyòu xǐnglái.',meaning:'I wake up around eight every day.',audio:{text:'我每天八点左右醒来。',pinyin:'Wǒ měitiān bā diǎn zuǒyòu xǐnglái.',source:'/source.mp3',kind:'sentence',context:false}};
+ const entry={text:'醒',pinyin:'xǐng',meaning:'wake up',audio:{text:'醒',pinyin:'xǐng',source:'/isolated.mp3',context:false},contextual:sentence};
+ const html=m.contextualDefinition(entry),header=html.slice(html.indexOf('<header'),html.indexOf('</header>')),context=html.slice(html.indexOf('<section class="sp-dictionary-context"'),html.indexOf('</section>'));
+ assert.match(header,/Whole word: 醒/);assert.doesNotMatch(header,/Listen to the sentence/);assert.match(context,/Listen to the sentence: 我每天八点左右醒来/);
+ const sourceOnly=m.contextualDefinition({...entry,audio:sentence.audio});assert.doesNotMatch(sourceOnly.slice(0,sourceOnly.indexOf('</header>')),/Listen to the sentence/);assert.match(sourceOnly,/Listen to the sentence/);
+ const missing=m.contextualDefinition({...entry,audio:undefined,contextual:{...sentence,audio:undefined}});assert.doesNotMatch(missing,/class="sp-speaker/);
 });

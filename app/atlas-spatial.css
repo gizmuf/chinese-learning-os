@@ -56,3 +56,31 @@
 .sp-dictionary-movebar .sp-dictionary-close{position:static;flex-shrink:0}.sp-dictionary-drag{display:flex;gap:7px;align-items:center;min-height:44px;padding:6px 10px;background:#f4f6f0;border-radius:8px;color:#536d5d;font-size:12px;cursor:grab;touch-action:none;user-select:none}.sp-dictionary-drag:active{cursor:grabbing}.sp-dictionary-source{display:block;font-size:11px;margin-block:10px;color:#667464}.sp-dictionary-senses summary{cursor:pointer;font-size:13px;padding-block:10px}.sp-dictionary-context{padding:10px;background:#f7f8f3;border-radius:10px}.sp-dictionary-structure{font-family:system-ui,"PingFang SC","Noto Sans CJK SC",sans-serif}.sp-dictionary-structure>p{overflow-wrap:anywhere}
 
 .dictionary-word-family{margin-top:24px;padding:20px;background:#fff;border:1px solid #d6e0cf;border-radius:16px;color:#2e493b}.dictionary-word-family h2{font-size:22px;margin:0 0 8px}.dictionary-word-family p{font-size:14px;line-height:1.6}.dictionary-family-scopes{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.dictionary-family-scopes [aria-pressed=true]{background:#e4eddc;border-color:#85a178}.dictionary-family-words{display:flex;gap:12px 18px;flex-wrap:wrap;min-height:70px;margin:18px 0}.dictionary-family-words .study-word{font-size:22px;min-height:44px}.dictionary-word-family nav{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:18px 0}.dictionary-word-family nav span,.dictionary-word-family small{font-size:12px;color:#65785e}.dictionary-family-note{max-width:780px}
+
+/* Window frame: fixed header, independently scrolling dictionary content. */
+.sp-dictionary{box-sizing:border-box;padding:0;max-width:none;max-height:none!important;overflow:visible}
+.sp-dictionary[open]{display:flex;flex-direction:column}
+.sp-dictionary .sp-dictionary-movebar{position:relative;top:auto;display:block;flex:none;padding:22px 20px 12px;border-bottom:1px solid #e6ebe1;border-radius:16px 16px 0 0;cursor:grab;touch-action:none;user-select:none}
+.sp-dictionary-movebar:active{cursor:grabbing}
+.sp-dictionary .sp-dictionary-grip{position:absolute;top:4px;left:calc(50% - 10px);color:#9ba793;pointer-events:none}
+.sp-dictionary .sp-dictionary-close{position:absolute;right:4px;top:4px;width:44px;height:44px;min-width:44px;min-height:44px;z-index:2}
+.sp-dictionary .sp-dictionary-movebar h2{margin:0 30px 0 0;max-height:86px;overflow:auto;line-height:1.25}
+.sp-dictionary .sp-dictionary-pronunciation{margin:4px 0 0;flex-wrap:wrap}
+.sp-dictionary .sp-dictionary-pronunciation p{margin:0}
+.sp-dictionary .sp-dictionary-back{margin:0 30px 8px 0}
+.sp-dictionary-body{min-height:0;flex:1;overflow:auto;overscroll-behavior:contain;padding:8px 20px 44px;touch-action:pan-y;border-radius:0 0 16px 16px}
+.sp-dictionary .sp-dictionary-context>div[lang],.sp-dictionary .sp-dictionary-examples article>div[lang]{font-size:26px;line-height:1.7}
+.sp-dictionary .sp-dictionary-entries button{min-height:64px;gap:12px;text-align:left}
+.sp-dictionary .sp-dictionary-entries button>strong{font-size:30px;line-height:1.4;min-width:36px;font-weight:400}
+.sp-dictionary .sp-dictionary-entries button>span{display:flex;flex-direction:column;min-width:0;gap:3px;line-height:1.45}
+.sp-dictionary .sp-dictionary-entries small{color:#65785e;font-size:12px}
+.sp-dictionary .sp-dictionary-radical{display:flex;align-items:center;gap:12px}
+.sp-dictionary-radical button,.sp-dictionary-radical>span{font-size:30px;min-width:44px;min-height:44px;padding:4px}
+.sp-dictionary .sp-dictionary-layout{font-size:13px;color:#65785e}
+.sp-dictionary-resize{position:absolute;touch-action:none;user-select:none;z-index:3}
+.sp-dictionary-resize-n{height:16px;top:-8px;left:44px;right:44px;cursor:ns-resize}
+.sp-dictionary-resize-s{height:16px;bottom:-8px;left:16px;right:36px;cursor:ns-resize}
+.sp-dictionary-resize-e{width:16px;right:-8px;top:48px;bottom:36px;cursor:ew-resize}
+.sp-dictionary-resize-w{width:16px;left:-8px;top:48px;bottom:16px;cursor:ew-resize}
+.sp-dictionary-resize-se{width:44px;height:44px;right:-8px;bottom:-8px;cursor:nwse-resize;display:flex;align-items:center;justify-content:center;color:#809375;font-size:17px}
+.sp-dictionary-movebar:focus-visible,.sp-dictionary-resize:focus-visible{outline:3px solid #b9976f;outline-offset:2px}
