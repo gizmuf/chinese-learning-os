@@ -1,0 +1,250 @@
+{
+  "words": {
+    "咖啡": {
+      "source": "/audio/bonus-04-word.mp3",
+      "text": "咖啡",
+      "sha256": "14649056ac5be51c856a707864b14ea53e894fb581c82848b541523e0d95f951",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "可以": {
+      "source": "/audio/can-word.mp3",
+      "text": "可以",
+      "sha256": "b73796704108706c6c30e304ffe6c68d09dd8d482631976ca6190ad586bcef88",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "吃": {
+      "source": "/audio/eat-word.mp3",
+      "text": "吃",
+      "sha256": "f58a32ed69bc5896a09e67e2312fe1fd8255cf80c79969b31558608fa7841e8d",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "东西": {
+      "source": "/audio/hsk1-040-word.mp3",
+      "text": "东西",
+      "sha256": "736157e25a38950402e39030e86452a3955c3cd14a731670e962cf67fb764f41",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "工作": {
+      "source": "/audio/hsk1-063-word.mp3",
+      "text": "工作",
+      "sha256": "1d339905d5f2b8cb151aabe936c1b2cad0a96a3e522ce772c59a28ca75a77369",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "觉得": {
+      "source": "/audio/hsk1-096-word.mp3",
+      "text": "觉得",
+      "sha256": "22943d7093ca8677c43af9bacd3b43ccdb297522ca81ee0d4ab338688be83786",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "起床": {
+      "source": "/audio/hsk1-161-word.mp3",
+      "text": "起床",
+      "sha256": "36fa41b61a1a8826c6454c642710f027054bc5a27ef4f691d27a86017c775e91",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "上课": {
+      "source": "/audio/hsk1-177-word.mp3",
+      "text": "上课",
+      "sha256": "ba2bf76817385d03885fa9adc6430adb5c1e4f7375ef643970f96ae994711088",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "上午": {
+      "source": "/audio/hsk1-178-word.mp3",
+      "text": "上午",
+      "sha256": "3e51d56f43406846a5a4bb9aafd25508503941b8b900a006f38708782ed32ca6",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "手机": {
+      "source": "/audio/hsk1-189-word.mp3",
+      "text": "手机",
+      "sha256": "a580500b3c20de9637473ead5faf08160c9cc5bd4f8740e381abb221a36e67aa",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "睡觉": {
+      "source": "/audio/hsk1-195-word.mp3",
+      "text": "睡觉",
+      "sha256": "89141c0a421bc6cf6e5b68018cf9bda662a18868eb193c05431020ff92e282b4",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "晚上": {
+      "source": "/audio/hsk1-217-word.mp3",
+      "text": "晚上",
+      "sha256": "09e73d5324fc0227c0ee2b6efd80d2c9738d5b3de54cc60db8f28583c02a4fb5",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "我们": {
+      "source": "/audio/hsk1-222-word.mp3",
+      "text": "我们",
+      "sha256": "c097bf5e895046e6fd034ebd7445953161df3e60c3791a0b22684750c6848f62",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "午饭": {
+      "source": "/audio/hsk1-224-word.mp3",
+      "text": "午饭",
+      "sha256": "5ececd4c11b41cd43aa5150e256a3c64851d107b43ea0a3c826e8439b6d399e8",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "喜欢": {
+      "source": "/audio/hsk1-225-word.mp3",
+      "text": "喜欢",
+      "sha256": "b75d8efd5a81f86ef5760a3cd3c3027f8badb9046ed391e6c3344919ac0ec95f",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "下课": {
+      "source": "/audio/hsk1-229-word.mp3",
+      "text": "下课",
+      "sha256": "c1c76545a150eae686e3627549a1d9ba96007d5671af4d5cd48c03a59206317f",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "下午": {
+      "source": "/audio/hsk1-230-word.mp3",
+      "text": "下午",
+      "sha256": "06514017db0df6d3080a8a5fe8c69e04774bac0a4fb58ebf5978d8a3868d7627",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "休息": {
+      "source": "/audio/hsk1-246-word.mp3",
+      "text": "休息",
+      "sha256": "b950dbfa43c9c107e44c3ca5e32acbd4efff4eba66927a12c10fe2b11c26b412",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "学习": {
+      "source": "/audio/hsk1-249-word.mp3",
+      "text": "学习",
+      "sha256": "486f92c16bbec657a4594bf14eb79af50319d8462d66224040c23aa96b6a4c1b",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "早上": {
+      "source": "/audio/hsk1-275-word.mp3",
+      "text": "早上",
+      "sha256": "903519f3acb67a351b2ea6af910fc2c8f4d5c259fc40ff32e6a8b63138b0113d",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "知道": {
+      "source": "/audio/hsk1-288-word.mp3",
+      "text": "知道",
+      "sha256": "a539e784c3660937cf5c669c655e43a30c00ffd71036315359d054ca1d6e897b",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "开始": {
+      "source": "/audio/hsk2-378-word.mp3",
+      "text": "开始",
+      "sha256": "3c86ec87a12b789b09b49bbe1e3332fbf981d4a3dbe9422dfa5605c899f0d2f4",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "所以": {
+      "source": "/audio/hsk2-439-word.mp3",
+      "text": "所以",
+      "sha256": "7289daf5727a50dcc92fe8d4d1812b1edb1709e3baa7670be7bca3374f70bd8c",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "因为": {
+      "source": "/audio/hsk2-476-word.mp3",
+      "text": "因为",
+      "sha256": "603f7ded09ef74d3dfdfdb6569802d442bf35d24b2efbf26d045802763de2259",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "欢迎": {
+      "source": "/audio/hsk3-677-word.mp3",
+      "text": "欢迎",
+      "sha256": "9c9878fe9e0b3745f9e1af08e5cc9fd9525e38f4e36db592cc11696b761fd98c",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "简单": {
+      "source": "/audio/hsk3-699-word.mp3",
+      "text": "简单",
+      "sha256": "aedf0d132525b4f4318365b27a8544ce0f037646316478ce689cd3e3459eaca5",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "马上": {
+      "source": "/audio/hsk3-766-word.mp3",
+      "text": "马上",
+      "sha256": "6ea7cf71abc2fca487fa514d1cf76424bc6230d4d48fe312e5f5873f2cf1db61",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "然后": {
+      "source": "/audio/hsk3-813-word.mp3",
+      "text": "然后",
+      "sha256": "80c53bc129b8e5d767d7be855ea7673218696391ed916d750dc104f3aff56ce5",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "完成": {
+      "source": "/audio/hsk3-868-word.mp3",
+      "text": "完成",
+      "sha256": "701d347df822c81487cb517b9020352bd1797f859b75169562bd6d7f955003ea",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "习惯": {
+      "source": "/audio/hsk3-885-word.mp3",
+      "text": "习惯",
+      "sha256": "2ae800f0070417118c4743b72741559aad708012316c9f1cb94452d49d3cba26",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "现在": {
+      "source": "/audio/now-word.mp3",
+      "text": "现在",
+      "sha256": "92158761e6e987f284a62c7d36e1aeeaaada081167602dbf654933a000eb38ef",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "时间": {
+      "source": "/audio/time-word.mp3",
+      "text": "时间",
+      "sha256": "6791c191335ac02e09878b68a0039a95c28e38c2ae04019e17b639028c9dd7ee",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "今天": {
+      "source": "/audio/today-word.mp3",
+      "text": "今天",
+      "sha256": "9cb2e11a49604ee68f67abf04ad2e507636e90470707d18d71eba05ce7f9ef8e",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "水": {
+      "source": "/audio/water-word.mp3",
+      "text": "水",
+      "sha256": "f1f7b75774462bb8dfb7813f8eabb6d8578f763d67ff074d99ed145275d9cb18",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/audio/manifest.json"
+    },
+    "看书": {
+      "source": "/course04/audio/course04-c04-t34-sentence.mp3",
+      "text": "看书",
+      "sha256": "2c2c759f61afd8238abcce4d40397ae23ec4e38bc2edd34b18519cb0551c69ad",
+      "provider": "Microsoft Edge Read Aloud via edge-tts",
+      "manifest": "public/course04/audio/manifest.json"
+    }
+  },
+  "sentences": {}
+}

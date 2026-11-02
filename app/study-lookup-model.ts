@@ -1,3 +1,9 @@
+import shuoshuoLookup from '../data/shuoshuo-morning-lookup.json';
+import {extendedComponent} from './atlas-cloud-extended';
+import {atlasByHanzi} from './atlas-model';
+import shuoshuoMorning from '../data/shuoshuo-morning.json';
+import shuoshuoAudio from '../data/shuoshuo-morning-audio.json';
+import shuoshuoStructures from '../data/hanzi-structure.json';
 import lesson09Characters from '../data/lesson09/characters.json';
 import {lesson09Terms,lesson09Pronunciation} from './lesson09-data';
 import lesson09AudioManifest from '../public/course09/audio/manifest.json';
@@ -17,7 +23,7 @@ import grammarLookup from '../data/speaking-chunks/grammar-lookup.json';
 import {grammarChunkTasks} from './chunk-library-data';
 import extraCharacters from '../data/study-dictionary-characters.json';
 import writingContext from '../data/writing-character-context.json';
-import {dictionaryTokens,type StudyDictionary} from './atlas-spatial-model';
+import {dictionaryTokens,type StudyDictionary,type DictionaryEntry} from './atlas-spatial-model';
 import type {Locale} from './translate';
 const lesson06Phrases=new Set(['请讲','醒了','够了','一把钥匙','一本书','两辆汽车','不难','不太难','有点儿难','很难','太难了','难极了','非常难','很有意思']);
 export function appStudyDictionary(locale:Locale):StudyDictionary{
@@ -53,6 +59,14 @@ export function appStudyDictionary(locale:Locale):StudyDictionary{
   匙:{en:"spoon; pronounced shi in 钥匙 (key)",fr:"cuillère ; prononcé shi dans 钥匙 (clé)",ru:"ложка; читается shi в 钥匙 (ключ)",tr:"kaşık; 钥匙 (anahtar) içinde shi okunur"},
   儿:{en:"child / son; r-ending in expressions such as 一点儿",fr:"enfant / fils ; terminaison en r, comme dans 一点儿",ru:"ребёнок / сын; окончание -r, как в 一点儿",tr:"çocuk / oğul; 一点儿 gibi ifadelerde r eki"},
  })){const entry=dictionary.get(text);if(entry)dictionary.set(text,{...entry,pinyin:text==='匙'?'chí / shi':entry.pinyin,meaning:meaning[locale]});}
+ // Built-in lesson text participates in the same word → character → Atlas flow.
+ const structureGlyphs=new Set(shuoshuoStructures.characters.map(c=>c.hanzi));
+ const characterContext:Record<string,[string,string]>={麻:['má','In 麻烦: troublesome / inconvenient. Separate character sense not recorded here.'],烦:['fán','In 麻烦: troublesome / inconvenient. Separate character sense not recorded here.'],呀:['ya','Conversational exclamation in 早上好呀.'],卧:['wò','In 卧室: bedroom. Separate character sense not recorded here.'],剪:['jiǎn','In 剪视频: cut / edit video; not the surname gloss.'],造:['zào','In 创造: create. Separate character sense not recorded here.'],番:['fān','In 番茄: tomato. The whole word supplies the meaning.'],茄:['qié','In 番茄: tomato. The whole word supplies the meaning.'],呆:['dāi','In 发呆: stare into space / zone out.'],饼:['bǐng','A flat cake / pancake; in 饼干, biscuit. Do not confuse 冰 bīng (ice).']};
+ for(const glyph of new Set(shuoshuoMorning.sources.flatMap(s=>Array.from(s.hanzi).filter(c=>/\p{Script=Han}/u.test(c))))){const old=dictionary.get(glyph),context=characterContext[glyph];dictionary.set(glyph,{...old,text:glyph,pinyin:old?.pinyin??context?.[0]??'',meaning:old?.meaning??context?.[1]??'Separate character meaning not recorded here.',character:glyph,atlasAvailable:structureGlyphs.has(glyph)});}
+ for(const term of shuoshuoLookup.entries)if(!dictionary.has(term.text))dictionary.set(term.text,{text:term.text,pinyin:term.pinyin,meaning:term.english});
+ for(const term of shuoshuoMorning.practiceTargets){const old=dictionary.get(term.text),clip=(shuoshuoAudio.words as Record<string,{source:string}>)[term.text];dictionary.set(term.text,{...old,text:term.text,pinyin:term.pinyin,meaning:old?.meaning??term.english,...(clip?{audio:{text:term.text,pinyin:term.pinyin,source:clip.source,context:false}}:{})});}
+ if(!dictionary.has('热水'))dictionary.set('热水',{text:'热水',pinyin:'rèshuǐ',meaning:'hot water'});
+ for(const sentence of shuoshuoMorning.sentences)dictionary.set(sentence.hanzi,{text:sentence.hanzi,pinyin:sentence.pinyin,meaning:sentence.english,phrase:true});
  return dictionary;
 }
 /** Resolve the glyph actually hit; whitespace/punctuation must never open a neighbouring word. */
@@ -66,4 +80,13 @@ export const studyFeedbackSelector='.lesson04-feedback,.course-feedback,.atlas-a
 export function studyLookupEntry(dictionary:StudyDictionary,text:string,locale:Locale,grammarContext=false){
  const existing=dictionary.get(text),gloss=grammarContext?grammarLookup.find(term=>term.text===text):undefined;
  return gloss?{...existing,text,pinyin:gloss.pinyin,meaning:gloss.meaning[locale]}:existing;
+}
+
+/** Keep Atlas on a component that actually belongs to the selected character. */
+export function studyAtlasHref(entry:DictionaryEntry){
+ if(entry.atlasAvailable===false)return null;
+ const hanzi=entry.character??Array.from(entry.text)[0],reviewed=atlasByHanzi.get(hanzi),structure=shuoshuoStructures.characters.find(c=>c.hanzi===hanzi);
+ const part=reviewed?.semantic??reviewed?.components[0]??structure?.leafComponents.find(p=>extendedComponent(p));
+ if(!part)return null;
+ const p=new URLSearchParams({atlas:'1',cloud:'1',layout:'space',collection:reviewed?'atlas':'library',hanzi,part});if(entry.word){p.set('word',entry.word.id);p.set('focus','word');}return '/?'+p;
 }

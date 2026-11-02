@@ -62,6 +62,6 @@ test('actual RecognitionReview producer fails the existing server validator in a
 });
 test('companion has catalog/Studio entry points, responsive CSS and no graded review producer or media copies',()=>{
  const ui=readFileSync('app/shuoshuo-companion.tsx','utf8');assert.ok(!ui.includes('RecognitionReview'));assert.ok(!ui.includes('newEvent'));assert.ok(ui.includes('ungraded'));assert.ok(ui.includes('not a full sentence-listening lesson'));
- assert.ok(readFileSync('app/study-app.tsx','utf8').includes('?companion=shuoshuo'));assert.ok(readFileSync('app/study-studio.tsx','utf8').includes('10-word vocabulary companion'));assert.ok(readFileSync('app/shuoshuo-companion.css','utf8').includes('@media(max-width:650px)'));
+ assert.ok(readFileSync('app/study-app.tsx','utf8').includes('?companion=shuoshuo'));assert.ok(readFileSync('app/study-studio.tsx','utf8').includes('Full lesson · 42 groups'));assert.ok(!readFileSync('app/study-studio.tsx','utf8').includes('{onCompanion&&'));assert.ok(readFileSync('app/shuoshuo-companion.css','utf8').includes('@media(max-width:650px)'));
  assert.equal(existsSync('public/shuoshuo-companion'),false);
 });

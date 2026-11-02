@@ -1,0 +1,311 @@
+{
+  "sourceCommit": "3edd44de6448acbf5028014710ba99e3d004d2d7",
+  "sourcePath": "data/video-shuoshuo-vlog/vocabulary.csv",
+  "attribution": "CC-CEDICT / MDBG, CC-BY-SA 4.0, with context-specific editorial glosses and readings. Lookup references only; no new curriculum or FSRS identities.",
+  "excludedTokenizerArtifacts": [
+    "水泡 in 热水泡咖啡",
+    "百度 in 一百度",
+    "十五分钟 inside 三十五分钟"
+  ],
+  "entries": [
+    {
+      "text": "成功",
+      "pinyin": "chénggōng",
+      "english": "succeed; successful",
+      "sourceIds": [
+        4,
+        48
+      ]
+    },
+    {
+      "text": "原因",
+      "pinyin": "yuányīn",
+      "english": "reason; cause",
+      "sourceIds": [
+        5,
+        6
+      ]
+    },
+    {
+      "text": "每天",
+      "pinyin": "měitiān",
+      "english": "every day",
+      "sourceIds": [
+        6,
+        29,
+        30
+      ]
+    },
+    {
+      "text": "咖啡机",
+      "pinyin": "kāfēijī",
+      "english": "coffee machine",
+      "sourceIds": [
+        11
+      ]
+    },
+    {
+      "text": "麻烦",
+      "pinyin": "máfan",
+      "english": "troublesome; inconvenient",
+      "sourceIds": [
+        11
+      ]
+    },
+    {
+      "text": "直接",
+      "pinyin": "zhíjiē",
+      "english": "directly",
+      "sourceIds": [
+        12
+      ]
+    },
+    {
+      "text": "样子",
+      "pinyin": "yàngzi",
+      "english": "appearance; what something looks like",
+      "sourceIds": [
+        15,
+        16
+      ]
+    },
+    {
+      "text": "早上好",
+      "pinyin": "zǎoshang hǎo",
+      "english": "good morning",
+      "sourceIds": [
+        18
+      ]
+    },
+    {
+      "text": "高楼",
+      "pinyin": "gāolóu",
+      "english": "tall building",
+      "sourceIds": [
+        20,
+        24
+      ]
+    },
+    {
+      "text": "看到",
+      "pinyin": "kàndào",
+      "english": "see; catch sight of",
+      "sourceIds": [
+        24
+      ]
+    },
+    {
+      "text": "工作室",
+      "pinyin": "gōngzuòshì",
+      "english": "studio; workroom",
+      "sourceIds": [
+        25,
+        28
+      ]
+    },
+    {
+      "text": "还有",
+      "pinyin": "háiyǒu",
+      "english": "also; there is still",
+      "sourceIds": [
+        26,
+        43
+      ]
+    },
+    {
+      "text": "卧室",
+      "pinyin": "wòshì",
+      "english": "bedroom",
+      "sourceIds": [
+        26
+      ]
+    },
+    {
+      "text": "衣柜",
+      "pinyin": "yīguì",
+      "english": "wardrobe",
+      "sourceIds": [
+        26
+      ]
+    },
+    {
+      "text": "柜子",
+      "pinyin": "guìzi",
+      "english": "cabinet; cupboard",
+      "sourceIds": [
+        27
+      ]
+    },
+    {
+      "text": "视频",
+      "pinyin": "shìpín",
+      "english": "video",
+      "sourceIds": [
+        29,
+        32,
+        65
+      ]
+    },
+    {
+      "text": "脑子",
+      "pinyin": "nǎozi",
+      "english": "brain; mind",
+      "sourceIds": [
+        30
+      ]
+    },
+    {
+      "text": "创造",
+      "pinyin": "chuàngzào",
+      "english": "create",
+      "sourceIds": [
+        31
+      ]
+    },
+    {
+      "text": "设计",
+      "pinyin": "shèjì",
+      "english": "design; plan",
+      "sourceIds": [
+        33
+      ]
+    },
+    {
+      "text": "课程",
+      "pinyin": "kèchéng",
+      "english": "course; lessons",
+      "sourceIds": [
+        33
+      ]
+    },
+    {
+      "text": "番茄",
+      "pinyin": "fānqié",
+      "english": "tomato",
+      "sourceIds": [
+        39
+      ]
+    },
+    {
+      "text": "发呆",
+      "pinyin": "fādāi",
+      "english": "stare into space; zone out",
+      "sourceIds": [
+        41
+      ]
+    },
+    {
+      "text": "就要",
+      "pinyin": "jiùyào",
+      "english": "be about to; will soon",
+      "sourceIds": [
+        43
+      ]
+    },
+    {
+      "text": "中高级",
+      "pinyin": "zhōnggāojí",
+      "english": "intermediate to advanced",
+      "sourceIds": [
+        44
+      ]
+    },
+    {
+      "text": "左右",
+      "pinyin": "zuǒyòu",
+      "english": "approximately; or so (after a number here)",
+      "sourceIds": [
+        45
+      ]
+    },
+    {
+      "text": "员工",
+      "pinyin": "yuángōng",
+      "english": "employee; staff member",
+      "sourceIds": [
+        46
+      ]
+    },
+    {
+      "text": "画饼",
+      "pinyin": "huàbǐng",
+      "english": "draw a pancake/pie; figuratively make enticing promises. Source 48 wording remains uncertain.",
+      "sourceIds": [
+        48,
+        50
+      ]
+    },
+    {
+      "text": "之后",
+      "pinyin": "zhīhòu",
+      "english": "after; afterwards",
+      "sourceIds": [
+        48
+      ]
+    },
+    {
+      "text": "比如说",
+      "pinyin": "bǐrú shuō",
+      "english": "for example",
+      "sourceIds": [
+        48
+      ]
+    },
+    {
+      "text": "饼干",
+      "pinyin": "bǐnggān",
+      "english": "biscuit; cookie; cracker",
+      "sourceIds": [
+        50
+      ]
+    },
+    {
+      "text": "想要",
+      "pinyin": "xiǎngyào",
+      "english": "want; want to",
+      "sourceIds": [
+        52
+      ]
+    },
+    {
+      "text": "收拾",
+      "pinyin": "shōushi",
+      "english": "tidy up; pack up",
+      "sourceIds": [
+        54
+      ]
+    },
+    {
+      "text": "所有",
+      "pinyin": "suǒyǒu",
+      "english": "all",
+      "sourceIds": [
+        61
+      ]
+    },
+    {
+      "text": "慢慢",
+      "pinyin": "mànmàn",
+      "english": "slowly; gradually",
+      "sourceIds": [
+        62
+      ]
+    },
+    {
+      "text": "分享",
+      "pinyin": "fēnxiǎng",
+      "english": "share",
+      "sourceIds": [
+        64
+      ]
+    },
+    {
+      "text": "评论",
+      "pinyin": "pínglùn",
+      "english": "comment; comment on",
+      "sourceIds": [
+        64
+      ]
+    }
+  ]
+}

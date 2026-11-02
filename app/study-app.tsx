@@ -417,6 +417,7 @@ export default function StudyApp({
   function openCompanion(){setCompanionOrigin(view==="studio"?"studio":"lessons");changeView("shuoshuo");}
   function openMyDay(){setMyDayOrigin(view==="studio"?"studio":"lessons");changeView("myday");}
   function changeView(v: View) {
+    setStudioMenu(false);
     if(v==="atlas"&&atlasReturn){returnToAtlas();return;}
     setAtlasReturn(null);
     if(v==="studio")setStudioVisited(true);
@@ -591,11 +592,11 @@ export default function StudyApp({
           </div>
         </header>
         <div className="page-content">
-          {view==="shuoshuo-lesson"&&<Suspense fallback={<p role="status">Opening your lesson…</p>}><ShuoshuoLesson key={user?.id??"guest"} owner={user?.id??null} db={db} onBack={()=>changeView(shuoshuoLessonOrigin)}/></Suspense>}
+          {view==="shuoshuo-lesson"&&<Suspense fallback={<p role="status">Opening your lesson…</p>}><ShuoshuoLesson key={user?.id??"guest"} owner={user?.id??null} db={db} record={record} notify={notify} onBack={()=>changeView(shuoshuoLessonOrigin)}/></Suspense>}
           {view==="private-lessons"&&<Suspense fallback={<p role="status">Opening local library…</p>}><PrivateLessons key={user?.id??"guest"} owner={user?.id??null} db={db} onBack={()=>changeView("lessons")} onSignIn={onSignIn}/></Suspense>}
           {view==="shuoshuo"&&<Suspense fallback={<p role="status">Opening vocabulary companion…</p>}><ShuoshuoCompanion key={user?.id??"guest"} owner={user?.id??null} db={db} notify={notify} onBack={()=>changeView(companionOrigin)}/></Suspense>}
           {view==="myday"&&<Suspense fallback={<p role="status">Opening your lesson…</p>}><MyDayLesson key={user?.id??"guest"} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} record={record} notify={notify} onBack={()=>changeView(myDayOrigin)}/></Suspense>}
-          {studioVisited&&<div hidden={view!=="studio"}><Suspense fallback={<p role="status">Opening StudyStudio…</p>}><StudyStudio key={user?.id??"guest"} owner={user?.id??null} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} record={record} onExit={()=>changeView("today")} onMyDay={openMyDay} onCompanion={openCompanion} onShuoshuoLesson={openShuoshuoLesson} onPrivate={()=>changeView("private-lessons")} menuOpen={studioMenu} onMenu={()=>setStudioMenu(v=>!v)}/></Suspense></div>}
+          {studioVisited&&<div hidden={view!=="studio"}><Suspense fallback={<p role="status">Opening StudyStudio…</p>}><StudyStudio key={user?.id??"guest"} owner={user?.id??null} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} record={record} onExit={()=>changeView("today")} onMyDay={openMyDay} onCompanion={openCompanion} onShuoshuoLesson={openShuoshuoLesson} menuOpen={studioMenu} onMenu={()=>setStudioMenu(v=>!v)}/></Suspense></div>}
           {(view === "atlas" || atlasReturn) && <div hidden={view!=="atlas"}><Suspense fallback={<p role="status">{t("Loading your notebook…")}</p>}><Atlas owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} onWord={openAtlasWord}/></Suspense></div>}
           {view==="practice" && atlasReturn && <button className="secondary atlas-return-button" onClick={returnToAtlas}><ArrowRight size={16} style={{transform:"rotate(180deg)"}}/>{t("Back to Cloud Atlas")}</button>}
           {view === "grammar" && <Suspense fallback={<p>{t("Loading your notebook…")}</p>}><HSK3Grammar key={user?.id ?? "guest"} owner={user?.id ?? null} db={db?.name === "chinese-os-v1-"+(user?.id ?? "guest") ? db : null}/></Suspense>}
@@ -852,8 +853,6 @@ export default function StudyApp({
                 </div>
               </div>
               <article className="personal-lesson-entry panel"><div><p className="eyebrow">VIDEO LESSON · SENTENCE REHEARSAL</p><h2>A morning with Shuoshuo · 我的早晨</h2><p>42 reading groups · 65 source segments · 40 vocabulary references · writing practice</p></div><button className="primary" onClick={openShuoshuoLesson}>Open lesson<ArrowRight size={16}/></button></article>
-              <article className="personal-lesson-entry panel"><div><p className="eyebrow">LOCAL FILES · PRIVATE STUDY</p><h2>Private lessons on this device</h2><p>Import your own JSON · no upload or cloud sync</p></div><button className="primary" onClick={()=>changeView("private-lessons")}>Open private lessons<ArrowRight size={16}/></button></article>
-              <article className="personal-lesson-entry panel"><div><p className="eyebrow">LIMITED VOCABULARY COMPANION · UNGRADED</p><h2>Dzień z Shuoshuo</h2><p>10 words & phrases · original ChineseOS examples · official video link</p></div><button className="primary" onClick={openCompanion}>Open vocabulary companion<ArrowRight size={16}/></button></article>
               <article className="personal-lesson-entry panel"><div><p className="eyebrow">PERSONAL LESSON · SPEAKING REHEARSAL</p><h2>我的一天 · My day</h2><p>Day 01 · Version 2 · 26 sentences · Hanzi, pinyin & English</p></div><button className="primary" onClick={openMyDay}>Open My day lesson<ArrowRight size={16}/></button></article>
               <button className="secondary pdf-library-button" onClick={() => setPdfSelection(filtered.map(item => item.id))}><Download size={16} /> {t("Print notebook PDF")}</button>
               <div className="library-controls">

@@ -1,6 +1,6 @@
 # Device-local private lesson import
 
-Open `/?private=1`, or use the entries in My lessons and StudyStudio. Sign in with the existing account, choose a JSON file, review its title/counts, then explicitly import. Guests cannot import. The account selects a separate existing IndexedDB notebook; this is device-local separation, not encryption or cloud synchronization.
+The retained optional utility opens only at `/?private=1`; its promotions have been removed from normal lesson/navigation entry points. Sign in with the existing account, choose a JSON file, review its title/counts, then explicitly import. Guests cannot import. The account selects a separate existing IndexedDB notebook; this is device-local separation, not encryption or cloud synchronization.
 
 The strict version-1 manifest is defined by `privateLessonSchema` in `app/private-lessons-model.ts`. It accepts at most 1 MB UTF-8 input, 200 ordered source segments and 200 sentence groups. Raw segment IDs must be contiguous from 1, covered exactly once in order, and each sentence's Hanzi must equal the exact concatenation of its raw sources. Source/content SHA-256 hashes use recursively sorted compact JSON. Exact vocabulary IDs are accepted only for identical complete expressions.
 

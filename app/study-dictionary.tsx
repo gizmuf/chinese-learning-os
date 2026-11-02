@@ -1,5 +1,6 @@
+import {extendedCharacters} from './atlas-cloud-extended';
 'use client';
-import {useEffect,useState,type ReactNode,type RefObject} from 'react';
+import {useEffect,useMemo,useState,type ReactNode,type RefObject} from 'react';
 import {ArrowRight,Volume2,X} from 'lucide-react';
 import {useI18n} from './i18n';
 import {L} from './course-data';
@@ -23,6 +24,7 @@ export function StudyDictionaryDialog({entry,dictionary,dialog,opener,headingId=
  const [trail,setTrail]=useState<DictionaryEntry[]>([]);
  useEffect(()=>{if(!entry)setTrail([])},[entry]);
  const labels={en:{characters:'Inside this expression',phrase:'Words in this expression',words:'Words in this sentence',examples:'Examples in use',back:'Back to',note:'Individual character meanings are clues. The expression has its own meaning.',missing:'No separate meaning recorded yet.'},fr:{characters:'Dans cette expression',phrase:'Les mots de cette expression',words:'Les mots de cette phrase',examples:'Exemples en contexte',back:'Retour à',note:'Le sens des caractères est un indice. L’expression a son propre sens.',missing:'Sens individuel non encore renseigné.'},ru:{characters:'Из чего состоит выражение',phrase:'Слова в этом выражении',words:'Слова в этом предложении',examples:'Примеры употребления',back:'Назад к',note:'Значения знаков — подсказки. У выражения есть собственное значение.',missing:'Отдельное значение пока не записано.'},tr:{characters:'Bu ifadenin içindeki karakterler',phrase:'Bu ifadedeki kelimeler',words:'Bu cümledeki kelimeler',examples:'Kullanım örnekleri',back:'Geri dön:',note:'Karakter anlamları ipucudur. İfadenin kendine özgü bir anlamı vardır.',missing:'Ayrı anlam henüz kaydedilmedi.'}}[locale];
+ const structure=useMemo(()=>entry&&Array.from(entry.text).length===1?extendedCharacters(locale).find(c=>c.hanzi===entry.text):undefined,[entry,locale]);
  const parts=entry?dictionaryBreakdown(entry,dictionary,locale):null,examples=entry&&!parts?.sentence?studyExamples(entry.text,locale):[];
  function select(text:string,trigger:HTMLButtonElement){if(!entry||text===entry.text)return;setTrail(previous=>[...previous,entry]);onLookup(text,trigger)}
  function close(){setTrail([]);onClose()}
@@ -38,8 +40,10 @@ export function StudyDictionaryDialog({entry,dictionary,dialog,opener,headingId=
     <div className="sp-dictionary-entries">{parts.parts.map((part,i)=><button type="button" key={i} onClick={e=>select(part.text,e.currentTarget)}><strong lang="zh-Hans">{part.text}</strong><span><span className="sp-reading">{part.entry?.pinyin}</span><span>{part.entry?.meaning||labels.missing}</span></span><ArrowRight size={15}/></button>)}</div>
    </section>}
    {examples.length>0&&<section className="sp-dictionary-examples" aria-label={labels.examples}><h3>{labels.examples}</h3>{examples.map(example=><article key={example.id}><div lang="zh-Hans"><DictionaryWords text={example.text} dictionary={dictionary} onLookup={select} activeText={entry.text}/></div><p className="sp-reading">{example.pinyin}</p><p>{example.meaning}</p>{example.audio&&speaker(example.audio)}</article>)}</section>}
+   {structure&&<section className="sp-dictionary-structure"><h3>Modern character structure</h3><p>Radical: <span>{structure.radical===entry.text?structure.radical:<button className="sp-dictionary-explore" onClick={e=>select(structure.radical,e.currentTarget)}>{structure.radical}</button>}</span> · {structure.decomposition}</p><div className="sp-dictionary-entries">{[...new Set(structure.leafComponents)].filter(part=>part!==entry.text).map(part=><button key={part} onClick={e=>select(part,e.currentTarget)}>{part}</button>)}</div><small>Dataset-derived modern shape. Component roles and historical origins are reviewed separately in Atlas.</small></section>}
+   {entry.atlasAvailable===false&&<p className="sp-dictionary-note">No reviewed Atlas decomposition is recorded for this character. Its writing practice and context remain available.</p>}
    {onWrite&&Array.from(entry.text).length===1&&<button type="button" className="sp-dictionary-explore" onClick={()=>onWrite(entry)}>{({en:'Practice writing',fr:'Pratiquer l’écriture',ru:'Тренировать письмо',tr:'Yazma alıştırması'}[locale])}<ArrowRight size={16}/></button>}
-   {onExplore&&(entry.word||entry.character)&&<button type="button" className="sp-dictionary-explore" onClick={()=>onExplore(entry)}>{c('Explore in Atlas','Explorer dans l’Atlas','Открыть в Атласе')}<ArrowRight size={16}/></button>}
+   {onExplore&&entry.atlasAvailable!==false&&(entry.word||entry.character)&&<button type="button" className="sp-dictionary-explore" onClick={()=>onExplore(entry)}>{c('Explore in Atlas','Explorer dans l’Atlas','Открыть в Атласе')}<ArrowRight size={16}/></button>}
   </>}
  </dialog>;
 }
