@@ -13,3 +13,16 @@ test('actual practice restores saved answers read-only; explicit new rounds alon
 test('typed pinyin records once under a double click and failed storage retries retain UUID and timestamp',async()=>{const a=await setup({kind:'pinyin',fail:true});await a.answer();await m.act(async()=>{const click=button(a.r,'Check answer').props.onClick;click();click();});assert.equal(a.attempts.length,1);assert.equal(a.rows.length,0);const first=a.attempts[0];a.allow();await a.submit();assert.equal(a.rows.length,1);assert.equal(a.rows[0].correct,true);assert.equal(a.rows[0].id,first.id);assert.equal(a.rows[0].at,first.at);await a.unmount();});
 test('a revealed hint survives reload and an assisted retry does not overwrite an independent failure',async()=>{let a=await setup();await m.act(async()=>button(a.r,'Show hint · supported attempt').props.onClick());const cp=a.cp;await a.unmount();a=await setup({checkpoint:cp});await a.answer();await a.submit();assert.equal(a.rows[0].assisted,true);await a.unmount();
  a=await setup();const wrong=a.check.optionIds.find(id=>id!==a.target.id);await a.answer(m.referenceEntryById.get(wrong).en);await a.submit();const failed=a.rows[0];assert.equal(failed.correct,false);assert.equal(failed.assisted,false);await m.act(async()=>button(a.r,'Retry this one · supported').props.onClick());await a.answer();await a.submit();assert.equal(a.rows.length,2);assert.equal(a.rows[1].assisted,true);assert.notEqual(a.rows[1].id,failed.id);assert.equal(a.rows[0].correct,false);await a.unmount();});
+
+test('review reproduction: a failed submission must not change its answer under the preserved UUID',async()=>{
+ const a=await setup({fail:true});
+ const wrong=a.check.optionIds.find(id=>id!==a.target.id);
+ await a.answer(m.referenceEntryById.get(wrong).en);await a.submit();
+ const first={...a.attempts[0]};
+ await a.answer(a.target.en);a.allow();await a.submit();
+ const second=a.attempts.at(-1);await a.unmount();
+ assert.equal(second.id,first.id);
+ assert.equal(second.correct,first.correct,'the same submission UUID and timestamp now carry a different answer/grade');
+});
+
+test('failed typed submission also freezes assistance and survives reload before its immutable retry',async()=>{let a=await setup({kind:'pinyin',fail:true});await a.answer('dian4');await a.submit();const first={...a.attempts[0]},cp=a.cp;assert.ok(a.r.root.findByType('input').props.disabled);assert.ok(button(a.r,'Show hint · supported attempt').props.disabled);await a.unmount();a=await setup({kind:'pinyin',checkpoint:cp});await a.answer(a.target.pinyin);await m.act(async()=>button(a.r,'Show hint · supported attempt').props.onClick());await a.submit();assert.deepEqual(a.rows[0],first);await a.unmount();});
