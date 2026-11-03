@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 # Execute only through an existing authorized HK admin channel, after preflight review.
 set -euo pipefail
+umask 022
 : "${CHINESEOS_NGINX_CONFIG:?Set the verified existing nginx server config path}"
 : "${CHINESEOS_ARCHIVE:?Set the uploaded verified static archive path}"
 : "${CHINESEOS_ARCHIVE_SHA256:?Set the delivery receipt SHA256}"
+CHINESEOS_NGINX_CONFIG=$(readlink -f "$CHINESEOS_NGINX_CONFIG")
+[[ "$CHINESEOS_NGINX_CONFIG" == /etc/nginx/* ]]
 release=v72-hk2-lesson10
 base=/var/www/chineseos
 expected=$base/releases/v72-hk2
@@ -18,6 +21,7 @@ nginx -t
 stamp=$(date -u +%Y%m%dT%H%M%SZ)
 backup=$base/backups/lesson10-$stamp
 mkdir -p "$backup" "$base/releases/$release" /etc/nginx/snippets
+chmod 700 "$backup"
 cp -a "$CHINESEOS_NGINX_CONFIG" "$backup/nginx.conf"
 tar -czf "$backup/previous-static.tar.gz" -C "$current" .
 tar -tzf "$backup/previous-static.tar.gz" > "$backup/previous-static-files.txt"
@@ -34,7 +38,7 @@ with tarfile.open(archive,'r:gz') as t:
  for m in t.getmembers():
   p=pathlib.PurePosixPath(m.name)
   if p.is_absolute() or '..' in p.parts or m.issym() or m.islnk() or not (m.isfile() or m.isdir()):raise SystemExit('Unsafe archive member')
-  if not (m.name.startswith('public/') or m.name in ['nginx/lesson10-maps.conf','nginx/lesson10-location.conf']):raise SystemExit('Unexpected package path')
+  if not (m.name.startswith('public/') or m.name in ['nginx/lesson10-maps.conf','nginx/lesson10-location.conf'] or m.isdir() and m.name in ['public','nginx']):raise SystemExit('Unexpected package path')
  for m in t.getmembers():
   if not m.isfile():continue
   if m.name.startswith('public/'):target=pathlib.Path(dest)/m.name.removeprefix('public/')
