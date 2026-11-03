@@ -1,4 +1,5 @@
 import myDay from '../data/my-day-01-v2.json';
+import {speakingSource} from './my-day-speaking-model';
 import morning from '../data/shuoshuo-morning.json';
 import {grammarFrames} from './chunk-library-data';
 import {cloudWords} from './atlas-cloud-model';
@@ -16,7 +17,8 @@ function audio(value:unknown):Pronunciation|undefined{
 }
 function source(id:unknown,locale:Locale):DictionaryContext|undefined{
  if(typeof id!=='string')return;
- const row=id.startsWith('my-day-01-v2:')?myDay.sections.flatMap(section=>section.rows)[Number(id.slice('my-day-01-v2:'.length))-1]:id.startsWith('shuoshuo:')?morning.sentences.find(row=>row.id===id.slice('shuoshuo:'.length)):undefined;
+ const speakingMatch=/^(voice-live-2026-11-03|my-day-full-2026-11-03):(\d+)$/.exec(id);
+ const row=speakingMatch?speakingSource(speakingMatch[1],Number(speakingMatch[2])-1):id.startsWith('my-day-01-v2:')?myDay.sections.flatMap(section=>section.rows)[Number(id.slice('my-day-01-v2:'.length))-1]:id.startsWith('shuoshuo:')?morning.sentences.find(row=>row.id===id.slice('shuoshuo:'.length)):undefined;
  if(row)return {sourceId:id,text:row.hanzi,pinyin:row.pinyin,meaning:row.english};
  const example=id.startsWith('grammar:')?grammarFrames.flatMap(frame=>frame.examples).find(example=>example.id===id.slice('grammar:'.length)):undefined;
  if(example)return {sourceId:id,text:example.hanzi,pinyin:example.pinyin,meaning:example.meaning[locale]};

@@ -1,0 +1,243 @@
+{
+  "sourceNote": "Supplied by Robert on 3 November 2026. These are separate variants; Day 01 Version 2 is retained unchanged.",
+  "variants": [
+    {
+      "id": "voice-live-2026-11-03",
+      "title": "Voice Live · 3 November",
+      "sections": [
+        {
+          "id": "morning-school",
+          "title": "Morning and the walk to school",
+          "rows": [
+            {
+              "hanzi": "我每天早上醒来，然后起床，洗澡，换衣服。",
+              "pinyin": "Wǒ měitiān zǎoshang xǐnglái, ránhòu qǐchuáng, xǐzǎo, huàn yīfu.",
+              "english": "I wake up every morning, then get out of bed, take a shower, and change my clothes."
+            },
+            {
+              "hanzi": "然后我去厨房做早饭。",
+              "pinyin": "Ránhòu wǒ qù chúfáng zuò zǎofàn.",
+              "english": "Then I go to the kitchen to prepare breakfast."
+            },
+            {
+              "hanzi": "因为我不吃肉，所以我做素食炒饭。",
+              "pinyin": "Yīnwèi wǒ bù chī ròu, suǒyǐ wǒ zuò sùshí chǎofàn.",
+              "english": "Because I don’t eat meat, I make vegetarian fried rice."
+            },
+            {
+              "hanzi": "我也喜欢水果。",
+              "pinyin": "Wǒ yě xǐhuan shuǐguǒ.",
+              "english": "I also like fruit."
+            },
+            {
+              "hanzi": "吃完早饭以后，我准备出门去学校。",
+              "pinyin": "Chī wán zǎofàn yǐhòu, wǒ zhǔnbèi chūmén qù xuéxiào.",
+              "english": "After finishing breakfast, I get ready to leave home and go to school."
+            },
+            {
+              "hanzi": "因为我家离学校不太远，所以我走十分钟就到学校。",
+              "pinyin": "Yīnwèi wǒ jiā lí xuéxiào bú tài yuǎn, suǒyǐ wǒ zǒu shí fēnzhōng jiù dào xuéxiào.",
+              "english": "Because my home isn’t very far from school, I can get there in just ten minutes on foot."
+            },
+            {
+              "hanzi": "我的课早上八点四十分开始。",
+              "pinyin": "Wǒ de kè zǎoshang bā diǎn sìshí fēn kāishǐ.",
+              "english": "My class starts at 8:40 a.m."
+            },
+            {
+              "hanzi": "十点十分，我们休息二十分钟。",
+              "pinyin": "Shí diǎn shí fēn, wǒmen xiūxi èrshí fēnzhōng.",
+              "english": "At 10:10, we have a twenty-minute break."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "my-day-full-2026-11-03",
+      "title": "My day · Full story",
+      "sections": [
+        {
+          "id": "morning",
+          "title": "Morning · 早上",
+          "rows": [
+            {
+              "hanzi": "我每天早上七点左右醒来。",
+              "pinyin": "Wǒ měitiān zǎoshang qī diǎn zuǒyòu xǐnglái.",
+              "english": "I wake up at around seven every morning."
+            },
+            {
+              "hanzi": "我通常在床上再躺十到十五分钟。",
+              "pinyin": "Wǒ tōngcháng zài chuáng shang zài tǎng shí dào shíwǔ fēnzhōng.",
+              "english": "I usually stay in bed for another ten to fifteen minutes."
+            },
+            {
+              "hanzi": "然后我起床，喝一杯温水。",
+              "pinyin": "Ránhòu wǒ qǐchuáng, hē yì bēi wēnshuǐ.",
+              "english": "Then I get out of bed and drink a glass of warm water."
+            },
+            {
+              "hanzi": "我洗澡，换衣服。",
+              "pinyin": "Wǒ xǐzǎo, huàn yīfu.",
+              "english": "I take a shower and change my clothes."
+            },
+            {
+              "hanzi": "然后我去厨房做早饭。",
+              "pinyin": "Ránhòu wǒ qù chúfáng zuò zǎofàn.",
+              "english": "Then I go to the kitchen and prepare breakfast."
+            },
+            {
+              "hanzi": "因为我不吃肉，所以我做素菜。",
+              "pinyin": "Yīnwèi wǒ bù chī ròu, suǒyǐ wǒ zuò sùcài.",
+              "english": "Because I don’t eat meat, I prepare vegetarian dishes."
+            },
+            {
+              "hanzi": "然后我吃早饭。",
+              "pinyin": "Ránhòu wǒ chī zǎofàn.",
+              "english": "Then I eat breakfast."
+            },
+            {
+              "hanzi": "早饭后，我准备出门。",
+              "pinyin": "Zǎofàn hòu, wǒ zhǔnbèi chūmén.",
+              "english": "After breakfast, I get ready to leave home."
+            }
+          ]
+        },
+        {
+          "id": "school",
+          "title": "Going to school · 去学校",
+          "rows": [
+            {
+              "hanzi": "我出门去学校。",
+              "pinyin": "Wǒ chūmén qù xuéxiào.",
+              "english": "I leave home and go to school."
+            },
+            {
+              "hanzi": "我家离学校很近，走路只要十分钟。",
+              "pinyin": "Wǒ jiā lí xuéxiào hěn jìn, zǒulù zhǐyào shí fēnzhōng.",
+              "english": "My home is close to school; walking takes only ten minutes."
+            },
+            {
+              "hanzi": "去学校的路上，我用微信点一杯咖啡。",
+              "pinyin": "Qù xuéxiào de lùshang, wǒ yòng Wēixìn diǎn yì bēi kāfēi.",
+              "english": "On the way to school, I order a coffee using WeChat."
+            },
+            {
+              "hanzi": "到学校以后，我在楼下的咖啡店取咖啡。",
+              "pinyin": "Dào xuéxiào yǐhòu, wǒ zài lóuxià de kāfēidiàn qǔ kāfēi.",
+              "english": "After arriving at school, I pick up my coffee at the coffee shop downstairs."
+            },
+            {
+              "hanzi": "然后我走进教室。",
+              "pinyin": "Ránhòu wǒ zǒujìn jiàoshì.",
+              "english": "Then I walk into the classroom."
+            }
+          ]
+        },
+        {
+          "id": "classes",
+          "title": "At school · 在学校",
+          "rows": [
+            {
+              "hanzi": "我的课早上八点四十分开始。",
+              "pinyin": "Wǒ de kè zǎoshang bā diǎn sìshí fēn kāishǐ.",
+              "english": "My class starts at 8:40 a.m."
+            },
+            {
+              "hanzi": "我十点十分休息二十分钟。",
+              "pinyin": "Wǒ shí diǎn shí fēn xiūxi èrshí fēnzhōng.",
+              "english": "At 10:10, I have a twenty-minute break."
+            },
+            {
+              "hanzi": "我十点半回去上课。",
+              "pinyin": "Wǒ shí diǎn bàn huíqù shàngkè.",
+              "english": "At 10:30, I return to class."
+            },
+            {
+              "hanzi": "中午十二点，我休息一个小时。",
+              "pinyin": "Zhōngwǔ shí’èr diǎn, wǒ xiūxi yí ge xiǎoshí.",
+              "english": "At noon, I have a one-hour break."
+            },
+            {
+              "hanzi": "我去吃午饭。",
+              "pinyin": "Wǒ qù chī wǔfàn.",
+              "english": "I go to have lunch."
+            },
+            {
+              "hanzi": "下一节课下午一点开始。",
+              "pinyin": "Xià yì jié kè xiàwǔ yì diǎn kāishǐ.",
+              "english": "The next class starts at 1 p.m."
+            },
+            {
+              "hanzi": "我下午两点半下课。",
+              "pinyin": "Wǒ xiàwǔ liǎng diǎn bàn xiàkè.",
+              "english": "I finish class at 2:30 p.m."
+            }
+          ]
+        },
+        {
+          "id": "afternoon",
+          "title": "Afternoon · 下午",
+          "rows": [
+            {
+              "hanzi": "然后我回家。",
+              "pinyin": "Ránhòu wǒ huí jiā.",
+              "english": "Then I go home."
+            },
+            {
+              "hanzi": "回家以后，我开始远程工作。",
+              "pinyin": "Huí jiā yǐhòu, wǒ kāishǐ yuǎnchéng gōngzuò.",
+              "english": "After returning home, I start working remotely."
+            },
+            {
+              "hanzi": "我工作一会儿，再学一会儿中文。",
+              "pinyin": "Wǒ gōngzuò yíhuìr, zài xué yíhuìr Zhōngwén.",
+              "english": "I work for a while, then study Chinese for a while."
+            },
+            {
+              "hanzi": "我经常出去散步。",
+              "pinyin": "Wǒ jīngcháng chūqù sànbù.",
+              "english": "I often go out for a walk."
+            },
+            {
+              "hanzi": "我有时候散步半个小时，有时候散步两个小时。",
+              "pinyin": "Wǒ yǒu shíhou sànbù bàn ge xiǎoshí, yǒu shíhou sànbù liǎng ge xiǎoshí.",
+              "english": "Sometimes I walk for half an hour, and sometimes for two hours."
+            },
+            {
+              "hanzi": "我在附近走走，有时候买点东西。",
+              "pinyin": "Wǒ zài fùjìn zǒuzou, yǒu shíhou mǎi diǎn dōngxi.",
+              "english": "I walk around the neighborhood and sometimes buy a few things."
+            },
+            {
+              "hanzi": "然后我回到家，继续工作。",
+              "pinyin": "Ránhòu wǒ huí dào jiā, jìxù gōngzuò.",
+              "english": "Then I return home and continue working."
+            }
+          ]
+        },
+        {
+          "id": "evening",
+          "title": "Evening · 晚上",
+          "rows": [
+            {
+              "hanzi": "晚上我继续学中文。",
+              "pinyin": "Wǎnshang wǒ jìxù xué Zhōngwén.",
+              "english": "In the evening, I continue studying Chinese."
+            },
+            {
+              "hanzi": "睡觉前，我准备明天的课。",
+              "pinyin": "Shuìjiào qián, wǒ zhǔnbèi míngtiān de kè.",
+              "english": "Before going to bed, I prepare for tomorrow’s class."
+            },
+            {
+              "hanzi": "晚上十一点左右，我上床睡觉。",
+              "pinyin": "Wǎnshang shíyī diǎn zuǒyòu, wǒ shàngchuáng shuìjiào.",
+              "english": "I go to bed at around eleven."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

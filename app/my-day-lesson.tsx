@@ -14,8 +14,16 @@ import {speak,stopAudio} from './audio';
 import {useRecordingPlayback} from './use-recording-playback';
 import {qwenCurriculumClip,hasQwenCurriculumAudio,qwenSyntheticLabel} from './qwen-curriculum-audio';
 import './my-day-lesson.css';
+import MyDaySpeaking from './my-day-speaking';
+import {speakingVariants} from './my-day-speaking-model';
 
-export default function MyDayLesson({db,record,notify,onBack,owner='guest'}:{db:IDBDatabase|null;record:(event:LearningEvent)=>Promise<void>;notify:(message:string)=>void;onBack:()=>void;owner?:string}){
+type LessonProps={db:IDBDatabase|null;record:(event:LearningEvent)=>Promise<void>;notify:(message:string)=>void;onBack:()=>void;owner?:string};
+export default function MyDayLesson(props:LessonProps){
+ const [variant,setVariant]=useState('my-day-01-v2');
+ useEffect(()=>{if(typeof window==='undefined')return;const id=new URLSearchParams(window.location.search).get('rehearsal');if(speakingVariants.some(v=>v.id===id))setVariant(id!);},[]);
+ return <><nav className="md-controls" aria-label="My Day variants"><label>Lesson variant <select aria-label="Lesson variant" value={variant} onChange={event=>{stopAudio();setVariant(event.target.value);const url=new URL(window.location.href);url.searchParams.set('rehearsal',event.target.value);window.history.replaceState(null,'',url.pathname+url.search);}}><option value="my-day-01-v2">Day 01 · Version 2 · Original</option>{speakingVariants.map(v=><option key={v.id} value={v.id}>{v.title}</option>)}</select></label></nav>{variant==='my-day-01-v2'?<OriginalMyDayLesson {...props}/>:<MyDaySpeaking key={variant+':'+(props.owner??'guest')} id={variant} owner={props.owner??'guest'} notify={props.notify} onBack={props.onBack}/>}</>;
+}
+function OriginalMyDayLesson({db,record,notify,onBack,owner='guest'}:LessonProps){
   const recording=useRecordingPlayback(notify);
   const [hanzi,setHanzi]=useState(true),[pinyin,setPinyin]=useState(true),[english,setEnglish]=useState(true);
   const [single,setSingle]=useState(false),[index,setIndex]=useState(0),[writing,setWriting]=useState<Item|null>(null);
