@@ -6,7 +6,7 @@ import shuoshuoLookup from '../data/shuoshuo-morning-lookup.json';
 import {extendedComponent} from './atlas-cloud-extended';
 import {atlasByHanzi} from './atlas-model';
 import shuoshuoMorning from '../data/shuoshuo-morning.json';
-import shuoshuoAudio from '../data/shuoshuo-morning-audio.json';
+import {shuoshuoWordAudio,shuoshuoSentenceAudio} from './shuoshuo-audio';
 import shuoshuoStructures from '../data/hanzi-structure.json';
 import lesson09Characters from '../data/lesson09/characters.json';
 import {lesson09Recording,lesson09Terms,lesson09Pronunciation} from './lesson09-data';
@@ -74,9 +74,9 @@ export function appStudyDictionary(locale:Locale):StudyDictionary{
  const characterContext:Record<string,[string,string]>={麻:['má','In 麻烦: troublesome / inconvenient. Separate character sense not recorded here.'],烦:['fán','In 麻烦: troublesome / inconvenient. Separate character sense not recorded here.'],呀:['ya','Conversational exclamation in 早上好呀.'],卧:['wò','In 卧室: bedroom. Separate character sense not recorded here.'],剪:['jiǎn','In 剪视频: cut / edit video; not the surname gloss.'],造:['zào','In 创造: create. Separate character sense not recorded here.'],番:['fān','In 番茄: tomato. The whole word supplies the meaning.'],茄:['qié','In 番茄: tomato. The whole word supplies the meaning.'],呆:['dāi','In 发呆: stare into space / zone out.'],饼:['bǐng','A flat cake / pancake; in 饼干, biscuit. Do not confuse 冰 bīng (ice).']};
  for(const glyph of new Set(shuoshuoMorning.sources.flatMap(s=>Array.from(s.hanzi).filter(c=>/\p{Script=Han}/u.test(c))))){const old=dictionary.get(glyph),context=characterContext[glyph];dictionary.set(glyph,{...old,text:glyph,pinyin:old?.pinyin??context?.[0]??'',meaning:old?.meaning??context?.[1]??'Separate character meaning not recorded here.',character:glyph,atlasAvailable:structureGlyphs.has(glyph)});}
  for(const term of shuoshuoLookup.entries)if(!dictionary.has(term.text))dictionary.set(term.text,{text:term.text,pinyin:term.pinyin,meaning:term.english});
- for(const term of shuoshuoMorning.practiceTargets){const old=dictionary.get(term.text),clip=(shuoshuoAudio.words as Record<string,{source:string}>)[term.text];dictionary.set(term.text,{...old,text:term.text,pinyin:term.pinyin,meaning:old?.meaning??term.english,...(clip?{audio:{text:term.text,pinyin:term.pinyin,source:clip.source,context:false}}:{})});}
+ for(const term of shuoshuoMorning.practiceTargets){const old=dictionary.get(term.text),clip=shuoshuoWordAudio(term.text);dictionary.set(term.text,{...old,text:term.text,pinyin:term.pinyin,meaning:old?.meaning??term.english,...(clip?{audio:{text:term.text,pinyin:term.pinyin,source:clip.source,context:false}}:{})});}
  if(!dictionary.has('热水'))dictionary.set('热水',{text:'热水',pinyin:'rèshuǐ',meaning:'hot water'});
- for(const sentence of shuoshuoMorning.sentences)dictionary.set(sentence.hanzi,{text:sentence.hanzi,pinyin:sentence.pinyin,meaning:sentence.english,phrase:true});
+ for(const sentence of shuoshuoMorning.sentences){const clip=shuoshuoSentenceAudio(sentence.id,sentence.hanzi);dictionary.set(sentence.hanzi,{text:sentence.hanzi,pinyin:sentence.pinyin,meaning:sentence.english,phrase:true,...(clip?{audio:{source:clip.source,text:sentence.hanzi,pinyin:sentence.pinyin,context:true,kind:'sentence' as const}}:{})});}
  return dictionary;
 }
 /** Resolve the glyph actually hit; whitespace/punctuation must never open a neighbouring word. */

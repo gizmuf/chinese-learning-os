@@ -624,7 +624,7 @@ export default function StudyApp({
             <p>{t("Close other Chinese OS tabs and check that browser storage is enabled. Your saved progress is kept.")}</p>
             <button className="primary" onClick={retryStorage}>{t("Retry loading notebook")}</button>
           </section>}
-          {view==="shuoshuo-lesson"&&<Suspense fallback={<p role="status">Opening your lesson…</p>}><ShuoshuoLesson key={user?.id??"guest"} owner={user?.id??null} db={db} record={record} notify={notify} onBack={()=>changeView(shuoshuoLessonOrigin)}/></Suspense>}
+          {view==="shuoshuo-lesson"&&<Suspense fallback={<p role="status">Opening your lesson…</p>}><ShuoshuoLesson slowAudio={slowAudio} onSlowAudio={setSlowAudio} key={user?.id??"guest"} owner={user?.id??null} db={db} record={record} notify={notify} onBack={()=>changeView(shuoshuoLessonOrigin)}/></Suspense>}
           {view==="private-lessons"&&<Suspense fallback={<p role="status">Opening local library…</p>}><PrivateLessons key={user?.id??"guest"} owner={user?.id??null} db={db} onBack={()=>changeView("lessons")} onSignIn={onSignIn}/></Suspense>}
           {view==="shuoshuo"&&<Suspense fallback={<p role="status">Opening vocabulary companion…</p>}><ShuoshuoCompanion key={user?.id??"guest"} owner={user?.id??null} db={db} notify={notify} onBack={()=>changeView(companionOrigin)}/></Suspense>}
           {view==="myday"&&<Suspense fallback={<p role="status">Opening your lesson…</p>}><MyDayLesson slowAudio={slowAudio} onSlowAudio={setSlowAudio} key={user?.id??"guest"} owner={user?.id??"guest"} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} record={record} notify={notify} onBack={()=>changeView(myDayOrigin)}/></Suspense>}

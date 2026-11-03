@@ -10,6 +10,7 @@ import {loadDictionaryResources,fetchDictionaryEntry} from './dictionary-client'
 import {contextualDictionaryEntry,validDictionaryText,type DictionaryContext} from './dictionary-source-model';
 import {registerDictionaryLexicon} from './atlas-spatial-model';
 import {speakingClip} from './my-day-speaking-model';
+import {shuoshuoSentenceAudioForText} from './shuoshuo-audio';
 import {playRecording,releaseRecording,stopAudio} from './audio';
 import SharedWriting from './shared-writing';
 import './study-lookup.css';
@@ -58,7 +59,7 @@ export default function StudyLookupProvider({children,notify,penOnly,setPenOnly,
   if(!inside){opener.current=trigger;activeContext.current=sourceContext(trigger)??atlasRef.current?.entry.contextual;}
   const nestedSource=sourceContext(trigger);if(nestedSource)activeContext.current=nestedSource;
   stopAudio();stop();const token=++requests.current,context=activeContext.current;
-  const present=(value:DictionaryEntry)=>{let selected=contextualDictionaryEntry({...value,meaning:simplifiedDisplayText(value.meaning)},context);if(Array.from(selected.text).length===1&&!studyAtlasHref(selected))selected.atlasAvailable=false;selected=contextualAudio(selected,selected.contextual?speakingClip(selected.contextual.text):undefined);return selected;};
+  const present=(value:DictionaryEntry)=>{let selected=contextualDictionaryEntry({...value,meaning:simplifiedDisplayText(value.meaning)},context);if(Array.from(selected.text).length===1&&!studyAtlasHref(selected))selected.atlasAvailable=false;selected=contextualAudio(selected,selected.contextual?(speakingClip(selected.contextual.text)??shuoshuoSentenceAudioForText(selected.contextual.text)):undefined);return selected;};
   const localEntry=()=>studyLookupEntry(latestDictionary.current,text,locale,!!trigger.closest('[data-grammar-frame]'))??(context?.text===text?{text,pinyin:context.pinyin,meaning:context.meaning,phrase:true}:undefined);
   const local=localEntry();
   setEntry(present(local?{...local,...(!local.meaning?{lookupStatus:'loading' as const}:{})}:{text,pinyin:'',meaning:'',lookupStatus:validDictionaryText(text)?'loading':'not-found'}));
@@ -71,7 +72,7 @@ export default function StudyLookupProvider({children,notify,penOnly,setPenOnly,
  useEffect(()=>{if(!restoredUI.current)return;if(hydratingUI.current){hydratingUI.current=false;return;}try{const key=contextSessionKey(owner,locale);if(atlas)sessionStorage.setItem(key,JSON.stringify(atlas));else sessionStorage.removeItem(key);}catch{}},[atlas,owner,locale]);
  useEffect(()=>{if(writing){if(!writer.current?.open)writer.current?.showModal();}else writer.current?.close();},[writing]);
  function closeWriting(){setWriting('');stopAudio();requestAnimationFrame(()=>writingTrigger.current?.isConnected&&writingTrigger.current.focus({preventScroll:true}));}
- function startWriting(selected:DictionaryEntry){requests.current++;stopAudio();stop();const source=selected.contextual;const current=selected;writingDetail.current=contextualAudio(contextualDictionaryEntry({...latestDictionary.current.get(current.text),...current},source),source?speakingClip(source.text):undefined);writingTrigger.current=document.activeElement as HTMLElement;setWriting(selected.text);}
+ function startWriting(selected:DictionaryEntry){requests.current++;stopAudio();stop();const source=selected.contextual;const current=selected;writingDetail.current=contextualAudio(contextualDictionaryEntry({...latestDictionary.current.get(current.text),...current},source),source?(speakingClip(source.text)??shuoshuoSentenceAudioForText(source.text)):undefined);writingTrigger.current=document.activeElement as HTMLElement;setWriting(selected.text);}
  function closeAtlas(){if(history.state?.chineseOSContext){history.back();return;}finishAtlas();}
  function finishAtlas(){const origin=atlasRef.current;setAtlas(null);if(origin){activeContext.current=origin.entry.contextual;setEntry(origin.entry);}stopAudio();requestAnimationFrame(()=>{const target=atlasTrigger.current?.isConnected?atlasTrigger.current:[...(dialog.current?.querySelectorAll<HTMLButtonElement>('.sp-dictionary-explore')??[])].at(-1);target?.focus({preventScroll:true});});}
  useEffect(()=>{if(!atlas)return;if(!history.state?.chineseOSContext)history.pushState({...history.state,chineseOSContext:true},'',location.href);const back=()=>{if(!history.state?.chineseOSContext)finishAtlas();};addEventListener('popstate',back);return()=>removeEventListener('popstate',back);},[!!atlas]);
