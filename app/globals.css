@@ -4308,6 +4308,11 @@ html[lang="ru"] .nav-item, html[lang="fr"] .nav-item { font-size: 12px; }
 .shared-writing-exercise .studio-grid {grid-template-columns:minmax(0,1fr);margin-top:1rem;}
 .shared-writing-exercise .writing-panel {min-width:0;}
 .shared-writing-exercise .writing-grid {width:min(100%,480px);margin-inline:auto;}
-.study-writing-dialog:has(.shared-writing-exercise),.l06-dialog:has(.shared-writing-exercise),.video-writing-dialog:has(.shared-writing-exercise) {max-height:92dvh;overflow:auto;}
+.study-writing-dialog:has(.shared-writing-exercise),.l06-dialog:has(.shared-writing-exercise),.video-writing-dialog:has(.shared-writing-exercise) {--writing-dialog-padding:24px;margin:auto;max-height:92dvh;overflow:auto;padding:var(--writing-dialog-padding);}
+:is(.study-writing-dialog,.l06-dialog,.video-writing-dialog):has(.shared-writing-exercise)>header{position:sticky;top:calc(-1 * var(--writing-dialog-padding));z-index:4;background:#fff;margin:calc(-1 * var(--writing-dialog-padding)) calc(-1 * var(--writing-dialog-padding)) 18px;padding:16px var(--writing-dialog-padding);border-bottom:1px solid #d8e2d2;}
+:is(.study-writing-dialog,.l06-dialog,.video-writing-dialog):has(.shared-writing-exercise)>header h2{font-size:20px;line-height:1.3;margin:0;}
+:is(.study-writing-dialog,.l06-dialog,.video-writing-dialog):has(.shared-writing-exercise)>header button{flex-shrink:0;min-width:44px;min-height:44px;}
+@media(max-width:650px){:is(.study-writing-dialog,.l06-dialog,.video-writing-dialog):has(.shared-writing-exercise){--writing-dialog-padding:16px}:is(.study-writing-dialog,.l06-dialog,.video-writing-dialog):has(.shared-writing-exercise)>header{padding-block:12px}}
+
 
 .personal-lesson-entry{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px;margin:0 0 24px;flex-wrap:wrap}.personal-lesson-entry h2{font-size:24px;margin:8px 0}.personal-lesson-entry p:not(.eyebrow){font-size:13px;color:var(--muted)}

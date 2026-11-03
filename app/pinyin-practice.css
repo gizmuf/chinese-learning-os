@@ -20,3 +20,11 @@
 .language-studio-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 22px}
 .language-practice button{min-height:44px}
 @media(max-width:600px){.language-practice{padding:20px;margin-top:16px}.language-cue{padding:14px 16px}.language-studio-tabs{gap:8px}.language-practice>.course-actions{align-items:stretch}.language-model{padding:16px}}
+
+.pinyin-handwriting.hanzi-handwriting{height:auto;min-height:0;margin-inline:auto}
+/* Course dialog headers use flex; the nested exercise keeps a vertical prompt. */
+.language-practice.panel>header{display:block;min-width:0;margin-bottom:0}
+.language-practice.panel>header h2{font-size:clamp(20px,2.1vw,25px);line-height:1.3;letter-spacing:-.02em;margin:0 0 10px}
+
+.language-practice .pencil-toggle{min-height:44px;display:flex;align-items:center;gap:8px;font-size:14px;margin:0 0 10px}
+.language-rating-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
