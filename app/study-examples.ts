@@ -1,3 +1,4 @@
+import {lesson10Sentences,lesson10Pronunciation} from './lesson10-data';
 import shuoshuoMorning from '../data/shuoshuo-morning.json';
 import {lesson09Sentences,lesson09Audio} from './lesson09-data';
 import {lesson08Sentences,lesson08Audio} from './lesson08-data';
@@ -18,6 +19,7 @@ function examples(locale:Locale){
  pool=[...lesson06Sentences.map(v=>row(v,lesson06Audio(v))),
   ...lesson07Sentences.filter(v=>v.origin!=='board-opinion'&&!v.excludeFromChecks).map(v=>row(v,lesson07Audio(v))),
   ...lesson08Sentences.map(v=>row(v,lesson08Audio(v))),
+  ...lesson10Sentences.map(v=>({id:v.id,text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],audio:lesson10Pronunciation(v)})),
   ...lesson09Sentences.map(v=>row(v,lesson09Audio(v))),
   ...extra.map(([word,text,pinyin,en,fr,ru,tr])=>({id:'usage:'+word,text,pinyin,meaning:{en,fr,ru,tr}[locale]})),
   ...lesson05Sentences.map(v=>row(v,'/course05/audio/course05-'+v.id+'-word.mp3')),

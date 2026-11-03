@@ -1,3 +1,4 @@
+import {lesson10ActivityIds} from './lesson10-data';
 import {lesson09ActivityIds} from './lesson09-data';
 import {lesson08ActivityIds} from './lesson08-data';
 import {lesson07ActivityIds} from './lesson07-data';
@@ -29,7 +30,7 @@ export const activityIds = [
 export const courseEventSchema = z
   .object({
     id: z.string().uuid(),
-    lessonId: z.enum(["intensive-03", "intensive-04", "intensive-05", "intensive-06", "intensive-07", "intensive-08", "intensive-09", "video-self-introduction", "grammar-hsk3", "speaking-chunks"]),
+    lessonId: z.enum(["intensive-03", "intensive-04", "intensive-05", "intensive-06", "intensive-07", "intensive-08", "intensive-09", "intensive-10", "video-self-introduction", "grammar-hsk3", "speaking-chunks"]),
     activityId: z.string(),
     kind: z.enum(["answer", "study", "writing"]),
     correct: z.boolean().nullable(),
@@ -38,8 +39,8 @@ export const courseEventSchema = z
     rating: z.number().int().min(0).max(4).optional(),
   })
   .superRefine((event, ctx) => {
-    if (!(event.lessonId === 'speaking-chunks' ? chunkActivityIds : event.lessonId === 'grammar-hsk3' ? grammarActivityIds : event.lessonId === 'intensive-09' ? lesson09ActivityIds : event.lessonId === 'intensive-08' ? lesson08ActivityIds : event.lessonId === 'intensive-07' ? lesson07ActivityIds : event.lessonId === 'intensive-06' ? lesson06ActivityIds : event.lessonId === 'video-self-introduction' ? videoActivityIds : event.lessonId === 'intensive-05' ? lesson05ActivityIds : event.lessonId === 'intensive-04' ? lesson04ActivityIds : activityIds).includes(event.activityId)) ctx.addIssue({code:'custom',message:'Unknown activity for this lesson'});
-    if((event.activityId.startsWith('c04-build-')||event.activityId.startsWith('c05-build-')||event.activityId.startsWith('c06-build-')||event.activityId.startsWith('c07-build-')||event.activityId.startsWith('c08-build-')||event.activityId.startsWith('c09-build-'))&&!event.assisted)ctx.addIssue({code:'custom',message:'Expression builders are supported practice'});
+    if (!(event.lessonId === 'speaking-chunks' ? chunkActivityIds : event.lessonId === 'grammar-hsk3' ? grammarActivityIds : event.lessonId === 'intensive-10' ? lesson10ActivityIds : event.lessonId === 'intensive-09' ? lesson09ActivityIds : event.lessonId === 'intensive-08' ? lesson08ActivityIds : event.lessonId === 'intensive-07' ? lesson07ActivityIds : event.lessonId === 'intensive-06' ? lesson06ActivityIds : event.lessonId === 'video-self-introduction' ? videoActivityIds : event.lessonId === 'intensive-05' ? lesson05ActivityIds : event.lessonId === 'intensive-04' ? lesson04ActivityIds : activityIds).includes(event.activityId)) ctx.addIssue({code:'custom',message:'Unknown activity for this lesson'});
+    if((event.activityId.startsWith('c04-build-')||event.activityId.startsWith('c05-build-')||event.activityId.startsWith('c06-build-')||event.activityId.startsWith('c07-build-')||event.activityId.startsWith('c08-build-')||event.activityId.startsWith('c09-build-')||event.activityId.startsWith('c10-build-'))&&!event.assisted)ctx.addIssue({code:'custom',message:'Expression builders are supported practice'});
     if(event.activityId.startsWith("lab-family-")&&!event.assisted) ctx.addIssue({code:"custom",message:"Visible family examples require assisted practice"});
     if(event.lessonId==='video-self-introduction'&&event.kind==='writing'&&!event.assisted)ctx.addIssue({code:'custom',message:'Video guided writing requires supported scoring'});
     const expected = event.activityId.startsWith("study:")

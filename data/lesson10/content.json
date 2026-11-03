@@ -1,0 +1,2827 @@
+{
+  "lesson_id": "intensive-10",
+  "status": "source-validated-draft-awaiting-app-integration",
+  "number": 10,
+  "date": "2026-11-02",
+  "title": {
+    "en": "Compare, locate & count everyday things"
+  },
+  "language": "en",
+  "words": [
+    {
+      "id": "c10-t01",
+      "hanzi": "大脑",
+      "pinyin": "dànǎo",
+      "meaning": {
+        "en": "brain"
+      },
+      "family": "electronics",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L01"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t02",
+      "hanzi": "电脑",
+      "pinyin": "diànnǎo",
+      "meaning": {
+        "en": "computer"
+      },
+      "family": "electronics",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L02"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-036",
+          "hanzi": "电脑",
+          "pinyin": "diànnǎo"
+        }
+      ]
+    },
+    {
+      "id": "c10-t03",
+      "hanzi": "台式机",
+      "pinyin": "táishìjī",
+      "meaning": {
+        "en": "desktop computer"
+      },
+      "family": "electronics",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t04",
+      "hanzi": "笔记本电脑",
+      "pinyin": "bǐjìběn diànnǎo",
+      "meaning": {
+        "en": "laptop computer"
+      },
+      "family": "electronics",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L04"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t05",
+      "hanzi": "电话",
+      "pinyin": "diànhuà",
+      "meaning": {
+        "en": "telephone; phone call"
+      },
+      "family": "electronics",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L05"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-035",
+          "hanzi": "电话",
+          "pinyin": "diànhuà"
+        }
+      ]
+    },
+    {
+      "id": "c10-t06",
+      "hanzi": "电视",
+      "pinyin": "diànshì",
+      "meaning": {
+        "en": "television"
+      },
+      "family": "electronics",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L06"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-037",
+          "hanzi": "电视",
+          "pinyin": "diànshì"
+        }
+      ]
+    },
+    {
+      "id": "c10-t07",
+      "hanzi": "冰箱",
+      "pinyin": "bīngxiāng",
+      "meaning": {
+        "en": "refrigerator"
+      },
+      "family": "electronics",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L07"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-536",
+          "hanzi": "冰箱",
+          "pinyin": "bīngxiāng"
+        }
+      ]
+    },
+    {
+      "id": "c10-t08",
+      "hanzi": "电冰箱",
+      "pinyin": "diànbīngxiāng",
+      "meaning": {
+        "en": "electric refrigerator; fuller form of 冰箱"
+      },
+      "family": "electronics",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L07"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t09",
+      "hanzi": "比",
+      "pinyin": "bǐ",
+      "meaning": {
+        "en": "than; comparison marker"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L12"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk2-309",
+          "hanzi": "比",
+          "pinyin": "bǐ"
+        }
+      ]
+    },
+    {
+      "id": "c10-t10",
+      "hanzi": "汽油",
+      "pinyin": "qìyóu",
+      "meaning": {
+        "en": "gasoline; petrol"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L08"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t11",
+      "hanzi": "油",
+      "pinyin": "yóu",
+      "meaning": {
+        "en": "oil; fuel in this comparison"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L13"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t12",
+      "hanzi": "电",
+      "pinyin": "diàn",
+      "meaning": {
+        "en": "electricity"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L13"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-593",
+          "hanzi": "电",
+          "pinyin": "diàn"
+        }
+      ]
+    },
+    {
+      "id": "c10-t13",
+      "hanzi": "电车",
+      "pinyin": "diànchē",
+      "meaning": {
+        "en": "electric vehicle here; can also mean tram in other contexts"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L11"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t14",
+      "hanzi": "油车",
+      "pinyin": "yóuchē",
+      "meaning": {
+        "en": "fuel-powered vehicle in this comparison"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L11"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t15",
+      "hanzi": "便宜",
+      "pinyin": "piányi",
+      "meaning": {
+        "en": "inexpensive; cheap in price"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L11"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-157",
+          "hanzi": "便宜",
+          "pinyin": "piányi"
+        }
+      ]
+    },
+    {
+      "id": "c10-t16",
+      "hanzi": "贵",
+      "pinyin": "guì",
+      "meaning": {
+        "en": "expensive; valuable"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L11"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-065",
+          "hanzi": "贵",
+          "pinyin": "guì"
+        }
+      ]
+    },
+    {
+      "id": "c10-t17",
+      "hanzi": "漂亮",
+      "pinyin": "piàoliang",
+      "meaning": {
+        "en": "pretty; beautiful"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L11"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-158",
+          "hanzi": "漂亮",
+          "pinyin": "piàoliang"
+        }
+      ]
+    },
+    {
+      "id": "c10-t18",
+      "hanzi": "远",
+      "pinyin": "yuǎn",
+      "meaning": {
+        "en": "far; distant"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L14"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk2-484",
+          "hanzi": "远",
+          "pinyin": "yuǎn"
+        }
+      ]
+    },
+    {
+      "id": "c10-t19",
+      "hanzi": "美国",
+      "pinyin": "Měiguó",
+      "meaning": {
+        "en": "the United States"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L14"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t20",
+      "hanzi": "土耳其",
+      "pinyin": "Tǔ'ěrqí",
+      "meaning": {
+        "en": "Turkey; Türkiye"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L14"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t21",
+      "hanzi": "头发",
+      "pinyin": "tóufa",
+      "meaning": {
+        "en": "hair on the head"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0392:L06"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-861",
+          "hanzi": "头发",
+          "pinyin": "tóufa"
+        }
+      ]
+    },
+    {
+      "id": "c10-t22",
+      "hanzi": "长",
+      "pinyin": "cháng",
+      "meaning": {
+        "en": "long; the reading in the hair comparison"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0392:L06"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk2-314",
+          "hanzi": "长",
+          "pinyin": "cháng"
+        }
+      ]
+    },
+    {
+      "id": "c10-t23",
+      "hanzi": "多了",
+      "pinyin": "duō le",
+      "meaning": {
+        "en": "much more; after a comparative adjective"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0392:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t24",
+      "hanzi": "得多",
+      "pinyin": "de duō",
+      "meaning": {
+        "en": "much more; degree complement after an adjective"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0392:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t25",
+      "hanzi": "一点儿",
+      "pinyin": "yìdiǎnr",
+      "meaning": {
+        "en": "a little; a bit"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0392:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-261",
+          "hanzi": "一点儿",
+          "pinyin": "yìdiǎnr"
+        }
+      ]
+    },
+    {
+      "id": "c10-t26",
+      "hanzi": "两倍",
+      "pinyin": "liǎng bèi",
+      "meaning": {
+        "en": "two times; ratio wording needs context"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0392:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t27",
+      "hanzi": "倍",
+      "pinyin": "bèi",
+      "meaning": {
+        "en": "times; fold; multiplicative unit"
+      },
+      "family": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0392:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t28",
+      "hanzi": "秘密",
+      "pinyin": "mìmì",
+      "meaning": {
+        "en": "secret"
+      },
+      "family": "guess",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0391:L07"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t29",
+      "hanzi": "猜",
+      "pinyin": "cāi",
+      "meaning": {
+        "en": "guess"
+      },
+      "family": "guess",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0391:L08"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t30",
+      "hanzi": "猜一猜",
+      "pinyin": "cāi yi cāi",
+      "meaning": {
+        "en": "have a guess; try guessing"
+      },
+      "family": "guess",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0391:L08"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t31",
+      "hanzi": "三十",
+      "pinyin": "sānshí",
+      "meaning": {
+        "en": "thirty; written as 30 on the board"
+      },
+      "family": "guess",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0393:L04"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t32",
+      "hanzi": "岁",
+      "pinyin": "suì",
+      "meaning": {
+        "en": "years old; age unit"
+      },
+      "family": "guess",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0393:L04"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-199",
+          "hanzi": "岁",
+          "pinyin": "suì"
+        }
+      ]
+    },
+    {
+      "id": "c10-t33",
+      "hanzi": "世界杯",
+      "pinyin": "Shìjièbēi",
+      "meaning": {
+        "en": "World Cup"
+      },
+      "family": "guess",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L15"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t34",
+      "hanzi": "家",
+      "pinyin": "jiā",
+      "meaning": {
+        "en": "home; family, according to context"
+      },
+      "family": "family",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L08",
+        "IMG_0395:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-086",
+          "hanzi": "家",
+          "pinyin": "jiā"
+        }
+      ]
+    },
+    {
+      "id": "c10-t35",
+      "hanzi": "几",
+      "pinyin": "jǐ",
+      "meaning": {
+        "en": "how many; asks about a small quantity"
+      },
+      "family": "family",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L08"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-085",
+          "hanzi": "几",
+          "pinyin": "jǐ"
+        }
+      ]
+    },
+    {
+      "id": "c10-t36",
+      "hanzi": "口",
+      "pinyin": "kǒu",
+      "meaning": {
+        "en": "classifier for family members here; mouth as a noun"
+      },
+      "family": "family",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L08"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-104",
+          "hanzi": "口",
+          "pinyin": "kǒu"
+        }
+      ]
+    },
+    {
+      "id": "c10-t37",
+      "hanzi": "人",
+      "pinyin": "rén",
+      "meaning": {
+        "en": "person; people"
+      },
+      "family": "family",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L08"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-170",
+          "hanzi": "人",
+          "pinyin": "rén"
+        }
+      ]
+    },
+    {
+      "id": "c10-t38",
+      "hanzi": "他们",
+      "pinyin": "tāmen",
+      "meaning": {
+        "en": "they; them"
+      },
+      "family": "family",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L09"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-203",
+          "hanzi": "他们",
+          "pinyin": "tāmen"
+        }
+      ]
+    },
+    {
+      "id": "c10-t39",
+      "hanzi": "姐姐",
+      "pinyin": "jiějie",
+      "meaning": {
+        "en": "older sister"
+      },
+      "family": "family",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L09"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-092",
+          "hanzi": "姐姐",
+          "pinyin": "jiějie"
+        }
+      ]
+    },
+    {
+      "id": "c10-t40",
+      "hanzi": "两个",
+      "pinyin": "liǎng ge",
+      "meaning": {
+        "en": "two; numeral plus general classifier"
+      },
+      "family": "family",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L09"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t41",
+      "hanzi": "三个",
+      "pinyin": "sān ge",
+      "meaning": {
+        "en": "three; numeral plus general classifier"
+      },
+      "family": "family",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L10"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t42",
+      "hanzi": "和",
+      "pinyin": "hé",
+      "meaning": {
+        "en": "and; with"
+      },
+      "family": "family",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L09"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-078",
+          "hanzi": "和",
+          "pinyin": "hé"
+        }
+      ]
+    },
+    {
+      "id": "c10-t43",
+      "hanzi": "男人",
+      "pinyin": "nánrén",
+      "meaning": {
+        "en": "man"
+      },
+      "family": "family",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0392:L08"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-779",
+          "hanzi": "男人",
+          "pinyin": "nánrén"
+        }
+      ]
+    },
+    {
+      "id": "c10-t44",
+      "hanzi": "女人",
+      "pinyin": "nǚrén",
+      "meaning": {
+        "en": "woman"
+      },
+      "family": "family",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0392:L09"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-787",
+          "hanzi": "女人",
+          "pinyin": "nǚrén"
+        }
+      ]
+    },
+    {
+      "id": "c10-t45",
+      "hanzi": "今天",
+      "pinyin": "jīntiān",
+      "meaning": {
+        "en": "today"
+      },
+      "family": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L11"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "today",
+          "hanzi": "今天",
+          "pinyin": "jīntiān"
+        }
+      ]
+    },
+    {
+      "id": "c10-t46",
+      "hanzi": "昨天",
+      "pinyin": "zuótiān",
+      "meaning": {
+        "en": "yesterday"
+      },
+      "family": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L07"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "yesterday",
+          "hanzi": "昨天",
+          "pinyin": "zuótiān"
+        }
+      ]
+    },
+    {
+      "id": "c10-t47",
+      "hanzi": "前天",
+      "pinyin": "qiántiān",
+      "meaning": {
+        "en": "the day before yesterday"
+      },
+      "family": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L07"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-806",
+          "hanzi": "前天",
+          "pinyin": "qiántiān"
+        }
+      ]
+    },
+    {
+      "id": "c10-t48",
+      "hanzi": "明天",
+      "pinyin": "míngtiān",
+      "meaning": {
+        "en": "tomorrow"
+      },
+      "family": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L12"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "tomorrow",
+          "hanzi": "明天",
+          "pinyin": "míngtiān"
+        }
+      ]
+    },
+    {
+      "id": "c10-t49",
+      "hanzi": "后天",
+      "pinyin": "hòutiān",
+      "meaning": {
+        "en": "the day after tomorrow"
+      },
+      "family": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L12"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-673",
+          "hanzi": "后天",
+          "pinyin": "hòutiān"
+        }
+      ]
+    },
+    {
+      "id": "c10-t50",
+      "hanzi": "月",
+      "pinyin": "yuè",
+      "meaning": {
+        "en": "month; moon in other contexts"
+      },
+      "family": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L11"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-269",
+          "hanzi": "月",
+          "pinyin": "yuè"
+        }
+      ]
+    },
+    {
+      "id": "c10-t51",
+      "hanzi": "号",
+      "pinyin": "hào",
+      "meaning": {
+        "en": "day of the month in spoken dates"
+      },
+      "family": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L11"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-076",
+          "hanzi": "号",
+          "pinyin": "hào"
+        }
+      ]
+    },
+    {
+      "id": "c10-t52",
+      "hanzi": "星期",
+      "pinyin": "xīngqī",
+      "meaning": {
+        "en": "week; weekday expression"
+      },
+      "family": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L11"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-243",
+          "hanzi": "星期",
+          "pinyin": "xīngqī"
+        }
+      ]
+    },
+    {
+      "id": "c10-t53",
+      "hanzi": "星期一",
+      "pinyin": "xīngqīyī",
+      "meaning": {
+        "en": "Monday"
+      },
+      "family": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L12"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t54",
+      "hanzi": "星期二",
+      "pinyin": "xīngqī'èr",
+      "meaning": {
+        "en": "Tuesday"
+      },
+      "family": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L12"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t55",
+      "hanzi": "星期三",
+      "pinyin": "xīngqīsān",
+      "meaning": {
+        "en": "Wednesday"
+      },
+      "family": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L12"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t56",
+      "hanzi": "星期日",
+      "pinyin": "xīngqīrì",
+      "meaning": {
+        "en": "Sunday; expanded from the 日 alternative"
+      },
+      "family": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L13"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-244",
+          "hanzi": "星期日",
+          "pinyin": "xīngqīrì"
+        }
+      ]
+    },
+    {
+      "id": "c10-t57",
+      "hanzi": "星期天",
+      "pinyin": "xīngqītiān",
+      "meaning": {
+        "en": "Sunday; expanded from the 天 alternative"
+      },
+      "family": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L13"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-245",
+          "hanzi": "星期天",
+          "pinyin": "xīngqītiān"
+        }
+      ]
+    },
+    {
+      "id": "c10-t58",
+      "hanzi": "在",
+      "pinyin": "zài",
+      "meaning": {
+        "en": "be at/in; progressive marker before an action"
+      },
+      "family": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L01",
+        "IMG_0401:L02"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-271",
+          "hanzi": "在",
+          "pinyin": "zài"
+        }
+      ]
+    },
+    {
+      "id": "c10-t59",
+      "hanzi": "哪儿",
+      "pinyin": "nǎr",
+      "meaning": {
+        "en": "where; 儿 is a rhotic suffix here"
+      },
+      "family": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L02"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-134",
+          "hanzi": "哪儿",
+          "pinyin": "nǎr"
+        }
+      ]
+    },
+    {
+      "id": "c10-t60",
+      "hanzi": "哪里",
+      "pinyin": "nǎlǐ",
+      "meaning": {
+        "en": "where"
+      },
+      "family": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L02"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-133",
+          "hanzi": "哪里",
+          "pinyin": "nǎlǐ"
+        }
+      ]
+    },
+    {
+      "id": "c10-t61",
+      "hanzi": "超市",
+      "pinyin": "chāoshì",
+      "meaning": {
+        "en": "supermarket"
+      },
+      "family": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-019",
+          "hanzi": "超市",
+          "pinyin": "chāoshì"
+        }
+      ]
+    },
+    {
+      "id": "c10-t62",
+      "hanzi": "书店",
+      "pinyin": "shūdiàn",
+      "meaning": {
+        "en": "bookshop; bookstore"
+      },
+      "family": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-191",
+          "hanzi": "书店",
+          "pinyin": "shūdiàn"
+        }
+      ]
+    },
+    {
+      "id": "c10-t63",
+      "hanzi": "教室",
+      "pinyin": "jiàoshì",
+      "meaning": {
+        "en": "classroom"
+      },
+      "family": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk2-368",
+          "hanzi": "教室",
+          "pinyin": "jiàoshì"
+        }
+      ]
+    },
+    {
+      "id": "c10-t64",
+      "hanzi": "花店",
+      "pinyin": "huādiàn",
+      "meaning": {
+        "en": "flower shop; florist"
+      },
+      "family": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L04"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t65",
+      "hanzi": "饭店",
+      "pinyin": "fàndiàn",
+      "meaning": {
+        "en": "restaurant here; can mean hotel in other contexts"
+      },
+      "family": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L05"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-051",
+          "hanzi": "饭店",
+          "pinyin": "fàndiàn"
+        }
+      ]
+    },
+    {
+      "id": "c10-t66",
+      "hanzi": "饭馆儿",
+      "pinyin": "fànguǎnr",
+      "meaning": {
+        "en": "restaurant; rhotic form of 饭馆"
+      },
+      "family": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L05"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t67",
+      "hanzi": "咖啡店",
+      "pinyin": "kāfēidiàn",
+      "meaning": {
+        "en": "cafe; coffee shop"
+      },
+      "family": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L06"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t68",
+      "hanzi": "酒店",
+      "pinyin": "jiǔdiàn",
+      "meaning": {
+        "en": "hotel in this classroom contrast"
+      },
+      "family": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L07"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk2-375",
+          "hanzi": "酒店",
+          "pinyin": "jiǔdiàn"
+        }
+      ]
+    },
+    {
+      "id": "c10-t69",
+      "hanzi": "现在",
+      "pinyin": "xiànzài",
+      "meaning": {
+        "en": "now; at present"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0401:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "now",
+          "hanzi": "现在",
+          "pinyin": "xiànzài"
+        }
+      ]
+    },
+    {
+      "id": "c10-t70",
+      "hanzi": "他",
+      "pinyin": "tā",
+      "meaning": {
+        "en": "he; him"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0401:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-200",
+          "hanzi": "他",
+          "pinyin": "tā"
+        }
+      ]
+    },
+    {
+      "id": "c10-t71",
+      "hanzi": "睡觉",
+      "pinyin": "shuìjiào",
+      "meaning": {
+        "en": "sleep; be asleep"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0401:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-195",
+          "hanzi": "睡觉",
+          "pinyin": "shuìjiào"
+        }
+      ]
+    },
+    {
+      "id": "c10-t72",
+      "hanzi": "做",
+      "pinyin": "zuò",
+      "meaning": {
+        "en": "do; make"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0401:L04"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-299",
+          "hanzi": "做",
+          "pinyin": "zuò"
+        }
+      ]
+    },
+    {
+      "id": "c10-t73",
+      "hanzi": "什么",
+      "pinyin": "shénme",
+      "meaning": {
+        "en": "what"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0401:L04"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-182",
+          "hanzi": "什么",
+          "pinyin": "shénme"
+        }
+      ]
+    },
+    {
+      "id": "c10-t74",
+      "hanzi": "我们",
+      "pinyin": "wǒmen",
+      "meaning": {
+        "en": "we; us"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0401:L05"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-222",
+          "hanzi": "我们",
+          "pinyin": "wǒmen"
+        }
+      ]
+    },
+    {
+      "id": "c10-t75",
+      "hanzi": "上课",
+      "pinyin": "shàngkè",
+      "meaning": {
+        "en": "have class; attend or teach a lesson"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0401:L05"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-177",
+          "hanzi": "上课",
+          "pinyin": "shàngkè"
+        }
+      ]
+    },
+    {
+      "id": "c10-t76",
+      "hanzi": "学习",
+      "pinyin": "xuéxí",
+      "meaning": {
+        "en": "study; learn"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0401:L05"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-249",
+          "hanzi": "学习",
+          "pinyin": "xuéxí"
+        }
+      ]
+    },
+    {
+      "id": "c10-t77",
+      "hanzi": "老师",
+      "pinyin": "lǎoshī",
+      "meaning": {
+        "en": "teacher"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0397:L02"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "teacher",
+          "hanzi": "老师",
+          "pinyin": "lǎoshī"
+        }
+      ]
+    },
+    {
+      "id": "c10-t78",
+      "hanzi": "学生",
+      "pinyin": "xuésheng",
+      "meaning": {
+        "en": "student"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0397:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t79",
+      "hanzi": "写",
+      "pinyin": "xiě",
+      "meaning": {
+        "en": "write"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0397:L02"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-240",
+          "hanzi": "写",
+          "pinyin": "xiě"
+        }
+      ]
+    },
+    {
+      "id": "c10-t80",
+      "hanzi": "听",
+      "pinyin": "tīng",
+      "meaning": {
+        "en": "listen; hear"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0397:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-209",
+          "hanzi": "听",
+          "pinyin": "tīng"
+        }
+      ]
+    },
+    {
+      "id": "c10-t81",
+      "hanzi": "读",
+      "pinyin": "dú",
+      "meaning": {
+        "en": "read; read aloud"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0397:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-042",
+          "hanzi": "读",
+          "pinyin": "dú"
+        }
+      ]
+    },
+    {
+      "id": "c10-t82",
+      "hanzi": "一直",
+      "pinyin": "yìzhí",
+      "meaning": {
+        "en": "continuously; all along"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0397:L01"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-934",
+          "hanzi": "一直",
+          "pinyin": "yìzhí"
+        }
+      ]
+    },
+    {
+      "id": "c10-t83",
+      "hanzi": "总是",
+      "pinyin": "zǒngshì",
+      "meaning": {
+        "en": "always; repeatedly"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0397:L01"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-994",
+          "hanzi": "总是",
+          "pinyin": "zǒngshì"
+        }
+      ]
+    },
+    {
+      "id": "c10-t84",
+      "hanzi": "干",
+      "pinyin": "gàn",
+      "meaning": {
+        "en": "do; work; the action reading"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0401:L06"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-640",
+          "hanzi": "干",
+          "pinyin": "gàn"
+        }
+      ]
+    },
+    {
+      "id": "c10-t85",
+      "hanzi": "干",
+      "pinyin": "gān",
+      "meaning": {
+        "en": "dry; the adjective reading"
+      },
+      "family": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0401:L06"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t86",
+      "hanzi": "一",
+      "pinyin": "yī",
+      "meaning": {
+        "en": "one; changes tone in the quantity phrases below"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-254",
+          "hanzi": "一",
+          "pinyin": "yī"
+        }
+      ]
+    },
+    {
+      "id": "c10-t87",
+      "hanzi": "条",
+      "pinyin": "tiáo",
+      "meaning": {
+        "en": "classifier for trousers, skirts and a quilt here"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk2-443",
+          "hanzi": "条",
+          "pinyin": "tiáo"
+        }
+      ]
+    },
+    {
+      "id": "c10-t88",
+      "hanzi": "双",
+      "pinyin": "shuāng",
+      "meaning": {
+        "en": "classifier for a pair"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L04"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-845",
+          "hanzi": "双",
+          "pinyin": "shuāng"
+        }
+      ]
+    },
+    {
+      "id": "c10-t89",
+      "hanzi": "件",
+      "pinyin": "jiàn",
+      "meaning": {
+        "en": "classifier for a garment here"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L05"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-089",
+          "hanzi": "件",
+          "pinyin": "jiàn"
+        }
+      ]
+    },
+    {
+      "id": "c10-t90",
+      "hanzi": "辆",
+      "pinyin": "liàng",
+      "meaning": {
+        "en": "classifier for vehicles"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0400:L01"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-754",
+          "hanzi": "辆",
+          "pinyin": "liàng"
+        }
+      ]
+    },
+    {
+      "id": "c10-t91",
+      "hanzi": "本",
+      "pinyin": "běn",
+      "meaning": {
+        "en": "classifier for bound books"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0400:L02"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-010",
+          "hanzi": "本",
+          "pinyin": "běn"
+        }
+      ]
+    },
+    {
+      "id": "c10-t92",
+      "hanzi": "张",
+      "pinyin": "zhāng",
+      "meaning": {
+        "en": "classifier for sheets and flat-surfaced items here"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0400:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-967",
+          "hanzi": "张",
+          "pinyin": "zhāng"
+        }
+      ]
+    },
+    {
+      "id": "c10-t93",
+      "hanzi": "裤子",
+      "pinyin": "kùzi",
+      "meaning": {
+        "en": "trousers; pants"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk2-383",
+          "hanzi": "裤子",
+          "pinyin": "kùzi"
+        }
+      ]
+    },
+    {
+      "id": "c10-t94",
+      "hanzi": "被子",
+      "pinyin": "bèizi",
+      "meaning": {
+        "en": "quilt; comforter"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t95",
+      "hanzi": "袜子",
+      "pinyin": "wàzi",
+      "meaning": {
+        "en": "socks"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L04"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t96",
+      "hanzi": "鞋子",
+      "pinyin": "xiézi",
+      "meaning": {
+        "en": "shoes"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L04"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-t97",
+      "hanzi": "衬衫",
+      "pinyin": "chènshān",
+      "meaning": {
+        "en": "shirt"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L05"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-558",
+          "hanzi": "衬衫",
+          "pinyin": "chènshān"
+        }
+      ]
+    },
+    {
+      "id": "c10-t98",
+      "hanzi": "裙子",
+      "pinyin": "qúnzi",
+      "meaning": {
+        "en": "skirt"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L06"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-812",
+          "hanzi": "裙子",
+          "pinyin": "qúnzi"
+        }
+      ]
+    },
+    {
+      "id": "c10-t99",
+      "hanzi": "汽车",
+      "pinyin": "qìchē",
+      "meaning": {
+        "en": "car; automobile"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0400:L01"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-803",
+          "hanzi": "汽车",
+          "pinyin": "qìchē"
+        }
+      ]
+    },
+    {
+      "id": "c10-t100",
+      "hanzi": "书",
+      "pinyin": "shū",
+      "meaning": {
+        "en": "book"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0400:L02"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-190",
+          "hanzi": "书",
+          "pinyin": "shū"
+        }
+      ]
+    },
+    {
+      "id": "c10-t101",
+      "hanzi": "词典",
+      "pinyin": "cídiǎn",
+      "meaning": {
+        "en": "dictionary"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0400:L02"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-569",
+          "hanzi": "词典",
+          "pinyin": "cídiǎn"
+        }
+      ]
+    },
+    {
+      "id": "c10-t102",
+      "hanzi": "纸",
+      "pinyin": "zhǐ",
+      "meaning": {
+        "en": "paper; a sheet of paper with 张"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0400:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk3-976",
+          "hanzi": "纸",
+          "pinyin": "zhǐ"
+        }
+      ]
+    },
+    {
+      "id": "c10-t103",
+      "hanzi": "桌子",
+      "pinyin": "zhuōzi",
+      "meaning": {
+        "en": "table; desk"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0400:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk1-295",
+          "hanzi": "桌子",
+          "pinyin": "zhuōzi"
+        }
+      ]
+    },
+    {
+      "id": "c10-t104",
+      "hanzi": "床",
+      "pinyin": "chuáng",
+      "meaning": {
+        "en": "bed"
+      },
+      "family": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0400:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": [
+        {
+          "id": "hsk2-321",
+          "hanzi": "床",
+          "pinyin": "chuáng"
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "c10-s01",
+      "hanzi": "电车比油车便宜。",
+      "pinyin": "Diànchē bǐ yóuchē piányi.",
+      "meaning": {
+        "en": "Electric vehicles are cheaper than fuel-powered vehicles in this example."
+      },
+      "topic": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L11"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s02",
+      "hanzi": "电车比油车贵。",
+      "pinyin": "Diànchē bǐ yóuchē guì.",
+      "meaning": {
+        "en": "Electric vehicles are more expensive than fuel-powered vehicles."
+      },
+      "topic": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L11"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s03",
+      "hanzi": "电车比油车漂亮。",
+      "pinyin": "Diànchē bǐ yóuchē piàoliang.",
+      "meaning": {
+        "en": "Electric vehicles are prettier than fuel-powered vehicles."
+      },
+      "topic": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L11"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s04",
+      "hanzi": "油比电贵。",
+      "pinyin": "Yóu bǐ diàn guì.",
+      "meaning": {
+        "en": "Fuel is more expensive than electricity in the board example."
+      },
+      "topic": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L13"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s05",
+      "hanzi": "美国比土耳其远。",
+      "pinyin": "Měiguó bǐ Tǔ'ěrqí yuǎn.",
+      "meaning": {
+        "en": "The United States is farther away than Turkey, from an understood reference point."
+      },
+      "topic": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0390:L14"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s06",
+      "hanzi": "你的头发比我的长多了。",
+      "pinyin": "Nǐ de tóufa bǐ wǒ de cháng duō le.",
+      "meaning": {
+        "en": "Your hair is much longer than mine."
+      },
+      "topic": "comparison",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0392:L06"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s07",
+      "hanzi": "你猜一猜。",
+      "pinyin": "Nǐ cāi yi cāi.",
+      "meaning": {
+        "en": "Have a guess."
+      },
+      "topic": "guess",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0391:L08"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s08",
+      "hanzi": "我猜你三十岁。",
+      "pinyin": "Wǒ cāi nǐ sānshí suì.",
+      "meaning": {
+        "en": "I guess you are thirty years old."
+      },
+      "topic": "guess",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0393:L04"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s09",
+      "hanzi": "你家有几口人？",
+      "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
+      "meaning": {
+        "en": "How many people are in your family?"
+      },
+      "topic": "family",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L08"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s10",
+      "hanzi": "今天几月几号，星期几？",
+      "pinyin": "Jīntiān jǐ yuè jǐ hào, xīngqī jǐ?",
+      "meaning": {
+        "en": "What is today's date and day of the week?"
+      },
+      "topic": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L11"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s11",
+      "hanzi": "今天十一月二号，星期一。",
+      "pinyin": "Jīntiān shíyī yuè èr hào, xīngqīyī.",
+      "meaning": {
+        "en": "Today is November second, Monday."
+      },
+      "topic": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L12"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s12",
+      "hanzi": "明天十一月三号，星期二。",
+      "pinyin": "Míngtiān shíyī yuè sān hào, xīngqī'èr.",
+      "meaning": {
+        "en": "Tomorrow is November third, Tuesday."
+      },
+      "topic": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L12"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s13",
+      "hanzi": "后天十一月四号，星期三。",
+      "pinyin": "Hòutiān shíyī yuè sì hào, xīngqīsān.",
+      "meaning": {
+        "en": "The day after tomorrow is November fourth, Wednesday."
+      },
+      "topic": "calendar",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0394:L12"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s14",
+      "hanzi": "你在哪儿？",
+      "pinyin": "Nǐ zài nǎr?",
+      "meaning": {
+        "en": "Where are you?"
+      },
+      "topic": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L02"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s15",
+      "hanzi": "你在哪里？",
+      "pinyin": "Nǐ zài nǎlǐ?",
+      "meaning": {
+        "en": "Where are you?"
+      },
+      "topic": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L02"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s16",
+      "hanzi": "我在超市。",
+      "pinyin": "Wǒ zài chāoshì.",
+      "meaning": {
+        "en": "I am at the supermarket."
+      },
+      "topic": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s17",
+      "hanzi": "我在家。",
+      "pinyin": "Wǒ zài jiā.",
+      "meaning": {
+        "en": "I am at home."
+      },
+      "topic": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s18",
+      "hanzi": "我在书店。",
+      "pinyin": "Wǒ zài shūdiàn.",
+      "meaning": {
+        "en": "I am at the bookshop."
+      },
+      "topic": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s19",
+      "hanzi": "我在教室。",
+      "pinyin": "Wǒ zài jiàoshì.",
+      "meaning": {
+        "en": "I am in the classroom."
+      },
+      "topic": "places",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0395:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s20",
+      "hanzi": "他在睡觉。",
+      "pinyin": "Tā zài shuìjiào.",
+      "meaning": {
+        "en": "He is sleeping."
+      },
+      "topic": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0401:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s21",
+      "hanzi": "现在他在睡觉。",
+      "pinyin": "Xiànzài tā zài shuìjiào.",
+      "meaning": {
+        "en": "He is sleeping now."
+      },
+      "topic": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0401:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s22",
+      "hanzi": "现在你在做什么？",
+      "pinyin": "Xiànzài nǐ zài zuò shénme?",
+      "meaning": {
+        "en": "What are you doing now?"
+      },
+      "topic": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0401:L04"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s23",
+      "hanzi": "我们在上课。",
+      "pinyin": "Wǒmen zài shàngkè.",
+      "meaning": {
+        "en": "We are having class."
+      },
+      "topic": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0401:L05"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s24",
+      "hanzi": "我们在学习。",
+      "pinyin": "Wǒmen zài xuéxí.",
+      "meaning": {
+        "en": "We are studying."
+      },
+      "topic": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0401:L05"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s25",
+      "hanzi": "老师在写。",
+      "pinyin": "Lǎoshī zài xiě.",
+      "meaning": {
+        "en": "The teacher is writing."
+      },
+      "topic": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0397:L02"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s26",
+      "hanzi": "学生在听。",
+      "pinyin": "Xuésheng zài tīng.",
+      "meaning": {
+        "en": "The students are listening."
+      },
+      "topic": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0397:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s27",
+      "hanzi": "学生在读。",
+      "pinyin": "Xuésheng zài dú.",
+      "meaning": {
+        "en": "The students are reading."
+      },
+      "topic": "actions",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0397:L03"
+      ],
+      "phrase": false,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s28",
+      "hanzi": "一条裤子",
+      "pinyin": "yì tiáo kùzi",
+      "meaning": {
+        "en": "a pair of trousers"
+      },
+      "topic": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L03"
+      ],
+      "phrase": true,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s29",
+      "hanzi": "一条被子",
+      "pinyin": "yì tiáo bèizi",
+      "meaning": {
+        "en": "a quilt"
+      },
+      "topic": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L03"
+      ],
+      "phrase": true,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s30",
+      "hanzi": "一双袜子",
+      "pinyin": "yì shuāng wàzi",
+      "meaning": {
+        "en": "a pair of socks"
+      },
+      "topic": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L04"
+      ],
+      "phrase": true,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s31",
+      "hanzi": "一双鞋子",
+      "pinyin": "yì shuāng xiézi",
+      "meaning": {
+        "en": "a pair of shoes"
+      },
+      "topic": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L04"
+      ],
+      "phrase": true,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s32",
+      "hanzi": "一件衬衫",
+      "pinyin": "yí jiàn chènshān",
+      "meaning": {
+        "en": "a shirt"
+      },
+      "topic": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L05"
+      ],
+      "phrase": true,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s33",
+      "hanzi": "一条裙子",
+      "pinyin": "yì tiáo qúnzi",
+      "meaning": {
+        "en": "a skirt"
+      },
+      "topic": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0399:L06"
+      ],
+      "phrase": true,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s34",
+      "hanzi": "一辆汽车",
+      "pinyin": "yí liàng qìchē",
+      "meaning": {
+        "en": "a car"
+      },
+      "topic": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0400:L01"
+      ],
+      "phrase": true,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s35",
+      "hanzi": "一本书",
+      "pinyin": "yì běn shū",
+      "meaning": {
+        "en": "a book"
+      },
+      "topic": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0400:L02"
+      ],
+      "phrase": true,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s36",
+      "hanzi": "一本词典",
+      "pinyin": "yì běn cídiǎn",
+      "meaning": {
+        "en": "a dictionary"
+      },
+      "topic": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0400:L02"
+      ],
+      "phrase": true,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s37",
+      "hanzi": "一张纸",
+      "pinyin": "yì zhāng zhǐ",
+      "meaning": {
+        "en": "a sheet of paper"
+      },
+      "topic": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0400:L03"
+      ],
+      "phrase": true,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s38",
+      "hanzi": "一张桌子",
+      "pinyin": "yì zhāng zhuōzi",
+      "meaning": {
+        "en": "a table"
+      },
+      "topic": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0400:L03"
+      ],
+      "phrase": true,
+      "canonicalMatches": []
+    },
+    {
+      "id": "c10-s39",
+      "hanzi": "一张床",
+      "pinyin": "yì zhāng chuáng",
+      "meaning": {
+        "en": "a bed"
+      },
+      "topic": "classifiers",
+      "origin": "source-normalized",
+      "sourceIds": [
+        "IMG_0400:L03"
+      ],
+      "phrase": true,
+      "canonicalMatches": []
+    }
+  ],
+  "topics": [
+    {
+      "id": "electronics",
+      "title": {
+        "en": "Electronics & familiar objects"
+      },
+      "note": {
+        "en": "Read each full word. The refrigerator appears with optional 电 on the board. Desktop and laptop forms are distinct. These are word connections, not invented historical etymologies."
+      },
+      "target": null,
+      "wordIds": [
+        "c10-t01",
+        "c10-t02",
+        "c10-t03",
+        "c10-t04",
+        "c10-t05",
+        "c10-t06",
+        "c10-t07",
+        "c10-t08"
+      ]
+    },
+    {
+      "id": "comparison",
+      "title": {
+        "en": "Compare price, appearance & distance"
+      },
+      "note": {
+        "en": "A + 比 + B + adjective compares A with B. 多了 and 得多 can strengthen a degree; 一点儿 can soften it. Do not add 很 automatically. 倍 describes a multiplicative relation and needs explicit context: the board list is not a rule that every adjective accepts every modifier. Classroom prices are examples, not verified current prices."
+      },
+      "target": "c10-s01",
+      "wordIds": [
+        "c10-t09",
+        "c10-t10",
+        "c10-t11",
+        "c10-t12",
+        "c10-t13",
+        "c10-t14",
+        "c10-t15",
+        "c10-t16",
+        "c10-t17",
+        "c10-t18",
+        "c10-t19",
+        "c10-t20",
+        "c10-t21",
+        "c10-t22",
+        "c10-t23",
+        "c10-t24",
+        "c10-t25",
+        "c10-t26",
+        "c10-t27"
+      ]
+    },
+    {
+      "id": "guess",
+      "title": {
+        "en": "Guess, age & the World Cup"
+      },
+      "note": {
+        "en": "Guess an age with 猜 and 岁. V-一-V is a light invitation to try; 一 is light/neutral in 猜一猜. The sports word is 世界杯. The number 30 is written out as 三十 in learning text."
+      },
+      "target": "c10-s07",
+      "wordIds": [
+        "c10-t28",
+        "c10-t29",
+        "c10-t30",
+        "c10-t31",
+        "c10-t32",
+        "c10-t33"
+      ]
+    },
+    {
+      "id": "family",
+      "title": {
+        "en": "Family & number of people"
+      },
+      "note": {
+        "en": "Use 口 when counting family members. 两个 and 三个 count older sisters. The source answer contains an unfilled slot; do not invent a private family history or turn the fragment into a factual personal answer."
+      },
+      "target": "c10-s09",
+      "wordIds": [
+        "c10-t34",
+        "c10-t35",
+        "c10-t36",
+        "c10-t37",
+        "c10-t38",
+        "c10-t39",
+        "c10-t40",
+        "c10-t41",
+        "c10-t42",
+        "c10-t43",
+        "c10-t44"
+      ]
+    },
+    {
+      "id": "calendar",
+      "title": {
+        "en": "Dates & neighbouring days"
+      },
+      "note": {
+        "en": "The table gives November 2 / Monday, November 3 / Tuesday and November 4 / Wednesday. Repeated 月, 号 and 星期 are expanded from the table heading. The ambiguous 10.30 / 六 annotation is preserved in source notes, not silently taught as a verified date."
+      },
+      "target": "c10-s10",
+      "wordIds": [
+        "c10-t45",
+        "c10-t46",
+        "c10-t47",
+        "c10-t48",
+        "c10-t49",
+        "c10-t50",
+        "c10-t51",
+        "c10-t52",
+        "c10-t53",
+        "c10-t54",
+        "c10-t55",
+        "c10-t56",
+        "c10-t57"
+      ]
+    },
+    {
+      "id": "places",
+      "title": {
+        "en": "Where someone is"
+      },
+      "note": {
+        "en": "在 + place answers a location question. 哪儿 has a rhotic ending; 哪里 is another form of where. 饭店 is restaurant in this classroom contrast, while 酒店 is hotel; real usage of 饭店 can also mean hotel."
+      },
+      "target": "c10-s14",
+      "wordIds": [
+        "c10-t58",
+        "c10-t59",
+        "c10-t60",
+        "c10-t61",
+        "c10-t62",
+        "c10-t63",
+        "c10-t64",
+        "c10-t65",
+        "c10-t66",
+        "c10-t67",
+        "c10-t68"
+      ]
+    },
+    {
+      "id": "actions",
+      "title": {
+        "en": "What someone is doing"
+      },
+      "note": {
+        "en": "在 + action describes an action in progress here. 现在 can make now explicit. 一直 stresses continuation; 总是 stresses habitual repetition, so they are not universally interchangeable. 干 has different readings and meanings: gàn (do/work) and gān (dry)."
+      },
+      "target": "c10-s20",
+      "wordIds": [
+        "c10-t69",
+        "c10-t70",
+        "c10-t71",
+        "c10-t72",
+        "c10-t73",
+        "c10-t74",
+        "c10-t75",
+        "c10-t76",
+        "c10-t77",
+        "c10-t78",
+        "c10-t79",
+        "c10-t80",
+        "c10-t81",
+        "c10-t82",
+        "c10-t83",
+        "c10-t84",
+        "c10-t85"
+      ]
+    },
+    {
+      "id": "classifiers",
+      "title": {
+        "en": "Count everyday objects"
+      },
+      "note": {
+        "en": "Choose the classifier with the noun: 条 for the displayed trousers/quilt/skirt, 双 for pairs, 件 for a shirt, 辆 for a car, 本 for books, 张 for a sheet/table/bed. 一 has dictionary tone yī; spoken quantity phrases show yì before non-fourth-tone classifiers and yí before fourth-tone classifiers."
+      },
+      "target": "c10-s28",
+      "wordIds": [
+        "c10-t86",
+        "c10-t87",
+        "c10-t88",
+        "c10-t89",
+        "c10-t90",
+        "c10-t91",
+        "c10-t92",
+        "c10-t93",
+        "c10-t94",
+        "c10-t95",
+        "c10-t96",
+        "c10-t97",
+        "c10-t98",
+        "c10-t99",
+        "c10-t100",
+        "c10-t101",
+        "c10-t102",
+        "c10-t103",
+        "c10-t104"
+      ]
+    }
+  ],
+  "dialogue": [],
+  "optional": [
+    {
+      "id": "c10-opt-source-saying",
+      "hanzi": "男人四十一枝花。",
+      "pinyin": "Nánrén sìshí yì zhī huā.",
+      "meaning": {
+        "en": "A man at forty is like a flower. A classroom saying, not a factual rule about gender or age."
+      },
+      "origin": "source-cultural-observation",
+      "sourceIds": [
+        "IMG_0392:L08"
+      ],
+      "optional": true,
+      "note": "Read 四十 + 一枝花, not 四十一 (forty-one). The missing female half of any proverb is not invented."
+    },
+    {
+      "id": "c10-opt-source-yi",
+      "hanzi": "衣",
+      "pinyin": "yī",
+      "meaning": {
+        "en": "clothing; the character shown next to 一 as a same-sound observation"
+      },
+      "origin": "source-character-observation",
+      "sourceIds": [
+        "IMG_0397:L04"
+      ],
+      "optional": true,
+      "note": "A sound/shape observation, not a claim of shared historical origin."
+    }
+  ],
+  "assessmentPolicy": "No listening completion, FSRS grade or account event produced by these authoring files."
+}

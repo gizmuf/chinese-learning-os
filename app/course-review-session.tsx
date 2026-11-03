@@ -1,4 +1,5 @@
 'use client';
+import {Lesson10Practice} from './lesson10';
 import {Lesson09Practice} from './lesson09';
 import {Lesson08Practice} from './lesson08';
 import {Lesson07Practice} from './lesson07';
@@ -14,6 +15,7 @@ export default function CourseReviewSession({id,number,ids,owner,ready,record,no
  {number===3&&<CoursePractice {...{ids,record,ready,notify}} onFinish={onComplete}/>}
  {number===4&&<Lesson04Practice sessionKey={id} {...{owner,record,ready,notify,onComplete}} mode="check" checkIds={ids}/>}
  {number===5&&<Lesson05Practice sessionKey={id} {...{owner,record,ready,notify,onComplete}} mode="check" checkIds={ids}/>}
+ {number===10&&<Lesson10Practice {...{ids,record,ready,notify}}/>}
  {number===9&&<Lesson09Practice {...{ids,record,ready,notify}}/>}
  {number===8&&<Lesson08Practice {...{ids,record,ready,notify}}/>}
  {number===7&&<Lesson07Practice {...{ids,record,ready,notify}}/>}

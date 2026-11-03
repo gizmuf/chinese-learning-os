@@ -1,0 +1,17 @@
+[Unit]
+Description=ChineseOS read-only dictionary lookup
+After=network.target
+[Service]
+Type=simple
+User=ecs-assist-user
+WorkingDirectory=/home/ecs-assist-user/chineseos-v70
+Environment=CHINESEOS_SOURCE_ROOT=/home/ecs-assist-user/chineseos-v70
+ExecStart=/home/ecs-assist-user/node22/bin/node /opt/chineseos-lookup/v70/lookup.mjs
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=true
+[Install]
+WantedBy=multi-user.target
