@@ -1,1 +1,22 @@
-.pinyin-handwriting{height:180px;position:relative;border:1px solid #bdcbbd;border-radius:14px;background:#fff;overflow:hidden;min-width:0}.pinyin-handwriting>svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.pinyin-handwriting .ink-canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}.language-practice{margin-top:20px;min-width:0}.language-practice header h2{font-size:clamp(22px,4vw,32px)}.language-cue{font-size:clamp(32px,7vw,60px);overflow-wrap:anywhere;margin:24px 0;color:#2f5145}.language-input-choice{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}.language-answer{display:flex;flex-direction:column;gap:12px}.language-answer input{width:100%;box-sizing:border-box;min-height:54px;padding:12px;font-size:22px;border:1px solid #bdcbbd;border-radius:12px}.language-answer small,.language-note{font-size:14px;line-height:1.6;color:#65776b}.language-model{padding:18px;background:#f1f5ec;border-radius:14px;margin:18px 0}.language-model>p[lang]{font-size:32px}.notebook-pinyin-practice{padding:18px;background:#f6f8f1;border-radius:16px;margin-top:18px}.notebook-pinyin-practice p{margin:8px 0}.language-studio-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.language-practice button{min-height:44px}
+.pinyin-handwriting{height:180px;position:relative;border:1px solid #bdcbbd;border-radius:14px;background:#fff;overflow:hidden;min-width:0}
+.pinyin-handwriting>svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.pinyin-handwriting .ink-canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
+.language-practice{box-sizing:border-box;min-width:0;width:100%;max-width:920px;margin:22px 0 0;padding:clamp(20px,3vw,32px)}
+.language-practice header .eyebrow{font-size:11px;letter-spacing:.13em;line-height:1.5;margin:0 0 8px}
+.language-practice header h2{font-size:clamp(20px,2.1vw,25px);line-height:1.3;letter-spacing:-.02em;margin:0 0 10px}
+.language-practice .language-meaning{font-size:17px;line-height:1.5;margin:0 0 18px;color:#52675b}
+.language-cue{box-sizing:border-box;font-size:clamp(38px,6vw,56px);line-height:1.3;overflow-wrap:anywhere;margin:0 0 20px;padding:16px 20px;border-radius:14px;background:#f5f7f0;color:#2f5145}
+.language-input-choice{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}
+.language-answer{display:flex;flex-direction:column;gap:10px;font-size:15px;font-weight:600;max-width:720px}
+.language-answer input{width:100%;box-sizing:border-box;min-height:54px;padding:12px 14px;font-size:22px;border:1px solid #bdcbbd;border-radius:12px;background:#fff}
+.language-answer small,.language-note{font-size:14px;font-weight:400;line-height:1.6;color:#65776b}
+.language-practice>.language-note:last-child{margin-bottom:0}
+.language-practice>.course-actions{margin-top:18px;gap:10px}
+.language-model{padding:18px;background:#f1f5ec;border-radius:14px;margin:18px 0}
+.language-model h3{font-size:18px;line-height:1.4;margin:0 0 10px}
+.language-model>p[lang]{font-size:32px;line-height:1.4;margin:8px 0}
+.notebook-pinyin-practice{padding:18px;background:#f6f8f1;border-radius:16px;margin-top:18px}
+.notebook-pinyin-practice p{margin:8px 0}
+.language-studio-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 22px}
+.language-practice button{min-height:44px}
+@media(max-width:600px){.language-practice{padding:20px;margin-top:16px}.language-cue{padding:14px 16px}.language-studio-tabs{gap:8px}.language-practice>.course-actions{align-items:stretch}.language-model{padding:16px}}

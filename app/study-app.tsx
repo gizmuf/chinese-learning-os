@@ -1070,13 +1070,13 @@ export default function StudyApp({
                         : t("THE WRITING STUDIO")}
                     </p>
                     <h1>
-                      {skill !== "writing"
+                      {isLanguageSkill(skill)?skillNames[skill]:skill !== "writing"
                         ? skillNames[skill] + " · " + t("Practice")
                         : t("One stroke at a time")}
                       <span className="orange">.</span>
                     </h1>
                     <p>
-                      {session
+                      {isLanguageSkill(skill)?(skill==='pinyin'?'Recall the reading. Write every tone.':skill==='hanzi-from-pinyin'?'Read the Pinyin. Recall the matching characters.':'Type the reading. Choose the characters that fit.'):session
                         ? t("Take a breath. Recall before you reveal.")
                         : t("Watch it. Trace it. Make it yours.")}
                     </p>
@@ -1097,7 +1097,7 @@ export default function StudyApp({
                     </select>
                   )}
                 </div>
-                {!session&&<div className="language-studio-tabs" role="group" aria-label="Writing and language practice"><button type="button" className={skill==='writing'?'primary':'secondary'} onClick={()=>{setLanguageRun(undefined);window.history.replaceState(null,'','/');setSkill('writing');}}>Hanzi writing</button>{languageSkills.map(value=><button type="button" key={value} className={skill===value?'primary':'secondary'} onClick={()=>{setLanguageRun(undefined);setSkill(value);}}>{skillNames[value]}</button>)}</div>}
+                {!session&&<div className="language-studio-tabs" role="group" aria-label="Writing and language practice"><button type="button" className={skill==='writing'?'primary':'secondary'} aria-pressed={skill==='writing'} onClick={()=>{setLanguageRun(undefined);window.history.replaceState(null,'','/');setSkill('writing');}}>Hanzi writing</button>{languageSkills.map(value=><button type="button" key={value} className={skill===value?'primary':'secondary'} aria-pressed={skill===value} onClick={()=>{setLanguageRun(undefined);setSkill(value);}}>{skillNames[value]}</button>)}</div>}
                 {skill === "writing" && !session && (
                   <div className="notebook-layout-switch" role="group" aria-label={t("Writing layout")}>
                     <button className={writingLayout === "studio" ? "selected" : ""} aria-pressed={writingLayout === "studio"} onClick={() => setWritingLayout("studio")}>{t("Single character")}</button>

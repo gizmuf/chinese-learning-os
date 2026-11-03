@@ -250,12 +250,13 @@ select {
   min-width: 0;
 }
 .topbar {
-  height: 73px;
+  height: auto;
+  min-height: 73px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--border);
-  padding: 0 42px;
+  padding: 12px 42px;
   font-size: 11px;
   background: #fcfcf9;
 }
@@ -1575,7 +1576,7 @@ td small {
     margin-left: 205px;
   }
   .topbar {
-    padding: 0 28px;
+    padding: 12px 28px;
   }
   .page-content {
     padding: 32px 28px 0;
@@ -1675,7 +1676,7 @@ td small {
     padding-right: 23px;
   }
   .topbar {
-    padding: 0 23px;
+    padding: 12px 23px;
   }
   .page-heading h1 {
     font-size: 30px;
