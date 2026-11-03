@@ -117,6 +117,9 @@ export default function StudyApp({
   const [notebookEvents, setEvents] = useState<LearningEvent[]>([]);
   const [sync, setSync] = useState(t("Loading your notebook…"));
   const [db, setDb] = useState<IDBDatabase | null>(null);
+  const [storageError, setStorageError] = useState(false);
+  const [storageAttempt, setStorageAttempt] = useState(0);
+  const retryStorage = () => setStorageAttempt(value => value + 1);
   const syncLock = useRef(false);
   const [selectedRecord, setSelected] = useState(items[0]);
   const selected = items.find(item => item.id === selectedRecord.id) ?? items[0];
@@ -179,15 +182,16 @@ export default function StudyApp({
   }, []);
   useEffect(() => {
     let alive = true;
+    let opened: IDBDatabase | undefined;
+    setDb(null); setIsReady(false); setStorageError(false); setSync(t("Loading your notebook…"));
     openStore(user?.id ?? "guest")
       .then(async (store) => {
+        opened = store;
         if (!alive) {
           store.close();
           return;
         }
-        setDb(store);
-        setEvents(await allEvents(store));
-        setSync(user ? t("Ready to sync") : t("Guest · saved on this device"));
+        const history = await allEvents(store);
         const prefs = await readDraft<{
           penOnly: boolean;
           hanziStyle?: HanziStyle;
@@ -197,6 +201,7 @@ export default function StudyApp({
           left: boolean;
           minutes: number;
         }>(store, "settings");
+        if (!alive) return;
         hanziAppearance.setStyle(prefs?.hanziStyle==='print'?'print':'strokes');
         hanziAppearance.setHighlight(prefs?.highlightComponents??true);
         if (prefs) {
@@ -210,6 +215,9 @@ export default function StudyApp({
           }
         }
         const recognition = await readDraft(store, recognitionDraftKey);
+        if (!alive) return;
+        setDb(store); setEvents(history);
+        setSync(user ? t("Ready to sync") : t("Guest · saved on this device"));
         const requestedAll=allReviewLevel(window.location.search);
         if(alive&&requestedAll){
           const queue=items.filter(item=>isInLevel(item,requestedAll));
@@ -227,13 +235,17 @@ export default function StudyApp({
         setIsReady(true);
       })
       .catch(() => {
+        opened?.close();
+        if (!alive) return;
+        setStorageError(true);
         setSync(t("Device storage unavailable"));
         notify(t("Enable browser storage to save your practice."));
       });
     return () => {
       alive = false;
+      opened?.close();
     };
-  }, [user?.id, notify]);
+  }, [user?.id, notify, storageAttempt]);
   useEffect(() => {
     if (db && isReady)
       saveDraft(db, "settings", {
@@ -601,6 +613,11 @@ export default function StudyApp({
           </div>
         </header>
         <div className="page-content">
+          {storageError && <section className="panel" role="alert">
+            <p>{t("Device storage unavailable")}</p>
+            <p>{t("Close other Chinese OS tabs and check that browser storage is enabled. Your saved progress is kept.")}</p>
+            <button className="primary" onClick={retryStorage}>{t("Retry loading notebook")}</button>
+          </section>}
           {view==="shuoshuo-lesson"&&<Suspense fallback={<p role="status">Opening your lesson…</p>}><ShuoshuoLesson key={user?.id??"guest"} owner={user?.id??null} db={db} record={record} notify={notify} onBack={()=>changeView(shuoshuoLessonOrigin)}/></Suspense>}
           {view==="private-lessons"&&<Suspense fallback={<p role="status">Opening local library…</p>}><PrivateLessons key={user?.id??"guest"} owner={user?.id??null} db={db} onBack={()=>changeView("lessons")} onSignIn={onSignIn}/></Suspense>}
           {view==="shuoshuo"&&<Suspense fallback={<p role="status">Opening vocabulary companion…</p>}><ShuoshuoCompanion key={user?.id??"guest"} owner={user?.id??null} db={db} notify={notify} onBack={()=>changeView(companionOrigin)}/></Suspense>}
@@ -1108,7 +1125,7 @@ export default function StudyApp({
                 ) : skill === "meaning" ? (
                   <RecognitionReview key={(user?.id ?? "guest") + ":" + recognitionRun}
                     db={db?.name === "chinese-os-v1-" + (user?.id ?? "guest") ? db : null}
-                    runId={recognitionRun} queue={(session ?? [selected]).map(i => sourceItems.find(source => source.id === i.id)!)}
+                    onRetryStorage={retryStorage} runId={recognitionRun} queue={(session ?? [selected]).map(i => sourceItems.find(source => source.id === i.id)!)}
                     record={record} notify={notify} practice={recognitionPractice} onWrite={setRecognitionWriting} onPosition={index => {
                       if (session) {setSessionIndex(index); if(session[index])setSelected(session[index]);}
                     }}/>

@@ -2447,6 +2447,14 @@
     "Practice again": {
       "fr": "Recommencer",
       "ru": "Ещё раз"
+    },
+    "Retry loading notebook": {
+      "fr": "Réessayer de charger le carnet",
+      "ru": "Повторить загрузку тетради"
+    },
+    "Close other Chinese OS tabs and check that browser storage is enabled. Your saved progress is kept.": {
+      "fr": "Fermez les autres onglets Chinese OS et vérifiez que le stockage du navigateur est activé. Vos progrès enregistrés sont conservés.",
+      "ru": "Закройте другие вкладки Chinese OS и проверьте, что хранилище браузера включено. Сохранённый прогресс не удаляется."
     }
   },
   "vocabulary": {
