@@ -1,3 +1,4 @@
+import {lesson11Terms,lesson11Pronunciation} from './lesson11-data';
 import {referenceEntries} from './reference-lessons-data';
 import lesson10Characters from '../data/lesson10/characters.json';
 import {lesson10Terms,lesson10Pronunciation} from './lesson10-data';
@@ -47,6 +48,9 @@ export function appStudyDictionary(locale:Locale):StudyDictionary{
  for(const v of lesson09Terms)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],phrase:v.phrase,audio:lesson09Pronunciation(v)});
  for(const v of lesson09Characters.characters)dictionary.set(v.text,{...dictionary.get(v.text),text:v.text,pinyin:v.pinyin,meaning:v.meaning[locale],character:v.text});
  for(const clip of (lesson09AudioManifest.recordings as {id:string;text:string;file:string}[]).filter(v=>v.id.startsWith('char-'))){const entry=dictionary.get(clip.text);if(entry&&!entry.audio)dictionary.set(clip.text,{...entry,audio:{text:clip.text,pinyin:entry.pinyin,context:false,source:lesson09Recording(clip.id)??'/course09/audio/'+clip.file}});}
+ // Constituent characters newly introduced by 任何; the compound keeps its own sense.
+ for(const [text,pinyin,en,fr,ru,tr] of [['任','rèn','appoint / allow; in 任何: any','nommer / permettre ; dans 任何 : tout','назначать / позволять; в 任何: любой','atamak / izin vermek; 任何 içinde: herhangi'],['何','hé','what / how; in 任何: any','quoi / comment ; dans 任何 : tout','что / как; в 任何: любой','ne / nasıl; 任何 içinde: herhangi']] as const)if(!dictionary.has(text))dictionary.set(text,{text,pinyin,meaning:{en,fr,ru,tr}[locale],character:text});
+ for(const v of lesson11Terms)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],phrase:v.phrase,audio:lesson11Pronunciation(v)});
  for(const v of lesson10Terms)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],phrase:v.phrase,audio:lesson10Pronunciation(v)});
  for(const v of lesson10Characters.characters)if(!dictionary.has(v.text))dictionary.set(v.text,{text:v.text,pinyin:v.pinyin,meaning:v.meaning.en,character:v.text});
  for(const v of referenceEntries)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.en,phrase:/[。！？?，,]/u.test(v.hanzi)});

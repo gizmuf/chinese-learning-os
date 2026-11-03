@@ -1,0 +1,962 @@
+{
+  "c11-t001": {
+    "text": "前天",
+    "source": "/audio/hsk3-806-word.mp3",
+    "sha256": "622540639f5dddcd4cd07e94775bb753c45f746fefc39c40b1503cb777dad18a",
+    "pinyin": "qiántiān"
+  },
+  "c11-t002": {
+    "text": "昨天",
+    "source": "/atlas/audio/atlas-u6628-sentence.mp3",
+    "sha256": "2184207632e7afa5ee0f69cdf14792ce5cb9af1d2243836449d9461b295ae235",
+    "pinyin": "zuótiān"
+  },
+  "c11-t003": {
+    "text": "今天",
+    "source": "/audio/today-word.mp3",
+    "sha256": "9cb2e11a49604ee68f67abf04ad2e507636e90470707d18d71eba05ce7f9ef8e",
+    "pinyin": "jīntiān"
+  },
+  "c11-t004": {
+    "text": "明天",
+    "source": "/atlas/audio/atlas-u660e-sentence.mp3",
+    "sha256": "53b074e8c5660fa797943225a3e2e8f96750ae62402f446df8ef0405b1eae66e",
+    "pinyin": "míngtiān"
+  },
+  "c11-t005": {
+    "text": "后天",
+    "source": "/audio/hsk3-673-word.mp3",
+    "sha256": "5953077b1f16fd59086110b1623715fb3d9f34c4db8a72f1bde095c75576c2d5",
+    "pinyin": "hòutiān"
+  },
+  "c11-t006": {
+    "text": "星期",
+    "source": "/audio/hsk1-243-word.mp3",
+    "sha256": "8bd25ed7f80b3880ae60023b70b8e7706a4e5fbd27660c6ca0d9f68fe3cd880f",
+    "pinyin": "xīngqī"
+  },
+  "c11-t007": {
+    "text": "星期天",
+    "source": "/audio/hsk1-245-word.mp3",
+    "sha256": "6e65bf4a57f2937dc3fc659861b4f0b2b8e3e845c057dde7137f2b9d6e8b7159",
+    "pinyin": "xīngqī tiān"
+  },
+  "c11-t008": {
+    "text": "星期日",
+    "source": "/audio/hsk1-244-word.mp3",
+    "sha256": "e3161ded71ad1046bcf7a5c60ad1138b90a263f39b2a2931e1827d5382667c98",
+    "pinyin": "xīngqī rì"
+  },
+  "c11-t009": {
+    "text": "星期一",
+    "source": "/course08/audio/c08-t29.mp3",
+    "sha256": "912a17b296f2fac09294da94377133478bf131836798a64df7671a7f2e6121e7",
+    "pinyin": "xīngqī yī"
+  },
+  "c11-t010": {
+    "text": "星期二",
+    "source": "/api/practice-recording?file=8621c00d3b2c45f7308129e7ff75dcadadd28689d3156d22d27a61cc3a3d000d",
+    "sha256": "471eabe86fb4b60fc1c2775972dd363dc7d91b70c93f109985604785585463e5",
+    "pinyin": "xīngqī èr"
+  },
+  "c11-t011": {
+    "text": "号",
+    "source": "/audio/hsk1-076-word.mp3",
+    "sha256": "44ce77fea3b677f79f9c2b66cb98c8b22d9ab78674de14a8ea49a63902e69e6d",
+    "pinyin": "hào"
+  },
+  "c11-t012": {
+    "text": "日",
+    "source": "/audio/hsk1-172-word.mp3",
+    "sha256": "2503cb24648c2c6b3bc7b1f38ce7f8cd77393a399a5495d70ab4d2ec922f2002",
+    "pinyin": "rì"
+  },
+  "c11-t013": {
+    "text": "周",
+    "source": "/audio/hsk2-492-word.mp3",
+    "sha256": "94b60c12e67773595d0fa7e1810616192627d46db7cb6b8f9a11b1a21e4c7f9e",
+    "pinyin": "zhōu"
+  },
+  "c11-t014": {
+    "text": "天",
+    "source": "/audio/hsk1-207-word.mp3",
+    "sha256": "09493b661faaace3b5c3f7cae95d2853aba68a21f81d7820a9ce1b0e503e5664",
+    "pinyin": "tiān"
+  },
+  "c11-t015": {
+    "text": "年",
+    "source": "/audio/hsk1-149-word.mp3",
+    "sha256": "30159e37b00b3ec2509523db417d7a356dbecea713dae48499cccdb007c5c7a3",
+    "pinyin": "nián"
+  },
+  "c11-t016": {
+    "text": "第",
+    "source": "/audio/hsk1-031-word.mp3",
+    "sha256": "be1d71c8eca8586df6552a04d621667998eeb6814732c2b8b66898dc55e14ea1",
+    "pinyin": "dì"
+  },
+  "c11-t017": {
+    "text": "第八课",
+    "source": "/api/practice-recording?file=c126f74ad44258e525ebb8ce2a13fc186bdaeccfca40559ea3399d636a4c7e7a",
+    "sha256": "593e19a0ea98fb138e70be6e9d1dc89c69901ab1103b4f5d498ada1d72ec4715",
+    "pinyin": "dì bā kè"
+  },
+  "c11-t018": {
+    "text": "弟弟",
+    "source": "/audio/hsk1-032-word.mp3",
+    "sha256": "bb0d99be1472a491f5b0cfd8e8079e37e32248937e3321e64ffcd52f8b04d3eb",
+    "pinyin": "dìdi"
+  },
+  "c11-t019": {
+    "text": "季节",
+    "source": "/audio/hsk3-694-word.mp3",
+    "sha256": "f05bffed8370997ceca37d941b0b67f31cc30615707596befcab8bfc1581c9e0",
+    "pinyin": "jìjié"
+  },
+  "c11-t020": {
+    "text": "春天",
+    "source": "/atlas/audio/atlas-u6625-sentence.mp3",
+    "sha256": "06f0b98d0dafa7556f6cca61a1b22965e941214a8b24ad864784a13a7f6dc820",
+    "pinyin": "chūntiān"
+  },
+  "c11-t021": {
+    "text": "夏天",
+    "source": "/audio/hsk3-889-word.mp3",
+    "sha256": "c346df09cc1ffc4ee4929b850862430d6fba1ee9989ee293a2a8a5ca3ef3b8ab",
+    "pinyin": "xiàtiān"
+  },
+  "c11-t022": {
+    "text": "秋天",
+    "source": "/audio/hsk3-810-word.mp3",
+    "sha256": "bd55e4cd203387cfa09295df559ac9aa6d442b347c43e941eeb6e2880578ada9",
+    "pinyin": "qiūtiān"
+  },
+  "c11-t023": {
+    "text": "冬天",
+    "source": "/audio/hsk3-601-word.mp3",
+    "sha256": "5c47a197e3e0c4905c0212f54e2ed2b10e439a4d43e60441c04ab284cae707db",
+    "pinyin": "dōngtiān"
+  },
+  "c11-t024": {
+    "text": "暖",
+    "source": "/course06/audio/char-6696.mp3",
+    "sha256": "6024a79f42bc7c80ce0bf606db84bd5fc9c88b193f3674516a16edda8218677c",
+    "pinyin": "nuǎn"
+  },
+  "c11-t025": {
+    "text": "热",
+    "source": "/audio/hsk1-169-word.mp3",
+    "sha256": "dfe36a41c8331693e6db7012996b9e0f022e091fc4fdd6ddca46be88b29f1a46",
+    "pinyin": "rè"
+  },
+  "c11-t026": {
+    "text": "凉",
+    "source": "/course03/audio/course03-cool-sentence.mp3",
+    "sha256": "f6e0660f0b807ca317daf5e44febdc0146c37b43f2fdd35fb18ee6b77794a509",
+    "pinyin": "liáng"
+  },
+  "c11-t027": {
+    "text": "冷",
+    "source": "/audio/hsk1-109-word.mp3",
+    "sha256": "357fa82b4f9866478f5d47a4d5e29035346ba988375b6df6f9d9ee73567f81e3",
+    "pinyin": "lěng"
+  },
+  "c11-t028": {
+    "text": "不冷不热",
+    "source": "/course09/audio/c09-t33.mp3",
+    "sha256": "d89fef57f9b4c0e50ecb42da4a40d9aca0ccc1f1132afe0f7db2753914144a28",
+    "pinyin": "bù lěng bú rè"
+  },
+  "c11-t029": {
+    "text": "有点儿",
+    "source": "/audio/hsk1-265-word.mp3",
+    "sha256": "9c39401844a3ff74db878cd1272a4b09d2a468676d0a3ea4e5461995320fc9c6",
+    "pinyin": "yǒudiǎnr"
+  },
+  "c11-t030": {
+    "text": "一点儿",
+    "source": "/audio/hsk1-261-word.mp3",
+    "sha256": "71d777979906fd20cef904c85be5d659cbdcda96cb5d8ae1c8dd0359e915461c",
+    "pinyin": "yìdiǎnr"
+  },
+  "c11-t031": {
+    "text": "比",
+    "source": "/audio/hsk2-309-word.mp3",
+    "sha256": "2a414960eada8b0e2f5b6c6e68f718c9843ca1cdfab3a97d32bbc9f740668dfc",
+    "pinyin": "bǐ"
+  },
+  "c11-t032": {
+    "text": "很",
+    "source": "/audio/hsk1-079-word.mp3",
+    "sha256": "2b05dedfa4bbf8c8f454766c10856136865c1fb0cf44b3dda06666f5a7d9fbd3",
+    "pinyin": "hěn"
+  },
+  "c11-t033": {
+    "text": "怎么",
+    "source": "/audio/hsk1-276-word.mp3",
+    "sha256": "ce0de49ac73b2d24feba9cb70dc951b0ee442075ae70c9869571e159b7653db1",
+    "pinyin": "zěnme"
+  },
+  "c11-t034": {
+    "text": "来",
+    "source": "/audio/hsk1-106-word.mp3",
+    "sha256": "b51614c30c78f5d90f98b0aee6fa4375ebad0a23546666bfd90091c47938c801",
+    "pinyin": "lái"
+  },
+  "c11-t035": {
+    "text": "学校",
+    "source": "/audio/hsk1-250-word.mp3",
+    "sha256": "010b0a4b821a0916d0c6ed0e5cc7daec1652681023e922987d16267a5df56d54",
+    "pinyin": "xuéxiào"
+  },
+  "c11-t036": {
+    "text": "坐",
+    "source": "/audio/hsk1-298-word.mp3",
+    "sha256": "56049d9574e703a3f458c5e396cf164446fd4f96905c54bd864a8c9fc98f4f14",
+    "pinyin": "zuò"
+  },
+  "c11-t037": {
+    "text": "公共汽车",
+    "source": "/course09/audio/c09-t76.mp3",
+    "sha256": "763c253ea8bd29fb8294e1da35c7d287c50d3d45bda6adaa5c47d57fb1debd3f",
+    "pinyin": "gōnggòng qìchē"
+  },
+  "c11-t038": {
+    "text": "地铁",
+    "source": "/audio/bonus-03-word.mp3",
+    "sha256": "9530ea89f16818adf94a289398f46338ec67a46a6c1658e5fd0c14effb6f4adf",
+    "pinyin": "dìtiě"
+  },
+  "c11-t039": {
+    "text": "飞机",
+    "source": "/audio/hsk1-054-word.mp3",
+    "sha256": "037a56631b3f5efc1836d608cb8fd2372caac6662ee59e76f2ddb7ac4ad6013e",
+    "pinyin": "fēijī"
+  },
+  "c11-t040": {
+    "text": "骑",
+    "source": "/audio/hsk3-797-word.mp3",
+    "sha256": "6f44df171664b047e07c89741cc3d19244f0c778e0f0c2e7decb36a0491378a6",
+    "pinyin": "qí"
+  },
+  "c11-t041": {
+    "text": "自行车",
+    "source": "/audio/hsk3-991-word.mp3",
+    "sha256": "2ebd96754469a246778259e89118132c9d1dc6105f32ad8d667dce761abb6116",
+    "pinyin": "zìxíngchē"
+  },
+  "c11-t042": {
+    "text": "马",
+    "source": "/audio/hsk3-764-word.mp3",
+    "sha256": "bf1a7d2104f8785add68b58107c9d374e0ba1a07b6597562dd9865b4e6f9864b",
+    "pinyin": "mǎ"
+  },
+  "c11-t043": {
+    "text": "电动车",
+    "source": "/api/practice-recording?file=95906f8fcb51e0cc77e9b87786249b95eafb83a3d8faf0dc40d10ad468cfe3b0",
+    "sha256": "020f7cb1769bf1071c8e901cd49f03bd823bc7a9dff8359df2a4f4af000cfa5c",
+    "pinyin": "diàndòngchē"
+  },
+  "c11-t044": {
+    "text": "走路",
+    "source": "/atlas/audio/atlas-u8d70-sentence.mp3",
+    "sha256": "753061d42cb889103edb18566c28eabccc74fa158521f79bb25a10a9ecdb3749",
+    "pinyin": "zǒulù"
+  },
+  "c11-t045": {
+    "text": "出租车",
+    "source": "/audio/hsk1-022-word.mp3",
+    "sha256": "d44bec823b8695e6b165f9e9990c4ab868189638448ec6ed30fafdabfce1e76c",
+    "pinyin": "chūzūchē"
+  },
+  "c11-t046": {
+    "text": "打的",
+    "source": "/api/practice-recording?file=bd5c48bbc13f77122516ed43cdfe52188d90d4e2d791666fdba7b44c9c3da313",
+    "sha256": "46b48b7ea3bfdd2451492692bc00753f4eb271a793d9769237187461065ff0bc",
+    "pinyin": "dǎ dī"
+  },
+  "c11-t047": {
+    "text": "火车",
+    "source": "/audio/hsk1-083-word.mp3",
+    "sha256": "c5ca1df2189e842638946c18215646d09e37d872f6816af9f311465f26a7afa7",
+    "pinyin": "huǒchē"
+  },
+  "c11-t048": {
+    "text": "高铁",
+    "source": "/audio/hsk3-644-word.mp3",
+    "sha256": "9a499496369504154e1dad95e7228c9c20467a5d5c760f551e45af1f3e035cb7",
+    "pinyin": "gāotiě"
+  },
+  "c11-t049": {
+    "text": "开车",
+    "source": "/audio/hsk1-098-word.mp3",
+    "sha256": "0649191eaa896febc4a56a9b9e1133e26dd761b48f43402b6681bf5405ca984c",
+    "pinyin": "kāichē"
+  },
+  "c11-t050": {
+    "text": "六点",
+    "source": "/api/practice-recording?file=aaaea5d982295030c2e759eab7fc3c191473d31fde20bd9fba45b78c956a9ab6",
+    "sha256": "4b91cb9e9d39b6fa4b750958010bc513cc1a03354b2f2766a3aed6025696daff",
+    "pinyin": "liù diǎn"
+  },
+  "c11-t051": {
+    "text": "起床",
+    "source": "/audio/hsk1-161-word.mp3",
+    "sha256": "36fa41b61a1a8826c6454c642710f027054bc5a27ef4f691d27a86017c775e91",
+    "pinyin": "qǐchuáng"
+  },
+  "c11-t052": {
+    "text": "几点",
+    "source": "/api/practice-recording?file=c67d6914bd85b00baa9e86352546d315e4f571791dc7c123438d58a98a797309",
+    "sha256": "e21c885c32ff90e372208b8ebc6144927aaa97ebb47752baab28949804563668",
+    "pinyin": "jǐ diǎn"
+  },
+  "c11-t053": {
+    "text": "什么时候",
+    "source": "/speaking-chunks/audio/chunk-43a188d1cb55.mp3",
+    "sha256": "440e8b76d7c8eab82a580fdf1700d370767ee69cc0a1d4f8bc5878729eec1482",
+    "pinyin": "shénme shíhou"
+  },
+  "c11-t054": {
+    "text": "吃",
+    "source": "/audio/eat-word.mp3",
+    "sha256": "f58a32ed69bc5896a09e67e2312fe1fd8255cf80c79969b31558608fa7841e8d",
+    "pinyin": "chī"
+  },
+  "c11-t055": {
+    "text": "早饭",
+    "source": "/audio/hsk1-274-word.mp3",
+    "sha256": "3f78992ecf9fdd5a07da597b88cc126cda531200b125a0340629f55aa7d83ea9",
+    "pinyin": "zǎofàn"
+  },
+  "c11-t056": {
+    "text": "张",
+    "source": "/audio/hsk3-967-word.mp3",
+    "sha256": "72c5d2448b39bb78afe620025ff11d8795c39575a6a5993629169932656cab07",
+    "pinyin": "zhāng"
+  },
+  "c11-t057": {
+    "text": "床",
+    "source": "/audio/hsk2-321-word.mp3",
+    "sha256": "314a03631a95db750d0618639e1e53a2d87493bfd6e0df6af82de9680c669860",
+    "pinyin": "chuáng"
+  },
+  "c11-t058": {
+    "text": "纸",
+    "source": "/audio/hsk3-976-word.mp3",
+    "sha256": "ef93b538e7708deb294feb76e5f9a776bbc74afab3260723909361e171d54572",
+    "pinyin": "zhǐ"
+  },
+  "c11-t059": {
+    "text": "地图",
+    "source": "/audio/hsk3-592-word.mp3",
+    "sha256": "d1ce73b3da38406bbbdbd02bb6919a22a031dc04262de0ab86c0f489c903693f",
+    "pinyin": "dìtú"
+  },
+  "c11-t060": {
+    "text": "桌子",
+    "source": "/audio/hsk1-295-word.mp3",
+    "sha256": "8c806f04ae95c3af8aa35f9bd2e6ce6143a47025a0943a4f5345813ac37a4504",
+    "pinyin": "zhuōzi"
+  },
+  "c11-t061": {
+    "text": "菜单",
+    "source": "/audio/hsk3-545-word.mp3",
+    "sha256": "c171f674a908725da7e606312326a8cd54d05deba78a1a78def4f2ef2a6d0f9d",
+    "pinyin": "càidān"
+  },
+  "c11-t062": {
+    "text": "开门",
+    "source": "/api/practice-recording?file=7f57bffc743a1ede75bccddca7ffc3653ba7fcded0eceba89ae9bf487db90178",
+    "sha256": "2711b01cf652a9cf280701a28552f85d2137ab1573326ea24576873b07e54a2d",
+    "pinyin": "kāi mén"
+  },
+  "c11-t063": {
+    "text": "开灯",
+    "source": "/api/practice-recording?file=c4a035cb794f52c3da76e14f56e1f05a71640189827585a987998cfa8b66be62",
+    "sha256": "0b279c3d927f6c5c76633238c12b7212a6afdcb7b17a90262a2784e188554aaf",
+    "pinyin": "kāi dēng"
+  },
+  "c11-t064": {
+    "text": "等",
+    "source": "/audio/hsk2-334-word.mp3",
+    "sha256": "2a7271ff1fa3e26c47acac4677e8bcbc901d5f2e070304aa1702bd9cb8ea24b3",
+    "pinyin": "děng"
+  },
+  "c11-t065": {
+    "text": "欢迎",
+    "source": "/audio/hsk3-677-word.mp3",
+    "sha256": "9c9878fe9e0b3745f9e1af08e5cc9fd9525e38f4e36db592cc11696b761fd98c",
+    "pinyin": "huānyíng"
+  },
+  "c11-t066": {
+    "text": "受欢迎",
+    "source": "/api/practice-recording?file=edf75d5e05e659ff00c81d2beb24e81cc8a0e1558f5617fdb1f2c8a0b6c7489c",
+    "sha256": "ff8691a8114eb6d9205efb4e665fd6f6f6c0bf74dabfe5b7c62d9d9d7d236df7",
+    "pinyin": "shòu huānyíng"
+  },
+  "c11-t067": {
+    "text": "一直",
+    "source": "/audio/hsk3-934-word.mp3",
+    "sha256": "150db3dd9f9fdc5191f831b5351c2b416c99f9f2bb9cff8458805768454fd72d",
+    "pinyin": "yìzhí"
+  },
+  "c11-t068": {
+    "text": "常常",
+    "source": "/audio/hsk3-557-word.mp3",
+    "sha256": "4c6a379f876d2b1fa1cb41eefc1bd8ee2442a8de7611b24a3d63d2747db59f63",
+    "pinyin": "chángcháng"
+  },
+  "c11-t069": {
+    "text": "有时候",
+    "source": "/course05/audio/course05-c05-t61-sentence.mp3",
+    "sha256": "8866f77e6d63dfc0fa7cd5a4d8a9aeeb8939244629a2bee97f357148fdf50e01",
+    "pinyin": "yǒu shíhou"
+  },
+  "c11-t070": {
+    "text": "很少",
+    "source": "/api/practice-recording?file=7708b5d0ec23c6eb9571b9647eacadbfaa3b1761d31beab43b6f16478edbdd14",
+    "sha256": "a7f6a47ed6d18f2c0b863d3491bcde1ff871675aac181561d67dc60d716788a5",
+    "pinyin": "hěn shǎo"
+  },
+  "c11-t071": {
+    "text": "从不",
+    "source": "/api/practice-recording?file=ab27425161a8da8433ce2e0e01d40b8d9c6ea0059e999ab38a84cead212c6cf2",
+    "sha256": "91d4f2d7048199a334dd49ce799c135702022ae39a8a58e6b7dd3f1baf954aec",
+    "pinyin": "cóng bù"
+  },
+  "c11-t072": {
+    "text": "任何时候",
+    "source": "/api/practice-recording?file=18e3f919729b42cf474518e245ef675ea086e351c1ba21f5d74ebb6be4b0a2a0",
+    "sha256": "d7b823d94c9e5501aa3713c8dabe3e518294b601c2e66587289a73027f2707c6",
+    "pinyin": "rènhé shíhou"
+  },
+  "c11-t073": {
+    "text": "都",
+    "source": "/audio/hsk1-041-word.mp3",
+    "sha256": "a4ade13b6c65dd71842df5869f8b541027e8cd1b728e7474123cc523150243b2",
+    "pinyin": "dōu"
+  },
+  "c11-t074": {
+    "text": "可以",
+    "source": "/audio/can-word.mp3",
+    "sha256": "b73796704108706c6c30e304ffe6c68d09dd8d482631976ca6190ad586bcef88",
+    "pinyin": "kěyǐ"
+  },
+  "c11-t075": {
+    "text": "喝酒",
+    "source": "/api/practice-recording?file=144027b96a6ddc5f338d3d92eaa8d2d5ad47b1e6f9b972eca8c091d538bea366",
+    "sha256": "a40f3416e42ec019c27b74bd4b32bee8ca4e25d43c1ba4cef314ec3dd0de393a",
+    "pinyin": "hē jiǔ"
+  },
+  "c11-t076": {
+    "text": "对",
+    "source": "/audio/hsk1-044-word.mp3",
+    "sha256": "371d1104f42c85a3e7939bae935722a3946c747b4fe3ecee20caeae672a81019",
+    "pinyin": "duì"
+  },
+  "c11-t077": {
+    "text": "身体",
+    "source": "/atlas/audio/atlas-u8eab-sentence.mp3",
+    "sha256": "e7d8249d4196632ca4c2b2aaec40cf06863288f4f18e61f9aad24a1b14b837f9",
+    "pinyin": "shēntǐ"
+  },
+  "c11-t078": {
+    "text": "好",
+    "source": "/audio/hsk1-071-word.mp3",
+    "sha256": "2052b0b04a4f0a997924084f90234badca9e4d10950c95c13816ce08daf319ed",
+    "pinyin": "hǎo"
+  },
+  "c11-t079": {
+    "text": "不好",
+    "source": "/api/practice-recording?file=1641a06dd3454f2d544a19c3df7b44a04946d96edfaa9f0b91ccb915501cd44c",
+    "sha256": "0cc9551d0a1a440037704694b6af5722d5003f2880326076a987555b5bbd0c16",
+    "pinyin": "bù hǎo"
+  },
+  "c11-t080": {
+    "text": "水果",
+    "source": "/atlas/audio/atlas-u6c34-sentence.mp3",
+    "sha256": "33a84c33263ebee0e06d93be033a0bf9998f32667266abd1f0b5ce92be9f1fff",
+    "pinyin": "shuǐguǒ"
+  },
+  "c11-t081": {
+    "text": "苹果",
+    "source": "/audio/hsk1-159-word.mp3",
+    "sha256": "5e531711d13ae133808bef42bb860b1a6bb4f6da0706dc5396f5bd220f745ab5",
+    "pinyin": "píngguǒ"
+  },
+  "c11-t082": {
+    "text": "收银员",
+    "source": "/api/practice-recording?file=fcf9d3057b1085323e6da0cb2e5a0cca1138cf8950ad51973e30fe14e89810a5",
+    "sha256": "8e4e1ef4183b35f09d0c7f655c851c653f2ae534e868705a198a5b283acb3812",
+    "pinyin": "shōuyínyuán"
+  },
+  "c11-t083": {
+    "text": "一共",
+    "source": "/audio/hsk3-923-word.mp3",
+    "sha256": "05f11d6d8c664597484cc533926351b47458da137dc90f324deb208c9f08bf90",
+    "pinyin": "yígòng"
+  },
+  "c11-t084": {
+    "text": "百",
+    "source": "/audio/hsk1-006-word.mp3",
+    "sha256": "fbe53ec0a2788eb14cc44b77f1f978d5c288633ed7fe9f3b9ced9fc522057662",
+    "pinyin": "bǎi"
+  },
+  "c11-t085": {
+    "text": "千",
+    "source": "/audio/hsk1-162-word.mp3",
+    "sha256": "0fa0a3bcfe7e42d9234e86e10415216f8311c12877cd8d0c9898efd143bb37a7",
+    "pinyin": "qiān"
+  },
+  "c11-t086": {
+    "text": "万",
+    "source": "/audio/hsk2-449-word.mp3",
+    "sha256": "e98940d83664fb8e556c009e731fd2061f86428ec8a5200c6b56bed08b48c4cb",
+    "pinyin": "wàn"
+  },
+  "c11-t087": {
+    "text": "你",
+    "source": "/audio/you-word.mp3",
+    "sha256": "541bb788548e7ae0a828d8a57a3b693dde2c6d704145ae9d606f768ab32edb16",
+    "pinyin": "nǐ"
+  },
+  "c11-t088": {
+    "text": "我",
+    "source": "/audio/me-word.mp3",
+    "sha256": "9af66368d6f5fd7ec00cc2d9b8c62917dd113630088ed37a043b371b2df97e68",
+    "pinyin": "wǒ"
+  },
+  "c11-t089": {
+    "text": "他",
+    "source": "/audio/hsk1-200-word.mp3",
+    "sha256": "0887b738e1bf3fb8be7d15d1bb24cda49bb689f805f4d33e09ed538fd54f60cc",
+    "pinyin": "tā"
+  },
+  "c11-t090": {
+    "text": "她",
+    "source": "/audio/hsk1-202-word.mp3",
+    "sha256": "b930f793528a9288e12cd87acf5e598467177a18bcdddf7ff809486a6165e4b4",
+    "pinyin": "tā"
+  },
+  "c11-t091": {
+    "text": "它",
+    "source": "/audio/hsk1-201-word.mp3",
+    "sha256": "690d37eaa483d39065264e92a956eed402759c200bdf3831a1666c5ab8cc23c7",
+    "pinyin": "tā"
+  },
+  "c11-t092": {
+    "text": "们",
+    "source": "/audio/hsk1-124-word.mp3",
+    "sha256": "b6eec3f197878fdc3a546e1d40061ad9bf64d0aef4ed4c37da5be4285b331dec",
+    "pinyin": "men"
+  },
+  "c11-t093": {
+    "text": "三十",
+    "source": "/api/practice-recording?file=a70676fba2a260e89793ebcc9d613314244fbe982cbd0b62eabf558cf95ef778",
+    "sha256": "20f701a12af24f3fad3907caf22e1424a8cbecbb0d327380025b363a1ccec180",
+    "pinyin": "sānshí"
+  },
+  "c11-t094": {
+    "text": "一百二十",
+    "source": "/api/practice-recording?file=022b1b538b3c204ee737d02da154ebdb39fa478eb29b052d9293a684bcaed4d1",
+    "sha256": "5d75412b36d9d5816450b43a0172464629d5ed82567ad36fbe5feb542887abb7",
+    "pinyin": "yì bǎi èrshí"
+  },
+  "c11-t095": {
+    "text": "一百五十",
+    "source": "/api/practice-recording?file=99ddb982449e01ee7cb752e2d393c3138b5f5d57729fbbd991d9f928c1fc4b79",
+    "sha256": "487f8fe329000362d5350778ec23cda3a442884808f0293e0ada3a5ea74ceca0",
+    "pinyin": "yì bǎi wǔshí"
+  },
+  "c11-t096": {
+    "text": "九十四",
+    "source": "/api/practice-recording?file=1ace8b6c089bdb7ede4c1bc534525352a6371c9394c47ebb4886edccbbbbd607",
+    "sha256": "54218f34cddfa977104f0337a20886891d823e7b9d18101978ca181859308d7d",
+    "pinyin": "jiǔshísì"
+  },
+  "c11-t097": {
+    "text": "九十五",
+    "source": "/api/practice-recording?file=74fb82a5811d3f481dec76169e346fb053b00ece2fd231802e45b73d3dcb6723",
+    "sha256": "be1654bf221ff9dc858652b383e0d0ca8fafdbdb7a58db957e7bcf3de04d439e",
+    "pinyin": "jiǔshíwǔ"
+  },
+  "c11-t098": {
+    "text": "三十六",
+    "source": "/api/practice-recording?file=0a16b41faa0a2e6ada265d48c852af764be7a6122f7abfa049da2882d0941c0a",
+    "sha256": "7bff98bb0d17e9850cdc800192bdce9833afb3cdde1cd91eb75205e7fbf09a58",
+    "pinyin": "sānshíliù"
+  },
+  "c11-t099": {
+    "text": "七十八",
+    "source": "/api/practice-recording?file=27e994280e0c3d173c064e5953bdfbb6e026a5e87576881fdacb7a6cdc47e0ad",
+    "sha256": "ad0d65db6e1563d073538dea3b1f1a10ee61d6b052f4503e74a8e133d7cefde7",
+    "pinyin": "qīshíbā"
+  },
+  "c11-t100": {
+    "text": "一百",
+    "source": "/api/practice-recording?file=38d302ad2b36640fe95c8d74d9ca49d7fa052421fb22cccb83d0e76147bf509a",
+    "sha256": "8880979ae5ef1b1fa2e0d7155e8e4bb15fc3f363d1e0646e202c7b5fae5465d0",
+    "pinyin": "yì bǎi"
+  },
+  "c11-t101": {
+    "text": "二十",
+    "source": "/api/practice-recording?file=e5ec573b3977ce9d55cb8e5fde4b730d653f8ab5b5d8dd377a7d97bbadfb0be3",
+    "sha256": "7aa43634b7132687efb3c7cdb5e5d3e662b31bb307c1687568b44385a83ef751",
+    "pinyin": "èrshí"
+  },
+  "c11-t102": {
+    "text": "二十二",
+    "source": "/api/practice-recording?file=8f4058e1381ee09c1c4d531e1cfb7566ec6ede463740a4c47658c737d16ac163",
+    "sha256": "134b2f2403d8a9d95aeca4391ce43d35662905d6ffd9801a951b55e4f9d3d388",
+    "pinyin": "èrshí'èr"
+  },
+  "c11-t103": {
+    "text": "一千",
+    "source": "/api/practice-recording?file=2987ed96e3306eec906c8a0755ce8f7103742e872167b4e525cce7ad5fd2dca4",
+    "sha256": "06d83b8aac24d12d8b57327d8d846644468d48fb0cf1f3bbb003772b8cc61715",
+    "pinyin": "yì qiān"
+  },
+  "c11-t104": {
+    "text": "一万",
+    "source": "/api/practice-recording?file=7396ef3616ec16ed18f2cc22c4eafdcf3b490374366f494389eba5931e2590a4",
+    "sha256": "7b7223259a5587faee58f19f2df729607b8ef3b5129ee953f790c5612f3d6d74",
+    "pinyin": "yí wàn"
+  },
+  "c11-t105": {
+    "text": "五十六",
+    "source": "/api/practice-recording?file=839f93a7749b55ca0775dd69001cc70f1bde392a35ffa546b39b5d2337f53f94",
+    "sha256": "58ed7f1b1242155b3d724623f6a5faa4bd1f4dd6e76c90bf570dbb2c65a4c339",
+    "pinyin": "wǔshíliù"
+  },
+  "c11-t106": {
+    "text": "五百",
+    "source": "/api/practice-recording?file=a04846d365f8fe2d17216164b724e75fb76a0bea227a4e3b3588ab6b00bbd88c",
+    "sha256": "2f363591627011397fc01e66326511aa8f7284dd7a771322c921e223ac308430",
+    "pinyin": "wǔ bǎi"
+  },
+  "c11-t107": {
+    "text": "一千七百",
+    "source": "/api/practice-recording?file=4eaf26c3fe00f636378155c4a3253ce99edf050853f7ee612920d37d97f893dd",
+    "sha256": "c6b45c3d3f0d271f211ff6bd3713a69ae7247e975f9847469eb8e150b3c15673",
+    "pinyin": "yì qiān qī bǎi"
+  },
+  "c11-s001": {
+    "text": "今天几月几号星期几？",
+    "source": "/api/practice-recording?file=df59a4876759a6fc3cfb77f119901e11295f0e66bd4f789b5d5fd714fd4b1982",
+    "sha256": "279b55d7509e2eafaddb10f4b9e013d7f505dced22240efdead085742e07551c",
+    "pinyin": "Jīntiān jǐ yuè jǐ hào xīngqī jǐ?"
+  },
+  "c11-s002": {
+    "text": "今天是十一月三号，星期二。",
+    "source": "/api/practice-recording?file=f61531934aeea81a3897ad83b9746a1d0faa83f9c1046003ba1ddb4d53354f80",
+    "sha256": "a1c5c852168c384c96a3391c18d6789144d7989f077efbc10dd04831c6588565",
+    "pinyin": "Jīntiān shì shíyī yuè sān hào, xīngqī èr."
+  },
+  "c11-s003": {
+    "text": "一周有七天。",
+    "source": "/api/practice-recording?file=3e40ff373ec556523b44da52b5061d551d829eb9e35f0d42c8d5bd3e72dd741c",
+    "sha256": "a62495ace9bba22be08b5dab074e0d68e5a76974accfff0badcabb869d183c72",
+    "pinyin": "Yì zhōu yǒu qī tiān."
+  },
+  "c11-s004": {
+    "text": "一年有四个季节。",
+    "source": "/api/practice-recording?file=f82a96a7358037e5d8398d4932db80f32ba1bebfb2b4179932b08faba9d0de1a",
+    "sha256": "a201933bfc2f62044d60ed80884fa0f7173f6222c15a649d8fd6f84f0360a723",
+    "pinyin": "Yì nián yǒu sì ge jìjié."
+  },
+  "c11-s005": {
+    "text": "二零二六年有三百六十五天。",
+    "source": "/api/practice-recording?file=ecc31657a5d40e8bd68046cfa4eb4fc107f61c690791e9d7e7c371adce884bf1",
+    "sha256": "c9935f7ae6a363d02a85c75fb84de4be274f0bd6a4f1b73658bdab894dfaec7c",
+    "pinyin": "Èr líng èr liù nián yǒu sānbǎi liùshíwǔ tiān."
+  },
+  "c11-s006": {
+    "text": "这是第八课。",
+    "source": "/api/practice-recording?file=cff73f74fa17492df931b74fd4cbf4ec5503171cc77ecad88c0e9f8cc7716afe",
+    "sha256": "f91e91a76cc277377b6e0554db6b95d250e29c3b12a95c0eb3a06cab688263a6",
+    "pinyin": "Zhè shì dì bā kè."
+  },
+  "c11-s007": {
+    "text": "他是我弟弟。",
+    "source": "/api/practice-recording?file=26203ae97160383284d9c64d638df005945aad76e772ef49d92b883efa83c9fa",
+    "sha256": "13d47b91d9778776eb47e261f65080ad270562d356d56c28161ee2baab081649",
+    "pinyin": "Tā shì wǒ dìdi."
+  },
+  "c11-s008": {
+    "text": "现在是什么课？",
+    "source": "/api/practice-recording?file=b0b97a4cd97f1d56ddf51927d22df79f5f6dec7749ce179d71c1e45f34e8e5ca",
+    "sha256": "3d6ed5195c893e02e5e6c54cb82a3bcf38dced062ecd376014da58bee2c5b298",
+    "pinyin": "Xiànzài shì shénme kè?"
+  },
+  "c11-s009": {
+    "text": "现在是什么季节？",
+    "source": "/api/practice-recording?file=d7417424c12c0a26b4afafa294098e2f0462b702918c63454385fcf6bdbd049b",
+    "sha256": "9fa512e37ebc769e62634c32c7820293629f1e2a7b66b9aa2e6b46e325c2c6e2",
+    "pinyin": "Xiànzài shì shénme jìjié?"
+  },
+  "c11-s010": {
+    "text": "现在是秋天。",
+    "source": "/api/practice-recording?file=96374b6605d73ba7cd9366ba20228e5700ecbd70e56483d2df3c4a6d449addec",
+    "sha256": "c62bcea56c190b720e5cf453293ec8e45f20c4cce35a48ae7cc1d773a352a572",
+    "pinyin": "Xiànzài shì qiūtiān."
+  },
+  "c11-s011": {
+    "text": "春天暖，夏天热，秋天凉，冬天冷。",
+    "source": "/api/practice-recording?file=58a1f357eea42b011adc325a380d65e345ea00fbd18925307f6b09c34d905c1f",
+    "sha256": "82214f9894be5acd817399e3791f6fd68e3bb8f81af331a709e681296a319eb8",
+    "pinyin": "Chūntiān nuǎn, xiàtiān rè, qiūtiān liáng, dōngtiān lěng."
+  },
+  "c11-s012": {
+    "text": "冷吗？",
+    "source": "/api/practice-recording?file=ca98343349a651d4d3848e2d319c3edabdbe712e8326e6bc62ca771ff20ed518",
+    "sha256": "5095286a224d5906038f1adeea36d301eb99c98e2c16974ac61119844a7393bb",
+    "pinyin": "Lěng ma?"
+  },
+  "c11-s013": {
+    "text": "很冷。",
+    "source": "/api/practice-recording?file=cb48a4445ddf3283dcf89a899616942a0a8c25abbc7a2a5148672f86af7c6a0b",
+    "sha256": "29e7e84f7d6167c7f0fdd0c0266dd0f1b55960f7a1b2868aae67fc87328267b8",
+    "pinyin": "Hěn lěng."
+  },
+  "c11-s014": {
+    "text": "不冷不热。",
+    "source": "/api/practice-recording?file=ab8da1827dd5393d6e5b46f8a0e539aa790b8033d8440b92de03edab74f51780",
+    "sha256": "d38415b811127679499a3ec102aea0e5bba58da37f718d743da000e4069a9a45",
+    "pinyin": "Bù lěng bú rè."
+  },
+  "c11-s015": {
+    "text": "有点儿冷。",
+    "source": "/api/practice-recording?file=5197b9ff8534edfb59dcbffe5b00d84235364b3be9ba32ccb42082c4a385b19d",
+    "sha256": "b4e0046628c135445a5522e22af1e6b416c0976a3912d0276e3c7fdb092d004a",
+    "pinyin": "Yǒudiǎnr lěng."
+  },
+  "c11-s016": {
+    "text": "今天比昨天冷。",
+    "source": "/api/practice-recording?file=d32608900d8c13bbb9f94b776e3e02e05de17f88a4af9397cf372863fba35045",
+    "sha256": "8e7fd0ce59da2e0e41c94f01aa374709593e7fe99e3862d55aea5abf50b9a32a",
+    "pinyin": "Jīntiān bǐ zuótiān lěng."
+  },
+  "c11-s017": {
+    "text": "今天有点儿冷。",
+    "source": "/audio/hsk1-265-sentence.mp3",
+    "sha256": "00af47ed93b00778b959238f3b431e802f548b532b48eb2d3a65c97479e07225",
+    "pinyin": "Jīntiān yǒudiǎnr lěng."
+  },
+  "c11-s018": {
+    "text": "今天比昨天冷一点儿。",
+    "source": "/api/practice-recording?file=23effa9592e5b8739c0da13c744dcef8bc6e16f1d4f8ad735efa4321d282d33f",
+    "sha256": "9c2c463547a4058c869e3ca4401ea8a9b159abb2fde42a3b8e032f9d415031f3",
+    "pinyin": "Jīntiān bǐ zuótiān lěng yìdiǎnr."
+  },
+  "c11-s019": {
+    "text": "你怎么来学校？",
+    "source": "/api/practice-recording?file=30316f11e5f3f622eef0a795dc38f96668ca378aff8e599c71b6461a97376c11",
+    "sha256": "a2457c6e8d6b02716149c4849dc74ef990f5816138a9fd9ed0f3af5f30c1e6e5",
+    "pinyin": "Nǐ zěnme lái xuéxiào?"
+  },
+  "c11-s020": {
+    "text": "我坐公共汽车。",
+    "source": "/api/practice-recording?file=11dfa33b6d42de23fab17e9ab873ff2110f7a7565b86e6de6ba10cfae954fb7d",
+    "sha256": "439ab84701bae8bdcbc01835c79a7b11b226d08b8d0cbe8bceac1b56c508ca66",
+    "pinyin": "Wǒ zuò gōnggòng qìchē."
+  },
+  "c11-s021": {
+    "text": "我坐地铁来学校。",
+    "source": "/api/practice-recording?file=d27b82434c02e8e8720f06aed1c22b6ad5b76165dd0a344dae43c4e946430c00",
+    "sha256": "17db26525dbd0bbbaac858b36ff5dbf68bbf3b69fde7ab63c12878268be4ac57",
+    "pinyin": "Wǒ zuò dìtiě lái xuéxiào."
+  },
+  "c11-s022": {
+    "text": "我骑自行车来学校。",
+    "source": "/api/practice-recording?file=059c384f57bee802e8040e8b369cbf6f6fcdfa4c5da5b386b92f6647951ed648",
+    "sha256": "f74586e9dad6f8bfb8fce571d7d18681c9d54e2eb51b7bcbf7ba02e7384b7152",
+    "pinyin": "Wǒ qí zìxíngchē lái xuéxiào."
+  },
+  "c11-s023": {
+    "text": "我走路来学校。",
+    "source": "/api/practice-recording?file=4f16169bac6636713fc58dff839a725aaacf3c154e62809410560f0cf4b67e59",
+    "sha256": "1836f2b0e50fd2f777500e5bbce870948805e5c9703a4aa09314268ef9237f45",
+    "pinyin": "Wǒ zǒulù lái xuéxiào."
+  },
+  "c11-s024": {
+    "text": "我开车来学校。",
+    "source": "/api/practice-recording?file=465e46bdca4ba8ec667cb7a731e3088cf14925ba4e93c35b6cf57ec836efd4d6",
+    "sha256": "c5a91223e48ab8f6d7052dad8b27233983d299b77bb97dc970dc29d1ecc183c6",
+    "pinyin": "Wǒ kāichē lái xuéxiào."
+  },
+  "c11-s025": {
+    "text": "我坐出租车来学校。",
+    "source": "/api/practice-recording?file=32cebb7cbad3782a0a5a765c5c84e5cb89f25ee0d69baa3f9c90e2bf2d1ac994",
+    "sha256": "1b64bda2bb7590ecd795c3dddd9d134e67b63b4494752b3c95bfe68c161a2e67",
+    "pinyin": "Wǒ zuò chūzūchē lái xuéxiào."
+  },
+  "c11-s026": {
+    "text": "我骑电动车来学校。",
+    "source": "/api/practice-recording?file=ca5615db5a74e09cbddf8b27640bdfef482244bc29476027c46601260f20c83c",
+    "sha256": "a41861ad72037a7c0c16145fb393e08bb384aee60af228da7ec9f77332832101",
+    "pinyin": "Wǒ qí diàndòngchē lái xuéxiào."
+  },
+  "c11-s027": {
+    "text": "我坐高铁去。",
+    "source": "/api/practice-recording?file=e9d5ca940d12d5fb0cd4d2aa419870d779225edaa211be3a37458620b86885ed",
+    "sha256": "08ff0959f597c1219fa12b588f2096b9c89c05940e5c13999d0df1308ec24de4",
+    "pinyin": "Wǒ zuò gāotiě qù."
+  },
+  "c11-s028": {
+    "text": "六点起床。",
+    "source": "/api/practice-recording?file=9a15909d43f4e6ce3e82becb1b0393898e4d72a00864f79815e870b54570f260",
+    "sha256": "7095386725b818b20ccb4c5ff099281984a1c6914beeab82c15db268df40a5c2",
+    "pinyin": "Liù diǎn qǐchuáng."
+  },
+  "c11-s029": {
+    "text": "你几点吃早饭？",
+    "source": "/api/practice-recording?file=6a3e4f1dddff9f3a03156210c195de882265219a3ab021e01176e01e605ddb24",
+    "sha256": "a5242d9778eb86518c5aba6b5cf61ac5fc5a662a96b2c459f69b3f1b0e752355",
+    "pinyin": "Nǐ jǐ diǎn chī zǎofàn?"
+  },
+  "c11-s030": {
+    "text": "你什么时候吃早饭？",
+    "source": "/api/practice-recording?file=90a99257783ab43751fe221a84ff2a8886414ba24ef54e460c2d340734d27ac4",
+    "sha256": "d00f680bcc7a781261c9cded90cd85ef9c726761a757b22d8345b373fdbc844e",
+    "pinyin": "Nǐ shénme shíhou chī zǎofàn?"
+  },
+  "c11-s031": {
+    "text": "我七点吃早饭。",
+    "source": "/api/practice-recording?file=36ea068556fa0af811e912cbe5e1fc5b5862c31515b3f4075bbcc77df47404c3",
+    "sha256": "bc8b998d750ae55986410b70a6f9da488713354104ae819a5ea6b45d2016d5c0",
+    "pinyin": "Wǒ qī diǎn chī zǎofàn."
+  },
+  "c11-s032": {
+    "text": "一张床",
+    "source": "/api/practice-recording?file=fd1fe7e44dc950531a6c233270c5487a226503cc0e7c7465f14f16488f5c10b6",
+    "sha256": "92616a4af4a9afb0920e496363cc60aaeaa616b989fb0c7a7ce23882649650f2",
+    "pinyin": "yì zhāng chuáng"
+  },
+  "c11-s033": {
+    "text": "一张纸",
+    "source": "/course08/audio/c08-t63.mp3",
+    "sha256": "246989b4e14e5e9e29c7d1d507003f1733630ca8d36a7525351c058bf10b3f35",
+    "pinyin": "yì zhāng zhǐ"
+  },
+  "c11-s034": {
+    "text": "一张地图",
+    "source": "/api/practice-recording?file=4b78d0488850f843aae6c89cb11731a86df2feca4aa4c2fe8258b0ca42733651",
+    "sha256": "758724c9d62e427471192651f2e2656b8e15b9412bf77190b3db9a413df577ff",
+    "pinyin": "yì zhāng dìtú"
+  },
+  "c11-s035": {
+    "text": "一张桌子",
+    "source": "/api/practice-recording?file=9580162337cc6962002b192053601fbf133a59d4692719afc32992944c9dd280",
+    "sha256": "93dcad206e1ddf2cd20e25f118961c8b5b4d66a1b8396ae189e917f336deaa52",
+    "pinyin": "yì zhāng zhuōzi"
+  },
+  "c11-s036": {
+    "text": "一张菜单",
+    "source": "/api/practice-recording?file=c3a09407c32a90f29411cad756089d2c2191b41033b22dc6726988ed9926d3ef",
+    "sha256": "de5ef31b0b87f72e46a4c34034e7c375572decf5c452871e3a86a03100a7a38e",
+    "pinyin": "yì zhāng càidān"
+  },
+  "c11-s037": {
+    "text": "请开门。",
+    "source": "/audio/hsk1-097-sentence.mp3",
+    "sha256": "2e0550acd68a5ff440fee65770fa2c2736c0a42a2ff526c32c3e3a3870a5901a",
+    "pinyin": "Qǐng kāi mén."
+  },
+  "c11-s038": {
+    "text": "请开灯。",
+    "source": "/api/practice-recording?file=f178a913e6189dcb2c45eaaa60f9d67abd2e70ceadb2b117426886e81a38fd8e",
+    "sha256": "a35a740effa3748df17ee586d4816ce14925aaa78d645efd91984ab90c12f5e2",
+    "pinyin": "Qǐng kāi dēng."
+  },
+  "c11-s039": {
+    "text": "请等一下。",
+    "source": "/api/practice-recording?file=e470cbdfef736596ed2467773595005a963d52dc9cfa984ebaba62e7e0b6b886",
+    "sha256": "42d49d4760bb45a26899cb877b73ea541cedeeee4af50da76444076a9ef94f46",
+    "pinyin": "Qǐng děng yíxià."
+  },
+  "c11-s040": {
+    "text": "这家店很受欢迎。",
+    "source": "/api/practice-recording?file=a449fa9a74249163b0659493e9e7726c231764016a376d6ca38782c4facdec46",
+    "sha256": "10e40718f772fc0437bb79a04236dcc6d366d368ecddd354f2d1ebe65900acad",
+    "pinyin": "Zhè jiā diàn hěn shòu huānyíng."
+  },
+  "c11-s041": {
+    "text": "我常常走路来学校。",
+    "source": "/api/practice-recording?file=394f3823acae428431bca50421544f84f7a8a7e8481edd6519198aa5b5b130c6",
+    "sha256": "65871e12afa13cb505de8dc691438a77f05345af0314b5c9785cd536cbe7c3b4",
+    "pinyin": "Wǒ chángcháng zǒulù lái xuéxiào."
+  },
+  "c11-s042": {
+    "text": "我有时候坐地铁。",
+    "source": "/api/practice-recording?file=b8653bdf5152fd69fa148b51b39a52f3135b3ce726397b23f9963db91c76345e",
+    "sha256": "ac7dff8cea0d3af25df626d424696b8d84cce198714cdb499efe1b830809bd35",
+    "pinyin": "Wǒ yǒu shíhou zuò dìtiě."
+  },
+  "c11-s043": {
+    "text": "我很少打的。",
+    "source": "/api/practice-recording?file=85f3c1ef8f01f3f1d16689ae49783e4de858fd88dabda2a59032b5b0ebabaac2",
+    "sha256": "a09274af3d05c05fed206d66166713801cdf81409d024d172276cd7d973c1238",
+    "pinyin": "Wǒ hěn shǎo dǎ dī."
+  },
+  "c11-s044": {
+    "text": "我从不骑马来学校。",
+    "source": "/api/practice-recording?file=565232655aff6cf68690bc34e39860476b18e73c33943a989cb917a3e2cd4752",
+    "sha256": "867f98b320155fc5d431e6031d16f56aec6d1b0422bcc3a2b4e74775a8f5b711",
+    "pinyin": "Wǒ cóng bù qí mǎ lái xuéxiào."
+  },
+  "c11-s045": {
+    "text": "我一直在等你。",
+    "source": "/api/practice-recording?file=ab763ea068d06467f92c211f29c3f985c290fdff9e7a25494fcdd57c446f3b4e",
+    "sha256": "52b14ecb0d1830d848045a13e80711b16576801180889f5b728adc896a97360b",
+    "pinyin": "Wǒ yìzhí zài děng nǐ."
+  },
+  "c11-s046": {
+    "text": "我什么时候可以来？",
+    "source": "/api/practice-recording?file=3ee8827278afb7b682bf71a49ff30b1c1d8085283dc43af9263212273c3f0d01",
+    "sha256": "7d542ce8459c6aa7aa86d109fe6777e9e3871ad4968af88885f29846b2a8b1ce",
+    "pinyin": "Wǒ shénme shíhou kěyǐ lái?"
+  },
+  "c11-s047": {
+    "text": "你任何时候都可以来。",
+    "source": "/api/practice-recording?file=41ad3516949c3b9b78c0c9d1404774d1f9c0478dc2a508f69cda6cc333aa9287",
+    "sha256": "b91b1a113f8640bf4dcb9441ea93fb46e13b408f060ac6214c2d71f2e3ba2efe",
+    "pinyin": "Nǐ rènhé shíhou dōu kěyǐ lái."
+  },
+  "c11-s048": {
+    "text": "吃苹果对身体好。",
+    "source": "/api/practice-recording?file=fa29acbebfe10cac5e13373125849775a69877fb7d0a5dfd2503d5619c129bae",
+    "sha256": "439f8f2f977b3318f8eb5df9c3f456100caa8590bd5f5b828b4d9ae800bd4251",
+    "pinyin": "Chī píngguǒ duì shēntǐ hǎo."
+  },
+  "c11-s049": {
+    "text": "不吃早饭对身体不好。",
+    "source": "/api/practice-recording?file=557ad33d5c263d6c40bfbcef13e7ba557592041be4849de09407503e501357ed",
+    "sha256": "c8a3f30f57c618f96ec95d834d64cef2b43702cb3e16daaa506bc3600ed3e067",
+    "pinyin": "Bù chī zǎofàn duì shēntǐ bù hǎo."
+  },
+  "c11-s050": {
+    "text": "三十加二十等于五十。",
+    "source": "/api/practice-recording?file=d66b84a356a752239016362b09815c5d658b2263ed113eb325e8d26747b8b0b3",
+    "sha256": "bc06e21bed097304ef9b5f5b688c30feb3b4ca7172df5b4d584e5884d0f09131",
+    "pinyin": "Sānshí jiā èrshí děngyú wǔshí."
+  },
+  "c11-s051": {
+    "text": "一共七十二元。",
+    "source": "/api/practice-recording?file=3fe5c6e3f3f3f2bef9e54239c8b5fdeb9e8107cdc869f3a9a3c77e5efd7728c6",
+    "sha256": "8dd3e1967fe50e92cee76e19fd3237fb03c464c14b7e4cfffe2a54a16852cf3e",
+    "pinyin": "Yígòng qīshí'èr yuán."
+  },
+  "c11-s052": {
+    "text": "他们是收银员。",
+    "source": "/api/practice-recording?file=b97cc59cb65902784ce3ce439f892ef0e490cd7579f9d903fdcef3930b908643",
+    "sha256": "465580a366ebf1f678bf5f3a2cf1ba8caf130dde85eb75ce3818a2c406c66cfe",
+    "pinyin": "Tāmen shì shōuyínyuán."
+  },
+  "c11-s053": {
+    "text": "我们今天上课。",
+    "source": "/api/practice-recording?file=0c32d0acf6bedbbfa73c3334202fc9d495c082381770233565b361a87940c959",
+    "sha256": "42cbc073267a79c9f5660a71e1f07e20cebf77357fe93cecf0611fccc2322fab",
+    "pinyin": "Wǒmen jīntiān shàngkè."
+  }
+}

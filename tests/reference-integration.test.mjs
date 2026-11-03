@@ -29,7 +29,7 @@ test('reference schema, UUID replay and review dates stay isolated from the eigh
  const result=m.referenceReviewSummary([e,e,study,{...e,id:crypto.randomUUID(),assisted:true}],lesson,now);assert.equal(result.attempted,1);assert.equal(result.difficult.length,1);assert.equal(result.due.length,0);assert.ok(result.nextDue>now);assert.equal(m.referenceReviewSummary([e],lesson,result.nextDue).due.length,1);
  assert.deepEqual(m.courseCards([e,e]),m.courseCards([e]));assert.equal(m.courseReviewSummary([e],now).attempted,0);
  }
- assert.deepEqual(m.reviewableCourseLessons.map(x=>x.number),[3,4,5,6,7,8,9,10]);
+ assert.deepEqual(m.reviewableCourseLessons.map(x=>x.number),[3,4,5,6,7,8,9,10,11]);
 });
 test('actual indexedDB record-sync-hydrate preserves all reference IDs and separates owners and disposed sessions',async()=>{
  globalThis.indexedDB=indexedDB;const server=new Map();
