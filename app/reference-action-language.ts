@@ -30,3 +30,6 @@ export const referenceActivityLanguage:Record<string,ReferenceCaption>={
  '上菜':row('服务员正在上菜。','Fúwùyuán zhèngzài shàng cài.','The waiter is serving the dishes.'),
 };
 export function referenceActionCaption(word:string,progress:number){const stages=referenceActionLanguage[word];return stages?.[progress===1?'after':progress>0?'during':'before'];}
+
+/** A user choosing reduced motion sees the completed scene, so its audio must name that result. */
+export function referenceSelectionCaption(word:string,reduced:boolean){return referenceActionLanguage[word]?.[reduced?'after':'during']??referenceActivityLanguage[word];}
