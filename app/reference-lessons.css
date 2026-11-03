@@ -109,3 +109,4 @@
 .ref-interactive-scene>.ref-scene-example{grid-column:1/-1;width:100%}
 .reference-lesson :is(button,a,input,select):focus-visible{outline:2px solid #6d9281;outline-offset:2px;box-shadow:none}
 @media(max-width:850px){.ref-scene>.ref-interactive-scene{display:flex;flex-direction:column;gap:16px}.ref-interactive-scene>.ref-choice-panel,.ref-interactive-scene>.ref-visual-focus{width:100%}.ref-scene .ref-visual-focus>svg[role=img]{max-height:190px}.ref-expression-choices{grid-template-columns:repeat(3,minmax(0,1fr))}.ref-expression-choices button{padding:7px}.ref-expression-choices small{font-size:.75rem}.ref-expression-choices strong{font-size:1.15rem}}
+.ref-expression-choices button[aria-pressed=true] .pinyin{color:inherit}
