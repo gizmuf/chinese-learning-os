@@ -1,0 +1,402 @@
+{
+  "三月": {
+    "text": "三月",
+    "source": "/atlas/audio/atlas-u4e09-sentence.mp3",
+    "sha256": "cabb4429af07a0809c62e34a5569a749b32b0264b148668b52f1398b00507327"
+  },
+  "上面": {
+    "text": "上面",
+    "source": "/atlas/audio/atlas-u4e0a-sentence.mp3",
+    "sha256": "d6c50708ae45a1e1729dedda7b46f535309580e2e0b5c0a8beedeaecfff23097"
+  },
+  "二月": {
+    "text": "二月",
+    "source": "/atlas/audio/atlas-u4e8c-sentence.mp3",
+    "sha256": "6500cdc8293fbf4a21dba38ffa5e9ba7feb0c9157d9cb57aa9e7a1b641847656"
+  },
+  "五月": {
+    "text": "五月",
+    "source": "/atlas/audio/atlas-u4e94-sentence.mp3",
+    "sha256": "2d3c1b00b60b8dfb6d9b70358d7a66b6b88df5e7d47650162ffe20dcb50837c0"
+  },
+  "四月": {
+    "text": "四月",
+    "source": "/atlas/audio/atlas-u56db-sentence.mp3",
+    "sha256": "bfb618d151cb6caf370fca0c6db595feeb390009e417fdaf0f2c563f9262c48b"
+  },
+  "早上": {
+    "text": "早上",
+    "source": "/atlas/audio/atlas-u65e9-sentence.mp3",
+    "sha256": "6e96b375e84e99845ddab05d1f514065ad07498f94c6664c6b8fa5bfea3df1e9"
+  },
+  "明天": {
+    "text": "明天",
+    "source": "/atlas/audio/atlas-u660e-sentence.mp3",
+    "sha256": "53b074e8c5660fa797943225a3e2e8f96750ae62402f446df8ef0405b1eae66e"
+  },
+  "昨天": {
+    "text": "昨天",
+    "source": "/atlas/audio/atlas-u6628-sentence.mp3",
+    "sha256": "2184207632e7afa5ee0f69cdf14792ce5cb9af1d2243836449d9461b295ae235"
+  },
+  "晚上": {
+    "text": "晚上",
+    "source": "/atlas/audio/atlas-u665a-sentence.mp3",
+    "sha256": "bd3fc1f4b52ba727a82110bc6284247d3df521e6650655e1598b109273f45da8"
+  },
+  "走路": {
+    "text": "走路",
+    "source": "/atlas/audio/atlas-u8d70-sentence.mp3",
+    "sha256": "753061d42cb889103edb18566c28eabccc74fa158521f79bb25a10a9ecdb3749"
+  },
+  "八": {
+    "text": "八",
+    "source": "/audio/hsk1-002-word.mp3",
+    "sha256": "a3e30e7decbf05b1c5d7460d2b8b744f9aa7780634b5ea8bbd56778097cd340d"
+  },
+  "半": {
+    "text": "半",
+    "source": "/audio/hsk1-007-word.mp3",
+    "sha256": "4ac52e74eabfa3a4f232d72b01235bd73f75569439220ef22ffb5f28ff5a9f9d"
+  },
+  "我到学校了。": {
+    "text": "我到学校了。",
+    "source": "/audio/hsk1-029-sentence.mp3",
+    "sha256": "e518df297f10892369da4c7432692389ccf4290e1e0c51be92a66a7fad210fe3"
+  },
+  "到": {
+    "text": "到",
+    "source": "/audio/hsk1-029-word.mp3",
+    "sha256": "0f1c17382afb23a0799ceae7f31f7b53ca1f31f81c262d2bb40f0ac11e44403e"
+  },
+  "点": {
+    "text": "点",
+    "source": "/audio/hsk1-033-word.mp3",
+    "sha256": "580306b1e3985c3ef60d2903c173aefb47704bc6aa5fb7f1ef5f5cf01af1b8a9"
+  },
+  "店": {
+    "text": "店",
+    "source": "/audio/hsk1-034-word.mp3",
+    "sha256": "1ada722facef0a6e596b692ff1c57723f871dd38a416ea9e875bc9c5c985acc1"
+  },
+  "分": {
+    "text": "分",
+    "source": "/audio/hsk1-055-word.mp3",
+    "sha256": "bcc2b4d1a8231c778553d18d4769ae304512654dcddfe70e479edaaaf4495e8b"
+  },
+  "分钟": {
+    "text": "分钟",
+    "source": "/audio/hsk1-056-word.mp3",
+    "sha256": "bf35a03a5d8dce3740b73ef10803bf9bdfa189479af228e9546f4164d352ed80"
+  },
+  "好": {
+    "text": "好",
+    "source": "/audio/hsk1-071-word.mp3",
+    "sha256": "2052b0b04a4f0a997924084f90234badca9e4d10950c95c13816ce08daf319ed"
+  },
+  "号": {
+    "text": "号",
+    "source": "/audio/hsk1-076-word.mp3",
+    "sha256": "44ce77fea3b677f79f9c2b66cb98c8b22d9ab78674de14a8ea49a63902e69e6d"
+  },
+  "后": {
+    "text": "后",
+    "source": "/audio/hsk1-080-word.mp3",
+    "sha256": "f89f16775adc901c586973b8172061b46b7427574df82d8089ea758bde1214e1"
+  },
+  "回": {
+    "text": "回",
+    "source": "/audio/hsk1-081-word.mp3",
+    "sha256": "e8e2a4c76b80b25824a3ff8bcf831f3a200cae79c3f96d6a51babf2252d23540"
+  },
+  "家": {
+    "text": "家",
+    "source": "/audio/hsk1-086-word.mp3",
+    "sha256": "d1e48f2af730d001962dad035c14099876bae14330ea37ceea04eb89780c9206"
+  },
+  "课": {
+    "text": "课",
+    "source": "/audio/hsk1-103-word.mp3",
+    "sha256": "7281d394d08c4a91e4103d2d3d23dbd729d5139fd176d55f03f44d8caa261035"
+  },
+  "来": {
+    "text": "来",
+    "source": "/audio/hsk1-106-word.mp3",
+    "sha256": "b51614c30c78f5d90f98b0aee6fa4375ebad0a23546666bfd90091c47938c801"
+  },
+  "两": {
+    "text": "两",
+    "source": "/audio/hsk1-111-word.mp3",
+    "sha256": "5acabbd3a1707c36cbe78669c301132d28f6f47f552d161ed72d4a30553b6184"
+  },
+  "年": {
+    "text": "年",
+    "source": "/audio/hsk1-149-word.mp3",
+    "sha256": "30159e37b00b3ec2509523db417d7a356dbecea713dae48499cccdb007c5c7a3"
+  },
+  "前": {
+    "text": "前",
+    "source": "/audio/hsk1-163-word.mp3",
+    "sha256": "39b0b20902fe8d923cab9876530a0ad0eea6b5b2307d2899c627259b9e812b08"
+  },
+  "去": {
+    "text": "去",
+    "source": "/audio/hsk1-167-word.mp3",
+    "sha256": "7f10e3fc935bb60cc61bd3878a951c3089c2214b440a923f615bdfe1a38884b6"
+  },
+  "日": {
+    "text": "日",
+    "source": "/audio/hsk1-172-word.mp3",
+    "sha256": "2503cb24648c2c6b3bc7b1f38ce7f8cd77393a399a5495d70ab4d2ec922f2002"
+  },
+  "书在桌子上。": {
+    "text": "书在桌子上。",
+    "source": "/audio/hsk1-175-sentence.mp3",
+    "sha256": "a26181ee4a6517539944658d4bf589ffea2338b5b61a64679ed2256b5fd9751a"
+  },
+  "上": {
+    "text": "上",
+    "source": "/audio/hsk1-175-word.mp3",
+    "sha256": "70d1ef8318e97f87130e24f7190b193cd3a7881249ac8acf648fd820ff0c325c"
+  },
+  "上班": {
+    "text": "上班",
+    "source": "/audio/hsk1-176-word.mp3",
+    "sha256": "7644398e4b1d8b961224a48857b92b896c3f4301fe607d0085cefc078ac14af1"
+  },
+  "上课": {
+    "text": "上课",
+    "source": "/audio/hsk1-177-word.mp3",
+    "sha256": "ba2bf76817385d03885fa9adc6430adb5c1e4f7375ef643970f96ae994711088"
+  },
+  "上午": {
+    "text": "上午",
+    "source": "/audio/hsk1-178-word.mp3",
+    "sha256": "3e51d56f43406846a5a4bb9aafd25508503941b8b900a006f38708782ed32ca6"
+  },
+  "上学": {
+    "text": "上学",
+    "source": "/audio/hsk1-179-word.mp3",
+    "sha256": "675247be1519350e9f249125debeb3001a0c0010e9c2e2b27ef02b2974365d20"
+  },
+  "十": {
+    "text": "十",
+    "source": "/audio/hsk1-184-word.mp3",
+    "sha256": "b7ca95151f423573c797ed1cf6fad4ec6e8effcbe53318579459de3807e0c876"
+  },
+  "下课": {
+    "text": "下课",
+    "source": "/audio/hsk1-229-word.mp3",
+    "sha256": "c1c76545a150eae686e3627549a1d9ba96007d5671af4d5cd48c03a59206317f"
+  },
+  "下午": {
+    "text": "下午",
+    "source": "/audio/hsk1-230-word.mp3",
+    "sha256": "06514017db0df6d3080a8a5fe8c69e04774bac0a4fb58ebf5978d8a3868d7627"
+  },
+  "小时": {
+    "text": "小时",
+    "source": "/audio/hsk1-236-word.mp3",
+    "sha256": "3b091ef6390a90552b8d54b7bbb15caa81f449790065ff0aa9e2fafd422f6bb7"
+  },
+  "星期日": {
+    "text": "星期日",
+    "source": "/audio/hsk1-244-word.mp3",
+    "sha256": "e3161ded71ad1046bcf7a5c60ad1138b90a263f39b2a2931e1827d5382667c98"
+  },
+  "星期天": {
+    "text": "星期天",
+    "source": "/audio/hsk1-245-word.mp3",
+    "sha256": "6e65bf4a57f2937dc3fc659861b4f0b2b8e3e845c057dde7137f2b9d6e8b7159"
+  },
+  "月": {
+    "text": "月",
+    "source": "/audio/hsk1-269-word.mp3",
+    "sha256": "2791b2a2e52a97ee7e80ce319282352a5eab55e3464ea0b82c0b4526f7625d09"
+  },
+  "中午": {
+    "text": "中午",
+    "source": "/audio/hsk1-291-word.mp3",
+    "sha256": "893c0484dbfb130608c9c089fed9063be65eb3b79ea734ec5e7f1ce82fa1ada0"
+  },
+  "出来": {
+    "text": "出来",
+    "source": "/audio/hsk2-318-word.mp3",
+    "sha256": "f791f171d0dc054b94fff67cee257a51f2a91cd90e059c350814ddcd66a5589f"
+  },
+  "出去": {
+    "text": "出去",
+    "source": "/audio/hsk2-320-word.mp3",
+    "sha256": "9f99f3d7f226641949396f3324b6aff96447c9707b8672fad6e46eed53370b95"
+  },
+  "过来": {
+    "text": "过来",
+    "source": "/audio/hsk2-348-word.mp3",
+    "sha256": "13799d88facd4eb8ef984f8ee0908f73abacee68dc04fdce776184652102527a"
+  },
+  "过去": {
+    "text": "过去",
+    "source": "/audio/hsk2-350-word.mp3",
+    "sha256": "31a3c8800397f765a41c9bb639c6058453827da81e867f3d6dc05730af4624ca"
+  },
+  "回来": {
+    "text": "回来",
+    "source": "/audio/hsk2-361-word.mp3",
+    "sha256": "bf725de324a61b74f3a1f8be8328bebf706ee5fd0e352491fd4d41e28b88d5e9"
+  },
+  "回去": {
+    "text": "回去",
+    "source": "/audio/hsk2-362-word.mp3",
+    "sha256": "37c7b4f0107c15e4f48593a113a668898145e9bd186613fd4f668f077cb25401"
+  },
+  "进来": {
+    "text": "进来",
+    "source": "/audio/hsk2-372-word.mp3",
+    "sha256": "d5d77b46091ec7652f3209a924f25e657a79a679ae9eb2682251eb7c2b299274"
+  },
+  "进去": {
+    "text": "进去",
+    "source": "/audio/hsk2-373-word.mp3",
+    "sha256": "e2d6d5770b314ba0ee29d25d6bdb4bbbdf4fc514fb8d087462730675fbc2cc6f"
+  },
+  "路上": {
+    "text": "路上",
+    "source": "/audio/hsk2-393-word.mp3",
+    "sha256": "f60f925f5bbe3dfb4583dea5ac3a47d7c20b1a0419c4467198701b008c7a7080"
+  },
+  "上来": {
+    "text": "上来",
+    "source": "/audio/hsk2-425-word.mp3",
+    "sha256": "49b50009d13ebbd61c5e7703df3ad4f6bd3dacaebcffd94591dee6e4c3dffebd"
+  },
+  "上去": {
+    "text": "上去",
+    "source": "/audio/hsk2-427-word.mp3",
+    "sha256": "3722979f09d644456d37e7972a361d6ccc73777d5e15bf836a6a1b6259d47be1"
+  },
+  "上网": {
+    "text": "上网",
+    "source": "/audio/hsk2-428-word.mp3",
+    "sha256": "2eb53411f35615a3ab270e2db131b7cc688da5634058a50b6ffb22ff88e03e97"
+  },
+  "时": {
+    "text": "时",
+    "source": "/audio/hsk2-431-word.mp3",
+    "sha256": "d15e82785908ad8621d4633d43684475605bd00eec648d8e2e365699ec6a0401"
+  },
+  "下来": {
+    "text": "下来",
+    "source": "/audio/hsk2-458-word.mp3",
+    "sha256": "5704d7071f62fd631811ce39c36adaf6dd43f6921a949f1f60667f76c5ad153b"
+  },
+  "下去": {
+    "text": "下去",
+    "source": "/audio/hsk2-460-word.mp3",
+    "sha256": "2ddab4699173633bf77f6fc1c2f0097805283281ff24c71bd05ebec5dca0521f"
+  },
+  "走": {
+    "text": "走",
+    "source": "/audio/hsk2-495-word.mp3",
+    "sha256": "433dff01e76fc6a48ee6d9088149b3aef577a0aff68c9b94c36575f0ac5f100e"
+  },
+  "大概": {
+    "text": "大概",
+    "source": "/audio/hsk3-573-word.mp3",
+    "sha256": "b594139acd032d7e9345f9d912301869d82809c26fee1c96cdf1094e6eb87adc"
+  },
+  "后天": {
+    "text": "后天",
+    "source": "/audio/hsk3-673-word.mp3",
+    "sha256": "5953077b1f16fd59086110b1623715fb3d9f34c4db8a72f1bde095c75576c2d5"
+  },
+  "然后": {
+    "text": "然后",
+    "source": "/audio/hsk3-813-word.mp3",
+    "sha256": "80c53bc129b8e5d767d7be855ea7673218696391ed916d750dc104f3aff56ce5"
+  },
+  "以后": {
+    "text": "以后",
+    "source": "/audio/hsk3-926-word.mp3",
+    "sha256": "203cca56ea6ad050bed70b5ff2ae20c9d39b680ba2e9f8bc7fc8337a11a04136"
+  },
+  "以前": {
+    "text": "以前",
+    "source": "/audio/hsk3-927-word.mp3",
+    "sha256": "ce0149d7af0321222fdc8d03e24f820846b9b2b8899ff98644bf1aa528a2d539"
+  },
+  "以上": {
+    "text": "以上",
+    "source": "/audio/hsk3-928-word.mp3",
+    "sha256": "0dcb570bb7cacc0ff7318ca6cdea0a4e88921a1f88682273fc40c29db22f2371"
+  },
+  "越": {
+    "text": "越",
+    "source": "/audio/hsk3-958-word.mp3",
+    "sha256": "bd28b18b16f03af00240bb21d26ec1aff8c55a0863cf6aa6ab60554bf3512fb5"
+  },
+  "周末": {
+    "text": "周末",
+    "source": "/audio/hsk3-986-word.mp3",
+    "sha256": "4a0436cd9a3f59fb44e1a9d1b46f56dc140d00d7f27f5fa7920827a82342ea63"
+  },
+  "今天": {
+    "text": "今天",
+    "source": "/audio/today-word.mp3",
+    "sha256": "9cb2e11a49604ee68f67abf04ad2e507636e90470707d18d71eba05ce7f9ef8e"
+  },
+  "上个月": {
+    "text": "上个月",
+    "source": "/course03/audio/course03-last-month-sentence.mp3",
+    "sha256": "0d15b7ed65dce708453bb370f5f8c4886af744dbc5bae6128871ba9949ada06f"
+  },
+  "下个月": {
+    "text": "下个月",
+    "source": "/course03/audio/course03-next-month-word.mp3",
+    "sha256": "5caa8beed7aa5120cbcda1cb9a115b2185645a0fb388ccedb946fa53e63a943b"
+  },
+  "这个月": {
+    "text": "这个月",
+    "source": "/course03/audio/course03-this-month-sentence.mp3",
+    "sha256": "566ace8d6cddce8f3137333fabcfc42c373bc0130e6f2166c88d8fa6db34c3ea"
+  },
+  "星期六": {
+    "text": "星期六",
+    "source": "/course07/audio/c07-t53.mp3",
+    "sha256": "fdc377766390d571c0a8dc1f711ca834e90325868c9f8621ded0482f0a69c245"
+  },
+  "两点": {
+    "text": "两点",
+    "source": "/course08/audio/c08-t10.mp3",
+    "sha256": "37a55c6e472657adb3ce66f6922660dfb953f06c9660e735f0ff841668e31296"
+  },
+  "一刻": {
+    "text": "一刻",
+    "source": "/course08/audio/c08-t21.mp3",
+    "sha256": "9577f779b0f2cbc9426c41787100a7ebe183d34056909c8b2310ed3b024a3905"
+  },
+  "下午一点": {
+    "text": "下午一点",
+    "source": "/course08/audio/c08-t23.mp3",
+    "sha256": "5fba9b13ce9cf8b5a7e5e1a03e38e31b0b54938e3d9a866d39ed911ecb9ebfbf"
+  },
+  "星期一": {
+    "text": "星期一",
+    "source": "/course08/audio/c08-t29.mp3",
+    "sha256": "912a17b296f2fac09294da94377133478bf131836798a64df7671a7f2e6121e7"
+  },
+  "星期五": {
+    "text": "星期五",
+    "source": "/course08/audio/c08-t30.mp3",
+    "sha256": "0c141cfff09479f8f5490386afbe9143af20a64ba6847077c50675027f721d64"
+  },
+  "今天星期几？": {
+    "text": "今天星期几？",
+    "source": "/course09/audio/c09-s10.mp3",
+    "sha256": "c896b11f995358b1cf0d32b1c1671bb34cf750659536fe08299bfab4e7f5a12c"
+  },
+  "今天几月几号？": {
+    "text": "今天几月几号？",
+    "source": "/course09/audio/c09-s09.mp3",
+    "sha256": "05aec163f3fd96fd55f0950e914949c00f7531c38923eb87a9d515aaf9344358"
+  }
+}
