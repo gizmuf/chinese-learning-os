@@ -1,4 +1,6 @@
 "use client";
+import ReferenceLessonLinks from './reference-lesson-links';
+import {referenceLessonHref} from './reference-lessons-data';
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowRight,
@@ -607,7 +609,7 @@ export default function StudyApp({
           {(view === "atlas" || atlasReturn) && <div hidden={view!=="atlas"}><Suspense fallback={<p role="status">{t("Loading your notebook…")}</p>}><Atlas owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} onWord={openAtlasWord}/></Suspense></div>}
           {view==="practice" && atlasReturn && <button className="secondary atlas-return-button" onClick={returnToAtlas}><ArrowRight size={16} style={{transform:"rotate(180deg)"}}/>{t("Back to Cloud Atlas")}</button>}
           {view === "grammar" && <Suspense fallback={<p>{t("Loading your notebook…")}</p>}><HSK3Grammar key={user?.id ?? "guest"} owner={user?.id ?? null} db={db?.name === "chinese-os-v1-"+(user?.id ?? "guest") ? db : null}/></Suspense>}
-          {view === "course" && <IntensiveCourse owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} recordHSK={record} notify={notify} onHSKRecall={item => { setLevel(item.hskLevel === 3 ? "hsk3" : item.hskLevel === 2 ? "hsk2" : item.hskLevel === 1 ? "hsk1" : "bonus"); openPractice(item, "recall"); }} />}
+          {view === "course" && <IntensiveCourse onReferenceLibraryBack={()=>changeView("lessons")} owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} recordHSK={record} notify={notify} onHSKRecall={item => { setLevel(item.hskLevel === 3 ? "hsk3" : item.hskLevel === 2 ? "hsk2" : item.hskLevel === 1 ? "hsk1" : "bonus"); openPractice(item, "recall"); }} />}
           {view === "today" && (
             <>
               <div className="page-heading">
@@ -861,6 +863,7 @@ export default function StudyApp({
               </div>
               <article className="personal-lesson-entry panel"><div><p className="eyebrow">VIDEO LESSON · SENTENCE REHEARSAL</p><h2>A morning with Shuoshuo · 我的早晨</h2><p>42 reading groups · 65 source segments · 40 vocabulary references · writing practice</p></div><button className="primary" onClick={openShuoshuoLesson}>Open lesson<ArrowRight size={16}/></button></article>
               <article className="personal-lesson-entry panel"><div><p className="eyebrow">PERSONAL LESSON · SPEAKING REHEARSAL</p><h2>我的一天 · My day</h2><p>Day 01 · Version 2 · 26 sentences · Hanzi, pinyin & English</p></div><button className="primary" onClick={openMyDay}>Open My day lesson<ArrowRight size={16}/></button></article>
+              <ReferenceLessonLinks onOpen={id=>{stopAudio();window.history.replaceState(null,'',referenceLessonHref(id)+'&from=lessons');setView('course');window.scrollTo({top:0,behavior:'instant'});}}/>
               <button className="secondary pdf-library-button" onClick={() => setPdfSelection(filtered.map(item => item.id))}><Download size={16} /> {t("Print notebook PDF")}</button>
               <div className="library-controls">
                 <label className="search-field">

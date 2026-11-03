@@ -1,4 +1,8 @@
 "use client";
+import ReferenceLesson from './reference-lesson';
+import ReferenceLessonLinks from './reference-lesson-links';
+import {referenceLessonById,referenceLessonHref} from './reference-lessons-data';
+import type {ReferenceMaterialId} from './reference-lesson-types';
 import Lesson10 from './lesson10';
 import {lesson10} from './lesson10-data';
 import Lesson09 from './lesson09';
@@ -80,7 +84,9 @@ export default function IntensiveCourse({
   recordHSK,
   notify,
   onHSKRecall,
+  onReferenceLibraryBack,
 }: {
+  onReferenceLibraryBack?:()=>void;
   owner: string | null;
   db: IDBDatabase | null;
   penOnly: boolean;
@@ -95,6 +101,7 @@ export default function IntensiveCourse({
   const [open, setOpen] = useState(false);
   const [videoOpen,setVideoOpen]=useState(false);
   const [chunksOpen,setChunksOpen]=useState(false);
+  const [referenceId,setReferenceId]=useState<ReferenceMaterialId|null>(null),[referenceFromLibrary,setReferenceFromLibrary]=useState(false);
   const [lessonNumber,setLessonNumber]=useState(3);
   const [tab, setTab] = useState<Tab>("overview");
   const [topic, setTopic] = useState<Topic>("time");
@@ -109,6 +116,8 @@ export default function IntensiveCourse({
     [progress.events],
   );
   useEffect(() => {
+    const material=new URLSearchParams(window.location.search).get('material');
+    if(material?.startsWith('reference-')){const id=material.slice('reference-'.length) as ReferenceMaterialId;if(referenceLessonById.has(id)){setReferenceId(id);setReferenceFromLibrary(new URLSearchParams(window.location.search).get('from')==='lessons');}}
     if(new URLSearchParams(window.location.search).get("material")==="self-introduction")setVideoOpen(true);
     if(new URLSearchParams(window.location.search).get("material")==="speaking-chunks")setChunksOpen(true);
     if (new URLSearchParams(window.location.search).get("lesson") === "10") {setLessonNumber(10);setOpen(true);}
@@ -212,6 +221,8 @@ export default function IntensiveCourse({
   function openLesson07(){stopAudio();setLessonNumber(7);setOpen(true);window.history.replaceState(null,"","/?course=intensive&lesson=7");window.scrollTo({top:0,behavior:"instant"});}
   if(open&&lessonNumber===6)return <Lesson06 {...{owner,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"","/?course=intensive");}}/>;
   function openLesson06(){stopAudio();setLessonNumber(6);setOpen(true);window.history.replaceState(null,"","/?course=intensive&lesson=6");window.scrollTo({top:0,behavior:"instant"});}
+  function openReference(id:ReferenceMaterialId){stopAudio();setReferenceFromLibrary(false);setReferenceId(id);window.history.replaceState(null,'',referenceLessonHref(id));window.scrollTo({top:0,behavior:'instant'});}
+  if(referenceId)return <ReferenceLesson id={referenceId} {...{owner,penOnly,setPenOnly,notify}} backLabel={referenceFromLibrary?'Back to My lessons':'All course materials'} onBack={()=>{setReferenceId(null);if(referenceFromLibrary&&onReferenceLibraryBack)onReferenceLibraryBack();else window.history.replaceState(null,'','/?course=intensive');}}/>;
   if(chunksOpen)return <SpeakingChunks owner={owner} notify={notify} onBack={()=>{setChunksOpen(false);window.history.replaceState(null,"","/?course=intensive");}}/>;
   if(videoOpen)return <VideoStudy {...{owner,penOnly,setPenOnly,notify}} onBack={()=>{setVideoOpen(false);window.history.replaceState(null,"","/?course=intensive");}}/>;
   if(open&&lessonNumber===5) return <Lesson05 {...{owner,db,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"",window.location.pathname+"?course=intensive");}}/>;
@@ -239,6 +250,7 @@ export default function IntensiveCourse({
       </div>
       {!open ? (
         <>
+          <ReferenceLessonLinks onOpen={openReference}/>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">你能给我 · … · 吗</div><div><span className="pill">CHUNKS</span><h2>{chunkCopy.title[locale]}</h2><p>{chunkCopy.intro[locale]}</p><p>{chunkCopy.subtitle[locale]}</p><button className="primary" onClick={()=>{stopAudio();setChunksOpen(true);window.history.replaceState(null,"","/?course=intensive&material=speaking-chunks");window.scrollTo({top:0,behavior:"instant"});}}>{chunkCopy.open[locale]}<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">你 · 自己</div><div><span className="pill">{videoCopy[locale].independent}</span><h2>{videoStudy.title[locale]}</h2><p>{videoCopy[locale].intro}</p><button className="primary" onClick={()=>{stopAudio();setVideoOpen(true);window.history.replaceState(null,'','/?course=intensive&material=self-introduction');window.scrollTo({top:0,behavior:'instant'});}}>{videoCopy[locale].read}<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">比 · 在 · 量词</div><div><span className="pill">{t("Lesson")} 10 / 60</span><h2>{lesson10.title[locale]}</h2><p>02.11.2026</p><button className="primary" onClick={openLesson10}>{t("Lesson")} 10<ArrowRight size={17}/></button></div></section>

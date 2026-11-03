@@ -1,3 +1,4 @@
+import {referenceLessons,referenceWordOccurs} from './reference-lessons-data';
 import {lesson10Sentences,lesson10Pronunciation} from './lesson10-data';
 import shuoshuoMorning from '../data/shuoshuo-morning.json';
 import {lesson09Sentences,lesson09Audio} from './lesson09-data';
@@ -19,6 +20,7 @@ function examples(locale:Locale){
  pool=[...lesson06Sentences.map(v=>row(v,lesson06Audio(v))),
   ...lesson07Sentences.filter(v=>v.origin!=='board-opinion'&&!v.excludeFromChecks).map(v=>row(v,lesson07Audio(v))),
   ...lesson08Sentences.map(v=>row(v,lesson08Audio(v))),
+  ...referenceLessons.flatMap(lesson=>lesson.examples.map(v=>({id:v.id,text:v.hanzi,pinyin:v.pinyin,meaning:v.en}))),
   ...lesson10Sentences.map(v=>({id:v.id,text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],audio:lesson10Pronunciation(v)})),
   ...lesson09Sentences.map(v=>row(v,lesson09Audio(v))),
   ...extra.map(([word,text,pinyin,en,fr,ru,tr])=>({id:'usage:'+word,text,pinyin,meaning:{en,fr,ru,tr}[locale]})),
@@ -35,6 +37,7 @@ export function studyExamples(text:string,locale:Locale,limit=2,priority=''):Stu
  const normalized=(value:string)=>value.replace(/[\s\p{P}]/gu,'');
  const seen=new Set<string>(),result:StudyExample[]=[];
  for(const value of [...examples(locale)].sort((a,b)=>priority?Number(b.id.startsWith(priority))-Number(a.id.startsWith(priority)):0)){
+  if(value.id.startsWith('ref-')&&!referenceWordOccurs(value.text,text))continue;
   if(!value.text.includes(text)||normalized(value.text)===normalized(text)||!/[。！？!?]/u.test(value.text)||seen.has(value.text))continue;
   seen.add(value.text);result.push(value);if(result.length>=limit)break;
  }
