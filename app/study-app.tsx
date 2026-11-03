@@ -1,4 +1,6 @@
 "use client";
+import LanguagePractice from './language-practice';
+import {isLanguageSkill,languageSkills,languagePracticeHref,languagePracticeRoute} from './pinyin-practice-model';
 import ReferenceLessonLinks from './reference-lesson-links';
 import {referenceLessonHref} from './reference-lessons-data';
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -124,8 +126,10 @@ export default function StudyApp({
   const [selectedRecord, setSelected] = useState(items[0]);
   const selected = items.find(item => item.id === selectedRecord.id) ?? items[0];
   const [skill, setSkill] = useState<Skill>("writing");
+  const [languageRun,setLanguageRun]=useState<string|undefined>(undefined);
   const [mode, setMode] = useState<Mode>("trace");
   const [writingLayout, setWritingLayout] = useState<"studio" | "notebook">("studio");
+  useEffect(()=>{if(view==='practice'&&isLanguageSkill(skill))window.history.replaceState(null,'',languagePracticeHref(skill,selected.id,languageRun));},[view,skill,selected.id,languageRun]);
   const [search, setSearch] = useState("");
   const [lesson, setLesson] = useState("all");
   const [level, setLevel] = useState<StudyLevel>("hsk1");
@@ -218,8 +222,9 @@ export default function StudyApp({
         if (!alive) return;
         setDb(store); setEvents(history);
         setSync(user ? t("Ready to sync") : t("Guest · saved on this device"));
-        const requestedAll=allReviewLevel(window.location.search);
-        if(alive&&requestedAll){
+        const requestedAll=allReviewLevel(window.location.search),languageRoute=languagePracticeRoute(window.location.search,sourceItems);
+        if(alive&&languageRoute){const target=sourceItems.find(item=>item.id===languageRoute.itemId)!;setLevel(target.hskLevel?('hsk'+target.hskLevel) as StudyLevel:'bonus');setSelected(target);setSkill(languageRoute.skill);setLanguageRun(languageRoute.runId);setMode('recall');setSession(null);setView('practice');
+        }else if(alive&&requestedAll){
           const queue=items.filter(item=>isInLevel(item,requestedAll));
           const previous=validRecognitionDraft(recognition)&&recognition.practice&&JSON.stringify(recognition.itemIds)===JSON.stringify(queue.map(i=>i.id))?recognition:null;
           const index=Math.min(previous?.index??0,queue.length-1);
@@ -390,6 +395,7 @@ export default function StudyApp({
     }
     if (s === "meaning") {setRecognitionRun(crypto.randomUUID());setRecognitionPractice(!!extra);}
     if(extra==='all'){const href=allReviewHref(level);if(href)window.history.replaceState(null,'',window.location.pathname+href);}
+    if(isLanguageSkill(s))setLanguageRun(crypto.randomUUID());
     setSkill(s);
     setMode("recall");
     setSession(queue);
@@ -982,9 +988,9 @@ export default function StudyApp({
                 ))}
               </div>
               <div className="review-grid">
-                {(["meaning", "listening", "writing"] as Skill[]).map(
+                {(["meaning", "listening", "writing", ...languageSkills] as Skill[]).map(
                   (s, index) => {
-                    const Icon = [BookOpen, Headphones, PenLine][index];
+                    const Icon = [BookOpen, Headphones, PenLine][index%3];
                     const count = Object.entries(cards).filter(
                       ([k, c]) =>
                         k.endsWith(":" + s) &&
@@ -997,7 +1003,7 @@ export default function StudyApp({
                       <section className="panel review-option" key={s}>
                         <span
                           className={
-                            "stat-icon " + ["sage", "peach", "yellow"][index]
+                            "stat-icon " + ["sage", "peach", "yellow"][index%3]
                           }
                         >
                           <Icon size={26} />
@@ -1008,7 +1014,7 @@ export default function StudyApp({
                             ? t("See the word. Recall what it means.")
                             : s === "listening"
                               ? t("Listen carefully. Connect sound to meaning.")
-                              : t("An empty grid. A word from memory.")}
+                              : isLanguageSkill(s)?(s==='pinyin'?'Recall and write the reading with every tone.':s==='ime'?'Type Pinyin and select the matching Chinese characters.':'Read the Pinyin and recall the Chinese characters.'):t("An empty grid. A word from memory.")}
                         </p>
                         <strong>
                           {count}
@@ -1064,7 +1070,7 @@ export default function StudyApp({
                         : t("THE WRITING STUDIO")}
                     </p>
                     <h1>
-                      {session && skill !== "writing"
+                      {skill !== "writing"
                         ? skillNames[skill] + " · " + t("Practice")
                         : t("One stroke at a time")}
                       <span className="orange">.</span>
@@ -1085,12 +1091,13 @@ export default function StudyApp({
                     >
                       {studyItems.map((i) => (
                         <option key={i.id} value={i.id}>
-                          {i.hanzi} · {i.pinyin} · {i.english}
+                          {isLanguageSkill(skill)?i.english:i.hanzi+' · '+i.pinyin+' · '+i.english}
                         </option>
                       ))}
                     </select>
                   )}
                 </div>
+                {!session&&<div className="language-studio-tabs" role="group" aria-label="Writing and language practice"><button type="button" className={skill==='writing'?'primary':'secondary'} onClick={()=>{setLanguageRun(undefined);window.history.replaceState(null,'','/');setSkill('writing');}}>Hanzi writing</button>{languageSkills.map(value=><button type="button" key={value} className={skill===value?'primary':'secondary'} onClick={()=>{setLanguageRun(undefined);setSkill(value);}}>{skillNames[value]}</button>)}</div>}
                 {skill === "writing" && !session && (
                   <div className="notebook-layout-switch" role="group" aria-label={t("Writing layout")}>
                     <button className={writingLayout === "studio" ? "selected" : ""} aria-pressed={writingLayout === "studio"} onClick={() => setWritingLayout("studio")}>{t("Single character")}</button>
@@ -1098,7 +1105,7 @@ export default function StudyApp({
                     <button onClick={() => setPdfSelection([selected.id])}><Download size={16} /> {t("Print notebook PDF")}</button>
                   </div>
                 )}
-                {skill === "writing" && writingLayout === "notebook" && !session ? (
+                {isLanguageSkill(skill)?<LanguagePractice key={(user?.id??'guest')+':'+selected.id+':'+skill} item={selected} skill={skill} runId={languageRun} db={db?.name==='chinese-os-v1-'+(user?.id??'guest')?db:null} record={record} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} next={next}/>:skill === "writing" && writingLayout === "notebook" && !session ? (
                   <Notebook key={selected.id} item={selected} db={db} penOnly={penOnly} setPenOnly={setPenOnly} record={record} notify={notify} next={next}
                     onRecall={() => { setWritingLayout("studio"); setMode("recall"); }} />
                 ) : skill === "writing" ? (
@@ -1201,7 +1208,7 @@ export default function StudyApp({
                               <small>{i.english}</small>
                             </td>
                             {(
-                              ["meaning", "listening", "writing"] as Skill[]
+                              ["meaning", "listening", "writing", ...languageSkills] as Skill[]
                             ).map((s) => {
                               const c = cards[i.id + ":" + s];
                               return (

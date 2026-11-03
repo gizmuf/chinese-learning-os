@@ -9,7 +9,7 @@ const point = z.object({
 export const eventSchema = z.object({
   id: z.string().uuid(),
   itemId: z.string().refine((id) => items.some((i) => i.id === id)),
-  skill: z.enum(["meaning", "writing", "listening"]),
+  skill: z.enum(["meaning", "writing", "listening", "pinyin", "hanzi-from-pinyin", "ime"]),
   mode: z.enum(["watch", "trace", "copy", "recall"]),
   rating: z.union([
     z.literal(0),
@@ -32,6 +32,8 @@ export const eventSchema = z.object({
     // Accept this exact historical marker without changing queued events.
     input: z.union([z.string().max(30),z.literal('hanzi > pinyin > English; self-assessed')]).optional(),
   }),
+}).superRefine((event,ctx)=>{
+  if(['pinyin','hanzi-from-pinyin','ime'].includes(event.skill)&&event.mode!=='recall')ctx.addIssue({code:'custom',message:'Language recall requires recall mode'});
 });
 
 export const progressSchema = z.object({ events: z.array(eventSchema) });

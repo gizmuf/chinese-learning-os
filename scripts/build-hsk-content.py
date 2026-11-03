@@ -109,9 +109,9 @@ export type Item = {
 text=head+'export const lessons = '+json.dumps(lesson_data,ensure_ascii=False,indent=2)+';\n'
 text+='export const curriculum = { total: 1020, hsk1: 300, hsk2: 200, hsk3: 500, extras: 20, edition: "HSK 2025 syllabus" };\n'
 text+='export const items: Item[] = '+json.dumps(items,ensure_ascii=False,indent=2)+';\n'
-text+='''export type Skill = "meaning" | "listening" | "writing";
+text+='''export type Skill = "meaning" | "listening" | "writing" | "pinyin" | "hanzi-from-pinyin" | "ime";
 export type Mode = "watch" | "trace" | "copy" | "recall";
-export const skillNames = { meaning: "Recognition", listening: "Listening", writing: "Writing" };
+export const skillNames = { meaning: "Recognition", listening: "Listening", writing: "Writing", pinyin: "Hanzi → Pinyin", "hanzi-from-pinyin": "Pinyin → Hanzi", ime: "Chinese keyboard" };
 function searchKey(value: string) {
   return value.normalize("NFD").replace(/\\p{M}/gu, "").toLowerCase().replace(/[\\s'’]/g, "");
 }

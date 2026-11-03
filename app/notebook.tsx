@@ -7,6 +7,10 @@ import type { Item } from "./content";
 import type { LearningEvent, Stroke } from "./learning";
 import { readDraft, saveDraft } from "./local-store";
 import { speak } from "./audio";
+import PinyinHandwriting from './pinyin-handwriting';
+import LanguagePracticeSet from './language-practice-set';
+import {authoredCharacterReadings} from './pinyin-boundaries';
+import './pinyin-practice.css';
 import Ink from "./ink";
 import {WritingCharacterContext} from "./writing-context";
 
@@ -31,8 +35,8 @@ function Glyph({ data, through, active, direction = false }: {
   </svg>;
 }
 
-function CharacterRow({ character, position, sheet, change, penOnly, disabled, notify }: {
-  character: string; position: number; sheet: Sheet;
+function CharacterRow({ character, reading, position, sheet, change, penOnly, disabled, notify }: {
+  character: string; reading?:string; position: number; sheet: Sheet;
   change: (key: string, strokes: Stroke[]) => void; penOnly: boolean; disabled: boolean; notify:(message:string)=>void;
 }) {
   const { t, locale } = useI18n();
@@ -88,6 +92,7 @@ function CharacterRow({ character, position, sheet, change, penOnly, disabled, n
       {cell(0, true, t("Trace 1"))}{cell(1, true, t("Trace 2"))}
       {cell(2, false, t("Copy 1"))}{cell(3, false, t("Copy 2"))}{cell(4, false, t("Copy 3"))}
     </div>
+    <div className="notebook-pinyin-practice"><h4>Pinyin with tones</h4>{!sheet.hidden&&reading&&<p className="pinyin">{reading}</p>}<p>Write the syllable and its tone mark beside your Hanzi practice.{!reading?' Use the whole-word reading above; no character reading has been guessed.':''}</p><PinyinHandwriting strokes={sheet.cells[`pinyin:${position}`]??[]} onChange={strokes=>change(`pinyin:${position}`,strokes)} penOnly={penOnly} disabled={disabled}/><button type="button" className="text-button" disabled={disabled} onClick={()=>change(`pinyin:${position}`,[])}>Clear Pinyin</button></div>
   </section>;
 }
 function Grid() {
@@ -102,6 +107,7 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
   const { t, locale } = useI18n();
   const [sheet, setSheet] = useState<Sheet>(emptySheet);
   const [ready, setReady] = useState(false);
+  const [languageOpen,setLanguageOpen]=useState(false);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const started = useRef(Date.now());
@@ -119,6 +125,7 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
     if (db && ready && !saved) saveDraft(db, key, sheet).catch(() => notify(t("Could not save the worksheet on this device.")));
   }, [db, key, ready, saved, sheet, notify]);
   function change(cell: string, strokes: Stroke[]) { setSheet(old => ({ ...old, cells: { ...old.cells, [cell]: strokes } })); }
+  const readings=authoredCharacterReadings(item.hanzi,item.pinyin);
   const complete = characters.every((_, i) => [2, 3, 4].some(slot => sheet.cells[`${i}:${slot}`]?.length));
   async function save() {
     if (!complete || saving || saved) return;
@@ -134,7 +141,7 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
     finally { setSaving(false); }
   }
   return <section className="panel notebook-panel" aria-label={t("Writing notebook")}>
-    <div className="notebook-header"><div><span className="eyebrow">{t("YOUR PRACTICE NOTEBOOK")}</span><h2>{item.english}</h2><p className="pinyin">{item.pinyin}</p></div>
+    <div className="notebook-header"><div><span className="eyebrow">{t("YOUR PRACTICE NOTEBOOK")}</span><h2>{item.english}</h2><p className="pinyin">{sheet.hidden?'Pinyin hidden · write before comparing':item.pinyin}</p></div>
       <label className="pencil-toggle"><input type="checkbox" checked={penOnly} onChange={e => setPenOnly(e.target.checked)} /> {t("Pencil only")}</label>
     </div>
     <WritingHelp/><div className="notebook-actions">
@@ -144,7 +151,7 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
     </div>
     <p className="notebook-intro">{t("Follow the steps, trace twice, then write in the empty boxes. Your worksheet stays on this device; saved practice syncs with your account.")}</p>
     {!ready ? <p role="status">{t("Loading your worksheet…")}</p> : <>
-      {characters.map((character, position) => <CharacterRow key={`${position}:${character}`} {...{ character, position, sheet, change, penOnly, notify }} disabled={saved} />)}
+      {characters.map((character, position) => <CharacterRow key={`${position}:${character}`} {...{ character, position, sheet, change, penOnly, notify }} reading={readings?.[position]?.pinyin} disabled={saved} />)}
       <section className="notebook-character"><h3>{t("Write the whole word")}</h3><p>{sheet.hidden ? t("Write the characters together from memory.") : item.hanzi}</p>
         <div className="notebook-cells notebook-whole-word">{characters.map((_, i) => <div className="notebook-cell" key={i}>
           <div className="notebook-square"><Grid /><Ink strokes={sheet.cells[`word:${i}`] ?? []} onChange={s => change(`word:${i}`, s)} penOnly={penOnly} disabled={saved} /></div>
@@ -152,6 +159,7 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
         </div>)}</div>
       </section>
     </>}
+    <details onToggle={event=>setLanguageOpen(event.currentTarget.open)}><summary>Practise Pinyin and Chinese keyboard input</summary>{languageOpen&&<LanguagePracticeSet item={item} db={db} record={record} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} supported/>}</details>
     <div className="notebook-footer"><p>{t("Notebook work counts as assisted practice, even with guides hidden. Use Recall for a separate memory review. Free writing is self-assessed.")}</p>
       {!saved ? <button className="primary" disabled={!ready || !complete || saving} onClick={() => void save()}>{saving ? t("Saving…") : t("Save notebook practice")}<Check size={16} /></button> : <button className="primary" onClick={next}>{t("Saved · next word")}<ChevronRight size={16} /></button>}
       <button className="secondary" onClick={onRecall}>{t("Try Recall")}<ChevronRight size={16} /></button>

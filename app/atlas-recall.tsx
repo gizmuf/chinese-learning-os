@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { useI18n } from "./i18n";
+import {SharedLanguagePractice} from './shared-writing';
 import Ink from "./ink";
 import AtlasGlyph from "./atlas-glyph";
 import type { AtlasCharacter } from "./atlas-data";
@@ -26,6 +27,8 @@ export default function AtlasRecall({
   const [ink, setInk] = useState<Stroke[]>([]);
   const [ready, setReady] = useState(false);
   const [revealed, setRevealed] = useState(false);
+  const [languageOpen,setLanguageOpen]=useState(false);
+  const [readingShown,setReadingShown]=useState(false);
   const [saved, setSaved] = useState(false);
   const [saving, setSaving] = useState(false);
   const id = useRef(crypto.randomUUID());
@@ -33,12 +36,12 @@ export default function AtlasRecall({
   useEffect(() => {
     let active = true;
     if (!db) return;
-    readDraft<{ ink: Stroke[]; revealed: boolean; id: string }>(db, key)
+    readDraft<{ ink: Stroke[]; revealed: boolean; id: string; readingShown?:boolean }>(db, key)
       .then((d) => {
         if (!active) return;
         if (d) {
           setInk(d.ink);
-          setRevealed(d.revealed);
+          setRevealed(d.revealed);setReadingShown(d.readingShown??false);
           id.current = d.id;
         }
         setReady(true);
@@ -55,16 +58,16 @@ export default function AtlasRecall({
   }, [db, key]);
   useEffect(() => {
     if (db && ready && !saved)
-      void saveDraft(db, key, { ink, revealed, id: id.current }).catch(() =>
+      void saveDraft(db, key, { ink, revealed, readingShown, id: id.current }).catch(() =>
         notify(t("Could not save the worksheet on this device.")),
       );
-  }, [db, key, ready, saved, ink, revealed]);
+  }, [db, key, ready, saved, ink, revealed, readingShown]);
   async function save(rating: 1 | 2 | 3 | 4) {
     if (saving || saved) return;
     setSaving(true);
     try {
       await record({
-        ...newAtlasEvent(character.id, "writing", "recall", rating, false),
+        ...newAtlasEvent(character.id, "writing", "recall", rating, readingShown),
         id: id.current,
       });
       setSaved(true);
@@ -79,7 +82,7 @@ export default function AtlasRecall({
     <section className="panel atlas-recall">
       <p className="eyebrow">{t("WRITE FROM MEMORY")}</p>
       <h3>{character.meaning[locale]}</h3>
-      <p className="pinyin">{character.pinyin}</p>
+      {readingShown||revealed?<p className="pinyin">{character.pinyin}</p>:<button type="button" className="text-button" disabled={saving||saved} onClick={()=>setReadingShown(true)}>Show Pinyin hint · supported writing</button>}
       <p>
         {t("Write the character before comparing. Rate your memory honestly.")}
       </p>
@@ -143,6 +146,7 @@ export default function AtlasRecall({
           )}
         </>
       )}
+      <details onToggle={event=>{setLanguageOpen(event.currentTarget.open);if(event.currentTarget.open)setReadingShown(true);}}><summary>Pinyin, tones & keyboard practice</summary>{languageOpen&&<SharedLanguagePractice hanzi={character.hanzi} pinyin={character.pinyin} meaning={character.meaning[locale]} sourceId={character.id} penOnly={penOnly}/>}</details>
       <button className="text-button" onClick={onBack}>
         {t("Back to notebook")}
       </button>
