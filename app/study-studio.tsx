@@ -14,6 +14,7 @@ import {readCloudRoute,cloudRouteHref} from './atlas-cloud-route';
 import type {LearningEvent} from './learning';
 import {applyStudioCommand,backStudio,claimStudio,dayItemIds,fixtureCommand,studioFixtures,visitStudio,writeStudio,type StudioCheckpoint,type StudioPane} from './study-studio-model';
 import './study-studio.css';
+import StudyLabLinks from './study-lab-links';
 const AtlasCloud=lazy(()=>import('./atlas-cloud'));
 const paneNames:Record<StudioPane,string>={atlas:'Character atlas',writing:'Writing',vocabulary:'Vocabulary',cards:'Flashcards',day:'Movement examples'};
 type Props={owner:string|null;db:IDBDatabase|null;penOnly:boolean;setPenOnly:(value:boolean)=>void;notify:(message:string)=>void;record:(event:LearningEvent)=>Promise<void>;onExit:()=>void;onMyDay?:()=>void;onCompanion?:()=>void;onPrivate?:()=>void;onShuoshuoLesson?:()=>void;menuOpen:boolean;onMenu:()=>void};
@@ -86,6 +87,7 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
     {onMyDay&&<button className="ss-personal-lesson" onClick={onMyDay} disabled={busy||atlasAssessment}><BookOpen size={16}/>My Day · Day 01 V2 · 26 sentences · Open lesson · New 3 November chapters<ArrowRight size={15}/></button>}
     {onShuoshuoLesson&&<button className="ss-personal-lesson" onClick={onShuoshuoLesson} disabled={busy||atlasAssessment}><BookOpen size={16}/>A morning with Shuoshuo · Full lesson · 42 groups<ArrowRight size={15}/></button>}
     <nav className="ss-tabs" aria-label="StudyStudio tools">{(Object.keys(paneNames) as StudioPane[]).map(pane=><button key={pane} aria-current={state.pane===pane?'page':undefined} disabled={busy||atlasAssessment} onClick={()=>navigate(pane)}>{paneNames[pane]}</button>)}</nav>
+    <StudyLabLinks disabled={busy||atlasAssessment}/>
     {atlasAssessment&&<p className="ss-assessment-note" role="status">Atlas quiz in progress. Finish or cancel it in the Atlas before opening another tool.</p>}
     <div className={'ss-workspace'+(open?' ss-with-companion':'')}>
       <div className="ss-main" aria-busy={busy}>

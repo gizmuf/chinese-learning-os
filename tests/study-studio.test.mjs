@@ -98,3 +98,11 @@ test('movement examples and five preset companion actions have honest labels and
   assert.equal((await m.readDraft(db,m.studioDraftKey)).pane,'cards');assert.equal((await m.allEvents(db)).length,0);
  } finally {await m.act(()=>r.unmount());db.close();}
 });
+
+ test('Learning Lab opens fixed demos separately, preserves ink and emits no grade; assessment disables links',async()=>{
+ const db=await m.openStore('studio-lab-links');const events=[];let r;await m.act(async()=>{r=m.renderer.create(m.createElement(m.Studio,{owner:null,db,penOnly:false,setPenOnly(){},notify(){},record:async e=>events.push(e),onExit(){},menuOpen:false,onMenu(){}}));});await settle();
+ await click(r,'Study companion');await click(r,'Practise writing 回');await m.act(()=>r.root.findByType('writing-stub').props.setInk('retained ink'));
+ const links=r.root.findAllByType('a').filter(a=>a.props.href?.startsWith('/design-references/scene-lab/'));assert.deepEqual(links.map(a=>a.props.href),['/design-references/scene-lab/journey.html','/design-references/scene-lab/world3d.html']);
+ for(const link of links){assert.equal(link.props.target,'_blank');assert.equal(link.props.rel,'noopener noreferrer');let prevented=false;await m.act(()=>link.props.onClick({preventDefault(){prevented=true;}}));assert.equal(prevented,false);}assert.equal(r.root.findByType('writing-stub').props.ink,'retained ink');assert.equal(events.length,0);
+ await m.act(()=>r.root.findByType('atlas-stub').props.embedded.onAssessmentChange(true));for(const link of r.root.findAllByType('a').filter(a=>a.props.href?.startsWith('/design-references/scene-lab/'))){assert.equal(link.props['aria-disabled'],true);assert.equal(link.props.tabIndex,-1);let prevented=false;link.props.onClick({preventDefault(){prevented=true;}});assert.equal(prevented,true);}assert.equal(events.length,0);await m.act(()=>r.unmount());db.close();
+});
