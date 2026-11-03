@@ -21,7 +21,7 @@ export default function MyDaySpeaking({id,owner,notify,onBack}:{id:string;owner:
  return <section className="my-day-lesson" aria-label={variant.title}>
   <button className="text-button" onClick={()=>{stopAudio();onBack();}}><ArrowLeft size={16}/>Back to study</button>
   <header className="md-heading"><p className="eyebrow">MY DAY · SPEAKING PRACTICE</p><h1>{variant.title}</h1><p>{rows.length} sentences · Listen → repeat → recall</p><p className="md-intro">Start with one sentence. Listen, echo it aloud, then say it again without looking. Repeat three times before moving on. For a longer turn, practise two sentences together.</p><span className="pill">Self practice · no pronunciation or tone score</span></header>
-  <p className="md-intro">Synthetic study voice · Qwen · {available} of {rows.length} sentences have an existing recording. Other recordings are pending.</p>
+  <p className="md-intro">Synthetic study voices · Qwen and Xiao Xiao Neural · {available} of {rows.length} sentences have audio.</p>
   <div className="md-controls" role="group" aria-label="Speaking practice display">
    <label>Practice size <select aria-label="Practice size" value={size} onChange={e=>{stopAudio();setSize(Number(e.target.value));}}><option value={1}>One sentence</option><option value={2}>Two sentences</option></select></label>
    <button aria-pressed={all} onClick={()=>{stopAudio();setAll(v=>!v);setHidden(false);}}>{all?'Return to practice':'Read full variant'}</button>
@@ -32,7 +32,7 @@ export default function MyDaySpeaking({id,owner,notify,onBack}:{id:string;owner:
   <div className="md-section">{visible.map(({row,i})=>{const clip=speakingClip(row.hanzi);return <article className="md-sentence" key={i} data-study-source-id={id+':'+(i+1)} data-study-sentence={row.hanzi} data-study-pinyin={row.pinyin} data-study-meaning={row.english}>
    <span className="md-number">{String(i+1).padStart(2,'0')} · {row.section}</span>
    {!hidden&&<><div className="md-hanzi" lang="zh-Hans"><StudyText text={row.hanzi} pinyin={row.pinyin}/></div><p className="md-pinyin" lang="zh-Latn-pinyin">{row.pinyin}</p><p className="md-english" lang="en">{row.english}</p></>}
-   <div className="md-speaking-actions">{clip?<button className="text-button" aria-pressed={recording.playing===clip.source} onClick={()=>recording.play(clip.source)}><Volume2 size={16}/>Listen to sentence {i+1}</button>:<span className="md-intro">Sentence recording pending</span>}
+   <div className="md-speaking-actions">{clip?<><button className="text-button" aria-pressed={recording.playing===clip.source} onClick={()=>recording.play(clip.source)}><Volume2 size={16}/>Listen to sentence {i+1}</button><span>{'voice' in clip?'Xiao Xiao Neural':'Qwen'}</span></>:<span className="md-intro">Sentence recording pending</span>}
    <button className="secondary" onClick={()=>setRounds(v=>({...v,[i]:Math.min(3,(v[i]??0)+1)}))}>I said it aloud · {rounds[i]??0}/3</button>
    {(rounds[i]??0)>=3&&<span role="status">Try it once from memory.</span>}</div>
   </article>;})}</div>

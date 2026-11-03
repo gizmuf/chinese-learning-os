@@ -83,7 +83,7 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
     {error&&<p className="ss-error" role="alert">{error}</p>}
     <div className="ss-heading"><div><p className="ss-eyebrow">A CONNECTED WAY TO LEARN</p><h1>One connection at a time.</h1><p>Your atlas, writing and words, together.</p></div>
       <button className="ss-companion-toggle" onClick={()=>setOpen(!open)} aria-expanded={open} aria-controls="ss-companion"><MessageCircle size={17}/>Study companion</button></div>
-    {onMyDay&&<button className="ss-personal-lesson" onClick={onMyDay} disabled={busy||atlasAssessment}><BookOpen size={16}/>My Day · Day 01 V2 · 26 sentences · Open lesson<ArrowRight size={15}/></button>}
+    {onMyDay&&<button className="ss-personal-lesson" onClick={onMyDay} disabled={busy||atlasAssessment}><BookOpen size={16}/>My Day · Day 01 V2 · 26 sentences · Open lesson · New 3 November chapters<ArrowRight size={15}/></button>}
     {onShuoshuoLesson&&<button className="ss-personal-lesson" onClick={onShuoshuoLesson} disabled={busy||atlasAssessment}><BookOpen size={16}/>A morning with Shuoshuo · Full lesson · 42 groups<ArrowRight size={15}/></button>}
     <nav className="ss-tabs" aria-label="StudyStudio tools">{(Object.keys(paneNames) as StudioPane[]).map(pane=><button key={pane} aria-current={state.pane===pane?'page':undefined} disabled={busy||atlasAssessment} onClick={()=>navigate(pane)}>{paneNames[pane]}</button>)}</nav>
     {atlasAssessment&&<p className="ss-assessment-note" role="status">Atlas quiz in progress. Finish or cancel it in the Atlas before opening another tool.</p>}

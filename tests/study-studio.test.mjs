@@ -83,7 +83,7 @@ test('movement examples and five preset companion actions have honest labels and
  try {
   assert.ok(button(r,'Movement examples'));
   assert.equal(button(r,'My day'),undefined);
-  await click(r,'My Day · Day 01 V2 · 26 sentences · Open lesson');assert.equal(myDayOpens,1);
+  await click(r,'My Day · Day 01 V2 · 26 sentences · Open lesson · New 3 November chapters');assert.equal(myDayOpens,1);
   await click(r,'Movement examples');
   const pane=r.root.findByProps({className:'ss-panel ss-day'});assert.equal(pane.props.hidden,false);assert.equal(pane.findAllByType('article').length,4);assert.match(text(pane),/Movement examples/);
   await click(r,'Study companion');

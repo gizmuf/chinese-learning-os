@@ -3,7 +3,7 @@
   "model": "qwen-audio-3.1-tts-plus",
   "voice": "longanhuan_v3.1",
   "region": "cn-beijing",
-  "note": "Preparation inventory only. Do not generate without current free quota observation and authorized provider access. Never replace exact full sentences with approximate or stitched audio.",
+  "note": "Optional future Qwen upgrade inventory only. All these texts already have validated Xiao Xiao Neural audio in my-day-speaking-audio.json; do not regenerate that audio. Qwen generation requires current free quota and authorized provider access.",
   "uniqueMissingCount": 27,
   "texts": [
     {
