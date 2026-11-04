@@ -14,7 +14,7 @@ export default function VoiceDemo(){
  async function connect(){
   if(!availability?.ready||socket.current)return;
   try{
-   audio.current=new AudioContext();await audio.current.resume();setWaiting(true);setStatus('Connecting…');
+   audio.current=new AudioContext();await audio.current.resume();setIds(['apple','banana','orange']);setReply('');setWaiting(true);setStatus('Connecting…');
    const ws=new WebSocket(location.origin.replace(/^http/,'ws')+'/api/voice-demo/stream');socket.current=ws;
    ws.onmessage=event=>{if(!alive.current||socket.current!==ws)return;try{const e=JSON.parse(event.data);
     if(e.type==='demo.ready'){deadline.current=Date.now()+120000;setSeconds(120);setTurns(3);setConnected(true);setWaiting(false);setStatus('Connected. Record a short question or type one.');}

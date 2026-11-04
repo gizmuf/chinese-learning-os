@@ -10,7 +10,7 @@ Scene assets are the accepted `ef81380` room/navigation and `1793706` guided-spe
 
 Voice pilot: three initial fruit cards, Hanzi/pinyin always visible, meanings on request, typed input or a recorded question up to ten seconds. The real-audio response is streamed through Qwen Realtime. It is a short push-to-talk pilot, not an always-open, interruptible phone call. The model can request an allowlisted `show_fruits` action; only catalogue IDs change existing React cards. Model-generated HTML is never executed.
 
-The candidate backend is a Workers WebSocket relay in `lib/voice-demo.ts`, dispatched by `build/sites-worker.ts`. It is disabled without all activation conditions. No credentials have been configured, no model calls made, and no microphone permission requested during development. Fixtures simulate provider events; they do not prove provider acceptance or real audio quality.
+The candidate backend is a Workers WebSocket relay in `lib/voice-demo.ts`, dispatched by `build/sites-worker.ts`. It is disabled without all activation conditions. After the explicit approval, a separate one-model key was stored in Native Sites secret environment revision 2 and the provider free-quota-only stop was enabled and read back. The relay remains inactive without the allowed tester identity and short expiry. No model calls have been made and no microphone permission has been requested during development. Fixtures simulate provider events; they do not prove provider acceptance or real audio quality.
 
 ## Activation after explicit approval
 

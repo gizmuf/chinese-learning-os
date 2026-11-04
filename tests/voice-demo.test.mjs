@@ -24,6 +24,7 @@ test('relay fixes model/session; denies client reconfiguration, limits turns and
   upstream.emit('message',{type:'session.created'});assert.equal(upstream.sent[0].type,'session.update');assert.equal(upstream.sent[0].session.turn_detection,null);
   upstream.emit('message',{type:'session.updated'});assert.equal(pair[1].sent[0].type,'demo.ready');
   pair[1].emit('message',{type:'session.update',session:{model:'expensive-other-model'}});assert.equal(upstream.sent.length,1);
+  const clip=Buffer.alloc(320000);for(let start=0;start<clip.length;start+=24000)pair[1].emit('message',{type:'audio',audio:clip.subarray(start,start+24000).toString('base64')});assert.equal(pair[1].closed,false);pair[1].emit('message',{type:'commit'});upstream.emit('message',{type:'response.done'});
   for(let i=0;i<4;i++){pair[1].emit('message',{type:'text',text:'Hello'});upstream.emit('message',{type:'response.done'});}
   assert.equal(upstream.sent.filter(e=>e.type==='response.create').length,3);
   upstream.emit('message',{type:'response.output_item.done',item:{type:'function_call',name:'show_fruits',arguments:JSON.stringify({ids:['banana']}),call_id:'call1'}});assert.ok(pair[1].sent.some(e=>e.type==='demo.cards'&&e.ids[0]==='banana'));
