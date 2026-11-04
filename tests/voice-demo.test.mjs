@@ -3,7 +3,7 @@ const b=await build({stdin:{contents:"export * from './lib/voice-demo';export * 
 const env={QWEN_REALTIME_API_KEY:'test-placeholder',QWEN_REALTIME_WORKSPACE:'ws-example',VOICE_DEMO_ALLOWED_USER_ID:'test-user',VOICE_DEMO_FREE_ONLY_CONFIRMED:'1',VOICE_DEMO_EXPIRES_AT:new Date(Date.now()+20*60000).toISOString()};
 const request=(path='/api/voice-demo/status',headers={})=>new Request('https://example.com'+path,{headers:{'oai-authenticated-user-id':'test-user',...headers}});
 test('voice fails closed without credentials, quota confirmation, approved identity and short activation window',async()=>{
- assert.equal(m.voiceDemoReadiness(request(),{}).ready,false);assert.equal(m.voiceDemoReadiness(request(),env).ready,true);
+ assert.equal(m.voiceDemoReadiness(request(),{}).ready,false);assert.equal(m.voiceDemoReadiness(new Request('https://example.com'),{}).userId,null);assert.equal(m.voiceDemoReadiness(request(),{}).userId,'test-user');assert.equal(m.voiceDemoReadiness(request(),env).ready,true);
  for(const [key,value] of [['VOICE_DEMO_FREE_ONLY_CONFIRMED','0'],['QWEN_REALTIME_API_KEY',''],['VOICE_DEMO_EXPIRES_AT',new Date(0).toISOString()],['VOICE_DEMO_EXPIRES_AT',new Date(Date.now()+2*3600000).toISOString()]])assert.equal(m.voiceDemoReadiness(request(),{...env,[key]:value}).ready,false);
  assert.equal(m.voiceDemoReadiness(request('/api/voice-demo/status',{'oai-authenticated-user-id':'other'}),env).ready,false);
  assert.equal((await m.handleVoiceDemo(request('/api/voice-demo/stream'),{})).status,403);

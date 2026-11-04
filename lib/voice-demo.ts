@@ -5,7 +5,7 @@ export function voiceDemoReadiness(request:Request,env:Env,now=Date.now()){
  const expiry=Date.parse(env.VOICE_DEMO_EXPIRES_AT??'');
  const configured=!!env.QWEN_REALTIME_API_KEY&&/^ws-[a-z0-9]+$/.test(env.QWEN_REALTIME_WORKSPACE??'')&&!!env.VOICE_DEMO_ALLOWED_USER_ID&&env.VOICE_DEMO_FREE_ONLY_CONFIRMED==='1'&&expiry>now&&expiry<=now+60*60*1000;
  const authorized=!!env.VOICE_DEMO_ALLOWED_USER_ID&&request.headers.get('oai-authenticated-user-id')===env.VOICE_DEMO_ALLOWED_USER_ID;
- return {ready:configured&&authorized,configured,authorized,seconds:120,turns:3};
+ return {ready:configured&&authorized,configured,authorized,signedIn:!!request.headers.get('oai-authenticated-user-id'),userId:request.headers.get('oai-authenticated-user-id')||null,seconds:120,turns:3};
 }
 const limits={audioIn:16000*2*30,audioOut:24000*2*30};
 const base64Bytes=(s:string)=>Math.floor(s.length*3/4)-(s.endsWith('==')?2:s.endsWith('=')?1:0);

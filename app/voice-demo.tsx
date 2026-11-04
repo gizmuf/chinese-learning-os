@@ -2,7 +2,7 @@
 import {useEffect,useRef,useState} from 'react';
 import {demoFruits,pcm16,validatedFruitIds} from './voice-demo-model';
 import './voice-demo.css';
-type Availability={ready:boolean;configured:boolean;authorized:boolean};
+type Availability={ready:boolean;configured:boolean;authorized:boolean;signedIn?:boolean};
 export default function VoiceDemo(){
  const [showEnglish,setShowEnglish]=useState(false);
  const [availability,setAvailability]=useState<Availability|null>(null),[connected,setConnected]=useState(false),[waiting,setWaiting]=useState(false),[recording,setRecording]=useState(false),[status,setStatus]=useState('Checking voice availability…'),[seconds,setSeconds]=useState(120),[turns,setTurns]=useState(3),[text,setText]=useState(''),[reply,setReply]=useState(''),[ids,setIds]=useState<string[]>(['apple','banana','orange']);
@@ -14,10 +14,10 @@ export default function VoiceDemo(){
  async function connect(){
   if(!availability?.ready||socket.current)return;
   try{
-   audio.current=new AudioContext();await audio.current.resume();setStatus('Connecting…');
+   audio.current=new AudioContext();await audio.current.resume();setWaiting(true);setStatus('Connecting…');
    const ws=new WebSocket(location.origin.replace(/^http/,'ws')+'/api/voice-demo/stream');socket.current=ws;
    ws.onmessage=event=>{if(!alive.current||socket.current!==ws)return;try{const e=JSON.parse(event.data);
-    if(e.type==='demo.ready'){deadline.current=Date.now()+120000;setSeconds(120);setTurns(3);setConnected(true);setStatus('Connected. Record a short question or type one.');}
+    if(e.type==='demo.ready'){deadline.current=Date.now()+120000;setSeconds(120);setTurns(3);setConnected(true);setWaiting(false);setStatus('Connected. Record a short question or type one.');}
     else if(e.type==='demo.text')setReply(v=>(v+e.delta).slice(-6000));
     else if(e.type==='demo.cards'){const next=validatedFruitIds(e.ids);if(next)setIds(next);}
     else if(e.type==='demo.done'){setWaiting(false);setTurns(e.turnsRemaining);setStatus(e.turnsRemaining?'Your turn.':'Three turns completed. You can listen, then end the demo.');}
@@ -64,8 +64,8 @@ export default function VoiceDemo(){
   <div className="voice-demo-intro"><h2>A small fruit lesson</h2><p>Up to 2 minutes · 3 turns · speak or type</p><button aria-pressed={showEnglish} onClick={()=>setShowEnglish(v=>!v)}>EN · {showEnglish?'Hide meanings':'Show meanings'}</button></div>
   <div className="voice-fruit-cards">{demoFruits.filter(f=>ids.includes(f[0])).map(f=><article key={f[0]}><strong lang="zh-Hans">{f[1]}</strong><span>{f[2]}</span><small hidden={!showEnglish}>{f[3]}</small></article>)}</div>
   <p className="voice-example"><span lang="zh-Hans">三根香蕉</span><span>sān gēn xiāngjiāo</span><small hidden={!showEnglish}>three bananas</small></p>
-  <div className="voice-demo-controls">{!connected?<button className="primary" disabled={!availability?.ready} onClick={()=>void connect()}>Start short conversation</button>:<><span>{seconds}s · {turns} turns left</span><button onClick={()=>{socket.current?.send(JSON.stringify({type:'stop'}));disconnect();setStatus('Conversation stopped.');}}>End conversation</button></>}</div>
-  <p className="voice-status" role="status">{status}</p>
+  <div className="voice-demo-controls">{!connected?<button className="primary" disabled={!availability?.ready||waiting} onClick={()=>void connect()}>Start short conversation</button>:<><span>{seconds}s · {turns} turns left</span><button onClick={()=>{socket.current?.send(JSON.stringify({type:'stop'}));disconnect();setStatus('Conversation stopped.');}}>End conversation</button></>}</div>
+  <p className="voice-status" role="status">{status}</p>{waiting&&!connected&&<button onClick={()=>{disconnect();setStatus('Connection cancelled.');}}>Cancel connection</button>}{availability&&!availability.signedIn&&<p><a href="/signin-with-chatgpt?return_to=%2F%3Fview%3Dlabs%26lab%3Dvoice" target="_top">Sign in for your private voice test</a></p>}
   {!connected&&<p className="voice-privacy">When enabled, recording sends your voice to Qwen in Beijing. Recording starts only when you press Record. This demo does not score pronunciation.</p>}
   <div className="voice-conversation"><div className="voice-reply" aria-live="polite">{reply||'Try: “Practise fruit names with me”, “Show me more fruits”, or “How do I say three bananas?”'}</div><div className="voice-input"><input aria-label="Message to the tutor" maxLength={300} placeholder="Type to your tutor…" value={text} disabled={!connected||waiting||recording||turns<1} onChange={e=>setText(e.target.value)} onKeyDown={e=>{if(e.key==='Enter')sendText();}}/><button disabled={!connected||waiting||recording||turns<1||!text.trim()} onClick={sendText}>Send</button><button disabled={!connected||waiting||turns<1} onClick={()=>{if(recording)recorder.current?.stop();else void startRecording();}}>{recording?'Stop recording':'● Record'}</button></div></div>
   {!availability?.ready&&<p className="voice-unavailable">The cards are a preview; no AI call is running. The connection needs a separately approved Realtime key and a protected test session.</p>}
