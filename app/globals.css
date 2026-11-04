@@ -4327,3 +4327,8 @@ html[lang="ru"] .nav-item, html[lang="fr"] .nav-item { font-size: 12px; }
 .library-related-lessons{margin-top:30px;border-top:1px solid #dce4d5;padding-top:16px}.library-related-lessons>summary{min-height:44px;font-size:14px;color:#7b8874;cursor:pointer}
 
 .word-card .sentence[hidden]{display:none}
+
+/* A palm must not select a cell number or open Safari's selection callout. */
+.sp-mini-notebook,.sp-mini-notebook *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}.sp-mini-notebook-cell{touch-action:none}.sp-mini-unit-switch{display:flex;gap:6px;margin:8px 0 16px}.sp-mini-unit-switch button{min-height:38px;padding:6px 10px;border:1px solid #dce5d6;border-radius:8px;font-size:12px;background:white;color:#5c7565}.sp-mini-unit-switch [aria-pressed=true]{background:#e9f0e3;border-color:#a3b69b}.writing-print-guide{position:absolute;inset:0;width:100%;height:100%;fill:#d9e2d3;pointer-events:none}.study-confusions-entry{display:inline-flex;gap:8px;align-items:center;margin-top:12px;font-size:13px}
+
+.notebook-cell,.notebook-cell *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}.notebook-cell{touch-action:none}
