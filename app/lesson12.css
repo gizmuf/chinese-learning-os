@@ -15,3 +15,11 @@
 
 /* Readings travel with their Hanzi, including when a chunk wraps. */
 .l12-hanzi ruby{ruby-position:under;ruby-align:center;display:inline-block;text-align:center;min-width:1.25em;margin-inline:.04em}.l12-hanzi rt{display:block;font:400 18px/1.6 var(--font-sans,system-ui,sans-serif);color:#a87551;text-align:center;letter-spacing:0}.l12-hanzi .study-word{white-space:normal}.l12 .l12-chunks>span{padding-bottom:3px}.l12-hanzi{line-height:2.3}.l12-hanzi:has(rt){margin-bottom:14px}
+.l12 .l12-display{gap:8px 20px;margin:10px 0 18px;padding:0;background:transparent;border-radius:0;font-size:13px;color:#6b7c68}
+.l12 .l12-display label{min-height:40px;gap:7px;cursor:pointer;font-weight:400;white-space:nowrap}
+.l12 .l12-display input{appearance:none;-webkit-appearance:none;position:relative;flex:0 0 25px;width:25px;height:14px;margin:0;border:1px solid #c7d1c0;border-radius:20px;background:#f1f4ed;cursor:pointer;transition:background .12s,border-color .12s}
+.l12 .l12-display input::before{content:"";position:absolute;top:2px;left:2px;width:8px;height:8px;border-radius:50%;background:#a3b29c;transition:transform .12s,background .12s}
+.l12 .l12-display input:checked{background:#dfe8d8;border-color:#a0b394}
+.l12 .l12-display input:checked::before{background:#52704f;transform:translateX(11px)}
+.l12 .l12-display input:focus-visible{outline:2px solid #779886;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){.l12 .l12-display input,.l12 .l12-display input::before{transition:none}}

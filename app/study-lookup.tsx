@@ -65,7 +65,7 @@ export default function StudyLookupProvider({children,notify,penOnly,setPenOnly,
   const inside=!!dialog.current?.open;if(!inside||fromAtlas||fromComparison)setNavigationId(v=>v+1);
   if(fromAtlas||fromComparison){opener.current=trigger;activeContext.current=sourceContext(trigger)??atlasRef.current?.entry.contextual;dialog.current?.close();requestAnimationFrame(()=>{if(dialog.current&&!dialog.current.open)dialog.current.showModal();});}
   if(!inside){opener.current=trigger;activeContext.current=sourceContext(trigger)??atlasRef.current?.entry.contextual;}
-  const nestedSource=sourceContext(trigger);if(nestedSource)activeContext.current=nestedSource;
+  const nestedSource=sourceContext(trigger);if(trigger.dataset?.studySourceRestore==='true')activeContext.current=nestedSource;else if(nestedSource)activeContext.current=nestedSource;
   stopAudio();stop();const token=++requests.current,context=activeContext.current;
   const present=(value:DictionaryEntry)=>{let selected=contextualDictionaryEntry({...value,meaning:simplifiedDisplayText(value.meaning)},context);if(Array.from(selected.text).length===1&&!studyAtlasHref(selected))selected.atlasAvailable=false;selected=contextualAudio(selected,selected.contextual?(selected.contextual.audio??latestDictionary.current.get(selected.contextual.text)?.audio??speakingClip(selected.contextual.text)??shuoshuoSentenceAudioForText(selected.contextual.text)):undefined);return selected;};
   const localEntry=()=>studyLookupEntry(latestDictionary.current,text,locale,!!trigger.closest('[data-grammar-frame]'))??(context?.text===text?{text,pinyin:context.pinyin,meaning:context.meaning,phrase:true}:undefined);

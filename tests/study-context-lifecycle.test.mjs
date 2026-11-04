@@ -29,3 +29,10 @@ test('comparison lookups use the shared remote resolver outside the lesson vocab
  }
  await act(()=>r.unmount());
 });
+
+test('returning from an occurrence restores the previous source sentence, including an explicitly empty context',async()=>{
+ const r=await mount();await act(()=>api(r).open('得',trigger));assert.equal(dialog(r).entry.contextual.text,'早饭后，我准备出门，因为我得去学校。');
+ const other={closest(selector){return selector==='[data-study-sentence]'?{dataset:{studySentence:'我每天都学习。',studyPinyin:'Wǒ měitiān dōu xuéxí.',studyMeaning:'I study every day.'}}:null},isConnected:false};await act(()=>api(r).open('都',other));assert.equal(dialog(r).entry.contextual.text,'我每天都学习。');
+ await act(()=>api(r).open('得',{...trigger,dataset:{studySourceRestore:'true'}}));assert.equal(dialog(r).entry.contextual.text,'早饭后，我准备出门，因为我得去学校。');
+ await act(()=>api(r).open('水',{dataset:{studySourceRestore:'true'},closest(){return null},isConnected:false}));assert.equal(dialog(r).entry.contextual,undefined);await act(()=>r.unmount());
+});
