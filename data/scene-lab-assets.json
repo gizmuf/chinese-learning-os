@@ -1,7 +1,6 @@
 {
-  "source_commit": "5ae01cf80df391093966f879a35310c15f204a4b",
-  "asset_commit": "8fbba43ec3a4d58055af80efa8ffd0ecccdd263b",
-  "archive_sha256": "627c6181822750f43cb627db3fa0154c4b2c5f0b926a9430472506e295d84338",
+  "source_commit": "ef81380b9787b5fd5050378a4b45b6692fac7ac4",
+  "asset_commit": "1c06f7bc90ae01a3b0ddd97d005bf6a4ad4ead28",
   "files": {
     "app.js": {
       "bytes": 11654,
@@ -874,13 +873,13 @@
       "type": "audio/mpeg"
     },
     "index.html": {
-      "bytes": 8810,
-      "sha256": "93579ddb08192d6fc377971655a2a55c58f3432d568499aaae6c9e4c9fd8b123",
+      "bytes": 8924,
+      "sha256": "89f6f93839278de641c1e567844cdb54d1d9752258ad111bd1464cd08bcf0fc0",
       "type": "text/html; charset=utf-8"
     },
     "journey.html": {
-      "bytes": 8310,
-      "sha256": "755a74cd155bc6e0da4c829d3595d9b52dbaefd64dc416188e7d4c889b2f357a",
+      "bytes": 8424,
+      "sha256": "4f01851db47a7205f0f5b34375b0099ee5f40e15fb1dcb5b0a904c716642f08b",
       "type": "text/html; charset=utf-8"
     },
     "room.css": {
@@ -894,8 +893,8 @@
       "type": "text/javascript; charset=utf-8"
     },
     "scene-data.js": {
-      "bytes": 17366,
-      "sha256": "ab7894a9d24380960c9ed1626fb3eee423382fd36eec6d073eca9f4fed36888a",
+      "bytes": 17855,
+      "sha256": "e51b10ffe9a60fe717b03d2635fbb0034479c6189a37a8dee4ba37e39ba5e2e1",
       "type": "text/javascript; charset=utf-8"
     },
     "style.css": {
@@ -904,19 +903,74 @@
       "type": "text/css; charset=utf-8"
     },
     "world3d.css": {
-      "bytes": 16283,
-      "sha256": "6bcb9a6f81a97ca4d32ca57722ef64897031ce04057fa008411190fadde9f739",
+      "bytes": 24036,
+      "sha256": "3ec0ec30047b391eeefbb8342efd908476ec64f3582a585e9db4dee1bfdfca76",
       "type": "text/css; charset=utf-8"
     },
     "world3d.html": {
-      "bytes": 4482,
-      "sha256": "3aeb59a04955a9c9ac09048ccbd7bc68c5f51404ef9f688ca67e972da41959c7",
+      "bytes": 5004,
+      "sha256": "01e710e8e0da0f82eda123ca62ae9da208f9d13ba40ff2af9aeb136968eedeb4",
       "type": "text/html; charset=utf-8"
     },
     "world3d.js": {
-      "bytes": 32393,
-      "sha256": "e0ab73d9ca66ba52428062756e1751fbce923fb659536a27b44bee6d86c0c53b",
+      "bytes": 35248,
+      "sha256": "74cf701b0829a822793bd25f5b3d50f6120e5fe819c6fb1a7212b88efcc7726a",
       "type": "text/javascript; charset=utf-8"
+    },
+    "app-navigation.js": {
+      "bytes": 1844,
+      "sha256": "a8f38a02a540fa63ec0600cb82d051602249ad46abb525aaa7b6bbf9f33b54d7",
+      "type": "text/javascript; charset=utf-8"
+    },
+    "app-navigation.css": {
+      "bytes": 1419,
+      "sha256": "e7082c01f9170d8e37d314f61d0e202ef00d62e728f20350b22a908abd8a1337",
+      "type": "text/css; charset=utf-8"
+    },
+    "teacher/room.html": {
+      "bytes": 4736,
+      "sha256": "f5374d7e30b60820818e01fe87cb053f6ba9106633190ca6ad821d2b96cd7074",
+      "type": "text/html; charset=utf-8"
+    },
+    "teacher/index.html": {
+      "bytes": 3917,
+      "sha256": "8fc77ee5073d558b59b8a27920650a0f9dbeeb48c0bd22e5b4a2793e8c33d038",
+      "type": "text/html; charset=utf-8"
+    },
+    "teacher/teacher.css": {
+      "bytes": 6432,
+      "sha256": "67423694fa3abedf883a3365571490db304f7d4b57bd2d37f69c5f5cb3936ccc",
+      "type": "text/css; charset=utf-8"
+    },
+    "teacher/audio-analysis.js": {
+      "bytes": 972,
+      "sha256": "018d62468d01bab3eb52bd3742232173398b1c652add03b1fdf885ab1a77a9e1",
+      "type": "text/javascript; charset=utf-8"
+    },
+    "teacher/teacher.js": {
+      "bytes": 11571,
+      "sha256": "cdb71316b28985b3a576a824cf7a576ac10545f86d2591d790e27176584a7f28",
+      "type": "text/javascript; charset=utf-8"
+    },
+    "teacher/room.js": {
+      "bytes": 37353,
+      "sha256": "5378e6c6f845675bb5f098196e0b56409945eae785afe2c82911068e67be5ffe",
+      "type": "text/javascript; charset=utf-8"
+    },
+    "teacher/vendor/rng.js": {
+      "bytes": 968,
+      "sha256": "1797279d21315a0e465e179ca360d7b4ae3e5ea10ee19bf7cda8400acbd914fb",
+      "type": "text/javascript; charset=utf-8"
+    },
+    "teacher/vendor/collision.js": {
+      "bytes": 1916,
+      "sha256": "3ad5054ebd035acece44d4aa39fa86fbf28ba6aa2888d1191c9f3056c60ee4e0",
+      "type": "text/javascript; charset=utf-8"
+    },
+    "teacher/vendor/LICENSE-ObjectTalk.txt": {
+      "bytes": 1372,
+      "sha256": "b4af4ce4cc4fe8e9f8dd12d69d642632fe79ce287315dda803dcf9c0760e98d1",
+      "type": "text/plain; charset=utf-8"
     }
   }
 }
