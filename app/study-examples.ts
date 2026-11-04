@@ -1,3 +1,4 @@
+import {lesson12Sentences,lesson12Pronunciation} from './lesson12-data';
 import {lesson11Sentences,lesson11Pronunciation} from './lesson11-data';
 import {referenceLessons,referenceWordOccurs} from './reference-lessons-data';
 import {lesson10Sentences,lesson10Pronunciation} from './lesson10-data';
@@ -30,7 +31,7 @@ function examples(locale:Locale){
   ...lesson04Sentences.map(v=>row(v,'/course04/audio/course04-'+v.id+'-word.mp3')),
   ...sentences.map(v=>row(v,'/course03/audio/course03-'+v.id+'-word.mp3')),
   ...cloudWords(locale).flatMap(word=>word.item?[{id:word.item.id,text:word.item.sentence,pinyin:word.item.sentencePinyin,meaning:word.item.translation,audio:sentencePronunciation(word)}]:[]),
-  ...shuoshuoMorning.sentences.filter(s=>!s.uncertain).map(s=>({id:'shuoshuo:'+s.id,text:s.hanzi,pinyin:s.pinyin,meaning:s.english}))];
+  ...shuoshuoMorning.sentences.filter(s=>!s.uncertain).map(s=>({id:'shuoshuo:'+s.id,text:s.hanzi,pinyin:s.pinyin,meaning:s.english})),...lesson12Sentences.map(v=>({id:v.id,text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],audio:lesson12Pronunciation(v)}))];
  pools.set(locale,pool);return pool;
 }
 /** Real authored sentences only: never use the isolated expression as its own example. */
@@ -56,6 +57,12 @@ export function dictionaryBreakdown(entry:DictionaryEntry,dictionary:StudyDictio
    if(t.text==='点')detail={...detail,meaning:{en:'a small amount or degree here',fr:'une petite quantité ou un faible degré ici',ru:'Здесь небольшое количество или степень',tr:'Burada az miktar veya düşük derece'}[locale]};
   }
   if(detail){
+   const contextualReading:Record<string,{pinyin:string;meaning:Record<Locale,string>}>={
+    '银行|行':{pinyin:'háng',meaning:{en:'line of business; háng in 银行 (bank)',fr:'secteur d’activité ; háng dans 银行 (banque)',ru:'сфера деятельности; háng в 银行 (банк)',tr:'iş kolu; 银行 (banka) içinde háng'}},
+    '宿舍|舍':{pinyin:'shè',meaning:{en:'lodging; shè in 宿舍 (dormitory)',fr:'logement ; shè dans 宿舍 (résidence)',ru:'жильё; shè в 宿舍 (общежитие)',tr:'barınak; 宿舍 (yurt) içinde shè'}},
+    '睡觉|觉':{pinyin:'jiào',meaning:{en:'sleep; jiào in 睡觉 (sleep)',fr:'sommeil ; jiào dans 睡觉 (dormir)',ru:'сон; jiào в 睡觉 (спать)',tr:'uyku; 睡觉 (uyumak) içinde jiào'}},
+   };
+   const contextual=contextualReading[entry.text+'|'+t.text];if(contextual)detail={...detail,pinyin:contextual.pinyin,meaning:contextual.meaning[locale],audio:entry.audio?{...entry.audio,context:true}:undefined};
    const roles:Record<string,Record<Locale,string>>={
     '泡咖啡|泡':{en:'brew / steep here, pào; not a blister',fr:'infuser ici, pào ; pas une ampoule',ru:'Здесь заваривать, pào; не волдырь',tr:'Burada demlemek, pào; kabarcık değil'},
     '烧水|烧':{en:'heat water to boiling here',fr:'faire bouillir de l’eau ici',ru:'Здесь кипятить воду',tr:'Burada suyu kaynatmak'},

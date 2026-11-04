@@ -1,3 +1,4 @@
+import {lesson12All,lesson12Pronunciation} from './lesson12-data';
 import {lesson11Terms,lesson11Pronunciation} from './lesson11-data';
 import {referenceEntries} from './reference-lessons-data';
 import lesson10Characters from '../data/lesson10/characters.json';
@@ -77,6 +78,7 @@ export function appStudyDictionary(locale:Locale):StudyDictionary{
  for(const term of shuoshuoMorning.practiceTargets){const old=dictionary.get(term.text),clip=shuoshuoWordAudio(term.text);dictionary.set(term.text,{...old,text:term.text,pinyin:term.pinyin,meaning:old?.meaning??term.english,...(clip?{audio:{text:term.text,pinyin:term.pinyin,source:clip.source,context:false}}:{})});}
  if(!dictionary.has('热水'))dictionary.set('热水',{text:'热水',pinyin:'rèshuǐ',meaning:'hot water'});
  for(const sentence of shuoshuoMorning.sentences){const clip=shuoshuoSentenceAudio(sentence.id,sentence.hanzi);dictionary.set(sentence.hanzi,{text:sentence.hanzi,pinyin:sentence.pinyin,meaning:sentence.english,phrase:true,...(clip?{audio:{source:clip.source,text:sentence.hanzi,pinyin:sentence.pinyin,context:true,kind:'sentence' as const}}:{})});}
+ for(const v of lesson12All)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],phrase:!!v.chunks,audio:lesson12Pronunciation(v)});
  return dictionary;
 }
 /** Resolve the glyph actually hit; whitespace/punctuation must never open a neighbouring word. */

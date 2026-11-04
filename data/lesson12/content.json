@@ -1,0 +1,1658 @@
+{
+  "id": "intensive-12",
+  "number": 12,
+  "date": "2026-11-04",
+  "title": {
+    "en": "Home, my day & finding your way",
+    "fr": "Chez soi, ma journée et les directions",
+    "ru": "Дом, мой день и ориентирование",
+    "tr": "Ev, günüm ve yön bulma"
+  },
+  "topics": [
+    {
+      "id": "home",
+      "title": {
+        "en": "At home",
+        "fr": "À la maison",
+        "ru": "Дома",
+        "tr": "Evde"
+      },
+      "pattern": "家"
+    },
+    {
+      "id": "rent",
+      "title": {
+        "en": "Renting & getting around",
+        "fr": "Louer et se déplacer",
+        "ru": "Аренда и транспорт",
+        "tr": "Kiralama ve ulaşım"
+      },
+      "pattern": "坐 / 做 / 座"
+    },
+    {
+      "id": "day",
+      "title": {
+        "en": "My day",
+        "fr": "Ma journée",
+        "ru": "Мой день",
+        "tr": "Günüm"
+      },
+      "pattern": "先 → 再"
+    },
+    {
+      "id": "directions",
+      "title": {
+        "en": "Find your bearings",
+        "fr": "Se repérer",
+        "ru": "Ориентируемся",
+        "tr": "Yönünü bul"
+      },
+      "pattern": "北 · 东 · 南 · 西"
+    },
+    {
+      "id": "campus",
+      "title": {
+        "en": "Around the campus",
+        "fr": "Sur le campus",
+        "ru": "На территории школы",
+        "tr": "Kampüste"
+      },
+      "pattern": "A 在 B 的……边"
+    },
+    {
+      "id": "route",
+      "title": {
+        "en": "Give directions",
+        "fr": "Indiquer le chemin",
+        "ru": "Объясняем дорогу",
+        "tr": "Yol tarifi"
+      },
+      "pattern": "往前走 · 左转 · 右转"
+    },
+    {
+      "id": "weather",
+      "title": {
+        "en": "Rain, money & similar sounds",
+        "fr": "Pluie, argent et sons proches",
+        "ru": "Дождь, деньги и похожие звуки",
+        "tr": "Yağmur, para ve benzer sesler"
+      },
+      "pattern": "钱 qián · 千 qiān · 前 qián"
+    }
+  ],
+  "words": [
+    {
+      "id": "c12-w001",
+      "family": "home",
+      "hanzi": "公寓",
+      "pinyin": "gōngyù",
+      "meaning": {
+        "en": "apartment",
+        "fr": "appartement",
+        "ru": "квартира",
+        "tr": "daire"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w002",
+      "family": "home",
+      "hanzi": "卧室",
+      "pinyin": "wòshì",
+      "meaning": {
+        "en": "bedroom",
+        "fr": "chambre",
+        "ru": "спальня",
+        "tr": "yatak odası"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w003",
+      "family": "home",
+      "hanzi": "厨房",
+      "pinyin": "chúfáng",
+      "meaning": {
+        "en": "kitchen",
+        "fr": "cuisine",
+        "ru": "кухня",
+        "tr": "mutfak"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w004",
+      "family": "home",
+      "hanzi": "卫生间",
+      "pinyin": "wèishēngjiān",
+      "meaning": {
+        "en": "bathroom",
+        "fr": "salle de bains",
+        "ru": "ванная комната",
+        "tr": "banyo"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w005",
+      "family": "home",
+      "hanzi": "客厅",
+      "pinyin": "kètīng",
+      "meaning": {
+        "en": "living room",
+        "fr": "salon",
+        "ru": "гостиная",
+        "tr": "oturma odası"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w006",
+      "family": "home",
+      "hanzi": "房间",
+      "pinyin": "fángjiān",
+      "meaning": {
+        "en": "room",
+        "fr": "pièce",
+        "ru": "комната",
+        "tr": "oda"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w007",
+      "family": "home",
+      "hanzi": "床",
+      "pinyin": "chuáng",
+      "meaning": {
+        "en": "bed",
+        "fr": "lit",
+        "ru": "кровать",
+        "tr": "yatak"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w008",
+      "family": "home",
+      "hanzi": "桌子",
+      "pinyin": "zhuōzi",
+      "meaning": {
+        "en": "table; desk",
+        "fr": "table; bureau",
+        "ru": "стол",
+        "tr": "masa"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w009",
+      "family": "home",
+      "hanzi": "椅子",
+      "pinyin": "yǐzi",
+      "meaning": {
+        "en": "chair",
+        "fr": "chaise",
+        "ru": "стул",
+        "tr": "sandalye"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w010",
+      "family": "home",
+      "hanzi": "一套",
+      "pinyin": "yí tào",
+      "meaning": {
+        "en": "one set; classifier for an apartment",
+        "fr": "un ensemble ; classificateur d’appartement",
+        "ru": "один комплект; счётное слово для квартиры",
+        "tr": "bir takım; daire için sayma sözcüğü"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w011",
+      "family": "home",
+      "hanzi": "一张",
+      "pinyin": "yì zhāng",
+      "meaning": {
+        "en": "one flat object; classifier for a bed or desk",
+        "fr": "un objet plat ; classificateur de lit ou table",
+        "ru": "один плоский предмет; счётное слово для кровати и стола",
+        "tr": "bir düz nesne; yatak ve masa için sayma sözcüğü"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w012",
+      "family": "home",
+      "hanzi": "两把",
+      "pinyin": "liǎng bǎ",
+      "meaning": {
+        "en": "two; classifier for chairs or handled objects",
+        "fr": "deux ; classificateur de chaises ou objets à manche",
+        "ru": "два; счётное слово для стульев и предметов с ручкой",
+        "tr": "iki; sandalye ve saplı nesneler için sayma sözcüğü"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w013",
+      "family": "rent",
+      "hanzi": "租房",
+      "pinyin": "zū fáng",
+      "meaning": {
+        "en": "rent a home",
+        "fr": "louer un logement",
+        "ru": "снимать жильё",
+        "tr": "ev kiralamak"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w014",
+      "family": "rent",
+      "hanzi": "租车",
+      "pinyin": "zū chē",
+      "meaning": {
+        "en": "rent a car",
+        "fr": "louer une voiture",
+        "ru": "арендовать машину",
+        "tr": "araba kiralamak"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w015",
+      "family": "rent",
+      "hanzi": "出租车",
+      "pinyin": "chūzūchē",
+      "meaning": {
+        "en": "taxi",
+        "fr": "taxi",
+        "ru": "такси",
+        "tr": "taksi"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w016",
+      "family": "rent",
+      "hanzi": "坐",
+      "pinyin": "zuò",
+      "meaning": {
+        "en": "sit; take transport",
+        "fr": "s’asseoir ; prendre un transport",
+        "ru": "сидеть; ехать на транспорте",
+        "tr": "oturmak; taşıta binmek"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w017",
+      "family": "rent",
+      "hanzi": "做",
+      "pinyin": "zuò",
+      "meaning": {
+        "en": "do; make",
+        "fr": "faire",
+        "ru": "делать",
+        "tr": "yapmak"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w018",
+      "family": "rent",
+      "hanzi": "座",
+      "pinyin": "zuò",
+      "meaning": {
+        "en": "classifier for buildings, mountains and bridges",
+        "fr": "classificateur de bâtiments, montagnes et ponts",
+        "ru": "счётное слово для зданий, гор и мостов",
+        "tr": "bina, dağ ve köprü için sayma sözcüğü"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w019",
+      "family": "rent",
+      "hanzi": "驾驶证",
+      "pinyin": "jiàshǐzhèng",
+      "meaning": {
+        "en": "driver’s licence",
+        "fr": "permis de conduire",
+        "ru": "водительское удостоверение",
+        "tr": "sürücü belgesi"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w020",
+      "family": "rent",
+      "hanzi": "开车",
+      "pinyin": "kāi chē",
+      "meaning": {
+        "en": "drive a car",
+        "fr": "conduire",
+        "ru": "водить машину",
+        "tr": "araba sürmek"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w021",
+      "family": "day",
+      "hanzi": "起床",
+      "pinyin": "qǐ chuáng",
+      "meaning": {
+        "en": "get up",
+        "fr": "se lever",
+        "ru": "вставать",
+        "tr": "kalkmak"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w022",
+      "family": "day",
+      "hanzi": "早饭",
+      "pinyin": "zǎofàn",
+      "meaning": {
+        "en": "breakfast",
+        "fr": "petit-déjeuner",
+        "ru": "завтрак",
+        "tr": "kahvaltı"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w023",
+      "family": "day",
+      "hanzi": "午饭",
+      "pinyin": "wǔfàn",
+      "meaning": {
+        "en": "lunch",
+        "fr": "déjeuner",
+        "ru": "обед",
+        "tr": "öğle yemeği"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w024",
+      "family": "day",
+      "hanzi": "晚饭",
+      "pinyin": "wǎnfàn",
+      "meaning": {
+        "en": "dinner",
+        "fr": "dîner",
+        "ru": "ужин",
+        "tr": "akşam yemeği"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w025",
+      "family": "day",
+      "hanzi": "上课",
+      "pinyin": "shàng kè",
+      "meaning": {
+        "en": "attend class",
+        "fr": "aller en cours",
+        "ru": "заниматься на уроке",
+        "tr": "derse girmek"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w026",
+      "family": "day",
+      "hanzi": "下课",
+      "pinyin": "xià kè",
+      "meaning": {
+        "en": "finish class",
+        "fr": "finir le cours",
+        "ru": "заканчивать урок",
+        "tr": "dersi bitirmek"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w027",
+      "family": "day",
+      "hanzi": "做作业",
+      "pinyin": "zuò zuòyè",
+      "meaning": {
+        "en": "do homework",
+        "fr": "faire ses devoirs",
+        "ru": "делать домашнее задание",
+        "tr": "ödev yapmak"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w028",
+      "family": "day",
+      "hanzi": "坐地铁",
+      "pinyin": "zuò dìtiě",
+      "meaning": {
+        "en": "take the metro",
+        "fr": "prendre le métro",
+        "ru": "ехать на метро",
+        "tr": "metroya binmek"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w029",
+      "family": "day",
+      "hanzi": "回家",
+      "pinyin": "huí jiā",
+      "meaning": {
+        "en": "return home",
+        "fr": "rentrer chez soi",
+        "ru": "возвращаться домой",
+        "tr": "eve dönmek"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w030",
+      "family": "day",
+      "hanzi": "复习",
+      "pinyin": "fùxí",
+      "meaning": {
+        "en": "review; revise",
+        "fr": "réviser",
+        "ru": "повторять",
+        "tr": "tekrar etmek"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w031",
+      "family": "day",
+      "hanzi": "睡觉",
+      "pinyin": "shuì jiào",
+      "meaning": {
+        "en": "sleep; go to bed",
+        "fr": "dormir ; se coucher",
+        "ru": "спать; ложиться спать",
+        "tr": "uyumak; yatmak"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w032",
+      "family": "day",
+      "hanzi": "大概",
+      "pinyin": "dàgài",
+      "meaning": {
+        "en": "approximately; before the time expression",
+        "fr": "environ ; avant l’heure",
+        "ru": "примерно; перед обозначением времени",
+        "tr": "yaklaşık; saat ifadesinden önce"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w033",
+      "family": "day",
+      "hanzi": "左右",
+      "pinyin": "zuǒyòu",
+      "meaning": {
+        "en": "about; after the time expression",
+        "fr": "environ ; après l’heure",
+        "ru": "около; после обозначения времени",
+        "tr": "civarı; saat ifadesinden sonra"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w034",
+      "family": "directions",
+      "hanzi": "东边",
+      "pinyin": "dōngbian",
+      "meaning": {
+        "en": "east; eastern side",
+        "fr": "à l’est ; côté est",
+        "ru": "восток; восточная сторона",
+        "tr": "doğu; doğu tarafı"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w035",
+      "family": "directions",
+      "hanzi": "西边",
+      "pinyin": "xībian",
+      "meaning": {
+        "en": "west; western side",
+        "fr": "à l’ouest ; côté ouest",
+        "ru": "запад; западная сторона",
+        "tr": "batı; batı tarafı"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w036",
+      "family": "directions",
+      "hanzi": "南边",
+      "pinyin": "nánbian",
+      "meaning": {
+        "en": "south; southern side",
+        "fr": "au sud ; côté sud",
+        "ru": "юг; южная сторона",
+        "tr": "güney; güney tarafı"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w037",
+      "family": "directions",
+      "hanzi": "北边",
+      "pinyin": "běibian",
+      "meaning": {
+        "en": "north; northern side",
+        "fr": "au nord ; côté nord",
+        "ru": "север; северная сторона",
+        "tr": "kuzey; kuzey tarafı"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w038",
+      "family": "directions",
+      "hanzi": "前边",
+      "pinyin": "qiánbian",
+      "meaning": {
+        "en": "in front; depends on the viewpoint",
+        "fr": "devant ; selon le point de vue",
+        "ru": "впереди; зависит от точки зрения",
+        "tr": "ön; bakış yönüne bağlı"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w039",
+      "family": "directions",
+      "hanzi": "后边",
+      "pinyin": "hòubian",
+      "meaning": {
+        "en": "behind; depends on the viewpoint",
+        "fr": "derrière ; selon le point de vue",
+        "ru": "сзади; зависит от точки зрения",
+        "tr": "arka; bakış yönüne bağlı"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w040",
+      "family": "directions",
+      "hanzi": "左边",
+      "pinyin": "zuǒbian",
+      "meaning": {
+        "en": "left; depends on which way you face",
+        "fr": "à gauche ; selon l’orientation",
+        "ru": "слева; зависит от направления взгляда",
+        "tr": "sol; bakış yönüne bağlı"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w041",
+      "family": "directions",
+      "hanzi": "右边",
+      "pinyin": "yòubian",
+      "meaning": {
+        "en": "right; depends on which way you face",
+        "fr": "à droite ; selon l’orientation",
+        "ru": "справа; зависит от направления взгляда",
+        "tr": "sağ; bakış yönüne bağlı"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w042",
+      "family": "campus",
+      "hanzi": "银行",
+      "pinyin": "yínháng",
+      "meaning": {
+        "en": "bank",
+        "fr": "banque",
+        "ru": "банк",
+        "tr": "banka"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w043",
+      "family": "campus",
+      "hanzi": "书店",
+      "pinyin": "shūdiàn",
+      "meaning": {
+        "en": "bookshop",
+        "fr": "librairie",
+        "ru": "книжный магазин",
+        "tr": "kitapçı"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w044",
+      "family": "campus",
+      "hanzi": "学校",
+      "pinyin": "xuéxiào",
+      "meaning": {
+        "en": "school",
+        "fr": "école",
+        "ru": "школа",
+        "tr": "okul"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w045",
+      "family": "campus",
+      "hanzi": "宿舍",
+      "pinyin": "sùshè",
+      "meaning": {
+        "en": "dormitory",
+        "fr": "résidence étudiante",
+        "ru": "общежитие",
+        "tr": "yurt"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w046",
+      "family": "campus",
+      "hanzi": "楼",
+      "pinyin": "lóu",
+      "meaning": {
+        "en": "building; storey",
+        "fr": "bâtiment ; étage",
+        "ru": "здание; этаж",
+        "tr": "bina; kat"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w047",
+      "family": "campus",
+      "hanzi": "号",
+      "pinyin": "hào",
+      "meaning": {
+        "en": "number; label for a building",
+        "fr": "numéro de bâtiment",
+        "ru": "номер здания",
+        "tr": "bina numarası"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w048",
+      "family": "campus",
+      "hanzi": "地方",
+      "pinyin": "dìfang",
+      "meaning": {
+        "en": "place",
+        "fr": "endroit",
+        "ru": "место",
+        "tr": "yer"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w049",
+      "family": "campus",
+      "hanzi": "哪儿",
+      "pinyin": "nǎr",
+      "meaning": {
+        "en": "where",
+        "fr": "où",
+        "ru": "где",
+        "tr": "nerede"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w050",
+      "family": "campus",
+      "hanzi": "一座楼",
+      "pinyin": "yí zuò lóu",
+      "meaning": {
+        "en": "one building",
+        "fr": "un bâtiment",
+        "ru": "одно здание",
+        "tr": "bir bina"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w051",
+      "family": "route",
+      "hanzi": "一直",
+      "pinyin": "yìzhí",
+      "meaning": {
+        "en": "continuously; straight on in a route",
+        "fr": "sans interruption ; tout droit pour un trajet",
+        "ru": "всё время; прямо при описании пути",
+        "tr": "sürekli; yol tarifinde dümdüz"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w052",
+      "family": "route",
+      "hanzi": "往",
+      "pinyin": "wǎng",
+      "meaning": {
+        "en": "towards; in the direction of",
+        "fr": "vers ; en direction de",
+        "ru": "по направлению к",
+        "tr": "doğru; yönünde"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w053",
+      "family": "route",
+      "hanzi": "走",
+      "pinyin": "zǒu",
+      "meaning": {
+        "en": "walk; go on foot",
+        "fr": "marcher ; aller à pied",
+        "ru": "идти пешком",
+        "tr": "yürümek"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w054",
+      "family": "route",
+      "hanzi": "左转",
+      "pinyin": "zuǒ zhuǎn",
+      "meaning": {
+        "en": "turn left",
+        "fr": "tourner à gauche",
+        "ru": "повернуть налево",
+        "tr": "sola dönmek"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w055",
+      "family": "route",
+      "hanzi": "右转",
+      "pinyin": "yòu zhuǎn",
+      "meaning": {
+        "en": "turn right",
+        "fr": "tourner à droite",
+        "ru": "повернуть направо",
+        "tr": "sağa dönmek"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w056",
+      "family": "route",
+      "hanzi": "路口",
+      "pinyin": "lùkǒu",
+      "meaning": {
+        "en": "intersection",
+        "fr": "carrefour",
+        "ru": "перекрёсток",
+        "tr": "kavşak"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w057",
+      "family": "weather",
+      "hanzi": "下雨",
+      "pinyin": "xià yǔ",
+      "meaning": {
+        "en": "rain; be raining",
+        "fr": "pleuvoir",
+        "ru": "идти о дожде",
+        "tr": "yağmur yağmak"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w058",
+      "family": "weather",
+      "hanzi": "雨伞",
+      "pinyin": "yǔsǎn",
+      "meaning": {
+        "en": "umbrella",
+        "fr": "parapluie",
+        "ru": "зонт",
+        "tr": "şemsiye"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w059",
+      "family": "weather",
+      "hanzi": "外卖",
+      "pinyin": "wàimài",
+      "meaning": {
+        "en": "takeaway; food delivery",
+        "fr": "repas à emporter ; livraison",
+        "ru": "еда навынос; доставка еды",
+        "tr": "paket yemek; yemek teslimatı"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w060",
+      "family": "weather",
+      "hanzi": "钱",
+      "pinyin": "qián",
+      "meaning": {
+        "en": "money",
+        "fr": "argent",
+        "ru": "деньги",
+        "tr": "para"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w061",
+      "family": "weather",
+      "hanzi": "千",
+      "pinyin": "qiān",
+      "meaning": {
+        "en": "thousand",
+        "fr": "mille",
+        "ru": "тысяча",
+        "tr": "bin"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w062",
+      "family": "weather",
+      "hanzi": "找",
+      "pinyin": "zhǎo",
+      "meaning": {
+        "en": "look for; give change",
+        "fr": "chercher ; rendre la monnaie",
+        "ru": "искать; давать сдачу",
+        "tr": "aramak; para üstü vermek"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w063",
+      "family": "weather",
+      "hanzi": "用",
+      "pinyin": "yòng",
+      "meaning": {
+        "en": "use",
+        "fr": "utiliser",
+        "ru": "использовать",
+        "tr": "kullanmak"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w064",
+      "family": "weather",
+      "hanzi": "勇敢",
+      "pinyin": "yǒnggǎn",
+      "meaning": {
+        "en": "brave",
+        "fr": "courageux",
+        "ru": "смелый",
+        "tr": "cesur"
+      },
+      "origin": "classroom"
+    },
+    {
+      "id": "c12-w065",
+      "family": "weather",
+      "hanzi": "祈祷",
+      "pinyin": "qídǎo",
+      "meaning": {
+        "en": "pray",
+        "fr": "prier",
+        "ru": "молиться",
+        "tr": "dua etmek"
+      },
+      "origin": "classroom"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "c12-s001",
+      "family": "home",
+      "hanzi": "我有一套公寓。",
+      "chunks": [
+        "我",
+        "有",
+        "一套公寓。"
+      ],
+      "pinyin": "Wǒ yǒu yí tào gōngyù.",
+      "meaning": {
+        "en": "I have an apartment.",
+        "fr": "J’ai un appartement.",
+        "ru": "У меня есть квартира.",
+        "tr": "Bir dairem var."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s002",
+      "family": "home",
+      "hanzi": "我的公寓里有两个卧室。",
+      "chunks": [
+        "我的公寓里",
+        "有",
+        "两个卧室。"
+      ],
+      "pinyin": "Wǒ de gōngyù lǐ yǒu liǎng ge wòshì.",
+      "meaning": {
+        "en": "There are two bedrooms in my apartment.",
+        "fr": "Il y a deux chambres dans mon appartement.",
+        "ru": "В моей квартире две спальни.",
+        "tr": "Dairemde iki yatak odası var."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s003",
+      "family": "home",
+      "hanzi": "还有一个厨房、一个卫生间和一个客厅。",
+      "chunks": [
+        "还有",
+        "一个厨房、",
+        "一个卫生间",
+        "和一个客厅。"
+      ],
+      "pinyin": "Hái yǒu yí ge chúfáng, yí ge wèishēngjiān hé yí ge kètīng.",
+      "meaning": {
+        "en": "There is also a kitchen, a bathroom and a living room.",
+        "fr": "Il y a aussi une cuisine, une salle de bains et un salon.",
+        "ru": "Также есть кухня, ванная и гостиная.",
+        "tr": "Ayrıca bir mutfak, bir banyo ve bir oturma odası var."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s004",
+      "family": "home",
+      "hanzi": "我的房间里有一张床、一张桌子和两把椅子。",
+      "chunks": [
+        "我的房间里",
+        "有",
+        "一张床、",
+        "一张桌子",
+        "和两把椅子。"
+      ],
+      "pinyin": "Wǒ de fángjiān lǐ yǒu yì zhāng chuáng, yì zhāng zhuōzi hé liǎng bǎ yǐzi.",
+      "meaning": {
+        "en": "My room has a bed, a desk and two chairs.",
+        "fr": "Dans ma chambre, il y a un lit, un bureau et deux chaises.",
+        "ru": "В моей комнате кровать, стол и два стула.",
+        "tr": "Odamda bir yatak, bir masa ve iki sandalye var."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s005",
+      "family": "rent",
+      "hanzi": "你想租房吗？",
+      "chunks": [
+        "你",
+        "想租房",
+        "吗？"
+      ],
+      "pinyin": "Nǐ xiǎng zū fáng ma?",
+      "meaning": {
+        "en": "Do you want to rent a place?",
+        "fr": "Veux-tu louer un logement ?",
+        "ru": "Ты хочешь снять жильё?",
+        "tr": "Ev kiralamak istiyor musun?"
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s006",
+      "family": "rent",
+      "hanzi": "我要租房，不是租车。",
+      "chunks": [
+        "我",
+        "要租房，",
+        "不是租车。"
+      ],
+      "pinyin": "Wǒ yào zū fáng, bú shì zū chē.",
+      "meaning": {
+        "en": "I want to rent a home, not a car.",
+        "fr": "Je veux louer un logement, pas une voiture.",
+        "ru": "Я хочу снять жильё, а не арендовать машину.",
+        "tr": "Araba değil, ev kiralamak istiyorum."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s007",
+      "family": "rent",
+      "hanzi": "我想坐出租车。",
+      "chunks": [
+        "我",
+        "想",
+        "坐出租车。"
+      ],
+      "pinyin": "Wǒ xiǎng zuò chūzūchē.",
+      "meaning": {
+        "en": "I would like to take a taxi.",
+        "fr": "Je voudrais prendre un taxi.",
+        "ru": "Я хочу поехать на такси.",
+        "tr": "Taksiye binmek istiyorum."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s008",
+      "family": "rent",
+      "hanzi": "你在干什么？",
+      "chunks": [
+        "你",
+        "在干什么？"
+      ],
+      "pinyin": "Nǐ zài gàn shénme?",
+      "meaning": {
+        "en": "What are you doing?",
+        "fr": "Qu’est-ce que tu fais ?",
+        "ru": "Что ты делаешь?",
+        "tr": "Ne yapıyorsun?"
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s009",
+      "family": "rent",
+      "hanzi": "先考驾驶证，再开车。",
+      "chunks": [
+        "先考驾驶证，",
+        "再开车。"
+      ],
+      "pinyin": "Xiān kǎo jiàshǐzhèng, zài kāi chē.",
+      "meaning": {
+        "en": "First get a driver’s licence, then drive.",
+        "fr": "Passe d’abord le permis, puis conduis.",
+        "ru": "Сначала получи права, потом води машину.",
+        "tr": "Önce ehliyet al, sonra araba sür."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s010",
+      "family": "day",
+      "hanzi": "我六点半起床。",
+      "chunks": [
+        "我",
+        "六点半",
+        "起床。"
+      ],
+      "pinyin": "Wǒ liù diǎn bàn qǐ chuáng.",
+      "meaning": {
+        "en": "I get up at 6:30.",
+        "fr": "Je me lève à 6 h 30.",
+        "ru": "Я встаю в 6:30.",
+        "tr": "Saat 6.30’da kalkarım."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s011",
+      "family": "day",
+      "hanzi": "六点五十吃早饭。",
+      "chunks": [
+        "六点五十",
+        "吃早饭。"
+      ],
+      "pinyin": "Liù diǎn wǔshí chī zǎofàn.",
+      "meaning": {
+        "en": "I eat breakfast at 6:50.",
+        "fr": "Je prends le petit-déjeuner à 6 h 50.",
+        "ru": "Я завтракаю в 6:50.",
+        "tr": "Saat 6.50’de kahvaltı ederim."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s012",
+      "family": "day",
+      "hanzi": "七点半来学校。",
+      "chunks": [
+        "七点半",
+        "来学校。"
+      ],
+      "pinyin": "Qī diǎn bàn lái xuéxiào.",
+      "meaning": {
+        "en": "I come to school at 7:30.",
+        "fr": "Je viens à l’école à 7 h 30.",
+        "ru": "Я прихожу в школу в 7:30.",
+        "tr": "Saat 7.30’da okula gelirim."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s013",
+      "family": "day",
+      "hanzi": "八点四十上课。",
+      "chunks": [
+        "八点四十",
+        "上课。"
+      ],
+      "pinyin": "Bā diǎn sìshí shàng kè.",
+      "meaning": {
+        "en": "Class starts at 8:40.",
+        "fr": "Le cours commence à 8 h 40.",
+        "ru": "Урок начинается в 8:40.",
+        "tr": "Ders saat 8.40’ta başlar."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s014",
+      "family": "day",
+      "hanzi": "十二点下课。",
+      "chunks": [
+        "十二点",
+        "下课。"
+      ],
+      "pinyin": "Shí’èr diǎn xià kè.",
+      "meaning": {
+        "en": "Class ends at noon.",
+        "fr": "Le cours finit à midi.",
+        "ru": "Урок заканчивается в полдень.",
+        "tr": "Ders öğlen biter."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s015",
+      "family": "day",
+      "hanzi": "十二点一刻吃午饭。",
+      "chunks": [
+        "十二点一刻",
+        "吃午饭。"
+      ],
+      "pinyin": "Shí’èr diǎn yí kè chī wǔfàn.",
+      "meaning": {
+        "en": "I eat lunch at 12:15.",
+        "fr": "Je déjeune à 12 h 15.",
+        "ru": "Я обедаю в 12:15.",
+        "tr": "Saat 12.15’te öğle yemeği yerim."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s016",
+      "family": "day",
+      "hanzi": "下午我也有课。",
+      "chunks": [
+        "下午",
+        "我也有课。"
+      ],
+      "pinyin": "Xiàwǔ wǒ yě yǒu kè.",
+      "meaning": {
+        "en": "I also have class in the afternoon.",
+        "fr": "J’ai aussi cours l’après-midi.",
+        "ru": "После обеда у меня тоже занятия.",
+        "tr": "Öğleden sonra da dersim var."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s017",
+      "family": "day",
+      "hanzi": "下课后我做作业。",
+      "chunks": [
+        "下课后",
+        "我",
+        "做作业。"
+      ],
+      "pinyin": "Xià kè hòu wǒ zuò zuòyè.",
+      "meaning": {
+        "en": "After class, I do homework.",
+        "fr": "Après le cours, je fais mes devoirs.",
+        "ru": "После уроков я делаю домашнее задание.",
+        "tr": "Dersten sonra ödev yaparım."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s018",
+      "family": "day",
+      "hanzi": "晚上六点我坐地铁回家。",
+      "chunks": [
+        "晚上六点",
+        "我",
+        "坐地铁",
+        "回家。"
+      ],
+      "pinyin": "Wǎnshang liù diǎn wǒ zuò dìtiě huí jiā.",
+      "meaning": {
+        "en": "At 6 p.m. I take the metro home.",
+        "fr": "À 18 heures, je rentre en métro.",
+        "ru": "В шесть вечера я еду домой на метро.",
+        "tr": "Akşam altıda metroyla eve dönerim."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s019",
+      "family": "day",
+      "hanzi": "回家后我吃晚饭，复习汉语。",
+      "chunks": [
+        "回家后",
+        "我",
+        "吃晚饭，",
+        "复习汉语。"
+      ],
+      "pinyin": "Huí jiā hòu wǒ chī wǎnfàn, fùxí Hànyǔ.",
+      "meaning": {
+        "en": "After getting home, I have dinner and review Chinese.",
+        "fr": "Après mon retour, je dîne et révise le chinois.",
+        "ru": "Вернувшись домой, я ужинаю и повторяю китайский.",
+        "tr": "Eve döndükten sonra akşam yemeği yer, Çince tekrar ederim."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s020",
+      "family": "day",
+      "hanzi": "我大概晚上十一点睡觉。",
+      "chunks": [
+        "我",
+        "大概晚上十一点",
+        "睡觉。"
+      ],
+      "pinyin": "Wǒ dàgài wǎnshang shíyī diǎn shuì jiào.",
+      "meaning": {
+        "en": "I go to bed at about 11 p.m.",
+        "fr": "Je me couche vers 23 heures.",
+        "ru": "Я ложусь спать примерно в одиннадцать вечера.",
+        "tr": "Gece saat on bir civarında yatarım."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s021",
+      "family": "campus",
+      "hanzi": "请问，银行在哪儿？",
+      "chunks": [
+        "请问，",
+        "银行",
+        "在哪儿？"
+      ],
+      "pinyin": "Qǐngwèn, yínháng zài nǎr?",
+      "meaning": {
+        "en": "Excuse me, where is the bank?",
+        "fr": "Excusez-moi, où est la banque ?",
+        "ru": "Скажите, пожалуйста, где банк?",
+        "tr": "Affedersiniz, banka nerede?"
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s022",
+      "family": "campus",
+      "hanzi": "银行在书店东边。",
+      "chunks": [
+        "银行",
+        "在",
+        "书店东边。"
+      ],
+      "pinyin": "Yínháng zài shūdiàn dōngbian.",
+      "meaning": {
+        "en": "The bank is east of the bookshop.",
+        "fr": "La banque est à l’est de la librairie.",
+        "ru": "Банк к востоку от книжного магазина.",
+        "tr": "Banka kitapçının doğusunda."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s023",
+      "family": "campus",
+      "hanzi": "这是什么地方？",
+      "chunks": [
+        "这",
+        "是",
+        "什么地方？"
+      ],
+      "pinyin": "Zhè shì shénme dìfang?",
+      "meaning": {
+        "en": "What place is this?",
+        "fr": "Quel est cet endroit ?",
+        "ru": "Что это за место?",
+        "tr": "Burası neresi?"
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s024",
+      "family": "campus",
+      "hanzi": "哪座楼是银行？",
+      "chunks": [
+        "哪座楼",
+        "是",
+        "银行？"
+      ],
+      "pinyin": "Nǎ zuò lóu shì yínháng?",
+      "meaning": {
+        "en": "Which building is the bank?",
+        "fr": "Quel bâtiment est la banque ?",
+        "ru": "В каком здании банк?",
+        "tr": "Hangi bina banka?"
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s025",
+      "family": "campus",
+      "hanzi": "宿舍楼都在北边。",
+      "chunks": [
+        "宿舍楼",
+        "都在",
+        "北边。"
+      ],
+      "pinyin": "Sùshè lóu dōu zài běibian.",
+      "meaning": {
+        "en": "The dormitory buildings are all in the north.",
+        "fr": "Les résidences sont toutes au nord.",
+        "ru": "Все общежития находятся на севере.",
+        "tr": "Yurt binalarının hepsi kuzeyde."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s026",
+      "family": "campus",
+      "hanzi": "一号楼、二号楼在前边，三号楼、四号楼在后边。",
+      "chunks": [
+        "一号楼、二号楼",
+        "在前边，",
+        "三号楼、四号楼",
+        "在后边。"
+      ],
+      "pinyin": "Yī hào lóu, èr hào lóu zài qiánbian, sān hào lóu, sì hào lóu zài hòubian.",
+      "meaning": {
+        "en": "Buildings 1 and 2 are in front; 3 and 4 are behind.",
+        "fr": "Les bâtiments 1 et 2 sont devant ; les 3 et 4 sont derrière.",
+        "ru": "Здания 1 и 2 спереди, а 3 и 4 сзади.",
+        "tr": "1 ve 2 numaralı binalar önde, 3 ve 4 arkada."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s027",
+      "family": "campus",
+      "hanzi": "我的宿舍在四号楼。",
+      "chunks": [
+        "我的宿舍",
+        "在",
+        "四号楼。"
+      ],
+      "pinyin": "Wǒ de sùshè zài sì hào lóu.",
+      "meaning": {
+        "en": "My dorm room is in Building 4.",
+        "fr": "Ma chambre est dans le bâtiment 4.",
+        "ru": "Моя комната в общежитии в здании 4.",
+        "tr": "Yurt odam 4 numaralı binada."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s028",
+      "family": "route",
+      "hanzi": "一直往前走。",
+      "chunks": [
+        "一直",
+        "往前",
+        "走。"
+      ],
+      "pinyin": "Yìzhí wǎng qián zǒu.",
+      "meaning": {
+        "en": "Go straight ahead.",
+        "fr": "Allez tout droit.",
+        "ru": "Идите всё время прямо.",
+        "tr": "Dümdüz ilerleyin."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s029",
+      "family": "route",
+      "hanzi": "到路口往左转。",
+      "chunks": [
+        "到路口",
+        "往左",
+        "转。"
+      ],
+      "pinyin": "Dào lùkǒu wǎng zuǒ zhuǎn.",
+      "meaning": {
+        "en": "At the intersection, turn left.",
+        "fr": "Au carrefour, tournez à gauche.",
+        "ru": "На перекрёстке поверните налево.",
+        "tr": "Kavşağa gelince sola dönün."
+      },
+      "origin": "practice"
+    },
+    {
+      "id": "c12-s030",
+      "family": "route",
+      "hanzi": "书店在银行西边。",
+      "chunks": [
+        "书店",
+        "在",
+        "银行西边。"
+      ],
+      "pinyin": "Shūdiàn zài yínháng xībian.",
+      "meaning": {
+        "en": "The bookshop is west of the bank.",
+        "fr": "La librairie est à l’ouest de la banque.",
+        "ru": "Книжный магазин к западу от банка.",
+        "tr": "Kitapçı bankanın batısında."
+      },
+      "origin": "practice"
+    },
+    {
+      "id": "c12-s031",
+      "family": "weather",
+      "hanzi": "今天下雨，我用雨伞。",
+      "chunks": [
+        "今天",
+        "下雨，",
+        "我",
+        "用雨伞。"
+      ],
+      "pinyin": "Jīntiān xià yǔ, wǒ yòng yǔsǎn.",
+      "meaning": {
+        "en": "It is raining today; I use an umbrella.",
+        "fr": "Il pleut aujourd’hui ; j’utilise un parapluie.",
+        "ru": "Сегодня идёт дождь, я пользуюсь зонтом.",
+        "tr": "Bugün yağmur yağıyor; şemsiye kullanıyorum."
+      },
+      "origin": "practice"
+    },
+    {
+      "id": "c12-s032",
+      "family": "weather",
+      "hanzi": "我点了外卖。",
+      "chunks": [
+        "我",
+        "点了",
+        "外卖。"
+      ],
+      "pinyin": "Wǒ diǎn le wàimài.",
+      "meaning": {
+        "en": "I ordered food delivery.",
+        "fr": "J’ai commandé un repas à livrer.",
+        "ru": "Я заказал еду с доставкой.",
+        "tr": "Yemek sipariş ettim."
+      },
+      "origin": "practice"
+    },
+    {
+      "id": "c12-s033",
+      "family": "weather",
+      "hanzi": "请找我十块钱。",
+      "chunks": [
+        "请",
+        "找我",
+        "十块钱。"
+      ],
+      "pinyin": "Qǐng zhǎo wǒ shí kuài qián.",
+      "meaning": {
+        "en": "Please give me ten yuan in change.",
+        "fr": "Rendez-moi dix yuans, s’il vous plaît.",
+        "ru": "Дайте мне, пожалуйста, десять юаней сдачи.",
+        "tr": "Lütfen on yuan para üstü verin."
+      },
+      "origin": "practice"
+    },
+    {
+      "id": "c12-s034",
+      "family": "weather",
+      "hanzi": "你很勇敢！",
+      "chunks": [
+        "你",
+        "很勇敢！"
+      ],
+      "pinyin": "Nǐ hěn yǒnggǎn!",
+      "meaning": {
+        "en": "You are brave!",
+        "fr": "Tu es courageux !",
+        "ru": "Ты очень смелый!",
+        "tr": "Çok cesursun!"
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s035",
+      "family": "campus",
+      "hanzi": "这是我们学校。",
+      "pinyin": "Zhè shì wǒmen xuéxiào.",
+      "chunks": [
+        "这",
+        "是",
+        "我们学校。"
+      ],
+      "meaning": {
+        "en": "This is our school.",
+        "fr": "Voici notre école.",
+        "ru": "Это наша школа.",
+        "tr": "Burası bizim okulumuz."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s036",
+      "family": "campus",
+      "hanzi": "东边的那座楼是银行。",
+      "pinyin": "Dōngbian de nà zuò lóu shì yínháng.",
+      "chunks": [
+        "东边的",
+        "那座楼",
+        "是银行。"
+      ],
+      "meaning": {
+        "en": "That building on the east side is the bank.",
+        "fr": "Le bâtiment à l’est est la banque.",
+        "ru": "То здание с восточной стороны — банк.",
+        "tr": "Doğudaki o bina banka."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s037",
+      "family": "weather",
+      "hanzi": "不用。",
+      "pinyin": "Bú yòng.",
+      "chunks": [
+        "不用。"
+      ],
+      "meaning": {
+        "en": "No need.",
+        "fr": "Pas besoin.",
+        "ru": "Не нужно.",
+        "tr": "Gerek yok."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s038",
+      "family": "weather",
+      "hanzi": "你在干嘛？",
+      "pinyin": "Nǐ zài gàn má?",
+      "chunks": [
+        "你",
+        "在干嘛？"
+      ],
+      "meaning": {
+        "en": "What are you doing? (casual)",
+        "fr": "Tu fais quoi ? (familier)",
+        "ru": "Что делаешь? (разговорное)",
+        "tr": "Ne yapıyorsun? (gündelik)"
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s039",
+      "family": "weather",
+      "hanzi": "今天天气不好。",
+      "pinyin": "Jīntiān tiānqì bù hǎo.",
+      "chunks": [
+        "今天",
+        "天气",
+        "不好。"
+      ],
+      "meaning": {
+        "en": "The weather is bad today.",
+        "fr": "Il fait mauvais aujourd’hui.",
+        "ru": "Сегодня плохая погода.",
+        "tr": "Bugün hava kötü."
+      },
+      "origin": "source"
+    },
+    {
+      "id": "c12-s040",
+      "family": "weather",
+      "hanzi": "我不用出租车。",
+      "pinyin": "Wǒ bú yòng chūzūchē.",
+      "chunks": [
+        "我",
+        "不用",
+        "出租车。"
+      ],
+      "meaning": {
+        "en": "I do not need a taxi.",
+        "fr": "Je n’ai pas besoin de taxi.",
+        "ru": "Мне не нужно такси.",
+        "tr": "Taksiye ihtiyacım yok."
+      },
+      "origin": "source"
+    }
+  ],
+  "provenance": {
+    "pdf": "Chinese_Classroom_Hybrid_Home_Day_EN_iPad.pdf",
+    "photos": [
+      "IMG_0433",
+      "IMG_0435",
+      "IMG_0455",
+      "IMG_0456",
+      "IMG_0457"
+    ],
+    "note": "Core home/day material from supplied PDF; campus/locality from textbook photos; route and linking examples are labelled additions. No photographs or personal images are published. The campus is a teaching diagram, not a real geographic map."
+  }
+}
