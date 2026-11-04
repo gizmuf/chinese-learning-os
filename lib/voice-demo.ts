@@ -19,10 +19,11 @@ export async function handleVoiceDemo(request:Request,env:Env):Promise<Response>
  if(active)return new Response('A demo is already running. Please try again later.',{status:429});
  active=true;
  let upstream:WebSocket;
+ const connectAbort=new AbortController(),connectTimer=setTimeout(()=>connectAbort.abort(),15000);
  try{
-  const response=await fetch(`https://${env.QWEN_REALTIME_WORKSPACE}.cn-beijing.maas.aliyuncs.com/api-ws/v1/realtime?model=${voiceModel}`,{headers:{Upgrade:'websocket',Authorization:'Bearer '+env.QWEN_REALTIME_API_KEY},signal:AbortSignal.timeout(15000)});
+  const response=await fetch(`https://${env.QWEN_REALTIME_WORKSPACE}.cn-beijing.maas.aliyuncs.com/api-ws/v1/realtime?model=${voiceModel}`,{headers:{Upgrade:'websocket',Authorization:'Bearer '+env.QWEN_REALTIME_API_KEY},signal:connectAbort.signal});
   if(!response.webSocket)throw Error('Connection unavailable');upstream=response.webSocket;upstream.accept();
- }catch{active=false;return new Response('Voice connection unavailable. No fallback was used.',{status:503});}
+ }catch{active=false;return new Response('Voice connection unavailable. No fallback was used.',{status:503});}finally{clearTimeout(connectTimer);}
  const pair=new WebSocketPair(),client=pair[0],server=pair[1];server.accept();
  let closed=false,ready=false,busy=false,turns=0,inBytes=0,outBytes=0,toolCalls=0,pendingAudio=0,toolPending=false;
  const send=(v:unknown)=>{if(!closed)try{server.send(JSON.stringify(v));}catch{}};

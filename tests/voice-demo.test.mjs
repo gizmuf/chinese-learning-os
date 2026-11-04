@@ -15,12 +15,14 @@ test('only catalogue cards and known Lab routes; PCM clips safely and preserves 
 });
 test('relay fixes model/session; denies client reconfiguration, limits turns and closes upstream on stop',async()=>{
  class Socket{sent=[];listeners={};closed=false;accept(){}send(v){this.sent.push(JSON.parse(v));}close(){this.closed=true;}addEventListener(n,fn){(this.listeners[n]??=[]).push(fn);}emit(n,data){for(const fn of this.listeners[n]??[])fn({data:JSON.stringify(data)});}}
+ const oldSetTimeout=globalThis.setTimeout,oldClearTimeout=globalThis.clearTimeout,handshakeTimers=new Set();
+ globalThis.setTimeout=(fn,ms,...args)=>{const id=oldSetTimeout(fn,ms,...args);if(ms===15000)handshakeTimers.add(id);return id;};globalThis.clearTimeout=id=>{handshakeTimers.delete(id);oldClearTimeout(id);};
  const oldFetch=globalThis.fetch,oldPair=globalThis.WebSocketPair,OldResponse=globalThis.Response;let pair;const upstream=new Socket();
  globalThis.fetch=async(url,init)=>{assert.match(url,/model=qwen3\.8-omni-flash-realtime$/);assert.equal(init.headers.Authorization,'Bearer test-placeholder');return {webSocket:upstream};};
  globalThis.WebSocketPair=class{constructor(){this[0]=new Socket();this[1]=new Socket();pair=this;}};
  globalThis.Response=class extends OldResponse{constructor(body,init){super(body,{...init,status:init.status===101?200:init.status});if(init.status===101)Object.defineProperty(this,'status',{value:101});this.webSocket=init.webSocket;}};
  try{
-  const response=await m.handleVoiceDemo(request('/api/voice-demo/stream',{Origin:'https://example.com',Upgrade:'websocket'}),env);assert.equal(response.status,101);
+  const response=await m.handleVoiceDemo(request('/api/voice-demo/stream',{Origin:'https://example.com',Upgrade:'websocket'}),env);assert.equal(response.status,101);assert.equal(handshakeTimers.size,0,'handshake timeout must be cleared after upgrade so it cannot abort the live socket');
   upstream.emit('message',{type:'session.created'});assert.equal(upstream.sent[0].type,'session.update');assert.equal(upstream.sent[0].session.turn_detection,null);
   assert.equal(upstream.sent[0].session.tools[0].type,'function');assert.equal(upstream.sent[0].session.tools[0].function.name,'show_fruits');assert.deepEqual(upstream.sent[0].session.tools[0].function.parameters.required,['ids']);
   upstream.emit('message',{type:'session.updated'});assert.equal(pair[1].sent[0].type,'demo.ready');
@@ -30,5 +32,5 @@ test('relay fixes model/session; denies client reconfiguration, limits turns and
   assert.equal(upstream.sent.filter(e=>e.type==='response.create').length,3);
   upstream.emit('message',{type:'response.output_item.done',item:{type:'function_call',name:'show_fruits',arguments:JSON.stringify({ids:['banana']}),call_id:'call1'}});assert.ok(pair[1].sent.some(e=>e.type==='demo.cards'&&e.ids[0]==='banana'));
   pair[1].emit('message',{type:'stop'});assert.equal(upstream.closed,true);assert.equal(pair[1].closed,true);
- }finally{globalThis.fetch=oldFetch;globalThis.WebSocketPair=oldPair;globalThis.Response=OldResponse;}
+ }finally{for(const id of handshakeTimers)oldClearTimeout(id);globalThis.setTimeout=oldSetTimeout;globalThis.clearTimeout=oldClearTimeout;globalThis.fetch=oldFetch;globalThis.WebSocketPair=oldPair;globalThis.Response=OldResponse;}
 });
