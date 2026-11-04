@@ -3,36 +3,36 @@
     "locale": "en",
     "label": "English",
     "filename": "Chinese_Practice_Lesson_12_HYBRID_EN_iPad_SAFE.pdf",
-    "pages": 27,
-    "bytes": 2728022,
-    "sha256": "62bd578b72c87fb272392cd0a14cb471bce3c3502e518c62986075847a402e54",
+    "pages": 40,
+    "bytes": 2887257,
+    "sha256": "91e99d4e76727ddee3f116be2494f2c700aa168d3181eef723b6f1ba1acadd2e",
     "path": "resources/lesson12/hybrid-en.pdf"
   },
   {
     "locale": "fr",
     "label": "Français",
     "filename": "Chinese_Practice_Lesson_12_HYBRID_FR_iPad_SAFE.pdf",
-    "pages": 27,
-    "bytes": 2728382,
-    "sha256": "cadb1ae7a8b5c8b3761e568f70305417c772e31075bf6d325bc16e9d02093210",
+    "pages": 40,
+    "bytes": 2888243,
+    "sha256": "882f97a87a698d6ed289e3ffe2a3d01cb8ca000854e670fef66b8b5dc097c7f7",
     "path": "resources/lesson12/hybrid-fr.pdf"
   },
   {
     "locale": "ru",
     "label": "Русский",
     "filename": "Chinese_Practice_Lesson_12_HYBRID_RU_iPad_SAFE.pdf",
-    "pages": 27,
-    "bytes": 2729045,
-    "sha256": "243a4b849881e72fdadfd8afff4e794261c7895cbe5fa4cda57825e49b1efebe",
+    "pages": 40,
+    "bytes": 2889049,
+    "sha256": "56be48049994f58421035929dfb0e9a14e2e3f3bdc36dc764b051fc92aa1f2a7",
     "path": "resources/lesson12/hybrid-ru.pdf"
   },
   {
     "locale": "tr",
     "label": "Türkçe",
     "filename": "Chinese_Practice_Lesson_12_HYBRID_TR_iPad_SAFE.pdf",
-    "pages": 27,
-    "bytes": 2727590,
-    "sha256": "d0b2b3ada005c46e21a55f14bf519a65d3144f7378325cd33541fd04bb1504e7",
+    "pages": 40,
+    "bytes": 2887413,
+    "sha256": "1b2a6dbc5665ef30e5fc8a09418748dd028ec237a74c0cd76a3780d93ef53c1c",
     "path": "resources/lesson12/hybrid-tr.pdf"
   }
 ]

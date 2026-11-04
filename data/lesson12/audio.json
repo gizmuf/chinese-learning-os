@@ -1001,5 +1001,459 @@
     "voice": "zh-CN-XiaoxiaoNeural",
     "rate": "-10%",
     "synthetic": true
+  },
+  "c12-w066": {
+    "text": "走路",
+    "source": "/atlas/audio/atlas-u8d70-sentence.mp3",
+    "sha256": "753061d42cb889103edb18566c28eabccc74fa158521f79bb25a10a9ecdb3749",
+    "pinyin": "zǒulù"
+  },
+  "c12-w067": {
+    "text": "骑自行车",
+    "source": "/api/lesson12-asset?file=audio-92883f83be7c1e320f4543351ecd12aea921d7c146acaa86ad5f58f0c7b77f23",
+    "path": "resources/lesson12/audio/92883f83be7c1e320f4543351ecd12aea921d7c146acaa86ad5f58f0c7b77f23.mp3",
+    "sha256": "f6368c84dbdfcd8d5815531b8157e4cddb2dd90b83e8fd8eabe9035aad15d5ae",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-w068": {
+    "text": "骑电动车",
+    "source": "/api/lesson12-asset?file=audio-93b4d7c86790782872c5774d73ca14df97064a59cee74cc5bae8c4a5a4382ad1",
+    "path": "resources/lesson12/audio/93b4d7c86790782872c5774d73ca14df97064a59cee74cc5bae8c4a5a4382ad1.mp3",
+    "sha256": "aa468c489a3322799540736f076e23b04b0d713a664ac29a153cf1b4e7442930",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-w069": {
+    "text": "坐公交车",
+    "source": "/api/lesson12-asset?file=audio-676207fe2bce4b0f331d171cac55b2759f5b3ea2a48970292afe3cb80e04c196",
+    "path": "resources/lesson12/audio/676207fe2bce4b0f331d171cac55b2759f5b3ea2a48970292afe3cb80e04c196.mp3",
+    "sha256": "19f93b7dac6d0cf3c9f3cd15bc42442eba238fe6c3cd05dd9e380f71c6f50f9a",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-w070": {
+    "text": "坐出租车",
+    "source": "/api/lesson12-asset?file=audio-bfcdcc805be685a9b16c7423e0968aaa42f4726f4e0f1107aaf6b103f9531246",
+    "path": "resources/lesson12/audio/bfcdcc805be685a9b16c7423e0968aaa42f4726f4e0f1107aaf6b103f9531246.mp3",
+    "sha256": "20b549795b0115a7d3931b9de08f353d0e2a5aadc65948b964166cbb66128a27",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-w071": {
+    "text": "叫网约车",
+    "source": "/api/lesson12-asset?file=audio-f532f3516144229331c7c3800c885c3f48f851c6f102d7cb1ea5fbf1084cc92a",
+    "path": "resources/lesson12/audio/f532f3516144229331c7c3800c885c3f48f851c6f102d7cb1ea5fbf1084cc92a.mp3",
+    "sha256": "c540b828a1eb88ea0a6fcb1867093368fec4fd668ba298829ca40c11eb290275",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-w072": {
+    "text": "坐火车",
+    "source": "/course09/audio/c09-t71.mp3",
+    "sha256": "eb3edb7a562d22639aa037c2150ca66e85e1bd11e27c3a188e6e4452799ef8ae",
+    "bytes": 11232,
+    "reused": true,
+    "voice": "zh-CN-XiaoxiaoNeural"
+  },
+  "c12-w073": {
+    "text": "坐高铁",
+    "source": "/api/lesson12-asset?file=audio-846e2c6f9b6a023b9fca1c74c5a228511ca6ce580624d5ff79abbe764076aa53",
+    "path": "resources/lesson12/audio/846e2c6f9b6a023b9fca1c74c5a228511ca6ce580624d5ff79abbe764076aa53.mp3",
+    "sha256": "6294fb22db69a41bad906e5ad7c7eff206a62fbc788b135d7877693716202925",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-w074": {
+    "text": "坐飞机",
+    "source": "/api/lesson12-asset?file=audio-7af7bdf680ba1931ad07db7d5811e5da8cdd9d306c0a1786547b957779afd35d",
+    "path": "resources/lesson12/audio/7af7bdf680ba1931ad07db7d5811e5da8cdd9d306c0a1786547b957779afd35d.mp3",
+    "sha256": "3b5cc146c8e9c902bba70775016d822faf1304702acb8c3c0a5a1af8fbe74b1b",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-w075": {
+    "text": "打车",
+    "source": "/audio/hsk2-328-word.mp3",
+    "sha256": "9d21f8edbc8f96676ae5a9b67684190d6deaf8836fb7b2fbc47d4a65e2db3dab",
+    "bytes": 11232,
+    "reused": true,
+    "voice": "zh-CN-XiaoxiaoNeural"
+  },
+  "c12-w076": {
+    "source": "/api/practice-recording?file=bd5c48bbc13f77122516ed43cdfe52188d90d4e2d791666fdba7b44c9c3da313",
+    "sha256": "46b48b7ea3bfdd2451492692bc00753f4eb271a793d9769237187461065ff0bc",
+    "bytes": 11232,
+    "text": "打的",
+    "reused": true
+  },
+  "c12-w077": {
+    "text": "滴滴",
+    "source": "/api/lesson12-asset?file=audio-57b33bc4f2a1d871291f537422129d60b479df418b8068ba07111b4c9841e30f",
+    "path": "resources/lesson12/audio/57b33bc4f2a1d871291f537422129d60b479df418b8068ba07111b4c9841e30f.mp3",
+    "sha256": "61cdf9ac037cf5322fab5924a5c15fa4ddfed4e98da20273a14ae16aa0ee91af",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-w078": {
+    "text": "骑",
+    "source": "/audio/hsk3-797-word.mp3",
+    "sha256": "6f44df171664b047e07c89741cc3d19244f0c778e0f0c2e7decb36a0491378a6",
+    "pinyin": "qí"
+  },
+  "c12-w079": {
+    "text": "开",
+    "source": "/audio/hsk1-097-word.mp3",
+    "sha256": "bc4c5ddf404b30368ebd57054c06a9bcac7b2413752ea198ef947e435adbac2e",
+    "bytes": 11232,
+    "reused": true,
+    "voice": "zh-CN-XiaoxiaoNeural"
+  },
+  "c12-w080": {
+    "text": "打",
+    "source": "/audio/hsk2-327-word.mp3",
+    "sha256": "5d694548510d0bd8f9f511a44b0aa03a8335c374496881c926a1edfa3607de5f",
+    "bytes": 11232,
+    "reused": true,
+    "voice": "zh-CN-XiaoxiaoNeural"
+  },
+  "c12-w081": {
+    "text": "叫",
+    "source": "/audio/hsk1-091-word.mp3",
+    "sha256": "10f9acd831a7280d1fcf24d6549b759ce559ac1d5844bce59965b68c7343ebf7",
+    "bytes": 11232,
+    "reused": true,
+    "voice": "zh-CN-XiaoxiaoNeural"
+  },
+  "c12-w082": {
+    "text": "租",
+    "source": "/course09/audio/char-79df.mp3",
+    "sha256": "44c060eaa61bd86e1680413226ff978b708712bed7adeef84714d07d6984c7e0",
+    "bytes": 11232,
+    "reused": true,
+    "voice": "zh-CN-XiaoxiaoNeural"
+  },
+  "c12-w083": {
+    "text": "在",
+    "source": "/audio/hsk1-271-word.mp3",
+    "sha256": "1c53df1860e89251106b671810997af71059cb57e684b710dcce80b59bf9381d",
+    "bytes": 11232,
+    "reused": true,
+    "voice": "zh-CN-XiaoxiaoNeural"
+  },
+  "c12-w084": {
+    "text": "再",
+    "source": "/audio/hsk1-270-word.mp3",
+    "sha256": "b4e726700d1a230d23c5ffe587827b8509fa82f66bafd46e4b25ccc4bc4ca7ae",
+    "bytes": 11232,
+    "reused": true,
+    "voice": "zh-CN-XiaoxiaoNeural"
+  },
+  "c12-w085": {
+    "text": "哪里",
+    "source": "/audio/hsk1-133-word.mp3",
+    "sha256": "0f943e0e1bf4d5a8771121888e1119fa4a7fd030efdc867d72a69988a01ee838",
+    "bytes": 11232,
+    "reused": true,
+    "voice": "zh-CN-XiaoxiaoNeural"
+  },
+  "c12-w086": {
+    "text": "两千",
+    "source": "/api/lesson12-asset?file=audio-9ccbe79396f39ef3ee5df53a0a3ec27e3445ea8aafa445f72e2af1cf299f0762",
+    "path": "resources/lesson12/audio/9ccbe79396f39ef3ee5df53a0a3ec27e3445ea8aafa445f72e2af1cf299f0762.mp3",
+    "sha256": "36c911ff83275a8abd1e781aac2e1820ab18a496e913d2e11632946be2f124a5",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-w087": {
+    "text": "找到",
+    "source": "/atlas/audio/atlas-u627e-sentence.mp3",
+    "sha256": "83b5c3f8e78816d119579e7223ca7092d8689bedae159bb203d44f4eb0e2ef3b",
+    "bytes": 11232,
+    "reused": true,
+    "voice": "zh-CN-XiaoxiaoNeural"
+  },
+  "c12-w088": {
+    "text": "带",
+    "source": "/audio/hsk3-578-word.mp3",
+    "sha256": "5c381f61373531e59357728d4a2d5641ce9840971bb38db8b6fdfebd1db38b94",
+    "bytes": 11232,
+    "reused": true,
+    "voice": "zh-CN-XiaoxiaoNeural"
+  },
+  "c12-w089": {
+    "text": "点外卖",
+    "source": "/api/lesson12-asset?file=audio-d4507ecfd49d737d6f3cdab2e2b1a97ee8cac5d92fe74a19614c341e6048893f",
+    "path": "resources/lesson12/audio/d4507ecfd49d737d6f3cdab2e2b1a97ee8cac5d92fe74a19614c341e6048893f.mp3",
+    "sha256": "dad6e900d58ad0f4198dce600cfd0fb1ad57c1919e687b532231da4c817ffdd6",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s041": {
+    "source": "/api/practice-recording?file=c6c42aeeb18a141002fbef94baf27f243ddf3150ef640887dd1b55ff4498a60e",
+    "sha256": "3d0dc6edbc36ab8cfb591f25e59dbfda25e716ae52b2b55730875083bb51c79c",
+    "bytes": 12528,
+    "text": "我走路去学校。",
+    "reused": true
+  },
+  "c12-s042": {
+    "text": "我骑电动车去学校。",
+    "source": "/api/lesson12-asset?file=audio-53e62ce3a45120ffe9b4512dd0762ba0a543fea99ac48d8cf7fd3432ad56ad6c",
+    "path": "resources/lesson12/audio/53e62ce3a45120ffe9b4512dd0762ba0a543fea99ac48d8cf7fd3432ad56ad6c.mp3",
+    "sha256": "6969fab284ee8ec80eb33ceb82459e466f0f7b16b359e3fb4e98aff668a428e8",
+    "bytes": 15840,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s043": {
+    "text": "我坐公交车回家。",
+    "source": "/api/lesson12-asset?file=audio-d1405253dc96e8f75490a0f54bafeaf20b6e9f199e0bf4e8872cb1c1f3cefd33",
+    "path": "resources/lesson12/audio/d1405253dc96e8f75490a0f54bafeaf20b6e9f199e0bf4e8872cb1c1f3cefd33.mp3",
+    "sha256": "b887f200bc9280149a61fa803d6406cb743214eb8cb60d1d8f0350ff0abbba14",
+    "bytes": 13968,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s044": {
+    "text": "我想打车，不想租车。",
+    "source": "/api/lesson12-asset?file=audio-42b56489f84d21d2c629cfa07435134976734d65dfe5c8c63d9f4e4086af105e",
+    "path": "resources/lesson12/audio/42b56489f84d21d2c629cfa07435134976734d65dfe5c8c63d9f4e4086af105e.mp3",
+    "sha256": "2cb3d4161ed2e51b0beb4e9c6c1d5309f05371525a82cd3f50fc13f4be14206d",
+    "bytes": 17568,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s045": {
+    "text": "我们坐高铁去上海。",
+    "source": "/api/lesson12-asset?file=audio-bd69ddb18734b00e2b477e9acdf07b3c3676309e6ef3a7048fd92ae703f7951b",
+    "path": "resources/lesson12/audio/bd69ddb18734b00e2b477e9acdf07b3c3676309e6ef3a7048fd92ae703f7951b.mp3",
+    "sha256": "162bf7738d3a91890fc8ecbbba44ae4a4e1a924c6c3c5e5d3607f3fc8d8e7417",
+    "bytes": 15120,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s046": {
+    "text": "我骑自行车去书店。",
+    "source": "/api/lesson12-asset?file=audio-72a32bd6922efce8c9b7a153baca8505776e6a895edb4de50e30e91840ab4f8d",
+    "path": "resources/lesson12/audio/72a32bd6922efce8c9b7a153baca8505776e6a895edb4de50e30e91840ab4f8d.mp3",
+    "sha256": "4c95bc4240e0bdcfe0a906a3bc57af7ba3e17e1609eaa543bbf4e468f1da59dd",
+    "bytes": 15552,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s047": {
+    "text": "我坐出租车回家。",
+    "source": "/api/lesson12-asset?file=audio-805fb7bcd766fee480f024fd391a309fed0b5458e277dce637a5b331b17d52fb",
+    "path": "resources/lesson12/audio/805fb7bcd766fee480f024fd391a309fed0b5458e277dce637a5b331b17d52fb.mp3",
+    "sha256": "142d196a92f735b63644e82bb8113409cae583128d0466a99a29524269268115",
+    "bytes": 14112,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s048": {
+    "text": "我叫网约车去学校。",
+    "source": "/api/lesson12-asset?file=audio-293066f343fc3339fb6ca258c820c2bd1649b9cf222e80b9b2f19bcae9b26a87",
+    "path": "resources/lesson12/audio/293066f343fc3339fb6ca258c820c2bd1649b9cf222e80b9b2f19bcae9b26a87.mp3",
+    "sha256": "607d84c4693fe6f953e762782e174d2aea8ff016f5cff35ffbd26eef8851532b",
+    "bytes": 15120,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s049": {
+    "text": "我坐火车去上海。",
+    "source": "/api/lesson12-asset?file=audio-46984879eef69bad01f5da749caea1558233f6fc44d2ac04f5dbba94b51718f1",
+    "path": "resources/lesson12/audio/46984879eef69bad01f5da749caea1558233f6fc44d2ac04f5dbba94b51718f1.mp3",
+    "sha256": "7b38cfa65fc761b4f07d7b810f82d8f50dd3cc3f8e2c6837b3c97aeceb7ecb1c",
+    "bytes": 14544,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s050": {
+    "text": "我坐飞机去上海。",
+    "source": "/api/lesson12-asset?file=audio-6ab044770895537b32ec78b0610ae7df47839ba8723e63bf15ffc2fcf826e3a8",
+    "path": "resources/lesson12/audio/6ab044770895537b32ec78b0610ae7df47839ba8723e63bf15ffc2fcf826e3a8.mp3",
+    "sha256": "c366bff92586ed7c4223926e08d36ab24c045e3d7b9135b3bef0940748fd78dc",
+    "bytes": 14256,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s051": {
+    "text": "我开车去学校。",
+    "source": "/api/lesson12-asset?file=audio-cfc2bc101c60e561c943065e5f91b544d2a6150d139f2ecfc4fa783f64f6f073",
+    "path": "resources/lesson12/audio/cfc2bc101c60e561c943065e5f91b544d2a6150d139f2ecfc4fa783f64f6f073.mp3",
+    "sha256": "2a4422828def8bae5ad1867a46e1930b166436822b68f4862224e8598c09fd93",
+    "bytes": 13104,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s052": {
+    "text": "我租车去旅行。",
+    "source": "/api/lesson12-asset?file=audio-591dcd969f02b22e147afbdf274ff6abf24939b90f49fbdbd4236e58479388c1",
+    "path": "resources/lesson12/audio/591dcd969f02b22e147afbdf274ff6abf24939b90f49fbdbd4236e58479388c1.mp3",
+    "sha256": "5ab149513b4c65bcde72c0576ec261bd36930aaa5d50aadfcd7b58ce21b634c6",
+    "bytes": 13392,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s053": {
+    "text": "银行在东边。",
+    "source": "/api/lesson12-asset?file=audio-9f8561d0a85ca4a876944fcabd0f7802a610972397947d2f8a4580aab945da03",
+    "path": "resources/lesson12/audio/9f8561d0a85ca4a876944fcabd0f7802a610972397947d2f8a4580aab945da03.mp3",
+    "sha256": "62048e636af7782ab6cc17dcbb57e18d9fe6f014f9e48428e67d10057b58eadb",
+    "bytes": 12096,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s054": {
+    "text": "这是书店，东边的那座楼是银行。",
+    "source": "/api/lesson12-asset?file=audio-de656d16c638f1a566c20a28d9a2fc52bcb306f448090197bf621fc72f1d90fc",
+    "path": "resources/lesson12/audio/de656d16c638f1a566c20a28d9a2fc52bcb306f448090197bf621fc72f1d90fc.mp3",
+    "sha256": "11daf64d898a3cf6dc1dc95f12b02ed4a7791cf3f9e9ff8d53d9ecba835c070e",
+    "bytes": 23472,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s055": {
+    "text": "谢谢！不客气！",
+    "source": "/api/lesson12-asset?file=audio-2b6c03e7b236df151b01a627a8f2f809be5848f8d5fa4e02fa69bbc029d32efc",
+    "path": "resources/lesson12/audio/2b6c03e7b236df151b01a627a8f2f809be5848f8d5fa4e02fa69bbc029d32efc.mp3",
+    "sha256": "90bd54dd2c48a63c5240d51d393072ba4c363493e68c163b6ff0700e41eeda75",
+    "bytes": 17136,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s056": {
+    "text": "这是书店，那是银行。",
+    "source": "/api/lesson12-asset?file=audio-a155d45a101469b9de3064ef209293d335b366a3a6640814d015fff92d8ebdbb",
+    "path": "resources/lesson12/audio/a155d45a101469b9de3064ef209293d335b366a3a6640814d015fff92d8ebdbb.mp3",
+    "sha256": "e6b96adbc7f8292e195f0e0085ccc91e44f16f860b1e872a15a8894cfcd8afaf",
+    "bytes": 17280,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s057": {
+    "text": "那座楼是四号楼，我的宿舍在四号楼。",
+    "source": "/api/lesson12-asset?file=audio-7adca56abe92b2d6642bd978e035752b09eb348fa200fb1b1c0a88d48e71ffce",
+    "path": "resources/lesson12/audio/7adca56abe92b2d6642bd978e035752b09eb348fa200fb1b1c0a88d48e71ffce.mp3",
+    "sha256": "8fcb48c983f64236a7b2a1d9fd45a7b73bb0e77578a5375242920fc731fb74e7",
+    "bytes": 25200,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s058": {
+    "text": "书店在哪儿？",
+    "source": "/api/lesson12-asset?file=audio-696cea5db872a1a041264c953e7f6fcfd54b245a9c508e4f8fb1b3e991c11334",
+    "path": "resources/lesson12/audio/696cea5db872a1a041264c953e7f6fcfd54b245a9c508e4f8fb1b3e991c11334.mp3",
+    "sha256": "362ec3fed0f73ea94bb5d6c884394ab0d6e7c9d22ea3cf1b2abc24dee7560511",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s059": {
+    "text": "学校在宿舍南边。",
+    "source": "/api/lesson12-asset?file=audio-f6ea67dbca68b189ed60e784eff28e830264b5dd831bd40d795eea569f03a5fa",
+    "path": "resources/lesson12/audio/f6ea67dbca68b189ed60e784eff28e830264b5dd831bd40d795eea569f03a5fa.mp3",
+    "sha256": "a64c7bf31e6c6a8598e9a42d0c96b49c5c1309c6149634ff26c33442f7056b7d",
+    "bytes": 15552,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s060": {
+    "text": "请问，银行在哪里？",
+    "source": "/api/lesson12-asset?file=audio-ec6acb1233493183cefec786429835c72e2bf040c459295d5a6e54844508da1b",
+    "path": "resources/lesson12/audio/ec6acb1233493183cefec786429835c72e2bf040c459295d5a6e54844508da1b.mp3",
+    "sha256": "c686c5b4c965ce7ba0f3b5521c3b00efce5bfe7a506a6a986ba1a3903c40c992",
+    "bytes": 15984,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s061": {
+    "text": "外面下雨了，带雨伞吧。",
+    "source": "/api/lesson12-asset?file=audio-c759cd15569be1bce8c36f1a48de543a87c07e5442dfc0cf5401c5dcccba244e",
+    "path": "resources/lesson12/audio/c759cd15569be1bce8c36f1a48de543a87c07e5442dfc0cf5401c5dcccba244e.mp3",
+    "sha256": "8184cb6ae245781b54c2361a31914520de581f93e3a55aa41e702364df14760c",
+    "bytes": 18000,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s062": {
+    "text": "我想点外卖。",
+    "source": "/api/lesson12-asset?file=audio-ff4a50e13bceb808a88d7ba4f94fc0c86eeb9afe62f66a35cd194e378d82a076",
+    "path": "resources/lesson12/audio/ff4a50e13bceb808a88d7ba4f94fc0c86eeb9afe62f66a35cd194e378d82a076.mp3",
+    "sha256": "44ec332fbacbd225912aa71a358f9bde1a3c2402d9ad1fbf07eaf257f1c4dd71",
+    "bytes": 11520,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s063": {
+    "text": "我在找我的钱。",
+    "source": "/api/lesson12-asset?file=audio-2ec11ddda58245022137263bcac91f5b3a27c46453a53d234763f23ee3fb180b",
+    "path": "resources/lesson12/audio/2ec11ddda58245022137263bcac91f5b3a27c46453a53d234763f23ee3fb180b.mp3",
+    "sha256": "dbd3b50dee7859d45f79ff8f8a5ba19649678618daf3f7fb00a53398ea9e02b1",
+    "bytes": 12240,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s064": {
+    "text": "外面下雨了，我带雨伞。",
+    "source": "/api/lesson12-asset?file=audio-a24569e032897173033f9ebd1590cd9b679aa00d87dfcbbe8dc5b0ca86cdddc2",
+    "path": "resources/lesson12/audio/a24569e032897173033f9ebd1590cd9b679aa00d87dfcbbe8dc5b0ca86cdddc2.mp3",
+    "sha256": "6903eb9ed7bbf63807be1e3b6b088b63dbd4019b5e81fb4abc992a08792eb3fa",
+    "bytes": 18000,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
+  },
+  "c12-s065": {
+    "text": "我有两千块钱。",
+    "source": "/api/lesson12-asset?file=audio-019777e75d8e9f240793733476b2bc7fffa65399b7acc983053fdb840a911178",
+    "path": "resources/lesson12/audio/019777e75d8e9f240793733476b2bc7fffa65399b7acc983053fdb840a911178.mp3",
+    "sha256": "bc18977396ec66e58b61f1df8e47f74269214f142bfe26d9dde7f1c9557245a3",
+    "bytes": 12960,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-10%",
+    "synthetic": true
   }
 }

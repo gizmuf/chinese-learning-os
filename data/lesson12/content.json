@@ -78,6 +78,16 @@
         "tr": "Yağmur, para ve benzer sesler"
       },
       "pattern": "钱 qián · 千 qiān · 前 qián"
+    },
+    {
+      "id": "transport",
+      "title": {
+        "en": "Choose how to travel",
+        "fr": "Choisir son transport",
+        "ru": "Выбираем транспорт",
+        "tr": "Nasıl gideceğini seç"
+      },
+      "pattern": "走 · 骑 · 坐 · 开 · 打 / 叫 · 租"
     }
   ],
   "words": [
@@ -925,6 +935,318 @@
         "tr": "dua etmek"
       },
       "origin": "classroom"
+    },
+    {
+      "id": "c12-w066",
+      "family": "transport",
+      "hanzi": "走路",
+      "pinyin": "zǒu lù",
+      "meaning": {
+        "en": "walk; go on foot",
+        "fr": "marcher ; aller à pied",
+        "ru": "идти пешком",
+        "tr": "yürümek; yaya gitmek"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w067",
+      "family": "transport",
+      "hanzi": "骑自行车",
+      "pinyin": "qí zìxíngchē",
+      "meaning": {
+        "en": "ride a bicycle",
+        "fr": "faire du vélo",
+        "ru": "ехать на велосипеде",
+        "tr": "bisiklete binmek"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w068",
+      "family": "transport",
+      "hanzi": "骑电动车",
+      "pinyin": "qí diàndòngchē",
+      "meaning": {
+        "en": "ride an e-bike",
+        "fr": "rouler à vélo électrique",
+        "ru": "ехать на электровелосипеде",
+        "tr": "elektrikli bisiklete binmek"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w069",
+      "family": "transport",
+      "hanzi": "坐公交车",
+      "pinyin": "zuò gōngjiāochē",
+      "meaning": {
+        "en": "take the bus",
+        "fr": "prendre le bus",
+        "ru": "ехать на автобусе",
+        "tr": "otobüse binmek"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w070",
+      "family": "transport",
+      "hanzi": "坐出租车",
+      "pinyin": "zuò chūzūchē",
+      "meaning": {
+        "en": "take a taxi",
+        "fr": "prendre un taxi",
+        "ru": "ехать на такси",
+        "tr": "taksiye binmek"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w071",
+      "family": "transport",
+      "hanzi": "叫网约车",
+      "pinyin": "jiào wǎngyuēchē",
+      "meaning": {
+        "en": "book an app-based ride",
+        "fr": "réserver une voiture avec une application",
+        "ru": "заказать поездку через приложение",
+        "tr": "uygulamadan araç çağırmak"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w072",
+      "family": "transport",
+      "hanzi": "坐火车",
+      "pinyin": "zuò huǒchē",
+      "meaning": {
+        "en": "take the train",
+        "fr": "prendre le train",
+        "ru": "ехать на поезде",
+        "tr": "trene binmek"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w073",
+      "family": "transport",
+      "hanzi": "坐高铁",
+      "pinyin": "zuò gāotiě",
+      "meaning": {
+        "en": "take a high-speed train",
+        "fr": "prendre le train à grande vitesse",
+        "ru": "ехать на скоростном поезде",
+        "tr": "hızlı trene binmek"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w074",
+      "family": "transport",
+      "hanzi": "坐飞机",
+      "pinyin": "zuò fēijī",
+      "meaning": {
+        "en": "take a plane; fly",
+        "fr": "prendre l’avion",
+        "ru": "лететь на самолёте",
+        "tr": "uçağa binmek"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w075",
+      "family": "transport",
+      "hanzi": "打车",
+      "pinyin": "dǎ chē",
+      "meaning": {
+        "en": "get a taxi / ride-hailing car",
+        "fr": "prendre un taxi / un VTC",
+        "ru": "вызвать такси",
+        "tr": "taksi çağırmak"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w076",
+      "family": "transport",
+      "hanzi": "打的",
+      "pinyin": "dǎ dī",
+      "meaning": {
+        "en": "take a taxi (colloquial)",
+        "fr": "prendre un taxi (familier)",
+        "ru": "взять такси (разговорное)",
+        "tr": "taksiye binmek (gündelik)"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w077",
+      "family": "transport",
+      "hanzi": "滴滴",
+      "pinyin": "Dīdī",
+      "meaning": {
+        "en": "DiDi; a ride-hailing app",
+        "fr": "DiDi ; application de VTC",
+        "ru": "DiDi; приложение для вызова машины",
+        "tr": "DiDi; araç çağırma uygulaması"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w078",
+      "family": "transport",
+      "hanzi": "骑",
+      "pinyin": "qí",
+      "meaning": {
+        "en": "ride a bicycle or a similar vehicle",
+        "fr": "monter à vélo ou sur un véhicule similaire",
+        "ru": "ехать верхом; на велосипеде",
+        "tr": "bisiklet vb. sürmek"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w079",
+      "family": "transport",
+      "hanzi": "开",
+      "pinyin": "kāi",
+      "meaning": {
+        "en": "drive; open (context matters)",
+        "fr": "conduire ; ouvrir (selon le contexte)",
+        "ru": "водить; открывать (по контексту)",
+        "tr": "sürmek; açmak (bağlama göre)"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w080",
+      "family": "transport",
+      "hanzi": "打",
+      "pinyin": "dǎ",
+      "meaning": {
+        "en": "hail (a taxi); strike (context matters)",
+        "fr": "héler un taxi ; frapper (selon le contexte)",
+        "ru": "вызывать такси; ударять (по контексту)",
+        "tr": "taksi çağırmak; vurmak (bağlama göre)"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w081",
+      "family": "transport",
+      "hanzi": "叫",
+      "pinyin": "jiào",
+      "meaning": {
+        "en": "call; order; be called",
+        "fr": "appeler ; commander ; s’appeler",
+        "ru": "звать; заказывать; называться",
+        "tr": "çağırmak; sipariş etmek; adı olmak"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w082",
+      "family": "transport",
+      "hanzi": "租",
+      "pinyin": "zū",
+      "meaning": {
+        "en": "rent; hire",
+        "fr": "louer",
+        "ru": "арендовать",
+        "tr": "kiralamak"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w083",
+      "family": "campus",
+      "hanzi": "在",
+      "pinyin": "zài",
+      "meaning": {
+        "en": "be at; located at",
+        "fr": "être à ; se trouver",
+        "ru": "находиться",
+        "tr": "bir yerde bulunmak"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w084",
+      "family": "day",
+      "hanzi": "再",
+      "pinyin": "zài",
+      "meaning": {
+        "en": "then; again",
+        "fr": "puis ; de nouveau",
+        "ru": "затем; снова",
+        "tr": "sonra; tekrar"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w085",
+      "family": "campus",
+      "hanzi": "哪里",
+      "pinyin": "nǎlǐ",
+      "meaning": {
+        "en": "where (variant of 哪儿)",
+        "fr": "où (variante de 哪儿)",
+        "ru": "где (вариант 哪儿)",
+        "tr": "nerede (哪儿 biçiminin eşdeğeri)"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w086",
+      "family": "weather",
+      "hanzi": "两千",
+      "pinyin": "liǎng qiān",
+      "meaning": {
+        "en": "two thousand",
+        "fr": "deux mille",
+        "ru": "две тысячи",
+        "tr": "iki bin"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w087",
+      "family": "weather",
+      "hanzi": "找到",
+      "pinyin": "zhǎo dào",
+      "meaning": {
+        "en": "find; successfully locate",
+        "fr": "trouver",
+        "ru": "найти",
+        "tr": "bulmak"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w088",
+      "family": "weather",
+      "hanzi": "带",
+      "pinyin": "dài",
+      "meaning": {
+        "en": "bring; take along",
+        "fr": "emporter ; apporter",
+        "ru": "брать с собой; приносить",
+        "tr": "yanına almak; getirmek"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-w089",
+      "family": "weather",
+      "hanzi": "点外卖",
+      "pinyin": "diǎn wàimài",
+      "meaning": {
+        "en": "order food delivery",
+        "fr": "commander un repas à livrer",
+        "ru": "заказывать еду с доставкой",
+        "tr": "yemek sipariş etmek"
+      },
+      "origin": "supplement"
     }
   ],
   "sentences": [
@@ -1642,6 +1964,459 @@
         "tr": "Taksiye ihtiyacım yok."
       },
       "origin": "source"
+    },
+    {
+      "id": "c12-s041",
+      "family": "transport",
+      "hanzi": "我走路去学校。",
+      "chunks": [
+        "我",
+        "走路",
+        "去学校。"
+      ],
+      "pinyin": "Wǒ zǒu lù qù xuéxiào.",
+      "meaning": {
+        "en": "I walk to school.",
+        "fr": "Je vais à l’école à pied.",
+        "ru": "Я иду в школу пешком.",
+        "tr": "Okula yürüyerek giderim."
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s042",
+      "family": "transport",
+      "hanzi": "我骑电动车去学校。",
+      "chunks": [
+        "我",
+        "骑电动车",
+        "去学校。"
+      ],
+      "pinyin": "Wǒ qí diàndòngchē qù xuéxiào.",
+      "meaning": {
+        "en": "I ride an e-bike to school.",
+        "fr": "Je vais à l’école à vélo électrique.",
+        "ru": "Я еду в школу на электровелосипеде.",
+        "tr": "Okula elektrikli bisikletle giderim."
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s043",
+      "family": "transport",
+      "hanzi": "我坐公交车回家。",
+      "chunks": [
+        "我",
+        "坐公交车",
+        "回家。"
+      ],
+      "pinyin": "Wǒ zuò gōngjiāochē huí jiā.",
+      "meaning": {
+        "en": "I take the bus home.",
+        "fr": "Je rentre chez moi en bus.",
+        "ru": "Я еду домой на автобусе.",
+        "tr": "Eve otobüsle dönerim."
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s044",
+      "family": "transport",
+      "hanzi": "我想打车，不想租车。",
+      "chunks": [
+        "我想",
+        "打车，",
+        "不想",
+        "租车。"
+      ],
+      "pinyin": "Wǒ xiǎng dǎ chē, bù xiǎng zū chē.",
+      "meaning": {
+        "en": "I want to get a taxi, not rent a car.",
+        "fr": "Je veux prendre un taxi, pas louer une voiture.",
+        "ru": "Я хочу вызвать такси, а не арендовать машину.",
+        "tr": "Taksi çağırmak istiyorum, araba kiralamak istemiyorum."
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s045",
+      "family": "transport",
+      "hanzi": "我们坐高铁去上海。",
+      "chunks": [
+        "我们",
+        "坐高铁",
+        "去上海。"
+      ],
+      "pinyin": "Wǒmen zuò gāotiě qù Shànghǎi.",
+      "meaning": {
+        "en": "We take the high-speed train to Shanghai.",
+        "fr": "Nous allons à Shanghai en train à grande vitesse.",
+        "ru": "Мы едем в Шанхай на скоростном поезде.",
+        "tr": "Şanghay’a hızlı trenle gideriz."
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s046",
+      "family": "transport",
+      "hanzi": "我骑自行车去书店。",
+      "chunks": [
+        "我",
+        "骑自行车",
+        "去书店。"
+      ],
+      "pinyin": "Wǒ qí zìxíngchē qù shūdiàn.",
+      "meaning": {
+        "en": "I ride a bicycle to the bookshop.",
+        "fr": "Je vais à la librairie à vélo.",
+        "ru": "Я еду в книжный магазин на велосипеде.",
+        "tr": "Kitapçıya bisikletle giderim."
+      },
+      "origin": "practice"
+    },
+    {
+      "id": "c12-s047",
+      "family": "transport",
+      "hanzi": "我坐出租车回家。",
+      "chunks": [
+        "我",
+        "坐出租车",
+        "回家。"
+      ],
+      "pinyin": "Wǒ zuò chūzūchē huí jiā.",
+      "meaning": {
+        "en": "I take a taxi home.",
+        "fr": "Je rentre chez moi en taxi.",
+        "ru": "Я еду домой на такси.",
+        "tr": "Eve taksiyle dönerim."
+      },
+      "origin": "practice"
+    },
+    {
+      "id": "c12-s048",
+      "family": "transport",
+      "hanzi": "我叫网约车去学校。",
+      "chunks": [
+        "我",
+        "叫网约车",
+        "去学校。"
+      ],
+      "pinyin": "Wǒ jiào wǎngyuēchē qù xuéxiào.",
+      "meaning": {
+        "en": "I book an app-based ride to school.",
+        "fr": "Je réserve une voiture avec une application pour aller à l’école.",
+        "ru": "Я заказываю поездку в школу через приложение.",
+        "tr": "Okula gitmek için uygulamadan araç çağırırım."
+      },
+      "origin": "practice"
+    },
+    {
+      "id": "c12-s049",
+      "family": "transport",
+      "hanzi": "我坐火车去上海。",
+      "chunks": [
+        "我",
+        "坐火车",
+        "去上海。"
+      ],
+      "pinyin": "Wǒ zuò huǒchē qù Shànghǎi.",
+      "meaning": {
+        "en": "I take the train to Shanghai.",
+        "fr": "Je vais à Shanghai en train.",
+        "ru": "Я еду в Шанхай на поезде.",
+        "tr": "Şanghay’a trenle giderim."
+      },
+      "origin": "practice"
+    },
+    {
+      "id": "c12-s050",
+      "family": "transport",
+      "hanzi": "我坐飞机去上海。",
+      "chunks": [
+        "我",
+        "坐飞机",
+        "去上海。"
+      ],
+      "pinyin": "Wǒ zuò fēijī qù Shànghǎi.",
+      "meaning": {
+        "en": "I fly to Shanghai.",
+        "fr": "Je vais à Shanghai en avion.",
+        "ru": "Я лечу в Шанхай на самолёте.",
+        "tr": "Şanghay’a uçakla giderim."
+      },
+      "origin": "practice"
+    },
+    {
+      "id": "c12-s051",
+      "family": "transport",
+      "hanzi": "我开车去学校。",
+      "chunks": [
+        "我",
+        "开车",
+        "去学校。"
+      ],
+      "pinyin": "Wǒ kāi chē qù xuéxiào.",
+      "meaning": {
+        "en": "I drive to school.",
+        "fr": "Je vais à l’école en voiture, au volant.",
+        "ru": "Я сам веду машину в школу.",
+        "tr": "Okula arabayı kendim sürerek giderim."
+      },
+      "origin": "practice"
+    },
+    {
+      "id": "c12-s052",
+      "family": "transport",
+      "hanzi": "我租车去旅行。",
+      "chunks": [
+        "我",
+        "租车",
+        "去旅行。"
+      ],
+      "pinyin": "Wǒ zū chē qù lǚxíng.",
+      "meaning": {
+        "en": "I rent a car for a trip.",
+        "fr": "Je loue une voiture pour voyager.",
+        "ru": "Я арендую машину для поездки.",
+        "tr": "Seyahat için araba kiralarım."
+      },
+      "origin": "practice"
+    },
+    {
+      "id": "c12-s053",
+      "family": "campus",
+      "hanzi": "银行在东边。",
+      "chunks": [
+        "银行",
+        "在",
+        "东边。"
+      ],
+      "pinyin": "Yínháng zài dōngbian.",
+      "meaning": {
+        "en": "The bank is to the east.",
+        "fr": "La banque est à l’est.",
+        "ru": "Банк находится на востоке.",
+        "tr": "Banka doğuda."
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s054",
+      "family": "campus",
+      "hanzi": "这是书店，东边的那座楼是银行。",
+      "chunks": [
+        "这是",
+        "书店，",
+        "东边的那座楼",
+        "是银行。"
+      ],
+      "pinyin": "Zhè shì shūdiàn, dōngbian de nà zuò lóu shì yínháng.",
+      "meaning": {
+        "en": "This is the bookshop; the building east of it is the bank.",
+        "fr": "Voici la librairie ; le bâtiment à l’est est la banque.",
+        "ru": "Это книжный магазин; здание к востоку от него — банк.",
+        "tr": "Burası kitapçı; doğusundaki bina banka."
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s055",
+      "family": "campus",
+      "hanzi": "谢谢！不客气！",
+      "chunks": [
+        "谢谢！",
+        "不客气！"
+      ],
+      "pinyin": "Xièxie! Bú kèqi!",
+      "meaning": {
+        "en": "Thank you! You’re welcome!",
+        "fr": "Merci ! De rien !",
+        "ru": "Спасибо! Не за что!",
+        "tr": "Teşekkürler! Rica ederim!"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s056",
+      "family": "campus",
+      "hanzi": "这是书店，那是银行。",
+      "chunks": [
+        "这是",
+        "书店，",
+        "那是",
+        "银行。"
+      ],
+      "pinyin": "Zhè shì shūdiàn, nà shì yínháng.",
+      "meaning": {
+        "en": "This is the bookshop; that is the bank.",
+        "fr": "Voici la librairie ; là-bas, c’est la banque.",
+        "ru": "Это книжный магазин, а то — банк.",
+        "tr": "Burası kitapçı, orası banka."
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s057",
+      "family": "campus",
+      "hanzi": "那座楼是四号楼，我的宿舍在四号楼。",
+      "chunks": [
+        "那座楼",
+        "是四号楼，",
+        "我的宿舍",
+        "在四号楼。"
+      ],
+      "pinyin": "Nà zuò lóu shì sì hào lóu, wǒ de sùshè zài sì hào lóu.",
+      "meaning": {
+        "en": "That is Building 4; my dorm room is in Building 4.",
+        "fr": "C’est le bâtiment 4 ; ma chambre y est.",
+        "ru": "Это здание № 4; моя комната в нём.",
+        "tr": "O bina 4 numaralı bina; yurt odam orada."
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s058",
+      "family": "campus",
+      "hanzi": "书店在哪儿？",
+      "chunks": [
+        "书店",
+        "在哪儿？"
+      ],
+      "pinyin": "Shūdiàn zài nǎr?",
+      "meaning": {
+        "en": "Where is the bookshop?",
+        "fr": "Où est la librairie ?",
+        "ru": "Где книжный магазин?",
+        "tr": "Kitapçı nerede?"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s059",
+      "family": "campus",
+      "hanzi": "学校在宿舍南边。",
+      "chunks": [
+        "学校",
+        "在",
+        "宿舍南边。"
+      ],
+      "pinyin": "Xuéxiào zài sùshè nánbian.",
+      "meaning": {
+        "en": "The school is south of the dormitory.",
+        "fr": "L’école est au sud de la résidence.",
+        "ru": "Школа находится к югу от общежития.",
+        "tr": "Okul yurdun güneyinde."
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s060",
+      "family": "campus",
+      "hanzi": "请问，银行在哪里？",
+      "chunks": [
+        "请问，",
+        "银行",
+        "在哪里？"
+      ],
+      "pinyin": "Qǐngwèn, yínháng zài nǎlǐ?",
+      "meaning": {
+        "en": "Excuse me, where is the bank?",
+        "fr": "Excusez-moi, où est la banque ?",
+        "ru": "Скажите, пожалуйста, где банк?",
+        "tr": "Affedersiniz, banka nerede?"
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s061",
+      "family": "weather",
+      "hanzi": "外面下雨了，带雨伞吧。",
+      "chunks": [
+        "外面",
+        "下雨了，",
+        "带雨伞吧。"
+      ],
+      "pinyin": "Wàimian xià yǔ le, dài yǔsǎn ba.",
+      "meaning": {
+        "en": "It is raining outside; take an umbrella.",
+        "fr": "Il pleut dehors ; emporte un parapluie.",
+        "ru": "На улице пошёл дождь; возьми зонт.",
+        "tr": "Dışarıda yağmur yağıyor; yanına şemsiye al."
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s062",
+      "family": "weather",
+      "hanzi": "我想点外卖。",
+      "chunks": [
+        "我",
+        "想",
+        "点外卖。"
+      ],
+      "pinyin": "Wǒ xiǎng diǎn wàimài.",
+      "meaning": {
+        "en": "I want to order food delivery.",
+        "fr": "Je veux commander un repas à livrer.",
+        "ru": "Я хочу заказать еду с доставкой.",
+        "tr": "Yemek sipariş etmek istiyorum."
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s063",
+      "family": "weather",
+      "hanzi": "我在找我的钱。",
+      "chunks": [
+        "我",
+        "在找",
+        "我的钱。"
+      ],
+      "pinyin": "Wǒ zài zhǎo wǒ de qián.",
+      "meaning": {
+        "en": "I am looking for my money.",
+        "fr": "Je cherche mon argent.",
+        "ru": "Я ищу свои деньги.",
+        "tr": "Paramı arıyorum."
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s064",
+      "family": "weather",
+      "hanzi": "外面下雨了，我带雨伞。",
+      "chunks": [
+        "外面",
+        "下雨了，",
+        "我",
+        "带雨伞。"
+      ],
+      "pinyin": "Wàimian xià yǔ le, wǒ dài yǔsǎn.",
+      "meaning": {
+        "en": "It is raining outside; I take an umbrella.",
+        "fr": "Il pleut dehors ; je prends un parapluie.",
+        "ru": "На улице пошёл дождь; я беру зонт.",
+        "tr": "Dışarıda yağmur yağıyor; şemsiyemi alıyorum."
+      },
+      "origin": "supplement"
+    },
+    {
+      "id": "c12-s065",
+      "family": "weather",
+      "hanzi": "我有两千块钱。",
+      "chunks": [
+        "我",
+        "有",
+        "两千块钱。"
+      ],
+      "pinyin": "Wǒ yǒu liǎng qiān kuài qián.",
+      "meaning": {
+        "en": "I have two thousand yuan.",
+        "fr": "J’ai deux mille yuans.",
+        "ru": "У меня две тысячи юаней.",
+        "tr": "İki bin yuanım var."
+      },
+      "origin": "supplement"
     }
   ],
   "provenance": {
@@ -1653,6 +2428,10 @@
       "IMG_0456",
       "IMG_0457"
     ],
-    "note": "Core home/day material from supplied PDF; campus/locality from textbook photos; route and linking examples are labelled additions. No photographs or personal images are published. The campus is a teaching diagram, not a real geographic map."
+    "note": "Core home/day material from supplied PDF; campus/locality from textbook photos; route and linking examples are labelled additions. No photographs or personal images are published. The campus is a teaching diagram, not a real geographic map.",
+    "supplements": [
+      "Chinese_Practice_OS_Directions_Visual_Hybrid_EN_iPad_SAFE.pdf",
+      "Chinese_Classroom_Hybrid_Home_Day_Transport_EN_iPad_SAFE_v3.pdf"
+    ]
   }
 }

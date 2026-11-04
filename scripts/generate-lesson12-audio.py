@@ -33,7 +33,13 @@ async def main():
   else:
    p=root/(key+'.mp3')
    if not p.exists():
-    temp=p.with_suffix('.part');await asyncio.wait_for(edge_tts.Communicate(text,VOICE,rate=RATE).save(str(temp)),75);assert temp.stat().st_size>1000;temp.replace(p)
+    temp=p.with_suffix('.part')
+    for attempt in range(3):
+     try:
+      await asyncio.wait_for(edge_tts.Communicate(text,VOICE,rate=RATE).save(str(temp)),75);assert temp.stat().st_size>1000;temp.replace(p);break
+     except Exception:
+      if attempt==2:raise
+      await asyncio.sleep(2*(attempt+1))
    subprocess.run(['ffmpeg','-v','error','-i',str(p),'-f','null','-'],check=True,capture_output=True)
    b=p.read_bytes();r={'text':text,'source':'/api/lesson12-asset?file=audio-'+key,'path':str(p),'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b),'voice':VOICE,'rate':RATE,'synthetic':True}
    cache[text]=r

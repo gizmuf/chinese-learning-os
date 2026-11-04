@@ -118,4 +118,6 @@ for hz,py,ch,mean in [
  ('今天天气不好。','Jīntiān tiānqì bù hǎo.',['今天','天气','不好。'],C('The weather is bad today.','Il fait mauvais aujourd’hui.','Сегодня плохая погода.','Bugün hava kötü.')),
  ('我不用出租车。','Wǒ bú yòng chūzūchē.',['我','不用','出租车。'],C('I do not need a taxi.','Je n’ai pas besoin de taxi.','Мне не нужно такси.','Taksiye ihtiyacım yok.'))]:
  d['sentences'].append(dict(id=f"c12-s{len(d['sentences'])+1:03}",family='weather',hanzi=hz,pinyin=py,chunks=ch,meaning=mean,origin='source'))
+from importlib.util import spec_from_file_location,module_from_spec
+_spec=spec_from_file_location('lesson12_supplement',Path(__file__).with_name('lesson12-supplement.py'));_m=module_from_spec(_spec);_spec.loader.exec_module(_m);_m.extend(d,C)
 Path('data/lesson12/content.json').write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n');print(len(d['words']),'words',len(d['sentences']),'sentences')

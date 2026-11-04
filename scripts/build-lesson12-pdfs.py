@@ -4,7 +4,7 @@ from pathlib import Path
 import pymupdf as f
 from fontTools.ttLib import TTFont
 from fontTools import subset
-P=argparse.ArgumentParser();P.add_argument('--font',required=True);P.add_argument('--out',required=True);P.add_argument('--qa',required=True);a=P.parse_args()
+P=argparse.ArgumentParser();P.add_argument('--font',required=True);P.add_argument('--out',required=True);P.add_argument('--qa',required=True);P.add_argument('--library',action='store_true');a=P.parse_args()
 d=json.loads(Path('data/lesson12/content.json').read_text());out=Path(a.out);qa=Path(a.qa);out.mkdir(parents=True,exist_ok=True);qa.mkdir(parents=True,exist_ok=True)
 langs=['en','fr','ru','tr'];C=lambda *s:dict(zip(langs,s));E=lambda s:html.escape(str(s))
 labels={
@@ -27,7 +27,7 @@ labels={
  'say':C('Speak, then check','Dire, puis vérifier','Скажите, затем проверьте','Söyle, sonra kontrol et'),
 }
 extra='北东南西前后左右面对坐做座钱千找租房出租车课客国天一二三四号楼书店银行学校宿舍一直往前走两把一张一套雨伞'
-font=TTFont(a.font);opts=subset.Options();opts.retain_gids=True;sub=subset.Subsetter(options=opts);sub.populate(text=json.dumps(d,ensure_ascii=False)+json.dumps(labels,ensure_ascii=False)+extra);sub.subset(font);font.save(qa/'lesson12-cjk.otf')
+font=TTFont(a.font);opts=subset.Options();opts.retain_gids=True;sub=subset.Subsetter(options=opts);sub.populate(text=json.dumps(d,ensure_ascii=False)+json.dumps(labels,ensure_ascii=False)+extra+'打叫骑走租开东的北位置');sub.subset(font);font.save(qa/'lesson12-cjk.otf')
 cmap=TTFont(qa/'lesson12-cjk.otf').getBestCmap();missing={ch for ch in json.dumps(d,ensure_ascii=False)+extra if '\u3400'<=ch<='\u9fff' and ord(ch) not in cmap};assert not missing,missing
 archive=f.Archive(str(qa));archive.add(str(Path('public/fonts').resolve()))
 CSS="@font-face{font-family:CJK;src:url('lesson12-cjk.otf')}@font-face{font-family:Latin;src:url('NotoSans-Regular.ttf')}body{font-family:Latin,CJK;font-size:10pt;line-height:1.38;color:#29483d}p{margin:0 0 4pt}.hz{font-family:CJK;font-size:19pt;line-height:1.4}.py{font-family:Latin;font-size:9pt;color:#977746}.note{font-size:8pt;color:#6d7f68}.chunk{background:#edf2e7;border-bottom:1pt solid #c7d7bd;padding:0 2pt}"
@@ -55,11 +55,11 @@ def mapdraw(p,y=160):
   xx=100+x*77;yy=y+20+row*61;r=f.Rect(xx-27,yy,xx+53,yy+43);p.draw_rect(r,fill=(1,1,1),color=gray,radius=.12);box(p,(r.x0+4,r.y0+6,r.x1-4,r.y1-4),'<span class="hz">'+E(name)+'</span>',10)
  box(p,(433,y+4,508,y+58),'<p>↑ N</p><span class="hz">北</span>',11)
 
-words={w['hanzi']:w for w in d['words']};selected=['公寓','卧室','厨房','卫生间','房间','出租车','租房','驾驶证','做作业','坐地铁','回家','睡觉','东边','西边','南边','北边','前边','后边','左边','右边','银行','书店','学校','宿舍','一直','左转','钱','千']
+words={w['hanzi']:w for w in d['words']};selected=['走路','骑自行车','骑电动车','坐公交车','坐出租车','叫网约车','坐高铁','坐飞机','打车','租车','两千','找到','公寓','卧室','厨房','卫生间','房间','出租车','租房','驾驶证','做作业','坐地铁','回家','睡觉','东边','西边','南边','北边','前边','后边','左边','右边','银行','书店','学校','宿舍','一直','左转','钱','千']
 mapqs=['银行在书店的哪边？','书店在银行的哪边？','一号楼在书店的哪边？','书店在一号楼的哪边？','四号楼在三号楼的哪边？','三号楼在四号楼的哪边？','四号楼在二号楼的哪边？','二号楼在四号楼的哪边？']
 mapanswers=['东边','西边','北边','南边','东边','西边','北边','南边']
 materials=[]
-for lang in langs:
+for lang in ([] if a.library else langs):
  doc=f.open();p=page(doc,lang,d['title'][lang]);box(p,(36,145,559,255),'<p>'+E(labels['guide'][lang])+'</p><p>'+E(C('Classroom material: 4 November 2026. Home, renting, routine, buildings and directions.','Cours du 4 novembre 2026 : logement, location, journée, bâtiments et directions.','Материалы занятия 4 ноября 2026: жильё, аренда, распорядок, здания и направления.','4 Kasım 2026 dersi: ev, kiralama, günlük düzen, binalar ve yönler.')[lang])+'</p>',12)
  for i,topic in enumerate(d['topics']):
   y=276+i*57;box(p,(44,y,551,y+52),'<strong>'+E(topic['title'][lang])+'</strong><br/><span class="hz">'+E(topic['pattern'])+'</span>',10)
@@ -73,6 +73,8 @@ for lang in langs:
   for j,(a1,b1) in enumerate(rows):box(p,(x,272+j*65,x+255,331+j*65),'<p class="hz">'+a1+' → '+b1+'</p><p class="py">'+E(words[a1]['pinyin'])+' → '+E(words[b1]['pinyin'])+'</p>',11)
  box(p,(36,565,559,652),E(C('Memory cue: 东西 means east–west, but dōngxi also means “things”. The compass directions have a stable map reference; left/right use the person’s orientation.','Repère : 东西 signifie est–ouest, mais dōngxi veut aussi dire « objets ». Les directions ont un repère fixe ; gauche/droite dépendent de la personne.','Подсказка: 东西 — восток–запад, а dōngxi — «вещи». Стороны света имеют постоянную точку отсчёта, лево/право зависят от человека.','İpucu: 东西 doğu–batı demektir; dōngxi ise “şeyler” anlamına da gelir. Yönler sabittir; sağ/sol kişinin bakışına bağlıdır.')[lang]),11)
  box(p,(36,676,559,766),'<span class="hz">A 在 B 的……边。</span><br/>'+E(C('Name A, choose reference B, then add the direction. The 的 is often omitted: 银行在书店东边。','Nommer A, choisir le repère B, puis la direction. 的 peut être omis : 银行在书店东边。','Назовите A, выберите ориентир B и добавьте направление. 的 часто опускается: 银行在书店东边。','A’yı söyle, B referansını seç, yönü ekle. 的 sıkça atılır: 银行在书店东边。')[lang]),11)
+ from importlib.util import spec_from_file_location,module_from_spec
+ spec=spec_from_file_location('l12pdfvisuals',Path(__file__).with_name('lesson12-pdf-visuals.py'));visuals=module_from_spec(spec);spec.loader.exec_module(visuals);visuals.add_visuals(doc,lang,d,C,E,page,box,f,pale,green)
  for offset in range(0,len(d['sentences']),5):
   p=page(doc,lang,labels['read'][lang])
   for j,row in enumerate(d['sentences'][offset:offset+5]):reading(p,row,134+j*126,lang)
@@ -104,4 +106,4 @@ for lang in langs:
  box(p,(36,650,559,776),'<strong>'+E(labels['hanzi'][lang])+' / '+E(labels['pinyin'][lang])+'</strong><p class="py">dōngbian · yínháng · chúfáng · zuò dìtiě</p><p class="hz">钱 · 千 · 学校 · 雨伞</p>',11)
  for i,p in enumerate(doc):p.draw_line((36,800),(559,800),color=green,width=.6);box(p,(36,807,500,831),'Chinese OS · Hanzi / Pinyin / IME · 04.11.2026',7);p.insert_text((505,819),str(i+1)+' / '+str(len(doc)),fontname='helv',fontsize=7,color=forest)
  name='Chinese_Practice_Lesson_12_HYBRID_'+lang.upper()+'_iPad_SAFE.pdf';dest=out/('hybrid-'+lang+'.pdf');doc.set_metadata({'title':'Chinese OS · Lesson 12 · '+d['title'][lang],'author':'Chinese OS','subject':'Home, daily routine and campus directions; Hanzi, Pinyin and IME'});doc.save(dest,garbage=4,deflate=True);b=dest.read_bytes();materials.append(dict(locale=lang,label={'en':'English','fr':'Français','ru':'Русский','tr':'Türkçe'}[lang],filename=name,pages=len(doc),bytes=len(b),sha256=hashlib.sha256(b).hexdigest(),path='resources/lesson12/hybrid-'+lang+'.pdf'));print(lang,len(doc),len(b));doc.close()
-Path('data/lesson12/materials.json').write_text(json.dumps(materials,ensure_ascii=False,indent=2)+'\n')
+if not a.library:Path('data/lesson12/materials.json').write_text(json.dumps(materials,ensure_ascii=False,indent=2)+'\n')

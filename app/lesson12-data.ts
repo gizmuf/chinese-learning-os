@@ -24,7 +24,17 @@ export function relativeDirection(direction:Cardinal,facing:'north'|'south'){con
 const word=(hz:string)=>lesson12Words.find(v=>v.hanzi===hz)!;
 const dirs=['东边','西边','北边','南边'].map(word);
 const pairs=[['bank','bookshop'],['bookshop','bank'],['dorm1','bookshop'],['bookshop','dorm1'],['dorm4','dorm3'],['dorm3','dorm4'],['dorm4','dorm2'],['dorm2','dorm4']];
-export type Lesson12Check={id:string;targetId:string;optionIds:string[];mode:'map'|'read'|'listen';question?:string;pair?:string[]};
+export type Lesson12Check={id:string;targetId:string;optionIds:string[];mode:'map'|'read'|'listen'|'usage';question?:string;pair?:string[]};
 export const lesson12MapChecks:Lesson12Check[]=pairs.map(([a,b],i)=>{const A=campusBuildings.find(v=>v.id===a)!,B=campusBuildings.find(v=>v.id===b)!,target=word(campusDirection(A,B)!);return {id:'c12-map-'+(i+1),targetId:target.id,optionIds:dirs.map(v=>v.id),mode:'map',question:A.text+'在'+B.text+'的哪边？',pair:[a,b]};});
-export const lesson12Checks:Lesson12Check[]=[...lesson12MapChecks,...lesson12Words.flatMap((v,i)=>{const pool=lesson12Words.filter(w=>w.id!==v.id&&w.meaning.en!==v.meaning.en).sort((a,b)=>Number(b.family===v.family)-Number(a.family===v.family));const opts=[v,...pool.slice(0,3)];const shift=(i+1)%4,optionIds=[...opts.slice(shift),...opts.slice(0,shift)].map(w=>w.id);return (['read','listen'] as const).map(mode=>({id:'c12-check-'+v.id+'-'+mode,targetId:v.id,optionIds,mode}));})];
+export const lesson12UsageChecks:Lesson12Check[]=[
+ ['sit','我___地铁回家。','坐',['坐','做','座','租']],
+ ['do','下课后我___作业。','做',['坐','做','座','租']],
+ ['building','那是一___楼。','座',['做','坐','租','座']],
+ ['located','银行___书店东边。','在',['再','在','坐','做']],
+ ['then','先复习，___做作业。','再',['在','座','再','坐']],
+ ['bike','我自己___电动车去学校。','骑',['开','坐','打','骑']],
+ ['find','我在___我的钱。','找',['找','千','钱','座']],
+ ['chairs','我的房间有___椅子。','两把',['一张','一套','两把','一座楼']],
+].map(([id,question,target,options])=>({id:'c12-usage-'+id,mode:'usage',question:question as string,targetId:word(target as string).id,optionIds:(options as string[]).map(h=>word(h).id)}));
+export const lesson12Checks:Lesson12Check[]=[...lesson12MapChecks,...lesson12UsageChecks,...lesson12Words.flatMap((v,i)=>{const pool=lesson12Words.filter(w=>w.id!==v.id&&w.meaning.en!==v.meaning.en).sort((a,b)=>Number(b.family===v.family)-Number(a.family===v.family));const opts=[v,...pool.slice(0,3)];const shift=(i+1)%4,optionIds=[...opts.slice(shift),...opts.slice(0,shift)].map(w=>w.id);return (['read','listen'] as const).map(mode=>({id:'c12-check-'+v.id+'-'+mode,targetId:v.id,optionIds,mode}));})];
 export const lesson12ActivityIds=[...lesson12Checks.map(q=>q.id),...lesson12Topics.map(t=>'study:c12-'+t.id)];
