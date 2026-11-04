@@ -1,4 +1,5 @@
 "use client";
+import {Globe2} from "lucide-react";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { translate, localeNames, type Locale } from "./translate";
 const LanguageContext = createContext({locale:"en" as Locale, setLocale: (_:Locale)=>{}, t:(text:string,values?: (string|number|null|undefined)[])=>translate(text,"en",values)});
@@ -12,4 +13,4 @@ export function I18nProvider({children}:{children:React.ReactNode}) {
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 }
 export const useI18n=()=>useContext(LanguageContext);
-export function LanguagePicker(){const {locale,setLocale,t}=useI18n();return <select className="study-language" aria-label={t("Language")} value={locale} onChange={e=>setLocale(e.target.value as Locale)}>{Object.entries(localeNames).map(([value,label])=><option value={value} key={value}>{label}</option>)}</select>;}
+export function LanguagePicker(){const {locale,setLocale,t}=useI18n();return <label className="study-language-control"><Globe2 size={16} aria-hidden="true"/><select title={localeNames[locale]} className="study-language" aria-label={t("Language")} value={locale} onChange={e=>setLocale(e.target.value as Locale)}>{Object.entries(localeNames).map(([value,label])=><option value={value} key={value}>{label}</option>)}</select></label>;}

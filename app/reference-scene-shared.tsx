@@ -8,7 +8,7 @@ import audioReuse from '../data/reference-lessons/audio-reuse.json';
 import type {ReferenceCaption} from './reference-time-model';
 export function ReferenceCaptionView({value,sourceId,context}:{value:ReferenceCaption;sourceId:string;context?:ReferenceCaption}){
  const source=context??value,display=useReferenceDisplay();
- return <div className="ref-scene-caption" data-study-sentence={source.hanzi} data-study-pinyin={source.pinyin} data-study-meaning={source.en} data-study-source-id={sourceId}><div lang="zh-Hans"><StudyText text={value.hanzi} pinyin={value.pinyin}/></div>{display.pinyin&&<p className="pinyin">{value.pinyin}</p>}{display.english&&<p className="ref-meaning">{value.en}</p>}<ReferenceListen text={value.hanzi}/></div>;
+ return <div className="ref-scene-caption" data-study-sentence={source.hanzi} data-study-pinyin={source.pinyin} data-study-meaning={source.en} data-study-source-id={sourceId}><div lang="zh-Hans">{display.chunks&&value.chunks?<span className="ref-meaning-chunks">{value.chunks.map((ch,i)=><span key={i}><StudyText text={ch}/></span>)}</span>:<StudyText text={value.hanzi} pinyin={value.pinyin}/>}</div>{display.pinyin&&<p className="pinyin">{value.pinyin}</p>}{display.english&&<p className="ref-meaning">{value.en}</p>}<ReferenceListen text={value.hanzi}/></div>;
 }
 export function useReferenceReducedMotion(){
  const [reduced,setReduced]=useState(false);
