@@ -6,7 +6,7 @@ const require=createRequire(import.meta.url);globalThis.IS_REACT_ACT_ENVIRONMENT
 const compiled=await build({stdin:{contents:`import React from 'react';export {createElement} from 'react';export {default as renderer,act} from 'react-test-renderer';export {default as Notebook} from './app/dictionary-mini-notebook';export {expandDictionaryForNotebook} from './app/dictionary-window';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false,external:['react','react-test-renderer'],loader:{'.css':'empty'},plugins:[{name:'isolated-writing-surface',setup(b){b.onResolve({filter:/^\.\/ink$/},()=>({path:'ink',namespace:'stub'}));b.onResolve({filter:/^\.\/notebook$/},()=>({path:'notebook',namespace:'stub'}));b.onLoad({filter:/.*/,namespace:'stub'},a=>({contents:a.path==='ink'?`import React from 'react';export default function Ink(p){return React.createElement('canvas',p);}`:`import React from 'react';export const Grid=()=>React.createElement('svg');export const NotebookWordModel=({text})=>React.createElement('span',null,text);`,loader:'jsx'}));}}],logLevel:'silent'});
 const module={exports:{}};new Function('require','module','exports',compiled.outputFiles[0].text)(require,module,module.exports);const m=module.exports;
 test('the inline notebook has eight independent cells and retains ink while folding or inspecting another character',async()=>{
- let r;const props={text:'书店',visible:true,onClose:()=>{}};await m.act(()=>{r=m.renderer.create(m.createElement(m.Notebook,props));});
+ let r;const props={text:'书店',visible:true,wholeWord:false,onClose:()=>{}};await m.act(()=>{r=m.renderer.create(m.createElement(m.Notebook,props));});
  let cells=()=>r.root.findAllByType('canvas');assert.equal(cells().length,8);assert.equal(cells()[0].props.penOnly,true);
  const first=[[{x:.1,y:.2,p:.5,t:1}]],second=[[{x:.3,y:.4,p:.5,t:2}]];
  await m.act(()=>cells()[0].props.onChange(first));await m.act(()=>cells()[1].props.onChange(second));
@@ -24,7 +24,13 @@ test('expansion moves left to retain the original right edge and stays inside ta
 });
 
 test('whole-word library practice pairs both characters in two rows instead of requiring a character switch',async()=>{
- let r;await m.act(()=>{r=m.renderer.create(m.createElement(m.Notebook,{text:'你好',visible:true,wholeWord:true,onClose:()=>{}}));});
+ let r;await m.act(()=>{r=m.renderer.create(m.createElement(m.Notebook,{text:'你好',visible:true,wholeWord:true,library:true,onClose:()=>{}}));});
  assert.equal(r.root.findAllByType('canvas').length,8);assert.equal(r.root.findAllByProps({className:'sp-mini-word-repetition'}).length,2);
  const labels=r.root.findAll(n=>n.props.role==='group').map(n=>n.props['aria-label']);assert.deepEqual(labels,['你 · 1','好 · 2','你 · 3','好 · 4','你 · 5','好 · 6','你 · 7','好 · 8']);await m.act(()=>r.unmount());
+});
+
+test('a character can switch to its recorded whole word and practise it in pairs',async()=>{
+ let r;await m.act(()=>{r=m.renderer.create(m.createElement(m.Notebook,{text:'香',word:'香蕉',visible:true,onClose:()=>{}}));});
+ const toggle=r.root.findAllByType('button').find(b=>b.children.filter(v=>typeof v==='string').join('').includes('Whole word'));assert.ok(toggle);await m.act(()=>toggle.props.onClick());
+ const labels=r.root.findAll(n=>n.props.role==='group'&&String(n.props['aria-label']).includes(' · ')).map(n=>n.props['aria-label']);assert.deepEqual(labels,['香 · 1','蕉 · 2','香 · 3','蕉 · 4','香 · 5','蕉 · 6','香 · 7','蕉 · 8']);await m.act(()=>r.unmount());
 });

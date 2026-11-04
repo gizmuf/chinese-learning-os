@@ -1,12 +1,12 @@
 'use client';
 import {createContext,useContext} from 'react';
 import {simplifiedDisplayText} from './simplified-chinese';
-import {BookOpen} from 'lucide-react';
+import {BookOpen,Shuffle} from 'lucide-react';
 import {useI18n} from './i18n';
 import {dictionaryTokens,type StudyDictionary} from './atlas-spatial-model';
 import {authoredPinyinBoundaries,authoredCharacterReadings} from './pinyin-boundaries';
 /** Lightweight shared text actions; no dependency on Atlas or writing surfaces. */
-export const LookupContext=createContext<{dictionary:StudyDictionary;open:(text:string,trigger:HTMLElement)=>void}|null>(null);
+export const LookupContext=createContext<{dictionary:StudyDictionary;open:(text:string,trigger:HTMLElement)=>void;openConfused?:(index?:number)=>void}|null>(null);
 export function useStudyLookup(){return useContext(LookupContext);}
 export function StudyText({text,anchor='',whole=false,pinyin,sourceText,offset=0,annotatePinyin=false}:{text:string;anchor?:string;whole?:boolean;pinyin?:string;sourceText?:string;offset?:number;annotatePinyin?:boolean}){
  text=simplifiedDisplayText(text);anchor=simplifiedDisplayText(anchor);
@@ -20,3 +20,5 @@ export function StudyText({text,anchor='',whole=false,pinyin,sourceText,offset=0
  return <span className="study-text">{tokens.map((token,i)=>token.chinese?<button type="button" className="study-word" aria-label={readings?token.text:undefined} key={i} lang="zh-Hans" onClick={e=>{e.stopPropagation();lookup.open(token.text,e.currentTarget);}}>{annotated(token.text)}</button>:<span key={i}>{token.text}</span>)}</span>;
 }
 export function StudyLookupButton({text}:{text:string}){text=simplifiedDisplayText(text);const value=useContext(LookupContext),{locale}=useI18n();return value?<button type="button" className="study-lookup-button" aria-label={({en:'Definition',fr:'Définition',ru:'Значение',tr:'Anlam'})[locale]+': '+text} onClick={e=>{e.stopPropagation();value.open(text,e.currentTarget);}}><BookOpen size={17}/></button>:null;}
+
+export function StudyConfusionsButton(){const lookup=useStudyLookup(),{locale}=useI18n();return lookup?.openConfused?<button type="button" className="secondary study-confusions-entry" onClick={()=>lookup.openConfused?.()}><Shuffle size={17}/>{({en:'Often confused',fr:'Souvent confondus',ru:'Часто путают',tr:'Sık karıştırılanlar'}[locale])}</button>:null;}

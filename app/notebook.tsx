@@ -36,11 +36,13 @@ function Glyph({ data, through, active, direction = false }: {
   </svg>;
 }
 
+function PrintedGlyph({character}:{character:string}){return <svg viewBox="0 0 100 100" aria-hidden="true"><text x="50" y="80" textAnchor="middle" fontSize="82" fontFamily="var(--font-hanzi),sans-serif" fill="currentColor">{character}</text></svg>;}
+
 export function NotebookWordModel({text}:{text:string}){
  const {style}=useHanziStyle();
  const [models,setModels]=useState<Record<string,CharacterData>>({});
  useEffect(()=>{const controller=new AbortController();setModels({});if(style==='print')return()=>controller.abort();for(const character of new Set(Array.from(text))){fetch(`/characters/${encodeURIComponent(character)}.json`,{signal:controller.signal}).then(r=>{if(!r.ok)throw Error('Missing character');return r.json() as Promise<CharacterData>;}).then(data=>{if(!controller.signal.aborted&&Array.isArray(data.strokes))setModels(old=>({...old,[character]:data}));}).catch(()=>{});}return()=>controller.abort();},[text,style]);
- return <div className="notebook-whole-model" role="img" aria-label={text}>{Array.from(text).map((character,i)=><span key={i}>{style==='print'?<span className="notebook-print-model" lang="zh-Hans">{character}</span>:models[character]?<Glyph data={models[character]} through={models[character].strokes.length-1}/>:<span lang="zh-Hans">{character}</span>}</span>)}</div>;
+ return <div className="notebook-whole-model" role="img" aria-label={text}>{Array.from(text).map((character,i)=><span key={i}>{style==='print'?<PrintedGlyph character={character}/>:models[character]?<Glyph data={models[character]} through={models[character].strokes.length-1}/>:<span lang="zh-Hans">{character}</span>}</span>)}</div>;
 }
 
 // Keep untouched cells stable while a neighbouring cell commits a stroke.
@@ -50,6 +52,7 @@ function CharacterRow({ character, reading, position, sheet, change, penOnly, di
   change: (key: string, strokes: Stroke[]) => void; penOnly: boolean; disabled: boolean; notify:(message:string)=>void;
 }) {
   const { t, locale } = useI18n();
+  const {style}=useHanziStyle();
   const [data, setData] = useState<CharacterData | null>(null);
   const [failed, setFailed] = useState(false);
   const [retry, setRetry] = useState(0);
@@ -69,8 +72,8 @@ function CharacterRow({ character, reading, position, sheet, change, penOnly, di
     return <div className="notebook-cell" key={slot}>
       <div className="notebook-square">
         <Grid />
-        {trace && !sheet.hidden && data && <div className="notebook-ghost"><Glyph data={data} through={data.strokes.length - 1} /></div>}
-        <Ink strokes={strokes} onChange={s => change(key, s)} penOnly={penOnly} disabled={disabled} />
+        {trace && !sheet.hidden && (style==='print'||data) && <div className="notebook-ghost">{style==='print'?<PrintedGlyph character={character}/>:data&&<Glyph data={data} through={data.strokes.length - 1} />}</div>}
+        <Ink quietTouch lineStyle={style==='print'?'pen':'brush'} strokes={strokes} onChange={s => change(key, s)} penOnly={penOnly} disabled={disabled} />
       </div>
       <div className="notebook-cell-tools"><small>{label}</small>
         <button aria-label={t("Undo {0} {1}", [character, label])} disabled={disabled || !strokes.length} onClick={() => change(key, strokes.slice(0, -1))}><Undo2 size={14} /></button>
@@ -98,7 +101,7 @@ function CharacterRow({ character, reading, position, sheet, change, penOnly, di
       </> : <p role="status">{failed ? <>{t("Stroke guide unavailable.")}<button className="text-button" onClick={() => setRetry(r => r + 1)}>{t("Retry")}</button> {t("You can still write below.")}</> : t("Loading stroke guide…")}</p>}
     </>}
     <div className="notebook-cells">
-      {!sheet.hidden && <div className="notebook-cell"><div className="notebook-square"><Grid /><div className="notebook-model">{data ? <Glyph data={data} through={data.strokes.length - 1} /> : character}</div></div><small>{t("Model")}</small></div>}
+      {!sheet.hidden && <div className="notebook-cell"><div className="notebook-square"><Grid /><div className="notebook-model">{style==='print'?<PrintedGlyph character={character}/>:data ? <Glyph data={data} through={data.strokes.length - 1} /> : character}</div></div><small>{t("Model")}</small></div>}
       {cell(0, true, t("Trace 1"))}{cell(1, true, t("Trace 2"))}
       {cell(2, false, t("Copy 1"))}{cell(3, false, t("Copy 2"))}{cell(4, false, t("Copy 3"))}
     </div>
@@ -115,6 +118,7 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
   onRecall: () => void; next: () => void; contextAudioOnly?: boolean;
 }) {
   const { t, locale } = useI18n();
+  const {style}=useHanziStyle();
   const [sheet, setSheet] = useState<Sheet>(emptySheet);
   const [ready, setReady] = useState(false);
   const [languageOpen,setLanguageOpen]=useState(false);
@@ -164,7 +168,7 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
       {characters.map((character, position) => <CharacterRow key={`${position}:${character}`} {...{ character, position, sheet, change, penOnly, notify }} reading={readings?.[position]?.pinyin} disabled={saved} />)}
       <section className="notebook-character"><h3>{t("Write the whole word")}</h3>{sheet.hidden?<p>{t("Write the characters together from memory.")}</p>:<NotebookWordModel text={item.hanzi}/>}
         <div className="notebook-cells notebook-whole-word">{characters.map((_, i) => <div className="notebook-cell" key={i}>
-          <div className="notebook-square"><Grid /><Ink strokes={sheet.cells[`word:${i}`] ?? EMPTY_STROKES} onChange={s => change(`word:${i}`, s)} penOnly={penOnly} disabled={saved} /></div>
+          <div className="notebook-square"><Grid /><Ink quietTouch lineStyle={style==='print'?'pen':'brush'} strokes={sheet.cells[`word:${i}`] ?? EMPTY_STROKES} onChange={s => change(`word:${i}`, s)} penOnly={penOnly} disabled={saved} /></div>
           <div className="notebook-cell-tools"><small>{t("Character {0}", [i + 1])}</small><button aria-label={t("Clear whole word character {0}", [i + 1])} disabled={saved || !sheet.cells[`word:${i}`]?.length} onClick={() => change(`word:${i}`, [])}><RotateCcw size={14} /></button></div>
         </div>)}</div>
       </section>

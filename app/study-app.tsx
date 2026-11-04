@@ -80,7 +80,7 @@ import IntensiveCourse from "./intensive-course";
 import {useHanziStyle,HanziDisplayControls,type HanziStyle} from './hanzi-style';
 import {buildReviewQueue,allReviewLevel,allReviewHref} from './review-queue';
 import './recognition-review.css';
-import StudyLookupProvider, {useDictionaryAssistance,StudyText} from "./study-lookup";
+import StudyLookupProvider, {useDictionaryAssistance,StudyText,StudyConfusionsButton} from "./study-lookup";
 import PdfExport from "./pdf-export";
 import { LanguagePicker, useI18n } from "./i18n";
 import { localizeItem } from "./translate";
@@ -934,6 +934,7 @@ export default function StudyApp({
                   ))}
                 </select>
               </div>
+              <StudyConfusionsButton/>
               <div className="library-results-bar"><p className="library-count" role="status">{filtered.length} {t(filtered.length===1?'word':'words')} · {practiceSelection?libraryCopy.selected:t(levelNames[level])}</p><div className="library-view-switch" role="group" aria-label="Library view"><button type="button" title={libraryCopy.cards} aria-label={libraryCopy.cards} aria-pressed={libraryLayout==='cards'} onClick={()=>{setLibraryLayout('cards');libraryRoute('cards');}}><LayoutGrid size={17}/></button><button type="button" title={libraryCopy.notebook} aria-label={libraryCopy.notebook} aria-pressed={libraryLayout==='notebook'} onClick={()=>{setLibraryLayout('notebook');libraryRoute('notebook');}}><Rows3 size={17}/></button></div></div>
               {practiceSelection&&<p className="library-selection-note">{libraryCopy.ready}</p>}
               <div className={'word-grid'+(libraryLayout==='notebook'?' is-notebook':'')}>
@@ -1126,7 +1127,7 @@ export default function StudyApp({
                 {!session&&<div className="language-studio-tabs" role="group" aria-label="Writing and language practice"><button type="button" className={skill==='writing'?'primary':'secondary'} aria-pressed={skill==='writing'} onClick={()=>{setLanguageRun(undefined);setSkill('writing');}}>Hanzi writing</button>{languageSkills.map(value=><button type="button" key={value} className={skill===value?'primary':'secondary'} aria-pressed={skill===value} onClick={()=>{setLanguageRun(undefined);setSkill(value);}}>{skillNames[value]}</button>)}</div>}
                 {skill === "writing" && !session && (
                   <div className="notebook-layout-switch" role="group" aria-label={t("Writing layout")}>
-                    <button className={writingLayout === "studio" ? "selected" : ""} aria-pressed={writingLayout === "studio"} onClick={() => setWritingLayout("studio")}>{t("Single character")}</button>
+                    <button className={writingLayout === "studio" ? "selected" : ""} aria-pressed={writingLayout === "studio"} onClick={() => setWritingLayout("studio")}>{t("Writing studio")}</button>
                     <button className={writingLayout === "notebook" ? "selected" : ""} aria-pressed={writingLayout === "notebook"} onClick={() => setWritingLayout("notebook")}><BookOpen size={16} /> {t("Notebook · Zeszyt")}</button>
                     <button onClick={() => setPdfSelection([selected.id])}><Download size={16} /> {t("Print notebook PDF")}</button>
                   </div>
