@@ -1,4 +1,5 @@
 "use client";
+import {useHanziStyle} from './hanzi-style';
 import {createContext,useContext,useMemo,useState,useEffect,type ReactNode} from 'react';
 import type {Item,Mode} from './content';
 import {items} from './content';
@@ -19,14 +20,15 @@ export function WritingPracticeProvider({value,children}:{value:WritingContext;c
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }
 /** Contextual entry to the existing full studio; its scores can never become recognition recall. */
-export default function SharedWriting({hanzi,item: supplied,pinyin,meaning,penOnly: explicitPen,setPenOnly: explicitSetPen,notify: explicitNotify,onSave,onBack,initialMode='watch',onModeChange,audio:explicitAudio,contextual}: {
+export default function SharedWriting({hanzi,item: supplied,pinyin,meaning,penOnly: explicitPen,setPenOnly: explicitSetPen,notify: explicitNotify,onSave,onBack,initialMode,onModeChange,audio:explicitAudio,contextual}: {
   hanzi: string; contextual?:DictionaryContext; item?: Item; pinyin?: string; meaning?: string; penOnly?: boolean; setPenOnly?:(value:boolean)=>void;
   notify?:(message:string)=>void; onSave?:()=>Promise<void>; onBack?:()=>void; initialMode?:Mode; onModeChange?:(mode:Mode)=>void; audio?:{word?:string;sentence?:string};
 }) {
   const context = useContext(Context), {locale,t} = useI18n();
-  const [mode,setLocalMode] = useState<Mode>(initialMode);
+  const {style}=useHanziStyle(),openingMode=initialMode??(style==='print'?'copy':'watch');
+  const [mode,setLocalMode] = useState<Mode>(openingMode);
   const setMode=(next:Mode)=>{setLocalMode(next);onModeChange?.(next);};
-  useEffect(()=>setLocalMode(initialMode),[initialMode]);
+  useEffect(()=>{if(initialMode)setLocalMode(initialMode);},[initialMode]);
   const [languageOpen,setLanguageOpen]=useState(false);
   const [attemptRun,setAttemptRun] = useState(0);
   const [localPen,setLocalPen] = useState(false);

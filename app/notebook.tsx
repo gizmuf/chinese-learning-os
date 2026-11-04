@@ -1,4 +1,5 @@
 "use client";
+import {useHanziStyle} from './hanzi-style';
 import WritingHelp from "./writing-help";
 import { useI18n } from "./i18n";
 import { useEffect, useRef, useState } from "react";
@@ -35,10 +36,11 @@ function Glyph({ data, through, active, direction = false }: {
   </svg>;
 }
 
-function NotebookWordModel({text}:{text:string}){
+export function NotebookWordModel({text}:{text:string}){
+ const {style}=useHanziStyle();
  const [models,setModels]=useState<Record<string,CharacterData>>({});
- useEffect(()=>{const controller=new AbortController();setModels({});for(const character of new Set(Array.from(text))){fetch(`/characters/${encodeURIComponent(character)}.json`,{signal:controller.signal}).then(r=>{if(!r.ok)throw Error('Missing character');return r.json() as Promise<CharacterData>;}).then(data=>{if(!controller.signal.aborted&&Array.isArray(data.strokes))setModels(old=>({...old,[character]:data}));}).catch(()=>{});}return()=>controller.abort();},[text]);
- return <div className="notebook-whole-model" role="img" aria-label={text}>{Array.from(text).map((character,i)=><span key={i}>{models[character]?<Glyph data={models[character]} through={models[character].strokes.length-1}/>:<span lang="zh-Hans">{character}</span>}</span>)}</div>;
+ useEffect(()=>{const controller=new AbortController();setModels({});if(style==='print')return()=>controller.abort();for(const character of new Set(Array.from(text))){fetch(`/characters/${encodeURIComponent(character)}.json`,{signal:controller.signal}).then(r=>{if(!r.ok)throw Error('Missing character');return r.json() as Promise<CharacterData>;}).then(data=>{if(!controller.signal.aborted&&Array.isArray(data.strokes))setModels(old=>({...old,[character]:data}));}).catch(()=>{});}return()=>controller.abort();},[text,style]);
+ return <div className="notebook-whole-model" role="img" aria-label={text}>{Array.from(text).map((character,i)=><span key={i}>{style==='print'?<span className="notebook-print-model" lang="zh-Hans">{character}</span>:models[character]?<Glyph data={models[character]} through={models[character].strokes.length-1}/>:<span lang="zh-Hans">{character}</span>}</span>)}</div>;
 }
 
 // Keep untouched cells stable while a neighbouring cell commits a stroke.
@@ -103,7 +105,7 @@ function CharacterRow({ character, reading, position, sheet, change, penOnly, di
     <div className="notebook-pinyin-practice"><h4>Pinyin with tones</h4>{!sheet.hidden&&reading&&<p className="pinyin">{reading}</p>}<p>Write the syllable and its tone mark beside your Hanzi practice.{!reading?' Use the whole-word reading above; no character reading has been guessed.':''}</p><PinyinHandwriting strokes={sheet.cells[`pinyin:${position}`]??EMPTY_STROKES} onChange={strokes=>change(`pinyin:${position}`,strokes)} penOnly={penOnly} disabled={disabled}/><button type="button" className="text-button" disabled={disabled} onClick={()=>change(`pinyin:${position}`,[])}>Clear Pinyin</button></div>
   </section>;
 }
-function Grid() {
+export function Grid() {
   return <svg className="notebook-guidelines" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0V100 M0 50H100 M0 0L100 100 M100 0L0 100" /></svg>;
 }
 

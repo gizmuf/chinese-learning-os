@@ -35,6 +35,7 @@ export function sourceCharacterEntry(text:string,source:SourceCharacter):Diction
 }
 /** Authored alignment may select one attested reading; ambiguous contexts retain all senses. */
 export function contextualDictionaryEntry(entry:DictionaryEntry,context?:DictionaryContext):DictionaryEntry{
+ if(context?.text===entry.text)return entry;
  if(context&&entry.senses&&new Set(entry.senses.map(sense=>sense.pinyin.toLowerCase())).size>1&&Array.from(entry.text).length===1){const readings=authoredCharacterReadings(context.text,context.pinyin)?.filter(row=>row.character===entry.text).map(row=>row.pinyin),unique=readings?[...new Set(readings)]:[];if(unique.length===1){const matches=entry.senses.filter(sense=>sense.pinyin.toLowerCase()===unique[0]);if(matches.length){const audio=entry.audio&&!entry.audio.context&&entry.audio.text===entry.text&&entry.audio.pinyin.toLowerCase()===unique[0]?entry.audio:undefined;return {...entry,word:entry.word?.pinyin.toLowerCase()===unique[0]?entry.word:undefined,pinyin:unique[0],meaning:matches.map(sense=>sense.meaning).join(' · '),audio,contextual:context};}}}
  if(entry.text==='得'&&context?.text==='早饭后，我准备出门，因为我得去学校。'&&context.pinyin.includes('děi'))return {...entry,word:undefined,pinyin:'děi',meaning:'must / have to — here: I have to go to school',audio:undefined,contextual:context};
  return context?.text.includes(entry.text)?{...entry,contextual:context}:entry;

@@ -1,12 +1,18 @@
 "use client";
 import {writingPracticeHref,writingPracticeRoute,type WritingOrigin} from './writing-navigation';
 
+import {usePracticeBook} from './use-practice-book';
+import LibraryNotebook from './library-notebook';
 import LanguagePractice from './language-practice';
 import {isLanguageSkill,languageSkills,languagePracticeHref,languagePracticeRoute} from './pinyin-practice-model';
 import ReferenceLessonLinks from './reference-lesson-links';
 import {referenceLessonHref} from './reference-lessons-data';
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
+  BookmarkPlus,
+  BookmarkCheck,
+  LayoutGrid,
+  Rows3,
   ArrowRight,
   ArrowUpRight,
   BookOpen,
@@ -79,7 +85,7 @@ import PdfExport from "./pdf-export";
 import { LanguagePicker, useI18n } from "./i18n";
 import { localizeItem } from "./translate";
 import { progressSchema } from "./event-schema";
-import { speak, setSpeechRate, stopAudio } from "./audio";
+import { playRecording, speak, setSpeechRate, stopAudio } from "./audio";
 import { authenticatedFetch } from "./auth-client";
 import type { StudyUser as User } from "./auth-shell";
 const HSK3Grammar = lazy(() => import("./hsk3-grammar"));
@@ -134,6 +140,7 @@ export default function StudyApp({
   useEffect(()=>{if(view==='practice'&&isLanguageSkill(skill))window.history.replaceState(null,'',languagePracticeHref(skill,selected.id,languageRun));},[view,skill,selected.id,languageRun]);
   const [search, setSearch] = useState("");
   const [lesson, setLesson] = useState("all");
+  const [libraryLayout,setLibraryLayout]=useState<'cards'|'notebook'>('cards'),[practiceSelection,setPracticeSelection]=useState(false);
   const [level, setLevel] = useState<StudyLevel>("hsk1");
   const [writingOrigin,setWritingOrigin]=useState<WritingOrigin|undefined>();
   const lastWriting=useRef<{item:Item;mode:Mode;layout:'studio'|'notebook';origin?:WritingOrigin}|null>(null);
@@ -189,6 +196,12 @@ export default function StudyApp({
     setToast(message);
     window.setTimeout(() => setToast(""), 4500);
   }, []);
+  const practiceBook=usePracticeBook(db?.name==='chinese-os-v1-'+(user?.id??'guest')?db:null,user?.id??null,notify);
+  const chosenItems=practiceBook.entries.map(v=>{const known=items.find(i=>i.hanzi===v.text);return known??{id:'practice-choice:'+v.text,lesson:'selected',hanzi:v.text,pinyin:v.pinyin,english:v.meaning,sentence:v.contextual?.text??'',sentencePinyin:v.contextual?.pinyin??'',translation:v.contextual?.meaning??''} satisfies Item;});
+  const libraryCopy={en:{selected:'Selected for practice',add:'Add to practice book',remove:'Remove from practice book',cards:'Cards',notebook:'Cards with notebook',empty:'Add words and characters using the bookmark-plus icon in any definition.',ready:'Your choices are saved on this device.'},fr:{selected:'Choisis pour pratiquer',add:'Ajouter au cahier',remove:'Retirer du cahier',cards:'Cartes',notebook:'Cartes avec cahier',empty:'Ajoutez des mots et caractères avec le signet + dans une définition.',ready:'Votre sélection est enregistrée sur cet appareil.'},ru:{selected:'Выбрано для практики',add:'Добавить в тетрадь',remove:'Убрать из тетради',cards:'Карточки',notebook:'Карточки с тетрадью',empty:'Добавляйте слова и знаки кнопкой закладки с плюсом в словаре.',ready:'Ваш выбор сохранён на этом устройстве.'},tr:{selected:'Pratik için seçilenler',add:'Deftere ekle',remove:'Defterden çıkar',cards:'Kartlar',notebook:'Defterli kartlar',empty:'Sözlükteki artılı yer imiyle kelime ve karakter ekle.',ready:'Seçimlerin bu cihazda kaydedilir.'}}[locale];
+  function libraryRecording(item:Item,kind:'word'|'sentence'){const chosen=practiceBook.entries.find(v=>v.text===item.hanzi);return kind==='word'?chosen?.audio&&!chosen.audio.context&&chosen.audio.text===item.hanzi?chosen.audio.source:undefined:chosen?.contextual?.audio?.text===item.sentence?chosen.contextual.audio.source:undefined;}
+  function listenLibrary(item:Item,kind:'word'|'sentence'){const source=libraryRecording(item,kind);if(source)playRecording(source,notify);else speak(kind==='word'?item.hanzi:item.sentence,notify,item);}
+  function libraryRoute(layout=libraryLayout,selected=practiceSelection){const p=new URLSearchParams({study:'library',layout,level});if(selected)p.set('set','selected');window.history.replaceState(null,'','/?'+p);}
   useEffect(() => {
     let alive = true;
     let opened: IDBDatabase | undefined;
@@ -230,6 +243,7 @@ export default function StudyApp({
         const requestedAll=allReviewLevel(window.location.search),languageRoute=languagePracticeRoute(window.location.search,sourceItems);
         const writingRoute=writingPracticeRoute(window.location.search,sourceItems);
         if(alive&&writingRoute){const item=sourceItems.find(v=>v.id===writingRoute.itemId)!;setSelected(item);setLevel(item.hskLevel?('hsk'+item.hskLevel) as StudyLevel:'bonus');setMode(writingRoute.mode);setWritingLayout(writingRoute.layout);setWritingOrigin(writingRoute.origin);setSkill('writing');setSession(null);setFinished(false);setView('practice');}
+        else if(alive&&new URLSearchParams(window.location.search).get('study')==='library'){const p=new URLSearchParams(window.location.search);setView('lessons');setSession(null);setLibraryLayout(p.get('layout')==='notebook'?'notebook':'cards');setPracticeSelection(p.get('set')==='selected');if(['hsk1','hsk2','hsk3','bonus'].includes(p.get('level')??''))setLevel(p.get('level') as StudyLevel);}
         else if(alive&&languageRoute){const target=sourceItems.find(item=>item.id===languageRoute.itemId)!;setLevel(target.hskLevel?('hsk'+target.hskLevel) as StudyLevel:'bonus');setSelected(target);setSkill(languageRoute.skill);setLanguageRun(languageRoute.runId);setMode('recall');setSession(null);setView('practice');
         }else if(alive&&requestedAll){
           const queue=items.filter(item=>isInLevel(item,requestedAll));
@@ -380,12 +394,13 @@ export default function StudyApp({
     setSync(user ? t("Saved here · syncing…") : t("Guest · saved on this device"));
     void synchronize();
   };
-  function openPractice(item: Item, practiceMode: Mode = "trace") {
+  function openPractice(item: Item, practiceMode?: Mode) {
+    practiceMode??=hanziAppearance.style==='print'?'copy':'trace';
     stopAudio();
     setAtlasReturn(null);
     const origin:WritingOrigin|undefined=view==='practice'?writingOrigin:{view:view as WritingOrigin['view'],url:window.location.pathname+window.location.search,scroll:window.scrollY,search,lesson,level};
     setWritingOrigin(origin);
-    window.history.replaceState(null,'',writingPracticeHref(item.id,practiceMode,writingLayout,origin));
+    if(view==='practice')window.history.replaceState(history.state,'',writingPracticeHref(item.id,practiceMode,writingLayout,origin));else window.history.pushState({chineseOSWriting:true},'',writingPracticeHref(item.id,practiceMode,writingLayout,origin));
     setSession(null);
     setFinished(false);
     setSelected(item);
@@ -394,8 +409,9 @@ export default function StudyApp({
     setView("practice");
     window.scrollTo({ top: 0, behavior: "instant" });
   }
-  useEffect(()=>{if(!isReady||view!=='practice'||skill!=='writing'||session)return;lastWriting.current={item:selected,mode,layout:writingLayout,origin:writingOrigin};window.history.replaceState(null,'',writingPracticeHref(selected.id,mode,writingLayout,writingOrigin));},[isReady,view,skill,selected.id,mode,writingLayout,writingOrigin,session]);
-  function returnFromWriting(){if(!writingOrigin){changeView('lessons');return;}stopAudio();setSession(null);setFinished(false);setView(writingOrigin.view);setSearch(writingOrigin.search??'');setLesson(writingOrigin.lesson??'all');if(['hsk1','hsk2','hsk3','bonus'].includes(writingOrigin.level??''))setLevel(writingOrigin.level as StudyLevel);window.history.replaceState(null,'',writingOrigin.url);const y=writingOrigin.scroll;requestAnimationFrame(()=>requestAnimationFrame(()=>window.scrollTo({top:y,behavior:'instant'})));}
+  useEffect(()=>{if(!isReady||view!=='practice'||skill!=='writing'||session)return;lastWriting.current={item:selected,mode,layout:writingLayout,origin:writingOrigin};window.history.replaceState(history.state,'',writingPracticeHref(selected.id,mode,writingLayout,writingOrigin));},[isReady,view,skill,selected.id,mode,writingLayout,writingOrigin,session]);
+  function returnFromWriting(){if(history.state?.chineseOSWriting){history.back();return;}if(!writingOrigin){changeView('lessons');return;}stopAudio();setSession(null);setFinished(false);setView(writingOrigin.view);setSearch(writingOrigin.search??'');setLesson(writingOrigin.lesson??'all');if(['hsk1','hsk2','hsk3','bonus'].includes(writingOrigin.level??''))setLevel(writingOrigin.level as StudyLevel);window.history.replaceState(null,'',writingOrigin.url);const y=writingOrigin.scroll;requestAnimationFrame(()=>requestAnimationFrame(()=>window.scrollTo({top:y,behavior:'instant'})));}
+  useEffect(()=>{const back=()=>{const route=writingPracticeRoute(window.location.search,sourceItems);if(route){const item=items.find(i=>i.id===route.itemId);if(item){setSelected(item);setMode(route.mode);setWritingLayout(route.layout);setWritingOrigin(route.origin);setSession(null);setSkill('writing');setView('practice');}}else if(view==='practice'&&!session&&writingOrigin)returnFromWriting();};addEventListener('popstate',back);return()=>removeEventListener('popstate',back);},[view,session,writingOrigin,items]);
   function startReview(s: Skill, extra: boolean|'all' = false) {
     const queue=buildReviewQueue(events,s,studyItems,minutes,extra==='all'?'all':extra?'extra':'scheduled');
     if (!queue.length) {
@@ -434,8 +450,8 @@ export default function StudyApp({
       );
     }
   }
-  const filtered = studyItems.filter((item) =>
-    matchesItem(item, search, lesson),
+  const filtered = (practiceSelection?chosenItems:studyItems).filter((item) =>
+    matchesItem(item, search, practiceSelection?"all":lesson),
   );
   function returnToAtlas() {
     if (!atlasReturn) return;
@@ -460,7 +476,7 @@ export default function StudyApp({
     if(v==="atlas"&&atlasReturn){returnToAtlas();return;}
     setAtlasReturn(null);
     if(v==="studio")setStudioVisited(true);
-    window.history.replaceState(null, "", window.location.pathname + (v === "shuoshuo-lesson" ? "?lesson=shuoshuo-morning" : v === "private-lessons" ? "?private=1" : v === "shuoshuo" ? "?companion=shuoshuo" : v === "myday" ? "?rehearsal=my-day-01-v2" : v === "studio" ? "?study=studio" : v === "grammar" ? "?grammar=hsk3" : v === "atlas" ? "?atlas=1" : v === "course" ? "?course=intensive" : ""));
+    window.history.replaceState(null, "", window.location.pathname + (v === "shuoshuo-lesson" ? "?lesson=shuoshuo-morning" : v === "private-lessons" ? "?private=1" : v === "shuoshuo" ? "?companion=shuoshuo" : v === "myday" ? "?rehearsal=my-day-01-v2" : v === "studio" ? "?study=studio" : v === "grammar" ? "?grammar=hsk3" : v === "atlas" ? "?atlas=1" : v === "course" ? "?course=intensive" : v === "lessons" ? "?study=library&layout="+libraryLayout+(practiceSelection?"&set=selected":"")+"&level="+level : ""));
     stopAudio();
 
     setView(v);
@@ -566,7 +582,7 @@ export default function StudyApp({
           )}
         </div>
       </aside>
-      <WritingPracticeProvider value={{db:db?.name === "chinese-os-v1-" + (user?.id??"guest") ? db : null,record,notify,penOnly,setPenOnly}}><StudyLookupProvider key={user?.id??"guest"} owner={user?.id??null} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} notify={notify} penOnly={penOnly} setPenOnly={setPenOnly}><main className="main">
+      <WritingPracticeProvider value={{db:db?.name === "chinese-os-v1-" + (user?.id??"guest") ? db : null,record,notify,penOnly,setPenOnly}}><StudyLookupProvider practiceBook={practiceBook} key={user?.id??"guest"} owner={user?.id??null} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} notify={notify} penOnly={penOnly} setPenOnly={setPenOnly}><main className="main">
         <header className="topbar">
           <span>
             <span className="breadcrumb">{t("My study space")}</span>
@@ -887,17 +903,12 @@ export default function StudyApp({
                     {t("Your learning library")}<span className="orange">.</span>
                   </h1>
                   <p>
-                    {t(levelNames[level])} · {studyItems.length} {t("words & phrases.")}{" "}
-                    {level === "bonus"
-                      ? t("Useful everyday additions.")
-                      : t("HSK 2025 syllabus.")}
+                    {practiceSelection?libraryCopy.selected:t(levelNames[level])} · {practiceSelection?chosenItems.length:studyItems.length} {t("words & phrases.")}{" "}
+                    {!practiceSelection&&(level === "bonus"?t("Useful everyday additions."):t("HSK 2025 syllabus."))}
                   </p>
                 </div>
               </div>
-              <article className="personal-lesson-entry panel"><div><p className="eyebrow">VIDEO LESSON · SENTENCE REHEARSAL</p><h2>A morning with Shuoshuo · 我的早晨</h2><p>42 reading groups · 65 source segments · 40 vocabulary references · writing practice</p></div><button className="primary" onClick={openShuoshuoLesson}>Open lesson<ArrowRight size={16}/></button></article>
-              <article className="personal-lesson-entry panel"><div><p className="eyebrow">PERSONAL LESSON · SPEAKING REHEARSAL</p><h2>我的一天 · My day</h2><p>26 original sentences + new 3 November speaking chapters · Full-sentence audio</p></div><button className="primary" onClick={openMyDay}>Open My day lesson<ArrowRight size={16}/></button></article>
-              <ReferenceLessonLinks onOpen={id=>{stopAudio();window.history.replaceState(null,'',referenceLessonHref(id)+'&from=lessons');setView('course');window.scrollTo({top:0,behavior:'instant'});}}/>
-              <button className="secondary pdf-library-button" onClick={() => setPdfSelection(filtered.map(item => item.id))}><Download size={16} /> {t("Print notebook PDF")}</button>
+              <button hidden={practiceSelection} className="secondary pdf-library-button" onClick={() => setPdfSelection(filtered.map(item => item.id))}><Download size={16} /> {t("Print notebook PDF")}</button>
               <div className="library-controls">
                 <label className="search-field">
                   <Search size={18} />
@@ -909,9 +920,10 @@ export default function StudyApp({
                 </label>
                 <select
                   aria-label={t("Choose lesson")}
-                  value={lesson}
-                  onChange={(e) => setLesson(e.target.value)}
+                  value={practiceSelection?'selected':lesson}
+                  onChange={(e) => {const selected=e.target.value==='selected';setPracticeSelection(selected);if(!selected)setLesson(e.target.value);libraryRoute(libraryLayout,selected);}}
                 >
+                  <option value="selected">{libraryCopy.selected} · {practiceBook.entries.length}</option>
                   <option value="all">
                     {t("All")} {t(levelNames[level])} {t("words ·")} {studyItems.length}
                   </option>
@@ -922,17 +934,15 @@ export default function StudyApp({
                   ))}
                 </select>
               </div>
-              <p className="library-count" role="status">
-                {filtered.length} {t(filtered.length === 1 ? "word" : "words")} ·{" "}
-                {t(levelNames[level])}
-              </p>
-              <div className="word-grid">
+              <div className="library-results-bar"><p className="library-count" role="status">{filtered.length} {t(filtered.length===1?'word':'words')} · {practiceSelection?libraryCopy.selected:t(levelNames[level])}</p><div className="library-view-switch" role="group" aria-label="Library view"><button type="button" title={libraryCopy.cards} aria-label={libraryCopy.cards} aria-pressed={libraryLayout==='cards'} onClick={()=>{setLibraryLayout('cards');libraryRoute('cards');}}><LayoutGrid size={17}/></button><button type="button" title={libraryCopy.notebook} aria-label={libraryCopy.notebook} aria-pressed={libraryLayout==='notebook'} onClick={()=>{setLibraryLayout('notebook');libraryRoute('notebook');}}><Rows3 size={17}/></button></div></div>
+              {practiceSelection&&<p className="library-selection-note">{libraryCopy.ready}</p>}
+              <div className={'word-grid'+(libraryLayout==='notebook'?' is-notebook':'')}>
                 {filtered.map((i) => (
-                  <article className="word-card panel" key={i.id}>
+                  <div className="library-word-row" key={i.id}><article className="word-card panel" data-study-sentence={i.sentence} data-study-pinyin={i.sentencePinyin} data-study-meaning={i.translation}>
                     <span className="eyebrow">
-                      {i.hskLevel ? `HSK${i.hskLevel}` : t("EXTRA")} ·{" "}
-                      {lessons.find((l) => l.id === i.lesson)?.title}
+                      {i.lesson==='selected'?libraryCopy.selected:<>{i.hskLevel ? `HSK${i.hskLevel}` : t("EXTRA")} · {lessons.find((l) => l.id === i.lesson)?.title}</>}
                     </span>
+                    <button type="button" className="icon-button library-add-choice" disabled={!practiceBook.ready||practiceBook.busy} aria-pressed={practiceBook.entries.some(v=>v.text===i.hanzi)} aria-label={practiceBook.entries.some(v=>v.text===i.hanzi)?libraryCopy.remove:libraryCopy.add} onClick={()=>void practiceBook.toggle({text:i.hanzi,pinyin:i.pinyin,meaning:i.english,contextual:i.sentence?{text:i.sentence,pinyin:i.sentencePinyin,meaning:i.translation}:undefined})}>{practiceBook.entries.some(v=>v.text===i.hanzi)?<BookmarkCheck size={18}/>:<BookmarkPlus size={18}/>}</button>
                     <div className="word-heading">
                       <div>
                         <span className="hanzi"><StudyText text={i.hanzi} whole/></span>
@@ -941,36 +951,41 @@ export default function StudyApp({
                       <button
                         className="icon-button"
                         aria-label={t("Listen to") + " " + i.pinyin}
-                        onClick={() => speak(i.hanzi, notify, i)}
+                        disabled={!sourceItems.some(v=>v.id===i.id)&&!libraryRecording(i,'word')} onClick={() => listenLibrary(i,'word')}
                       >
                         <Volume2 size={20} />
                       </button>
                     </div>
                     <h3>{i.english}</h3>
-                    <div className="sentence">
+                    <div className="sentence" hidden={!i.sentence}>
                       <span><StudyText text={i.sentence}/></span>
                       <span className="pinyin">{i.sentencePinyin}</span>
                       <small>{i.translation}</small>
                       <button
                         className="text-button"
                         aria-label={t("Listen to example:") + " " + i.pinyin}
-                        onClick={() => speak(i.sentence, notify, i)}
+                        disabled={!sourceItems.some(v=>v.id===i.id)&&!libraryRecording(i,'sentence')} onClick={() => listenLibrary(i,'sentence')}
                       >
                         <Volume2 size={14} /> {t("Listen to example")}</button>
                     </div>
                     <button
                       className="text-button"
-                      onClick={() => openPractice(i)}
+                      onClick={() => sourceItems.some(v=>v.id===i.id)?openPractice(i):setRecognitionWriting(i)}
                     >
                       {t("Practice writing")}<ArrowRight size={16} />
                     </button>
-                  </article>
+                  </article>{libraryLayout==='notebook'&&<LibraryNotebook key={(user?.id??'guest')+':'+i.id} text={i.hanzi} db={db?.name==='chinese-os-v1-'+(user?.id??'guest')?db:null}/>}</div>
                 ))}
               </div>
               {!filtered.length && (
                 <div className="empty-state">
-                  {t("No words found. Try another spelling or lesson.")}</div>
+                  {practiceSelection?libraryCopy.empty:t("No words found. Try another spelling or lesson.")}</div>
               )}
+              <details className="library-related-lessons"><summary>{({en:'Course & conversation lessons',fr:'Cours et conversations',ru:'Курс и разговорные уроки',tr:'Kurs ve konuşma dersleri'}[locale])}</summary>
+              <article className="personal-lesson-entry panel"><div><p className="eyebrow">VIDEO LESSON · SENTENCE REHEARSAL</p><h2>A morning with Shuoshuo · 我的早晨</h2><p>42 reading groups · 65 source segments · 40 vocabulary references · writing practice</p></div><button className="primary" onClick={openShuoshuoLesson}>Open lesson<ArrowRight size={16}/></button></article>
+              <article className="personal-lesson-entry panel"><div><p className="eyebrow">PERSONAL LESSON · SPEAKING REHEARSAL</p><h2>我的一天 · My day</h2><p>26 original sentences + new 3 November speaking chapters · Full-sentence audio</p></div><button className="primary" onClick={openMyDay}>Open My day lesson<ArrowRight size={16}/></button></article>
+              <ReferenceLessonLinks onOpen={id=>{stopAudio();window.history.replaceState(null,'',referenceLessonHref(id)+'&from=lessons');setView('course');window.scrollTo({top:0,behavior:'instant'});}}/>
+              </details>
             </>
           )}
           {view === "reviews" && (
@@ -1082,13 +1097,13 @@ export default function StudyApp({
                     <h1>
                       {isLanguageSkill(skill)?skillNames[skill]:skill !== "writing"
                         ? skillNames[skill] + " · " + t("Practice")
-                        : t("One stroke at a time")}
+                        : hanziAppearance.style==='print'?t("Practice writing"):t("One stroke at a time")}
                       <span className="orange">.</span>
                     </h1>
                     <p>
                       {isLanguageSkill(skill)?(skill==='pinyin'?'Recall the reading. Write every tone.':skill==='hanzi-from-pinyin'?'Read the Pinyin. Recall the matching characters.':'Type the reading. Choose the characters that fit.'):session
                         ? t("Take a breath. Recall before you reveal.")
-                        : t("Watch it. Trace it. Make it yours.")}
+                        : hanziAppearance.style==='print'?t("Look at the reference. Write in the empty grid."):t("Watch it. Trace it. Make it yours.")}
                     </p>
                   </div>
                   {!session && (
@@ -1099,6 +1114,7 @@ export default function StudyApp({
                         setSelected(items.find((i) => i.id === e.target.value)!)
                       }
                     >
+                      {!studyItems.some(i=>i.id===selected.id)&&<option value={selected.id}>{selected.hanzi+' · '+selected.pinyin+' · '+selected.english}</option>}
                       {studyItems.map((i) => (
                         <option key={i.id} value={i.id}>
                           {isLanguageSkill(skill)?i.english:i.hanzi+' · '+i.pinyin+' · '+i.english}
@@ -1301,8 +1317,8 @@ export default function StudyApp({
           </footer>
         </div>
       <dialog ref={recognitionWriter} className="study-writing-dialog" aria-label={t("Practice writing")} onCancel={e=>{e.preventDefault();setRecognitionWriting(null);}} onClose={()=>setRecognitionWriting(null)}>
-        <header><h2>{t("Practice writing")}</h2><button className="secondary" onClick={()=>setRecognitionWriting(null)} aria-label={t("Back to recognition")}><X size={20}/></button></header>
-        {recognitionWriting&&<SharedWriting key={recognitionWriting.id} hanzi={recognitionWriting.hanzi} item={recognitionWriting} onBack={()=>setRecognitionWriting(null)}/>}
+        <header><h2>{t("Practice writing")}</h2><button className="secondary" onClick={()=>setRecognitionWriting(null)} aria-label={view==='lessons'?({en:'Back to library',fr:'Retour à la bibliothèque',ru:'Назад в библиотеку',tr:'Kitaplığa dön'}[locale]):t("Back to recognition")}><X size={20}/></button></header>
+        {recognitionWriting&&<SharedWriting key={recognitionWriting.id} hanzi={recognitionWriting.hanzi} item={recognitionWriting} audio={recognitionWriting.id.startsWith('practice-choice:')?{word:libraryRecording(recognitionWriting,'word'),sentence:libraryRecording(recognitionWriting,'sentence')}:undefined} onBack={()=>setRecognitionWriting(null)}/>}
       </dialog></main></StudyLookupProvider></WritingPracticeProvider>
       {pdfSelection && <PdfExport key={level} level={level} initialIds={pdfSelection} onClose={() => setPdfSelection(null)} />}
       {toast && (

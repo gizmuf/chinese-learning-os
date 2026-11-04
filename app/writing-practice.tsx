@@ -1,4 +1,5 @@
 "use client";
+import {HanziDisplayControls,useHanziStyle} from './hanzi-style';
 import {useEffect,useRef,useState} from 'react';
 import {ArrowRight,Check,ChevronRight,Lightbulb,PenLine,Play,Sparkles,Trash2,Undo2,Volume2} from 'lucide-react';
 import type {Item,Mode} from './content';
@@ -54,6 +55,8 @@ export default function Writing({
   contextExample?: boolean;
 }) {
   const { t, locale } = useI18n();
+  const {style}=useHanziStyle(),previousAppearance=useRef(style);
+  useEffect(()=>{if(previousAppearance.current!==style&&style==='print'&&!session&&(mode==='trace'||mode==='watch'))setMode('copy');previousAppearance.current=style;},[style,session,mode,setMode]);
   function listen(kind:'word'|'sentence') {
     if (audio) {const source=audio[kind];if(source)playRecording(source,notify);}
     else speak(kind==='word'?item.hanzi:item.sentence,notify,item);
@@ -218,7 +221,7 @@ export default function Writing({
           ))}
         </div>
         {characters.length>1&&<div className="writing-layout-controls" role="group" aria-label={t('Writing layout')}>{[false,true].map(whole=><button type="button" className="secondary" key={String(whole)} aria-pressed={wholeWord===whole} onClick={()=>setWholeWord(whole)}>{whole?({en:'Whole word',fr:'Mot entier',ru:'Целое слово',tr:'Tüm sözcük'}[locale]):({en:'One character',fr:'Un caractère',ru:'Один иероглиф',tr:'Tek karakter'}[locale])}</button>)}</div>}
-        <div className={wholeWord?'whole-word-writing':'single-character-writing'}>{(wholeWord?characters.map((_,i)=>i):[index]).map(i=><div className={'writing-word-cell'+(i===index?' is-active':'')} key={i} onPointerDownCapture={event=>{if(!penOnly||event.pointerType==='pen')setIndex(i);}} onFocusCapture={()=>setIndex(i)}><div className="writing-grid"><div className="grid-line horizontal"/><div className="grid-line vertical"/><div className="grid-line diagonal-one"/><div className="grid-line diagonal-two"/>{free?(ready?<Ink disabled={saved} strokes={strokes[i]??[]} onChange={value=>changeStrokes(value,i)} penOnly={penOnly}/>:<span className="canvas-notice">{t('Loading your saved drawing…')}</span>):<Guided character={characters[i]} mode={mode as 'watch'|'trace'} penOnly={penOnly} replay={replay+(cellReplay[i]??0)} onMistake={()=>setMistakes(n=>n+1)} onAvailabilityChange={available=>setUnavailable(previous=>{const next=new Set(previous);if(available)next.delete(i);else next.add(i);return next;})} onComplete={()=>setCompleted(previous=>new Set([...previous,i]))}/>}</div>{wholeWord&&<button type="button" className="text-button" aria-pressed={i===index} onClick={()=>setIndex(i)}>{t('Character')} {i+1}{completed.has(i)&&!unavailable.has(i)?' ✓':''}</button>}</div>)}</div>
+        {!session&&<HanziDisplayControls compact showHighlight={false}/>}<div className={wholeWord?'whole-word-writing':'single-character-writing'}>{(wholeWord?characters.map((_,i)=>i):[index]).map(i=><div className={'writing-word-cell'+(i===index?' is-active':'')} key={i} onPointerDownCapture={event=>{if(!penOnly||event.pointerType==='pen')setIndex(i);}} onFocusCapture={()=>setIndex(i)}><div className="writing-grid"><div className="grid-line horizontal"/><div className="grid-line vertical"/><div className="grid-line diagonal-one"/><div className="grid-line diagonal-two"/>{free?(ready?<Ink disabled={saved} strokes={strokes[i]??[]} onChange={value=>changeStrokes(value,i)} penOnly={penOnly}/>:<span className="canvas-notice">{t('Loading your saved drawing…')}</span>):<Guided character={characters[i]} mode={mode as 'watch'|'trace'} penOnly={penOnly} replay={replay+(cellReplay[i]??0)} onMistake={()=>setMistakes(n=>n+1)} onAvailabilityChange={available=>setUnavailable(previous=>{const next=new Set(previous);if(available)next.delete(i);else next.add(i);return next;})} onComplete={()=>setCompleted(previous=>new Set([...previous,i]))}/>}</div>{wholeWord&&<button type="button" className="text-button" aria-pressed={i===index} onClick={()=>setIndex(i)}>{t('Character')} {i+1}{completed.has(i)&&!unavailable.has(i)?' ✓':''}</button>}</div>)}</div>
         <p className="canvas-caption">
           {completed.has(index) && !unavailable.has(index) && !free
             ? t("✓ Character complete. Choose the next cell.")
