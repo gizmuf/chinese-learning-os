@@ -35,6 +35,8 @@ function Glyph({ data, through, active, direction = false }: {
   </svg>;
 }
 
+// Keep untouched cells stable while a neighbouring cell commits a stroke.
+const EMPTY_STROKES:Stroke[]=[];
 function CharacterRow({ character, reading, position, sheet, change, penOnly, disabled, notify }: {
   character: string; reading?:string; position: number; sheet: Sheet;
   change: (key: string, strokes: Stroke[]) => void; penOnly: boolean; disabled: boolean; notify:(message:string)=>void;
@@ -55,7 +57,7 @@ function CharacterRow({ character, reading, position, sheet, change, penOnly, di
   }, [character, retry]);
   function cell(slot: number, trace: boolean, label: string) {
     const key = `${position}:${slot}`;
-    const strokes = sheet.cells[key] ?? [];
+    const strokes = sheet.cells[key] ?? EMPTY_STROKES;
     return <div className="notebook-cell" key={slot}>
       <div className="notebook-square">
         <Grid />
@@ -92,7 +94,7 @@ function CharacterRow({ character, reading, position, sheet, change, penOnly, di
       {cell(0, true, t("Trace 1"))}{cell(1, true, t("Trace 2"))}
       {cell(2, false, t("Copy 1"))}{cell(3, false, t("Copy 2"))}{cell(4, false, t("Copy 3"))}
     </div>
-    <div className="notebook-pinyin-practice"><h4>Pinyin with tones</h4>{!sheet.hidden&&reading&&<p className="pinyin">{reading}</p>}<p>Write the syllable and its tone mark beside your Hanzi practice.{!reading?' Use the whole-word reading above; no character reading has been guessed.':''}</p><PinyinHandwriting strokes={sheet.cells[`pinyin:${position}`]??[]} onChange={strokes=>change(`pinyin:${position}`,strokes)} penOnly={penOnly} disabled={disabled}/><button type="button" className="text-button" disabled={disabled} onClick={()=>change(`pinyin:${position}`,[])}>Clear Pinyin</button></div>
+    <div className="notebook-pinyin-practice"><h4>Pinyin with tones</h4>{!sheet.hidden&&reading&&<p className="pinyin">{reading}</p>}<p>Write the syllable and its tone mark beside your Hanzi practice.{!reading?' Use the whole-word reading above; no character reading has been guessed.':''}</p><PinyinHandwriting strokes={sheet.cells[`pinyin:${position}`]??EMPTY_STROKES} onChange={strokes=>change(`pinyin:${position}`,strokes)} penOnly={penOnly} disabled={disabled}/><button type="button" className="text-button" disabled={disabled} onClick={()=>change(`pinyin:${position}`,[])}>Clear Pinyin</button></div>
   </section>;
 }
 function Grid() {
@@ -154,7 +156,7 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
       {characters.map((character, position) => <CharacterRow key={`${position}:${character}`} {...{ character, position, sheet, change, penOnly, notify }} reading={readings?.[position]?.pinyin} disabled={saved} />)}
       <section className="notebook-character"><h3>{t("Write the whole word")}</h3><p>{sheet.hidden ? t("Write the characters together from memory.") : item.hanzi}</p>
         <div className="notebook-cells notebook-whole-word">{characters.map((_, i) => <div className="notebook-cell" key={i}>
-          <div className="notebook-square"><Grid /><Ink strokes={sheet.cells[`word:${i}`] ?? []} onChange={s => change(`word:${i}`, s)} penOnly={penOnly} disabled={saved} /></div>
+          <div className="notebook-square"><Grid /><Ink strokes={sheet.cells[`word:${i}`] ?? EMPTY_STROKES} onChange={s => change(`word:${i}`, s)} penOnly={penOnly} disabled={saved} /></div>
           <div className="notebook-cell-tools"><small>{t("Character {0}", [i + 1])}</small><button aria-label={t("Clear whole word character {0}", [i + 1])} disabled={saved || !sheet.cells[`word:${i}`]?.length} onClick={() => change(`word:${i}`, [])}><RotateCcw size={14} /></button></div>
         </div>)}</div>
       </section>

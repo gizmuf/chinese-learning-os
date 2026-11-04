@@ -10,4 +10,8 @@ Use the established Intensive Course lesson list, numbering and quiet light surf
 - Keep the shared toolbar compact: language menu, two visibly distinct Hanzi examples, component highlight only in the stroke mode. Keep accessible names, keyboard focus and usable touch targets.
 - Exploration, listening and supported writing do not create independent review grades. Preserve existing lesson/activity IDs and progress.
 
-November 4 implementation: Lesson 12 transport cards + contextual choices; reference time lesson morning/class stories and daypart bands; shared compact appearance/language controls. Other lesson structures remain intact.
+November 4 implementation: Lesson 12 vocabulary/example pairs with decorative pictures + contextual checks; reference time lesson morning/class stories and daypart bands; shared compact appearance/language controls. Other lesson structures remain intact.
+
+Lesson 12 follows Lessons 6–8 directly: Overview, numbered Lesson journey, Short checks, PDF materials. Each vocabulary card uses the standard whole-word StudyText dictionary target, Pinyin, translation, Listen and Write. Its authored sentence appears beside it on desktop and immediately beneath it on mobile. Illustrations are small and decorative. No scene-selector cards, comparison mode or per-character annotation renderer. Existing legacy links open the corresponding journey topic.
+
+Shared Writing Studio offers Whole word / One character using the same per-character strokes and completion state. Tablet/desktop starts with whole-word fields for 2–6 character expressions; phone starts with one field. Switching layout never clears the draft. All characters must be completed before comparing/saving; missing stroke data still blocks guided completion. Pencil-only pointer filtering applies to field selection as well as ink.

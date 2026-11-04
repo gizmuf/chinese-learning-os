@@ -48,7 +48,9 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false }: {
     for (const stroke of current.current) paintInk(ctx, stroke, rect.width, rect.height);
     schedule();
   }, [schedule]);
-  useEffect(() => { current.current = strokes; active.current = null; rebuild(); }, [strokes, rebuild]);
+  // Parent echoes our committed array after pointer-up. A new Pencil stroke may
+  // already have started: only an external replacement (Clear/restore) cancels it.
+  useEffect(() => { if(current.current!==strokes){current.current=strokes;active.current=null;} rebuild(); }, [strokes, rebuild]);
   useEffect(() => {
     const obs = new ResizeObserver(rebuild);
     obs.observe(ref.current!);
@@ -97,7 +99,7 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false }: {
           if (stroke.points.length < 1500) stroke.points.push(point(p, stroke.rect));
         }
         schedule();
-      }} onPointerUp={finish} onPointerCancel={cancel} onLostPointerCapture={cancel}/>
+      }} onPointerUp={finish} onPointerCancel={cancel} onLostPointerCapture={e=>{if(!e.currentTarget.hasPointerCapture(e.pointerId))cancel(e);}}/>
     {touchNotice && <span className="canvas-notice">{t("Pencil only is on. Turn it off for finger or mouse input.")}</span>}
   </>;
 }

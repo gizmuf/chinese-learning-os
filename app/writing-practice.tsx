@@ -62,6 +62,8 @@ export default function Writing({
     Array.from(item.hanzi, () => []),
   );
   const [index, setIndex] = useState(0);
+  const [wholeWord,setWholeWord]=useState(false),[cellReplay,setCellReplay]=useState<Record<number,number>>({});
+  useEffect(()=>{setWholeWord(item.hanzi.length>1&&item.hanzi.length<=6&&typeof window!=='undefined'&&!!window.matchMedia?.("(min-width: 768px)").matches);},[item.id,item.hanzi]);
   const [assisted, setAssisted] = useState(supported);
   const [hints, setHints] = useState(0);
   const [mistakes, setMistakes] = useState(0);
@@ -132,8 +134,8 @@ export default function Writing({
   const allWritten = free
     ? strokes.every((s) => s.length > 0)
     : completed.size === characters.length&&unavailable.size===0;
-  function changeStrokes(s: Stroke[]) {
-    setStrokes((old) => old.map((v, i) => (i === index ? s : v)));
+  function changeStrokes(s: Stroke[],at=index) {
+    setStrokes((old) => old.map((v, i) => (i === at ? s : v)));
   }
   async function save(r: LearningEvent["rating"]) {
     if (saved || saveLock.current) return;
@@ -215,38 +217,8 @@ export default function Writing({
             </button>
           ))}
         </div>
-        <div className="writing-grid">
-          <div className="grid-line horizontal" />
-          <div className="grid-line vertical" />
-          <div className="grid-line diagonal-one" />
-          <div className="grid-line diagonal-two" />
-          {free ? (
-            ready ? (
-              <Ink
-                key={index}
-                disabled={saved}
-                strokes={strokes[index] ?? []}
-                onChange={changeStrokes}
-                penOnly={penOnly}
-              />
-            ) : (
-              <span className="canvas-notice">{t("Loading your saved drawing…")}</span>
-            )
-          ) : (
-            <Guided
-              key={index}
-              character={characters[index]}
-              mode={mode as "watch" | "trace"}
-              penOnly={penOnly}
-              replay={replay}
-              onMistake={() => setMistakes((n) => n + 1)}
-              onAvailabilityChange={available=>setUnavailable(previous=>{const next=new Set(previous);if(available)next.delete(index);else next.add(index);return next;})}
-              onComplete={() =>
-                setCompleted((prev) => new Set([...prev, index]))
-              }
-            />
-          )}
-        </div>
+        {characters.length>1&&<div className="writing-layout-controls" role="group" aria-label={t('Writing layout')}>{[false,true].map(whole=><button type="button" className="secondary" key={String(whole)} aria-pressed={wholeWord===whole} onClick={()=>setWholeWord(whole)}>{whole?({en:'Whole word',fr:'Mot entier',ru:'Целое слово',tr:'Tüm sözcük'}[locale]):({en:'One character',fr:'Un caractère',ru:'Один иероглиф',tr:'Tek karakter'}[locale])}</button>)}</div>}
+        <div className={wholeWord?'whole-word-writing':'single-character-writing'}>{(wholeWord?characters.map((_,i)=>i):[index]).map(i=><div className={'writing-word-cell'+(i===index?' is-active':'')} key={i} onPointerDownCapture={event=>{if(!penOnly||event.pointerType==='pen')setIndex(i);}} onFocusCapture={()=>setIndex(i)}><div className="writing-grid"><div className="grid-line horizontal"/><div className="grid-line vertical"/><div className="grid-line diagonal-one"/><div className="grid-line diagonal-two"/>{free?(ready?<Ink disabled={saved} strokes={strokes[i]??[]} onChange={value=>changeStrokes(value,i)} penOnly={penOnly}/>:<span className="canvas-notice">{t('Loading your saved drawing…')}</span>):<Guided character={characters[i]} mode={mode as 'watch'|'trace'} penOnly={penOnly} replay={replay+(cellReplay[i]??0)} onMistake={()=>setMistakes(n=>n+1)} onAvailabilityChange={available=>setUnavailable(previous=>{const next=new Set(previous);if(available)next.delete(i);else next.add(i);return next;})} onComplete={()=>setCompleted(previous=>new Set([...previous,i]))}/>}</div>{wholeWord&&<button type="button" className="text-button" aria-pressed={i===index} onClick={()=>setIndex(i)}>{t('Character')} {i+1}{completed.has(i)&&!unavailable.has(i)?' ✓':''}</button>}</div>)}</div>
         <p className="canvas-caption">
           {completed.has(index) && !unavailable.has(index) && !free
             ? t("✓ Character complete. Choose the next cell.")
@@ -270,7 +242,7 @@ export default function Writing({
             onClick={() => {
               if (free) changeStrokes([]);
               else {
-                setReplay((r) => r + 1);
+                setCellReplay(previous=>({...previous,[index]:(previous[index]??0)+1}));
                 setCompleted((p) => {
                   const n = new Set(p);
                   n.delete(index);
@@ -309,7 +281,7 @@ export default function Writing({
           <span>
             {t("Character")} {t("{0} of {1}", [index + 1, characters.length])}
           </span>
-          {index < characters.length - 1 ? (
+          {!wholeWord && index < characters.length - 1 ? (
             <button
               className="secondary"
               onClick={() => setIndex((i) => i + 1)}
