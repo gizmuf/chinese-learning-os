@@ -1,4 +1,6 @@
 "use client";
+import {writingPracticeHref,writingPracticeRoute,type WritingOrigin} from './writing-navigation';
+
 import LanguagePractice from './language-practice';
 import {isLanguageSkill,languageSkills,languagePracticeHref,languagePracticeRoute} from './pinyin-practice-model';
 import ReferenceLessonLinks from './reference-lesson-links';
@@ -133,6 +135,9 @@ export default function StudyApp({
   const [search, setSearch] = useState("");
   const [lesson, setLesson] = useState("all");
   const [level, setLevel] = useState<StudyLevel>("hsk1");
+  const [writingOrigin,setWritingOrigin]=useState<WritingOrigin|undefined>();
+  const lastWriting=useRef<{item:Item;mode:Mode;layout:'studio'|'notebook';origin?:WritingOrigin}|null>(null);
+
   const studyItems = useMemo(
     () => items.filter((item) => isInLevel(item, level)),
     [level, items],
@@ -223,7 +228,9 @@ export default function StudyApp({
         setDb(store); setEvents(history);
         setSync(user ? t("Ready to sync") : t("Guest · saved on this device"));
         const requestedAll=allReviewLevel(window.location.search),languageRoute=languagePracticeRoute(window.location.search,sourceItems);
-        if(alive&&languageRoute){const target=sourceItems.find(item=>item.id===languageRoute.itemId)!;setLevel(target.hskLevel?('hsk'+target.hskLevel) as StudyLevel:'bonus');setSelected(target);setSkill(languageRoute.skill);setLanguageRun(languageRoute.runId);setMode('recall');setSession(null);setView('practice');
+        const writingRoute=writingPracticeRoute(window.location.search,sourceItems);
+        if(alive&&writingRoute){const item=sourceItems.find(v=>v.id===writingRoute.itemId)!;setSelected(item);setLevel(item.hskLevel?('hsk'+item.hskLevel) as StudyLevel:'bonus');setMode(writingRoute.mode);setWritingLayout(writingRoute.layout);setWritingOrigin(writingRoute.origin);setSkill('writing');setSession(null);setFinished(false);setView('practice');}
+        else if(alive&&languageRoute){const target=sourceItems.find(item=>item.id===languageRoute.itemId)!;setLevel(target.hskLevel?('hsk'+target.hskLevel) as StudyLevel:'bonus');setSelected(target);setSkill(languageRoute.skill);setLanguageRun(languageRoute.runId);setMode('recall');setSession(null);setView('practice');
         }else if(alive&&requestedAll){
           const queue=items.filter(item=>isInLevel(item,requestedAll));
           const previous=validRecognitionDraft(recognition)&&recognition.practice&&JSON.stringify(recognition.itemIds)===JSON.stringify(queue.map(i=>i.id))?recognition:null;
@@ -376,7 +383,9 @@ export default function StudyApp({
   function openPractice(item: Item, practiceMode: Mode = "trace") {
     stopAudio();
     setAtlasReturn(null);
-    window.history.replaceState(null, "", window.location.pathname);
+    const origin:WritingOrigin|undefined=view==='practice'?writingOrigin:{view:view as WritingOrigin['view'],url:window.location.pathname+window.location.search,scroll:window.scrollY,search,lesson,level};
+    setWritingOrigin(origin);
+    window.history.replaceState(null,'',writingPracticeHref(item.id,practiceMode,writingLayout,origin));
     setSession(null);
     setFinished(false);
     setSelected(item);
@@ -385,6 +394,8 @@ export default function StudyApp({
     setView("practice");
     window.scrollTo({ top: 0, behavior: "instant" });
   }
+  useEffect(()=>{if(!isReady||view!=='practice'||skill!=='writing'||session)return;lastWriting.current={item:selected,mode,layout:writingLayout,origin:writingOrigin};window.history.replaceState(null,'',writingPracticeHref(selected.id,mode,writingLayout,writingOrigin));},[isReady,view,skill,selected.id,mode,writingLayout,writingOrigin,session]);
+  function returnFromWriting(){if(!writingOrigin){changeView('lessons');return;}stopAudio();setSession(null);setFinished(false);setView(writingOrigin.view);setSearch(writingOrigin.search??'');setLesson(writingOrigin.lesson??'all');if(['hsk1','hsk2','hsk3','bonus'].includes(writingOrigin.level??''))setLevel(writingOrigin.level as StudyLevel);window.history.replaceState(null,'',writingOrigin.url);const y=writingOrigin.scroll;requestAnimationFrame(()=>requestAnimationFrame(()=>window.scrollTo({top:y,behavior:'instant'})));}
   function startReview(s: Skill, extra: boolean|'all' = false) {
     const queue=buildReviewQueue(events,s,studyItems,minutes,extra==='all'?'all':extra?'extra':'scheduled');
     if (!queue.length) {
@@ -445,15 +456,13 @@ export default function StudyApp({
   function openMyDay(){setMyDayOrigin(view==="studio"?"studio":"lessons");changeView("myday");}
   function changeView(v: View) {
     setStudioMenu(false);
+    if(v==='practice'){const previous=lastWriting.current;if(previous)setWritingLayout(previous.layout);openPractice(previous?.item??selected,previous?.mode??mode);if(previous)setWritingOrigin(previous.origin);return;}
     if(v==="atlas"&&atlasReturn){returnToAtlas();return;}
     setAtlasReturn(null);
     if(v==="studio")setStudioVisited(true);
     window.history.replaceState(null, "", window.location.pathname + (v === "shuoshuo-lesson" ? "?lesson=shuoshuo-morning" : v === "private-lessons" ? "?private=1" : v === "shuoshuo" ? "?companion=shuoshuo" : v === "myday" ? "?rehearsal=my-day-01-v2" : v === "studio" ? "?study=studio" : v === "grammar" ? "?grammar=hsk3" : v === "atlas" ? "?atlas=1" : v === "course" ? "?course=intensive" : ""));
     stopAudio();
-    if (v === "practice") {
-      setSkill("writing");
-      setMode("trace");
-    }
+
     setView(v);
     window.scrollTo({ top: 0, behavior: "instant" });
     setSession(null);
@@ -630,6 +639,7 @@ export default function StudyApp({
           {view==="myday"&&<Suspense fallback={<p role="status">Opening your lesson…</p>}><MyDayLesson slowAudio={slowAudio} onSlowAudio={setSlowAudio} key={user?.id??"guest"} owner={user?.id??"guest"} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} record={record} notify={notify} onBack={()=>changeView(myDayOrigin)}/></Suspense>}
           {studioVisited&&<div hidden={view!=="studio"}><Suspense fallback={<p role="status">Opening StudyStudio…</p>}><StudyStudio key={user?.id??"guest"} owner={user?.id??null} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} record={record} onExit={()=>changeView("today")} onMyDay={openMyDay} onCompanion={openCompanion} onShuoshuoLesson={openShuoshuoLesson} menuOpen={studioMenu} onMenu={()=>setStudioMenu(v=>!v)}/></Suspense></div>}
           {(view === "atlas" || atlasReturn) && <div hidden={view!=="atlas"}><Suspense fallback={<p role="status">{t("Loading your notebook…")}</p>}><Atlas owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} onWord={openAtlasWord}/></Suspense></div>}
+          {view==='practice'&&!session&&!atlasReturn&&<button className="secondary atlas-return-button" onClick={returnFromWriting}><ChevronLeft size={16}/>{({en:'Back to learning material',fr:'Retour au cours',ru:'Назад к материалу',tr:'Ders materyaline dön'})[locale]}</button>}
           {view==="practice" && atlasReturn && <button className="secondary atlas-return-button" onClick={returnToAtlas}><ArrowRight size={16} style={{transform:"rotate(180deg)"}}/>{t("Back to Cloud Atlas")}</button>}
           {view === "grammar" && <Suspense fallback={<p>{t("Loading your notebook…")}</p>}><HSK3Grammar key={user?.id ?? "guest"} owner={user?.id ?? null} db={db?.name === "chinese-os-v1-"+(user?.id ?? "guest") ? db : null}/></Suspense>}
           {view === "course" && <IntensiveCourse onReferenceLibraryBack={()=>changeView("lessons")} owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} recordHSK={record} notify={notify} onHSKRecall={item => { setLevel(item.hskLevel === 3 ? "hsk3" : item.hskLevel === 2 ? "hsk2" : item.hskLevel === 1 ? "hsk1" : "bonus"); openPractice(item, "recall"); }} />}
@@ -1097,7 +1107,7 @@ export default function StudyApp({
                     </select>
                   )}
                 </div>
-                {!session&&<div className="language-studio-tabs" role="group" aria-label="Writing and language practice"><button type="button" className={skill==='writing'?'primary':'secondary'} aria-pressed={skill==='writing'} onClick={()=>{setLanguageRun(undefined);window.history.replaceState(null,'','/');setSkill('writing');}}>Hanzi writing</button>{languageSkills.map(value=><button type="button" key={value} className={skill===value?'primary':'secondary'} aria-pressed={skill===value} onClick={()=>{setLanguageRun(undefined);setSkill(value);}}>{skillNames[value]}</button>)}</div>}
+                {!session&&<div className="language-studio-tabs" role="group" aria-label="Writing and language practice"><button type="button" className={skill==='writing'?'primary':'secondary'} aria-pressed={skill==='writing'} onClick={()=>{setLanguageRun(undefined);setSkill('writing');}}>Hanzi writing</button>{languageSkills.map(value=><button type="button" key={value} className={skill===value?'primary':'secondary'} aria-pressed={skill===value} onClick={()=>{setLanguageRun(undefined);setSkill(value);}}>{skillNames[value]}</button>)}</div>}
                 {skill === "writing" && !session && (
                   <div className="notebook-layout-switch" role="group" aria-label={t("Writing layout")}>
                     <button className={writingLayout === "studio" ? "selected" : ""} aria-pressed={writingLayout === "studio"} onClick={() => setWritingLayout("studio")}>{t("Single character")}</button>

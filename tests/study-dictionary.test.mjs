@@ -7,11 +7,13 @@ const result=await build({stdin:{contents:`
  import {renderToStaticMarkup} from 'react-dom/server';
  import {DictionaryWords,DictionaryAudio,StudyDictionaryDialog} from './app/study-dictionary';
  import {studyDictionary} from './app/atlas-spatial-model';
+ import {StudyText,LookupContext} from './app/study-lookup-context';
  import {lesson05Terms} from './app/lesson05-data';
  const dictionary=studyDictionary('en');
  for(const v of lesson05Terms)dictionary.set(v.hanzi,{...dictionary.get(v.hanzi),text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning.en,audio:{text:v.hanzi,pinyin:v.pinyin,context:false,source:'/course05/audio/course05-'+v.id+'-word.mp3'}});
+ export const aligned=(text,pinyin,enabled=true,sourceText,offset)=>renderToStaticMarkup(h(LookupContext.Provider,{value:{dictionary,open:()=>{}}},h(StudyText,{text,pinyin,annotatePinyin:enabled,sourceText,offset})));
  export const words=text=>renderToStaticMarkup(h(DictionaryWords,{text,dictionary,onLookup:()=>{}}));
- export const contextualDefinition=(entry)=>renderToStaticMarkup(h(StudyDictionaryDialog,{entry,dictionary,dialog:createRef(),opener:createRef(),onClose:()=>{},onLookup:()=>{},speaker:recording=>h(DictionaryAudio,{recording,playing:null,onPlay:()=>{}})}));
+ export const contextualDefinition=(entry)=>renderToStaticMarkup(h(StudyDictionaryDialog,{entry,dictionary,dialog:createRef(),opener:createRef(),onClose:()=>{},onLookup:()=>{},onWrite:()=>{},onExplore:()=>{},speaker:recording=>h(DictionaryAudio,{recording,playing:null,onPlay:()=>{}})}));
  export const definition=text=>renderToStaticMarkup(h(StudyDictionaryDialog,{entry:dictionary.get(text),dictionary,dialog:createRef(),opener:createRef(),headingId:'lesson-word',onClose:()=>{},onLookup:()=>{},speaker:recording=>h(DictionaryAudio,{recording,playing:null,onPlay:()=>{}})}));
  `,resolveDir:process.cwd(),loader:'tsx'},bundle:true,format:'cjs',platform:'node',write:false,loader:{'.css':'empty'},logLevel:'silent'});
 const module={exports:{}};new Function('require','module','exports',result.outputFiles[0].text)(createRequire(import.meta.url),module,module.exports);
@@ -43,4 +45,29 @@ test('source sentence recording stays with its source while isolated headword au
  assert.match(header,/Whole word: 醒/);assert.doesNotMatch(header,/Listen to the sentence/);assert.match(context,/Listen to the sentence: 我每天八点左右醒来/);
  const sourceOnly=m.contextualDefinition({...entry,audio:sentence.audio});assert.doesNotMatch(sourceOnly.slice(0,sourceOnly.indexOf('</header>')),/Listen to the sentence/);assert.match(sourceOnly,/Listen to the sentence/);
  const missing=m.contextualDefinition({...entry,audio:undefined,contextual:{...sentence,audio:undefined}});assert.doesNotMatch(missing,/class="sp-speaker/);
+});
+
+test('all headwords expose the same nearby writing action and supported Atlas link',()=>{
+ for(const entry of [{text:'在',pinyin:'zài',meaning:'at',character:'在'},{text:'书店',pinyin:'shūdiàn',meaning:'bookshop'},{text:'银行',pinyin:'yínháng',meaning:'bank'}]){
+  const html=m.contextualDefinition(entry),actions=html.slice(html.indexOf('class="sp-dictionary-actions"'),html.indexOf('</div>',html.indexOf('class="sp-dictionary-actions"')));
+  assert.match(actions,/>Write<\/button>/,entry.text);
+  assert.match(actions,/Explore in Atlas/,entry.text);
+  assert.equal((html.match(/>Write<\/button>/g)||[]).length,1);
+ }
+ const unavailable=m.contextualDefinition({text:'口',pinyin:'kǒu',meaning:'mouth',atlasAvailable:false});assert.match(unavailable,/>Write<\/button>/);assert.doesNotMatch(unavailable,/Explore in Atlas/);
+});
+test('source context precedes character structure while examples and writing remain intact',()=>{
+ const html=m.contextualDefinition({text:'得',pinyin:'de',meaning:'complement particle',contextual:{text:'我跑得很快。',pinyin:'Wǒ pǎo de hěn kuài.',meaning:'I run fast.'}});
+ assert.ok(html.indexOf('sp-dictionary-context')<html.indexOf('sp-dictionary-structure'));
+ assert.match(html,/In this sentence/);assert.match(html,/I run fast/);
+ const examples=m.definition('久');assert.match(examples,/Examples in use/);
+});
+
+test('aligned Pinyin remains attached to the right Hanzi without replacing dictionary word targets',()=>{
+ const html=m.aligned('银行在书店东边。','Yínháng zài shūdiàn dōngbian.');
+ assert.match(html,/<ruby[^>]*>银<rt>yín<\/rt>/);assert.match(html,/<ruby[^>]*>行<rt>háng<\/rt>/);
+ assert.match(html,/aria-label="银行"/);assert.match(html,/aria-label="书店"/);
+ assert.doesNotMatch(m.aligned('银行','yínháng',false),/<rt>/);
+ const chunk=m.aligned('书店','Yínháng zài shūdiàn dōngbian.',true,'银行在书店东边。',3);assert.match(chunk,/>书<rt>shū<\/rt>/);assert.match(chunk,/>店<rt>diàn<\/rt>/);
+ assert.doesNotMatch(m.aligned('哪儿','nǎr'),/<rt>/,'ambiguous erhua is never assigned to the wrong character');
 });

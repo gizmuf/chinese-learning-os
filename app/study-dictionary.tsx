@@ -2,12 +2,13 @@
 import {extendedCharacters} from './atlas-cloud-extended';
 import {useEffect,useMemo,useState,type ReactNode,type RefObject} from 'react';
 import {authoredPinyinBoundaries} from './pinyin-boundaries';
+import {studyAtlasHref} from './study-lookup-model';
 import {useDictionaryWindow} from './use-dictionary-window';
 import {dictionaryLearningNote} from './dictionary-learning-notes';
 import {simplifiedDisplayText} from './simplified-chinese';
 import {describeStructure} from './dictionary-source-model';
 import {dictionaryStructureParts,dictionaryComponentReading} from './dictionary-structure';
-import {ArrowRight,GripHorizontal,Volume2,X} from 'lucide-react';
+import {ArrowRight,GripHorizontal,Network,PenLine,Volume2,X} from 'lucide-react';
 import {useI18n} from './i18n';
 import {L} from './course-data';
 import {dictionaryTokens,pronunciationPresentation,type StudyDictionary,type DictionaryEntry,type Pronunciation} from './atlas-spatial-model';
@@ -36,7 +37,7 @@ export function StudyDictionaryDialog({entry,dictionary,dialog,opener,headingId=
  const parts=entry?dictionaryBreakdown(entry,dictionary,locale):null,examples=entry&&!parts?.sentence&&!entry.contextual?studyExamples(entry.text,locale):[];
  function select(text:string,trigger:HTMLButtonElement){if(!entry||text===entry.text)return;setTrail(previous=>[...previous,entry]);onLookup(text,trigger)}
  function close(){setTrail([]);onClose()}
- useEffect(()=>{if(!entry){if(dialog.current?.open)dialog.current.close();return}const el=dialog.current;if(!el)return;el.scrollTop=0;const body=el.querySelector('.sp-dictionary-body');if(body)body.scrollTop=0;if(!el.open)el.showModal();el.querySelector<HTMLButtonElement>('.sp-dictionary-close')?.focus({preventScroll:true});},[entry?.text,dialog]);
+ useEffect(()=>{if(!entry){if(dialog.current?.open)dialog.current.close();return}const el=dialog.current;if(!el)return;el.scrollTop=0;const body=el.querySelector('.sp-dictionary-body');if(body)body.scrollTop=0;if(!el.open)el.showModal();el.querySelector<HTMLElement>('.sp-dictionary-movebar h2')?.focus({preventScroll:true});},[entry?.text,dialog]);
  const {moving,resizing}=useDictionaryWindow(dialog,opener,entry);
  const learningNote=entry?dictionaryLearningNote(entry.text,locale):undefined;
  const senseKind=(kind:'name'|'variant'|'rare')=>({en:{name:'Name sense · source-marked',variant:'Variant · source-marked',rare:'Rare / archaic · source-marked'},fr:{name:'Nom propre · indiqué par la source',variant:'Variante · indiquée par la source',rare:'Rare / archaïque · indiqué par la source'},ru:{name:'Имя собственное · помета источника',variant:'Вариант · помета источника',rare:'Редкое / устаревшее · помета источника'},tr:{name:'Özel ad anlamı · kaynak işaretli',variant:'Varyant · kaynak işaretli',rare:'Nadir / eski · kaynak işaretli'}}[locale][kind]);
@@ -45,8 +46,9 @@ export function StudyDictionaryDialog({entry,dictionary,dialog,opener,headingId=
  return <dialog className="sp-dictionary" ref={dialog} aria-labelledby={headingId} onCancel={e=>{e.preventDefault();close()}} onClick={e=>{if(e.target===dialog.current){const rect=dialog.current.getBoundingClientRect();if(e.clientX<rect.left||e.clientX>rect.right||e.clientY<rect.top||e.clientY>rect.bottom)close()}}}>
   {entry&&<><header className="sp-dictionary-movebar" tabIndex={0} role="group" aria-label={ui.move} title={ui.move} {...moving}><GripHorizontal className="sp-dictionary-grip" size={20} aria-hidden="true"/><button type="button" className="sp-dictionary-close" onClick={close} aria-label={c('Close definition','Fermer la définition','Закрыть перевод')}><X size={18}/></button>
    {trail.length>0&&<button type="button" className="sp-dictionary-back" onClick={e=>{const previous=trail.at(-1);if(previous){setTrail(history=>history.slice(0,-1));onLookup(previous.text,e.currentTarget)}}}>← {labels.back} {trail.at(-1)?.text}</button>}
-   <h2 id={headingId} lang="zh-Hans">{entry.text}</h2>
+   <h2 id={headingId} tabIndex={-1} lang="zh-Hans">{entry.text}</h2>
    <div className="sp-dictionary-pronunciation"><p className="sp-reading">{entry.pinyin}</p>{speaker(entry.audio?.kind==='sentence'?undefined:entry.audio)}</div></header><div className="sp-dictionary-body" key={entry.text}><p>{entry.meaning}</p>{entry.senses?.length===1&&entry.senses[0].kind&&<small className="sp-dictionary-sense-kind">{senseKind(entry.senses[0].kind)}</small>}
+   <div className="sp-dictionary-actions">{onWrite&&/[\u3400-\u9fff]/u.test(entry.text)&&<button type="button" className="text-button" onClick={()=>onWrite(entry)}><PenLine size={17}/>{({en:'Write',fr:'Écrire',ru:'Писать',tr:'Yaz'}[locale])}</button>}{onExplore&&studyAtlasHref(entry)&&<button type="button" className="text-button" onClick={()=>onExplore(entry)}><Network size={17}/>{c('Explore in Atlas','Explorer dans l’Atlas','Открыть в Атласе')}</button>}</div>
    {entry.lookupStatus==='loading'&&<p role="status">Looking up this entry…</p>}
    {entry.lookupStatus==='error'&&<div role="alert"><p>Could not load the dictionary. Check your connection and retry.</p><button className="secondary" onClick={onRetry}>Retry lookup</button></div>}
    {entry.lookupStatus==='not-found'&&<p role="status">No entry found for this expression. Explore its individual characters below.</p>}
@@ -59,11 +61,9 @@ export function StudyDictionaryDialog({entry,dictionary,dialog,opener,headingId=
     {!parts.sentence&&!parts.phrase&&<p className="sp-dictionary-note">{labels.note}</p>}
     <div className="sp-dictionary-entries">{parts.parts.map((part,i)=><button type="button" key={i} onClick={e=>select(part.text,e.currentTarget)}><strong lang="zh-Hans">{part.text}</strong><span><span className="sp-reading">{part.entry?.pinyin}</span><span>{part.entry?.meaning||labels.missing}</span></span><ArrowRight size={15}/></button>)}</div>
    </section>}
-   {examples.length>0&&<section className="sp-dictionary-examples" aria-label={labels.examples}><h3>{labels.examples}</h3>{examples.map(example=><article key={example.id} data-study-sentence={example.text} data-study-pinyin={example.pinyin} data-study-meaning={example.meaning} data-study-source-id={example.id}><div lang="zh-Hans"><DictionaryWords text={example.text} pinyin={example.pinyin} dictionary={dictionary} onLookup={select} activeText={entry.text}/></div><p className="sp-reading">{example.pinyin}</p><p>{example.meaning}</p>{example.audio&&speaker(example.audio)}</article>)}</section>}
    {structure&&<section className="sp-dictionary-structure"><h3>{ui.structure}</h3><div className="sp-dictionary-radical">{ui.radical}: {structure.radical===entry.text?<span lang="zh-Hans">{structure.radical}</span>:<button type="button" lang="zh-Hans" onClick={e=>select(structure.radical,e.currentTarget)}>{structure.radical}</button>}</div><p className="sp-dictionary-layout">{shape?.description}</p><div className="sp-dictionary-entries">{dictionaryStructureParts(structure.decomposition,locale).filter(part=>part.glyph!==entry.text).map((part,i)=>{const recorded=dictionaryComponentReading(part.glyph),known=dictionary.get(part.glyph);return <button type="button" key={i} onClick={e=>select(part.glyph,e.currentTarget)}><strong lang="zh-Hans">{part.glyph}</strong><span><small>{part.position}</small><span className="sp-reading">{recorded?recorded.pinyin:known?.pinyin}</span><span>{simplifiedDisplayText(recorded?.meaning||known?.meaning||'')}</span></span><ArrowRight size={15}/></button>})}</div><small>Dataset-derived modern shape. Component roles and historical origins are reviewed separately in Atlas.</small></section>}
+   {examples.length>0&&<section className="sp-dictionary-examples" aria-label={labels.examples}><h3>{labels.examples}</h3>{examples.map(example=><article key={example.id} data-study-sentence={example.text} data-study-pinyin={example.pinyin} data-study-meaning={example.meaning} data-study-source-id={example.id}><div lang="zh-Hans"><DictionaryWords text={example.text} pinyin={example.pinyin} dictionary={dictionary} onLookup={select} activeText={entry.text}/></div><p className="sp-reading">{example.pinyin}</p><p>{example.meaning}</p>{example.audio&&speaker(example.audio)}</article>)}</section>}
    {entry.atlasAvailable===false&&<p className="sp-dictionary-note">This character is outside the current Atlas map. Source-based parts and writing practice remain available.</p>}
-   {onWrite&&Array.from(entry.text).length===1&&<button type="button" className="sp-dictionary-explore" onClick={()=>onWrite(entry)}>{({en:'Practice writing',fr:'Pratiquer l’écriture',ru:'Тренировать письмо',tr:'Yazma alıştırması'}[locale])}<ArrowRight size={16}/></button>}
-   {onExplore&&entry.atlasAvailable!==false&&(entry.word||entry.character)&&<button type="button" className="sp-dictionary-explore" onClick={()=>onExplore(entry)}>{c('Explore in Atlas','Explorer dans l’Atlas','Открыть в Атласе')}<ArrowRight size={16}/></button>}
-  </div>{(['n','e','s','w','se'] as const).map(edge=><div key={edge} className={'sp-dictionary-resize sp-dictionary-resize-'+edge} role="button" tabIndex={edge==='se'?0:-1} aria-label={ui.resize} title={ui.resize} {...resizing(edge)}>{edge==='se'?'◢':null}</div>)} </>}
+  </div>{(['n','e','s','w','se'] as const).map(edge=><div key={edge} className={'sp-dictionary-resize sp-dictionary-resize-'+edge} role="button" tabIndex={edge==='se'?0:-1} aria-label={ui.resize} title={ui.resize} {...resizing(edge)}>{edge==='se'?<svg viewBox="0 0 28 28" width="22" height="22" fill="none" aria-hidden="true"><path d="M6 22a16 16 0 0 0 16-16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>:null}</div>)} </>}
  </dialog>;
 }

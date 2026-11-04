@@ -88,3 +88,6 @@
    native panning, which otherwise cancels a header drag at that scroll boundary. */
 .sp-dictionary .sp-dictionary-movebar *{touch-action:none}
 .sp-dictionary-sense-kind{display:block;font-size:12px;color:#65785e}.sp-dictionary-usage{margin:12px 0;padding:12px;background:#f3f6ee;border:1px solid #dce4d3;border-radius:10px}.sp-dictionary-usage a{font-size:12px;text-decoration:underline}
+
+/* One definition layout for words and characters, including nested lookups. */
+.sp-dictionary-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px 18px;margin:10px 0 16px}.sp-dictionary-actions button{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:6px 8px;font-size:14px;color:#496b5a}.sp-dictionary .sp-dictionary-close{border:0;background:transparent;color:#52695c;box-shadow:none}.sp-dictionary .sp-dictionary-close:hover{background:#f1f5ed}.sp-dictionary .sp-dictionary-close:focus-visible,.sp-dictionary-movebar:focus-visible,.sp-dictionary-resize:focus-visible{outline:2px solid #7d9c8b;outline-offset:1px;box-shadow:none}.sp-dictionary h2:focus{outline:none}.sp-dictionary-resize-se svg{pointer-events:none;opacity:.75}

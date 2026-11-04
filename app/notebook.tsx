@@ -35,6 +35,12 @@ function Glyph({ data, through, active, direction = false }: {
   </svg>;
 }
 
+function NotebookWordModel({text}:{text:string}){
+ const [models,setModels]=useState<Record<string,CharacterData>>({});
+ useEffect(()=>{const controller=new AbortController();setModels({});for(const character of new Set(Array.from(text))){fetch(`/characters/${encodeURIComponent(character)}.json`,{signal:controller.signal}).then(r=>{if(!r.ok)throw Error('Missing character');return r.json() as Promise<CharacterData>;}).then(data=>{if(!controller.signal.aborted&&Array.isArray(data.strokes))setModels(old=>({...old,[character]:data}));}).catch(()=>{});}return()=>controller.abort();},[text]);
+ return <div className="notebook-whole-model" role="img" aria-label={text}>{Array.from(text).map((character,i)=><span key={i}>{models[character]?<Glyph data={models[character]} through={models[character].strokes.length-1}/>:<span lang="zh-Hans">{character}</span>}</span>)}</div>;
+}
+
 // Keep untouched cells stable while a neighbouring cell commits a stroke.
 const EMPTY_STROKES:Stroke[]=[];
 function CharacterRow({ character, reading, position, sheet, change, penOnly, disabled, notify }: {
@@ -154,7 +160,7 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
     <p className="notebook-intro">{t("Follow the steps, trace twice, then write in the empty boxes. Your worksheet stays on this device; saved practice syncs with your account.")}</p>
     {!ready ? <p role="status">{t("Loading your worksheet…")}</p> : <>
       {characters.map((character, position) => <CharacterRow key={`${position}:${character}`} {...{ character, position, sheet, change, penOnly, notify }} reading={readings?.[position]?.pinyin} disabled={saved} />)}
-      <section className="notebook-character"><h3>{t("Write the whole word")}</h3><p>{sheet.hidden ? t("Write the characters together from memory.") : item.hanzi}</p>
+      <section className="notebook-character"><h3>{t("Write the whole word")}</h3>{sheet.hidden?<p>{t("Write the characters together from memory.")}</p>:<NotebookWordModel text={item.hanzi}/>}
         <div className="notebook-cells notebook-whole-word">{characters.map((_, i) => <div className="notebook-cell" key={i}>
           <div className="notebook-square"><Grid /><Ink strokes={sheet.cells[`word:${i}`] ?? EMPTY_STROKES} onChange={s => change(`word:${i}`, s)} penOnly={penOnly} disabled={saved} /></div>
           <div className="notebook-cell-tools"><small>{t("Character {0}", [i + 1])}</small><button aria-label={t("Clear whole word character {0}", [i + 1])} disabled={saved || !sheet.cells[`word:${i}`]?.length} onClick={() => change(`word:${i}`, [])}><RotateCcw size={14} /></button></div>
