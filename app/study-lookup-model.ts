@@ -1,3 +1,4 @@
+import {addMeasureDictionary} from './measure-words-model';
 import {lesson12All,lesson12Pronunciation} from './lesson12-data';
 import {lesson11Terms,lesson11Pronunciation} from './lesson11-data';
 import {referenceEntries} from './reference-lessons-data';
@@ -79,7 +80,7 @@ export function appStudyDictionary(locale:Locale):StudyDictionary{
  if(!dictionary.has('热水'))dictionary.set('热水',{text:'热水',pinyin:'rèshuǐ',meaning:'hot water'});
  for(const sentence of shuoshuoMorning.sentences){const clip=shuoshuoSentenceAudio(sentence.id,sentence.hanzi);dictionary.set(sentence.hanzi,{text:sentence.hanzi,pinyin:sentence.pinyin,meaning:sentence.english,phrase:true,...(clip?{audio:{source:clip.source,text:sentence.hanzi,pinyin:sentence.pinyin,context:true,kind:'sentence' as const}}:{})});}
  for(const v of lesson12All)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],phrase:!!v.chunks,audio:lesson12Pronunciation(v)});
- return dictionary;
+ return addMeasureDictionary(dictionary);
 }
 /** Resolve the glyph actually hit; whitespace/punctuation must never open a neighbouring word. */
 export function lookupAtOffset(text:string,offset:number,dictionary:StudyDictionary){

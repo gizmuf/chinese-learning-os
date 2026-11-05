@@ -1,0 +1,44 @@
+'use client';
+import {useState} from 'react';
+import {useI18n} from './i18n';
+import {StudyText} from './study-lookup-context';
+import SharedWriting from './shared-writing';
+import {measureWords,measureGroups,matchesMeasureWord,measureCanonical,type MeasureWord} from './measure-words-model';
+import './measure-words.css';
+const L=(en:string,fr:string,ru:string,tr:string)=>({en,fr,ru,tr});
+export const measureCopy={
+ title:L('Measure words','Classificateurs','Счётные слова','Ölçü sözcükleri'),
+ intro:L('A practical beginner collection. Learn the usual noun pairing, not just an isolated character. English meanings and examples; this is not every classifier in Mandarin.','Une collection pratique pour débuter. Apprenez les associations avec les noms. Sens et exemples en anglais ; cette liste ne couvre pas tous les classificateurs du mandarin.','Практическая подборка для начинающих. Учите сочетания с существительными. Значения и примеры на английском; здесь не все счётные слова китайского языка.','Yeni başlayanlar için pratik bir derleme. Sözcüğü isimle birlikte öğren. Anlamlar ve örnekler İngilizcedir; Mandarincedeki tüm ölçü sözcüklerini kapsamaz.'),
+ search:L('Search Hanzi, pinyin or English','Chercher en caractères, pinyin ou anglais','Поиск по иероглифам, пиньиню или английскому','Karakter, pinyin veya İngilizce ara'),
+ all:L('All groups','Tous les groupes','Все группы','Tüm gruplar'),
+ learn:L('Learn','Apprendre','Изучать','Öğren'),recall:L('Recall','Se rappeler','Вспомнить','Hatırla'),
+ reveal:L('Reveal classifier & examples','Afficher le classificateur et les exemples','Открыть счётное слово и примеры','Ölçü sözcüğünü ve örnekleri göster'),
+ recallHelp:L('Say a suitable classifier and its tone for the English prompt, then reveal. Other pairings may be possible. This self-check does not record a grade.','Dites un classificateur et son ton pour le sens anglais, puis affichez la réponse. D’autres associations sont possibles. Cette vérification ne donne pas de note.','Назовите подходящее счётное слово и тон по английской подсказке, затем откройте ответ. Возможны другие сочетания. Оценка не сохраняется.','İngilizce ipucuna uygun ölçü sözcüğünü tonuyla söyle, sonra aç. Başka eşleşmeler de mümkün olabilir. Bu öz kontrol bir not kaydetmez.'),
+ write:L('Write classifier','Écrire le classificateur','Написать счётное слово','Ölçü sözcüğünü yaz'),
+ phrase:L('Practise phrase','Pratiquer le groupe de mots','Практика выражения','İfadeyi çalış'),
+ back:L('Back to measure words','Retour aux classificateurs','К счётным словам','Ölçü sözcüklerine dön'),
+ empty:L('No match. Try shan, 扇, door or another group.','Aucun résultat. Essayez shan, 扇, door ou un autre groupe.','Ничего не найдено. Попробуйте shan, 扇, door или другую группу.','Eşleşme yok. shan, 扇, door veya başka bir grup dene.'),
+ groups:L('Group','Groupe','Группа','Grup'),
+};
+export const measureGroupNames={
+ people:L('People','Personnes','Люди','İnsanlar'),animals:L('Animals & groups','Animaux et groupes','Животные и группы','Hayvanlar ve gruplar'),home:L('Home & objects','Maison et objets','Дом и предметы','Ev ve eşyalar'),clothing:L('Clothes & pairs','Vêtements et paires','Одежда и пары','Giysi ve çiftler'),places:L('Places & buildings','Lieux et bâtiments','Места и здания','Yerler ve binalar'),study:L('Books, study & language','Livres, études et langue','Книги, учёба и язык','Kitap, öğrenim ve dil'),travel:L('Travel & transport','Voyages et transports','Поездки и транспорт','Seyahat ve ulaşım'),food:L('Food, portions & containers','Aliments, portions et contenants','Еда, порции и ёмкости','Yiyecek, porsiyon ve kaplar'),nature:L('Nature & types','Nature et types','Природа и виды','Doğa ve türler'),actions:L('Actions & repetitions','Actions et répétitions','Действия и повторения','Eylem ve tekrarlar'),units:L('Standard units','Unités standard','Единицы измерения','Standart birimler'),time:L('Time expressions','Expressions de durée','Выражения времени','Zaman ifadeleri'),
+};
+type Target={word:MeasureWord;example?:number};
+export default function MeasureWords(){
+ const {locale}=useI18n(),c=(key:keyof typeof measureCopy)=>measureCopy[key][locale];
+ const [query,setQuery]=useState(''),[group,setGroup]=useState('all'),[recall,setRecall]=useState(false),[revealed,setRevealed]=useState<string[]>([]),[target,setTarget]=useState<Target|null>(null);
+ const filtered=measureWords.filter(word=>(group==='all'||word.group===group)&&matchesMeasureWord(word,query));
+ if(target){const example=target.example===undefined?undefined:target.word.examples[target.example],canonical=example?undefined:measureCanonical(target.word);return <section className="measure-words"><button type="button" className="secondary" onClick={()=>setTarget(null)}>← {c('back')}</button><h1>{c('title')}</h1><SharedWriting key={target.word.id+':'+target.example} hanzi={example?.hanzi??target.word.hanzi} item={canonical?{...canonical,english:target.word.meaning}:undefined} pinyin={canonical?undefined:example?.pinyin??target.word.pinyin} meaning={canonical?undefined:example?.english??target.word.meaning} contextual={example?{text:example.hanzi,pinyin:example.pinyin,meaning:example.english,sourceId:target.word.id+':'+target.example}:undefined} initialMode={recall?'recall':undefined} onBack={()=>setTarget(null)}/></section>;}
+ return <section className="measure-words">
+  <header className="page-heading"><div><p className="eyebrow">量词 · liàngcí</p><h1>{c('title')}</h1><p>{c('intro')}</p></div></header>
+  <details className="measure-guide"><summary>{L('How to use measure words','Comment utiliser les classificateurs','Как пользоваться счётными словами','Ölçü sözcükleri nasıl kullanılır')[locale]}</summary><div lang="en"><p><small>English learning notes</small></p><p>Number + classifier + noun: <StudyText text="两只猫" pinyin="liǎng zhī māo"/> · liǎng zhī māo · two cats. With “this / that”: <StudyText text="这扇门" pinyin="zhè shàn mén"/> · zhè shàn mén · this door.</p><p>Use 两 liǎng before most classifiers for two. 一 yī is usually pronounced yí before a fourth tone and yì before a first, second or third tone. The examples show these spoken tone changes; dictionary headwords keep their own tone. Third-tone combinations retain standard written tone marks.</p><p>Containers and units measure amounts. Action counters often follow verbs. Time expressions have their own patterns: 两天, but 两个小时. Learn each example as a phrase.</p><p>扇 shàn (doors/windows) ≠ 山 shān (mountain). 只 zhī (animals) ≠ 只 zhǐ (only). 支 zhī (pens) is another character.</p><p>Reference: <a href="https://dict.revised.moe.edu.tw/dictView.jsp?ID=8940" target="_blank" rel="noreferrer">Ministry of Education · 扇</a>. Examples are authored for this collection.</p></div></details>
+  <div className="measure-tools"><label>{c('search')}<input type="search" value={query} onChange={e=>setQuery(e.target.value)}/></label><label>{c('groups')}<select value={group} onChange={e=>setGroup(e.target.value)}><option value="all">{c('all')}</option>{measureGroups.map(id=><option key={id} value={id}>{measureGroupNames[id][locale]}</option>)}</select></label><div role="group" aria-label={c('title')}>{[false,true].map(value=><button type="button" key={String(value)} className="secondary" aria-pressed={recall===value} onClick={()=>{setRecall(value);setRevealed([]);}}>{c(value?'recall':'learn')}</button>)}</div></div>
+  <p role="status">{filtered.length} / {measureWords.length}</p>{recall&&<p>{c('recallHelp')}</p>}
+  <div className="measure-grid">{filtered.map(word=>{const visible=!recall||revealed.includes(word.id);return <article className="measure-card" key={word.id}>
+   <small>{measureGroupNames[word.group as keyof typeof measureGroupNames][locale]}</small>
+   <h2>{visible?<><span lang="zh-Hans"><StudyText text={word.hanzi} whole/></span> <span className="measure-pinyin">{word.pinyin}</span></>:<span aria-label={c('recall')}>?</span>}</h2>
+   <p lang="en">{word.meaning}</p>
+   {visible?<><ul>{word.examples.map((example,index)=><li key={example.hanzi} data-study-sentence={example.hanzi} data-study-pinyin={example.pinyin} data-study-meaning={example.english} data-study-source-id={word.id+':'+index}><p lang="zh-Hans"><StudyText text={example.hanzi} pinyin={example.pinyin}/></p><p>{example.pinyin}</p><p lang="en">{example.english}</p><button type="button" className="secondary" onClick={()=>setTarget({word,example:index})}>{c('phrase')} · {index+1}</button></li>)}</ul>{word.note&&<p className="measure-note" lang="en">{word.note}</p>}<button type="button" className="secondary" onClick={()=>setTarget({word})}>{c('write')} · {word.hanzi}</button></>:<button type="button" className="primary" onClick={()=>setRevealed(old=>[...old,word.id])}>{c('reveal')}</button>}
+  </article>})}</div>{!filtered.length&&<p>{c('empty')}</p>}
+ </section>;
+}
