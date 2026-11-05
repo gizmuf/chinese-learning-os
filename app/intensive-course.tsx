@@ -590,11 +590,11 @@ export default function IntensiveCourse({
                                     ? ["−2", "−1", t("Now"), "+1", "+2"][i]
                                     : i + 1}
                                 </small>
-                                <strong lang="zh-Hans">{value.hanzi}</strong>{terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi}/>}
+                                <strong lang="zh-Hans">{value.hanzi}</strong>
                                 <span className="pinyin">{value.pinyin}</span>
                                 <span>{value.meaning[locale]}</span>
                                 <Volume2 size={13} />
-                              </button>
+                              {terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi}/>}</button>
                             );
                           })}
                         </div>
@@ -650,7 +650,7 @@ export default function IntensiveCourse({
                           ? t("Linked to your HSK vocabulary")
                           : t("Course expression")}
                       </span>
-                      <strong lang="zh-Hans">{value.hanzi}</strong>{terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi}/>}
+                      <strong lang="zh-Hans">{value.hanzi}</strong>
                       <p className="pinyin">{value.pinyin}</p>
                       <p>{value.meaning[locale]}</p>
                       <div className="course-actions">
@@ -671,7 +671,7 @@ export default function IntensiveCourse({
                           <ChevronRight size={15} />
                         </button>
                       </div>
-                    </article>
+                    {terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi}/>}</article>
                   ))}
               </div>
             </>
@@ -832,7 +832,7 @@ function SentenceCard({
           ? t("Practice example")
           : t("From the lesson")}
       </span>
-      <strong lang="zh-Hans">{value.hanzi}</strong>{terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi}/>}
+      <strong lang="zh-Hans">{value.hanzi}</strong>
       <p className="pinyin">{value.pinyin}</p>
       <p>{value.meaning[locale]}</p>
       <div className="course-actions">
@@ -850,7 +850,7 @@ function SentenceCard({
           <ChevronRight size={15} />
         </button>}
       </div>
-    </article>
+    {terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi}/>}</article>
   );
 }
 function OptionText({

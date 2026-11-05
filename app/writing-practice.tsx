@@ -199,12 +199,13 @@ export default function Writing({
             {t("Pencil only")}</label>
         </div>
         <div className="writing-prompt">
+          {(mode!=="recall"||revealed)&&<HskBadge text={item.hanzi}/>}
           <span className="eyebrow">
             {mode === "recall"
               ? t("WRITE FROM MEMORY")
               : t("LET YOUR HAND LEARN THE SHAPE")}
           </span>
-          <h2>{item.english}</h2>{(mode!=="recall"||revealed)&&<HskBadge text={item.hanzi}/>}
+          <h2>{item.english}</h2>
           <span className="pinyin">{item.pinyin}</span>
         </div>
         <div className="character-tabs">
