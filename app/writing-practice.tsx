@@ -1,4 +1,5 @@
 "use client";
+import HskBadge from './hsk-badge';
 import {HanziDisplayControls,useHanziStyle} from './hanzi-style';
 import {useEffect,useRef,useState} from 'react';
 import {ArrowRight,Check,ChevronRight,Lightbulb,PenLine,Play,Sparkles,Trash2,Undo2,Volume2} from 'lucide-react';
@@ -203,7 +204,7 @@ export default function Writing({
               ? t("WRITE FROM MEMORY")
               : t("LET YOUR HAND LEARN THE SHAPE")}
           </span>
-          <h2>{item.english}</h2>
+          <h2>{item.english}</h2>{(mode!=="recall"||revealed)&&<HskBadge text={item.hanzi}/>}
           <span className="pinyin">{item.pinyin}</span>
         </div>
         <div className="character-tabs">

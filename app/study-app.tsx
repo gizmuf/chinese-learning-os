@@ -1,4 +1,5 @@
 "use client";
+import HskBadge from './hsk-badge';
 import {writingPracticeHref,writingPracticeRoute,type WritingOrigin} from './writing-navigation';
 
 import {usePracticeBook} from './use-practice-book';
@@ -528,14 +529,14 @@ export default function StudyApp({
           {(
             [
               { id: "today", title: t("Today"), icon: Home },
-              { id: "studio", title: "StudyStudio", icon: Sparkles },
-              { id: "labs", title: "3D Lab", icon: LabNavIcon },
               { id: "lessons", title: t("My lessons"), icon: BookOpen },
               { id: "course", title: t("Course"), icon: GraduationCap },
               { id: "atlas", title: t("Cloud Atlas"), icon: Network },
+              { id: "studio", title: "StudyStudio", icon: Sparkles },
               { id: "practice", title: t("Writing studio"), icon: PenLine },
               { id: "reviews", title: t("Review"), icon: RotateCcw },
               { id: "progress", title: t("My progress"), icon: TrendingUp },
+              { id: "labs", title: "3D Lab", icon: LabNavIcon },
             ] as const
           ).map((n) => (
             <button
@@ -920,6 +921,7 @@ export default function StudyApp({
                 <span><BookOpen size={15}/>{libraryLessonLabel}</span>
                 <button type="button" onClick={openShuoshuoLesson}>Shuoshuo · Morning</button>
                 <button type="button" aria-label={({en:'Open My day lesson',fr:'Ouvrir Ma journée',ru:'Открыть урок «Мой день»',tr:'Günüm dersini aç'}[locale])} onClick={openMyDay}>{({en:'My day',fr:'Ma journée',ru:'Мой день',tr:'Günüm'}[locale])}</button>
+                <button type="button" className="library-practice-shortcut" aria-pressed={practiceSelection} onClick={()=>{setPracticeSelection(true);libraryRoute(libraryLayout,true);}}><BookmarkCheck size={15}/>{libraryCopy.selected} · {practiceBook.entries.length}</button>
                 <ReferenceLessonLinks compact onOpen={id=>{stopAudio();window.history.replaceState(null,'',referenceLessonHref(id)+'&from=lessons');setView('course');window.scrollTo({top:0,behavior:'instant'});}}/>
               </nav>
               <button hidden={practiceSelection} className="secondary pdf-library-button" onClick={() => setPdfSelection(filtered.map(item => item.id))}><Download size={16} /> {t("Print notebook PDF")}</button>
@@ -971,7 +973,7 @@ export default function StudyApp({
                         <Volume2 size={20} />
                       </button>
                     </div>
-                    <h3>{i.english}</h3>
+                    {(practiceSelection||!i.hskLevel)&&<HskBadge text={i.hanzi}/>}<h3>{i.english}</h3>
                     <div className="sentence" hidden={!i.sentence}>
                       <span><StudyText text={i.sentence}/></span>
                       <span className="pinyin">{i.sentencePinyin}</span>

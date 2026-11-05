@@ -1,4 +1,5 @@
 'use client';
+import HskBadge from './hsk-badge';
 import {useEffect,useMemo,useState,type ReactNode} from 'react';
 import {useI18n} from './i18n';
 import {loadDictionaryResources,fetchDictionaryEntry} from './dictionary-client';
@@ -51,7 +52,7 @@ export default function DictionaryExploration({entry,dictionary,onLookup,speaker
   // eslint-disable-next-line react-hooks/exhaustive-deps
  },[wordPageKey,allCharacters]);
  function changeTab(value:Tab){setTab(value);setPage(0);setLesson('');}
- function preview(value:DictionaryEntry){return <div className="sp-connection-card" key={value.text}><button type="button" className="sp-connection-target" onClick={e=>onLookup(value.text,e.currentTarget)}><strong lang="zh-Hans"><CloudHighlight hanzi={value.text} component={tab==='family'?part:character}/></strong><span className="sp-reading">{value.pinyin}</span><span>{value.meaning}</span></button>{value.audio&&speaker(value.audio)}</div>;}
+ function preview(value:DictionaryEntry){return <div className="sp-connection-card" key={value.text}><button type="button" className="sp-connection-target" onClick={e=>onLookup(value.text,e.currentTarget)}><strong lang="zh-Hans"><CloudHighlight hanzi={value.text} component={tab==='family'?part:character}/></strong><span className="sp-reading">{value.pinyin}</span><span>{value.meaning}</span></button><HskBadge text={value.text}/>{value.audio&&speaker(value.audio)}</div>;}
  const paging=tab==='lessons'?shownLessons:shown,total=tab==='family'?family.length:tab==='words'?words.length:filtered.length;
  return <section className="sp-exploration" aria-label={c.title} data-study-exploration="true">
   <h3>{c.title}</h3>
@@ -64,7 +65,7 @@ export default function DictionaryExploration({entry,dictionary,onLookup,speaker
   {!resources&&tab!=='lessons'&&!error?<p role="status">{c.loading}</p>:<>
    {tab==='family'&&<div className="sp-connection-grid">{(shown.rows as DictionaryEntry[]).map(preview)}</div>}
    {tab==='words'&&<div className="sp-connection-grid">{(shown.rows as string[]).map(text=>preview((allCharacters.get(text)?.meaning?allCharacters.get(text):wordReadings.get(text))??{text,pinyin:'',meaning:''}))}</div>}
-   {tab==='lessons'&&<div className="sp-occurrences">{shownLessons.rows.map(row=><article key={row.id} data-study-sentence={row.kind==='sentence'?row.text:undefined} data-study-pinyin={row.kind==='sentence'?row.pinyin:undefined} data-study-meaning={row.kind==='sentence'?row.meaning:undefined} data-study-source-id={row.sourceId}><small>{row.lessonLabel} · {row.kind==='word'?c.word:c.sentence}</small><div lang="zh-Hans">{renderSentence(row.text,row.pinyin)}</div><p className="sp-reading">{row.pinyin}</p><p>{row.meaning}</p>{row.note&&<small>{row.note}</small>}{row.audio&&speaker(row.audio)}</article>)}</div>}
+   {tab==='lessons'&&<div className="sp-occurrences">{shownLessons.rows.map(row=><article key={row.id} data-study-sentence={row.kind==='sentence'?row.text:undefined} data-study-pinyin={row.kind==='sentence'?row.pinyin:undefined} data-study-meaning={row.kind==='sentence'?row.meaning:undefined} data-study-source-id={row.sourceId}><small>{row.lessonLabel} · {row.kind==='word'?c.word:c.sentence}</small><div lang="zh-Hans">{renderSentence(row.text,row.pinyin)}</div>{row.kind==='word'&&<HskBadge text={row.text}/>}<p className="sp-reading">{row.pinyin}</p><p>{row.meaning}</p>{row.note&&<small>{row.note}</small>}{row.audio&&speaker(row.audio)}</article>)}</div>}
    {!total&&<p className="sp-connection-note">{c.empty}</p>}
    {total>0&&<nav className="sp-connection-pages" aria-label={c[tab]}><button type="button" disabled={paging.page===0} onClick={()=>setPage(paging.page-1)}>{c.previous}</button><span>{paging.page*(tab==='lessons'?5:8)+1}–{Math.min(total,(paging.page+1)*(tab==='lessons'?5:8))} / {total}</span><button type="button" disabled={paging.page>=paging.pages-1} onClick={()=>setPage(paging.page+1)}>{c.next}</button></nav>}
   </>}

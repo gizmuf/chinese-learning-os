@@ -3,6 +3,7 @@ import {lesson12} from './lesson12-data';
 import Lesson11 from './lesson11';
 import {lesson11} from './lesson11-data';
 "use client";
+import HskBadge from './hsk-badge';
 import ReferenceLesson from './reference-lesson';
 import ReferenceLessonLinks from './reference-lesson-links';
 import {referenceLessonById,referenceLessonHref} from './reference-lessons-data';
@@ -589,7 +590,7 @@ export default function IntensiveCourse({
                                     ? ["−2", "−1", t("Now"), "+1", "+2"][i]
                                     : i + 1}
                                 </small>
-                                <strong lang="zh-Hans">{value.hanzi}</strong>
+                                <strong lang="zh-Hans">{value.hanzi}</strong>{terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi}/>}
                                 <span className="pinyin">{value.pinyin}</span>
                                 <span>{value.meaning[locale]}</span>
                                 <Volume2 size={13} />
@@ -649,7 +650,7 @@ export default function IntensiveCourse({
                           ? t("Linked to your HSK vocabulary")
                           : t("Course expression")}
                       </span>
-                      <strong lang="zh-Hans">{value.hanzi}</strong>
+                      <strong lang="zh-Hans">{value.hanzi}</strong>{terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi}/>}
                       <p className="pinyin">{value.pinyin}</p>
                       <p>{value.meaning[locale]}</p>
                       <div className="course-actions">
@@ -831,7 +832,7 @@ function SentenceCard({
           ? t("Practice example")
           : t("From the lesson")}
       </span>
-      <strong lang="zh-Hans">{value.hanzi}</strong>
+      <strong lang="zh-Hans">{value.hanzi}</strong>{terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi}/>}
       <p className="pinyin">{value.pinyin}</p>
       <p>{value.meaning[locale]}</p>
       <div className="course-actions">
