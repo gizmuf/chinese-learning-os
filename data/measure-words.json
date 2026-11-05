@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "mw-扇",
+    "hanzi": "扇",
+    "pinyin": "shàn",
+    "group": "home",
+    "meaning": "doors and windows",
+    "note": "Use shàn, fourth tone. 山 shān means mountain; 扇 shān can mean to fan.",
+    "examples": [
+      {
+        "hanzi": "一扇门",
+        "pinyin": "yí shàn mén",
+        "english": "one door"
+      },
+      {
+        "hanzi": "一扇窗",
+        "pinyin": "yí shàn chuāng",
+        "english": "one window"
+      }
+    ]
+  },
+  {
+    "id": "mw-只",
+    "hanzi": "只",
+    "pinyin": "zhī",
+    "group": "animals",
+    "meaning": "many animals; one of a pair",
+    "note": "Here zhī is first tone. 只 zhǐ means only.",
+    "examples": [
+      {
+        "hanzi": "一只猫",
+        "pinyin": "yì zhī māo",
+        "english": "one cat"
+      },
+      {
+        "hanzi": "一只手",
+        "pinyin": "yì zhī shǒu",
+        "english": "one hand"
+      }
+    ]
+  },
+  {
+    "id": "mw-个",
+    "hanzi": "个",
+    "pinyin": "gè",
+    "group": "people",
+    "meaning": "general classifier",
+    "note": "A useful general classifier, but learn the usual classifier with each noun. 个 is often light in everyday speech.",
+    "examples": [
+      {
+        "hanzi": "一个人",
+        "pinyin": "yí gè rén",
+        "english": "one person"
+      },
+      {
+        "hanzi": "两个苹果",
+        "pinyin": "liǎng gè píngguǒ",
+        "english": "two apples"
+      }
+    ]
+  },
+  {
+    "id": "mw-位",
+    "hanzi": "位",
+    "pinyin": "wèi",
+    "group": "people",
+    "meaning": "people, politely",
+    "note": "More polite than 个 for people.",
+    "examples": [
+      {
+        "hanzi": "一位老师",
+        "pinyin": "yí wèi lǎoshī",
+        "english": "one teacher"
+      },
+      {
+        "hanzi": "两位客人",
+        "pinyin": "liǎng wèi kèrén",
+        "english": "two guests"
+      }
+    ]
+  },
+  {
+    "id": "mw-名",
+    "hanzi": "名",
+    "pinyin": "míng",
+    "group": "people",
+    "meaning": "people in a role",
+    "note": "Often used in reports or to identify a role.",
+    "examples": [
+      {
+        "hanzi": "一名学生",
+        "pinyin": "yì míng xuésheng",
+        "english": "one student"
+      },
+      {
+        "hanzi": "两名医生",
+        "pinyin": "liǎng míng yīshēng",
+        "english": "two doctors"
+      }
+    ]
+  },
+  {
+    "id": "mw-口",
+    "hanzi": "口",
+    "pinyin": "kǒu",
+    "group": "people",
+    "meaning": "family members",
+    "note": "Used when counting the people in a household.",
+    "examples": [
+      {
+        "hanzi": "三口人",
+        "pinyin": "sān kǒu rén",
+        "english": "a family of three"
+      },
+      {
+        "hanzi": "五口人",
+        "pinyin": "wǔ kǒu rén",
+        "english": "a family of five"
+      }
+    ]
+  },
+  {
+    "id": "mw-家",
+    "hanzi": "家",
+    "pinyin": "jiā",
+    "group": "places",
+    "meaning": "businesses and establishments",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一家饭店",
+        "pinyin": "yì jiā fàndiàn",
+        "english": "one restaurant"
+      },
+      {
+        "hanzi": "两家医院",
+        "pinyin": "liǎng jiā yīyuàn",
+        "english": "two hospitals"
+      }
+    ]
+  },
+  {
+    "id": "mw-所",
+    "hanzi": "所",
+    "pinyin": "suǒ",
+    "group": "places",
+    "meaning": "schools and institutions",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一所学校",
+        "pinyin": "yì suǒ xuéxiào",
+        "english": "one school"
+      },
+      {
+        "hanzi": "两所大学",
+        "pinyin": "liǎng suǒ dàxué",
+        "english": "two universities"
+      }
+    ]
+  },
+  {
+    "id": "mw-座",
+    "hanzi": "座",
+    "pinyin": "zuò",
+    "group": "places",
+    "meaning": "large fixed structures",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一座山",
+        "pinyin": "yí zuò shān",
+        "english": "one mountain"
+      },
+      {
+        "hanzi": "一座桥",
+        "pinyin": "yí zuò qiáo",
+        "english": "one bridge"
+      }
+    ]
+  },
+  {
+    "id": "mw-栋",
+    "hanzi": "栋",
+    "pinyin": "dòng",
+    "group": "places",
+    "meaning": "buildings",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一栋楼",
+        "pinyin": "yí dòng lóu",
+        "english": "one building"
+      },
+      {
+        "hanzi": "两栋房子",
+        "pinyin": "liǎng dòng fángzi",
+        "english": "two buildings"
+      }
+    ]
+  },
+  {
+    "id": "mw-间",
+    "hanzi": "间",
+    "pinyin": "jiān",
+    "group": "home",
+    "meaning": "rooms",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一间教室",
+        "pinyin": "yì jiān jiàoshì",
+        "english": "one classroom"
+      },
+      {
+        "hanzi": "两间卧室",
+        "pinyin": "liǎng jiān wòshì",
+        "english": "two bedrooms"
+      }
+    ]
+  },
+  {
+    "id": "mw-张",
+    "hanzi": "张",
+    "pinyin": "zhāng",
+    "group": "home",
+    "meaning": "flat things and spread-out surfaces",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一张纸",
+        "pinyin": "yì zhāng zhǐ",
+        "english": "one sheet of paper"
+      },
+      {
+        "hanzi": "一张桌子",
+        "pinyin": "yì zhāng zhuōzi",
+        "english": "one table"
+      }
+    ]
+  },
+  {
+    "id": "mw-把",
+    "hanzi": "把",
+    "pinyin": "bǎ",
+    "group": "home",
+    "meaning": "objects with handles; chairs",
+    "note": "Also used for a handful. The 把 sentence pattern is a separate use.",
+    "examples": [
+      {
+        "hanzi": "一把椅子",
+        "pinyin": "yì bǎ yǐzi",
+        "english": "one chair"
+      },
+      {
+        "hanzi": "一把伞",
+        "pinyin": "yì bǎ sǎn",
+        "english": "one umbrella"
+      }
+    ]
+  },
+  {
+    "id": "mw-台",
+    "hanzi": "台",
+    "pinyin": "tái",
+    "group": "home",
+    "meaning": "machines and appliances",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一台电脑",
+        "pinyin": "yì tái diànnǎo",
+        "english": "one computer"
+      },
+      {
+        "hanzi": "一台电视",
+        "pinyin": "yì tái diànshì",
+        "english": "one television"
+      }
+    ]
+  },
+  {
+    "id": "mw-面",
+    "hanzi": "面",
+    "pinyin": "miàn",
+    "group": "home",
+    "meaning": "mirrors, flags and some flat objects",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一面镜子",
+        "pinyin": "yí miàn jìngzi",
+        "english": "one mirror"
+      },
+      {
+        "hanzi": "一面旗",
+        "pinyin": "yí miàn qí",
+        "english": "one flag"
+      }
+    ]
+  },
+  {
+    "id": "mw-盏",
+    "hanzi": "盏",
+    "pinyin": "zhǎn",
+    "group": "home",
+    "meaning": "lamps and lights",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一盏灯",
+        "pinyin": "yì zhǎn dēng",
+        "english": "one lamp"
+      },
+      {
+        "hanzi": "两盏台灯",
+        "pinyin": "liǎng zhǎn táidēng",
+        "english": "two desk lamps"
+      }
+    ]
+  },
+  {
+    "id": "mw-件",
+    "hanzi": "件",
+    "pinyin": "jiàn",
+    "group": "clothing",
+    "meaning": "clothing, matters and items",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一件衣服",
+        "pinyin": "yí jiàn yīfu",
+        "english": "one item of clothing"
+      },
+      {
+        "hanzi": "一件事",
+        "pinyin": "yí jiàn shì",
+        "english": "one matter"
+      }
+    ]
+  },
+  {
+    "id": "mw-条",
+    "hanzi": "条",
+    "pinyin": "tiáo",
+    "group": "clothing",
+    "meaning": "long things; trousers; fish",
+    "note": "A pair of trousers is one item in Chinese: 一条裤子.",
+    "examples": [
+      {
+        "hanzi": "一条裤子",
+        "pinyin": "yì tiáo kùzi",
+        "english": "one pair of trousers"
+      },
+      {
+        "hanzi": "一条鱼",
+        "pinyin": "yì tiáo yú",
+        "english": "one fish"
+      }
+    ]
+  },
+  {
+    "id": "mw-双",
+    "hanzi": "双",
+    "pinyin": "shuāng",
+    "group": "clothing",
+    "meaning": "matching pairs",
+    "note": "Two matching items used together; compare 只 for a single one.",
+    "examples": [
+      {
+        "hanzi": "一双鞋",
+        "pinyin": "yì shuāng xié",
+        "english": "one pair of shoes"
+      },
+      {
+        "hanzi": "一双筷子",
+        "pinyin": "yì shuāng kuàizi",
+        "english": "one pair of chopsticks"
+      }
+    ]
+  },
+  {
+    "id": "mw-顶",
+    "hanzi": "顶",
+    "pinyin": "dǐng",
+    "group": "clothing",
+    "meaning": "hats and tents",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一顶帽子",
+        "pinyin": "yì dǐng màozi",
+        "english": "one hat"
+      },
+      {
+        "hanzi": "一顶帐篷",
+        "pinyin": "yì dǐng zhàngpeng",
+        "english": "one tent"
+      }
+    ]
+  },
+  {
+    "id": "mw-套",
+    "hanzi": "套",
+    "pinyin": "tào",
+    "group": "clothing",
+    "meaning": "sets",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一套衣服",
+        "pinyin": "yí tào yīfu",
+        "english": "one outfit"
+      },
+      {
+        "hanzi": "一套家具",
+        "pinyin": "yí tào jiājù",
+        "english": "one set of furniture"
+      }
+    ]
+  },
+  {
+    "id": "mw-匹",
+    "hanzi": "匹",
+    "pinyin": "pǐ",
+    "group": "animals",
+    "meaning": "horses",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一匹马",
+        "pinyin": "yì pǐ mǎ",
+        "english": "one horse"
+      },
+      {
+        "hanzi": "两匹马",
+        "pinyin": "liǎng pǐ mǎ",
+        "english": "two horses"
+      }
+    ]
+  },
+  {
+    "id": "mw-头",
+    "hanzi": "头",
+    "pinyin": "tóu",
+    "group": "animals",
+    "meaning": "large livestock",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一头牛",
+        "pinyin": "yì tóu niú",
+        "english": "one cow"
+      },
+      {
+        "hanzi": "一头猪",
+        "pinyin": "yì tóu zhū",
+        "english": "one pig"
+      }
+    ]
+  },
+  {
+    "id": "mw-群",
+    "hanzi": "群",
+    "pinyin": "qún",
+    "group": "animals",
+    "meaning": "groups, flocks and herds",
+    "note": "Counts a group rather than one animal or person.",
+    "examples": [
+      {
+        "hanzi": "一群鸟",
+        "pinyin": "yì qún niǎo",
+        "english": "a flock of birds"
+      },
+      {
+        "hanzi": "一群人",
+        "pinyin": "yì qún rén",
+        "english": "a group of people"
+      }
+    ]
+  },
+  {
+    "id": "mw-本",
+    "hanzi": "本",
+    "pinyin": "běn",
+    "group": "study",
+    "meaning": "bound books",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一本书",
+        "pinyin": "yì běn shū",
+        "english": "one book"
+      },
+      {
+        "hanzi": "一本词典",
+        "pinyin": "yì běn cídiǎn",
+        "english": "one dictionary"
+      }
+    ]
+  },
+  {
+    "id": "mw-支",
+    "hanzi": "支",
+    "pinyin": "zhī",
+    "group": "study",
+    "meaning": "pens and slender objects",
+    "note": "Same sound as 只 zhī, different character and usual nouns.",
+    "examples": [
+      {
+        "hanzi": "一支笔",
+        "pinyin": "yì zhī bǐ",
+        "english": "one pen"
+      },
+      {
+        "hanzi": "一支铅笔",
+        "pinyin": "yì zhī qiānbǐ",
+        "english": "one pencil"
+      }
+    ]
+  },
+  {
+    "id": "mw-封",
+    "hanzi": "封",
+    "pinyin": "fēng",
+    "group": "study",
+    "meaning": "letters and emails",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一封信",
+        "pinyin": "yì fēng xìn",
+        "english": "one letter"
+      },
+      {
+        "hanzi": "一封邮件",
+        "pinyin": "yì fēng yóujiàn",
+        "english": "one email"
+      }
+    ]
+  },
+  {
+    "id": "mw-份",
+    "hanzi": "份",
+    "pinyin": "fèn",
+    "group": "study",
+    "meaning": "copies, portions and jobs",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一份报纸",
+        "pinyin": "yí fèn bàozhǐ",
+        "english": "one copy of a newspaper"
+      },
+      {
+        "hanzi": "一份工作",
+        "pinyin": "yí fèn gōngzuò",
+        "english": "one job"
+      }
+    ]
+  },
+  {
+    "id": "mw-页",
+    "hanzi": "页",
+    "pinyin": "yè",
+    "group": "study",
+    "meaning": "pages",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一页书",
+        "pinyin": "yí yè shū",
+        "english": "one page of a book"
+      },
+      {
+        "hanzi": "两页纸",
+        "pinyin": "liǎng yè zhǐ",
+        "english": "two pages"
+      }
+    ]
+  },
+  {
+    "id": "mw-篇",
+    "hanzi": "篇",
+    "pinyin": "piān",
+    "group": "study",
+    "meaning": "complete written pieces",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一篇文章",
+        "pinyin": "yì piān wénzhāng",
+        "english": "one article"
+      },
+      {
+        "hanzi": "一篇作文",
+        "pinyin": "yì piān zuòwén",
+        "english": "one composition"
+      }
+    ]
+  },
+  {
+    "id": "mw-句",
+    "hanzi": "句",
+    "pinyin": "jù",
+    "group": "study",
+    "meaning": "sentences and utterances",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一句话",
+        "pinyin": "yí jù huà",
+        "english": "one sentence"
+      },
+      {
+        "hanzi": "两句中文",
+        "pinyin": "liǎng jù Zhōngwén",
+        "english": "two sentences in Chinese"
+      }
+    ]
+  },
+  {
+    "id": "mw-首",
+    "hanzi": "首",
+    "pinyin": "shǒu",
+    "group": "study",
+    "meaning": "songs and poems",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一首歌",
+        "pinyin": "yì shǒu gē",
+        "english": "one song"
+      },
+      {
+        "hanzi": "一首诗",
+        "pinyin": "yì shǒu shī",
+        "english": "one poem"
+      }
+    ]
+  },
+  {
+    "id": "mw-门",
+    "hanzi": "门",
+    "pinyin": "mén",
+    "group": "study",
+    "meaning": "courses and fields of study",
+    "note": "As a noun 门 means door; doors are counted with 扇.",
+    "examples": [
+      {
+        "hanzi": "一门课",
+        "pinyin": "yì mén kè",
+        "english": "one course"
+      },
+      {
+        "hanzi": "一门外语",
+        "pinyin": "yì mén wàiyǔ",
+        "english": "one foreign language"
+      }
+    ]
+  },
+  {
+    "id": "mw-节",
+    "hanzi": "节",
+    "pinyin": "jié",
+    "group": "study",
+    "meaning": "class periods and sections",
+    "note": "一门课 is a course; 一节课 is one session.",
+    "examples": [
+      {
+        "hanzi": "一节课",
+        "pinyin": "yì jié kè",
+        "english": "one class period"
+      },
+      {
+        "hanzi": "两节课",
+        "pinyin": "liǎng jié kè",
+        "english": "two class periods"
+      }
+    ]
+  },
+  {
+    "id": "mw-辆",
+    "hanzi": "辆",
+    "pinyin": "liàng",
+    "group": "travel",
+    "meaning": "wheeled vehicles",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一辆车",
+        "pinyin": "yí liàng chē",
+        "english": "one vehicle"
+      },
+      {
+        "hanzi": "一辆自行车",
+        "pinyin": "yí liàng zìxíngchē",
+        "english": "one bicycle"
+      }
+    ]
+  },
+  {
+    "id": "mw-架",
+    "hanzi": "架",
+    "pinyin": "jià",
+    "group": "travel",
+    "meaning": "aircraft and some machines",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一架飞机",
+        "pinyin": "yí jià fēijī",
+        "english": "one airplane"
+      },
+      {
+        "hanzi": "一架钢琴",
+        "pinyin": "yí jià gāngqín",
+        "english": "one piano"
+      }
+    ]
+  },
+  {
+    "id": "mw-艘",
+    "hanzi": "艘",
+    "pinyin": "sōu",
+    "group": "travel",
+    "meaning": "ships and boats",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一艘船",
+        "pinyin": "yì sōu chuán",
+        "english": "one boat"
+      },
+      {
+        "hanzi": "两艘轮船",
+        "pinyin": "liǎng sōu lúnchuán",
+        "english": "two ships"
+      }
+    ]
+  },
+  {
+    "id": "mw-班",
+    "hanzi": "班",
+    "pinyin": "bān",
+    "group": "travel",
+    "meaning": "scheduled transport services",
+    "note": "Counts a service or departure; 架 counts the aircraft itself.",
+    "examples": [
+      {
+        "hanzi": "一班飞机",
+        "pinyin": "yì bān fēijī",
+        "english": "one flight"
+      },
+      {
+        "hanzi": "一班车",
+        "pinyin": "yì bān chē",
+        "english": "one scheduled service"
+      }
+    ]
+  },
+  {
+    "id": "mw-杯",
+    "hanzi": "杯",
+    "pinyin": "bēi",
+    "group": "food",
+    "meaning": "cupfuls and glassfuls",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一杯水",
+        "pinyin": "yì bēi shuǐ",
+        "english": "one glass of water"
+      },
+      {
+        "hanzi": "一杯茶",
+        "pinyin": "yì bēi chá",
+        "english": "one cup of tea"
+      }
+    ]
+  },
+  {
+    "id": "mw-瓶",
+    "hanzi": "瓶",
+    "pinyin": "píng",
+    "group": "food",
+    "meaning": "bottlefuls",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一瓶水",
+        "pinyin": "yì píng shuǐ",
+        "english": "one bottle of water"
+      },
+      {
+        "hanzi": "一瓶牛奶",
+        "pinyin": "yì píng niúnǎi",
+        "english": "one bottle of milk"
+      }
+    ]
+  },
+  {
+    "id": "mw-碗",
+    "hanzi": "碗",
+    "pinyin": "wǎn",
+    "group": "food",
+    "meaning": "bowlfuls",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一碗饭",
+        "pinyin": "yì wǎn fàn",
+        "english": "one bowl of rice"
+      },
+      {
+        "hanzi": "一碗面",
+        "pinyin": "yì wǎn miàn",
+        "english": "one bowl of noodles"
+      }
+    ]
+  },
+  {
+    "id": "mw-盘",
+    "hanzi": "盘",
+    "pinyin": "pán",
+    "group": "food",
+    "meaning": "platefuls",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一盘菜",
+        "pinyin": "yì pán cài",
+        "english": "one plate of food"
+      },
+      {
+        "hanzi": "一盘水果",
+        "pinyin": "yì pán shuǐguǒ",
+        "english": "one plate of fruit"
+      }
+    ]
+  },
+  {
+    "id": "mw-盒",
+    "hanzi": "盒",
+    "pinyin": "hé",
+    "group": "food",
+    "meaning": "boxfuls",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一盒牛奶",
+        "pinyin": "yì hé niúnǎi",
+        "english": "one carton of milk"
+      },
+      {
+        "hanzi": "一盒鸡蛋",
+        "pinyin": "yì hé jīdàn",
+        "english": "one box of eggs"
+      }
+    ]
+  },
+  {
+    "id": "mw-包",
+    "hanzi": "包",
+    "pinyin": "bāo",
+    "group": "food",
+    "meaning": "packets and bags",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一包茶叶",
+        "pinyin": "yì bāo cháyè",
+        "english": "one packet of tea"
+      },
+      {
+        "hanzi": "一包饼干",
+        "pinyin": "yì bāo bǐnggān",
+        "english": "one packet of biscuits"
+      }
+    ]
+  },
+  {
+    "id": "mw-袋",
+    "hanzi": "袋",
+    "pinyin": "dài",
+    "group": "food",
+    "meaning": "bagfuls",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一袋米",
+        "pinyin": "yí dài mǐ",
+        "english": "one bag of rice"
+      },
+      {
+        "hanzi": "一袋苹果",
+        "pinyin": "yí dài píngguǒ",
+        "english": "one bag of apples"
+      }
+    ]
+  },
+  {
+    "id": "mw-块",
+    "hanzi": "块",
+    "pinyin": "kuài",
+    "group": "food",
+    "meaning": "pieces and chunks",
+    "note": "Also the everyday unit for yuan: 三块钱, three yuan.",
+    "examples": [
+      {
+        "hanzi": "一块蛋糕",
+        "pinyin": "yí kuài dàngāo",
+        "english": "one piece of cake"
+      },
+      {
+        "hanzi": "一块面包",
+        "pinyin": "yí kuài miànbāo",
+        "english": "one piece of bread"
+      }
+    ]
+  },
+  {
+    "id": "mw-片",
+    "hanzi": "片",
+    "pinyin": "piàn",
+    "group": "food",
+    "meaning": "thin slices and flat pieces",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一片面包",
+        "pinyin": "yí piàn miànbāo",
+        "english": "one slice of bread"
+      },
+      {
+        "hanzi": "一片叶子",
+        "pinyin": "yí piàn yèzi",
+        "english": "one leaf"
+      }
+    ]
+  },
+  {
+    "id": "mw-颗",
+    "hanzi": "颗",
+    "pinyin": "kē",
+    "group": "food",
+    "meaning": "small round objects",
+    "note": "Compare 棵 kē for plants.",
+    "examples": [
+      {
+        "hanzi": "一颗糖",
+        "pinyin": "yì kē táng",
+        "english": "one sweet"
+      },
+      {
+        "hanzi": "一颗星星",
+        "pinyin": "yì kē xīngxing",
+        "english": "one star"
+      }
+    ]
+  },
+  {
+    "id": "mw-根",
+    "hanzi": "根",
+    "pinyin": "gēn",
+    "group": "food",
+    "meaning": "long thin objects",
+    "note": "一双筷子 is a matching pair; 一根筷子 is one stick.",
+    "examples": [
+      {
+        "hanzi": "一根香蕉",
+        "pinyin": "yì gēn xiāngjiāo",
+        "english": "one banana"
+      },
+      {
+        "hanzi": "一根筷子",
+        "pinyin": "yì gēn kuàizi",
+        "english": "one chopstick"
+      }
+    ]
+  },
+  {
+    "id": "mw-棵",
+    "hanzi": "棵",
+    "pinyin": "kē",
+    "group": "nature",
+    "meaning": "trees and plants",
+    "note": "Same sound as 颗 kē, different usual nouns.",
+    "examples": [
+      {
+        "hanzi": "一棵树",
+        "pinyin": "yì kē shù",
+        "english": "one tree"
+      },
+      {
+        "hanzi": "一棵白菜",
+        "pinyin": "yì kē báicài",
+        "english": "one Chinese cabbage"
+      }
+    ]
+  },
+  {
+    "id": "mw-朵",
+    "hanzi": "朵",
+    "pinyin": "duǒ",
+    "group": "nature",
+    "meaning": "flowers and clouds",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一朵花",
+        "pinyin": "yì duǒ huā",
+        "english": "one flower"
+      },
+      {
+        "hanzi": "一朵云",
+        "pinyin": "yì duǒ yún",
+        "english": "one cloud"
+      }
+    ]
+  },
+  {
+    "id": "mw-种",
+    "hanzi": "种",
+    "pinyin": "zhǒng",
+    "group": "nature",
+    "meaning": "kinds and types",
+    "note": "Counts types, rather than individual objects.",
+    "examples": [
+      {
+        "hanzi": "一种水果",
+        "pinyin": "yì zhǒng shuǐguǒ",
+        "english": "one kind of fruit"
+      },
+      {
+        "hanzi": "两种颜色",
+        "pinyin": "liǎng zhǒng yánsè",
+        "english": "two colours"
+      }
+    ]
+  },
+  {
+    "id": "mw-次",
+    "hanzi": "次",
+    "pinyin": "cì",
+    "group": "actions",
+    "meaning": "occurrences of an action",
+    "note": "Usually follows the verb. 次 counts occurrences.",
+    "examples": [
+      {
+        "hanzi": "去一次",
+        "pinyin": "qù yí cì",
+        "english": "go once"
+      },
+      {
+        "hanzi": "看两次",
+        "pinyin": "kàn liǎng cì",
+        "english": "look twice"
+      }
+    ]
+  },
+  {
+    "id": "mw-遍",
+    "hanzi": "遍",
+    "pinyin": "biàn",
+    "group": "actions",
+    "meaning": "complete repetitions",
+    "note": "Emphasizes doing something from beginning to end.",
+    "examples": [
+      {
+        "hanzi": "读一遍",
+        "pinyin": "dú yí biàn",
+        "english": "read through once"
+      },
+      {
+        "hanzi": "听两遍",
+        "pinyin": "tīng liǎng biàn",
+        "english": "listen through twice"
+      }
+    ]
+  },
+  {
+    "id": "mw-趟",
+    "hanzi": "趟",
+    "pinyin": "tàng",
+    "group": "actions",
+    "meaning": "trips and journeys",
+    "note": "Used with movement verbs.",
+    "examples": [
+      {
+        "hanzi": "去一趟",
+        "pinyin": "qù yí tàng",
+        "english": "make one trip there"
+      },
+      {
+        "hanzi": "跑两趟",
+        "pinyin": "pǎo liǎng tàng",
+        "english": "make two trips"
+      }
+    ]
+  },
+  {
+    "id": "mw-下",
+    "hanzi": "下",
+    "pinyin": "xià",
+    "group": "actions",
+    "meaning": "brief actions; individual movements",
+    "note": "一下 can soften a request; it does not always mean exactly one movement.",
+    "examples": [
+      {
+        "hanzi": "看一下",
+        "pinyin": "kàn yí xià",
+        "english": "take a quick look"
+      },
+      {
+        "hanzi": "敲两下",
+        "pinyin": "qiāo liǎng xià",
+        "english": "knock twice"
+      }
+    ]
+  },
+  {
+    "id": "mw-顿",
+    "hanzi": "顿",
+    "pinyin": "dùn",
+    "group": "actions",
+    "meaning": "meals",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一顿饭",
+        "pinyin": "yí dùn fàn",
+        "english": "one meal"
+      },
+      {
+        "hanzi": "一天三顿饭",
+        "pinyin": "yì tiān sān dùn fàn",
+        "english": "three meals a day"
+      }
+    ]
+  },
+  {
+    "id": "mw-公斤",
+    "hanzi": "公斤",
+    "pinyin": "gōngjīn",
+    "group": "units",
+    "meaning": "kilograms",
+    "note": "A standard unit, not an object classifier.",
+    "examples": [
+      {
+        "hanzi": "一公斤米",
+        "pinyin": "yì gōngjīn mǐ",
+        "english": "one kilogram of rice"
+      },
+      {
+        "hanzi": "两公斤苹果",
+        "pinyin": "liǎng gōngjīn píngguǒ",
+        "english": "two kilograms of apples"
+      }
+    ]
+  },
+  {
+    "id": "mw-斤",
+    "hanzi": "斤",
+    "pinyin": "jīn",
+    "group": "units",
+    "meaning": "jin, a weight unit",
+    "note": "In mainland China, one jin is 500 grams. Regional definitions differ.",
+    "examples": [
+      {
+        "hanzi": "一斤苹果",
+        "pinyin": "yì jīn píngguǒ",
+        "english": "one jin of apples"
+      },
+      {
+        "hanzi": "两斤米",
+        "pinyin": "liǎng jīn mǐ",
+        "english": "two jin of rice"
+      }
+    ]
+  },
+  {
+    "id": "mw-米",
+    "hanzi": "米",
+    "pinyin": "mǐ",
+    "group": "units",
+    "meaning": "metres",
+    "note": "As a noun 米 also means uncooked rice.",
+    "examples": [
+      {
+        "hanzi": "一米布",
+        "pinyin": "yì mǐ bù",
+        "english": "one metre of cloth"
+      },
+      {
+        "hanzi": "两米长",
+        "pinyin": "liǎng mǐ cháng",
+        "english": "two metres long"
+      }
+    ]
+  },
+  {
+    "id": "mw-升",
+    "hanzi": "升",
+    "pinyin": "shēng",
+    "group": "units",
+    "meaning": "litres",
+    "note": "A standard volume unit.",
+    "examples": [
+      {
+        "hanzi": "一升水",
+        "pinyin": "yì shēng shuǐ",
+        "english": "one litre of water"
+      },
+      {
+        "hanzi": "两升牛奶",
+        "pinyin": "liǎng shēng niúnǎi",
+        "english": "two litres of milk"
+      }
+    ]
+  },
+  {
+    "id": "mw-元",
+    "hanzi": "元",
+    "pinyin": "yuán",
+    "group": "units",
+    "meaning": "yuan, a currency unit",
+    "note": "Everyday speech often uses 块 instead of 元.",
+    "examples": [
+      {
+        "hanzi": "一元钱",
+        "pinyin": "yì yuán qián",
+        "english": "one yuan"
+      },
+      {
+        "hanzi": "两元钱",
+        "pinyin": "liǎng yuán qián",
+        "english": "two yuan"
+      }
+    ]
+  },
+  {
+    "id": "mw-小时",
+    "hanzi": "小时",
+    "pinyin": "xiǎoshí",
+    "group": "time",
+    "meaning": "hours",
+    "note": "Usually uses 个: 两个小时. Contrast 两天 without 个.",
+    "examples": [
+      {
+        "hanzi": "一个小时",
+        "pinyin": "yí gè xiǎoshí",
+        "english": "one hour"
+      },
+      {
+        "hanzi": "两个小时",
+        "pinyin": "liǎng gè xiǎoshí",
+        "english": "two hours"
+      }
+    ]
+  },
+  {
+    "id": "mw-分钟",
+    "hanzi": "分钟",
+    "pinyin": "fēnzhōng",
+    "group": "time",
+    "meaning": "minutes",
+    "note": "Do not add 个 in this duration pattern.",
+    "examples": [
+      {
+        "hanzi": "一分钟",
+        "pinyin": "yì fēnzhōng",
+        "english": "one minute"
+      },
+      {
+        "hanzi": "两分钟",
+        "pinyin": "liǎng fēnzhōng",
+        "english": "two minutes"
+      }
+    ]
+  },
+  {
+    "id": "mw-天",
+    "hanzi": "天",
+    "pinyin": "tiān",
+    "group": "time",
+    "meaning": "days",
+    "note": "A duration unit; no 个 in 两天.",
+    "examples": [
+      {
+        "hanzi": "一天",
+        "pinyin": "yì tiān",
+        "english": "one day"
+      },
+      {
+        "hanzi": "两天",
+        "pinyin": "liǎng tiān",
+        "english": "two days"
+      }
+    ]
+  },
+  {
+    "id": "mw-年",
+    "hanzi": "年",
+    "pinyin": "nián",
+    "group": "time",
+    "meaning": "years",
+    "note": "A duration unit; no 个 in 两年.",
+    "examples": [
+      {
+        "hanzi": "一年",
+        "pinyin": "yì nián",
+        "english": "one year"
+      },
+      {
+        "hanzi": "两年",
+        "pinyin": "liǎng nián",
+        "english": "two years"
+      }
+    ]
+  },
+  {
+    "id": "mw-部",
+    "hanzi": "部",
+    "pinyin": "bù",
+    "group": "study",
+    "meaning": "films, works and some devices",
+    "note": "部 counts a film as a work; 场 counts a showing.",
+    "examples": [
+      {
+        "hanzi": "一部电影",
+        "pinyin": "yí bù diànyǐng",
+        "english": "one film"
+      },
+      {
+        "hanzi": "一部手机",
+        "pinyin": "yí bù shǒujī",
+        "english": "one mobile phone"
+      }
+    ]
+  },
+  {
+    "id": "mw-对",
+    "hanzi": "对",
+    "pinyin": "duì",
+    "group": "people",
+    "meaning": "pairs and couples",
+    "note": "A pair seen as a unit; 双 is common for matching items such as shoes.",
+    "examples": [
+      {
+        "hanzi": "一对夫妻",
+        "pinyin": "yí duì fūqī",
+        "english": "one married couple"
+      },
+      {
+        "hanzi": "一对耳环",
+        "pinyin": "yí duì ěrhuán",
+        "english": "one pair of earrings"
+      }
+    ]
+  },
+  {
+    "id": "mw-段",
+    "hanzi": "段",
+    "pinyin": "duàn",
+    "group": "study",
+    "meaning": "sections, stretches and passages",
+    "note": "",
+    "examples": [
+      {
+        "hanzi": "一段话",
+        "pinyin": "yí duàn huà",
+        "english": "one passage of speech"
+      },
+      {
+        "hanzi": "一段时间",
+        "pinyin": "yí duàn shíjiān",
+        "english": "one period of time"
+      }
+    ]
+  },
+  {
+    "id": "mw-层",
+    "hanzi": "层",
+    "pinyin": "céng",
+    "group": "places",
+    "meaning": "floors and layers",
+    "note": "三层楼 can mean three storeys; 三楼 means the third floor.",
+    "examples": [
+      {
+        "hanzi": "一层楼",
+        "pinyin": "yì céng lóu",
+        "english": "one floor of a building"
+      },
+      {
+        "hanzi": "两层纸",
+        "pinyin": "liǎng céng zhǐ",
+        "english": "two layers of paper"
+      }
+    ]
+  },
+  {
+    "id": "mw-道",
+    "hanzi": "道",
+    "pinyin": "dào",
+    "group": "food",
+    "meaning": "dishes and questions",
+    "note": "一道菜 counts a dish; 一盘菜 describes a plateful.",
+    "examples": [
+      {
+        "hanzi": "一道菜",
+        "pinyin": "yí dào cài",
+        "english": "one dish"
+      },
+      {
+        "hanzi": "一道题",
+        "pinyin": "yí dào tí",
+        "english": "one question"
+      }
+    ]
+  },
+  {
+    "id": "mw-场",
+    "hanzi": "场",
+    "pinyin": "chǎng",
+    "group": "actions",
+    "meaning": "events, games and performances",
+    "note": "The reading here is chǎng, third tone. 部 counts the film itself.",
+    "examples": [
+      {
+        "hanzi": "一场比赛",
+        "pinyin": "yì chǎng bǐsài",
+        "english": "one match"
+      },
+      {
+        "hanzi": "一场电影",
+        "pinyin": "yì chǎng diànyǐng",
+        "english": "one film showing"
+      }
+    ]
+  }
+]
