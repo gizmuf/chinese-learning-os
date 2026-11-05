@@ -528,14 +528,14 @@ export default function StudyApp({
           {(
             [
               { id: "today", title: t("Today"), icon: Home },
-              { id: "studio", title: "StudyStudio", icon: Sparkles },
-              { id: "labs", title: "3D Lab", icon: LabNavIcon },
               { id: "lessons", title: t("My lessons"), icon: BookOpen },
               { id: "course", title: t("Course"), icon: GraduationCap },
               { id: "atlas", title: t("Cloud Atlas"), icon: Network },
+              { id: "studio", title: "StudyStudio", icon: Sparkles },
               { id: "practice", title: t("Writing studio"), icon: PenLine },
               { id: "reviews", title: t("Review"), icon: RotateCcw },
               { id: "progress", title: t("My progress"), icon: TrendingUp },
+              { id: "labs", title: "3D Lab", icon: LabNavIcon },
             ] as const
           ).map((n) => (
             <button
