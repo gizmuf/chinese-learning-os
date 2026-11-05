@@ -12,3 +12,20 @@ test('Print Trace uses the printed glyph and pen ink, remains supported, and req
  const stroke=[{x:.1,y:.1,p:.5,t:1},{x:.3,y:.3,p:.5,t:2}];await m.act(()=>r.root.findAllByType('ink')[0].props.onChange([stroke]));assert.equal(button(r,'Save practice').props.disabled,true);
  await m.act(()=>r.root.findAllByType('ink')[1].props.onChange([stroke]));assert.equal(button(r,'Save practice').props.disabled,false);assert.equal(r.root.findAllByType('ink')[0].props.lineStyle,'pen');await m.act(()=>button(r,'Save practice').props.onClick());assert.equal(globalThis.__writingEvent.assisted,true);assert.equal(globalThis.__writingEvent.mode,'trace');await m.act(()=>r.unmount());globalThis.printAppearance=false;
 });
+
+test('normal writing has compact fields and explicit enlargement preserves every character’s ink and recall state',async()=>{
+ const r=await mount();const fields=()=>r.root.findByProps({className:'whole-word-writing'});
+ assert.equal(fields().props.style['--writing-cell-size'],'180px');
+ const stroke=[{x:.2,y:.3,t:1,p:.5}];await m.act(()=>r.root.findAllByType('ink')[0].props.onChange([stroke]));
+ const toggle=()=>r.root.findByProps({'aria-label':'Enlarge writing area'});
+ await m.act(()=>toggle().props.onClick());assert.equal(fields().props.style['--writing-cell-size'],'300px');assert.equal(r.root.findAllByType('ink')[0].props.strokes.length,1);assert.ok(button(r,'Compare answer').props.disabled);
+ await m.act(()=>toggle().props.onClick());assert.equal(fields().props.style['--writing-cell-size'],'180px');assert.equal(r.root.findAllByType('ink')[0].props.strokes.length,1);await m.act(()=>r.unmount());
+});
+
+test('selecting the next character by writing in its field does not replace its empty ink buffer mid-contact',async()=>{
+ const r=await mount();const before=r.root.findAllByType('ink')[1].props.strokes;
+ await m.act(()=>r.root.findAllByProps({className:'writing-word-cell'})[0]?.props.onPointerDownCapture?.({pointerType:'pen'}));
+ const cells=r.root.findAll(n=>typeof n.props.className==='string'&&n.props.className.startsWith('writing-word-cell'));
+ await m.act(()=>cells[1].props.onPointerDownCapture({pointerType:'pen'}));
+ assert.equal(r.root.findAllByType('ink')[1].props.strokes,before,'focus changes must not look like an external Clear to the drawing surface');await m.act(()=>r.unmount());
+});

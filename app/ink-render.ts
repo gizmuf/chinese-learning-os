@@ -1,9 +1,12 @@
 import { getStroke } from "./vendor/perfect-freehand/getStroke";
 import type { Stroke } from "./learning";
 // Keep stored points unchanged: rendering is independent of grading and export.
+export function writingPenWidth(width:number,height:number){
+  return Math.min(5,Math.max(2.4,Math.min(width,height)*2.8/144));
+}
 export function inkOutline(stroke: Stroke, width: number, height: number, complete = true, lineStyle: 'brush'|'pen' = 'brush') {
   return getStroke(stroke.map(p => [p.x * width, p.y * height, p.p]), {
-    size: lineStyle==='pen'?2.2:5.5, thinning: lineStyle==='pen'?0:.6, smoothing: .55, streamline: .25,
+    size: lineStyle==='pen'?writingPenWidth(width,height):5.5, thinning: lineStyle==='pen'?0:.6, smoothing: .55, streamline: .25,
     simulatePressure: false, last: complete,
   });
 }

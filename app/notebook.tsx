@@ -85,6 +85,7 @@ function CharacterRow({ character, reading, position, sheet, change, penOnly, di
     <h3>{sheet.hidden ? t("Character {0}", [position + 1]) : character}</h3>
     {!sheet.hidden && <><WritingCharacterContext character={character} notify={notify}/>
       {data ? <>
+        {style==='print'&&<p className="notebook-guide-note">{({en:'Stroke-order diagrams use the handwriting model. The practice boxes below use your printed font.',fr:'Les étapes suivent le modèle manuscrit. Les cases ci-dessous utilisent votre police imprimée.',ru:'Порядок штрихов показан по рукописному образцу. В клетках ниже используется печатный шрифт.',tr:'Çizgi sırası el yazısı modelini kullanır. Aşağıdaki kutular basılı yazı tipini kullanır.'}[locale])}</p>}
         <div className="notebook-steps" aria-label={t("Stroke order for {0}", [character])}>
           {data.strokes.map((_, i) => <button key={i} aria-label={t("{0} stroke {1}", [character, i + 1])} aria-pressed={step === i}
             className={step === i ? "selected" : ""} onClick={() => setStep(i)}>

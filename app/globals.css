@@ -4347,3 +4347,11 @@ html[lang="ru"] .nav-item, html[lang="fr"] .nav-item { font-size: 12px; }
 .library-boundary{height:1px}.library-boundary:focus,#library-start:focus{outline:none}
 
 @media(max-width:1000px){.library-boundary{scroll-margin-bottom:calc(94px + env(safe-area-inset-bottom,0px))}}
+
+/* Natural-sized writing, with explicit enlargement for inspecting a new shape. */
+.writing-panel{min-width:0}
+.writing-panel .writing-grid,.shared-writing-exercise .writing-grid{width:100%;max-width:var(--writing-cell-size,180px);margin-inline:auto}
+.writing-panel .whole-word-writing .writing-grid{max-width:var(--writing-cell-size,180px)}
+.writing-presentation-controls{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin:10px 0 16px}
+.writing-presentation-controls .hanzi-display-controls{margin:0}.writing-size-toggle{font-size:12px;min-height:40px;padding:5px 8px;color:#77896d}
+.notebook-guide-note{font-size:12px;line-height:1.5;color:#7b8974;margin:8px 0 12px}
