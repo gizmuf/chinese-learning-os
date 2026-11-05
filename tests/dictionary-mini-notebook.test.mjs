@@ -34,3 +34,16 @@ test('a character can switch to its recorded whole word and practise it in pairs
  const toggle=r.root.findAllByType('button').find(b=>b.children.filter(v=>typeof v==='string').join('').includes('Whole word'));assert.ok(toggle);await m.act(()=>toggle.props.onClick());
  const labels=r.root.findAll(n=>n.props.role==='group'&&String(n.props['aria-label']).includes(' · ')).map(n=>n.props['aria-label']);assert.deepEqual(labels,['香 · 1','蕉 · 2','香 · 3','蕉 · 4','香 · 5','蕉 · 6','香 · 7','蕉 · 8']);await m.act(()=>r.unmount());
 });
+
+test('offscreen library notebooks keep every square and toolbar in layout while suspending only canvases',async()=>{
+ let r;const props={text:'服务员',visible:true,wholeWord:true,library:true,onClose:()=>{}};
+ await m.act(()=>{r=m.renderer.create(m.createElement(m.Notebook,props));});
+ const squares=()=>r.root.findAllByProps({className:'notebook-square'}).length;
+ const tools=()=>r.root.findAllByProps({className:'sp-mini-notebook-tools'}).length;
+ const shape=[squares(),tools(),r.root.findAllByProps({className:'sp-mini-word-repetition'}).length];
+ const ink=[[{x:.1,y:.2,p:.5,t:1}]];await m.act(()=>r.root.findAllByType('canvas')[0].props.onChange(ink));
+ await m.act(()=>r.update(m.createElement(m.Notebook,{...props,visible:false})));
+ assert.deepEqual([squares(),tools(),r.root.findAllByProps({className:'sp-mini-word-repetition'}).length],shape);
+ assert.equal(r.root.findByType('aside').props.hidden,false);assert.equal(r.root.findByType('aside').props.inert,true);assert.equal(r.root.findAllByType('canvas').length,0);
+ await m.act(()=>r.update(m.createElement(m.Notebook,props)));assert.deepEqual(r.root.findAllByType('canvas')[0].props.strokes,ink);await m.act(()=>r.unmount());
+});

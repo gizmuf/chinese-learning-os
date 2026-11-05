@@ -9,3 +9,24 @@ test('a delayed lost-capture notification from the previous contact cannot cance
 test('an external Clear still cancels unfinished ink, and a palm cannot end a Pencil stroke',async()=>{const r=await mount();const ink=()=>r.root.findByType('canvas').props;await m.act(()=>ink().onPointerDown(event(7)));await m.act(()=>__clearInk());await m.act(()=>ink().onPointerUp(event(7,40)));assert.equal(__committedInk.length,0);await m.act(()=>{ink().onPointerDown(event(7));ink().onPointerCancel(event(9,40,'touch'));ink().onPointerUp(event(7,60));});assert.equal(__committedInk.at(-1).length,1);await m.act(()=>r.unmount());});
 
 test('a resting palm is silently rejected in the notebook without stealing the active Pencil contact',async()=>{globalThis.__quietTouch=true;const r=await mount();const ink=()=>r.root.findByType('canvas').props;let prevented=0;await m.act(()=>{ink().onPointerDown(event(7));ink().onPointerDown({...event(8,45,'touch'),preventDefault(){prevented++;}});ink().onPointerUp(event(7,60));});assert.equal(prevented,1);assert.equal(__committedInk.at(-1).length,1);assert.equal(r.root.findAllByProps({className:'canvas-notice'}).length,0);await m.act(()=>r.unmount());globalThis.__quietTouch=false;});
+
+test('an interrupted Pencil contact keeps its collected ink and the very next contact writes immediately',async()=>{
+ const r=await mount();const ink=()=>r.root.findByType('canvas').props;
+ await m.act(()=>{ink().onPointerDown(event(7));ink().onPointerMove(event(7,40));ink().onPointerCancel(event(7,0));});
+ assert.equal(__committedInk.length,1,'a browser cancellation must not discard accepted Pencil points');
+ assert.equal(__committedInk[0][0].at(-1).x,.2,'cancellation coordinates must not add a false line to the origin');
+ await m.act(()=>{ink().onPointerDown(event(7,60));ink().onPointerUp(event(7,90));});
+ assert.equal(__committedInk.at(-1).length,2);await m.act(()=>r.unmount());
+});
+test('a fresh Pencil down recovers a missing previous up instead of consuming the next stroke',async()=>{
+ const r=await mount();const ink=()=>r.root.findByType('canvas').props;
+ await m.act(()=>{ink().onPointerDown(event(7));ink().onPointerMove(event(7,40));});
+ await m.act(()=>{ink().onPointerDown(event(7,60));ink().onPointerMove(event(7,80));ink().onPointerUp(event(7,100));});
+ assert.equal(__committedInk.length,2,'retain the interrupted contact and accept the new stroke on its first attempt');
+ assert.equal(__committedInk.at(-1)[1][0].x,.3);await m.act(()=>r.unmount());
+});
+test('losing capture retains collected points once, and a later up cannot duplicate them',async()=>{
+ const r=await mount();const ink=()=>r.root.findByType('canvas').props;
+ await m.act(()=>{ink().onPointerDown(event(7));ink().onPointerMove(event(7,40));captures.delete(7);ink().onLostPointerCapture(event(7,0));ink().onPointerUp(event(7,60));});
+ assert.equal(__committedInk.length,1);assert.equal(__committedInk[0][0].length,2);await m.act(()=>r.unmount());
+});

@@ -3,6 +3,7 @@ import {writingPracticeHref,writingPracticeRoute,type WritingOrigin} from './wri
 
 import {usePracticeBook} from './use-practice-book';
 import LibraryNotebook from './library-notebook';
+import LibraryScrollControls from './library-scroll-controls';
 import LanguagePractice from './language-practice';
 import {isLanguageSkill,languageSkills,languagePracticeHref,languagePracticeRoute} from './pinyin-practice-model';
 import ReferenceLessonLinks from './reference-lesson-links';
@@ -202,6 +203,7 @@ export default function StudyApp({
   }, []);
   const practiceBook=usePracticeBook(db?.name==='chinese-os-v1-'+(user?.id??'guest')?db:null,user?.id??null,notify);
   const chosenItems=practiceBook.entries.map(v=>{const known=items.find(i=>i.hanzi===v.text);return known??{id:'practice-choice:'+v.text,lesson:'selected',hanzi:v.text,pinyin:v.pinyin,english:v.meaning,sentence:v.contextual?.text??'',sentencePinyin:v.contextual?.pinyin??'',translation:v.contextual?.meaning??''} satisfies Item;});
+  const libraryLessonLabel={en:'Lessons',fr:'Leçons',ru:'Уроки',tr:'Dersler'}[locale];
   const libraryCopy={en:{selected:'Selected for practice',add:'Add to practice book',remove:'Remove from practice book',cards:'Cards',notebook:'Cards with notebook',empty:'Add words and characters using the bookmark-plus icon in any definition.',ready:'Your choices are saved on this device.'},fr:{selected:'Choisis pour pratiquer',add:'Ajouter au cahier',remove:'Retirer du cahier',cards:'Cartes',notebook:'Cartes avec cahier',empty:'Ajoutez des mots et caractères avec le signet + dans une définition.',ready:'Votre sélection est enregistrée sur cet appareil.'},ru:{selected:'Выбрано для практики',add:'Добавить в тетрадь',remove:'Убрать из тетради',cards:'Карточки',notebook:'Карточки с тетрадью',empty:'Добавляйте слова и знаки кнопкой закладки с плюсом в словаре.',ready:'Ваш выбор сохранён на этом устройстве.'},tr:{selected:'Pratik için seçilenler',add:'Deftere ekle',remove:'Defterden çıkar',cards:'Kartlar',notebook:'Defterli kartlar',empty:'Sözlükteki artılı yer imiyle kelime ve karakter ekle.',ready:'Seçimlerin bu cihazda kaydedilir.'}}[locale];
   function libraryRecording(item:Item,kind:'word'|'sentence'){const chosen=practiceBook.entries.find(v=>v.text===item.hanzi);return kind==='word'?chosen?.audio&&!chosen.audio.context&&chosen.audio.text===item.hanzi?chosen.audio.source:undefined:chosen?.contextual?.audio?.text===item.sentence?chosen.contextual.audio.source:undefined;}
   function listenLibrary(item:Item,kind:'word'|'sentence'){const source=libraryRecording(item,kind);if(source)playRecording(source,notify);else speak(kind==='word'?item.hanzi:item.sentence,notify,item);}
@@ -901,7 +903,7 @@ export default function StudyApp({
           )}
           {view === "lessons" && (
             <>
-              <div className="page-heading">
+              <div id="library-start" className="page-heading" tabIndex={-1}>
                 <div>
                   <p className="eyebrow">{t("WORDS FOR YOUR REAL LIFE")}</p>
                   {level === "hsk3" && <button className="grammar-back" onClick={() => changeView("grammar")}>{t("HSK3 grammar")} →</button>}
@@ -914,6 +916,12 @@ export default function StudyApp({
                   </p>
                 </div>
               </div>
+              <nav className="library-lesson-links" aria-label={libraryLessonLabel}>
+                <span><BookOpen size={15}/>{libraryLessonLabel}</span>
+                <button type="button" onClick={openShuoshuoLesson}>Shuoshuo · Morning</button>
+                <button type="button" aria-label={({en:'Open My day lesson',fr:'Ouvrir Ma journée',ru:'Открыть урок «Мой день»',tr:'Günüm dersini aç'}[locale])} onClick={openMyDay}>{({en:'My day',fr:'Ma journée',ru:'Мой день',tr:'Günüm'}[locale])}</button>
+                <ReferenceLessonLinks compact onOpen={id=>{stopAudio();window.history.replaceState(null,'',referenceLessonHref(id)+'&from=lessons');setView('course');window.scrollTo({top:0,behavior:'instant'});}}/>
+              </nav>
               <button hidden={practiceSelection} className="secondary pdf-library-button" onClick={() => setPdfSelection(filtered.map(item => item.id))}><Download size={16} /> {t("Print notebook PDF")}</button>
               <div className="library-controls">
                 <label className="search-field">
@@ -941,7 +949,7 @@ export default function StudyApp({
                 </select>
               </div>
               <StudyConfusionsButton/>
-              <div className="library-results-bar"><p className="library-count" role="status">{filtered.length} {t(filtered.length===1?'word':'words')} · {practiceSelection?libraryCopy.selected:t(levelNames[level])}</p><div className="library-view-switch" role="group" aria-label="Library view"><button type="button" title={libraryCopy.cards} aria-label={libraryCopy.cards} aria-pressed={libraryLayout==='cards'} onClick={()=>{setLibraryLayout('cards');libraryRoute('cards');}}><LayoutGrid size={17}/></button><button type="button" title={libraryCopy.notebook} aria-label={libraryCopy.notebook} aria-pressed={libraryLayout==='notebook'} onClick={()=>{setLibraryLayout('notebook');libraryRoute('notebook');}}><Rows3 size={17}/></button></div></div>
+              <div className="library-results-bar"><p className="library-count" role="status">{filtered.length} {t(filtered.length===1?'word':'words')} · {practiceSelection?libraryCopy.selected:t(levelNames[level])}</p><div className="library-view-switch" role="group" aria-label="Library view"><button type="button" title={libraryCopy.cards} aria-label={libraryCopy.cards} aria-pressed={libraryLayout==='cards'} onClick={()=>{setLibraryLayout('cards');libraryRoute('cards');}}><LayoutGrid size={17}/></button><button type="button" title={libraryCopy.notebook} aria-label={libraryCopy.notebook} aria-pressed={libraryLayout==='notebook'} onClick={()=>{setLibraryLayout('notebook');libraryRoute('notebook');}}><Rows3 size={17}/></button></div><LibraryScrollControls/></div>
               {practiceSelection&&<p className="library-selection-note">{libraryCopy.ready}</p>}
               <div className={'word-grid'+(libraryLayout==='notebook'?' is-notebook':'')}>
                 {filtered.map((i) => (
@@ -988,11 +996,7 @@ export default function StudyApp({
                 <div className="empty-state">
                   {practiceSelection?libraryCopy.empty:t("No words found. Try another spelling or lesson.")}</div>
               )}
-              <details className="library-related-lessons"><summary>{({en:'Course & conversation lessons',fr:'Cours et conversations',ru:'Курс и разговорные уроки',tr:'Kurs ve konuşma dersleri'}[locale])}</summary>
-              <article className="personal-lesson-entry panel"><div><p className="eyebrow">VIDEO LESSON · SENTENCE REHEARSAL</p><h2>A morning with Shuoshuo · 我的早晨</h2><p>42 reading groups · 65 source segments · 40 vocabulary references · writing practice</p></div><button className="primary" onClick={openShuoshuoLesson}>Open lesson<ArrowRight size={16}/></button></article>
-              <article className="personal-lesson-entry panel"><div><p className="eyebrow">PERSONAL LESSON · SPEAKING REHEARSAL</p><h2>我的一天 · My day</h2><p>26 original sentences + new 3 November speaking chapters · Full-sentence audio</p></div><button className="primary" onClick={openMyDay}>Open My day lesson<ArrowRight size={16}/></button></article>
-              <ReferenceLessonLinks onOpen={id=>{stopAudio();window.history.replaceState(null,'',referenceLessonHref(id)+'&from=lessons');setView('course');window.scrollTo({top:0,behavior:'instant'});}}/>
-              </details>
+              <div id="library-end" className="library-boundary" tabIndex={-1}/>
             </>
           )}
           {view === "reviews" && (

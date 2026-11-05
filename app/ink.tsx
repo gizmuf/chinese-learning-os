@@ -61,9 +61,18 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false,quiet
   function point(e: PointerEvent | React.PointerEvent, rect: DOMRect): Point {
     return { x: Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width)), y: Math.min(1, Math.max(0, (e.clientY - rect.top) / rect.height)), p: e.pointerType === "pen" ? Math.max(0, Math.min(1, e.pressure)) : .5, t: e.timeStamp };
   }
+  function commit() {
+    const stroke = active.current;
+    if (!stroke) return;
+    active.current = null;
+    const next = [...current.current, stroke.points];
+    current.current = next; onChange(next); rebuild();
+  }
   function cancel(e: React.PointerEvent) {
     if (active.current?.id !== e.pointerId) return;
-    active.current = null; schedule();
+    // Keep collected ink when Safari cancels/revokes capture. Its cancellation
+    // coordinates may be zeroed and must never add a line to the origin.
+    commit();
   }
   function finish(e: React.PointerEvent) {
     const stroke = active.current;
@@ -73,16 +82,18 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false,quiet
       // Pointer-up commonly reports zero pressure: retain the last contact pressure.
       if (end.x !== last.x || end.y !== last.y) stroke.points.push({ ...end, p: last.p });
     }
-    active.current = null;
-    const next = [...current.current, stroke.points];
-    current.current = next; onChange(next); rebuild();
+    commit();
     if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId);
   }
   return <>
     <canvas aria-label={t("Write a character here using a pencil, finger or mouse")} ref={ref} className="ink-canvas"
       onContextMenu={e=>e.preventDefault()}
       onPointerDown={e => {
-        if (disabled || current.current.length >= 50) return;
+        if (disabled) return;
+        // A new physical pen contact recovers a missing up, rather than
+        // consuming the next stroke and making the learner draw it twice.
+        if(e.pointerType==='pen'&&active.current?.type==='pen')commit();
+        if (current.current.length >= 50) return;
         if(!acceptWritingPointer(e,penOnly,penSeen.current,active.current)){if(penOnly&&e.pointerType!=="pen"){if(quietTouch)e.preventDefault();else setTouchNotice(true);}return;}
         if(e.pointerType==="pen")penSeen.current=true;
         if(active.current){const id=active.current.id;active.current=null;if(e.currentTarget.hasPointerCapture(id))e.currentTarget.releasePointerCapture(id);schedule();}

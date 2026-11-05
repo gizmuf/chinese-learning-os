@@ -4332,3 +4332,18 @@ html[lang="ru"] .nav-item, html[lang="fr"] .nav-item { font-size: 12px; }
 .sp-mini-notebook,.sp-mini-notebook *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}.sp-mini-notebook-cell{touch-action:none}.sp-mini-unit-switch{display:flex;gap:6px;margin:8px 0 16px}.sp-mini-unit-switch button{min-height:38px;padding:6px 10px;border:1px solid #dce5d6;border-radius:8px;font-size:12px;background:white;color:#5c7565}.sp-mini-unit-switch [aria-pressed=true]{background:#e9f0e3;border-color:#a3b69b}.writing-print-guide{position:absolute;inset:0;width:100%;height:100%;fill:#d9e2d3;pointer-events:none}.study-confusions-entry{display:inline-flex;gap:8px;align-items:center;margin-top:12px;font-size:13px}
 
 .notebook-cell,.notebook-cell *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}.notebook-cell{touch-action:none}
+
+/* Keep library notebook geometry stable while offscreen canvases are suspended. */
+.sp-mini-storage-status{min-height:24px;font-size:12px;line-height:24px;color:#73836c}
+.library-lesson-links{display:flex;align-items:center;flex-wrap:wrap;gap:2px 15px;margin:0 0 18px;padding:0 0 12px;border-bottom:1px solid #e0e7da;font-size:13px}
+.library-lesson-links>span{display:inline-flex;align-items:center;gap:6px;color:#7a8872}
+.library-lesson-links>a,.library-lesson-links>button{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0;border:0;background:transparent;color:#4c7059;text-decoration:none;font-size:13px;font-weight:500;line-height:1.4}
+.library-lesson-links>a:hover,.library-lesson-links>button:hover{color:#294f3b;text-decoration:underline;text-underline-offset:4px}
+.library-lesson-links>a:focus-visible,.library-lesson-links>button:focus-visible,.library-scroll-controls button:focus-visible{outline:2px solid #8fa68a;outline-offset:4px;border-radius:5px}
+.library-results-bar{position:sticky;top:0;z-index:20;padding:6px 0;background:#f8f9f4f5;border-bottom:1px solid #e4e9de}.library-results-bar .library-view-switch{margin-left:auto}
+.library-scroll-controls{display:flex;align-items:center;gap:2px;border-left:1px solid #dce4d6;padding-left:8px}
+.library-scroll-controls button{display:grid;place-items:center;width:36px;min-height:40px;padding:0;border:0;border-radius:8px;background:transparent;color:#71856b}
+.library-scroll-controls button:hover{background:#edf2e8;color:#365d45}
+.library-boundary{height:1px}.library-boundary:focus,#library-start:focus{outline:none}
+
+@media(max-width:1000px){.library-boundary{scroll-margin-bottom:calc(94px + env(safe-area-inset-bottom,0px))}}
