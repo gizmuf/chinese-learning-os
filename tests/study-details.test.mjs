@@ -1,3 +1,4 @@
+import {recordingAssetPath} from './audio-source-helper.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {build} from 'esbuild';
@@ -8,7 +9,7 @@ test('Every Lesson 06 expression has a real translated usage sentence in all fou
  for(const locale of ['en','fr','ru','tr'])for(const word of m.lesson06Terms){
   const examples=m.studyExamples(word.hanzi,locale);assert.ok(examples.length,locale+': '+word.hanzi);
   assert.ok(examples.length<=2);
-  for(const example of examples){assert.ok(example.text.includes(word.hanzi));assert.notEqual(example.text.replace(/[\s\p{P}]/gu,''),word.hanzi);assert.ok(example.pinyin&&example.meaning);if(example.audio)assert.ok(existsSync('public'+example.audio.source),example.audio.source);}
+  for(const example of examples){assert.ok(example.text.includes(word.hanzi));assert.notEqual(example.text.replace(/[\s\p{P}]/gu,''),word.hanzi);assert.ok(example.pinyin&&example.meaning);if(example.audio)assert.ok(existsSync(recordingAssetPath(example.audio.source)),example.audio.source);}
  }
 });
 test('Expression details show actual character readings and meanings, including the r-ending role',()=>{

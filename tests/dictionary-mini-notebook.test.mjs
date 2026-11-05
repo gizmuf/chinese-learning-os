@@ -1,0 +1,49 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {build} from 'esbuild';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url);globalThis.IS_REACT_ACT_ENVIRONMENT=true;
+const compiled=await build({stdin:{contents:`import React from 'react';export {createElement} from 'react';export {default as renderer,act} from 'react-test-renderer';export {default as Notebook} from './app/dictionary-mini-notebook';export {expandDictionaryForNotebook} from './app/dictionary-window';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false,external:['react','react-test-renderer'],loader:{'.css':'empty'},plugins:[{name:'isolated-writing-surface',setup(b){b.onResolve({filter:/^\.\/ink$/},()=>({path:'ink',namespace:'stub'}));b.onResolve({filter:/^\.\/notebook$/},()=>({path:'notebook',namespace:'stub'}));b.onLoad({filter:/.*/,namespace:'stub'},a=>({contents:a.path==='ink'?`import React from 'react';export default function Ink(p){return React.createElement('canvas',p);}`:`import React from 'react';export const Grid=()=>React.createElement('svg');export const NotebookWordModel=({text})=>React.createElement('span',null,text);`,loader:'jsx'}));}}],logLevel:'silent'});
+const module={exports:{}};new Function('require','module','exports',compiled.outputFiles[0].text)(require,module,module.exports);const m=module.exports;
+test('the inline notebook has eight independent cells and retains ink while folding or inspecting another character',async()=>{
+ let r;const props={text:'书店',visible:true,wholeWord:false,onClose:()=>{}};await m.act(()=>{r=m.renderer.create(m.createElement(m.Notebook,props));});
+ let cells=()=>r.root.findAllByType('canvas');assert.equal(cells().length,8);assert.equal(cells()[0].props.penOnly,true);
+ const first=[[{x:.1,y:.2,p:.5,t:1}]],second=[[{x:.3,y:.4,p:.5,t:2}]];
+ await m.act(()=>cells()[0].props.onChange(first));await m.act(()=>cells()[1].props.onChange(second));
+ await m.act(()=>r.root.findAllByType('button').find(b=>b.props.children==='店').props.onClick());assert.equal(cells()[0].props.strokes.length,0);
+ await m.act(()=>r.root.findAllByType('button').find(b=>b.props.children==='书').props.onClick());assert.deepEqual(cells()[0].props.strokes,first);
+ await m.act(()=>r.update(m.createElement(m.Notebook,{...props,visible:false})));assert.equal(cells().length,0);
+ await m.act(()=>r.update(m.createElement(m.Notebook,props)));assert.deepEqual(cells()[1].props.strokes,second);
+ await m.act(()=>r.root.findByProps({'aria-label':'Clear box 1'}).props.onClick());assert.equal(cells()[0].props.strokes.length,0);assert.deepEqual(cells()[1].props.strokes,second);
+ await m.act(()=>r.unmount());
+});
+test('expansion moves left to retain the original right edge and stays inside tablet and phone bounds',()=>{
+ const rect={x:650,y:80,width:360,height:560};const expanded=m.expandDictionaryForNotebook(rect,{left:0,top:0,width:1024,height:768});
+ assert.equal(expanded.width,940);assert.equal(expanded.x,70);assert.equal(expanded.x+expanded.width,rect.x+rect.width);assert.ok(expanded.y+expanded.height<=756);
+ const phone=m.expandDictionaryForNotebook(rect,{left:0,top:0,width:390,height:844});assert.equal(phone.width,366);assert.equal(phone.x,12);assert.ok(phone.y+phone.height<=832);
+});
+
+test('whole-word library practice pairs both characters in two rows instead of requiring a character switch',async()=>{
+ let r;await m.act(()=>{r=m.renderer.create(m.createElement(m.Notebook,{text:'你好',visible:true,wholeWord:true,library:true,onClose:()=>{}}));});
+ assert.equal(r.root.findAllByType('canvas').length,8);assert.equal(r.root.findAllByProps({className:'sp-mini-word-repetition'}).length,2);
+ const labels=r.root.findAll(n=>n.props.role==='group').map(n=>n.props['aria-label']);assert.deepEqual(labels,['你 · 1','好 · 2','你 · 3','好 · 4','你 · 5','好 · 6','你 · 7','好 · 8']);await m.act(()=>r.unmount());
+});
+
+test('a character can switch to its recorded whole word and practise it in pairs',async()=>{
+ let r;await m.act(()=>{r=m.renderer.create(m.createElement(m.Notebook,{text:'香',word:'香蕉',visible:true,onClose:()=>{}}));});
+ const toggle=r.root.findAllByType('button').find(b=>b.children.filter(v=>typeof v==='string').join('').includes('Whole word'));assert.ok(toggle);await m.act(()=>toggle.props.onClick());
+ const labels=r.root.findAll(n=>n.props.role==='group'&&String(n.props['aria-label']).includes(' · ')).map(n=>n.props['aria-label']);assert.deepEqual(labels,['香 · 1','蕉 · 2','香 · 3','蕉 · 4','香 · 5','蕉 · 6','香 · 7','蕉 · 8']);await m.act(()=>r.unmount());
+});
+
+test('offscreen library notebooks keep every square and toolbar in layout while suspending only canvases',async()=>{
+ let r;const props={text:'服务员',visible:true,wholeWord:true,library:true,onClose:()=>{}};
+ await m.act(()=>{r=m.renderer.create(m.createElement(m.Notebook,props));});
+ const squares=()=>r.root.findAllByProps({className:'notebook-square'}).length;
+ const tools=()=>r.root.findAllByProps({className:'sp-mini-notebook-tools'}).length;
+ const shape=[squares(),tools(),r.root.findAllByProps({className:'sp-mini-word-repetition'}).length];
+ const ink=[[{x:.1,y:.2,p:.5,t:1}]];await m.act(()=>r.root.findAllByType('canvas')[0].props.onChange(ink));
+ await m.act(()=>r.update(m.createElement(m.Notebook,{...props,visible:false})));
+ assert.deepEqual([squares(),tools(),r.root.findAllByProps({className:'sp-mini-word-repetition'}).length],shape);
+ assert.equal(r.root.findByType('aside').props.hidden,false);assert.equal(r.root.findByType('aside').props.inert,true);assert.equal(r.root.findAllByType('canvas').length,0);
+ await m.act(()=>r.update(m.createElement(m.Notebook,props)));assert.deepEqual(r.root.findAllByType('canvas')[0].props.strokes,ink);await m.act(()=>r.unmount());
+});

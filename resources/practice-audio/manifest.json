@@ -1,0 +1,2442 @@
+{
+  "一个半小时": {
+    "text": "一个半小时",
+    "file": "511748915395cac4c0bd8922402a0feaaf3fa0dffc6667f32669195bff27c9b2.mp3",
+    "sha256": "cf7b85c6b07ea2f4b05fdba69170134d4ce17d439683477f28f01e33f2e134cc",
+    "bytes": 11808,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "一万": {
+    "text": "一万",
+    "file": "7396ef3616ec16ed18f2cc22c4eafdcf3b490374366f494389eba5931e2590a4.mp3",
+    "sha256": "7b7223259a5587faee58f19f2df729607b8ef3b5129ee953f790c5612f3d6d74",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "一个小时": {
+    "text": "一个小时",
+    "file": "bb8aba94f0ddce68bb6a9b04e5bf27eff7dba0d9fe181a074d030c95b2829ee1.mp3",
+    "sha256": "26e08c13d104b32cd338c4263f38d42d30a02cba2ea204730aa71dd8a9239107",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "一千": {
+    "text": "一千",
+    "file": "2987ed96e3306eec906c8a0755ce8f7103742e872167b4e525cce7ad5fd2dca4.mp3",
+    "sha256": "06d83b8aac24d12d8b57327d8d846644468d48fb0cf1f3bbb003772b8cc61715",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "一共七十二元。": {
+    "text": "一共七十二元。",
+    "file": "3fe5c6e3f3f3f2bef9e54239c8b5fdeb9e8107cdc869f3a9a3c77e5efd7728c6.mp3",
+    "sha256": "8dd3e1967fe50e92cee76e19fd3237fb03c464c14b7e4cfffe2a54a16852cf3e",
+    "bytes": 12672,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "一周有七天。": {
+    "text": "一周有七天。",
+    "file": "3e40ff373ec556523b44da52b5061d551d829eb9e35f0d42c8d5bd3e72dd741c.mp3",
+    "sha256": "a62495ace9bba22be08b5dab074e0d68e5a76974accfff0badcabb869d183c72",
+    "bytes": 12384,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "一年有四个季节。": {
+    "text": "一年有四个季节。",
+    "file": "f82a96a7358037e5d8398d4932db80f32ba1bebfb2b4179932b08faba9d0de1a.mp3",
+    "sha256": "a201933bfc2f62044d60ed80884fa0f7173f6222c15a649d8fd6f84f0360a723",
+    "bytes": 13680,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "一张地图": {
+    "text": "一张地图",
+    "file": "4b78d0488850f843aae6c89cb11731a86df2feca4aa4c2fe8258b0ca42733651.mp3",
+    "sha256": "758724c9d62e427471192651f2e2656b8e15b9412bf77190b3db9a413df577ff",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "一张床": {
+    "text": "一张床",
+    "file": "fd1fe7e44dc950531a6c233270c5487a226503cc0e7c7465f14f16488f5c10b6.mp3",
+    "sha256": "92616a4af4a9afb0920e496363cc60aaeaa616b989fb0c7a7ce23882649650f2",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "一张桌子": {
+    "text": "一张桌子",
+    "file": "9580162337cc6962002b192053601fbf133a59d4692719afc32992944c9dd280.mp3",
+    "sha256": "93dcad206e1ddf2cd20e25f118961c8b5b4d66a1b8396ae189e917f336deaa52",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "一千七百": {
+    "text": "一千七百",
+    "file": "4eaf26c3fe00f636378155c4a3253ce99edf050853f7ee612920d37d97f893dd.mp3",
+    "sha256": "c6b45c3d3f0d271f211ff6bd3713a69ae7247e975f9847469eb8e150b3c15673",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "一月": {
+    "text": "一月",
+    "file": "364a4dfc2d4702455765cc3c264ae9c681d4ba754fb3a9ffbeb9c09899ca27b6.mp3",
+    "sha256": "1877c5692dc813eda870477c6fe4a7ed8c8636cc9a3f2ff4e65beb2ed5935c0b",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "一百二十": {
+    "text": "一百二十",
+    "file": "022b1b538b3c204ee737d02da154ebdb39fa478eb29b052d9293a684bcaed4d1.mp3",
+    "sha256": "5d75412b36d9d5816450b43a0172464629d5ed82567ad36fbe5feb542887abb7",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "一张菜单": {
+    "text": "一张菜单",
+    "file": "c3a09407c32a90f29411cad756089d2c2191b41033b22dc6726988ed9926d3ef.mp3",
+    "sha256": "de5ef31b0b87f72e46a4c34034e7c375572decf5c452871e3a86a03100a7a38e",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "一百五十": {
+    "text": "一百五十",
+    "file": "99ddb982449e01ee7cb752e2d393c3138b5f5d57729fbbd991d9f928c1fc4b79.mp3",
+    "sha256": "487f8fe329000362d5350778ec23cda3a442884808f0293e0ada3a5ea74ceca0",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "一百": {
+    "text": "一百",
+    "file": "38d302ad2b36640fe95c8d74d9ca49d7fa052421fb22cccb83d0e76147bf509a.mp3",
+    "sha256": "8880979ae5ef1b1fa2e0d7155e8e4bb15fc3f363d1e0646e202c7b5fae5465d0",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "七十八": {
+    "text": "七十八",
+    "file": "27e994280e0c3d173c064e5953bdfbb6e026a5e87576881fdacb7a6cdc47e0ad.mp3",
+    "sha256": "ad0d65db6e1563d073538dea3b1f1a10ee61d6b052f4503e74a8e133d7cefde7",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "七点": {
+    "text": "七点",
+    "file": "c88998c90c467cf25704b854b59ad633b9f03b689d627ac3eb85bb8571e247ef.mp3",
+    "sha256": "6591521a03512d084a9efeeed2c30a2fdf523864850724ac10d63127517a039e",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "三十": {
+    "text": "三十",
+    "file": "a70676fba2a260e89793ebcc9d613314244fbe982cbd0b62eabf558cf95ef778.mp3",
+    "sha256": "20f701a12af24f3fad3907caf22e1424a8cbecbb0d327380025b363a1ccec180",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "七月": {
+    "text": "七月",
+    "file": "f8cd68e290a5d7422edda9bb1a685f4d0d7de23357beb411304ee3f7e9c529e7.mp3",
+    "sha256": "0298fd14e8737fb954e3078d80fef45ab9e479cf0643aa75c8dfccfdb909234e",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "三刻": {
+    "text": "三刻",
+    "file": "64aa9778be5adcc18ec4ea0c2701f576c0c5f93672efa322f13000818a632c3c.mp3",
+    "sha256": "e3be57bd368e2c5d38d85783d10a2ba193fef059ef6d2b8064470cbfbaf85543",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "三十六": {
+    "text": "三十六",
+    "file": "0a16b41faa0a2e6ada265d48c852af764be7a6122f7abfa049da2882d0941c0a.mp3",
+    "sha256": "7bff98bb0d17e9850cdc800192bdce9833afb3cdde1cd91eb75205e7fbf09a58",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "三号": {
+    "text": "三号",
+    "file": "bac6ab7a0c6f1d0535f5d668d66af19a1c9103a29f457adb6b5ca276c6706eea.mp3",
+    "sha256": "5a3be15213dbd4c9fbe372285abe171087f593e803c0d68aacc8fabb85f71a38",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "三十加二十等于五十。": {
+    "text": "三十加二十等于五十。",
+    "file": "d66b84a356a752239016362b09815c5d658b2263ed113eb325e8d26747b8b0b3.mp3",
+    "sha256": "bc06e21bed097304ef9b5f5b688c30feb3b4ca7172df5b4d584e5884d0f09131",
+    "bytes": 18576,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上一节课": {
+    "text": "上一节课",
+    "file": "fc0415a871ed443de2a0b0279d1ad072ac527606df2b4a8456985fbead056933.mp3",
+    "sha256": "11a9af895976f1cf480a1c77313b5a1f4d0671e3569410973e1aa3c85572b5bd",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上个月我在家。": {
+    "text": "上个月我在家。",
+    "file": "d791c13216dc8b3585128d6ba88a1c7fbc667cf522eda5c4a2d34a33b15d10ec.mp3",
+    "sha256": "1e9c49c4d4716a20b2a5fb45a1ee208ae8b6683935fbef63eaccf33ca98e2d11",
+    "bytes": 12384,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上传": {
+    "text": "上传",
+    "file": "9e07e3c0532d49765d558d66095bc48e2f9f34e8a8e9ad35d73e4bf2ca224bfc.mp3",
+    "sha256": "a938f930de3164f9dcb53e5766746aaa2b9e7b9b010ac95c24609178e9e65107",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上一节课我学习中文。": {
+    "text": "上一节课我学习中文。",
+    "file": "db3297972f1d5d45b1104948df8873fba509960039f1c9b9fb343d9ee5947e26.mp3",
+    "sha256": "5670c7e9df810689ceb6a4035d651ac09287a2d391ba4a7e74081b318c16c14b",
+    "bytes": 18000,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上午八点四十分": {
+    "text": "上午八点四十分",
+    "file": "18c1a3652beca8fba98683bdc95a93e62ce8ad7f2d932add369e1e700f023d79.mp3",
+    "sha256": "c7828f24f2f9fbf0b60540635a0944540b328b92e46e189d1481df31ee43ef0d",
+    "bytes": 14400,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上半年": {
+    "text": "上半年",
+    "file": "d1023d339768307b1b6d8797f2aae4057b6f6cf57a50b9f86459668caad4c5d4.mp3",
+    "sha256": "44ec36ceafaeb895fcb43f457b85dd5ea0c5962a9c7641f9c9d7a584c0347d5d",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上半年我学习中文。": {
+    "text": "上半年我学习中文。",
+    "file": "e4585f0d34ed55bdbd5ca06d0b3677c62f2e07ee8d9481ecc48c44cc0102860e.mp3",
+    "sha256": "5b773a4e3dc50d0980985a7209f4d1c60fa16b04cbc50990a9305473a3831a89",
+    "bytes": 16992,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上千": {
+    "text": "上千",
+    "file": "5a9f27d57ba43bfca191c56f7be926009ab7b207a2d8e0f600aa393166025b7e.mp3",
+    "sha256": "cc4b68976a440f8578d229d135f9a91a56836d6bbda5e98c4d258efd4b265e49",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上司": {
+    "text": "上司",
+    "file": "c408874d4619e54a8ff444768fb03409f9e37623eaf030f4e4195441d87ca3d7.mp3",
+    "sha256": "157de6c8b4a055ba4b851a360afabcdf1f9b4effddac3588f03e06216497316e",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上声": {
+    "text": "上声",
+    "file": "63903e6997a941053b43cd9b165291a839ca831ce6d00c6abcf87eb8b584b286.mp3",
+    "sha256": "e7ad5fb38960652851c1a8d3bba4f91c0bc6057fa11cfa8ce5d7f3247d33375e",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上厕所": {
+    "text": "上厕所",
+    "file": "38cff5350bbe462ec75db23673e7d5acc586869cc44694ac3c6477e6b9380a8a.mp3",
+    "sha256": "e5a7758000b015dcd124eb629a8c168acc3de8d6275fdb672335900436f3e914",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上山": {
+    "text": "上山",
+    "file": "3860ba1683e63d621da8dbd5d93ac687140fa145bf3eec13d594d6fe53984778.mp3",
+    "sha256": "7f1eac66d8689a9fff917b24f538d0a5de5eba1fe935ac013e8383f9c31133a0",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上床": {
+    "text": "上床",
+    "file": "782c3a00b0dccc1641bd6bbb8bf36afccefde5d426c6cac75cd51e4606db860d.mp3",
+    "sha256": "6189baa86828cf0fa8120ee61c4f492544e3b9f6a6f93435494caa1ea0dc0152",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上大学": {
+    "text": "上大学",
+    "file": "e1f4465f31eb5962624047ae8a5d15546d9da7f146dbdeee63d807d8ddf3c65a.mp3",
+    "sha256": "e92a05ae0ea709e985861b673fcfab4056e04b3c5f42fa7396fcf759880bd925",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上星期": {
+    "text": "上星期",
+    "file": "e8eecb6a991681372cb54b7c2cba44267b0720b6e8cfe553c7e962a1b082025b.mp3",
+    "sha256": "fb5535efaaccf22e9f691d045f6475d379fdcf96eff47288d72221d19e403f16",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上星期我上课。": {
+    "text": "上星期我上课。",
+    "file": "b5fe8f3e6afe4d503b40a83c49a5613ea20c856031d3c158ad68ec1543f08ac7.mp3",
+    "sha256": "cf15b72f4d848e1a567d3d441adcfa8f620d5158e61dd6d965b60ce9b69e0fba",
+    "bytes": 13536,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上楼": {
+    "text": "上楼",
+    "file": "4031aeb88f21be39f81edae12b3a619b88b79b724f1f241618fc300a300b95eb.mp3",
+    "sha256": "73ed16f8f54d9587702b1490097e35f48d59cf32788070c432473572bce3d4c8",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上次我坐车。": {
+    "text": "上次我坐车。",
+    "file": "112db9105dc3fb0b1d8ebb9cd1c19ef6417481768b7beee000cb0ea77bb6a598.mp3",
+    "sha256": "deedb8e93be75b37f2e1166c34bcfd95f69dd687b304a024f5427b407b315fbb",
+    "bytes": 12528,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上次": {
+    "text": "上次",
+    "file": "f664edd9036b794e12914afdc60c717e2f3952dd4cd65cf8a498d8f52d77c9ab.mp3",
+    "sha256": "c6e58bd72f61af05c736009911d18a27b1ae4da4fc91c593556584b4bbf5c893",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上菜": {
+    "text": "上菜",
+    "file": "bc03ca1502d65b71fd4e9e28aa2ebad9ff97080af63c42125a91ba2dd500e01d.mp3",
+    "sha256": "d6b948bc08c6d4b41de8882f8f62621fd0d156e2b6dcb0d8a50282f92cdee1e8",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上级": {
+    "text": "上级",
+    "file": "da88ef9c3ec580d299cbdb46164ca8965e4ba4bc5bdedd45d08ea25b8c51f41b.mp3",
+    "sha256": "e0b9e98767ed56810c412791c761345f52c7a70411b44a15319885a7c15a28ff",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上车": {
+    "text": "上车",
+    "file": "d9e6af5a2b64d2afb897cc525c3b404f6ed7e3f79046d9930883e536eff54bed.mp3",
+    "sha256": "e687b70add1b435c5ffaaf54a7156be098f63124ef8a0c95716efc0205c4382e",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上飞机": {
+    "text": "上飞机",
+    "file": "f41d32599ad508a11a492922a878081a4bfc45e7af5cc7138ae283f42ec4fb1a.mp3",
+    "sha256": "b96420854787a6bbdec9819162a1156987bc7d488078b0ff987fc9d7b55288c9",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "下一节课": {
+    "text": "下一节课",
+    "file": "d3a28cd3b43486276b439f596caf0fbc5f37b8951ca808a4634ebc0c50f6168b.mp3",
+    "sha256": "e471efc272d111a107cbbd73d4ec688a961fe77b8c58f83f91a30c8b1cd44d71",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "上百": {
+    "text": "上百",
+    "file": "21db4d392e784ba4570728b3cb5f890b7b59433b37066de3a3fc842771a965a6.mp3",
+    "sha256": "7101ff17e9dae77aebfcb346355895733820b72bc3130a5da6bbad374dc1d494",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "下个月我去学校。": {
+    "text": "下个月我去学校。",
+    "file": "85c3cd700d3403d956d4b1b70c226b23cca7a35dd9ec7958909d8c429a52c74f.mp3",
+    "sha256": "a4611cfd96025cd6ad5afd624d1e1ac82d162f36822ed056e16c32138e448c27",
+    "bytes": 13536,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "下星期": {
+    "text": "下星期",
+    "file": "97b102f681afff47858b581f3706b10bae9cc591f7ae535f2663df59ac2e27fd.mp3",
+    "sha256": "5159d2f118478a6f9655e149fd8837081be2097879ae9d1c64aeebbb0f138c5e",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "下午两点半": {
+    "text": "下午两点半",
+    "file": "d7e7c81b11632864aa0e2e33e8a1f281808a5d8c5450be74c7c632d432cdf08c.mp3",
+    "sha256": "21b5eec8dfb62908816460099cdb2589bb1c19a359f861d3f289a7353009e232",
+    "bytes": 11808,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "下星期我上课。": {
+    "text": "下星期我上课。",
+    "file": "3da68dbbbbbe881c9820b205fb7164a4d7c47b54e168223378623172420f4921.mp3",
+    "sha256": "93569e5288168875bb304a2532af5854a52ef77eb2a8496a7c2db71349ba13a0",
+    "bytes": 13392,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "下次": {
+    "text": "下次",
+    "file": "6f7517d250d82ea5204763fda62ff6d0bfa3ee237d8fe8160cc70d3d5cf83561.mp3",
+    "sha256": "d9185767c8b0d0da28251b956bff001f69f412e0fa2a0a7eb8ae8be344bf8eaa",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "下次我走路。": {
+    "text": "下次我走路。",
+    "file": "264ed827d02cc6ca36c4c18c4120b48bd6e03b4be4fa60227ff79efe492a9f14.mp3",
+    "sha256": "a3b35b396f0747bebff32576bf988501c3dddf3ebbdebd36077967c66e8d1f22",
+    "bytes": 12096,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "不吃早饭对身体不好。": {
+    "text": "不吃早饭对身体不好。",
+    "file": "557ad33d5c263d6c40bfbcef13e7ba557592041be4849de09407503e501357ed.mp3",
+    "sha256": "c8a3f30f57c618f96ec95d834d64cef2b43702cb3e16daaa506bc3600ed3e067",
+    "bytes": 17568,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "下一节课下午一点开始。": {
+    "text": "下一节课下午一点开始。",
+    "file": "a7ad9b780f460092d65de06535f23d204c41d5b49c3afd2edf560ef3a3c109b2.mp3",
+    "sha256": "3d4c800c000c272d5de15f99756f21e88a74c1e1e43a9f0cee112209d1e8fc41",
+    "bytes": 18144,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "两个小时": {
+    "text": "两个小时",
+    "file": "f613f6e4da1c044dfc69a5b3b71e5991b6c1f4a59014040763fed867ccdccecf.mp3",
+    "sha256": "8dfdbb256bd35c52735d571cd596862fff66ad9462b7288042b489b6a23f1fb6",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "九十五": {
+    "text": "九十五",
+    "file": "74fb82a5811d3f481dec76169e346fb053b00ece2fd231802e45b73d3dcb6723.mp3",
+    "sha256": "be1654bf221ff9dc858652b383e0d0ca8fafdbdb7a58db957e7bcf3de04d439e",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "不好": {
+    "text": "不好",
+    "file": "1641a06dd3454f2d544a19c3df7b44a04946d96edfaa9f0b91ccb915501cd44c.mp3",
+    "sha256": "0cc9551d0a1a440037704694b6af5722d5003f2880326076a987555b5bbd0c16",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "九月": {
+    "text": "九月",
+    "file": "b45d34fc7542481e36500deadfb71186d785bb2922ed967d0d9aca4a46c9a557.mp3",
+    "sha256": "9fe4baa82ed81694f6f621ef66fd16fa9d37c973a90e5b093daa0826f87fcfa2",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "二十": {
+    "text": "二十",
+    "file": "e5ec573b3977ce9d55cb8e5fde4b730d653f8ab5b5d8dd377a7d97bbadfb0be3.mp3",
+    "sha256": "7aa43634b7132687efb3c7cdb5e5d3e662b31bb307c1687568b44385a83ef751",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "二十二": {
+    "text": "二十二",
+    "file": "8f4058e1381ee09c1c4d531e1cfb7566ec6ede463740a4c47658c737d16ac163.mp3",
+    "sha256": "134b2f2403d8a9d95aeca4391ce43d35662905d6ffd9801a951b55e4f9d3d388",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "九十四": {
+    "text": "九十四",
+    "file": "1ace8b6c089bdb7ede4c1bc534525352a6371c9394c47ebb4886edccbbbbd607.mp3",
+    "sha256": "54218f34cddfa977104f0337a20886891d823e7b9d18101978ca181859308d7d",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "不冷不热。": {
+    "text": "不冷不热。",
+    "file": "ab8da1827dd5393d6e5b46f8a0e539aa790b8033d8440b92de03edab74f51780.mp3",
+    "sha256": "d38415b811127679499a3ec102aea0e5bba58da37f718d743da000e4069a9a45",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "二十到三十分钟": {
+    "text": "二十到三十分钟",
+    "file": "5c6a3ed08872bb2fc8b43076ccc4324eeec8a1740220654026cdb702e1ecab89.mp3",
+    "sha256": "a902bafa942c660f9c183a4a660ea6a01feb7b74dfd95459362745c34f46d85b",
+    "bytes": 13824,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "二零二六年": {
+    "text": "二零二六年",
+    "file": "d84c0e69afc18f985c28c1388d3abf104e87123271dca24b1fcffb533c00c81f.mp3",
+    "sha256": "f8f1266ba6a5de5400eda69446229e533f46cc1f42b11279cfcd2e956f1902be",
+    "bytes": 11808,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "二零二六年有三百六十五天。": {
+    "text": "二零二六年有三百六十五天。",
+    "file": "ecc31657a5d40e8bd68046cfa4eb4fc107f61c690791e9d7e7c371adce884bf1.mp3",
+    "sha256": "c9935f7ae6a363d02a85c75fb84de4be274f0bd6a4f1b73658bdab894dfaec7c",
+    "bytes": 20880,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "五十六": {
+    "text": "五十六",
+    "file": "839f93a7749b55ca0775dd69001cc70f1bde392a35ffa546b39b5d2337f53f94.mp3",
+    "sha256": "58ed7f1b1242155b3d724623f6a5faa4bd1f4dd6e76c90bf570dbb2c65a4c339",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "二十分钟": {
+    "text": "二十分钟",
+    "file": "7a9394b378756266817cd4ef427a12853c7973c28679f2b9bd64f64588934aa0.mp3",
+    "sha256": "dd23f10ea163e43bc8e7359e4cd3172fbc4bd00177874a38c7d55ec609863511",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "今天几号？": {
+    "text": "今天几号？",
+    "file": "b0769acc376c408f24a2f18a0a08788c7af15f14912618af2e1b65c53332229f.mp3",
+    "sha256": "dd3f033801c4a136cb1dc7a24704417b0a3fd8f2029c4a7cf4e231246aca81d4",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "五百": {
+    "text": "五百",
+    "file": "a04846d365f8fe2d17216164b724e75fb76a0bea227a4e3b3588ab6b00bbd88c.mp3",
+    "sha256": "2f363591627011397fc01e66326511aa8f7284dd7a771322c921e223ac308430",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "今天是十一月三号，星期二。": {
+    "text": "今天是十一月三号，星期二。",
+    "file": "f61531934aeea81a3897ad83b9746a1d0faa83f9c1046003ba1ddb4d53354f80.mp3",
+    "sha256": "a1c5c852168c384c96a3391c18d6789144d7989f077efbc10dd04831c6588565",
+    "bytes": 20592,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "今天几月几号星期几？": {
+    "text": "今天几月几号星期几？",
+    "file": "df59a4876759a6fc3cfb77f119901e11295f0e66bd4f789b5d5fd714fd4b1982.mp3",
+    "sha256": "279b55d7509e2eafaddb10f4b9e013d7f505dced22240efdead085742e07551c",
+    "bytes": 16560,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "今天比昨天冷。": {
+    "text": "今天比昨天冷。",
+    "file": "d32608900d8c13bbb9f94b776e3e02e05de17f88a4af9397cf372863fba35045.mp3",
+    "sha256": "8e7fd0ce59da2e0e41c94f01aa374709593e7fe99e3862d55aea5abf50b9a32a",
+    "bytes": 13392,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "今天是二零二六年十一月三号，星期二。": {
+    "text": "今天是二零二六年十一月三号，星期二。",
+    "file": "95a9d2dcc86177867dbd862c954b8e7551a924ffb34ce65a4210954c5879b6e2.mp3",
+    "sha256": "4d9479494af703b0229b23da01672266f8220d41382ce1900eb71e6038eda266",
+    "bytes": 26928,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "从…到…": {
+    "text": "从…到…",
+    "file": "2c23c54f8aad42dc1963b8464250043a072c74922dc3bf9887a4d90b0a190816.mp3",
+    "sha256": "81c7266c66d9847bd27b9042e4c1a6841c04b3cd148b29c7178fd5c98a973f22",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "从不": {
+    "text": "从不",
+    "file": "ab27425161a8da8433ce2e0e01d40b8d9c6ea0059e999ab38a84cead212c6cf2.mp3",
+    "sha256": "91d4f2d7048199a334dd49ce799c135702022ae39a8a58e6b7dd3f1baf954aec",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "从八点到十二点，我在学校。": {
+    "text": "从八点到十二点，我在学校。",
+    "file": "a0e4cf85b623deed61e8e6a2f5184be4e0ccf6cf36d7e4d6bc48aaec403c360c.mp3",
+    "sha256": "8855cb10d51eecef025ba0cfe75dc08d27cdbf39e1d4baf4b672c07f30e85201",
+    "bytes": 20736,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "他上楼。": {
+    "text": "他上楼。",
+    "file": "4033f184a756e028b36d9ac6f3c90e0b12e158469cb230a4c6f5b45d8efaba6e.mp3",
+    "sha256": "5129505b90f2bd6afae683402aa6e2d275d628b8378b4c269e9f6be9c8845876",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "今天比昨天冷一点儿。": {
+    "text": "今天比昨天冷一点儿。",
+    "file": "23effa9592e5b8739c0da13c744dcef8bc6e16f1d4f8ad735efa4321d282d33f.mp3",
+    "sha256": "9c2c463547a4058c869e3ca4401ea8a9b159abb2fde42a3b8e032f9d415031f3",
+    "bytes": 15408,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "他戴上帽子。": {
+    "text": "他戴上帽子。",
+    "file": "56adeeea4bc436e00f77e2c76b96ff13a787461b9215c1f79c446f5d890caccc.mp3",
+    "sha256": "3e2d640654061c51c691fe5ba675d08a77e2734ec9865076901fee1571a1c45e",
+    "bytes": 11376,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "他在楼上。": {
+    "text": "他在楼上。",
+    "file": "c05410be0c4c9b823d13d729a57f2ed1fa60ee527d827e2a707b4420ab5da7d2.mp3",
+    "sha256": "a55fafe48a8daed707129d1ca667e4c14ca972e1e73fb4a43621685cfa967fff",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "他是我弟弟。": {
+    "text": "他是我弟弟。",
+    "file": "26203ae97160383284d9c64d638df005945aad76e772ef49d92b883efa83c9fa.mp3",
+    "sha256": "13d47b91d9778776eb47e261f65080ad270562d356d56c28161ee2baab081649",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "他是我的上司。": {
+    "text": "他是我的上司。",
+    "file": "287e131671f898b9af8828922f249f2808dc152fa3476be91143be56b165ba19.mp3",
+    "sha256": "3acbef9a94993d29940669a25235e7298ea1511dfa53741960dd49528361d13e",
+    "bytes": 12240,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "他们是收银员。": {
+    "text": "他们是收银员。",
+    "file": "b97cc59cb65902784ce3ce439f892ef0e490cd7579f9d903fdcef3930b908643.mp3",
+    "sha256": "465580a366ebf1f678bf5f3a2cf1ba8caf130dde85eb75ce3818a2c406c66cfe",
+    "bytes": 12384,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "你什么时候吃早饭？": {
+    "text": "你什么时候吃早饭？",
+    "file": "90a99257783ab43751fe221a84ff2a8886414ba24ef54e460c2d340734d27ac4.mp3",
+    "sha256": "d00f680bcc7a781261c9cded90cd85ef9c726761a757b22d8345b373fdbc844e",
+    "bytes": 13536,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "你几点上课？": {
+    "text": "你几点上课？",
+    "file": "e17b5a986a6139a91af771e3c8d7c6d4a0f53ad5aeea41499b78d07a5b109fee.mp3",
+    "sha256": "03de962f09f200be11f9962a5df377a45d309258f10636192880bcaf15edf635",
+    "bytes": 11664,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "任何时候": {
+    "text": "任何时候",
+    "file": "18e3f919729b42cf474518e245ef675ea086e351c1ba21f5d74ebb6be4b0a2a0.mp3",
+    "sha256": "d7b823d94c9e5501aa3713c8dabe3e518294b601c2e66587289a73027f2707c6",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "你几点吃早饭？": {
+    "text": "你几点吃早饭？",
+    "file": "6a3e4f1dddff9f3a03156210c195de882265219a3ab021e01176e01e605ddb24.mp3",
+    "sha256": "a5242d9778eb86518c5aba6b5cf61ac5fc5a662a96b2c459f69b3f1b0e752355",
+    "bytes": 12528,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "你怎么来学校？": {
+    "text": "你怎么来学校？",
+    "file": "30316f11e5f3f622eef0a795dc38f96668ca378aff8e599c71b6461a97376c11.mp3",
+    "sha256": "a2457c6e8d6b02716149c4849dc74ef990f5816138a9fd9ed0f3af5f30c1e6e5",
+    "bytes": 11808,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "你的生日是几月几号？": {
+    "text": "你的生日是几月几号？",
+    "file": "fac2fdaa3e97ee872bf4b2807a63ecabde414e5b0bae4eef390b679b215ec5ae.mp3",
+    "sha256": "5854c97364a0535b9314f56a5f999936da7c1d782183ee9ee86fa94bb8bd4202",
+    "bytes": 16272,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "你任何时候都可以来。": {
+    "text": "你任何时候都可以来。",
+    "file": "41ad3516949c3b9b78c0c9d1404774d1f9c0478dc2a508f69cda6cc333aa9287.mp3",
+    "sha256": "b91b1a113f8640bf4dcb9441ea93fb46e13b408f060ac6214c2d71f2e3ba2efe",
+    "bytes": 14976,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "傍晚": {
+    "text": "傍晚",
+    "file": "1bd701b2643956b19633eb32e4f11a20de011bbae09e2cd88ffbc5fea02ae7fb.mp3",
+    "sha256": "295e9e4fdeac0549f66e37bae88e3d1dcb85c78516b4e0adff06687e7f59dddd",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "你几点起床？": {
+    "text": "你几点起床？",
+    "file": "0714aa8bf8fea651ced7c5c26364c6c85f0e2006432fb61825c4c6194b9ce5b4.mp3",
+    "sha256": "4ea85afebf2d74919f7cd4292a9dc6b46d617c2898cf7ee710b70a9749f75c08",
+    "bytes": 11376,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "八月": {
+    "text": "八月",
+    "file": "affa2599cd5f27894c4df714c5df9473c2c7e362ce813e2be336de5bdf8de6db.mp3",
+    "sha256": "e7d0fbf31510c6d401e93dad4d8a982c096c4a9f5e81a265a5f0966260c3e012",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "八点": {
+    "text": "八点",
+    "file": "342a22252894bf6040fe7c8afa7c626875e1cae69fb993a05813f1b20f9af262.mp3",
+    "sha256": "374e74612947f415211deab6e090cc5dcbc120ec3666f46be3dbe6fd908d5f71",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "你进来吧。": {
+    "text": "你进来吧。",
+    "file": "56d8a276c5005a967ebcac98626fbb4613f61ffa0a44288ba5f23ea3ee6803fd.mp3",
+    "sha256": "796101e5ea9676f71c786ccbc81b8e09822f5b647525035f2888e4ae039f4261",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "八点一刻": {
+    "text": "八点一刻",
+    "file": "a00fc7ae8ce19c9183d3eb96fe4cfa9b7b352704e710dff2e705955d9acce902.mp3",
+    "sha256": "6d150fc3c43f2cde393aa676fc3780666b2a60d0e390d678490ac0f37ca863ab",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "八点三刻": {
+    "text": "八点三刻",
+    "file": "fc188b4e4e3655340c9b3fc660c68296e9a85592777b42923ac83b0f7906eeb0.mp3",
+    "sha256": "0f6dadebc61e443e6d059ff426081c45b29efd4197ea50efc6bca5acf7444660",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "八点二十分": {
+    "text": "八点二十分",
+    "file": "c238ebd2e222c45436b40830669c68fb15f0108e6b41a5ea6ab9c34ba8b5f135.mp3",
+    "sha256": "673a505b07b8099cf4b604ea418ce1715fa912bf3080c8e077e5f66faaae8161",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "八点以前": {
+    "text": "八点以前",
+    "file": "587fb1c3ce2b0a02a7b55decd11d226b7c4b163010912a5097ed53ee589b9703.mp3",
+    "sha256": "14850984f8f20c62f4549509eade62ebf994d65df9e6aa70bcf40f3aa4f29258",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "八点以后": {
+    "text": "八点以后",
+    "file": "8764153775789dc6f1dd574f9632bab087c7aab99dc38d2cb222f64cc532d913.mp3",
+    "sha256": "17106b62adfa03fc4c2eb19454b6043ccf19c8a25cb132d15538748f8ccfa84d",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "八点四十分": {
+    "text": "八点四十分",
+    "file": "73112d9213ce557cd85315e87fce7a5293800bdf069c1d859cdea588973d373f.mp3",
+    "sha256": "a80fa3dfada304314dd9a5d100deff5e404a338ba7e2ee9546b7a10808524b35",
+    "bytes": 11520,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "八点半": {
+    "text": "八点半",
+    "file": "280d302406a062eb3a4f6c80f11d7366237bcdf6dc64214a41bcdf6834bf63fd.mp3",
+    "sha256": "325c4860bd64be8d9eae7769ed2cd7a2776b0521167cb1374544cf0c75a74c29",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "六点": {
+    "text": "六点",
+    "file": "aaaea5d982295030c2e759eab7fc3c191473d31fde20bd9fba45b78c956a9ab6.mp3",
+    "sha256": "4b91cb9e9d39b6fa4b750958010bc513cc1a03354b2f2766a3aed6025696daff",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "六点起床。": {
+    "text": "六点起床。",
+    "file": "9a15909d43f4e6ce3e82becb1b0393898e4d72a00864f79815e870b54570f260.mp3",
+    "sha256": "7095386725b818b20ccb4c5ff099281984a1c6914beeab82c15db268df40a5c2",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "六月": {
+    "text": "六月",
+    "file": "ebecbbe06139ab8405f507b3efda3a4adee7a98c8e06d8b762af8054614c4e51.mp3",
+    "sha256": "bec9e30a8bf323cbb6a217bfd3afe3ac4e858e5faa0672aef4014db5324f36b4",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "关上": {
+    "text": "关上",
+    "file": "419d02bc528bcc3a8b2c6695ace54e22156462bc8c42f38f0ff70e46bc2668d8.mp3",
+    "sha256": "f8e809ac6ab2dea95f59d0e78a25551169cd16969f091a6a5fc24622cf7d43ad",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "八点零五分": {
+    "text": "八点零五分",
+    "file": "a4569d91a0f2b96371a68542f4213ef2c659a6b27d87e43789c51ccf01cd7765.mp3",
+    "sha256": "3e56bb17d188572013d80263a8496046500754166ff060f26b3789ec84cb9884",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "写上": {
+    "text": "写上",
+    "file": "d8dadf7954f5a9ad5c4caba406babfd1917c69076c5eb33ff74a749ed683cf21.mp3",
+    "sha256": "eb355d701851fa916366d934c59f0966090b574d46619856aea0058d59ca8fe6",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "冷吗？": {
+    "text": "冷吗？",
+    "file": "ca98343349a651d4d3848e2d319c3edabdbe712e8326e6bc62ca771ff20ed518.mp3",
+    "sha256": "5095286a224d5906038f1adeea36d301eb99c98e2c16974ac61119844a7393bb",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "凌晨": {
+    "text": "凌晨",
+    "file": "a57e324fcc596a4f1498722fd842e37430be586668308affa372692196ce21cb.mp3",
+    "sha256": "e82121b8bc52ace96bced18a36f1e6f3cb08c8095354da65486dda1ac387f178",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "几点": {
+    "text": "几点",
+    "file": "c67d6914bd85b00baa9e86352546d315e4f571791dc7c123438d58a98a797309.mp3",
+    "sha256": "e21c885c32ff90e372208b8ebc6144927aaa97ebb47752baab28949804563668",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "几个小时？": {
+    "text": "几个小时？",
+    "file": "a641b6ca2aad104c189f3dc778bd94c2be3e11d1a158d62f8490e45359e2fe12.mp3",
+    "sha256": "314e6e3e49c180385c2a3bb3e0d577d153226e478e0cdfd282a2cc5afe4bb903",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "到学校以后，我去上课。": {
+    "text": "到学校以后，我去上课。",
+    "file": "a920cfcfca98407c6f84f064b0658db93d71432f065d51ec82f8d61cfb45f08a.mp3",
+    "sha256": "6fabb271f60ee6cd8d3844e6f4d3b38a601d64ae584ce4d565165a6d3aec0bc9",
+    "bytes": 18144,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "十一月": {
+    "text": "十一月",
+    "file": "cc60e689ee69a69c8d2d10bdae52b6550aa040811ca63d3dca148c9ab79c04b3.mp3",
+    "sha256": "379e8462ad3a80d9e3f5a4b818eab47878d10873622d7196a6e773b3ecd9615c",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "十一月三号": {
+    "text": "十一月三号",
+    "file": "d6bd8e977c0cd1fd9bd6a56b9b13564d3784b29dab5993f5f6ae964d4c4c37ef.mp3",
+    "sha256": "9b56466ebd27c5bfcadfb8ee21140209c5515f48993e2f14866d7bec2fc16b30",
+    "bytes": 11952,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "十二月": {
+    "text": "十二月",
+    "file": "0cab18cabae0fca0ba13c3e4162d579ce23871521320a4d8fe81a47620ef8cee.mp3",
+    "sha256": "1b7b14033778932582d52e003d79539df3cd764f3813a01f673b9cb09e6e2cc0",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "到了": {
+    "text": "到了",
+    "file": "e6f764587e4a2d3f5111a32a8d3eca0abacf8c8354b55f66f0f77ca724906e46.mp3",
+    "sha256": "cbfec1d0029c6145e583033d580cdb26347e033a9f0aa68c51f678dd3285b460",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "十四点三十分": {
+    "text": "十四点三十分",
+    "file": "ed140b921a35d8c6c92fdcce2608a98b20db02ffd5890c2f51c0c5060c9920e6.mp3",
+    "sha256": "7436638bab94327bdd4d334c8e115643075d7e2e58f72b821cded8e1dd4af4ac",
+    "bytes": 13392,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "十分钟": {
+    "text": "十分钟",
+    "file": "019f7d741f597f03ea918a4529d8d0fb212be3e66e4cbf5cbf93f820f4630303.mp3",
+    "sha256": "939c6d3da1957ad7a52fbcb48d3728409bac60e84d2bf690fd2397fe5a46315f",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "十分钟后，我到学校了。": {
+    "text": "十分钟后，我到学校了。",
+    "file": "d983f1c28f2ca9fe3c5bdac0d08e48a509752b7762534e2ecdf4efe96c681a0d.mp3",
+    "sha256": "407c5f588bdc5182113bed8636388d586902a35141d9a25306b0cf82d52c968e",
+    "bytes": 18432,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "十点十分": {
+    "text": "十点十分",
+    "file": "0eeef2be09fdbe259b39f3051a9d1e9e0bcb2338df5458a6b44df9a68533aaa6.mp3",
+    "sha256": "8e63b6573fefb669b75740f8796824235d729d661777a406376ecb567ff0d0c9",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "十月": {
+    "text": "十月",
+    "file": "57ef441f94957cd1603a2edd264a61af0d0681ac24bb3cbbf853a08a1916558a.mp3",
+    "sha256": "3135d2c742179ee004a165e64d30c03b33f72439fc8cb693d68f2765b54041fd",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "半个小时": {
+    "text": "半个小时",
+    "file": "13e1f9a33ac4adff1a5e312143481a40996bff6b2606e0cf8900d134dffae5da.mp3",
+    "sha256": "968a6419bead3281dc90348193992068b9db2be0fe9dac81044f61fe374b7a24",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "半夜": {
+    "text": "半夜",
+    "file": "ecf4ce25e0bdbc494a2c7a0ccf779d88ba62511b84ac58dae8306f7179b6d60b.mp3",
+    "sha256": "acaed10ac9cce5a370239721e7f6e839b35b5e1b957d917a037d15f065941acf",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "十点半": {
+    "text": "十点半",
+    "file": "7e8425df3a989e453d964721214f738a731ee58738169f8c7b00b11f68609928.mp3",
+    "sha256": "30d7ce5c53e8c4dbaf38455fd07abbb0233aee2149ee135ddeb5f79decccf5d2",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "历史上，这里很重要。": {
+    "text": "历史上，这里很重要。",
+    "file": "c019b6b3f1f4ff0fa321332511b7d8495f5d133c09fc56bb628e4868a1972a1d.mp3",
+    "sha256": "03d9b007a741ee098d53d4decd24f7b8f420eaa369b5edb70255294232018a88",
+    "bytes": 16848,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "受欢迎": {
+    "text": "受欢迎",
+    "file": "edf75d5e05e659ff00c81d2beb24e81cc8a0e1558f5617fdb1f2c8a0b6c7489c.mp3",
+    "sha256": "ff8691a8114eb6d9205efb4e665fd6f6f6c0bf74dabfe5b7c62d9d9d7d236df7",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "历史上": {
+    "text": "历史上",
+    "file": "2f72b38e62419e2ab73b3621a0a38f427773fd6836ed512811047fb8c72c0786.mp3",
+    "sha256": "5255e54d9867faccdf9a7a6f485d9b6f31309c36db61a93e52d4063cd2689959",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "去了": {
+    "text": "去了",
+    "file": "dfa20f3be4f5288b48fc21b7d564b481efedaead775fd4363815e2cdd4d3b44d.mp3",
+    "sha256": "a5186103727206c34bbb1b927edb6dd0f010c28edf384ec96d566fdd2872fa87",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "吃苹果对身体好。": {
+    "text": "吃苹果对身体好。",
+    "file": "fa29acbebfe10cac5e13373125849775a69877fb7d0a5dfd2503d5619c129bae.mp3",
+    "sha256": "439f8f2f977b3318f8eb5df9c3f456100caa8590bd5f5b828b4d9ae800bd4251",
+    "bytes": 14976,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "回家以后，我学习中文，也远程工作。": {
+    "text": "回家以后，我学习中文，也远程工作。",
+    "file": "a08a0cec398a13fb17197fb48523cfe0839fcd435519c9fd32716c8da55b586d.mp3",
+    "sha256": "5a725559d6780e3a8743f3fd9e7efdc4b84c62a9055062ce0c5d960973611898",
+    "bytes": 26352,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "喝酒": {
+    "text": "喝酒",
+    "file": "144027b96a6ddc5f338d3d92eaa8d2d5ad47b1e6f9b972eca8c091d538bea366.mp3",
+    "sha256": "a40f3416e42ec019c27b74bd4b32bee8ca4e25d43c1ba4cef314ec3dd0de393a",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "四十分": {
+    "text": "四十分",
+    "file": "bf8082ed93351b2fa928209899eb60268e48ceccd3c60dd26ac82c415ee3e40f.mp3",
+    "sha256": "977db46e0f20e2b1e0dda901beb838b1e6102bc9eedbddf417634b4fe6205130",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "在工作上，他帮助我。": {
+    "text": "在工作上，他帮助我。",
+    "file": "f08d1cb9aa1a7f24ca4a222f892bd65d23fefc438f526345fbe28d2bf91b260a.mp3",
+    "sha256": "d4e66dc0aa94bce4e20188cb8f82408dfe6cd5814600f96cdb9dab2668215745",
+    "bytes": 17424,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "在工作上": {
+    "text": "在工作上",
+    "file": "62edc014ca333b53c523cc0f3cadec5252072a138bc3b27fc7fc675457d4d0e3.mp3",
+    "sha256": "42401fd0692b8e23ad5b4e89513d6054fbf60997221ce5766d476d288d25f986",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "基本上": {
+    "text": "基本上",
+    "file": "c709fc07cb3a8b5a5177e9da3be26ed8a64d6be9f2f739ddad1e6c3774d64eb0.mp3",
+    "sha256": "aa1c77bc3a9ee6fb094a2fdf79006554fe297562a38f1c7c2dd56d72cc8198b2",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "基本上，我每天都学习。": {
+    "text": "基本上，我每天都学习。",
+    "file": "6501ca183e36b2e6c0c00156deba1071d4fa6c5eae0a23cf76e5b9c77c27d9eb.mp3",
+    "sha256": "fff16c1eabfe9dfdda294304b3f6700da54c6a9edf454a20f2f15f47c3654539",
+    "bytes": 18576,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "回来了": {
+    "text": "回来了",
+    "file": "8d428ee9d26ffb0a234e2f97254400c50c7910de1104f26154b37273a9a472ef.mp3",
+    "sha256": "79df03be7c8ff5e3d1347d252295c88c6a614101ca9e0f82d87e1784fa795246",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "多长时间？": {
+    "text": "多长时间？",
+    "file": "5f0890f78e5f5a6b5739667223cd05f9326e1314e0528fb18301dfab11b52032.mp3",
+    "sha256": "295f5971eedf71b642801e8c322a7a71bd761e7886980b2e6c3df057a0ac5fca",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "实际上": {
+    "text": "实际上",
+    "file": "52943ebcaea3d1922767dcb67335dc7208d082336fc50d4d799cd48dd1aaebf7.mp3",
+    "sha256": "92cb1c0d35e4aba415daf58dbcac5cbe447969fb56db6068fb5e8cc41aa29e5c",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "实际上，我在家。": {
+    "text": "实际上，我在家。",
+    "file": "1c529d5ae62a34dc4db14fe69dc18959ce509a3b61c356ee6376c0a387474ebd.mp3",
+    "sha256": "42121fd7aa27906c789281bdeac62717b137c8c15fef8a0af0fe646282015e02",
+    "bytes": 15264,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "左右": {
+    "text": "左右",
+    "file": "191e26b5d741e457a0c94b3e6605f7bb9c007028a5f1bb08978d40f2725f6668.mp3",
+    "sha256": "48ac96b9c0c2d21e18c65ac85f2e5a28a4f7024baa56ed9a465d280a2f975646",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "差一刻九点": {
+    "text": "差一刻九点",
+    "file": "72d23350a7f781d6ab77f7172b9cf7490498c6e737ac14405cf3877dcbf41114.mp3",
+    "sha256": "8b35708245dbafad583fd6a6894dbdd6113673d6d1939292fff4baa91a1f783a",
+    "bytes": 11664,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "床上": {
+    "text": "床上",
+    "file": "bd0223ec651e4a0e7ecc25c9fd1d0db7eaa3c17c4ba8564fa6829952cb201b20.mp3",
+    "sha256": "dc34e8e9bfd65dc6e89e5868c9857c8a5cb2d631c536a164498ce3d07536c52f",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "开灯": {
+    "text": "开灯",
+    "file": "c4a035cb794f52c3da76e14f56e1f05a71640189827585a987998cfa8b66be62.mp3",
+    "sha256": "0b279c3d927f6c5c76633238c12b7212a6afdcb7b17a90262a2784e188554aaf",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "开始上课": {
+    "text": "开始上课",
+    "file": "ba5b25e6d8bd3e00635a32fd2e43e4351e6e9cfa0b78b1c575d5e190c46e4949.mp3",
+    "sha256": "27f551fe1b630e1edf4755f998de91390d73451e449b079ad587149087033069",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "很冷。": {
+    "text": "很冷。",
+    "file": "cb48a4445ddf3283dcf89a899616942a0a8c25abbc7a2a5148672f86af7c6a0b.mp3",
+    "sha256": "29e7e84f7d6167c7f0fdd0c0266dd0f1b55960f7a1b2868aae67fc87328267b8",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "很少": {
+    "text": "很少",
+    "file": "7708b5d0ec23c6eb9571b9647eacadbfaa3b1761d31beab43b6f16478edbdd14.mp3",
+    "sha256": "a7f6a47ed6d18f2c0b863d3491bcde1ff871675aac181561d67dc60d716788a5",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "开门": {
+    "text": "开门",
+    "file": "7f57bffc743a1ede75bccddca7ffc3653ba7fcded0eceba89ae9bf487db90178.mp3",
+    "sha256": "2711b01cf652a9cf280701a28552f85d2137ab1573326ea24576873b07e54a2d",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我七点吃早饭。": {
+    "text": "我七点吃早饭。",
+    "file": "36ea068556fa0af811e912cbe5e1fc5b5862c31515b3f4075bbcc77df47404c3.mp3",
+    "sha256": "bc8b998d750ae55986410b70a6f9da488713354104ae819a5ea6b45d2016d5c0",
+    "bytes": 12528,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我上传了照片。": {
+    "text": "我上传了照片。",
+    "file": "38125f8d852c22d374c9e0b26231877a7ba5fb4781dcbc43397e4e955621787f.mp3",
+    "sha256": "c660d4f27e46930980835cc2d0511c6181033adbf57564b83e2431108204d834",
+    "bytes": 12672,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我七点左右醒来。": {
+    "text": "我七点左右醒来。",
+    "file": "b395601feb21ff8df8ea4a72da8d07de8ff06bf74557514474420ba9a09bb9cb.mp3",
+    "sha256": "b4afa528b9b41e5579b47476c4d6971cbe5f30a19f45f88309a563e7875e28e7",
+    "bytes": 13392,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我上学。": {
+    "text": "我上学。",
+    "file": "ca06aa1d750be0f39d19d60cac76cb74a43437d503771daf8e426a8ac15cca16.mp3",
+    "sha256": "557eee714969084819e66edcc41ee3993a52d9727385794ec400d34e2c67a3bf",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我上床了。": {
+    "text": "我上床了。",
+    "file": "8ac7bc33764ff6c737ed96275bb3bfe52bbb1ebaa1cf5b3493bb92d03addaad7.mp3",
+    "sha256": "3794334d104cd3c5cf8f2b44db803a54833d544cbf18b0bb56d1603f520db844",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我一直在等你。": {
+    "text": "我一直在等你。",
+    "file": "ab763ea068d06467f92c211f29c3f985c290fdff9e7a25494fcdd57c446f3b4e.mp3",
+    "sha256": "52b14ecb0d1830d848045a13e80711b16576801180889f5b728adc896a97360b",
+    "bytes": 12672,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我上大学。": {
+    "text": "我上大学。",
+    "file": "7ceea69714b8eaec11b9e22d772638ce08f2c6a437b3ab3cbbf22837c570e291.mp3",
+    "sha256": "5b242e9503408e95c9a824215adb1a447296e1331054a6ac875e6cfa1cfc0bd9",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我上床睡觉。": {
+    "text": "我上床睡觉。",
+    "file": "5b612700e0c0b1c0d3eaa7165e0a2f7bc9d621bb4626cbf8f0dbc1885c5f87ac.mp3",
+    "sha256": "64fd39581067e02a6a60b0c0d9c03aae95205f99f7393ed4994b6a8939325168",
+    "bytes": 12096,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我上楼了。": {
+    "text": "我上楼了。",
+    "file": "46d45114e7484d48e0229f695a4a350a069477781477c2d25cd185d91f61bab0.mp3",
+    "sha256": "89cb1456d35b5e681e19435372a658be44de428058846e2f9fb31d5cb4d9c614",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我上飞机了。": {
+    "text": "我上飞机了。",
+    "file": "da51279338d8fa3ed83da89808b225ee1b09e117b2ec4b85394cc8bb44cfb3e9.mp3",
+    "sha256": "f857d32f92b3853343e13421587aecbc858e74086e04cc1a540ed177a04a464b",
+    "bytes": 11376,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我上车了。": {
+    "text": "我上车了。",
+    "file": "39f9bbd4413121fd3a0998fee377f5086154ae000f2ddc8a29a58eeb271540a0.mp3",
+    "sha256": "413a48519d7c009b468333d3c5e94df3f509656d9a308836ea96c82391262775",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我下午两点半下课，然后回家。": {
+    "text": "我下午两点半下课，然后回家。",
+    "file": "404ef49dfc1d911a1ba7558c5f010c1f9c2f532eea17159f8467fab80d65d3e2.mp3",
+    "sha256": "2a7f7acb6fd59775681d4282a0e73263dd3e292c0ecb4cea7f40568d267fe7c8",
+    "bytes": 21744,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我中午休息一个小时。": {
+    "text": "我中午休息一个小时。",
+    "file": "ea545248b1a3522c428c98698d134f2983f6488c2a5df78efe22c5c02adb6325.mp3",
+    "sha256": "603bbea0d19920e223f81d0320a827b7e35145f66839094bcee06919a5f881db",
+    "bytes": 15408,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我下午两点半下课。": {
+    "text": "我下午两点半下课。",
+    "file": "1b4ce5561cefbb1c7a3a94e85f8c585ffd8b348bd197196da8cef31dc5e5d305.mp3",
+    "sha256": "1e4d52b5be1b60997d35874242c809ab937854b94d2e25e84407cb295aba24d9",
+    "bytes": 15264,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我什么时候可以来？": {
+    "text": "我什么时候可以来？",
+    "file": "3ee8827278afb7b682bf71a49ff30b1c1d8085283dc43af9263212273c3f0d01.mp3",
+    "sha256": "7d542ce8459c6aa7aa86d109fe6777e9e3871ad4968af88885f29846b2a8b1ce",
+    "bytes": 13248,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我们上山。": {
+    "text": "我们上山。",
+    "file": "cd6452777effb19ee2fe33d37370b09db6e81a3c12c6c0abbe793765b34b54b2.mp3",
+    "sha256": "710873077d74d0abe0bec82e29533cf2e034fb244229d42d0cb02228397b9ae7",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我从不骑马来学校。": {
+    "text": "我从不骑马来学校。",
+    "file": "565232655aff6cf68690bc34e39860476b18e73c33943a989cb917a3e2cd4752.mp3",
+    "sha256": "867f98b320155fc5d431e6031d16f56aec6d1b0422bcc3a2b4e74775a8f5b711",
+    "bytes": 14256,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我们开始上课。": {
+    "text": "我们开始上课。",
+    "file": "93553c507ff487a69b0e67d7439d79a3b092f38792cca1cebfab31bdff56c862.mp3",
+    "sha256": "4375e51ec6ad679da7e228f4418491918553aa2c2eb1f3c5e63884fe2e9042e7",
+    "bytes": 12240,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我们今天上课。": {
+    "text": "我们今天上课。",
+    "file": "0c32d0acf6bedbbfa73c3334202fc9d495c082381770233565b361a87940c959.mp3",
+    "sha256": "42cbc073267a79c9f5660a71e1f07e20cebf77357fe93cecf0611fccc2322fab",
+    "bytes": 12528,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我八点上班。": {
+    "text": "我八点上班。",
+    "file": "d5754273ea7df9a2123ac2fdfc77ecb69f324062b36f15f0fa70c8930a228804.mp3",
+    "sha256": "5b1ef33ab47aac1e39d864a00585a0322f051301387e92d98fc15c30861d603a",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我们上飞机。": {
+    "text": "我们上飞机。",
+    "file": "dc11fd3a8264092f5ca5f8b2ef57a2ef2cc73190f415b8d8a2501d11e6d89ed2.mp3",
+    "sha256": "942c313f4453f7f4a88b5de8683f9b59fd8b52ad97eabec4f60df0d3abe360b5",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我出去了。": {
+    "text": "我出去了。",
+    "file": "1c3e92448f1e39aed037f5df2e28a6d0996b3a0475b76f8b93f092fd735b9f70.mp3",
+    "sha256": "e61e6fe40ac8720182b16907931271ee70a74466697273a17eb63cf626311b9f",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我八点起床。": {
+    "text": "我八点起床。",
+    "file": "2bf7a93a80cddec33d2414a447fd5147e00089f362ad2ce2b724ad513f86b838.mp3",
+    "sha256": "1de216aaa0428fe971ccf9fc2d7b0b34b9750ad845cee0cd3031dd7031f6520a",
+    "bytes": 11664,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我出来了。": {
+    "text": "我出来了。",
+    "file": "8e848ff7bdb5851b5a5d6dc69d3989ef2b8bf61329563cb07f8c9579bf9b784d.mp3",
+    "sha256": "1c3a0e6ac2d36efb5d7a4f1667283b4e299d7af3ba3bbb27c5101012fae707ee",
+    "bytes": 9936,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我到山顶了。": {
+    "text": "我到山顶了。",
+    "file": "3bccc0942f711fc069d10b66ef5abb7396cf97720c0c1fcc0fceb3ee10e56dd1.mp3",
+    "sha256": "55048b7bf651f792935cf6f93749c16531b114e1f47e9f9a243ddae85cf2f7ad",
+    "bytes": 11520,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我到山脚了。": {
+    "text": "我到山脚了。",
+    "file": "eed721922fc0bb6a1c2d9ddea92f34e70174c7f3eb88dbd0f5dff12e32536cac.mp3",
+    "sha256": "bf49e767a152a076e7066f12ef29e52d87902c1a16bcfa04c0d7ea4b43c8b256",
+    "bytes": 11664,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我十点十分休息二十分钟。": {
+    "text": "我十点十分休息二十分钟。",
+    "file": "82674d5f19c166a75ac4bb6f282d652d43b1998c1d65561ec9465660af276d9f.mp3",
+    "sha256": "b6e7a9bac5f932a8d9b197eb958992b2526c23294c29b6e298eaecdd1f0ce789",
+    "bytes": 19728,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我十点半回去上课。": {
+    "text": "我十点半回去上课。",
+    "file": "4fe84d34a5956e259dd85c92ad299fabc1d9286e370dd02697b1cc4ece29fb37.mp3",
+    "sha256": "c01f72455272e038f0dc863a5291476af045763e823a2781dc98ebad4f43a173",
+    "bytes": 15408,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我去上厕所。": {
+    "text": "我去上厕所。",
+    "file": "2aa7f27ada8019829f07ed507bed195be5f90b0a1f43a3880dd19c9a4c8126d6.mp3",
+    "sha256": "3ef07b0c2ded49ffc1c0d4fc06eee73ce72e74cde98b7c8a9d9db562551698ad",
+    "bytes": 12096,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我去上学。": {
+    "text": "我去上学。",
+    "file": "a491732bc4190919a0790eef1561331e2fc34c058f992b50ebd51c787abdd467.mp3",
+    "sha256": "e88b6327e6c8f75a5816ad94e9274f991e05b80dee49830185fdd35e31a1fa6f",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我回来了。": {
+    "text": "我回来了。",
+    "file": "4f3f071de3a132d55ed31edf557b362afda8ef29b618fd0f52a13920ed7d26bb.mp3",
+    "sha256": "02540336840b27f3abcd168712048f46bb6827b05c1c2dcd06f78203682bb7a2",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我在上班。": {
+    "text": "我在上班。",
+    "file": "dfaad19590cdcc3159ba364f96647472fcc6fbdda4bd51c6c178c8d743fc2e28.mp3",
+    "sha256": "6d0c6fd5cf5dc163d102e48fcd07e85e6520eb66a473905d0c8bad92306c2619",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我在上网。": {
+    "text": "我在上网。",
+    "file": "cf63523d6b3654eda2444e1be8c8df098d8215a515dc556467351725e90d8fb4.mp3",
+    "sha256": "23a117949411790a55241e5b0a9efe18864616102b10b0ae2fd0715f5f2ef4d0",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我在上课。": {
+    "text": "我在上课。",
+    "file": "d3a70be560d808f00493ec09040da541c68beefefea494d7f68ad6852bf7b5e1.mp3",
+    "sha256": "d28a02125ed92b14c3759ad6091bc7f873769cf58a24b592176608321e8208a4",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我坐公共汽车。": {
+    "text": "我坐公共汽车。",
+    "file": "11dfa33b6d42de23fab17e9ab873ff2110f7a7565b86e6de6ba10cfae954fb7d.mp3",
+    "sha256": "439ab84701bae8bdcbc01835c79a7b11b226d08b8d0cbe8bceac1b56c508ca66",
+    "bytes": 12960,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我在家上网。": {
+    "text": "我在家上网。",
+    "file": "aa7e3e6261400347b0d86d6ae6f0151fd408c8509657287e6f6fba7926b81eea.mp3",
+    "sha256": "64d342355eb2cbd022bdeb306ad18444ea3fe69bd6a1d5f7d67d88e6d5d83548",
+    "bytes": 11664,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我坐出租车来学校。": {
+    "text": "我坐出租车来学校。",
+    "file": "32cebb7cbad3782a0a5a765c5c84e5cb89f25ee0d69baa3f9c90e2bf2d1ac994.mp3",
+    "sha256": "1b64bda2bb7590ecd795c3dddd9d134e67b63b4494752b3c95bfe68c161a2e67",
+    "bytes": 15408,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我在路上。": {
+    "text": "我在路上。",
+    "file": "9a537f1fd1042f4a06f830f7e38269eda0e14f8dfed63bc8cdf163fcb5d8b03f.mp3",
+    "sha256": "2ffbcfdc20a6f4efc37b1bdb491f079578bf6ac912c9de03e0317f6f004178d9",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我家离学校很近，走路只要十分钟。": {
+    "text": "我家离学校很近，走路只要十分钟。",
+    "file": "e31d2c77a71cdeafe542fd53a4f58dae6f27c5afbd61b182978964e5fc58963c.mp3",
+    "sha256": "b7a0aba33c731878b0b89d7ff400e07b4e630f8cc6ce9c768975af47703e3724",
+    "bytes": 23904,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我坐高铁去。": {
+    "text": "我坐高铁去。",
+    "file": "e9d5ca940d12d5fb0cd4d2aa419870d779225edaa211be3a37458620b86885ed.mp3",
+    "sha256": "08ff0959f597c1219fa12b588f2096b9c89c05940e5c13999d0df1308ec24de4",
+    "bytes": 11808,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我坐地铁来学校。": {
+    "text": "我坐地铁来学校。",
+    "file": "d27b82434c02e8e8720f06aed1c22b6ad5b76165dd0a344dae43c4e946430c00.mp3",
+    "sha256": "17db26525dbd0bbbaac858b36ff5dbf68bbf3b69fde7ab63c12878268be4ac57",
+    "bytes": 13968,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我常常走路来学校。": {
+    "text": "我常常走路来学校。",
+    "file": "394f3823acae428431bca50421544f84f7a8a7e8481edd6519198aa5b5b130c6.mp3",
+    "sha256": "65871e12afa13cb505de8dc691438a77f05345af0314b5c9785cd536cbe7c3b4",
+    "bytes": 15264,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我很少打的。": {
+    "text": "我很少打的。",
+    "file": "85f3c1ef8f01f3f1d16689ae49783e4de858fd88dabda2a59032b5b0ebabaac2.mp3",
+    "sha256": "a09274af3d05c05fed206d66166713801cdf81409d024d172276cd7d973c1238",
+    "bytes": 11376,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我早上八点四十分上课。": {
+    "text": "我早上八点四十分上课。",
+    "file": "6d315e2c24026dd6d56b0e5fb541094684654b4f2d0ccdac28782359240e0cef.mp3",
+    "sha256": "c5ffde5e32f4b0714798c2f5c48eadd77dbd88364d7cbde43d9ad62d0de3a6fb",
+    "bytes": 17568,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我开车来学校。": {
+    "text": "我开车来学校。",
+    "file": "465e46bdca4ba8ec667cb7a731e3088cf14925ba4e93c35b6cf57ec836efd4d6.mp3",
+    "sha256": "c5a91223e48ab8f6d7052dad8b27233983d299b77bb97dc970dc29d1ecc183c6",
+    "bytes": 12960,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我有时候散步半个小时。": {
+    "text": "我有时候散步半个小时。",
+    "file": "fe22caeefd99aebb5ff3638c774d48231c6ba603f1ae0fcbd25c493d7cbc5150.mp3",
+    "sha256": "09330e00eae5c375a660c8e7a5d5490b5b88f380cf033761ba35b62ee6b5e07e",
+    "bytes": 17424,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我正在上床。": {
+    "text": "我正在上床。",
+    "file": "3514c74f1108ee0b07c54081fe556b75e82232b1121860afd09355d6290b6deb.mp3",
+    "sha256": "f0fb4b7a3288c0291512732729b82eb50e4fb1a47d4aec1c247f16c068d69447",
+    "bytes": 11808,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我正在上山。": {
+    "text": "我正在上山。",
+    "file": "71d6e595c90a2d682aac03dec50f641666b37c217213ddfa647c9ea1120dc651.mp3",
+    "sha256": "dccb5dd8ac995411db7152c576557388fcd0bdb32729120e556e9dce0a71b4a3",
+    "bytes": 11664,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我正在上楼。": {
+    "text": "我正在上楼。",
+    "file": "7b08d4833fc89106391c50516b531532c9d90163a75e09790ef6bda7ea079900.mp3",
+    "sha256": "7f2c7beb675e99d03b397ada069efd935b2a1429b7ea5473a2daf7e02faf9cd5",
+    "bytes": 11520,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我正在上车。": {
+    "text": "我正在上车。",
+    "file": "db334d89a51aded4b18bc04212fac35b6f13d8f0c25eba596c0c9614468912bd.mp3",
+    "sha256": "65779f01d21e1a10db98a6dc61bb0f6816cad78b882957cddf423aef20140d50",
+    "bytes": 12096,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我有时候坐地铁。": {
+    "text": "我有时候坐地铁。",
+    "file": "b8653bdf5152fd69fa148b51b39a52f3135b3ce726397b23f9963db91c76345e.mp3",
+    "sha256": "ac7dff8cea0d3af25df626d424696b8d84cce198714cdb499efe1b830809bd35",
+    "bytes": 13824,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我正在下山。": {
+    "text": "我正在下山。",
+    "file": "b917d2db7aaea561b021e2a8251af631bb5a5c115938ee6ea7337886a6850f31.mp3",
+    "sha256": "deae5c9bbdecba25f811345fd93f6f7bc5ab8afd8a89f0e7b3fbefe2ca716648",
+    "bytes": 11664,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我洗澡，换衣服。": {
+    "text": "我洗澡，换衣服。",
+    "file": "fd3822601a62c0e3c20de1f5a1a515a898b1388a2c24ec61e81f9c2a9871ac73.mp3",
+    "sha256": "d7ee2a2c81f222879cb66a0fe04cccd8d2a16c15b774f0cfd00aaa13e54cf530",
+    "bytes": 15264,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我每天早上七点左右醒来。": {
+    "text": "我每天早上七点左右醒来。",
+    "file": "5b21f9ff6de79f1a6281fdb8e6f366e2a72a0e480615f836a0340950112de4e6.mp3",
+    "sha256": "68a6882649082c5c8ec07c161b2f71f3eb129aba87958064ca5e18543a4a7cb5",
+    "bytes": 18576,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我爱上了这座城市。": {
+    "text": "我爱上了这座城市。",
+    "file": "c8099c1704f7a380ad357521764559d2c7ce70d2477d78b61f272bc0688bd38e.mp3",
+    "sha256": "25307f10a35c9e47810c25bb4ff481ac1a4b8f6a72d73c75f314809b3bd10cb4",
+    "bytes": 14544,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我的课八点四十分开始。": {
+    "text": "我的课八点四十分开始。",
+    "file": "9198c47857c56c8ae9ff7dce7e19b544c3fd2349da6e3c4e971a463bb18c1013.mp3",
+    "sha256": "aa93e809ef73d0a7fe88ef233af14c1783acab954db8f4cbd86f5f0e313e2a81",
+    "bytes": 17712,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我正在上飞机。": {
+    "text": "我正在上飞机。",
+    "file": "5bbf187b518462fa405ab7a0fd0655539d4e628c37733efa23b150756808c7df.mp3",
+    "sha256": "fb5d47dfc07b4cb053d4d19cb4a5eadfa2755eb8c1b1d186e52844fc31b534b1",
+    "bytes": 12672,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我现在去学校。": {
+    "text": "我现在去学校。",
+    "file": "4a7aafac7ead885cef105dbd6e93cc123def66f62511a3452da1c59b01822c83.mp3",
+    "sha256": "c211ced6a685927ea7209a43d9392261e696949573898a1717fb26531b84ffdb",
+    "bytes": 12816,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我穿上衣服。": {
+    "text": "我穿上衣服。",
+    "file": "1ead2df417965168b718f296595fcaef7fe0581fb6fcded2c08fc673293df1e3.mp3",
+    "sha256": "4a9210340ebf384058e5b9fdf4449163f5d92d46b499b687c8dec8a3c2dfbffd",
+    "bytes": 11808,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我要上山。": {
+    "text": "我要上山。",
+    "file": "b12f7877cda5ef2b9c2b6e206b2b04f977dfae68c5ba9b5f53c142a1da891d24.mp3",
+    "sha256": "616c6846e615635ebf73f1322f89dc765cd4d8415d3664d430b89baa363421be",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我的课早上八点四十分开始。": {
+    "text": "我的课早上八点四十分开始。",
+    "file": "0f89fa7e2c2cead8f420e2d2b4a54c8491c9fc63268ab42c4320ff4e904ce249.mp3",
+    "sha256": "aadbcdbcce2d31d9e5fffd00f3cefd30cc0141cf26cab0ffdba7598a5ae8684d",
+    "bytes": 20448,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我要上楼。": {
+    "text": "我要上楼。",
+    "file": "1ef9a0534abeb79b4f25371c83603e700eecc8a7bf6f2894b89beb3a46a2eaef.mp3",
+    "sha256": "d054941fa4ce4362cd424e0f7c87b247802ee35c618578038b920dc46e36490f",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我要上车。": {
+    "text": "我要上车。",
+    "file": "422ea5d5ad445d85fc3a489f61513b1871a7f6b16d66e387f75c3d476b57f7cb.mp3",
+    "sha256": "9699e8673dd1d785b857f2902844adc81037c42c6d83019f9064e2133e7bb4b5",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我要上厕所。": {
+    "text": "我要上厕所。",
+    "file": "c783e6e0baa06114d3aba774fbfac7759bf71a659b2025c3bdd023f9d03e4d83.mp3",
+    "sha256": "29e19efa43dc3e1a7a772db8a56f91b90c0a874baf761721d15c4f6e7f5d38ba",
+    "bytes": 11808,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我要上飞机。": {
+    "text": "我要上飞机。",
+    "file": "c9d8554868040ddaeef89652b4539528d2b35c185fe67bc00b9d6453bb259ae5.mp3",
+    "sha256": "15687592eaccd7c14d8440fb5d1add4ab3c7ff1b58226d6e53e96810d02c2b2b",
+    "bytes": 11376,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我要上床睡觉。": {
+    "text": "我要上床睡觉。",
+    "file": "818e947cfb50c651aa0a3be99760afa8c5109637e9c42aa0d2dcc04ae68a4185.mp3",
+    "sha256": "7636ae6df0d88f32345880a71d1293002f7aac75ecfd313d929012edb781bea5",
+    "bytes": 12816,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我要下山。": {
+    "text": "我要下山。",
+    "file": "30b5529b18a1250c04089fda185c8bf82a362da8d412b0b035c248b46830c4d2.mp3",
+    "sha256": "7a479729e9060460e16e757762f5840578b9e86300abacdefcb9c0ce6d8dcba3",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我走路去学校。": {
+    "text": "我走路去学校。",
+    "file": "c6c42aeeb18a141002fbef94baf27f243ddf3150ef640887dd1b55ff4498a60e.mp3",
+    "sha256": "3d0dc6edbc36ab8cfb591f25e59dbfda25e716ae52b2b55730875083bb51c79c",
+    "bytes": 12528,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我走路来学校。": {
+    "text": "我走路来学校。",
+    "file": "4f16169bac6636713fc58dff839a725aaacf3c154e62809410560f0cf4b67e59.mp3",
+    "sha256": "1836f2b0e50fd2f777500e5bbce870948805e5c9703a4aa09314268ef9237f45",
+    "bytes": 12384,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我赶上了公共汽车。": {
+    "text": "我赶上了公共汽车。",
+    "file": "7afc49c8947fc1abb0654becb04e936462244c22e5acf3f0f3d5728316610793.mp3",
+    "sha256": "9f8e2aca173bff5119c2828736928dcf65f3589b9dd053a997e5497bef4a1a47",
+    "bytes": 14544,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我通常在床上再躺十到十五分钟。": {
+    "text": "我通常在床上再躺十到十五分钟。",
+    "file": "ea9c5e920785081f11659be4842b6fc4bd11a0d235695e3cc3c25a3a9a47a69e.mp3",
+    "sha256": "2135978b947cdb8fb12f5a6af96d6ee4f833140f55f1a1aedd93238eda8da773",
+    "bytes": 23184,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我通常在床上躺一会儿。": {
+    "text": "我通常在床上躺一会儿。",
+    "file": "abf9042648e31af435b519e5e6d141ffccb6ae8aaa94ea929583d930dd1aa296.mp3",
+    "sha256": "f8e2e274a237b779ad1f8076d8198544de90251ab4ae42f9da23358aec7773e3",
+    "bytes": 16128,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我骑电动车来学校。": {
+    "text": "我骑电动车来学校。",
+    "file": "ca5615db5a74e09cbddf8b27640bdfef482244bc29476027c46601260f20c83c.mp3",
+    "sha256": "a41861ad72037a7c0c16145fb393e08bb384aee60af228da7ec9f77332832101",
+    "bytes": 15408,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我骑自行车来学校。": {
+    "text": "我骑自行车来学校。",
+    "file": "059c384f57bee802e8040e8b369cbf6f6fcdfa4c5da5b386b92f6647951ed648.mp3",
+    "sha256": "f74586e9dad6f8bfb8fce571d7d18681c9d54e2eb51b7bcbf7ba02e7384b7152",
+    "bytes": 15552,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "戴上": {
+    "text": "戴上",
+    "file": "eb031b60f0b26c4ca6cc874670b6ce1532ba685232efde5a608cee1098c8b347.mp3",
+    "sha256": "e0dc73fa33077559dddae8193f8a9b9cf1cbc55b2720dac57b3bd2fbd0b0fc77",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "打的": {
+    "text": "打的",
+    "file": "bd5c48bbc13f77122516ed43cdfe52188d90d4e2d791666fdba7b44c9c3da313.mp3",
+    "sha256": "46b48b7ea3bfdd2451492692bc00753f4eb271a793d9769237187461065ff0bc",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "收银员": {
+    "text": "收银员",
+    "file": "fcf9d3057b1085323e6da0cb2e5a0cca1138cf8950ad51973e30fe14e89810a5.mp3",
+    "sha256": "8e4e1ef4183b35f09d0c7f655c851c653f2ae534e868705a198a5b283acb3812",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "早饭以后": {
+    "text": "早饭以后",
+    "file": "68ca5fc97d3d4545d96ebf8f208adc7c4a1cd6d410271bcc6f447d3aa3b20816.mp3",
+    "sha256": "256c0b89065f7dee96d7fe830708347ba739d5fa22eb832c65478dd1910d82d8",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "早饭后，我准备出门。": {
+    "text": "早饭后，我准备出门。",
+    "file": "69c04ded12305b5c039950a6d83e6bddfc6d8d49b5fce542a99338591063307b.mp3",
+    "sha256": "b555bc94ef49707127afbc70044b284e60dcc247454548d094135d48416423ea",
+    "bytes": 16992,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "星期三": {
+    "text": "星期三",
+    "file": "23ae0a11ac5bab279073da92efacdd4d961ac17b3692754cd4cc07d07696ff65.mp3",
+    "sha256": "326781b44162a99fcb773477e174f750f547389ed65c5c2a2981f12f73919625",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "春天暖，夏天热，秋天凉，冬天冷。": {
+    "text": "春天暖，夏天热，秋天凉，冬天冷。",
+    "file": "58a1f357eea42b011adc325a380d65e345ea00fbd18925307f6b09c34d905c1f.mp3",
+    "sha256": "82214f9894be5acd817399e3791f6fd68e3bb8f81af331a709e681296a319eb8",
+    "bytes": 27936,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "晚上八点": {
+    "text": "晚上八点",
+    "file": "0d204f3cb7de26b0869db0ef221808fc33c5a7dad7e5cfdba0b53409465e9445.mp3",
+    "sha256": "375b79e3e3009412aa59a9741fa9c212844cd17e52eb9bc3c2370be4285a34f6",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "晚上十一点": {
+    "text": "晚上十一点",
+    "file": "d29baec881a8dfa71be7b81c61b4f13a3beb73a3193c9b422500a3b56dd9906b.mp3",
+    "sha256": "05d358bed4cd120cb05663d83d0ede4bdcf920e0879c0b1bde3e47a1c88db0bc",
+    "bytes": 11808,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "晚上十一点左右，我上床睡觉。": {
+    "text": "晚上十一点左右，我上床睡觉。",
+    "file": "84a519d876b27f014b5e1122829865575da044ba504e72665e8ac68ce4b99f02.mp3",
+    "sha256": "2f306abb9b2cd6054944c00f512ed2a577b6167a579537ac38d2f44359fa02cd",
+    "bytes": 21888,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "有点儿冷。": {
+    "text": "有点儿冷。",
+    "file": "5197b9ff8534edfb59dcbffe5b00d84235364b3be9ba32ccb42082c4a385b19d.mp3",
+    "sha256": "b4e0046628c135445a5522e22af1e6b416c0976a3912d0276e3c7fdb092d004a",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "星期四": {
+    "text": "星期四",
+    "file": "478911d29ab88b951d6fb9d3c13a1a5d581a83faa374a0b915010eb7c3b3f8c4.mp3",
+    "sha256": "ad13184ebbbe2ec48baf9602d8774c945b8f518998f09707b25031a75ae5c3ce",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "服务员上菜了。": {
+    "text": "服务员上菜了。",
+    "file": "5d0ff9766184efcab1c15372023cca9cf0f00b1d3a35e9ff8b957859e30381f9.mp3",
+    "sha256": "d4e6652df11c9134b3bd9993ea5c61dfb97a2d97efbf6d19a04c560190904c20",
+    "bytes": 12672,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "来了": {
+    "text": "来了",
+    "file": "92800cc83b66314cec2942c03a42bd455e59aa3fefdf7bee56019fcb1fb11e27.mp3",
+    "sha256": "06e4300f50f18e4b64bb17a17e9f68b2d015fb0de726c9d73ac0c39e79c27260",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "星期二": {
+    "text": "星期二",
+    "file": "8621c00d3b2c45f7308129e7ff75dcadadd28689d3156d22d27a61cc3a3d000d.mp3",
+    "sha256": "471eabe86fb4b60fc1c2775972dd363dc7d91b70c93f109985604785585463e5",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "桌子上": {
+    "text": "桌子上",
+    "file": "0cabf76829bf8bd5ff217228a403c857fc7782b0e4b3e66a9718957c49312566.mp3",
+    "sha256": "e136a8b612b19c9c6505b6f4a0d78abb4970dcf565d5ff45ad402323ea0af186",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "楼上": {
+    "text": "楼上",
+    "file": "9d743810c4b56fb309c9279b43b47e772358bc117297be99c14a5d5d45ef5909.mp3",
+    "sha256": "da70654f17fc73081449c1b290c364f867131056889b1cae430496120cbde28e",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "然后我去厨房，做早饭。": {
+    "text": "然后我去厨房，做早饭。",
+    "file": "c933e786c02b2c64271b038d3cd4e75ca493aa3e428883bba1580df7a887511e.mp3",
+    "sha256": "2efc7602a55077f06ff9641147a37050fa20b1647a47aa0adaff3dfeba8262ab",
+    "bytes": 18144,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "服务员正在上菜。": {
+    "text": "服务员正在上菜。",
+    "file": "b2e6d977997fe6bc5fb79c10b9f35ed24939a4701e31052d1478029389d0f02c.mp3",
+    "sha256": "7d1986c87307420317c69c8a6f2023d0ee971f81e2e498b3a97d6a3c19ffc89d",
+    "bytes": 14400,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "然后我起床，喝一杯温水。": {
+    "text": "然后我起床，喝一杯温水。",
+    "file": "4ed57ef6d1616a3aaf3d20395b8ff5ff0008ff5395ea476b65bd6ac64285868b.mp3",
+    "sha256": "7763216af018f5ba4d61119e35e16937f4dadcba0f4e06cf20409761eea482e6",
+    "bytes": 19440,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "爱上": {
+    "text": "爱上",
+    "file": "6847adc3b481514b432b74699fa6db8c20bdd7d8420e4a0b4fb4ebd0c74d0adc.mp3",
+    "sha256": "690d53a754de4492a241a3c5e2e2ffc7974e5ab55c25bb5a3a837abab598ceda",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "现在是什么季节？": {
+    "text": "现在是什么季节？",
+    "file": "d7417424c12c0a26b4afafa294098e2f0462b702918c63454385fcf6bdbd049b.mp3",
+    "sha256": "9fa512e37ebc769e62634c32c7820293629f1e2a7b66b9aa2e6b46e325c2c6e2",
+    "bytes": 13824,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "现在八点四十分。": {
+    "text": "现在八点四十分。",
+    "file": "77157c0a8a14dcafaf0388ab62f21e6c5692c65c3d1817381685d6ba3eb2b563.mp3",
+    "sha256": "411d4fc2556ced7ba6ac5f1902e31cc9bf7f5305f637e48aeaa44cabf910a7f0",
+    "bytes": 14400,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "现在是什么课？": {
+    "text": "现在是什么课？",
+    "file": "b0b97a4cd97f1d56ddf51927d22df79f5f6dec7749ce179d71c1e45f34e8e5ca.mp3",
+    "sha256": "3d6ed5195c893e02e5e6c54cb82a3bcf38dced062ecd376014da58bee2c5b298",
+    "bytes": 12672,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "现在是秋天。": {
+    "text": "现在是秋天。",
+    "file": "96374b6605d73ba7cd9366ba20228e5700ecbd70e56483d2df3c4a6d449addec.mp3",
+    "sha256": "c62bcea56c190b720e5cf453293ec8e45f20c4cce35a48ae7cc1d773a352a572",
+    "bytes": 12384,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "理论上": {
+    "text": "理论上",
+    "file": "d1901111bfeb5c884683504c47a0a7160f2fc40afb7db79f1f95fc4075655c99.mp3",
+    "sha256": "3e59a4618a65dcdca72622a8c7ada3453cb4163c4698348ed30ef9504c698a05",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "理论上，这样可以。": {
+    "text": "理论上，这样可以。",
+    "file": "b4d311fef3c25f7a5ce05a9234a3586cca84d4946aced66d744219572bed8975.mp3",
+    "sha256": "57057c1e1fe5a65d756846dbb8c506ee89cb506f6c5a5de013d76b9660ee2f4d",
+    "bytes": 15408,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "电动车": {
+    "text": "电动车",
+    "file": "95906f8fcb51e0cc77e9b87786249b95eafb83a3d8faf0dc40d10ad468cfe3b0.mp3",
+    "sha256": "020f7cb1769bf1071c8e901cd49f03bd823bc7a9dff8359df2a4f4af000cfa5c",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "第八课": {
+    "text": "第八课",
+    "file": "c126f74ad44258e525ebb8ce2a13fc186bdaeccfca40559ea3399d636a4c7e7a.mp3",
+    "sha256": "593e19a0ea98fb138e70be6e9d1dc89c69901ab1103b4f5d498ada1d72ec4715",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "现在几点了？": {
+    "text": "现在几点了？",
+    "file": "854dcc5a6850252bff7ed737ef723a3f62beeb4b6ce57bc60f092de88f09caf5.mp3",
+    "sha256": "1efa8ff436a1c2bc99e7d62c29ced5a82bd44a9c83988c188bd0da3a678d9bf6",
+    "bytes": 11520,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "穿上": {
+    "text": "穿上",
+    "file": "8638f50c3f2ad6346758fbc518548236d06414edef43f68995c197dff448bca4.mp3",
+    "sha256": "8dc31580e3ea640b108522921f95ba0f514caf8bd1ee6f82abaee322135d9f08",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "请向上级报告。": {
+    "text": "请向上级报告。",
+    "file": "bf58a06a0ee2d13f9a2bad991d1e8d74f761047b44702eb081fcb47feb488249.mp3",
+    "sha256": "1c472eab3abf0093866b160275229dabb43deb39f3fd0a18f12912ff70d57ec1",
+    "bytes": 12816,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "请关上门。": {
+    "text": "请关上门。",
+    "file": "95915044ffd9187939e1783acb9c72fd986f5582b688e028ff0e8ae99b00a4d0.mp3",
+    "sha256": "6074ba6e8fda5b39afb47badf8fbe03c60e518cbbdcc67af48f73c3f1b99b1d9",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "请等一下。": {
+    "text": "请等一下。",
+    "file": "e470cbdfef736596ed2467773595005a963d52dc9cfa984ebaba62e7e0b6b886.mp3",
+    "sha256": "42d49d4760bb45a26899cb877b73ea541cedeeee4af50da76444076a9ef94f46",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "请开灯。": {
+    "text": "请开灯。",
+    "file": "f178a913e6189dcb2c45eaaa60f9d67abd2e70ceadb2b117426886e81a38fd8e.mp3",
+    "sha256": "a35a740effa3748df17ee586d4816ce14925aaa78d645efd91984ab90c12f5e2",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "请写上你的名字。": {
+    "text": "请写上你的名字。",
+    "file": "1d82f77d6874c9063b4d62a6cd9514ac20ea6b972252b9eba0acf0be7fcec497.mp3",
+    "sha256": "8e76e0f61f5b59a00859056204e4814d3e3e1dfac192d5e09fb952fff74e9493",
+    "bytes": 13824,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "请锁上门。": {
+    "text": "请锁上门。",
+    "file": "609d55d4c748c1181ad099cee34b8498794e52fdeeee61f33f562f0989c51204.mp3",
+    "sha256": "3fa941122fc0f6c302223154e115a467a00fa0300a2056c1886b621f41e60c7f",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "走了": {
+    "text": "走了",
+    "file": "25eba594657061b476db47b07fb28501834e6ed3f106d7ba4d8008f365160c06.mp3",
+    "sha256": "1d17a5ff8356f689e71b449dbaead39e4a6091408efba3992818db90bca736fe",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "走路只要十分钟。": {
+    "text": "走路只要十分钟。",
+    "file": "a54faa0989759b58ba39daa90c36d3046a437cb7130a546a6a9411a192dd2073.mp3",
+    "sha256": "8a60934d3959cdf8cbc69bc9f40f48eaacb64c9c1d59bddc7b7f13411d6ff6c2",
+    "bytes": 13968,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "这家店很受欢迎。": {
+    "text": "这家店很受欢迎。",
+    "file": "a449fa9a74249163b0659493e9e7726c231764016a376d6ca38782c4facdec46.mp3",
+    "sha256": "10e40718f772fc0437bb79a04236dcc6d366d368ecddd354f2d1ebe65900acad",
+    "bytes": 14976,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "这是第八课。": {
+    "text": "这是第八课。",
+    "file": "cff73f74fa17492df931b74fd4cbf4ec5503171cc77ecad88c0e9f8cc7716afe.mp3",
+    "sha256": "f91e91a76cc277377b6e0554db6b95d250e29c3b12a95c0eb3a06cab688263a6",
+    "bytes": 11664,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "赶上": {
+    "text": "赶上",
+    "file": "45c110c38979eb61c2052ac6a9a5eff656c3f51c899618449ada40826165270a.mp3",
+    "sha256": "18362edb4eed3480c3198c978ebbb65e67d24e542e9a34189fa74f1bcd7623e6",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "路上我用微信点一杯咖啡。": {
+    "text": "路上我用微信点一杯咖啡。",
+    "file": "fc14861f3bf514b218f8392f56e494221cb9cf62d53db8eeb5129a46e806e623.mp3",
+    "sha256": "fb7b83c239a243a7fc119c07f7295e278569e28a21b55afb156f1e1ea5bde226",
+    "bytes": 18432,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "这里有上百人。": {
+    "text": "这里有上百人。",
+    "file": "a77f5b127527d5072552a15961fa30e282102e846c0b0f7b8ea84144ad9df0d3.mp3",
+    "sha256": "104eeef232dbefef1606a18aec1df2148762ccd22a92722fd2083fccadd07030",
+    "bytes": 12384,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "这里有上千人。": {
+    "text": "这里有上千人。",
+    "file": "d262924c05661898d747838a92b4a8e9c5347c5b3133ae5047d0867a0a184ce4.mp3",
+    "sha256": "b761c820933025f43397b1b548c39456fe08ec9729fe9e16afaf4dce86eb7e94",
+    "bytes": 12528,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "锁上": {
+    "text": "锁上",
+    "file": "9dd3df3a611d916264ee349159b3c6ac8c697ee14d79c1a64efeb4c6bf5b1946.mp3",
+    "sha256": "02c66059be034319daedd38f6bbdc8a8dcc00be5fbbc1493e587c20ae597e98e",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "这本书有一百页以上。": {
+    "text": "这本书有一百页以上。",
+    "file": "a90c9e4f82d09e45262214fb2156e4f1953f5a73cdb59dca88b058dc46008f0a.mp3",
+    "sha256": "1da76c4f6bd1824b8187474500d7ae8fc7f06f8eb8cfa09aeb4858e5dc8a0339",
+    "bytes": 16560,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "他上去了。": {
+    "text": "他上去了。",
+    "file": "39ad895107014a1d0967d38a3b7d2be7c719a715446098e349c4b8da8ddedfcd.mp3",
+    "sha256": "cd836b6703ee7cf80e244c703137b9a4a26f3e48ef9ee11ddb22c9ad0adf6a8d",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "他正在上去。": {
+    "text": "他正在上去。",
+    "file": "649bfba490955cb14f264a6b93d2776b05ca8dd5b2ee7cd795a1e6620dbf2798.mp3",
+    "sha256": "13c5d278083949463936e4a6838d8be76d7f763af946c76a569c00fc2bf7b426",
+    "bytes": 11520,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "他上来了。": {
+    "text": "他上来了。",
+    "file": "7078a22952b88a7eda450b6ce6cbd51bfba0fe14694f62565432075690db48f4.mp3",
+    "sha256": "291da1d1c098753007c2c0c310072a9f1489e2decd10a96683779af9c29a3965",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "他要上去。": {
+    "text": "他要上去。",
+    "file": "506213de019b47dba8262cd2c56a2559255a34b6a07fb5481c98ba624ed56818.mp3",
+    "sha256": "def6f003207b5e90fd883ff8607d7a3d51297f5b8da5b45179dfa4a8b3b4a2b0",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "他正在上来。": {
+    "text": "他正在上来。",
+    "file": "9063684205bd1a672caa5828d57f62d6aa9995f8ed9f0db78c0979bb88c2ce19.mp3",
+    "sha256": "945a93a25b636183c7cd68d0d95852543acef69a25bd9941ca1fed50a05c1112",
+    "bytes": 11376,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我戴上帽子了。": {
+    "text": "我戴上帽子了。",
+    "file": "a4c93d2be07ffcce9a5cc220b2abe8ef430cc59091370f5d377bd4b506fd35ba.mp3",
+    "sha256": "473e1a45a45c6fa2f0711a1e9f21ce51fb235bdbbbddeadde0d95a30c781f778",
+    "bytes": 11664,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我写上名字了。": {
+    "text": "我写上名字了。",
+    "file": "adfb9e5f82f1ecc08c4e1da81b5648c3d557d906e157985c1e6a8a868d5032c1.mp3",
+    "sha256": "880368fd3413aaa88258f9b9b9ca4225bedf4e3e1b36eb94c3fe45740a058e4e",
+    "bytes": 12096,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "他要上来。": {
+    "text": "他要上来。",
+    "file": "9e8866ed3ed76d9439ef4be614138ce3b9be96a864271c9108c95c77a636d02a.mp3",
+    "sha256": "7fa1bde0270543c3e71d3890b428e5dee7bb057ecf9d78e5a183e9ff6d9aec03",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我把门锁上了。": {
+    "text": "我把门锁上了。",
+    "file": "574708f8c26a0d487593c8c2dde43d4d1d8437b4a1d7661bfda2aa0a84e5af54.mp3",
+    "sha256": "14b0a3ae0f8f97f1ad829035ce4ed60aebb15c316da87149437cb1cb5ce1d46b",
+    "bytes": 11808,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我来到这个城市。": {
+    "text": "我来到这个城市。",
+    "file": "bb02efd29940f9bf3a819bbba45ba03a6ea86d037fc787f6b5c655e4d290cb6e.mp3",
+    "sha256": "14d65452d5ee93fe03dfe2a89b8039f00253bebfe2bf900135f628b809936c2b",
+    "bytes": 13392,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我把门关上了。": {
+    "text": "我把门关上了。",
+    "file": "786b3279fa63179dc71d433001d6a1d0a947ae04bc46a7e858925c3c4a9e652c.mp3",
+    "sha256": "64b4bb0043ba229749719c4112395ddf68eda77018d1ce4b7b134b95362f5a43",
+    "bytes": 12096,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我正在写名字。": {
+    "text": "我正在写名字。",
+    "file": "dce0a089cbc91151bfa87de80deb846e75f6f2784c823bd83fc6248f7305a46d.mp3",
+    "sha256": "fe5dc2d3619999830ed7050de7b85f1dbcd632c503253909a7e5db3b99249f50",
+    "bytes": 12672,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我正在关门。": {
+    "text": "我正在关门。",
+    "file": "6c66620452ea238b9444a4a382df85d5b1e0177fd73a9b6fd5fc92cd57066826.mp3",
+    "sha256": "5fda8df6c47c2dac70235cd54bb7d7e4b10a8988f44f86532b2d0b806f6d2fff",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我正在上传照片。": {
+    "text": "我正在上传照片。",
+    "file": "0b6bdc1c03298470f77fccf2c7baad7b6a68319db7262dd382cb2c3d00539734.mp3",
+    "sha256": "bf046f7f3c0c5ea73d04f79b6f202075c50998a9e58c378f4eae3a600783baeb",
+    "bytes": 14544,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我正在穿外套。": {
+    "text": "我正在穿外套。",
+    "file": "ce4d16c02fce083c72fea45b46bc1b57b64c6ac06b4cedb4275134178c63184a.mp3",
+    "sha256": "e789552547fd944cab4bc8f6d08ca826d8ad60dd69ad46166f995d51dae3f3bf",
+    "bytes": 12960,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我正在锁门。": {
+    "text": "我正在锁门。",
+    "file": "937909ede4147ed079c9f070e096635e508e8d4c2ee76bd86b27afe58ac14cd3.mp3",
+    "sha256": "c6836985b044c5706a928e4f6df71cce95806228a0a6a371ee088d65615843ff",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我正在追公共汽车。": {
+    "text": "我正在追公共汽车。",
+    "file": "98e7bcf7ad57f7201de7db6f387801360c032fd693ece5648e5347c6dd154778.mp3",
+    "sha256": "a83195b7e04f5e900b3acc49e368d48a417adf3746f16b3db5311efc707866df",
+    "bytes": 15552,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我正在戴帽子。": {
+    "text": "我正在戴帽子。",
+    "file": "eb13ad3b4847d7f2079652beb3f15066f9d54ce7a0247662d4d69d4791d51940.mp3",
+    "sha256": "73fb9d4113cfc85edf5c27e21390adf9813267d3e7df098c11f77660b8bd22a3",
+    "bytes": 12816,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我爱上这个城市了。": {
+    "text": "我爱上这个城市了。",
+    "file": "02b680d7c5dac5eb545b94b53e5c853e5daa93dc2804012b69dd2c63e889aaa6.mp3",
+    "sha256": "e30e5f7d3f821c941654ed448e714393d0cddd4f08fd00ab04b49e27d5bedade",
+    "bytes": 14256,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我穿上外套了。": {
+    "text": "我穿上外套了。",
+    "file": "4a4d75ad4650810846ae64dc646f6a2dc9cd255fd9962a7dc7fe4280f3cb30be.mp3",
+    "sha256": "e3d771fc606ef14297a7304f6f3abe7a3435d0e1ea8b2bf5186591cff4c7b1c4",
+    "bytes": 12672,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我要上传照片。": {
+    "text": "我要上传照片。",
+    "file": "0cc64d628a0554ac13c49b2123ca253c57f42e8fa8e3a22919ff93f24011e058.mp3",
+    "sha256": "4019aa11ab55d5d2ab622492fbf4b2fad8de48c8616a7b007bb814f687af8764",
+    "bytes": 12960,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我要关门。": {
+    "text": "我要关门。",
+    "file": "70bb95cb72e8ac925683c401b8a916632f2f44c527fcf7f12ea2dfac2e14909d.mp3",
+    "sha256": "dced135a778d77ef482cec8f2bc84f239403b18efadfe074740d3b567fe0fea1",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我要写名字。": {
+    "text": "我要写名字。",
+    "file": "99cc5ff06adae7e219160d83567ef000cd10eb10e0ff2fa08f00f9a3acbe5b42.mp3",
+    "sha256": "1fc99ef1f26c5e5b0317bf189b51eb1165ef13b57802bb7821af20c58b79f4aa",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我要戴帽子。": {
+    "text": "我要戴帽子。",
+    "file": "bd154847be23472d8e7be1d9a7b880ec44fcdf92eaae203e730f4cb2030c432f.mp3",
+    "sha256": "cca3de2633f09f73452daa786782b8f1c336b463fe3f96f23dd2a4c2adf292a2",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我要锁门。": {
+    "text": "我要锁门。",
+    "file": "066d24ebe2275ab987df61db624d585815ae7a33e503a392e00bef0de765ccc7.mp3",
+    "sha256": "c07c74f9070e97ba1a0eaf6bbf309023db33e1458166c72cfbffe50aedb74049",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我赶上公共汽车了。": {
+    "text": "我赶上公共汽车了。",
+    "file": "5c70ae20fb100a514723bebbe9463d4481096146f58b61714839c3f1e0ef9b09.mp3",
+    "sha256": "4f7071d38ae09e5ae427f7c07c8a9e5fcfe90bb163322e3a8a552e21d1409b69",
+    "bytes": 14976,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我要穿外套。": {
+    "text": "我要穿外套。",
+    "file": "49ca19ef3e0e4ed02f694b85adb6e16b0dfe5231e957a6dc8e3633d8593c9f4f.mp3",
+    "sha256": "cba67f1f448f11f7593868332f23f156ddafbc6a7e378cfd4ab5b8289910fe64",
+    "bytes": 11232,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我要赶公共汽车。": {
+    "text": "我要赶公共汽车。",
+    "file": "1b77fa4ea6b368a32b24175a040931196b73fce76e6d943a5491e18d4f2facab.mp3",
+    "sha256": "6d3332a33850739dfb3146464e24781b78a00d6cc4359e0b3988630cb903871f",
+    "bytes": 13824,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "服务员把菜端上桌了。": {
+    "text": "服务员把菜端上桌了。",
+    "file": "081486ead18c170be3a82a3caf5927d613debcf5d4022568e76d9c563b36cd84.mp3",
+    "sha256": "f6878967813ff9acea771bfebc0707ebb8cd84885193c230dc571a0c54684f5b",
+    "bytes": 16704,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "服务员要上菜了。": {
+    "text": "服务员要上菜了。",
+    "file": "3c245c16a881babcfaf9bd1696afd8812267b730d5758fcd963eb6f18e533520.mp3",
+    "sha256": "47f6085252dca9c9c0166df3a34ebde3f0dce3e75b3ff7d0f5ba91329a8ba64b",
+    "bytes": 13680,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "照片已经上传了。": {
+    "text": "照片已经上传了。",
+    "file": "86adbd92639d2f86340ecab4600151a5198fc109a07cca0e91a3c0161fa5842b.mp3",
+    "sha256": "fc412246a722c53242ebd70c8433a00ecc32772bc7e05aaf4a8f279a22486036",
+    "bytes": 13680,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  },
+  "我越来越喜欢这个城市。": {
+    "text": "我越来越喜欢这个城市。",
+    "file": "7135c3343923319fcbee5ce0cee8892d94e68e8d7c4dc0a23bfbc9417ec8b1a3.mp3",
+    "sha256": "d0510f304ec0122aaef8bc010fd506a719c830a5fdae1c74f1f2564eb9aa5752",
+    "bytes": 16416,
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "generationRate": "-10%"
+  }
+}

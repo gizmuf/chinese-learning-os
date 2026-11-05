@@ -3,7 +3,7 @@ import {useEffect, useRef, useState, type MouseEvent} from 'react';
 import {ArrowLeft, ArrowRight, BookOpen, Volume2} from 'lucide-react';
 import type {Item} from './content';
 import {getCards, type LearningEvent} from './learning';
-import {allEvents, readDraft} from './local-store';
+import {allEvents, readDraft, storageTransaction, storageTimeoutMs} from './local-store';
 import {useI18n} from './i18n';
 import {StudyText, useDictionaryAssistance} from './study-lookup';
 import {speak, stopAudio} from './audio';
@@ -25,30 +25,34 @@ const ratingNames = ['Again', 'Hard', 'Good', 'Easy'] as const;
 const ratingHelp = ['Could not recall', 'Correct, with effort', 'Recalled correctly', 'Quick & confident'] as const;
 
 export function writeRecognitionDraft(db: IDBDatabase, draft: RecognitionDraft, replace = false, key = recognitionDraftKey) {
-  return new Promise<void>((resolve, reject) => {
-    const tx = db.transaction('drafts', 'readwrite'), store = tx.objectStore('drafts');
+  return storageTransaction(db, 'drafts', 'readwrite', (store, _result, tx) => {
     const request = store.get(key);
     request.onsuccess = () => {
       // A completed request from an abandoned session cannot replace a newer session.
-      if (!replace && request.result?.id !== draft.id) {tx.abort(); return;}
+      const previous = request.result;
+      if (!replace && previous?.id !== draft.id) {tx.abort(); return;}
+      // Keep an interrupted previous run available without applying its answer to this run.
+      if (replace && validRecognitionDraft(previous) && previous.id !== draft.id &&
+          Object.values(previous.attempts).some(a => a.event && !a.saved)) {
+        store.put(previous, key + ':recovery:' + previous.id);
+      }
       store.put(draft, key);
     };
-    tx.oncomplete = () => resolve();
-    tx.onerror = () => reject(tx.error);
-    tx.onabort = () => reject(tx.error ?? Error('Review session changed'));
   });
 }
 
 /** One durable session per notebook. Rating retries reuse the complete original event. */
-export default function RecognitionReview({db, runId, queue, record, notify, onPosition, practice = false, onWrite, draftKey = recognitionDraftKey, inputLabel}: {
+export default function RecognitionReview({db, runId, queue, record, notify, onPosition, practice = false, onWrite, draftKey = recognitionDraftKey, inputLabel, onRetryStorage}: {
   db: IDBDatabase|null; runId: string; queue: Item[];
   record: (event: LearningEvent) => Promise<void>; notify: (message: string) => void;
   onPosition: (index: number) => void;
-  practice?: boolean; onWrite?: (item: Item) => void; draftKey?:string; inputLabel?:string;
+  practice?: boolean; onWrite?: (item: Item) => void; draftKey?:string; inputLabel?:string; onRetryStorage?: () => void;
 }) {
   const {t, locale} = useI18n();
   const copy={en:{lookup:'Look up',tap:'Tap the card to reveal the next step'},fr:{lookup:'Consulter',tap:'Touchez la carte pour révéler la suite'},ru:{lookup:'Посмотреть значение',tap:'Нажмите на карточку, чтобы открыть следующий шаг'},tr:{lookup:'Anlamına bak',tap:'Sonraki adımı görmek için karta dokunun'}}[locale];
   const [draft, setDraft] = useState<RecognitionDraft|null>(null);
+  const [loadError, setLoadError] = useState(false);
+  const [loadAttempt, setLoadAttempt] = useState(0);
   const current = useRef<RecognitionDraft|null>(null);
   const [busy, setBusy] = useState(false);
   const lock = useRef(false), alive = useRef(true), helped = useRef(false);
@@ -71,13 +75,18 @@ export default function RecognitionReview({db, runId, queue, record, notify, onP
   }
   useEffect(() => {
     alive.current = true; let cancelled = false;
-    current.current = null; setDraft(null);
-    if (!db) return;
+    current.current = null; setDraft(null); setLoadError(false);
+    if (!db) {
+      const timer = setTimeout(() => {if (!cancelled) setLoadError(true);}, storageTimeoutMs);
+      return () => {cancelled = true; alive.current = false; clearTimeout(timer); stopAudio();};
+    }
     void (async () => {
       try {
         const stored = await readDraft<RecognitionDraft>(db, draftKey);
-        let d: RecognitionDraft = validRecognitionDraft(stored) && stored.id === runId ? stored :
+        const sameRun = validRecognitionDraft(stored) && stored.id === runId;
+        let d: RecognitionDraft = sameRun ? stored :
           {version: 1, id: runId, itemIds: queue.map(i => i.id), index: 0, attempts: {}, practice};
+        if (d.itemIds.some(id => !queue.some(item => item.id === id))) throw Error('Review words unavailable');
         // Recover a committed event even if a later UI/draft write failed or the page closed.
         const history = await allEvents(db);
         const events = new Set(history.map(e => e.id)), cards = getCards(history);
@@ -86,8 +95,8 @@ export default function RecognitionReview({db, runId, queue, record, notify, onP
           if (a.event && events.has(a.event.id)) d.attempts[id] = {...a, saved: true, due: cards[id+':meaning']?.due.toISOString()};
         }
         // Pending committed ratings advance once on recovery; normal Back keeps its position.
-        const original = validRecognitionDraft(stored) ? stored.attempts[d.itemIds[d.index]] : undefined;
-        if (original?.event && !original.saved && events.has(original.event.id)) {
+        const original = sameRun ? stored.attempts[d.itemIds[d.index]] : undefined;
+        if (original?.event && !original.saved && events.has(original.event.id) && d.attempts[d.itemIds[d.index]]?.saved) {
           const id=d.itemIds[d.index];
           d.last={hanzi:queue.find(i=>i.id===id)!.hanzi,due:d.attempts[id].due};
           d.index++;
@@ -97,10 +106,10 @@ export default function RecognitionReview({db, runId, queue, record, notify, onP
         if (cancelled) return;
         await writeRecognitionDraft(db, d, true, draftKey);
         if (!cancelled) display(d);
-      } catch {if (!cancelled) notify(t('Could not load this review. Please try again.'));}
+      } catch {if (!cancelled) setLoadError(true);}
     })();
     return () => {cancelled = true; alive.current = false; stopAudio();};
-  }, [db, runId, draftKey]); // Queue is pinned by the persisted session, not re-generated by SRS updates.
+  }, [db, runId, draftKey, loadAttempt]); // Queue is pinned by the persisted session, not re-generated by SRS updates.
   async function update(d: RecognitionDraft) {
     const store = storage.current;
     if (lock.current || !store) return;
@@ -153,6 +162,11 @@ export default function RecognitionReview({db, runId, queue, record, notify, onP
     } catch {if (alive.current) notify(t('Could not save this review. Please try again.'));}
     finally {lock.current = false; if (alive.current) setBusy(false);}
   }
+  if (!draft && loadError) return <section ref={dictionaryHelp} className="panel" role="alert">
+    <p>{t('Could not load this review. Please try again.')}</p>
+    <p>{t('Close other Chinese OS tabs and check that browser storage is enabled. Your saved progress is kept.')}</p>
+    <button className="primary" onClick={() => {setLoadError(false); setLoadAttempt(value => value + 1); onRetryStorage?.();}}>{t('Retry loading notebook')}</button>
+  </section>;
   if (!draft) return <section ref={dictionaryHelp} className="panel" role="status">{t('Loading your notebook…')}</section>;
   const id = draft.itemIds[draft.index], item = queue.find(i => i.id === id), a = draft.attempts[id];
   const finished = draft.index === draft.itemIds.length;

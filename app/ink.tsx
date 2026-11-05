@@ -4,8 +4,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { Point, Stroke } from "./learning";
 import {acceptWritingPointer} from "./writing-pointer";
 import { paintInk } from "./ink-render";
-export default function Ink({ strokes, onChange, penOnly, disabled = false }: {
-  strokes: Stroke[]; onChange: (s: Stroke[]) => void; penOnly: boolean; disabled?: boolean;
+export default function Ink({ strokes, onChange, penOnly, disabled = false,quietTouch=false,lineStyle='brush' }: {
+  strokes: Stroke[]; onChange: (s: Stroke[]) => void; penOnly: boolean; disabled?: boolean;quietTouch?:boolean;lineStyle?:'pen'|'brush';
 }) {
   const { t } = useI18n();
   const ref = useRef<HTMLCanvasElement>(null);
@@ -27,8 +27,8 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false }: {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(saved, 0, 0);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    if (active.current) paintInk(ctx, active.current.points, w, h, false);
-  }, []);
+    if (active.current) paintInk(ctx, active.current.points, w, h, false,lineStyle);
+  }, [lineStyle]);
   const schedule = useCallback(() => { if (!frame.current) frame.current = requestAnimationFrame(draw); }, [draw]);
   const rebuild = useCallback(() => {
     const canvas = ref.current;
@@ -45,10 +45,12 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false }: {
     const ctx = saved.getContext("2d");
     if (!ctx) return;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    for (const stroke of current.current) paintInk(ctx, stroke, rect.width, rect.height);
+    for (const stroke of current.current) paintInk(ctx, stroke, rect.width, rect.height,true,lineStyle);
     schedule();
-  }, [schedule]);
-  useEffect(() => { current.current = strokes; active.current = null; rebuild(); }, [strokes, rebuild]);
+  }, [schedule,lineStyle]);
+  // Parent echoes our committed array after pointer-up. A new Pencil stroke may
+  // already have started: only an external replacement (Clear/restore) cancels it.
+  useEffect(() => { if(current.current!==strokes){current.current=strokes;active.current=null;} rebuild(); }, [strokes, rebuild]);
   useEffect(() => {
     const obs = new ResizeObserver(rebuild);
     obs.observe(ref.current!);
@@ -59,9 +61,18 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false }: {
   function point(e: PointerEvent | React.PointerEvent, rect: DOMRect): Point {
     return { x: Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width)), y: Math.min(1, Math.max(0, (e.clientY - rect.top) / rect.height)), p: e.pointerType === "pen" ? Math.max(0, Math.min(1, e.pressure)) : .5, t: e.timeStamp };
   }
+  function commit() {
+    const stroke = active.current;
+    if (!stroke) return;
+    active.current = null;
+    const next = [...current.current, stroke.points];
+    current.current = next; onChange(next); rebuild();
+  }
   function cancel(e: React.PointerEvent) {
     if (active.current?.id !== e.pointerId) return;
-    active.current = null; schedule();
+    // Keep collected ink when Safari cancels/revokes capture. Its cancellation
+    // coordinates may be zeroed and must never add a line to the origin.
+    commit();
   }
   function finish(e: React.PointerEvent) {
     const stroke = active.current;
@@ -71,17 +82,19 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false }: {
       // Pointer-up commonly reports zero pressure: retain the last contact pressure.
       if (end.x !== last.x || end.y !== last.y) stroke.points.push({ ...end, p: last.p });
     }
-    active.current = null;
-    const next = [...current.current, stroke.points];
-    current.current = next; onChange(next); rebuild();
+    commit();
     if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId);
   }
   return <>
     <canvas aria-label={t("Write a character here using a pencil, finger or mouse")} ref={ref} className="ink-canvas"
       onContextMenu={e=>e.preventDefault()}
       onPointerDown={e => {
-        if (disabled || current.current.length >= 50) return;
-        if(!acceptWritingPointer(e,penOnly,penSeen.current,active.current)){if(penOnly&&e.pointerType!=="pen")setTouchNotice(true);return;}
+        if (disabled) return;
+        // A new physical pen contact recovers a missing up, rather than
+        // consuming the next stroke and making the learner draw it twice.
+        if(e.pointerType==='pen'&&active.current?.type==='pen')commit();
+        if (current.current.length >= 50) return;
+        if(!acceptWritingPointer(e,penOnly,penSeen.current,active.current)){if(penOnly&&e.pointerType!=="pen"){if(quietTouch)e.preventDefault();else setTouchNotice(true);}return;}
         if(e.pointerType==="pen")penSeen.current=true;
         if(active.current){const id=active.current.id;active.current=null;if(e.currentTarget.hasPointerCapture(id))e.currentTarget.releasePointerCapture(id);schedule();}
         const rect = e.currentTarget.getBoundingClientRect();
@@ -97,7 +110,7 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false }: {
           if (stroke.points.length < 1500) stroke.points.push(point(p, stroke.rect));
         }
         schedule();
-      }} onPointerUp={finish} onPointerCancel={cancel} onLostPointerCapture={cancel}/>
-    {touchNotice && <span className="canvas-notice">{t("Pencil only is on. Turn it off for finger or mouse input.")}</span>}
+      }} onPointerUp={finish} onPointerCancel={cancel} onLostPointerCapture={e=>{if(!e.currentTarget.hasPointerCapture(e.pointerId))cancel(e);}}/>
+    {touchNotice && !quietTouch && <span className="canvas-notice">{t("Pencil only is on. Turn it off for finger or mouse input.")}</span>}
   </>;
 }

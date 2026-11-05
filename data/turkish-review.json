@@ -13,5 +13,7 @@
   "Review schedule unchanged": "Tekrar programı değişmedi",
   "Next review: {0}": "Sonraki tekrar: {0}",
   "Back": "Geri",
-  "Practice again": "Yeniden çalış"
+  "Practice again": "Yeniden çalış",
+  "Retry loading notebook": "Defteri yüklemeyi yeniden dene",
+  "Close other Chinese OS tabs and check that browser storage is enabled. Your saved progress is kept.": "Diğer Chinese OS sekmelerini kapatın ve tarayıcı depolamasının açık olduğunu kontrol edin. Kaydedilen ilerlemeniz korunur."
 }

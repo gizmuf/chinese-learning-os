@@ -464,3 +464,7 @@ The additive `?study=studio` workspace uses the existing shell, owner notebook, 
 Selected-word rounds are explicitly extra practice: RecognitionReview durably stores `practice: true` before displaying the round, and its existing events stay assisted. Contextual Recall likewise uses SharedWriting's existing assisted-writing rule. Ordinary independent review, reveal and event UUID semantics remain unchanged. Atlas quizzes pause external companion commands. There is no provider, arbitrary code execution, generated curriculum, TTS generation or live AI in this stage.
 
 Validation: the focused workspace tests cover allowlisted inputs, action idempotency, Back, reload/checkpoint restore, owner separation, stale-tab rejection, mounted ink, supported queues and assessment navigation fences. Existing SharedWriting/RecognitionReview regressions cover real mode/reveal/rating persistence. Browser acceptance covers mouse ink and Back/reload restoration, flashcard reveal restoration, companion open/close, and responsive viewports (390px phone, 1024px iPad size, 1280px laptop); these are browser viewport checks, not physical iPad/Pencil acceptance.
+
+## 4 November follow-up
+
+Current context/voice/composition and billing proposal: [ASSISTANT_NEXT_STEP.md](ASSISTANT_NEXT_STEP.md). Live model integration remains a proposal; the shipped StudyStudio controller still uses fixtures.

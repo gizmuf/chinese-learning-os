@@ -52,8 +52,8 @@ button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 3px solid #ba9971;
-  outline-offset: 4px;
+  outline: 2px solid #6d9281;
+  outline-offset: 2px;
 }
 h1,
 h2,
@@ -250,12 +250,13 @@ select {
   min-width: 0;
 }
 .topbar {
-  height: 73px;
+  height: auto;
+  min-height: 73px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--border);
-  padding: 0 42px;
+  padding: 12px 42px;
   font-size: 11px;
   background: #fcfcf9;
 }
@@ -1575,7 +1576,7 @@ td small {
     margin-left: 205px;
   }
   .topbar {
-    padding: 0 28px;
+    padding: 12px 28px;
   }
   .page-content {
     padding: 32px 28px 0;
@@ -1675,7 +1676,7 @@ td small {
     padding-right: 23px;
   }
   .topbar {
-    padding: 0 23px;
+    padding: 12px 23px;
   }
   .page-heading h1 {
     font-size: 30px;
@@ -4307,6 +4308,50 @@ html[lang="ru"] .nav-item, html[lang="fr"] .nav-item { font-size: 12px; }
 .shared-writing-exercise .studio-grid {grid-template-columns:minmax(0,1fr);margin-top:1rem;}
 .shared-writing-exercise .writing-panel {min-width:0;}
 .shared-writing-exercise .writing-grid {width:min(100%,480px);margin-inline:auto;}
-.study-writing-dialog:has(.shared-writing-exercise),.l06-dialog:has(.shared-writing-exercise),.video-writing-dialog:has(.shared-writing-exercise) {max-height:92dvh;overflow:auto;}
+.study-writing-dialog:has(.shared-writing-exercise),.l06-dialog:has(.shared-writing-exercise),.video-writing-dialog:has(.shared-writing-exercise) {--writing-dialog-padding:24px;margin:auto;max-height:92dvh;overflow:auto;padding:var(--writing-dialog-padding);}
+:is(.study-writing-dialog,.l06-dialog,.video-writing-dialog):has(.shared-writing-exercise)>header{position:sticky;top:calc(-1 * var(--writing-dialog-padding));z-index:4;background:#fff;margin:calc(-1 * var(--writing-dialog-padding)) calc(-1 * var(--writing-dialog-padding)) 18px;padding:16px var(--writing-dialog-padding);border-bottom:1px solid #d8e2d2;}
+:is(.study-writing-dialog,.l06-dialog,.video-writing-dialog):has(.shared-writing-exercise)>header h2{font-size:20px;line-height:1.3;margin:0;}
+:is(.study-writing-dialog,.l06-dialog,.video-writing-dialog):has(.shared-writing-exercise)>header button{flex-shrink:0;min-width:44px;min-height:44px;}
+@media(max-width:650px){:is(.study-writing-dialog,.l06-dialog,.video-writing-dialog):has(.shared-writing-exercise){--writing-dialog-padding:16px}:is(.study-writing-dialog,.l06-dialog,.video-writing-dialog):has(.shared-writing-exercise)>header{padding-block:12px}}
+
 
 .personal-lesson-entry{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px;margin:0 0 24px;flex-wrap:wrap}.personal-lesson-entry h2{font-size:24px;margin:8px 0}.personal-lesson-entry p:not(.eyebrow){font-size:13px;color:var(--muted)}
+.ref-routine-story{list-style:none;padding:0;margin:0;display:grid;gap:18px}.ref-routine-story>li{display:grid;grid-template-columns:76px minmax(0,1fr);gap:20px;align-items:start;padding:24px;border:1px solid #dce4d6;border-radius:16px;background:#fff}.ref-story-art{display:flex;flex-direction:column;align-items:center;gap:8px;color:#7b9275;padding-top:12px}.ref-story-art span{font-size:12px}.ref-routine-story .ref-scene-caption{margin:0;padding:0;background:none;border:0}.ref-meaning-chunks{display:flex;flex-wrap:wrap;gap:5px 10px}.ref-meaning-chunks>span{border-bottom:2px solid #dce6d2;padding:0 3px;border-radius:4px;background:#f7f9f3}.ref-active-scene:has(.ref-routine-story){background:none;padding:0;border:0}@media(max-width:600px){.ref-routine-story>li{grid-template-columns:40px minmax(0,1fr);padding:16px;gap:12px}.ref-story-art svg{width:32px;height:32px}}
+.ref-scene:has(>.ref-routine-story){background:transparent;border:0;padding:0}.ref-routine-story .ref-scene-caption>div[lang]{font-size:clamp(24px,2.5vw,32px);line-height:1.7}
+.writing-layout-controls{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:14px 0 20px}.writing-layout-controls button{min-height:44px}.writing-layout-controls button[aria-pressed=true]{background:#e6eddf;border-color:#809879;color:#365b4a}.whole-word-writing{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:14px;width:100%;max-width:720px;margin:0 auto}.whole-word-writing .writing-grid{width:100%;max-width:none;margin:0;aspect-ratio:1}.writing-word-cell{min-width:0}.whole-word-writing .writing-word-cell.is-active .writing-grid{border-color:#8fa488}.whole-word-writing .writing-word-cell>.text-button{display:flex;margin:8px auto;min-height:36px;font-size:12px}.single-character-writing .writing-word-cell{width:100%}
+.notebook-whole-model{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0 18px;color:#315f50}.notebook-whole-model>span{display:grid;place-items:center;width:70px;height:70px;font-size:48px}.notebook-whole-model svg{width:100%;height:100%}
+.library-results-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:16px 0}.library-results-bar .library-count{margin:0}.library-view-switch{display:flex;gap:5px}.library-view-switch button{display:grid;place-items:center;width:40px;min-height:40px;padding:5px;background:transparent;color:#8a9683;border:1px solid transparent;border-radius:8px}.library-view-switch [aria-pressed=true]{background:#edf2e7;border-color:#d4dfca;color:#496d58}.library-selection-note{font-size:13px;color:#7c8974}.library-word-row{display:contents}.word-card{position:relative}.library-add-choice{position:absolute;top:12px;right:12px;min-width:36px;min-height:36px;color:#829277}.word-card>.eyebrow{padding-right:30px;display:block}.library-add-choice[aria-pressed=true]{color:#3f7054;background:#edf3e7}.word-grid.is-notebook{display:flex;flex-direction:column;gap:20px}.word-grid.is-notebook>.library-word-row{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr);gap:16px;align-items:start}.library-inline-notebook{min-height:300px;border:1px solid #dce5d4;border-radius:16px;overflow:hidden;background:#fafbf7}.library-inline-notebook .sp-mini-notebook{border:0;padding:20px}.library-inline-notebook .sp-mini-notebook-model{margin:0 0 10px;justify-content:flex-end}.sp-mini-word-pages{display:grid;gap:12px}.sp-mini-word-repetition{display:grid;gap:8px}.sp-mini-notebook.is-library-notebook .notebook-square{max-width:150px}.sp-mini-notebook.is-library-notebook .sp-mini-notebook-cell{max-width:150px}.notebook-print-model{font-family:var(--font-hanzi),sans-serif;font-size:58px;line-height:1;display:grid;place-items:center;width:100%;height:100%}@media(max-width:800px){.word-grid.is-notebook>.library-word-row{grid-template-columns:1fr;gap:0;border:1px solid #dce5d4;border-radius:16px;overflow:hidden}.word-grid.is-notebook .word-card{border:0;border-radius:0}.word-grid.is-notebook .library-inline-notebook{border:0;border-top:1px solid #e1e8da;border-radius:0}}
+
+.pdf-library-button[hidden]{display:none}.library-inline-notebook .sp-mini-word-repetition{justify-content:start}
+
+.library-related-lessons{margin-top:30px;border-top:1px solid #dce4d5;padding-top:16px}.library-related-lessons>summary{min-height:44px;font-size:14px;color:#7b8874;cursor:pointer}
+
+.word-card .sentence[hidden]{display:none}
+
+/* A palm must not select a cell number or open Safari's selection callout. */
+.sp-mini-notebook,.sp-mini-notebook *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}.sp-mini-notebook-cell{touch-action:none}.sp-mini-unit-switch{display:flex;gap:6px;margin:8px 0 16px}.sp-mini-unit-switch button{min-height:38px;padding:6px 10px;border:1px solid #dce5d6;border-radius:8px;font-size:12px;background:white;color:#5c7565}.sp-mini-unit-switch [aria-pressed=true]{background:#e9f0e3;border-color:#a3b69b}.writing-print-guide{position:absolute;inset:0;width:100%;height:100%;fill:#d9e2d3;pointer-events:none}.study-confusions-entry{display:inline-flex;gap:8px;align-items:center;margin-top:12px;font-size:13px}
+
+.notebook-cell,.notebook-cell *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}.notebook-cell{touch-action:none}
+
+/* Keep library notebook geometry stable while offscreen canvases are suspended. */
+.sp-mini-storage-status{min-height:24px;font-size:12px;line-height:24px;color:#73836c}
+.library-lesson-links{display:flex;align-items:center;flex-wrap:wrap;gap:2px 15px;margin:0 0 18px;padding:0 0 12px;border-bottom:1px solid #e0e7da;font-size:13px}
+.library-lesson-links>span{display:inline-flex;align-items:center;gap:6px;color:#7a8872}
+.library-lesson-links>a,.library-lesson-links>button{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0;border:0;background:transparent;color:#4c7059;text-decoration:none;font-size:13px;font-weight:500;line-height:1.4}
+.library-lesson-links>a:hover,.library-lesson-links>button:hover{color:#294f3b;text-decoration:underline;text-underline-offset:4px}
+.library-lesson-links>a:focus-visible,.library-lesson-links>button:focus-visible,.library-scroll-controls button:focus-visible{outline:2px solid #8fa68a;outline-offset:4px;border-radius:5px}
+.library-results-bar{position:sticky;top:0;z-index:20;padding:6px 0;background:#f8f9f4f5;border-bottom:1px solid #e4e9de}.library-results-bar .library-view-switch{margin-left:auto}
+.library-scroll-controls{display:flex;align-items:center;gap:2px;border-left:1px solid #dce4d6;padding-left:8px}
+.library-scroll-controls button{display:grid;place-items:center;width:36px;min-height:40px;padding:0;border:0;border-radius:8px;background:transparent;color:#71856b}
+.library-scroll-controls button:hover{background:#edf2e8;color:#365d45}
+.library-boundary{height:1px}.library-boundary:focus,#library-start:focus{outline:none}
+
+@media(max-width:1000px){.library-boundary{scroll-margin-bottom:calc(94px + env(safe-area-inset-bottom,0px))}}
+
+/* Natural-sized writing, with explicit enlargement for inspecting a new shape. */
+.writing-panel{min-width:0}
+.writing-panel .writing-grid,.shared-writing-exercise .writing-grid{width:100%;max-width:var(--writing-cell-size,180px);margin-inline:auto}
+.writing-panel .whole-word-writing .writing-grid{max-width:var(--writing-cell-size,180px)}
+.writing-presentation-controls{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin:10px 0 16px}
+.writing-presentation-controls .hanzi-display-controls{margin:0}.writing-size-toggle{font-size:12px;min-height:40px;padding:5px 8px;color:#77896d}
+.notebook-guide-note{font-size:12px;line-height:1.5;color:#7b8974;margin:8px 0 12px}

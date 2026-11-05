@@ -1,0 +1,252 @@
+{
+  "status": "validated",
+  "provider": "Microsoft Edge Read Aloud via edge-tts",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "generationRate": "-10%",
+  "edgeTtsVersion": "7.3.1",
+  "recordings": [
+    {
+      "text": "我每天早上醒来，然后起床，洗澡，换衣服。",
+      "source": "/audio/my-day-speaking/f456abf33a0ee70a9beb0ec2329c2605b5a6414d0ba141d89ac3b0c7e2ebd832.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "63c8c903fa2d275ecc875512f65de798e08f670fe23f4d831bb98e7f23d58a17",
+      "durationSeconds": 5.28,
+      "validated": true
+    },
+    {
+      "text": "因为我不吃肉，所以我做素食炒饭。",
+      "source": "/audio/my-day-speaking/658d8bf04000ac6df5f787f4e1a9473e2f52e8719be55af834983cdec5d0b768.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "1e60b3e062c6f9acf19c5398f1ef95aa150373c70ae7d222e654218f2e59035b",
+      "durationSeconds": 3.816,
+      "validated": true
+    },
+    {
+      "text": "我也喜欢水果。",
+      "source": "/audio/my-day-speaking/24ce2adad22f3d52587f20207fd627fad877eeab25bfadba4e8a0f6576691265.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "2c8d76d2ea8f7c2b8b496e3457db5dcdf71ea7507f79b49efb30be78a133c32d",
+      "durationSeconds": 2.04,
+      "validated": true
+    },
+    {
+      "text": "吃完早饭以后，我准备出门去学校。",
+      "source": "/audio/my-day-speaking/5658cd97c497900a6f52f73d27eb9e038a78889ff3ea86c5184ce13bd0239b26.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "11ddb37c3767c3a7116498c44009594be706cc75cb179e5d489a6fc181516fd8",
+      "durationSeconds": 3.888,
+      "validated": true
+    },
+    {
+      "text": "因为我家离学校不太远，所以我走十分钟就到学校。",
+      "source": "/audio/my-day-speaking/8b53a3fd301c81f55794a4358ce88c59a2666ed16e22db816453b3d41f920d2b.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "b45b9caedda8036ac3a3fc1530ea4c7b1a939c49713ea195698386640a76f2e5",
+      "durationSeconds": 5.664,
+      "validated": true
+    },
+    {
+      "text": "我每天早上七点左右醒来。",
+      "source": "/audio/my-day-speaking/bfd684408575f12e40a9ee4db4b54bd74d25ef5976f78352186f84c945b69034.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "37fce9a7978ad7305a5acb110a79e09223b198b3914f1b372861c35b45f2ed32",
+      "durationSeconds": 3.096,
+      "validated": true
+    },
+    {
+      "text": "我通常在床上再躺十到十五分钟。",
+      "source": "/audio/my-day-speaking/6095cd106dd8077b4418bca3c6275b70119135f80b3a7d60c0df116a34765186.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "6b1e737ee4a71bfe945ff488a08b13a8782f61629ae0eff1c5e62928f097cf2f",
+      "durationSeconds": 3.864,
+      "validated": true
+    },
+    {
+      "text": "然后我起床，喝一杯温水。",
+      "source": "/audio/my-day-speaking/de635b8b50cb69f1bc354439e67224ad3042dade4103a6200213441a2e216797.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "7e785248276db59d385d23be99ccc4418a4e3a7a14544c1c2cb7143105ff3dbb",
+      "durationSeconds": 3.24,
+      "validated": true
+    },
+    {
+      "text": "我洗澡，换衣服。",
+      "source": "/audio/my-day-speaking/214f1c5bb0ba3de7ae8f384881ad227bf4edd1f85e1b7a2167849e85fc6eff59.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "5c3dae7dd65f3c54fe373bd7a6845cfa9c2144e06ba1cd69d23ac5a3c5a08540",
+      "durationSeconds": 2.544,
+      "validated": true
+    },
+    {
+      "text": "因为我不吃肉，所以我做素菜。",
+      "source": "/audio/my-day-speaking/825c558d210427a6a40e6024fecd63a730e85eb9ec8fe2cd5a12d72673d05cac.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "738ac3b4a5a2ad71be2962ae03dbce1826ff2dc905536a9cb497ecd144e40f46",
+      "durationSeconds": 3.384,
+      "validated": true
+    },
+    {
+      "text": "早饭后，我准备出门。",
+      "source": "/audio/my-day-speaking/a4ebcd39e14fcf79e9bcd3b920c107271a76ef45d0d1b9f912017edb7ba29b4e.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "d3f0d1c9f858acc5eaf27d8aaa2b0ca41e0a7e20c3c45d2d867d899941035f30",
+      "durationSeconds": 2.832,
+      "validated": true
+    },
+    {
+      "text": "我出门去学校。",
+      "source": "/audio/my-day-speaking/94f16546a96997f19a586a14fdc6fead5cdd373eb90f73fe4feff1713dd9c067.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "fc17d527d02a676e65c67999fb80be94eaa2f700a0f1bdfcc88ca7eea793cf00",
+      "durationSeconds": 2.136,
+      "validated": true
+    },
+    {
+      "text": "去学校的路上，我用微信点一杯咖啡。",
+      "source": "/audio/my-day-speaking/7d82a3f77ea737763489c6e69af7b13d6847f683a6b9defa3a19ac28c2d492d5.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "11a6f6a9923f7b654810223d8d41ad18f6a3701030ad4d694f61fd63fc80ac40",
+      "durationSeconds": 4.08,
+      "validated": true
+    },
+    {
+      "text": "到学校以后，我在楼下的咖啡店取咖啡。",
+      "source": "/audio/my-day-speaking/050e14cceb578d016730658a6163917dbda515c724f3557d9afb6422a5a29c10.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "ae48cb20216e8efbee322f217d456cffbf35793238f5ac2487b90ed4a4b1c8f2",
+      "durationSeconds": 4.32,
+      "validated": true
+    },
+    {
+      "text": "我十点十分休息二十分钟。",
+      "source": "/audio/my-day-speaking/11b042ead79feec4f87f193e9af96fe8f6def2773409ce6a01f9af6b481f5421.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "a744f383b4acb672e3b080a9bf8725587a8493a7e9a0614c33383f25d619eb23",
+      "durationSeconds": 3.288,
+      "validated": true
+    },
+    {
+      "text": "我十点半回去上课。",
+      "source": "/audio/my-day-speaking/21e66a8b6f3ccb4ceee5684ea1823ad85cea0c947ea7ae167ce544debdb497fa.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "009cb10865e2d1e545094330b5a7460d3ca6e6cb0eb70278835e619e54a0586e",
+      "durationSeconds": 2.568,
+      "validated": true
+    },
+    {
+      "text": "中午十二点，我休息一个小时。",
+      "source": "/audio/my-day-speaking/3342a39faf16e7956772aa7fe416f9ebbacd221a4e9975167f1b9d6bf067a7ae.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "61f1ad9e3f6763f430de00cc5666fe516be355088f2dc36d86a7c7a07609fcf7",
+      "durationSeconds": 3.408,
+      "validated": true
+    },
+    {
+      "text": "我去吃午饭。",
+      "source": "/audio/my-day-speaking/64bfd353ddc4da7b2dc92d80936406b32825c27262246fb85d98224c7adfa7df.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "993bc804a2d500d18313896181e6a942de1e201676b576cdc590185b6aa3d4dc",
+      "durationSeconds": 1.872,
+      "validated": true
+    },
+    {
+      "text": "下一节课下午一点开始。",
+      "source": "/audio/my-day-speaking/e563a89b23f7fd38866b7b56008fc927ff89304e795ec5015410b164b3012c88.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "8aea6d149fc36c50504e7e113887ce352bf69d70ad51fcb04986d9c5bab7a508",
+      "durationSeconds": 3.024,
+      "validated": true
+    },
+    {
+      "text": "我下午两点半下课。",
+      "source": "/audio/my-day-speaking/cc859b78b308606a51d374d51ea1421d300ed680eda20556bfabbfec1a94785f.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "808ef93b3adda2ac4f3c78d8ada22a0c148d4fdade3e0805f2a201476db25603",
+      "durationSeconds": 2.544,
+      "validated": true
+    },
+    {
+      "text": "然后我回家。",
+      "source": "/audio/my-day-speaking/af851c25215f6295050cc8aabe58b262510032ea030550e9dbdefc1c929a5ab8.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "967dc0dc33cb21ba330b891258eec55415f0f5788490f6d85f631a751da9df48",
+      "durationSeconds": 1.872,
+      "validated": true
+    },
+    {
+      "text": "回家以后，我开始远程工作。",
+      "source": "/audio/my-day-speaking/1b51093779ebe4bd1f00096ba96fcc0c0fac09a19fcff29fbfd3cb36c34ded27.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "450f3d6de5ddfcc1e23be86a82a6068ae63fd7549c3c7a666e508a49a4236558",
+      "durationSeconds": 3.408,
+      "validated": true
+    },
+    {
+      "text": "我工作一会儿，再学一会儿中文。",
+      "source": "/audio/my-day-speaking/f7dc982ded716bd225a98c927a7a2e3a8edd442b5f9d1ea7f93a79ea176b13a6.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "a930af7fc0265ccb8cc0219bba6ecf69fa82afbe310ab8f02ba5cd2fb462459f",
+      "durationSeconds": 3.264,
+      "validated": true
+    },
+    {
+      "text": "我经常出去散步。",
+      "source": "/audio/my-day-speaking/611f255a57a509139fc717c1db5384237ec3b31ae6f749e9594365fbf22f055a.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "65c8873f91573f7349092bc396c89e917adc002b8ff4fca2c9de2b92ef35d22a",
+      "durationSeconds": 2.256,
+      "validated": true
+    },
+    {
+      "text": "我有时候散步半个小时，有时候散步两个小时。",
+      "source": "/audio/my-day-speaking/1b5a48dcdc78ff670e91f1b702523ace4556603cf40c60499300338cee6a2df0.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "fd803d5796ae6329d781fff9bfb7fc0c273a51289e6afc0d2d8d38932b0d66d5",
+      "durationSeconds": 5.112,
+      "validated": true
+    },
+    {
+      "text": "晚上我继续学中文。",
+      "source": "/audio/my-day-speaking/5dfb4cc59d1df291e68c9256c127da030f95cbd908d9e3fa41cc5f506fc19a74.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "76c041226f7b274ef195be3fc90317fe4985b2ed305cfe98aa82538dcdf66ad1",
+      "durationSeconds": 2.472,
+      "validated": true
+    },
+    {
+      "text": "睡觉前，我准备明天的课。",
+      "source": "/audio/my-day-speaking/322570dd3029e6b33658f64437eef5b09f1b5ecc4a24a29882917025c4db481e.mp3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "generationRate": "-10%",
+      "sha256": "1d2c9d962a9813de26e474e1d397fd2b8596ee587cf426ff79075f820d6ff349",
+      "durationSeconds": 3.312,
+      "validated": true
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 "use client";
+import {useHanziStyle} from './hanzi-style';
 import WritingHelp from "./writing-help";
 import { useI18n } from "./i18n";
 import { useEffect, useRef, useState } from "react";
@@ -7,6 +8,10 @@ import type { Item } from "./content";
 import type { LearningEvent, Stroke } from "./learning";
 import { readDraft, saveDraft } from "./local-store";
 import { speak } from "./audio";
+import PinyinHandwriting from './pinyin-handwriting';
+import LanguagePracticeSet from './language-practice-set';
+import {authoredCharacterReadings} from './pinyin-boundaries';
+import './pinyin-practice.css';
 import Ink from "./ink";
 import {WritingCharacterContext} from "./writing-context";
 
@@ -31,11 +36,23 @@ function Glyph({ data, through, active, direction = false }: {
   </svg>;
 }
 
-function CharacterRow({ character, position, sheet, change, penOnly, disabled, notify }: {
-  character: string; position: number; sheet: Sheet;
+function PrintedGlyph({character}:{character:string}){return <svg viewBox="0 0 100 100" aria-hidden="true"><text x="50" y="80" textAnchor="middle" fontSize="82" fontFamily="var(--font-hanzi),sans-serif" fill="currentColor">{character}</text></svg>;}
+
+export function NotebookWordModel({text}:{text:string}){
+ const {style}=useHanziStyle();
+ const [models,setModels]=useState<Record<string,CharacterData>>({});
+ useEffect(()=>{const controller=new AbortController();setModels({});if(style==='print')return()=>controller.abort();for(const character of new Set(Array.from(text))){fetch(`/characters/${encodeURIComponent(character)}.json`,{signal:controller.signal}).then(r=>{if(!r.ok)throw Error('Missing character');return r.json() as Promise<CharacterData>;}).then(data=>{if(!controller.signal.aborted&&Array.isArray(data.strokes))setModels(old=>({...old,[character]:data}));}).catch(()=>{});}return()=>controller.abort();},[text,style]);
+ return <div className="notebook-whole-model" role="img" aria-label={text}>{Array.from(text).map((character,i)=><span key={i}>{style==='print'?<PrintedGlyph character={character}/>:models[character]?<Glyph data={models[character]} through={models[character].strokes.length-1}/>:<span lang="zh-Hans">{character}</span>}</span>)}</div>;
+}
+
+// Keep untouched cells stable while a neighbouring cell commits a stroke.
+const EMPTY_STROKES:Stroke[]=[];
+function CharacterRow({ character, reading, position, sheet, change, penOnly, disabled, notify }: {
+  character: string; reading?:string; position: number; sheet: Sheet;
   change: (key: string, strokes: Stroke[]) => void; penOnly: boolean; disabled: boolean; notify:(message:string)=>void;
 }) {
   const { t, locale } = useI18n();
+  const {style}=useHanziStyle();
   const [data, setData] = useState<CharacterData | null>(null);
   const [failed, setFailed] = useState(false);
   const [retry, setRetry] = useState(0);
@@ -51,12 +68,12 @@ function CharacterRow({ character, position, sheet, change, penOnly, disabled, n
   }, [character, retry]);
   function cell(slot: number, trace: boolean, label: string) {
     const key = `${position}:${slot}`;
-    const strokes = sheet.cells[key] ?? [];
+    const strokes = sheet.cells[key] ?? EMPTY_STROKES;
     return <div className="notebook-cell" key={slot}>
       <div className="notebook-square">
         <Grid />
-        {trace && !sheet.hidden && data && <div className="notebook-ghost"><Glyph data={data} through={data.strokes.length - 1} /></div>}
-        <Ink strokes={strokes} onChange={s => change(key, s)} penOnly={penOnly} disabled={disabled} />
+        {trace && !sheet.hidden && (style==='print'||data) && <div className="notebook-ghost">{style==='print'?<PrintedGlyph character={character}/>:data&&<Glyph data={data} through={data.strokes.length - 1} />}</div>}
+        <Ink quietTouch lineStyle={style==='print'?'pen':'brush'} strokes={strokes} onChange={s => change(key, s)} penOnly={penOnly} disabled={disabled} />
       </div>
       <div className="notebook-cell-tools"><small>{label}</small>
         <button aria-label={t("Undo {0} {1}", [character, label])} disabled={disabled || !strokes.length} onClick={() => change(key, strokes.slice(0, -1))}><Undo2 size={14} /></button>
@@ -68,6 +85,7 @@ function CharacterRow({ character, position, sheet, change, penOnly, disabled, n
     <h3>{sheet.hidden ? t("Character {0}", [position + 1]) : character}</h3>
     {!sheet.hidden && <><WritingCharacterContext character={character} notify={notify}/>
       {data ? <>
+        {style==='print'&&<p className="notebook-guide-note">{({en:'Stroke-order diagrams use the handwriting model. The practice boxes below use your printed font.',fr:'Les étapes suivent le modèle manuscrit. Les cases ci-dessous utilisent votre police imprimée.',ru:'Порядок штрихов показан по рукописному образцу. В клетках ниже используется печатный шрифт.',tr:'Çizgi sırası el yazısı modelini kullanır. Aşağıdaki kutular basılı yazı tipini kullanır.'}[locale])}</p>}
         <div className="notebook-steps" aria-label={t("Stroke order for {0}", [character])}>
           {data.strokes.map((_, i) => <button key={i} aria-label={t("{0} stroke {1}", [character, i + 1])} aria-pressed={step === i}
             className={step === i ? "selected" : ""} onClick={() => setStep(i)}>
@@ -84,13 +102,14 @@ function CharacterRow({ character, position, sheet, change, penOnly, disabled, n
       </> : <p role="status">{failed ? <>{t("Stroke guide unavailable.")}<button className="text-button" onClick={() => setRetry(r => r + 1)}>{t("Retry")}</button> {t("You can still write below.")}</> : t("Loading stroke guide…")}</p>}
     </>}
     <div className="notebook-cells">
-      {!sheet.hidden && <div className="notebook-cell"><div className="notebook-square"><Grid /><div className="notebook-model">{data ? <Glyph data={data} through={data.strokes.length - 1} /> : character}</div></div><small>{t("Model")}</small></div>}
+      {!sheet.hidden && <div className="notebook-cell"><div className="notebook-square"><Grid /><div className="notebook-model">{style==='print'?<PrintedGlyph character={character}/>:data ? <Glyph data={data} through={data.strokes.length - 1} /> : character}</div></div><small>{t("Model")}</small></div>}
       {cell(0, true, t("Trace 1"))}{cell(1, true, t("Trace 2"))}
       {cell(2, false, t("Copy 1"))}{cell(3, false, t("Copy 2"))}{cell(4, false, t("Copy 3"))}
     </div>
+    <div className="notebook-pinyin-practice"><h4>Pinyin with tones</h4>{!sheet.hidden&&reading&&<p className="pinyin">{reading}</p>}<p>Write the syllable and its tone mark beside your Hanzi practice.{!reading?' Use the whole-word reading above; no character reading has been guessed.':''}</p><PinyinHandwriting strokes={sheet.cells[`pinyin:${position}`]??EMPTY_STROKES} onChange={strokes=>change(`pinyin:${position}`,strokes)} penOnly={penOnly} disabled={disabled}/><button type="button" className="text-button" disabled={disabled} onClick={()=>change(`pinyin:${position}`,[])}>Clear Pinyin</button></div>
   </section>;
 }
-function Grid() {
+export function Grid() {
   return <svg className="notebook-guidelines" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0V100 M0 50H100 M0 0L100 100 M100 0L0 100" /></svg>;
 }
 
@@ -100,8 +119,10 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
   onRecall: () => void; next: () => void; contextAudioOnly?: boolean;
 }) {
   const { t, locale } = useI18n();
+  const {style}=useHanziStyle();
   const [sheet, setSheet] = useState<Sheet>(emptySheet);
   const [ready, setReady] = useState(false);
+  const [languageOpen,setLanguageOpen]=useState(false);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const started = useRef(Date.now());
@@ -119,6 +140,7 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
     if (db && ready && !saved) saveDraft(db, key, sheet).catch(() => notify(t("Could not save the worksheet on this device.")));
   }, [db, key, ready, saved, sheet, notify]);
   function change(cell: string, strokes: Stroke[]) { setSheet(old => ({ ...old, cells: { ...old.cells, [cell]: strokes } })); }
+  const readings=authoredCharacterReadings(item.hanzi,item.pinyin);
   const complete = characters.every((_, i) => [2, 3, 4].some(slot => sheet.cells[`${i}:${slot}`]?.length));
   async function save() {
     if (!complete || saving || saved) return;
@@ -134,7 +156,7 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
     finally { setSaving(false); }
   }
   return <section className="panel notebook-panel" aria-label={t("Writing notebook")}>
-    <div className="notebook-header"><div><span className="eyebrow">{t("YOUR PRACTICE NOTEBOOK")}</span><h2>{item.english}</h2><p className="pinyin">{item.pinyin}</p></div>
+    <div className="notebook-header"><div><span className="eyebrow">{t("YOUR PRACTICE NOTEBOOK")}</span><h2>{item.english}</h2><p className="pinyin">{sheet.hidden?'Pinyin hidden · write before comparing':item.pinyin}</p></div>
       <label className="pencil-toggle"><input type="checkbox" checked={penOnly} onChange={e => setPenOnly(e.target.checked)} /> {t("Pencil only")}</label>
     </div>
     <WritingHelp/><div className="notebook-actions">
@@ -144,14 +166,15 @@ export default function Notebook({ item, db, penOnly, setPenOnly, record, notify
     </div>
     <p className="notebook-intro">{t("Follow the steps, trace twice, then write in the empty boxes. Your worksheet stays on this device; saved practice syncs with your account.")}</p>
     {!ready ? <p role="status">{t("Loading your worksheet…")}</p> : <>
-      {characters.map((character, position) => <CharacterRow key={`${position}:${character}`} {...{ character, position, sheet, change, penOnly, notify }} disabled={saved} />)}
-      <section className="notebook-character"><h3>{t("Write the whole word")}</h3><p>{sheet.hidden ? t("Write the characters together from memory.") : item.hanzi}</p>
+      {characters.map((character, position) => <CharacterRow key={`${position}:${character}`} {...{ character, position, sheet, change, penOnly, notify }} reading={readings?.[position]?.pinyin} disabled={saved} />)}
+      <section className="notebook-character"><h3>{t("Write the whole word")}</h3>{sheet.hidden?<p>{t("Write the characters together from memory.")}</p>:<NotebookWordModel text={item.hanzi}/>}
         <div className="notebook-cells notebook-whole-word">{characters.map((_, i) => <div className="notebook-cell" key={i}>
-          <div className="notebook-square"><Grid /><Ink strokes={sheet.cells[`word:${i}`] ?? []} onChange={s => change(`word:${i}`, s)} penOnly={penOnly} disabled={saved} /></div>
+          <div className="notebook-square"><Grid /><Ink quietTouch lineStyle={style==='print'?'pen':'brush'} strokes={sheet.cells[`word:${i}`] ?? EMPTY_STROKES} onChange={s => change(`word:${i}`, s)} penOnly={penOnly} disabled={saved} /></div>
           <div className="notebook-cell-tools"><small>{t("Character {0}", [i + 1])}</small><button aria-label={t("Clear whole word character {0}", [i + 1])} disabled={saved || !sheet.cells[`word:${i}`]?.length} onClick={() => change(`word:${i}`, [])}><RotateCcw size={14} /></button></div>
         </div>)}</div>
       </section>
     </>}
+    <details onToggle={event=>setLanguageOpen(event.currentTarget.open)}><summary>Practise Pinyin and Chinese keyboard input</summary>{languageOpen&&<LanguagePracticeSet item={item} db={db} record={record} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} supported/>}</details>
     <div className="notebook-footer"><p>{t("Notebook work counts as assisted practice, even with guides hidden. Use Recall for a separate memory review. Free writing is self-assessed.")}</p>
       {!saved ? <button className="primary" disabled={!ready || !complete || saving} onClick={() => void save()}>{saving ? t("Saving…") : t("Save notebook practice")}<Check size={16} /></button> : <button className="primary" onClick={next}>{t("Saved · next word")}<ChevronRight size={16} /></button>}
       <button className="secondary" onClick={onRecall}>{t("Try Recall")}<ChevronRight size={16} /></button>

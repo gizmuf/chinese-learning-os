@@ -1,4 +1,9 @@
+import Lesson12 from './lesson12';
+import {lesson12} from './lesson12-data';
+import Lesson11 from './lesson11';
+import {lesson11} from './lesson11-data';
 "use client";
+import HskBadge from './hsk-badge';
 import ReferenceLesson from './reference-lesson';
 import ReferenceLessonLinks from './reference-lesson-links';
 import {referenceLessonById,referenceLessonHref} from './reference-lessons-data';
@@ -120,6 +125,8 @@ export default function IntensiveCourse({
     if(material?.startsWith('reference-')){const id=material.slice('reference-'.length) as ReferenceMaterialId;if(referenceLessonById.has(id)){setReferenceId(id);setReferenceFromLibrary(new URLSearchParams(window.location.search).get('from')==='lessons');}}
     if(new URLSearchParams(window.location.search).get("material")==="self-introduction")setVideoOpen(true);
     if(new URLSearchParams(window.location.search).get("material")==="speaking-chunks")setChunksOpen(true);
+    if (new URLSearchParams(window.location.search).get("lesson") === "12") {setLessonNumber(12);setOpen(true);}
+    if (new URLSearchParams(window.location.search).get("lesson") === "11") {setLessonNumber(11);setOpen(true);}
     if (new URLSearchParams(window.location.search).get("lesson") === "10") {setLessonNumber(10);setOpen(true);}
     if (new URLSearchParams(window.location.search).get("lesson") === "9") {setLessonNumber(9);setOpen(true);}
     if (new URLSearchParams(window.location.search).get("lesson") === "8") {setLessonNumber(8);setOpen(true);}
@@ -211,6 +218,10 @@ export default function IntensiveCourse({
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
+  if(open&&lessonNumber===12)return <Lesson12 {...{owner,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"","/?course=intensive");}}/>;
+  function openLesson12(){stopAudio();setLessonNumber(12);setOpen(true);window.history.replaceState(null,"","/?course=intensive&lesson=12");window.scrollTo({top:0,behavior:"instant"});}
+  if(open&&lessonNumber===11)return <Lesson11 {...{owner,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"","/?course=intensive");}}/>;
+  function openLesson11(){stopAudio();setLessonNumber(11);setOpen(true);window.history.replaceState(null,"","/?course=intensive&lesson=11");window.scrollTo({top:0,behavior:"instant"});}
   if(open&&lessonNumber===10)return <Lesson10 {...{owner,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"","/?course=intensive");}}/>;
   function openLesson10(){stopAudio();setLessonNumber(10);setOpen(true);window.history.replaceState(null,"","/?course=intensive&lesson=10");window.scrollTo({top:0,behavior:"instant"});}
   if(open&&lessonNumber===9)return <Lesson09 {...{owner,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"","/?course=intensive");}}/>;
@@ -253,6 +264,8 @@ export default function IntensiveCourse({
           <ReferenceLessonLinks onOpen={openReference}/>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">你能给我 · … · 吗</div><div><span className="pill">CHUNKS</span><h2>{chunkCopy.title[locale]}</h2><p>{chunkCopy.intro[locale]}</p><p>{chunkCopy.subtitle[locale]}</p><button className="primary" onClick={()=>{stopAudio();setChunksOpen(true);window.history.replaceState(null,"","/?course=intensive&material=speaking-chunks");window.scrollTo({top:0,behavior:"instant"});}}>{chunkCopy.open[locale]}<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">你 · 自己</div><div><span className="pill">{videoCopy[locale].independent}</span><h2>{videoStudy.title[locale]}</h2><p>{videoCopy[locale].intro}</p><button className="primary" onClick={()=>{stopAudio();setVideoOpen(true);window.history.replaceState(null,'','/?course=intensive&material=self-introduction');window.scrollTo({top:0,behavior:'instant'});}}>{videoCopy[locale].read}<ArrowRight size={17}/></button></div></section>
+          <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">北 · 东 · 南 · 西</div><div><span className="pill">{t("Lesson")} 12 / 60</span><h2>{lesson12.title[locale]}</h2><p>04.11.2026</p><button className="primary" onClick={openLesson12}>{t("Lesson")} 12<ArrowRight size={17}/></button></div></section>
+          <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">坐 · 骑 · 开 · 走</div><div><span className="pill">{t("Lesson")} 11 / 60</span><h2>{lesson11.title[locale]}</h2><p>03.11.2026</p><button className="primary" onClick={openLesson11}>{t("Lesson")} 11<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">比 · 在 · 量词</div><div><span className="pill">{t("Lesson")} 10 / 60</span><h2>{lesson10.title[locale]}</h2><p>02.11.2026</p><button className="primary" onClick={openLesson10}>{t("Lesson")} 10<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">复习 · 天气 · 会</div><div><span className="pill">{t("Lesson")} 09 / 60</span><h2>{lesson09.title[locale]}</h2><p>30.10.2026</p><button className="primary" onClick={openLesson09}>{t("Lesson")} 09<ArrowRight size={17}/></button></div></section>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">时间 · 从 · 同</div><div><span className="pill">{t("Lesson")} 08 / 60</span><h2>{lesson08.title[locale]}</h2><p>29.10.2026</p><button className="primary" onClick={openLesson08}>{t("Lesson")} 08<ArrowRight size={17}/></button></div></section>
@@ -279,19 +292,19 @@ export default function IntensiveCourse({
 
           <details className="course-calendar panel">
             <summary>
-              {t("All 60 lessons")} · {({en:"Eight lessons ready",fr:"Huit leçons disponibles",ru:"Восемь уроков доступны",tr:"Sekiz ders hazır"})[locale]}
+              {t("All 60 lessons")} · {({en:"Ten lessons ready",fr:"Dix leçons disponibles",ru:"Десять уроков доступны",tr:"On ders hazır"})[locale]}
             </summary>
             <div className="course-lesson-grid">
               {Array.from({ length: 60 }, (_, i) => (
                 <button
                   key={i}
-                  disabled={i !== 2 && i !== 3 && i !== 4 && i !== 5 && i !== 6 && i !== 7 && i !== 8 && i !== 9}
-                  className={i === 2 || i === 3 || i === 4 || i === 5 || i === 6 || i === 7 || i === 8 || i === 9 ? "available" : ""}
-                  onClick={i===9?openLesson10:i===8?openLesson09:i===7?openLesson08:i===6?openLesson07:i===5?openLesson06:i===4?openLesson05:i===3?openLesson04:openLesson}
+                  disabled={i !== 2 && i !== 3 && i !== 4 && i !== 5 && i !== 6 && i !== 7 && i !== 8 && i !== 9 && i !== 10 && i !== 11}
+                  className={i === 2 || i === 3 || i === 4 || i === 5 || i === 6 || i === 7 || i === 8 || i === 9 || i === 10 || i === 11 ? "available" : ""}
+                  onClick={i===11?openLesson12:i===10?openLesson11:i===9?openLesson10:i===8?openLesson09:i===7?openLesson08:i===6?openLesson07:i===5?openLesson06:i===4?openLesson05:i===3?openLesson04:openLesson}
                 >
                   <strong>{String(i + 1).padStart(2, "0")}</strong>
                   <small>
-                    {i === 2 || i === 3 || i === 4 || i === 5 || i === 6 || i === 7 || i === 8 || i === 9
+                    {i === 2 || i === 3 || i === 4 || i === 5 || i === 6 || i === 7 || i === 8 || i === 9 || i === 10 || i === 11
                       ? t("Ready to practice")
                       : t("Awaiting class material")}
                   </small>
@@ -581,7 +594,7 @@ export default function IntensiveCourse({
                                 <span className="pinyin">{value.pinyin}</span>
                                 <span>{value.meaning[locale]}</span>
                                 <Volume2 size={13} />
-                              </button>
+                              {terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi}/>}</button>
                             );
                           })}
                         </div>
@@ -658,7 +671,7 @@ export default function IntensiveCourse({
                           <ChevronRight size={15} />
                         </button>
                       </div>
-                    </article>
+                    {terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi}/>}</article>
                   ))}
               </div>
             </>
@@ -837,7 +850,7 @@ function SentenceCard({
           <ChevronRight size={15} />
         </button>}
       </div>
-    </article>
+    {terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi}/>}</article>
   );
 }
 function OptionText({

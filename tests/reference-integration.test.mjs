@@ -23,13 +23,13 @@ test('all 17 source pages have complete, internally consistent references and un
  assert.ok(!m.referenceLessons[2].checks.some(x=>m.referenceEntryById.get(x.targetId).hanzi==='上声'));
  assert.equal(m.referenceWordOccurs('十一月三号','一月'),false);assert.equal(m.referenceWordOccurs('一月三号','一月'),true);
 });
-test('reference schema, UUID replay and review dates stay isolated from the eight numeric lessons',()=>{
+test('reference schema, UUID replay and review dates stay isolated from the ten numeric lessons',()=>{
  for(const lesson of m.referenceLessons){const e=event(lesson,{correct:false});assert.ok(m.courseEventSchema.safeParse(e).success);assert.ok(!m.courseEventSchema.safeParse({...e,activityId:'unknown'}).success);const other=m.referenceLessons.find(x=>x!==lesson);assert.ok(!m.courseEventSchema.safeParse({...e,activityId:other.checks[0].id}).success);
  const study=event(lesson,{activityId:'study:'+lesson.topics[0].id,kind:'study',correct:null,assisted:true});assert.ok(m.courseEventSchema.safeParse(study).success);assert.ok(!m.courseEventSchema.safeParse({...study,assisted:false}).success);
  const result=m.referenceReviewSummary([e,e,study,{...e,id:crypto.randomUUID(),assisted:true}],lesson,now);assert.equal(result.attempted,1);assert.equal(result.difficult.length,1);assert.equal(result.due.length,0);assert.ok(result.nextDue>now);assert.equal(m.referenceReviewSummary([e],lesson,result.nextDue).due.length,1);
  assert.deepEqual(m.courseCards([e,e]),m.courseCards([e]));assert.equal(m.courseReviewSummary([e],now).attempted,0);
  }
- assert.deepEqual(m.reviewableCourseLessons.map(x=>x.number),[3,4,5,6,7,8,9,10]);
+ assert.deepEqual(m.reviewableCourseLessons.map(x=>x.number),[3,4,5,6,7,8,9,10,11,12]);
 });
 test('actual indexedDB record-sync-hydrate preserves all reference IDs and separates owners and disposed sessions',async()=>{
  globalThis.indexedDB=indexedDB;const server=new Map();

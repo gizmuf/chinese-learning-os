@@ -1,0 +1,24 @@
+[
+  {
+    "id": "visual-directions-en",
+    "title": "Visual directions & place relations",
+    "label": "English",
+    "locale": "en",
+    "filename": "Chinese_Practice_OS_Directions_Visual_Hybrid_EN_SEARCHABLE_iPad_SAFE.pdf",
+    "path": "resources/lesson12/visual-directions-en.pdf",
+    "pages": 25,
+    "bytes": 2687023,
+    "sha256": "5f584c2d52345cd84c3f8dae8b13479014f25ca75245567a31aa8f0b057b7017"
+  },
+  {
+    "id": "visual-transport-en",
+    "title": "Home, my day & transport",
+    "label": "English",
+    "locale": "en",
+    "filename": "Chinese_Classroom_Hybrid_Home_Day_Transport_EN_SEARCHABLE_iPad_SAFE.pdf",
+    "path": "resources/lesson12/visual-transport-en.pdf",
+    "pages": 28,
+    "bytes": 2517177,
+    "sha256": "2294722f423b634de0b368f46c155a0617d491668ad5320b693f2c21759e5781"
+  }
+]

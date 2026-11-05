@@ -1,0 +1,5 @@
+:root .dictionary-hsk-badge{display:block;width:fit-content;max-width:100%;font:400 10px/1.4 system-ui,sans-serif;color:#68786d;background:none;border:0;border-radius:0;padding:0;margin:8px 0 0 auto;letter-spacing:0;text-transform:none;text-align:right;align-self:flex-end;white-space:normal}
+.library-word-level .dictionary-hsk-badge{margin:0;text-align:left}
+.writing-prompt>.dictionary-hsk-badge{float:right;margin:0 0 6px 14px}
+.sp-card>.dictionary-hsk-badge{margin-top:6px;flex-shrink:0}
+.sp-card.is-active>.dictionary-hsk-badge{color:var(--sp-muted,#68786d)}

@@ -65,3 +65,8 @@ test('电 lexical family contains real compounds beyond HSK, has separate counts
  const family=m.dictionaryWordFamily(words,'电',['电脑','电话']);for(const word of ['电脑','电话','电影','电梯','电车','雷电'])assert.ok(family.includes(word),word);assert.ok(family.length>100);assert.ok(family.every(word=>word.includes('电')));assert.ok(!family.includes('店'));assert.ok(!family.includes('点'));assert.equal(family[0]==='电脑'||family[0]==='电话',true);assert.equal(new Set(family).size,family.length);
  const first=m.dictionaryFamilyPage(family,0),second=m.dictionaryFamilyPage(family,1);assert.equal(first.words.length,18);assert.equal(second.words.length,18);assert.ok(!first.words.some(word=>second.words.includes(word)));assert.equal(m.dictionaryWordFamily(words,'diàn').length,0);
 });
+
+test('a headword is not repeated as its own source sentence',()=>{
+ const entry={text:'租车',pinyin:'zū chē',meaning:'rent a car'};assert.equal(m.contextualDictionaryEntry(entry,{text:'租车',pinyin:'zū chē',meaning:'rent a car'}).contextual,undefined);
+ const context={text:'我租车去旅行。',pinyin:'Wǒ zū chē qù lǚxíng.',meaning:'I rent a car for a trip.'};assert.equal(m.contextualDictionaryEntry(entry,context).contextual,context);
+});

@@ -12307,9 +12307,9 @@ export const items: Item[] = [
     "hskLevel": 3
   }
 ];
-export type Skill = "meaning" | "listening" | "writing";
+export type Skill = "meaning" | "listening" | "writing" | "pinyin" | "hanzi-from-pinyin" | "ime";
 export type Mode = "watch" | "trace" | "copy" | "recall";
-export const skillNames = { meaning: "Recognition", listening: "Listening", writing: "Writing" };
+export const skillNames = { meaning: "Recognition", listening: "Listening", writing: "Writing", pinyin: "Hanzi → Pinyin", "hanzi-from-pinyin": "Pinyin → Hanzi", ime: "Chinese keyboard" };
 function searchKey(value: string) {
   return value.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().replace(/[\s'’]/g, "");
 }

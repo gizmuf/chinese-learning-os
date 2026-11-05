@@ -1,3 +1,5 @@
+import {lesson12All,lesson12Pronunciation} from './lesson12-data';
+import {lesson11Terms,lesson11Pronunciation} from './lesson11-data';
 import {referenceEntries} from './reference-lessons-data';
 import lesson10Characters from '../data/lesson10/characters.json';
 import {lesson10Terms,lesson10Pronunciation} from './lesson10-data';
@@ -5,7 +7,7 @@ import shuoshuoLookup from '../data/shuoshuo-morning-lookup.json';
 import {extendedComponent} from './atlas-cloud-extended';
 import {atlasByHanzi} from './atlas-model';
 import shuoshuoMorning from '../data/shuoshuo-morning.json';
-import shuoshuoAudio from '../data/shuoshuo-morning-audio.json';
+import {shuoshuoWordAudio,shuoshuoSentenceAudio} from './shuoshuo-audio';
 import shuoshuoStructures from '../data/hanzi-structure.json';
 import lesson09Characters from '../data/lesson09/characters.json';
 import {lesson09Recording,lesson09Terms,lesson09Pronunciation} from './lesson09-data';
@@ -47,6 +49,9 @@ export function appStudyDictionary(locale:Locale):StudyDictionary{
  for(const v of lesson09Terms)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],phrase:v.phrase,audio:lesson09Pronunciation(v)});
  for(const v of lesson09Characters.characters)dictionary.set(v.text,{...dictionary.get(v.text),text:v.text,pinyin:v.pinyin,meaning:v.meaning[locale],character:v.text});
  for(const clip of (lesson09AudioManifest.recordings as {id:string;text:string;file:string}[]).filter(v=>v.id.startsWith('char-'))){const entry=dictionary.get(clip.text);if(entry&&!entry.audio)dictionary.set(clip.text,{...entry,audio:{text:clip.text,pinyin:entry.pinyin,context:false,source:lesson09Recording(clip.id)??'/course09/audio/'+clip.file}});}
+ // Constituent characters newly introduced by 任何; the compound keeps its own sense.
+ for(const [text,pinyin,en,fr,ru,tr] of [['任','rèn','appoint / allow; in 任何: any','nommer / permettre ; dans 任何 : tout','назначать / позволять; в 任何: любой','atamak / izin vermek; 任何 içinde: herhangi'],['何','hé','what / how; in 任何: any','quoi / comment ; dans 任何 : tout','что / как; в 任何: любой','ne / nasıl; 任何 içinde: herhangi']] as const)if(!dictionary.has(text))dictionary.set(text,{text,pinyin,meaning:{en,fr,ru,tr}[locale],character:text});
+ for(const v of lesson11Terms)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],phrase:v.phrase,audio:lesson11Pronunciation(v)});
  for(const v of lesson10Terms)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],phrase:v.phrase,audio:lesson10Pronunciation(v)});
  for(const v of lesson10Characters.characters)if(!dictionary.has(v.text))dictionary.set(v.text,{text:v.text,pinyin:v.pinyin,meaning:v.meaning.en,character:v.text});
  for(const v of referenceEntries)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.en,phrase:/[。！？?，,]/u.test(v.hanzi)});
@@ -70,9 +75,10 @@ export function appStudyDictionary(locale:Locale):StudyDictionary{
  const characterContext:Record<string,[string,string]>={麻:['má','In 麻烦: troublesome / inconvenient. Separate character sense not recorded here.'],烦:['fán','In 麻烦: troublesome / inconvenient. Separate character sense not recorded here.'],呀:['ya','Conversational exclamation in 早上好呀.'],卧:['wò','In 卧室: bedroom. Separate character sense not recorded here.'],剪:['jiǎn','In 剪视频: cut / edit video; not the surname gloss.'],造:['zào','In 创造: create. Separate character sense not recorded here.'],番:['fān','In 番茄: tomato. The whole word supplies the meaning.'],茄:['qié','In 番茄: tomato. The whole word supplies the meaning.'],呆:['dāi','In 发呆: stare into space / zone out.'],饼:['bǐng','A flat cake / pancake; in 饼干, biscuit. Do not confuse 冰 bīng (ice).']};
  for(const glyph of new Set(shuoshuoMorning.sources.flatMap(s=>Array.from(s.hanzi).filter(c=>/\p{Script=Han}/u.test(c))))){const old=dictionary.get(glyph),context=characterContext[glyph];dictionary.set(glyph,{...old,text:glyph,pinyin:old?.pinyin??context?.[0]??'',meaning:old?.meaning??context?.[1]??'Separate character meaning not recorded here.',character:glyph,atlasAvailable:structureGlyphs.has(glyph)});}
  for(const term of shuoshuoLookup.entries)if(!dictionary.has(term.text))dictionary.set(term.text,{text:term.text,pinyin:term.pinyin,meaning:term.english});
- for(const term of shuoshuoMorning.practiceTargets){const old=dictionary.get(term.text),clip=(shuoshuoAudio.words as Record<string,{source:string}>)[term.text];dictionary.set(term.text,{...old,text:term.text,pinyin:term.pinyin,meaning:old?.meaning??term.english,...(clip?{audio:{text:term.text,pinyin:term.pinyin,source:clip.source,context:false}}:{})});}
+ for(const term of shuoshuoMorning.practiceTargets){const old=dictionary.get(term.text),clip=shuoshuoWordAudio(term.text);dictionary.set(term.text,{...old,text:term.text,pinyin:term.pinyin,meaning:old?.meaning??term.english,...(clip?{audio:{text:term.text,pinyin:term.pinyin,source:clip.source,context:false}}:{})});}
  if(!dictionary.has('热水'))dictionary.set('热水',{text:'热水',pinyin:'rèshuǐ',meaning:'hot water'});
- for(const sentence of shuoshuoMorning.sentences)dictionary.set(sentence.hanzi,{text:sentence.hanzi,pinyin:sentence.pinyin,meaning:sentence.english,phrase:true});
+ for(const sentence of shuoshuoMorning.sentences){const clip=shuoshuoSentenceAudio(sentence.id,sentence.hanzi);dictionary.set(sentence.hanzi,{text:sentence.hanzi,pinyin:sentence.pinyin,meaning:sentence.english,phrase:true,...(clip?{audio:{source:clip.source,text:sentence.hanzi,pinyin:sentence.pinyin,context:true,kind:'sentence' as const}}:{})});}
+ for(const v of lesson12All)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],phrase:!!v.chunks,audio:lesson12Pronunciation(v)});
  return dictionary;
 }
 /** Resolve the glyph actually hit; whitespace/punctuation must never open a neighbouring word. */

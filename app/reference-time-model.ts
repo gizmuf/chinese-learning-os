@@ -1,4 +1,4 @@
-export type ReferenceCaption={hanzi:string;pinyin:string;en:string};
+export type ReferenceCaption={hanzi:string;pinyin:string;en:string;chunks?:string[]};
 const digits=['零','一','二','三','四','五','六','七','八','九'];
 const readings=['líng','yī','èr','sān','sì','wǔ','liù','qī','bā','jiǔ'];
 export function referenceNumber(n:number){
@@ -35,12 +35,12 @@ export function referenceCalendarMonth(iso:string,delta:number){
  const last=new Date(Date.UTC(current.getUTCFullYear(),current.getUTCMonth()+1,0)).getUTCDate();current.setUTCDate(Math.min(day,last));return current.toISOString().slice(0,10);
 }
 export const referenceDayparts=[
- {hanzi:'凌晨',pinyin:'língchén',en:'very early morning',hour:2},
- {hanzi:'早上',pinyin:'zǎoshang',en:'morning',hour:7},
- {hanzi:'上午',pinyin:'shàngwǔ',en:'before noon',hour:10},
- {hanzi:'中午',pinyin:'zhōngwǔ',en:'noon',hour:12},
- {hanzi:'下午',pinyin:'xiàwǔ',en:'afternoon',hour:15},
- {hanzi:'傍晚',pinyin:'bàngwǎn',en:'dusk / early evening',hour:18},
- {hanzi:'晚上',pinyin:'wǎnshang',en:'evening / night',hour:21},
- {hanzi:'半夜',pinyin:'bànyè',en:'middle of the night',hour:0},
+ {hanzi:'凌晨',pinyin:'língchén',en:'very early morning',hour:2,ranges:[[0, 5]]},
+ {hanzi:'早上',pinyin:'zǎoshang',en:'morning',hour:7,ranges:[[5, 9]]},
+ {hanzi:'上午',pinyin:'shàngwǔ',en:'before noon',hour:10,ranges:[[8, 12]]},
+ {hanzi:'中午',pinyin:'zhōngwǔ',en:'noon',hour:12,ranges:[[11, 13]]},
+ {hanzi:'下午',pinyin:'xiàwǔ',en:'afternoon',hour:15,ranges:[[12, 18]]},
+ {hanzi:'傍晚',pinyin:'bàngwǎn',en:'dusk / early evening',hour:18,ranges:[[17, 20]]},
+ {hanzi:'晚上',pinyin:'wǎnshang',en:'evening / night',hour:21,ranges:[[18, 24]]},
+ {hanzi:'半夜',pinyin:'bànyè',en:'middle of the night',hour:0,ranges:[[0, 1], [23, 24]]},
 ] as const;

@@ -4,8 +4,9 @@ import {useI18n} from './i18n';
 export type HanziStyle='print'|'strokes';
 const Context=createContext({style:'strokes' as HanziStyle,highlight:true,setStyle:(_:HanziStyle)=>{},setHighlight:(_:boolean)=>{}});
 export function HanziStyleProvider({children}:{children:ReactNode}){
- const [style,setStyle]=useState<HanziStyle>('strokes'),[highlight,setHighlight]=useState(true);
- useEffect(()=>{document.documentElement.dataset.hanziStyle=style;document.documentElement.dataset.hanziHighlight=String(highlight);},[style,highlight]);
+ const [style,setStyle]=useState<HanziStyle>('strokes'),[highlight,setHighlight]=useState(true),[ready,setReady]=useState(false);
+ useEffect(()=>{try{const saved=JSON.parse(localStorage.getItem('chinese-os:hanzi-appearance:v1')??'null');if(saved?.style==='print'||saved?.style==='strokes')setStyle(saved.style);if(typeof saved?.highlight==='boolean')setHighlight(saved.highlight);}catch{}setReady(true);},[]);
+ useEffect(()=>{if(!ready)return;document.documentElement.dataset.hanziStyle=style;document.documentElement.dataset.hanziHighlight=String(highlight);try{localStorage.setItem('chinese-os:hanzi-appearance:v1',JSON.stringify({style,highlight}));}catch{}},[style,highlight,ready]);
  const value=useMemo(()=>({style,highlight,setStyle,setHighlight}),[style,highlight]);
  return <Context.Provider value={value}>{children}</Context.Provider>;
 }
@@ -20,5 +21,5 @@ const copy={
 };
 export function HanziDisplayControls({compact=false,showHighlight=true}:{compact?:boolean;showHighlight?:boolean}){
  const {locale}=useI18n(),p=useHanziStyle();
- return <fieldset className={'hanzi-display-controls'+(compact?' is-compact':'')}><legend>{copy.title[locale]}</legend><div role="group" aria-label={copy.title[locale]}>{(['print','strokes'] as const).map(value=><button type="button" key={value} className="secondary" aria-pressed={p.style===value} onClick={()=>p.setStyle(value)}>{compact&&value==='strokes'?({en:'Stroke',fr:'Traits',ru:'Штрихи',tr:'Çizgi'}[locale]):copy[value][locale]}</button>)}</div>{showHighlight&&<label title={p.style==='print'?copy.unavailable[locale]:copy.highlight[locale]}><input type="checkbox" disabled={p.style==='print'} checked={p.highlight} onChange={e=>p.setHighlight(e.target.checked)}/><span aria-label={copy.highlight[locale]}>{compact?({en:'Highlight parts',fr:'Surligner les parties',ru:'Выделить части',tr:'Parçaları vurgula'}[locale]):copy.highlight[locale]}</span></label>}{!compact&&<p>{copy.note[locale]}</p>}{showHighlight&&!compact&&<small>{copy.unavailable[locale]}</small>}</fieldset>;
+ return <fieldset className={'hanzi-display-controls'+(compact?' is-compact':'')}><legend>{copy.title[locale]}</legend><div role="group" aria-label={copy.title[locale]}>{(['print','strokes'] as const).map(value=><button type="button" key={value} className="secondary" aria-label={copy[value][locale]} title={copy[value][locale]} aria-pressed={p.style===value} onClick={()=>p.setStyle(value)}>{compact?<span aria-hidden="true" className={'hanzi-style-sample '+value}>汉</span>:copy[value][locale]}</button>)}</div>{showHighlight&&(!compact||p.style==='strokes')&&<label title={p.style==='print'?copy.unavailable[locale]:copy.highlight[locale]}><input type="checkbox" disabled={p.style==='print'} checked={p.highlight} onChange={e=>p.setHighlight(e.target.checked)}/><span aria-label={copy.highlight[locale]}>{compact?<span aria-hidden="true">◧</span>:copy.highlight[locale]}</span></label>}{!compact&&<p>{copy.note[locale]}</p>}{showHighlight&&!compact&&<small>{copy.unavailable[locale]}</small>}</fieldset>;
 }

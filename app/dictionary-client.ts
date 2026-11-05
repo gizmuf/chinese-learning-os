@@ -1,5 +1,6 @@
 import {canonicalDictionaryText,isSimplifiedHeadword} from './simplified-chinese';
 import sourceMeta from '../data/dictionary-sources.json';
+import hskSource from '../data/hsk-levels-source.json';
 import {sourceCharacterEntry,type SourceCharacter} from './dictionary-source-model';
 import type {DictionaryEntry} from './atlas-spatial-model';
 const cacheName='chinese-os-dictionary-'+sourceMeta.cedict.sha256.slice(0,12)+'-'+sourceMeta.cedict.policySHA256.slice(0,12)+'-3';
@@ -31,3 +32,5 @@ export function fetchDictionaryEntry(text:string){
   await cache?.put(url,new Response(JSON.stringify(data.entry),{headers:{'Content-Type':'application/json','X-Dictionary-Cached-At':String(Date.now())}})).catch(()=>{});return data.entry;
  })().finally(()=>inFlight.delete(text));inFlight.set(text,task);return task;
 }
+
+export function loadHskLevelResource(){return resource(hskSource.asset+'?v='+hskSource.assetSha256.slice(0,12));}

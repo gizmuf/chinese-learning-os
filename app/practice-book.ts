@@ -1,0 +1,11 @@
+import type {Stroke} from './learning';
+import type {DictionaryEntry} from './atlas-spatial-model';
+import {storageTransaction} from './local-store';
+export const practiceBookKey='practice-book:v1';
+export type PracticeChoice={text:string;pinyin:string;meaning:string;addedAt:number;contextual?:DictionaryEntry['contextual'];audio?:DictionaryEntry['audio']};
+export function canChoosePractice(entry:Pick<DictionaryEntry,'text'|'phrase'>){return !entry.phrase&&/^[\p{Script=Han}]{1,12}$/u.test(entry.text);}
+export function readPracticeChoices(value:unknown):PracticeChoice[]{if(!Array.isArray(value))return [];const seen=new Set<string>();return value.filter((v):v is PracticeChoice=>!!v&&typeof v==='object'&&typeof v.text==='string'&&canChoosePractice(v)&&typeof v.pinyin==='string'&&typeof v.meaning==='string'&&Number.isFinite(v.addedAt)&&!seen.has(v.text)&&!!seen.add(v.text));}
+/** Merge against the committed set in one transaction, so two tabs cannot erase each other's choices. */
+export function togglePracticeChoice(db:IDBDatabase,entry:DictionaryEntry){if(!canChoosePractice(entry))return Promise.reject(Error('Choose a word or character, rather than a sentence.'));return storageTransaction<PracticeChoice[]>(db,'drafts','readwrite',(store,result)=>{const request=store.get(practiceBookKey);request.onsuccess=()=>{const rows=readPracticeChoices(request.result),exists=rows.some(v=>v.text===entry.text),next=exists?rows.filter(v=>v.text!==entry.text):[...rows,{text:entry.text,pinyin:entry.pinyin,meaning:entry.meaning,addedAt:Date.now(),contextual:entry.contextual,audio:entry.audio}];store.put(next,practiceBookKey);result(next);};});}
+
+export function readPracticeInk(value:unknown):Record<string,Stroke[][]>{if(!value||typeof value!=='object'||Array.isArray(value))return {};return Object.fromEntries(Object.entries(value).filter(([key,cells])=>/^(word:)?[\p{Script=Han}]{1,12}$/u.test(key)&&Array.isArray(cells)&&cells.length<=64&&cells.every(strokes=>strokes===undefined||(Array.isArray(strokes)&&strokes.length<=50&&strokes.every(stroke=>Array.isArray(stroke)&&stroke.length<=1501&&stroke.every(p=>p&&['x','y','p','t'].every(key=>Number.isFinite(p[key]))&&p.x>=0&&p.x<=1&&p.y>=0&&p.y<=1&&p.p>=0&&p.p<=1)))))) as Record<string,Stroke[][]>;}

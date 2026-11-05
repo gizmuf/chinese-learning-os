@@ -1,8 +1,20 @@
 "use client";
+import HskBadge from './hsk-badge';
+import {writingPracticeHref,writingPracticeRoute,type WritingOrigin} from './writing-navigation';
+
+import {usePracticeBook} from './use-practice-book';
+import LibraryNotebook from './library-notebook';
+import LibraryScrollControls from './library-scroll-controls';
+import LanguagePractice from './language-practice';
+import {isLanguageSkill,languageSkills,languagePracticeHref,languagePracticeRoute} from './pinyin-practice-model';
 import ReferenceLessonLinks from './reference-lesson-links';
 import {referenceLessonHref} from './reference-lessons-data';
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
+  BookmarkPlus,
+  BookmarkCheck,
+  LayoutGrid,
+  Rows3,
   ArrowRight,
   ArrowUpRight,
   BookOpen,
@@ -70,16 +82,19 @@ import IntensiveCourse from "./intensive-course";
 import {useHanziStyle,HanziDisplayControls,type HanziStyle} from './hanzi-style';
 import {buildReviewQueue,allReviewLevel,allReviewHref} from './review-queue';
 import './recognition-review.css';
-import StudyLookupProvider, {useDictionaryAssistance,StudyText} from "./study-lookup";
+import StudyLookupProvider, {useDictionaryAssistance,StudyText,StudyConfusionsButton} from "./study-lookup";
 import PdfExport from "./pdf-export";
 import { LanguagePicker, useI18n } from "./i18n";
 import { localizeItem } from "./translate";
 import { progressSchema } from "./event-schema";
-import { speak, setSpeechRate, stopAudio } from "./audio";
+import { playRecording, speak, setSpeechRate, stopAudio } from "./audio";
 import { authenticatedFetch } from "./auth-client";
 import type { StudyUser as User } from "./auth-shell";
 const HSK3Grammar = lazy(() => import("./hsk3-grammar"));
 const Atlas = lazy(() => import("./atlas"));
+import {sceneLab,sceneLabHref,type SceneLab} from './scene-lab-model';
+import {LabNavIcon} from './scene-lab';
+const SceneLabView=lazy(()=>import('./scene-lab'));
 const StudyStudio = lazy(() => import("./study-studio"));
 const MyDayLesson = lazy(() => import("./my-day-lesson"));
 const ShuoshuoCompanion = lazy(() => import("./shuoshuo-companion"));
@@ -87,7 +102,7 @@ const ShuoshuoLesson = lazy(() => import("./shuoshuo-lesson"));
 const PrivateLessons = lazy(() => import("./private-lessons"));
 const TodayCourseReviews = lazy(() => import("./today-course-reviews"));
 const TodayRecognition = lazy(() => import("./today-recognition"));
-type View = "shuoshuo-lesson" | "private-lessons" | "shuoshuo" | "myday" | "studio" | "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
+type View = "labs" | "shuoshuo-lesson" | "private-lessons" | "shuoshuo" | "myday" | "studio" | "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
 export default function StudyApp({
   user,
   onSignIn,
@@ -112,20 +127,30 @@ export default function StudyApp({
   const [myDayOrigin,setMyDayOrigin] = useState<View>("lessons");
   const [studioVisited,setStudioVisited] = useState(false);
   const [studioMenu,setStudioMenu] = useState(false);
+  const [lab,setLab]=useState<SceneLab>("room");
   const [atlasReturn, setAtlasReturn] = useState<{url:string;scroll:number}|null>(null);
-  useEffect(() => { if (new URLSearchParams(window.location.search).get("lesson") === "shuoshuo-morning") setView("shuoshuo-lesson"); else if (new URLSearchParams(window.location.search).get("private") === "1") setView("private-lessons"); else if (new URLSearchParams(window.location.search).get("companion") === "shuoshuo") setView("shuoshuo"); else if (new URLSearchParams(window.location.search).get("rehearsal") === "my-day-01-v2") setView("myday"); else if (new URLSearchParams(window.location.search).get("study") === "studio") {setView("studio");setStudioVisited(true);} else if (new URLSearchParams(window.location.search).get("grammar") === "hsk3") setView("grammar"); else if (new URLSearchParams(window.location.search).get("atlas") === "1") setView("atlas"); else if (new URLSearchParams(window.location.search).get("course") === "intensive") setView("course"); }, []);
+  useEffect(() => { if (new URLSearchParams(window.location.search).get("view")==="labs") {setView("labs");setLab(sceneLab(new URLSearchParams(window.location.search).get("lab")));} else if (new URLSearchParams(window.location.search).get("lesson") === "shuoshuo-morning") setView("shuoshuo-lesson"); else if (new URLSearchParams(window.location.search).get("private") === "1") setView("private-lessons"); else if (new URLSearchParams(window.location.search).get("companion") === "shuoshuo") setView("shuoshuo"); else if (["my-day-01-v2","voice-live-2026-11-03","my-day-full-2026-11-03"].includes(new URLSearchParams(window.location.search).get("rehearsal")??"")) setView("myday"); else if (new URLSearchParams(window.location.search).get("study") === "studio") {setView("studio");setStudioVisited(true);} else if (new URLSearchParams(window.location.search).get("grammar") === "hsk3") setView("grammar"); else if (new URLSearchParams(window.location.search).get("atlas") === "1") setView("atlas"); else if (new URLSearchParams(window.location.search).get("course") === "intensive") setView("course"); }, []);
   const [notebookEvents, setEvents] = useState<LearningEvent[]>([]);
   const [sync, setSync] = useState(t("Loading your notebook…"));
   const [db, setDb] = useState<IDBDatabase | null>(null);
+  const [storageError, setStorageError] = useState(false);
+  const [storageAttempt, setStorageAttempt] = useState(0);
+  const retryStorage = () => setStorageAttempt(value => value + 1);
   const syncLock = useRef(false);
   const [selectedRecord, setSelected] = useState(items[0]);
   const selected = items.find(item => item.id === selectedRecord.id) ?? items[0];
   const [skill, setSkill] = useState<Skill>("writing");
+  const [languageRun,setLanguageRun]=useState<string|undefined>(undefined);
   const [mode, setMode] = useState<Mode>("trace");
   const [writingLayout, setWritingLayout] = useState<"studio" | "notebook">("studio");
+  useEffect(()=>{if(view==='practice'&&isLanguageSkill(skill))window.history.replaceState(null,'',languagePracticeHref(skill,selected.id,languageRun));},[view,skill,selected.id,languageRun]);
   const [search, setSearch] = useState("");
   const [lesson, setLesson] = useState("all");
+  const [libraryLayout,setLibraryLayout]=useState<'cards'|'notebook'>('cards'),[practiceSelection,setPracticeSelection]=useState(false);
   const [level, setLevel] = useState<StudyLevel>("hsk1");
+  const [writingOrigin,setWritingOrigin]=useState<WritingOrigin|undefined>();
+  const lastWriting=useRef<{item:Item;mode:Mode;layout:'studio'|'notebook';origin?:WritingOrigin}|null>(null);
+
   const studyItems = useMemo(
     () => items.filter((item) => isInLevel(item, level)),
     [level, items],
@@ -177,17 +202,25 @@ export default function StudyApp({
     setToast(message);
     window.setTimeout(() => setToast(""), 4500);
   }, []);
+  const practiceBook=usePracticeBook(db?.name==='chinese-os-v1-'+(user?.id??'guest')?db:null,user?.id??null,notify);
+  const chosenItems=practiceBook.entries.map(v=>{const known=items.find(i=>i.hanzi===v.text);return known??{id:'practice-choice:'+v.text,lesson:'selected',hanzi:v.text,pinyin:v.pinyin,english:v.meaning,sentence:v.contextual?.text??'',sentencePinyin:v.contextual?.pinyin??'',translation:v.contextual?.meaning??''} satisfies Item;});
+  const libraryLessonLabel={en:'Lessons',fr:'Leçons',ru:'Уроки',tr:'Dersler'}[locale];
+  const libraryCopy={en:{selected:'Selected for practice',add:'Add to practice book',remove:'Remove from practice book',cards:'Cards',notebook:'Cards with notebook',empty:'Add words and characters using the bookmark-plus icon in any definition.',ready:'Your choices are saved on this device.'},fr:{selected:'Choisis pour pratiquer',add:'Ajouter au cahier',remove:'Retirer du cahier',cards:'Cartes',notebook:'Cartes avec cahier',empty:'Ajoutez des mots et caractères avec le signet + dans une définition.',ready:'Votre sélection est enregistrée sur cet appareil.'},ru:{selected:'Выбрано для практики',add:'Добавить в тетрадь',remove:'Убрать из тетради',cards:'Карточки',notebook:'Карточки с тетрадью',empty:'Добавляйте слова и знаки кнопкой закладки с плюсом в словаре.',ready:'Ваш выбор сохранён на этом устройстве.'},tr:{selected:'Pratik için seçilenler',add:'Deftere ekle',remove:'Defterden çıkar',cards:'Kartlar',notebook:'Defterli kartlar',empty:'Sözlükteki artılı yer imiyle kelime ve karakter ekle.',ready:'Seçimlerin bu cihazda kaydedilir.'}}[locale];
+  function libraryRecording(item:Item,kind:'word'|'sentence'){const chosen=practiceBook.entries.find(v=>v.text===item.hanzi);return kind==='word'?chosen?.audio&&!chosen.audio.context&&chosen.audio.text===item.hanzi?chosen.audio.source:undefined:chosen?.contextual?.audio?.text===item.sentence?chosen.contextual.audio.source:undefined;}
+  function listenLibrary(item:Item,kind:'word'|'sentence'){const source=libraryRecording(item,kind);if(source)playRecording(source,notify);else speak(kind==='word'?item.hanzi:item.sentence,notify,item);}
+  function libraryRoute(layout=libraryLayout,selected=practiceSelection){const p=new URLSearchParams({study:'library',layout,level});if(selected)p.set('set','selected');window.history.replaceState(null,'','/?'+p);}
   useEffect(() => {
     let alive = true;
+    let opened: IDBDatabase | undefined;
+    setDb(null); setIsReady(false); setStorageError(false); setSync(t("Loading your notebook…"));
     openStore(user?.id ?? "guest")
       .then(async (store) => {
+        opened = store;
         if (!alive) {
           store.close();
           return;
         }
-        setDb(store);
-        setEvents(await allEvents(store));
-        setSync(user ? t("Ready to sync") : t("Guest · saved on this device"));
+        const history = await allEvents(store);
         const prefs = await readDraft<{
           penOnly: boolean;
           hanziStyle?: HanziStyle;
@@ -197,6 +230,7 @@ export default function StudyApp({
           left: boolean;
           minutes: number;
         }>(store, "settings");
+        if (!alive) return;
         hanziAppearance.setStyle(prefs?.hanziStyle==='print'?'print':'strokes');
         hanziAppearance.setHighlight(prefs?.highlightComponents??true);
         if (prefs) {
@@ -210,8 +244,15 @@ export default function StudyApp({
           }
         }
         const recognition = await readDraft(store, recognitionDraftKey);
-        const requestedAll=allReviewLevel(window.location.search);
-        if(alive&&requestedAll){
+        if (!alive) return;
+        setDb(store); setEvents(history);
+        setSync(user ? t("Ready to sync") : t("Guest · saved on this device"));
+        const requestedAll=allReviewLevel(window.location.search),languageRoute=languagePracticeRoute(window.location.search,sourceItems);
+        const writingRoute=writingPracticeRoute(window.location.search,sourceItems);
+        if(alive&&writingRoute){const item=sourceItems.find(v=>v.id===writingRoute.itemId)!;setSelected(item);setLevel(item.hskLevel?('hsk'+item.hskLevel) as StudyLevel:'bonus');setMode(writingRoute.mode);setWritingLayout(writingRoute.layout);setWritingOrigin(writingRoute.origin);setSkill('writing');setSession(null);setFinished(false);setView('practice');}
+        else if(alive&&new URLSearchParams(window.location.search).get('study')==='library'){const p=new URLSearchParams(window.location.search);setView('lessons');setSession(null);setLibraryLayout(p.get('layout')==='notebook'?'notebook':'cards');setPracticeSelection(p.get('set')==='selected');if(['hsk1','hsk2','hsk3','bonus'].includes(p.get('level')??''))setLevel(p.get('level') as StudyLevel);}
+        else if(alive&&languageRoute){const target=sourceItems.find(item=>item.id===languageRoute.itemId)!;setLevel(target.hskLevel?('hsk'+target.hskLevel) as StudyLevel:'bonus');setSelected(target);setSkill(languageRoute.skill);setLanguageRun(languageRoute.runId);setMode('recall');setSession(null);setView('practice');
+        }else if(alive&&requestedAll){
           const queue=items.filter(item=>isInLevel(item,requestedAll));
           const previous=validRecognitionDraft(recognition)&&recognition.practice&&JSON.stringify(recognition.itemIds)===JSON.stringify(queue.map(i=>i.id))?recognition:null;
           const index=Math.min(previous?.index??0,queue.length-1);
@@ -227,13 +268,17 @@ export default function StudyApp({
         setIsReady(true);
       })
       .catch(() => {
+        opened?.close();
+        if (!alive) return;
+        setStorageError(true);
         setSync(t("Device storage unavailable"));
         notify(t("Enable browser storage to save your practice."));
       });
     return () => {
       alive = false;
+      opened?.close();
     };
-  }, [user?.id, notify]);
+  }, [user?.id, notify, storageAttempt]);
   useEffect(() => {
     if (db && isReady)
       saveDraft(db, "settings", {
@@ -356,10 +401,13 @@ export default function StudyApp({
     setSync(user ? t("Saved here · syncing…") : t("Guest · saved on this device"));
     void synchronize();
   };
-  function openPractice(item: Item, practiceMode: Mode = "trace") {
+  function openPractice(item: Item, practiceMode?: Mode) {
+    practiceMode??=hanziAppearance.style==='print'?'copy':'trace';
     stopAudio();
     setAtlasReturn(null);
-    window.history.replaceState(null, "", window.location.pathname);
+    const origin:WritingOrigin|undefined=view==='practice'?writingOrigin:{view:view as WritingOrigin['view'],url:window.location.pathname+window.location.search,scroll:window.scrollY,search,lesson,level};
+    setWritingOrigin(origin);
+    if(view==='practice')window.history.replaceState(history.state,'',writingPracticeHref(item.id,practiceMode,writingLayout,origin));else window.history.pushState({chineseOSWriting:true},'',writingPracticeHref(item.id,practiceMode,writingLayout,origin));
     setSession(null);
     setFinished(false);
     setSelected(item);
@@ -368,6 +416,9 @@ export default function StudyApp({
     setView("practice");
     window.scrollTo({ top: 0, behavior: "instant" });
   }
+  useEffect(()=>{if(!isReady||view!=='practice'||skill!=='writing'||session)return;lastWriting.current={item:selected,mode,layout:writingLayout,origin:writingOrigin};window.history.replaceState(history.state,'',writingPracticeHref(selected.id,mode,writingLayout,writingOrigin));},[isReady,view,skill,selected.id,mode,writingLayout,writingOrigin,session]);
+  function returnFromWriting(){if(history.state?.chineseOSWriting){history.back();return;}if(!writingOrigin){changeView('lessons');return;}stopAudio();setSession(null);setFinished(false);setView(writingOrigin.view);setSearch(writingOrigin.search??'');setLesson(writingOrigin.lesson??'all');if(['hsk1','hsk2','hsk3','bonus'].includes(writingOrigin.level??''))setLevel(writingOrigin.level as StudyLevel);window.history.replaceState(null,'',writingOrigin.url);const y=writingOrigin.scroll;requestAnimationFrame(()=>requestAnimationFrame(()=>window.scrollTo({top:y,behavior:'instant'})));}
+  useEffect(()=>{const back=()=>{const route=writingPracticeRoute(window.location.search,sourceItems);if(route){const item=items.find(i=>i.id===route.itemId);if(item){setSelected(item);setMode(route.mode);setWritingLayout(route.layout);setWritingOrigin(route.origin);setSession(null);setSkill('writing');setView('practice');}}else if(view==='practice'&&!session&&writingOrigin)returnFromWriting();};addEventListener('popstate',back);return()=>removeEventListener('popstate',back);},[view,session,writingOrigin,items]);
   function startReview(s: Skill, extra: boolean|'all' = false) {
     const queue=buildReviewQueue(events,s,studyItems,minutes,extra==='all'?'all':extra?'extra':'scheduled');
     if (!queue.length) {
@@ -378,6 +429,7 @@ export default function StudyApp({
     }
     if (s === "meaning") {setRecognitionRun(crypto.randomUUID());setRecognitionPractice(!!extra);}
     if(extra==='all'){const href=allReviewHref(level);if(href)window.history.replaceState(null,'',window.location.pathname+href);}
+    if(isLanguageSkill(s))setLanguageRun(crypto.randomUUID());
     setSkill(s);
     setMode("recall");
     setSession(queue);
@@ -405,8 +457,8 @@ export default function StudyApp({
       );
     }
   }
-  const filtered = studyItems.filter((item) =>
-    matchesItem(item, search, lesson),
+  const filtered = (practiceSelection?chosenItems:studyItems).filter((item) =>
+    matchesItem(item, search, practiceSelection?"all":lesson),
   );
   function returnToAtlas() {
     if (!atlasReturn) return;
@@ -427,15 +479,13 @@ export default function StudyApp({
   function openMyDay(){setMyDayOrigin(view==="studio"?"studio":"lessons");changeView("myday");}
   function changeView(v: View) {
     setStudioMenu(false);
+    if(v==='practice'){const previous=lastWriting.current;if(previous)setWritingLayout(previous.layout);openPractice(previous?.item??selected,previous?.mode??mode);if(previous)setWritingOrigin(previous.origin);return;}
     if(v==="atlas"&&atlasReturn){returnToAtlas();return;}
     setAtlasReturn(null);
     if(v==="studio")setStudioVisited(true);
-    window.history.replaceState(null, "", window.location.pathname + (v === "shuoshuo-lesson" ? "?lesson=shuoshuo-morning" : v === "private-lessons" ? "?private=1" : v === "shuoshuo" ? "?companion=shuoshuo" : v === "myday" ? "?rehearsal=my-day-01-v2" : v === "studio" ? "?study=studio" : v === "grammar" ? "?grammar=hsk3" : v === "atlas" ? "?atlas=1" : v === "course" ? "?course=intensive" : ""));
+    window.history.replaceState(null, "", window.location.pathname + (v === "labs" ? sceneLabHref(lab).slice(1) : v === "shuoshuo-lesson" ? "?lesson=shuoshuo-morning" : v === "private-lessons" ? "?private=1" : v === "shuoshuo" ? "?companion=shuoshuo" : v === "myday" ? "?rehearsal=my-day-01-v2" : v === "studio" ? "?study=studio" : v === "grammar" ? "?grammar=hsk3" : v === "atlas" ? "?atlas=1" : v === "course" ? "?course=intensive" : v === "lessons" ? "?study=library&layout="+libraryLayout+(practiceSelection?"&set=selected":"")+"&level="+level : ""));
     stopAudio();
-    if (v === "practice") {
-      setSkill("writing");
-      setMode("trace");
-    }
+
     setView(v);
     window.scrollTo({ top: 0, behavior: "instant" });
     setSession(null);
@@ -479,13 +529,14 @@ export default function StudyApp({
           {(
             [
               { id: "today", title: t("Today"), icon: Home },
-              { id: "studio", title: "StudyStudio", icon: Sparkles },
               { id: "lessons", title: t("My lessons"), icon: BookOpen },
               { id: "course", title: t("Course"), icon: GraduationCap },
               { id: "atlas", title: t("Cloud Atlas"), icon: Network },
+              { id: "studio", title: "StudyStudio", icon: Sparkles },
               { id: "practice", title: t("Writing studio"), icon: PenLine },
               { id: "reviews", title: t("Review"), icon: RotateCcw },
               { id: "progress", title: t("My progress"), icon: TrendingUp },
+              { id: "labs", title: "3D Lab", icon: LabNavIcon },
             ] as const
           ).map((n) => (
             <button
@@ -539,12 +590,12 @@ export default function StudyApp({
           )}
         </div>
       </aside>
-      <WritingPracticeProvider value={{db:db?.name === "chinese-os-v1-" + (user?.id??"guest") ? db : null,record,notify,penOnly,setPenOnly}}><StudyLookupProvider key={user?.id??"guest"} owner={user?.id??null} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} notify={notify} penOnly={penOnly} setPenOnly={setPenOnly}><main className="main">
+      <WritingPracticeProvider value={{db:db?.name === "chinese-os-v1-" + (user?.id??"guest") ? db : null,record,notify,penOnly,setPenOnly}}><StudyLookupProvider practiceBook={practiceBook} key={user?.id??"guest"} owner={user?.id??null} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} notify={notify} penOnly={penOnly} setPenOnly={setPenOnly}><main className="main">
         <header className="topbar">
           <span>
             <span className="breadcrumb">{t("My study space")}</span>
             <ChevronRight size={13} />
-            {view === "shuoshuo-lesson" ? "A morning with Shuoshuo" : view === "private-lessons" ? "Private lessons" : view === "shuoshuo" ? "Shuoshuo · Vocabulary companion" : view === "myday" ? "My day · Day 01 V2" : view === "studio" ? "StudyStudio" : view === "grammar" ? t("HSK3 grammar") : view === "atlas" ? t("Cloud Atlas") : view === "course" ? t("Intensive course") : view === "practice"
+            {view === "labs" ? "3D Lab" : view === "shuoshuo-lesson" ? "A morning with Shuoshuo" : view === "private-lessons" ? "Private lessons" : view === "shuoshuo" ? "Shuoshuo · Vocabulary companion" : view === "myday" ? "My Day · Speaking" : view === "studio" ? "StudyStudio" : view === "grammar" ? t("HSK3 grammar") : view === "atlas" ? t("Cloud Atlas") : view === "course" ? t("Intensive course") : view === "practice"
               ? skill==='meaning'?t('Flashcards'):t("Writing studio")
               : view === "today"
                 ? t("Today")
@@ -556,7 +607,7 @@ export default function StudyApp({
           </span>
           <div className="topbar-actions">
             <div className="topbar-language-stack"><LanguagePicker /><HanziDisplayControls compact/></div>
-            {view !== "shuoshuo-lesson" && view !== "private-lessons" && view !== "shuoshuo" && view !== "myday" && view !== "studio" && view !== "grammar" && view !== "course" && view !== "atlas" && <select
+            {view !== "labs" && view !== "shuoshuo-lesson" && view !== "private-lessons" && view !== "shuoshuo" && view !== "myday" && view !== "studio" && view !== "grammar" && view !== "course" && view !== "atlas" && <select
               className="study-level"
               aria-label={t("Study level")}
               value={level}
@@ -601,12 +652,19 @@ export default function StudyApp({
           </div>
         </header>
         <div className="page-content">
-          {view==="shuoshuo-lesson"&&<Suspense fallback={<p role="status">Opening your lesson…</p>}><ShuoshuoLesson key={user?.id??"guest"} owner={user?.id??null} db={db} record={record} notify={notify} onBack={()=>changeView(shuoshuoLessonOrigin)}/></Suspense>}
+          {storageError && <section className="panel" role="alert">
+            <p>{t("Device storage unavailable")}</p>
+            <p>{t("Close other Chinese OS tabs and check that browser storage is enabled. Your saved progress is kept.")}</p>
+            <button className="primary" onClick={retryStorage}>{t("Retry loading notebook")}</button>
+          </section>}
+          {view==="labs"&&<Suspense fallback={<p role="status">Opening 3D Lab…</p>}><SceneLabView selected={lab} onSelect={next=>{stopAudio();setLab(next);window.history.replaceState(null,"",window.location.pathname+sceneLabHref(next).slice(1));}}/></Suspense>}
+          {view==="shuoshuo-lesson"&&<Suspense fallback={<p role="status">Opening your lesson…</p>}><ShuoshuoLesson slowAudio={slowAudio} onSlowAudio={setSlowAudio} key={user?.id??"guest"} owner={user?.id??null} db={db} record={record} notify={notify} onBack={()=>changeView(shuoshuoLessonOrigin)}/></Suspense>}
           {view==="private-lessons"&&<Suspense fallback={<p role="status">Opening local library…</p>}><PrivateLessons key={user?.id??"guest"} owner={user?.id??null} db={db} onBack={()=>changeView("lessons")} onSignIn={onSignIn}/></Suspense>}
           {view==="shuoshuo"&&<Suspense fallback={<p role="status">Opening vocabulary companion…</p>}><ShuoshuoCompanion key={user?.id??"guest"} owner={user?.id??null} db={db} notify={notify} onBack={()=>changeView(companionOrigin)}/></Suspense>}
-          {view==="myday"&&<Suspense fallback={<p role="status">Opening your lesson…</p>}><MyDayLesson key={user?.id??"guest"} owner={user?.id??"guest"} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} record={record} notify={notify} onBack={()=>changeView(myDayOrigin)}/></Suspense>}
+          {view==="myday"&&<Suspense fallback={<p role="status">Opening your lesson…</p>}><MyDayLesson slowAudio={slowAudio} onSlowAudio={setSlowAudio} key={user?.id??"guest"} owner={user?.id??"guest"} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} record={record} notify={notify} onBack={()=>changeView(myDayOrigin)}/></Suspense>}
           {studioVisited&&<div hidden={view!=="studio"}><Suspense fallback={<p role="status">Opening StudyStudio…</p>}><StudyStudio key={user?.id??"guest"} owner={user?.id??null} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} record={record} onExit={()=>changeView("today")} onMyDay={openMyDay} onCompanion={openCompanion} onShuoshuoLesson={openShuoshuoLesson} menuOpen={studioMenu} onMenu={()=>setStudioMenu(v=>!v)}/></Suspense></div>}
           {(view === "atlas" || atlasReturn) && <div hidden={view!=="atlas"}><Suspense fallback={<p role="status">{t("Loading your notebook…")}</p>}><Atlas owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} onWord={openAtlasWord}/></Suspense></div>}
+          {view==='practice'&&!session&&!atlasReturn&&<button className="secondary atlas-return-button" onClick={returnFromWriting}><ChevronLeft size={16}/>{({en:'Back to learning material',fr:'Retour au cours',ru:'Назад к материалу',tr:'Ders materyaline dön'})[locale]}</button>}
           {view==="practice" && atlasReturn && <button className="secondary atlas-return-button" onClick={returnToAtlas}><ArrowRight size={16} style={{transform:"rotate(180deg)"}}/>{t("Back to Cloud Atlas")}</button>}
           {view === "grammar" && <Suspense fallback={<p>{t("Loading your notebook…")}</p>}><HSK3Grammar key={user?.id ?? "guest"} owner={user?.id ?? null} db={db?.name === "chinese-os-v1-"+(user?.id ?? "guest") ? db : null}/></Suspense>}
           {view === "course" && <IntensiveCourse onReferenceLibraryBack={()=>changeView("lessons")} owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} recordHSK={record} notify={notify} onHSKRecall={item => { setLevel(item.hskLevel === 3 ? "hsk3" : item.hskLevel === 2 ? "hsk2" : item.hskLevel === 1 ? "hsk1" : "bonus"); openPractice(item, "recall"); }} />}
@@ -846,7 +904,7 @@ export default function StudyApp({
           )}
           {view === "lessons" && (
             <>
-              <div className="page-heading">
+              <div id="library-start" className="page-heading" tabIndex={-1}>
                 <div>
                   <p className="eyebrow">{t("WORDS FOR YOUR REAL LIFE")}</p>
                   {level === "hsk3" && <button className="grammar-back" onClick={() => changeView("grammar")}>{t("HSK3 grammar")} →</button>}
@@ -854,17 +912,19 @@ export default function StudyApp({
                     {t("Your learning library")}<span className="orange">.</span>
                   </h1>
                   <p>
-                    {t(levelNames[level])} · {studyItems.length} {t("words & phrases.")}{" "}
-                    {level === "bonus"
-                      ? t("Useful everyday additions.")
-                      : t("HSK 2025 syllabus.")}
+                    {practiceSelection?libraryCopy.selected:t(levelNames[level])} · {practiceSelection?chosenItems.length:studyItems.length} {t("words & phrases.")}{" "}
+                    {!practiceSelection&&(level === "bonus"?t("Useful everyday additions."):t("HSK 2025 syllabus."))}
                   </p>
                 </div>
               </div>
-              <article className="personal-lesson-entry panel"><div><p className="eyebrow">VIDEO LESSON · SENTENCE REHEARSAL</p><h2>A morning with Shuoshuo · 我的早晨</h2><p>42 reading groups · 65 source segments · 40 vocabulary references · writing practice</p></div><button className="primary" onClick={openShuoshuoLesson}>Open lesson<ArrowRight size={16}/></button></article>
-              <article className="personal-lesson-entry panel"><div><p className="eyebrow">PERSONAL LESSON · SPEAKING REHEARSAL</p><h2>我的一天 · My day</h2><p>Day 01 · Version 2 · 26 sentences · Hanzi, pinyin & English</p></div><button className="primary" onClick={openMyDay}>Open My day lesson<ArrowRight size={16}/></button></article>
-              <ReferenceLessonLinks onOpen={id=>{stopAudio();window.history.replaceState(null,'',referenceLessonHref(id)+'&from=lessons');setView('course');window.scrollTo({top:0,behavior:'instant'});}}/>
-              <button className="secondary pdf-library-button" onClick={() => setPdfSelection(filtered.map(item => item.id))}><Download size={16} /> {t("Print notebook PDF")}</button>
+              <nav className="library-lesson-links" aria-label={libraryLessonLabel}>
+                <span><BookOpen size={15}/>{libraryLessonLabel}</span>
+                <button type="button" onClick={openShuoshuoLesson}>Shuoshuo · Morning</button>
+                <button type="button" aria-label={({en:'Open My day lesson',fr:'Ouvrir Ma journée',ru:'Открыть урок «Мой день»',tr:'Günüm dersini aç'}[locale])} onClick={openMyDay}>{({en:'My day',fr:'Ma journée',ru:'Мой день',tr:'Günüm'}[locale])}</button>
+                <button type="button" className="library-practice-shortcut" aria-pressed={practiceSelection} onClick={()=>{setPracticeSelection(true);libraryRoute(libraryLayout,true);}}><BookmarkCheck size={15}/>{libraryCopy.selected} · {practiceBook.entries.length}</button>
+                <ReferenceLessonLinks compact onOpen={id=>{stopAudio();window.history.replaceState(null,'',referenceLessonHref(id)+'&from=lessons');setView('course');window.scrollTo({top:0,behavior:'instant'});}}/>
+              </nav>
+              <button hidden={practiceSelection} className="secondary pdf-library-button" onClick={() => setPdfSelection(filtered.map(item => item.id))}><Download size={16} /> {t("Print notebook PDF")}</button>
               <div className="library-controls">
                 <label className="search-field">
                   <Search size={18} />
@@ -876,9 +936,10 @@ export default function StudyApp({
                 </label>
                 <select
                   aria-label={t("Choose lesson")}
-                  value={lesson}
-                  onChange={(e) => setLesson(e.target.value)}
+                  value={practiceSelection?'selected':lesson}
+                  onChange={(e) => {const selected=e.target.value==='selected';setPracticeSelection(selected);if(!selected)setLesson(e.target.value);libraryRoute(libraryLayout,selected);}}
                 >
+                  <option value="selected">{libraryCopy.selected} · {practiceBook.entries.length}</option>
                   <option value="all">
                     {t("All")} {t(levelNames[level])} {t("words ·")} {studyItems.length}
                   </option>
@@ -889,17 +950,14 @@ export default function StudyApp({
                   ))}
                 </select>
               </div>
-              <p className="library-count" role="status">
-                {filtered.length} {t(filtered.length === 1 ? "word" : "words")} ·{" "}
-                {t(levelNames[level])}
-              </p>
-              <div className="word-grid">
+              <StudyConfusionsButton/>
+              <div className="library-results-bar"><p className="library-count" role="status">{filtered.length} {t(filtered.length===1?'word':'words')} · {practiceSelection?libraryCopy.selected:t(levelNames[level])}</p><div className="library-view-switch" role="group" aria-label="Library view"><button type="button" title={libraryCopy.cards} aria-label={libraryCopy.cards} aria-pressed={libraryLayout==='cards'} onClick={()=>{setLibraryLayout('cards');libraryRoute('cards');}}><LayoutGrid size={17}/></button><button type="button" title={libraryCopy.notebook} aria-label={libraryCopy.notebook} aria-pressed={libraryLayout==='notebook'} onClick={()=>{setLibraryLayout('notebook');libraryRoute('notebook');}}><Rows3 size={17}/></button></div><LibraryScrollControls/></div>
+              {practiceSelection&&<p className="library-selection-note">{libraryCopy.ready}</p>}
+              <div className={'word-grid'+(libraryLayout==='notebook'?' is-notebook':'')}>
                 {filtered.map((i) => (
-                  <article className="word-card panel" key={i.id}>
-                    <span className="eyebrow">
-                      {i.hskLevel ? `HSK${i.hskLevel}` : t("EXTRA")} ·{" "}
-                      {lessons.find((l) => l.id === i.lesson)?.title}
-                    </span>
+                  <div className="library-word-row" key={i.id}><article className="word-card panel" data-study-sentence={i.sentence} data-study-pinyin={i.sentencePinyin} data-study-meaning={i.translation}>
+                    <span className="eyebrow library-word-level"><HskBadge text={i.hanzi}/></span>
+                    <button type="button" className="icon-button library-add-choice" disabled={!practiceBook.ready||practiceBook.busy} aria-pressed={practiceBook.entries.some(v=>v.text===i.hanzi)} aria-label={practiceBook.entries.some(v=>v.text===i.hanzi)?libraryCopy.remove:libraryCopy.add} onClick={()=>void practiceBook.toggle({text:i.hanzi,pinyin:i.pinyin,meaning:i.english,contextual:i.sentence?{text:i.sentence,pinyin:i.sentencePinyin,meaning:i.translation}:undefined})}>{practiceBook.entries.some(v=>v.text===i.hanzi)?<BookmarkCheck size={18}/>:<BookmarkPlus size={18}/>}</button>
                     <div className="word-heading">
                       <div>
                         <span className="hanzi"><StudyText text={i.hanzi} whole/></span>
@@ -908,36 +966,37 @@ export default function StudyApp({
                       <button
                         className="icon-button"
                         aria-label={t("Listen to") + " " + i.pinyin}
-                        onClick={() => speak(i.hanzi, notify, i)}
+                        disabled={!sourceItems.some(v=>v.id===i.id)&&!libraryRecording(i,'word')} onClick={() => listenLibrary(i,'word')}
                       >
                         <Volume2 size={20} />
                       </button>
                     </div>
                     <h3>{i.english}</h3>
-                    <div className="sentence">
+                    <div className="sentence" hidden={!i.sentence}>
                       <span><StudyText text={i.sentence}/></span>
                       <span className="pinyin">{i.sentencePinyin}</span>
                       <small>{i.translation}</small>
                       <button
                         className="text-button"
                         aria-label={t("Listen to example:") + " " + i.pinyin}
-                        onClick={() => speak(i.sentence, notify, i)}
+                        disabled={!sourceItems.some(v=>v.id===i.id)&&!libraryRecording(i,'sentence')} onClick={() => listenLibrary(i,'sentence')}
                       >
                         <Volume2 size={14} /> {t("Listen to example")}</button>
                     </div>
                     <button
                       className="text-button"
-                      onClick={() => openPractice(i)}
+                      onClick={() => sourceItems.some(v=>v.id===i.id)?openPractice(i):setRecognitionWriting(i)}
                     >
                       {t("Practice writing")}<ArrowRight size={16} />
                     </button>
-                  </article>
+                  </article>{libraryLayout==='notebook'&&<LibraryNotebook key={(user?.id??'guest')+':'+i.id} text={i.hanzi} db={db?.name==='chinese-os-v1-'+(user?.id??'guest')?db:null}/>}</div>
                 ))}
               </div>
               {!filtered.length && (
                 <div className="empty-state">
-                  {t("No words found. Try another spelling or lesson.")}</div>
+                  {practiceSelection?libraryCopy.empty:t("No words found. Try another spelling or lesson.")}</div>
               )}
+              <div id="library-end" className="library-boundary" tabIndex={-1}/>
             </>
           )}
           {view === "reviews" && (
@@ -965,9 +1024,9 @@ export default function StudyApp({
                 ))}
               </div>
               <div className="review-grid">
-                {(["meaning", "listening", "writing"] as Skill[]).map(
+                {(["meaning", "listening", "writing", ...languageSkills] as Skill[]).map(
                   (s, index) => {
-                    const Icon = [BookOpen, Headphones, PenLine][index];
+                    const Icon = [BookOpen, Headphones, PenLine][index%3];
                     const count = Object.entries(cards).filter(
                       ([k, c]) =>
                         k.endsWith(":" + s) &&
@@ -980,7 +1039,7 @@ export default function StudyApp({
                       <section className="panel review-option" key={s}>
                         <span
                           className={
-                            "stat-icon " + ["sage", "peach", "yellow"][index]
+                            "stat-icon " + ["sage", "peach", "yellow"][index%3]
                           }
                         >
                           <Icon size={26} />
@@ -991,7 +1050,7 @@ export default function StudyApp({
                             ? t("See the word. Recall what it means.")
                             : s === "listening"
                               ? t("Listen carefully. Connect sound to meaning.")
-                              : t("An empty grid. A word from memory.")}
+                              : isLanguageSkill(s)?(s==='pinyin'?'Recall and write the reading with every tone.':s==='ime'?'Type Pinyin and select the matching Chinese characters.':'Read the Pinyin and recall the Chinese characters.'):t("An empty grid. A word from memory.")}
                         </p>
                         <strong>
                           {count}
@@ -1047,15 +1106,15 @@ export default function StudyApp({
                         : t("THE WRITING STUDIO")}
                     </p>
                     <h1>
-                      {session && skill !== "writing"
+                      {isLanguageSkill(skill)?skillNames[skill]:skill !== "writing"
                         ? skillNames[skill] + " · " + t("Practice")
-                        : t("One stroke at a time")}
+                        : hanziAppearance.style==='print'?t("Practice writing"):t("One stroke at a time")}
                       <span className="orange">.</span>
                     </h1>
                     <p>
-                      {session
+                      {isLanguageSkill(skill)?(skill==='pinyin'?'Recall the reading. Write every tone.':skill==='hanzi-from-pinyin'?'Read the Pinyin. Recall the matching characters.':'Type the reading. Choose the characters that fit.'):session
                         ? t("Take a breath. Recall before you reveal.")
-                        : t("Watch it. Trace it. Make it yours.")}
+                        : hanziAppearance.style==='print'?t("Look at the reference. Write in the empty grid."):t("Watch it. Trace it. Make it yours.")}
                     </p>
                   </div>
                   {!session && (
@@ -1066,22 +1125,24 @@ export default function StudyApp({
                         setSelected(items.find((i) => i.id === e.target.value)!)
                       }
                     >
+                      {!studyItems.some(i=>i.id===selected.id)&&<option value={selected.id}>{selected.hanzi+' · '+selected.pinyin+' · '+selected.english}</option>}
                       {studyItems.map((i) => (
                         <option key={i.id} value={i.id}>
-                          {i.hanzi} · {i.pinyin} · {i.english}
+                          {isLanguageSkill(skill)?i.english:i.hanzi+' · '+i.pinyin+' · '+i.english}
                         </option>
                       ))}
                     </select>
                   )}
                 </div>
+                {!session&&<div className="language-studio-tabs" role="group" aria-label="Writing and language practice"><button type="button" className={skill==='writing'?'primary':'secondary'} aria-pressed={skill==='writing'} onClick={()=>{setLanguageRun(undefined);setSkill('writing');}}>Hanzi writing</button>{languageSkills.map(value=><button type="button" key={value} className={skill===value?'primary':'secondary'} aria-pressed={skill===value} onClick={()=>{setLanguageRun(undefined);setSkill(value);}}>{skillNames[value]}</button>)}</div>}
                 {skill === "writing" && !session && (
                   <div className="notebook-layout-switch" role="group" aria-label={t("Writing layout")}>
-                    <button className={writingLayout === "studio" ? "selected" : ""} aria-pressed={writingLayout === "studio"} onClick={() => setWritingLayout("studio")}>{t("Single character")}</button>
+                    <button className={writingLayout === "studio" ? "selected" : ""} aria-pressed={writingLayout === "studio"} onClick={() => setWritingLayout("studio")}>{t("Writing studio")}</button>
                     <button className={writingLayout === "notebook" ? "selected" : ""} aria-pressed={writingLayout === "notebook"} onClick={() => setWritingLayout("notebook")}><BookOpen size={16} /> {t("Notebook · Zeszyt")}</button>
                     <button onClick={() => setPdfSelection([selected.id])}><Download size={16} /> {t("Print notebook PDF")}</button>
                   </div>
                 )}
-                {skill === "writing" && writingLayout === "notebook" && !session ? (
+                {isLanguageSkill(skill)?<LanguagePractice key={(user?.id??'guest')+':'+selected.id+':'+skill} item={selected} skill={skill} runId={languageRun} db={db?.name==='chinese-os-v1-'+(user?.id??'guest')?db:null} record={record} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} next={next}/>:skill === "writing" && writingLayout === "notebook" && !session ? (
                   <Notebook key={selected.id} item={selected} db={db} penOnly={penOnly} setPenOnly={setPenOnly} record={record} notify={notify} next={next}
                     onRecall={() => { setWritingLayout("studio"); setMode("recall"); }} />
                 ) : skill === "writing" ? (
@@ -1108,7 +1169,7 @@ export default function StudyApp({
                 ) : skill === "meaning" ? (
                   <RecognitionReview key={(user?.id ?? "guest") + ":" + recognitionRun}
                     db={db?.name === "chinese-os-v1-" + (user?.id ?? "guest") ? db : null}
-                    runId={recognitionRun} queue={(session ?? [selected]).map(i => sourceItems.find(source => source.id === i.id)!)}
+                    onRetryStorage={retryStorage} runId={recognitionRun} queue={(session ?? [selected]).map(i => sourceItems.find(source => source.id === i.id)!)}
                     record={record} notify={notify} practice={recognitionPractice} onWrite={setRecognitionWriting} onPosition={index => {
                       if (session) {setSessionIndex(index); if(session[index])setSelected(session[index]);}
                     }}/>
@@ -1184,7 +1245,7 @@ export default function StudyApp({
                               <small>{i.english}</small>
                             </td>
                             {(
-                              ["meaning", "listening", "writing"] as Skill[]
+                              ["meaning", "listening", "writing", ...languageSkills] as Skill[]
                             ).map((s) => {
                               const c = cards[i.id + ":" + s];
                               return (
@@ -1267,8 +1328,8 @@ export default function StudyApp({
           </footer>
         </div>
       <dialog ref={recognitionWriter} className="study-writing-dialog" aria-label={t("Practice writing")} onCancel={e=>{e.preventDefault();setRecognitionWriting(null);}} onClose={()=>setRecognitionWriting(null)}>
-        <header><h2>{t("Practice writing")}</h2><button className="secondary" onClick={()=>setRecognitionWriting(null)} aria-label={t("Back to recognition")}><X size={20}/></button></header>
-        {recognitionWriting&&<SharedWriting key={recognitionWriting.id} hanzi={recognitionWriting.hanzi} item={recognitionWriting} onBack={()=>setRecognitionWriting(null)}/>}
+        <header><h2>{t("Practice writing")}</h2><button className="secondary" onClick={()=>setRecognitionWriting(null)} aria-label={view==='lessons'?({en:'Back to library',fr:'Retour à la bibliothèque',ru:'Назад в библиотеку',tr:'Kitaplığa dön'}[locale]):t("Back to recognition")}><X size={20}/></button></header>
+        {recognitionWriting&&<SharedWriting key={recognitionWriting.id} hanzi={recognitionWriting.hanzi} item={recognitionWriting} audio={recognitionWriting.id.startsWith('practice-choice:')?{word:libraryRecording(recognitionWriting,'word'),sentence:libraryRecording(recognitionWriting,'sentence')}:undefined} onBack={()=>setRecognitionWriting(null)}/>}
       </dialog></main></StudyLookupProvider></WritingPracticeProvider>
       {pdfSelection && <PdfExport key={level} level={level} initialIds={pdfSelection} onClose={() => setPdfSelection(null)} />}
       {toast && (

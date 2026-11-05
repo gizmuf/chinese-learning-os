@@ -1,3 +1,4 @@
+import {recordingAssetPath} from './audio-source-helper.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {existsSync} from 'node:fs';
@@ -14,7 +15,7 @@ test('Punctuation and whitespace cannot resolve to a neighbouring Chinese word',
  assert.equal(m.lookupAtOffset('你好',0,d),'你好');assert.equal(m.lookupAtOffset('你好',1,d),'你好');
 });
 test('Shared dictionary recordings point to real assets, including all course word sources',()=>{
- const missing=[...d.values()].filter(e=>e.audio&&!existsSync('public'+decodeURIComponent(e.audio.source))).map(e=>[e.text,e.audio.source]);assert.deepEqual(missing,[]);
+ const missing=[...d.values()].filter(e=>e.audio&&!existsSync(recordingAssetPath(decodeURIComponent(e.audio.source)))).map(e=>[e.text,e.audio.source]);assert.deepEqual(missing,[]);
  for(const locale of ['en','fr','ru','tr']){const dictionary=m.appStudyDictionary(locale);for(const ch of ['门','出','国','请','既','臭']){assert.ok(dictionary.get(ch)?.pinyin);assert.ok(dictionary.get(ch)?.meaning);}}
 });
 const ui=await build({stdin:{contents:`import {createElement as h} from 'react';import {renderToStaticMarkup} from 'react-dom/server';import Provider,{StudyText,StudyLookupButton} from './app/study-lookup';const props={notify:()=>{},penOnly:false,setPenOnly:()=>{}};export const sentence=renderToStaticMarkup(h(Provider,props,h('p',{lang:'zh-Hans'},h(StudyText,{text:'请从这个门出。',anchor:'出'}))));export const word=renderToStaticMarkup(h(Provider,props,h('strong',{},h(StudyText,{text:'出国',whole:true}))));export const lookup=renderToStaticMarkup(h(Provider,props,h(StudyLookupButton,{text:'出国'})));`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false,loader:{'.css':'empty'},logLevel:'silent'});

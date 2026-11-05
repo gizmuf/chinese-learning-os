@@ -1,0 +1,809 @@
+{
+  "asset_commit": "4c77946be5f8f2b808471a8bd0ba5387f65db76c",
+  "files": {
+    "audio-e73bb0bb82e2cc69b4255151be59fca49d672042b312d15e8d6c8fd5171051df": {
+      "path": "resources/lesson12/audio/e73bb0bb82e2cc69b4255151be59fca49d672042b312d15e8d6c8fd5171051df.mp3",
+      "bytes": 11232,
+      "sha256": "e7b083f9451a53d6f45bec4d3b396869dea8af8294f6a00f502bfe5da3ee8a5c",
+      "type": "audio/mpeg"
+    },
+    "audio-c90c647032879fdec49a084e244477e8343405bb06211c1ad164f87717b1c863": {
+      "path": "resources/lesson12/audio/c90c647032879fdec49a084e244477e8343405bb06211c1ad164f87717b1c863.mp3",
+      "bytes": 11232,
+      "sha256": "ef12179cd417f7c19e2646166ea23a664db5d25a794cbb5e591ba1a13d4b77c0",
+      "type": "audio/mpeg"
+    },
+    "audio-4ae988a29c1f702c36ecb8b2438eae30907a0c82394d3d955f9de91af8b67526": {
+      "path": "resources/lesson12/audio/4ae988a29c1f702c36ecb8b2438eae30907a0c82394d3d955f9de91af8b67526.mp3",
+      "bytes": 11232,
+      "sha256": "8bf07b4d0778973ee2f26eb1bb3e014b0141cd8151d5edce55273e8d77483641",
+      "type": "audio/mpeg"
+    },
+    "audio-091ef162c8ed3e4ac8139d8207c01d8c6450a4d01373d9f6d23aa41896e8a270": {
+      "path": "resources/lesson12/audio/091ef162c8ed3e4ac8139d8207c01d8c6450a4d01373d9f6d23aa41896e8a270.mp3",
+      "bytes": 11232,
+      "sha256": "d5dbda492960692415f3b91362ad506431287d4040f9416143225c96b6d7d805",
+      "type": "audio/mpeg"
+    },
+    "audio-c151cdea798412bc542bf60fdbbd4673d38af6f22bb42e9dcc9a1ab8a895ba7f": {
+      "path": "resources/lesson12/audio/c151cdea798412bc542bf60fdbbd4673d38af6f22bb42e9dcc9a1ab8a895ba7f.mp3",
+      "bytes": 11232,
+      "sha256": "9a5830cfa2efaf9b8855c7467b314b12ded1e70863149f6e251d56306ac3552a",
+      "type": "audio/mpeg"
+    },
+    "audio-96b2d406041bbf38bc75017e2f5a8108163bb061fad3ab79b7bbfbede668ea2a": {
+      "path": "resources/lesson12/audio/96b2d406041bbf38bc75017e2f5a8108163bb061fad3ab79b7bbfbede668ea2a.mp3",
+      "bytes": 11232,
+      "sha256": "ee32f29022faad3999e58edf56d1e65b18ef3699b671c1ec44361e09ce4ec0e1",
+      "type": "audio/mpeg"
+    },
+    "audio-e57f49ca9c8120c9001bfcf5d954a533c4cb63de907fd14a088b508d2c9bf32f": {
+      "path": "resources/lesson12/audio/e57f49ca9c8120c9001bfcf5d954a533c4cb63de907fd14a088b508d2c9bf32f.mp3",
+      "bytes": 11232,
+      "sha256": "1aa33798d3c10fa98b02fa268b1ba5f58541b30a53e3d68694329d1ddd5467f1",
+      "type": "audio/mpeg"
+    },
+    "audio-5c94c05b77c55184f7c7b8343be642ce95a3ebe9a3d5cabd9f6dd6051abebbb4": {
+      "path": "resources/lesson12/audio/5c94c05b77c55184f7c7b8343be642ce95a3ebe9a3d5cabd9f6dd6051abebbb4.mp3",
+      "bytes": 11232,
+      "sha256": "51a435852470090ab4239ef2c258f6a20825420bb48b9bd60915da168cacf65f",
+      "type": "audio/mpeg"
+    },
+    "audio-dc50d5e51e242939d7561edcae26e69dec3a3cd6134fe1115ddc582074bbf891": {
+      "path": "resources/lesson12/audio/dc50d5e51e242939d7561edcae26e69dec3a3cd6134fe1115ddc582074bbf891.mp3",
+      "bytes": 11232,
+      "sha256": "cc6a2c0e6fe60042f7e2e1ddaabe0948d47768ad424fda0a0d8f63cf4cef99b6",
+      "type": "audio/mpeg"
+    },
+    "audio-3c7b1727ee63bfd2ff1a0acfb6bcf601e43ccf71d2e0ce5483b18b491f603224": {
+      "path": "resources/lesson12/audio/3c7b1727ee63bfd2ff1a0acfb6bcf601e43ccf71d2e0ce5483b18b491f603224.mp3",
+      "bytes": 11232,
+      "sha256": "8170ff7132903284a37d421d4629fd9280b4db8f2104a8bfacadaef477b0838a",
+      "type": "audio/mpeg"
+    },
+    "audio-ad59363e4cf9ffdb9d9074e4d93d14fc7dd2aecd8f6129602459bf0b138f08ca": {
+      "path": "resources/lesson12/audio/ad59363e4cf9ffdb9d9074e4d93d14fc7dd2aecd8f6129602459bf0b138f08ca.mp3",
+      "bytes": 11232,
+      "sha256": "4d0474a31b2d2f6ae5e316921dcf872d2b307f41d4c17b4917b8f88d824a12b2",
+      "type": "audio/mpeg"
+    },
+    "audio-fd50841d7d37d84eb6c397fa1a36688a92c8fc1d2fad008a946008d07c5841a1": {
+      "path": "resources/lesson12/audio/fd50841d7d37d84eb6c397fa1a36688a92c8fc1d2fad008a946008d07c5841a1.mp3",
+      "bytes": 11232,
+      "sha256": "4236de19e5dabd863010e3f364bf3eec779ed680a720b55c09608c5c533920ad",
+      "type": "audio/mpeg"
+    },
+    "audio-94f5404441e8c480117d2b802038130dad173b64e8a76bb00eefb9f7705dc6e7": {
+      "path": "resources/lesson12/audio/94f5404441e8c480117d2b802038130dad173b64e8a76bb00eefb9f7705dc6e7.mp3",
+      "bytes": 11232,
+      "sha256": "8aa1788cf39beede532789a17425d5a32a363498af72ae2c0dc536be35631e41",
+      "type": "audio/mpeg"
+    },
+    "audio-001d9c64f7f1d3816df61f0d42a31eb80619bd408211a8b239d18d49829fe875": {
+      "path": "resources/lesson12/audio/001d9c64f7f1d3816df61f0d42a31eb80619bd408211a8b239d18d49829fe875.mp3",
+      "bytes": 11232,
+      "sha256": "0100c9316c8674e9fe4e2fabc00ebdbf46b1f3763df45e21ea4f5efa91f4c628",
+      "type": "audio/mpeg"
+    },
+    "audio-61b7153092bcdccb7b96199a382f12aaf870582015b15b64351880a224077bc6": {
+      "path": "resources/lesson12/audio/61b7153092bcdccb7b96199a382f12aaf870582015b15b64351880a224077bc6.mp3",
+      "bytes": 11232,
+      "sha256": "131ec1cbb5e028161ca4a53f2349da52e93701513a0f6cf224d7455614291152",
+      "type": "audio/mpeg"
+    },
+    "audio-dac152a147729f3fea56707825d54d6d5c06d81068aa4936284884e64498c70f": {
+      "path": "resources/lesson12/audio/dac152a147729f3fea56707825d54d6d5c06d81068aa4936284884e64498c70f.mp3",
+      "bytes": 11232,
+      "sha256": "c52e4783fc84658c30444360300b080f0db38ca5fe66bde9d4dbe68042f32e47",
+      "type": "audio/mpeg"
+    },
+    "audio-5a5420f01e11d0bcd282104cc8fc4febb31265daed479088a31d3331f335e37b": {
+      "path": "resources/lesson12/audio/5a5420f01e11d0bcd282104cc8fc4febb31265daed479088a31d3331f335e37b.mp3",
+      "bytes": 11232,
+      "sha256": "144f70dd09e4d0471467a1847a3fc00b793ad96562d3de676cdca09937f39282",
+      "type": "audio/mpeg"
+    },
+    "audio-b6a5b00f8db545dcf22b4bfb80b1a94d32d75381bbaae194fa7c19d18a93e361": {
+      "path": "resources/lesson12/audio/b6a5b00f8db545dcf22b4bfb80b1a94d32d75381bbaae194fa7c19d18a93e361.mp3",
+      "bytes": 11232,
+      "sha256": "81c643324d65251beb7a6f90bab06dfe94c4dd17967f3d58d94c8c3778a23a02",
+      "type": "audio/mpeg"
+    },
+    "audio-fd0b4036e8b231ad8586503f3bb17a152585776aba721528b30bcb74cbc6d9af": {
+      "path": "resources/lesson12/audio/fd0b4036e8b231ad8586503f3bb17a152585776aba721528b30bcb74cbc6d9af.mp3",
+      "bytes": 11232,
+      "sha256": "2938c1eaf335c8a50fc6414c36cb8f80ec231125c948c302321584766349ea31",
+      "type": "audio/mpeg"
+    },
+    "audio-ad905cb6e5ac8db88e255f7dd735653131a2ec620b4564a4792a308a8139bbe6": {
+      "path": "resources/lesson12/audio/ad905cb6e5ac8db88e255f7dd735653131a2ec620b4564a4792a308a8139bbe6.mp3",
+      "bytes": 11232,
+      "sha256": "a5251b84b6a8af836e336a217ab5d6f171b0cbebe18d5d57e7b7cc5f5b545130",
+      "type": "audio/mpeg"
+    },
+    "audio-7a80e2742b334cc75ca998a5d30e354d73827cdd22b835a1287de20ef58bb26c": {
+      "path": "resources/lesson12/audio/7a80e2742b334cc75ca998a5d30e354d73827cdd22b835a1287de20ef58bb26c.mp3",
+      "bytes": 11232,
+      "sha256": "2a1b64736b8a23cbdbf9150bcce056273778106845cf7081fa535d5c7affd11b",
+      "type": "audio/mpeg"
+    },
+    "audio-9a6ce4cf2cab6307ec871bb31d10308969fed3dfed4d7da55d07becbb9750796": {
+      "path": "resources/lesson12/audio/9a6ce4cf2cab6307ec871bb31d10308969fed3dfed4d7da55d07becbb9750796.mp3",
+      "bytes": 11232,
+      "sha256": "d65b14134647bcf83e0518c73f2a06a2a816cd0fd52d5895ea0fc0e1c8f1606d",
+      "type": "audio/mpeg"
+    },
+    "audio-00f0efe7948e154941619f0c6bef8de83dd3125516a6b2b5311d0d209642083e": {
+      "path": "resources/lesson12/audio/00f0efe7948e154941619f0c6bef8de83dd3125516a6b2b5311d0d209642083e.mp3",
+      "bytes": 11232,
+      "sha256": "472e8fe1cef21c4c560a57d0524ae5990e37c6afceee37ed028dd21dd8b5ac0a",
+      "type": "audio/mpeg"
+    },
+    "audio-b38a4b4c3335f2d473e4c4e52abfdbe2f34893cdb03afc2e6e827b49b21093ba": {
+      "path": "resources/lesson12/audio/b38a4b4c3335f2d473e4c4e52abfdbe2f34893cdb03afc2e6e827b49b21093ba.mp3",
+      "bytes": 11232,
+      "sha256": "6b3d3eb2a6aca871b788d584d1c4193a6bd912d034b43b4068b8a3af44293986",
+      "type": "audio/mpeg"
+    },
+    "audio-1c0fdcd4dfb3f381c570e9c183dab9bf073f019d3fadb88d4c4f9132167323ba": {
+      "path": "resources/lesson12/audio/1c0fdcd4dfb3f381c570e9c183dab9bf073f019d3fadb88d4c4f9132167323ba.mp3",
+      "bytes": 11232,
+      "sha256": "eec7327253e18a61ed3da201ece6b20f180ed94cd1ce7549b2a6731e8d27fd1f",
+      "type": "audio/mpeg"
+    },
+    "audio-691b1216093d230f97ef903937f379d4f0e0c0f2bccce885c634d324ab158f01": {
+      "path": "resources/lesson12/audio/691b1216093d230f97ef903937f379d4f0e0c0f2bccce885c634d324ab158f01.mp3",
+      "bytes": 11232,
+      "sha256": "51d87c4c82df6553f55b16d0331111c8bf3c5c297877cbcc119202fd3ac23e3b",
+      "type": "audio/mpeg"
+    },
+    "audio-e619ad8e60ba21329f6f6ceafbe7731360b233fc0bfb194383d548d5d568e09d": {
+      "path": "resources/lesson12/audio/e619ad8e60ba21329f6f6ceafbe7731360b233fc0bfb194383d548d5d568e09d.mp3",
+      "bytes": 11232,
+      "sha256": "0bd94d1091cee62af22267a93e3daa85a2a48c36bd79d4fe7c98e4090c4fb3b4",
+      "type": "audio/mpeg"
+    },
+    "audio-3053fe9592d5249626f65bd57d2bc596fc83c411c60d7e39c221f2805dc8fe50": {
+      "path": "resources/lesson12/audio/3053fe9592d5249626f65bd57d2bc596fc83c411c60d7e39c221f2805dc8fe50.mp3",
+      "bytes": 11232,
+      "sha256": "da03273a32c49f5185d711050988f49ffeeec8baa9d0bf9ec26ab4862b9d27f7",
+      "type": "audio/mpeg"
+    },
+    "audio-db3274424dabf9736ebeed8c984f70d7ffcbe081f6c0509f9031556adf42efba": {
+      "path": "resources/lesson12/audio/db3274424dabf9736ebeed8c984f70d7ffcbe081f6c0509f9031556adf42efba.mp3",
+      "bytes": 11232,
+      "sha256": "8977cf5d0f5572a47718e269a8c856d673e9eb11430aef5e4fdc0c6ef1cf6b60",
+      "type": "audio/mpeg"
+    },
+    "audio-1e576dc6f553f400428cde91a11f2124c9deaf90b0053b80799769fb85cdb076": {
+      "path": "resources/lesson12/audio/1e576dc6f553f400428cde91a11f2124c9deaf90b0053b80799769fb85cdb076.mp3",
+      "bytes": 11232,
+      "sha256": "6933efccba008714a1cedbab3ed2f6eb8fc42735d59a841a65f1fc09223f9d2a",
+      "type": "audio/mpeg"
+    },
+    "audio-7e7ccabc40613c6abf8b3c21d08d69cc37118e911619da6e2506b5cebd1d04c1": {
+      "path": "resources/lesson12/audio/7e7ccabc40613c6abf8b3c21d08d69cc37118e911619da6e2506b5cebd1d04c1.mp3",
+      "bytes": 11232,
+      "sha256": "53833a6fae01668cc9fdccf8c3ef54d4a5500ca4b3009480b3f0124aaff16355",
+      "type": "audio/mpeg"
+    },
+    "audio-6a0ef384c814c9e51e1eaac30390c6bd0c072a2993dccbd015374baa8869cf2a": {
+      "path": "resources/lesson12/audio/6a0ef384c814c9e51e1eaac30390c6bd0c072a2993dccbd015374baa8869cf2a.mp3",
+      "bytes": 11232,
+      "sha256": "6d4f9b71a43ab438da286a95ad158087a94575825aaa7820d46e7f6d2a8341e7",
+      "type": "audio/mpeg"
+    },
+    "audio-0838dcc59823278cbc01b7472e0747ab39aaf98e8f2e7c4dea2bd79c939b5fb6": {
+      "path": "resources/lesson12/audio/0838dcc59823278cbc01b7472e0747ab39aaf98e8f2e7c4dea2bd79c939b5fb6.mp3",
+      "bytes": 11232,
+      "sha256": "56569cd53f23c689417b2ee2a14a1c89132e8094aeb738730c76c69eb0563ed5",
+      "type": "audio/mpeg"
+    },
+    "audio-920e88c5a602df57efb0bf95b249acb049e34f9deeca514f81af910e62dcd72a": {
+      "path": "resources/lesson12/audio/920e88c5a602df57efb0bf95b249acb049e34f9deeca514f81af910e62dcd72a.mp3",
+      "bytes": 11232,
+      "sha256": "e511ec18241e7010509924e3ae3e8de11a6a6c9d8e60a92a6772762d48c611af",
+      "type": "audio/mpeg"
+    },
+    "audio-9d95a62f5e3af75914d0e326cd4c1cac7a4a476d0533bd3dd8767acd2d2963bb": {
+      "path": "resources/lesson12/audio/9d95a62f5e3af75914d0e326cd4c1cac7a4a476d0533bd3dd8767acd2d2963bb.mp3",
+      "bytes": 11232,
+      "sha256": "b246ab87557fe453a37a815f7103634e074ea41f8227f165a7e3c119466ce4e1",
+      "type": "audio/mpeg"
+    },
+    "audio-3a74de9a9014149a3ab05086272c9bf70c6fe8c3f1bc0d6a5250d25eaca447cc": {
+      "path": "resources/lesson12/audio/3a74de9a9014149a3ab05086272c9bf70c6fe8c3f1bc0d6a5250d25eaca447cc.mp3",
+      "bytes": 11232,
+      "sha256": "d963ecb7096c6e50bfb9a3c49fea7f1120780f077d45dd72b1bfd6a00978d7c9",
+      "type": "audio/mpeg"
+    },
+    "audio-580f81d6c55c67ebb1e1c344c378633987b6b217c3602fad2352ef3358156f78": {
+      "path": "resources/lesson12/audio/580f81d6c55c67ebb1e1c344c378633987b6b217c3602fad2352ef3358156f78.mp3",
+      "bytes": 11232,
+      "sha256": "8e6374f45d96b2852fc5f72fd32debc4f8bbf2ac81300cdd1e37a36e44200b5b",
+      "type": "audio/mpeg"
+    },
+    "audio-1462a7d8531ef5d219ed84e59c663b9882735e14fefcdd06c0356d648d54d73e": {
+      "path": "resources/lesson12/audio/1462a7d8531ef5d219ed84e59c663b9882735e14fefcdd06c0356d648d54d73e.mp3",
+      "bytes": 11232,
+      "sha256": "8e9055e6386cbf1d570c77d7204605a1a248bb77718a5585821f3a7e609801e9",
+      "type": "audio/mpeg"
+    },
+    "audio-1ca22981984a89e6d592ae9fd8583373fb919e32f2beaa1681b87dcffb19adeb": {
+      "path": "resources/lesson12/audio/1ca22981984a89e6d592ae9fd8583373fb919e32f2beaa1681b87dcffb19adeb.mp3",
+      "bytes": 11232,
+      "sha256": "ba5e3970ca5cbc10cbf1897926c2ec26b6523a5c804c70f304048c2cde262ff7",
+      "type": "audio/mpeg"
+    },
+    "audio-373f23721ec46c8b8c7ecfa1ec55d163c9acc88745453f3e89527192fd259aad": {
+      "path": "resources/lesson12/audio/373f23721ec46c8b8c7ecfa1ec55d163c9acc88745453f3e89527192fd259aad.mp3",
+      "bytes": 9648,
+      "sha256": "85a188bc7e3ba3b802fd835a87608eb2c99bff21fabab4895933317e080da91a",
+      "type": "audio/mpeg"
+    },
+    "audio-da8b4cde304b1488c9f6d0bfc865a061d1fc6098faae13143241491be19163e8": {
+      "path": "resources/lesson12/audio/da8b4cde304b1488c9f6d0bfc865a061d1fc6098faae13143241491be19163e8.mp3",
+      "bytes": 11232,
+      "sha256": "57b34abc556eef8fd210ae5735072e2396b455d2298ded42ff5fa34e025abbeb",
+      "type": "audio/mpeg"
+    },
+    "audio-f66de6c4cd41cdff6c5d8ba092129d5c3f6d3c0418b1b084518163f6ea1738d1": {
+      "path": "resources/lesson12/audio/f66de6c4cd41cdff6c5d8ba092129d5c3f6d3c0418b1b084518163f6ea1738d1.mp3",
+      "bytes": 11232,
+      "sha256": "d993fa558023efdd9019722b996972038944dfccd5dc81db17fe5b95f545f562",
+      "type": "audio/mpeg"
+    },
+    "audio-067d19dd0e427aa16dd82bb5c7c3a4e1f2b6ac1a7a25a3d014a4d7881ffd6966": {
+      "path": "resources/lesson12/audio/067d19dd0e427aa16dd82bb5c7c3a4e1f2b6ac1a7a25a3d014a4d7881ffd6966.mp3",
+      "bytes": 11232,
+      "sha256": "9c2c6836c6d71b61ee42a872acb0bdcb5e2500560f118e47b6dd30cbab3ab3f6",
+      "type": "audio/mpeg"
+    },
+    "audio-4ff5203b418b6de1cfa0975cb34db9279adc0e6da34115c841fe92c4186f6942": {
+      "path": "resources/lesson12/audio/4ff5203b418b6de1cfa0975cb34db9279adc0e6da34115c841fe92c4186f6942.mp3",
+      "bytes": 11232,
+      "sha256": "419bc3e396a4180e7804abd72f5219ff054283d58dbe017fdfa1717894b899de",
+      "type": "audio/mpeg"
+    },
+    "audio-4f986690b0dad778a77f658fab7fb32a5bdccb0a75cc319c4571024af464f3f2": {
+      "path": "resources/lesson12/audio/4f986690b0dad778a77f658fab7fb32a5bdccb0a75cc319c4571024af464f3f2.mp3",
+      "bytes": 11232,
+      "sha256": "1cfad9d24c19d85d78009bc3e2a9356333e49feabd3f5252aa3cc48064804b88",
+      "type": "audio/mpeg"
+    },
+    "audio-024b2708ed8e3ffc2b64f9ed416c06ecada0c8accb9b77f388e33e32d7301189": {
+      "path": "resources/lesson12/audio/024b2708ed8e3ffc2b64f9ed416c06ecada0c8accb9b77f388e33e32d7301189.mp3",
+      "bytes": 11232,
+      "sha256": "c5cf7c8a5f0059d206c6b2553916e5aaefa0828e137eef39e1a6e4bc66cb9fb4",
+      "type": "audio/mpeg"
+    },
+    "audio-a86eaeb98f4ced934d5997ecb01b6ce4b949ef8b5cb4c64178efc7f838a7d6a8": {
+      "path": "resources/lesson12/audio/a86eaeb98f4ced934d5997ecb01b6ce4b949ef8b5cb4c64178efc7f838a7d6a8.mp3",
+      "bytes": 11232,
+      "sha256": "c93fdfe51ab8e97af773756ce614840f8d41fba13a4254354a2daeccbc7cc5c4",
+      "type": "audio/mpeg"
+    },
+    "audio-f42db5493d75fdb3ec943465031d8ff46e3690349c8424a5aa7bceb48b2b9454": {
+      "path": "resources/lesson12/audio/f42db5493d75fdb3ec943465031d8ff46e3690349c8424a5aa7bceb48b2b9454.mp3",
+      "bytes": 11232,
+      "sha256": "b53731712feb1b590107c046c7d662707cfccd3607aca9fa6acec10f26812d27",
+      "type": "audio/mpeg"
+    },
+    "audio-0eb863c78da3e38b6b92d1f3999566e5d8e17a6f700a112c8993cf6bfc48f70b": {
+      "path": "resources/lesson12/audio/0eb863c78da3e38b6b92d1f3999566e5d8e17a6f700a112c8993cf6bfc48f70b.mp3",
+      "bytes": 11232,
+      "sha256": "83e6b7adc0c1f15c67e3cf6203b5b8bc0acde72effe1317ca68ad9d4077e6abb",
+      "type": "audio/mpeg"
+    },
+    "audio-c277be8a4b92ee421a23d4b6b754c72cefd62031bedc2ce34515b2b1b53ac82c": {
+      "path": "resources/lesson12/audio/c277be8a4b92ee421a23d4b6b754c72cefd62031bedc2ce34515b2b1b53ac82c.mp3",
+      "bytes": 11232,
+      "sha256": "b103bf5f1c3d44dbd65e59a4e3357d920ea990d00c1358a067b0c8a90a98e172",
+      "type": "audio/mpeg"
+    },
+    "audio-04e45efb3be890e7442f15332bb289be7246583bf05136a2d9491fb489d621ee": {
+      "path": "resources/lesson12/audio/04e45efb3be890e7442f15332bb289be7246583bf05136a2d9491fb489d621ee.mp3",
+      "bytes": 11232,
+      "sha256": "6446b0cc2aa0fb20a32f6a359abc2c9819d026c0f686b3479b91762bb2b3218d",
+      "type": "audio/mpeg"
+    },
+    "audio-27402adfd76c2a150f31a0834acc5c1aa31a914240e735890fd3c4f2eb39293c": {
+      "path": "resources/lesson12/audio/27402adfd76c2a150f31a0834acc5c1aa31a914240e735890fd3c4f2eb39293c.mp3",
+      "bytes": 11232,
+      "sha256": "f59da7e5e2028d7d92ee25af5e599794354f7cf6e434a2fd15403ee152e1d728",
+      "type": "audio/mpeg"
+    },
+    "audio-c69185351f9cc3e9ebf31457588c9b5a51fe860c804c0e4abc9d7aaac686dc5a": {
+      "path": "resources/lesson12/audio/c69185351f9cc3e9ebf31457588c9b5a51fe860c804c0e4abc9d7aaac686dc5a.mp3",
+      "bytes": 11232,
+      "sha256": "5c42ff73bf2d3de77ef236cac572e308fb2b542fb09fea69abd343164eb76977",
+      "type": "audio/mpeg"
+    },
+    "audio-5342b0b22dc4b6046e1a7559393f1d567bfba1d7c5e1a19a2c07bac80df5c74b": {
+      "path": "resources/lesson12/audio/5342b0b22dc4b6046e1a7559393f1d567bfba1d7c5e1a19a2c07bac80df5c74b.mp3",
+      "bytes": 11520,
+      "sha256": "525746cd881b6d4ce99b6f6dd7022ecca57800ee5244c62c20c3d78ceacbe3bf",
+      "type": "audio/mpeg"
+    },
+    "audio-9f455088874ba6174a7ddcf0c42f13e87937188942ba6b74d09dcb49588bb107": {
+      "path": "resources/lesson12/audio/9f455088874ba6174a7ddcf0c42f13e87937188942ba6b74d09dcb49588bb107.mp3",
+      "bytes": 18000,
+      "sha256": "9f02ac994e6d61c4e6ead7e7260c2e7f4f6bbe7c5f7c757e5c2c2ed9a95aed4e",
+      "type": "audio/mpeg"
+    },
+    "audio-22b018ee85124f1273a1cac8de22ea2c65fe95b6acb849d6514620dfe6067927": {
+      "path": "resources/lesson12/audio/22b018ee85124f1273a1cac8de22ea2c65fe95b6acb849d6514620dfe6067927.mp3",
+      "bytes": 26208,
+      "sha256": "0a7d2ac4489ed9efcef2b7a0337f6b539b81b571d68dc660096d09374f89a308",
+      "type": "audio/mpeg"
+    },
+    "audio-a2b5ad639c9a12278029fbe94274a107167766c1098afb0491f455dd04c2d284": {
+      "path": "resources/lesson12/audio/a2b5ad639c9a12278029fbe94274a107167766c1098afb0491f455dd04c2d284.mp3",
+      "bytes": 30960,
+      "sha256": "dce287c8ae5e2b323601ef3ee22b0bd57e4a3d432843e032979108fa7c159b77",
+      "type": "audio/mpeg"
+    },
+    "audio-bd23bcb4d5ee74291a06d92832d94af7afb0d1400f7f05ba6dbd17ec2b47b328": {
+      "path": "resources/lesson12/audio/bd23bcb4d5ee74291a06d92832d94af7afb0d1400f7f05ba6dbd17ec2b47b328.mp3",
+      "bytes": 11232,
+      "sha256": "4a024681b1752550beb11bfa8f91922c203e02132bd15662f741c910320b670f",
+      "type": "audio/mpeg"
+    },
+    "audio-ad9ac270b78aa34631a5c9924f95c1bbf6ff15ba43fe9d3898932b4b95eb0a85": {
+      "path": "resources/lesson12/audio/ad9ac270b78aa34631a5c9924f95c1bbf6ff15ba43fe9d3898932b4b95eb0a85.mp3",
+      "bytes": 16848,
+      "sha256": "8918c0d150d44c117ce29cd90ada7069687d0c5cbf33c27a148c9751f0141d62",
+      "type": "audio/mpeg"
+    },
+    "audio-fa8365456f8cd15c161d776745d9346a85d050c7d7508ab40d8e856ff3e1cd14": {
+      "path": "resources/lesson12/audio/fa8365456f8cd15c161d776745d9346a85d050c7d7508ab40d8e856ff3e1cd14.mp3",
+      "bytes": 12672,
+      "sha256": "68a3a52d9571ecec703fd7c5c621c25b6baaf21fb8904e0e606d087fdbc07fca",
+      "type": "audio/mpeg"
+    },
+    "audio-57e359abe5ad370a457fcdc5b38e102ca2c5e80fdb06dcaeb2b89b944aea3ba8": {
+      "path": "resources/lesson12/audio/57e359abe5ad370a457fcdc5b38e102ca2c5e80fdb06dcaeb2b89b944aea3ba8.mp3",
+      "bytes": 11232,
+      "sha256": "589a7f9041e6916554bf2b954db2c4e01ba02ba46fae4f2bfa9a7449db4cdb84",
+      "type": "audio/mpeg"
+    },
+    "audio-2ea50de6cd35f7455f002cc97ca34fa06e5588b85d12cf3bc656b5c66ba940d8": {
+      "path": "resources/lesson12/audio/2ea50de6cd35f7455f002cc97ca34fa06e5588b85d12cf3bc656b5c66ba940d8.mp3",
+      "bytes": 18288,
+      "sha256": "9034d4ad8295130cedac726484af801973bd9baf6559c50ac2952b2bd9d634be",
+      "type": "audio/mpeg"
+    },
+    "audio-0542b6404419045b05ca9085d3126650a272c9288da20bbb7ff90ccadde96a30": {
+      "path": "resources/lesson12/audio/0542b6404419045b05ca9085d3126650a272c9288da20bbb7ff90ccadde96a30.mp3",
+      "bytes": 12960,
+      "sha256": "3606196d7dbc7eafb27937a2806fa4e6eb0d9eda75f2b03080b403cb6988e531",
+      "type": "audio/mpeg"
+    },
+    "audio-07838894c99d51810c821a1cd878a4b67cf881563f8977f7260524319bd5c432": {
+      "path": "resources/lesson12/audio/07838894c99d51810c821a1cd878a4b67cf881563f8977f7260524319bd5c432.mp3",
+      "bytes": 14256,
+      "sha256": "f1390749bec038fb8c0a5fccf8f28ec8b9ee05d87152a131d9c0c94120e875f5",
+      "type": "audio/mpeg"
+    },
+    "audio-8a8390850168817e603fdeb0e6c274163f8948388f65c1d1db97c3fb4bd1ed75": {
+      "path": "resources/lesson12/audio/8a8390850168817e603fdeb0e6c274163f8948388f65c1d1db97c3fb4bd1ed75.mp3",
+      "bytes": 13248,
+      "sha256": "b5f6ba21cf23fecd92e968f5d7c84ad632b6b5aecac524dff25f9b4571ba2952",
+      "type": "audio/mpeg"
+    },
+    "audio-04eec5bd008c64672c1b6e0e06a39963604be0aee6900dd8c1e45bd7d09ec198": {
+      "path": "resources/lesson12/audio/04eec5bd008c64672c1b6e0e06a39963604be0aee6900dd8c1e45bd7d09ec198.mp3",
+      "bytes": 12960,
+      "sha256": "bfeb2244bda4c20cd779ac2894081f2a39bc2928a6f1d7a6b3e26ee05879c330",
+      "type": "audio/mpeg"
+    },
+    "audio-66022a2d772039afc1ca843fbe22692aba0a6ab8ee17afc3f5ec68a8f89dd1fa": {
+      "path": "resources/lesson12/audio/66022a2d772039afc1ca843fbe22692aba0a6ab8ee17afc3f5ec68a8f89dd1fa.mp3",
+      "bytes": 12096,
+      "sha256": "0b19ebae28dab5990107e945046c6f2e3b79a78ed0b341b66b18b3b4e152e500",
+      "type": "audio/mpeg"
+    },
+    "audio-fdc91e921de3f28da1b8108efb01cc6ab035299cfc8f1b3efaacdd9c70b1b683": {
+      "path": "resources/lesson12/audio/fdc91e921de3f28da1b8108efb01cc6ab035299cfc8f1b3efaacdd9c70b1b683.mp3",
+      "bytes": 15408,
+      "sha256": "a653e1aa2c1538a97c767d3ff92465f1ded784debd7bcf5a7b56b0e2e82f2819",
+      "type": "audio/mpeg"
+    },
+    "audio-3ef95545ddf139bad86fb762a83432056166935ec8eaca143281267e80ffccec": {
+      "path": "resources/lesson12/audio/3ef95545ddf139bad86fb762a83432056166935ec8eaca143281267e80ffccec.mp3",
+      "bytes": 12672,
+      "sha256": "bfb5870d28734558ea63243fe78308a8cfd888e020ca9e7f728226c6eb46a9d1",
+      "type": "audio/mpeg"
+    },
+    "audio-b1d9f6a318aaa7730fb64d5daa21d6e81c01ff3db2065d14e668eb6c39f9cbcb": {
+      "path": "resources/lesson12/audio/b1d9f6a318aaa7730fb64d5daa21d6e81c01ff3db2065d14e668eb6c39f9cbcb.mp3",
+      "bytes": 14688,
+      "sha256": "d33168c35576f38ef40765d04c36eecda7eb6d8a77cc28da7ca51d14ca253e32",
+      "type": "audio/mpeg"
+    },
+    "audio-a5b4170013ccab7d6c42a6643ba1f4eb6da37adb34d626e73307a3a54ce952e3": {
+      "path": "resources/lesson12/audio/a5b4170013ccab7d6c42a6643ba1f4eb6da37adb34d626e73307a3a54ce952e3.mp3",
+      "bytes": 19152,
+      "sha256": "8e2b7704fe923094dec7e38d12b62316a30c3aecae26042437d04ff1049f9e14",
+      "type": "audio/mpeg"
+    },
+    "audio-afc94fcd82114bc87b7e3e2a2a900635c7846a4f4f835f323a65c4f1e9eb88c6": {
+      "path": "resources/lesson12/audio/afc94fcd82114bc87b7e3e2a2a900635c7846a4f4f835f323a65c4f1e9eb88c6.mp3",
+      "bytes": 21168,
+      "sha256": "ee545c4a58c5d086e5a4b0e1a3ab111015d9810e1e8c488f4155998708dcfbd2",
+      "type": "audio/mpeg"
+    },
+    "audio-d0906960d7ae3bf31394cea186b952dc59ee3d0675e7e7b2e200c51b990dac7b": {
+      "path": "resources/lesson12/audio/d0906960d7ae3bf31394cea186b952dc59ee3d0675e7e7b2e200c51b990dac7b.mp3",
+      "bytes": 17280,
+      "sha256": "99994d3bf35b029b75c703cb8a223f5844e438c8e7e7f0148d4bc390d9f8d85d",
+      "type": "audio/mpeg"
+    },
+    "audio-c90b259f080c90c1f81bb941bf707c18914c5a485850f8911a2993ecfe83b39c": {
+      "path": "resources/lesson12/audio/c90b259f080c90c1f81bb941bf707c18914c5a485850f8911a2993ecfe83b39c.mp3",
+      "bytes": 14832,
+      "sha256": "6b7e6611309c55fe357910fb04b24f20b5819713c6d951f65a48b869c372b2c9",
+      "type": "audio/mpeg"
+    },
+    "audio-a6c12aec0414f869e472b656ca2a188e21e92bf0b3b3c652b95ed025adeff924": {
+      "path": "resources/lesson12/audio/a6c12aec0414f869e472b656ca2a188e21e92bf0b3b3c652b95ed025adeff924.mp3",
+      "bytes": 14832,
+      "sha256": "754ea37d411c6e0c97b920a6bd8582d2c357c90bec369738560e1a1c06342836",
+      "type": "audio/mpeg"
+    },
+    "audio-52ff121914ebefe55ae73eef47047d79c9de352af39fecd71df61c4926d9e708": {
+      "path": "resources/lesson12/audio/52ff121914ebefe55ae73eef47047d79c9de352af39fecd71df61c4926d9e708.mp3",
+      "bytes": 11808,
+      "sha256": "17a29ffab2cc16fed4b7d149fb9d0c093f1ac3062bf2c53bf7fe1eec51e79c32",
+      "type": "audio/mpeg"
+    },
+    "audio-249959473930f0f76e4b00abd6ed6098c378e8f2d4e735559d8ceb4bd96ae73f": {
+      "path": "resources/lesson12/audio/249959473930f0f76e4b00abd6ed6098c378e8f2d4e735559d8ceb4bd96ae73f.mp3",
+      "bytes": 12960,
+      "sha256": "2b7b5d4ec5f2fcc9d741b2a05c7ed040411d6fecad57d774fb77d2797ee004d0",
+      "type": "audio/mpeg"
+    },
+    "audio-ffad7f99aaa23a8364d58eb4729cd906c491dae984c350011b4930652a1fb475": {
+      "path": "resources/lesson12/audio/ffad7f99aaa23a8364d58eb4729cd906c491dae984c350011b4930652a1fb475.mp3",
+      "bytes": 14832,
+      "sha256": "11418075e3b0728d89784080476e00c8ab5d3761e56c119f511cdbc2a07d20f0",
+      "type": "audio/mpeg"
+    },
+    "audio-22bafa70641a3923fb11141274fef079d26ceaac484a2574ac93a37151854e81": {
+      "path": "resources/lesson12/audio/22bafa70641a3923fb11141274fef079d26ceaac484a2574ac93a37151854e81.mp3",
+      "bytes": 33408,
+      "sha256": "41e454c63a694da4335ff5a1df6d67f7b8e4806d3f2d26bb0be8ba6abec661ea",
+      "type": "audio/mpeg"
+    },
+    "audio-08923fca76962201b8bc5cdaad4ac7db83af14583d4119c13f4b8c3e940f4a81": {
+      "path": "resources/lesson12/audio/08923fca76962201b8bc5cdaad4ac7db83af14583d4119c13f4b8c3e940f4a81.mp3",
+      "bytes": 15120,
+      "sha256": "66deab651b995fa3b25f54bc21a3b33043f0e84ae3f2148f49b59974b2855000",
+      "type": "audio/mpeg"
+    },
+    "audio-18ddb78ddc4349e340ecb59ba072a1a5b143bcbe99b63c010f3ca3387f515dbe": {
+      "path": "resources/lesson12/audio/18ddb78ddc4349e340ecb59ba072a1a5b143bcbe99b63c010f3ca3387f515dbe.mp3",
+      "bytes": 11952,
+      "sha256": "e03bdc3626873f6124a7f0aa297b26a60ce9cf25f6cb86452fcbcf3ddc6caeb6",
+      "type": "audio/mpeg"
+    },
+    "audio-07edac0c33e56e17c1744cecd477c85540ac6fc6d03371c6ab5cad74524e6034": {
+      "path": "resources/lesson12/audio/07edac0c33e56e17c1744cecd477c85540ac6fc6d03371c6ab5cad74524e6034.mp3",
+      "bytes": 13392,
+      "sha256": "bf73041a7af3a6319dd203287a3bf18168392767a719a29e0fa19790f8c820c1",
+      "type": "audio/mpeg"
+    },
+    "audio-f172bd7e56cdacc277c19266f08c2296e5a358375bc42bea110b2e3ac2dccca2": {
+      "path": "resources/lesson12/audio/f172bd7e56cdacc277c19266f08c2296e5a358375bc42bea110b2e3ac2dccca2.mp3",
+      "bytes": 14976,
+      "sha256": "aeed834dffb8017644cb2cd08ab1c05a2156c9d3170def283053dabfbdd82007",
+      "type": "audio/mpeg"
+    },
+    "audio-1063a43f9be012e16802682db4d419cc098d16e14e8ea97b913042e316d9d0d7": {
+      "path": "resources/lesson12/audio/1063a43f9be012e16802682db4d419cc098d16e14e8ea97b913042e316d9d0d7.mp3",
+      "bytes": 16992,
+      "sha256": "1517a2ef59683f4472619f2ea3cdbabb9412b80e9b61f43dfcc92ce337dbf18b",
+      "type": "audio/mpeg"
+    },
+    "audio-bd9216ac46104d18b1efe073246becd64e918b2b6c8b3de12967a0891023b678": {
+      "path": "resources/lesson12/audio/bd9216ac46104d18b1efe073246becd64e918b2b6c8b3de12967a0891023b678.mp3",
+      "bytes": 11232,
+      "sha256": "ee9662d6d6c009431f3bccd09b52235698695e95541c52732c4f55de08274da8",
+      "type": "audio/mpeg"
+    },
+    "audio-70b6ea42b6067d6ffd07f45b0e3ea380abb9916ecfe574d8e2ee4a0eda958b3b": {
+      "path": "resources/lesson12/audio/70b6ea42b6067d6ffd07f45b0e3ea380abb9916ecfe574d8e2ee4a0eda958b3b.mp3",
+      "bytes": 12528,
+      "sha256": "bbd1efe5f70a2c445282d524e64436556f1a91ead512e01450b75444625db941",
+      "type": "audio/mpeg"
+    },
+    "audio-93fbf4d5638c3001c46f0cd271b942bfe98132f1ff9b7a2f9c867de4cc97de08": {
+      "path": "resources/lesson12/audio/93fbf4d5638c3001c46f0cd271b942bfe98132f1ff9b7a2f9c867de4cc97de08.mp3",
+      "bytes": 11232,
+      "sha256": "63ea52b084347b151211338f92c4deb000e23b542db6e221e545315d755150cf",
+      "type": "audio/mpeg"
+    },
+    "audio-c5ef5bf061483b8d2f3b7d6629ad8ef41096069d2bb60f668974ca398c830471": {
+      "path": "resources/lesson12/audio/c5ef5bf061483b8d2f3b7d6629ad8ef41096069d2bb60f668974ca398c830471.mp3",
+      "bytes": 12096,
+      "sha256": "d5bfbe4690122a90a985edbd4c405224c4038ac51373958186f3cbd4e7acc195",
+      "type": "audio/mpeg"
+    },
+    "audio-85b73848f134d8ff355b83b32bbea4dc539be5b5ff6c5dcc1084ac64474d6f8e": {
+      "path": "resources/lesson12/audio/85b73848f134d8ff355b83b32bbea4dc539be5b5ff6c5dcc1084ac64474d6f8e.mp3",
+      "bytes": 16560,
+      "sha256": "0fa89c7663dbe8daf47ed3a2869738f0c2b0949c151b969e7ccfff7b2f0f9223",
+      "type": "audio/mpeg"
+    },
+    "audio-5087ad6f55241dba290ea318b74ab52d08e41498efcf5a07da2df56969ca8106": {
+      "path": "resources/lesson12/audio/5087ad6f55241dba290ea318b74ab52d08e41498efcf5a07da2df56969ca8106.mp3",
+      "bytes": 11232,
+      "sha256": "88f984b9fd8b5e319eb630e75a6984c5096bb63fffc0fe1a6b3e746d6137da77",
+      "type": "audio/mpeg"
+    },
+    "audio-c5331bc5672198119bd07864897bc8b55993d64d90089b33b13e592b21db5782": {
+      "path": "resources/lesson12/audio/c5331bc5672198119bd07864897bc8b55993d64d90089b33b13e592b21db5782.mp3",
+      "bytes": 9936,
+      "sha256": "4e7c183d0b0d31468f4b88a29f14db3cbc29d674541966115af06c4bd11036ac",
+      "type": "audio/mpeg"
+    },
+    "audio-ada4a44477a6e707ad3f91551ad8260d46654debd9923e7944c5a6faf6728491": {
+      "path": "resources/lesson12/audio/ada4a44477a6e707ad3f91551ad8260d46654debd9923e7944c5a6faf6728491.mp3",
+      "bytes": 12672,
+      "sha256": "2e679b73939dd7202d1a65b2321883ac71596f96081b7d72734309071189af94",
+      "type": "audio/mpeg"
+    },
+    "audio-70e524f63c0f7ca59e7f15d35b1aacf9ee16a2dbdd83a6a194dd0eb992b8b1eb": {
+      "path": "resources/lesson12/audio/70e524f63c0f7ca59e7f15d35b1aacf9ee16a2dbdd83a6a194dd0eb992b8b1eb.mp3",
+      "bytes": 12096,
+      "sha256": "b63c38ec2f7d396b49db41b62fda7b3726ae059417cb4f556a7ab1a808d1da07",
+      "type": "audio/mpeg"
+    },
+    "audio-92883f83be7c1e320f4543351ecd12aea921d7c146acaa86ad5f58f0c7b77f23": {
+      "path": "resources/lesson12/audio/92883f83be7c1e320f4543351ecd12aea921d7c146acaa86ad5f58f0c7b77f23.mp3",
+      "bytes": 11232,
+      "sha256": "f6368c84dbdfcd8d5815531b8157e4cddb2dd90b83e8fd8eabe9035aad15d5ae",
+      "type": "audio/mpeg"
+    },
+    "audio-93b4d7c86790782872c5774d73ca14df97064a59cee74cc5bae8c4a5a4382ad1": {
+      "path": "resources/lesson12/audio/93b4d7c86790782872c5774d73ca14df97064a59cee74cc5bae8c4a5a4382ad1.mp3",
+      "bytes": 11232,
+      "sha256": "aa468c489a3322799540736f076e23b04b0d713a664ac29a153cf1b4e7442930",
+      "type": "audio/mpeg"
+    },
+    "audio-676207fe2bce4b0f331d171cac55b2759f5b3ea2a48970292afe3cb80e04c196": {
+      "path": "resources/lesson12/audio/676207fe2bce4b0f331d171cac55b2759f5b3ea2a48970292afe3cb80e04c196.mp3",
+      "bytes": 11232,
+      "sha256": "19f93b7dac6d0cf3c9f3cd15bc42442eba238fe6c3cd05dd9e380f71c6f50f9a",
+      "type": "audio/mpeg"
+    },
+    "audio-bfcdcc805be685a9b16c7423e0968aaa42f4726f4e0f1107aaf6b103f9531246": {
+      "path": "resources/lesson12/audio/bfcdcc805be685a9b16c7423e0968aaa42f4726f4e0f1107aaf6b103f9531246.mp3",
+      "bytes": 11232,
+      "sha256": "20b549795b0115a7d3931b9de08f353d0e2a5aadc65948b964166cbb66128a27",
+      "type": "audio/mpeg"
+    },
+    "audio-f532f3516144229331c7c3800c885c3f48f851c6f102d7cb1ea5fbf1084cc92a": {
+      "path": "resources/lesson12/audio/f532f3516144229331c7c3800c885c3f48f851c6f102d7cb1ea5fbf1084cc92a.mp3",
+      "bytes": 11232,
+      "sha256": "c540b828a1eb88ea0a6fcb1867093368fec4fd668ba298829ca40c11eb290275",
+      "type": "audio/mpeg"
+    },
+    "audio-846e2c6f9b6a023b9fca1c74c5a228511ca6ce580624d5ff79abbe764076aa53": {
+      "path": "resources/lesson12/audio/846e2c6f9b6a023b9fca1c74c5a228511ca6ce580624d5ff79abbe764076aa53.mp3",
+      "bytes": 11232,
+      "sha256": "6294fb22db69a41bad906e5ad7c7eff206a62fbc788b135d7877693716202925",
+      "type": "audio/mpeg"
+    },
+    "audio-7af7bdf680ba1931ad07db7d5811e5da8cdd9d306c0a1786547b957779afd35d": {
+      "path": "resources/lesson12/audio/7af7bdf680ba1931ad07db7d5811e5da8cdd9d306c0a1786547b957779afd35d.mp3",
+      "bytes": 11232,
+      "sha256": "3b5cc146c8e9c902bba70775016d822faf1304702acb8c3c0a5a1af8fbe74b1b",
+      "type": "audio/mpeg"
+    },
+    "audio-57b33bc4f2a1d871291f537422129d60b479df418b8068ba07111b4c9841e30f": {
+      "path": "resources/lesson12/audio/57b33bc4f2a1d871291f537422129d60b479df418b8068ba07111b4c9841e30f.mp3",
+      "bytes": 11232,
+      "sha256": "61cdf9ac037cf5322fab5924a5c15fa4ddfed4e98da20273a14ae16aa0ee91af",
+      "type": "audio/mpeg"
+    },
+    "audio-9ccbe79396f39ef3ee5df53a0a3ec27e3445ea8aafa445f72e2af1cf299f0762": {
+      "path": "resources/lesson12/audio/9ccbe79396f39ef3ee5df53a0a3ec27e3445ea8aafa445f72e2af1cf299f0762.mp3",
+      "bytes": 11232,
+      "sha256": "36c911ff83275a8abd1e781aac2e1820ab18a496e913d2e11632946be2f124a5",
+      "type": "audio/mpeg"
+    },
+    "audio-d4507ecfd49d737d6f3cdab2e2b1a97ee8cac5d92fe74a19614c341e6048893f": {
+      "path": "resources/lesson12/audio/d4507ecfd49d737d6f3cdab2e2b1a97ee8cac5d92fe74a19614c341e6048893f.mp3",
+      "bytes": 11232,
+      "sha256": "dad6e900d58ad0f4198dce600cfd0fb1ad57c1919e687b532231da4c817ffdd6",
+      "type": "audio/mpeg"
+    },
+    "audio-53e62ce3a45120ffe9b4512dd0762ba0a543fea99ac48d8cf7fd3432ad56ad6c": {
+      "path": "resources/lesson12/audio/53e62ce3a45120ffe9b4512dd0762ba0a543fea99ac48d8cf7fd3432ad56ad6c.mp3",
+      "bytes": 15840,
+      "sha256": "6969fab284ee8ec80eb33ceb82459e466f0f7b16b359e3fb4e98aff668a428e8",
+      "type": "audio/mpeg"
+    },
+    "audio-d1405253dc96e8f75490a0f54bafeaf20b6e9f199e0bf4e8872cb1c1f3cefd33": {
+      "path": "resources/lesson12/audio/d1405253dc96e8f75490a0f54bafeaf20b6e9f199e0bf4e8872cb1c1f3cefd33.mp3",
+      "bytes": 13968,
+      "sha256": "b887f200bc9280149a61fa803d6406cb743214eb8cb60d1d8f0350ff0abbba14",
+      "type": "audio/mpeg"
+    },
+    "audio-42b56489f84d21d2c629cfa07435134976734d65dfe5c8c63d9f4e4086af105e": {
+      "path": "resources/lesson12/audio/42b56489f84d21d2c629cfa07435134976734d65dfe5c8c63d9f4e4086af105e.mp3",
+      "bytes": 17568,
+      "sha256": "2cb3d4161ed2e51b0beb4e9c6c1d5309f05371525a82cd3f50fc13f4be14206d",
+      "type": "audio/mpeg"
+    },
+    "audio-bd69ddb18734b00e2b477e9acdf07b3c3676309e6ef3a7048fd92ae703f7951b": {
+      "path": "resources/lesson12/audio/bd69ddb18734b00e2b477e9acdf07b3c3676309e6ef3a7048fd92ae703f7951b.mp3",
+      "bytes": 15120,
+      "sha256": "162bf7738d3a91890fc8ecbbba44ae4a4e1a924c6c3c5e5d3607f3fc8d8e7417",
+      "type": "audio/mpeg"
+    },
+    "audio-72a32bd6922efce8c9b7a153baca8505776e6a895edb4de50e30e91840ab4f8d": {
+      "path": "resources/lesson12/audio/72a32bd6922efce8c9b7a153baca8505776e6a895edb4de50e30e91840ab4f8d.mp3",
+      "bytes": 15552,
+      "sha256": "4c95bc4240e0bdcfe0a906a3bc57af7ba3e17e1609eaa543bbf4e468f1da59dd",
+      "type": "audio/mpeg"
+    },
+    "audio-805fb7bcd766fee480f024fd391a309fed0b5458e277dce637a5b331b17d52fb": {
+      "path": "resources/lesson12/audio/805fb7bcd766fee480f024fd391a309fed0b5458e277dce637a5b331b17d52fb.mp3",
+      "bytes": 14112,
+      "sha256": "142d196a92f735b63644e82bb8113409cae583128d0466a99a29524269268115",
+      "type": "audio/mpeg"
+    },
+    "audio-293066f343fc3339fb6ca258c820c2bd1649b9cf222e80b9b2f19bcae9b26a87": {
+      "path": "resources/lesson12/audio/293066f343fc3339fb6ca258c820c2bd1649b9cf222e80b9b2f19bcae9b26a87.mp3",
+      "bytes": 15120,
+      "sha256": "607d84c4693fe6f953e762782e174d2aea8ff016f5cff35ffbd26eef8851532b",
+      "type": "audio/mpeg"
+    },
+    "audio-46984879eef69bad01f5da749caea1558233f6fc44d2ac04f5dbba94b51718f1": {
+      "path": "resources/lesson12/audio/46984879eef69bad01f5da749caea1558233f6fc44d2ac04f5dbba94b51718f1.mp3",
+      "bytes": 14544,
+      "sha256": "7b38cfa65fc761b4f07d7b810f82d8f50dd3cc3f8e2c6837b3c97aeceb7ecb1c",
+      "type": "audio/mpeg"
+    },
+    "audio-6ab044770895537b32ec78b0610ae7df47839ba8723e63bf15ffc2fcf826e3a8": {
+      "path": "resources/lesson12/audio/6ab044770895537b32ec78b0610ae7df47839ba8723e63bf15ffc2fcf826e3a8.mp3",
+      "bytes": 14256,
+      "sha256": "c366bff92586ed7c4223926e08d36ab24c045e3d7b9135b3bef0940748fd78dc",
+      "type": "audio/mpeg"
+    },
+    "audio-cfc2bc101c60e561c943065e5f91b544d2a6150d139f2ecfc4fa783f64f6f073": {
+      "path": "resources/lesson12/audio/cfc2bc101c60e561c943065e5f91b544d2a6150d139f2ecfc4fa783f64f6f073.mp3",
+      "bytes": 13104,
+      "sha256": "2a4422828def8bae5ad1867a46e1930b166436822b68f4862224e8598c09fd93",
+      "type": "audio/mpeg"
+    },
+    "audio-591dcd969f02b22e147afbdf274ff6abf24939b90f49fbdbd4236e58479388c1": {
+      "path": "resources/lesson12/audio/591dcd969f02b22e147afbdf274ff6abf24939b90f49fbdbd4236e58479388c1.mp3",
+      "bytes": 13392,
+      "sha256": "5ab149513b4c65bcde72c0576ec261bd36930aaa5d50aadfcd7b58ce21b634c6",
+      "type": "audio/mpeg"
+    },
+    "audio-9f8561d0a85ca4a876944fcabd0f7802a610972397947d2f8a4580aab945da03": {
+      "path": "resources/lesson12/audio/9f8561d0a85ca4a876944fcabd0f7802a610972397947d2f8a4580aab945da03.mp3",
+      "bytes": 12096,
+      "sha256": "62048e636af7782ab6cc17dcbb57e18d9fe6f014f9e48428e67d10057b58eadb",
+      "type": "audio/mpeg"
+    },
+    "audio-de656d16c638f1a566c20a28d9a2fc52bcb306f448090197bf621fc72f1d90fc": {
+      "path": "resources/lesson12/audio/de656d16c638f1a566c20a28d9a2fc52bcb306f448090197bf621fc72f1d90fc.mp3",
+      "bytes": 23472,
+      "sha256": "11daf64d898a3cf6dc1dc95f12b02ed4a7791cf3f9e9ff8d53d9ecba835c070e",
+      "type": "audio/mpeg"
+    },
+    "audio-2b6c03e7b236df151b01a627a8f2f809be5848f8d5fa4e02fa69bbc029d32efc": {
+      "path": "resources/lesson12/audio/2b6c03e7b236df151b01a627a8f2f809be5848f8d5fa4e02fa69bbc029d32efc.mp3",
+      "bytes": 17136,
+      "sha256": "90bd54dd2c48a63c5240d51d393072ba4c363493e68c163b6ff0700e41eeda75",
+      "type": "audio/mpeg"
+    },
+    "audio-a155d45a101469b9de3064ef209293d335b366a3a6640814d015fff92d8ebdbb": {
+      "path": "resources/lesson12/audio/a155d45a101469b9de3064ef209293d335b366a3a6640814d015fff92d8ebdbb.mp3",
+      "bytes": 17280,
+      "sha256": "e6b96adbc7f8292e195f0e0085ccc91e44f16f860b1e872a15a8894cfcd8afaf",
+      "type": "audio/mpeg"
+    },
+    "audio-7adca56abe92b2d6642bd978e035752b09eb348fa200fb1b1c0a88d48e71ffce": {
+      "path": "resources/lesson12/audio/7adca56abe92b2d6642bd978e035752b09eb348fa200fb1b1c0a88d48e71ffce.mp3",
+      "bytes": 25200,
+      "sha256": "8fcb48c983f64236a7b2a1d9fd45a7b73bb0e77578a5375242920fc731fb74e7",
+      "type": "audio/mpeg"
+    },
+    "audio-696cea5db872a1a041264c953e7f6fcfd54b245a9c508e4f8fb1b3e991c11334": {
+      "path": "resources/lesson12/audio/696cea5db872a1a041264c953e7f6fcfd54b245a9c508e4f8fb1b3e991c11334.mp3",
+      "bytes": 11232,
+      "sha256": "362ec3fed0f73ea94bb5d6c884394ab0d6e7c9d22ea3cf1b2abc24dee7560511",
+      "type": "audio/mpeg"
+    },
+    "audio-f6ea67dbca68b189ed60e784eff28e830264b5dd831bd40d795eea569f03a5fa": {
+      "path": "resources/lesson12/audio/f6ea67dbca68b189ed60e784eff28e830264b5dd831bd40d795eea569f03a5fa.mp3",
+      "bytes": 15552,
+      "sha256": "a64c7bf31e6c6a8598e9a42d0c96b49c5c1309c6149634ff26c33442f7056b7d",
+      "type": "audio/mpeg"
+    },
+    "audio-ec6acb1233493183cefec786429835c72e2bf040c459295d5a6e54844508da1b": {
+      "path": "resources/lesson12/audio/ec6acb1233493183cefec786429835c72e2bf040c459295d5a6e54844508da1b.mp3",
+      "bytes": 15984,
+      "sha256": "c686c5b4c965ce7ba0f3b5521c3b00efce5bfe7a506a6a986ba1a3903c40c992",
+      "type": "audio/mpeg"
+    },
+    "audio-c759cd15569be1bce8c36f1a48de543a87c07e5442dfc0cf5401c5dcccba244e": {
+      "path": "resources/lesson12/audio/c759cd15569be1bce8c36f1a48de543a87c07e5442dfc0cf5401c5dcccba244e.mp3",
+      "bytes": 18000,
+      "sha256": "8184cb6ae245781b54c2361a31914520de581f93e3a55aa41e702364df14760c",
+      "type": "audio/mpeg"
+    },
+    "audio-ff4a50e13bceb808a88d7ba4f94fc0c86eeb9afe62f66a35cd194e378d82a076": {
+      "path": "resources/lesson12/audio/ff4a50e13bceb808a88d7ba4f94fc0c86eeb9afe62f66a35cd194e378d82a076.mp3",
+      "bytes": 11520,
+      "sha256": "44ec332fbacbd225912aa71a358f9bde1a3c2402d9ad1fbf07eaf257f1c4dd71",
+      "type": "audio/mpeg"
+    },
+    "audio-2ec11ddda58245022137263bcac91f5b3a27c46453a53d234763f23ee3fb180b": {
+      "path": "resources/lesson12/audio/2ec11ddda58245022137263bcac91f5b3a27c46453a53d234763f23ee3fb180b.mp3",
+      "bytes": 12240,
+      "sha256": "dbd3b50dee7859d45f79ff8f8a5ba19649678618daf3f7fb00a53398ea9e02b1",
+      "type": "audio/mpeg"
+    },
+    "audio-a24569e032897173033f9ebd1590cd9b679aa00d87dfcbbe8dc5b0ca86cdddc2": {
+      "path": "resources/lesson12/audio/a24569e032897173033f9ebd1590cd9b679aa00d87dfcbbe8dc5b0ca86cdddc2.mp3",
+      "bytes": 18000,
+      "sha256": "6903eb9ed7bbf63807be1e3b6b088b63dbd4019b5e81fb4abc992a08792eb3fa",
+      "type": "audio/mpeg"
+    },
+    "audio-019777e75d8e9f240793733476b2bc7fffa65399b7acc983053fdb840a911178": {
+      "path": "resources/lesson12/audio/019777e75d8e9f240793733476b2bc7fffa65399b7acc983053fdb840a911178.mp3",
+      "bytes": 12960,
+      "sha256": "bc18977396ec66e58b61f1df8e47f74269214f142bfe26d9dde7f1c9557245a3",
+      "type": "audio/mpeg"
+    },
+    "pdf-en": {
+      "path": "resources/lesson12/hybrid-en.pdf",
+      "bytes": 2887257,
+      "sha256": "91e99d4e76727ddee3f116be2494f2c700aa168d3181eef723b6f1ba1acadd2e",
+      "filename": "Chinese_Practice_Lesson_12_HYBRID_EN_iPad_SAFE.pdf",
+      "type": "application/pdf"
+    },
+    "pdf-fr": {
+      "path": "resources/lesson12/hybrid-fr.pdf",
+      "bytes": 2888243,
+      "sha256": "882f97a87a698d6ed289e3ffe2a3d01cb8ca000854e670fef66b8b5dc097c7f7",
+      "filename": "Chinese_Practice_Lesson_12_HYBRID_FR_iPad_SAFE.pdf",
+      "type": "application/pdf"
+    },
+    "pdf-ru": {
+      "path": "resources/lesson12/hybrid-ru.pdf",
+      "bytes": 2889049,
+      "sha256": "56be48049994f58421035929dfb0e9a14e2e3f3bdc36dc764b051fc92aa1f2a7",
+      "filename": "Chinese_Practice_Lesson_12_HYBRID_RU_iPad_SAFE.pdf",
+      "type": "application/pdf"
+    },
+    "pdf-tr": {
+      "path": "resources/lesson12/hybrid-tr.pdf",
+      "bytes": 2887413,
+      "sha256": "1b2a6dbc5665ef30e5fc8a09418748dd028ec237a74c0cd76a3780d93ef53c1c",
+      "filename": "Chinese_Practice_Lesson_12_HYBRID_TR_iPad_SAFE.pdf",
+      "type": "application/pdf"
+    },
+    "visual-directions-en": {
+      "path": "resources/lesson12/visual-directions-en.pdf",
+      "bytes": 2687023,
+      "sha256": "5f584c2d52345cd84c3f8dae8b13479014f25ca75245567a31aa8f0b057b7017",
+      "filename": "Chinese_Practice_OS_Directions_Visual_Hybrid_EN_SEARCHABLE_iPad_SAFE.pdf",
+      "type": "application/pdf"
+    },
+    "visual-transport-en": {
+      "path": "resources/lesson12/visual-transport-en.pdf",
+      "bytes": 2517177,
+      "sha256": "2294722f423b634de0b368f46c155a0617d491668ad5320b693f2c21759e5781",
+      "filename": "Chinese_Classroom_Hybrid_Home_Day_Transport_EN_SEARCHABLE_iPad_SAFE.pdf",
+      "type": "application/pdf"
+    }
+  }
+}

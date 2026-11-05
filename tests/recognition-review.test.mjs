@@ -99,3 +99,74 @@ test('the final rating completes a finite session and its last card remains read
  await click(root,'Previous');assert.ok(text(root).includes('Already rated · viewing only'));assert.ok(!button(root,'HardCorrect, with effort'));
  await click(root,'Next');assert.ok(text(root).includes('Session complete'));assert.equal((await m.allEvents(env.db)).length,2);await unmount(root);
 });
+
+test('a committed pending rating from a different run starts at the first word and keeps prior progress',async()=>{
+ const env=await setup('old-pending-new-run');
+ let root=await mount({...env,runId:'old-run',record:async e=>{await env.record(e);throw Error('after commit')}});
+ await reveal(root);await click(root,'GoodRecalled correctly');await unmount(root);
+ const before=await m.allEvents(env.db),old=await m.readDraft(env.db,m.recognitionDraftKey);
+ assert.equal(old.attempts[queue[0].id].saved,undefined);
+ root=await mount({...env,runId:'new-run'});
+ assert.ok(button(root,'Show pinyin'));assert.ok(text(root).includes('半'));assert.ok(!text(root).includes('水'));
+ const draft=await m.readDraft(env.db,m.recognitionDraftKey);
+ assert.equal(draft.id,'new-run');assert.equal(draft.index,0);assert.equal(draft.attempts[queue[0].id].phase,1);assert.equal(draft.attempts[queue[0].id].event,undefined);
+ assert.deepEqual(await m.allEvents(env.db),before);
+ assert.deepEqual(await m.readDraft(env.db,m.recognitionDraftKey+':recovery:old-run'),old);
+ await unmount(root);env.db.close();
+});
+
+test('same-run recovery advances exactly once, prepares the next word and preserves read-only Back',async()=>{
+ const env=await setup('recover-once');let calls=0;
+ let root=await mount({...env,runId:'same',record:async e=>{calls++;await env.record(e);throw Error('after commit')}});
+ await reveal(root);await click(root,'HardCorrect, with effort');await unmount(root);
+ root=await mount({...env,runId:'same'});
+ assert.equal((await m.readDraft(env.db,m.recognitionDraftKey)).index,1);
+ assert.ok(text(root).includes('水'));assert.ok(button(root,'Show pinyin'));
+ await unmount(root);root=await mount({...env,runId:'same'});
+ assert.equal((await m.readDraft(env.db,m.recognitionDraftKey)).index,1);
+ await click(root,'Previous');assert.ok(text(root).includes('Already rated · viewing only'));
+ await unmount(root);root=await mount({...env,runId:'same'});
+ assert.ok(text(root).includes('Already rated · viewing only'));assert.equal((await m.readDraft(env.db,m.recognitionDraftKey)).index,0);
+ assert.equal(calls,1);assert.equal((await m.allEvents(env.db)).length,1);await unmount(root);env.db.close();
+});
+
+test('load failures remain visible and Retry recovers without clearing the saved draft or events',async()=>{
+ const env=await setup('load-failure');let root=await mount({...env,runId:'load-failure'});
+ await click(root,'Show pinyin');await unmount(root);
+ const before=await m.readDraft(env.db,m.recognitionDraftKey);let broken=true;
+ const db={transaction(...args){if(broken)throw Error('storage denied');return env.db.transaction(...args)}};
+ await m.act(async()=>{root=m.renderer.create(m.createElement(m.Review,{...env,db,runId:'load-failure',queue,notify(){},onPosition(){}}));await tick()});
+ await until(()=>!!button(root,'Retry loading notebook'));
+ assert.ok(text(root).includes('Could not load this review'));
+ assert.equal(root.root.findByType('section').props.role,'alert');
+ assert.deepEqual(await m.readDraft(env.db,m.recognitionDraftKey),before);
+ broken=false;await click(root,'Retry loading notebook');await until(()=>!!button(root,'Show English meaning'));
+ assert.deepEqual(await m.allEvents(env.db),[]);await unmount(root);env.db.close();
+});
+
+test('a hanging read aborts and offers Retry; a late result cannot overwrite the successful retry',async()=>{
+ const env=await setup('hung-read');let hanging=true,aborted=0,request;
+ const db={transaction(...args){if(!hanging)return env.db.transaction(...args);return {objectStore(){return {get(){request={};return request}}},abort(){aborted++}}}};
+ const nativeTimeout=globalThis.setTimeout;globalThis.setTimeout=(fn,ms,...args)=>nativeTimeout(fn,ms===10000?20:ms,...args);
+ let root;
+ try {
+  await m.act(async()=>{root=m.renderer.create(m.createElement(m.Review,{...env,db,runId:'hung',queue,notify(){},onPosition(){}}));await tick()});
+  await until(()=>!!button(root,'Retry loading notebook'));assert.equal(aborted,1);
+  hanging=false;await click(root,'Retry loading notebook');await until(()=>!!button(root,'Show pinyin'));
+  request.result={version:1,id:'obsolete',itemIds:[],index:10,attempts:{}};
+  await m.act(async()=>{request.onsuccess?.();await tick()});
+  assert.equal((await m.readDraft(env.db,m.recognitionDraftKey)).id,'hung');assert.ok(button(root,'Show pinyin'));
+ }finally{globalThis.setTimeout=nativeTimeout;if(root)await unmount(root);env.db.close()}
+});
+
+test('missing notebook connection stops loading and Retry requests a new connection',async()=>{
+ const env=await setup('missing-db');const nativeTimeout=globalThis.setTimeout;globalThis.setTimeout=(fn,ms,...args)=>nativeTimeout(fn,ms===10000?20:ms,...args);
+ let root,calls=0;
+ const props={...env,runId:'missing',queue,notify(){},onPosition(){},onRetryStorage(){calls++}};
+ try{
+  await m.act(async()=>{root=m.renderer.create(m.createElement(m.Review,{...props,db:null}));await tick()});
+  await until(()=>!!button(root,'Retry loading notebook'));await click(root,'Retry loading notebook');assert.equal(calls,1);
+  await m.act(async()=>{root.update(m.createElement(m.Review,props));await tick()});
+  await until(()=>!!button(root,'Show pinyin'));assert.equal((await m.allEvents(env.db)).length,0);
+ }finally{globalThis.setTimeout=nativeTimeout;if(root)await unmount(root);env.db.close()}
+});

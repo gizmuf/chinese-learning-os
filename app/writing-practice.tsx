@@ -1,6 +1,8 @@
 "use client";
+import HskBadge from './hsk-badge';
+import {HanziDisplayControls,useHanziStyle} from './hanzi-style';
 import {useEffect,useRef,useState} from 'react';
-import {ArrowRight,Check,ChevronRight,Lightbulb,PenLine,Play,Sparkles,Trash2,Undo2,Volume2} from 'lucide-react';
+import {ArrowRight,Check,ChevronRight,Lightbulb,Maximize2,Minimize2,PenLine,Play,Sparkles,Trash2,Undo2,Volume2} from 'lucide-react';
 import type {Item,Mode} from './content';
 import {compactStrokes,type LearningEvent,type Stroke} from './learning';
 import {readDraft,saveDraft} from './local-store';
@@ -54,6 +56,7 @@ export default function Writing({
   contextExample?: boolean;
 }) {
   const { t, locale } = useI18n();
+  const {style}=useHanziStyle();
   function listen(kind:'word'|'sentence') {
     if (audio) {const source=audio[kind];if(source)playRecording(source,notify);}
     else speak(kind==='word'?item.hanzi:item.sentence,notify,item);
@@ -62,6 +65,9 @@ export default function Writing({
     Array.from(item.hanzi, () => []),
   );
   const [index, setIndex] = useState(0);
+  const [enlarged,setEnlarged]=useState(false);
+  const [wholeWord,setWholeWord]=useState(false),[cellReplay,setCellReplay]=useState<Record<number,number>>({});
+  useEffect(()=>{setWholeWord(item.hanzi.length>1&&item.hanzi.length<=6&&typeof window!=='undefined'&&!!window.matchMedia?.("(min-width: 768px)").matches);},[item.id,item.hanzi]);
   const [assisted, setAssisted] = useState(supported);
   const [hints, setHints] = useState(0);
   const [mistakes, setMistakes] = useState(0);
@@ -128,12 +134,12 @@ export default function Writing({
     notify,
   ]);
   const characters = Array.from(item.hanzi);
-  const free = mode === "copy" || mode === "recall";
+  const printedTrace=style==='print'&&mode==='trace',free = mode === "copy" || mode === "recall" || printedTrace;
   const allWritten = free
     ? strokes.every((s) => s.length > 0)
     : completed.size === characters.length&&unavailable.size===0;
-  function changeStrokes(s: Stroke[]) {
-    setStrokes((old) => old.map((v, i) => (i === index ? s : v)));
+  function changeStrokes(s: Stroke[],at=index) {
+    setStrokes((old) => old.map((v, i) => (i === at ? s : v)));
   }
   async function save(r: LearningEvent["rating"]) {
     if (saved || saveLock.current) return;
@@ -194,6 +200,7 @@ export default function Writing({
             {t("Pencil only")}</label>
         </div>
         <div className="writing-prompt">
+          {(mode!=="recall"||revealed)&&<HskBadge text={item.hanzi}/>}
           <span className="eyebrow">
             {mode === "recall"
               ? t("WRITE FROM MEMORY")
@@ -215,45 +222,15 @@ export default function Writing({
             </button>
           ))}
         </div>
-        <div className="writing-grid">
-          <div className="grid-line horizontal" />
-          <div className="grid-line vertical" />
-          <div className="grid-line diagonal-one" />
-          <div className="grid-line diagonal-two" />
-          {free ? (
-            ready ? (
-              <Ink
-                key={index}
-                disabled={saved}
-                strokes={strokes[index] ?? []}
-                onChange={changeStrokes}
-                penOnly={penOnly}
-              />
-            ) : (
-              <span className="canvas-notice">{t("Loading your saved drawing…")}</span>
-            )
-          ) : (
-            <Guided
-              key={index}
-              character={characters[index]}
-              mode={mode as "watch" | "trace"}
-              penOnly={penOnly}
-              replay={replay}
-              onMistake={() => setMistakes((n) => n + 1)}
-              onAvailabilityChange={available=>setUnavailable(previous=>{const next=new Set(previous);if(available)next.delete(index);else next.add(index);return next;})}
-              onComplete={() =>
-                setCompleted((prev) => new Set([...prev, index]))
-              }
-            />
-          )}
-        </div>
+        {characters.length>1&&<div className="writing-layout-controls" role="group" aria-label={t('Writing layout')}>{[false,true].map(whole=><button type="button" className="secondary" key={String(whole)} aria-pressed={wholeWord===whole} onClick={()=>setWholeWord(whole)}>{whole?({en:'Whole word',fr:'Mot entier',ru:'Целое слово',tr:'Tüm sözcük'}[locale]):({en:'One character',fr:'Un caractère',ru:'Один иероглиф',tr:'Tek karakter'}[locale])}</button>)}</div>}
+        <div className="writing-presentation-controls">{!session&&<HanziDisplayControls compact showHighlight={false}/>}<button type="button" className="text-button writing-size-toggle" aria-pressed={enlarged} aria-label={({en:'Enlarge writing area',fr:'Agrandir la zone d’écriture',ru:'Увеличить поле письма',tr:'Yazma alanını büyüt'}[locale])} onClick={()=>setEnlarged(v=>!v)}>{enlarged?<Minimize2 size={15}/>:<Maximize2 size={15}/>} {enlarged?({en:'Normal size',fr:'Taille normale',ru:'Обычный размер',tr:'Normal boyut'}[locale]):({en:'Enlarge',fr:'Agrandir',ru:'Увеличить',tr:'Büyüt'}[locale])}</button></div><div className={wholeWord?'whole-word-writing':'single-character-writing'} style={{'--writing-cell-size':(enlarged?300:180)+'px',...(wholeWord?{width:(Math.min(characters.length,3)*(enlarged?300:180)+(Math.min(characters.length,3)-1)*14)+'px',maxWidth:'100%',gridTemplateColumns:`repeat(${Math.min(characters.length,3)},minmax(0,1fr))`}:{})} as React.CSSProperties}>{(wholeWord?characters.map((_,i)=>i):[index]).map(i=><div className={'writing-word-cell'+(i===index?' is-active':'')} key={i} onPointerDownCapture={event=>{if(!penOnly||event.pointerType==='pen')setIndex(i);}} onFocusCapture={()=>setIndex(i)}><div className="writing-grid"><div className="grid-line horizontal"/><div className="grid-line vertical"/><div className="grid-line diagonal-one"/><div className="grid-line diagonal-two"/>{printedTrace&&<svg className="writing-print-guide" viewBox="0 0 100 100" aria-hidden="true"><text x="50" y="80" textAnchor="middle" fontSize="82" fontFamily="var(--font-hanzi),sans-serif">{characters[i]}</text></svg>}{free?(ready?<Ink lineStyle={style==='print'?'pen':'brush'} disabled={saved} strokes={strokes[i]??[]} onChange={value=>changeStrokes(value,i)} penOnly={penOnly}/>:<span className="canvas-notice">{t('Loading your saved drawing…')}</span>):<Guided character={characters[i]} mode={mode as 'watch'|'trace'} penOnly={penOnly} replay={replay+(cellReplay[i]??0)} onMistake={()=>setMistakes(n=>n+1)} onAvailabilityChange={available=>setUnavailable(previous=>{const next=new Set(previous);if(available)next.delete(i);else next.add(i);return next;})} onComplete={()=>setCompleted(previous=>new Set([...previous,i]))}/>}</div>{wholeWord&&<button type="button" className="text-button" aria-pressed={i===index} onClick={()=>setIndex(i)}>{t('Character')} {i+1}{completed.has(i)&&!unavailable.has(i)?' ✓':''}</button>}</div>)}</div>
         <p className="canvas-caption">
           {completed.has(index) && !unavailable.has(index) && !free
             ? t("✓ Character complete. Choose the next cell.")
             : mode === "watch"
               ? t("Follow the stroke order. Replay whenever you like.")
               : mode === "trace"
-                ? t("Follow the outline, one stroke at a time.")
+                ? printedTrace?({en:'Trace the printed shape with a pen. This is free tracing, without automatic stroke scoring.',fr:'Repassez la forme imprimée au stylet. Tracé libre, sans évaluation automatique des traits.',ru:'Обведите печатную форму пером. Свободная обводка без автоматической оценки штрихов.',tr:'Basılı şekli kalemle çiz. Otomatik çizgi puanlaması olmayan serbest çizim.'}[locale]):t("Follow the outline, one stroke at a time.")
                 : mode === "copy"
                   ? t("Look at the reference. Write in the empty grid.")
                   : t("Write the whole word, then compare your answer.")}
@@ -270,7 +247,7 @@ export default function Writing({
             onClick={() => {
               if (free) changeStrokes([]);
               else {
-                setReplay((r) => r + 1);
+                setCellReplay(previous=>({...previous,[index]:(previous[index]??0)+1}));
                 setCompleted((p) => {
                   const n = new Set(p);
                   n.delete(index);
@@ -309,7 +286,7 @@ export default function Writing({
           <span>
             {t("Character")} {t("{0} of {1}", [index + 1, characters.length])}
           </span>
-          {index < characters.length - 1 ? (
+          {!wholeWord && index < characters.length - 1 ? (
             <button
               className="secondary"
               onClick={() => setIndex((i) => i + 1)}

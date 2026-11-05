@@ -20,16 +20,19 @@ export function readDictionarySize(value:unknown):WindowSize|undefined{
  if(!Number.isFinite(width)||!Number.isFinite(height)||width<=0||height<=0)return;
  return {width:Math.min(760,width),height:Math.min(2000,height)};
 }
-export function fitDictionarySize(size:WindowSize,bounds:WindowBounds):WindowSize{
+export function fitDictionarySize(size:WindowSize,bounds:WindowBounds,maxWidth=760):WindowSize{
  const width=Math.max(1,bounds.width-24),height=Math.max(1,bounds.height-24);
- return {width:Math.min(width,Math.max(Math.min(260,width),Math.min(760,size.width))),height:Math.min(height,Math.max(Math.min(240,height),size.height))};
+ return {width:Math.min(width,Math.max(Math.min(260,width),Math.min(maxWidth,size.width))),height:Math.min(height,Math.max(Math.min(240,height),size.height))};
 }
-export function resizeDictionaryWindow(rect:WindowRect,edge:ResizeEdge,delta:WindowPoint,bounds:WindowBounds):WindowRect{
+export function resizeDictionaryWindow(rect:WindowRect,edge:ResizeEdge,delta:WindowPoint,bounds:WindowBounds,maxWidth=760):WindowRect{
  const minWidth=Math.min(260,bounds.width-24),minHeight=Math.min(240,bounds.height-24);
  let left=rect.x,top=rect.y,right=rect.x+rect.width,bottom=rect.y+rect.height;
- if(edge.includes('w'))left=Math.max(bounds.left+12,right-760,Math.min(right-minWidth,rect.x+delta.x));
- if(edge.includes('e'))right=Math.min(bounds.left+bounds.width-12,left+760,Math.max(left+minWidth,right+delta.x));
+ if(edge.includes('w'))left=Math.max(bounds.left+12,right-maxWidth,Math.min(right-minWidth,rect.x+delta.x));
+ if(edge.includes('e'))right=Math.min(bounds.left+bounds.width-12,left+maxWidth,Math.max(left+minWidth,right+delta.x));
  if(edge.includes('n'))top=Math.max(bounds.top+12,Math.min(bottom-minHeight,rect.y+delta.y));
  if(edge.includes('s'))bottom=Math.min(bounds.top+bounds.height-12,Math.max(top+minHeight,bottom+delta.y));
  return {x:left,y:top,width:right-left,height:bottom-top};
 }
+
+/** Keep the definition on the left while making room for a compact notebook on the right. */
+export function expandDictionaryForNotebook(rect:WindowRect,bounds:WindowBounds):WindowRect{const size=fitDictionarySize({width:Math.max(940,rect.width),height:Math.max(620,rect.height)},bounds,1000);return {...clampDictionaryPosition({x:rect.x+rect.width-size.width,y:rect.y},bounds,size),...size};}
