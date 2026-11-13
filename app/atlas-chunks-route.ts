@@ -4,24 +4,24 @@ import {compareWordFamilies, familyWords, selectFamilyWord} from './word-family-
 import type {CloudWord} from './atlas-cloud-model';
 import type {Locale} from './translate';
 
-export function atlasContextWord(
+export function atlasLearningContext(
  route: CloudRoute,
  locale: Locale,
  scopedWords: readonly CloudWord[],
  characterWord: CloudWord | undefined,
-) {
- if (route.layout === 'journey') return scopedWords.find(word => word.id === route.familyEntry);
+): {word?: CloudWord; character?: {hanzi: string}; relatives?: CloudWord[]} {
+ if (route.layout === 'journey') return {word: scopedWords.find(word => word.id === route.familyEntry)};
  if (route.layout === 'words') {
   const words = route.wordCompare
    ? compareWordFamilies('哪', '那', locale, route.level).flatMap(row => [...row.left, ...row.right])
    : familyWords(route.anchor, locale, route.level);
-  return selectFamilyWord(words, route.familyEntry);
+  return {word: selectFamilyWord(words, route.familyEntry)};
  }
  if (isHybridLayout(route.layout)) {
   const words = hybridWords(route.mapSet, route.anchor, locale, route.level);
-  return hybridSelection(words, hybridInventory(words, locale).characters, route.hanzi, route.familyEntry).word;
+  return hybridSelection(words, hybridInventory(words, locale).characters, route.hanzi, route.familyEntry);
  }
- return characterWord;
+ return {word: characterWord};
 }
 
 export function atlasChunksHref(route: CloudRoute, word?: CloudWord) {
