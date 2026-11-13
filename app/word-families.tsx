@@ -35,6 +35,7 @@ export default function WordFamilies(p:Props){
  const candidates=useMemo(()=>searchPending?wordFamilyCandidates(submittedQuery,locale,scope):[],[submittedQuery,searchPending,locale,scope]);
  const searchMessage=searchPending?(candidates.length?c('Choose the written form below.','Choisissez la forme écrite ci-dessous.','Выберите написание ниже.'):c('No exact pinyin match in this vocabulary. Try All or enter Chinese characters.','Aucun pinyin exact dans ce vocabulaire. Essayez Tout ou des caractères chinois.','Нет точного пиньинь в этом словаре. Выберите «Все» или введите иероглифы.')):error;
  const component=extendedComponent(anchor);
+ const componentAction={en:'Show characters with',fr:'Afficher les caractères avec',ru:'Показать знаки с',tr:'Bu bileşeni içeren karakterleri göster:'}[locale];
  const revealKey=[anchor,scope,selected?.id,locale,mode,p.route.wordMemory].join('|'),revealed=revealToken===revealKey;
  function setRevealed(value:boolean){setRevealToken(value?revealKey:'')}
  const audio=useRef<HTMLAudioElement|null>(null);
@@ -46,6 +47,12 @@ export default function WordFamilies(p:Props){
  function choose(word:CloudWord){if(p.route.familyEntry===word.id)return;setRevealed(false);p.onChange({familyEntry:word.id})}
  function chooseIndex(next:number){const word=words[boundedFamilyIndex(next,words.length)];if(word)choose(word)}
  function chooseAnchor(next:string){next=canonicalDictionaryText(next)??'';if(!validWordAnchor(next)){setError(c('Enter one to eight Chinese characters.','Saisissez un à huit caractères chinois.','Введите от одного до восьми китайских знаков.'));return}setDraft(next);setError('');setSubmittedQuery('');setSearchPending(false);stop();p.onChange({anchor:next,wordCompare:false,familyEntry:''})}
+ function componentButton(component:NonNullable<ReturnType<typeof extendedComponent>>){
+  return <button type="button" onClick={()=>{
+   stop();
+   p.onChange({layout:'family',component:component.id,hanzi:component.glyph,stage:'family',word:'',familyEntry:'',kind:'character',parts:[],relation:'all'});
+  }}>{componentAction} <span lang="zh-Hans">{component.glyph}</span></button>;
+ }
  function submitSearch(){const query=draft.trim();if(validWordAnchor(query)){chooseAnchor(query);return}stop();setError('');setSubmittedQuery(query);setSearchPending(true)}
  function listen(word:CloudWord,sentence=false){const clip=sentence?sentencePronunciation(word):wordPronunciation(word);if(!clip)return;stop();setPlaying(clip.source);const value=playRecording(clip.source,()=>{setPlaying('');p.notify(c('Could not play. Tap the speaker to retry.','Lecture impossible. Réessayez avec le haut-parleur.','Не удалось воспроизвести. Нажмите динамик ещё раз.'))});audio.current=value;const ended=value.onended;value.onended=e=>{if(typeof ended==='function')ended.call(value,e);if(audio.current===value){audio.current=null;setPlaying('')}}}
  const hidden=mode==='train'&&p.route.wordMemory&&!revealed;
@@ -58,7 +65,14 @@ export default function WordFamilies(p:Props){
   <p className="wf-explanation">{c('Words sharing written characters. This is a different view from characters sharing a component.','Des mots qui partagent des caractères écrits. Une autre vue que les caractères partageant un composant.','Слова с общими написанными знаками. Это другой вид, чем знаки с общим компонентом.')}</p>
   <div className="wf-controls"><form onSubmit={e=>{e.preventDefault();submitSearch()}}><label htmlFor="wf-anchor-input">{c('Pinyin / shared characters','Pinyin / caractères communs','Пиньинь / общие знаки')}</label><div><input id="wf-anchor-input" value={draft} onChange={e=>setDraft(e.target.value)} maxLength={16} autoComplete="off" placeholder="xue / 学 / 学生"/><button type="submit" aria-label={c('Find this family','Trouver cette famille','Найти семейство')}><Search size={16}/></button></div></form><label>{c('Vocabulary','Vocabulaire','Словарь')}<select aria-label={c('Word family vocabulary','Vocabulaire des familles de mots','Словарь семейств слов')} value={scope} onChange={e=>p.onChange({level:parseBrowseScope(e.target.value)})}><option value="1">HSK 1</option><option value="2">HSK 1–2</option><option value="3">HSK 1–3</option><option value="4">HSK 1–4</option><option value="5">HSK 1–5</option><option value="6">HSK 1–6</option><option value="7-9">HSK 1–6 + 7–9</option><option value="all">{c('All','Tout','Все')}</option></select></label><nav className="wf-modes" aria-label={c('Word family view','Vue des familles de mots','Вид семейства слов')}><button type="button" aria-pressed={mode==='board'} onClick={()=>p.onChange({wordView:'board'})}>{c('Board','Planche','Таблица')}</button><button type="button" aria-pressed={mode==='train'} onClick={()=>p.onChange({wordView:'train',wordCompare:false})}>{c('Difference training','Entraînement des différences','Тренировка различий')}</button></nav></div>
   {searchMessage&&<p role="status">{searchMessage}</p>}
-  {searchPending&&<nav className="wf-shortcuts" aria-label="Choose a written family">{candidates.map(row=><button type="button" key={row.hanzi} onClick={()=>chooseAnchor(row.hanzi)}><span lang="zh-Hans">{row.hanzi}</span> {row.pinyin}</button>)}</nav>}
+  {searchPending&&<nav className="wf-shortcuts" aria-label="Choose a written family">{candidates.map(row=>{
+   const found=!row.pinyin&&extendedComponent(row.hanzi);
+   return <div key={row.hanzi} className="wf-candidate">
+    <button type="button" onClick={()=>chooseAnchor(row.hanzi)}><span lang="zh-Hans">{row.hanzi}</span> {row.pinyin}</button>
+    {found&&componentButton(found)}
+   </div>;
+  })}</nav>}
+  {!searchPending&&component&&!p.route.wordCompare&&<div className="wf-shortcuts">{componentButton(component)}</div>}
   {!searchPending&&<>
   {!(mode==='train'&&p.route.wordMemory)&&<nav className="wf-shortcuts" aria-label={c('Shared character groups','Groupes de caractères communs','Группы общих знаков')}>{['学','学生','电','电影','大','哪','那','天','子','人'].map(value=><button type="button" key={value} aria-pressed={!p.route.wordCompare&&anchor===value} onClick={()=>chooseAnchor(value)} lang="zh-Hans">{value}</button>)}<button type="button" aria-pressed={p.route.wordCompare} onClick={()=>p.onChange({wordCompare:!p.route.wordCompare,wordView:'board',anchor:'哪',familyEntry:''})}>{c('Compare','Comparer','Сравнить')} 哪 / 那</button><details className="wf-directory"><summary>{c('Character index','Index des caractères','Указатель знаков')} · {anchors.length}</summary><div>{anchors.map(row=><button type="button" key={row.anchor} onClick={()=>chooseAnchor(row.anchor)}><span lang="zh-Hans">{row.anchor}</span><small>{row.count}</small></button>)}</div></details></nav>}
   <p className="wf-count" aria-live="polite">{p.route.wordCompare?`${allPair.length}`:`${words.length}`} {c('words / readings','mots / lectures','слов / чтений')} · {scope==='all'?c('all available vocabulary','tout le vocabulaire disponible','весь доступный словарь'):`HSK ${scope===1?'1':'1–'+scope}`} · {p.route.wordCompare?'哪 / 那':anchor}</p>
@@ -71,7 +85,6 @@ export default function WordFamilies(p:Props){
    {!p.route.wordMemory&&<details className="wf-training-list" open><summary>{c('Whole family','Toute la famille','Всё семейство')} · {words.length}</summary><div>{words.map(word=><button type="button" key={word.id} aria-pressed={selected?.id===word.id} onClick={()=>choose(word)}><span lang="zh-Hans"><SharedText text={word.hanzi} anchor={anchor}/></span><small>{word.pinyin} · {word.meaning}</small></button>)}</div></details>}
   </>:null}
   {!pool.length&&<p className="wf-empty">{c('No words with these characters in this scope. Try a different group or All.','Aucun mot avec ces caractères dans ce niveau. Essayez un autre groupe ou Tout.','В этом уровне нет слов с такими знаками. Выберите другую группу или «Все».')}</p>}
-  {component&&!p.route.wordCompare&&<p className="wf-note">{c('Looking for characters built with this component, rather than words containing it?','Vous cherchez des caractères formés avec ce composant plutôt que des mots le contenant ?','Ищете знаки с этим компонентом, а не слова с этим иероглифом?')} <button type="button" onClick={()=>{stop();p.onChange({layout:'family',component:component.id,hanzi:component.glyph,stage:'family',word:'',familyEntry:'',kind:'character',parts:[],relation:'all'})}}>{c('Explore component','Explorer le composant','Изучить компонент')} {component.glyph}</button></p>}
   {selected&&!hidden&&details(selected)}
   </>}
   <p className="wf-note">{c('Literal shared writing, not a claim about shared meaning or etymology. Exploring and revealing do not record mastery.','Un point commun dans l’écriture, pas une affirmation de sens ou d’étymologie partagés. Explorer et révéler ne valide pas la maîtrise.','Совпадение в написании не гарантирует общего значения или происхождения. Просмотр и показ ответа не засчитывают освоение.')}</p>

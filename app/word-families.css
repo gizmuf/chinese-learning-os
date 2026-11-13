@@ -10,3 +10,5 @@
 /* Expanded study view spends the tablet height on the complete family. Exit restores Atlas navigation. */
 .cloud-full .layout-words>.cloud-heading,.cloud-full .layout-words>.cloud-view-switch{display:none}.cloud-full .layout-words .word-family-lab{padding:12px 22px}.cloud-full .layout-words .wf-heading{display:flex;min-height:40px}.cloud-full .layout-words .wf-heading h2{font-size:22px}.cloud-full .layout-words .wf-kicker,.cloud-full .layout-words .wf-explanation,.cloud-full .layout-words .wf-shortcuts{display:none}.cloud-full .layout-words .wf-row{min-height:44px}.cloud-full .layout-words .wf-hanzi{font-size:min(26px,calc(var(--wf-room) / var(--wf-letters)))}
 .word-family-lab .wf-reel-row{display:flex;align-items:flex-start;justify-content:center}
+
+.word-family-lab .wf-candidate { display: inline-flex; flex-wrap: wrap; gap: 6px; }
