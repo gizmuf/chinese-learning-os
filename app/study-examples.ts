@@ -7,6 +7,8 @@ import {lesson09Sentences,lesson09Audio} from './lesson09-data';
 import {lesson08Sentences,lesson08Audio} from './lesson08-data';
 import {lesson07Sentences,lesson07Audio} from './lesson07-data';
 import type {Locale} from './translate';
+import {authoredCharacterReadings,authoredPinyinBoundaries} from './pinyin-boundaries';
+import {simplifiedDisplayText} from './simplified-chinese';
 import {cloudWords} from './atlas-cloud-model';
 import {sentencePronunciation,type DictionaryEntry,type StudyDictionary,type Pronunciation,dictionaryTokens,inheritDictionaryLexicon} from './atlas-spatial-model';
 import {sentences} from './course-data';
@@ -16,6 +18,8 @@ import {lesson06Sentences,lesson06Audio} from './lesson06-data';
 import extra from '../data/lesson06/usage-examples.json';
 export type StudyExample={id:string;text:string;pinyin:string;meaning:string;audio?:Pronunciation};
 const pools=new Map<Locale,StudyExample[]>();
+const sentenceKey=(value:string)=>simplifiedDisplayText(value).replace(/[\s\p{P}]/gu,'');
+const readingKey=(value:string)=>value.normalize('NFC').toLowerCase().replace(/[\s’'·-]/gu,'');
 function examples(locale:Locale){
  let pool=pools.get(locale);if(pool)return pool;
  const row=(v:{id:string;hanzi:string;pinyin:string;meaning:Record<Locale,string>},source:string):StudyExample=>({id:v.id,text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],audio:{text:v.hanzi,pinyin:v.pinyin,source,context:false,kind:'sentence'}});
@@ -35,16 +39,43 @@ function examples(locale:Locale){
  pools.set(locale,pool);return pool;
 }
 /** Real authored sentences only: never use the isolated expression as its own example. */
-export function studyExamples(text:string,locale:Locale,limit=2,priority=''):StudyExample[]{
+export function studyExamples(text:string,locale:Locale,limit=2,priority='',accept:(example:StudyExample)=>boolean=()=>true):StudyExample[]{
  if(!text||limit<1)return [];
  const normalized=(value:string)=>value.replace(/[\s\p{P}]/gu,'');
  const seen=new Set<string>(),result:StudyExample[]=[];
  for(const value of [...examples(locale)].sort((a,b)=>priority?Number(b.id.startsWith(priority))-Number(a.id.startsWith(priority)):0)){
   if(value.id.startsWith('ref-')&&!referenceWordOccurs(value.text,text))continue;
-  if(!value.text.includes(text)||normalized(value.text)===normalized(text)||!/[。！？!?]/u.test(value.text)||seen.has(value.text))continue;
+  if(!value.text.includes(text)||normalized(value.text)===normalized(text)||!/[。！？!?]/u.test(value.text)||seen.has(value.text)||!accept(value))continue;
   seen.add(value.text);result.push(value);if(result.length>=limit)break;
  }
  return result;
+}
+/**
+ * Keep the source sentence as the first example. Additional examples must be
+ * distinct and contain the selected word (or character) with its authored reading.
+ */
+export function popupStudyExamples(entry:DictionaryEntry,dictionary:StudyDictionary,locale:Locale):StudyExample[]{
+ const active=simplifiedDisplayText(entry.text),glyphs=Array.from(active),source=entry.contextual;
+ const seen=new Set(source?[sentenceKey(source.text)]:[]);
+ const readings=new Set(entry.pinyin.split(/\s*[/;,|]\s*/u).filter(Boolean).map(readingKey));
+ return studyExamples(entry.text,locale,source?1:2,'',example=>{
+  const key=sentenceKey(example.text);
+  if(seen.has(key))return false;
+  const text=simplifiedDisplayText(example.text);
+  const aligned=authoredCharacterReadings(text,example.pinyin);
+  if(readings.size){
+   if(!aligned)return false;
+   let matches=false;
+   for(let i=0;i<=aligned.length-glyphs.length;i++){
+    const part=aligned.slice(i,i+glyphs.length);
+    if(part.map(row=>row.character).join('')===active&&readings.has(readingKey(part.map(row=>row.pinyin).join('')))){matches=true;break;}
+   }
+   if(!matches)return false;
+  }
+  if(glyphs.length>1&&!dictionaryTokens(text,dictionary,undefined,authoredPinyinBoundaries(text,example.pinyin)).some(token=>token.text===active))return false;
+  seen.add(key);
+  return true;
+ });
 }
 export function dictionaryBreakdown(entry:DictionaryEntry,dictionary:StudyDictionary,locale:Locale='en'){
  const sentence=/[。！？!?，,；;]/u.test(entry.text),phrase=entry.phrase===true;

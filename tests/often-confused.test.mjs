@@ -1,11 +1,13 @@
+import {createRequire} from 'node:module';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 
-const result=await build({stdin:{contents:`export * from './app/often-confused-data';export {default as OftenConfused,ContrastPicture,confusionCopy} from './app/often-confused';export {appStudyDictionary} from './app/study-lookup-model';export {dictionaryTokens} from './app/atlas-spatial-model';export {createElement} from 'react';export {renderToStaticMarkup} from 'react-dom/server';export {setLocale} from './i18n';export {matchesContrast} from './app/often-confused';`,resolveDir:process.cwd()},jsx:'automatic',bundle:true,platform:'node',format:'esm',write:false,loader:{'.css':'empty'},logLevel:'silent',banner:{js:"import{createRequire}from'node:module';const require=createRequire(process.cwd()+'/package.json');"},plugins:[{name:'locale',setup(b){b.onResolve({filter:/^\.\/i18n$/},()=>({path:'mock',namespace:'locale'}));b.onLoad({filter:/.*/,namespace:'locale'},()=>({contents:`let locale='en';export const setLocale=value=>{locale=value};export const useI18n=()=>({locale,t:text=>text});`,loader:'js'}));}}]});
-const m=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
+const result=await build({stdin:{contents:`export * from './app/often-confused-data';export {default as OftenConfused,ContrastPicture,confusionCopy} from './app/often-confused';export {appStudyDictionary} from './app/study-lookup-model';export {dictionaryTokens} from './app/atlas-spatial-model';export {createElement} from 'react';export {renderToStaticMarkup} from 'react-dom/server';export {setLocale} from './i18n';export {matchesContrast} from './app/often-confused';`,resolveDir:process.cwd()},jsx:'automatic',bundle:true,platform:'node',format:'cjs',write:false,loader:{'.css':'empty'},logLevel:'silent',plugins:[{name:'locale',setup(b){b.onResolve({filter:/^\.\/i18n$/},()=>({path:'mock',namespace:'locale'}));b.onLoad({filter:/.*/,namespace:'locale'},()=>({contents:`let locale='en';export const setLocale=value=>{locale=value};export const useI18n=()=>({locale,t:text=>text});`,loader:'js'}));}}]});
+const module={exports:{}};new Function('require','module','exports',result.outputFiles[0].text)(createRequire(import.meta.url),module,module.exports);
+const m=module.exports;
 
 test('Visual pilot offers 24 compact contrast sets with complete four-language meanings and examples',()=>{
  assert.equal(m.confusionGroups.length,24);assert.equal(m.confusionItems.length,54);

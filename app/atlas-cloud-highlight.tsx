@@ -40,7 +40,7 @@ function Character({ hanzi, component }: { hanzi: string; component?: string }) 
   const [loaded, setLoaded] = useState<{ hanzi: string; data: GlyphData | null } | null>(null);
   useEffect(() => {
     let active = true;
-    if (style !== 'strokes') return;
+    if (style !== 'strokes' || !/^\p{Unified_Ideograph}$/u.test(hanzi)) return;
     // Requests are shared by nodes/focus/word chunks. Do not abort another consumer's
     // request on unmount; the guard prevents stale updates after navigation/unmount.
     void loadGlyph(hanzi).then(data => { if (active) setLoaded({ hanzi, data }); });

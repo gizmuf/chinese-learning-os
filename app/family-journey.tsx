@@ -36,7 +36,7 @@ export default function FamilyJourney(p:Props){
   const sentence=sentencePronunciation(word);
   return <section className="fj-word-context" id={'fj-context-'+encodeURIComponent(word.id)} aria-label={t('context')+' · '+word.hanzi}>
    <div className="fj-context-top"><strong lang="zh-Hans"><StudyText text={word.hanzi} whole/></strong><span>{word.pinyin}</span><button type="button" aria-label={t('close')} onClick={()=>{p.onChange({familyEntry:''});requestAnimationFrame(()=>document.getElementById('fj-open-'+encodeURIComponent(word.id))?.focus())}}><X size={17}/></button></div>
-   {word.item?<><p className="fj-sentence" lang="zh-Hans"><StudyText text={word.item.sentence} anchor={anchor}/></p><p>{word.item.sentencePinyin}</p><p>{word.item.translation}</p></>:<p>{t('noSentence')}</p>}
+   {word.item?<><p className="fj-sentence" lang="zh-Hans" data-study-sentence={word.item.sentence} data-study-pinyin={word.item.sentencePinyin} data-study-meaning={word.item.translation} data-study-source-id={word.id}><StudyText text={word.item.sentence} pinyin={word.item.sentencePinyin} anchor={anchor}/></p><p>{word.item.sentencePinyin}</p><p>{word.item.translation}</p></>:<p>{t('noSentence')}</p>}
    <div className="fj-context-actions">{sentence&&<button type="button" aria-label={t('listenSentence')+' · '+word.hanzi} aria-pressed={playing===sentence.source} onClick={()=>listen(word,true)}><Volume2 size={17}/>{t('sentence')}</button>}<button type="button" disabled={!word.item&&!word.atlasCharacterId} onClick={e=>{stop();p.onWrite(word,e.currentTarget)}}><PenLine size={17}/>{word.item?t('write'):t('writeLinked')+' '+(atlasById.get(word.atlasCharacterId??'')?.hanzi??'')}</button></div>
   </section>;
  }

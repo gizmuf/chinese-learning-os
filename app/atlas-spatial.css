@@ -113,3 +113,9 @@
 .sp-dictionary.has-notebook{container-type:inline-size;container-name:definition-window}@container definition-window (max-width:680px){.sp-dictionary.has-notebook .sp-dictionary-content{display:block;overflow:auto}.sp-dictionary.has-notebook .sp-dictionary-body{overflow:visible}.sp-mini-notebook{border-left:0;border-top:1px solid #dce5d6;overflow:visible}.sp-mini-notebook-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 @container definition-window (min-width:461px) and (max-width:680px){.sp-mini-notebook-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+.sp-dictionary-memory{margin:12px 0;border:1px solid var(--line,#dce4d3);border-radius:10px}
+.sp-dictionary-memory>summary{padding:10px 12px;cursor:pointer;font-weight:600}
+.sp-dictionary-memory .family-stories{border:0;margin:0;padding:0;background:none}
+.sp-dictionary-memory .workshop-actions button{max-width:100%;white-space:normal}
+mark.sp-dictionary-current{background:transparent;color:inherit;text-decoration:underline;text-underline-offset:.2em}

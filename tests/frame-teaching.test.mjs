@@ -1,6 +1,8 @@
+import {createRequire} from 'node:module';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {build} from 'esbuild';
-const b=await build({stdin:{contents:`export {grammarFrames,grammarChunkTasks,learningSequence} from './app/chunk-library-data';export {FrameTeaching} from './app/frame-teaching';export {appStudyDictionary,studyLookupEntry} from './app/study-lookup-model';export {createElement} from 'react';export {renderToStaticMarkup} from 'react-dom/server';`,resolveDir:process.cwd()},banner:{js:"import{createRequire}from'node:module';const require=createRequire(process.cwd()+'/package.json');"},jsx:'automatic',loader:{'.css':'empty'},bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent'});
-const m=await import('data:text/javascript;base64,'+Buffer.from(b.outputFiles[0].text).toString('base64'));
+const b=await build({stdin:{contents:`export {grammarFrames,grammarChunkTasks,learningSequence} from './app/chunk-library-data';export {FrameTeaching} from './app/frame-teaching';export {appStudyDictionary,studyLookupEntry} from './app/study-lookup-model';export {createElement} from 'react';export {renderToStaticMarkup} from 'react-dom/server';`,resolveDir:process.cwd()},jsx:'automatic',loader:{'.css':'empty'},bundle:true,platform:'node',format:'cjs',write:false,logLevel:'silent'});
+const module={exports:{}};new Function('require','module','exports',b.outputFiles[0].text)(createRequire(import.meta.url),module,module.exports);
+const m=module.exports;
 test('All 54 patterns teach a scene, usage, contrast and visual relationship before any cloze input',()=>{
  assert.equal(m.grammarFrames.filter(f=>f.advanced).length,30);
  for(const f of m.grammarFrames){assert.equal(f.examples.length,2);assert.equal(f.learning.labels.length,2);for(const lang of ['en','fr','ru','tr']){for(const key of ['scene','explanation','contrast'])assert.ok(f.learning[key][lang],f.id+key+lang);assert.ok(f.learning.labels.every(label=>label[lang]));}}

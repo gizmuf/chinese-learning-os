@@ -8,6 +8,22 @@ Passive Chinese text elsewhere in the main learning area also supports click/tap
 
 The shared vocabulary includes the existing HSK/Atlas dictionary, Lesson 3/4/5 terms, video characters and source-backed metadata for all 968 locally served writing characters. The metadata comes from the previously used Make Me a Hanzi dictionary and retains its LGPL/source attribution in `public/licenses/hanzi-structure-*`. Reviewed/localized definitions take precedence. Unreviewed fallback character definitions may be English. No new audio is generated: the dictionary uses validated existing character, word and course recordings and labels whole-word pronunciation context accurately.
 
+## From the Atlas to examples and illustrated stories
+
+Atlas character details open the same dictionary. Family Journey carries the
+sentence's authored pinyin and translation into lookup. The popup keeps that
+sentence first and shows a distinct curated example when one matches the
+selected reading. Lookups in the new example preserve the source context.
+
+For the eleven reviewed 莫-family characters, **Picture & memory story** opens
+the selected illustration, component explanation and usage in place. Close it
+to continue browsing the same definition. The illustrated memory cues remain
+separate from source-based structure and historical claims.
+
+The Atlas preparation step ships local stroke data for the HSK browse index
+from the pinned Hanzi Writer dataset. Existing public character URLs retain
+their original bytes on Alibaba.
+
 ## Assessment integrity
 
 A dictionary help event is handled by each opted-in exercise's existing assisted/hint state. HSK recognition recall, Lessons 3/4/5 checks and classic Atlas practice save lookup-assisted results as assisted; they do not advance independent recall. For recognition/listening formats whose event schema does not represent assistance, lookup stays unavailable before checking and becomes available in feedback. Answer-choice buttons continue to answer the question, rather than opening a definition. Drawing surfaces are excluded from passive lookup.

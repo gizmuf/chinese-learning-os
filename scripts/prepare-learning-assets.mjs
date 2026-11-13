@@ -20,3 +20,5 @@ await import("./verify-lesson04.mjs");
 await import("./verify-lesson05.mjs");
 await import("./verify-video-study.mjs");
 await import('./prepare-atlas.mjs');
+const {prepareAtlasBrowseStrokes}=await import('./prepare-atlas-browse-strokes.mjs');
+await prepareAtlasBrowseStrokes();

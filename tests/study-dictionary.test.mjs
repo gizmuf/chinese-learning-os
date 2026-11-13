@@ -44,7 +44,7 @@ test('source sentence recording stays with its source while isolated headword au
  const html=m.contextualDefinition(entry),header=html.slice(html.indexOf('<header'),html.indexOf('</header>')),contextStart=html.indexOf('<section class="sp-dictionary-context"'),context=html.slice(contextStart,html.indexOf('</section>',contextStart));
  assert.match(header,/Whole word: 醒/);assert.doesNotMatch(header,/Listen to the sentence/);assert.match(context,/Listen to the sentence: 我每天八点左右醒来/);
  const sourceOnly=m.contextualDefinition({...entry,audio:sentence.audio});assert.doesNotMatch(sourceOnly.slice(0,sourceOnly.indexOf('</header>')),/Listen to the sentence/);assert.match(sourceOnly,/Listen to the sentence/);
- const missing=m.contextualDefinition({...entry,audio:undefined,contextual:{...sentence,audio:undefined}});assert.doesNotMatch(missing,/class="sp-speaker/);
+ const missing=m.contextualDefinition({...entry,audio:undefined,contextual:{...sentence,audio:undefined}});assert.doesNotMatch(missing.slice(0,missing.indexOf('<section class="sp-dictionary-examples"')),/class="sp-speaker/);
 });
 
 test('all headwords expose the same nearby writing action and supported Atlas link',()=>{
@@ -79,4 +79,18 @@ test('aligned Pinyin remains attached to the right Hanzi without replacing dicti
  assert.doesNotMatch(m.aligned('银行','yínháng',false),/<rt>/);
  const chunk=m.aligned('书店','Yínháng zài shūdiàn dōngbian.',true,'银行在书店东边。',3);assert.match(chunk,/>书<rt>shū<\/rt>/);assert.match(chunk,/>店<rt>diàn<\/rt>/);
  assert.doesNotMatch(m.aligned('哪儿','nǎr'),/<rt>/,'ambiguous erhua is never assigned to the wrong character');
+});
+
+test('a word opened in a lesson keeps its source and shows a different matching example',()=>{
+ const source={text:'我想坐出租车。',pinyin:'Wǒ xiǎng zuò chūzūchē.',meaning:'I would like to take a taxi.'};
+ const html=m.contextualDefinition({text:'出租车',pinyin:'chūzūchē',meaning:'taxi',contextual:source});
+ assert.match(html,/In this sentence/);
+ const examples=html.match(/<section class="sp-dictionary-examples"[^>]*>(.*?)<\/section>/s)?.[1];
+ assert.ok(examples,'a curated second example exists in the corpus');
+ assert.match(examples,/出租车/);
+ assert.doesNotMatch(examples,/我想坐出租车。/);
+});
+test('illustrated stories are offered only for their reviewed characters',()=>{
+ assert.match(m.contextualDefinition({text:'幕',pinyin:'mù',meaning:'curtain'}),/Picture &amp; memory story/);
+ assert.doesNotMatch(m.contextualDefinition({text:'帽',pinyin:'mào',meaning:'hat'}),/Picture &amp; memory story/);
 });
