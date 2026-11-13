@@ -24,7 +24,8 @@ to continue browsing the same definition. The illustrated memory cues remain
 separate from source-based structure and historical claims.
 
 The Atlas preparation step ships local stroke data for the HSK browse index
-from the pinned Hanzi Writer dataset. Existing public character URLs retain
+from the pinned Hanzi Writer dataset, including two related non-HSK glyphs
+shown in the 莫 family (摹 and 嫫). Existing public character URLs retain
 their original bytes on Alibaba.
 
 ## Assessment integrity

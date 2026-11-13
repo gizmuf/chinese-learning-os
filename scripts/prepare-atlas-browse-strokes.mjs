@@ -2,10 +2,13 @@ import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import {join,resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
+// These non-HSK characters appear in the 莫 family browsing path.
+const atlasRelatedGlyphs=['摹','嫫'];
+
 /** Ship Atlas browse glyphs from the already pinned, attributed Hanzi Writer data. */
 export async function prepareAtlasBrowseStrokes(target='public/characters'){
  const {characters}=JSON.parse(await readFile('data/hsk-browse-index.json','utf8'));
- const glyphs=[...new Set(characters.map(row=>row.hanzi))].sort();
+ const glyphs=[...new Set([...characters.map(row=>row.hanzi),...atlasRelatedGlyphs])].sort();
  await mkdir(target,{recursive:true});
  let added=0;
  for(const glyph of glyphs){
