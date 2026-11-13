@@ -1,0 +1,124 @@
+{
+  "lessonId": "intensive-07",
+  "pdfPages": 24,
+  "files": [
+    {
+      "filename": "Chinese_Practice_Lesson_07_HYBRID_EN_iPad_SAFE.pdf",
+      "sha256": "3393c5d070c14281fa944d4d2fa00b72526fa58025dd6d2bf8b7fbf2204e96c8",
+      "bytes": 8862618
+    },
+    {
+      "filename": "IMG_0191.heic",
+      "sha256": "94f495b148627ce91184b3d6b9ef199312ab88d9aad17c494a8c5a86f0bab51a",
+      "bytes": 891268
+    },
+    {
+      "filename": "IMG_0192.heic",
+      "sha256": "39bacecb2d97eb9018ff93b90d31f4efa335cd06dda3063b663fb668f2f9a5e5",
+      "bytes": 987372
+    },
+    {
+      "filename": "IMG_0193.heic",
+      "sha256": "2e36b6dc4721493806b3545c502da5e9f03f4cbc0689e66b743b36307143c2d2",
+      "bytes": 1249192
+    },
+    {
+      "filename": "IMG_0194.heic",
+      "sha256": "adaae2d93fa96dca5e03ec83cba53f8071942c11b7ece418e19d84de5b5ff08d",
+      "bytes": 982557
+    },
+    {
+      "filename": "IMG_0195.heic",
+      "sha256": "e54133091be0aa74a3485194608f6b17201611a23adfa3ae9f2b5e313c1920d9",
+      "bytes": 1668858
+    },
+    {
+      "filename": "IMG_0196.heic",
+      "sha256": "e0d60be119f8623c4f4423e6261cdc322480f06fbcd6ea3675aeec7867ffd04e",
+      "bytes": 1107309
+    },
+    {
+      "filename": "IMG_0197.heic",
+      "sha256": "ff360dbb3b72185a1267d71939524b5b2dcb6025a023856922162316e9158d5b",
+      "bytes": 966251
+    },
+    {
+      "filename": "IMG_0198.heic",
+      "sha256": "e52c98ffe2ba3f267a24aa20f732282eea21bf552c253bb6cf4a56854f48c571",
+      "bytes": 825544
+    },
+    {
+      "filename": "IMG_0199.heic",
+      "sha256": "a1fe37054795b70c9327970bbb2f06e8723fc194086aec7a032619b1c0297161",
+      "bytes": 1446282
+    },
+    {
+      "filename": "IMG_0200.heic",
+      "sha256": "5d2963599046370310e5f27e51201c837e879a8fbef951b2f87cccdb1637da35",
+      "bytes": 1053068
+    },
+    {
+      "filename": "IMG_0202.heic",
+      "sha256": "96137ba39600020e3816997dd16d5b6fcfbdb1d0c494f1fe745e7341fbc054b0",
+      "bytes": 1243628
+    },
+    {
+      "filename": "IMG_0203.heic",
+      "sha256": "a05094c9c047ebe9aab9436e352293207b85837fb4990053d5aa92057db20a08",
+      "bytes": 1607894
+    },
+    {
+      "filename": "IMG_0204.heic",
+      "sha256": "7518532ec16e8f810ceac1671fc571fbebdf07ad63ec41a2a90f55576fed4356",
+      "bytes": 1339196
+    },
+    {
+      "filename": "IMG_0205.heic",
+      "sha256": "4992109da24e3a260f490d6eab36bb0a3e506d6d6892c90ac8f0696e50031961",
+      "bytes": 1112580
+    }
+  ],
+  "method": "Image-only PDF and HEIC sources read with native OCR; ambiguous board text compared visually.",
+  "verifiedCorrections": {
+    "IMG_0202.heic": "Phone prices 1800 / 12000; OCR 1860 rejected after visual check.",
+    "IMG_0205.heic": "桂花公园; 池塘 versus 食堂; 每星期六上午.",
+    "engineering": "PDF page 12; the underlying translation screenshot was not separately attached."
+  },
+  "priceStages": [
+    {
+      "prices": [
+        1800,
+        12000
+      ],
+      "photos": [
+        "IMG_0200.heic",
+        "IMG_0202.heic"
+      ]
+    },
+    {
+      "prices": [
+        1800,
+        10000
+      ],
+      "photos": [
+        "IMG_0198.heic",
+        "IMG_0199.heic"
+      ]
+    }
+  ],
+  "heightStages": [
+    [
+      180,
+      175
+    ],
+    [
+      180,
+      179
+    ],
+    [
+      185,
+      163
+    ]
+  ],
+  "privacy": "Raw classroom photographs are not included in public assets."
+}

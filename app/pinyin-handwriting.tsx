@@ -1,0 +1,7 @@
+'use client';
+import Ink from './ink';
+import type {Stroke} from './learning';
+export default function PinyinHandwriting({strokes,onChange,penOnly,disabled=false,label='Write Pinyin and tone marks here',kind='pinyin',characters=1}:{strokes:Stroke[];onChange:(strokes:Stroke[])=>void;penOnly:boolean;disabled?:boolean;label?:string;kind?:'pinyin'|'hanzi';characters?:number}){
+ const count=Math.max(1,Math.trunc(characters)),columns=Math.min(2,count),rows=Math.ceil(count/columns);
+ return <div className={'pinyin-handwriting'+(kind==='hanzi'?' hanzi-handwriting':'')} style={kind==='hanzi'?{aspectRatio:columns+'/'+rows,maxWidth:columns===1?'360px':'640px'}:undefined} role="group" aria-label={label}>{kind==='hanzi'?<svg viewBox={'0 0 '+columns*100+' '+rows*100} aria-hidden="true">{Array.from({length:count},(_,index)=><g key={index} transform={'translate('+(index%columns)*100+' '+Math.floor(index/columns)*100+')'}><rect x="0" y="0" width="100" height="100" fill="none" stroke="#b4c8bf" strokeWidth=".6"/><path d="M50 0V100 M0 50H100 M0 0L100 100 M100 0L0 100" fill="none" stroke="#dce5dd" strokeWidth=".5" strokeDasharray="2 2"/><text x="5" y="10" fill="#849589" fontSize="6">{index+1}</text></g>)}</svg>:<svg viewBox="0 0 600 170" preserveAspectRatio="none" aria-hidden="true"><path d="M0 35H600 M0 75H600 M0 115H600 M0 155H600" fill="none" stroke="#b4c8bf" strokeWidth="1"/><path d="M0 55H600 M0 95H600 M0 135H600" fill="none" stroke="#dce5dd" strokeDasharray="5 5"/></svg>}<Ink strokes={strokes} onChange={onChange} penOnly={penOnly} disabled={disabled}/></div>;
+}

@@ -1,0 +1,2511 @@
+{
+  "lesson_id": "intensive-07",
+  "date": "2026-10-28",
+  "level": "Classroom lesson, with HSK review links",
+  "words": [
+    {
+      "id": "c07-t01",
+      "hanzi": "比",
+      "pinyin": "bǐ",
+      "meaning": {
+        "en": "than / compared with",
+        "fr": "que / par rapport à",
+        "ru": "чем / по сравнению с",
+        "tr": "kıyasla / -den daha"
+      },
+      "family": "comparison",
+      "pdfPages": [
+        2
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t02",
+      "hanzi": "高",
+      "pinyin": "gāo",
+      "meaning": {
+        "en": "tall / high",
+        "fr": "grand / haut",
+        "ru": "высокий",
+        "tr": "uzun / yüksek"
+      },
+      "family": "comparison",
+      "pdfPages": [
+        2
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t03",
+      "hanzi": "身高",
+      "pinyin": "shēngāo",
+      "meaning": {
+        "en": "body height",
+        "fr": "taille (d’une personne)",
+        "ru": "рост",
+        "tr": "boy"
+      },
+      "family": "comparison",
+      "pdfPages": [
+        2
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t04",
+      "hanzi": "矮",
+      "pinyin": "ǎi",
+      "meaning": {
+        "en": "short (height)",
+        "fr": "petit (taille)",
+        "ru": "низкий / невысокий",
+        "tr": "kısa boylu"
+      },
+      "family": "comparison",
+      "pdfPages": [
+        2
+      ],
+      "origin": "pdf-added",
+      "phrase": false
+    },
+    {
+      "id": "c07-t05",
+      "hanzi": "没有",
+      "pinyin": "méiyǒu",
+      "meaning": {
+        "en": "not as … as (in this comparison)",
+        "fr": "pas aussi … que (comparaison)",
+        "ru": "не такой … как (сравнение)",
+        "tr": "… kadar değil (karşılaştırma)"
+      },
+      "family": "comparison",
+      "pdfPages": [
+        2
+      ],
+      "origin": "pdf-added",
+      "phrase": true
+    },
+    {
+      "id": "c07-t06",
+      "hanzi": "不比",
+      "pinyin": "bù bǐ",
+      "meaning": {
+        "en": "not more … than",
+        "fr": "pas plus … que",
+        "ru": "не более … чем",
+        "tr": "… den daha değil"
+      },
+      "family": "comparison",
+      "pdfPages": [
+        2
+      ],
+      "origin": "pdf-added",
+      "phrase": true
+    },
+    {
+      "id": "c07-t07",
+      "hanzi": "一点儿",
+      "pinyin": "yìdiǎnr",
+      "meaning": {
+        "en": "a little",
+        "fr": "un peu",
+        "ru": "немного",
+        "tr": "biraz"
+      },
+      "family": "difference",
+      "pdfPages": [
+        3
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t08",
+      "hanzi": "多了",
+      "pinyin": "duō le",
+      "meaning": {
+        "en": "much more (degree ending)",
+        "fr": "beaucoup plus (degré)",
+        "ru": "намного (показатель степени)",
+        "tr": "çok daha (derece ifadesi)"
+      },
+      "family": "difference",
+      "pdfPages": [
+        3
+      ],
+      "origin": "source",
+      "phrase": false,
+      "audioText": "高多了",
+      "audioPinyin": "gāo duō le"
+    },
+    {
+      "id": "c07-t09",
+      "hanzi": "得多",
+      "pinyin": "de duō",
+      "meaning": {
+        "en": "much more (degree ending)",
+        "fr": "beaucoup plus (degré)",
+        "ru": "намного (показатель степени)",
+        "tr": "çok daha (derece ifadesi)"
+      },
+      "family": "difference",
+      "pdfPages": [
+        3
+      ],
+      "origin": "source",
+      "phrase": false,
+      "audioText": "高得多",
+      "audioPinyin": "gāo de duō"
+    },
+    {
+      "id": "c07-t10",
+      "hanzi": "高一点儿",
+      "pinyin": "gāo yìdiǎnr",
+      "meaning": {
+        "en": "a little taller",
+        "fr": "un peu plus grand",
+        "ru": "немного выше",
+        "tr": "biraz daha uzun"
+      },
+      "family": "difference",
+      "pdfPages": [
+        3
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t11",
+      "hanzi": "高多了",
+      "pinyin": "gāo duō le",
+      "meaning": {
+        "en": "much taller",
+        "fr": "beaucoup plus grand",
+        "ru": "намного выше",
+        "tr": "çok daha uzun"
+      },
+      "family": "difference",
+      "pdfPages": [
+        3
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t12",
+      "hanzi": "高得多",
+      "pinyin": "gāo de duō",
+      "meaning": {
+        "en": "much taller",
+        "fr": "beaucoup plus grand",
+        "ru": "намного выше",
+        "tr": "çok daha uzun"
+      },
+      "family": "difference",
+      "pdfPages": [
+        3
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t13",
+      "hanzi": "体重",
+      "pinyin": "tǐzhòng",
+      "meaning": {
+        "en": "body weight",
+        "fr": "poids corporel",
+        "ru": "вес тела",
+        "tr": "vücut ağırlığı"
+      },
+      "family": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t14",
+      "hanzi": "厘米",
+      "pinyin": "límǐ",
+      "meaning": {
+        "en": "centimetre",
+        "fr": "centimètre",
+        "ru": "сантиметр",
+        "tr": "santimetre"
+      },
+      "family": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t15",
+      "hanzi": "米",
+      "pinyin": "mǐ",
+      "meaning": {
+        "en": "metre",
+        "fr": "mètre",
+        "ru": "метр",
+        "tr": "metre"
+      },
+      "family": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t16",
+      "hanzi": "公斤",
+      "pinyin": "gōngjīn",
+      "meaning": {
+        "en": "kilogram",
+        "fr": "kilogramme",
+        "ru": "килограмм",
+        "tr": "kilogram"
+      },
+      "family": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t17",
+      "hanzi": "八十公斤",
+      "pinyin": "bāshí gōngjīn",
+      "meaning": {
+        "en": "80 kilograms",
+        "fr": "80 kilogrammes",
+        "ru": "80 килограммов",
+        "tr": "80 kilogram"
+      },
+      "family": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t18",
+      "hanzi": "一百八十厘米",
+      "pinyin": "yì bǎi bāshí límǐ",
+      "meaning": {
+        "en": "180 centimetres",
+        "fr": "180 centimètres",
+        "ru": "180 сантиметров",
+        "tr": "180 santimetre"
+      },
+      "family": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t19",
+      "hanzi": "一百七十五厘米",
+      "pinyin": "yì bǎi qīshíwǔ límǐ",
+      "meaning": {
+        "en": "175 centimetres",
+        "fr": "175 centimètres",
+        "ru": "175 сантиметров",
+        "tr": "175 santimetre"
+      },
+      "family": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t20",
+      "hanzi": "一百七十九厘米",
+      "pinyin": "yì bǎi qīshíjiǔ límǐ",
+      "meaning": {
+        "en": "179 centimetres",
+        "fr": "179 centimètres",
+        "ru": "179 сантиметров",
+        "tr": "179 santimetre"
+      },
+      "family": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t21",
+      "hanzi": "一百八十五厘米",
+      "pinyin": "yì bǎi bāshíwǔ límǐ",
+      "meaning": {
+        "en": "185 centimetres",
+        "fr": "185 centimètres",
+        "ru": "185 сантиметров",
+        "tr": "185 santimetre"
+      },
+      "family": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t22",
+      "hanzi": "一百六十三厘米",
+      "pinyin": "yì bǎi liùshísān límǐ",
+      "meaning": {
+        "en": "163 centimetres",
+        "fr": "163 centimètres",
+        "ru": "163 сантиметра",
+        "tr": "163 santimetre"
+      },
+      "family": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t23",
+      "hanzi": "一米八",
+      "pinyin": "yì mǐ bā",
+      "meaning": {
+        "en": "1.80 metres (spoken height)",
+        "fr": "1,80 m (taille, à l’oral)",
+        "ru": "метр восемьдесят (рост)",
+        "tr": "bir seksen (boy)"
+      },
+      "family": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "pdf-added",
+      "phrase": true
+    },
+    {
+      "id": "c07-t24",
+      "hanzi": "五厘米",
+      "pinyin": "wǔ límǐ",
+      "meaning": {
+        "en": "five centimetres",
+        "fr": "cinq centimètres",
+        "ru": "пять сантиметров",
+        "tr": "beş santimetre"
+      },
+      "family": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "pdf-added",
+      "phrase": true
+    },
+    {
+      "id": "c07-t25",
+      "hanzi": "重",
+      "pinyin": "zhòng",
+      "meaning": {
+        "en": "heavy",
+        "fr": "lourd",
+        "ru": "тяжёлый",
+        "tr": "ağır"
+      },
+      "family": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "pdf-added",
+      "phrase": false
+    },
+    {
+      "id": "c07-t26",
+      "hanzi": "轻",
+      "pinyin": "qīng",
+      "meaning": {
+        "en": "light (weight)",
+        "fr": "léger",
+        "ru": "лёгкий (по весу)",
+        "tr": "hafif"
+      },
+      "family": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "pdf-added",
+      "phrase": false
+    },
+    {
+      "id": "c07-t27",
+      "hanzi": "手机",
+      "pinyin": "shǒujī",
+      "meaning": {
+        "en": "mobile phone",
+        "fr": "téléphone portable",
+        "ru": "мобильный телефон",
+        "tr": "cep telefonu"
+      },
+      "family": "phones",
+      "pdfPages": [
+        5
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t28",
+      "hanzi": "这个手机",
+      "pinyin": "zhè ge shǒujī",
+      "meaning": {
+        "en": "this phone",
+        "fr": "ce téléphone-ci",
+        "ru": "этот телефон",
+        "tr": "bu telefon"
+      },
+      "family": "phones",
+      "pdfPages": [
+        5
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t29",
+      "hanzi": "那个手机",
+      "pinyin": "nà ge shǒujī",
+      "meaning": {
+        "en": "that phone",
+        "fr": "ce téléphone-là",
+        "ru": "тот телефон",
+        "tr": "şu telefon"
+      },
+      "family": "phones",
+      "pdfPages": [
+        5
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t30",
+      "hanzi": "贵",
+      "pinyin": "guì",
+      "meaning": {
+        "en": "expensive",
+        "fr": "cher",
+        "ru": "дорогой",
+        "tr": "pahalı"
+      },
+      "family": "phones",
+      "pdfPages": [
+        5
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t31",
+      "hanzi": "便宜",
+      "pinyin": "piányi",
+      "meaning": {
+        "en": "cheap / inexpensive",
+        "fr": "bon marché",
+        "ru": "недорогой / дешёвый",
+        "tr": "ucuz"
+      },
+      "family": "phones",
+      "pdfPages": [
+        5
+      ],
+      "origin": "source",
+      "phrase": false,
+      "equivalence": "cheap"
+    },
+    {
+      "id": "c07-t32",
+      "hanzi": "很便宜",
+      "pinyin": "hěn piányi",
+      "meaning": {
+        "en": "inexpensive / very cheap",
+        "fr": "bon marché / très bon marché",
+        "ru": "недорогой / очень дешёвый",
+        "tr": "ucuz / çok ucuz"
+      },
+      "family": "phones",
+      "pdfPages": [
+        5
+      ],
+      "origin": "source",
+      "phrase": true,
+      "equivalence": "cheap"
+    },
+    {
+      "id": "c07-t33",
+      "hanzi": "便宜多了",
+      "pinyin": "piányi duō le",
+      "meaning": {
+        "en": "much cheaper",
+        "fr": "beaucoup moins cher",
+        "ru": "намного дешевле",
+        "tr": "çok daha ucuz"
+      },
+      "family": "phones",
+      "pdfPages": [
+        5
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t34",
+      "hanzi": "英语",
+      "pinyin": "Yīngyǔ",
+      "meaning": {
+        "en": "English language",
+        "fr": "anglais",
+        "ru": "английский язык",
+        "tr": "İngilizce"
+      },
+      "family": "difficulty",
+      "pdfPages": [
+        6
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t35",
+      "hanzi": "汉语",
+      "pinyin": "Hànyǔ",
+      "meaning": {
+        "en": "Chinese language",
+        "fr": "chinois",
+        "ru": "китайский язык",
+        "tr": "Çince"
+      },
+      "family": "difficulty",
+      "pdfPages": [
+        6
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t36",
+      "hanzi": "难",
+      "pinyin": "nán",
+      "meaning": {
+        "en": "difficult",
+        "fr": "difficile",
+        "ru": "трудный",
+        "tr": "zor"
+      },
+      "family": "difficulty",
+      "pdfPages": [
+        6
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t37",
+      "hanzi": "医生",
+      "pinyin": "yīshēng",
+      "meaning": {
+        "en": "doctor",
+        "fr": "médecin",
+        "ru": "врач",
+        "tr": "doktor"
+      },
+      "family": "difficulty",
+      "pdfPages": [
+        6
+      ],
+      "origin": "source",
+      "phrase": false,
+      "equivalence": "doctor"
+    },
+    {
+      "id": "c07-t38",
+      "hanzi": "大夫",
+      "pinyin": "dàifu",
+      "meaning": {
+        "en": "doctor",
+        "fr": "médecin",
+        "ru": "врач",
+        "tr": "doktor"
+      },
+      "family": "difficulty",
+      "pdfPages": [
+        6
+      ],
+      "origin": "source",
+      "phrase": false,
+      "equivalence": "doctor"
+    },
+    {
+      "id": "c07-t39",
+      "hanzi": "护士",
+      "pinyin": "hùshi",
+      "meaning": {
+        "en": "nurse",
+        "fr": "infirmier / infirmière",
+        "ru": "медбрат / медсестра",
+        "tr": "hemşire"
+      },
+      "family": "difficulty",
+      "pdfPages": [
+        6
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t40",
+      "hanzi": "重要",
+      "pinyin": "zhòngyào",
+      "meaning": {
+        "en": "important",
+        "fr": "important",
+        "ru": "важный",
+        "tr": "önemli"
+      },
+      "family": "difficulty",
+      "pdfPages": [
+        6
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t41",
+      "hanzi": "公园",
+      "pinyin": "gōngyuán",
+      "meaning": {
+        "en": "park",
+        "fr": "parc",
+        "ru": "парк",
+        "tr": "park"
+      },
+      "family": "parks",
+      "pdfPages": [
+        8
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t42",
+      "hanzi": "大公园",
+      "pinyin": "dà gōngyuán",
+      "meaning": {
+        "en": "a large park",
+        "fr": "un grand parc",
+        "ru": "большой парк",
+        "tr": "büyük park"
+      },
+      "family": "parks",
+      "pdfPages": [
+        8
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t43",
+      "hanzi": "桂花公园",
+      "pinyin": "Guìhuā Gōngyuán",
+      "meaning": {
+        "en": "Guihua Park",
+        "fr": "parc Guihua",
+        "ru": "парк Гуйхуа",
+        "tr": "Guihua Parkı"
+      },
+      "family": "parks",
+      "pdfPages": [
+        8
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t44",
+      "hanzi": "人民公园",
+      "pinyin": "Rénmín Gōngyuán",
+      "meaning": {
+        "en": "People’s Park",
+        "fr": "parc du Peuple",
+        "ru": "Народный парк",
+        "tr": "Halk Parkı"
+      },
+      "family": "parks",
+      "pdfPages": [
+        8
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t45",
+      "hanzi": "桂花",
+      "pinyin": "guìhuā",
+      "meaning": {
+        "en": "osmanthus",
+        "fr": "osmanthe",
+        "ru": "османтус",
+        "tr": "osmanthus"
+      },
+      "family": "parks",
+      "pdfPages": [
+        8
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t46",
+      "hanzi": "人民",
+      "pinyin": "rénmín",
+      "meaning": {
+        "en": "the people",
+        "fr": "le peuple",
+        "ru": "народ",
+        "tr": "halk"
+      },
+      "family": "parks",
+      "pdfPages": [
+        8
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t47",
+      "hanzi": "池塘",
+      "pinyin": "chítáng",
+      "meaning": {
+        "en": "pond",
+        "fr": "étang",
+        "ru": "пруд",
+        "tr": "gölet"
+      },
+      "family": "parks",
+      "pdfPages": [
+        8
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t48",
+      "hanzi": "食堂",
+      "pinyin": "shítáng",
+      "meaning": {
+        "en": "canteen / dining hall",
+        "fr": "cantine / réfectoire",
+        "ru": "столовая",
+        "tr": "yemekhane"
+      },
+      "family": "parks",
+      "pdfPages": [
+        8
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t49",
+      "hanzi": "食物",
+      "pinyin": "shíwù",
+      "meaning": {
+        "en": "food",
+        "fr": "nourriture",
+        "ru": "еда / пища",
+        "tr": "yiyecek"
+      },
+      "family": "parks",
+      "pdfPages": [
+        8
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t50",
+      "hanzi": "单身",
+      "pinyin": "dānshēn",
+      "meaning": {
+        "en": "single / not in a relationship",
+        "fr": "célibataire",
+        "ru": "не в отношениях",
+        "tr": "bekâr"
+      },
+      "family": "routine",
+      "pdfPages": [
+        10
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t51",
+      "hanzi": "相亲",
+      "pinyin": "xiāngqīn",
+      "meaning": {
+        "en": "meet a potential partner / blind date",
+        "fr": "rencontre arrangée en vue d’un couple",
+        "ru": "знакомство с потенциальным партнёром",
+        "tr": "evlilik amaçlı tanışma"
+      },
+      "family": "routine",
+      "pdfPages": [
+        10
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t52",
+      "hanzi": "每",
+      "pinyin": "měi",
+      "meaning": {
+        "en": "every / each",
+        "fr": "chaque",
+        "ru": "каждый",
+        "tr": "her"
+      },
+      "family": "routine",
+      "pdfPages": [
+        10
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t53",
+      "hanzi": "星期六",
+      "pinyin": "xīngqīliù",
+      "meaning": {
+        "en": "Saturday",
+        "fr": "samedi",
+        "ru": "суббота",
+        "tr": "cumartesi"
+      },
+      "family": "routine",
+      "pdfPages": [
+        10
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t54",
+      "hanzi": "上午",
+      "pinyin": "shàngwǔ",
+      "meaning": {
+        "en": "morning / before noon",
+        "fr": "matin / avant midi",
+        "ru": "утро / до полудня",
+        "tr": "sabah / öğleden önce"
+      },
+      "family": "routine",
+      "pdfPages": [
+        10
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t55",
+      "hanzi": "十一月十一号",
+      "pinyin": "shíyī yuè shíyī hào",
+      "meaning": {
+        "en": "11 November",
+        "fr": "11 novembre",
+        "ru": "11 ноября",
+        "tr": "11 Kasım"
+      },
+      "family": "routine",
+      "pdfPages": [
+        10
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t56",
+      "hanzi": "每星期六上午",
+      "pinyin": "měi xīngqīliù shàngwǔ",
+      "meaning": {
+        "en": "every Saturday morning",
+        "fr": "chaque samedi matin",
+        "ru": "каждое субботнее утро",
+        "tr": "her cumartesi sabahı"
+      },
+      "family": "routine",
+      "pdfPages": [
+        10
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t57",
+      "hanzi": "可乐",
+      "pinyin": "kělè",
+      "meaning": {
+        "en": "cola",
+        "fr": "cola",
+        "ru": "кола",
+        "tr": "kola"
+      },
+      "family": "drinks",
+      "pdfPages": [
+        11
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t58",
+      "hanzi": "无糖可乐",
+      "pinyin": "wútáng kělè",
+      "meaning": {
+        "en": "sugar-free cola",
+        "fr": "cola sans sucre",
+        "ru": "кола без сахара",
+        "tr": "şekersiz kola"
+      },
+      "family": "drinks",
+      "pdfPages": [
+        11
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t59",
+      "hanzi": "糖",
+      "pinyin": "táng",
+      "meaning": {
+        "en": "sugar",
+        "fr": "sucre",
+        "ru": "сахар",
+        "tr": "şeker"
+      },
+      "family": "drinks",
+      "pdfPages": [
+        11
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t60",
+      "hanzi": "冰",
+      "pinyin": "bīng",
+      "meaning": {
+        "en": "ice",
+        "fr": "glace (glaçons)",
+        "ru": "лёд",
+        "tr": "buz"
+      },
+      "family": "drinks",
+      "pdfPages": [
+        11
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t61",
+      "hanzi": "可口可乐",
+      "pinyin": "Kěkǒu Kělè",
+      "meaning": {
+        "en": "Coca-Cola",
+        "fr": "Coca-Cola",
+        "ru": "Кока-Кола",
+        "tr": "Coca-Cola"
+      },
+      "family": "drinks",
+      "pdfPages": [
+        11
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t62",
+      "hanzi": "百事可乐",
+      "pinyin": "Bǎishì Kělè",
+      "meaning": {
+        "en": "Pepsi",
+        "fr": "Pepsi",
+        "ru": "Пепси",
+        "tr": "Pepsi"
+      },
+      "family": "drinks",
+      "pdfPages": [
+        11
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t63",
+      "hanzi": "不要糖",
+      "pinyin": "bú yào táng",
+      "meaning": {
+        "en": "no sugar, please",
+        "fr": "sans sucre ajouté, s’il vous plaît",
+        "ru": "без добавления сахара, пожалуйста",
+        "tr": "şeker eklemeyin, lütfen"
+      },
+      "family": "drinks",
+      "pdfPages": [
+        11
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t64",
+      "hanzi": "不要冰",
+      "pinyin": "bú yào bīng",
+      "meaning": {
+        "en": "no ice, please",
+        "fr": "sans glaçons, s’il vous plaît",
+        "ru": "без льда, пожалуйста",
+        "tr": "buz koymayın, lütfen"
+      },
+      "family": "drinks",
+      "pdfPages": [
+        11
+      ],
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c07-t65",
+      "hanzi": "电",
+      "pinyin": "diàn",
+      "meaning": {
+        "en": "electricity",
+        "fr": "électricité",
+        "ru": "электричество",
+        "tr": "elektrik"
+      },
+      "family": "engineering",
+      "pdfPages": [
+        12
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t66",
+      "hanzi": "电气工程",
+      "pinyin": "diànqì gōngchéng",
+      "meaning": {
+        "en": "electrical engineering",
+        "fr": "génie électrique",
+        "ru": "электротехника (область)",
+        "tr": "elektrik mühendisliği (alan)"
+      },
+      "family": "engineering",
+      "pdfPages": [
+        12
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t67",
+      "hanzi": "电气工程师",
+      "pinyin": "diànqì gōngchéngshī",
+      "meaning": {
+        "en": "electrical engineer",
+        "fr": "ingénieur électricien",
+        "ru": "инженер-электрик",
+        "tr": "elektrik mühendisi"
+      },
+      "family": "engineering",
+      "pdfPages": [
+        12
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t68",
+      "hanzi": "电工",
+      "pinyin": "diàngōng",
+      "meaning": {
+        "en": "electrician",
+        "fr": "électricien",
+        "ru": "электрик",
+        "tr": "elektrikçi"
+      },
+      "family": "engineering",
+      "pdfPages": [
+        12
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t69",
+      "hanzi": "电子工程",
+      "pinyin": "diànzǐ gōngchéng",
+      "meaning": {
+        "en": "electronics engineering",
+        "fr": "génie électronique",
+        "ru": "электронная инженерия",
+        "tr": "elektronik mühendisliği"
+      },
+      "family": "engineering",
+      "pdfPages": [
+        12
+      ],
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c07-t70",
+      "hanzi": "工程",
+      "pinyin": "gōngchéng",
+      "meaning": {
+        "en": "engineering / project",
+        "fr": "ingénierie / projet",
+        "ru": "инженерия / проект",
+        "tr": "mühendislik / proje"
+      },
+      "family": "engineering",
+      "pdfPages": [
+        12
+      ],
+      "origin": "pdf-added",
+      "phrase": false
+    },
+    {
+      "id": "c07-t71",
+      "hanzi": "工程师",
+      "pinyin": "gōngchéngshī",
+      "meaning": {
+        "en": "engineer",
+        "fr": "ingénieur",
+        "ru": "инженер",
+        "tr": "mühendis"
+      },
+      "family": "engineering",
+      "pdfPages": [
+        12
+      ],
+      "origin": "pdf-added",
+      "phrase": false
+    },
+    {
+      "id": "c07-t72",
+      "hanzi": "天才",
+      "pinyin": "tiāncái",
+      "meaning": {
+        "en": "genius / exceptional natural talent",
+        "fr": "génie / talent inné exceptionnel",
+        "ru": "гений / исключительный врождённый талант",
+        "tr": "dâhi / olağanüstü doğuştan yetenek"
+      },
+      "family": "engineering",
+      "pdfPages": [
+        12
+      ],
+      "origin": "source",
+      "phrase": false
+    }
+  ],
+  "sentences": [
+    {
+      "id": "c07-s01",
+      "hanzi": "A比B高。",
+      "pinyin": "A bǐ B gāo.",
+      "meaning": {
+        "en": "A is taller than B.",
+        "fr": "A est plus grand que B.",
+        "ru": "A выше B.",
+        "tr": "A, B’den daha uzundur."
+      },
+      "topic": "comparison",
+      "pdfPages": [
+        2
+      ],
+      "origin": "board",
+      "equivalence": "a-taller-b"
+    },
+    {
+      "id": "c07-s02",
+      "hanzi": "我比你高。",
+      "pinyin": "Wǒ bǐ nǐ gāo.",
+      "meaning": {
+        "en": "I am taller than you.",
+        "fr": "Je suis plus grand que toi.",
+        "ru": "Я выше тебя.",
+        "tr": "Ben senden daha uzunum."
+      },
+      "topic": "comparison",
+      "pdfPages": [
+        2
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s03",
+      "hanzi": "B比A矮。",
+      "pinyin": "B bǐ A ǎi.",
+      "meaning": {
+        "en": "B is shorter than A.",
+        "fr": "B est plus petit que A.",
+        "ru": "B ниже A.",
+        "tr": "B, A’dan daha kısadır."
+      },
+      "topic": "comparison",
+      "pdfPages": [
+        2
+      ],
+      "origin": "pdf-added",
+      "equivalence": "a-taller-b"
+    },
+    {
+      "id": "c07-s04",
+      "hanzi": "我没有你高。",
+      "pinyin": "Wǒ méiyǒu nǐ gāo.",
+      "meaning": {
+        "en": "I am not as tall as you.",
+        "fr": "Je ne suis pas aussi grand que toi.",
+        "ru": "Я не такой высокий, как ты.",
+        "tr": "Ben senin kadar uzun değilim."
+      },
+      "topic": "comparison",
+      "pdfPages": [
+        7
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s05",
+      "hanzi": "我不比你高。",
+      "pinyin": "Wǒ bù bǐ nǐ gāo.",
+      "meaning": {
+        "en": "I am not taller than you; I may be equally tall or shorter.",
+        "fr": "Je ne suis pas plus grand que toi ; je peux être aussi grand ou plus petit.",
+        "ru": "Я не выше тебя: могу быть такого же роста или ниже.",
+        "tr": "Senden daha uzun değilim; aynı boyda veya daha kısa olabilirim."
+      },
+      "topic": "comparison",
+      "pdfPages": [
+        7
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s06",
+      "hanzi": "A比B高一点儿。",
+      "pinyin": "A bǐ B gāo yìdiǎnr.",
+      "meaning": {
+        "en": "A is a little taller than B.",
+        "fr": "A est un peu plus grand que B.",
+        "ru": "A немного выше B.",
+        "tr": "A, B’den biraz daha uzundur."
+      },
+      "topic": "difference",
+      "pdfPages": [
+        3
+      ],
+      "origin": "board"
+    },
+    {
+      "id": "c07-s07",
+      "hanzi": "Robert比我高多了。",
+      "pinyin": "Robert bǐ wǒ gāo duō le.",
+      "meaning": {
+        "en": "Robert is much taller than me.",
+        "fr": "Robert est beaucoup plus grand que moi.",
+        "ru": "Роберт намного выше меня.",
+        "tr": "Robert benden çok daha uzundur."
+      },
+      "topic": "difference",
+      "pdfPages": [
+        3
+      ],
+      "origin": "board",
+      "equivalence": "robert-taller"
+    },
+    {
+      "id": "c07-s08",
+      "hanzi": "Robert比我高得多。",
+      "pinyin": "Robert bǐ wǒ gāo de duō.",
+      "meaning": {
+        "en": "Robert is much taller than me.",
+        "fr": "Robert est beaucoup plus grand que moi.",
+        "ru": "Роберт намного выше меня.",
+        "tr": "Robert benden çok daha uzundur."
+      },
+      "topic": "difference",
+      "pdfPages": [
+        3
+      ],
+      "origin": "board",
+      "equivalence": "robert-taller"
+    },
+    {
+      "id": "c07-s09",
+      "hanzi": "我的身高是一米八。",
+      "pinyin": "Wǒ de shēngāo shì yì mǐ bā.",
+      "meaning": {
+        "en": "My height is 1.80 metres.",
+        "fr": "Je mesure un mètre quatre-vingts.",
+        "ru": "Мой рост — метр восемьдесят.",
+        "tr": "Boyum bir seksen."
+      },
+      "topic": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s10",
+      "hanzi": "我的体重是八十公斤。",
+      "pinyin": "Wǒ de tǐzhòng shì bāshí gōngjīn.",
+      "meaning": {
+        "en": "My weight is 80 kilograms (practice role).",
+        "fr": "Je pèse 80 kilos (rôle d’exercice).",
+        "ru": "Мой вес — 80 кг (учебная роль).",
+        "tr": "Ağırlığım 80 kilogram (alıştırma rolü)."
+      },
+      "topic": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s11",
+      "hanzi": "A比B高五厘米。",
+      "pinyin": "A bǐ B gāo wǔ límǐ.",
+      "meaning": {
+        "en": "A is five centimetres taller than B.",
+        "fr": "A mesure cinq centimètres de plus que B.",
+        "ru": "A выше B на пять сантиметров.",
+        "tr": "A, B’den beş santimetre daha uzundur."
+      },
+      "topic": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s12",
+      "hanzi": "那个手机比这个手机贵多了。",
+      "pinyin": "Nà ge shǒujī bǐ zhè ge shǒujī guì duō le.",
+      "meaning": {
+        "en": "That phone is much more expensive than this phone.",
+        "fr": "Ce téléphone-là est beaucoup plus cher que celui-ci.",
+        "ru": "Тот телефон намного дороже этого.",
+        "tr": "Şu telefon bu telefondan çok daha pahalı."
+      },
+      "topic": "phones",
+      "pdfPages": [
+        5
+      ],
+      "origin": "board"
+    },
+    {
+      "id": "c07-s13",
+      "hanzi": "这个手机很便宜。",
+      "pinyin": "Zhè ge shǒujī hěn piányi.",
+      "meaning": {
+        "en": "This phone is inexpensive.",
+        "fr": "Ce téléphone est bon marché.",
+        "ru": "Этот телефон недорогой.",
+        "tr": "Bu telefon ucuz."
+      },
+      "topic": "phones",
+      "pdfPages": [
+        5
+      ],
+      "origin": "board"
+    },
+    {
+      "id": "c07-s14",
+      "hanzi": "这个手机比那个手机便宜多了。",
+      "pinyin": "Zhè ge shǒujī bǐ nà ge shǒujī piányi duō le.",
+      "meaning": {
+        "en": "This phone is much cheaper than that phone.",
+        "fr": "Ce téléphone-ci est beaucoup moins cher que celui-là.",
+        "ru": "Этот телефон намного дешевле того.",
+        "tr": "Bu telefon şu telefondan çok daha ucuz."
+      },
+      "topic": "phones",
+      "pdfPages": [
+        5
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s15",
+      "hanzi": "这个手机比那个手机便宜一点儿。",
+      "pinyin": "Zhè ge shǒujī bǐ nà ge shǒujī piányi yìdiǎnr.",
+      "meaning": {
+        "en": "This phone is a little cheaper than that phone.",
+        "fr": "Ce téléphone-ci est un peu moins cher que celui-là.",
+        "ru": "Этот телефон немного дешевле того.",
+        "tr": "Bu telefon şu telefondan biraz daha ucuz."
+      },
+      "topic": "phones",
+      "pdfPages": [
+        7
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s16",
+      "hanzi": "这个手机比那个手机贵吗？",
+      "pinyin": "Zhè ge shǒujī bǐ nà ge shǒujī guì ma?",
+      "meaning": {
+        "en": "Is this phone more expensive than that one?",
+        "fr": "Ce téléphone-ci est-il plus cher que celui-là ?",
+        "ru": "Этот телефон дороже того?",
+        "tr": "Bu telefon şu telefondan daha pahalı mı?"
+      },
+      "topic": "phones",
+      "pdfPages": [
+        7
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s17",
+      "hanzi": "英语比汉语难多了。",
+      "pinyin": "Yīngyǔ bǐ Hànyǔ nán duō le.",
+      "meaning": {
+        "en": "English is much harder than Chinese (speaker’s opinion).",
+        "fr": "L’anglais est beaucoup plus difficile que le chinois (avis du locuteur).",
+        "ru": "Английский намного труднее китайского (мнение говорящего).",
+        "tr": "İngilizce Çinceden çok daha zor (konuşanın görüşü)."
+      },
+      "topic": "difficulty",
+      "pdfPages": [
+        6
+      ],
+      "origin": "board-opinion"
+    },
+    {
+      "id": "c07-s18",
+      "hanzi": "医生比护士重要多了！",
+      "pinyin": "Yīshēng bǐ hùshi zhòngyào duō le!",
+      "meaning": {
+        "en": "Classroom quote: doctors are much more important than nurses.",
+        "fr": "Citation du cours : les médecins sont beaucoup plus importants que les infirmiers.",
+        "ru": "Цитата с занятия: врачи намного важнее медсестёр.",
+        "tr": "Ders alıntısı: doktorlar hemşirelerden çok daha önemlidir."
+      },
+      "topic": "difficulty",
+      "pdfPages": [
+        6
+      ],
+      "origin": "board-opinion",
+      "excludeFromChecks": true,
+      "equivalence": "doctor-opinion"
+    },
+    {
+      "id": "c07-s19",
+      "hanzi": "大夫比护士重要多了！",
+      "pinyin": "Dàifu bǐ hùshi zhòngyào duō le!",
+      "meaning": {
+        "en": "Classroom quote: doctors are much more important than nurses.",
+        "fr": "Citation du cours : les médecins sont beaucoup plus importants que les infirmiers.",
+        "ru": "Цитата с занятия: врачи намного важнее медсестёр.",
+        "tr": "Ders alıntısı: doktorlar hemşirelerden çok daha önemlidir."
+      },
+      "topic": "difficulty",
+      "pdfPages": [
+        6
+      ],
+      "origin": "board-opinion",
+      "excludeFromChecks": true,
+      "equivalence": "doctor-opinion"
+    },
+    {
+      "id": "c07-s20",
+      "hanzi": "这个公园很大。",
+      "pinyin": "Zhè ge gōngyuán hěn dà.",
+      "meaning": {
+        "en": "This park is big.",
+        "fr": "Ce parc est grand.",
+        "ru": "Этот парк большой.",
+        "tr": "Bu park büyük."
+      },
+      "topic": "parks",
+      "pdfPages": [
+        8
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s21",
+      "hanzi": "我们去桂花公园吧。",
+      "pinyin": "Wǒmen qù Guìhuā Gōngyuán ba.",
+      "meaning": {
+        "en": "Let’s go to Guihua Park.",
+        "fr": "Allons au parc Guihua.",
+        "ru": "Пойдём в парк Гуйхуа.",
+        "tr": "Guihua Parkı’na gidelim."
+      },
+      "topic": "parks",
+      "pdfPages": [
+        8
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s22",
+      "hanzi": "公园里有一个池塘。",
+      "pinyin": "Gōngyuán lǐ yǒu yí ge chítáng.",
+      "meaning": {
+        "en": "There is a pond in the park.",
+        "fr": "Il y a un étang dans le parc.",
+        "ru": "В парке есть пруд.",
+        "tr": "Parkta bir gölet var."
+      },
+      "topic": "parks",
+      "pdfPages": [
+        9
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s23",
+      "hanzi": "我在食堂吃饭。",
+      "pinyin": "Wǒ zài shítáng chī fàn.",
+      "meaning": {
+        "en": "I eat in the canteen.",
+        "fr": "Je mange à la cantine.",
+        "ru": "Я ем в столовой.",
+        "tr": "Yemekhanede yemek yiyorum."
+      },
+      "topic": "parks",
+      "pdfPages": [
+        9
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s24",
+      "hanzi": "食堂的食物很便宜。",
+      "pinyin": "Shítáng de shíwù hěn piányi.",
+      "meaning": {
+        "en": "The food in the canteen is inexpensive.",
+        "fr": "La nourriture de la cantine est bon marché.",
+        "ru": "Еда в столовой недорогая.",
+        "tr": "Yemekhanedeki yiyecekler ucuz."
+      },
+      "topic": "parks",
+      "pdfPages": [
+        9
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s25",
+      "hanzi": "我每星期六上午去公园。",
+      "pinyin": "Wǒ měi xīngqīliù shàngwǔ qù gōngyuán.",
+      "meaning": {
+        "en": "I go to the park every Saturday morning.",
+        "fr": "Je vais au parc chaque samedi matin.",
+        "ru": "Я хожу в парк каждое субботнее утро.",
+        "tr": "Her cumartesi sabahı parka giderim."
+      },
+      "topic": "routine",
+      "pdfPages": [
+        10
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s26",
+      "hanzi": "他是单身。",
+      "pinyin": "Tā shì dānshēn.",
+      "meaning": {
+        "en": "He is single.",
+        "fr": "Il est célibataire.",
+        "ru": "Он не в отношениях.",
+        "tr": "O bekâr."
+      },
+      "topic": "routine",
+      "pdfPages": [
+        10
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s27",
+      "hanzi": "不要糖。",
+      "pinyin": "Bú yào táng.",
+      "meaning": {
+        "en": "No sugar, please.",
+        "fr": "Sans sucre ajouté, s’il vous plaît.",
+        "ru": "Без добавления сахара, пожалуйста.",
+        "tr": "Şeker eklemeyin, lütfen."
+      },
+      "topic": "drinks",
+      "pdfPages": [
+        11
+      ],
+      "origin": "board-expanded"
+    },
+    {
+      "id": "c07-s28",
+      "hanzi": "不要冰。",
+      "pinyin": "Bú yào bīng.",
+      "meaning": {
+        "en": "No ice, please.",
+        "fr": "Sans glaçons, s’il vous plaît.",
+        "ru": "Без льда, пожалуйста.",
+        "tr": "Buz koymayın, lütfen."
+      },
+      "topic": "drinks",
+      "pdfPages": [
+        11
+      ],
+      "origin": "board-expanded"
+    },
+    {
+      "id": "c07-s29",
+      "hanzi": "我要无糖可乐，不要冰。",
+      "pinyin": "Wǒ yào wútáng kělè, bú yào bīng.",
+      "meaning": {
+        "en": "I would like sugar-free cola with no ice.",
+        "fr": "Je voudrais un cola sans sucre et sans glaçons.",
+        "ru": "Я хочу колу без сахара и без льда.",
+        "tr": "Buzsuz, şekersiz kola istiyorum."
+      },
+      "topic": "drinks",
+      "pdfPages": [
+        11
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s30",
+      "hanzi": "你要可口可乐还是百事可乐？",
+      "pinyin": "Nǐ yào Kěkǒu Kělè háishi Bǎishì Kělè?",
+      "meaning": {
+        "en": "Would you like Coca-Cola or Pepsi?",
+        "fr": "Voulez-vous du Coca-Cola ou du Pepsi ?",
+        "ru": "Ты хочешь Кока-Колу или Пепси?",
+        "tr": "Coca-Cola mı Pepsi mi istersin?"
+      },
+      "topic": "drinks",
+      "pdfPages": [
+        11
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s31",
+      "hanzi": "我要百事可乐。",
+      "pinyin": "Wǒ yào Bǎishì Kělè.",
+      "meaning": {
+        "en": "I would like Pepsi.",
+        "fr": "Je voudrais du Pepsi.",
+        "ru": "Я хочу Пепси.",
+        "tr": "Pepsi istiyorum."
+      },
+      "topic": "drinks",
+      "pdfPages": [
+        11
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s32",
+      "hanzi": "我学电气工程。",
+      "pinyin": "Wǒ xué diànqì gōngchéng.",
+      "meaning": {
+        "en": "I study electrical engineering.",
+        "fr": "J’étudie le génie électrique.",
+        "ru": "Я изучаю электротехнику.",
+        "tr": "Elektrik mühendisliği okuyorum."
+      },
+      "topic": "engineering",
+      "pdfPages": [
+        12
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s33",
+      "hanzi": "他是电气工程师。",
+      "pinyin": "Tā shì diànqì gōngchéngshī.",
+      "meaning": {
+        "en": "He is an electrical engineer.",
+        "fr": "Il est ingénieur électricien.",
+        "ru": "Он инженер-электрик.",
+        "tr": "O bir elektrik mühendisi."
+      },
+      "topic": "engineering",
+      "pdfPages": [
+        12
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s34",
+      "hanzi": "他是天才。",
+      "pinyin": "Tā shì tiāncái.",
+      "meaning": {
+        "en": "He is a genius.",
+        "fr": "C’est un génie.",
+        "ru": "Он гений.",
+        "tr": "O bir dâhi."
+      },
+      "topic": "engineering",
+      "pdfPages": [
+        12
+      ],
+      "origin": "pdf-added"
+    },
+    {
+      "id": "c07-s35",
+      "hanzi": "这个手机一千八百元，那个手机一万元。",
+      "pinyin": "Zhè ge shǒujī yì qiān bā bǎi yuán, nà ge shǒujī yí wàn yuán.",
+      "meaning": {
+        "en": "This phone costs 1,800 yuan; that phone costs 10,000 yuan.",
+        "fr": "Ce téléphone-ci coûte 1 800 yuans et celui-là 10 000 yuans.",
+        "ru": "Этот телефон стоит 1800 юаней, а тот — 10000.",
+        "tr": "Bu telefon 1800 yuan, şu telefon 10000 yuan."
+      },
+      "topic": "phones",
+      "pdfPages": [
+        18
+      ],
+      "origin": "pdf-reading"
+    },
+    {
+      "id": "c07-s36",
+      "hanzi": "我想买这个手机。",
+      "pinyin": "Wǒ xiǎng mǎi zhè ge shǒujī.",
+      "meaning": {
+        "en": "I would like to buy this phone.",
+        "fr": "Je voudrais acheter ce téléphone-ci.",
+        "ru": "Я хочу купить этот телефон.",
+        "tr": "Bu telefonu satın almak istiyorum."
+      },
+      "topic": "phones",
+      "pdfPages": [
+        18
+      ],
+      "origin": "pdf-reading"
+    },
+    {
+      "id": "c07-s37",
+      "hanzi": "我每星期六上午去桂花公园。",
+      "pinyin": "Wǒ měi xīngqīliù shàngwǔ qù Guìhuā Gōngyuán.",
+      "meaning": {
+        "en": "I go to Guihua Park every Saturday morning.",
+        "fr": "Je vais au parc Guihua chaque samedi matin.",
+        "ru": "Я хожу в парк Гуйхуа каждое субботнее утро.",
+        "tr": "Her cumartesi sabahı Guihua Parkı’na giderim."
+      },
+      "topic": "routine",
+      "pdfPages": [
+        18
+      ],
+      "origin": "pdf-reading"
+    },
+    {
+      "id": "c07-s38",
+      "hanzi": "中午，我去食堂吃饭。",
+      "pinyin": "Zhōngwǔ, wǒ qù shítáng chī fàn.",
+      "meaning": {
+        "en": "At noon, I go to the canteen to eat.",
+        "fr": "À midi, je vais manger à la cantine.",
+        "ru": "В полдень я иду есть в столовую.",
+        "tr": "Öğleyin yemek yemek için yemekhaneye giderim."
+      },
+      "topic": "parks",
+      "pdfPages": [
+        18
+      ],
+      "origin": "pdf-reading"
+    },
+    {
+      "id": "c07-s39",
+      "hanzi": "我的朋友是电工。",
+      "pinyin": "Wǒ de péngyou shì diàngōng.",
+      "meaning": {
+        "en": "My friend is an electrician.",
+        "fr": "Mon ami est électricien.",
+        "ru": "Мой друг — электрик.",
+        "tr": "Arkadaşım elektrikçi."
+      },
+      "topic": "engineering",
+      "pdfPages": [
+        18
+      ],
+      "origin": "pdf-reading"
+    },
+    {
+      "id": "c07-s40",
+      "hanzi": "我们去买可乐。",
+      "pinyin": "Wǒmen qù mǎi kělè.",
+      "meaning": {
+        "en": "We go to buy cola.",
+        "fr": "Nous allons acheter du cola.",
+        "ru": "Мы идём покупать колу.",
+        "tr": "Kola almaya gidiyoruz."
+      },
+      "topic": "drinks",
+      "pdfPages": [
+        18
+      ],
+      "origin": "pdf-reading"
+    },
+    {
+      "id": "c07-s41",
+      "hanzi": "她是医生。",
+      "pinyin": "Tā shì yīshēng.",
+      "meaning": {
+        "en": "She is a doctor.",
+        "fr": "Elle est médecin.",
+        "ru": "Она врач.",
+        "tr": "O bir doktor."
+      },
+      "topic": "difficulty",
+      "pdfPages": [
+        0
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s42",
+      "hanzi": "他是大夫。",
+      "pinyin": "Tā shì dàifu.",
+      "meaning": {
+        "en": "He is a doctor.",
+        "fr": "Il est médecin.",
+        "ru": "Он врач.",
+        "tr": "O bir doktor."
+      },
+      "topic": "difficulty",
+      "pdfPages": [
+        0
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s43",
+      "hanzi": "她是护士。",
+      "pinyin": "Tā shì hùshi.",
+      "meaning": {
+        "en": "She is a nurse.",
+        "fr": "Elle est infirmière.",
+        "ru": "Она медсестра.",
+        "tr": "O bir hemşire."
+      },
+      "topic": "difficulty",
+      "pdfPages": [
+        0
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s44",
+      "hanzi": "健康很重要。",
+      "pinyin": "Jiànkāng hěn zhòngyào.",
+      "meaning": {
+        "en": "Health is important.",
+        "fr": "La santé est importante.",
+        "ru": "Здоровье важно.",
+        "tr": "Sağlık önemlidir."
+      },
+      "topic": "difficulty",
+      "pdfPages": [
+        0
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s45",
+      "hanzi": "我学英语。",
+      "pinyin": "Wǒ xué Yīngyǔ.",
+      "meaning": {
+        "en": "I study English.",
+        "fr": "J’étudie l’anglais.",
+        "ru": "Я изучаю английский.",
+        "tr": "İngilizce öğreniyorum."
+      },
+      "topic": "difficulty",
+      "pdfPages": [
+        0
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s46",
+      "hanzi": "我学汉语。",
+      "pinyin": "Wǒ xué Hànyǔ.",
+      "meaning": {
+        "en": "I study Chinese.",
+        "fr": "J’étudie le chinois.",
+        "ru": "Я изучаю китайский.",
+        "tr": "Çince öğreniyorum."
+      },
+      "topic": "difficulty",
+      "pdfPages": [
+        0
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s47",
+      "hanzi": "他比我重。",
+      "pinyin": "Tā bǐ wǒ zhòng.",
+      "meaning": {
+        "en": "He is heavier than me.",
+        "fr": "Il est plus lourd que moi.",
+        "ru": "Он тяжелее меня.",
+        "tr": "O benden daha ağır."
+      },
+      "topic": "measure",
+      "pdfPages": [
+        0
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s48",
+      "hanzi": "这个包比那个包轻。",
+      "pinyin": "Zhè ge bāo bǐ nà ge bāo qīng.",
+      "meaning": {
+        "en": "This bag is lighter than that bag.",
+        "fr": "Ce sac-ci est plus léger que celui-là.",
+        "ru": "Эта сумка легче той.",
+        "tr": "Bu çanta şu çantadan daha hafif."
+      },
+      "topic": "measure",
+      "pdfPages": [
+        0
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s49",
+      "hanzi": "桂花公园是一个大公园。",
+      "pinyin": "Guìhuā Gōngyuán shì yí ge dà gōngyuán.",
+      "meaning": {
+        "en": "Guihua Park is a large park.",
+        "fr": "Le parc Guihua est un grand parc.",
+        "ru": "Парк Гуйхуа — большой парк.",
+        "tr": "Guihua Parkı büyük bir parktır."
+      },
+      "topic": "parks",
+      "pdfPages": [
+        0
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s50",
+      "hanzi": "我们去人民公园吧。",
+      "pinyin": "Wǒmen qù Rénmín Gōngyuán ba.",
+      "meaning": {
+        "en": "Let’s go to People’s Park.",
+        "fr": "Allons au parc du Peuple.",
+        "ru": "Пойдём в Народный парк.",
+        "tr": "Halk Parkı’na gidelim."
+      },
+      "topic": "parks",
+      "pdfPages": [
+        0
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s51",
+      "hanzi": "我不想去相亲。",
+      "pinyin": "Wǒ bù xiǎng qù xiāngqīn.",
+      "meaning": {
+        "en": "I do not want to go on a blind date.",
+        "fr": "Je ne veux pas aller à une rencontre arrangée.",
+        "ru": "Я не хочу идти на знакомство с потенциальным партнёром.",
+        "tr": "Evlilik amaçlı bir tanışmaya gitmek istemiyorum."
+      },
+      "topic": "routine",
+      "pdfPages": [
+        0
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s52",
+      "hanzi": "今天是十一月十一号。",
+      "pinyin": "Jīntiān shì shíyī yuè shíyī hào.",
+      "meaning": {
+        "en": "Today is 11 November (practice date).",
+        "fr": "Nous sommes le 11 novembre (date d’exercice).",
+        "ru": "Сегодня 11 ноября (учебная дата).",
+        "tr": "Bugün 11 Kasım (alıştırma tarihi)."
+      },
+      "topic": "routine",
+      "pdfPages": [
+        0
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s53",
+      "hanzi": "我学电子工程。",
+      "pinyin": "Wǒ xué diànzǐ gōngchéng.",
+      "meaning": {
+        "en": "I study electronics engineering.",
+        "fr": "J’étudie le génie électronique.",
+        "ru": "Я изучаю электронную инженерию.",
+        "tr": "Elektronik mühendisliği okuyorum."
+      },
+      "topic": "engineering",
+      "pdfPages": [
+        0
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s54",
+      "hanzi": "这里没有电。",
+      "pinyin": "Zhèlǐ méiyǒu diàn.",
+      "meaning": {
+        "en": "There is no electricity here.",
+        "fr": "Il n’y a pas d’électricité ici.",
+        "ru": "Здесь нет электричества.",
+        "tr": "Burada elektrik yok."
+      },
+      "topic": "engineering",
+      "pdfPages": [
+        0
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s55",
+      "hanzi": "他的身高是一百八十厘米。",
+      "pinyin": "Tā de shēngāo shì yì bǎi bāshí límǐ.",
+      "meaning": {
+        "en": "His height is 180 centimetres.",
+        "fr": "Il mesure 180 centimètres.",
+        "ru": "Его рост — 180 сантиметров.",
+        "tr": "Boyu 180 santimetre."
+      },
+      "topic": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s56",
+      "hanzi": "他的身高是一百七十五厘米。",
+      "pinyin": "Tā de shēngāo shì yì bǎi qīshíwǔ límǐ.",
+      "meaning": {
+        "en": "His height is 175 centimetres.",
+        "fr": "Il mesure 175 centimètres.",
+        "ru": "Его рост — 175 сантиметров.",
+        "tr": "Boyu 175 santimetre."
+      },
+      "topic": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s57",
+      "hanzi": "他的身高是一百七十九厘米。",
+      "pinyin": "Tā de shēngāo shì yì bǎi qīshíjiǔ límǐ.",
+      "meaning": {
+        "en": "His height is 179 centimetres.",
+        "fr": "Il mesure 179 centimètres.",
+        "ru": "Его рост — 179 сантиметров.",
+        "tr": "Boyu 179 santimetre."
+      },
+      "topic": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s58",
+      "hanzi": "他的身高是一百八十五厘米。",
+      "pinyin": "Tā de shēngāo shì yì bǎi bāshíwǔ límǐ.",
+      "meaning": {
+        "en": "His height is 185 centimetres.",
+        "fr": "Il mesure 185 centimètres.",
+        "ru": "Его рост — 185 сантиметров.",
+        "tr": "Boyu 185 santimetre."
+      },
+      "topic": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s59",
+      "hanzi": "他的身高是一百六十三厘米。",
+      "pinyin": "Tā de shēngāo shì yì bǎi liùshísān límǐ.",
+      "meaning": {
+        "en": "His height is 163 centimetres.",
+        "fr": "Il mesure 163 centimètres.",
+        "ru": "Его рост — 163 сантиметров.",
+        "tr": "Boyu 163 santimetre."
+      },
+      "topic": "measure",
+      "pdfPages": [
+        4
+      ],
+      "origin": "app-added"
+    },
+    {
+      "id": "c07-s60",
+      "hanzi": "我要一杯茶，不要糖。",
+      "pinyin": "Wǒ yào yì bēi chá, bú yào táng.",
+      "meaning": {
+        "en": "I would like a cup of tea, without sugar.",
+        "fr": "Je voudrais une tasse de thé, sans sucre.",
+        "ru": "Я хочу чашку чая без сахара.",
+        "tr": "Bir fincan çay istiyorum, şeker olmasın."
+      },
+      "topic": "drinks",
+      "pdfPages": [],
+      "origin": "app-added"
+    }
+  ],
+  "dialogue": [],
+  "sourceSentenceIds": {
+    "compare": "c07-s01",
+    "me": "c07-s02",
+    "reverse": "c07-s03",
+    "not-as": "c07-s04",
+    "not-more": "c07-s05",
+    "small": "c07-s06",
+    "much-le": "c07-s07",
+    "much-de": "c07-s08",
+    "height": "c07-s09",
+    "weight": "c07-s10",
+    "five": "c07-s11",
+    "phone": "c07-s12",
+    "cheap": "c07-s13",
+    "cheaper": "c07-s14",
+    "slightly-cheaper": "c07-s15",
+    "price-question": "c07-s16",
+    "languages": "c07-s17",
+    "doctor": "c07-s18",
+    "daifu": "c07-s19",
+    "park-big": "c07-s20",
+    "guihua": "c07-s21",
+    "pond": "c07-s22",
+    "canteen": "c07-s23",
+    "food": "c07-s24",
+    "saturday": "c07-s25",
+    "single": "c07-s26",
+    "sugar": "c07-s27",
+    "ice": "c07-s28",
+    "order": "c07-s29",
+    "brands": "c07-s30",
+    "pepsi": "c07-s31",
+    "study": "c07-s32",
+    "engineer": "c07-s33",
+    "genius": "c07-s34",
+    "prices": "c07-s35",
+    "buy": "c07-s36",
+    "saturday-guihua": "c07-s37",
+    "noon": "c07-s38",
+    "electrician": "c07-s39",
+    "buy-cola": "c07-s40",
+    "extra-0": "c07-s41",
+    "extra-1": "c07-s42",
+    "extra-2": "c07-s43",
+    "extra-3": "c07-s44",
+    "extra-4": "c07-s45",
+    "extra-5": "c07-s46",
+    "extra-6": "c07-s47",
+    "extra-7": "c07-s48",
+    "extra-8": "c07-s49",
+    "extra-9": "c07-s50",
+    "extra-10": "c07-s51",
+    "extra-11": "c07-s52",
+    "extra-12": "c07-s53",
+    "extra-13": "c07-s54",
+    "height-180": "c07-s55",
+    "height-175": "c07-s56",
+    "height-179": "c07-s57",
+    "height-185": "c07-s58",
+    "height-163": "c07-s59"
+  },
+  "notes": [
+    "Source wording and workbook-added practice are labelled separately.",
+    "The two phone price stages are intentionally retained.",
+    "Profession hierarchy is a quoted classroom opinion, not an endorsed fact or a graded factual claim.",
+    "No park timetable or location is inferred from the vocabulary fragments."
+  ],
+  "topics": [
+    {
+      "id": "comparison",
+      "anchor": "比",
+      "title": {
+        "en": "Build a comparison",
+        "fr": "Construire une comparaison",
+        "ru": "Строим сравнение",
+        "tr": "Karşılaştırma kur"
+      },
+      "pattern": "A + 比 + B + adjective",
+      "note": {
+        "en": "A is the thing you describe; B is the comparison standard. Use A 比 B 高 without 是 or 很. A 没有 B 高 means A is not as tall. A 不比 B 高 only denies being taller and may allow equality.",
+        "fr": "A est ce que l’on décrit et B le point de comparaison. Utilisez A 比 B 高 sans 是 ni 很. A 没有 B 高 signifie moins grand ; A 不比 B 高 peut aussi permettre l’égalité.",
+        "ru": "A — то, что описываем; B — образец сравнения. В A 比 B 高 не нужны 是 и 很. A 没有 B 高 — не такой высокий; A 不比 B 高 допускает и одинаковый рост.",
+        "tr": "A anlatılan, B karşılaştırma ölçütüdür. A 比 B 高 yapısında 是 veya 很 kullanmayın. A 没有 B 高, A’nın daha kısa olduğunu; A 不比 B 高 ise eşit veya daha kısa olabileceğini söyler."
+      },
+      "target": "me",
+      "blocks": [
+        "我",
+        "比",
+        "你",
+        "高"
+      ],
+      "beforeLesson": 6,
+      "beforeId": "c06-s-difficult"
+    },
+    {
+      "id": "difference",
+      "anchor": "一点儿",
+      "title": {
+        "en": "A little or much more",
+        "fr": "Un peu ou beaucoup plus",
+        "ru": "Немного или намного",
+        "tr": "Biraz veya çok daha"
+      },
+      "pattern": "adjective + 一点儿 / 多了 / 得多",
+      "note": {
+        "en": "Put the difference after the adjective. 一点儿 is a small difference; 多了 and 得多 are alternative large-degree endings. 得 is neutral de here. This 了 is not a general past-tense marker. Compare Lesson 06 有点儿难 with 高一点儿: the positions differ.",
+        "fr": "La différence vient après l’adjectif. 一点儿 exprime un petit écart ; 多了 et 得多 sont deux alternatives pour un grand écart. 得 se lit de. Ce 了 n’est pas un marqueur général du passé. Comparez 有点儿难 et 高一点儿.",
+        "ru": "Размер различия ставится после прилагательного. 一点儿 — небольшое различие; 多了 и 得多 — два варианта для большой степени. 得 читается нейтрально de, а 了 здесь не обычный показатель прошлого. Сравните 有点儿难 и 高一点儿.",
+        "tr": "Fark sıfattan sonra gelir. 一点儿 küçük farkı, 多了 ve 得多 büyük farkı belirtir. 得 burada nötr de okunur. Bu 了 genel geçmiş zaman eki değildir. 有点儿难 ile 高一点儿 dizilişlerini karşılaştırın."
+      },
+      "target": "much-de",
+      "blocks": [
+        "Robert",
+        "比",
+        "我",
+        "高",
+        "得多"
+      ],
+      "beforeLesson": 6,
+      "beforeId": "c06-s-hard"
+    },
+    {
+      "id": "measure",
+      "anchor": "米",
+      "title": {
+        "en": "Height, weight & units",
+        "fr": "Taille, poids et unités",
+        "ru": "Рост, вес и единицы",
+        "tr": "Boy, ağırlık ve birimler"
+      },
+      "pattern": "比 + adjective + exact difference",
+      "note": {
+        "en": "身高 and 体重 are measurements, not comparison adjectives. Use 高 / 矮 for height and 重 / 轻 for weight. Put 五厘米 after 高. 一米八 is a common spoken way to say 1.80 m. All personal measurements here are fictional practice roles.",
+        "fr": "身高 et 体重 nomment des mesures. Comparez avec 高 / 矮 et 重 / 轻. 五厘米 vient après 高. 一米八 signifie couramment 1,80 m à l’oral. Les mesures personnelles sont des rôles d’exercice.",
+        "ru": "身高 и 体重 — названия измерений. Для сравнения используйте 高 / 矮 и 重 / 轻. 五厘米 ставится после 高. 一米八 — обычное разговорное «метр восемьдесят». Личные измерения здесь — учебные роли.",
+        "tr": "身高 ve 体重 ölçüm adlarıdır. Karşılaştırmada boy için 高 / 矮, ağırlık için 重 / 轻 kullanın. 五厘米, 高’dan sonra gelir. 一米八 konuşmada 1,80 m demektir. Kişisel ölçüler alıştırma rolleridir."
+      },
+      "target": "weight",
+      "blocks": [
+        "我的体重",
+        "是",
+        "八十公斤"
+      ],
+      "beforeLesson": 6,
+      "beforeId": "c06-s-money"
+    },
+    {
+      "id": "phones",
+      "anchor": "手机",
+      "title": {
+        "en": "Compare phone prices",
+        "fr": "Comparer les prix des téléphones",
+        "ru": "Сравниваем цены телефонов",
+        "tr": "Telefon fiyatlarını karşılaştır"
+      },
+      "pattern": "这个手机 / 那个手机 + 比 + …",
+      "note": {
+        "en": "The board has two separate stages: ¥1,800 versus ¥12,000, and ¥1,800 versus ¥10,000. They are classroom examples. Keep 便宜 piányi with a neutral final syllable. 很便宜 is a description, not the 比 pattern.",
+        "fr": "Le tableau présente deux étapes distinctes : 1 800 contre 12 000 yuans, puis 1 800 contre 10 000. Ce sont des exemples de cours. La dernière syllabe de 便宜 piányi est neutre. 很便宜 est une description.",
+        "ru": "На доске два отдельных этапа: 1800 против 12000 и 1800 против 10000 юаней. Это учебные цены. Последний слог 便宜 piányi нейтральный. 很便宜 — описание, а не конструкция с 比.",
+        "tr": "Tahtada iki ayrı aşama var: 1800–12000 ve 1800–10000 yuan. Bunlar ders örnekleridir. 便宜 piányi sözcüğünün son hecesi nötrdür. 很便宜 bir betimlemedir, 比 yapısı değildir."
+      },
+      "target": "slightly-cheaper",
+      "blocks": [
+        "这个手机",
+        "比",
+        "那个手机",
+        "便宜",
+        "一点儿"
+      ],
+      "beforeLesson": 6,
+      "beforeId": "c06-s-interesting"
+    },
+    {
+      "id": "difficulty",
+      "anchor": "难",
+      "title": {
+        "en": "Difficulty & professions",
+        "fr": "Difficulté et professions",
+        "ru": "Трудность и профессии",
+        "tr": "Zorluk ve meslekler"
+      },
+      "pattern": "英语 + 比 + 汉语 + 难多了",
+      "note": {
+        "en": "Difficulty is a speaker’s opinion. The doctor/nurse sentence is retained as a classroom quote, not a factual ranking; both professions are essential, and that quote is not graded as a fact. 医生 and 大夫 are synonyms here; say one, not both. 大夫 is dàifu in this lesson.",
+        "fr": "La difficulté est un avis. La phrase sur les médecins et infirmiers reste une citation du cours, pas un classement factuel ; elle n’est pas évaluée comme un fait. 医生 et 大夫 sont synonymes ici. Choisissez-en un. 大夫 se lit dàifu.",
+        "ru": "Трудность — мнение говорящего. Фраза о врачах и медсёстрах сохранена как цитата с занятия, а не объективный рейтинг; как факт она не оценивается. 医生 и 大夫 здесь синонимы: произносите одно слово. 大夫 читается dàifu.",
+        "tr": "Zorluk konuşanın görüşüdür. Doktor/hemşire cümlesi ders alıntısıdır, gerçek bir önem sıralaması değildir ve olgu olarak puanlanmaz. 医生 ve 大夫 burada eş anlamlıdır; birini söyleyin. Bu derste 大夫, dàifu okunur."
+      },
+      "target": "languages",
+      "blocks": [
+        "英语",
+        "比",
+        "汉语",
+        "难",
+        "多了"
+      ],
+      "beforeLesson": 6,
+      "beforeId": "c06-s-difficult"
+    },
+    {
+      "id": "parks",
+      "anchor": "公园",
+      "title": {
+        "en": "Parks, ponds & the canteen",
+        "fr": "Parcs, étangs et cantine",
+        "ru": "Парки, пруды и столовая",
+        "tr": "Parklar, göletler ve yemekhane"
+      },
+      "pattern": "桂花 + 公园 · 池塘 ≠ 食堂",
+      "note": {
+        "en": "大公园 describes a large park; 桂花公园 and 人民公园 are name-like phrases. 池塘 chítáng and 食堂 shítáng both use 2nd + 2nd tones, but ch and sh differ. 塘 and 堂 are different characters. 食 links 食堂 and 食物. No location is inferred from the board.",
+        "fr": "大公园 décrit un grand parc ; 桂花公园 et 人民公园 ressemblent à des noms. 池塘 chítáng et 食堂 shítáng ont deux tons 2, mais ch et sh diffèrent. 塘 et 堂 sont distincts. 食 relie 食堂 et 食物. Aucun lieu exact n’est déduit.",
+        "ru": "大公园 — описание большого парка; 桂花公园 и 人民公园 похожи на названия. У 池塘 chítáng и 食堂 shítáng два вторых тона, но ch и sh различаются. 塘 и 堂 — разные знаки. 食 связывает 食堂 и 食物. Точное место не выводится из доски.",
+        "tr": "大公园 büyük park betimlemesidir; 桂花公园 ve 人民公园 ad gibi kullanılır. 池塘 chítáng ile 食堂 shítáng iki ikinci tona sahiptir; ch ve sh farklıdır. 塘 ile 堂 ayrı karakterlerdir. 食, 食堂 ile 食物 arasında bağ kurar."
+      },
+      "target": "canteen",
+      "blocks": [
+        "我",
+        "在",
+        "食堂",
+        "吃饭"
+      ],
+      "beforeLesson": 6,
+      "beforeId": "c06-s-living"
+    },
+    {
+      "id": "routine",
+      "anchor": "每",
+      "title": {
+        "en": "People, dates & routines",
+        "fr": "Personnes, dates et habitudes",
+        "ru": "Люди, даты и привычки",
+        "tr": "Kişiler, tarihler ve alışkanlıklar"
+      },
+      "pattern": "每 + 星期六 + 上午 + action",
+      "note": {
+        "en": "Build the time phrase from larger to smaller units: every + Saturday + morning. It comes before the action. 单身, 相亲 and 11月11号 are vocabulary fragments, not a verified park timetable or event announcement.",
+        "fr": "Construisez le repère temporel du plus grand au plus petit : chaque + samedi + matin, avant l’action. 单身, 相亲 et 11月11号 sont du vocabulaire, pas un programme vérifié d’événements.",
+        "ru": "Стройте время от большего к меньшему: каждый + суббота + утро, перед действием. 单身, 相亲 и 11月11号 — словарные фрагменты, не подтверждённое расписание встреч в парке.",
+        "tr": "Zamanı büyük birimden küçüğe kurun: her + cumartesi + sabah, eylemden önce. 单身, 相亲 ve 11月11号 sözcük parçalarıdır; doğrulanmış park etkinliği duyurusu değildir."
+      },
+      "target": "saturday",
+      "blocks": [
+        "我",
+        "每星期六上午",
+        "去",
+        "公园"
+      ],
+      "beforeLesson": 6,
+      "beforeId": "c06-s-today"
+    },
+    {
+      "id": "drinks",
+      "anchor": "可乐",
+      "title": {
+        "en": "Order a drink precisely",
+        "fr": "Commander une boisson précisément",
+        "ru": "Точно заказываем напиток",
+        "tr": "İçeceği doğru sipariş et"
+      },
+      "pattern": "我要 + 无糖可乐 · 不要冰",
+      "note": {
+        "en": "无糖可乐 names sugar-free cola. 不要糖 asks for no sugar to be added; it does not remove sugar already in a bottled drink. 不要冰 means no ice. Before 要 yào, 不 is pronounced bú. 还是 gives an A-or-B choice, not a 比 comparison.",
+        "fr": "无糖可乐 nomme un cola sans sucre. 不要糖 demande de ne pas ajouter de sucre, sans retirer celui d’une boisson en bouteille. 不要冰 veut dire sans glaçons. Devant 要 yào, 不 se lit bú. 还是 propose un choix.",
+        "ru": "无糖可乐 — кола без сахара. 不要糖 — просьба не добавлять сахар, а не убрать его из готовой колы. 不要冰 — без льда. Перед 要 yào 不 читается bú. 还是 задаёт выбор, а не сравнение с 比.",
+        "tr": "无糖可乐 şekersiz koladır. 不要糖 şeker eklenmemesini ister; şişedeki şekeri yok etmez. 不要冰 buz koymamak demektir. 要 yào önünde 不, bú okunur. 还是 seçenek sorar; 比 karşılaştırması değildir."
+      },
+      "target": "order",
+      "blocks": [
+        "我要",
+        "无糖可乐",
+        "不要冰"
+      ],
+      "beforeLesson": 6,
+      "beforeId": "c06-s-waterchoice"
+    },
+    {
+      "id": "engineering",
+      "anchor": "电",
+      "title": {
+        "en": "Engineering, work & talent",
+        "fr": "Ingénierie, travail et talent",
+        "ru": "Инженерия, работа и талант",
+        "tr": "Mühendislik, iş ve yetenek"
+      },
+      "pattern": "工程 = field · 工程师 = profession",
+      "note": {
+        "en": "电气工程 is electrical engineering; 电气工程师 is an electrical engineer. 电工 is an electrician. 电子工程 is electronics engineering. For a person, 天才 means genius, rather than any learned skill.",
+        "fr": "电气工程 est le génie électrique ; 电气工程师 est un ingénieur électricien. 电工 désigne un électricien. 电子工程 est le génie électronique. Pour une personne, 天才 signifie génie, pas toute compétence acquise.",
+        "ru": "电气工程 — электротехника как область; 电气工程师 — инженер-электрик; 电工 — электрик. 电子工程 — электронная инженерия. О человеке 天才 означает «гений», а не любой приобретённый навык.",
+        "tr": "电气工程 elektrik mühendisliği alanı, 电气工程师 elektrik mühendisi, 电工 elektrikçidir. 电子工程 elektronik mühendisliğidir. Bir kişi için 天才, herhangi bir beceri değil, dâhi demektir."
+      },
+      "target": "engineer",
+      "blocks": [
+        "他",
+        "是",
+        "电气工程师"
+      ],
+      "beforeLesson": 5,
+      "beforeId": ""
+    }
+  ]
+}

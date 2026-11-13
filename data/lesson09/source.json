@@ -1,0 +1,101 @@
+{
+  "lessonId": "intensive-09",
+  "date": "2026-10-30",
+  "files": [
+    {
+      "filename": "IMG_0279.heic",
+      "bytes": 1100638,
+      "sha256": "1cdd56162b545f649463f977bfe487babc3e117358eca6393279645ab1f6b1bb"
+    },
+    {
+      "filename": "IMG_0280.heic",
+      "bytes": 1156019,
+      "sha256": "9833308097e3a683688b4490cd5e6b9109c23ca38d1aab5e4216a7531adc9d09"
+    },
+    {
+      "filename": "IMG_0281.heic",
+      "bytes": 1346900,
+      "sha256": "b4c1ec1d10d16c28bf6e9f3af236f355202a86fdfa3b94077ca7b351ab0cdea6"
+    },
+    {
+      "filename": "IMG_0282.heic",
+      "bytes": 1921397,
+      "sha256": "f14cd23682715fb9f7ff85622e68f51a0123ec60e7f6181f13d06d506f8006ca"
+    },
+    {
+      "filename": "IMG_0283.heic",
+      "bytes": 1056362,
+      "sha256": "f0e076eeac96226617aa07fddd6499069e7074d45ac097fb568ac28ea8d2793f"
+    },
+    {
+      "filename": "IMG_0284.heic",
+      "bytes": 1329171,
+      "sha256": "430f85af59ce4ff922cdf0eeffd35f43b5b0d4ecbede33c89c9f6d361d774e42"
+    },
+    {
+      "filename": "IMG_0285.heic",
+      "bytes": 1291769,
+      "sha256": "ce4277afdd96d00e944a95d34cddbe3fab7825c12b5569f1427376a447b13c60"
+    },
+    {
+      "filename": "IMG_0286.heic",
+      "bytes": 898633,
+      "sha256": "50d1cd323048c606b1e47d8658c76378a95116f192b3a70262558f9251716dfd"
+    },
+    {
+      "filename": "IMG_0287.heic",
+      "bytes": 1030482,
+      "sha256": "f24f1a62f64c247ecac667e08240360c575f1cb3331cfe0290761368580dc2a7"
+    },
+    {
+      "filename": "IMG_0288.heic",
+      "bytes": 1400875,
+      "sha256": "2c11cce657b77fdc76f2223d7e98c6929c95136641a3f019cfc43a6680aa3aba"
+    },
+    {
+      "filename": "IMG_0290.heic",
+      "bytes": 1001687,
+      "sha256": "bc4edb1f0442a8f5bb79dd4973c6e746c434f11ab95d175d6a9e62d632fcfb47"
+    },
+    {
+      "filename": "IMG_0291.heic",
+      "bytes": 1004531,
+      "sha256": "7ce7c467171b2d257338a47baacc94389d952bbe7824332f9ce784b2bdb5b515"
+    },
+    {
+      "filename": "IMG_0293.heic",
+      "bytes": 1276247,
+      "sha256": "e56c662c06f08d08394154d9130075343220e872646c11464da2c52a1219dbea"
+    },
+    {
+      "filename": "IMG_0294.heic",
+      "bytes": 1321227,
+      "sha256": "e8b00953cfa969e71a36bb9a50d7cb927fc04c401ab2d42ed42a34fb551a414e"
+    },
+    {
+      "filename": "IMG_0292.mov",
+      "bytes": 1181614,
+      "sha256": "5650231654ce51a9525fcc41ae35336147f2fcc80df634dc71c9b01df62efd99"
+    }
+  ],
+  "video": {
+    "filename": "IMG_0292.mov",
+    "durationSeconds": 0.633333,
+    "framesReviewed": [
+      0,
+      0.25,
+      0.55
+    ]
+  },
+  "notes": [
+    "Fourteen photographs and three video frames reviewed; overlapping board stages deduplicated.",
+    "Raw photos/video remain local. IMG_0282 contains a teacher; no personal image is published.",
+    "Weekday question normalized to 今天星期几？; do not add 吗 to this 几 question.",
+    "Weather sentences are separate classroom practice scenarios, not a live weather report.",
+    "23:30 = 晚上十一点半; class schedule and personal-routine examples kept separate.",
+    "K318, T214, D8, G9001 and 90/60/30 minutes are classroom annotations with no specified route. They are not a live timetable or general duration promise.",
+    "The board numbers ≤3000 and 900–1000 have unspecified scope. They are not taught as a universal count of Chinese characters.",
+    "贱 is retained for character comparison; everyday neutral price examples use 便宜.",
+    "Source board components 丝/纟 and 青 are shape/sound observations, not invented historical etymology."
+  ]
+}

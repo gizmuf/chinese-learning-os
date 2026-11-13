@@ -1,0 +1,4644 @@
+{
+  "characters": [
+    {
+      "text": "一",
+      "pinyin": "yī",
+      "meaning": {
+        "en": "one; yì / yí in quantity phrases, neutral yi in 猜一猜"
+      },
+      "sourceEntryIds": [
+        "c10-t25",
+        "c10-t30",
+        "c10-t53",
+        "c10-t82",
+        "c10-t86",
+        "c10-s07",
+        "c10-s11",
+        "c10-s12",
+        "c10-s13",
+        "c10-s28",
+        "c10-s29",
+        "c10-s30",
+        "c10-s31",
+        "c10-s32",
+        "c10-s33",
+        "c10-s34",
+        "c10-s35",
+        "c10-s36",
+        "c10-s37",
+        "c10-s38",
+        "c10-s39",
+        "c10-opt-source-saying"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t25",
+          "hanzi": "一点儿",
+          "pinyin": "yìdiǎnr",
+          "sourceIds": [
+            "IMG_0392:L03"
+          ]
+        },
+        {
+          "id": "c10-t30",
+          "hanzi": "猜一猜",
+          "pinyin": "cāi yi cāi",
+          "sourceIds": [
+            "IMG_0391:L08"
+          ]
+        },
+        {
+          "id": "c10-t53",
+          "hanzi": "星期一",
+          "pinyin": "xīngqīyī",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-t82",
+          "hanzi": "一直",
+          "pinyin": "yìzhí",
+          "sourceIds": [
+            "IMG_0397:L01"
+          ]
+        },
+        {
+          "id": "c10-t86",
+          "hanzi": "一",
+          "pinyin": "yī",
+          "sourceIds": [
+            "IMG_0399:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "三",
+      "pinyin": "sān",
+      "meaning": {
+        "en": "three"
+      },
+      "sourceEntryIds": [
+        "c10-t31",
+        "c10-t41",
+        "c10-t55",
+        "c10-s08",
+        "c10-s12",
+        "c10-s13"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t31",
+          "hanzi": "三十",
+          "pinyin": "sānshí",
+          "sourceIds": [
+            "IMG_0393:L04"
+          ]
+        },
+        {
+          "id": "c10-t41",
+          "hanzi": "三个",
+          "pinyin": "sān ge",
+          "sourceIds": [
+            "IMG_0394:L10"
+          ]
+        },
+        {
+          "id": "c10-t55",
+          "hanzi": "星期三",
+          "pinyin": "xīngqīsān",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-s08",
+          "hanzi": "我猜你三十岁。",
+          "pinyin": "Wǒ cāi nǐ sānshí suì.",
+          "sourceIds": [
+            "IMG_0393:L04"
+          ]
+        },
+        {
+          "id": "c10-s12",
+          "hanzi": "明天十一月三号，星期二。",
+          "pinyin": "Míngtiān shíyī yuè sān hào, xīngqī'èr.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "上",
+      "pinyin": "shàng",
+      "meaning": {
+        "en": "above, on top, superior; to go up; to attend; previous"
+      },
+      "sourceEntryIds": [
+        "c10-t75",
+        "c10-s23"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t75",
+          "hanzi": "上课",
+          "pinyin": "shàngkè",
+          "sourceIds": [
+            "IMG_0401:L05"
+          ]
+        },
+        {
+          "id": "c10-s23",
+          "hanzi": "我们在上课。",
+          "pinyin": "Wǒmen zài shàngkè.",
+          "sourceIds": [
+            "IMG_0401:L05"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "世",
+      "pinyin": "shì",
+      "meaning": {
+        "en": "generation, era, age; world"
+      },
+      "sourceEntryIds": [
+        "c10-t33"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t33",
+          "hanzi": "世界杯",
+          "pinyin": "Shìjièbēi",
+          "sourceIds": [
+            "IMG_0390:L15"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "两",
+      "pinyin": "liǎng",
+      "meaning": {
+        "en": "two, both, pair, couple; ounce"
+      },
+      "sourceEntryIds": [
+        "c10-t26",
+        "c10-t40"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t26",
+          "hanzi": "两倍",
+          "pinyin": "liǎng bèi",
+          "sourceIds": [
+            "IMG_0392:L03"
+          ]
+        },
+        {
+          "id": "c10-t40",
+          "hanzi": "两个",
+          "pinyin": "liǎng ge",
+          "sourceIds": [
+            "IMG_0394:L09"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "个",
+      "pinyin": "gè",
+      "meaning": {
+        "en": "this, that; single; measure word for individuals"
+      },
+      "sourceEntryIds": [
+        "c10-t40",
+        "c10-t41"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t40",
+          "hanzi": "两个",
+          "pinyin": "liǎng ge",
+          "sourceIds": [
+            "IMG_0394:L09"
+          ]
+        },
+        {
+          "id": "c10-t41",
+          "hanzi": "三个",
+          "pinyin": "sān ge",
+          "sourceIds": [
+            "IMG_0394:L10"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "么",
+      "pinyin": "me",
+      "meaning": {
+        "en": "neutral second syllable of 什么 (what)"
+      },
+      "sourceEntryIds": [
+        "c10-t73",
+        "c10-s22"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t73",
+          "hanzi": "什么",
+          "pinyin": "shénme",
+          "sourceIds": [
+            "IMG_0401:L04"
+          ]
+        },
+        {
+          "id": "c10-s22",
+          "hanzi": "现在你在做什么？",
+          "pinyin": "Xiànzài nǐ zài zuò shénme?",
+          "sourceIds": [
+            "IMG_0401:L04"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "习",
+      "pinyin": "xí",
+      "meaning": {
+        "en": "to study, to practice; habit"
+      },
+      "sourceEntryIds": [
+        "c10-t76",
+        "c10-s24"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t76",
+          "hanzi": "学习",
+          "pinyin": "xuéxí",
+          "sourceIds": [
+            "IMG_0401:L05"
+          ]
+        },
+        {
+          "id": "c10-s24",
+          "hanzi": "我们在学习。",
+          "pinyin": "Wǒmen zài xuéxí.",
+          "sourceIds": [
+            "IMG_0401:L05"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "书",
+      "pinyin": "shū",
+      "meaning": {
+        "en": "book, letter, document; writing"
+      },
+      "sourceEntryIds": [
+        "c10-t62",
+        "c10-t100",
+        "c10-s18",
+        "c10-s35"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t62",
+          "hanzi": "书店",
+          "pinyin": "shūdiàn",
+          "sourceIds": [
+            "IMG_0395:L03"
+          ]
+        },
+        {
+          "id": "c10-t100",
+          "hanzi": "书",
+          "pinyin": "shū",
+          "sourceIds": [
+            "IMG_0400:L02"
+          ]
+        },
+        {
+          "id": "c10-s18",
+          "hanzi": "我在书店。",
+          "pinyin": "Wǒ zài shūdiàn.",
+          "sourceIds": [
+            "IMG_0395:L03"
+          ]
+        },
+        {
+          "id": "c10-s35",
+          "hanzi": "一本书",
+          "pinyin": "yì běn shū",
+          "sourceIds": [
+            "IMG_0400:L02"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "了",
+      "pinyin": "le",
+      "meaning": {
+        "en": "neutral particle after the comparative degree phrase; not liǎo"
+      },
+      "sourceEntryIds": [
+        "c10-t23",
+        "c10-s06"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t23",
+          "hanzi": "多了",
+          "pinyin": "duō le",
+          "sourceIds": [
+            "IMG_0392:L03"
+          ]
+        },
+        {
+          "id": "c10-s06",
+          "hanzi": "你的头发比我的长多了。",
+          "pinyin": "Nǐ de tóufa bǐ wǒ de cháng duō le.",
+          "sourceIds": [
+            "IMG_0392:L06"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "二",
+      "pinyin": "èr",
+      "meaning": {
+        "en": "two; twice"
+      },
+      "sourceEntryIds": [
+        "c10-t54",
+        "c10-s11",
+        "c10-s12"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t54",
+          "hanzi": "星期二",
+          "pinyin": "xīngqī'èr",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-s11",
+          "hanzi": "今天十一月二号，星期一。",
+          "pinyin": "Jīntiān shíyī yuè èr hào, xīngqīyī.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-s12",
+          "hanzi": "明天十一月三号，星期二。",
+          "pinyin": "Míngtiān shíyī yuè sān hào, xīngqī'èr.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "亮",
+      "pinyin": "liang",
+      "meaning": {
+        "en": "neutral second syllable of 漂亮 (pretty); citation liàng (bright)"
+      },
+      "sourceEntryIds": [
+        "c10-t17",
+        "c10-s03"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t17",
+          "hanzi": "漂亮",
+          "pinyin": "piàoliang",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        },
+        {
+          "id": "c10-s03",
+          "hanzi": "电车比油车漂亮。",
+          "pinyin": "Diànchē bǐ yóuchē piàoliang.",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "人",
+      "pinyin": "rén",
+      "meaning": {
+        "en": "man, person; people"
+      },
+      "sourceEntryIds": [
+        "c10-t37",
+        "c10-t43",
+        "c10-t44",
+        "c10-s09",
+        "c10-opt-source-saying"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t37",
+          "hanzi": "人",
+          "pinyin": "rén",
+          "sourceIds": [
+            "IMG_0394:L08"
+          ]
+        },
+        {
+          "id": "c10-t43",
+          "hanzi": "男人",
+          "pinyin": "nánrén",
+          "sourceIds": [
+            "IMG_0392:L08"
+          ]
+        },
+        {
+          "id": "c10-t44",
+          "hanzi": "女人",
+          "pinyin": "nǚrén",
+          "sourceIds": [
+            "IMG_0392:L09"
+          ]
+        },
+        {
+          "id": "c10-s09",
+          "hanzi": "你家有几口人？",
+          "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
+          "sourceIds": [
+            "IMG_0394:L08"
+          ]
+        },
+        {
+          "id": "c10-opt-source-saying",
+          "hanzi": "男人四十一枝花。",
+          "pinyin": "Nánrén sìshí yì zhī huā.",
+          "sourceIds": [
+            "IMG_0392:L08"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "什",
+      "pinyin": "shén",
+      "meaning": {
+        "en": "what? mixed, miscellaneous"
+      },
+      "sourceEntryIds": [
+        "c10-t73",
+        "c10-s22"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t73",
+          "hanzi": "什么",
+          "pinyin": "shénme",
+          "sourceIds": [
+            "IMG_0401:L04"
+          ]
+        },
+        {
+          "id": "c10-s22",
+          "hanzi": "现在你在做什么？",
+          "pinyin": "Xiànzài nǐ zài zuò shénme?",
+          "sourceIds": [
+            "IMG_0401:L04"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "今",
+      "pinyin": "jīn",
+      "meaning": {
+        "en": "modern, current; today, now"
+      },
+      "sourceEntryIds": [
+        "c10-t45",
+        "c10-s10",
+        "c10-s11"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t45",
+          "hanzi": "今天",
+          "pinyin": "jīntiān",
+          "sourceIds": [
+            "IMG_0394:L11"
+          ]
+        },
+        {
+          "id": "c10-s10",
+          "hanzi": "今天几月几号，星期几？",
+          "pinyin": "Jīntiān jǐ yuè jǐ hào, xīngqī jǐ?",
+          "sourceIds": [
+            "IMG_0394:L11"
+          ]
+        },
+        {
+          "id": "c10-s11",
+          "hanzi": "今天十一月二号，星期一。",
+          "pinyin": "Jīntiān shíyī yuè èr hào, xīngqīyī.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "他",
+      "pinyin": "tā",
+      "meaning": {
+        "en": "other, another; he, she, it"
+      },
+      "sourceEntryIds": [
+        "c10-t38",
+        "c10-t70",
+        "c10-s20",
+        "c10-s21"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t38",
+          "hanzi": "他们",
+          "pinyin": "tāmen",
+          "sourceIds": [
+            "IMG_0394:L09"
+          ]
+        },
+        {
+          "id": "c10-t70",
+          "hanzi": "他",
+          "pinyin": "tā",
+          "sourceIds": [
+            "IMG_0401:L03"
+          ]
+        },
+        {
+          "id": "c10-s20",
+          "hanzi": "他在睡觉。",
+          "pinyin": "Tā zài shuìjiào.",
+          "sourceIds": [
+            "IMG_0401:L03"
+          ]
+        },
+        {
+          "id": "c10-s21",
+          "hanzi": "现在他在睡觉。",
+          "pinyin": "Xiànzài tā zài shuìjiào.",
+          "sourceIds": [
+            "IMG_0401:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "们",
+      "pinyin": "men",
+      "meaning": {
+        "en": "neutral plural suffix for people/pronouns"
+      },
+      "sourceEntryIds": [
+        "c10-t38",
+        "c10-t74",
+        "c10-s23",
+        "c10-s24"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t38",
+          "hanzi": "他们",
+          "pinyin": "tāmen",
+          "sourceIds": [
+            "IMG_0394:L09"
+          ]
+        },
+        {
+          "id": "c10-t74",
+          "hanzi": "我们",
+          "pinyin": "wǒmen",
+          "sourceIds": [
+            "IMG_0401:L05"
+          ]
+        },
+        {
+          "id": "c10-s23",
+          "hanzi": "我们在上课。",
+          "pinyin": "Wǒmen zài shàngkè.",
+          "sourceIds": [
+            "IMG_0401:L05"
+          ]
+        },
+        {
+          "id": "c10-s24",
+          "hanzi": "我们在学习。",
+          "pinyin": "Wǒmen zài xuéxí.",
+          "sourceIds": [
+            "IMG_0401:L05"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "件",
+      "pinyin": "jiàn",
+      "meaning": {
+        "en": "item, matter; component, part; measure word for events"
+      },
+      "sourceEntryIds": [
+        "c10-t89",
+        "c10-s32"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t89",
+          "hanzi": "件",
+          "pinyin": "jiàn",
+          "sourceIds": [
+            "IMG_0399:L05"
+          ]
+        },
+        {
+          "id": "c10-s32",
+          "hanzi": "一件衬衫",
+          "pinyin": "yí jiàn chènshān",
+          "sourceIds": [
+            "IMG_0399:L05"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "你",
+      "pinyin": "nǐ",
+      "meaning": {
+        "en": "you, second person pronoun"
+      },
+      "sourceEntryIds": [
+        "c10-s06",
+        "c10-s07",
+        "c10-s08",
+        "c10-s09",
+        "c10-s14",
+        "c10-s15",
+        "c10-s22"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-s06",
+          "hanzi": "你的头发比我的长多了。",
+          "pinyin": "Nǐ de tóufa bǐ wǒ de cháng duō le.",
+          "sourceIds": [
+            "IMG_0392:L06"
+          ]
+        },
+        {
+          "id": "c10-s07",
+          "hanzi": "你猜一猜。",
+          "pinyin": "Nǐ cāi yi cāi.",
+          "sourceIds": [
+            "IMG_0391:L08"
+          ]
+        },
+        {
+          "id": "c10-s08",
+          "hanzi": "我猜你三十岁。",
+          "pinyin": "Wǒ cāi nǐ sānshí suì.",
+          "sourceIds": [
+            "IMG_0393:L04"
+          ]
+        },
+        {
+          "id": "c10-s09",
+          "hanzi": "你家有几口人？",
+          "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
+          "sourceIds": [
+            "IMG_0394:L08"
+          ]
+        },
+        {
+          "id": "c10-s14",
+          "hanzi": "你在哪儿？",
+          "pinyin": "Nǐ zài nǎr?",
+          "sourceIds": [
+            "IMG_0395:L02"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "便",
+      "pinyin": "pián",
+      "meaning": {
+        "en": "first syllable of 便宜 (inexpensive); not biàn (convenient)"
+      },
+      "sourceEntryIds": [
+        "c10-t15",
+        "c10-s01"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t15",
+          "hanzi": "便宜",
+          "pinyin": "piányi",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        },
+        {
+          "id": "c10-s01",
+          "hanzi": "电车比油车便宜。",
+          "pinyin": "Diànchē bǐ yóuchē piányi.",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "倍",
+      "pinyin": "bèi",
+      "meaning": {
+        "en": "times; fold; multiplicative unit"
+      },
+      "sourceEntryIds": [
+        "c10-t26",
+        "c10-t27"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t26",
+          "hanzi": "两倍",
+          "pinyin": "liǎng bèi",
+          "sourceIds": [
+            "IMG_0392:L03"
+          ]
+        },
+        {
+          "id": "c10-t27",
+          "hanzi": "倍",
+          "pinyin": "bèi",
+          "sourceIds": [
+            "IMG_0392:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "做",
+      "pinyin": "zuò",
+      "meaning": {
+        "en": "to work, to make; to act"
+      },
+      "sourceEntryIds": [
+        "c10-t72",
+        "c10-s22"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t72",
+          "hanzi": "做",
+          "pinyin": "zuò",
+          "sourceIds": [
+            "IMG_0401:L04"
+          ]
+        },
+        {
+          "id": "c10-s22",
+          "hanzi": "现在你在做什么？",
+          "pinyin": "Xiànzài nǐ zài zuò shénme?",
+          "sourceIds": [
+            "IMG_0401:L04"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "儿",
+      "pinyin": "r",
+      "meaning": {
+        "en": "rhotic suffix in 哪儿 / 一点儿 / 饭馆儿; not a separate ér syllable here"
+      },
+      "sourceEntryIds": [
+        "c10-t25",
+        "c10-t59",
+        "c10-t66",
+        "c10-s14"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t25",
+          "hanzi": "一点儿",
+          "pinyin": "yìdiǎnr",
+          "sourceIds": [
+            "IMG_0392:L03"
+          ]
+        },
+        {
+          "id": "c10-t59",
+          "hanzi": "哪儿",
+          "pinyin": "nǎr",
+          "sourceIds": [
+            "IMG_0395:L02"
+          ]
+        },
+        {
+          "id": "c10-t66",
+          "hanzi": "饭馆儿",
+          "pinyin": "fànguǎnr",
+          "sourceIds": [
+            "IMG_0395:L05"
+          ]
+        },
+        {
+          "id": "c10-s14",
+          "hanzi": "你在哪儿？",
+          "pinyin": "Nǐ zài nǎr?",
+          "sourceIds": [
+            "IMG_0395:L02"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "其",
+      "pinyin": "qí",
+      "meaning": {
+        "en": "his, her, its, their; that"
+      },
+      "sourceEntryIds": [
+        "c10-t20",
+        "c10-s05"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t20",
+          "hanzi": "土耳其",
+          "pinyin": "Tǔ'ěrqí",
+          "sourceIds": [
+            "IMG_0390:L14"
+          ]
+        },
+        {
+          "id": "c10-s05",
+          "hanzi": "美国比土耳其远。",
+          "pinyin": "Měiguó bǐ Tǔ'ěrqí yuǎn.",
+          "sourceIds": [
+            "IMG_0390:L14"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "典",
+      "pinyin": "diǎn",
+      "meaning": {
+        "en": "law, canon; scripture, classic; documentation"
+      },
+      "sourceEntryIds": [
+        "c10-t101",
+        "c10-s36"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t101",
+          "hanzi": "词典",
+          "pinyin": "cídiǎn",
+          "sourceIds": [
+            "IMG_0400:L02"
+          ]
+        },
+        {
+          "id": "c10-s36",
+          "hanzi": "一本词典",
+          "pinyin": "yì běn cídiǎn",
+          "sourceIds": [
+            "IMG_0400:L02"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "写",
+      "pinyin": "xiě",
+      "meaning": {
+        "en": "to write; to draw, to sketch; to compose"
+      },
+      "sourceEntryIds": [
+        "c10-t79",
+        "c10-s25"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t79",
+          "hanzi": "写",
+          "pinyin": "xiě",
+          "sourceIds": [
+            "IMG_0397:L02"
+          ]
+        },
+        {
+          "id": "c10-s25",
+          "hanzi": "老师在写。",
+          "pinyin": "Lǎoshī zài xiě.",
+          "sourceIds": [
+            "IMG_0397:L02"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "冰",
+      "pinyin": "bīng",
+      "meaning": {
+        "en": "ice; ice-cold"
+      },
+      "sourceEntryIds": [
+        "c10-t07",
+        "c10-t08"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t07",
+          "hanzi": "冰箱",
+          "pinyin": "bīngxiāng",
+          "sourceIds": [
+            "IMG_0390:L07"
+          ]
+        },
+        {
+          "id": "c10-t08",
+          "hanzi": "电冰箱",
+          "pinyin": "diànbīngxiāng",
+          "sourceIds": [
+            "IMG_0390:L07"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "几",
+      "pinyin": "jǐ",
+      "meaning": {
+        "en": "small table; how many; a few, some"
+      },
+      "sourceEntryIds": [
+        "c10-t35",
+        "c10-s09",
+        "c10-s10"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t35",
+          "hanzi": "几",
+          "pinyin": "jǐ",
+          "sourceIds": [
+            "IMG_0394:L08"
+          ]
+        },
+        {
+          "id": "c10-s09",
+          "hanzi": "你家有几口人？",
+          "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
+          "sourceIds": [
+            "IMG_0394:L08"
+          ]
+        },
+        {
+          "id": "c10-s10",
+          "hanzi": "今天几月几号，星期几？",
+          "pinyin": "Jīntiān jǐ yuè jǐ hào, xīngqī jǐ?",
+          "sourceIds": [
+            "IMG_0394:L11"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "前",
+      "pinyin": "qián",
+      "meaning": {
+        "en": "in front, forward; former, preceding"
+      },
+      "sourceEntryIds": [
+        "c10-t47"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t47",
+          "hanzi": "前天",
+          "pinyin": "qiántiān",
+          "sourceIds": [
+            "IMG_0394:L07"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "十",
+      "pinyin": "shí",
+      "meaning": {
+        "en": "ten, tenth; complete; perfect"
+      },
+      "sourceEntryIds": [
+        "c10-t31",
+        "c10-s08",
+        "c10-s11",
+        "c10-s12",
+        "c10-s13",
+        "c10-opt-source-saying"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t31",
+          "hanzi": "三十",
+          "pinyin": "sānshí",
+          "sourceIds": [
+            "IMG_0393:L04"
+          ]
+        },
+        {
+          "id": "c10-s08",
+          "hanzi": "我猜你三十岁。",
+          "pinyin": "Wǒ cāi nǐ sānshí suì.",
+          "sourceIds": [
+            "IMG_0393:L04"
+          ]
+        },
+        {
+          "id": "c10-s11",
+          "hanzi": "今天十一月二号，星期一。",
+          "pinyin": "Jīntiān shíyī yuè èr hào, xīngqīyī.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-s12",
+          "hanzi": "明天十一月三号，星期二。",
+          "pinyin": "Míngtiān shíyī yuè sān hào, xīngqī'èr.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-s13",
+          "hanzi": "后天十一月四号，星期三。",
+          "pinyin": "Hòutiān shíyī yuè sì hào, xīngqīsān.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "双",
+      "pinyin": "shuāng",
+      "meaning": {
+        "en": "pair, couple; both; measure word for things that come in pairs"
+      },
+      "sourceEntryIds": [
+        "c10-t88",
+        "c10-s30",
+        "c10-s31"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t88",
+          "hanzi": "双",
+          "pinyin": "shuāng",
+          "sourceIds": [
+            "IMG_0399:L04"
+          ]
+        },
+        {
+          "id": "c10-s30",
+          "hanzi": "一双袜子",
+          "pinyin": "yì shuāng wàzi",
+          "sourceIds": [
+            "IMG_0399:L04"
+          ]
+        },
+        {
+          "id": "c10-s31",
+          "hanzi": "一双鞋子",
+          "pinyin": "yì shuāng xiézi",
+          "sourceIds": [
+            "IMG_0399:L04"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "发",
+      "pinyin": "fa",
+      "meaning": {
+        "en": "neutral syllable in 头发 (hair); citation hair reading fà, not fā (send)"
+      },
+      "sourceEntryIds": [
+        "c10-t21",
+        "c10-s06"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t21",
+          "hanzi": "头发",
+          "pinyin": "tóufa",
+          "sourceIds": [
+            "IMG_0392:L06"
+          ]
+        },
+        {
+          "id": "c10-s06",
+          "hanzi": "你的头发比我的长多了。",
+          "pinyin": "Nǐ de tóufa bǐ wǒ de cháng duō le.",
+          "sourceIds": [
+            "IMG_0392:L06"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "口",
+      "pinyin": "kǒu",
+      "meaning": {
+        "en": "classifier for family members here; mouth as a noun"
+      },
+      "sourceEntryIds": [
+        "c10-t36",
+        "c10-s09"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t36",
+          "hanzi": "口",
+          "pinyin": "kǒu",
+          "sourceIds": [
+            "IMG_0394:L08"
+          ]
+        },
+        {
+          "id": "c10-s09",
+          "hanzi": "你家有几口人？",
+          "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
+          "sourceIds": [
+            "IMG_0394:L08"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "台",
+      "pinyin": "tái",
+      "meaning": {
+        "en": "platform; unit; term of address"
+      },
+      "sourceEntryIds": [
+        "c10-t03"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t03",
+          "hanzi": "台式机",
+          "pinyin": "táishìjī",
+          "sourceIds": [
+            "IMG_0390:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "号",
+      "pinyin": "hào",
+      "meaning": {
+        "en": "day number in the source date; number/sign in other contexts"
+      },
+      "sourceEntryIds": [
+        "c10-t51",
+        "c10-s10",
+        "c10-s11",
+        "c10-s12",
+        "c10-s13"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t51",
+          "hanzi": "号",
+          "pinyin": "hào",
+          "sourceIds": [
+            "IMG_0394:L11"
+          ]
+        },
+        {
+          "id": "c10-s10",
+          "hanzi": "今天几月几号，星期几？",
+          "pinyin": "Jīntiān jǐ yuè jǐ hào, xīngqī jǐ?",
+          "sourceIds": [
+            "IMG_0394:L11"
+          ]
+        },
+        {
+          "id": "c10-s11",
+          "hanzi": "今天十一月二号，星期一。",
+          "pinyin": "Jīntiān shíyī yuè èr hào, xīngqīyī.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-s12",
+          "hanzi": "明天十一月三号，星期二。",
+          "pinyin": "Míngtiān shíyī yuè sān hào, xīngqī'èr.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-s13",
+          "hanzi": "后天十一月四号，星期三。",
+          "pinyin": "Hòutiān shíyī yuè sì hào, xīngqīsān.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "后",
+      "pinyin": "hòu",
+      "meaning": {
+        "en": "after; behind, rear; descendants"
+      },
+      "sourceEntryIds": [
+        "c10-t49",
+        "c10-s13"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t49",
+          "hanzi": "后天",
+          "pinyin": "hòutiān",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-s13",
+          "hanzi": "后天十一月四号，星期三。",
+          "pinyin": "Hòutiān shíyī yuè sì hào, xīngqīsān.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "听",
+      "pinyin": "tīng",
+      "meaning": {
+        "en": "to hear, to listen; to understand; to obey"
+      },
+      "sourceEntryIds": [
+        "c10-t80",
+        "c10-s26"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t80",
+          "hanzi": "听",
+          "pinyin": "tīng",
+          "sourceIds": [
+            "IMG_0397:L03"
+          ]
+        },
+        {
+          "id": "c10-s26",
+          "hanzi": "学生在听。",
+          "pinyin": "Xuésheng zài tīng.",
+          "sourceIds": [
+            "IMG_0397:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "和",
+      "pinyin": "hé",
+      "meaning": {
+        "en": "harmony, peace; calm, peaceful"
+      },
+      "sourceEntryIds": [
+        "c10-t42"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t42",
+          "hanzi": "和",
+          "pinyin": "hé",
+          "sourceIds": [
+            "IMG_0394:L09"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "咖",
+      "pinyin": "kā",
+      "meaning": {
+        "en": "first syllable of 咖啡店 (cafe); not gā"
+      },
+      "sourceEntryIds": [
+        "c10-t67"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t67",
+          "hanzi": "咖啡店",
+          "pinyin": "kāfēidiàn",
+          "sourceIds": [
+            "IMG_0395:L06"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "哪",
+      "pinyin": "nǎ",
+      "meaning": {
+        "en": "which? where? how?"
+      },
+      "sourceEntryIds": [
+        "c10-t59",
+        "c10-t60",
+        "c10-s14",
+        "c10-s15"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t59",
+          "hanzi": "哪儿",
+          "pinyin": "nǎr",
+          "sourceIds": [
+            "IMG_0395:L02"
+          ]
+        },
+        {
+          "id": "c10-t60",
+          "hanzi": "哪里",
+          "pinyin": "nǎlǐ",
+          "sourceIds": [
+            "IMG_0395:L02"
+          ]
+        },
+        {
+          "id": "c10-s14",
+          "hanzi": "你在哪儿？",
+          "pinyin": "Nǐ zài nǎr?",
+          "sourceIds": [
+            "IMG_0395:L02"
+          ]
+        },
+        {
+          "id": "c10-s15",
+          "hanzi": "你在哪里？",
+          "pinyin": "Nǐ zài nǎlǐ?",
+          "sourceIds": [
+            "IMG_0395:L02"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "啡",
+      "pinyin": "fēi",
+      "meaning": {
+        "en": "coffee; morphine"
+      },
+      "sourceEntryIds": [
+        "c10-t67"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t67",
+          "hanzi": "咖啡店",
+          "pinyin": "kāfēidiàn",
+          "sourceIds": [
+            "IMG_0395:L06"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "四",
+      "pinyin": "sì",
+      "meaning": {
+        "en": "four"
+      },
+      "sourceEntryIds": [
+        "c10-s13",
+        "c10-opt-source-saying"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-s13",
+          "hanzi": "后天十一月四号，星期三。",
+          "pinyin": "Hòutiān shíyī yuè sì hào, xīngqīsān.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-opt-source-saying",
+          "hanzi": "男人四十一枝花。",
+          "pinyin": "Nánrén sìshí yì zhī huā.",
+          "sourceIds": [
+            "IMG_0392:L08"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "国",
+      "pinyin": "guó",
+      "meaning": {
+        "en": "country, nation, state; national"
+      },
+      "sourceEntryIds": [
+        "c10-t19",
+        "c10-s05"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t19",
+          "hanzi": "美国",
+          "pinyin": "Měiguó",
+          "sourceIds": [
+            "IMG_0390:L14"
+          ]
+        },
+        {
+          "id": "c10-s05",
+          "hanzi": "美国比土耳其远。",
+          "pinyin": "Měiguó bǐ Tǔ'ěrqí yuǎn.",
+          "sourceIds": [
+            "IMG_0390:L14"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "土",
+      "pinyin": "tǔ",
+      "meaning": {
+        "en": "soil, earth; items made of earth"
+      },
+      "sourceEntryIds": [
+        "c10-t20",
+        "c10-s05"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t20",
+          "hanzi": "土耳其",
+          "pinyin": "Tǔ'ěrqí",
+          "sourceIds": [
+            "IMG_0390:L14"
+          ]
+        },
+        {
+          "id": "c10-s05",
+          "hanzi": "美国比土耳其远。",
+          "pinyin": "Měiguó bǐ Tǔ'ěrqí yuǎn.",
+          "sourceIds": [
+            "IMG_0390:L14"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "在",
+      "pinyin": "zài",
+      "meaning": {
+        "en": "at, in, on; to exist; used to indicate the present progressive tense"
+      },
+      "sourceEntryIds": [
+        "c10-t58",
+        "c10-t69",
+        "c10-s14",
+        "c10-s15",
+        "c10-s16",
+        "c10-s17",
+        "c10-s18",
+        "c10-s19",
+        "c10-s20",
+        "c10-s21",
+        "c10-s22",
+        "c10-s23",
+        "c10-s24",
+        "c10-s25",
+        "c10-s26",
+        "c10-s27"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t58",
+          "hanzi": "在",
+          "pinyin": "zài",
+          "sourceIds": [
+            "IMG_0395:L01",
+            "IMG_0401:L02"
+          ]
+        },
+        {
+          "id": "c10-t69",
+          "hanzi": "现在",
+          "pinyin": "xiànzài",
+          "sourceIds": [
+            "IMG_0401:L03"
+          ]
+        },
+        {
+          "id": "c10-s14",
+          "hanzi": "你在哪儿？",
+          "pinyin": "Nǐ zài nǎr?",
+          "sourceIds": [
+            "IMG_0395:L02"
+          ]
+        },
+        {
+          "id": "c10-s15",
+          "hanzi": "你在哪里？",
+          "pinyin": "Nǐ zài nǎlǐ?",
+          "sourceIds": [
+            "IMG_0395:L02"
+          ]
+        },
+        {
+          "id": "c10-s16",
+          "hanzi": "我在超市。",
+          "pinyin": "Wǒ zài chāoshì.",
+          "sourceIds": [
+            "IMG_0395:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "多",
+      "pinyin": "duō",
+      "meaning": {
+        "en": "much, many, multi-; more than, over"
+      },
+      "sourceEntryIds": [
+        "c10-t23",
+        "c10-t24",
+        "c10-s06"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t23",
+          "hanzi": "多了",
+          "pinyin": "duō le",
+          "sourceIds": [
+            "IMG_0392:L03"
+          ]
+        },
+        {
+          "id": "c10-t24",
+          "hanzi": "得多",
+          "pinyin": "de duō",
+          "sourceIds": [
+            "IMG_0392:L03"
+          ]
+        },
+        {
+          "id": "c10-s06",
+          "hanzi": "你的头发比我的长多了。",
+          "pinyin": "Nǐ de tóufa bǐ wǒ de cháng duō le.",
+          "sourceIds": [
+            "IMG_0392:L06"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "大",
+      "pinyin": "dà",
+      "meaning": {
+        "en": "big, great, vast, high, deep"
+      },
+      "sourceEntryIds": [
+        "c10-t01"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t01",
+          "hanzi": "大脑",
+          "pinyin": "dànǎo",
+          "sourceIds": [
+            "IMG_0390:L01"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "天",
+      "pinyin": "tiān",
+      "meaning": {
+        "en": "sky, heaven; god, celestial"
+      },
+      "sourceEntryIds": [
+        "c10-t45",
+        "c10-t46",
+        "c10-t47",
+        "c10-t48",
+        "c10-t49",
+        "c10-t57",
+        "c10-s10",
+        "c10-s11",
+        "c10-s12",
+        "c10-s13"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t45",
+          "hanzi": "今天",
+          "pinyin": "jīntiān",
+          "sourceIds": [
+            "IMG_0394:L11"
+          ]
+        },
+        {
+          "id": "c10-t46",
+          "hanzi": "昨天",
+          "pinyin": "zuótiān",
+          "sourceIds": [
+            "IMG_0394:L07"
+          ]
+        },
+        {
+          "id": "c10-t47",
+          "hanzi": "前天",
+          "pinyin": "qiántiān",
+          "sourceIds": [
+            "IMG_0394:L07"
+          ]
+        },
+        {
+          "id": "c10-t48",
+          "hanzi": "明天",
+          "pinyin": "míngtiān",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-t49",
+          "hanzi": "后天",
+          "pinyin": "hòutiān",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "头",
+      "pinyin": "tóu",
+      "meaning": {
+        "en": "head; chief, boss; first, top"
+      },
+      "sourceEntryIds": [
+        "c10-t21",
+        "c10-s06"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t21",
+          "hanzi": "头发",
+          "pinyin": "tóufa",
+          "sourceIds": [
+            "IMG_0392:L06"
+          ]
+        },
+        {
+          "id": "c10-s06",
+          "hanzi": "你的头发比我的长多了。",
+          "pinyin": "Nǐ de tóufa bǐ wǒ de cháng duō le.",
+          "sourceIds": [
+            "IMG_0392:L06"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "女",
+      "pinyin": "nǚ",
+      "meaning": {
+        "en": "woman, girl; female"
+      },
+      "sourceEntryIds": [
+        "c10-t44"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t44",
+          "hanzi": "女人",
+          "pinyin": "nǚrén",
+          "sourceIds": [
+            "IMG_0392:L09"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "姐",
+      "pinyin": "jiě / jie",
+      "meaning": {
+        "en": "older sister; jiě then neutral jie in 姐姐"
+      },
+      "sourceEntryIds": [
+        "c10-t39"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t39",
+          "hanzi": "姐姐",
+          "pinyin": "jiějie",
+          "sourceIds": [
+            "IMG_0394:L09"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "子",
+      "pinyin": "zi",
+      "meaning": {
+        "en": "neutral noun suffix in the clothing/object words here; not zǐ (child)"
+      },
+      "sourceEntryIds": [
+        "c10-t93",
+        "c10-t94",
+        "c10-t95",
+        "c10-t96",
+        "c10-t98",
+        "c10-t103",
+        "c10-s28",
+        "c10-s29",
+        "c10-s30",
+        "c10-s31",
+        "c10-s33",
+        "c10-s38"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t93",
+          "hanzi": "裤子",
+          "pinyin": "kùzi",
+          "sourceIds": [
+            "IMG_0399:L03"
+          ]
+        },
+        {
+          "id": "c10-t94",
+          "hanzi": "被子",
+          "pinyin": "bèizi",
+          "sourceIds": [
+            "IMG_0399:L03"
+          ]
+        },
+        {
+          "id": "c10-t95",
+          "hanzi": "袜子",
+          "pinyin": "wàzi",
+          "sourceIds": [
+            "IMG_0399:L04"
+          ]
+        },
+        {
+          "id": "c10-t96",
+          "hanzi": "鞋子",
+          "pinyin": "xiézi",
+          "sourceIds": [
+            "IMG_0399:L04"
+          ]
+        },
+        {
+          "id": "c10-t98",
+          "hanzi": "裙子",
+          "pinyin": "qúnzi",
+          "sourceIds": [
+            "IMG_0399:L06"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "学",
+      "pinyin": "xué",
+      "meaning": {
+        "en": "learning, knowledge, science; to study, to go to school; -ology"
+      },
+      "sourceEntryIds": [
+        "c10-t76",
+        "c10-t78",
+        "c10-s24",
+        "c10-s26",
+        "c10-s27"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t76",
+          "hanzi": "学习",
+          "pinyin": "xuéxí",
+          "sourceIds": [
+            "IMG_0401:L05"
+          ]
+        },
+        {
+          "id": "c10-t78",
+          "hanzi": "学生",
+          "pinyin": "xuésheng",
+          "sourceIds": [
+            "IMG_0397:L03"
+          ]
+        },
+        {
+          "id": "c10-s24",
+          "hanzi": "我们在学习。",
+          "pinyin": "Wǒmen zài xuéxí.",
+          "sourceIds": [
+            "IMG_0401:L05"
+          ]
+        },
+        {
+          "id": "c10-s26",
+          "hanzi": "学生在听。",
+          "pinyin": "Xuésheng zài tīng.",
+          "sourceIds": [
+            "IMG_0397:L03"
+          ]
+        },
+        {
+          "id": "c10-s27",
+          "hanzi": "学生在读。",
+          "pinyin": "Xuésheng zài dú.",
+          "sourceIds": [
+            "IMG_0397:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "宜",
+      "pinyin": "yi",
+      "meaning": {
+        "en": "neutral second syllable of 便宜 (inexpensive); citation yí"
+      },
+      "sourceEntryIds": [
+        "c10-t15",
+        "c10-s01"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t15",
+          "hanzi": "便宜",
+          "pinyin": "piányi",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        },
+        {
+          "id": "c10-s01",
+          "hanzi": "电车比油车便宜。",
+          "pinyin": "Diànchē bǐ yóuchē piányi.",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "室",
+      "pinyin": "shì",
+      "meaning": {
+        "en": "house, home; room, chamber"
+      },
+      "sourceEntryIds": [
+        "c10-t63",
+        "c10-s19"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t63",
+          "hanzi": "教室",
+          "pinyin": "jiàoshì",
+          "sourceIds": [
+            "IMG_0395:L03"
+          ]
+        },
+        {
+          "id": "c10-s19",
+          "hanzi": "我在教室。",
+          "pinyin": "Wǒ zài jiàoshì.",
+          "sourceIds": [
+            "IMG_0395:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "家",
+      "pinyin": "jiā",
+      "meaning": {
+        "en": "house, home, residence; family"
+      },
+      "sourceEntryIds": [
+        "c10-t34",
+        "c10-s09",
+        "c10-s17"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t34",
+          "hanzi": "家",
+          "pinyin": "jiā",
+          "sourceIds": [
+            "IMG_0394:L08",
+            "IMG_0395:L03"
+          ]
+        },
+        {
+          "id": "c10-s09",
+          "hanzi": "你家有几口人？",
+          "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
+          "sourceIds": [
+            "IMG_0394:L08"
+          ]
+        },
+        {
+          "id": "c10-s17",
+          "hanzi": "我在家。",
+          "pinyin": "Wǒ zài jiā.",
+          "sourceIds": [
+            "IMG_0395:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "密",
+      "pinyin": "mì",
+      "meaning": {
+        "en": "secret, confidential; intimate, close; dense, thick"
+      },
+      "sourceEntryIds": [
+        "c10-t28"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t28",
+          "hanzi": "秘密",
+          "pinyin": "mìmì",
+          "sourceIds": [
+            "IMG_0391:L07"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "岁",
+      "pinyin": "suì",
+      "meaning": {
+        "en": "year; years old, age; harvest"
+      },
+      "sourceEntryIds": [
+        "c10-t32",
+        "c10-s08"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t32",
+          "hanzi": "岁",
+          "pinyin": "suì",
+          "sourceIds": [
+            "IMG_0393:L04"
+          ]
+        },
+        {
+          "id": "c10-s08",
+          "hanzi": "我猜你三十岁。",
+          "pinyin": "Wǒ cāi nǐ sānshí suì.",
+          "sourceIds": [
+            "IMG_0393:L04"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "市",
+      "pinyin": "shì",
+      "meaning": {
+        "en": "city, town; market, fair; to trade"
+      },
+      "sourceEntryIds": [
+        "c10-t61",
+        "c10-s16"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t61",
+          "hanzi": "超市",
+          "pinyin": "chāoshì",
+          "sourceIds": [
+            "IMG_0395:L03"
+          ]
+        },
+        {
+          "id": "c10-s16",
+          "hanzi": "我在超市。",
+          "pinyin": "Wǒ zài chāoshì.",
+          "sourceIds": [
+            "IMG_0395:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "师",
+      "pinyin": "shī",
+      "meaning": {
+        "en": "teacher, professional, master"
+      },
+      "sourceEntryIds": [
+        "c10-t77",
+        "c10-s25"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t77",
+          "hanzi": "老师",
+          "pinyin": "lǎoshī",
+          "sourceIds": [
+            "IMG_0397:L02"
+          ]
+        },
+        {
+          "id": "c10-s25",
+          "hanzi": "老师在写。",
+          "pinyin": "Lǎoshī zài xiě.",
+          "sourceIds": [
+            "IMG_0397:L02"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "干",
+      "pinyin": "gàn / gān",
+      "meaning": {
+        "en": "do/work (gàn); dry (gān); two source readings, never one ambiguous clip"
+      },
+      "sourceEntryIds": [
+        "c10-t84",
+        "c10-t85"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t84",
+          "hanzi": "干",
+          "pinyin": "gàn",
+          "sourceIds": [
+            "IMG_0401:L06"
+          ]
+        },
+        {
+          "id": "c10-t85",
+          "hanzi": "干",
+          "pinyin": "gān",
+          "sourceIds": [
+            "IMG_0401:L06"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "床",
+      "pinyin": "chuáng",
+      "meaning": {
+        "en": "bed, couch; framework, chassis"
+      },
+      "sourceEntryIds": [
+        "c10-t104",
+        "c10-s39"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t104",
+          "hanzi": "床",
+          "pinyin": "chuáng",
+          "sourceIds": [
+            "IMG_0400:L03"
+          ]
+        },
+        {
+          "id": "c10-s39",
+          "hanzi": "一张床",
+          "pinyin": "yì zhāng chuáng",
+          "sourceIds": [
+            "IMG_0400:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "店",
+      "pinyin": "diàn",
+      "meaning": {
+        "en": "shop, store; inn, hotel"
+      },
+      "sourceEntryIds": [
+        "c10-t62",
+        "c10-t64",
+        "c10-t65",
+        "c10-t67",
+        "c10-t68",
+        "c10-s18"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t62",
+          "hanzi": "书店",
+          "pinyin": "shūdiàn",
+          "sourceIds": [
+            "IMG_0395:L03"
+          ]
+        },
+        {
+          "id": "c10-t64",
+          "hanzi": "花店",
+          "pinyin": "huādiàn",
+          "sourceIds": [
+            "IMG_0395:L04"
+          ]
+        },
+        {
+          "id": "c10-t65",
+          "hanzi": "饭店",
+          "pinyin": "fàndiàn",
+          "sourceIds": [
+            "IMG_0395:L05"
+          ]
+        },
+        {
+          "id": "c10-t67",
+          "hanzi": "咖啡店",
+          "pinyin": "kāfēidiàn",
+          "sourceIds": [
+            "IMG_0395:L06"
+          ]
+        },
+        {
+          "id": "c10-t68",
+          "hanzi": "酒店",
+          "pinyin": "jiǔdiàn",
+          "sourceIds": [
+            "IMG_0395:L07"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "式",
+      "pinyin": "shì",
+      "meaning": {
+        "en": "style; form; in desktop computer"
+      },
+      "sourceEntryIds": [
+        "c10-t03"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t03",
+          "hanzi": "台式机",
+          "pinyin": "táishìjī",
+          "sourceIds": [
+            "IMG_0390:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "张",
+      "pinyin": "zhāng",
+      "meaning": {
+        "en": "to display; to expand, to open; to stretch; a sheet of paper"
+      },
+      "sourceEntryIds": [
+        "c10-t92",
+        "c10-s37",
+        "c10-s38",
+        "c10-s39"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t92",
+          "hanzi": "张",
+          "pinyin": "zhāng",
+          "sourceIds": [
+            "IMG_0400:L03"
+          ]
+        },
+        {
+          "id": "c10-s37",
+          "hanzi": "一张纸",
+          "pinyin": "yì zhāng zhǐ",
+          "sourceIds": [
+            "IMG_0400:L03"
+          ]
+        },
+        {
+          "id": "c10-s38",
+          "hanzi": "一张桌子",
+          "pinyin": "yì zhāng zhuōzi",
+          "sourceIds": [
+            "IMG_0400:L03"
+          ]
+        },
+        {
+          "id": "c10-s39",
+          "hanzi": "一张床",
+          "pinyin": "yì zhāng chuáng",
+          "sourceIds": [
+            "IMG_0400:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "得",
+      "pinyin": "de",
+      "meaning": {
+        "en": "neutral degree particle in 得多; not dé (obtain)"
+      },
+      "sourceEntryIds": [
+        "c10-t24"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t24",
+          "hanzi": "得多",
+          "pinyin": "de duō",
+          "sourceIds": [
+            "IMG_0392:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "总",
+      "pinyin": "zǒng",
+      "meaning": {
+        "en": "to gather, to collect; overall, altogether"
+      },
+      "sourceEntryIds": [
+        "c10-t83"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t83",
+          "hanzi": "总是",
+          "pinyin": "zǒngshì",
+          "sourceIds": [
+            "IMG_0397:L01"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "我",
+      "pinyin": "wǒ",
+      "meaning": {
+        "en": "I, me, my; our, us"
+      },
+      "sourceEntryIds": [
+        "c10-t74",
+        "c10-s06",
+        "c10-s08",
+        "c10-s16",
+        "c10-s17",
+        "c10-s18",
+        "c10-s19",
+        "c10-s23",
+        "c10-s24"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t74",
+          "hanzi": "我们",
+          "pinyin": "wǒmen",
+          "sourceIds": [
+            "IMG_0401:L05"
+          ]
+        },
+        {
+          "id": "c10-s06",
+          "hanzi": "你的头发比我的长多了。",
+          "pinyin": "Nǐ de tóufa bǐ wǒ de cháng duō le.",
+          "sourceIds": [
+            "IMG_0392:L06"
+          ]
+        },
+        {
+          "id": "c10-s08",
+          "hanzi": "我猜你三十岁。",
+          "pinyin": "Wǒ cāi nǐ sānshí suì.",
+          "sourceIds": [
+            "IMG_0393:L04"
+          ]
+        },
+        {
+          "id": "c10-s16",
+          "hanzi": "我在超市。",
+          "pinyin": "Wǒ zài chāoshì.",
+          "sourceIds": [
+            "IMG_0395:L03"
+          ]
+        },
+        {
+          "id": "c10-s17",
+          "hanzi": "我在家。",
+          "pinyin": "Wǒ zài jiā.",
+          "sourceIds": [
+            "IMG_0395:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "教",
+      "pinyin": "jiào",
+      "meaning": {
+        "en": "teaching/education in 教室 (classroom); not jiāo (teach as a verb)"
+      },
+      "sourceEntryIds": [
+        "c10-t63",
+        "c10-s19"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t63",
+          "hanzi": "教室",
+          "pinyin": "jiàoshì",
+          "sourceIds": [
+            "IMG_0395:L03"
+          ]
+        },
+        {
+          "id": "c10-s19",
+          "hanzi": "我在教室。",
+          "pinyin": "Wǒ zài jiàoshì.",
+          "sourceIds": [
+            "IMG_0395:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "日",
+      "pinyin": "rì",
+      "meaning": {
+        "en": "sun; day; daytime"
+      },
+      "sourceEntryIds": [
+        "c10-t56"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t56",
+          "hanzi": "星期日",
+          "pinyin": "xīngqīrì",
+          "sourceIds": [
+            "IMG_0394:L13"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "明",
+      "pinyin": "míng",
+      "meaning": {
+        "en": "bright, clear; to explain, to understand, to shed light"
+      },
+      "sourceEntryIds": [
+        "c10-t48",
+        "c10-s12"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t48",
+          "hanzi": "明天",
+          "pinyin": "míngtiān",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-s12",
+          "hanzi": "明天十一月三号，星期二。",
+          "pinyin": "Míngtiān shíyī yuè sān hào, xīngqī'èr.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "星",
+      "pinyin": "xīng",
+      "meaning": {
+        "en": "star, planet; a point of light"
+      },
+      "sourceEntryIds": [
+        "c10-t52",
+        "c10-t53",
+        "c10-t54",
+        "c10-t55",
+        "c10-t56",
+        "c10-t57",
+        "c10-s10",
+        "c10-s11",
+        "c10-s12",
+        "c10-s13"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t52",
+          "hanzi": "星期",
+          "pinyin": "xīngqī",
+          "sourceIds": [
+            "IMG_0394:L11"
+          ]
+        },
+        {
+          "id": "c10-t53",
+          "hanzi": "星期一",
+          "pinyin": "xīngqīyī",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-t54",
+          "hanzi": "星期二",
+          "pinyin": "xīngqī'èr",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-t55",
+          "hanzi": "星期三",
+          "pinyin": "xīngqīsān",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-t56",
+          "hanzi": "星期日",
+          "pinyin": "xīngqīrì",
+          "sourceIds": [
+            "IMG_0394:L13"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "昨",
+      "pinyin": "zuó",
+      "meaning": {
+        "en": "yesterday; formerly, in the past"
+      },
+      "sourceEntryIds": [
+        "c10-t46"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t46",
+          "hanzi": "昨天",
+          "pinyin": "zuótiān",
+          "sourceIds": [
+            "IMG_0394:L07"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "是",
+      "pinyin": "shì",
+      "meaning": {
+        "en": "to be; indeed, right, yes; okay"
+      },
+      "sourceEntryIds": [
+        "c10-t83"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t83",
+          "hanzi": "总是",
+          "pinyin": "zǒngshì",
+          "sourceIds": [
+            "IMG_0397:L01"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "月",
+      "pinyin": "yuè",
+      "meaning": {
+        "en": "moon; month"
+      },
+      "sourceEntryIds": [
+        "c10-t50",
+        "c10-s10",
+        "c10-s11",
+        "c10-s12",
+        "c10-s13"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t50",
+          "hanzi": "月",
+          "pinyin": "yuè",
+          "sourceIds": [
+            "IMG_0394:L11"
+          ]
+        },
+        {
+          "id": "c10-s10",
+          "hanzi": "今天几月几号，星期几？",
+          "pinyin": "Jīntiān jǐ yuè jǐ hào, xīngqī jǐ?",
+          "sourceIds": [
+            "IMG_0394:L11"
+          ]
+        },
+        {
+          "id": "c10-s11",
+          "hanzi": "今天十一月二号，星期一。",
+          "pinyin": "Jīntiān shíyī yuè èr hào, xīngqīyī.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-s12",
+          "hanzi": "明天十一月三号，星期二。",
+          "pinyin": "Míngtiān shíyī yuè sān hào, xīngqī'èr.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-s13",
+          "hanzi": "后天十一月四号，星期三。",
+          "pinyin": "Hòutiān shíyī yuè sì hào, xīngqīsān.",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "有",
+      "pinyin": "yǒu",
+      "meaning": {
+        "en": "to have, to own, to possess; to exist"
+      },
+      "sourceEntryIds": [
+        "c10-s09"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-s09",
+          "hanzi": "你家有几口人？",
+          "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
+          "sourceIds": [
+            "IMG_0394:L08"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "期",
+      "pinyin": "qī",
+      "meaning": {
+        "en": "a period of time; date, time; phase"
+      },
+      "sourceEntryIds": [
+        "c10-t52",
+        "c10-t53",
+        "c10-t54",
+        "c10-t55",
+        "c10-t56",
+        "c10-t57",
+        "c10-s10",
+        "c10-s11",
+        "c10-s12",
+        "c10-s13"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t52",
+          "hanzi": "星期",
+          "pinyin": "xīngqī",
+          "sourceIds": [
+            "IMG_0394:L11"
+          ]
+        },
+        {
+          "id": "c10-t53",
+          "hanzi": "星期一",
+          "pinyin": "xīngqīyī",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-t54",
+          "hanzi": "星期二",
+          "pinyin": "xīngqī'èr",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-t55",
+          "hanzi": "星期三",
+          "pinyin": "xīngqīsān",
+          "sourceIds": [
+            "IMG_0394:L12"
+          ]
+        },
+        {
+          "id": "c10-t56",
+          "hanzi": "星期日",
+          "pinyin": "xīngqīrì",
+          "sourceIds": [
+            "IMG_0394:L13"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "本",
+      "pinyin": "běn",
+      "meaning": {
+        "en": "root, origin, source; basis"
+      },
+      "sourceEntryIds": [
+        "c10-t04",
+        "c10-t91",
+        "c10-s35",
+        "c10-s36"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t04",
+          "hanzi": "笔记本电脑",
+          "pinyin": "bǐjìběn diànnǎo",
+          "sourceIds": [
+            "IMG_0390:L04"
+          ]
+        },
+        {
+          "id": "c10-t91",
+          "hanzi": "本",
+          "pinyin": "běn",
+          "sourceIds": [
+            "IMG_0400:L02"
+          ]
+        },
+        {
+          "id": "c10-s35",
+          "hanzi": "一本书",
+          "pinyin": "yì běn shū",
+          "sourceIds": [
+            "IMG_0400:L02"
+          ]
+        },
+        {
+          "id": "c10-s36",
+          "hanzi": "一本词典",
+          "pinyin": "yì běn cídiǎn",
+          "sourceIds": [
+            "IMG_0400:L02"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "机",
+      "pinyin": "jī",
+      "meaning": {
+        "en": "desk; machine; moment, opportunity"
+      },
+      "sourceEntryIds": [
+        "c10-t03"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t03",
+          "hanzi": "台式机",
+          "pinyin": "táishìjī",
+          "sourceIds": [
+            "IMG_0390:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "条",
+      "pinyin": "tiáo",
+      "meaning": {
+        "en": "clause, condition; string, stripe"
+      },
+      "sourceEntryIds": [
+        "c10-t87",
+        "c10-s28",
+        "c10-s29",
+        "c10-s33"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t87",
+          "hanzi": "条",
+          "pinyin": "tiáo",
+          "sourceIds": [
+            "IMG_0399:L03"
+          ]
+        },
+        {
+          "id": "c10-s28",
+          "hanzi": "一条裤子",
+          "pinyin": "yì tiáo kùzi",
+          "sourceIds": [
+            "IMG_0399:L03"
+          ]
+        },
+        {
+          "id": "c10-s29",
+          "hanzi": "一条被子",
+          "pinyin": "yì tiáo bèizi",
+          "sourceIds": [
+            "IMG_0399:L03"
+          ]
+        },
+        {
+          "id": "c10-s33",
+          "hanzi": "一条裙子",
+          "pinyin": "yì tiáo qúnzi",
+          "sourceIds": [
+            "IMG_0399:L06"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "杯",
+      "pinyin": "bēi",
+      "meaning": {
+        "en": "cup, glass; measure word for liquids"
+      },
+      "sourceEntryIds": [
+        "c10-t33"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t33",
+          "hanzi": "世界杯",
+          "pinyin": "Shìjièbēi",
+          "sourceIds": [
+            "IMG_0390:L15"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "枝",
+      "pinyin": "zhī",
+      "meaning": {
+        "en": "branch; classifier for a stalk of flowers in the optional saying"
+      },
+      "sourceEntryIds": [
+        "c10-opt-source-saying"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-opt-source-saying",
+          "hanzi": "男人四十一枝花。",
+          "pinyin": "Nánrén sìshí yì zhī huā.",
+          "sourceIds": [
+            "IMG_0392:L08"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "桌",
+      "pinyin": "zhuō",
+      "meaning": {
+        "en": "table, stand, desk, counter"
+      },
+      "sourceEntryIds": [
+        "c10-t103",
+        "c10-s38"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t103",
+          "hanzi": "桌子",
+          "pinyin": "zhuōzi",
+          "sourceIds": [
+            "IMG_0400:L03"
+          ]
+        },
+        {
+          "id": "c10-s38",
+          "hanzi": "一张桌子",
+          "pinyin": "yì zhāng zhuōzi",
+          "sourceIds": [
+            "IMG_0400:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "比",
+      "pinyin": "bǐ",
+      "meaning": {
+        "en": "to compare, liken; comparison; than"
+      },
+      "sourceEntryIds": [
+        "c10-t09",
+        "c10-s01",
+        "c10-s02",
+        "c10-s03",
+        "c10-s04",
+        "c10-s05",
+        "c10-s06"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t09",
+          "hanzi": "比",
+          "pinyin": "bǐ",
+          "sourceIds": [
+            "IMG_0390:L12"
+          ]
+        },
+        {
+          "id": "c10-s01",
+          "hanzi": "电车比油车便宜。",
+          "pinyin": "Diànchē bǐ yóuchē piányi.",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        },
+        {
+          "id": "c10-s02",
+          "hanzi": "电车比油车贵。",
+          "pinyin": "Diànchē bǐ yóuchē guì.",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        },
+        {
+          "id": "c10-s03",
+          "hanzi": "电车比油车漂亮。",
+          "pinyin": "Diànchē bǐ yóuchē piàoliang.",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        },
+        {
+          "id": "c10-s04",
+          "hanzi": "油比电贵。",
+          "pinyin": "Yóu bǐ diàn guì.",
+          "sourceIds": [
+            "IMG_0390:L13"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "汽",
+      "pinyin": "qì",
+      "meaning": {
+        "en": "gasoline; steam, vapor"
+      },
+      "sourceEntryIds": [
+        "c10-t10",
+        "c10-t99",
+        "c10-s34"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t10",
+          "hanzi": "汽油",
+          "pinyin": "qìyóu",
+          "sourceIds": [
+            "IMG_0390:L08"
+          ]
+        },
+        {
+          "id": "c10-t99",
+          "hanzi": "汽车",
+          "pinyin": "qìchē",
+          "sourceIds": [
+            "IMG_0400:L01"
+          ]
+        },
+        {
+          "id": "c10-s34",
+          "hanzi": "一辆汽车",
+          "pinyin": "yí liàng qìchē",
+          "sourceIds": [
+            "IMG_0400:L01"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "油",
+      "pinyin": "yóu",
+      "meaning": {
+        "en": "oil; fuel in the comparison"
+      },
+      "sourceEntryIds": [
+        "c10-t10",
+        "c10-t11",
+        "c10-t14",
+        "c10-s01",
+        "c10-s02",
+        "c10-s03",
+        "c10-s04"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t10",
+          "hanzi": "汽油",
+          "pinyin": "qìyóu",
+          "sourceIds": [
+            "IMG_0390:L08"
+          ]
+        },
+        {
+          "id": "c10-t11",
+          "hanzi": "油",
+          "pinyin": "yóu",
+          "sourceIds": [
+            "IMG_0390:L13"
+          ]
+        },
+        {
+          "id": "c10-t14",
+          "hanzi": "油车",
+          "pinyin": "yóuchē",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        },
+        {
+          "id": "c10-s01",
+          "hanzi": "电车比油车便宜。",
+          "pinyin": "Diànchē bǐ yóuchē piányi.",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        },
+        {
+          "id": "c10-s02",
+          "hanzi": "电车比油车贵。",
+          "pinyin": "Diànchē bǐ yóuchē guì.",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "漂",
+      "pinyin": "piào",
+      "meaning": {
+        "en": "first syllable of 漂亮 (pretty); not piāo (float)"
+      },
+      "sourceEntryIds": [
+        "c10-t17",
+        "c10-s03"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t17",
+          "hanzi": "漂亮",
+          "pinyin": "piàoliang",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        },
+        {
+          "id": "c10-s03",
+          "hanzi": "电车比油车漂亮。",
+          "pinyin": "Diànchē bǐ yóuchē piàoliang.",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "点",
+      "pinyin": "diǎn",
+      "meaning": {
+        "en": "dot, point, speck"
+      },
+      "sourceEntryIds": [
+        "c10-t25"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t25",
+          "hanzi": "一点儿",
+          "pinyin": "yìdiǎnr",
+          "sourceIds": [
+            "IMG_0392:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "猜",
+      "pinyin": "cāi",
+      "meaning": {
+        "en": "guess"
+      },
+      "sourceEntryIds": [
+        "c10-t29",
+        "c10-t30",
+        "c10-s07",
+        "c10-s08"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t29",
+          "hanzi": "猜",
+          "pinyin": "cāi",
+          "sourceIds": [
+            "IMG_0391:L08"
+          ]
+        },
+        {
+          "id": "c10-t30",
+          "hanzi": "猜一猜",
+          "pinyin": "cāi yi cāi",
+          "sourceIds": [
+            "IMG_0391:L08"
+          ]
+        },
+        {
+          "id": "c10-s07",
+          "hanzi": "你猜一猜。",
+          "pinyin": "Nǐ cāi yi cāi.",
+          "sourceIds": [
+            "IMG_0391:L08"
+          ]
+        },
+        {
+          "id": "c10-s08",
+          "hanzi": "我猜你三十岁。",
+          "pinyin": "Wǒ cāi nǐ sānshí suì.",
+          "sourceIds": [
+            "IMG_0393:L04"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "现",
+      "pinyin": "xiàn",
+      "meaning": {
+        "en": "to appear, to manifest; current, now"
+      },
+      "sourceEntryIds": [
+        "c10-t69",
+        "c10-s21",
+        "c10-s22"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t69",
+          "hanzi": "现在",
+          "pinyin": "xiànzài",
+          "sourceIds": [
+            "IMG_0401:L03"
+          ]
+        },
+        {
+          "id": "c10-s21",
+          "hanzi": "现在他在睡觉。",
+          "pinyin": "Xiànzài tā zài shuìjiào.",
+          "sourceIds": [
+            "IMG_0401:L03"
+          ]
+        },
+        {
+          "id": "c10-s22",
+          "hanzi": "现在你在做什么？",
+          "pinyin": "Xiànzài nǐ zài zuò shénme?",
+          "sourceIds": [
+            "IMG_0401:L04"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "生",
+      "pinyin": "shēng",
+      "meaning": {
+        "en": "life, lifetime; birth; growth"
+      },
+      "sourceEntryIds": [
+        "c10-t78",
+        "c10-s26",
+        "c10-s27"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t78",
+          "hanzi": "学生",
+          "pinyin": "xuésheng",
+          "sourceIds": [
+            "IMG_0397:L03"
+          ]
+        },
+        {
+          "id": "c10-s26",
+          "hanzi": "学生在听。",
+          "pinyin": "Xuésheng zài tīng.",
+          "sourceIds": [
+            "IMG_0397:L03"
+          ]
+        },
+        {
+          "id": "c10-s27",
+          "hanzi": "学生在读。",
+          "pinyin": "Xuésheng zài dú.",
+          "sourceIds": [
+            "IMG_0397:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "电",
+      "pinyin": "diàn",
+      "meaning": {
+        "en": "electricity; electric; lightning"
+      },
+      "sourceEntryIds": [
+        "c10-t02",
+        "c10-t04",
+        "c10-t05",
+        "c10-t06",
+        "c10-t08",
+        "c10-t12",
+        "c10-t13",
+        "c10-s01",
+        "c10-s02",
+        "c10-s03",
+        "c10-s04"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t02",
+          "hanzi": "电脑",
+          "pinyin": "diànnǎo",
+          "sourceIds": [
+            "IMG_0390:L02"
+          ]
+        },
+        {
+          "id": "c10-t04",
+          "hanzi": "笔记本电脑",
+          "pinyin": "bǐjìběn diànnǎo",
+          "sourceIds": [
+            "IMG_0390:L04"
+          ]
+        },
+        {
+          "id": "c10-t05",
+          "hanzi": "电话",
+          "pinyin": "diànhuà",
+          "sourceIds": [
+            "IMG_0390:L05"
+          ]
+        },
+        {
+          "id": "c10-t06",
+          "hanzi": "电视",
+          "pinyin": "diànshì",
+          "sourceIds": [
+            "IMG_0390:L06"
+          ]
+        },
+        {
+          "id": "c10-t08",
+          "hanzi": "电冰箱",
+          "pinyin": "diànbīngxiāng",
+          "sourceIds": [
+            "IMG_0390:L07"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "男",
+      "pinyin": "nán",
+      "meaning": {
+        "en": "man, boy; male; baron; surname"
+      },
+      "sourceEntryIds": [
+        "c10-t43",
+        "c10-opt-source-saying"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t43",
+          "hanzi": "男人",
+          "pinyin": "nánrén",
+          "sourceIds": [
+            "IMG_0392:L08"
+          ]
+        },
+        {
+          "id": "c10-opt-source-saying",
+          "hanzi": "男人四十一枝花。",
+          "pinyin": "Nánrén sìshí yì zhī huā.",
+          "sourceIds": [
+            "IMG_0392:L08"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "界",
+      "pinyin": "jiè",
+      "meaning": {
+        "en": "boundary, limit; domain; society, the world"
+      },
+      "sourceEntryIds": [
+        "c10-t33"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t33",
+          "hanzi": "世界杯",
+          "pinyin": "Shìjièbēi",
+          "sourceIds": [
+            "IMG_0390:L15"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "的",
+      "pinyin": "de",
+      "meaning": {
+        "en": "neutral possessive/attributive particle"
+      },
+      "sourceEntryIds": [
+        "c10-s06"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-s06",
+          "hanzi": "你的头发比我的长多了。",
+          "pinyin": "Nǐ de tóufa bǐ wǒ de cháng duō le.",
+          "sourceIds": [
+            "IMG_0392:L06"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "直",
+      "pinyin": "zhí",
+      "meaning": {
+        "en": "straight, vertical; candid, direct, frank"
+      },
+      "sourceEntryIds": [
+        "c10-t82"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t82",
+          "hanzi": "一直",
+          "pinyin": "yìzhí",
+          "sourceIds": [
+            "IMG_0397:L01"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "睡",
+      "pinyin": "shuì",
+      "meaning": {
+        "en": "to sleep, to doze"
+      },
+      "sourceEntryIds": [
+        "c10-t71",
+        "c10-s20",
+        "c10-s21"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t71",
+          "hanzi": "睡觉",
+          "pinyin": "shuìjiào",
+          "sourceIds": [
+            "IMG_0401:L03"
+          ]
+        },
+        {
+          "id": "c10-s20",
+          "hanzi": "他在睡觉。",
+          "pinyin": "Tā zài shuìjiào.",
+          "sourceIds": [
+            "IMG_0401:L03"
+          ]
+        },
+        {
+          "id": "c10-s21",
+          "hanzi": "现在他在睡觉。",
+          "pinyin": "Xiànzài tā zài shuìjiào.",
+          "sourceIds": [
+            "IMG_0401:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "秘",
+      "pinyin": "mì",
+      "meaning": {
+        "en": "secret, in 秘密; not the name reading bì"
+      },
+      "sourceEntryIds": [
+        "c10-t28"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t28",
+          "hanzi": "秘密",
+          "pinyin": "mìmì",
+          "sourceIds": [
+            "IMG_0391:L07"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "笔",
+      "pinyin": "bǐ",
+      "meaning": {
+        "en": "pen, pencil, writing brush; to compose, to write; Hanzi stroke"
+      },
+      "sourceEntryIds": [
+        "c10-t04"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t04",
+          "hanzi": "笔记本电脑",
+          "pinyin": "bǐjìběn diànnǎo",
+          "sourceIds": [
+            "IMG_0390:L04"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "箱",
+      "pinyin": "xiāng",
+      "meaning": {
+        "en": "box, case; chest, trunk"
+      },
+      "sourceEntryIds": [
+        "c10-t07",
+        "c10-t08"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t07",
+          "hanzi": "冰箱",
+          "pinyin": "bīngxiāng",
+          "sourceIds": [
+            "IMG_0390:L07"
+          ]
+        },
+        {
+          "id": "c10-t08",
+          "hanzi": "电冰箱",
+          "pinyin": "diànbīngxiāng",
+          "sourceIds": [
+            "IMG_0390:L07"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "纸",
+      "pinyin": "zhǐ",
+      "meaning": {
+        "en": "paper"
+      },
+      "sourceEntryIds": [
+        "c10-t102",
+        "c10-s37"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t102",
+          "hanzi": "纸",
+          "pinyin": "zhǐ",
+          "sourceIds": [
+            "IMG_0400:L03"
+          ]
+        },
+        {
+          "id": "c10-s37",
+          "hanzi": "一张纸",
+          "pinyin": "yì zhāng zhǐ",
+          "sourceIds": [
+            "IMG_0400:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "美",
+      "pinyin": "měi",
+      "meaning": {
+        "en": "beautiful, pretty; pleasing"
+      },
+      "sourceEntryIds": [
+        "c10-t19",
+        "c10-s05"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t19",
+          "hanzi": "美国",
+          "pinyin": "Měiguó",
+          "sourceIds": [
+            "IMG_0390:L14"
+          ]
+        },
+        {
+          "id": "c10-s05",
+          "hanzi": "美国比土耳其远。",
+          "pinyin": "Měiguó bǐ Tǔ'ěrqí yuǎn.",
+          "sourceIds": [
+            "IMG_0390:L14"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "老",
+      "pinyin": "lǎo",
+      "meaning": {
+        "en": "old, aged; experienced"
+      },
+      "sourceEntryIds": [
+        "c10-t77",
+        "c10-s25"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t77",
+          "hanzi": "老师",
+          "pinyin": "lǎoshī",
+          "sourceIds": [
+            "IMG_0397:L02"
+          ]
+        },
+        {
+          "id": "c10-s25",
+          "hanzi": "老师在写。",
+          "pinyin": "Lǎoshī zài xiě.",
+          "sourceIds": [
+            "IMG_0397:L02"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "耳",
+      "pinyin": "ěr",
+      "meaning": {
+        "en": "ear; to hear, to hear of; handle"
+      },
+      "sourceEntryIds": [
+        "c10-t20",
+        "c10-s05"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t20",
+          "hanzi": "土耳其",
+          "pinyin": "Tǔ'ěrqí",
+          "sourceIds": [
+            "IMG_0390:L14"
+          ]
+        },
+        {
+          "id": "c10-s05",
+          "hanzi": "美国比土耳其远。",
+          "pinyin": "Měiguó bǐ Tǔ'ěrqí yuǎn.",
+          "sourceIds": [
+            "IMG_0390:L14"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "脑",
+      "pinyin": "nǎo",
+      "meaning": {
+        "en": "brain"
+      },
+      "sourceEntryIds": [
+        "c10-t01",
+        "c10-t02",
+        "c10-t04"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t01",
+          "hanzi": "大脑",
+          "pinyin": "dànǎo",
+          "sourceIds": [
+            "IMG_0390:L01"
+          ]
+        },
+        {
+          "id": "c10-t02",
+          "hanzi": "电脑",
+          "pinyin": "diànnǎo",
+          "sourceIds": [
+            "IMG_0390:L02"
+          ]
+        },
+        {
+          "id": "c10-t04",
+          "hanzi": "笔记本电脑",
+          "pinyin": "bǐjìběn diànnǎo",
+          "sourceIds": [
+            "IMG_0390:L04"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "花",
+      "pinyin": "huā",
+      "meaning": {
+        "en": "flower, blossom; to spend (time or money)"
+      },
+      "sourceEntryIds": [
+        "c10-t64",
+        "c10-opt-source-saying"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t64",
+          "hanzi": "花店",
+          "pinyin": "huādiàn",
+          "sourceIds": [
+            "IMG_0395:L04"
+          ]
+        },
+        {
+          "id": "c10-opt-source-saying",
+          "hanzi": "男人四十一枝花。",
+          "pinyin": "Nánrén sìshí yì zhī huā.",
+          "sourceIds": [
+            "IMG_0392:L08"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "衣",
+      "pinyin": "yī",
+      "meaning": {
+        "en": "clothing; source sound observation with 一, not an etymology"
+      },
+      "sourceEntryIds": [
+        "c10-opt-source-yi"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-opt-source-yi",
+          "hanzi": "衣",
+          "pinyin": "yī",
+          "sourceIds": [
+            "IMG_0397:L04"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "衫",
+      "pinyin": "shān",
+      "meaning": {
+        "en": "shirt, robe, jacket, gown"
+      },
+      "sourceEntryIds": [
+        "c10-t97",
+        "c10-s32"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t97",
+          "hanzi": "衬衫",
+          "pinyin": "chènshān",
+          "sourceIds": [
+            "IMG_0399:L05"
+          ]
+        },
+        {
+          "id": "c10-s32",
+          "hanzi": "一件衬衫",
+          "pinyin": "yí jiàn chènshān",
+          "sourceIds": [
+            "IMG_0399:L05"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "衬",
+      "pinyin": "chèn",
+      "meaning": {
+        "en": "underwear, lining; in contrast"
+      },
+      "sourceEntryIds": [
+        "c10-t97",
+        "c10-s32"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t97",
+          "hanzi": "衬衫",
+          "pinyin": "chènshān",
+          "sourceIds": [
+            "IMG_0399:L05"
+          ]
+        },
+        {
+          "id": "c10-s32",
+          "hanzi": "一件衬衫",
+          "pinyin": "yí jiàn chènshān",
+          "sourceIds": [
+            "IMG_0399:L05"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "袜",
+      "pinyin": "wà",
+      "meaning": {
+        "en": "sock; in 袜子"
+      },
+      "sourceEntryIds": [
+        "c10-t95",
+        "c10-s30"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t95",
+          "hanzi": "袜子",
+          "pinyin": "wàzi",
+          "sourceIds": [
+            "IMG_0399:L04"
+          ]
+        },
+        {
+          "id": "c10-s30",
+          "hanzi": "一双袜子",
+          "pinyin": "yì shuāng wàzi",
+          "sourceIds": [
+            "IMG_0399:L04"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "被",
+      "pinyin": "bèi",
+      "meaning": {
+        "en": "quilt in 被子 here; not the passive use"
+      },
+      "sourceEntryIds": [
+        "c10-t94",
+        "c10-s29"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t94",
+          "hanzi": "被子",
+          "pinyin": "bèizi",
+          "sourceIds": [
+            "IMG_0399:L03"
+          ]
+        },
+        {
+          "id": "c10-s29",
+          "hanzi": "一条被子",
+          "pinyin": "yì tiáo bèizi",
+          "sourceIds": [
+            "IMG_0399:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "裙",
+      "pinyin": "qún",
+      "meaning": {
+        "en": "skirt, petticoat, apron"
+      },
+      "sourceEntryIds": [
+        "c10-t98",
+        "c10-s33"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t98",
+          "hanzi": "裙子",
+          "pinyin": "qúnzi",
+          "sourceIds": [
+            "IMG_0399:L06"
+          ]
+        },
+        {
+          "id": "c10-s33",
+          "hanzi": "一条裙子",
+          "pinyin": "yì tiáo qúnzi",
+          "sourceIds": [
+            "IMG_0399:L06"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "裤",
+      "pinyin": "kù",
+      "meaning": {
+        "en": "pants, trousers"
+      },
+      "sourceEntryIds": [
+        "c10-t93",
+        "c10-s28"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t93",
+          "hanzi": "裤子",
+          "pinyin": "kùzi",
+          "sourceIds": [
+            "IMG_0399:L03"
+          ]
+        },
+        {
+          "id": "c10-s28",
+          "hanzi": "一条裤子",
+          "pinyin": "yì tiáo kùzi",
+          "sourceIds": [
+            "IMG_0399:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "视",
+      "pinyin": "shì",
+      "meaning": {
+        "en": "to look at, to inspect, to observe, to regard"
+      },
+      "sourceEntryIds": [
+        "c10-t06"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t06",
+          "hanzi": "电视",
+          "pinyin": "diànshì",
+          "sourceIds": [
+            "IMG_0390:L06"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "觉",
+      "pinyin": "jiào",
+      "meaning": {
+        "en": "sleep, in 睡觉; not jué (feel/perceive)"
+      },
+      "sourceEntryIds": [
+        "c10-t71",
+        "c10-s20",
+        "c10-s21"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t71",
+          "hanzi": "睡觉",
+          "pinyin": "shuìjiào",
+          "sourceIds": [
+            "IMG_0401:L03"
+          ]
+        },
+        {
+          "id": "c10-s20",
+          "hanzi": "他在睡觉。",
+          "pinyin": "Tā zài shuìjiào.",
+          "sourceIds": [
+            "IMG_0401:L03"
+          ]
+        },
+        {
+          "id": "c10-s21",
+          "hanzi": "现在他在睡觉。",
+          "pinyin": "Xiànzài tā zài shuìjiào.",
+          "sourceIds": [
+            "IMG_0401:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "记",
+      "pinyin": "jì",
+      "meaning": {
+        "en": "mark, sign; to note, to record"
+      },
+      "sourceEntryIds": [
+        "c10-t04"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t04",
+          "hanzi": "笔记本电脑",
+          "pinyin": "bǐjìběn diànnǎo",
+          "sourceIds": [
+            "IMG_0390:L04"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "词",
+      "pinyin": "cí",
+      "meaning": {
+        "en": "phrase, expression; words, speech"
+      },
+      "sourceEntryIds": [
+        "c10-t101",
+        "c10-s36"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t101",
+          "hanzi": "词典",
+          "pinyin": "cídiǎn",
+          "sourceIds": [
+            "IMG_0400:L02"
+          ]
+        },
+        {
+          "id": "c10-s36",
+          "hanzi": "一本词典",
+          "pinyin": "yì běn cídiǎn",
+          "sourceIds": [
+            "IMG_0400:L02"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "话",
+      "pinyin": "huà",
+      "meaning": {
+        "en": "talk, speech; language, dialect"
+      },
+      "sourceEntryIds": [
+        "c10-t05"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t05",
+          "hanzi": "电话",
+          "pinyin": "diànhuà",
+          "sourceIds": [
+            "IMG_0390:L05"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "读",
+      "pinyin": "dú",
+      "meaning": {
+        "en": "to study, to learn; to read, to pronounce"
+      },
+      "sourceEntryIds": [
+        "c10-t81",
+        "c10-s27"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t81",
+          "hanzi": "读",
+          "pinyin": "dú",
+          "sourceIds": [
+            "IMG_0397:L03"
+          ]
+        },
+        {
+          "id": "c10-s27",
+          "hanzi": "学生在读。",
+          "pinyin": "Xuésheng zài dú.",
+          "sourceIds": [
+            "IMG_0397:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "课",
+      "pinyin": "kè",
+      "meaning": {
+        "en": "subject, lesson, course; classwork"
+      },
+      "sourceEntryIds": [
+        "c10-t75",
+        "c10-s23"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t75",
+          "hanzi": "上课",
+          "pinyin": "shàngkè",
+          "sourceIds": [
+            "IMG_0401:L05"
+          ]
+        },
+        {
+          "id": "c10-s23",
+          "hanzi": "我们在上课。",
+          "pinyin": "Wǒmen zài shàngkè.",
+          "sourceIds": [
+            "IMG_0401:L05"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "贵",
+      "pinyin": "guì",
+      "meaning": {
+        "en": "expensive, costly; valuable, precious"
+      },
+      "sourceEntryIds": [
+        "c10-t16",
+        "c10-s02",
+        "c10-s04"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t16",
+          "hanzi": "贵",
+          "pinyin": "guì",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        },
+        {
+          "id": "c10-s02",
+          "hanzi": "电车比油车贵。",
+          "pinyin": "Diànchē bǐ yóuchē guì.",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        },
+        {
+          "id": "c10-s04",
+          "hanzi": "油比电贵。",
+          "pinyin": "Yóu bǐ diàn guì.",
+          "sourceIds": [
+            "IMG_0390:L13"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "超",
+      "pinyin": "chāo",
+      "meaning": {
+        "en": "to jump over, to leap over; to overtake, to surpass"
+      },
+      "sourceEntryIds": [
+        "c10-t61",
+        "c10-s16"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t61",
+          "hanzi": "超市",
+          "pinyin": "chāoshì",
+          "sourceIds": [
+            "IMG_0395:L03"
+          ]
+        },
+        {
+          "id": "c10-s16",
+          "hanzi": "我在超市。",
+          "pinyin": "Wǒ zài chāoshì.",
+          "sourceIds": [
+            "IMG_0395:L03"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "车",
+      "pinyin": "chē",
+      "meaning": {
+        "en": "cart, vehicle; to move in a cart"
+      },
+      "sourceEntryIds": [
+        "c10-t13",
+        "c10-t14",
+        "c10-t99",
+        "c10-s01",
+        "c10-s02",
+        "c10-s03",
+        "c10-s34"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t13",
+          "hanzi": "电车",
+          "pinyin": "diànchē",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        },
+        {
+          "id": "c10-t14",
+          "hanzi": "油车",
+          "pinyin": "yóuchē",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        },
+        {
+          "id": "c10-t99",
+          "hanzi": "汽车",
+          "pinyin": "qìchē",
+          "sourceIds": [
+            "IMG_0400:L01"
+          ]
+        },
+        {
+          "id": "c10-s01",
+          "hanzi": "电车比油车便宜。",
+          "pinyin": "Diànchē bǐ yóuchē piányi.",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        },
+        {
+          "id": "c10-s02",
+          "hanzi": "电车比油车贵。",
+          "pinyin": "Diànchē bǐ yóuchē guì.",
+          "sourceIds": [
+            "IMG_0390:L11"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "辆",
+      "pinyin": "liàng",
+      "meaning": {
+        "en": "measure word for vehicles"
+      },
+      "sourceEntryIds": [
+        "c10-t90",
+        "c10-s34"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t90",
+          "hanzi": "辆",
+          "pinyin": "liàng",
+          "sourceIds": [
+            "IMG_0400:L01"
+          ]
+        },
+        {
+          "id": "c10-s34",
+          "hanzi": "一辆汽车",
+          "pinyin": "yí liàng qìchē",
+          "sourceIds": [
+            "IMG_0400:L01"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "远",
+      "pinyin": "yuǎn",
+      "meaning": {
+        "en": "distant, remote, far; profound"
+      },
+      "sourceEntryIds": [
+        "c10-t18",
+        "c10-s05"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t18",
+          "hanzi": "远",
+          "pinyin": "yuǎn",
+          "sourceIds": [
+            "IMG_0390:L14"
+          ]
+        },
+        {
+          "id": "c10-s05",
+          "hanzi": "美国比土耳其远。",
+          "pinyin": "Měiguó bǐ Tǔ'ěrqí yuǎn.",
+          "sourceIds": [
+            "IMG_0390:L14"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "酒",
+      "pinyin": "jiǔ",
+      "meaning": {
+        "en": "wine, spirits, liquor, alcohol"
+      },
+      "sourceEntryIds": [
+        "c10-t68"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t68",
+          "hanzi": "酒店",
+          "pinyin": "jiǔdiàn",
+          "sourceIds": [
+            "IMG_0395:L07"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "里",
+      "pinyin": "lǐ",
+      "meaning": {
+        "en": "unit of distance equal to 0.5km; village; lane"
+      },
+      "sourceEntryIds": [
+        "c10-t60",
+        "c10-s15"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t60",
+          "hanzi": "哪里",
+          "pinyin": "nǎlǐ",
+          "sourceIds": [
+            "IMG_0395:L02"
+          ]
+        },
+        {
+          "id": "c10-s15",
+          "hanzi": "你在哪里？",
+          "pinyin": "Nǐ zài nǎlǐ?",
+          "sourceIds": [
+            "IMG_0395:L02"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "长",
+      "pinyin": "cháng",
+      "meaning": {
+        "en": "long, in the hair comparison; not the grow reading zhǎng"
+      },
+      "sourceEntryIds": [
+        "c10-t22",
+        "c10-s06"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t22",
+          "hanzi": "长",
+          "pinyin": "cháng",
+          "sourceIds": [
+            "IMG_0392:L06"
+          ]
+        },
+        {
+          "id": "c10-s06",
+          "hanzi": "你的头发比我的长多了。",
+          "pinyin": "Nǐ de tóufa bǐ wǒ de cháng duō le.",
+          "sourceIds": [
+            "IMG_0392:L06"
+          ]
+        }
+      ],
+      "audioRequiresContext": true,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "鞋",
+      "pinyin": "xié",
+      "meaning": {
+        "en": "shoes, footwear in general"
+      },
+      "sourceEntryIds": [
+        "c10-t96",
+        "c10-s31"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t96",
+          "hanzi": "鞋子",
+          "pinyin": "xiézi",
+          "sourceIds": [
+            "IMG_0399:L04"
+          ]
+        },
+        {
+          "id": "c10-s31",
+          "hanzi": "一双鞋子",
+          "pinyin": "yì shuāng xiézi",
+          "sourceIds": [
+            "IMG_0399:L04"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "饭",
+      "pinyin": "fàn",
+      "meaning": {
+        "en": "meal, food; cooked rice"
+      },
+      "sourceEntryIds": [
+        "c10-t65",
+        "c10-t66"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t65",
+          "hanzi": "饭店",
+          "pinyin": "fàndiàn",
+          "sourceIds": [
+            "IMG_0395:L05"
+          ]
+        },
+        {
+          "id": "c10-t66",
+          "hanzi": "饭馆儿",
+          "pinyin": "fànguǎnr",
+          "sourceIds": [
+            "IMG_0395:L05"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    },
+    {
+      "text": "馆",
+      "pinyin": "guǎn",
+      "meaning": {
+        "en": "public building; shop, house, establishment"
+      },
+      "sourceEntryIds": [
+        "c10-t66"
+      ],
+      "contextExamples": [
+        {
+          "id": "c10-t66",
+          "hanzi": "饭馆儿",
+          "pinyin": "fànguǎnr",
+          "sourceIds": [
+            "IMG_0395:L05"
+          ]
+        }
+      ],
+      "audioRequiresContext": false,
+      "progress": "No event or grade; candidate reference data only"
+    }
+  ],
+  "contextPolicy": "Use full-word pronunciation for neutral syllables, erhua and polyphones. Independent character glosses are not folk etymologies; proper names are not translated character by character.",
+  "reference": "Existing study-dictionary-characters.json; source-context corrections explicitly override generic dictionary readings."
+}

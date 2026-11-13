@@ -1,0 +1,3221 @@
+{
+  "lesson_id": "intensive-11",
+  "date": "2026-11-03",
+  "title": {
+    "en": "Dates, seasons & everyday journeys",
+    "fr": "Dates, saisons et trajets quotidiens",
+    "ru": "Даты, времена года и повседневные поездки",
+    "tr": "Tarihler, mevsimler ve günlük yolculuklar"
+  },
+  "intro": {
+    "en": "Connect the board’s patterns: a date, a season, a journey, a routine and a repeated action.",
+    "fr": "Reliez les modèles du tableau : une date, une saison, un trajet, une routine et une action répétée.",
+    "ru": "Свяжите конструкции с доски: дата, время года, дорога, распорядок и повторяющееся действие.",
+    "tr": "Tahtadaki yapıları bağla: tarih, mevsim, yolculuk, günlük düzen ve yinelenen eylem."
+  },
+  "words": [
+    {
+      "id": "c11-t001",
+      "hanzi": "前天",
+      "pinyin": "qiántiān",
+      "meaning": {
+        "en": "the day before yesterday",
+        "fr": "avant-hier",
+        "ru": "позавчера",
+        "tr": "evvelsi gün"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t002",
+      "hanzi": "昨天",
+      "pinyin": "zuótiān",
+      "meaning": {
+        "en": "yesterday",
+        "fr": "hier",
+        "ru": "вчера",
+        "tr": "dün"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t003",
+      "hanzi": "今天",
+      "pinyin": "jīntiān",
+      "meaning": {
+        "en": "today",
+        "fr": "aujourd’hui",
+        "ru": "сегодня",
+        "tr": "bugün"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t004",
+      "hanzi": "明天",
+      "pinyin": "míngtiān",
+      "meaning": {
+        "en": "tomorrow",
+        "fr": "demain",
+        "ru": "завтра",
+        "tr": "yarın"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t005",
+      "hanzi": "后天",
+      "pinyin": "hòutiān",
+      "meaning": {
+        "en": "the day after tomorrow",
+        "fr": "après-demain",
+        "ru": "послезавтра",
+        "tr": "öbür gün"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t006",
+      "hanzi": "星期",
+      "pinyin": "xīngqī",
+      "meaning": {
+        "en": "week / weekday",
+        "fr": "semaine / jour de la semaine",
+        "ru": "неделя / день недели",
+        "tr": "hafta / haftanın günü"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t007",
+      "hanzi": "星期天",
+      "pinyin": "xīngqī tiān",
+      "meaning": {
+        "en": "Sunday",
+        "fr": "dimanche",
+        "ru": "воскресенье",
+        "tr": "pazar"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t008",
+      "hanzi": "星期日",
+      "pinyin": "xīngqī rì",
+      "meaning": {
+        "en": "Sunday",
+        "fr": "dimanche",
+        "ru": "воскресенье",
+        "tr": "pazar"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t009",
+      "hanzi": "星期一",
+      "pinyin": "xīngqī yī",
+      "meaning": {
+        "en": "Monday",
+        "fr": "lundi",
+        "ru": "понедельник",
+        "tr": "pazartesi"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t010",
+      "hanzi": "星期二",
+      "pinyin": "xīngqī èr",
+      "meaning": {
+        "en": "Tuesday",
+        "fr": "mardi",
+        "ru": "вторник",
+        "tr": "salı"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t011",
+      "hanzi": "号",
+      "pinyin": "hào",
+      "meaning": {
+        "en": "date: day of the month",
+        "fr": "jour du mois",
+        "ru": "число месяца",
+        "tr": "ayın günü"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t012",
+      "hanzi": "日",
+      "pinyin": "rì",
+      "meaning": {
+        "en": "day in a written date",
+        "fr": "jour dans une date écrite",
+        "ru": "день в письменной дате",
+        "tr": "yazılı tarihte gün"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t013",
+      "hanzi": "周",
+      "pinyin": "zhōu",
+      "meaning": {
+        "en": "week",
+        "fr": "semaine",
+        "ru": "неделя",
+        "tr": "hafta"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t014",
+      "hanzi": "天",
+      "pinyin": "tiān",
+      "meaning": {
+        "en": "day",
+        "fr": "jour",
+        "ru": "день",
+        "tr": "gün"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t015",
+      "hanzi": "年",
+      "pinyin": "nián",
+      "meaning": {
+        "en": "year",
+        "fr": "année",
+        "ru": "год",
+        "tr": "yıl"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t016",
+      "hanzi": "第",
+      "pinyin": "dì",
+      "meaning": {
+        "en": "ordinal prefix",
+        "fr": "préfixe ordinal",
+        "ru": "показатель порядкового числительного",
+        "tr": "sıra sayısı öneki"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t017",
+      "hanzi": "第八课",
+      "pinyin": "dì bā kè",
+      "meaning": {
+        "en": "the eighth lesson",
+        "fr": "la huitième leçon",
+        "ru": "восьмой урок",
+        "tr": "sekizinci ders"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t018",
+      "hanzi": "弟弟",
+      "pinyin": "dìdi",
+      "meaning": {
+        "en": "younger brother",
+        "fr": "petit frère",
+        "ru": "младший брат",
+        "tr": "erkek kardeş"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t019",
+      "hanzi": "季节",
+      "pinyin": "jìjié",
+      "meaning": {
+        "en": "season",
+        "fr": "saison",
+        "ru": "время года",
+        "tr": "mevsim"
+      },
+      "family": "seasons",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t020",
+      "hanzi": "春天",
+      "pinyin": "chūntiān",
+      "meaning": {
+        "en": "spring",
+        "fr": "printemps",
+        "ru": "весна",
+        "tr": "ilkbahar"
+      },
+      "family": "seasons",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t021",
+      "hanzi": "夏天",
+      "pinyin": "xiàtiān",
+      "meaning": {
+        "en": "summer",
+        "fr": "été",
+        "ru": "лето",
+        "tr": "yaz"
+      },
+      "family": "seasons",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t022",
+      "hanzi": "秋天",
+      "pinyin": "qiūtiān",
+      "meaning": {
+        "en": "autumn",
+        "fr": "automne",
+        "ru": "осень",
+        "tr": "sonbahar"
+      },
+      "family": "seasons",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t023",
+      "hanzi": "冬天",
+      "pinyin": "dōngtiān",
+      "meaning": {
+        "en": "winter",
+        "fr": "hiver",
+        "ru": "зима",
+        "tr": "kış"
+      },
+      "family": "seasons",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t024",
+      "hanzi": "暖",
+      "pinyin": "nuǎn",
+      "meaning": {
+        "en": "warm",
+        "fr": "doux / chaud",
+        "ru": "тепло",
+        "tr": "ılık"
+      },
+      "family": "seasons",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t025",
+      "hanzi": "热",
+      "pinyin": "rè",
+      "meaning": {
+        "en": "hot",
+        "fr": "chaud",
+        "ru": "жарко",
+        "tr": "sıcak"
+      },
+      "family": "seasons",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t026",
+      "hanzi": "凉",
+      "pinyin": "liáng",
+      "meaning": {
+        "en": "cool",
+        "fr": "frais",
+        "ru": "прохладно",
+        "tr": "serin"
+      },
+      "family": "seasons",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t027",
+      "hanzi": "冷",
+      "pinyin": "lěng",
+      "meaning": {
+        "en": "cold",
+        "fr": "froid",
+        "ru": "холодно",
+        "tr": "soğuk"
+      },
+      "family": "seasons",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t028",
+      "hanzi": "不冷不热",
+      "pinyin": "bù lěng bú rè",
+      "meaning": {
+        "en": "neither cold nor hot",
+        "fr": "ni froid ni chaud",
+        "ru": "ни холодно ни жарко",
+        "tr": "ne soğuk ne sıcak"
+      },
+      "family": "seasons",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t029",
+      "hanzi": "有点儿",
+      "pinyin": "yǒudiǎnr",
+      "meaning": {
+        "en": "a bit, before an adjective",
+        "fr": "un peu, avant l’adjectif",
+        "ru": "немного, перед прилагательным",
+        "tr": "biraz, sıfattan önce"
+      },
+      "family": "degree",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t030",
+      "hanzi": "一点儿",
+      "pinyin": "yìdiǎnr",
+      "meaning": {
+        "en": "a little amount / difference",
+        "fr": "une petite quantité / différence",
+        "ru": "немного / небольшая разница",
+        "tr": "az miktar / küçük fark"
+      },
+      "family": "degree",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t031",
+      "hanzi": "比",
+      "pinyin": "bǐ",
+      "meaning": {
+        "en": "compared with",
+        "fr": "comparé à",
+        "ru": "по сравнению с",
+        "tr": "ile karşılaştırıldığında"
+      },
+      "family": "degree",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t032",
+      "hanzi": "很",
+      "pinyin": "hěn",
+      "meaning": {
+        "en": "very; degree word in these examples",
+        "fr": "très ; mot de degré dans ces exemples",
+        "ru": "очень; слово степени в этих примерах",
+        "tr": "çok; bu örneklerde derece sözcüğü"
+      },
+      "family": "degree",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t033",
+      "hanzi": "怎么",
+      "pinyin": "zěnme",
+      "meaning": {
+        "en": "how",
+        "fr": "comment",
+        "ru": "как",
+        "tr": "nasıl"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t034",
+      "hanzi": "来",
+      "pinyin": "lái",
+      "meaning": {
+        "en": "come",
+        "fr": "venir",
+        "ru": "приходить",
+        "tr": "gelmek"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t035",
+      "hanzi": "学校",
+      "pinyin": "xuéxiào",
+      "meaning": {
+        "en": "school",
+        "fr": "école",
+        "ru": "школа",
+        "tr": "okul"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t036",
+      "hanzi": "坐",
+      "pinyin": "zuò",
+      "meaning": {
+        "en": "take a vehicle as a passenger",
+        "fr": "prendre un véhicule comme passager",
+        "ru": "ехать пассажиром",
+        "tr": "araca yolcu olarak binmek"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t037",
+      "hanzi": "公共汽车",
+      "pinyin": "gōnggòng qìchē",
+      "meaning": {
+        "en": "bus",
+        "fr": "bus",
+        "ru": "автобус",
+        "tr": "otobüs"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t038",
+      "hanzi": "地铁",
+      "pinyin": "dìtiě",
+      "meaning": {
+        "en": "metro / subway",
+        "fr": "métro",
+        "ru": "метро",
+        "tr": "metro"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t039",
+      "hanzi": "飞机",
+      "pinyin": "fēijī",
+      "meaning": {
+        "en": "airplane",
+        "fr": "avion",
+        "ru": "самолёт",
+        "tr": "uçak"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t040",
+      "hanzi": "骑",
+      "pinyin": "qí",
+      "meaning": {
+        "en": "ride a bike or animal",
+        "fr": "monter à vélo ou à cheval",
+        "ru": "ехать верхом или на велосипеде",
+        "tr": "bisiklete veya hayvana binmek"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t041",
+      "hanzi": "自行车",
+      "pinyin": "zìxíngchē",
+      "meaning": {
+        "en": "bicycle",
+        "fr": "vélo",
+        "ru": "велосипед",
+        "tr": "bisiklet"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t042",
+      "hanzi": "马",
+      "pinyin": "mǎ",
+      "meaning": {
+        "en": "horse",
+        "fr": "cheval",
+        "ru": "лошадь",
+        "tr": "at"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t043",
+      "hanzi": "电动车",
+      "pinyin": "diàndòngchē",
+      "meaning": {
+        "en": "electric bike in this riding context",
+        "fr": "deux-roues électrique dans ce contexte",
+        "ru": "электровелосипед в этом контексте",
+        "tr": "bu binme bağlamında elektrikli bisiklet"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t044",
+      "hanzi": "走路",
+      "pinyin": "zǒulù",
+      "meaning": {
+        "en": "walk on foot",
+        "fr": "aller à pied",
+        "ru": "идти пешком",
+        "tr": "yürümek"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t045",
+      "hanzi": "出租车",
+      "pinyin": "chūzūchē",
+      "meaning": {
+        "en": "taxi",
+        "fr": "taxi",
+        "ru": "такси",
+        "tr": "taksi"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t046",
+      "hanzi": "打的",
+      "pinyin": "dǎ dī",
+      "meaning": {
+        "en": "take a taxi, colloquial",
+        "fr": "prendre un taxi, familier",
+        "ru": "ехать на такси, разговорное",
+        "tr": "taksiye binmek, konuşma dili"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false,
+      "acceptedPinyin": [
+        "dǎ dī",
+        "dǎ dí"
+      ],
+      "note": {
+        "en": "The taxi expression uses dī (also documented dí), not the particle de.",
+        "fr": "Dans cette expression, 的 se lit dī (aussi attesté dí), pas de.",
+        "ru": "В этом выражении 的 читается dī (также встречается dí), а не de.",
+        "tr": "Bu taksi ifadesinde 的, de değil dī (dí biçimi de belgelenmiştir) okunur."
+      }
+    },
+    {
+      "id": "c11-t047",
+      "hanzi": "火车",
+      "pinyin": "huǒchē",
+      "meaning": {
+        "en": "train",
+        "fr": "train",
+        "ru": "поезд",
+        "tr": "tren"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t048",
+      "hanzi": "高铁",
+      "pinyin": "gāotiě",
+      "meaning": {
+        "en": "high-speed rail",
+        "fr": "train à grande vitesse",
+        "ru": "скоростная железная дорога",
+        "tr": "hızlı tren"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t049",
+      "hanzi": "开车",
+      "pinyin": "kāichē",
+      "meaning": {
+        "en": "drive a car",
+        "fr": "conduire une voiture",
+        "ru": "вести машину",
+        "tr": "araba sürmek"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t050",
+      "hanzi": "六点",
+      "pinyin": "liù diǎn",
+      "meaning": {
+        "en": "six o’clock",
+        "fr": "six heures",
+        "ru": "шесть часов",
+        "tr": "saat altı"
+      },
+      "family": "routine",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0419",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t051",
+      "hanzi": "起床",
+      "pinyin": "qǐchuáng",
+      "meaning": {
+        "en": "get up",
+        "fr": "se lever",
+        "ru": "вставать с постели",
+        "tr": "kalkmak"
+      },
+      "family": "routine",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0419",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t052",
+      "hanzi": "几点",
+      "pinyin": "jǐ diǎn",
+      "meaning": {
+        "en": "what clock time?",
+        "fr": "à quelle heure ?",
+        "ru": "во сколько?",
+        "tr": "saat kaçta?"
+      },
+      "family": "routine",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0419",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t053",
+      "hanzi": "什么时候",
+      "pinyin": "shénme shíhou",
+      "meaning": {
+        "en": "when?",
+        "fr": "quand ?",
+        "ru": "когда?",
+        "tr": "ne zaman?"
+      },
+      "family": "routine",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0419",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t054",
+      "hanzi": "吃",
+      "pinyin": "chī",
+      "meaning": {
+        "en": "eat",
+        "fr": "manger",
+        "ru": "есть",
+        "tr": "yemek"
+      },
+      "family": "routine",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0419",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t055",
+      "hanzi": "早饭",
+      "pinyin": "zǎofàn",
+      "meaning": {
+        "en": "breakfast",
+        "fr": "petit-déjeuner",
+        "ru": "завтрак",
+        "tr": "kahvaltı"
+      },
+      "family": "routine",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0419",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t056",
+      "hanzi": "张",
+      "pinyin": "zhāng",
+      "meaning": {
+        "en": "measure word for the objects practised here",
+        "fr": "classificateur des objets étudiés ici",
+        "ru": "счётное слово для предметов этого раздела",
+        "tr": "burada çalışılan nesnelerin ölçü sözcüğü"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t057",
+      "hanzi": "床",
+      "pinyin": "chuáng",
+      "meaning": {
+        "en": "bed",
+        "fr": "lit",
+        "ru": "кровать",
+        "tr": "yatak"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t058",
+      "hanzi": "纸",
+      "pinyin": "zhǐ",
+      "meaning": {
+        "en": "paper",
+        "fr": "papier",
+        "ru": "бумага",
+        "tr": "kâğıt"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t059",
+      "hanzi": "地图",
+      "pinyin": "dìtú",
+      "meaning": {
+        "en": "map",
+        "fr": "carte",
+        "ru": "карта",
+        "tr": "harita"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t060",
+      "hanzi": "桌子",
+      "pinyin": "zhuōzi",
+      "meaning": {
+        "en": "table",
+        "fr": "table",
+        "ru": "стол",
+        "tr": "masa"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t061",
+      "hanzi": "菜单",
+      "pinyin": "càidān",
+      "meaning": {
+        "en": "menu",
+        "fr": "menu",
+        "ru": "меню",
+        "tr": "menü"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t062",
+      "hanzi": "开门",
+      "pinyin": "kāi mén",
+      "meaning": {
+        "en": "open a door",
+        "fr": "ouvrir une porte",
+        "ru": "открыть дверь",
+        "tr": "kapı açmak"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t063",
+      "hanzi": "开灯",
+      "pinyin": "kāi dēng",
+      "meaning": {
+        "en": "turn on a light",
+        "fr": "allumer la lumière",
+        "ru": "включить свет",
+        "tr": "ışığı açmak"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t064",
+      "hanzi": "等",
+      "pinyin": "děng",
+      "meaning": {
+        "en": "wait",
+        "fr": "attendre",
+        "ru": "ждать",
+        "tr": "beklemek"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t065",
+      "hanzi": "欢迎",
+      "pinyin": "huānyíng",
+      "meaning": {
+        "en": "welcome",
+        "fr": "bienvenue / accueillir",
+        "ru": "добро пожаловать / приветствовать",
+        "tr": "hoş geldiniz / karşılamak"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t066",
+      "hanzi": "受欢迎",
+      "pinyin": "shòu huānyíng",
+      "meaning": {
+        "en": "be popular / well received",
+        "fr": "être populaire / bien accueilli",
+        "ru": "пользоваться популярностью",
+        "tr": "sevilmek / ilgi görmek"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t067",
+      "hanzi": "一直",
+      "pinyin": "yìzhí",
+      "meaning": {
+        "en": "continuously / all along",
+        "fr": "sans interruption / depuis le début",
+        "ru": "непрерывно / всё это время",
+        "tr": "sürekli / başından beri"
+      },
+      "family": "frequency",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": false,
+      "acceptedPinyin": [
+        "yìzhí",
+        "yīzhí"
+      ]
+    },
+    {
+      "id": "c11-t068",
+      "hanzi": "常常",
+      "pinyin": "chángcháng",
+      "meaning": {
+        "en": "often",
+        "fr": "souvent",
+        "ru": "часто",
+        "tr": "sık sık"
+      },
+      "family": "frequency",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t069",
+      "hanzi": "有时候",
+      "pinyin": "yǒu shíhou",
+      "meaning": {
+        "en": "sometimes",
+        "fr": "parfois",
+        "ru": "иногда",
+        "tr": "bazen"
+      },
+      "family": "frequency",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t070",
+      "hanzi": "很少",
+      "pinyin": "hěn shǎo",
+      "meaning": {
+        "en": "seldom / rarely",
+        "fr": "rarement",
+        "ru": "редко",
+        "tr": "nadiren"
+      },
+      "family": "frequency",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t071",
+      "hanzi": "从不",
+      "pinyin": "cóng bù",
+      "meaning": {
+        "en": "never",
+        "fr": "jamais",
+        "ru": "никогда",
+        "tr": "asla"
+      },
+      "family": "frequency",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t072",
+      "hanzi": "任何时候",
+      "pinyin": "rènhé shíhou",
+      "meaning": {
+        "en": "any time",
+        "fr": "à n’importe quel moment",
+        "ru": "в любое время",
+        "tr": "herhangi bir zaman"
+      },
+      "family": "frequency",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t073",
+      "hanzi": "都",
+      "pinyin": "dōu",
+      "meaning": {
+        "en": "all / in every case",
+        "fr": "tous / dans tous les cas",
+        "ru": "все / в каждом случае",
+        "tr": "hepsi / her durumda"
+      },
+      "family": "frequency",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t074",
+      "hanzi": "可以",
+      "pinyin": "kěyǐ",
+      "meaning": {
+        "en": "can / may",
+        "fr": "pouvoir / avoir la permission",
+        "ru": "мочь / можно",
+        "tr": "yapabilmek / izinli olmak"
+      },
+      "family": "frequency",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t075",
+      "hanzi": "喝酒",
+      "pinyin": "hē jiǔ",
+      "meaning": {
+        "en": "drink alcohol",
+        "fr": "boire de l’alcool",
+        "ru": "пить алкоголь",
+        "tr": "alkol içmek"
+      },
+      "family": "frequency",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t076",
+      "hanzi": "对",
+      "pinyin": "duì",
+      "meaning": {
+        "en": "for / in relation to, in this pattern",
+        "fr": "pour / à l’égard de, dans ce modèle",
+        "ru": "для / по отношению к, в этой модели",
+        "tr": "bu yapıda birine/bir şeye etkisi"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t077",
+      "hanzi": "身体",
+      "pinyin": "shēntǐ",
+      "meaning": {
+        "en": "body / health",
+        "fr": "corps / santé",
+        "ru": "организм / здоровье",
+        "tr": "beden / sağlık"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t078",
+      "hanzi": "好",
+      "pinyin": "hǎo",
+      "meaning": {
+        "en": "good",
+        "fr": "bon",
+        "ru": "хорошо",
+        "tr": "iyi"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t079",
+      "hanzi": "不好",
+      "pinyin": "bù hǎo",
+      "meaning": {
+        "en": "not good",
+        "fr": "pas bon",
+        "ru": "плохо / нехорошо",
+        "tr": "iyi değil"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t080",
+      "hanzi": "水果",
+      "pinyin": "shuǐguǒ",
+      "meaning": {
+        "en": "fruit",
+        "fr": "fruit",
+        "ru": "фрукты",
+        "tr": "meyve"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t081",
+      "hanzi": "苹果",
+      "pinyin": "píngguǒ",
+      "meaning": {
+        "en": "apple",
+        "fr": "pomme",
+        "ru": "яблоко",
+        "tr": "elma"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t082",
+      "hanzi": "收银员",
+      "pinyin": "shōuyínyuán",
+      "meaning": {
+        "en": "cashier",
+        "fr": "caissier / caissière",
+        "ru": "кассир",
+        "tr": "kasiyer"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t083",
+      "hanzi": "一共",
+      "pinyin": "yígòng",
+      "meaning": {
+        "en": "in total",
+        "fr": "au total",
+        "ru": "всего",
+        "tr": "toplam"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false,
+      "acceptedPinyin": [
+        "yígòng",
+        "yīgòng"
+      ]
+    },
+    {
+      "id": "c11-t084",
+      "hanzi": "百",
+      "pinyin": "bǎi",
+      "meaning": {
+        "en": "hundred",
+        "fr": "cent",
+        "ru": "сто",
+        "tr": "yüz"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t085",
+      "hanzi": "千",
+      "pinyin": "qiān",
+      "meaning": {
+        "en": "thousand",
+        "fr": "mille",
+        "ru": "тысяча",
+        "tr": "bin"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t086",
+      "hanzi": "万",
+      "pinyin": "wàn",
+      "meaning": {
+        "en": "ten thousand",
+        "fr": "dix mille",
+        "ru": "десять тысяч",
+        "tr": "on bin"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t087",
+      "hanzi": "你",
+      "pinyin": "nǐ",
+      "meaning": {
+        "en": "you",
+        "fr": "tu / vous",
+        "ru": "ты / вы",
+        "tr": "sen / siz"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t088",
+      "hanzi": "我",
+      "pinyin": "wǒ",
+      "meaning": {
+        "en": "I / me",
+        "fr": "je / moi",
+        "ru": "я / меня",
+        "tr": "ben"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t089",
+      "hanzi": "他",
+      "pinyin": "tā",
+      "meaning": {
+        "en": "he / him",
+        "fr": "il / lui",
+        "ru": "он / его",
+        "tr": "o, erkek"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t090",
+      "hanzi": "她",
+      "pinyin": "tā",
+      "meaning": {
+        "en": "she / her",
+        "fr": "elle",
+        "ru": "она / её",
+        "tr": "o, kadın"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t091",
+      "hanzi": "它",
+      "pinyin": "tā",
+      "meaning": {
+        "en": "it",
+        "fr": "il / elle, chose ou animal",
+        "ru": "оно, предмет или животное",
+        "tr": "o, nesne veya hayvan"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t092",
+      "hanzi": "们",
+      "pinyin": "men",
+      "meaning": {
+        "en": "plural suffix in these pronouns",
+        "fr": "suffixe pluriel dans ces pronoms",
+        "ru": "показатель множественного числа этих местоимений",
+        "tr": "bu zamirlerde çoğul eki"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t093",
+      "hanzi": "三十",
+      "pinyin": "sānshí",
+      "meaning": {
+        "en": "thirty",
+        "fr": "trente",
+        "ru": "тридцать",
+        "tr": "otuz"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t094",
+      "hanzi": "一百二十",
+      "pinyin": "yì bǎi èrshí",
+      "meaning": {
+        "en": "one hundred and twenty",
+        "fr": "cent vingt",
+        "ru": "сто двадцать",
+        "tr": "yüz yirmi"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t095",
+      "hanzi": "一百五十",
+      "pinyin": "yì bǎi wǔshí",
+      "meaning": {
+        "en": "one hundred and fifty",
+        "fr": "cent cinquante",
+        "ru": "сто пятьдесят",
+        "tr": "yüz elli"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t096",
+      "hanzi": "九十四",
+      "pinyin": "jiǔshísì",
+      "meaning": {
+        "en": "ninety-four",
+        "fr": "quatre-vingt-quatorze",
+        "ru": "девяносто четыре",
+        "tr": "doksan dört"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t097",
+      "hanzi": "九十五",
+      "pinyin": "jiǔshíwǔ",
+      "meaning": {
+        "en": "ninety-five",
+        "fr": "quatre-vingt-quinze",
+        "ru": "девяносто пять",
+        "tr": "doksan beş"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t098",
+      "hanzi": "三十六",
+      "pinyin": "sānshíliù",
+      "meaning": {
+        "en": "thirty-six",
+        "fr": "trente-six",
+        "ru": "тридцать шесть",
+        "tr": "otuz altı"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t099",
+      "hanzi": "七十八",
+      "pinyin": "qīshíbā",
+      "meaning": {
+        "en": "seventy-eight",
+        "fr": "soixante-dix-huit",
+        "ru": "семьдесят восемь",
+        "tr": "yetmiş sekiz"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t100",
+      "hanzi": "一百",
+      "pinyin": "yì bǎi",
+      "meaning": {
+        "en": "one hundred",
+        "fr": "cent",
+        "ru": "сто",
+        "tr": "yüz"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t101",
+      "hanzi": "二十",
+      "pinyin": "èrshí",
+      "meaning": {
+        "en": "twenty",
+        "fr": "vingt",
+        "ru": "двадцать",
+        "tr": "yirmi"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t102",
+      "hanzi": "二十二",
+      "pinyin": "èrshí'èr",
+      "meaning": {
+        "en": "twenty-two",
+        "fr": "vingt-deux",
+        "ru": "двадцать два",
+        "tr": "yirmi iki"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t103",
+      "hanzi": "一千",
+      "pinyin": "yì qiān",
+      "meaning": {
+        "en": "one thousand",
+        "fr": "mille",
+        "ru": "тысяча",
+        "tr": "bin"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t104",
+      "hanzi": "一万",
+      "pinyin": "yí wàn",
+      "meaning": {
+        "en": "ten thousand",
+        "fr": "dix mille",
+        "ru": "десять тысяч",
+        "tr": "on bin"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t105",
+      "hanzi": "五十六",
+      "pinyin": "wǔshíliù",
+      "meaning": {
+        "en": "fifty-six",
+        "fr": "cinquante-six",
+        "ru": "пятьдесят шесть",
+        "tr": "elli altı"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t106",
+      "hanzi": "五百",
+      "pinyin": "wǔ bǎi",
+      "meaning": {
+        "en": "five hundred",
+        "fr": "cinq cents",
+        "ru": "пятьсот",
+        "tr": "beş yüz"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0422"
+      ],
+      "phrase": false
+    },
+    {
+      "id": "c11-t107",
+      "hanzi": "一千七百",
+      "pinyin": "yì qiān qī bǎi",
+      "meaning": {
+        "en": "one thousand seven hundred",
+        "fr": "mille sept cents",
+        "ru": "тысяча семьсот",
+        "tr": "bin yedi yüz"
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0422"
+      ],
+      "phrase": false
+    }
+  ],
+  "sentences": [
+    {
+      "id": "c11-s001",
+      "hanzi": "今天几月几号星期几？",
+      "pinyin": "Jīntiān jǐ yuè jǐ hào xīngqī jǐ?",
+      "meaning": {
+        "en": "What month, date and weekday is today?",
+        "fr": "Quel mois, quelle date et quel jour sommes-nous ?",
+        "ru": "Какой сегодня месяц, число и день недели?",
+        "tr": "Bugün hangi ay, ayın kaçı ve haftanın hangi günü?"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s002",
+      "hanzi": "今天是十一月三号，星期二。",
+      "pinyin": "Jīntiān shì shíyī yuè sān hào, xīngqī èr.",
+      "meaning": {
+        "en": "In the source example, today is Tuesday, November 3.",
+        "fr": "Dans l’exemple source, nous sommes le mardi 3 novembre.",
+        "ru": "В учебном примере сегодня вторник, 3 ноября.",
+        "tr": "Kaynak örneğinde bugün 3 Kasım Salı."
+      },
+      "family": "calendar",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s003",
+      "hanzi": "一周有七天。",
+      "pinyin": "Yì zhōu yǒu qī tiān.",
+      "meaning": {
+        "en": "A week has seven days.",
+        "fr": "Une semaine compte sept jours.",
+        "ru": "В неделе семь дней.",
+        "tr": "Bir haftada yedi gün vardır."
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s004",
+      "hanzi": "一年有四个季节。",
+      "pinyin": "Yì nián yǒu sì ge jìjié.",
+      "meaning": {
+        "en": "A year has four seasons.",
+        "fr": "Une année compte quatre saisons.",
+        "ru": "В году четыре времени года.",
+        "tr": "Bir yılda dört mevsim vardır."
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s005",
+      "hanzi": "二零二六年有三百六十五天。",
+      "pinyin": "Èr líng èr liù nián yǒu sānbǎi liùshíwǔ tiān.",
+      "meaning": {
+        "en": "The year 2026 has 365 days.",
+        "fr": "L’année 2026 compte 365 jours.",
+        "ru": "В 2026 году 365 дней.",
+        "tr": "2026 yılında 365 gün vardır."
+      },
+      "family": "calendar",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s006",
+      "hanzi": "这是第八课。",
+      "pinyin": "Zhè shì dì bā kè.",
+      "meaning": {
+        "en": "This is the eighth lesson in the textbook.",
+        "fr": "C’est la huitième leçon du manuel.",
+        "ru": "Это восьмой урок в учебнике.",
+        "tr": "Bu, ders kitabındaki sekizinci ders."
+      },
+      "family": "calendar",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s007",
+      "hanzi": "他是我弟弟。",
+      "pinyin": "Tā shì wǒ dìdi.",
+      "meaning": {
+        "en": "He is my younger brother.",
+        "fr": "C’est mon petit frère.",
+        "ru": "Он мой младший брат.",
+        "tr": "O benim erkek kardeşim."
+      },
+      "family": "calendar",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s008",
+      "hanzi": "现在是什么课？",
+      "pinyin": "Xiànzài shì shénme kè?",
+      "meaning": {
+        "en": "What class is it now?",
+        "fr": "Quel cours avons-nous maintenant ?",
+        "ru": "Какой сейчас урок?",
+        "tr": "Şimdi hangi ders var?"
+      },
+      "family": "calendar",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s009",
+      "hanzi": "现在是什么季节？",
+      "pinyin": "Xiànzài shì shénme jìjié?",
+      "meaning": {
+        "en": "What season is it now?",
+        "fr": "En quelle saison sommes-nous ?",
+        "ru": "Какое сейчас время года?",
+        "tr": "Şimdi hangi mevsimdeyiz?"
+      },
+      "family": "seasons",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s010",
+      "hanzi": "现在是秋天。",
+      "pinyin": "Xiànzài shì qiūtiān.",
+      "meaning": {
+        "en": "In the classroom example, it is autumn now.",
+        "fr": "Dans l’exemple du cours, c’est l’automne.",
+        "ru": "В примере с занятия сейчас осень.",
+        "tr": "Sınıf örneğinde şimdi sonbahar."
+      },
+      "family": "seasons",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s011",
+      "hanzi": "春天暖，夏天热，秋天凉，冬天冷。",
+      "pinyin": "Chūntiān nuǎn, xiàtiān rè, qiūtiān liáng, dōngtiān lěng.",
+      "meaning": {
+        "en": "The class associations are warm spring, hot summer, cool autumn and cold winter.",
+        "fr": "Les associations du cours sont : printemps doux, été chaud, automne frais et hiver froid.",
+        "ru": "Учебные ассоциации: тёплая весна, жаркое лето, прохладная осень и холодная зима.",
+        "tr": "Sınıf çağrışımları: ılık ilkbahar, sıcak yaz, serin sonbahar ve soğuk kış."
+      },
+      "family": "seasons",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s012",
+      "hanzi": "冷吗？",
+      "pinyin": "Lěng ma?",
+      "meaning": {
+        "en": "Is it cold?",
+        "fr": "Est-ce qu’il fait froid ?",
+        "ru": "Холодно?",
+        "tr": "Hava soğuk mu?"
+      },
+      "family": "seasons",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s013",
+      "hanzi": "很冷。",
+      "pinyin": "Hěn lěng.",
+      "meaning": {
+        "en": "It is cold / very cold in this example.",
+        "fr": "Il fait froid / très froid dans cet exemple.",
+        "ru": "В этом примере холодно / очень холодно.",
+        "tr": "Bu örnekte hava soğuk / çok soğuk."
+      },
+      "family": "seasons",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s014",
+      "hanzi": "不冷不热。",
+      "pinyin": "Bù lěng bú rè.",
+      "meaning": {
+        "en": "Neither cold nor hot.",
+        "fr": "Ni froid ni chaud.",
+        "ru": "Ни холодно ни жарко.",
+        "tr": "Ne soğuk ne sıcak."
+      },
+      "family": "seasons",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s015",
+      "hanzi": "有点儿冷。",
+      "pinyin": "Yǒudiǎnr lěng.",
+      "meaning": {
+        "en": "A bit cold.",
+        "fr": "Un peu froid.",
+        "ru": "Немного холодно.",
+        "tr": "Biraz soğuk."
+      },
+      "family": "degree",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s016",
+      "hanzi": "今天比昨天冷。",
+      "pinyin": "Jīntiān bǐ zuótiān lěng.",
+      "meaning": {
+        "en": "Today is colder than yesterday.",
+        "fr": "Il fait plus froid aujourd’hui qu’hier.",
+        "ru": "Сегодня холоднее, чем вчера.",
+        "tr": "Bugün dünden daha soğuk."
+      },
+      "family": "degree",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s017",
+      "hanzi": "今天有点儿冷。",
+      "pinyin": "Jīntiān yǒudiǎnr lěng.",
+      "meaning": {
+        "en": "Today is a bit cold.",
+        "fr": "Il fait un peu froid aujourd’hui.",
+        "ru": "Сегодня немного холодно.",
+        "tr": "Bugün hava biraz soğuk."
+      },
+      "family": "degree",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s018",
+      "hanzi": "今天比昨天冷一点儿。",
+      "pinyin": "Jīntiān bǐ zuótiān lěng yìdiǎnr.",
+      "meaning": {
+        "en": "Today is a little colder than yesterday.",
+        "fr": "Il fait un peu plus froid aujourd’hui qu’hier.",
+        "ru": "Сегодня немного холоднее, чем вчера.",
+        "tr": "Bugün dünden biraz daha soğuk."
+      },
+      "family": "degree",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s019",
+      "hanzi": "你怎么来学校？",
+      "pinyin": "Nǐ zěnme lái xuéxiào?",
+      "meaning": {
+        "en": "How do you come to school?",
+        "fr": "Comment viens-tu à l’école ?",
+        "ru": "Как ты добираешься до школы?",
+        "tr": "Okula nasıl geliyorsun?"
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s020",
+      "hanzi": "我坐公共汽车。",
+      "pinyin": "Wǒ zuò gōnggòng qìchē.",
+      "meaning": {
+        "en": "I take the bus.",
+        "fr": "Je prends le bus.",
+        "ru": "Я еду на автобусе.",
+        "tr": "Otobüse biniyorum."
+      },
+      "family": "transport",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s021",
+      "hanzi": "我坐地铁来学校。",
+      "pinyin": "Wǒ zuò dìtiě lái xuéxiào.",
+      "meaning": {
+        "en": "I take the metro to school.",
+        "fr": "Je viens à l’école en métro.",
+        "ru": "Я добираюсь до школы на метро.",
+        "tr": "Okula metroyla geliyorum."
+      },
+      "family": "transport",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s022",
+      "hanzi": "我骑自行车来学校。",
+      "pinyin": "Wǒ qí zìxíngchē lái xuéxiào.",
+      "meaning": {
+        "en": "I cycle to school.",
+        "fr": "Je viens à l’école à vélo.",
+        "ru": "Я приезжаю в школу на велосипеде.",
+        "tr": "Okula bisikletle geliyorum."
+      },
+      "family": "transport",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s023",
+      "hanzi": "我走路来学校。",
+      "pinyin": "Wǒ zǒulù lái xuéxiào.",
+      "meaning": {
+        "en": "I walk to school.",
+        "fr": "Je viens à l’école à pied.",
+        "ru": "Я прихожу в школу пешком.",
+        "tr": "Okula yürüyerek geliyorum."
+      },
+      "family": "transport",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s024",
+      "hanzi": "我开车来学校。",
+      "pinyin": "Wǒ kāichē lái xuéxiào.",
+      "meaning": {
+        "en": "I drive to school.",
+        "fr": "Je viens à l’école en conduisant.",
+        "ru": "Я приезжаю в школу за рулём.",
+        "tr": "Okula araba sürerek geliyorum."
+      },
+      "family": "transport",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s025",
+      "hanzi": "我坐出租车来学校。",
+      "pinyin": "Wǒ zuò chūzūchē lái xuéxiào.",
+      "meaning": {
+        "en": "I take a taxi to school.",
+        "fr": "Je viens à l’école en taxi.",
+        "ru": "Я приезжаю в школу на такси.",
+        "tr": "Okula taksiyle geliyorum."
+      },
+      "family": "transport",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s026",
+      "hanzi": "我骑电动车来学校。",
+      "pinyin": "Wǒ qí diàndòngchē lái xuéxiào.",
+      "meaning": {
+        "en": "I ride an electric bike to school.",
+        "fr": "Je viens à l’école en deux-roues électrique.",
+        "ru": "Я приезжаю в школу на электровелосипеде.",
+        "tr": "Okula elektrikli bisikletle geliyorum."
+      },
+      "family": "transport",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s027",
+      "hanzi": "我坐高铁去。",
+      "pinyin": "Wǒ zuò gāotiě qù.",
+      "meaning": {
+        "en": "I go by high-speed train.",
+        "fr": "J’y vais en train à grande vitesse.",
+        "ru": "Я еду туда скоростным поездом.",
+        "tr": "Oraya hızlı trenle gidiyorum."
+      },
+      "family": "transport",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s028",
+      "hanzi": "六点起床。",
+      "pinyin": "Liù diǎn qǐchuáng.",
+      "meaning": {
+        "en": "Get up at six, in the source example.",
+        "fr": "Se lever à six heures, dans l’exemple source.",
+        "ru": "Вставать в шесть, в примере с доски.",
+        "tr": "Kaynak örneğinde altıda kalkmak."
+      },
+      "family": "routine",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0419",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s029",
+      "hanzi": "你几点吃早饭？",
+      "pinyin": "Nǐ jǐ diǎn chī zǎofàn?",
+      "meaning": {
+        "en": "What time do you eat breakfast?",
+        "fr": "À quelle heure prends-tu le petit-déjeuner ?",
+        "ru": "Во сколько ты завтракаешь?",
+        "tr": "Saat kaçta kahvaltı ediyorsun?"
+      },
+      "family": "routine",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0419",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s030",
+      "hanzi": "你什么时候吃早饭？",
+      "pinyin": "Nǐ shénme shíhou chī zǎofàn?",
+      "meaning": {
+        "en": "When do you eat breakfast?",
+        "fr": "Quand prends-tu le petit-déjeuner ?",
+        "ru": "Когда ты завтракаешь?",
+        "tr": "Ne zaman kahvaltı ediyorsun?"
+      },
+      "family": "routine",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0419",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s031",
+      "hanzi": "我七点吃早饭。",
+      "pinyin": "Wǒ qī diǎn chī zǎofàn.",
+      "meaning": {
+        "en": "I eat breakfast at seven, in this added example.",
+        "fr": "Je prends le petit-déjeuner à sept heures, dans cet exemple ajouté.",
+        "ru": "В дополнительном примере я завтракаю в семь.",
+        "tr": "Bu ek örnekte yedide kahvaltı ediyorum."
+      },
+      "family": "routine",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0419",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s032",
+      "hanzi": "一张床",
+      "pinyin": "yì zhāng chuáng",
+      "meaning": {
+        "en": "one bed",
+        "fr": "un lit",
+        "ru": "одна кровать",
+        "tr": "bir yatak"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s033",
+      "hanzi": "一张纸",
+      "pinyin": "yì zhāng zhǐ",
+      "meaning": {
+        "en": "one sheet of paper",
+        "fr": "une feuille de papier",
+        "ru": "один лист бумаги",
+        "tr": "bir kâğıt"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s034",
+      "hanzi": "一张地图",
+      "pinyin": "yì zhāng dìtú",
+      "meaning": {
+        "en": "one map",
+        "fr": "une carte",
+        "ru": "одна карта",
+        "tr": "bir harita"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s035",
+      "hanzi": "一张桌子",
+      "pinyin": "yì zhāng zhuōzi",
+      "meaning": {
+        "en": "one table",
+        "fr": "une table",
+        "ru": "один стол",
+        "tr": "bir masa"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s036",
+      "hanzi": "一张菜单",
+      "pinyin": "yì zhāng càidān",
+      "meaning": {
+        "en": "one menu",
+        "fr": "un menu",
+        "ru": "одно меню",
+        "tr": "bir menü"
+      },
+      "family": "objects",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s037",
+      "hanzi": "请开门。",
+      "pinyin": "Qǐng kāi mén.",
+      "meaning": {
+        "en": "Please open the door.",
+        "fr": "Ouvre la porte, s’il te plaît.",
+        "ru": "Пожалуйста, откройте дверь.",
+        "tr": "Lütfen kapıyı aç."
+      },
+      "family": "objects",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s038",
+      "hanzi": "请开灯。",
+      "pinyin": "Qǐng kāi dēng.",
+      "meaning": {
+        "en": "Please turn on the light.",
+        "fr": "Allume la lumière, s’il te plaît.",
+        "ru": "Пожалуйста, включите свет.",
+        "tr": "Lütfen ışığı aç."
+      },
+      "family": "objects",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s039",
+      "hanzi": "请等一下。",
+      "pinyin": "Qǐng děng yíxià.",
+      "meaning": {
+        "en": "Please wait a moment.",
+        "fr": "Attends un instant, s’il te plaît.",
+        "ru": "Пожалуйста, подождите немного.",
+        "tr": "Lütfen biraz bekle."
+      },
+      "family": "objects",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s040",
+      "hanzi": "这家店很受欢迎。",
+      "pinyin": "Zhè jiā diàn hěn shòu huānyíng.",
+      "meaning": {
+        "en": "This shop is popular.",
+        "fr": "Ce magasin est populaire.",
+        "ru": "Этот магазин пользуется популярностью.",
+        "tr": "Bu dükkân çok seviliyor."
+      },
+      "family": "objects",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s041",
+      "hanzi": "我常常走路来学校。",
+      "pinyin": "Wǒ chángcháng zǒulù lái xuéxiào.",
+      "meaning": {
+        "en": "I often walk to school.",
+        "fr": "Je viens souvent à l’école à pied.",
+        "ru": "Я часто прихожу в школу пешком.",
+        "tr": "Okula sık sık yürüyerek geliyorum."
+      },
+      "family": "frequency",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s042",
+      "hanzi": "我有时候坐地铁。",
+      "pinyin": "Wǒ yǒu shíhou zuò dìtiě.",
+      "meaning": {
+        "en": "I sometimes take the metro.",
+        "fr": "Je prends parfois le métro.",
+        "ru": "Я иногда езжу на метро.",
+        "tr": "Bazen metroya biniyorum."
+      },
+      "family": "frequency",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s043",
+      "hanzi": "我很少打的。",
+      "pinyin": "Wǒ hěn shǎo dǎ dī.",
+      "meaning": {
+        "en": "I rarely take a taxi.",
+        "fr": "Je prends rarement le taxi.",
+        "ru": "Я редко езжу на такси.",
+        "tr": "Nadiren taksiye biniyorum."
+      },
+      "family": "frequency",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": true,
+      "acceptedPinyin": [
+        "Wǒ hěn shǎo dǎ dī.",
+        "Wǒ hěn shǎo dǎ dí."
+      ]
+    },
+    {
+      "id": "c11-s044",
+      "hanzi": "我从不骑马来学校。",
+      "pinyin": "Wǒ cóng bù qí mǎ lái xuéxiào.",
+      "meaning": {
+        "en": "I never ride a horse to school.",
+        "fr": "Je ne viens jamais à l’école à cheval.",
+        "ru": "Я никогда не приезжаю в школу верхом на лошади.",
+        "tr": "Okula asla atla gelmiyorum."
+      },
+      "family": "frequency",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s045",
+      "hanzi": "我一直在等你。",
+      "pinyin": "Wǒ yìzhí zài děng nǐ.",
+      "meaning": {
+        "en": "I have been waiting for you all along.",
+        "fr": "Je t’attends depuis le début, sans interruption.",
+        "ru": "Я всё это время жду тебя.",
+        "tr": "Başından beri seni bekliyorum."
+      },
+      "family": "frequency",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s046",
+      "hanzi": "我什么时候可以来？",
+      "pinyin": "Wǒ shénme shíhou kěyǐ lái?",
+      "meaning": {
+        "en": "When can I come?",
+        "fr": "Quand puis-je venir ?",
+        "ru": "Когда я могу прийти?",
+        "tr": "Ne zaman gelebilirim?"
+      },
+      "family": "frequency",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s047",
+      "hanzi": "你任何时候都可以来。",
+      "pinyin": "Nǐ rènhé shíhou dōu kěyǐ lái.",
+      "meaning": {
+        "en": "You can come any time.",
+        "fr": "Tu peux venir à n’importe quel moment.",
+        "ru": "Ты можешь прийти в любое время.",
+        "tr": "İstediğin zaman gelebilirsin."
+      },
+      "family": "frequency",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s048",
+      "hanzi": "吃苹果对身体好。",
+      "pinyin": "Chī píngguǒ duì shēntǐ hǎo.",
+      "meaning": {
+        "en": "Eating apples is good for health, in this language example.",
+        "fr": "Manger des pommes est bon pour la santé, dans cet exemple linguistique.",
+        "ru": "Есть яблоки полезно для здоровья — пример языковой конструкции.",
+        "tr": "Bu dil örneğinde elma yemek sağlık için iyidir."
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s049",
+      "hanzi": "不吃早饭对身体不好。",
+      "pinyin": "Bù chī zǎofàn duì shēntǐ bù hǎo.",
+      "meaning": {
+        "en": "Not eating breakfast is not good for health, in this language example.",
+        "fr": "Ne pas prendre de petit-déjeuner n’est pas bon pour la santé, dans cet exemple linguistique.",
+        "ru": "Не завтракать неполезно для здоровья — пример языковой конструкции.",
+        "tr": "Bu dil örneğinde kahvaltı etmemek sağlık için iyi değildir."
+      },
+      "family": "everyday",
+      "origin": "source",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s050",
+      "hanzi": "三十加二十等于五十。",
+      "pinyin": "Sānshí jiā èrshí děngyú wǔshí.",
+      "meaning": {
+        "en": "Thirty plus twenty equals fifty.",
+        "fr": "Trente plus vingt font cinquante.",
+        "ru": "Тридцать плюс двадцать равно пятидесяти.",
+        "tr": "Otuz artı yirmi elli eder."
+      },
+      "family": "everyday",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s051",
+      "hanzi": "一共七十二元。",
+      "pinyin": "Yígòng qīshí'èr yuán.",
+      "meaning": {
+        "en": "Seventy-two yuan in total, in the added receipt example.",
+        "fr": "Soixante-douze yuans au total, dans le ticket ajouté.",
+        "ru": "Всего семьдесят два юаня в дополнительном примере чека.",
+        "tr": "Ek fiş örneğinde toplam yetmiş iki yuan."
+      },
+      "family": "everyday",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s052",
+      "hanzi": "他们是收银员。",
+      "pinyin": "Tāmen shì shōuyínyuán.",
+      "meaning": {
+        "en": "They are cashiers.",
+        "fr": "Ce sont des caissiers.",
+        "ru": "Они кассиры.",
+        "tr": "Onlar kasiyer."
+      },
+      "family": "everyday",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": true
+    },
+    {
+      "id": "c11-s053",
+      "hanzi": "我们今天上课。",
+      "pinyin": "Wǒmen jīntiān shàngkè.",
+      "meaning": {
+        "en": "We have class today.",
+        "fr": "Nous avons cours aujourd’hui.",
+        "ru": "У нас сегодня занятие.",
+        "tr": "Bugün dersimiz var."
+      },
+      "family": "everyday",
+      "origin": "practice",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ],
+      "phrase": true
+    }
+  ],
+  "topics": [
+    {
+      "id": "calendar",
+      "title": {
+        "en": "Days, dates & order",
+        "fr": "Jours, dates et ordre",
+        "ru": "Дни, даты и порядок",
+        "tr": "Günler, tarihler ve sıra"
+      },
+      "note": {
+        "en": "Locate yesterday and tomorrow around a labelled example date. 第 introduces an order; 弟弟 is a different word. A normal year has 365 days; a leap year has 366.",
+        "fr": "Situez hier et demain autour d’une date d’exemple indiquée. 第 marque un rang ; 弟弟 est un autre mot. Une année ordinaire compte 365 jours, une année bissextile 366.",
+        "ru": "Расположите вчера и завтра относительно указанной учебной даты. 第 обозначает порядок, а 弟弟 — другое слово. В обычном году 365 дней, в високосном — 366.",
+        "tr": "Dünü ve yarını belirtilen örnek tarihe göre yerleştir. 第 sıra bildirir; 弟弟 farklı bir sözcüktür. Normal yıl 365, artık yıl 366 gündür."
+      },
+      "target": "c11-s001",
+      "sourceIds": [
+        "photo-0415",
+        "photo-0416"
+      ]
+    },
+    {
+      "id": "seasons",
+      "title": {
+        "en": "Seasons & sensations",
+        "fr": "Saisons et sensations",
+        "ru": "Времена года и ощущения",
+        "tr": "Mevsimler ve hisler"
+      },
+      "note": {
+        "en": "Spring/warm, summer/hot, autumn/cool and winter/cold are classroom associations. They do not describe the weather everywhere. Ask what season it is, then describe the feeling.",
+        "fr": "Printemps/doux, été/chaud, automne/frais et hiver/froid sont des associations de classe, pas une description du climat partout. Demandez la saison, puis décrivez la sensation.",
+        "ru": "Весна/тепло, лето/жарко, осень/прохладно и зима/холодно — учебные ассоциации, а не погода во всех странах. Спросите о времени года и опишите ощущение.",
+        "tr": "İlkbahar/ılık, yaz/sıcak, sonbahar/serin ve kış/soğuk sınıf çağrışımlarıdır; her yerdeki havayı anlatmaz. Mevsimi sor, sonra hissi anlat."
+      },
+      "target": "c11-s009",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418",
+        "photo-0420"
+      ]
+    },
+    {
+      "id": "degree",
+      "title": {
+        "en": "A little feeling, a little difference",
+        "fr": "Un peu : sensation et différence",
+        "ru": "Немного: ощущение и разница",
+        "tr": "Biraz his, biraz fark"
+      },
+      "note": {
+        "en": "有点儿 comes before the adjective: 有点儿冷. A small comparative difference comes after it: 比昨天冷一点儿. Keep the chunks in their correct positions.",
+        "fr": "有点儿 se place avant l’adjectif : 有点儿冷. Une petite différence comparative se place après : 比昨天冷一点儿. Gardez chaque bloc à sa place.",
+        "ru": "有点儿 стоит перед прилагательным: 有点儿冷. Небольшая разница в сравнении — после него: 比昨天冷一点儿. Сохраняйте порядок блоков.",
+        "tr": "有点儿 sıfattan önce gelir: 有点儿冷. Küçük bir karşılaştırma farkı ise sonra gelir: 比昨天冷一点儿. Parçaların yerini koru."
+      },
+      "target": "c11-s015",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0418"
+      ]
+    },
+    {
+      "id": "transport",
+      "title": {
+        "en": "Passenger, rider, driver or walker?",
+        "fr": "Passager, cycliste, conducteur ou piéton ?",
+        "ru": "Пассажир, велосипедист, водитель или пешеход?",
+        "tr": "Yolcu, bisikletli, sürücü veya yaya?"
+      },
+      "note": {
+        "en": "坐 marks taking a vehicle as a passenger; 骑 is used with a bike or horse; 开车 means drive. The speaker is at school in these 来 examples. 电动车 in the riding group is an electric bike.",
+        "fr": "坐 indique le passager ; 骑 s’emploie avec un vélo ou un cheval ; 开车 signifie conduire. Dans ces exemples avec 来, la personne qui parle est à l’école. Ici, 电动车 désigne un deux-roues électrique.",
+        "ru": "坐 — ехать пассажиром; 骑 — ехать верхом или на велосипеде; 开车 — вести машину. В примерах с 来 говорящий находится в школе. Здесь 电动车 — электрический двухколёсный транспорт.",
+        "tr": "坐 araçta yolcu olmayı, 骑 bisiklet veya ata binmeyi, 开车 araç sürmeyi anlatır. 来 örneklerinde konuşan kişi okuldadır. Buradaki 电动车 elektrikli bisiklettir."
+      },
+      "target": "c11-s019",
+      "sourceIds": [
+        "photo-0416",
+        "photo-0417",
+        "photo-0418",
+        "photo-0420"
+      ]
+    },
+    {
+      "id": "routine",
+      "title": {
+        "en": "What time? When?",
+        "fr": "À quelle heure ? Quand ?",
+        "ru": "Во сколько? Когда?",
+        "tr": "Saat kaçta? Ne zaman?"
+      },
+      "note": {
+        "en": "几点 asks for a clock time. 什么时候 allows a broader answer, such as after breakfast. Getting up at six is this board’s example; it does not change the earlier My Day stories.",
+        "fr": "几点 demande une heure précise. 什么时候 permet une réponse plus large, comme après le petit-déjeuner. Le réveil à six heures est l’exemple du tableau ; il ne remplace pas les récits My Day précédents.",
+        "ru": "几点 спрашивает время на часах. На 什么时候 можно ответить шире, например «после завтрака». Подъём в шесть — пример с этой доски; прежние истории My Day сохраняются.",
+        "tr": "几点 saat sorar. 什么时候 daha geniş bir yanıtı, örneğin kahvaltıdan sonrayı kabul eder. Altıda kalkmak bu tahtanın örneğidir; önceki My Day öykülerini değiştirmez."
+      },
+      "target": "c11-s028",
+      "sourceIds": [
+        "photo-0419",
+        "photo-0420"
+      ]
+    },
+    {
+      "id": "objects",
+      "title": {
+        "en": "One 张, five familiar objects",
+        "fr": "Un 张, cinq objets familiers",
+        "ru": "Один 张 и пять знакомых предметов",
+        "tr": "Bir 张, beş tanıdık nesne"
+      },
+      "note": {
+        "en": "Practise 一张 with a bed, sheet of paper, map, table and menu. Learn these complete combinations; 张 is not a measure word for every object. Compare 开 in opening a door, switching on a light and driving.",
+        "fr": "Pratiquez 一张 avec un lit, une feuille, une carte, une table et un menu. Apprenez ces associations : 张 ne sert pas pour tous les objets. Comparez 开 dans ouvrir, allumer et conduire.",
+        "ru": "Тренируйте 一张 с кроватью, листом, картой, столом и меню. Учите сочетания целиком: 张 подходит не ко всем предметам. Сравните 开 в «открыть», «включить» и «вести машину».",
+        "tr": "一张 ile yatak, kâğıt, harita, masa ve menüyü çalış. Bu birleşimleri bütün öğren; 张 her nesneyle kullanılmaz. 开 sözcüğünü kapı açma, ışık açma ve araç sürmede karşılaştır."
+      },
+      "target": "c11-s032",
+      "sourceIds": [
+        "photo-0418",
+        "photo-0419",
+        "photo-0422"
+      ]
+    },
+    {
+      "id": "frequency",
+      "title": {
+        "en": "Often is not the same as continuously",
+        "fr": "Souvent ne veut pas dire sans interruption",
+        "ru": "Часто — не то же самое, что непрерывно",
+        "tr": "Sık sık, sürekli demek değildir"
+      },
+      "note": {
+        "en": "常常, 有时候, 很少 and 从不 describe repeated occasions. 一直 highlights continuity or an unchanged situation. The example week is illustrative, not an exact percentage rule. 任何时候…都… means any time, within the stated context.",
+        "fr": "常常, 有时候, 很少 et 从不 décrivent la répétition. 一直 souligne la continuité ou une situation inchangée. La semaine illustrée ne fixe pas de pourcentages. 任何时候…都… signifie à n’importe quel moment dans le contexte donné.",
+        "ru": "常常, 有时候, 很少 и 从不 описывают повторяющиеся случаи. 一直 подчёркивает непрерывность или неизменность. Учебная неделя не задаёт точных процентов. 任何时候…都… — «в любое время» в заданном контексте.",
+        "tr": "常常, 有时候, 很少 ve 从不 yinelenen olayları anlatır. 一直 sürekliliği veya değişmeyen durumu vurgular. Örnek hafta kesin yüzde kuralı değildir. 任何时候…都… belirtilen bağlamda herhangi bir zaman demektir."
+      },
+      "target": "c11-s041",
+      "sourceIds": [
+        "photo-0421",
+        "photo-0422"
+      ]
+    },
+    {
+      "id": "everyday",
+      "title": {
+        "en": "For someone; numbers and a total",
+        "fr": "Pour quelqu’un ; nombres et total",
+        "ru": "Для кого-то; числа и итог",
+        "tr": "Birine etkisi; sayılar ve toplam"
+      },
+      "note": {
+        "en": "Build action + 对 + affected person/body + 好/不好. Then read the board’s numbers and a receipt total with 一共. 百=100, 千=1,000 and 万=10,000. Pronoun 们 is not a general plural ending for arbitrary objects.",
+        "fr": "Construisez action + 对 + personne/corps + 好/不好. Lisez ensuite les nombres et le total avec 一共. 百=100, 千=1 000, 万=10 000. 们 n’est pas une terminaison plurielle pour tous les noms.",
+        "ru": "Соберите действие + 对 + человек/организм + 好/不好. Затем прочитайте числа и итог с 一共. 百=100, 千=1 000, 万=10 000. 们 не является общим окончанием множественного числа для любых предметов.",
+        "tr": "Eylem + 对 + etkilenen kişi/beden + 好/不好 yapısını kur. Ardından sayıları ve 一共 ile toplamı oku. 百=100, 千=1.000, 万=10.000. 们 her nesneye eklenen genel bir çoğul eki değildir."
+      },
+      "target": "c11-s048",
+      "sourceIds": [
+        "photo-0413",
+        "photo-0420"
+      ]
+    }
+  ],
+  "source": {
+    "kind": "classroom-photos",
+    "photos": [
+      "photo-0413",
+      "photo-0415",
+      "photo-0416",
+      "photo-0417",
+      "photo-0418",
+      "photo-0419",
+      "photo-0420",
+      "photo-0421",
+      "photo-0422"
+    ],
+    "textbookReference": "L8 / 第8课",
+    "appLessonNumber": 11
+  },
+  "corrections": [
+    {
+      "id": "ordinary-year",
+      "photos": [
+        "photo-0415"
+      ],
+      "decision": "Board365days contextualized to2026; leap-year366 stated in topic note."
+    },
+    {
+      "id": "continuity",
+      "photos": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "decision": "一直 separated from frequency percentages."
+    },
+    {
+      "id": "permission-context",
+      "photos": [
+        "photo-0421",
+        "photo-0422"
+      ],
+      "decision": "Age/alcohol aside is not taught as a universal rule; same任何时候都 grammar uses a labelled neutral authored example. Source喝酒 vocabulary retained."
+    },
+    {
+      "id": "uncertain-glyph",
+      "photos": [
+        "photo-0413"
+      ],
+      "decision": "Isolated red glyph and erased lower-board residue excluded rather than guessed."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
+const row=readFileSync('app/atlas-part-explorer.tsx','utf8'),cloud=readFileSync('app/atlas-cloud.tsx','utf8'),css=readFileSync('app/atlas-cloud-context.css','utf8');
+test('Atlas has explicit component lookup targets instead of relying on SVG strokes',()=>{assert.match(row,/lookup\.open\(part\.glyph,e\.currentTarget\)/);assert.match(row,/lookup\.open\(hanzi,e\.currentTarget\)/);assert.match(row,/else onFamily\(id\)/);assert.match(row,/e\.stopPropagation\(\)/);assert.match(css,/min-height:44px/)});
+test('Family context and cloud focus both expose part explorer outside collapsed details',()=>{assert.match(cloud,/\{characterActions\}\{partExplorer\}<details/);assert.match(cloud,/route\.kind==='character'&&partExplorer/)});

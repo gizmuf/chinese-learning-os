@@ -1,0 +1,32 @@
+.recall-card.panel{min-height:0;padding:clamp(14px,2vw,24px)}
+.topbar-language-stack{display:flex;flex-direction:column;align-items:flex-end;gap:4px;min-width:0}
+.review-all-note{display:block;margin-top:8px;font-size:12px;line-height:1.5;color:#687961}
+.study-studio.is-reviewing .ss-heading{margin:10px 0}
+.study-studio.is-reviewing .ss-heading h1{font-size:22px;margin:5px 0;line-height:1.25}
+.study-studio.is-reviewing .ss-heading p{margin:3px 0;font-size:12px;line-height:1.4}
+.study-studio.is-reviewing .ss-personal-lesson{padding:8px 12px;margin:6px 0;min-height:44px;font-size:13px}
+.study-studio.is-reviewing .ss-tabs{margin:8px 0}
+.study-studio.is-reviewing button.recall-reveal{min-height:180px}
+.recall-card .recognition-navigation{margin-bottom:10px;gap:8px}
+.recall-card>p{font-size:12px;line-height:1.4;margin:5px 0}
+.recognition-tools{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:8px 0}
+.recognition-lookup{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#60735f;min-height:44px}
+.recall-card button.recall-reveal{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:100%;min-height:220px;padding:20px;border:1px solid #d8e2d1;border-radius:16px;background:#f5f7ef;color:#2e4d3e;touch-action:pan-y}
+.recall-reveal:focus-visible{outline:3px solid #a98753;outline-offset:3px}
+.recall-card .recall-hanzi{font-size:clamp(45px,6vw,72px);line-height:1.25;margin:8px 0;text-align:center}
+.recall-card .recall-face .pinyin,.recall-card .recall-reveal .pinyin{font-size:21px;line-height:1.45;margin:0;color:#98783e;text-align:center}
+.recall-action-label{display:inline-flex;align-items:center;gap:8px;font-size:15px}
+.recall-reveal>small{font-size:12px;line-height:1.4;color:#6e7c69}
+.recall-card .recall-face{padding:8px}
+.recall-card .revealed-answer{margin:8px 0 12px;padding:12px 0}
+.recall-card .recognition-meaning{font-size:16px;font-weight:400;line-height:1.45;margin:5px 0 0;text-align:center;color:#52695c}
+.recall-card .recognition-example p{font-size:15px;line-height:1.55;margin:5px 0}
+.recall-card .recognition-example p[lang="zh-Hans"]{font-size:23px;line-height:1.5}
+.recall-card .recognition-example .pinyin{font-size:15px}
+.recall-card .recognition-rating-zone{position:sticky;bottom:8px;z-index:3;padding:10px 0 2px;background:#fff;border-top:1px solid #dce4d4}
+.recall-card .recognition-rating-zone .rating-instruction{font-size:13px;margin:0 0 8px;line-height:1.4}
+.recall-card .ratings{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.recall-card .ratings button{min-height:54px;padding:8px 6px}
+.recall-card .ratings small{font-size:11px;line-height:1.3}
+@media(max-width:650px){.recall-card .recognition-rating-zone{bottom:calc(76px + env(safe-area-inset-bottom,0px))}}
+@media(max-width:600px){.recall-card button.recall-reveal{min-height:190px;padding:16px}.recall-card .ratings{grid-template-columns:repeat(4,minmax(0,1fr))}.recall-card .ratings button{min-height:48px;padding:8px 3px;font-size:12px}.recall-card .ratings strong{font-size:12px}.recall-card .ratings small{display:none}.recognition-tools .pill{font-size:11px}}

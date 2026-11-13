@@ -1,0 +1,9 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';
+const root='public/audio-comparison/my-day-first10/',manifest=JSON.parse(fs.readFileSync(root+'manifest.json')),canonical=JSON.parse(fs.readFileSync('data/my-day-01-v2.json')).sections.flatMap(s=>s.rows).slice(0,10),original=JSON.parse(fs.readFileSync('data/qwen-curriculum-audio.json'));
+test('A/B has exactly the first ten canonical sentences, twenty real assets, and untouched original A clips',()=>{
+ assert.equal(manifest.rows.length,10);assert.equal(manifest.currentLessonUnchanged,true);assert.equal(manifest.model,'qwen-audio-3.1-tts-plus');assert.equal(manifest.voice,'longanhuan_v3.1');
+ for(let i=0;i<10;i++){const row=manifest.rows[i],source=canonical[i];assert.equal(row.id,i+1);assert.equal(row.text,source.hanzi);assert.equal(row.pinyin,source.pinyin);assert.equal(row.english,source.english);const old=original.recordings.find(c=>c.material==='my-day-01-v2'&&c.text===row.text);assert.equal(row.A.source,old.source);assert.equal(row.A.sha256,old.sha256);for(const clip of [row.A,row.B])assert.equal(createHash('sha256').update(fs.readFileSync('public'+clip.source)).digest('hex'),clip.sha256);assert.ok(row.B.durationSeconds>.2);}
+});
+test('comparison is English, has paired listening links, and never presents B as a selected replacement',()=>{
+ const html=fs.readFileSync(root+'index.html','utf8');assert.ok(html.includes('lang="en"'));assert.equal((html.match(/<audio /g)??[]).length,20);assert.equal((html.match(/>Open A<\/a>/g)??[]).length,10);assert.equal((html.match(/>Open B<\/a>/g)??[]).length,10);assert.ok(html.includes('Reference sentence'));assert.ok(html.includes('have not been replaced'));assert.ok(!/[ąćęłńśźż]/iu.test(html));assert.ok(!html.includes('Bearer '));assert.ok(!html.includes('DASHSCOPE'));
+});

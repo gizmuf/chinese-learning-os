@@ -1,0 +1,1438 @@
+{
+  "units": [
+    {
+      "id": "request",
+      "title": {
+        "en": "A small request",
+        "fr": "Une petite demande",
+        "ru": "Небольшая просьба",
+        "tr": "Küçük bir rica"
+      },
+      "lesson": 6,
+      "note": {
+        "en": "Keep 你能给我…吗 as one request frame. Swap the thing you need; 吗 stays at the end.",
+        "fr": "Gardez la structure 你能给我…吗. Changez ce que vous demandez ; 吗 reste à la fin.",
+        "ru": "Сохраняйте рамку просьбы 你能给我…吗. Меняйте нужный предмет; 吗 остаётся в конце.",
+        "tr": "你能给我…吗 rica kalıbını koru. İstediğin şeyi değiştir; 吗 sonda kalır."
+      },
+      "variants": [
+        {
+          "id": "request-1",
+          "chunks": [
+            {
+              "text": "你能给我",
+              "pinyin": "nǐ néng gěi wǒ",
+              "role": "action",
+              "meaning": {
+                "en": "can you give me",
+                "fr": "peux-tu me donner",
+                "ru": "можешь дать мне",
+                "tr": "bana verebilir misin"
+              },
+              "audioId": "chunk-4ffd58f97dcf"
+            },
+            {
+              "text": "一点儿水",
+              "pinyin": "yìdiǎnr shuǐ",
+              "role": "topic",
+              "meaning": {
+                "en": "a little water",
+                "fr": "un peu d’eau",
+                "ru": "немного воды",
+                "tr": "biraz su"
+              },
+              "audioId": "chunk-517da41a56bc"
+            },
+            {
+              "text": "吗",
+              "pinyin": "ma",
+              "role": "question",
+              "meaning": {
+                "en": "yes/no question",
+                "fr": "question oui/non",
+                "ru": "вопрос да/нет",
+                "tr": "evet/hayır sorusu"
+              },
+              "audioId": "chunk-5ac1612110de"
+            }
+          ],
+          "hanzi": "你能给我一点儿水吗？",
+          "pinyin": "nǐ néng gěi wǒ yìdiǎnr shuǐ ma?",
+          "meaning": {
+            "en": "Can you give me a little water?",
+            "fr": "Peux-tu me donner un peu d’eau ?",
+            "ru": "Можешь дать мне немного воды?",
+            "tr": "Bana biraz su verebilir misin?"
+          }
+        },
+        {
+          "id": "request-2",
+          "chunks": [
+            {
+              "text": "你能给我",
+              "pinyin": "nǐ néng gěi wǒ",
+              "role": "action",
+              "meaning": {
+                "en": "can you give me",
+                "fr": "peux-tu me donner",
+                "ru": "можешь дать мне",
+                "tr": "bana verebilir misin"
+              },
+              "audioId": "chunk-4ffd58f97dcf"
+            },
+            {
+              "text": "一本书",
+              "pinyin": "yì běn shū",
+              "role": "topic",
+              "meaning": {
+                "en": "a book",
+                "fr": "un livre",
+                "ru": "книгу",
+                "tr": "bir kitap"
+              },
+              "audioId": "chunk-ddb133631c60"
+            },
+            {
+              "text": "吗",
+              "pinyin": "ma",
+              "role": "question",
+              "meaning": {
+                "en": "yes/no question",
+                "fr": "question oui/non",
+                "ru": "вопрос да/нет",
+                "tr": "evet/hayır sorusu"
+              },
+              "audioId": "chunk-5ac1612110de"
+            }
+          ],
+          "hanzi": "你能给我一本书吗？",
+          "pinyin": "nǐ néng gěi wǒ yì běn shū ma?",
+          "meaning": {
+            "en": "Can you give me a book?",
+            "fr": "Peux-tu me donner un livre ?",
+            "ru": "Можешь дать мне книгу?",
+            "tr": "Bana bir kitap verebilir misin?"
+          }
+        },
+        {
+          "id": "request-3",
+          "chunks": [
+            {
+              "text": "你能给我",
+              "pinyin": "nǐ néng gěi wǒ",
+              "role": "action",
+              "meaning": {
+                "en": "can you give me",
+                "fr": "peux-tu me donner",
+                "ru": "можешь дать мне",
+                "tr": "bana verebilir misin"
+              },
+              "audioId": "chunk-4ffd58f97dcf"
+            },
+            {
+              "text": "一把钥匙",
+              "pinyin": "yì bǎ yàoshi",
+              "role": "topic",
+              "meaning": {
+                "en": "a key",
+                "fr": "une clé",
+                "ru": "ключ",
+                "tr": "bir anahtar"
+              },
+              "audioId": "chunk-bc711c746d30"
+            },
+            {
+              "text": "吗",
+              "pinyin": "ma",
+              "role": "question",
+              "meaning": {
+                "en": "yes/no question",
+                "fr": "question oui/non",
+                "ru": "вопрос да/нет",
+                "tr": "evet/hayır sorusu"
+              },
+              "audioId": "chunk-5ac1612110de"
+            }
+          ],
+          "hanzi": "你能给我一把钥匙吗？",
+          "pinyin": "nǐ néng gěi wǒ yì bǎ yàoshi ma?",
+          "meaning": {
+            "en": "Can you give me a key?",
+            "fr": "Peux-tu me donner une clé ?",
+            "ru": "Можешь дать мне ключ?",
+            "tr": "Bana bir anahtar verebilir misin?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "choice",
+      "title": {
+        "en": "Offer a choice",
+        "fr": "Proposer un choix",
+        "ru": "Предложить выбор",
+        "tr": "Seçenek sun"
+      },
+      "lesson": 6,
+      "note": {
+        "en": "还是 joins alternatives inside a question. Do not add 吗 to this choice question.",
+        "fr": "还是 relie les choix dans une question. N’ajoutez pas 吗 à cette question alternative.",
+        "ru": "还是 соединяет варианты в вопросе. В таком вопросе 吗 не добавляется.",
+        "tr": "还是 soru içindeki seçenekleri bağlar. Bu seçim sorusuna 吗 ekleme."
+      },
+      "variants": [
+        {
+          "id": "choice-1",
+          "chunks": [
+            {
+              "text": "你想喝",
+              "pinyin": "nǐ xiǎng hē",
+              "role": "action",
+              "meaning": {
+                "en": "would you like to drink",
+                "fr": "voudrais-tu boire",
+                "ru": "что хочешь выпить",
+                "tr": "içmek ister misin"
+              },
+              "audioId": "chunk-d345fb0fca5d"
+            },
+            {
+              "text": "咖啡还是茶",
+              "pinyin": "kāfēi háishi chá",
+              "role": "question",
+              "meaning": {
+                "en": "coffee or tea",
+                "fr": "du café ou du thé",
+                "ru": "кофе или чай",
+                "tr": "kahve mi çay mı"
+              },
+              "audioId": "chunk-e396c9f059af"
+            }
+          ],
+          "hanzi": "你想喝咖啡还是茶？",
+          "pinyin": "nǐ xiǎng hē kāfēi háishi chá?",
+          "meaning": {
+            "en": "Would you like coffee or tea?",
+            "fr": "Voudrais-tu du café ou du thé ?",
+            "ru": "Хочешь кофе или чай?",
+            "tr": "Kahve mi çay mı içmek istersin?"
+          }
+        },
+        {
+          "id": "choice-2",
+          "chunks": [
+            {
+              "text": "你想喝",
+              "pinyin": "nǐ xiǎng hē",
+              "role": "action",
+              "meaning": {
+                "en": "would you like to drink",
+                "fr": "voudrais-tu boire",
+                "ru": "что хочешь выпить",
+                "tr": "içmek ister misin"
+              },
+              "audioId": "chunk-d345fb0fca5d"
+            },
+            {
+              "text": "温水还是冰水",
+              "pinyin": "wēnshuǐ háishi bīngshuǐ",
+              "role": "question",
+              "meaning": {
+                "en": "warm water or iced water",
+                "fr": "de l’eau tiède ou glacée",
+                "ru": "тёплую воду или воду со льдом",
+                "tr": "ılık su mu buzlu su mu"
+              },
+              "audioId": "chunk-caa7a1c8a0b5"
+            }
+          ],
+          "hanzi": "你想喝温水还是冰水？",
+          "pinyin": "nǐ xiǎng hē wēnshuǐ háishi bīngshuǐ?",
+          "meaning": {
+            "en": "Would you like warm water or iced water?",
+            "fr": "Voudrais-tu de l’eau tiède ou glacée ?",
+            "ru": "Хочешь тёплую воду или воду со льдом?",
+            "tr": "Ilık su mu buzlu su mu içmek istersin?"
+          }
+        },
+        {
+          "id": "choice-3",
+          "chunks": [
+            {
+              "text": "你想喝",
+              "pinyin": "nǐ xiǎng hē",
+              "role": "action",
+              "meaning": {
+                "en": "would you like to drink",
+                "fr": "voudrais-tu boire",
+                "ru": "что хочешь выпить",
+                "tr": "içmek ister misin"
+              },
+              "audioId": "chunk-d345fb0fca5d"
+            },
+            {
+              "text": "茶还是水",
+              "pinyin": "chá háishi shuǐ",
+              "role": "question",
+              "meaning": {
+                "en": "tea or water",
+                "fr": "du thé ou de l’eau",
+                "ru": "чай или воду",
+                "tr": "çay mı su mu"
+              },
+              "audioId": "chunk-bcf731607bdc"
+            }
+          ],
+          "hanzi": "你想喝茶还是水？",
+          "pinyin": "nǐ xiǎng hē chá háishi shuǐ?",
+          "meaning": {
+            "en": "Would you like tea or water?",
+            "fr": "Voudrais-tu du thé ou de l’eau ?",
+            "ru": "Хочешь чай или воду?",
+            "tr": "Çay mı su mu içmek istersin?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "title": {
+        "en": "Have you got time?",
+        "fr": "As-tu le temps ?",
+        "ru": "Есть время?",
+        "tr": "Vaktin var mı?"
+      },
+      "lesson": 5,
+      "note": {
+        "en": "Put the time before 有时间. Keep 有时间 together: it means having time.",
+        "fr": "Placez le moment avant 有时间. Gardez 有时间 ensemble : avoir le temps.",
+        "ru": "Время ставится перед 有时间. 有时间 — цельное сочетание «иметь время».",
+        "tr": "Zamanı 有时间 önüne koy. 有时间 birlikte “vakti olmak” demektir."
+      },
+      "variants": [
+        {
+          "id": "time-1",
+          "chunks": [
+            {
+              "text": "你",
+              "pinyin": "nǐ",
+              "role": "person",
+              "meaning": {
+                "en": "you",
+                "fr": "tu",
+                "ru": "ты",
+                "tr": "sen"
+              },
+              "audioId": "chunk-a0c7716669b5"
+            },
+            {
+              "text": "今天有时间",
+              "pinyin": "jīntiān yǒu shíjiān",
+              "role": "time",
+              "meaning": {
+                "en": "have time today",
+                "fr": "as le temps aujourd’hui",
+                "ru": "есть время сегодня",
+                "tr": "bugün vaktin var"
+              },
+              "audioId": "chunk-0e8ff5ecf1c9"
+            },
+            {
+              "text": "吗",
+              "pinyin": "ma",
+              "role": "question",
+              "meaning": {
+                "en": "yes/no question",
+                "fr": "question oui/non",
+                "ru": "вопрос да/нет",
+                "tr": "evet/hayır sorusu"
+              },
+              "audioId": "chunk-5ac1612110de"
+            }
+          ],
+          "hanzi": "你今天有时间吗？",
+          "pinyin": "nǐ jīntiān yǒu shíjiān ma?",
+          "meaning": {
+            "en": "Do you have time today?",
+            "fr": "As-tu le temps aujourd’hui ?",
+            "ru": "У тебя есть время сегодня?",
+            "tr": "Bugün vaktin var mı?"
+          }
+        },
+        {
+          "id": "time-2",
+          "chunks": [
+            {
+              "text": "你",
+              "pinyin": "nǐ",
+              "role": "person",
+              "meaning": {
+                "en": "you",
+                "fr": "tu",
+                "ru": "ты",
+                "tr": "sen"
+              },
+              "audioId": "chunk-a0c7716669b5"
+            },
+            {
+              "text": "明天有时间",
+              "pinyin": "míngtiān yǒu shíjiān",
+              "role": "time",
+              "meaning": {
+                "en": "have time tomorrow",
+                "fr": "as le temps demain",
+                "ru": "есть время завтра",
+                "tr": "yarın vaktin var"
+              },
+              "audioId": "chunk-176d0d5cc48e"
+            },
+            {
+              "text": "吗",
+              "pinyin": "ma",
+              "role": "question",
+              "meaning": {
+                "en": "yes/no question",
+                "fr": "question oui/non",
+                "ru": "вопрос да/нет",
+                "tr": "evet/hayır sorusu"
+              },
+              "audioId": "chunk-5ac1612110de"
+            }
+          ],
+          "hanzi": "你明天有时间吗？",
+          "pinyin": "nǐ míngtiān yǒu shíjiān ma?",
+          "meaning": {
+            "en": "Do you have time tomorrow?",
+            "fr": "As-tu le temps demain ?",
+            "ru": "У тебя есть время завтра?",
+            "tr": "Yarın vaktin var mı?"
+          }
+        },
+        {
+          "id": "time-3",
+          "chunks": [
+            {
+              "text": "你",
+              "pinyin": "nǐ",
+              "role": "person",
+              "meaning": {
+                "en": "you",
+                "fr": "tu",
+                "ru": "ты",
+                "tr": "sen"
+              },
+              "audioId": "chunk-a0c7716669b5"
+            },
+            {
+              "text": "下午有时间",
+              "pinyin": "xiàwǔ yǒu shíjiān",
+              "role": "time",
+              "meaning": {
+                "en": "have time in the afternoon",
+                "fr": "as le temps cet après-midi",
+                "ru": "есть время после обеда",
+                "tr": "öğleden sonra vaktin var"
+              },
+              "audioId": "chunk-0a5db27f707d"
+            },
+            {
+              "text": "吗",
+              "pinyin": "ma",
+              "role": "question",
+              "meaning": {
+                "en": "yes/no question",
+                "fr": "question oui/non",
+                "ru": "вопрос да/нет",
+                "tr": "evet/hayır sorusu"
+              },
+              "audioId": "chunk-5ac1612110de"
+            }
+          ],
+          "hanzi": "你下午有时间吗？",
+          "pinyin": "nǐ xiàwǔ yǒu shíjiān ma?",
+          "meaning": {
+            "en": "Do you have time in the afternoon?",
+            "fr": "As-tu le temps cet après-midi ?",
+            "ru": "У тебя есть время после обеда?",
+            "tr": "Öğleden sonra vaktin var mı?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "place",
+      "title": {
+        "en": "Where the action happens",
+        "fr": "Le lieu de l’action",
+        "ru": "Где происходит действие",
+        "tr": "Eylemin yeri"
+      },
+      "lesson": 4,
+      "note": {
+        "en": "在 + place comes before the action 学习中文. Change the location, keep the action.",
+        "fr": "在 + lieu précède l’action 学习中文. Changez le lieu, gardez l’action.",
+        "ru": "在 + место стоит перед действием 学习中文. Меняйте место, сохраняя действие.",
+        "tr": "在 + yer, 学习中文 eyleminden önce gelir. Eylemi koruyup yeri değiştir."
+      },
+      "variants": [
+        {
+          "id": "place-1",
+          "chunks": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "role": "person",
+              "meaning": {
+                "en": "I",
+                "fr": "je",
+                "ru": "я",
+                "tr": "ben"
+              },
+              "audioId": "chunk-b70bb4acc048"
+            },
+            {
+              "text": "在学校",
+              "pinyin": "zài xuéxiào",
+              "role": "place",
+              "meaning": {
+                "en": "at school",
+                "fr": "à l’école",
+                "ru": "в школе",
+                "tr": "okulda"
+              },
+              "audioId": "chunk-ef08cbdc739c"
+            },
+            {
+              "text": "学习中文",
+              "pinyin": "xuéxí Zhōngwén",
+              "role": "action",
+              "meaning": {
+                "en": "study Chinese",
+                "fr": "étudier le chinois",
+                "ru": "изучать китайский",
+                "tr": "Çince öğrenmek"
+              },
+              "audioId": "chunk-bfe07125e7b4"
+            }
+          ],
+          "hanzi": "我在学校学习中文。",
+          "pinyin": "wǒ zài xuéxiào xuéxí Zhōngwén.",
+          "meaning": {
+            "en": "I study Chinese at school.",
+            "fr": "J’étudie le chinois à l’école.",
+            "ru": "Я изучаю китайский в школе.",
+            "tr": "Okulda Çince öğreniyorum."
+          }
+        },
+        {
+          "id": "place-2",
+          "chunks": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "role": "person",
+              "meaning": {
+                "en": "I",
+                "fr": "je",
+                "ru": "я",
+                "tr": "ben"
+              },
+              "audioId": "chunk-b70bb4acc048"
+            },
+            {
+              "text": "在宿舍",
+              "pinyin": "zài sùshè",
+              "role": "place",
+              "meaning": {
+                "en": "in the dormitory",
+                "fr": "au dortoir",
+                "ru": "в общежитии",
+                "tr": "yurtta"
+              },
+              "audioId": "chunk-67e94dcbdc44"
+            },
+            {
+              "text": "学习中文",
+              "pinyin": "xuéxí Zhōngwén",
+              "role": "action",
+              "meaning": {
+                "en": "study Chinese",
+                "fr": "étudier le chinois",
+                "ru": "изучать китайский",
+                "tr": "Çince öğrenmek"
+              },
+              "audioId": "chunk-bfe07125e7b4"
+            }
+          ],
+          "hanzi": "我在宿舍学习中文。",
+          "pinyin": "wǒ zài sùshè xuéxí Zhōngwén.",
+          "meaning": {
+            "en": "I study Chinese in the dormitory.",
+            "fr": "J’étudie le chinois au dortoir.",
+            "ru": "Я изучаю китайский в общежитии.",
+            "tr": "Yurtta Çince öğreniyorum."
+          }
+        },
+        {
+          "id": "place-3",
+          "chunks": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "role": "person",
+              "meaning": {
+                "en": "I",
+                "fr": "je",
+                "ru": "я",
+                "tr": "ben"
+              },
+              "audioId": "chunk-b70bb4acc048"
+            },
+            {
+              "text": "在家",
+              "pinyin": "zài jiā",
+              "role": "place",
+              "meaning": {
+                "en": "at home",
+                "fr": "à la maison",
+                "ru": "дома",
+                "tr": "evde"
+              },
+              "audioId": "chunk-5879c0bf32bb"
+            },
+            {
+              "text": "学习中文",
+              "pinyin": "xuéxí Zhōngwén",
+              "role": "action",
+              "meaning": {
+                "en": "study Chinese",
+                "fr": "étudier le chinois",
+                "ru": "изучать китайский",
+                "tr": "Çince öğrenmek"
+              },
+              "audioId": "chunk-bfe07125e7b4"
+            }
+          ],
+          "hanzi": "我在家学习中文。",
+          "pinyin": "wǒ zài jiā xuéxí Zhōngwén.",
+          "meaning": {
+            "en": "I study Chinese at home.",
+            "fr": "J’étudie le chinois à la maison.",
+            "ru": "Я изучаю китайский дома.",
+            "tr": "Evde Çince öğreniyorum."
+          }
+        }
+      ]
+    },
+    {
+      "id": "plan",
+      "title": {
+        "en": "Talk about a plan",
+        "fr": "Parler d’un projet",
+        "ru": "Рассказать о плане",
+        "tr": "Plan anlat"
+      },
+      "lesson": 3,
+      "note": {
+        "en": "我明天想去… is a reusable intention frame. 想 expresses wanting or intending, not a tense ending.",
+        "fr": "我明天想去… exprime un projet. 想 marque une envie ou une intention, pas un temps verbal.",
+        "ru": "我明天想去… — рамка намерения. 想 выражает желание, а не грамматическое время.",
+        "tr": "我明天想去… bir niyet kalıbıdır. 想 istek veya niyet bildirir; zaman eki değildir."
+      },
+      "variants": [
+        {
+          "id": "plan-1",
+          "chunks": [
+            {
+              "text": "我明天想去",
+              "pinyin": "wǒ míngtiān xiǎng qù",
+              "role": "action",
+              "meaning": {
+                "en": "tomorrow I would like to go to",
+                "fr": "demain je voudrais aller à",
+                "ru": "завтра я хочу пойти в",
+                "tr": "yarın gitmek istiyorum"
+              },
+              "audioId": "chunk-4d3a8efb294f"
+            },
+            {
+              "text": "上海",
+              "pinyin": "Shànghǎi",
+              "role": "place",
+              "meaning": {
+                "en": "Shanghai",
+                "fr": "Shanghai",
+                "ru": "Шанхай",
+                "tr": "Şanghay"
+              },
+              "audioId": "chunk-4906a49adc5c"
+            }
+          ],
+          "hanzi": "我明天想去上海。",
+          "pinyin": "wǒ míngtiān xiǎng qù Shànghǎi.",
+          "meaning": {
+            "en": "I would like to go to Shanghai tomorrow.",
+            "fr": "Je voudrais aller à Shanghai demain.",
+            "ru": "Завтра я хочу поехать в Шанхай.",
+            "tr": "Yarın Şanghay’a gitmek istiyorum."
+          }
+        },
+        {
+          "id": "plan-2",
+          "chunks": [
+            {
+              "text": "我明天想去",
+              "pinyin": "wǒ míngtiān xiǎng qù",
+              "role": "action",
+              "meaning": {
+                "en": "tomorrow I would like to go to",
+                "fr": "demain je voudrais aller à",
+                "ru": "завтра я хочу пойти в",
+                "tr": "yarın gitmek istiyorum"
+              },
+              "audioId": "chunk-4d3a8efb294f"
+            },
+            {
+              "text": "学校",
+              "pinyin": "xuéxiào",
+              "role": "place",
+              "meaning": {
+                "en": "school",
+                "fr": "l’école",
+                "ru": "школу",
+                "tr": "okul"
+              },
+              "audioId": "chunk-dc6e2aafeb9e"
+            }
+          ],
+          "hanzi": "我明天想去学校。",
+          "pinyin": "wǒ míngtiān xiǎng qù xuéxiào.",
+          "meaning": {
+            "en": "I would like to go to school tomorrow.",
+            "fr": "Je voudrais aller à l’école demain.",
+            "ru": "Завтра я хочу пойти в школу.",
+            "tr": "Yarın okula gitmek istiyorum."
+          }
+        },
+        {
+          "id": "plan-3",
+          "chunks": [
+            {
+              "text": "我明天想去",
+              "pinyin": "wǒ míngtiān xiǎng qù",
+              "role": "action",
+              "meaning": {
+                "en": "tomorrow I would like to go to",
+                "fr": "demain je voudrais aller à",
+                "ru": "завтра я хочу пойти в",
+                "tr": "yarın gitmek istiyorum"
+              },
+              "audioId": "chunk-4d3a8efb294f"
+            },
+            {
+              "text": "超市",
+              "pinyin": "chāoshì",
+              "role": "place",
+              "meaning": {
+                "en": "the supermarket",
+                "fr": "le supermarché",
+                "ru": "супермаркет",
+                "tr": "süpermarket"
+              },
+              "audioId": "chunk-fc63db3dd422"
+            }
+          ],
+          "hanzi": "我明天想去超市。",
+          "pinyin": "wǒ míngtiān xiǎng qù chāoshì.",
+          "meaning": {
+            "en": "I would like to go to the supermarket tomorrow.",
+            "fr": "Je voudrais aller au supermarché demain.",
+            "ru": "Завтра я хочу пойти в супермаркет.",
+            "tr": "Yarın süpermarkete gitmek istiyorum."
+          }
+        }
+      ]
+    },
+    {
+      "id": "past",
+      "title": {
+        "en": "What did not happen",
+        "fr": "Ce qui ne s’est pas passé",
+        "ru": "Чего не произошло",
+        "tr": "Gerçekleşmeyen eylem"
+      },
+      "lesson": 3,
+      "note": {
+        "en": "昨天 + 没 describes a past action that did not happen. Do not add completed-action 了 after the verb here.",
+        "fr": "昨天 + 没 décrit une action passée non réalisée. Ici, n’ajoutez pas le 了 d’action accomplie après le verbe.",
+        "ru": "昨天 + 没 обозначает несостоявшееся действие в прошлом. Здесь после глагола не ставится 了 завершения.",
+        "tr": "昨天 + 没 geçmişte gerçekleşmeyen eylemi anlatır. Burada fiilden sonra tamamlanma 了 ekleme."
+      },
+      "variants": [
+        {
+          "id": "past-1",
+          "chunks": [
+            {
+              "text": "我昨天没",
+              "pinyin": "wǒ zuótiān méi",
+              "role": "time",
+              "meaning": {
+                "en": "yesterday I did not",
+                "fr": "hier je n’ai pas",
+                "ru": "вчера я не",
+                "tr": "dün yapmadım"
+              },
+              "audioId": "chunk-3bec204bbf54"
+            },
+            {
+              "text": "吃早饭",
+              "pinyin": "chī zǎofàn",
+              "role": "action",
+              "meaning": {
+                "en": "eat breakfast",
+                "fr": "prendre le petit-déjeuner",
+                "ru": "завтракать",
+                "tr": "kahvaltı yapmak"
+              },
+              "audioId": "chunk-9a0f8d2ad3e6"
+            }
+          ],
+          "hanzi": "我昨天没吃早饭。",
+          "pinyin": "wǒ zuótiān méi chī zǎofàn.",
+          "meaning": {
+            "en": "I did not eat breakfast yesterday.",
+            "fr": "Je n’ai pas pris de petit-déjeuner hier.",
+            "ru": "Вчера я не завтракал(а).",
+            "tr": "Dün kahvaltı yapmadım."
+          }
+        },
+        {
+          "id": "past-2",
+          "chunks": [
+            {
+              "text": "我昨天没",
+              "pinyin": "wǒ zuótiān méi",
+              "role": "time",
+              "meaning": {
+                "en": "yesterday I did not",
+                "fr": "hier je n’ai pas",
+                "ru": "вчера я не",
+                "tr": "dün yapmadım"
+              },
+              "audioId": "chunk-3bec204bbf54"
+            },
+            {
+              "text": "喝咖啡",
+              "pinyin": "hē kāfēi",
+              "role": "action",
+              "meaning": {
+                "en": "drink coffee",
+                "fr": "boire du café",
+                "ru": "пить кофе",
+                "tr": "kahve içmek"
+              },
+              "audioId": "chunk-bca9f5c6acff"
+            }
+          ],
+          "hanzi": "我昨天没喝咖啡。",
+          "pinyin": "wǒ zuótiān méi hē kāfēi.",
+          "meaning": {
+            "en": "I did not drink coffee yesterday.",
+            "fr": "Je n’ai pas bu de café hier.",
+            "ru": "Вчера я не пил(а) кофе.",
+            "tr": "Dün kahve içmedim."
+          }
+        },
+        {
+          "id": "past-3",
+          "chunks": [
+            {
+              "text": "我昨天没",
+              "pinyin": "wǒ zuótiān méi",
+              "role": "time",
+              "meaning": {
+                "en": "yesterday I did not",
+                "fr": "hier je n’ai pas",
+                "ru": "вчера я не",
+                "tr": "dün yapmadım"
+              },
+              "audioId": "chunk-3bec204bbf54"
+            },
+            {
+              "text": "去学校",
+              "pinyin": "qù xuéxiào",
+              "role": "action",
+              "meaning": {
+                "en": "go to school",
+                "fr": "aller à l’école",
+                "ru": "идти в школу",
+                "tr": "okula gitmek"
+              },
+              "audioId": "chunk-2b5b7b03da37"
+            }
+          ],
+          "hanzi": "我昨天没去学校。",
+          "pinyin": "wǒ zuótiān méi qù xuéxiào.",
+          "meaning": {
+            "en": "I did not go to school yesterday.",
+            "fr": "Je ne suis pas allé(e) à l’école hier.",
+            "ru": "Вчера я не ходил(а) в школу.",
+            "tr": "Dün okula gitmedim."
+          }
+        }
+      ]
+    },
+    {
+      "id": "habit",
+      "title": {
+        "en": "A usual habit",
+        "fr": "Une habitude",
+        "ru": "Обычная привычка",
+        "tr": "Alışkanlık"
+      },
+      "lesson": 3,
+      "note": {
+        "en": "Contrast 我早上不… (a habit) with 我昨天没… (an event that did not happen).",
+        "fr": "Comparez 我早上不… (habitude) avec 我昨天没… (événement non réalisé).",
+        "ru": "Сравните 我早上不… (привычка) и 我昨天没… (несостоявшееся событие).",
+        "tr": "我早上不… (alışkanlık) ile 我昨天没… (gerçekleşmeyen olay) kalıplarını karşılaştır."
+      },
+      "variants": [
+        {
+          "id": "habit-1",
+          "chunks": [
+            {
+              "text": "我早上不",
+              "pinyin": "wǒ zǎoshang bù",
+              "role": "time",
+              "meaning": {
+                "en": "in the morning I do not",
+                "fr": "le matin je ne… pas",
+                "ru": "по утрам я не",
+                "tr": "sabahları yapmam"
+              },
+              "audioId": "chunk-f95cac149ad8"
+            },
+            {
+              "text": "喝咖啡",
+              "pinyin": "hē kāfēi",
+              "role": "action",
+              "meaning": {
+                "en": "drink coffee",
+                "fr": "boire du café",
+                "ru": "пить кофе",
+                "tr": "kahve içmek"
+              },
+              "audioId": "chunk-bca9f5c6acff"
+            }
+          ],
+          "hanzi": "我早上不喝咖啡。",
+          "pinyin": "wǒ zǎoshang bù hē kāfēi.",
+          "meaning": {
+            "en": "I do not drink coffee in the morning.",
+            "fr": "Je ne bois pas de café le matin.",
+            "ru": "По утрам я не пью кофе.",
+            "tr": "Sabahları kahve içmem."
+          }
+        },
+        {
+          "id": "habit-2",
+          "chunks": [
+            {
+              "text": "我早上不",
+              "pinyin": "wǒ zǎoshang bù",
+              "role": "time",
+              "meaning": {
+                "en": "in the morning I do not",
+                "fr": "le matin je ne… pas",
+                "ru": "по утрам я не",
+                "tr": "sabahları yapmam"
+              },
+              "audioId": "chunk-f95cac149ad8"
+            },
+            {
+              "text": "喝茶",
+              "pinyin": "hē chá",
+              "role": "action",
+              "meaning": {
+                "en": "drink tea",
+                "fr": "boire du thé",
+                "ru": "пить чай",
+                "tr": "çay içmek"
+              },
+              "audioId": "chunk-cb79e0cecd8e"
+            }
+          ],
+          "hanzi": "我早上不喝茶。",
+          "pinyin": "wǒ zǎoshang bù hē chá.",
+          "meaning": {
+            "en": "I do not drink tea in the morning.",
+            "fr": "Je ne bois pas de thé le matin.",
+            "ru": "По утрам я не пью чай.",
+            "tr": "Sabahları çay içmem."
+          }
+        },
+        {
+          "id": "habit-3",
+          "chunks": [
+            {
+              "text": "我早上不",
+              "pinyin": "wǒ zǎoshang bù",
+              "role": "time",
+              "meaning": {
+                "en": "in the morning I do not",
+                "fr": "le matin je ne… pas",
+                "ru": "по утрам я не",
+                "tr": "sabahları yapmam"
+              },
+              "audioId": "chunk-f95cac149ad8"
+            },
+            {
+              "text": "吃早饭",
+              "pinyin": "chī zǎofàn",
+              "role": "action",
+              "meaning": {
+                "en": "eat breakfast",
+                "fr": "prendre le petit-déjeuner",
+                "ru": "завтракать",
+                "tr": "kahvaltı yapmak"
+              },
+              "audioId": "chunk-9a0f8d2ad3e6"
+            }
+          ],
+          "hanzi": "我早上不吃早饭。",
+          "pinyin": "wǒ zǎoshang bù chī zǎofàn.",
+          "meaning": {
+            "en": "I do not eat breakfast in the morning.",
+            "fr": "Je ne prends pas de petit-déjeuner le matin.",
+            "ru": "По утрам я не завтракаю.",
+            "tr": "Sabahları kahvaltı yapmam."
+          }
+        }
+      ]
+    },
+    {
+      "id": "when",
+      "title": {
+        "en": "Ask when",
+        "fr": "Demander quand",
+        "ru": "Спросить когда",
+        "tr": "Ne zaman diye sor"
+      },
+      "lesson": 3,
+      "note": {
+        "en": "什么时候 replaces the unknown time in the normal sentence position. No extra 吗 is needed.",
+        "fr": "什么时候 remplace le moment inconnu à sa place normale. Aucun 吗 supplémentaire.",
+        "ru": "什么时候 заменяет неизвестное время в обычной позиции. Дополнительное 吗 не нужно.",
+        "tr": "什么时候 bilinmeyen zamanın yerini alır. Ek bir 吗 gerekmez."
+      },
+      "variants": [
+        {
+          "id": "when-1",
+          "chunks": [
+            {
+              "text": "你",
+              "pinyin": "nǐ",
+              "role": "person",
+              "meaning": {
+                "en": "you",
+                "fr": "tu",
+                "ru": "ты",
+                "tr": "sen"
+              },
+              "audioId": "chunk-a0c7716669b5"
+            },
+            {
+              "text": "什么时候",
+              "pinyin": "shénme shíhou",
+              "role": "question",
+              "meaning": {
+                "en": "when",
+                "fr": "quand",
+                "ru": "когда",
+                "tr": "ne zaman"
+              },
+              "audioId": "chunk-43a188d1cb55"
+            },
+            {
+              "text": "去学校",
+              "pinyin": "qù xuéxiào",
+              "role": "action",
+              "meaning": {
+                "en": "go to school",
+                "fr": "aller à l’école",
+                "ru": "идти в школу",
+                "tr": "okula gitmek"
+              },
+              "audioId": "chunk-2b5b7b03da37"
+            }
+          ],
+          "hanzi": "你什么时候去学校？",
+          "pinyin": "nǐ shénme shíhou qù xuéxiào?",
+          "meaning": {
+            "en": "When do you go to school?",
+            "fr": "Quand vas-tu à l’école ?",
+            "ru": "Когда ты идёшь в школу?",
+            "tr": "Okula ne zaman gidiyorsun?"
+          }
+        },
+        {
+          "id": "when-2",
+          "chunks": [
+            {
+              "text": "你",
+              "pinyin": "nǐ",
+              "role": "person",
+              "meaning": {
+                "en": "you",
+                "fr": "tu",
+                "ru": "ты",
+                "tr": "sen"
+              },
+              "audioId": "chunk-a0c7716669b5"
+            },
+            {
+              "text": "什么时候",
+              "pinyin": "shénme shíhou",
+              "role": "question",
+              "meaning": {
+                "en": "when",
+                "fr": "quand",
+                "ru": "когда",
+                "tr": "ne zaman"
+              },
+              "audioId": "chunk-43a188d1cb55"
+            },
+            {
+              "text": "去上海",
+              "pinyin": "qù Shànghǎi",
+              "role": "action",
+              "meaning": {
+                "en": "go to Shanghai",
+                "fr": "aller à Shanghai",
+                "ru": "ехать в Шанхай",
+                "tr": "Şanghay’a gitmek"
+              },
+              "audioId": "chunk-f0e6aa434f09"
+            }
+          ],
+          "hanzi": "你什么时候去上海？",
+          "pinyin": "nǐ shénme shíhou qù Shànghǎi?",
+          "meaning": {
+            "en": "When do you go to Shanghai?",
+            "fr": "Quand vas-tu à Shanghai ?",
+            "ru": "Когда ты едешь в Шанхай?",
+            "tr": "Şanghay’a ne zaman gidiyorsun?"
+          }
+        },
+        {
+          "id": "when-3",
+          "chunks": [
+            {
+              "text": "你",
+              "pinyin": "nǐ",
+              "role": "person",
+              "meaning": {
+                "en": "you",
+                "fr": "tu",
+                "ru": "ты",
+                "tr": "sen"
+              },
+              "audioId": "chunk-a0c7716669b5"
+            },
+            {
+              "text": "什么时候",
+              "pinyin": "shénme shíhou",
+              "role": "question",
+              "meaning": {
+                "en": "when",
+                "fr": "quand",
+                "ru": "когда",
+                "tr": "ne zaman"
+              },
+              "audioId": "chunk-43a188d1cb55"
+            },
+            {
+              "text": "起床",
+              "pinyin": "qǐchuáng",
+              "role": "action",
+              "meaning": {
+                "en": "get out of bed",
+                "fr": "se lever",
+                "ru": "вставать с постели",
+                "tr": "yataktan kalkmak"
+              },
+              "audioId": "chunk-96f512f98004"
+            }
+          ],
+          "hanzi": "你什么时候起床？",
+          "pinyin": "nǐ shénme shíhou qǐchuáng?",
+          "meaning": {
+            "en": "When do you get out of bed?",
+            "fr": "Quand te lèves-tu ?",
+            "ru": "Когда ты встаёшь с постели?",
+            "tr": "Yataktan ne zaman kalkıyorsun?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "reason",
+      "title": {
+        "en": "Give a reason",
+        "fr": "Donner une raison",
+        "ru": "Назвать причину",
+        "tr": "Neden belirt"
+      },
+      "lesson": 5,
+      "note": {
+        "en": "因为 introduces the reason; 所以 introduces the result. Learn them as a linked pair, then change the reason.",
+        "fr": "因为 introduit la cause ; 所以, la conséquence. Apprenez cette paire, puis changez la cause.",
+        "ru": "因为 вводит причину, 所以 — следствие. Учите их как пару, затем меняйте причину.",
+        "tr": "因为 nedeni, 所以 sonucu belirtir. İkili olarak öğren, ardından nedeni değiştir."
+      },
+      "variants": [
+        {
+          "id": "reason-1",
+          "chunks": [
+            {
+              "text": "因为今天下雨",
+              "pinyin": "yīnwèi jīntiān xiàyǔ",
+              "role": "reason",
+              "meaning": {
+                "en": "because it is raining today",
+                "fr": "parce qu’il pleut aujourd’hui",
+                "ru": "потому что сегодня идёт дождь",
+                "tr": "bugün yağmur yağdığı için"
+              },
+              "audioId": "chunk-9a0eed346881"
+            },
+            {
+              "text": "所以我不去公园",
+              "pinyin": "suǒyǐ wǒ bú qù gōngyuán",
+              "role": "action",
+              "meaning": {
+                "en": "so I am not going to the park",
+                "fr": "donc je ne vais pas au parc",
+                "ru": "поэтому я не пойду в парк",
+                "tr": "bu yüzden parka gitmiyorum"
+              },
+              "audioId": "chunk-eeca357e5af0"
+            }
+          ],
+          "hanzi": "因为今天下雨所以我不去公园。",
+          "pinyin": "yīnwèi jīntiān xiàyǔ suǒyǐ wǒ bú qù gōngyuán.",
+          "meaning": {
+            "en": "Because it is raining today, I am not going to the park.",
+            "fr": "Comme il pleut aujourd’hui, je ne vais pas au parc.",
+            "ru": "Сегодня идёт дождь, поэтому я не пойду в парк.",
+            "tr": "Bugün yağmur yağdığı için parka gitmiyorum."
+          }
+        },
+        {
+          "id": "reason-2",
+          "chunks": [
+            {
+              "text": "因为我很忙",
+              "pinyin": "yīnwèi wǒ hěn máng",
+              "role": "reason",
+              "meaning": {
+                "en": "because I am busy",
+                "fr": "parce que je suis occupé(e)",
+                "ru": "потому что я занят(а)",
+                "tr": "meşgul olduğum için"
+              },
+              "audioId": "chunk-c003fcaac477"
+            },
+            {
+              "text": "所以我不去公园",
+              "pinyin": "suǒyǐ wǒ bú qù gōngyuán",
+              "role": "action",
+              "meaning": {
+                "en": "so I am not going to the park",
+                "fr": "donc je ne vais pas au parc",
+                "ru": "поэтому я не пойду в парк",
+                "tr": "bu yüzden parka gitmiyorum"
+              },
+              "audioId": "chunk-eeca357e5af0"
+            }
+          ],
+          "hanzi": "因为我很忙所以我不去公园。",
+          "pinyin": "yīnwèi wǒ hěn máng suǒyǐ wǒ bú qù gōngyuán.",
+          "meaning": {
+            "en": "Because I am busy, I am not going to the park.",
+            "fr": "Comme je suis occupé(e), je ne vais pas au parc.",
+            "ru": "Я занят(а), поэтому не пойду в парк.",
+            "tr": "Meşgul olduğum için parka gitmiyorum."
+          }
+        },
+        {
+          "id": "reason-3",
+          "chunks": [
+            {
+              "text": "因为我有点儿累",
+              "pinyin": "yīnwèi wǒ yǒudiǎnr lèi",
+              "role": "reason",
+              "meaning": {
+                "en": "because I am a little tired",
+                "fr": "parce que je suis un peu fatigué(e)",
+                "ru": "потому что я немного устал(а)",
+                "tr": "biraz yorgun olduğum için"
+              },
+              "audioId": "chunk-fe8e94de5d0a"
+            },
+            {
+              "text": "所以我不去公园",
+              "pinyin": "suǒyǐ wǒ bú qù gōngyuán",
+              "role": "action",
+              "meaning": {
+                "en": "so I am not going to the park",
+                "fr": "donc je ne vais pas au parc",
+                "ru": "поэтому я не пойду в парк",
+                "tr": "bu yüzden parka gitmiyorum"
+              },
+              "audioId": "chunk-eeca357e5af0"
+            }
+          ],
+          "hanzi": "因为我有点儿累所以我不去公园。",
+          "pinyin": "yīnwèi wǒ yǒudiǎnr lèi suǒyǐ wǒ bú qù gōngyuán.",
+          "meaning": {
+            "en": "Because I am a little tired, I am not going to the park.",
+            "fr": "Comme je suis un peu fatigué(e), je ne vais pas au parc.",
+            "ru": "Я немного устал(а), поэтому не пойду в парк.",
+            "tr": "Biraz yorgun olduğum için parka gitmiyorum."
+          }
+        }
+      ]
+    },
+    {
+      "id": "experience",
+      "title": {
+        "en": "Have been there",
+        "fr": "Y être déjà allé",
+        "ru": "Уже бывали там",
+        "tr": "Daha önce bulunmak"
+      },
+      "lesson": 3,
+      "note": {
+        "en": "去过 describes an experience. Compare it with 想去, an intention. 以前 makes the earlier time explicit.",
+        "fr": "去过 exprime une expérience ; 想去, une intention. 以前 situe explicitement l’expérience auparavant.",
+        "ru": "去过 — опыт, 想去 — намерение. 以前 явно указывает на прошлый опыт.",
+        "tr": "去过 deneyim, 想去 niyet bildirir. 以前 deneyimin daha önce olduğunu açıkça belirtir."
+      },
+      "variants": [
+        {
+          "id": "experience-1",
+          "chunks": [
+            {
+              "text": "我以前",
+              "pinyin": "wǒ yǐqián",
+              "role": "time",
+              "meaning": {
+                "en": "I previously",
+                "fr": "moi auparavant",
+                "ru": "я раньше",
+                "tr": "ben daha önce"
+              },
+              "audioId": "chunk-b8a5db31175c"
+            },
+            {
+              "text": "去过上海",
+              "pinyin": "qùguo Shànghǎi",
+              "role": "action",
+              "meaning": {
+                "en": "have been to Shanghai",
+                "fr": "être déjà allé(e) à Shanghai",
+                "ru": "бывал(а) в Шанхае",
+                "tr": "Şanghay’da bulundum"
+              },
+              "audioId": "chunk-59c009f6245c"
+            }
+          ],
+          "hanzi": "我以前去过上海。",
+          "pinyin": "wǒ yǐqián qùguo Shànghǎi.",
+          "meaning": {
+            "en": "I have been to Shanghai before.",
+            "fr": "Je suis déjà allé(e) à Shanghai.",
+            "ru": "Я раньше бывал(а) в Шанхае.",
+            "tr": "Daha önce Şanghay’da bulundum."
+          }
+        },
+        {
+          "id": "experience-2",
+          "chunks": [
+            {
+              "text": "我以前",
+              "pinyin": "wǒ yǐqián",
+              "role": "time",
+              "meaning": {
+                "en": "I previously",
+                "fr": "moi auparavant",
+                "ru": "я раньше",
+                "tr": "ben daha önce"
+              },
+              "audioId": "chunk-b8a5db31175c"
+            },
+            {
+              "text": "去过北京",
+              "pinyin": "qùguo Běijīng",
+              "role": "action",
+              "meaning": {
+                "en": "have been to Beijing",
+                "fr": "être déjà allé(e) à Pékin",
+                "ru": "бывал(а) в Пекине",
+                "tr": "Pekin’de bulundum"
+              },
+              "audioId": "chunk-b82245564747"
+            }
+          ],
+          "hanzi": "我以前去过北京。",
+          "pinyin": "wǒ yǐqián qùguo Běijīng.",
+          "meaning": {
+            "en": "I have been to Beijing before.",
+            "fr": "Je suis déjà allé(e) à Pékin.",
+            "ru": "Я раньше бывал(а) в Пекине.",
+            "tr": "Daha önce Pekin’de bulundum."
+          }
+        },
+        {
+          "id": "experience-3",
+          "chunks": [
+            {
+              "text": "我以前",
+              "pinyin": "wǒ yǐqián",
+              "role": "time",
+              "meaning": {
+                "en": "I previously",
+                "fr": "moi auparavant",
+                "ru": "я раньше",
+                "tr": "ben daha önce"
+              },
+              "audioId": "chunk-b8a5db31175c"
+            },
+            {
+              "text": "去过苏州",
+              "pinyin": "qùguo Sūzhōu",
+              "role": "action",
+              "meaning": {
+                "en": "have been to Suzhou",
+                "fr": "être déjà allé(e) à Suzhou",
+                "ru": "бывал(а) в Сучжоу",
+                "tr": "Suzhou’da bulundum"
+              },
+              "audioId": "chunk-2e54bf42f588"
+            }
+          ],
+          "hanzi": "我以前去过苏州。",
+          "pinyin": "wǒ yǐqián qùguo Sūzhōu.",
+          "meaning": {
+            "en": "I have been to Suzhou before.",
+            "fr": "Je suis déjà allé(e) à Suzhou.",
+            "ru": "Я раньше бывал(а) в Сучжоу.",
+            "tr": "Daha önce Suzhou’da bulundum."
+          }
+        }
+      ]
+    }
+  ]
+}

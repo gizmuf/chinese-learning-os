@@ -1,0 +1,906 @@
+{
+  "id": "movement-directions",
+  "title": "Movement & direction",
+  "intro": "See the speaker, distinguish six spatial paths and use movement words in a route and full sentences. 来/去 follows the viewpoint, not screen-left/right.",
+  "source": {
+    "filename": "Mandarin_Movement_Directions_Visual_Reference(2).pdf",
+    "sha256": "eec3672166efd67651cf9ef4441c1b4b9ecd4ccbe6b4cafc700155876d22454c",
+    "pages": 3
+  },
+  "terms": [
+    {
+      "id": "ref-move-t001",
+      "hanzi": "来",
+      "pinyin": "lái",
+      "en": "come toward the speaker",
+      "sourcePages": [
+        1,
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t002",
+      "hanzi": "去",
+      "pinyin": "qù",
+      "en": "go away from the speaker",
+      "sourcePages": [
+        1,
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t003",
+      "hanzi": "进来",
+      "pinyin": "jìn lái",
+      "en": "come in",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t004",
+      "hanzi": "进去",
+      "pinyin": "jìn qù",
+      "en": "go in",
+      "sourcePages": [
+        1,
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t005",
+      "hanzi": "出来",
+      "pinyin": "chū lái",
+      "en": "come out",
+      "sourcePages": [
+        1,
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t006",
+      "hanzi": "出去",
+      "pinyin": "chū qù",
+      "en": "go out",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t007",
+      "hanzi": "过来",
+      "pinyin": "guò lái",
+      "en": "come over",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t008",
+      "hanzi": "过去",
+      "pinyin": "guò qù",
+      "en": "go over / go there",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t009",
+      "hanzi": "回来",
+      "pinyin": "huí lái",
+      "en": "come back",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t010",
+      "hanzi": "回去",
+      "pinyin": "huí qù",
+      "en": "go back",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t011",
+      "hanzi": "上来",
+      "pinyin": "shàng lái",
+      "en": "come up",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t012",
+      "hanzi": "上去",
+      "pinyin": "shàng qù",
+      "en": "go up",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t013",
+      "hanzi": "下来",
+      "pinyin": "xià lái",
+      "en": "come down",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t014",
+      "hanzi": "下去",
+      "pinyin": "xià qù",
+      "en": "go down",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t015",
+      "hanzi": "走",
+      "pinyin": "zǒu",
+      "en": "walk / leave",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t016",
+      "hanzi": "到",
+      "pinyin": "dào",
+      "en": "arrive / reach",
+      "sourcePages": [
+        2,
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t017",
+      "hanzi": "回",
+      "pinyin": "huí",
+      "en": "return",
+      "sourcePages": [
+        2,
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t018",
+      "hanzi": "走路",
+      "pinyin": "zǒu lù",
+      "en": "walk on foot",
+      "sourcePages": [
+        2,
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t019",
+      "hanzi": "走了",
+      "pinyin": "zǒu le",
+      "en": "left / went away",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t020",
+      "hanzi": "去了",
+      "pinyin": "qù le",
+      "en": "went / has gone",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t021",
+      "hanzi": "来了",
+      "pinyin": "lái le",
+      "en": "came / has arrived",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t022",
+      "hanzi": "到了",
+      "pinyin": "dào le",
+      "en": "arrived",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t023",
+      "hanzi": "回来了",
+      "pinyin": "huí lái le",
+      "en": "came back / has returned",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-t024",
+      "hanzi": "家",
+      "pinyin": "jiā",
+      "en": "home",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    }
+  ],
+  "examples": [
+    {
+      "id": "ref-move-e001",
+      "hanzi": "我现在去学校。",
+      "pinyin": "Wǒ xiànzài qù xuéxiào.",
+      "en": "I am going to school now.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-e002",
+      "hanzi": "我走路去学校。",
+      "pinyin": "Wǒ zǒu lù qù xuéxiào.",
+      "en": "I walk to school.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-e003",
+      "hanzi": "我到学校了。",
+      "pinyin": "Wǒ dào xuéxiào le.",
+      "en": "I have arrived at school.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-e004",
+      "hanzi": "你进来吧。",
+      "pinyin": "Nǐ jìn lái ba.",
+      "en": "Come in.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-e005",
+      "hanzi": "我出去了。",
+      "pinyin": "Wǒ chū qù le.",
+      "en": "I went out.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-e006",
+      "hanzi": "我出来了。",
+      "pinyin": "Wǒ chū lái le.",
+      "en": "I came out.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-move-e007",
+      "hanzi": "我回来了。",
+      "pinyin": "Wǒ huí lái le.",
+      "en": "I am back.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    }
+  ],
+  "topics": [
+    {
+      "id": "ref-move-p01",
+      "title": "Six movement pairs",
+      "explanation": "The first part tells the spatial path. 来 is toward the visible speaker; 去 is away. Moving the speaker changes the ending even when the actor follows the same screen path.",
+      "sourcePages": [
+        1
+      ],
+      "termIds": [
+        "ref-move-t001",
+        "ref-move-t002",
+        "ref-move-t003",
+        "ref-move-t004",
+        "ref-move-t005",
+        "ref-move-t006",
+        "ref-move-t007",
+        "ref-move-t008",
+        "ref-move-t009",
+        "ref-move-t010",
+        "ref-move-t011",
+        "ref-move-t012",
+        "ref-move-t013",
+        "ref-move-t014"
+      ],
+      "exampleIds": [],
+      "visualIntent": "Distinct room entry, exit, bridge/over, return-home, upstairs and downstairs scenes. Actor path stays fixed while the speaker changes start/end."
+    },
+    {
+      "id": "ref-move-p02",
+      "title": "Movement and completed phrases",
+      "explanation": "走 can mean walk or leave; 走路 explicitly means walking on foot. 到 highlights reaching a destination. 了 often signals completion or a change of state; it is not a universal English past tense.",
+      "sourcePages": [
+        2
+      ],
+      "termIds": [
+        "ref-move-t015",
+        "ref-move-t002",
+        "ref-move-t001",
+        "ref-move-t016",
+        "ref-move-t017",
+        "ref-move-t018",
+        "ref-move-t019",
+        "ref-move-t020",
+        "ref-move-t021",
+        "ref-move-t022",
+        "ref-move-t023"
+      ],
+      "exampleIds": [],
+      "visualIntent": "Walk along a route, leave a start, reach a destination, return to the reference place; completion is a distinct endpoint state."
+    },
+    {
+      "id": "ref-move-p03",
+      "title": "A route and real sentences",
+      "explanation": "The route fixes a visible viewpoint. Entering/exiting labels do not become universal: change the speaker in Six movement pairs to compare. Recall the four English cues before checking their Chinese.",
+      "sourcePages": [
+        3
+      ],
+      "termIds": [
+        "ref-move-t024",
+        "ref-move-t018",
+        "ref-move-t016",
+        "ref-move-t004",
+        "ref-move-t005",
+        "ref-move-t017"
+      ],
+      "exampleIds": [
+        "ref-move-e001",
+        "ref-move-e002",
+        "ref-move-e003",
+        "ref-move-e004",
+        "ref-move-e005",
+        "ref-move-e006",
+        "ref-move-e007"
+      ],
+      "visualIntent": "Home → walk → arrival → enter → exit → return, with a home-based speaker. Speaking and recall retain full sentence context."
+    }
+  ],
+  "checks": [
+    {
+      "id": "ref-move-check-001",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-move-t003",
+      "optionIds": [
+        "ref-move-t004",
+        "ref-move-t005",
+        "ref-move-t006",
+        "ref-move-t003"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-move-check-002",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-move-t004",
+      "optionIds": [
+        "ref-move-t005",
+        "ref-move-t006",
+        "ref-move-t004",
+        "ref-move-t003"
+      ],
+      "sourcePages": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "ref-move-check-003",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-move-t005",
+      "optionIds": [
+        "ref-move-t006",
+        "ref-move-t005",
+        "ref-move-t003",
+        "ref-move-t004"
+      ],
+      "sourcePages": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "ref-move-check-004",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-move-t006",
+      "optionIds": [
+        "ref-move-t006",
+        "ref-move-t003",
+        "ref-move-t004",
+        "ref-move-t005"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-move-check-005",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-move-t018",
+      "optionIds": [
+        "ref-move-t004",
+        "ref-move-t005",
+        "ref-move-t019",
+        "ref-move-t018"
+      ],
+      "sourcePages": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "ref-move-check-006",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-move-t019",
+      "optionIds": [
+        "ref-move-t020",
+        "ref-move-t021",
+        "ref-move-t019",
+        "ref-move-t018"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-move-check-007",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-move-t020",
+      "optionIds": [
+        "ref-move-t021",
+        "ref-move-t020",
+        "ref-move-t018",
+        "ref-move-t019"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-move-check-008",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-move-t021",
+      "optionIds": [
+        "ref-move-t021",
+        "ref-move-t018",
+        "ref-move-t019",
+        "ref-move-t020"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-move-check-009",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-move-t007",
+      "optionIds": [
+        "ref-move-t003",
+        "ref-move-t004",
+        "ref-move-t005",
+        "ref-move-t007"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-move-check-010",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-move-t008",
+      "optionIds": [
+        "ref-move-t003",
+        "ref-move-t004",
+        "ref-move-t005",
+        "ref-move-t008"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-move-check-011",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-move-t022",
+      "optionIds": [
+        "ref-move-t018",
+        "ref-move-t019",
+        "ref-move-t020",
+        "ref-move-t022"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-move-check-012",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-move-t024",
+      "optionIds": [
+        "ref-move-t024",
+        "ref-move-t004",
+        "ref-move-t005",
+        "ref-move-t018"
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-move-check-013",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-move-t003",
+      "optionIds": [],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-move-check-014",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-move-t006",
+      "optionIds": [],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-move-check-015",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-move-t009",
+      "optionIds": [],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-move-check-016",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-move-t014",
+      "optionIds": [],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-move-check-017",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-move-e003",
+      "optionIds": [],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-move-scene-01",
+      "kind": "hanzi",
+      "prompt": "Which Chinese expression matches this path and speaker?",
+      "targetId": "ref-move-t003",
+      "optionIds": [
+        "ref-move-t004",
+        "ref-move-t005",
+        "ref-move-t006",
+        "ref-move-t003"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "scene": {
+        "kind": "movement",
+        "direction": 0,
+        "speakerAtEnd": true
+      }
+    },
+    {
+      "id": "ref-move-scene-02",
+      "kind": "hanzi",
+      "prompt": "Which Chinese expression matches this path and speaker?",
+      "targetId": "ref-move-t004",
+      "optionIds": [
+        "ref-move-t003",
+        "ref-move-t004",
+        "ref-move-t005",
+        "ref-move-t006"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "scene": {
+        "kind": "movement",
+        "direction": 0,
+        "speakerAtEnd": false
+      }
+    },
+    {
+      "id": "ref-move-scene-03",
+      "kind": "hanzi",
+      "prompt": "Which Chinese expression matches this path and speaker?",
+      "targetId": "ref-move-t005",
+      "optionIds": [
+        "ref-move-t003",
+        "ref-move-t004",
+        "ref-move-t005",
+        "ref-move-t006"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "scene": {
+        "kind": "movement",
+        "direction": 1,
+        "speakerAtEnd": true
+      }
+    },
+    {
+      "id": "ref-move-scene-04",
+      "kind": "hanzi",
+      "prompt": "Which Chinese expression matches this path and speaker?",
+      "targetId": "ref-move-t006",
+      "optionIds": [
+        "ref-move-t006",
+        "ref-move-t003",
+        "ref-move-t004",
+        "ref-move-t005"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "scene": {
+        "kind": "movement",
+        "direction": 1,
+        "speakerAtEnd": false
+      }
+    },
+    {
+      "id": "ref-move-scene-05",
+      "kind": "hanzi",
+      "prompt": "Which Chinese expression matches this path and speaker?",
+      "targetId": "ref-move-t007",
+      "optionIds": [
+        "ref-move-t010",
+        "ref-move-t007",
+        "ref-move-t008",
+        "ref-move-t009"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "scene": {
+        "kind": "movement",
+        "direction": 2,
+        "speakerAtEnd": true
+      }
+    },
+    {
+      "id": "ref-move-scene-06",
+      "kind": "hanzi",
+      "prompt": "Which Chinese expression matches this path and speaker?",
+      "targetId": "ref-move-t008",
+      "optionIds": [
+        "ref-move-t009",
+        "ref-move-t010",
+        "ref-move-t007",
+        "ref-move-t008"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "scene": {
+        "kind": "movement",
+        "direction": 2,
+        "speakerAtEnd": false
+      }
+    },
+    {
+      "id": "ref-move-scene-07",
+      "kind": "hanzi",
+      "prompt": "Which Chinese expression matches this path and speaker?",
+      "targetId": "ref-move-t009",
+      "optionIds": [
+        "ref-move-t009",
+        "ref-move-t010",
+        "ref-move-t007",
+        "ref-move-t008"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "scene": {
+        "kind": "movement",
+        "direction": 3,
+        "speakerAtEnd": true
+      }
+    },
+    {
+      "id": "ref-move-scene-08",
+      "kind": "hanzi",
+      "prompt": "Which Chinese expression matches this path and speaker?",
+      "targetId": "ref-move-t010",
+      "optionIds": [
+        "ref-move-t008",
+        "ref-move-t009",
+        "ref-move-t010",
+        "ref-move-t007"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "scene": {
+        "kind": "movement",
+        "direction": 3,
+        "speakerAtEnd": false
+      }
+    },
+    {
+      "id": "ref-move-scene-09",
+      "kind": "hanzi",
+      "prompt": "Which Chinese expression matches this path and speaker?",
+      "targetId": "ref-move-t011",
+      "optionIds": [
+        "ref-move-t012",
+        "ref-move-t013",
+        "ref-move-t014",
+        "ref-move-t011"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "scene": {
+        "kind": "movement",
+        "direction": 4,
+        "speakerAtEnd": true
+      }
+    },
+    {
+      "id": "ref-move-scene-10",
+      "kind": "hanzi",
+      "prompt": "Which Chinese expression matches this path and speaker?",
+      "targetId": "ref-move-t012",
+      "optionIds": [
+        "ref-move-t011",
+        "ref-move-t012",
+        "ref-move-t013",
+        "ref-move-t014"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "scene": {
+        "kind": "movement",
+        "direction": 4,
+        "speakerAtEnd": false
+      }
+    },
+    {
+      "id": "ref-move-scene-11",
+      "kind": "hanzi",
+      "prompt": "Which Chinese expression matches this path and speaker?",
+      "targetId": "ref-move-t013",
+      "optionIds": [
+        "ref-move-t011",
+        "ref-move-t012",
+        "ref-move-t013",
+        "ref-move-t014"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "scene": {
+        "kind": "movement",
+        "direction": 5,
+        "speakerAtEnd": true
+      }
+    },
+    {
+      "id": "ref-move-scene-12",
+      "kind": "hanzi",
+      "prompt": "Which Chinese expression matches this path and speaker?",
+      "targetId": "ref-move-t014",
+      "optionIds": [
+        "ref-move-t014",
+        "ref-move-t011",
+        "ref-move-t012",
+        "ref-move-t013"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "scene": {
+        "kind": "movement",
+        "direction": 5,
+        "speakerAtEnd": false
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "page": 1,
+      "topicIds": [
+        "ref-move-p01"
+      ],
+      "summary": "Six movement pairs"
+    },
+    {
+      "page": 2,
+      "topicIds": [
+        "ref-move-p02"
+      ],
+      "summary": "Movement and completed phrases"
+    },
+    {
+      "page": 3,
+      "topicIds": [
+        "ref-move-p03"
+      ],
+      "summary": "A route and real sentences"
+    }
+  ]
+}

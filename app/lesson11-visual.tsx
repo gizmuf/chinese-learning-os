@@ -1,0 +1,22 @@
+'use client';
+import {Sun,Snowflake,Leaf,CloudSun,Train,Bike,Car,Footprints,Bed,FileText,Map,RectangleHorizontal,ClipboardList,Apple,Coffee} from 'lucide-react';
+import {lesson11ById,lesson11Terms,C,type Lesson11Entry} from './lesson11-data';
+import {ReferenceClockFace} from './reference-time-scene';
+import {StudyText} from './study-lookup';
+import type {Locale} from './translate';
+export const lesson11FocusIds:Record<string,string[]>={calendar:['c11-s001','c11-s002','c11-s003'],seasons:['c11-s009','c11-s010','c11-s011'],degree:['c11-s017','c11-s018','c11-s016'],transport:['c11-s019','c11-s021','c11-s022'],routine:['c11-s028','c11-s029','c11-s030'],objects:['c11-s032','c11-s033','c11-s034'],frequency:['c11-s041','c11-s045','c11-s047'],everyday:['c11-s048','c11-s049','c11-s051']};
+export default function Lesson11Visual({topic,locale,selected,onSelect}:{topic:string;locale:Locale;selected:string;onSelect:(id:string)=>void}){
+ const c=(en:string,fr:string,ru:string,tr:string)=>C(en,fr,ru,tr)[locale];
+ function tile(id:string,Icon?:typeof Sun,extra?:React.ReactNode){const v=lesson11ById.get(id);if(!v)return null;return <button type="button" key={id} className={'l11-visual-tile '+(selected===id?'selected':'')} onClick={()=>onSelect(id)} aria-pressed={selected===id}>{Icon&&<Icon size={30} aria-hidden="true"/>}{extra}<strong lang="zh-Hans">{v.hanzi}</strong><span className="pinyin">{v.pinyin}</span><span className="l11-translation">{v.meaning[locale]}</span></button>;}
+ function term(word:string,extra?:React.ReactNode){const v=lesson11Terms.find(v=>v.hanzi===word);return v?tile(v.id,undefined,extra):null;}
+ return <section className={'l11-visual l11-visual-'+topic} aria-label={c('Explore this pattern','Explorer cette structure','Изучить модель','Bu kalıbı keşfet')}>
+ {topic==='calendar'&&<><p className="l11-visual-note">{c('Classroom date: 3 November 2026','Date du cours : 3 novembre 2026','Дата занятия: 3 ноября 2026','Ders tarihi: 3 Kasım 2026')}</p><div className="l11-day-strip">{['前天','昨天','今天','明天','后天'].map((word,i)=>term(word,<small>{String(i+1).padStart(2,'0')} · {new Date(Date.UTC(2026,10,i+1)).toLocaleDateString(locale,{weekday:'short',timeZone:'UTC'})}</small>))}</div><div className="l11-pair">{term('第',<span className="l11-chunk">第 → 第八课</span>)}{term('弟弟',<span className="l11-chunk">弟 → 弟弟</span>)}</div></>}
+ {topic==='seasons'&&<div className="l11-season-grid">{(['春天','夏天','秋天','冬天'] as const).map((word,i)=>{const Icon=[CloudSun,Sun,Leaf,Snowflake][i],v=lesson11Terms.find(v=>v.hanzi===word),feeling=lesson11Terms.find(v=>v.hanzi===['暖','热','凉','冷'][i]);return v&&<button type="button" key={word} className={'l11-visual-tile season-'+i} onClick={()=>onSelect('c11-s011')}><Icon size={38}/><strong lang="zh-Hans">{word} · {feeling?.hanzi}</strong><span className="pinyin">{v.pinyin} · {feeling?.pinyin}</span><span className="l11-translation">{v.meaning[locale]} · {feeling?.meaning[locale]}</span></button>;})}</div>}
+ {topic==='degree'&&<div className="l11-pair">{tile('c11-s017',undefined,<span className="l11-chunk"><b>有点儿</b> + 冷</span>)}{tile('c11-s018',undefined,<span className="l11-chunk">冷 + <b>一点儿</b></span>)}</div>}
+ {topic==='transport'&&<div className="l11-four-grid">{tile('c11-s021',Train,<span className="l11-chunk">坐</span>)}{tile('c11-s022',Bike,<span className="l11-chunk">骑</span>)}{tile('c11-s024',Car,<span className="l11-chunk">开</span>)}{tile('c11-s023',Footprints,<span className="l11-chunk">走路</span>)}</div>}
+ {topic==='routine'&&<><div className="l11-clock"><ReferenceClockFace minutes={360} label="Six o’clock — 六点"/>{tile('c11-s028')}</div><div className="l11-pair">{tile('c11-s029')}{tile('c11-s030')}</div></>}
+ {topic==='objects'&&<div className="l11-object-grid">{['c11-s032','c11-s033','c11-s034','c11-s035','c11-s036'].map((id,i)=>tile(id,[Bed,FileText,Map,RectangleHorizontal,ClipboardList][i]))}</div>}
+ {topic==='frequency'&&<><div className="l11-frequency">{['常常','有时候','很少','从不'].map((word,i)=>term(word,<span className="l11-dots" aria-hidden="true">{Array.from({length:6},(_,n)=><i className={n<[5,3,1,0][i]?'filled':''} key={n}/>)}</span>))}</div><div className="l11-continuous">{term('一直',<span className="l11-continuous-line" aria-hidden="true"/>)}{tile('c11-s045')}</div></>}
+ {topic==='everyday'&&<><div className="l11-receipt"><span className="l11-chunk">¥30 + ¥20 + ¥22 = <b>¥72</b></span>{tile('c11-s051')}</div><div className="l11-pair">{tile('c11-s048',Apple)}{tile('c11-s049',Coffee)}</div></>}
+ </section>;
+}

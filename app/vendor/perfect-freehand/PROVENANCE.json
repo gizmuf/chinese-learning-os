@@ -1,0 +1,44 @@
+{
+  "source": "https://github.com/steveruizok/perfect-freehand",
+  "retrieved": "2026-10-22",
+  "license": "MIT",
+  "reason": "Vendored upstream source; package registry unavailable in this environment.",
+  "files": [
+    {
+      "file": "getStroke.ts",
+      "gitBlob": "ee0bea8d8417327f4c281aed568c020eff119a53"
+    },
+    {
+      "file": "getStrokePoints.ts",
+      "gitBlob": "1b130e59eb3a2359bd9150c14b3e0fb5417f7fb2"
+    },
+    {
+      "file": "getStrokeOutlinePoints.ts",
+      "gitBlob": "ec5f75caf09a8cf499441bf5eb889b9a18d0a172"
+    },
+    {
+      "file": "vec.ts",
+      "gitBlob": "3c9ed4647b2e58c5c745f4b4cee6e8c1c9813f94"
+    },
+    {
+      "file": "types.ts",
+      "gitBlob": "8fa97932c6b6e57065c6ce6204e5b3afdf9acd48"
+    },
+    {
+      "file": "constants.ts",
+      "gitBlob": "cd26232e203868cdcf5b4b944687ee7790f5d0bb"
+    },
+    {
+      "file": "LICENSE",
+      "gitBlob": "bdcc8b850fa75b94f70f2cfd012abf74744cd61c"
+    },
+    {
+      "file": "getStrokeRadius.ts",
+      "gitBlob": "3a87e03aac56132627e36be30f6f2eb9763c6b80"
+    },
+    {
+      "file": "simulatePressure.ts",
+      "gitBlob": "0ad4022e4fca3ca658fc6ba9ea7ed229f8cd58ee"
+    }
+  ]
+}

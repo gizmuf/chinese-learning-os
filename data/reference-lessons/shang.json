@@ -1,0 +1,1839 @@
+{
+  "id": "shang",
+  "title": "上 in everyday contexts",
+  "intro": "Explore position, movement, daily activities, previous time, results and advanced uses from this visual reference. This is the source’s selected 上 family, not every possible Mandarin usage. Everyday shàng can become unstressed shang in compounds.",
+  "source": {
+    "filename": "Mandarin_SHANG_All_Usages_iPad_SAFE(1).pdf",
+    "sha256": "f80157217ac781b6b01435b24ff5d5d8679943e39ee98f0b950ad4827ca187cb",
+    "pages": 4
+  },
+  "terms": [
+    {
+      "id": "ref-shang-t001",
+      "hanzi": "上",
+      "pinyin": "shàng",
+      "en": "up / on / above; also attend or previous in context",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t002",
+      "hanzi": "上面",
+      "pinyin": "shàngmiàn",
+      "en": "on top / above",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t003",
+      "hanzi": "楼上",
+      "pinyin": "lóushàng",
+      "en": "upstairs",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t004",
+      "hanzi": "床上",
+      "pinyin": "chuáng shang",
+      "en": "on the bed",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t005",
+      "hanzi": "桌子上",
+      "pinyin": "zhuōzi shang",
+      "en": "on the table",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t006",
+      "hanzi": "路上",
+      "pinyin": "lùshang",
+      "en": "on the way",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t007",
+      "hanzi": "上楼",
+      "pinyin": "shàng lóu",
+      "en": "go upstairs",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t008",
+      "hanzi": "上车",
+      "pinyin": "shàng chē",
+      "en": "get into a car / board a vehicle",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t009",
+      "hanzi": "上床",
+      "pinyin": "shàng chuáng",
+      "en": "get into bed",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t010",
+      "hanzi": "上山",
+      "pinyin": "shàng shān",
+      "en": "go up a mountain",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t011",
+      "hanzi": "上来",
+      "pinyin": "shànglái",
+      "en": "come up",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t012",
+      "hanzi": "上去",
+      "pinyin": "shàngqù",
+      "en": "go up",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t013",
+      "hanzi": "上飞机",
+      "pinyin": "shàng fēijī",
+      "en": "board a plane",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t014",
+      "hanzi": "上课",
+      "pinyin": "shàngkè",
+      "en": "attend class",
+      "sourcePages": [
+        2,
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t015",
+      "hanzi": "上学",
+      "pinyin": "shàngxué",
+      "en": "attend school",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t016",
+      "hanzi": "上班",
+      "pinyin": "shàngbān",
+      "en": "go to work",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t017",
+      "hanzi": "上大学",
+      "pinyin": "shàng dàxué",
+      "en": "attend university",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t018",
+      "hanzi": "上网",
+      "pinyin": "shàngwǎng",
+      "en": "go online",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t019",
+      "hanzi": "上厕所",
+      "pinyin": "shàng cèsuǒ",
+      "en": "go to the toilet",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t020",
+      "hanzi": "上菜",
+      "pinyin": "shàng cài",
+      "en": "serve dishes",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t021",
+      "hanzi": "课",
+      "pinyin": "kè",
+      "en": "a lesson",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t022",
+      "hanzi": "开始上课",
+      "pinyin": "kāishǐ shàngkè",
+      "en": "start class",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t023",
+      "hanzi": "下课",
+      "pinyin": "xiàkè",
+      "en": "finish class",
+      "sourcePages": [
+        2,
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t024",
+      "hanzi": "上个月",
+      "pinyin": "shàng ge yuè",
+      "en": "last month",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t025",
+      "hanzi": "下个月",
+      "pinyin": "xià ge yuè",
+      "en": "next month",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t026",
+      "hanzi": "上星期",
+      "pinyin": "shàng xīngqī",
+      "en": "last week",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t027",
+      "hanzi": "下星期",
+      "pinyin": "xià xīngqī",
+      "en": "next week",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t028",
+      "hanzi": "上次",
+      "pinyin": "shàng cì",
+      "en": "last time",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t029",
+      "hanzi": "下次",
+      "pinyin": "xià cì",
+      "en": "next time",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t030",
+      "hanzi": "上一节课",
+      "pinyin": "shàng yì jié kè",
+      "en": "previous class",
+      "sourcePages": [
+        2,
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t031",
+      "hanzi": "下一节课",
+      "pinyin": "xià yì jié kè",
+      "en": "next class",
+      "sourcePages": [
+        2,
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t032",
+      "hanzi": "上午",
+      "pinyin": "shàngwǔ",
+      "en": "before noon",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t033",
+      "hanzi": "上半年",
+      "pinyin": "shàng bànnián",
+      "en": "first half of the year",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t034",
+      "hanzi": "穿上",
+      "pinyin": "chuān shang",
+      "en": "put on clothes",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t035",
+      "hanzi": "戴上",
+      "pinyin": "dài shang",
+      "en": "put on a hat",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t036",
+      "hanzi": "关上",
+      "pinyin": "guān shang",
+      "en": "close / shut",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t037",
+      "hanzi": "锁上",
+      "pinyin": "suǒ shang",
+      "en": "lock",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t038",
+      "hanzi": "赶上",
+      "pinyin": "gǎnshang",
+      "en": "catch up",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t039",
+      "hanzi": "爱上",
+      "pinyin": "ài shang",
+      "en": "fall in love",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t040",
+      "hanzi": "写上",
+      "pinyin": "xiě shang",
+      "en": "write onto",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t041",
+      "hanzi": "实际上",
+      "pinyin": "shíjì shang",
+      "en": "actually",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t042",
+      "hanzi": "基本上",
+      "pinyin": "jīběn shang",
+      "en": "basically",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t043",
+      "hanzi": "理论上",
+      "pinyin": "lǐlùn shang",
+      "en": "in theory",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t044",
+      "hanzi": "在工作上",
+      "pinyin": "zài gōngzuò shang",
+      "en": "in work matters",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t045",
+      "hanzi": "历史上",
+      "pinyin": "lìshǐ shang",
+      "en": "historically",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t046",
+      "hanzi": "以上",
+      "pinyin": "yǐshàng",
+      "en": "above / or more",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t047",
+      "hanzi": "上百",
+      "pinyin": "shàng bǎi",
+      "en": "over a hundred",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t048",
+      "hanzi": "上千",
+      "pinyin": "shàng qiān",
+      "en": "over a thousand",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t049",
+      "hanzi": "上级",
+      "pinyin": "shàngjí",
+      "en": "higher level / superior",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t050",
+      "hanzi": "上司",
+      "pinyin": "shàngsi",
+      "en": "superior / boss",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t051",
+      "hanzi": "上传",
+      "pinyin": "shàngchuán",
+      "en": "upload",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-t052",
+      "hanzi": "上声",
+      "pinyin": "shǎngshēng",
+      "en": "the third tone; optional technical reading shǎng",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    }
+  ],
+  "examples": [
+    {
+      "id": "ref-shang-e001",
+      "hanzi": "我通常在床上躺一会儿。",
+      "pinyin": "Wǒ tōngcháng zài chuáng shang tǎng yíhuìr.",
+      "en": "I usually lie in bed for a while.",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-e002",
+      "hanzi": "我早上八点四十分上课。",
+      "pinyin": "Wǒ zǎoshang bā diǎn sìshí fēn shàngkè.",
+      "en": "I have class at 8:40 A.M.",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-e003",
+      "hanzi": "我十点半回去上课。",
+      "pinyin": "Wǒ shí diǎn bàn huíqù shàngkè.",
+      "en": "I go back to class at 10:30.",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-e004",
+      "hanzi": "下一节课下午一点开始。",
+      "pinyin": "Xià yì jié kè xiàwǔ yì diǎn kāishǐ.",
+      "en": "The next class starts at 1 P.M.",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-e005",
+      "hanzi": "我下午两点半下课。",
+      "pinyin": "Wǒ xiàwǔ liǎng diǎn bàn xiàkè.",
+      "en": "I finish class at 2:30 P.M.",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-shang-e006",
+      "hanzi": "他在楼上。",
+      "pinyin": "Tā zài lóushàng.",
+      "en": "He is upstairs.",
+      "sourcePages": [
+        1
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e007",
+      "hanzi": "他上楼。",
+      "pinyin": "Tā shàng lóu.",
+      "en": "He goes upstairs.",
+      "sourcePages": [
+        1
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e008",
+      "hanzi": "书在桌子上。",
+      "pinyin": "Shū zài zhuōzi shang.",
+      "en": "The book is on the table.",
+      "sourcePages": [
+        1
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e009",
+      "hanzi": "我在路上。",
+      "pinyin": "Wǒ zài lùshang.",
+      "en": "I am on my way.",
+      "sourcePages": [
+        1
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e010",
+      "hanzi": "我上车了。",
+      "pinyin": "Wǒ shàng chē le.",
+      "en": "I have got into the car.",
+      "sourcePages": [
+        1
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e011",
+      "hanzi": "我上床睡觉。",
+      "pinyin": "Wǒ shàng chuáng shuìjiào.",
+      "en": "I get into bed to sleep.",
+      "sourcePages": [
+        1
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e012",
+      "hanzi": "我们上山。",
+      "pinyin": "Wǒmen shàng shān.",
+      "en": "We go up the mountain.",
+      "sourcePages": [
+        1
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e013",
+      "hanzi": "我们上飞机。",
+      "pinyin": "Wǒmen shàng fēijī.",
+      "en": "We board the plane.",
+      "sourcePages": [
+        1
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e014",
+      "hanzi": "我上学。",
+      "pinyin": "Wǒ shàngxué.",
+      "en": "I attend school.",
+      "sourcePages": [
+        2
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e015",
+      "hanzi": "我八点上班。",
+      "pinyin": "Wǒ bā diǎn shàngbān.",
+      "en": "I go to work at eight.",
+      "sourcePages": [
+        2
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e016",
+      "hanzi": "我上大学。",
+      "pinyin": "Wǒ shàng dàxué.",
+      "en": "I attend university.",
+      "sourcePages": [
+        2
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e017",
+      "hanzi": "我在家上网。",
+      "pinyin": "Wǒ zài jiā shàngwǎng.",
+      "en": "I go online at home.",
+      "sourcePages": [
+        2
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e018",
+      "hanzi": "我去上厕所。",
+      "pinyin": "Wǒ qù shàng cèsuǒ.",
+      "en": "I go to the toilet.",
+      "sourcePages": [
+        2
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e019",
+      "hanzi": "服务员上菜了。",
+      "pinyin": "Fúwùyuán shàng cài le.",
+      "en": "The waiter has served the dishes.",
+      "sourcePages": [
+        2
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e020",
+      "hanzi": "我们开始上课。",
+      "pinyin": "Wǒmen kāishǐ shàngkè.",
+      "en": "We begin class.",
+      "sourcePages": [
+        2
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e021",
+      "hanzi": "上个月我在家。",
+      "pinyin": "Shàng ge yuè wǒ zài jiā.",
+      "en": "Last month I was at home.",
+      "sourcePages": [
+        2
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e022",
+      "hanzi": "下个月我去学校。",
+      "pinyin": "Xià ge yuè wǒ qù xuéxiào.",
+      "en": "Next month I will go to school.",
+      "sourcePages": [
+        2
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e023",
+      "hanzi": "上星期我上课。",
+      "pinyin": "Shàng xīngqī wǒ shàngkè.",
+      "en": "Last week I attended class.",
+      "sourcePages": [
+        2
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e024",
+      "hanzi": "下星期我上课。",
+      "pinyin": "Xià xīngqī wǒ shàngkè.",
+      "en": "Next week I will attend class.",
+      "sourcePages": [
+        2
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e025",
+      "hanzi": "上次我坐车。",
+      "pinyin": "Shàng cì wǒ zuò chē.",
+      "en": "Last time I went by car.",
+      "sourcePages": [
+        2
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e026",
+      "hanzi": "下次我走路。",
+      "pinyin": "Xià cì wǒ zǒulù.",
+      "en": "Next time I will walk.",
+      "sourcePages": [
+        2
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e027",
+      "hanzi": "上一节课我学习中文。",
+      "pinyin": "Shàng yì jié kè wǒ xuéxí Zhōngwén.",
+      "en": "In the previous class I studied Chinese.",
+      "sourcePages": [
+        2
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e028",
+      "hanzi": "上半年我学习中文。",
+      "pinyin": "Shàng bànnián wǒ xuéxí Zhōngwén.",
+      "en": "In the first half of the year I studied Chinese.",
+      "sourcePages": [
+        2
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e029",
+      "hanzi": "请关上门。",
+      "pinyin": "Qǐng guān shang mén.",
+      "en": "Please close the door.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e030",
+      "hanzi": "请锁上门。",
+      "pinyin": "Qǐng suǒ shang mén.",
+      "en": "Please lock the door.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e031",
+      "hanzi": "我穿上衣服。",
+      "pinyin": "Wǒ chuān shang yīfu.",
+      "en": "I put on clothes.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e032",
+      "hanzi": "他戴上帽子。",
+      "pinyin": "Tā dài shang màozi.",
+      "en": "He puts on a hat.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e033",
+      "hanzi": "我赶上了公共汽车。",
+      "pinyin": "Wǒ gǎnshang le gōnggòng qìchē.",
+      "en": "I caught the bus.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e034",
+      "hanzi": "我爱上了这座城市。",
+      "pinyin": "Wǒ ài shang le zhè zuò chéngshì.",
+      "en": "I fell in love with this city.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e035",
+      "hanzi": "请写上你的名字。",
+      "pinyin": "Qǐng xiě shang nǐ de míngzi.",
+      "en": "Please write your name onto it.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e036",
+      "hanzi": "实际上，我在家。",
+      "pinyin": "Shíjì shang, wǒ zài jiā.",
+      "en": "Actually, I am at home.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e037",
+      "hanzi": "基本上，我每天都学习。",
+      "pinyin": "Jīběn shang, wǒ měitiān dōu xuéxí.",
+      "en": "Basically, I study every day.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e038",
+      "hanzi": "理论上，这样可以。",
+      "pinyin": "Lǐlùn shang, zhèyàng kěyǐ.",
+      "en": "In theory, this will work.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e039",
+      "hanzi": "在工作上，他帮助我。",
+      "pinyin": "Zài gōngzuò shang, tā bāngzhù wǒ.",
+      "en": "He helps me with work matters.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e040",
+      "hanzi": "历史上，这里很重要。",
+      "pinyin": "Lìshǐ shang, zhèlǐ hěn zhòngyào.",
+      "en": "Historically, this place was important.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e041",
+      "hanzi": "这本书有一百页以上。",
+      "pinyin": "Zhè běn shū yǒu yì bǎi yè yǐshàng.",
+      "en": "This book has a hundred pages or more.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e042",
+      "hanzi": "这里有上百人。",
+      "pinyin": "Zhèlǐ yǒu shàng bǎi rén.",
+      "en": "There are over a hundred people here.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e043",
+      "hanzi": "这里有上千人。",
+      "pinyin": "Zhèlǐ yǒu shàng qiān rén.",
+      "en": "There are over a thousand people here.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e044",
+      "hanzi": "他是我的上司。",
+      "pinyin": "Tā shì wǒ de shàngsi.",
+      "en": "He is my boss.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e045",
+      "hanzi": "请向上级报告。",
+      "pinyin": "Qǐng xiàng shàngjí bàogào.",
+      "en": "Please report to your higher-up.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    },
+    {
+      "id": "ref-shang-e046",
+      "hanzi": "我上传了照片。",
+      "pinyin": "Wǒ shàngchuán le zhàopiàn.",
+      "en": "I uploaded the photos.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "practice",
+      "note": "Additional authored practice for this source distinction; not a quotation from the PDF."
+    }
+  ],
+  "topics": [
+    {
+      "id": "ref-shang-p01-position",
+      "title": "Position: where something is",
+      "explanation": "Keep position separate from an action. 楼上 says upstairs; 上楼 describes going upstairs. 床上 is on the bed; 上床 describes getting into bed.",
+      "sourcePages": [
+        1
+      ],
+      "termIds": [
+        "ref-shang-t001",
+        "ref-shang-t002",
+        "ref-shang-t003",
+        "ref-shang-t004",
+        "ref-shang-t005",
+        "ref-shang-t006"
+      ],
+      "exampleIds": [
+        "ref-shang-e006",
+        "ref-shang-e007",
+        "ref-shang-e008",
+        "ref-shang-e009"
+      ],
+      "visualIntent": "Static position on a bed/table or upper floor, contrasted with moving into/up to it."
+    },
+    {
+      "id": "ref-shang-p01-movement",
+      "title": "Movement: go up or board",
+      "explanation": "Upward movement and boarding use 上. 上来 is upward toward the speaker; 上去 is upward away. The speaker must remain visible.",
+      "sourcePages": [
+        1
+      ],
+      "termIds": [
+        "ref-shang-t007",
+        "ref-shang-t008",
+        "ref-shang-t009",
+        "ref-shang-t010",
+        "ref-shang-t011",
+        "ref-shang-t012",
+        "ref-shang-t013"
+      ],
+      "exampleIds": [
+        "ref-shang-e010",
+        "ref-shang-e011",
+        "ref-shang-e012",
+        "ref-shang-e013"
+      ],
+      "visualIntent": "Stairs, vehicle boarding, bed and mountain; source comparison 上来/上去 uses explicit speaker placement."
+    },
+    {
+      "id": "ref-shang-p02-activities",
+      "title": "Activities: what you do",
+      "explanation": "Learn the complete expression rather than translating 上 as physical up everywhere. 课 is a lesson; 上课 is attending class; 开始上课 means start class.",
+      "sourcePages": [
+        2
+      ],
+      "termIds": [
+        "ref-shang-t014",
+        "ref-shang-t015",
+        "ref-shang-t016",
+        "ref-shang-t017",
+        "ref-shang-t018",
+        "ref-shang-t019",
+        "ref-shang-t020",
+        "ref-shang-t021",
+        "ref-shang-t022",
+        "ref-shang-t023"
+      ],
+      "exampleIds": [
+        "ref-shang-e014",
+        "ref-shang-e015",
+        "ref-shang-e016",
+        "ref-shang-e017",
+        "ref-shang-e018",
+        "ref-shang-e019",
+        "ref-shang-e020"
+      ],
+      "visualIntent": "A lesson/class timeline and context cards for school, work, internet, toilet and serving dishes; do not illustrate all as literal climbing."
+    },
+    {
+      "id": "ref-shang-p02-time",
+      "title": "Previous and next",
+      "explanation": "In these time expressions 上 refers to the previous period and 下 to the next. Compare them around an explicitly labelled reference, not up/down on a physical staircase.",
+      "sourcePages": [
+        2
+      ],
+      "termIds": [
+        "ref-shang-t024",
+        "ref-shang-t025",
+        "ref-shang-t026",
+        "ref-shang-t027",
+        "ref-shang-t028",
+        "ref-shang-t029",
+        "ref-shang-t030",
+        "ref-shang-t031",
+        "ref-shang-t032",
+        "ref-shang-t033"
+      ],
+      "exampleIds": [
+        "ref-shang-e021",
+        "ref-shang-e022",
+        "ref-shang-e023",
+        "ref-shang-e024",
+        "ref-shang-e025",
+        "ref-shang-e026",
+        "ref-shang-e027",
+        "ref-shang-e028"
+      ],
+      "visualIntent": "Previous/current-reference/next timeline for month, week, occasion and class; source day/half-year distinctions."
+    },
+    {
+      "id": "ref-shang-p03-result",
+      "title": "After a verb: a result",
+      "explanation": "The complete phrase can express an achieved result: put something on, close, lock, catch up or write onto. Observe a start and result; do not treat 上 as one fixed English preposition.",
+      "sourcePages": [
+        3
+      ],
+      "termIds": [
+        "ref-shang-t034",
+        "ref-shang-t035",
+        "ref-shang-t036",
+        "ref-shang-t037",
+        "ref-shang-t038",
+        "ref-shang-t039",
+        "ref-shang-t040"
+      ],
+      "exampleIds": [
+        "ref-shang-e029",
+        "ref-shang-e030",
+        "ref-shang-e031",
+        "ref-shang-e032",
+        "ref-shang-e033",
+        "ref-shang-e034",
+        "ref-shang-e035"
+      ],
+      "visualIntent": "Door open→closed; lock open→locked; clothes/hat put on; catching-up distance closes; writing appears on a surface."
+    },
+    {
+      "id": "ref-shang-p03-abstract",
+      "title": "Abstract contexts",
+      "explanation": "Here 上 is part of an expression or frames a domain: actually, basically, in theory, in work matters, historically. Read each as a complete contextual expression.",
+      "sourcePages": [
+        3
+      ],
+      "termIds": [
+        "ref-shang-t041",
+        "ref-shang-t042",
+        "ref-shang-t043",
+        "ref-shang-t044",
+        "ref-shang-t045"
+      ],
+      "exampleIds": [
+        "ref-shang-e036",
+        "ref-shang-e037",
+        "ref-shang-e038",
+        "ref-shang-e039",
+        "ref-shang-e040"
+      ],
+      "visualIntent": "Context frames for reality, a general statement, theory, work and history; keep the full expression visible with its English use."
+    },
+    {
+      "id": "ref-shang-p03-quantity",
+      "title": "Quantity, rank and technology",
+      "explanation": "The source also covers amounts, hierarchy and uploading. These meanings belong to their complete expressions and contexts, not one universal literal-up rule.",
+      "sourcePages": [
+        3
+      ],
+      "termIds": [
+        "ref-shang-t046",
+        "ref-shang-t047",
+        "ref-shang-t048",
+        "ref-shang-t049",
+        "ref-shang-t050",
+        "ref-shang-t051"
+      ],
+      "exampleIds": [
+        "ref-shang-e041",
+        "ref-shang-e042",
+        "ref-shang-e043",
+        "ref-shang-e044",
+        "ref-shang-e045",
+        "ref-shang-e046"
+      ],
+      "visualIntent": "A quantity threshold, approximate large counts, rank levels and an illustrative local-device→remote-copy upload scene; no real upload control."
+    },
+    {
+      "id": "ref-shang-p04",
+      "title": "上 in a day and an optional reading",
+      "explanation": "Contrast 上课/下课 and 上一节课/下一节课. The optional technical term 上声 has shǎng, unlike the main everyday shàng/unstressed shang. These examples describe the PDF day, not a change to your own My Day lesson.",
+      "sourcePages": [
+        4
+      ],
+      "termIds": [
+        "ref-shang-t014",
+        "ref-shang-t023",
+        "ref-shang-t030",
+        "ref-shang-t031",
+        "ref-shang-t052"
+      ],
+      "exampleIds": [
+        "ref-shang-e001",
+        "ref-shang-e002",
+        "ref-shang-e003",
+        "ref-shang-e004",
+        "ref-shang-e005"
+      ],
+      "visualIntent": "Compare source class start/return/next/end around 8:40/10:30/13:00/14:30, plus neutral locative 上 and optional shǎng reading."
+    }
+  ],
+  "checks": [
+    {
+      "id": "ref-shang-check-001",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t003",
+      "optionIds": [
+        "ref-shang-t004",
+        "ref-shang-t005",
+        "ref-shang-t006",
+        "ref-shang-t003"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-shang-check-002",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t004",
+      "optionIds": [
+        "ref-shang-t005",
+        "ref-shang-t006",
+        "ref-shang-t004",
+        "ref-shang-t003"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-shang-check-003",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t005",
+      "optionIds": [
+        "ref-shang-t006",
+        "ref-shang-t005",
+        "ref-shang-t003",
+        "ref-shang-t004"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-shang-check-004",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t006",
+      "optionIds": [
+        "ref-shang-t006",
+        "ref-shang-t003",
+        "ref-shang-t004",
+        "ref-shang-t005"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-shang-check-005",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t007",
+      "optionIds": [
+        "ref-shang-t003",
+        "ref-shang-t004",
+        "ref-shang-t005",
+        "ref-shang-t007"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-shang-check-006",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t008",
+      "optionIds": [
+        "ref-shang-t004",
+        "ref-shang-t005",
+        "ref-shang-t008",
+        "ref-shang-t003"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-shang-check-007",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t009",
+      "optionIds": [
+        "ref-shang-t005",
+        "ref-shang-t009",
+        "ref-shang-t003",
+        "ref-shang-t004"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-shang-check-008",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t010",
+      "optionIds": [
+        "ref-shang-t010",
+        "ref-shang-t003",
+        "ref-shang-t004",
+        "ref-shang-t005"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-shang-check-009",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t014",
+      "optionIds": [
+        "ref-shang-t015",
+        "ref-shang-t016",
+        "ref-shang-t017",
+        "ref-shang-t014"
+      ],
+      "sourcePages": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": "ref-shang-check-010",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t015",
+      "optionIds": [
+        "ref-shang-t016",
+        "ref-shang-t017",
+        "ref-shang-t015",
+        "ref-shang-t014"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-shang-check-011",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t016",
+      "optionIds": [
+        "ref-shang-t017",
+        "ref-shang-t016",
+        "ref-shang-t014",
+        "ref-shang-t015"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-shang-check-012",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t017",
+      "optionIds": [
+        "ref-shang-t017",
+        "ref-shang-t014",
+        "ref-shang-t015",
+        "ref-shang-t016"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-shang-check-013",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t024",
+      "optionIds": [
+        "ref-shang-t014",
+        "ref-shang-t015",
+        "ref-shang-t016",
+        "ref-shang-t024"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-shang-check-014",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t025",
+      "optionIds": [
+        "ref-shang-t015",
+        "ref-shang-t016",
+        "ref-shang-t025",
+        "ref-shang-t014"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-shang-check-015",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t026",
+      "optionIds": [
+        "ref-shang-t016",
+        "ref-shang-t026",
+        "ref-shang-t014",
+        "ref-shang-t015"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-shang-check-016",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t027",
+      "optionIds": [
+        "ref-shang-t027",
+        "ref-shang-t014",
+        "ref-shang-t015",
+        "ref-shang-t016"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-shang-check-017",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t034",
+      "optionIds": [
+        "ref-shang-t035",
+        "ref-shang-t036",
+        "ref-shang-t037",
+        "ref-shang-t034"
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-shang-check-018",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t035",
+      "optionIds": [
+        "ref-shang-t036",
+        "ref-shang-t037",
+        "ref-shang-t035",
+        "ref-shang-t034"
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-shang-check-019",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t036",
+      "optionIds": [
+        "ref-shang-t037",
+        "ref-shang-t036",
+        "ref-shang-t034",
+        "ref-shang-t035"
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-shang-check-020",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t037",
+      "optionIds": [
+        "ref-shang-t037",
+        "ref-shang-t034",
+        "ref-shang-t035",
+        "ref-shang-t036"
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-shang-check-021",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t041",
+      "optionIds": [
+        "ref-shang-t034",
+        "ref-shang-t035",
+        "ref-shang-t036",
+        "ref-shang-t041"
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-shang-check-022",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t042",
+      "optionIds": [
+        "ref-shang-t035",
+        "ref-shang-t036",
+        "ref-shang-t042",
+        "ref-shang-t034"
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-shang-check-023",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t043",
+      "optionIds": [
+        "ref-shang-t036",
+        "ref-shang-t043",
+        "ref-shang-t034",
+        "ref-shang-t035"
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-shang-check-024",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t044",
+      "optionIds": [
+        "ref-shang-t044",
+        "ref-shang-t034",
+        "ref-shang-t035",
+        "ref-shang-t036"
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-shang-check-025",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t046",
+      "optionIds": [
+        "ref-shang-t034",
+        "ref-shang-t035",
+        "ref-shang-t036",
+        "ref-shang-t046"
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-shang-check-026",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t047",
+      "optionIds": [
+        "ref-shang-t035",
+        "ref-shang-t036",
+        "ref-shang-t047",
+        "ref-shang-t034"
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-shang-check-027",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t048",
+      "optionIds": [
+        "ref-shang-t036",
+        "ref-shang-t048",
+        "ref-shang-t034",
+        "ref-shang-t035"
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-shang-check-028",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t049",
+      "optionIds": [
+        "ref-shang-t049",
+        "ref-shang-t034",
+        "ref-shang-t035",
+        "ref-shang-t036"
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-shang-check-029",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t018",
+      "optionIds": [
+        "ref-shang-t014",
+        "ref-shang-t015",
+        "ref-shang-t016",
+        "ref-shang-t018"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-shang-check-030",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t023",
+      "optionIds": [
+        "ref-shang-t015",
+        "ref-shang-t016",
+        "ref-shang-t023",
+        "ref-shang-t014"
+      ],
+      "sourcePages": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": "ref-shang-check-031",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t030",
+      "optionIds": [
+        "ref-shang-t016",
+        "ref-shang-t030",
+        "ref-shang-t014",
+        "ref-shang-t015"
+      ],
+      "sourcePages": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": "ref-shang-check-032",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-shang-t031",
+      "optionIds": [
+        "ref-shang-t031",
+        "ref-shang-t014",
+        "ref-shang-t015",
+        "ref-shang-t016"
+      ],
+      "sourcePages": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": "ref-shang-check-033",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-shang-t003",
+      "optionIds": [],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-shang-check-034",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-shang-t004",
+      "optionIds": [],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-shang-check-035",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-shang-t007",
+      "optionIds": [],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-shang-check-036",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-shang-t009",
+      "optionIds": [],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-shang-check-037",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-shang-t014",
+      "optionIds": [],
+      "sourcePages": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": "ref-shang-check-038",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-shang-t023",
+      "optionIds": [],
+      "sourcePages": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": "ref-shang-check-039",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-shang-e005",
+      "optionIds": [],
+      "sourcePages": [
+        4
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "page": 1,
+      "topicIds": [
+        "ref-shang-p01-position",
+        "ref-shang-p01-movement"
+      ],
+      "summary": "Position: where something is; Movement: go up or board"
+    },
+    {
+      "page": 2,
+      "topicIds": [
+        "ref-shang-p02-activities",
+        "ref-shang-p02-time"
+      ],
+      "summary": "Activities: what you do; Previous and next"
+    },
+    {
+      "page": 3,
+      "topicIds": [
+        "ref-shang-p03-result",
+        "ref-shang-p03-abstract",
+        "ref-shang-p03-quantity"
+      ],
+      "summary": "After a verb: a result; Abstract contexts; Quantity, rank and technology"
+    },
+    {
+      "page": 4,
+      "topicIds": [
+        "ref-shang-p04"
+      ],
+      "summary": "上 in a day and an optional reading"
+    }
+  ]
+}

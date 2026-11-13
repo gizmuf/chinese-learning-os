@@ -1,0 +1,698 @@
+{
+  "ref-move-p01": {
+    "title": "One path, two viewpoints",
+    "rule": "The first character tells the path. 来 means toward the speaker; 去 means away. Compare the pair, then move the speaker while keeping the path the same.",
+    "focus": [
+      {
+        "id": "ref-move-t003",
+        "hanzi": "进来",
+        "pinyin": "jìn lái",
+        "en": "come in"
+      },
+      {
+        "id": "ref-move-t004",
+        "hanzi": "进去",
+        "pinyin": "jìn qù",
+        "en": "go in"
+      },
+      {
+        "id": "ref-move-t011",
+        "hanzi": "上来",
+        "pinyin": "shàng lái",
+        "en": "come up"
+      },
+      {
+        "id": "ref-move-t012",
+        "hanzi": "上去",
+        "pinyin": "shàng qù",
+        "en": "go up"
+      },
+      {
+        "id": "ref-move-t013",
+        "hanzi": "下来",
+        "pinyin": "xià lái",
+        "en": "come down"
+      },
+      {
+        "id": "ref-move-t014",
+        "hanzi": "下去",
+        "pinyin": "xià qù",
+        "en": "go down"
+      }
+    ]
+  },
+  "ref-move-p02": {
+    "title": "Walking, leaving, arriving",
+    "rule": "走路 tells how someone travels. 走了 can mean someone has left; 到了 focuses on arrival. 了 is used here for the changed situation or completed event.",
+    "focus": [
+      {
+        "id": "ref-move-t018",
+        "hanzi": "走路",
+        "pinyin": "zǒu lù",
+        "en": "walk on foot"
+      },
+      {
+        "id": "ref-move-t019",
+        "hanzi": "走了",
+        "pinyin": "zǒu le",
+        "en": "left / went away"
+      },
+      {
+        "id": "ref-move-t020",
+        "hanzi": "去了",
+        "pinyin": "qù le",
+        "en": "went / has gone"
+      },
+      {
+        "id": "ref-move-t021",
+        "hanzi": "来了",
+        "pinyin": "lái le",
+        "en": "came / has arrived"
+      },
+      {
+        "id": "ref-move-t022",
+        "hanzi": "到了",
+        "pinyin": "dào le",
+        "en": "arrived"
+      },
+      {
+        "id": "ref-move-t023",
+        "hanzi": "回来了",
+        "pinyin": "huí lái le",
+        "en": "came back / has returned"
+      }
+    ]
+  },
+  "ref-move-p03": {
+    "title": "Follow a trip to school",
+    "rule": "Go → walk → arrive → enter → come out → return. The speaker stays at home in this example. Use the full sentence to say what changes.",
+    "focus": [
+      {
+        "id": "ref-move-e001",
+        "hanzi": "我现在去学校。",
+        "pinyin": "Wǒ xiànzài qù xuéxiào.",
+        "en": "I am going to school now."
+      },
+      {
+        "id": "ref-move-e002",
+        "hanzi": "我走路去学校。",
+        "pinyin": "Wǒ zǒu lù qù xuéxiào.",
+        "en": "I walk to school."
+      },
+      {
+        "id": "ref-move-e003",
+        "hanzi": "我到学校了。",
+        "pinyin": "Wǒ dào xuéxiào le.",
+        "en": "I have arrived at school."
+      },
+      {
+        "id": "ref-move-e007",
+        "hanzi": "我回来了。",
+        "pinyin": "Wǒ huí lái le.",
+        "en": "I am back."
+      }
+    ]
+  },
+  "ref-time-p01": {
+    "title": "Tell the time",
+    "rule": "Ask 现在几点了？ Then answer with a time: 上午 + 八点 + 四十分. Put the time before an activity: 我 + 八点 + 起床.",
+    "focus": [
+      {
+        "id": "ref-time-t088",
+        "hanzi": "现在几点了？",
+        "pinyin": "Xiànzài jǐ diǎn le?",
+        "en": "What time is it now?"
+      },
+      {
+        "id": "ref-time-e002",
+        "hanzi": "现在八点四十分。",
+        "pinyin": "Xiànzài bā diǎn sìshí fēn.",
+        "en": "It is 8:40 now."
+      },
+      {
+        "id": "ref-time-e006",
+        "hanzi": "我八点起床。",
+        "pinyin": "Wǒ bā diǎn qǐchuáng.",
+        "en": "I get up at eight."
+      }
+    ]
+  },
+  "ref-time-p02": {
+    "title": "Read the two hands",
+    "rule": "The short hand shows the hour; the long hand shows minutes. Compare 八点一刻 (8:15), 八点半 (8:30) and 八点三刻 (8:45).",
+    "focus": [
+      {
+        "id": "ref-time-t009",
+        "hanzi": "八点一刻",
+        "pinyin": "bā diǎn yí kè",
+        "en": "8:15"
+      },
+      {
+        "id": "ref-time-t010",
+        "hanzi": "八点半",
+        "pinyin": "bā diǎn bàn",
+        "en": "8:30"
+      },
+      {
+        "id": "ref-time-t012",
+        "hanzi": "八点三刻",
+        "pinyin": "bā diǎn sān kè",
+        "en": "8:45"
+      }
+    ]
+  },
+  "ref-time-p03": {
+    "title": "Add a part of the day",
+    "rule": "八点 can mean morning or evening. Add 早上 or 晚上 to make it clear. Daypart boundaries are approximate.",
+    "focus": [
+      {
+        "id": "ref-time-t020",
+        "hanzi": "早上",
+        "pinyin": "zǎoshang",
+        "en": "morning"
+      },
+      {
+        "id": "ref-time-t001",
+        "hanzi": "上午",
+        "pinyin": "shàngwǔ",
+        "en": "before noon / A.M."
+      },
+      {
+        "id": "ref-time-t024",
+        "hanzi": "晚上",
+        "pinyin": "wǎnshang",
+        "en": "evening / night"
+      }
+    ]
+  },
+  "ref-time-p04": {
+    "title": "When, or how long?",
+    "rule": "两点 answers “at what time?” 两个小时 answers “for how long?” For minutes, compare 八点二十分 on a clock with 二十分钟 as a duration.",
+    "focus": [
+      {
+        "id": "ref-time-t032",
+        "hanzi": "两点",
+        "pinyin": "liǎng diǎn",
+        "en": "2:00 on the clock"
+      },
+      {
+        "id": "ref-time-t033",
+        "hanzi": "两个小时",
+        "pinyin": "liǎng ge xiǎoshí",
+        "en": "two hours"
+      },
+      {
+        "id": "ref-time-t030",
+        "hanzi": "八点二十分",
+        "pinyin": "bā diǎn èrshí fēn",
+        "en": "8:20 on the clock"
+      },
+      {
+        "id": "ref-time-t031",
+        "hanzi": "二十分钟",
+        "pinyin": "èrshí fēnzhōng",
+        "en": "a twenty-minute duration"
+      }
+    ]
+  },
+  "ref-time-p05": {
+    "title": "Before, after, around",
+    "rule": "Put 以前 after a reference time to mean “before”; 以后 means “after”: 八点以前 / 八点以后. 左右 means approximately. 从…到… gives a beginning and an end.",
+    "focus": [
+      {
+        "id": "ref-time-t051",
+        "hanzi": "八点以前",
+        "pinyin": "bā diǎn yǐqián",
+        "en": "before eight"
+      },
+      {
+        "id": "ref-time-t052",
+        "hanzi": "八点",
+        "pinyin": "bā diǎn",
+        "en": "eight o’clock"
+      },
+      {
+        "id": "ref-time-t053",
+        "hanzi": "八点以后",
+        "pinyin": "bā diǎn yǐhòu",
+        "en": "after eight"
+      },
+      {
+        "id": "ref-time-e011",
+        "hanzi": "从八点到十二点，我在学校。",
+        "pinyin": "Cóng bā diǎn dào shí'èr diǎn, wǒ zài xuéxiào.",
+        "en": "From eight to twelve, I am at school."
+      }
+    ]
+  },
+  "ref-time-p06": {
+    "title": "Build a date",
+    "rule": "Use year → month → day: 二〇二六年 → 十一月 → 三号. Read year digits individually. 号 is common in conversation; 日 is used in writing.",
+    "focus": [
+      {
+        "id": "ref-time-e015",
+        "hanzi": "今天几月几号？",
+        "pinyin": "Jīntiān jǐ yuè jǐ hào?",
+        "en": "What month and date is today?"
+      },
+      {
+        "id": "ref-time-e005",
+        "hanzi": "今天星期几？",
+        "pinyin": "Jīntiān xīngqī jǐ?",
+        "en": "What day is today?"
+      }
+    ]
+  },
+  "ref-time-p07": {
+    "title": "Reuse the calendar patterns",
+    "rule": "星期 + a number gives a weekday. A number + 月 gives a month. Start from 今天, then move to 昨天, 明天 and 后天.",
+    "focus": [
+      {
+        "id": "ref-time-t061",
+        "hanzi": "星期一",
+        "pinyin": "xīngqī yī",
+        "en": "Monday"
+      },
+      {
+        "id": "ref-time-t068",
+        "hanzi": "星期天",
+        "pinyin": "xīngqī tiān",
+        "en": "Sunday"
+      },
+      {
+        "id": "ref-time-t069",
+        "hanzi": "一月",
+        "pinyin": "yī yuè",
+        "en": "January"
+      },
+      {
+        "id": "ref-time-t059",
+        "hanzi": "十一月",
+        "pinyin": "shíyī yuè",
+        "en": "November"
+      },
+      {
+        "id": "ref-time-t080",
+        "hanzi": "昨天",
+        "pinyin": "zuótiān",
+        "en": "yesterday"
+      },
+      {
+        "id": "ref-time-t081",
+        "hanzi": "今天",
+        "pinyin": "jīntiān",
+        "en": "today"
+      },
+      {
+        "id": "ref-time-t082",
+        "hanzi": "明天",
+        "pinyin": "míngtiān",
+        "en": "tomorrow"
+      }
+    ]
+  },
+  "ref-time-p08": {
+    "title": "Connect a morning",
+    "rule": "Follow the sequence: 醒来 → 起床 → 做早饭 → 出门 → 上课. 然后 links the next action; …后 and …以后 mean “after…”.",
+    "focus": [
+      {
+        "id": "ref-time-e019",
+        "hanzi": "然后我起床，喝一杯温水。",
+        "pinyin": "Ránhòu wǒ qǐchuáng, hē yì bēi wēnshuǐ.",
+        "en": "Then I get up and drink a glass of warm water."
+      },
+      {
+        "id": "ref-time-e010",
+        "hanzi": "早饭后，我准备出门。",
+        "pinyin": "Zǎofàn hòu, wǒ zhǔnbèi chūmén.",
+        "en": "After breakfast, I get ready to leave."
+      },
+      {
+        "id": "ref-time-e024",
+        "hanzi": "到学校以后，我去上课。",
+        "pinyin": "Dào xuéxiào yǐhòu, wǒ qù shàngkè.",
+        "en": "After reaching school, I go to class."
+      }
+    ]
+  },
+  "ref-time-p09": {
+    "title": "Connect times and durations",
+    "rule": "A class starts at a clock time, but a break lasts for a duration: 八点四十分开始 / 休息二十分钟. Follow the day, then describe your own.",
+    "focus": [
+      {
+        "id": "ref-time-e025",
+        "hanzi": "我的课早上八点四十分开始。",
+        "pinyin": "Wǒ de kè zǎoshang bā diǎn sìshí fēn kāishǐ.",
+        "en": "My class starts at 8:40 A.M."
+      },
+      {
+        "id": "ref-time-e026",
+        "hanzi": "我十点十分休息二十分钟。",
+        "pinyin": "Wǒ shí diǎn shí fēn xiūxi èrshí fēnzhōng.",
+        "en": "I have a twenty-minute break at 10:10."
+      },
+      {
+        "id": "ref-time-e027",
+        "hanzi": "我十点半回去上课。",
+        "pinyin": "Wǒ shí diǎn bàn huíqù shàngkè.",
+        "en": "I go back to class at 10:30."
+      }
+    ]
+  },
+  "ref-time-p10": {
+    "title": "Choose the word you mean",
+    "rule": "A keyboard suggestion is not a meaning. Compare the Hanzi, pinyin and meaning before choosing: 点 / 店, 时 / 十, 月 / 越, 号 / 好.",
+    "focus": [
+      {
+        "id": "ref-time-t003",
+        "hanzi": "点",
+        "pinyin": "diǎn",
+        "en": "clock hour; o’clock"
+      },
+      {
+        "id": "ref-time-t092",
+        "hanzi": "店",
+        "pinyin": "diàn",
+        "en": "shop"
+      },
+      {
+        "id": "ref-time-t093",
+        "hanzi": "时",
+        "pinyin": "shí",
+        "en": "time"
+      },
+      {
+        "id": "ref-time-t094",
+        "hanzi": "十",
+        "pinyin": "shí",
+        "en": "ten"
+      },
+      {
+        "id": "ref-time-t055",
+        "hanzi": "月",
+        "pinyin": "yuè",
+        "en": "month"
+      },
+      {
+        "id": "ref-time-t095",
+        "hanzi": "越",
+        "pinyin": "yuè",
+        "en": "surpass"
+      },
+      {
+        "id": "ref-time-t056",
+        "hanzi": "号",
+        "pinyin": "hào",
+        "en": "day of the month in conversation"
+      },
+      {
+        "id": "ref-time-t096",
+        "hanzi": "好",
+        "pinyin": "hǎo",
+        "en": "good"
+      }
+    ]
+  },
+  "ref-shang-p01-position": {
+    "title": "楼上 or 上楼?",
+    "rule": "Order changes the meaning: 楼上 is a place, “upstairs”; 上楼 is an action, “go upstairs”. Compare 在楼上 with 上楼, and 床上 with 上床.",
+    "focus": [
+      {
+        "id": "ref-shang-t003",
+        "hanzi": "楼上",
+        "pinyin": "lóushàng",
+        "en": "upstairs"
+      },
+      {
+        "id": "ref-shang-t007",
+        "hanzi": "上楼",
+        "pinyin": "shàng lóu",
+        "en": "go upstairs"
+      },
+      {
+        "id": "ref-shang-e006",
+        "hanzi": "他在楼上。",
+        "pinyin": "Tā zài lóushàng.",
+        "en": "He is upstairs."
+      },
+      {
+        "id": "ref-shang-e007",
+        "hanzi": "他上楼。",
+        "pinyin": "Tā shàng lóu.",
+        "en": "He goes upstairs."
+      },
+      {
+        "id": "ref-shang-t004",
+        "hanzi": "床上",
+        "pinyin": "chuáng shang",
+        "en": "on the bed"
+      },
+      {
+        "id": "ref-shang-t009",
+        "hanzi": "上床",
+        "pinyin": "shàng chuáng",
+        "en": "get into bed"
+      }
+    ]
+  },
+  "ref-shang-p01-movement": {
+    "title": "Go up, get on",
+    "rule": "上 before a place or vehicle can express moving up or boarding: 上楼, 上山, 上车. Add 来 or 去 to show the movement relative to the speaker.",
+    "focus": [
+      {
+        "id": "ref-shang-t007",
+        "hanzi": "上楼",
+        "pinyin": "shàng lóu",
+        "en": "go upstairs"
+      },
+      {
+        "id": "ref-shang-t010",
+        "hanzi": "上山",
+        "pinyin": "shàng shān",
+        "en": "go up a mountain"
+      },
+      {
+        "id": "ref-shang-t008",
+        "hanzi": "上车",
+        "pinyin": "shàng chē",
+        "en": "get into a car / board a vehicle"
+      },
+      {
+        "id": "ref-shang-t011",
+        "hanzi": "上来",
+        "pinyin": "shànglái",
+        "en": "come up"
+      },
+      {
+        "id": "ref-shang-t012",
+        "hanzi": "上去",
+        "pinyin": "shàngqù",
+        "en": "go up"
+      }
+    ]
+  },
+  "ref-shang-p02-activities": {
+    "title": "Learn the activity as a chunk",
+    "rule": "上课 means attend class; 下课 means finish class. Reuse 上 in everyday activity chunks such as 上班 and 上网, rather than translating each one as “up”.",
+    "focus": [
+      {
+        "id": "ref-shang-t014",
+        "hanzi": "上课",
+        "pinyin": "shàngkè",
+        "en": "attend class"
+      },
+      {
+        "id": "ref-shang-t023",
+        "hanzi": "下课",
+        "pinyin": "xiàkè",
+        "en": "finish class"
+      },
+      {
+        "id": "ref-shang-t016",
+        "hanzi": "上班",
+        "pinyin": "shàngbān",
+        "en": "go to work"
+      },
+      {
+        "id": "ref-shang-t018",
+        "hanzi": "上网",
+        "pinyin": "shàngwǎng",
+        "en": "go online"
+      },
+      {
+        "id": "ref-shang-e020",
+        "hanzi": "我们开始上课。",
+        "pinyin": "Wǒmen kāishǐ shàngkè.",
+        "en": "We begin class."
+      }
+    ]
+  },
+  "ref-shang-p02-time": {
+    "title": "Previous or next?",
+    "rule": "Compare 上个月 / 下个月, 上星期 / 下星期 and 上次 / 下次. 上 points to the previous period in these pairs. 上午 and 上半年 use a different “first part” pattern.",
+    "focus": [
+      {
+        "id": "ref-shang-t024",
+        "hanzi": "上个月",
+        "pinyin": "shàng ge yuè",
+        "en": "last month"
+      },
+      {
+        "id": "ref-shang-t025",
+        "hanzi": "下个月",
+        "pinyin": "xià ge yuè",
+        "en": "next month"
+      },
+      {
+        "id": "ref-shang-t026",
+        "hanzi": "上星期",
+        "pinyin": "shàng xīngqī",
+        "en": "last week"
+      },
+      {
+        "id": "ref-shang-t027",
+        "hanzi": "下星期",
+        "pinyin": "xià xīngqī",
+        "en": "next week"
+      },
+      {
+        "id": "ref-shang-t028",
+        "hanzi": "上次",
+        "pinyin": "shàng cì",
+        "en": "last time"
+      },
+      {
+        "id": "ref-shang-t029",
+        "hanzi": "下次",
+        "pinyin": "xià cì",
+        "en": "next time"
+      }
+    ]
+  },
+  "ref-shang-p03-result": {
+    "title": "Action → result",
+    "rule": "Compare an action with reaching its result: 关 → 关上, 穿 → 穿上, 戴 → 戴上. Watch the change, then use the whole phrase in a sentence.",
+    "focus": [
+      {
+        "id": "ref-shang-t036",
+        "hanzi": "关上",
+        "pinyin": "guān shang",
+        "en": "close / shut"
+      },
+      {
+        "id": "ref-shang-e029",
+        "hanzi": "请关上门。",
+        "pinyin": "Qǐng guān shang mén.",
+        "en": "Please close the door."
+      },
+      {
+        "id": "ref-shang-t034",
+        "hanzi": "穿上",
+        "pinyin": "chuān shang",
+        "en": "put on clothes"
+      },
+      {
+        "id": "ref-shang-e031",
+        "hanzi": "我穿上衣服。",
+        "pinyin": "Wǒ chuān shang yīfu.",
+        "en": "I put on clothes."
+      },
+      {
+        "id": "ref-shang-t035",
+        "hanzi": "戴上",
+        "pinyin": "dài shang",
+        "en": "put on a hat"
+      },
+      {
+        "id": "ref-shang-e032",
+        "hanzi": "他戴上帽子。",
+        "pinyin": "Tā dài shang màozi.",
+        "en": "He puts on a hat."
+      }
+    ]
+  },
+  "ref-shang-p03-abstract": {
+    "title": "Frame what you say",
+    "rule": "实际上 introduces what is actually true; 理论上 introduces what is true in theory. 在工作上 frames the sentence as being about work.",
+    "focus": [
+      {
+        "id": "ref-shang-t041",
+        "hanzi": "实际上",
+        "pinyin": "shíjì shang",
+        "en": "actually"
+      },
+      {
+        "id": "ref-shang-t043",
+        "hanzi": "理论上",
+        "pinyin": "lǐlùn shang",
+        "en": "in theory"
+      },
+      {
+        "id": "ref-shang-t044",
+        "hanzi": "在工作上",
+        "pinyin": "zài gōngzuò shang",
+        "en": "in work matters"
+      }
+    ]
+  },
+  "ref-shang-p03-quantity": {
+    "title": "A limit, a rank, an upload",
+    "rule": "Read each whole chunk: 以上 sets a lower limit; 上级 and 上司 describe rank; 上传 means upload. These are separate uses, not one physical movement.",
+    "focus": [
+      {
+        "id": "ref-shang-t046",
+        "hanzi": "以上",
+        "pinyin": "yǐshàng",
+        "en": "above / or more"
+      },
+      {
+        "id": "ref-shang-t049",
+        "hanzi": "上级",
+        "pinyin": "shàngjí",
+        "en": "higher level / superior"
+      },
+      {
+        "id": "ref-shang-t050",
+        "hanzi": "上司",
+        "pinyin": "shàngsi",
+        "en": "superior / boss"
+      },
+      {
+        "id": "ref-shang-t051",
+        "hanzi": "上传",
+        "pinyin": "shàngchuán",
+        "en": "upload"
+      }
+    ]
+  },
+  "ref-shang-p04": {
+    "title": "Reuse 上 through a day",
+    "rule": "Connect 上课 and 下课 to the day’s timetable. Compare 上一节课 with 下一节课, then describe when your own classes start and finish.",
+    "focus": [
+      {
+        "id": "ref-shang-e002",
+        "hanzi": "我早上八点四十分上课。",
+        "pinyin": "Wǒ zǎoshang bā diǎn sìshí fēn shàngkè.",
+        "en": "I have class at 8:40 A.M."
+      },
+      {
+        "id": "ref-shang-e005",
+        "hanzi": "我下午两点半下课。",
+        "pinyin": "Wǒ xiàwǔ liǎng diǎn bàn xiàkè.",
+        "en": "I finish class at 2:30 P.M."
+      },
+      {
+        "id": "ref-shang-t030",
+        "hanzi": "上一节课",
+        "pinyin": "shàng yì jié kè",
+        "en": "previous class"
+      },
+      {
+        "id": "ref-shang-t031",
+        "hanzi": "下一节课",
+        "pinyin": "xià yì jié kè",
+        "en": "next class"
+      }
+    ]
+  }
+}

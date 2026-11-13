@@ -1,0 +1,2144 @@
+{
+  "status": "PLAN ONLY; zero TTS requests",
+  "model": "qwen-audio-3.1-tts-plus",
+  "voice": "longanhuan_v3.1",
+  "region": "cn-beijing",
+  "records": [
+    {
+      "id": "c10-t01",
+      "text": "大脑",
+      "pinyin": "dànǎo",
+      "key": [
+        "大脑",
+        "dànǎo",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t02",
+      "text": "电脑",
+      "pinyin": "diànnǎo",
+      "key": [
+        "电脑",
+        "diànnǎo",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t03",
+      "text": "台式机",
+      "pinyin": "táishìjī",
+      "key": [
+        "台式机",
+        "táishìjī",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t04",
+      "text": "笔记本电脑",
+      "pinyin": "bǐjìběn diànnǎo",
+      "key": [
+        "笔记本电脑",
+        "bǐjìběn diànnǎo",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t05",
+      "text": "电话",
+      "pinyin": "diànhuà",
+      "key": [
+        "电话",
+        "diànhuà",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t06",
+      "text": "电视",
+      "pinyin": "diànshì",
+      "key": [
+        "电视",
+        "diànshì",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t07",
+      "text": "冰箱",
+      "pinyin": "bīngxiāng",
+      "key": [
+        "冰箱",
+        "bīngxiāng",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t08",
+      "text": "电冰箱",
+      "pinyin": "diànbīngxiāng",
+      "key": [
+        "电冰箱",
+        "diànbīngxiāng",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t09",
+      "text": "比",
+      "pinyin": "bǐ",
+      "key": [
+        "比",
+        "bǐ",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t10",
+      "text": "汽油",
+      "pinyin": "qìyóu",
+      "key": [
+        "汽油",
+        "qìyóu",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t11",
+      "text": "油",
+      "pinyin": "yóu",
+      "key": [
+        "油",
+        "yóu",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t12",
+      "text": "电",
+      "pinyin": "diàn",
+      "key": [
+        "电",
+        "diàn",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t13",
+      "text": "电车",
+      "pinyin": "diànchē",
+      "key": [
+        "电车",
+        "diànchē",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t14",
+      "text": "油车",
+      "pinyin": "yóuchē",
+      "key": [
+        "油车",
+        "yóuchē",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t15",
+      "text": "便宜",
+      "pinyin": "piányi",
+      "key": [
+        "便宜",
+        "piányi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/b78b13c6cf8a5293294447a5a9b5977fc824111d8930ab23556f2ba0067c78d3.mp3",
+          "existingId": "c09-t44",
+          "sha256": "ba61d464200c852597c51a999838c7d961a5ce04fb950393250ba839a869d617",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": "piányi",
+          "readingExact": true,
+          "bytesVerified": true,
+          "eligible": true
+        }
+      ],
+      "action": "reuse verified exact clip"
+    },
+    {
+      "id": "c10-t16",
+      "text": "贵",
+      "pinyin": "guì",
+      "key": [
+        "贵",
+        "guì",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/f8757380d0e8f8830fd49de47d4c27eb664e361a1fabb949dd77c1442c611069.mp3",
+          "existingId": "c09-t42",
+          "sha256": "deec969bc9d1d02c44c110c877f0449e456e4ac234a9c48a2cc2604fa24e94c2",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": "guì",
+          "readingExact": true,
+          "bytesVerified": true,
+          "eligible": true
+        },
+        {
+          "source": "/audio/qwen-curriculum/f8757380d0e8f8830fd49de47d4c27eb664e361a1fabb949dd77c1442c611069.mp3",
+          "existingId": "char-8d35",
+          "sha256": "deec969bc9d1d02c44c110c877f0449e456e4ac234a9c48a2cc2604fa24e94c2",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "reuse verified exact clip"
+    },
+    {
+      "id": "c10-t17",
+      "text": "漂亮",
+      "pinyin": "piàoliang",
+      "key": [
+        "漂亮",
+        "piàoliang",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t18",
+      "text": "远",
+      "pinyin": "yuǎn",
+      "key": [
+        "远",
+        "yuǎn",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/59cc813aed57876b3d9822b18b37263c15ff5997dffa17211708283e45de10ce.mp3",
+          "existingId": "char-8fdc",
+          "sha256": "8cd7a2dafdbf4a81447335d39f451a7c4c6df017dfc171f3ff12625058e9c4c7",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t19",
+      "text": "美国",
+      "pinyin": "Měiguó",
+      "key": [
+        "美国",
+        "Měiguó",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t20",
+      "text": "土耳其",
+      "pinyin": "Tǔ'ěrqí",
+      "key": [
+        "土耳其",
+        "Tǔ'ěrqí",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t21",
+      "text": "头发",
+      "pinyin": "tóufa",
+      "key": [
+        "头发",
+        "tóufa",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t22",
+      "text": "长",
+      "pinyin": "cháng",
+      "key": [
+        "长",
+        "cháng",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t23",
+      "text": "多了",
+      "pinyin": "duō le",
+      "key": [
+        "多了",
+        "duō le",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t24",
+      "text": "得多",
+      "pinyin": "de duō",
+      "key": [
+        "得多",
+        "de duō",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t25",
+      "text": "一点儿",
+      "pinyin": "yìdiǎnr",
+      "key": [
+        "一点儿",
+        "yìdiǎnr",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t26",
+      "text": "两倍",
+      "pinyin": "liǎng bèi",
+      "key": [
+        "两倍",
+        "liǎng bèi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t27",
+      "text": "倍",
+      "pinyin": "bèi",
+      "key": [
+        "倍",
+        "bèi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t28",
+      "text": "秘密",
+      "pinyin": "mìmì",
+      "key": [
+        "秘密",
+        "mìmì",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t29",
+      "text": "猜",
+      "pinyin": "cāi",
+      "key": [
+        "猜",
+        "cāi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t30",
+      "text": "猜一猜",
+      "pinyin": "cāi yi cāi",
+      "key": [
+        "猜一猜",
+        "cāi yi cāi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t31",
+      "text": "三十",
+      "pinyin": "sānshí",
+      "key": [
+        "三十",
+        "sānshí",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t32",
+      "text": "岁",
+      "pinyin": "suì",
+      "key": [
+        "岁",
+        "suì",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t33",
+      "text": "世界杯",
+      "pinyin": "Shìjièbēi",
+      "key": [
+        "世界杯",
+        "Shìjièbēi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t34",
+      "text": "家",
+      "pinyin": "jiā",
+      "key": [
+        "家",
+        "jiā",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/4f65e198700a4bdf6b7c1ab2ce48b90061701bf6c262b052a20494266426bf2f.mp3",
+          "existingId": "char-5bb6",
+          "sha256": "c9bf35e6fc7e5cf32cf22c7838602eb4152da7c8fa2396a3ebe3a95723a71c58",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t35",
+      "text": "几",
+      "pinyin": "jǐ",
+      "key": [
+        "几",
+        "jǐ",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/b652d3a8ea81ce4b74577dc1199df7e0025239bcae0891f2e05d2e88c84d85d3.mp3",
+          "existingId": "char-51e0",
+          "sha256": "1a06633bb42963b736ba2d3b184b5cc138eb85a827df40cc80cbea05c2188126",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t36",
+      "text": "口",
+      "pinyin": "kǒu",
+      "key": [
+        "口",
+        "kǒu",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t37",
+      "text": "人",
+      "pinyin": "rén",
+      "key": [
+        "人",
+        "rén",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/899727f0625df1cc7c6af0f00ada18b4992322359c151d184e8dec89237d1e48.mp3",
+          "existingId": "char-4eba",
+          "sha256": "0188794d6998b220c71e01e8e705b5668a7099fcb06fddc8aa10494f21de805d",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t38",
+      "text": "他们",
+      "pinyin": "tāmen",
+      "key": [
+        "他们",
+        "tāmen",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t39",
+      "text": "姐姐",
+      "pinyin": "jiějie",
+      "key": [
+        "姐姐",
+        "jiějie",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t40",
+      "text": "两个",
+      "pinyin": "liǎng ge",
+      "key": [
+        "两个",
+        "liǎng ge",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t41",
+      "text": "三个",
+      "pinyin": "sān ge",
+      "key": [
+        "三个",
+        "sān ge",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t42",
+      "text": "和",
+      "pinyin": "hé",
+      "key": [
+        "和",
+        "hé",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/9310a36d8ce9c543a29495409799596189b053b957c354f5ca35e26b4eb67395.mp3",
+          "existingId": "char-548c",
+          "sha256": "2645b699fe9ae7d5f2612446aef3c34f9eb1001e4d3c38a8107967787c84b5fd",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t43",
+      "text": "男人",
+      "pinyin": "nánrén",
+      "key": [
+        "男人",
+        "nánrén",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t44",
+      "text": "女人",
+      "pinyin": "nǚrén",
+      "key": [
+        "女人",
+        "nǚrén",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t45",
+      "text": "今天",
+      "pinyin": "jīntiān",
+      "key": [
+        "今天",
+        "jīntiān",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/281cc71fd8eb804d8058c585fdd1ea717450eed175561311dad34107e6a144c6.mp3",
+          "existingId": "c09-t12",
+          "sha256": "dc74dc37815762bb61617e9f3cb5610037358e7d3ce81f71ec3fc39b29b66377",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": "jīntiān",
+          "readingExact": true,
+          "bytesVerified": true,
+          "eligible": true
+        }
+      ],
+      "action": "reuse verified exact clip"
+    },
+    {
+      "id": "c10-t46",
+      "text": "昨天",
+      "pinyin": "zuótiān",
+      "key": [
+        "昨天",
+        "zuótiān",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t47",
+      "text": "前天",
+      "pinyin": "qiántiān",
+      "key": [
+        "前天",
+        "qiántiān",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t48",
+      "text": "明天",
+      "pinyin": "míngtiān",
+      "key": [
+        "明天",
+        "míngtiān",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t49",
+      "text": "后天",
+      "pinyin": "hòutiān",
+      "key": [
+        "后天",
+        "hòutiān",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t50",
+      "text": "月",
+      "pinyin": "yuè",
+      "key": [
+        "月",
+        "yuè",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/f72a9f0af2399b6f9bb38f631de881054811613bcada50d2a6db164181adddc9.mp3",
+          "existingId": "char-6708",
+          "sha256": "e3b9ad2399221669cafe44ca6c60bd04482a137fddf9bd7e2698c174029689f1",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t51",
+      "text": "号",
+      "pinyin": "hào",
+      "key": [
+        "号",
+        "hào",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/5cf8414dd80cec79692344f8ad6dffce8e0b00a74ecd59578737f6a04a3c7218.mp3",
+          "existingId": "char-53f7",
+          "sha256": "891921625376280b6eb5f09110b8cbef694e64fb4047095de8ac8aa71c312fc4",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t52",
+      "text": "星期",
+      "pinyin": "xīngqī",
+      "key": [
+        "星期",
+        "xīngqī",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t53",
+      "text": "星期一",
+      "pinyin": "xīngqīyī",
+      "key": [
+        "星期一",
+        "xīngqīyī",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t54",
+      "text": "星期二",
+      "pinyin": "xīngqī'èr",
+      "key": [
+        "星期二",
+        "xīngqī'èr",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t55",
+      "text": "星期三",
+      "pinyin": "xīngqīsān",
+      "key": [
+        "星期三",
+        "xīngqīsān",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t56",
+      "text": "星期日",
+      "pinyin": "xīngqīrì",
+      "key": [
+        "星期日",
+        "xīngqīrì",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t57",
+      "text": "星期天",
+      "pinyin": "xīngqītiān",
+      "key": [
+        "星期天",
+        "xīngqītiān",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t58",
+      "text": "在",
+      "pinyin": "zài",
+      "key": [
+        "在",
+        "zài",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/205eb564c53b85fe6345c37eea8b8c6e600e7da11fecedce9b28b480e1a3fe95.mp3",
+          "existingId": "char-5728",
+          "sha256": "ec53b298953123aaa0d155ecc03cd6dc15be6d37b96b74b341bf8c3abbb95ffc",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t59",
+      "text": "哪儿",
+      "pinyin": "nǎr",
+      "key": [
+        "哪儿",
+        "nǎr",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t60",
+      "text": "哪里",
+      "pinyin": "nǎlǐ",
+      "key": [
+        "哪里",
+        "nǎlǐ",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t61",
+      "text": "超市",
+      "pinyin": "chāoshì",
+      "key": [
+        "超市",
+        "chāoshì",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t62",
+      "text": "书店",
+      "pinyin": "shūdiàn",
+      "key": [
+        "书店",
+        "shūdiàn",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t63",
+      "text": "教室",
+      "pinyin": "jiàoshì",
+      "key": [
+        "教室",
+        "jiàoshì",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t64",
+      "text": "花店",
+      "pinyin": "huādiàn",
+      "key": [
+        "花店",
+        "huādiàn",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t65",
+      "text": "饭店",
+      "pinyin": "fàndiàn",
+      "key": [
+        "饭店",
+        "fàndiàn",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t66",
+      "text": "饭馆儿",
+      "pinyin": "fànguǎnr",
+      "key": [
+        "饭馆儿",
+        "fànguǎnr",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t67",
+      "text": "咖啡店",
+      "pinyin": "kāfēidiàn",
+      "key": [
+        "咖啡店",
+        "kāfēidiàn",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t68",
+      "text": "酒店",
+      "pinyin": "jiǔdiàn",
+      "key": [
+        "酒店",
+        "jiǔdiàn",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t69",
+      "text": "现在",
+      "pinyin": "xiànzài",
+      "key": [
+        "现在",
+        "xiànzài",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t70",
+      "text": "他",
+      "pinyin": "tā",
+      "key": [
+        "他",
+        "tā",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/bc83d5b40a414b6d2383cdfe554041c60e98af674889db786c4a89a8746cca6e.mp3",
+          "existingId": "char-4ed6",
+          "sha256": "db1e90c7dc08d00ee6dd2aefca2467b3dc9a5c79ddc752ddcb766582d5422dd2",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t71",
+      "text": "睡觉",
+      "pinyin": "shuìjiào",
+      "key": [
+        "睡觉",
+        "shuìjiào",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t72",
+      "text": "做",
+      "pinyin": "zuò",
+      "key": [
+        "做",
+        "zuò",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/ae0a7da3e31581dc9c672b4120e916b6ea37cc5038b08dc4d000b6018451039d.mp3",
+          "existingId": "char-505a",
+          "sha256": "2d2994cef4f9a187f162e7df3d1748d9716cd9e82084858b576f33941436157f",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t73",
+      "text": "什么",
+      "pinyin": "shénme",
+      "key": [
+        "什么",
+        "shénme",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t74",
+      "text": "我们",
+      "pinyin": "wǒmen",
+      "key": [
+        "我们",
+        "wǒmen",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t75",
+      "text": "上课",
+      "pinyin": "shàngkè",
+      "key": [
+        "上课",
+        "shàngkè",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t76",
+      "text": "学习",
+      "pinyin": "xuéxí",
+      "key": [
+        "学习",
+        "xuéxí",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/ef1fd9a3664d07ba74c3757ca071c9d8d29397ffb91e9277ac76b8aeaf2dab92.mp3",
+          "existingId": "c09-t02",
+          "sha256": "d200ea8e6ef61352b51814fcedd28d5a7eece0df636cc292e070e5ac5b6f7fdc",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": "xuéxí",
+          "readingExact": true,
+          "bytesVerified": true,
+          "eligible": true
+        }
+      ],
+      "action": "reuse verified exact clip"
+    },
+    {
+      "id": "c10-t77",
+      "text": "老师",
+      "pinyin": "lǎoshī",
+      "key": [
+        "老师",
+        "lǎoshī",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t78",
+      "text": "学生",
+      "pinyin": "xuésheng",
+      "key": [
+        "学生",
+        "xuésheng",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t79",
+      "text": "写",
+      "pinyin": "xiě",
+      "key": [
+        "写",
+        "xiě",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/81448430913de14d24cc19a9b59c3263c7ad7efa9eb4dcdc2918a511974d0d84.mp3",
+          "existingId": "char-5199",
+          "sha256": "e22e9ff1f556b3c8e93c3e2df163dcb6321095c2ed8482abad9e4470de51fe4c",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t80",
+      "text": "听",
+      "pinyin": "tīng",
+      "key": [
+        "听",
+        "tīng",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/f5afd7566001ee6516ea21574a08cd4fedbf6b9e3ea620981ebbb501356a7a19.mp3",
+          "existingId": "char-542c",
+          "sha256": "5a9bf00ee964c50716f8ff1c907b0965fc6e6898bf39f9c0e0616b49c55ed577",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t81",
+      "text": "读",
+      "pinyin": "dú",
+      "key": [
+        "读",
+        "dú",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t82",
+      "text": "一直",
+      "pinyin": "yìzhí",
+      "key": [
+        "一直",
+        "yìzhí",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t83",
+      "text": "总是",
+      "pinyin": "zǒngshì",
+      "key": [
+        "总是",
+        "zǒngshì",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t84",
+      "text": "干",
+      "pinyin": "gàn",
+      "key": [
+        "干",
+        "gàn",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/260bd1d7afb5009e616d79b713f92ec31df4e96aabe9a159b57f28c26dc756d9.mp3",
+          "existingId": "char-5e72",
+          "sha256": "0f2f6064cec2966a8013f9a7981d75cadcb35945592733f098967e4ca24d4aa4",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t85",
+      "text": "干",
+      "pinyin": "gān",
+      "key": [
+        "干",
+        "gān",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/260bd1d7afb5009e616d79b713f92ec31df4e96aabe9a159b57f28c26dc756d9.mp3",
+          "existingId": "char-5e72",
+          "sha256": "0f2f6064cec2966a8013f9a7981d75cadcb35945592733f098967e4ca24d4aa4",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t86",
+      "text": "一",
+      "pinyin": "yī",
+      "key": [
+        "一",
+        "yī",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/3f5e20d3042d18c6224ec902588b0c34d26b407edd947c1e759f7c7d239cc716.mp3",
+          "existingId": "char-4e00",
+          "sha256": "26a889b2de032f1ebac5b1dc35168bce98d13aa015213f8a29f32552f2ac5cc2",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t87",
+      "text": "条",
+      "pinyin": "tiáo",
+      "key": [
+        "条",
+        "tiáo",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t88",
+      "text": "双",
+      "pinyin": "shuāng",
+      "key": [
+        "双",
+        "shuāng",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t89",
+      "text": "件",
+      "pinyin": "jiàn",
+      "key": [
+        "件",
+        "jiàn",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t90",
+      "text": "辆",
+      "pinyin": "liàng",
+      "key": [
+        "辆",
+        "liàng",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t91",
+      "text": "本",
+      "pinyin": "běn",
+      "key": [
+        "本",
+        "běn",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/a956b3c1d5798a0c5cae937aea570967a1028eddc49296d27a24584a4da27d40.mp3",
+          "existingId": "char-672c",
+          "sha256": "009bbcfb3f607370f10c7e4ce3383137e6f2a1b625e559c58faf04e9175625e6",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t92",
+      "text": "张",
+      "pinyin": "zhāng",
+      "key": [
+        "张",
+        "zhāng",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t93",
+      "text": "裤子",
+      "pinyin": "kùzi",
+      "key": [
+        "裤子",
+        "kùzi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t94",
+      "text": "被子",
+      "pinyin": "bèizi",
+      "key": [
+        "被子",
+        "bèizi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t95",
+      "text": "袜子",
+      "pinyin": "wàzi",
+      "key": [
+        "袜子",
+        "wàzi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t96",
+      "text": "鞋子",
+      "pinyin": "xiézi",
+      "key": [
+        "鞋子",
+        "xiézi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t97",
+      "text": "衬衫",
+      "pinyin": "chènshān",
+      "key": [
+        "衬衫",
+        "chènshān",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t98",
+      "text": "裙子",
+      "pinyin": "qúnzi",
+      "key": [
+        "裙子",
+        "qúnzi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t99",
+      "text": "汽车",
+      "pinyin": "qìchē",
+      "key": [
+        "汽车",
+        "qìchē",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t100",
+      "text": "书",
+      "pinyin": "shū",
+      "key": [
+        "书",
+        "shū",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/22112b32a6760293fca9bdf8cb8fa5e9642aeee585796c67511a5fe978dae299.mp3",
+          "existingId": "char-4e66",
+          "sha256": "26b22a869d70b315c3fb6ba0b8eb6c9e1d97ad3bb6728046b4b27dcff1a3bc39",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t101",
+      "text": "词典",
+      "pinyin": "cídiǎn",
+      "key": [
+        "词典",
+        "cídiǎn",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t102",
+      "text": "纸",
+      "pinyin": "zhǐ",
+      "key": [
+        "纸",
+        "zhǐ",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t103",
+      "text": "桌子",
+      "pinyin": "zhuōzi",
+      "key": [
+        "桌子",
+        "zhuōzi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-t104",
+      "text": "床",
+      "pinyin": "chuáng",
+      "key": [
+        "床",
+        "chuáng",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [
+        {
+          "source": "/audio/qwen-curriculum/2e61f5834b7e76adbddde84f0855f4af3dcff84162780544814cbcdb77d8939f.mp3",
+          "existingId": "char-5e8a",
+          "sha256": "f00c83acb0b144488de281840a562d6a1caab480d3ab5e93aab062f40ef9d6ce",
+          "model": "qwen-audio-3.1-tts-plus",
+          "voice": "longanhuan_v3.1",
+          "existingPinyin": null,
+          "readingExact": false,
+          "bytesVerified": true,
+          "eligible": false
+        }
+      ],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s01",
+      "text": "电车比油车便宜。",
+      "pinyin": "Diànchē bǐ yóuchē piányi.",
+      "key": [
+        "电车比油车便宜。",
+        "Diànchē bǐ yóuchē piányi.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s02",
+      "text": "电车比油车贵。",
+      "pinyin": "Diànchē bǐ yóuchē guì.",
+      "key": [
+        "电车比油车贵。",
+        "Diànchē bǐ yóuchē guì.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s03",
+      "text": "电车比油车漂亮。",
+      "pinyin": "Diànchē bǐ yóuchē piàoliang.",
+      "key": [
+        "电车比油车漂亮。",
+        "Diànchē bǐ yóuchē piàoliang.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s04",
+      "text": "油比电贵。",
+      "pinyin": "Yóu bǐ diàn guì.",
+      "key": [
+        "油比电贵。",
+        "Yóu bǐ diàn guì.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s05",
+      "text": "美国比土耳其远。",
+      "pinyin": "Měiguó bǐ Tǔ'ěrqí yuǎn.",
+      "key": [
+        "美国比土耳其远。",
+        "Měiguó bǐ Tǔ'ěrqí yuǎn.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s06",
+      "text": "你的头发比我的长多了。",
+      "pinyin": "Nǐ de tóufa bǐ wǒ de cháng duō le.",
+      "key": [
+        "你的头发比我的长多了。",
+        "Nǐ de tóufa bǐ wǒ de cháng duō le.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s07",
+      "text": "你猜一猜。",
+      "pinyin": "Nǐ cāi yi cāi.",
+      "key": [
+        "你猜一猜。",
+        "Nǐ cāi yi cāi.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s08",
+      "text": "我猜你三十岁。",
+      "pinyin": "Wǒ cāi nǐ sānshí suì.",
+      "key": [
+        "我猜你三十岁。",
+        "Wǒ cāi nǐ sānshí suì.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s09",
+      "text": "你家有几口人？",
+      "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
+      "key": [
+        "你家有几口人？",
+        "Nǐ jiā yǒu jǐ kǒu rén?",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s10",
+      "text": "今天几月几号，星期几？",
+      "pinyin": "Jīntiān jǐ yuè jǐ hào, xīngqī jǐ?",
+      "key": [
+        "今天几月几号，星期几？",
+        "Jīntiān jǐ yuè jǐ hào, xīngqī jǐ?",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s11",
+      "text": "今天十一月二号，星期一。",
+      "pinyin": "Jīntiān shíyī yuè èr hào, xīngqīyī.",
+      "key": [
+        "今天十一月二号，星期一。",
+        "Jīntiān shíyī yuè èr hào, xīngqīyī.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s12",
+      "text": "明天十一月三号，星期二。",
+      "pinyin": "Míngtiān shíyī yuè sān hào, xīngqī'èr.",
+      "key": [
+        "明天十一月三号，星期二。",
+        "Míngtiān shíyī yuè sān hào, xīngqī'èr.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s13",
+      "text": "后天十一月四号，星期三。",
+      "pinyin": "Hòutiān shíyī yuè sì hào, xīngqīsān.",
+      "key": [
+        "后天十一月四号，星期三。",
+        "Hòutiān shíyī yuè sì hào, xīngqīsān.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s14",
+      "text": "你在哪儿？",
+      "pinyin": "Nǐ zài nǎr?",
+      "key": [
+        "你在哪儿？",
+        "Nǐ zài nǎr?",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s15",
+      "text": "你在哪里？",
+      "pinyin": "Nǐ zài nǎlǐ?",
+      "key": [
+        "你在哪里？",
+        "Nǐ zài nǎlǐ?",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s16",
+      "text": "我在超市。",
+      "pinyin": "Wǒ zài chāoshì.",
+      "key": [
+        "我在超市。",
+        "Wǒ zài chāoshì.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s17",
+      "text": "我在家。",
+      "pinyin": "Wǒ zài jiā.",
+      "key": [
+        "我在家。",
+        "Wǒ zài jiā.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s18",
+      "text": "我在书店。",
+      "pinyin": "Wǒ zài shūdiàn.",
+      "key": [
+        "我在书店。",
+        "Wǒ zài shūdiàn.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s19",
+      "text": "我在教室。",
+      "pinyin": "Wǒ zài jiàoshì.",
+      "key": [
+        "我在教室。",
+        "Wǒ zài jiàoshì.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s20",
+      "text": "他在睡觉。",
+      "pinyin": "Tā zài shuìjiào.",
+      "key": [
+        "他在睡觉。",
+        "Tā zài shuìjiào.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s21",
+      "text": "现在他在睡觉。",
+      "pinyin": "Xiànzài tā zài shuìjiào.",
+      "key": [
+        "现在他在睡觉。",
+        "Xiànzài tā zài shuìjiào.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s22",
+      "text": "现在你在做什么？",
+      "pinyin": "Xiànzài nǐ zài zuò shénme?",
+      "key": [
+        "现在你在做什么？",
+        "Xiànzài nǐ zài zuò shénme?",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s23",
+      "text": "我们在上课。",
+      "pinyin": "Wǒmen zài shàngkè.",
+      "key": [
+        "我们在上课。",
+        "Wǒmen zài shàngkè.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s24",
+      "text": "我们在学习。",
+      "pinyin": "Wǒmen zài xuéxí.",
+      "key": [
+        "我们在学习。",
+        "Wǒmen zài xuéxí.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s25",
+      "text": "老师在写。",
+      "pinyin": "Lǎoshī zài xiě.",
+      "key": [
+        "老师在写。",
+        "Lǎoshī zài xiě.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s26",
+      "text": "学生在听。",
+      "pinyin": "Xuésheng zài tīng.",
+      "key": [
+        "学生在听。",
+        "Xuésheng zài tīng.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s27",
+      "text": "学生在读。",
+      "pinyin": "Xuésheng zài dú.",
+      "key": [
+        "学生在读。",
+        "Xuésheng zài dú.",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s28",
+      "text": "一条裤子",
+      "pinyin": "yì tiáo kùzi",
+      "key": [
+        "一条裤子",
+        "yì tiáo kùzi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s29",
+      "text": "一条被子",
+      "pinyin": "yì tiáo bèizi",
+      "key": [
+        "一条被子",
+        "yì tiáo bèizi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s30",
+      "text": "一双袜子",
+      "pinyin": "yì shuāng wàzi",
+      "key": [
+        "一双袜子",
+        "yì shuāng wàzi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s31",
+      "text": "一双鞋子",
+      "pinyin": "yì shuāng xiézi",
+      "key": [
+        "一双鞋子",
+        "yì shuāng xiézi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s32",
+      "text": "一件衬衫",
+      "pinyin": "yí jiàn chènshān",
+      "key": [
+        "一件衬衫",
+        "yí jiàn chènshān",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s33",
+      "text": "一条裙子",
+      "pinyin": "yì tiáo qúnzi",
+      "key": [
+        "一条裙子",
+        "yì tiáo qúnzi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s34",
+      "text": "一辆汽车",
+      "pinyin": "yí liàng qìchē",
+      "key": [
+        "一辆汽车",
+        "yí liàng qìchē",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s35",
+      "text": "一本书",
+      "pinyin": "yì běn shū",
+      "key": [
+        "一本书",
+        "yì běn shū",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s36",
+      "text": "一本词典",
+      "pinyin": "yì běn cídiǎn",
+      "key": [
+        "一本词典",
+        "yì běn cídiǎn",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s37",
+      "text": "一张纸",
+      "pinyin": "yì zhāng zhǐ",
+      "key": [
+        "一张纸",
+        "yì zhāng zhǐ",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s38",
+      "text": "一张桌子",
+      "pinyin": "yì zhāng zhuōzi",
+      "key": [
+        "一张桌子",
+        "yì zhāng zhuōzi",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    },
+    {
+      "id": "c10-s39",
+      "text": "一张床",
+      "pinyin": "yì zhāng chuáng",
+      "key": [
+        "一张床",
+        "yì zhāng chuáng",
+        "qwen-audio-3.1-tts-plus",
+        "longanhuan_v3.1"
+      ],
+      "candidates": [],
+      "action": "pending local-owner quota/reading check; do not generate here"
+    }
+  ],
+  "characterAudio": "Context-sensitive characters need full-word/phrase verification; never dedup 干 by text alone.",
+  "futureGeneration": "Only the existing authorized free Qwen lane, after LOCAL integration owner verifies quota. No credential access, provider calls or mass generation in this slice."
+}

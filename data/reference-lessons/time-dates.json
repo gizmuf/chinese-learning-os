@@ -1,0 +1,2394 @@
+{
+  "id": "time-dates",
+  "title": "Time & dates",
+  "intro": "Read a clock, distinguish a time from a duration, navigate an example calendar and tell a day in order. The source date is 3 November 2026; daypart boundaries are flexible.",
+  "source": {
+    "filename": "Mandarin_Time_Dates_Visual_iPad_SAFE(1).pdf",
+    "sha256": "eb4fff3e611b0163b55d45a53a87221ffdcaff46943dc1789cb84cdf7bf2e72f",
+    "pages": 10
+  },
+  "terms": [
+    {
+      "id": "ref-time-t001",
+      "hanzi": "上午",
+      "pinyin": "shàngwǔ",
+      "en": "before noon / A.M.",
+      "sourcePages": [
+        1,
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t002",
+      "hanzi": "八",
+      "pinyin": "bā",
+      "en": "eight",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t003",
+      "hanzi": "点",
+      "pinyin": "diǎn",
+      "en": "clock hour; o’clock",
+      "sourcePages": [
+        1,
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t004",
+      "hanzi": "四十分",
+      "pinyin": "sìshí fēn",
+      "en": "forty minutes past the hour",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t005",
+      "hanzi": "分",
+      "pinyin": "fēn",
+      "en": "clock minute",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t006",
+      "hanzi": "上午八点四十分",
+      "pinyin": "shàngwǔ bā diǎn sìshí fēn",
+      "en": "8:40 A.M.",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t007",
+      "hanzi": "七点",
+      "pinyin": "qī diǎn",
+      "en": "7:00",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t008",
+      "hanzi": "八点零五分",
+      "pinyin": "bā diǎn líng wǔ fēn",
+      "en": "8:05",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t009",
+      "hanzi": "八点一刻",
+      "pinyin": "bā diǎn yí kè",
+      "en": "8:15",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t010",
+      "hanzi": "八点半",
+      "pinyin": "bā diǎn bàn",
+      "en": "8:30",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t011",
+      "hanzi": "八点四十分",
+      "pinyin": "bā diǎn sìshí fēn",
+      "en": "8:40",
+      "sourcePages": [
+        2,
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t012",
+      "hanzi": "八点三刻",
+      "pinyin": "bā diǎn sān kè",
+      "en": "8:45",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t013",
+      "hanzi": "差一刻九点",
+      "pinyin": "chà yí kè jiǔ diǎn",
+      "en": "a quarter to nine / 8:45",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t014",
+      "hanzi": "十点十分",
+      "pinyin": "shí diǎn shí fēn",
+      "en": "10:10",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t015",
+      "hanzi": "下午两点半",
+      "pinyin": "xiàwǔ liǎng diǎn bàn",
+      "en": "2:30 P.M. / 14:30",
+      "sourcePages": [
+        2,
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t016",
+      "hanzi": "一刻",
+      "pinyin": "yí kè",
+      "en": "fifteen minutes / a quarter hour",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t017",
+      "hanzi": "半",
+      "pinyin": "bàn",
+      "en": "half",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t018",
+      "hanzi": "三刻",
+      "pinyin": "sān kè",
+      "en": "forty-five minutes",
+      "sourcePages": [
+        2
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t019",
+      "hanzi": "凌晨",
+      "pinyin": "língchén",
+      "en": "very early morning",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t020",
+      "hanzi": "早上",
+      "pinyin": "zǎoshang",
+      "en": "morning",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t021",
+      "hanzi": "中午",
+      "pinyin": "zhōngwǔ",
+      "en": "noon",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t022",
+      "hanzi": "下午",
+      "pinyin": "xiàwǔ",
+      "en": "afternoon",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t023",
+      "hanzi": "傍晚",
+      "pinyin": "bàngwǎn",
+      "en": "dusk / early evening",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t024",
+      "hanzi": "晚上",
+      "pinyin": "wǎnshang",
+      "en": "evening / night",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t025",
+      "hanzi": "半夜",
+      "pinyin": "bànyè",
+      "en": "middle of the night",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t026",
+      "hanzi": "下午一点",
+      "pinyin": "xiàwǔ yì diǎn",
+      "en": "13:00 / 1 P.M.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t027",
+      "hanzi": "晚上八点",
+      "pinyin": "wǎnshang bā diǎn",
+      "en": "20:00 / 8 P.M.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t028",
+      "hanzi": "晚上十一点",
+      "pinyin": "wǎnshang shíyī diǎn",
+      "en": "23:00 / 11 P.M.",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t029",
+      "hanzi": "十四点三十分",
+      "pinyin": "shísì diǎn sānshí fēn",
+      "en": "14:30 in a formal timetable",
+      "sourcePages": [
+        3
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t030",
+      "hanzi": "八点二十分",
+      "pinyin": "bā diǎn èrshí fēn",
+      "en": "8:20 on the clock",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t031",
+      "hanzi": "二十分钟",
+      "pinyin": "èrshí fēnzhōng",
+      "en": "a twenty-minute duration",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t032",
+      "hanzi": "两点",
+      "pinyin": "liǎng diǎn",
+      "en": "2:00 on the clock",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t033",
+      "hanzi": "两个小时",
+      "pinyin": "liǎng ge xiǎoshí",
+      "en": "two hours",
+      "sourcePages": [
+        4,
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t034",
+      "hanzi": "半个小时",
+      "pinyin": "bàn ge xiǎoshí",
+      "en": "half an hour",
+      "sourcePages": [
+        4,
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t035",
+      "hanzi": "一个小时",
+      "pinyin": "yí ge xiǎoshí",
+      "en": "one hour",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t036",
+      "hanzi": "一个半小时",
+      "pinyin": "yí ge bàn xiǎoshí",
+      "en": "one and a half hours",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t037",
+      "hanzi": "十分钟",
+      "pinyin": "shí fēnzhōng",
+      "en": "ten minutes",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t038",
+      "hanzi": "二十到三十分钟",
+      "pinyin": "èrshí dào sānshí fēnzhōng",
+      "en": "twenty to thirty minutes",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t039",
+      "hanzi": "小时",
+      "pinyin": "xiǎoshí",
+      "en": "hour as a duration unit",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t040",
+      "hanzi": "分钟",
+      "pinyin": "fēnzhōng",
+      "en": "minute as a duration unit",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t041",
+      "hanzi": "两",
+      "pinyin": "liǎng",
+      "en": "two in these clock-hour and measure phrases",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t042",
+      "hanzi": "二十",
+      "pinyin": "èrshí",
+      "en": "twenty",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t043",
+      "hanzi": "以前",
+      "pinyin": "yǐqián",
+      "en": "before / earlier",
+      "sourcePages": [
+        5
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t044",
+      "hanzi": "以后",
+      "pinyin": "yǐhòu",
+      "en": "after / later",
+      "sourcePages": [
+        5
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t045",
+      "hanzi": "前",
+      "pinyin": "qián",
+      "en": "before / in front",
+      "sourcePages": [
+        5
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t046",
+      "hanzi": "后",
+      "pinyin": "hòu",
+      "en": "after / behind",
+      "sourcePages": [
+        5
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t047",
+      "hanzi": "然后",
+      "pinyin": "ránhòu",
+      "en": "then / afterwards",
+      "sourcePages": [
+        5
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t048",
+      "hanzi": "左右",
+      "pinyin": "zuǒyòu",
+      "en": "around / approximately",
+      "sourcePages": [
+        5
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t049",
+      "hanzi": "大概",
+      "pinyin": "dàgài",
+      "en": "approximately / probably",
+      "sourcePages": [
+        5
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t050",
+      "hanzi": "从…到…",
+      "pinyin": "cóng…dào…",
+      "en": "from…to…",
+      "sourcePages": [
+        5
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t051",
+      "hanzi": "八点以前",
+      "pinyin": "bā diǎn yǐqián",
+      "en": "before eight",
+      "sourcePages": [
+        5
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t052",
+      "hanzi": "八点",
+      "pinyin": "bā diǎn",
+      "en": "eight o’clock",
+      "sourcePages": [
+        5
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t053",
+      "hanzi": "八点以后",
+      "pinyin": "bā diǎn yǐhòu",
+      "en": "after eight",
+      "sourcePages": [
+        5
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t054",
+      "hanzi": "年",
+      "pinyin": "nián",
+      "en": "year",
+      "sourcePages": [
+        6
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t055",
+      "hanzi": "月",
+      "pinyin": "yuè",
+      "en": "month",
+      "sourcePages": [
+        6,
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t056",
+      "hanzi": "号",
+      "pinyin": "hào",
+      "en": "day of the month in conversation",
+      "sourcePages": [
+        6,
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t057",
+      "hanzi": "日",
+      "pinyin": "rì",
+      "en": "day in formal or written dates",
+      "sourcePages": [
+        6
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t058",
+      "hanzi": "二零二六年",
+      "pinyin": "èr líng èr liù nián",
+      "en": "the year 2026",
+      "sourcePages": [
+        6
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t059",
+      "hanzi": "十一月",
+      "pinyin": "shíyī yuè",
+      "en": "November",
+      "sourcePages": [
+        6,
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t060",
+      "hanzi": "三号",
+      "pinyin": "sān hào",
+      "en": "the third day of the month",
+      "sourcePages": [
+        6
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t061",
+      "hanzi": "星期一",
+      "pinyin": "xīngqī yī",
+      "en": "Monday",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t062",
+      "hanzi": "星期二",
+      "pinyin": "xīngqī èr",
+      "en": "Tuesday",
+      "sourcePages": [
+        7,
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t063",
+      "hanzi": "星期三",
+      "pinyin": "xīngqī sān",
+      "en": "Wednesday",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t064",
+      "hanzi": "星期四",
+      "pinyin": "xīngqī sì",
+      "en": "Thursday",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t065",
+      "hanzi": "星期五",
+      "pinyin": "xīngqī wǔ",
+      "en": "Friday",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t066",
+      "hanzi": "星期六",
+      "pinyin": "xīngqī liù",
+      "en": "Saturday",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t067",
+      "hanzi": "星期日",
+      "pinyin": "xīngqī rì",
+      "en": "Sunday",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t068",
+      "hanzi": "星期天",
+      "pinyin": "xīngqī tiān",
+      "en": "Sunday",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t069",
+      "hanzi": "一月",
+      "pinyin": "yī yuè",
+      "en": "January",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t070",
+      "hanzi": "二月",
+      "pinyin": "èr yuè",
+      "en": "February",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t071",
+      "hanzi": "三月",
+      "pinyin": "sān yuè",
+      "en": "March",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t072",
+      "hanzi": "四月",
+      "pinyin": "sì yuè",
+      "en": "April",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t073",
+      "hanzi": "五月",
+      "pinyin": "wǔ yuè",
+      "en": "May",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t074",
+      "hanzi": "六月",
+      "pinyin": "liù yuè",
+      "en": "June",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t075",
+      "hanzi": "七月",
+      "pinyin": "qī yuè",
+      "en": "July",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t076",
+      "hanzi": "八月",
+      "pinyin": "bā yuè",
+      "en": "August",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t077",
+      "hanzi": "九月",
+      "pinyin": "jiǔ yuè",
+      "en": "September",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t078",
+      "hanzi": "十月",
+      "pinyin": "shí yuè",
+      "en": "October",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t079",
+      "hanzi": "十二月",
+      "pinyin": "shí'èr yuè",
+      "en": "December",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t080",
+      "hanzi": "昨天",
+      "pinyin": "zuótiān",
+      "en": "yesterday",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t081",
+      "hanzi": "今天",
+      "pinyin": "jīntiān",
+      "en": "today",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t082",
+      "hanzi": "明天",
+      "pinyin": "míngtiān",
+      "en": "tomorrow",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t083",
+      "hanzi": "后天",
+      "pinyin": "hòutiān",
+      "en": "the day after tomorrow",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t084",
+      "hanzi": "这个月",
+      "pinyin": "zhège yuè",
+      "en": "this month",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t085",
+      "hanzi": "下个月",
+      "pinyin": "xià ge yuè",
+      "en": "next month",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t086",
+      "hanzi": "上星期",
+      "pinyin": "shàng xīngqī",
+      "en": "last week",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t087",
+      "hanzi": "周末",
+      "pinyin": "zhōumò",
+      "en": "weekend",
+      "sourcePages": [
+        7
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t088",
+      "hanzi": "现在几点了？",
+      "pinyin": "Xiànzài jǐ diǎn le?",
+      "en": "What time is it now?",
+      "sourcePages": [
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t089",
+      "hanzi": "十点半",
+      "pinyin": "shí diǎn bàn",
+      "en": "10:30",
+      "sourcePages": [
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t090",
+      "hanzi": "早饭以后",
+      "pinyin": "zǎofàn yǐhòu",
+      "en": "after breakfast",
+      "sourcePages": [
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t091",
+      "hanzi": "十一月三号",
+      "pinyin": "shíyī yuè sān hào",
+      "en": "November 3",
+      "sourcePages": [
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t092",
+      "hanzi": "店",
+      "pinyin": "diàn",
+      "en": "shop",
+      "sourcePages": [
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t093",
+      "hanzi": "时",
+      "pinyin": "shí",
+      "en": "time",
+      "sourcePages": [
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t094",
+      "hanzi": "十",
+      "pinyin": "shí",
+      "en": "ten",
+      "sourcePages": [
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t095",
+      "hanzi": "越",
+      "pinyin": "yuè",
+      "en": "surpass",
+      "sourcePages": [
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-t096",
+      "hanzi": "好",
+      "pinyin": "hǎo",
+      "en": "good",
+      "sourcePages": [
+        10
+      ],
+      "origin": "source"
+    }
+  ],
+  "examples": [
+    {
+      "id": "ref-time-e001",
+      "hanzi": "现在几点了？",
+      "pinyin": "Xiànzài jǐ diǎn le?",
+      "en": "What time is it now?",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e002",
+      "hanzi": "现在八点四十分。",
+      "pinyin": "Xiànzài bā diǎn sìshí fēn.",
+      "en": "It is 8:40 now.",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e003",
+      "hanzi": "你几点起床？",
+      "pinyin": "Nǐ jǐ diǎn qǐchuáng?",
+      "en": "When do you get up?",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e004",
+      "hanzi": "你几点上课？",
+      "pinyin": "Nǐ jǐ diǎn shàngkè?",
+      "en": "When does class start?",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e005",
+      "hanzi": "今天星期几？",
+      "pinyin": "Jīntiān xīngqī jǐ?",
+      "en": "What day is today?",
+      "sourcePages": [
+        1,
+        6
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e006",
+      "hanzi": "我八点起床。",
+      "pinyin": "Wǒ bā diǎn qǐchuáng.",
+      "en": "I get up at eight.",
+      "sourcePages": [
+        1
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e007",
+      "hanzi": "多长时间？",
+      "pinyin": "Duō cháng shíjiān?",
+      "en": "How long?",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e008",
+      "hanzi": "几个小时？",
+      "pinyin": "Jǐ ge xiǎoshí?",
+      "en": "How many hours?",
+      "sourcePages": [
+        4
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e009",
+      "hanzi": "我七点左右醒来。",
+      "pinyin": "Wǒ qī diǎn zuǒyòu xǐnglái.",
+      "en": "I wake up around seven.",
+      "sourcePages": [
+        5
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e010",
+      "hanzi": "早饭后，我准备出门。",
+      "pinyin": "Zǎofàn hòu, wǒ zhǔnbèi chūmén.",
+      "en": "After breakfast, I get ready to leave.",
+      "sourcePages": [
+        5,
+        8
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e011",
+      "hanzi": "从八点到十二点，我在学校。",
+      "pinyin": "Cóng bā diǎn dào shí'èr diǎn, wǒ zài xuéxiào.",
+      "en": "From eight to twelve, I am at school.",
+      "sourcePages": [
+        5
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e012",
+      "hanzi": "十分钟后，我到学校了。",
+      "pinyin": "Shí fēnzhōng hòu, wǒ dào xuéxiào le.",
+      "en": "Ten minutes later, I arrive at school.",
+      "sourcePages": [
+        5
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e013",
+      "hanzi": "今天是二零二六年十一月三号，星期二。",
+      "pinyin": "Jīntiān shì èr líng èr liù nián shíyī yuè sān hào, xīngqī èr.",
+      "en": "Today is Tuesday, 3 November 2026 in the source example.",
+      "sourcePages": [
+        6
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e014",
+      "hanzi": "今天几号？",
+      "pinyin": "Jīntiān jǐ hào?",
+      "en": "What is today’s date?",
+      "sourcePages": [
+        6
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e015",
+      "hanzi": "今天几月几号？",
+      "pinyin": "Jīntiān jǐ yuè jǐ hào?",
+      "en": "What month and date is today?",
+      "sourcePages": [
+        6
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e016",
+      "hanzi": "你的生日是几月几号？",
+      "pinyin": "Nǐ de shēngrì shì jǐ yuè jǐ hào?",
+      "en": "When is your birthday?",
+      "sourcePages": [
+        6
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e017",
+      "hanzi": "我每天早上七点左右醒来。",
+      "pinyin": "Wǒ měitiān zǎoshang qī diǎn zuǒyòu xǐnglái.",
+      "en": "Every morning I wake up around seven.",
+      "sourcePages": [
+        8
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e018",
+      "hanzi": "我通常在床上再躺十到十五分钟。",
+      "pinyin": "Wǒ tōngcháng zài chuáng shang zài tǎng shí dào shíwǔ fēnzhōng.",
+      "en": "I usually stay in bed another ten to fifteen minutes.",
+      "sourcePages": [
+        8
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e019",
+      "hanzi": "然后我起床，喝一杯温水。",
+      "pinyin": "Ránhòu wǒ qǐchuáng, hē yì bēi wēnshuǐ.",
+      "en": "Then I get up and drink a glass of warm water.",
+      "sourcePages": [
+        8
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e020",
+      "hanzi": "我洗澡，换衣服。",
+      "pinyin": "Wǒ xǐzǎo, huàn yīfu.",
+      "en": "I shower and change clothes.",
+      "sourcePages": [
+        8
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e021",
+      "hanzi": "然后我去厨房，做早饭。",
+      "pinyin": "Ránhòu wǒ qù chúfáng, zuò zǎofàn.",
+      "en": "Then I go to the kitchen and make breakfast.",
+      "sourcePages": [
+        8
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e022",
+      "hanzi": "我家离学校很近，走路只要十分钟。",
+      "pinyin": "Wǒ jiā lí xuéxiào hěn jìn, zǒulù zhǐyào shí fēnzhōng.",
+      "en": "My home is close to school; walking takes only ten minutes.",
+      "sourcePages": [
+        8
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e023",
+      "hanzi": "路上我用微信点一杯咖啡。",
+      "pinyin": "Lùshang wǒ yòng Wēixìn diǎn yì bēi kāfēi.",
+      "en": "On my way I order a cup of coffee on WeChat.",
+      "sourcePages": [
+        8
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e024",
+      "hanzi": "到学校以后，我去上课。",
+      "pinyin": "Dào xuéxiào yǐhòu, wǒ qù shàngkè.",
+      "en": "After reaching school, I go to class.",
+      "sourcePages": [
+        8
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e025",
+      "hanzi": "我的课早上八点四十分开始。",
+      "pinyin": "Wǒ de kè zǎoshang bā diǎn sìshí fēn kāishǐ.",
+      "en": "My class starts at 8:40 A.M.",
+      "sourcePages": [
+        9
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e026",
+      "hanzi": "我十点十分休息二十分钟。",
+      "pinyin": "Wǒ shí diǎn shí fēn xiūxi èrshí fēnzhōng.",
+      "en": "I have a twenty-minute break at 10:10.",
+      "sourcePages": [
+        9
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e027",
+      "hanzi": "我十点半回去上课。",
+      "pinyin": "Wǒ shí diǎn bàn huíqù shàngkè.",
+      "en": "I go back to class at 10:30.",
+      "sourcePages": [
+        9
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e028",
+      "hanzi": "我中午休息一个小时。",
+      "pinyin": "Wǒ zhōngwǔ xiūxi yí ge xiǎoshí.",
+      "en": "I have a one-hour break at noon.",
+      "sourcePages": [
+        9
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e029",
+      "hanzi": "下一节课下午一点开始。",
+      "pinyin": "Xià yì jié kè xiàwǔ yì diǎn kāishǐ.",
+      "en": "The next class starts at 1 P.M.",
+      "sourcePages": [
+        9
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e030",
+      "hanzi": "我下午两点半下课，然后回家。",
+      "pinyin": "Wǒ xiàwǔ liǎng diǎn bàn xiàkè, ránhòu huí jiā.",
+      "en": "I finish class at 2:30 P.M., then go home.",
+      "sourcePages": [
+        9
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e031",
+      "hanzi": "回家以后，我学习中文，也远程工作。",
+      "pinyin": "Huí jiā yǐhòu, wǒ xuéxí Zhōngwén, yě yuǎnchéng gōngzuò.",
+      "en": "At home I study Chinese and work remotely.",
+      "sourcePages": [
+        9
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e032",
+      "hanzi": "我有时候散步半个小时。",
+      "pinyin": "Wǒ yǒu shíhou sànbù bàn ge xiǎoshí.",
+      "en": "Sometimes I walk for half an hour.",
+      "sourcePages": [
+        9
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e033",
+      "hanzi": "晚上十一点左右，我上床睡觉。",
+      "pinyin": "Wǎnshang shíyī diǎn zuǒyòu, wǒ shàngchuáng shuìjiào.",
+      "en": "Around 11 P.M., I go to bed.",
+      "sourcePages": [
+        9
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e034",
+      "hanzi": "我的课八点四十分开始。",
+      "pinyin": "Wǒ de kè bā diǎn sìshí fēn kāishǐ.",
+      "en": "My class starts at 8:40.",
+      "sourcePages": [
+        10
+      ],
+      "origin": "source"
+    },
+    {
+      "id": "ref-time-e035",
+      "hanzi": "走路只要十分钟。",
+      "pinyin": "Zǒulù zhǐyào shí fēnzhōng.",
+      "en": "Walking takes only ten minutes.",
+      "sourcePages": [
+        10
+      ],
+      "origin": "source"
+    }
+  ],
+  "topics": [
+    {
+      "id": "ref-time-p01",
+      "title": "Ask and build a time",
+      "explanation": "Daypart + hour + 点 + minutes. Time normally precedes the activity. These examples use 8:40 in the morning.",
+      "sourcePages": [
+        1
+      ],
+      "termIds": [
+        "ref-time-t001",
+        "ref-time-t002",
+        "ref-time-t003",
+        "ref-time-t004",
+        "ref-time-t005",
+        "ref-time-t006"
+      ],
+      "exampleIds": [
+        "ref-time-e001",
+        "ref-time-e002",
+        "ref-time-e003",
+        "ref-time-e004",
+        "ref-time-e005",
+        "ref-time-e006"
+      ],
+      "visualIntent": "Clock at 8:40 with an interpolated hour hand; assemble daypart/hour/minutes."
+    },
+    {
+      "id": "ref-time-p02",
+      "title": "Eight everyday clocks",
+      "explanation": "Watch both hands. 一刻 is fifteen minutes, 半 is thirty, 三刻 is forty-five. At 8:45, 差一刻九点 is another way to say a quarter to nine.",
+      "sourcePages": [
+        2
+      ],
+      "termIds": [
+        "ref-time-t007",
+        "ref-time-t008",
+        "ref-time-t009",
+        "ref-time-t010",
+        "ref-time-t011",
+        "ref-time-t012",
+        "ref-time-t013",
+        "ref-time-t014",
+        "ref-time-t015",
+        "ref-time-t016",
+        "ref-time-t017",
+        "ref-time-t018"
+      ],
+      "exampleIds": [],
+      "visualIntent": "Eight source clock presets with movable hands and minute controls; 12/24-hour wording."
+    },
+    {
+      "id": "ref-time-p03",
+      "title": "Parts of the day",
+      "explanation": "The band is illustrative. Dayparts overlap: 早上 and 上午 can overlap, and 中午 is around noon. They are not exact legal boundaries. Formal timetables can use 24-hour numbers; conversation usually uses a daypart.",
+      "sourcePages": [
+        3
+      ],
+      "termIds": [
+        "ref-time-t019",
+        "ref-time-t020",
+        "ref-time-t001",
+        "ref-time-t021",
+        "ref-time-t022",
+        "ref-time-t023",
+        "ref-time-t024",
+        "ref-time-t025",
+        "ref-time-t026",
+        "ref-time-t015",
+        "ref-time-t027",
+        "ref-time-t028",
+        "ref-time-t029"
+      ],
+      "exampleIds": [],
+      "visualIntent": "An approximate 24-hour day/night band linked to eight daypart examples."
+    },
+    {
+      "id": "ref-time-p04",
+      "title": "Clock point or duration?",
+      "explanation": "A point on a clock answers when; an interval answers how long. 分 is used in clock readings, 分钟 for a duration. These examples use 两点 and 两个小时, but 二十 means twenty.",
+      "sourcePages": [
+        4
+      ],
+      "termIds": [
+        "ref-time-t030",
+        "ref-time-t031",
+        "ref-time-t032",
+        "ref-time-t033",
+        "ref-time-t034",
+        "ref-time-t035",
+        "ref-time-t036",
+        "ref-time-t037",
+        "ref-time-t038",
+        "ref-time-t039",
+        "ref-time-t040",
+        "ref-time-t041",
+        "ref-time-t042"
+      ],
+      "exampleIds": [
+        "ref-time-e007",
+        "ref-time-e008"
+      ],
+      "visualIntent": "Side-by-side clock point and interval bar; selectable duration lengths, not interchangeable labels."
+    },
+    {
+      "id": "ref-time-p05",
+      "title": "Before, after and around",
+      "explanation": "以前 and 以后 locate something before/after a reference. 左右 and 大概 express approximation. 从…到… marks an interval; 然后 links the next event.",
+      "sourcePages": [
+        5
+      ],
+      "termIds": [
+        "ref-time-t043",
+        "ref-time-t044",
+        "ref-time-t045",
+        "ref-time-t046",
+        "ref-time-t047",
+        "ref-time-t048",
+        "ref-time-t049",
+        "ref-time-t050",
+        "ref-time-t051",
+        "ref-time-t052",
+        "ref-time-t053"
+      ],
+      "exampleIds": [
+        "ref-time-e009",
+        "ref-time-e010",
+        "ref-time-e011",
+        "ref-time-e012"
+      ],
+      "visualIntent": "Reference at eight with before/after positions; a fuzzy region around seven; interval from eight to twelve."
+    },
+    {
+      "id": "ref-time-p06",
+      "title": "Read a date",
+      "explanation": "Use year → month → day. Read a year digit by digit. 号 is conversational and 日 is formal/written. This source example is Tuesday, 3 November 2026, not a live claim about today.",
+      "sourcePages": [
+        6
+      ],
+      "termIds": [
+        "ref-time-t054",
+        "ref-time-t055",
+        "ref-time-t056",
+        "ref-time-t057",
+        "ref-time-t058",
+        "ref-time-t059",
+        "ref-time-t060"
+      ],
+      "exampleIds": [
+        "ref-time-e013",
+        "ref-time-e014",
+        "ref-time-e005",
+        "ref-time-e015",
+        "ref-time-e016"
+      ],
+      "visualIntent": "Monday-first November 2026 calendar with Tuesday 3 highlighted; navigate practice dates without treating source date as device today."
+    },
+    {
+      "id": "ref-time-p07",
+      "title": "Days, weeks and months",
+      "explanation": "Month names use a number + 月. 星期日 and 星期天 both mean Sunday. Relative words need a reference day, week or month.",
+      "sourcePages": [
+        7
+      ],
+      "termIds": [
+        "ref-time-t061",
+        "ref-time-t062",
+        "ref-time-t063",
+        "ref-time-t064",
+        "ref-time-t065",
+        "ref-time-t066",
+        "ref-time-t067",
+        "ref-time-t068",
+        "ref-time-t069",
+        "ref-time-t070",
+        "ref-time-t071",
+        "ref-time-t072",
+        "ref-time-t073",
+        "ref-time-t074",
+        "ref-time-t075",
+        "ref-time-t076",
+        "ref-time-t077",
+        "ref-time-t078",
+        "ref-time-t059",
+        "ref-time-t079",
+        "ref-time-t080",
+        "ref-time-t081",
+        "ref-time-t082",
+        "ref-time-t083",
+        "ref-time-t084",
+        "ref-time-t085",
+        "ref-time-t086",
+        "ref-time-t087"
+      ],
+      "exampleIds": [],
+      "visualIntent": "Selectable practice calendar plus yesterday/today/tomorrow/day-after strip; names and weekday/date remain consistent."
+    },
+    {
+      "id": "ref-time-p08",
+      "title": "A morning in order",
+      "explanation": "This is the PDF’s separate around-seven example, not an edit to your existing My Day lesson. Follow the order; untimed actions do not acquire invented exact times.",
+      "sourcePages": [
+        8
+      ],
+      "termIds": [],
+      "exampleIds": [
+        "ref-time-e017",
+        "ref-time-e018",
+        "ref-time-e019",
+        "ref-time-e020",
+        "ref-time-e021",
+        "ref-time-e010",
+        "ref-time-e022",
+        "ref-time-e023",
+        "ref-time-e024"
+      ],
+      "visualIntent": "Ordered morning events: around seven is approximate; the walk has a ten-minute duration; other actions stay untimed."
+    },
+    {
+      "id": "ref-time-p09",
+      "title": "Class times and breaks",
+      "explanation": "Use exact class anchors and measured breaks. 10:10 → 10:30 is twenty minutes; noon → 13:00 is one hour. The seven o’clock morning and this schedule belong to this source only.",
+      "sourcePages": [
+        9
+      ],
+      "termIds": [],
+      "exampleIds": [
+        "ref-time-e025",
+        "ref-time-e026",
+        "ref-time-e027",
+        "ref-time-e028",
+        "ref-time-e029",
+        "ref-time-e030",
+        "ref-time-e031",
+        "ref-time-e032",
+        "ref-time-e033"
+      ],
+      "visualIntent": "A full-day schedule with exact class times, measured breaks, and untimed home activities kept untimed."
+    },
+    {
+      "id": "ref-time-p10",
+      "title": "Recall, writing and IME choices",
+      "explanation": "Hide the model before answering. Tone marks or tone numbers are accepted in pinyin checks. Untoned IME strings admit both candidates; meaning and context decide which you intend.",
+      "sourcePages": [
+        10
+      ],
+      "termIds": [
+        "ref-time-t088",
+        "ref-time-t011",
+        "ref-time-t089",
+        "ref-time-t034",
+        "ref-time-t033",
+        "ref-time-t090",
+        "ref-time-t091",
+        "ref-time-t062",
+        "ref-time-t003",
+        "ref-time-t092",
+        "ref-time-t093",
+        "ref-time-t094",
+        "ref-time-t055",
+        "ref-time-t095",
+        "ref-time-t056",
+        "ref-time-t096"
+      ],
+      "exampleIds": [
+        "ref-time-e034",
+        "ref-time-e035"
+      ],
+      "visualIntent": "Contextual IME contrasts dian/shi/yue/hao and ten exact pinyin-recall source targets; supported handwriting of 点分时间年月号前后."
+    }
+  ],
+  "checks": [
+    {
+      "id": "ref-time-check-001",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t001",
+      "optionIds": [
+        "ref-time-t002",
+        "ref-time-t003",
+        "ref-time-t004",
+        "ref-time-t001"
+      ],
+      "sourcePages": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "ref-time-check-002",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t002",
+      "optionIds": [
+        "ref-time-t003",
+        "ref-time-t004",
+        "ref-time-t002",
+        "ref-time-t001"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-time-check-003",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t003",
+      "optionIds": [
+        "ref-time-t004",
+        "ref-time-t003",
+        "ref-time-t001",
+        "ref-time-t002"
+      ],
+      "sourcePages": [
+        1,
+        10
+      ]
+    },
+    {
+      "id": "ref-time-check-004",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t004",
+      "optionIds": [
+        "ref-time-t004",
+        "ref-time-t001",
+        "ref-time-t002",
+        "ref-time-t003"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-time-check-005",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t007",
+      "optionIds": [
+        "ref-time-t008",
+        "ref-time-t009",
+        "ref-time-t010",
+        "ref-time-t007"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-time-check-006",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t008",
+      "optionIds": [
+        "ref-time-t009",
+        "ref-time-t010",
+        "ref-time-t008",
+        "ref-time-t007"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-time-check-007",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t009",
+      "optionIds": [
+        "ref-time-t010",
+        "ref-time-t009",
+        "ref-time-t007",
+        "ref-time-t008"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-time-check-008",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t010",
+      "optionIds": [
+        "ref-time-t010",
+        "ref-time-t007",
+        "ref-time-t008",
+        "ref-time-t009"
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "ref-time-check-009",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t005",
+      "optionIds": [
+        "ref-time-t001",
+        "ref-time-t002",
+        "ref-time-t003",
+        "ref-time-t005"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-time-check-010",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t015",
+      "optionIds": [
+        "ref-time-t007",
+        "ref-time-t008",
+        "ref-time-t015",
+        "ref-time-t001"
+      ],
+      "sourcePages": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "ref-time-check-011",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t019",
+      "optionIds": [
+        "ref-time-t020",
+        "ref-time-t019",
+        "ref-time-t001",
+        "ref-time-t015"
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-time-check-012",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t020",
+      "optionIds": [
+        "ref-time-t020",
+        "ref-time-t001",
+        "ref-time-t015",
+        "ref-time-t019"
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "ref-time-check-013",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t030",
+      "optionIds": [
+        "ref-time-t031",
+        "ref-time-t032",
+        "ref-time-t033",
+        "ref-time-t030"
+      ],
+      "sourcePages": [
+        4
+      ]
+    },
+    {
+      "id": "ref-time-check-014",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t031",
+      "optionIds": [
+        "ref-time-t032",
+        "ref-time-t033",
+        "ref-time-t031",
+        "ref-time-t030"
+      ],
+      "sourcePages": [
+        4
+      ]
+    },
+    {
+      "id": "ref-time-check-015",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t032",
+      "optionIds": [
+        "ref-time-t033",
+        "ref-time-t032",
+        "ref-time-t030",
+        "ref-time-t031"
+      ],
+      "sourcePages": [
+        4
+      ]
+    },
+    {
+      "id": "ref-time-check-016",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t033",
+      "optionIds": [
+        "ref-time-t033",
+        "ref-time-t003",
+        "ref-time-t011",
+        "ref-time-t030"
+      ],
+      "sourcePages": [
+        4,
+        10
+      ]
+    },
+    {
+      "id": "ref-time-check-017",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t043",
+      "optionIds": [
+        "ref-time-t044",
+        "ref-time-t045",
+        "ref-time-t046",
+        "ref-time-t043"
+      ],
+      "sourcePages": [
+        5
+      ]
+    },
+    {
+      "id": "ref-time-check-018",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t044",
+      "optionIds": [
+        "ref-time-t045",
+        "ref-time-t046",
+        "ref-time-t044",
+        "ref-time-t043"
+      ],
+      "sourcePages": [
+        5
+      ]
+    },
+    {
+      "id": "ref-time-check-019",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t047",
+      "optionIds": [
+        "ref-time-t045",
+        "ref-time-t047",
+        "ref-time-t043",
+        "ref-time-t044"
+      ],
+      "sourcePages": [
+        5
+      ]
+    },
+    {
+      "id": "ref-time-check-020",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t048",
+      "optionIds": [
+        "ref-time-t048",
+        "ref-time-t043",
+        "ref-time-t044",
+        "ref-time-t045"
+      ],
+      "sourcePages": [
+        5
+      ]
+    },
+    {
+      "id": "ref-time-check-021",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t054",
+      "optionIds": [
+        "ref-time-t055",
+        "ref-time-t056",
+        "ref-time-t057",
+        "ref-time-t054"
+      ],
+      "sourcePages": [
+        6
+      ]
+    },
+    {
+      "id": "ref-time-check-022",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t055",
+      "optionIds": [
+        "ref-time-t011",
+        "ref-time-t033",
+        "ref-time-t055",
+        "ref-time-t003"
+      ],
+      "sourcePages": [
+        6,
+        10
+      ]
+    },
+    {
+      "id": "ref-time-check-023",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t058",
+      "optionIds": [
+        "ref-time-t056",
+        "ref-time-t058",
+        "ref-time-t054",
+        "ref-time-t055"
+      ],
+      "sourcePages": [
+        6
+      ]
+    },
+    {
+      "id": "ref-time-check-024",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t059",
+      "optionIds": [
+        "ref-time-t059",
+        "ref-time-t054",
+        "ref-time-t055",
+        "ref-time-t056"
+      ],
+      "sourcePages": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "ref-time-check-025",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t060",
+      "optionIds": [
+        "ref-time-t054",
+        "ref-time-t055",
+        "ref-time-t058",
+        "ref-time-t060"
+      ],
+      "sourcePages": [
+        6
+      ]
+    },
+    {
+      "id": "ref-time-check-026",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t061",
+      "optionIds": [
+        "ref-time-t062",
+        "ref-time-t063",
+        "ref-time-t061",
+        "ref-time-t059"
+      ],
+      "sourcePages": [
+        7
+      ]
+    },
+    {
+      "id": "ref-time-check-027",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t062",
+      "optionIds": [
+        "ref-time-t033",
+        "ref-time-t062",
+        "ref-time-t003",
+        "ref-time-t011"
+      ],
+      "sourcePages": [
+        7,
+        10
+      ]
+    },
+    {
+      "id": "ref-time-check-028",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t063",
+      "optionIds": [
+        "ref-time-t063",
+        "ref-time-t059",
+        "ref-time-t061",
+        "ref-time-t062"
+      ],
+      "sourcePages": [
+        7
+      ]
+    },
+    {
+      "id": "ref-time-check-029",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-e010",
+      "optionIds": [
+        "ref-time-t043",
+        "ref-time-t044",
+        "ref-time-t045",
+        "ref-time-e010"
+      ],
+      "sourcePages": [
+        5,
+        8
+      ]
+    },
+    {
+      "id": "ref-time-check-030",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-e017",
+      "optionIds": [
+        "ref-time-e018",
+        "ref-time-e019",
+        "ref-time-e017",
+        "ref-time-e010"
+      ],
+      "sourcePages": [
+        8
+      ]
+    },
+    {
+      "id": "ref-time-check-031",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-e018",
+      "optionIds": [
+        "ref-time-e019",
+        "ref-time-e018",
+        "ref-time-e010",
+        "ref-time-e017"
+      ],
+      "sourcePages": [
+        8
+      ]
+    },
+    {
+      "id": "ref-time-check-032",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-e019",
+      "optionIds": [
+        "ref-time-e019",
+        "ref-time-e010",
+        "ref-time-e017",
+        "ref-time-e018"
+      ],
+      "sourcePages": [
+        8
+      ]
+    },
+    {
+      "id": "ref-time-check-033",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-e025",
+      "optionIds": [
+        "ref-time-e026",
+        "ref-time-e027",
+        "ref-time-e028",
+        "ref-time-e025"
+      ],
+      "sourcePages": [
+        9
+      ]
+    },
+    {
+      "id": "ref-time-check-034",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-e026",
+      "optionIds": [
+        "ref-time-e027",
+        "ref-time-e028",
+        "ref-time-e026",
+        "ref-time-e025"
+      ],
+      "sourcePages": [
+        9
+      ]
+    },
+    {
+      "id": "ref-time-check-035",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-e027",
+      "optionIds": [
+        "ref-time-e028",
+        "ref-time-e027",
+        "ref-time-e025",
+        "ref-time-e026"
+      ],
+      "sourcePages": [
+        9
+      ]
+    },
+    {
+      "id": "ref-time-check-036",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-e028",
+      "optionIds": [
+        "ref-time-e028",
+        "ref-time-e025",
+        "ref-time-e026",
+        "ref-time-e027"
+      ],
+      "sourcePages": [
+        9
+      ]
+    },
+    {
+      "id": "ref-time-check-037",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t006",
+      "optionIds": [
+        "ref-time-t001",
+        "ref-time-t002",
+        "ref-time-t003",
+        "ref-time-t006"
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "ref-time-check-038",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t011",
+      "optionIds": [
+        "ref-time-t007",
+        "ref-time-t008",
+        "ref-time-t011",
+        "ref-time-t003"
+      ],
+      "sourcePages": [
+        2,
+        10
+      ]
+    },
+    {
+      "id": "ref-time-check-039",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t035",
+      "optionIds": [
+        "ref-time-t030",
+        "ref-time-t031",
+        "ref-time-t032",
+        "ref-time-t035"
+      ],
+      "sourcePages": [
+        4
+      ]
+    },
+    {
+      "id": "ref-time-check-040",
+      "kind": "meaning",
+      "prompt": "Choose the meaning in this lesson.",
+      "targetId": "ref-time-t034",
+      "optionIds": [
+        "ref-time-t034",
+        "ref-time-t003",
+        "ref-time-t011",
+        "ref-time-t030"
+      ],
+      "sourcePages": [
+        4,
+        10
+      ]
+    },
+    {
+      "id": "ref-time-check-041",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-time-t088",
+      "optionIds": [],
+      "sourcePages": [
+        10
+      ]
+    },
+    {
+      "id": "ref-time-check-042",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-time-t011",
+      "optionIds": [],
+      "sourcePages": [
+        2,
+        10
+      ]
+    },
+    {
+      "id": "ref-time-check-043",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-time-t089",
+      "optionIds": [],
+      "sourcePages": [
+        10
+      ]
+    },
+    {
+      "id": "ref-time-check-044",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-time-t034",
+      "optionIds": [],
+      "sourcePages": [
+        4,
+        10
+      ]
+    },
+    {
+      "id": "ref-time-check-045",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-time-t033",
+      "optionIds": [],
+      "sourcePages": [
+        4,
+        10
+      ]
+    },
+    {
+      "id": "ref-time-check-046",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-time-t090",
+      "optionIds": [],
+      "sourcePages": [
+        10
+      ]
+    },
+    {
+      "id": "ref-time-check-047",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-time-t091",
+      "optionIds": [],
+      "sourcePages": [
+        10
+      ]
+    },
+    {
+      "id": "ref-time-check-048",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-time-t062",
+      "optionIds": [],
+      "sourcePages": [
+        7,
+        10
+      ]
+    },
+    {
+      "id": "ref-time-check-049",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-time-e034",
+      "optionIds": [],
+      "sourcePages": [
+        10
+      ]
+    },
+    {
+      "id": "ref-time-check-050",
+      "kind": "pinyin",
+      "prompt": "Write the pinyin from memory. Use tone marks or tone numbers.",
+      "targetId": "ref-time-e035",
+      "optionIds": [],
+      "sourcePages": [
+        10
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "page": 1,
+      "topicIds": [
+        "ref-time-p01"
+      ],
+      "summary": "Ask and build a time"
+    },
+    {
+      "page": 2,
+      "topicIds": [
+        "ref-time-p02"
+      ],
+      "summary": "Eight everyday clocks"
+    },
+    {
+      "page": 3,
+      "topicIds": [
+        "ref-time-p03"
+      ],
+      "summary": "Parts of the day"
+    },
+    {
+      "page": 4,
+      "topicIds": [
+        "ref-time-p04"
+      ],
+      "summary": "Clock point or duration?"
+    },
+    {
+      "page": 5,
+      "topicIds": [
+        "ref-time-p05"
+      ],
+      "summary": "Before, after and around"
+    },
+    {
+      "page": 6,
+      "topicIds": [
+        "ref-time-p06"
+      ],
+      "summary": "Read a date"
+    },
+    {
+      "page": 7,
+      "topicIds": [
+        "ref-time-p07"
+      ],
+      "summary": "Days, weeks and months"
+    },
+    {
+      "page": 8,
+      "topicIds": [
+        "ref-time-p08"
+      ],
+      "summary": "A morning in order"
+    },
+    {
+      "page": 9,
+      "topicIds": [
+        "ref-time-p09"
+      ],
+      "summary": "Class times and breaks"
+    },
+    {
+      "page": 10,
+      "topicIds": [
+        "ref-time-p10"
+      ],
+      "summary": "Recall, writing and IME choices"
+    }
+  ]
+}

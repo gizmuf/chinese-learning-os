@@ -1,0 +1,5 @@
+Lesson 04 text and PDFs: original Chinese OS educational materials, prepared from the owner's classroom-board photos. Four additional teaching examples are identified in the dataset and guide.
+Handwriting stroke diagrams: locally served Hanzi Writer / Make Me a Hanzi data; see hanzi-writer-data-ARPHICPL.TXT and the existing dataset notices in this directory.
+Embedded serif typeface: Noto Serif CJK SC, Noto project (https://github.com/notofonts/noto-cjk), SIL Open Font License 1.1. Embedded as an authoring subset; no standalone font file is distributed here.
+Embedded Latin/Cyrillic typeface: Noto Sans, Noto project, SIL Open Font License 1.1.
+Mandarin speech: Microsoft Edge Read Aloud via edge-tts, zh-CN-XiaoxiaoNeural, generation rate -10%, matching previous Chinese OS course recordings. Only authored lesson text is used; learner records are never sent to the speech provider.

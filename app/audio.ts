@@ -1,0 +1,53 @@
+"use client";
+import type { Item } from "./content";
+let current: HTMLAudioElement | null = null;
+let playbackRate = 1;
+export function setSpeechRate(rate: number) {
+  playbackRate = rate === 0.8 ? 0.8 : 1;
+  if (current) current.playbackRate = playbackRate;
+}
+export function stopAudio() {
+  if (!current) return;
+  current.pause();
+  current.removeAttribute("src");
+  current.load();
+  current = null;
+}
+// Release only this player's recording, preserving a later pronunciation.
+export function releaseRecording(audio: HTMLAudioElement) {
+  if (current === audio) stopAudio();
+  else { audio.pause(); audio.removeAttribute("src"); audio.load(); }
+}
+export function speak(
+  text: string,
+  notify: (message: string) => void,
+  item: Item,
+) {
+  const prefix = item.id.startsWith("atlas-") ? "/atlas/audio" : item.id.startsWith("course05-") ? "/course05/audio" : item.id.startsWith("course04-") ? "/course04/audio" : item.id.startsWith("course03-") ? "/course03/audio" : "/audio";
+  const source = `${prefix}/${encodeURIComponent(item.id)}-${text === item.hanzi ? "word" : "sentence"}.mp3`;
+  playRecording(source,notify);
+}
+export function playRecording(source:string,notify:(message:string)=>void) {
+  stopAudio();
+  const audio = new Audio(source);
+  current = audio;
+  audio.playbackRate = playbackRate;
+  audio.preservesPitch = true;
+  audio.onended = () => {
+    if (current === audio) current = null;
+  };
+  audio.onerror = () => {
+    if (current === audio)
+      notify("Could not load the pronunciation. Reconnect and try again.");
+  };
+  // Start directly from the user's tap: no async voice lookup or third-party call.
+  void audio.play().catch((error: unknown) => {
+    if (
+      current !== audio ||
+      (error instanceof DOMException && error.name === "AbortError")
+    )
+      return;
+    notify("Tap the speaker again to play the pronunciation.");
+  });
+  return audio;
+}

@@ -1,0 +1,77 @@
+{
+  "source": "https://github.com/skishore/makemeahanzi",
+  "characters": [
+    {
+      "text": "临",
+      "pinyin": "lín",
+      "meaning": "to draw near, to approach; to descend",
+      "audio": "/writing-context/audio/char-4e34.mp3"
+    },
+    {
+      "text": "代",
+      "pinyin": "dài",
+      "meaning": "era, generation; to substitute for, to replace",
+      "audio": "/writing-context/audio/char-4ee3.mp3"
+    },
+    {
+      "text": "光",
+      "pinyin": "guāng",
+      "meaning": "light; bright, brilliant; only, merely",
+      "audio": "/writing-context/audio/char-5149.mp3"
+    },
+    {
+      "text": "堂",
+      "pinyin": "táng",
+      "meaning": "hall, large room; government office; cousins",
+      "audio": "/writing-context/audio/char-5802.mp3"
+    },
+    {
+      "text": "奋",
+      "pinyin": "fèn",
+      "meaning": "to strive, to exert effort; to arouse",
+      "audio": "/writing-context/audio/char-594b.mp3"
+    },
+    {
+      "text": "既",
+      "pinyin": "jì",
+      "meaning": "already, since, then; both; de facto",
+      "audio": "/writing-context/audio/char-65e2.mp3"
+    },
+    {
+      "text": "腐",
+      "pinyin": "fǔ",
+      "meaning": "to spoil, to rot, to decay; rotten",
+      "audio": "/writing-context/audio/char-8150.mp3"
+    },
+    {
+      "text": "臭",
+      "pinyin": "chòu",
+      "meaning": "to reek, to smell, to stink",
+      "audio": "/writing-context/audio/char-81ed.mp3"
+    },
+    {
+      "text": "落",
+      "pinyin": "luò",
+      "meaning": "to fall, to drop; surplus, net income",
+      "audio": "/writing-context/audio/char-843d.mp3"
+    },
+    {
+      "text": "谈",
+      "pinyin": "tán",
+      "meaning": "to talk, to chat; conversation; surname",
+      "audio": "/writing-context/audio/char-8c08.mp3"
+    },
+    {
+      "text": "豆",
+      "pinyin": "dòu",
+      "meaning": "beans, peas; bean-shaped",
+      "audio": "/writing-context/audio/char-8c46.mp3"
+    },
+    {
+      "text": "首",
+      "pinyin": "shǒu",
+      "meaning": "chief, head, leader",
+      "audio": "/writing-context/audio/char-9996.mp3"
+    }
+  ]
+}

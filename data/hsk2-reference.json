@@ -1,0 +1,1208 @@
+{
+  "edition": "HSK examination syllabus, November 2025",
+  "officialSource": "https://hsk.cn-bj.ufileos.com/3.0/%E6%96%B0%E7%89%88HSK%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B21219.pdf",
+  "sourceSha256": "ec74ce0439e837bbb15154be13e747ae798903b2fd3a331629df6c3b45504941",
+  "transcriptionCrossCheck": "https://github.com/uranbekanarbaev/hsk-3.0-vocabulary-dataset",
+  "entries": [
+    {
+      "id": 301,
+      "hanzi": "啊",
+      "pinyin": "a",
+      "part_of_speech": "助"
+    },
+    {
+      "id": 302,
+      "hanzi": "爱好",
+      "pinyin": "àihào",
+      "part_of_speech": "动、名"
+    },
+    {
+      "id": 303,
+      "hanzi": "白色",
+      "pinyin": "báisè",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 304,
+      "hanzi": "班",
+      "pinyin": "bān",
+      "part_of_speech": "名、（量）"
+    },
+    {
+      "id": 305,
+      "hanzi": "帮",
+      "pinyin": "bāng",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 306,
+      "hanzi": "帮忙",
+      "pinyin": "bāngmáng",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 307,
+      "hanzi": "包",
+      "pinyin": "bāo",
+      "part_of_speech": "动、名、量"
+    },
+    {
+      "id": 308,
+      "hanzi": "本子",
+      "pinyin": "běnzi",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 309,
+      "hanzi": "比",
+      "pinyin": "bǐ",
+      "part_of_speech": "动、介"
+    },
+    {
+      "id": 310,
+      "hanzi": "笔",
+      "pinyin": "bǐ",
+      "part_of_speech": "名、（量）"
+    },
+    {
+      "id": 311,
+      "hanzi": "别",
+      "pinyin": "bié",
+      "part_of_speech": "副"
+    },
+    {
+      "id": 312,
+      "hanzi": "不错",
+      "pinyin": "búcuò",
+      "part_of_speech": "形"
+    },
+    {
+      "id": 313,
+      "hanzi": "不好意思",
+      "pinyin": "bù hǎoyìsi",
+      "part_of_speech": ""
+    },
+    {
+      "id": 314,
+      "hanzi": "长",
+      "pinyin": "cháng",
+      "part_of_speech": "形"
+    },
+    {
+      "id": 315,
+      "hanzi": "车站",
+      "pinyin": "chēzhàn",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 316,
+      "hanzi": "出",
+      "pinyin": "chū",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 317,
+      "hanzi": "出国",
+      "pinyin": "chūguó",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 318,
+      "hanzi": "出来",
+      "pinyin": "chūlái",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 319,
+      "hanzi": "出门",
+      "pinyin": "chūmén",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 320,
+      "hanzi": "出去",
+      "pinyin": "chūqù",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 321,
+      "hanzi": "床",
+      "pinyin": "chuáng",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 322,
+      "hanzi": "词",
+      "pinyin": "cí",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 323,
+      "hanzi": "次",
+      "pinyin": "cì",
+      "part_of_speech": "量、（形）"
+    },
+    {
+      "id": 324,
+      "hanzi": "从",
+      "pinyin": "cóng",
+      "part_of_speech": "介、（副）"
+    },
+    {
+      "id": 325,
+      "hanzi": "从小",
+      "pinyin": "cóngxiǎo",
+      "part_of_speech": "副"
+    },
+    {
+      "id": 326,
+      "hanzi": "错",
+      "pinyin": "cuò",
+      "part_of_speech": "形"
+    },
+    {
+      "id": 327,
+      "hanzi": "打",
+      "pinyin": "dǎ",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 328,
+      "hanzi": "打车",
+      "pinyin": "dǎchē",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 329,
+      "hanzi": "打开",
+      "pinyin": "dǎkāi",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 330,
+      "hanzi": "但",
+      "pinyin": "dàn",
+      "part_of_speech": "连、（副）"
+    },
+    {
+      "id": 331,
+      "hanzi": "但是",
+      "pinyin": "dànshì",
+      "part_of_speech": "连"
+    },
+    {
+      "id": 332,
+      "hanzi": "得",
+      "pinyin": "de",
+      "part_of_speech": "助"
+    },
+    {
+      "id": 333,
+      "hanzi": "地",
+      "pinyin": "de",
+      "part_of_speech": "助"
+    },
+    {
+      "id": 334,
+      "hanzi": "等",
+      "pinyin": "děng",
+      "part_of_speech": "动、（介）"
+    },
+    {
+      "id": 335,
+      "hanzi": "地铁",
+      "pinyin": "dìtiě",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 336,
+      "hanzi": "点",
+      "pinyin": "diǎn",
+      "part_of_speech": "动、（名、量）"
+    },
+    {
+      "id": 337,
+      "hanzi": "懂",
+      "pinyin": "dǒng",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 338,
+      "hanzi": "动",
+      "pinyin": "dòng",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 339,
+      "hanzi": "饭馆",
+      "pinyin": "fànguǎn",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 340,
+      "hanzi": "飞",
+      "pinyin": "fēi",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 341,
+      "hanzi": "高",
+      "pinyin": "gāo",
+      "part_of_speech": "形、名"
+    },
+    {
+      "id": 342,
+      "hanzi": "高中",
+      "pinyin": "gāozhōng",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 343,
+      "hanzi": "告诉",
+      "pinyin": "gàosu",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 344,
+      "hanzi": "个子",
+      "pinyin": "gèzi",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 345,
+      "hanzi": "跟",
+      "pinyin": "gēn",
+      "part_of_speech": "介、连、（名、动）"
+    },
+    {
+      "id": 346,
+      "hanzi": "公交车",
+      "pinyin": "gōngjiāochē",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 347,
+      "hanzi": "过",
+      "pinyin": "guò",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 348,
+      "hanzi": "过来",
+      "pinyin": "guòlái",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 349,
+      "hanzi": "过年",
+      "pinyin": "guònián",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 350,
+      "hanzi": "过去",
+      "pinyin": "guòqù",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 351,
+      "hanzi": "过",
+      "pinyin": "guo",
+      "part_of_speech": "助"
+    },
+    {
+      "id": 352,
+      "hanzi": "还是",
+      "pinyin": "háishi",
+      "part_of_speech": "副、连"
+    },
+    {
+      "id": 353,
+      "hanzi": "黑色",
+      "pinyin": "hēisè",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 354,
+      "hanzi": "红茶",
+      "pinyin": "hóngchá",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 355,
+      "hanzi": "红色",
+      "pinyin": "hóngsè",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 356,
+      "hanzi": "后面",
+      "pinyin": "hòumiàn",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 357,
+      "hanzi": "花",
+      "pinyin": "huā",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 358,
+      "hanzi": "花",
+      "pinyin": "huā",
+      "part_of_speech": "名、（形）"
+    },
+    {
+      "id": 359,
+      "hanzi": "画",
+      "pinyin": "huà",
+      "part_of_speech": "动、名"
+    },
+    {
+      "id": 360,
+      "hanzi": "坏",
+      "pinyin": "huài",
+      "part_of_speech": "形"
+    },
+    {
+      "id": 361,
+      "hanzi": "回来",
+      "pinyin": "huílái",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 362,
+      "hanzi": "回去",
+      "pinyin": "huíqù",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 363,
+      "hanzi": "机场",
+      "pinyin": "jīchǎng",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 364,
+      "hanzi": "机票",
+      "pinyin": "jīpiào",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 365,
+      "hanzi": "记得",
+      "pinyin": "jìde",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 366,
+      "hanzi": "间",
+      "pinyin": "jiān",
+      "part_of_speech": "量、（名）"
+    },
+    {
+      "id": 367,
+      "hanzi": "教",
+      "pinyin": "jiāo",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 368,
+      "hanzi": "教室",
+      "pinyin": "jiàoshì",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 369,
+      "hanzi": "介绍",
+      "pinyin": "jièshào",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 370,
+      "hanzi": "进",
+      "pinyin": "jìn",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 371,
+      "hanzi": "近",
+      "pinyin": "jìn",
+      "part_of_speech": "形"
+    },
+    {
+      "id": 372,
+      "hanzi": "进来",
+      "pinyin": "jìnlái",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 373,
+      "hanzi": "进去",
+      "pinyin": "jìnqù",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 374,
+      "hanzi": "经常",
+      "pinyin": "jīngcháng",
+      "part_of_speech": "副"
+    },
+    {
+      "id": 375,
+      "hanzi": "酒店",
+      "pinyin": "jiǔdiàn",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 376,
+      "hanzi": "就",
+      "pinyin": "jiù",
+      "part_of_speech": "副、（介）"
+    },
+    {
+      "id": 377,
+      "hanzi": "咖啡",
+      "pinyin": "kāfēi",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 378,
+      "hanzi": "开始",
+      "pinyin": "kāishǐ",
+      "part_of_speech": "动、名"
+    },
+    {
+      "id": 379,
+      "hanzi": "开学",
+      "pinyin": "kāixué",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 380,
+      "hanzi": "考",
+      "pinyin": "kǎo",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 381,
+      "hanzi": "考试",
+      "pinyin": "kǎoshì",
+      "part_of_speech": "动、名"
+    },
+    {
+      "id": 382,
+      "hanzi": "可能",
+      "pinyin": "kěnéng",
+      "part_of_speech": "形、名、动"
+    },
+    {
+      "id": 383,
+      "hanzi": "裤子",
+      "pinyin": "kùzi",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 384,
+      "hanzi": "快",
+      "pinyin": "kuài",
+      "part_of_speech": "形、副"
+    },
+    {
+      "id": 385,
+      "hanzi": "快乐",
+      "pinyin": "kuàilè",
+      "part_of_speech": "形"
+    },
+    {
+      "id": 386,
+      "hanzi": "快要",
+      "pinyin": "kuàiyào",
+      "part_of_speech": "副"
+    },
+    {
+      "id": 387,
+      "hanzi": "篮球",
+      "pinyin": "lánqiú",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 388,
+      "hanzi": "累",
+      "pinyin": "lèi",
+      "part_of_speech": "形、动"
+    },
+    {
+      "id": 389,
+      "hanzi": "离",
+      "pinyin": "lí",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 390,
+      "hanzi": "里面",
+      "pinyin": "lǐmiàn",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 391,
+      "hanzi": "楼",
+      "pinyin": "lóu",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 392,
+      "hanzi": "路",
+      "pinyin": "lù",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 393,
+      "hanzi": "路上",
+      "pinyin": "lùshang",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 394,
+      "hanzi": "旅游",
+      "pinyin": "lǚyóu",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 395,
+      "hanzi": "绿茶",
+      "pinyin": "lǜchá",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 396,
+      "hanzi": "绿色",
+      "pinyin": "lǜsè",
+      "part_of_speech": "名、（形）"
+    },
+    {
+      "id": 397,
+      "hanzi": "慢",
+      "pinyin": "màn",
+      "part_of_speech": "形"
+    },
+    {
+      "id": 398,
+      "hanzi": "没意思",
+      "pinyin": "méi yìsi",
+      "part_of_speech": ""
+    },
+    {
+      "id": 399,
+      "hanzi": "每",
+      "pinyin": "měi",
+      "part_of_speech": "代、（副）"
+    },
+    {
+      "id": 400,
+      "hanzi": "门",
+      "pinyin": "mén",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 401,
+      "hanzi": "门口",
+      "pinyin": "ménkǒu",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 402,
+      "hanzi": "门票",
+      "pinyin": "ménpiào",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 403,
+      "hanzi": "面",
+      "pinyin": "miàn",
+      "part_of_speech": "后缀、（动、名、量）"
+    },
+    {
+      "id": 404,
+      "hanzi": "名",
+      "pinyin": "míng",
+      "part_of_speech": "名、量"
+    },
+    {
+      "id": 405,
+      "hanzi": "拿",
+      "pinyin": "ná",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 406,
+      "hanzi": "那么",
+      "pinyin": "nàme",
+      "part_of_speech": "代、连"
+    },
+    {
+      "id": 407,
+      "hanzi": "那样",
+      "pinyin": "nàyàng",
+      "part_of_speech": "代"
+    },
+    {
+      "id": 408,
+      "hanzi": "奶茶",
+      "pinyin": "nǎichá",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 409,
+      "hanzi": "奶奶",
+      "pinyin": "nǎinai",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 410,
+      "hanzi": "男孩儿",
+      "pinyin": "nánháir",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 411,
+      "hanzi": "鸟",
+      "pinyin": "niǎo",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 412,
+      "hanzi": "女孩儿",
+      "pinyin": "nǚháir",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 413,
+      "hanzi": "旁边",
+      "pinyin": "pángbiān",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 414,
+      "hanzi": "跑",
+      "pinyin": "pǎo",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 415,
+      "hanzi": "跑步",
+      "pinyin": "pǎobù",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 416,
+      "hanzi": "票",
+      "pinyin": "piào",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 417,
+      "hanzi": "妻子",
+      "pinyin": "qīzi",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 418,
+      "hanzi": "起来",
+      "pinyin": "qǐlái",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 419,
+      "hanzi": "前面",
+      "pinyin": "qiánmiàn",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 420,
+      "hanzi": "晴",
+      "pinyin": "qíng",
+      "part_of_speech": "形"
+    },
+    {
+      "id": 421,
+      "hanzi": "球",
+      "pinyin": "qiú",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 422,
+      "hanzi": "让",
+      "pinyin": "ràng",
+      "part_of_speech": "动、（介）"
+    },
+    {
+      "id": 423,
+      "hanzi": "肉",
+      "pinyin": "ròu",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 424,
+      "hanzi": "商场",
+      "pinyin": "shāngchǎng",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 425,
+      "hanzi": "上来",
+      "pinyin": "shànglái",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 426,
+      "hanzi": "上面",
+      "pinyin": "shàngmiàn",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 427,
+      "hanzi": "上去",
+      "pinyin": "shàngqù",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 428,
+      "hanzi": "上网",
+      "pinyin": "shàngwǎng",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 429,
+      "hanzi": "身体",
+      "pinyin": "shēntǐ",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 430,
+      "hanzi": "生日",
+      "pinyin": "shēngrì",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 431,
+      "hanzi": "时",
+      "pinyin": "shí",
+      "part_of_speech": "名、（量）"
+    },
+    {
+      "id": 432,
+      "hanzi": "事情",
+      "pinyin": "shìqing",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 433,
+      "hanzi": "手",
+      "pinyin": "shǒu",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 434,
+      "hanzi": "手表",
+      "pinyin": "shǒubiǎo",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 435,
+      "hanzi": "书包",
+      "pinyin": "shūbāo",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 436,
+      "hanzi": "舒服",
+      "pinyin": "shūfu",
+      "part_of_speech": "形"
+    },
+    {
+      "id": 437,
+      "hanzi": "送",
+      "pinyin": "sòng",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 438,
+      "hanzi": "虽然",
+      "pinyin": "suīrán",
+      "part_of_speech": "连"
+    },
+    {
+      "id": 439,
+      "hanzi": "所以",
+      "pinyin": "suǒyǐ",
+      "part_of_speech": "连"
+    },
+    {
+      "id": 440,
+      "hanzi": "疼",
+      "pinyin": "téng",
+      "part_of_speech": "形、（动）"
+    },
+    {
+      "id": 441,
+      "hanzi": "踢",
+      "pinyin": "tī",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 442,
+      "hanzi": "题",
+      "pinyin": "tí",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 443,
+      "hanzi": "条",
+      "pinyin": "tiáo",
+      "part_of_speech": "量、（名）"
+    },
+    {
+      "id": 444,
+      "hanzi": "跳舞",
+      "pinyin": "tiàowǔ",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 445,
+      "hanzi": "头",
+      "pinyin": "tóu",
+      "part_of_speech": "名、（量）、（形）"
+    },
+    {
+      "id": 446,
+      "hanzi": "外国",
+      "pinyin": "wàiguó",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 447,
+      "hanzi": "外面",
+      "pinyin": "wàimiàn",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 448,
+      "hanzi": "完",
+      "pinyin": "wán",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 449,
+      "hanzi": "万",
+      "pinyin": "wàn",
+      "part_of_speech": "数"
+    },
+    {
+      "id": 450,
+      "hanzi": "往",
+      "pinyin": "wǎng",
+      "part_of_speech": "动、介"
+    },
+    {
+      "id": 451,
+      "hanzi": "网上",
+      "pinyin": "wǎngshang",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 452,
+      "hanzi": "忘",
+      "pinyin": "wàng",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 453,
+      "hanzi": "位",
+      "pinyin": "wèi",
+      "part_of_speech": "量"
+    },
+    {
+      "id": 454,
+      "hanzi": "为什么",
+      "pinyin": "wèi shénme",
+      "part_of_speech": ""
+    },
+    {
+      "id": 455,
+      "hanzi": "希望",
+      "pinyin": "xīwàng",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 456,
+      "hanzi": "洗",
+      "pinyin": "xǐ",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 457,
+      "hanzi": "洗手间",
+      "pinyin": "xǐshǒujiān",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 458,
+      "hanzi": "下来",
+      "pinyin": "xiàlái",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 459,
+      "hanzi": "下面",
+      "pinyin": "xiàmiàn",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 460,
+      "hanzi": "下去",
+      "pinyin": "xiàqù",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 461,
+      "hanzi": "小孩儿",
+      "pinyin": "xiǎoháir",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 462,
+      "hanzi": "小时候",
+      "pinyin": "xiǎoshíhou",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 463,
+      "hanzi": "笑",
+      "pinyin": "xiào",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 464,
+      "hanzi": "姓",
+      "pinyin": "xìng",
+      "part_of_speech": "名、动"
+    },
+    {
+      "id": 465,
+      "hanzi": "姓名",
+      "pinyin": "xìngmíng",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 466,
+      "hanzi": "颜色",
+      "pinyin": "yánsè",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 467,
+      "hanzi": "眼睛",
+      "pinyin": "yǎnjing",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 468,
+      "hanzi": "药",
+      "pinyin": "yào",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 469,
+      "hanzi": "药店",
+      "pinyin": "yàodiàn",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 470,
+      "hanzi": "爷爷",
+      "pinyin": "yéye",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 471,
+      "hanzi": "一会儿",
+      "pinyin": "yíhuìr",
+      "part_of_speech": "数量、（副）"
+    },
+    {
+      "id": 472,
+      "hanzi": "已经",
+      "pinyin": "yǐjīng",
+      "part_of_speech": "副"
+    },
+    {
+      "id": 473,
+      "hanzi": "一起",
+      "pinyin": "yìqǐ",
+      "part_of_speech": "副"
+    },
+    {
+      "id": 474,
+      "hanzi": "意思",
+      "pinyin": "yìsi",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 475,
+      "hanzi": "阴",
+      "pinyin": "yīn",
+      "part_of_speech": "形"
+    },
+    {
+      "id": 476,
+      "hanzi": "因为",
+      "pinyin": "yīnwèi",
+      "part_of_speech": "介、连"
+    },
+    {
+      "id": 477,
+      "hanzi": "游",
+      "pinyin": "yóu",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 478,
+      "hanzi": "游泳",
+      "pinyin": "yóuyǒng",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 479,
+      "hanzi": "有意思",
+      "pinyin": "yǒu yìsi",
+      "part_of_speech": ""
+    },
+    {
+      "id": 480,
+      "hanzi": "有时",
+      "pinyin": "yǒushí",
+      "part_of_speech": "副"
+    },
+    {
+      "id": 481,
+      "hanzi": "右",
+      "pinyin": "yòu",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 482,
+      "hanzi": "右边",
+      "pinyin": "yòubian",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 483,
+      "hanzi": "鱼",
+      "pinyin": "yú",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 484,
+      "hanzi": "远",
+      "pinyin": "yuǎn",
+      "part_of_speech": "形"
+    },
+    {
+      "id": 485,
+      "hanzi": "运动",
+      "pinyin": "yùndòng",
+      "part_of_speech": "动、名"
+    },
+    {
+      "id": 486,
+      "hanzi": "站",
+      "pinyin": "zhàn",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 487,
+      "hanzi": "丈夫",
+      "pinyin": "zhàngfu",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 488,
+      "hanzi": "这么",
+      "pinyin": "zhème",
+      "part_of_speech": "代"
+    },
+    {
+      "id": 489,
+      "hanzi": "这样",
+      "pinyin": "zhèyàng",
+      "part_of_speech": "代"
+    },
+    {
+      "id": 490,
+      "hanzi": "着",
+      "pinyin": "zhe",
+      "part_of_speech": "助"
+    },
+    {
+      "id": 491,
+      "hanzi": "正",
+      "pinyin": "zhèng",
+      "part_of_speech": "副、（形）"
+    },
+    {
+      "id": 492,
+      "hanzi": "周",
+      "pinyin": "zhōu",
+      "part_of_speech": "名、（量）"
+    },
+    {
+      "id": 493,
+      "hanzi": "准备",
+      "pinyin": "zhǔnbèi",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 494,
+      "hanzi": "自己",
+      "pinyin": "zìjǐ",
+      "part_of_speech": "代"
+    },
+    {
+      "id": 495,
+      "hanzi": "走",
+      "pinyin": "zǒu",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 496,
+      "hanzi": "走路",
+      "pinyin": "zǒulù",
+      "part_of_speech": "动"
+    },
+    {
+      "id": 497,
+      "hanzi": "足球",
+      "pinyin": "zúqiú",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 498,
+      "hanzi": "最",
+      "pinyin": "zuì",
+      "part_of_speech": "副"
+    },
+    {
+      "id": 499,
+      "hanzi": "左",
+      "pinyin": "zuǒ",
+      "part_of_speech": "名"
+    },
+    {
+      "id": 500,
+      "hanzi": "左边",
+      "pinyin": "zuǒbian",
+      "part_of_speech": "名"
+    }
+  ]
+}

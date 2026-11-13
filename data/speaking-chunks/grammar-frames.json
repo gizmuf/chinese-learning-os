@@ -1,0 +1,1938 @@
+[
+  {
+    "id": "compare-bi",
+    "topic": "compare",
+    "level": "core",
+    "pattern": "A 比 B + adjective",
+    "title": {
+      "en": "Comparing two things",
+      "fr": "Comparer deux choses",
+      "ru": "Сравниваем два предмета",
+      "tr": "İki şeyi karşılaştırma"
+    },
+    "note": {
+      "en": "Place the comparison marker before the reference point.",
+      "fr": "Placez le marqueur de comparaison avant le point de référence.",
+      "ru": "Показатель сравнения ставится перед объектом сравнения.",
+      "tr": "Karşılaştırma sözcüğünü karşılaştırılan ögeden önce koyun."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "compare-bi-1",
+        "hanzi": "今天比昨天暖和。",
+        "pinyin": "Jīntiān bǐ zuótiān nuǎnhuo.",
+        "meaning": {
+          "en": "Today is warmer than yesterday.",
+          "fr": "Il fait plus doux aujourd’hui qu’hier.",
+          "ru": "Сегодня теплее, чем вчера.",
+          "tr": "Bugün dünden daha ılık."
+        },
+        "parts": [
+          "今天",
+          "比",
+          "昨天",
+          "暖和",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Place the comparison marker before the reference point.",
+          "fr": "Placez le marqueur de comparaison avant le point de référence.",
+          "ru": "Показатель сравнения ставится перед объектом сравнения.",
+          "tr": "Karşılaştırma sözcüğünü karşılaştırılan ögeden önce koyun."
+        }
+      },
+      {
+        "id": "compare-bi-2",
+        "hanzi": "这杯茶比那杯茶便宜。",
+        "pinyin": "Zhè bēi chá bǐ nà bēi chá piányi.",
+        "meaning": {
+          "en": "This cup of tea is cheaper than that one.",
+          "fr": "Cette tasse de thé est moins chère que celle-là.",
+          "ru": "Эта чашка чая дешевле той.",
+          "tr": "Bu fincan çay, o fincan çaydan daha ucuz."
+        },
+        "parts": [
+          "这杯茶",
+          "比",
+          "那杯茶",
+          "便宜",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Place the comparison marker before the reference point.",
+          "fr": "Placez le marqueur de comparaison avant le point de référence.",
+          "ru": "Показатель сравнения ставится перед объектом сравнения.",
+          "tr": "Karşılaştırma sözcüğünü karşılaştırılan ögeden önce koyun."
+        }
+      }
+    ]
+  },
+  {
+    "id": "compare-meiyou",
+    "topic": "compare",
+    "level": "core",
+    "pattern": "A 没有 B 那么 + adjective",
+    "title": {
+      "en": "Not as…as",
+      "fr": "Moins…que",
+      "ru": "Не такой…как",
+      "tr": "O kadar…değil"
+    },
+    "note": {
+      "en": "Use the two markers to express a lower degree.",
+      "fr": "Utilisez les deux marqueurs pour exprimer un degré inférieur.",
+      "ru": "Два показателя выражают меньшую степень признака.",
+      "tr": "Daha düşük bir derece belirtmek için iki sözcüğü kullanın."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "compare-meiyou-1",
+        "hanzi": "这条路没有那条路那么宽。",
+        "pinyin": "Zhè tiáo lù méiyǒu nà tiáo lù nàme kuān.",
+        "meaning": {
+          "en": "This road is not as wide as that one.",
+          "fr": "Cette route n’est pas aussi large que celle-là.",
+          "ru": "Эта дорога не такая широкая, как та.",
+          "tr": "Bu yol, o yol kadar geniş değil."
+        },
+        "parts": [
+          "这条路",
+          "没有",
+          "那条路",
+          "那么",
+          "宽",
+          "。"
+        ],
+        "targets": [
+          1,
+          3
+        ],
+        "hint": {
+          "en": "Use the two markers to express a lower degree.",
+          "fr": "Utilisez les deux marqueurs pour exprimer un degré inférieur.",
+          "ru": "Два показателя выражают меньшую степень признака.",
+          "tr": "Daha düşük bir derece belirtmek için iki sözcüğü kullanın."
+        }
+      },
+      {
+        "id": "compare-meiyou-2",
+        "hanzi": "今天没有昨天那么冷。",
+        "pinyin": "Jīntiān méiyǒu zuótiān nàme lěng.",
+        "meaning": {
+          "en": "Today is not as cold as yesterday.",
+          "fr": "Il ne fait pas aussi froid aujourd’hui qu’hier.",
+          "ru": "Сегодня не так холодно, как вчера.",
+          "tr": "Bugün dün kadar soğuk değil."
+        },
+        "parts": [
+          "今天",
+          "没有",
+          "昨天",
+          "那么",
+          "冷",
+          "。"
+        ],
+        "targets": [
+          1,
+          3
+        ],
+        "hint": {
+          "en": "Use the two markers to express a lower degree.",
+          "fr": "Utilisez les deux marqueurs pour exprimer un degré inférieur.",
+          "ru": "Два показателя выражают меньшую степень признака.",
+          "tr": "Daha düşük bir derece belirtmek için iki sözcüğü kullanın."
+        }
+      }
+    ]
+  },
+  {
+    "id": "compare-same",
+    "topic": "compare",
+    "level": "core",
+    "pattern": "A 跟 B 一样 + adjective",
+    "title": {
+      "en": "The same degree",
+      "fr": "Au même degré",
+      "ru": "Одинаковая степень",
+      "tr": "Aynı derecede"
+    },
+    "note": {
+      "en": "The paired markers show that two things share a quality equally.",
+      "fr": "Les marqueurs indiquent une qualité au même degré.",
+      "ru": "Парные показатели выражают одинаковую степень признака.",
+      "tr": "İki sözcük, bir özelliğin aynı derecede olduğunu belirtir."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "compare-same-1",
+        "hanzi": "我的杯子跟你的杯子一样大。",
+        "pinyin": "Wǒ de bēizi gēn nǐ de bēizi yíyàng dà.",
+        "meaning": {
+          "en": "My cup is as big as yours.",
+          "fr": "Ma tasse est aussi grande que la tienne.",
+          "ru": "Моя чашка такая же большая, как твоя.",
+          "tr": "Fincanım seninki kadar büyük."
+        },
+        "parts": [
+          "我的杯子",
+          "跟",
+          "你的杯子",
+          "一样",
+          "大",
+          "。"
+        ],
+        "targets": [
+          1,
+          3
+        ],
+        "hint": {
+          "en": "The paired markers show that two things share a quality equally.",
+          "fr": "Les marqueurs indiquent une qualité au même degré.",
+          "ru": "Парные показатели выражают одинаковую степень признака.",
+          "tr": "İki sözcük, bir özelliğin aynı derecede olduğunu belirtir."
+        }
+      },
+      {
+        "id": "compare-same-2",
+        "hanzi": "这家店跟那家店一样安静。",
+        "pinyin": "Zhè jiā diàn gēn nà jiā diàn yíyàng ānjìng.",
+        "meaning": {
+          "en": "This shop is as quiet as that one.",
+          "fr": "Ce magasin est aussi calme que celui-là.",
+          "ru": "Этот магазин такой же тихий, как тот.",
+          "tr": "Bu dükkân, o dükkân kadar sessiz."
+        },
+        "parts": [
+          "这家店",
+          "跟",
+          "那家店",
+          "一样",
+          "安静",
+          "。"
+        ],
+        "targets": [
+          1,
+          3
+        ],
+        "hint": {
+          "en": "The paired markers show that two things share a quality equally.",
+          "fr": "Les marqueurs indiquent une qualité au même degré.",
+          "ru": "Парные показатели выражают одинаковую степень признака.",
+          "tr": "İki sözcük, bir özelliğin aynı derecede olduğunu belirtir."
+        }
+      }
+    ]
+  },
+  {
+    "id": "distance-li",
+    "topic": "compare",
+    "level": "core",
+    "pattern": "A 离 B + 远 / 近",
+    "title": {
+      "en": "Describing distance",
+      "fr": "Décrire la distance",
+      "ru": "Описываем расстояние",
+      "tr": "Uzaklık belirtme"
+    },
+    "note": {
+      "en": "Introduce the reference place before describing the distance.",
+      "fr": "Introduisez le lieu de référence avant de décrire la distance.",
+      "ru": "Сначала обозначьте место, относительно которого измеряется расстояние.",
+      "tr": "Uzaklığı belirtmeden önce referans yerini söyleyin."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "distance-li-1",
+        "hanzi": "我家离地铁站很近。",
+        "pinyin": "Wǒ jiā lí dìtiězhàn hěn jìn.",
+        "meaning": {
+          "en": "My home is very close to the metro station.",
+          "fr": "Chez moi, on est tout près de la station de métro.",
+          "ru": "Мой дом совсем рядом со станцией метро.",
+          "tr": "Evim metro istasyonuna çok yakın."
+        },
+        "parts": [
+          "我家",
+          "离",
+          "地铁站",
+          "很",
+          "近",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Introduce the reference place before describing the distance.",
+          "fr": "Introduisez le lieu de référence avant de décrire la distance.",
+          "ru": "Сначала обозначьте место, относительно которого измеряется расстояние.",
+          "tr": "Uzaklığı belirtmeden önce referans yerini söyleyin."
+        }
+      },
+      {
+        "id": "distance-li-2",
+        "hanzi": "学校离这里很远。",
+        "pinyin": "Xuéxiào lí zhèlǐ hěn yuǎn.",
+        "meaning": {
+          "en": "The school is very far from here.",
+          "fr": "L’école est très loin d’ici.",
+          "ru": "Школа очень далеко отсюда.",
+          "tr": "Okul buradan çok uzak."
+        },
+        "parts": [
+          "学校",
+          "离",
+          "这里",
+          "很",
+          "远",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Introduce the reference place before describing the distance.",
+          "fr": "Introduisez le lieu de référence avant de décrire la distance.",
+          "ru": "Сначала обозначьте место, относительно которого измеряется расстояние.",
+          "tr": "Uzaklığı belirtmeden önce referans yerini söyleyin."
+        }
+      }
+    ]
+  },
+  {
+    "id": "change-more",
+    "topic": "compare",
+    "level": "core",
+    "pattern": "越来越 + adjective",
+    "title": {
+      "en": "Increasing change",
+      "fr": "Une évolution croissante",
+      "ru": "Постепенное изменение",
+      "tr": "Giderek artan değişim"
+    },
+    "note": {
+      "en": "Put this fixed expression before a quality that increases over time.",
+      "fr": "Placez cette expression avant une qualité qui augmente avec le temps.",
+      "ru": "Поставьте устойчивое выражение перед постепенно усиливающимся признаком.",
+      "tr": "Zamanla artan bir özellikten önce bu kalıbı kullanın."
+    },
+    "sources": [
+      "https://www.mangolanguages.com/resources/learn/grammar/mandarin-chinese/how-to-express-the-more-the-more-in-mandarin-chinese"
+    ],
+    "examples": [
+      {
+        "id": "change-more-1",
+        "hanzi": "天气越来越热了。",
+        "pinyin": "Tiānqì yuèláiyuè rè le.",
+        "meaning": {
+          "en": "The weather is getting hotter and hotter.",
+          "fr": "Il fait de plus en plus chaud.",
+          "ru": "Погода становится всё жарче.",
+          "tr": "Hava giderek ısınıyor."
+        },
+        "parts": [
+          "天气",
+          "越来越",
+          "热",
+          "了",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put this fixed expression before a quality that increases over time.",
+          "fr": "Placez cette expression avant une qualité qui augmente avec le temps.",
+          "ru": "Поставьте устойчивое выражение перед постепенно усиливающимся признаком.",
+          "tr": "Zamanla artan bir özellikten önce bu kalıbı kullanın."
+        }
+      },
+      {
+        "id": "change-more-2",
+        "hanzi": "这条街越来越热闹了。",
+        "pinyin": "Zhè tiáo jiē yuèláiyuè rènao le.",
+        "meaning": {
+          "en": "This street is getting livelier and livelier.",
+          "fr": "Cette rue devient de plus en plus animée.",
+          "ru": "Эта улица становится всё оживлённее.",
+          "tr": "Bu sokak giderek hareketleniyor."
+        },
+        "parts": [
+          "这条街",
+          "越来越",
+          "热闹",
+          "了",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put this fixed expression before a quality that increases over time.",
+          "fr": "Placez cette expression avant une qualité qui augmente avec le temps.",
+          "ru": "Поставьте устойчивое выражение перед постепенно усиливающимся признаком.",
+          "tr": "Zamanla artan bir özellikten önce bu kalıbı kullanın."
+        }
+      }
+    ]
+  },
+  {
+    "id": "change-correlated",
+    "topic": "compare",
+    "level": "extension",
+    "pattern": "越…越…",
+    "title": {
+      "en": "The more…the more",
+      "fr": "Plus…plus",
+      "ru": "Чем…тем",
+      "tr": "Ne kadar…o kadar"
+    },
+    "note": {
+      "en": "Repeat the marker to link two changing degrees.",
+      "fr": "Répétez le marqueur pour relier deux degrés qui évoluent.",
+      "ru": "Повторите показатель, чтобы связать два изменяющихся признака.",
+      "tr": "Birlikte değişen iki dereceyi bağlamak için sözcüğü tekrarlayın."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "change-correlated-1",
+        "hanzi": "你越练习，就越熟练。",
+        "pinyin": "Nǐ yuè liànxí, jiù yuè shúliàn.",
+        "meaning": {
+          "en": "The more you practise, the more skilled you become.",
+          "fr": "Plus tu t’entraînes, plus tu gagnes en maîtrise.",
+          "ru": "Чем больше ты тренируешься, тем увереннее владеешь навыком.",
+          "tr": "Ne kadar çok pratik yaparsan o kadar ustalaşırsın."
+        },
+        "parts": [
+          "你",
+          "越",
+          "练习",
+          "，",
+          "就",
+          "越",
+          "熟练",
+          "。"
+        ],
+        "targets": [
+          1,
+          5
+        ],
+        "hint": {
+          "en": "Repeat the marker to link two changing degrees.",
+          "fr": "Répétez le marqueur pour relier deux degrés qui évoluent.",
+          "ru": "Повторите показатель, чтобы связать два изменяющихся признака.",
+          "tr": "Birlikte değişen iki dereceyi bağlamak için sözcüğü tekrarlayın."
+        }
+      },
+      {
+        "id": "change-correlated-2",
+        "hanzi": "这本书我越看越喜欢。",
+        "pinyin": "Zhè běn shū wǒ yuè kàn yuè xǐhuan.",
+        "meaning": {
+          "en": "The more I read this book, the more I like it.",
+          "fr": "Plus je lis ce livre, plus je l’aime.",
+          "ru": "Чем больше я читаю эту книгу, тем больше она мне нравится.",
+          "tr": "Bu kitabı okudukça daha çok seviyorum."
+        },
+        "parts": [
+          "这本书",
+          "我",
+          "越",
+          "看",
+          "越",
+          "喜欢",
+          "。"
+        ],
+        "targets": [
+          2,
+          4
+        ],
+        "hint": {
+          "en": "Repeat the marker to link two changing degrees.",
+          "fr": "Répétez le marqueur pour relier deux degrés qui évoluent.",
+          "ru": "Повторите показатель, чтобы связать два изменяющихся признака.",
+          "tr": "Birlikte değişen iki dereceyi bağlamak için sözcüğü tekrarlayın."
+        }
+      }
+    ]
+  },
+  {
+    "id": "time-first-then",
+    "topic": "time",
+    "level": "core",
+    "pattern": "先…再…",
+    "title": {
+      "en": "First…then",
+      "fr": "D’abord…ensuite",
+      "ru": "Сначала…потом",
+      "tr": "Önce…sonra"
+    },
+    "note": {
+      "en": "Order two intended actions with these paired markers.",
+      "fr": "Ordonnez deux actions prévues avec ces marqueurs.",
+      "ru": "Расположите два запланированных действия по порядку.",
+      "tr": "Planlanan iki eylemi bu sözcüklerle sıralayın."
+    },
+    "sources": [
+      "https://ci.ioe.ac.uk/wp-content/uploads/2021/04/GCSE.OTH_.aqa-gcse-vocabulary-and-grammar-booklet-1.AL_.Frank-Fan.EXM_.GC_.MEP10MEP11.pdf",
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "time-first-then-1",
+        "hanzi": "我们先吃饭，再去公园。",
+        "pinyin": "Wǒmen xiān chīfàn, zài qù gōngyuán.",
+        "meaning": {
+          "en": "We will eat first, then go to the park.",
+          "fr": "Nous allons d’abord manger, puis aller au parc.",
+          "ru": "Мы сначала поедим, потом пойдём в парк.",
+          "tr": "Önce yemek yiyeceğiz, sonra parka gideceğiz."
+        },
+        "parts": [
+          "我们",
+          "先",
+          "吃饭",
+          "，",
+          "再",
+          "去公园",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Order two intended actions with these paired markers.",
+          "fr": "Ordonnez deux actions prévues avec ces marqueurs.",
+          "ru": "Расположите два запланированных действия по порядку.",
+          "tr": "Planlanan iki eylemi bu sözcüklerle sıralayın."
+        }
+      },
+      {
+        "id": "time-first-then-2",
+        "hanzi": "请先洗手，再吃水果。",
+        "pinyin": "Qǐng xiān xǐshǒu, zài chī shuǐguǒ.",
+        "meaning": {
+          "en": "Please wash your hands first, then eat the fruit.",
+          "fr": "Lave-toi les mains avant de manger les fruits, s’il te plaît.",
+          "ru": "Сначала вымой руки, потом ешь фрукты, пожалуйста.",
+          "tr": "Lütfen önce ellerini yıka, sonra meyve ye."
+        },
+        "parts": [
+          "请",
+          "先",
+          "洗手",
+          "，",
+          "再",
+          "吃水果",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Order two intended actions with these paired markers.",
+          "fr": "Ordonnez deux actions prévues avec ces marqueurs.",
+          "ru": "Расположите два запланированных действия по порядку.",
+          "tr": "Planlanan iki eylemi bu sözcüklerle sıralayın."
+        }
+      }
+    ]
+  },
+  {
+    "id": "time-after",
+    "topic": "time",
+    "level": "core",
+    "pattern": "event + 以后",
+    "title": {
+      "en": "After an event",
+      "fr": "Après un événement",
+      "ru": "После события",
+      "tr": "Bir olaydan sonra"
+    },
+    "note": {
+      "en": "Put the time marker after the event that happens first.",
+      "fr": "Placez le marqueur temporel après le premier événement.",
+      "ru": "Временной показатель ставится после события, которое происходит первым.",
+      "tr": "Zaman sözcüğünü ilk gerçekleşen olaydan sonra koyun."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "time-after-1",
+        "hanzi": "下课以后，我去图书馆。",
+        "pinyin": "Xiàkè yǐhòu, wǒ qù túshūguǎn.",
+        "meaning": {
+          "en": "After class, I go to the library.",
+          "fr": "Après le cours, je vais à la bibliothèque.",
+          "ru": "После занятий я иду в библиотеку.",
+          "tr": "Dersten sonra kütüphaneye gidiyorum."
+        },
+        "parts": [
+          "下课",
+          "以后",
+          "，",
+          "我去图书馆",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put the time marker after the event that happens first.",
+          "fr": "Placez le marqueur temporel après le premier événement.",
+          "ru": "Временной показатель ставится после события, которое происходит первым.",
+          "tr": "Zaman sözcüğünü ilk gerçekleşen olaydan sonra koyun."
+        }
+      },
+      {
+        "id": "time-after-2",
+        "hanzi": "吃完饭以后，我们去散步。",
+        "pinyin": "Chī wán fàn yǐhòu, wǒmen qù sànbù.",
+        "meaning": {
+          "en": "After finishing our meal, we go for a walk.",
+          "fr": "Après le repas, nous allons nous promener.",
+          "ru": "После еды мы идём гулять.",
+          "tr": "Yemeğimizi bitirdikten sonra yürüyüşe çıkıyoruz."
+        },
+        "parts": [
+          "吃完饭",
+          "以后",
+          "，",
+          "我们去散步",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put the time marker after the event that happens first.",
+          "fr": "Placez le marqueur temporel après le premier événement.",
+          "ru": "Временной показатель ставится после события, которое происходит первым.",
+          "tr": "Zaman sözcüğünü ilk gerçekleşen olaydan sonra koyun."
+        }
+      }
+    ]
+  },
+  {
+    "id": "time-before",
+    "topic": "time",
+    "level": "core",
+    "pattern": "event + 以前",
+    "title": {
+      "en": "Before an event",
+      "fr": "Avant un événement",
+      "ru": "До события",
+      "tr": "Bir olaydan önce"
+    },
+    "note": {
+      "en": "Put the time marker after the reference event to mean before it.",
+      "fr": "Placez le marqueur après l’événement de référence pour dire avant.",
+      "ru": "Показатель ставится после события и означает время до него.",
+      "tr": "Öncesini belirtmek için zaman sözcüğünü referans olayından sonra koyun."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "time-before-1",
+        "hanzi": "睡觉以前，我会看一会儿书。",
+        "pinyin": "Shuìjiào yǐqián, wǒ huì kàn yíhuìr shū.",
+        "meaning": {
+          "en": "Before sleeping, I usually read for a while.",
+          "fr": "Avant de dormir, je lis généralement un moment.",
+          "ru": "Перед сном я обычно немного читаю.",
+          "tr": "Uyumadan önce genellikle biraz kitap okurum."
+        },
+        "parts": [
+          "睡觉",
+          "以前",
+          "，",
+          "我会看一会儿书",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put the time marker after the reference event to mean before it.",
+          "fr": "Placez le marqueur après l’événement de référence pour dire avant.",
+          "ru": "Показатель ставится после события и означает время до него.",
+          "tr": "Öncesini belirtmek için zaman sözcüğünü referans olayından sonra koyun."
+        }
+      },
+      {
+        "id": "time-before-2",
+        "hanzi": "出门以前，请看看天气。",
+        "pinyin": "Chūmén yǐqián, qǐng kànkan tiānqì.",
+        "meaning": {
+          "en": "Please check the weather before going out.",
+          "fr": "Regarde la météo avant de sortir, s’il te plaît.",
+          "ru": "Перед выходом посмотри прогноз погоды, пожалуйста.",
+          "tr": "Lütfen dışarı çıkmadan önce hava durumuna bak."
+        },
+        "parts": [
+          "出门",
+          "以前",
+          "，",
+          "请看看天气",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put the time marker after the reference event to mean before it.",
+          "fr": "Placez le marqueur après l’événement de référence pour dire avant.",
+          "ru": "Показатель ставится после события и означает время до него.",
+          "tr": "Öncesini belirtmek için zaman sözcüğünü referans olayından sonra koyun."
+        }
+      }
+    ]
+  },
+  {
+    "id": "time-simultaneous",
+    "topic": "time",
+    "level": "core",
+    "pattern": "一边…一边…",
+    "title": {
+      "en": "Two actions together",
+      "fr": "Deux actions simultanées",
+      "ru": "Два действия одновременно",
+      "tr": "Aynı anda iki eylem"
+    },
+    "note": {
+      "en": "Use the same marker before each simultaneous action.",
+      "fr": "Utilisez le même marqueur devant chaque action simultanée.",
+      "ru": "Поставьте одинаковый показатель перед каждым одновременным действием.",
+      "tr": "Eş zamanlı iki eylemin her birinden önce aynı sözcüğü kullanın."
+    },
+    "sources": [
+      "https://ci.ioe.ac.uk/wp-content/uploads/2021/04/GCSE.OTH_.aqa-gcse-vocabulary-and-grammar-booklet-1.AL_.Frank-Fan.EXM_.GC_.MEP10MEP11.pdf"
+    ],
+    "examples": [
+      {
+        "id": "time-simultaneous-1",
+        "hanzi": "她一边做饭，一边听音乐。",
+        "pinyin": "Tā yìbiān zuòfàn, yìbiān tīng yīnyuè.",
+        "meaning": {
+          "en": "She listens to music while cooking.",
+          "fr": "Elle écoute de la musique en cuisinant.",
+          "ru": "Она слушает музыку, пока готовит.",
+          "tr": "Yemek yaparken müzik dinliyor."
+        },
+        "parts": [
+          "她",
+          "一边",
+          "做饭",
+          "，",
+          "一边",
+          "听音乐",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Use the same marker before each simultaneous action.",
+          "fr": "Utilisez le même marqueur devant chaque action simultanée.",
+          "ru": "Поставьте одинаковый показатель перед каждым одновременным действием.",
+          "tr": "Eş zamanlı iki eylemin her birinden önce aynı sözcüğü kullanın."
+        }
+      },
+      {
+        "id": "time-simultaneous-2",
+        "hanzi": "我们一边走路，一边聊天。",
+        "pinyin": "Wǒmen yìbiān zǒulù, yìbiān liáotiān.",
+        "meaning": {
+          "en": "We chat while walking.",
+          "fr": "Nous discutons en marchant.",
+          "ru": "Мы разговариваем на ходу.",
+          "tr": "Yürürken sohbet ediyoruz."
+        },
+        "parts": [
+          "我们",
+          "一边",
+          "走路",
+          "，",
+          "一边",
+          "聊天",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Use the same marker before each simultaneous action.",
+          "fr": "Utilisez le même marqueur devant chaque action simultanée.",
+          "ru": "Поставьте одинаковый показатель перед каждым одновременным действием.",
+          "tr": "Eş zamanlı iki eylemin her birinden önce aynı sözcüğü kullanın."
+        }
+      }
+    ]
+  },
+  {
+    "id": "connect-cause",
+    "topic": "connect",
+    "level": "core",
+    "pattern": "因为…所以…",
+    "title": {
+      "en": "Cause and result",
+      "fr": "Cause et conséquence",
+      "ru": "Причина и следствие",
+      "tr": "Neden ve sonuç"
+    },
+    "note": {
+      "en": "Introduce the cause first and the resulting situation second.",
+      "fr": "Introduisez d’abord la cause, puis sa conséquence.",
+      "ru": "Сначала укажите причину, затем следствие.",
+      "tr": "Önce nedeni, sonra sonucu belirtin."
+    },
+    "sources": [
+      "https://ci.ioe.ac.uk/wp-content/uploads/2021/04/GCSE.OTH_.aqa-gcse-vocabulary-and-grammar-booklet-1.AL_.Frank-Fan.EXM_.GC_.MEP10MEP11.pdf"
+    ],
+    "examples": [
+      {
+        "id": "connect-cause-1",
+        "hanzi": "因为下雨，所以我们在家吃饭。",
+        "pinyin": "Yīnwèi xiàyǔ, suǒyǐ wǒmen zài jiā chīfàn.",
+        "meaning": {
+          "en": "Because it is raining, we are eating at home.",
+          "fr": "Comme il pleut, nous mangeons à la maison.",
+          "ru": "Поскольку идёт дождь, мы едим дома.",
+          "tr": "Yağmur yağdığı için evde yemek yiyoruz."
+        },
+        "parts": [
+          "因为",
+          "下雨",
+          "，",
+          "所以",
+          "我们在家吃饭",
+          "。"
+        ],
+        "targets": [
+          0,
+          3
+        ],
+        "hint": {
+          "en": "Introduce the cause first and the resulting situation second.",
+          "fr": "Introduisez d’abord la cause, puis sa conséquence.",
+          "ru": "Сначала укажите причину, затем следствие.",
+          "tr": "Önce nedeni, sonra sonucu belirtin."
+        }
+      },
+      {
+        "id": "connect-cause-2",
+        "hanzi": "因为明天要考试，所以我今晚复习。",
+        "pinyin": "Yīnwèi míngtiān yào kǎoshì, suǒyǐ wǒ jīnwǎn fùxí.",
+        "meaning": {
+          "en": "Because I have an exam tomorrow, I am revising tonight.",
+          "fr": "Comme j’ai un examen demain, je révise ce soir.",
+          "ru": "Поскольку завтра у меня экзамен, сегодня вечером я повторяю материал.",
+          "tr": "Yarın sınavım olduğu için bu akşam tekrar yapıyorum."
+        },
+        "parts": [
+          "因为",
+          "明天要考试",
+          "，",
+          "所以",
+          "我今晚复习",
+          "。"
+        ],
+        "targets": [
+          0,
+          3
+        ],
+        "hint": {
+          "en": "Introduce the cause first and the resulting situation second.",
+          "fr": "Introduisez d’abord la cause, puis sa conséquence.",
+          "ru": "Сначала укажите причину, затем следствие.",
+          "tr": "Önce nedeni, sonra sonucu belirtin."
+        }
+      }
+    ]
+  },
+  {
+    "id": "connect-although",
+    "topic": "connect",
+    "level": "core",
+    "pattern": "虽然…但是…",
+    "title": {
+      "en": "Although…but",
+      "fr": "Bien que…cependant",
+      "ru": "Хотя…но",
+      "tr": "Her ne kadar…ama"
+    },
+    "note": {
+      "en": "State a fact, then introduce a contrasting fact.",
+      "fr": "Énoncez un fait, puis un fait qui contraste avec lui.",
+      "ru": "Сообщите факт, затем противопоставьте ему другой.",
+      "tr": "Bir durumu, ardından onunla çelişen başka bir durumu belirtin."
+    },
+    "sources": [
+      "https://www.chineseboost.com/functions/paired-conjunctions/",
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "connect-although-1",
+        "hanzi": "虽然今天很忙，但是我很开心。",
+        "pinyin": "Suīrán jīntiān hěn máng, dànshì wǒ hěn kāixīn.",
+        "meaning": {
+          "en": "Although I am busy today, I am happy.",
+          "fr": "Même si je suis très occupé aujourd’hui, je suis content.",
+          "ru": "Хотя сегодня я очень занят, я рад.",
+          "tr": "Bugün çok meşgul olsam da mutluyum."
+        },
+        "parts": [
+          "虽然",
+          "今天很忙",
+          "，",
+          "但是",
+          "我很开心",
+          "。"
+        ],
+        "targets": [
+          0,
+          3
+        ],
+        "hint": {
+          "en": "State a fact, then introduce a contrasting fact.",
+          "fr": "Énoncez un fait, puis un fait qui contraste avec lui.",
+          "ru": "Сообщите факт, затем противопоставьте ему другой.",
+          "tr": "Bir durumu, ardından onunla çelişen başka bir durumu belirtin."
+        }
+      },
+      {
+        "id": "connect-although-2",
+        "hanzi": "虽然这家店很小，但是东西很好吃。",
+        "pinyin": "Suīrán zhè jiā diàn hěn xiǎo, dànshì dōngxi hěn hǎochī.",
+        "meaning": {
+          "en": "Although this eatery is small, the food is delicious.",
+          "fr": "Ce petit restaurant est minuscule, mais on y mange très bien.",
+          "ru": "Хотя это кафе маленькое, еда очень вкусная.",
+          "tr": "Bu lokanta küçük olsa da yemekleri çok lezzetli."
+        },
+        "parts": [
+          "虽然",
+          "这家店很小",
+          "，",
+          "但是",
+          "东西很好吃",
+          "。"
+        ],
+        "targets": [
+          0,
+          3
+        ],
+        "hint": {
+          "en": "State a fact, then introduce a contrasting fact.",
+          "fr": "Énoncez un fait, puis un fait qui contraste avec lui.",
+          "ru": "Сообщите факт, затем противопоставьте ему другой.",
+          "tr": "Bir durumu, ardından onunla çelişen başka bir durumu belirtin."
+        }
+      }
+    ]
+  },
+  {
+    "id": "connect-if",
+    "topic": "connect",
+    "level": "core",
+    "pattern": "如果…就…",
+    "title": {
+      "en": "If…then",
+      "fr": "Si…alors",
+      "ru": "Если…то",
+      "tr": "Eğer…o zaman"
+    },
+    "note": {
+      "en": "Link a possible condition with its consequence.",
+      "fr": "Reliez une condition possible à sa conséquence.",
+      "ru": "Свяжите возможное условие с его следствием.",
+      "tr": "Olası bir koşulu sonucuna bağlayın."
+    },
+    "sources": [
+      "https://www.chineseboost.com/functions/paired-conjunctions/",
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "connect-if-1",
+        "hanzi": "如果你有时间，我们就一起喝茶。",
+        "pinyin": "Rúguǒ nǐ yǒu shíjiān, wǒmen jiù yìqǐ hē chá.",
+        "meaning": {
+          "en": "If you have time, we can have tea together.",
+          "fr": "Si tu as le temps, nous prendrons un thé ensemble.",
+          "ru": "Если у тебя есть время, выпьем вместе чаю.",
+          "tr": "Vaktin varsa birlikte çay içeriz."
+        },
+        "parts": [
+          "如果",
+          "你有时间",
+          "，",
+          "我们",
+          "就",
+          "一起喝茶",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "Link a possible condition with its consequence.",
+          "fr": "Reliez une condition possible à sa conséquence.",
+          "ru": "Свяжите возможное условие с его следствием.",
+          "tr": "Olası bir koşulu sonucuna bağlayın."
+        }
+      },
+      {
+        "id": "connect-if-2",
+        "hanzi": "如果明天下雨，我就坐地铁。",
+        "pinyin": "Rúguǒ míngtiān xiàyǔ, wǒ jiù zuò dìtiě.",
+        "meaning": {
+          "en": "If it rains tomorrow, I will take the metro.",
+          "fr": "S’il pleut demain, je prendrai le métro.",
+          "ru": "Если завтра будет дождь, я поеду на метро.",
+          "tr": "Yarın yağmur yağarsa metroya binerim."
+        },
+        "parts": [
+          "如果",
+          "明天下雨",
+          "，",
+          "我",
+          "就",
+          "坐地铁",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "Link a possible condition with its consequence.",
+          "fr": "Reliez une condition possible à sa conséquence.",
+          "ru": "Свяжите возможное условие с его следствием.",
+          "tr": "Olası bir koşulu sonucuna bağlayın."
+        }
+      }
+    ]
+  },
+  {
+    "id": "connect-provided",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "只要…就…",
+    "title": {
+      "en": "A sufficient condition",
+      "fr": "Une condition suffisante",
+      "ru": "Достаточное условие",
+      "tr": "Yeterli koşul"
+    },
+    "note": {
+      "en": "The first clause gives a condition sufficient for the result.",
+      "fr": "La première proposition donne une condition suffisante pour le résultat.",
+      "ru": "Первое условие достаточно для наступления результата.",
+      "tr": "İlk bölümdeki koşul, sonucun gerçekleşmesi için yeterlidir."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "connect-provided-1",
+        "hanzi": "只要每天练习，你就会进步。",
+        "pinyin": "Zhǐyào měitiān liànxí, nǐ jiù huì jìnbù.",
+        "meaning": {
+          "en": "As long as you practise every day, you will improve.",
+          "fr": "Du moment que tu t’entraînes chaque jour, tu progresseras.",
+          "ru": "Если будешь заниматься каждый день, обязательно продвинешься.",
+          "tr": "Her gün pratik yaptığın sürece ilerlersin."
+        },
+        "parts": [
+          "只要",
+          "每天练习",
+          "，",
+          "你",
+          "就",
+          "会进步",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "The first clause gives a condition sufficient for the result.",
+          "fr": "La première proposition donne une condition suffisante pour le résultat.",
+          "ru": "Первое условие достаточно для наступления результата.",
+          "tr": "İlk bölümdeki koşul, sonucun gerçekleşmesi için yeterlidir."
+        }
+      },
+      {
+        "id": "connect-provided-2",
+        "hanzi": "只要带上学生证，你就可以买学生票。",
+        "pinyin": "Zhǐyào dài shàng xuéshēngzhèng, nǐ jiù kěyǐ mǎi xuéshēngpiào.",
+        "meaning": {
+          "en": "As long as you bring your student ID, you can buy a student ticket.",
+          "fr": "Il suffit d’apporter ta carte étudiante pour acheter un billet étudiant.",
+          "ru": "Достаточно взять студенческий билет, и можно купить билет для студентов.",
+          "tr": "Öğrenci kimliğini getirdiğin sürece öğrenci bileti alabilirsin."
+        },
+        "parts": [
+          "只要",
+          "带上学生证",
+          "，",
+          "你",
+          "就",
+          "可以买学生票",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "The first clause gives a condition sufficient for the result.",
+          "fr": "La première proposition donne une condition suffisante pour le résultat.",
+          "ru": "Первое условие достаточно для наступления результата.",
+          "tr": "İlk bölümdeki koşul, sonucun gerçekleşmesi için yeterlidir."
+        }
+      }
+    ]
+  },
+  {
+    "id": "connect-only-if",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "只有…才…",
+    "title": {
+      "en": "A necessary condition",
+      "fr": "Une condition nécessaire",
+      "ru": "Необходимое условие",
+      "tr": "Gerekli koşul"
+    },
+    "note": {
+      "en": "The result requires the stated condition; it is not a guarantee.",
+      "fr": "Le résultat exige cette condition, sans être garanti.",
+      "ru": "Условие необходимо для результата, но не гарантирует его.",
+      "tr": "Sonuç için bu koşul gereklidir; sonucu garanti etmez."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf",
+      "https://www.chineseboost.com/functions/paired-conjunctions/",
+      "https://dict.revised.moe.edu.tw/dictView.jsp?ID=113861"
+    ],
+    "examples": [
+      {
+        "id": "connect-only-if-1",
+        "hanzi": "只有提前预约，你才能参加这节课。",
+        "pinyin": "Zhǐyǒu tíqián yùyuē, nǐ cái néng cānjiā zhè jié kè.",
+        "meaning": {
+          "en": "Only if you book in advance can you attend this class.",
+          "fr": "Il faut réserver à l’avance pour pouvoir assister à ce cours.",
+          "ru": "На это занятие можно попасть только по предварительной записи.",
+          "tr": "Bu derse ancak önceden rezervasyon yaparsan katılabilirsin."
+        },
+        "parts": [
+          "只有",
+          "提前预约",
+          "，",
+          "你",
+          "才",
+          "能参加这节课",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "The result requires the stated condition; it is not a guarantee.",
+          "fr": "Le résultat exige cette condition, sans être garanti.",
+          "ru": "Условие необходимо для результата, но не гарантирует его.",
+          "tr": "Sonuç için bu koşul gereklidir; sonucu garanti etmez."
+        }
+      },
+      {
+        "id": "connect-only-if-2",
+        "hanzi": "只有买了票，你才能进展览馆。",
+        "pinyin": "Zhǐyǒu mǎi le piào, nǐ cái néng jìn zhǎnlǎnguǎn.",
+        "meaning": {
+          "en": "You can enter the exhibition hall only if you have bought a ticket.",
+          "fr": "Tu ne peux entrer dans le hall d’exposition qu’après avoir acheté un billet.",
+          "ru": "В выставочный зал можно войти только купив билет.",
+          "tr": "Sergi salonuna ancak bilet aldıysan girebilirsin."
+        },
+        "parts": [
+          "只有",
+          "买了票",
+          "，",
+          "你",
+          "才",
+          "能进展览馆",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "The result requires the stated condition; it is not a guarantee.",
+          "fr": "Le résultat exige cette condition, sans être garanti.",
+          "ru": "Условие необходимо для результата, но не гарантирует его.",
+          "tr": "Sonuç için bu koşul gereklidir; sonucu garanti etmez."
+        }
+      }
+    ]
+  },
+  {
+    "id": "connect-not-only",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "不但…而且…",
+    "title": {
+      "en": "Not only…but also",
+      "fr": "Non seulement…mais aussi",
+      "ru": "Не только…но и",
+      "tr": "Sadece…değil, ayrıca"
+    },
+    "note": {
+      "en": "Add a second quality that strengthens the first statement.",
+      "fr": "Ajoutez une seconde qualité qui renforce la première affirmation.",
+      "ru": "Добавьте второе свойство, усиливающее первое утверждение.",
+      "tr": "İlk ifadeyi güçlendiren ikinci bir özellik ekleyin."
+    },
+    "sources": [
+      "https://www.chineseboost.com/functions/paired-conjunctions/",
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "connect-not-only-1",
+        "hanzi": "这家餐厅不但便宜，而且干净。",
+        "pinyin": "Zhè jiā cāntīng búdàn piányi, érqiě gānjìng.",
+        "meaning": {
+          "en": "This restaurant is not only inexpensive but also clean.",
+          "fr": "Ce restaurant est non seulement bon marché, mais aussi propre.",
+          "ru": "Этот ресторан не только недорогой, но и чистый.",
+          "tr": "Bu restoran sadece ucuz değil, aynı zamanda temiz."
+        },
+        "parts": [
+          "这家餐厅",
+          "不但",
+          "便宜",
+          "，",
+          "而且",
+          "干净",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Add a second quality that strengthens the first statement.",
+          "fr": "Ajoutez une seconde qualité qui renforce la première affirmation.",
+          "ru": "Добавьте второе свойство, усиливающее первое утверждение.",
+          "tr": "İlk ifadeyi güçlendiren ikinci bir özellik ekleyin."
+        }
+      },
+      {
+        "id": "connect-not-only-2",
+        "hanzi": "她不但会说中文，而且会写汉字。",
+        "pinyin": "Tā búdàn huì shuō Zhōngwén, érqiě huì xiě Hànzì.",
+        "meaning": {
+          "en": "She can not only speak Chinese but also write Chinese characters.",
+          "fr": "Elle sait non seulement parler chinois, mais aussi écrire les caractères.",
+          "ru": "Она не только говорит по-китайски, но и умеет писать иероглифы.",
+          "tr": "Sadece Çince konuşmakla kalmıyor, Çince karakterleri de yazabiliyor."
+        },
+        "parts": [
+          "她",
+          "不但",
+          "会说中文",
+          "，",
+          "而且",
+          "会写汉字",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Add a second quality that strengthens the first statement.",
+          "fr": "Ajoutez une seconde qualité qui renforce la première affirmation.",
+          "ru": "Добавьте второе свойство, усиливающее первое утверждение.",
+          "tr": "İlk ifadeyi güçlendiren ikinci bir özellik ekleyin."
+        }
+      }
+    ]
+  },
+  {
+    "id": "connect-besides",
+    "topic": "connect",
+    "level": "core",
+    "pattern": "除了…还…",
+    "title": {
+      "en": "Besides…also",
+      "fr": "En plus…aussi",
+      "ru": "Кроме…ещё и",
+      "tr": "Yanı sıra…da"
+    },
+    "note": {
+      "en": "Add another item or activity, rather than excluding the first.",
+      "fr": "Ajoutez un élément ou une activité sans exclure le premier.",
+      "ru": "Добавьте ещё один элемент, не исключая первый.",
+      "tr": "İlkini dışlamadan başka bir öge veya eylem ekleyin."
+    },
+    "sources": [
+      "https://www.chineseboost.com/functions/paired-conjunctions/"
+    ],
+    "examples": [
+      {
+        "id": "connect-besides-1",
+        "hanzi": "除了咖啡，我还喜欢喝茶。",
+        "pinyin": "Chúle kāfēi, wǒ hái xǐhuan hē chá.",
+        "meaning": {
+          "en": "Besides coffee, I also like drinking tea.",
+          "fr": "En plus du café, j’aime aussi boire du thé.",
+          "ru": "Кроме кофе, я также люблю пить чай.",
+          "tr": "Kahvenin yanı sıra çay içmeyi de severim."
+        },
+        "parts": [
+          "除了",
+          "咖啡",
+          "，",
+          "我",
+          "还",
+          "喜欢喝茶",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "Add another item or activity, rather than excluding the first.",
+          "fr": "Ajoutez un élément ou une activité sans exclure le premier.",
+          "ru": "Добавьте ещё один элемент, не исключая первый.",
+          "tr": "İlkini dışlamadan başka bir öge veya eylem ekleyin."
+        }
+      },
+      {
+        "id": "connect-besides-2",
+        "hanzi": "除了上课，他还在书店工作。",
+        "pinyin": "Chúle shàngkè, tā hái zài shūdiàn gōngzuò.",
+        "meaning": {
+          "en": "Besides attending classes, he also works in a bookshop.",
+          "fr": "En plus de ses cours, il travaille aussi dans une librairie.",
+          "ru": "Помимо занятий, он ещё работает в книжном магазине.",
+          "tr": "Derslere katılmanın yanı sıra bir kitapçıda da çalışıyor."
+        },
+        "parts": [
+          "除了",
+          "上课",
+          "，",
+          "他",
+          "还",
+          "在书店工作",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "Add another item or activity, rather than excluding the first.",
+          "fr": "Ajoutez un élément ou une activité sans exclure le premier.",
+          "ru": "Добавьте ещё один элемент, не исключая первый.",
+          "tr": "İlkini dışlamadan başka bir öge veya eylem ekleyin."
+        }
+      }
+    ]
+  },
+  {
+    "id": "connect-no-matter",
+    "topic": "connect",
+    "level": "extension",
+    "pattern": "不管…都…",
+    "title": {
+      "en": "Regardless of the situation",
+      "fr": "Quelle que soit la situation",
+      "ru": "Независимо от обстоятельств",
+      "tr": "Durum ne olursa olsun"
+    },
+    "note": {
+      "en": "Use a question word or alternatives; the result stays unchanged.",
+      "fr": "Utilisez un mot interrogatif ou des alternatives ; le résultat reste identique.",
+      "ru": "Используйте вопросительное слово или варианты; результат остаётся тем же.",
+      "tr": "Soru sözcüğü veya seçenekler kullanın; sonuç değişmez."
+    },
+    "sources": [
+      "https://www.cheng-tsui.com/sites/default/files/previews/CO%205%20textbook%20sample_3.pdf"
+    ],
+    "examples": [
+      {
+        "id": "connect-no-matter-1",
+        "hanzi": "不管你选哪本书，我都愿意读。",
+        "pinyin": "Bùguǎn nǐ xuǎn nǎ běn shū, wǒ dōu yuànyì dú.",
+        "meaning": {
+          "en": "Whichever book you choose, I am willing to read it.",
+          "fr": "Quel que soit le livre que tu choisis, je veux bien le lire.",
+          "ru": "Какую бы книгу ты ни выбрал, я готов её прочитать.",
+          "tr": "Hangi kitabı seçersen seç, okumaya hazırım."
+        },
+        "parts": [
+          "不管",
+          "你选哪本书",
+          "，",
+          "我",
+          "都",
+          "愿意读",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "Use a question word or alternatives; the result stays unchanged.",
+          "fr": "Utilisez un mot interrogatif ou des alternatives ; le résultat reste identique.",
+          "ru": "Используйте вопросительное слово или варианты; результат остаётся тем же.",
+          "tr": "Soru sözcüğü veya seçenekler kullanın; sonuç değişmez."
+        }
+      },
+      {
+        "id": "connect-no-matter-2",
+        "hanzi": "不管明天下不下雨，我们都去图书馆。",
+        "pinyin": "Bùguǎn míngtiān xià bu xiàyǔ, wǒmen dōu qù túshūguǎn.",
+        "meaning": {
+          "en": "Whether or not it rains tomorrow, we are going to the library.",
+          "fr": "Qu’il pleuve ou non demain, nous irons à la bibliothèque.",
+          "ru": "Будет завтра дождь или нет, мы пойдём в библиотеку.",
+          "tr": "Yarın yağmur yağsa da yağmasa da kütüphaneye gideceğiz."
+        },
+        "parts": [
+          "不管",
+          "明天下不下雨",
+          "，",
+          "我们",
+          "都",
+          "去图书馆",
+          "。"
+        ],
+        "targets": [
+          0,
+          4
+        ],
+        "hint": {
+          "en": "Use a question word or alternatives; the result stays unchanged.",
+          "fr": "Utilisez un mot interrogatif ou des alternatives ; le résultat reste identique.",
+          "ru": "Используйте вопросительное слово или варианты; результат остаётся тем же.",
+          "tr": "Soru sözcüğü veya seçenekler kullanın; sonuç değişmez."
+        }
+      }
+    ]
+  },
+  {
+    "id": "attitude-interest",
+    "topic": "attitude",
+    "level": "core",
+    "pattern": "对…感兴趣",
+    "title": {
+      "en": "Being interested in something",
+      "fr": "S’intéresser à quelque chose",
+      "ru": "Интересуемся чем-либо",
+      "tr": "Bir şeye ilgi duymak"
+    },
+    "note": {
+      "en": "Introduce the topic before the expression for being interested.",
+      "fr": "Introduisez le sujet avant l’expression de l’intérêt.",
+      "ru": "Поставьте тему перед выражением интереса.",
+      "tr": "İlgi duyulan konuyu ilgi bildiren ifadeden önce söyleyin."
+    },
+    "sources": [
+      "https://www.chineseboost.com/ci/%E6%84%9F%E5%85%B4%E8%B6%A3/"
+    ],
+    "examples": [
+      {
+        "id": "attitude-interest-1",
+        "hanzi": "我对中国历史很感兴趣。",
+        "pinyin": "Wǒ duì Zhōngguó lìshǐ hěn gǎn xìngqù.",
+        "meaning": {
+          "en": "I am very interested in Chinese history.",
+          "fr": "Je m’intéresse beaucoup à l’histoire de la Chine.",
+          "ru": "Я очень интересуюсь историей Китая.",
+          "tr": "Çin tarihine çok ilgi duyuyorum."
+        },
+        "parts": [
+          "我",
+          "对",
+          "中国历史",
+          "很",
+          "感兴趣",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Introduce the topic before the expression for being interested.",
+          "fr": "Introduisez le sujet avant l’expression de l’intérêt.",
+          "ru": "Поставьте тему перед выражением интереса.",
+          "tr": "İlgi duyulan konuyu ilgi bildiren ifadeden önce söyleyin."
+        }
+      },
+      {
+        "id": "attitude-interest-2",
+        "hanzi": "她对这个活动不感兴趣。",
+        "pinyin": "Tā duì zhège huódòng bù gǎn xìngqù.",
+        "meaning": {
+          "en": "She is not interested in this activity.",
+          "fr": "Cette activité ne l’intéresse pas.",
+          "ru": "Она не интересуется этим мероприятием.",
+          "tr": "Bu etkinliğe ilgi duymuyor."
+        },
+        "parts": [
+          "她",
+          "对",
+          "这个活动",
+          "不",
+          "感兴趣",
+          "。"
+        ],
+        "targets": [
+          1,
+          4
+        ],
+        "hint": {
+          "en": "Introduce the topic before the expression for being interested.",
+          "fr": "Introduisez le sujet avant l’expression de l’intérêt.",
+          "ru": "Поставьте тему перед выражением интереса.",
+          "tr": "İlgi duyulan konuyu ilgi bildiren ifadeden önce söyleyin."
+        }
+      }
+    ]
+  },
+  {
+    "id": "complement-ba",
+    "topic": "complement",
+    "level": "extension",
+    "pattern": "subject + 把 + object + verb + result/location",
+    "title": {
+      "en": "Handling a known object",
+      "fr": "Agir sur un objet connu",
+      "ru": "Действие над известным предметом",
+      "tr": "Bilinen bir nesne üzerinde eylem"
+    },
+    "note": {
+      "en": "Move a known object before the verb and show its outcome.",
+      "fr": "Placez un objet connu avant le verbe et indiquez le résultat.",
+      "ru": "Поставьте известный предмет перед глаголом и укажите результат.",
+      "tr": "Bilinen nesneyi fiilden önce koyun ve sonucu belirtin."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf",
+      "https://www.chineseboost.com/grammar/ba-structure-usage-basics/"
+    ],
+    "examples": [
+      {
+        "id": "complement-ba-1",
+        "hanzi": "请把杯子放在桌子上。",
+        "pinyin": "Qǐng bǎ bēizi fàng zài zhuōzi shàng.",
+        "meaning": {
+          "en": "Please put the cup on the table.",
+          "fr": "Pose la tasse sur la table, s’il te plaît.",
+          "ru": "Поставь чашку на стол, пожалуйста.",
+          "tr": "Lütfen fincanı masanın üstüne koy."
+        },
+        "parts": [
+          "请",
+          "把",
+          "杯子",
+          "放在桌子上",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Move a known object before the verb and show its outcome.",
+          "fr": "Placez un objet connu avant le verbe et indiquez le résultat.",
+          "ru": "Поставьте известный предмет перед глаголом и укажите результат.",
+          "tr": "Bilinen nesneyi fiilden önce koyun ve sonucu belirtin."
+        }
+      },
+      {
+        "id": "complement-ba-2",
+        "hanzi": "我把作业写完了。",
+        "pinyin": "Wǒ bǎ zuòyè xiě wán le.",
+        "meaning": {
+          "en": "I have finished my homework.",
+          "fr": "J’ai terminé mes devoirs.",
+          "ru": "Я закончил домашнее задание.",
+          "tr": "Ödevimi bitirdim."
+        },
+        "parts": [
+          "我",
+          "把",
+          "作业",
+          "写完了",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Move a known object before the verb and show its outcome.",
+          "fr": "Placez un objet connu avant le verbe et indiquez le résultat.",
+          "ru": "Поставьте известный предмет перед глаголом и укажите результат.",
+          "tr": "Bilinen nesneyi fiilden önce koyun ve sonucu belirtin."
+        }
+      }
+    ]
+  },
+  {
+    "id": "complement-bei",
+    "topic": "complement",
+    "level": "extension",
+    "pattern": "affected subject + 被 + agent + verb + result",
+    "title": {
+      "en": "What happened to something",
+      "fr": "Ce qu’un objet a subi",
+      "ru": "Что произошло с предметом",
+      "tr": "Nesnenin başına gelen"
+    },
+    "note": {
+      "en": "Put the affected thing first, then introduce the agent.",
+      "fr": "Placez d’abord l’objet affecté, puis introduisez l’agent.",
+      "ru": "Сначала назовите предмет действия, затем исполнителя.",
+      "tr": "Önce etkilenen nesneyi, sonra eylemi yapanı belirtin."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "complement-bei-1",
+        "hanzi": "我的杯子被小猫碰倒了。",
+        "pinyin": "Wǒ de bēizi bèi xiǎomāo pèng dǎo le.",
+        "meaning": {
+          "en": "My cup was knocked over by the kitten.",
+          "fr": "Mon chaton a renversé ma tasse.",
+          "ru": "Котёнок опрокинул мою чашку.",
+          "tr": "Fincanımı yavru kedi devirdi."
+        },
+        "parts": [
+          "我的杯子",
+          "被",
+          "小猫",
+          "碰倒了",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put the affected thing first, then introduce the agent.",
+          "fr": "Placez d’abord l’objet affecté, puis introduisez l’agent.",
+          "ru": "Сначала назовите предмет действия, затем исполнителя.",
+          "tr": "Önce etkilenen nesneyi, sonra eylemi yapanı belirtin."
+        }
+      },
+      {
+        "id": "complement-bei-2",
+        "hanzi": "那块蛋糕被弟弟吃掉了。",
+        "pinyin": "Nà kuài dàngāo bèi dìdi chī diào le.",
+        "meaning": {
+          "en": "That piece of cake was eaten by my younger brother.",
+          "fr": "Mon petit frère a mangé cette part de gâteau.",
+          "ru": "Тот кусок торта съел мой младший брат.",
+          "tr": "O dilim pastayı küçük erkek kardeşim yedi."
+        },
+        "parts": [
+          "那块蛋糕",
+          "被",
+          "弟弟",
+          "吃掉了",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put the affected thing first, then introduce the agent.",
+          "fr": "Placez d’abord l’objet affecté, puis introduisez l’agent.",
+          "ru": "Сначала назовите предмет действия, затем исполнителя.",
+          "tr": "Önce etkilenen nesneyi, sonra eylemi yapanı belirtin."
+        }
+      }
+    ]
+  },
+  {
+    "id": "complement-de",
+    "topic": "complement",
+    "level": "core",
+    "pattern": "verb + 得 + description",
+    "title": {
+      "en": "Describing how an action goes",
+      "fr": "Décrire la manière d’agir",
+      "ru": "Описываем выполнение действия",
+      "tr": "Eylemin nasıl yapıldığı"
+    },
+    "note": {
+      "en": "Link the verb to a description of its manner or degree.",
+      "fr": "Reliez le verbe à une description de manière ou de degré.",
+      "ru": "Свяжите глагол с описанием способа или степени действия.",
+      "tr": "Fiili, yapılış biçimini veya derecesini anlatan ifadeye bağlayın."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf",
+      "https://openbooks.lib.msu.edu/chs101/open/download?type=pdf"
+    ],
+    "examples": [
+      {
+        "id": "complement-de-1",
+        "hanzi": "他说得很清楚。",
+        "pinyin": "Tā shuō de hěn qīngchu.",
+        "meaning": {
+          "en": "He speaks very clearly.",
+          "fr": "Il parle très clairement.",
+          "ru": "Он говорит очень понятно.",
+          "tr": "Çok açık konuşuyor."
+        },
+        "parts": [
+          "他说",
+          "得",
+          "很清楚",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Link the verb to a description of its manner or degree.",
+          "fr": "Reliez le verbe à une description de manière ou de degré.",
+          "ru": "Свяжите глагол с описанием способа или степени действия.",
+          "tr": "Fiili, yapılış biçimini veya derecesini anlatan ifadeye bağlayın."
+        }
+      },
+      {
+        "id": "complement-de-2",
+        "hanzi": "她跑得很快。",
+        "pinyin": "Tā pǎo de hěn kuài.",
+        "meaning": {
+          "en": "She runs very fast.",
+          "fr": "Elle court très vite.",
+          "ru": "Она бегает очень быстро.",
+          "tr": "Çok hızlı koşuyor."
+        },
+        "parts": [
+          "她跑",
+          "得",
+          "很快",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Link the verb to a description of its manner or degree.",
+          "fr": "Reliez le verbe à une description de manière ou de degré.",
+          "ru": "Свяжите глагол с описанием способа или степени действия.",
+          "tr": "Fiili, yapılış biçimini veya derecesini anlatan ifadeye bağlayın."
+        }
+      }
+    ]
+  },
+  {
+    "id": "aspect-experience",
+    "topic": "complement",
+    "level": "core",
+    "pattern": "verb + 过 + object",
+    "title": {
+      "en": "Past experience",
+      "fr": "Une expérience passée",
+      "ru": "Опыт в прошлом",
+      "tr": "Geçmiş deneyim"
+    },
+    "note": {
+      "en": "Put the experience marker directly after the verb.",
+      "fr": "Placez le marqueur d’expérience directement après le verbe.",
+      "ru": "Показатель опыта ставится сразу после глагола.",
+      "tr": "Deneyim sözcüğünü fiilin hemen arkasına koyun."
+    },
+    "sources": [
+      "https://www.ctcfl.ox.ac.uk/media/pages/pdf/lang-work_grammar-database_grammar-database-for-hard-copy.pdf"
+    ],
+    "examples": [
+      {
+        "id": "aspect-experience-1",
+        "hanzi": "我去过杭州。",
+        "pinyin": "Wǒ qù guo Hángzhōu.",
+        "meaning": {
+          "en": "I have been to Hangzhou.",
+          "fr": "Je suis déjà allé à Hangzhou.",
+          "ru": "Я бывал в Ханчжоу.",
+          "tr": "Hangzhou’ya gittim."
+        },
+        "parts": [
+          "我去",
+          "过",
+          "杭州",
+          "。"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put the experience marker directly after the verb.",
+          "fr": "Placez le marqueur d’expérience directement après le verbe.",
+          "ru": "Показатель опыта ставится сразу после глагола.",
+          "tr": "Deneyim sözcüğünü fiilin hemen arkasına koyun."
+        }
+      },
+      {
+        "id": "aspect-experience-2",
+        "hanzi": "你吃过这种面条吗？",
+        "pinyin": "Nǐ chī guo zhè zhǒng miàntiáo ma?",
+        "meaning": {
+          "en": "Have you ever eaten this kind of noodles?",
+          "fr": "As-tu déjà mangé ce genre de nouilles ?",
+          "ru": "Ты когда-нибудь ел такую лапшу?",
+          "tr": "Bu tür erişteden hiç yedin mi?"
+        },
+        "parts": [
+          "你吃",
+          "过",
+          "这种面条",
+          "吗",
+          "？"
+        ],
+        "targets": [
+          1
+        ],
+        "hint": {
+          "en": "Put the experience marker directly after the verb.",
+          "fr": "Placez le marqueur d’expérience directement après le verbe.",
+          "ru": "Показатель опыта ставится сразу после глагола.",
+          "tr": "Deneyim sözcüğünü fiilin hemen arkasına koyun."
+        }
+      }
+    ]
+  },
+  {
+    "id": "time-as-soon",
+    "topic": "time",
+    "level": "core",
+    "pattern": "一…就…",
+    "title": {
+      "en": "As soon as",
+      "fr": "Dès que",
+      "ru": "Как только",
+      "tr": "Yapar yapmaz"
+    },
+    "note": {
+      "en": "The second action follows immediately after the first.",
+      "fr": "La seconde action suit immédiatement la première.",
+      "ru": "Второе действие следует сразу за первым.",
+      "tr": "İkinci eylem, birincinin hemen ardından gerçekleşir."
+    },
+    "sources": [
+      "https://ci.ioe.ac.uk/wp-content/uploads/2021/04/GCSE.OTH_.aqa-gcse-vocabulary-and-grammar-booklet-1.AL_.Frank-Fan.EXM_.GC_.MEP10MEP11.pdf"
+    ],
+    "examples": [
+      {
+        "id": "time-as-soon-1",
+        "hanzi": "我一到家就给你打电话。",
+        "pinyin": "Wǒ yí dào jiā jiù gěi nǐ dǎ diànhuà.",
+        "meaning": {
+          "en": "I will call you as soon as I get home.",
+          "fr": "Je t’appellerai dès que je serai à la maison.",
+          "ru": "Я позвоню тебе, как только приду домой.",
+          "tr": "Eve varır varmaz seni arayacağım."
+        },
+        "parts": [
+          "我",
+          "一",
+          "到家",
+          "就",
+          "给你打电话",
+          "。"
+        ],
+        "targets": [
+          1,
+          3
+        ],
+        "hint": {
+          "en": "The second action follows immediately after the first.",
+          "fr": "La seconde action suit immédiatement la première.",
+          "ru": "Второе действие следует сразу за первым.",
+          "tr": "İkinci eylem, birincinin hemen ardından gerçekleşir."
+        }
+      },
+      {
+        "id": "time-as-soon-2",
+        "hanzi": "他一听到音乐就开始跳舞。",
+        "pinyin": "Tā yì tīng dào yīnyuè jiù kāishǐ tiàowǔ.",
+        "meaning": {
+          "en": "He starts dancing as soon as he hears music.",
+          "fr": "Il se met à danser dès qu’il entend de la musique.",
+          "ru": "Он начинает танцевать, как только слышит музыку.",
+          "tr": "Müzik duyar duymaz dans etmeye başlıyor."
+        },
+        "parts": [
+          "他",
+          "一",
+          "听到音乐",
+          "就",
+          "开始跳舞",
+          "。"
+        ],
+        "targets": [
+          1,
+          3
+        ],
+        "hint": {
+          "en": "The second action follows immediately after the first.",
+          "fr": "La seconde action suit immédiatement la première.",
+          "ru": "Второе действие следует сразу за первым.",
+          "tr": "İkinci eylem, birincinin hemen ardından gerçekleşir."
+        }
+      }
+    ]
+  }
+]

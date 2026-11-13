@@ -1,0 +1,69 @@
+{
+  "lessonId": "intensive-08",
+  "date": "2026-10-29",
+  "files": [
+    {
+      "filename": "IMG_0236.heic",
+      "bytes": 1266528,
+      "sha256": "01c9bac84857d60831c1d4895e5e0ecab163e9a6e7c28b041289babe15b5802b"
+    },
+    {
+      "filename": "IMG_0237.heic",
+      "bytes": 1141273,
+      "sha256": "1bf448933c2745d724be4fa89dc0234fb1b8f2cc40be5c4c6c4673acb561d6ba"
+    },
+    {
+      "filename": "IMG_0238.heic",
+      "bytes": 1357986,
+      "sha256": "14f4d6060285c477ac656220daf419f0b94f8cdd336cbb65d7db4f9855b12bfb"
+    },
+    {
+      "filename": "IMG_0239.heic",
+      "bytes": 1318583,
+      "sha256": "ca8a7d172e1482c6c9e950bc3aeb51ac19488fd047d2a43004881af689bab85a"
+    },
+    {
+      "filename": "IMG_0240.heic",
+      "bytes": 1206784,
+      "sha256": "31a484d14b4ca5342ca7dcb275c15634d0f317f5dfeed7f086c968b5858b6aec"
+    },
+    {
+      "filename": "IMG_0241.heic",
+      "bytes": 919464,
+      "sha256": "8f09e6a1dd7a474ee19d31ee35174d20565e3da7e7ee7bc87a1024f7aea78932"
+    },
+    {
+      "filename": "IMG_0242.heic",
+      "bytes": 1009221,
+      "sha256": "a8340e1f043746216b27ed18bfa918cd6fe601a5e946282bb5b8c2b193bcbc10"
+    },
+    {
+      "filename": "IMG_0243.heic",
+      "bytes": 925764,
+      "sha256": "cbbd16abc0913fdd8f3e995bfa444b1098f573a89464cc341ebf7e5fb4c19475"
+    },
+    {
+      "filename": "IMG_0244.heic",
+      "bytes": 934739,
+      "sha256": "18d8a3bc5e5a563f03b7b997f6d88c4c05b3d1e37044d877b3ef6c54d080a0db"
+    },
+    {
+      "filename": "IMG_0245.heic",
+      "bytes": 1169815,
+      "sha256": "a0a52bedf197fcbfdea6f1b8805f4924bf65ef41b02be19a19afeda566df9645"
+    },
+    {
+      "filename": "IMG_0246.heic",
+      "bytes": 1191800,
+      "sha256": "a4e238749c6e2aa89248499b2d1d22855ebcc974511a86cc2a1250459efb9f76"
+    }
+  ],
+  "notes": [
+    "All eleven supplied photos checked visually against overlapping views.",
+    "Board numeric times normalized to Chinese without changing 08:40–12:00 class and 12:00–13:00 break.",
+    "The board heading 世界上最远的距离 is retained without inventing a continuation or attribution.",
+    "钥匙 yàoshi vs 要死 yàosǐ is a classroom sound joke; do not present 我要死 as the meaning of 我的钥匙.",
+    "Character resemblances are visual observations, not invented historical etymology.",
+    "Source photos remain local; public lessons contain normalized educational text."
+  ]
+}

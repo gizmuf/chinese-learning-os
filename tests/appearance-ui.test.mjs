@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {build} from 'esbuild';
+import {mkdtempSync,writeFileSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url);
+const bundle=await build({stdin:{contents:`export {AppearanceControls,AppearanceProvider} from './app/theme';export {createElement} from 'react';export {default as renderer,act} from 'react-test-renderer';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent',alias:{react:require.resolve('react').replace(/\/index\.js$/,'')},plugins:[{name:'appearance-context',setup(b){b.onResolve({filter:/^(next-themes|\.\/i18n)$/},a=>({path:a.path,namespace:'test-context'}));b.onLoad({filter:/.*/,namespace:'test-context'},a=>({contents:a.path==='next-themes'?`import {createElement,useState} from 'react';export const ThemeProvider=({children,...props})=>createElement('theme-provider',props,children);export function useTheme(){const [theme,setTheme]=useState('system');return {theme,setTheme};}`:`export const useI18n=()=>({locale:'en'});`,loader:'js'}));}}]});
+const file=join(mkdtempSync(join(tmpdir(),'appearance-ui-')),'test.mjs');writeFileSync(file,bundle.outputFiles[0].text);const m=await import(pathToFileURL(file));globalThis.IS_REACT_ACT_ENVIRONMENT=true;
+test('theme selector changes pressed state correctly through repeated choices',async()=>{let root;await m.act(async()=>{root=m.renderer.create(m.createElement(m.AppearanceControls));});const buttons=root.root.findAllByType('button');assert.equal(buttons.length,3);for(const index of [2,1,0,2,2]){await m.act(async()=>buttons[index].props.onClick());assert.deepEqual(buttons.map(b=>b.props['aria-pressed']),[0,1,2].map(i=>i===index));assert.equal(buttons[index].props.disabled,false);}await m.act(async()=>root.unmount());});
+test('theme provider passes device-only persistent configuration with opt-in system mode',async()=>{let root;await m.act(async()=>{root=m.renderer.create(m.createElement(m.AppearanceProvider,null,'lesson'));});const props=root.root.findByType('theme-provider').props;assert.equal(props.attribute,'data-theme');assert.equal(props.storageKey,'chinese-os-appearance');assert.equal(props.defaultTheme,'light');assert.equal(props.enableSystem,true);assert.equal(props.children,'lesson');await m.act(async()=>root.unmount());});
+test.after(()=>{for(const h of process._getActiveHandles())if(h.constructor.name==='MessagePort')h.unref();});

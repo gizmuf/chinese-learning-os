@@ -1,0 +1,4082 @@
+{
+  "hello": {
+    "english": "merhaba",
+    "translation": "Merhaba, tanıştığımıza memnun oldum."
+  },
+  "me": {
+    "english": "ben",
+    "translation": "Ben öğrenciyim."
+  },
+  "you": {
+    "english": "sen",
+    "translation": "Adın ne?"
+  },
+  "teacher": {
+    "english": "öğretmen",
+    "translation": "Merhaba öğretmenim."
+  },
+  "student": {
+    "english": "öğrenci",
+    "translation": "Ben öğrenciyim."
+  },
+  "thanks": {
+    "english": "teşekkür ederim",
+    "translation": "Teşekkür ederim."
+  },
+  "goodbye": {
+    "english": "hoşça kal",
+    "translation": "Hoşça kalın öğretmenim."
+  },
+  "china": {
+    "english": "Çin",
+    "translation": "Çin'deyim."
+  },
+  "yes": {
+    "english": "olmak / evet",
+    "translation": "Ben öğrenciyim."
+  },
+  "no": {
+    "english": "değil / hayır",
+    "translation": "Ben öğretmen değilim."
+  },
+  "have": {
+    "english": "sahip olmak / var",
+    "translation": "Vaktin var mı?"
+  },
+  "want": {
+    "english": "istemek",
+    "translation": "Bunu istiyorum."
+  },
+  "this": {
+    "english": "bu",
+    "translation": "Bu ne kadar?"
+  },
+  "howmuch": {
+    "english": "ne kadar / kaç",
+    "translation": "Bu ne kadar?"
+  },
+  "can": {
+    "english": "yapabilmek / izinli olmak",
+    "translation": "Olur mu?"
+  },
+  "notbad": {
+    "english": "fena değil / oldukça iyi",
+    "translation": "Bu oldukça iyi."
+  },
+  "water": {
+    "english": "su",
+    "translation": "Su istiyorum."
+  },
+  "tea": {
+    "english": "çay",
+    "translation": "Bir fincan çay istiyorum."
+  },
+  "eat": {
+    "english": "yemek",
+    "translation": "Ne yiyorsun?"
+  },
+  "sweet": {
+    "english": "tatlı",
+    "translation": "Bu tatlı mı?"
+  },
+  "little": {
+    "english": "biraz",
+    "translation": "Biraz istiyorum."
+  },
+  "vegetarian": {
+    "english": "vejetaryen yemek",
+    "translation": "Vejetaryen yemeğiniz var mı?"
+  },
+  "meat": {
+    "english": "et",
+    "translation": "Et yemiyorum."
+  },
+  "delicious": {
+    "english": "lezzetli",
+    "translation": "Bu lezzetli."
+  },
+  "today": {
+    "english": "bugün",
+    "translation": "Bugün dersim var."
+  },
+  "tomorrow": {
+    "english": "yarın",
+    "translation": "Yarın görüşürüz."
+  },
+  "yesterday": {
+    "english": "dün",
+    "translation": "Dün dersim vardı."
+  },
+  "now": {
+    "english": "şimdi",
+    "translation": "Şimdi olur mu?"
+  },
+  "later": {
+    "english": "sonra / daha sonra",
+    "translation": "Daha sonra geri geleceğim."
+  },
+  "week": {
+    "english": "gelecek hafta",
+    "translation": "Gelecek hafta görüşürüz."
+  },
+  "time": {
+    "english": "zaman / vakit",
+    "translation": "Vaktin var mı?"
+  },
+  "start": {
+    "english": "başlamak",
+    "translation": "Başlayalım."
+  },
+  "hsk1-001": {
+    "english": "sevmek",
+    "translation": "Ailemi seviyorum."
+  },
+  "hsk1-002": {
+    "english": "sekiz",
+    "translation": "Sekiz kitabım var."
+  },
+  "hsk1-003": {
+    "english": "baba",
+    "translation": "Babam doktor."
+  },
+  "hsk1-004": {
+    "english": "öneri bildiren edat",
+    "translation": "Hadi gidip yemek yiyelim."
+  },
+  "hsk1-005": {
+    "english": "gündüz",
+    "translation": "Gündüzleri derslerim var."
+  },
+  "hsk1-006": {
+    "english": "yüz",
+    "translation": "Bu giysi yüz yuan."
+  },
+  "hsk1-007": {
+    "english": "yarım / buçuk",
+    "translation": "Şimdi saat üç buçuk."
+  },
+  "hsk1-008": {
+    "english": "buharda pişmiş çörek",
+    "translation": "Kahvaltıda buharda pişmiş çörek yerim."
+  },
+  "hsk1-009": {
+    "english": "fincan / bardak",
+    "translation": "Bu benim bardağım."
+  },
+  "hsk1-010": {
+    "english": "kitaplar için ölçü sözcüğü",
+    "translation": "Bir kitap aldım."
+  },
+  "hsk1-011": {
+    "english": "yan / kenar",
+    "translation": "Lütfen benim yanıma otur."
+  },
+  "hsk1-012": {
+    "english": "hastalık / hasta olmak",
+    "translation": "Hastalığın geçti mi?"
+  },
+  "hsk1-014": {
+    "english": "rica ederim",
+    "translation": "Rica ederim; bu senin kitabın."
+  },
+  "hsk1-015": {
+    "english": "yapma / istememek",
+    "translation": "Burada konuşma."
+  },
+  "hsk1-016": {
+    "english": "yemek / sebze",
+    "translation": "Bu yemek lezzetli."
+  },
+  "hsk1-018": {
+    "english": "şarkı söylemek",
+    "translation": "Bu şarkıyı söyleyebilir misin?"
+  },
+  "hsk1-019": {
+    "english": "süpermarket",
+    "translation": "Meyve almak için süpermarkete gidiyorum."
+  },
+  "hsk1-020": {
+    "english": "araç / araba",
+    "translation": "Arabam dışarıda."
+  },
+  "hsk1-022": {
+    "english": "taksi",
+    "translation": "Okula taksiyle gidiyoruz."
+  },
+  "hsk1-023": {
+    "english": "giymek",
+    "translation": "Bugün hava soğuk; biraz daha kalın giyin."
+  },
+  "hsk1-024": {
+    "english": "telefon etmek",
+    "translation": "Anneme telefon ediyorum."
+  },
+  "hsk1-025": {
+    "english": "büyük",
+    "translation": "Bu oda büyük."
+  },
+  "hsk1-026": {
+    "english": "herkes",
+    "translation": "Herkese merhaba, ben yeni sınıf arkadaşınızım."
+  },
+  "hsk1-027": {
+    "english": "üniversite",
+    "translation": "Üniversitede Çince öğreniyorum."
+  },
+  "hsk1-028": {
+    "english": "üniversite öğrencisi",
+    "translation": "Ağabeyim üniversite öğrencisi."
+  },
+  "hsk1-029": {
+    "english": "varmak / ulaşmak",
+    "translation": "Okula vardım."
+  },
+  "hsk1-030": {
+    "english": "iyelik bildiren edat",
+    "translation": "Bu benim telefonum."
+  },
+  "hsk1-031": {
+    "english": "sıra sayısı öneki",
+    "translation": "Bu benim ilk Çince kitabım."
+  },
+  "hsk1-032": {
+    "english": "erkek kardeş",
+    "translation": "Erkek kardeşim bu yıl sekiz yaşında."
+  },
+  "hsk1-033": {
+    "english": "saat",
+    "translation": "Derse saat sekizde başlıyoruz."
+  },
+  "hsk1-034": {
+    "english": "dükkan / mağaza",
+    "translation": "Bu dükkandaki ürünler ucuz."
+  },
+  "hsk1-035": {
+    "english": "telefon / telefon görüşmesi",
+    "translation": "Telefon numaran ne?"
+  },
+  "hsk1-036": {
+    "english": "bilgisayar",
+    "translation": "Ders çalışmak için bilgisayar kullanıyorum."
+  },
+  "hsk1-037": {
+    "english": "televizyon",
+    "translation": "Annem televizyon izliyor."
+  },
+  "hsk1-038": {
+    "english": "film",
+    "translation": "Bu film çok güzel."
+  },
+  "hsk1-039": {
+    "english": "sinema",
+    "translation": "Sinema okulun arkasında."
+  },
+  "hsk1-040": {
+    "english": "eşya / şey",
+    "translation": "Bunlar kimin eşyaları?"
+  },
+  "hsk1-041": {
+    "english": "hepsi / ikisi de",
+    "translation": "Hepimiz öğrenciyiz."
+  },
+  "hsk1-042": {
+    "english": "sesli okumak / okumak",
+    "translation": "Lütfen bu karakteri oku."
+  },
+  "hsk1-043": {
+    "english": "okumak / öğrenim görmek",
+    "translation": "Evde kitap okumayı seviyorum."
+  },
+  "hsk1-044": {
+    "english": "doğru",
+    "translation": "Söylediğin doğru."
+  },
+  "hsk1-045": {
+    "english": "özür dilerim",
+    "translation": "Özür dilerim, geç kaldım."
+  },
+  "hsk1-046": {
+    "english": "çok / birçok",
+    "translation": "Burada çok insan var."
+  },
+  "hsk1-048": {
+    "english": "oğul",
+    "translation": "Onun oğlu okula gidiyor."
+  },
+  "hsk1-049": {
+    "english": "iki",
+    "translation": "Bugün salı."
+  },
+  "hsk1-050": {
+    "english": "yemek / pişmiş pirinç",
+    "translation": "Yemek hazır."
+  },
+  "hsk1-051": {
+    "english": "restoran / lokanta",
+    "translation": "Hadi şu restoranda yiyelim."
+  },
+  "hsk1-052": {
+    "english": "oda",
+    "translation": "Odam küçük."
+  },
+  "hsk1-053": {
+    "english": "çok / son derece",
+    "translation": "Bugün çok mutluyum."
+  },
+  "hsk1-054": {
+    "english": "uçak",
+    "translation": "Çin'e uçakla gidiyorum."
+  },
+  "hsk1-055": {
+    "english": "dakika / kuruş",
+    "translation": "Şimdi saat sekizi on geçiyor."
+  },
+  "hsk1-056": {
+    "english": "dakika (süre)",
+    "translation": "Lütfen beni beş dakika bekle."
+  },
+  "hsk1-057": {
+    "english": "mutlu / memnun",
+    "translation": "Seninle tanıştığıma memnun oldum."
+  },
+  "hsk1-058": {
+    "english": "şarkı",
+    "translation": "Bu şarkıyı seviyorum."
+  },
+  "hsk1-059": {
+    "english": "ağabey",
+    "translation": "Ağabeyim araba kullanabiliyor."
+  },
+  "hsk1-060": {
+    "english": "genel ölçü sözcüğü",
+    "translation": "Üç elmam var."
+  },
+  "hsk1-061": {
+    "english": "vermek / için",
+    "translation": "Lütfen bana bir bardak su ver."
+  },
+  "hsk1-062": {
+    "english": "şirket",
+    "translation": "Bu şirkette çalışıyorum."
+  },
+  "hsk1-063": {
+    "english": "çalışmak / iş",
+    "translation": "Babam bugün çalışmıyor."
+  },
+  "hsk1-064": {
+    "english": "köpek",
+    "translation": "Bu köpek küçük."
+  },
+  "hsk1-065": {
+    "english": "pahalı",
+    "translation": "Bu giysi çok pahalı."
+  },
+  "hsk1-066": {
+    "english": "ülke / devlet",
+    "translation": "Hangi ülkedensin?"
+  },
+  "hsk1-067": {
+    "english": "hâlâ / ayrıca",
+    "translation": "Biraz daha su da istiyorum."
+  },
+  "hsk1-068": {
+    "english": "çocuk / çocuklar",
+    "translation": "Çocuklar okulda."
+  },
+  "hsk1-069": {
+    "english": "Çince / Mandarin",
+    "translation": "Çince öğreniyorum."
+  },
+  "hsk1-070": {
+    "english": "Çince karakter",
+    "translation": "Bu Çince karakter nasıl yazılır?"
+  },
+  "hsk1-071": {
+    "english": "iyi",
+    "translation": "Bugün hava güzel."
+  },
+  "hsk1-073": {
+    "english": "güzel görünen / izlemesi keyifli",
+    "translation": "Bu kitabı okumak keyifli."
+  },
+  "hsk1-074": {
+    "english": "kulağa hoş gelen",
+    "translation": "Bu şarkı kulağa çok hoş geliyor."
+  },
+  "hsk1-075": {
+    "english": "eğlenceli",
+    "translation": "Burası eğlenceli."
+  },
+  "hsk1-076": {
+    "english": "numara / ayın günü",
+    "translation": "Bugün ayın kaçı?"
+  },
+  "hsk1-077": {
+    "english": "içmek",
+    "translation": "Ne içmek istersin?"
+  },
+  "hsk1-078": {
+    "english": "ve / ile",
+    "translation": "Arkadaşımla okula gidiyoruz."
+  },
+  "hsk1-079": {
+    "english": "çok / oldukça",
+    "translation": "Bugün çok meşgulüm."
+  },
+  "hsk1-080": {
+    "english": "sonra / arka",
+    "translation": "Dersten sonra eve gidiyorum."
+  },
+  "hsk1-081": {
+    "english": "dönmek",
+    "translation": "Yarın eve dönüyorum."
+  },
+  "hsk1-082": {
+    "english": "yapabilmek / yapmayı bilmek",
+    "translation": "Biraz Çince konuşabiliyorum."
+  },
+  "hsk1-083": {
+    "english": "tren",
+    "translation": "Pekin'e trenle gidiyoruz."
+  },
+  "hsk1-084": {
+    "english": "yumurta",
+    "translation": "Kahvaltıda yumurta yerim."
+  },
+  "hsk1-085": {
+    "english": "kaç (küçük sayılar)",
+    "translation": "Ailen kaç kişi?"
+  },
+  "hsk1-086": {
+    "english": "ev / aile",
+    "translation": "Evim burada."
+  },
+  "hsk1-087": {
+    "english": "aile üyeleri",
+    "translation": "Ailemin bütün üyeleri iyi."
+  },
+  "hsk1-088": {
+    "english": "görmek / buluşmak",
+    "translation": "Yarın görüşürüz!"
+  },
+  "hsk1-089": {
+    "english": "giysi ve işler için ölçü sözcüğü",
+    "translation": "İki parça giysi aldım."
+  },
+  "hsk1-090": {
+    "english": "Çin mantısı",
+    "translation": "Bu akşam Çin mantısı yiyoruz."
+  },
+  "hsk1-091": {
+    "english": "adı olmak / çağırmak",
+    "translation": "Adın ne?"
+  },
+  "hsk1-092": {
+    "english": "abla",
+    "translation": "Ablam öğretmen."
+  },
+  "hsk1-093": {
+    "english": "bu yıl",
+    "translation": "Bu yıl yirmi yaşındayım."
+  },
+  "hsk1-095": {
+    "english": "dokuz",
+    "translation": "Her gün dokuzda uyurum."
+  },
+  "hsk1-096": {
+    "english": "hissetmek / düşünmek",
+    "translation": "Sence bu nasıl?"
+  },
+  "hsk1-097": {
+    "english": "açmak",
+    "translation": "Lütfen kapıyı aç."
+  },
+  "hsk1-098": {
+    "english": "araba kullanmak",
+    "translation": "Annem araba kullanabiliyor."
+  },
+  "hsk1-099": {
+    "english": "bakmak / izlemek / okumak",
+    "translation": "Neye bakıyorsun?"
+  },
+  "hsk1-100": {
+    "english": "doktora gitmek",
+    "translation": "Bugün doktora görünmek için hastaneye gidiyorum."
+  },
+  "hsk1-101": {
+    "english": "görmek / gözüne ilişmek",
+    "translation": "Öğretmeni gördüm."
+  },
+  "hsk1-103": {
+    "english": "ders",
+    "translation": "Bu ders ilginç."
+  },
+  "hsk1-104": {
+    "english": "aile üyeleri için ölçü sözcüğü",
+    "translation": "Ailem üç kişi."
+  },
+  "hsk1-105": {
+    "english": "yuan (günlük dilde) / parça",
+    "translation": "Bu elma üç yuan."
+  },
+  "hsk1-106": {
+    "english": "gelmek",
+    "translation": "Lütfen evime gel."
+  },
+  "hsk1-108": {
+    "english": "değişim veya tamamlanmış eylem edatı",
+    "translation": "Yemek yedim."
+  },
+  "hsk1-109": {
+    "english": "soğuk",
+    "translation": "Bugün hava soğuk."
+  },
+  "hsk1-110": {
+    "english": "iç / içinde",
+    "translation": "Kitap çantanın içinde."
+  },
+  "hsk1-111": {
+    "english": "iki (ölçü sözcüğünden önce)",
+    "translation": "İki fincan çay istiyorum."
+  },
+  "hsk1-112": {
+    "english": "sıfır",
+    "translation": "Yüz bir kaç eder?"
+  },
+  "hsk1-113": {
+    "english": "altı",
+    "translation": "Saat altıda kalkarım."
+  },
+  "hsk1-114": {
+    "english": "anne",
+    "translation": "Annem yemek yapıyor."
+  },
+  "hsk1-115": {
+    "english": "evet-hayır sorusu edatı",
+    "translation": "Öğrenci misin?"
+  },
+  "hsk1-116": {
+    "english": "satın almak",
+    "translation": "Bir kitap almak istiyorum."
+  },
+  "hsk1-117": {
+    "english": "satmak",
+    "translation": "Bu dükkan meyve satıyor."
+  },
+  "hsk1-118": {
+    "english": "meşgul",
+    "translation": "Bugün meşgul müsün?"
+  },
+  "hsk1-119": {
+    "english": "kedi",
+    "translation": "Kedim sandalyenin üstünde."
+  },
+  "hsk1-120": {
+    "english": "önemli değil / sorun değil",
+    "translation": "Sorun değil; lütfen otur."
+  },
+  "hsk1-121": {
+    "english": "bir şey yok / sorun yok",
+    "translation": "İyiyim, teşekkür ederim."
+  },
+  "hsk1-122": {
+    "english": "sahip olmamak / yok",
+    "translation": "Bilgisayarım yok."
+  },
+  "hsk1-123": {
+    "english": "kız kardeş",
+    "translation": "Kız kardeşim şarkı söylemeyi seviyor."
+  },
+  "hsk1-124": {
+    "english": "kişiler için çoğul eki",
+    "translation": "Günaydın arkadaşlar!"
+  },
+  "hsk1-125": {
+    "english": "pişmiş pirinç / pilav",
+    "translation": "Bir kase pilav istiyorum."
+  },
+  "hsk1-126": {
+    "english": "ekmek",
+    "translation": "Kahvaltıda ekmek yerim."
+  },
+  "hsk1-127": {
+    "english": "erişte",
+    "translation": "Bu kasedeki erişte lezzetli."
+  },
+  "hsk1-128": {
+    "english": "gelecek yıl",
+    "translation": "Gelecek yıl Çin'e gidiyorum."
+  },
+  "hsk1-130": {
+    "english": "ad / isim",
+    "translation": "Adın nasıl yazılır?"
+  },
+  "hsk1-131": {
+    "english": "hangi",
+    "translation": "Hangi ülkedensin?"
+  },
+  "hsk1-132": {
+    "english": "hangisi",
+    "translation": "Hangisini seviyorsun?"
+  },
+  "hsk1-133": {
+    "english": "nerede",
+    "translation": "Nerede yaşıyorsun?"
+  },
+  "hsk1-134": {
+    "english": "nerede (konuşma dilinde)",
+    "translation": "Nereye gidiyorsun?"
+  },
+  "hsk1-135": {
+    "english": "hangileri",
+    "translation": "Hangi kitaplar senin?"
+  },
+  "hsk1-136": {
+    "english": "o / şu",
+    "translation": "O benim babam."
+  },
+  "hsk1-137": {
+    "english": "şurada / o taraf",
+    "translation": "Okul şurada."
+  },
+  "hsk1-138": {
+    "english": "şu / o",
+    "translation": "Şu bardağı istiyorum."
+  },
+  "hsk1-139": {
+    "english": "orada",
+    "translation": "Arkadaşım orada."
+  },
+  "hsk1-140": {
+    "english": "orada (konuşma dilinde)",
+    "translation": "Lütfen oraya otur."
+  },
+  "hsk1-141": {
+    "english": "onlar / şunlar",
+    "translation": "Şu öğrenciler benim arkadaşlarım."
+  },
+  "hsk1-142": {
+    "english": "erkek",
+    "translation": "Bu bir erkek öğretmen."
+  },
+  "hsk1-143": {
+    "english": "erkek arkadaş / sevgili",
+    "translation": "Onun erkek arkadaşı doktor."
+  },
+  "hsk1-144": {
+    "english": "soru veya devam edatı",
+    "translation": "Ben iyiyim; ya sen?"
+  },
+  "hsk1-145": {
+    "english": "yapabilmek / gücü yetmek",
+    "translation": "Yarın gelebilir misin?"
+  },
+  "hsk1-148": {
+    "english": "siz",
+    "translation": "Hepiniz üniversite öğrencisi misiniz?"
+  },
+  "hsk1-149": {
+    "english": "yıl",
+    "translation": "Bir yılda on iki ay vardır."
+  },
+  "hsk1-150": {
+    "english": "siz (saygılı hitap)",
+    "translation": "Merhaba, lütfen oturun."
+  },
+  "hsk1-151": {
+    "english": "süt",
+    "translation": "Her gün süt içerim."
+  },
+  "hsk1-152": {
+    "english": "kadın",
+    "translation": "Bu bir kadın doktor."
+  },
+  "hsk1-153": {
+    "english": "kız evlat",
+    "translation": "Kızım bu yıl altı yaşında."
+  },
+  "hsk1-154": {
+    "english": "kız arkadaş / sevgili",
+    "translation": "Onun kız arkadaşı bir üniversitede çalışıyor."
+  },
+  "hsk1-155": {
+    "english": "hanım",
+    "translation": "Bu hanım benim öğretmenim."
+  },
+  "hsk1-156": {
+    "english": "arkadaş",
+    "translation": "O benim iyi bir arkadaşım."
+  },
+  "hsk1-157": {
+    "english": "ucuz",
+    "translation": "Buradaki meyveler ucuz."
+  },
+  "hsk1-158": {
+    "english": "güzel",
+    "translation": "Giysilerin güzel."
+  },
+  "hsk1-159": {
+    "english": "elma",
+    "translation": "Elma yemeyi seviyorum."
+  },
+  "hsk1-160": {
+    "english": "yedi",
+    "translation": "Saat yedide kahvaltı yaparız."
+  },
+  "hsk1-161": {
+    "english": "kalkmak",
+    "translation": "Her gün saat kaçta kalkarsın?"
+  },
+  "hsk1-162": {
+    "english": "bin",
+    "translation": "Bu bilgisayar üç bin yuan."
+  },
+  "hsk1-163": {
+    "english": "önce / önünde",
+    "translation": "Lütfen yemekten önce ellerini yıka."
+  },
+  "hsk1-164": {
+    "english": "para",
+    "translation": "Hiç param yok."
+  },
+  "hsk1-165": {
+    "english": "lütfen / davet etmek",
+    "translation": "Lütfen biraz çay için."
+  },
+  "hsk1-166": {
+    "english": "affedersiniz / sorabilir miyim",
+    "translation": "Affedersiniz, hastane nerede?"
+  },
+  "hsk1-167": {
+    "english": "gitmek",
+    "translation": "Nereye gitmek istersin?"
+  },
+  "hsk1-168": {
+    "english": "geçen yıl",
+    "translation": "Geçen yıl Çin'de okudum."
+  },
+  "hsk1-169": {
+    "english": "sıcak",
+    "translation": "Bugün hava sıcak."
+  },
+  "hsk1-170": {
+    "english": "kişi / insan",
+    "translation": "Burada çok insan var."
+  },
+  "hsk1-171": {
+    "english": "tanımak / tanışmak",
+    "translation": "Bu öğretmeni tanıyorum."
+  },
+  "hsk1-172": {
+    "english": "gün / tarih (resmî)",
+    "translation": "Bugün bir ekim."
+  },
+  "hsk1-173": {
+    "english": "üç",
+    "translation": "Üç kitabım var."
+  },
+  "hsk1-174": {
+    "english": "dükkan / mağaza",
+    "translation": "Dükkan hastanenin önünde."
+  },
+  "hsk1-175": {
+    "english": "üst / üstünde",
+    "translation": "Kitap masanın üstünde."
+  },
+  "hsk1-176": {
+    "english": "işe gitmek",
+    "translation": "Babam işe sekizde başlıyor."
+  },
+  "hsk1-177": {
+    "english": "derse girmek",
+    "translation": "Sabahları dersimiz var."
+  },
+  "hsk1-178": {
+    "english": "sabah / öğleden önce",
+    "translation": "Sabah okula giderim."
+  },
+  "hsk1-179": {
+    "english": "okula gitmek",
+    "translation": "Erkek kardeşim her gün okula arabayla gider."
+  },
+  "hsk1-180": {
+    "english": "az",
+    "translation": "Bugün az insan var."
+  },
+  "hsk1-181": {
+    "english": "kim",
+    "translation": "O kişi kim?"
+  },
+  "hsk1-182": {
+    "english": "ne",
+    "translation": "Ne yemek istersin?"
+  },
+  "hsk1-183": {
+    "english": "hastalanmak / hasta olmak",
+    "translation": "Hastayım ve dinlenmek istiyorum."
+  },
+  "hsk1-184": {
+    "english": "on",
+    "translation": "Burada on öğrenci var."
+  },
+  "hsk1-185": {
+    "english": "zaman / an",
+    "translation": "Ne zaman geliyorsun?"
+  },
+  "hsk1-187": {
+    "english": "iş / mesele",
+    "translation": "Sana sormak istediğim bir şey var."
+  },
+  "hsk1-189": {
+    "english": "cep telefonu",
+    "translation": "Telefonum nerede?"
+  },
+  "hsk1-190": {
+    "english": "kitap",
+    "translation": "Bu kitap benim."
+  },
+  "hsk1-191": {
+    "english": "kitapçı",
+    "translation": "Kitap almak için kitapçıya gidiyorum."
+  },
+  "hsk1-193": {
+    "english": "meyve",
+    "translation": "Hangi meyveyi yemeyi seversin?"
+  },
+  "hsk1-194": {
+    "english": "uyumak",
+    "translation": "Çocuk çoktan uyudu."
+  },
+  "hsk1-195": {
+    "english": "uyumak / yatmak",
+    "translation": "Her gün saat onda yatarım."
+  },
+  "hsk1-196": {
+    "english": "söylemek / konuşmak",
+    "translation": "Lütfen bir daha söyle."
+  },
+  "hsk1-197": {
+    "english": "konuşmak",
+    "translation": "Öğretmen konuşuyor."
+  },
+  "hsk1-198": {
+    "english": "dört",
+    "translation": "Ailemiz dört kişi."
+  },
+  "hsk1-199": {
+    "english": "yaş",
+    "translation": "Bu yıl kaç yaşındasın?"
+  },
+  "hsk1-200": {
+    "english": "o (erkek)",
+    "translation": "O benim arkadaşım."
+  },
+  "hsk1-201": {
+    "english": "o (hayvan veya nesne)",
+    "translation": "O bir kedi."
+  },
+  "hsk1-202": {
+    "english": "o (kadın)",
+    "translation": "O bizim öğretmenimiz."
+  },
+  "hsk1-203": {
+    "english": "onlar (erkek veya karma)",
+    "translation": "Onlar okulda ders çalışıyor."
+  },
+  "hsk1-204": {
+    "english": "onlar (hayvan veya nesne)",
+    "translation": "Onlar benim kedilerim."
+  },
+  "hsk1-205": {
+    "english": "onlar (kadın)",
+    "translation": "Onların hepsi öğrenci."
+  },
+  "hsk1-206": {
+    "english": "çok / aşırı",
+    "translation": "Bugün hava çok sıcak!"
+  },
+  "hsk1-207": {
+    "english": "gün",
+    "translation": "Burada üç gün kalıyorum."
+  },
+  "hsk1-208": {
+    "english": "hava",
+    "translation": "Bugün hava nasıl?"
+  },
+  "hsk1-209": {
+    "english": "dinlemek",
+    "translation": "Çince şarkılar dinlemeyi seviyorum."
+  },
+  "hsk1-210": {
+    "english": "duymak",
+    "translation": "Bunu duydun mu?"
+  },
+  "hsk1-211": {
+    "english": "sınıf arkadaşı",
+    "translation": "O benim sınıf arkadaşım."
+  },
+  "hsk1-212": {
+    "english": "dış / dışarı",
+    "translation": "Seni okulun dışında bekliyorum."
+  },
+  "hsk1-213": {
+    "english": "dışarı",
+    "translation": "Dışarısı soğuk."
+  },
+  "hsk1-214": {
+    "english": "oynamak / eğlenmek",
+    "translation": "Çocuklar evde oynuyor."
+  },
+  "hsk1-215": {
+    "english": "geç",
+    "translation": "Artık çok geç."
+  },
+  "hsk1-216": {
+    "english": "akşam yemeği",
+    "translation": "Akşam yemeğini altıda yeriz."
+  },
+  "hsk1-217": {
+    "english": "akşam / gece",
+    "translation": "Akşam evde ders çalışırım."
+  },
+  "hsk1-218": {
+    "english": "alo",
+    "translation": "Alo, kiminle görüşüyorum?"
+  },
+  "hsk1-219": {
+    "english": "sormak",
+    "translation": "Bir soru sormak istiyorum."
+  },
+  "hsk1-220": {
+    "english": "soru / sorun",
+    "translation": "Bu soru kolay."
+  },
+  "hsk1-222": {
+    "english": "biz",
+    "translation": "Birlikte ders çalışalım."
+  },
+  "hsk1-223": {
+    "english": "beş",
+    "translation": "Beş elmam var."
+  },
+  "hsk1-224": {
+    "english": "öğle yemeği",
+    "translation": "Öğlen ne yiyeceksin?"
+  },
+  "hsk1-225": {
+    "english": "sevmek / hoşlanmak",
+    "translation": "Çince öğrenmeyi seviyorum."
+  },
+  "hsk1-226": {
+    "english": "alt / altında",
+    "translation": "Kedi masanın altında."
+  },
+  "hsk1-227": {
+    "english": "yağmur yağmak",
+    "translation": "Bugün yağmur yağıyor."
+  },
+  "hsk1-228": {
+    "english": "işten çıkmak",
+    "translation": "Annem işten altıda çıkıyor."
+  },
+  "hsk1-229": {
+    "english": "dersin bitmesi",
+    "translation": "Dersimiz beşte bitiyor."
+  },
+  "hsk1-230": {
+    "english": "öğleden sonra",
+    "translation": "Bu öğleden sonra kitapçıya gidiyorum."
+  },
+  "hsk1-231": {
+    "english": "bey / beyefendi",
+    "translation": "Bay Wang benim öğretmenim."
+  },
+  "hsk1-233": {
+    "english": "istemek / düşünmek / özlemek",
+    "translation": "Biraz çay istiyorum."
+  },
+  "hsk1-234": {
+    "english": "küçük / az",
+    "translation": "Odam küçük."
+  },
+  "hsk1-235": {
+    "english": "çocuk / küçük arkadaş",
+    "translation": "Küçüğüm, adın ne?"
+  },
+  "hsk1-236": {
+    "english": "saat (süre)",
+    "translation": "Her gün bir saat ders çalışırım."
+  },
+  "hsk1-237": {
+    "english": "ilkokul",
+    "translation": "İlkokul evimin yanında."
+  },
+  "hsk1-238": {
+    "english": "ilkokul öğrencisi",
+    "translation": "Kız kardeşim ilkokul öğrencisi."
+  },
+  "hsk1-239": {
+    "english": "biraz / birkaç",
+    "translation": "Biraz meyve aldım."
+  },
+  "hsk1-240": {
+    "english": "yazmak",
+    "translation": "Lütfen adını yaz."
+  },
+  "hsk1-242": {
+    "english": "yeni",
+    "translation": "Bu benim yeni telefonum."
+  },
+  "hsk1-243": {
+    "english": "hafta",
+    "translation": "Bir haftada yedi gün vardır."
+  },
+  "hsk1-244": {
+    "english": "pazar",
+    "translation": "Pazar günü evde dinlenirim."
+  },
+  "hsk1-245": {
+    "english": "pazar (konuşma dilinde)",
+    "translation": "Pazar günü dışarı çıkıp eğlenelim."
+  },
+  "hsk1-246": {
+    "english": "dinlenmek / mola vermek",
+    "translation": "Kısa bir mola verelim."
+  },
+  "hsk1-247": {
+    "english": "öğrenmek / okumak",
+    "translation": "Nerede Çince öğreniyorsun?"
+  },
+  "hsk1-249": {
+    "english": "ders çalışmak / öğrenmek",
+    "translation": "Her gün Çince çalışırım."
+  },
+  "hsk1-250": {
+    "english": "okul",
+    "translation": "Okul bu tarafta."
+  },
+  "hsk1-251": {
+    "english": "kar",
+    "translation": "Dışarıda çok kar var."
+  },
+  "hsk1-253": {
+    "english": "de / da / ayrıca",
+    "translation": "Ben de öğrenciyim."
+  },
+  "hsk1-254": {
+    "english": "bir",
+    "translation": "Bir sorum var."
+  },
+  "hsk1-255": {
+    "english": "giysi / kıyafet",
+    "translation": "Giysilerin güzel görünüyor."
+  },
+  "hsk1-256": {
+    "english": "doktor",
+    "translation": "Bir doktora görünmek istiyorum."
+  },
+  "hsk1-257": {
+    "english": "hastane",
+    "translation": "Hastane nerede?"
+  },
+  "hsk1-258": {
+    "english": "yarısı",
+    "translation": "Bu elmanın yarısını yiyeceğim."
+  },
+  "hsk1-259": {
+    "english": "kısaca / biraz (fiilden sonra)",
+    "translation": "Lütfen bu karaktere bir göz at."
+  },
+  "hsk1-260": {
+    "english": "sandalye",
+    "translation": "Burada bir sandalye var."
+  },
+  "hsk1-261": {
+    "english": "biraz / azıcık",
+    "translation": "Biraz Çince konuşabiliyorum."
+  },
+  "hsk1-262": {
+    "english": "biraz / birkaç",
+    "translation": "Biraz meyve aldım."
+  },
+  "hsk1-264": {
+    "english": "bazıları",
+    "translation": "Bazı öğrenciler şarkı söylemeyi sever."
+  },
+  "hsk1-265": {
+    "english": "biraz / az da olsa",
+    "translation": "Bugün hava biraz soğuk."
+  },
+  "hsk1-266": {
+    "english": "bazı / biraz",
+    "translation": "Bazı meyveler pahalı."
+  },
+  "hsk1-267": {
+    "english": "yağmur",
+    "translation": "Bugün şiddetli yağmur yağıyor."
+  },
+  "hsk1-268": {
+    "english": "yuan (para birimi)",
+    "translation": "Bu kitap yirmi yuan."
+  },
+  "hsk1-269": {
+    "english": "ay",
+    "translation": "Bir yılda on iki ay vardır."
+  },
+  "hsk1-270": {
+    "english": "tekrar / sonra",
+    "translation": "Lütfen tekrar söyle."
+  },
+  "hsk1-271": {
+    "english": "-de / -da / bulunmak",
+    "translation": "Evdeyim."
+  },
+  "hsk1-273": {
+    "english": "erken",
+    "translation": "Bugün çok erken geldin."
+  },
+  "hsk1-274": {
+    "english": "kahvaltı",
+    "translation": "Kahvaltı yaptın mı?"
+  },
+  "hsk1-275": {
+    "english": "sabah erken",
+    "translation": "Sabah yedide kalkarım."
+  },
+  "hsk1-276": {
+    "english": "nasıl",
+    "translation": "Bu karakter nasıl okunur?"
+  },
+  "hsk1-277": {
+    "english": "nasıl / ne gibi",
+    "translation": "Bu kitap hakkında ne düşünüyorsun?"
+  },
+  "hsk1-278": {
+    "english": "aramak / bulmak",
+    "translation": "Telefonumu arıyorum."
+  },
+  "hsk1-279": {
+    "english": "bu",
+    "translation": "Bu benim kitabım."
+  },
+  "hsk1-280": {
+    "english": "bu taraf / bu yön",
+    "translation": "Lütfen bu tarafa gel."
+  },
+  "hsk1-282": {
+    "english": "burada",
+    "translation": "Burada yaşıyorum."
+  },
+  "hsk1-283": {
+    "english": "burada (konuşma dilinde)",
+    "translation": "Lütfen buraya otur."
+  },
+  "hsk1-284": {
+    "english": "bunlar",
+    "translation": "Bu kitapların hepsi benim."
+  },
+  "hsk1-285": {
+    "english": "gerçekten",
+    "translation": "Bu yemek gerçekten lezzetli!"
+  },
+  "hsk1-286": {
+    "english": "şu anda / yapmakta olmak",
+    "translation": "Şu anda ders çalışıyorum."
+  },
+  "hsk1-287": {
+    "english": "birçok hayvan için ölçü sözcüğü",
+    "translation": "Ailemin bir köpeği var."
+  },
+  "hsk1-288": {
+    "english": "bilmek",
+    "translation": "Onun nerede olduğunu bilmiyorum."
+  },
+  "hsk1-290": {
+    "english": "Çince (özellikle yazılı dil)",
+    "translation": "Çince öğreniyorum."
+  },
+  "hsk1-291": {
+    "english": "öğle",
+    "translation": "Öğlen birlikte yemek yiyelim."
+  },
+  "hsk1-292": {
+    "english": "ortaöğretim okulu",
+    "translation": "Ağabeyim ortaöğretime devam ediyor."
+  },
+  "hsk1-293": {
+    "english": "ortaöğretim öğrencisi",
+    "translation": "O bir ortaöğretim öğrencisi."
+  },
+  "hsk1-294": {
+    "english": "yaşamak / kalmak",
+    "translation": "Nerede yaşıyorsun?"
+  },
+  "hsk1-295": {
+    "english": "masa",
+    "translation": "Kitap masanın üstünde."
+  },
+  "hsk1-296": {
+    "english": "karakter / yazılı sözcük",
+    "translation": "Bu karakter nasıl yazılır?"
+  },
+  "hsk1-298": {
+    "english": "oturmak / taşıta binmek",
+    "translation": "Lütfen bu sandalyeye otur."
+  },
+  "hsk1-299": {
+    "english": "yapmak",
+    "translation": "Ne yapıyorsun?"
+  },
+  "hsk1-300": {
+    "english": "yemek yapmak",
+    "translation": "Babam yemek yapabilir."
+  },
+  "bonus-01": {
+    "english": "affedersiniz / özür dilerim",
+    "translation": "Affedersiniz, lütfen tekrar söyleyin."
+  },
+  "bonus-02": {
+    "english": "tuvalet",
+    "translation": "Affedersiniz, tuvalet nerede?"
+  },
+  "bonus-03": {
+    "english": "metro",
+    "translation": "Okula metroyla giderim."
+  },
+  "bonus-04": {
+    "english": "kahve",
+    "translation": "Bir fincan kahve istiyorum."
+  },
+  "bonus-05": {
+    "english": "teşekkür ederim (saygılı)",
+    "translation": "Teşekkür ederim öğretmenim."
+  },
+  "bonus-06": {
+    "english": "yardım etmek / yardım",
+    "translation": "Yardımınız için teşekkür ederim."
+  },
+  "bonus-07": {
+    "english": "yavaş",
+    "translation": "Lütfen biraz daha yavaş konuş."
+  },
+  "bonus-08": {
+    "english": "hızlı",
+    "translation": "Bu araba hızlı."
+  },
+  "bonus-09": {
+    "english": "duyduğunu anlamak",
+    "translation": "Söylenenleri anladım."
+  },
+  "bonus-10": {
+    "english": "anlamak / açık",
+    "translation": "Ne demek istediğini anlıyorum."
+  },
+  "bonus-11": {
+    "english": "sol taraf",
+    "translation": "Kitapçı sol tarafta."
+  },
+  "bonus-12": {
+    "english": "sağ taraf",
+    "translation": "Hastane sağ tarafta."
+  },
+  "hsk2-301": {
+    "english": "ünlem edatı (ah / aa)",
+    "translation": "Aa, senmişsin!"
+  },
+  "hsk2-302": {
+    "english": "hobi / ilgi alanı",
+    "translation": "Hobim kitap okumak."
+  },
+  "hsk2-303": {
+    "english": "beyaz",
+    "translation": "Beyaz giysileri severim."
+  },
+  "hsk2-304": {
+    "english": "sınıf / grup",
+    "translation": "Sınıfımızda yirmi öğrenci var."
+  },
+  "hsk2-305": {
+    "english": "yardım etmek",
+    "translation": "Lütfen kitapları taşımama yardım et."
+  },
+  "hsk2-306": {
+    "english": "yardım etmek / iyilik yapmak",
+    "translation": "Yardım edebilir misin?"
+  },
+  "hsk2-307": {
+    "english": "çanta / paket",
+    "translation": "Çantam sandalyenin üstünde."
+  },
+  "hsk2-308": {
+    "english": "defter",
+    "translation": "Yeni bir defter aldım."
+  },
+  "hsk2-309": {
+    "english": "-den / -dan daha",
+    "translation": "Ağabeyim benden uzun."
+  },
+  "hsk2-310": {
+    "english": "kalem",
+    "translation": "Bu kalem benim."
+  },
+  "hsk2-311": {
+    "english": "yapma (yasaklama)",
+    "translation": "Konuşmayın; öğretmen geldi."
+  },
+  "hsk2-312": {
+    "english": "fena değil / oldukça iyi",
+    "translation": "Bu restoran oldukça iyi."
+  },
+  "hsk2-313": {
+    "english": "affedersiniz / özür dilerim",
+    "translation": "Özür dilerim, lütfen bir daha söyleyin."
+  },
+  "hsk2-314": {
+    "english": "uzun",
+    "translation": "Bu yol uzun."
+  },
+  "hsk2-315": {
+    "english": "istasyon / durak",
+    "translation": "Durak buraya yakın."
+  },
+  "hsk2-316": {
+    "english": "çıkmak",
+    "translation": "Lütfen bu kapıdan çıkın."
+  },
+  "hsk2-317": {
+    "english": "yurt dışına çıkmak",
+    "translation": "Gelecek yıl yurt dışında okumak istiyorum."
+  },
+  "hsk2-318": {
+    "english": "dışarı gelmek",
+    "translation": "Lütfen bir anlığına dışarı gel."
+  },
+  "hsk2-319": {
+    "english": "evden çıkmak",
+    "translation": "Her gün sekizde evden çıkarım."
+  },
+  "hsk2-320": {
+    "english": "dışarı gitmek",
+    "translation": "Dışarı çıkıp yürüyüş yapalım."
+  },
+  "hsk2-321": {
+    "english": "yatak",
+    "translation": "Yeni bir yatak almak istiyorum."
+  },
+  "hsk2-322": {
+    "english": "sözcük / ifade",
+    "translation": "Bu sözcük ne demek?"
+  },
+  "hsk2-323": {
+    "english": "kez / defa (ölçü sözcüğü)",
+    "translation": "Çin'e üç kez gittim."
+  },
+  "hsk2-324": {
+    "english": "-den / -dan",
+    "translation": "Evden okula yürürüm."
+  },
+  "hsk2-325": {
+    "english": "çocukluktan beri",
+    "translation": "Çocukluğumdan beri resim yapmayı severim."
+  },
+  "hsk2-326": {
+    "english": "yanlış / hata",
+    "translation": "Bu karakter yanlış yazılmış."
+  },
+  "hsk2-327": {
+    "english": "vurmak",
+    "translation": "Yavru köpeğe vurma."
+  },
+  "hsk2-328": {
+    "english": "taksiye binmek",
+    "translation": "Havaalanına taksiyle gidelim."
+  },
+  "hsk2-329": {
+    "english": "açmak",
+    "translation": "Lütfen bu kitabı aç."
+  },
+  "hsk2-330": {
+    "english": "ama / ancak",
+    "translation": "Gitmek istiyorum ama vaktim yok."
+  },
+  "hsk2-331": {
+    "english": "ama / ancak",
+    "translation": "Bu giysiler güzel ama çok pahalı."
+  },
+  "hsk2-332": {
+    "english": "tümleç edatı (de)",
+    "translation": "O çok iyi konuşuyor."
+  },
+  "hsk2-333": {
+    "english": "zarf oluşturan edat (de)",
+    "translation": "O mutlulukla gülümsedi."
+  },
+  "hsk2-334": {
+    "english": "beklemek",
+    "translation": "Seni girişte bekliyorum."
+  },
+  "hsk2-335": {
+    "english": "metro",
+    "translation": "İşe metroyla giderim."
+  },
+  "hsk2-336": {
+    "english": "sipariş vermek (yemek veya içecek)",
+    "translation": "İki yemek sipariş edelim."
+  },
+  "hsk2-337": {
+    "english": "anlamak",
+    "translation": "Bu sözcüğü anlamıyorum."
+  },
+  "hsk2-338": {
+    "english": "hareket etmek / yerini değiştirmek",
+    "translation": "Lütfen bu masayı oynatmayın."
+  },
+  "hsk2-339": {
+    "english": "restoran",
+    "translation": "Restoran okulun hemen yanında."
+  },
+  "hsk2-340": {
+    "english": "uçmak",
+    "translation": "Kuşlar gökyüzünde uçuyor."
+  },
+  "hsk2-341": {
+    "english": "uzun / yüksek",
+    "translation": "Bu bina yüksek."
+  },
+  "hsk2-342": {
+    "english": "lise",
+    "translation": "Ablam liseye gidiyor."
+  },
+  "hsk2-343": {
+    "english": "söylemek / anlatmak",
+    "translation": "Lütfen bana adını söyle."
+  },
+  "hsk2-344": {
+    "english": "boy",
+    "translation": "Ağabeyim uzun boylu."
+  },
+  "hsk2-345": {
+    "english": "ile / ve / takip etmek",
+    "translation": "Arkadaşımla gidiyorum."
+  },
+  "hsk2-346": {
+    "english": "otobüs",
+    "translation": "Her gün okula otobüsle giderim."
+  },
+  "hsk2-347": {
+    "english": "geçmek / karşıya geçmek / zaman geçirmek",
+    "translation": "Bu yoldan karşıya geçelim."
+  },
+  "hsk2-348": {
+    "english": "buraya gelmek / yaklaşmak",
+    "translation": "Lütfen buraya gelip otur."
+  },
+  "hsk2-349": {
+    "english": "yeni yılı kutlamak",
+    "translation": "Yeni yılı kutlamak için eve gidiyoruz."
+  },
+  "hsk2-350": {
+    "english": "oraya gitmek",
+    "translation": "Sen önce oraya git; ben birazdan gelirim."
+  },
+  "hsk2-351": {
+    "english": "deneyim bildiren edat (guo)",
+    "translation": "Çin'e gittim."
+  },
+  "hsk2-352": {
+    "english": "yoksa / hâlâ",
+    "translation": "Çay mı kahve mi istersin?"
+  },
+  "hsk2-353": {
+    "english": "siyah",
+    "translation": "Okul çantam siyah."
+  },
+  "hsk2-354": {
+    "english": "siyah çay",
+    "translation": "Bir fincan siyah çay istiyorum."
+  },
+  "hsk2-355": {
+    "english": "kırmızı",
+    "translation": "O kırmızıyı sever."
+  },
+  "hsk2-356": {
+    "english": "arka / arkada",
+    "translation": "Durak okulun arkasında."
+  },
+  "hsk2-357": {
+    "english": "harcamak (para veya zaman)",
+    "translation": "Kitaplara elli yuan harcadım."
+  },
+  "hsk2-358": {
+    "english": "çiçek",
+    "translation": "Masanın üstünde bir çiçek var."
+  },
+  "hsk2-359": {
+    "english": "resim çizmek / boyamak",
+    "translation": "Resim çizmeyi seviyorum."
+  },
+  "hsk2-360": {
+    "english": "kötü / bozuk",
+    "translation": "Telefonum bozuk."
+  },
+  "hsk2-361": {
+    "english": "geri gelmek",
+    "translation": "Ne zaman geri geliyorsun?"
+  },
+  "hsk2-362": {
+    "english": "geri gitmek",
+    "translation": "Şimdi geri gitmem gerekiyor."
+  },
+  "hsk2-363": {
+    "english": "havaalanı",
+    "translation": "Havaalanı buradan uzak."
+  },
+  "hsk2-364": {
+    "english": "uçak bileti",
+    "translation": "Uçak biletini çoktan aldım."
+  },
+  "hsk2-365": {
+    "english": "hatırlamak",
+    "translation": "Onun adını hatırlıyor musun?"
+  },
+  "hsk2-366": {
+    "english": "odalar için ölçü sözcüğü",
+    "translation": "İki oda istiyoruz."
+  },
+  "hsk2-367": {
+    "english": "öğretmek (jiāo)",
+    "translation": "Öğretmen bize Çince karakter yazmayı öğretiyor."
+  },
+  "hsk2-368": {
+    "english": "derslik / sınıf",
+    "translation": "Sınıfımız ikinci katta."
+  },
+  "hsk2-369": {
+    "english": "tanıtmak / tanıştırma",
+    "translation": "Arkadaşımı tanıştırayım."
+  },
+  "hsk2-370": {
+    "english": "girmek",
+    "translation": "Lütfen bu kapıdan girin."
+  },
+  "hsk2-371": {
+    "english": "yakın",
+    "translation": "Evim okula yakın."
+  },
+  "hsk2-372": {
+    "english": "içeri gelmek",
+    "translation": "Lütfen içeri gelip oturun."
+  },
+  "hsk2-373": {
+    "english": "içeri gitmek",
+    "translation": "İçeri girip bir bakalım."
+  },
+  "hsk2-374": {
+    "english": "sık sık",
+    "translation": "Burada sık sık yemek yerim."
+  },
+  "hsk2-375": {
+    "english": "otel",
+    "translation": "Bu otelde kalıyoruz."
+  },
+  "hsk2-376": {
+    "english": "hemen / o zaman / tam",
+    "translation": "Hemen gidiyorum."
+  },
+  "hsk2-377": {
+    "english": "kahve",
+    "translation": "Bu kahvenin tadı güzel."
+  },
+  "hsk2-378": {
+    "english": "başlamak",
+    "translation": "Sınav dokuzda başlıyor."
+  },
+  "hsk2-379": {
+    "english": "okul döneminin başlaması",
+    "translation": "Yeni dönemimiz gelecek hafta başlıyor."
+  },
+  "hsk2-380": {
+    "english": "sınava girmek / sınav yapmak",
+    "translation": "Yarın Çince sınavım var."
+  },
+  "hsk2-381": {
+    "english": "sınav / sınava girmek",
+    "translation": "Bu sınav zor değil."
+  },
+  "hsk2-382": {
+    "english": "mümkün / belki",
+    "translation": "Yarın yağmur yağabilir."
+  },
+  "hsk2-383": {
+    "english": "pantolon",
+    "translation": "Bu pantolon çok uzun."
+  },
+  "hsk2-384": {
+    "english": "hızlı / çabuk / yakında",
+    "translation": "O çok hızlı konuşuyor."
+  },
+  "hsk2-385": {
+    "english": "mutlu / neşeli",
+    "translation": "Doğum günün kutlu olsun!"
+  },
+  "hsk2-386": {
+    "english": "üzere olmak / yakında",
+    "translation": "Dersimiz bitmek üzere."
+  },
+  "hsk2-387": {
+    "english": "basketbol",
+    "translation": "O basketbol oynamayı seviyor."
+  },
+  "hsk2-388": {
+    "english": "yorgun",
+    "translation": "Bugün biraz yorgunum."
+  },
+  "hsk2-389": {
+    "english": "-den / -dan uzakta",
+    "translation": "Evim okuldan uzak değil."
+  },
+  "hsk2-390": {
+    "english": "iç / içerisi",
+    "translation": "Çantanın içinde bir kitap var."
+  },
+  "hsk2-391": {
+    "english": "bina / kat",
+    "translation": "Bu binada oturuyorum."
+  },
+  "hsk2-392": {
+    "english": "yol",
+    "translation": "Bu yoldan nasıl giderim?"
+  },
+  "hsk2-393": {
+    "english": "yolda",
+    "translation": "Okula gidiyorum, yoldayım."
+  },
+  "hsk2-394": {
+    "english": "seyahat etmek / turizm",
+    "translation": "Çin'e seyahat etmek istiyorum."
+  },
+  "hsk2-395": {
+    "english": "yeşil çay",
+    "translation": "Yeşil çay içmeyi sever misin?"
+  },
+  "hsk2-396": {
+    "english": "yeşil",
+    "translation": "Bu giysi yeşil."
+  },
+  "hsk2-397": {
+    "english": "yavaş",
+    "translation": "Lütfen biraz daha yavaş konuş."
+  },
+  "hsk2-398": {
+    "english": "sıkıcı / ilginç olmayan",
+    "translation": "Bu film sıkıcı."
+  },
+  "hsk2-399": {
+    "english": "her / her bir",
+    "translation": "Her gün ders çalışırım."
+  },
+  "hsk2-400": {
+    "english": "kapı",
+    "translation": "Lütfen kapıyı aç."
+  },
+  "hsk2-401": {
+    "english": "kapı önü / giriş",
+    "translation": "Seni okulun girişinde bekliyorum."
+  },
+  "hsk2-402": {
+    "english": "giriş bileti",
+    "translation": "Bu giriş bileti ne kadar?"
+  },
+  "hsk2-403": {
+    "english": "erişte / un",
+    "translation": "Bugün erişte istiyorum."
+  },
+  "hsk2-404": {
+    "english": "kişiler için ölçü sözcüğü",
+    "translation": "Sınıfımızda üç yeni arkadaş var."
+  },
+  "hsk2-405": {
+    "english": "almak / tutmak / getirmek",
+    "translation": "Lütfen bu çantayı taşımama yardım et."
+  },
+  "hsk2-406": {
+    "english": "bu kadar / o kadar",
+    "translation": "O kadar hızlı konuşma."
+  },
+  "hsk2-407": {
+    "english": "öyle / o şekilde",
+    "translation": "Öyle yapmak olur mu?"
+  },
+  "hsk2-408": {
+    "english": "sütlü çay",
+    "translation": "Bir fincan sütlü çay istiyorum."
+  },
+  "hsk2-409": {
+    "english": "babaanne",
+    "translation": "Babaannem burada yaşıyor."
+  },
+  "hsk2-410": {
+    "english": "erkek çocuk",
+    "translation": "O erkek çocuk benim kardeşim."
+  },
+  "hsk2-411": {
+    "english": "kuş",
+    "translation": "Ağaçta bir kuş var."
+  },
+  "hsk2-412": {
+    "english": "kız çocuk",
+    "translation": "O kız benim sınıf arkadaşım."
+  },
+  "hsk2-413": {
+    "english": "yanında",
+    "translation": "Kitapçı süpermarketin yanında."
+  },
+  "hsk2-414": {
+    "english": "koşmak",
+    "translation": "Koşma; yavaş yürü."
+  },
+  "hsk2-415": {
+    "english": "koşmak / koşuya çıkmak",
+    "translation": "Her sabah koşuya çıkarım."
+  },
+  "hsk2-416": {
+    "english": "bilet",
+    "translation": "Bilet aldın mı?"
+  },
+  "hsk2-417": {
+    "english": "eş (kadın)",
+    "translation": "Eşim öğretmen."
+  },
+  "hsk2-418": {
+    "english": "kalkmak / yükselmek",
+    "translation": "Lütfen ayağa kalk."
+  },
+  "hsk2-419": {
+    "english": "ön / ilerisi",
+    "translation": "Hastane okulun önünde."
+  },
+  "hsk2-420": {
+    "english": "açık / güneşli",
+    "translation": "Yarın hava güneşli olacak."
+  },
+  "hsk2-421": {
+    "english": "top",
+    "translation": "Bu top benim."
+  },
+  "hsk2-422": {
+    "english": "izin vermek / birinden istemek",
+    "translation": "Öğretmen bu sözcüğü okumamı istedi."
+  },
+  "hsk2-423": {
+    "english": "et",
+    "translation": "Bugün et yemek istemiyorum."
+  },
+  "hsk2-424": {
+    "english": "alışveriş merkezi",
+    "translation": "Giysi almak için alışveriş merkezine gidelim."
+  },
+  "hsk2-425": {
+    "english": "yukarı gelmek",
+    "translation": "Lütfen yukarı gelip otur."
+  },
+  "hsk2-426": {
+    "english": "üst / yukarıda",
+    "translation": "Kitap masanın üstünde."
+  },
+  "hsk2-427": {
+    "english": "yukarı gitmek",
+    "translation": "Yukarı çıkıp bir bakalım."
+  },
+  "hsk2-428": {
+    "english": "internete girmek",
+    "translation": "Telefonumdan internete giriyorum."
+  },
+  "hsk2-429": {
+    "english": "vücut / sağlık",
+    "translation": "Dedemin sağlığı iyi."
+  },
+  "hsk2-430": {
+    "english": "doğum günü",
+    "translation": "Bugün benim doğum günüm."
+  },
+  "hsk2-431": {
+    "english": "zaman / -diğinde",
+    "translation": "Bir şey olursa lütfen beni ara."
+  },
+  "hsk2-432": {
+    "english": "iş / mesele / şey",
+    "translation": "Sana söylemek istediğim bir şey var."
+  },
+  "hsk2-433": {
+    "english": "el",
+    "translation": "Yemekten önce ellerini yıkamalısın."
+  },
+  "hsk2-434": {
+    "english": "kol saati",
+    "translation": "Bu benim yeni saatim."
+  },
+  "hsk2-435": {
+    "english": "okul çantası",
+    "translation": "Okul çantamda üç kitap var."
+  },
+  "hsk2-436": {
+    "english": "rahat / iyi",
+    "translation": "Bugün kendimi iyi hissetmiyorum."
+  },
+  "hsk2-437": {
+    "english": "hediye etmek / teslim etmek / uğurlamak",
+    "translation": "Sana bir kitap hediye etmek istiyorum."
+  },
+  "hsk2-438": {
+    "english": "-rağmen / her ne kadar",
+    "translation": "Yağmur yağmasına rağmen yine de gittik."
+  },
+  "hsk2-439": {
+    "english": "bu yüzden / dolayısıyla",
+    "translation": "Bugün yağmur yağdı, bu yüzden dışarı çıkmadım."
+  },
+  "hsk2-440": {
+    "english": "ağrımak / acımak",
+    "translation": "Başım biraz ağrıyor."
+  },
+  "hsk2-441": {
+    "english": "tekme atmak",
+    "translation": "Hadi futbol oynamaya gidelim."
+  },
+  "hsk2-442": {
+    "english": "soru / alıştırma",
+    "translation": "Bu alıştırma nasıl yapılır?"
+  },
+  "hsk2-443": {
+    "english": "uzun nesneler için ölçü sözcüğü",
+    "translation": "Bu pantolon güzel."
+  },
+  "hsk2-444": {
+    "english": "dans etmek",
+    "translation": "Kız kardeşim dans etmeyi seviyor."
+  },
+  "hsk2-445": {
+    "english": "baş",
+    "translation": "Başım artık ağrımıyor."
+  },
+  "hsk2-446": {
+    "english": "yabancı ülke / yurt dışı",
+    "translation": "O yurt dışında okuyor."
+  },
+  "hsk2-447": {
+    "english": "dışarı",
+    "translation": "Dışarıda yağmur yağıyor."
+  },
+  "hsk2-448": {
+    "english": "bitirmek / tamamlamak",
+    "translation": "Ödevimi bitirdim."
+  },
+  "hsk2-449": {
+    "english": "on bin",
+    "translation": "Bu araba elli bin yuan."
+  },
+  "hsk2-450": {
+    "english": "-e doğru / yönünde",
+    "translation": "Lütfen sola gidin."
+  },
+  "hsk2-451": {
+    "english": "internette / çevrim içi",
+    "translation": "İnternetten bir kitap aldım."
+  },
+  "hsk2-452": {
+    "english": "unutmak",
+    "translation": "Onun adını unuttum."
+  },
+  "hsk2-453": {
+    "english": "kişiler için saygılı ölçü sözcüğü",
+    "translation": "Bu öğretmen bize Çince öğretiyor."
+  },
+  "hsk2-454": {
+    "english": "neden / niçin",
+    "translation": "Neden Çince öğreniyorsun?"
+  },
+  "hsk2-455": {
+    "english": "umut etmek / dilemek",
+    "translation": "Umarım yarın hava güneşli olur."
+  },
+  "hsk2-456": {
+    "english": "yıkamak",
+    "translation": "Ellerimi yıkamak istiyorum."
+  },
+  "hsk2-457": {
+    "english": "tuvalet",
+    "translation": "Affedersiniz, tuvalet nerede?"
+  },
+  "hsk2-458": {
+    "english": "aşağı gelmek",
+    "translation": "Lütfen aşağı gelip yemek ye."
+  },
+  "hsk2-459": {
+    "english": "alt / aşağıda",
+    "translation": "Kedi masanın altında."
+  },
+  "hsk2-460": {
+    "english": "aşağı gitmek",
+    "translation": "Aşağı inip yürüyüş yapalım."
+  },
+  "hsk2-461": {
+    "english": "çocuk",
+    "translation": "Çocuklar dışarıda oynuyor."
+  },
+  "hsk2-462": {
+    "english": "çocukluk / küçükken",
+    "translation": "Çocukken burada yaşıyordum."
+  },
+  "hsk2-463": {
+    "english": "gülümsemek / gülmek",
+    "translation": "O neşeyle güldü."
+  },
+  "hsk2-464": {
+    "english": "soyadı olmak",
+    "translation": "Soyadınız ne?"
+  },
+  "hsk2-465": {
+    "english": "ad ve soyad",
+    "translation": "Lütfen adınızı ve soyadınızı yazın."
+  },
+  "hsk2-466": {
+    "english": "renk",
+    "translation": "Hangi rengi seversin?"
+  },
+  "hsk2-467": {
+    "english": "göz",
+    "translation": "Onun gözleri güzel."
+  },
+  "hsk2-468": {
+    "english": "ilaç",
+    "translation": "Doktor ilaç almamı söyledi."
+  },
+  "hsk2-469": {
+    "english": "eczane",
+    "translation": "Eczane hastanenin yanında."
+  },
+  "hsk2-470": {
+    "english": "dede (babanın babası)",
+    "translation": "Dedem her gün yürüyüşe çıkar."
+  },
+  "hsk2-471": {
+    "english": "bir an / kısa bir süre",
+    "translation": "Lütfen beni biraz bekle."
+  },
+  "hsk2-472": {
+    "english": "çoktan / zaten",
+    "translation": "Yemeğimi çoktan yedim."
+  },
+  "hsk2-473": {
+    "english": "birlikte",
+    "translation": "Birlikte derse gidelim."
+  },
+  "hsk2-474": {
+    "english": "anlam / fikir",
+    "translation": "Bu sözcük ne demek?"
+  },
+  "hsk2-475": {
+    "english": "bulutlu / kapalı",
+    "translation": "Bugün hava bulutlu."
+  },
+  "hsk2-476": {
+    "english": "çünkü",
+    "translation": "Hasta olduğum için gitmedim."
+  },
+  "hsk2-477": {
+    "english": "yüzmek",
+    "translation": "Balıklar suda yüzer."
+  },
+  "hsk2-478": {
+    "english": "yüzmek / yüzmeye gitmek",
+    "translation": "Yüzmeyi seviyorum."
+  },
+  "hsk2-479": {
+    "english": "ilginç / anlamlı",
+    "translation": "Bu kitap ilginç."
+  },
+  "hsk2-480": {
+    "english": "bazen",
+    "translation": "Bazen okula otobüsle giderim."
+  },
+  "hsk2-481": {
+    "english": "sağ (yön)",
+    "translation": "Lütfen sağa gidin."
+  },
+  "hsk2-482": {
+    "english": "sağ taraf",
+    "translation": "Hastane sağ tarafta."
+  },
+  "hsk2-483": {
+    "english": "balık",
+    "translation": "Balık yemeyi seviyorum."
+  },
+  "hsk2-484": {
+    "english": "uzak",
+    "translation": "Evim havaalanından uzak."
+  },
+  "hsk2-485": {
+    "english": "spor / egzersiz",
+    "translation": "Her gün egzersiz yaparım."
+  },
+  "hsk2-486": {
+    "english": "istasyon / durak",
+    "translation": "Bir sonraki durakta iniyoruz."
+  },
+  "hsk2-487": {
+    "english": "eş (erkek)",
+    "translation": "Onun eşi hastanede çalışıyor."
+  },
+  "hsk2-488": {
+    "english": "bu kadar / böyle",
+    "translation": "Bugün neden bu kadar sıcak?"
+  },
+  "hsk2-489": {
+    "english": "böyle / bu şekilde",
+    "translation": "Böyle yazmak doğru mu?"
+  },
+  "hsk2-490": {
+    "english": "süren durum edatı (zhe)",
+    "translation": "Kapı açık."
+  },
+  "hsk2-491": {
+    "english": "tam / şu anda",
+    "translation": "Tam dışarı çıkmaya hazırlanıyorum."
+  },
+  "hsk2-492": {
+    "english": "hafta",
+    "translation": "Bu hafta çok meşgulüm."
+  },
+  "hsk2-493": {
+    "english": "hazırlamak / hazırlanmak",
+    "translation": "Sınava hazırlanıyorum."
+  },
+  "hsk2-494": {
+    "english": "kendi / kendim",
+    "translation": "Kendime yemek yaparım."
+  },
+  "hsk2-495": {
+    "english": "yürümek / gitmek / ayrılmak",
+    "translation": "Hadi gidelim."
+  },
+  "hsk2-496": {
+    "english": "yürümek / yaya gitmek",
+    "translation": "Her gün okula yürüyerek giderim."
+  },
+  "hsk2-497": {
+    "english": "futbol",
+    "translation": "O futbol oynamayı seviyor."
+  },
+  "hsk2-498": {
+    "english": "en",
+    "translation": "Okuması en keyifli kitap bu."
+  },
+  "hsk2-499": {
+    "english": "sol (yön)",
+    "translation": "Lütfen sola gidin."
+  },
+  "hsk2-500": {
+    "english": "sol taraf",
+    "translation": "Okul sol tarafta."
+  },
+  "hsk3-501": {
+    "english": "teyze / yaşça büyük kadına hitap",
+    "translation": "Wang teyze bugün akşam yemeğine bize geliyor."
+  },
+  "hsk3-502": {
+    "english": "kısa (boy)",
+    "translation": "Erkek kardeşim benden biraz kısa."
+  },
+  "hsk3-503": {
+    "english": "eş / hayat arkadaşı",
+    "translation": "Eşimle her gün işe metroyla gideriz."
+  },
+  "hsk3-504": {
+    "english": "sessiz / sakin",
+    "translation": "Kütüphane sessiz, herkes kitap okuyor."
+  },
+  "hsk3-505": {
+    "english": "güvenli",
+    "translation": "Gece bu yolda tek başına yürümek pek güvenli değil."
+  },
+  "hsk3-506": {
+    "english": "bǎ yapısında nesne belirteci",
+    "translation": "Lütfen kapıyı kapat; dışarısı soğuk."
+  },
+  "hsk3-507": {
+    "english": "taşımak / yerini değiştirmek",
+    "translation": "Bu masa çok ağır; birlikte taşıyalım."
+  },
+  "hsk3-508": {
+    "english": "sınıf / sınıf grubu",
+    "translation": "Bu sınıfta yirmiden fazla öğrenci var."
+  },
+  "hsk3-509": {
+    "english": "ev taşımak",
+    "translation": "Gelecek ay taşınıyorlar ve birkaç arkadaşlarından yardım istiyorlar."
+  },
+  "hsk3-510": {
+    "english": "halletmek / ilgilenmek",
+    "translation": "Bunu ben hallederim; sen önce dinlen."
+  },
+  "hsk3-511": {
+    "english": "yol / çözüm",
+    "translation": "Yağmur yağıyor; eve dönmenin bir yolunu bulmalıyız."
+  },
+  "hsk3-512": {
+    "english": "ofis",
+    "translation": "Öğretmenin ofisi üçüncü katta."
+  },
+  "hsk3-513": {
+    "english": "uzun bir süre / yarım gün",
+    "translation": "O sözlüğü sonunda bulana kadar uzun süre aradım."
+  },
+  "hsk3-514": {
+    "english": "yardım etmek / yardım",
+    "translation": "Bu sınava hazırlanmama yardım ettiğin için teşekkür ederim."
+  },
+  "hsk3-515": {
+    "english": "tok",
+    "translation": "Zaten tokum, daha fazla kek istemiyorum."
+  },
+  "hsk3-516": {
+    "english": "gazete",
+    "translation": "Dedem her sabah gazete okur."
+  },
+  "hsk3-517": {
+    "english": "kuzey",
+    "translation": "Okul tren istasyonunun kuzeyinde."
+  },
+  "hsk3-518": {
+    "english": "kuzey / kuzey bölgesi",
+    "translation": "Kuzeyde kışın sık sık kar yağar."
+  },
+  "hsk3-519": {
+    "english": "edilgenlik belirteci",
+    "translation": "Bisikletime erkek kardeşim binip gitti."
+  },
+  "hsk3-520": {
+    "english": "notlar",
+    "translation": "Derste önemli şeyleri notlarıma yazarım."
+  },
+  "hsk3-521": {
+    "english": "karşılaştırmak",
+    "translation": "Önce bu iki otelin fiyatlarını karşılaştıralım."
+  },
+  "hsk3-522": {
+    "english": "defter",
+    "translation": "Lütfen defteri okul çantana koy."
+  },
+  "hsk3-523": {
+    "english": "örneğin",
+    "translation": "Meyveleri severim, örneğin elma ve portakalı."
+  },
+  "hsk3-524": {
+    "english": "yarışma / yarışmak",
+    "translation": "Kız kardeşim okulun yüzme yarışmasına katıldı."
+  },
+  "hsk3-525": {
+    "english": "zorunda olmak / mutlaka",
+    "translation": "Sınıfa girdikten sonra telefonunuzu kapatmalısınız."
+  },
+  "hsk3-526": {
+    "english": "değişmek / olmak",
+    "translation": "Hava soğudu; daha kalın giyinmeyi unutma."
+  },
+  "hsk3-527": {
+    "english": "baştan sona bir eylem için ölçü sözcüğü",
+    "translation": "Bu şarkıyı bir kez dinledim, bir kez daha dinlemek istiyorum."
+  },
+  "hsk3-528": {
+    "english": "olmak / dönüşmek",
+    "translation": "Bahar geldi, ağaçların yaprakları yeşerdi."
+  },
+  "hsk3-529": {
+    "english": "değişim / durum değişikliği",
+    "translation": "Okulumuz son birkaç yılda çok değişti."
+  },
+  "hsk3-530": {
+    "english": "gösteri yapmak / sahnelemek",
+    "translation": "Çocuklar bu akşam bir gösteri yapacak."
+  },
+  "hsk3-531": {
+    "english": "başka / başka bir şey",
+    "translation": "Bu gömlek çok pahalı; başka bir şey görmek istiyorum."
+  },
+  "hsk3-532": {
+    "english": "başkaları / diğer insanlar",
+    "translation": "Diğerleri geldi, biz de içeri girelim."
+  },
+  "hsk3-533": {
+    "english": "otel / pansiyon",
+    "translation": "Otelde üç gün kaldık, bugün ayrılıyoruz."
+  },
+  "hsk3-534": {
+    "english": "buz",
+    "translation": "Hava çok sıcak; bir bardak buzlu su istiyorum."
+  },
+  "hsk3-535": {
+    "english": "dondurma",
+    "translation": "Hava sıcak olduğunda dondurma yemeyi severim."
+  },
+  "hsk3-536": {
+    "english": "buzdolabı",
+    "translation": "Süt buzdolabında; içmeden önce ısıt."
+  },
+  "hsk3-537": {
+    "english": "hasta",
+    "translation": "Hemşire o hastayla ilgileniyor."
+  },
+  "hsk3-538": {
+    "english": "yalnızca ... değil",
+    "translation": "O yalnızca yemek yapmayı bilmiyor, üstelik çok iyi yapıyor."
+  },
+  "hsk3-539": {
+    "english": "kaybolmak / ortadan kaybolmak",
+    "translation": "Anahtarlarım kayıp; aramama yardım eder misin?"
+  },
+  "hsk3-540": {
+    "english": "gerek olmamak",
+    "translation": "Şemsiye getirmene gerek yok; dışarıda yağmur yağmıyor."
+  },
+  "hsk3-541": {
+    "english": "farklı / aynı olmayan",
+    "translation": "Bu iki restoranın menüleri ve fiyatları farklı."
+  },
+  "hsk3-542": {
+    "english": "yakında / kısa süre sonra",
+    "translation": "Film bittikten kısa süre sonra arkadaşım beni aradı."
+  },
+  "hsk3-543": {
+    "english": "olmaz / işe yaramaz",
+    "translation": "Bu çözüm işe yaramaz; başka bir çözüm düşünelim."
+  },
+  "hsk3-544": {
+    "english": "ancak / ancak o zaman",
+    "translation": "Bugün geç kalktı ve okula ancak dokuzda varabildi."
+  },
+  "hsk3-545": {
+    "english": "menü",
+    "translation": "Lütfen menüyü gösterin; ne yiyeceğimize henüz karar vermedik."
+  },
+  "hsk3-546": {
+    "english": "katılmak",
+    "translation": "Bu hafta sonu okulun basketbol yarışmasına katılmak istiyorum."
+  },
+  "hsk3-547": {
+    "english": "ot / çimen",
+    "translation": "Yavru kedi çimenlerin arasında uyuyakaldı."
+  },
+  "hsk3-548": {
+    "english": "çim alan",
+    "translation": "Çocuklar çimlerin üstünde top oynuyor."
+  },
+  "hsk3-549": {
+    "english": "kat veya tabaka için ölçü sözcüğü",
+    "translation": "Bu binanın sekizinci katında oturuyoruz."
+  },
+  "hsk3-550": {
+    "english": "kontrol etmek / bakmak",
+    "translation": "Önce trenin ne zaman kalktığına bakayım."
+  },
+  "hsk3-551": {
+    "english": "daha kötü olmak / eksik kalmak",
+    "translation": "Dinleme puanım geçen seferden biraz daha düşüktü."
+  },
+  "hsk3-552": {
+    "english": "hemen hemen / yaklaşık aynı",
+    "translation": "Eve hemen hemen aynı anda vardık."
+  },
+  "hsk3-553": {
+    "english": "tadına bakmak",
+    "translation": "Bu çorbanın tadına bak; sence tuzlu mu?"
+  },
+  "hsk3-554": {
+    "english": "sık sık / düzenli olarak",
+    "translation": "Kitap okumak için sık sık kütüphaneye giderim; orası sessizdir."
+  },
+  "hsk3-555": {
+    "english": "yaygın / sık görülen",
+    "translation": "Bu tür kuşlar kuzeydeki parklarda sık görülür."
+  },
+  "hsk3-556": {
+    "english": "yaygın kullanılan",
+    "translation": "Bu sözcük günlük konuşmada yaygın kullanılır."
+  },
+  "hsk3-557": {
+    "english": "sık sık",
+    "translation": "Ablam evi sık sık arar."
+  },
+  "hsk3-558": {
+    "english": "gömlek",
+    "translation": "İşe beyaz bir gömlek giydi."
+  },
+  "hsk3-559": {
+    "english": "not / sonuç",
+    "translation": "Bu matematik sınavındaki sonucu iyileşti."
+  },
+  "hsk3-560": {
+    "english": "şehir",
+    "translation": "Bu şehirde çok sayıda park ve otel var."
+  },
+  "hsk3-561": {
+    "english": "geç kalmak",
+    "translation": "Acele edelim, yoksa derse geç kalacağız."
+  },
+  "hsk3-562": {
+    "english": "yola çıkmak / hareket etmek",
+    "translation": "Sabah altıda yola çıkıp gece Pekin'e varıyoruz."
+  },
+  "hsk3-563": {
+    "english": "doğmak",
+    "translation": "Kuzeyde küçük bir şehirde doğdum."
+  },
+  "hsk3-564": {
+    "english": "hastaneden taburcu olmak",
+    "translation": "Büyükannem çok daha iyi, yarın taburcu olabilir."
+  },
+  "hsk3-565": {
+    "english": "ortaokul",
+    "translation": "Kuzenim bir ortaokulda İngilizce öğretiyor."
+  },
+  "hsk3-566": {
+    "english": "hariç / ayrıca",
+    "translation": "Xiao Wang dışında herkes geldi."
+  },
+  "hsk3-567": {
+    "english": "tekne / gemi",
+    "translation": "Nehri tekneyle geçip kısa sürede karşı kıyıya ulaştık."
+  },
+  "hsk3-568": {
+    "english": "ilkbahar",
+    "translation": "Bahar geldi, parktaki bütün çiçekler açıyor."
+  },
+  "hsk3-569": {
+    "english": "sözlük",
+    "translation": "Bu sözcüğün anlamına sözlükten baktım."
+  },
+  "hsk3-570": {
+    "english": "zeki / akıllı",
+    "translation": "O zeki, soruyu ilk seferde anladı."
+  },
+  "hsk3-571": {
+    "english": "temizlemek / süpürmek",
+    "translation": "Cumartesileri odayı birlikte temizleriz."
+  },
+  "hsk3-572": {
+    "english": "planlamak / niyet etmek",
+    "translation": "Tatilden sonra deniz kıyısına gitmeyi planlıyorum."
+  },
+  "hsk3-573": {
+    "english": "muhtemelen / yaklaşık",
+    "translation": "Okuldan buraya yürümek yaklaşık on dakika sürer."
+  },
+  "hsk3-574": {
+    "english": "yetişkin",
+    "translation": "Çocuklar karşıdan karşıya bir yetişkinle geçmeli."
+  },
+  "hsk3-575": {
+    "english": "boyut / büyüklük",
+    "translation": "Bu iki oda yaklaşık aynı büyüklükte."
+  },
+  "hsk3-576": {
+    "english": "dev panda",
+    "translation": "Hayvanat bahçesinde iki dev panda gördük."
+  },
+  "hsk3-577": {
+    "english": "palto",
+    "translation": "Dışarısı çok soğuk; çıkarken palto giy."
+  },
+  "hsk3-578": {
+    "english": "getirmek / yanına almak",
+    "translation": "Yarın deniz kıyısına gidiyoruz; su ve harita almayı unutma."
+  },
+  "hsk3-579": {
+    "english": "endişelenmek",
+    "translation": "Endişelenme; eşimi çoktan aradım."
+  },
+  "hsk3-580": {
+    "english": "pasta / kek",
+    "translation": "Arkadaşlarım doğum günüm için bana pasta aldı."
+  },
+  "hsk3-581": {
+    "english": "elbette / tabii",
+    "translation": "Tabii; çay mı kahve mi istersin?"
+  },
+  "hsk3-582": {
+    "english": "her yer / her yerde",
+    "translation": "Yağmurdan sonra parkın her yerinde su vardı."
+  },
+  "hsk3-583": {
+    "english": "elde etmek / almak",
+    "translation": "Yarışmada birincilik ödülünü kazandı."
+  },
+  "hsk3-584": {
+    "english": "elde etmek / yardım almak",
+    "translation": "Sonunda öğretmenden yardım aldım."
+  },
+  "hsk3-585": {
+    "english": "puan almak / puan",
+    "translation": "Yarışmada en çok puanı alıp birinci oldu."
+  },
+  "hsk3-586": {
+    "english": "eğer / ise",
+    "translation": "Vaktin varsa benimle sözlük almaya gel."
+  },
+  "hsk3-587": {
+    "english": "zorunda olmak / gerek",
+    "translation": "Yarın sınavım var, bu yüzden bu akşam çalışmalıyım."
+  },
+  "hsk3-588": {
+    "english": "lamba / ışık",
+    "translation": "Hava kararıyor; lütfen oturma odasının ışığını aç."
+  },
+  "hsk3-589": {
+    "english": "yer / toprak",
+    "translation": "Yağmurdan sonra yerde çok su var."
+  },
+  "hsk3-590": {
+    "english": "yer / konum",
+    "translation": "Lütfen sınav yerini kayıt formuna yazın."
+  },
+  "hsk3-591": {
+    "english": "yer / bölge",
+    "translation": "Burası okula çok yakın; yürüyerek gidebiliriz."
+  },
+  "hsk3-592": {
+    "english": "harita",
+    "translation": "Haritayı kullanarak yakındaki bir parkı bulduk."
+  },
+  "hsk3-593": {
+    "english": "elektrik",
+    "translation": "Bugün evde elektrik yok, bu yüzden buzdolabı da kullanılamıyor."
+  },
+  "hsk3-594": {
+    "english": "asansör",
+    "translation": "Bu binada asansör yok, merdivenleri kullanmak zorundayız."
+  },
+  "hsk3-595": {
+    "english": "e-kitap",
+    "translation": "Telefonumdan e-kitap okurum, böylece dışarı çıkarken çok kitap taşımam gerekmez."
+  },
+  "hsk3-596": {
+    "english": "kaybetmek / yanlış yere koymak",
+    "translation": "Anahtarlarımı ofiste bırakmışım; aramak için geri döneceğim."
+  },
+  "hsk3-597": {
+    "english": "doğu",
+    "translation": "Doğuya doğru yürümeye devam edersen köprüyü görürsün."
+  },
+  "hsk3-598": {
+    "english": "kuzeydoğu",
+    "translation": "Evim şehrin kuzeydoğusunda, denizden biraz uzakta."
+  },
+  "hsk3-599": {
+    "english": "doğu / doğu bölgesi",
+    "translation": "Güneş her sabah doğudan doğar."
+  },
+  "hsk3-600": {
+    "english": "güneydoğu",
+    "translation": "Tren istasyonu parkın güneydoğusunda."
+  },
+  "hsk3-601": {
+    "english": "kış",
+    "translation": "Burada kışın hava çok soğuk olur, geceleri sık sık kar yağar."
+  },
+  "hsk3-602": {
+    "english": "anlamak / yapmayı bilmek",
+    "translation": "Bu yöntemi öğrendikten sonra sözlükten nasıl bakacağımı biliyorum."
+  },
+  "hsk3-603": {
+    "english": "hayvan",
+    "translation": "Bu hayvan gündüz dinlenir, gece yiyecek aramak için dışarı çıkar."
+  },
+  "hsk3-604": {
+    "english": "hayvanat bahçesi",
+    "translation": "Bu hafta sonu çocukları dev pandaları görmeleri için hayvanat bahçesine götürüyoruz."
+  },
+  "hsk3-605": {
+    "english": "kısa (uzunluk)",
+    "translation": "Bu etek biraz kısa; daha uzununu denemek istiyorum."
+  },
+  "hsk3-606": {
+    "english": "şort",
+    "translation": "Hava sıcak, bu yüzden parka şort giyerek gitti."
+  },
+  "hsk3-607": {
+    "english": "bölüm / parça / süre",
+    "translation": "Her gün biraz zaman ayırıp Çince karakter yazma alıştırması yaparım."
+  },
+  "hsk3-608": {
+    "english": "egzersiz yapmak / spor yapmak",
+    "translation": "Babam her sabah egzersiz yapmak için parka gider."
+  },
+  "hsk3-609": {
+    "english": "diyalog / konuşma",
+    "translation": "İkimiz bir diyalog çalıştık."
+  },
+  "hsk3-610": {
+    "english": "aç",
+    "translation": "Biraz açım; önce biraz meyve yiyelim."
+  },
+  "hsk3-611": {
+    "english": "ve / üstelik",
+    "translation": "Bu restoran eve yakın, üstelik pahalı da değil."
+  },
+  "hsk3-612": {
+    "english": "kulak",
+    "translation": "Yavru köpeğin kulakları hassas, uzaktaki sesleri duyabiliyor."
+  },
+  "hsk3-613": {
+    "english": "kulaklık",
+    "translation": "Metroda kulaklıkla müzik dinlemeyi seviyorum."
+  },
+  "hsk3-614": {
+    "english": "göndermek / çıkarmak",
+    "translation": "Bu öğleden sonra öğretmene bir e-posta göndereceğim."
+  },
+  "hsk3-615": {
+    "english": "ateşi olmak",
+    "translation": "Erkek kardeşimin ateşi var, annem onu doktora götürüyor."
+  },
+  "hsk3-616": {
+    "english": "olmak / meydana gelmek",
+    "translation": "Dün gece ne olduğunu biliyor musun?"
+  },
+  "hsk3-617": {
+    "english": "keşfetmek / fark etmek",
+    "translation": "Haritayı ararken masanın altında olduğunu fark ettim."
+  },
+  "hsk3-618": {
+    "english": "gelişmek / gelişim",
+    "translation": "Bu şehir son yıllarda hızla gelişti."
+  },
+  "hsk3-619": {
+    "english": "kolay / kullanışlı",
+    "translation": "İnternetten bilet almak kolay; sıraya girmek gerekmiyor."
+  },
+  "hsk3-620": {
+    "english": "hazır erişte",
+    "translation": "Çok geç oldu; biraz hazır erişte yapalım."
+  },
+  "hsk3-621": {
+    "english": "yöntem / yol",
+    "translation": "Metni her gün bir kez oku; bu iyi bir yöntem."
+  },
+  "hsk3-622": {
+    "english": "yön",
+    "translation": "Galiba yanlış yöne gittik; kuzeye gitmeliyiz."
+  },
+  "hsk3-623": {
+    "english": "ev",
+    "translation": "Yeni evlerinde üç oda ve küçük bir avlu var."
+  },
+  "hsk3-624": {
+    "english": "koymak / yerleştirmek",
+    "translation": "Lütfen meyveleri herkesin paylaşması için masaya koy."
+  },
+  "hsk3-625": {
+    "english": "tatile girmek / ara vermek",
+    "translation": "Okul gelecek hafta tatile giriyor, deniz kıyısına gidebiliriz."
+  },
+  "hsk3-626": {
+    "english": "içi rahat etmek / endişelenmemek",
+    "translation": "Endişelenme; çocuklar eve sağ salim vardılar."
+  },
+  "hsk3-627": {
+    "english": "okulun bitmesi",
+    "translation": "Okuldan sonra parkta buluşalım."
+  },
+  "hsk3-628": {
+    "english": "ayırmak / ayrı",
+    "translation": "Lütfen beyaz ve siyah gömlekleri ayrı tut."
+  },
+  "hsk3-629": {
+    "english": "rüzgar",
+    "translation": "Bugün çok rüzgar var; çıkmadan önce pencereleri kapat."
+  },
+  "hsk3-630": {
+    "english": "mektuplar veya zarflar için ölçü sözcüğü",
+    "translation": "Büyükanneme bir mektup yazdım, yarın postalayacağım."
+  },
+  "hsk3-631": {
+    "english": "evli çift",
+    "translation": "O evli çift her akşam birlikte yürüyüş yapar."
+  },
+  "hsk3-632": {
+    "english": "hizmet / hizmet etmek",
+    "translation": "Otelin hizmeti iyi, çalışanlar da çok güler yüzlü."
+  },
+  "hsk3-633": {
+    "english": "yakın / civar",
+    "translation": "Evimin yakınında bir park ve küçük bir restoran var."
+  },
+  "hsk3-634": {
+    "english": "tekrar etmek / gözden geçirmek",
+    "translation": "Sınavlardan önce her akşam iki saat tekrar yaparım."
+  },
+  "hsk3-635": {
+    "english": "-malı / -meli / gerek",
+    "translation": "Hava soğuk; montunu giymelisin."
+  },
+  "hsk3-636": {
+    "english": "temiz / düzenli",
+    "translation": "Mutfak temizlendi; şimdi yemek yapabiliriz."
+  },
+  "hsk3-637": {
+    "english": "ilgi duymak",
+    "translation": "Çin tarihine çok ilgi duyuyorum, sık sık bu konuda kitap okurum."
+  },
+  "hsk3-638": {
+    "english": "hissetmek",
+    "translation": "İyi haberi duyunca çok mutlu oldum."
+  },
+  "hsk3-639": {
+    "english": "soğuk algınlığına yakalanmak",
+    "translation": "Dün soğuk algınlığına yakalandım, bugün evde dinleniyorum."
+  },
+  "hsk3-640": {
+    "english": "yapmak / çalışmak",
+    "translation": "Ablan hastanede ne iş yapıyor?"
+  },
+  "hsk3-641": {
+    "english": "az önce / henüz",
+    "translation": "Eve yeni geldim; yemek yapmadan önce biraz su içeceğim."
+  },
+  "hsk3-642": {
+    "english": "az önce / demin",
+    "translation": "Demin ofisteydim, telefonun çaldığını duymadım."
+  },
+  "hsk3-643": {
+    "english": "hemen önce / daha yeni",
+    "translation": "Daha yeni çıktı, muhtemelen henüz durağa varmamıştır."
+  },
+  "hsk3-644": {
+    "english": "yüksek hızlı tren",
+    "translation": "Pekin'e yüksek hızlı trenle gittik, yalnızca iki saatte vardık."
+  },
+  "hsk3-645": {
+    "english": "-e göre / dayanarak",
+    "translation": "Haritaya göre doğuya gitmeliyiz."
+  },
+  "hsk3-646": {
+    "english": "daha da / daha fazla",
+    "translation": "Bugün dünden de soğuk; çıkarken mont giy."
+  },
+  "hsk3-647": {
+    "english": "kilogram",
+    "translation": "Bu pasta iki kilogram; herkesle paylaşabiliriz."
+  },
+  "hsk3-648": {
+    "english": "park",
+    "translation": "Hava güzel olduğunda dedem beni sık sık parkta yürüyüşe çıkarır."
+  },
+  "hsk3-649": {
+    "english": "iş günü / hafta içi",
+    "translation": "Hafta içi işe metroyla giderim, hafta sonları genellikle evde dinlenirim."
+  },
+  "hsk3-650": {
+    "english": "hikaye",
+    "translation": "Dedem bana her akşam bir hikaye anlatır."
+  },
+  "hsk3-651": {
+    "english": "esmek (rüzgar)",
+    "translation": "Dışarıda rüzgar esmeye başladı; pencereyi kapatalım."
+  },
+  "hsk3-652": {
+    "english": "kapatmak",
+    "translation": "Ayrılmadan önce kapıyı iyice kapatmayı unutma."
+  },
+  "hsk3-653": {
+    "english": "cihazı kapatmak",
+    "translation": "Lütfen ders sırasında telefonunuzu kapatın."
+  },
+  "hsk3-654": {
+    "english": "ilişki / bağlantı",
+    "translation": "Yeni sınıf arkadaşımla ilişkim gittikçe iyileşiyor."
+  },
+  "hsk3-655": {
+    "english": "ilgilenmek / önemsemek",
+    "translation": "Büyükannem derslerimle ilgilenir, sık sık yorulup yorulmadığımı sorar."
+  },
+  "hsk3-656": {
+    "english": "hakkında / ilişkin",
+    "translation": "Öğretmen bize Çin tarihi hakkında bir kitap tanıttı."
+  },
+  "hsk3-657": {
+    "english": "takip etmek / dikkat etmek",
+    "translation": "Ne giyeceğime karar vermek için her gün hava tahminine bakarım."
+  },
+  "hsk3-658": {
+    "english": "ülke / ulus",
+    "translation": "Çin, birçok şehri olan çok büyük bir ülke."
+  },
+  "hsk3-659": {
+    "english": "bayram kutlamak",
+    "translation": "Bayramlarda bütün aile birlikte yemek yeriz."
+  },
+  "hsk3-660": {
+    "english": "geçmiş / eskiden",
+    "translation": "Eskiden insanlar nehirleri sık sık tekneyle geçerdi."
+  },
+  "hsk3-661": {
+    "english": "deniz",
+    "translation": "Yazın sık sık deniz kıyısında yüzmeye gideriz."
+  },
+  "hsk3-662": {
+    "english": "korkmak / korku",
+    "translation": "Çocuk gece tek başına yürümekten biraz korkuyor."
+  },
+  "hsk3-663": {
+    "english": "çok / bir sürü",
+    "translation": "Masanın üstünde bir sürü meyve var; hepimiz biraz yiyelim."
+  },
+  "hsk3-664": {
+    "english": "uzun zaman",
+    "translation": "Uzun zamandır görüşemedik! Nasılsın?"
+  },
+  "hsk3-665": {
+    "english": "gibi görünmek",
+    "translation": "Dışarıda yağmur yağıyor gibi; şemsiye al."
+  },
+  "hsk3-666": {
+    "english": "numara / referans numarası",
+    "translation": "Lütfen telefon numaranı söyle, yazayım."
+  },
+  "hsk3-667": {
+    "english": "nehir",
+    "translation": "Bu nehir çok geniş; karşı kıyıya tekneyle geçelim."
+  },
+  "hsk3-668": {
+    "english": "uygun",
+    "translation": "Bu ayakkabılar tam uygun; bütün gün yorulmadan yürüyebiliyorum."
+  },
+  "hsk3-669": {
+    "english": "kara tahta",
+    "translation": "Öğretmen yeni sözcükleri tahtaya yazdı."
+  },
+  "hsk3-670": {
+    "english": "trafik ışığı",
+    "translation": "İlerideki trafik ışığını geç, sonra sağa dön."
+  },
+  "hsk3-671": {
+    "english": "sonradan / daha sonra",
+    "translation": "Onun çoktan Şanghay'a taşındığını sonradan öğrendim."
+  },
+  "hsk3-672": {
+    "english": "öbür yıl",
+    "translation": "Öbür yıl Fransa'daki arkadaşlarımızı ziyaret etmeyi planlıyoruz."
+  },
+  "hsk3-673": {
+    "english": "öbür gün",
+    "translation": "Öbür gün sabah boşum, seninle hastaneye gelebilirim."
+  },
+  "hsk3-674": {
+    "english": "pasaport",
+    "translation": "Ayrılmadan önce pasaportunu ve biletini kontrol etmeyi unutma."
+  },
+  "hsk3-675": {
+    "english": "bahçe",
+    "translation": "Sitede bir bahçe var, ilkbaharda çiçeklerle doluyor."
+  },
+  "hsk3-676": {
+    "english": "ressam",
+    "translation": "Bu ressam nehir kıyısında sık sık manzara resimleri yapar."
+  },
+  "hsk3-677": {
+    "english": "karşılamak / hoş geldiniz",
+    "translation": "Yeni öğrencileri Çince sınıfında karşılamaktan mutluyuz."
+  },
+  "hsk3-678": {
+    "english": "geri vermek / iade etmek",
+    "translation": "Bu kitabı bitirince lütfen kütüphaneye geri ver."
+  },
+  "hsk3-679": {
+    "english": "çevre / ortam",
+    "translation": "Bu otelin çevresi sakin; geceleri trafik sesi duyulmuyor."
+  },
+  "hsk3-680": {
+    "english": "değiştirmek / değiş tokuş etmek",
+    "translation": "Bu gömlek çok büyük, daha küçüğüyle değiştirmek istiyorum."
+  },
+  "hsk3-681": {
+    "english": "sarı",
+    "translation": "Kış için tam uygun sarı bir atkı seçti."
+  },
+  "hsk3-682": {
+    "english": "cevap vermek",
+    "translation": "Öğrenci, öğretmenin sorduğu soruyu dikkatle cevapladı."
+  },
+  "hsk3-683": {
+    "english": "toplantı (günlük dil)",
+    "translation": "Bugün öğleden sonra üçte toplantımız var."
+  },
+  "hsk3-684": {
+    "english": "toplantı",
+    "translation": "Müdür toplantıyı cuma öğleden sonraya planladı."
+  },
+  "hsk3-685": {
+    "english": "veya (resmî)",
+    "translation": "Bu yoldan yürüyerek veya bisikletle gidebilirsin; ikisi de okula uzak değil."
+  },
+  "hsk3-686": {
+    "english": "veya / ya da",
+    "translation": "Bu akşam ya da yarın sabah gelebilirsin."
+  },
+  "hsk3-687": {
+    "english": "tavuk eti",
+    "translation": "Bu restoranın tavuğu yumuşacık, pilavı da güzel."
+  },
+  "hsk3-688": {
+    "english": "neredeyse / hemen hemen",
+    "translation": "Otobüs neredeyse yarım saat geciktiği için az kalsın geç kalıyordum."
+  },
+  "hsk3-689": {
+    "english": "fırsat",
+    "translation": "Bu, konuşma pratiği için iyi bir fırsat; kaçırma."
+  },
+  "hsk3-690": {
+    "english": "son derece / çok",
+    "translation": "Dağın tepesindeki rüzgar çok güçlüydü, bu yüzden hemen indik."
+  },
+  "hsk3-691": {
+    "english": "acele / acil",
+    "translation": "İstasyona yetişmek için acelem var, bu yüzden şimdi çıkıyorum."
+  },
+  "hsk3-692": {
+    "english": "hatırlamak / not etmek",
+    "translation": "Yeni adresi duyunca hemen telefonuma not ettim."
+  },
+  "hsk3-693": {
+    "english": "mevsim",
+    "translation": "Bu mevsimde çok yağmur yağar, dışarı çıkarken şemsiye almak iyi olur."
+  },
+  "hsk3-694": {
+    "english": "mevsim / dönem",
+    "translation": "En sevdiğim mevsim ilkbahar; hava ne soğuk ne de sıcak."
+  },
+  "hsk3-695": {
+    "english": "eklemek",
+    "translation": "Çorba biraz tatsız; biraz daha tuz ekleyelim."
+  },
+  "hsk3-696": {
+    "english": "tatil",
+    "translation": "Tatilin son gününde evde eşyalarımı toplayacağım."
+  },
+  "hsk3-697": {
+    "english": "ısrarla sürdürmek / devam etmek",
+    "translation": "Günde on dakika dinleme çalışmak zor değil; zor olan bunu sürdürmek."
+  },
+  "hsk3-698": {
+    "english": "kontrol etmek / muayene etmek",
+    "translation": "Çıkmadan önce kapıların ve pencerelerin kapalı olduğunu kontrol ettim."
+  },
+  "hsk3-699": {
+    "english": "basit / kolay",
+    "translation": "Bu yöntem basit; bir kez izleyince nasıl yapıldığını öğrenirsin."
+  },
+  "hsk3-700": {
+    "english": "bilet kontrol etmek",
+    "translation": "Bilet kontrol girişi sağda; lütfen biletinizi hazırlayın."
+  },
+  "hsk3-701": {
+    "english": "sağlık / sağlıklı",
+    "translation": "Doktor sağlıklı olduğunu ve normal şekilde işe dönebileceğini söyledi."
+  },
+  "hsk3-702": {
+    "english": "buluşmak / görüşmek",
+    "translation": "Mezuniyetten sonra yılda bir kez mutlaka buluşuruz."
+  },
+  "hsk3-703": {
+    "english": "konuşmak / açıklamak",
+    "translation": "Öğretmen önce yeni sözcükleri açıkladı, sonra metni herkesle birlikte okudu."
+  },
+  "hsk3-704": {
+    "english": "jiao / yuanın onda biri",
+    "translation": "Bu kurşun kalem beş jiao, yani yarım yuan."
+  },
+  "hsk3-705": {
+    "english": "ayak",
+    "translation": "İki kilometre koştu, ayağı biraz ağrıyor."
+  },
+  "hsk3-706": {
+    "english": "almak / karşılamak",
+    "translation": "İşten sonra ablamı havaalanından alacağım."
+  },
+  "hsk3-707": {
+    "english": "sokak / cadde",
+    "translation": "Bu sokakta eski bir kitapçı ve iki kafe var."
+  },
+  "hsk3-708": {
+    "english": "ders saati / bölüm",
+    "translation": "Bu öğleden sonraki ilk ders Çince."
+  },
+  "hsk3-709": {
+    "english": "evlenmek",
+    "translation": "Gelecek yıl evlenmeyi planlıyorlar, düğün hazırlıkları da neredeyse tamam."
+  },
+  "hsk3-710": {
+    "english": "program / gösteri",
+    "translation": "Akşam yemeğinden sonra birlikte ilginç bir program izledik."
+  },
+  "hsk3-711": {
+    "english": "bayram / festival",
+    "translation": "Bahar Bayramı, Çin'in en önemli bayramlarından biridir."
+  },
+  "hsk3-712": {
+    "english": "bitmek / sona ermek",
+    "translation": "Film bittikten sonra eve metroyla döndük."
+  },
+  "hsk3-713": {
+    "english": "çözmek / gidermek",
+    "translation": "Birlikte bir çözüm düşünüp sonunda bilgisayar sorununu giderdik."
+  },
+  "hsk3-714": {
+    "english": "kız kardeşler",
+    "translation": "İki kız kardeş çocukken birlikte okula gidiyordu, hâlâ aynı şehirde yaşıyorlar."
+  },
+  "hsk3-715": {
+    "english": "ödünç almak / ödünç vermek",
+    "translation": "Kalemimi unuttum; seninkini biraz ödünç alabilir miyim?"
+  },
+  "hsk3-716": {
+    "english": "jin (yaklaşık 500 g)",
+    "translation": "Bir kilo elma aldım, aileye iki gün yeter."
+  },
+  "hsk3-717": {
+    "english": "-den geçmek / deneyimlemek",
+    "translation": "O köprüden geçerken tesadüfen gün batımını gördük."
+  },
+  "hsk3-718": {
+    "english": "müdür / yönetici",
+    "translation": "Müdür bugün ofiste değil; bir şeye ihtiyacınız olursa lütfen e-posta gönderin."
+  },
+  "hsk3-719": {
+    "english": "uzun süre / uzun",
+    "translation": "Otobüsün gelişini görene kadar uzun süre bekledim."
+  },
+  "hsk3-720": {
+    "english": "alkol / içki",
+    "translation": "Araba kullanacak kişiler alkol içmemeli; eve metroyla dönebilirsiniz."
+  },
+  "hsk3-721": {
+    "english": "eski / kullanılmış",
+    "translation": "Bu eski sandalye güzel değil ama oturması rahat."
+  },
+  "hsk3-722": {
+    "english": "cümleler için ölçü sözcüğü",
+    "translation": "Lütfen son cümleyi bir kez daha oku."
+  },
+  "hsk3-723": {
+    "english": "cümle",
+    "translation": "Bu cümle çok uzun; iki cümleye bölelim."
+  },
+  "hsk3-724": {
+    "english": "karar vermek / belirlemek",
+    "translation": "Bu hafta sonu fazla mesai yapmayıp çocukları parka götürmeye karar verdim."
+  },
+  "hsk3-725": {
+    "english": "kart",
+    "translation": "Metro istasyonuna girmeden önce makineden ulaşım kartına para yükle."
+  },
+  "hsk3-726": {
+    "english": "çiçek açmak",
+    "translation": "Avludaki şeftali ağacı çiçek açtı, kokusu her yeri sardı."
+  },
+  "hsk3-727": {
+    "english": "toplantı yapmak",
+    "translation": "Haftanın işlerini konuşmak için her pazartesi sabah toplantı yaparız."
+  },
+  "hsk3-728": {
+    "english": "açmak (cihaz)",
+    "translation": "Yatmadan önce ışığı kapatmayı, sabah bilgisayarı açmayı unutma."
+  },
+  "hsk3-729": {
+    "english": "mutlu / sevinçli",
+    "translation": "Arkadaşından gelen kartpostalı alınca mutlulukla gülümsedi."
+  },
+  "hsk3-730": {
+    "english": "görünüşe göre / anlaşılan",
+    "translation": "Görünüşe göre bugünkü tren gecikecek; önce çay içelim."
+  },
+  "hsk3-731": {
+    "english": "gerçekten / doğrusu (vurgu)",
+    "translation": "Gerçekten kimseye söylememelisin; bu aramızda bir sır."
+  },
+  "hsk3-732": {
+    "english": "susamış",
+    "translation": "O kadar uzun yürüdük ki susadım, biraz su istiyorum."
+  },
+  "hsk3-733": {
+    "english": "sevimli",
+    "translation": "O yavru kedi çok sevimli, bütün çocuklar onu kucağına almak istiyor."
+  },
+  "hsk3-734": {
+    "english": "ama / ancak",
+    "translation": "Trenle gitmek istiyordum ama sonunda bilet alamadım."
+  },
+  "hsk3-735": {
+    "english": "çeyrek saat / çeyrek",
+    "translation": "Saat sekizi çeyrek geçiyor; film ancak dokuzda başlayacak."
+  },
+  "hsk3-736": {
+    "english": "ders kitabı",
+    "translation": "Derste lütfen ders kitabınızın otuzuncu sayfasını açın."
+  },
+  "hsk3-737": {
+    "english": "misafir / konuk",
+    "translation": "Misafirler geldi; lütfen oturmaları için içeri davet et."
+  },
+  "hsk3-738": {
+    "english": "ders metni",
+    "translation": "Bugünkü ders metni uzun değil; iki kez okuyunca aklımda kaldı."
+  },
+  "hsk3-739": {
+    "english": "klima",
+    "translation": "Çok sıcak; klimayı biraz açalım."
+  },
+  "hsk3-740": {
+    "english": "ağlamak",
+    "translation": "Küçük oğlan annesini bulamayınca üzüntüyle ağlamaya başladı."
+  },
+  "hsk3-741": {
+    "english": "yemek çubukları",
+    "translation": "Bu restoranda yemek çubukları masanın sol tarafında."
+  },
+  "hsk3-742": {
+    "english": "doğal kaynak suyu",
+    "translation": "Doğa yürüyüşüne çıkarken bir şişe doğal kaynak suyu almak iyi olur; yolda dükkan yok."
+  },
+  "hsk3-743": {
+    "english": "-den gelmek / -li olmak",
+    "translation": "Bu yeni sınıf arkadaşı Kanada'dan geliyor ve çok iyi Çince konuşuyor."
+  },
+  "hsk3-744": {
+    "english": "mavi",
+    "translation": "Dışarıda gökyüzü mavi, uzaktaki dağlar da hâlâ görünüyor."
+  },
+  "hsk3-745": {
+    "english": "eski / köklü",
+    "translation": "Bu köklü dükkan otuz yılı aşkın süredir açık, mahalle sakinleri buraya gelmeyi sever."
+  },
+  "hsk3-746": {
+    "english": "yaşlı kişi",
+    "translation": "Parktaki birkaç yaşlı her sabah birlikte tai chi yapar."
+  },
+  "hsk3-747": {
+    "english": "ayrılmak / yola çıkmak",
+    "translation": "Yarın sabah erkenden Pekin'den ayrılıp akşam Şian'a varacağız."
+  },
+  "hsk3-748": {
+    "english": "hediye",
+    "translation": "Büyükannem torunundan gelen hediyeyi alınca o kadar mutlu oldu ki gülümsemesi hiç dinmedi."
+  },
+  "hsk3-749": {
+    "english": "tarih",
+    "translation": "Çin tarihine çok ilgi duyuyor, sergileri görmek için sık sık müzelere gidiyor."
+  },
+  "hsk3-750": {
+    "english": "yüz",
+    "translation": "Yüzünü yıkadıktan sonra annesine kahvaltı hazırlamada yardım etmek için mutfağa gitti."
+  },
+  "hsk3-751": {
+    "english": "pratik yapmak / çalışmak",
+    "translation": "Her gün yarım saat piyano çalışırım, hafta sonları daha uzun çalışırım."
+  },
+  "hsk3-752": {
+    "english": "alıştırma / pratik",
+    "translation": "Bu alıştırmada henüz rahat değilim; bu akşam birkaç kez daha çalışmalıyım."
+  },
+  "hsk3-753": {
+    "english": "serin / hoş serinlik",
+    "translation": "Yağmur durunca hava iyice serinledi, yürüyüş için güzel oldu."
+  },
+  "hsk3-754": {
+    "english": "araçlar için ölçü sözcüğü",
+    "translation": "Girişte üç taksi bekliyor, hepsi de boş."
+  },
+  "hsk3-755": {
+    "english": "sohbet etmek / konuşmak",
+    "translation": "Kafede yarım saat sohbet ettikten sonra başka bir randevumuz olduğunu hatırladık."
+  },
+  "hsk3-756": {
+    "english": "sohbet etmek (kuzeyde günlük dil)",
+    "translation": "Dedem akşam yemeğinden sonra komşularla sohbet etmeyi sever, eve ancak hava kararırken döner."
+  },
+  "hsk3-757": {
+    "english": "anlamak / tanımak",
+    "translation": "Üniversitedeyken burada dört yıl yaşadığım için bu şehri iyi tanıyorum."
+  },
+  "hsk3-758": {
+    "english": "komşu",
+    "translation": "Yeni komşumuz taşındıktan sonra bize bir kutu meyve getirdi."
+  },
+  "hsk3-759": {
+    "english": "yurt dışında okumak",
+    "translation": "Mezun olduktan sonra Fransa'da okumak istiyor, önce Fransızca kursuna kaydoldu."
+  },
+  "hsk3-760": {
+    "english": "uluslararası öğrenci",
+    "translation": "Uluslararası öğrenci kütüphanede Çince bir gazete buldu."
+  },
+  "hsk3-761": {
+    "english": "merdiven",
+    "translation": "Merdivenler yeni temizlendi, yürürken dikkatli ol."
+  },
+  "hsk3-762": {
+    "english": "yol kenarı",
+    "translation": "Yol kenarında küçük bir dükkan var; girip su alabiliriz."
+  },
+  "hsk3-763": {
+    "english": "kavşak",
+    "translation": "İlerideki kavşaktan sola dönersen okulu görürsün."
+  },
+  "hsk3-764": {
+    "english": "at",
+    "translation": "Çocuk ilk kez ata binerken biraz gergin ama heyecanlıydı."
+  },
+  "hsk3-765": {
+    "english": "yol / cadde",
+    "translation": "Yağmurdan sonra yol kaygan, bisikleti yavaş sür."
+  },
+  "hsk3-766": {
+    "english": "hemen / derhal",
+    "translation": "Doktor hemen gelecek; lütfen burada biraz bekleyin."
+  },
+  "hsk3-767": {
+    "english": "memnun",
+    "translation": "Misafirler odadan çok memnun kaldı, tekrar geleceklerini söylediler."
+  },
+  "hsk3-768": {
+    "english": "mao (yuanın onda biri)",
+    "translation": "Bu kurşun kalem elli fen; üç tane aldım."
+  },
+  "hsk3-769": {
+    "english": "metre",
+    "translation": "Bu duvar üç metre yüksekliğinde, bu yüzden kitaplık tam sığıyor."
+  },
+  "hsk3-770": {
+    "english": "önünde",
+    "translation": "Kütüphanenin önünde öğrencilerin sık sık dinlendiği açık bir alan var."
+  },
+  "hsk3-771": {
+    "english": "anlamak / açık",
+    "translation": "Çok hızlı konuştun; son cümleyi anlamadım."
+  },
+  "hsk3-772": {
+    "english": "liste / isim listesi",
+    "translation": "Öğretmen yarınki yarışmaya katılan öğrencilerin adlarını listeye yazdı."
+  },
+  "hsk3-773": {
+    "english": "ünlü kişi / tanınmış kişi",
+    "translation": "Bu tanınmış kişi çocuklara kitap okumak için sık sık mahalle kütüphanesine gelir."
+  },
+  "hsk3-774": {
+    "english": "güney",
+    "translation": "Kışın güneye gidince hava genellikle daha sıcak olur."
+  },
+  "hsk3-775": {
+    "english": "zor / güç",
+    "translation": "Bu sınav zor değil; ders metinlerini tekrar etmen yeterli."
+  },
+  "hsk3-776": {
+    "english": "güney bölgesi",
+    "translation": "Güneyde nadiren kar yağar, birçok kişi yeni yılı orada geçirmeyi sever."
+  },
+  "hsk3-777": {
+    "english": "üzgün / üzüntülü",
+    "translation": "Arkadaşının taşınacağını duyunca biraz üzüldü."
+  },
+  "hsk3-778": {
+    "english": "çirkin / görünüşü hoş olmayan",
+    "translation": "Bu giysinin rengi güzel ama görünüşü biraz çirkin."
+  },
+  "hsk3-779": {
+    "english": "erkek / yetişkin erkek",
+    "translation": "O adam her sabah göl kenarında koşar."
+  },
+  "hsk3-780": {
+    "english": "erkek öğrenci",
+    "translation": "Sınıfımızda on iki erkek öğrenci var; kızlar erkeklerden iki kişi fazla."
+  },
+  "hsk3-781": {
+    "english": "zor problem",
+    "translation": "Öğretmen bu zor problemi üç adımda açıkladı, herkes anladı."
+  },
+  "hsk3-782": {
+    "english": "kulağa hoş gelmeyen",
+    "translation": "Üst kattaki müzik o kadar rahatsız edici ki pencereyi kapatmak zorunda kalıyorum."
+  },
+  "hsk3-783": {
+    "english": "sınıf / öğrenim yılı",
+    "translation": "Kız kardeşim bu yıl altıncı sınıfta, gelecek yıl ortaokula başlayacak."
+  },
+  "hsk3-784": {
+    "english": "genç",
+    "translation": "Genç olmasına rağmen kendi kendine bakabiliyor."
+  },
+  "hsk3-785": {
+    "english": "inek / öküz",
+    "translation": "Dağdaki inekler çayırda yavaşça otluyor."
+  },
+  "hsk3-786": {
+    "english": "çok çalışmak / çabalamak",
+    "translation": "İstediği üniversiteye girebilmek umuduyla her gün çok çalışıyor."
+  },
+  "hsk3-787": {
+    "english": "kadın",
+    "translation": "Kadın kucağında bir çocukla istasyonda ailesini bekliyordu."
+  },
+  "hsk3-788": {
+    "english": "kız öğrenci",
+    "translation": "Okulumuzda çok kız öğrenci var, futbol takımında da epey kız var."
+  },
+  "hsk3-789": {
+    "english": "tırmanmak / emeklemek",
+    "translation": "Küçük çocuk sandalyeye tutunup yavaşça kanepeye tırmandı."
+  },
+  "hsk3-790": {
+    "english": "korkmak",
+    "translation": "Karanlıktan korktuğu için gece küçük bir ışığı açık bırakıyor."
+  },
+  "hsk3-791": {
+    "english": "fotoğraf çekmek",
+    "translation": "Eski şehir kapısının yanında çok kişi fotoğraf çeker, erkenden gitmek iyi olur."
+  },
+  "hsk3-792": {
+    "english": "tabak",
+    "translation": "Yemekten sonra lütfen tabakları mutfak lavabosuna koy."
+  },
+  "hsk3-793": {
+    "english": "şişman / kilolu",
+    "translation": "Bu kedi son zamanlarda çok yiyor, çok daha şişman görünüyor."
+  },
+  "hsk3-794": {
+    "english": "bira",
+    "translation": "Bu küçük dükkanda yerel biranın yanı sıra meyve suyu ve çay da var."
+  },
+  "hsk3-795": {
+    "english": "genellikle / günlük yaşamda",
+    "translation": "Genellikle işe otobüsle giderim, yalnızca yağmur yağdığında taksiye binerim."
+  },
+  "hsk3-796": {
+    "english": "şişe",
+    "translation": "Masada iki şişe var, birinde su, diğerinde süt var."
+  },
+  "hsk3-797": {
+    "english": "binmek (hayvan veya bisiklet)",
+    "translation": "Bu hafta sonu hava güzel, çiçekleri görmek için kırsala bisikletle gidiyoruz."
+  },
+  "hsk3-798": {
+    "english": "garip / tuhaf",
+    "translation": "Tuhaf: kapı kesinlikle kilitliydi ama kedi ortada yok."
+  },
+  "hsk3-799": {
+    "english": "aslında / gerçekte",
+    "translation": "Sessiz görünüyor ama aslında şaka anlatmayı çok seviyor."
+  },
+  "hsk3-800": {
+    "english": "diğer / diğerleri",
+    "translation": "Bu kitap dışında diğerlerinin hepsini bitirdim."
+  },
+  "hsk3-801": {
+    "english": "kalkmak / ayağa kalkmak",
+    "translation": "Her gün altıda kalkarım, bir bardak su içerim, sonra çıkarım."
+  },
+  "hsk3-802": {
+    "english": "havalanmak (uçak)",
+    "translation": "Uçak onda kalkıyor, bu yüzden havaalanına dokuzdan önce varmalıyız."
+  },
+  "hsk3-803": {
+    "english": "araba / otomobil",
+    "translation": "Yağmurda trafik yoğun, yavaş sür."
+  },
+  "hsk3-804": {
+    "english": "kurşun kalem",
+    "translation": "Sınavda bu formu yalnızca siyah kurşun kalemle doldurabilirsiniz."
+  },
+  "hsk3-805": {
+    "english": "evvelki yıl",
+    "translation": "Evvelki yılın kışında Harbin'de yoğun kar gördük."
+  },
+  "hsk3-806": {
+    "english": "evvelsi gün",
+    "translation": "Evvelsi gün kitapçıda eski Çince öğretmenime rastladım."
+  },
+  "hsk3-807": {
+    "english": "açık / açıkça",
+    "translation": "Harita açıkça işaretlenmiş, bu yüzden yolu kolayca bulduk."
+  },
+  "hsk3-808": {
+    "english": "izin istemek",
+    "translation": "Ateşi olduğu için öğretmeni arayıp bir günlük izin istedi."
+  },
+  "hsk3-809": {
+    "english": "ısmarlamak / masrafını karşılamak",
+    "translation": "Bu sefer benden; istediğinizi sipariş edin."
+  },
+  "hsk3-810": {
+    "english": "sonbahar",
+    "translation": "Sonbaharda sabah ve akşam biraz serin olur, ceket almak iyi olur."
+  },
+  "hsk3-811": {
+    "english": "spor sahası / top sahası",
+    "translation": "Okuldan sonra çocuklar hava kararana kadar sahada futbol oynar."
+  },
+  "hsk3-812": {
+    "english": "etek",
+    "translation": "Arkadaşının doğum günü partisine mavi etek giydi."
+  },
+  "hsk3-813": {
+    "english": "sonra / ardından",
+    "translation": "Önce sebzeleri yıka, sonra küçük parçalara kes."
+  },
+  "hsk3-814": {
+    "english": "sıcakkanlı / misafirperver",
+    "translation": "Bu pansiyonun sahibi çok misafirperver, akşam bize çay bile yaptı."
+  },
+  "hsk3-815": {
+    "english": "tanımak / görünce bilmek",
+    "translation": "O doktoru tanıyorum; daha önce beni tedavi etti."
+  },
+  "hsk3-816": {
+    "english": "düşünmek / inanmak",
+    "translation": "Bence cevap vermeden önce soruyu anlamak daha iyi."
+  },
+  "hsk3-817": {
+    "english": "ciddi / özenli",
+    "translation": "Sınava ciddi hazırlanıyor, her gün plana göre tekrar yapıyor."
+  },
+  "hsk3-818": {
+    "english": "kolay / basit",
+    "translation": "Bu yemeği yapmak kolay, yarım saatte hazır olabilir."
+  },
+  "hsk3-819": {
+    "english": "eğer",
+    "translation": "Yarın yağmur yağmazsa gün doğumunu izlemek için dağa çıkacağız."
+  },
+  "hsk3-820": {
+    "english": "şemsiye",
+    "translation": "Kapının yanında bir şemsiye var; çıkarken al."
+  },
+  "hsk3-821": {
+    "english": "süpürmek / temizlemek",
+    "translation": "Kahvaltıdan sonra dışarı çıkmadan önce yeri süpürdüm."
+  },
+  "hsk3-822": {
+    "english": "kanepe",
+    "translation": "Salondaki kanepe yumuşak, dedem sık sık orada oturup gazete okur."
+  },
+  "hsk3-823": {
+    "english": "dağ",
+    "translation": "Hava açık olduğunda dağdan bütün şehri görebiliriz."
+  },
+  "hsk3-824": {
+    "english": "üst giysi",
+    "translation": "Üst giysisini katlayıp gardıroba koydu."
+  },
+  "hsk3-825": {
+    "english": "kaşık",
+    "translation": "Bu çorba çok sıcak; kaşıkla yavaş yavaş iç."
+  },
+  "hsk3-826": {
+    "english": "yanında / yakında",
+    "translation": "Yeni bir şehre taşındıktan sonra arkadaşım yardım etmek için hep yanımdaydı."
+  },
+  "hsk3-827": {
+    "english": "boy",
+    "translation": "Boyu 1,80 metre, basketbol oynarken özellikle çevik."
+  },
+  "hsk3-828": {
+    "english": "ses / tek bir ses",
+    "translation": "Kapının dışından bir tıkırtı geldi, arkadaşımın geldiğini düşündüm."
+  },
+  "hsk3-829": {
+    "english": "yaşam / yaşamak",
+    "translation": "Yurt dışında birkaç yıl yaşadıktan sonra Çincesi hızla ilerledi."
+  },
+  "hsk3-830": {
+    "english": "kızmak / öfkeli",
+    "translation": "Kızma; doğum gününü bilerek unutmadım."
+  },
+  "hsk3-831": {
+    "english": "ses",
+    "translation": "Sesi yumuşaktı, herkes dinlemek için sessizleşti."
+  },
+  "hsk3-832": {
+    "english": "şehir / belediye",
+    "translation": "Suzhou'da çok sayıda ziyaretçi çeken birçok klasik bahçe var."
+  },
+  "hsk3-833": {
+    "english": "denemek / sınamak",
+    "translation": "Bu paltoyu bedenine bakmak için deneyeceğim, uyarsa alacağım."
+  },
+  "hsk3-834": {
+    "english": "oda / bölüm (sonek)",
+    "translation": "Okulumuzda akşam dokuzda kapanan bir okuma odası var."
+  },
+  "hsk3-835": {
+    "english": "dünya",
+    "translation": "Dünyanın dört bir yanındaki insanlar müzik dinlemeyi sever."
+  },
+  "hsk3-836": {
+    "english": "toplamak / kaldırmak",
+    "translation": "Sınavdan sonra öğretmen bütün sınav kağıtlarını topladı."
+  },
+  "hsk3-837": {
+    "english": "almak / ulaşmak",
+    "translation": "Dün ablamdan bir kartpostal aldım."
+  },
+  "hsk3-838": {
+    "english": "dayanmak / katlanmak",
+    "translation": "Odanın sıcağına dayanamadığı için pencereyi açtı."
+  },
+  "hsk3-839": {
+    "english": "zayıf / ince",
+    "translation": "Tatlıyı azalttığından beri biraz kilo verdi."
+  },
+  "hsk3-840": {
+    "english": "görmek / maruz kalmak",
+    "translation": "Bu küçük şehir turistler tarafından çok seviliyor."
+  },
+  "hsk3-841": {
+    "english": "amca / babanın küçük erkek kardeşi",
+    "translation": "Amcam beni her hafta yüzmeye götürür."
+  },
+  "hsk3-842": {
+    "english": "ağaç",
+    "translation": "Avludaki ağaç ilkbaharda çiçek açar, sonbaharda meyve verir."
+  },
+  "hsk3-843": {
+    "english": "matematik",
+    "translation": "Kız kardeşim en çok matematiği sever, çünkü problem çözmeye bayılır."
+  },
+  "hsk3-844": {
+    "english": "fırçalamak / ovalamak",
+    "translation": "Yatmadan önce dişlerini fırçalamayı unutma."
+  },
+  "hsk3-845": {
+    "english": "çift",
+    "translation": "Masanın üstünde temiz bir çift yemek çubuğu var."
+  },
+  "hsk3-846": {
+    "english": "seviye / standart",
+    "translation": "Daha sık Çince radyo dinlemek dinleme seviyeni geliştirebilir."
+  },
+  "hsk3-847": {
+    "english": "şoför / sürücü",
+    "translation": "Şoför emniyet kemerlerimizi takmamızı hatırlattı."
+  },
+  "hsk3-848": {
+    "english": "dört mevsim",
+    "translation": "Bu şehirde dört mevsim belirgin yaşanır, ilkbahar özellikle güzeldir."
+  },
+  "hsk3-849": {
+    "english": "güneş",
+    "translation": "Güneş çıktı, giysiler hızla kurudu."
+  },
+  "hsk3-850": {
+    "english": "şeker",
+    "translation": "Kahvemi şekersiz içerim."
+  },
+  "hsk3-851": {
+    "english": "özellikle",
+    "translation": "Bugün akşam yemeği özellikle güzel kokuyordu, bu yüzden bir kase daha yedim."
+  },
+  "hsk3-852": {
+    "english": "geliştirmek / yükseltmek",
+    "translation": "Her gün on dakika duyduğunu taklit ederek konuşmak telaffuzunu geliştirebilir."
+  },
+  "hsk3-853": {
+    "english": "spor / beden eğitimi",
+    "translation": "Okulda her hafta iki beden eğitimi dersi var."
+  },
+  "hsk3-854": {
+    "english": "spor salonu",
+    "translation": "Maç yeni spor salonunda yapıldı, seyirciler tribünleri doldurdu."
+  },
+  "hsk3-855": {
+    "english": "tatlı",
+    "translation": "Bu soya sütü biraz tatlı; şeker eklemeye gerek yok."
+  },
+  "hsk3-856": {
+    "english": "zıplamak / atlamak",
+    "translation": "Yavru kedi tek sıçrayışta pencere pervazına çıktı."
+  },
+  "hsk3-857": {
+    "english": "duyduğuna göre / denildiğine göre",
+    "translation": "Bu eriştecinin dana etli eriştesiyle ünlü olduğunu duydum."
+  },
+  "hsk3-858": {
+    "english": "oldukça / epey",
+    "translation": "Bu sokak oldukça sakin, akşam yürüyüşü için güzel."
+  },
+  "hsk3-859": {
+    "english": "iş arkadaşı",
+    "translation": "Öğlen iş arkadaşlarımla aşağı inip birlikte yemek yeriz."
+  },
+  "hsk3-860": {
+    "english": "kabul etmek / onaylamak",
+    "translation": "Müdür gelecek hafta bir gün izin almama onay verdi."
+  },
+  "hsk3-861": {
+    "english": "saç",
+    "translation": "Yağmur o kadar şiddetliydi ki saçlarım ıslandı."
+  },
+  "hsk3-862": {
+    "english": "aniden",
+    "translation": "Tam ayrılmak üzereyken elektrik aniden kesildi."
+  },
+  "hsk3-863": {
+    "english": "kütüphane",
+    "translation": "Sınavlardan önce sık sık kütüphanede dokuza kadar çalışırım."
+  },
+  "hsk3-864": {
+    "english": "bacak",
+    "translation": "İki saat bisiklet sürdükten sonra bacaklarım biraz ağrıyor."
+  },
+  "hsk3-865": {
+    "english": "başka şehir / memleket dışı",
+    "translation": "İş için başka bir şehirden Pekin'e yeni taşındı, çevreyi henüz tanımıyor."
+  },
+  "hsk3-866": {
+    "english": "paket yemek / yemek teslimatı",
+    "translation": "Bugün çok meşguldük, bu yüzden dışarıdan yemek söyledik."
+  },
+  "hsk3-867": {
+    "english": "yabancı dil",
+    "translation": "Yabancı dil öğrenirken önce dinlemeyi, sonra konuşmayı sever."
+  },
+  "hsk3-868": {
+    "english": "tamamlamak / bitirmek",
+    "translation": "Önce raporu bitireceğim, sonra çocuğu almaya gideceğim."
+  },
+  "hsk3-869": {
+    "english": "kase",
+    "translation": "Lütfen bu kaseyi dolaba koy."
+  },
+  "hsk3-870": {
+    "english": "gecikmiş / geç",
+    "translation": "Tren yirmi dakika gecikti, bu yüzden peronda bekledik."
+  },
+  "hsk3-871": {
+    "english": "akşam eğlencesi / gala",
+    "translation": "Okulun yeni yıl partisinde şarkı ve dans gösterileri var."
+  },
+  "hsk3-872": {
+    "english": "tenis",
+    "translation": "Hafta sonu kuzenimle tenis oynadım, iki set kaybettim."
+  },
+  "hsk3-873": {
+    "english": "internet sitesi",
+    "translation": "Ders programını okulun internet sitesinde buldum."
+  },
+  "hsk3-874": {
+    "english": "unutmak",
+    "translation": "Çıkarken anahtarlarını almayı unutma."
+  },
+  "hsk3-875": {
+    "english": "için / uğruna",
+    "translation": "Bu masa küçük çocuklar için tasarlandı."
+  },
+  "hsk3-876": {
+    "english": "-mek için / amacıyla",
+    "translation": "Erken otobüse yetişmek için altıda kalktım."
+  },
+  "hsk3-877": {
+    "english": "tuvalet / banyo",
+    "translation": "Banyonun ışığı bozuk; lütfen ampulü değiştirmeme yardım et."
+  },
+  "hsk3-878": {
+    "english": "kültür",
+    "translation": "Seyahatten önce yerel kültürü öğrenmek insanlarla iletişimi kolaylaştırır."
+  },
+  "hsk3-879": {
+    "english": "oda / ev",
+    "translation": "Oda büyük değil ama bol güneş alıyor."
+  },
+  "hsk3-880": {
+    "english": "batı / batıya",
+    "translation": "Okuldan batıya doğru yürüdük, iki kavşaktan sonra vardık."
+  },
+  "hsk3-881": {
+    "english": "kuzeybatı",
+    "translation": "Evim şehrin kuzeybatısında, tren istasyonundan uzak değil."
+  },
+  "hsk3-882": {
+    "english": "Batı / Batı ülkeleri",
+    "translation": "Batı müziğine çok ilgi duyuyor."
+  },
+  "hsk3-883": {
+    "english": "karpuz",
+    "translation": "Hava sıcak olduğunda ailem soğutulmuş karpuz yemeyi sever."
+  },
+  "hsk3-884": {
+    "english": "güneybatı",
+    "translation": "Bu köy eyalet başkentinin güneybatısında, arabayla üç saat uzaklıkta."
+  },
+  "hsk3-885": {
+    "english": "alışmak / alışkanlık",
+    "translation": "Erken kalkmaya alışığım, her gün altıda koşarım."
+  },
+  "hsk3-886": {
+    "english": "sevmek / hoşlanmak",
+    "translation": "Büyükannem çiçek yetiştirmeyi sever; balkon saksı bitkileriyle dolu."
+  },
+  "hsk3-887": {
+    "english": "çamaşır makinesi",
+    "translation": "Çamaşır makinesi çalışıyor; biraz sonra aç."
+  },
+  "hsk3-888": {
+    "english": "banyo yapmak / duş almak",
+    "translation": "Spordan sonra önce duş alırım, sonra yemek yerim."
+  },
+  "hsk3-889": {
+    "english": "yaz",
+    "translation": "Yazın güneş geç batar, çocuklar sık sık dışarıda oynar."
+  },
+  "hsk3-890": {
+    "english": "önce / ilk olarak",
+    "translation": "Sen önce sipariş ver, ben bize yer bulayım."
+  },
+  "hsk3-891": {
+    "english": "muz",
+    "translation": "Bu muzlar henüz olgunlaşmamış; yarın yiyelim."
+  },
+  "hsk3-892": {
+    "english": "inanmak / güvenmek",
+    "translation": "Kitabı zamanında geri vereceğine inanıyorum."
+  },
+  "hsk3-893": {
+    "english": "kutu / bavul",
+    "translation": "Ayrılmadan önce giysilerini bavula koydu."
+  },
+  "hsk3-894": {
+    "english": "-e doğru / bir kişiden veya kişiye",
+    "translation": "Komşumdan bir şemsiye ödünç aldım."
+  },
+  "hsk3-895": {
+    "english": "benzemek",
+    "translation": "Bu küçük oğlan babasına benziyor."
+  },
+  "hsk3-896": {
+    "english": "fotoğraf makinesi",
+    "translation": "Müzeye girmeden önce fotoğraf makineni kaldır."
+  },
+  "hsk3-897": {
+    "english": "konut sitesi / mahalle",
+    "translation": "Sitenin girişinde yeni bir fırın açıldı."
+  },
+  "hsk3-898": {
+    "english": "dikkatli olmak / dikkat etmek",
+    "translation": "Yerde su var; yürürken dikkat et."
+  },
+  "hsk3-899": {
+    "english": "kampüs / yerleşke",
+    "translation": "İlkbaharda kampüs çiçeklerle dolu olur."
+  },
+  "hsk3-900": {
+    "english": "okul müdürü",
+    "translation": "Müdür açılış töreninde yeni öğrencileri karşıladı."
+  },
+  "hsk3-901": {
+    "english": "ayakkabı",
+    "translation": "Bu ayakkabılar rahat, seyahatte giymeyi planlıyorum."
+  },
+  "hsk3-902": {
+    "english": "içinden / gönlünde",
+    "translation": "Söylemese de içten içe mutluydu."
+  },
+  "hsk3-903": {
+    "english": "yeni yıl",
+    "translation": "Yeni yılın ilk günü bütün aile birlikte Çin mantısı yeriz."
+  },
+  "hsk3-904": {
+    "english": "haberler",
+    "translation": "Babam her sabah kahvaltı yaparken haberleri izler."
+  },
+  "hsk3-905": {
+    "english": "taze",
+    "translation": "Balık yalnızca taze olduğunda lezzetlidir."
+  },
+  "hsk3-906": {
+    "english": "mektup",
+    "translation": "Büyükannem mektubumu alınca hemen beni aradı."
+  },
+  "hsk3-907": {
+    "english": "kredi kartı",
+    "translation": "Bu küçük dükkan kredi kartı kabul etmiyor; yalnızca nakit alıyor."
+  },
+  "hsk3-908": {
+    "english": "olmak / uygun olmak",
+    "translation": "Bu düzenleme bugün için de uygun."
+  },
+  "hsk3-909": {
+    "english": "bagaj / valiz",
+    "translation": "Lütfen binmeden önce bagajınızı kontrol edin."
+  },
+  "hsk3-910": {
+    "english": "ilgi / hobi",
+    "translation": "Fotoğrafçılığa çok ilgi duyuyor, hafta sonları sık sık parkta fotoğraf çekiyor."
+  },
+  "hsk3-911": {
+    "english": "izin yapmak / tatil",
+    "translation": "Babam gelecek ay izin alacak, deniz kıyısına gitmeyi planlıyoruz."
+  },
+  "hsk3-912": {
+    "english": "ihtiyaç duymak / gerekmek",
+    "translation": "Yardıma ihtiyacın olursa beni arayabilirsin."
+  },
+  "hsk3-913": {
+    "english": "seçmek",
+    "translation": "Önce bir renk seçip sonra hangisini alacağına karar verebilirsin."
+  },
+  "hsk3-914": {
+    "english": "seçmek / seçim",
+    "translation": "Üç otele baktıktan sonra istasyona en yakın olanı seçtik."
+  },
+  "hsk3-915": {
+    "english": "okul dönemi / yarıyıl",
+    "translation": "Bu dönem iki yabancı dil dersi aldım."
+  },
+  "hsk3-916": {
+    "english": "diş",
+    "translation": "Dün dişçiye gittim, doktor bu dişin iyi olduğunu söyledi."
+  },
+  "hsk3-917": {
+    "english": "diş fırçası",
+    "translation": "Bu diş fırçası çok eski; yenisini almak istiyorum."
+  },
+  "hsk3-918": {
+    "english": "koyun",
+    "translation": "Dağdaki koyunlar tarlada otluyor."
+  },
+  "hsk3-919": {
+    "english": "yetiştirmek / beslemek",
+    "translation": "İki kedi besliyor, her sabah onlara mama veriyor."
+  },
+  "hsk3-920": {
+    "english": "istemek / gerektirmek / talep etmek",
+    "translation": "Öğretmen ödevlerimizi yarın teslim etmemizi istedi."
+  },
+  "hsk3-921": {
+    "english": "sayfa",
+    "translation": "Bu kitap 300 sayfa, ben şimdiden 80. sayfaya kadar okudum."
+  },
+  "hsk3-922": {
+    "english": "kesinlikle / mutlaka",
+    "translation": "Öğrenci kimliğini mutlaka getir; kütüphaneye girmek için gerekecek."
+  },
+  "hsk3-923": {
+    "english": "toplam / toplamda",
+    "translation": "Toplam altı bilet aldık."
+  },
+  "hsk3-924": {
+    "english": "birlikte",
+    "translation": "Dersten sonra birlikte kahve içmeye gidelim."
+  },
+  "hsk3-925": {
+    "english": "aynı / benzer",
+    "translation": "Bu iki giysinin rengi aynı, yalnızca bedenleri farklı."
+  },
+  "hsk3-926": {
+    "english": "sonra / daha sonra",
+    "translation": "Akşam yemeğinden sonra sık sık yürüyüşe çıkarım."
+  },
+  "hsk3-927": {
+    "english": "önce / eskiden",
+    "translation": "Eskiden Şanghay'da yaşıyordum ama şimdi Hangzhou'ya taşındım."
+  },
+  "hsk3-928": {
+    "english": "ve üzeri / üstünde",
+    "translation": "On yaş ve üzeri çocuklar bu yarışmaya katılabilir."
+  },
+  "hsk3-929": {
+    "english": "dışında / yanı sıra",
+    "translation": "Çincenin yanı sıra Fransızca da konuşuyor."
+  },
+  "hsk3-930": {
+    "english": "sanmak / yanlış düşünmek",
+    "translation": "Bugünü cuma sanıyordum, meğer cumartesi olmuş bile."
+  },
+  "hsk3-931": {
+    "english": "altında / aşağısı",
+    "translation": "On yaşından küçük çocuklar müzeye ücretsiz girebilir."
+  },
+  "hsk3-932": {
+    "english": "sıradan / genellikle",
+    "translation": "Bu restoranın yemekleri sıradan ama fiyatları ucuz."
+  },
+  "hsk3-933": {
+    "english": "-ken / aynı zamanda",
+    "translation": "Yemek yaparken haberleri dinler."
+  },
+  "hsk3-934": {
+    "english": "sürekli / başından beri",
+    "translation": "Seni girişte yarım saat bekledim, hiç göremedim."
+  },
+  "hsk3-935": {
+    "english": "müzik",
+    "translation": "Klasik müzik dinlemeyi severim, birkaç parça da çalabilirim."
+  },
+  "hsk3-936": {
+    "english": "banka",
+    "translation": "Bozuk para almak için bankaya gittim."
+  },
+  "hsk3-937": {
+    "english": "banka kartı",
+    "translation": "Ayrılmadan önce banka kartını cüzdanına koymayı unutma."
+  },
+  "hsk3-938": {
+    "english": "içecek",
+    "translation": "Bu dükkanda sıcak çay, meyve suyu ve başka içecekler var."
+  },
+  "hsk3-939": {
+    "english": "-malı / -meli / gerek",
+    "translation": "Dışarıda yağmur yağıyor; şemsiye almalısın."
+  },
+  "hsk3-940": {
+    "english": "etkilemek / etki",
+    "translation": "Akşam çok kahve içmek uykunu etkileyebilir."
+  },
+  "hsk3-941": {
+    "english": "kullanmak / ile",
+    "translation": "Yazmak için bu kalemi kullan; rengi daha kolay görülüyor."
+  },
+  "hsk3-942": {
+    "english": "e-posta / mektup",
+    "translation": "Okuldan az önce bir e-posta aldım."
+  },
+  "hsk3-943": {
+    "english": "turist",
+    "translation": "Bu eski şehre her yaz çok turist gelir."
+  },
+  "hsk3-944": {
+    "english": "oyun / oynamak",
+    "translation": "Yağmur yağdığında çocuklar evde oyun oynar."
+  },
+  "hsk3-945": {
+    "english": "e-posta kutusu / posta kutusu",
+    "translation": "Lütfen fotoğrafları e-posta kutuma gönder."
+  },
+  "hsk3-946": {
+    "english": "ile ilgili / ilişkin",
+    "translation": "Bu kuralların hepsi güvenlikle ilgili."
+  },
+  "hsk3-947": {
+    "english": "ünlü / tanınmış",
+    "translation": "Bu restoran çorbasıyla ünlü, birçok kişi sırf denemek için geliyor."
+  },
+  "hsk3-948": {
+    "english": "yararlı / kullanışlı",
+    "translation": "Bu harita kullanışlı; ilk kez gelenlerin kaybolma olasılığını azaltır."
+  },
+  "hsk3-949": {
+    "english": "yine / tekrar",
+    "translation": "Yağmur durdu, güneş tekrar çıktı."
+  },
+  "hsk3-950": {
+    "english": "badminton",
+    "translation": "Arkadaşımla haftada iki kez badminton oynarım."
+  },
+  "hsk3-951": {
+    "english": "dil",
+    "translation": "Yeni bir dil öğrenmek sabır ve pratik gerektirir."
+  },
+  "hsk3-952": {
+    "english": "yağmurluk",
+    "translation": "Hava tahmini bu öğleden sonra yağmur yağacağını söylüyor; çıkmadan önce yağmurluk al."
+  },
+  "hsk3-953": {
+    "english": "karşılaşmak / rastlamak",
+    "translation": "Süpermarkette eski bir sınıf arkadaşıma rastladım."
+  },
+  "hsk3-954": {
+    "english": "karşılaşmak / denk gelmek",
+    "translation": "Aşağı inerken tesadüfen ev sahibiyle karşılaştım."
+  },
+  "hsk3-955": {
+    "english": "bahçe / park",
+    "translation": "Çocuklar parkta topun peşinden koşuyor."
+  },
+  "hsk3-956": {
+    "english": "üye / çalışan",
+    "translation": "Yeni çalışanın ilk iş gününde herkes ona içtenlikle yardım etti."
+  },
+  "hsk3-957": {
+    "english": "istekli olmak / razı olmak",
+    "translation": "İstersen birlikte konuşma pratiği yapabiliriz."
+  },
+  "hsk3-958": {
+    "english": "gittikçe / ne kadar ... o kadar",
+    "translation": "Saat ilerledikçe sokaktaki araba sayısı azalıyor."
+  },
+  "hsk3-959": {
+    "english": "ay",
+    "translation": "Bu gece ay büyük ve parlak."
+  },
+  "hsk3-960": {
+    "english": "spor şenliği / atletizm yarışları",
+    "translation": "Okulun spor şenliği gelecek hafta, sınıfımız bayrak yarışına katılacak."
+  },
+  "hsk3-961": {
+    "english": "sporcu / atlet",
+    "translation": "O sporcu her gün altı saat antrenman yapıyor."
+  },
+  "hsk3-962": {
+    "english": "biz (sen de dahil)",
+    "translation": "Önce yemek yiyelim, sonra birlikte film izlemeye gidelim."
+  },
+  "hsk3-963": {
+    "english": "kirli",
+    "translation": "Ayakkabıların kirli; içeri girmeden önce sil."
+  },
+  "hsk3-964": {
+    "english": "ne yapmalı / ne yapacağız?",
+    "translation": "Tren biletleri tükenmiş. Şimdi ne yapacağız?"
+  },
+  "hsk3-965": {
+    "english": "nasıl / ne şekilde",
+    "translation": "Sence bu yemek nasıl daha lezzetli yapılabilir?"
+  },
+  "hsk3-966": {
+    "english": "ayakta durmak",
+    "translation": "Lütfen kapının yanında biraz dur; hemen döneceğim."
+  },
+  "hsk3-967": {
+    "english": "düz nesneler için ölçü sözcüğü",
+    "translation": "Adresi yazabilmem için lütfen bana iki yaprak kağıt ver."
+  },
+  "hsk3-968": {
+    "english": "büyümek",
+    "translation": "Çocuk hızla büyüyor; geçen yıl aldığımız giysiler şimdiden küçük geliyor."
+  },
+  "hsk3-969": {
+    "english": "kaygılanmak / endişelenmek",
+    "translation": "Endişelenme; otobüsün gelmesine daha beş dakika var."
+  },
+  "hsk3-970": {
+    "english": "üzerine ışık vurmak / aydınlatmak",
+    "translation": "Sabah güneşi odaya vurup masayı aydınlatıyor."
+  },
+  "hsk3-971": {
+    "english": "bakmak / ilgilenmek",
+    "translation": "İş seyahatindeyken yavru kediye komşum baktı."
+  },
+  "hsk3-972": {
+    "english": "fotoğraf / resim",
+    "translation": "Bu fotoğraf geçen yıl deniz kıyısında çekildi."
+  },
+  "hsk3-973": {
+    "english": "fotoğraf çekmek",
+    "translation": "Turistler eski şehir kapısının yanında fotoğraf çekiyor, arkalarında uzun bir kuyruk oluştu."
+  },
+  "hsk3-974": {
+    "english": "-e kadar / ancak",
+    "translation": "Doktor işini ancak akşam sekizde bitirebildi."
+  },
+  "hsk3-975": {
+    "english": "yalnızca / sadece",
+    "translation": "Yanımda yalnızca bir kitap getirdim; diğer her şey evde."
+  },
+  "hsk3-976": {
+    "english": "kağıt",
+    "translation": "Masada kağıt ve kalem var; yazabilirsin."
+  },
+  "hsk3-977": {
+    "english": "ancak yapabilmek / yalnızca ... yapabilmek",
+    "translation": "Bugün yağmur yağıyor, bu yüzden ancak evde film izleyebiliriz."
+  },
+  "hsk3-978": {
+    "english": "sadece / yalnızca",
+    "translation": "Sadece sormak istedim; şikayet etmeye gelmedim."
+  },
+  "hsk3-979": {
+    "english": "yeter ki / koşuluyla",
+    "translation": "Her gün pratik yaptığın sürece telaffuzun gelişir."
+  },
+  "hsk3-980": {
+    "english": "yalnızca / sadece ... var",
+    "translation": "Sınıfta yalnızca üç kişi var; diğerleri henüz gelmedi."
+  },
+  "hsk3-981": {
+    "english": "sırasında / esnasında",
+    "translation": "Haberi toplantı sırasında duydum."
+  },
+  "hsk3-982": {
+    "english": "orta / merkez",
+    "translation": "Postane okul ile bankanın arasında."
+  },
+  "hsk3-983": {
+    "english": "sonunda / nihayet",
+    "translation": "Uzun süre aradıktan sonra kitabı sonunda rafta bulduk."
+  },
+  "hsk3-984": {
+    "english": "tür / çeşit",
+    "translation": "Bu tür çayı denemek ister misin?"
+  },
+  "hsk3-985": {
+    "english": "önemli",
+    "translation": "Sekiz saat uyumak çocuklar için çok önemli."
+  },
+  "hsk3-986": {
+    "english": "hafta sonu",
+    "translation": "Bu hafta sonu büyükannemi ziyaret etmeyi planlıyorum."
+  },
+  "hsk3-987": {
+    "english": "ana / başlıca",
+    "translation": "Bu caddedeki başlıca dükkanlar dokuzda açılır."
+  },
+  "hsk3-988": {
+    "english": "dikkat etmek / önem vermek",
+    "translation": "Karşıdan karşıya geçerken trafiğe dikkat et."
+  },
+  "hsk3-989": {
+    "english": "hastaneye yatmak",
+    "translation": "Dedem hastaneye yattıktan sonra aile her gün sırayla onu ziyaret etti."
+  },
+  "hsk3-990": {
+    "english": "sözlük",
+    "translation": "Bu karakteri bilmiyorum, sözlükten bakmam gerekiyor."
+  },
+  "hsk3-991": {
+    "english": "bisiklet",
+    "translation": "Hava güzel; bisikletle nehre gidelim."
+  },
+  "hsk3-992": {
+    "english": "isim soneki (桌子 sözcüğündeki gibi)",
+    "translation": "Lütfen masayı pencerenin yanına koy."
+  },
+  "hsk3-993": {
+    "english": "hep / toplam",
+    "translation": "Şemsiyemi hep ofiste unutuyorum."
+  },
+  "hsk3-994": {
+    "english": "her zaman / daima",
+    "translation": "Otobüs her zaman vaktinde gelir."
+  },
+  "hsk3-995": {
+    "english": "ağız",
+    "translation": "Gülerken ağzını eliyle kapatır."
+  },
+  "hsk3-996": {
+    "english": "en iyisi / iyi olur",
+    "translation": "Akşam çok fazla kahve içmemek en iyisi."
+  },
+  "hsk3-997": {
+    "english": "son / sonunda",
+    "translation": "Herkes oy verdikten sonra sonunda kırmızı seçeneği seçtiler."
+  },
+  "hsk3-998": {
+    "english": "son zamanlarda / yakınlarda",
+    "translation": "Son zamanlarda havalar ısındı, bu yüzden sabahları sık sık parkta koşuyorum."
+  },
+  "hsk3-999": {
+    "english": "misafirliğe gitmek",
+    "translation": "Pazar günü Öğretmen Wang'a misafirliğe gidiyorum."
+  },
+  "hsk3-1000": {
+    "english": "ev ödevi / görev",
+    "translation": "Akşam yemeğinden sonra erkek kardeşim ödevini yapmak için oturdu."
+  }
+}

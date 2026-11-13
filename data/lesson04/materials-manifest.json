@@ -1,0 +1,35 @@
+{
+  "sourceSha256": "323f6741d68f4e4863fbffe7289c78255663f18a02f9303131ee4505c3be0ce8",
+  "documents": [
+    {
+      "file": "guide-en.pdf",
+      "pages": 14,
+      "sha256": "188cb1046ad414d104fe996a5ecccac692ba833a371170db93e908e8c26dff7a"
+    },
+    {
+      "file": "guide-fr.pdf",
+      "pages": 14,
+      "sha256": "ecb385bdb365f8b3de40e0c1826223e127a68e8f361aed72c355c8ef97ca7536"
+    },
+    {
+      "file": "guide-ru.pdf",
+      "pages": 14,
+      "sha256": "74896235dfb483b8564c16693eb3fa0b3a378f73c8f901c0ec2105cc068c6993"
+    },
+    {
+      "file": "workbook-en.pdf",
+      "pages": 36,
+      "sha256": "a283b3c650f248a880159b6957b9e07108f5b1a0a6923f9a4b314f65c837e504"
+    },
+    {
+      "file": "workbook-fr.pdf",
+      "pages": 36,
+      "sha256": "22a8ee819744beee127a43f500bbd2722e1fa5ccff4eac41763bb000f11eb7e2"
+    },
+    {
+      "file": "workbook-ru.pdf",
+      "pages": 36,
+      "sha256": "9433d9d15f4d4497f889ca19de7884abcf44ca67ce9f8690bc322f9b04842c4a"
+    }
+  ]
+}

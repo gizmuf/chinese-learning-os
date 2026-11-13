@@ -1,0 +1,1989 @@
+{
+  "date": "2026-10-26",
+  "title": {
+    "en": "Meet, describe & get ready",
+    "fr": "Se présenter, décrire et se préparer",
+    "ru": "Знакомимся, описываем и готовимся"
+  },
+  "topics": [
+    {
+      "id": "meet",
+      "title": {
+        "en": "Meet again, introduce yourself",
+        "fr": "Se retrouver et se présenter",
+        "ru": "Встреча и знакомство"
+      },
+      "note": {
+        "en": "我叫 + name introduces you. 也 goes before the predicate: 我也很高兴. 自己 means “oneself”; 一下 makes an action brief or softens a request. 好久不见 is a greeting after time apart. In speech, 不 before a fourth tone becomes bú; dictionaries still list bù.",
+        "fr": "我叫 + prénom sert à se présenter. 也 précède le prédicat : 我也很高兴. 自己 signifie « soi-même » ; 一下 indique une action brève ou adoucit une demande. 好久不见 se dit après une longue séparation. À l’oral, 不 devant un quatrième ton devient bú ; le dictionnaire indique bù.",
+        "ru": "我叫 + имя — представление. 也 стоит перед сказуемым: 我也很高兴. 自己 — «сам, себя»; 一下 обозначает краткость или смягчает просьбу. 好久不见 говорят после долгой разлуки. Перед четвёртым тоном 不 произносится bú; словарный тон — bù."
+      },
+      "photos": [
+        72,
+        76,
+        82,
+        83
+      ]
+    },
+    {
+      "id": "both",
+      "title": {
+        "en": "Two qualities, one pattern",
+        "fr": "Deux qualités, une construction",
+        "ru": "Два качества — одна конструкция"
+      },
+      "note": {
+        "en": "又 A 又 B and 既 A 又 B connect two descriptions of the same subject. Practise a complete frame, then replace one block. 不 stays inside the second description in 又贵又不好吃. These frames can also join suitable actions; they are not restricted to positive adjectives.",
+        "fr": "又 A 又 B et 既 A 又 B relient deux descriptions du même sujet. Réutilisez la structure entière en changeant un bloc. 不 reste dans la seconde description : 又贵又不好吃. Ces structures peuvent aussi relier certaines actions ; elles ne sont pas réservées aux adjectifs positifs.",
+        "ru": "又 A 又 B и 既 A 又 B соединяют два описания одного предмета. Выучите рамку и меняйте один блок. 不 остаётся внутри второго описания: 又贵又不好吃. Эти конструкции могут соединять и подходящие действия; они не ограничены положительными прилагательными."
+      },
+      "photos": [
+        80,
+        82,
+        88
+      ]
+    },
+    {
+      "id": "senses",
+      "title": {
+        "en": "What your senses suggest",
+        "fr": "Ce que suggèrent les sens",
+        "ru": "Что подсказывают чувства"
+      },
+      "note": {
+        "en": "看 / 听 / 闻 / 尝 + 起来 + description reports an impression: looks, sounds, smells or tastes. Here 起来 does not mean “stand up”. 好听 describes a pleasant sound; 好吃 describes pleasant food. 首 counts songs. Compare 问 wèn “ask” and 闻 wén “smell”: tone and written component both differ.",
+        "fr": "看 / 听 / 闻 / 尝 + 起来 + description exprime une impression visuelle, sonore, olfactive ou gustative. Ici, 起来 ne signifie pas « se lever ». 好听 concerne un son agréable ; 好吃, un aliment. 首 compte les chansons. Comparez 问 wèn « demander » et 闻 wén « sentir » : le ton et le composant écrit diffèrent.",
+        "ru": "看 / 听 / 闻 / 尝 + 起来 + описание передаёт впечатление: выглядит, звучит, пахнет, на вкус. Здесь 起来 не означает «встать». 好听 — о приятном звуке; 好吃 — о вкусной еде. 首 — счётное слово для песен. Сравните 问 wèn «спрашивать» и 闻 wén «нюхать»: различаются тон и компонент."
+      },
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "ready",
+      "title": {
+        "en": "Feelings, time to prepare, ready",
+        "fr": "Émotions et préparation",
+        "ru": "Чувства и готовность"
+      },
+      "note": {
+        "en": "Learn 高兴 gāoxìng and 兴奋 xīngfèn as whole words: 兴 has different readings. 让 + person + description means “make someone feel…”. 准备好 means “get ready”; in 我准备好了, 好 gives the achieved result and 了 marks the new situation. It is not a general past-tense ending. 十五分钟 is a duration; 十五分钟后 is a later point.",
+        "fr": "Apprenez 高兴 gāoxìng et 兴奋 xīngfèn comme des mots entiers : 兴 change de lecture. 让 + personne + description signifie « rendre quelqu’un… ». 准备好 signifie « être prêt » ; dans 我准备好了, 好 exprime le résultat et 了 la nouvelle situation, pas un passé général. 十五分钟 est une durée ; 十五分钟后, un moment ultérieur.",
+        "ru": "Учите 高兴 gāoxìng и 兴奋 xīngfèn целиком: чтение 兴 меняется. 让 + человек + описание — «вызывать у кого-то состояние». 准备好 — «подготовиться»; в 我准备好了 好 указывает достигнутый результат, 了 — новую ситуацию, а не общее прошедшее время. 十五分钟 — длительность, 十五分钟后 — момент позже."
+      },
+      "photos": [
+        89,
+        90,
+        99
+      ]
+    },
+    {
+      "id": "time",
+      "title": {
+        "en": "After, days and generations",
+        "fr": "Après, les jours et les générations",
+        "ru": "После, дни и поколения"
+      },
+      "note": {
+        "en": "Put 后 after a time or event: 八点后, 饭后, 十五分钟后. Compare Lesson 3’s 昨天 / 明天 with the new greeting 明天见. 90后 names people born in 1990–1999, not an age. 白 bái “white”, 百 bǎi “hundred” and 自 zì “self” need separate readings. The walking proverb is a traditional saying, not a medical promise; sunrise and sunset times vary.",
+        "fr": "后 suit un moment ou un événement : 八点后, 饭后, 十五分钟后. Retrouvez 昨天 / 明天 de la leçon 3 dans 明天见. 90后 désigne les personnes nées de 1990 à 1999, pas un âge. 白 bái « blanc », 百 bǎi « cent » et 自 zì « soi » se lisent différemment. Le proverbe sur la marche n’est pas une promesse médicale ; les heures du lever et du coucher du soleil varient.",
+        "ru": "后 ставится после времени или события: 八点后, 饭后, 十五分钟后. Вспомните 昨天 / 明天 из урока 3 в новом 明天见. 90后 — люди, родившиеся в 1990–1999 годах, а не возраст. Различайте 白 bái «белый», 百 bǎi «сто» и 自 zì «сам». Пословица о ходьбе — не медицинское обещание; время восхода и заката меняется."
+      },
+      "photos": [
+        72,
+        74,
+        76,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "classroom",
+      "title": {
+        "en": "Follow a short conversation",
+        "fr": "Suivre une courte conversation",
+        "ru": "Понимаем короткий разговор"
+      },
+      "note": {
+        "en": "Read in small meaning groups, not character by character. 在 + place + action recalls Lesson 4; 在…中 means “in/during…” in the new context. …的时候 gives a time setting, 或者 offers an alternative. 变得 + adjective describes a change. The classroom video fragments are grouped into complete practice sentences; added endings are labelled as extensions.",
+        "fr": "Lisez par petits groupes de sens. 在 + lieu + action rappelle la leçon 4 ; 在…中 signifie ici « dans/pendant… ». …的时候 situe le moment ; 或者 propose une alternative. 变得 + adjectif décrit un changement. Les fragments de la vidéo du cours sont complétés pour la pratique ; les ajouts sont signalés.",
+        "ru": "Читайте смысловыми группами. 在 + место + действие напоминает урок 4; 在…中 в новом контексте — «в/во время…». …的时候 задаёт время, 或者 предлагает альтернативу. 变得 + прилагательное обозначает изменение. Фрагменты видео дополнены до учебных предложений; добавления отмечены."
+      },
+      "photos": [
+        84,
+        85,
+        86,
+        87,
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "id": "c05-t01",
+      "topic": "meet",
+      "hanzi": "好久不见",
+      "pinyin": "hǎo jiǔ bú jiàn",
+      "meaning": {
+        "en": "long time no see",
+        "fr": "ça fait longtemps",
+        "ru": "давно не виделись"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        76,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "id": "c05-t02",
+      "topic": "meet",
+      "hanzi": "明天见",
+      "pinyin": "míngtiān jiàn",
+      "meaning": {
+        "en": "see you tomorrow",
+        "fr": "à demain",
+        "ru": "до завтра"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        76,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "id": "c05-t03",
+      "topic": "meet",
+      "hanzi": "认识",
+      "pinyin": "rènshi",
+      "meaning": {
+        "en": "to know; to meet",
+        "fr": "connaître ; faire connaissance",
+        "ru": "знать; знакомиться"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        76,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "id": "c05-t04",
+      "topic": "meet",
+      "hanzi": "高兴",
+      "pinyin": "gāoxìng",
+      "meaning": {
+        "en": "happy; pleased",
+        "fr": "content ; heureux",
+        "ru": "радостный; довольный"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        76,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "id": "c05-t05",
+      "topic": "meet",
+      "hanzi": "也",
+      "pinyin": "yě",
+      "meaning": {
+        "en": "also; too",
+        "fr": "aussi",
+        "ru": "тоже"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        76,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "id": "c05-t06",
+      "topic": "meet",
+      "hanzi": "自己",
+      "pinyin": "zìjǐ",
+      "meaning": {
+        "en": "oneself",
+        "fr": "soi-même",
+        "ru": "сам; себя"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        76,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "id": "c05-t07",
+      "topic": "meet",
+      "hanzi": "介绍",
+      "pinyin": "jièshào",
+      "meaning": {
+        "en": "to introduce",
+        "fr": "présenter",
+        "ru": "представлять; знакомить"
+      },
+      "source": "video",
+      "photos": [
+        72,
+        76,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "id": "c05-t08",
+      "topic": "meet",
+      "hanzi": "一下",
+      "pinyin": "yíxià",
+      "meaning": {
+        "en": "briefly; a little",
+        "fr": "un instant ; un peu",
+        "ru": "немного; ненадолго"
+      },
+      "source": "video",
+      "photos": [
+        72,
+        76,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "id": "c05-t09",
+      "topic": "meet",
+      "hanzi": "欢迎",
+      "pinyin": "huānyíng",
+      "meaning": {
+        "en": "to welcome",
+        "fr": "accueillir ; bienvenue",
+        "ru": "приветствовать; добро пожаловать"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        76,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "id": "c05-t10",
+      "topic": "meet",
+      "hanzi": "欢迎光临",
+      "pinyin": "huānyíng guānglín",
+      "meaning": {
+        "en": "welcome (to a shop or venue)",
+        "fr": "bienvenue (dans un établissement)",
+        "ru": "добро пожаловать (в заведение)"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        76,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "id": "c05-t11",
+      "topic": "meet",
+      "hanzi": "来到",
+      "pinyin": "láidào",
+      "meaning": {
+        "en": "to arrive at; come to",
+        "fr": "arriver à ; venir à",
+        "ru": "прибывать; приходить в"
+      },
+      "source": "video",
+      "photos": [
+        72,
+        76,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "id": "c05-t12",
+      "topic": "meet",
+      "hanzi": "回到",
+      "pinyin": "huídào",
+      "meaning": {
+        "en": "to return to",
+        "fr": "retourner à",
+        "ru": "возвращаться в"
+      },
+      "source": "video",
+      "photos": [
+        72,
+        76,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "id": "c05-t13",
+      "topic": "both",
+      "hanzi": "又",
+      "pinyin": "yòu",
+      "meaning": {
+        "en": "both… (in 又…又…); again",
+        "fr": "à la fois… (又…又…) ; encore",
+        "ru": "и… (в 又…又…); снова"
+      },
+      "source": "board",
+      "photos": [
+        80,
+        82,
+        88
+      ]
+    },
+    {
+      "id": "c05-t14",
+      "topic": "both",
+      "hanzi": "既",
+      "pinyin": "jì",
+      "meaning": {
+        "en": "both… (in 既…又…)",
+        "fr": "à la fois… (既…又…)",
+        "ru": "и… (в 既…又…)"
+      },
+      "source": "board",
+      "photos": [
+        80,
+        82,
+        88
+      ]
+    },
+    {
+      "id": "c05-t15",
+      "topic": "both",
+      "hanzi": "便宜",
+      "pinyin": "piányi",
+      "meaning": {
+        "en": "inexpensive",
+        "fr": "bon marché",
+        "ru": "недорогой"
+      },
+      "source": "board",
+      "photos": [
+        80,
+        82,
+        88
+      ]
+    },
+    {
+      "id": "c05-t16",
+      "topic": "both",
+      "hanzi": "贵",
+      "pinyin": "guì",
+      "meaning": {
+        "en": "expensive",
+        "fr": "cher",
+        "ru": "дорогой"
+      },
+      "source": "board",
+      "photos": [
+        80,
+        82,
+        88
+      ]
+    },
+    {
+      "id": "c05-t17",
+      "topic": "both",
+      "hanzi": "好吃",
+      "pinyin": "hǎochī",
+      "meaning": {
+        "en": "tasty",
+        "fr": "bon (au goût)",
+        "ru": "вкусный"
+      },
+      "source": "board",
+      "photos": [
+        80,
+        82,
+        88
+      ]
+    },
+    {
+      "id": "c05-t18",
+      "topic": "both",
+      "hanzi": "包子",
+      "pinyin": "bāozi",
+      "meaning": {
+        "en": "steamed bun",
+        "fr": "petit pain farci à la vapeur",
+        "ru": "паровая булочка с начинкой"
+      },
+      "source": "board",
+      "photos": [
+        80,
+        82,
+        88
+      ]
+    },
+    {
+      "id": "c05-t19",
+      "topic": "both",
+      "hanzi": "简单",
+      "pinyin": "jiǎndān",
+      "meaning": {
+        "en": "simple",
+        "fr": "simple",
+        "ru": "простой"
+      },
+      "source": "video",
+      "photos": [
+        80,
+        82,
+        88
+      ]
+    },
+    {
+      "id": "c05-t20",
+      "topic": "both",
+      "hanzi": "有趣",
+      "pinyin": "yǒuqù",
+      "meaning": {
+        "en": "interesting; fun",
+        "fr": "intéressant ; amusant",
+        "ru": "интересный; увлекательный"
+      },
+      "source": "video",
+      "photos": [
+        80,
+        82,
+        88
+      ]
+    },
+    {
+      "id": "c05-t21",
+      "topic": "both",
+      "hanzi": "胖",
+      "pinyin": "pàng",
+      "meaning": {
+        "en": "plump; fat",
+        "fr": "rond ; gros",
+        "ru": "полный; толстый"
+      },
+      "source": "board",
+      "photos": [
+        80,
+        82,
+        88
+      ]
+    },
+    {
+      "id": "c05-t22",
+      "topic": "senses",
+      "hanzi": "看起来",
+      "pinyin": "kàn qǐlái",
+      "meaning": {
+        "en": "to look; seem visually",
+        "fr": "avoir l’air",
+        "ru": "выглядеть; казаться на вид"
+      },
+      "source": "board",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-t23",
+      "topic": "senses",
+      "hanzi": "听起来",
+      "pinyin": "tīng qǐlái",
+      "meaning": {
+        "en": "to sound; seem when heard",
+        "fr": "sembler à l’écoute",
+        "ru": "звучать; казаться на слух"
+      },
+      "source": "board",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-t24",
+      "topic": "senses",
+      "hanzi": "闻起来",
+      "pinyin": "wén qǐlái",
+      "meaning": {
+        "en": "to smell (give an impression)",
+        "fr": "sentir (dégager une odeur)",
+        "ru": "пахнуть"
+      },
+      "source": "board",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-t25",
+      "topic": "senses",
+      "hanzi": "尝起来",
+      "pinyin": "cháng qǐlái",
+      "meaning": {
+        "en": "to taste (give an impression)",
+        "fr": "avoir un goût",
+        "ru": "быть на вкус"
+      },
+      "source": "board",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-t26",
+      "topic": "senses",
+      "hanzi": "苹果",
+      "pinyin": "píngguǒ",
+      "meaning": {
+        "en": "apple",
+        "fr": "pomme",
+        "ru": "яблоко"
+      },
+      "source": "board",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-t27",
+      "topic": "senses",
+      "hanzi": "首",
+      "pinyin": "shǒu",
+      "meaning": {
+        "en": "classifier for songs and poems",
+        "fr": "classificateur des chansons et poèmes",
+        "ru": "счётное слово для песен и стихов"
+      },
+      "source": "board",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-t28",
+      "topic": "senses",
+      "hanzi": "歌",
+      "pinyin": "gē",
+      "meaning": {
+        "en": "song",
+        "fr": "chanson",
+        "ru": "песня"
+      },
+      "source": "board",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-t29",
+      "topic": "senses",
+      "hanzi": "好听",
+      "pinyin": "hǎotīng",
+      "meaning": {
+        "en": "pleasant to listen to",
+        "fr": "agréable à écouter",
+        "ru": "приятный на слух"
+      },
+      "source": "board",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-t30",
+      "topic": "senses",
+      "hanzi": "臭豆腐",
+      "pinyin": "chòu dòufu",
+      "meaning": {
+        "en": "stinky tofu",
+        "fr": "tofu fermenté à forte odeur",
+        "ru": "ферментированный тофу с сильным запахом"
+      },
+      "source": "board",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-t31",
+      "topic": "senses",
+      "hanzi": "臭",
+      "pinyin": "chòu",
+      "meaning": {
+        "en": "smelly; stinky",
+        "fr": "malodorant",
+        "ru": "вонючий"
+      },
+      "source": "board",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-t32",
+      "topic": "senses",
+      "hanzi": "问",
+      "pinyin": "wèn",
+      "meaning": {
+        "en": "to ask",
+        "fr": "demander",
+        "ru": "спрашивать"
+      },
+      "source": "board",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-t33",
+      "topic": "senses",
+      "hanzi": "闻",
+      "pinyin": "wén",
+      "meaning": {
+        "en": "to smell; to hear news",
+        "fr": "sentir ; apprendre une nouvelle",
+        "ru": "нюхать; слышать новости"
+      },
+      "source": "board",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-t34",
+      "topic": "ready",
+      "hanzi": "兴奋",
+      "pinyin": "xīngfèn",
+      "meaning": {
+        "en": "excited",
+        "fr": "enthousiaste ; excité",
+        "ru": "воодушевлённый; возбуждённый"
+      },
+      "source": "board",
+      "photos": [
+        89,
+        90,
+        99
+      ]
+    },
+    {
+      "id": "c05-t35",
+      "topic": "ready",
+      "hanzi": "咖啡",
+      "pinyin": "kāfēi",
+      "meaning": {
+        "en": "coffee",
+        "fr": "café",
+        "ru": "кофе"
+      },
+      "source": "board",
+      "photos": [
+        89,
+        90,
+        99
+      ]
+    },
+    {
+      "id": "c05-t36",
+      "topic": "ready",
+      "hanzi": "让",
+      "pinyin": "ràng",
+      "meaning": {
+        "en": "to let; to make someone…",
+        "fr": "laisser ; rendre quelqu’un…",
+        "ru": "позволять; вызывать у кого-то…"
+      },
+      "source": "board",
+      "photos": [
+        89,
+        90,
+        99
+      ]
+    },
+    {
+      "id": "c05-t37",
+      "topic": "ready",
+      "hanzi": "准备",
+      "pinyin": "zhǔnbèi",
+      "meaning": {
+        "en": "to prepare",
+        "fr": "préparer",
+        "ru": "готовить; готовиться"
+      },
+      "source": "board",
+      "photos": [
+        89,
+        90,
+        99
+      ]
+    },
+    {
+      "id": "c05-t38",
+      "topic": "ready",
+      "hanzi": "准备好",
+      "pinyin": "zhǔnbèi hǎo",
+      "meaning": {
+        "en": "to get ready",
+        "fr": "être prêt",
+        "ru": "подготовиться"
+      },
+      "source": "board",
+      "photos": [
+        89,
+        90,
+        99
+      ]
+    },
+    {
+      "id": "c05-t39",
+      "topic": "ready",
+      "hanzi": "分钟",
+      "pinyin": "fēnzhōng",
+      "meaning": {
+        "en": "minute",
+        "fr": "minute",
+        "ru": "минута"
+      },
+      "source": "board",
+      "photos": [
+        89,
+        90,
+        99
+      ]
+    },
+    {
+      "id": "c05-t40",
+      "topic": "ready",
+      "hanzi": "需要",
+      "pinyin": "xūyào",
+      "meaning": {
+        "en": "to need",
+        "fr": "avoir besoin de",
+        "ru": "нуждаться"
+      },
+      "source": "extension",
+      "photos": [
+        89,
+        90,
+        99
+      ]
+    },
+    {
+      "id": "c05-t41",
+      "topic": "time",
+      "hanzi": "后",
+      "pinyin": "hòu",
+      "meaning": {
+        "en": "after; behind",
+        "fr": "après ; derrière",
+        "ru": "после; позади"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        74,
+        76,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-t42",
+      "topic": "time",
+      "hanzi": "饭后",
+      "pinyin": "fàn hòu",
+      "meaning": {
+        "en": "after a meal",
+        "fr": "après le repas",
+        "ru": "после еды"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        74,
+        76,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-t43",
+      "topic": "time",
+      "hanzi": "昨天",
+      "pinyin": "zuótiān",
+      "meaning": {
+        "en": "yesterday",
+        "fr": "hier",
+        "ru": "вчера"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        74,
+        76,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-t44",
+      "topic": "time",
+      "hanzi": "今天",
+      "pinyin": "jīntiān",
+      "meaning": {
+        "en": "today",
+        "fr": "aujourd’hui",
+        "ru": "сегодня"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        74,
+        76,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-t45",
+      "topic": "time",
+      "hanzi": "明天",
+      "pinyin": "míngtiān",
+      "meaning": {
+        "en": "tomorrow",
+        "fr": "demain",
+        "ru": "завтра"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        74,
+        76,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-t46",
+      "topic": "time",
+      "hanzi": "后天",
+      "pinyin": "hòutiān",
+      "meaning": {
+        "en": "the day after tomorrow",
+        "fr": "après-demain",
+        "ru": "послезавтра"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        74,
+        76,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-t47",
+      "topic": "time",
+      "hanzi": "日出",
+      "pinyin": "rìchū",
+      "meaning": {
+        "en": "sunrise",
+        "fr": "lever du soleil",
+        "ru": "восход солнца"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        74,
+        76,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-t48",
+      "topic": "time",
+      "hanzi": "日落",
+      "pinyin": "rìluò",
+      "meaning": {
+        "en": "sunset",
+        "fr": "coucher du soleil",
+        "ru": "закат"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        74,
+        76,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-t49",
+      "topic": "time",
+      "hanzi": "白",
+      "pinyin": "bái",
+      "meaning": {
+        "en": "white",
+        "fr": "blanc",
+        "ru": "белый"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        74,
+        76,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-t50",
+      "topic": "time",
+      "hanzi": "百",
+      "pinyin": "bǎi",
+      "meaning": {
+        "en": "hundred",
+        "fr": "cent",
+        "ru": "сто"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        74,
+        76,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-t51",
+      "topic": "time",
+      "hanzi": "九十九",
+      "pinyin": "jiǔshíjiǔ",
+      "meaning": {
+        "en": "ninety-nine",
+        "fr": "quatre-vingt-dix-neuf",
+        "ru": "девяносто девять"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        74,
+        76,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-t52",
+      "topic": "time",
+      "hanzi": "活",
+      "pinyin": "huó",
+      "meaning": {
+        "en": "to live; alive",
+        "fr": "vivre ; vivant",
+        "ru": "жить; живой"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        74,
+        76,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-t53",
+      "topic": "time",
+      "hanzi": "年代",
+      "pinyin": "niándài",
+      "meaning": {
+        "en": "decade; era",
+        "fr": "décennie ; époque",
+        "ru": "десятилетие; эпоха"
+      },
+      "source": "extension",
+      "photos": [
+        72,
+        74,
+        76,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-t54",
+      "topic": "classroom",
+      "hanzi": "问题",
+      "pinyin": "wèntí",
+      "meaning": {
+        "en": "question; problem",
+        "fr": "question ; problème",
+        "ru": "вопрос; проблема"
+      },
+      "source": "video",
+      "photos": [
+        84,
+        85,
+        86,
+        87,
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-t55",
+      "topic": "classroom",
+      "hanzi": "话题",
+      "pinyin": "huàtí",
+      "meaning": {
+        "en": "topic of conversation",
+        "fr": "sujet de conversation",
+        "ru": "тема разговора"
+      },
+      "source": "video",
+      "photos": [
+        84,
+        85,
+        86,
+        87,
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-t56",
+      "topic": "classroom",
+      "hanzi": "常见",
+      "pinyin": "chángjiàn",
+      "meaning": {
+        "en": "common; often seen",
+        "fr": "courant",
+        "ru": "распространённый"
+      },
+      "source": "video",
+      "photos": [
+        84,
+        85,
+        86,
+        87,
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-t57",
+      "topic": "classroom",
+      "hanzi": "经常",
+      "pinyin": "jīngcháng",
+      "meaning": {
+        "en": "often",
+        "fr": "souvent",
+        "ru": "часто"
+      },
+      "source": "video",
+      "photos": [
+        84,
+        85,
+        86,
+        87,
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-t58",
+      "topic": "classroom",
+      "hanzi": "重要",
+      "pinyin": "zhòngyào",
+      "meaning": {
+        "en": "important",
+        "fr": "important",
+        "ru": "важный"
+      },
+      "source": "video",
+      "photos": [
+        84,
+        85,
+        86,
+        87,
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-t59",
+      "topic": "classroom",
+      "hanzi": "或者",
+      "pinyin": "huòzhě",
+      "meaning": {
+        "en": "or (an alternative)",
+        "fr": "ou (une possibilité)",
+        "ru": "или (вариант)"
+      },
+      "source": "video",
+      "photos": [
+        84,
+        85,
+        86,
+        87,
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-t60",
+      "topic": "classroom",
+      "hanzi": "朋友",
+      "pinyin": "péngyou",
+      "meaning": {
+        "en": "friend",
+        "fr": "ami",
+        "ru": "друг"
+      },
+      "source": "video",
+      "photos": [
+        84,
+        85,
+        86,
+        87,
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-t61",
+      "topic": "classroom",
+      "hanzi": "有时候",
+      "pinyin": "yǒu shíhou",
+      "meaning": {
+        "en": "sometimes",
+        "fr": "parfois",
+        "ru": "иногда"
+      },
+      "source": "video",
+      "photos": [
+        84,
+        85,
+        86,
+        87,
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-t62",
+      "topic": "classroom",
+      "hanzi": "知道",
+      "pinyin": "zhīdào",
+      "meaning": {
+        "en": "to know (a fact)",
+        "fr": "savoir",
+        "ru": "знать (факт)"
+      },
+      "source": "video",
+      "photos": [
+        84,
+        85,
+        86,
+        87,
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-t63",
+      "topic": "classroom",
+      "hanzi": "谈谈",
+      "pinyin": "tán tan",
+      "meaning": {
+        "en": "to talk a little",
+        "fr": "discuter un peu",
+        "ru": "немного поговорить"
+      },
+      "source": "video",
+      "photos": [
+        84,
+        85,
+        86,
+        87,
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-t64",
+      "topic": "classroom",
+      "hanzi": "变得",
+      "pinyin": "biàn de",
+      "meaning": {
+        "en": "to become (before a description)",
+        "fr": "devenir (avant une description)",
+        "ru": "становиться (перед описанием)"
+      },
+      "source": "video",
+      "photos": [
+        84,
+        85,
+        86,
+        87,
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-t65",
+      "topic": "classroom",
+      "hanzi": "课堂",
+      "pinyin": "kètáng",
+      "meaning": {
+        "en": "classroom; class session",
+        "fr": "classe ; cours",
+        "ru": "аудитория; занятие"
+      },
+      "source": "video",
+      "photos": [
+        84,
+        85,
+        86,
+        87,
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "c05-s01",
+      "topic": "meet",
+      "hanzi": "我叫小花。",
+      "pinyin": "Wǒ jiào Xiǎohuā.",
+      "meaning": {
+        "en": "My name is Xiaohua.",
+        "fr": "Je m’appelle Xiaohua.",
+        "ru": "Меня зовут Сяохуа."
+      },
+      "source": "board",
+      "photos": [
+        76,
+        82,
+        83,
+        84,
+        87
+      ]
+    },
+    {
+      "id": "c05-s02",
+      "topic": "meet",
+      "hanzi": "我叫大卫。",
+      "pinyin": "Wǒ jiào Dàwèi.",
+      "meaning": {
+        "en": "My name is David.",
+        "fr": "Je m’appelle David.",
+        "ru": "Меня зовут Давид."
+      },
+      "source": "board",
+      "photos": [
+        76,
+        82,
+        83,
+        84,
+        87
+      ]
+    },
+    {
+      "id": "c05-s03",
+      "topic": "meet",
+      "hanzi": "认识你很高兴。",
+      "pinyin": "Rènshi nǐ hěn gāoxìng.",
+      "meaning": {
+        "en": "Pleased to meet you.",
+        "fr": "Enchanté de faire ta connaissance.",
+        "ru": "Рад с тобой познакомиться."
+      },
+      "source": "board",
+      "photos": [
+        76,
+        82,
+        83,
+        84,
+        87
+      ]
+    },
+    {
+      "id": "c05-s04",
+      "topic": "meet",
+      "hanzi": "认识你我也很高兴。",
+      "pinyin": "Rènshi nǐ wǒ yě hěn gāoxìng.",
+      "meaning": {
+        "en": "I am pleased to meet you too.",
+        "fr": "Moi aussi, je suis ravi de te rencontrer.",
+        "ru": "Я тоже рад с тобой познакомиться."
+      },
+      "source": "board",
+      "photos": [
+        76,
+        82,
+        83,
+        84,
+        87
+      ]
+    },
+    {
+      "id": "c05-s05",
+      "topic": "meet",
+      "hanzi": "请介绍一下你自己。",
+      "pinyin": "Qǐng jièshào yíxià nǐ zìjǐ.",
+      "meaning": {
+        "en": "Please briefly introduce yourself.",
+        "fr": "Présente-toi brièvement, s’il te plaît.",
+        "ru": "Пожалуйста, кратко представься."
+      },
+      "source": "video",
+      "photos": [
+        76,
+        82,
+        83,
+        84,
+        87
+      ]
+    },
+    {
+      "id": "c05-s06",
+      "topic": "meet",
+      "hanzi": "我自己做。",
+      "pinyin": "Wǒ zìjǐ zuò.",
+      "meaning": {
+        "en": "I do it myself.",
+        "fr": "Je le fais moi-même.",
+        "ru": "Я делаю это сам."
+      },
+      "source": "board",
+      "photos": [
+        76,
+        82,
+        83,
+        84,
+        87
+      ]
+    },
+    {
+      "id": "c05-s07",
+      "topic": "meet",
+      "hanzi": "大家好，很高兴来到这里。",
+      "pinyin": "Dàjiā hǎo, hěn gāoxìng láidào zhèlǐ.",
+      "meaning": {
+        "en": "Hello everyone, I am happy to be here.",
+        "fr": "Bonjour à tous, je suis heureux d’être ici.",
+        "ru": "Всем привет, я рад быть здесь."
+      },
+      "source": "video",
+      "photos": [
+        76,
+        82,
+        83,
+        84,
+        87
+      ]
+    },
+    {
+      "id": "c05-s08",
+      "topic": "both",
+      "hanzi": "这个包子又贵又不好吃。",
+      "pinyin": "Zhège bāozi yòu guì yòu bù hǎochī.",
+      "meaning": {
+        "en": "This bun is expensive and not tasty.",
+        "fr": "Ce petit pain est cher et n’est pas bon.",
+        "ru": "Эта булочка и дорогая, и невкусная."
+      },
+      "source": "board",
+      "photos": [
+        80,
+        82,
+        88
+      ]
+    },
+    {
+      "id": "c05-s09",
+      "topic": "both",
+      "hanzi": "这个包子又便宜又好吃。",
+      "pinyin": "Zhège bāozi yòu piányi yòu hǎochī.",
+      "meaning": {
+        "en": "This bun is inexpensive and tasty.",
+        "fr": "Ce petit pain est bon marché et délicieux.",
+        "ru": "Эта булочка и недорогая, и вкусная."
+      },
+      "source": "extension",
+      "photos": [
+        80,
+        82,
+        88
+      ]
+    },
+    {
+      "id": "c05-s10",
+      "topic": "both",
+      "hanzi": "在这里学习中文既简单又有趣。",
+      "pinyin": "Zài zhèlǐ xuéxí Zhōngwén jì jiǎndān yòu yǒuqù.",
+      "meaning": {
+        "en": "Learning Chinese here is both simple and interesting.",
+        "fr": "Apprendre le chinois ici est à la fois simple et intéressant.",
+        "ru": "Учить китайский здесь и просто, и интересно."
+      },
+      "source": "video",
+      "photos": [
+        80,
+        82,
+        88
+      ]
+    },
+    {
+      "id": "c05-s11",
+      "topic": "both",
+      "hanzi": "他又白又胖。",
+      "pinyin": "Tā yòu bái yòu pàng.",
+      "meaning": {
+        "en": "He is fair-skinned and plump.",
+        "fr": "Il a la peau claire et il est rond.",
+        "ru": "Он светлокожий и полный."
+      },
+      "source": "board",
+      "photos": [
+        80,
+        82,
+        88
+      ]
+    },
+    {
+      "id": "c05-s12",
+      "topic": "senses",
+      "hanzi": "这个苹果看起来很好吃。",
+      "pinyin": "Zhège píngguǒ kàn qǐlái hěn hǎochī.",
+      "meaning": {
+        "en": "This apple looks tasty.",
+        "fr": "Cette pomme a l’air bonne.",
+        "ru": "Это яблоко выглядит вкусным."
+      },
+      "source": "board",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-s13",
+      "topic": "senses",
+      "hanzi": "这首歌听起来很好听。",
+      "pinyin": "Zhè shǒu gē tīng qǐlái hěn hǎotīng.",
+      "meaning": {
+        "en": "This song sounds lovely.",
+        "fr": "Cette chanson est agréable à écouter.",
+        "ru": "Эта песня приятно звучит."
+      },
+      "source": "board",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-s14",
+      "topic": "senses",
+      "hanzi": "臭豆腐闻起来很臭。",
+      "pinyin": "Chòu dòufu wén qǐlái hěn chòu.",
+      "meaning": {
+        "en": "Stinky tofu smells strong.",
+        "fr": "Le tofu fermenté sent très fort.",
+        "ru": "Ферментированный тофу сильно пахнет."
+      },
+      "source": "board",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-s15",
+      "topic": "senses",
+      "hanzi": "这个包子尝起来很好吃。",
+      "pinyin": "Zhège bāozi cháng qǐlái hěn hǎochī.",
+      "meaning": {
+        "en": "This bun tastes delicious.",
+        "fr": "Ce petit pain est délicieux.",
+        "ru": "Эта булочка вкусная."
+      },
+      "source": "extension",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-s16",
+      "topic": "senses",
+      "hanzi": "你想问什么问题？",
+      "pinyin": "Nǐ xiǎng wèn shénme wèntí?",
+      "meaning": {
+        "en": "What question do you want to ask?",
+        "fr": "Quelle question veux-tu poser ?",
+        "ru": "Какой вопрос ты хочешь задать?"
+      },
+      "source": "extension",
+      "photos": [
+        83,
+        89,
+        99
+      ]
+    },
+    {
+      "id": "c05-s17",
+      "topic": "ready",
+      "hanzi": "咖啡让我兴奋。",
+      "pinyin": "Kāfēi ràng wǒ xīngfèn.",
+      "meaning": {
+        "en": "Coffee makes me excited.",
+        "fr": "Le café m’excite.",
+        "ru": "Кофе меня возбуждает."
+      },
+      "source": "board",
+      "photos": [
+        89,
+        90,
+        99
+      ]
+    },
+    {
+      "id": "c05-s18",
+      "topic": "ready",
+      "hanzi": "我对我们今天的话题很兴奋。",
+      "pinyin": "Wǒ duì wǒmen jīntiān de huàtí hěn xīngfèn.",
+      "meaning": {
+        "en": "I am excited about today’s topic.",
+        "fr": "Le sujet d’aujourd’hui m’enthousiasme.",
+        "ru": "Меня воодушевляет наша сегодняшняя тема."
+      },
+      "source": "video",
+      "photos": [
+        89,
+        90,
+        99
+      ]
+    },
+    {
+      "id": "c05-s19",
+      "topic": "ready",
+      "hanzi": "那么，小明，你准备好了吗？",
+      "pinyin": "Nàme, Xiǎomíng, nǐ zhǔnbèi hǎo le ma?",
+      "meaning": {
+        "en": "So, Xiaoming, are you ready?",
+        "fr": "Alors, Xiaoming, es-tu prêt ?",
+        "ru": "Итак, Сяомин, ты готов?"
+      },
+      "source": "video",
+      "photos": [
+        89,
+        90,
+        99
+      ]
+    },
+    {
+      "id": "c05-s20",
+      "topic": "ready",
+      "hanzi": "我准备好了。",
+      "pinyin": "Wǒ zhǔnbèi hǎo le.",
+      "meaning": {
+        "en": "I am ready now.",
+        "fr": "Ça y est, je suis prêt.",
+        "ru": "Я уже готов."
+      },
+      "source": "board",
+      "photos": [
+        89,
+        90,
+        99
+      ]
+    },
+    {
+      "id": "c05-s21",
+      "topic": "ready",
+      "hanzi": "我需要十五分钟准备。",
+      "pinyin": "Wǒ xūyào shíwǔ fēnzhōng zhǔnbèi.",
+      "meaning": {
+        "en": "I need fifteen minutes to prepare.",
+        "fr": "J’ai besoin de quinze minutes pour me préparer.",
+        "ru": "Мне нужно пятнадцать минут на подготовку."
+      },
+      "source": "extension",
+      "photos": [
+        89,
+        90,
+        99
+      ]
+    },
+    {
+      "id": "c05-s22",
+      "topic": "ready",
+      "hanzi": "十五分钟后，我准备好了。",
+      "pinyin": "Shíwǔ fēnzhōng hòu, wǒ zhǔnbèi hǎo le.",
+      "meaning": {
+        "en": "Fifteen minutes later, I was ready.",
+        "fr": "Quinze minutes plus tard, j’étais prêt.",
+        "ru": "Через пятнадцать минут я был готов."
+      },
+      "source": "extension",
+      "photos": [
+        89,
+        90,
+        99
+      ]
+    },
+    {
+      "id": "c05-s23",
+      "topic": "time",
+      "hanzi": "八点后，我在家。",
+      "pinyin": "Bā diǎn hòu, wǒ zài jiā.",
+      "meaning": {
+        "en": "After eight, I am at home.",
+        "fr": "Après huit heures, je suis chez moi.",
+        "ru": "После восьми я дома."
+      },
+      "source": "extension",
+      "photos": [
+        72,
+        74,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-s24",
+      "topic": "time",
+      "hanzi": "饭后百步走，活到九十九。",
+      "pinyin": "Fàn hòu bǎi bù zǒu, huó dào jiǔshíjiǔ.",
+      "meaning": {
+        "en": "Walk a hundred steps after a meal, live to ninety-nine (traditional saying).",
+        "fr": "Cent pas après le repas, vivre jusqu’à quatre-vingt-dix-neuf ans (proverbe).",
+        "ru": "Сто шагов после еды — доживёшь до девяноста девяти (пословица)."
+      },
+      "source": "board",
+      "photos": [
+        72,
+        74,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-s25",
+      "topic": "time",
+      "hanzi": "你是几零后？",
+      "pinyin": "Nǐ shì jǐ líng hòu?",
+      "meaning": {
+        "en": "Which decade cohort were you born in?",
+        "fr": "De quelle génération décennale es-tu ?",
+        "ru": "В каком десятилетии ты родился?"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        74,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-s26",
+      "topic": "time",
+      "hanzi": "我是九零后。",
+      "pinyin": "Wǒ shì jiǔ líng hòu.",
+      "meaning": {
+        "en": "I was born in the 1990s.",
+        "fr": "Je suis né dans les années 1990.",
+        "ru": "Я родился в девяностые."
+      },
+      "source": "extension",
+      "photos": [
+        72,
+        74,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-s27",
+      "topic": "time",
+      "hanzi": "明天见！",
+      "pinyin": "Míngtiān jiàn!",
+      "meaning": {
+        "en": "See you tomorrow!",
+        "fr": "À demain !",
+        "ru": "До завтра!"
+      },
+      "source": "board",
+      "photos": [
+        72,
+        74,
+        78,
+        80
+      ]
+    },
+    {
+      "id": "c05-s28",
+      "topic": "classroom",
+      "hanzi": "这是一个很常见的问题。",
+      "pinyin": "Zhè shì yí ge hěn chángjiàn de wèntí.",
+      "meaning": {
+        "en": "This is a very common question.",
+        "fr": "C’est une question très courante.",
+        "ru": "Это очень распространённый вопрос."
+      },
+      "source": "video",
+      "photos": [
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-s29",
+      "topic": "classroom",
+      "hanzi": "人们经常问这个问题。",
+      "pinyin": "Rénmen jīngcháng wèn zhège wèntí.",
+      "meaning": {
+        "en": "People often ask this question.",
+        "fr": "Les gens posent souvent cette question.",
+        "ru": "Люди часто задают этот вопрос."
+      },
+      "source": "video",
+      "photos": [
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-s30",
+      "topic": "classroom",
+      "hanzi": "在新的课堂上，人们会问这个问题。",
+      "pinyin": "Zài xīn de kètáng shàng, rénmen huì wèn zhège wèntí.",
+      "meaning": {
+        "en": "In a new class, people may ask this question.",
+        "fr": "Dans un nouveau cours, les gens peuvent poser cette question.",
+        "ru": "На новом занятии люди могут задать этот вопрос."
+      },
+      "source": "extension",
+      "photos": [
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-s31",
+      "topic": "classroom",
+      "hanzi": "认识新朋友的时候，人们会问这个问题。",
+      "pinyin": "Rènshi xīn péngyou de shíhou, rénmen huì wèn zhège wèntí.",
+      "meaning": {
+        "en": "When meeting new friends, people may ask this question.",
+        "fr": "En rencontrant de nouveaux amis, on peut poser cette question.",
+        "ru": "При знакомстве с новыми друзьями могут задать этот вопрос."
+      },
+      "source": "extension",
+      "photos": [
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-s32",
+      "topic": "classroom",
+      "hanzi": "有时候很难知道该说什么。",
+      "pinyin": "Yǒu shíhou hěn nán zhīdào gāi shuō shénme.",
+      "meaning": {
+        "en": "Sometimes it is hard to know what to say.",
+        "fr": "Parfois, il est difficile de savoir quoi dire.",
+        "ru": "Иногда трудно понять, что сказать."
+      },
+      "source": "video",
+      "photos": [
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-s33",
+      "topic": "classroom",
+      "hanzi": "所以今天我们会谈谈这个话题。",
+      "pinyin": "Suǒyǐ jīntiān wǒmen huì tán tan zhège huàtí.",
+      "meaning": {
+        "en": "So today we will talk a little about this topic.",
+        "fr": "Aujourd’hui, nous allons donc parler un peu de ce sujet.",
+        "ru": "Поэтому сегодня мы немного поговорим об этой теме."
+      },
+      "source": "video",
+      "photos": [
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "c05-s34",
+      "topic": "classroom",
+      "hanzi": "我们会让它变得简单又有趣。",
+      "pinyin": "Wǒmen huì ràng tā biàn de jiǎndān yòu yǒuqù.",
+      "meaning": {
+        "en": "We will make it simple and interesting.",
+        "fr": "Nous allons rendre cela simple et intéressant.",
+        "ru": "Мы сделаем это простым и интересным."
+      },
+      "source": "video",
+      "photos": [
+        91,
+        92,
+        95,
+        96,
+        100,
+        101
+      ]
+    }
+  ]
+}

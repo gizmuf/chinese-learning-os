@@ -1,0 +1,1220 @@
+{
+  "number": 4,
+  "date": "2026-10-23",
+  "terms": [
+    {
+      "id": "c04-t01",
+      "topic": "identity",
+      "hanzi": "名字",
+      "pinyin": "míngzi",
+      "meaning": {
+        "en": "name",
+        "fr": "nom",
+        "ru": "имя"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t02",
+      "topic": "identity",
+      "hanzi": "什么",
+      "pinyin": "shénme",
+      "meaning": {
+        "en": "what",
+        "fr": "quoi",
+        "ru": "что"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t03",
+      "topic": "identity",
+      "hanzi": "姓",
+      "pinyin": "xìng",
+      "meaning": {
+        "en": "surname; be surnamed",
+        "fr": "nom de famille ; s’appeler",
+        "ru": "фамилия; носить фамилию"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t04",
+      "topic": "identity",
+      "hanzi": "贵姓",
+      "pinyin": "guìxìng",
+      "meaning": {
+        "en": "your surname (polite)",
+        "fr": "votre nom de famille (poli)",
+        "ru": "ваша фамилия (вежливо)"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t05",
+      "topic": "identity",
+      "hanzi": "多大",
+      "pinyin": "duō dà",
+      "meaning": {
+        "en": "how old; how big",
+        "fr": "quel âge ; quelle taille",
+        "ru": "сколько лет; какого размера"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t06",
+      "topic": "identity",
+      "hanzi": "几岁",
+      "pinyin": "jǐ suì",
+      "meaning": {
+        "en": "how old (usually children)",
+        "fr": "quel âge (surtout aux enfants)",
+        "ru": "сколько лет (обычно детям)"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t07",
+      "topic": "identity",
+      "hanzi": "贵庚",
+      "pinyin": "guìgēng",
+      "meaning": {
+        "en": "your age (very formal)",
+        "fr": "votre âge (très formel)",
+        "ru": "ваш возраст (очень официально)"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t08",
+      "topic": "identity",
+      "hanzi": "哪国人",
+      "pinyin": "nǎ guó rén",
+      "meaning": {
+        "en": "from which country",
+        "fr": "de quel pays",
+        "ru": "из какой страны"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t09",
+      "topic": "identity",
+      "hanzi": "这",
+      "pinyin": "zhè",
+      "meaning": {
+        "en": "this",
+        "fr": "ceci",
+        "ru": "это; этот"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t10",
+      "topic": "identity",
+      "hanzi": "那",
+      "pinyin": "nà",
+      "meaning": {
+        "en": "that",
+        "fr": "cela",
+        "ru": "то; тот"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t11",
+      "topic": "identity",
+      "hanzi": "哪",
+      "pinyin": "nǎ",
+      "meaning": {
+        "en": "which",
+        "fr": "quel",
+        "ru": "какой"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t12",
+      "topic": "identity",
+      "hanzi": "哪里",
+      "pinyin": "nǎlǐ",
+      "meaning": {
+        "en": "where",
+        "fr": "où",
+        "ru": "где"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t13",
+      "topic": "identity",
+      "hanzi": "哪儿",
+      "pinyin": "nǎr",
+      "meaning": {
+        "en": "where (alternative)",
+        "fr": "où (autre forme)",
+        "ru": "где (другая форма)"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t14",
+      "topic": "places",
+      "hanzi": "家",
+      "pinyin": "jiā",
+      "meaning": {
+        "en": "home; family",
+        "fr": "maison ; famille",
+        "ru": "дом; семья"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t15",
+      "topic": "places",
+      "hanzi": "超市",
+      "pinyin": "chāoshì",
+      "meaning": {
+        "en": "supermarket",
+        "fr": "supermarché",
+        "ru": "супермаркет"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t16",
+      "topic": "places",
+      "hanzi": "教室",
+      "pinyin": "jiàoshì",
+      "meaning": {
+        "en": "classroom",
+        "fr": "salle de classe",
+        "ru": "аудитория"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t17",
+      "topic": "places",
+      "hanzi": "宿舍",
+      "pinyin": "sùshè",
+      "meaning": {
+        "en": "dormitory",
+        "fr": "résidence étudiante",
+        "ru": "общежитие"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t18",
+      "topic": "places",
+      "hanzi": "学校",
+      "pinyin": "xuéxiào",
+      "meaning": {
+        "en": "school",
+        "fr": "école",
+        "ru": "школа"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t19",
+      "topic": "places",
+      "hanzi": "公司",
+      "pinyin": "gōngsī",
+      "meaning": {
+        "en": "company",
+        "fr": "entreprise",
+        "ru": "компания"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t20",
+      "topic": "places",
+      "hanzi": "咖啡店",
+      "pinyin": "kāfēidiàn",
+      "meaning": {
+        "en": "café",
+        "fr": "café",
+        "ru": "кафе"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t21",
+      "topic": "places",
+      "hanzi": "上海",
+      "pinyin": "Shànghǎi",
+      "meaning": {
+        "en": "Shanghai",
+        "fr": "Shanghai",
+        "ru": "Шанхай"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t22",
+      "topic": "places",
+      "hanzi": "苏州",
+      "pinyin": "Sūzhōu",
+      "meaning": {
+        "en": "Suzhou",
+        "fr": "Suzhou",
+        "ru": "Сучжоу"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t23",
+      "topic": "work",
+      "hanzi": "工作",
+      "pinyin": "gōngzuò",
+      "meaning": {
+        "en": "work; job",
+        "fr": "travailler ; travail",
+        "ru": "работать; работа"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t24",
+      "topic": "work",
+      "hanzi": "做作业",
+      "pinyin": "zuò zuòyè",
+      "meaning": {
+        "en": "do homework",
+        "fr": "faire ses devoirs",
+        "ru": "делать домашнее задание"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t25",
+      "topic": "work",
+      "hanzi": "学生",
+      "pinyin": "xuésheng",
+      "meaning": {
+        "en": "student",
+        "fr": "étudiant",
+        "ru": "студент"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t26",
+      "topic": "work",
+      "hanzi": "老板",
+      "pinyin": "lǎobǎn",
+      "meaning": {
+        "en": "boss; business owner",
+        "fr": "patron ; propriétaire",
+        "ru": "начальник; владелец бизнеса"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t27",
+      "topic": "work",
+      "hanzi": "工人",
+      "pinyin": "gōngrén",
+      "meaning": {
+        "en": "worker",
+        "fr": "ouvrier",
+        "ru": "рабочий"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t28",
+      "topic": "work",
+      "hanzi": "老师",
+      "pinyin": "lǎoshī",
+      "meaning": {
+        "en": "teacher",
+        "fr": "enseignant",
+        "ru": "учитель"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t29",
+      "topic": "work",
+      "hanzi": "医生",
+      "pinyin": "yīshēng",
+      "meaning": {
+        "en": "doctor",
+        "fr": "médecin",
+        "ru": "врач"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t30",
+      "topic": "work",
+      "hanzi": "大夫",
+      "pinyin": "dàifu",
+      "meaning": {
+        "en": "doctor (another common word)",
+        "fr": "docteur (autre mot courant)",
+        "ru": "доктор (другое обычное слово)"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t31",
+      "topic": "work",
+      "hanzi": "律师",
+      "pinyin": "lǜshī",
+      "meaning": {
+        "en": "lawyer",
+        "fr": "avocat",
+        "ru": "адвокат"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t32",
+      "topic": "work",
+      "hanzi": "律师事务所",
+      "pinyin": "lǜshī shìwùsuǒ",
+      "meaning": {
+        "en": "law firm",
+        "fr": "cabinet d’avocats",
+        "ru": "юридическая фирма"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t33",
+      "topic": "work",
+      "hanzi": "学习",
+      "pinyin": "xuéxí",
+      "meaning": {
+        "en": "study; learn",
+        "fr": "étudier ; apprendre",
+        "ru": "учиться; изучать"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t34",
+      "topic": "work",
+      "hanzi": "看书",
+      "pinyin": "kàn shū",
+      "meaning": {
+        "en": "read a book",
+        "fr": "lire un livre",
+        "ru": "читать книгу"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t35",
+      "topic": "sport",
+      "hanzi": "喜欢",
+      "pinyin": "xǐhuan",
+      "meaning": {
+        "en": "like",
+        "fr": "aimer",
+        "ru": "нравиться; любить"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t36",
+      "topic": "sport",
+      "hanzi": "运动",
+      "pinyin": "yùndòng",
+      "meaning": {
+        "en": "sport; exercise",
+        "fr": "sport ; exercice",
+        "ru": "спорт; физические упражнения"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t37",
+      "topic": "sport",
+      "hanzi": "打篮球",
+      "pinyin": "dǎ lánqiú",
+      "meaning": {
+        "en": "play basketball",
+        "fr": "jouer au basket",
+        "ru": "играть в баскетбол"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t38",
+      "topic": "sport",
+      "hanzi": "打网球",
+      "pinyin": "dǎ wǎngqiú",
+      "meaning": {
+        "en": "play tennis",
+        "fr": "jouer au tennis",
+        "ru": "играть в теннис"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t39",
+      "topic": "sport",
+      "hanzi": "打乒乓球",
+      "pinyin": "dǎ pīngpāngqiú",
+      "meaning": {
+        "en": "play table tennis",
+        "fr": "jouer au tennis de table",
+        "ru": "играть в настольный теннис"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t40",
+      "topic": "colours",
+      "hanzi": "颜色",
+      "pinyin": "yánsè",
+      "meaning": {
+        "en": "colour",
+        "fr": "couleur",
+        "ru": "цвет"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t41",
+      "topic": "colours",
+      "hanzi": "彩虹",
+      "pinyin": "cǎihóng",
+      "meaning": {
+        "en": "rainbow",
+        "fr": "arc-en-ciel",
+        "ru": "радуга"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t42",
+      "topic": "colours",
+      "hanzi": "红色",
+      "pinyin": "hóngsè",
+      "meaning": {
+        "en": "red",
+        "fr": "rouge",
+        "ru": "красный"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t43",
+      "topic": "colours",
+      "hanzi": "橙色",
+      "pinyin": "chéngsè",
+      "meaning": {
+        "en": "orange",
+        "fr": "orange",
+        "ru": "оранжевый"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t44",
+      "topic": "colours",
+      "hanzi": "黄色",
+      "pinyin": "huángsè",
+      "meaning": {
+        "en": "yellow",
+        "fr": "jaune",
+        "ru": "жёлтый"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t45",
+      "topic": "colours",
+      "hanzi": "绿色",
+      "pinyin": "lǜsè",
+      "meaning": {
+        "en": "green",
+        "fr": "vert",
+        "ru": "зелёный"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t46",
+      "topic": "colours",
+      "hanzi": "青色",
+      "pinyin": "qīngsè",
+      "meaning": {
+        "en": "blue-green; cyan (context matters)",
+        "fr": "bleu-vert ; cyan (selon le contexte)",
+        "ru": "сине-зелёный; голубой (по контексту)"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t47",
+      "topic": "colours",
+      "hanzi": "蓝色",
+      "pinyin": "lánsè",
+      "meaning": {
+        "en": "blue",
+        "fr": "bleu",
+        "ru": "синий"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t48",
+      "topic": "colours",
+      "hanzi": "紫色",
+      "pinyin": "zǐsè",
+      "meaning": {
+        "en": "purple",
+        "fr": "violet",
+        "ru": "фиолетовый"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t49",
+      "topic": "colours",
+      "hanzi": "黑色",
+      "pinyin": "hēisè",
+      "meaning": {
+        "en": "black",
+        "fr": "noir",
+        "ru": "чёрный"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t50",
+      "topic": "colours",
+      "hanzi": "白色",
+      "pinyin": "báisè",
+      "meaning": {
+        "en": "white",
+        "fr": "blanc",
+        "ru": "белый"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t51",
+      "topic": "colours",
+      "hanzi": "粉色",
+      "pinyin": "fěnsè",
+      "meaning": {
+        "en": "pink",
+        "fr": "rose",
+        "ru": "розовый"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t52",
+      "topic": "food",
+      "hanzi": "鸡蛋",
+      "pinyin": "jīdàn",
+      "meaning": {
+        "en": "egg",
+        "fr": "œuf",
+        "ru": "яйцо"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t53",
+      "topic": "food",
+      "hanzi": "鸡肉",
+      "pinyin": "jīròu",
+      "meaning": {
+        "en": "chicken meat",
+        "fr": "viande de poulet",
+        "ru": "курятина"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t54",
+      "topic": "food",
+      "hanzi": "牛肉",
+      "pinyin": "niúròu",
+      "meaning": {
+        "en": "beef",
+        "fr": "bœuf",
+        "ru": "говядина"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t55",
+      "topic": "food",
+      "hanzi": "羊肉",
+      "pinyin": "yángròu",
+      "meaning": {
+        "en": "mutton; lamb",
+        "fr": "mouton ; agneau",
+        "ru": "баранина"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t56",
+      "topic": "food",
+      "hanzi": "猪肉",
+      "pinyin": "zhūròu",
+      "meaning": {
+        "en": "pork",
+        "fr": "porc",
+        "ru": "свинина"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t57",
+      "topic": "food",
+      "hanzi": "鸭肉",
+      "pinyin": "yāròu",
+      "meaning": {
+        "en": "duck meat",
+        "fr": "viande de canard",
+        "ru": "утятина"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t58",
+      "topic": "food",
+      "hanzi": "面粉",
+      "pinyin": "miànfěn",
+      "meaning": {
+        "en": "flour",
+        "fr": "farine",
+        "ru": "мука"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t59",
+      "topic": "food",
+      "hanzi": "奶粉",
+      "pinyin": "nǎifěn",
+      "meaning": {
+        "en": "milk powder",
+        "fr": "lait en poudre",
+        "ru": "сухое молоко"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t60",
+      "topic": "food",
+      "hanzi": "蛋白粉",
+      "pinyin": "dànbáifěn",
+      "meaning": {
+        "en": "protein powder",
+        "fr": "poudre de protéines",
+        "ru": "протеиновый порошок"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t61",
+      "topic": "components",
+      "hanzi": "江",
+      "pinyin": "jiāng",
+      "meaning": {
+        "en": "river",
+        "fr": "fleuve",
+        "ru": "река"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t62",
+      "topic": "components",
+      "hanzi": "河",
+      "pinyin": "hé",
+      "meaning": {
+        "en": "river",
+        "fr": "rivière",
+        "ru": "река"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t63",
+      "topic": "components",
+      "hanzi": "湖",
+      "pinyin": "hú",
+      "meaning": {
+        "en": "lake",
+        "fr": "lac",
+        "ru": "озеро"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t64",
+      "topic": "components",
+      "hanzi": "海",
+      "pinyin": "hǎi",
+      "meaning": {
+        "en": "sea",
+        "fr": "mer",
+        "ru": "море"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t65",
+      "topic": "components",
+      "hanzi": "手",
+      "pinyin": "shǒu",
+      "meaning": {
+        "en": "hand",
+        "fr": "main",
+        "ru": "рука"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t66",
+      "topic": "components",
+      "hanzi": "竹",
+      "pinyin": "zhú",
+      "meaning": {
+        "en": "bamboo",
+        "fr": "bambou",
+        "ru": "бамбук"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t67",
+      "topic": "components",
+      "hanzi": "笔",
+      "pinyin": "bǐ",
+      "meaning": {
+        "en": "pen; writing brush",
+        "fr": "stylo ; pinceau",
+        "ru": "ручка; кисть"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t68",
+      "topic": "components",
+      "hanzi": "篮",
+      "pinyin": "lán",
+      "meaning": {
+        "en": "basket",
+        "fr": "panier",
+        "ru": "корзина"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t69",
+      "topic": "components",
+      "hanzi": "行",
+      "pinyin": "xíng",
+      "meaning": {
+        "en": "go; be OK (this reading)",
+        "fr": "aller ; convenir (cette lecture)",
+        "ru": "идти; годиться (это чтение)"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t70",
+      "topic": "components",
+      "hanzi": "走",
+      "pinyin": "zǒu",
+      "meaning": {
+        "en": "walk; leave",
+        "fr": "marcher ; partir",
+        "ru": "идти; уходить"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t71",
+      "topic": "components",
+      "hanzi": "超",
+      "pinyin": "chāo",
+      "meaning": {
+        "en": "exceed; surpass",
+        "fr": "dépasser",
+        "ru": "превышать"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t72",
+      "topic": "components",
+      "hanzi": "越",
+      "pinyin": "yuè",
+      "meaning": {
+        "en": "exceed; cross",
+        "fr": "dépasser ; franchir",
+        "ru": "превосходить; пересекать"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-t73",
+      "topic": "components",
+      "hanzi": "越来越",
+      "pinyin": "yuè lái yuè",
+      "meaning": {
+        "en": "more and more",
+        "fr": "de plus en plus",
+        "ru": "всё более и более"
+      },
+      "source": "board"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "c04-s01",
+      "topic": "identity",
+      "hanzi": "你叫什么名字？",
+      "pinyin": "Nǐ jiào shénme míngzi?",
+      "meaning": {
+        "en": "What is your name?",
+        "fr": "Comment t’appelles-tu ?",
+        "ru": "Как тебя зовут?"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s02",
+      "topic": "identity",
+      "hanzi": "你姓什么？",
+      "pinyin": "Nǐ xìng shénme?",
+      "meaning": {
+        "en": "What is your surname?",
+        "fr": "Quel est ton nom de famille ?",
+        "ru": "Какая у тебя фамилия?"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s03",
+      "topic": "identity",
+      "hanzi": "您贵姓？",
+      "pinyin": "Nín guìxìng?",
+      "meaning": {
+        "en": "May I ask your surname?",
+        "fr": "Quel est votre nom de famille ?",
+        "ru": "Как ваша фамилия?"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s04",
+      "topic": "identity",
+      "hanzi": "你多大了？",
+      "pinyin": "Nǐ duō dà le?",
+      "meaning": {
+        "en": "How old are you?",
+        "fr": "Quel âge as-tu ?",
+        "ru": "Сколько тебе лет?"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s05",
+      "topic": "identity",
+      "hanzi": "你几岁？",
+      "pinyin": "Nǐ jǐ suì?",
+      "meaning": {
+        "en": "How old are you? (to a child)",
+        "fr": "Quel âge as-tu ? (à un enfant)",
+        "ru": "Сколько тебе лет? (ребёнку)"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s06",
+      "topic": "identity",
+      "hanzi": "您贵庚？",
+      "pinyin": "Nín guìgēng?",
+      "meaning": {
+        "en": "May I ask your age? (very formal)",
+        "fr": "Puis-je vous demander votre âge ? (très formel)",
+        "ru": "Позвольте спросить ваш возраст. (очень официально)"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s07",
+      "topic": "identity",
+      "hanzi": "你是哪国人？",
+      "pinyin": "Nǐ shì nǎ guó rén?",
+      "meaning": {
+        "en": "Which country are you from?",
+        "fr": "De quel pays viens-tu ?",
+        "ru": "Из какой ты страны?"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s08",
+      "topic": "places",
+      "hanzi": "你在哪里？",
+      "pinyin": "Nǐ zài nǎlǐ?",
+      "meaning": {
+        "en": "Where are you?",
+        "fr": "Où es-tu ?",
+        "ru": "Где ты?"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s09",
+      "topic": "places",
+      "hanzi": "你在哪儿？",
+      "pinyin": "Nǐ zài nǎr?",
+      "meaning": {
+        "en": "Where are you? (alternative)",
+        "fr": "Où es-tu ? (autre forme)",
+        "ru": "Где ты? (другая форма)"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s10",
+      "topic": "places",
+      "hanzi": "我在家。",
+      "pinyin": "Wǒ zài jiā.",
+      "meaning": {
+        "en": "I am at home.",
+        "fr": "Je suis à la maison.",
+        "ru": "Я дома."
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s11",
+      "topic": "work",
+      "hanzi": "你做作业吗？",
+      "pinyin": "Nǐ zuò zuòyè ma?",
+      "meaning": {
+        "en": "Do you do homework?",
+        "fr": "Fais-tu tes devoirs ?",
+        "ru": "Ты делаешь домашнее задание?"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s12",
+      "topic": "work",
+      "hanzi": "你工作吗？",
+      "pinyin": "Nǐ gōngzuò ma?",
+      "meaning": {
+        "en": "Do you work?",
+        "fr": "Est-ce que tu travailles ?",
+        "ru": "Ты работаешь?"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s13",
+      "topic": "work",
+      "hanzi": "我不工作。我是学生。",
+      "pinyin": "Wǒ bù gōngzuò. Wǒ shì xuésheng.",
+      "meaning": {
+        "en": "I do not work. I am a student.",
+        "fr": "Je ne travaille pas. Je suis étudiant.",
+        "ru": "Я не работаю. Я студент."
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s14",
+      "topic": "work",
+      "hanzi": "你做什么工作？",
+      "pinyin": "Nǐ zuò shénme gōngzuò?",
+      "meaning": {
+        "en": "What do you do for work?",
+        "fr": "Quel travail fais-tu ?",
+        "ru": "Кем ты работаешь?"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s15",
+      "topic": "work",
+      "hanzi": "我是公司老板。",
+      "pinyin": "Wǒ shì gōngsī lǎobǎn.",
+      "meaning": {
+        "en": "I am a company owner.",
+        "fr": "Je suis propriétaire d’une entreprise.",
+        "ru": "Я владелец компании."
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s16",
+      "topic": "places",
+      "hanzi": "你在哪里工作？",
+      "pinyin": "Nǐ zài nǎlǐ gōngzuò?",
+      "meaning": {
+        "en": "Where do you work?",
+        "fr": "Où travailles-tu ?",
+        "ru": "Где ты работаешь?"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s17",
+      "topic": "places",
+      "hanzi": "我在学校工作。",
+      "pinyin": "Wǒ zài xuéxiào gōngzuò.",
+      "meaning": {
+        "en": "I work at a school.",
+        "fr": "Je travaille dans une école.",
+        "ru": "Я работаю в школе."
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s18",
+      "topic": "places",
+      "hanzi": "你的公司在哪儿？",
+      "pinyin": "Nǐ de gōngsī zài nǎr?",
+      "meaning": {
+        "en": "Where is your company?",
+        "fr": "Où se trouve ton entreprise ?",
+        "ru": "Где находится твоя компания?"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s19",
+      "topic": "places",
+      "hanzi": "在上海。",
+      "pinyin": "Zài Shànghǎi.",
+      "meaning": {
+        "en": "In Shanghai.",
+        "fr": "À Shanghai.",
+        "ru": "В Шанхае."
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s20",
+      "topic": "places",
+      "hanzi": "明天我在苏州工作。",
+      "pinyin": "Míngtiān wǒ zài Sūzhōu gōngzuò.",
+      "meaning": {
+        "en": "Tomorrow I will work in Suzhou.",
+        "fr": "Demain, je travaillerai à Suzhou.",
+        "ru": "Завтра я буду работать в Сучжоу."
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s21",
+      "topic": "work",
+      "hanzi": "昨天我没工作。",
+      "pinyin": "Zuótiān wǒ méi gōngzuò.",
+      "meaning": {
+        "en": "I did not work yesterday.",
+        "fr": "Hier, je n’ai pas travaillé.",
+        "ru": "Вчера я не работал."
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s22",
+      "topic": "places",
+      "hanzi": "我在教室学习。",
+      "pinyin": "Wǒ zài jiàoshì xuéxí.",
+      "meaning": {
+        "en": "I study in the classroom.",
+        "fr": "J’étudie dans la salle de classe.",
+        "ru": "Я учусь в аудитории."
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s23",
+      "topic": "places",
+      "hanzi": "我在咖啡店看书。",
+      "pinyin": "Wǒ zài kāfēidiàn kàn shū.",
+      "meaning": {
+        "en": "I read in a café.",
+        "fr": "Je lis dans un café.",
+        "ru": "Я читаю в кафе."
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s24",
+      "topic": "sport",
+      "hanzi": "你喜欢什么运动？",
+      "pinyin": "Nǐ xǐhuan shénme yùndòng?",
+      "meaning": {
+        "en": "What sports do you like?",
+        "fr": "Quels sports aimes-tu ?",
+        "ru": "Какие виды спорта тебе нравятся?"
+      },
+      "source": "board"
+    },
+    {
+      "id": "c04-s25",
+      "topic": "sport",
+      "hanzi": "我喜欢打篮球。",
+      "pinyin": "Wǒ xǐhuan dǎ lánqiú.",
+      "meaning": {
+        "en": "I like playing basketball.",
+        "fr": "J’aime jouer au basket.",
+        "ru": "Мне нравится играть в баскетбол."
+      },
+      "source": "extension"
+    },
+    {
+      "id": "c04-s26",
+      "topic": "colours",
+      "hanzi": "我喜欢蓝色。",
+      "pinyin": "Wǒ xǐhuan lánsè.",
+      "meaning": {
+        "en": "I like blue.",
+        "fr": "J’aime le bleu.",
+        "ru": "Мне нравится синий цвет."
+      },
+      "source": "extension"
+    },
+    {
+      "id": "c04-s27",
+      "topic": "food",
+      "hanzi": "我喜欢吃牛肉。",
+      "pinyin": "Wǒ xǐhuan chī niúròu.",
+      "meaning": {
+        "en": "I like eating beef.",
+        "fr": "J’aime manger du bœuf.",
+        "ru": "Я люблю есть говядину."
+      },
+      "source": "extension"
+    },
+    {
+      "id": "c04-s28",
+      "topic": "components",
+      "hanzi": "我的汉语越来越好。",
+      "pinyin": "Wǒ de Hànyǔ yuè lái yuè hǎo.",
+      "meaning": {
+        "en": "My Chinese is getting better and better.",
+        "fr": "Mon chinois s’améliore de plus en plus.",
+        "ru": "Мой китайский становится всё лучше."
+      },
+      "source": "extension"
+    }
+  ]
+}

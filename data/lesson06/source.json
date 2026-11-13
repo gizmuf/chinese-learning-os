@@ -1,0 +1,902 @@
+{
+  "lesson_id": "lesson-06-2026-10-27",
+  "date": "2026-10-27",
+  "level": "beginner",
+  "source": "classroom photographs IMG_0126 through IMG_0153; manual transcription and careful additions",
+  "words": [
+    {
+      "hanzi": "春天",
+      "pinyin": "chūntiān",
+      "meaning": {
+        "en": "spring",
+        "fr": "printemps",
+        "ru": "весна",
+        "tr": "ilkbahar"
+      },
+      "family": "season"
+    },
+    {
+      "hanzi": "夏天",
+      "pinyin": "xiàtiān",
+      "meaning": {
+        "en": "summer",
+        "fr": "été",
+        "ru": "лето",
+        "tr": "yaz"
+      },
+      "family": "season"
+    },
+    {
+      "hanzi": "秋天",
+      "pinyin": "qiūtiān",
+      "meaning": {
+        "en": "autumn / fall",
+        "fr": "automne",
+        "ru": "осень",
+        "tr": "sonbahar"
+      },
+      "family": "season"
+    },
+    {
+      "hanzi": "冬天",
+      "pinyin": "dōngtiān",
+      "meaning": {
+        "en": "winter",
+        "fr": "hiver",
+        "ru": "зима",
+        "tr": "kış"
+      },
+      "family": "season"
+    },
+    {
+      "hanzi": "温暖",
+      "pinyin": "wēnnuǎn",
+      "meaning": {
+        "en": "warm / mild",
+        "fr": "doux / chaud",
+        "ru": "тепло / мягко",
+        "tr": "ılık / yumuşak"
+      },
+      "family": "season"
+    },
+    {
+      "hanzi": "炎热",
+      "pinyin": "yánrè",
+      "meaning": {
+        "en": "very hot",
+        "fr": "très chaud",
+        "ru": "очень жарко",
+        "tr": "çok sıcak"
+      },
+      "family": "season"
+    },
+    {
+      "hanzi": "凉爽",
+      "pinyin": "liángshuǎng",
+      "meaning": {
+        "en": "pleasantly cool",
+        "fr": "agréablement frais",
+        "ru": "приятно прохладно",
+        "tr": "hoş serin"
+      },
+      "family": "season"
+    },
+    {
+      "hanzi": "寒冷",
+      "pinyin": "hánlěng",
+      "meaning": {
+        "en": "cold / chilly",
+        "fr": "froid / glacial",
+        "ru": "холодно",
+        "tr": "çok soğuk"
+      },
+      "family": "season"
+    },
+    {
+      "hanzi": "冰水",
+      "pinyin": "bīngshuǐ",
+      "meaning": {
+        "en": "ice water",
+        "fr": "eau glacée",
+        "ru": "ледяная вода",
+        "tr": "buzlu su"
+      },
+      "family": "water"
+    },
+    {
+      "hanzi": "常温水",
+      "pinyin": "chángwēnshuǐ",
+      "meaning": {
+        "en": "room-temperature water",
+        "fr": "eau à température ambiante",
+        "ru": "вода комнатной температуры",
+        "tr": "oda sıcaklığında su"
+      },
+      "family": "water"
+    },
+    {
+      "hanzi": "温水",
+      "pinyin": "wēnshuǐ",
+      "meaning": {
+        "en": "warm water",
+        "fr": "eau tiède",
+        "ru": "тёплая вода",
+        "tr": "ılık su"
+      },
+      "family": "water"
+    },
+    {
+      "hanzi": "热水",
+      "pinyin": "rèshuǐ",
+      "meaning": {
+        "en": "hot water",
+        "fr": "eau chaude",
+        "ru": "горячая вода",
+        "tr": "sıcak su"
+      },
+      "family": "water"
+    },
+    {
+      "hanzi": "湿巾",
+      "pinyin": "shījīn",
+      "meaning": {
+        "en": "wet wipe",
+        "fr": "lingette humide",
+        "ru": "влажная салфетка",
+        "tr": "ıslak mendil"
+      },
+      "family": "routine"
+    },
+    {
+      "hanzi": "抽纸",
+      "pinyin": "chōuzhǐ",
+      "meaning": {
+        "en": "paper tissues",
+        "fr": "mouchoirs en papier",
+        "ru": "бумажные салфетки",
+        "tr": "kağıt mendil"
+      },
+      "family": "routine"
+    },
+    {
+      "hanzi": "请问",
+      "pinyin": "qǐngwèn",
+      "meaning": {
+        "en": "excuse me / may I ask",
+        "fr": "excusez-moi / puis-je demander",
+        "ru": "позвольте спросить",
+        "tr": "affedersiniz / sorabilir miyim"
+      },
+      "family": "routine"
+    },
+    {
+      "hanzi": "请讲",
+      "pinyin": "qǐngjiǎng",
+      "meaning": {
+        "en": "please speak / go ahead",
+        "fr": "je vous écoute / parlez",
+        "ru": "говорите, пожалуйста",
+        "tr": "buyurun, konuşun"
+      },
+      "family": "routine"
+    },
+    {
+      "hanzi": "起立",
+      "pinyin": "qǐlì",
+      "meaning": {
+        "en": "stand up",
+        "fr": "levez-vous",
+        "ru": "встаньте",
+        "tr": "ayağa kalkın"
+      },
+      "family": "routine"
+    },
+    {
+      "hanzi": "起床",
+      "pinyin": "qǐchuáng",
+      "meaning": {
+        "en": "get out of bed",
+        "fr": "se lever du lit",
+        "ru": "встать с постели",
+        "tr": "yataktan kalkmak"
+      },
+      "family": "routine"
+    },
+    {
+      "hanzi": "醒了",
+      "pinyin": "xǐng le",
+      "meaning": {
+        "en": "woke up",
+        "fr": "s’est réveillé",
+        "ru": "проснулся",
+        "tr": "uyandı"
+      },
+      "family": "routine"
+    },
+    {
+      "hanzi": "切",
+      "pinyin": "qiē",
+      "meaning": {
+        "en": "cut",
+        "fr": "couper",
+        "ru": "резать",
+        "tr": "kesmek"
+      },
+      "family": "routine"
+    },
+    {
+      "hanzi": "够了",
+      "pinyin": "gòu le",
+      "meaning": {
+        "en": "enough / that is enough",
+        "fr": "ça suffit",
+        "ru": "хватит / достаточно",
+        "tr": "yeter / bu kadar yeter"
+      },
+      "family": "routine"
+    },
+    {
+      "hanzi": "家乡",
+      "pinyin": "jiāxiāng",
+      "meaning": {
+        "en": "hometown",
+        "fr": "ville natale",
+        "ru": "родной город / край",
+        "tr": "memleket"
+      },
+      "family": "routine"
+    },
+    {
+      "hanzi": "租房",
+      "pinyin": "zūfáng",
+      "meaning": {
+        "en": "rent a home",
+        "fr": "louer un logement",
+        "ru": "снимать жильё",
+        "tr": "ev kiralamak"
+      },
+      "family": "routine"
+    },
+    {
+      "hanzi": "冰淇淋",
+      "pinyin": "bīngqílín",
+      "meaning": {
+        "en": "ice cream",
+        "fr": "glace",
+        "ru": "мороженое",
+        "tr": "dondurma"
+      },
+      "family": "routine"
+    },
+    {
+      "hanzi": "还是",
+      "pinyin": "háishi",
+      "meaning": {
+        "en": "or (in questions)",
+        "fr": "ou (dans une question)",
+        "ru": "или (в вопросе)",
+        "tr": "veya (sorularda)"
+      },
+      "family": "direction"
+    },
+    {
+      "hanzi": "里面",
+      "pinyin": "lǐmiàn",
+      "meaning": {
+        "en": "inside",
+        "fr": "à l’intérieur",
+        "ru": "внутри",
+        "tr": "içeride"
+      },
+      "family": "direction"
+    },
+    {
+      "hanzi": "外面",
+      "pinyin": "wàimiàn",
+      "meaning": {
+        "en": "outside",
+        "fr": "à l’extérieur",
+        "ru": "снаружи",
+        "tr": "dışarıda"
+      },
+      "family": "direction"
+    },
+    {
+      "hanzi": "中间",
+      "pinyin": "zhōngjiān",
+      "meaning": {
+        "en": "middle / centre",
+        "fr": "milieu / centre",
+        "ru": "середина",
+        "tr": "orta"
+      },
+      "family": "direction"
+    },
+    {
+      "hanzi": "北边",
+      "pinyin": "běibiān",
+      "meaning": {
+        "en": "north side",
+        "fr": "côté nord",
+        "ru": "северная сторона",
+        "tr": "kuzey tarafı"
+      },
+      "family": "direction"
+    },
+    {
+      "hanzi": "南边",
+      "pinyin": "nánbiān",
+      "meaning": {
+        "en": "south side",
+        "fr": "côté sud",
+        "ru": "южная сторона",
+        "tr": "güney tarafı"
+      },
+      "family": "direction"
+    },
+    {
+      "hanzi": "东边",
+      "pinyin": "dōngbiān",
+      "meaning": {
+        "en": "east side",
+        "fr": "côté est",
+        "ru": "восточная сторона",
+        "tr": "doğu tarafı"
+      },
+      "family": "direction"
+    },
+    {
+      "hanzi": "西边",
+      "pinyin": "xībiān",
+      "meaning": {
+        "en": "west side",
+        "fr": "côté ouest",
+        "ru": "западная сторона",
+        "tr": "batı tarafı"
+      },
+      "family": "direction"
+    },
+    {
+      "hanzi": "西北",
+      "pinyin": "xīběi",
+      "meaning": {
+        "en": "northwest",
+        "fr": "nord-ouest",
+        "ru": "северо-запад",
+        "tr": "kuzeybatı"
+      },
+      "family": "direction"
+    },
+    {
+      "hanzi": "东南",
+      "pinyin": "dōngnán",
+      "meaning": {
+        "en": "southeast",
+        "fr": "sud-est",
+        "ru": "юго-восток",
+        "tr": "güneydoğu"
+      },
+      "family": "direction"
+    },
+    {
+      "hanzi": "一点儿",
+      "pinyin": "yìdiǎnr",
+      "meaning": {
+        "en": "a little (quantity)",
+        "fr": "un peu (quantité)",
+        "ru": "немного (количество)",
+        "tr": "biraz (miktar)"
+      },
+      "family": "quantity"
+    },
+    {
+      "hanzi": "一些",
+      "pinyin": "yìxiē",
+      "meaning": {
+        "en": "some / a few",
+        "fr": "un peu / quelques",
+        "ru": "немного / несколько",
+        "tr": "birkaç / bir miktar"
+      },
+      "family": "quantity"
+    },
+    {
+      "hanzi": "有点儿",
+      "pinyin": "yǒudiǎnr",
+      "meaning": {
+        "en": "a bit / somewhat",
+        "fr": "un peu / plutôt",
+        "ru": "немного / слегка",
+        "tr": "biraz / hafifçe"
+      },
+      "family": "quantity"
+    },
+    {
+      "hanzi": "很多",
+      "pinyin": "hěnduō",
+      "meaning": {
+        "en": "many / much",
+        "fr": "beaucoup",
+        "ru": "много",
+        "tr": "çok"
+      },
+      "family": "quantity"
+    },
+    {
+      "hanzi": "一把钥匙",
+      "pinyin": "yì bǎ yàoshi",
+      "meaning": {
+        "en": "one key",
+        "fr": "une clé",
+        "ru": "один ключ",
+        "tr": "bir anahtar"
+      },
+      "family": "quantity"
+    },
+    {
+      "hanzi": "一本书",
+      "pinyin": "yì běn shū",
+      "meaning": {
+        "en": "one book",
+        "fr": "un livre",
+        "ru": "одна книга",
+        "tr": "bir kitap"
+      },
+      "family": "quantity"
+    },
+    {
+      "hanzi": "两辆汽车",
+      "pinyin": "liǎng liàng qìchē",
+      "meaning": {
+        "en": "two cars",
+        "fr": "deux voitures",
+        "ru": "две машины",
+        "tr": "iki araba"
+      },
+      "family": "quantity"
+    },
+    {
+      "hanzi": "给",
+      "pinyin": "gěi",
+      "meaning": {
+        "en": "give / to",
+        "fr": "donner / à",
+        "ru": "давать / для",
+        "tr": "vermek / -e"
+      },
+      "family": "quantity"
+    },
+    {
+      "hanzi": "能",
+      "pinyin": "néng",
+      "meaning": {
+        "en": "be able to / can",
+        "fr": "pouvoir",
+        "ru": "мочь",
+        "tr": "-ebilmek"
+      },
+      "family": "quantity"
+    },
+    {
+      "hanzi": "不难",
+      "pinyin": "bù nán",
+      "meaning": {
+        "en": "not difficult",
+        "fr": "pas difficile",
+        "ru": "не трудно",
+        "tr": "zor değil"
+      },
+      "family": "degree"
+    },
+    {
+      "hanzi": "不太难",
+      "pinyin": "bú tài nán",
+      "meaning": {
+        "en": "not too difficult",
+        "fr": "pas trop difficile",
+        "ru": "не слишком трудно",
+        "tr": "çok zor değil"
+      },
+      "family": "degree"
+    },
+    {
+      "hanzi": "有点儿难",
+      "pinyin": "yǒudiǎnr nán",
+      "meaning": {
+        "en": "a little difficult",
+        "fr": "un peu difficile",
+        "ru": "немного трудно",
+        "tr": "biraz zor"
+      },
+      "family": "degree"
+    },
+    {
+      "hanzi": "很难",
+      "pinyin": "hěn nán",
+      "meaning": {
+        "en": "difficult / very difficult",
+        "fr": "difficile / très difficile",
+        "ru": "трудно / очень трудно",
+        "tr": "zor / çok zor"
+      },
+      "family": "degree"
+    },
+    {
+      "hanzi": "太难了",
+      "pinyin": "tài nán le",
+      "meaning": {
+        "en": "too difficult!",
+        "fr": "trop difficile !",
+        "ru": "слишком трудно!",
+        "tr": "çok zor!"
+      },
+      "family": "degree"
+    },
+    {
+      "hanzi": "难极了",
+      "pinyin": "nán jí le",
+      "meaning": {
+        "en": "extremely difficult",
+        "fr": "extrêmement difficile",
+        "ru": "крайне трудно",
+        "tr": "aşırı zor"
+      },
+      "family": "degree"
+    },
+    {
+      "hanzi": "非常难",
+      "pinyin": "fēicháng nán",
+      "meaning": {
+        "en": "extremely difficult",
+        "fr": "extrêmement difficile",
+        "ru": "очень трудно",
+        "tr": "son derece zor"
+      },
+      "family": "degree"
+    },
+    {
+      "hanzi": "很有意思",
+      "pinyin": "hěn yǒu yìsi",
+      "meaning": {
+        "en": "very interesting",
+        "fr": "très intéressant",
+        "ru": "очень интересно",
+        "tr": "çok ilginç"
+      },
+      "family": "degree"
+    },
+    {
+      "hanzi": "但是",
+      "pinyin": "dànshì",
+      "meaning": {
+        "en": "but / however",
+        "fr": "mais / cependant",
+        "ru": "но / однако",
+        "tr": "ama / fakat"
+      },
+      "family": "degree"
+    },
+    {
+      "hanzi": "看起来",
+      "pinyin": "kàn qǐlái",
+      "meaning": {
+        "en": "look / seem",
+        "fr": "avoir l’air",
+        "ru": "выглядеть",
+        "tr": "görünmek"
+      },
+      "family": "degree"
+    },
+    {
+      "hanzi": "累",
+      "pinyin": "lèi",
+      "meaning": {
+        "en": "tired",
+        "fr": "fatigué",
+        "ru": "усталый",
+        "tr": "yorgun"
+      },
+      "family": "degree"
+    },
+    {
+      "hanzi": "困",
+      "pinyin": "kùn",
+      "meaning": {
+        "en": "sleepy",
+        "fr": "somnolent",
+        "ru": "сонный",
+        "tr": "uykulu"
+      },
+      "family": "degree"
+    }
+  ],
+  "sentences": [
+    {
+      "hanzi": "春天很温暖。",
+      "pinyin": "Chūntiān hěn wēnnuǎn.",
+      "meaning": {
+        "en": "Spring is warm.",
+        "fr": "Au printemps, il fait doux.",
+        "ru": "Весной тепло.",
+        "tr": "İlkbaharda hava ılıktır."
+      },
+      "id": "spring"
+    },
+    {
+      "hanzi": "你想要温水还是冰水？",
+      "pinyin": "Nǐ xiǎng yào wēnshuǐ háishi bīngshuǐ?",
+      "meaning": {
+        "en": "Would you like warm water or ice water?",
+        "fr": "Tu préfères de l’eau tiède ou glacée ?",
+        "ru": "Ты хочешь тёплую или ледяную воду?",
+        "tr": "Ilık su mu, buzlu su mu istersin?"
+      },
+      "id": "waterchoice"
+    },
+    {
+      "hanzi": "你的家乡冷吗？",
+      "pinyin": "Nǐ de jiāxiāng lěng ma?",
+      "meaning": {
+        "en": "Is your hometown cold?",
+        "fr": "Fait-il froid dans ta région natale ?",
+        "ru": "У тебя на родине холодно?",
+        "tr": "Memleketin soğuk mu?"
+      },
+      "id": "home"
+    },
+    {
+      "hanzi": "你喝咖啡还是茶？",
+      "pinyin": "Nǐ hē kāfēi háishi chá?",
+      "meaning": {
+        "en": "Do you drink coffee or tea?",
+        "fr": "Tu bois du café ou du thé ?",
+        "ru": "Ты пьёшь кофе или чай?",
+        "tr": "Kahve mi, çay mı içersin?"
+      },
+      "id": "coffee"
+    },
+    {
+      "hanzi": "你住在学校里面还是学校外面？",
+      "pinyin": "Nǐ zhù zài xuéxiào lǐmiàn háishi xuéxiào wàimiàn?",
+      "meaning": {
+        "en": "Do you live inside or outside the school?",
+        "fr": "Tu vis dans l’école ou à l’extérieur ?",
+        "ru": "Ты живёшь внутри школы или за её пределами?",
+        "tr": "Okulun içinde mi yoksa dışında mı yaşıyorsun?"
+      },
+      "id": "living"
+    },
+    {
+      "hanzi": "你能给我一点儿水吗？",
+      "pinyin": "Nǐ néng gěi wǒ yìdiǎnr shuǐ ma?",
+      "meaning": {
+        "en": "Could you give me a little water?",
+        "fr": "Peux-tu me donner un peu d’eau ?",
+        "ru": "Можешь дать мне немного воды?",
+        "tr": "Bana biraz su verebilir misin?"
+      },
+      "id": "water"
+    },
+    {
+      "hanzi": "我能给你一些钱。",
+      "pinyin": "Wǒ néng gěi nǐ yìxiē qián.",
+      "meaning": {
+        "en": "I can give you some money.",
+        "fr": "Je peux te donner un peu d’argent.",
+        "ru": "Я могу дать тебе немного денег.",
+        "tr": "Sana biraz para verebilirim."
+      },
+      "id": "money"
+    },
+    {
+      "hanzi": "你今天看起来有点儿累。",
+      "pinyin": "Nǐ jīntiān kàn qǐlái yǒudiǎnr lèi.",
+      "meaning": {
+        "en": "You look a little tired today.",
+        "fr": "Tu as l’air un peu fatigué aujourd’hui.",
+        "ru": "Сегодня ты выглядишь немного уставшим.",
+        "tr": "Bugün biraz yorgun görünüyorsun."
+      },
+      "id": "today"
+    },
+    {
+      "hanzi": "汉语有点儿难。",
+      "pinyin": "Hànyǔ yǒudiǎnr nán.",
+      "meaning": {
+        "en": "Chinese is a little difficult.",
+        "fr": "Le chinois est un peu difficile.",
+        "ru": "Китайский немного сложный.",
+        "tr": "Çince biraz zor."
+      },
+      "id": "hard"
+    },
+    {
+      "hanzi": "今天有点儿热。",
+      "pinyin": "Jīntiān yǒudiǎnr rè.",
+      "meaning": {
+        "en": "Today is a bit hot.",
+        "fr": "Il fait un peu chaud aujourd’hui.",
+        "ru": "Сегодня немного жарко.",
+        "tr": "Bugün hava biraz sıcak."
+      },
+      "id": "hot"
+    },
+    {
+      "hanzi": "汉语不太难，但是很有意思。",
+      "pinyin": "Hànyǔ bú tài nán, dànshì hěn yǒu yìsi.",
+      "meaning": {
+        "en": "Chinese is not too difficult, but it is very interesting.",
+        "fr": "Le chinois n’est pas trop difficile, mais il est très intéressant.",
+        "ru": "Китайский не слишком трудный, но очень интересный.",
+        "tr": "Çince çok zor değil ama çok ilginç."
+      },
+      "id": "interesting"
+    },
+    {
+      "hanzi": "我今天有点儿困。",
+      "pinyin": "Wǒ jīntiān yǒudiǎnr kùn.",
+      "meaning": {
+        "en": "I am a little sleepy today.",
+        "fr": "J’ai un peu sommeil aujourd’hui.",
+        "ru": "Сегодня мне немного хочется спать.",
+        "tr": "Bugün biraz uykum var."
+      },
+      "id": "sleepy"
+    },
+    {
+      "hanzi": "我醒了。",
+      "pinyin": "Wǒ xǐng le.",
+      "meaning": {
+        "en": "I woke up.",
+        "fr": "Je me suis réveillé.",
+        "ru": "Я проснулся.",
+        "tr": "Uyandım."
+      },
+      "id": "wake"
+    },
+    {
+      "hanzi": "汉语很难，但是很有意思。",
+      "pinyin": "Hànyǔ hěn nán, dànshì hěn yǒu yìsi.",
+      "meaning": {
+        "en": "Chinese is difficult, but interesting.",
+        "fr": "Le chinois est difficile, mais intéressant.",
+        "ru": "Китайский трудный, но интересный.",
+        "tr": "Çince zor ama ilginç."
+      },
+      "id": "difficult"
+    }
+  ],
+  "practice_groups": {
+    "words1": [
+      "春天",
+      "夏天",
+      "秋天",
+      "冬天",
+      "温水",
+      "冰水"
+    ],
+    "words2": [
+      "请问",
+      "起床",
+      "还是",
+      "一点儿",
+      "有点儿",
+      "很有意思"
+    ],
+    "sentences1": [
+      "home",
+      "coffee",
+      "water"
+    ],
+    "sentences2": [
+      "hard",
+      "today",
+      "interesting"
+    ]
+  },
+  "dialogue": [
+    {
+      "hanzi": "请介绍一下你自己。",
+      "pinyin": "Qǐng jièshào yíxià nǐ zìjǐ.",
+      "meaning": {
+        "en": "Please introduce yourself briefly.",
+        "fr": "Présente-toi brièvement, s’il te plaît.",
+        "ru": "Представься, пожалуйста, коротко.",
+        "tr": "Lütfen kendini kısaca tanıt."
+      },
+      "source": "classroom video screenshot"
+    },
+    {
+      "hanzi": "听起来太好了。那么谁先开始？",
+      "pinyin": "Tīng qǐlái tài hǎo le. Nàme shéi xiān kāishǐ?",
+      "meaning": {
+        "en": "That sounds great. So who will start?",
+        "fr": "Ça a l’air génial. Alors, qui commence ?",
+        "ru": "Звучит отлично. Тогда кто начнёт?",
+        "tr": "Kulağa harika geliyor. Peki, kim başlayacak?"
+      },
+      "source": "classroom video screenshot"
+    },
+    {
+      "hanzi": "你还是我？",
+      "pinyin": "Nǐ háishi wǒ?",
+      "meaning": {
+        "en": "You or me?",
+        "fr": "Toi ou moi ?",
+        "ru": "Ты или я?",
+        "tr": "Sen mi, ben mi?"
+      },
+      "source": "classroom video screenshot"
+    },
+    {
+      "hanzi": "要不你先开始吧，小明？",
+      "pinyin": "Yàobu nǐ xiān kāishǐ ba, Xiǎomíng?",
+      "meaning": {
+        "en": "How about you start first, Xiaoming?",
+        "fr": "Et si tu commençais, Xiaoming ?",
+        "ru": "Может, ты начнёшь первым, Сяомин?",
+        "tr": "Önce sen başlasan, Xiaoming?"
+      },
+      "source": "classroom video screenshot"
+    }
+  ],
+  "dialogue_words": [
+    {
+      "hanzi": "介绍",
+      "pinyin": "jièshào",
+      "meaning": {
+        "en": "introduce",
+        "fr": "présenter",
+        "ru": "представлять",
+        "tr": "tanıtmak"
+      }
+    },
+    {
+      "hanzi": "自己",
+      "pinyin": "zìjǐ",
+      "meaning": {
+        "en": "oneself",
+        "fr": "soi-même",
+        "ru": "себя",
+        "tr": "kendini"
+      }
+    },
+    {
+      "hanzi": "先",
+      "pinyin": "xiān",
+      "meaning": {
+        "en": "first",
+        "fr": "d’abord",
+        "ru": "сначала",
+        "tr": "önce"
+      }
+    },
+    {
+      "hanzi": "开始",
+      "pinyin": "kāishǐ",
+      "meaning": {
+        "en": "begin / start",
+        "fr": "commencer",
+        "ru": "начинать",
+        "tr": "başlamak"
+      }
+    },
+    {
+      "hanzi": "要不",
+      "pinyin": "yàobu",
+      "meaning": {
+        "en": "how about…",
+        "fr": "et si…",
+        "ru": "может…",
+        "tr": "ya …? / nasıl?"
+      }
+    }
+  ],
+  "notes": [
+    "Board numbers for water temperatures are illustrations and are not drinking advice.",
+    "Use 还是 in choice questions.",
+    "Use 一点儿/一些 with nouns and 有点儿 most often before adjectives.",
+    "Do not automatically use pinyin for the no-pinyin test.",
+    "Pinyin and translations verified, but follow the teacher for class-specific usage."
+  ]
+}

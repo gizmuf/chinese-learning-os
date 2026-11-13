@@ -1,0 +1,3 @@
+'use client';
+import {useI18n} from './i18n';
+export default function WritingHelp(){const {locale}=useI18n();return <p className="writing-input-help">{({en:'Using Apple Pencil? Turn on Pencil only before resting your hand. Scroll using the space outside the writing boxes.',fr:'Avec Apple Pencil, activez « Stylet uniquement » avant de poser la main. Faites défiler dans l’espace autour des cases.',ru:'С Apple Pencil включите «Только стилус», прежде чем положить ладонь. Прокручивайте страницу за пределами полей письма.',tr:'Apple Pencil kullanırken elinizi dayamadan önce Yalnızca kalem seçeneğini açın. Sayfayı yazma kutularının dışındaki alandan kaydırın.'})[locale]}</p>;}

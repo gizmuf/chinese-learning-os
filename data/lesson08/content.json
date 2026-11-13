@@ -1,0 +1,1820 @@
+{
+  "lesson_id": "intensive-08",
+  "date": "2026-10-29",
+  "words": [
+    {
+      "id": "c08-t01",
+      "hanzi": "上课",
+      "pinyin": "shàng kè",
+      "meaning": {
+        "en": "attend / start class",
+        "fr": "aller en cours / commencer le cours",
+        "ru": "идти на занятие / начинать урок",
+        "tr": "derse girmek / derse başlamak"
+      },
+      "family": "class",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t02",
+      "hanzi": "下课",
+      "pinyin": "xià kè",
+      "meaning": {
+        "en": "finish class",
+        "fr": "finir le cours",
+        "ru": "заканчивать занятие",
+        "tr": "dersin bitmesi"
+      },
+      "family": "class",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t03",
+      "hanzi": "上班",
+      "pinyin": "shàng bān",
+      "meaning": {
+        "en": "go to / start work",
+        "fr": "aller au travail / commencer le travail",
+        "ru": "идти на работу / начинать работу",
+        "tr": "işe gitmek / işe başlamak"
+      },
+      "family": "class",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t04",
+      "hanzi": "下班",
+      "pinyin": "xià bān",
+      "meaning": {
+        "en": "finish work",
+        "fr": "finir le travail",
+        "ru": "заканчивать работу",
+        "tr": "işten çıkmak"
+      },
+      "family": "class",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t05",
+      "hanzi": "有课",
+      "pinyin": "yǒu kè",
+      "meaning": {
+        "en": "have classes",
+        "fr": "avoir cours",
+        "ru": "иметь занятия",
+        "tr": "dersi olmak"
+      },
+      "family": "class",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t06",
+      "hanzi": "课",
+      "pinyin": "kè",
+      "meaning": {
+        "en": "lesson / class",
+        "fr": "leçon / cours",
+        "ru": "урок / занятие",
+        "tr": "ders"
+      },
+      "family": "class",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t07",
+      "hanzi": "班",
+      "pinyin": "bān",
+      "meaning": {
+        "en": "class group / work shift",
+        "fr": "groupe-classe / équipe de travail",
+        "ru": "класс / рабочая смена",
+        "tr": "sınıf grubu / vardiya"
+      },
+      "family": "class",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t08",
+      "hanzi": "休息",
+      "pinyin": "xiūxi",
+      "meaning": {
+        "en": "rest / take a break",
+        "fr": "se reposer / faire une pause",
+        "ru": "отдыхать / делать перерыв",
+        "tr": "dinlenmek / mola vermek"
+      },
+      "family": "class",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t09",
+      "hanzi": "检查",
+      "pinyin": "jiǎnchá",
+      "meaning": {
+        "en": "check / inspect",
+        "fr": "vérifier / examiner",
+        "ru": "проверять / осматривать",
+        "tr": "kontrol etmek / incelemek"
+      },
+      "family": "class",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t10",
+      "hanzi": "两点",
+      "pinyin": "liǎng diǎn",
+      "meaning": {
+        "en": "two o’clock",
+        "fr": "deux heures",
+        "ru": "два часа",
+        "tr": "saat iki"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t11",
+      "hanzi": "两点零二",
+      "pinyin": "liǎng diǎn líng èr",
+      "meaning": {
+        "en": "2:02",
+        "fr": "2 h 02",
+        "ru": "2:02",
+        "tr": "2:02"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t12",
+      "hanzi": "两点零五",
+      "pinyin": "liǎng diǎn líng wǔ",
+      "meaning": {
+        "en": "2:05",
+        "fr": "2 h 05",
+        "ru": "2:05",
+        "tr": "2:05"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t13",
+      "hanzi": "两点十五分",
+      "pinyin": "liǎng diǎn shíwǔ fēn",
+      "meaning": {
+        "en": "2:15 (fifteen minutes past two)",
+        "fr": "2 h 15 (quinze minutes après deux heures)",
+        "ru": "2:15 (пятнадцать минут третьего)",
+        "tr": "2:15 (ikiyi on beş geçiyor)"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": true,
+      "equivalence": "time215"
+    },
+    {
+      "id": "c08-t14",
+      "hanzi": "两点一刻",
+      "pinyin": "liǎng diǎn yí kè",
+      "meaning": {
+        "en": "a quarter past two",
+        "fr": "deux heures et quart",
+        "ru": "четверть третьего",
+        "tr": "ikiyi çeyrek geçiyor"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": false,
+      "equivalence": "time215"
+    },
+    {
+      "id": "c08-t15",
+      "hanzi": "两点半",
+      "pinyin": "liǎng diǎn bàn",
+      "meaning": {
+        "en": "half past two",
+        "fr": "deux heures et demie",
+        "ru": "половина третьего",
+        "tr": "iki buçuk"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t16",
+      "hanzi": "两点四十五分",
+      "pinyin": "liǎng diǎn sìshíwǔ fēn",
+      "meaning": {
+        "en": "2:45 (forty-five minutes past two)",
+        "fr": "2 h 45 (quarante-cinq minutes après deux heures)",
+        "ru": "2:45 (два часа сорок пять минут)",
+        "tr": "2:45 (ikiyi kırk beş geçiyor)"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": true,
+      "equivalence": "time245"
+    },
+    {
+      "id": "c08-t17",
+      "hanzi": "两点三刻",
+      "pinyin": "liǎng diǎn sān kè",
+      "meaning": {
+        "en": "2:45 (three quarters past two)",
+        "fr": "2 h 45 (trois quarts après deux heures)",
+        "ru": "2:45 (три четверти часа после двух)",
+        "tr": "2:45 (ikiyi üç çeyrek geçiyor)"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": false,
+      "equivalence": "time245"
+    },
+    {
+      "id": "c08-t18",
+      "hanzi": "两点五十五分",
+      "pinyin": "liǎng diǎn wǔshíwǔ fēn",
+      "meaning": {
+        "en": "2:55 (fifty-five minutes past two)",
+        "fr": "2 h 55 (cinquante-cinq minutes après deux heures)",
+        "ru": "2:55 (два часа пятьдесят пять минут)",
+        "tr": "2:55 (ikiyi elli beş geçiyor)"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": true,
+      "equivalence": "time255"
+    },
+    {
+      "id": "c08-t19",
+      "hanzi": "差一刻三点",
+      "pinyin": "chà yí kè sān diǎn",
+      "meaning": {
+        "en": "a quarter to three",
+        "fr": "trois heures moins le quart",
+        "ru": "без четверти три",
+        "tr": "üçe çeyrek var"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": true,
+      "equivalence": "time245"
+    },
+    {
+      "id": "c08-t20",
+      "hanzi": "差五分三点",
+      "pinyin": "chà wǔ fēn sān diǎn",
+      "meaning": {
+        "en": "five to three",
+        "fr": "trois heures moins cinq",
+        "ru": "без пяти три",
+        "tr": "üçe beş var"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": true,
+      "equivalence": "time255"
+    },
+    {
+      "id": "c08-t21",
+      "hanzi": "一刻",
+      "pinyin": "yí kè",
+      "meaning": {
+        "en": "a quarter of an hour",
+        "fr": "un quart d’heure",
+        "ru": "четверть часа",
+        "tr": "çeyrek saat"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t22",
+      "hanzi": "分钟",
+      "pinyin": "fēnzhōng",
+      "meaning": {
+        "en": "minute (duration)",
+        "fr": "minute (durée)",
+        "ru": "минута (длительность)",
+        "tr": "dakika (süre)"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t23",
+      "hanzi": "下午一点",
+      "pinyin": "xiàwǔ yì diǎn",
+      "meaning": {
+        "en": "one in the afternoon",
+        "fr": "une heure de l’après-midi",
+        "ru": "час дня",
+        "tr": "öğleden sonra saat bir"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t24",
+      "hanzi": "点",
+      "pinyin": "diǎn",
+      "meaning": {
+        "en": "o’clock (here)",
+        "fr": "heure (ici)",
+        "ru": "час (здесь)",
+        "tr": "saat (burada)"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "两点",
+      "audioPinyin": "liǎng diǎn"
+    },
+    {
+      "id": "c08-t25",
+      "hanzi": "半",
+      "pinyin": "bàn",
+      "meaning": {
+        "en": "half",
+        "fr": "demi / moitié",
+        "ru": "половина",
+        "tr": "yarım"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "两点半",
+      "audioPinyin": "liǎng diǎn bàn"
+    },
+    {
+      "id": "c08-t26",
+      "hanzi": "零",
+      "pinyin": "líng",
+      "meaning": {
+        "en": "zero",
+        "fr": "zéro",
+        "ru": "ноль",
+        "tr": "sıfır"
+      },
+      "family": "clock",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "两点零二",
+      "audioPinyin": "liǎng diǎn líng èr"
+    },
+    {
+      "id": "c08-t27",
+      "hanzi": "从",
+      "pinyin": "cóng",
+      "meaning": {
+        "en": "from",
+        "fr": "de / depuis",
+        "ru": "от / с",
+        "tr": " -den / -dan"
+      },
+      "family": "ranges",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "从星期一到星期五",
+      "audioPinyin": "cóng xīngqīyī dào xīngqīwǔ"
+    },
+    {
+      "id": "c08-t28",
+      "hanzi": "到",
+      "pinyin": "dào",
+      "meaning": {
+        "en": "to / until / arrive",
+        "fr": "à / jusqu’à / arriver",
+        "ru": "до / прибывать",
+        "tr": " -e kadar / varmak"
+      },
+      "family": "ranges",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "从星期一到星期五",
+      "audioPinyin": "cóng xīngqīyī dào xīngqīwǔ"
+    },
+    {
+      "id": "c08-t29",
+      "hanzi": "星期一",
+      "pinyin": "xīngqīyī",
+      "meaning": {
+        "en": "Monday",
+        "fr": "lundi",
+        "ru": "понедельник",
+        "tr": "pazartesi"
+      },
+      "family": "ranges",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t30",
+      "hanzi": "星期五",
+      "pinyin": "xīngqīwǔ",
+      "meaning": {
+        "en": "Friday",
+        "fr": "vendredi",
+        "ru": "пятница",
+        "tr": "cuma"
+      },
+      "family": "ranges",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t31",
+      "hanzi": "时间",
+      "pinyin": "shíjiān",
+      "meaning": {
+        "en": "time",
+        "fr": "temps / heure",
+        "ru": "время",
+        "tr": "zaman"
+      },
+      "family": "ranges",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t32",
+      "hanzi": "地方",
+      "pinyin": "dìfang",
+      "meaning": {
+        "en": "place",
+        "fr": "endroit",
+        "ru": "место",
+        "tr": "yer"
+      },
+      "family": "distance",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t33",
+      "hanzi": "离",
+      "pinyin": "lí",
+      "meaning": {
+        "en": "away from (distance marker)",
+        "fr": "de (marque la distance)",
+        "ru": "от (показатель расстояния)",
+        "tr": " -den (uzaklık)"
+      },
+      "family": "distance",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "离学校很近",
+      "audioPinyin": "lí xuéxiào hěn jìn"
+    },
+    {
+      "id": "c08-t34",
+      "hanzi": "远",
+      "pinyin": "yuǎn",
+      "meaning": {
+        "en": "far",
+        "fr": "loin",
+        "ru": "далеко",
+        "tr": "uzak"
+      },
+      "family": "distance",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t35",
+      "hanzi": "近",
+      "pinyin": "jìn",
+      "meaning": {
+        "en": "near",
+        "fr": "près",
+        "ru": "близко",
+        "tr": "yakın"
+      },
+      "family": "distance",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t36",
+      "hanzi": "学校",
+      "pinyin": "xuéxiào",
+      "meaning": {
+        "en": "school",
+        "fr": "école",
+        "ru": "школа",
+        "tr": "okul"
+      },
+      "family": "distance",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t37",
+      "hanzi": "家",
+      "pinyin": "jiā",
+      "meaning": {
+        "en": "home / family",
+        "fr": "maison / famille",
+        "ru": "дом / семья",
+        "tr": "ev / aile"
+      },
+      "family": "distance",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t38",
+      "hanzi": "世界",
+      "pinyin": "shìjiè",
+      "meaning": {
+        "en": "world",
+        "fr": "monde",
+        "ru": "мир",
+        "tr": "dünya"
+      },
+      "family": "distance",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t39",
+      "hanzi": "距离",
+      "pinyin": "jùlí",
+      "meaning": {
+        "en": "distance",
+        "fr": "distance",
+        "ru": "расстояние",
+        "tr": "mesafe"
+      },
+      "family": "distance",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t40",
+      "hanzi": "最远",
+      "pinyin": "zuì yuǎn",
+      "meaning": {
+        "en": "farthest",
+        "fr": "le plus loin",
+        "ru": "самый далёкий",
+        "tr": "en uzak"
+      },
+      "family": "distance",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t41",
+      "hanzi": "世界上最远的距离",
+      "pinyin": "shìjiè shàng zuì yuǎn de jùlí",
+      "meaning": {
+        "en": "the greatest distance in the world (a heading)",
+        "fr": "la plus grande distance au monde (un titre)",
+        "ru": "самое большое расстояние в мире (заголовок)",
+        "tr": "dünyadaki en uzak mesafe (bir başlık)"
+      },
+      "family": "distance",
+      "origin": "source",
+      "phrase": true
+    },
+    {
+      "id": "c08-t42",
+      "hanzi": "同",
+      "pinyin": "tóng",
+      "meaning": {
+        "en": "same / together",
+        "fr": "même / ensemble",
+        "ru": "одинаковый / вместе",
+        "tr": "aynı / birlikte"
+      },
+      "family": "people",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t43",
+      "hanzi": "同学",
+      "pinyin": "tóngxué",
+      "meaning": {
+        "en": "classmate / fellow student",
+        "fr": "camarade de classe / étudiant",
+        "ru": "одноклассник / сокурсник",
+        "tr": "sınıf arkadaşı / öğrenci arkadaşı"
+      },
+      "family": "people",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t44",
+      "hanzi": "同班同学",
+      "pinyin": "tóngbān tóngxué",
+      "meaning": {
+        "en": "classmate in the same class group",
+        "fr": "camarade du même groupe-classe",
+        "ru": "одноклассник из того же класса",
+        "tr": "aynı sınıftaki arkadaş"
+      },
+      "family": "people",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t45",
+      "hanzi": "同屋",
+      "pinyin": "tóngwū",
+      "meaning": {
+        "en": "roommate",
+        "fr": "camarade de chambre",
+        "ru": "сосед по комнате",
+        "tr": "oda arkadaşı"
+      },
+      "family": "people",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t46",
+      "hanzi": "同桌",
+      "pinyin": "tóngzhuō",
+      "meaning": {
+        "en": "deskmate",
+        "fr": "camarade de table",
+        "ru": "сосед по парте",
+        "tr": "sıra arkadaşı"
+      },
+      "family": "people",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t47",
+      "hanzi": "同事",
+      "pinyin": "tóngshì",
+      "meaning": {
+        "en": "colleague",
+        "fr": "collègue",
+        "ru": "коллега",
+        "tr": "iş arkadaşı"
+      },
+      "family": "people",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t48",
+      "hanzi": "同意",
+      "pinyin": "tóngyì",
+      "meaning": {
+        "en": "agree",
+        "fr": "être d’accord",
+        "ru": "соглашаться",
+        "tr": "katılmak / hemfikir olmak"
+      },
+      "family": "people",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t49",
+      "hanzi": "不同意",
+      "pinyin": "bù tóngyì",
+      "meaning": {
+        "en": "disagree",
+        "fr": "ne pas être d’accord",
+        "ru": "не соглашаться",
+        "tr": "katılmamak"
+      },
+      "family": "people",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t50",
+      "hanzi": "有事",
+      "pinyin": "yǒu shì",
+      "meaning": {
+        "en": "have something to do / have a matter to discuss",
+        "fr": "avoir quelque chose à faire / à dire",
+        "ru": "иметь дела / вопрос для обсуждения",
+        "tr": "işi olmak / konuşacak bir konusu olmak"
+      },
+      "family": "people",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t51",
+      "hanzi": "有空",
+      "pinyin": "yǒu kòng",
+      "meaning": {
+        "en": "have free time",
+        "fr": "avoir du temps libre",
+        "ru": "иметь свободное время",
+        "tr": "boş vakti olmak"
+      },
+      "family": "people",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t52",
+      "hanzi": "门",
+      "pinyin": "mén",
+      "meaning": {
+        "en": "door / gate",
+        "fr": "porte",
+        "ru": "дверь / ворота",
+        "tr": "kapı"
+      },
+      "family": "shapes",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t53",
+      "hanzi": "问",
+      "pinyin": "wèn",
+      "meaning": {
+        "en": "ask",
+        "fr": "demander",
+        "ru": "спрашивать",
+        "tr": "sormak"
+      },
+      "family": "shapes",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t54",
+      "hanzi": "间",
+      "pinyin": "jiān",
+      "meaning": {
+        "en": "room / between (here)",
+        "fr": "pièce / entre (ici)",
+        "ru": "комната / между (здесь)",
+        "tr": "oda / ara (burada)"
+      },
+      "family": "shapes",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "房间",
+      "audioPinyin": "fángjiān"
+    },
+    {
+      "id": "c08-t55",
+      "hanzi": "闻",
+      "pinyin": "wén",
+      "meaning": {
+        "en": "smell / hear of",
+        "fr": "sentir / entendre parler de",
+        "ru": "нюхать / слышать о",
+        "tr": "koklamak / haberini almak"
+      },
+      "family": "shapes",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "闻一下",
+      "audioPinyin": "wén yíxià"
+    },
+    {
+      "id": "c08-t56",
+      "hanzi": "桌子",
+      "pinyin": "zhuōzi",
+      "meaning": {
+        "en": "table / desk",
+        "fr": "table / bureau",
+        "ru": "стол / парта",
+        "tr": "masa"
+      },
+      "family": "objects",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t57",
+      "hanzi": "椅子",
+      "pinyin": "yǐzi",
+      "meaning": {
+        "en": "chair",
+        "fr": "chaise",
+        "ru": "стул",
+        "tr": "sandalye"
+      },
+      "family": "objects",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t58",
+      "hanzi": "地图",
+      "pinyin": "dìtú",
+      "meaning": {
+        "en": "map",
+        "fr": "carte géographique",
+        "ru": "карта",
+        "tr": "harita"
+      },
+      "family": "objects",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t59",
+      "hanzi": "纸",
+      "pinyin": "zhǐ",
+      "meaning": {
+        "en": "paper",
+        "fr": "papier",
+        "ru": "бумага",
+        "tr": "kâğıt"
+      },
+      "family": "objects",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t60",
+      "hanzi": "钥匙",
+      "pinyin": "yàoshi",
+      "meaning": {
+        "en": "key",
+        "fr": "clé",
+        "ru": "ключ",
+        "tr": "anahtar"
+      },
+      "family": "objects",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t61",
+      "hanzi": "一张",
+      "pinyin": "yì zhāng",
+      "meaning": {
+        "en": "one (classifier for flat things)",
+        "fr": "un / une (classificateur des objets plats)",
+        "ru": "один (счётное слово для плоских предметов)",
+        "tr": "bir (düz nesneler için sayma sözcüğü)"
+      },
+      "family": "objects",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t62",
+      "hanzi": "一把",
+      "pinyin": "yì bǎ",
+      "meaning": {
+        "en": "one (classifier for handled objects)",
+        "fr": "un / une (classificateur des objets à manche)",
+        "ru": "один (счётное слово для предметов с ручкой)",
+        "tr": "bir (saplı nesneler için sayma sözcüğü)"
+      },
+      "family": "objects",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t63",
+      "hanzi": "张",
+      "pinyin": "zhāng",
+      "meaning": {
+        "en": "classifier for flat things",
+        "fr": "classificateur des objets plats",
+        "ru": "счётное слово для плоских предметов",
+        "tr": "düz nesneler için sayma sözcüğü"
+      },
+      "family": "objects",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "一张纸",
+      "audioPinyin": "yì zhāng zhǐ"
+    },
+    {
+      "id": "c08-t64",
+      "hanzi": "把",
+      "pinyin": "bǎ",
+      "meaning": {
+        "en": "classifier for handled objects",
+        "fr": "classificateur des objets à manche",
+        "ru": "счётное слово для предметов с ручкой",
+        "tr": "saplı nesneler için sayma sözcüğü"
+      },
+      "family": "objects",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "一把椅子",
+      "audioPinyin": "yì bǎ yǐzi"
+    },
+    {
+      "id": "c08-t65",
+      "hanzi": "车",
+      "pinyin": "chē",
+      "meaning": {
+        "en": "vehicle / car",
+        "fr": "véhicule / voiture",
+        "ru": "транспорт / машина",
+        "tr": "taşıt / araba"
+      },
+      "family": "objects",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t66",
+      "hanzi": "里",
+      "pinyin": "lǐ",
+      "meaning": {
+        "en": "inside",
+        "fr": "à l’intérieur",
+        "ru": "внутри",
+        "tr": "içinde"
+      },
+      "family": "objects",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "在车里",
+      "audioPinyin": "zài chē lǐ"
+    },
+    {
+      "id": "c08-t67",
+      "hanzi": "给",
+      "pinyin": "gěi",
+      "meaning": {
+        "en": "give / to",
+        "fr": "donner / à",
+        "ru": "давать / для",
+        "tr": "vermek / -e"
+      },
+      "family": "objects",
+      "origin": "source",
+      "phrase": false,
+      "audioText": "给我一张纸",
+      "audioPinyin": "gěi wǒ yì zhāng zhǐ"
+    },
+    {
+      "id": "c08-t68",
+      "hanzi": "萝卜",
+      "pinyin": "luóbo",
+      "meaning": {
+        "en": "radish",
+        "fr": "radis",
+        "ru": "редька / редис",
+        "tr": "turp"
+      },
+      "family": "extras",
+      "origin": "source",
+      "phrase": false
+    },
+    {
+      "id": "c08-t69",
+      "hanzi": "罗汉果",
+      "pinyin": "luóhànguǒ",
+      "meaning": {
+        "en": "monk fruit",
+        "fr": "fruit du moine",
+        "ru": "плод архата",
+        "tr": "keşiş meyvesi"
+      },
+      "family": "extras",
+      "origin": "source",
+      "phrase": false
+    }
+  ],
+  "sentences": [
+    {
+      "id": "c08-s01",
+      "hanzi": "我们从星期一到星期五有课。",
+      "pinyin": "Wǒmen cóng xīngqīyī dào xīngqīwǔ yǒu kè.",
+      "meaning": {
+        "en": "We have classes from Monday to Friday.",
+        "fr": "Nous avons cours du lundi au vendredi.",
+        "ru": "У нас занятия с понедельника по пятницу.",
+        "tr": "Pazartesiden cumaya kadar dersimiz var."
+      },
+      "topic": "class",
+      "origin": "source-normalized"
+    },
+    {
+      "id": "c08-s02",
+      "hanzi": "我们从八点四十分到十二点上课。",
+      "pinyin": "Wǒmen cóng bā diǎn sìshí fēn dào shí'èr diǎn shàng kè.",
+      "meaning": {
+        "en": "We have class from 8:40 to 12:00.",
+        "fr": "Nous avons cours de 8 h 40 à 12 h.",
+        "ru": "У нас занятия с 8:40 до 12:00.",
+        "tr": "Saat 8.40’tan 12.00’ye kadar dersimiz var."
+      },
+      "topic": "class",
+      "origin": "source-normalized"
+    },
+    {
+      "id": "c08-s03",
+      "hanzi": "我们从十二点到下午一点休息。",
+      "pinyin": "Wǒmen cóng shí'èr diǎn dào xiàwǔ yì diǎn xiūxi.",
+      "meaning": {
+        "en": "We take a break from noon to one in the afternoon.",
+        "fr": "Nous faisons une pause de midi à une heure de l’après-midi.",
+        "ru": "Мы отдыхаем с полудня до часа дня.",
+        "tr": "Öğlen on ikiden öğleden sonra bire kadar dinleniyoruz."
+      },
+      "topic": "class",
+      "origin": "source-normalized"
+    },
+    {
+      "id": "c08-s04",
+      "hanzi": "从你家到学校远吗？",
+      "pinyin": "Cóng nǐ jiā dào xuéxiào yuǎn ma?",
+      "meaning": {
+        "en": "Is it far from your home to school?",
+        "fr": "Est-ce loin de chez toi à l’école ?",
+        "ru": "От твоего дома до школы далеко?",
+        "tr": "Evinden okula uzak mı?"
+      },
+      "topic": "distance",
+      "origin": "source"
+    },
+    {
+      "id": "c08-s05",
+      "hanzi": "从我家到学校很近。",
+      "pinyin": "Cóng wǒ jiā dào xuéxiào hěn jìn.",
+      "meaning": {
+        "en": "It is quite near from my home to school.",
+        "fr": "De chez moi à l’école, c’est tout près.",
+        "ru": "От моего дома до школы близко.",
+        "tr": "Evimden okula çok yakın."
+      },
+      "topic": "distance",
+      "origin": "source"
+    },
+    {
+      "id": "c08-s06",
+      "hanzi": "我家离学校很近。",
+      "pinyin": "Wǒ jiā lí xuéxiào hěn jìn.",
+      "meaning": {
+        "en": "My home is near the school.",
+        "fr": "Ma maison est près de l’école.",
+        "ru": "Мой дом рядом со школой.",
+        "tr": "Evim okula çok yakın."
+      },
+      "topic": "distance",
+      "origin": "source"
+    },
+    {
+      "id": "c08-s07",
+      "hanzi": "我同意。",
+      "pinyin": "Wǒ tóngyì.",
+      "meaning": {
+        "en": "I agree.",
+        "fr": "Je suis d’accord.",
+        "ru": "Я согласен.",
+        "tr": "Katılıyorum."
+      },
+      "topic": "people",
+      "origin": "source"
+    },
+    {
+      "id": "c08-s08",
+      "hanzi": "我不同意。",
+      "pinyin": "Wǒ bù tóngyì.",
+      "meaning": {
+        "en": "I disagree.",
+        "fr": "Je ne suis pas d’accord.",
+        "ru": "Я не согласен.",
+        "tr": "Katılmıyorum."
+      },
+      "topic": "people",
+      "origin": "source"
+    },
+    {
+      "id": "c08-s09",
+      "hanzi": "你有事吗？",
+      "pinyin": "Nǐ yǒu shì ma?",
+      "meaning": {
+        "en": "Do you have something to do or discuss?",
+        "fr": "As-tu quelque chose à faire ou à dire ?",
+        "ru": "У тебя есть дела или вопрос для обсуждения?",
+        "tr": "Yapacak veya konuşacak bir işin var mı？"
+      },
+      "topic": "people",
+      "origin": "source"
+    },
+    {
+      "id": "c08-s10",
+      "hanzi": "我钥匙在你车里。",
+      "pinyin": "Wǒ yàoshi zài nǐ chē lǐ.",
+      "meaning": {
+        "en": "My keys are in your car (colloquial omission of 的).",
+        "fr": "Mes clés sont dans ta voiture (omission familière de 的).",
+        "ru": "Мои ключи в твоей машине (разговорный пропуск 的).",
+        "tr": "Anahtarım arabanda (konuşma dilinde 的 atlanmış)."
+      },
+      "topic": "objects",
+      "origin": "source"
+    },
+    {
+      "id": "c08-s11",
+      "hanzi": "你几点上班？",
+      "pinyin": "Nǐ jǐ diǎn shàng bān?",
+      "meaning": {
+        "en": "What time do you start work?",
+        "fr": "À quelle heure commences-tu le travail ?",
+        "ru": "Во сколько ты начинаешь работать?",
+        "tr": "Saat kaçta işe başlıyorsun?"
+      },
+      "topic": "class",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s12",
+      "hanzi": "我八点上班，五点下班。",
+      "pinyin": "Wǒ bā diǎn shàng bān, wǔ diǎn xià bān.",
+      "meaning": {
+        "en": "I start work at eight and finish at five.",
+        "fr": "Je commence à huit heures et termine à cinq heures.",
+        "ru": "Я начинаю работать в восемь и заканчиваю в пять.",
+        "tr": "Sekizde işe başlar, beşte çıkarım."
+      },
+      "topic": "class",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s13",
+      "hanzi": "我们上课了。",
+      "pinyin": "Wǒmen shàng kè le.",
+      "meaning": {
+        "en": "We have started class.",
+        "fr": "Nous avons commencé le cours.",
+        "ru": "Мы начали занятие.",
+        "tr": "Derse başladık."
+      },
+      "topic": "class",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s14",
+      "hanzi": "我们下课了。",
+      "pinyin": "Wǒmen xià kè le.",
+      "meaning": {
+        "en": "We have finished class.",
+        "fr": "Nous avons terminé le cours.",
+        "ru": "Мы закончили занятие.",
+        "tr": "Dersimiz bitti."
+      },
+      "topic": "class",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s15",
+      "hanzi": "请检查作业。",
+      "pinyin": "Qǐng jiǎnchá zuòyè.",
+      "meaning": {
+        "en": "Please check the homework.",
+        "fr": "Vérifiez les devoirs, s’il vous plaît.",
+        "ru": "Пожалуйста, проверьте домашнее задание.",
+        "tr": "Lütfen ödevi kontrol edin."
+      },
+      "topic": "class",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s16",
+      "hanzi": "现在是两点。",
+      "pinyin": "Xiànzài shì liǎng diǎn.",
+      "meaning": {
+        "en": "It is two o’clock now.",
+        "fr": "Il est deux heures.",
+        "ru": "Сейчас два часа.",
+        "tr": "Şimdi saat iki."
+      },
+      "topic": "clock",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s17",
+      "hanzi": "现在是两点零二。",
+      "pinyin": "Xiànzài shì liǎng diǎn líng èr.",
+      "meaning": {
+        "en": "It is 2:02 now.",
+        "fr": "Il est 2 h 02.",
+        "ru": "Сейчас 2:02.",
+        "tr": "Şimdi saat 2:02."
+      },
+      "topic": "clock",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s18",
+      "hanzi": "现在是两点零五。",
+      "pinyin": "Xiànzài shì liǎng diǎn líng wǔ.",
+      "meaning": {
+        "en": "It is 2:05 now.",
+        "fr": "Il est 2 h 05.",
+        "ru": "Сейчас 2:05.",
+        "tr": "Şimdi saat 2:05."
+      },
+      "topic": "clock",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s19",
+      "hanzi": "两点十五分，也可以说两点一刻。",
+      "pinyin": "Liǎng diǎn shíwǔ fēn, yě kěyǐ shuō liǎng diǎn yí kè.",
+      "meaning": {
+        "en": "For 2:15, you can also say a quarter past two.",
+        "fr": "Pour 2 h 15, on peut aussi dire deux heures et quart.",
+        "ru": "2:15 можно также сказать как «четверть третьего».",
+        "tr": "2:15 için “ikiyi çeyrek geçiyor” da denebilir."
+      },
+      "topic": "clock",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s20",
+      "hanzi": "现在是两点半。",
+      "pinyin": "Xiànzài shì liǎng diǎn bàn.",
+      "meaning": {
+        "en": "It is half past two now.",
+        "fr": "Il est deux heures et demie.",
+        "ru": "Сейчас половина третьего.",
+        "tr": "Şimdi saat iki buçuk."
+      },
+      "topic": "clock",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s21",
+      "hanzi": "两点四十五分，也可以说两点三刻。",
+      "pinyin": "Liǎng diǎn sìshíwǔ fēn, yě kěyǐ shuō liǎng diǎn sān kè.",
+      "meaning": {
+        "en": "For 2:45, you can also say three quarters past two.",
+        "fr": "Pour 2 h 45, on peut aussi dire trois quarts après deux heures.",
+        "ru": "2:45 можно также выразить как три четверти часа после двух.",
+        "tr": "2:45, “ikiyi üç çeyrek geçiyor” diye de söylenebilir."
+      },
+      "topic": "clock",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s22",
+      "hanzi": "两点四十五分，也可以说差一刻三点。",
+      "pinyin": "Liǎng diǎn sìshíwǔ fēn, yě kěyǐ shuō chà yí kè sān diǎn.",
+      "meaning": {
+        "en": "For 2:45, you can also say a quarter to three.",
+        "fr": "Pour 2 h 45, on peut aussi dire trois heures moins le quart.",
+        "ru": "2:45 можно также сказать как «без четверти три».",
+        "tr": "2:45 için “üçe çeyrek var” da denebilir."
+      },
+      "topic": "clock",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s23",
+      "hanzi": "两点五十五分，也可以说差五分三点。",
+      "pinyin": "Liǎng diǎn wǔshíwǔ fēn, yě kěyǐ shuō chà wǔ fēn sān diǎn.",
+      "meaning": {
+        "en": "For 2:55, you can also say five to three.",
+        "fr": "Pour 2 h 55, on peut aussi dire trois heures moins cinq.",
+        "ru": "2:55 можно также сказать как «без пяти три».",
+        "tr": "2:55 için “üçe beş var” da denebilir."
+      },
+      "topic": "clock",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s24",
+      "hanzi": "一刻是十五分钟。",
+      "pinyin": "Yí kè shì shíwǔ fēnzhōng.",
+      "meaning": {
+        "en": "A quarter of an hour is fifteen minutes.",
+        "fr": "Un quart d’heure fait quinze minutes.",
+        "ru": "Четверть часа — это пятнадцать минут.",
+        "tr": "Çeyrek saat on beş dakikadır."
+      },
+      "topic": "clock",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s25",
+      "hanzi": "我下午一点有课。",
+      "pinyin": "Wǒ xiàwǔ yì diǎn yǒu kè.",
+      "meaning": {
+        "en": "I have class at one in the afternoon.",
+        "fr": "J’ai cours à une heure de l’après-midi.",
+        "ru": "У меня занятие в час дня.",
+        "tr": "Öğleden sonra birde dersim var."
+      },
+      "topic": "clock",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s26",
+      "hanzi": "我们从星期一到星期五上班。",
+      "pinyin": "Wǒmen cóng xīngqīyī dào xīngqīwǔ shàng bān.",
+      "meaning": {
+        "en": "We work from Monday to Friday.",
+        "fr": "Nous travaillons du lundi au vendredi.",
+        "ru": "Мы работаем с понедельника по пятницу.",
+        "tr": "Pazartesiden cumaya kadar çalışıyoruz."
+      },
+      "topic": "ranges",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s27",
+      "hanzi": "我从家到学校走路。",
+      "pinyin": "Wǒ cóng jiā dào xuéxiào zǒulù.",
+      "meaning": {
+        "en": "I walk from home to school.",
+        "fr": "Je vais à pied de chez moi à l’école.",
+        "ru": "Я иду пешком из дома в школу.",
+        "tr": "Evden okula yürürüm."
+      },
+      "topic": "ranges",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s28",
+      "hanzi": "你有时间吗？",
+      "pinyin": "Nǐ yǒu shíjiān ma?",
+      "meaning": {
+        "en": "Do you have time?",
+        "fr": "As-tu du temps ?",
+        "ru": "У тебя есть время?",
+        "tr": "Vaktin var mı?"
+      },
+      "topic": "ranges",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s29",
+      "hanzi": "这个地方离学校很远。",
+      "pinyin": "Zhè ge dìfang lí xuéxiào hěn yuǎn.",
+      "meaning": {
+        "en": "This place is far from the school.",
+        "fr": "Cet endroit est loin de l’école.",
+        "ru": "Это место далеко от школы.",
+        "tr": "Bu yer okuldan çok uzak."
+      },
+      "topic": "distance",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s30",
+      "hanzi": "这两个地方的距离很远。",
+      "pinyin": "Zhè liǎng ge dìfang de jùlí hěn yuǎn.",
+      "meaning": {
+        "en": "The distance between these two places is great.",
+        "fr": "La distance entre ces deux endroits est grande.",
+        "ru": "Расстояние между этими двумя местами большое.",
+        "tr": "Bu iki yer arasındaki mesafe çok fazla."
+      },
+      "topic": "distance",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s31",
+      "hanzi": "这是世界上最远的距离吗？",
+      "pinyin": "Zhè shì shìjiè shàng zuì yuǎn de jùlí ma?",
+      "meaning": {
+        "en": "Is this the greatest distance in the world?",
+        "fr": "Est-ce la plus grande distance au monde ?",
+        "ru": "Это самое большое расстояние в мире?",
+        "tr": "Bu dünyadaki en uzak mesafe mi?"
+      },
+      "topic": "distance",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s32",
+      "hanzi": "他是我的同班同学。",
+      "pinyin": "Tā shì wǒ de tóngbān tóngxué.",
+      "meaning": {
+        "en": "He is a classmate in my class group.",
+        "fr": "C’est un camarade de mon groupe-classe.",
+        "ru": "Он мой одноклассник из того же класса.",
+        "tr": "O benimle aynı sınıfta."
+      },
+      "topic": "people",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s33",
+      "hanzi": "她是我的同屋。",
+      "pinyin": "Tā shì wǒ de tóngwū.",
+      "meaning": {
+        "en": "She is my roommate.",
+        "fr": "C’est ma camarade de chambre.",
+        "ru": "Она моя соседка по комнате.",
+        "tr": "O benim oda arkadaşım."
+      },
+      "topic": "people",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s34",
+      "hanzi": "他是我的同桌。",
+      "pinyin": "Tā shì wǒ de tóngzhuō.",
+      "meaning": {
+        "en": "He is my deskmate.",
+        "fr": "C’est mon camarade de table.",
+        "ru": "Он мой сосед по парте.",
+        "tr": "O benim sıra arkadaşım."
+      },
+      "topic": "people",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s35",
+      "hanzi": "她是我的同事。",
+      "pinyin": "Tā shì wǒ de tóngshì.",
+      "meaning": {
+        "en": "She is my colleague.",
+        "fr": "C’est ma collègue.",
+        "ru": "Она моя коллега.",
+        "tr": "O benim iş arkadaşım."
+      },
+      "topic": "people",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s36",
+      "hanzi": "你今天有空吗？",
+      "pinyin": "Nǐ jīntiān yǒu kòng ma?",
+      "meaning": {
+        "en": "Do you have free time today?",
+        "fr": "As-tu du temps libre aujourd’hui ?",
+        "ru": "У тебя сегодня есть свободное время?",
+        "tr": "Bugün boş vaktin var mı?"
+      },
+      "topic": "people",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s37",
+      "hanzi": "门开着。",
+      "pinyin": "Mén kāizhe.",
+      "meaning": {
+        "en": "The door is open.",
+        "fr": "La porte est ouverte.",
+        "ru": "Дверь открыта.",
+        "tr": "Kapı açık."
+      },
+      "topic": "shapes",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s38",
+      "hanzi": "我想问一个问题。",
+      "pinyin": "Wǒ xiǎng wèn yí ge wèntí.",
+      "meaning": {
+        "en": "I would like to ask a question.",
+        "fr": "Je voudrais poser une question.",
+        "ru": "Я хочу задать вопрос.",
+        "tr": "Bir soru sormak istiyorum."
+      },
+      "topic": "shapes",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s39",
+      "hanzi": "这是我的房间。",
+      "pinyin": "Zhè shì wǒ de fángjiān.",
+      "meaning": {
+        "en": "This is my room.",
+        "fr": "C’est ma chambre.",
+        "ru": "Это моя комната.",
+        "tr": "Bu benim odam."
+      },
+      "topic": "shapes",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s40",
+      "hanzi": "你闻一下。",
+      "pinyin": "Nǐ wén yíxià.",
+      "meaning": {
+        "en": "Have a smell.",
+        "fr": "Sens un peu.",
+        "ru": "Понюхай.",
+        "tr": "Bir kokla."
+      },
+      "topic": "shapes",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s41",
+      "hanzi": "我的钥匙在你车里。",
+      "pinyin": "Wǒ de yàoshi zài nǐ chē lǐ.",
+      "meaning": {
+        "en": "My keys are in your car.",
+        "fr": "Mes clés sont dans ta voiture.",
+        "ru": "Мои ключи в твоей машине.",
+        "tr": "Anahtarım arabanda."
+      },
+      "topic": "objects",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s42",
+      "hanzi": "这里有一张桌子和一把椅子。",
+      "pinyin": "Zhèlǐ yǒu yì zhāng zhuōzi hé yì bǎ yǐzi.",
+      "meaning": {
+        "en": "There is a table and a chair here.",
+        "fr": "Il y a une table et une chaise ici.",
+        "ru": "Здесь есть стол и стул.",
+        "tr": "Burada bir masa ve bir sandalye var."
+      },
+      "topic": "objects",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s43",
+      "hanzi": "请给我一张地图。",
+      "pinyin": "Qǐng gěi wǒ yì zhāng dìtú.",
+      "meaning": {
+        "en": "Please give me a map.",
+        "fr": "Donne-moi une carte, s’il te plaît.",
+        "ru": "Дай мне, пожалуйста, карту.",
+        "tr": "Lütfen bana bir harita ver."
+      },
+      "topic": "objects",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s44",
+      "hanzi": "请给我一张纸。",
+      "pinyin": "Qǐng gěi wǒ yì zhāng zhǐ.",
+      "meaning": {
+        "en": "Please give me a sheet of paper.",
+        "fr": "Donne-moi une feuille de papier, s’il te plaît.",
+        "ru": "Дай мне, пожалуйста, лист бумаги.",
+        "tr": "Lütfen bana bir yaprak kâğıt ver."
+      },
+      "topic": "objects",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s45",
+      "hanzi": "这是一把钥匙。",
+      "pinyin": "Zhè shì yì bǎ yàoshi.",
+      "meaning": {
+        "en": "This is a key.",
+        "fr": "C’est une clé.",
+        "ru": "Это ключ.",
+        "tr": "Bu bir anahtar."
+      },
+      "topic": "objects",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s46",
+      "hanzi": "我想买萝卜。",
+      "pinyin": "Wǒ xiǎng mǎi luóbo.",
+      "meaning": {
+        "en": "I would like to buy radishes.",
+        "fr": "Je voudrais acheter des radis.",
+        "ru": "Я хочу купить редьку.",
+        "tr": "Turp almak istiyorum."
+      },
+      "topic": "extras",
+      "origin": "app-added"
+    },
+    {
+      "id": "c08-s47",
+      "hanzi": "这是罗汉果。",
+      "pinyin": "Zhè shì luóhànguǒ.",
+      "meaning": {
+        "en": "This is monk fruit.",
+        "fr": "C’est du fruit du moine.",
+        "ru": "Это плод архата.",
+        "tr": "Bu keşiş meyvesidir."
+      },
+      "topic": "extras",
+      "origin": "app-added"
+    }
+  ],
+  "dialogue": [],
+  "topics": [
+    {
+      "id": "class",
+      "anchor": "课",
+      "pattern": "上课 ↔ 下课 · 上班 ↔ 下班",
+      "title": {
+        "en": "Classes, work & breaks",
+        "fr": "Cours, travail et pauses",
+        "ru": "Занятия, работа и перерывы",
+        "tr": "Ders, iş ve molalar"
+      },
+      "note": {
+        "en": "上课 / 下课 describe starting or attending class and finishing it; 上班 / 下班 concern work. 有课 means having a class scheduled. 休息 means resting. The board’s class interval is 08:40–12:00; the break is 12:00–13:00.",
+        "fr": "上课 / 下课 concernent le début ou la participation au cours, puis sa fin ; 上班 / 下班, le travail. 有课 indique un cours prévu. 休息 signifie se reposer. Au tableau : cours de 08:40 à 12:00, pause de 12:00 à 13:00.",
+        "ru": "上课 / 下课 — начинать или посещать занятие и заканчивать его; 上班 / 下班 — о работе. 有课 означает наличие занятия в расписании. 休息 — отдыхать. На доске: занятия 08:40–12:00, перерыв 12:00–13:00.",
+        "tr": "上课 / 下课 derse başlamak veya katılmak ve dersin bitmesidir; 上班 / 下班 işle ilgilidir. 有课 programda ders olması, 休息 dinlenmektir. Tahtada ders 08:40–12:00, mola 12:00–13:00."
+      },
+      "target": "c08-s14",
+      "blocks": [
+        "我们",
+        "下课",
+        "了"
+      ],
+      "beforeId": "c07-s35"
+    },
+    {
+      "id": "clock",
+      "anchor": "点",
+      "pattern": "点 + minutes · 半 · 一刻 / 三刻 · 差 + gap + next hour",
+      "title": {
+        "en": "Say the time",
+        "fr": "Dire l’heure",
+        "ru": "Как сказать время",
+        "tr": "Saati söyle"
+      },
+      "note": {
+        "en": "两点 is two o’clock; use 两 for the hour two. 零 marks the empty tens position in 两点零二 / 两点零五. 一刻 is fifteen minutes; 半 is half an hour. At 2:45, 两点四十五分, 两点三刻 and 差一刻三点 describe the same time. In 差…三点, 三点 is the upcoming hour, not the current one.",
+        "fr": "两点 : deux heures, avec 两. 零 marque la dizaine vide dans 两点零二 / 两点零五. 一刻 : quinze minutes ; 半 : une demi-heure. 两点四十五分, 两点三刻 et 差一刻三点 indiquent tous 2 h 45. Dans 差…三点, 三点 est l’heure suivante.",
+        "ru": "两点 — два часа: для часа «два» используется 两. 零 заполняет разряд десятков в 两点零二 / 两点零五. 一刻 — 15 минут, 半 — полчаса. 两点四十五分, 两点三刻 и 差一刻三点 — всё 2:45. В 差…三点 указаны предстоящие три часа.",
+        "tr": "两点 saat ikidir; saat için 两 kullanılır. 两点零二 / 两点零五 içindeki 零 boş onlar basamağını gösterir. 一刻 on beş dakika, 半 yarım saattir. 两点四十五分, 两点三刻 ve 差一刻三点 aynı saati, 2:45’i anlatır. 差…三点 içinde 三点 yaklaşan saattir."
+      },
+      "target": "c08-s24",
+      "blocks": [
+        "一刻",
+        "是",
+        "十五分钟"
+      ],
+      "beforeId": "c07-s05"
+    },
+    {
+      "id": "ranges",
+      "anchor": "从",
+      "pattern": "从 + start + 到 + end + action",
+      "title": {
+        "en": "From … to …",
+        "fr": "De … à …",
+        "ru": "От … до …",
+        "tr": "…den …e kadar"
+      },
+      "note": {
+        "en": "从…到… works for time and for a route. Put both endpoints before the action: 我们从星期一到星期五上班. In the board phrase 是（从）星期一到星期五, brackets show an optional 从 after 是; do not treat that fragment as a complete sentence without context.",
+        "fr": "从…到… sert pour une période ou un trajet. Placez les deux limites avant l’action : 我们从星期一到星期五上班. Dans 是（从）星期一到星期五 au tableau, 从 entre parenthèses est facultatif après 是 ; le fragment nécessite un contexte.",
+        "ru": "从…到… задаёт время или маршрут. Обе границы ставятся до действия: 我们从星期一到星期五上班. В записи 是（从）星期一到星期五 скобки обозначают необязательное 从 после 是; фрагмент требует контекста.",
+        "tr": "从…到… zaman aralığı veya rota için kullanılır. İki uç noktayı eylemden önce koyun: 我们从星期一到星期五上班. Tahtadaki 是（从）星期一到星期五 içinde parantez, 是 sonrasında 从 kullanılmasının isteğe bağlı olduğunu gösterir; bu parça bağlam gerektirir."
+      },
+      "target": "c08-s26",
+      "blocks": [
+        "我们",
+        "从",
+        "星期一",
+        "到",
+        "星期五",
+        "上班"
+      ],
+      "beforeId": "c07-s27"
+    },
+    {
+      "id": "distance",
+      "anchor": "离",
+      "pattern": "A 离 B 很近 / 很远 · 从 A 到 B",
+      "title": {
+        "en": "Routes & distance",
+        "fr": "Trajets et distance",
+        "ru": "Маршруты и расстояние",
+        "tr": "Rota ve mesafe"
+      },
+      "note": {
+        "en": "从你家到学校 describes endpoints; 我家离学校很近 describes distance between places. 离 is not a replacement for 从 in every sentence. The board heading 世界上最远的距离 is a noun phrase, not a completed quotation; no missing continuation or author is supplied.",
+        "fr": "从你家到学校 décrit les limites d’un trajet ; 我家离学校很近, la distance entre deux lieux. 离 ne remplace pas toujours 从. 世界上最远的距离 est un titre nominal au tableau ; aucune suite ni attribution n’est inventée.",
+        "ru": "从你家到学校 задаёт маршрут, а 我家离学校很近 описывает расстояние между местами. 离 не заменяет 从 во всех предложениях. 世界上最远的距离 — именной заголовок с доски; продолжение и автор не приписываются.",
+        "tr": "从你家到学校 rotanın uçlarını; 我家离学校很近 iki yer arasındaki mesafeyi anlatır. 离 her cümlede 从 yerine geçmez. 世界上最远的距离 tahtadaki bir isim başlığıdır; eksik devam veya yazar eklenmez."
+      },
+      "target": "c08-s06",
+      "blocks": [
+        "我家",
+        "离",
+        "学校",
+        "很近"
+      ],
+      "beforeId": "c07-s25"
+    },
+    {
+      "id": "people",
+      "anchor": "同",
+      "pattern": "同班同学 · 同屋 · 同桌 · 同事",
+      "title": {
+        "en": "People around you",
+        "fr": "Les personnes autour de vous",
+        "ru": "Люди вокруг вас",
+        "tr": "Çevrendeki insanlar"
+      },
+      "note": {
+        "en": "The shared 同 suggests something in common, but learn each whole word: 同屋 roommate, 同桌 deskmate, 同事 colleague. 同意 means agree. 有空 uses kòng for free time; 有事 can mean being busy or having a matter to discuss, depending on context.",
+        "fr": "同 évoque un point commun, mais apprenez les mots entiers : 同屋, camarade de chambre ; 同桌, de table ; 同事, collègue. 同意 : être d’accord. Dans 有空, 空 se lit kòng. 有事 peut indiquer une occupation ou une affaire à discuter.",
+        "ru": "同 указывает на общность, но слова изучаются целиком: 同屋 — сосед по комнате, 同桌 — по парте, 同事 — коллега. 同意 — соглашаться. В 有空 знак 空 читается kòng. 有事 — иметь дела или вопрос для обсуждения, в зависимости от контекста.",
+        "tr": "同 ortaklığı çağrıştırır ama her kelimeyi bütün öğrenin: 同屋 oda arkadaşı, 同桌 sıra arkadaşı, 同事 iş arkadaşı. 同意 hemfikir olmaktır. 有空 içindeki 空, kòng okunur. 有事 bağlama göre meşgul olmak veya konuşacak işi olmak anlamına gelir."
+      },
+      "target": "c08-s34",
+      "blocks": [
+        "他",
+        "是",
+        "我的",
+        "同桌"
+      ],
+      "beforeId": "c07-s43"
+    },
+    {
+      "id": "shapes",
+      "anchor": "门",
+      "pattern": "门 mén · 问 wèn · 间 jiān · 闻 wén · 同 tóng",
+      "title": {
+        "en": "Look closely, hear the difference",
+        "fr": "Observer et écouter les différences",
+        "ru": "Различайте форму и звучание",
+        "tr": "Şekle ve sese dikkat et"
+      },
+      "note": {
+        "en": "门, 问, 间 and 闻 share a visible outer shape; 同 has a different enclosure. These are shape observations, not a claim about historical origin. Read 问 wèn (ask) and 闻 wén (smell) distinctly. 间 is jiān in 房间 and 时间; some other words use jiàn.",
+        "fr": "门, 问, 间 et 闻 partagent une forme extérieure visible ; l’encadrement de 同 diffère. Il s’agit d’observations graphiques, pas d’étymologie. Distinguez 问 wèn et 闻 wén. 间 se lit jiān dans 房间 et 时间 ; d’autres mots emploient jiàn.",
+        "ru": "门, 问, 间 и 闻 имеют общую видимую внешнюю форму; рамка 同 отличается. Это наблюдение о форме, не историческая этимология. Различайте 问 wèn и 闻 wén. 间 читается jiān в 房间 и 时间; в других словах бывает jiàn.",
+        "tr": "门, 问, 间 ve 闻 görünür dış şekli paylaşır; 同 çerçevesi farklıdır. Bu, şekil gözlemidir, tarihsel köken iddiası değildir. 问 wèn ile 闻 wén seslerini ayırın. 间, 房间 ve 时间 içinde jiān; bazı başka sözcüklerde jiàn okunur."
+      },
+      "target": "c08-s38",
+      "blocks": [
+        "我",
+        "想",
+        "问",
+        "一个",
+        "问题"
+      ],
+      "beforeId": "c07-s29"
+    },
+    {
+      "id": "objects",
+      "anchor": "张",
+      "pattern": "一张 + flat object · 一把 + handled object",
+      "title": {
+        "en": "Objects, classifiers & keys",
+        "fr": "Objets, classificateurs et clés",
+        "ru": "Предметы, счётные слова и ключи",
+        "tr": "Nesneler, sayma sözcükleri ve anahtar"
+      },
+      "note": {
+        "en": "Use 一张 for 桌子, 地图 and 纸; 一把 for 椅子 and 钥匙. The classroom sentence 我钥匙在你车里 colloquially omits 的; practise the clear version 我的钥匙在你车里 too. 钥匙 is yàoshi, with neutral shi. The board joke 要死 yàosǐ means “going to die” and is different text and meaning, not a translation of “my keys”.",
+        "fr": "Employez 一张 avec 桌子, 地图 et 纸 ; 一把 avec 椅子 et 钥匙. 我钥匙在你车里 omet familièrement 的 ; pratiquez aussi 我的钥匙在你车里. 钥匙 se lit yàoshi, shi neutre. Le jeu de sons 要死 yàosǐ signifie « être sur le point de mourir » ; ce n’est pas la traduction de « mes clés ».",
+        "ru": "一张 употребляется с 桌子, 地图 и 纸; 一把 — с 椅子 и 钥匙. В 我钥匙在你车里 разговорно опущено 的; тренируйте также 我的钥匙在你车里. 钥匙 читается yàoshi, с нейтральным shi. Шутка 要死 yàosǐ означает «собираюсь умереть»: это другой текст и смысл, не перевод «мои ключи».",
+        "tr": "桌子, 地图 ve 纸 için 一张; 椅子 ve 钥匙 için 一把 kullanın. 我钥匙在你车里 konuşma dilinde 的 atlar; açık biçim 我的钥匙在你车里 için de alıştırma yapın. 钥匙, nötr shi ile yàoshi okunur. Tahtadaki ses oyunu 要死 yàosǐ “ölmek üzere olmak” demektir; “anahtarım” çevirisi değildir."
+      },
+      "target": "c08-s44",
+      "blocks": [
+        "请",
+        "给我",
+        "一张",
+        "纸"
+      ],
+      "beforeId": "c07-s44"
+    },
+    {
+      "id": "extras",
+      "anchor": "卜",
+      "pattern": "萝卜 · 罗汉果",
+      "title": {
+        "en": "Two extra board words",
+        "fr": "Deux mots supplémentaires",
+        "ru": "Ещё два слова с доски",
+        "tr": "Tahtadan iki ek kelime"
+      },
+      "note": {
+        "en": "萝卜 (radish) and 罗汉果 (monk fruit) appear separately on the board. Learn them as whole words. Additional sentences here practise ordinary identification and shopping.",
+        "fr": "萝卜 (radis) et 罗汉果 (fruit du moine) figurent séparément au tableau. Apprenez les mots entiers. Les exemples ajoutés entraînent l’identification et les achats.",
+        "ru": "萝卜 (редька) и 罗汉果 (плод архата) отдельно записаны на доске. Учите слова целиком. Дополнительные примеры — об определении предмета и покупке.",
+        "tr": "萝卜 (turp) ve 罗汉果 (keşiş meyvesi) tahtada ayrı kelimelerdir. Bütün olarak öğrenin. Ek cümleler tanıma ve alışveriş alıştırmasıdır."
+      },
+      "target": "c08-s46",
+      "blocks": [
+        "我",
+        "想",
+        "买",
+        "萝卜"
+      ],
+      "beforeId": "c07-s59"
+    }
+  ]
+}

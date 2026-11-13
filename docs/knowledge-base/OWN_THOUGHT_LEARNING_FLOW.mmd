@@ -1,0 +1,23 @@
+flowchart TD
+  A[Własna myśl ucznia] --> B{Sposób wejścia}
+  B -->|Tekst| C[Intencja i kontekst]
+  B -->|Głos za zgodą| D[Edytowalna transkrypcja]
+  D --> C
+  C --> E{Poziom i cel}
+  E --> F[Pełny naturalny wariant chiński]
+  E --> G[Prostszy wariant z jawnymi uproszczeniami]
+  F --> H[Uczeń wybiera sens i wersję]
+  G --> H
+  H --> I[Walidacja Hanzi Pinyin odczytania i segmentów]
+  I --> J[Audio dokładnie tego zdania]
+  J --> K{Ćwiczenie}
+  K --> L[Odsłuch wolny i normalny]
+  K --> M[Nagranie i porównanie prawdziwych konturów]
+  K --> N[Odtworzenie znaczenia bez podpowiedzi]
+  K --> O[Scena przestrzenna zgodna ze zdaniem]
+  L --> P[Zapis wybranego zdania z intencją]
+  M --> P
+  N --> P
+  O --> P
+  P --> Q[Istniejące powtórki COS]
+  Q --> C

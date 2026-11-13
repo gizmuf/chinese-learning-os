@@ -1,0 +1,2 @@
+import{build}from'esbuild';import{writeFileSync}from'node:fs';
+const r=await build({entryPoints:['app/atlas-model.ts'],bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent'});const{atlasCharacters,atlasAudioItem}=await import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));writeFileSync('/tmp/chinese-atlas-build/audio-items.json',JSON.stringify(atlasCharacters.map(atlasAudioItem)));console.log('Exported',atlasCharacters.length,'contextual audio items.');

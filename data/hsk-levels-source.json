@@ -1,0 +1,29 @@
+{
+  "edition": "HSK examination syllabus, November 2025",
+  "officialSource": "https://hsk.cn-bj.ufileos.com/3.0/%E6%96%B0%E7%89%88HSK%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B21219.pdf",
+  "sourceSha256": "ec74ce0439e837bbb15154be13e747ae798903b2fd3a331629df6c3b45504941",
+  "vocabularyEntries": 11000,
+  "recognitionCharacters": 3088,
+  "wordCounts": {
+    "1": 300,
+    "2": 200,
+    "3": 500,
+    "4": 1000,
+    "5": 1600,
+    "6": 1800,
+    "7-9": 5600
+  },
+  "recognitionCharacterCounts": {
+    "1": 246,
+    "2": 125,
+    "3": 284,
+    "4": 441,
+    "5": 431,
+    "6": 413,
+    "7-9": 1148
+  },
+  "asset": "/dictionary/hsk-levels-2025.json.gz",
+  "assetSha256": "e3257bf10b921770458cec3a922bea67a27c68853efa0bd95c4f76852741f4b2",
+  "wordPolicy": "Exact headword; homograph markers removed; levels refer to first introduction of each listed sense, not later part-of-speech extensions.",
+  "characterPolicy": "Official recognition-character tables, not inferred from containing words. HSK7-9 is one combined official table."
+}

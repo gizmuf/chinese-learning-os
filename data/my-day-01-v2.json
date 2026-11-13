@@ -1,0 +1,258 @@
+{
+  "id": "my-day-01-v2",
+  "title": "我的一天 · My day",
+  "subtitle": "Day 01 · Version 2 · Speaking rehearsal",
+  "source": "https://chatgpt.com/share/6ae75675-0960-83ee-814b-49f161e1ee9a?ogimg=plain",
+  "sourceNote": "Hanzi verified against the owner-approved 26-sentence transcript; pinyin and English retained from the matching supplied Day01 V2 HTML.",
+  "sections": [
+    {
+      "title": "Morning · 早上",
+      "rows": [
+        {
+          "hanzi": "我每天八点左右醒来。",
+          "pinyin": "Wǒ měitiān bā diǎn zuǒyòu xǐnglái.",
+          "english": "I wake up at around eight every day."
+        },
+        {
+          "hanzi": "二十到三十分钟后，我起床。",
+          "pinyin": "Èrshí dào sānshí fēnzhōng hòu, wǒ qǐchuáng.",
+          "english": "Twenty to thirty minutes later, I get out of bed."
+        },
+        {
+          "hanzi": "然后我去厨房做早饭。",
+          "pinyin": "Ránhòu wǒ qù chúfáng zuò zǎofàn.",
+          "english": "Then I go to the kitchen and make breakfast."
+        },
+        {
+          "hanzi": "因为我不吃肉，所以早饭我做素菜。",
+          "pinyin": "Yīnwèi wǒ bù chī ròu, suǒyǐ zǎofàn wǒ zuò sùcài.",
+          "english": "Because I don't eat meat, I make vegetarian dishes for breakfast."
+        },
+        {
+          "hanzi": "然后我吃早饭。",
+          "pinyin": "Ránhòu wǒ chī zǎofàn.",
+          "english": "Then I eat breakfast."
+        },
+        {
+          "hanzi": "早饭后，我准备出门，因为我得去学校。",
+          "pinyin": "Zǎofàn hòu, wǒ zhǔnbèi chūmén, yīnwèi wǒ děi qù xuéxiào.",
+          "english": "After breakfast, I get ready to leave home because I have to go to school."
+        }
+      ],
+      "id": "morning"
+    },
+    {
+      "title": "To school · 去学校",
+      "rows": [
+        {
+          "hanzi": "我走出家门，走路去学校。",
+          "pinyin": "Wǒ zǒuchū jiāmén, zǒulù qù xuéxiào.",
+          "english": "I walk out of my home and walk to school."
+        },
+        {
+          "hanzi": "我家离学校很近，走路只要十分钟。",
+          "pinyin": "Wǒ jiā lí xuéxiào hěn jìn, zǒulù zhǐ yào shí fēnzhōng.",
+          "english": "My home is close to school; the walk takes only ten minutes."
+        },
+        {
+          "hanzi": "路上，我用微信点一杯咖啡。",
+          "pinyin": "Lùshang, wǒ yòng Wēixìn diǎn yì bēi kāfēi.",
+          "english": "On the way, I order a coffee using WeChat."
+        },
+        {
+          "hanzi": "到学校以后，我在楼下取咖啡。",
+          "pinyin": "Dào xuéxiào yǐhòu, wǒ zài lóuxià qǔ kāfēi.",
+          "english": "After arriving at school, I pick up my coffee downstairs."
+        },
+        {
+          "hanzi": "然后我走进教室。",
+          "pinyin": "Ránhòu wǒ zǒujìn jiàoshì.",
+          "english": "Then I walk into the classroom."
+        }
+      ],
+      "id": "to-school"
+    },
+    {
+      "title": "Classes · 上课",
+      "rows": [
+        {
+          "hanzi": "我的课早上八点四十分开始。",
+          "pinyin": "Wǒ de kè zǎoshang bā diǎn sìshí fēn kāishǐ.",
+          "english": "My class starts at 8:40 a.m."
+        },
+        {
+          "hanzi": "十点十分，我们休息二十分钟。",
+          "pinyin": "Shí diǎn shí fēn, wǒmen xiūxi èrshí fēnzhōng.",
+          "english": "At 10:10, we have a twenty-minute break."
+        },
+        {
+          "hanzi": "休息的时候，我走出教室。",
+          "pinyin": "Xiūxi de shíhou, wǒ zǒuchū jiàoshì.",
+          "english": "During the break, I walk out of the classroom."
+        },
+        {
+          "hanzi": "中午十二点，我们休息一个小时。",
+          "pinyin": "Zhōngwǔ shí'èr diǎn, wǒmen xiūxi yí ge xiǎoshí.",
+          "english": "At noon, we have a one-hour break."
+        },
+        {
+          "hanzi": "我吃午饭。",
+          "pinyin": "Wǒ chī wǔfàn.",
+          "english": "I eat lunch."
+        },
+        {
+          "hanzi": "下午一点，我还有一个半小时的中文课。",
+          "pinyin": "Xiàwǔ yì diǎn, wǒ hái yǒu yí ge bàn xiǎoshí de Zhōngwén kè.",
+          "english": "At 1 p.m., I have another ninety-minute Chinese class."
+        }
+      ],
+      "id": "classes"
+    },
+    {
+      "title": "After school · 下课后",
+      "rows": [
+        {
+          "hanzi": "下午两点半下课以后，我回家。",
+          "pinyin": "Xiàwǔ liǎng diǎn bàn xiàkè yǐhòu, wǒ huí jiā.",
+          "english": "After class ends at 2:30 p.m., I go home."
+        },
+        {
+          "hanzi": "到家以后，我进屋开始工作。",
+          "pinyin": "Dào jiā yǐhòu, wǒ jìn wū kāishǐ gōngzuò.",
+          "english": "When I get home, I go inside and start working."
+        },
+        {
+          "hanzi": "我在家工作，也学中文。",
+          "pinyin": "Wǒ zài jiā gōngzuò, yě xué Zhōngwén.",
+          "english": "I work from home and also study Chinese."
+        },
+        {
+          "hanzi": "下午我通常出去散步。",
+          "pinyin": "Xiàwǔ wǒ tōngcháng chūqù sànbù.",
+          "english": "In the afternoon, I usually go out for a walk."
+        },
+        {
+          "hanzi": "有时候我走半个小时，有时候走两个小时。",
+          "pinyin": "Yǒu shíhou wǒ zǒu bàn ge xiǎoshí, yǒu shíhou zǒu liǎng ge xiǎoshí.",
+          "english": "Sometimes I walk for half an hour, sometimes for two hours."
+        },
+        {
+          "hanzi": "我在附近走走，有时候买点东西。",
+          "pinyin": "Wǒ zài fùjìn zǒuzou, yǒu shíhou mǎi diǎn dōngxi.",
+          "english": "I walk around the neighborhood and sometimes buy a few things."
+        },
+        {
+          "hanzi": "然后我回到家，继续工作。",
+          "pinyin": "Ránhòu wǒ huí dào jiā, jìxù gōngzuò.",
+          "english": "Then I return home and continue working."
+        }
+      ],
+      "id": "after-school"
+    },
+    {
+      "title": "Evening · 晚上",
+      "rows": [
+        {
+          "hanzi": "晚上我练习中文。",
+          "pinyin": "Wǎnshang wǒ liànxí Zhōngwén.",
+          "english": "In the evening, I practice Chinese."
+        },
+        {
+          "hanzi": "晚上十一点左右，我上床睡觉。",
+          "pinyin": "Wǎnshang shíyī diǎn zuǒyòu, wǒ shàngchuáng shuìjiào.",
+          "english": "At around 11 p.m., I go to bed."
+        }
+      ],
+      "id": "evening"
+    }
+  ],
+  "movement": [
+    {
+      "hanzi": "出门",
+      "pinyin": "chūmén",
+      "english": "leave home"
+    },
+    {
+      "hanzi": "走出家门",
+      "pinyin": "zǒuchū jiāmén",
+      "english": "walk out of the house"
+    },
+    {
+      "hanzi": "走进教室",
+      "pinyin": "zǒujìn jiàoshì",
+      "english": "walk into the classroom"
+    },
+    {
+      "hanzi": "走出教室",
+      "pinyin": "zǒuchū jiàoshì",
+      "english": "walk out of the classroom"
+    },
+    {
+      "hanzi": "到学校",
+      "pinyin": "dào xuéxiào",
+      "english": "arrive at school"
+    },
+    {
+      "hanzi": "回家",
+      "pinyin": "huí jiā",
+      "english": "go back home"
+    },
+    {
+      "hanzi": "到家",
+      "pinyin": "dào jiā",
+      "english": "arrive home"
+    },
+    {
+      "hanzi": "进屋",
+      "pinyin": "jìn wū",
+      "english": "go inside the room / house"
+    },
+    {
+      "hanzi": "出去",
+      "pinyin": "chūqù",
+      "english": "go out, away from the speaker"
+    },
+    {
+      "hanzi": "回来",
+      "pinyin": "huílái",
+      "english": "come back, toward the speaker"
+    }
+  ],
+  "connectors": [
+    {
+      "hanzi": "因为…所以…",
+      "pinyin": "yīnwèi… suǒyǐ…",
+      "english": "because… therefore…"
+    },
+    {
+      "hanzi": "然后",
+      "pinyin": "ránhòu",
+      "english": "then / next"
+    },
+    {
+      "hanzi": "…后",
+      "pinyin": "…hòu",
+      "english": "after an event or time"
+    },
+    {
+      "hanzi": "…以后",
+      "pinyin": "…yǐhòu",
+      "english": "after"
+    },
+    {
+      "hanzi": "左右",
+      "pinyin": "zuǒyòu",
+      "english": "approximately; after the number"
+    },
+    {
+      "hanzi": "有时候",
+      "pinyin": "yǒu shíhou",
+      "english": "sometimes"
+    },
+    {
+      "hanzi": "通常",
+      "pinyin": "tōngcháng",
+      "english": "usually"
+    }
+  ]
+}

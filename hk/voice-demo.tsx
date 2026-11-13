@@ -1,0 +1,2 @@
+// HK HTTP guest deployment: no provider, microphone, credentials or relay.
+export default function VoiceDemo(){return <section className="voice-demo" aria-label="Short voice demo"><h2>Voice conversation is not enabled on HK.</h2><p>Choose Guided speaking to practise with recorded examples and your own audio file.</p><p>This version has no live AI connection or pronunciation score.</p><button disabled>Voice conversation unavailable</button></section>;}

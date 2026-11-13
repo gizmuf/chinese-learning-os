@@ -1,0 +1,122 @@
+import {referenceActivityIds} from './reference-lessons-data';
+import {lesson12ActivityIds} from './lesson12-data';
+import {lesson11ActivityIds} from './lesson11-data';
+import {lesson10ActivityIds} from './lesson10-data';
+import {lesson09ActivityIds} from './lesson09-data';
+import {lesson08ActivityIds} from './lesson08-data';
+import {lesson07ActivityIds} from './lesson07-data';
+import {chunkActivityIds} from './speaking-chunks-data';
+import {
+  createEmptyCard,
+  fsrs,
+  generatorParameters,
+  type Card,
+  type Grade,
+} from "ts-fsrs";
+import { z } from "zod";
+import { labActivityIds, labExtraTerms } from "./course-lab-data";
+import { exercises } from "./course-exercises";
+import { terms, sentences, topicInfo, course } from "./course-data";
+import { lesson04ActivityIds } from './lesson04-data';
+import { lesson06ActivityIds } from './lesson06-data';
+import { lesson05ActivityIds } from './lesson05-data';
+import {grammarActivityIds} from './grammar-hsk3-data';
+import {videoActivityIds} from './video-study-data';
+export const activityIds = [
+  ...exercises.map((e) => e.id),
+  ...labActivityIds,
+  ...labExtraTerms.map(t=>"write:"+t.id),
+  ...Object.keys(topicInfo).map((t) => "study:" + t),
+  ...terms.map((t) => "write:" + t.id),
+  ...sentences.map((s) => "write:" + s.id),
+];
+export const courseEventSchema = z
+  .object({
+    id: z.string().uuid(),
+    lessonId: z.enum(["intensive-03", "intensive-04", "intensive-05", "intensive-06", "intensive-07", "intensive-08", "intensive-09", "intensive-10", "intensive-11", "intensive-12", "reference-time-dates", "reference-movement-directions", "reference-shang", "video-self-introduction", "grammar-hsk3", "speaking-chunks"]),
+    activityId: z.string(),
+    kind: z.enum(["answer", "study", "writing"]),
+    correct: z.boolean().nullable(),
+    assisted: z.boolean(),
+    at: z.number().int().nonnegative(),
+    rating: z.number().int().min(0).max(4).optional(),
+  })
+  .superRefine((event, ctx) => {
+    if (!((event.lessonId in referenceActivityIds) ? referenceActivityIds[event.lessonId as keyof typeof referenceActivityIds] : event.lessonId === 'speaking-chunks' ? chunkActivityIds : event.lessonId === 'grammar-hsk3' ? grammarActivityIds : event.lessonId === 'intensive-12' ? lesson12ActivityIds : event.lessonId === 'intensive-11' ? lesson11ActivityIds : event.lessonId === 'intensive-10' ? lesson10ActivityIds : event.lessonId === 'intensive-09' ? lesson09ActivityIds : event.lessonId === 'intensive-08' ? lesson08ActivityIds : event.lessonId === 'intensive-07' ? lesson07ActivityIds : event.lessonId === 'intensive-06' ? lesson06ActivityIds : event.lessonId === 'video-self-introduction' ? videoActivityIds : event.lessonId === 'intensive-05' ? lesson05ActivityIds : event.lessonId === 'intensive-04' ? lesson04ActivityIds : activityIds).includes(event.activityId)) ctx.addIssue({code:'custom',message:'Unknown activity for this lesson'});
+    if((event.activityId.startsWith('c04-build-')||event.activityId.startsWith('c05-build-')||event.activityId.startsWith('c06-build-')||event.activityId.startsWith('c07-build-')||event.activityId.startsWith('c08-build-')||event.activityId.startsWith('c09-build-')||event.activityId.startsWith('c10-build-')||event.activityId.startsWith('c11-build-'))&&!event.assisted)ctx.addIssue({code:'custom',message:'Expression builders are supported practice'});
+    if(event.lessonId.startsWith('reference-')&&event.kind==='study'&&!event.assisted)ctx.addIssue({code:'custom',message:'Reference reading and animations are supported study'});
+    if(event.activityId.startsWith("lab-family-")&&!event.assisted) ctx.addIssue({code:"custom",message:"Visible family examples require assisted practice"});
+    if(event.lessonId==='video-self-introduction'&&event.kind==='writing'&&!event.assisted)ctx.addIssue({code:'custom',message:'Video guided writing requires supported scoring'});
+    const expected = event.activityId.startsWith("study:")
+      ? "study"
+      : event.activityId.startsWith("write:")
+        ? "writing"
+        : "answer";
+    if (
+      event.kind !== expected ||
+      (event.kind === "study" ? event.correct !== null : event.correct === null)
+    )
+      ctx.addIssue({ code: "custom", message: "Activity kind mismatch" });
+  });
+export type CourseEvent = z.infer<typeof courseEventSchema>;
+export type StoredCourseEvent = CourseEvent & { synced: boolean };
+const scheduler = fsrs(
+  generatorParameters({ request_retention: 0.9, enable_fuzz: false }),
+);
+export function courseCards(events: CourseEvent[]) {
+  const cards: Record<string, Card> = {};
+  const seen = new Set<string>();
+  for (const e of [...events].sort(
+    (a, b) => a.at - b.at || a.id.localeCompare(b.id),
+  )) {
+    if (seen.has(e.id) || e.assisted || e.kind === "study") continue;
+    seen.add(e.id);
+    const grade =
+      e.kind === "writing"
+        ? (e.rating ?? (e.correct ? 3 : 1))
+        : e.correct
+          ? 3
+          : 1;
+    if (grade < 1) continue;
+    cards[e.activityId] = scheduler.next(
+      cards[e.activityId] ?? createEmptyCard(new Date(e.at)),
+      new Date(e.at),
+      grade as Grade,
+    ).card;
+  }
+  return cards;
+}
+export function courseSummary(events: CourseEvent[], now = Date.now()) {
+  const answers = events.filter((e) => e.kind === "answer" && exercises.some(activity=>activity.id===e.activityId));
+  const independent = answers.filter((e) => !e.assisted);
+  const cards = courseCards(events.filter(e=>e.lessonId === "intensive-03"));
+  const attempted = new Set(answers.map((e) => e.activityId));
+  return {
+    attempted: attempted.size,
+    total: exercises.length,
+    practiced: exercises.every((e) => attempted.has(e.id)),
+    independent: independent.length,
+    correct: independent.filter((e) => e.correct).length,
+    due: Object.entries(cards)
+      .filter(([, c]) => new Date(c.due).getTime() <= now)
+      .map(([id]) => id),
+  };
+}
+export function newCourseEvent(
+  activityId: string,
+  kind: CourseEvent["kind"],
+  correct: boolean | null,
+  assisted: boolean,
+  rating?: number,
+): CourseEvent {
+  return {
+    id: crypto.randomUUID(),
+    lessonId: "intensive-03",
+    activityId,
+    kind,
+    correct,
+    assisted,
+    at: Date.now(),
+    ...(rating === undefined ? {} : { rating }),
+  };
+}

@@ -1,0 +1,390 @@
+{
+  "compare-bi-1": {
+    "1": "bǐ"
+  },
+  "compare-bi-2": {
+    "1": "bǐ"
+  },
+  "compare-meiyou-1": {
+    "1": "méiyǒu",
+    "3": "nàme"
+  },
+  "compare-meiyou-2": {
+    "1": "méiyǒu",
+    "3": "nàme"
+  },
+  "compare-same-1": {
+    "1": "gēn",
+    "3": "yíyàng"
+  },
+  "compare-same-2": {
+    "1": "gēn",
+    "3": "yíyàng"
+  },
+  "distance-li-1": {
+    "1": "lí",
+    "4": "jìn"
+  },
+  "distance-li-2": {
+    "1": "lí",
+    "4": "yuǎn"
+  },
+  "change-more-1": {
+    "1": "yuèláiyuè"
+  },
+  "change-more-2": {
+    "1": "yuèláiyuè"
+  },
+  "change-correlated-1": {
+    "1": "yuè",
+    "5": "yuè"
+  },
+  "change-correlated-2": {
+    "2": "yuè",
+    "4": "yuè"
+  },
+  "time-first-then-1": {
+    "1": "xiān",
+    "4": "zài"
+  },
+  "time-first-then-2": {
+    "1": "xiān",
+    "4": "zài"
+  },
+  "time-after-1": {
+    "1": "yǐhòu"
+  },
+  "time-after-2": {
+    "1": "yǐhòu"
+  },
+  "time-before-1": {
+    "1": "yǐqián"
+  },
+  "time-before-2": {
+    "1": "yǐqián"
+  },
+  "time-simultaneous-1": {
+    "1": "yìbiān",
+    "4": "yìbiān"
+  },
+  "time-simultaneous-2": {
+    "1": "yìbiān",
+    "4": "yìbiān"
+  },
+  "connect-cause-1": {
+    "0": "yīnwèi",
+    "3": "suǒyǐ"
+  },
+  "connect-cause-2": {
+    "0": "yīnwèi",
+    "3": "suǒyǐ"
+  },
+  "connect-although-1": {
+    "0": "suīrán",
+    "3": "dànshì"
+  },
+  "connect-although-2": {
+    "0": "suīrán",
+    "3": "dànshì"
+  },
+  "connect-if-1": {
+    "0": "rúguǒ",
+    "4": "jiù"
+  },
+  "connect-if-2": {
+    "0": "rúguǒ",
+    "4": "jiù"
+  },
+  "connect-provided-1": {
+    "0": "zhǐyào",
+    "4": "jiù"
+  },
+  "connect-provided-2": {
+    "0": "zhǐyào",
+    "4": "jiù"
+  },
+  "connect-only-if-1": {
+    "0": "zhǐyǒu",
+    "4": "cái"
+  },
+  "connect-only-if-2": {
+    "0": "zhǐyǒu",
+    "4": "cái"
+  },
+  "connect-not-only-1": {
+    "1": "búdàn",
+    "4": "érqiě"
+  },
+  "connect-not-only-2": {
+    "1": "búdàn",
+    "4": "érqiě"
+  },
+  "connect-besides-1": {
+    "0": "chúle",
+    "4": "hái"
+  },
+  "connect-besides-2": {
+    "0": "chúle",
+    "4": "hái"
+  },
+  "connect-no-matter-1": {
+    "0": "bùguǎn",
+    "4": "dōu"
+  },
+  "connect-no-matter-2": {
+    "0": "bùguǎn",
+    "4": "dōu"
+  },
+  "attitude-interest-1": {
+    "1": "duì",
+    "4": "gǎn xìngqù"
+  },
+  "attitude-interest-2": {
+    "1": "duì",
+    "4": "gǎn xìngqù"
+  },
+  "complement-ba-1": {
+    "1": "bǎ"
+  },
+  "complement-ba-2": {
+    "1": "bǎ"
+  },
+  "complement-bei-1": {
+    "1": "bèi"
+  },
+  "complement-bei-2": {
+    "1": "bèi"
+  },
+  "complement-de-1": {
+    "1": "de"
+  },
+  "complement-de-2": {
+    "1": "de"
+  },
+  "aspect-experience-1": {
+    "1": "guo"
+  },
+  "aspect-experience-2": {
+    "1": "guo"
+  },
+  "time-as-soon-1": {
+    "1": "yí",
+    "3": "jiù"
+  },
+  "time-as-soon-2": {
+    "1": "yì",
+    "3": "jiù"
+  },
+  "adv-even-if-1": {
+    "0": "jíshǐ",
+    "4": "yě"
+  },
+  "adv-even-if-2": {
+    "0": "jíshǐ",
+    "4": "yě"
+  },
+  "adv-since-1": {
+    "0": "jìrán",
+    "4": "jiù"
+  },
+  "adv-since-2": {
+    "0": "jìrán",
+    "4": "jiù"
+  },
+  "adv-despite-1": {
+    "0": "jǐnguǎn",
+    "4": "háishi"
+  },
+  "adv-despite-2": {
+    "0": "jǐnguǎn",
+    "4": "háishi"
+  },
+  "adv-no-matter-1": {
+    "0": "wúlùn",
+    "4": "dōu"
+  },
+  "adv-no-matter-2": {
+    "0": "wúlùn",
+    "4": "dōu"
+  },
+  "adv-rather-than-1": {
+    "0": "yǔqí",
+    "3": "bùrú"
+  },
+  "adv-rather-than-2": {
+    "0": "yǔqí",
+    "3": "bùrú"
+  },
+  "adv-would-rather-1": {
+    "1": "nìngkě",
+    "4": "yě bú"
+  },
+  "adv-would-rather-2": {
+    "1": "nìngkě",
+    "4": "yě bù"
+  },
+  "adv-not-only-1": {
+    "1": "bùjǐn",
+    "4": "hái"
+  },
+  "adv-not-only-2": {
+    "1": "bùjǐn",
+    "4": "hái"
+  },
+  "adv-both-and-1": {
+    "1": "jì",
+    "3": "yòu"
+  },
+  "adv-both-and-2": {
+    "1": "jì",
+    "3": "yòu"
+  },
+  "adv-correction-1": {
+    "1": "bú shì",
+    "4": "ér shì"
+  },
+  "adv-correction-2": {
+    "1": "bú shì",
+    "4": "ér shì"
+  },
+  "adv-either-or-1": {
+    "1": "yàome",
+    "4": "yàome"
+  },
+  "adv-either-or-2": {
+    "1": "yàome",
+    "4": "yàome"
+  },
+  "adv-two-aspects-1": {
+    "1": "yì fāngmiàn",
+    "4": "lìng yì fāngmiàn"
+  },
+  "adv-two-aspects-2": {
+    "1": "yì fāngmiàn",
+    "4": "lìng yì fāngmiàn"
+  },
+  "adv-due-therefore-1": {
+    "0": "yóuyú",
+    "3": "yīncǐ"
+  },
+  "adv-due-therefore-2": {
+    "0": "yóuyú",
+    "3": "yīncǐ"
+  },
+  "adv-so-that-1": {
+    "2": "yǐbiàn"
+  },
+  "adv-so-that-2": {
+    "2": "yǐbiàn"
+  },
+  "adv-purpose-1": {
+    "0": "wèile"
+  },
+  "adv-purpose-2": {
+    "0": "wèile"
+  },
+  "adv-through-1": {
+    "1": "tōngguò"
+  },
+  "adv-through-2": {
+    "1": "tōngguò"
+  },
+  "adv-according-to-1": {
+    "0": "gēnjù"
+  },
+  "adv-according-to-2": {
+    "1": "gēnjù"
+  },
+  "adv-regarding-1": {
+    "0": "duìyú"
+  },
+  "adv-regarding-2": {
+    "0": "duìyú"
+  },
+  "adv-even-lian-1": {
+    "0": "lián",
+    "2": "dōu"
+  },
+  "adv-even-lian-2": {
+    "1": "lián",
+    "3": "dōu"
+  },
+  "adv-even-shenzhi-1": {
+    "2": "shènzhì"
+  },
+  "adv-even-shenzhi-2": {
+    "2": "shènzhì"
+  },
+  "adv-almost-1": {
+    "1": "chàdiǎnr"
+  },
+  "adv-almost-2": {
+    "3": "chàdiǎnr"
+  },
+  "adv-too-late-1": {
+    "3": "lái bu jí"
+  },
+  "adv-too-late-2": {
+    "1": "lái bu jí"
+  },
+  "adv-seems-1": {
+    "1": "qǐlai"
+  },
+  "adv-seems-2": {
+    "1": "qǐlai"
+  },
+  "adv-continue-1": {
+    "3": "xiàqu"
+  },
+  "adv-continue-2": {
+    "3": "xiàqu"
+  },
+  "adv-recognize-result-1": {
+    "1": "chūlai"
+  },
+  "adv-recognize-result-2": {
+    "1": "chūlai"
+  },
+  "adv-potential-1": {
+    "1": "de"
+  },
+  "adv-potential-2": {
+    "3": "bu"
+  },
+  "adv-less-than-1": {
+    "1": "bùrú"
+  },
+  "adv-less-than-2": {
+    "1": "bùrú"
+  },
+  "adv-more-than-1": {
+    "1": "bǐ",
+    "3": "gèng"
+  },
+  "adv-more-than-2": {
+    "1": "bǐ",
+    "3": "hái"
+  },
+  "adv-transform-result-1": {
+    "1": "bǎ",
+    "4": "chéng"
+  },
+  "adv-transform-result-2": {
+    "1": "bǎ",
+    "4": "chéng"
+  },
+  "adv-causative-1": {
+    "1": "shǐ"
+  },
+  "adv-causative-2": {
+    "1": "ràng"
+  },
+  "adv-past-focus-1": {
+    "1": "shì",
+    "4": "de"
+  },
+  "adv-past-focus-2": {
+    "1": "shì",
+    "4": "de"
+  }
+}

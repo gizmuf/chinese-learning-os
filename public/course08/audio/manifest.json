@@ -1,0 +1,1314 @@
+{
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "generationRate": "-10%",
+  "recordings": [
+    {
+      "id": "c08-t01",
+      "text": "上课",
+      "file": "c08-t01.mp3",
+      "sha256": "ba2bf76817385d03885fa9adc6430adb5c1e4f7375ef643970f96ae994711088"
+    },
+    {
+      "id": "c08-t02",
+      "text": "下课",
+      "file": "c08-t02.mp3",
+      "sha256": "c1c76545a150eae686e3627549a1d9ba96007d5671af4d5cd48c03a59206317f"
+    },
+    {
+      "id": "c08-t03",
+      "text": "上班",
+      "file": "c08-t03.mp3",
+      "sha256": "7644398e4b1d8b961224a48857b92b896c3f4301fe607d0085cefc078ac14af1"
+    },
+    {
+      "id": "c08-t04",
+      "text": "下班",
+      "file": "c08-t04.mp3",
+      "sha256": "a3e62c332d9950df2c95371e89449b83b6dad5a645afd24c4c882b9af707ca49"
+    },
+    {
+      "id": "c08-t06",
+      "text": "课",
+      "file": "c08-t06.mp3",
+      "sha256": "7281d394d08c4a91e4103d2d3d23dbd729d5139fd176d55f03f44d8caa261035"
+    },
+    {
+      "id": "c08-t07",
+      "text": "班",
+      "file": "c08-t07.mp3",
+      "sha256": "ea6d405ca8309ee3affacc6aa9c20dc35604b7c762857dc4e4b4cb41d4edf765"
+    },
+    {
+      "id": "c08-t08",
+      "text": "休息",
+      "file": "c08-t08.mp3",
+      "sha256": "e4f75d892864585f35f2358cb3d137343a6a2156c93f8954293638016bec2ee5"
+    },
+    {
+      "id": "c08-t09",
+      "text": "检查",
+      "file": "c08-t09.mp3",
+      "sha256": "ad854afaae54640d8926f7bb5f7dcb8036c3ef4d0032dffde238975c7635f1ed"
+    },
+    {
+      "id": "c08-t05",
+      "text": "有课",
+      "file": "c08-t05.mp3",
+      "sha256": "0769a8bada749294dfd02103842116f5022c65e0b960ddd2755cacb7a227b7ec"
+    },
+    {
+      "id": "c08-t11",
+      "text": "两点零二",
+      "file": "c08-t11.mp3",
+      "sha256": "7a8af52ed9eb31063d1b446dbd4c10166a893188deaa7bdaae36c9a473f6ba86"
+    },
+    {
+      "id": "c08-t10",
+      "text": "两点",
+      "file": "c08-t10.mp3",
+      "sha256": "37a55c6e472657adb3ce66f6922660dfb953f06c9660e735f0ff841668e31296"
+    },
+    {
+      "id": "c08-t12",
+      "text": "两点零五",
+      "file": "c08-t12.mp3",
+      "sha256": "628e241a41cfc86a8ce216bea11770c8b4b6bd1a519b86b0902b63df76415d38"
+    },
+    {
+      "id": "c08-t14",
+      "text": "两点一刻",
+      "file": "c08-t14.mp3",
+      "sha256": "a617e503fc3ae46cc4407fce11e1f44bc6469fb4b67f9142e0af67cc338a07bb"
+    },
+    {
+      "id": "c08-t13",
+      "text": "两点十五分",
+      "file": "c08-t13.mp3",
+      "sha256": "fb820c9ff19f607cd4aaae2b19146409d0516187adc79b0c79a08f99ec78e1ac"
+    },
+    {
+      "id": "c08-t15",
+      "text": "两点半",
+      "file": "c08-t15.mp3",
+      "sha256": "45c2d71e67e15a6e3473d55fe12e2cb3c3b3f6af0ff6de63fd10e717599426b8"
+    },
+    {
+      "id": "c08-t16",
+      "text": "两点四十五分",
+      "file": "c08-t16.mp3",
+      "sha256": "735da00906f940edda31ca7cf95990b565b0c4014b0754fcd0848bf440c80f15"
+    },
+    {
+      "id": "c08-t17",
+      "text": "两点三刻",
+      "file": "c08-t17.mp3",
+      "sha256": "677b4bbfb8a9557a54b500244c2339aca50340f694f2b60fb1564cbe0a4aa5ef"
+    },
+    {
+      "id": "c08-t18",
+      "text": "两点五十五分",
+      "file": "c08-t18.mp3",
+      "sha256": "1a722d4a757058e49737beae7fbcf5395d2906f86bad5d345831ee4f34add26c"
+    },
+    {
+      "id": "c08-t19",
+      "text": "差一刻三点",
+      "file": "c08-t19.mp3",
+      "sha256": "92fa1db5daee158d7162eded322eeb2cf1b5ee3c277ecebaabe3f82c345c4072"
+    },
+    {
+      "id": "c08-t22",
+      "text": "分钟",
+      "file": "c08-t22.mp3",
+      "sha256": "bf35a03a5d8dce3740b73ef10803bf9bdfa189479af228e9546f4164d352ed80"
+    },
+    {
+      "id": "c08-t20",
+      "text": "差五分三点",
+      "file": "c08-t20.mp3",
+      "sha256": "4ac9e93ace76b8900438d4053066985f5332b8ded35184fa3aff47da4981e44f"
+    },
+    {
+      "id": "c08-t24",
+      "text": "两点",
+      "file": "c08-t24.mp3",
+      "sha256": "37a55c6e472657adb3ce66f6922660dfb953f06c9660e735f0ff841668e31296"
+    },
+    {
+      "id": "c08-t25",
+      "text": "两点半",
+      "file": "c08-t25.mp3",
+      "sha256": "45c2d71e67e15a6e3473d55fe12e2cb3c3b3f6af0ff6de63fd10e717599426b8"
+    },
+    {
+      "id": "c08-t26",
+      "text": "两点零二",
+      "file": "c08-t26.mp3",
+      "sha256": "7a8af52ed9eb31063d1b446dbd4c10166a893188deaa7bdaae36c9a473f6ba86"
+    },
+    {
+      "id": "c08-t21",
+      "text": "一刻",
+      "file": "c08-t21.mp3",
+      "sha256": "9577f779b0f2cbc9426c41787100a7ebe183d34056909c8b2310ed3b024a3905"
+    },
+    {
+      "id": "c08-t23",
+      "text": "下午一点",
+      "file": "c08-t23.mp3",
+      "sha256": "5fba9b13ce9cf8b5a7e5e1a03e38e31b0b54938e3d9a866d39ed911ecb9ebfbf"
+    },
+    {
+      "id": "c08-t27",
+      "text": "从星期一到星期五",
+      "file": "c08-t27.mp3",
+      "sha256": "6f5d5ebe017d12b4793646e20f50818b2f39d9a45ae264934f3a52718fd9be59"
+    },
+    {
+      "id": "c08-t28",
+      "text": "从星期一到星期五",
+      "file": "c08-t28.mp3",
+      "sha256": "3ada910a9596ac90ee78cd32ca947725d3797e27d9cf79304f2861e2ad4e7bf9"
+    },
+    {
+      "id": "c08-t31",
+      "text": "时间",
+      "file": "c08-t31.mp3",
+      "sha256": "051f45084dd5e97322d27ec137e1d933ca6ce5176e32f38bec7a9f66d4099812"
+    },
+    {
+      "id": "c08-t32",
+      "text": "地方",
+      "file": "c08-t32.mp3",
+      "sha256": "657309a189fdf18b958cb36a8315f2aa0d1aa4c13e423ebec33f3d079b686ec1"
+    },
+    {
+      "id": "c08-t29",
+      "text": "星期一",
+      "file": "c08-t29.mp3",
+      "sha256": "912a17b296f2fac09294da94377133478bf131836798a64df7671a7f2e6121e7"
+    },
+    {
+      "id": "c08-t34",
+      "text": "远",
+      "file": "c08-t34.mp3",
+      "sha256": "77533fc8defabea05a55cb53c828beaedcedc0c1f13d3036859ae19c79adf1f7"
+    },
+    {
+      "id": "c08-t35",
+      "text": "近",
+      "file": "c08-t35.mp3",
+      "sha256": "1e6e845a74e3c65a1bd7a9e0de9f4620626ab453adb4b629c68dc792b191dc64"
+    },
+    {
+      "id": "c08-t36",
+      "text": "学校",
+      "file": "c08-t36.mp3",
+      "sha256": "010b0a4b821a0916d0c6ed0e5cc7daec1652681023e922987d16267a5df56d54"
+    },
+    {
+      "id": "c08-t37",
+      "text": "家",
+      "file": "c08-t37.mp3",
+      "sha256": "d1e48f2af730d001962dad035c14099876bae14330ea37ceea04eb89780c9206"
+    },
+    {
+      "id": "c08-t38",
+      "text": "世界",
+      "file": "c08-t38.mp3",
+      "sha256": "0ef8f9c832396f4b4ec015f232fa84b143e41e15781ce40c868e75c2d2c8d256"
+    },
+    {
+      "id": "c08-t30",
+      "text": "星期五",
+      "file": "c08-t30.mp3",
+      "sha256": "0c141cfff09479f8f5490386afbe9143af20a64ba6847077c50675027f721d64"
+    },
+    {
+      "id": "c08-t33",
+      "text": "离学校很近",
+      "file": "c08-t33.mp3",
+      "sha256": "ea02197d7d08fcda75eadc5d37e0df49e3d9021c3e5a6010779b5b915d9a4066"
+    },
+    {
+      "id": "c08-t40",
+      "text": "最远",
+      "file": "c08-t40.mp3",
+      "sha256": "f873c3ba0ba598134b7f8b4111a06a2d23305436e6c5425c00597816bc980791"
+    },
+    {
+      "id": "c08-t42",
+      "text": "同",
+      "file": "c08-t42.mp3",
+      "sha256": "09cb3866fe25d298a48458637209978ddb352be96d09a0fc3ea63d8cfd396623"
+    },
+    {
+      "id": "c08-t43",
+      "text": "同学",
+      "file": "c08-t43.mp3",
+      "sha256": "75a668b64578130ad4df2afe4070862d71ba9c144a075670088d83a18a592971"
+    },
+    {
+      "id": "c08-t39",
+      "text": "距离",
+      "file": "c08-t39.mp3",
+      "sha256": "d39a90347aca5e52d603306f4c5a7d8a6b7db04f129cb175083c4c47f742d182"
+    },
+    {
+      "id": "c08-t41",
+      "text": "世界上最远的距离",
+      "file": "c08-t41.mp3",
+      "sha256": "75310b063b2604de0c5bd3e7e5d481ef5bfd3e5345e7b069e329c3f82c6822b9"
+    },
+    {
+      "id": "c08-t45",
+      "text": "同屋",
+      "file": "c08-t45.mp3",
+      "sha256": "8f90dbe3e11b035f7adcd5c18ea01daa6d65f93f54bb1bc917e27cc27f536157"
+    },
+    {
+      "id": "c08-t47",
+      "text": "同事",
+      "file": "c08-t47.mp3",
+      "sha256": "a50ca36a8d45baf13b5009f094ed8e730e1b4bacf07d5a62e65666c9e7a2054c"
+    },
+    {
+      "id": "c08-t48",
+      "text": "同意",
+      "file": "c08-t48.mp3",
+      "sha256": "de860cca58fc77db304b24f7b9ba618328e9a36c67abeb33c61a5709f3d10978"
+    },
+    {
+      "id": "c08-t44",
+      "text": "同班同学",
+      "file": "c08-t44.mp3",
+      "sha256": "1411e767710bd58ffb9bc04dd150f4f99c2367ccfad3befa00edee3c5ff68e75"
+    },
+    {
+      "id": "c08-t46",
+      "text": "同桌",
+      "file": "c08-t46.mp3",
+      "sha256": "0982d0c0beafa39bb30c6d639ad8a84f50153719df89c8cab694c9055b94e7dd"
+    },
+    {
+      "id": "c08-t49",
+      "text": "不同意",
+      "file": "c08-t49.mp3",
+      "sha256": "7b9204f9ff3a70c589328aec1e9bd0f1030ccfe987af4d21c5272f630886fb9a"
+    },
+    {
+      "id": "c08-t52",
+      "text": "门",
+      "file": "c08-t52.mp3",
+      "sha256": "f0a5217dfc6f88fe58365fa2de2e538013c3490f3020531d0ee2391ca4191b91"
+    },
+    {
+      "id": "c08-t53",
+      "text": "问",
+      "file": "c08-t53.mp3",
+      "sha256": "4be4cf584fcc7028d7aebebd636c3410ed20076f7cd62120d3121f2d4f5f4a45"
+    },
+    {
+      "id": "c08-t54",
+      "text": "房间",
+      "file": "c08-t54.mp3",
+      "sha256": "21cdcabe0f3b08f2114eb4c248bca8ba519ea8b8063903ad144594948a6e43ef"
+    },
+    {
+      "id": "c08-t50",
+      "text": "有事",
+      "file": "c08-t50.mp3",
+      "sha256": "9747de7b57ef5bdd29c8f99cd63a59feade49900caa6b7d8d8b88997bd89ee02"
+    },
+    {
+      "id": "c08-t56",
+      "text": "桌子",
+      "file": "c08-t56.mp3",
+      "sha256": "8c806f04ae95c3af8aa35f9bd2e6ce6143a47025a0943a4f5345813ac37a4504"
+    },
+    {
+      "id": "c08-t57",
+      "text": "椅子",
+      "file": "c08-t57.mp3",
+      "sha256": "e17dca0dcd05cf2240e99023f9030596eb4aade474ea7d2327d6de94d9693f46"
+    },
+    {
+      "id": "c08-t58",
+      "text": "地图",
+      "file": "c08-t58.mp3",
+      "sha256": "d1ce73b3da38406bbbdbd02bb6919a22a031dc04262de0ab86c0f489c903693f"
+    },
+    {
+      "id": "c08-t59",
+      "text": "纸",
+      "file": "c08-t59.mp3",
+      "sha256": "ef93b538e7708deb294feb76e5f9a776bbc74afab3260723909361e171d54572"
+    },
+    {
+      "id": "c08-t51",
+      "text": "有空",
+      "file": "c08-t51.mp3",
+      "sha256": "c88e10c5bfbb870adc008b8725403162c5bff62fc8a5d601a0f630cdc22b860b"
+    },
+    {
+      "id": "c08-t55",
+      "text": "闻一下",
+      "file": "c08-t55.mp3",
+      "sha256": "9d5db3b33b3f49f34a3a687260ef95858d46f33ba3f34b6889173c00e71f03ad"
+    },
+    {
+      "id": "c08-t60",
+      "text": "钥匙",
+      "file": "c08-t60.mp3",
+      "sha256": "e627b7562968eb179a3fb542918c1629a4a1ff3142911749577ef1e67206d828"
+    },
+    {
+      "id": "c08-t61",
+      "text": "一张",
+      "file": "c08-t61.mp3",
+      "sha256": "b95014b781c9a002303fb8c50aa84e3e25b28fa868773b4f4ce5625169096394"
+    },
+    {
+      "id": "c08-t62",
+      "text": "一把",
+      "file": "c08-t62.mp3",
+      "sha256": "5517d73deffbc79fc9db88aa0638ea869c0cab5e9ad5e938ca0083482da9483e"
+    },
+    {
+      "id": "c08-t65",
+      "text": "车",
+      "file": "c08-t65.mp3",
+      "sha256": "a3e762feaafcd75a595d62f74c2db5801f554780053a3a0eacf9bb4c1ca5530c"
+    },
+    {
+      "id": "c08-t63",
+      "text": "一张纸",
+      "file": "c08-t63.mp3",
+      "sha256": "246989b4e14e5e9e29c7d1d507003f1733630ca8d36a7525351c058bf10b3f35"
+    },
+    {
+      "id": "c08-t64",
+      "text": "一把椅子",
+      "file": "c08-t64.mp3",
+      "sha256": "6e5d4b89f0eb03a2719056c4879b7c7eb66ee8d50bc8c957799a5bdc2ac98b5a"
+    },
+    {
+      "id": "c08-t66",
+      "text": "在车里",
+      "file": "c08-t66.mp3",
+      "sha256": "774383246186b09aaf64b86b154198d51562d6c6a68a15df100fe8cf7217bfd8"
+    },
+    {
+      "id": "c08-t67",
+      "text": "给我一张纸",
+      "file": "c08-t67.mp3",
+      "sha256": "b3a8e0580eda478a0acac8c2a66a7162f9d070bfd7c23ef51335733ba96bb656"
+    },
+    {
+      "id": "c08-t68",
+      "text": "萝卜",
+      "file": "c08-t68.mp3",
+      "sha256": "5780a0e950211898960fbe50a1c36c1b3cb9ffa0e87bc1e8104fe58675cd7350"
+    },
+    {
+      "id": "c08-t69",
+      "text": "罗汉果",
+      "file": "c08-t69.mp3",
+      "sha256": "bee98a3b45d15d4bea87487da35a682310dae59209d2faf8ddfeb6f49fd58422"
+    },
+    {
+      "id": "c08-s01",
+      "text": "我们从星期一到星期五有课。",
+      "file": "c08-s01.mp3",
+      "sha256": "e84283ce412a8f863b8dbf480e02bf95403dd2dda8946806695e79a01460d988"
+    },
+    {
+      "id": "c08-s02",
+      "text": "我们从八点四十分到十二点上课。",
+      "file": "c08-s02.mp3",
+      "sha256": "2f5ebfbe023dc4ce59998367028d0ee50e0fe0640c3cf5ea23577a339fb8eb50"
+    },
+    {
+      "id": "c08-s04",
+      "text": "从你家到学校远吗？",
+      "file": "c08-s04.mp3",
+      "sha256": "4f7c02b5d383438ae3ab77d045779978e1345a5a15fa59f9a8671d37e7a99012"
+    },
+    {
+      "id": "c08-s06",
+      "text": "我家离学校很近。",
+      "file": "c08-s06.mp3",
+      "sha256": "a2836b6cb270b5355420cd9c324096e07aacfb8de489f042ec47ee522e98cbf1"
+    },
+    {
+      "id": "c08-s03",
+      "text": "我们从十二点到下午一点休息。",
+      "file": "c08-s03.mp3",
+      "sha256": "3561be2c0c45b458e5e4a3ff3ce654f4c45ea436c644967744550e303580321f"
+    },
+    {
+      "id": "c08-s05",
+      "text": "从我家到学校很近。",
+      "file": "c08-s05.mp3",
+      "sha256": "a8f84c231af3c9c8dea22f6f7aaf84639356f5c8cf75fa6a259ac643986b02d6"
+    },
+    {
+      "id": "c08-s07",
+      "text": "我同意。",
+      "file": "c08-s07.mp3",
+      "sha256": "892c8805dc6354a8e5991c8f76dd777119ee6d6d066d59d970ef220249d9a109"
+    },
+    {
+      "id": "c08-s08",
+      "text": "我不同意。",
+      "file": "c08-s08.mp3",
+      "sha256": "d6bbcefe175bc58e71d9b952d93c8eccddf8092ae47ef22df37af1a33043f347"
+    },
+    {
+      "id": "c08-s09",
+      "text": "你有事吗？",
+      "file": "c08-s09.mp3",
+      "sha256": "e1bb2e80c32e7c0fd4d80b9cc09a0717dd26de1e7d035c27a8dc96a2ccc2fb66"
+    },
+    {
+      "id": "c08-s11",
+      "text": "你几点上班？",
+      "file": "c08-s11.mp3",
+      "sha256": "f91c2e71e2eca6daa89e5da030c161e323f800297530c27d2ce9ea5063929403"
+    },
+    {
+      "id": "c08-s10",
+      "text": "我钥匙在你车里。",
+      "file": "c08-s10.mp3",
+      "sha256": "552f2d71e0e45c348da4997dd80ff95798346bd77c94ae6dff0974fed37f40e6"
+    },
+    {
+      "id": "c08-s12",
+      "text": "我八点上班，五点下班。",
+      "file": "c08-s12.mp3",
+      "sha256": "3ffc235db55d4d26845e3a08e8918560b193cd0d50f66c64c56d65f2b11202cc"
+    },
+    {
+      "id": "c08-s13",
+      "text": "我们上课了。",
+      "file": "c08-s13.mp3",
+      "sha256": "33a8d73e2d47bf496d8d27c04b0deca93ff9ea50edee59cdce08d79f9be41965"
+    },
+    {
+      "id": "c08-s14",
+      "text": "我们下课了。",
+      "file": "c08-s14.mp3",
+      "sha256": "2b9ebd2751c5c94c55bef5c109cedd4072e94d10b9fab62998d126cd7906af6f"
+    },
+    {
+      "id": "c08-s15",
+      "text": "请检查作业。",
+      "file": "c08-s15.mp3",
+      "sha256": "a30bec69148f6acc950a6ee81985c8d78cf9bf35ce51e335dbf2b82143dacea7"
+    },
+    {
+      "id": "c08-s16",
+      "text": "现在是两点。",
+      "file": "c08-s16.mp3",
+      "sha256": "1f6dc072d99c7c35402630726c17e8e0653aace16e9b28182105ed46af14e1b7"
+    },
+    {
+      "id": "c08-s17",
+      "text": "现在是两点零二。",
+      "file": "c08-s17.mp3",
+      "sha256": "a3f7f3a11a5b5ffe9927af7b2b47e813e73f697259bda5723d1a742057575ca2"
+    },
+    {
+      "id": "c08-s18",
+      "text": "现在是两点零五。",
+      "file": "c08-s18.mp3",
+      "sha256": "442efa0414ecc1c7a1ddd01566c2b03091732397ee981c238a95a46adf1a4be7"
+    },
+    {
+      "id": "c08-s20",
+      "text": "现在是两点半。",
+      "file": "c08-s20.mp3",
+      "sha256": "7371927d13a312d562434b36517fb6823450909b297f61fa3bea0996b4f612ff"
+    },
+    {
+      "id": "c08-s19",
+      "text": "两点十五分，也可以说两点一刻。",
+      "file": "c08-s19.mp3",
+      "sha256": "262b653902ad1d3fe606f0039120acd36c30295e755980a62c8ca6541d4101fd"
+    },
+    {
+      "id": "c08-s21",
+      "text": "两点四十五分，也可以说两点三刻。",
+      "file": "c08-s21.mp3",
+      "sha256": "938c4667b4ada847ece848e8bbb1b772c89bdc17ff6523d3102315644ebcbf3a"
+    },
+    {
+      "id": "c08-s22",
+      "text": "两点四十五分，也可以说差一刻三点。",
+      "file": "c08-s22.mp3",
+      "sha256": "8f62a5eea7c21f127a15e9c79c86e268e8ebb42eafa9e02db3a59b37718f8a47"
+    },
+    {
+      "id": "c08-s23",
+      "text": "两点五十五分，也可以说差五分三点。",
+      "file": "c08-s23.mp3",
+      "sha256": "44c3fc7c71cfb4320ed1e59bbdd58bbb47a896ea1677eccfe9828c6debf4054b"
+    },
+    {
+      "id": "c08-s24",
+      "text": "一刻是十五分钟。",
+      "file": "c08-s24.mp3",
+      "sha256": "af3f1ce9eb15cc82ac71aec1816ca7c0dd7c68b970a8d87d2085f6c1326488af"
+    },
+    {
+      "id": "c08-s25",
+      "text": "我下午一点有课。",
+      "file": "c08-s25.mp3",
+      "sha256": "f9d3f47165028ec89e3995ddbfe86ec5971a0935ca8a484b1c5d4c498aaa95cb"
+    },
+    {
+      "id": "c08-s28",
+      "text": "你有时间吗？",
+      "file": "c08-s28.mp3",
+      "sha256": "d56ab5ab6b3910e9227c2ee45a6a1e11bc89b30e74d755c5bf8b4a918fbbf6a9"
+    },
+    {
+      "id": "c08-s26",
+      "text": "我们从星期一到星期五上班。",
+      "file": "c08-s26.mp3",
+      "sha256": "addd427686da92f12bd90aa95b0e11f061820d0db6500059a91cecb56c98936e"
+    },
+    {
+      "id": "c08-s27",
+      "text": "我从家到学校走路。",
+      "file": "c08-s27.mp3",
+      "sha256": "a981d365e8d72cae383939b6d5338adf5011739e24cbd8f6d879c67e997f6d57"
+    },
+    {
+      "id": "c08-s30",
+      "text": "这两个地方的距离很远。",
+      "file": "c08-s30.mp3",
+      "sha256": "7a66c6e6079ff9da6385cde7c726d36b1e1ad76be27ceec022a18cf76aaf4a64"
+    },
+    {
+      "id": "c08-s29",
+      "text": "这个地方离学校很远。",
+      "file": "c08-s29.mp3",
+      "sha256": "9101c489fcc6e866060deb19110ccfb8cc11d08987c78c51a1151d1611e1a3bb"
+    },
+    {
+      "id": "c08-s31",
+      "text": "这是世界上最远的距离吗？",
+      "file": "c08-s31.mp3",
+      "sha256": "59c5de6c982afcdb29b02c294a0513f737f1d93f19128d8073cefa1b766e1395"
+    },
+    {
+      "id": "c08-s32",
+      "text": "他是我的同班同学。",
+      "file": "c08-s32.mp3",
+      "sha256": "580a5e49475d5cbfbe0d9bf098c3524f985da0722904da8f281abccbe098149a"
+    },
+    {
+      "id": "c08-s33",
+      "text": "她是我的同屋。",
+      "file": "c08-s33.mp3",
+      "sha256": "95e38d29e23c2673188afbf5f6319d7d0b7ef806d967901dfa61d59d65a83330"
+    },
+    {
+      "id": "c08-s34",
+      "text": "他是我的同桌。",
+      "file": "c08-s34.mp3",
+      "sha256": "16f680980e31427735e3580f07be7b3ab1d9e63a3da7c174514118374b2a131e"
+    },
+    {
+      "id": "c08-s37",
+      "text": "门开着。",
+      "file": "c08-s37.mp3",
+      "sha256": "8391127eb1de7b54a8125f1e3ac238f4081508b174244fd95fd459acd9982873"
+    },
+    {
+      "id": "c08-s38",
+      "text": "我想问一个问题。",
+      "file": "c08-s38.mp3",
+      "sha256": "f47c83384607d282be3b9b0a42811fdc13edadda6c9499a05af7f08cc70ae51b"
+    },
+    {
+      "id": "c08-s35",
+      "text": "她是我的同事。",
+      "file": "c08-s35.mp3",
+      "sha256": "0a559fa937486817464bcfa7b958672159f91957adcd1b97cefe46a9eabc796b"
+    },
+    {
+      "id": "c08-s36",
+      "text": "你今天有空吗？",
+      "file": "c08-s36.mp3",
+      "sha256": "31b5ef127f4e719c8315d9da4c3fb86555f7b0e6b554a60e38aa789300c52cb8"
+    },
+    {
+      "id": "c08-s39",
+      "text": "这是我的房间。",
+      "file": "c08-s39.mp3",
+      "sha256": "c73e640dfd541fe92d8e814ffbb7bd7fc1932e038cf7010ede3c37c3d51cdc62"
+    },
+    {
+      "id": "c08-s40",
+      "text": "你闻一下。",
+      "file": "c08-s40.mp3",
+      "sha256": "7c60b12bd1118c7c549a69f96c4fe58a1c3a70661c076c486a8690594db101f9"
+    },
+    {
+      "id": "c08-s41",
+      "text": "我的钥匙在你车里。",
+      "file": "c08-s41.mp3",
+      "sha256": "3af8323f48f573f45f33a7fe065d8ebfd026160a966e6558a86d38cb3013490c"
+    },
+    {
+      "id": "c08-s42",
+      "text": "这里有一张桌子和一把椅子。",
+      "file": "c08-s42.mp3",
+      "sha256": "4b43ea3c6ce11b27e5902580dbcb38e063a8288f8decf8b48ee5592f41b06dc6"
+    },
+    {
+      "id": "c08-s43",
+      "text": "请给我一张地图。",
+      "file": "c08-s43.mp3",
+      "sha256": "a120e10fcce602009834da62537b6f4bdbbb4a52248d451b5186a21760e64844"
+    },
+    {
+      "id": "c08-s44",
+      "text": "请给我一张纸。",
+      "file": "c08-s44.mp3",
+      "sha256": "fcade1460804006349f9703f952928fcdd63928b3ef5788e82c37b9d7dd00545"
+    },
+    {
+      "id": "c08-s45",
+      "text": "这是一把钥匙。",
+      "file": "c08-s45.mp3",
+      "sha256": "10b7cd9cd6def913c6512e4156d70e82a1a1c2ee9c52458b9728351878328d67"
+    },
+    {
+      "id": "char-4e00",
+      "text": "一",
+      "file": "char-4e00.mp3",
+      "sha256": "3a3841e33e0388b65fe1b2e59e4ec2f05fdabcfeb15086e7e4127354b7c1dc9e"
+    },
+    {
+      "id": "char-4e09",
+      "text": "三",
+      "file": "char-4e09.mp3",
+      "sha256": "f8f9fce460cacc0cfeeaacc9caafa78e9f35a313b0c92a23d229e13718339517"
+    },
+    {
+      "id": "char-4e0a",
+      "text": "上",
+      "file": "char-4e0a.mp3",
+      "sha256": "70d1ef8318e97f87130e24f7190b193cd3a7881249ac8acf648fd820ff0c325c"
+    },
+    {
+      "id": "char-4e0b",
+      "text": "下",
+      "file": "char-4e0b.mp3",
+      "sha256": "f6ac37502be6232b4ce04c559b0f489005d00ae75cae14db03f1cf44c0a2bf88"
+    },
+    {
+      "id": "char-4e0d",
+      "text": "不",
+      "file": "char-4e0d.mp3",
+      "sha256": "15c47418467d0112d1760db37fb07af2c06e7ca72e3e65017919bdb2bdc18689"
+    },
+    {
+      "id": "c08-s46",
+      "text": "我想买萝卜。",
+      "file": "c08-s46.mp3",
+      "sha256": "aefa50abf3752a72a795281999d8beb03cf31a150e13c4753f78b2175f6acc2e"
+    },
+    {
+      "id": "char-4e1a",
+      "text": "业",
+      "file": "char-4e1a.mp3",
+      "sha256": "b13836aef2beadf8e67fc36bbc381f365a8802c37bdcf79bfcf8145322db1585"
+    },
+    {
+      "id": "char-4e24",
+      "text": "两",
+      "file": "char-4e24.mp3",
+      "sha256": "5acabbd3a1707c36cbe78669c301132d28f6f47f552d161ed72d4a30553b6184"
+    },
+    {
+      "id": "char-4e2a",
+      "text": "个",
+      "file": "char-4e2a.mp3",
+      "sha256": "7533be65b64361a19c20245e3ed9d7a1c41c8c657552e8bc0bf97a02de467f1f"
+    },
+    {
+      "id": "char-4e5f",
+      "text": "也",
+      "file": "char-4e5f.mp3",
+      "sha256": "b94e346ba162d1fa5adacd25d696b7feb90f05b5dfabe3bfd1462b5e95144b8b"
+    },
+    {
+      "id": "char-4e70",
+      "text": "买",
+      "file": "char-4e70.mp3",
+      "sha256": "0e3763d92a8c1df9dc7476bdc616e9a6a18e47a17a5c8294e760d321444a803d"
+    },
+    {
+      "id": "char-4e86",
+      "text": "了",
+      "file": "char-4e86.mp3",
+      "sha256": "2a6662bae6bdc7635711f67bf17d08541b28072c2b835bca13a931a4cddc383e"
+    },
+    {
+      "id": "char-4e8b",
+      "text": "事",
+      "file": "char-4e8b.mp3",
+      "sha256": "e19b68038f925cc2226c14717c1028c1ed3c656b3ac6dac0d2f778ef483147b5"
+    },
+    {
+      "id": "char-4e8c",
+      "text": "二",
+      "file": "char-4e8c.mp3",
+      "sha256": "8a6e3244476d3e6dce01905c31370b77cd49b58be33941812cc58f06c37db34f"
+    },
+    {
+      "id": "c08-s47",
+      "text": "这是罗汉果。",
+      "file": "c08-s47.mp3",
+      "sha256": "a272e7126d0ced5e162fbf4083d56e3324224bd6bb9b397def128e492254f9db"
+    },
+    {
+      "id": "char-4e94",
+      "text": "五",
+      "file": "char-4e94.mp3",
+      "sha256": "912abd23cbe506f9f7b7c296ef85033737c347114eab5c8ba5ac63a8e19b91c2"
+    },
+    {
+      "id": "char-4eca",
+      "text": "今",
+      "file": "char-4eca.mp3",
+      "sha256": "6d6ec2620b119bebfbbfc82d247abe7f770de4533d3c30735d2cdc1bc1d9b130"
+    },
+    {
+      "id": "char-4ece",
+      "text": "从",
+      "file": "char-4ece.mp3",
+      "sha256": "3ee321a2d9f2ee14e4de87ae8ec020cd6056a838452e579bea3e161cec04d26a"
+    },
+    {
+      "id": "char-4ed6",
+      "text": "他",
+      "file": "char-4ed6.mp3",
+      "sha256": "0887b738e1bf3fb8be7d15d1bb24cda49bb689f805f4d33e09ed538fd54f60cc"
+    },
+    {
+      "id": "char-4ee5",
+      "text": "以",
+      "file": "char-4ee5.mp3",
+      "sha256": "01dde16023df7c424d16d4954118b08aa0115fd07edf194b32fbdf89dd098d93"
+    },
+    {
+      "id": "char-4eec",
+      "text": "们",
+      "file": "char-4eec.mp3",
+      "sha256": "b6eec3f197878fdc3a546e1d40061ad9bf64d0aef4ed4c37da5be4285b331dec"
+    },
+    {
+      "id": "char-4f5c",
+      "text": "作",
+      "file": "char-4f5c.mp3",
+      "sha256": "683e17c171673a4665f94b7bd7de6e674f91f0c729f615928a4bd1c39442029e"
+    },
+    {
+      "id": "char-4f60",
+      "text": "你",
+      "file": "char-4f60.mp3",
+      "sha256": "541bb788548e7ae0a828d8a57a3b693dde2c6d704145ae9d606f768ab32edb16"
+    },
+    {
+      "id": "char-516b",
+      "text": "八",
+      "file": "char-516b.mp3",
+      "sha256": "a3e30e7decbf05b1c5d7460d2b8b744f9aa7780634b5ea8bbd56778097cd340d"
+    },
+    {
+      "id": "char-51e0",
+      "text": "几",
+      "file": "char-51e0.mp3",
+      "sha256": "dc8f4fb5612083f707337fc9153d86eeb35cd400d66d64b28666ac291fb5aedf"
+    },
+    {
+      "id": "char-5206",
+      "text": "分",
+      "file": "char-5206.mp3",
+      "sha256": "bcc2b4d1a8231c778553d18d4769ae304512654dcddfe70e479edaaaf4495e8b"
+    },
+    {
+      "id": "char-5230",
+      "text": "到",
+      "file": "char-5230.mp3",
+      "sha256": "0f1c17382afb23a0799ceae7f31f7b53ca1f31f81c262d2bb40f0ac11e44403e"
+    },
+    {
+      "id": "char-523b",
+      "text": "刻",
+      "file": "char-523b.mp3",
+      "sha256": "7a22e179c40d00a105403cff00ad60d420ea9ab7aa3cfa60fe6708e5a14d1425"
+    },
+    {
+      "id": "char-5319",
+      "text": "匙",
+      "file": "char-5319.mp3",
+      "sha256": "c87a7dbed161da2f2ccd713387f52b6a5b5e8915d3508dce6096561008a386b8"
+    },
+    {
+      "id": "char-5341",
+      "text": "十",
+      "file": "char-5341.mp3",
+      "sha256": "b7ca95151f423573c797ed1cf6fad4ec6e8effcbe53318579459de3807e0c876"
+    },
+    {
+      "id": "char-5348",
+      "text": "午",
+      "file": "char-5348.mp3",
+      "sha256": "c2a911ca01aa8c74d66ff43baee87a51f29c911cd05bfbad77b6d47407de1b07"
+    },
+    {
+      "id": "char-534a",
+      "text": "半",
+      "file": "char-534a.mp3",
+      "sha256": "4ac52e74eabfa3a4f232d72b01235bd73f75569439220ef22ffb5f28ff5a9f9d"
+    },
+    {
+      "id": "char-4e16",
+      "text": "世",
+      "file": "char-4e16.mp3",
+      "sha256": "ebfc2bb153eceb7841f0756bcd013c6e424d8c52d0b5836f8a0e224f9538c25f"
+    },
+    {
+      "id": "char-53ef",
+      "text": "可",
+      "file": "char-53ef.mp3",
+      "sha256": "16fb229a8d9a2b4ff491a4d16a6b6f285886e86d101d7665ba29dfab4203f014"
+    },
+    {
+      "id": "char-540c",
+      "text": "同",
+      "file": "char-540c.mp3",
+      "sha256": "09cb3866fe25d298a48458637209978ddb352be96d09a0fc3ea63d8cfd396623"
+    },
+    {
+      "id": "char-5417",
+      "text": "吗",
+      "file": "char-5417.mp3",
+      "sha256": "c00d9b5c6dd92315a1cdf7f597c9c8f9d375290ecd460daad930370610056dac"
+    },
+    {
+      "id": "char-548c",
+      "text": "和",
+      "file": "char-548c.mp3",
+      "sha256": "a0facd2a392b0a6ef7871ec900fffbc016c9563046b73e9abf7fe51666812b9c"
+    },
+    {
+      "id": "char-56db",
+      "text": "四",
+      "file": "char-56db.mp3",
+      "sha256": "3c90f3532014e1fefa66d42ce3eca3e18ca0f1aace23e46f1024cc73e1ebaefd"
+    },
+    {
+      "id": "char-4f11",
+      "text": "休",
+      "file": "char-4f11.mp3",
+      "sha256": "f4c198ff1910967f75f104bbd0c9c28fee739f2c22483284e23da90b9b6e44b3"
+    },
+    {
+      "id": "char-5728",
+      "text": "在",
+      "file": "char-5728.mp3",
+      "sha256": "1c53df1860e89251106b671810997af71059cb57e684b710dcce80b59bf9381d"
+    },
+    {
+      "id": "char-5730",
+      "text": "地",
+      "file": "char-5730.mp3",
+      "sha256": "b6f0cd0ea9d3558bd3fadca2542a3b48f9aea440281dac14b275d3ade0f28ce9"
+    },
+    {
+      "id": "char-5929",
+      "text": "天",
+      "file": "char-5929.mp3",
+      "sha256": "09493b661faaace3b5c3f7cae95d2853aba68a21f81d7820a9ce1b0e503e5664"
+    },
+    {
+      "id": "char-5979",
+      "text": "她",
+      "file": "char-5979.mp3",
+      "sha256": "b930f793528a9288e12cd87acf5e598467177a18bcdddf7ff809486a6165e4b4"
+    },
+    {
+      "id": "char-5b50",
+      "text": "子",
+      "file": "char-5b50.mp3",
+      "sha256": "f0c97bdcc1725ceadc85bce3a093c6ebe36196e2230780278b0507ba35f87ddc"
+    },
+    {
+      "id": "char-5b66",
+      "text": "学",
+      "file": "char-5b66.mp3",
+      "sha256": "e5f09368619e2aa1751f6bfb2f17b88897565f9ff44ec0b8cfb6ffc8afe1a4e2"
+    },
+    {
+      "id": "char-5bb6",
+      "text": "家",
+      "file": "char-5bb6.mp3",
+      "sha256": "d1e48f2af730d001962dad035c14099876bae14330ea37ceea04eb89780c9206"
+    },
+    {
+      "id": "char-535c",
+      "text": "卜",
+      "file": "char-535c.mp3",
+      "sha256": "8e14c977c564f6f1d4e442ebafeb2941261f5e382f76f652a770a64804e3d563"
+    },
+    {
+      "id": "char-5dee",
+      "text": "差",
+      "file": "char-5dee.mp3",
+      "sha256": "ea9d78cade099681cd15e46ecde2d0ff0e36dea6ba0fdfa73624a805db939c0e"
+    },
+    {
+      "id": "char-5f00",
+      "text": "开",
+      "file": "char-5f00.mp3",
+      "sha256": "bc4c5ddf404b30368ebd57054c06a9bcac7b2413752ea198ef947e435adbac2e"
+    },
+    {
+      "id": "char-56fe",
+      "text": "图",
+      "file": "char-56fe.mp3",
+      "sha256": "4254256352fc51a85cc24030bfefd5ecc882d3a379fab62beb1b9d07537bfc4c"
+    },
+    {
+      "id": "char-5f20",
+      "text": "张",
+      "file": "char-5f20.mp3",
+      "sha256": "72c5d2448b39bb78afe620025ff11d8795c39575a6a5993629169932656cab07"
+    },
+    {
+      "id": "char-5f88",
+      "text": "很",
+      "file": "char-5f88.mp3",
+      "sha256": "2b05dedfa4bbf8c8f454766c10856136865c1fb0cf44b3dda06666f5a7d9fbd3"
+    },
+    {
+      "id": "char-60f3",
+      "text": "想",
+      "file": "char-60f3.mp3",
+      "sha256": "c67ec0676c1f2ae61405ba34cec936f46f1d3edc0fa5a1dcd137822b8226b905"
+    },
+    {
+      "id": "char-610f",
+      "text": "意",
+      "file": "char-610f.mp3",
+      "sha256": "ebd387ee00c31743f930063e8f21307ea2b70f16686737b6fcb0f3e0d72522b4"
+    },
+    {
+      "id": "char-6211",
+      "text": "我",
+      "file": "char-6211.mp3",
+      "sha256": "9af66368d6f5fd7ec00cc2d9b8c62917dd113630088ed37a043b371b2df97e68"
+    },
+    {
+      "id": "char-623f",
+      "text": "房",
+      "file": "char-623f.mp3",
+      "sha256": "8a48b4d7c4331de1ba560e1b6dc2aeb7515e0f95630f84be6a08b338a97068c3"
+    },
+    {
+      "id": "char-628a",
+      "text": "把",
+      "file": "char-628a.mp3",
+      "sha256": "ae8efe780f34141f6eef3aa31adb366def32400554efd68a4dbbb1f4e0ce5e45"
+    },
+    {
+      "id": "char-65b9",
+      "text": "方",
+      "file": "char-65b9.mp3",
+      "sha256": "ff2a31d9cb8c49aff971f7e5f849e847ed42c43bc5d2252482a89fe94602a8e8"
+    },
+    {
+      "id": "char-65f6",
+      "text": "时",
+      "file": "char-65f6.mp3",
+      "sha256": "d15e82785908ad8621d4633d43684475605bd00eec648d8e2e365699ec6a0401"
+    },
+    {
+      "id": "char-661f",
+      "text": "星",
+      "file": "char-661f.mp3",
+      "sha256": "c0246c355f33dd5dcb656f3f861115236e2646967ad804721e8ad7721554d961"
+    },
+    {
+      "id": "char-662f",
+      "text": "是",
+      "file": "char-662f.mp3",
+      "sha256": "4ce14f174a28e632ec16f4ede3d799c196fc9e5b46bd9334444c089689c193a0"
+    },
+    {
+      "id": "char-6700",
+      "text": "最",
+      "file": "char-6700.mp3",
+      "sha256": "c40caef2fbda882722b3c83582734b02cf7a11a3a4c4d34a72782e24ade34a52"
+    },
+    {
+      "id": "char-6709",
+      "text": "有",
+      "file": "char-6709.mp3",
+      "sha256": "8258b09a4d71128b39a1e3b11905b406f655d40d7792b9cc7349a1272df178e6"
+    },
+    {
+      "id": "char-671f",
+      "text": "期",
+      "file": "char-671f.mp3",
+      "sha256": "ef4a410b02010405d244b3a9ce80c64d4957e5a7fe92e10b3604ff0616b83290"
+    },
+    {
+      "id": "char-679c",
+      "text": "果",
+      "file": "char-679c.mp3",
+      "sha256": "69c2b9f33834f8a89a45dc0f080b0fc5e3f4e38d586b8e87ca7d5eb1de6d5aec"
+    },
+    {
+      "id": "char-67e5",
+      "text": "查",
+      "file": "char-67e5.mp3",
+      "sha256": "1fc2558f6af0af23c471418312a7e1f613d695e752a0bda942266b710306d4a2"
+    },
+    {
+      "id": "char-6821",
+      "text": "校",
+      "file": "char-6821.mp3",
+      "sha256": "5a7cf8c1c5e978aaea359064ac5614c9497e9ba7f000438657d6a7a82004bd1e"
+    },
+    {
+      "id": "char-5c4b",
+      "text": "屋",
+      "file": "char-5c4b.mp3",
+      "sha256": "76296df2a8eede2eb1f783e19ede1962d844203994573eef68dd73c90b7c3456"
+    },
+    {
+      "id": "char-606f",
+      "text": "息",
+      "file": "char-606f.mp3",
+      "sha256": "2607fa805e768c87206cbe9d0a391d3ee69992c1112992f51e37694b1d82ae8f"
+    },
+    {
+      "id": "char-684c",
+      "text": "桌",
+      "file": "char-684c.mp3",
+      "sha256": "b5e2da8edf2bb18d87df0f08edcd4cbe43e22d1493b8eac018f3fa74c81b1cf0"
+    },
+    {
+      "id": "char-6c49",
+      "text": "汉",
+      "file": "char-6c49.mp3",
+      "sha256": "eb99aee531e5d242f072fae6444f2f294dbec03ebac44e9ab15f7b82aa99eae8"
+    },
+    {
+      "id": "char-70b9",
+      "text": "点",
+      "file": "char-70b9.mp3",
+      "sha256": "580306b1e3985c3ef60d2903c173aefb47704bc6aa5fb7f1ef5f5cf01af1b8a9"
+    },
+    {
+      "id": "char-73b0",
+      "text": "现",
+      "file": "char-73b0.mp3",
+      "sha256": "9b996964718f2a1edcfd8a5c93550baa22371fd7934e3494a348d86bdcb571eb"
+    },
+    {
+      "id": "char-73ed",
+      "text": "班",
+      "file": "char-73ed.mp3",
+      "sha256": "ea6d405ca8309ee3affacc6aa9c20dc35604b7c762857dc4e4b4cb41d4edf765"
+    },
+    {
+      "id": "char-6905",
+      "text": "椅",
+      "file": "char-6905.mp3",
+      "sha256": "75460c5a384a63d947a30a72a5cbcd9940328fad7401aa02a9b60047385d61e1"
+    },
+    {
+      "id": "char-7684",
+      "text": "的",
+      "file": "char-7684.mp3",
+      "sha256": "89a975d9ee9f4d8a6b04f873359735c78f2103a7b5e45527a10b0bdc820301ff"
+    },
+    {
+      "id": "char-7740",
+      "text": "着",
+      "file": "char-7740.mp3",
+      "sha256": "a24d7bcca8d966cac084f38e96770388f804cc8e8664d11aa168d566e8eb03f3"
+    },
+    {
+      "id": "char-79bb",
+      "text": "离",
+      "file": "char-79bb.mp3",
+      "sha256": "e6c4fd649be789fdb2074abe500442dde3c527df49b3f7365c167ecdca94abde"
+    },
+    {
+      "id": "char-7a7a",
+      "text": "空",
+      "file": "char-7a7a.mp3",
+      "sha256": "6cff1d7c2313832481b503d650f6a97bc142d82c1af8fdf0ae296b211a06cde6"
+    },
+    {
+      "id": "char-7eb8",
+      "text": "纸",
+      "file": "char-7eb8.mp3",
+      "sha256": "ef93b538e7708deb294feb76e5f9a776bbc74afab3260723909361e171d54572"
+    },
+    {
+      "id": "char-7ed9",
+      "text": "给",
+      "file": "char-7ed9.mp3",
+      "sha256": "83c3b61cb332d1c2c461bad96cba4987111193b190f2d35472ba5d29421d633f"
+    },
+    {
+      "id": "char-68c0",
+      "text": "检",
+      "file": "char-68c0.mp3",
+      "sha256": "aa95a50428854700f9119c815fc972128be594a1639316d26d750cca8842006e"
+    },
+    {
+      "id": "char-754c",
+      "text": "界",
+      "file": "char-754c.mp3",
+      "sha256": "1d6429c4c604044629355e274689aa619cfb54adb45f217f681061f3b1e4ad56"
+    },
+    {
+      "id": "char-8bf4",
+      "text": "说",
+      "file": "char-8bf4.mp3",
+      "sha256": "7c51e96a81af31dd2a854f610c7012cc4c2076f238d9805f678b7cdfade5579b"
+    },
+    {
+      "id": "char-8bf7",
+      "text": "请",
+      "file": "char-8bf7.mp3",
+      "sha256": "f7bc2461afb0f0ebcc6da4f963788239b58df8c15224ea2ceb6998d7e82265f8"
+    },
+    {
+      "id": "char-8bfe",
+      "text": "课",
+      "file": "char-8bfe.mp3",
+      "sha256": "7281d394d08c4a91e4103d2d3d23dbd729d5139fd176d55f03f44d8caa261035"
+    },
+    {
+      "id": "char-8d70",
+      "text": "走",
+      "file": "char-8d70.mp3",
+      "sha256": "433dff01e76fc6a48ee6d9088149b3aef577a0aff68c9b94c36575f0ac5f100e"
+    },
+    {
+      "id": "char-7f57",
+      "text": "罗",
+      "file": "char-7f57.mp3",
+      "sha256": "aeaedd92e337b2919dc6c32a5a648c56730c4495e8c76fd07619ac2322b4eb0a"
+    },
+    {
+      "id": "char-8def",
+      "text": "路",
+      "file": "char-8def.mp3",
+      "sha256": "00bcf07b49f992beafc9c9ae73f2094e7110723ba0f98a80d6a970e333cca165"
+    },
+    {
+      "id": "char-8f66",
+      "text": "车",
+      "file": "char-8f66.mp3",
+      "sha256": "a3e762feaafcd75a595d62f74c2db5801f554780053a3a0eacf9bb4c1ca5530c"
+    },
+    {
+      "id": "char-8fd1",
+      "text": "近",
+      "file": "char-8fd1.mp3",
+      "sha256": "1e6e845a74e3c65a1bd7a9e0de9f4620626ab453adb4b629c68dc792b191dc64"
+    },
+    {
+      "id": "char-8fd9",
+      "text": "这",
+      "file": "char-8fd9.mp3",
+      "sha256": "0dc43625434a330a36e7516b817c13df179db63872ad1b5df5907023334c673e"
+    },
+    {
+      "id": "char-8fdc",
+      "text": "远",
+      "file": "char-8fdc.mp3",
+      "sha256": "77533fc8defabea05a55cb53c828beaedcedc0c1f13d3036859ae19c79adf1f7"
+    },
+    {
+      "id": "char-841d",
+      "text": "萝",
+      "file": "char-841d.mp3",
+      "sha256": "aeaedd92e337b2919dc6c32a5a648c56730c4495e8c76fd07619ac2322b4eb0a"
+    },
+    {
+      "id": "char-91cc",
+      "text": "里",
+      "file": "char-91cc.mp3",
+      "sha256": "a8a5ce74f12a547a91c5b2848593d53ed453a52e77e59f5d46ff6db07b816c45"
+    },
+    {
+      "id": "char-94a5",
+      "text": "钥",
+      "file": "char-94a5.mp3",
+      "sha256": "5f5608c48a05a712de64a961d7ff7c6492945ec09da0027e2c743d1720d43d76"
+    },
+    {
+      "id": "char-95e8",
+      "text": "门",
+      "file": "char-95e8.mp3",
+      "sha256": "f0a5217dfc6f88fe58365fa2de2e538013c3490f3020531d0ee2391ca4191b91"
+    },
+    {
+      "id": "char-95ee",
+      "text": "问",
+      "file": "char-95ee.mp3",
+      "sha256": "4be4cf584fcc7028d7aebebd636c3410ed20076f7cd62120d3121f2d4f5f4a45"
+    },
+    {
+      "id": "char-95f4",
+      "text": "间",
+      "file": "char-95f4.mp3",
+      "sha256": "656ebaddc50725cb04573ac9c12d3da086a0c4fbe66d0d8cccfdbe2335e50dc5"
+    },
+    {
+      "id": "char-95fb",
+      "text": "闻",
+      "file": "char-95fb.mp3",
+      "sha256": "6643d66bf6ced533da628b9841ab7906e86170c5b5d7da621d80473dfeef1473"
+    },
+    {
+      "id": "char-96f6",
+      "text": "零",
+      "file": "char-96f6.mp3",
+      "sha256": "7537dccb06c94e9f7aae159bd08fc8a9f767d84c4a0d4142d9489b9143578f08"
+    },
+    {
+      "id": "char-8ddd",
+      "text": "距",
+      "file": "char-8ddd.mp3",
+      "sha256": "4b14329034962442907435e94b08051f3e1e966ebe22ddf02a4c53d51acd1a41"
+    },
+    {
+      "id": "char-9898",
+      "text": "题",
+      "file": "char-9898.mp3",
+      "sha256": "f87fb6bdfd361708b58439691a778b5f725d3db9ce5a6ea6434dbba7f5dd79c5"
+    },
+    {
+      "id": "char-949f",
+      "text": "钟",
+      "file": "char-949f.mp3",
+      "sha256": "a5f1a5ec201095285b59d1497e1bbf274981ee6e75f7104f4de8d2d9c1e160c1"
+    }
+  ]
+}

@@ -1,0 +1,1130 @@
+{
+  "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+  "sourceSha256": "cc2a0a97e6a51ed6ebe59870ef2af66e83f3c3c27387d79b4441bb2d791d78b1",
+  "sourceDate": "2025-06-27",
+  "sourceExcerpt": "data/sources/babelstone-ids-review.txt",
+  "fontSourceUrl": "https://www.babelstone.co.uk/Fonts/Download/BabelStoneHanPUA.ttf",
+  "fontSourceSha256": "92e7155bd28f5570449f4dc71e9bb6fa919f67ef0120d4f83b58c61bed3ed4dc",
+  "fontActualVersion": "1.472",
+  "fontVersionNote": "Official download metadata reports 1.472, despite web page advertising 1.473; exact downloaded bytes and rendered glyphs are pinned.",
+  "namedComponents": {
+    "": {
+      "glyph": "",
+      "description": "left of 段",
+      "sourceHeaderLine": 82,
+      "id": "babelstone-part-6",
+      "number": 6,
+      "label": {
+        "en": "Left part of 段",
+        "fr": "Partie gauche de 段",
+        "ru": "Левая часть 段"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "bottom-right of 旅",
+      "sourceHeaderLine": 91,
+      "id": "babelstone-part-15",
+      "number": 15,
+      "label": {
+        "en": "Lower-right part of 旅",
+        "fr": "Partie inférieure droite de 旅",
+        "ru": "Нижняя правая часть 旅"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "right of 水",
+      "sourceHeaderLine": 100,
+      "id": "babelstone-part-24",
+      "number": 24,
+      "label": {
+        "en": "Right arm of 水",
+        "fr": "Branche droite de 水",
+        "ru": "Правая ветвь 水"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "bottom (legs) of 喪",
+      "sourceHeaderLine": 101,
+      "id": "babelstone-part-25",
+      "number": 25,
+      "label": {
+        "en": "Lower part of 喪 / 展",
+        "fr": "Partie inférieure de 喪 / 展",
+        "ru": "Нижняя часть 喪 / 展"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "left of 北 [G source glyph]",
+      "sourceHeaderLine": 121,
+      "id": "babelstone-part-45",
+      "number": 45,
+      "label": {
+        "en": "Left part of 北",
+        "fr": "Partie gauche de 北",
+        "ru": "Левая часть 北"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "bottom of 年 [J-form of 㐄]",
+      "sourceHeaderLine": 124,
+      "id": "babelstone-part-48",
+      "number": 48,
+      "label": {
+        "en": "Lower part of 年",
+        "fr": "Partie inférieure de 年",
+        "ru": "Нижняя часть 年"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "outside of 马",
+      "sourceHeaderLine": 128,
+      "id": "babelstone-part-52",
+      "number": 52,
+      "label": {
+        "en": "Outer part of 马",
+        "fr": "Partie extérieure de 马",
+        "ru": "Внешняя часть 马"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "outside of 鸟岛",
+      "sourceHeaderLine": 129,
+      "id": "babelstone-part-53",
+      "number": 53,
+      "label": {
+        "en": "Outer part of 鸟",
+        "fr": "Partie extérieure de 鸟",
+        "ru": "Внешняя часть 鸟"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    },
+    "": {
+      "glyph": "",
+      "description": "top of 黑",
+      "sourceHeaderLine": 144,
+      "id": "babelstone-part-68",
+      "number": 68,
+      "label": {
+        "en": "Upper part of 黑",
+        "fr": "Partie supérieure de 黑",
+        "ru": "Верхняя часть 黑"
+      },
+      "fontVersion": "1.472",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "glyphSourceUrl": "https://www.babelstone.co.uk/Fonts/PUA.html",
+      "kind": "named-unencoded-terminal"
+    }
+  },
+  "resolutions": [
+    {
+      "hanzi": "一",
+      "sourceIds": [
+        "^一$(GHTJKPV)"
+      ],
+      "decomposition": "一",
+      "status": "atomic",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 324,
+      "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility.",
+      "approximate": false
+    },
+    {
+      "hanzi": "万",
+      "sourceIds": [
+        "^⿸丆𠃌$(GHTJKPV)"
+      ],
+      "decomposition": "⿸丆𠃌",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 331,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "不",
+      "sourceIds": [
+        "^⿸丆⿰丨丶$(GHTJKP)"
+      ],
+      "decomposition": "⿸丆⿰丨丶",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 337,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "世",
+      "sourceIds": [
+        "^⿻廿𠃊$(GHTJKPV)"
+      ],
+      "decomposition": "⿻廿𠃊",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 346,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "业",
+      "sourceIds": [
+        "^⿱⿻⿰丨丨丷一$(GH)"
+      ],
+      "decomposition": "⿱⿻⿰丨丨丷一",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 350,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "久",
+      "sourceIds": [
+        "^久$(GHTJKPV)"
+      ],
+      "decomposition": "久",
+      "status": "atomic",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 393,
+      "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility.",
+      "approximate": false
+    },
+    {
+      "hanzi": "乎",
+      "sourceIds": [
+        "^⿻𠂌丷$(GHTJKPV)"
+      ],
+      "decomposition": "⿻𠂌丷",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 402,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "乐",
+      "sourceIds": [
+        "^⿻⿱㇒𠃋小$(G)"
+      ],
+      "decomposition": "⿻⿱㇒𠃋小",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 404,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "也",
+      "sourceIds": [
+        "^⿻乜丨$(GHTJKPV)"
+      ],
+      "decomposition": "⿻乜丨",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 419,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "习",
+      "sourceIds": [
+        "^⿹𠃌冫$(G)"
+      ],
+      "decomposition": "⿹𠃌冫",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 420,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "书",
+      "sourceIds": [
+        "^⿺⿻⿱𠃍𠃌丨丶$(G)"
+      ],
+      "decomposition": "⿺⿻⿱𠃍𠃌丨丶",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 426,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "五",
+      "sourceIds": [
+        "^⿱一𫝀$(GHTJKPV)"
+      ],
+      "decomposition": "⿱一𫝀",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 472,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "人",
+      "sourceIds": [
+        "^人$(GHTJKPV)"
+      ],
+      "decomposition": "人",
+      "status": "atomic",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 510,
+      "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility.",
+      "approximate": false
+    },
+    {
+      "hanzi": "今",
+      "sourceIds": [
+        "^⿱⿵𠆢丶乛$(G[P][U][B])"
+      ],
+      "decomposition": "⿱⿵𠆢丶乛",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 526,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "介",
+      "sourceIds": [
+        "^⿱𠆢⿰丿丨$(GHTJKPV)"
+      ],
+      "decomposition": "⿱𠆢⿰丿丨",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 527,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "以",
+      "sourceIds": [
+        "^⿽人⿰𠄌丶$(GHTJKPV)"
+      ],
+      "decomposition": "⿽人⿰𠄌丶",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 553,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "伞",
+      "sourceIds": [
+        "^⿱𠆢⿻丷十$(G)"
+      ],
+      "decomposition": "⿱𠆢⿻丷十",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 610,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "先",
+      "sourceIds": [
+        "^⿱𠂒儿$(GHTJKPV)"
+      ],
+      "decomposition": "⿱𠂒儿",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 1164,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "八",
+      "sourceIds": [
+        "^⿰丿㇏$(GHT)"
+      ],
+      "decomposition": "⿰丿㇏",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 1199,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "力",
+      "sourceIds": [
+        "^⿻𠃌丿$(GHTJKPV)"
+      ],
+      "decomposition": "⿻𠃌丿",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 1503,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "北",
+      "sourceIds": [
+        "^⿰{45}匕$(GHTJKPV)"
+      ],
+      "decomposition": "⿰匕",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 1627,
+      "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred.",
+      "approximate": false
+    },
+    {
+      "hanzi": "单",
+      "sourceIds": [
+        "^⿱丷⿻甲一$(GT)"
+      ],
+      "decomposition": "⿱丷⿻甲一",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 1689,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "又",
+      "sourceIds": [
+        "^又$(GHTJKPV)"
+      ],
+      "decomposition": "又",
+      "status": "atomic",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 1804,
+      "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility.",
+      "approximate": false
+    },
+    {
+      "hanzi": "友",
+      "sourceIds": [
+        "^⿸𠂇又$(GHTJKPV)"
+      ],
+      "decomposition": "⿸𠂇又",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 1807,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "发",
+      "sourceIds": [
+        "^⿺⿸⿻𠃋丿又丶$(GH)"
+      ],
+      "decomposition": "⿺⿸⿻𠃋丿又丶",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 1813,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "右",
+      "sourceIds": [
+        "^⿸𠂇口$(GHTJKPV)"
+      ],
+      "decomposition": "⿸𠂇口",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 1847,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "司",
+      "sourceIds": [
+        "^⿹𠃌𠮛$(GHTJKPV)"
+      ],
+      "decomposition": "⿹𠃌𠮛",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 1852,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "后",
+      "sourceIds": [
+        "^⿸𠂋口$(GHTJKPV)"
+      ],
+      "decomposition": "⿸𠂋口",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 1874,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "向",
+      "sourceIds": [
+        "^⿱㇒冋$(GHTJKPV)"
+      ],
+      "decomposition": "⿱㇒冋",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 1877,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "坚",
+      "sourceIds": [
+        "^⿱𰀡土$(G)"
+      ],
+      "decomposition": "⿱𰀡土",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 2718,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "士",
+      "sourceIds": [
+        "^⿻一丄$(GHTJKPV)"
+      ],
+      "decomposition": "⿻一丄",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 3119,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "声",
+      "sourceIds": [
+        "^⿱士𠃜$(GHTJKP)"
+      ],
+      "decomposition": "⿱士𠃜",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 3124,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "女",
+      "sourceIds": [
+        "^女$(GHTJKPV)"
+      ],
+      "decomposition": "女",
+      "status": "atomic",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 3255,
+      "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility.",
+      "approximate": false
+    },
+    {
+      "hanzi": "展",
+      "sourceIds": [
+        "^⿸尸⿱龷{25}$(GHTJKPV)"
+      ],
+      "decomposition": "⿸尸⿱龷",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 3993,
+      "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred.",
+      "approximate": false
+    },
+    {
+      "hanzi": "左",
+      "sourceIds": [
+        "^⿸𠂇工$(GHTJKPV)"
+      ],
+      "decomposition": "⿸𠂇工",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 4394,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "己",
+      "sourceIds": [
+        "^己$(GHTJKPV)"
+      ],
+      "decomposition": "己",
+      "status": "atomic",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 4405,
+      "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility.",
+      "approximate": false
+    },
+    {
+      "hanzi": "已",
+      "sourceIds": [
+        "^已$(GHTJKPV)"
+      ],
+      "decomposition": "已",
+      "status": "atomic",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 4406,
+      "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility.",
+      "approximate": false
+    },
+    {
+      "hanzi": "年",
+      "sourceIds": [
+        "^⿱𠂉{48}$(GHTKPV)"
+      ],
+      "decomposition": "⿱𠂉",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 4536,
+      "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred.",
+      "approximate": false
+    },
+    {
+      "hanzi": "弟",
+      "sourceIds": [
+        "^⿱丷𢎨$(GHTJKPV)"
+      ],
+      "decomposition": "⿱丷𢎨",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 4707,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "往",
+      "sourceIds": [
+        "^⿰彳主$(GHTJKPV)"
+      ],
+      "decomposition": "⿰彳主",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 4804,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "心",
+      "sourceIds": [
+        "^⿰㇒⿻乚⿰丶丶$(GHTJKPV)"
+      ],
+      "decomposition": "⿰㇒⿻乚⿰丶丶",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 4871,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "手",
+      "sourceIds": [
+        "^⿱㇒⿻二亅$(GHTJKPV)"
+      ],
+      "decomposition": "⿱㇒⿻二亅",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 5519,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "才",
+      "sourceIds": [
+        "^⿹𬺰㇒$(GHTPV)"
+      ],
+      "decomposition": "⿹𬺰㇒",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 5521,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "择",
+      "sourceIds": [
+        "^⿰扌𠬤$(G)"
+      ],
+      "decomposition": "⿰扌𠬤",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 5677,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "方",
+      "sourceIds": [
+        "^⿱丶万$(GHTJKPV)"
+      ],
+      "decomposition": "⿱丶万",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 6397,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "旅",
+      "sourceIds": [
+        "^⿰方⿱𠂉{15}$(GHTKPV)"
+      ],
+      "decomposition": "⿰方⿱𠂉",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 6409,
+      "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred.",
+      "approximate": false
+    },
+    {
+      "hanzi": "春",
+      "sourceIds": [
+        "^⿱𡗗日$(GHTJKPV)"
+      ],
+      "decomposition": "⿱𡗗日",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 6505,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "有",
+      "sourceIds": [
+        "^⿸𠂇⺝$(GHJKPV[S])"
+      ],
+      "decomposition": "⿸𠂇⺝",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 6733,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "步",
+      "sourceIds": [
+        "^⿱止𣥂$(GHTJKPV)"
+      ],
+      "decomposition": "⿱止𣥂",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 7849,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "段",
+      "sourceIds": [
+        "^⿰{6}殳$(GHTJKPV)"
+      ],
+      "decomposition": "⿰殳",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 7929,
+      "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred.",
+      "approximate": false
+    },
+    {
+      "hanzi": "每",
+      "sourceIds": [
+        "^⿱𠂉母$(GHTJKPV)"
+      ],
+      "decomposition": "⿱𠂉母",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 7955,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "气",
+      "sourceIds": [
+        "^⿳𠂉一⺄$(GHTJKP)"
+      ],
+      "decomposition": "⿳𠂉一⺄",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 8024,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "水",
+      "sourceIds": [
+        "^⿰㇇𰛅$(GHTJKPV)"
+      ],
+      "decomposition": "⿰㇇𰛅",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 8056,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "片",
+      "sourceIds": [
+        "^⿰丿⿱丄𠃍$(GHTJKPV)"
+      ],
+      "decomposition": "⿰丿⿱丄𠃍",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 9611,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "牙",
+      "sourceIds": [
+        "^⿹⿻丁𠃋㇒$(GHTJKPV)"
+      ],
+      "decomposition": "⿹⿻丁𠃋㇒",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 9629,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "牛",
+      "sourceIds": [
+        "^⿰㇒𰀁$(GHTJKPV)"
+      ],
+      "decomposition": "⿰㇒𰀁",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 9631,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "瓜",
+      "sourceIds": [
+        "^瓜$(GHTJKPV)"
+      ],
+      "decomposition": "瓜",
+      "status": "atomic",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 10272,
+      "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility.",
+      "approximate": false
+    },
+    {
+      "hanzi": "用",
+      "sourceIds": [
+        "^⿵⺆𰀁$(GHTJKPV)"
+      ],
+      "decomposition": "⿵⺆𰀁",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 10348,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "白",
+      "sourceIds": [
+        "^⿱㇒日$(GHTJKPV)"
+      ],
+      "decomposition": "⿱㇒日",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 10689,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "经",
+      "sourceIds": [
+        "^⿰纟𢀖$(GH)"
+      ],
+      "decomposition": "⿰纟𢀖",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 12819,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "羊",
+      "sourceIds": [
+        "^⿱䒑𰀁$(GHTJKPV)"
+      ],
+      "decomposition": "⿱䒑𰀁",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 13006,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "而",
+      "sourceIds": [
+        "^⿱一𦓐$(GHTJKP)"
+      ],
+      "decomposition": "⿱一𦓐",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 13136,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "耳",
+      "sourceIds": [
+        "^耳$(GHTJKPV)"
+      ],
+      "decomposition": "耳",
+      "status": "atomic",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 13175,
+      "notes": "Source self-IDS: terminal shape; not a claim of historical indivisibility.",
+      "approximate": false
+    },
+    {
+      "hanzi": "自",
+      "sourceIds": [
+        "^⿱㇒目$(GHTJKPV)"
+      ],
+      "decomposition": "⿱㇒目",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 13614,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "节",
+      "sourceIds": [
+        "^⿱艹𰆊$(G)"
+      ],
+      "decomposition": "⿱艹𰆊",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 13766,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "衣",
+      "sourceIds": [
+        "^⿱亠𧘇$(GHTJKPV)"
+      ],
+      "decomposition": "⿱亠𧘇",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 15271,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "赛",
+      "sourceIds": [
+        "^⿱𡨄贝$(G)"
+      ],
+      "decomposition": "⿱𡨄贝",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 16543,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "足",
+      "sourceIds": [
+        "^⿱口龰$(GHTJKPV)"
+      ],
+      "decomposition": "⿱口龰",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 16631,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "身",
+      "sourceIds": [
+        "^⿻𨈑㇒$(GHTJKPV)"
+      ],
+      "decomposition": "⿻𨈑㇒",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 16879,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "那",
+      "sourceIds": [
+        "^⿰𭃂阝$(GHTJKPV)"
+      ],
+      "decomposition": "⿰𭃂阝",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 17383,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "长",
+      "sourceIds": [
+        "^⿸⿺⿻一𠄌㇒乀$(GH)"
+      ],
+      "decomposition": "⿸⿺⿻一𠄌㇒乀",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 18627,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "门",
+      "sourceIds": [
+        "^⿲丨丶𠃌$(GH)"
+      ],
+      "decomposition": "⿲丨丶𠃌",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 18732,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "雨",
+      "sourceIds": [
+        "^⿻丅⿵冂⿰⿱丶丶⿱丶丶$(GJKP)"
+      ],
+      "decomposition": "⿻丅⿵冂⿰⿱丶丶⿱丶丶",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 18988,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "非",
+      "sourceIds": [
+        "^⿰⿰三丨⿰丨三$(G)"
+      ],
+      "decomposition": "⿰⿰三丨⿰丨三",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 19106,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "面",
+      "sourceIds": [
+        "^⿱丆囬$(GHTJKPV)"
+      ],
+      "decomposition": "⿱丆囬",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 19110,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "页",
+      "sourceIds": [
+        "^⿱丆贝$(GH)"
+      ],
+      "decomposition": "⿱丆贝",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 19385,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "飞",
+      "sourceIds": [
+        "^⿰⺄{24}$(G)"
+      ],
+      "decomposition": "⿰⺄",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 19490,
+      "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred.",
+      "approximate": false
+    },
+    {
+      "hanzi": "马",
+      "sourceIds": [
+        "^⿹{52}一$(GH)"
+      ],
+      "decomposition": "⿹一",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 19888,
+      "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred.",
+      "approximate": false
+    },
+    {
+      "hanzi": "鸟",
+      "sourceIds": [
+        "^⿹{53}一$(GH)"
+      ],
+      "decomposition": "⿹一",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 20835,
+      "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred.",
+      "approximate": false
+    },
+    {
+      "hanzi": "黄",
+      "sourceIds": [
+        "^⿳龷由八$(GHJV[B])"
+      ],
+      "decomposition": "⿳龷由八",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 21000,
+      "notes": "Exact China-tagged source IDS; modern graphical structure only.",
+      "approximate": false
+    },
+    {
+      "hanzi": "黑",
+      "sourceIds": [
+        "^⿱{68}灬$(GHTJKPV)"
+      ],
+      "decomposition": "⿱灬",
+      "status": "resolved",
+      "sourceUrl": "https://www.babelstone.co.uk/CJK/IDS.TXT",
+      "sourceLine": 21013,
+      "notes": "Exact China-tagged source IDS. Numbered parts are preserved as named unencoded terminal shapes using the pinned source font; no approximate expansion or etymology is inferred.",
+      "approximate": false
+    }
+  ]
+}
