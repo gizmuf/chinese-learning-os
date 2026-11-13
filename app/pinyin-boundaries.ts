@@ -12,6 +12,18 @@ export function authoredPinyinBoundaries(text:string,pinyin:string):Set<number>|
  if(!counts.length||counts.some(n=>!n)||counts.reduce((a,b)=>a+b,0)!==glyphs.length)return;
  const boundaries=new Set<number>();let position=0;for(const count of counts){position+=count;boundaries.add(glyphs[position-1].end);}return boundaries;
 }
+/** Some lessons space pinyin per syllable. An explicit headword still has one lookup target. */
+export function authoredLookupBoundaries(text:string,pinyin:string,headword?:string){
+ const boundaries=authoredPinyinBoundaries(text,pinyin);
+ if(!boundaries||!headword||!/^[\p{Script=Han}]{2,}$/u.test(headword))return boundaries;
+ for(let start=text.indexOf(headword);start!==-1;start=text.indexOf(headword,start+headword.length)){
+  const end=start+headword.length;
+  if(start)boundaries.add(start);
+  for(const point of boundaries)if(point>start&&point<end)boundaries.delete(point);
+  boundaries.add(end);
+ }
+ return boundaries;
+}
 /** A character reading is selected only when authored text and syllables align exactly. */
 export function authoredCharacterReadings(text:string,pinyin:string):{character:string;pinyin:string}[]|undefined{
  const characters=Array.from(text).filter(glyph=>/\p{Script=Han}/u.test(glyph));if(!authoredPinyinBoundaries(text,pinyin))return;

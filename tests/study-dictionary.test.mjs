@@ -11,7 +11,7 @@ const result=await build({stdin:{contents:`
  import {lesson05Terms} from './app/lesson05-data';
  const dictionary=studyDictionary('en');
  for(const v of lesson05Terms)dictionary.set(v.hanzi,{...dictionary.get(v.hanzi),text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning.en,audio:{text:v.hanzi,pinyin:v.pinyin,context:false,source:'/course05/audio/course05-'+v.id+'-word.mp3'}});
- export const aligned=(text,pinyin,enabled=true,sourceText,offset)=>renderToStaticMarkup(h(LookupContext.Provider,{value:{dictionary,open:()=>{}}},h(StudyText,{text,pinyin,annotatePinyin:enabled,sourceText,offset})));
+ export const aligned=(text,pinyin,enabled=true,sourceText,offset,headword)=>renderToStaticMarkup(h(LookupContext.Provider,{value:{dictionary,open:()=>{}}},h(StudyText,{text,pinyin,annotatePinyin:enabled,sourceText,offset,headword})));
  export const words=text=>renderToStaticMarkup(h(DictionaryWords,{text,dictionary,onLookup:()=>{}}));
  export const contextualDefinition=(entry)=>renderToStaticMarkup(h(StudyDictionaryDialog,{entry,dictionary,dialog:createRef(),opener:createRef(),onClose:()=>{},onLookup:()=>{},onWrite:()=>{},onExplore:()=>{},speaker:recording=>h(DictionaryAudio,{recording,playing:null,onPlay:()=>{}})}));
  export const definition=text=>renderToStaticMarkup(h(StudyDictionaryDialog,{entry:dictionary.get(text),dictionary,dialog:createRef(),opener:createRef(),headingId:'lesson-word',onClose:()=>{},onLookup:()=>{},speaker:recording=>h(DictionaryAudio,{recording,playing:null,onPlay:()=>{}})}));
@@ -93,4 +93,13 @@ test('a word opened in a lesson keeps its source and shows a different matching 
 test('illustrated stories are offered only for their reviewed characters',()=>{
  assert.match(m.contextualDefinition({text:'幕',pinyin:'mù',meaning:'curtain'}),/Picture &amp; memory story/);
  assert.doesNotMatch(m.contextualDefinition({text:'帽',pinyin:'mào',meaning:'hat'}),/Picture &amp; memory story/);
+});
+
+test('syllable-spaced lesson pinyin keeps the known vocabulary word clickable in its sentence',()=>{
+ const source={text:'我们坐出租车去学校。',pinyin:'Wǒ men zuò chū zū chē qù xué xiào。',meaning:'We are taking a taxi to school.'};
+ const sentence=m.aligned(source.text,source.pinyin,true,undefined,0,'出租车');
+ assert.match(sentence,/aria-label="出租车"[^>]*>.*?<ruby>出<rt>chū<\/rt>.*?<ruby>租<rt>zū<\/rt>.*?<ruby>车<rt>chē<\/rt>/);
+ assert.doesNotMatch(sentence,/aria-label="[出租车]"/);
+ const popup=m.contextualDefinition({text:'出租车',pinyin:'chūzūchē',meaning:'taxi',contextual:source});
+ assert.match(popup,/<span class="sp-dictionary-current">出租车<\/span>/);
 });

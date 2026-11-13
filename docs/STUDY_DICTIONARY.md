@@ -15,6 +15,9 @@ sentence's authored pinyin and translation into lookup. The popup keeps that
 sentence first and shows a distinct curated example when one matches the
 selected reading. Lookups in the new example preserve the source context.
 
+In Family Journey, a word remains a single lookup target in its own sentence
+even when the source pinyin uses a space between every syllable.
+
 For the eleven reviewed 莫-family characters, **Picture & memory story** opens
 the selected illustration, component explanation and usage in place. Close it
 to continue browsing the same definition. The illustrated memory cues remain

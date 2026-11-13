@@ -4,14 +4,14 @@ import {simplifiedDisplayText} from './simplified-chinese';
 import {BookOpen,Shuffle} from 'lucide-react';
 import {useI18n} from './i18n';
 import {dictionaryTokens,type StudyDictionary} from './atlas-spatial-model';
-import {authoredPinyinBoundaries,authoredCharacterReadings} from './pinyin-boundaries';
+import {authoredLookupBoundaries,authoredCharacterReadings} from './pinyin-boundaries';
 /** Lightweight shared text actions; no dependency on Atlas or writing surfaces. */
 export const LookupContext=createContext<{dictionary:StudyDictionary;open:(text:string,trigger:HTMLElement)=>void;openConfused?:(index?:number)=>void}|null>(null);
 export function useStudyLookup(){return useContext(LookupContext);}
-export function StudyText({text,anchor='',whole=false,pinyin,sourceText,offset=0,annotatePinyin=false}:{text:string;anchor?:string;whole?:boolean;pinyin?:string;sourceText?:string;offset?:number;annotatePinyin?:boolean}){
+export function StudyText({text,anchor='',whole=false,pinyin,headword,sourceText,offset=0,annotatePinyin=false}:{text:string;anchor?:string;whole?:boolean;pinyin?:string;headword?:string;sourceText?:string;offset?:number;annotatePinyin?:boolean}){
  text=simplifiedDisplayText(text);anchor=simplifiedDisplayText(anchor);
  const lookup=useContext(LookupContext);if(!lookup)return <>{text}</>;
- const authored=pinyin?authoredPinyinBoundaries(sourceText??text,pinyin):undefined,boundaries=authored?new Set([...authored].map(n=>n-offset)):undefined;
+ const authored=pinyin?authoredLookupBoundaries(sourceText??text,pinyin,headword&&simplifiedDisplayText(headword)):undefined,boundaries=authored?new Set([...authored].map(n=>n-offset)):undefined;
  const tokens=whole?[{text,chinese:/\p{Script=Han}/u.test(text)}]:dictionaryTokens(text,lookup.dictionary,undefined,boundaries);
  const readings=annotatePinyin&&pinyin?authoredCharacterReadings(sourceText??text,pinyin):undefined;
  let position=Array.from((sourceText??text).slice(0,offset)).filter(ch=>/\p{Script=Han}/u.test(ch)).length;

@@ -2,7 +2,7 @@
 import HskBadge from './hsk-badge';
 import {extendedCharacters} from './atlas-cloud-extended';
 import {lazy,Suspense,useEffect,useMemo,useRef,useState,type ReactNode,type RefObject} from 'react';
-import {authoredPinyinBoundaries} from './pinyin-boundaries';
+import {authoredLookupBoundaries} from './pinyin-boundaries';
 import type {PracticeBook} from './use-practice-book';
 import {canChoosePractice} from './practice-book';
 import DictionaryMiniNotebook from './dictionary-mini-notebook';
@@ -25,7 +25,7 @@ import './atlas-spatial.css';
 // implementing a second definition view or a different word/character lookup.
 export function DictionaryWords({text,dictionary,onLookup,activeText,pinyin}:{text:string;pinyin?:string;dictionary:StudyDictionary;activeText?:string;onLookup:(text:string,trigger:HTMLButtonElement)=>void}){
  text=simplifiedDisplayText(text);
- return <>{dictionaryTokens(text,dictionary,undefined,pinyin?authoredPinyinBoundaries(text,pinyin):undefined).map((token,i)=>{
+ return <>{dictionaryTokens(text,dictionary,undefined,pinyin?authoredLookupBoundaries(text,pinyin,activeText):undefined).map((token,i)=>{
   const content=activeText&&token.text!==activeText&&Array.from(activeText).length===1&&token.text.includes(activeText)
    ?token.text.split(activeText).map((part,j)=><span key={j}>{j>0&&<mark className="sp-dictionary-current">{activeText}</mark>}{part}</span>)
    :token.text;
