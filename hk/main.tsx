@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import StudyApp from '../app/study-app';
+import PronunciationLab from '../app/pronunciation-lab-ui';
 import {I18nProvider} from '../app/i18n';
 import {HanziStyleProvider} from '../app/hanzi-style';
 import {AccountDialogContext} from '../app/account-dialog-context';
@@ -21,4 +22,7 @@ function App() {
  {account&&<div className="modal-backdrop" role="presentation"><section role="dialog" aria-modal="true" aria-label="Local notebook" style={{background:'white',padding:'2rem',maxWidth:420,margin:'20vh auto',borderRadius:16}}><h2>Local notebook</h2><p>Your progress stays in this browser. Account sync is not available on this test server.</p><button className="primary" onClick={()=>setAccount(false)}>Continue studying</button></section></div>}
  </AccountDialogContext.Provider></I18nProvider>;
 }
-createRoot(document.getElementById('root')!).render(<HanziStyleProvider><App/></HanziStyleProvider>);
+const isPronunciationLab=/^\/pronunciation-lab\/?$/.test(window.location.pathname);
+createRoot(document.getElementById('root')!).render(
+ isPronunciationLab?<PronunciationLab serverEvaluation={false}/>:<HanziStyleProvider><App/></HanziStyleProvider>,
+);

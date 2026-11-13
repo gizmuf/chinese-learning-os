@@ -66,6 +66,7 @@ import {lesson06} from "./lesson06-data";
 import Lesson05 from "./lesson05";
 import VideoStudy from "./video-study";
 import SpeakingChunks from "./speaking-chunks";
+import {atlasChunksReturn} from "./atlas-chunks-route";
 import {chunkCopy} from "./speaking-chunks-copy";
 import {videoStudy} from "./video-study-data";
 import {videoCopy} from "./video-study-copy";
@@ -234,7 +235,14 @@ export default function IntensiveCourse({
   function openLesson06(){stopAudio();setLessonNumber(6);setOpen(true);window.history.replaceState(null,"","/?course=intensive&lesson=6");window.scrollTo({top:0,behavior:"instant"});}
   function openReference(id:ReferenceMaterialId){stopAudio();setReferenceFromLibrary(false);setReferenceId(id);window.history.replaceState(null,'',referenceLessonHref(id));window.scrollTo({top:0,behavior:'instant'});}
   if(referenceId)return <ReferenceLesson id={referenceId} {...{owner,penOnly,setPenOnly,notify}} backLabel={referenceFromLibrary?'Back to My lessons':'All course materials'} onBack={()=>{setReferenceId(null);if(referenceFromLibrary&&onReferenceLibraryBack)onReferenceLibraryBack();else window.history.replaceState(null,'','/?course=intensive');}}/>;
-  if(chunksOpen)return <SpeakingChunks owner={owner} notify={notify} onBack={()=>{setChunksOpen(false);window.history.replaceState(null,"","/?course=intensive");}}/>;
+  if(chunksOpen){
+    const returnToAtlas=atlasChunksReturn(window.location.search);
+    return <SpeakingChunks owner={owner} notify={notify} backToAtlas={!!returnToAtlas} onBack={()=>{
+      if(returnToAtlas){window.location.replace(returnToAtlas);return;}
+      setChunksOpen(false);
+      window.history.replaceState(null,"","/?course=intensive");
+    }}/>;
+  }
   if(videoOpen)return <VideoStudy {...{owner,penOnly,setPenOnly,notify}} onBack={()=>{setVideoOpen(false);window.history.replaceState(null,"","/?course=intensive");}}/>;
   if(open&&lessonNumber===5) return <Lesson05 {...{owner,db,penOnly,setPenOnly,notify}} onBack={()=>{setOpen(false);setLessonNumber(3);window.history.replaceState(null,"",window.location.pathname+"?course=intensive");}}/>;
   function openLesson05(){stopAudio();setLessonNumber(5);setOpen(true);window.history.replaceState(null,"",window.location.pathname+"?course=intensive&lesson=5");window.scrollTo({top:0,behavior:"instant"});}

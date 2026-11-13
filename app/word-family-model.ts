@@ -22,4 +22,5 @@ export function compareWordFamilies(left:string,right:string,locale:Locale,level
  for(const [anchor,side] of [[left,'left'],[right,'right']] as const)for(const word of familyWords(anchor,locale,level)){const p=splitFamilyWord(word.hanzi,anchor)!;const key=JSON.stringify([p.before,p.after]);const row=groups.get(key)??{key,before:p.before,after:p.after,left:[],right:[]};row[side].push(word);groups.set(key,row)}
  return [...groups.values()].sort((a,b)=>Array.from(a.before+a.after).length-Array.from(b.before+b.after).length||a.key.localeCompare(b.key));
 }
+export function selectFamilyWord(words:readonly CloudWord[],entry:string){return words.find(word=>word.id===entry)??words[0]}
 export function boundedFamilyIndex(index:number,count:number){return count?Math.max(0,Math.min(count-1,Math.round(Number.isFinite(index)?index:0))):0}

@@ -9,7 +9,7 @@ import {ArrowLeft,ArrowRight,PenLine,Volume2,Search,Maximize2,Minimize2} from 'l
 import {useI18n} from './i18n';
 import type {CloudRoute} from './atlas-cloud-route';
 import type {CloudWord} from './atlas-cloud-model';
-import {familyWords,familyAnchors,familyColumns,compareWordFamilies,validWordAnchor,boundedFamilyIndex} from './word-family-model';
+import {familyWords,familyAnchors,familyColumns,compareWordFamilies,validWordAnchor,boundedFamilyIndex,selectFamilyWord} from './word-family-model';
 import {StudyText} from './study-lookup';
 import {SharedText} from './word-family-text';
 import {atlasById} from './atlas-model';
@@ -28,7 +28,7 @@ export default function WordFamilies(p:Props){
  const anchors=useMemo(()=>familyAnchors(locale,scope),[locale,scope]);
  const pair=useMemo(()=>p.route.wordCompare?compareWordFamilies('哪','那',locale,scope):[],[p.route.wordCompare,locale,scope]);
  const allPair=pair.flatMap(row=>[...row.left,...row.right]),pool=p.route.wordCompare?allPair:words;
- const selected=pool.find(w=>w.id===p.route.familyEntry)??pool[0];
+ const selected=selectFamilyWord(pool,p.route.familyEntry);
  const index=Math.max(0,words.findIndex(w=>w.id===selected?.id));
  const [draft,setDraft]=useState(anchor),[error,setError]=useState(''),[revealToken,setRevealToken]=useState(''),[playing,setPlaying]=useState('');
  const [submittedQuery,setSubmittedQuery]=useState(''),[searchPending,setSearchPending]=useState(false);
