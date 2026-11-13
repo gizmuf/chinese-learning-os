@@ -1,7 +1,7 @@
 import {items, type Mode} from './content';
 
 export const studioDraftKey = 'study-studio-v1';
-export type StudioPane = 'atlas'|'writing'|'vocabulary'|'cards'|'day';
+export type StudioPane = 'atlas'|'writing'|'vocabulary'|'classifiers'|'cards'|'day';
 export type StudioLocation = {pane:StudioPane; itemId:string; mode:Mode; atlasQuery:string};
 export type StudioCheckpoint = StudioLocation & {
   version:1; revision:number; lease:string; trail:StudioLocation[]; selected:string[];
@@ -14,7 +14,7 @@ export type StudioCommand =
   | {tool:'examples.open'; actionId:string}
   | {tool:'flashcards.open'; actionId:string};
 const known = new Map(items.map(item=>[item.id,item]));
-const panes = new Set(['atlas','writing','vocabulary','cards','day']);
+const panes = new Set(['atlas','writing','vocabulary','classifiers','cards','day']);
 const modes = new Set(['watch','trace','copy','recall']);
 export const dayItemIds = ['hsk1-167','hsk1-081','hsk1-086','hsk1-250'];
 export const studioFixtures = [

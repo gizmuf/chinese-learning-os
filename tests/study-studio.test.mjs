@@ -15,7 +15,7 @@ const b=await build({stdin:{contents:`export * from './app/study-studio-model';e
  b.onLoad({filter:/.*/,namespace:'mock'},a=>({contents:({
  './i18n':`export const useI18n=()=>({locale:'en',t:s=>s});`,
  './study-lookup':`export const StudyText=({text})=>text;`,
- './audio':`export const speak=()=>{};export const stopAudio=()=>{};`,
+ './audio':`export const speak=()=>{};export const stopAudio=()=>{};export const playRecording=()=>{};export const releaseRecording=()=>{};`,
  './atlas-store':`export const useAtlasProgress=()=>({});`,
  './atlas-cloud':`import {createElement} from 'react';export default props=>createElement('atlas-stub',props);`,
  './shared-writing':`import {createElement,useState} from 'react';export default function Writing(props){const [ink,setInk]=useState('');return createElement('writing-stub',{...props,ink,setInk});}`,
@@ -56,6 +56,14 @@ test('real workspace retains mounted ink on navigation, restores checkpoint, and
  await click(r,'Study companion');await click(r,'Practise writing 回');
  await m.act(async()=>r.root.findByType('writing-stub').props.setInk('saved strokes'));await settle();
  await m.act(async()=>r.root.findByType('writing-stub').props.onModeChange('recall'));await settle();
+ await click(r,'Measure words · 量词');
+ assert.equal((await m.readDraft(db,m.studioDraftKey)).pane,'classifiers');
+ await click(r,'Vehicles');
+ const catalogue=r.root.findByProps({className:'classifier-catalogue'});
+ assert.match(text(catalogue),/两辆汽车/);
+ assert.doesNotMatch(text(catalogue),/一本书/);
+ await click(r,'Back');
+ assert.equal(r.root.findByType('writing-stub').props.initialMode,'recall');
  await click(r,'Movement examples');assert.equal(r.root.findByType('writing-stub').props.ink,'saved strokes');
  await click(r,'Back');assert.equal(r.root.findByType('writing-stub').props.initialMode,'recall');
  await click(r,'Vocabulary');await click(r,'Practice selected words');

@@ -15,8 +15,9 @@ import type {LearningEvent} from './learning';
 import {applyStudioCommand,backStudio,claimStudio,dayItemIds,fixtureCommand,studioFixtures,visitStudio,writeStudio,type StudioCheckpoint,type StudioPane} from './study-studio-model';
 import './study-studio.css';
 import StudyLabLinks from './study-lab-links';
+import ClassifierCatalogue, {classifierCatalogueTitle} from './classifier-catalogue';
 const AtlasCloud=lazy(()=>import('./atlas-cloud'));
-const paneNames:Record<StudioPane,string>={atlas:'Character atlas',writing:'Writing',vocabulary:'Vocabulary',cards:'Flashcards',day:'Movement examples'};
+const paneNames:Record<StudioPane,string>={atlas:'Character atlas',writing:'Writing',vocabulary:'Vocabulary',classifiers:'Measure words',cards:'Flashcards',day:'Movement examples'};
 type Props={owner:string|null;db:IDBDatabase|null;penOnly:boolean;setPenOnly:(value:boolean)=>void;notify:(message:string)=>void;record:(event:LearningEvent)=>Promise<void>;onExit:()=>void;onMyDay?:()=>void;onCompanion?:()=>void;onPrivate?:()=>void;onShuoshuoLesson?:()=>void;menuOpen:boolean;onMenu:()=>void};
 
 /** Additive workspace: all learning and ink still belong to the existing modules. */
@@ -30,7 +31,11 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
   const generation=useRef(0),alive=useRef(false),tasks=useRef(Promise.resolve()),pending=useRef(0);
   useEffect(()=>{
     const token=++generation.current;alive.current=true;current.current=null;setState(null);
-    if(db)void claimStudio(db,crypto.randomUUID()).then(checkpoint=>{
+    if(db)void claimStudio(db,crypto.randomUUID()).then(async checkpoint=>{
+      const route=new URLSearchParams(typeof window==='undefined'?'':window.location.search);
+      if(alive.current&&token===generation.current&&route.get('study')==='studio'&&route.get('tool')==='classifiers'&&checkpoint.pane!=='classifiers'){
+        checkpoint=await writeStudio(db,checkpoint,visitStudio(checkpoint,{pane:'classifiers'}));
+      }
       if(!alive.current||token!==generation.current)return;current.current=checkpoint;setState(checkpoint);
       setWriterVisited(checkpoint.pane==='writing');setAtlasVisited(checkpoint.pane==='atlas');
     }).catch(()=>{if(alive.current)setError('Could not open your saved workspace. Reload to retry.');});
@@ -63,6 +68,15 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
     void dispatch(s=>applyStudioCommand(s,input,crypto.randomUUID()));
     setReply(input.tool==='flashcards.open'?'Selected words use extra practice. Your independent review schedule stays unchanged.':input.tool==='atlas.open'?'Explore the real Atlas. Shared shapes are not automatically shared meanings or sounds.':input.tool==='writing.open'?'Watch, trace, copy, then write from memory. Your drawing stays saved when you leave.':'Using the existing course vocabulary and authored examples.');
   }
+  useEffect(()=>{
+    if(!state||typeof window==='undefined')return;
+    const url=new URL(window.location.href);
+    if(url.searchParams.get('study')!=='studio')return;
+    if(state.pane==='classifiers')url.searchParams.set('tool','classifiers');
+    else if(url.searchParams.get('tool')==='classifiers')url.searchParams.delete('tool');
+    if(url.href!==location.href)history.replaceState(history.state,'',url);
+  },[state?.pane]);
+
   function navigate(pane:StudioPane){
     if(atlasAssessment)return;
     stopAudio();
@@ -86,7 +100,7 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
       <button className="ss-companion-toggle" onClick={()=>setOpen(!open)} aria-expanded={open} aria-controls="ss-companion"><MessageCircle size={17}/>Study companion</button></div>
     {onMyDay&&<button className="ss-personal-lesson" onClick={onMyDay} disabled={busy||atlasAssessment}><BookOpen size={16}/>My Day · Day 01 V2 · 26 sentences · Open lesson · New 3 November chapters<ArrowRight size={15}/></button>}
     {onShuoshuoLesson&&<button className="ss-personal-lesson" onClick={onShuoshuoLesson} disabled={busy||atlasAssessment}><BookOpen size={16}/>A morning with Shuoshuo · Full lesson · 42 groups<ArrowRight size={15}/></button>}
-    <nav className="ss-tabs" aria-label="StudyStudio tools">{(Object.keys(paneNames) as StudioPane[]).map(pane=><button key={pane} aria-current={state.pane===pane?'page':undefined} disabled={busy||atlasAssessment} onClick={()=>navigate(pane)}>{paneNames[pane]}</button>)}</nav>
+    <nav className="ss-tabs" aria-label="StudyStudio tools">{(Object.keys(paneNames) as StudioPane[]).map(pane=><button key={pane} aria-current={state.pane===pane?'page':undefined} disabled={busy||atlasAssessment} onClick={()=>navigate(pane)}>{pane==='classifiers'?classifierCatalogueTitle[locale]+' · 量词':paneNames[pane]}</button>)}</nav>
     <StudyLabLinks disabled={busy||atlasAssessment}/>
     {atlasAssessment&&<p className="ss-assessment-note" role="status">Atlas quiz in progress. Finish or cancel it in the Atlas before opening another tool.</p>}
     <div className={'ss-workspace'+(open?' ss-with-companion':'')}>
@@ -100,6 +114,7 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
             void dispatch(s=>applyStudioCommand({...s,review:null},action,crypto.randomUUID()));
           }}>Practice selected words<ArrowRight size={16}/></button></div>
         </div>
+        {state.pane==='classifiers'&&<ClassifierCatalogue notify={notify}/>}
         {state.review&&<div hidden={state.pane!=='cards'} className="ss-cards"><RecognitionReview key={state.review.id} db={db} runId={state.review.id} queue={reviewQueue} practice record={record} notify={notify} onPosition={()=>{}} onWrite={write}/></div>}
         <div hidden={state.pane!=='day'} className="ss-panel ss-day"><header><h2>Movement examples</h2><span>4 existing course examples · 去, 回, 家, 学校</span></header>
           {dayItemIds.map(id=>localized.find(i=>i.id===id)!).map(word=><article key={word.id}><p className="ss-eyebrow">{word.english}</p><div lang="zh-Hans" className="ss-sentence"><StudyText text={word.sentence}/></div><p>{word.sentencePinyin}</p><p>{word.translation}</p><div className="ss-row-actions"><button onClick={()=>speak(word.sentence,notify,word)}><Volume2 size={16}/>Listen</button><button onClick={()=>write(word)}><PenLine size={16}/>Write {word.hanzi}</button></div></article>)}
