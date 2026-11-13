@@ -3,6 +3,7 @@ import {hybridInventory, hybridSelection, hybridWords, isHybridLayout} from './a
 import {compareWordFamilies, familyWords, selectFamilyWord} from './word-family-model';
 import type {CloudWord} from './atlas-cloud-model';
 import type {Locale} from './translate';
+import {atlasWorkspaceReturn} from './atlas-workspace-route';
 
 export function atlasLearningContext(
  route: CloudRoute,
@@ -37,6 +38,8 @@ export function atlasChunksHref(route: CloudRoute, word?: CloudWord) {
 
 export function atlasChunksReturn(search: string) {
  const origin = new URLSearchParams(search).get('returnAtlas');
+ const workspace = atlasWorkspaceReturn(origin);
+ if (workspace) return '/' + workspace;
  if (!origin?.startsWith('?') || origin.length > 2000) return;
  const params = new URLSearchParams(origin);
  if (params.get('atlas') !== '1' || params.get('cloud') !== '1') return;

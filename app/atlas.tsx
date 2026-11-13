@@ -17,6 +17,8 @@ import {
 } from "lucide-react";
 import AtlasWorkshop from "./atlas-workshop";
 const AtlasCloud = lazy(() => import("./atlas-cloud"));
+const AtlasWorkspace = lazy(() => import("./atlas-workspace"));
+import {isAtlasWorkspaceEntry, atlasWorkspaceReturn} from "./atlas-workspace-route";
 const AtlasStudio = lazy(() => import("./atlas-studio"));
 const ConnectionLab = lazy(() => import("./connection-lab"));
 import { L as labCopy } from "./connection-lab-copy";
@@ -82,6 +84,8 @@ export default function Atlas({
   const progress = useAtlasProgress(owner);
   const [studio, setStudio] = useState(false);
   const [cloud, setCloud] = useState(true);
+  const [workspace, setWorkspace] = useState(false);
+  const [workspaceReturn, setWorkspaceReturn] = useState<string>();
   const [scope, setScope] = useState<Scope>(null);
   const [trail, setTrail] = useState<{ scope: Scope; target: string }[]>([]);
   const [selected, setSelected] = useState("u6674");
@@ -97,6 +101,8 @@ export default function Atlas({
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     setStudio(params.get("studio") === "1");
+    setWorkspace(isAtlasWorkspaceEntry(params));
+    setWorkspaceReturn(atlasWorkspaceReturn(params.get("returnWorkspace")));
     setCloud(isCloudAtlasEntry(params));
     const component = params.get("component");
     const group = params.get("group");
@@ -257,7 +263,11 @@ export default function Atlas({
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
-  if (cloud) return <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><AtlasCloud owner={owner} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} progress={progress} onWord={onWord}/></Suspense>;
+  if (workspace) return <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><AtlasWorkspace penOnly={penOnly} setPenOnly={setPenOnly} notify={notify}/></Suspense>;
+  if (cloud) return <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}>
+    {workspaceReturn && <a className="secondary atlas-return-button" href={workspaceReturn}>← Back to Atlas workspace</a>}
+    <AtlasCloud owner={owner} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} progress={progress} onWord={onWord}/>
+  </Suspense>;
   if (studio) return <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><AtlasStudio owner={owner} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} progress={progress}/></Suspense>;
   return (
     <div className="atlas-space">

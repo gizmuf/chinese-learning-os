@@ -37,6 +37,7 @@ import {useRecognitionProgress} from './recognition-store';
 import type {PracticeQuestion} from './recognition-history';
 import {cloudRelation} from './atlas-cloud-connections';
 
+import {atlasWorkspaceReturn} from './atlas-workspace-route';
 import {initialCloudRoute,readCloudRoute,cloudRouteHref,cloudFamilyGroups,cloudRelationSelection,type CloudRoute as Route} from './atlas-cloud-route';
 
 type Props={owner:string|null;db:IDBDatabase|null;penOnly:boolean;setPenOnly:(v:boolean)=>void;notify:(v:string)=>void;progress:ReturnType<typeof useAtlasProgress>;onWord:(item:Item)=>void;embedded?:{route:Route;onRoute:(route:Route)=>void;onAssessmentChange:(active:boolean)=>void;onContextWrite?:(item:Item)=>void;contextEntry?:DictionaryEntry}};
@@ -60,6 +61,7 @@ const grammar:Record<string,{pattern:string;en:string;fr:string;ru:string;tr:str
 };
 export default function AtlasCloud(props:Props){return <CloudMap key={props.owner??'guest'} {...props}/>}
 function CloudMap({owner,db,penOnly,setPenOnly,notify,progress,onWord,embedded}:Props){
+ const workspaceOrigin=useRef<string|undefined>(undefined);
  const recognition=useRecognitionProgress(owner),recognitionOrigin=useRef<Route|null>(null);
  const [navigationRevision,setNavigationRevision]=useState(0);
  const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>(withTurkish({en,fr,ru}))[locale];
@@ -74,9 +76,19 @@ function CloudMap({owner,db,penOnly,setPenOnly,notify,progress,onWord,embedded}:
  const sentencePanel=useRef<HTMLDivElement>(null);
  const tourLauncher=useRef<HTMLButtonElement>(null);
  const centre=useRef<HTMLElement>(null),sheet=useRef<HTMLDialogElement>(null),writeTrigger=useRef<HTMLButtonElement>(null);
- useEffect(()=>{if(embedded)return;setRoute(readRoute());const pop=()=>{setNavigationRevision(value=>value+1);recognitionOrigin.current=null;stopAudio();setWriting(false);setTrail([]);setTour(null);setRoute(readRoute());};addEventListener('popstate',pop);return()=>{removeEventListener('popstate',pop);stopAudio()};},[]);
+ useEffect(()=>{if(embedded)return;workspaceOrigin.current=atlasWorkspaceReturn(new URLSearchParams(location.search).get('returnWorkspace'));setRoute(readRoute());const pop=()=>{setNavigationRevision(value=>value+1);recognitionOrigin.current=null;stopAudio();setWriting(false);setTrail([]);setTour(null);setRoute(readRoute());};addEventListener('popstate',pop);return()=>{removeEventListener('popstate',pop);stopAudio()};},[]);
  useEffect(()=>{if(embedded)setRoute(embedded.route)},[embedded?.route]);
- function publishRoute(next:Route,replace=false){if(embedded)embedded.onRoute(next);else if(replace)history.replaceState(null,'',href(next));else history.pushState(null,'',href(next));}
+ function publishRoute(next:Route,replace=false){
+  if(embedded){embedded.onRoute(next);return;}
+  let destination=href(next);
+  if(workspaceOrigin.current){
+   const params=new URLSearchParams(destination);
+   params.set('returnWorkspace',workspaceOrigin.current);
+   destination='?'+params;
+  }
+  if(replace)history.replaceState(null,'',destination);
+  else history.pushState(null,'',destination);
+ }
  useEffect(()=>{if(writing)sheet.current?.showModal();else if(sheet.current?.open)sheet.current.close();},[writing]);
  useEffect(()=>{if(embedded)return;document.body.classList.toggle('cloud-full',full);return()=>document.body.classList.remove('cloud-full')},[full]);
  const library=useMemo(()=>extendedCharacters(locale).map(libraryView),[locale]);
