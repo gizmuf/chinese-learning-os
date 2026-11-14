@@ -18,7 +18,7 @@ export default function CourseReviewSession({id,number,ids,owner,ready,record,no
  {number===4&&<Lesson04Practice sessionKey={id} {...{owner,record,ready,notify,onComplete}} mode="check" checkIds={ids}/>}
  {number===5&&<Lesson05Practice sessionKey={id} {...{owner,record,ready,notify,onComplete}} mode="check" checkIds={ids}/>}
  {number===12&&<Lesson12Practice {...{id,ids,owner,ready,record,notify,onComplete}}/>}
- {number===11&&<Lesson11Practice {...{ids,events:[],owner,ready,record,notify}}/>}
+ {number===11&&<Lesson11Practice {...{ids,owner,ready,record,notify}} reviewRun={id}/>}
  {number===10&&<Lesson10Practice {...{ids,record,ready,notify}}/>}
  {number===9&&<Lesson09Practice {...{ids,record,ready,notify}}/>}
  {number===8&&<Lesson08Practice {...{ids,record,ready,notify}}/>}

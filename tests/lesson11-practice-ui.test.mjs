@@ -26,8 +26,23 @@ const button=(r,text)=>r.root.findAllByType('button').find(b=>label(b)===text);
 const options=r=>r.root.findAllByType('button').filter(b=>'aria-pressed' in b.props);
 
 const data=new Map();globalThis.localStorage={getItem:k=>data.get(k)??null,setItem:(k,v)=>data.set(k,v)};
-async function mount(owner,record,events=[]){let r;await m.act(async()=>{r=m.renderer.create(m.createElement(m.Lesson11Practice,{ids,events,owner,ready:true,record,notify(){}}),{createNodeMock:()=>({focus(){}})});});return r;}
+async function mount(owner,record,events=[],reviewRun){let r;await m.act(async()=>{r=m.renderer.create(m.createElement(m.Lesson11Practice,{ids,events,owner,reviewRun,ready:true,record,notify(){}}),{createNodeMock:()=>({focus(){}})});});return r;}
 const target=m.lesson11ById.get(m.lesson11Checks.find(q=>q.id===ids[0]).targetId);
+test('Today Lesson 11 starts fresh without resetting or overwriting the lesson checkpoint',async()=>{
+ const rows=[],record=async e=>rows.push(e),owner='review-owner';
+ let r=await mount(owner,record);
+ await m.act(async()=>button(r,target.meaning.en).props.onClick());
+ await m.act(async()=>button(r,'Check answer').props.onClick());
+ assert.ok(button(r,'Result saved').props.disabled);await m.act(async()=>r.unmount());
+ const snapshot=new Map(data);
+ r=await mount(owner,record,[],'today-review-run');
+ assert.ok(options(r).every(v=>!v.props.disabled));
+ await m.act(async()=>button(r,target.meaning.en).props.onClick());
+ await m.act(async()=>button(r,'Check answer').props.onClick());
+ assert.equal(rows.length,2);assert.notEqual(rows[0].id,rows[1].id);assert.equal(rows[0].activityId,rows[1].activityId);
+ await m.act(async()=>r.unmount());assert.deepEqual(data,snapshot);
+ r=await mount(owner,record);assert.ok(button(r,'Result saved').props.disabled);await m.act(async()=>r.unmount());
+});
 test('Lesson11 hint remains assisted across reload and owners stay isolated',async()=>{
  const rows=[],record=async e=>rows.push(e);let r=await mount('hint-owner',record);
  await m.act(async()=>button(r,'Show hint · supported attempt').props.onClick());await m.act(async()=>r.unmount());

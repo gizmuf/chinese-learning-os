@@ -1,5 +1,5 @@
 'use client';
-import {useMemo,useRef,useState,type CSSProperties,type ReactNode} from 'react';
+import {useLayoutEffect,useMemo,useRef,useState,type CSSProperties,type ReactNode} from 'react';
 import {ArrowLeft,Maximize2,Minimize2,Volume2} from 'lucide-react';
 import type {CloudWord,CloudLevel} from './atlas-cloud-model';
 import type {Locale} from './translate';
@@ -8,12 +8,16 @@ import {SharedText} from './word-family-text';
 import {familyContrastPairs,familyRecallRound,familyRecallResult,retryFamilyMistakes,type ContrastPair,type RecallResult} from './family-practice-lab-model';
 import {familyLabCopy} from './family-practice-lab-copy';
 import './family-practice-lab.css';
-type Props={words:CloudWord[];anchor:string;scope:CloudLevel;locale:Locale;boardCopy:FamilyBoardCopy;selected?:CloudWord;onChoose:(word:CloudWord)=>void;details:(word:CloudWord)=>ReactNode;listen:(word:CloudWord)=>void;silence:()=>void;columnStyle:CSSProperties;expanded:boolean;onExpand:()=>void;onBack:()=>void};
+type Props={words:CloudWord[];anchor:string;scope:CloudLevel;locale:Locale;boardCopy:FamilyBoardCopy;selected?:CloudWord;onChoose:(word:CloudWord)=>void;details:(word:CloudWord)=>ReactNode;listen:(word:CloudWord)=>void;silence:()=>void;columnStyle:CSSProperties;expanded:boolean;onExpand:()=>void;onBack:()=>void;onRecallActive?:(active:boolean)=>void};
 export default function FamilyPracticeLab(p:Props){
  const c=familyLabCopy[p.locale],pairs=useMemo(()=>familyContrastPairs(p.words,p.anchor),[p.words,p.anchor]);
  const initial=useMemo(()=>familyRecallRound(pairs),[pairs]);
  const [stage,setStage]=useState(0),[round,setRound]=useState(initial),[results,setResults]=useState<RecallResult[]>([]),[answer,setAnswer]=useState(''),[feedback,setFeedback]=useState<RecallResult|null>(null),[assisted,setAssisted]=useState(false);
  const input=useRef<HTMLInputElement>(null),composing=useRef(false),prompt=round[results.length],complete=results.length===round.length;
+ const recallActive=stage===2&&pairs.length>0&&!!prompt&&!feedback;
+ const onRecallActive=p.onRecallActive;
+ useLayoutEffect(()=>{onRecallActive?.(recallActive);},[onRecallActive,recallActive]);
+ useLayoutEffect(()=>()=>onRecallActive?.(false),[onRecallActive]);
  function moveStage(next:number){p.silence();composing.current=false;if(stage===2&&next!==2&&prompt&&!feedback)setAssisted(true);setStage(next)}
  function submit(reveal=false){if(!prompt||feedback||composing.current&&!reveal)return;setFeedback(familyRecallResult(prompt,answer,assisted||reveal));p.silence()}
  function next(){if(!feedback)return;composing.current=false;setResults([...results,feedback]);setFeedback(null);setAnswer('');setAssisted(false);p.silence();requestAnimationFrame(()=>input.current?.focus())}

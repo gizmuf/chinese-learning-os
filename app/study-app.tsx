@@ -1,8 +1,10 @@
 "use client";
+import GuestBackup from './guest-backup';
 import SearchModeToggle from './search-mode-toggle';
 import {rankSearch,type SearchMode} from './chinese-search';
 import {AppearanceControls} from "./theme";
 import HskBadge from './hsk-badge';
+import ReadingLabResume from './reading-lab-resume';
 import {writingPracticeHref,writingPracticeRoute,type WritingOrigin} from './writing-navigation';
 
 import {usePracticeBook} from './use-practice-book';
@@ -198,6 +200,8 @@ export default function StudyApp({
   const [minutes, setMinutes] = useState(10);
   const [session, setSession] = useState<Item[] | null>(null);
   const [sessionIndex, setSessionIndex] = useState(0);
+  const [sessionAttempts, setSessionAttempts] = useState<{queue:Item[]; ids:Set<string>} | null>(null);
+  const savedSessionAttempts = sessionAttempts?.queue === session ? sessionAttempts.ids.size : 0;
   const [recognitionRun, setRecognitionRun] = useState("");
   const [recognitionPractice,setRecognitionPractice] = useState(false);
   const [recognitionWriting,setRecognitionWriting] = useState<Item|null>(null);
@@ -211,6 +215,7 @@ export default function StudyApp({
     }
   }, [isReady, view, skill, selected.id, languageRun, writingOrigin]);
   const [backup, setBackup] = useState(false);
+  const savedSettingsStore = useRef<IDBDatabase | null>(null);
   const notify = useCallback((message: string) => {
     setToast(message);
     window.setTimeout(() => setToast(""), 4500);
@@ -244,8 +249,9 @@ export default function StudyApp({
           minutes: number;
         }>(store, "settings");
         if (!alive) return;
-        hanziAppearance.setStyle(prefs?.hanziStyle==='print'?'print':'strokes');
-        hanziAppearance.setHighlight(prefs?.highlightComponents??true);
+        savedSettingsStore.current = prefs ? store : null;
+        if (prefs?.hanziStyle !== undefined || user) hanziAppearance.setStyle(prefs?.hanziStyle==='print'?'print':'strokes');
+        if (prefs?.highlightComponents !== undefined || user) hanziAppearance.setHighlight(prefs?.highlightComponents??true);
         if (prefs) {
           setPenOnly(prefs.penOnly);
           setSlowAudio(prefs.slowAudio ?? false);
@@ -293,17 +299,22 @@ export default function StudyApp({
     };
   }, [user?.id, notify, storageAttempt]);
   useEffect(() => {
-    if (db && isReady)
-      saveDraft(db, "settings", {
-        penOnly,
-        hanziStyle:hanziAppearance.style,
-        highlightComponents:hanziAppearance.highlight,
-        slowAudio,
-        left,
-        minutes,
-        level,
-      }).catch(() => notify(t("Could not save preferences.")));
-  }, [db, isReady, penOnly, slowAudio, left, minutes, level, notify,hanziAppearance.style,hanziAppearance.highlight]);
+    if (!db || !isReady) return;
+    const usingDefaults = !penOnly && hanziAppearance.style === 'strokes'
+      && hanziAppearance.highlight && !slowAudio && !left && minutes === 10 && level === 'hsk1';
+    // Untouched guest defaults should not take the place of imported preferences.
+    if (!user && savedSettingsStore.current !== db && usingDefaults) return;
+    savedSettingsStore.current = db;
+    saveDraft(db, "settings", {
+      penOnly,
+      hanziStyle:hanziAppearance.style,
+      highlightComponents:hanziAppearance.highlight,
+      slowAudio,
+      left,
+      minutes,
+      level,
+    }).catch(() => notify(t("Could not save preferences.")));
+  }, [db, isReady, user?.id, penOnly, slowAudio, left, minutes, level, notify,hanziAppearance.style,hanziAppearance.highlight]);
   const synchronize = useCallback(async () => {
     if (!db || !user || syncLock.current) return;
     syncLock.current = true;
@@ -375,6 +386,9 @@ export default function StudyApp({
     if (!db) throw Error(t("Storage is not ready."));
     await putEvents(db, [{ ...e, synced: false }]);
     setEvents(await allEvents(db));
+    if(session&&e.skill===skill&&session[sessionIndex]?.id===e.itemId){
+      setSessionAttempts(current=>current?.queue===session?{queue:session,ids:new Set([...current.ids,e.id])}:current);
+    }
     setSync(user ? t("Saved here · syncing…") : t("Guest · saved on this device"));
     void synchronize();
   };
@@ -454,6 +468,7 @@ export default function StudyApp({
     setSkill(s);
     setMode("recall");
     setSession(queue);
+    setSessionAttempts({queue,ids:new Set()});
     setSessionIndex(0);
     setSelected(queue[0]);
     setFinished(false);
@@ -708,6 +723,7 @@ export default function StudyApp({
                   <span>{t("LET’S KEEP GROWING")}</span>
                 </div>
               </div>
+              <ReadingLabResume owner={user?.id ?? null}/>
               <div className="dashboard-grid">
                 <section className="hero-card">
                   <div className="hero-copy">
@@ -1108,7 +1124,8 @@ export default function StudyApp({
                   {t("You showed up.")}<br />
                   {t("That’s how it starts.")}</h1>
                 <p>
-                  {session?.length} {t("words reviewed. Your next reviews are scheduled.")}</p>
+                  {savedSessionAttempts === 0 ? t("No attempts were saved in this session.") :
+                    <>{savedSessionAttempts} {t(savedSessionAttempts === 1 ? "attempt saved in this session." : "attempts saved in this session.")}</>}</p>
                 <button
                   className="primary"
                   onClick={() => changeView("progress")}
@@ -1162,7 +1179,7 @@ export default function StudyApp({
                     <button onClick={() => setPdfSelection([selected.id])}><Download size={16} /> {t("Print notebook PDF")}</button>
                   </div>
                 )}
-                {isLanguageSkill(skill)?<LanguagePractice key={(user?.id??'guest')+':'+selected.id+':'+skill} item={selected} skill={skill} runId={languageRun} db={db?.name==='chinese-os-v1-'+(user?.id??'guest')?db:null} record={record} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} next={next}/>:skill === "writing" && writingLayout === "notebook" && !session ? (
+                {isLanguageSkill(skill)?<LanguagePractice key={(user?.id??'guest')+':'+selected.id+':'+skill} item={selected} skill={skill} runId={languageRun} db={db?.name==='chinese-os-v1-'+(user?.id??'guest')?db:null} record={record} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} next={next} scheduled={!!session}/>:skill === "writing" && writingLayout === "notebook" && !session ? (
                   <Notebook key={selected.id} item={selected} db={db} penOnly={penOnly} setPenOnly={setPenOnly} record={record} notify={notify} next={next}
                     onRecall={() => { setWritingLayout("studio"); setMode("recall"); }} />
                 ) : skill === "writing" ? (
@@ -1224,6 +1241,7 @@ export default function StudyApp({
                   <ArrowUpRight size={16} />
                 </button>
               </div>
+              {!user && <GuestBackup disabled={!isReady} />}
               <div className="progress-summary">
                 <div className="panel">
                   <strong>{events.length}</strong>

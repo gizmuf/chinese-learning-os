@@ -4,9 +4,10 @@ import {useI18n} from './i18n';
 export type HanziStyle='print'|'strokes';
 const Context=createContext({style:'strokes' as HanziStyle,highlight:true,setStyle:(_:HanziStyle)=>{},setHighlight:(_:boolean)=>{}});
 export function HanziStyleProvider({children}:{children:ReactNode}){
+ const preferenceKey='chinese-os:hanzi-appearance:v1';
  const [style,setStyle]=useState<HanziStyle>('strokes'),[highlight,setHighlight]=useState(true),[ready,setReady]=useState(false);
- useEffect(()=>{try{const saved=JSON.parse(localStorage.getItem('chinese-os:hanzi-appearance:v1')??'null');if(saved?.style==='print'||saved?.style==='strokes')setStyle(saved.style);if(typeof saved?.highlight==='boolean')setHighlight(saved.highlight);}catch{}setReady(true);},[]);
- useEffect(()=>{if(!ready)return;document.documentElement.dataset.hanziStyle=style;document.documentElement.dataset.hanziHighlight=String(highlight);try{localStorage.setItem('chinese-os:hanzi-appearance:v1',JSON.stringify({style,highlight}));}catch{}},[style,highlight,ready]);
+ useEffect(()=>{try{const saved=JSON.parse(localStorage.getItem(preferenceKey)??'null');if(saved?.style==='print'||saved?.style==='strokes')setStyle(saved.style);if(typeof saved?.highlight==='boolean')setHighlight(saved.highlight);}catch{}setReady(true);},[]);
+ useEffect(()=>{if(!ready)return;document.documentElement.dataset.hanziStyle=style;document.documentElement.dataset.hanziHighlight=String(highlight);try{if(style!=='strokes'||!highlight||localStorage.getItem(preferenceKey)!==null)localStorage.setItem(preferenceKey,JSON.stringify({style,highlight}));}catch{}},[style,highlight,ready]);
  const value=useMemo(()=>({style,highlight,setStyle,setHighlight}),[style,highlight]);
  return <Context.Provider value={value}>{children}</Context.Provider>;
 }

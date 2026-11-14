@@ -379,10 +379,10 @@ function WorkspaceWriting({context, penOnly, setPenOnly}: {context: WorkspaceCon
   </section>;
 }
 
-export function WorkspacePractise({route, context, locale, audio, choose, setExercise, penOnly, setPenOnly, onExpand, memory, revealed, setMemory, setRevealed}: {
+export function WorkspacePractise({route, context, locale, audio, choose, setExercise, penOnly, setPenOnly, onExpand, memory, revealed, setMemory, setRevealed, onContrastRecallActive}: {
   route: WorkspaceRoute; context: WorkspaceContext; locale: Locale; audio: WorkspaceAudio; choose: Choose;
   setExercise: (exercise: WorkspaceRoute['exercise']) => void; penOnly: boolean; setPenOnly: (value: boolean) => void; onExpand: () => void;
-  memory: boolean; revealed: boolean; setMemory: (memory: boolean) => void; setRevealed: (revealed: boolean) => void;
+  memory: boolean; revealed: boolean; setMemory: (memory: boolean) => void; setRevealed: (revealed: boolean) => void; onContrastRecallActive: (active: boolean) => void;
 }) {
   const literal = route.relation === 'literal';
   const reelWords = literal ? context.members : [];
@@ -423,7 +423,7 @@ export function WorkspacePractise({route, context, locale, audio, choose, setExe
       boardCopy={boardCopy} selected={context.word} onChoose={choose}
       details={word => <p>{word.hanzi} · {word.pinyin} · {word.meaning}</p>}
       listen={word => audio.listen(wordPronunciation(word))} silence={audio.stop} columnStyle={workspaceColumns(reelWords, route.anchor)}
-      expanded={route.wide} onExpand={onExpand} onBack={() => setExercise('')}/>}
+      expanded={route.wide} onExpand={onExpand} onBack={() => setExercise('')} onRecallActive={onContrastRecallActive}/>}
     {exercise === 'recognition' && <WorkspaceRecognition key={route.part + route.scope} questions={questions} audio={audio}/>}
     {exercise === 'writing' && <WorkspaceWriting key={context.text} context={context} penOnly={penOnly} setPenOnly={setPenOnly}/>}
   </section>;

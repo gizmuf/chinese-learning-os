@@ -147,3 +147,14 @@ html[data-theme=dark] .reading-lab{
   .rl-atlas-dialog,.rl-stroke-dialog{padding:9px}
 }
 @media(prefers-reduced-motion:reduce){.reading-lab *, .reading-lab *::before, .reading-lab *::after{scroll-behavior:auto}}
+.reading-lab [hidden]{display:none!important}
+.rl-resume{margin-top:12px}
+.rl-question label{display:block;font-size:clamp(22px,2.3vw,28px);line-height:1.65;font-weight:650;margin-bottom:8px}
+.rl-question p[lang="zh-Hans"],.rl-question p span[lang="zh-Hans"]{font-size:22px;line-height:1.7}
+.rl-question textarea{width:100%;padding:10px;border:1px solid var(--rl-line);border-radius:8px;background:var(--rl-wash);color:var(--rl-ink);font:inherit;font-size:20px;line-height:1.6;resize:vertical}
+.rl-question+.rl-reading-actions{margin-top:10px}
+.rl-today-resume{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 16px;padding:13px 17px}
+.rl-today-resume h2{margin:0 0 5px;font-size:.88rem}
+.rl-today-resume strong{margin-right:8px}
+.rl-today-resume span{font-size:.87rem}
+.rl-today-resume a{display:inline-flex;align-items:center;gap:6px;text-decoration:none}

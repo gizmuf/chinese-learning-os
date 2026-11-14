@@ -16,9 +16,9 @@ export function restoreLesson11Practice(raw:string|null,owner:string|null):Lesso
   drafts[id]=d;
  }return {...empty,checkId:v.checkId,roundStartedAt:v.roundStartedAt,drafts};}catch{return empty;}
 }
-export function useLesson11PracticeState(owner:string|null){
+export function useLesson11PracticeState(owner:string|null,reviewRun?:string){
  const [snapshot,setSnapshot]=useState({value:emptyLesson11Practice(owner),ready:false,writable:false}),current=useRef(snapshot.value),active=useRef(false);
- useEffect(()=>{active.current=true;let value=emptyLesson11Practice(owner),writable=false;try{value=restoreLesson11Practice(localStorage.getItem(lesson11PracticeKey(owner)),owner);localStorage.setItem(lesson11PracticeKey(owner),JSON.stringify(value));writable=true;}catch{}current.current=value;setSnapshot({value,ready:true,writable});return()=>{active.current=false;};},[owner]);
- const update=useCallback((change:(old:Lesson11PracticeState)=>Lesson11PracticeState)=>{if(!active.current||current.current.owner!==(owner??'guest'))return false;const next=change(current.current);try{localStorage.setItem(lesson11PracticeKey(owner),JSON.stringify(next));}catch{setSnapshot(old=>({...old,writable:false}));return false;}current.current=next;setSnapshot({value:next,ready:true,writable:true});return true;},[owner]);
+ useEffect(()=>{active.current=true;let value=emptyLesson11Practice(owner),writable=!!reviewRun;if(!reviewRun)try{value=restoreLesson11Practice(localStorage.getItem(lesson11PracticeKey(owner)),owner);localStorage.setItem(lesson11PracticeKey(owner),JSON.stringify(value));writable=true;}catch{}current.current=value;setSnapshot({value,ready:true,writable});return()=>{active.current=false;};},[owner,reviewRun]);
+ const update=useCallback((change:(old:Lesson11PracticeState)=>Lesson11PracticeState)=>{if(!active.current||current.current.owner!==(owner??'guest'))return false;const next=change(current.current);if(!reviewRun)try{localStorage.setItem(lesson11PracticeKey(owner),JSON.stringify(next));}catch{setSnapshot(old=>({...old,writable:false}));return false;}current.current=next;setSnapshot({value:next,ready:true,writable:true});return true;},[owner,reviewRun]);
  return {...snapshot,update};
 }

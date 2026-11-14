@@ -46,6 +46,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
   const [journeyVisited, setJourneyVisited] = useState(route.mode === 'read');
   const [reelMemory, setReelMemory] = useState(false);
   const [reelRevealed, setReelRevealed] = useState(false);
+  const [contrastRecallActive, setContrastRecallActive] = useState(false);
   const [narrow, setNarrow] = useState(() => matchMedia('(max-width: 850px)').matches);
   const root = useRef<HTMLElement>(null);
   const heading = useRef<HTMLHeadingElement>(null);
@@ -255,7 +256,8 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
     history.replaceState({...history.state, atlasWorkspace: {...workspaceHistory(), scroll: window.scrollY}}, '', location.href);
   }
 
-  const hideInspector = route.mode === 'practise' && route.exercise === 'reels' && reelMemory && !reelRevealed;
+  const hideInspector = route.mode === 'practise' && (route.exercise === 'reels' && reelMemory && !reelRevealed
+    || route.exercise === 'contrast' && contrastRecallActive);
   const inlineContext = narrow && route.mode === 'read' && groups.some(group => group.id === route.group);
   const inspector = <WorkspaceInspector context={context} route={route} audio={audio} explore={explore} showFamily={anchor => selectFamily(anchor, true)}
     onStory={story} onWriting={() => setExercise('writing')} chunksHref={embedded ? '' : chunksHref()}/>;
@@ -320,7 +322,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
           onMap={map => navigate({map, page: 0})} onPage={page => navigate({page})} onWiden={() => changeScope('all')}/>}
         {route.mode === 'practise' && <WorkspacePractise route={route} context={context} locale={locale} choose={choose} audio={audio}
           penOnly={penOnly} setPenOnly={setPenOnly} setExercise={setExercise} memory={reelMemory} revealed={reelRevealed}
-          setMemory={setReelMemory} setRevealed={setReelRevealed} onExpand={() => navigate({wide: !route.wide}, null, true)}/>}
+          setMemory={setReelMemory} setRevealed={setReelRevealed} onContrastRecallActive={setContrastRecallActive} onExpand={() => navigate({wide: !route.wide}, null, true)}/>}
       </div>
       {!inlineContext && !hideInspector && inspector}
     </div>

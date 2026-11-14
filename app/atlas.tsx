@@ -267,7 +267,7 @@ export default function Atlas({
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
-  if (reader) return <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><ReadingLab penOnly={penOnly} notify={notify}/></Suspense>;
+  if (reader) return <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><ReadingLab key={owner === null ? "guest" : `owner:${owner}`} owner={owner} penOnly={penOnly} notify={notify}/></Suspense>;
   if (workspace) return <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><AtlasWorkspace penOnly={penOnly} setPenOnly={setPenOnly} notify={notify}/></Suspense>;
   if (cloud) return <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}>
     {workspaceReturn && <a className="secondary atlas-return-button" href={workspaceReturn}>← Back to Atlas workspace</a>}

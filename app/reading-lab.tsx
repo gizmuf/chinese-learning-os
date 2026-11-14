@@ -15,14 +15,19 @@ import {hskLevelIndex, type HskIndex} from './hsk-level-model';
 import syllabus from '../data/hsk-levels-source.json';
 import {useStudyLookup} from './study-lookup-context';
 import {useI18n} from './i18n';
+import {emptyReadingLabSession, persistReadingLabSession, readReadingLabSession, readingLabDraftLimit, type ReadingLabResume} from './reading-lab-session';
 import Guided from './guided';
 import './reading-lab.css';
 
 type ReadingProps = {penOnly: boolean; notify: (message: string) => void};
 type ReaderDetour = {kind: 'atlas'; visit: ReadingLabAtlasVisit} | {kind: 'stroke'; text: string};
-type ReaderHistory = {readingLabScroll?: number; readingLabDetour?: ReaderDetour};
+type ReaderHistory = {readingLabScroll?: number; readingLabDetour?: ReaderDetour; readingLabFocus?: {paragraph: string; word: string}};
 type VocabularyReport = ReturnType<typeof analyzeReading>;
-type WritingDraft = Record<string, string>;
+type RecallCheck = {article: string; step: 'recall' | 'compare'; responses: Record<string, string>};
+
+function readerHistory(): ReaderHistory {
+  return history.state ?? {};
+}
 
 const aids: {id: ReadingAid; label: string}[] = [
   {id: 'hanzi', label: 'Hanzi'}, {id: 'tones', label: 'Tone marks'}, {id: 'pinyin', label: 'Pinyin'},
@@ -35,7 +40,7 @@ function readingLabLocation(route: ReadingLabRoute, workspaceOrigin?: string) {
 }
 
 function currentDetour() {
-  const detour = (history.state as ReaderHistory | null)?.readingLabDetour;
+  const detour = readerHistory().readingLabDetour;
   return detour?.kind === 'atlas' || detour?.kind === 'stroke' ? detour : undefined;
 }
 
@@ -129,18 +134,22 @@ function LibraryCoverage({reading, report, failed}: {reading: ReadingLabReading;
   </small>;
 }
 
-function ReaderLibrary({route, index, failed, workspaceOrigin, onLevel, onArticle}: {
+function ReaderLibrary({route, index, failed, workspaceOrigin, resume, onResume, onLevel, onArticle}: {
   route: ReadingLabRoute; index?: HskIndex; failed: boolean;
-  workspaceOrigin?: string; onLevel: (level: ReadingLabRoute['level']) => void;
+  workspaceOrigin?: string; resume?: ReadingLabResume; onResume: () => void; onLevel: (level: ReadingLabRoute['level']) => void;
   onArticle: (event: MouseEvent<HTMLAnchorElement>, reading: ReadingLabReading) => void;
 }) {
   const material = useMemo(() => readingLabReadings.filter(reading => reading.level === route.level)
     .map(reading => ({reading, report: index ? analyzeReading(reading, index) : undefined})), [route.level, index]);
+  const resumable = readingLabReadings.find(reading => reading.id === resume?.article);
   return <>
     <header className="rl-library-heading">
       <BookOpen size={24} aria-hidden="true"/><h1>Reading Lab</h1>
       <p>Read a short Chinese text, then explore the words, patterns, and ideas you want to keep.</p>
     </header>
+    {resumable && <div className="rl-reading-actions rl-resume">
+      <button type="button" onClick={onResume}>Resume <span lang="zh-Hans">{resumable.title.hanzi}</span><ArrowRight size={15}/></button>
+    </div>}
     <nav className="rl-levels" aria-label="Reading level">
       {readingLabLevels.map(level => <button key={level} type="button" aria-pressed={level === route.level} onClick={() => onLevel(level)}>HSK {level}</button>)}
     </nav>
@@ -203,22 +212,36 @@ function StrokeDetour({text, penOnly, onClose}: {text: string; penOnly: boolean;
   </Modal>;
 }
 
-export default function ReadingLab({penOnly, notify}: ReadingProps) {
+export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {owner: string | null}) {
   const lookup = useStudyLookup();
   const vocabulary = useVocabularyIndex();
   const [route, setRoute] = useState(() => readReadingLabRoute(location.search));
   const returnWorkspace = useRef(atlasWorkspaceReturn(new URLSearchParams(location.search).get('returnWorkspace')));
-  const [drafts, setDrafts] = useState<WritingDraft>({});
-  const [selectedWord, setSelectedWord] = useState('');
-  const [questionEvidence, setQuestionEvidence] = useState('');
+  const [loaded] = useState(() => {
+    try {return {session: readReadingLabSession(localStorage, owner), unavailable: false};}
+    catch {return {session: emptyReadingLabSession(), unavailable: true};}
+  });
+  const [drafts, setDrafts] = useState(loaded.session.drafts);
+  const [resume, setResume] = useState(loaded.session.resume);
+  const [saveUnavailable, setSaveUnavailable] = useState(loaded.unavailable);
+  const [selectedWord, setSelectedWord] = useState(() => readerHistory().readingLabFocus?.word ?? '');
+  const [recall, setRecall] = useState<RecallCheck>();
+  const [questionEvidence, setQuestionEvidence] = useState<{article: string; chunk: string}>();
   const [detour, setDetour] = useState(currentDetour);
   const root = useRef<HTMLElement>(null);
   const selectedTrigger = useRef<HTMLElement | null>(null);
-  const scrollDestination = useRef<number | string | null>((history.state as ReaderHistory | null)?.readingLabScroll ?? (route.paragraph || null));
+  const savedResume = loaded.session.resume;
+  const sameResume = savedResume && readingLabHref(savedResume) === readingLabHref(route);
+  const scrollDestination = useRef<number | string | null>(readerHistory().readingLabScroll
+    ?? (sameResume ? savedResume.scroll : route.paragraph || null));
+  const restoringFocus = useRef(false);
+  const lastSaved = useRef('');
+  const recallHeading = useRef<HTMLHeadingElement>(null);
+  const recallStart = useRef<HTMLButtonElement>(null);
   const reading = readingLabReadings.find(candidate => candidate.id === route.article);
   const grammar = reading?.grammar.find(entry => entry.id === route.grammar);
   const relatedFrame = resolveReadingGrammarFrame(grammar?.frameId);
-  const highlights = useMemo(() => new Set([...(grammar?.sourceChunks ?? []), ...(questionEvidence ? [questionEvidence] : [])]), [grammar, questionEvidence]);
+  const highlights = useMemo(() => new Set([...(grammar?.sourceChunks ?? []), ...(questionEvidence?.article === route.article && questionEvidence?.chunk ? [questionEvidence.chunk] : [])]), [grammar, questionEvidence, route.article]);
 
   useEffect(() => {
     const before = history.scrollRestoration;
@@ -226,11 +249,15 @@ export default function ReadingLab({penOnly, notify}: ReadingProps) {
     const pop = () => {
       if (!isReadingLabEntry(new URLSearchParams(location.search))) return;
       const next = readReadingLabRoute(location.search);
-      const state = history.state as ReaderHistory | null;
+      const state = readerHistory();
       const restored = currentDetour();
       setDetour(restored);
-      if (!restored) requestAnimationFrame(() => selectedTrigger.current?.focus({preventScroll: true}));
-      scrollDestination.current = state?.readingLabScroll ?? (next.paragraph || 0);
+      restoringFocus.current = !restored;
+      if (!state.readingLabFocus) selectedTrigger.current = null;
+      setSelectedWord(state.readingLabFocus?.word ?? '');
+      setRecall(current => current?.article === next.article ? current : undefined);
+      setQuestionEvidence(current => current?.article === next.article ? current : undefined);
+      scrollDestination.current = state.readingLabScroll ?? (next.paragraph || 0);
       setRoute(next);
     };
     addEventListener('popstate', pop);
@@ -245,28 +272,81 @@ export default function ReadingLab({penOnly, notify}: ReadingProps) {
     if (destination === null) return;
     scrollDestination.current = null;
     const frame = requestAnimationFrame(() => {
+      if (restoringFocus.current) {
+        restoringFocus.current = false;
+        const {readingLabFocus: saved} = readerHistory();
+        const candidates = root.current?.querySelectorAll<HTMLButtonElement>('[data-reader-headword]');
+        const fallback = saved && Array.from(candidates ?? []).find(button =>
+          button.dataset.readerHeadword === saved.word && button.closest<HTMLElement>('[data-reader-paragraph]')?.dataset.readerParagraph === saved.paragraph);
+        const trigger = selectedTrigger.current?.isConnected ? selectedTrigger.current : fallback;
+        trigger?.focus({preventScroll: true});
+      }
       if (typeof destination === 'string') document.getElementById('rl-' + destination)?.scrollIntoView({block: 'start'});
       else window.scrollTo({top: destination, behavior: 'instant'});
     });
     return () => cancelAnimationFrame(frame);
-  }, [route]);
+  }, [route, detour]);
+
+  function saveResume(next: ReadingLabRoute, scroll: number) {
+    if (!next.article) return;
+    const snapshot = {...next, scroll: Math.max(0, Math.round(scroll))};
+    const signature = JSON.stringify(snapshot);
+    if (signature === lastSaved.current) return;
+    try {
+      const saved = persistReadingLabSession(localStorage, owner, {resume: snapshot});
+      lastSaved.current = signature;
+      setResume(saved.resume);
+    } catch {
+      setSaveUnavailable(true);
+    }
+  }
+
+  function saveDraft(article: string, text: string) {
+    setDrafts(previous => ({...previous, [article]: text}));
+    try {
+      persistReadingLabSession(localStorage, owner, {draft: {article, text}});
+      setSaveUnavailable(false);
+    } catch {
+      setSaveUnavailable(true);
+    }
+  }
+
+  useEffect(() => {
+    if (!reading || detour || recall?.step === 'recall') return;
+    let timer = 0;
+    const flush = () => saveResume(route, window.scrollY);
+    const scrolling = () => {
+      clearTimeout(timer);
+      timer = window.setTimeout(flush, 160);
+    };
+    scrolling();
+    window.addEventListener('scroll', scrolling, {passive: true});
+    window.addEventListener('pagehide', flush);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', scrolling);
+      window.removeEventListener('pagehide', flush);
+    };
+  }, [route, reading, detour, recall?.step]);
 
   function navigate(patch: Partial<ReadingLabRoute>, options: {replace?: boolean; scroll?: number | string} = {}) {
     const next = {...route, ...patch};
     const destination = readingLabLocation(next, returnWorkspace.current);
-    if (options.replace) history.replaceState(history.state, '', destination);
+    if (options.replace) history.replaceState({...history.state, readingLabScroll: undefined}, '', destination);
     else {
+      saveResume(route, window.scrollY);
       history.replaceState({...history.state, readingLabScroll: window.scrollY}, '', location.href);
-      history.pushState({...history.state, readingLabScroll: 0}, '', destination);
+      history.pushState({...history.state, readingLabScroll: typeof options.scroll === 'number' ? options.scroll : 0, readingLabFocus: undefined, readingLabDetour: undefined}, '', destination);
     }
     scrollDestination.current = options.scroll ?? null;
     setRoute(next);
   }
 
-  function preservePosition() {
-    history.replaceState({...history.state, readingLabScroll: window.scrollY}, '', location.href);
+  function preservePosition(focus?: ReaderHistory['readingLabFocus']) {
+    history.replaceState({...history.state, readingLabScroll: window.scrollY, ...(focus ? {readingLabFocus: focus} : {})}, '', location.href);
   }
   function beginDetour(next: ReaderDetour) {
+    saveResume(route, window.scrollY);
     preservePosition();
     history.pushState({...history.state, readingLabDetour: next}, '', location.href);
     setDetour(next);
@@ -295,18 +375,18 @@ export default function ReadingLab({penOnly, notify}: ReadingProps) {
       node.removeEventListener(readingLabAtlasEvent, openAtlas);
       node.removeEventListener(readingLabWriteEvent, openWriting);
     };
-  }, []);
+  }, [route]);
 
   function chooseWord(text: string, opener: HTMLButtonElement, paragraph: string) {
     setSelectedWord(text);
     selectedTrigger.current = opener;
     if (route.paragraph !== paragraph) navigate({paragraph}, {replace: true});
-    preservePosition();
+    preservePosition({paragraph, word: text});
     lookup?.open(text, opener);
   }
 
   function showEvidence(paragraph: string, chunk: string) {
-    setQuestionEvidence(chunk);
+    setQuestionEvidence({article: route.article, chunk});
     navigate({paragraph}, {replace: true, scroll: chunk});
   }
 
@@ -314,7 +394,7 @@ export default function ReadingLab({penOnly, notify}: ReadingProps) {
   return <section ref={root} className="reading-lab" data-reading-lab aria-label="Reading Lab">
     <header className="rl-topline">
       {reading ? <button type="button" onClick={() => {
-        setSelectedWord(''); setQuestionEvidence(''); navigate({article: '', paragraph: '', grammar: '', level: reading.level}, {scroll: 0});
+        setSelectedWord(''); setQuestionEvidence(undefined); setRecall(undefined); navigate({article: '', paragraph: '', grammar: '', level: reading.level}, {scroll: 0});
       }}><ArrowLeft size={16}/> Reading library</button> : <a href={workspace}><ArrowLeft size={16}/> Hanzi Atlas</a>}
       {reading && <span>HSK {reading.level}</span>}
     </header>
@@ -326,17 +406,17 @@ export default function ReadingLab({penOnly, notify}: ReadingProps) {
         <p className="rl-title-translation">{reading.title.english}</p>
         <p className="rl-level-intent">{reading.levelIntent}</p>
       </header>
-      <div className="rl-reader-controls">
+      <div className="rl-reader-controls" hidden={recall?.step === 'recall'}>
         <div className="rl-modes" role="group" aria-label="Reading aid">{aids.map(aid =>
           <button type="button" key={aid.id} aria-pressed={route.aid === aid.id} onClick={() => navigate({aid: aid.id}, {replace: true})}>{aid.label}</button>)}</div>
         <label className="rl-chunk-switch"><input type="checkbox" checked={route.chunks} onChange={event => navigate({chunks: event.target.checked}, {replace: true})}/> Show chunks</label>
       </div>
-      {route.aid !== 'hanzi' && <details className="rl-tone-legend">
+      {route.aid !== 'hanzi' && recall?.step !== 'recall' && <details className="rl-tone-legend">
         <summary>Tone guide</summary>
         <div>{Object.entries(toneMarks).map(([tone, mark], index) => <span key={tone} data-tone={tone}><b>{mark}</b> {neutralNames[index]}</span>)}</div>
         <p>{readingToneNote}</p>
       </details>}
-      <div className="rl-page-grid">
+      <div className="rl-page-grid" hidden={recall?.step === 'recall'}>
         <div className="rl-text-panel">
           <div className="rl-text" data-aid={route.aid} data-chunks={route.chunks}>
             {reading.paragraphs.map((paragraph, index) =>
@@ -377,29 +457,66 @@ export default function ReadingLab({penOnly, notify}: ReadingProps) {
           </div>}
         </aside>
       </div>
-      <section className="rl-followup">
-        <h2>Check your understanding</h2>
-        {reading.questions.map(question => <details key={question.id} className="rl-question">
-          <summary>{question.question}</summary><p>{question.answer}</p>
-          <button type="button" onClick={() => showEvidence(question.evidence.paragraphId, question.evidence.chunkId)}>Show evidence <ArrowRight size={15}/></button>
-        </details>)}
+      <section className="rl-followup" aria-labelledby="rl-recall-heading" data-study-assessment={recall?.step === 'recall' ? 'blocked' : undefined}>
+        <h2 id="rl-recall-heading" ref={recallHeading} tabIndex={-1}>Check your understanding</h2>
+        {!recall ? <>
+          <p>Try answering from memory, or open the sample answers with the text beside you.</p>
+          <div className="rl-reading-actions">
+            <button type="button" ref={recallStart} onClick={() => {
+              saveResume(route, window.scrollY);
+              setRecall({article: reading.id, step: 'recall', responses: {}});
+              requestAnimationFrame(() => recallHeading.current?.focus());
+            }}>Recall with the text hidden</button>
+            <button type="button" onClick={() => setRecall({article: reading.id, step: 'compare', responses: {}})}>Open sample answers</button>
+          </div>
+        </> : <>
+          <p>{recall.step === 'recall' ? 'Answer to yourself or jot down a few words.' : 'Compare with the sample and find the passage that supports it.'} This check is for you.</p>
+          {reading.questions.map(question => <div key={question.id} className="rl-question">
+            <label lang="zh-Hans" htmlFor={'rl-answer-' + question.id}>{question.question}</label>
+            {recall.step === 'recall' ? <textarea id={'rl-answer-' + question.id} rows={2} maxLength={1500}
+              value={recall.responses[question.id] ?? ''}
+              onChange={event => setRecall({...recall, responses: {...recall.responses, [question.id]: event.target.value}})}/> : <>
+              {recall.responses[question.id] && <p>Your answer <span lang="zh-Hans">{recall.responses[question.id]}</span></p>}
+              <p lang="zh-Hans">{question.answer}</p>
+              <button type="button" onClick={() => showEvidence(question.evidence.paragraphId, question.evidence.chunkId)}>Show evidence <ArrowRight size={15}/></button>
+            </>}
+          </div>)}
+          <div className="rl-reading-actions">
+            {recall.step === 'recall' && <button type="button" onClick={() => {
+              setRecall({...recall, step: 'compare'});
+              requestAnimationFrame(() => recallHeading.current?.focus());
+            }}>Reveal sample answers</button>}
+            <button type="button" onClick={() => {
+              setRecall(undefined);
+              setQuestionEvidence(undefined);
+              requestAnimationFrame(() => recallStart.current?.focus());
+            }}>{recall.step === 'recall' ? 'Return to the text' : 'Close check'}</button>
+          </div>
+        </>}
       </section>
-      <section className="rl-followup rl-transfer">
+      <section className="rl-followup rl-transfer" hidden={recall?.step === 'recall'}>
         <h2>Try writing</h2><p lang="zh-Hans">{reading.writing.prompt}</p><p>{reading.writing.english}</p>
         <ul>{reading.writing.requirements.map(requirement => <li key={requirement}>{requirement}</li>)}</ul>
         <label htmlFor="rl-writing">Your draft</label>
-        <textarea id="rl-writing" lang="zh-Hans" rows={4} value={drafts[reading.id] ?? ''}
-          onChange={event => setDrafts(previous => ({...previous, [reading.id]: event.target.value}))}/>
+        <textarea id="rl-writing" lang="zh-Hans" rows={4} maxLength={readingLabDraftLimit} value={drafts[reading.id] ?? ''}
+          onChange={event => saveDraft(reading.id, event.target.value)}/>
+        <p role="status">{saveUnavailable ? 'Could not save to this browser. Copy your draft before leaving.' : drafts[reading.id] ? 'Draft saved on this browser.' : 'Your draft stays in this browser.'}</p>
         {reading.writing.example && <details><summary>Read one possible response</summary>
           <p lang="zh-Hans">{reading.writing.example.hanzi}</p><p>{reading.writing.example.pinyin}</p><p>{reading.writing.example.english}</p>
         </details>}
       </section>
-    </article> : <ReaderLibrary route={route} {...vocabulary} workspaceOrigin={returnWorkspace.current}
+    </article> : <ReaderLibrary route={route} {...vocabulary} workspaceOrigin={returnWorkspace.current} resume={resume}
+      onResume={() => {
+        if (!resume) return;
+        const {scroll, ...destination} = resume;
+        setSelectedWord(''); setQuestionEvidence(undefined); setRecall(undefined);
+        navigate(destination, {scroll: scroll || destination.paragraph});
+      }}
       onLevel={level => navigate({level, article: '', paragraph: '', grammar: ''}, {scroll: 0})}
       onArticle={(event, article) => {
         if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         event.preventDefault();
-        setSelectedWord(''); setQuestionEvidence('');
+        setSelectedWord(''); setQuestionEvidence(undefined); setRecall(undefined);
         navigate({article: article.id, level: article.level, paragraph: '', grammar: ''}, {scroll: 0});
       }}/>}
     {detour?.kind === 'atlas' && <AtlasDetour detour={detour.visit} level={reading?.level ?? route.level} penOnly={penOnly} notify={notify} onClose={closeDetour}/>}
