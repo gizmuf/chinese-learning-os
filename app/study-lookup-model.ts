@@ -5,6 +5,7 @@ import lesson10Characters from '../data/lesson10/characters.json';
 import {lesson10Terms,lesson10Pronunciation} from './lesson10-data';
 import shuoshuoLookup from '../data/shuoshuo-morning-lookup.json';
 import {extendedComponent} from './atlas-cloud-extended';
+import {cloudWords,type CloudWord} from './atlas-cloud-model';
 import {atlasByHanzi} from './atlas-model';
 import shuoshuoMorning from '../data/shuoshuo-morning.json';
 import {shuoshuoWordAudio,shuoshuoSentenceAudio} from './shuoshuo-audio';
@@ -30,7 +31,21 @@ import extraCharacters from '../data/study-dictionary-characters.json';
 import writingContext from '../data/writing-character-context.json';
 import {dictionaryTokens,type StudyDictionary,type DictionaryEntry} from './atlas-spatial-model';
 import type {Locale} from './translate';
+import {normalizedPinyin} from './pinyin-practice-model';
 const lesson06Phrases=new Set(['请讲','醒了','够了','一把钥匙','一本书','两辆汽车','不难','不太难','有点儿难','很难','太难了','难极了','非常难','很有意思']);
+function matchesWordReading(entry: DictionaryEntry, word: CloudWord) {
+ const readings = entry.pinyin.split('/').map(normalizedPinyin);
+ const wordReadings = word.pinyin.split('/').map(normalizedPinyin);
+ return entry.text === word.hanzi && readings.length === wordReadings.length
+  && readings.every((reading,index)=>reading && reading === wordReadings[index]);
+}
+
+/** An authored gloss can override the source reading without inheriting a different curriculum identity. */
+function alignWordIdentity(entry: DictionaryEntry, words: CloudWord[]) {
+ if (!entry.word || matchesWordReading(entry, entry.word)) return entry;
+ return {...entry, word: words.find(word=>matchesWordReading(entry, word))};
+}
+
 export function appStudyDictionary(locale:Locale):StudyDictionary{
  const dictionary=videoDictionary(locale);
  for(const c of extraCharacters.characters){const existing=dictionary.get(c.text);if(!existing?.pinyin||!existing.meaning)dictionary.set(c.text,{...existing,text:c.text,pinyin:existing?.pinyin||c.pinyin,meaning:existing?.meaning||c.meaning,character:c.text});}
@@ -83,6 +98,11 @@ export function appStudyDictionary(locale:Locale):StudyDictionary{
  if(!dictionary.has('热水'))dictionary.set('热水',{text:'热水',pinyin:'rèshuǐ',meaning:'hot water'});
  for(const sentence of shuoshuoMorning.sentences){const clip=shuoshuoSentenceAudio(sentence.id,sentence.hanzi);dictionary.set(sentence.hanzi,{text:sentence.hanzi,pinyin:sentence.pinyin,meaning:sentence.english,phrase:true,...(clip?{audio:{source:clip.source,text:sentence.hanzi,pinyin:sentence.pinyin,context:true,kind:'sentence' as const}}:{})});}
  for(const v of lesson12All)if(!dictionary.has(v.hanzi))dictionary.set(v.hanzi,{text:v.hanzi,pinyin:v.pinyin,meaning:v.meaning[locale],phrase:!!v.chunks,audio:lesson12Pronunciation(v)});
+ const words=cloudWords(locale);
+ for(const [text,entry] of dictionary){
+  const aligned=alignWordIdentity(entry,words);
+  if(aligned!==entry)dictionary.set(text,aligned);
+ }
  return dictionary;
 }
 /** Resolve the glyph actually hit; whitespace/punctuation must never open a neighbouring word. */
@@ -95,7 +115,7 @@ export const studyFeedbackSelector='.lesson04-feedback,.course-feedback,.atlas-a
 /** A grammar example may need senses absent from an earlier lesson's narrower gloss. */
 export function studyLookupEntry(dictionary:StudyDictionary,text:string,locale:Locale,grammarContext=false){
  const existing=dictionary.get(text),gloss=grammarContext?grammarLookup.find(term=>term.text===text):undefined;
- return gloss?{...existing,text,pinyin:gloss.pinyin,meaning:gloss.meaning[locale]}:existing;
+ return gloss?alignWordIdentity({...existing,text,pinyin:gloss.pinyin,meaning:gloss.meaning[locale]},cloudWords(locale)):existing;
 }
 
 /** Keep Atlas on a component that actually belongs to the selected character. */
@@ -104,5 +124,5 @@ export function studyAtlasHref(entry:DictionaryEntry){
  const hanzi=entry.character??Array.from(entry.text)[0],reviewed=atlasByHanzi.get(hanzi),structure=shuoshuoStructures.characters.find(c=>c.hanzi===hanzi);
  const part=reviewed?.semantic??reviewed?.components[0]??structure?.leafComponents.find(p=>extendedComponent(p));
  if(!part)return null;
- const p=new URLSearchParams({atlas:'1',cloud:'1',layout:'space',collection:reviewed?'atlas':'library',hanzi,part});if(entry.word){p.set('word',entry.word.id);p.set('focus','word');}return '/?'+p;
+ const p=new URLSearchParams({atlas:'1',cloud:'1',layout:'space',collection:reviewed?'atlas':'library',hanzi,part});if(entry.word&&matchesWordReading(entry,entry.word)){p.set('word',entry.word.id);p.set('focus','word');}return '/?'+p;
 }

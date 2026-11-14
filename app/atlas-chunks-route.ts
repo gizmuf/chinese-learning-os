@@ -1,7 +1,7 @@
 import {cloudRouteHref, readCloudRoute, type CloudRoute} from './atlas-cloud-route';
 import {hybridInventory, hybridSelection, hybridWords, isHybridLayout} from './atlas-hybrid-model';
 import {compareWordFamilies, familyWords, selectFamilyWord} from './word-family-model';
-import {matchesCloudWordId, type CloudWord} from './atlas-cloud-model';
+import type {CloudWord} from './atlas-cloud-model';
 import type {Locale} from './translate';
 import {atlasWorkspaceReturn} from './atlas-workspace-route';
 
@@ -11,7 +11,7 @@ export function atlasLearningContext(
  scopedWords: readonly CloudWord[],
  characterWord: CloudWord | undefined,
 ): {word?: CloudWord; character?: {hanzi: string}; relatives?: CloudWord[]} {
- if (route.layout === 'journey') return {word: scopedWords.find(word => matchesCloudWordId(word, route.familyEntry))};
+ if (route.layout === 'journey') return {word: scopedWords.find(word => word.id === route.familyEntry)};
  if (route.layout === 'words') {
   const words = route.wordCompare
    ? compareWordFamilies('哪', '那', locale, route.level).flatMap(row => [...row.left, ...row.right])

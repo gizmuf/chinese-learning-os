@@ -9,12 +9,11 @@ export type CloudLevel = BrowseScope;
 export type CloudWord = {
   id: string; hanzi: string; pinyin: string; meaning: string;
   level: BrowseLevel | null; origin: 'curriculum' | 'atlas-example' | 'dictionary';
-  item?: Item; atlasCharacterId?: string; alternateId?: string;
+  item?: Item; atlasCharacterId?: string;
 };
 export type CloudRole = 'semantic' | 'phonetic' | 'visual';
 const normalizedReading = (value: string) => value.normalize('NFC').toLowerCase().replace(/[\s’'·-]/g,'');
 const wordKey = (hanzi: string, pinyin: string) => hanzi+'|'+normalizedReading(pinyin);
-export const matchesCloudWordId = (word: CloudWord, id: string) => id === word.id || id === word.alternateId;
 const inScope = (item: Item, level: CloudLevel) => level==='all'||(item.hskLevel!==undefined&&item.hskLevel<=scopeRank(level));
 /** Numeric scopes include earlier levels. Extras and unlevelled examples belong only to all. */
 const wordCache=new Map<string,CloudWord[]>();
@@ -32,19 +31,12 @@ function buildCloudWords(locale: Locale, level: CloudLevel): CloudWord[] {
   const knownHanzi=new Set(canonical.map(word=>word.hanzi));
   const seenDictionary=new Set<string>();
   const dictionary:CloudWord[]=browseWords.filter(word=>{const eligible=browseInScope(browseLevel(word.level),level)&&!knownHanzi.has(word.hanzi)&&!seenDictionary.has(word.hanzi);if(eligible)seenDictionary.add(word.hanzi);return eligible}).map(word=>({...word,meaning:simplifiedDisplayText(word.meaning),level:browseLevel(word.level),origin:'dictionary' as const}));
-  // The reviewed 森林 recording and the HSK4 browse entry teach the same word.
-  const forest = atlasByHanzi.get('森');
-  const forestEntry = forest && dictionary.find(word => wordKey(word.hanzi, word.pinyin) === wordKey(forest.word, forest.wordPinyin));
-  if (forestEntry) {
-    forestEntry.atlasCharacterId = forest.id;
-    forestEntry.alternateId = 'atlas-example:' + forest.id;
-  }
   if(level!=='all')return [...canonical,...dictionary];
   const known=new Set(canonical.map(word=>wordKey(word.hanzi,word.pinyin)));
   const examples:CloudWord[]=[];
   for(const character of atlasCharacters){
     const key=wordKey(character.word,character.wordPinyin);
-    if (known.has(key) || character.id === forestEntry?.atlasCharacterId) continue;
+    if(known.has(key))continue;
     known.add(key);
     examples.push({id:'atlas-example:'+character.id,hanzi:character.word,pinyin:character.wordPinyin,
       meaning:character.wordMeaning[locale],level:null,origin:'atlas-example',atlasCharacterId:character.id});

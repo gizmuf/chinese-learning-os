@@ -27,3 +27,29 @@ test('Journey context provides separate keyboard-accessible word targets and pre
 });
 
 test("degree-complement example uses neutral de while keeping the original curriculum identity",()=>{const entry=d.get("得");assert.equal(entry.word.item.id,"hsk2-332");assert.equal(entry.word.item.sentence,"她说得很好。");assert.equal(entry.word.item.sentencePinyin,"Tā shuō de hěn hǎo。");});
+
+test('experience particle 过 points to its own curriculum entry and keeps the source reading and audio',()=>{
+ const entry=d.get('过');
+ assert.equal(entry.pinyin,'guo');
+ assert.equal(entry.word.id,'hsk2-351');
+ assert.equal(entry.word.item.pinyin,'guo');
+ assert.equal(entry.word.item.sentence,'我去过中国。');
+ assert.equal(entry.audio.text,'过');
+ assert.equal(entry.audio.pinyin,'guo');
+ const route=new URL(m.studyAtlasHref(entry),'https://example.test');
+ assert.equal(route.searchParams.get('word'),'hsk2-351');
+ assert.equal(route.searchParams.get('focus'),'word');
+});
+
+test('matching word identities accept tone notation and reject different readings in Atlas',()=>{
+ const degree=d.get('得'),greeting=d.get('你好');
+ function query(entry){return new URL(m.studyAtlasHref(entry),'https://example.test').searchParams;}
+ assert.equal(query({...degree,pinyin:'de5'}).get('word'),'hsk2-332');
+ assert.equal(query({...degree,pinyin:'děi'}).has('word'),false);
+ assert.equal(query({...greeting,pinyin:'ni3-hao3'}).get('word'),'hello');
+ assert.equal(query({...greeting,text:'别',character:'你'}).has('word'),false);
+ const unmatched=d.get('臭');
+ assert.equal(unmatched.pinyin,'chòu');
+ assert.equal(unmatched.word,undefined);
+ assert.equal(query(unmatched).has('word'),false);
+});

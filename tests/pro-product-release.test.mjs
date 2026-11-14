@@ -65,20 +65,22 @@ test('The curated 人/亻 grouping includes 你 while exact 人 and 亻 remain s
   assert.deepEqual(indexed.filter(hanzi => !authored.includes(hanzi)), ['寞']);
 });
 
-test('森林 has one visible row with HSK4 membership, its existing audio and both lookup IDs', () => {
-  for (const level of [4, 'all']) {
-    const rows = model.familyWords('森', 'en', level).filter(word => word.hanzi === '森林');
-    assert.equal(rows.length, 1);
-    const [forest] = rows;
-    assert.equal(forest.level, 4);
-    assert.equal(forest.id, 'hsk-browse:4:森林');
-    assert.equal(model.selectFamilyWord(rows, 'atlas-example:u68ee'), forest);
-    const clip = model.wordPronunciation(forest);
-    assert.equal(clip.source, '/atlas/audio/atlas-u68ee-word.mp3');
-    assert.ok(existsSync('public' + clip.source));
-    const route = model.readAtlasWorkspaceRoute('?relation=literal&anchor=森&word=atlas-example:u68ee&hsk=' + level);
-    assert.equal(model.resolveWorkspaceContext(route, 'en').word.id, forest.id);
-  }
+test('Unified Atlas combines the HSK4 and recorded 森林 entries only in All vocabulary', () => {
+  const dictionaryId = 'hsk-browse:4:森林';
+  const exampleId = 'atlas-example:u68ee';
+  const route = model.readAtlasWorkspaceRoute('?relation=literal&anchor=森&word=' + dictionaryId);
+  const all = model.resolveWorkspaceContext(route, 'en');
+  assert.deepEqual(all.members.filter(word => word.hanzi === '森林').map(word => word.id), [dictionaryId]);
+  assert.equal(all.word.level, 4);
+  assert.equal(all.pronunciation.source, '/atlas/audio/atlas-u68ee-word.mp3');
+  assert.ok(existsSync('public' + all.pronunciation.source));
+  assert.equal(model.resolveWorkspaceContext({...route, wordId: exampleId}, 'en').word.id, dictionaryId);
+
+  const hsk4 = model.resolveWorkspaceContext({...route, scope: 4}, 'en');
+  assert.deepEqual(hsk4.members.filter(word => word.hanzi === '森林').map(word => word.id), [dictionaryId]);
+  assert.equal(hsk4.word.atlasCharacterId, undefined);
+  assert.equal(hsk4.pronunciation, undefined);
+  assert.deepEqual(model.familyWords('森', 'en', 'all').filter(word => word.hanzi === '森林').map(word => word.id), [exampleId, dictionaryId]);
 });
 
 test('Cloud Atlas handoff retains the learning selection, exact source route and both scopes', () => {

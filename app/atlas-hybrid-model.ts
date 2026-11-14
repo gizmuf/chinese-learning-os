@@ -1,6 +1,6 @@
 import componentReadings from '../data/study-component-readings.json';
 import dictionaryCharacters from '../data/study-dictionary-characters.json';
-import {cloudWords, matchesCloudWordId, type CloudLevel, type CloudWord} from './atlas-cloud-model';
+import {cloudWords, type CloudLevel, type CloudWord} from './atlas-cloud-model';
 import {extendedCharacters} from './atlas-cloud-extended';
 import {atlasByHanzi, componentById} from './atlas-model';
 import {familyWords} from './word-family-model';
@@ -45,7 +45,7 @@ export function hybridPartFamily(characters:readonly HybridCharacter[],part:stri
 export function hybridSelection(words:readonly CloudWord[],characters:readonly HybridCharacter[],hanzi:string,entry:string){
  const character=characters.find(ch=>ch.hanzi===hanzi)??characters[0];
  const relatives=character?words.filter(w=>character.wordIds.includes(w.id)):[];
- return {character,relatives,word:relatives.find(w=>matchesCloudWordId(w,entry))??relatives[0]};
+ return {character,relatives,word:relatives.find(w=>w.id===entry)??relatives[0]};
 }
 export function hybridPage(total:number,page:number,size:number){
  const pages=Math.ceil(total/size),safe=Math.max(0,Math.min(Math.max(0,pages-1),Math.floor(Number.isFinite(page)?page:0)));
