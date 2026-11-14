@@ -93,6 +93,12 @@ select {
   flex-direction: column;
   z-index: 30;
 }
+@media (min-width: 651px) {
+  .sidebar {
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+  }
+}
 .brand {
   display: flex;
   align-items: center;
