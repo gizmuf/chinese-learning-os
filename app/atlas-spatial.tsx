@@ -11,7 +11,7 @@ import {atlasByHanzi} from './atlas-model';
 import {cloudRelation} from './atlas-cloud-connections';
 import CloudHighlight from './atlas-cloud-highlight';
 import {playRecording,releaseRecording} from './audio';
-import {characterPronunciation,componentPronunciation,sentencePronunciation,spatialCards,spatialNext,spatialPage,recognitionQuestions,wordPronunciation,type CardMode,type DictionaryEntry,type Pronunciation,type SpatialCharacter} from './atlas-spatial-model';
+import {characterPronunciation,componentPronunciation,sentencePronunciation,spatialCards,spatialNext,spatialPage,spatialWordOptions,recognitionQuestions,wordPronunciation,type CardMode,type DictionaryEntry,type Pronunciation,type SpatialCharacter} from './atlas-spatial-model';
 import AtlasRecognition from './atlas-recognition';
 import RecognitionDashboard from './recognition-dashboard';
 import {recognitionSummary,recognitionReviewQuestions,type PracticeQuestion} from './recognition-history';
@@ -66,7 +66,8 @@ export default function AtlasSpatial(p:Props){
  const relationLabels={all:c('All connections','Tous les liens','Все связи'),meaning:c('Meaning clue','Indice de sens','Подсказка смысла'),sound:c('Sound clue','Indice sonore','Подсказка звучания'),shape:c('Shape / unreviewed','Forme / non vérifié','Форма / не проверено')};
  const relationHelp={all:c('All structural matches. A shared shape does not always mean a shared meaning or pronunciation.','Tous les liens de structure. Une forme commune ne signifie pas toujours un sens ou une prononciation communs.','Все структурные связи. Общая форма не всегда означает общий смысл или произношение.'),meaning:c('The shared part helps explain the character’s meaning. Only reviewed clues appear here.','La partie commune aide à expliquer le sens du caractère. Seuls les indices vérifiés figurent ici.','Общая часть помогает объяснить значение знака. Здесь только проверенные подсказки.'),sound:c('The shared part gives a pronunciation clue. Sounds can differ, including their tones.','La partie commune donne un indice de prononciation. Les sons, y compris les tons, peuvent différer.','Общая часть подсказывает произношение. Звуки и тоны могут различаться.'),shape:c('The shape is shared. Its meaning or sound role has not been established here.','La forme est commune. Son rôle de sens ou de son n’est pas établi ici.','Общая форма. Её смысловая или звуковая роль здесь не установлена.')};
 
- const shownWords=moreWords?p.words:p.words.slice(0,6),sentence=p.word?.item;
+ const wordOptions=useMemo(()=>spatialWordOptions(p.words),[p.words]);
+ const shownWords=moreWords?wordOptions:wordOptions.slice(0,6),sentence=p.word?.item;
  return <div className={'sp-atlas'+(practicing?' is-practicing':'')} aria-label={c('Spatial Atlas','Atlas spatial','Пространственный Атлас')}>
   <section className="sp-inventory" aria-label={c('Vocabulary coverage','Couverture du vocabulaire','Охват словаря')}><div><strong>{coverage.words.toLocaleString(locale)} {c('HSK words','mots HSK','слов HSK')} · {coverage.characters} {c('distinct characters','caractères distincts','разных знаков')}</strong><small>{p.collection==='atlas'?c('Current view: curated Atlas selection · 121 characters','Vue actuelle : sélection Atlas · 121 caractères','Сейчас: избранная коллекция Атласа · 121 знак'):c('Current view: HSK map','Vue actuelle : carte HSK','Сейчас: карта HSK')}{p.collection==='library'&&(p.level===1||p.level===2)&&' · '+c('filtered scope','périmètre filtré','ограниченный охват')}</small></div><div>{(p.collection==='atlas'||p.level!==3)&&<button type="button" onClick={()=>{setPracticing(false);p.onHskFamily()}}>{c('Open full HSK 1–3','Ouvrir tout HSK 1–3','Открыть весь HSK 1–3')}</button>}<button type="button" onClick={e=>{directoryTrigger.current=e.currentTarget;setDirectoryOpen(true)}}><Grid2X2 size={16}/>{c('Browse all families','Toutes les familles','Все семейства')}</button></div></section>
   <div className="sp-workspace">
@@ -102,7 +103,20 @@ export default function AtlasSpatial(p:Props){
   {!practicing&&<><section className="sp-context" aria-labelledby="sp-context-title"><div className="sp-panel-heading"><h2 id="sp-context-title">{c('One connection, in context','Un lien, en contexte','Одна связь в контексте')}</h2><span>{c('Tap Chinese text for a definition','Touchez le texte chinois pour une définition','Нажмите китайский текст для перевода')}</span></div>
    <div className="sp-path"><div><small>{c('Component','Composant','Компонент')}</small><strong lang="zh-Hans">{p.familyLabel}</strong></div><ChevronRight size={16}/><div><small>{c('Character','Caractère','Знак')}</small><strong>{text(p.hanzi)}</strong></div><ChevronRight size={16}/><div><small>{c('Word','Mot','Слово')}</small><strong>{p.word?text(p.word.hanzi):'—'}</strong>{p.word&&speaker(wordPronunciation(p.word),true)}</div><ChevronRight size={16}/><small>{c('Sentence','Phrase','Предложение')}</small></div>
    {p.word&&<div className="sp-word-context"><span>{p.word.pinyin}</span><p>{p.word.meaning}</p></div>}
-   {p.words.length>1&&<div className="sp-word-options" aria-label={c('Words with this character','Mots avec ce caractère','Слова с этим знаком')}>{shownWords.map(word=><div className={'sp-word-option'+(p.word?.id===word.id?' is-active':'')} key={word.id}><button type="button" onClick={()=>p.onWord(word)} aria-pressed={p.word?.id===word.id}><span lang="zh-Hans">{word.hanzi}</span><small>{word.pinyin}</small><small>{word.meaning}</small></button>{speaker(wordPronunciation(word),true)}</div>)}{p.words.length>6&&<button type="button" onClick={()=>setMoreWords(!moreWords)}>{moreWords?c('Show less','Réduire','Свернуть'):c('All words','Tous les mots','Все слова')+' · '+p.words.length}</button>}</div>}
+   {p.words.length>1&&<div className="sp-word-options" aria-label={c('Words with this character','Mots avec ce caractère','Слова с этим знаком')}>
+    {shownWords.map(({word,dictionary})=>{
+      const selectedDictionary=!!dictionary&&p.word?.id===dictionary.id;
+      const active=p.word?.id===word.id||selectedDictionary;
+      return <div className={'sp-word-option'+(active?' is-active':'')} key={word.id}>
+        <button type="button" onClick={()=>p.onWord(selectedDictionary?dictionary:word)} aria-pressed={active}>
+          <span lang="zh-Hans">{word.hanzi}</span><small>{word.pinyin}</small><small>{word.meaning}</small>
+          {dictionary&&<small>HSK {dictionary.level} · {dictionary.meaning}</small>}
+        </button>
+        {speaker(wordPronunciation(word),true)}
+      </div>;
+    })}
+    {wordOptions.length>6&&<button type="button" onClick={()=>setMoreWords(!moreWords)}>{moreWords?c('Show less','Réduire','Свернуть'):c('All words','Tous les mots','Все слова')+' · '+wordOptions.length}</button>}
+   </div>}
    <div className="sp-sentence">{p.contextEntry?.contextual?<><h3>In your source sentence</h3><p lang="zh-Hans">{text(p.contextEntry.contextual.text)}</p><div className="sp-sentence-controls"><span>{p.contextEntry.contextual.pinyin}</span>{speaker(p.contextEntry.contextual.audio)}</div><p className="sp-translation">{p.contextEntry.contextual.meaning}</p></>:sentence?<><p lang="zh-Hans">{text(sentence.sentence)}</p><div className="sp-sentence-controls"><span>{sentence.sentencePinyin}</span>{speaker(sentencePronunciation(p.word!))}</div><p className="sp-translation">{sentence.translation}</p></>:<p className="sp-source-note">{c('No linked sentence yet for this word. You can still listen to it and explore its characters.','Pas encore de phrase liée à ce mot. Vous pouvez l’écouter et explorer ses caractères.','Для этого слова пока нет связанного предложения. Можно послушать слово и изучить его знаки.')}</p>}</div>
   </section>
   <details className="sp-parts"><summary>{c('Parts & sources','Composants et sources','Части и источники')}</summary>{p.parts}</details></>}

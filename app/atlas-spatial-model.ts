@@ -12,6 +12,30 @@ export function spatialCards(total:number,index:number,mode:CardMode){if(index<0
 export function spatialNext(total:number,index:number,mode:CardMode,direction:-1|1){if(!total)return -1;if(index<0)return 0;const next=mode==='compare'?Math.floor(index/4)*4+direction*4:index+direction;return next<0||next>=total?index:next}
 /** A horizontal gesture is independent of solving questions and never awards credit. */
 export function spatialSwipe(dx:number,dy:number):-1|0|1{return Math.abs(dx)>=54&&Math.abs(dx)>Math.abs(dy)*1.3?(dx<0?1:-1):0}
+type SpatialWordOption = {word: CloudWord; dictionary?: CloudWord};
+
+// These recorded examples share the ordinary word sense with the HSK entry.
+// Keep the dictionary row available for its additional glosses and existing deep links.
+const spatialWordPairs = new Map([
+ ['atlas-example:u6797', 'hsk-browse:4:树林'],
+ ['atlas-example:u68ee', 'hsk-browse:4:森林'],
+]);
+
+export function spatialWordOptions(words: readonly CloudWord[]): SpatialWordOption[] {
+ const byId = new Map(words.map(word => [word.id, word]));
+ const hidden = new Set<string>();
+ const options = new Map<string, CloudWord>();
+ const reading = (word: CloudWord) => word.pinyin.normalize('NFC').replace(/\s/g, '').toLowerCase();
+ for (const [recordingId, dictionaryId] of spatialWordPairs) {
+  const recording = byId.get(recordingId), dictionary = byId.get(dictionaryId);
+  if (recording?.origin !== 'atlas-example' || !recording.atlasCharacterId || dictionary?.origin !== 'dictionary'
+      || recording.hanzi !== dictionary.hanzi || reading(recording) !== reading(dictionary)) continue;
+  hidden.add(dictionaryId);
+  options.set(recordingId, dictionary);
+ }
+ return words.filter(word => !hidden.has(word.id)).map(word => ({word, dictionary: options.get(word.id)}));
+}
+
 export function wordPronunciation(word:CloudWord):Pronunciation|undefined{
  if(!word.item&&!word.atlasCharacterId)return;
  const id=word.item?.id??'atlas-'+word.atlasCharacterId;
