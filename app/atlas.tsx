@@ -18,6 +18,8 @@ import {
 import AtlasWorkshop from "./atlas-workshop";
 const AtlasCloud = lazy(() => import("./atlas-cloud"));
 const AtlasWorkspace = lazy(() => import("./atlas-workspace"));
+const ReadingLab = lazy(() => import("./reading-lab"));
+import {isReadingLabEntry} from "./reading-lab-route";
 import {isAtlasWorkspaceEntry, atlasWorkspaceReturn} from "./atlas-workspace-route";
 const AtlasStudio = lazy(() => import("./atlas-studio"));
 const ConnectionLab = lazy(() => import("./connection-lab"));
@@ -85,6 +87,7 @@ export default function Atlas({
   const [studio, setStudio] = useState(false);
   const [cloud, setCloud] = useState(true);
   const [workspace, setWorkspace] = useState(false);
+  const [reader, setReader] = useState(false);
   const [workspaceReturn, setWorkspaceReturn] = useState<string>();
   const [scope, setScope] = useState<Scope>(null);
   const [trail, setTrail] = useState<{ scope: Scope; target: string }[]>([]);
@@ -102,6 +105,7 @@ export default function Atlas({
     const params = new URLSearchParams(window.location.search);
     setStudio(params.get("studio") === "1");
     setWorkspace(isAtlasWorkspaceEntry(params));
+    setReader(isReadingLabEntry(params));
     setWorkspaceReturn(atlasWorkspaceReturn(params.get("returnWorkspace")));
     setCloud(isCloudAtlasEntry(params));
     const component = params.get("component");
@@ -263,6 +267,7 @@ export default function Atlas({
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
+  if (reader) return <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><ReadingLab penOnly={penOnly} notify={notify}/></Suspense>;
   if (workspace) return <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><AtlasWorkspace penOnly={penOnly} setPenOnly={setPenOnly} notify={notify}/></Suspense>;
   if (cloud) return <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}>
     {workspaceReturn && <a className="secondary atlas-return-button" href={workspaceReturn}>← Back to Atlas workspace</a>}

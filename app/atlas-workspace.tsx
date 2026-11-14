@@ -15,6 +15,7 @@ import {WorkspaceBoard, WorkspaceInspector, WorkspaceJourney, WorkspaceMap, Work
 import AtlasStoryExplorer from './atlas-story-explorer';
 import {isStoryTarget, type StoryTarget} from './atlas-story-explorer-model';
 import './atlas-workspace.css';
+import {readReadingLabRoute, readingLabHref} from './reading-lab-route';
 
 const modes = [
   ['family', 'Whole family', Columns2], ['read', 'Read through', BookOpen], ['map', 'Map', Compass], ['practise', 'Practise', PenLine],
@@ -31,12 +32,15 @@ function workspaceHistory(): WorkspaceHistory {
   return window.history.state?.atlasWorkspace ?? {depth: 0, scroll: 0};
 }
 
-export default function AtlasWorkspace({penOnly, setPenOnly, notify}: {
-  penOnly: boolean; setPenOnly: (value: boolean) => void; notify: (message: string) => void;
+type EmbeddedWorkspace = {initial: WorkspaceRoute; viewport: HTMLDialogElement | null};
+
+export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: {
+  penOnly: boolean; setPenOnly: (value: boolean) => void; notify: (message: string) => void; embedded?: EmbeddedWorkspace;
 }) {
   const {locale} = useI18n();
-  const [route, setRoute] = useState(() => readAtlasWorkspaceRoute(window.location.search));
-  const [depth, setDepth] = useState(() => workspaceHistory().depth);
+  const [route, setRoute] = useState(() => embedded?.initial ?? readAtlasWorkspaceRoute(window.location.search));
+  const [depth, setDepth] = useState(() => embedded ? 0 : workspaceHistory().depth);
+  const embedTrail = useRef<{route: WorkspaceRoute; scroll: number}[]>([]);
   const [draft, setDraft] = useState(route.anchor);
   const [error, setError] = useState('');
   const [journeyVisited, setJourneyVisited] = useState(route.mode === 'read');
@@ -45,13 +49,14 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify}: {
   const [narrow, setNarrow] = useState(() => matchMedia('(max-width: 850px)').matches);
   const root = useRef<HTMLElement>(null);
   const heading = useRef<HTMLHeadingElement>(null);
-  const pendingScroll = useRef<number | string | null>(atlasWorkspaceScroll(window.location.search) || workspaceHistory().scroll);
+  const pendingScroll = useRef<number | string | null>(embedded ? null : atlasWorkspaceScroll(window.location.search) || workspaceHistory().scroll);
   const audio = useWorkspaceAudio(notify);
   const groups = useMemo(() => journeyVisited || route.mode === 'read' || route.relation === 'topic' ? workspaceGroups(locale, route.scope) : [], [journeyVisited, locale, route.mode, route.relation, route.scope]);
   const context = useMemo(() => resolveWorkspaceContext(route, locale, groups), [route, locale, groups]);
   const query = atlasWorkspaceHref(route);
 
   useEffect(() => {
+    if (embedded) return;
     const original = history.scrollRestoration;
     history.scrollRestoration = 'manual';
     const pop = () => {
@@ -76,7 +81,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify}: {
     pendingScroll.current = null;
     const frame = requestAnimationFrame(() => {
       if (typeof destination === 'string') document.getElementById(destination)?.scrollIntoView({block: 'start'});
-      else window.scrollTo({top: destination, behavior: 'instant'});
+      else (embedded?.viewport ?? window).scrollTo({top: destination, behavior: 'instant'});
     });
     return () => cancelAnimationFrame(frame);
   }, [route]);
@@ -101,6 +106,14 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify}: {
       return;
     }
     audio.stop();
+    if (embedded) {
+      if (!replace) embedTrail.current.push({route, scroll: embedded.viewport?.scrollTop ?? 0});
+      pendingScroll.current = scroll;
+      if (next.mode === 'read') setJourneyVisited(true);
+      setDepth(embedTrail.current.length);
+      setRoute(next);
+      return;
+    }
     const current = workspaceHistory();
     const currentScroll = window.scrollY;
     const state = {...history.state, atlasWorkspace: {...current, scroll: currentScroll}};
@@ -117,7 +130,14 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify}: {
 
   function previous() {
     audio.stop();
-    if (depth > 0) history.back();
+    if (embedded && depth > 0) {
+      const previous = embedTrail.current.pop();
+      if (!previous) return;
+      pendingScroll.current = previous.scroll;
+      setDepth(embedTrail.current.length);
+      setRoute(previous.route);
+    }
+    else if (depth > 0) history.back();
     else navigate({story: '', step: 0, exercise: '', mode: 'family'}, 0, true);
   }
 
@@ -143,7 +163,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify}: {
       const value = (event as CustomEvent<unknown>).detail;
       if (typeof value === 'string' && isStoryTarget(value)) story(value);
       else if (value && typeof value === 'object' && 'text' in value && typeof value.text === 'string' && 'kind' in value
-        && (value.kind === 'word' || value.kind === 'character' || value.kind === 'sentence')) explore(value.text, value.kind);
+        && (value.kind === 'word' || value.kind === 'character' || value.kind === 'component' || value.kind === 'sentence')) explore(value.text, value.kind);
     };
     node.addEventListener(workspaceExploreEvent, onExplore);
     return () => node.removeEventListener(workspaceExploreEvent, onExplore);
@@ -233,7 +253,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify}: {
   const hideInspector = route.mode === 'practise' && route.exercise === 'reels' && reelMemory && !reelRevealed;
   const inlineContext = narrow && route.mode === 'read' && groups.some(group => group.id === route.group);
   const inspector = <WorkspaceInspector context={context} route={route} audio={audio} explore={explore} showFamily={anchor => selectFamily(anchor, true)}
-    onStory={story} onWriting={() => setExercise('writing')} chunksHref={chunksHref()}/>;
+    onStory={story} onWriting={() => setExercise('writing')} chunksHref={embedded ? '' : chunksHref()}/>;
 
   return <section ref={root} className={'atlas-workspace' + (route.wide ? ' aw-wide' : '')} data-atlas-workspace aria-label="Atlas workspace"
     onClickCapture={event => {
@@ -251,11 +271,15 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify}: {
         </select></label>
         <button type="button" className="aw-expand" aria-pressed={route.wide} aria-label={route.wide ? 'Restore workspace' : 'Expand workspace'}
           onClick={() => navigate({wide: !route.wide}, null, true)}>{route.wide ? <Minimize2 size={17}/> : <Maximize2 size={17}/>}</button>
+        {!embedded && <><a className="aw-reader-link" href={readingLabHref(readReadingLabRoute('?hsk=' + route.scope)) + '&returnWorkspace=' + encodeURIComponent(returnQuery())}
+          onClick={event => follow(event.currentTarget, scroll => readingLabHref(readReadingLabRoute('?hsk=' + route.scope)) + '&returnWorkspace=' + encodeURIComponent(returnQuery(scroll)))}>
+          <BookOpen size={16}/> Reading Lab
+        </a>
         <details className="aw-original"><summary>Original views</summary><div className="aw-original-menu">{originalViews.map(group =>
           <div key={group.name}><strong>{group.name}</strong>{group.views.map(([label, view]) =>
             <a key={view} href={workspaceOriginalHref(route, context, view)} onClick={event => follow(event.currentTarget, scroll => workspaceOriginalHref(route, context, view, scroll))}>{label}</a>
           )}</div>
-        )}</div></details>
+        )}</div></details></>}
       </div>
       {error && <p className="aw-error" role="alert">{error}</p>}
       <div className="aw-header-line aw-navigation">

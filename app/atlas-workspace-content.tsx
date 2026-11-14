@@ -183,7 +183,7 @@ export function WorkspaceInspector({context, route, audio, explore, showFamily, 
         <p className="aw-reading">{example.pinyin}</p><p>{example.meaning}</p>
         <div className="aw-actions">
           <ListenButton clip={example.audio} audio={audio}>Listen to sentence</ListenButton>
-          <a href={chunksHref}>Speaking chunks <ArrowRight size={14}/></a>
+          {chunksHref && <a href={chunksHref}>Speaking chunks <ArrowRight size={14}/></a>}
         </div>
       </div>}
       {(route.kind === 'word' || route.kind === 'sentence') && letters.length > 0 &&
@@ -197,7 +197,7 @@ export function WorkspaceInspector({context, route, audio, explore, showFamily, 
       </div>}
       {route.kind === 'component' && context.part && /\p{Script=Han}/u.test(context.part.glyph) &&
         <div className="aw-related"><button type="button" onClick={() => showFamily(context.part!.glyph)}>Words containing <b lang="zh-Hans">{context.part.glyph}</b> <ArrowRight size={14}/></button></div>}
-      {!example && route.kind === 'word' && <div className="aw-actions"><a href={chunksHref}>Find speaking chunks <ArrowRight size={14}/></a></div>}
+      {chunksHref && !example && route.kind === 'word' && <div className="aw-actions"><a href={chunksHref}>Find speaking chunks <ArrowRight size={14}/></a></div>}
     </> : <p>Choose an entry to see its reading and example.</p>}
   </aside>;
 }

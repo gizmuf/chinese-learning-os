@@ -10,6 +10,10 @@ import DictionaryExploration,{type ExplorationView} from './dictionary-explorati
 import {studyAtlasHref} from './study-lookup-model';
 import {isStoryTarget} from './atlas-story-explorer-model';
 import {workspaceExploreEvent, workspaceOrigin} from './atlas-workspace-bridge';
+import {readingLabAtlasEvent, readingLabAtlasVisit, readingLabContextualEntry, readingLabOrigin, readingLabWriteEvent} from './reading-lab-route';
+import {sourceContext} from './writing-context-model';
+import type {DictionaryContext} from './dictionary-source-model';
+import type {WorkspaceKind} from './atlas-workspace-route';
 import {useDictionaryWindow} from './use-dictionary-window';
 import {dictionaryLearningNote} from './dictionary-learning-notes';
 import {simplifiedDisplayText} from './simplified-chinese';
@@ -55,29 +59,54 @@ export function DictionaryAudio({recording,playing,onPlay,compact=false,target}:
  const original=pronunciationPresentation(recording,target),view={...original,text:simplifiedDisplayText(original.text),target:original.target?simplifiedDisplayText(original.target):undefined},kind=view.kind==='sentence'?c('Listen to the sentence','Écouter la phrase','Слушать предложение'):view.kind==='character'?c('Single character','Caractère seul','Один знак'):c('Whole word','Mot entier','Целое слово');
  return <button type="button" className={'sp-speaker'+(compact?' is-compact':'')+(recording.context?' is-context':'')+(playing===recording.source?' is-playing':'')} aria-label={kind+': '+view.text+' · '+view.pinyin} onClick={()=>onPlay(recording)}><Volume2 size={17}/>{view.kind==='sentence'?<span>{kind}</span>:(!compact||recording.context)?<span className="sp-audio-copy"><small>{kind}</small><b lang="zh-Hans">{view.text}</b><small>{view.pinyin}{view.target&&<> · {c('contains','contient','содержит')} <span lang="zh-Hans">{view.target}</span></>}</small></span>:null}</button>;
 }
-export function StudyDictionaryDialog({entry,dictionary,dialog,opener,headingId='sp-dictionary-title',onClose,onLookup,speaker,onExplore,onWrite,onRetry,practiceBook,navigationId=0}:{navigationId?:number;practiceBook?:PracticeBook;entry:DictionaryEntry|null;dictionary:StudyDictionary;dialog:RefObject<HTMLDialogElement|null>;opener:RefObject<HTMLElement|null>;headingId?:string;onClose:()=>void;onLookup:(text:string,trigger:HTMLButtonElement)=>void;speaker:(v:Pronunciation|undefined)=>ReactNode;onExplore?:(entry:DictionaryEntry)=>void;onWrite?:(entry:DictionaryEntry)=>void;onRetry?:()=>void}){
+export function StudyDictionaryDialog({entry: suppliedEntry,dictionary,dialog,opener,headingId='sp-dictionary-title',onClose,onLookup,speaker,onExplore,onWrite,onRetry,practiceBook,navigationId=0}:{navigationId?:number;practiceBook?:PracticeBook;entry:DictionaryEntry|null;dictionary:StudyDictionary;dialog:RefObject<HTMLDialogElement|null>;opener:RefObject<HTMLElement|null>;headingId?:string;onClose:()=>void;onLookup:(text:string,trigger:HTMLButtonElement)=>void;speaker:(v:Pronunciation|undefined)=>ReactNode;onExplore?:(entry:DictionaryEntry)=>void;onWrite?:(entry:DictionaryEntry)=>void;onRetry?:()=>void}){
  const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>L(en,fr,ru)[locale];
+ const entry=readingLabContextualEntry(suppliedEntry,opener.current);
  const [trail,setTrail]=useState<DictionaryEntry[]>([]),[notebook,setNotebook]=useState(false);
+ const readerTrail=useRef<(WorkspaceKind|undefined)[]>([]);
+ const readerKind=useRef<WorkspaceKind|undefined>(undefined);
+ const readerSource=useRef<DictionaryContext|undefined>(undefined);
  const explorationViews=useRef(new Map<string,ExplorationView>());
  useEffect(()=>{if(!entry){setTrail([]);setNotebook(false);explorationViews.current.clear();}},[entry]);
- useEffect(()=>setTrail([]),[navigationId]);
+ useEffect(()=>{setTrail([]);readerTrail.current=[];readerKind.current=undefined;},[navigationId]);
  const labels={en:{characters:'Inside this expression',phrase:'Words in this expression',words:'Words in this sentence',examples:'Examples in use',back:'Back to',note:'Individual character meanings are clues. The expression has its own meaning.',missing:'Look up this character'},fr:{characters:'Dans cette expression',phrase:'Les mots de cette expression',words:'Les mots de cette phrase',examples:'Exemples en contexte',back:'Retour à',note:'Le sens des caractères est un indice. L’expression a son propre sens.',missing:'Consulter ce caractère'},ru:{characters:'Из чего состоит выражение',phrase:'Слова в этом выражении',words:'Слова в этом предложении',examples:'Примеры употребления',back:'Назад к',note:'Значения знаков — подсказки. У выражения есть собственное значение.',missing:'Посмотреть значение знака'},tr:{characters:'Bu ifadenin içindeki karakterler',phrase:'Bu ifadedeki kelimeler',words:'Bu cümledeki kelimeler',examples:'Kullanım örnekleri',back:'Geri dön:',note:'Karakter anlamları ipucudur. İfadenin kendine özgü bir anlamı vardır.',missing:'Bu karakteri araştır'}}[locale];
  const structure=useMemo(()=>entry&&Array.from(entry.text).length===1?extendedCharacters(locale).find(c=>c.hanzi===entry.text)??entry.structure:undefined,[entry,locale]);
  const parts=entry?dictionaryBreakdown(entry,dictionary,locale):null;
  const examples=useMemo(()=>entry&&!/[。！？!?，,；;]/u.test(entry.text)?popupStudyExamples(entry,dictionary,locale):[],[entry,dictionary,locale]);
  const workspaceSession=useRef<HTMLElement|null>(null);
- if(!entry)workspaceSession.current=null;
- else if(opener.current&&!dialog.current?.contains(opener.current))workspaceSession.current=workspaceOrigin(opener.current);
+ const readerSession=useRef<HTMLElement|null>(null);
+ if(!entry){workspaceSession.current=null;readerSession.current=null;readerSource.current=undefined;}
+ else if(opener.current&&!dialog.current?.contains(opener.current)){
+  workspaceSession.current=workspaceOrigin(opener.current);
+  const nextReader=readingLabOrigin(opener.current);
+  if(nextReader){
+   const source=sourceContext(opener.current);
+   readerSource.current=source??(nextReader===readerSession.current?readerSource.current:undefined);
+  }
+  readerSession.current=nextReader;
+ }
  const workspace=workspaceSession.current;
+ const reader=readerSession.current;
  const workspaceStory=!!entry&&!!workspace&&isStoryTarget(entry.text);
- function openWorkspace(text:string,kind?:'word'|'character'|'sentence'){
+ function openWorkspace(text:string,kind?:WorkspaceKind){
   if(!workspace)return;
   close();
   workspace.dispatchEvent(new CustomEvent(workspaceExploreEvent,{detail:kind?{text,kind}:text}));
  }
  const story=entry&&!workspaceStory?familyStoryForCharacter(entry.text):undefined;
- function select(text:string,trigger:HTMLButtonElement){if(!entry||text===entry.text)return;setTrail(previous=>[...previous,entry]);onLookup(text,trigger)}
- function close(){setTrail([]);onClose()}
+ function select(text:string,trigger:HTMLButtonElement,kind?:WorkspaceKind){
+  if(!entry||text===entry.text)return;
+  if(reader){readerTrail.current.push(readerKind.current);readerKind.current=kind;}
+  setTrail(previous=>[...previous,entry]);onLookup(text,trigger);
+ }
+ function returnTo(index:number,trigger:HTMLButtonElement){
+  const previous=trail[index];
+  if(!previous)return;
+  if(reader){readerKind.current=readerTrail.current[index];readerTrail.current.length=index;}
+  setTrail(history=>history.slice(0,index));
+  onLookup(previous.text,trigger);
+ }
+ function close(){setTrail([]);readerTrail.current=[];readerKind.current=undefined;onClose()}
  useEffect(()=>{if(!entry){if(dialog.current?.open)dialog.current.close();return}const el=dialog.current;if(!el)return;el.scrollTop=0;const body=el.querySelector('.sp-dictionary-body');if(body)body.scrollTop=0;if(!el.open)el.showModal();el.querySelector<HTMLElement>('.sp-dictionary-movebar h2')?.focus({preventScroll:true});},[entry?.text,dialog]);
  const {moving,resizing}=useDictionaryWindow(dialog,opener,entry,notebook);
  const learningNote=entry?dictionaryLearningNote(entry.text,locale):undefined;
@@ -86,10 +115,21 @@ export function StudyDictionaryDialog({entry,dictionary,dialog,opener,headingId=
  const ui={en:{move:'Drag header to move. Arrow keys move; Shift for smaller steps.',resize:'Resize definition. Drag or use arrow keys.',radical:'Radical',structure:'Modern character structure'},fr:{move:'Déplacer par l’en-tête ou les flèches. Maj : petits pas.',resize:'Redimensionner par glissement ou les flèches.',radical:'Radical',structure:'Structure moderne du caractère'},ru:{move:'Перемещайте за заголовок или стрелками. Shift: малый шаг.',resize:'Меняйте размер перетаскиванием или стрелками.',radical:'Ключ',structure:'Современная структура знака'},tr:{move:'Başlığı sürükleyin veya ok tuşlarını kullanın. Shift: küçük adımlar.',resize:'Sürükleyerek veya ok tuşlarıyla boyutlandırın.',radical:'Kök',structure:'Modern karakter yapısı'}}[locale];
  return <dialog className={"sp-dictionary"+(notebook?" has-notebook":"")} ref={dialog} aria-labelledby={headingId} onCancel={e=>{e.preventDefault();close()}} onClick={e=>{if(e.target===dialog.current){const rect=dialog.current.getBoundingClientRect();if(e.clientX<rect.left||e.clientX>rect.right||e.clientY<rect.top||e.clientY>rect.bottom)close()}}}>
   {entry&&<><header className="sp-dictionary-movebar" tabIndex={0} role="group" aria-label={ui.move} title={ui.move} {...moving}><GripHorizontal className="sp-dictionary-grip" size={20} aria-hidden="true"/><button type="button" className="sp-dictionary-close" onClick={close} aria-label={c('Close definition','Fermer la définition','Закрыть перевод')}><X size={18}/></button>
-   {trail.length>0&&<button type="button" className="sp-dictionary-back" data-study-source-restore="true" data-study-sentence={trail.at(-1)?.contextual?.text} data-study-pinyin={trail.at(-1)?.contextual?.pinyin} data-study-meaning={trail.at(-1)?.contextual?.meaning} data-study-source-id={trail.at(-1)?.contextual?.sourceId} data-study-audio={trail.at(-1)?.contextual?.audio?.source} onClick={e=>{const previous=trail.at(-1);if(previous){setTrail(history=>history.slice(0,-1));onLookup(previous.text,e.currentTarget)}}}>← {labels.back} {trail.at(-1)?.text}</button>}
+   {trail.length>0&&<button type="button" className="sp-dictionary-back" data-study-source-restore="true" data-study-sentence={trail.at(-1)?.contextual?.text} data-study-pinyin={trail.at(-1)?.contextual?.pinyin} data-study-meaning={trail.at(-1)?.contextual?.meaning} data-study-source-id={trail.at(-1)?.contextual?.sourceId} data-study-audio={trail.at(-1)?.contextual?.audio?.source} onClick={e=>returnTo(trail.length-1,e.currentTarget)}>← {labels.back} {trail.at(-1)?.text}</button>}
    <h2 id={headingId} tabIndex={-1} lang="zh-Hans">{entry.text}</h2>
-   <div className="sp-dictionary-pronunciation"><p className="sp-reading">{entry.pinyin}</p>{speaker(entry.audio?.kind==='sentence'?undefined:entry.audio)}</div><HskBadge text={entry.text}/></header><div className="sp-dictionary-content"><div className="sp-dictionary-body" key={entry.text}>{trail.length>0&&<nav className="sp-component-path" aria-label={c('Definition path','Chemin des définitions','Путь определений')}>{trail.map((parent,index)=><span key={index}><button type="button" lang="zh-Hans" data-study-source-restore="true" data-study-sentence={parent.contextual?.text} data-study-pinyin={parent.contextual?.pinyin} data-study-meaning={parent.contextual?.meaning} data-study-source-id={parent.contextual?.sourceId} data-study-audio={parent.contextual?.audio?.source} onClick={e=>{setTrail(history=>history.slice(0,index));onLookup(parent.text,e.currentTarget)}}>{parent.text}</button><span aria-hidden="true"> › </span></span>)}<span lang="zh-Hans" aria-current="page">{entry.text}</span></nav>}<p>{entry.meaning}</p>{entry.senses?.length===1&&entry.senses[0].kind&&<small className="sp-dictionary-sense-kind">{senseKind(entry.senses[0].kind)}</small>}
-   <div className="sp-dictionary-actions">{practiceBook&&canChoosePractice(entry)&&<button type="button" className="icon-button sp-practice-choice" disabled={!practiceBook.ready||practiceBook.busy} aria-pressed={practiceBook.entries.some(v=>v.text===entry.text)} aria-label={practiceBook.entries.some(v=>v.text===entry.text)?({en:'Remove from practice book',fr:'Retirer du cahier',ru:'Убрать из тетради',tr:'Defterden çıkar'}[locale]):({en:'Add to practice book',fr:'Ajouter au cahier',ru:'Добавить в тетрадь',tr:'Deftere ekle'}[locale])} title={practiceBook.entries.some(v=>v.text===entry.text)?'Saved for practice':'Add to practice book'} onClick={()=>void practiceBook.toggle(entry)}>{practiceBook.entries.some(v=>v.text===entry.text)?<BookmarkCheck size={19}/>:<BookmarkPlus size={19}/>}</button>}{/[\u3400-\u9fff]/u.test(entry.text)&&<button type="button" className="text-button sp-dictionary-notebook-toggle" aria-label="Notebook beside definition" aria-pressed={notebook} onClick={()=>setNotebook(v=>!v)}><NotebookPen size={17}/>{({en:'Notebook',fr:'Cahier',ru:'Тетрадь',tr:'Defter'}[locale])}</button>}{onWrite&&/[\u3400-\u9fff]/u.test(entry.text)&&<button type="button" className="text-button" onClick={()=>onWrite(entry)}><PenLine size={17}/>{({en:'Write',fr:'Écrire',ru:'Писать',tr:'Yaz'}[locale])}</button>}{workspaceStory&&<button type="button" className="text-button" onClick={()=>openWorkspace(entry.text)}>Explore story</button>}{onExplore&&studyAtlasHref(entry)&&<button type="button" className="text-button" onClick={()=>{if(workspace)openWorkspace(entry.text,Array.from(entry.text).length===1?'character':entry.phrase?'sentence':'word');else onExplore(entry);}}><Network size={17}/>{c('Explore in Atlas','Explorer dans l’Atlas','Открыть в Атласе')}</button>}</div>
+   <div className="sp-dictionary-pronunciation"><p className="sp-reading">{entry.pinyin}</p>{speaker(entry.audio?.kind==='sentence'?undefined:entry.audio)}</div><HskBadge text={entry.text}/></header><div className="sp-dictionary-content"><div className="sp-dictionary-body" key={entry.text}>{trail.length>0&&<nav className="sp-component-path" aria-label={c('Definition path','Chemin des définitions','Путь определений')}>{trail.map((parent,index)=><span key={index}><button type="button" lang="zh-Hans" data-study-source-restore="true" data-study-sentence={parent.contextual?.text} data-study-pinyin={parent.contextual?.pinyin} data-study-meaning={parent.contextual?.meaning} data-study-source-id={parent.contextual?.sourceId} data-study-audio={parent.contextual?.audio?.source} onClick={e=>returnTo(index,e.currentTarget)}>{parent.text}</button><span aria-hidden="true"> › </span></span>)}<span lang="zh-Hans" aria-current="page">{entry.text}</span></nav>}<p>{entry.meaning}</p>{entry.senses?.length===1&&entry.senses[0].kind&&<small className="sp-dictionary-sense-kind">{senseKind(entry.senses[0].kind)}</small>}
+   <div className="sp-dictionary-actions">
+    {!reader&&practiceBook&&canChoosePractice(entry)&&<button type="button" className="icon-button sp-practice-choice" disabled={!practiceBook.ready||practiceBook.busy} aria-pressed={practiceBook.entries.some(v=>v.text===entry.text)} aria-label={practiceBook.entries.some(v=>v.text===entry.text)?({en:'Remove from practice book',fr:'Retirer du cahier',ru:'Убрать из тетради',tr:'Defterden çıkar'}[locale]):({en:'Add to practice book',fr:'Ajouter au cahier',ru:'Добавить в тетрадь',tr:'Deftere ekle'}[locale])} title={practiceBook.entries.some(v=>v.text===entry.text)?'Saved for practice':'Add to practice book'} onClick={()=>void practiceBook.toggle(entry)}>{practiceBook.entries.some(v=>v.text===entry.text)?<BookmarkCheck size={19}/>:<BookmarkPlus size={19}/>}</button>}
+    {!reader&&/[\u3400-\u9fff]/u.test(entry.text)&&<button type="button" className="text-button sp-dictionary-notebook-toggle" aria-label="Notebook beside definition" aria-pressed={notebook} onClick={()=>setNotebook(v=>!v)}><NotebookPen size={17}/>{({en:'Notebook',fr:'Cahier',ru:'Тетрадь',tr:'Defter'}[locale])}</button>}
+    {onWrite&&/[\u3400-\u9fff]/u.test(entry.text)&&<button type="button" className="text-button" onClick={()=>{if(reader){close();reader.dispatchEvent(new CustomEvent(readingLabWriteEvent,{detail:entry.text}));}else onWrite(entry);}}><PenLine size={17}/>{({en:'Write',fr:'Écrire',ru:'Писать',tr:'Yaz'}[locale])}</button>}
+    {workspaceStory&&<button type="button" className="text-button" onClick={()=>openWorkspace(entry.text)}>Explore story</button>}
+    {onExplore&&(reader ? /\p{Script=Han}/u.test(entry.text) : studyAtlasHref(entry))&&<button type="button" className="text-button" onClick={()=>{if(reader){
+     const visit=readingLabAtlasVisit(entry,readerKind.current,readerSource.current);
+     if(workspace)openWorkspace(entry.text,visit.kind);
+     else{close();reader.dispatchEvent(new CustomEvent(readingLabAtlasEvent,{detail:visit}));}
+    }else if(workspace)openWorkspace(entry.text,Array.from(entry.text).length===1?'character':entry.phrase?'sentence':'word');
+    else onExplore(entry);}}><Network size={17}/>{c('Explore in Atlas','Explorer dans l’Atlas','Открыть в Атласе')}</button>}
+   </div>
    {entry.lookupStatus==='loading'&&<p role="status">Looking up this entry…</p>}
    {entry.lookupStatus==='error'&&<div role="alert"><p>Could not load the dictionary. Check your connection and retry.</p><button className="secondary" onClick={onRetry}>Retry lookup</button></div>}
    {entry.lookupStatus==='not-found'&&<p role="status">No entry found for this expression. Explore its individual characters below.</p>}
@@ -98,7 +138,7 @@ export function StudyDictionaryDialog({entry,dictionary,dialog,opener,headingId=
     {!parts.sentence&&!parts.phrase&&<p className="sp-dictionary-note">{labels.note}</p>}
     <div className="sp-dictionary-entries">{parts.parts.map((part,i)=><button type="button" key={i} onClick={e=>select(part.text,e.currentTarget)}><strong lang="zh-Hans">{part.text}</strong><span><span className="sp-reading">{part.entry?.pinyin}</span><span>{part.entry?.meaning||labels.missing}</span><HskBadge text={part.text}/></span><ArrowRight size={15}/></button>)}</div>
    </section>}
-   {structure&&<DictionaryComponentGuide text={entry.text} structure={structure} dictionary={dictionary} onLookup={select}/>}
+   {structure&&<DictionaryComponentGuide text={entry.text} structure={structure} dictionary={dictionary} onLookup={(text,trigger)=>select(text,trigger,'component')}/>}
    {story&&<DictionaryMemoryStory key={story} story={story}/>}
    {entry.contextual&&<section className="sp-dictionary-context"><h3>In this sentence</h3><div lang="zh-Hans"><DictionaryWords text={entry.contextual.text} pinyin={entry.contextual.pinyin} dictionary={dictionary} onLookup={select} activeText={entry.text}/></div><p className="sp-reading">{entry.contextual.pinyin}</p><p>{entry.contextual.meaning}</p>{speaker(sourceAudio)}</section>}
    {entry.senses&&entry.senses.length>1&&<details className="sp-dictionary-senses"><summary>Readings and meanings</summary>{entry.senses.map((sense,i)=><p key={i}><strong className="sp-reading">{sense.pinyin}</strong> · {sense.meaning}{sense.kind&&<small className="sp-dictionary-sense-kind">{senseKind(sense.kind)}</small>}</p>)}</details>}

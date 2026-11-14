@@ -1,0 +1,3310 @@
+{
+  "schemaVersion": 1,
+  "pinyinPolicy": {
+    "display": "contextual citation tones",
+    "neutral": "unaccented syllable, optional neutral dot in the interface",
+    "sandhi": "separate from annotation; 一 and 不 keep citation tones, as does third tone"
+  },
+  "readings": [
+    {
+      "id": "hsk2-library-meeting",
+      "level": 2,
+      "title": {
+        "hanzi": "在图书馆见",
+        "pinyin": "Zài túshūguǎn jiàn",
+        "english": "Meet at the library"
+      },
+      "topic": "Making plans",
+      "levelIntent": "Short clauses follow time, place and a simple change of plans.",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "english": "On Saturday morning I call a friend who wants to read with me. I ask when to meet, and he suggests ten because he has to buy vegetables at nine.",
+          "sentenceEnglish": [
+            "On Saturday morning I call a friend.",
+            "We want to read together.",
+            "I ask, “What time shall we meet?”",
+            "He says, “I have to go buy vegetables at nine. Does ten work?”"
+          ],
+          "chunks": [
+            {
+              "id": "p1-c1",
+              "tokens": [
+                {"text": "星期", "pinyin": ["xīng", "qī"]},
+                {"text": "六", "pinyin": ["liù"]},
+                {"text": "早上", "pinyin": ["zǎo", "shang"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c2",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "给", "pinyin": ["gěi"]},
+                {"text": "朋友", "pinyin": ["péng", "you"]},
+                {"text": "打电话", "pinyin": ["dǎ", "diàn", "huà"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c3",
+              "tokens": [
+                {"text": "我们", "pinyin": ["wǒ", "men"]},
+                {"text": "想", "pinyin": ["xiǎng"]},
+                {"text": "一起", "pinyin": ["yī", "qǐ"]},
+                {"text": "读书", "pinyin": ["dú", "shū"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c4",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "问", "pinyin": ["wèn"]},
+                {"text": "：", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c5",
+              "tokens": [
+                {"text": "“", "pinyin": []},
+                {"text": "我们", "pinyin": ["wǒ", "men"]},
+                {"text": "几", "pinyin": ["jǐ"]},
+                {"text": "点", "pinyin": ["diǎn"]},
+                {"text": "见", "pinyin": ["jiàn"]},
+                {"text": "？", "pinyin": []},
+                {"text": "”", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c6",
+              "tokens": [
+                {"text": "他", "pinyin": ["tā"]},
+                {"text": "说", "pinyin": ["shuō"]},
+                {"text": "：", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c7",
+              "tokens": [
+                {"text": "“", "pinyin": []},
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "九", "pinyin": ["jiǔ"]},
+                {"text": "点", "pinyin": ["diǎn"]},
+                {"text": "要", "pinyin": ["yào"]},
+                {"text": "去", "pinyin": ["qù"]},
+                {"text": "买", "pinyin": ["mǎi"]},
+                {"text": "菜", "pinyin": ["cài"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c8",
+              "tokens": [
+                {"text": "十", "pinyin": ["shí"]},
+                {"text": "点", "pinyin": ["diǎn"]},
+                {"text": "可以", "pinyin": ["kě", "yǐ"]},
+                {"text": "吗", "pinyin": ["ma"]},
+                {"text": "？", "pinyin": []},
+                {"text": "”", "pinyin": []}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "english": "At ten I wait for my friend at the library entrance. He brings me some water. We drink it and go inside to read. Later we eat near the school and agree to meet again next week.",
+          "sentenceEnglish": [
+            "At ten, I wait for my friend at the library entrance.",
+            "He brings me some water when he comes.",
+            "We have some water, then go inside to read.",
+            "After reading, we walk over to eat near the school.",
+            "He says, “Let’s meet here again next week!”"
+          ],
+          "chunks": [
+            {
+              "id": "p2-c1",
+              "tokens": [
+                {"text": "十", "pinyin": ["shí"]},
+                {"text": "点", "pinyin": ["diǎn"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "时候", "pinyin": ["shí", "hou"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c2",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "图书馆", "pinyin": ["tú", "shū", "guǎn"]},
+                {"text": "门口", "pinyin": ["mén", "kǒu"]},
+                {"text": "等", "pinyin": ["děng"]},
+                {"text": "朋友", "pinyin": ["péng", "you"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c3",
+              "tokens": [
+                {"text": "他", "pinyin": ["tā"]},
+                {"text": "来", "pinyin": ["lái"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "时候", "pinyin": ["shí", "hou"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c4",
+              "tokens": [
+                {"text": "还", "pinyin": ["hái"]},
+                {"text": "给", "pinyin": ["gěi"]},
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "买", "pinyin": ["mǎi"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "水", "pinyin": ["shuǐ"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c5",
+              "tokens": [
+                {"text": "我们", "pinyin": ["wǒ", "men"]},
+                {"text": "喝", "pinyin": ["hē"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "水", "pinyin": ["shuǐ"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c6",
+              "tokens": [
+                {"text": "再", "pinyin": ["zài"]},
+                {"text": "进去", "pinyin": ["jìn", "qù"]},
+                {"text": "读书", "pinyin": ["dú", "shū"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c7",
+              "tokens": [
+                {"text": "读", "pinyin": ["dú"]},
+                {"text": "完", "pinyin": ["wán"]},
+                {"text": "书", "pinyin": ["shū"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c8",
+              "tokens": [
+                {"text": "我们", "pinyin": ["wǒ", "men"]},
+                {"text": "走", "pinyin": ["zǒu"]},
+                {"text": "到", "pinyin": ["dào"]},
+                {"text": "学校", "pinyin": ["xué", "xiào"]},
+                {"text": "旁边", "pinyin": ["páng", "biān"]},
+                {"text": "吃", "pinyin": ["chī"]},
+                {"text": "饭", "pinyin": ["fàn"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c10",
+              "tokens": [
+                {"text": "他", "pinyin": ["tā"]},
+                {"text": "说", "pinyin": ["shuō"]},
+                {"text": "：", "pinyin": []},
+                {"text": "“", "pinyin": []},
+                {"text": "下", "pinyin": ["xià"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "星期", "pinyin": ["xīng", "qī"]},
+                {"text": "还", "pinyin": ["hái"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "这里", "pinyin": ["zhè", "lǐ"]},
+                {"text": "见", "pinyin": ["jiàn"]},
+                {"text": "吧", "pinyin": ["ba"]},
+                {"text": "！", "pinyin": []},
+                {"text": "”", "pinyin": []}
+              ]
+            }
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "……的时候",
+          "note": "Use 的时候 after a time or action to say when something happens.",
+          "example": {
+            "hanzi": "下课的时候，我给你打电话。",
+            "pinyin": "Xiàkè de shíhou, wǒ gěi nǐ dǎ diànhuà.",
+            "english": "When class is over, I’ll give you a call."
+          },
+          "id": "g1",
+          "sourceChunks": [
+            "p2-c3",
+            "p2-c4"
+          ]
+        },
+        {
+          "pattern": "……，再……",
+          "note": "再 introduces what follows the earlier action.",
+          "example": {
+            "hanzi": "我们买了菜，再回家。",
+            "pinyin": "Wǒmen mǎi le cài, zài huí jiā.",
+            "english": "We bought vegetables, then went home."
+          },
+          "id": "g2",
+          "sourceChunks": [
+            "p2-c5",
+            "p2-c6"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "朋友九点要做什么？",
+          "answer": "他九点要去买菜。",
+          "evidence": {
+            "paragraphId": "p1",
+            "chunkId": "p1-c7"
+          },
+          "id": "q1"
+        },
+        {
+          "question": "他们在哪里见？",
+          "answer": "他们在图书馆门口见。",
+          "evidence": {
+            "paragraphId": "p2",
+            "chunkId": "p2-c2"
+          },
+          "id": "q2"
+        }
+      ],
+      "writing": {
+        "prompt": "给朋友写两句话。说说你们几点见，在哪里见。",
+        "english": "Write two sentences to a friend. Say what time and where you will meet.",
+        "requirements": [
+          "写清楚几点、在哪里见。",
+          "用一次再。"
+        ]
+      },
+      "glossaryCandidates": [
+        "图书馆"
+      ]
+    },
+    {
+      "id": "hsk2-cooking-together",
+      "level": 2,
+      "title": {
+        "hanzi": "一起做晚饭",
+        "pinyin": "Yīqǐ zuò wǎnfàn",
+        "english": "Cooking dinner together"
+      },
+      "topic": "Dinner at home",
+      "levelIntent": "Familiar food and household actions give context to simple sequencing and ongoing activity.",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "english": "This evening Mom and I make dinner together. Mom is washing vegetables and I’m cooking rice. When my younger brother gets home, we’re still cooking. He asks if he can help.",
+          "sentenceEnglish": [
+            "This evening Mom and I make dinner together.",
+            "Mom is washing vegetables, and I’m cooking rice.",
+            "When my younger brother gets home, we’re still cooking.",
+            "He asks, “Can I help?”"
+          ],
+          "chunks": [
+            {
+              "id": "p1-c1",
+              "tokens": [
+                {"text": "今天", "pinyin": ["jīn", "tiān"]},
+                {"text": "晚上", "pinyin": ["wǎn", "shang"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c2",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "和", "pinyin": ["hé"]},
+                {"text": "妈妈", "pinyin": ["mā", "ma"]},
+                {"text": "一起", "pinyin": ["yī", "qǐ"]},
+                {"text": "做饭", "pinyin": ["zuò", "fàn"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c3",
+              "tokens": [
+                {"text": "妈妈", "pinyin": ["mā", "ma"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "洗", "pinyin": ["xǐ"]},
+                {"text": "菜", "pinyin": ["cài"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c4",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "做", "pinyin": ["zuò"]},
+                {"text": "米饭", "pinyin": ["mǐ", "fàn"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c5",
+              "tokens": [
+                {"text": "弟弟", "pinyin": ["dì", "di"]},
+                {"text": "回来", "pinyin": ["huí", "lái"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "时候", "pinyin": ["shí", "hou"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c6",
+              "tokens": [
+                {"text": "我们", "pinyin": ["wǒ", "men"]},
+                {"text": "还", "pinyin": ["hái"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "做饭", "pinyin": ["zuò", "fàn"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c7",
+              "tokens": [
+                {"text": "他", "pinyin": ["tā"]},
+                {"text": "问", "pinyin": ["wèn"]},
+                {"text": "：", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c8",
+              "tokens": [
+                {"text": "“", "pinyin": []},
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "可以", "pinyin": ["kě", "yǐ"]},
+                {"text": "帮忙", "pinyin": ["bāng", "máng"]},
+                {"text": "吗", "pinyin": ["ma"]},
+                {"text": "？", "pinyin": []},
+                {"text": "”", "pinyin": []}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "english": "Mom says, “Yes. When you’re done washing your hands, get three bowls.” My brother brings the bowls and three cups too. At six thirty we sit down for dinner. He eats two bowls of rice and asks if he can make a dish tomorrow.",
+          "sentenceEnglish": [
+            "Mom says, “Yes.”",
+            "“When you’re done washing your hands, get three bowls.”",
+            "My brother brought the bowls and got three cups as well.",
+            "At six thirty, we sit down and eat together.",
+            "My brother eats two bowls of rice and asks, “Can I make a dish tomorrow, too?”"
+          ],
+          "chunks": [
+            {
+              "id": "p2-c1",
+              "tokens": [
+                {"text": "妈妈", "pinyin": ["mā", "ma"]},
+                {"text": "说", "pinyin": ["shuō"]},
+                {"text": "：", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c2",
+              "tokens": [
+                {"text": "“", "pinyin": []},
+                {"text": "可以", "pinyin": ["kě", "yǐ"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c3",
+              "tokens": [
+                {"text": "你", "pinyin": ["nǐ"]},
+                {"text": "洗", "pinyin": ["xǐ"]},
+                {"text": "完", "pinyin": ["wán"]},
+                {"text": "手", "pinyin": ["shǒu"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c4",
+              "tokens": [
+                {"text": "再", "pinyin": ["zài"]},
+                {"text": "拿", "pinyin": ["ná"]},
+                {"text": "三", "pinyin": ["sān"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "碗", "pinyin": ["wǎn"]},
+                {"text": "。", "pinyin": []},
+                {"text": "”", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c5",
+              "tokens": [
+                {"text": "弟弟", "pinyin": ["dì", "di"]},
+                {"text": "拿", "pinyin": ["ná"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "碗", "pinyin": ["wǎn"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c6",
+              "tokens": [
+                {"text": "也", "pinyin": ["yě"]},
+                {"text": "拿", "pinyin": ["ná"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "三", "pinyin": ["sān"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "杯子", "pinyin": ["bēi", "zi"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c7",
+              "tokens": [
+                {"text": "六", "pinyin": ["liù"]},
+                {"text": "点", "pinyin": ["diǎn"]},
+                {"text": "半", "pinyin": ["bàn"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c8",
+              "tokens": [
+                {"text": "我们", "pinyin": ["wǒ", "men"]},
+                {"text": "坐", "pinyin": ["zuò"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "一起", "pinyin": ["yī", "qǐ"]},
+                {"text": "吃", "pinyin": ["chī"]},
+                {"text": "饭", "pinyin": ["fàn"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c9",
+              "tokens": [
+                {"text": "弟弟", "pinyin": ["dì", "di"]},
+                {"text": "吃", "pinyin": ["chī"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "两", "pinyin": ["liǎng"]},
+                {"text": "碗", "pinyin": ["wǎn"]},
+                {"text": "米饭", "pinyin": ["mǐ", "fàn"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c10",
+              "tokens": [
+                {"text": "还", "pinyin": ["hái"]},
+                {"text": "问", "pinyin": ["wèn"]},
+                {"text": "：", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c11",
+              "tokens": [
+                {"text": "“", "pinyin": []},
+                {"text": "明天", "pinyin": ["míng", "tiān"]},
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "也", "pinyin": ["yě"]},
+                {"text": "可以", "pinyin": ["kě", "yǐ"]},
+                {"text": "做", "pinyin": ["zuò"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "菜", "pinyin": ["cài"]},
+                {"text": "吗", "pinyin": ["ma"]},
+                {"text": "？", "pinyin": []},
+                {"text": "”", "pinyin": []}
+              ]
+            }
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "在 + 动词",
+          "note": "在 before an action verb shows that the action is in progress.",
+          "example": {
+            "hanzi": "爸爸在吃饭，我在喝水。",
+            "pinyin": "Bàba zài chī fàn, wǒ zài hē shuǐ.",
+            "english": "Dad is eating, and I am drinking water."
+          },
+          "id": "g1",
+          "sourceChunks": [
+            "p1-c3",
+            "p1-c4"
+          ]
+        },
+        {
+          "pattern": "也 + 动词 + 了",
+          "note": "也 adds another action that happened as well.",
+          "example": {
+            "hanzi": "我洗了手，也洗了菜。",
+            "pinyin": "Wǒ xǐ le shǒu, yě xǐ le cài.",
+            "english": "I washed my hands and also washed the vegetables."
+          },
+          "id": "g2",
+          "sourceChunks": [
+            "p2-c5",
+            "p2-c6"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "弟弟拿了几个杯子？",
+          "answer": "他拿了三个杯子。",
+          "evidence": {
+            "paragraphId": "p2",
+            "chunkId": "p2-c6"
+          },
+          "id": "q1"
+        },
+        {
+          "question": "弟弟明天想做什么？",
+          "answer": "他想做一个菜。",
+          "evidence": {
+            "paragraphId": "p2",
+            "chunkId": "p2-c11"
+          },
+          "id": "q2"
+        }
+      ],
+      "writing": {
+        "prompt": "写三句话，说说你和家人怎么做晚饭。",
+        "english": "Write three sentences about how you and your family make dinner.",
+        "requirements": [
+          "用在说一件事。",
+          "用也说另一件事。"
+        ]
+      },
+      "glossaryCandidates": [
+        "碗"
+      ]
+    },
+    {
+      "id": "hsk3-rain-bike",
+      "level": 3,
+      "title": {
+        "hanzi": "下雨以后怎么回家",
+        "pinyin": "Xiàyǔ yǐhòu zěnme huí jiā",
+        "english": "Getting home after the rain"
+      },
+      "topic": "Changing travel plans",
+      "levelIntent": "A familiar trip presents a problem, a choice and the reason for it.",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "english": "Yesterday afternoon it suddenly started raining hard after class. I had planned to bike home, but I had not brought an umbrella. A friend said there was a bus at the school entrance, but the one we usually took wouldn’t go near my house that day.",
+          "sentenceEnglish": [
+            "Yesterday afternoon it suddenly started raining hard after class.",
+            "I had planned to bike home, but I hadn’t brought an umbrella.",
+            "My friend said there was a bus at the school entrance, but the one we usually took wasn’t going near my house that day."
+          ],
+          "chunks": [
+            {
+              "id": "p1-c1",
+              "tokens": [
+                {"text": "昨天", "pinyin": ["zuó", "tiān"]},
+                {"text": "下午", "pinyin": ["xià", "wǔ"]},
+                {"text": "下课", "pinyin": ["xià", "kè"]},
+                {"text": "以后", "pinyin": ["yǐ", "hòu"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c2",
+              "tokens": [
+                {"text": "雨", "pinyin": ["yǔ"]},
+                {"text": "突然", "pinyin": ["tū", "rán"]},
+                {"text": "下", "pinyin": ["xià"]},
+                {"text": "得", "pinyin": ["de"]},
+                {"text": "很", "pinyin": ["hěn"]},
+                {"text": "大", "pinyin": ["dà"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c3",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "本来", "pinyin": ["běn", "lái"]},
+                {"text": "想", "pinyin": ["xiǎng"]},
+                {"text": "骑", "pinyin": ["qí"]},
+                {"text": "自行车", "pinyin": ["zì", "xíng", "chē"]},
+                {"text": "回", "pinyin": ["huí"]},
+                {"text": "家", "pinyin": ["jiā"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c4",
+              "tokens": [
+                {"text": "可是", "pinyin": ["kě", "shì"]},
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "没有", "pinyin": ["méi", "yǒu"]},
+                {"text": "带", "pinyin": ["dài"]},
+                {"text": "伞", "pinyin": ["sǎn"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c5",
+              "tokens": [
+                {"text": "朋友", "pinyin": ["péng", "you"]},
+                {"text": "说", "pinyin": ["shuō"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c6",
+              "tokens": [
+                {"text": "学校", "pinyin": ["xué", "xiào"]},
+                {"text": "门口", "pinyin": ["mén", "kǒu"]},
+                {"text": "有", "pinyin": ["yǒu"]},
+                {"text": "公交车", "pinyin": ["gōng", "jiāo", "chē"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c7",
+              "tokens": [
+                {"text": "但是", "pinyin": ["dàn", "shì"]},
+                {"text": "我们", "pinyin": ["wǒ", "men"]},
+                {"text": "平时", "pinyin": ["píng", "shí"]},
+                {"text": "坐", "pinyin": ["zuò"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "那", "pinyin": ["nà"]},
+                {"text": "辆", "pinyin": ["liàng"]},
+                {"text": "车", "pinyin": ["chē"]}
+              ]
+            },
+            {
+              "id": "p1-c8",
+              "tokens": [
+                {"text": "今天", "pinyin": ["jīn", "tiān"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "开", "pinyin": ["kāi"]},
+                {"text": "到", "pinyin": ["dào"]},
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "家", "pinyin": ["jiā"]},
+                {"text": "附近", "pinyin": ["fù", "jìn"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "english": "I called Dad to say I might get home a little late. He said, “If the rain lets up a little, walk to the metro station. It’s closer to home.”",
+          "sentenceEnglish": [
+            "I called Dad to tell him I might get home a little late.",
+            "He said, “If the rain lets up a little, walk to the metro station. It’s closer to home.”"
+          ],
+          "chunks": [
+            {
+              "id": "p2-c1",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "给", "pinyin": ["gěi"]},
+                {"text": "爸爸", "pinyin": ["bà", "ba"]},
+                {"text": "打电话", "pinyin": ["dǎ", "diàn", "huà"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c2",
+              "tokens": [
+                {"text": "告诉", "pinyin": ["gào", "su"]},
+                {"text": "他", "pinyin": ["tā"]},
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "可能", "pinyin": ["kě", "néng"]},
+                {"text": "会", "pinyin": ["huì"]},
+                {"text": "晚", "pinyin": ["wǎn"]},
+                {"text": "一些", "pinyin": ["yī", "xiē"]},
+                {"text": "到", "pinyin": ["dào"]},
+                {"text": "家", "pinyin": ["jiā"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c3",
+              "tokens": [
+                {"text": "他", "pinyin": ["tā"]},
+                {"text": "说", "pinyin": ["shuō"]},
+                {"text": "：", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c4",
+              "tokens": [
+                {"text": "“", "pinyin": []},
+                {"text": "如果", "pinyin": ["rú", "guǒ"]},
+                {"text": "雨", "pinyin": ["yǔ"]},
+                {"text": "小", "pinyin": ["xiǎo"]},
+                {"text": "一些", "pinyin": ["yī", "xiē"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c5",
+              "tokens": [
+                {"text": "你", "pinyin": ["nǐ"]},
+                {"text": "就", "pinyin": ["jiù"]},
+                {"text": "走", "pinyin": ["zǒu"]},
+                {"text": "到", "pinyin": ["dào"]},
+                {"text": "地铁", "pinyin": ["dì", "tiě"]},
+                {"text": "站", "pinyin": ["zhàn"]},
+                {"text": "吧", "pinyin": ["ba"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c6",
+              "tokens": [
+                {"text": "那边", "pinyin": ["nà", "biān"]},
+                {"text": "离", "pinyin": ["lí"]},
+                {"text": "家", "pinyin": ["jiā"]},
+                {"text": "更", "pinyin": ["gèng"]},
+                {"text": "近", "pinyin": ["jìn"]},
+                {"text": "。", "pinyin": []},
+                {"text": "”", "pinyin": []}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "english": "I waited at the entrance for ten minutes. The rain didn’t stop, but it got much lighter. I left my bike at school and went home on the metro with my friend. I called Dad as soon as I got there.",
+          "sentenceEnglish": [
+            "I waited at the entrance for ten minutes.",
+            "It was still raining, but much more lightly than before.",
+            "I left my bike at school and went home on the metro with my friend.",
+            "I called Dad as soon as I got there."
+          ],
+          "chunks": [
+            {
+              "id": "p3-c1",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "门口", "pinyin": ["mén", "kǒu"]},
+                {"text": "等", "pinyin": ["děng"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "十", "pinyin": ["shí"]},
+                {"text": "分钟", "pinyin": ["fēn", "zhōng"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c2",
+              "tokens": [
+                {"text": "雨", "pinyin": ["yǔ"]},
+                {"text": "还", "pinyin": ["hái"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "下", "pinyin": ["xià"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c3",
+              "tokens": [
+                {"text": "但是", "pinyin": ["dàn", "shì"]},
+                {"text": "比", "pinyin": ["bǐ"]},
+                {"text": "刚才", "pinyin": ["gāng", "cái"]},
+                {"text": "小", "pinyin": ["xiǎo"]},
+                {"text": "多", "pinyin": ["duō"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c4",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "把", "pinyin": ["bǎ"]},
+                {"text": "车", "pinyin": ["chē"]},
+                {"text": "放", "pinyin": ["fàng"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "学校", "pinyin": ["xué", "xiào"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c5",
+              "tokens": [
+                {"text": "和", "pinyin": ["hé"]},
+                {"text": "朋友", "pinyin": ["péng", "you"]},
+                {"text": "一起", "pinyin": ["yī", "qǐ"]},
+                {"text": "坐", "pinyin": ["zuò"]},
+                {"text": "地铁", "pinyin": ["dì", "tiě"]},
+                {"text": "回", "pinyin": ["huí"]},
+                {"text": "家", "pinyin": ["jiā"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c6",
+              "tokens": [
+                {"text": "到", "pinyin": ["dào"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "以后", "pinyin": ["yǐ", "hòu"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c7",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "马上", "pinyin": ["mǎ", "shàng"]},
+                {"text": "给", "pinyin": ["gěi"]},
+                {"text": "爸爸", "pinyin": ["bà", "ba"]},
+                {"text": "打", "pinyin": ["dǎ"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "电话", "pinyin": ["diàn", "huà"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "本来……可是……",
+          "note": "Use 本来 for the original plan and 可是 to introduce what complicates it.",
+          "example": {
+            "hanzi": "我本来想走回家，可是雨下得太大。",
+            "pinyin": "Wǒ běnlái xiǎng zǒu huí jiā, kěshì yǔ xià de tài dà.",
+            "english": "I had planned to walk home, but it was raining too hard."
+          },
+          "id": "g1",
+          "sourceChunks": [
+            "p1-c3",
+            "p1-c4"
+          ]
+        },
+        {
+          "pattern": "如果……就……",
+          "frameId": "connect-if",
+          "note": "如果 states a condition. 就 introduces what happens or what you should do if it is met.",
+          "example": {
+            "hanzi": "如果雨还很大，我们就坐车。",
+            "pinyin": "Rúguǒ yǔ hái hěn dà, wǒmen jiù zuò chē.",
+            "english": "If it’s still raining hard, we’ll take a ride."
+          },
+          "id": "g2",
+          "sourceChunks": [
+            "p2-c4",
+            "p2-c5"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "“我”本来想怎么回家？",
+          "answer": "“我”本来想骑自行车回家。",
+          "evidence": {
+            "paragraphId": "p1",
+            "chunkId": "p1-c3"
+          },
+          "id": "q1"
+        },
+        {
+          "question": "等了十分钟以后，雨还在下吗？",
+          "answer": "雨还在下。",
+          "evidence": {
+            "paragraphId": "p3",
+            "chunkId": "p3-c2"
+          },
+          "id": "q2"
+        }
+      ],
+      "writing": {
+        "prompt": "写三到四句话，告诉朋友下雨时你准备怎样改计划。",
+        "english": "Write three or four sentences telling a friend how you would change your plans if it rains.",
+        "requirements": [
+          "说出原来的计划。",
+          "用如果……就……说明新计划。"
+        ]
+      },
+      "glossaryCandidates": [
+        "本来"
+      ]
+    },
+    {
+      "id": "hsk3-exchanging-clothes",
+      "level": 3,
+      "title": {
+        "hanzi": "这件衣服能换吗",
+        "pinyin": "Zhè jiàn yīfu néng huàn ma",
+        "english": "Can I exchange this shirt?"
+      },
+      "topic": "Shopping and exchanges",
+      "levelIntent": "A short customer–staff dialogue makes it possible to infer a store process from what each person says.",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "english": "Last week I bought a black top at a shop near home. I was about to go to work, so I didn’t try it on then. I only found out it was too small when I tried it on at home that evening.",
+          "sentenceEnglish": [
+            "Last week I bought a black top at a shop near home.",
+            "I didn’t try it on then because I was about to go to work.",
+            "I only realized it was too small when I tried it on at home that evening."
+          ],
+          "chunks": [
+            {
+              "id": "p1-c1",
+              "tokens": [
+                {"text": "上", "pinyin": ["shàng"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "星期", "pinyin": ["xīng", "qī"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c2",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "家", "pinyin": ["jiā"]},
+                {"text": "附近", "pinyin": ["fù", "jìn"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "商店", "pinyin": ["shāng", "diàn"]},
+                {"text": "买", "pinyin": ["mǎi"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "件", "pinyin": ["jiàn"]},
+                {"text": "黑色", "pinyin": ["hēi", "sè"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "衣服", "pinyin": ["yī", "fu"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c3",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "没有", "pinyin": ["méi", "yǒu"]},
+                {"text": "试", "pinyin": ["shì"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c4",
+              "tokens": [
+                {"text": "因为", "pinyin": ["yīn", "wèi"]},
+                {"text": "快要", "pinyin": ["kuài", "yào"]},
+                {"text": "上班", "pinyin": ["shàng", "bān"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c5",
+              "tokens": [
+                {"text": "晚上", "pinyin": ["wǎn", "shang"]},
+                {"text": "回", "pinyin": ["huí"]},
+                {"text": "家", "pinyin": ["jiā"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "试", "pinyin": ["shì"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c6",
+              "tokens": [
+                {"text": "才", "pinyin": ["cái"]},
+                {"text": "发现", "pinyin": ["fā", "xiàn"]},
+                {"text": "衣服", "pinyin": ["yī", "fu"]},
+                {"text": "太", "pinyin": ["tài"]},
+                {"text": "小", "pinyin": ["xiǎo"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "english": "I took it back the next day and asked whether I could exchange it. The person working there asked how much I had paid and said the black ones were all too small, but there were larger white ones.",
+          "sentenceEnglish": [
+            "The next day I took the top back to the store.",
+            "I asked, “Excuse me, can I exchange this top?”",
+            "The person working in the shop first asked how much it cost, then said, “The black ones are all too small, but there are larger white ones.”"
+          ],
+          "chunks": [
+            {
+              "id": "p2-c1",
+              "tokens": [
+                {"text": "第", "pinyin": ["dì"]},
+                {"text": "二", "pinyin": ["èr"]},
+                {"text": "天", "pinyin": ["tiān"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c2",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "把", "pinyin": ["bǎ"]},
+                {"text": "衣服", "pinyin": ["yī", "fu"]},
+                {"text": "带", "pinyin": ["dài"]},
+                {"text": "回", "pinyin": ["huí"]},
+                {"text": "商店", "pinyin": ["shāng", "diàn"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c3",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "问", "pinyin": ["wèn"]},
+                {"text": "：", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c4",
+              "tokens": [
+                {"text": "“", "pinyin": []},
+                {"text": "请问", "pinyin": ["qǐng", "wèn"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c5",
+              "tokens": [
+                {"text": "这", "pinyin": ["zhè"]},
+                {"text": "件", "pinyin": ["jiàn"]},
+                {"text": "衣服", "pinyin": ["yī", "fu"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "换", "pinyin": ["huàn"]},
+                {"text": "吗", "pinyin": ["ma"]},
+                {"text": "？", "pinyin": []},
+                {"text": "”", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c6",
+              "tokens": [
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "商店", "pinyin": ["shāng", "diàn"]},
+                {"text": "工作", "pinyin": ["gōng", "zuò"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "先", "pinyin": ["xiān"]},
+                {"text": "问", "pinyin": ["wèn"]},
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "花", "pinyin": ["huā"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "多少", "pinyin": ["duō", "shao"]},
+                {"text": "钱", "pinyin": ["qián"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c7",
+              "tokens": [
+                {"text": "然后", "pinyin": ["rán", "hòu"]},
+                {"text": "说", "pinyin": ["shuō"]},
+                {"text": "：", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c8",
+              "tokens": [
+                {"text": "“", "pinyin": []},
+                {"text": "黑色", "pinyin": ["hēi", "sè"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "衣服", "pinyin": ["yī", "fu"]},
+                {"text": "都", "pinyin": ["dōu"]},
+                {"text": "太", "pinyin": ["tài"]},
+                {"text": "小", "pinyin": ["xiǎo"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c9",
+              "tokens": [
+                {"text": "白色", "pinyin": ["bái", "sè"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "有", "pinyin": ["yǒu"]},
+                {"text": "大", "pinyin": ["dà"]},
+                {"text": "一些", "pinyin": ["yī", "xiē"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "。", "pinyin": []},
+                {"text": "”", "pinyin": []}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "english": "I tried on a larger white top. It felt more comfortable. Both tops cost the same, so I didn’t have to pay anything more. I took the white one home.",
+          "sentenceEnglish": [
+            "I tried on a larger white top. It felt more comfortable than the black one.",
+            "I asked if I needed to pay anything more.",
+            "He said both tops cost the same, so I didn’t have to pay anything more.",
+            "So I took the white top home."
+          ],
+          "chunks": [
+            {
+              "id": "p3-c1",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "试", "pinyin": ["shì"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "件", "pinyin": ["jiàn"]},
+                {"text": "大", "pinyin": ["dà"]},
+                {"text": "一些", "pinyin": ["yī", "xiē"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "白色", "pinyin": ["bái", "sè"]},
+                {"text": "衣服", "pinyin": ["yī", "fu"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c2",
+              "tokens": [
+                {"text": "穿", "pinyin": ["chuān"]},
+                {"text": "起来", "pinyin": ["qǐ", "lái"]},
+                {"text": "比", "pinyin": ["bǐ"]},
+                {"text": "黑色", "pinyin": ["hēi", "sè"]},
+                {"text": "那", "pinyin": ["nà"]},
+                {"text": "件", "pinyin": ["jiàn"]},
+                {"text": "舒服", "pinyin": ["shū", "fu"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c3",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "问", "pinyin": ["wèn"]},
+                {"text": "还", "pinyin": ["hái"]},
+                {"text": "要", "pinyin": ["yào"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "要", "pinyin": ["yào"]},
+                {"text": "给", "pinyin": ["gěi"]},
+                {"text": "钱", "pinyin": ["qián"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c4",
+              "tokens": [
+                {"text": "他", "pinyin": ["tā"]},
+                {"text": "说", "pinyin": ["shuō"]},
+                {"text": "这", "pinyin": ["zhè"]},
+                {"text": "两", "pinyin": ["liǎng"]},
+                {"text": "件", "pinyin": ["jiàn"]},
+                {"text": "衣服", "pinyin": ["yī", "fu"]},
+                {"text": "一样", "pinyin": ["yī", "yàng"]},
+                {"text": "贵", "pinyin": ["guì"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c5",
+              "tokens": [
+                {"text": "所以", "pinyin": ["suǒ", "yǐ"]},
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "不用", "pinyin": ["bù", "yòng"]},
+                {"text": "再", "pinyin": ["zài"]},
+                {"text": "给", "pinyin": ["gěi"]},
+                {"text": "钱", "pinyin": ["qián"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c6",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "就", "pinyin": ["jiù"]},
+                {"text": "把", "pinyin": ["bǎ"]},
+                {"text": "白色", "pinyin": ["bái", "sè"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "衣服", "pinyin": ["yī", "fu"]},
+                {"text": "带", "pinyin": ["dài"]},
+                {"text": "回", "pinyin": ["huí"]},
+                {"text": "家", "pinyin": ["jiā"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "才 + 动词",
+          "note": "才 shows that the discovery came only when the earlier action happened.",
+          "example": {
+            "hanzi": "我回到家才发现衣服太大了。",
+            "pinyin": "Wǒ huí dào jiā cái fāxiàn yīfu tài dà le.",
+            "english": "I only realized the clothes were too big once I got home."
+          },
+          "id": "g1",
+          "sourceChunks": [
+            "p1-c5",
+            "p1-c6"
+          ]
+        },
+        {
+          "pattern": "比…… + 形容词",
+          "frameId": "compare-bi",
+          "note": "比 introduces what the subject is being compared with.",
+          "example": {
+            "hanzi": "这件白色的衣服比那件黑色的舒服。",
+            "pinyin": "Zhè jiàn báisè de yīfu bǐ nà jiàn hēisè de shūfu.",
+            "english": "This white top is more comfortable than that black one."
+          },
+          "id": "g2",
+          "sourceChunks": [
+            "p3-c2"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "为什么换成了白色的？",
+          "answer": "因为黑色的衣服都太小。",
+          "evidence": {
+            "paragraphId": "p2",
+            "chunkId": "p2-c8"
+          },
+          "id": "q1"
+        },
+        {
+          "question": "为什么不用再给钱？",
+          "answer": "因为这两件衣服一样贵。",
+          "evidence": {
+            "paragraphId": "p3",
+            "chunkId": "p3-c4"
+          },
+          "id": "q2"
+        }
+      ],
+      "writing": {
+        "prompt": "给商店的人写一条消息，说明你想换什么、为什么要换。",
+        "english": "Write a short message to someone at the shop explaining what you want to exchange and why.",
+        "requirements": [
+          "用比比较两个大小或颜色。",
+          "问一下要不要再给钱。"
+        ]
+      },
+      "glossaryCandidates": []
+    },
+    {
+      "id": "hsk4-repair-before-replace",
+      "level": 4,
+      "title": {
+        "hanzi": "先修还是先换",
+        "pinyin": "Xiān xiū háishi xiān huàn",
+        "english": "Repair it or replace it?"
+      },
+      "topic": "Repair decisions",
+      "levelIntent": "A short explainer compares practical options and states when its advice changes.",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "english": "Last month our desk lamp suddenly stopped lighting up. I thought it was broken and planned to buy a new one. A friend reminded me to think about where the problem might be first. I changed the bulb and the lamp came right back on. That was all it needed.",
+          "sentenceEnglish": [
+            "Last month our desk lamp suddenly stopped lighting up.",
+            "I thought it was broken and planned to buy a new one.",
+            "A friend reminded me to think about where the problem might be first.",
+            "I changed the bulb and the lamp came right back on.",
+            "It turned out that was all it needed."
+          ],
+          "chunks": [
+            {
+              "id": "p1-c1",
+              "tokens": [
+                {"text": "上", "pinyin": ["shàng"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "月", "pinyin": ["yuè"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c2",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "家", "pinyin": ["jiā"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "台灯", "pinyin": ["tái", "dēng"]},
+                {"text": "突然", "pinyin": ["tū", "rán"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "亮", "pinyin": ["liàng"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c3",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "以为", "pinyin": ["yǐ", "wéi"]},
+                {"text": "灯", "pinyin": ["dēng"]},
+                {"text": "坏", "pinyin": ["huài"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c4",
+              "tokens": [
+                {"text": "就", "pinyin": ["jiù"]},
+                {"text": "打算", "pinyin": ["dǎ", "suàn"]},
+                {"text": "去", "pinyin": ["qù"]},
+                {"text": "买", "pinyin": ["mǎi"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "新", "pinyin": ["xīn"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c5",
+              "tokens": [
+                {"text": "朋友", "pinyin": ["péng", "you"]},
+                {"text": "提醒", "pinyin": ["tí", "xǐng"]},
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c6",
+              "tokens": [
+                {"text": "先", "pinyin": ["xiān"]},
+                {"text": "想", "pinyin": ["xiǎng"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "想", "pinyin": ["xiǎng"]},
+                {"text": "问题", "pinyin": ["wèn", "tí"]},
+                {"text": "出", "pinyin": ["chū"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "哪里", "pinyin": ["nǎ", "lǐ"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c7",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "换", "pinyin": ["huàn"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "灯泡", "pinyin": ["dēng", "pào"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c8",
+              "tokens": [
+                {"text": "灯", "pinyin": ["dēng"]},
+                {"text": "马上", "pinyin": ["mǎ", "shàng"]},
+                {"text": "又", "pinyin": ["yòu"]},
+                {"text": "亮", "pinyin": ["liàng"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c9",
+              "tokens": [
+                {"text": "原来", "pinyin": ["yuán", "lái"]},
+                {"text": "只", "pinyin": ["zhǐ"]},
+                {"text": "需要", "pinyin": ["xū", "yào"]},
+                {"text": "换", "pinyin": ["huàn"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "灯泡", "pinyin": ["dēng", "pào"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "english": "Later I asked a repairer nearby when it was worth repairing something and when it was better to replace it. He said to find out how much it would cost and how long it would take. If it just needs a small part and will last a long time afterward, it’s worth repairing. If a repair costs about as much as a replacement and takes a month, you need to decide whether you can wait.",
+          "sentenceEnglish": [
+            "Later I asked a repairer nearby when it was worth repairing something and when it was better to replace it.",
+            "He said to find out how much it would cost and how long it would take first.",
+            "If it just needs a small part and will last a long time after the repair, it’s worth fixing.",
+            "If the repair costs about as much as a replacement and takes a month, you need to decide whether you can wait."
+          ],
+          "chunks": [
+            {
+              "id": "p2-c1",
+              "tokens": [
+                {"text": "后来", "pinyin": ["hòu", "lái"]},
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "问", "pinyin": ["wèn"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "附近", "pinyin": ["fù", "jìn"]},
+                {"text": "修", "pinyin": ["xiū"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "师傅", "pinyin": ["shī", "fu"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c2",
+              "tokens": [
+                {"text": "什么", "pinyin": ["shén", "me"]},
+                {"text": "时候", "pinyin": ["shí", "hou"]},
+                {"text": "值得", "pinyin": ["zhí", "de"]},
+                {"text": "修", "pinyin": ["xiū"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c3",
+              "tokens": [
+                {"text": "什么", "pinyin": ["shén", "me"]},
+                {"text": "时候", "pinyin": ["shí", "hou"]},
+                {"text": "该", "pinyin": ["gāi"]},
+                {"text": "换", "pinyin": ["huàn"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c4",
+              "tokens": [
+                {"text": "他", "pinyin": ["tā"]},
+                {"text": "说", "pinyin": ["shuō"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c5",
+              "tokens": [
+                {"text": "先", "pinyin": ["xiān"]},
+                {"text": "问", "pinyin": ["wèn"]},
+                {"text": "清楚", "pinyin": ["qīng", "chu"]},
+                {"text": "大概", "pinyin": ["dà", "gài"]},
+                {"text": "需要", "pinyin": ["xū", "yào"]},
+                {"text": "多少", "pinyin": ["duō", "shao"]},
+                {"text": "钱", "pinyin": ["qián"]},
+                {"text": "和", "pinyin": ["hé"]},
+                {"text": "多", "pinyin": ["duō"]},
+                {"text": "长", "pinyin": ["cháng"]},
+                {"text": "时间", "pinyin": ["shí", "jiān"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c6",
+              "tokens": [
+                {"text": "如果", "pinyin": ["rú", "guǒ"]},
+                {"text": "只是", "pinyin": ["zhǐ", "shì"]},
+                {"text": "换", "pinyin": ["huàn"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "小", "pinyin": ["xiǎo"]},
+                {"text": "零件", "pinyin": ["líng", "jiàn"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c7",
+              "tokens": [
+                {"text": "修", "pinyin": ["xiū"]},
+                {"text": "好", "pinyin": ["hǎo"]},
+                {"text": "以后", "pinyin": ["yǐ", "hòu"]},
+                {"text": "还", "pinyin": ["hái"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "用", "pinyin": ["yòng"]},
+                {"text": "很", "pinyin": ["hěn"]},
+                {"text": "久", "pinyin": ["jiǔ"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c8",
+              "tokens": [
+                {"text": "那", "pinyin": ["nà"]},
+                {"text": "就", "pinyin": ["jiù"]},
+                {"text": "值得", "pinyin": ["zhí", "de"]},
+                {"text": "修", "pinyin": ["xiū"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c9",
+              "tokens": [
+                {"text": "要是", "pinyin": ["yào", "shi"]},
+                {"text": "修", "pinyin": ["xiū"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "次", "pinyin": ["cì"]},
+                {"text": "跟", "pinyin": ["gēn"]},
+                {"text": "买", "pinyin": ["mǎi"]},
+                {"text": "新", "pinyin": ["xīn"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "差不多", "pinyin": ["chà", "bù", "duō"]},
+                {"text": "贵", "pinyin": ["guì"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c10",
+              "tokens": [
+                {"text": "还", "pinyin": ["hái"]},
+                {"text": "要", "pinyin": ["yào"]},
+                {"text": "等", "pinyin": ["děng"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "月", "pinyin": ["yuè"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c11",
+              "tokens": [
+                {"text": "就", "pinyin": ["jiù"]},
+                {"text": "要", "pinyin": ["yào"]},
+                {"text": "想", "pinyin": ["xiǎng"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "想", "pinyin": ["xiǎng"]},
+                {"text": "自己", "pinyin": ["zì", "jǐ"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "等", "pinyin": ["děng"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "english": "Of course, some things are no longer worth repairing. Some items are cheap but no longer safe to use. Next time something breaks, I’ll ask if it can be repaired and how long it would take to get it back before I decide. If I don’t need it every day, I’ll ask a friend if I can borrow one in the meantime.",
+          "sentenceEnglish": [
+            "Of course, some things are no longer worth repairing.",
+            "Some items are cheap but are no longer safe to use.",
+            "Next time something breaks, I’ll ask if it can be repaired and how long it would take to get it back before I decide.",
+            "If it’s something I don’t need every day, I’ll also ask a friend if I can borrow one in the meantime."
+          ],
+          "chunks": [
+            {
+              "id": "p3-c1",
+              "tokens": [
+                {"text": "当然", "pinyin": ["dāng", "rán"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c2",
+              "tokens": [
+                {"text": "有些", "pinyin": ["yǒu", "xiē"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "已经", "pinyin": ["yǐ", "jīng"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "值得", "pinyin": ["zhí", "de"]},
+                {"text": "修", "pinyin": ["xiū"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c3",
+              "tokens": [
+                {"text": "有些", "pinyin": ["yǒu", "xiē"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "虽然", "pinyin": ["suī", "rán"]},
+                {"text": "便宜", "pinyin": ["pián", "yi"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c4",
+              "tokens": [
+                {"text": "却", "pinyin": ["què"]},
+                {"text": "已经", "pinyin": ["yǐ", "jīng"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "安全", "pinyin": ["ān", "quán"]},
+                {"text": "使用", "pinyin": ["shǐ", "yòng"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c5",
+              "tokens": [
+                {"text": "下", "pinyin": ["xià"]},
+                {"text": "次", "pinyin": ["cì"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "坏", "pinyin": ["huài"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c6",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "会", "pinyin": ["huì"]},
+                {"text": "先", "pinyin": ["xiān"]},
+                {"text": "问", "pinyin": ["wèn"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "修", "pinyin": ["xiū"]},
+                {"text": "、", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c7",
+              "tokens": [
+                {"text": "大概", "pinyin": ["dà", "gài"]},
+                {"text": "多", "pinyin": ["duō"]},
+                {"text": "久", "pinyin": ["jiǔ"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "拿", "pinyin": ["ná"]},
+                {"text": "回来", "pinyin": ["huí", "lái"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c8",
+              "tokens": [
+                {"text": "然后", "pinyin": ["rán", "hòu"]},
+                {"text": "再", "pinyin": ["zài"]},
+                {"text": "决定", "pinyin": ["jué", "dìng"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c9",
+              "tokens": [
+                {"text": "如果", "pinyin": ["rú", "guǒ"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "是", "pinyin": ["shì"]},
+                {"text": "每", "pinyin": ["měi"]},
+                {"text": "天", "pinyin": ["tiān"]},
+                {"text": "都", "pinyin": ["dōu"]},
+                {"text": "要", "pinyin": ["yào"]},
+                {"text": "用", "pinyin": ["yòng"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c10",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "也", "pinyin": ["yě"]},
+                {"text": "会", "pinyin": ["huì"]},
+                {"text": "问", "pinyin": ["wèn"]},
+                {"text": "朋友", "pinyin": ["péng", "you"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "先", "pinyin": ["xiān"]},
+                {"text": "借", "pinyin": ["jiè"]},
+                {"text": "来", "pinyin": ["lái"]},
+                {"text": "用", "pinyin": ["yòng"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "以为……",
+          "note": "Use 以为 for what someone believed at the time, especially when later information changes that belief.",
+          "example": {
+            "hanzi": "我以为台灯坏了，后来才知道只要换一个灯泡。",
+            "pinyin": "Wǒ yǐwéi táidēng huài le, hòulái cái zhīdào zhǐyào huàn yī ge dēngpào.",
+            "english": "I thought the desk lamp was broken. Later I realized all it needed was a new bulb."
+          },
+          "id": "g1",
+          "sourceChunks": [
+            "p1-c3",
+            "p1-c9"
+          ]
+        },
+        {
+          "pattern": "虽然……却……",
+          "note": "虽然 concedes one point. 却 introduces a fact that goes against what that point might lead you to expect.",
+          "example": {
+            "hanzi": "这把椅子虽然很旧，却还能用。",
+            "pinyin": "Zhè bǎ yǐzi suīrán hěn jiù, què hái néng yòng.",
+            "english": "The chair is old, but you can still use it."
+          },
+          "id": "g2",
+          "sourceChunks": [
+            "p3-c3",
+            "p3-c4"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "作者最后怎样让台灯重新亮起来？",
+          "answer": "作者换了一个灯泡。",
+          "evidence": {
+            "paragraphId": "p1",
+            "chunkId": "p1-c7"
+          },
+          "id": "q1"
+        },
+        {
+          "question": "问师傅时，需要问清哪些事？",
+          "answer": "大概需要多少钱和多长时间。",
+          "evidence": {
+            "paragraphId": "p2",
+            "chunkId": "p2-c5"
+          },
+          "id": "q2"
+        }
+      ],
+      "writing": {
+        "prompt": "写四句话，告诉朋友你会修还是换一件旧东西。",
+        "english": "Write four sentences explaining whether you would repair or replace something old.",
+        "requirements": [
+          "写出两个影响决定的条件。",
+          "用虽然……却……。"
+        ]
+      },
+      "glossaryCandidates": [
+        "台灯",
+        "灯泡",
+        "零件"
+      ]
+    },
+    {
+      "id": "hsk4-phone-free-dinner",
+      "level": 4,
+      "title": {
+        "hanzi": "桌上没有手机的一顿饭",
+        "pinyin": "Zhuō shàng méiyǒu shǒujī de yī dùn fàn",
+        "english": "Dinner without phones on the table"
+      },
+      "topic": "Phone habits with friends",
+      "levelIntent": "A group tries a rule, makes an exception, and judges how the change affected conversation.",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "english": "Last Friday four of us from work went to dinner. Before the dishes came, everyone was on their phone. One person was replying to work messages and another was watching a video. A coworker paused halfway through his story and asked if anyone had heard what he’d just said. No one could answer.",
+          "sentenceEnglish": [
+            "Last Friday four of us from work went to dinner together.",
+            "Before the dishes even came, everyone was already looking at their phone.",
+            "One person was replying to work messages and another was watching a video.",
+            "A coworker paused halfway through his story and asked, “Did you hear what I just said?”",
+            "No one could answer."
+          ],
+          "chunks": [
+            {
+              "id": "p1-c1",
+              "tokens": [
+                {"text": "上", "pinyin": ["shàng"]},
+                {"text": "周", "pinyin": ["zhōu"]},
+                {"text": "五", "pinyin": ["wǔ"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c2",
+              "tokens": [
+                {"text": "我们", "pinyin": ["wǒ", "men"]},
+                {"text": "四", "pinyin": ["sì"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "同事", "pinyin": ["tóng", "shì"]},
+                {"text": "下班", "pinyin": ["xià", "bān"]},
+                {"text": "后", "pinyin": ["hòu"]},
+                {"text": "一起", "pinyin": ["yī", "qǐ"]},
+                {"text": "吃", "pinyin": ["chī"]},
+                {"text": "饭", "pinyin": ["fàn"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c3",
+              "tokens": [
+                {"text": "菜", "pinyin": ["cài"]},
+                {"text": "还", "pinyin": ["hái"]},
+                {"text": "没有", "pinyin": ["méi", "yǒu"]},
+                {"text": "上", "pinyin": ["shàng"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c4",
+              "tokens": [
+                {"text": "大家", "pinyin": ["dà", "jiā"]},
+                {"text": "就", "pinyin": ["jiù"]},
+                {"text": "已经", "pinyin": ["yǐ", "jīng"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "看", "pinyin": ["kàn"]},
+                {"text": "手机", "pinyin": ["shǒu", "jī"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c5",
+              "tokens": [
+                {"text": "有", "pinyin": ["yǒu"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "回", "pinyin": ["huí"]},
+                {"text": "工作", "pinyin": ["gōng", "zuò"]},
+                {"text": "消息", "pinyin": ["xiāo", "xi"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c6",
+              "tokens": [
+                {"text": "另", "pinyin": ["lìng"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "看", "pinyin": ["kàn"]},
+                {"text": "视频", "pinyin": ["shì", "pín"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c7",
+              "tokens": [
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "同事", "pinyin": ["tóng", "shì"]},
+                {"text": "讲", "pinyin": ["jiǎng"]},
+                {"text": "到", "pinyin": ["dào"]},
+                {"text": "一半", "pinyin": ["yī", "bàn"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c8",
+              "tokens": [
+                {"text": "忽然", "pinyin": ["hū", "rán"]},
+                {"text": "停", "pinyin": ["tíng"]},
+                {"text": "下来", "pinyin": ["xià", "lái"]},
+                {"text": "问", "pinyin": ["wèn"]},
+                {"text": "：", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c9",
+              "tokens": [
+                {"text": "“", "pinyin": []},
+                {"text": "你们", "pinyin": ["nǐ", "men"]},
+                {"text": "听见", "pinyin": ["tīng", "jiàn"]},
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "刚才", "pinyin": ["gāng", "cái"]},
+                {"text": "说", "pinyin": ["shuō"]},
+                {"text": "什么", "pinyin": ["shén", "me"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "吗", "pinyin": ["ma"]},
+                {"text": "？", "pinyin": []},
+                {"text": "”", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c10",
+              "tokens": [
+                {"text": "没有", "pinyin": ["méi", "yǒu"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "回答", "pinyin": ["huí", "dá"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "english": "I suggested leaving our phones in our bags until the end of dinner. One coworker was waiting for a call from home, so we adjusted the rule. He kept his phone beside him, face down. He could answer a call from home. Otherwise we’d leave our phones alone.",
+          "sentenceEnglish": [
+            "I suggested that everyone put their phone away in their bag until the end of dinner.",
+            "That coworker said he was waiting for a call from home, so we adjusted the rule.",
+            "He kept his phone beside him, face down.",
+            "If a call came in from home, he could answer it. Otherwise we’d leave our phones alone for now."
+          ],
+          "chunks": [
+            {
+              "id": "p2-c1",
+              "tokens": [
+                {"text": "我", "pinyin": ["wǒ"]},
+                {"text": "建议", "pinyin": ["jiàn", "yì"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c2",
+              "tokens": [
+                {"text": "大家", "pinyin": ["dà", "jiā"]},
+                {"text": "把", "pinyin": ["bǎ"]},
+                {"text": "手机", "pinyin": ["shǒu", "jī"]},
+                {"text": "放", "pinyin": ["fàng"]},
+                {"text": "进", "pinyin": ["jìn"]},
+                {"text": "包", "pinyin": ["bāo"]},
+                {"text": "里", "pinyin": ["lǐ"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c3",
+              "tokens": [
+                {"text": "等", "pinyin": ["děng"]},
+                {"text": "吃", "pinyin": ["chī"]},
+                {"text": "完", "pinyin": ["wán"]},
+                {"text": "饭", "pinyin": ["fàn"]},
+                {"text": "再", "pinyin": ["zài"]},
+                {"text": "看", "pinyin": ["kàn"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c4",
+              "tokens": [
+                {"text": "那", "pinyin": ["nà"]},
+                {"text": "位", "pinyin": ["wèi"]},
+                {"text": "同事", "pinyin": ["tóng", "shì"]},
+                {"text": "说", "pinyin": ["shuō"]},
+                {"text": "他", "pinyin": ["tā"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "等", "pinyin": ["děng"]},
+                {"text": "家", "pinyin": ["jiā"]},
+                {"text": "里", "pinyin": ["lǐ"]},
+                {"text": "来", "pinyin": ["lái"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "电话", "pinyin": ["diàn", "huà"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c5",
+              "tokens": [
+                {"text": "所以", "pinyin": ["suǒ", "yǐ"]},
+                {"text": "我们", "pinyin": ["wǒ", "men"]},
+                {"text": "改", "pinyin": ["gǎi"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "一下", "pinyin": ["yī", "xià"]},
+                {"text": "办法", "pinyin": ["bàn", "fǎ"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c6",
+              "tokens": [
+                {"text": "他", "pinyin": ["tā"]},
+                {"text": "把", "pinyin": ["bǎ"]},
+                {"text": "手机", "pinyin": ["shǒu", "jī"]},
+                {"text": "放", "pinyin": ["fàng"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "手", "pinyin": ["shǒu"]},
+                {"text": "边", "pinyin": ["biān"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c7",
+              "tokens": [
+                {"text": "把", "pinyin": ["bǎ"]},
+                {"text": "屏幕", "pinyin": ["píng", "mù"]},
+                {"text": "向", "pinyin": ["xiàng"]},
+                {"text": "下", "pinyin": ["xià"]},
+                {"text": "放", "pinyin": ["fàng"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c8",
+              "tokens": [
+                {"text": "如果", "pinyin": ["rú", "guǒ"]},
+                {"text": "家", "pinyin": ["jiā"]},
+                {"text": "里", "pinyin": ["lǐ"]},
+                {"text": "打电话", "pinyin": ["dǎ", "diàn", "huà"]},
+                {"text": "来", "pinyin": ["lái"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c9",
+              "tokens": [
+                {"text": "他", "pinyin": ["tā"]},
+                {"text": "就", "pinyin": ["jiù"]},
+                {"text": "接", "pinyin": ["jiē"]},
+                {"text": "，", "pinyin": []},
+                {"text": "否则", "pinyin": ["fǒu", "zé"]},
+                {"text": "大家", "pinyin": ["dà", "jiā"]},
+                {"text": "先", "pinyin": ["xiān"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "看", "pinyin": ["kàn"]},
+                {"text": "手机", "pinyin": ["shǒu", "jī"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "english": "For the first few minutes it felt too quiet, as if we didn’t know what to talk about. Then the coworker finished his story, and we learned he was moving the following month. Someone asked if he needed help. Soon we couldn’t stop talking. After dinner, we agreed to do it again next time.",
+          "sentenceEnglish": [
+            "For the first few minutes it felt too quiet, as if we didn’t know what to talk about.",
+            "Then the coworker finished his story, and we learned he was moving the next month.",
+            "Someone asked if he needed help, and soon we couldn’t stop talking.",
+            "After dinner we agreed to do it again next time."
+          ],
+          "chunks": [
+            {
+              "id": "p3-c1",
+              "tokens": [
+                {"text": "刚", "pinyin": ["gāng"]},
+                {"text": "开始", "pinyin": ["kāi", "shǐ"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "几", "pinyin": ["jǐ"]},
+                {"text": "分钟", "pinyin": ["fēn", "zhōng"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c2",
+              "tokens": [
+                {"text": "我们", "pinyin": ["wǒ", "men"]},
+                {"text": "觉得", "pinyin": ["jué", "de"]},
+                {"text": "太", "pinyin": ["tài"]},
+                {"text": "安静", "pinyin": ["ān", "jìng"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c3",
+              "tokens": [
+                {"text": "好像", "pinyin": ["hǎo", "xiàng"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "知道", "pinyin": ["zhī", "dào"]},
+                {"text": "该", "pinyin": ["gāi"]},
+                {"text": "聊", "pinyin": ["liáo"]},
+                {"text": "什么", "pinyin": ["shén", "me"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c4",
+              "tokens": [
+                {"text": "后来", "pinyin": ["hòu", "lái"]},
+                {"text": "那", "pinyin": ["nà"]},
+                {"text": "位", "pinyin": ["wèi"]},
+                {"text": "同事", "pinyin": ["tóng", "shì"]},
+                {"text": "把", "pinyin": ["bǎ"]},
+                {"text": "刚才", "pinyin": ["gāng", "cái"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "事", "pinyin": ["shì"]},
+                {"text": "讲", "pinyin": ["jiǎng"]},
+                {"text": "完", "pinyin": ["wán"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c5",
+              "tokens": [
+                {"text": "我们", "pinyin": ["wǒ", "men"]},
+                {"text": "才", "pinyin": ["cái"]},
+                {"text": "知道", "pinyin": ["zhī", "dào"]},
+                {"text": "他", "pinyin": ["tā"]},
+                {"text": "下", "pinyin": ["xià"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "月", "pinyin": ["yuè"]},
+                {"text": "就", "pinyin": ["jiù"]},
+                {"text": "要", "pinyin": ["yào"]},
+                {"text": "搬家", "pinyin": ["bān", "jiā"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c6",
+              "tokens": [
+                {"text": "有", "pinyin": ["yǒu"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "问", "pinyin": ["wèn"]},
+                {"text": "他", "pinyin": ["tā"]},
+                {"text": "要", "pinyin": ["yào"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "要", "pinyin": ["yào"]},
+                {"text": "帮忙", "pinyin": ["bāng", "máng"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c7",
+              "tokens": [
+                {"text": "大家", "pinyin": ["dà", "jiā"]},
+                {"text": "很", "pinyin": ["hěn"]},
+                {"text": "快", "pinyin": ["kuài"]},
+                {"text": "聊", "pinyin": ["liáo"]},
+                {"text": "得", "pinyin": ["de"]},
+                {"text": "停", "pinyin": ["tíng"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "下来", "pinyin": ["xià", "lái"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c8",
+              "tokens": [
+                {"text": "吃", "pinyin": ["chī"]},
+                {"text": "完", "pinyin": ["wán"]},
+                {"text": "饭", "pinyin": ["fàn"]},
+                {"text": "以后", "pinyin": ["yǐ", "hòu"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c9",
+              "tokens": [
+                {"text": "我们", "pinyin": ["wǒ", "men"]},
+                {"text": "约", "pinyin": ["yuē"]},
+                {"text": "好", "pinyin": ["hǎo"]},
+                {"text": "下", "pinyin": ["xià"]},
+                {"text": "次", "pinyin": ["cì"]},
+                {"text": "还", "pinyin": ["hái"]},
+                {"text": "这样", "pinyin": ["zhè", "yàng"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "如果……就……，否则……",
+          "note": "如果 states a condition. 就 gives the result when it holds. 否则 gives the result in the other case.",
+          "example": {
+            "hanzi": "如果工作不忙，我们就一起吃饭，否则改天再约。",
+            "pinyin": "Rúguǒ gōngzuò bù máng, wǒmen jiù yīqǐ chī fàn, fǒuzé gǎitiān zài yuē.",
+            "english": "If work isn’t busy, we’ll eat together. Otherwise, we’ll pick another day."
+          },
+          "id": "g1",
+          "sourceChunks": [
+            "p2-c8",
+            "p2-c9"
+          ]
+        },
+        {
+          "pattern": "动词 + 得 + 补语",
+          "frameId": "complement-de",
+          "note": "得 links the action to the result or degree described after it. In this sentence, 停不下来 shows how absorbed they were.",
+          "example": {
+            "hanzi": "大家笑得说不出话来。",
+            "pinyin": "Dàjiā xiào de shuō bù chū huà lái.",
+            "english": "Everyone laughed so hard they couldn’t speak."
+          },
+          "id": "g2",
+          "sourceChunks": [
+            "p3-c7"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "为什么那位同事可以把手机放在手边？",
+          "answer": "因为他在等家里来的电话。",
+          "evidence": {
+            "paragraphId": "p2",
+            "chunkId": "p2-c4"
+          },
+          "id": "q1"
+        },
+        {
+          "question": "那位同事讲了什么消息？",
+          "answer": "他下个月就要搬家。",
+          "evidence": {
+            "paragraphId": "p3",
+            "chunkId": "p3-c5"
+          },
+          "id": "q2"
+        }
+      ],
+      "writing": {
+        "prompt": "写一段给朋友的消息，为下次聚餐提一个手机使用规则。",
+        "english": "Write a message proposing a phone rule for your next group meal.",
+        "requirements": [
+          "说明为什么提议这个规则。",
+          "用如果……就……，否则……写出例外。"
+        ]
+      },
+      "glossaryCandidates": [
+        "屏幕"
+      ]
+    },
+    {
+      "id": "hsk5-building-secondhand",
+      "level": 5,
+      "title": {
+        "hanzi": "楼里的二手角",
+        "pinyin": "Lóu lǐ de èrshǒu jiǎo",
+        "english": "The secondhand corner in our building"
+      },
+      "topic": "Community reuse",
+      "levelIntent": "A neighborhood case study introduces how to compare benefits, practical costs, and evidence.",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "english": "Last winter, several neighbors in our building set up a secondhand corner in the downstairs lobby. Anyone with books or small appliances they no longer needed could leave them there for others to take for free. At first, just a few things appeared each week. Once people saw someone take old books, they started bringing their own unused things.",
+          "sentenceEnglish": [
+            "Last winter, several neighbors in our building set up a secondhand corner in the downstairs lobby.",
+            "Anyone with books or small appliances they no longer needed could leave them there.",
+            "Anyone who wanted them could take them for free.",
+            "At first, only a few things appeared each week.",
+            "After people saw someone take old books, they started bringing their own unused things too."
+          ],
+          "chunks": [
+            {
+              "id": "p1-c1",
+              "tokens": [
+                {"text": "去年", "pinyin": ["qù", "nián"]},
+                {"text": "冬天", "pinyin": ["dōng", "tiān"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c2",
+              "tokens": [
+                {"text": "我们", "pinyin": ["wǒ", "men"]},
+                {"text": "楼", "pinyin": ["lóu"]},
+                {"text": "里", "pinyin": ["lǐ"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "几", "pinyin": ["jǐ"]},
+                {"text": "位", "pinyin": ["wèi"]},
+                {"text": "邻居", "pinyin": ["lín", "jū"]}
+              ]
+            },
+            {
+              "id": "p1-c3",
+              "tokens": [
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "楼", "pinyin": ["lóu"]},
+                {"text": "大厅", "pinyin": ["dà", "tīng"]},
+                {"text": "开", "pinyin": ["kāi"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "二手", "pinyin": ["èr", "shǒu"]},
+                {"text": "角", "pinyin": ["jiǎo"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c4",
+              "tokens": [
+                {"text": "谁", "pinyin": ["shéi"]},
+                {"text": "有", "pinyin": ["yǒu"]},
+                {"text": "用", "pinyin": ["yòng"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "上", "pinyin": ["shàng"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "书", "pinyin": ["shū"]},
+                {"text": "或", "pinyin": ["huò"]},
+                {"text": "小", "pinyin": ["xiǎo"]},
+                {"text": "家电", "pinyin": ["jiā", "diàn"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c5",
+              "tokens": [
+                {"text": "就", "pinyin": ["jiù"]},
+                {"text": "可以", "pinyin": ["kě", "yǐ"]},
+                {"text": "放", "pinyin": ["fàng"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "那里", "pinyin": ["nà", "lǐ"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c6",
+              "tokens": [
+                {"text": "想", "pinyin": ["xiǎng"]},
+                {"text": "要", "pinyin": ["yào"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "可以", "pinyin": ["kě", "yǐ"]},
+                {"text": "免费", "pinyin": ["miǎn", "fèi"]},
+                {"text": "拿", "pinyin": ["ná"]},
+                {"text": "走", "pinyin": ["zǒu"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c7",
+              "tokens": [
+                {"text": "刚", "pinyin": ["gāng"]},
+                {"text": "开始", "pinyin": ["kāi", "shǐ"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c8",
+              "tokens": [
+                {"text": "每", "pinyin": ["měi"]},
+                {"text": "周", "pinyin": ["zhōu"]},
+                {"text": "只", "pinyin": ["zhǐ"]},
+                {"text": "有", "pinyin": ["yǒu"]},
+                {"text": "几", "pinyin": ["jǐ"]},
+                {"text": "件", "pinyin": ["jiàn"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c9",
+              "tokens": [
+                {"text": "大家", "pinyin": ["dà", "jiā"]},
+                {"text": "看见", "pinyin": ["kàn", "jiàn"]},
+                {"text": "有", "pinyin": ["yǒu"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "拿", "pinyin": ["ná"]},
+                {"text": "走", "pinyin": ["zǒu"]},
+                {"text": "旧", "pinyin": ["jiù"]},
+                {"text": "书", "pinyin": ["shū"]},
+                {"text": "以后", "pinyin": ["yǐ", "hòu"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c10",
+              "tokens": [
+                {"text": "也", "pinyin": ["yě"]},
+                {"text": "愿意", "pinyin": ["yuàn", "yì"]},
+                {"text": "把", "pinyin": ["bǎ"]},
+                {"text": "家", "pinyin": ["jiā"]},
+                {"text": "里", "pinyin": ["lǐ"]},
+                {"text": "不用", "pinyin": ["bù", "yòng"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "拿", "pinyin": ["ná"]},
+                {"text": "来", "pinyin": ["lái"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "english": "Three months later, there were more and more things on the shelf, and problems followed. One broken rice cooker sat there for two weeks. The neighbors who tidied the shelf noticed that some people were treating it as a place to dump things. To keep the lobby from getting messier, the neighbors agreed on two rules. First, people must check that something still works before leaving it. Second, if nobody has taken an item after two weeks, whoever left it must remove it.",
+          "sentenceEnglish": [
+            "Three months later, there were more and more things on the shelf, and problems followed.",
+            "A rice cooker was already broken, yet it sat there for two weeks.",
+            "The neighbors who tidied the shelf noticed that some people treated it as a place to dump things.",
+            "To keep the lobby from getting messier, everyone agreed on two rules.",
+            "First, people must check that an item still works before leaving it.",
+            "Second, if nobody takes an item after two weeks, whoever left it must remove it."
+          ],
+          "chunks": [
+            {
+              "id": "p2-c1",
+              "tokens": [
+                {"text": "三", "pinyin": ["sān"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "月", "pinyin": ["yuè"]},
+                {"text": "后", "pinyin": ["hòu"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c2",
+              "tokens": [
+                {"text": "架子", "pinyin": ["jià", "zi"]},
+                {"text": "上", "pinyin": ["shàng"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "越", "pinyin": ["yuè"]},
+                {"text": "来", "pinyin": ["lái"]},
+                {"text": "越", "pinyin": ["yuè"]},
+                {"text": "多", "pinyin": ["duō"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c3",
+              "tokens": [
+                {"text": "麻烦", "pinyin": ["má", "fan"]},
+                {"text": "也", "pinyin": ["yě"]},
+                {"text": "跟", "pinyin": ["gēn"]},
+                {"text": "着", "pinyin": ["zhe"]},
+                {"text": "来", "pinyin": ["lái"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c4",
+              "tokens": [
+                {"text": "有", "pinyin": ["yǒu"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "台", "pinyin": ["tái"]},
+                {"text": "电饭锅", "pinyin": ["diàn", "fàn", "guō"]}
+              ]
+            },
+            {
+              "id": "p2-c5",
+              "tokens": [
+                {"text": "已经", "pinyin": ["yǐ", "jīng"]},
+                {"text": "坏", "pinyin": ["huài"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c6",
+              "tokens": [
+                {"text": "却", "pinyin": ["què"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "架子", "pinyin": ["jià", "zi"]},
+                {"text": "上", "pinyin": ["shàng"]},
+                {"text": "放", "pinyin": ["fàng"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "两", "pinyin": ["liǎng"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "星期", "pinyin": ["xīng", "qī"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c7",
+              "tokens": [
+                {"text": "负责", "pinyin": ["fù", "zé"]},
+                {"text": "整理", "pinyin": ["zhěng", "lǐ"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "邻居", "pinyin": ["lín", "jū"]},
+                {"text": "发现", "pinyin": ["fā", "xiàn"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c8",
+              "tokens": [
+                {"text": "有些", "pinyin": ["yǒu", "xiē"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "把", "pinyin": ["bǎ"]},
+                {"text": "这里", "pinyin": ["zhè", "lǐ"]},
+                {"text": "当成", "pinyin": ["dàng", "chéng"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "扔", "pinyin": ["rēng"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "地方", "pinyin": ["dì", "fang"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c9",
+              "tokens": [
+                {"text": "为了", "pinyin": ["wèi", "le"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "让", "pinyin": ["ràng"]},
+                {"text": "大厅", "pinyin": ["dà", "tīng"]},
+                {"text": "越", "pinyin": ["yuè"]},
+                {"text": "来", "pinyin": ["lái"]},
+                {"text": "越", "pinyin": ["yuè"]},
+                {"text": "乱", "pinyin": ["luàn"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c10",
+              "tokens": [
+                {"text": "大家", "pinyin": ["dà", "jiā"]},
+                {"text": "商量", "pinyin": ["shāng", "liang"]},
+                {"text": "出", "pinyin": ["chū"]},
+                {"text": "两", "pinyin": ["liǎng"]},
+                {"text": "条", "pinyin": ["tiáo"]},
+                {"text": "规则", "pinyin": ["guī", "zé"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c11",
+              "tokens": [
+                {"text": "第", "pinyin": ["dì"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c12",
+              "tokens": [
+                {"text": "放", "pinyin": ["fàng"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "得", "pinyin": ["děi"]},
+                {"text": "先", "pinyin": ["xiān"]},
+                {"text": "检查", "pinyin": ["jiǎn", "chá"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "还", "pinyin": ["hái"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "用", "pinyin": ["yòng"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c13",
+              "tokens": [
+                {"text": "第", "pinyin": ["dì"]},
+                {"text": "二", "pinyin": ["èr"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c14",
+              "tokens": [
+                {"text": "两", "pinyin": ["liǎng"]},
+                {"text": "周", "pinyin": ["zhōu"]},
+                {"text": "后", "pinyin": ["hòu"]},
+                {"text": "没有", "pinyin": ["méi", "yǒu"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "拿", "pinyin": ["ná"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c15",
+              "tokens": [
+                {"text": "由", "pinyin": ["yóu"]},
+                {"text": "放", "pinyin": ["fàng"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "自己", "pinyin": ["zì", "jǐ"]},
+                {"text": "带", "pinyin": ["dài"]},
+                {"text": "走", "pinyin": ["zǒu"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "english": "A month later there were fewer things on the shelf, yet more items were being taken. The neighbors realized success depends on how many things actually get used again. Now the corner needs only ten minutes of tidying each weekend to keep going.",
+          "sentenceEnglish": [
+            "A month later there were fewer things on the shelf, yet more were being taken.",
+            "The neighbors realized that success depends on how many things actually get used again, rather than how many the corner takes in.",
+            "Now the corner needs only ten minutes of tidying each weekend to keep going."
+          ],
+          "chunks": [
+            {
+              "id": "p3-c1",
+              "tokens": [
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "月", "pinyin": ["yuè"]},
+                {"text": "以后", "pinyin": ["yǐ", "hòu"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c2",
+              "tokens": [
+                {"text": "架子", "pinyin": ["jià", "zi"]},
+                {"text": "上", "pinyin": ["shàng"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "没有", "pinyin": ["méi", "yǒu"]},
+                {"text": "以前", "pinyin": ["yǐ", "qián"]},
+                {"text": "多", "pinyin": ["duō"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c3",
+              "tokens": [
+                {"text": "拿", "pinyin": ["ná"]},
+                {"text": "走", "pinyin": ["zǒu"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "却", "pinyin": ["què"]},
+                {"text": "比", "pinyin": ["bǐ"]},
+                {"text": "以前", "pinyin": ["yǐ", "qián"]},
+                {"text": "多", "pinyin": ["duō"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c4",
+              "tokens": [
+                {"text": "这", "pinyin": ["zhè"]},
+                {"text": "让", "pinyin": ["ràng"]},
+                {"text": "大家", "pinyin": ["dà", "jiā"]},
+                {"text": "明白", "pinyin": ["míng", "bai"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c5",
+              "tokens": [
+                {"text": "二手", "pinyin": ["èr", "shǒu"]},
+                {"text": "角", "pinyin": ["jiǎo"]},
+                {"text": "办", "pinyin": ["bàn"]},
+                {"text": "得", "pinyin": ["de"]},
+                {"text": "好", "pinyin": ["hǎo"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "好", "pinyin": ["hǎo"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c6",
+              "tokens": [
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "在于", "pinyin": ["zài", "yú"]},
+                {"text": "收", "pinyin": ["shōu"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "多少", "pinyin": ["duō", "shao"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c7",
+              "tokens": [
+                {"text": "而", "pinyin": ["ér"]},
+                {"text": "在于", "pinyin": ["zài", "yú"]},
+                {"text": "多少", "pinyin": ["duō", "shao"]},
+                {"text": "东西", "pinyin": ["dōng", "xi"]},
+                {"text": "真", "pinyin": ["zhēn"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "又", "pinyin": ["yòu"]},
+                {"text": "被", "pinyin": ["bèi"]},
+                {"text": "用", "pinyin": ["yòng"]},
+                {"text": "起来", "pinyin": ["qǐ", "lái"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c8",
+              "tokens": [
+                {"text": "现在", "pinyin": ["xiàn", "zài"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c9",
+              "tokens": [
+                {"text": "每", "pinyin": ["měi"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "周末", "pinyin": ["zhōu", "mò"]},
+                {"text": "只", "pinyin": ["zhǐ"]},
+                {"text": "需要", "pinyin": ["xū", "yào"]},
+                {"text": "花", "pinyin": ["huā"]},
+                {"text": "十", "pinyin": ["shí"]},
+                {"text": "分钟", "pinyin": ["fēn", "zhōng"]},
+                {"text": "整理", "pinyin": ["zhěng", "lǐ"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c10",
+              "tokens": [
+                {"text": "这个", "pinyin": ["zhè", "ge"]},
+                {"text": "小", "pinyin": ["xiǎo"]},
+                {"text": "地方", "pinyin": ["dì", "fang"]},
+                {"text": "就", "pinyin": ["jiù"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "继续", "pinyin": ["jì", "xù"]},
+                {"text": "用", "pinyin": ["yòng"]},
+                {"text": "下去", "pinyin": ["xià", "qù"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "由 + 人 + 动词",
+          "note": "由 names the person responsible for an action, often in an instruction or rule.",
+          "example": {
+            "hanzi": "每周由一位邻居整理桌上的书。",
+            "pinyin": "Měi zhōu yóu yī wèi línjū zhěnglǐ zhuō shàng de shū.",
+            "english": "Each week, one neighbor takes care of the books on the table."
+          },
+          "id": "g1",
+          "sourceChunks": [
+            "p2-c14",
+            "p2-c15"
+          ]
+        },
+        {
+          "pattern": "不在于……而在于……",
+          "note": "Use the two clauses to replace one criterion with the one the speaker considers meaningful.",
+          "example": {
+            "hanzi": "活动的价值不在于来了多少人，而在于多少人愿意再来。",
+            "pinyin": "Huódòng de jiàzhí bù zàiyú lái le duōshao rén, ér zàiyú duōshao rén yuànyì zài lái.",
+            "english": "The event’s value depends on how many people want to come back, rather than how many came."
+          },
+          "id": "g2",
+          "sourceChunks": [
+            "p3-c6",
+            "p3-c7"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "新规则要求谁带走两周没人拿的东西？",
+          "answer": "放东西的人要自己带走。",
+          "evidence": {
+            "paragraphId": "p2",
+            "chunkId": "p2-c15"
+          },
+          "id": "q1"
+        },
+        {
+          "question": "邻居现在用什么来判断二手角办得好不好？",
+          "answer": "看有多少东西真的又被用起来了。",
+          "evidence": {
+            "paragraphId": "p3",
+            "chunkId": "p3-c7"
+          },
+          "id": "q2"
+        }
+      ],
+      "writing": {
+        "prompt": "给另一栋楼的邻居写一段建议，说明怎样开一个二手角。",
+        "english": "Write a short proposal to neighbors in another building about running a secondhand corner.",
+        "requirements": [
+          "写一条具体规则。",
+          "用不在于……而在于……说明怎样判断它办得好不好。"
+        ]
+      },
+      "glossaryCandidates": [
+        "架子",
+        "电饭锅"
+      ]
+    },
+    {
+      "id": "hsk5-neighborhood-deliveries",
+      "level": 5,
+      "title": {
+        "hanzi": "快递送到哪儿更合适",
+        "pinyin": "Kuàidì sòng dào nǎr gèng héshì",
+        "english": "Where should deliveries go?"
+      },
+      "topic": "Neighborhood delivery policies",
+      "levelIntent": "An explainer weighs conflicting needs and proposes an adjustable trial with evidence.",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "english": "Packages in our housing complex used to come straight to our doors. Last summer the complex set up a pickup point outside the east gate. Residents living nearby found it convenient to pick up packages on their way home from work. Couriers no longer had to go building to building. But residents near the west gate had to walk nearly twenty minutes extra round-trip, and some older residents couldn’t carry large packages.",
+          "sentenceEnglish": [
+            "Packages in our housing complex used to come straight to our doors.",
+            "Last summer the complex set up a pickup point outside the east gate.",
+            "Residents living nearby found it convenient to pick up packages on their way home from work.",
+            "Couriers no longer had to go building to building, either.",
+            "But residents near the west gate had to walk nearly twenty minutes extra round-trip.",
+            "Some older residents also couldn’t carry large packages."
+          ],
+          "chunks": [
+            {
+              "id": "p1-c1",
+              "tokens": [
+                {"text": "以前", "pinyin": ["yǐ", "qián"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c2",
+              "tokens": [
+                {"text": "我们", "pinyin": ["wǒ", "men"]},
+                {"text": "小区", "pinyin": ["xiǎo", "qū"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "快递", "pinyin": ["kuài", "dì"]},
+                {"text": "大多", "pinyin": ["dà", "duō"]},
+                {"text": "直接", "pinyin": ["zhí", "jiē"]},
+                {"text": "送", "pinyin": ["sòng"]},
+                {"text": "到", "pinyin": ["dào"]},
+                {"text": "家", "pinyin": ["jiā"]},
+                {"text": "门口", "pinyin": ["mén", "kǒu"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c3",
+              "tokens": [
+                {"text": "去年", "pinyin": ["qù", "nián"]},
+                {"text": "夏天", "pinyin": ["xià", "tiān"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c4",
+              "tokens": [
+                {"text": "小区", "pinyin": ["xiǎo", "qū"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "东", "pinyin": ["dōng"]},
+                {"text": "门", "pinyin": ["mén"]},
+                {"text": "外", "pinyin": ["wài"]},
+                {"text": "开", "pinyin": ["kāi"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "快递", "pinyin": ["kuài", "dì"]},
+                {"text": "站", "pinyin": ["zhàn"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c5",
+              "tokens": [
+                {"text": "住", "pinyin": ["zhù"]},
+                {"text": "得", "pinyin": ["de"]},
+                {"text": "近", "pinyin": ["jìn"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "居民", "pinyin": ["jū", "mín"]},
+                {"text": "觉得", "pinyin": ["jué", "de"]},
+                {"text": "方便", "pinyin": ["fāng", "biàn"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c6",
+              "tokens": [
+                {"text": "下班", "pinyin": ["xià", "bān"]},
+                {"text": "回", "pinyin": ["huí"]},
+                {"text": "家", "pinyin": ["jiā"]},
+                {"text": "时", "pinyin": ["shí"]},
+                {"text": "顺便", "pinyin": ["shùn", "biàn"]},
+                {"text": "就", "pinyin": ["jiù"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "取", "pinyin": ["qǔ"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c7",
+              "tokens": [
+                {"text": "送", "pinyin": ["sòng"]},
+                {"text": "快递", "pinyin": ["kuài", "dì"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "也", "pinyin": ["yě"]},
+                {"text": "不用", "pinyin": ["bù", "yòng"]},
+                {"text": "每", "pinyin": ["měi"]},
+                {"text": "座", "pinyin": ["zuò"]},
+                {"text": "楼", "pinyin": ["lóu"]},
+                {"text": "都", "pinyin": ["dōu"]},
+                {"text": "跑", "pinyin": ["pǎo"]},
+                {"text": "了", "pinyin": ["le"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c8",
+              "tokens": [
+                {"text": "可", "pinyin": ["kě"]},
+                {"text": "住", "pinyin": ["zhù"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "西", "pinyin": ["xī"]},
+                {"text": "门", "pinyin": ["mén"]},
+                {"text": "附近", "pinyin": ["fù", "jìn"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "人", "pinyin": ["rén"]}
+              ]
+            },
+            {
+              "id": "p1-c9",
+              "tokens": [
+                {"text": "往返", "pinyin": ["wǎng", "fǎn"]},
+                {"text": "要", "pinyin": ["yào"]},
+                {"text": "多", "pinyin": ["duō"]},
+                {"text": "走", "pinyin": ["zǒu"]},
+                {"text": "将近", "pinyin": ["jiāng", "jìn"]},
+                {"text": "二", "pinyin": ["èr"]},
+                {"text": "十", "pinyin": ["shí"]},
+                {"text": "分钟", "pinyin": ["fēn", "zhōng"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p1-c10",
+              "tokens": [
+                {"text": "有些", "pinyin": ["yǒu", "xiē"]},
+                {"text": "老人", "pinyin": ["lǎo", "rén"]},
+                {"text": "还", "pinyin": ["hái"]},
+                {"text": "拿", "pinyin": ["ná"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "动", "pinyin": ["dòng"]},
+                {"text": "大", "pinyin": ["dà"]},
+                {"text": "件", "pinyin": ["jiàn"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "english": "At a residents’ meeting some people asked for packages to come to their doors again. Others preferred the pickup point because packages could go missing outside a door and nobody could accept them when the household was out. Residents have different needs, so the complex could keep the pickup point and offer booked home delivery to people who need help. Evening delivery would let couriers take packages to the same building together.",
+          "sentenceEnglish": [
+            "At a residents’ meeting some people asked for all packages to come to their doors again. Others preferred the pickup point: packages could go missing outside a door, and nobody could accept them when the household was out.",
+            "Residents don’t all have the same needs, so there’s no need to choose just one system.",
+            "The complex could keep the pickup point while letting people who need help book home delivery.",
+            "Home deliveries could be scheduled for the evening so couriers could deliver packages to the same building together."
+          ],
+          "chunks": [
+            {
+              "id": "p2-c1",
+              "tokens": [
+                {"text": "居民", "pinyin": ["jū", "mín"]},
+                {"text": "开会", "pinyin": ["kāi", "huì"]},
+                {"text": "时", "pinyin": ["shí"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c2",
+              "tokens": [
+                {"text": "有", "pinyin": ["yǒu"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "要求", "pinyin": ["yāo", "qiú"]},
+                {"text": "把", "pinyin": ["bǎ"]},
+                {"text": "快递", "pinyin": ["kuài", "dì"]},
+                {"text": "都", "pinyin": ["dōu"]},
+                {"text": "送", "pinyin": ["sòng"]},
+                {"text": "回", "pinyin": ["huí"]},
+                {"text": "门口", "pinyin": ["mén", "kǒu"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c3",
+              "tokens": [
+                {"text": "也", "pinyin": ["yě"]},
+                {"text": "有", "pinyin": ["yǒu"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "觉得", "pinyin": ["jué", "de"]},
+                {"text": "还是", "pinyin": ["hái", "shì"], "meaning": "still; after all (expressing a preference)"},
+                {"text": "快递", "pinyin": ["kuài", "dì"]},
+                {"text": "站", "pinyin": ["zhàn"]},
+                {"text": "好", "pinyin": ["hǎo"]},
+                {"text": "：", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c4",
+              "tokens": [
+                {"text": "包裹", "pinyin": ["bāo", "guǒ"]},
+                {"text": "放", "pinyin": ["fàng"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "门口", "pinyin": ["mén", "kǒu"]},
+                {"text": "，", "pinyin": []},
+                {"text": "有时", "pinyin": ["yǒu", "shí"]},
+                {"text": "会", "pinyin": ["huì"]},
+                {"text": "丢", "pinyin": ["diū"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c5",
+              "tokens": [
+                {"text": "而且", "pinyin": ["ér", "qiě"]},
+                {"text": "家", "pinyin": ["jiā"]},
+                {"text": "里", "pinyin": ["lǐ"]},
+                {"text": "没有", "pinyin": ["méi", "yǒu"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "时候", "pinyin": ["shí", "hou"]},
+                {"text": "收", "pinyin": ["shōu"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "了", "pinyin": ["liǎo"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c6",
+              "tokens": [
+                {"text": "如果", "pinyin": ["rú", "guǒ"]},
+                {"text": "大家", "pinyin": ["dà", "jiā"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "需要", "pinyin": ["xū", "yào"]},
+                {"text": "不同", "pinyin": ["bù", "tóng"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c7",
+              "tokens": [
+                {"text": "就", "pinyin": ["jiù"]},
+                {"text": "不必", "pinyin": ["bù", "bì"]},
+                {"text": "只", "pinyin": ["zhǐ"]},
+                {"text": "选", "pinyin": ["xuǎn"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "种", "pinyin": ["zhǒng"]},
+                {"text": "方式", "pinyin": ["fāng", "shì"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c8",
+              "tokens": [
+                {"text": "可以", "pinyin": ["kě", "yǐ"]},
+                {"text": "保留", "pinyin": ["bǎo", "liú"]},
+                {"text": "快递", "pinyin": ["kuài", "dì"]},
+                {"text": "站", "pinyin": ["zhàn"]},
+                {"text": "，", "pinyin": []},
+                {"text": "同时", "pinyin": ["tóng", "shí"]},
+                {"text": "让", "pinyin": ["ràng"]},
+                {"text": "需要", "pinyin": ["xū", "yào"]},
+                {"text": "帮助", "pinyin": ["bāng", "zhù"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "预约", "pinyin": ["yù", "yuē"]},
+                {"text": "送", "pinyin": ["sòng"]},
+                {"text": "上门", "pinyin": ["shàng", "mén"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c9",
+              "tokens": [
+                {"text": "送", "pinyin": ["sòng"]},
+                {"text": "上门", "pinyin": ["shàng", "mén"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "时间", "pinyin": ["shí", "jiān"]},
+                {"text": "可以", "pinyin": ["kě", "yǐ"]},
+                {"text": "固定", "pinyin": ["gù", "dìng"]},
+                {"text": "在", "pinyin": ["zài"]},
+                {"text": "晚上", "pinyin": ["wǎn", "shang"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p2-c10",
+              "tokens": [
+                {"text": "这样", "pinyin": ["zhè", "yàng"]},
+                {"text": "送", "pinyin": ["sòng"]},
+                {"text": "快递", "pinyin": ["kuài", "dì"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "把", "pinyin": ["bǎ"]},
+                {"text": "同一", "pinyin": ["tóng", "yī"]},
+                {"text": "座", "pinyin": ["zuò"]},
+                {"text": "楼", "pinyin": ["lóu"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "包裹", "pinyin": ["bāo", "guǒ"]},
+                {"text": "一起", "pinyin": ["yī", "qǐ"]},
+                {"text": "送", "pinyin": ["sòng"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "english": "During the first trial month, the complex would record how many residents booked delivery and when their packages arrived. Booking numbers alone aren’t enough. Even if few people book delivery, ask residents who often find it hard to carry packages. If they receive them on time and the couriers don’t have to make extra trips, the arrangement is worth keeping.",
+          "sentenceEnglish": [
+            "We could try the system for a month. The complex would record how many residents booked delivery and when their packages arrived.",
+            "Booking numbers alone aren’t enough.",
+            "Even if few people book a delivery, ask residents who often find packages too heavy to carry.",
+            "If they receive their packages on time and couriers don’t need extra trips, the arrangement is worth keeping."
+          ],
+          "chunks": [
+            {
+              "id": "p3-c1",
+              "tokens": [
+                {"text": "我们", "pinyin": ["wǒ", "men"]},
+                {"text": "可以", "pinyin": ["kě", "yǐ"]},
+                {"text": "先", "pinyin": ["xiān"]},
+                {"text": "试用", "pinyin": ["shì", "yòng"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "个", "pinyin": ["ge"]},
+                {"text": "月", "pinyin": ["yuè"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c2",
+              "tokens": [
+                {"text": "小区", "pinyin": ["xiǎo", "qū"]},
+                {"text": "每", "pinyin": ["měi"]},
+                {"text": "天", "pinyin": ["tiān"]},
+                {"text": "记", "pinyin": ["jì"]},
+                {"text": "下", "pinyin": ["xià"]},
+                {"text": "预约", "pinyin": ["yù", "yuē"]},
+                {"text": "人数", "pinyin": ["rén", "shù"]},
+                {"text": "和", "pinyin": ["hé"]},
+                {"text": "送", "pinyin": ["sòng"]},
+                {"text": "到", "pinyin": ["dào"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "时间", "pinyin": ["shí", "jiān"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c3",
+              "tokens": [
+                {"text": "只", "pinyin": ["zhǐ"]},
+                {"text": "看", "pinyin": ["kàn"]},
+                {"text": "有", "pinyin": ["yǒu"]},
+                {"text": "多少", "pinyin": ["duō", "shao"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "预约", "pinyin": ["yù", "yuē"]},
+                {"text": "还", "pinyin": ["hái"]},
+                {"text": "不够", "pinyin": ["bù", "gòu"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c4",
+              "tokens": [
+                {"text": "即使", "pinyin": ["jí", "shǐ"]},
+                {"text": "预约", "pinyin": ["yù", "yuē"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "多", "pinyin": ["duō"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c5",
+              "tokens": [
+                {"text": "也", "pinyin": ["yě"]},
+                {"text": "要", "pinyin": ["yào"]},
+                {"text": "问", "pinyin": ["wèn"]},
+                {"text": "一", "pinyin": ["yī"]},
+                {"text": "问", "pinyin": ["wèn"]},
+                {"text": "那些", "pinyin": ["nà", "xiē"]},
+                {"text": "常常", "pinyin": ["cháng", "cháng"]},
+                {"text": "搬", "pinyin": ["bān"]},
+                {"text": "不", "pinyin": ["bù"]},
+                {"text": "动", "pinyin": ["dòng"]},
+                {"text": "包裹", "pinyin": ["bāo", "guǒ"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "居民", "pinyin": ["jū", "mín"]},
+                {"text": "。", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c6",
+              "tokens": [
+                {"text": "如果", "pinyin": ["rú", "guǒ"]},
+                {"text": "他们", "pinyin": ["tā", "men"]},
+                {"text": "能", "pinyin": ["néng"]},
+                {"text": "按时", "pinyin": ["àn", "shí"]},
+                {"text": "收到", "pinyin": ["shōu", "dào"]},
+                {"text": "快递", "pinyin": ["kuài", "dì"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c7",
+              "tokens": [
+                {"text": "而", "pinyin": ["ér"]},
+                {"text": "送", "pinyin": ["sòng"]},
+                {"text": "快递", "pinyin": ["kuài", "dì"]},
+                {"text": "的", "pinyin": ["de"]},
+                {"text": "人", "pinyin": ["rén"]},
+                {"text": "也", "pinyin": ["yě"]},
+                {"text": "没有", "pinyin": ["méi", "yǒu"]},
+                {"text": "因此", "pinyin": ["yīn", "cǐ"]},
+                {"text": "多", "pinyin": ["duō"]},
+                {"text": "跑", "pinyin": ["pǎo"]},
+                {"text": "几", "pinyin": ["jǐ"]},
+                {"text": "次", "pinyin": ["cì"]},
+                {"text": "，", "pinyin": []}
+              ]
+            },
+            {
+              "id": "p3-c8",
+              "tokens": [
+                {"text": "这个", "pinyin": ["zhè", "ge"]},
+                {"text": "办法", "pinyin": ["bàn", "fǎ"]},
+                {"text": "就", "pinyin": ["jiù"]},
+                {"text": "值得", "pinyin": ["zhí", "de"]},
+                {"text": "保留", "pinyin": ["bǎo", "liú"]},
+                {"text": "下来", "pinyin": ["xià", "lái"]},
+                {"text": "。", "pinyin": []}
+              ]
+            }
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "……，同时……",
+          "note": "Use 同时 to introduce a second action pursued alongside the first one.",
+          "example": {
+            "hanzi": "我们可以保留周末的服务，同时增加晚上的时间。",
+            "pinyin": "Wǒmen kěyǐ bǎoliú zhōumò de fúwù, tóngshí zēngjiā wǎnshang de shíjiān.",
+            "english": "We can keep the weekend service while adding evening times."
+          },
+          "id": "g1",
+          "sourceChunks": [
+            "p2-c8"
+          ]
+        },
+        {
+          "pattern": "即使……也……",
+          "frameId": "adv-even-if",
+          "note": "即使 introduces a possible condition under which the speaker’s proposal still holds.",
+          "example": {
+            "hanzi": "即使只收到几条意见，我们也要认真看。",
+            "pinyin": "Jíshǐ zhǐ shōudào jǐ tiáo yìjiàn, wǒmen yě yào rènzhēn kàn.",
+            "english": "Even if we receive only a few comments, we need to read them carefully."
+          },
+          "id": "g2",
+          "sourceChunks": [
+            "p3-c4",
+            "p3-c5"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "新的办法给有需要的居民什么选择？",
+          "answer": "他们可以预约送上门。",
+          "evidence": {
+            "paragraphId": "p2",
+            "chunkId": "p2-c8"
+          },
+          "id": "q1"
+        },
+        {
+          "question": "为什么把送上门的时间固定在晚上？",
+          "answer": "这样快递员能把同一栋楼的包裹一起送。",
+          "evidence": {
+            "paragraphId": "p2",
+            "chunkId": "p2-c10"
+          },
+          "id": "q2"
+        }
+      ],
+      "writing": {
+        "prompt": "写一段给小区的建议，提出一个可以先试一个月的送快递办法。",
+        "english": "Write a short proposal for a delivery policy your neighborhood could test for one month.",
+        "requirements": [
+          "用同时说明怎样满足两种需要。",
+          "说明用什么信息判断新办法是否成功。"
+        ]
+      },
+      "glossaryCandidates": []
+    }
+  ]
+}
