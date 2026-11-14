@@ -59,3 +59,5 @@
 .cloud-search-heading{margin:0!important;padding:9px 12px!important;font-size:11px;font-weight:700;letter-spacing:.04em;background:var(--surface,#f4f6f7);position:sticky;top:0;z-index:1}
 .cloud-results .cloud-search-more{justify-content:center;font-weight:700}
 @media(max-width:600px){.cloud-search-mode{max-width:115px}.cloud-toolbar .cloud-search{flex:1 1 100%}}
+
+.cloud-learning-links{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px}.cloud-learning-links a{display:inline-flex;align-items:center;min-height:40px}

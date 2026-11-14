@@ -89,7 +89,7 @@ import StudyLookupProvider, {useDictionaryAssistance,StudyText,StudyConfusionsBu
 import PdfExport from "./pdf-export";
 import { LanguagePicker, useI18n } from "./i18n";
 import { localizeItem } from "./translate";
-import { progressSchema } from "./event-schema";
+import { synchronizeProgress } from "./progress-sync";
 import { playRecording, speak, setSpeechRate, stopAudio } from "./audio";
 import { authenticatedFetch } from "./auth-client";
 import type { StudyUser as User } from "./auth-shell";
@@ -147,7 +147,10 @@ export default function StudyApp({
   const [languageRun,setLanguageRun]=useState<string|undefined>(undefined);
   const [mode, setMode] = useState<Mode>("trace");
   const [writingLayout, setWritingLayout] = useState<"studio" | "notebook">("studio");
-  useEffect(()=>{if(view==='practice'&&isLanguageSkill(skill))window.history.replaceState(null,'',languagePracticeHref(skill,selected.id,languageRun));},[view,skill,selected.id,languageRun]);
+  const writingRecallSelector = skill === 'writing' && writingLayout === 'studio' && mode === 'recall';
+  const practiceWordLabel = (item: Item) => isLanguageSkill(skill)
+    ? item.english
+    : [writingRecallSelector ? '' : item.hanzi, item.pinyin, item.english].filter(Boolean).join(' · ');
   const [search, setSearch] = useState("");
   const [searchMode,setSearchMode]=useState<SearchMode>('pinyin');
   const [lesson, setLesson] = useState("all");
@@ -202,6 +205,11 @@ export default function StudyApp({
   useEffect(()=>{if(recognitionWriting) recognitionWriter.current?.showModal();else recognitionWriter.current?.close();},[recognitionWriting]);
   const [finished, setFinished] = useState(false);
   const [isReady, setIsReady] = useState(false);
+  useEffect(() => {
+    if (isReady && view === 'practice' && isLanguageSkill(skill)) {
+      window.history.replaceState(history.state, '', languagePracticeHref(skill, selected.id, languageRun, writingOrigin));
+    }
+  }, [isReady, view, skill, selected.id, languageRun, writingOrigin]);
   const [backup, setBackup] = useState(false);
   const notify = useCallback((message: string) => {
     setToast(message);
@@ -256,7 +264,7 @@ export default function StudyApp({
         const writingRoute=writingPracticeRoute(window.location.search,sourceItems);
         if(alive&&writingRoute){const item=sourceItems.find(v=>v.id===writingRoute.itemId)!;setSelected(item);setLevel(item.hskLevel?('hsk'+item.hskLevel) as StudyLevel:'bonus');setMode(writingRoute.mode);setWritingLayout(writingRoute.layout);setWritingOrigin(writingRoute.origin);setSkill('writing');setSession(null);setFinished(false);setView('practice');}
         else if(alive&&new URLSearchParams(window.location.search).get('study')==='library'){const p=new URLSearchParams(window.location.search);setView('lessons');setSession(null);setLibraryLayout(p.get('layout')==='notebook'?'notebook':'cards');setPracticeSelection(p.get('set')==='selected');if(['hsk1','hsk2','hsk3','bonus'].includes(p.get('level')??''))setLevel(p.get('level') as StudyLevel);}
-        else if(alive&&languageRoute){const target=sourceItems.find(item=>item.id===languageRoute.itemId)!;setLevel(target.hskLevel?('hsk'+target.hskLevel) as StudyLevel:'bonus');setSelected(target);setSkill(languageRoute.skill);setLanguageRun(languageRoute.runId);setMode('recall');setSession(null);setView('practice');
+        else if(alive&&languageRoute){const target=sourceItems.find(item=>item.id===languageRoute.itemId)!;setLevel(target.hskLevel?('hsk'+target.hskLevel) as StudyLevel:'bonus');setSelected(target);setSkill(languageRoute.skill);setLanguageRun(languageRoute.runId);setWritingOrigin(languageRoute.origin);setMode('recall');setSession(null);setFinished(false);setView('practice');
         }else if(alive&&requestedAll){
           const queue=items.filter(item=>isInLevel(item,requestedAll));
           const previous=validRecognitionDraft(recognition)&&recognition.practice&&JSON.stringify(recognition.itemIds)===JSON.stringify(queue.map(i=>i.id))?recognition:null;
@@ -302,51 +310,15 @@ export default function StudyApp({
     try {
       if (!navigator.onLine) throw Error("offline");
       setSync(t("Syncing…"));
-      const local = await allEvents(db);
-      const pending = local.filter((e) => !e.synced);
-      for (let i = 0; i < pending.length;) {
-        const batch: typeof pending = [];
-        while (i < pending.length && batch.length < 20) {
-          const candidate = [...batch, pending[i]];
-          if (
-            new TextEncoder().encode(JSON.stringify({ events: candidate }))
-              .length > 900000
-          ) {
-            if (!batch.length) throw new Error(t("Attempt exceeds sync limit"));
-            break;
-          }
-          batch.push(pending[i++]);
-        }
-        const r = await authenticatedFetch(
-          "/api/progress",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ events: batch }),
-          },
-          user.id,
-        );
-        if (!r.ok) throw Error("sync");
-        await putEvents(
-          db,
-          batch.map((e) => ({ ...e, synced: true })),
-        );
-      }
-      const r = await authenticatedFetch(
-        "/api/progress",
-        {
-          cache: "no-store",
-        },
-        user.id,
-      );
-      if (!r.ok) throw Error("sync");
-      const data = progressSchema.parse(await r.json());
-      await putEvents(
-        db,
-        data.events.map((e: LearningEvent) => ({ ...e, synced: true })),
-      );
-      setEvents(await allEvents(db));
-      setSync(t("All progress synced"));
+      const {events, pending} = await synchronizeProgress({
+        read: () => allEvents(db),
+        put: rows => putEvents(db, rows),
+        request: (method, body) => authenticatedFetch('/api/progress', method === 'GET'
+          ? {cache: 'no-store'}
+          : {method, headers: {'Content-Type': 'application/json'}, body}, user.id),
+      });
+      setEvents(events);
+      setSync(t(pending ? 'Saved here · sync pending' : 'All progress synced'));
     } catch {
       setSync(
         navigator.onLine
@@ -422,8 +394,52 @@ export default function StudyApp({
     window.scrollTo({ top: 0, behavior: "instant" });
   }
   useEffect(()=>{if(!isReady||view!=='practice'||skill!=='writing'||session)return;lastWriting.current={item:selected,mode,layout:writingLayout,origin:writingOrigin};window.history.replaceState(history.state,'',writingPracticeHref(selected.id,mode,writingLayout,writingOrigin));},[isReady,view,skill,selected.id,mode,writingLayout,writingOrigin,session]);
-  function returnFromWriting(){if(history.state?.chineseOSWriting){history.back();return;}if(!writingOrigin){changeView('lessons');return;}stopAudio();setSession(null);setFinished(false);setView(writingOrigin.view);setSearch(writingOrigin.search??'');setLesson(writingOrigin.lesson??'all');if(['hsk1','hsk2','hsk3','bonus'].includes(writingOrigin.level??''))setLevel(writingOrigin.level as StudyLevel);window.history.replaceState(null,'',writingOrigin.url);const y=writingOrigin.scroll;requestAnimationFrame(()=>requestAnimationFrame(()=>window.scrollTo({top:y,behavior:'instant'})));}
-  useEffect(()=>{const back=()=>{const route=writingPracticeRoute(window.location.search,sourceItems);if(route){const item=items.find(i=>i.id===route.itemId);if(item){setSelected(item);setMode(route.mode);setWritingLayout(route.layout);setWritingOrigin(route.origin);setSession(null);setSkill('writing');setView('practice');}}else if(view==='practice'&&!session&&writingOrigin)returnFromWriting();};addEventListener('popstate',back);return()=>removeEventListener('popstate',back);},[view,session,writingOrigin,items]);
+  function restoreWritingOrigin(origin: WritingOrigin) {
+    stopAudio();
+    setSession(null);
+    setFinished(false);
+    setView(origin.view);
+    setSearch(origin.search ?? '');
+    setLesson(origin.lesson ?? 'all');
+    if (['hsk1', 'hsk2', 'hsk3', 'bonus'].includes(origin.level ?? '')) setLevel(origin.level as StudyLevel);
+    requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo({top: origin.scroll, behavior: 'instant'})));
+  }
+  function returnFromWriting() {
+    if (history.state?.chineseOSWriting) { history.back(); return; }
+    if (!writingOrigin) { changeView('lessons'); return; }
+    window.history.replaceState(history.state, '', writingOrigin.url);
+    restoreWritingOrigin(writingOrigin);
+  }
+  useEffect(() => {
+    const back = () => {
+      const writing = writingPracticeRoute(window.location.search, sourceItems);
+      const language = languagePracticeRoute(window.location.search, sourceItems);
+      const practice = writing ?? language;
+      if (practice) {
+        const item = items.find(candidate => candidate.id === practice.itemId);
+        if (!item) return;
+        setSelected(item);
+        setWritingOrigin(practice.origin);
+        setSession(null);
+        setFinished(false);
+        setView('practice');
+        if (writing) {
+          setMode(writing.mode);
+          setWritingLayout(writing.layout);
+          setSkill('writing');
+        } else if (language) {
+          setMode('recall');
+          setSkill(language.skill);
+          setLanguageRun(language.runId);
+        }
+      } else if (view === 'practice' && !session && writingOrigin) {
+        if (window.location.pathname + window.location.search === writingOrigin.url) restoreWritingOrigin(writingOrigin);
+      }
+    };
+    addEventListener('popstate', back);
+    return () => removeEventListener('popstate', back);
+  }, [view, session, writingOrigin, items]);
+
   function startReview(s: Skill, extra: boolean|'all' = false) {
     const queue=buildReviewQueue(events,s,studyItems,minutes,extra==='all'?'all':extra?'extra':'scheduled');
     if (!queue.length) {
@@ -1129,10 +1145,10 @@ export default function StudyApp({
                         setSelected(items.find((i) => i.id === e.target.value)!)
                       }
                     >
-                      {!studyItems.some(i=>i.id===selected.id)&&<option value={selected.id}>{selected.hanzi+' · '+selected.pinyin+' · '+selected.english}</option>}
+                      {!studyItems.some(i=>i.id===selected.id)&&<option value={selected.id}>{practiceWordLabel(selected)}</option>}
                       {studyItems.map((i) => (
                         <option key={i.id} value={i.id}>
-                          {isLanguageSkill(skill)?i.english:i.hanzi+' · '+i.pinyin+' · '+i.english}
+                          {practiceWordLabel(i)}
                         </option>
                       ))}
                     </select>

@@ -8,7 +8,7 @@ import {validWordAnchor} from './word-family-model';
 import type {CloudWord} from './atlas-cloud-model';
 import type {JourneyGroup} from './family-journey-model';
 import type {CloudRoute} from './atlas-cloud-route';
-import {atlasWorkspaceHref, atlasWorkspaceScroll, isAtlasWorkspaceEntry, readAtlasWorkspaceRoute, type WorkspaceKind, type WorkspaceRoute} from './atlas-workspace-route';
+import {atlasCloudReturn, atlasWorkspaceHref, atlasWorkspaceScroll, isAtlasWorkspaceEntry, readAtlasWorkspaceRoute, type WorkspaceKind, type WorkspaceRoute} from './atlas-workspace-route';
 import {resolveWorkspaceContext, workspaceExploration, workspaceGroups, workspaceOriginalHref, workspaceScopeLabel, workspaceSelection} from './atlas-workspace-model';
 import {workspaceExploreEvent} from './atlas-workspace-bridge';
 import {WorkspaceBoard, WorkspaceInspector, WorkspaceJourney, WorkspaceMap, WorkspacePractise, useWorkspaceAudio} from './atlas-workspace-content';
@@ -53,7 +53,12 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
   const audio = useWorkspaceAudio(notify);
   const groups = useMemo(() => journeyVisited || route.mode === 'read' || route.relation === 'topic' ? workspaceGroups(locale, route.scope) : [], [journeyVisited, locale, route.mode, route.relation, route.scope]);
   const context = useMemo(() => resolveWorkspaceContext(route, locale, groups), [route, locale, groups]);
-  const query = atlasWorkspaceHref(route);
+  const cloudOrigin = useRef(embedded ? undefined : atlasCloudReturn(new URLSearchParams(window.location.search).get('returnCloud')));
+  function ownHref(next: WorkspaceRoute, scroll = 0) {
+    const href = atlasWorkspaceHref(next, scroll);
+    return cloudOrigin.current ? href + '&returnCloud=' + encodeURIComponent(cloudOrigin.current) : href;
+  }
+  const query = ownHref(route);
 
   useEffect(() => {
     if (embedded) return;
@@ -100,7 +105,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
 
   function navigate(patch: Partial<WorkspaceRoute>, scroll: number | string | null = null, replace = false) {
     const next = {...route, ...patch};
-    const destination = atlasWorkspaceHref(next);
+    const destination = ownHref(next);
     if (destination === query) {
       if (typeof scroll === 'string') document.getElementById(scroll)?.scrollIntoView({block: 'start'});
       return;
@@ -235,7 +240,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
   }
 
   function returnQuery(scroll = 0) {
-    return atlasWorkspaceHref({...route, wordId: context.word?.id ?? route.wordId, hanzi: context.hanzi}, scroll);
+    return ownHref({...route, wordId: context.word?.id ?? route.wordId, hanzi: context.hanzi}, scroll);
   }
 
   function chunksHref(scroll = 0) {
@@ -275,6 +280,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
           onClick={event => follow(event.currentTarget, scroll => readingLabHref(readReadingLabRoute('?hsk=' + route.scope)) + '&returnWorkspace=' + encodeURIComponent(returnQuery(scroll)))}>
           <BookOpen size={16}/> Reading Lab
         </a>
+        {cloudOrigin.current && <a className="aw-reader-link" href={cloudOrigin.current}><ArrowLeft size={16}/> Original Atlas</a>}
         <details className="aw-original"><summary>Original views</summary><div className="aw-original-menu">{originalViews.map(group =>
           <div key={group.name}><strong>{group.name}</strong>{group.views.map(([label, view]) =>
             <a key={view} href={workspaceOriginalHref(route, context, view)} onClick={event => follow(event.currentTarget, scroll => workspaceOriginalHref(route, context, view, scroll))}>{label}</a>
@@ -287,6 +293,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
           <button key={mode} type="button" aria-pressed={route.mode === mode && !route.story} onClick={() => selectMode(mode)}><Icon size={16}/>{label}</button>
         )}</nav>
         <nav className="aw-samples" aria-label="Sample stories and families">
+          <button type="button" onClick={() => explore('person', 'component')} title="Person component family"><span lang="zh-Hans">人 / 亻</span> shapes</button>
           <button type="button" onClick={() => selectFamily('生')} title="生 family"><span lang="zh-Hans">生</span> family</button>
           {(['幕', '明天', '姓'] as const).map(target =>
             <button type="button" key={target} aria-label={'Explore ' + target + ' story'} onClick={() => story(target)} lang="zh-Hans">{target}</button>

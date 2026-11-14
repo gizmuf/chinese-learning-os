@@ -5,3 +5,17 @@ test('IME checks final committed Hanzi, never the latin preedit; composing Enter
 test('additive language skills preserve legacy events and never advance writing or recognition SRS',()=>{const item=m.items.find(x=>x.hanzi==='水'),base={id:crypto.randomUUID(),itemId:item.id,skill:'writing',mode:'recall',rating:3,assisted:false,at:1800000000000,timezone:'Asia/Shanghai',detail:{}};assert.ok(m.eventSchema.safeParse(base).success);const old=m.getCards([base]);const events=m.languageSkills.map(skill=>({...base,id:crypto.randomUUID(),skill}));for(const event of events){assert.ok(m.eventSchema.safeParse(event).success);assert.equal(m.eventSchema.safeParse({...event,mode:'copy'}).success,false);}const cards=m.getCards([base,...events]);assert.deepEqual(cards[item.id+':writing'],old[item.id+':writing']);assert.equal(cards[item.id+':meaning'],undefined);for(const skill of m.languageSkills)assert.ok(cards[item.id+':'+skill]);assert.deepEqual(m.getCards(events.map(e=>({...e,assisted:true}))),{});assert.deepEqual(m.getCards([base,base]),old);});
 
 test('language deep links validate direction and target without changing existing all-word routes',()=>{const href=m.languagePracticeHref('pinyin',m.items[0].id);assert.deepEqual(m.languagePracticeRoute(href.slice(1),m.items),{skill:'pinyin',itemId:m.items[0].id});assert.equal(m.languagePracticeRoute('?practice=all&hsk=1',m.items),null);assert.equal(m.languagePracticeRoute('?practice=made-up',m.items),null);assert.equal(m.languagePracticeRoute('?practice=ime&item=unknown',m.items).itemId,m.items[0].id);});
+
+test('switching language skills and reloading retain the local writing origin and item', () => {
+ const origin = {view: 'lessons', url: '/?study=library&level=hsk2', scroll: 461, search: 'xìng', lesson: 'first', level: 'hsk2'};
+ const runId = '55731edf-42f1-4af1-bc89-552be7907507';
+ const itemId = 'hsk2-464';
+ for (const skill of m.languageSkills) {
+  const href = m.languagePracticeHref(skill, itemId, runId, origin);
+  const reloaded = m.languagePracticeRoute(href.slice(1), m.items);
+  assert.deepEqual(reloaded, {skill, itemId, runId, origin});
+  assert.equal(new URL(reloaded.origin.url, 'https://example.test').searchParams.get('level'), 'hsk2');
+ }
+ const unsafe = m.languagePracticeHref('pinyin', itemId, undefined, {...origin, url: '//other.example'});
+ assert.equal(m.languagePracticeRoute(unsafe.slice(1), m.items).origin, undefined);
+});

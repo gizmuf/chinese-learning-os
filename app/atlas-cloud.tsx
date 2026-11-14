@@ -12,7 +12,7 @@ import {Fragment,useEffect,useMemo,useRef,useState,type CSSProperties} from 'rea
 import {ArrowLeft,ChevronRight,Cloud,Grid2X2,Info,Maximize2,Minimize2,PenLine,Search,Volume2,X} from 'lucide-react';
 import {useI18n} from './i18n';
 import {atlasByHanzi,atlasItem,componentById} from './atlas-model';
-import {cloudWords,wordsForCharacter,familyForComponents,type CloudLevel,type CloudWord} from './atlas-cloud-model';
+import {cloudWords,matchesCloudWordId,wordsForCharacter,familyForComponents,type CloudLevel,type CloudWord} from './atlas-cloud-model';
 import {extendedCharacters,extendedComponent,extendedFamily,type ExtendedCharacter} from './atlas-cloud-extended';
 import type {Item} from './content';
 import type {DictionaryEntry} from './atlas-spatial-model';
@@ -37,7 +37,8 @@ import {useRecognitionProgress} from './recognition-store';
 import type {PracticeQuestion} from './recognition-history';
 import {cloudRelation} from './atlas-cloud-connections';
 
-import {atlasWorkspaceReturn} from './atlas-workspace-route';
+import {atlasWorkspaceReturn, workspaceHrefFromCloud} from './atlas-workspace-route';
+import {readingLabHref, readReadingLabRoute} from './reading-lab-route';
 import {initialCloudRoute,readCloudRoute,cloudRouteHref,cloudFamilyGroups,cloudRelationSelection,type CloudRoute as Route} from './atlas-cloud-route';
 
 type Props={owner:string|null;db:IDBDatabase|null;penOnly:boolean;setPenOnly:(v:boolean)=>void;notify:(v:string)=>void;progress:ReturnType<typeof useAtlasProgress>;onWord:(item:Item)=>void;embedded?:{route:Route;onRoute:(route:Route)=>void;onAssessmentChange:(active:boolean)=>void;onContextWrite?:(item:Item)=>void;contextEntry?:DictionaryEntry}};
@@ -101,9 +102,12 @@ function CloudMap({owner,db,penOnly,setPenOnly,notify,progress,onWord,embedded}:
  const words=useMemo(()=>wordsForCharacter(route.hanzi,locale,route.level),[route.hanzi,locale,route.level]);
  const dictionaryCourseWords=useMemo(()=>words.map(word=>word.hanzi),[words]);
  const allWords=useMemo(()=>cloudWords(locale,route.level),[locale,route.level]);
- const baseSelected=words.find(w=>w.id===route.word)??words.find(w=>w.item&&w.hanzi===character?.word)??words.find(w=>w.item&&w.level&&[...w.hanzi].length>1)??words.find(w=>w.item&&[...w.hanzi].length>1)??words.find(w=>w.item)??words[0];
+ const baseSelected=words.find(w=>matchesCloudWordId(w,route.word))??words.find(w=>w.item&&w.hanzi===character?.word)??words.find(w=>w.item&&w.level&&[...w.hanzi].length>1)??words.find(w=>w.item&&[...w.hanzi].length>1)??words.find(w=>w.item)??words[0];
  const selected=sourceFocus?undefined:baseSelected;
  const learningContext=useMemo(()=>atlasLearningContext(route,locale,allWords,selected),[route,locale,allWords,selected]);
+ const activeWord=learningContext.word;
+ const unifiedHref=workspaceHrefFromCloud(route, activeWord && {id:activeWord.id,hanzi:activeWord.hanzi,sentence:activeWord.item?.sentence},learningContext.character?.hanzi);
+ const readHref=readingLabHref(readReadingLabRoute('?hsk='+route.level))+'&returnWorkspace='+encodeURIComponent(unifiedHref);
  const family=useMemo(()=>getFamily([route.component,...route.parts.filter(p=>p!==route.component)],route.level).sort((a,b)=>relationRank(a.hanzi)-relationRank(b.hanzi)).map(ch=>sourceFocus?.text===ch.hanzi?{...ch,pinyin:sourceFocus.pinyin,meaning:{...ch.meaning,[locale]:sourceFocus.meaning}}:ch),[route.component,route.parts,route.level,route.collection,route.nested,locale,sourceFocus]);
  const groups=cloudFamilyGroups<(typeof family)[number]>(family,route.component);
  const visibleFamily=route.relation==='all'?family:groups[route.relation];
@@ -191,7 +195,11 @@ function CloudMap({owner,db,penOnly,setPenOnly,notify,progress,onWord,embedded}:
 <section className="cloud-sentence"><div className="cloud-zone-title"><span>04</span><h2>{c('In a sentence','Dans une phrase','В предложении')}</h2></div>{sentenceContent}</section></>);
  return <section className={'cloud-lab '+(route.layout==='cloud'?'cloud-restored-layout':'cloud-context-layout')+' layout-'+route.layout+(tour!==null?' cloud-tour-active':'')} aria-label={c('Cloud Atlas','Atlas en nuages','Облачный Атлас')}>
   {!embedded&&<><header className="cloud-heading"><div><span className="cloud-eyebrow">{c('FOLLOW ONE CONNECTION','SUIVRE UN LIEN','СЛЕДУЕМ ЗА СВЯЗЬЮ')}</span><h1><Cloud size={27}/>{c('Cloud Atlas','Atlas en nuages','Облачный Атлас')}<span>。</span></h1></div><div className="cloud-header-actions"><button ref={tourLauncher} className="cloud-tour-launch" onClick={startTour}>{c('Try 人 → 你好','Essayer 人 → 你好','Пройти 人 → 你好')}</button><button onClick={()=>setAbout(!about)} aria-label={c('About this map','À propos de cette carte','Об этой карте')} aria-expanded={about}><Info size={18}/></button><button onClick={()=>setFull(!full)} aria-label={full?c('Exit expanded map','Réduire la carte','Уменьшить карту'):c('Expand map','Agrandir la carte','Развернуть карту')}>{full?<Minimize2 size={18}/>:<Maximize2 size={18}/>}</button></div></header>
-  <a className="text-button" href={atlasChunksHref(route,learningContext.word)}>{libraryCopy.words[locale]} · {libraryCopy.grammar[locale]} →</a>
+  <nav className="cloud-learning-links" aria-label={c('Atlas learning tools','Outils de l’Atlas','Инструменты Атласа')}>
+    <a className="text-button" href={unifiedHref}>{c('Unified Atlas','Atlas unifié','Единый Атлас')}</a>
+    <a className="text-button" href={readHref}>{c('Reading Lab','Atelier de lecture','Лаборатория чтения')}</a>
+    <a className="text-button" href={atlasChunksHref(route,learningContext.word)}>{libraryCopy.words[locale]} · {libraryCopy.grammar[locale]} →</a>
+  </nav>
   <div className="cloud-view-switch" role="group" aria-label={c('Atlas layout','Disposition de l’Atlas','Вид Атласа')}>{(['journey','cloud','family','path','space','words','layers','constellations','matrix'] as const).map(layout=><button key={layout} aria-pressed={route.layout===layout} onClick={()=>go({layout,familyLab:false})}>{layoutName(layout)}</button>)}</div>
   <details className="cloud-other-views"><summary>{c('About these views','À propos des vues','Об этих видах')}</summary><AtlasViewGuide layout={route.layout} name={layoutName(route.layout)} onChange={layout=>go({layout,familyLab:false})}/></details>
   {aboutContent}</>}

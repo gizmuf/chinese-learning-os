@@ -30,7 +30,7 @@ test('Alibaba opens the shared lab with HTTP recording and server evaluation dis
  const previousWindow=globalThis.window;
  const previousDocument=globalThis.document;
  const previousAct=globalThis.IS_REACT_ACT_ENVIRONMENT;
- globalThis.window={location:{pathname:'/pronunciation-lab'},isSecureContext:false};
+ globalThis.window=Object.assign(new EventTarget(),{location:{pathname:'/pronunciation-lab'},isSecureContext:false});
  globalThis.document={getElementById:()=>({})};
  globalThis.IS_REACT_ACT_ENVIRONMENT=true;
  let root;
@@ -59,7 +59,7 @@ test('Alibaba opens the shared lab with HTTP recording and server evaluation dis
 test('the server-rendered route still exposes its existing evaluator consent',async t=>{
  const previousWindow=globalThis.window;
  const previousAct=globalThis.IS_REACT_ACT_ENVIRONMENT;
- globalThis.window={isSecureContext:true};
+ globalThis.window=Object.assign(new EventTarget(),{isSecureContext:true});
  globalThis.IS_REACT_ACT_ENVIRONMENT=true;
  let root;
  t.after(async()=>{
@@ -73,4 +73,48 @@ test('the server-rendered route still exposes its existing evaluator consent',as
  assert.match(content,/Send this recording to Tencent/);
  assert.equal(root.root.findByType('input').props.type,'checkbox');
  assert.equal(root.root.findAllByType('button').find(button=>button.props.children==='Evaluate recording').props.disabled,true);
+});
+
+test('leaving the lab during pending permission releases the eventual microphone stream',async t=>{
+ const previousWindow=globalThis.window;
+ const previousContext=globalThis.AudioContext;
+ const previousOffline=globalThis.OfflineAudioContext;
+ const previousAct=globalThis.IS_REACT_ACT_ENVIRONMENT;
+ const previousMedia=Object.getOwnPropertyDescriptor(navigator,'mediaDevices');
+ const permission=Promise.withResolvers(),requested=Promise.withResolvers();
+ const events=[];
+ globalThis.window=Object.assign(new EventTarget(),{isSecureContext:true});
+ globalThis.AudioContext=class{
+  async resume(){}
+  async close(){events.push('context closed')}
+  createMediaStreamSource(){events.push('capture started');throw Error('Unexpected capture')}
+ };
+ globalThis.OfflineAudioContext=class{};
+ globalThis.IS_REACT_ACT_ENVIRONMENT=true;
+ Object.defineProperty(navigator,'mediaDevices',{configurable:true,value:{getUserMedia(){
+  requested.resolve();
+  return permission.promise;
+ }}});
+ let root;
+ t.after(async()=>{
+  if(root)await act(async()=>root.unmount());
+  globalThis.window=previousWindow;
+  globalThis.AudioContext=previousContext;
+  globalThis.OfflineAudioContext=previousOffline;
+  globalThis.IS_REACT_ACT_ENVIRONMENT=previousAct;
+  if(previousMedia)Object.defineProperty(navigator,'mediaDevices',previousMedia);
+  else delete navigator.mediaDevices;
+ });
+ await act(async()=>{root=create(createElement(CanonicalLab));});
+ const record=root.root.findAllByType('button').find(button=>button.props.children==='Record');
+ assert.equal(record.props.disabled,false);
+ await act(async()=>{record.props.onClick();await requested.promise;});
+ assert.match(JSON.stringify(root.toJSON()),/Opening microphone/);
+ await act(async()=>{
+  window.dispatchEvent(new Event('pagehide'));
+  root.unmount();
+  root=null;
+  permission.resolve({getTracks:()=>[{stop:()=>events.push('track stopped')}]});
+ });
+ assert.deepEqual(events,['context closed','track stopped']);
 });

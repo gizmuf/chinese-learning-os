@@ -1,4 +1,4 @@
-import {cloudWords, type CloudWord} from './atlas-cloud-model';
+import {cloudWords, matchesCloudWordId, type CloudWord} from './atlas-cloud-model';
 import {extendedCharacters, extendedComponent, extendedFamily, type ExtendedCharacter} from './atlas-cloud-extended';
 import {cloudRelation} from './atlas-cloud-connections';
 import {familyJourney, type JourneyGroup} from './family-journey-model';
@@ -87,7 +87,7 @@ export function resolveWorkspaceContext(route: WorkspaceRoute, locale: Locale, g
   const members = route.relation === 'literal' ? familyWords(route.anchor, locale, route.scope)
     : route.relation === 'topic' && group?.kind === 'topic' ? group.words : [];
   const structural = route.relation === 'structure' ? workspaceStructure(route.scope, locale, componentId) : [];
-  const explicit = (candidate: CloudWord) => route.wordId ? candidate.id === route.wordId
+  const explicit = (candidate: CloudWord) => route.wordId ? matchesCloudWordId(candidate, route.wordId)
     : route.kind === 'sentence' ? !!route.expression && candidate.item?.sentence === route.expression
     : route.kind === 'word' ? !!route.expression && candidate.hanzi === route.expression : false;
   const selected = route.wordId || route.expression && (route.kind === 'word' || route.kind === 'sentence')
@@ -175,7 +175,7 @@ export function workspaceExploration(text: string, kind: WorkspaceKind, locale: 
   if (kind === 'component') return {kind, relation: 'structure', part: text, hanzi: '', wordId: '', expression: text, page: 0};
   if (kind === 'character') return {kind, hanzi: text, wordId: '', expression: '', page: 0};
   if (kind === 'sentence') {
-    const current = route.wordId ? cloudWords(locale).find(word => word.id === route.wordId && word.item?.sentence === text) : undefined;
+    const current = route.wordId ? cloudWords(locale).find(word => matchesCloudWordId(word, route.wordId) && word.item?.sentence === text) : undefined;
     const owner = current ?? catalog.find(word => word.item?.sentence === text) ?? cloudWords(locale).find(word => word.item?.sentence === text);
     return {kind, wordId: owner?.id ?? '', expression: text, hanzi: owner && owner.hanzi.includes(route.hanzi) ? route.hanzi : [...(owner?.hanzi || text)][0]};
 

@@ -79,15 +79,34 @@ export function WorkspaceStructureBoard({context, route, explore, onPage}: {
   </>;
 }
 
+function WorkspaceStructureScope() {
+  return <div className="aw-empty"><p>Includes listed recognition characters and characters used in course words within this scope.</p></div>;
+}
+
+function WorkspaceStructureLinks({part, explore}: {part: WorkspaceContext['part']; explore: Explore}) {
+  if (part?.id === '莫') return <div className="aw-actions">
+    <a href="?atlas=1&studio=1&view=stories">Open the 11 authored stories about <span lang="zh-Hans">莫</span></a>
+  </div>;
+  if (!part || !['person', '人', '亻'].includes(part.id)) return null;
+  return <div className="aw-actions" role="group" aria-label="Person component shapes">
+    <button type="button" aria-pressed={part.id === 'person'} onClick={() => explore('person', 'component')}><span lang="zh-Hans">人 / 亻</span> grouped shapes</button>
+    {['人', '亻'].map(glyph => <button key={glyph} type="button" aria-pressed={part.id === glyph} onClick={() => explore(glyph, 'component')}>
+      <span lang="zh-Hans">{glyph}</span> exact shape
+    </button>)}
+  </div>;
+}
+
 export function WorkspaceBoard({route, context, choose, explore, onPage, onWiden}: {
   route: WorkspaceRoute; context: WorkspaceContext; choose: Choose; explore: Explore;
   onPage: (page: number) => void; onWiden: () => void;
 }) {
   if (route.relation === 'structure') return <section className="aw-panel aw-board" aria-label="Component family">
-    <header className="aw-panel-head"><div><p className="aw-relation">Modern character structure</p>
-      <h2><span lang="zh-Hans">{context.part?.glyph ?? route.part}</span> component family</h2></div>
+    <header className="aw-panel-head"><div><p className="aw-relation">Indexed modern structure</p>
+      <h2><span lang="zh-Hans">{context.part?.variants.join(' / ') ?? route.part}</span> component family</h2></div>
       <span>{context.structural.length} in {workspaceScopeLabel(route.scope)}</span>
     </header>
+    <WorkspaceStructureScope/>
+    <WorkspaceStructureLinks part={context.part} explore={explore}/>
     {context.structural.length > 0 ? <WorkspaceStructureBoard route={route} context={context} explore={explore} onPage={onPage}/>
       : <div className="aw-empty"><p>No mapped characters for this component in {workspaceScopeLabel(route.scope)}.</p>
         {route.scope !== 'all' && <button type="button" onClick={onWiden}>Show all vocabulary</button>}</div>}
@@ -267,9 +286,10 @@ export function WorkspaceMap({route, context, locale, choose, explore, onMap, on
   const linked = words.filter(word => word.hanzi.includes(context.hanzi));
   const linkedPage = Math.min(route.page, Math.max(0, Math.ceil(linked.length / workspaceBoardSize) - 1));
   return <section className="aw-panel aw-map" aria-label="Family map">
-    <header className="aw-panel-head"><div><p className="aw-relation">{route.relation === 'structure' ? 'Modern character structure' : route.relation === 'topic' ? 'Study topic' : 'Shared written Hanzi'}</p>
-      <h2>Map <span lang="zh-Hans">{context.part?.glyph || route.anchor}</span></h2></div>
+    <header className="aw-panel-head"><div><p className="aw-relation">{route.relation === 'structure' ? 'Indexed modern structure' : route.relation === 'topic' ? 'Study topic' : 'Shared written Hanzi'}</p>
+      <h2>Map <span lang="zh-Hans">{context.part?.variants.join(' / ') || route.anchor}</span></h2></div>
       <span>{route.relation === 'structure' ? context.structural.length + ' mapped Hanzi' : inventory.characterCount + ' Hanzi in this word set'} · {workspaceScopeLabel(route.scope)}</span></header>
+    {route.relation === 'structure' && <><WorkspaceStructureScope/><WorkspaceStructureLinks part={context.part} explore={explore}/></>}
     {route.relation === 'structure' ? context.structural.length
       ? <WorkspaceStructureBoard route={route} context={context} explore={explore} onPage={onPage}/>
       : <div className="aw-empty"><p>No mapped characters in {workspaceScopeLabel(route.scope)}.</p>

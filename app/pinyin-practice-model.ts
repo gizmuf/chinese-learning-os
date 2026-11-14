@@ -1,5 +1,6 @@
 import {tonePinyin} from './dictionary-source-model';
 import type {Skill} from './content';
+import {appendWritingOrigin, readWritingOrigin, type WritingOrigin} from './writing-navigation';
 export const languageSkills=['pinyin','hanzi-from-pinyin','ime'] as const;
 export type LanguageSkill=typeof languageSkills[number];
 export const isLanguageSkill=(skill:Skill):skill is LanguageSkill=>(languageSkills as readonly string[]).includes(skill);
@@ -12,5 +13,20 @@ export function languageAnswerCorrect(skill:LanguageSkill,answer:string,target:{
  return /\p{Script=Han}/u.test(answer)&&normalizedHanzi(answer)===normalizedHanzi(target.hanzi);
 }
 export const canSubmitComposition=(composing:boolean,native:{isComposing?:boolean;keyCode?:number})=>!composing&&!native.isComposing&&native.keyCode!==229;
-export const languagePracticeHref=(skill:LanguageSkill,itemId:string,runId?:string)=>'/?'+new URLSearchParams({practice:skill,item:itemId,...(runId?{run:runId}:{})});
-export function languagePracticeRoute(search:string,pool:{id:string}[]){const p=new URLSearchParams(search),skill=p.get('practice');if(!(languageSkills as readonly (string|null)[]).includes(skill))return null;const item=pool.find(item=>item.id===p.get('item'))??pool[0];const run=p.get('run');return item?{skill:skill as LanguageSkill,itemId:item.id,...(run&&/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i.test(run)?{runId:run}:{})}:null;}
+export function languagePracticeHref(skill: LanguageSkill, itemId: string, runId?: string, origin?: WritingOrigin) {
+ const params = new URLSearchParams({practice: skill, item: itemId});
+ if (runId) params.set('run', runId);
+ appendWritingOrigin(params, origin);
+ return '/?' + params;
+}
+export function languagePracticeRoute(search: string, pool: readonly {id: string}[]) {
+ const params = new URLSearchParams(search), skill = params.get('practice');
+ if (!(languageSkills as readonly (string | null)[]).includes(skill)) return null;
+ const item = pool.find(item => item.id === params.get('item')) ?? pool[0];
+ if (!item) return null;
+ const runId = params.get('run');
+ const origin = readWritingOrigin(params);
+ return {skill: skill as LanguageSkill, itemId: item.id,
+  ...(runId && /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i.test(runId) ? {runId} : {}),
+  ...(origin ? {origin} : {})};
+}

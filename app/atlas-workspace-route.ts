@@ -1,5 +1,7 @@
 import type {BrowseScope} from './hsk-browse';
 import {parseBrowseScope} from './hsk-browse';
+import {cloudRouteHref, readCloudRoute, type CloudRoute} from './atlas-cloud-route';
+import {isHybridLayout} from './atlas-hybrid-model';
 import {isStoryTarget, type StoryTarget} from './atlas-story-explorer-model';
 
 export const workspaceModes = ['family', 'read', 'map', 'practise'] as const;
@@ -92,5 +94,30 @@ export function atlasWorkspaceScroll(search: string) {
 export function atlasWorkspaceReturn(origin: string | null) {
   if (!origin?.startsWith('?') || origin.length > 2000) return;
   if (!isAtlasWorkspaceEntry(new URLSearchParams(origin))) return;
-  return atlasWorkspaceHref(readAtlasWorkspaceRoute(origin), atlasWorkspaceScroll(origin));
+  const href = atlasWorkspaceHref(readAtlasWorkspaceRoute(origin), atlasWorkspaceScroll(origin));
+  const cloud = atlasCloudReturn(new URLSearchParams(origin).get('returnCloud'));
+  return cloud ? href + '&returnCloud=' + encodeURIComponent(cloud) : href;
+}
+
+/** Accept only a local Cloud Atlas origin and normalize it through the existing route model. */
+export function atlasCloudReturn(origin: string | null) {
+  if (!origin?.startsWith('?') || origin.length > 2000) return;
+  const params = new URLSearchParams(origin);
+  if (params.get('atlas') !== '1' || params.get('cloud') !== '1' || params.has('workspace') || params.has('reader')) return;
+  return cloudRouteHref(readCloudRoute(origin));
+}
+
+export function workspaceHrefFromCloud(route: CloudRoute, word: {id: string; hanzi: string; sentence?: string} | undefined, selectedHanzi?: string) {
+  const literal = route.layout === 'words' || route.layout === 'journey' || isHybridLayout(route.layout);
+  const hanzi = selectedHanzi || (word && !word.hanzi.includes(route.hanzi) ? [...word.hanzi][0] : route.hanzi);
+  const selectedWord = word && (literal || route.kind === 'word' || route.stage === 'sentence') ? word : undefined;
+  const sentence = route.stage === 'sentence' ? selectedWord?.sentence : undefined;
+  return atlasWorkspaceHref({
+    ...readAtlasWorkspaceRoute(''),
+    scope: route.level, mode: route.layout === 'journey' ? 'read' : 'family',
+    anchor: literal ? route.anchor : hanzi,
+    relation: literal ? 'literal' : 'structure',
+    part: route.component, hanzi, wordId: selectedWord?.id ?? '',
+    kind: sentence ? 'sentence' : selectedWord ? 'word' : 'character', expression: sentence ?? '',
+  }) + '&returnCloud=' + encodeURIComponent(cloudRouteHref(route));
 }
