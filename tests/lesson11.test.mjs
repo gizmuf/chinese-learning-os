@@ -36,3 +36,22 @@ test('Lesson11 independent checks use existing isolated Course scheduling; build
  const builder={...e,activityId:d.lesson11Builders.filter(Boolean)[0].id};assert.equal(l.courseEventSchema.safeParse(builder).success,false);assert.ok(l.courseEventSchema.safeParse({...builder,assisted:true}).success);
  assert.ok(reviews.reviewableCourseLessons.some(v=>v.id==='intensive-11'));
 });
+
+test('the Sentence Explorer swaps one recorded vehicle and preserves the sentence pattern', async () => {
+ const {lesson11TransportSentence,sentenceExplorerOrigin}=await load('app/lesson11-sentence-explorer-data.ts');
+ const original=lesson11TransportSentence('metro'),variant=lesson11TransportSentence('taxi');
+ assert.equal(original.sentence.id,sentenceExplorerOrigin);
+ assert.deepEqual(original.parts.map(part=>part.id),['subject','vehicle-verb','vehicle','movement','destination']);
+ assert.deepEqual(original.parts.filter(part=>part.id!=='vehicle'),variant.parts.filter(part=>part.id!=='vehicle'));
+ assert.equal(original.sentence.hanzi.replace('地铁','出租车'),variant.sentence.hanzi);
+ const recordings=JSON.parse(fs.readFileSync('data/lesson11/audio-reuse.json'));
+ for(const {sentence,parts,recording} of [original,variant]){
+  assert.equal(parts.map(part=>part.hanzi).join('')+'。',sentence.hanzi);
+  assert.equal(parts.map(part=>part.pinyin).join(' ').toLowerCase()+'.',sentence.pinyin.toLowerCase());
+  const clip=recordings[sentence.id];
+  assert.equal(clip.text,recording.text);
+  assert.equal(clip.pinyin,recording.pinyin);
+  assert.equal(clip.source,recording.source);
+ }
+ assert.notEqual(original.recording.source,variant.recording.source);
+});

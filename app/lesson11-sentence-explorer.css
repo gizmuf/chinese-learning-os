@@ -1,0 +1,55 @@
+.sentence-explorer {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(42rem, calc(100% - 24px));
+  max-width: none;
+  max-height: calc(100dvh - 24px);
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  padding: clamp(14px, 3vw, 24px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.sentence-explorer::backdrop {background: #1d302688}
+.se-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 14px;
+}
+.se-header h2 {margin: 0; font-size: clamp(20px, 3vw, 26px)}
+.se-header button, .se-choices button {display: inline-flex; align-items: center; gap: 6px}
+.se-sentence {margin: 16px 0 9px}
+.se-sentence p {margin: 4px 0; overflow-wrap: anywhere}
+.se-hanzi {font-size: clamp(25px, 5vw, 38px); line-height: 1.45}
+.se-hanzi mark {
+  color: var(--ink);
+  background: var(--sage);
+  box-shadow: inset 0 -2px var(--green);
+  border-radius: 4px;
+}
+.se-pinyin {color: var(--green)}
+.sentence-explorer h3 {margin: 16px 0 8px; font-size: 16px}
+.se-parts {display: grid; gap: 6px; margin: 0}
+.se-part {
+  display: grid;
+  grid-template-columns: minmax(5.4rem, 1fr) minmax(0, 4fr);
+  gap: 10px;
+  align-items: start;
+  padding: 7px 9px;
+  border-left: 3px solid var(--border);
+  border-radius: 5px;
+}
+.se-part[data-swappable] {background: var(--sage); border-color: var(--green)}
+.se-part dt {display: grid; gap: 2px; overflow-wrap: anywhere}
+.se-part dt strong {font-size: 19px}
+.se-part dd, .se-part p {margin: 0}
+.se-choices {border: 0; padding: 0; margin: 14px 0 0; min-width: 0}
+.se-choices legend {font-weight: 700; margin-bottom: 6px}
+.se-choices > div {display: flex; flex-wrap: wrap; gap: 8px}
+.se-choices button[aria-pressed=true] {background: var(--sage); border-color: var(--green)}

@@ -70,11 +70,13 @@ html[data-theme=dark] .reading-lab{
   font-family:'Songti SC','Noto Serif CJK SC','Noto Serif SC',serif;
   color:var(--rl-ink);font-size:clamp(1.3rem,3.15vw,2.1rem);font-weight:500;line-height:1.72;overflow-wrap:anywhere
 }
-.rl-text[data-aid=pinyin] .rl-paragraph-text,.rl-text[data-aid=tones] .rl-paragraph-text{line-height:2.05}
+.rl-text:is([data-aid=pinyin],[data-aid=tones]) .rl-paragraph-text{line-height:2.05;padding-block-start:.125em}
 .reading-lab .rl-word{
   font:inherit;line-height:inherit;color:inherit;vertical-align:baseline;padding:0;border:0;background:none;
   text-decoration-color:var(--rl-accent);text-underline-offset:.14em;border-radius:3px
 }
+/* Keep chunk underlines close to the Hanzi while the paragraph leads the ruby. */
+.rl-text:is([data-aid=pinyin],[data-aid=tones]) .rl-word{line-height:1.25}
 .reading-lab .rl-word:hover{background:var(--rl-wash);text-decoration:underline;text-decoration-thickness:1px}
 .rl-word ruby{ruby-position:over;ruby-align:center}
 .rl-word rt{font-family:system-ui,sans-serif;font-weight:650;color:var(--rl-tone,var(--rl-accent));font-size:clamp(.8125rem,1.45vw,1rem);line-height:1.12}
