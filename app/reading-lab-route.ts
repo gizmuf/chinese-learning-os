@@ -18,7 +18,7 @@ export type ReadingLabRoute = {
   chunk?: string;
 };
 
-const reviewId = (value: string | null) => value && /^[a-z][a-z\d-]{0,79}:\p{Script=Han}{1,12}$/u.test(value) ? value : undefined;
+const reviewId = (value: string | null) => value && /^[a-z][a-z\d-]{0,79}:(?:\p{Script=Han}{1,12}|p[1-9][0-9]{0,2}-c[1-9][0-9]{0,2}:(?:0|[1-9][0-9]{0,2})(?:~[a-z0-9]{1,7})?)$/u.test(value) ? value : undefined;
 
 const readingId = (value: string | null) => value && /^[a-z][a-z\d-]{0,79}$/i.test(value) ? value : '';
 
@@ -72,12 +72,19 @@ export function readingLabAtlasVisit(entry: DictionaryEntry, kind: WorkspaceKind
   )};
 }
 
-export function readingLabContextualEntry(entry: DictionaryEntry | null, opener: HTMLElement | null) {
+const normalizedLookupReading = (value: string) => value.normalize('NFC').replace(/[\s'’·-]/gu, '').toLowerCase();
+
+export function readingLabContextualEntry(entry: DictionaryEntry | null, opener: HTMLElement | null, original = entry) {
   if (!entry || !readingLabOrigin(opener) || opener?.dataset.readerHeadword !== entry.text) return entry;
   const {readerMeaning, readerPinyin} = opener.dataset;
-  if (!readerMeaning || !readerPinyin) return entry;
-  return {...entry, meaning: readerMeaning, pinyin: readerPinyin, word: undefined,
-    audio: entry.audio?.text === entry.text && entry.audio.pinyin === readerPinyin ? entry.audio : undefined};
+  if (!readerPinyin) return entry;
+  const exactReading = (value?: string) => !!value && normalizedLookupReading(value) === normalizedLookupReading(readerPinyin);
+  const senses = original?.senses?.filter(sense => exactReading(sense.pinyin));
+  const matchingMeaning = senses?.length ? senses.map(sense => sense.meaning).join(' · ') : undefined;
+  return {...entry, pinyin: readerPinyin,
+    meaning: readerMeaning || matchingMeaning || (exactReading(original?.pinyin) && original?.meaning) || 'See meaning in the source sentence.',
+    word: !readerMeaning && exactReading(entry.word?.pinyin) ? entry.word : undefined,
+    audio: entry.audio?.text === entry.text && exactReading(entry.audio.pinyin) ? entry.audio : undefined};
 }
 
 export const readingLabAtlasEvent = 'chinese-os:reading-lab-atlas';

@@ -1,4 +1,5 @@
-import {readingReviewTargetsById} from './reading-lab-review-data';
+import {readingReviewMatchesPinId, readingReviewPinId, readingReviewTargetId, readingReviewTargetsById, resolveReadingReviewTarget, type ReadingReviewSourcePin} from './reading-lab-review-data';
+import {syllableTone} from './reading-lab-model';
 
 export const readingReviewGuestKey = 'chinese-os:reading-reviews:v1:guest';
 export const readingReviewChanged = 'chinese-os:reading-reviews-changed';
@@ -18,7 +19,7 @@ export type ReadingReviewResponse = {word: string; sentence: string; completedAt
   outcome: 'again' | 'remembered'; early: boolean; supported: boolean};
 export type ReadingReviewCard = {
   dueAt: number; step: number; reviewCount: number; revision: number;
-  lastAttemptId?: string; pending?: ReadingReviewPending; lastResponse?: ReadingReviewResponse;
+  lastAttemptId?: string; pending?: ReadingReviewPending; lastResponse?: ReadingReviewResponse; target?: ReadingReviewSourcePin;
 };
 export type ReadingReviewStore = {version: 1; cards: Record<string, ReadingReviewCard>};
 type StoreAccess = Pick<Storage, 'getItem' | 'setItem'>;
@@ -36,21 +37,45 @@ const integer = (value: unknown, min: number, max: number): value is number =>
 const timestamp = (value: unknown): value is number => integer(value, 0, 8_640_000_000_000_000 - 30 * day);
 const attemptId = (value: unknown): value is string => typeof value === 'string' && /^[a-f\d]{8}-[a-f\d]{4}-4[a-f\d]{3}-[89ab][a-f\d]{3}-[a-f\d]{12}$/u.test(value);
 
+const maxReviewCards = 4096;
+
+function validSourcePin(value: unknown): value is ReadingReviewSourcePin {
+  return exact(value, ['article', 'chunk', 'tokenIndex', 'hanzi', 'pinyin', 'sentence'])
+    && typeof value.article === 'string' && /^[a-z][a-z0-9-]{0,79}$/u.test(value.article)
+    && typeof value.chunk === 'string' && /^p[1-9][0-9]{0,2}-c[1-9][0-9]{0,2}$/u.test(value.chunk)
+    && integer(value.tokenIndex, 0, 200)
+    && typeof value.hanzi === 'string' && /^\p{Script=Han}{1,12}$/u.test(value.hanzi)
+    && Array.isArray(value.pinyin) && value.pinyin.length === [...value.hanzi].length
+    && value.pinyin.every(part => typeof part === 'string' && part.length <= 12 && !!syllableTone(part))
+    && typeof value.sentence === 'string' && value.sentence.length <= 512 && /^[\p{Script=Han}\p{P} ]+$/u.test(value.sentence)
+    && value.sentence.includes(value.hanzi);
+}
+
 export function validateReadingReviewStore(raw: unknown): ReadingReviewStore | undefined {
-  if (!exact(raw, ['version', 'cards']) || raw.version !== 1 || !exact(raw.cards, [], [...readingReviewTargetsById.keys()])) return;
+  if (!exact(raw, ['version', 'cards']) || raw.version !== 1 || !raw.cards || typeof raw.cards !== 'object' || Object.getPrototypeOf(raw.cards) !== Object.prototype) return;
+  const entries = Object.entries(raw.cards);
+  if (entries.length > maxReviewCards) return;
   const store = emptyReadingReviewStore();
-  for (const [target, card] of Object.entries(raw.cards)) {
-    if (!exact(card, ['dueAt', 'step', 'reviewCount', 'revision'], ['lastAttemptId', 'pending', 'lastResponse']) || !timestamp(card.dueAt)
+  for (const [target, card] of entries) {
+    if (!exact(card, ['dueAt', 'step', 'reviewCount', 'revision'], ['lastAttemptId', 'pending', 'lastResponse', 'target']) || !timestamp(card.dueAt)
       || !integer(card.step, 0, intervals.length) || !integer(card.reviewCount, 0, 100_000) || !integer(card.revision, 0, 100_000)
       || card.revision !== card.reviewCount || card.step > card.reviewCount
       || (card.reviewCount === 0 ? Object.hasOwn(card, 'lastAttemptId') : !attemptId(card.lastAttemptId))) return;
+    const pin = card.target;
+    if (pin === undefined) {
+      if (!readingReviewTargetsById.has(target) || Object.hasOwn(card, 'target')) return;
+    } else if (!validSourcePin(pin) || !readingReviewMatchesPinId(target, pin)) return;
+    const entry = resolveReadingReviewTarget(target, {target: pin});
+    // A well-formed pin whose source changed stays in the store, outside the active queue.
+    const hanzi = entry?.hanzi ?? pin?.hanzi;
+    if (!hanzi) return;
     if (Object.hasOwn(card, 'lastResponse')) {
       const response = card.lastResponse;
       if (!card.reviewCount || !exact(response, ['word', 'sentence', 'completedAt', 'scenarioIndex', 'outcome', 'early', 'supported'])
         || typeof response.word !== 'string' || response.word.length > readingReviewWordLimit || typeof response.sentence !== 'string' || response.sentence.length > readingReviewSentenceLimit
         || !timestamp(response.completedAt) || response.scenarioIndex !== (card.reviewCount - 1) % 2
         || (response.outcome !== 'again' && response.outcome !== 'remembered') || typeof response.early !== 'boolean' || typeof response.supported !== 'boolean'
-        || (response.outcome === 'remembered' && (response.supported || normalizedWord(response.word) !== readingReviewTargetsById.get(target)?.hanzi || !hasSentence(target, response.sentence) || copiedSentence(target, response.sentence)))) return;
+        || (response.outcome === 'remembered' && (response.supported || normalizedWord(response.word) !== hanzi || !hasSentence(hanzi, response.sentence) || !!entry && copiedSentence(entry, response.sentence)))) return;
     }
     let pending: ReadingReviewPending | undefined;
     if (Object.hasOwn(card, 'pending')) {
@@ -61,7 +86,7 @@ export function validateReadingReviewStore(raw: unknown): ReadingReviewStore | u
         || typeof p.sentence !== 'string' || p.sentence.length > readingReviewSentenceLimit || typeof p.help !== 'boolean'
         || typeof p.sampleShown !== 'boolean' || typeof p.sourceSeen !== 'boolean'
         || (p.stage === 'recall' && (p.sentence || p.help || p.sampleShown))
-        || (p.stage === 'sentence' && !p.help && normalizedWord(p.word) !== readingReviewTargetsById.get(target)?.hanzi)) return;
+        || (p.stage === 'sentence' && !p.help && normalizedWord(p.word) !== hanzi)) return;
       pending = p as ReadingReviewPending;
     }
     store.cards[target] = {...card, ...(pending && {pending})} as ReadingReviewCard;
@@ -81,44 +106,42 @@ export function mergeReadingReviewStores(local: ReadingReviewStore, incoming: Re
 }
 
 export function readingReviewSchedule(store: ReadingReviewStore, now: number) {
-  const entries = Object.entries(store.cards).sort(([, a], [, b]) => a.dueAt - b.dueAt);
+  const entries = Object.entries(store.cards).filter(([id, card]) => resolveReadingReviewTarget(id, card)).sort(([, a], [, b]) => a.dueAt - b.dueAt);
   const due = entries.filter(([, card]) => card.dueAt <= now).map(([id]) => id);
   return {due, nextDue: entries.find(([, card]) => card.dueAt > now)?.[1].dueAt};
 }
 
 export function readingReviewScenario(target: string, card: ReadingReviewCard) {
-  const scenarios = readingReviewTargetsById.get(target)!.scenarios;
-  return scenarios[card.reviewCount % scenarios.length];
+  const scenarios = resolveReadingReviewTarget(target, card)?.scenarios;
+  return scenarios && scenarios[card.reviewCount % scenarios.length];
 }
 const normalizedWord = (value: string) => value.normalize('NFKC').trim();
 const normalized = (value: string) => value.normalize('NFKC').replace(/[\p{Z}\p{P}\p{Cf}\s]/gu, '');
 const hanziCount = (value: string) => value.match(/\p{Script=Han}/gu)?.length ?? 0;
 
-function hasSentence(target: string, value: string) {
-  const {hanzi} = readingReviewTargetsById.get(target)!;
+function hasSentence(hanzi: string, value: string) {
   const sentence = normalized(value);
   const rest = sentence.split(hanzi).join('');
-  return sentence.includes(hanzi) && hanziCount(rest) >= 3 && new Set(rest.match(/\p{Script=Han}/gu)).size >= 2;
+  return sentence.includes(hanzi) && hanziCount(rest) >= 1;
 }
 
-function copiedSentence(target: string, value: string) {
-  const entry = readingReviewTargetsById.get(target)!;
+function copiedSentence(entry: NonNullable<ReturnType<typeof resolveReadingReviewTarget>>, value: string) {
   const sentence = normalized(value);
-  return [...entry.articleSentences, ...entry.scenarios.map(example => example.hanzi)].some(example => normalized(example) === sentence);
+  return [...entry.articleSentences, ...entry.scenarios.flatMap(example => example.hanzi ? [example.hanzi] : [])].some(example => normalized(example) === sentence);
 }
 
 export function readingReviewEligibility(target: string, card: ReadingReviewCard) {
-  const entry = readingReviewTargetsById.get(target)!;
+  const entry = resolveReadingReviewTarget(target, card);
   const pending = card.pending;
-  if (!pending || pending.stage !== 'sentence') return {sentenceReady: false, independent: false};
-  const sentenceReady = hasSentence(target, pending.sentence);
-  const copiesModel = copiedSentence(target, pending.sentence);
+  if (!entry || !pending || pending.stage !== 'sentence') return {sentenceReady: false, independent: false};
+  const sentenceReady = hasSentence(entry.hanzi, pending.sentence);
+  const copiesModel = copiedSentence(entry, pending.sentence);
   const independent = sentenceReady && !pending.help && !pending.sourceSeen && !copiesModel
     && normalizedWord(pending.word) === entry.hanzi;
   return {sentenceReady, independent};
 }
 
-export type ReadingReviewAction = {type: 'save'} | {type: 'begin'; attempt: string}
+export type ReadingReviewAction = {type: 'save'; target?: ReadingReviewSourcePin} | {type: 'begin'; attempt: string}
   | {type: 'edit'; attempt: string; field: 'word' | 'sentence'; value: string}
   | {type: 'reveal'; attempt: string; help: boolean}
   | {type: 'sample' | 'source'; attempt: string}
@@ -132,9 +155,11 @@ export function readingReviewNext(card: ReadingReviewCard, outcome: ReadingRevie
 }
 
 function updateReadingReviewCard(target: string, card: ReadingReviewCard | undefined, action: ReadingReviewAction, now: number): ReadingReviewCard {
-  const entry = readingReviewTargetsById.get(target);
+  const sourcePin = action.type === 'save' && action.target && readingReviewMatchesPinId(target, action.target) ? action.target : undefined;
+  const entry = resolveReadingReviewTarget(target, card ?? {target: sourcePin});
   if (!entry || !timestamp(now)) throw Error('Unknown review target or time');
-  if (action.type === 'save') return card ?? {dueAt: now + day, step: 0, reviewCount: 0, revision: 0};
+  if (action.type === 'save') return card ?? {dueAt: now + day, step: 0, reviewCount: 0, revision: 0,
+    ...(sourcePin && {target: sourcePin})};
   if (!card || !attemptId(action.attempt)) throw Error('Reading review is unavailable');
   if (action.type === 'begin') {
     if (card.pending) return card;
@@ -165,7 +190,7 @@ function updateReadingReviewCard(target: string, card: ReadingReviewCard | undef
   const eligible = readingReviewEligibility(target, card);
   if (action.outcome === 'remembered' && !eligible.independent) throw Error('Use Again for supported practice');
   const {early, step, dueAt} = readingReviewNext(card, action.outcome, now);
-  return {dueAt, step, reviewCount: card.reviewCount + 1, revision: card.revision + 1, lastAttemptId: action.attempt,
+  return {dueAt, step, ...(card.target && {target: card.target}), reviewCount: card.reviewCount + 1, revision: card.revision + 1, lastAttemptId: action.attempt,
     lastResponse: {word: pending.word, sentence: pending.sentence, completedAt: now, scenarioIndex: card.reviewCount % 2,
       outcome: action.outcome, early, supported: !eligible.independent}};
 }
@@ -181,6 +206,11 @@ export function newReadingReviewAttemptId() {
 
 export function persistReadingReview(storage: StoreAccess, owner: string | null, target: string, action: ReadingReviewAction, now = Date.now()) {
   const current = readReadingReviewStore(storage, owner);
+  if (action.type === 'save' && action.target) {
+    if (!validSourcePin(action.target) || !resolveReadingReviewTarget(readingReviewPinId(action.target), {target: action.target})
+        || (target !== readingReviewPinId(action.target) && target !== readingReviewTargetId(action.target, current.cards))) throw Error('Review source no longer matches the reading');
+    target = readingReviewTargetId(action.target, current.cards);
+  }
   const previous = current.cards[target];
   const nextCard = updateReadingReviewCard(target, previous, action, now);
   if (previous === nextCard) return current;

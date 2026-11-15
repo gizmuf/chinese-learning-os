@@ -12,7 +12,7 @@ import {act, create} from 'react-test-renderer';
 const require = createRequire(import.meta.url);
 const {outputFiles: [bundle]} = await build({
   stdin: {contents: `export {ReadingReview} from './app/reading-lab-review';
-    export {readingReviewTargets} from './app/reading-lab-review-data';
+    export {readingReviewTargets, findReadingReviewSource, readingReviewPinId} from './app/reading-lab-review-data';
     export {persistReadingReview} from './app/reading-lab-review-model';`, resolveDir: process.cwd()},
   bundle: true, jsx: 'automatic', platform: 'node', format: 'esm', write: false,
   plugins: [{name: 'shared-react', setup(builder) {
@@ -75,5 +75,33 @@ test('active review hides the target and another tab completing a joined attempt
   assert.equal(button('Retry save'), undefined);
   assert.equal(writes.some(request => request.type === 'begin'), false);
   assert.equal(store.cards[target.id].lastResponse.sentence, inputText);
+  await act(() => renderer.unmount());
+});
+
+test('noncurated review renders the exact cloze and later offers the labeled source instead of a fabricated sample', async () => {
+  const {findReadingReviewSource, readingReviewPinId} = model;
+  const pin = findReadingReviewSource('hsk4-repair-before-replace', 'p1-c9', 1);
+  assert.equal(pin.hanzi, '只');
+  const id = readingReviewPinId(pin);
+  const rows = new Map();
+  const storage = {getItem: key => rows.get(key) ?? null, setItem: (key, value) => rows.set(key, value)};
+  const action = (action, now = base + day) => model.persistReadingReview(storage, null, id, action, now);
+  action({type: 'save', target: pin}, base);
+  let store = action({type: 'begin', attempt: '7a7ff4ee-f450-4428-84b6-000000000010'});
+  let renderer;
+  const render = () => createElement(model.ReadingReview, {id, reviews: {ready: true, store, now: base + day, write: (_id, request) => {
+    store = action(request);
+    renderer.update(render());
+  }}, onExit() {}, onSource() {}});
+  await act(() => {renderer = create(render());});
+  const button = label => renderer.root.findAllByType('button').find(element => content(element) === label);
+  assert.match(content(renderer.root), /Context recall.*原来＿＿需要换个灯泡/su);
+  assert.doesNotMatch(content(renderer.root), /只|zhǐ|zhī|classifier/u);
+  await act(() => button('Need help').props.onClick());
+  assert.match(content(renderer.root), /只zhǐ/u);
+  assert.equal(button('Compare a sample'), undefined);
+  await act(() => button('View source sentence').props.onClick());
+  assert.match(content(renderer.root), /Source sentence.*原来只需要换个灯泡/su);
+  assert.equal(button('Remembered').props.disabled, true);
   await act(() => renderer.unmount());
 });

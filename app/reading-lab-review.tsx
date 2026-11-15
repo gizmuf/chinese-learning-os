@@ -1,7 +1,7 @@
 'use client';
 
 import {useEffect, useRef, useState} from 'react';
-import {readingReviewTargets, readingReviewTargetsById} from './reading-lab-review-data';
+import {readingReviewTargets, resolveReadingReviewTarget} from './reading-lab-review-data';
 import {emptyReadingReviewStore, newReadingReviewAttemptId, persistReadingReview, readReadingReviewStore, readingReviewChanged,
   readingReviewEligibility, readingReviewNext, readingReviewScenario, readingReviewSchedule, readingReviewSentenceLimit, readingReviewStorageKey,
   readingReviewWordLimit, type ReadingReviewAction, type ReadingReviewStore} from './reading-lab-review-model';
@@ -49,7 +49,7 @@ export const reviewDate = (timestamp: number) => new Date(timestamp).toLocaleDat
 
 export function ReadingReviewSummary({store, now, onOpen}: {store: ReadingReviewStore; now: number; onOpen: (id: string) => void}) {
   const schedule = readingReviewSchedule(store, now);
-  const first = schedule.due[0] ?? Object.keys(store.cards).find(id => store.cards[id].pending);
+  const first = schedule.due[0] ?? Object.keys(store.cards).find(id => store.cards[id].pending && resolveReadingReviewTarget(id, store.cards[id]));
   if (!first && !schedule.nextDue) return null;
   return <section className="rl-followup" aria-label="Saved reading reviews">
     <h2>Reading reviews</h2>
@@ -61,13 +61,19 @@ export function ReadingReviewSummary({store, now, onOpen}: {store: ReadingReview
 
 export function ReadingReviewSave({article, reviews, onOpen}: {article: string; reviews: ReturnType<typeof useReadingReviews>; onOpen: (id: string) => void}) {
   const [error, setError] = useState(false);
+  const targeted = [...readingReviewTargets.filter(target => target.article === article), ...Object.entries(reviews.store.cards)
+    .flatMap(([id, card]) => {
+      if (card.target?.article !== article) return [];
+      const target = resolveReadingReviewTarget(id, card);
+      return target ? [target] : [];
+    })];
   return <section className="rl-followup rl-review-save" aria-label="Save words for later">
     <h2>Save words for later</h2>
-    <p>Choose words to recall another day and use in a new sentence.</p>
-    {readingReviewTargets.filter(target => target.article === article).map(target => {
+    <p>Choose a word below or tap any word in the passage to save it.</p>
+    {targeted.map(target => {
       const card = reviews.store.cards[target.id];
       return <div key={target.id} className="rl-review-target">
-        <div><strong lang="zh-Hans">{target.hanzi}</strong><span>{target.pinyin} · {target.meaning}</span></div>
+        <div><strong lang="zh-Hans">{target.hanzi}</strong><span>{target.pinyin} · {target.meaning ?? 'Context recall'}</span></div>
         {card?.lastResponse?.sentence && <details><summary>Previous response</summary><p lang="zh-Hans">{card.lastResponse.sentence}</p></details>}
         {card ? <><span>{card.dueAt <= reviews.now ? 'Due now' : 'Next review ' + reviewDate(card.dueAt)}</span>
           <button type="button" onClick={() => onOpen(target.id)}>{card.pending ? 'Resume practice' : card.dueAt <= reviews.now ? 'Review' : 'Practise now'}</button></>
@@ -83,8 +89,8 @@ export function ReadingReviewSave({article, reviews, onOpen}: {article: string; 
 
 export function ReadingReview({id, reviews, onExit, onSource}: {id: string; reviews: ReturnType<typeof useReadingReviews>;
   onExit: () => void; onSource: (id: string) => void}) {
-  const target = readingReviewTargetsById.get(id);
   const card = reviews.store.cards[id];
+  const target = resolveReadingReviewTarget(id, card);
   const pending = card?.pending;
   const [input, setInput] = useState<{attempt: string; word?: string; sentence?: string}>();
   const [failed, setFailed] = useState<{action: ReadingReviewAction; after?: () => void}>();
@@ -105,7 +111,7 @@ export function ReadingReview({id, reviews, onExit, onSource}: {id: string; revi
       after?.();
     } catch {setFailed({action, after});}
   }
-  const saved = !!card;
+  const saved = !!card && !!target;
   useEffect(() => {
     if (!saved || pending || attemptEnded || failed || observedAttempt.current) return;
     beginId.current ??= newReadingReviewAttemptId();
@@ -125,7 +131,7 @@ export function ReadingReview({id, reviews, onExit, onSource}: {id: string; revi
   return <section className="rl-followup rl-review" aria-label="Reading review" data-study-assessment={!attemptEnded ? 'blocked' : undefined}>
     <div className="rl-reading-actions"><button type="button" disabled={!!failed && !attemptEnded} onClick={onExit}>Back to reading</button></div>
     <h1 ref={heading} tabIndex={-1}>{attemptEnded ? 'Review saved' : 'Reading review'}</h1>
-    {!reviews.ready ? <p>Loading review…</p> : !saved || !target ? <p>{reviews.unavailable ? 'Could not read reviews on this browser.' : 'This word is not saved for review in this browser.'}</p> : null}
+    {!reviews.ready ? <p>Loading review…</p> : !saved || !target ? <p>{reviews.unavailable ? 'Could not read reviews on this browser.' : card?.target ? 'This saved word’s source is no longer available. Its record is still saved.' : 'This word is not saved for review in this browser.'}</p> : null}
     {!attemptEnded && saved && target && pending && <>
       {early && <p>Early practice. Your scheduled review date stays the same.</p>}
       {recall ? <form onSubmit={event => {
@@ -133,8 +139,12 @@ export function ReadingReview({id, reviews, onExit, onSource}: {id: string; revi
         if (composing.current) return;
         write({type: 'reveal', attempt: pending.id, help: false});
       }}>
-        <p>Recall the Chinese word for</p>
-        <h2>{target.meaning}</h2>
+        {target.cloze ? <>
+          <h2>Context recall</h2>
+          <p>Write the word missing from this sentence.</p>
+          <div className="rl-review-cloze" lang="zh-Hans">{target.cloze}</div>
+          <p>{target.source.english}</p>
+        </> : <><p>Recall the Chinese word for</p><h2>{target.meaning}</h2></>}
         <label htmlFor="rl-review-word">Your answer in Hanzi</label>
         <input id="rl-review-word" lang="zh-Hans" autoComplete="off" autoCorrect="off" spellCheck={false} maxLength={readingReviewWordLimit}
           onCompositionStart={() => {composing.current = true;}} onCompositionEnd={() => {composing.current = false;}}
@@ -151,7 +161,7 @@ export function ReadingReview({id, reviews, onExit, onSource}: {id: string; revi
           <button type="button" disabled={!!failed} onClick={() => write({type: 'reveal', attempt: pending.id, help: true})}>Need help</button>
         </div>
       </form> : <>
-        <div className="rl-review-answer"><strong lang="zh-Hans">{target.hanzi}</strong><span>{target.pinyin} · {target.meaning}</span></div>
+        <div className="rl-review-answer"><strong lang="zh-Hans">{target.hanzi}</strong><span>{target.pinyin} · {target.meaning ?? 'Context recall'}</span></div>
         <p>{pending.help ? 'This attempt used help. Choose Again when you finish.' : 'Check the word and try it in a different situation.'}</p>
         <div className="rl-reading-actions"><button type="button" disabled={!!failed} onClick={() => write({type: 'source', attempt: pending.id}, () => onSource(id))}>Open source paragraph</button></div>
         <h2>Write a new sentence</h2>
@@ -164,14 +174,16 @@ export function ReadingReview({id, reviews, onExit, onSource}: {id: string; revi
             write({type: 'edit', attempt: pending.id, field: 'sentence', value});
           }}/>
         <p>You judge your sentence. This check does not grade grammar or meaning.</p>
-        {pending.sampleShown ? <div className="rl-review-sample"><h3>One possible sentence</h3><strong lang="zh-Hans">{scenario?.hanzi}</strong><p>{scenario?.pinyin}</p><p>{scenario?.english}</p></div>
-          : <button type="button" disabled={!!failed} onClick={() => write({type: 'sample', attempt: pending.id})}>Compare a sample</button>}
+        {scenario?.hanzi && (pending.sampleShown ? <div className="rl-review-sample"><h3>One possible sentence</h3><strong lang="zh-Hans">{scenario.hanzi}</strong><p>{scenario.pinyin}</p><p>{scenario.english}</p></div>
+          : <button type="button" disabled={!!failed} onClick={() => write({type: 'sample', attempt: pending.id})}>Compare a sample</button>)}
+        {target.cloze && (pending.sourceSeen ? <div className="rl-review-sample"><h3>Source sentence</h3><strong lang="zh-Hans">{target.source.hanzi}</strong><p>{target.source.pinyin}</p><p>{target.source.english}</p></div>
+          : <button type="button" disabled={!!failed} onClick={() => write({type: 'source', attempt: pending.id})}>View source sentence</button>)}
         <div className="rl-reading-actions">
           <button type="button" disabled={!!failed} onClick={() => write({type: 'finish', attempt: pending.id, outcome: 'again'}, () => setFinished(true))}>Again</button>
           <button type="button" disabled={!!failed || !eligibility?.independent} onClick={() => write({type: 'finish', attempt: pending.id, outcome: 'remembered'}, () => setFinished(true))}>Remembered</button>
         </div>
         {!early && again && remembered && <p><b>Again</b> brings this word back tomorrow ({reviewDate(again.dueAt)}). <b>Remembered</b> schedules it in {remembered.interval} days ({reviewDate(remembered.dueAt)}).</p>}
-        {!eligibility?.independent && <p>To choose Remembered, recall the word without help and write your own sentence before opening the source or sample.</p>}
+        {!eligibility?.independent && <p>To choose Remembered, recall the word without help and write your own sentence {target.cloze ? 'without opening the source.' : 'before opening the source or sample.'}</p>}
       </>}
     </>}
     {failed && !attemptEnded && <div role="alert"><p>Could not save this step. Your schedule has not changed.</p><button type="button" onClick={() => write(failed.action, failed.after)}>Retry save</button></div>}

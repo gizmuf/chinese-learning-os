@@ -8,8 +8,8 @@ const {outputFiles:[bundle]}=await build({
  export {shuoshuoMorning} from './app/shuoshuo-lesson-model';
  export {items} from './app/content'; export {privateLibraryKey,privateLessonKey,privateDigest} from './app/private-lessons-model';
  export {readingLabGuestKey} from './app/reading-lab-session'; export {newCourseEvent} from './app/course-learning';
- export {readingReviewGuestKey,validateReadingReviewStore} from './app/reading-lab-review-model';
- export {readingReviewTargets} from './app/reading-lab-review-data';
+ export {persistReadingReview,readReadingReviewStore,readingReviewGuestKey,readingReviewSchedule,validateReadingReviewStore} from './app/reading-lab-review-model';
+ export {findReadingReviewSource,readingReviewTargets,resolveReadingReviewTarget} from './app/reading-lab-review-data';
  export {recognitionQuestions} from './app/atlas-spatial-model'; export {newRecognitionAttempt} from './app/recognition-history';
  export {extendedFamily} from './app/atlas-cloud-extended';`,
  resolveDir:process.cwd()},bundle:true,platform:'node',format:'esm',write:false,
@@ -261,4 +261,81 @@ test('review backup rejects account keys, invented targets and malformed progres
  ]){
   await assert.rejects(m.parseGuestBackup(JSON.stringify({...clean,preferences:[{key,value:JSON.stringify(record)}]})));
  }
+});
+
+function saveClickedReview(storage,article,chunk,tokenIndex,now=0){
+ const target=m.findReadingReviewSource(article,chunk,tokenIndex);
+ assert.ok(target);
+ const key=article+':'+chunk+':'+tokenIndex;
+ return {key,target,store:m.persistReadingReview(storage,null,key,{type:'save',target},now)};
+}
+
+test('clicked-word backup v1 restores complete local targets alongside authored targets and preserves a pending conflict',async()=>{
+ const input=device(), destination=device(), empty=device(), guest=m.readingReviewGuestKey;
+ const day=86_400_000;
+ const [authored]=m.readingReviewTargets;
+ m.persistReadingReview(input.storage,null,authored.id,{type:'save'},0);
+ const clicked=saveClickedReview(input.storage,'hsk4-repair-before-replace','p1-c9',1);
+ const other=saveClickedReview(input.storage,'hsk5-building-secondhand','p2-c12',4);
+ m.persistReadingReview(input.storage,null,other.key,{type:'begin',attempt:id()},day);
+ saveClickedReview(destination.storage,'hsk4-repair-before-replace','p1-c9',1,day);
+ const pending=id();
+ m.persistReadingReview(destination.storage,null,clicked.key,{type:'begin',attempt:pending},2*day);
+ m.persistReadingReview(destination.storage,null,clicked.key,{type:'edit',attempt:pending,field:'word',value:'只'},2*day);
+ const before=m.readReadingReviewStore(destination.storage,null);
+ const source=m.readReadingReviewStore(input.storage,null);
+ const payload=await m.parseGuestBackup(await (await m.exportGuestBackup(input)).file.text());
+ assert.equal(payload.data.version,1);
+ assert.deepEqual(JSON.parse(payload.data.preferences.find(row=>row.key===guest).value),source);
+ assert.deepEqual((await m.restoreGuestBackup(empty,payload)).failed,[]);
+ assert.deepEqual(m.readReadingReviewStore(empty.storage,null),source);
+ assert.deepEqual((await m.restoreGuestBackup(destination,payload)).groups.preferences,{added:1,skipped:0});
+ const merged=m.readReadingReviewStore(destination.storage,null);
+ assert.deepEqual(merged.cards[clicked.key],before.cards[clicked.key]);
+ assert.deepEqual(merged.cards[other.key],source.cards[other.key]);
+ assert.deepEqual(merged.cards[authored.id],source.cards[authored.id]);
+ assert.deepEqual((await m.restoreGuestBackup(destination,payload)).groups.preferences,{added:0,skipped:1});
+});
+
+test('a well-formed retired pin survives guest backup but cannot be selected; malformed pins are rejected',async()=>{
+ const deviceData=device(), destination=device(), guest=m.readingReviewGuestKey;
+ const {key}=saveClickedReview(deviceData.storage,'hsk4-repair-before-replace','p1-c9',1);
+ const retired=m.readReadingReviewStore(deviceData.storage,null);
+ retired.cards[key].target.sentence='只需要换个灯泡。';
+ assert.equal(m.resolveReadingReviewTarget(key,retired.cards[key]),undefined);
+ assert.deepEqual(m.readingReviewSchedule(retired,Number.MAX_SAFE_INTEGER).due,[]);
+ deviceData.storage.setItem(guest,JSON.stringify(retired));
+ const saved=JSON.parse(await (await m.exportGuestBackup(deviceData)).file.text());
+ const restored=await m.parseGuestBackup(JSON.stringify(saved));
+ assert.deepEqual((await m.restoreGuestBackup(destination,restored)).failed,[]);
+ assert.deepEqual(m.readReadingReviewStore(destination.storage,null),retired);
+ const raw=saved.preferences.find(row=>row.key===guest);
+ for(const patch of [{hanzi:'<script>'},{pinyin:['ri5']},{tokenIndex:-1},{externalURL:'https://example.test/'},{sentence:'不再是这个词。'}]){
+  const wrong=structuredClone(retired);
+  Object.assign(wrong.cards[key].target,patch);
+  raw.value=JSON.stringify(wrong);
+  await assert.rejects(m.parseGuestBackup(JSON.stringify(saved)));
+ }
+});
+
+
+test('merging two valid review queues past the card limit preserves the destination queue',async()=>{
+ const guest=m.readingReviewGuestKey;
+ function queue(prefix,count){
+  const cards={};
+  for(let i=0;i<count;i++){
+   const article=prefix+'-'+i,chunk='p1-c1',tokenIndex=0;
+   cards[article+':'+chunk+':'+tokenIndex]={dueAt:86_400_000,step:0,reviewCount:0,revision:0,
+    target:{article,chunk,tokenIndex,hanzi:'读',pinyin:['dú'],sentence:'我读书。'}};
+  }
+  return {version:1,cards};
+ }
+ const source=queue('older-source',2049), current=queue('older-destination',2048);
+ const from=device({[guest]:JSON.stringify(source)}), to=device({[guest]:JSON.stringify(current)});
+ const rawBefore=to.storage.getItem(guest);
+ const {file}=await m.exportGuestBackup(from);
+ const backup=await m.parseGuestBackup(await file.text());
+ assert.deepEqual((await m.restoreGuestBackup(to,backup)).failed,['preferences']);
+ assert.equal(to.storage.getItem(guest),rawBefore);
+ assert.deepEqual(m.readReadingReviewStore(to.storage,null),current);
 });

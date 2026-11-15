@@ -8,6 +8,7 @@ import {DictionaryAudio,StudyDictionaryDialog} from './study-dictionary';
 import {dictionaryTokens,type DictionaryEntry,type Pronunciation,type StudyDictionary} from './atlas-spatial-model';
 import {appStudyDictionary,studyLookupEntry,lookupAtOffset,studyAssessmentSelector,studyFeedbackSelector,studyAtlasHref} from './study-lookup-model';
 import {loadDictionaryResources,fetchDictionaryEntry} from './dictionary-client';
+import {readingLabContextualEntry} from './reading-lab-route';
 import {contextualDictionaryEntry,validDictionaryText,type DictionaryContext} from './dictionary-source-model';
 import {registerDictionaryLexicon} from './atlas-spatial-model';
 import {speakingClip} from './my-day-speaking-model';
@@ -67,7 +68,7 @@ export default function StudyLookupProvider({children,notify,penOnly,setPenOnly,
   if(!inside){opener.current=trigger;activeContext.current=sourceContext(trigger)??atlasRef.current?.entry.contextual;}
   const nestedSource=sourceContext(trigger);if(trigger.dataset?.studySourceRestore==='true')activeContext.current=nestedSource;else if(nestedSource)activeContext.current=nestedSource;
   stopAudio();stop();const token=++requests.current,context=activeContext.current;
-  const present=(value:DictionaryEntry)=>{let selected=contextualDictionaryEntry({...value,meaning:simplifiedDisplayText(value.meaning)},context);if(Array.from(selected.text).length===1&&!studyAtlasHref(selected))selected.atlasAvailable=false;selected=contextualAudio(selected,selected.contextual?(selected.contextual.audio??latestDictionary.current.get(selected.contextual.text)?.audio??speakingClip(selected.contextual.text)??shuoshuoSentenceAudioForText(selected.contextual.text)):undefined);return selected;};
+  const present=(value:DictionaryEntry)=>{const original={...value,meaning:simplifiedDisplayText(value.meaning)};let selected=readingLabContextualEntry(contextualDictionaryEntry(original,context),trigger,original)!;if(Array.from(selected.text).length===1&&!studyAtlasHref(selected))selected.atlasAvailable=false;selected=contextualAudio(selected,selected.contextual?(selected.contextual.audio??latestDictionary.current.get(selected.contextual.text)?.audio??speakingClip(selected.contextual.text)??shuoshuoSentenceAudioForText(selected.contextual.text)):undefined);return selected;};
   const localEntry=()=>studyLookupEntry(latestDictionary.current,text,locale,!!trigger.closest('[data-grammar-frame]'))??(context?.text===text?{text,pinyin:context.pinyin,meaning:context.meaning,phrase:true}:undefined);
   const local=localEntry();
   setEntry(present(local?{...local,...(!local.meaning?{lookupStatus:'loading' as const}:{})}:{text,pinyin:'',meaning:'',lookupStatus:validDictionaryText(text)?'loading':'not-found'}));

@@ -54,3 +54,16 @@ test('an authored reading sense applies only to the exact word and a Reader open
   const nested = {text: '还', pinyin: 'hái', meaning: 'still'};
   assert.equal(reading.readingLabContextualEntry(nested, opener), nested);
 });
+
+test('Reader exact pinyin avoids a competing offline gloss until matching lookup senses arrive', () => {
+  const opener = {dataset: {readerHeadword: '只', readerPinyin: 'zhǐ'}, closest: () => ({})};
+  const originally = {text: '只', pinyin: 'zhī', meaning: 'measure word for many animals'};
+  const adjusted = {...originally, pinyin: 'zhǐ'};
+  const before = reading.readingLabContextualEntry(adjusted, opener, originally);
+  assert.equal(before.pinyin, 'zhǐ');
+  assert.equal(before.meaning, 'See meaning in the source sentence.');
+  const remote = {...originally, senses: [{pinyin: 'zhī', meaning: 'measure word for many animals'}, {pinyin: 'zhǐ', meaning: 'only; merely; just'}]};
+  const after = reading.readingLabContextualEntry(adjusted, opener, remote);
+  assert.equal(after.meaning, 'only; merely; just');
+  assert.equal(reading.readingLabContextualEntry(adjusted, {...opener, closest: () => null}, originally), adjusted);
+});

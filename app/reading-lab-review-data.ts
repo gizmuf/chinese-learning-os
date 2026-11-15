@@ -73,3 +73,99 @@ export const readingReviewTargets = [
 ];
 
 export const readingReviewTargetsById = new Map(readingReviewTargets.map(item => [item.id, item]));
+
+export type ReadingReviewSourcePin = {
+  article: string;
+  chunk: string;
+  tokenIndex: number;
+  hanzi: string;
+  pinyin: string[];
+  sentence: string;
+};
+
+type AuthoredReviewTarget = typeof readingReviewTargets[number];
+export type ReadingReviewTarget = Omit<AuthoredReviewTarget, 'meaning' | 'scenarios'> & {
+  meaning?: string;
+  cloze?: string;
+  scenarios: readonly [{prompt: string} & Partial<ReadingLabExample>, {prompt: string} & Partial<ReadingLabExample>];
+};
+
+const dynamicScenarios: ReadingReviewTarget['scenarios'] = [
+  {prompt: 'Use this word in a short Chinese message to someone about a situation different from the reading.'},
+  {prompt: 'Use this word in a short Chinese sentence about your own day or plans.'},
+];
+const readingById = new Map(readingLabReadings.map(reading => [reading.id, reading]));
+const articleSentenceCache = new Map<string, string[]>();
+
+export const readingReviewPinId = ({article, chunk, tokenIndex}: ReadingReviewSourcePin) => `${article}:${chunk}:${tokenIndex}`;
+
+function alternatePinId(pin: ReadingReviewSourcePin) {
+  let hash = 2166136261;
+  for (const glyph of [pin.hanzi, ...pin.pinyin, pin.sentence].join('|')) hash = Math.imul(hash ^ glyph.codePointAt(0)!, 16777619);
+  return readingReviewPinId(pin) + '~' + (hash >>> 0).toString(36);
+}
+
+export function readingReviewMatchesPinId(id: string, pin: ReadingReviewSourcePin) {
+  return id === readingReviewPinId(pin) || id === alternatePinId(pin);
+}
+
+function findSource(article: string, chunk: string, tokenIndex: number) {
+  const reading = readingById.get(article);
+  const block = reading?.paragraphs.find(paragraph => paragraph.chunks.some(part => part.id === chunk));
+  const part = block?.chunks.find(item => item.id === chunk);
+  const token = part?.tokens[tokenIndex];
+  if (!reading || !block || !token) return;
+  const hanzi = token.text.replaceAll(/[^\p{Script=Han}]/gu, '');
+  if (!hanzi || [...hanzi].length !== token.pinyin.length) return;
+  const sentence = splitReadingSentences(block).find(value => value.tokens.includes(token));
+  if (!sentence) return;
+  const {tokens, ...source} = sentence;
+  const pin: ReadingReviewSourcePin = {article, chunk, tokenIndex, hanzi, pinyin: [...token.pinyin], sentence: source.hanzi};
+  return {reading, block, source, pin};
+}
+
+const sourceCache = new Map<string, NonNullable<ReturnType<typeof findSource>>>();
+function sourceAt(article: string, chunk: string, tokenIndex: number) {
+  const id = `${article}:${chunk}:${tokenIndex}`;
+  const existing = sourceCache.get(id);
+  if (existing) return existing;
+  const found = findSource(article, chunk, tokenIndex);
+  if (found) sourceCache.set(id, found);
+  return found;
+}
+
+export function findReadingReviewSource(article: string, chunk: string, tokenIndex: number): ReadingReviewSourcePin | undefined {
+  const pin = sourceAt(article, chunk, tokenIndex)?.pin;
+  return pin && {...pin, pinyin: [...pin.pinyin]};
+}
+
+function sameWord(a: ReadingReviewSourcePin, b: ReadingReviewSourcePin) {
+  return a.article === b.article && a.hanzi === b.hanzi && a.pinyin.join(' ') === b.pinyin.join(' ');
+}
+
+export function readingReviewTargetId(pin: ReadingReviewSourcePin, cards: Record<string, {target?: ReadingReviewSourcePin}>) {
+  const authored = readingReviewTargetsById.get(`${pin.article}:${pin.hanzi}`);
+  if (authored?.pinyin === pin.pinyin.join('')) return authored.id;
+  const equivalent = Object.entries(cards).find(([id, card]) => card.target?.sentence === pin.sentence && sameWord(card.target, pin)
+    && resolveReadingReviewTarget(id, card));
+  if (equivalent) return equivalent[0];
+  const id = readingReviewPinId(pin);
+  return cards[id] ? alternatePinId(pin) : id;
+}
+
+export function resolveReadingReviewTarget(id: string, card?: {target?: ReadingReviewSourcePin}): ReadingReviewTarget | undefined {
+  const authored = readingReviewTargetsById.get(id);
+  if (authored && !card?.target) return authored;
+  const pin = card?.target;
+  if (!pin || !readingReviewMatchesPinId(id, pin)) return;
+  const actual = sourceAt(pin.article, pin.chunk, pin.tokenIndex);
+  if (!actual || !sameWord(pin, actual.pin) || pin.sentence !== actual.pin.sentence) return;
+  let articleSentences = articleSentenceCache.get(pin.article);
+  if (!articleSentences) {
+    articleSentences = actual.reading.paragraphs.flatMap(splitReadingSentences).map(sentence => sentence.hanzi);
+    articleSentenceCache.set(pin.article, articleSentences);
+  }
+  return {id, article: pin.article, level: actual.reading.level, paragraph: actual.block.id, chunk: pin.chunk,
+    title: actual.reading.title, hanzi: pin.hanzi, pinyin: pin.pinyin.join(''), source: actual.source, articleSentences,
+    cloze: actual.source.hanzi.replaceAll(pin.hanzi, '＿＿'), scenarios: dynamicScenarios};
+}

@@ -232,6 +232,7 @@ function mergeReadingPreference(key:string, previous:string, value:string) {
   const current=validateReadingReviewStore(existing), backup=validateReadingReviewStore(incoming);
   if(!current||!backup||!sameBackupValue(current,existing))return previous;
   const merged=mergeReadingReviewStores(current,backup);
+  if(!validateReadingReviewStore(merged))throw Error('The combined reading review queue does not fit.');
   return sameBackupValue(merged,current)?previous:JSON.stringify(merged);
  }
  const current=validateReadingLabSession(existing), backup=validateReadingLabSession(incoming);

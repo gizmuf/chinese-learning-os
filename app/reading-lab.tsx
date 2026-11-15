@@ -16,7 +16,8 @@ import syllabus from '../data/hsk-levels-source.json';
 import {useStudyLookup} from './study-lookup-context';
 import {useI18n} from './i18n';
 import {ReadingReview, ReadingReviewSave, ReadingReviewSummary, useReadingReviews} from './reading-lab-review';
-import {readingReviewTargetsById} from './reading-lab-review-data';
+import {findReadingReviewSource, readingReviewTargetId, resolveReadingReviewTarget} from './reading-lab-review-data';
+import {readingReviewTokenEvent, type ReadingReviewTokenRequest} from './reading-lab-review-popup';
 import type {ReadingReviewAction} from './reading-lab-review-model';
 import {emptyReadingLabSession, persistReadingLabSession, readReadingLabSession, readingLabDraftLimit, type ReadingLabResume} from './reading-lab-session';
 import Guided from './guided';
@@ -61,13 +62,13 @@ function Modal({children, className, label, onClose}: {children: ReactNode; clas
   </dialog>;
 }
 
-function ReaderToken({token, aid, onChoose}: {token: ReadingLabToken; aid: ReadingAid; onChoose: (text: string, opener: HTMLButtonElement) => void}) {
+function ReaderToken({token, tokenIndex, aid, onChoose}: {token: ReadingLabToken; tokenIndex: number; aid: ReadingAid; onChoose: (text: string, opener: HTMLButtonElement) => void}) {
   const headword = [...token.text].filter(glyph => /\p{Script=Han}/u.test(glyph)).join('');
   if (!headword) return <span className="rl-punctuation">{token.text}</span>;
   const glyphs = aid === 'hanzi' ? undefined : tokenGlyphs(token);
   const meaning = (token as ReadingLabToken & {meaning?: string}).meaning;
-  return <button type="button" className="rl-word" lang="zh-Hans" data-reader-headword={headword}
-    data-reader-meaning={meaning} data-reader-pinyin={meaning ? token.pinyin.join('') : undefined} aria-label={aid === 'hanzi' ? headword : headword + ' · ' + token.pinyin.join(' ')}
+  return <button type="button" className="rl-word" lang="zh-Hans" data-reader-headword={headword} data-reader-review-index={tokenIndex}
+    data-reader-meaning={meaning} data-reader-pinyin={token.pinyin.join('')} aria-label={aid === 'hanzi' ? headword : headword + ' · ' + token.pinyin.join(' ')}
     onClick={event => onChoose(headword, event.currentTarget)}>
     {glyphs ? glyphs.map((glyph, index) => glyph.tone
       ? <ruby key={index} data-tone={glyph.tone}>{glyph.text}<rt aria-hidden="true">{aid === 'tones' ? glyph.mark : glyph.pinyin}</rt></ruby>
@@ -90,7 +91,7 @@ function ReaderParagraph({paragraph, index, route, highlights, onChoose}: {
           const source = sentenceByToken.get(token);
           return <span key={tokenIndex} data-study-source-id={source && route.article + ':' + paragraph.id + ':' + source.sentenceIndex}
             data-study-sentence={source?.sentence.hanzi} data-study-pinyin={source?.sentence.pinyin} data-study-meaning={source?.sentence.english}>
-            <ReaderToken token={token} aid={route.aid} onChoose={(text, opener) => onChoose(text, opener, paragraph.id)}/>
+            <ReaderToken token={token} tokenIndex={tokenIndex} aid={route.aid} onChoose={(text, opener) => onChoose(text, opener, paragraph.id)}/>
           </span>;
         })}
       </span>)}
@@ -383,6 +384,29 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
     };
   }, [route]);
 
+  useLayoutEffect(() => {
+    const node = root.current;
+    if (!node || !route.article || route.review) return;
+    const reviewToken = (event: Event) => {
+      const opener = event.target;
+      if (!(opener instanceof HTMLElement) || opener.closest('[data-reading-lab]') !== node) return;
+      const chunk = opener.closest<HTMLElement>('[data-reader-chunk]')?.dataset.readerChunk;
+      const index = opener.dataset.readerReviewIndex;
+      const request = (event as CustomEvent<ReadingReviewTokenRequest>).detail;
+      if (!chunk || index === undefined || !/^\d+$/.test(index) || !request?.reply) return;
+      const pin = findReadingReviewSource(route.article, chunk, Number(index));
+      if (!pin || pin.hanzi !== opener.dataset.readerHeadword) return;
+      const id = readingReviewTargetId(pin, reviews.store.cards);
+      try {
+        const store = request.save ? reviews.write(id, {type: 'save', target: pin}) : reviews.store;
+        const card = store.cards[readingReviewTargetId(pin, store.cards)];
+        request.reply({pinyin: pin.pinyin.join(''), dueAt: card?.dueAt, error: reviews.unavailable && !request.save});
+      } catch {request.reply({pinyin: pin.pinyin.join(''), error: true});}
+    };
+    node.addEventListener(readingReviewTokenEvent, reviewToken);
+    return () => node.removeEventListener(readingReviewTokenEvent, reviewToken);
+  }, [route.article, route.review, reviews.store, reviews.unavailable]);
+
   function chooseWord(text: string, opener: HTMLButtonElement, paragraph: string) {
     setSelectedWord(text);
     selectedTrigger.current = opener;
@@ -408,7 +432,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   }
 
   function reviewSource(id: string) {
-    const target = readingReviewTargetsById.get(id);
+    const target = resolveReadingReviewTarget(id, reviews.store.cards[id]);
     if (!target) return;
     navigate({review: undefined, reviewReturn: id, article: target.article, level: target.level,
       grammar: route.article === target.article ? route.grammar : '', paragraph: target.paragraph, chunk: target.chunk}, {scroll: target.chunk});
@@ -418,7 +442,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   useLayoutEffect(() => {
     if (!route.article || route.review) return;
     for (const [id, card] of Object.entries(reviews.store.cards)) {
-      if (card.pending && !card.pending.sourceSeen && readingReviewTargetsById.get(id)?.article === route.article) {
+      if (card.pending && !card.pending.sourceSeen && resolveReadingReviewTarget(id, card)?.article === route.article) {
         unsavedSourceVisits.current.set(id, card.pending.id);
         try {
           reviews.write(id, {type: 'source', attempt: card.pending.id});

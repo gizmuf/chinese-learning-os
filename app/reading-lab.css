@@ -175,3 +175,7 @@ html[data-theme=dark] .reading-lab{
 .rl-today-resume span+span{margin-left:9px}
 
 .rl-review-sample h3{margin:0 0 6px;font-size:.88rem}
+.sp-reading-review-action{display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px}
+.sp-reading-review-action small{font-size:.78rem}
+.sp-reading-review-action p{flex-basis:100%;margin:0}
+.rl-review-cloze{font-size:clamp(24px,6vw,32px);line-height:1.45;font-weight:650}
