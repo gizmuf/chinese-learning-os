@@ -91,3 +91,72 @@ test('Opening 姓名 from the HSK 1 story retains the filter and the HSK 2 ident
   assert.equal(context.outsideScope, true);
   assert.ok(!context.members.some(word => word.id === 'hsk2-465'));
 });
+
+test('the optional story pane roundtrips scope, selection, side tab and old Story independently', () => {
+  const legacy = read('?atlas=1&workspace=1&mode=practise&practice=reels&wsstory=姓&step=2');
+  assert.equal(legacy.storyPanel, false);
+  assert.equal(legacy.panelStep, 0);
+  assert.equal(legacy.story, '姓');
+  assert.equal(legacy.step, 2);
+  assert.equal(new URLSearchParams(atlas.atlasWorkspaceHref(legacy)).has('storyPanel'), false);
+  assert.equal(read('?storyPanel=0&panelStep=2').panelStep, 0);
+  for (const mode of ['family', 'read', 'map', 'practise']) {
+    const route = read('?atlas=1&workspace=1&relation=structure&part=莫&anchor=莫&focus=character&hanzi=幕&hsk=all&storyPanel=1&panelStep=2&mode=' + mode);
+    const context = atlas.resolveWorkspaceContext(route, 'en');
+    const href = atlas.atlasWorkspaceHref(route, 51);
+    assert.deepEqual(read(atlas.atlasWorkspaceReturn(href)), route);
+    const original = new URLSearchParams(atlas.workspaceOriginalHref(route, context, 'family', 51));
+    assert.deepEqual(read(atlas.atlasWorkspaceReturn(original.get('returnWorkspace'))), route);
+    const closed = read(atlas.atlasWorkspaceHref({...route, storyPanel: false}));
+    assert.deepEqual(closed, {...route, storyPanel: false, panelStep: 0});
+  }
+});
+
+test('the component and word searches follow the selected family relation', () => {
+  assert.deepEqual(atlas.workspaceFamilySearch(' 莫 ', 'structure'), {
+    relation: 'structure', anchor: '莫', part: '莫', kind: 'component', hanzi: '',
+  });
+  assert.deepEqual(atlas.workspaceFamilySearch(' 莫 ', 'literal'), {
+    relation: 'literal', anchor: '莫', part: '', kind: 'word', hanzi: '莫',
+  });
+  assert.deepEqual(atlas.workspaceFamilySearch('person', 'structure'), {
+    relation: 'structure', anchor: '人', part: 'person', kind: 'component', hanzi: '',
+  });
+  assert.equal(atlas.workspaceFamilySearch('亻', 'structure').part, '亻');
+  assert.equal(atlas.workspaceFamilySearch('person', 'literal'), undefined);
+  assert.equal(atlas.workspaceFamilySearch('明天', 'structure'), undefined);
+});
+
+test('the Mo board retains all eleven indexed members, including one without an authored story', async () => {
+  const route = read('?atlas=1&workspace=1&relation=structure&part=莫&anchor=莫&focus=character&hanzi=幕&hsk=all&storyPanel=1');
+  const context = atlas.resolveWorkspaceContext(route, 'en');
+  assert.equal(context.structural.length, 11);
+  assert.ok(context.structural.length <= atlas.workspaceBoardSize);
+  const members = context.structural.map(member => member.hanzi);
+  assert.deepEqual([...members].sort(), [...'慕摸模漠幕寞膜莫募墓暮'].sort());
+  assert.deepEqual(atlas.workspacePanelStory(route.kind, context.text), {kind: 'explorer', target: '幕'});
+  assert.equal(atlas.workspacePanelStory('character', '寞'), undefined);
+  for (const hanzi of members.filter(member => member !== '幕' && member !== '寞')) {
+    const {kind, story} = atlas.workspacePanelStory('character', hanzi);
+    assert.equal(kind, 'family');
+    assert.equal(story.hanzi, hanzi);
+    assert.ok((await stat('public/atlas/family-stories/' + story.id + '-en.mp3')).size > 0);
+  }
+  const wordRoute = read('?atlas=1&workspace=1&anchor=明&hsk=1&word=tomorrow&storyPanel=1');
+  const wordContext = atlas.resolveWorkspaceContext(wordRoute, 'en');
+  assert.equal(wordContext.word?.id, 'tomorrow');
+  assert.deepEqual(atlas.workspacePanelStory(wordRoute.kind, wordContext.text), {kind: 'explorer', target: '明天'});
+  assert.equal(atlas.workspacePanelStory('word', '明星'), undefined);
+  assert.equal(atlas.workspacePanelStory('sentence', '明天见。'), undefined);
+});
+
+test('the inline pane identifies a retained selection hidden by the vocabulary filter', () => {
+  const route = read('?atlas=1&workspace=1&relation=structure&part=女&anchor=女&focus=character&hanzi=姓&hsk=1&storyPanel=1');
+  const context = atlas.resolveWorkspaceContext(route, 'en');
+  assert.equal(context.text, '姓');
+  assert.equal(atlas.workspacePanelOutsideScope(route, context), true);
+  const widened = {...route, scope: 'all'};
+  assert.equal(atlas.workspacePanelOutsideScope(widened, atlas.resolveWorkspaceContext(widened, 'en')), false);
+  const pinnedWord = read('?atlas=1&workspace=1&anchor=姓&hsk=1&word=hsk2-465&storyPanel=1');
+  assert.equal(atlas.workspacePanelOutsideScope(pinnedWord, atlas.resolveWorkspaceContext(pinnedWord, 'en')), true);
+});

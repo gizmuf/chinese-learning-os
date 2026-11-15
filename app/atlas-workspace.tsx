@@ -4,15 +4,15 @@ import {useEffect, useLayoutEffect, useMemo, useRef, useState, type FormEvent} f
 import {ArrowLeft, ArrowRight, BookOpen, ChevronRight, Columns2, Compass, Maximize2, Minimize2, PenLine} from 'lucide-react';
 import {useI18n} from './i18n';
 import {browseScopes, parseBrowseScope} from './hsk-browse';
-import {validWordAnchor} from './word-family-model';
 import type {CloudWord} from './atlas-cloud-model';
 import type {JourneyGroup} from './family-journey-model';
 import type {CloudRoute} from './atlas-cloud-route';
 import {atlasCloudReturn, atlasWorkspaceHref, atlasWorkspaceScroll, isAtlasWorkspaceEntry, readAtlasWorkspaceRoute, type WorkspaceKind, type WorkspaceRoute} from './atlas-workspace-route';
-import {resolveWorkspaceContext, workspaceExploration, workspaceGroups, workspaceOriginalHref, workspaceScopeLabel, workspaceSelection} from './atlas-workspace-model';
+import {resolveWorkspaceContext, workspaceExploration, workspaceFamilySearch, workspaceGroups, workspaceOriginalHref, workspaceBoardSize, workspaceScopeLabel, workspaceSelection, type WorkspaceFamilyType} from './atlas-workspace-model';
 import {workspaceExploreEvent} from './atlas-workspace-bridge';
 import {WorkspaceBoard, WorkspaceInspector, WorkspaceJourney, WorkspaceMap, WorkspacePractise, useWorkspaceAudio} from './atlas-workspace-content';
 import AtlasStoryExplorer from './atlas-story-explorer';
+import {WorkspaceStoryPane} from './atlas-workspace-story';
 import {isStoryTarget, type StoryTarget} from './atlas-story-explorer-model';
 import './atlas-workspace.css';
 import {readReadingLabRoute, readingLabHref} from './reading-lab-route';
@@ -41,7 +41,10 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
   const [route, setRoute] = useState(() => embedded?.initial ?? readAtlasWorkspaceRoute(window.location.search));
   const [depth, setDepth] = useState(() => embedded ? 0 : workspaceHistory().depth);
   const embedTrail = useRef<{route: WorkspaceRoute; scroll: number}[]>([]);
-  const [draft, setDraft] = useState(route.anchor);
+  const searchType = route.relation === 'structure' ? 'structure' : 'literal';
+  const searchTerm = searchType === 'structure' ? route.part || route.anchor : route.anchor;
+  const [draft, setDraft] = useState(searchTerm);
+  const [familyType, setFamilyType] = useState<WorkspaceFamilyType>(searchType);
   const [error, setError] = useState('');
   const [journeyVisited, setJourneyVisited] = useState(route.mode === 'read');
   const [reelMemory, setReelMemory] = useState(false);
@@ -50,6 +53,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
   const [narrow, setNarrow] = useState(() => matchMedia('(max-width: 850px)').matches);
   const root = useRef<HTMLElement>(null);
   const heading = useRef<HTMLHeadingElement>(null);
+  const panelToggle = useRef<HTMLButtonElement>(null);
   const pendingScroll = useRef<number | string | null>(embedded ? null : atlasWorkspaceScroll(window.location.search) || workspaceHistory().scroll);
   const audio = useWorkspaceAudio(notify);
   const groups = useMemo(() => journeyVisited || route.mode === 'read' || route.relation === 'topic' ? workspaceGroups(locale, route.scope) : [], [journeyVisited, locale, route.mode, route.relation, route.scope]);
@@ -100,9 +104,10 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
   }, []);
 
   useEffect(() => {
-    setDraft(route.anchor);
+    setDraft(searchTerm);
+    setFamilyType(searchType);
     setError('');
-  }, [route.anchor]);
+  }, [searchType, searchTerm]);
 
   function navigate(patch: Partial<WorkspaceRoute>, scroll: number | string | null = null, replace = false) {
     const next = {...route, ...patch};
@@ -152,13 +157,13 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
     requestAnimationFrame(() => heading.current?.focus({preventScroll: true}));
   }
 
-  function explore(text: string, kind: WorkspaceKind) {
+  function explore(text: string, kind: WorkspaceKind, fromPanel = false) {
     const selection = workspaceExploration(text, kind, locale, route);
-    const detour = route.story || kind === 'component' || route.mode === 'practise';
+    const detour = route.story || fromPanel || kind === 'component' || route.mode === 'practise';
     navigate({
-      ...selection, story: '', step: 0, exercise: '',
+      ...selection, story: '', step: 0, panelStep: 0, exercise: '',
       mode: detour ? 'family' : route.mode,
-      ...(route.story && kind === 'character' ? {relation: 'literal', anchor: text, group: '', part: ''} : {}),
+      ...((route.story || fromPanel) && kind === 'character' ? {relation: 'literal', anchor: text, group: '', part: ''} : {}),
     }, detour ? 0 : null);
   }
 
@@ -176,24 +181,25 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
   });
 
   function choose(word: CloudWord) {
-    navigate(workspaceSelection(route, word));
+    navigate({...workspaceSelection(route, word), panelStep: 0});
   }
 
   function selectFamily(anchor: string, keepCharacter = false) {
     navigate({
-      relation: 'literal', anchor, group: '', part: '', mode: 'family', story: '', step: 0, page: 0, exercise: '',
+      relation: 'literal', anchor, group: '', part: '', mode: 'family', story: '', step: 0, panelStep: 0, page: 0, exercise: '',
       kind: keepCharacter ? 'character' : 'word', hanzi: [...anchor][0], wordId: '', expression: '',
     }, 0);
   }
 
   function search(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const anchor = draft.trim();
-    if (!validWordAnchor(anchor)) {
-      setError('Enter one or more Hanzi.');
+    const selection = workspaceFamilySearch(draft, familyType);
+    if (!selection) {
+      setError(familyType === 'literal' ? 'Enter one or more Hanzi.' : 'Enter an indexed component, such as 莫, 亻, or person.');
       return;
     }
-    selectFamily(anchor);
+    setError('');
+    navigate({...selection, group: '', wordId: '', expression: '', mode: 'family', story: '', step: 0, panelStep: 0, page: 0, exercise: ''}, 0);
   }
 
   function selectMode(mode: WorkspaceRoute['mode']) {
@@ -256,13 +262,22 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
     history.replaceState({...history.state, atlasWorkspace: {...workspaceHistory(), scroll: window.scrollY}}, '', location.href);
   }
 
+  const canShowStoryPanel = route.mode === 'family' && !route.story;
+  const showStoryPanel = canShowStoryPanel && route.storyPanel;
+  const shortFamily = (route.relation === 'structure' ? context.structural.length : context.members.length) <= workspaceBoardSize;
+  function toggleStoryPanel(open: boolean, returnToFamily = false) {
+    const scroll = returnToFamily ? 'aw-family-board' : open && matchMedia('(max-width: 999px)').matches ? 'aw-story-pane' : null;
+    navigate({storyPanel: open, panelStep: open ? route.panelStep : 0}, scroll);
+    if (returnToFamily) requestAnimationFrame(() => panelToggle.current?.focus({preventScroll: true}));
+  }
+
   const hideInspector = route.mode === 'practise' && (route.exercise === 'reels' && reelMemory && !reelRevealed
     || route.exercise === 'contrast' && contrastRecallActive);
   const inlineContext = narrow && route.mode === 'read' && groups.some(group => group.id === route.group);
   const inspector = <WorkspaceInspector context={context} route={route} audio={audio} explore={explore} showFamily={anchor => selectFamily(anchor, true)}
     onStory={story} onWriting={() => setExercise('writing')} chunksHref={embedded ? '' : chunksHref()}/>;
 
-  return <section ref={root} className={'atlas-workspace' + (route.wide ? ' aw-wide' : '')} data-atlas-workspace aria-label="Atlas workspace"
+  return <section ref={root} className={'atlas-workspace' + (route.wide ? ' aw-wide' : '') + (showStoryPanel ? ' aw-story-open' : '')} data-atlas-workspace aria-label="Atlas workspace"
     onClickCapture={event => {
       const link = (event.target as Element).closest<HTMLAnchorElement>('.aw-inspector a[href*="returnAtlas"]');
       if (link) follow(link, chunksHref);
@@ -270,9 +285,18 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
     <header className="aw-header">
       <div className="aw-header-line">
         <div className="aw-brand"><Compass size={21} aria-hidden="true"/><h1 ref={heading} tabIndex={-1}>Hanzi Atlas</h1></div>
-        <form className="aw-search" onSubmit={search}><label htmlFor="aw-anchor">Word family</label>
-          <input id="aw-anchor" value={draft} onChange={event => setDraft(event.target.value)} lang="zh-Hans" maxLength={8} aria-invalid={!!error}/>
-          <button type="submit" aria-label="Search word family"><ArrowRight size={17}/></button></form>
+        <form className="aw-search" onSubmit={search}>
+          <select aria-label="Family search type" value={familyType} onChange={event => {
+            setFamilyType(event.target.value === 'structure' ? 'structure' : 'literal');
+            setError('');
+          }}>
+            <option value="literal">Word family</option>
+            <option value="structure">Component family</option>
+          </select>
+          <input id="aw-anchor" aria-label={familyType === 'literal' ? 'Shared Hanzi in words' : 'Component glyph or ID'}
+            value={draft} onChange={event => setDraft(event.target.value)} lang={familyType === 'literal' ? 'zh-Hans' : undefined} maxLength={familyType === 'literal' ? 8 : 40} aria-invalid={!!error}/>
+          <button type="submit" aria-label={familyType === 'literal' ? 'Search word family' : 'Search component family'}><ArrowRight size={17}/></button>
+        </form>
         <label className="aw-scope"><span>Vocabulary</span><select aria-label="Vocabulary scope" value={route.scope} onChange={event => changeScope(parseBrowseScope(event.target.value))}>
           {browseScopes.map(scope => <option key={scope} value={scope}>{workspaceScopeLabel(scope)}</option>)}
         </select></label>
@@ -311,9 +335,20 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
       {(route.story || (!hideInspector && context.text && context.text !== context.hanzi)) && <><ChevronRight size={14} aria-hidden="true"/><span lang="zh-Hans" aria-current="page">{route.story || context.text}</span></>}
     </nav>}
     {route.story && <AtlasStoryExplorer target={route.story} step={route.step} onStepChange={step => navigate({step}, null, true)} onExplore={explore} onBack={previous}/>}
-    <div className={'aw-layout' + (hideInspector ? ' aw-layout-single' : '')} hidden={!!route.story}>
-      <div className="aw-material">
-        {route.mode === 'family' && <WorkspaceBoard route={route} context={context} choose={choose} explore={explore} onPage={page => navigate({page})} onWiden={() => changeScope('all')}/>}
+    <div className={'aw-layout' + (hideInspector ? ' aw-layout-single' : '') + (showStoryPanel ? ' aw-layout-story' : '')} hidden={!!route.story}>
+      <div className="aw-material" data-sticky-family={showStoryPanel && shortFamily ? true : undefined}>
+        {canShowStoryPanel && <div className="aw-actions aw-story-toggle">
+          <button ref={panelToggle} type="button" aria-pressed={showStoryPanel} aria-controls={showStoryPanel ? 'aw-story-pane' : undefined}
+            onClick={() => toggleStoryPanel(!showStoryPanel)}><BookOpen size={16}/> Story beside family</button>
+          {showStoryPanel && <a className="aw-story-jump" href="#aw-story-pane" onClick={event => {
+            const pane = document.getElementById('aw-story-pane');
+            if (!pane) return;
+            event.preventDefault();
+            pane.scrollIntoView({block: 'start'});
+            pane.focus({preventScroll: true});
+          }}>Jump to selected story</a>}
+        </div>}
+        {route.mode === 'family' && <WorkspaceBoard route={route} context={context} compact={showStoryPanel} choose={choose} explore={explore} onPage={page => navigate({page})} onWiden={() => changeScope('all')}/>}
         {(journeyVisited || route.mode === 'read') && <div hidden={route.mode !== 'read'}>
           <WorkspaceJourney key={route.scope} route={route} groups={groups} locale={locale} context={context}
             select={chooseJourney} openGroup={openGroup} showWhole={wholeGroup} inspector={inlineContext ? inspector : undefined}/>
@@ -324,7 +359,11 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
           penOnly={penOnly} setPenOnly={setPenOnly} setExercise={setExercise} memory={reelMemory} revealed={reelRevealed}
           setMemory={setReelMemory} setRevealed={setReelRevealed} onContrastRecallActive={setContrastRecallActive} onExpand={() => navigate({wide: !route.wide}, null, true)}/>}
       </div>
-      {!inlineContext && !hideInspector && inspector}
+      {showStoryPanel
+        ? <WorkspaceStoryPane route={route} context={context} audio={audio} step={route.panelStep}
+          onStep={panelStep => navigate({panelStep}, null, true)} onExplore={(text, kind) => explore(text, kind, true)}
+          onBack={() => toggleStoryPanel(false, true)} onFullStory={story} inspector={inspector}/>
+        : !inlineContext && !hideInspector && inspector}
     </div>
   </section>;
 }

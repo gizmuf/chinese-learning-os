@@ -2,10 +2,11 @@ import {cloudWords, type CloudWord} from './atlas-cloud-model';
 import {extendedCharacters, extendedComponent, extendedFamily, type ExtendedCharacter} from './atlas-cloud-extended';
 import {cloudRelation} from './atlas-cloud-connections';
 import {familyJourney, type JourneyGroup} from './family-journey-model';
-import {familyWords} from './word-family-model';
+import {familyWords, validWordAnchor} from './word-family-model';
 import {atlasByHanzi, atlasComponents} from './atlas-model';
 import {characterPronunciation, componentPronunciation, sentencePronunciation, wordPronunciation} from './atlas-spatial-model';
 import {familyStories} from './atlas-family-stories-data';
+import {isStoryTarget} from './atlas-story-explorer-model';
 import type {Locale} from './translate';
 import type {BrowseScope} from './hsk-browse';
 import type {StudyExample} from './study-examples';
@@ -147,6 +148,33 @@ export function resolveWorkspaceContext(route: WorkspaceRoute, locale: Locale, g
 }
 
 export type WorkspaceContext = ReturnType<typeof resolveWorkspaceContext>;
+export type WorkspaceFamilyType = 'literal' | 'structure';
+
+export function workspaceFamilySearch(draft: string, type: WorkspaceFamilyType): Pick<WorkspaceRoute, 'relation' | 'anchor' | 'part' | 'kind' | 'hanzi'> | undefined {
+  const query = draft.trim();
+  if (type === 'literal') {
+    if (!validWordAnchor(query)) return;
+    return {relation: type, anchor: query, part: '', kind: 'word', hanzi: [...query][0]};
+  }
+  const part = extendedComponent(query);
+  if (part) return {relation: type, anchor: part.glyph, part: part.id, kind: 'component', hanzi: ''};
+}
+
+export function workspacePanelOutsideScope(route: WorkspaceRoute, context: WorkspaceContext) {
+  if (context.outsideScope) return true;
+  if (route.scope === 'all' || route.relation !== 'structure' || route.kind !== 'character') return false;
+  const {part, character, structural} = context;
+  if (!part || !character) return false;
+  const belongsToFamily = part.variants.some(glyph => glyph === character.hanzi || character.components.includes(glyph));
+  return belongsToFamily && !structural.some(member => member.hanzi === character.hanzi);
+}
+
+export function workspacePanelStory(kind: WorkspaceKind, text: string) {
+  if (kind === 'sentence') return;
+  if (kind !== 'component' && isStoryTarget(text)) return {kind: 'explorer' as const, target: text};
+  const story = familyStories.find(item => item.hanzi === text);
+  if (story) return {kind: 'family' as const, story};
+}
 
 function originalComponent(context: WorkspaceContext) {
   const {hanzi, character, reviewed, parts, part} = context;

@@ -14,11 +14,12 @@ export type AtlasStoryExplorerProps = {
   onStepChange: (step: number) => void;
   onExplore: (text: string, kind: StoryLinkKind) => void;
   onBack: () => void;
+  backLabel?: string;
 };
 
 const steps = ["Scene", "Structure", "In use"] as const;
 
-export default function AtlasStoryExplorer({ target, step, onStepChange, onExplore, onBack }: AtlasStoryExplorerProps) {
+export default function AtlasStoryExplorer({ target, step, onStepChange, onExplore, onBack, backLabel = 'Back to Atlas' }: AtlasStoryExplorerProps) {
   const heading = useId();
   const story = atlasExplorerStories[target];
   const selectedStep = steps[step] ? step : 0;
@@ -26,7 +27,7 @@ export default function AtlasStoryExplorer({ target, step, onStepChange, onExplo
   return <section className="atlas-story-explorer" data-story-target={target} aria-labelledby={heading}>
     <div className="atlas-story-explorer-top">
       <button type="button" className="ase-button ase-back" onClick={onBack}>
-        <ArrowLeft size={17} aria-hidden="true" /> Back to Atlas
+        <ArrowLeft size={17} aria-hidden="true" /> {backLabel}
       </button>
       <div className="ase-steps" role="group" aria-label="Story steps">
         {steps.map((label, index) => <button type="button" key={label} className="ase-button"

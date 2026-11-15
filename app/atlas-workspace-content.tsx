@@ -68,13 +68,15 @@ export function WorkspaceStructureBoard({context, route, explore, onPage}: {
   const page = Math.min(route.page, Math.max(0, Math.ceil(context.structural.length / workspaceMapSize) - 1));
   const visible = context.structural.slice(page * workspaceMapSize, (page + 1) * workspaceMapSize);
   return <>
-    <div className="aw-structure-board">{visible.map(node =>
-      <button type="button" key={node.id} aria-pressed={route.kind === 'character' && context.hanzi === node.hanzi} onClick={() => explore(node.hanzi, 'character')}>
+    <div className="aw-structure-board">{visible.map(node => {
+      const reading = node.reviewed?.pinyin ?? node.readings.join(' / ');
+      const role = workspaceStructureRole(node.hanzi, context.part?.id ?? route.part);
+      return <button type="button" key={node.id} aria-pressed={route.kind === 'character' && context.hanzi === node.hanzi}
+        aria-label={`${node.hanzi} · ${reading} · ${node.meaning} · ${role}`} title={node.meaning} onClick={() => explore(node.hanzi, 'character')}>
         <CloudHighlight className="aw-structure-glyph" hanzi={node.hanzi} component={context.part?.id}/>
-        <span><span>{node.reviewed?.pinyin ?? node.readings.join(' / ')}</span><span>{node.meaning}</span>
-        <small>{workspaceStructureRole(node.hanzi, context.part?.id ?? route.part)}</small></span>
-      </button>
-    )}</div>
+        <span><span>{reading}</span><span>{node.meaning}</span><small>{role}</small></span>
+      </button>;
+    })}</div>
     <WorkspacePager page={page} size={workspaceMapSize} total={context.structural.length} onPage={onPage}/>
   </>;
 }
@@ -96,26 +98,31 @@ function WorkspaceStructureLinks({part, explore}: {part: WorkspaceContext['part'
   </div>;
 }
 
-export function WorkspaceBoard({route, context, choose, explore, onPage, onWiden}: {
+export function WorkspaceBoard({route, context, choose, explore, onPage, onWiden, compact = false}: {
   route: WorkspaceRoute; context: WorkspaceContext; choose: Choose; explore: Explore;
-  onPage: (page: number) => void; onWiden: () => void;
+  onPage: (page: number) => void; onWiden: () => void; compact?: boolean;
 }) {
-  if (route.relation === 'structure') return <section className="aw-panel aw-board" aria-label="Component family">
-    <header className="aw-panel-head"><div><p className="aw-relation">Indexed modern structure</p>
-      <h2><span lang="zh-Hans">{context.part?.variants.join(' / ') ?? route.part}</span> component family</h2></div>
+  if (route.relation === 'structure') return <section className="aw-panel aw-board" id="aw-family-board" aria-label="Component family">
+    <header className="aw-panel-head"><div><p className="aw-relation">Shared component in Hanzi</p>
+      <h2><span lang="zh-Hans">{context.part?.variants.join(' / ') ?? route.part}</span> Component family</h2></div>
       <span>{context.structural.length} in {workspaceScopeLabel(route.scope)}</span>
     </header>
-    <WorkspaceStructureScope/>
-    <WorkspaceStructureLinks part={context.part} explore={explore}/>
+    {!compact && <WorkspaceStructureScope/>}
+    {(!compact || context.part?.id !== '莫') && <WorkspaceStructureLinks part={context.part} explore={explore}/>}
     {context.structural.length > 0 ? <WorkspaceStructureBoard route={route} context={context} explore={explore} onPage={onPage}/>
       : <div className="aw-empty"><p>No mapped characters for this component in {workspaceScopeLabel(route.scope)}.</p>
         {route.scope !== 'all' && <button type="button" onClick={onWiden}>Show all vocabulary</button>}</div>}
+    {compact && <details className="aw-family-board-notes">
+      <summary>About this component family</summary>
+      <WorkspaceStructureScope/>
+      {context.part?.id === '莫' && <WorkspaceStructureLinks part={context.part} explore={explore}/>}
+    </details>}
   </section>;
   const {members} = context;
   const page = Math.min(route.page, Math.max(0, Math.ceil(members.length / workspaceBoardSize) - 1));
-  return <section className="aw-panel aw-board" aria-label={route.relation === 'topic' ? 'Study topic' : 'Whole family'}>
-    <header className="aw-panel-head"><div><p className="aw-relation">{route.relation === 'topic' ? 'Study topic' : 'Shared written Hanzi'}</p>
-      <h2>{route.relation === 'topic' ? context.group?.title ?? 'Topic' : <><span lang="zh-Hans">{route.anchor}</span> family</>}</h2></div>
+  return <section className="aw-panel aw-board" id="aw-family-board" aria-label={route.relation === 'topic' ? 'Study topic' : 'Word family'}>
+    <header className="aw-panel-head"><div><p className="aw-relation">{route.relation === 'topic' ? 'Study topic' : 'Whole words sharing Hanzi'}</p>
+      <h2>{route.relation === 'topic' ? context.group?.title ?? 'Topic' : <><span lang="zh-Hans">{route.anchor}</span> Word family</>}</h2></div>
       <span>{members.length} {members.length === 1 ? 'entry' : 'entries'} in {workspaceScopeLabel(route.scope)}</span>
     </header>
     {members.length > 0 ? <WorkspaceWordBoard words={members.slice(page * workspaceBoardSize, (page + 1) * workspaceBoardSize)}
@@ -130,8 +137,9 @@ export function useWorkspaceAudio(notify: (message: string) => void) {
   const audio = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState('');
   function stop() {
-    if (audio.current) releaseRecording(audio.current);
+    const recording = audio.current;
     audio.current = null;
+    if (recording) releaseRecording(recording);
     setPlaying('');
   }
   useEffect(() => () => { if (audio.current) releaseRecording(audio.current); }, []);
@@ -148,6 +156,11 @@ export function useWorkspaceAudio(notify: (message: string) => void) {
     setPlaying(clip.source);
     recording.addEventListener('ended', () => {
       if (audio.current === recording) stop();
+    }, {once: true});
+    recording.addEventListener('pause', () => {
+      if (audio.current !== recording) return;
+      audio.current = null;
+      setPlaying('');
     }, {once: true});
   }
   return {playing, listen, stop};

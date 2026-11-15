@@ -26,7 +26,6 @@
 .aw-brand h1{font-size:1.24rem;margin:0;font-weight:680;color:var(--aw-ink)}
 .aw-search,.aw-scope{color:var(--aw-muted);font-size:.78rem;font-weight:650}
 .aw-search{gap:0;border:1px solid var(--aw-line);border-radius:9px;overflow:hidden}
-.aw-search label{padding-left:9px}
 .aw-search input{width:62px;min-height:36px;line-height:1;background:transparent;border:0;font:inherit;font-size:1.15rem;color:var(--aw-ink);text-align:center;padding:3px 4px}
 .aw-search button,.aw-expand{display:grid;place-items:center;width:36px;min-height:36px;background:var(--aw-wash);border:0;color:var(--aw-green)}
 .aw-expand{border-radius:8px}
@@ -162,3 +161,95 @@
 }
 html[data-theme=dark] .atlas-workspace{--aw-coral:#e68b79;--aw-muted:#b8c9bf}
 .aw-journey-group .aw-inspector{margin-top:10px;scroll-margin-top:10px}
+
+.aw-search select {
+  min-width: 0;
+  min-height: 36px;
+  padding-inline: 7px;
+  border: 0;
+  font: inherit;
+  color: var(--aw-muted);
+  background: var(--aw-paper);
+}
+.aw-search input {border-inline-start: 1px solid var(--aw-line)}
+.aw-story-toggle {margin-bottom: 8px}
+.aw-story-pane {min-width: 0; scroll-margin-top: 12px}
+.aw-story-pane .aw-inspector {position: static}
+.aw-story-context, .aw-story-tools {margin-top: 12px}
+.aw-story-context > summary {cursor: pointer; color: var(--aw-muted); padding: 7px 0}
+.aw-story-context .aw-inspector {margin-top: 6px}
+.aw-story-fallback {margin-bottom: 8px}
+.aw-story-fallback p {margin-bottom: 0}
+.aw-family-story {display: grid; gap: 10px}
+.aw-family-story .family-story-art {display: block; width: 100%; height: auto; margin: 0}
+.aw-family-story p, .aw-family-story h2 {margin: 0}
+.aw-family-story-heading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0 12px;
+}
+.aw-family-story-heading h2 {grid-row: span 2; font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.05}
+.aw-family-story-heading .aw-reading {align-self: end}
+.aw-family-story-heading p:last-child {align-self: start}
+.aw-family-story .aw-example p + div {margin-top: 8px}
+#aw-family-board {scroll-margin-top: 60px}
+.atlas-workspace .aw-layout.aw-layout-story {grid-template-columns: minmax(0, 1fr)}
+@media (min-width: 1000px) {
+  .atlas-workspace .aw-layout.aw-layout-story {grid-template-columns: minmax(0, 1.28fr) minmax(330px, 1fr)}
+}
+@media (max-width: 520px) {
+  .aw-search input {width: 48px}
+}
+@media (min-width: 1000px) {
+  .aw-story-toggle .aw-story-jump {display: none}
+}
+
+.aw-story-open .aw-board {container-type: inline-size}
+.aw-story-open .aw-structure-board {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 9px;
+}
+.aw-story-open .aw-structure-board button {
+  min-height: 68px;
+  gap: 6px;
+  padding: 6px;
+}
+.aw-story-open .aw-structure-glyph {
+  flex: 0 0 auto;
+  font-size: clamp(2rem, 2.9vw, 2.45rem);
+}
+.aw-story-open .aw-structure-board .aw-structure-glyph > span {font-size: inherit}
+.aw-story-open .aw-structure-board button > span:nth-child(2) > span:nth-child(2) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.2;
+}
+.aw-story-open .aw-structure-board button small {display: none}
+.aw-family-board-notes {
+  margin-top: 8px;
+  color: var(--aw-muted);
+  font-size: .78rem;
+}
+.aw-family-board-notes summary {padding-block: 5px}
+.aw-family-board-notes .aw-empty p {margin-top: 7px}
+@container (min-width: 365px) {
+  .aw-story-open .aw-structure-board {grid-template-columns: repeat(3, minmax(0, 1fr))}
+}
+@media (min-width: 1000px) {
+  .aw-story-open .aw-header {padding-block: 7px}
+  .aw-story-open .aw-header-line {gap: 5px 8px}
+  .aw-story-open .aw-navigation {margin-top: 6px; padding-top: 6px}
+  .aw-story-open .aw-board {padding: 12px}
+}
+@media (min-width: 1000px) and (min-height: 740px) {
+  .aw-layout-story > [data-sticky-family] {position: sticky; top: 12px}
+}
+.aw-story-scope-note {
+  margin: 0 0 8px;
+  padding: 6px 9px;
+  border-radius: 8px;
+  background: var(--aw-wash);
+}

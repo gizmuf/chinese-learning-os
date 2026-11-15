@@ -22,6 +22,8 @@ export type WorkspaceRoute = {
   kind: WorkspaceKind;
   story: StoryTarget | '';
   step: number;
+  storyPanel: boolean;
+  panelStep: number;
   page: number;
   map: typeof workspaceMapViews[number];
   exercise: typeof workspaceExercises[number] | '';
@@ -44,6 +46,7 @@ const readCharacter = (value: string | null) =>
 export function readAtlasWorkspaceRoute(search: string): WorkspaceRoute {
   const params = new URLSearchParams(search);
   const story = params.get('wsstory');
+  const storyPanel = params.get('storyPanel') === '1';
   return {
     mode: readOption(params.get('mode'), workspaceModes, 'family'),
     relation: readOption(params.get('relation'), ['literal', 'structure', 'topic'], 'literal'),
@@ -57,6 +60,8 @@ export function readAtlasWorkspaceRoute(search: string): WorkspaceRoute {
     kind: readOption(params.get('focus'), ['word', 'character', 'component', 'sentence'], 'word'),
     story: story && isStoryTarget(story) ? story : '',
     step: smallNumber(params.get('step'), 2),
+    storyPanel,
+    panelStep: storyPanel ? smallNumber(params.get('panelStep'), 2) : 0,
     page: smallNumber(params.get('page'), 1000),
     map: readOption(params.get('map'), workspaceMapViews, 'structure'),
     exercise: readOption(params.get('practice'), [...workspaceExercises, ''], ''),
@@ -77,6 +82,10 @@ export function atlasWorkspaceHref(route: WorkspaceRoute, scroll = 0) {
   if (route.story) {
     params.set('wsstory', route.story);
     if (route.step) params.set('step', String(route.step));
+  }
+  if (route.storyPanel) {
+    params.set('storyPanel', '1');
+    if (route.panelStep) params.set('panelStep', String(route.panelStep));
   }
   if (route.page) params.set('page', String(route.page));
   if (route.map !== 'structure') params.set('map', route.map);
