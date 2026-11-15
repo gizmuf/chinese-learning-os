@@ -158,3 +158,20 @@ html[data-theme=dark] .reading-lab{
 .rl-today-resume strong{margin-right:8px}
 .rl-today-resume span{font-size:.87rem}
 .rl-today-resume a{display:inline-flex;align-items:center;gap:6px;text-decoration:none}
+.rl-review{max-width:730px;margin:0 auto;overflow-wrap:anywhere}
+.rl-review h1{margin:.7rem 0;font-size:clamp(1.55rem,5vw,2.15rem)}
+.rl-review h2{margin:.6rem 0}
+.rl-review label{display:block;margin:.6rem 0 .3rem;font-weight:650}
+.rl-review :is(input,textarea){width:100%;box-sizing:border-box;padding:9px 11px;border:1px solid var(--rl-line);border-radius:8px;background:var(--rl-wash);color:var(--rl-ink);font:inherit;font-size:20px}
+.rl-review textarea{resize:vertical}
+.rl-review .rl-reading-actions{margin:.55rem 0}
+.rl-review-answer,.rl-review-target>div{display:grid;gap:3px;min-width:0}
+.rl-review strong[lang],.rl-review-target strong[lang]{font-size:clamp(24px,6vw,32px);letter-spacing:0;line-height:1.22}
+.rl-review-sample{padding:10px;margin-top:9px;background:var(--rl-wash);border-radius:9px}
+.rl-review-target{display:flex;gap:9px;align-items:center;flex-wrap:wrap;padding:9px 0;border-top:1px solid var(--rl-line)}
+.rl-review-target>div{flex:1 1 145px}
+.rl-review-target>span,.rl-review-target>div span{font-size:.88rem}
+.rl-review-target button{margin-left:auto}
+.rl-today-resume span+span{margin-left:9px}
+
+.rl-review-sample h3{margin:0 0 6px;font-size:.88rem}

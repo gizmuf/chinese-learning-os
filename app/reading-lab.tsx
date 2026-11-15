@@ -15,13 +15,16 @@ import {hskLevelIndex, type HskIndex} from './hsk-level-model';
 import syllabus from '../data/hsk-levels-source.json';
 import {useStudyLookup} from './study-lookup-context';
 import {useI18n} from './i18n';
+import {ReadingReview, ReadingReviewSave, ReadingReviewSummary, useReadingReviews} from './reading-lab-review';
+import {readingReviewTargetsById} from './reading-lab-review-data';
+import type {ReadingReviewAction} from './reading-lab-review-model';
 import {emptyReadingLabSession, persistReadingLabSession, readReadingLabSession, readingLabDraftLimit, type ReadingLabResume} from './reading-lab-session';
 import Guided from './guided';
 import './reading-lab.css';
 
 type ReadingProps = {penOnly: boolean; notify: (message: string) => void};
 type ReaderDetour = {kind: 'atlas'; visit: ReadingLabAtlasVisit} | {kind: 'stroke'; text: string};
-type ReaderHistory = {readingLabScroll?: number; readingLabDetour?: ReaderDetour; readingLabFocus?: {paragraph: string; word: string}};
+type ReaderHistory = {readingLabReviewSource?: string; readingLabReviewEntry?: string; readingLabScroll?: number; readingLabDetour?: ReaderDetour; readingLabFocus?: {paragraph: string; word: string}};
 type VocabularyReport = ReturnType<typeof analyzeReading>;
 type RecallCheck = {article: string; step: 'recall' | 'compare'; responses: Record<string, string>};
 
@@ -214,6 +217,8 @@ function StrokeDetour({text, penOnly, onClose}: {text: string; penOnly: boolean;
 
 export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {owner: string | null}) {
   const lookup = useStudyLookup();
+  const reviews = useReadingReviews(owner);
+  const unsavedSourceVisits = useRef(new Map<string, string>());
   const vocabulary = useVocabularyIndex();
   const [route, setRoute] = useState(() => readReadingLabRoute(location.search));
   const returnWorkspace = useRef(atlasWorkspaceReturn(new URLSearchParams(location.search).get('returnWorkspace')));
@@ -233,7 +238,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   const savedResume = loaded.session.resume;
   const sameResume = savedResume && readingLabHref(savedResume) === readingLabHref(route);
   const scrollDestination = useRef<number | string | null>(readerHistory().readingLabScroll
-    ?? (sameResume ? savedResume.scroll : route.paragraph || null));
+    ?? (sameResume ? savedResume.scroll : route.chunk || route.paragraph || null));
   const restoringFocus = useRef(false);
   const lastSaved = useRef('');
   const recallHeading = useRef<HTMLHeadingElement>(null);
@@ -241,7 +246,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   const reading = readingLabReadings.find(candidate => candidate.id === route.article);
   const grammar = reading?.grammar.find(entry => entry.id === route.grammar);
   const relatedFrame = resolveReadingGrammarFrame(grammar?.frameId);
-  const highlights = useMemo(() => new Set([...(grammar?.sourceChunks ?? []), ...(questionEvidence?.article === route.article && questionEvidence?.chunk ? [questionEvidence.chunk] : [])]), [grammar, questionEvidence, route.article]);
+  const highlights = useMemo(() => new Set([...(grammar?.sourceChunks ?? []), ...(questionEvidence?.article === route.article && questionEvidence?.chunk ? [questionEvidence.chunk] : []), ...(route.chunk ? [route.chunk] : [])]), [grammar, questionEvidence, route.article, route.chunk]);
 
   useEffect(() => {
     const before = history.scrollRestoration;
@@ -257,7 +262,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
       setSelectedWord(state.readingLabFocus?.word ?? '');
       setRecall(current => current?.article === next.article ? current : undefined);
       setQuestionEvidence(current => current?.article === next.article ? current : undefined);
-      scrollDestination.current = state.readingLabScroll ?? (next.paragraph || 0);
+      scrollDestination.current = state.readingLabScroll ?? (next.chunk || next.paragraph || 0);
       setRoute(next);
     };
     addEventListener('popstate', pop);
@@ -288,8 +293,9 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   }, [route, detour]);
 
   function saveResume(next: ReadingLabRoute, scroll: number) {
-    if (!next.article) return;
-    const snapshot = {...next, scroll: Math.max(0, Math.round(scroll))};
+    if (!next.article || next.review) return;
+    const {reviewReturn, chunk, ...savedRoute} = next;
+    const snapshot = {...savedRoute, scroll: Math.max(0, Math.round(scroll))};
     const signature = JSON.stringify(snapshot);
     if (signature === lastSaved.current) return;
     try {
@@ -312,7 +318,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   }
 
   useEffect(() => {
-    if (!reading || detour || recall?.step === 'recall') return;
+    if (!reading || route.review || detour || recall?.step === 'recall') return;
     let timer = 0;
     const flush = () => saveResume(route, window.scrollY);
     const scrolling = () => {
@@ -390,12 +396,61 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
     navigate({paragraph}, {replace: true, scroll: chunk});
   }
 
+  function reviewOpen(id: string) {
+    if (!reviews.store.cards[id]) return;
+    navigate({review: id, reviewReturn: undefined}, {scroll: 0});
+    history.replaceState({...history.state, readingLabReviewEntry: id}, '', location.href);
+  }
+
+  function reviewExit() {
+    if (readerHistory().readingLabReviewEntry === route.review) history.back();
+    else navigate({review: undefined}, {replace: true, scroll: route.chunk || route.paragraph || 0});
+  }
+
+  function reviewSource(id: string) {
+    const target = readingReviewTargetsById.get(id);
+    if (!target) return;
+    navigate({review: undefined, reviewReturn: id, article: target.article, level: target.level,
+      grammar: route.article === target.article ? route.grammar : '', paragraph: target.paragraph, chunk: target.chunk}, {scroll: target.chunk});
+    history.replaceState({...history.state, readingLabReviewSource: id, readingLabScroll: undefined}, '', location.href);
+  }
+
+  useLayoutEffect(() => {
+    if (!route.article || route.review) return;
+    for (const [id, card] of Object.entries(reviews.store.cards)) {
+      if (card.pending && !card.pending.sourceSeen && readingReviewTargetsById.get(id)?.article === route.article) {
+        unsavedSourceVisits.current.set(id, card.pending.id);
+        try {
+          reviews.write(id, {type: 'source', attempt: card.pending.id});
+          unsavedSourceVisits.current.delete(id);
+        } catch { /* Keep the flag to retry before any later completion. */ }
+      }
+    }
+  }, [route.article, route.review, reviews.store]);
+
+  function writeReview(id: string, action: ReadingReviewAction) {
+    const seen = unsavedSourceVisits.current.get(id);
+    if (seen) {
+      if (reviews.store.cards[id]?.pending?.id === seen) reviews.write(id, {type: 'source', attempt: seen});
+      unsavedSourceVisits.current.delete(id);
+    }
+    return reviews.write(id, action);
+  }
+
+  if (route.review) return <section ref={root} className="reading-lab" aria-label="Reading Lab">
+    <ReadingReview key={route.review} id={route.review} reviews={{...reviews, write: writeReview}} onExit={reviewExit} onSource={reviewSource}/>
+  </section>;
+
   const workspace = returnWorkspace.current || defaultWorkspace;
   return <section ref={root} className="reading-lab" data-reading-lab aria-label="Reading Lab">
     <header className="rl-topline">
       {reading ? <button type="button" onClick={() => {
-        setSelectedWord(''); setQuestionEvidence(undefined); setRecall(undefined); navigate({article: '', paragraph: '', grammar: '', level: reading.level}, {scroll: 0});
+        setSelectedWord(''); setQuestionEvidence(undefined); setRecall(undefined); navigate({article: '', paragraph: '', grammar: '', chunk: undefined, reviewReturn: undefined, level: reading.level}, {scroll: 0});
       }}><ArrowLeft size={16}/> Reading library</button> : <a href={workspace}><ArrowLeft size={16}/> Hanzi Atlas</a>}
+      {route.reviewReturn && <button type="button" onClick={() => {
+        if (readerHistory().readingLabReviewSource === route.reviewReturn) history.back();
+        else reviewOpen(route.reviewReturn!);
+      }}>Back to review</button>}
       {reading && <span>HSK {reading.level}</span>}
     </header>
     {reading ? <article className="rl-article">
@@ -457,6 +512,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
           </div>}
         </aside>
       </div>
+      {recall?.step !== 'recall' && <ReadingReviewSave key={reading.id} article={reading.id} reviews={reviews} onOpen={reviewOpen}/>}
       <section className="rl-followup" aria-labelledby="rl-recall-heading" data-study-assessment={recall?.step === 'recall' ? 'blocked' : undefined}>
         <h2 id="rl-recall-heading" ref={recallHeading} tabIndex={-1}>Check your understanding</h2>
         {!recall ? <>
@@ -505,20 +561,20 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
           <p lang="zh-Hans">{reading.writing.example.hanzi}</p><p>{reading.writing.example.pinyin}</p><p>{reading.writing.example.english}</p>
         </details>}
       </section>
-    </article> : <ReaderLibrary route={route} {...vocabulary} workspaceOrigin={returnWorkspace.current} resume={resume}
+    </article> : <><ReadingReviewSummary store={reviews.store} now={reviews.now} onOpen={reviewOpen}/><ReaderLibrary route={route} {...vocabulary} workspaceOrigin={returnWorkspace.current} resume={resume}
       onResume={() => {
         if (!resume) return;
         const {scroll, ...destination} = resume;
         setSelectedWord(''); setQuestionEvidence(undefined); setRecall(undefined);
-        navigate(destination, {scroll: scroll || destination.paragraph});
+        navigate({...destination, chunk: undefined, reviewReturn: undefined}, {scroll: scroll || destination.paragraph});
       }}
       onLevel={level => navigate({level, article: '', paragraph: '', grammar: ''}, {scroll: 0})}
       onArticle={(event, article) => {
         if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         event.preventDefault();
         setSelectedWord(''); setQuestionEvidence(undefined); setRecall(undefined);
-        navigate({article: article.id, level: article.level, paragraph: '', grammar: ''}, {scroll: 0});
-      }}/>}
+        navigate({article: article.id, level: article.level, paragraph: '', grammar: '', chunk: undefined, reviewReturn: undefined}, {scroll: 0});
+      }}/></>}
     {detour?.kind === 'atlas' && <AtlasDetour detour={detour.visit} level={reading?.level ?? route.level} penOnly={penOnly} notify={notify} onClose={closeDetour}/>}
     {detour?.kind === 'stroke' && <StrokeDetour text={detour.text} penOnly={penOnly} onClose={closeDetour}/>}
   </section>;

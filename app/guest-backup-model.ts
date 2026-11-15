@@ -3,6 +3,7 @@ import {storageTimeoutMs} from './local-store';
 import {privateLibraryKey, privateLessonKey, type LocalLesson} from './private-lessons-model';
 import {practiceBookKey, readPracticeChoices} from './practice-book';
 import {readingLabGuestKey, validateReadingLabSession} from './reading-lab-session';
+import {mergeReadingReviewStores, readingReviewGuestKey, validateReadingReviewStore} from './reading-lab-review-model';
 import {checkBackupTree, eventStores, isKnownDraft, isKnownPreference, sameBackupValue, validateDraft, validateEvent, validateLibrary, validatePreference, type EventStore} from './guest-backup-validation';
 
 export const guestBackupLimit = 64 * 1024 * 1024;
@@ -222,27 +223,32 @@ function writeBackupRows(db:IDBDatabase, spec:Database, backup:BackupData) {
  });
 }
 
+function mergeReadingPreference(key:string, previous:string, value:string) {
+ if(key!==readingLabGuestKey && key!==readingReviewGuestKey)return previous;
+ let existing:unknown;
+ try{existing=JSON.parse(previous);}catch{return previous;}
+ const incoming:unknown=JSON.parse(value);
+ if(key===readingReviewGuestKey){
+  const current=validateReadingReviewStore(existing), backup=validateReadingReviewStore(incoming);
+  if(!current||!backup||!sameBackupValue(current,existing))return previous;
+  const merged=mergeReadingReviewStores(current,backup);
+  return sameBackupValue(merged,current)?previous:JSON.stringify(merged);
+ }
+ const current=validateReadingLabSession(existing), backup=validateReadingLabSession(incoming);
+ if(!current||!backup||!sameBackupValue(current,existing))return previous;
+ const merged={...current,resume:current.resume??backup.resume,drafts:{...backup.drafts,...current.drafts}};
+ return sameBackupValue(merged,current)?previous:JSON.stringify(merged);
+}
+
 function writeBackupPreferences(storage:BackupStorage, rows:PreferenceRow[]) {
  const counts=emptyCounts();
  const written:{key:string;previous:string|null}[]=[];
  try{
   for(const {key,value} of rows){
    const previous=storage.getItem(key);
-   if(previous!==null){
-    if(key===readingLabGuestKey){
-     let existing:unknown;
-     try{existing=JSON.parse(previous);}catch{/* Existing unsupported values remain in place. */}
-     const current=validateReadingLabSession(existing), backup=validateReadingLabSession(JSON.parse(value));
-     if(current&&backup&&sameBackupValue(current,existing)){
-      const merged={...current,resume:current.resume??backup.resume,drafts:{...backup.drafts,...current.drafts}};
-      if(!sameBackupValue(merged,current)){
-       storage.setItem(key,JSON.stringify(merged));written.push({key,previous});counts.added++;continue;
-      }
-     }
-    }
-    counts.skipped++;continue;
-   }
-   storage.setItem(key,value);written.push({key,previous});counts.added++;
+   const next=previous===null?value:mergeReadingPreference(key,previous,value);
+   if(next===previous){counts.skipped++;continue;}
+   storage.setItem(key,next);written.push({key,previous});counts.added++;
   }
  }catch(error){
   for(const {key,previous} of written.reverse()){

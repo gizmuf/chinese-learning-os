@@ -13,7 +13,12 @@ export type ReadingLabRoute = {
   chunks: boolean;
   paragraph: string;
   grammar: string;
+  review?: string;
+  reviewReturn?: string;
+  chunk?: string;
 };
+
+const reviewId = (value: string | null) => value && /^[a-z][a-z\d-]{0,79}:\p{Script=Han}{1,12}$/u.test(value) ? value : undefined;
 
 const readingId = (value: string | null) => value && /^[a-z][a-z\d-]{0,79}$/i.test(value) ? value : '';
 
@@ -31,6 +36,9 @@ export function readReadingLabRoute(search: string): ReadingLabRoute {
     chunks: params.get('chunks') === '1',
     paragraph: readingId(params.get('at')),
     grammar: readingId(params.get('grammar')),
+    ...(reviewId(params.get('review')) && {review: reviewId(params.get('review'))}),
+    ...(reviewId(params.get('reviewReturn')) && {reviewReturn: reviewId(params.get('reviewReturn'))}),
+    ...(readingId(params.get('chunk')) && {chunk: readingId(params.get('chunk'))}),
   };
 }
 
@@ -41,6 +49,9 @@ export function readingLabHref(route: ReadingLabRoute) {
   if (route.chunks) params.set('chunks', '1');
   if (route.paragraph) params.set('at', route.paragraph);
   if (route.grammar) params.set('grammar', route.grammar);
+  if (route.review) params.set('review', route.review);
+  if (route.reviewReturn) params.set('reviewReturn', route.reviewReturn);
+  if (route.chunk) params.set('chunk', route.chunk);
   return '?' + params;
 }
 

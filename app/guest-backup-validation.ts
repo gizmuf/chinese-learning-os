@@ -10,6 +10,7 @@ import {lesson12PracticeKey, restoreLesson12Practice} from './lesson12-practice-
 import {referenceLessonById, referenceLessons} from './reference-lessons-data';
 import {referenceCheckpointKey, restoreReferenceCheckpoint} from './reference-lesson-state';
 import {readingLabGuestKey, validateReadingLabSession} from './reading-lab-session';
+import {readingReviewGuestKey, validateReadingReviewStore} from './reading-lab-review-model';
 import {companionDraftKey, validCompanion} from './shuoshuo-companion-model';
 import {studioDraftKey, validStudio} from './study-studio-model';
 import {practiceBookKey} from './practice-book';
@@ -145,7 +146,7 @@ const sceneProgress=z.object({objects:z.array(sceneId).max(300),actions:z.array(
 const sceneKeys=['scene-lab-discovery-v1','scene-lab-teacher-discovery-v1'];
 const referenceKeys=new Map(referenceLessons.map(lesson=>[referenceCheckpointKey(null,lesson.id),lesson.id]));
 export function isKnownPreference(key:string) {
- return ['chinese-os-language','chinese-os-appearance','chinese-os:hanzi-appearance:v1','chinese-os:dictionary-window-v2','chinese-os:dictionary-position-v1',readingLabGuestKey,
+ return ['chinese-os-language','chinese-os-appearance','chinese-os:hanzi-appearance:v1','chinese-os:dictionary-window-v2','chinese-os:dictionary-position-v1',readingLabGuestKey,readingReviewGuestKey,
   lesson11PracticeKey(null),lesson12PracticeKey(null),...sceneKeys].includes(key) || referenceKeys.has(key) || lesson12Review.test(key);
 }
 
@@ -159,6 +160,7 @@ export function validatePreference(key:string, raw:string) {
  if (key==='chinese-os:dictionary-window-v2') return JSON.stringify(windowState.parse(value));
  if (key==='chinese-os:dictionary-position-v1') return JSON.stringify(position.parse(value));
  const sanitized=key===readingLabGuestKey?validateReadingLabSession(value):
+  key===readingReviewGuestKey?validateReadingReviewStore(value):
   key===lesson11PracticeKey(null)?restoreLesson11Practice(raw,null):
   key===lesson12PracticeKey(null)||lesson12Review.test(key)?restoreLesson12Practice(raw,null):
   referenceKeys.has(key)?restoreReferenceCheckpoint(raw,null,referenceLessonById.get(referenceKeys.get(key)!)!):undefined;

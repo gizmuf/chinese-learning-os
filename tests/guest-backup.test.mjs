@@ -8,6 +8,8 @@ const {outputFiles:[bundle]}=await build({
  export {shuoshuoMorning} from './app/shuoshuo-lesson-model';
  export {items} from './app/content'; export {privateLibraryKey,privateLessonKey,privateDigest} from './app/private-lessons-model';
  export {readingLabGuestKey} from './app/reading-lab-session'; export {newCourseEvent} from './app/course-learning';
+ export {readingReviewGuestKey,validateReadingReviewStore} from './app/reading-lab-review-model';
+ export {readingReviewTargets} from './app/reading-lab-review-data';
  export {recognitionQuestions} from './app/atlas-spatial-model'; export {newRecognitionAttempt} from './app/recognition-history';
  export {extendedFamily} from './app/atlas-cloud-extended';`,
  resolveDir:process.cwd()},bundle:true,platform:'node',format:'esm',write:false,
@@ -206,4 +208,57 @@ test('a localStorage quota error rolls back preferences and the Reader merge tog
  assert.equal(destination.storage.getItem(firstKey),'fr');
  assert.deepEqual(JSON.parse(destination.storage.getItem(m.readingLabGuestKey)).drafts,
   {'hsk2-library-meeting':'existing','hsk2-cooking-together':'incoming'});
+});
+
+function reviewFixture() {
+ const [first,second]=m.readingReviewTargets;
+ const initial={dueAt:86_400_000,step:0,reviewCount:0,revision:0};
+ const pending={id:id(),startedAt:86_400_000,expectedDueAt:initial.dueAt,expectedRevision:0,stage:'recall',
+  word:'图',sentence:'',help:false,sampleShown:false,sourceSeen:false};
+ return {first:first.id,second:second.id,initial,pending};
+}
+
+test('a review backup v1 excludes signed-in queues and merges whole cards without replacing local pending work',async()=>{
+ const {first,second,initial,pending}=reviewFixture();
+ const importedPending={...pending,id:id(),stage:'sentence',word:'',sentence:'这条路旁边有树。',help:true,sampleShown:true};
+ const lastResponse={word:'图书馆',sentence:'爸爸今天在图书馆看书。',completedAt:86_400_000,
+  scenarioIndex:0,outcome:'remembered',early:false,supported:false};
+ const completed={dueAt:345_600_000,step:1,reviewCount:1,revision:1,lastAttemptId:id(),lastResponse};
+ const incoming={version:1,cards:{[first]:completed,[second]:{...initial,pending:importedPending}}};
+ const local={version:1,cards:{[first]:{...initial,pending}}};
+ const guestKey=m.readingReviewGuestKey, ownerKey='chinese-os:reading-reviews:v1:owner:learner';
+ assert.deepEqual(m.validateReadingReviewStore(incoming),incoming);
+ assert.deepEqual(m.validateReadingReviewStore(local),local);
+ const source=device({[guestKey]:JSON.stringify(incoming),[ownerKey]:'signed-in'});
+ const target=device({[guestKey]:JSON.stringify(local),[ownerKey]:'keep-signed-in'});
+ const {file}=await m.exportGuestBackup(source);
+ const preview=await m.parseGuestBackup(await file.text());
+ assert.equal(preview.data.version,1);
+ assert.equal(preview.counts.preferences,1);
+ assert.deepEqual(preview.data.preferences.map(row=>row.key),[guestKey]);
+ assert.deepEqual((await m.restoreGuestBackup(target,preview)).groups.preferences,{added:1,skipped:0});
+ assert.deepEqual(JSON.parse(target.storage.getItem(guestKey)),{version:1,cards:{...incoming.cards,...local.cards}});
+ assert.equal(target.storage.getItem(ownerKey),'keep-signed-in');
+ assert.deepEqual((await m.restoreGuestBackup(target,preview)).groups.preferences,{added:0,skipped:1});
+ const emptyTarget=device();
+ assert.deepEqual((await m.restoreGuestBackup(emptyTarget,preview)).groups.preferences,{added:1,skipped:0});
+ assert.deepEqual(JSON.parse(emptyTarget.storage.getItem(guestKey)),incoming);
+ const malformedTarget=device({[guestKey]:'existing unsupported content'});
+ assert.deepEqual((await m.restoreGuestBackup(malformedTarget,preview)).groups.preferences,{added:0,skipped:1});
+ assert.equal(malformedTarget.storage.getItem(guestKey),'existing unsupported content');
+});
+
+test('review backup rejects account keys, invented targets and malformed progress before importing',async()=>{
+ const {first,initial,pending}=reviewFixture();
+ const clean=JSON.parse(await (await m.exportGuestBackup(device())).file.text());
+ const guestKey=m.readingReviewGuestKey;
+ for(const [key,record] of [
+  ['chinese-os:reading-reviews:v1:owner:g',{version:1,cards:{[first]:initial}}],
+  [guestKey,{version:1,cards:{invented:initial}}],
+  [guestKey,{version:1,cards:{[first]:{...initial,dueAt:-1}}}],
+  [guestKey,{version:1,cards:{[first]:{...initial,pending:{...pending,stage:'unsupported'}}}}],
+  [guestKey,{version:1,cards:{[first]:{...initial,grade:100}}}],
+ ]){
+  await assert.rejects(m.parseGuestBackup(JSON.stringify({...clean,preferences:[{key,value:JSON.stringify(record)}]})));
+ }
 });
