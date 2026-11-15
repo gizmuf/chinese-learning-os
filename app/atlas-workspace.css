@@ -42,9 +42,33 @@
 }
 .aw-samples button{background:var(--aw-wash);border-color:transparent}
 .aw-samples [lang]{font-size:1rem}
-.aw-original{position:relative}
+/* Anchor the list to the toolbar, so a wrapped trigger cannot pull it under the sidebar. */
+.aw-header-line:has(> .aw-original){position:relative}
 .aw-original summary{display:list-item;min-height:unset;padding:8px 10px}
-.aw-original-menu{position:absolute;z-index:3;right:0;top:calc(100% + 6px);width:min(256px,calc(100vw - 40px));max-height:70vh;overflow:auto;background:var(--aw-paper);border:1px solid var(--aw-line);border-radius:12px;padding:10px;box-shadow:0 10px 30px #203a3329}
+.aw-original-menu {
+  position: absolute;
+  z-index: 3;
+  inset-inline: 0;
+  top: calc(100% + 6px);
+  max-height: min(55dvh, 420px);
+  overflow: auto;
+  overscroll-behavior-y: contain;
+  background: var(--aw-paper);
+  border: 1px solid var(--aw-line);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 10px 30px #203a3329;
+}
+.aw-original[open] > .aw-original-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr));
+  align-items: start;
+  gap: 8px 14px;
+}
+.aw-original-menu {scroll-padding-block: 8px}
+@media (max-width: 650px) {
+  .aw-original-menu {max-height: min(32dvh, 260px)}
+}
 .aw-original-menu strong,.aw-original-menu a{display:block;padding:4px 8px;color:var(--aw-ink)}
 .aw-original-menu strong{margin-top:6px;color:var(--aw-muted);font-size:.7rem}
 .aw-original-menu a{font-size:.88rem;text-decoration:none}
