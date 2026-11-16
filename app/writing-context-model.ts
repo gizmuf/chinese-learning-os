@@ -4,7 +4,7 @@ import type {DictionaryContext} from './dictionary-source-model';
 export function sourceContext(element:HTMLElement|null):DictionaryContext|undefined{
  const source=element?.closest<HTMLElement>('[data-study-sentence]');
  if(!source?.dataset.studySentence)return;
- const text=source.dataset.studySentence,pinyin=source.dataset.studyPinyin??'',clip=source.dataset.studyAudio;return {text,pinyin,meaning:source.dataset.studyMeaning??'',sourceId:source.dataset.studySourceId||source.id||undefined,...(clip?.startsWith('/often-confused/audio/')?{audio:{text,pinyin,source:clip,context:true,kind:'sentence' as const}}:{})};
+ const text=source.dataset.studySentence,pinyin=source.dataset.studyPinyin??'',clip=source.dataset.studyAudio;return {text,pinyin,meaning:source.dataset.studyMeaning??'',sourceId:source.dataset.studySourceId||source.id||undefined,...(clip&&(clip.startsWith('/often-confused/audio/')||/^\/audio\/practical-2026-11-16\/[a-f0-9]{20}\.mp3$/.test(clip))?{audio:{text,pinyin,source:clip,context:true,kind:'sentence' as const}}:{})};
 }
 /** Broader senses never inherit an unrelated isolated clip. Exact source audio remains separately labelled. */
 export function contextualAudio(entry:DictionaryEntry,clip?:{source:string}):DictionaryEntry{

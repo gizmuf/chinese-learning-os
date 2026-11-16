@@ -1,0 +1,849 @@
+{
+  "title": {
+    "en": "Everyday Mandarin · 16 November",
+    "fr": "Le mandarin au quotidien · 16 novembre",
+    "ru": "Китайский на каждый день · 16 ноября",
+    "tr": "Günlük Mandarin · 16 Kasım"
+  },
+  "scenes": [
+    {
+      "id": "restaurant",
+      "title": {
+        "en": "At the restaurant",
+        "fr": "Au restaurant",
+        "ru": "В ресторане",
+        "tr": "Restoranda"
+      },
+      "lines": [
+        {
+          "hanzi": "你们几位？",
+          "pinyin": "Nǐmen jǐ wèi?",
+          "meaning": {
+            "en": "How many in your party?",
+            "fr": "Vous êtes combien ?",
+            "ru": "Сколько вас человек?",
+            "tr": "Kaç kişisiniz?"
+          },
+          "chunks": [
+            "你们",
+            "几位？"
+          ],
+          "source": "pdf"
+        },
+        {
+          "hanzi": "冰的还是热的？",
+          "pinyin": "Bīng de háishi rè de?",
+          "meaning": {
+            "en": "Iced or hot?",
+            "fr": "Glacé ou chaud ?",
+            "ru": "Со льдом или горячее?",
+            "tr": "Buzlu mu, sıcak mı?"
+          },
+          "chunks": [
+            "冰的",
+            "还是",
+            "热的？"
+          ],
+          "source": "pdf",
+          "variants": [
+            {
+              "hanzi": "在这儿吃还是打包？",
+              "pinyin": "Zài zhèr chī háishi dǎbāo?",
+              "meaning": {
+                "en": "For here or to go?",
+                "fr": "Sur place ou à emporter ?",
+                "ru": "Здесь или с собой?",
+                "tr": "Burada mı, paket mi?"
+              }
+            },
+            {
+              "hanzi": "喝茶还是喝咖啡？",
+              "pinyin": "Hē chá háishi hē kāfēi?",
+              "meaning": {
+                "en": "Tea or coffee?",
+                "fr": "Du thé ou du café ?",
+                "ru": "Чай или кофе?",
+                "tr": "Çay mı, kahve mi?"
+              }
+            }
+          ]
+        },
+        {
+          "hanzi": "还要别的吗？",
+          "pinyin": "Hái yào bié de ma?",
+          "meaning": {
+            "en": "Would you like anything else?",
+            "fr": "Vous désirez autre chose ?",
+            "ru": "Что-нибудь ещё?",
+            "tr": "Başka bir şey ister misiniz?"
+          },
+          "chunks": [
+            "还要",
+            "别的",
+            "吗？"
+          ],
+          "source": "pdf"
+        },
+        {
+          "hanzi": "我来付。",
+          "pinyin": "Wǒ lái fù.",
+          "meaning": {
+            "en": "I’ll pay.",
+            "fr": "Je vais payer.",
+            "ru": "Я заплачу.",
+            "tr": "Ben ödeyeyim."
+          },
+          "chunks": [
+            "我",
+            "来付。"
+          ],
+          "source": "pdf"
+        },
+        {
+          "hanzi": "我请客。",
+          "pinyin": "Wǒ qǐngkè.",
+          "meaning": {
+            "en": "My treat.",
+            "fr": "C’est moi qui invite.",
+            "ru": "Я угощаю.",
+            "tr": "Benden olsun."
+          },
+          "chunks": [
+            "我",
+            "请客。"
+          ],
+          "source": "pdf",
+          "variants": [
+            {
+              "hanzi": "我们各付各的吧。",
+              "pinyin": "Wǒmen gè fù gè de ba.",
+              "meaning": {
+                "en": "Let’s each pay our own share.",
+                "fr": "On paie chacun sa part ?",
+                "ru": "Давайте каждый заплатит за себя.",
+                "tr": "Herkes kendi hesabını ödesin."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "coffee-breakfast",
+      "title": {
+        "en": "Coffee and breakfast",
+        "fr": "Café et petit-déjeuner",
+        "ru": "Кофе и завтрак",
+        "tr": "Kahve ve kahvaltı"
+      },
+      "lines": [
+        {
+          "hanzi": "请给我一杯咖啡。",
+          "pinyin": "Qǐng gěi wǒ yì bēi kāfēi.",
+          "meaning": {
+            "en": "A cup of coffee, please.",
+            "fr": "Un café, s’il vous plaît.",
+            "ru": "Чашку кофе, пожалуйста.",
+            "tr": "Bir fincan kahve, lütfen."
+          },
+          "chunks": [
+            "请给我",
+            "一杯咖啡。"
+          ],
+          "source": "adapted",
+          "variants": [
+            {
+              "hanzi": "请给我两杯豆浆。",
+              "pinyin": "Qǐng gěi wǒ liǎng bēi dòujiāng.",
+              "meaning": {
+                "en": "Two cups of soy milk, please.",
+                "fr": "Deux verres de lait de soja, s’il vous plaît.",
+                "ru": "Два стакана соевого молока, пожалуйста.",
+                "tr": "İki bardak soya sütü, lütfen."
+              }
+            }
+          ]
+        },
+        {
+          "hanzi": "堂食还是外带？",
+          "pinyin": "Tángshí háishi wàidài?",
+          "meaning": {
+            "en": "For here or to go?",
+            "fr": "Sur place ou à emporter ?",
+            "ru": "Здесь или с собой?",
+            "tr": "Burada mı, paket mi?"
+          },
+          "chunks": [
+            "堂食",
+            "还是",
+            "外带？"
+          ],
+          "source": "adapted"
+        },
+        {
+          "hanzi": "我在这儿喝。",
+          "pinyin": "Wǒ zài zhèr hē.",
+          "meaning": {
+            "en": "I’ll drink it here.",
+            "fr": "Je vais le boire ici.",
+            "ru": "Я выпью здесь.",
+            "tr": "Burada içeceğim."
+          },
+          "chunks": [
+            "我",
+            "在这儿",
+            "喝。"
+          ],
+          "source": "adapted"
+        },
+        {
+          "hanzi": "可以用微信支付吗？",
+          "pinyin": "Kěyǐ yòng Wēixìn zhīfù ma?",
+          "meaning": {
+            "en": "Can I pay with WeChat?",
+            "fr": "Je peux payer avec WeChat ?",
+            "ru": "Можно оплатить через WeChat?",
+            "tr": "WeChat ile ödeme yapabilir miyim?"
+          },
+          "chunks": [
+            "可以",
+            "用微信",
+            "支付",
+            "吗？"
+          ],
+          "source": "adapted"
+        },
+        {
+          "hanzi": "一共多少钱？",
+          "pinyin": "Yígòng duōshao qián?",
+          "meaning": {
+            "en": "How much is it altogether?",
+            "fr": "Ça fait combien en tout ?",
+            "ru": "Сколько всего?",
+            "tr": "Toplam ne kadar?"
+          },
+          "chunks": [
+            "一共",
+            "多少钱？"
+          ],
+          "source": "pdf"
+        }
+      ]
+    },
+    {
+      "id": "food-actions",
+      "title": {
+        "en": "Making and eating food",
+        "fr": "Préparer et manger",
+        "ru": "Готовим и едим",
+        "tr": "Yemek hazırlamak ve yemek"
+      },
+      "lines": [
+        {
+          "hanzi": "这个菜怎么做？",
+          "pinyin": "Zhège cài zěnme zuò?",
+          "meaning": {
+            "en": "How do you make this dish?",
+            "fr": "Comment prépare-t-on ce plat ?",
+            "ru": "Как готовят это блюдо?",
+            "tr": "Bu yemek nasıl yapılır?"
+          },
+          "chunks": [
+            "这个菜",
+            "怎么做？"
+          ],
+          "source": "adapted",
+          "variants": [
+            {
+              "hanzi": "这个鸡蛋怎么煮？",
+              "pinyin": "Zhège jīdàn zěnme zhǔ?",
+              "meaning": {
+                "en": "How do you boil this egg?",
+                "fr": "Comment fait-on cuire cet œuf à l’eau ?",
+                "ru": "Как сварить это яйцо?",
+                "tr": "Bu yumurta nasıl haşlanır?"
+              }
+            }
+          ]
+        },
+        {
+          "hanzi": "我们用筷子吃。",
+          "pinyin": "Wǒmen yòng kuàizi chī.",
+          "meaning": {
+            "en": "We eat with chopsticks.",
+            "fr": "On mange avec des baguettes.",
+            "ru": "Мы едим палочками.",
+            "tr": "Yemek çubuklarıyla yiyoruz."
+          },
+          "chunks": [
+            "我们",
+            "用筷子",
+            "吃。"
+          ],
+          "source": "adapted",
+          "variants": [
+            {
+              "hanzi": "我用勺子喝汤。",
+              "pinyin": "Wǒ yòng sháozi hē tāng.",
+              "meaning": {
+                "en": "I eat soup with a spoon.",
+                "fr": "Je mange la soupe avec une cuillère.",
+                "ru": "Я ем суп ложкой.",
+                "tr": "Çorbayı kaşıkla içiyorum."
+              }
+            }
+          ]
+        },
+        {
+          "hanzi": "请慢点说。",
+          "pinyin": "Qǐng màn diǎn shuō.",
+          "meaning": {
+            "en": "Please speak a little more slowly.",
+            "fr": "Parlez un peu plus lentement, s’il vous plaît.",
+            "ru": "Говорите, пожалуйста, чуть медленнее.",
+            "tr": "Lütfen biraz daha yavaş konuşun."
+          },
+          "chunks": [
+            "请",
+            "慢点",
+            "说。"
+          ],
+          "source": "adapted"
+        },
+        {
+          "hanzi": "我做饭，你们先坐。",
+          "pinyin": "Wǒ zuòfàn, nǐmen xiān zuò.",
+          "meaning": {
+            "en": "I’ll cook. You can sit down first.",
+            "fr": "Je vais cuisiner. Asseyez-vous d’abord.",
+            "ru": "Я приготовлю еду, а вы пока садитесь.",
+            "tr": "Ben yemek yapayım, siz önce oturun."
+          },
+          "chunks": [
+            "我",
+            "做饭，",
+            "你们",
+            "先坐。"
+          ],
+          "source": "adapted"
+        }
+      ]
+    },
+    {
+      "id": "suzhou",
+      "title": {
+        "en": "Getting around Suzhou",
+        "fr": "Se déplacer à Suzhou",
+        "ru": "Поездки по Сучжоу",
+        "tr": "Suzhou’da ulaşım"
+      },
+      "lines": [
+        {
+          "hanzi": "我现在住在苏州。",
+          "pinyin": "Wǒ xiànzài zhù zài Sūzhōu.",
+          "meaning": {
+            "en": "I live in Suzhou now.",
+            "fr": "J’habite à Suzhou en ce moment.",
+            "ru": "Сейчас я живу в Сучжоу.",
+            "tr": "Şu anda Suzhou’da yaşıyorum."
+          },
+          "chunks": [
+            "我",
+            "现在",
+            "住在苏州。"
+          ],
+          "source": "pdf"
+        },
+        {
+          "hanzi": "这里有很多漂亮的地方。",
+          "pinyin": "Zhèlǐ yǒu hěn duō piàoliang de dìfang.",
+          "meaning": {
+            "en": "There are lots of beautiful places here.",
+            "fr": "Il y a beaucoup de beaux endroits ici.",
+            "ru": "Здесь много красивых мест.",
+            "tr": "Burada birçok güzel yer var."
+          },
+          "chunks": [
+            "这里",
+            "有",
+            "很多漂亮的地方。"
+          ],
+          "source": "pdf"
+        },
+        {
+          "hanzi": "我坐地铁可以去很多地方。",
+          "pinyin": "Wǒ zuò dìtiě kěyǐ qù hěn duō dìfang.",
+          "meaning": {
+            "en": "I can get to lots of places by metro.",
+            "fr": "Je peux aller dans beaucoup d’endroits en métro.",
+            "ru": "На метро я могу добраться до многих мест.",
+            "tr": "Metroyla birçok yere gidebilirim."
+          },
+          "chunks": [
+            "我",
+            "坐地铁",
+            "可以去很多地方。"
+          ],
+          "source": "pdf",
+          "variants": [
+            {
+              "hanzi": "我坐地铁可以去公园。",
+              "pinyin": "Wǒ zuò dìtiě kěyǐ qù gōngyuán.",
+              "meaning": {
+                "en": "I can get to the park by metro.",
+                "fr": "Je peux aller au parc en métro.",
+                "ru": "Я могу доехать до парка на метро.",
+                "tr": "Parka metroyla gidebilirim."
+              }
+            }
+          ]
+        },
+        {
+          "hanzi": "我也喜欢骑共享单车。",
+          "pinyin": "Wǒ yě xǐhuan qí gòngxiǎng dānchē.",
+          "meaning": {
+            "en": "I also like riding shared bikes.",
+            "fr": "J’aime aussi prendre des vélos en libre-service.",
+            "ru": "Мне ещё нравится ездить на велосипедах напрокат.",
+            "tr": "Paylaşımlı bisiklete binmeyi de seviyorum."
+          },
+          "chunks": [
+            "我",
+            "也喜欢",
+            "骑共享单车。"
+          ],
+          "source": "pdf"
+        },
+        {
+          "hanzi": "下个星期我们再去。",
+          "pinyin": "Xià ge xīngqī wǒmen zài qù.",
+          "meaning": {
+            "en": "We’ll go again next week.",
+            "fr": "On y retournera la semaine prochaine.",
+            "ru": "На следующей неделе мы сходим туда ещё раз.",
+            "tr": "Gelecek hafta tekrar gideriz."
+          },
+          "chunks": [
+            "下个星期",
+            "我们",
+            "再去。"
+          ],
+          "source": "pdf",
+          "variants": [
+            {
+              "hanzi": "我想再去一次。",
+              "pinyin": "Wǒ xiǎng zài qù yí cì.",
+              "meaning": {
+                "en": "I’d like to go one more time.",
+                "fr": "J’aimerais y retourner une fois de plus.",
+                "ru": "Я хочу сходить туда ещё раз.",
+                "tr": "Bir kez daha gitmek istiyorum."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "restaurant-story",
+      "title": {
+        "en": "Telling the story of an outing",
+        "fr": "Raconter une sortie",
+        "ru": "Рассказ о встрече с друзьями",
+        "tr": "Arkadaşlarla bir günü anlatmak"
+      },
+      "lines": [
+        {
+          "hanzi": "我们觉得这里的菜很好吃。",
+          "pinyin": "Wǒmen juéde zhèlǐ de cài hěn hǎochī.",
+          "meaning": {
+            "en": "We think the food here is delicious.",
+            "fr": "On trouve que les plats sont délicieux ici.",
+            "ru": "По-нашему, здесь очень вкусно готовят.",
+            "tr": "Buradaki yemeklerin çok lezzetli olduğunu düşünüyoruz."
+          },
+          "chunks": [
+            "我们",
+            "觉得",
+            "这里的菜",
+            "很好吃。"
+          ],
+          "source": "pdf",
+          "variants": [
+            {
+              "hanzi": "我觉得坐地铁很方便。",
+              "pinyin": "Wǒ juéde zuò dìtiě hěn fāngbiàn.",
+              "meaning": {
+                "en": "I think taking the metro is convenient.",
+                "fr": "Je trouve que le métro est pratique.",
+                "ru": "По-моему, ездить на метро удобно.",
+                "tr": "Bence metroya binmek çok rahat."
+              }
+            }
+          ]
+        },
+        {
+          "hanzi": "我们很喜欢这个饭店，所以决定在这儿吃饭。",
+          "pinyin": "Wǒmen hěn xǐhuan zhège fàndiàn, suǒyǐ juédìng zài zhèr chīfàn.",
+          "meaning": {
+            "en": "We liked this restaurant, so we decided to eat here.",
+            "fr": "On a beaucoup aimé ce restaurant, alors on a décidé de manger ici.",
+            "ru": "Нам очень понравился этот ресторан, поэтому мы решили поесть здесь.",
+            "tr": "Bu restoranı çok sevdik, o yüzden burada yemek yemeye karar verdik."
+          },
+          "chunks": [
+            "我们",
+            "很喜欢这个饭店，",
+            "所以",
+            "决定在这儿吃饭。"
+          ],
+          "source": "adapted"
+        },
+        {
+          "hanzi": "她唱了半个小时。",
+          "pinyin": "Tā chàng le bàn ge xiǎoshí.",
+          "meaning": {
+            "en": "She sang for half an hour.",
+            "fr": "Elle a chanté pendant une demi-heure.",
+            "ru": "Она пела полчаса.",
+            "tr": "Yarım saat şarkı söyledi."
+          },
+          "chunks": [
+            "她",
+            "唱了",
+            "半个小时。"
+          ],
+          "source": "pdf"
+        },
+        {
+          "hanzi": "我不喜欢唱歌，所以没唱。",
+          "pinyin": "Wǒ bù xǐhuan chànggē, suǒyǐ méi chàng.",
+          "meaning": {
+            "en": "I don’t like singing, so I didn’t sing.",
+            "fr": "Je n’aime pas chanter, alors je n’ai pas chanté.",
+            "ru": "Я не люблю петь, поэтому не стал петь.",
+            "tr": "Şarkı söylemeyi sevmiyorum, o yüzden söylemedim."
+          },
+          "chunks": [
+            "我",
+            "不喜欢唱歌，",
+            "所以",
+            "没唱。"
+          ],
+          "source": "adapted"
+        }
+      ]
+    },
+    {
+      "id": "time-and-amount",
+      "title": {
+        "en": "After, a little, and for a while",
+        "fr": "Après, un peu et un moment",
+        "ru": "После, немного и ненадолго",
+        "tr": "Sonra, biraz ve bir süre"
+      },
+      "lines": [
+        {
+          "hanzi": "吃完饭以后，我们一起去散步。",
+          "pinyin": "Chī wán fàn yǐhòu, wǒmen yìqǐ qù sànbù.",
+          "meaning": {
+            "en": "After we finish eating, we’ll go for a walk together.",
+            "fr": "Après le repas, on ira se promener ensemble.",
+            "ru": "После еды мы вместе пойдём гулять.",
+            "tr": "Yemeği bitirdikten sonra birlikte yürüyüşe çıkacağız."
+          },
+          "chunks": [
+            "吃完饭以后，",
+            "我们",
+            "一起去散步。"
+          ],
+          "source": "adapted",
+          "variants": [
+            {
+              "hanzi": "下课以后，我想去公园。",
+              "pinyin": "Xiàkè yǐhòu, wǒ xiǎng qù gōngyuán.",
+              "meaning": {
+                "en": "After class, I want to go to the park.",
+                "fr": "Après le cours, j’aimerais aller au parc.",
+                "ru": "После занятия я хочу пойти в парк.",
+                "tr": "Dersten sonra parka gitmek istiyorum."
+              }
+            }
+          ]
+        },
+        {
+          "hanzi": "我想多学一点儿汉语。",
+          "pinyin": "Wǒ xiǎng duō xué yìdiǎnr Hànyǔ.",
+          "meaning": {
+            "en": "I want to learn a little more Chinese.",
+            "fr": "J’aimerais apprendre un peu plus de chinois.",
+            "ru": "Я хочу ещё немного поучить китайский.",
+            "tr": "Biraz daha Çince öğrenmek istiyorum."
+          },
+          "chunks": [
+            "我",
+            "想",
+            "多学一点儿",
+            "汉语。"
+          ],
+          "source": "pdf"
+        },
+        {
+          "hanzi": "我想散一会儿步。",
+          "pinyin": "Wǒ xiǎng sàn yíhuìr bù.",
+          "meaning": {
+            "en": "I want to go for a little walk.",
+            "fr": "J’aimerais me promener un petit moment.",
+            "ru": "Я хочу немного прогуляться.",
+            "tr": "Bir süre yürüyüş yapmak istiyorum."
+          },
+          "chunks": [
+            "我",
+            "想",
+            "散一会儿步。"
+          ],
+          "source": "pdf",
+          "variants": [
+            {
+              "hanzi": "我想多跑一会儿步。",
+              "pinyin": "Wǒ xiǎng duō pǎo yíhuìr bù.",
+              "meaning": {
+                "en": "I want to run a little longer.",
+                "fr": "J’aimerais courir encore un petit moment.",
+                "ru": "Я хочу ещё немного побегать.",
+                "tr": "Biraz daha koşmak istiyorum."
+              }
+            }
+          ]
+        },
+        {
+          "hanzi": "我肚子有点儿疼。",
+          "pinyin": "Wǒ dùzi yǒudiǎnr téng.",
+          "meaning": {
+            "en": "My stomach hurts a little.",
+            "fr": "J’ai un peu mal au ventre.",
+            "ru": "У меня немного болит живот.",
+            "tr": "Karnım biraz ağrıyor."
+          },
+          "chunks": [
+            "我肚子",
+            "有点儿疼。"
+          ],
+          "source": "pdf",
+          "variants": [
+            {
+              "hanzi": "我头有点儿疼。",
+              "pinyin": "Wǒ tóu yǒudiǎnr téng.",
+              "meaning": {
+                "en": "My head hurts a little.",
+                "fr": "J’ai un peu mal à la tête.",
+                "ru": "У меня немного болит голова.",
+                "tr": "Başım biraz ağrıyor."
+              }
+            }
+          ]
+        },
+        {
+          "hanzi": "我正在买东西。",
+          "pinyin": "Wǒ zhèngzài mǎi dōngxi.",
+          "meaning": {
+            "en": "I’m shopping right now.",
+            "fr": "Je suis en train de faire des courses.",
+            "ru": "Я сейчас за покупками.",
+            "tr": "Şu anda alışveriş yapıyorum."
+          },
+          "chunks": [
+            "我",
+            "正在",
+            "买东西。"
+          ],
+          "source": "pdf"
+        }
+      ]
+    },
+    {
+      "id": "podcast",
+      "title": {
+        "en": "A short podcast conversation",
+        "fr": "Un court échange de podcast",
+        "ru": "Короткий разговор из подкаста",
+        "tr": "Kısa bir podcast sohbeti"
+      },
+      "lines": [
+        {
+          "hanzi": "你有没有觉得每天都一样？",
+          "pinyin": "Nǐ yǒu méiyǒu juéde měitiān dōu yíyàng?",
+          "meaning": {
+            "en": "Do you ever feel like every day is the same?",
+            "fr": "Tu as parfois l’impression que toutes les journées se ressemblent ?",
+            "ru": "У тебя бывает ощущение, что все дни одинаковые?",
+            "tr": "Her gün aynıymış gibi hissettiğin oluyor mu?"
+          },
+          "chunks": [
+            "你",
+            "有没有觉得",
+            "每天都一样？"
+          ],
+          "source": "adapted"
+        },
+        {
+          "hanzi": "有的时候，生活好像有点没意思。",
+          "pinyin": "Yǒu de shíhou, shēnghuó hǎoxiàng yǒudiǎn méi yìsi.",
+          "meaning": {
+            "en": "Sometimes life seems a bit dull.",
+            "fr": "Parfois, la vie paraît un peu monotone.",
+            "ru": "Иногда жизнь кажется немного скучной.",
+            "tr": "Bazen hayat biraz sıkıcı gibi geliyor."
+          },
+          "chunks": [
+            "有的时候，",
+            "生活",
+            "好像",
+            "有点没意思。"
+          ],
+          "source": "pdf"
+        },
+        {
+          "hanzi": "怎么会突然问这个？",
+          "pinyin": "Zěnme huì tūrán wèn zhège?",
+          "meaning": {
+            "en": "Why are you asking all of a sudden?",
+            "fr": "Pourquoi tu demandes ça tout d’un coup ?",
+            "ru": "Почему ты вдруг об этом спрашиваешь?",
+            "tr": "Bunu neden birdenbire soruyorsun?"
+          },
+          "chunks": [
+            "怎么会",
+            "突然",
+            "问这个？"
+          ],
+          "source": "pdf"
+        },
+        {
+          "hanzi": "你最近遇到什么事情了吗？",
+          "pinyin": "Nǐ zuìjìn yùdào shénme shìqing le ma?",
+          "meaning": {
+            "en": "Has anything happened to you lately?",
+            "fr": "Il t’est arrivé quelque chose récemment ?",
+            "ru": "С тобой недавно что-то случилось?",
+            "tr": "Son zamanlarda başına bir şey geldi mi?"
+          },
+          "chunks": [
+            "你最近",
+            "遇到什么事情",
+            "了吗？"
+          ],
+          "source": "pdf"
+        }
+      ]
+    }
+  ],
+  "families": [
+    {
+      "anchor": "木 · 本 · 末 · 未",
+      "examples": [
+        "木",
+        "本",
+        "末",
+        "未",
+        "一本书",
+        "周末",
+        "未来",
+        "本来"
+      ],
+      "note": {
+        "en": "Look-alikes. 本 places a short stroke low, at the base. Compare the two horizontal strokes at the top of 末 and 未. The top stroke is longer in 末. Learn them in 一本书, 周末 and 未来.",
+        "fr": "Caractères de forme proche. Le petit trait de 本 est à la base. Comparez les traits horizontaux de 末 et 未. Celui du haut est plus long dans 末. Retenez 一本书, 周末 et 未来.",
+        "ru": "Похожие знаки. У 本 короткая черта внизу. Сравните две верхние горизонтали в 末 и 未. У 末 самая верхняя длиннее. Закрепите их в 一本书, 周末 и 未来.",
+        "tr": "Benzer görünümlü karakterler. 本 karakterinde kısa çizgi alttadır. 末 ve 未 karakterlerinin iki üst yatay çizgisini karşılaştır. 末 karakterinde en üstteki çizgi daha uzundur. 一本书, 周末 ve 未来 ile pekiştir."
+      }
+    },
+    {
+      "anchor": "再 · 在",
+      "examples": [
+        "再去",
+        "再来",
+        "下个星期我们再去",
+        "在这儿",
+        "住在苏州",
+        "正在买东西"
+      ],
+      "note": {
+        "en": "Same sound, different jobs. 再 marks doing something again. 在 locates an action or, in 正在, marks that it is happening now.",
+        "fr": "Même son, fonctions différentes. 再 marque la répétition. 在 situe une action ou, dans 正在, indique qu’elle est en cours.",
+        "ru": "Звучат одинаково, функции разные. 再 обозначает повтор действия. 在 указывает место, а в 正在 — действие в процессе.",
+        "tr": "Okunuş aynı, işlevler farklı. 再 bir eylemin tekrarlanmasını belirtir. 在 eylemin yerini, 正在 içinde ise sürmekte olduğunu gösterir."
+      }
+    },
+    {
+      "anchor": "做 · 坐",
+      "examples": [
+        "做饭",
+        "做作业",
+        "怎么做",
+        "先坐",
+        "坐地铁",
+        "坐出租车"
+      ],
+      "note": {
+        "en": "Two words pronounced zuò. 做 goes with making and doing. 坐 goes with sitting and riding in vehicles.",
+        "fr": "Deux mots prononcés zuò. 做 sert à dire faire ou préparer. 坐 sert à dire s’asseoir ou prendre un moyen de transport.",
+        "ru": "Оба слова произносятся zuò. 做 значит делать или готовить, 坐 — сидеть или ехать на транспорте.",
+        "tr": "İki sözcük de zuò diye okunur. 做 yapmak veya hazırlamak, 坐 oturmak veya bir taşıtla gitmek için kullanılır."
+      }
+    },
+    {
+      "anchor": "共",
+      "examples": [
+        "一共",
+        "共享",
+        "共同",
+        "共用",
+        "公共",
+        "共享单车"
+      ],
+      "note": {
+        "en": "Compare 共 in words for totals and sharing. 一共 gives the total, while 共享 and 共用 describe something shared or used together.",
+        "fr": "Comparez 共 dans les mots du total et du partage. 一共 donne le total, tandis que 共享 et 共用 décrivent ce que l’on partage ou utilise ensemble.",
+        "ru": "Сравните 共 в словах о сумме и совместном использовании. 一共 значит всего, а 共享 и 共用 обозначают совместное пользование.",
+        "tr": "Toplam ve paylaşım bildiren sözcüklerde 共 karakterini karşılaştır. 一共 toplamı, 共享 ve 共用 ise paylaşımı veya ortak kullanımı anlatır."
+      }
+    },
+    {
+      "anchor": "头",
+      "examples": [
+        "头",
+        "头发",
+        "头疼",
+        "头晕",
+        "点头",
+        "摇头",
+        "抬头"
+      ],
+      "note": {
+        "en": "Group head movements and sensations. 点头 means to nod, 摇头 to shake your head and 头晕 to feel dizzy.",
+        "fr": "Regroupez les mouvements et sensations de la tête. 点头 signifie hocher la tête, 摇头 la secouer et 头晕 avoir le vertige.",
+        "ru": "Объедините движения и ощущения, связанные с головой. 点头 — кивнуть, 摇头 — покачать головой, 头晕 — чувствовать головокружение.",
+        "tr": "Baş hareketlerini ve hislerini grupla. 点头 başını sallayarak onaylamak, 摇头 başını iki yana sallamak, 头晕 ise başının dönmesi demektir."
+      }
+    },
+    {
+      "anchor": "电",
+      "examples": [
+        "电",
+        "电瓶车",
+        "电影",
+        "电影院",
+        "看电影",
+        "电脑",
+        "电话"
+      ],
+      "note": {
+        "en": "Track 电 across transport and everyday technology, then notice how a whole word grows from 电影 to 电影院.",
+        "fr": "Repérez 电 dans les transports et les objets du quotidien, puis voyez comment 电影 s’allonge pour former 电影院.",
+        "ru": "Найдите 电 в словах о транспорте и технике, а затем посмотрите, как из 电影 получается 电影院.",
+        "tr": "Ulaşım ve günlük teknoloji sözcüklerinde 电 karakterini bul. Sonra 电影 sözcüğünün 电影院 biçimine nasıl dönüştüğüne bak."
+      }
+    }
+  ]
+}
