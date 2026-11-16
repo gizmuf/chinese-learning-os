@@ -11,7 +11,7 @@ export const sentenceCheckCopy = {
     examples: 'Try an example', exampleNames: ['Comparing height', 'Going to school'],
     checked: 'Checked sentence', result: 'Result', correct: 'Correct', corrected: 'Correction needed',
     uncertain: 'Uncertain', correction: 'Minimal correction', explanation: 'Explanation', natural: 'Natural variant',
-    listen: 'Listen', noAudio: 'Mandarin playback is unavailable in this browser.',
+    listen: 'Listen', noAudio: 'Recording unavailable for this sentence.', playError: 'The recording could not play. Try again.',
     invalid: 'Enter one short Mandarin sentence and try again.',
   },
   fr: {
@@ -24,7 +24,7 @@ export const sentenceCheckCopy = {
     examples: 'Essayer un exemple', exampleNames: ['Comparer des tailles', 'Aller à l’école'],
     checked: 'Phrase vérifiée', result: 'Résultat', correct: 'Correcte', corrected: 'À corriger',
     uncertain: 'Incertain', correction: 'Correction minimale', explanation: 'Explication', natural: 'Variante naturelle',
-    listen: 'Écouter', noAudio: 'La lecture en mandarin est indisponible dans ce navigateur.',
+    listen: 'Écouter', noAudio: 'Aucun enregistrement pour cette phrase.', playError: 'Impossible de lire l’enregistrement. Réessayez.',
     invalid: 'Saisissez une courte phrase en mandarin, puis réessayez.',
   },
   ru: {
@@ -37,7 +37,7 @@ export const sentenceCheckCopy = {
     examples: 'Попробуйте пример', exampleNames: ['Сравнить рост', 'Идти в школу'],
     checked: 'Проверенное предложение', result: 'Результат', correct: 'Правильно', corrected: 'Нужно исправить',
     uncertain: 'Неопределённо', correction: 'Минимальное исправление', explanation: 'Объяснение', natural: 'Естественный вариант',
-    listen: 'Послушать', noAudio: 'В этом браузере озвучивание на китайском недоступно.',
+    listen: 'Послушать', noAudio: 'Для этого предложения нет записи.', playError: 'Не удалось воспроизвести запись. Повторите попытку.',
     invalid: 'Введите одно короткое предложение на китайском и повторите попытку.',
   },
   tr: {
@@ -50,7 +50,7 @@ export const sentenceCheckCopy = {
     examples: 'Bir örnek dene', exampleNames: ['Boy karşılaştırmak', 'Okula gitmek'],
     checked: 'Kontrol edilen cümle', result: 'Sonuç', correct: 'Doğru', corrected: 'Düzeltme gerekli',
     uncertain: 'Belirsiz', correction: 'Gerekli düzeltme', explanation: 'Açıklama', natural: 'Daha doğal ifade',
-    listen: 'Dinle', noAudio: 'Bu tarayıcıda Mandarin Çincesi seslendirme kullanılamıyor.',
+    listen: 'Dinle', noAudio: 'Bu cümle için ses kaydı yok.', playError: 'Ses kaydı oynatılamadı. Tekrar dene.',
     invalid: 'Mandarin Çincesi kısa bir cümle girip tekrar dene.',
   },
 } satisfies Record<Locale, Record<string, string | string[]>>;

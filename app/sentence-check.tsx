@@ -2,7 +2,7 @@
 
 import { ArrowLeft, Check, CircleHelp, Pencil, Volume2 } from 'lucide-react';
 import { useEffect, useRef, useState, type FormEvent } from 'react';
-import { playRecording, releaseRecording, stopAudio } from './audio';
+import { playRecording, releaseRecording } from './audio';
 import { sentenceCheckRecording } from './sentence-check-recording';
 import { checkSentenceRules, type SentenceCheckResult } from './sentence-check-rules';
 import type { Locale } from './translate';
@@ -30,7 +30,6 @@ export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () =
   const [audioError, setAudioError] = useState(false);
   const field = useRef<HTMLTextAreaElement>(null);
   const recording = useRef<HTMLAudioElement | null>(null);
-  const utterance = useRef<SpeechSynthesisUtterance | null>(null);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -50,50 +49,11 @@ export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () =
 
   useEffect(() => () => {
     if (recording.current) releaseRecording(recording.current);
-    if (utterance.current) {
-      utterance.current = null;
-      window.speechSynthesis.cancel();
-    }
   }, []);
 
-  function listen(text: string) {
+  function listen(source: string) {
     setAudioError(false);
-    if (utterance.current) {
-      utterance.current = null;
-      window.speechSynthesis.cancel();
-    }
-    const source = sentenceCheckRecording(text);
-    if (source) {
-      recording.current = playRecording(source, () => setAudioError(true));
-      return;
-    }
-    if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
-      setAudioError(true);
-      return;
-    }
-    const speech = window.speechSynthesis;
-    const voices = speech.getVoices().filter(voice => voice.localService);
-    const mandarin = voices.find(voice => /^zh[-_]CN$/i.test(voice.lang))
-      ?? voices.find(voice => /^(zh|cmn)(?:[-_]|$)/i.test(voice.lang) && !/hk|yue|cantonese/i.test(voice.lang + ' ' + voice.name));
-    if (!mandarin) {
-      setAudioError(true);
-      return;
-    }
-    stopAudio();
-    const next = new SpeechSynthesisUtterance(text);
-    next.lang = mandarin.lang;
-    next.voice = mandarin;
-    next.onend = () => {
-      if (utterance.current === next) utterance.current = null;
-    };
-    next.onerror = () => {
-      if (utterance.current !== next) return;
-      utterance.current = null;
-      setAudioError(true);
-    };
-    utterance.current = next;
-    speech.cancel();
-    speech.speak(next);
+    recording.current = playRecording(source, () => setAudioError(true));
   }
 
   function inputForCheck() {
@@ -148,15 +108,17 @@ export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () =
   }
 
   function reading(text: string, pinyin: string, label: string, spokenText = text) {
+    const source = spokenText ? sentenceCheckRecording(spokenText) : undefined;
     return <section className="sentence-check-reading">
       <div>
         <h3>{label}</h3>
         <p className="sentence-check-hanzi" lang="zh-Hans">{text}</p>
         {pinyin && <p className="pinyin" lang="zh-Latn-pinyin">{pinyin}</p>}
       </div>
-      {spokenText && <button type="button" className="secondary" onClick={() => listen(spokenText)} aria-label={c.listen + ' · ' + label}>
+      {source && <button type="button" className="secondary" onClick={() => listen(source)} aria-label={c.listen + ' · ' + label}>
         <Volume2 size={17} aria-hidden="true" />{c.listen}
       </button>}
+      {spokenText && !source && <p className="sentence-check-disclosure">{c.noAudio}</p>}
     </section>;
   }
 
@@ -210,7 +172,7 @@ export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () =
         <p>{feedback.explanation}</p>
       </section>
       {feedback.natural && reading(feedback.natural, feedback.naturalPinyin, c.natural)}
-      {audioError && <p className="sentence-check-message" role="alert">{c.noAudio}</p>}
+      {audioError && <p className="sentence-check-message" role="alert">{c.playError}</p>}
     </section>}
   </div>;
 }

@@ -49,3 +49,13 @@ test('all feedback paths offer a specific explanation in the four UI languages',
     assert.equal(new Set(explanations).size, locales.length, sentence);
   }
 });
+
+test('DeepSeek comparison outputs use exact prerecorded Mandarin audio', async () => {
+  const { sentenceCheckRecording } = await import('../app/sentence-check-recording.ts');
+  const { statSync } = await import('node:fs');
+  for (const sentence of ['他比我高很多。', '他比我高得多。']) {
+    const asset = sentenceCheckRecording(sentence);
+    assert.ok(asset && statSync(new URL('../public' + asset, import.meta.url)).size > 0);
+  }
+  assert.equal(sentenceCheckRecording('她骑自行车去了图书馆。'), undefined);
+});
