@@ -52,7 +52,7 @@ export default function DictionaryExploration({entry,dictionary,onLookup,speaker
   // eslint-disable-next-line react-hooks/exhaustive-deps
  },[wordPageKey,allCharacters]);
  function changeTab(value:Tab){setTab(value);setPage(0);setLesson('');}
- function preview(value:DictionaryEntry){return <div className="sp-connection-card" key={value.text}><button type="button" className="sp-connection-target" onClick={e=>onLookup(value.text,e.currentTarget)}><strong lang="zh-Hans"><CloudHighlight hanzi={value.text} component={tab==='family'?part:character}/></strong><span className="sp-reading">{value.pinyin}</span><span>{value.meaning}</span></button><HskBadge text={value.text}/>{value.audio&&speaker(value.audio)}</div>;}
+ function preview(value:DictionaryEntry){return <div className="sp-connection-card" key={value.text}><button type="button" className="sp-connection-target" onClick={e=>onLookup(value.text,e.currentTarget)}><strong lang="zh-Hans"><CloudHighlight hanzi={value.text} component={tab==='family'?part:character}/></strong><span className="sp-reading">{value.pinyin}</span><span>{value.meaning}</span></button><HskBadge text={value.text} pinyin={value.pinyin}/>{value.audio&&speaker(value.audio)}</div>;}
  const paging=tab==='lessons'?shownLessons:shown,total=tab==='family'?family.length:tab==='words'?words.length:filtered.length;
  return <section className="sp-exploration" aria-label={c.title} data-study-exploration="true">
   <h3>{c.title}</h3>

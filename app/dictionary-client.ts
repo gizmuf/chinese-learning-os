@@ -1,15 +1,26 @@
 import {canonicalDictionaryText,isSimplifiedHeadword} from './simplified-chinese';
 import sourceMeta from '../data/dictionary-sources.json';
 import hskSource from '../data/hsk-levels-source.json';
+import {contentDigest} from '../hk/content-digest';
 import {sourceCharacterEntry,type SourceCharacter} from './dictionary-source-model';
 import type {DictionaryEntry} from './atlas-spatial-model';
 const cacheName='chinese-os-dictionary-'+sourceMeta.cedict.sha256.slice(0,12)+'-'+sourceMeta.cedict.policySHA256.slice(0,12)+'-3';
 async function storage(){try{return typeof caches==='undefined'?undefined:await caches.open(cacheName);}catch{return undefined;}}
-async function resource(path:string){
+async function resource(path:string, verifyHsk=false){
  const cache=await storage(),cached=await cache?.match(path),response=cached??await fetch(path);
  if(!response.ok)throw Error('Could not load dictionary data');
  const bytes=await response.clone().arrayBuffer();if(bytes.byteLength>10000000)throw Error('Unexpected dictionary data');
- const body=new Uint8Array(bytes);const text=body[0]===31&&body[1]===139?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(body);
+ const body=new Uint8Array(bytes);
+ const compressed=body[0]===31&&body[1]===139;
+ if(verifyHsk){
+  const expected=compressed?hskSource.assetSha256:hskSource.decodedAssetSha256;
+  const digest=Array.from(new Uint8Array(await contentDigest('SHA-256',body)),byte=>byte.toString(16).padStart(2,'0')).join('');
+  if(digest!==expected){
+   await cache?.delete(path).catch(()=>{});
+   throw Error('The HSK index did not match its published fingerprint');
+  }
+ }
+ const text=compressed?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(body);
  const data=JSON.parse(text);if(!cached)await cache?.put(path,response).catch(()=>{});return data;
 }
 let resources:Promise<{headwords:Set<string>;characters:Map<string,DictionaryEntry>}>|undefined;
@@ -33,4 +44,4 @@ export function fetchDictionaryEntry(text:string){
  })().finally(()=>inFlight.delete(text));inFlight.set(text,task);return task;
 }
 
-export function loadHskLevelResource(){return resource(hskSource.asset+'?v='+hskSource.assetSha256.slice(0,12));}
+export function loadHskLevelResource(){return resource(hskSource.asset+'?v='+hskSource.assetSha256.slice(0,12),true);}
