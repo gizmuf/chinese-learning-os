@@ -425,7 +425,12 @@ export default function StudyApp({
     restoreWritingOrigin(writingOrigin);
   }
   useEffect(() => {
-    const back = () => {
+    const back = (event: PopStateEvent) => {
+      // In-app navigation replaces the lesson entry. Its Explorer may still be in Forward history.
+      if (event.state?.chineseOSLesson11Explorer && !document.querySelector('.lesson11-space')) {
+        window.history.back();
+        return;
+      }
       const writing = writingPracticeRoute(window.location.search, sourceItems);
       const language = languagePracticeRoute(window.location.search, sourceItems);
       const practice = writing ?? language;
