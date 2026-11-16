@@ -3,12 +3,12 @@
 import {useEffect, useLayoutEffect, useMemo, useRef, useState, type FormEvent} from 'react';
 import {ArrowLeft, ArrowRight, BookOpen, ChevronRight, Columns2, Compass, Maximize2, Minimize2, PenLine} from 'lucide-react';
 import {useI18n} from './i18n';
-import {browseScopes, parseBrowseScope} from './hsk-browse';
+import {GlobalHskSelect, useGlobalHsk} from './global-hsk';
 import type {CloudWord} from './atlas-cloud-model';
 import type {JourneyGroup} from './family-journey-model';
 import type {CloudRoute} from './atlas-cloud-route';
 import {atlasCloudReturn, atlasWorkspaceHref, atlasWorkspaceScroll, isAtlasWorkspaceEntry, readAtlasWorkspaceRoute, type WorkspaceKind, type WorkspaceRoute} from './atlas-workspace-route';
-import {resolveWorkspaceContext, workspaceExploration, workspaceFamilySearch, workspaceGroups, workspaceOriginalHref, workspaceBoardSize, workspaceScopeLabel, workspaceSelection, type WorkspaceFamilyType} from './atlas-workspace-model';
+import {resolveWorkspaceContext, workspaceExploration, workspaceFamilySearch, workspaceGroups, workspaceOriginalHref, workspacePanelOutsideScope, workspaceBoardSize, workspaceScopeLabel, workspaceSelection, type WorkspaceFamilyType} from './atlas-workspace-model';
 import {workspaceExploreEvent} from './atlas-workspace-bridge';
 import {WorkspaceBoard, WorkspaceInspector, WorkspaceJourney, WorkspaceMap, WorkspacePractise, useWorkspaceAudio} from './atlas-workspace-content';
 import AtlasStoryExplorer from './atlas-story-explorer';
@@ -38,7 +38,10 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
   penOnly: boolean; setPenOnly: (value: boolean) => void; notify: (message: string) => void; embedded?: EmbeddedWorkspace;
 }) {
   const {locale} = useI18n();
-  const [route, setRoute] = useState(() => embedded?.initial ?? readAtlasWorkspaceRoute(window.location.search));
+  const global = useGlobalHsk();
+  const [localRoute, setRoute] = useState(() => embedded?.initial ?? readAtlasWorkspaceRoute(window.location.search));
+  const route = useMemo(() => global && global.scope !== localRoute.scope ? {...localRoute, scope: global.scope} : localRoute,
+    [localRoute, global?.scope]);
   const [depth, setDepth] = useState(() => embedded ? 0 : workspaceHistory().depth);
   const embedTrail = useRef<{route: WorkspaceRoute; scroll: number}[]>([]);
   const searchType = route.relation === 'structure' ? 'structure' : 'literal';
@@ -233,6 +236,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
   }
 
   function changeScope(scope: WorkspaceRoute['scope']) {
+    if (global) { audio.stop(); global.setScope(scope); return; }
     const group = route.group && (route.mode === 'read' || route.relation === 'topic')
       ? workspaceGroups(locale, scope).find(entry => entry.id === route.group)
       : undefined;
@@ -271,6 +275,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
     if (returnToFamily) requestAnimationFrame(() => panelToggle.current?.focus({preventScroll: true}));
   }
 
+  const outsideScope = workspacePanelOutsideScope(route, context);
   const hideInspector = route.mode === 'practise' && (route.exercise === 'reels' && reelMemory && !reelRevealed
     || route.exercise === 'contrast' && contrastRecallActive);
   const inlineContext = narrow && route.mode === 'read' && groups.some(group => group.id === route.group);
@@ -297,9 +302,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
             value={draft} onChange={event => setDraft(event.target.value)} lang={familyType === 'literal' ? 'zh-Hans' : undefined} maxLength={familyType === 'literal' ? 8 : 40} aria-invalid={!!error}/>
           <button type="submit" aria-label={familyType === 'literal' ? 'Search word family' : 'Search component family'}><ArrowRight size={17}/></button>
         </form>
-        <label className="aw-scope"><span>Vocabulary</span><select aria-label="Vocabulary scope" value={route.scope} onChange={event => changeScope(parseBrowseScope(event.target.value))}>
-          {browseScopes.map(scope => <option key={scope} value={scope}>{workspaceScopeLabel(scope)}</option>)}
-        </select></label>
+        <label className="aw-scope"><span>Vocabulary</span><GlobalHskSelect label="Vocabulary scope" scope={route.scope} setScope={changeScope}/></label>
         <button type="button" className="aw-expand" aria-pressed={route.wide} aria-label={route.wide ? 'Restore workspace' : 'Expand workspace'}
           onClick={() => navigate({wide: !route.wide}, null, true)}>{route.wide ? <Minimize2 size={17}/> : <Maximize2 size={17}/>}</button>
         {!embedded && <><a className="aw-reader-link" href={readingLabHref(readReadingLabRoute('?hsk=' + route.scope)) + '&returnWorkspace=' + encodeURIComponent(returnQuery())}
@@ -355,7 +358,10 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded}: 
         </div>}
         {route.mode === 'map' && <WorkspaceMap route={route} context={context} locale={locale} choose={choose} explore={explore}
           onMap={map => navigate({map, page: 0})} onPage={page => navigate({page})} onWiden={() => changeScope('all')}/>}
-        {route.mode === 'practise' && <WorkspacePractise route={route} context={context} locale={locale} choose={choose} audio={audio}
+        {route.mode === 'practise' && outsideScope && <p className="aw-scope-note" role="status">
+          The selected entry is outside the current HSK range. Widen the range to resume this exercise.
+        </p>}
+        {route.mode === 'practise' && !outsideScope && <WorkspacePractise route={route} context={context} locale={locale} choose={choose} audio={audio}
           penOnly={penOnly} setPenOnly={setPenOnly} setExercise={setExercise} memory={reelMemory} revealed={reelRevealed}
           setMemory={setReelMemory} setRevealed={setReelRevealed} onContrastRecallActive={setContrastRecallActive} onExpand={() => navigate({wide: !route.wide}, null, true)}/>}
       </div>

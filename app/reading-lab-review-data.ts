@@ -1,3 +1,6 @@
+import {knownHskInScope} from './global-hsk-model';
+import type {BrowseScope} from './hsk-scope';
+import type {ReadingReviewStore} from './reading-lab-review-model';
 import {readingLabReadings} from './reading-lab-data';
 import {splitReadingSentences} from './reading-lab-model';
 import type {ReadingLabExample} from './reading-lab-types';
@@ -168,4 +171,10 @@ export function resolveReadingReviewTarget(id: string, card?: {target?: ReadingR
   return {id, article: pin.article, level: actual.reading.level, paragraph: actual.block.id, chunk: pin.chunk,
     title: actual.reading.title, hanzi: pin.hanzi, pinyin: pin.pinyin.join(''), source: actual.source, articleSentences,
     cloze: actual.source.hanzi.replaceAll(pin.hanzi, '＿＿'), scenarios: dynamicScenarios};
+}
+
+export function readingReviewsInHskScope(store: ReadingReviewStore, scope: BrowseScope): ReadingReviewStore {
+ if (scope === 'all') return store;
+ return {...store, cards: Object.fromEntries(Object.entries(store.cards).filter(([id, card]) =>
+  knownHskInScope(resolveReadingReviewTarget(id, card)?.level, scope)))};
 }

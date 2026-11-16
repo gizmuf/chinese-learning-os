@@ -1,3 +1,5 @@
+import {knownHskInScope} from './global-hsk-model';
+import type {BrowseScope} from './hsk-scope';
 import {cloudWords,type CloudWord} from './atlas-cloud-model';
 import {atlasByHanzi,componentById} from './atlas-model';
 import {extendedCharacters,extendedComponent} from './atlas-cloud-extended';
@@ -73,9 +75,9 @@ export function dictionaryTokens(text:string,dictionary:StudyDictionary,exclude?
 
 export type RecognitionQuestion={id:string;target:string;word:CloudWord;masked:string;choices:string[]};
 /** Short local recognition only: no server target IDs or independent-recall grades. */
-export function recognitionQuestions(family:readonly {hanzi:string}[],locale:Locale):RecognitionQuestion[]{
+export function recognitionQuestions(family:readonly {hanzi:string}[],locale:Locale,scope:BrowseScope='all'):RecognitionQuestion[]{
  if(family.length<2)return [];
- const vocabulary=pronunciationWords(locale),questions:RecognitionQuestion[]=[];
+ const vocabulary=pronunciationWords(locale).filter(word=>knownHskInScope(word.level,scope)),questions:RecognitionQuestion[]=[];
  for(let i=0;i<family.length;i++){
   const target=family[i].hanzi,reviewed=atlasByHanzi.get(target);
   const words=vocabulary.filter(word=>word.hanzi.includes(target));

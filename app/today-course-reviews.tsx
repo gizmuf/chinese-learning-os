@@ -1,4 +1,5 @@
 'use client';
+import {useGlobalHsk} from './global-hsk';
 import ReferenceTodayLinks from './reference-today-links';
 import {lazy,Suspense,useEffect,useMemo,useRef,useState} from 'react';
 import {ArrowLeft,ArrowRight,RotateCcw} from 'lucide-react';
@@ -33,6 +34,7 @@ const copy={
  session:{en:'Review session',fr:'Séance de révision',ru:'Повторение',tr:'Tekrar oturumu'},
 } satisfies Record<string,Copy>;
 export default function TodayCourseReviews({owner,notify}:{owner:string|null;notify:(s:string)=>void}){
+ const scope=useGlobalHsk()?.scope??'all';
  const {locale,t}=useI18n(),progress=useCourseProgress(owner),[now,setNow]=useState(()=>Date.now()),[session,setSession]=useState<{id:string;number:number;kind:CourseReviewKind;ids:string[]}|null>(null);
  const heading=useRef<HTMLHeadingElement>(null);
  function focusHeading(){requestAnimationFrame(()=>{heading.current?.scrollIntoView({block:"start",behavior:"instant"});heading.current?.focus({preventScroll:true});});}
@@ -57,9 +59,9 @@ export default function TodayCourseReviews({owner,notify}:{owner:string|null;not
   </article>;
  }
  return <section className="today-course-reviews panel" aria-labelledby="today-course-title"><header className="today-course-heading"><div><p className="eyebrow">{lessonRange}</p><h2 id="today-course-title" ref={heading} tabIndex={-1}>{copy.title[locale]}</h2></div><button className="text-button" aria-label={copy.sync[locale]} disabled={!progress.ready} onClick={()=>void progress.sync()}><RotateCcw size={20}/></button></header>
- {session?<><div className="today-course-sessionbar"><button className="text-button" onClick={close}><ArrowLeft size={16}/>{copy.back[locale]}</button><p>{copy.lesson[locale]} {session.number} · {copy[session.kind][locale]} · {session.ids.length}</p></div><Suspense fallback={<p role="status">{copy.loading[locale]}</p>}><CourseReviewSession key={session.id} {...session} owner={owner} ready={progress.ready} record={progress.record} notify={notify} onComplete={close}/></Suspense></>:!progress.ready?<p role="status">{copy[progress.status==='Device storage unavailable'?'storage':'loading'][locale]}</p>:<><p className="today-course-intro">{copy.intro[locale]}</p><p className="today-course-total" role="status"><strong>{summary.due}</strong> {copy.due[locale]}{summary.due===0&&' · '+copy[summary.attempted?'clear':'first'][locale]}</p>{activeLessons.length>0&&<div className="today-course-list">{activeLessons.map(renderLesson)}</div>}
+ {session?<><div className="today-course-sessionbar"><button className="text-button" onClick={close}><ArrowLeft size={16}/>{copy.back[locale]}</button><p>{copy.lesson[locale]} {session.number} · {copy[session.kind][locale]} · {session.ids.length}</p></div><Suspense fallback={<p role="status">{copy.loading[locale]}</p>}><CourseReviewSession key={session.id} {...session} owner={owner} ready={progress.ready} record={progress.record} notify={notify} onComplete={close}/></Suspense></>:!progress.ready?<p role="status">{copy[progress.status==='Device storage unavailable'?'storage':'loading'][locale]}</p>:<><p className="today-course-intro">{copy.intro[locale]}</p><p className="hsk-unclassified-note">Classroom lessons are unclassified as a collection.</p><p className="today-course-total" role="status"><strong>{summary.due}</strong> {copy.due[locale]}{summary.due===0&&' · '+copy[summary.attempted?'clear':'first'][locale]}</p>{activeLessons.length>0&&<div className="today-course-list">{activeLessons.map(renderLesson)}</div>}
  {inactiveLessons.length>0&&<details className="today-course-other"><summary>{copy[activeLessons.length?'more':'browse'][locale]} · {inactiveLessons.length}</summary><div className="today-course-list">{inactiveLessons.map(renderLesson)}</div></details>}
- <div className="chunk-today-link"><a href="/?course=intensive&material=speaking-chunks"><span>{chunkCopy.title[locale]}</span><ArrowRight size={16}/></a><span>{chunkCopy.due[locale]} · {chunkReviewSummary(progress.events,now).due.length} · {chunkCopy.difficult[locale]} · {chunkReviewSummary(progress.events,now).difficult.length}</span></div><p className="today-course-status">{t(progress.status)}</p></>}
+ <div className="chunk-today-link"><a href="/?course=intensive&material=speaking-chunks"><span>{chunkCopy.title[locale]}</span><ArrowRight size={16}/></a><span>{chunkCopy.due[locale]} · {chunkReviewSummary(progress.events,now,scope).due.length} · {chunkCopy.difficult[locale]} · {chunkReviewSummary(progress.events,now,scope).difficult.length}</span></div><p className="today-course-status">{t(progress.status)}</p></>}
  <ReferenceTodayLinks events={progress.events} now={now}/>
  </section>;
 }

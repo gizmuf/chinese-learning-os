@@ -1,12 +1,14 @@
 'use client';
 
+import {GlobalHskSelect, useGlobalHsk} from './global-hsk';
+import {globalHskLabel, knownHskInScope} from './global-hsk-model';
 import {useEffect, useLayoutEffect, useMemo, useRef, useState, type MouseEvent, type ReactNode} from 'react';
 import {ArrowLeft, ArrowRight, BookOpen, PenLine} from 'lucide-react';
 import {readingLabReadings} from './reading-lab-data';
 import {resolveReadingGrammarFrame} from './reading-lab-grammar';
 import type {ReadingLabParagraph, ReadingLabReading, ReadingLabToken} from './reading-lab-types';
 import {analyzeReading, readingToneNote, splitReadingSentences, tokenGlyphs, toneMarks} from './reading-lab-model';
-import {isReadingLabEntry, readReadingLabRoute, readingLabAtlasEvent, readingLabHref, readingLabLevels, readingLabWriteEvent, type ReadingAid, type ReadingLabAtlasVisit, type ReadingLabRoute} from './reading-lab-route';
+import {isReadingLabEntry, readReadingLabRoute, readingLabAtlasEvent, readingLabHref, readingLabWriteEvent, type ReadingAid, type ReadingLabAtlasVisit, type ReadingLabRoute} from './reading-lab-route';
 import {atlasWorkspaceReturn, readAtlasWorkspaceRoute} from './atlas-workspace-route';
 import {workspaceExploration} from './atlas-workspace-model';
 import AtlasWorkspace from './atlas-workspace';
@@ -16,7 +18,7 @@ import syllabus from '../data/hsk-levels-source.json';
 import {useStudyLookup} from './study-lookup-context';
 import {useI18n} from './i18n';
 import {ReadingReview, ReadingReviewSave, ReadingReviewSummary, useReadingReviews} from './reading-lab-review';
-import {findReadingReviewSource, readingReviewTargetId, resolveReadingReviewTarget} from './reading-lab-review-data';
+import {findReadingReviewSource, readingReviewTargetId, readingReviewsInHskScope, resolveReadingReviewTarget} from './reading-lab-review-data';
 import {readingReviewTokenEvent, type ReadingReviewTokenRequest} from './reading-lab-review-popup';
 import type {ReadingReviewAction} from './reading-lab-review-model';
 import {emptyReadingLabSession, persistReadingLabSession, readReadingLabSession, readingLabDraftLimit, type ReadingLabResume} from './reading-lab-session';
@@ -143,9 +145,9 @@ function ReaderLibrary({route, index, failed, workspaceOrigin, resume, onResume,
   workspaceOrigin?: string; resume?: ReadingLabResume; onResume: () => void; onLevel: (level: ReadingLabRoute['level']) => void;
   onArticle: (event: MouseEvent<HTMLAnchorElement>, reading: ReadingLabReading) => void;
 }) {
-  const material = useMemo(() => readingLabReadings.filter(reading => reading.level === route.level)
+  const material = useMemo(() => readingLabReadings.filter(reading => knownHskInScope(reading.level, route.level))
     .map(reading => ({reading, report: index ? analyzeReading(reading, index) : undefined})), [route.level, index]);
-  const resumable = readingLabReadings.find(reading => reading.id === resume?.article);
+  const resumable = readingLabReadings.find(reading => reading.id === resume?.article && knownHskInScope(reading.level, route.level));
   return <>
     <header className="rl-library-heading">
       <BookOpen size={24} aria-hidden="true"/><h1>Reading Lab</h1>
@@ -155,16 +157,16 @@ function ReaderLibrary({route, index, failed, workspaceOrigin, resume, onResume,
       <button type="button" onClick={onResume}>Resume <span lang="zh-Hans">{resumable.title.hanzi}</span><ArrowRight size={15}/></button>
     </div>}
     <nav className="rl-levels" aria-label="Reading level">
-      {readingLabLevels.map(level => <button key={level} type="button" aria-pressed={level === route.level} onClick={() => onLevel(level)}>HSK {level}</button>)}
+      <GlobalHskSelect label="Reading level" scope={route.level} setScope={onLevel}/>
     </nav>
     <div className="rl-library-list">
       {material.map(({reading, report}) => <a className="rl-reading-card" key={reading.id}
-        href={readingLabLocation({...route, article: reading.id, level: reading.level, paragraph: '', grammar: ''}, workspaceOrigin)}
+        href={readingLabLocation({...route, article: reading.id, paragraph: '', grammar: ''}, workspaceOrigin)}
         onClick={event => onArticle(event, reading)}>
         <span><small>{reading.topic}</small><strong lang="zh-Hans">{reading.title.hanzi}</strong><span>{reading.title.english}</span><LibraryCoverage reading={reading} report={report} failed={failed}/></span>
         <ArrowRight size={18} aria-hidden="true"/>
       </a>)}
-      {!material.length && <p>No readings are available at this level.</p>}
+      {!material.length && <p>No authored readings are available in the current HSK range.</p>}
     </div>
   </>;
 }
@@ -221,7 +223,10 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   const reviews = useReadingReviews(owner);
   const unsavedSourceVisits = useRef(new Map<string, string>());
   const vocabulary = useVocabularyIndex();
-  const [route, setRoute] = useState(() => readReadingLabRoute(location.search));
+  const global = useGlobalHsk();
+  const [localRoute, setRoute] = useState(() => readReadingLabRoute(location.search));
+  const route = useMemo(() => global && global.scope !== localRoute.level ? {...localRoute, level: global.scope} : localRoute,
+    [localRoute, global?.scope]);
   const returnWorkspace = useRef(atlasWorkspaceReturn(new URLSearchParams(location.search).get('returnWorkspace')));
   const [loaded] = useState(() => {
     try {return {session: readReadingLabSession(localStorage, owner), unavailable: false};}
@@ -244,7 +249,9 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   const lastSaved = useRef('');
   const recallHeading = useRef<HTMLHeadingElement>(null);
   const recallStart = useRef<HTMLButtonElement>(null);
-  const reading = readingLabReadings.find(candidate => candidate.id === route.article);
+  const requestedReading = readingLabReadings.find(candidate => candidate.id === route.article);
+  const outsideScope = requestedReading && !knownHskInScope(requestedReading.level, route.level);
+  const reading = outsideScope ? undefined : requestedReading;
   const grammar = reading?.grammar.find(entry => entry.id === route.grammar);
   const relatedFrame = resolveReadingGrammarFrame(grammar?.frameId);
   const highlights = useMemo(() => new Set([...(grammar?.sourceChunks ?? []), ...(questionEvidence?.article === route.article && questionEvidence?.chunk ? [questionEvidence.chunk] : []), ...(route.chunk ? [route.chunk] : [])]), [grammar, questionEvidence, route.article, route.chunk]);
@@ -434,7 +441,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   function reviewSource(id: string) {
     const target = resolveReadingReviewTarget(id, reviews.store.cards[id]);
     if (!target) return;
-    navigate({review: undefined, reviewReturn: id, article: target.article, level: target.level,
+    navigate({review: undefined, reviewReturn: id, article: target.article,
       grammar: route.article === target.article ? route.grammar : '', paragraph: target.paragraph, chunk: target.chunk}, {scroll: target.chunk});
     history.replaceState({...history.state, readingLabReviewSource: id, readingLabScroll: undefined}, '', location.href);
   }
@@ -461,6 +468,17 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
     return reviews.write(id, action);
   }
 
+  const scopedReviewStore = readingReviewsInHskScope(reviews.store, route.level);
+  const scopedReview = route.review ? resolveReadingReviewTarget(route.review, reviews.store.cards[route.review]) : undefined;
+  if (scopedReview && !knownHskInScope(scopedReview.level, route.level)) return <section className="reading-lab">
+    <div role="status" className="hsk-outside panel">
+      <p>This saved reading review is HSK {scopedReview.level}, outside the current range.</p>
+      <button className="secondary" onClick={() => global ? global.setScope(scopedReview.level) : navigate({level: scopedReview.level})}>
+        Use {globalHskLabel(scopedReview.level)}
+      </button>
+      <button className="secondary" onClick={reviewExit}>Back to Reading Lab</button>
+    </div>
+  </section>;
   if (route.review) return <section ref={root} className="reading-lab" aria-label="Reading Lab">
     <ReadingReview key={route.review} id={route.review} reviews={{...reviews, write: writeReview}} onExit={reviewExit} onSource={reviewSource}/>
   </section>;
@@ -469,7 +487,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   return <section ref={root} className="reading-lab" data-reading-lab aria-label="Reading Lab">
     <header className="rl-topline">
       {reading ? <button type="button" onClick={() => {
-        setSelectedWord(''); setQuestionEvidence(undefined); setRecall(undefined); navigate({article: '', paragraph: '', grammar: '', chunk: undefined, reviewReturn: undefined, level: reading.level}, {scroll: 0});
+        setSelectedWord(''); setQuestionEvidence(undefined); setRecall(undefined); navigate({article: '', paragraph: '', grammar: '', chunk: undefined, reviewReturn: undefined}, {scroll: 0});
       }}><ArrowLeft size={16}/> Reading library</button> : <a href={workspace}><ArrowLeft size={16}/> Hanzi Atlas</a>}
       {route.reviewReturn && <button type="button" onClick={() => {
         if (readerHistory().readingLabReviewSource === route.reviewReturn) history.back();
@@ -477,6 +495,12 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
       }}>Back to review</button>}
       {reading && <span>HSK {reading.level}</span>}
     </header>
+    {outsideScope && <div role="status" className="hsk-outside panel">
+      <p><span lang="zh-Hans">{requestedReading.title.hanzi}</span> is HSK {requestedReading.level}, outside the current range.</p>
+      <button className="secondary" onClick={() => global ? global.setScope(requestedReading.level) : navigate({level: requestedReading.level})}>
+        Use {globalHskLabel(requestedReading.level)}
+      </button>
+    </div>}
     {reading ? <article className="rl-article">
       <header className="rl-article-heading">
         <p className="rl-topic">{reading.topic}</p>
@@ -585,19 +609,19 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
           <p lang="zh-Hans">{reading.writing.example.hanzi}</p><p>{reading.writing.example.pinyin}</p><p>{reading.writing.example.english}</p>
         </details>}
       </section>
-    </article> : <><ReadingReviewSummary store={reviews.store} now={reviews.now} onOpen={reviewOpen}/><ReaderLibrary route={route} {...vocabulary} workspaceOrigin={returnWorkspace.current} resume={resume}
+    </article> : <><ReadingReviewSummary store={scopedReviewStore} now={reviews.now} onOpen={reviewOpen}/><ReaderLibrary route={route} {...vocabulary} workspaceOrigin={returnWorkspace.current} resume={resume}
       onResume={() => {
         if (!resume) return;
         const {scroll, ...destination} = resume;
         setSelectedWord(''); setQuestionEvidence(undefined); setRecall(undefined);
         navigate({...destination, chunk: undefined, reviewReturn: undefined}, {scroll: scroll || destination.paragraph});
       }}
-      onLevel={level => navigate({level, article: '', paragraph: '', grammar: ''}, {scroll: 0})}
+      onLevel={global?.setScope ?? (level => navigate({level, article: '', paragraph: '', grammar: ''}, {scroll: 0}))}
       onArticle={(event, article) => {
         if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         event.preventDefault();
         setSelectedWord(''); setQuestionEvidence(undefined); setRecall(undefined);
-        navigate({article: article.id, level: article.level, paragraph: '', grammar: '', chunk: undefined, reviewReturn: undefined}, {scroll: 0});
+        navigate({article: article.id, paragraph: '', grammar: '', chunk: undefined, reviewReturn: undefined}, {scroll: 0});
       }}/></>}
     {detour?.kind === 'atlas' && <AtlasDetour detour={detour.visit} level={reading?.level ?? route.level} penOnly={penOnly} notify={notify} onClose={closeDetour}/>}
     {detour?.kind === 'stroke' && <StrokeDetour text={detour.text} penOnly={penOnly} onClose={closeDetour}/>}

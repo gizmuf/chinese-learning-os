@@ -12,7 +12,7 @@ import type {Pronunciation} from './atlas-spatial-model';
 import {recognitionQuestions, checkRecognition, wordPronunciation} from './atlas-spatial-model';
 import {playRecording, releaseRecording} from './audio';
 import {StudyLookupButton, StudyText, useStudyLookup} from './study-lookup-context';
-import {workspaceBoardSize, workspaceGroupLabel, workspaceHanzi, workspaceJourneyGroup, workspaceMapSize, workspaceScopeLabel, workspaceStructureRole, type WorkspaceContext} from './atlas-workspace-model';
+import {workspaceBoardSize, workspaceGroupLabel, workspaceHanzi, workspaceJourneyGroup, workspaceMapSize, workspacePanelOutsideScope, workspaceScopeLabel, workspaceStructureRole, type WorkspaceContext} from './atlas-workspace-model';
 import type {WorkspaceKind, WorkspaceRoute} from './atlas-workspace-route';
 import {hybridInventory} from './atlas-hybrid-model';
 import CloudHighlight from './atlas-cloud-highlight';
@@ -183,6 +183,7 @@ export function WorkspaceInspector({context, route, audio, explore, showFamily, 
   const lookup = useStudyLookup();
   const fallback = text ? lookup?.dictionary.get(text) : undefined;
   const sentenceFocus = route.kind === 'sentence';
+  const outsideScope = workspacePanelOutsideScope(route, context);
   const letters = workspaceHanzi(text);
   const label = route.kind === 'word' ? 'Word in context' : route.kind === 'sentence' ? 'Sentence in context'
     : route.kind === 'component' ? 'Component in context' : 'Hanzi in context';
@@ -198,12 +199,12 @@ export function WorkspaceInspector({context, route, audio, explore, showFamily, 
         {(meaning || fallback?.meaning) && <p className="aw-meaning">{meaning ?? fallback?.meaning}</p>}
         <div className="aw-actions">
           <ListenButton clip={pronunciation} audio={audio}/>
-          {(route.kind === 'word' || route.kind === 'character') && /^[\p{Script=Han}]{1,8}$/u.test(text) &&
+          {!outsideScope && (route.kind === 'word' || route.kind === 'character') && /^[\p{Script=Han}]{1,8}$/u.test(text) &&
             <button type="button" onClick={onWriting}><PenLine size={16}/>Write</button>}
           {isStoryTarget(text) && <button type="button" onClick={() => onStory(text)}><BookOpen size={16}/>Explore story</button>}
         </div>
       </>}
-      {context.outsideScope && <p className="aw-scope-note">Selected entry is outside {workspaceScopeLabel(route.scope)}.</p>}
+      {outsideScope && <p className="aw-scope-note" role="status">Selected entry is outside {workspaceScopeLabel(route.scope)}.</p>}
       {example && <div className={'aw-example' + (sentenceFocus ? ' aw-selected-example' : '')} data-study-source-id={example.id}
         data-study-sentence={example.text} data-study-pinyin={example.pinyin} data-study-meaning={example.meaning} data-study-audio={example.audio?.source}>
         {!sentenceFocus && <div className="aw-example-title"><strong>In a sentence</strong>

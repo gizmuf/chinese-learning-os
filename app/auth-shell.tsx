@@ -58,7 +58,7 @@ function errorMessage(error: unknown) {
   };
   return messages[code] ?? "Could not complete sign-in. Please try again.";
 }
-export default function AuthShell({ initialUser }: { initialUser: StudyUser }) {
+export default function AuthShell({ initialUser, initialView }: { initialUser: StudyUser; initialView?: "pronunciation" }) {
   const { t, locale } = useI18n();
   const [auth, setAuth] = useState<Auth | null>(null);
   const [account, setAccount] = useState<Account>(null);
@@ -136,6 +136,7 @@ export default function AuthShell({ initialUser }: { initialUser: StudyUser }) {
       <StudyApp
         key={user?.id ?? "guest"}
         user={user}
+        initialView={initialView}
         onSignIn={() => setOpen(true)}
         onSignOut={() => void logOut()}
         onManageAccount={() => setOpen(true)}

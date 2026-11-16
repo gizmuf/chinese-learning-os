@@ -1,5 +1,6 @@
 import type {DictionaryEntry} from './atlas-spatial-model';
 import type {DictionaryContext} from './dictionary-source-model';
+import {readBrowseScope, type BrowseScope} from './hsk-scope';
 import type {WorkspaceKind} from './atlas-workspace-route';
 
 export const readingLabLevels = [2, 3, 4, 5] as const;
@@ -7,7 +8,7 @@ export type ReadingLabLevel = typeof readingLabLevels[number];
 export type ReadingAid = 'hanzi' | 'tones' | 'pinyin';
 
 export type ReadingLabRoute = {
-  level: ReadingLabLevel;
+  level: BrowseScope;
   article: string;
   aid: ReadingAid;
   chunks: boolean;
@@ -30,7 +31,7 @@ export function readReadingLabRoute(search: string): ReadingLabRoute {
   const params = new URLSearchParams(search);
   const aid = params.get('aid');
   return {
-    level: readingLabLevels.find(level => String(level) === params.get('hsk')) ?? 2,
+    level: readBrowseScope(params.get('hsk')) ?? 2,
     article: readingId(params.get('article')),
     aid: aid === 'tones' || aid === 'pinyin' ? aid : 'hanzi',
     chunks: params.get('chunks') === '1',

@@ -1,4 +1,4 @@
-import {parseBrowseScope} from './hsk-browse';
+import {GlobalHskSelect, useGlobalHsk} from './global-hsk';
 'use client';
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {ArrowUp,Maximize2,Minimize2,PenLine,Volume2,X} from 'lucide-react';
@@ -16,6 +16,7 @@ import './family-journey.css';
 
 type Props={route:CloudRoute;onChange:(patch:Partial<CloudRoute>)=>void;onWrite:(word:CloudWord,trigger:HTMLButtonElement)=>void;notify:(message:string)=>void;expanded:boolean;onExpand:()=>void};
 export default function FamilyJourney(p:Props){
+ const global=useGlobalHsk();
  const {locale}=useI18n(),t=(key:Parameters<typeof journeyText>[1])=>journeyText(locale,key);
  const groups=useMemo(()=>familyJourney(locale,p.route.level),[locale,p.route.level]);
  const coverage=useMemo(()=>journeyCoverage(groups),[groups]);
@@ -42,7 +43,7 @@ export default function FamilyJourney(p:Props){
  }
  return <section className="family-journey" ref={root} id="family-journey-start" aria-labelledby="fj-title">
   <header className="fj-heading"><div><h2 id="fj-title">{t('title')}</h2><details className="fj-intro"><summary>{({en:'About this journey',fr:'À propos du parcours',ru:'Об этом пути',tr:'Bu yolculuk hakkında'}[locale])}</summary><p>{t('intro')}</p></details></div><button type="button" onClick={p.onExpand} aria-label={t(p.expanded?'collapse':'expand')}>{p.expanded?<Minimize2 size={18}/>:<Maximize2 size={18}/>}</button></header>
-  <div className="fj-controls"><label>{t('vocabulary')}<select value={p.route.level} onChange={e=>{stop();p.onChange({level:parseBrowseScope(e.target.value),familyEntry:''})}}><option value="1">HSK 1 · 300</option><option value="2">HSK 1–2 · 500</option><option value="3">HSK 1–3 · 1000</option><option value="4">HSK 1–4</option><option value="5">HSK 1–5</option><option value="6">HSK 1–6</option><option value="7-9">HSK 1–6 + 7–9</option><option value="all">{t('all')}</option></select></label><p className="fj-count" aria-live="polite">{coverage.words} {t('words')} · {coverage.characters} {t('characters')} · {coverage.groups} {t('groups')}</p></div>
+  <div className="fj-controls"><label>{t('vocabulary')}<GlobalHskSelect label={t('vocabulary')} scope={p.route.level} setScope={global?.setScope??(scope=>{stop();p.onChange({level:scope})})}/></label><p className="fj-count" aria-live="polite">{coverage.words} {t('words')} · {coverage.characters} {t('characters')} · {coverage.groups} {t('groups')}</p></div>
   <nav className="fj-tracks" aria-label={t('vocabulary')}>{coverage.tracks.map(track=><button type="button" key={track.level??'extra'} onClick={()=>jump(track.groups[0].id)}>{track.level?'HSK '+track.level:t('extras')}<span>{track.count} {t('words')}</span></button>)}</nav>
   <details className="fj-directory"><summary>{t('index')} · {groups.length}</summary><div>{coverage.tracks.map(track=><section key={track.level??'extra'}><h3>{track.level?'HSK '+track.level:t('extras')}</h3>{track.groups.map(group=><button type="button" key={group.id} onClick={()=>jump(group.id)}>{group.anchor?<><b lang="zh-Hans">{group.anchor}</b><span>{group.reading} · {group.englishTitle}</span></>:<span>{group.title}</span>}<small>{group.words.length}</small></button>)}</section>)}</div></details>
   {groups.map((group,index)=><section className="fj-group" id={group.id} key={group.id} aria-label={(group.level?'HSK '+group.level:t('extras'))+' · '+(group.anchor?group.anchor+' · '+group.reading:group.title)}>

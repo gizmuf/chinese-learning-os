@@ -1,6 +1,8 @@
 import { PDFDocument, rgb, pushGraphicsState, popGraphicsState, translate as move, scale, type PDFPage, type PDFFont } from "pdf-lib";
 import fontkit from "@pdf-lib/fontkit";
 import type { Item, StudyLevel } from "./content";
+import type { BrowseScope } from './hsk-scope';
+import { globalHskLabel, knownHskInScope } from './global-hsk-model';
 import { isInLevel } from "./content";
 import { translate, type Locale } from "./translate";
 
@@ -8,14 +10,18 @@ type CharacterData = {strokes:string[]};
 type Resources = {font:Uint8Array; characters:Record<string,CharacterData>};
 const ink=rgb(.16,.22,.19), pale=rgb(.74,.77,.72), guide=rgb(.83,.85,.81), accent=rgb(.70,.29,.17);
 const W=595.28,H=841.89,margin=38;
-export function worksheetItems(items:Item[], ids:string[], level:StudyLevel):Item[]{const selected=new Set(ids);return items.filter(item=>isInLevel(item,level)&&selected.has(item.id));}
+export type NotebookScope = StudyLevel | BrowseScope;
+export function notebookIncludes(item:Item, level:NotebookScope) {
+ return typeof level === 'number' || level === 'all' || level === '7-9' ? knownHskInScope(item.hskLevel, level) : isInLevel(item, level);
+}
+export function worksheetItems(items:Item[], ids:string[], level:NotebookScope):Item[]{const selected=new Set(ids);return items.filter(item=>notebookIncludes(item,level)&&selected.has(item.id));}
 function lines(text:string,font:PDFFont,size:number,width:number){
  const result:string[]=[];let line="";
  for(const word of text.split(/\s+/)){const next=line?line+" "+word:word;if(font.widthOfTextAtSize(next,size)>width&&line){result.push(line);line=word;}else line=next;}
  if(line)result.push(line);return result;
 }
-export async function createNotebookPdf(items:Item[],level:StudyLevel,locale:Locale,resources?:Resources):Promise<Uint8Array>{
- if(!items.length || items.some(item=>!isInLevel(item,level)))throw Error("Choose words from one study level.");
+export async function createNotebookPdf(items:Item[],level:NotebookScope,locale:Locale,resources?:Resources):Promise<Uint8Array>{
+ if(!items.length || items.some(item=>!notebookIncludes(item,level)))throw Error("Choose words from one study level.");
  const t=(text:string)=>translate(text,locale);
  const chars=[...new Set(items.flatMap(item=>Array.from(item.hanzi)))];
  const load=async(url:string)=>{const r=await fetch(url);if(!r.ok)throw Error("PDF resource unavailable");return r;};
@@ -27,7 +33,7 @@ export async function createNotebookPdf(items:Item[],level:StudyLevel,locale:Loc
  for(const char of chars)if(!characters[char]?.strokes.length)throw Error("Missing stroke order");
  const doc=await PDFDocument.create();doc.registerFontkit(fontkit);
  const font=await doc.embedFont(fontBytes,{subset:true});
- const levelName=level==='bonus'?t('Everyday extras'):level.toUpperCase();
+ const levelName=level==='bonus'?t('Everyday extras'):typeof level==='string'&&level.startsWith('hsk')?level.toUpperCase():globalHskLabel(level as BrowseScope);
  doc.setTitle(`Chinese OS - ${levelName} - ${t('Writing practice')}`);doc.setAuthor('Chinese OS');doc.setLanguage(locale);
  let page:PDFPage;let y=0;
  function text(value:string,x:number,at:number,size=10,color=ink){page.drawText(value,{x,y:at,size,font,color});}
@@ -64,6 +70,6 @@ export async function createNotebookPdf(items:Item[],level:StudyLevel,locale:Loc
  const pages=doc.getPages();pages.forEach((p,i)=>{p.drawText(`${levelName}  |  ${t('Page')} ${i+1} / ${pages.length}`,{x:margin,y:25,size:8,font,color:ink});});
  return doc.save();
 }
-export async function downloadNotebookPdf(items:Item[],level:StudyLevel,locale:Locale){
- const bytes=await createNotebookPdf(items,level,locale);const blob=new Blob([new Uint8Array(bytes)],{type:"application/pdf"});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`Chinese-OS-${level.toUpperCase()}-${locale}-${items.length}-words.pdf`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60_000);
+export async function downloadNotebookPdf(items:Item[],level:NotebookScope,locale:Locale){
+ const bytes=await createNotebookPdf(items,level,locale);const blob=new Blob([new Uint8Array(bytes)],{type:"application/pdf"});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`Chinese-OS-${String(level).toUpperCase()}-${locale}-${items.length}-words.pdf`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60_000);
 }
