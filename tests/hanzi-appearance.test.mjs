@@ -5,7 +5,7 @@ const require=createRequire(import.meta.url),dir=mkdtempSync(join(tmpdir(),'hanz
 const b=await build({stdin:{contents:`export {HanziStyleProvider,HanziDisplayControls} from './app/hanzi-style';export {default as CloudHighlight} from './app/atlas-cloud-highlight';export * from './app/atlas-cloud-connections';export * from './app/dictionary-character-family-model';export {sourceCharacterEntry} from './app/dictionary-source-model';export {isSimplifiedHeadword} from './app/simplified-chinese';export {hskLevelIndex,hskClassification} from './app/hsk-level-model';export {createElement} from 'react';export {default as renderer,act} from 'react-test-renderer';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent',alias:{react:require.resolve('react').replace(/\/index\.js$/,'')},plugins:[{name:'i18n',setup(build){build.onResolve({filter:/^\.\/i18n$/},()=>({path:'i18n',namespace:'mock'}));build.onLoad({filter:/.*/,namespace:'mock'},()=>({contents:`export const useI18n=()=>({locale:'en'});`,loader:'js'}));}}]});
 const file=join(dir,'test.mjs');writeFileSync(file,b.outputFiles[0].text);const m=await import(pathToFileURL(file));globalThis.IS_REACT_ACT_ENVIRONMENT=true;
 globalThis.document={documentElement:{dataset:{}}};
-const fontCss=fs.readFileSync('app/hanzi-font-faces.css','utf8');
+const fontCss=fs.readFileSync('app/hanzi-style.css','utf8');
 const fontReleases=Array.from(fontCss.matchAll(/\/fonts\/(ChineseOSStroke(-HSK)?-([a-f0-9]{12})\.woff)/g),match=>{
  const [,name,official,hash]=match;
  const strokeFont=fs.readFileSync('public/fonts/'+name);
