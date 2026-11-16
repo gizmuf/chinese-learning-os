@@ -1,6 +1,7 @@
 import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import {join,resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {gunzipSync} from 'node:zlib';
 
 // These non-HSK characters appear in the 莫 family browsing path.
 const atlasRelatedGlyphs=['摹','嫫'];
@@ -8,9 +9,11 @@ const atlasRelatedGlyphs=['摹','嫫'];
 /** Ship Atlas browse glyphs from the already pinned, attributed Hanzi Writer data. */
 export async function prepareAtlasBrowseStrokes(target='public/characters'){
  const {characters}=JSON.parse(await readFile('data/hsk-browse-index.json','utf8'));
+ const official=JSON.parse(gunzipSync(await readFile('public/dictionary/hsk-levels-2025.json.gz')));
+ const recognition=Object.values(official.characters).flatMap(value=>Array.from(value));
  const supplement=JSON.parse(await readFile('data/hanzi-stroke-supplement.json','utf8'));
  const supplementalGlyphs=Object.values(supplement).flatMap(value=>Array.from(value));
- const glyphs=[...new Set([...characters.map(row=>row.hanzi),...atlasRelatedGlyphs,...supplementalGlyphs])].sort();
+ const glyphs=[...new Set([...characters.map(row=>row.hanzi),...atlasRelatedGlyphs,...supplementalGlyphs,...recognition])].sort();
  await mkdir(target,{recursive:true});
  let added=0;
  for(const glyph of glyphs){

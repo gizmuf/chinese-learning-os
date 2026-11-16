@@ -5,10 +5,17 @@ const require=createRequire(import.meta.url),dir=mkdtempSync(join(tmpdir(),'hanz
 const b=await build({stdin:{contents:`export {HanziStyleProvider,HanziDisplayControls} from './app/hanzi-style';export {default as CloudHighlight} from './app/atlas-cloud-highlight';export * from './app/atlas-cloud-connections';export * from './app/dictionary-character-family-model';export {sourceCharacterEntry} from './app/dictionary-source-model';export {isSimplifiedHeadword} from './app/simplified-chinese';export {hskLevelIndex,hskClassification} from './app/hsk-level-model';export {createElement} from 'react';export {default as renderer,act} from 'react-test-renderer';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent',alias:{react:require.resolve('react').replace(/\/index\.js$/,'')},plugins:[{name:'i18n',setup(build){build.onResolve({filter:/^\.\/i18n$/},()=>({path:'i18n',namespace:'mock'}));build.onLoad({filter:/.*/,namespace:'mock'},()=>({contents:`export const useI18n=()=>({locale:'en'});`,loader:'js'}));}}]});
 const file=join(dir,'test.mjs');writeFileSync(file,b.outputFiles[0].text);const m=await import(pathToFileURL(file));globalThis.IS_REACT_ACT_ENVIRONMENT=true;
 globalThis.document={documentElement:{dataset:{}}};
-const fontPath=fs.readFileSync('app/hanzi-style.css','utf8').match(/\/fonts\/(ChineseOSStroke-([a-f0-9]{12})\.woff)/);
-assert.ok(fontPath,'the shared stylesheet points to a content-addressed stroke font');
-const strokeFont=fs.readFileSync('public/fonts/'+fontPath[1]);
-const strokeManifest=JSON.parse(fs.readFileSync('public/fonts/hanzi-display-'+fontPath[2]+'.json'));
+const fontCss=fs.readFileSync('app/hanzi-font-faces.css','utf8');
+const fontReleases=Array.from(fontCss.matchAll(/\/fonts\/(ChineseOSStroke(-HSK)?-([a-f0-9]{12})\.woff)/g),match=>{
+ const [,name,official,hash]=match;
+ const strokeFont=fs.readFileSync('public/fonts/'+name);
+ const strokeManifest=JSON.parse(fs.readFileSync('public/fonts/hanzi-display'+(official?'-hsk':'')+'-'+hash+'.json'));
+ assert.equal(crypto.createHash('sha256').update(strokeFont).digest('hex'),strokeManifest.sha256);
+ assert.equal(hash,strokeManifest.sha256.slice(0,12));
+ return {strokeFont,strokeManifest};
+});
+assert.equal(fontReleases.length,2);
+const [{strokeFont,strokeManifest}]=fontReleases;
 const text=node=>typeof node==='string'?node:Array.isArray(node)?node.map(text).join(''):node?text(node.children):'';
 test('All 17 walking-family characters keep stroke geometry regardless of mapping or semantic-role coverage',async()=>{
  globalThis.fetch=async url=>({ok:true,json:async()=>JSON.parse(fs.readFileSync('public'+decodeURIComponent(url),'utf8'))});
@@ -59,10 +66,26 @@ test('The stroke font covers the Practical lesson, its dictionary components and
   assert.ok(glyphs.has(ch.codePointAt(0)),ch);
   assert.ok(manifest.outlineSources[ch],ch);
  }
- assert.equal(fontPath[2],manifest.sha256.slice(0,12));
  const index=m.hskLevelIndex(hsk);
  assert.deepEqual(m.hskClassification(index,'付','character'),{kind:'character',levels:['4']});
  for(const ch of '冉篝耩聃苒')assert.deepEqual(m.hskClassification(index,ch,'character'),{kind:'character',levels:[]});
+});
+test('The separate official face adds every missing HSK 1–9 glyph without overlapping the core face',()=>{
+ const official=JSON.parse(gunzipSync(fs.readFileSync('public/dictionary/hsk-levels-2025.json.gz')));
+ const [core,supplement]=fontReleases.map(({strokeFont})=>new Set(fontkit.create(strokeFont).characterSet.filter(point=>point!==0xffff)));
+ assert.equal([...supplement].some(point=>core.has(point)),false);
+ for(const glyph of Object.values(official.characters).join(''))assert.ok(core.has(glyph.codePointAt(0))||supplement.has(glyph.codePointAt(0)),glyph);
+ assert.ok(strokeFont.length<500_000);
+ assert.equal(supplement.size,[...Object.values(official.characters).join('')].filter(glyph=>!core.has(glyph.codePointAt(0))).length);
+ const declared=Array.from(fontCss.matchAll(/unicode-range:([^;]+);/g),match=>{
+  const points=new Set();
+  for(const value of match[1].trim().split(/\s*,\s*/)){
+   const [start,end=start]=value.slice(2).split('-').map(hex=>parseInt(hex,16));
+   for(let point=start;point<=end;point++)points.add(point);
+  }
+  return points;
+ });
+ assert.deepEqual(declared,[core,supplement]);
 });
 test('Practical dictionary targets respect the selected style and use the pinned stroke assets',async()=>{
  const sample='付寸冉篝耩聃苒';
