@@ -5,6 +5,10 @@ const require=createRequire(import.meta.url),dir=mkdtempSync(join(tmpdir(),'hanz
 const b=await build({stdin:{contents:`export {HanziStyleProvider,HanziDisplayControls} from './app/hanzi-style';export {default as CloudHighlight} from './app/atlas-cloud-highlight';export * from './app/atlas-cloud-connections';export * from './app/dictionary-character-family-model';export {sourceCharacterEntry} from './app/dictionary-source-model';export {isSimplifiedHeadword} from './app/simplified-chinese';export {hskLevelIndex,hskClassification} from './app/hsk-level-model';export {createElement} from 'react';export {default as renderer,act} from 'react-test-renderer';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent',alias:{react:require.resolve('react').replace(/\/index\.js$/,'')},plugins:[{name:'i18n',setup(build){build.onResolve({filter:/^\.\/i18n$/},()=>({path:'i18n',namespace:'mock'}));build.onLoad({filter:/.*/,namespace:'mock'},()=>({contents:`export const useI18n=()=>({locale:'en'});`,loader:'js'}));}}]});
 const file=join(dir,'test.mjs');writeFileSync(file,b.outputFiles[0].text);const m=await import(pathToFileURL(file));globalThis.IS_REACT_ACT_ENVIRONMENT=true;
 globalThis.document={documentElement:{dataset:{}}};
+const fontPath=fs.readFileSync('app/hanzi-style.css','utf8').match(/\/fonts\/(ChineseOSStroke-([a-f0-9]{12})\.woff)/);
+assert.ok(fontPath,'the shared stylesheet points to a content-addressed stroke font');
+const strokeFont=fs.readFileSync('public/fonts/'+fontPath[1]);
+const strokeManifest=JSON.parse(fs.readFileSync('public/fonts/hanzi-display-'+fontPath[2]+'.json'));
 const text=node=>typeof node==='string'?node:Array.isArray(node)?node.map(text).join(''):node?text(node.children):'';
 test('All 17 walking-family characters keep stroke geometry regardless of mapping or semantic-role coverage',async()=>{
  globalThis.fetch=async url=>({ok:true,json:async()=>JSON.parse(fs.readFileSync('public'+decodeURIComponent(url),'utf8'))});
@@ -25,7 +29,7 @@ test('Supplemental maps preserve curated maps, add 16 direct walking highlights 
  for(const [key,parts]of Object.entries(data.mappings)){const ch=String.fromCodePoint(parseInt(key.slice(1),16)),n=JSON.parse(fs.readFileSync('public/characters/'+ch+'.json')).strokes.length;for(const indices of Object.values(parts)){assert.ok(indices.length);assert.equal(new Set(indices).size,indices.length);assert.ok(indices.every(i=>Number.isInteger(i)&&i>=0&&i<n));}}
 });
 test('One licensed Unicode stroke font covers every HSK character and all new grammar examples',()=>{
- const font=fs.readFileSync('public/fonts/ChineseOSStroke.woff'),manifest=JSON.parse(fs.readFileSync('public/fonts/hanzi-display.json')),index=JSON.parse(fs.readFileSync('data/hanzi-structure.json'));
+ const font=strokeFont,manifest=strokeManifest,index=JSON.parse(fs.readFileSync('data/hanzi-structure.json'));
  assert.equal(font.toString('ascii',0,4),'wOFF');assert.equal(crypto.createHash('sha256').update(font).digest('hex'),manifest.sha256);assert.ok(manifest.glyphCount>=1011);
  for(const ch of index.characters)assert.ok(manifest.characters.includes(ch.hanzi));
  for(const path of ['data/speaking-chunks/grammar-frames.json','data/speaking-chunks/grammar-frames-advanced.json'])for(const frame of JSON.parse(fs.readFileSync(path)))for(const ex of frame.examples)for(const ch of ex.hanzi)if(/\p{Script=Han}/u.test(ch))assert.ok(manifest.characters.includes(ch),ch);
@@ -35,8 +39,8 @@ test('The stroke font covers the Practical lesson, its dictionary components and
  const read=(path)=>JSON.parse(gunzipSync(fs.readFileSync(path)).toString('utf8'));
  const dictionaryData=read('public/dictionary/characters.json.gz');
  const hsk=read('public/dictionary/hsk-levels-2025.json.gz');
- const font=fontkit.create(fs.readFileSync('public/fonts/ChineseOSStroke.woff'));
- const manifest=JSON.parse(fs.readFileSync('public/fonts/hanzi-display.json'));
+ const font=fontkit.create(strokeFont);
+ const manifest=strokeManifest;
  const glyphs=new Set(font.characterSet);
  const lessonFiles=[
   ...fs.readdirSync('data/practical-2026-11-16').filter(file=>file.endsWith('.json')).map(file=>'data/practical-2026-11-16/'+file),
@@ -55,7 +59,7 @@ test('The stroke font covers the Practical lesson, its dictionary components and
   assert.ok(glyphs.has(ch.codePointAt(0)),ch);
   assert.ok(manifest.outlineSources[ch],ch);
  }
- assert.match(fs.readFileSync('app/hanzi-style.css','utf8'),new RegExp('ChineseOSStroke\\.woff\\?v='+manifest.sha256.slice(0,12)));
+ assert.equal(fontPath[2],manifest.sha256.slice(0,12));
  const index=m.hskLevelIndex(hsk);
  assert.deepEqual(m.hskClassification(index,'付','character'),{kind:'character',levels:['4']});
  for(const ch of '冉篝耩聃苒')assert.deepEqual(m.hskClassification(index,ch,'character'),{kind:'character',levels:[]});
