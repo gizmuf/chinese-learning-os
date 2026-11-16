@@ -4,10 +4,10 @@ import test from 'node:test';
 import {build} from 'esbuild';
 
 const {outputFiles:[bundle]}=await build({
- stdin:{contents:"export * from './app/practical-lesson-data'; export * from './app/practical-lesson-family-data';",resolveDir:process.cwd()},
+ stdin:{contents:"export * from './app/practical-lesson-data'; export * from './app/practical-lesson-family-data'; export * from './app/practical-family-exercise-data';",resolveDir:process.cwd()},
  platform:'node',format:'esm',bundle:true,write:false,
 });
-const {practicalLesson,practicalLessonAudio,buildPracticalSentence,activePracticalScene,practicalFamilyGloss,practicalFamilyEntry}=
+const {practicalLesson,practicalLessonAudio,buildPracticalSentence,activePracticalScene,practicalFamilyGloss,practicalFamilyEntry,practicalFamilyExercises}=
  await import('data:text/javascript;base64,'+Buffer.from(bundle.text).toString('base64'));
 
 test('classroom scenes preserve full sentences and recordings',()=>{
@@ -56,4 +56,24 @@ test('every family anchor and example opens with a complete lesson gloss in ever
  assert.equal(sentence.phrase,true);
  assert.equal(sentence.pinyin,'xià ge xīngqī wǒmen zài qù');
  assert.ok(existsSync('public'+practicalLessonAudio[sentence.text+'。']));
+});
+
+test('family practice covers both lesson groups with complete answer feedback',()=>{
+ assert.deepEqual(Object.keys(practicalFamilyExercises),['木 · 本 · 末 · 未','再 · 在']);
+ const ids=new Set();
+ for(const [family,{options,questions}] of Object.entries(practicalFamilyExercises)){
+  assert.ok(practicalLesson.families.some(group=>group.anchor===family),family);
+  assert.deepEqual(options,family.split(' · '));
+  assert.equal(questions.length,4);
+  assert.deepEqual(new Set(questions.map(question=>question.answer)),new Set(options));
+  for(const question of questions){
+   assert.ok(!ids.has(question.id),question.id);
+   ids.add(question.id);
+   assert.ok(question.before && question.after && question.pinyin,question.id);
+   for(const locale of ['en','fr','ru','tr']){
+    assert.ok(question.meaning[locale],question.id+' meaning '+locale);
+    assert.ok(question.explanation[locale].includes(question.answer),question.id+' explanation '+locale);
+   }
+  }
+ }
 });
