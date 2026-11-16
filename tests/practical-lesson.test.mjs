@@ -4,10 +4,10 @@ import test from 'node:test';
 import {build} from 'esbuild';
 
 const {outputFiles:[bundle]}=await build({
- stdin:{contents:"export * from './app/practical-lesson-data';",resolveDir:process.cwd()},
+ stdin:{contents:"export * from './app/practical-lesson-data'; export * from './app/practical-lesson-family-data';",resolveDir:process.cwd()},
  platform:'node',format:'esm',bundle:true,write:false,
 });
-const {practicalLesson,practicalLessonAudio,buildPracticalSentence,activePracticalScene}=
+const {practicalLesson,practicalLessonAudio,buildPracticalSentence,activePracticalScene,practicalFamilyGloss,practicalFamilyEntry}=
  await import('data:text/javascript;base64,'+Buffer.from(bundle.text).toString('base64'));
 
 test('classroom scenes preserve full sentences and recordings',()=>{
@@ -39,4 +39,21 @@ test('combining drink and temperature keeps the exact sentence and matching audi
   assert.equal(result.chunks.join(''),result.hanzi);
   assert.ok(existsSync('public'+practicalLessonAudio[result.hanzi]));
  }
+});
+
+test('every family anchor and example opens with a complete lesson gloss in every locale',()=>{
+ const terms=new Set(practicalLesson.families.flatMap(family=>[...family.anchor.split(' · '),...family.examples]));
+ assert.deepEqual(new Set(Object.keys(practicalFamilyGloss)),terms);
+ for(const word of terms){
+  for(const locale of ['en','fr','ru','tr']){
+   const entry=practicalFamilyEntry(word,locale);
+   assert.equal(entry.text,word);
+   assert.ok(entry.pinyin,word);
+   assert.ok(entry.meaning,word+' '+locale);
+  }
+ }
+ const sentence=practicalFamilyEntry('下个星期我们再去','en');
+ assert.equal(sentence.phrase,true);
+ assert.equal(sentence.pinyin,'xià ge xīngqī wǒmen zài qù');
+ assert.ok(existsSync('public'+practicalLessonAudio[sentence.text+'。']));
 });

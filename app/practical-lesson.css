@@ -23,7 +23,9 @@
 .practical-variants { border-top:1px solid var(--line,#dde5dd); padding:.65rem 0 0; margin:.75rem 0 0; }
 .practical-variants summary { cursor:pointer; }
 .practical-variants > div { margin-top:.55rem; }
-.practical-family-words { display:flex; flex-wrap:wrap; gap:.6rem; }
+.practical-family-words { display:flex; flex-wrap:wrap; align-items:center; gap:.5rem; list-style:none; padding:0; }
+.practical-family-words li { display:flex; align-items:center; gap:.35rem; }
+.practical-family-words .study-word { min-height:2.75rem; min-width:2.75rem; padding:.2rem .55rem; border:1px solid var(--line,#dde5dd); border-radius:.45rem; cursor:pointer; }
 .practical-sidebar label { display:grid; gap:.25rem; margin:.75rem 0; }
 .practical-sidebar select { width:100%; }
 .practical-recall { margin-top:1rem; }

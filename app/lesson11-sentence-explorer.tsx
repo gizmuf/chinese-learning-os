@@ -14,6 +14,8 @@ const labels = {
   back:C('Back to the lesson','Retour à la leçon','Вернуться к уроку','Derse dön'),
   parts:C('How the sentence works','Comment la phrase fonctionne','Как устроено предложение','Cümlenin yapısı'),
   change:C('Change one part','Changer un élément','Изменить одну часть','Bir kısmı değiştir'),
+  audioError:C('Could not play the pronunciation.','Impossible de lire la prononciation.','Не удалось воспроизвести произношение.','Telaffuz oynatılamadı.'),
+  retry:C('Retry pronunciation','Réessayer la lecture','Повторить воспроизведение','Telaffuzu yeniden oynat'),
   vehicle:C('Choose a vehicle','Choisir un véhicule','Выберите транспорт','Taşıt seçin'),
   choices:{
     metro:C('metro','métro','метро','metro'),
@@ -21,12 +23,14 @@ const labels = {
   },
 };
 
-export default function Lesson11SentenceExplorer({onBack, notify}:{onBack:()=>void; notify:(message:string)=>void}) {
+export default function Lesson11SentenceExplorer({onBack}:{onBack:()=>void}) {
   const {locale} = useI18n();
   const [choice, setChoice] = useState<TransportChoice>('metro');
   const dialog = useRef<HTMLDialogElement>(null);
   const title = useRef<HTMLHeadingElement>(null);
-  const player = useRecordingPlayback(notify);
+  const audioControls = useRef<HTMLDivElement>(null);
+  const [audioError, setAudioError] = useState(false);
+  const player = useRecordingPlayback(() => setAudioError(true));
   const {sentence, recording, parts} = lesson11TransportSentence(choice);
   const currentVehicle = parts.find(part => part.id === 'vehicle')!;
   const vehicleOffset = sentence.hanzi.indexOf(currentVehicle.hanzi);
@@ -45,7 +49,13 @@ export default function Lesson11SentenceExplorer({onBack, notify}:{onBack:()=>vo
   function selectVehicle(next: TransportChoice) {
     if (next === choice) return;
     stopAudio();
+    setAudioError(false);
     setChoice(next);
+  }
+
+  function playPronunciation() {
+    setAudioError(false);
+    player.play(recording.source);
   }
 
   return (
@@ -66,7 +76,14 @@ export default function Lesson11SentenceExplorer({onBack, notify}:{onBack:()=>vo
         <p className="se-pinyin">{sentence.pinyin}</p>
         <p>{sentence.meaning[locale]}</p>
       </div>
-      <DictionaryAudio recording={recording} playing={player.playing} onPlay={clip => player.play(clip.source)}/>
+      <div className="se-audio" ref={audioControls}>
+        <DictionaryAudio recording={recording} playing={player.playing} onPlay={playPronunciation}/>
+        <div role="status">{audioError && <p>{labels.audioError[locale]}</p>}</div>
+        {audioError && <button type="button" className="secondary" onClick={() => {
+          audioControls.current?.querySelector('button')?.focus({preventScroll:true});
+          playPronunciation();
+        }}>{labels.retry[locale]}</button>}
+      </div>
 
       <h3>{labels.parts[locale]}</h3>
       <dl className="se-parts">
