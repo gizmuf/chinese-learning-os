@@ -1,0 +1,8 @@
+.hsk-exam-characters{padding:.75rem 1rem;margin:0 0 1rem;border:1px solid var(--line,#dce4d6);border-radius:.8rem}
+.hsk-exam-characters>summary{cursor:pointer;font-weight:600}
+.hsk-exam-controls{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;margin:.85rem 0 .45rem}
+.hsk-exam-controls button[aria-pressed=true]{border-color:currentColor}
+.hsk-exam-controls output{font-variant-numeric:tabular-nums}
+.hsk-exam-characters>p{margin:.5rem 0;font-size:.875rem}
+.hsk-exam-grid{padding:0;margin:.75rem 0 0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(2.75rem,1fr));gap:.35rem}
+.hsk-exam-grid .study-word{min-height:2.75rem;width:100%;font-size:1.35rem}

@@ -3,16 +3,19 @@ import {turkishText,withTurkish} from "./turkish";
 import {hanziStructureData as rawData} from './browse-data';
 import {browseCharacters,browseWords,browseLevel,browseInScope,scopeRank,type BrowseScope} from './hsk-browse';
 const data=withTurkish(rawData);
+import {recognitionCharsByLevel} from './hsk-exam-model';
 import {atlasByHanzi,componentById} from './atlas-model';
 import {items,type Item} from './content';
 import {localizeItem,type Locale} from './translate';
 export type ExtendedScope=BrowseScope;
 const rows=[...data.characters,...browseCharacters];
+const recognitionLevels=Object.entries(recognitionCharsByLevel).flatMap(([level, chars]) =>
+ [...chars].map(glyph => [glyph, level === '7-9' ? 9 : Number(level)] as const));
+const recognitionLevelByGlyph=new Map(recognitionLevels);
 const scopedItems=(scope:ExtendedScope)=>items.filter(item=>scope==='all'?item.hskLevel!==undefined:item.hskLevel!==undefined&&item.hskLevel<=scopeRank(scope));
 export function extendedWords(hanzi:string,locale:Locale,scope:ExtendedScope='all'):Item[]{return Array.from(hanzi).length===1?scopedItems(scope).filter(item=>item.hanzi.includes(hanzi)).map(item=>localizeItem(item,locale)):[];}
 export function extendedCharacters(locale:Locale,scope:ExtendedScope='all'){
- const allowed=new Set([...scopedItems(scope).flatMap(item=>Array.from(item.hanzi)),...browseCharacters.filter(row=>browseInScope(browseLevel(row.level),scope)).map(row=>row.hanzi)]);
- return rows.filter(row=>allowed.has(row.hanzi)).map(row=>{
+ return rows.filter(row=>(recognitionLevelByGlyph.get(row.hanzi)??Infinity)<=scopeRank(scope)).map(row=>{
   const reviewed=atlasByHanzi.get(row.hanzi);
   return {id:'structure-u'+row.hanzi.codePointAt(0)!.toString(16),hanzi:row.hanzi,
    readings:row.readings,meaning:reviewed?.meaning[locale]??(locale==='tr'?turkishText(row.definition):row.definition),meaningLocale:reviewed||locale==='tr'&&turkishText(row.definition)!==row.definition?locale:'en' as Locale,

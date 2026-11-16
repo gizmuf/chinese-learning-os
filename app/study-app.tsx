@@ -4,6 +4,7 @@ import SearchModeToggle from './search-mode-toggle';
 import {rankSearch,type SearchMode} from './chinese-search';
 import {AppearanceControls} from "./theme";
 import HskBadge from './hsk-badge';
+import HskExamCharacters from './hsk-exam-characters';
 import ReadingLabResume from './reading-lab-resume';
 import {writingPracticeHref,writingPracticeRoute,type WritingOrigin} from './writing-navigation';
 
@@ -993,6 +994,7 @@ export default function StudyApp({
                 <button type="button" className="library-practice-shortcut" aria-pressed={practiceSelection} onClick={()=>{setPracticeSelection(true);libraryRoute(libraryLayout,true);}}><BookmarkCheck size={15}/>{libraryCopy.selected} · {practiceBook.entries.length}</button>
                 <ReferenceLessonLinks compact onOpen={id=>{stopAudio();window.history.replaceState(null,'',referenceLessonHref(id)+'&from=lessons');setView('course');window.scrollTo({top:0,behavior:'instant'});}}/>
               </nav>
+              {!practiceSelection && <HskExamCharacters/>}
               <button hidden={practiceSelection} className="secondary pdf-library-button" onClick={() => setPdfSelection(filtered.map(item => item.id))}><Download size={16} /> {t("Print notebook PDF")}</button>
               <div className="library-controls"><SearchModeToggle value={searchMode} onChange={setSearchMode}/>
                 <label className="search-field">
@@ -1025,7 +1027,7 @@ export default function StudyApp({
               <div className={'word-grid'+(libraryLayout==='notebook'?' is-notebook':'')}>
                 {filtered.map((i) => (
                   <div className="library-word-row" key={i.id}><article className="word-card panel" data-study-sentence={i.sentence} data-study-pinyin={i.sentencePinyin} data-study-meaning={i.translation}>
-                    <span className="eyebrow library-word-level"><HskBadge text={i.hanzi}/>{i.hskLevel === undefined && 'Unclassified'}</span>
+                    <span className="eyebrow library-word-level"><HskBadge text={i.hanzi} kind="word"/></span>
                     <button type="button" className="icon-button library-add-choice" disabled={!practiceBook.ready||practiceBook.busy} aria-pressed={practiceBook.entries.some(v=>v.text===i.hanzi)} aria-label={practiceBook.entries.some(v=>v.text===i.hanzi)?libraryCopy.remove:libraryCopy.add} onClick={()=>void practiceBook.toggle({text:i.hanzi,pinyin:i.pinyin,meaning:i.english,contextual:i.sentence?{text:i.sentence,pinyin:i.sentencePinyin,meaning:i.translation}:undefined})}>{practiceBook.entries.some(v=>v.text===i.hanzi)?<BookmarkCheck size={18}/>:<BookmarkPlus size={18}/>}</button>
                     <div className="word-heading">
                       <div>

@@ -2,11 +2,13 @@
 
 HSK3 is an independent study level in the existing application. It adds 500 entries (official IDs 501–1000), bringing the library to 1,000 syllabus entries plus 20 everyday extras. HSK1, HSK2, classroom lessons and Atlas retain their identities and layouts. This is vocabulary-level coverage, not a claim that all HSK3 grammar lessons, historical character stories or Atlas animations are complete.
 
-The reference is the official HSK examination syllabus published November 2025, effective July 2026: vocabulary PDF pages 92–104. `data/hsk3-reference.json` records the URL, SHA-256, source pages, sense markers and official pronunciation. It is the same source edition used for HSK1 and HSK2; legacy 600-word HSK3 lists are not mixed in.
+The reference is the official HSK examination syllabus published November 2025: vocabulary PDF pages 92–104. `data/hsk3-reference.json` records the URL, SHA-256, source pages, sense markers and official pronunciation. It is the same source edition used for HSK1 and HSK2; legacy 600-word HSK3 lists are not mixed in.
 
 `data/hsk3-authoring.json` contains original contextual examples and EN/FR/RU glosses and sentence translations. The a/b/c batch files are authoring inputs to `scripts/assemble-hsk3-content.py`; edit those, assemble, then run `scripts/build-hsk-content.py` (pypinyin 0.55.0) and `scripts/build-translations.mjs`. Official word pinyin is preserved; example pinyin is generated with reviewed phrase overrides. Homographs keep separate IDs, notably 得 dé and 得 děi. Learning history uses stable `hsk3-501` through `hsk3-1000` IDs, independently of earlier levels.
 
 All word characters use locally bundled Hanzi Writer stroke data. Existing Watch/Trace/Copy/Recall, Notebook and printable selected-word/lesson PDFs work through the same level filter. Word and example recordings use the existing Xiaoxiao Mandarin voice, rate -10%; audio is bundled locally, without student text being sent to a provider at runtime. `scripts/verify-audio.mjs` checks text identity, file size and SHA-256. `scripts/generate-audio.py` resumes verified clips and uses pronunciation contexts for ambiguous isolated words.
+
+My Lessons → **HSK 3.0 exam characters** offers the complete cumulative recognition list (246, 371 and 655) and the writing list (100 shared by HSK 1–2, plus 150 for HSK 3). The generator compares the 1,000 curriculum word-and-pinyin entries against the currently published PDF without renumbering study IDs. Atlas filters characters by official recognition level. Badges on vocabulary cards report word membership, while badges for individual character components report character membership. “Outside HSK” means the item has no entry in the corresponding official table.
 
 ## Release verification
 

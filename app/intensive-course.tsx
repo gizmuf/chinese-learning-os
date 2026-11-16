@@ -609,7 +609,7 @@ export default function IntensiveCourse({
                                 <span className="pinyin">{value.pinyin}</span>
                                 <span>{value.meaning[locale]}</span>
                                 <Volume2 size={13} />
-                              {terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi}/>}</button>
+                              {terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi} kind="word"/>}</button>
                             );
                           })}
                         </div>
@@ -686,7 +686,7 @@ export default function IntensiveCourse({
                           <ChevronRight size={15} />
                         </button>
                       </div>
-                    {terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi}/>}</article>
+                    {terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi} kind="word"/>}</article>
                   ))}
               </div>
             </>
@@ -865,7 +865,7 @@ function SentenceCard({
           <ChevronRight size={15} />
         </button>}
       </div>
-    {terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi}/>}</article>
+    {terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi} kind="word"/>}</article>
   );
 }
 function OptionText({
