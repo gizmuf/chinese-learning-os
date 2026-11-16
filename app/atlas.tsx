@@ -61,6 +61,8 @@ import AtlasGlyph from "./atlas-glyph";
 import AtlasRecall from "./atlas-recall";
 import Notebook from "./notebook";
 import AtlasGuidedWriting from "./atlas-guided-writing";
+import {useGlobalHsk} from './global-hsk';
+import {familyForComponents} from './atlas-cloud-model';
 import {isCloudAtlasEntry} from "./atlas-cloud-entry";
 import type { Item } from "./content";
 import type { LearningEvent } from "./learning";
@@ -89,6 +91,10 @@ export default function Atlas({
   const [workspace, setWorkspace] = useState(false);
   const [reader, setReader] = useState(false);
   const [workspaceReturn, setWorkspaceReturn] = useState<string>();
+  const global = useGlobalHsk();
+  const curriculumScope = global?.scope ?? 'all';
+  const scopedCharacters = useMemo(() => familyForComponents([], curriculumScope), [curriculumScope]);
+  const inRange = (character: AtlasCharacter) => scopedCharacters.some(item => item.id === character.id);
   const [scope, setScope] = useState<Scope>(null);
   const [trail, setTrail] = useState<{ scope: Scope; target: string }[]>([]);
   const [selected, setSelected] = useState("u6674");
@@ -128,7 +134,7 @@ export default function Atlas({
   }, []);
   const character = atlasById.get(selected) ?? characters[0];
   const item = atlasItem(character, locale);
-  const due = useMemo(() => atlasDue(progress.events).filter(d=>atlasById.has(d.targetId)), [progress.events]);
+  const due = useMemo(() => atlasDue(progress.events).filter(d=>scopedCharacters.some(c=>c.id===d.targetId)), [progress.events,scopedCharacters]);
   const practiced = new Set(
     progress.events
       .filter((e) => coreIds.has(e.targetId) && e.mode !== "explore")
@@ -141,7 +147,7 @@ export default function Atlas({
       : scope?.kind === "group"
         ? groupById.get(scope.id)!.characters.map((c) => atlasByHanzi.get(c)!)
         : atlasCharacters;
-  const results = search.trim() ? rankSearch(atlasCharacters,search,searchMode,c=>({hanzi:c.hanzi+' / '+c.word,pinyin:c.pinyin+' / '+c.wordPinyin,english:c.meaning.en+' / '+c.wordMeaning.en})) : scoped;
+  const results = search.trim() ? rankSearch(scopedCharacters,search,searchMode,c=>({hanzi:c.hanzi+' / '+c.word,pinyin:c.pinyin+' / '+c.wordPinyin,english:c.meaning.en+' / '+c.wordMeaning.en})) : scoped.filter(inRange);
   const activeComponent =
     scope?.kind === "component" ? componentById.get(scope.id) : undefined;
   const activeGroup =
@@ -208,9 +214,10 @@ export default function Atlas({
     tasks?: Task[],
   ) {
     stopAudio();
+    const eligible = new Set(scopedCharacters.map(character => character.id));
     const q =
-      tasks ??
-      atlasQueue(ids, 8).map((targetId, i) => ({
+      tasks?.filter(task => eligible.has(task.targetId)) ??
+      atlasQueue(ids.filter(id => eligible.has(id)), 8).map((targetId, i) => ({
         targetId,
         skill: (i % 3 === 2 && coreIds.has(targetId)
           ? "component"
@@ -276,6 +283,9 @@ export default function Atlas({
   if (studio) return <Suspense fallback={<p role="status">{labCopy.loading[locale]}</p>}><AtlasStudio owner={owner} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} progress={progress}/></Suspense>;
   return (
     <div className="atlas-space">
+      {!inRange(character) && <p className="hsk-unclassified-note" role="status">
+        The selected character is outside the current HSK results.
+      </p>}
       <div className="page-heading">
         <div>
           <p className="eyebrow">{t("FOLLOW THE CONNECTIONS")}</p>
@@ -810,7 +820,7 @@ export default function Atlas({
                           )
                         }
                       >
-                        {atlasCharacters.map((c) => (
+                        {scopedCharacters.map((c) => (
                           <option value={c.id} key={c.id}>
                             {c.hanzi} · {c.pinyin} · {c.meaning[locale]}
                           </option>
@@ -930,7 +940,7 @@ export default function Atlas({
                   url(scope, e.target.value);
                 }}
               >
-                {atlasCharacters.map((c) => (
+                {scopedCharacters.map((c) => (
                   <option value={c.id} key={c.id}>
                     {c.hanzi} · {c.pinyin} · {c.meaning[locale]}
                   </option>

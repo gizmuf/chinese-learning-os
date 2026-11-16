@@ -87,7 +87,7 @@ export default function PronunciationLab({serverEvaluation=true}:{serverEvaluati
   }
  }
  const busy=['starting','recording','processing','evaluating'].includes(phase);
- return <main style={{maxWidth:760,margin:'auto',padding:'32px 20px',color:'var(--ink)',fontFamily:'system-ui',lineHeight:1.7}}>
+ return <section aria-label="Pronunciation Lab" style={{maxWidth:760,margin:'auto',padding:'32px 20px',color:'var(--ink)',fontFamily:'system-ui',lineHeight:1.7}}>
   <a href='/'>← Chinese OS</a><h1>Pronunciation lab</h1><p>{serverEvaluation?'Record a short sentence. Feedback appears after you stop and submit. This experiment does not change your SRS.':'Choose a short sentence and practise saying it aloud.'}</p>
   <label>Sentence <select disabled={busy} value={id} onChange={e=>{discard();setId(e.target.value);setResult(null);setUrl('');setConsent(false);setPhase('idle');setError('');}}>{sentences.map(s=><option key={s.id} value={s.id}>{s.english}</option>)}</select></label>
   <div lang='zh-CN' style={{fontSize:56,marginTop:24}}>{sentence.hanzi}</div><div style={{fontSize:28}}>{sentence.pinyin}</div><p>{sentence.english}</p>
@@ -103,5 +103,5 @@ export default function PronunciationLab({serverEvaluation=true}:{serverEvaluati
   {result&&<section><h2>Actual audio analysis · Tencent SOE-N</h2><p>Provider score: {result.score===null?'Unavailable':Math.round(result.score)+' / 100'} · not a probability of correctness.</p><p>Tones assessed: {result.toneCoverage} / {result.total}. {result.uncertain?'Some recognition is uncertain. Record again before drawing conclusions.':''}</p>
   <table style={{width:'100%',textAlign:'left'}}><thead><tr><th>Hanzi</th><th>Expected tone</th><th>Detected tone</th><th>Feedback</th></tr></thead><tbody>{result.words.map((w,i)=><tr key={i}><td style={{fontSize:30}}>{w.hanzi}</td><td>{w.expected??'—'}</td><td>{w.heard??'—'}</td><td>{w.status==='match'?'Matches':w.status==='review'?'Review this tone':'Uncertain — no judgement'}</td></tr>)}</tbody></table>
   <p>Tone changes in connected speech, neutral tones and third-tone sandhi need teacher review. A flagged difference is a practice cue.</p></section>}
- </main>;
+ </section>;
 }

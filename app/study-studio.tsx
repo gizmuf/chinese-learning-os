@@ -1,4 +1,6 @@
 'use client';
+import {useGlobalHsk} from './global-hsk';
+import {globalHskLabel, knownHskInScope} from './global-hsk-model';
 import {lazy,Suspense,useCallback,useEffect,useMemo,useRef,useState} from 'react';
 import {ArrowLeft,ArrowRight,BookOpen,Menu,MessageCircle,PenLine,Sparkles,Volume2,X} from 'lucide-react';
 import {items,type Item} from './content';
@@ -12,7 +14,7 @@ import RecognitionReview from './recognition-review';
 import {useAtlasProgress} from './atlas-store';
 import {readCloudRoute,cloudRouteHref} from './atlas-cloud-route';
 import type {LearningEvent} from './learning';
-import {applyStudioCommand,backStudio,claimStudio,dayItemIds,fixtureCommand,studioFixtures,visitStudio,writeStudio,type StudioCheckpoint,type StudioPane} from './study-studio-model';
+import {applyStudioCommand,backStudio,claimStudio,dayItemIds,fixtureCommand,studioFixtures,visitStudio,writeStudio,type StudioCheckpoint,type StudioCommand,type StudioPane} from './study-studio-model';
 import './study-studio.css';
 import StudyLabLinks from './study-lab-links';
 import {sentenceCheckTitle} from './sentence-check-copy';
@@ -24,6 +26,7 @@ type Props={owner:string|null;db:IDBDatabase|null;penOnly:boolean;setPenOnly:(va
 /** Additive workspace: all learning and ink still belong to the existing modules. */
 export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,onExit,onMyDay,onCompanion,onPrivate,onShuoshuoLesson,onSentenceCheck,menuOpen,onMenu}:Props){
   const {locale}=useI18n();
+  const global=useGlobalHsk();
   const progress=useAtlasProgress(owner);
   const [state,setState]=useState<StudioCheckpoint|null>(null),current=useRef<StudioCheckpoint|null>(null);
   const [busy,setBusy]=useState(false),[error,setError]=useState(''),[open,setOpen]=useState(false),[reply,setReply]=useState('Choose one of the five predefined actions below.');
@@ -62,11 +65,19 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
   const embedded=useMemo(()=>({route:atlasRoute,onRoute:atlasRouteChange,onAssessmentChange:setAtlasAssessment}),[atlasRoute,atlasRouteChange]);
   const localized=useMemo(()=>items.map(item=>localizeItem(item,locale)),[locale]);
   const item=localized.find(item=>item.id===state?.itemId);
+  const available = (item: Item) => !global || knownHskInScope(item.hskLevel, global.scope);
+  const availableIds = new Set(localized.filter(available).map(item => item.id));
+  function studioCommand(state: StudioCheckpoint, input: StudioCommand) {
+    if (input.tool !== 'flashcards.open') return applyStudioCommand(state, input, crypto.randomUUID());
+    const selected = state.selected.filter(id => availableIds.has(id));
+    if (!selected.length) return state;
+    return {...applyStudioCommand({...state, selected}, input, crypto.randomUUID()), selected: state.selected};
+  }
   function command(text:string){
     if(atlasAssessment)return;
     const input=fixtureCommand(text,crypto.randomUUID());
     if(!input){setReply('Choose one of the five predefined actions below. No live AI is connected.');return;}
-    void dispatch(s=>applyStudioCommand(s,input,crypto.randomUUID()));
+    void dispatch(s=>studioCommand(s,input));
     setReply(input.tool==='flashcards.open'?'Selected words use extra practice. Your independent review schedule stays unchanged.':input.tool==='atlas.open'?'Explore the real Atlas. Shared shapes are not automatically shared meanings or sounds.':input.tool==='writing.open'?'Watch, trace, copy, then write from memory. Your drawing stays saved when you leave.':'Using the existing course vocabulary and authored examples.');
   }
   useEffect(()=>{
@@ -87,7 +98,7 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
   function write(item:Item){if(!atlasAssessment)void dispatch(s=>visitStudio(s,{pane:'writing',itemId:item.id,mode:'watch'}));}
   if(!state||!item)return <section className="studio-loading" role="status">{error||'Opening your saved study workspace…'}</section>;
   const examples=studyExamples(item.hanzi,locale,3);
-  const selected=state.selected.map(id=>localized.find(item=>item.id===id)!);
+  const selected=state.selected.filter(id=>availableIds.has(id)).map(id=>localized.find(item=>item.id===id)!);
   const reviewQueue=state.review?.itemIds.map(id=>localized.find(item=>item.id===id)!)??[];
   return <section className={'study-studio'+(state.pane==='cards'?' is-reviewing':'')} aria-label="StudyStudio">
     <div className="ss-toolbar">
@@ -107,20 +118,23 @@ export default function StudyStudio({owner,db,penOnly,setPenOnly,notify,record,o
     <div className={'ss-workspace'+(open?' ss-with-companion':'')}>
       <div className="ss-main" aria-busy={busy}>
         {atlasVisited&&<div hidden={state.pane!=='atlas'} className="ss-atlas"><Suspense fallback={<p role="status">Opening Atlas…</p>}><AtlasCloud owner={owner} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} progress={progress} onWord={write} embedded={embedded}/></Suspense></div>}
-        {writerVisited&&<div hidden={state.pane!=='writing'} className="ss-panel ss-writing"><SharedWriting key={item.id} hanzi={item.hanzi} item={item} initialMode={state.mode} onModeChange={mode=>{void dispatch(s=>({...s,mode}));}} onBack={()=>{void dispatch(backStudio);}}/></div>}
+        {writerVisited&&<div hidden={state.pane!=='writing'} className="ss-panel ss-writing">{available(item)?<SharedWriting key={item.id} hanzi={item.hanzi} item={item} initialMode={state.mode} onModeChange={mode=>{void dispatch(s=>({...s,mode}));}} onBack={()=>{void dispatch(backStudio);}}/>:<p role="status">
+          <span lang="zh-Hans">{item.hanzi}</span> is outside the current range.
+          {item.hskLevel && <button type="button" className="secondary" onClick={()=>global?.setScope(item.hskLevel!)}>Use {globalHskLabel(item.hskLevel)}</button>}
+        </p>}</div>}
         <div hidden={state.pane!=='vocabulary'} className="ss-panel"><header><BookOpen size={19}/><h2>Your practice words</h2><span>{selected.length} selected</span></header>
-          <div className="ss-word-list">{localized.filter(i=>dayItemIds.includes(i.id)).map(word=><div className="ss-word" key={word.id}><label><input type="checkbox" disabled={busy} checked={state.selected.includes(word.id)} onChange={e=>{const checked=e.target.checked;void dispatch(s=>({...s,selected:checked?[...s.selected,word.id]:s.selected.filter(id=>id!==word.id)}));}}/><span lang="zh-Hans"><StudyText text={word.hanzi} whole/></span><span><b>{word.pinyin}</b><small>{word.english}</small></span></label><button onClick={()=>write(word)} aria-label={'Write '+word.hanzi}><PenLine size={17}/></button></div>)}</div>
+          <div className="ss-word-list">{localized.filter(i=>dayItemIds.includes(i.id)&&available(i)).map(word=><div className="ss-word" key={word.id}><label><input type="checkbox" disabled={busy} checked={state.selected.includes(word.id)} onChange={e=>{const checked=e.target.checked;void dispatch(s=>({...s,selected:checked?[...s.selected,word.id]:s.selected.filter(id=>id!==word.id)}));}}/><span lang="zh-Hans"><StudyText text={word.hanzi} whole/></span><span><b>{word.pinyin}</b><small>{word.english}</small></span></label><button onClick={()=>write(word)} aria-label={'Write '+word.hanzi}><PenLine size={17}/></button></div>)}</div>
           <div className="ss-panel-foot"><p>Saved in this notebook. Extra practice uses the existing flashcard system.</p><button disabled={busy||!selected.length} className="primary" onClick={()=>{
-            const action={tool:'flashcards.open',actionId:crypto.randomUUID()};
-            void dispatch(s=>applyStudioCommand({...s,review:null},action,crypto.randomUUID()));
+            const action:StudioCommand={tool:'flashcards.open',actionId:crypto.randomUUID()};
+            void dispatch(s=>studioCommand({...s,review:null},action));
           }}>Practice selected words<ArrowRight size={16}/></button></div>
         </div>
         {state.pane==='classifiers'&&<ClassifierCatalogue notify={notify}/>}
         {state.review&&<div hidden={state.pane!=='cards'} className="ss-cards"><RecognitionReview key={state.review.id} db={db} runId={state.review.id} queue={reviewQueue} practice record={record} notify={notify} onPosition={()=>{}} onWrite={write}/></div>}
-        <div hidden={state.pane!=='day'} className="ss-panel ss-day"><header><h2>Movement examples</h2><span>4 existing course examples · 去, 回, 家, 学校</span></header>
-          {dayItemIds.map(id=>localized.find(i=>i.id===id)!).map(word=><article key={word.id}><p className="ss-eyebrow">{word.english}</p><div lang="zh-Hans" className="ss-sentence"><StudyText text={word.sentence}/></div><p>{word.sentencePinyin}</p><p>{word.translation}</p><div className="ss-row-actions"><button onClick={()=>speak(word.sentence,notify,word)}><Volume2 size={16}/>Listen</button><button onClick={()=>write(word)}><PenLine size={16}/>Write {word.hanzi}</button></div></article>)}
+        <div hidden={state.pane!=='day'} className="ss-panel ss-day"><header><h2>Movement examples</h2><span>Classified course examples in the current HSK range</span></header>
+          {localized.filter(i=>dayItemIds.includes(i.id)&&available(i)).map(word=><article key={word.id}><p className="ss-eyebrow">{word.english}</p><div lang="zh-Hans" className="ss-sentence"><StudyText text={word.sentence}/></div><p>{word.sentencePinyin}</p><p>{word.translation}</p><div className="ss-row-actions"><button onClick={()=>speak(word.sentence,notify,word)}><Volume2 size={16}/>Listen</button><button onClick={()=>write(word)}><PenLine size={16}/>Write {word.hanzi}</button></div></article>)}
         </div>
-        {state.pane==='writing'&&state.mode!=='recall'&&<div className="ss-examples">{examples.map(example=><article key={example.id}><div lang="zh-Hans"><StudyText text={example.text}/></div><p>{example.pinyin}</p><p>{example.meaning}</p></article>)}</div>}
+        {state.pane==='writing'&&available(item)&&state.mode!=='recall'&&<div className="ss-examples">{examples.map(example=><article key={example.id}><div lang="zh-Hans"><StudyText text={example.text}/></div><p>{example.pinyin}</p><p>{example.meaning}</p></article>)}</div>}
       </div>
       {open&&<aside className="ss-companion" id="ss-companion" aria-label="Study companion" onKeyDown={e=>{if(e.key==='Escape'){setOpen(false);e.stopPropagation();}}}>
         <header><Sparkles size={18}/><strong>Study companion</strong><button aria-label="Close companion" onClick={()=>setOpen(false)}><X size={18}/></button></header>

@@ -1,3 +1,5 @@
+import {knownHskInScope} from './global-hsk-model';
+import type {BrowseScope} from './hsk-scope';
 import {z} from 'zod';
 import {createEmptyCard,fsrs,generatorParameters,type Card} from 'ts-fsrs';
 import {atlasCharacters} from './atlas-model';
@@ -28,8 +30,14 @@ export function recognitionSummary(events:readonly RecognitionAttempt[],now=Date
  }
  const all=[...characters.values()].sort((a,b)=>a.dueAt-b.dueAt||a.target.localeCompare(b.target));return {checked:seen.size,correct,wrong,characters:all,difficult:all.filter(ch=>!ch.latest.correct),due:all.filter(ch=>ch.dueAt<=now)};
 }
-export function recognitionReviewQuestions(events:readonly RecognitionAttempt[],kind:'difficult'|'due',locale:Locale,now=Date.now()):PracticeQuestion[]{
- const summary=recognitionSummary(events,now),localized=wordMap(locale);return summary[kind].flatMap(ch=>{const e=ch.latest,word=localized.get(e.wordId);return word?[{id:e.target+'|'+e.wordId,target:e.target,partId:e.partId,word,masked:word.hanzi.split(e.target).join('□'),choices:e.choices}]:[]});
+export function scopedRecognitionSummary(events:readonly RecognitionAttempt[],now:number,scope:BrowseScope){
+ const summary=recognitionSummary(events,now);
+ if(scope==='all')return summary;
+ const inScope=(row:RecognitionCharacter)=>knownHskInScope(words.get(row.latest.wordId)?.level,scope);
+ return {...summary,characters:summary.characters.filter(inScope),difficult:summary.difficult.filter(inScope),due:summary.due.filter(inScope)};
+}
+export function recognitionReviewQuestions(events:readonly RecognitionAttempt[],kind:'difficult'|'due',locale:Locale,now=Date.now(),scope:BrowseScope='all'):PracticeQuestion[]{
+ const summary=scopedRecognitionSummary(events,now,scope),localized=wordMap(locale);return summary[kind].flatMap(ch=>{const e=ch.latest,word=localized.get(e.wordId);return word?[{id:e.target+'|'+e.wordId,target:e.target,partId:e.partId,word,masked:word.hanzi.split(e.target).join('□'),choices:e.choices}]:[]});
 }
 export function localizeRecognitionQuestion(question:PracticeQuestion,locale:Locale):PracticeQuestion{const word=wordMap(locale).get(question.word.id);return word?{...question,word}:question}
 /** A late sync snapshot must not discard a just-checked local result or downgrade an acknowledgement. */

@@ -6,7 +6,8 @@ import {build} from 'esbuild';
 const require=createRequire(import.meta.url);
 const result=await build({
  stdin:{contents:`
-  export {default as CanonicalLab} from './app/pronunciation-lab/page';
+  export {default as CanonicalRoute} from './app/pronunciation-lab/page';
+  export {default as CanonicalLab} from './app/pronunciation-lab-ui';
   export {createElement} from 'react';
   export {act,create} from 'react-test-renderer';
   export async function runStaticEntry(){await import('./hk/main');return globalThis.staticEntry;}
@@ -15,23 +16,25 @@ const result=await build({
  plugins:[{name:'static-route-browser',setup(build){
   const stubs={
    'react-dom/client':"export const createRoot=()=>({render:element=>{globalThis.staticEntry=element}});",
-   '../app/study-app':"export default function StudyApp(){return 'StudyApp';}",
+   '../app/study-app':"import {createElement} from 'react'; import Lab from './app/pronunciation-lab-ui'; export default function StudyApp(props){return props.initialView==='pronunciation' ? createElement(Lab,{serverEvaluation:props.pronunciationServerEvaluation}) : 'StudyApp';}",
+   '../auth-shell':"export default function AuthShell(){return null;}",
+   '../chatgpt-auth':"export async function getChatGPTUser(){return null;}",
    './auth-client':"export const getAuthClient=()=>{throw Error('Unexpected authentication');};",
   };
-  build.onResolve({filter:/^(react-dom\/client|\.\.\/app\/study-app|\.\/auth-client)$/},({path})=>({path,namespace:'stub'}));
-  build.onLoad({filter:/.*/,namespace:'stub'},({path})=>({contents:stubs[path]}));
+  build.onResolve({filter:/^(react-dom\/client|\.\.\/app\/study-app|\.\.\/auth-shell|\.\.\/chatgpt-auth|\.\/auth-client)$/},({path})=>({path,namespace:'stub'}));
+  build.onLoad({filter:/.*/,namespace:'stub'},({path})=>({contents:stubs[path],resolveDir:process.cwd()}));
  }}],
 });
 const module={exports:{}};
 new Function('require','module','exports',result.outputFiles[0].text)(require,module,module.exports);
-const {CanonicalLab,createElement,runStaticEntry,act,create}=module.exports;
+const {CanonicalRoute,CanonicalLab,createElement,runStaticEntry,act,create}=module.exports;
 
 test('Alibaba opens the shared lab with HTTP recording and server evaluation disabled',async t=>{
  const previousWindow=globalThis.window;
  const previousDocument=globalThis.document;
  const previousAct=globalThis.IS_REACT_ACT_ENVIRONMENT;
  globalThis.window=Object.assign(new EventTarget(),{location:{pathname:'/pronunciation-lab'},isSecureContext:false});
- globalThis.document={getElementById:()=>({})};
+ globalThis.document={getElementById:()=>({}),documentElement:{dataset:{}}};
  globalThis.IS_REACT_ACT_ENVIRONMENT=true;
  let root;
  t.after(async()=>{
@@ -54,6 +57,13 @@ test('Alibaba opens the shared lab with HTTP recording and server evaluation dis
   ['Record',true],['Evaluate recording',true],
  ]);
  assert.equal(root.root.findAllByType('input').length,0);
+});
+
+test('the canonical pronunciation URL opens the shared study shell in pronunciation mode',async ()=>{
+ const route=await CanonicalRoute();
+ assert.equal(route.type.name,'AuthShell');
+ assert.equal(route.props.initialView,'pronunciation');
+ assert.equal(route.props.initialUser,null);
 });
 
 test('the server-rendered route still exposes its existing evaluator consent',async t=>{

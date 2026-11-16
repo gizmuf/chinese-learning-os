@@ -1,4 +1,4 @@
-import {parseBrowseScope} from './hsk-browse';
+import {GlobalHskSelect, useGlobalHsk} from './global-hsk';
 'use client';
 import {useEffect,useLayoutEffect,useMemo,useRef,useState,type RefObject} from 'react';
 import {ArrowLeft,ArrowRight,Maximize2,Minimize2,PenLine,Search,Volume2,X} from 'lucide-react';
@@ -38,12 +38,18 @@ function LayerLinks({host,revision}:{host:RefObject<HTMLDivElement|null>;revisio
 }
 
 export default function AtlasHybrid(p:Props){
+ const global=useGlobalHsk();
  const {locale}=useI18n(),t=(key:Parameters<typeof hybridText>[1])=>hybridText(locale,key);
  const mode=p.route.layout as HybridLayout;
  const words=useMemo(()=>hybridWords(p.route.mapSet,p.route.anchor,locale,p.route.level),[p.route.mapSet,p.route.anchor,locale,p.route.level]);
  const inventory=useMemo(()=>hybridInventory(words,locale),[words,locale]);
  const {characters}=inventory;
- const {character,relatives,word}=hybridSelection(words,characters,p.route.hanzi,p.route.familyEntry);
+ const exactCharacter=characters.some(character=>character.hanzi===p.route.hanzi);
+ const exactWord=!p.route.familyEntry||words.some(word=>word.id===p.route.familyEntry);
+ const missingSelection=!!global&&(!exactCharacter||!exactWord);
+ const selected=hybridSelection(words,characters,p.route.hanzi,p.route.familyEntry);
+ const {character,relatives}=selected;
+ const word=exactWord?selected.word:undefined;
  const part=p.route.mapPart&&character&&(character.hanzi===p.route.mapPart||character.components.includes(p.route.mapPart))?p.route.mapPart:'';
  const partFamily=part?hybridPartFamily(characters,part):[];
  const [draft,setDraft]=useState(p.route.anchor),[error,setError]=useState(''),[indexOpen,setIndexOpen]=useState(false),[playing,setPlaying]=useState(''),[columns,setColumns]=useState(6);
@@ -76,10 +82,11 @@ export default function AtlasHybrid(p:Props){
  }
  return <section className="atlas-hybrid" ref={root} aria-labelledby="ah-title">
   <header className="ah-heading"><div><h2 id="ah-title">{t(mode)}</h2><p>{t('intro')}</p></div><button type="button" onClick={p.onExpand} aria-label={t(p.expanded?'collapse':'expand')}>{p.expanded?<Minimize2 size={18}/>:<Maximize2 size={18}/>}</button></header>
-  <div className="ah-controls"><label>{t('material')}<select value={p.route.mapSet} onChange={e=>change({mapSet:e.target.value as HybridSet,mapPart:'',mapWordPage:0,mapCharPage:0,familyEntry:''})}><option value="family">{t('family')}</option><option value="hundred">{t('hundred')}</option><option value="scope">{t('scope')}</option></select></label><label>{t('vocabulary')}<select value={p.route.level} onChange={e=>change({level:parseBrowseScope(e.target.value),mapPart:'',mapWordPage:0,mapCharPage:0,familyEntry:''})}><option value="1">HSK 1</option><option value="2">HSK 1–2</option><option value="3">HSK 1–3</option><option value="4">HSK 1–4</option><option value="5">HSK 1–5</option><option value="6">HSK 1–6</option><option value="7-9">HSK 1–6 + 7–9</option><option value="all">{t('all')}</option></select></label>{p.route.mapSet==='family'&&<form onSubmit={e=>{e.preventDefault();findFamily()}}><label htmlFor="ah-anchor">{t('anchor')}</label><div><input id="ah-anchor" value={draft} maxLength={16} onChange={e=>setDraft(e.target.value)} autoComplete="off" placeholder="学 / 学生 / 电"/><button type="submit" aria-label={t('find')}><Search size={17}/></button></div></form>}</div>
+  <div className="ah-controls"><label>{t('material')}<select value={p.route.mapSet} onChange={e=>change({mapSet:e.target.value as HybridSet,mapPart:'',mapWordPage:0,mapCharPage:0,familyEntry:''})}><option value="family">{t('family')}</option><option value="hundred">{t('hundred')}</option><option value="scope">{t('scope')}</option></select></label><label>{t('vocabulary')}<GlobalHskSelect label={t('vocabulary')} scope={p.route.level} setScope={global?.setScope??(scope=>change({level:scope,mapWordPage:0,mapCharPage:0}))}/></label>{p.route.mapSet==='family'&&<form onSubmit={e=>{e.preventDefault();findFamily()}}><label htmlFor="ah-anchor">{t('anchor')}</label><div><input id="ah-anchor" value={draft} maxLength={16} onChange={e=>setDraft(e.target.value)} autoComplete="off" placeholder="学 / 学生 / 电"/><button type="submit" aria-label={t('find')}><Search size={17}/></button></div></form>}</div>
   {error&&<p role="alert">{error}</p>}
   {p.route.mapSet==='family'&&<nav className="ah-seeds" aria-label={t('family')}>{['学','学生','电','大','人','子'].map(anchor=><button type="button" key={anchor} aria-pressed={p.route.anchor===anchor} onClick={()=>{setDraft(anchor);change({anchor,wordCompare:false,hanzi:Array.from(anchor)[0],familyEntry:'',mapPart:'',mapWordPage:0,mapCharPage:0})}} ><span lang="zh-Hans">{anchor}</span><small className="ah-visible-reading">{hybridTextReading(anchor)}</small></button>)}</nav>}
   <p className="ah-counts" aria-live="polite">{inventory.wordCount} {t('words')} · {inventory.characterCount} {t('characters')} · {inventory.occurrences} {t('occurrences')}</p>
+  {missingSelection&&<p className="hsk-unclassified-note" role="status">The selected entry is outside the current results. The scoped map is shown below.</p>}
   {!character?<p className="ah-empty">{t('empty')}</p>:<>
    <div className="ah-interaction" onClickCapture={e=>{if(performance.now()<suppressClick.current){e.preventDefault();e.stopPropagation()}}} onPointerDown={e=>{if(e.pointerType!=='mouse'&&!(e.target as HTMLElement).closest('input,select'))touch.current={x:e.clientX,y:e.clientY}}} onPointerCancel={()=>{touch.current=null}} onPointerUp={e=>{const start=touch.current;touch.current=null;if(!start)return;const dx=e.clientX-start.x,dy=e.clientY-start.y;const direction=hybridSwipe(dx,dy);if(!direction)return;const next=wordPage.page+direction;suppressClick.current=performance.now()+350;if(next>=0&&next<wordPage.pages)change({mapWordPage:next})}}>
    {mode==='layers'?<>

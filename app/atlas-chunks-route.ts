@@ -16,7 +16,7 @@ export function atlasLearningContext(
   const words = route.wordCompare
    ? compareWordFamilies('哪', '那', locale, route.level).flatMap(row => [...row.left, ...row.right])
    : familyWords(route.anchor, locale, route.level);
-  return {word: selectFamilyWord(words, route.familyEntry)};
+  return {word: route.familyEntry ? words.find(word => word.id === route.familyEntry) : selectFamilyWord(words, route.familyEntry)};
  }
  if (isHybridLayout(route.layout)) {
   const words = hybridWords(route.mapSet, route.anchor, locale, route.level);

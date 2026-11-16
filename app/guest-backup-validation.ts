@@ -55,7 +55,7 @@ const privateLibrary = z.object({
 
 const exactDrafts = new Map<string,z.ZodType>([
  ['settings',z.object({penOnly:z.boolean(),hanziStyle:z.enum(['print','strokes']).optional(),highlightComponents:z.boolean().optional(),
-  slowAudio:z.boolean().optional(),level:z.enum(levels).optional(),left:z.boolean(),minutes:int}).strict()],
+  slowAudio:z.boolean().optional(),level:z.enum(levels).optional(),hskScope:z.union([z.literal(1),z.literal(2),z.literal(3),z.literal(4),z.literal(5),z.literal(6),z.literal('7-9'),z.literal('all')]).optional(),left:z.boolean(),minutes:int}).strict()],
  [studioDraftKey,z.custom(validStudio)],
  [companionDraftKey,z.custom(validCompanion)],
  [practiceBookKey,practiceChoices],

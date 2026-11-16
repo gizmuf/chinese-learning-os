@@ -1,5 +1,8 @@
 'use client';
 import SearchModeToggle from './search-mode-toggle';
+import {GlobalHskSelect, useGlobalHsk} from './global-hsk';
+import {knownHskInScope} from './global-hsk-model';
+import type {BrowseScope} from './hsk-scope';
 import {rankSearch,type SearchMode} from './chinese-search';
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {ArrowLeft,ArrowRight,Volume2} from 'lucide-react';
@@ -16,20 +19,33 @@ import type {CourseEvent} from './course-learning';
 type Shared={ready:boolean;record:(event:CourseEvent)=>Promise<void>;notify:(message:string)=>void;onBusy:(busy:boolean)=>void};
 export function ChunkLibrary({collection,...shared}:Shared&{collection:'words'|'grammar'|'original'}){
  const {locale,t}=useI18n(),c=(k:keyof typeof copy)=>copy[k][locale];
- const [band,setBand]=useState('all'),[search,setSearch]=useState(()=>typeof window==='undefined'?'':new URLSearchParams(window.location.search).get('q')??''),[level,setLevel]=useState('all'),[topic,setTopic]=useState('all'),[limit,setLimit]=useState(40),[selected,setSelected]=useState<string|null>(null),[practice,setPractice]=useState<string[]|null>(null),[run,setRun]=useState(0);
- const scopeFrames=grammarFrames.filter(f=>band==='all'||(band==='advanced'?f.advanced:!f.advanced));
+ const global=useGlobalHsk();
+ const [band,setBand]=useState('all'),[search,setSearch]=useState(()=>typeof window==='undefined'?'':new URLSearchParams(window.location.search).get('q')??''),[localLevel,setLevel]=useState<BrowseScope>('all'),[topic,setTopic]=useState('all'),[limit,setLimit]=useState(40),[selected,setSelected]=useState<string|null>(null),[practice,setPractice]=useState<string[]|null>(null),[run,setRun]=useState(0);
+ const level=global?.scope??localLevel;
+ const scopeFrames=grammarFrames.filter(f=>knownHskInScope(f.level==='core'?3:4,level)&&(band==='all'||(band==='advanced'?f.advanced:!f.advanced)));
  const all=useMemo(()=>clozeTasks.filter(t=>t.collection===collection),[collection]);
  const [searchMode,setSearchMode]=useState<SearchMode>('pinyin');
- const filtered=useMemo(()=>rankSearch(all.filter(task=>(level==='all'||String(task.level)===level)&&(band==='all'||(band==='advanced'?task.advanced:!task.advanced))&&(topic==='all'||task.topic===topic)),search,searchMode,task=>({hanzi:[task.word,task.hanzi,task.pattern].filter(Boolean).join(' / '),pinyin:[task.wordPinyin,task.pinyin].filter(Boolean).join(' / '),english:task.title.en+' / '+task.meaning.en})),[all,search,searchMode,level,topic,band]);
+ const filtered=useMemo(()=>rankSearch(all.filter(task=>(task.level===0||knownHskInScope(task.level,level))&&(band==='all'||(band==='advanced'?task.advanced:!task.advanced))&&(topic==='all'||task.topic===topic)),search,searchMode,task=>({hanzi:[task.word,task.hanzi,task.pattern].filter(Boolean).join(' / '),pinyin:[task.wordPinyin,task.pinyin].filter(Boolean).join(' / '),english:task.title.en+' / '+task.meaning.en})),[all,search,searchMode,level,topic,band]);
  useEffect(()=>()=>stopAudio(),[]);
  function start(ids:string[]){stopAudio();setPractice(ids);setRun(n=>n+1);}
  const task=filtered.find(t=>t.id===selected),navigation=collection==='grammar'?learningSequence(filtered):filtered,index=task?navigation.findIndex(t=>collection==='grammar'?t.frameId===task.frameId:t.id===task.id):-1;
  function move(delta:number){stopAudio();setSelected(navigation[Math.max(0,Math.min(navigation.length-1,index+delta))]?.id??null);}
  const swipe=useSwipeNavigation(move);
- if(practice)return <ClozeSession key={run} ids={practice} {...shared} onFinish={()=>{setPractice(null);stopAudio();}}/>;
+ if(practice){
+  const blocked=practice.some(id=>all.some(task=>task.id===id&&task.level>0&&!knownHskInScope(task.level,level)));
+  return <>
+   {blocked&&<section className="panel hsk-outside" role="status">
+    <p>This practice set includes words outside the current HSK range. Widen the range to resume, or return to the filtered list.</p>
+    <button type="button" className="secondary" onClick={()=>setPractice(null)}>Back to list</button>
+   </section>}
+   <div hidden={blocked}><ClozeSession key={run} ids={practice} {...shared} onFinish={()=>{setPractice(null);stopAudio();}}/></div>
+  </>;
+ }
  return <section className="chunk-library"><h2>{c(collection==='words'?'words':collection==='grammar'?'grammar':'gaps')}</h2><p>{c(collection==='words'?'vocabularyNote':collection==='grammar'?'grammarNote':'intro')}</p>
- {collection==='grammar'&&<><FrameLearningIntro onLearn={()=>{stopAudio();setSelected(filtered[0]?.id??null);requestAnimationFrame(()=>document.querySelector('.chunk-context')?.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));}}/><nav className="chunk-topic-tabs" aria-label={c('grammar')}>{(['all','basic','advanced'] as const).map(value=><button key={value} className="secondary" aria-pressed={band===(value==='basic'?'core':value)} onClick={()=>{stopAudio();setBand(value==='basic'?'core':value);setSelected(null);setLimit(40);}}>{teachingCopy[value==='all'?'both':value][locale]}</button>)}</nav></>}<div className="chunk-filters"><SearchModeToggle value={searchMode} onChange={mode=>{setSearchMode(mode);setSelected(null);setLimit(40);}}/><label>{c('search')}<input type="search" value={search} onChange={e=>{setSearch(e.target.value);setSelected(null);setLimit(40);}}/></label>{collection==='words'&&<label>HSK<select value={level} onChange={e=>{stopAudio();setLevel(e.target.value);setSelected(null);setLimit(40);}}><option value="all">{c('all')} · 1,000</option>{[1,2,3].map(l=><option key={l} value={l}>HSK{l} · {all.filter(t=>t.level===l).length}</option>)}</select></label>}{collection==='words'&&<label>{c('topics')}<select value={topic} onChange={e=>{stopAudio();setTopic(e.target.value);setSelected(null);setLimit(40);}}><option value="all">{c('all')}</option>{lessons.filter(l=>all.some(task=>task.topic===l.id)).map(l=><option key={l.id} value={l.id}>{t(l.title)}</option>)}</select></label>}</div>
+ {collection==='grammar'&&<><FrameLearningIntro onLearn={()=>{stopAudio();setSelected(filtered[0]?.id??null);requestAnimationFrame(()=>document.querySelector('.chunk-context')?.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));}}/><nav className="chunk-topic-tabs" aria-label={c('grammar')}>{(['all','basic','advanced'] as const).map(value=><button key={value} className="secondary" aria-pressed={band===(value==='basic'?'core':value)} onClick={()=>{stopAudio();setBand(value==='basic'?'core':value);setSelected(null);setLimit(40);}}>{teachingCopy[value==='all'?'both':value][locale]}</button>)}</nav></>}<div className="chunk-filters"><SearchModeToggle value={searchMode} onChange={mode=>{setSearchMode(mode);setSelected(null);setLimit(40);}}/><label>{c('search')}<input type="search" value={search} onChange={e=>{setSearch(e.target.value);setSelected(null);setLimit(40);}}/></label>{collection==='words'&&<label>HSK<GlobalHskSelect label="Speaking Chunks HSK range" scope={level} setScope={scope=>{stopAudio();if(global)global.setScope(scope);else setLevel(scope);setLimit(40);}}/></label>}{collection==='words'&&<label>{c('topics')}<select value={topic} onChange={e=>{stopAudio();setTopic(e.target.value);setSelected(null);setLimit(40);}}><option value="all">{c('all')}</option>{lessons.filter(l=>all.some(task=>task.topic===l.id)).map(l=><option key={l.id} value={l.id}>{t(l.title)}</option>)}</select></label>}</div>
  {collection==='grammar'&&<nav className="chunk-topic-tabs" aria-label={c('grammar')}>{(['all','compare','time','connect','complement','attitude'] as const).map(key=><button className="secondary" key={key} aria-pressed={topic===key} onClick={()=>{stopAudio();setTopic(key);setSelected(null);}}>{c(key)} · {key==='all'?scopeFrames.length:scopeFrames.filter(f=>f.topic===key).length}</button>)}</nav>}
+ {collection==='original'&&<p className="hsk-unclassified-note">Classroom and original sentence materials are unclassified.</p>}
+ {selected&&!task&&<p role="status">The selected item is outside the current results.</p>}
  <div className="chunk-library-count"><span role="status">{filtered.length} {c('matches')}</span><button className="secondary" disabled={!shared.ready||!filtered.length} onClick={()=>start(filtered.slice(0,20).map(t=>t.id))}>{c('practise20')}<ArrowRight size={16}/></button></div>
  {task&&<section className="panel chunk-context" {...swipe}><header className="chunk-lesson-head"><h3>{task.pattern??task.word} <small>{task.wordPinyin}</small></h3><nav><button className="secondary" disabled={index===0} aria-label={c('previous')} onClick={()=>move(-1)}><ArrowLeft size={18}/></button><button className="secondary" disabled={index===navigation.length-1} aria-label={c('next')} onClick={()=>move(1)}><ArrowRight size={18}/></button><button className="secondary" onClick={()=>{stopAudio();setSelected(null);}}>{c('back')}</button></nav></header>{collection!=='grammar'&&task.note[locale]&&<p>{task.note[locale]}</p>}{collection==='grammar'?<FrameTeaching task={task} notify={shared.notify} onPractice={start}/>:<TaskContext task={task} notify={shared.notify}/>}<button className="secondary" onClick={()=>start([task.id])}>{c('practice')}<ArrowRight size={16}/></button>{task.sources&&<details><summary>{c('sources')}</summary>{task.sources.map(url=><a key={url} href={url} target="_blank" rel="noreferrer">{new URL(url).hostname}</a>)}</details>}</section>}
  {!filtered.length&&<p>{c('empty')}</p>}

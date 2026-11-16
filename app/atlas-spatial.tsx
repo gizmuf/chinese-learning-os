@@ -1,4 +1,6 @@
 'use client';
+import {useGlobalHsk} from './global-hsk';
+import {knownHskInScope} from './global-hsk-model';
 import HskBadge from './hsk-badge';
 import {useStudyLookup} from './study-lookup-context';
 import {withTurkish} from "./turkish";
@@ -14,7 +16,7 @@ import {playRecording,releaseRecording} from './audio';
 import {characterPronunciation,componentPronunciation,sentencePronunciation,spatialCards,spatialNext,spatialPage,spatialWordOptions,recognitionQuestions,wordPronunciation,type CardMode,type DictionaryEntry,type Pronunciation,type SpatialCharacter} from './atlas-spatial-model';
 import AtlasRecognition from './atlas-recognition';
 import RecognitionDashboard from './recognition-dashboard';
-import {recognitionSummary,recognitionReviewQuestions,type PracticeQuestion} from './recognition-history';
+import {scopedRecognitionSummary,recognitionReviewQuestions,type PracticeQuestion} from './recognition-history';
 import type {useRecognitionProgress} from './recognition-store';
 import AtlasFamilyDirectory from './atlas-family-directory';
 import {useSpatialMotion} from './atlas-spatial-motion';
@@ -25,6 +27,7 @@ import {DictionaryWords,DictionaryAudio,StudyDictionaryDialog} from './study-dic
 import OftenConfused,{confusionCopy} from './often-confused';
 type Props={contextEntry?:DictionaryEntry;family:SpatialCharacter[];total:number;hanzi:string;component:string;familyLabel:string;mode:CardMode;word?:CloudWord;words:CloudWord[];onMode:(mode:CardMode)=>void;onCharacter:(h:string)=>void;onWord:(word:CloudWord)=>void;onWrite:(trigger:HTMLButtonElement)=>void;canWrite:boolean;notify:(message:string)=>void;collection:'library'|'atlas';level:CloudLevel;relation:'all'|'meaning'|'sound'|'shape';counts:{meaning:number;sound:number;shape:number};onRelation:(relation:'all'|'meaning'|'sound'|'shape')=>void;onHskFamily:(id?:string)=>void;recognition:ReturnType<typeof useRecognitionProgress>;navigationRevision:number;owner:string|null;onReviewStart:()=>void;onReviewContext:(question:PracticeQuestion)=>void;onReviewEnd:(restore:boolean)=>void;parts:ReactNode;onAssessmentChange?:(active:boolean)=>void};
 export default function AtlasSpatial(p:Props){
+ const scope=useGlobalHsk()?.scope??'all';
  const {locale}=useI18n(),c=(en:string,fr:string,ru:string)=>(withTurkish({en,fr,ru}))[locale];
  const [confusedOpen,setConfusedOpen]=useState(false),[confusedIndex,setConfusedIndex]=useState(0),confusedTrigger=useRef<HTMLButtonElement|null>(null);
  const dictionary=useMemo(()=>appStudyDictionary(locale),[locale]);
@@ -32,12 +35,12 @@ export default function AtlasSpatial(p:Props){
  const [session,setSession]=useState<{id:string;kind:'family'|'difficult'|'due';questions:PracticeQuestion[];initialIndex:number}|null>(null),[directoryOpen,setDirectoryOpen]=useState(false),[now,setNow]=useState(()=>Date.now());
  useEffect(()=>{setSession(null);p.onReviewEnd(false)},[p.navigationRevision]);
  useEffect(()=>{p.onAssessmentChange?.(!!session);return()=>p.onAssessmentChange?.(false)},[!!session,p.onAssessmentChange]);
- const practicing=!!session,summary=useMemo(()=>recognitionSummary(p.recognition.events,now),[p.recognition.events,now]);
+ const practicing=!!session,summary=useMemo(()=>scopedRecognitionSummary(p.recognition.events,now,scope),[p.recognition.events,now,scope]);
  useEffect(()=>{const timer=setInterval(()=>setNow(Date.now()),30000);return()=>clearInterval(timer)},[]);
  function setPracticing(value:boolean){if(!value){setSession(null);p.onReviewEnd(false);return}const group=Math.floor(Math.max(0,selectedIndex)/4);const initialIndex=Math.max(0,questions.findIndex(q=>Math.floor(p.family.findIndex(ch=>ch.hanzi===q.target)/4)===group));setSession({id:crypto.randomUUID(),kind:'family',questions:questions.map(q=>({...q,partId:p.component})),initialIndex})}
- function review(kind:'difficult'|'due'){const questions=recognitionReviewQuestions(p.recognition.events,kind,locale);if(!questions.length)return;p.onReviewStart();setSession({id:crypto.randomUUID(),kind,questions,initialIndex:0})}
+ function review(kind:'difficult'|'due'){const questions=recognitionReviewQuestions(p.recognition.events,kind,locale,now,scope);if(!questions.length)return;p.onReviewStart();setSession({id:crypto.randomUUID(),kind,questions,initialIndex:0})}
  function exitPractice(){setSession(null);p.onReviewEnd(true)}
- const coverage=useMemo(()=>extendedCoverage(3),[]),questions=useMemo(()=>recognitionQuestions(p.family,locale),[p.family,locale]);
+ const coverage=useMemo(()=>extendedCoverage(scope),[scope]),questions=useMemo(()=>recognitionQuestions(p.family,locale,scope),[p.family,locale,scope]);
  const directory=useRef<HTMLDialogElement>(null),directoryTrigger=useRef<HTMLElement|null>(null);
  const groupMotion=useSpatialMotion(p.mode+'|'+p.hanzi+'|'+p.component);
  const deckMotion=useDeckMotion(p.mode+'|'+p.hanzi+'|'+p.component,move);
@@ -69,9 +72,12 @@ export default function AtlasSpatial(p:Props){
  const wordOptions=useMemo(()=>spatialWordOptions(p.words),[p.words]);
  const shownWords=moreWords?wordOptions:wordOptions.slice(0,6),sentence=p.word?.item;
  return <div className={'sp-atlas'+(practicing?' is-practicing':'')} aria-label={c('Spatial Atlas','Atlas spatial','Пространственный Атлас')}>
-  <section className="sp-inventory" aria-label={c('Vocabulary coverage','Couverture du vocabulaire','Охват словаря')}><div><strong>{coverage.words.toLocaleString(locale)} {c('HSK words','mots HSK','слов HSK')} · {coverage.characters} {c('distinct characters','caractères distincts','разных знаков')}</strong><small>{p.collection==='atlas'?c('Current view: curated Atlas selection · 121 characters','Vue actuelle : sélection Atlas · 121 caractères','Сейчас: избранная коллекция Атласа · 121 знак'):c('Current view: HSK map','Vue actuelle : carte HSK','Сейчас: карта HSK')}{p.collection==='library'&&(p.level===1||p.level===2)&&' · '+c('filtered scope','périmètre filtré','ограниченный охват')}</small></div><div>{(p.collection==='atlas'||p.level!==3)&&<button type="button" onClick={()=>{setPracticing(false);p.onHskFamily()}}>{c('Open full HSK 1–3','Ouvrir tout HSK 1–3','Открыть весь HSK 1–3')}</button>}<button type="button" onClick={e=>{directoryTrigger.current=e.currentTarget;setDirectoryOpen(true)}}><Grid2X2 size={16}/>{c('Browse all families','Toutes les familles','Все семейства')}</button></div></section>
+  <section className="sp-inventory" aria-label={c('Vocabulary coverage','Couverture du vocabulaire','Охват словаря')}><div><strong>{coverage.words.toLocaleString(locale)} {c('HSK words','mots HSK','слов HSK')} · {coverage.characters} {c('distinct characters','caractères distincts','разных знаков')}</strong><small>{p.collection==='atlas'?c('Current view: curated Atlas selection · 121 characters','Vue actuelle : sélection Atlas · 121 caractères','Сейчас: избранная коллекция Атласа · 121 знак'):c('Current view: HSK map','Vue actuelle : carte HSK','Сейчас: карта HSK')}{p.collection==='library'&&(p.level===1||p.level===2)&&' · '+c('filtered scope','périmètre filtré','ограниченный охват')}</small></div><div>{(p.collection==='atlas'||p.level!==3)&&<button type="button" onClick={()=>{setPracticing(false);p.onHskFamily()}}>{c('HSK map · current range','Ouvrir tout HSK 1–3','Открыть весь HSK 1–3')}</button>}<button type="button" onClick={e=>{directoryTrigger.current=e.currentTarget;setDirectoryOpen(true)}}><Grid2X2 size={16}/>{c('Browse all families','Toutes les familles','Все семейства')}</button></div></section>
   <div className="sp-workspace">
-   {session?<AtlasRecognition key={session.id} questions={session.questions} initialIndex={session.initialIndex} kind={session.kind} onExit={exitPractice} onSave={p.recognition.record} onQuestion={q=>{if(session.kind!=='family')p.onReviewContext(q)}} onListen={word=>{const clip=wordPronunciation(word);if(clip)listen(clip)}} onStop={()=>{if(audioRef.current){releaseRecording(audioRef.current);audioRef.current=null;setPlaying(null)}}}/>:<section className="sp-detail" aria-labelledby="sp-cards-title">
+   {session && session.questions.some(question=>!knownHskInScope(question.word.level,scope))?<div role="status">
+    <p>This review includes words outside the current HSK range. Widen the range to resume.</p>
+    <button type="button" className="secondary" onClick={exitPractice}>Back to Atlas</button>
+   </div>:session?<AtlasRecognition key={session.id} questions={session.questions} initialIndex={session.initialIndex} kind={session.kind} onExit={exitPractice} onSave={p.recognition.record} onQuestion={q=>{if(session.kind!=='family')p.onReviewContext(q)}} onListen={word=>{const clip=wordPronunciation(word);if(clip)listen(clip)}} onStop={()=>{if(audioRef.current){releaseRecording(audioRef.current);audioRef.current=null;setPlaying(null)}}}/>:<section className="sp-detail" aria-labelledby="sp-cards-title">
     <div className="sp-panel-heading"><h2 id="sp-cards-title">{c('Family cards','Cartes de la famille','Карточки семейства')}</h2><div className="sp-card-modes" role="group" aria-label={c('Card mode','Mode des cartes','Режим карточек')}><button type="button" aria-pressed={p.mode==='focus'} onClick={()=>{setPracticing(false);p.onMode('focus')}}>{c('3D cards','Cartes 3D','3D-карточки')}</button><button type="button" aria-pressed={p.mode==='compare'} onClick={()=>{setPracticing(false);p.onMode('compare')}}><Layers size={14}/>{c('Compare 4','Comparer 4','Сравнить 4')}</button><button type="button" ref={confusedTrigger} aria-haspopup="dialog" onClick={()=>{if(audioRef.current){releaseRecording(audioRef.current);audioRef.current=null;setPlaying(null)}sharedLookup?.openConfused?sharedLookup.openConfused():setConfusedOpen(true)}}>{confusionCopy.title[locale]}</button></div></div>
     {p.mode==='compare'&&questions.length>0&&<button type="button" className="sp-start-practice" onClick={()=>{if(audioRef.current){releaseRecording(audioRef.current);audioRef.current=null;setPlaying(null)}setPracticing(true)}}>{c('Practise recognition · hide hints','Reconnaissance · masquer les indices','Распознавание · скрыть подсказки')}</button>}
     <p className="sp-position" aria-live="polite">{selectedIndex<0?c('Choose a character in the family','Choisissez un caractère de la famille','Выберите знак семейства'):p.mode==='compare'?`${cards[0]+1}–${cards.at(-1)!+1} / ${p.family.length}`:`${selectedIndex+1} / ${p.family.length} · ${p.hanzi}`}</p>

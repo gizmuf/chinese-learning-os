@@ -61,3 +61,10 @@
 @media(max-width:600px){.cloud-search-mode{max-width:115px}.cloud-toolbar .cloud-search{flex:1 1 100%}}
 
 .cloud-learning-links{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px}.cloud-learning-links a{display:inline-flex;align-items:center;min-height:40px}
+
+.cloud-full .cloud-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 12;
+  background: var(--cream, #f8faf4);
+}

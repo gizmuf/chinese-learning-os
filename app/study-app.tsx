@@ -51,11 +51,7 @@ import {
 import {
   items as sourceItems,
   lessons as sourceLessons,
-  curriculum,
   matchesItem,
-  isInLevel,
-  levelNames,
-  type StudyLevel,
   skillNames as sourceSkillNames,
   type Item,
   type Mode,
@@ -85,7 +81,10 @@ import RecognitionReview, {recognitionDraftKey, validRecognitionDraft} from "./r
 import Notebook from "./notebook";
 import IntensiveCourse from "./intensive-course";
 import {useHanziStyle,HanziDisplayControls,type HanziStyle} from './hanzi-style';
-import {buildReviewQueue,allReviewLevel,allReviewHref} from './review-queue';
+import {allReviewRun, buildReviewQueue, isAllReviewEntry, queueForScopedAllReview, scopedAllReviewHref} from './review-queue';
+import {GlobalHskProvider, GlobalHskSelect} from './global-hsk';
+import {defaultHskScope, globalHskLabel, hskScopeForOwner, initialGlobalHsk, knownHskInScope} from './global-hsk-model';
+import type {BrowseScope} from './hsk-scope';
 import './recognition-review.css';
 import StudyLookupProvider, {useDictionaryAssistance,StudyText,StudyConfusionsButton} from "./study-lookup";
 import PdfExport from "./pdf-export";
@@ -107,18 +106,23 @@ const ShuoshuoCompanion = lazy(() => import("./shuoshuo-companion"));
 const ShuoshuoLesson = lazy(() => import("./shuoshuo-lesson"));
 const PrivateLessons = lazy(() => import("./private-lessons"));
 const TodayCourseReviews = lazy(() => import("./today-course-reviews"));
+const PronunciationLab = lazy(() => import("./pronunciation-lab-ui"));
 const TodayRecognition = lazy(() => import("./today-recognition"));
-type View = "sentence-check" | "labs" | "shuoshuo-lesson" | "private-lessons" | "shuoshuo" | "myday" | "studio" | "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
+type View = "pronunciation" | "sentence-check" | "labs" | "shuoshuo-lesson" | "private-lessons" | "shuoshuo" | "myday" | "studio" | "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
 export default function StudyApp({
   user,
   onSignIn,
   onSignOut,
   onManageAccount,
+  initialView = "today",
+  pronunciationServerEvaluation = true,
 }: {
   user: User;
   onSignIn: () => void;
   onSignOut: () => void;
   onManageAccount: () => void;
+  initialView?: "today" | "pronunciation";
+  pronunciationServerEvaluation?: boolean;
 }) {
   const { locale, t } = useI18n();
   const allWordsCopy={en:'Practise all {0} words',fr:'Pratiquer les {0} mots',ru:'Практиковать все слова: {0}',tr:'Tüm {0} kelimeyi çalış'}[locale];
@@ -128,7 +132,7 @@ export default function StudyApp({
   const items = useMemo(() => sourceItems.map(item => localizeItem(item, locale)), [locale]);
   const lessons = sourceLessons.map(lesson => ({...lesson, title: t(lesson.title), subtitle: t(lesson.subtitle)}));
   const skillNames = Object.fromEntries(Object.entries(sourceSkillNames).map(([key,value]) => [key,t(value)])) as typeof sourceSkillNames;
-  const [view, setView] = useState<View>("today");
+  const [view, setView] = useState<View>(initialView);
   const [shuoshuoLessonOrigin,setShuoshuoLessonOrigin] = useState<View>("lessons");
   const [companionOrigin,setCompanionOrigin] = useState<View>("lessons");
   const [myDayOrigin,setMyDayOrigin] = useState<View>("lessons");
@@ -159,12 +163,16 @@ export default function StudyApp({
   const [searchMode,setSearchMode]=useState<SearchMode>('pinyin');
   const [lesson, setLesson] = useState("all");
   const [libraryLayout,setLibraryLayout]=useState<'cards'|'notebook'>('cards'),[practiceSelection,setPracticeSelection]=useState(false);
-  const [level, setLevel] = useState<StudyLevel>("hsk1");
+  const [level, setLevel] = useState<BrowseScope>(() => typeof window === 'undefined' ? defaultHskScope : initialGlobalHsk(location.search, !!document.referrer && new URL(document.referrer).origin === location.origin));
+  const currentScope = useRef(level);
+  const scopeChoice = useRef(0);
+  const firstScope = useRef(level);
+  const label = globalHskLabel(level);
   const [writingOrigin,setWritingOrigin]=useState<WritingOrigin|undefined>();
   const lastWriting=useRef<{item:Item;mode:Mode;layout:'studio'|'notebook';origin?:WritingOrigin}|null>(null);
 
   const studyItems = useMemo(
-    () => items.filter((item) => isInLevel(item, level)),
+    () => items.filter((item) => knownHskInScope(item.hskLevel, level)),
     [level, items],
   );
   const studyIds = useMemo(
@@ -178,15 +186,18 @@ export default function StudyApp({
   const visibleLessons = lessons.filter((lesson) =>
     studyItems.some((item) => item.lesson === lesson.id),
   );
-  function changeLevel(next: StudyLevel) {
+  function changeLevel(next: BrowseScope) {
+    if (currentScope.current === next) return;
     stopAudio();
+    scopeChoice.current++;
+    currentScope.current = next;
     setLevel(next);
-    setSelected(items.find((item) => isInLevel(item, next))!);
-    setLesson("all");
-    setSearch("");
-    setSession(null);
-    setFinished(false);
-    if (view === "practice") setView("lessons");
+    const params = new URLSearchParams(location.search);
+    if (params.has('hsk') || params.get('study') === 'library' && params.has('level')) {
+      if (params.get('study') === 'library') params.delete('level');
+      params.set('hsk', String(next));
+      history.replaceState(history.state, '', location.pathname + '?' + params + location.hash);
+    }
   }
 
   const [toast, setToast] = useState("");
@@ -201,6 +212,9 @@ export default function StudyApp({
   const [left, setLeft] = useState(false);
   const [minutes, setMinutes] = useState(10);
   const [session, setSession] = useState<Item[] | null>(null);
+  const selectedOutsideScope = (selected.hskLevel !== undefined || !!session)
+    && !knownHskInScope(selected.hskLevel, level);
+  const pinnedSessionOutsideScope = session?.some(item => !knownHskInScope(item.hskLevel, level));
   const [sessionIndex, setSessionIndex] = useState(0);
   const [sessionAttempts, setSessionAttempts] = useState<{queue:Item[]; ids:Set<string>} | null>(null);
   const savedSessionAttempts = sessionAttempts?.queue === session ? sessionAttempts.ids.size : 0;
@@ -218,6 +232,8 @@ export default function StudyApp({
   }, [isReady, view, skill, selected.id, languageRun, writingOrigin]);
   const [backup, setBackup] = useState(false);
   const savedSettingsStore = useRef<IDBDatabase | null>(null);
+  const activeSettingsStore = useRef<IDBDatabase | null>(null);
+  const savedSettingsValue = useRef('');
   const notify = useCallback((message: string) => {
     setToast(message);
     window.setTimeout(() => setToast(""), 4500);
@@ -228,10 +244,11 @@ export default function StudyApp({
   const libraryCopy={en:{selected:'Selected for practice',add:'Add to practice book',remove:'Remove from practice book',cards:'Cards',notebook:'Cards with notebook',empty:'Add words and characters using the bookmark-plus icon in any definition.',ready:'Your choices are saved on this device.'},fr:{selected:'Choisis pour pratiquer',add:'Ajouter au cahier',remove:'Retirer du cahier',cards:'Cartes',notebook:'Cartes avec cahier',empty:'Ajoutez des mots et caractères avec le signet + dans une définition.',ready:'Votre sélection est enregistrée sur cet appareil.'},ru:{selected:'Выбрано для практики',add:'Добавить в тетрадь',remove:'Убрать из тетради',cards:'Карточки',notebook:'Карточки с тетрадью',empty:'Добавляйте слова и знаки кнопкой закладки с плюсом в словаре.',ready:'Ваш выбор сохранён на этом устройстве.'},tr:{selected:'Pratik için seçilenler',add:'Deftere ekle',remove:'Defterden çıkar',cards:'Kartlar',notebook:'Defterli kartlar',empty:'Sözlükteki artılı yer imiyle kelime ve karakter ekle.',ready:'Seçimlerin bu cihazda kaydedilir.'}}[locale];
   function libraryRecording(item:Item,kind:'word'|'sentence'){const chosen=practiceBook.entries.find(v=>v.text===item.hanzi);return kind==='word'?chosen?.audio&&!chosen.audio.context&&chosen.audio.text===item.hanzi?chosen.audio.source:undefined:chosen?.contextual?.audio?.text===item.sentence?chosen.contextual.audio.source:undefined;}
   function listenLibrary(item:Item,kind:'word'|'sentence'){const source=libraryRecording(item,kind);if(source)playRecording(source,notify);else speak(kind==='word'?item.hanzi:item.sentence,notify,item);}
-  function libraryRoute(layout=libraryLayout,selected=practiceSelection){const p=new URLSearchParams({study:'library',layout,level});if(selected)p.set('set','selected');window.history.replaceState(null,'','/?'+p);}
+  function libraryRoute(layout=libraryLayout,selected=practiceSelection){const p=new URLSearchParams({study:'library',layout,hsk:String(level)});if(selected)p.set('set','selected');window.history.replaceState(null,'','/?'+p);}
   useEffect(() => {
     let alive = true;
     let opened: IDBDatabase | undefined;
+    const openingChoice = scopeChoice.current;
     setDb(null); setIsReady(false); setStorageError(false); setSync(t("Loading your notebook…"));
     openStore(user?.id ?? "guest")
       .then(async (store) => {
@@ -240,13 +257,14 @@ export default function StudyApp({
           store.close();
           return;
         }
-        const history = await allEvents(store);
+        const savedEvents = await allEvents(store);
         const prefs = await readDraft<{
           penOnly: boolean;
           hanziStyle?: HanziStyle;
           highlightComponents?: boolean;
           slowAudio?: boolean;
-          level?: StudyLevel;
+          level?: string;
+          hskScope?: BrowseScope;
           left: boolean;
           minutes: number;
         }>(store, "settings");
@@ -259,25 +277,33 @@ export default function StudyApp({
           setSlowAudio(prefs.slowAudio ?? false);
           setLeft(prefs.left);
           setMinutes(prefs.minutes);
-          if (prefs.level && ["hsk1", "hsk2", "hsk3", "bonus"].includes(prefs.level)) {
-            setLevel(prefs.level);
-            setSelected(items.find((item) => isInLevel(item, prefs.level!))!);
-          }
         }
         const recognition = await readDraft(store, recognitionDraftKey);
         if (!alive) return;
-        setDb(store); setEvents(history);
+        if (scopeChoice.current === openingChoice) {
+          currentScope.current = hskScopeForOwner(prefs, scopeChoice.current ? currentScope.current : firstScope.current);
+          setLevel(currentScope.current);
+        }
+        activeSettingsStore.current = store;
+        savedSettingsValue.current = prefs ? JSON.stringify({
+          penOnly: prefs.penOnly, hanziStyle: prefs.hanziStyle,
+          highlightComponents: prefs.highlightComponents, slowAudio: prefs.slowAudio ?? false,
+          left: prefs.left, minutes: prefs.minutes, hskScope: hskScopeForOwner(prefs,firstScope.current),
+        }) : '';
+        setDb(store); setEvents(savedEvents);
         setSync(user ? t("Ready to sync") : t("Guest · saved on this device"));
-        const requestedAll=allReviewLevel(window.location.search),languageRoute=languagePracticeRoute(window.location.search,sourceItems);
+        const requestedAll=isAllReviewEntry(window.location.search),languageRoute=languagePracticeRoute(window.location.search,sourceItems);
         const writingRoute=writingPracticeRoute(window.location.search,sourceItems);
-        if(alive&&writingRoute){const item=sourceItems.find(v=>v.id===writingRoute.itemId)!;setSelected(item);setLevel(item.hskLevel?('hsk'+item.hskLevel) as StudyLevel:'bonus');setMode(writingRoute.mode);setWritingLayout(writingRoute.layout);setWritingOrigin(writingRoute.origin);setSkill('writing');setSession(null);setFinished(false);setView('practice');}
-        else if(alive&&new URLSearchParams(window.location.search).get('study')==='library'){const p=new URLSearchParams(window.location.search);setView('lessons');setSession(null);setLibraryLayout(p.get('layout')==='notebook'?'notebook':'cards');setPracticeSelection(p.get('set')==='selected');if(['hsk1','hsk2','hsk3','bonus'].includes(p.get('level')??''))setLevel(p.get('level') as StudyLevel);}
-        else if(alive&&languageRoute){const target=sourceItems.find(item=>item.id===languageRoute.itemId)!;setLevel(target.hskLevel?('hsk'+target.hskLevel) as StudyLevel:'bonus');setSelected(target);setSkill(languageRoute.skill);setLanguageRun(languageRoute.runId);setWritingOrigin(languageRoute.origin);setMode('recall');setSession(null);setFinished(false);setView('practice');
+        if(alive&&writingRoute){const item=sourceItems.find(v=>v.id===writingRoute.itemId)!;setSelected(item);setMode(writingRoute.mode);setWritingLayout(writingRoute.layout);setWritingOrigin(writingRoute.origin);setSkill('writing');setSession(null);setFinished(false);setView('practice');}
+        else if(alive&&new URLSearchParams(window.location.search).get('study')==='library'){const p=new URLSearchParams(window.location.search);setView('lessons');setSession(null);setLibraryLayout(p.get('layout')==='notebook'?'notebook':'cards');setPracticeSelection(p.get('set')==='selected');}
+        else if(alive&&languageRoute){const target=sourceItems.find(item=>item.id===languageRoute.itemId)!;setSelected(target);setSkill(languageRoute.skill);setLanguageRun(languageRoute.runId);setWritingOrigin(languageRoute.origin);setMode('recall');setSession(null);setFinished(false);setView('practice');
         }else if(alive&&requestedAll){
-          const queue=items.filter(item=>isInLevel(item,requestedAll));
-          const previous=validRecognitionDraft(recognition)&&recognition.practice&&JSON.stringify(recognition.itemIds)===JSON.stringify(queue.map(i=>i.id))?recognition:null;
-          const index=Math.min(previous?.index??0,queue.length-1);
-          setLevel(requestedAll);setRecognitionRun(previous?.id??crypto.randomUUID());setRecognitionPractice(true);setSession(queue);setSessionIndex(index);setSelected(queue[index]);setSkill('meaning');setMode('recall');setFinished(false);setView('practice');
+          const inScope = items.filter(item=>knownHskInScope(item.hskLevel,currentScope.current));
+          const {queue, index, run: savedRun} = queueForScopedAllReview(items, inScope,
+            validRecognitionDraft(recognition) ? recognition : undefined, allReviewRun(location.search), initialGlobalHsk(location.search));
+          const run = savedRun ?? crypto.randomUUID();
+          history.replaceState(history.state, '', scopedAllReviewHref(currentScope.current, run));
+          setRecognitionRun(run);setRecognitionPractice(true);setSession(queue);setSessionIndex(index);setSelected(queue[index]);setSkill('meaning');setMode('recall');setFinished(false);setView('practice');
         }else if (alive && validRecognitionDraft(recognition) && !window.location.search && !window.location.hash) {
           const queue = recognition.itemIds.map(id => sourceItems.find(i => i.id === id)).filter((i): i is Item => !!i);
           if (queue.length === recognition.itemIds.length) {
@@ -297,25 +323,31 @@ export default function StudyApp({
       });
     return () => {
       alive = false;
+      if (activeSettingsStore.current === opened) activeSettingsStore.current = null;
       opened?.close();
     };
   }, [user?.id, notify, storageAttempt]);
   useEffect(() => {
-    if (!db || !isReady) return;
+    if (!db || !isReady || activeSettingsStore.current !== db) return;
     const usingDefaults = !penOnly && hanziAppearance.style === 'strokes'
-      && hanziAppearance.highlight && !slowAudio && !left && minutes === 10 && level === 'hsk1';
+      && hanziAppearance.highlight && !slowAudio && !left && minutes === 10 && level === defaultHskScope && !scopeChoice.current;
     // Untouched guest defaults should not take the place of imported preferences.
     if (!user && savedSettingsStore.current !== db && usingDefaults) return;
-    savedSettingsStore.current = db;
-    saveDraft(db, "settings", {
-      penOnly,
-      hanziStyle:hanziAppearance.style,
-      highlightComponents:hanziAppearance.highlight,
-      slowAudio,
-      left,
-      minutes,
-      level,
-    }).catch(() => notify(t("Could not save preferences.")));
+    const settings = {
+      penOnly, hanziStyle: hanziAppearance.style, highlightComponents: hanziAppearance.highlight,
+      slowAudio, left, minutes, hskScope: level,
+    };
+    const snapshot = JSON.stringify(settings);
+    if (savedSettingsValue.current === snapshot) return;
+    let current = true;
+    void saveDraft(db, 'settings', settings).then(() => {
+      if (activeSettingsStore.current !== db) return;
+      savedSettingsStore.current = db;
+      savedSettingsValue.current = snapshot;
+    }).catch(() => {
+      if (current && activeSettingsStore.current === db) notify(t('Could not save preferences.'));
+    });
+    return () => { current = false; };
   }, [db, isReady, user?.id, penOnly, slowAudio, left, minutes, level, notify,hanziAppearance.style,hanziAppearance.highlight]);
   const synchronize = useCallback(async () => {
     if (!db || !user || syncLock.current) return;
@@ -398,7 +430,7 @@ export default function StudyApp({
     practiceMode??=hanziAppearance.style==='print'?'copy':'trace';
     stopAudio();
     setAtlasReturn(null);
-    const origin:WritingOrigin|undefined=view==='practice'?writingOrigin:{view:view as WritingOrigin['view'],url:window.location.pathname+window.location.search,scroll:window.scrollY,search,lesson,level};
+    const origin:WritingOrigin|undefined=view==='practice'?writingOrigin:{view:view as WritingOrigin['view'],url:window.location.pathname+window.location.search,scroll:window.scrollY,search,lesson};
     setWritingOrigin(origin);
     if(view==='practice')window.history.replaceState(history.state,'',writingPracticeHref(item.id,practiceMode,writingLayout,origin));else window.history.pushState({chineseOSWriting:true},'',writingPracticeHref(item.id,practiceMode,writingLayout,origin));
     setSession(null);
@@ -417,7 +449,6 @@ export default function StudyApp({
     setView(origin.view);
     setSearch(origin.search ?? '');
     setLesson(origin.lesson ?? 'all');
-    if (['hsk1', 'hsk2', 'hsk3', 'bonus'].includes(origin.level ?? '')) setLevel(origin.level as StudyLevel);
     requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo({top: origin.scroll, behavior: 'instant'})));
   }
   function returnFromWriting() {
@@ -469,8 +500,11 @@ export default function StudyApp({
       );
       return;
     }
-    if (s === "meaning") {setRecognitionRun(crypto.randomUUID());setRecognitionPractice(!!extra);}
-    if(extra==='all'){const href=allReviewHref(level);if(href)window.history.replaceState(null,'',window.location.pathname+href);}
+    if (s === "meaning") {
+      const run = crypto.randomUUID();
+      setRecognitionRun(run);setRecognitionPractice(!!extra);
+      if(extra==='all')window.history.replaceState(null,'',scopedAllReviewHref(level, run));
+    }
     if(isLanguageSkill(s))setLanguageRun(crypto.randomUUID());
     setSkill(s);
     setMode("recall");
@@ -493,6 +527,7 @@ export default function StudyApp({
       setSelected(session[n]);
     } else {
       const group = studyItems.filter((i) => i.lesson === selected.lesson);
+      if (!group.length) return;
       setSelected(
         group[
           (group.findIndex((i) => i.id === selected.id) + 1) % group.length
@@ -500,7 +535,8 @@ export default function StudyApp({
       );
     }
   }
-  const filtered = rankSearch((practiceSelection?chosenItems:studyItems).filter(item => matchesItem(item, "", practiceSelection?"all":lesson)), search, searchMode, item=>({hanzi:item.hanzi,pinyin:item.pinyin,english:englishById.get(item.id)??item.english}));
+  const scopedChoices = chosenItems.filter(item => item.hskLevel === undefined || knownHskInScope(item.hskLevel, level));
+  const filtered = rankSearch((practiceSelection?scopedChoices:studyItems).filter(item => matchesItem(item, "", practiceSelection?"all":lesson)), search, searchMode, item=>({hanzi:item.hanzi,pinyin:item.pinyin,english:englishById.get(item.id)??item.english}));
   function returnToAtlas() {
     if (!atlasReturn) return;
     stopAudio();
@@ -512,7 +548,6 @@ export default function StudyApp({
   function openAtlasWord(item: Item) {
     setWritingLayout("studio");
     const origin={url:window.location.pathname+window.location.search,scroll:window.scrollY};
-    setLevel(item.hskLevel===3?"hsk3":item.hskLevel===2?"hsk2":item.hskLevel===1?"hsk1":"bonus");
     openPractice(item); setAtlasReturn(origin);
   }
   function openShuoshuoLesson(){setShuoshuoLessonOrigin(view==="studio"?"studio":"lessons");changeView("shuoshuo-lesson");}
@@ -537,7 +572,7 @@ export default function StudyApp({
     if(v==="atlas"&&atlasReturn){returnToAtlas();return;}
     setAtlasReturn(null);
     if(v==="studio")setStudioVisited(true);
-    window.history.replaceState(null, "", window.location.pathname + (v === "labs" ? sceneLabHref(lab).slice(1) : v === "shuoshuo-lesson" ? "?lesson=shuoshuo-morning" : v === "private-lessons" ? "?private=1" : v === "shuoshuo" ? "?companion=shuoshuo" : v === "myday" ? "?rehearsal=my-day-01-v2" : v === "studio" ? "?study=studio" : v === "sentence-check" ? "?study=sentence-check" : v === "grammar" ? "?grammar=hsk3" : v === "atlas" ? "?atlas=1" : v === "course" ? "?course=intensive" : v === "lessons" ? "?study=library&layout="+libraryLayout+(practiceSelection?"&set=selected":"")+"&level="+level : ""));
+    window.history.replaceState(null, "", (v === "pronunciation" ? "/pronunciation-lab" : "/") + (v === "labs" ? sceneLabHref(lab).slice(1) : v === "shuoshuo-lesson" ? "?lesson=shuoshuo-morning" : v === "private-lessons" ? "?private=1" : v === "shuoshuo" ? "?companion=shuoshuo" : v === "myday" ? "?rehearsal=my-day-01-v2" : v === "studio" ? "?study=studio" : v === "sentence-check" ? "?study=sentence-check" : v === "grammar" ? "?grammar=hsk3" : v === "atlas" ? "?atlas=1" : v === "course" ? "?course=intensive" : v === "lessons" ? "?study=library&layout="+libraryLayout+(practiceSelection?"&set=selected":"")+"&hsk="+level : ""));
     stopAudio();
 
     setView(v);
@@ -567,6 +602,7 @@ export default function StudyApp({
     setBackup(true);
   }
   return (
+    <GlobalHskProvider scope={level} setScope={changeLevel}>
     <div className={"app-shell"+(view==="studio"?" ss-shell"+(studioMenu?" ss-menu-expanded":""):"")}>
       <aside className="sidebar">
         <a className="brand" href="/" aria-label={t("Chinese OS home")}>
@@ -650,7 +686,7 @@ export default function StudyApp({
           <span>
             <span className="breadcrumb">{t("My study space")}</span>
             <ChevronRight size={13} />
-            {view === "labs" ? "3D Lab" : view === "shuoshuo-lesson" ? "A morning with Shuoshuo" : view === "private-lessons" ? "Private lessons" : view === "shuoshuo" ? "Shuoshuo · Vocabulary companion" : view === "myday" ? "My Day · Speaking" : view === "studio" || view === "sentence-check" ? "StudyStudio" : view === "grammar" ? t("HSK3 grammar") : view === "atlas" ? t("Cloud Atlas") : view === "course" ? t("Intensive course") : view === "practice"
+            {view === "labs" ? "3D Lab" : view === "shuoshuo-lesson" ? "A morning with Shuoshuo" : view === "private-lessons" ? "Private lessons" : view === "shuoshuo" ? "Shuoshuo · Vocabulary companion" : view === "myday" ? "My Day · Speaking" : view === "pronunciation" ? "Pronunciation Lab" : view === "studio" || view === "sentence-check" ? "StudyStudio" : view === "grammar" ? "HSK 1–3 grammar" : view === "atlas" ? t("Cloud Atlas") : view === "course" ? t("Intensive course") : view === "practice"
               ? skill==='meaning'?t('Flashcards'):t("Writing studio")
               : view === "today"
                 ? t("Today")
@@ -662,19 +698,7 @@ export default function StudyApp({
           </span>
           <div className="topbar-actions">
             <div className="topbar-language-stack"><LanguagePicker /><HanziDisplayControls compact/></div>
-            {view !== "labs" && view !== "shuoshuo-lesson" && view !== "private-lessons" && view !== "shuoshuo" && view !== "myday" && view !== "studio" && view !== "grammar" && view !== "course" && view !== "atlas" && <select
-              className="study-level"
-              aria-label={t("Study level")}
-              value={level}
-              onChange={(event) =>
-                changeLevel(event.target.value as StudyLevel)
-              }
-            >
-              <option value="hsk1">HSK1 · {curriculum.hsk1}</option>
-              <option value="hsk2">HSK2 · {curriculum.hsk2}</option>
-              <option value="hsk3">HSK3 · {curriculum.hsk3}</option>
-              <option value="bonus">{t("Extras ·")} {curriculum.extras}</option>
-            </select>}
+            <GlobalHskSelect className="study-level" scope={level} setScope={changeLevel}/>
             {!user && (
               <a
                 className="signin-link"
@@ -712,6 +736,9 @@ export default function StudyApp({
             <p>{t("Close other Chinese OS tabs and check that browser storage is enabled. Your saved progress is kept.")}</p>
             <button className="primary" onClick={retryStorage}>{t("Retry loading notebook")}</button>
           </section>}
+          {view === "pronunciation" && <Suspense fallback={<p role="status">Opening Pronunciation Lab…</p>}><PronunciationLab serverEvaluation={pronunciationServerEvaluation}/></Suspense>}
+          {['course', 'private-lessons', 'myday', 'shuoshuo-lesson', 'shuoshuo', 'sentence-check', 'labs', 'pronunciation'].includes(view) &&
+            <p className="hsk-unclassified-note">Materials here include unclassified content. The HSK range applies to classified study collections.</p>}
           {view==="labs"&&<Suspense fallback={<p role="status">Opening 3D Lab…</p>}><SceneLabView selected={lab} onSelect={next=>{stopAudio();setLab(next);window.history.replaceState(null,"",window.location.pathname+sceneLabHref(next).slice(1));}}/></Suspense>}
           {view==="shuoshuo-lesson"&&<Suspense fallback={<p role="status">Opening your lesson…</p>}><ShuoshuoLesson slowAudio={slowAudio} onSlowAudio={setSlowAudio} key={user?.id??"guest"} owner={user?.id??null} db={db} record={record} notify={notify} onBack={()=>changeView(shuoshuoLessonOrigin)}/></Suspense>}
           {view==="private-lessons"&&<Suspense fallback={<p role="status">Opening local library…</p>}><PrivateLessons key={user?.id??"guest"} owner={user?.id??null} db={db} onBack={()=>changeView("lessons")} onSignIn={onSignIn}/></Suspense>}
@@ -723,7 +750,7 @@ export default function StudyApp({
           {view==='practice'&&!session&&!atlasReturn&&<button className="secondary atlas-return-button" onClick={returnFromWriting}><ChevronLeft size={16}/>{({en:'Back to learning material',fr:'Retour au cours',ru:'Назад к материалу',tr:'Ders materyaline dön'})[locale]}</button>}
           {view==="practice" && atlasReturn && <button className="secondary atlas-return-button" onClick={returnToAtlas}><ArrowRight size={16} style={{transform:"rotate(180deg)"}}/>{t("Back to Cloud Atlas")}</button>}
           {view === "grammar" && <Suspense fallback={<p>{t("Loading your notebook…")}</p>}><HSK3Grammar key={user?.id ?? "guest"} owner={user?.id ?? null} db={db?.name === "chinese-os-v1-"+(user?.id ?? "guest") ? db : null}/></Suspense>}
-          {view === "course" && <IntensiveCourse onReferenceLibraryBack={()=>changeView("lessons")} owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} recordHSK={record} notify={notify} onHSKRecall={item => { setLevel(item.hskLevel === 3 ? "hsk3" : item.hskLevel === 2 ? "hsk2" : item.hskLevel === 1 ? "hsk1" : "bonus"); openPractice(item, "recall"); }} />}
+          {view === "course" && <IntensiveCourse onReferenceLibraryBack={()=>changeView("lessons")} owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} recordHSK={record} notify={notify} onHSKRecall={item => openPractice(item, "recall")} />}
           {view === "today" && (
             <>
               <div className="page-heading">
@@ -732,7 +759,7 @@ export default function StudyApp({
                   <h1>
                     {t("A little Chinese,")}<br className="mobile-br" /> {t("every day")}<span className="orange">.</span>
                   </h1>
-                  <p>{t("Build a habit. Find your rhythm. Make it yours.")}</p>
+                  <p>{studyItems.length} study words · {label}</p>
                 </div>
                 <div className="date-chip">
                   {isReady
@@ -891,7 +918,7 @@ export default function StudyApp({
                     </div>
                     <div className="lesson-content">
                       <span className="eyebrow">
-                        {t(levelNames[level])} ·{" "}
+                        {label} ·{" "}
                         {
                           studyItems.filter((item) => item.lesson === l.id)
                             .length
@@ -964,13 +991,14 @@ export default function StudyApp({
               <div id="library-start" className="page-heading" tabIndex={-1}>
                 <div>
                   <p className="eyebrow">{t("WORDS FOR YOUR REAL LIFE")}</p>
-                  {level === "hsk3" && <button className="grammar-back" onClick={() => changeView("grammar")}>{t("HSK3 grammar")} →</button>}
+                  <button className="grammar-back" onClick={() => changeView("grammar")}>HSK 1–3 grammar →</button>
                   <h1>
                     {t("Your learning library")}<span className="orange">.</span>
                   </h1>
                   <p>
-                    {practiceSelection?libraryCopy.selected:t(levelNames[level])} · {practiceSelection?chosenItems.length:studyItems.length} {t("words & phrases.")}{" "}
-                    {!practiceSelection&&(level === "bonus"?t("Useful everyday additions."):t("HSK 2025 syllabus."))}
+                    {practiceSelection?libraryCopy.selected:label} · {practiceSelection?scopedChoices.length:studyItems.length} {t("words & phrases.")}{" "}
+                    {!practiceSelection && (level === 'all' ? 'Includes unclassified extras.' : 'Classified course vocabulary.')}{' '}
+                    {!practiceSelection && [4, 5, 6, '7-9'].includes(level) && 'Authored study cards currently cover HSK 1–3. Higher HSK levels are available to browse in Atlas.'}
                   </p>
                 </div>
               </div>
@@ -998,7 +1026,7 @@ export default function StudyApp({
                 >
                   <option value="selected">{libraryCopy.selected} · {practiceBook.entries.length}</option>
                   <option value="all">
-                    {t("All")} {t(levelNames[level])} {t("words ·")} {studyItems.length}
+                    {t("All")} {label} {t("words ·")} {studyItems.length}
                   </option>
                   {visibleLessons.map((l) => (
                     <option key={l.id} value={l.id}>
@@ -1008,12 +1036,12 @@ export default function StudyApp({
                 </select>
               </div>
               <StudyConfusionsButton/>
-              <div className="library-results-bar"><p className="library-count" role="status">{filtered.length} {t(filtered.length===1?'word':'words')} · {practiceSelection?libraryCopy.selected:t(levelNames[level])}</p><div className="library-view-switch" role="group" aria-label="Library view"><button type="button" title={libraryCopy.cards} aria-label={libraryCopy.cards} aria-pressed={libraryLayout==='cards'} onClick={()=>{setLibraryLayout('cards');libraryRoute('cards');}}><LayoutGrid size={17}/></button><button type="button" title={libraryCopy.notebook} aria-label={libraryCopy.notebook} aria-pressed={libraryLayout==='notebook'} onClick={()=>{setLibraryLayout('notebook');libraryRoute('notebook');}}><Rows3 size={17}/></button></div><LibraryScrollControls/></div>
+              <div className="library-results-bar"><p className="library-count" role="status">{filtered.length} {t(filtered.length===1?'word':'words')} · {practiceSelection?libraryCopy.selected:label}</p><div className="library-view-switch" role="group" aria-label="Library view"><button type="button" title={libraryCopy.cards} aria-label={libraryCopy.cards} aria-pressed={libraryLayout==='cards'} onClick={()=>{setLibraryLayout('cards');libraryRoute('cards');}}><LayoutGrid size={17}/></button><button type="button" title={libraryCopy.notebook} aria-label={libraryCopy.notebook} aria-pressed={libraryLayout==='notebook'} onClick={()=>{setLibraryLayout('notebook');libraryRoute('notebook');}}><Rows3 size={17}/></button></div><LibraryScrollControls/></div>
               {practiceSelection&&<p className="library-selection-note">{libraryCopy.ready}</p>}
               <div className={'word-grid'+(libraryLayout==='notebook'?' is-notebook':'')}>
                 {filtered.map((i) => (
                   <div className="library-word-row" key={i.id}><article className="word-card panel" data-study-sentence={i.sentence} data-study-pinyin={i.sentencePinyin} data-study-meaning={i.translation}>
-                    <span className="eyebrow library-word-level"><HskBadge text={i.hanzi}/></span>
+                    <span className="eyebrow library-word-level"><HskBadge text={i.hanzi}/>{i.hskLevel === undefined && 'Unclassified'}</span>
                     <button type="button" className="icon-button library-add-choice" disabled={!practiceBook.ready||practiceBook.busy} aria-pressed={practiceBook.entries.some(v=>v.text===i.hanzi)} aria-label={practiceBook.entries.some(v=>v.text===i.hanzi)?libraryCopy.remove:libraryCopy.add} onClick={()=>void practiceBook.toggle({text:i.hanzi,pinyin:i.pinyin,meaning:i.english,contextual:i.sentence?{text:i.sentence,pinyin:i.sentencePinyin,meaning:i.translation}:undefined})}>{practiceBook.entries.some(v=>v.text===i.hanzi)?<BookmarkCheck size={18}/>:<BookmarkPlus size={18}/>}</button>
                     <div className="word-heading">
                       <div>
@@ -1134,8 +1162,18 @@ export default function StudyApp({
               </div>
             </>
           )}
-          {view === "practice" &&
-            (finished ? (
+          {view === "practice" && <>
+            {pinnedSessionOutsideScope && !finished && <section className="panel hsk-outside" role="status">
+              <p>Saved session from a wider range. Cards outside the current range are paused.</p>
+              <button className="secondary" onClick={() => changeView('reviews')}>Choose a new scoped session</button>
+            </section>}
+            {selectedOutsideScope && !finished && <section className="panel hsk-outside" role="status">
+              <h1>Outside the current HSK range</h1>
+              <p><span lang="zh-Hans">{selected.hanzi}</span> · {selected.hskLevel ? 'HSK ' + selected.hskLevel : 'Unclassified'}.</p>
+              <button className="secondary" onClick={() => changeLevel(selected.hskLevel ?? 'all')}>Use {globalHskLabel(selected.hskLevel ?? 'all')}</button>
+            </section>}
+            <div hidden={selectedOutsideScope && !finished}>
+            {finished ? (
               <section className="completion panel">
                 <span className="completion-icon">
                   <Check size={34} />
@@ -1242,7 +1280,9 @@ export default function StudyApp({
                   />
                 )}
               </>
-            ))}
+            )}
+            </div>
+          </>}
           {view === "progress" && (
             <>
               <div className="page-heading">
@@ -1494,6 +1534,7 @@ export default function StudyApp({
         </div>
       )}
     </div>
+    </GlobalHskProvider>
   );
 }
 

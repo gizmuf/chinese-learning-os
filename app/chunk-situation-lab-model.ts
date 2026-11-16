@@ -1,3 +1,5 @@
+import {knownHskInScope} from './global-hsk-model';
+import type {BrowseScope} from './hsk-scope';
 import {chunkUnits,matchesChunkAnswer,type ChunkExample,type ChunkUnit} from './speaking-chunks-data';
 import {grammarFrames,type GrammarFrame,type GrammarExample} from './chunk-library-data';
 import glossary from '../data/speaking-chunks/grammar-lookup.json';
@@ -14,8 +16,8 @@ function grammarExample(example:GrammarExample):ChunkExample{
   return {text,pinyin:connected,meaning:entry.meaning,role:'action' as const,audioId:'frame-'+example.id+'-'+target};
  })};
 }
-function grammarRound(set:SituationSet):Situation[]{
- const selected=situationGrammarFrames.filter(id=>{const frame=grammarFrames.find(f=>f.id===id);return set==='all'||frame?.topic===set});
+function grammarRound(set:SituationSet, scope:BrowseScope):Situation[]{
+ const selected=situationGrammarFrames.filter(id=>{const frame=grammarFrames.find(f=>f.id===id);return !!frame && (set==='all'||frame.topic===set) && knownHskInScope(frame.level==='core'?3:4,scope)});
  // Separate the two targets of a frame instead of immediately repeating the worked answer.
  return ([0,1] as const).flatMap(index=>selected.map(id=>{
   const frame=grammarFrames.find(f=>f.id===id)!;if(frame.examples.length!==2)throw new Error('Expected two canonical examples: '+id);
@@ -23,9 +25,9 @@ function grammarRound(set:SituationSet):Situation[]{
   return {id:target.id as GrammarSituationId,unit:{id:frame.id,title:frame.title,note:frame.note,lesson:0,variants},example:variants[1-index],target:variants[index],grammar:{frame,example,target}};
  }));
 }
-export function situationRound(set:SituationSet='everyday'):Situation[]{
+export function situationRound(set:SituationSet='everyday',scope:BrowseScope='all'):Situation[]{
  const everyday=()=>situationIds.map(id=>{const unit=chunkUnits.find(u=>u.variants.some(v=>v.id===id));const target=unit?.variants.find(v=>v.id===id);if(!unit||!target)throw new Error('Missing canonical situation: '+id);return {id,unit,example:unit.variants[0],target}});
- return set==='everyday'?everyday():set==='all'?[...everyday(),...grammarRound(set)]:grammarRound(set);
+ return set==='everyday'?everyday():set==='all'?[...everyday(),...grammarRound(set,scope)]:grammarRound(set,scope);
 }
 export const situationPatterns:Record<string,string>={request:'你能给我 […] 吗？',choice:'你想喝 […] 还是 […]？',plan:'我明天想去 […]。',...Object.fromEntries(grammarFrames.filter(f=>situationGrammarFrames.includes(f.id as typeof situationGrammarFrames[number])).map(f=>[f.id,f.pattern]))};
 export function situationHintChunks(situation:Situation){return situation.grammar?situation.target.chunks:situation.target.chunks.filter((chunk,i)=>situation.unit.variants.some(other=>other.chunks[i]?.text!==chunk.text))}

@@ -1,4 +1,6 @@
 "use client";
+import {useGlobalHsk} from './global-hsk';
+import {globalHskLabel, knownHskInScope} from './global-hsk-model';
 import {useEffect, useRef, useState, type MouseEvent} from 'react';
 import {ArrowLeft, ArrowRight, BookOpen, Volume2} from 'lucide-react';
 import type {Item} from './content';
@@ -48,6 +50,7 @@ export default function RecognitionReview({db, runId, queue, record, notify, onP
   onPosition: (index: number) => void;
   practice?: boolean; onWrite?: (item: Item) => void; draftKey?:string; inputLabel?:string; onRetryStorage?: () => void;
 }) {
+  const global = useGlobalHsk();
   const {t, locale} = useI18n();
   const copy={en:{lookup:'Look up',tap:'Tap the card to reveal the next step'},fr:{lookup:'Consulter',tap:'Touchez la carte pour révéler la suite'},ru:{lookup:'Посмотреть значение',tap:'Нажмите на карточку, чтобы открыть следующий шаг'},tr:{lookup:'Anlamına bak',tap:'Sonraki adımı görmek için karta dokunun'}}[locale];
   const [draft, setDraft] = useState<RecognitionDraft|null>(null);
@@ -169,6 +172,13 @@ export default function RecognitionReview({db, runId, queue, record, notify, onP
   </section>;
   if (!draft) return <section ref={dictionaryHelp} className="panel" role="status">{t('Loading your notebook…')}</section>;
   const id = draft.itemIds[draft.index], item = queue.find(i => i.id === id), a = draft.attempts[id];
+  if (global && item && !knownHskInScope(item.hskLevel, global.scope)) {
+    const level = item.hskLevel ?? 'all';
+    return <section className="recall-card panel hsk-outside" role="status">
+      <p><span lang="zh-Hans">{item.hanzi}</span> · {level === 'all' ? 'Unclassified' : 'HSK ' + level}. This card is outside the current range.</p>
+      <button type="button" className="secondary" onClick={() => global.setScope(level)}>Use {globalHskLabel(level)}</button>
+    </section>;
+  }
   const finished = draft.index === draft.itemIds.length;
   return <section ref={dictionaryHelp} className="recall-card panel" data-study-assessment={a?.phase === 3 ? 'complete' : 'supported'} aria-busy={busy}
     onPointerDownCapture={e=>{if(e.isPrimary!==false)pointer.current={id:e.pointerId,x:e.clientX,y:e.clientY,moved:false};}}
