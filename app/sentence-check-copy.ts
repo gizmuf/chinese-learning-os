@@ -2,6 +2,10 @@ import type { Locale } from './translate';
 
 export const sentenceCheckCopy = {
   en: {
+    ai: 'Check with DeepSeek', aiPending: 'Checking with DeepSeek…', aiResult: 'DeepSeek feedback',
+    aiPrivacy: 'This option sends your sentence to DeepSeek. Leave out names and other personal details.',
+    aiUnavailable: 'DeepSeek is unavailable. The local check is shown below.',
+
     title: 'Check my sentence', back: 'Back', intro: 'Check a Mandarin sentence for selected grammar patterns.',
     input: 'Your Mandarin sentence', submit: 'Check sentence',
     examples: 'Try an example', exampleNames: ['Comparing height', 'Going to school'],
@@ -11,6 +15,10 @@ export const sentenceCheckCopy = {
     invalid: 'Enter one short Mandarin sentence and try again.',
   },
   fr: {
+    ai: 'Vérifier avec DeepSeek', aiPending: 'Vérification avec DeepSeek…', aiResult: 'Avis de DeepSeek',
+    aiPrivacy: 'Cette option envoie votre phrase à DeepSeek. Évitez les noms et autres données personnelles.',
+    aiUnavailable: 'DeepSeek est indisponible. Le résultat de la vérification locale est affiché ci-dessous.',
+
     title: 'Vérifier ma phrase', back: 'Retour', intro: 'Vérifiez certaines structures grammaticales dans une phrase en mandarin.',
     input: 'Votre phrase en mandarin', submit: 'Vérifier la phrase',
     examples: 'Essayer un exemple', exampleNames: ['Comparer des tailles', 'Aller à l’école'],
@@ -20,6 +28,10 @@ export const sentenceCheckCopy = {
     invalid: 'Saisissez une courte phrase en mandarin, puis réessayez.',
   },
   ru: {
+    ai: 'Проверить с DeepSeek', aiPending: 'DeepSeek проверяет…', aiResult: 'Результат DeepSeek',
+    aiPrivacy: 'Эта функция отправляет предложение в DeepSeek. Не указывайте имена и другие личные данные.',
+    aiUnavailable: 'DeepSeek недоступен. Ниже показан результат локальной проверки.',
+
     title: 'Проверить моё предложение', back: 'Назад', intro: 'Проверьте, как употреблены отдельные грамматические конструкции в китайском предложении.',
     input: 'Ваше предложение на китайском', submit: 'Проверить предложение',
     examples: 'Попробуйте пример', exampleNames: ['Сравнить рост', 'Идти в школу'],
@@ -29,6 +41,10 @@ export const sentenceCheckCopy = {
     invalid: 'Введите одно короткое предложение на китайском и повторите попытку.',
   },
   tr: {
+    ai: 'DeepSeek ile kontrol et', aiPending: 'DeepSeek kontrol ediyor…', aiResult: 'DeepSeek değerlendirmesi',
+    aiPrivacy: 'Bu seçenek cümleni DeepSeek’e gönderir. İsimleri ve diğer kişisel bilgileri yazma.',
+    aiUnavailable: 'DeepSeek kullanılamıyor. Aşağıda yerel kontrol sonucu gösteriliyor.',
+
     title: 'Cümlemi kontrol et', back: 'Geri', intro: 'Mandarin Çincesi bir cümlede belirli dil bilgisi kalıplarını kontrol et.',
     input: 'Mandarin Çincesi cümlen', submit: 'Cümleyi kontrol et',
     examples: 'Bir örnek dene', exampleNames: ['Boy karşılaştırmak', 'Okula gitmek'],

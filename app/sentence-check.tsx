@@ -21,11 +21,32 @@ export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () =
   const c = sentenceCheckCopy[locale];
   const [sentence, setSentence] = useState('');
   const [checked, setChecked] = useState('');
+  const [aiEnabled, setAIEnabled] = useState(false);
+  const [aiBusy, setAIBusy] = useState(false);
+  const [aiError, setAIError] = useState(false);
+  const [aiFeedback, setAIFeedback] = useState<{ locale: Locale; feedback: SentenceCheckResult } | null>(null);
+  const aiRequest = useRef<AbortController | null>(null);
   const [invalid, setInvalid] = useState(false);
   const [audioError, setAudioError] = useState(false);
   const field = useRef<HTMLTextAreaElement>(null);
   const recording = useRef<HTMLAudioElement | null>(null);
   const utterance = useRef<SpeechSynthesisUtterance | null>(null);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    void fetch('/api/sentence-check', { signal: controller.signal, cache: 'no-store' })
+      .then(async response => {
+        if (!response.ok) return false;
+        const settings: { enabled?: boolean } = await response.json();
+        return settings?.enabled === true;
+      })
+      .then(enabled => { if (enabled && !controller.signal.aborted) setAIEnabled(true); })
+      .catch(() => {});
+    return () => {
+      controller.abort();
+      aiRequest.current?.abort();
+    };
+  }, []);
 
   useEffect(() => () => {
     if (recording.current) releaseRecording(recording.current);
@@ -75,16 +96,55 @@ export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () =
     speech.speak(next);
   }
 
-  function submit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const checkedSentence = sentence.trim();
-    if (!/\p{Script=Han}/u.test(checkedSentence)) {
+  function inputForCheck() {
+    const text = sentence.trim();
+    if (!/\p{Script=Han}/u.test(text) || /[\r\n]/u.test(text)) {
       setInvalid(true);
-      return;
+      field.current?.focus();
+      return null;
     }
     setInvalid(false);
     setAudioError(false);
-    setChecked(checkedSentence);
+    setAIError(false);
+    setAIFeedback(null);
+    return text;
+  }
+
+  function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const text = inputForCheck();
+    if (text) setChecked(text);
+  }
+
+  async function checkWithAI() {
+    if (aiRequest.current) return;
+    const text = inputForCheck();
+    if (!text) return;
+    const controller = new AbortController();
+    aiRequest.current = controller;
+    setAIBusy(true);
+    try {
+      const response = await fetch('/api/sentence-check', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sentence: text, locale }),
+        signal: controller.signal,
+      });
+      if (!response.ok) throw new Error('Sentence check unavailable');
+      const feedback: SentenceCheckResult = await response.json();
+      if (controller.signal.aborted) return;
+      setChecked(text);
+      setAIFeedback({ locale, feedback });
+    } catch {
+      if (controller.signal.aborted) return;
+      setChecked(text);
+      setAIError(true);
+    } finally {
+      if (aiRequest.current === controller) {
+        aiRequest.current = null;
+        if (!controller.signal.aborted) setAIBusy(false);
+      }
+    }
   }
 
   function reading(text: string, pinyin: string, label: string, spokenText = text) {
@@ -100,7 +160,8 @@ export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () =
     </section>;
   }
 
-  const feedback = checked ? checkSentenceRules(checked, locale) : null;
+  const activeAIFeedback = aiFeedback?.locale === locale ? aiFeedback.feedback : null;
+  const feedback = activeAIFeedback ?? (checked ? checkSentenceRules(checked, locale) : null);
   return <div className="sentence-check">
     <button type="button" className="text-button" onClick={onBack}>
       <ArrowLeft size={17} aria-hidden="true" />{c.back}
@@ -122,7 +183,13 @@ export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () =
           {c.exampleNames[i]}
         </button>)}
       </div>
-      <button className="primary" type="submit" disabled={!sentence.trim()}>{c.submit}</button>
+      <div className="sentence-check-examples">
+        <button className="primary" type="submit" disabled={!sentence.trim() || aiBusy}>{c.submit}</button>
+        {aiEnabled && <button className="secondary" type="button" aria-describedby="sentence-ai-privacy"
+          disabled={!sentence.trim() || aiBusy} onClick={checkWithAI}>{aiBusy ? c.aiPending : c.ai}</button>}
+      </div>
+      {aiEnabled && <p id="sentence-ai-privacy" className="sentence-check-disclosure">{c.aiPrivacy}</p>}
+      {aiBusy && <span className="sr-only" role="status">{c.aiPending}</span>}
       {invalid && <p className="sentence-check-message" role="alert">{c.invalid}</p>}
     </form>
 
@@ -131,6 +198,8 @@ export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () =
     </div>
 
     {feedback && <section className="panel sentence-check-result" aria-label={c.result}>
+      {activeAIFeedback && <p className="sentence-check-disclosure">{c.aiResult}</p>}
+      {aiError && <p className="sentence-check-message" role="status">{c.aiUnavailable}</p>}
       <h2 className="sentence-check-status" data-status={feedback.status}><FeedbackIcon status={feedback.status} />{c[feedback.status]}</h2>
       {feedback.status === 'correct'
         ? reading(checked, feedback.pinyin, c.checked, feedback.correction)
