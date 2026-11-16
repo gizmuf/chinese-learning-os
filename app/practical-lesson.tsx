@@ -7,6 +7,7 @@ import {useI18n} from './i18n';
 import SharedWriting from './shared-writing';
 import {StudyText,useStudyLookup} from './study-lookup-context';
 import {practicalFamilyEntry,type PracticalFamilyTerm} from './practical-lesson-family-data';
+import FamilyExercise from './practical-family-exercise';
 import {practicalLessonCopy} from './practical-lesson-copy';
 import {
  activePracticalScene, buildPracticalSentence, practicalLesson, practicalLessonAudio, practicalLessonHref,
@@ -166,6 +167,7 @@ export default function PracticalLesson({notify}: {notify:(message:string)=>void
         {familyTerm(word)}
         {listen(word+'。')}
        </li>)}</ul>
+       <FamilyExercise family={family.anchor}/>
        {/^\p{Script=Han}$/u.test(family.anchor)&&<a href={'/?atlas=1&workspace=1&anchor='+encodeURIComponent(family.anchor)}
         onClick={e=>{if(!e.metaKey&&!e.ctrlKey&&!e.altKey&&!e.shiftKey)rememberFamily(family.anchor);}}>{copy.explore} {family.anchor} →</a>}
       </details>;
