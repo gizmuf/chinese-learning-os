@@ -1,0 +1,166 @@
+import type {PracticalFamilyExercise} from './practical-family-exercise-data';
+
+export const practicalTouDianExercises = {
+  '头': {
+    options: ['头发', '头疼', '点头', '摇头'],
+    questions: [
+      {
+        id: 'wash-hair',
+        before: '洗完',
+        after: '以后，我用吹风机吹干了。',
+        answer: '头发',
+        pinyin: 'Xǐ wán tóufa yǐhòu, wǒ yòng chuīfēngjī chuīgān le.',
+        meaning: {
+          en: 'After washing my hair, I dried it with a hair dryer.',
+          fr: 'Après m’être lavé les cheveux, je les ai séchés au sèche-cheveux.',
+          ru: 'Вымыв голову, я высушил волосы феном.',
+          tr: 'Saçımı yıkadıktan sonra saç kurutma makinesiyle kuruttum.',
+        },
+        explanation: {
+          en: '头发 means hair on the head (头). It is what you wash and then dry with a hair dryer.',
+          fr: '头发 désigne les cheveux qu’on a sur la tête (头). On les lave, puis on les sèche au sèche-cheveux.',
+          ru: '头发 — это волосы на голове (头). Их моют, а потом сушат феном.',
+          tr: '头发, baştaki (头) saç demektir. Saç yıkanır, sonra saç kurutma makinesiyle kurutulur.',
+        },
+      },
+      {
+        id: 'headache',
+        before: '我今天',
+        after: '，太阳穴一跳一跳地疼。',
+        answer: '头疼',
+        pinyin: 'Wǒ jīntiān tóuténg, tàiyángxué yí tiào yí tiào de téng.',
+        meaning: {
+          en: 'I have a headache today. My temples are throbbing.',
+          fr: 'J’ai mal à la tête aujourd’hui. Ça me lance dans les tempes.',
+          ru: 'Сегодня у меня болит голова. В висках пульсирует боль.',
+          tr: 'Bugün başım ağrıyor. Şakaklarım zonkluyor.',
+        },
+        explanation: {
+          en: '头疼 means to have a headache. The throbbing pain at the temples describes where it hurts.',
+          fr: '头疼 signifie « avoir mal à la tête ». La douleur pulsatile aux tempes indique où la personne a mal.',
+          ru: '头疼 значит «болит голова». Пульсирующая боль в висках уточняет, где именно болит.',
+          tr: '头疼 başın ağrıması demektir. Şakaklardaki zonklama ağrının yerini belirtir.',
+        },
+      },
+      {
+        id: 'nod-yes',
+        before: '我问他同不同意，他没说话，只是',
+        after: '表示同意。',
+        answer: '点头',
+        pinyin: 'Wǒ wèn tā tóng bu tóngyì, tā méi shuōhuà, zhǐshì diǎntóu biǎoshì tóngyì.',
+        meaning: {
+          en: 'I asked if he agreed. He said nothing and just nodded to show that he agreed.',
+          fr: 'Je lui ai demandé s’il était d’accord. Il a simplement hoché la tête pour dire oui, sans rien dire.',
+          ru: 'Я спросил, согласен ли он. Он ничего не сказал и просто кивнул в знак согласия.',
+          tr: 'Ona aynı fikirde olup olmadığını sordum. Hiçbir şey söylemeden onaylamak için başını salladı.',
+        },
+        explanation: {
+          en: '点头 means to nod. Here he moves his head (头) up and down to show agreement.',
+          fr: '点头 signifie « hocher la tête ». Ici, il fait un mouvement vertical de la tête (头) pour marquer son accord.',
+          ru: '点头 значит «кивнуть». Здесь он двигает головой (头) вверх-вниз в знак согласия.',
+          tr: '点头, başını (头) yukarı aşağı sallamak demektir. Burada bu hareket onay anlamına gelir.',
+        },
+      },
+      {
+        id: 'shake-head-no',
+        before: '我问她要不要再来一杯，她',
+        after: '表示不要。',
+        answer: '摇头',
+        pinyin: 'Wǒ wèn tā yào bu yào zài lái yì bēi, tā yáotóu biǎoshì bú yào.',
+        meaning: {
+          en: 'I asked if she wanted another cup. She shook her head to say no.',
+          fr: 'Je lui ai demandé si elle en voulait encore une tasse. Elle a secoué la tête pour dire non.',
+          ru: 'Я спросил её, хочет ли она ещё чашку. Она покачала головой в знак отказа.',
+          tr: 'Ona bir fincan daha isteyip istemediğini sordum. İstemediğini belirtmek için başını iki yana salladı.',
+        },
+        explanation: {
+          en: '摇头 means to shake your head. Here the side-to-side movement shows she does not want another cup.',
+          fr: '摇头 signifie « secouer la tête ». Ce mouvement de gauche à droite indique qu’elle refuse une autre tasse.',
+          ru: '摇头 значит «качать головой из стороны в сторону». Так она показывает, что больше не хочет.',
+          tr: '摇头 başını iki yana sallamak demektir. Bu hareketle bir fincan daha istemediğini gösterir.',
+        },
+      },
+    ],
+  },
+  '电': {
+    options: ['电脑', '电话', '电影', '电瓶车'],
+    questions: [
+      {
+        id: 'computer-keyboard',
+        before: '我的台式',
+        after: '没有键盘，所以我得买一个。',
+        answer: '电脑',
+        pinyin: 'Wǒ de táishì diànnǎo méiyǒu jiànpán, suǒyǐ wǒ děi mǎi yí ge.',
+        meaning: {
+          en: 'My desktop computer has no keyboard, so I need to buy one.',
+          fr: 'Mon ordinateur de bureau n’a pas de clavier, donc je dois en acheter un.',
+          ru: 'У моего настольного компьютера нет клавиатуры, поэтому мне нужно её купить.',
+          tr: 'Masaüstü bilgisayarımın klavyesi yok, bu yüzden bir tane almam gerekiyor.',
+        },
+        explanation: {
+          en: '台式电脑 means desktop computer. The word 电脑 combines 电 (electricity) and 脑 (brain), and 键盘 is a keyboard.',
+          fr: '台式电脑 signifie « ordinateur de bureau ». 电脑 associe 电 (électricité) à 脑 (cerveau), et 键盘 désigne le clavier.',
+          ru: '台式电脑 — настольный компьютер. В слове 电脑 电 — электричество, а 脑 — мозг. 键盘 означает «клавиатура».',
+          tr: '台式电脑 masaüstü bilgisayar demektir. 电脑, 电 (elektrik) ve 脑 (beyin) karakterlerini birleştirir. 键盘 ise klavye demektir.',
+        },
+      },
+      {
+        id: 'call-mom',
+        before: '我给妈妈打了个',
+        after: '，告诉她我已经到家了。',
+        answer: '电话',
+        pinyin: 'Wǒ gěi māma dǎ le ge diànhuà, gàosu tā wǒ yǐjīng dào jiā le.',
+        meaning: {
+          en: 'I called Mom to tell her I had already gotten home.',
+          fr: 'J’ai appelé maman pour lui dire que j’étais déjà à la maison.',
+          ru: 'Я позвонил маме и сказал, что уже дома.',
+          tr: 'Annemi arayıp eve vardığımı söyledim.',
+        },
+        explanation: {
+          en: '打电话 means to make a phone call. In 电话, 电 means electricity and 话 refers to speech.',
+          fr: '打电话 signifie « passer un appel ». Dans 电话, 电 renvoie à l’électricité et 话 à la parole.',
+          ru: '打电话 значит «звонить по телефону». В слове 电话 电 связано с электричеством, а 话 — с речью.',
+          tr: '打电话 telefon etmek demektir. 电话 sözcüğünde 电 elektriği, 话 ise konuşmayı ifade eder.',
+        },
+      },
+      {
+        id: 'watch-a-movie',
+        before: '我们在电影院看了一部',
+        after: '，片长两个小时。',
+        answer: '电影',
+        pinyin: 'Wǒmen zài diànyǐngyuàn kàn le yí bù diànyǐng, piàncháng liǎng ge xiǎoshí.',
+        meaning: {
+          en: 'We watched a two-hour movie at the cinema.',
+          fr: 'Nous avons vu un film de deux heures au cinéma.',
+          ru: 'Мы посмотрели в кинотеатре двухчасовой фильм.',
+          tr: 'Sinemada iki saatlik bir film izledik.',
+        },
+        explanation: {
+          en: '电影 means film. 影 refers to an image or shadow, and 电影院 is the theater where you watch films.',
+          fr: '电影 signifie « film ». 影 désigne une image ou une ombre, et 电影院 est la salle où l’on regarde des films.',
+          ru: '电影 означает «фильм». 影 — изображение или тень, а 电影院 — кинотеатр, где смотрят фильмы.',
+          tr: '电影 film demektir. 影 görüntü veya gölge demektir. 电影院 ise film izlenen sinema salonudur.',
+        },
+      },
+      {
+        id: 'charge-scooter',
+        before: '我骑着',
+        after: '出门，车到半路就没电了，只好推回家充电。',
+        answer: '电瓶车',
+        pinyin: 'Wǒ qízhe diànpíngchē chūmén, chē dào bànlù jiù méi diàn le, zhǐhǎo tuī huí jiā chōngdiàn.',
+        meaning: {
+          en: 'My electric scooter ran out of power halfway there, so I had to push it home to charge it.',
+          fr: 'Mon scooter électrique est tombé en panne de batterie à mi-chemin. J’ai dû le pousser jusqu’à la maison pour le recharger.',
+          ru: 'Аккумулятор моего электроскутера разрядился на полпути, и мне пришлось докатить скутер до дома, чтобы поставить его на зарядку.',
+          tr: 'Elektrikli skuterimin şarjı yarı yolda bitti. Şarj etmek için onu eve kadar itmek zorunda kaldım.',
+        },
+        explanation: {
+          en: '电瓶 is a battery and 车 is a vehicle. Here 电瓶车 is the scooter you ride and recharge when its battery runs out.',
+          fr: '电瓶 désigne une batterie et 车 un véhicule. Ici, 电瓶车 est le scooter qu’on conduit et qu’on recharge quand la batterie est vide.',
+          ru: '电瓶 — аккумулятор, а 车 — транспортное средство. Здесь 电瓶车 — скутер, который ездит на аккумуляторе и требует зарядки.',
+          tr: '电瓶 akü, 车 ise taşıt demektir. Burada 电瓶车, şarjı bittiğinde yeniden şarj edilen elektrikli skuterdir.',
+        },
+      },
+    ],
+  },
+} as const satisfies Record<string, PracticalFamilyExercise>;

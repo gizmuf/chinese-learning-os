@@ -1,4 +1,7 @@
-type ExerciseCopy = Record<'en' | 'fr' | 'ru' | 'tr', string>;
+import {practicalZuoGongExercises} from './practical-family-exercise-zuo-gong-data';
+import {practicalTouDianExercises} from './practical-family-exercise-tou-dian-data';
+
+type ExerciseCopy = Readonly<Record<'en' | 'fr' | 'ru' | 'tr', string>>;
 
 export type PracticalFamilyExerciseQuestion = {
   id: string;
@@ -11,8 +14,8 @@ export type PracticalFamilyExerciseQuestion = {
 };
 
 export type PracticalFamilyExercise = {
-  options: string[];
-  questions: PracticalFamilyExerciseQuestion[];
+  options: readonly string[];
+  questions: readonly PracticalFamilyExerciseQuestion[];
 };
 
 export const practicalFamilyExercises = {
@@ -178,4 +181,6 @@ export const practicalFamilyExercises = {
       },
     ],
   },
+  ...practicalZuoGongExercises,
+  ...practicalTouDianExercises,
 } satisfies Record<string, PracticalFamilyExercise>;

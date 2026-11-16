@@ -1,0 +1,166 @@
+import type { PracticalFamilyExercise } from './practical-family-exercise-data';
+
+export const practicalZuoGongExercises = {
+  '做 · 坐': {
+    options: ['做', '坐'],
+    questions: [
+      {
+        id: 'zuo-cook-dinner',
+        before: '今天晚上我在家',
+        after: '饭。',
+        answer: '做',
+        pinyin: 'Jīntiān wǎnshang wǒ zài jiā zuò fàn.',
+        meaning: {
+          en: 'I’m cooking at home tonight.',
+          fr: 'Ce soir, je fais à manger à la maison.',
+          ru: 'Сегодня вечером я готовлю дома.',
+          tr: 'Bu akşam evde yemek yapacağım.',
+        },
+        explanation: {
+          en: '做 means to do or make. In 做饭, it refers to preparing a meal.',
+          fr: '做 signifie faire. Dans 做饭, il s’agit de préparer un repas.',
+          ru: '做 означает «делать». В 做饭 речь идёт о приготовлении еды.',
+          tr: '做 yapmak anlamına gelir. 做饭 yemek hazırlamak demektir.',
+        },
+      },
+      {
+        id: 'zuo-do-homework',
+        before: '放学以后，我先',
+        after: '作业。',
+        answer: '做',
+        pinyin: 'Fàngxué yǐhòu, wǒ xiān zuò zuòyè.',
+        meaning: {
+          en: 'After school, I do my homework first.',
+          fr: 'Après l’école, je fais d’abord mes devoirs.',
+          ru: 'После школы я первым делом делаю домашнее задание.',
+          tr: 'Okuldan sonra önce ödevimi yaparım.',
+        },
+        explanation: {
+          en: '做作业 means to do homework. 作业 names the task, and 做 is the verb.',
+          fr: '做作业 signifie faire ses devoirs. 作业 désigne les devoirs et 做 est le verbe.',
+          ru: '做作业 означает «делать домашнее задание». 作业 — задание, а 做 — глагол.',
+          tr: '做作业 ödev yapmak demektir. 作业 ödev, 做 ise yapmak anlamına gelir.',
+        },
+      },
+      {
+        id: 'zuo-take-subway',
+        before: '我每天',
+        after: '地铁去上班。',
+        answer: '坐',
+        pinyin: 'Wǒ měitiān zuò dìtiě qù shàngbān.',
+        meaning: {
+          en: 'I take the subway to work every day.',
+          fr: 'Je prends le métro tous les jours pour aller au travail.',
+          ru: 'Я каждый день езжу на работу на метро.',
+          tr: 'Her gün işe metroyla giderim.',
+        },
+        explanation: {
+          en: 'Use 坐 with a form of transport to say how you travel. 坐地铁 means to take the subway.',
+          fr: '坐 suivi d’un moyen de transport indique comment on se déplace. 坐地铁 signifie prendre le métro.',
+          ru: '坐 перед названием транспорта указывает, на чём едут. 坐地铁 означает «ехать на метро».',
+          tr: '坐 bir taşıtla birlikte kullanıldığında nasıl yolculuk ettiğini belirtir. 坐地铁 metroyla gitmek demektir.',
+        },
+      },
+      {
+        id: 'zuo-sit-on-chair',
+        before: '请',
+        after: '在椅子上。',
+        answer: '坐',
+        pinyin: 'Qǐng zuò zài yǐzi shàng.',
+        meaning: {
+          en: 'Please sit on the chair.',
+          fr: 'Asseyez-vous sur la chaise, s’il vous plaît.',
+          ru: 'Пожалуйста, сядьте на стул.',
+          tr: 'Lütfen sandalyeye oturun.',
+        },
+        explanation: {
+          en: '坐 means to sit. 在椅子上 tells you where to sit.',
+          fr: '坐 signifie s’asseoir. 在椅子上 indique où s’asseoir.',
+          ru: '坐 означает «сесть». 在椅子上 указывает, куда сесть.',
+          tr: '坐 oturmak demektir. 在椅子上 nereye oturacağını belirtir.',
+        },
+      },
+    ],
+  },
+  共: {
+    options: ['一共', '共享单车', '共同', '公共'],
+    questions: [
+      {
+        id: 'gong-total-price',
+        before: '一杯茶十块，两杯',
+        after: '多少钱？',
+        answer: '一共',
+        pinyin: 'Yì bēi chá shí kuài, liǎng bēi yígòng duōshao qián?',
+        meaning: {
+          en: 'One cup of tea costs ten yuan. How much are two cups in total?',
+          fr: 'Une tasse de thé coûte dix yuans. Combien coûtent deux tasses au total ?',
+          ru: 'Чашка чая стоит десять юаней. Сколько всего стоят две чашки?',
+          tr: 'Bir fincan çay on yuan. İki fincan toplam ne kadar?',
+        },
+        explanation: {
+          en: '一共 introduces a total. Here the question asks for the combined price of two cups.',
+          fr: '一共 introduit un total. La question porte sur le prix des deux tasses ensemble.',
+          ru: '一共 обозначает итог. Здесь спрашивают общую цену двух чашек.',
+          tr: '一共 toplamı belirtir. Burada iki fincanın toplam fiyatı soruluyor.',
+        },
+      },
+      {
+        id: 'gong-bike-share',
+        before: '地铁站门口有很多',
+        after: '，扫码就可以骑。',
+        answer: '共享单车',
+        pinyin: 'Dìtiězhàn ménkǒu yǒu hěn duō gòngxiǎng dānchē, sǎo mǎ jiù kěyǐ qí.',
+        meaning: {
+          en: 'There are lots of bike-share bikes outside the subway station. Scan the code to ride one.',
+          fr: 'Il y a beaucoup de vélos en libre-service devant la station de métro. Il suffit de scanner le code pour en prendre un.',
+          ru: 'У входа в метро много прокатных велосипедов. Чтобы поехать, достаточно отсканировать код.',
+          tr: 'Metro istasyonunun girişinde çok sayıda paylaşımlı bisiklet var. Sürmek için kodu okutman yeterli.',
+        },
+        explanation: {
+          en: '共享 means to share, and 单车 means bicycle. 共享单车 is a bicycle you can rent through a bike-share service.',
+          fr: '共享 signifie partager et 单车 veut dire vélo. Un 共享单车 est un vélo qu’on peut louer en libre-service.',
+          ru: '共享 означает «совместно пользоваться», а 单车 — «велосипед». 共享单车 — велосипед, который можно взять напрокат через сервис велопроката.',
+          tr: '共享 paylaşmak, 单车 bisiklet demektir. 共享单车, bisiklet paylaşım hizmetinden kiralayabileceğin bir bisiklettir.',
+        },
+      },
+      {
+        id: 'gong-shared-interest',
+        before: '我和她有一个',
+        after: '的爱好：打篮球。',
+        answer: '共同',
+        pinyin: 'Wǒ hé tā yǒu yí ge gòngtóng de àihào: dǎ lánqiú.',
+        meaning: {
+          en: 'She and I have a hobby in common: playing basketball.',
+          fr: 'Elle et moi avons un loisir en commun : jouer au basket.',
+          ru: 'У нас с ней общее увлечение: мы играем в баскетбол.',
+          tr: 'Onunla ortak bir hobimiz var: basketbol oynamak.',
+        },
+        explanation: {
+          en: '共同 describes something people have in common. 共同的爱好 is a hobby that both people enjoy.',
+          fr: '共同 qualifie ce que plusieurs personnes ont en commun. Dans 共同的爱好, les deux personnes apprécient la même activité.',
+          ru: '共同 описывает то, что объединяет нескольких людей. 共同的爱好 — увлечение, которое нравится обоим.',
+          tr: '共同, kişilerin ortak bir yönünü belirtir. 共同的爱好, iki kişinin de sevdiği bir hobidir.',
+        },
+      },
+      {
+        id: 'gong-public-transport',
+        before: '地铁和公交车都是',
+        after: '交通工具。',
+        answer: '公共',
+        pinyin: 'Dìtiě hé gōngjiāochē dōu shì gōnggòng jiāotōng gōngjù.',
+        meaning: {
+          en: 'Subways and buses are both forms of public transport.',
+          fr: 'Le métro et le bus sont tous deux des moyens de transport en commun.',
+          ru: 'Метро и автобусы относятся к общественному транспорту.',
+          tr: 'Metro da otobüs de toplu taşıma aracıdır.',
+        },
+        explanation: {
+          en: '公共 means public or for public use. 公共交通 is the usual term for public transport.',
+          fr: '公共 désigne ce qui est à l’usage du public. 公共交通 est l’expression courante pour les transports en commun.',
+          ru: '公共 означает «общественный, для общего пользования». 公共交通 — обычное название общественного транспорта.',
+          tr: '公共 kamusal veya herkesin kullanımına açık demektir. 公共交通 toplu taşıma için kullanılan yaygın ifadedir.',
+        },
+      },
+    ],
+  },
+} as const satisfies Record<string, PracticalFamilyExercise>;
