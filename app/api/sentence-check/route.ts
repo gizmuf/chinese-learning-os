@@ -1,4 +1,5 @@
 import { env } from 'cloudflare:workers';
+import { sentenceAudioTickets } from '../../../lib/sentence-audio-token';
 import {
   checkSentenceWithDeepSeek, JsonBodyTooLarge, parseDailyLimit, readBoundedJson,
   reserveSentenceCheckSql, sentenceCheckRequest,
@@ -21,12 +22,14 @@ function config() {
     DEEPSEEK_SENTENCE_CHECK_API_KEY?: string;
     DEEPSEEK_SENTENCE_CHECK_DAILY_LIMIT?: string;
     DEEPSEEK_SENTENCE_CHECK_ORIGIN?: string;
+    SENTENCE_CHECK_AUDIO_SECRET?: string;
   };
   const key = bindings.DEEPSEEK_SENTENCE_CHECK_API_KEY?.trim();
   const dailyLimit = parseDailyLimit(bindings.DEEPSEEK_SENTENCE_CHECK_DAILY_LIMIT);
   const db = bindings.DB;
   const origin = httpsOrigin(bindings.DEEPSEEK_SENTENCE_CHECK_ORIGIN);
-  return key && dailyLimit && db && origin ? { key, dailyLimit, db, origin } : undefined;
+  const audioSecret = bindings.SENTENCE_CHECK_AUDIO_SECRET;
+  return key && dailyLimit && db && origin ? { key, dailyLimit, db, origin, audioSecret } : undefined;
 }
 
 export async function GET() {
@@ -73,7 +76,10 @@ export async function POST(request: Request) {
     return fail('unavailable', 503);
   }
   try {
-    return Response.json(await checkSentenceWithDeepSeek(settings.key, input.data), { headers });
+    const feedback = await checkSentenceWithDeepSeek(settings.key, input.data);
+    // A signing failure should leave grammar feedback usable.
+    const audio = await sentenceAudioTickets(settings.audioSecret, feedback).catch(() => undefined);
+    return Response.json(audio ? { ...feedback, audio } : feedback, { headers });
   } catch {
     return fail('provider_unavailable', 502);
   }

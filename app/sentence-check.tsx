@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowLeft, Check, CircleHelp, Pencil, Volume2 } from 'lucide-react';
-import { useEffect, useRef, useState, type FormEvent } from 'react';
+import { useEffect, useId, useLayoutEffect, useRef, useState, type FormEvent } from 'react';
 import { playRecording, releaseRecording } from './audio';
 import { sentenceCheckRecording } from './sentence-check-recording';
 import { checkSentenceRules, type SentenceCheckResult } from './sentence-check-rules';
@@ -12,9 +12,141 @@ import './sentence-check.css';
 const examples = ['他比我很高。', '我昨天不去了学校。'];
 const maxLength = 160;
 const statusIcons = { correct: Check, corrected: Pencil, uncertain: CircleHelp };
+type ReadingKind = 'correction' | 'natural';
+type AudioTicket = { expires: number; signature: string };
+type AIFeedback = SentenceCheckResult & { audio?: Partial<Record<ReadingKind, AudioTicket>> };
+type AudioStatus = { kind: ReadingKind; state: 'loading' | 'loadError' | 'playError' | 'ready' };
+
 function FeedbackIcon({ status }: { status: SentenceCheckResult['status'] }) {
   const Icon = statusIcons[status];
   return <Icon size={20} aria-hidden="true" />;
+}
+
+function SentenceReading({ text, pinyin, label, copy: c, onListen, expectsAudio, status, privacyId }: {
+  text: string;
+  pinyin?: string;
+  label: string;
+  copy: typeof sentenceCheckCopy[Locale];
+  onListen?: () => void;
+  expectsAudio?: boolean;
+  status?: AudioStatus['state'];
+  privacyId?: string;
+}) {
+  const loading = status === 'loading';
+  return <section className="sentence-check-reading">
+    <div>
+      <h3>{label}</h3>
+      <p className="sentence-check-hanzi" lang="zh-Hans">{text}</p>
+      {pinyin && <p className="pinyin" lang="zh-Latn-pinyin">{pinyin}</p>}
+    </div>
+    {onListen && <button type="button" className="secondary" onClick={onListen} disabled={loading}
+      aria-describedby={privacyId} aria-label={`${loading ? c.audioLoading : c.listen} · ${label}`}>
+      <Volume2 size={17} aria-hidden="true" />{loading ? c.audioLoading : c.listen}
+    </button>}
+    {expectsAudio && !onListen && <p className="sentence-check-disclosure">{c.noAudio}</p>}
+    {loading && <span className="sr-only" role="status">{c.audioLoading} · {label}</span>}
+    {status === 'ready' && <p className="sentence-check-message" role="status">{c.audioReady}</p>}
+    {status === 'loadError' && <p className="sentence-check-message" role="alert">{c.audioLoadError}</p>}
+    {status === 'playError' && <p className="sentence-check-message" role="alert">{c.playError}</p>}
+  </section>;
+}
+
+function SentenceCheckResultPanel({ locale, checked, feedback, aiFeedback, aiError }: {
+  locale: Locale;
+  checked: string;
+  feedback: SentenceCheckResult;
+  aiFeedback: AIFeedback | null;
+  aiError: boolean;
+}) {
+  const c = sentenceCheckCopy[locale];
+  const privacyId = useId();
+  const [audioStatus, setAudioStatus] = useState<AudioStatus | null>(null);
+  const pendingAudio = useRef<AbortController | null>(null);
+  const recording = useRef<HTMLAudioElement | null>(null);
+  const generatedSources = useRef(new Map<string, string>());
+  const correctionSource = sentenceCheckRecording(feedback.correction);
+  const naturalSource = sentenceCheckRecording(feedback.natural);
+  const correctionTicket = !correctionSource ? aiFeedback?.audio?.correction : undefined;
+  const naturalTicket = !naturalSource ? aiFeedback?.audio?.natural : undefined;
+
+  useLayoutEffect(() => {
+    const sources = generatedSources.current;
+    return () => {
+      pendingAudio.current?.abort();
+      if (recording.current) releaseRecording(recording.current);
+      for (const source of sources.values()) URL.revokeObjectURL(source);
+      sources.clear();
+    };
+  }, []);
+
+  async function listen(kind: ReadingKind, text: string, recordingSource?: string, ticket?: AudioTicket) {
+    pendingAudio.current?.abort();
+    pendingAudio.current = null;
+    if (recording.current) {
+      releaseRecording(recording.current);
+      recording.current = null;
+    }
+    setAudioStatus(null);
+
+    let source = recordingSource ?? generatedSources.current.get(text);
+    let fetched = false;
+    if (!source && ticket) {
+      const controller = new AbortController();
+      pendingAudio.current = controller;
+      setAudioStatus({ kind, state: 'loading' });
+      try {
+        const response = await fetch('/api/sentence-check/audio', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text, expires: ticket.expires, signature: ticket.signature }),
+          signal: controller.signal,
+        });
+        if (!response.ok || !response.headers.get('Content-Type')?.startsWith('audio/')) {
+          throw new Error('Sentence audio unavailable');
+        }
+        const audio = await response.blob();
+        if (controller.signal.aborted) return;
+        if (!audio.size) throw new Error('Sentence audio is empty');
+        source = URL.createObjectURL(audio);
+        generatedSources.current.set(text, source);
+        fetched = true;
+        setAudioStatus(null);
+      } catch {
+        if (!controller.signal.aborted) setAudioStatus({ kind, state: 'loadError' });
+        return;
+      } finally {
+        if (pendingAudio.current === controller) pendingAudio.current = null;
+      }
+    }
+    if (source) {
+      recording.current = playRecording(source, () => setAudioStatus({ kind, state: fetched ? 'ready' : 'playError' }));
+    }
+  }
+
+  const alreadyCorrect = feedback.status === 'correct';
+  return <section className="panel sentence-check-result" aria-label={c.result}>
+    {aiFeedback && <p className="sentence-check-disclosure">{c.aiResult}</p>}
+    {aiError && <p className="sentence-check-message" role="status">{c.aiUnavailable}</p>}
+    <h2 className="sentence-check-status" data-status={feedback.status}><FeedbackIcon status={feedback.status} />{c[feedback.status]}</h2>
+    {(correctionTicket || naturalTicket) && <p id={privacyId} className="sentence-check-disclosure">{c.audioPrivacy}</p>}
+    {!alreadyCorrect && <SentenceReading text={checked} label={c.checked} copy={c} />}
+    {(alreadyCorrect || feedback.status === 'corrected') && (alreadyCorrect || feedback.correction) &&
+      <SentenceReading text={alreadyCorrect ? checked : feedback.correction} pinyin={feedback.pinyin}
+        label={alreadyCorrect ? c.checked : c.correction} copy={c} expectsAudio={Boolean(feedback.correction)}
+        onListen={correctionSource || correctionTicket
+          ? () => void listen('correction', feedback.correction, correctionSource, correctionTicket) : undefined}
+        status={audioStatus?.kind === 'correction' ? audioStatus.state : undefined}
+        privacyId={correctionTicket ? privacyId : undefined} />}
+    <section className="sentence-check-explanation">
+      <h3>{c.explanation}</h3>
+      <p>{feedback.explanation}</p>
+    </section>
+    {feedback.natural && <SentenceReading text={feedback.natural} pinyin={feedback.naturalPinyin}
+      label={c.natural} copy={c} expectsAudio
+      onListen={naturalSource || naturalTicket ? () => void listen('natural', feedback.natural, naturalSource, naturalTicket) : undefined}
+      status={audioStatus?.kind === 'natural' ? audioStatus.state : undefined}
+      privacyId={naturalTicket ? privacyId : undefined} />}
+  </section>;
 }
 
 export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () => void }) {
@@ -24,12 +156,11 @@ export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () =
   const [aiEnabled, setAIEnabled] = useState(false);
   const [aiBusy, setAIBusy] = useState(false);
   const [aiError, setAIError] = useState(false);
-  const [aiFeedback, setAIFeedback] = useState<{ locale: Locale; feedback: SentenceCheckResult } | null>(null);
+  const [aiFeedback, setAIFeedback] = useState<{ locale: Locale; feedback: AIFeedback } | null>(null);
   const aiRequest = useRef<AbortController | null>(null);
   const [invalid, setInvalid] = useState(false);
-  const [audioError, setAudioError] = useState(false);
+  const [checkVersion, setCheckVersion] = useState(0);
   const field = useRef<HTMLTextAreaElement>(null);
-  const recording = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -47,15 +178,6 @@ export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () =
     };
   }, []);
 
-  useEffect(() => () => {
-    if (recording.current) releaseRecording(recording.current);
-  }, []);
-
-  function listen(source: string) {
-    setAudioError(false);
-    recording.current = playRecording(source, () => setAudioError(true));
-  }
-
   function inputForCheck() {
     const text = sentence.trim();
     if (!/\p{Script=Han}/u.test(text) || /[\r\n]/u.test(text)) {
@@ -64,7 +186,7 @@ export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () =
       return null;
     }
     setInvalid(false);
-    setAudioError(false);
+    setCheckVersion(version => version + 1);
     setAIError(false);
     setAIFeedback(null);
     return text;
@@ -91,7 +213,7 @@ export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () =
         signal: controller.signal,
       });
       if (!response.ok) throw new Error('Sentence check unavailable');
-      const feedback: SentenceCheckResult = await response.json();
+      const feedback: AIFeedback = await response.json();
       if (controller.signal.aborted) return;
       setChecked(text);
       setAIFeedback({ locale, feedback });
@@ -105,21 +227,6 @@ export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () =
         if (!controller.signal.aborted) setAIBusy(false);
       }
     }
-  }
-
-  function reading(text: string, pinyin: string, label: string, spokenText = text) {
-    const source = spokenText ? sentenceCheckRecording(spokenText) : undefined;
-    return <section className="sentence-check-reading">
-      <div>
-        <h3>{label}</h3>
-        <p className="sentence-check-hanzi" lang="zh-Hans">{text}</p>
-        {pinyin && <p className="pinyin" lang="zh-Latn-pinyin">{pinyin}</p>}
-      </div>
-      {source && <button type="button" className="secondary" onClick={() => listen(source)} aria-label={c.listen + ' · ' + label}>
-        <Volume2 size={17} aria-hidden="true" />{c.listen}
-      </button>}
-      {spokenText && !source && <p className="sentence-check-disclosure">{c.noAudio}</p>}
-    </section>;
   }
 
   const activeAIFeedback = aiFeedback?.locale === locale ? aiFeedback.feedback : null;
@@ -159,20 +266,7 @@ export function SentenceCheck({ locale, onBack }: { locale: Locale; onBack: () =
       {feedback && <span className="sr-only">{c.result} · {c[feedback.status]} · <span lang="zh-Hans">{checked}</span></span>}
     </div>
 
-    {feedback && <section className="panel sentence-check-result" aria-label={c.result}>
-      {activeAIFeedback && <p className="sentence-check-disclosure">{c.aiResult}</p>}
-      {aiError && <p className="sentence-check-message" role="status">{c.aiUnavailable}</p>}
-      <h2 className="sentence-check-status" data-status={feedback.status}><FeedbackIcon status={feedback.status} />{c[feedback.status]}</h2>
-      {feedback.status === 'correct'
-        ? reading(checked, feedback.pinyin, c.checked, feedback.correction)
-        : reading(checked, '', c.checked, '')}
-      {feedback.status === 'corrected' && feedback.correction && reading(feedback.correction, feedback.pinyin, c.correction)}
-      <section className="sentence-check-explanation">
-        <h3>{c.explanation}</h3>
-        <p>{feedback.explanation}</p>
-      </section>
-      {feedback.natural && reading(feedback.natural, feedback.naturalPinyin, c.natural)}
-      {audioError && <p className="sentence-check-message" role="alert">{c.playError}</p>}
-    </section>}
+    {feedback && <SentenceCheckResultPanel key={`${locale}:${checkVersion}:${checked}:${Boolean(activeAIFeedback)}`}
+      locale={locale} checked={checked} feedback={feedback} aiFeedback={activeAIFeedback} aiError={aiError} />}
   </div>;
 }

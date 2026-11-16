@@ -48,7 +48,7 @@
   justify-self: start;
 }
 
-.sentence-check .primary:disabled {
+.sentence-check :is(.primary, .secondary):disabled {
   cursor: default;
   opacity: .65;
 }
@@ -93,6 +93,10 @@
   gap: 10px 16px;
 }
 
+.sentence-check-reading .sentence-check-message {
+  flex-basis: 100%;
+}
+
 .sentence-check-reading h3,
 .sentence-check-explanation h3 {
   font-size: .88rem;
@@ -113,7 +117,7 @@
   color: var(--muted);
 }
 
-.sentence-check-live .sr-only {
+.sentence-check .sr-only {
   position: absolute;
   width: 1px;
   height: 1px;

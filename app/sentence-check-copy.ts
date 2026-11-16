@@ -12,6 +12,9 @@ export const sentenceCheckCopy = {
     checked: 'Checked sentence', result: 'Result', correct: 'Correct', corrected: 'Correction needed',
     uncertain: 'Uncertain', correction: 'Minimal correction', explanation: 'Explanation', natural: 'Natural variant',
     listen: 'Listen', noAudio: 'Recording unavailable for this sentence.', playError: 'The recording could not play. Try again.',
+    audioPrivacy: 'When you tap Listen, the selected Mandarin sentence may be sent to Microsoft to generate audio.',
+    audioLoading: 'Loading audio…', audioLoadError: 'Could not load audio for this sentence. Try again.',
+    audioReady: 'Audio is ready. Tap Listen again to play it.',
     invalid: 'Enter one short Mandarin sentence and try again.',
   },
   fr: {
@@ -25,6 +28,9 @@ export const sentenceCheckCopy = {
     checked: 'Phrase vérifiée', result: 'Résultat', correct: 'Correcte', corrected: 'À corriger',
     uncertain: 'Incertain', correction: 'Correction minimale', explanation: 'Explication', natural: 'Variante naturelle',
     listen: 'Écouter', noAudio: 'Aucun enregistrement pour cette phrase.', playError: 'Impossible de lire l’enregistrement. Réessayez.',
+    audioPrivacy: 'Lorsque vous appuyez sur Écouter, la phrase en mandarin sélectionnée peut être envoyée à Microsoft pour générer l’audio.',
+    audioLoading: 'Chargement de l’audio…', audioLoadError: 'Impossible de charger l’audio pour cette phrase. Réessayez.',
+    audioReady: 'L’audio est prêt. Appuyez de nouveau sur Écouter pour le lire.',
     invalid: 'Saisissez une courte phrase en mandarin, puis réessayez.',
   },
   ru: {
@@ -38,6 +44,9 @@ export const sentenceCheckCopy = {
     checked: 'Проверенное предложение', result: 'Результат', correct: 'Правильно', corrected: 'Нужно исправить',
     uncertain: 'Неопределённо', correction: 'Минимальное исправление', explanation: 'Объяснение', natural: 'Естественный вариант',
     listen: 'Послушать', noAudio: 'Для этого предложения нет записи.', playError: 'Не удалось воспроизвести запись. Повторите попытку.',
+    audioPrivacy: 'Когда вы нажимаете «Послушать», выбранное предложение на китайском может быть отправлено в Microsoft для озвучивания.',
+    audioLoading: 'Загрузка аудио…', audioLoadError: 'Не удалось загрузить аудио для этого предложения. Повторите попытку.',
+    audioReady: 'Аудио готово. Нажмите «Послушать» ещё раз, чтобы его воспроизвести.',
     invalid: 'Введите одно короткое предложение на китайском и повторите попытку.',
   },
   tr: {
@@ -51,6 +60,9 @@ export const sentenceCheckCopy = {
     checked: 'Kontrol edilen cümle', result: 'Sonuç', correct: 'Doğru', corrected: 'Düzeltme gerekli',
     uncertain: 'Belirsiz', correction: 'Gerekli düzeltme', explanation: 'Açıklama', natural: 'Daha doğal ifade',
     listen: 'Dinle', noAudio: 'Bu cümle için ses kaydı yok.', playError: 'Ses kaydı oynatılamadı. Tekrar dene.',
+    audioPrivacy: 'Dinle’ye dokunduğunda, seçtiğin Mandarin Çincesi cümle seslendirme için Microsoft’a gönderilebilir.',
+    audioLoading: 'Ses yükleniyor…', audioLoadError: 'Bu cümle için ses yüklenemedi. Tekrar dene.',
+    audioReady: 'Ses hazır. Oynatmak için tekrar Dinle’ye dokun.',
     invalid: 'Mandarin Çincesi kısa bir cümle girip tekrar dene.',
   },
 } satisfies Record<Locale, Record<string, string | string[]>>;
