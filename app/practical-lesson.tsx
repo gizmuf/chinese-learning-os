@@ -5,7 +5,8 @@ import {ArrowLeft, ArrowRight, PenLine, Volume2} from 'lucide-react';
 import {playRecording, stopAudio} from './audio';
 import {useI18n} from './i18n';
 import SharedWriting from './shared-writing';
-import {StudyText} from './study-lookup-context';
+import {StudyText,useStudyLookup} from './study-lookup-context';
+import {practicalFamilyEntry,type PracticalFamilyTerm} from './practical-lesson-family-data';
 import {practicalLessonCopy} from './practical-lesson-copy';
 import {
  activePracticalScene, buildPracticalSentence, practicalLesson, practicalLessonAudio, practicalLessonHref,
@@ -30,7 +31,8 @@ function SentenceText({example, chunks, pinyin}: {
 }
 
 export default function PracticalLesson({notify}: {notify:(message:string)=>void}){
- const {locale}=useI18n(),copy=practicalLessonCopy(locale);
+ const {locale}=useI18n(),copy=practicalLessonCopy(locale),lookup=useStudyLookup();
+ const families=useRef<HTMLElement>(null);
  const [scene,setScene]=useState(()=>activePracticalScene(typeof location==='undefined'?'':location.search));
  const [pinyin,setPinyin]=useState(true),[chunks,setChunks]=useState(true),[translation,setTranslation]=useState(true);
  const [revealed,setRevealed]=useState(false);
@@ -42,10 +44,30 @@ export default function PracticalLesson({notify}: {notify:(message:string)=>void
  const challenge=scene.lines.at(-1)!;
 
  useEffect(()=>{
-  const back=()=>{stopAudio();setRevealed(false);setScene(activePracticalScene(location.search));};
-  window.addEventListener('popstate',back);
-  return()=>{window.removeEventListener('popstate',back);stopAudio();};
+  // A full navigation to the Atlas workspace can remount this lesson on Back.
+  const familyReturn=history.state?.practicalFamilyReturn as {open:string[];from:string}|undefined;
+  if(familyReturn){
+   const state={...history.state};
+   delete state.practicalFamilyReturn;
+   history.replaceState(state,'');
+   for(const group of families.current?.querySelectorAll<HTMLDetailsElement>('details[data-family]')??[]){
+    group.open=familyReturn.open.includes(group.dataset.family??'');
+    if(group.dataset.family===familyReturn.from)group.querySelector('a')?.focus({preventScroll:true});
+   }
+  }
+  return stopAudio;
  },[]);
+ useEffect(()=>{
+  const back=()=>{
+   const target=activePracticalScene(location.search);
+   if(target===scene)return;
+   stopAudio();
+   setRevealed(false);
+   setScene(target);
+  };
+  window.addEventListener('popstate',back);
+  return()=>window.removeEventListener('popstate',back);
+ },[scene]);
  useEffect(()=>{
   if(writing&&!dialog.current?.open)dialog.current?.showModal();
   if(!writing&&dialog.current?.open)dialog.current.close();
@@ -64,6 +86,14 @@ export default function PracticalLesson({notify}: {notify:(message:string)=>void
   stopAudio();
   setWriting(undefined);
   requestAnimationFrame(()=>opener.current?.focus());
+ }
+ function familyTerm(word:PracticalFamilyTerm){
+  const entry=practicalFamilyEntry(word,locale);
+  return <button className="study-word" type="button" lang="zh-Hans" onClick={e=>lookup?.open(word,e.currentTarget,entry)}>{word}</button>;
+ }
+ function rememberFamily(anchor:string){
+  const open=Array.from(families.current?.querySelectorAll<HTMLDetailsElement>('details[open][data-family]')??[],group=>group.dataset.family??'');
+  history.replaceState({...history.state,practicalFamilyReturn:{open,from:anchor}},'');
  }
  function listen(text:string){
   const source=practicalLessonAudio[text];
@@ -126,11 +156,20 @@ export default function PracticalLesson({notify}: {notify:(message:string)=>void
      </select></label>
      <div aria-live="polite"><SentenceText example={built} chunks={built.chunks} pinyin={pinyin}/></div>{listen(built.hanzi)}
     </section>
-    <section className="panel practical-line"><h3>{copy.families}</h3>
-     {practicalLesson.families?.map(family=><details className="practical-variants" key={family.anchor}><summary lang="zh-Hans">{family.anchor} · {family.examples.join(' · ')}</summary>
-      <p>{family.note[locale]}</p><p className="practical-family-words" lang="zh-Hans">{family.examples.map(word=><StudyText key={word} text={word} whole/>)}</p>
-      {/^\p{Script=Han}$/u.test(family.anchor)&&<a href={'/?atlas=1&workspace=1&anchor='+encodeURIComponent(family.anchor)}>{copy.explore} {family.anchor} →</a>}
-     </details>)}
+    <section className="panel practical-line" ref={families}><h3>{copy.families}</h3>
+     {practicalLesson.families?.map(family=>{
+      const words=[...new Set([...family.anchor.split(' · ') as PracticalFamilyTerm[],...family.examples])];
+      return <details className="practical-variants" key={family.anchor} data-family={family.anchor}>
+       <summary lang="zh-Hans">{family.anchor}</summary>
+       <p>{family.note[locale]}</p>
+       <ul className="practical-family-words">{words.map(word=><li key={word}>
+        {familyTerm(word)}
+        {listen(word+'。')}
+       </li>)}</ul>
+       {/^\p{Script=Han}$/u.test(family.anchor)&&<a href={'/?atlas=1&workspace=1&anchor='+encodeURIComponent(family.anchor)}
+        onClick={e=>{if(!e.metaKey&&!e.ctrlKey&&!e.altKey&&!e.shiftKey)rememberFamily(family.anchor);}}>{copy.explore} {family.anchor} →</a>}
+      </details>;
+     })}
     </section>
    </aside>
   </div>

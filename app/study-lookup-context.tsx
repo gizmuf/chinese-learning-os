@@ -3,10 +3,10 @@ import {createContext,useContext} from 'react';
 import {simplifiedDisplayText} from './simplified-chinese';
 import {BookOpen,Shuffle} from 'lucide-react';
 import {useI18n} from './i18n';
-import {dictionaryTokens,type StudyDictionary} from './atlas-spatial-model';
+import {dictionaryTokens,type DictionaryEntry,type StudyDictionary} from './atlas-spatial-model';
 import {authoredLookupBoundaries,authoredCharacterReadings} from './pinyin-boundaries';
 /** Lightweight shared text actions; no dependency on Atlas or writing surfaces. */
-export const LookupContext=createContext<{dictionary:StudyDictionary;open:(text:string,trigger:HTMLElement)=>void;openConfused?:(index?:number)=>void}|null>(null);
+export const LookupContext=createContext<{dictionary:StudyDictionary;open:(text:string,trigger:HTMLElement,authoredEntry?:DictionaryEntry)=>void;openConfused?:(index?:number)=>void}|null>(null);
 export function useStudyLookup(){return useContext(LookupContext);}
 export function StudyText({text,anchor='',whole=false,pinyin,headword,sourceText,offset=0,annotatePinyin=false}:{text:string;anchor?:string;whole?:boolean;pinyin?:string;headword?:string;sourceText?:string;offset?:number;annotatePinyin?:boolean}){
  text=simplifiedDisplayText(text);anchor=simplifiedDisplayText(anchor);

@@ -1,4 +1,5 @@
 import type {Copy} from './course-data';
+import type {PracticalFamilyTerm} from './practical-lesson-family-data';
 import content from '../data/practical-2026-11-16/content.json';
 import audio from '../data/practical-2026-11-16/audio.json';
 
@@ -7,7 +8,7 @@ export type PracticalLine = PracticalExample & {
   chunks: string[]; source: 'pdf' | 'adapted'; variants?: PracticalExample[];
 };
 type PracticalScene = {id: string; title: Copy; lines: PracticalLine[]};
-type PracticalFamily = {anchor: string; examples: string[]; note: Copy};
+type PracticalFamily = {anchor: string; examples: PracticalFamilyTerm[]; note: Copy};
 
 export const practicalLesson = content as {
   title: Copy; scenes: PracticalScene[]; families?: PracticalFamily[];

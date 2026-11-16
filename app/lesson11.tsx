@@ -3,7 +3,7 @@ import HskBadge from './hsk-badge';
 import {lesson11Materials,lesson11MaterialHref} from './lesson11-materials';
 import {useRecordingPlayback} from './use-recording-playback';
 import {hasQwenCurriculumAudio,qwenSyntheticLabel} from './qwen-curriculum-audio';
-import {useEffect,useRef,useState} from 'react';
+import {useEffect,useLayoutEffect,useRef,useState} from 'react';
 import {ArrowLeft,ArrowRight,Volume2,PenLine,Download,X,RotateCcw} from 'lucide-react';
 import {useLesson11PracticeState,freshLesson11Draft,type Lesson11CheckDraft} from './lesson11-practice-state';
 import Lesson11Visual,{lesson11FocusIds} from './lesson11-visual';
@@ -22,6 +22,15 @@ import SharedWriting from './shared-writing';
 import './lesson06.css';
 type Props={owner:string|null;penOnly:boolean;setPenOnly:(v:boolean)=>void;notify:(s:string)=>void;onBack:()=>void};
 const event=(activityId:string,correct:boolean|null,assisted:boolean):CourseEvent=>({id:crypto.randomUUID(),lessonId:'intensive-11',activityId,kind:correct===null?'study':'answer',correct,assisted,at:Date.now()});
+type ExplorerEntry={href:string;scroll:number;opener:'featured'|'all'};
+function lessonRoute(){
+ const p=new URLSearchParams(location.search),section=p.get('section'),n=Number(p.get('step'));
+ return {
+  isLesson:p.get('course')==='intensive'&&p.get('lesson')==='11',
+  tab:section&&['overview','learn','practice','materials'].includes(section)?section:'overview',
+  index:Number.isInteger(n)&&n>=1&&n<=lesson11Topics.length?n-1:0,
+ };
+}
 export default function Lesson11(props:Props){return <Lesson11Content key={props.owner??'guest'} {...props}/>;}
 function Lesson11Content({owner,penOnly,setPenOnly,notify,onBack}:Props){
  const {locale,t}=useI18n(),c=(en:string,fr:string,ru:string,tr:string)=>C(en,fr,ru,tr)[locale],progress=useCourseProgress(owner);
@@ -33,43 +42,100 @@ function Lesson11Content({owner,penOnly,setPenOnly,notify,onBack}:Props){
  const latest=new Map<string,CourseEvent>();for(const e of [...rows].sort((a,b)=>a.at-b.at))if(e.kind==='answer'&&e.activityId.startsWith('c11-check-')&&!e.assisted)latest.set(e.activityId,e);
  const difficult=[...latest.values()].filter(e=>!e.correct).map(e=>e.activityId);
  const [selectedExample,setSelectedExample]=useState(''),[showPinyin,setShowPinyin]=useState(true),[showTranslation,setShowTranslation]=useState(true);
- const [exploring,setExploring]=useState(false);
- const explorerOrigin=useRef<{button:HTMLButtonElement;scroll:number}|null>(null);
+ const [exploring,setExploring]=useState<ExplorerEntry|null>(null);
+ const lessonRoot=useRef<HTMLDivElement>(null);
+ const explorer=useRef<ExplorerEntry|null>(null),returnTo=useRef<ExplorerEntry|null>(null),closing=useRef(false);
+ const savingNext=useRef(false),navigation=useRef(0);
  const [practiceMode,setPracticeMode]=useState<'read'|'listen'>('read');
- useEffect(()=>{const p=new URLSearchParams(location.search),section=p.get('section'),n=Number(p.get('step'));if(section&&['overview','learn','practice','materials'].includes(section))setTab(section);if(n>=1&&n<=lesson11Topics.length)setIndex(n-1);return()=>stopAudio();},[]);
+
+ useEffect(()=>{
+  function restoreRoute(fromHistory:boolean){
+   const route=lessonRoute();
+   if(!route.isLesson)return;
+   const entry=history.state?.chineseOSLesson11Explorer as ExplorerEntry|undefined;
+   const previous=explorer.current;
+   if(fromHistory&&!entry&&!previous)return;
+   if(fromHistory)navigation.current++;
+   if(entry&&savingNext.current){history.back();return;}
+   closing.current=false;
+   setTab(route.tab);
+   setIndex(route.index);
+   const next=entry?.href===location.href&&route.tab==='learn'?entry:null;
+   explorer.current=next;
+   returnTo.current=!next&&previous?.href===location.href?previous:null;
+   setExploring(next);
+  }
+  const back=()=>restoreRoute(true);
+  restoreRoute(false);
+  addEventListener('popstate',back);
+  return()=>{removeEventListener('popstate',back);stopAudio();};
+ },[]);
+ useLayoutEffect(()=>{
+  const opener=exploring??returnTo.current;
+  if(!opener)return;
+  returnTo.current=null;
+  const button=lessonRoot.current?.querySelector<HTMLButtonElement>(`[data-sentence-explorer-opener="${opener.opener}"]`);
+  if(!button)return;
+  const details=button.closest('details');
+  if(details)details.open=true;
+  const frame=requestAnimationFrame(()=>{
+   window.scrollTo({top:opener.scroll,behavior:'instant'});
+   if(!exploring)button.focus({preventScroll:true});
+  });
+  return()=>cancelAnimationFrame(frame);
+ },[exploring]);
  useEffect(()=>{if(writing)writingDialog.current?.showModal();else writingDialog.current?.close();},[writing]);
- function route(next:string,n=index){stopAudio();setTab(next);setIndex(n);const p=new URLSearchParams({course:'intensive',lesson:'11',section:next});if(next==='learn')p.set('step',String(n+1));history.replaceState(null,'','/?'+p);window.scrollTo({top:0,behavior:'instant'});requestAnimationFrame(()=>head.current?.focus({preventScroll:true}));}
- const move=(delta:number)=>route('learn',Math.max(0,Math.min(lesson11Topics.length-1,index+delta))),swipe=useSwipeNavigation(move,tab!=='learn'||!!writing||exploring);
+ function route(next:string,n=index){
+  if(explorer.current)return;
+  navigation.current++;
+  stopAudio();setTab(next);setIndex(n);
+  const p=new URLSearchParams({course:'intensive',lesson:'11',section:next});
+  if(next==='learn')p.set('step',String(n+1));
+  history.replaceState(null,'','/?'+p);
+  window.scrollTo({top:0,behavior:'instant'});requestAnimationFrame(()=>head.current?.focus({preventScroll:true}));
+ }
+ const move=(delta:number)=>route('learn',Math.max(0,Math.min(lesson11Topics.length-1,index+delta))),swipe=useSwipeNavigation(move,tab!=='learn'||!!writing||!!exploring);
  function closeModal(){stopAudio();setWriting(null);requestAnimationFrame(()=>origin.current?.isConnected&&origin.current.focus({preventScroll:true}));}
  function write(v:Lesson11Entry,button:HTMLElement){stopAudio();origin.current=button;setWriting(v);}
- function openExplorer(button:HTMLButtonElement){
+ function openExplorer(opener:ExplorerEntry['opener']){
+  if(savingNext.current||explorer.current)return;
   stopAudio();
-  explorerOrigin.current={button,scroll:window.scrollY};
-  setExploring(true);
+  const entry={href:location.href,scroll:window.scrollY,opener};
+  history.pushState({...history.state,chineseOSLesson11Explorer:entry},'',entry.href);
+  explorer.current=entry;
+  setExploring(entry);
  }
  function closeExplorer(){
-  const opener=explorerOrigin.current;
-  setExploring(false);
-  requestAnimationFrame(()=>{
-   if(!opener?.button.isConnected)return;
-   window.scrollTo({top:opener.scroll,behavior:'instant'});
-   opener.button.focus({preventScroll:true});
-  });
+  if(closing.current||!explorer.current)return;
+  closing.current=true;
+  history.back();
+ }
+ async function saveAndAdvance(){
+  if(savingNext.current||explorer.current||!progress.ready)return;
+  savingNext.current=true;
+  setBusy(true);
+  const revision=navigation.current,href=location.href;
+  try{
+   if(!studied.has('study:c11-'+topic.id))await progress.record(event('study:c11-'+topic.id,null,true));
+   if(!lessonRoot.current||revision!==navigation.current||href!==location.href)return;
+   if(index<lesson11Topics.length-1)move(1);else startChecks();
+  }catch{notify(t('Could not save practice. Keep this worksheet open and try again.'));}
+  finally{savingNext.current=false;setBusy(false);}
  }
  function sound(v:Lesson11Entry){return <DictionaryAudio recording={lesson11Pronunciation(v)} target={undefined} playing={recording.playing} onPlay={clip=>recording.play(clip.source)}/>;}
- function example(v:Lesson11Entry){return <article className="l06-example" key={v.id} data-study-source-id={v.id} data-study-sentence={v.hanzi} data-study-pinyin={v.pinyin} data-study-meaning={v.meaning[locale]}><div lang="zh-Hans" className="l06-hanzi"><StudyText text={v.hanzi} pinyin={v.pinyin}/></div><p className="pinyin">{v.pinyin}</p><p className="l11-translation">{v.meaning[locale]}</p>{v.origin==='practice'&&<small>{c('Additional practice example','Exemple complémentaire','Дополнительный пример','Ek alıştırma örneği')}</small>}{v.origin==='board-opinion'&&<small>{c('Classroom comparison: a speaker’s opinion, not a factual ranking.','Comparaison en classe : opinion du locuteur, pas un classement factuel.','Сравнение на занятии: мнение говорящего, а не объективный рейтинг.','Sınıf karşılaştırması: konuşanın görüşü, nesnel bir sıralama değil.')}</small>}<div className="course-actions">{sound(v)}{v.id===sentenceExplorerOrigin&&<button type="button" className="secondary" aria-haspopup="dialog" onClick={e=>openExplorer(e.currentTarget)}>{sentenceExplorerLabel[locale]}</button>}<button className="text-button" onClick={e=>write(v,e.currentTarget)}><PenLine size={16}/>{t('Practice writing')}</button></div></article>;}
+ function example(v:Lesson11Entry,opener?:ExplorerEntry['opener']){return <article className="l06-example" key={v.id} data-study-source-id={v.id} data-study-sentence={v.hanzi} data-study-pinyin={v.pinyin} data-study-meaning={v.meaning[locale]}><div lang="zh-Hans" className="l06-hanzi"><StudyText text={v.hanzi} pinyin={v.pinyin}/></div><p className="pinyin">{v.pinyin}</p><p className="l11-translation">{v.meaning[locale]}</p>{v.origin==='practice'&&<small>{c('Additional practice example','Exemple complémentaire','Дополнительный пример','Ek alıştırma örneği')}</small>}{v.origin==='board-opinion'&&<small>{c('Classroom comparison: a speaker’s opinion, not a factual ranking.','Comparaison en classe : opinion du locuteur, pas un classement factuel.','Сравнение на занятии: мнение говорящего, а не объективный рейтинг.','Sınıf karşılaştırması: konuşanın görüşü, nesnel bir sıralama değil.')}</small>}<div className="course-actions">{sound(v)}{opener&&v.id===sentenceExplorerOrigin&&<button type="button" className="secondary" aria-haspopup="dialog" data-sentence-explorer-opener={opener} disabled={busy} onClick={()=>openExplorer(opener)}>{sentenceExplorerLabel[locale]}</button>}<button className="text-button" onClick={e=>write(v,e.currentTarget)}><PenLine size={16}/>{t('Practice writing')}</button></div></article>;}
  function startChecks(ids:string[]|null=null){setReview(ids);setRun(v=>v+1);route('practice');}
  const labels={overview:c('Overview','Vue d’ensemble','Обзор','Genel bakış'),learn:c('Lesson journey','Parcours de la leçon','Маршрут урока','Ders yolculuğu'),practice:c('Short checks','Petites vérifications','Короткие проверки','Kısa testler'),materials:c('PDF materials','Documents PDF','Материалы PDF','PDF materyalleri')};
- return <div className="course-space lesson06-space lesson11-space" data-show-pinyin={showPinyin} data-show-translation={showTranslation}><button className="text-button" onClick={()=>{stopAudio();onBack();}}><ArrowLeft size={16}/>{t('All course lessons')}</button><header className="page-heading"><div><span className="pill">{t('Lesson')} 11 / 60 · 03.11.2026</span><h1 ref={head} tabIndex={-1}>{lesson11.title[locale]}<span className="orange">.</span></h1><p>{lesson11.intro[locale]}</p></div><button className="course-sync" onClick={()=>void progress.sync()}><span role="status">{t(progress.status)}</span></button></header><nav className="l06-tabs" aria-label={t('Lesson')}>{Object.entries(labels).map(([id,label])=><button className={tab===id?'primary':'secondary'} aria-current={tab===id?'page':undefined} key={id} onClick={()=>route(id)}>{label}</button>)}</nav>
+ return <div ref={lessonRoot} className="course-space lesson06-space lesson11-space" data-show-pinyin={showPinyin} data-show-translation={showTranslation}><button className="text-button" onClick={()=>{stopAudio();onBack();}}><ArrowLeft size={16}/>{t('All course lessons')}</button><header className="page-heading"><div><span className="pill">{t('Lesson')} 11 / 60 · 03.11.2026</span><h1 ref={head} tabIndex={-1}>{lesson11.title[locale]}<span className="orange">.</span></h1><p>{lesson11.intro[locale]}</p></div><button className="course-sync" onClick={()=>void progress.sync()}><span role="status">{t(progress.status)}</span></button></header><nav className="l06-tabs" aria-label={t('Lesson')}>{Object.entries(labels).map(([id,label])=><button className={tab===id?'primary':'secondary'} aria-current={tab===id?'page':undefined} key={id} onClick={()=>route(id)}>{label}</button>)}</nav>
  {tab==='overview'&&<><section className="panel l06-welcome"><h2>{c('Learn a group, then use it','Apprendre un groupe, puis l’utiliser','Изучите группу и примените её','Bir grubu öğrenin, sonra kullanın')}</h2><p>{c('107 expressions, 53 examples and 8 connected steps. Tap a Chinese word for its meaning, pronunciation and individual characters. Writing opens only when you ask for it.','107 expressions, 53 exemples et 8 étapes reliées. Touchez un mot chinois pour son sens, sa prononciation et ses caractères. L’écriture s’ouvre à la demande.','107 выражения, 53 примеров и 8 связанных шагов. Нажмите китайское слово: значение, произношение и отдельные знаки. Письмо открывается по запросу.','107 ifade, 53 örnek ve bağlantılı 8 adım. Anlam, telaffuz ve karakterler için Çince kelimeye dokunun. Yazma yalnızca istediğinizde açılır.')}</p><div className="course-actions"><button className="primary" onClick={()=>route('learn',0)}>{labels.learn}<ArrowRight size={17}/></button><button className="secondary" disabled={!due.length} onClick={()=>startChecks(due)}>{c('Due reviews','Révisions dues','Пора повторить','Zamanı gelen tekrarlar')} · {due.length}</button><button className="secondary" disabled={!difficult.length} onClick={()=>startChecks(difficult)}>{c('Try difficult items again','Revoir les difficultés','Повторить трудное','Zorlandıklarını tekrar et')} · {difficult.length}</button></div><p className="l06-note">{c('Reading and guided building are supported practice. Independent checks schedule spaced reviews for this student; browsing alone does not count as mastery.','Lecture et construction guidée : entraînement aidé. Les tests autonomes planifient des révisions pour cet élève ; parcourir ne signifie pas maîtriser.','Чтение и сборка — практика с поддержкой. Самостоятельные проверки планируют повторы для этого ученика; просмотр не означает освоение.','Okuma ve rehberli kurma destekli alıştırmadır. Bağımsız testler bu öğrenciye aralıklı tekrar planlar; yalnızca gezinmek öğrenildi demek değildir.')}</p></section><div className="l06-topic-grid">{lesson11Topics.map((v,i)=><button className="panel l06-topic" key={v.id} onClick={()=>route('learn',i)}><span className="eyebrow">{String(i+1).padStart(2,'0')} {studied.has('study:c11-'+v.id)?'✓':''}</span><h2>{v.title[locale]}</h2><strong lang="zh-Hans">{lesson11Terms.filter(w=>w.family===v.id).slice(0,2).map(w=>w.hanzi).join(' · ')}</strong><p className="pinyin">{lesson11Terms.filter(w=>w.family===v.id).slice(0,2).map(w=>w.pinyin).join(' · ')}</p></button>)}</div></>}
  {tab==='overview'&&<details className="panel"><summary>{c('Classroom sources','Sources du cours','Материалы занятия','Ders kaynakları')}</summary><p>{c('Based on nine classroom photos. Textbook lesson 8 is a source reference; this session is Course lesson 11.','Neuf photos du cours. Le manuel indique la leçon 8 ; cette séance est la leçon 11 du cours.','Девять фотографий с занятия. Урок 8 в учебнике — ссылка на источник; это урок 11 курса.','Dokuz sınıf fotoğrafı. Kitaptaki 8. ders kaynak referansıdır; bu oturum kursun 11. dersidir.')}</p></details>}
  {tab==='learn'&&<><div className="ref-display-options" role="group" aria-label="Show learning aids"><label><input type="checkbox" checked={showPinyin} onChange={e=>setShowPinyin(e.target.checked)}/> Pinyin</label><label><input type="checkbox" checked={showTranslation} onChange={e=>setShowTranslation(e.target.checked)}/>{c('Translation','Traduction','Перевод','Çeviri')}</label></div><div className="l06-steps" aria-label={labels.learn}>{lesson11Topics.map((v,i)=><button className={i===index?'selected':''} key={v.id} aria-current={i===index?'step':undefined} onClick={()=>route('learn',i)}>{i+1} · {v.title[locale]}</button>)}</div><section className="panel l06-journey" {...swipe}><div className="l06-step-title"><div><p className="eyebrow">{index+1} / {lesson11Topics.length}</p><h2>{topic.title[locale]}</h2></div><div className="course-actions"><button className="secondary" aria-label={t('Previous')} disabled={index===0} onClick={()=>move(-1)}><ArrowLeft size={18}/></button><button className="secondary" aria-label={t('Next')} disabled={index===lesson11Topics.length-1} onClick={()=>move(1)}><ArrowRight size={18}/></button></div></div><p className="l06-note">{c('Swipe left/right between groups. Tap any underlined Chinese word for help.','Balayez à gauche/droite entre les groupes. Touchez un mot chinois souligné pour l’aide.','Листайте группы влево/вправо. Нажмите подчёркнутое китайское слово для подсказки.','Gruplar arasında sola/sağa kaydırın. Yardım için altı çizili Çince kelimeye dokunun.')}</p><Lesson11Visual topic={topic.id} locale={locale} selected={selectedExample} onSelect={id=>{setSelectedExample(id);const value=lesson11ById.get(id);const clip=value&&lesson11Audio(value);if(clip)recording.play(clip);}}/>
- <div className="l06-examples">{(lesson11FocusIds[topic.id]??[topic.target]).map(id=>lesson11ById.get(id)!).filter(Boolean).map(example)}</div>
- <details className="l11-library"><summary>{c('All words in this group','Tous les mots du groupe','Все слова этой группы','Bu gruptaki tüm kelimeler')} · {words.length}</summary><div className="l06-words">{words.map(v=><article className="l06-word" key={v.id} data-study-source-id={v.id} data-study-sentence={v.hanzi} data-study-pinyin={v.pinyin} data-study-meaning={v.meaning[locale]}><strong lang="zh-Hans"><StudyText text={v.hanzi} whole anchor={topic.anchor}/></strong><p className="pinyin">{v.pinyin}</p><p className="l11-translation">{v.meaning[locale]}</p><div className="course-actions">{sound(v)}<button className="text-button" aria-label={t('Practice writing')+': '+v.hanzi} onClick={e=>write(v,e.currentTarget)}><PenLine size={17}/></button></div><HskBadge text={v.hanzi}/></article>)}</div></details><section className="l06-grammar"><h3>{c('How the sentence works','Comment se construit la phrase','Как устроена фраза','Cümle nasıl kurulur')}</h3><p className="l06-pattern" lang="zh-Hans">{topic.pattern}</p><p>{topic.note[locale]}</p></section><details className="l11-library"><summary>{c('All examples in this group','Tous les exemples du groupe','Все примеры этой группы','Bu gruptaki tüm örnekler')} · {examples.length}</summary><div className="l06-examples">{examples.map(example)}</div></details>{lesson11Builders[index]&&<Lesson11Builder key={topic.id+'-'+owner} builder={lesson11Builders[index]!} ready={progress.ready} record={progress.record} notify={notify}/>}<div className="l06-bottom"><button className="secondary" disabled={index===0} onClick={()=>move(-1)}><ArrowLeft size={16}/>{t('Previous')}</button><button className="primary" disabled={!progress.ready||busy} onClick={async()=>{setBusy(true);try{if(!studied.has('study:c11-'+topic.id))await progress.record(event('study:c11-'+topic.id,null,true));if(index<lesson11Topics.length-1)move(1);else startChecks();}catch{notify(t('Could not save practice. Keep this worksheet open and try again.'));}finally{setBusy(false);}}}>{index===lesson11Topics.length-1?labels.practice:t('Next')}<ArrowRight size={16}/></button></div></section></>}
+ <div className="l06-examples">{(lesson11FocusIds[topic.id]??[topic.target]).map(id=>lesson11ById.get(id)!).filter(Boolean).map(v=>example(v,'featured'))}</div>
+ <details className="l11-library"><summary>{c('All words in this group','Tous les mots du groupe','Все слова этой группы','Bu gruptaki tüm kelimeler')} · {words.length}</summary><div className="l06-words">{words.map(v=><article className="l06-word" key={v.id} data-study-source-id={v.id} data-study-sentence={v.hanzi} data-study-pinyin={v.pinyin} data-study-meaning={v.meaning[locale]}><strong lang="zh-Hans"><StudyText text={v.hanzi} whole anchor={topic.anchor}/></strong><p className="pinyin">{v.pinyin}</p><p className="l11-translation">{v.meaning[locale]}</p><div className="course-actions">{sound(v)}<button className="text-button" aria-label={t('Practice writing')+': '+v.hanzi} onClick={e=>write(v,e.currentTarget)}><PenLine size={17}/></button></div><HskBadge text={v.hanzi}/></article>)}</div></details><section className="l06-grammar"><h3>{c('How the sentence works','Comment se construit la phrase','Как устроена фраза','Cümle nasıl kurulur')}</h3><p className="l06-pattern" lang="zh-Hans">{topic.pattern}</p><p>{topic.note[locale]}</p></section><details className="l11-library"><summary>{c('All examples in this group','Tous les exemples du groupe','Все примеры этой группы','Bu gruptaki tüm örnekler')} · {examples.length}</summary><div className="l06-examples">{examples.map(v=>example(v,'all'))}</div></details>{lesson11Builders[index]&&<Lesson11Builder key={topic.id+'-'+owner} builder={lesson11Builders[index]!} ready={progress.ready} record={progress.record} notify={notify}/>}<div className="l06-bottom"><button className="secondary" disabled={index===0} onClick={()=>move(-1)}><ArrowLeft size={16}/>{t('Previous')}</button><button className="primary" disabled={!progress.ready||busy} onClick={saveAndAdvance}>{index===lesson11Topics.length-1?labels.practice:t('Next')}<ArrowRight size={16}/></button></div></section></>}
  {tab==='practice'&&<><div className="l06-filters"><label>{c('Topic','Thème','Тема','Konu')}<select value={filter} onChange={e=>{setFilter(e.target.value);setReview(null);setRun(v=>v+1);}}><option value="all">{c('All topics','Tous les thèmes','Все темы','Tüm konular')}</option>{lesson11Topics.map(v=><option key={v.id} value={v.id}>{v.title[locale]}</option>)}</select></label><label>{c('Exercise','Exercice','Упражнение','Alıştırma')}<select value={practiceMode} onChange={e=>{setPracticeMode(e.target.value as 'read'|'listen');setReview(null);setRun(v=>v+1);}}><option value="read">{c('Read without pinyin','Lire sans pinyin','Читать без пиньиня','Pinyin olmadan oku')}</option><option value="listen">{c('Listen without text','Écouter sans texte','Слушать без текста','Metinsiz dinle')}</option></select></label>{review&&<button className="secondary" onClick={()=>startChecks()}>{c('All checks','Tous les tests','Все проверки','Tüm testler')}</button>}</div><Lesson11Practice owner={owner} key={run+'-'+filter+'-'+practiceMode+'-'+owner} ids={review??lesson11Checks.filter(q=>(filter==='all'||q.topic===filter)&&q.mode===practiceMode).map(q=>q.id)} ready={progress.ready} record={progress.record} notify={notify} events={review?undefined:progress.events}/></>}
- {tab==='practice'&&<details className="panel" data-study-assessment="complete"><summary>{c('Read & speak in context','Lire et parler en contexte','Читаем и говорим в контексте','Bağlam içinde oku ve konuş')}</summary><p>{c('Try first, then open the model. This is supported practice, without an independent score.','Essayez avant d’ouvrir le modèle. Pratique aidée, sans score autonome.','Сначала попробуйте сами, затем откройте образец. Практика с поддержкой, без самостоятельной оценки.','Önce deneyin, sonra modeli açın. Bu, bağımsız puan verilmeyen destekli alıştırmadır.')}</p>{lesson11Readings.map((v,i)=><article className="l06-grammar" key={v.id}><h3>{c('Reading','Lecture','Чтение','Okuma')} {i+1}</h3>{v.sentences.map(row=><p className="l06-hanzi" lang="zh-Hans" key={row.id}><StudyText text={row.hanzi}/></p>)}<details><summary>{c('Pronunciation & meaning','Prononciation et sens','Произношение и значение','Telaffuz ve anlam')}</summary>{v.sentences.map(example)}</details></article>)}{lesson11Speaking.map((v,i)=><article className="l06-grammar" key={v.id}><h3>{c('Speaking','Expression orale','Говорение','Konuşma')} {i+1}</h3><p>{v.prompt[locale]}</p><details><summary>{c('Model answer','Réponse modèle','Образец ответа','Örnek cevap')}</summary>{v.answers.map(example)}</details></article>)}</details>}
+ {tab==='practice'&&<details className="panel" data-study-assessment="complete"><summary>{c('Read & speak in context','Lire et parler en contexte','Читаем и говорим в контексте','Bağlam içinde oku ve konuş')}</summary><p>{c('Try first, then open the model. This is supported practice, without an independent score.','Essayez avant d’ouvrir le modèle. Pratique aidée, sans score autonome.','Сначала попробуйте сами, затем откройте образец. Практика с поддержкой, без самостоятельной оценки.','Önce deneyin, sonra modeli açın. Bu, bağımsız puan verilmeyen destekli alıştırmadır.')}</p>{lesson11Readings.map((v,i)=><article className="l06-grammar" key={v.id}><h3>{c('Reading','Lecture','Чтение','Okuma')} {i+1}</h3>{v.sentences.map(row=><p className="l06-hanzi" lang="zh-Hans" key={row.id}><StudyText text={row.hanzi}/></p>)}<details><summary>{c('Pronunciation & meaning','Prononciation et sens','Произношение и значение','Telaffuz ve anlam')}</summary>{v.sentences.map(v=>example(v))}</details></article>)}{lesson11Speaking.map((v,i)=><article className="l06-grammar" key={v.id}><h3>{c('Speaking','Expression orale','Говорение','Konuşma')} {i+1}</h3><p>{v.prompt[locale]}</p><details><summary>{c('Model answer','Réponse modèle','Образец ответа','Örnek cevap')}</summary>{v.answers.map(v=>example(v))}</details></article>)}</details>}
  {tab==='materials'&&<section className="panel"><h2>{labels.materials}</h2><p>{c('Complete hybrid workbook: lesson guide, examples, exercises, Hanzi and Pinyin writing, and answers. 54 pages in each language.','Cahier hybride complet : guide, exemples, exercices, écriture Hanzi et pinyin, corrigés. 54 pages par langue.','Полный гибридный учебник: объяснения, примеры, упражнения, письмо Hanzi и Pinyin, ответы. 54 страницы на каждом языке.','Tam karma çalışma kitabı: ders rehberi, örnekler, alıştırmalar, Hanzi ve Pinyin yazımı, cevaplar. Her dilde 54 sayfa.')}</p><div className="l06-downloads">{lesson11Materials.map(file=><a className="secondary" key={file.id} href={lesson11MaterialHref(file.id)} download={file.filename}><Download size={17}/>{file.label} · PDF</a>)}</div></section>}
- {exploring&&<Lesson11SentenceExplorer notify={notify} onBack={closeExplorer}/>}
+ {exploring&&<Lesson11SentenceExplorer onBack={closeExplorer}/>}
  <dialog className="l06-dialog" ref={writingDialog} aria-label={t('Practice writing')} onCancel={e=>{e.preventDefault();closeModal();}} onClose={()=>setWriting(null)}><header><h2>{t('Practice writing')}</h2><button className="secondary" aria-label={c('Close','Fermer','Закрыть','Kapat')} onClick={closeModal}><X size={20}/></button></header>{writing&&<SharedWriting key={writing.id} hanzi={writing.hanzi} contextual={{text:writing.hanzi,pinyin:writing.pinyin,meaning:writing.meaning[locale],sourceId:writing.id}} pinyin={writing.pinyin} meaning={writing.meaning[locale]} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} onBack={closeModal}/>}</dialog></div>;
 }
 type PracticeProps={ready:boolean;record:(e:CourseEvent)=>Promise<void>;notify:(s:string)=>void};
