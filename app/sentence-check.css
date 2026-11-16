@@ -1,0 +1,125 @@
+.sentence-check {
+  width: min(100%, 760px);
+  margin-inline: auto;
+  min-width: 0;
+}
+
+.sentence-check-form,
+.sentence-check-result {
+  display: grid;
+  gap: 16px;
+  padding: clamp(16px, 4vw, 28px);
+}
+
+.sentence-check-form label {
+  font-weight: 650;
+}
+
+.sentence-check-form textarea {
+  width: 100%;
+  min-height: 115px;
+  resize: vertical;
+  padding: 12px 14px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font: inherit;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.sentence-check-examples,
+.sentence-check-reading button,
+.sentence-check-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sentence-check-examples {
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.sentence-check :is(.primary, .secondary) {
+  min-height: 44px;
+  justify-self: start;
+}
+
+.sentence-check .primary:disabled {
+  cursor: default;
+  opacity: .65;
+}
+
+.sentence-check-result {
+  margin-top: 16px;
+  overflow-wrap: anywhere;
+}
+
+.sentence-check-result :is(h2, h3, p),
+.sentence-check-message {
+  margin: 0;
+}
+
+.sentence-check-status {
+  width: fit-content;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  background: var(--sage);
+}
+
+.sentence-check-status[data-status="corrected"] {
+  background: var(--peach);
+}
+
+.sentence-check-status[data-status="uncertain"] {
+  background: var(--yellow);
+}
+
+.sentence-check-reading,
+.sentence-check-explanation {
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+
+.sentence-check-reading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+}
+
+.sentence-check-reading h3,
+.sentence-check-explanation h3 {
+  font-size: .88rem;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+
+.sentence-check-hanzi {
+  font-size: clamp(1.3rem, 4vw, 1.7rem);
+  line-height: 1.6;
+}
+
+.sentence-check-explanation p {
+  line-height: 1.55;
+}
+
+.sentence-check-message {
+  color: var(--muted);
+}
+
+.sentence-check-live .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

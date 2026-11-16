@@ -101,13 +101,14 @@ import {sceneLab,sceneLabHref,type SceneLab} from './scene-lab-model';
 import {LabNavIcon} from './scene-lab';
 const SceneLabView=lazy(()=>import('./scene-lab'));
 const StudyStudio = lazy(() => import("./study-studio"));
+const SentenceCheck = lazy(() => import("./sentence-check").then(module => ({default:module.SentenceCheck})));
 const MyDayLesson = lazy(() => import("./my-day-lesson"));
 const ShuoshuoCompanion = lazy(() => import("./shuoshuo-companion"));
 const ShuoshuoLesson = lazy(() => import("./shuoshuo-lesson"));
 const PrivateLessons = lazy(() => import("./private-lessons"));
 const TodayCourseReviews = lazy(() => import("./today-course-reviews"));
 const TodayRecognition = lazy(() => import("./today-recognition"));
-type View = "labs" | "shuoshuo-lesson" | "private-lessons" | "shuoshuo" | "myday" | "studio" | "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
+type View = "sentence-check" | "labs" | "shuoshuo-lesson" | "private-lessons" | "shuoshuo" | "myday" | "studio" | "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
 export default function StudyApp({
   user,
   onSignIn,
@@ -133,9 +134,10 @@ export default function StudyApp({
   const [myDayOrigin,setMyDayOrigin] = useState<View>("lessons");
   const [studioVisited,setStudioVisited] = useState(false);
   const [studioMenu,setStudioMenu] = useState(false);
+  const sentenceCheckOrigin = useRef<{url:string;scroll:number}|null>(null);
   const [lab,setLab]=useState<SceneLab>("room");
   const [atlasReturn, setAtlasReturn] = useState<{url:string;scroll:number}|null>(null);
-  useEffect(() => { if (new URLSearchParams(window.location.search).get("view")==="labs") {setView("labs");setLab(sceneLab(new URLSearchParams(window.location.search).get("lab")));} else if (new URLSearchParams(window.location.search).get("lesson") === "shuoshuo-morning") setView("shuoshuo-lesson"); else if (new URLSearchParams(window.location.search).get("private") === "1") setView("private-lessons"); else if (new URLSearchParams(window.location.search).get("companion") === "shuoshuo") setView("shuoshuo"); else if (["my-day-01-v2","voice-live-2026-11-03","my-day-full-2026-11-03"].includes(new URLSearchParams(window.location.search).get("rehearsal")??"")) setView("myday"); else if (new URLSearchParams(window.location.search).get("study") === "studio") {setView("studio");setStudioVisited(true);} else if (new URLSearchParams(window.location.search).get("grammar") === "hsk3") setView("grammar"); else if (new URLSearchParams(window.location.search).get("atlas") === "1") setView("atlas"); else if (new URLSearchParams(window.location.search).get("course") === "intensive") setView("course"); }, []);
+  useEffect(() => { if (new URLSearchParams(window.location.search).get("view")==="labs") {setView("labs");setLab(sceneLab(new URLSearchParams(window.location.search).get("lab")));} else if (new URLSearchParams(window.location.search).get("lesson") === "shuoshuo-morning") setView("shuoshuo-lesson"); else if (new URLSearchParams(window.location.search).get("private") === "1") setView("private-lessons"); else if (new URLSearchParams(window.location.search).get("companion") === "shuoshuo") setView("shuoshuo"); else if (["my-day-01-v2","voice-live-2026-11-03","my-day-full-2026-11-03"].includes(new URLSearchParams(window.location.search).get("rehearsal")??"")) setView("myday"); else if (new URLSearchParams(window.location.search).get("study") === "sentence-check") setView("sentence-check"); else if (new URLSearchParams(window.location.search).get("study") === "studio") {setView("studio");setStudioVisited(true);} else if (new URLSearchParams(window.location.search).get("grammar") === "hsk3") setView("grammar"); else if (new URLSearchParams(window.location.search).get("atlas") === "1") setView("atlas"); else if (new URLSearchParams(window.location.search).get("course") === "intensive") setView("course"); }, []);
   const [notebookEvents, setEvents] = useState<LearningEvent[]>([]);
   const [sync, setSync] = useState(t("Loading your notebook…"));
   const [db, setDb] = useState<IDBDatabase | null>(null);
@@ -511,13 +513,26 @@ export default function StudyApp({
   function openShuoshuoLesson(){setShuoshuoLessonOrigin(view==="studio"?"studio":"lessons");changeView("shuoshuo-lesson");}
   function openCompanion(){setCompanionOrigin(view==="studio"?"studio":"lessons");changeView("shuoshuo");}
   function openMyDay(){setMyDayOrigin(view==="studio"?"studio":"lessons");changeView("myday");}
+  function openSentenceCheck() {
+    sentenceCheckOrigin.current={url:location.pathname+location.search+location.hash,scroll:window.scrollY};
+    changeView("sentence-check");
+  }
+  function returnFromSentenceCheck() {
+    const origin=sentenceCheckOrigin.current;
+    changeView("studio");
+    if(origin) {
+      history.replaceState(history.state,"",origin.url);
+      requestAnimationFrame(()=>window.scrollTo({top:origin.scroll,behavior:"instant"}));
+    }
+    sentenceCheckOrigin.current=null;
+  }
   function changeView(v: View) {
     setStudioMenu(false);
     if(v==='practice'){const previous=lastWriting.current;if(previous)setWritingLayout(previous.layout);openPractice(previous?.item??selected,previous?.mode??mode);if(previous)setWritingOrigin(previous.origin);return;}
     if(v==="atlas"&&atlasReturn){returnToAtlas();return;}
     setAtlasReturn(null);
     if(v==="studio")setStudioVisited(true);
-    window.history.replaceState(null, "", window.location.pathname + (v === "labs" ? sceneLabHref(lab).slice(1) : v === "shuoshuo-lesson" ? "?lesson=shuoshuo-morning" : v === "private-lessons" ? "?private=1" : v === "shuoshuo" ? "?companion=shuoshuo" : v === "myday" ? "?rehearsal=my-day-01-v2" : v === "studio" ? "?study=studio" : v === "grammar" ? "?grammar=hsk3" : v === "atlas" ? "?atlas=1" : v === "course" ? "?course=intensive" : v === "lessons" ? "?study=library&layout="+libraryLayout+(practiceSelection?"&set=selected":"")+"&level="+level : ""));
+    window.history.replaceState(null, "", window.location.pathname + (v === "labs" ? sceneLabHref(lab).slice(1) : v === "shuoshuo-lesson" ? "?lesson=shuoshuo-morning" : v === "private-lessons" ? "?private=1" : v === "shuoshuo" ? "?companion=shuoshuo" : v === "myday" ? "?rehearsal=my-day-01-v2" : v === "studio" ? "?study=studio" : v === "sentence-check" ? "?study=sentence-check" : v === "grammar" ? "?grammar=hsk3" : v === "atlas" ? "?atlas=1" : v === "course" ? "?course=intensive" : v === "lessons" ? "?study=library&layout="+libraryLayout+(practiceSelection?"&set=selected":"")+"&level="+level : ""));
     stopAudio();
 
     setView(v);
@@ -575,7 +590,7 @@ export default function StudyApp({
           ).map((n) => (
             <button
               key={n.id}
-              className={(view==='practice'&&skill==='meaning'?'reviews':view) === n.id ? "nav-item active" : "nav-item"}
+              className={(view==='practice'&&skill==='meaning'?'reviews':view==='sentence-check'?'studio':view) === n.id ? "nav-item active" : "nav-item"}
               title={n.title}
               onClick={() => changeView(n.id)}
             >
@@ -630,7 +645,7 @@ export default function StudyApp({
           <span>
             <span className="breadcrumb">{t("My study space")}</span>
             <ChevronRight size={13} />
-            {view === "labs" ? "3D Lab" : view === "shuoshuo-lesson" ? "A morning with Shuoshuo" : view === "private-lessons" ? "Private lessons" : view === "shuoshuo" ? "Shuoshuo · Vocabulary companion" : view === "myday" ? "My Day · Speaking" : view === "studio" ? "StudyStudio" : view === "grammar" ? t("HSK3 grammar") : view === "atlas" ? t("Cloud Atlas") : view === "course" ? t("Intensive course") : view === "practice"
+            {view === "labs" ? "3D Lab" : view === "shuoshuo-lesson" ? "A morning with Shuoshuo" : view === "private-lessons" ? "Private lessons" : view === "shuoshuo" ? "Shuoshuo · Vocabulary companion" : view === "myday" ? "My Day · Speaking" : view === "studio" || view === "sentence-check" ? "StudyStudio" : view === "grammar" ? t("HSK3 grammar") : view === "atlas" ? t("Cloud Atlas") : view === "course" ? t("Intensive course") : view === "practice"
               ? skill==='meaning'?t('Flashcards'):t("Writing studio")
               : view === "today"
                 ? t("Today")
@@ -697,7 +712,8 @@ export default function StudyApp({
           {view==="private-lessons"&&<Suspense fallback={<p role="status">Opening local library…</p>}><PrivateLessons key={user?.id??"guest"} owner={user?.id??null} db={db} onBack={()=>changeView("lessons")} onSignIn={onSignIn}/></Suspense>}
           {view==="shuoshuo"&&<Suspense fallback={<p role="status">Opening vocabulary companion…</p>}><ShuoshuoCompanion key={user?.id??"guest"} owner={user?.id??null} db={db} notify={notify} onBack={()=>changeView(companionOrigin)}/></Suspense>}
           {view==="myday"&&<Suspense fallback={<p role="status">Opening your lesson…</p>}><MyDayLesson slowAudio={slowAudio} onSlowAudio={setSlowAudio} key={user?.id??"guest"} owner={user?.id??"guest"} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} record={record} notify={notify} onBack={()=>changeView(myDayOrigin)}/></Suspense>}
-          {studioVisited&&<div hidden={view!=="studio"}><Suspense fallback={<p role="status">Opening StudyStudio…</p>}><StudyStudio key={user?.id??"guest"} owner={user?.id??null} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} record={record} onExit={()=>changeView("today")} onMyDay={openMyDay} onCompanion={openCompanion} onShuoshuoLesson={openShuoshuoLesson} menuOpen={studioMenu} onMenu={()=>setStudioMenu(v=>!v)}/></Suspense></div>}
+          {view==="sentence-check"&&<Suspense fallback={<p role="status">{t("Loading your notebook…")}</p>}><SentenceCheck locale={locale} onBack={returnFromSentenceCheck}/></Suspense>}
+          {studioVisited&&<div hidden={view!=="studio"}><Suspense fallback={<p role="status">Opening StudyStudio…</p>}><StudyStudio key={user?.id??"guest"} owner={user?.id??null} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} record={record} onExit={()=>changeView("today")} onMyDay={openMyDay} onCompanion={openCompanion} onShuoshuoLesson={openShuoshuoLesson} onSentenceCheck={openSentenceCheck} menuOpen={studioMenu} onMenu={()=>setStudioMenu(v=>!v)}/></Suspense></div>}
           {(view === "atlas" || atlasReturn) && <div hidden={view!=="atlas"}><Suspense fallback={<p role="status">{t("Loading your notebook…")}</p>}><Atlas owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} onWord={openAtlasWord}/></Suspense></div>}
           {view==='practice'&&!session&&!atlasReturn&&<button className="secondary atlas-return-button" onClick={returnFromWriting}><ChevronLeft size={16}/>{({en:'Back to learning material',fr:'Retour au cours',ru:'Назад к материалу',tr:'Ders materyaline dön'})[locale]}</button>}
           {view==="practice" && atlasReturn && <button className="secondary atlas-return-button" onClick={returnToAtlas}><ArrowRight size={16} style={{transform:"rotate(180deg)"}}/>{t("Back to Cloud Atlas")}</button>}
