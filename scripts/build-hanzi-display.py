@@ -5,6 +5,7 @@ Run after preparing character assets. fontTools is an authoring dependency only.
 """
 import argparse
 import hashlib,json
+from io import BytesIO
 from pathlib import Path
 from fontTools.fontBuilder import FontBuilder
 from fontTools.pens.ttGlyphPen import TTGlyphPen
@@ -42,9 +43,17 @@ def build(extend_supplement=False):
  font.setupOS2(sTypoAscender=900,sTypoDescender=-124,usWinAscent=1024,usWinDescent=256)
  font.setupPost();font.setupMaxp();font.font.recalcTimestamp=False
  font.font['head'].created=font.font['head'].modified=2082844800
- font.font.flavor='woff';out=ROOT/'public/fonts/ChineseOSStroke.woff';font.save(out)
- manifest={'source':'Local Hanzi Writer stroke outlines, converted for passive text display','glyphCount':len(data),'characters':''.join(data),'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'outlineSources':{ch:hashlib.sha256(json.dumps(d['strokes'],ensure_ascii=False,separators=(',',':')).encode()).hexdigest() for ch,d in data.items()},'licenses':['/licenses/hanzi-writer-data-ARPHICPL.TXT','/licenses/makemeahanzi-COPYING.txt']}
- manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+ font.font.flavor='woff'
+ buffer=BytesIO()
+ font.save(buffer)
+ font_bytes=buffer.getvalue()
+ digest=hashlib.sha256(font_bytes).hexdigest()
+ # Published font paths are immutable. Keep the legacy paths for old clients.
+ suffix='-'+digest[:12] if extend_supplement else ''
+ out=manifest_path.parent/f'ChineseOSStroke{suffix}.woff'
+ out.write_bytes(font_bytes)
+ manifest={'source':'Local Hanzi Writer stroke outlines, converted for passive text display','glyphCount':len(data),'characters':''.join(data),'sha256':digest,'outlineSources':{ch:hashlib.sha256(json.dumps(d['strokes'],ensure_ascii=False,separators=(',',':')).encode()).hexdigest() for ch,d in data.items()},'licenses':['/licenses/hanzi-writer-data-ARPHICPL.TXT','/licenses/makemeahanzi-COPYING.txt']}
+ (manifest_path.parent/f'hanzi-display{suffix}.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
  print('Stroke font:',len(data),'characters,',out.stat().st_size,'bytes')
 if __name__=='__main__':
  parser=argparse.ArgumentParser(description=__doc__)
