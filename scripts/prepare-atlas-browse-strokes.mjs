@@ -8,7 +8,9 @@ const atlasRelatedGlyphs=['摹','嫫'];
 /** Ship Atlas browse glyphs from the already pinned, attributed Hanzi Writer data. */
 export async function prepareAtlasBrowseStrokes(target='public/characters'){
  const {characters}=JSON.parse(await readFile('data/hsk-browse-index.json','utf8'));
- const glyphs=[...new Set([...characters.map(row=>row.hanzi),...atlasRelatedGlyphs])].sort();
+ const supplement=JSON.parse(await readFile('data/hanzi-stroke-supplement.json','utf8'));
+ const supplementalGlyphs=Object.values(supplement).flatMap(value=>Array.from(value));
+ const glyphs=[...new Set([...characters.map(row=>row.hanzi),...atlasRelatedGlyphs,...supplementalGlyphs])].sort();
  await mkdir(target,{recursive:true});
  let added=0;
  for(const glyph of glyphs){

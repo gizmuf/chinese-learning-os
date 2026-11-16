@@ -3,6 +3,7 @@
 Uses the already licensed local Hanzi Writer outlines, never a visual guess.
 Run after preparing character assets. fontTools is an authoring dependency only.
 """
+import argparse
 import hashlib,json
 from pathlib import Path
 from fontTools.fontBuilder import FontBuilder
@@ -10,9 +11,22 @@ from fontTools.pens.ttGlyphPen import TTGlyphPen
 from fontTools.pens.cu2quPen import Cu2QuPen
 from fontTools.svgLib.path import parse_path
 ROOT=Path(__file__).resolve().parents[1]
-def build():
- data={p.stem:json.loads(p.read_text()) for p in sorted((ROOT/'public/characters').glob('*.json')) if len(p.stem)==1}
+def build(extend_supplement=False):
+ manifest_path=ROOT/'public/fonts/hanzi-display.json'
+ source_dir=ROOT/'public/characters'
+ if extend_supplement:
+  # Build just the committed display set plus the scoped additions, even when
+  # a development checkout has staged many other downloadable stroke files.
+  previous=json.loads(manifest_path.read_text())
+  supplement=json.loads((ROOT/'data/hanzi-stroke-supplement.json').read_text())
+  characters=sorted(set(previous['characters']+''.join(supplement.values())))
+  sources=[source_dir/(ch+'.json') for ch in characters]
+ else:
+  sources=sorted(source_dir.glob('*.json'))
+ data={p.stem:json.loads(p.read_text()) for p in sources if len(p.stem)==1}
  data={ch:d for ch,d in data.items() if d.get('strokes') and all(isinstance(s,str) and s.strip() for s in d['strokes'])}
+ if extend_supplement and len(data)!=len(characters):
+  raise ValueError('Missing trusted stroke outline for a requested glyph')
  order=['.notdef']+['uni'+format(ord(ch),'X') for ch in data]
  font=FontBuilder(1024,isTTF=True);font.setupGlyphOrder(order)
  font.setupCharacterMap({ord(ch):'uni'+format(ord(ch),'X') for ch in data})
@@ -30,6 +44,9 @@ def build():
  font.font['head'].created=font.font['head'].modified=2082844800
  font.font.flavor='woff';out=ROOT/'public/fonts/ChineseOSStroke.woff';font.save(out)
  manifest={'source':'Local Hanzi Writer stroke outlines, converted for passive text display','glyphCount':len(data),'characters':''.join(data),'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'outlineSources':{ch:hashlib.sha256(json.dumps(d['strokes'],ensure_ascii=False,separators=(',',':')).encode()).hexdigest() for ch,d in data.items()},'licenses':['/licenses/hanzi-writer-data-ARPHICPL.TXT','/licenses/makemeahanzi-COPYING.txt']}
- (ROOT/'public/fonts/hanzi-display.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+ manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
  print('Stroke font:',len(data),'characters,',out.stat().st_size,'bytes')
-if __name__=='__main__':build()
+if __name__=='__main__':
+ parser=argparse.ArgumentParser(description=__doc__)
+ parser.add_argument('--extend-supplement',action='store_true',help='Keep the current display set and add the curated supplement')
+ build(parser.parse_args().extend_supplement)
