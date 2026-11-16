@@ -58,12 +58,17 @@ test('every family anchor and example opens with a complete lesson gloss in ever
  assert.ok(existsSync('public'+practicalLessonAudio[sentence.text+'。']));
 });
 
-test('family practice covers both lesson groups with complete answer feedback',()=>{
- assert.deepEqual(Object.keys(practicalFamilyExercises),['木 · 本 · 末 · 未','再 · 在']);
+test('family practice covers every lesson group with complete answer feedback',()=>{
+ assert.deepEqual(Object.keys(practicalFamilyExercises),practicalLesson.families.map(group=>group.anchor));
  const ids=new Set();
- for(const [family,{options,questions}] of Object.entries(practicalFamilyExercises)){
-  assert.ok(practicalLesson.families.some(group=>group.anchor===family),family);
-  assert.deepEqual(options,family.split(' · '));
+ for(const {anchor,examples} of practicalLesson.families){
+  const {options,questions}=practicalFamilyExercises[anchor];
+  if(anchor.includes(' · '))assert.deepEqual(options,anchor.split(' · '));
+  else{
+   assert.equal(options.length,4,anchor);
+   assert.ok(options.every(word=>word.includes(anchor) && examples.includes(word)),anchor);
+  }
+  assert.equal(new Set(options).size,options.length,anchor);
   assert.equal(questions.length,4);
   assert.deepEqual(new Set(questions.map(question=>question.answer)),new Set(options));
   for(const question of questions){
@@ -76,4 +81,5 @@ test('family practice covers both lesson groups with complete answer feedback',(
    }
   }
  }
+ assert.equal(ids.size,24);
 });

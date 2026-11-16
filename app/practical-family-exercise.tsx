@@ -11,6 +11,13 @@ const copy = {
  tr: {start:'Bu grupla alıştırma yap', prompt:'Eksik karakteri seçin', correct:'Doğru.', incorrect:'Doğru karakter', next:'Sonraki soru', finish:'Sonucu gör', result:'Doğru yanıtlar', again:'Tekrar alıştırma yap'},
 };
 
+const wordCopy = {
+ en: {prompt:'Choose the missing word', incorrect:'Correct word'},
+ fr: {prompt:'Choisissez le mot manquant', incorrect:'Mot correct'},
+ ru: {prompt:'Выберите пропущенное слово', incorrect:'Правильное слово'},
+ tr: {prompt:'Eksik kelimeyi seçin', incorrect:'Doğru kelime'},
+};
+
 export default function FamilyExercise({family}: {family:string}) {
  const exercises: Readonly<Partial<Record<string, PracticalFamilyExercise>>> = practicalFamilyExercises;
  const exercise = exercises[family];
@@ -26,6 +33,7 @@ function ExerciseRound({exercise}: {exercise:PracticalFamilyExercise}) {
  const heading = useRef<HTMLHeadingElement>(null);
  const labelId = useId();
  const {questions, options} = exercise;
+ const terms = options.some(option => [...option].length>1) ? wordCopy[locale] : labels;
  const question = questions[index];
  const answered = choice !== null;
 
@@ -53,7 +61,7 @@ function ExerciseRound({exercise}: {exercise:PracticalFamilyExercise}) {
  }
 
  return <section className="practical-family-exercise" aria-labelledby={labelId} data-study-assessment={answered?'complete':'blocked'}>
-  <h4 id={labelId} ref={heading} tabIndex={-1}>{labels.prompt} <span>{index+1}/{questions.length}</span></h4>
+  <h4 id={labelId} ref={heading} tabIndex={-1}>{terms.prompt} <span>{index+1}/{questions.length}</span></h4>
   <p className="practical-family-sentence" lang="zh-Hans">{question.before}<span className="practical-family-blank">＿</span>{question.after}</p>
   <div className="practical-family-options" role="group" aria-labelledby={labelId}>
    {options.map(option => <button className="secondary" type="button" key={option} lang="zh-Hans"
@@ -66,7 +74,7 @@ function ExerciseRound({exercise}: {exercise:PracticalFamilyExercise}) {
   </div>
   <div role="status" aria-live="polite">
    {answered && <div className="practical-family-feedback">
-    <p><strong>{choice===question.answer?labels.correct:labels.incorrect+' '}</strong>
+    <p><strong>{choice===question.answer?labels.correct:terms.incorrect+' '}</strong>
      {choice!==question.answer && <strong lang="zh-Hans">{question.answer}</strong>}</p>
     <p className="practical-family-sentence" lang="zh-Hans">{question.before}<mark>{question.answer}</mark>{question.after}</p>
     <p lang="zh-Latn">{question.pinyin}</p>
