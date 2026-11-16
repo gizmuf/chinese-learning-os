@@ -13,7 +13,7 @@ test('official combined 7–9 scope survives routes, never invents separate adva
 });
 test('all 3088 official recognition characters can be browsed; supplied incomplete IDS stays incomplete',()=>{
  const all=extended.extendedCharacters('en','7-9');assert.equal(all.length,3088);assert.equal(new Set(all.map(x=>x.hanzi)).size,3088);
- for(const [level,count] of [[3,655],[4,1096],[5,1527],[6,1940],['7-9',3088]])assert.equal(extended.extendedCharacters('en',level).length,count);
+ for(const [level,count] of [[1,246],[2,371],[3,655],[4,1096],[5,1527],[6,1940],['7-9',3088]])assert.equal(extended.extendedCharacters('en',level).length,count);
  const missing=raw.characters.filter(r=>r.unresolvedComponents.length);assert.ok(missing.length>0);for(const row of missing)assert.equal(all.find(x=>x.hanzi===row.hanzi).complete,false);
 });
 test('no guessed readings for absent dictionary headwords; source limitation is explicit',()=>{

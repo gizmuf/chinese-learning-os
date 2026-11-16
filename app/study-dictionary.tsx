@@ -140,7 +140,7 @@ export function StudyDictionaryDialog({entry: suppliedEntry,dictionary,dialog,op
    {parts&&parts.parts.length>0&&!(parts.parts.length===1&&parts.parts[0].text===entry.text)&&<section className="sp-dictionary-breakdown" aria-label={parts.sentence?labels.words:parts.phrase?labels.phrase:labels.characters}>
     <h3>{parts.sentence?labels.words:parts.phrase?labels.phrase:labels.characters}</h3>
     {!parts.sentence&&!parts.phrase&&<p className="sp-dictionary-note">{labels.note}</p>}
-    <div className="sp-dictionary-entries">{parts.parts.map((part,i)=><button type="button" key={i} onClick={e=>select(part.text,e.currentTarget)}><strong lang="zh-Hans">{part.text}</strong><span><span className="sp-reading">{part.entry?.pinyin}</span><span>{part.entry?.meaning||labels.missing}</span><HskBadge text={part.text}/></span><ArrowRight size={15}/></button>)}</div>
+    <div className="sp-dictionary-entries">{parts.parts.map((part,i)=><button type="button" key={i} onClick={e=>select(part.text,e.currentTarget)}><strong lang="zh-Hans">{part.text}</strong><span><span className="sp-reading">{part.entry?.pinyin}</span><span>{part.entry?.meaning||labels.missing}</span><HskBadge text={part.text} kind="character"/></span><ArrowRight size={15}/></button>)}</div>
    </section>}
    {structure&&<DictionaryComponentGuide text={entry.text} structure={structure} dictionary={dictionary} onLookup={(text,trigger)=>select(text,trigger,'component')}/>}
    {story&&<DictionaryMemoryStory key={story} story={story}/>}

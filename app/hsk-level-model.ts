@@ -13,9 +13,16 @@ export function hskLevelIndex(raw:unknown):HskIndex{
  }
  return {words,characters};
 }
-export function hskClassification(index:HskIndex,text:string){
- const value=canonicalDictionaryText(text);
- if(!value||!/^\p{Script=Han}+$/u.test(value))return null;
- const kind=Array.from(value).length===1?'character':'word';
- return {kind,levels:(kind==='character'?index.characters:index.words).get(value)??[]};
+export function hskClassification(index:HskIndex,text:string,preferredKind?:'word'|'character'){
+ if(!/^\p{Script=Han}+$/u.test(text))return null;
+ const kind=preferredKind??(Array.from(text).length===1?'character':'word');
+ const table=kind==='character'?index.characters:index.words;
+ const alias=table.has(text)?text:canonicalDictionaryText(text)??text;
+ const levels=table.get(alias);
+ if(levels)return {kind,levels};
+ if(kind==='character'&&!preferredKind){
+  const wordLevels=index.words.get(text)??index.words.get(alias);
+  if(wordLevels)return {kind:'word' as const,levels:wordLevels};
+ }
+ return {kind,levels:[]};
 }

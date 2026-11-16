@@ -9,7 +9,7 @@ test('all badges share one metadata request, retain the existing subtle badge cl
  assert.equal(calls,1);assert.equal(r.root.findAllByProps({className:'dictionary-hsk-badge'}).length,3);
  await m.act(async()=>{resolve(payload);await Promise.resolve();});
  const badges=r.root.findAllByType('small');assert.deepEqual(badges.map(b=>b.children.join('')),['HSK 4','HSK 4','HSK 7–9']);assert.equal(badges[0].props['data-hsk-kind'],'character');assert.equal(badges[1].props['data-hsk-kind'],'word');
- await m.act(()=>r.update(m.createElement(m.Badge,{text:'讠'})));assert.equal(r.root.findByType('small').children.join(''),'HSK —');assert.equal(calls,1);await m.act(()=>r.unmount());
+ await m.act(()=>r.update(m.createElement(m.Badge,{text:'讠'})));assert.equal(r.root.findByType('small').children.join(''),'Outside HSK');assert.equal(calls,1);await m.act(()=>r.unmount());
 });
 test('metadata failure does not label a word as unlisted or break lookup, and reopening retries',async()=>{
  const m=module();let calls=0;globalThis.__hskFetch=async()=>{if(++calls===1)throw Error('offline');return payload;};let r;

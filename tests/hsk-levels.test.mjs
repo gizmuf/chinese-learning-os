@@ -18,3 +18,23 @@ test('no level is invented for unlisted components, other Hanzi or whole sentenc
  assert.equal(m.hskClassification(index,'HSK'),null);assert.equal(m.hskClassification(index,''),null);
  assert.throws(()=>m.hskLevelIndex({version:1,words:{'1':'你'},characters:{'1':'你'}}));
 });
+
+test('every exact syllabus word and character gets its published levels in the appropriate role',()=>{
+ for(const [word,levels] of index.words)assert.deepEqual(m.hskClassification(index,word,'word'),{kind:'word',levels},word);
+ for(const [glyph,levels] of index.characters)assert.deepEqual(m.hskClassification(index,glyph,'character'),{kind:'character',levels},glyph);
+ assert.deepEqual(m.hskClassification(index,'青','word'),{kind:'word',levels:['5']});
+});
+
+test('the exam list contains all HSK 1–3 characters and the distinct official writing subset',async()=>{
+ const exam=JSON.parse(readFileSync('data/hsk-exam-characters.json'));
+ assert.deepEqual(exam.recognition,data.characters);
+ const compiled=await build({entryPoints:['app/hsk-exam-model.ts'],bundle:true,platform:'node',format:'esm',write:false});
+ const {examCharacters}=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+ for(const [level,recognition,writing] of [['1',246,100],['2',371,100],['3',655,250]]){
+  const read=examCharacters(level,'recognition'),write=examCharacters(level,'writing');
+  assert.equal(new Set(read).size,recognition);
+  assert.equal(new Set(write).size,writing);
+  for(const glyph of write)assert.ok(examCharacters(level==='1'?'2':level,'recognition').includes(glyph),glyph);
+  for(const glyph of read)assert.ok(JSON.parse(readFileSync('public/characters/'+glyph+'.json')).strokes.length,glyph);
+ }
+});
