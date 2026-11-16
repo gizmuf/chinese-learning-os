@@ -21,7 +21,7 @@ test('sends only the submitted sentence and locale with the teacher guide to fix
   const actual = await checkSentenceWithDeepSeek('inert-test-key', input, async (url, options) => {
     times += 1;
     assert.equal(url, 'https://api.deepseek.com/chat/completions');
-    assert.equal(options.redirect, 'error');
+    assert.equal(options.redirect, 'manual');
     assert.equal(options.headers.Authorization, 'Bearer inert-test-key');
     assert.ok(options.signal instanceof AbortSignal);
     const payload = JSON.parse(options.body);
@@ -39,7 +39,7 @@ test('sends only the submitted sentence and locale with the teacher guide to fix
 
 test('rejects invalid or truncated AI feedback and never retries the paid call', async () => {
   for (const mocked of [completion(correction, 'length'), completion({ ...correction, unrelated: 'extra' }),
-    completion({ ...correction, natural: '他比我更高。' }), new Response('provider detail', { status: 429 })]) {
+    completion({ ...correction, natural: '他比我更高。' }), Response.redirect('https://example.com/', 302), new Response('provider detail', { status: 429 })]) {
     let times = 0;
     await assert.rejects(checkSentenceWithDeepSeek('inert-test-key', input, async () => {
       times++;
