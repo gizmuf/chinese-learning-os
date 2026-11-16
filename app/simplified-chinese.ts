@@ -5,10 +5,20 @@ const canonicalWords=new Set<string>(raw.canonicalWords);
 const sharedCharacters=new Set<string>(raw.sharedCharacters);
 const traditionalCharacters=new Set(Object.keys(aliases).filter(text=>Array.from(text).length===1&&!sharedCharacters.has(text)));
 function readingKey(value:string){return value.replace(/u:/gi,'v').normalize('NFD').replace(/u\u0308/gi,'v').toLowerCase().split(/[\s’'·-]+/).filter(Boolean).map(syllable=>{const digit=syllable.match(/[1-5]/)?.[0],mark=syllable.match(/[\u0304\u0301\u030c\u0300]/)?.[0];return syllable.replace(/[\u0300-\u036f1-5]/g,'')+(digit??(mark?String(['\u0304','\u0301','\u030c','\u0300'].indexOf(mark)+1):'5'));}).join('');}
+export function dictionaryReadingEquivalent(text:string,pinyin:string):string|undefined {
+ const choices=ambiguous[text];
+ if(!choices||!pinyin)return;
+ const key=readingKey(pinyin);
+ const matches=new Set(Object.entries(choices.readings).filter(([reading])=>readingKey(reading)===key).flatMap(([,values])=>values));
+ return matches.size===1?[...matches][0]:undefined;
+}
 /** Lexical aliases only. Actual parts, radicals, IDS and stroke paths must not pass through this adapter. */
 export function canonicalDictionaryText(text:string,pinyin?:string):string|undefined{
  const choices=ambiguous[text];
- if(choices&&pinyin){const key=readingKey(pinyin),matches=new Set(Object.entries(choices.readings).filter(([reading])=>readingKey(reading)===key).flatMap(([,values])=>values));if(matches.size===1)return [...matches][0];}
+ if(pinyin){
+  const matched=dictionaryReadingEquivalent(text,pinyin);
+  if(matched)return matched;
+ }
  if(choices&&!choices.canonical)return;
  if(sharedCharacters.has(text))return text;
  if(Object.hasOwn(aliases,text))return aliases[text];

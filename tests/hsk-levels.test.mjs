@@ -38,3 +38,24 @@ test('the exam list contains all HSK 1–3 characters and the distinct official 
   for(const glyph of read)assert.ok(JSON.parse(readFileSync('public/characters/'+glyph+'.json')).strokes.length,glyph);
  }
 });
+
+test('metadata requires complete verified per-band counts for both tables',()=>{
+ const incomplete={...data,words:{...data.words,'3':data.words['3'].split('|').slice(1).join('|')}};
+ assert.throws(()=>m.hskLevelIndex(incomplete),/Invalid HSK band/);
+ const malformed={...data,characters:{...data.characters,'7-9':'A'+[...data.characters['7-9']].slice(1).join('')}};
+ assert.throws(()=>m.hskLevelIndex(malformed),/Invalid HSK band/);
+});
+test('HSK asset transport distinguishes intact compressed and decoded data from corruption',async()=>{
+ const {outputFiles:[resource]}=await build({entryPoints:['app/dictionary-client.ts'],bundle:true,platform:'node',format:'esm',write:false});
+ const api=await import('data:text/javascript;base64,'+Buffer.from(resource.text).toString('base64'));
+ const previous=globalThis.fetch;
+ try{
+  for(const body of [bytes,gunzipSync(bytes)]){
+   globalThis.fetch=async()=>new Response(body);
+   assert.deepEqual((await api.loadHskLevelResource()).characters,data.characters);
+  }
+  const altered={...data,characters:{...data.characters,'1':data.characters['1'].split('').reverse().join('')}};
+  globalThis.fetch=async()=>new Response(JSON.stringify(altered));
+  await assert.rejects(()=>api.loadHskLevelResource(),/published fingerprint/);
+ }finally{globalThis.fetch=previous;}
+});
