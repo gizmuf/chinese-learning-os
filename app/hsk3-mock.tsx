@@ -1,14 +1,17 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Clock3, Ear } from 'lucide-react';
+import { Clock3, Ear, ListChecks } from 'lucide-react';
 import PinyinHandwriting from './pinyin-handwriting';
 import { HskQuestionNavigation, useHskQuestionNavigation } from './hsk-question-navigation';
-import { beginMock, finishMockSection, hasMockInk, mockSections, pictureLabel, scoreMockSection, syncMockClock, type Attempt, type MockTask } from './hsk3-mock-model';
+import { beginMock, finishMockSection, hasMockInk, mockSectionsFor, pictureLabel, scoreMockSection, syncMockClock, type Attempt, type MockSection, type MockTask } from './hsk3-mock-model';
 import { type Stroke } from './learning';
 import { StudyText } from './study-lookup-context';
 
-const storageKey='chinese-os:hsk3-mock:v1';
+import { hskFormStorageKey, type HskExamForm } from './hsk3-form';
+import { automaticMistakes, hskMistakeReviewHref, mistakeSeed, type MistakeSeed } from './hsk3-mistakes-model';
+import { saveExamMistakes } from './hsk3-mistakes-storage';
+import './hsk3-practice.css';
 const noInk:Stroke[]=[];
 
 function reviewAnswer(task:MockTask) {
@@ -16,10 +19,37 @@ function reviewAnswer(task:MockTask) {
   return task.example;
 }
 
-function MockResults({attempt,onReset}:{attempt:Attempt;onReset:()=>void}) {
+function MockResults({attempt,onReset,mockSections,form}:{attempt:Attempt;onReset:()=>void;mockSections:MockSection[];form:HskExamForm}) {
+  const [busy,setBusy]=useState(false);
+  const [saveError,setSaveError]=useState(false);
+  const [added,setAdded]=useState<string[]>([]);
+  const incorrect=automaticMistakes(form,attempt,mockSections.flatMap(section=>section.tasks));
+
+  async function addToPractice(seeds:MistakeSeed[],open=false) {
+    if(busy)return;
+    setBusy(true);
+    setSaveError(false);
+    try {
+      if(seeds.length) await saveExamMistakes(seeds);
+      setAdded(current=>[...current,...seeds.map(seed=>seed.source)]);
+      if(open) window.location.assign(hskMistakeReviewHref);
+    } catch {
+      setSaveError(true);
+    } finally {
+      setBusy(false);
+    }
+  }
+
   return <section className="panel hsk3-prep-practice hsk3-mock" aria-labelledby="hsk-mock-results">
     <h2 id="hsk-mock-results">Mock exam results</h2>
     <p>Use the answer review to check handwritten work and open sentences. This practice score counts correct answers on automatically checked items.</p>
+    <div className="hsk-practice-actions hsk-mistake-entry">
+      <button type="button" className="primary" disabled={busy} onClick={()=>void addToPractice(incorrect,true)}>
+        <ListChecks size={17} aria-hidden="true"/> Practise my mistakes
+      </button>
+      <span>{incorrect.length?incorrect.length+' incorrect '+(incorrect.length===1?'answer':'answers')+' to review':'You can add individual questions below.'}</span>
+    </div>
+    {saveError&&<p role="alert">Could not save these questions. Please try again.</p>}
     {mockSections.map(section=>{
       const {correct,automatic,review,answered}=scoreMockSection(section,attempt);
       return <details key={section.name} className="hsk-mock-review">
@@ -31,6 +61,8 @@ function MockResults({attempt,onReset}:{attempt:Attempt;onReset:()=>void}) {
             const ink=attempt.ink[task.id];
             const handwriting=hasMockInk(ink);
             const manual=task.kind==='sentence'||handwriting;
+            const seed=mistakeSeed(form,attempt,task);
+            const saved=added.includes(seed.source);
             return <li key={task.id}>
               <p lang={task.kind!=='choice'||task.passage||task.transcript?'zh-Hans':undefined}>{task.kind==='choice'?(task.passage??task.transcript):task.prompt}</p>
               {task.kind==='choice'&&task.passage&&!/^[A-Za-z]/.test(task.prompt)&&<p lang="zh-Hans">{task.prompt}</p>}
@@ -43,6 +75,9 @@ function MockResults({attempt,onReset}:{attempt:Attempt;onReset:()=>void}) {
                 {task.kind==='character'&&<strong>{task.answer} · </strong>}<StudyText text={reviewAnswer(task)}/>
               </span></p>
               {task.kind==='sentence'&&<p>Check that you used the given word and wrote a complete, natural sentence.</p>}
+              <button type="button" className="secondary hsk-mistake-save" disabled={busy||saved} onClick={()=>void addToPractice([seed])}>
+                {saved?'Added to review':'Add question to review'}
+              </button>
             </li>;
           })}
         </ol>
@@ -81,7 +116,9 @@ function MockWriting({task,answer,ink,onAnswer,onInk}:{
   </>;
 }
 
-export default function Hsk3Mock() {
+export default function Hsk3Mock({form='a'}:{form?:HskExamForm}) {
+  const mockSections=mockSectionsFor(form);
+  const storageKey=hskFormStorageKey('chinese-os:hsk3-mock:v1',form);
   const [attempt,setAttempt]=useState<Attempt|null>(null);
   const [ready,setReady]=useState(false);
   const [now,setNow]=useState(0);
@@ -101,14 +138,14 @@ export default function Hsk3Mock() {
     } catch { /* Continue with a new attempt if local storage is unavailable. */ }
     setNow(time);
     setReady(true);
-  },[]);
+  },[mockSections,storageKey]);
   useEffect(()=>{
     if(!ready) return;
     try {
       if(attempt) localStorage.setItem(storageKey,JSON.stringify(attempt));
       else localStorage.removeItem(storageKey);
     } catch { /* The current attempt remains usable in memory. */ }
-  },[attempt,ready]);
+  },[attempt,ready,storageKey]);
   const active=Boolean(attempt&&attempt.section<mockSections.length);
   useEffect(()=>{
     if(!active) return;
@@ -153,7 +190,7 @@ export default function Hsk3Mock() {
     <p>The clock continues when you leave this tab. You can revisit questions within the current section. Play the listening clips from each question.</p>
     <button type="button" className="primary" onClick={()=>{const time=Date.now();setNow(time);setAttempt(beginMock(time));}}>Start timed exam</button>
   </section>;
-  if(!section||!task) return <MockResults attempt={attempt} onReset={()=>setAttempt(null)}/>;
+  if(!section||!task) return <MockResults attempt={attempt} mockSections={mockSections} form={form} onReset={()=>setAttempt(null)}/>;
 
   const seconds=Math.max(0,Math.ceil((attempt.deadline-now)/1000));
   const clock=`${Math.floor(seconds/60)}:${String(seconds%60).padStart(2,'0')}`;

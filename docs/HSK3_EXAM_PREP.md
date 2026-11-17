@@ -24,21 +24,27 @@ Grammar opens all three levels at `/?grammar=hsk3&grammarScope=exam` and links a
 
 ## Full timed mock
 
-Open `/?course=hsk3&mock=1`. The main mock has 70 original questions and 73 timed minutes: listening (23), reading (30), writing (20). The two administrative periods in the paper sample are omitted in digital practice. The separate timed oral mock is linked from the same course. The short diagnostic also includes one untimed speaking prompt.
+Open `/?course=hsk3&mock=1` and choose Form A or B. Each form has 70 original questions and 73 timed minutes: listening (23), reading (30), writing (20). The two administrative periods in the paper sample are omitted in digital practice. The separate timed oral mock is linked from the same course. The short diagnostic also includes one untimed speaking prompt.
 
 Listening uses 30 prerecorded tracks with distinct Xiaoxiao/Yunxi roles and Yunjian for spoken questions. It includes picture matching, dialogue comprehension and short monologues. Start a track from its question; the web mock lets you replay and choose questions in the active section. Reading uses reply matching, cloze and passage comprehension.
 
 The section locks when submitted or when its timer expires. Attempts resume on the same browser, with deadlines continuing in the background. Writing accepts a Chinese keyboard or the existing Pencil canvas. The result checks multiple choice and typed characters, shows transcripts and solutions, and opens written responses alongside examples for self-review. It reports practice counts rather than a scaled official score.
 
-Authoring data lives in `resources/hsk3-mock`. Run `python3 scripts/build-hsk3-mock-data.py` after editing the task or grammar banks. The MP3 files are served from `public/audio/hsk3-mock`. If a listening script changes, regenerate that track using `scripts/build-hsk3-mock-audio.py` with Edge TTS and ffmpeg available.
+Authoring data lives in `resources/hsk3-mock` and `resources/hsk3-mock-b`. Run `python3 scripts/build-hsk3-mock-data.py` after editing the task or grammar banks. Regenerate listening clips with `scripts/build-hsk3-mock-audio.py --form a` or `--form b`, using Edge TTS and ffmpeg. The forms keep separate clocks, responses and results. Existing Form A attempts use their original browser key.
 
 ## Timed speaking mock
 
-Open `/?course=hsk3&speaking=1` over HTTPS. The 15 original questions mirror the official HSK 3.0 oral sample: eight repeat-after-listening items (10 seconds each), five picture descriptions (15 seconds each), and two open questions (three minutes to prepare and 90 seconds to answer each). The prompt audio and countdowns total about 14 minutes without interruptions, comparable to the approximately 15-minute official sample.
+Open `/?course=hsk3&speaking=1` over HTTPS and choose Form A or B. Each form’s 15 questions mirror the official HSK 3.0 oral sample: eight repeat-after-listening items (10 seconds each), five picture descriptions (15 seconds each), and two open questions (three minutes to prepare and 90 seconds to answer each). The prompt audio and countdowns total about 14 minutes without interruptions, comparable to the approximately 15-minute official sample.
 
 Enable the microphone before starting. One audio player delivers the Mandarin instructions and questions. The app opens and closes the microphone recording at each answer window. If Safari blocks an automatic transition, tap **Play prompt to continue**. Each finished recording is stored in IndexedDB for the current server and browser, with access from the review screen after a reload. The attempt runs in the current tab. After a reload you can review already saved answers or begin a new attempt. Recordings are compared with the prompt and example responses in self-review and can be deleted from the review screen.
 
-The original prompts and generated illustrations are shipped with the app. To regenerate an edited prompt, remove the corresponding clip in `public/audio/hsk3-speaking` and run `scripts/build-hsk3-speaking-audio.py` with Edge TTS installed. The app uses local media playback and capture through the browser.
+Each form has its own sentences, pictures, open questions and saved recordings. Spoken section instructions and picture directions are shared. To regenerate an edited prompt, remove its clip from the corresponding folder under `public/audio` and run `scripts/build-hsk3-speaking-audio.py --form a` or `--form b` with Edge TTS installed.
+
+## Follow-up practice
+
+Use **Practise my mistakes** on a written exam result to add incorrect submitted answers to the review queue. You can also add individual questions after checking handwriting or an open sentence. Review uses new examples from `data/hsk3-practice.json`. The other exam form stays available as a fresh attempt. Recognition and writing have separate filters and due counts. Each review presents up to five due exercises and rotates its example on the next scheduled date. Reviews are saved in the current browser. Handwritten responses and open sentences use explicit self-review.
+
+Open **Listen, speak, check** for seven short prompts with optional chunked Hanzi, character-aligned Pinyin below the text, and a separate translation switch. Play the Mandarin reference, record your answer, then use **Compare recordings** to play the reference and your answer in succession. The dōu and duō examples each have three voices. This drill’s recordings last for the current tab session. Its clips and the mistake-review audio can be regenerated with `scripts/build-hsk3-practice-audio.py`.
 
 ## Suggested run-up
 

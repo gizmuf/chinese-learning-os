@@ -13,10 +13,11 @@ FEMALE = 'zh-CN-XiaoxiaoNeural'
 MALE = 'zh-CN-YunxiNeural'
 NARRATOR = 'zh-CN-YunjianNeural'
 
-async def render(force: bool):
-    output = ROOT / 'public/audio/hsk3-mock'
+async def render(force: bool, form: str):
+    folder = 'hsk3-mock' if form == 'a' else 'hsk3-mock-b'
+    output = ROOT / 'public/audio' / folder
     output.mkdir(parents=True, exist_ok=True)
-    with (ROOT / 'resources/hsk3-mock/listening.tsv').open() as handle:
+    with (ROOT / 'resources' / folder / 'listening.tsv').open(encoding='utf-8') as handle:
         rows = list(csv.reader(handle, delimiter='|'))
     assert len(rows) == 30 and all(len(row) == 6 for row in rows)
     limit = asyncio.Semaphore(6)
@@ -57,4 +58,6 @@ async def render(force: bool):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--force', action='store_true')
-    asyncio.run(render(parser.parse_args().force))
+    parser.add_argument('--form', choices=('a', 'b'), default='a')
+    args = parser.parse_args()
+    asyncio.run(render(args.force, args.form))

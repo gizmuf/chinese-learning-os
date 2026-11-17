@@ -1,0 +1,17 @@
+[
+  {"kind":"repeat","prompt":"你把桌子上的苹果洗一下，再给弟弟吃。"},
+  {"kind":"repeat","prompt":"她从来没有迟到过，今天可能有事。"},
+  {"kind":"repeat","prompt":"如果雨小一点儿，我们就去公园散步。"},
+  {"kind":"repeat","prompt":"从这儿走到地铁站，大概要十分钟。"},
+  {"kind":"repeat","prompt":"黑色的那件衣服比白色的便宜。"},
+  {"kind":"repeat","prompt":"小李一边做作业，一边听外面的雨声。"},
+  {"kind":"repeat","prompt":"请把你借的书还给图书馆的老师。"},
+  {"kind":"repeat","prompt":"我刚才给你打了两个电话，你都没接。"},
+  {"kind":"picture","prompt":"第九题。请看图说话。","picture":"parcel","alt":"A courier handing a package to a woman at her front door","example":"她打开门，从送东西的人手里接过一个盒子。"},
+  {"kind":"picture","prompt":"第十题。请看图说话。","picture":"dog","alt":"A mother and child walking a small dog in a park","example":"妈妈和孩子在公园里散步。孩子牵着一只小狗。"},
+  {"kind":"picture","prompt":"第十一题。请看图说话。","picture":"bus-stop","alt":"Two people sharing an umbrella while a bus approaches","example":"外面下雨了。他们打着一把伞，在等公共汽车。"},
+  {"kind":"picture","prompt":"第十二题。请看图说话。","picture":"cake","alt":"A father and daughter choosing a cake at a bakery counter","example":"爸爸带女儿去买蛋糕。女儿想买有水果的那个。"},
+  {"kind":"picture","prompt":"第十三题。请看图说话。","picture":"luggage","alt":"A woman talking on the phone next to her suitcases at a station","example":"她在火车站打电话。她的行李就在她旁边。"},
+  {"kind":"question","prompt":"请介绍一下你上个周末做了什么。哪一件事最有意思？","example":"上个周末天气不错。我和两个朋友去了山上。我们走了一个多小时，在山上吃了午饭。最有意思的是，我在路上遇见了以前的同学。我们很久没见了，一起聊了很久。"},
+  {"kind":"question","prompt":"如果有新同学来你的学校，你会带他去哪儿？为什么？","example":"我会先带他去图书馆。那儿很安静，也有很多中文书。然后我们去吃饭，我会告诉他哪家的面条比较好吃。如果还有时间，我会和他在学校里走一走。"}
+]

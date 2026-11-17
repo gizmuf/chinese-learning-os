@@ -5,10 +5,13 @@ import { BookOpen, Ear, FileText, ListChecks, Network, PenLine } from 'lucide-re
 import { StudyText } from './study-lookup-context';
 import { hskPrepTasks } from './hsk3-prep-data';
 import { HskQuestionNavigation, useHskQuestionNavigation } from './hsk-question-navigation';
+import { hskExamForm, type HskExamForm } from './hsk3-form';
 import './hsk3-prep.css';
 
 const Hsk3Mock=lazy(()=>import('./hsk3-mock'));
 const Hsk3Speaking=lazy(()=>import('./hsk3-speaking'));
+const Hsk3Mistakes=lazy(()=>import('./hsk3-mistakes'));
+const Hsk3ListenSpeak=lazy(()=>import('./hsk3-listen-speak'));
 type DiagnosticAnswer={choice:number|null;draft:string;checked:boolean};
 const blankAnswer:DiagnosticAnswer={choice:null,draft:'',checked:false};
 
@@ -28,11 +31,15 @@ function ReviewLine({text,pinyin,aid}:{text:string;pinyin:string;aid:Aid}) {
 }
 
 export default function Hsk3Prep() {
-  const [mode,setMode]=useState<'diagnostic'|'mock'|'speaking'>('diagnostic');
+  type Mode='diagnostic'|'mock'|'speaking'|'mistakes'|'listen-speak';
+  const [{mode,form},setView]=useState<{mode:Mode;form:HskExamForm}>({mode:'diagnostic',form:'a'});
   useEffect(()=>{
     const query=new URLSearchParams(window.location.search);
-    setMode(query.get('speaking')==='1'?'speaking':query.get('mock')==='1'?'mock':'diagnostic');
+    const mode=query.get('review')==='mistakes'?'mistakes':query.get('drill')==='listen-speak'?'listen-speak':
+      query.get('speaking')==='1'?'speaking':query.get('mock')==='1'?'mock':'diagnostic';
+    setView({mode,form:hskExamForm(query.get('form'))});
   },[]);
+  const formUrl=mode==='mock'?'/?course=hsk3&mock=1':mode==='speaking'?'/?course=hsk3&speaking=1':null;
   return <div className="hsk3-prep">
     <header className="hsk3-prep-head">
       <p className="eyebrow">HSK 3.0 · Suzhou · 13 December 2026</p>
@@ -46,9 +53,16 @@ export default function Hsk3Prep() {
       <a href="/?course=hsk3" aria-current={mode==='diagnostic'?'page':undefined}>Short diagnostic</a>
       <a href="/?course=hsk3&mock=1" aria-current={mode==='mock'?'page':undefined}>Full timed mock</a>
       <a href="/?course=hsk3&speaking=1" aria-current={mode==='speaking'?'page':undefined}>Timed speaking mock</a>
+      <a href="/?course=hsk3&review=mistakes" aria-current={mode==='mistakes'?'page':undefined}>Mistake review</a>
+      <a href="/?course=hsk3&drill=listen-speak" aria-current={mode==='listen-speak'?'page':undefined}>Listen, speak, check</a>
     </nav>
+    {formUrl&&<nav className="hsk3-prep-aids hsk-exam-forms" aria-label="Exam form">
+      <a className="secondary" href={formUrl} aria-current={form==='a'?'page':undefined}>Form A</a>
+      <a className="secondary" href={formUrl+'&form=b'} aria-current={form==='b'?'page':undefined}>Form B</a>
+    </nav>}
     <Suspense fallback={<p role="status">Loading exam practice…</p>}>
-      {mode==='speaking'?<Hsk3Speaking/>:mode==='mock'?<Hsk3Mock/>:<Diagnostic/>}
+      {mode==='speaking'?<Hsk3Speaking key={form} form={form}/>:mode==='mock'?<Hsk3Mock key={form} form={form}/>:
+        mode==='mistakes'?<Hsk3Mistakes/>:mode==='listen-speak'?<Hsk3ListenSpeak/>:<Diagnostic/>}
     </Suspense>
   </div>;
 }
