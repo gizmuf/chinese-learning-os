@@ -3,9 +3,11 @@ import type { RecordedAnswer } from './hsk3-speaking-model';
 const name = 'chinese-os-hsk3-speaking-v1';
 const storeName = 'attempt';
 const latest = 'latest';
-type StoredAttempt = { key:typeof latest; id:string; answers:RecordedAnswer[] };
+type StoredAnswer = { question:number; bytes:ArrayBuffer; mime:string };
+type StoredAttempt = { key:typeof latest; id:string; answers:(StoredAnswer|RecordedAnswer)[] };
+type SpeakingAttempt = { id:string; answers:RecordedAnswer[] };
 
-async function useAttemptStore<T>(mode:IDBTransactionMode,run:(store:IDBObjectStore,setResult:(value:T)=>void)=>void) {
+async function withAttemptStore<T>(mode:IDBTransactionMode,run:(store:IDBObjectStore,setResult:(value:T)=>void)=>void) {
   const database=await new Promise<IDBDatabase>((resolve,reject)=>{
     const request=indexedDB.open(name,1);
     request.onupgradeneeded=()=>request.result.createObjectStore(storeName,{keyPath:'key'});
@@ -25,27 +27,40 @@ async function useAttemptStore<T>(mode:IDBTransactionMode,run:(store:IDBObjectSt
   }
 }
 
-export const readSpeakingAttempt=()=>useAttemptStore<StoredAttempt|undefined>('readonly',(store,done)=>{
-  const request=store.get(latest);
-  request.onsuccess=()=>done(request.result as StoredAttempt|undefined);
-});
-
-export const beginSpeakingAttempt=(id:string)=>useAttemptStore<void>('readwrite',(store)=>{
-  store.put({key:latest,id,answers:[]} satisfies StoredAttempt);
-});
-
-export const saveSpeakingAnswer=(id:string,answer:RecordedAnswer)=>useAttemptStore<boolean>('readwrite',(store,done)=>{
+export const readSpeakingAttempt=()=>withAttemptStore<SpeakingAttempt|undefined>('readonly',(store,done)=>{
   const request=store.get(latest);
   request.onsuccess=()=>{
     const attempt=request.result as StoredAttempt|undefined;
-    if(attempt?.id!==id) {done(false);return;}
-    attempt.answers=[...attempt.answers.filter(item=>item.question!==answer.question),answer];
-    store.put(attempt);
-    done(true);
+    if(!attempt) {done(undefined);return;}
+    const answers=attempt.answers.map(answer=>'audio' in answer?answer:{
+      question:answer.question,
+      audio:new Blob([answer.bytes],{type:answer.mime}),
+    });
+    done({id:attempt.id,answers});
   };
 });
 
-export const clearSpeakingAnswers=(id:string)=>useAttemptStore<boolean>('readwrite',(store,done)=>{
+export const beginSpeakingAttempt=(id:string)=>withAttemptStore<void>('readwrite',(store)=>{
+  store.put({key:latest,id,answers:[]} satisfies StoredAttempt);
+});
+
+export async function saveSpeakingAnswer(id:string,answer:RecordedAnswer) {
+  // WebKit may reject MediaRecorder-backed Blobs in IndexedDB. Materialize
+  // the bytes before opening the transaction and rebuild a Blob for playback.
+  const stored:StoredAnswer={question:answer.question,bytes:await answer.audio.arrayBuffer(),mime:answer.audio.type};
+  return withAttemptStore<boolean>('readwrite',(store,done)=>{
+    const request=store.get(latest);
+    request.onsuccess=()=>{
+      const attempt=request.result as StoredAttempt|undefined;
+      if(attempt?.id!==id) {done(false);return;}
+      attempt.answers=[...attempt.answers.filter(item=>item.question!==stored.question),stored];
+      store.put(attempt);
+      done(true);
+    };
+  });
+}
+
+export const clearSpeakingAnswers=(id:string)=>withAttemptStore<boolean>('readwrite',(store,done)=>{
   const request=store.get(latest);
   request.onsuccess=()=>{
     const attempt=request.result as StoredAttempt|undefined;

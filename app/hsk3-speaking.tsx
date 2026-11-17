@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useEffectEvent, useRef, useState } from 'react';
 import { Clock3, Headphones, Mic } from 'lucide-react';
 import { StudyText } from './study-lookup-context';
 import { beginSpeakingAttempt, clearSpeakingAnswers, readSpeakingAttempt, saveSpeakingAnswer } from './hsk3-speaking-storage';
@@ -13,13 +13,15 @@ function Picture({task}:{task:SpeakingTask}) {
 }
 
 function AnswerPlayback({answer}:{answer:RecordedAnswer}) {
-  const [url,setUrl]=useState('');
+  const player=useRef<HTMLAudioElement>(null);
   useEffect(()=>{
+    const element=player.current;
+    if(!element)return;
     const source=URL.createObjectURL(answer.audio);
-    setUrl(source);
+    element.src=source;
     return ()=>URL.revokeObjectURL(source);
   },[answer.audio]);
-  return url?<audio controls preload="metadata" src={url} aria-label={'Your recording for question '+(answer.question+1)}/>:null;
+  return <audio ref={player} controls preload="metadata" aria-label={'Your recording for question '+(answer.question+1)}/>;
 }
 
 function SpeakingReview({answers}:{answers:RecordedAnswer[]}) {
@@ -219,18 +221,24 @@ export default function Hsk3Speaking() {
       setAnswers(current=>[...current,answer]);
       queueSave(()=>saveSpeakingAnswer(id,answer));
     }
-    transition.current=false;
-    if(stop||stopRequested.current!==null)showReview(stopRequested.current??message);
-    else startAt(index+1);
+    if(stop||stopRequested.current!==null||index===speakingSteps.length-1) {
+      releaseMicrophone();
+      await queued.current;
+      if(mounted.current&&running.current)showReview(stopRequested.current??message);
+    } else {
+      transition.current=false;
+      startAt(index+1);
+    }
   }
 
+  const advanceFromTimer=useEffectEvent(()=>{void advance();});
   useEffect(()=>{
     if(screen!=='active')return;
     function tick() {
       if(!deadline.current)return;
       const seconds=Math.max(0,Math.ceil((deadline.current-Date.now())/1000));
       setTime(seconds);
-      if(seconds===0)void advance();
+      if(seconds===0)advanceFromTimer();
     }
     const interval=window.setInterval(tick,200);
     window.addEventListener('focus',tick);
