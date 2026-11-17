@@ -18,7 +18,9 @@ const copy={back:withTurkish({en:'All topics',fr:'Tous les thèmes',ru:'Все �
 export default function HSK3Grammar({db,owner}:{db:IDBDatabase|null;owner:string|null}){
  const {locale}=useI18n();const t=(key:keyof typeof copy)=>copy[key][locale];
  const curriculum=curriculumCopy[locale];
- const hsk=useGlobalHsk(),scope=hsk?.scope??3;
+ const hsk=useGlobalHsk();
+ const [examScope]=useState(()=>typeof window!=='undefined'&&new URLSearchParams(window.location.search).get('grammarScope')==='exam');
+ const scope=examScope?3:hsk?.scope??3;
  const visibleGroups=groups.filter(group=>knownHskInScope(group.level,scope));
  const visibleUnits=visibleGroups.flatMap(group=>group.units);
  const [{unitId,index,checklist},setSelection]=useState(initialSelection);
