@@ -8,6 +8,7 @@ import { HskQuestionNavigation, useHskQuestionNavigation } from './hsk-question-
 import './hsk3-prep.css';
 
 const Hsk3Mock=lazy(()=>import('./hsk3-mock'));
+const Hsk3Speaking=lazy(()=>import('./hsk3-speaking'));
 type DiagnosticAnswer={choice:number|null;draft:string;checked:boolean};
 const blankAnswer:DiagnosticAnswer={choice:null,draft:'',checked:false};
 
@@ -27,8 +28,11 @@ function ReviewLine({text,pinyin,aid}:{text:string;pinyin:string;aid:Aid}) {
 }
 
 export default function Hsk3Prep() {
-  const [showMock,setShowMock]=useState(false);
-  useEffect(()=>setShowMock(new URLSearchParams(window.location.search).get('mock')==='1'),[]);
+  const [mode,setMode]=useState<'diagnostic'|'mock'|'speaking'>('diagnostic');
+  useEffect(()=>{
+    const query=new URLSearchParams(window.location.search);
+    setMode(query.get('speaking')==='1'?'speaking':query.get('mock')==='1'?'mock':'diagnostic');
+  },[]);
   return <div className="hsk3-prep">
     <header className="hsk3-prep-head">
       <p className="eyebrow">HSK 3.0 · Suzhou · 13 December 2026</p>
@@ -39,10 +43,13 @@ export default function Hsk3Prep() {
       {links.map(({name,detail,href,icon:Icon})=><a key={name} href={href}><Icon size={18} aria-hidden="true"/><span><strong>{name}</strong><small>{detail}</small></span></a>)}
     </nav>
     <nav className="hsk3-prep-modes" aria-label="Exam practice">
-      <a href="/?course=hsk3" aria-current={!showMock?'page':undefined}>Short diagnostic</a>
-      <a href="/?course=hsk3&mock=1" aria-current={showMock?'page':undefined}>Full timed mock</a>
+      <a href="/?course=hsk3" aria-current={mode==='diagnostic'?'page':undefined}>Short diagnostic</a>
+      <a href="/?course=hsk3&mock=1" aria-current={mode==='mock'?'page':undefined}>Full timed mock</a>
+      <a href="/?course=hsk3&speaking=1" aria-current={mode==='speaking'?'page':undefined}>Timed speaking mock</a>
     </nav>
-    {showMock?<Suspense fallback={<p role="status">Loading mock exam…</p>}><Hsk3Mock/></Suspense>:<Diagnostic/>}
+    <Suspense fallback={<p role="status">Loading exam practice…</p>}>
+      {mode==='speaking'?<Hsk3Speaking/>:mode==='mock'?<Hsk3Mock/>:<Diagnostic/>}
+    </Suspense>
   </div>;
 }
 
