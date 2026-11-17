@@ -14,9 +14,9 @@ const grammar = await import('data:text/javascript;base64,' + Buffer.from(bundle
 
 test('cumulative scope adds foundations while the original independent exercise bank stays intact', () => {
   assert.deepEqual(grammar.grammarStudyGroups.map(({units}) => grammar.grammarCounts(units)), [
-    {topics: 3, cards: 6, exercises: 6},
-    {topics: 3, cards: 6, exercises: 6},
-    {topics: 12, cards: 57, exercises: 114},
+    {topics: 19, cards: 22, exercises: 22},
+    {topics: 19, cards: 22, exercises: 22},
+    {topics: 26, cards: 71, exercises: 128},
   ]);
   for (const scope of [1, 2, 3, 4, '7-9', 'all']) {
     const visible = grammar.grammarStudyGroups.filter(group => grammar.knownHskInScope(group.level, scope));
@@ -25,7 +25,7 @@ test('cumulative scope adds foundations while the original independent exercise 
   const units = grammar.grammarStudyGroups.flatMap(({units}) => units);
   const allIds = units.flatMap(unit => unit.cards.flatMap(card => card.exercises.map(ex => ex.id)));
   assert.equal(allIds.length, new Set(allIds).size);
-  assert.deepEqual(allIds.slice(12), grammar.grammarActivityIds);
+  assert.deepEqual(allIds.filter(id => grammar.grammarActivityIds.includes(id)), grammar.grammarActivityIds);
 });
 
 test('syllabus markers only point to existing exercises at their mapped levels', () => {
@@ -39,9 +39,9 @@ test('syllabus markers only point to existing exercises at their mapped levels',
     return grammar.grammarCoverageTotals(level);
   });
   assert.deepEqual(summary, [
-    {topics: 18, linked: 7, partial: 5},
-    {topics: 19, linked: 8, partial: 5},
-    {topics: 20, linked: 20, partial: 14},
+    {topics: 18, linked: 18, partial: 0},
+    {topics: 19, linked: 19, partial: 0},
+    {topics: 20, linked: 20, partial: 0},
   ]);
 });
 

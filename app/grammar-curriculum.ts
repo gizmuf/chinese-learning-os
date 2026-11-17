@@ -1,5 +1,6 @@
 import {grammarFoundations, type GrammarUnit} from './grammar-foundations';
 import batchA from '../data/grammar-hsk3-a.json';
+import supplements from '../data/hsk-grammar-supplements.json';
 import batchB from '../data/grammar-hsk3-b.json';
 
 export type GrammarLevel = 1 | 2 | 3;
@@ -19,7 +20,7 @@ const row = (label: string, patterns: string, card?: string, partial?: true): Gr
 
 // Grouped index of the syllabus. A linked card covers the listed construction or
 // a stated subset. The index does not count individual words as separate rules.
-export const grammarCoverage: Record<GrammarLevel, GrammarCoverageRow[]> = {
+const baseCoverage: Record<GrammarLevel, GrammarCoverageRow[]> = {
   1: [
     row('Word building and place nouns', '小–、第–、–们、–边；上、下、里、外、前、后'),
     row('Modal and separable verbs', '会、能、想、要、可以；看病、睡觉、说话等'),
@@ -85,11 +86,45 @@ export const grammarCoverage: Record<GrammarLevel, GrammarCoverageRow[]> = {
   ],
 };
 
+const supplementalCopy = (en: string) => ({en, fr: en, ru: en, tr: en});
+type Supplement = [GrammarLevel, number, string, string, string, string, string, string[]];
+const supplementRows = supplements as Supplement[];
+const supplementId = (level: GrammarLevel, group: number) => 'hsk' + level + '-syllabus-' + group;
+
+function syllabusUnits(level: GrammarLevel): GrammarUnit[] {
+  return supplementRows.filter(row => row[0] === level).map(([, group, rule, hanzi, pinyin, meaning, sentence, authored]) => {
+    const source = baseCoverage[level][group - 1];
+    const id = supplementId(level, group);
+    const answer = (group + level) % authored.length;
+    const options = authored.map((_, index) => authored[(index - answer + authored.length) % authored.length]);
+    return {
+      id,
+      title: supplementalCopy(source.label),
+      cards: [{
+        id: id + '-rule', pattern: source.patterns, explanation: supplementalCopy(rule),
+        example: {hanzi, pinyin, meaning: supplementalCopy(meaning)},
+        exercises: [{
+          id: id + '-exercise', prompt: supplementalCopy('Complete the sentence.'),
+          sentence, options, answer,
+          explanation: supplementalCopy(sentence.replace('___', authored[0]) + ' · ' + rule),
+        }],
+      }],
+    };
+  });
+}
+
+export const grammarCoverage = Object.fromEntries(grammarLevels.map(level => [level,
+  baseCoverage[level].map((group, index) =>
+    supplementRows.some(([band, order]) => band === level && order === index + 1)
+      ? {label: group.label, patterns: group.patterns, card: supplementId(level, index + 1) + '-rule'}
+      : group),
+])) as Record<GrammarLevel, GrammarCoverageRow[]>;
+
 const legacyUnits = [...batchA, ...batchB];
 export const grammarStudyGroups = [
-  {level: 1, units: grammarFoundations[1]},
-  {level: 2, units: grammarFoundations[2]},
-  {level: 3, units: legacyUnits},
+  {level: 1, units: [...grammarFoundations[1], ...syllabusUnits(1)]},
+  {level: 2, units: [...grammarFoundations[2], ...syllabusUnits(2)]},
+  {level: 3, units: [...legacyUnits, ...syllabusUnits(3)]},
 ] as const;
 
 export function grammarCoverageTotals(level: GrammarLevel) {
