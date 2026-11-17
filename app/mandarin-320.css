@@ -31,23 +31,51 @@
   .mandarin320-entries .hanzi-family-entry summary .hanzi-family-gloss {grid-column: 2; padding-left: 0}
   .mandarin320-ranges {grid-template-columns: repeat(auto-fit, minmax(min(100%, 5rem), 1fr))}
 }
+.mandarin320-entries .hanzi-family-headword {font-size: clamp(1.55rem, 3vw, 1.9rem)}
+.mandarin320 .hanzi-family-example {font-size: clamp(1.55rem, 3vw, 1.9rem)}
+.mandarin320 .hanzi-family-exercise :is(.mandarin320-gap-sentence, .hanzi-family-feedback b[lang="zh-Hans"]) {
+  font-size: clamp(1.75rem, 3.4vw, 2.15rem);
+}
+.mandarin320 .hanzi-family-exercise :is(.hanzi-family-answer-options, .hanzi-family-piece-order) button {
+  font-size: 1.625rem;
+}
 .mandarin320-gap-sentence {margin: .15rem 0 0; max-width: 100%; overflow-wrap: anywhere}
 .mandarin320-gap {
-  display: inline-grid;
-  width: 10rem;
+  position: relative;
+  display: inline-block;
+  width: 8.5rem;
   max-width: calc(100% - .5rem);
-  margin-inline: .25rem;
-  gap: .15rem;
-  vertical-align: bottom;
+  margin-inline: .3ch;
+  vertical-align: baseline;
 }
-.mandarin320-gap > span {font: 600 .8rem/1.2 var(--font-sans, system-ui)}
+.mandarin320-gap-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 .mandarin320-gap input {
+  display: block;
   width: 100%;
   min-height: 44px;
-  padding: .25rem .55rem;
-  border: 1px solid var(--muted);
-  font-size: 1rem;
-  line-height: 1.4;
+  padding: .125rem .45rem;
+  background: #fbfcfb;
+  border: 1px solid #b9c0bc;
+  border-radius: .4rem;
+  font-size: inherit;
+  line-height: 1.2;
+}
+.mandarin320-gap input::placeholder {font: 400 .875rem/1.2 system-ui, sans-serif; color: #616b65}
+.mandarin320-gap input:focus-visible {outline: 1px solid #69756f; outline-offset: 1px}
+.mandarin320-pencil-controls {display: flex; flex-wrap: wrap; align-items: center; gap: .45rem .8rem}
+.mandarin320-pencil-controls button {min-height: 44px}
+.mandarin320-pencil-controls button[aria-pressed=true] {background: var(--sage, #e9efe8); border-color: #a2b2a8}
+.mandarin320-pencil-controls p {font-size: .875rem; color: var(--muted)}
+.mandarin320-candidates button span[lang="zh-Hans"] {font-size: 1.625rem; line-height: 1.2}
+.mandarin320 .hanzi-family-exercise .hanzi-family-piece-order {
+  min-width: 0;
 }
 .mandarin320-gap-translation, .mandarin320-candidate-status {margin: 0}
 .mandarin320-candidate-status:empty {position: absolute}
