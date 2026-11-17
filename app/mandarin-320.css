@@ -25,6 +25,12 @@
 .mandarin320-example {width: 100%}
 .mandarin320-example p {margin: .25rem 0; overflow-wrap: anywhere}
 .mandarin320 .hanzi-family-feedback .mandarin320-example {border-top: 1px solid var(--line); padding-block-start: .6rem}
+@media (min-width: 48rem) {
+  .mandarin320 .mandarin320-entries .hanzi-family-entry-body > p .study-text .study-word,
+  .mandarin320 .hanzi-family-group[data-appendix-id] > p .study-text .study-word {
+    font-size: 1.25rem;
+  }
+}
 @media (max-width: 37rem) {
   .mandarin320-entries .hanzi-family-entry summary {grid-template-columns: 2.7rem minmax(0, 1fr)}
   .mandarin320-entries .hanzi-family-entry summary .hanzi-family-reading,
