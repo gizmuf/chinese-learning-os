@@ -1,6 +1,6 @@
 'use client';
 
-import {useEffect,useRef,useState} from 'react';
+import {useEffect,useLayoutEffect,useRef,useState} from 'react';
 import {ArrowLeft,ArrowRight,BookOpen,Volume2} from 'lucide-react';
 import {stopAudio} from './audio';
 import {wordPronunciation} from './atlas-spatial-model';
@@ -60,6 +60,7 @@ export default function PracticalLesson17({notify}: {notify:(message:string)=>vo
  const [revealed,setRevealed]=useState(false);
  const [drafts,setDrafts]=useState<Partial<Record<number,string>>>({});
  const contentHeading=useRef<HTMLHeadingElement>(null);
+ const focusContent=useRef(false);
  const player=useRecordingPlayback(notify);
  const section=practicalLesson17Sections.find(item=>item.id===route.topic)??practicalLesson17Sections[0];
  const exercise=practicalLesson17Exercises[route.question-1];
@@ -70,15 +71,21 @@ export default function PracticalLesson17({notify}: {notify:(message:string)=>vo
   return ()=>{window.removeEventListener('popstate',restore);stopAudio();};
  },[]);
 
- function select(change:Partial<View>) {
+ useLayoutEffect(()=>{
+  if(!focusContent.current)return;
+  focusContent.current=false;
+  contentHeading.current?.focus();
+ },[route]);
+
+ function select(change:Partial<View>,moveFocus=false) {
   const next={...route,...change};
+  focusContent.current=moveFocus;
   setRoute(next);
   setRevealed(false);
   stopAudio();
   const url=new URL(location.href);
   for(const [name,value] of Object.entries(next))url.searchParams.set(name,String(value));
   history.replaceState(history.state,'',url);
-  if(change.view||change.question)requestAnimationFrame(()=>contentHeading.current?.focus());
  }
 
  return <article className="course-space practical17">
@@ -90,7 +97,7 @@ export default function PracticalLesson17({notify}: {notify:(message:string)=>vo
   </header>
   <nav className="practical17-tabs" aria-label="Lesson activities">
    {views.map(([id,label])=><button key={id} type="button" className={route.view===id?'primary':'secondary'}
-    aria-pressed={route.view===id} onClick={()=>select({view:id})}>{label}</button>)}
+    aria-pressed={route.view===id} onClick={()=>select({view:id},true)}>{label}</button>)}
   </nav>
 
   {route.view==='examples'&&<section className="panel practical17-panel" aria-labelledby="practical17-examples">
@@ -143,8 +150,8 @@ export default function PracticalLesson17({notify}: {notify:(message:string)=>vo
     </div>
    </div>
    <div className="practical17-actions practical17-pagination">
-    <button type="button" className="secondary" disabled={route.question===1} onClick={()=>select({question:route.question-1})}><ArrowLeft size={16} aria-hidden="true"/>Previous question</button>
-    <button type="button" className="secondary" disabled={route.question===practicalLesson17Exercises.length} onClick={()=>select({question:route.question+1})}>Next question<ArrowRight size={16} aria-hidden="true"/></button>
+    <button type="button" className="secondary" disabled={route.question===1} onClick={()=>select({question:route.question-1},true)}><ArrowLeft size={16} aria-hidden="true"/>Previous question</button>
+    <button type="button" className="secondary" disabled={route.question===practicalLesson17Exercises.length} onClick={()=>select({question:route.question+1},true)}>Next question<ArrowRight size={16} aria-hidden="true"/></button>
    </div>
   </section>}
 
