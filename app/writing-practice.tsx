@@ -329,7 +329,7 @@ export default function Writing({
                 <Volume2 size={17} /> {t("Hear pronunciation")}</button>
               {item.sentence && <div className="reference-example">
                 <span className="eyebrow">{contextExample?"IN YOUR SOURCE SENTENCE":t("IN EVERYDAY LIFE")}</span>
-                <p>{item.sentence}</p>
+                <p className="study-hanzi-example" lang="zh-Hans">{item.sentence}</p>
                 <p className="pinyin">{item.sentencePinyin}</p>
                 <small>{item.translation}</small>
                 <button

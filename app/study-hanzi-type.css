@@ -1,0 +1,69 @@
+/* Screen typography for learning content. Keep pinyin and translations at their own sizes. */
+@media (min-width: 48rem) {
+  :root {
+    --hanzi-study-inline: 1.125rem;
+    --hanzi-study-choice: 1.375rem;
+    --hanzi-study-sentence: 1.5rem;
+    --hanzi-study-term: 1.75rem;
+  }
+
+  /* Vocabulary cards, review, and writing reference. */
+  .word-card .sentence > .study-hanzi-example,
+  .revealed-answer > p.study-hanzi-example,
+  .reference-example > p.study-hanzi-example {
+    font-size: var(--hanzi-study-sentence);
+    line-height: 1.5;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .hanzi-family-compare .hanzi-family-group > ul > li {
+    grid-template-columns: minmax(3.5rem, max-content) minmax(0, 5rem) minmax(0, 1fr);
+    overflow-wrap: anywhere;
+  }
+  .hanzi-family-compare .hanzi-family-headword {
+    font-size: var(--hanzi-study-term);
+    line-height: 1.35;
+  }
+  .hanzi-family-compare .hanzi-family-group h3 .study-text .study-word {
+    font-size: var(--hanzi-study-choice);
+  }
+  .hanzi-family-compare .hanzi-family-group > p .study-text .study-word {
+    font-size: var(--hanzi-study-inline);
+  }
+  .hanzi-family-lesson .hanzi-family-exercise .hanzi-family-glyphs {
+    font-size: var(--hanzi-study-choice);
+    overflow-wrap: anywhere;
+  }
+  .hanzi-family-lesson .hanzi-family-exercise .hanzi-family-context .hanzi-family-glyphs {
+    font-size: var(--hanzi-study-sentence);
+  }
+  .hanzi-family-lesson .hanzi-family-exercise .hanzi-family-feedback .hanzi-family-example {
+    font-size: 1.625rem;
+  }
+
+  /* Examples and choices where Hanzi previously shared the supporting text size. */
+  .atlas-workspace .aw-example p[lang="zh-Hans"],
+  .rl-pattern-note p[lang="zh-Hans"],
+  .rl-question p[lang="zh-Hans"],
+  .rl-question p span[lang="zh-Hans"],
+  .sp-dictionary-examples article > div[lang="zh-Hans"],
+  .chunk-variants span[lang="zh-Hans"],
+  .video-options span[lang="zh-Hans"],
+  .hsk3-prep .hsk3-prep-passage p[lang="zh-Hans"],
+  .hsk3-prep p.hsk3-prep-question[lang="zh-Hans"],
+  .hsk3-prep-feedback p[lang="zh-Hans"] {
+    font-size: var(--hanzi-study-sentence);
+    overflow-wrap: anywhere;
+  }
+  .aw-chips button[lang="zh-Hans"],
+  .sentence-explorer :is(.se-part, .se-choices) strong[lang="zh-Hans"],
+  .hsk3-prep-options label > span[lang="zh-Hans"] {
+    font-size: var(--hanzi-study-choice);
+    overflow-wrap: anywhere;
+  }
+  .hsk3-prep .hsk3-prep-passage rt {
+    /* Preserve the former 65% of 1.28rem when changing the Hanzi base. */
+    font-size: .832rem;
+  }
+}

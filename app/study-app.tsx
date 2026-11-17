@@ -1056,7 +1056,7 @@ export default function StudyApp({
                     </div>
                     <h3>{i.english}</h3>
                     <div className="sentence" hidden={!i.sentence}>
-                      <span><StudyText text={i.sentence}/></span>
+                      <span className="study-hanzi-example" lang="zh-Hans"><StudyText text={i.sentence}/></span>
                       <span className="pinyin">{i.sentencePinyin}</span>
                       <small>{i.translation}</small>
                       <button
@@ -1607,7 +1607,7 @@ function Recall({
               </>
             )}
             <h2>{item.english}</h2>
-            <p>{item.sentence}</p>
+            <p className="study-hanzi-example" lang="zh-Hans">{item.sentence}</p>
             <p className="pinyin">{item.sentencePinyin}</p>
             <small>{item.translation}</small>
             <button

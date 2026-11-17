@@ -9,6 +9,13 @@ import {type HanziExercise, matchesHanziAnswer, selectedPracticeHref} from './ha
 import {canSubmitComposition} from './pinyin-practice-model';
 import './pinyin-practice.css';
 
+// Keep assessment text non-interactive, and size Hanzi independently of inline pinyin.
+function HanziRuns({text}: {text: string}) {
+  return <>{text.split(/([\p{Script=Han}、。，！？：；]+)/u).map((part, index) => index % 2
+    ? <span className="hanzi-family-glyphs" key={index} lang="zh-Hans">{part}</span>
+    : part)}</>;
+}
+
 type Outcome = 'correct' | 'retry' | 'compare';
 export type Attempt = { outcome: Outcome; response: string; strokes?: Stroke[] };
 export type Attempts = Partial<Record<string, Attempt>>;
@@ -149,17 +156,17 @@ export function Exercise({exercise, attempt, onSave, penOnly, setPenOnly, feedba
   }
 
   return <div className="hanzi-family-exercise" data-study-assessment={attempt ? 'complete' : 'blocked'}>
-    <h3>{sentenceGap ? 'Fill the gap with Hanzi or pinyin.' : exercise.prompt}</h3>
-    {!sentenceGap && exercise.context && <p className="hanzi-family-context">{exercise.context}</p>}
+    <h3>{sentenceGap ? 'Fill the gap with Hanzi or pinyin.' : <HanziRuns text={exercise.prompt}/>}</h3>
+    {!sentenceGap && exercise.context && <p className="hanzi-family-context"><HanziRuns text={exercise.context}/></p>}
     {attempt ? <>
       {attempt.strokes && <PinyinHandwriting kind="hanzi" label="Your handwritten answer" strokes={attempt.strokes} onChange={() => {}} disabled penOnly={penOnly} characters={[...exercise.answer].filter(ch => /\p{Script=Han}/u.test(ch)).length}/>}
       <div className="hanzi-family-feedback">
         <h4 tabIndex={-1} ref={feedback}>{attempt.outcome === 'correct' ? 'Correct' : attempt.outcome === 'retry' ? 'Review this answer' : 'Compare your handwriting'}</h4>
-        {attempt.response && <p>Your answer <b lang="zh-Hans">{attempt.response}</b></p>}
+        {attempt.response && <p>Your answer <b lang="zh-Hans"><HanziRuns text={attempt.response}/></b></p>}
         <p className="hanzi-family-example" lang="zh-Hans"><StudyText text={exercise.answer}/></p>
         {exercise.pinyin && <p className="hanzi-family-reading" lang="zh-Latn">{exercise.pinyin}</p>}
         {exercise.meaning && <p>{exercise.meaning}</p>}
-        <p>{exercise.explanation}</p>
+        <p><HanziRuns text={exercise.explanation}/></p>
         {feedbackDetails}
       </div>
       <div className="hanzi-family-actions">
@@ -232,14 +239,14 @@ export function Exercise({exercise, attempt, onSave, penOnly, setPenOnly, feedba
       </>}
       {building && <>
         <div className="hanzi-family-piece-order" role="group" aria-label="Your sentence">
-          {pieces.length ? pieces.map(index => <button type="button" className="secondary" key={index} onClick={() => setPieces(pieces.filter(value => value !== index))} aria-label={'Remove ' + options[index]}>{options[index]}</button>) : <span>Choose the pieces in order.</span>}
+          {pieces.length ? pieces.map(index => <button type="button" className="secondary" key={index} onClick={() => setPieces(pieces.filter(value => value !== index))} aria-label={'Remove ' + options[index]}><HanziRuns text={options[index]}/></button>) : <span>Choose the pieces in order.</span>}
         </div>
         <div className="hanzi-family-actions hanzi-family-answer-options" role="group" aria-label="Sentence pieces" lang="zh-Hans">
-          {options.map((option, index) => <button type="button" className="secondary" key={index} disabled={pieces.includes(index)} onClick={() => setPieces([...pieces, index])}>{option}</button>)}
+          {options.map((option, index) => <button type="button" className="secondary" key={index} disabled={pieces.includes(index)} onClick={() => setPieces([...pieces, index])}><HanziRuns text={option}/></button>)}
         </div>
       </>}
       {!sentenceGap && !building && !drawing && (options.length ? <div className="hanzi-family-actions hanzi-family-answer-options" role="group" aria-label="Answer choices" lang="zh-Hans">
-        {options.map(option => <button type="button" className="secondary" key={option} aria-pressed={draft === option} onClick={() => setDraft(option)}>{option}</button>)}
+        {options.map(option => <button type="button" className="secondary" key={option} aria-pressed={draft === option} onClick={() => setDraft(option)}><HanziRuns text={option}/></button>)}
       </div> : <label className="hanzi-family-input">Your answer
         <input lang="zh-Hans" autoComplete="off" autoCorrect="off" spellCheck={false} value={draft} onChange={event => setDraft(event.target.value)}/>
       </label>)}

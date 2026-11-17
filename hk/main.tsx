@@ -6,6 +6,7 @@ import {HanziStyleProvider} from '../app/hanzi-style';
 import {AccountDialogContext} from '../app/account-dialog-context';
 import '../app/globals.css';
 import '../app/hanzi-style.css';
+import '../app/study-hanzi-type.css';
 // HTTP staging still needs collision-resistant IDs for local learning events.
 // getRandomValues is available on HTTP; no authentication uses this shim.
 if (!crypto.randomUUID) Object.defineProperty(crypto, 'randomUUID', {value: () => {
