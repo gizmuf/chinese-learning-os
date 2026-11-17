@@ -18,7 +18,7 @@ import Lesson07 from './lesson07';
 import {lesson07} from './lesson07-data';
 import {useDictionaryAssistance} from "./study-lookup";
 import {withTurkish} from "./turkish";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -70,6 +70,7 @@ import {practicalLesson,practicalLessonHref,practicalLessonId} from './practical
 import {practicalLessonCopy} from './practical-lesson-copy';
 import PracticalLesson17 from './practical-lesson-17';
 import {practicalLesson17Date,practicalLesson17Href,practicalLesson17Id,practicalLesson17Title} from './practical-lesson-17-data';
+import {hanziFamilyLessonHref,hanziFamilyLessonId,hanziFamilyLessonTitle} from './hanzi-family-lesson-route';
 import SpeakingChunks from "./speaking-chunks";
 import {atlasChunksReturn} from "./atlas-chunks-route";
 import {chunkCopy} from "./speaking-chunks-copy";
@@ -87,6 +88,7 @@ import type { Item } from "./content";
 import type { LearningEvent, Stroke } from "./learning";
 type Tab = "lab" | "overview" | "learn" | "practice" | "writing" | "materials";
 const topics = Object.keys(topicInfo) as Topic[];
+const HanziFamilyLesson = lazy(() => import('./hanzi-family-lesson'));
 export default function IntensiveCourse({
   owner,
   db,
@@ -129,7 +131,7 @@ export default function IntensiveCourse({
   );
   useEffect(() => {
     const material=new URLSearchParams(window.location.search).get('material');
-    if(material===practicalLessonId||material===practicalLesson17Id)setPracticalMaterial(material);
+    if(material===practicalLessonId||material===practicalLesson17Id||material===hanziFamilyLessonId)setPracticalMaterial(material);
     if(material?.startsWith('reference-')){const id=material.slice('reference-'.length) as ReferenceMaterialId;if(referenceLessonById.has(id)){setReferenceId(id);setReferenceFromLibrary(new URLSearchParams(window.location.search).get('from')==='lessons');}}
     if(new URLSearchParams(window.location.search).get("material")==="self-introduction")setVideoOpen(true);
     if(new URLSearchParams(window.location.search).get("material")==="speaking-chunks")setChunksOpen(true);
@@ -244,6 +246,9 @@ export default function IntensiveCourse({
   if(referenceId)return <ReferenceLesson id={referenceId} {...{owner,penOnly,setPenOnly,notify}} backLabel={referenceFromLibrary?'Back to My lessons':'All course materials'} onBack={()=>{setReferenceId(null);if(referenceFromLibrary&&onReferenceLibraryBack)onReferenceLibraryBack();else window.history.replaceState(null,'','/?course=intensive');}}/>;
   if(practicalMaterial===practicalLesson17Id)return <PracticalLesson17 notify={notify}/>;
   if(practicalMaterial===practicalLessonId)return <PracticalLesson notify={notify}/>;
+  if(practicalMaterial===hanziFamilyLessonId)return <Suspense fallback={<p role="status">Opening Hanzi lesson…</p>}>
+    <HanziFamilyLesson key={owner??'guest'} {...{owner,penOnly,setPenOnly,notify}}/>
+  </Suspense>;
   if(chunksOpen){
     const returnToAtlas=atlasChunksReturn(window.location.search);
     return <SpeakingChunks owner={owner} notify={notify} backToAtlas={!!returnToAtlas} onBack={()=>{
@@ -279,6 +284,11 @@ export default function IntensiveCourse({
       </div>
       {!open ? (
         <>
+          <section className="panel course-feature">
+            <div aria-hidden="true" lang="zh-Hans" className="lesson05-topic-art">一般 · 出去</div>
+            <div><p className="eyebrow">17 November 2026</p><h2>{hanziFamilyLessonTitle}</h2>
+              <a className="primary" href={hanziFamilyLessonHref}>{t("Open lesson")}<ArrowRight size={17}/></a></div>
+          </section>
           <section className="panel course-feature">
             <div aria-hidden="true" lang="zh-Hans" className="lesson05-topic-art">买 · 卖 · 说</div>
             <div><p className="eyebrow">{practicalLesson17Date}</p><h2>{practicalLesson17Title}</h2>

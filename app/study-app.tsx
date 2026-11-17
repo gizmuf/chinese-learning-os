@@ -15,6 +15,7 @@ import LanguagePractice from './language-practice';
 import {isLanguageSkill,languageSkills,languagePracticeHref,languagePracticeRoute} from './pinyin-practice-model';
 import ReferenceLessonLinks from './reference-lesson-links';
 import {referenceLessonHref} from './reference-lessons-data';
+import {hanziFamilyLessonHref,hanziFamilyLessonTitle} from './hanzi-family-lesson-route';
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   BookmarkPlus,
@@ -995,6 +996,12 @@ export default function StudyApp({
                 <button type="button" onClick={openShuoshuoLesson}>Shuoshuo · Morning</button>
                 <button type="button" aria-label={({en:'Open My day lesson',fr:'Ouvrir Ma journée',ru:'Открыть урок «Мой день»',tr:'Günüm dersini aç'}[locale])} onClick={openMyDay}>{({en:'My day',fr:'Ma journée',ru:'Мой день',tr:'Günüm'}[locale])}</button>
                 <button type="button" className="library-practice-shortcut" aria-pressed={practiceSelection} onClick={()=>{setPracticeSelection(true);libraryRoute(libraryLayout,true);}}><BookmarkCheck size={15}/>{libraryCopy.selected} · {practiceBook.entries.length}</button>
+                <a href={hanziFamilyLessonHref+'&from=lessons'} onClick={event=>{
+                  if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+                  event.preventDefault();
+                  const returnTo=window.location.pathname+window.location.search+window.location.hash;
+                  window.location.assign(hanziFamilyLessonHref+'&from=lessons&returnTo='+encodeURIComponent(returnTo));
+                }}><BookOpen size={15} aria-hidden="true"/>{hanziFamilyLessonTitle}</a>
                 <ReferenceLessonLinks compact onOpen={id=>{stopAudio();window.history.replaceState(null,'',referenceLessonHref(id)+'&from=lessons');setView('course');window.scrollTo({top:0,behavior:'instant'});}}/>
               </nav>
               {!practiceSelection && <HskExamCharacters key={user?.id ?? "guest"} owner={user?.id ?? "guest"}/>}

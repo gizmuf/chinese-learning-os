@@ -1,0 +1,849 @@
+[
+  {
+    "id": "word-01",
+    "kind": "choice",
+    "prompt": "Które słowo opisuje zwyczaj?",
+    "answer": "一般",
+    "explanation": "一般 przed określeniem czasu opisuje typowy przebieg dnia. 一样 oznacza „taki sam”.",
+    "pinyin": "Wǒ yìbān qī diǎn qǐchuáng.",
+    "meaning": "I usually get up at seven.",
+    "context": "I usually get up at seven. · 我＿＿七点起床。",
+    "choices": [
+      "一样",
+      "昨天",
+      "一般"
+    ]
+  },
+  {
+    "id": "word-02",
+    "kind": "build",
+    "prompt": "Ułóż zdanie odpowiadające tłumaczeniu.",
+    "answer": "请坐在椅子上",
+    "explanation": "坐在 łączy czynność z miejscem. 上 po 椅子 określa, gdzie masz usiąść.",
+    "pinyin": "Qǐng zuò zài yǐzi shang.",
+    "meaning": "Please sit on the chair.",
+    "context": "Please sit on the chair.",
+    "choices": [
+      "椅子上",
+      "请",
+      "坐在"
+    ]
+  },
+  {
+    "id": "word-03",
+    "kind": "gap",
+    "prompt": "Wpisz „trochę” określające ilość, używając formy z końcówką -r.",
+    "answer": "一点儿",
+    "explanation": "一点儿 określa tu niewielką ilość. 有点儿 przed przymiotnikiem opisuje stan, np. 有点儿累.",
+    "pinyin": "Wǒ huì shuō yìdiǎnr Zhōngwén.",
+    "meaning": "I can speak a little Chinese.",
+    "context": "I can speak a little Chinese. · 我会说＿＿中文。"
+  },
+  {
+    "id": "word-04",
+    "kind": "choice",
+    "prompt": "Uzupełnij przedmiot po 买了.",
+    "answer": "一些",
+    "explanation": "一些水果 mówi o bliżej nieokreślonej ilości owoców. 这些 i 那些 wskazują konkretne owoce. 一些 i 一点儿 mogą łączyć się z 水.",
+    "pinyin": "Wǒ mǎi le yìxiē shuǐguǒ.",
+    "meaning": "I bought some fruit.",
+    "context": "I bought some fruit. · 我买了＿＿水果。",
+    "choices": [
+      "这些",
+      "一些",
+      "那些"
+    ]
+  },
+  {
+    "id": "word-05",
+    "kind": "build",
+    "prompt": "Ułóż zdanie odpowiadające tłumaczeniu.",
+    "answer": "有的人喜欢茶，有的人喜欢咖啡",
+    "explanation": "Powtórzone 有的人 rozdziela dwie grupy osób. Tłumaczenie ustala kolejność przykładów.",
+    "pinyin": "Yǒude rén xǐhuan chá, yǒude rén xǐhuan kāfēi.",
+    "meaning": "Some people like tea, and some like coffee.",
+    "context": "Some people like tea, and some like coffee.",
+    "choices": [
+      "喜欢咖啡",
+      "有的人",
+      "，",
+      "喜欢茶",
+      "有的人"
+    ]
+  },
+  {
+    "id": "word-06",
+    "kind": "gap",
+    "prompt": "Wpisz trzysylabową lub krótszą formę „trochę” z końcówką -r, używaną przed przymiotnikiem.",
+    "answer": "有点儿",
+    "explanation": "有点儿 przed 累 określa stopień zmęczenia, zwykle z odcieniem dyskomfortu.",
+    "pinyin": "Wǒ yǒudiǎnr lèi.",
+    "meaning": "I’m a little tired.",
+    "context": "I’m a little tired. · 我＿＿累。",
+    "accepted": [
+      "有一点儿"
+    ]
+  },
+  {
+    "id": "word-07",
+    "kind": "choice",
+    "prompt": "Wybierz wyrażenie, które wskazuje część grupy.",
+    "answer": "有些",
+    "explanation": "有些人 wskazuje na niektóre osoby. 有些 może też oznaczać „nieco”, np. w 有些累.",
+    "pinyin": "Yǒuxiē rén hěn ānjìng.",
+    "meaning": "Some people are very quiet.",
+    "context": "Some people are very quiet. · ＿＿人很安静。",
+    "choices": [
+      "有点儿",
+      "有时候",
+      "有些"
+    ]
+  },
+  {
+    "id": "word-08",
+    "kind": "build",
+    "prompt": "Ułóż zdanie odpowiadające tłumaczeniu.",
+    "answer": "我有时候骑共享单车",
+    "explanation": "有时候 określa częstotliwość. Można postawić je przed podmiotem albo po nim, przed czasownikiem.",
+    "pinyin": "Wǒ yǒu shíhou qí gòngxiǎng dānchē.",
+    "meaning": "I sometimes ride a shared bicycle.",
+    "context": "I sometimes ride a shared bicycle.",
+    "choices": [
+      "共享单车",
+      "骑",
+      "我",
+      "有时候"
+    ],
+    "accepted": [
+      "有时候我骑共享单车"
+    ]
+  },
+  {
+    "id": "word-09",
+    "kind": "writing",
+    "prompt": "Napisz znak oznaczający „deszcz”.",
+    "answer": "雨",
+    "explanation": "Deszcz zapisujemy jako 雨. W 雪 „śnieg” element 雨 znajduje się nad 彐.",
+    "pinyin": "Jīntiān xià yǔ.",
+    "meaning": "It’s raining today.",
+    "context": "It’s raining today. · 今天下＿＿。"
+  },
+  {
+    "id": "word-10",
+    "kind": "gap",
+    "prompt": "Wpisz jeden znak oznaczający „daleko”.",
+    "answer": "远",
+    "explanation": "离 wprowadza punkt odniesienia. 远 opisuje odległość i zawiera 辶 oraz 元.",
+    "pinyin": "Wǒ jiā lí xuéxiào bù yuǎn.",
+    "meaning": "My home isn’t far from school.",
+    "context": "My home isn’t far from school. · 我家离学校不＿＿。"
+  },
+  {
+    "id": "word-11",
+    "kind": "writing",
+    "prompt": "Napisz znak oznaczający „miesiąc”.",
+    "answer": "月",
+    "explanation": "Nazwę miesiąca tworzą liczba oraz 月. Dziesiąty miesiąc to 十月.",
+    "pinyin": "Shí yuè.",
+    "meaning": "October",
+    "context": "October · 十＿＿"
+  },
+  {
+    "id": "word-12",
+    "kind": "choice",
+    "prompt": "Poproś o powtórzenie.",
+    "answer": "再",
+    "explanation": "再 w prośbie dotyczy kolejnego wykonania czynności. 又 opisuje np. powtórzenie, które już zaszło.",
+    "pinyin": "Qǐng zài shuō yí cì.",
+    "meaning": "Please say it again.",
+    "context": "Please say it again. · 请＿＿说一次。",
+    "choices": [
+      "又",
+      "在",
+      "再"
+    ]
+  },
+  {
+    "id": "word-13",
+    "kind": "writing",
+    "prompt": "Zapisz zài wskazujące miejsce.",
+    "answer": "在",
+    "explanation": "在家 mówi, gdzie ktoś jest. 再 ma tę samą wymowę i dotyczy powtórzenia.",
+    "pinyin": "Wǒ zài jiā.",
+    "meaning": "I’m at home.",
+    "context": "I’m at home. · 我＿＿家。"
+  },
+  {
+    "id": "word-14",
+    "kind": "writing",
+    "prompt": "Zapisz pierwszy znak w porannym powitaniu.",
+    "answer": "早",
+    "explanation": "早 oznacza „wcześnie”. Nad 十 w tym znaku jest 日.",
+    "pinyin": "Zǎoshang hǎo!",
+    "meaning": "Good morning!",
+    "context": "Good morning! · ＿＿上好！"
+  },
+  {
+    "id": "word-15",
+    "kind": "build",
+    "prompt": "Ułóż zdanie odpowiadające tłumaczeniu.",
+    "answer": "你怎么去学校",
+    "explanation": "怎么 przed 去 pyta o sposób dotarcia. Po 去 występuje cel podróży.",
+    "pinyin": "Nǐ zěnme qù xuéxiào?",
+    "meaning": "How do you get to school?",
+    "context": "How do you get to school?",
+    "choices": [
+      "学校",
+      "怎么",
+      "你",
+      "去"
+    ]
+  },
+  {
+    "id": "word-16",
+    "kind": "choice",
+    "prompt": "Zapytaj, jaka jest pogoda.",
+    "answer": "怎么样",
+    "explanation": "怎么样 po temacie prosi o opis lub ocenę. 怎么 przed czasownikiem pyta o sposób wykonania.",
+    "pinyin": "Jīntiān tiānqì zěnmeyàng?",
+    "meaning": "How is the weather today?",
+    "context": "How is the weather today? · 今天天气＿＿？",
+    "choices": [
+      "怎么",
+      "什么",
+      "怎么样"
+    ]
+  },
+  {
+    "id": "word-17",
+    "kind": "choice",
+    "prompt": "Wybierz czasownik opisujący trwające poszukiwanie.",
+    "answer": "找",
+    "explanation": "找 to szukać. 到 w 找到 wskazuje na osiągnięty wynik, czyli znalezienie.",
+    "pinyin": "Wǒ zài zhǎo wǒ de shǒujī.",
+    "meaning": "I’m looking for my phone.",
+    "context": "I’m looking for my phone. · 我在＿＿我的手机。",
+    "choices": [
+      "找到",
+      "看到",
+      "找"
+    ]
+  },
+  {
+    "id": "word-18",
+    "kind": "writing",
+    "prompt": "Zapisz jeden znak wskazujący pobliską rzecz.",
+    "answer": "这",
+    "explanation": "这 wskazuje bliską rzecz. 那 oznacza „tamto”.",
+    "pinyin": "Zhè shì wǒ de shū.",
+    "meaning": "This is my book.",
+    "context": "This is my book. · ＿＿是我的书。"
+  },
+  {
+    "id": "word-19",
+    "kind": "gap",
+    "prompt": "Wpisz ostatni znak wyrażenia „taki sam”.",
+    "answer": "样",
+    "explanation": "一样 oznacza „taki sam”. 不一样 oznacza „różny”. 样 składa się z 木 i 羊.",
+    "pinyin": "Sūzhōu hé Shànghǎi bù yíyàng.",
+    "meaning": "Suzhou and Shanghai are different.",
+    "context": "Suzhou and Shanghai are different. · 苏州和上海不一＿＿。"
+  },
+  {
+    "id": "word-20",
+    "kind": "choice",
+    "prompt": "Wskaż miejsce przy mówiącym.",
+    "answer": "这里",
+    "explanation": "这里 to „tutaj”. 那里 to „tam”, a 哪里 pyta „gdzie?”.",
+    "pinyin": "Qǐng lái zhèlǐ.",
+    "meaning": "Please come here.",
+    "context": "Please come here. · 请来＿＿。",
+    "choices": [
+      "那里",
+      "哪里",
+      "这里"
+    ]
+  },
+  {
+    "id": "word-21",
+    "kind": "writing",
+    "prompt": "Napisz znak znaczący „naprawdę” w pytaniu o potwierdzenie.",
+    "answer": "真",
+    "explanation": "真的 pyta o prawdziwość informacji. Przed przymiotnikiem 真 wzmacnia ocenę, np. 真好.",
+    "pinyin": "Zhēn de ma?",
+    "meaning": "Really?",
+    "context": "Really? · ＿＿的吗？"
+  },
+  {
+    "id": "word-22",
+    "kind": "choice",
+    "prompt": "Wybierz konkretny wskaźnik trwania czynności.",
+    "answer": "正在",
+    "explanation": "正在 wyraźnie zaznacza trwającą czynność. 现在 wskazuje czas i może też określać dłuższy obecny okres.",
+    "pinyin": "Tā zhèngzài chīfàn.",
+    "meaning": "He is eating right now.",
+    "context": "He is eating right now. · 他＿＿吃饭。",
+    "choices": [
+      "现在",
+      "正在",
+      "再"
+    ]
+  },
+  {
+    "id": "word-23",
+    "kind": "choice",
+    "prompt": "Wybierz wymowy znaku w kolejności zdań.",
+    "answer": "zhǐ · zhī",
+    "explanation": "Przysłówek „tylko” czytamy zhǐ. Klasyfikator zwierząt czytamy zhī.",
+    "pinyin": "Wǒ zhǐ yǒu yí ge. Yì zhī māo.",
+    "meaning": "I only have one. One cat.",
+    "context": "我只有一个。 一只猫。",
+    "choices": [
+      "zhī · zhǐ",
+      "zhǐ · zhǐ",
+      "zhǐ · zhī"
+    ]
+  },
+  {
+    "id": "word-24",
+    "kind": "build",
+    "prompt": "Ułóż zdanie odpowiadające tłumaczeniu.",
+    "answer": "我只是开玩笑",
+    "explanation": "只是 ogranicza sens wypowiedzi. Tu oznacza „tylko” przed 开玩笑.",
+    "pinyin": "Wǒ zhǐshì kāi wánxiào.",
+    "meaning": "I’m just joking.",
+    "context": "I’m just joking.",
+    "choices": [
+      "只是",
+      "开玩笑",
+      "我"
+    ]
+  },
+  {
+    "id": "word-25",
+    "kind": "gap",
+    "prompt": "Uzupełnij jednym znakiem o znaczeniu „ale”.",
+    "answer": "但",
+    "explanation": "但 otwiera zdanie przeciwstawne i ma dłuższą formę 但是.",
+    "pinyin": "Wǒ xiǎng qù, dàn wǒ hěn máng.",
+    "meaning": "I want to go, but I’m busy.",
+    "context": "I want to go, but I’m busy. · 我想去，＿＿我很忙。"
+  },
+  {
+    "id": "word-26",
+    "kind": "choice",
+    "prompt": "Potrafisz podać jego imię, gdy ktoś o nie pyta. Wybierz czasownik.",
+    "answer": "知道",
+    "explanation": "知道 łączy się z informacją, np. imieniem. 认识他 znaczy „znam go osobiście”.",
+    "pinyin": "Wǒ zhīdào tā de míngzi.",
+    "meaning": "I know his name.",
+    "context": "I know his name. · 我＿＿他的名字。",
+    "choices": [
+      "认识",
+      "知道",
+      "找到"
+    ]
+  },
+  {
+    "id": "word-27",
+    "kind": "build",
+    "prompt": "Ułóż zdanie odpowiadające tłumaczeniu.",
+    "answer": "我现在住在苏州",
+    "explanation": "住在 wprowadza miejsce zamieszkania. 现在 można postawić przed podmiotem albo po nim.",
+    "pinyin": "Wǒ xiànzài zhù zài Sūzhōu.",
+    "meaning": "I now live in Suzhou.",
+    "context": "I now live in Suzhou.",
+    "choices": [
+      "苏州",
+      "现在",
+      "住在",
+      "我"
+    ],
+    "accepted": [
+      "现在我住在苏州"
+    ]
+  },
+  {
+    "id": "word-28",
+    "kind": "build",
+    "prompt": "Ułóż zdanie odpowiadające tłumaczeniu.",
+    "answer": "书在桌子上",
+    "explanation": "在 wskazuje położenie. 上 po 桌子 mówi, że książka leży na powierzchni stołu.",
+    "pinyin": "Shū zài zhuōzi shang.",
+    "meaning": "The book is on the table.",
+    "context": "The book is on the table.",
+    "choices": [
+      "桌子上",
+      "书",
+      "在"
+    ]
+  },
+  {
+    "id": "word-29",
+    "kind": "writing",
+    "prompt": "Napisz pojedynczy znak oznaczający „znak pisma”.",
+    "answer": "字",
+    "explanation": "字 oznacza znak lub jednostkę pisma. 写字 oznacza pisać znaki.",
+    "pinyin": "Zhège zì zěnme dú?",
+    "meaning": "How do you read this character?",
+    "context": "How do you read this character? · 这个＿＿怎么读？"
+  },
+  {
+    "id": "word-30",
+    "kind": "writing",
+    "prompt": "Napisz znak oznaczający „pisać”.",
+    "answer": "写",
+    "explanation": "写 może wystąpić samodzielnie, jeśli z rozmowy wiadomo, co piszesz. 写名字 ma już przedmiot 名字.",
+    "pinyin": "Wǒ huì xiě.",
+    "meaning": "I can write.",
+    "context": "I can write. · 我会＿＿。"
+  },
+  {
+    "id": "word-31",
+    "kind": "build",
+    "prompt": "Ułóż zdanie odpowiadające tłumaczeniu.",
+    "answer": "昨天我去了商店",
+    "explanation": "昨天 ustala czas. Może stać przed podmiotem lub zaraz po nim.",
+    "pinyin": "Zuótiān wǒ qù le shāngdiàn.",
+    "meaning": "Yesterday I went to the shop.",
+    "context": "Yesterday I went to the shop.",
+    "choices": [
+      "商店",
+      "昨天",
+      "去了",
+      "我"
+    ],
+    "accepted": [
+      "我昨天去了商店"
+    ]
+  },
+  {
+    "id": "word-32",
+    "kind": "choice",
+    "prompt": "Uzupełnij zwrot „na pierwszy rzut oka”.",
+    "answer": "乍",
+    "explanation": "乍 w 乍一看 oznacza „na początku”. 咋 może potocznie znaczyć „jak?”.",
+    "pinyin": "Zhà yí kàn.",
+    "meaning": "At first glance",
+    "context": "At first glance · ＿＿一看",
+    "choices": [
+      "作",
+      "咋",
+      "乍"
+    ]
+  },
+  {
+    "id": "word-33",
+    "kind": "writing",
+    "prompt": "Zapisz zuò używane, gdy siadasz lub jedziesz autobusem.",
+    "answer": "坐",
+    "explanation": "坐 oznacza „siedzieć” lub „jechać środkiem transportu”. W 座 nad 坐 dochodzi 广.",
+    "pinyin": "Wǒ zuò gōngjiāochē.",
+    "meaning": "I take the bus.",
+    "context": "I take the bus. · 我＿＿公交车。"
+  },
+  {
+    "id": "word-34",
+    "kind": "writing",
+    "prompt": "Wpisz zuò używane w zwrocie „odrabiać pracę domową”.",
+    "answer": "做",
+    "explanation": "W 做作业 używamy 做 jako czasownika. 作 jest częścią rzeczownika 作业.",
+    "pinyin": "Wǒ zài zuò zuòyè.",
+    "meaning": "I’m doing homework.",
+    "context": "I’m doing homework. · 我在＿＿作业。"
+  },
+  {
+    "id": "word-35",
+    "kind": "choice",
+    "prompt": "Wybierz rzeczownik oznaczający zainteresowanie lub hobby.",
+    "answer": "爱好",
+    "explanation": "爱好 pasuje jako rzeczownik po 我的. 喜欢 w zdaniu 我喜欢看书 to czasownik „lubić”.",
+    "pinyin": "Wǒ de àihào shì kànshū.",
+    "meaning": "My hobby is reading.",
+    "context": "My hobby is reading. · 我的＿＿是看书。",
+    "choices": [
+      "爱好",
+      "喜欢",
+      "工作"
+    ]
+  },
+  {
+    "id": "word-36",
+    "kind": "choice",
+    "prompt": "Dokończ zdanie z właściwym kolorem.",
+    "answer": "白色",
+    "explanation": "白色 nazywa kolor biały. 白天 oznacza porę dzienną. 百 to „sto”.",
+    "pinyin": "Tā chuān báisè yīfu.",
+    "meaning": "She wears white clothes.",
+    "context": "She wears white clothes. · 她穿＿＿衣服。",
+    "choices": [
+      "白天",
+      "百色",
+      "白色"
+    ]
+  },
+  {
+    "id": "word-37",
+    "kind": "writing",
+    "prompt": "Zapisz bān oznaczające klasę w szkole.",
+    "answer": "班",
+    "explanation": "班 oznacza klasę, grupę lub zmianę w pracy. W podobnym 斑 pośrodku jest 文.",
+    "pinyin": "Wǒ zài sān bān.",
+    "meaning": "I’m in Class Three.",
+    "context": "I’m in Class Three. · 我在三＿＿。"
+  },
+  {
+    "id": "word-38",
+    "kind": "gap",
+    "prompt": "Użyj jednego znaku, po którym może stać 我 jako osoba, której pomagasz.",
+    "answer": "帮",
+    "explanation": "帮 przyjmuje osobę bezpośrednio, np. 帮我. W 帮忙 znak 忙 jest już częścią wyrażenia.",
+    "pinyin": "Qǐng bāng wǒ yíxià.",
+    "meaning": "Please help me for a moment.",
+    "context": "Please help me for a moment. · 请＿＿我一下。"
+  },
+  {
+    "id": "word-39",
+    "kind": "build",
+    "prompt": "Ułóż zdanie odpowiadające tłumaczeniu.",
+    "answer": "你能帮忙吗",
+    "explanation": "帮忙 może stać samodzielnie. 吗 zamyka pytanie wymagające potwierdzenia lub zaprzeczenia.",
+    "pinyin": "Nǐ néng bāngmáng ma?",
+    "meaning": "Can you help?",
+    "context": "Can you help?",
+    "choices": [
+      "吗",
+      "你能",
+      "帮忙"
+    ]
+  },
+  {
+    "id": "word-40",
+    "kind": "writing",
+    "prompt": "Zapisz bāo oznaczające torbę lub pakunek.",
+    "answer": "包",
+    "explanation": "包 oznacza torbę lub pakunek. Ten sam kształt widać w 抱, 饱 i 跑.",
+    "pinyin": "Wǒ mǎi le yí ge bāo.",
+    "meaning": "I bought a bag.",
+    "context": "I bought a bag. · 我买了一个＿＿。"
+  },
+  {
+    "id": "word-41",
+    "kind": "build",
+    "prompt": "Ułóż zdanie odpowiadające tłumaczeniu.",
+    "answer": "我比你高",
+    "explanation": "Schemat porównania to A + 比 + B + przymiotnik. Tutaj 我 jest A, a 你 jest B.",
+    "pinyin": "Wǒ bǐ nǐ gāo.",
+    "meaning": "I’m taller than you.",
+    "context": "I’m taller than you.",
+    "choices": [
+      "高",
+      "你",
+      "我",
+      "比"
+    ]
+  },
+  {
+    "id": "word-42",
+    "kind": "gap",
+    "prompt": "Wpisz pierwszy znak wyrażenia „jeśli”.",
+    "answer": "如",
+    "explanation": "如果 wprowadza warunek, po którym następuje jego skutek. 如 to 女 oraz 口.",
+    "pinyin": "Rúguǒ míngtiān xià yǔ, wǒ zài jiā xuéxí.",
+    "meaning": "If it rains tomorrow, I’ll study at home.",
+    "context": "If it rains tomorrow, I’ll study at home. · ＿＿果明天下雨，我在家学习。"
+  },
+  {
+    "id": "word-43",
+    "kind": "writing",
+    "prompt": "Zapisz znak tworzący potoczny zakaz lub prośbę, żeby czegoś nie robić.",
+    "answer": "别",
+    "explanation": "别 przed czasownikiem tworzy zakaz lub prośbę. W 别人 ten sam znak oznacza „inny”.",
+    "pinyin": "Bié wàng le!",
+    "meaning": "Don’t forget!",
+    "context": "Don’t forget! · ＿＿忘了！"
+  },
+  {
+    "id": "word-44",
+    "kind": "choice",
+    "prompt": "Wybierz odpowiedź, która wyraża umiarkowaną pochwałę.",
+    "answer": "不错",
+    "explanation": "不错 to pozytywna ocena. W tym wyrażeniu 不 czytamy bú, bo 错 ma czwarty ton.",
+    "pinyin": "Zhège cài búcuò.",
+    "meaning": "This dish is pretty good.",
+    "context": "This dish is pretty good. · 这个菜＿＿。",
+    "choices": [
+      "不好",
+      "不错",
+      "没错"
+    ]
+  },
+  {
+    "id": "word-45",
+    "kind": "build",
+    "prompt": "Ułóż zdanie odpowiadające tłumaczeniu.",
+    "answer": "不好意思，我来晚了",
+    "explanation": "不好意思 to częsta, lekka forma przeprosin. 来晚了 mówi, że przyjście nastąpiło później niż oczekiwano.",
+    "pinyin": "Bù hǎoyìsi, wǒ lái wǎn le.",
+    "meaning": "Sorry, I’m late.",
+    "context": "Sorry, I’m late.",
+    "choices": [
+      "来晚了",
+      "，",
+      "我",
+      "不好意思"
+    ]
+  },
+  {
+    "id": "word-46",
+    "kind": "choice",
+    "prompt": "Wybierz wymowy znaku w kolejności zdań.",
+    "answer": "cháng · zhǎng",
+    "explanation": "cháng opisuje długość, a zhǎng w 长大 oznacza rosnąć lub dorastać.",
+    "pinyin": "Zhè tiáo lù hěn cháng. Wǒ zhǎngdà le.",
+    "meaning": "This road is long. I’ve grown up.",
+    "context": "这条路很长。 我长大了。",
+    "choices": [
+      "zhǎng · cháng",
+      "cháng · cháng",
+      "cháng · zhǎng"
+    ]
+  },
+  {
+    "id": "word-47",
+    "kind": "build",
+    "prompt": "Ułóż zdanie odpowiadające tłumaczeniu.",
+    "answer": "火车站在哪儿",
+    "explanation": "火车站 tworzy nazwę miejsca, a 在哪儿 pyta o jego położenie.",
+    "pinyin": "Huǒchēzhàn zài nǎr?",
+    "meaning": "Where is the train station?",
+    "context": "Where is the train station?",
+    "choices": [
+      "在哪儿",
+      "火车",
+      "站"
+    ]
+  },
+  {
+    "id": "word-48",
+    "kind": "writing",
+    "prompt": "Napisz znak o znaczeniu „wyjść” lub „wyłonić się”.",
+    "answer": "出",
+    "explanation": "出 wskazuje ruch na zewnątrz. 去 dodaje kierunek od punktu odniesienia.",
+    "pinyin": "Tā chūqù le.",
+    "meaning": "He went out.",
+    "context": "He went out. · 他＿＿去了。"
+  },
+  {
+    "id": "word-49",
+    "kind": "choice",
+    "prompt": "Stoisz na korytarzu i prosisz kogoś w pokoju, żeby wyszedł do ciebie.",
+    "answer": "出来",
+    "explanation": "出 wskazuje ruch na zewnątrz pokoju, a 来 ruch w stronę mówiącego na korytarzu.",
+    "pinyin": "Qǐng chūlái yíxià.",
+    "meaning": "Please come out for a moment.",
+    "context": "Please come out for a moment. · 请＿＿一下。",
+    "choices": [
+      "进去",
+      "出去",
+      "出来"
+    ]
+  },
+  {
+    "id": "word-50",
+    "kind": "choice",
+    "prompt": "Jesteś w pokoju i mówisz, że wyjdziesz z niego na chwilę.",
+    "answer": "出去",
+    "explanation": "出 wskazuje ruch na zewnątrz pokoju, a 去 oddalanie się od przyjętego punktu odniesienia.",
+    "pinyin": "Wǒ chūqù yíxià.",
+    "meaning": "I’m going out for a bit.",
+    "context": "I’m going out for a bit. · 我＿＿一下。",
+    "choices": [
+      "出去",
+      "出来",
+      "进来"
+    ]
+  },
+  {
+    "id": "shape-01",
+    "kind": "choice",
+    "prompt": "Który znak oznacza „jeszcze nie”?",
+    "answer": "未",
+    "explanation": "未 ma krótszą górną kreskę niż drugą. W 末 górna kreska jest dłuższa.",
+    "pinyin": "wèi",
+    "meaning": "not yet",
+    "choices": [
+      "末",
+      "木",
+      "未",
+      "本"
+    ]
+  },
+  {
+    "id": "shape-02",
+    "kind": "choice",
+    "prompt": "Wybierz znak bān, który zamyka słowo „zwykle”.",
+    "answer": "般",
+    "explanation": "W 般 i 船 po lewej jest 舟. 一般 zapisujemy z 般.",
+    "pinyin": "yìbān",
+    "meaning": "usually",
+    "context": "一＿＿",
+    "choices": [
+      "船",
+      "班",
+      "般"
+    ]
+  },
+  {
+    "id": "shape-03",
+    "kind": "choice",
+    "prompt": "Wybierz znak qí oznaczający „jechać na czymś okrakiem”.",
+    "answer": "骑",
+    "explanation": "骑 ma po lewej 马, a 椅 ma 木. 奇 to prawy element obu znaków.",
+    "pinyin": "qí",
+    "meaning": "ride",
+    "choices": [
+      "椅",
+      "奇",
+      "骑"
+    ]
+  },
+  {
+    "id": "shape-04",
+    "kind": "choice",
+    "prompt": "Wybierz znak yuǎn oznaczający „daleko”.",
+    "answer": "远",
+    "explanation": "远 dodaje 辶 do 元. W 园 element 元 mieści się w obramowaniu 囗.",
+    "pinyin": "yuǎn",
+    "meaning": "far",
+    "choices": [
+      "园",
+      "元",
+      "远",
+      "完"
+    ]
+  },
+  {
+    "id": "shape-05",
+    "kind": "choice",
+    "prompt": "Wybierz znak yáng oznaczający „ocean”.",
+    "answer": "洋",
+    "explanation": "洋 ma 氵 związane z wodą, 样 ma 木, a 羊 zapisuje się samodzielnie jako „owca”.",
+    "pinyin": "yáng",
+    "meaning": "ocean",
+    "choices": [
+      "羊",
+      "洋",
+      "样"
+    ]
+  },
+  {
+    "id": "shape-06",
+    "kind": "choice",
+    "prompt": "Wybierz znak zhǎi oznaczający „wąski”.",
+    "answer": "窄",
+    "explanation": "窄 ma u góry 穴, a na dole 乍. 昨 ma 日 po lewej, a 怎 ma 心 u dołu.",
+    "pinyin": "zhǎi",
+    "meaning": "narrow",
+    "choices": [
+      "作",
+      "昨",
+      "炸",
+      "窄",
+      "怎"
+    ]
+  },
+  {
+    "id": "shape-07",
+    "kind": "choice",
+    "prompt": "Wybierz znak zhù oznaczający „mieszkać”.",
+    "answer": "住",
+    "explanation": "住 ma po lewej 亻. 注 używa 氵, a 往 ma 彳. 主 jest wspólnym elementem tych znaków.",
+    "pinyin": "zhù",
+    "meaning": "live, reside",
+    "choices": [
+      "注",
+      "往",
+      "住",
+      "主"
+    ]
+  },
+  {
+    "id": "shape-08",
+    "kind": "choice",
+    "prompt": "W którym znaku bǎo element po lewej wiąże się z jedzeniem?",
+    "answer": "饱",
+    "explanation": "饱 ma 饣 i oznacza „najedzony”. 抱 używa 扌, 跑 ma element 足, a 炮 ma 火.",
+    "pinyin": "bǎo",
+    "meaning": "full after eating",
+    "choices": [
+      "抱",
+      "饱",
+      "跑",
+      "炮",
+      "包"
+    ]
+  },
+  {
+    "id": "shape-09",
+    "kind": "choice",
+    "prompt": "Wybierz znak bǐ używany w porównaniu.",
+    "answer": "比",
+    "explanation": "比 wprowadza porównanie. 批 dodaje 扌, a 毕 ma 十 na dole. 北 oznacza północ.",
+    "pinyin": "bǐ",
+    "meaning": "compare, than",
+    "choices": [
+      "北",
+      "批",
+      "比",
+      "毕"
+    ]
+  },
+  {
+    "id": "shape-10",
+    "kind": "choice",
+    "prompt": "Wybierz zuò, które może być klasyfikatorem mostu.",
+    "answer": "座",
+    "explanation": "座 zawiera 坐 oraz 广. Konstrukcja 一座桥 liczy mosty, a 坐 w 坐公交车 oznacza jechać.",
+    "pinyin": "yí zuò qiáo",
+    "meaning": "one bridge",
+    "context": "一＿＿桥",
+    "choices": [
+      "坐",
+      "做",
+      "作",
+      "座"
+    ]
+  },
+  {
+    "id": "shape-11",
+    "kind": "choice",
+    "prompt": "Wybierz bǎi oznaczające „sto”.",
+    "answer": "百",
+    "explanation": "百 ma u góry dodatkową poziomą kreskę w porównaniu z 白. 日 oznacza słońce lub dzień, 目 oznacza oko.",
+    "pinyin": "bǎi",
+    "meaning": "one hundred",
+    "choices": [
+      "白",
+      "日",
+      "百",
+      "目"
+    ]
+  },
+  {
+    "id": "shape-12",
+    "kind": "choice",
+    "prompt": "Wybierz znak oznaczający „ryż” w słowie „ugotowany ryż”.",
+    "answer": "米",
+    "explanation": "米 oznacza ryż jako ziarno, a 米饭 to ugotowany ryż. Podobny znak 来 oznacza „przyjść”.",
+    "pinyin": "mǐfàn",
+    "meaning": "cooked rice",
+    "context": "＿＿饭",
+    "choices": [
+      "再",
+      "来",
+      "在",
+      "米"
+    ]
+  }
+]
