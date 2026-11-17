@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./hanzi-style.css";
+import "./study-hanzi-type.css";
 import "./theme.css";
 import {AppearanceProvider} from "./theme";
 import { I18nProvider } from "./i18n";
