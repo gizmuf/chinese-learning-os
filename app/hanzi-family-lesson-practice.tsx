@@ -5,7 +5,7 @@ import {ArrowLeft, ArrowRight, RotateCcw} from 'lucide-react';
 import type {Stroke} from './learning';
 import PinyinHandwriting from './pinyin-handwriting';
 import {StudyText} from './study-lookup-context';
-import {type HanziExercise, matchesHanziAnswer} from './hanzi-family-lesson-route';
+import {type HanziExercise, matchesHanziAnswer, selectedPracticeHref} from './hanzi-family-lesson-route';
 import './pinyin-practice.css';
 
 type Outcome = 'correct' | 'retry' | 'compare';
@@ -58,7 +58,7 @@ export default function HanziFamilyPractice({exercises, active, onSelect, filter
         </select>
       </label>
       <p role="status">{exercises.filter(item => attempts[item.id]).length} / {exercises.length} attempted</p>
-      <a className="text-button" href="/?study=library&set=selected">Selected for practice</a>
+      <a className="text-button" href={selectedPracticeHref}>Selected for practice</a>
     </div>
     <Exercise key={exercise.id} exercise={exercise} attempt={attempts[exercise.id]} onSave={value => save(exercise.id, value)} {...{penOnly, setPenOnly}}/>
     <div className="hanzi-family-actions hanzi-family-paging">

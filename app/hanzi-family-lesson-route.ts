@@ -1,6 +1,7 @@
 export const hanziFamilyLessonId = 'hanzi-families-2026-11-17';
 export const hanziFamilyLessonTitle = 'Hanzi, words and their families';
 export const hanziFamilyLessonHref = '/?course=intensive&material=' + hanziFamilyLessonId;
+export const selectedPracticeHref = '/?study=library&set=selected';
 
 export function hanziFamilyBackLink(search: string) {
   const query = new URLSearchParams(search);
