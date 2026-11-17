@@ -7,6 +7,7 @@ import audioSources from '../data/mandarin-320-audio.json';
 import {stopAudio} from './audio';
 import {Exercise, type Attempt, type Attempts} from './hanzi-family-lesson-practice';
 import {hanziFamilyBackLink, selectedPracticeHref} from './hanzi-family-lesson-route';
+import {createMandarin320PinyinLookup} from './mandarin-320-pinyin';
 import {mandarin320Contrasts, mandarin320ContrastTopics, recallMandarin320, sentenceMandarin320, type MandarinEntry} from './mandarin-320-practice-model';
 import {mandarin320Activities, mandarin320Id, mandarin320Modes, mandarin320Route, mandarin320Title, type Mandarin320Route} from './mandarin-320-route';
 import {StudyText, useStudyLookup} from './study-lookup-context';
@@ -16,6 +17,7 @@ import './hanzi-family-lesson.css';
 import './mandarin-320.css';
 
 const entries: MandarinEntry[] = catalog.entries;
+const lookupPinyin = createMandarin320PinyinLookup(entries);
 const clips: Record<string, string> = audioSources;
 const rangeSize = 40;
 type Playback = ReturnType<typeof useRecordingPlayback>;
@@ -166,6 +168,10 @@ function Practice({route, navigate, attempts, pending, save, player, penOnly, se
     ? (route.mode === 'recall' ? recallMandarin320(entry) : sentenceMandarin320(entry))
     : mandarin320Contrasts[item - 1];
   const attempt = attempts[exercise.id];
+  const [before, after] = exercise.context?.split(' · ', 1)[0].split('＿＿') ?? [];
+  const sentenceGap = entry && route.mode === 'sentence' && exercise.kind === 'gap' && after !== undefined
+    ? {before, after, translation: entry.example_meaning, lookup: lookupPinyin}
+    : undefined;
   const select = (item: number) => navigate({item});
 
   return <section className="panel hanzi-family-panel" aria-labelledby="mandarin320-practice">
@@ -183,7 +189,7 @@ function Practice({route, navigate, attempts, pending, save, player, penOnly, se
     </div>
     <p className="mandarin320-practice-position">{isContrast ? 'Contrast' : 'Entry'} {item} / {count}</p>
     {isContrast && attempt && <p lang="pl">{mandarin320ContrastTopics[item - 1]}</p>}
-    <Exercise key={exercise.id} exercise={exercise} attempt={attempt} pending={pending} onSave={value => save(exercise.id, value)}
+    <Exercise key={exercise.id} exercise={exercise} attempt={attempt} pending={pending} sentenceGap={sentenceGap} onSave={value => save(exercise.id, value)}
       {...{penOnly, setPenOnly}} feedbackDetails={entry && <Example entry={entry} player={player} dictionary/>}/>
     <div className="hanzi-family-actions hanzi-family-paging">
       <button type="button" className="secondary" disabled={item === 1} onClick={() => select(item - 1)}><ArrowLeft size={16} aria-hidden="true"/>Previous question</button>
