@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Clock3, Headphones, Mic } from 'lucide-react';
 import { StudyText } from './study-lookup-context';
-import { beginSpeakingAttempt, clearSpeakingAnswers, readSpeakingAnswers, saveSpeakingAnswer } from './hsk3-speaking-storage';
+import { beginSpeakingAttempt, clearSpeakingAnswers, readSpeakingAttempt, saveSpeakingAnswer } from './hsk3-speaking-storage';
 import { recordSpeakingAnswer } from './hsk3-speaking-recorder';
 import { speakingAudio, speakingClock, speakingSections, speakingSteps, speakingTasks, questionClip, type RecordedAnswer, type SpeakingTask } from './hsk3-speaking-model';
 import './hsk3-speaking.css';
@@ -58,9 +58,11 @@ export default function Hsk3Speaking() {
   const source=useRef<HTMLAudioElement>(null);
   const panel=useRef<HTMLElement>(null);
   const stream=useRef<MediaStream|null>(null);
+  const microphoneRequest=useRef(0);
   const running=useRef(false);
   const activeStep=useRef(-1);
   const transition=useRef(false);
+  const stopRequested=useRef<string|null>(null);
   const mounted=useRef(false);
   const cue=useRef(-1);
   const deadline=useRef(0);
@@ -69,16 +71,19 @@ export default function Hsk3Speaking() {
   const queued=useRef<Promise<unknown>>(Promise.resolve());
 
   function releaseMicrophone() {
+    microphoneRequest.current++;
     stream.current?.getTracks().forEach(track=>{track.onended=null;track.stop();});
     stream.current=null;
   }
 
   useEffect(()=>{
     mounted.current=true;
-    readSpeakingAnswers().then(previous=>{
+    readSpeakingAttempt().then(previous=>{
       if(!mounted.current)return;
-      setAnswers(previous);
-      setScreen(previous.length?'review':'ready');
+      const saved=previous?.answers??[];
+      runId.current=previous?.id??'';
+      setAnswers(saved);
+      setScreen(saved.length?'review':'ready');
     }).catch(()=>{
       if(mounted.current) {setStorageWarning(true);setScreen('ready');}
     });
@@ -110,9 +115,10 @@ export default function Hsk3Speaking() {
     }
     setNote('');
     setMicrophone('loading');
+    const request=++microphoneRequest.current;
     try {
       const opened=await navigator.mediaDevices.getUserMedia({audio:{channelCount:1,echoCancellation:true,noiseSuppression:true}});
-      if(!mounted.current) {opened.getTracks().forEach(track=>track.stop());return;}
+      if(!mounted.current||microphoneRequest.current!==request) {opened.getTracks().forEach(track=>track.stop());return;}
       const track=opened.getAudioTracks()[0];
       if(!track||track.readyState!=='live') {
         opened.getTracks().forEach(item=>item.stop());
@@ -125,13 +131,14 @@ export default function Hsk3Speaking() {
       };
       setMicrophone('ready');
     } catch {
-      if(mounted.current) {setMicrophone('off');setNote(microphoneError);}
+      if(mounted.current&&microphoneRequest.current===request) {setMicrophone('off');setNote(microphoneError);}
     }
   }
 
   function showReview(message='') {
     running.current=false;
     transition.current=false;
+    stopRequested.current=null;
     activeStep.current=-1;
     deadline.current=0;
     cue.current=-1;
@@ -189,7 +196,11 @@ export default function Hsk3Speaking() {
   }
 
   async function advance(stop=false,message='') {
-    if(!running.current||transition.current)return;
+    if(!running.current)return;
+    if(transition.current) {
+      if(stop)stopRequested.current=message;
+      return;
+    }
     transition.current=true;
     const index=activeStep.current;
     deadline.current=0;
@@ -209,7 +220,7 @@ export default function Hsk3Speaking() {
       queueSave(()=>saveSpeakingAnswer(id,answer));
     }
     transition.current=false;
-    if(stop)showReview(message);
+    if(stop||stopRequested.current!==null)showReview(stopRequested.current??message);
     else startAt(index+1);
   }
 
@@ -287,7 +298,13 @@ export default function Hsk3Speaking() {
       <div className="hsk-speaking-actions">
         <button type="button" className="primary" onClick={()=>{setScreen('ready');setNote('');}}>New attempt</button>
         {answers.length>0&&<button type="button" className="secondary" onClick={()=>{
-          setAnswers([]);queueSave(clearSpeakingAnswers);
+          const id=runId.current;
+          queueSave(async()=>{
+            const deleted=await clearSpeakingAnswers(id);
+            if(!mounted.current||runId.current!==id)return;
+            setAnswers([]);
+            if(!deleted)setNote('A newer attempt was saved in another tab. Reload to review it.');
+          });
         }}>Delete recordings</button>}
       </div>
     </>}

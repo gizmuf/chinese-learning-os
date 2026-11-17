@@ -25,9 +25,9 @@ async function useAttemptStore<T>(mode:IDBTransactionMode,run:(store:IDBObjectSt
   }
 }
 
-export const readSpeakingAnswers=()=>useAttemptStore<RecordedAnswer[]>('readonly',(store,done)=>{
+export const readSpeakingAttempt=()=>useAttemptStore<StoredAttempt|undefined>('readonly',(store,done)=>{
   const request=store.get(latest);
-  request.onsuccess=()=>done((request.result as StoredAttempt|undefined)?.answers??[]);
+  request.onsuccess=()=>done(request.result as StoredAttempt|undefined);
 });
 
 export const beginSpeakingAttempt=(id:string)=>useAttemptStore<void>('readwrite',(store)=>{
@@ -45,4 +45,12 @@ export const saveSpeakingAnswer=(id:string,answer:RecordedAnswer)=>useAttemptSto
   };
 });
 
-export const clearSpeakingAnswers=()=>useAttemptStore<void>('readwrite',store=>{store.delete(latest);});
+export const clearSpeakingAnswers=(id:string)=>useAttemptStore<boolean>('readwrite',(store,done)=>{
+  const request=store.get(latest);
+  request.onsuccess=()=>{
+    const attempt=request.result as StoredAttempt|undefined;
+    if(attempt&&attempt.id!==id) {done(false);return;}
+    if(attempt)store.delete(latest);
+    done(true);
+  };
+});
