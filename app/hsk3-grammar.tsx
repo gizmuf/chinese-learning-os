@@ -11,7 +11,7 @@ import GrammarOverview,{curriculumCopy,type GrammarStudyGroup} from './hsk3-gram
 import {readDraft,saveDraft} from './local-store';
 import './hsk3-grammar.css';
 import GrammarReview from './hsk3-grammar-review';
-const groups:GrammarStudyGroup[]=grammarStudyGroups.map(({level,units})=>({level,units:withTurkish(units)}));
+const groups:GrammarStudyGroup[]=grammarStudyGroups.map(({level,units})=>({level,units:withTurkish([...units])}));
 export const grammarUnits:GrammarUnit[]=groups.flatMap(({units})=>units);
 const initialSelection=()=>readGrammarSelection(typeof window==='undefined'?'':window.location.search,grammarUnits);
 const copy={back:withTurkish({en:'All topics',fr:'Tous les thèmes',ru:'Все темы'}),check:withTurkish({en:'Check answer',fr:'Vérifier',ru:'Проверить'}),retry:withTurkish({en:'Try again',fr:'Réessayer',ru:'Попробовать снова'}),next:withTurkish({en:'Next',fr:'Suivant',ru:'Далее'}),prev:withTurkish({en:'Previous',fr:'Précédent',ru:'Назад'}),yes:withTurkish({en:'Correct',fr:'Correct',ru:'Правильно'}),no:withTurkish({en:'Not quite — compare the explanation.',fr:'Pas tout à fait — comparez avec l’explication.',ru:'Не совсем — сравните с объяснением.'}),practice:withTurkish({en:'Guided practice · saved on this device in your notebook. This does not award independent recall credit.',fr:'Pratique guidée · enregistrée dans votre carnet sur cet appareil. Aucun crédit de rappel autonome.',ru:'Практика с подсказками · сохраняется в вашей тетради на этом устройстве. Самостоятельное воспроизведение не засчитывается.'}),count:withTurkish({en:'exercises checked',fr:'exercices vérifiés',ru:'упражнений проверено'})};

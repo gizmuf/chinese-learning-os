@@ -24,3 +24,37 @@
 .hsk3-prep-aids{display:flex;gap:.35rem;flex-wrap:wrap}
 .hsk3-prep-aids button[aria-pressed=true]{border-color:currentColor}
 .hsk3-prep-source{font-size:.875rem;margin-top:1rem}
+
+.hsk3-prep-modes,.hsk-question-navigation,.hsk-mock-footer,.hsk-mock-writing-tools{display:flex;flex-wrap:wrap;align-items:center;gap:.55rem}
+.hsk3-prep-modes{margin-block:0 1rem}
+.hsk3-prep-modes a{display:inline-flex;align-items:center;min-height:44px;padding:.45rem .8rem;border:1px solid var(--line);border-radius:.65rem;color:inherit;text-decoration:none}
+.hsk3-prep-modes a[aria-current=page],.hsk-mock-options label[data-selected=true]{background:color-mix(in srgb,currentColor 8%,transparent);border-color:currentColor}
+.hsk-question-navigation{justify-content:space-between;border-block:1px solid var(--line);padding-block:.55rem;margin-block:.55rem .9rem}
+.hsk-question-navigation button,.hsk-question-navigation select,.hsk-mock-footer button,.hsk-mock-writing-tools button,.hsk3-prep-aids button{min-height:44px}
+.hsk-question-navigation button{display:inline-flex;align-items:center;gap:.25rem}
+.hsk-question-navigation select{font:inherit;color:inherit;border:1px solid var(--line);border-radius:.5rem;background:transparent;padding-inline:.5rem}
+.hsk-mock-status{display:flex;align-items:center;justify-content:space-between;gap:.75rem}
+.hsk-mock-status p,.hsk-mock-status h2{margin:0}
+.hsk-mock-timer{display:flex;align-items:center;gap:.4rem;border:1px solid var(--line);border-radius:1rem;padding:.4rem .65rem;font-variant-numeric:tabular-nums;font-weight:600}
+.hsk-mock-timer[data-low=true]{color:#8d3b2b;background:#fbede5}
+.hsk-mock-sections{list-style:none;padding:0;margin-block:1rem;border-block:1px solid var(--line)}
+.hsk-mock-sections li{display:flex;justify-content:space-between;gap:.75rem;padding:.55rem 0}
+.hsk-mock-sections li+li{border-top:1px solid var(--line)}
+.hsk-mock-swipe{touch-action:pan-y}
+.hsk-mock-note,.hsk-mock-footer>span{color:var(--muted)}
+.hsk-mock-options[data-pictures=true] label>span:last-child{font-size:1.55rem}
+.hsk-mock-option-letter{font-size:.8em;color:var(--muted)}
+.hsk-mock-footer{margin-top:.9rem;border-top:1px solid var(--line);padding-top:.65rem}
+.hsk-mock-footer>span{margin-inline-end:auto}
+.hsk-mock-writing{margin-top:.85rem}
+.hsk-mock-writing-tools{margin-block:.3rem .65rem}
+.hsk-mock-writing .hanzi-handwriting,.hsk-mock-review .hanzi-handwriting{width:min(100%,13rem)}
+.hsk-mock-review{border-block-start:1px solid var(--line);margin-block:.75rem}
+.hsk-mock-review summary{cursor:pointer;padding:.7rem 0}
+.hsk-mock-review li{border-block-end:1px solid var(--line);padding-block:.6rem}
+.hsk-mock-review p{white-space:pre-line;margin:.35rem 0}
+.hsk-mock-review audio{max-width:100%}
+@media(max-width:30rem){
+  .hsk-question-navigation button span{display:none}
+  .hsk-mock-options:not([data-pictures=true]){flex-direction:column}
+}

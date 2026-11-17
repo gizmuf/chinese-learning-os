@@ -18,16 +18,19 @@ The main paper is about 83 minutes in the official sample, including the candida
 
 Course opens HSK 3 Exam Prep at `/?course=hsk3`. The landing page connects to the existing cumulative 1,000 word entries and their audio, the 655-character recognition and 250-character writing checklists, Grammar, the HSK 1–3 Atlas and Reading Lab. The optional reading aids display Hanzi, tone marks or pinyin in the review step, using authored contextual readings. There are no reading hints before answering.
 
-The first diagnostic has eight original tasks, some automatically checked and others for self-review: a two-voice recorded dialogue, reply matching, a word gap, two short reading passages, a character gap, sentence writing and speaking. The station audio uses Xiaoxiao and Yunxi, one voice per role, with the authored turns combined into a single track. The example is a synthesis and playback demonstration. Pronunciation, rhythm and the quality of natural Mandarin are separate review items.
+The short diagnostic has eight original tasks, including a two-voice recorded dialogue, reply matching, a word gap, two short passages, a character gap, sentence writing and speaking. Use the previous/next buttons, question picker, horizontal swipe or keyboard arrows to move between tasks. Short diagnostic answers are preserved when moving within the session.
 
-The current grammar catalogue maps 57 groups to the official syllabus: 35 have linked cards, of which 24 are marked partial. Eleven are marked complete and 22 lack a card. The eight existing Reading Lab passages and the new practice texts are study material; the exam uses unseen texts. The course does not yet contain a full-length mock, all grammar lessons, timed section runs, scoring for open responses, or the complete variety of listening and speaking tasks.
+Grammar links all 57 syllabus groups to study cards. Forty-six additions expand previously partial or unmapped groups with explanations, contextual Hanzi and Pinyin, and choice exercises. Supplementary explanations and glosses currently use English. Existing exercise IDs and saved answers remain valid.
 
-## Completion order
+## Full timed mock
 
-1. Fill all missing grammar groups and incomplete cards. For each, include a short contrast, a gloss, a worked example and an unassisted exercise. Track the syllabus mapping against each authored unit.
-2. Write new texts and dialogue scripts from official task domains. Check vocabulary and constructions against the HSK 1–3 index. Create picture selection exercises, short monologues, and longer dialogue exercises. Audit passages with contextual polyphonic characters such as 还, 得, 行 and 了.
-3. Produce stable dialogue audio with distinct Mandarin voices. Compare two voices at normal test pace against the official sample. Inspect tones, polyphones, pauses and speaker changes. Have a fluent Mandarin speaker review the clips before bundling a larger pack. Qwen offers alternative Mandarin voices and prosody controls. This preview uses existing Xiaoxiao and Yunxi synthesis, without a new application runtime dependency.
-4. Build full parallel timed forms. Keep prompts and response aids separate during the form, and report mistakes afterwards by skill. Accept only a single expected glyph for the character item. Use examples and a rubric for open writing and speaking.
+Open `/?course=hsk3&mock=1`. The main mock has 70 original questions and 73 timed minutes: listening (23), reading (30), writing (20). The two administrative periods in the paper sample are omitted in digital practice. The optional speaking prompt is in the short diagnostic.
+
+Listening uses 30 prerecorded tracks with distinct Xiaoxiao/Yunxi roles and Yunjian for spoken questions. It includes picture matching, dialogue comprehension and short monologues. Start a track from its question; the web mock lets you replay and choose questions in the active section. Reading uses reply matching, cloze and passage comprehension.
+
+The section locks when submitted or when its timer expires. Attempts resume on the same browser, with deadlines continuing in the background. Writing accepts a Chinese keyboard or the existing Pencil canvas. The result checks multiple choice and typed characters, shows transcripts and solutions, and opens written responses alongside examples for self-review. It reports practice counts rather than a scaled official score.
+
+Authoring data lives in `resources/hsk3-mock`. Run `python3 scripts/build-hsk3-mock-data.py` after editing the task or grammar banks. The MP3 files are served from `public/audio/hsk3-mock`. If a listening script changes, regenerate that track using `scripts/build-hsk3-mock-audio.py` with Edge TTS and ffmpeg available.
 
 ## Suggested run-up
 

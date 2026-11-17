@@ -1,10 +1,15 @@
 'use client';
 
-import { useState } from 'react';
-import { ArrowRight, BookOpen, Ear, FileText, ListChecks, Network, PenLine } from 'lucide-react';
+import { lazy, Suspense, useEffect, useState } from 'react';
+import { BookOpen, Ear, FileText, ListChecks, Network, PenLine } from 'lucide-react';
 import { StudyText } from './study-lookup-context';
 import { hskPrepTasks } from './hsk3-prep-data';
+import { HskQuestionNavigation, useHskQuestionNavigation } from './hsk-question-navigation';
 import './hsk3-prep.css';
+
+const Hsk3Mock=lazy(()=>import('./hsk3-mock'));
+type DiagnosticAnswer={choice:number|null;draft:string;checked:boolean};
+const blankAnswer:DiagnosticAnswer={choice:null,draft:'',checked:false};
 
 const links = [
   {name:'Hanzi checklist', detail:'655 to recognize · 250 to write', href:'/?study=library&hsk=3&level=hsk3#hsk-exam', icon:ListChecks},
@@ -22,27 +27,8 @@ function ReviewLine({text,pinyin,aid}:{text:string;pinyin:string;aid:Aid}) {
 }
 
 export default function Hsk3Prep() {
-  const [position,setPosition]=useState(0);
-  const [choice,setChoice]=useState<number|null>(null);
-  const [draft,setDraft]=useState('');
-  const [checked,setChecked]=useState(false);
-  const [results,setResults]=useState<boolean[]>([]);
-  const [aid,setAid]=useState<Aid>('hanzi');
-  const task=hskPrepTasks[position];
-  const automatic=task&&(task.type==='read'||task.type==='listen'||task.type==='character');
-  const isCorrect=task&&(task.type==='read'||task.type==='listen'?choice===task.answer:task.type==='character'&&draft.trim()===task.answer);
-  function move(next:number) {
-    setPosition(next);
-    setChoice(null);
-    setDraft('');
-    setChecked(false);
-  }
-  function check() {
-    if(checked)return;
-    if(automatic)setResults(current=>[...current,Boolean(isCorrect)]);
-    setChecked(true);
-  }
-
+  const [showMock,setShowMock]=useState(false);
+  useEffect(()=>setShowMock(new URLSearchParams(window.location.search).get('mock')==='1'),[]);
   return <div className="hsk3-prep">
     <header className="hsk3-prep-head">
       <p className="eyebrow">HSK 3.0 · Suzhou · 13 December 2026</p>
@@ -52,14 +38,48 @@ export default function Hsk3Prep() {
     <nav className="hsk3-prep-links" aria-label="HSK study material">
       {links.map(({name,detail,href,icon:Icon})=><a key={name} href={href}><Icon size={18} aria-hidden="true"/><span><strong>{name}</strong><small>{detail}</small></span></a>)}
     </nav>
+    <nav className="hsk3-prep-modes" aria-label="Exam practice">
+      <a href="/?course=hsk3" aria-current={!showMock?'page':undefined}>Short diagnostic</a>
+      <a href="/?course=hsk3&mock=1" aria-current={showMock?'page':undefined}>Full timed mock</a>
+    </nav>
+    {showMock?<Suspense fallback={<p role="status">Loading mock exam…</p>}><Hsk3Mock/></Suspense>:<Diagnostic/>}
+  </div>;
+}
+
+function Diagnostic() {
+  const [position,setPosition]=useState(0);
+  const [answers,setAnswers]=useState<Record<number,DiagnosticAnswer>>({});
+  const [aid,setAid]=useState<Aid>('hanzi');
+  const {choice,draft,checked}=answers[position]??blankAnswer;
+  const task=hskPrepTasks[position];
+  const automatic=task&&(task.type==='read'||task.type==='listen'||task.type==='character');
+  const isCorrect=task&&(task.type==='read'||task.type==='listen'?choice===task.answer:task.type==='character'&&draft.trim()===task.answer);
+  function move(next:number) {
+    if(next>=0&&next<=hskPrepTasks.length) setPosition(next);
+  }
+  function answer(patch:Partial<DiagnosticAnswer>) {
+    setAnswers(current=>({...current,[position]:{...(current[position]??blankAnswer),...patch}}));
+  }
+  const swipe=useHskQuestionNavigation(step=>{if(task&&position+step<hskPrepTasks.length)move(position+step);});
+  const results=hskPrepTasks.flatMap((item,index)=>{
+    const saved=answers[index];
+    if(!saved?.checked)return [];
+    if(item.type==='read'||item.type==='listen')return [saved.choice===item.answer];
+    if(item.type==='character')return [saved.draft.trim()===item.answer];
+    return [];
+  });
+  return <>
     <section className="panel hsk3-prep-practice" aria-labelledby="hsk3-prep-practice">
       <h2 id="hsk3-prep-practice">Short diagnostic</h2>
       {!task?<div role="status">
         <p><strong>{results.filter(Boolean).length}/{results.length}</strong> correct on automatically checked tasks.</p>
         <p>Sentence writing and speaking use example answers for self-review.</p>
-        <button type="button" className="secondary" onClick={()=>{setResults([]);move(0);}}>Start again</button>
+        <button type="button" className="secondary" onClick={()=>move(hskPrepTasks.length-1)}>Back to last question</button>
+        <button type="button" className="secondary" onClick={()=>{setAnswers({});move(0);}}>Start again</button>
       </div>:<>
-        <div className="hsk3-prep-task-label"><span>{taskLabels[task.type]}</span><span>{position+1} / {hskPrepTasks.length}</span></div>
+        <HskQuestionNavigation position={position} total={hskPrepTasks.length} onMove={move}/>
+        <div className="hsk-mock-swipe" {...swipe}>
+        <div className="hsk3-prep-task-label">{taskLabels[task.type]}</div>
         {task.type==='listen'&&<div className="hsk3-prep-player"><Ear size={19} aria-hidden="true"/><audio controls preload="none" src={task.audio} aria-label="Recorded Mandarin dialogue"/></div>}
         {task.type==='read'&&<div className="hsk3-prep-passage">
           {task.text.map(line=><p key={line.hanzi} lang="zh-Hans">{checked?<ReviewLine text={line.hanzi} pinyin={line.pinyin} aid={aid}/>:line.hanzi}</p>)}
@@ -67,12 +87,12 @@ export default function Hsk3Prep() {
         <p className="hsk3-prep-question" lang="zh-Hans">{task.prompt}</p>
         {(task.type==='listen'||task.type==='read')&&<fieldset className="hsk3-prep-options" disabled={checked}>
           <legend className="sr-only">Your answer</legend>
-          {task.choices.map((option,index)=><label key={option} data-correct={checked&&index===task.answer}><input type="radio" name="hsk3-choice" checked={choice===index} onChange={()=>setChoice(index)}/><span lang="zh-Hans">{option}</span></label>)}
+          {task.choices.map((option,index)=><label key={option} data-correct={checked&&index===task.answer}><input type="radio" name="hsk3-choice" checked={choice===index} onChange={()=>answer({choice:index})}/><span lang="zh-Hans">{option}</span></label>)}
         </fieldset>}
         {(task.type==='character'||task.type==='sentence')&&<label className="hsk3-prep-input">
           <span>Your answer</span>
-          {task.type==='character'?<input lang="zh-Hans" autoComplete="off" value={draft} onChange={e=>setDraft(e.target.value)} disabled={checked}/>
-           :<textarea lang="zh-Hans" rows={2} value={draft} onChange={e=>setDraft(e.target.value)} disabled={checked}/>}
+          {task.type==='character'?<input lang="zh-Hans" autoComplete="off" value={draft} onChange={e=>answer({draft:e.target.value})} disabled={checked}/>
+           :<textarea lang="zh-Hans" rows={2} value={draft} onChange={e=>answer({draft:e.target.value})} disabled={checked}/>}
         </label>}
         {task.type==='speaking'&&<p>Answer aloud, then compare with the example.</p>}
         {checked&&<div className="hsk3-prep-feedback" aria-live="polite">
@@ -84,8 +104,9 @@ export default function Hsk3Prep() {
           </div>}
           <p>{task.explanation}</p>
         </div>}
-        {checked?<button type="button" className="secondary" onClick={()=>move(position+1)}>{position===hskPrepTasks.length-1?'See result':'Next'} <ArrowRight size={16}/></button>
-          :<button type="button" className="secondary" disabled={task.type==='read'||task.type==='listen'?choice===null:task.type!=='speaking'&&!draft.trim()} onClick={check}><PenLine size={16}/> {automatic?'Check answer':'See example'}</button>}
+        </div>
+        {!checked&&<button type="button" className="secondary" disabled={task.type==='read'||task.type==='listen'?choice===null:task.type!=='speaking'&&!draft.trim()} onClick={()=>answer({checked:true})}><PenLine size={16}/> {automatic?'Check answer':'See example'}</button>}
+        {position===hskPrepTasks.length-1&&<button type="button" className="secondary" onClick={()=>move(hskPrepTasks.length)}>See result</button>}
       </>}
     </section>
     <section className="hsk3-prep-session" aria-labelledby="hsk3-prep-session">
@@ -98,5 +119,5 @@ export default function Hsk3Prep() {
       </ol>
     </section>
     <p className="hsk3-prep-source">Try the full format on the <a href="https://www.chinesetest.cn/hsk">official HSK site</a>.</p>
-  </div>;
+  </>;
 }

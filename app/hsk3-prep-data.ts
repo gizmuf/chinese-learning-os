@@ -7,7 +7,7 @@ export type HskPrepTask =
   | Base & {type: 'sentence' | 'speaking'; example: string};
 
 export const hskPrepTasks: HskPrepTask[] = [
-  {id: 'listen-station', type: 'listen', prompt: '男的建议她怎么去火车站？', audio: '/hsk3-prep/station-dialogue.mp3',
+  {id: 'listen-station', type: 'listen', prompt: '男的建议她怎么去火车站？', audio: '/audio/hsk3-prep/station-dialogue.mp3',
    transcript: '女：请问，去火车站怎么走？ 男：你可以坐公交车，但是现在车还没来。 女：我的火车十点开。我怕迟到。 男：那就坐地铁吧，十分钟就到了。',
    choices: ['坐地铁', '坐公交车', '走路'], answer: 0, explanation: 'The man first mentions the bus. After hearing about the departure time, he suggests the metro: 那就坐地铁吧。'},
   {id: 'read-match', type: 'read', prompt: '选出最合适的回答。', text: [{hanzi: '你什么时候有空？', pinyin: 'Nǐ shénme shíhou yǒu kòng?'}],
