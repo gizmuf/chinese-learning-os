@@ -1,0 +1,37 @@
+.practical17 { min-width:0; }
+.practical17-heading { padding:1.05rem 0 .8rem; }
+.practical17-heading h1 { margin:.3rem 0; font-size:clamp(1.7rem,4.6vw,2.7rem); }
+.practical17-heading p { margin:.45rem 0; }
+.practical17-tabs,.practical17-controls,.practical17-actions { display:flex; flex-wrap:wrap; align-items:center; gap:.55rem; }
+.practical17-tabs { margin:.55rem 0 1rem; }
+.practical17-tabs button,.practical17-actions button { min-height:2.75rem; }
+.practical17-panel { padding:clamp(.85rem,3vw,1.5rem); min-width:0; }
+.practical17-panel h2 { margin:.65rem 0 .35rem; }
+.practical17-note { color:var(--soft-ink,#50635a); margin:.3rem 0 .8rem; }
+.practical17-controls { justify-content:space-between; gap:.75rem; }
+.practical17-controls label:first-child,.practical17-question-select { display:grid; gap:.3rem; min-width:0; max-width:100%; }
+.practical17-controls select,.practical17-question-select select { min-width:0; max-width:100%; min-height:2.75rem; }
+.practical17-toggle { display:flex; align-items:center; gap:.4rem; }
+.practical17-examples { list-style:none; padding:0; margin:.75rem 0 0; }
+.practical17-example { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:.7rem 1rem; align-items:start; border-top:1px solid var(--line,#dde5dd); padding:.8rem 0; }
+.practical17-example.is-recall { grid-template-columns:minmax(0,1fr); gap:.45rem; }
+.practical17-example summary { cursor:pointer; width:fit-content; }
+.practical17-example details[open] .practical17-chinese { padding-top:.55rem; }
+.practical17-hanzi,.practical17-pinyin,.practical17-meaning { margin:.15rem 0; overflow-wrap:anywhere; }
+.practical17-hanzi { font-size:clamp(1.3rem,3.1vw,1.95rem); line-height:1.55; }
+.practical17-pinyin,.practical17-meaning { color:var(--soft-ink,#50635a); }
+.practical17-actions { margin-top:.55rem; }
+.practical17-actions button[data-playing="true"] { border-color:var(--green,#356846); }
+.practical17-question-select { width:fit-content; margin:.75rem 0; }
+.practical17-prompt { border-top:1px solid var(--line,#dde5dd); padding-top:.65rem; }
+.practical17-prompt h3 { margin:.25rem 0 .65rem; }
+.practical17-prompt label { display:grid; gap:.3rem; margin:0 0 .75rem; }
+.practical17-prompt textarea { width:100%; box-sizing:border-box; min-height:3rem; resize:vertical; }
+.practical17-answer { margin-top:.75rem; border-inline-start:3px solid var(--green,#356846); padding:.2rem 0 .2rem .75rem; }
+.practical17-answer>p { margin:.55rem 0; }
+.practical17-pagination { margin-top:1rem; }
+.practical17-review-note { border-top:1px solid var(--line,#dde5dd); margin-top:.7rem; padding-top:.65rem; }
+.practical17-review-note h3,.practical17-review-note p { margin:.35rem 0; }
+@media(max-width:650px) {
+ .practical17-example { grid-template-columns:minmax(0,1fr); gap:.35rem; }
+}

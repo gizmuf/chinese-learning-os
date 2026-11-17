@@ -68,6 +68,8 @@ import VideoStudy from "./video-study";
 import PracticalLesson from './practical-lesson';
 import {practicalLesson,practicalLessonHref,practicalLessonId} from './practical-lesson-data';
 import {practicalLessonCopy} from './practical-lesson-copy';
+import PracticalLesson17 from './practical-lesson-17';
+import {practicalLesson17Date,practicalLesson17Href,practicalLesson17Id,practicalLesson17Title} from './practical-lesson-17-data';
 import SpeakingChunks from "./speaking-chunks";
 import {atlasChunksReturn} from "./atlas-chunks-route";
 import {chunkCopy} from "./speaking-chunks-copy";
@@ -110,7 +112,7 @@ export default function IntensiveCourse({
   const [open, setOpen] = useState(false);
   const [videoOpen,setVideoOpen]=useState(false);
   const [chunksOpen,setChunksOpen]=useState(false);
-  const [practicalOpen,setPracticalOpen]=useState(false);
+  const [practicalMaterial,setPracticalMaterial]=useState<string|null>(null);
   const [referenceId,setReferenceId]=useState<ReferenceMaterialId|null>(null),[referenceFromLibrary,setReferenceFromLibrary]=useState(false);
   const [lessonNumber,setLessonNumber]=useState(3);
   const [tab, setTab] = useState<Tab>("overview");
@@ -127,7 +129,7 @@ export default function IntensiveCourse({
   );
   useEffect(() => {
     const material=new URLSearchParams(window.location.search).get('material');
-    if(material===practicalLessonId)setPracticalOpen(true);
+    if(material===practicalLessonId||material===practicalLesson17Id)setPracticalMaterial(material);
     if(material?.startsWith('reference-')){const id=material.slice('reference-'.length) as ReferenceMaterialId;if(referenceLessonById.has(id)){setReferenceId(id);setReferenceFromLibrary(new URLSearchParams(window.location.search).get('from')==='lessons');}}
     if(new URLSearchParams(window.location.search).get("material")==="self-introduction")setVideoOpen(true);
     if(new URLSearchParams(window.location.search).get("material")==="speaking-chunks")setChunksOpen(true);
@@ -240,7 +242,8 @@ export default function IntensiveCourse({
   function openLesson06(){stopAudio();setLessonNumber(6);setOpen(true);window.history.replaceState(null,"","/?course=intensive&lesson=6");window.scrollTo({top:0,behavior:"instant"});}
   function openReference(id:ReferenceMaterialId){stopAudio();setReferenceFromLibrary(false);setReferenceId(id);window.history.replaceState(null,'',referenceLessonHref(id));window.scrollTo({top:0,behavior:'instant'});}
   if(referenceId)return <ReferenceLesson id={referenceId} {...{owner,penOnly,setPenOnly,notify}} backLabel={referenceFromLibrary?'Back to My lessons':'All course materials'} onBack={()=>{setReferenceId(null);if(referenceFromLibrary&&onReferenceLibraryBack)onReferenceLibraryBack();else window.history.replaceState(null,'','/?course=intensive');}}/>;
-  if(practicalOpen)return <PracticalLesson notify={notify}/>;
+  if(practicalMaterial===practicalLesson17Id)return <PracticalLesson17 notify={notify}/>;
+  if(practicalMaterial===practicalLessonId)return <PracticalLesson notify={notify}/>;
   if(chunksOpen){
     const returnToAtlas=atlasChunksReturn(window.location.search);
     return <SpeakingChunks owner={owner} notify={notify} backToAtlas={!!returnToAtlas} onBack={()=>{
@@ -275,6 +278,11 @@ export default function IntensiveCourse({
       </div>
       {!open ? (
         <>
+          <section className="panel course-feature">
+            <div aria-hidden="true" lang="zh-Hans" className="lesson05-topic-art">买 · 卖 · 说</div>
+            <div><p className="eyebrow">{practicalLesson17Date}</p><h2>{practicalLesson17Title}</h2>
+              <a className="primary" href={practicalLesson17Href}>{t("Open lesson")}<ArrowRight size={17}/></a></div>
+          </section>
           <section className="panel course-feature"><div aria-hidden="true" lang="zh-Hans" className="lesson05-topic-art">吃 · 喝 · 聊</div><div><p className="eyebrow">{practicalLessonCopy(locale).date}</p><h2>{practicalLesson.title[locale]}</h2><a className="primary" href={practicalLessonHref}>{t("Open lesson")}<ArrowRight size={17}/></a></div></section>
           <ReferenceLessonLinks onOpen={openReference}/>
           <section className="panel course-feature"><div aria-hidden="true" className="lesson05-topic-art">你能给我 · … · 吗</div><div><span className="pill">CHUNKS</span><h2>{chunkCopy.title[locale]}</h2><p>{chunkCopy.intro[locale]}</p><p>{chunkCopy.subtitle[locale]}</p><button className="primary" onClick={()=>{stopAudio();setChunksOpen(true);window.history.replaceState(null,"","/?course=intensive&material=speaking-chunks");window.scrollTo({top:0,behavior:"instant"});}}>{chunkCopy.open[locale]}<ArrowRight size={17}/></button></div></section>

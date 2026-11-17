@@ -1,0 +1,543 @@
+[
+  {
+    "id": "buying-apples",
+    "title": "Buying apples",
+    "note": "Classroom core. Practise asking the price per jin and bargaining. Kuài is a colloquial unit for yuan in prices.",
+    "entries": [
+      {
+        "hanzi": "苹果多少钱一斤",
+        "pinyin": "píng guǒ duō shao qián yì jīn",
+        "english": "How much are the apples per jin?",
+        "sourcePage": 1
+      },
+      {
+        "hanzi": "二十块一斤",
+        "pinyin": "èr shí kuài yì jīn",
+        "english": "Twenty yuan per jin.",
+        "sourcePage": 1
+      },
+      {
+        "hanzi": "太贵了",
+        "pinyin": "tài guì le",
+        "english": "That's too expensive.",
+        "sourcePage": 1
+      },
+      {
+        "hanzi": "便宜一点可以吗",
+        "pinyin": "pián yi yì diǎn kě yǐ ma",
+        "english": "Could it be a little cheaper?",
+        "sourcePage": 1
+      },
+      {
+        "hanzi": "不行",
+        "pinyin": "bù xíng",
+        "english": "No; that won't work.",
+        "sourcePage": 1
+      },
+      {
+        "hanzi": "这是新西兰进口的苹果",
+        "pinyin": "zhè shì xīn xī lán jìn kǒu de píng guǒ",
+        "english": "These are apples imported from New Zealand.",
+        "sourcePage": 1
+      },
+      {
+        "hanzi": "苹果",
+        "pinyin": "píng guǒ",
+        "english": "Apple; apples.",
+        "sourcePage": 1
+      },
+      {
+        "hanzi": "一斤",
+        "pinyin": "yì jīn",
+        "english": "One jin: a unit of weight.",
+        "sourcePage": 1
+      },
+      {
+        "hanzi": "块",
+        "pinyin": "kuài",
+        "english": "Colloquial yuan, in a price.",
+        "sourcePage": 2
+      },
+      {
+        "hanzi": "元",
+        "pinyin": "yuán",
+        "english": "Yuan: currency unit.",
+        "sourcePage": 2
+      },
+      {
+        "hanzi": "贵",
+        "pinyin": "guì",
+        "english": "Expensive.",
+        "sourcePage": 2
+      },
+      {
+        "hanzi": "便宜",
+        "pinyin": "pián yi",
+        "english": "Cheap; inexpensive.",
+        "sourcePage": 2
+      }
+    ]
+  },
+  {
+    "id": "bargaining",
+    "title": "Bargaining: change one detail",
+    "note": "Practical extensions. Compare with A + bǐ + B + adjective. Put yìdiǎn after the adjective when asking for a change. Put yǒudiǎn before the adjective for a mild complaint. Use liǎng before the measure word in these examples.",
+    "entries": [
+      {
+        "hanzi": "这个多少钱",
+        "pinyin": "zhè ge duō shao qián",
+        "english": "How much is this?",
+        "sourcePage": 2
+      },
+      {
+        "hanzi": "一共多少钱",
+        "pinyin": "yí gòng duō shao qián",
+        "english": "How much is it altogether?",
+        "sourcePage": 2
+      },
+      {
+        "hanzi": "我要两斤苹果",
+        "pinyin": "wǒ yào liǎng jīn píng guǒ",
+        "english": "I'd like two jin of apples.",
+        "sourcePage": 2
+      },
+      {
+        "hanzi": "可以便宜一点吗",
+        "pinyin": "kě yǐ pián yi yì diǎn ma",
+        "english": "Could it be a little cheaper?",
+        "sourcePage": 2
+      },
+      {
+        "hanzi": "有点贵",
+        "pinyin": "yǒu diǎn guì",
+        "english": "It's a bit expensive.",
+        "sourcePage": 2
+      },
+      {
+        "hanzi": "这个更便宜",
+        "pinyin": "zhè ge gèng pián yi",
+        "english": "This one is cheaper.",
+        "sourcePage": 2
+      },
+      {
+        "hanzi": "这个比那个便宜",
+        "pinyin": "zhè ge bǐ nà ge pián yi",
+        "english": "This one is cheaper than that one.",
+        "sourcePage": 3
+      },
+      {
+        "hanzi": "太贵了我不买了",
+        "pinyin": "tài guì le wǒ bù mǎi le",
+        "english": "Too expensive. I won't buy it after all.",
+        "sourcePage": 3
+      },
+      {
+        "hanzi": "我买了两个苹果",
+        "pinyin": "wǒ mǎi le liǎng ge píng guǒ",
+        "english": "I bought two apples.",
+        "sourcePage": 3
+      },
+      {
+        "hanzi": "买",
+        "pinyin": "mǎi",
+        "english": "Buy.",
+        "sourcePage": 3
+      },
+      {
+        "hanzi": "卖",
+        "pinyin": "mài",
+        "english": "Sell.",
+        "sourcePage": 3
+      },
+      {
+        "hanzi": "这家店卖水果",
+        "pinyin": "zhè jiā diàn mài shuǐ guǒ",
+        "english": "This shop sells fruit.",
+        "sourcePage": 3
+      }
+    ]
+  },
+  {
+    "id": "both-and",
+    "title": "Both…and…",
+    "note": "Classroom core. Repeat yòu before each description. For repeated actions, yòu often describes something that has already happened, while zài often describes the next time.",
+    "entries": [
+      {
+        "hanzi": "又大又好吃",
+        "pinyin": "yòu dà yòu hǎo chī",
+        "english": "Both big and tasty.",
+        "sourcePage": 3
+      },
+      {
+        "hanzi": "又漂亮又聪明",
+        "pinyin": "yòu piào liang yòu cōng ming",
+        "english": "Both beautiful and clever.",
+        "sourcePage": 3
+      },
+      {
+        "hanzi": "又高又帅又有钱",
+        "pinyin": "yòu gāo yòu shuài yòu yǒu qián",
+        "english": "Tall, handsome and rich.",
+        "sourcePage": 3
+      },
+      {
+        "hanzi": "这些苹果又大又甜",
+        "pinyin": "zhè xiē píng guǒ yòu dà yòu tián",
+        "english": "These apples are big and sweet.",
+        "sourcePage": 3
+      },
+      {
+        "hanzi": "这家店的菜又便宜又好吃",
+        "pinyin": "zhè jiā diàn de cài yòu pián yi yòu hǎo chī",
+        "english": "The food here is cheap and tasty.",
+        "sourcePage": 4
+      },
+      {
+        "hanzi": "又",
+        "pinyin": "yòu",
+        "english": "Again; also, in linked descriptions.",
+        "sourcePage": 4
+      },
+      {
+        "hanzi": "有",
+        "pinyin": "yǒu",
+        "english": "Have; there is / are.",
+        "sourcePage": 4
+      },
+      {
+        "hanzi": "有钱",
+        "pinyin": "yǒu qián",
+        "english": "Have money; be well-off.",
+        "sourcePage": 4
+      },
+      {
+        "hanzi": "没有钱",
+        "pinyin": "méi yǒu qián",
+        "english": "Have no money.",
+        "sourcePage": 4
+      },
+      {
+        "hanzi": "没钱",
+        "pinyin": "méi qián",
+        "english": "Have no money (short form).",
+        "sourcePage": 4
+      },
+      {
+        "hanzi": "他又来了",
+        "pinyin": "tā yòu lái le",
+        "english": "He has come again.",
+        "sourcePage": 4
+      },
+      {
+        "hanzi": "我明天再来",
+        "pinyin": "wǒ míng tiān zài lái",
+        "english": "I'll come again tomorrow.",
+        "sourcePage": 4
+      }
+    ]
+  },
+  {
+    "id": "getting-more-and-more",
+    "title": "Getting more and more…",
+    "note": "Use yuèláiyuè before an adjective or an attitude verb like xǐhuan to describe change over time. The adjective follows yuèláiyuè directly.",
+    "entries": [
+      {
+        "hanzi": "越来越贵",
+        "pinyin": "yuè lái yuè guì",
+        "english": "More and more expensive.",
+        "sourcePage": 4
+      },
+      {
+        "hanzi": "越来越便宜",
+        "pinyin": "yuè lái yuè pián yi",
+        "english": "Cheaper and cheaper.",
+        "sourcePage": 4
+      },
+      {
+        "hanzi": "天气越来越冷",
+        "pinyin": "tiān qì yuè lái yuè lěng",
+        "english": "The weather is getting colder.",
+        "sourcePage": 5
+      },
+      {
+        "hanzi": "我的中文越来越好",
+        "pinyin": "wǒ de zhōng wén yuè lái yuè hǎo",
+        "english": "My Chinese is getting better.",
+        "sourcePage": 5
+      },
+      {
+        "hanzi": "我越来越喜欢这里",
+        "pinyin": "wǒ yuè lái yuè xǐ huan zhè lǐ",
+        "english": "I like it here more and more.",
+        "sourcePage": 5
+      },
+      {
+        "hanzi": "越",
+        "pinyin": "yuè",
+        "english": "The yuè in an increasing-change pattern.",
+        "sourcePage": 5
+      },
+      {
+        "hanzi": "来",
+        "pinyin": "lái",
+        "english": "Come; part of yuèláiyuè.",
+        "sourcePage": 5
+      },
+      {
+        "hanzi": "这杯茶有点甜",
+        "pinyin": "zhè bēi chá yǒu diǎn tián",
+        "english": "This tea is a little sweet.",
+        "sourcePage": 5
+      },
+      {
+        "hanzi": "我想喝甜一点的",
+        "pinyin": "wǒ xiǎng hē tián yì diǎn de",
+        "english": "I'd like something a little sweeter.",
+        "sourcePage": 5
+      },
+      {
+        "hanzi": "这个太甜了",
+        "pinyin": "zhè ge tài tián le",
+        "english": "This is too sweet.",
+        "sourcePage": 5
+      }
+    ]
+  },
+  {
+    "id": "sweet-sugar-and-drinks",
+    "title": "Sweet, sugar and drinks",
+    "note": "Classroom vocabulary and ordering extensions. Tián describes taste, táng means sugar or candy, and bù jiā táng asks for no added sugar.",
+    "entries": [
+      {
+        "hanzi": "甜",
+        "pinyin": "tián",
+        "english": "Sweet.",
+        "sourcePage": 5
+      },
+      {
+        "hanzi": "糖",
+        "pinyin": "táng",
+        "english": "Sugar; sweets / candy.",
+        "sourcePage": 5
+      },
+      {
+        "hanzi": "无糖",
+        "pinyin": "wú táng",
+        "english": "Sugar-free; no sugar.",
+        "sourcePage": 6
+      },
+      {
+        "hanzi": "加糖",
+        "pinyin": "jiā táng",
+        "english": "Add sugar.",
+        "sourcePage": 6
+      },
+      {
+        "hanzi": "不加糖",
+        "pinyin": "bù jiā táng",
+        "english": "Without added sugar.",
+        "sourcePage": 6
+      },
+      {
+        "hanzi": "不要糖",
+        "pinyin": "bú yào táng",
+        "english": "No sugar, please.",
+        "sourcePage": 6
+      },
+      {
+        "hanzi": "少放一点糖",
+        "pinyin": "shǎo fàng yì diǎn táng",
+        "english": "Put in a little less sugar.",
+        "sourcePage": 6
+      },
+      {
+        "hanzi": "这杯咖啡不加糖",
+        "pinyin": "zhè bēi kā fēi bù jiā táng",
+        "english": "No added sugar in this coffee.",
+        "sourcePage": 6
+      },
+      {
+        "hanzi": "我要一杯无糖茶",
+        "pinyin": "wǒ yào yì bēi wú táng chá",
+        "english": "I'd like a cup of sugar-free tea.",
+        "sourcePage": 6
+      },
+      {
+        "hanzi": "苦",
+        "pinyin": "kǔ",
+        "english": "Bitter.",
+        "sourcePage": 6
+      },
+      {
+        "hanzi": "酸",
+        "pinyin": "suān",
+        "english": "Sour.",
+        "sourcePage": 6
+      },
+      {
+        "hanzi": "辣",
+        "pinyin": "là",
+        "english": "Spicy; hot.",
+        "sourcePage": 6
+      }
+    ]
+  },
+  {
+    "id": "describing-people",
+    "title": "Describing people",
+    "note": "Classroom vocabulary. Pàng, chǒu and qióng can sound blunt when describing a person. In simple descriptions, hěn often links the subject to an adjective with little emphasis.",
+    "entries": [
+      {
+        "hanzi": "高",
+        "pinyin": "gāo",
+        "english": "Tall; high.",
+        "sourcePage": 7
+      },
+      {
+        "hanzi": "矮",
+        "pinyin": "ǎi",
+        "english": "Short, in height.",
+        "sourcePage": 7
+      },
+      {
+        "hanzi": "胖",
+        "pinyin": "pàng",
+        "english": "Fat; overweight.",
+        "sourcePage": 7
+      },
+      {
+        "hanzi": "瘦",
+        "pinyin": "shòu",
+        "english": "Thin; slim.",
+        "sourcePage": 7
+      },
+      {
+        "hanzi": "帅",
+        "pinyin": "shuài",
+        "english": "Handsome; good-looking.",
+        "sourcePage": 7
+      },
+      {
+        "hanzi": "丑",
+        "pinyin": "chǒu",
+        "english": "Ugly.",
+        "sourcePage": 7
+      },
+      {
+        "hanzi": "穷",
+        "pinyin": "qióng",
+        "english": "Poor; without much money.",
+        "sourcePage": 7
+      },
+      {
+        "hanzi": "漂亮",
+        "pinyin": "piào liang",
+        "english": "Beautiful; pretty.",
+        "sourcePage": 7
+      },
+      {
+        "hanzi": "聪明",
+        "pinyin": "cōng ming",
+        "english": "Clever; intelligent.",
+        "sourcePage": 7
+      },
+      {
+        "hanzi": "努力",
+        "pinyin": "nǔ lì",
+        "english": "Work hard; make an effort.",
+        "sourcePage": 7
+      },
+      {
+        "hanzi": "她很聪明也很努力",
+        "pinyin": "tā hěn cōng ming yě hěn nǔ lì",
+        "english": "She is clever and hardworking.",
+        "sourcePage": 7
+      },
+      {
+        "hanzi": "他不高但是很帅",
+        "pinyin": "tā bù gāo dàn shì hěn shuài",
+        "english": "He isn't tall, but he's handsome.",
+        "sourcePage": 8
+      }
+    ]
+  },
+  {
+    "id": "understand-know-recognize",
+    "title": "Understand, know, recognize",
+    "note": "Zhīdào usually introduces information. Rènshi expresses familiarity or recognition. Míngbai and dǒng overlap. In tīngdǒng, dǒng expresses the result of listening.",
+    "entries": [
+      {
+        "hanzi": "明白",
+        "pinyin": "míng bai",
+        "english": "Understand; be clear about something.",
+        "sourcePage": 8
+      },
+      {
+        "hanzi": "懂",
+        "pinyin": "dǒng",
+        "english": "Understand; know how something works.",
+        "sourcePage": 8
+      },
+      {
+        "hanzi": "知道",
+        "pinyin": "zhī dao",
+        "english": "Know a fact or information.",
+        "sourcePage": 8
+      },
+      {
+        "hanzi": "认识",
+        "pinyin": "rèn shi",
+        "english": "Know / recognize a person or thing.",
+        "sourcePage": 8
+      },
+      {
+        "hanzi": "我明白了",
+        "pinyin": "wǒ míng bai le",
+        "english": "I understand now.",
+        "sourcePage": 8
+      },
+      {
+        "hanzi": "我没听懂",
+        "pinyin": "wǒ méi tīng dǒng",
+        "english": "I didn't understand what I heard.",
+        "sourcePage": 8
+      },
+      {
+        "hanzi": "我看不懂这个字",
+        "pinyin": "wǒ kàn bu dǒng zhè ge zì",
+        "english": "I can't understand this character.",
+        "sourcePage": 8
+      },
+      {
+        "hanzi": "我不知道多少钱",
+        "pinyin": "wǒ bù zhī dao duō shao qián",
+        "english": "I don't know how much it costs.",
+        "sourcePage": 8
+      },
+      {
+        "hanzi": "我认识这位老师",
+        "pinyin": "wǒ rèn shi zhè wèi lǎo shī",
+        "english": "I know this teacher.",
+        "sourcePage": 8
+      },
+      {
+        "hanzi": "你认识这个字吗",
+        "pinyin": "nǐ rèn shi zhè ge zì ma",
+        "english": "Do you recognize this character?",
+        "sourcePage": 9
+      },
+      {
+        "hanzi": "请再说一遍",
+        "pinyin": "qǐng zài shuō yí biàn",
+        "english": "Please say it once more.",
+        "sourcePage": 9
+      },
+      {
+        "hanzi": "请说慢一点",
+        "pinyin": "qǐng shuō màn yì diǎn",
+        "english": "Please speak a little more slowly.",
+        "sourcePage": 9
+      }
+    ]
+  }
+]
