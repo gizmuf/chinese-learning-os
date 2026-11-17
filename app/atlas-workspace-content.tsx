@@ -16,6 +16,7 @@ import {workspaceBoardSize, workspaceGroupLabel, workspaceHanzi, workspaceJourne
 import type {WorkspaceKind, WorkspaceRoute} from './atlas-workspace-route';
 import {hybridInventory} from './atlas-hybrid-model';
 import CloudHighlight from './atlas-cloud-highlight';
+import AtlasFamilyStudyActions, {atlasWordStudyEntries} from './atlas-family-study-actions';
 import WordFamilyReels from './word-family-reels';
 import FamilyPracticeLab from './family-practice-lab';
 import {familyContrastPairs} from './family-practice-lab-model';
@@ -108,6 +109,9 @@ export function WorkspaceBoard({route, context, choose, explore, onPage, onWiden
       <span>{context.structural.length} in {workspaceScopeLabel(route.scope)}</span>
     </header>
     {!compact && <WorkspaceStructureScope/>}
+    <AtlasFamilyStudyActions title={context.part?.variants.join(' / ') ?? route.part} entries={context.structural.map(node => ({
+      hanzi: node.hanzi, pinyin: node.reviewed?.pinyin ?? node.readings.join(' / '), meaning: node.englishMeaning,
+    }))}/>
     {(!compact || context.part?.id !== '莫') && <WorkspaceStructureLinks part={context.part} explore={explore}/>}
     {context.structural.length > 0 ? <WorkspaceStructureBoard route={route} context={context} explore={explore} onPage={onPage}/>
       : <div className="aw-empty"><p>No mapped characters for this component in {workspaceScopeLabel(route.scope)}.</p>
@@ -125,6 +129,7 @@ export function WorkspaceBoard({route, context, choose, explore, onPage, onWiden
       <h2>{route.relation === 'topic' ? context.group?.title ?? 'Topic' : <><span lang="zh-Hans">{route.anchor}</span> Word family</>}</h2></div>
       <span>{members.length} {members.length === 1 ? 'entry' : 'entries'} in {workspaceScopeLabel(route.scope)}</span>
     </header>
+    {route.relation === 'literal' && members.length > 0 && <AtlasFamilyStudyActions title={route.anchor} entries={atlasWordStudyEntries(members, route.scope)}/>}
     {members.length > 0 ? <WorkspaceWordBoard words={members.slice(page * workspaceBoardSize, (page + 1) * workspaceBoardSize)}
       anchor={route.relation === 'topic' ? '' : route.anchor} selected={context.word?.id} choose={choose}/>
       : <div className="aw-empty"><p>No entries for this selection in {workspaceScopeLabel(route.scope)}.</p>

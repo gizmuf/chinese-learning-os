@@ -5,6 +5,14 @@ import {Download} from 'lucide-react';
 import {useI18n} from './i18n';
 import type {HanziGroupPdfEntry} from './notebook-pdf';
 
+const missingStrokes = {
+  en: (glyph: string) => `Stroke order is unavailable for ${glyph}.`,
+  fr: (glyph: string) => `L’ordre des traits n’est pas disponible pour ${glyph}.`,
+  ru: (glyph: string) => `Порядок черт для ${glyph} недоступен.`,
+  tr: (glyph: string) => `${glyph} için çizgi sırası kullanılamıyor.`,
+};
+
+
 export function HanziGroupPdf({entries, title, fileName}: {
   entries: readonly HanziGroupPdfEntry[];
   title: string;
@@ -12,17 +20,19 @@ export function HanziGroupPdf({entries, title, fileName}: {
 }) {
   const {locale, t} = useI18n();
   const [busy, setBusy] = useState(false);
-  const [failed, setFailed] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   async function download() {
     setBusy(true);
-    setFailed(false);
+    setErrorMessage('');
     try {
       const {downloadHanziGroupPdf} = await import('./notebook-pdf');
       const slug = title.trim().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-|-$/g, '');
       await downloadHanziGroupPdf(entries, title, locale, fileName ?? `Chinese-OS-${slug || 'Hanzi'}-${locale}.pdf`);
-    } catch {
-      setFailed(true);
+    } catch (error) {
+      setErrorMessage(error instanceof Error && error.name === 'MissingWorksheetStroke' && typeof error.cause === 'string'
+        ? missingStrokes[locale](error.cause)
+        : t('Could not create the PDF. Please try again.'));
     } finally {
       setBusy(false);
     }
@@ -33,6 +43,6 @@ export function HanziGroupPdf({entries, title, fileName}: {
       <Download size={17} aria-hidden="true"/>
       {busy ? t('Preparing PDF…') : t('Download PDF')}
     </button>
-    {failed && <p role="alert">{t('Could not create the PDF. Please try again.')}</p>}
+    {errorMessage && <p role="alert">{errorMessage}</p>}
   </>;
 }
