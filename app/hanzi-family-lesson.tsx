@@ -40,18 +40,22 @@ function StudyWords({player}: {player: ReturnType<typeof useRecordingPlayback>})
   const visible = grouped.slice(page * pageSize, (page + 1) * pageSize);
   return <section className="panel hanzi-family-panel" aria-labelledby="hanzi-study-heading">
     <h2 id="hanzi-study-heading">Words and families</h2>
+    {pageCount > 1 && <nav className="hanzi-family-word-ranges" aria-label="Word ranges">
+      {Array.from({length: pageCount}, (_, index) => {
+        const first = index * pageSize + 1;
+        const last = Math.min((index + 1) * pageSize, grouped.length);
+        return <button key={index} type="button" className={page === index ? 'primary' : 'secondary'}
+          aria-current={page === index ? 'true' : undefined} aria-controls="hanzi-family-word-list"
+          onClick={() => setPage(index)}>{first}–{last}</button>;
+      })}
+    </nav>}
     <div className="hanzi-family-actions hanzi-family-study-controls">
       <label>Find a word
         <input type="search" value={search} placeholder="Hanzi, pinyin or meaning" onChange={event => {setSearch(event.target.value);setPage(0);}}/>
       </label>
-      {pageCount > 1 && <label>Show words
-        <select value={page} onChange={event => setPage(Number(event.target.value))}>
-          {Array.from({length: pageCount}, (_, index) => <option value={index} key={index}>{index * pageSize + 1}–{Math.min((index + 1) * pageSize, grouped.length)}</option>)}
-        </select>
-      </label>}
       <p role="status">{grouped.length} words</p>
     </div>
-    <div className="hanzi-family-entries">
+    <div className="hanzi-family-entries" id="hanzi-family-word-list">
       {visible.map(({entry, index}) => {
         const clip = audio[entry.example];
         return <details key={entry.hanzi} className="hanzi-family-entry">

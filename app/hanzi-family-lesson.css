@@ -7,6 +7,9 @@
 .hanzi-family-tabs {margin-bottom: 1rem}
 .hanzi-family-panel {padding: clamp(1rem, 3.4vw, 2rem)}
 .hanzi-family-panel h2, .hanzi-family-group h3 {margin-top: 0}
+.hanzi-family-word-ranges {display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 5rem), 1fr)); gap: .55rem; max-width: 34rem; margin-bottom: 1rem}
+.hanzi-family-word-ranges button {min-width: 0; min-height: 44px; justify-content: center; padding-inline: .5rem; white-space: nowrap; font-variant-numeric: tabular-nums}
+.hanzi-family-word-ranges button:focus-visible {outline: 2px solid var(--text); outline-offset: 2px}
 .hanzi-family-study-controls, .hanzi-family-practice-controls {align-items: end; margin-bottom: 1rem}
 .hanzi-family-study-controls label, .hanzi-family-practice-controls label, .hanzi-family-input {display: grid; gap: .35rem; min-width: 0}
 .hanzi-family-study-controls input {width: min(21rem, 65vw); max-width: 100%}
