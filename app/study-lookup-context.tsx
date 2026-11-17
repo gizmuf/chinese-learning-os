@@ -4,18 +4,19 @@ import {simplifiedDisplayText} from './simplified-chinese';
 import {BookOpen,Shuffle} from 'lucide-react';
 import {useI18n} from './i18n';
 import {dictionaryTokens,type DictionaryEntry,type StudyDictionary} from './atlas-spatial-model';
+import {syllableTone,toneMarks} from './reading-lab-model';
 import {authoredLookupBoundaries,authoredCharacterReadings} from './pinyin-boundaries';
 /** Lightweight shared text actions; no dependency on Atlas or writing surfaces. */
 export const LookupContext=createContext<{dictionary:StudyDictionary;open:(text:string,trigger:HTMLElement,authoredEntry?:DictionaryEntry)=>void;openConfused?:(index?:number)=>void}|null>(null);
 export function useStudyLookup(){return useContext(LookupContext);}
-export function StudyText({text,anchor='',whole=false,pinyin,headword,sourceText,offset=0,annotatePinyin=false}:{text:string;anchor?:string;whole?:boolean;pinyin?:string;headword?:string;sourceText?:string;offset?:number;annotatePinyin?:boolean}){
+export function StudyText({text,anchor='',whole=false,pinyin,headword,sourceText,offset=0,annotatePinyin=false,annotateTones=false}:{text:string;anchor?:string;whole?:boolean;pinyin?:string;headword?:string;sourceText?:string;offset?:number;annotatePinyin?:boolean;annotateTones?:boolean}){
  text=simplifiedDisplayText(text);anchor=simplifiedDisplayText(anchor);
  const lookup=useContext(LookupContext);if(!lookup)return <>{text}</>;
  const authored=pinyin?authoredLookupBoundaries(sourceText??text,pinyin,headword&&simplifiedDisplayText(headword)):undefined,boundaries=authored?new Set([...authored].map(n=>n-offset)):undefined;
  const tokens=whole?[{text,chinese:/\p{Script=Han}/u.test(text)}]:dictionaryTokens(text,lookup.dictionary,undefined,boundaries);
- const readings=annotatePinyin&&pinyin?authoredCharacterReadings(sourceText??text,pinyin):undefined;
+ const readings=(annotatePinyin||annotateTones)&&pinyin?authoredCharacterReadings(sourceText??text,pinyin):undefined;
  let position=Array.from((sourceText??text).slice(0,offset)).filter(ch=>/\p{Script=Han}/u.test(ch)).length;
- const annotated=(value:string)=>readings?Array.from(value).map((ch,i)=>{if(!/\p{Script=Han}/u.test(ch))return <span key={i}>{ch}</span>;const reading=readings[position++];return <ruby key={i}>{ch}<rt>{reading?.pinyin}</rt></ruby>;}):marked(value);
+ const annotated=(value:string)=>readings?Array.from(value).map((ch,i)=>{if(!/\p{Script=Han}/u.test(ch))return <span key={i}>{ch}</span>;const reading=readings[position++];const tone=annotateTones&&reading?syllableTone(reading.pinyin):undefined;return <ruby key={i}>{ch}<rt>{annotateTones?(tone?toneMarks[tone]:null):reading?.pinyin}</rt></ruby>;}):marked(value);
  const marked=(value:string)=>anchor?value.split(anchor).map((part,i)=><span key={i}>{i>0&&<span className="wf-shared">{anchor}</span>}{part}</span>):value;
  return <span className="study-text">{tokens.map((token,i)=>token.chinese?<button type="button" className="study-word" aria-label={readings?token.text:undefined} key={i} lang="zh-Hans" onClick={e=>{e.stopPropagation();lookup.open(token.text,e.currentTarget);}}>{annotated(token.text)}</button>:<span key={i}>{token.text}</span>)}</span>;
 }

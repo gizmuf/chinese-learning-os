@@ -267,6 +267,7 @@ export default function IntensiveCourse({
             <span className="orange">.</span>
           </h1>
           <p>{t("60 lessons, connected to your real classes.")}</p>
+          <a className="grammar-back" href="/?course=hsk3">HSK 3 Exam Prep →</a>
         </div>
         <button
           className="course-sync"
