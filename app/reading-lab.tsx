@@ -187,7 +187,7 @@ function AtlasDetour({detour, level, penOnly, notify, onClose}: ReadingProps & {
   const glyphs = [...entry.text].filter(glyph => /\p{Script=Han}/u.test(glyph));
   const base = readAtlasWorkspaceRoute('?hsk=' + level + '&anchor=' + encodeURIComponent(glyphs[0] ?? '学'));
   const initial = {...base, ...workspaceExploration(entry.text, kind, locale, base)};
-  return <dialog className="rl-atlas-dialog" ref={viewport} aria-label="Atlas exploration" onCancel={event => {event.preventDefault(); onClose();}}>
+  return <dialog className="rl-atlas-dialog" ref={viewport} aria-label="Atlas exploration" onCancel={event => {if(event.target!==event.currentTarget)return; event.preventDefault(); onClose();}}>
     <header className="rl-modal-header"><strong>Atlas exploration</strong><button type="button" onClick={onClose}><ArrowLeft size={16}/> Back to reading</button></header>
     {source && <details className="rl-detour-source"><summary>Source sentence</summary>
       <p lang="zh-Hans">{source.text}</p><p>{source.pinyin}</p><p>{source.meaning}</p>

@@ -53,7 +53,13 @@ async function createWorksheetPdf(items:WorksheetWord[],title:string,locale:Loca
    return [char,undefined] as const;
   })).then(pairs=>Object.fromEntries(pairs) as Record<string,CharacterData>),
  ]);
- for(const char of required)if(!characters[char]?.strokes?.length)throw Error(`Missing stroke order for ${char}`);
+ for(const char of required){
+  if(characters[char]?.strokes?.length)continue;
+  const error=new Error(`Missing stroke order for ${char}`);
+  error.name='MissingWorksheetStroke';
+  error.cause=char;
+  throw error;
+ }
  const doc=await PDFDocument.create();doc.registerFontkit(fontkit);
  const font=await doc.embedFont(fontBytes,{subset:true});
  const printable=new Set(font.getCharacterSet());
