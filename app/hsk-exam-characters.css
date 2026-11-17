@@ -6,3 +6,12 @@
 .hsk-exam-characters>p{margin:.5rem 0;font-size:.875rem}
 .hsk-exam-grid{padding:0;margin:.75rem 0 0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(2.75rem,1fr));gap:.35rem}
 .hsk-exam-grid .study-word{min-height:2.75rem;width:100%;font-size:1.35rem}
+.hsk-exam-count{margin-inline-start:.15rem;color:var(--muted);font-size:.85em;font-weight:400;font-variant-numeric:tabular-nums}
+.hsk-exam-progress{display:flex;align-items:baseline;flex-wrap:wrap;gap:.25rem .8rem}
+.hsk-exam-progress output{font-weight:600;font-variant-numeric:tabular-nums}
+.hsk-exam-progress small{color:var(--muted)}
+.hsk-exam-grid{grid-template-columns:repeat(auto-fill,minmax(3.2rem,1fr))}
+.hsk-exam-grid>li{border:1px solid var(--line,#dce4d6);border-radius:.5rem;text-align:center}
+.hsk-exam-grid>li[data-known=true]{background:color-mix(in srgb,var(--green) 9%,transparent)}
+.hsk-exam-check{display:flex;align-items:center;justify-content:center;min-height:2.75rem;cursor:pointer}
+.hsk-exam-check input{width:1rem;height:1rem;margin:0;accent-color:var(--green);cursor:pointer}
