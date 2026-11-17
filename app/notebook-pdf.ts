@@ -8,6 +8,8 @@ import { translate, type Locale } from "./translate";
 
 type CharacterData = {strokes:string[]};
 type Resources = {font:Uint8Array; characters:Record<string,CharacterData>};
+type WorksheetWord = Pick<Item, 'hanzi' | 'pinyin' | 'english'>;
+export type HanziGroupPdfEntry = Pick<Item, 'hanzi' | 'pinyin'> & {meaning:string};
 const ink=rgb(.16,.22,.19), pale=rgb(.74,.77,.72), guide=rgb(.83,.85,.81), accent=rgb(.70,.29,.17);
 const W=595.28,H=841.89,margin=38;
 export type NotebookScope = StudyLevel | BrowseScope;
@@ -22,22 +24,41 @@ function lines(text:string,font:PDFFont,size:number,width:number){
 }
 export async function createNotebookPdf(items:Item[],level:NotebookScope,locale:Locale,resources?:Resources):Promise<Uint8Array>{
  if(!items.length || items.some(item=>!notebookIncludes(item,level)))throw Error("Choose words from one study level.");
+ const levelName=level==='bonus'?translate('Everyday extras',locale):typeof level==='string'&&level.startsWith('hsk')?level.toUpperCase():globalHskLabel(level as BrowseScope);
+ return createWorksheetPdf(items,levelName,locale,resources);
+}
+export function createHanziGroupPdf(entries:readonly HanziGroupPdfEntry[],title:string,locale:Locale,resources?:Resources):Promise<Uint8Array>{
+ return createWorksheetPdf(entries.map(({hanzi,pinyin,meaning})=>({hanzi,pinyin,english:meaning})),title,locale,resources);
+}
+async function createWorksheetPdf(items:WorksheetWord[],title:string,locale:Locale,resources?:Resources):Promise<Uint8Array>{
+ if(!items.length||items.some(item=>!item.hanzi))throw Error("Choose words for writing practice.");
  const t=(text:string)=>translate(text,locale);
- const chars=[...new Set(items.flatMap(item=>Array.from(item.hanzi)))];
+ const titleCharacters=title.match(/\p{Script=Han}/gu)??[];
+ const chars=[...new Set([...items.flatMap(item=>Array.from(item.hanzi)),...titleCharacters])];
  const load=async(url:string)=>{const r=await fetch(url);if(!r.ok)throw Error("PDF resource unavailable");return r;};
  const [fontBytes,characterPairs]=resources?[resources.font,Object.entries(resources.characters)]:await Promise.all([
   load("/fonts/NotoSans-Regular.ttf").then(r=>r.arrayBuffer()).then(b=>new Uint8Array(b)),
   Promise.all(chars.map(async char=>[char,await (await load(`/characters/${encodeURIComponent(char)}.json`)).json()] as [string,CharacterData])),
  ]);
  const characters=Object.fromEntries(characterPairs) as Record<string,CharacterData>;
- for(const char of chars)if(!characters[char]?.strokes.length)throw Error("Missing stroke order");
+ for(const char of chars)if(!characters[char]?.strokes?.length)throw Error(`Missing stroke order for ${char}`);
  const doc=await PDFDocument.create();doc.registerFontkit(fontkit);
  const font=await doc.embedFont(fontBytes,{subset:true});
- const levelName=level==='bonus'?t('Everyday extras'):typeof level==='string'&&level.startsWith('hsk')?level.toUpperCase():globalHskLabel(level as BrowseScope);
- doc.setTitle(`Chinese OS - ${levelName} - ${t('Writing practice')}`);doc.setAuthor('Chinese OS');doc.setLanguage(locale);
+ doc.setTitle(`Chinese OS - ${title} - ${t('Writing practice')}`);doc.setAuthor('Chinese OS');doc.setLanguage(locale);
  let page:PDFPage;let y=0;
  function text(value:string,x:number,at:number,size=10,color=ink){page.drawText(value,{x,y:at,size,font,color});}
- function newPage(){page=doc.addPage([W,H]);text(`Chinese OS  /  ${levelName}  /  ${t('Writing practice')}`,margin,H-35,12);text(`${t('Name')}: ____________________    ${t('Date')}: ______________`,margin,H-60,9);page.drawLine({start:{x:margin,y:H-73},end:{x:W-margin,y:H-73},color:guide,thickness:.6});y=H-94;}
+ function titleLine(value:string,at:number,size:number){
+  const parts=value.split(/(\p{Script=Han})/gu).filter(Boolean);
+  const width=parts.reduce((total,part)=>total+(characters[part]?size:font.widthOfTextAtSize(part,size)),0);
+  const fittedSize=size*Math.min(1,(W-2*margin)/width);
+  let x=margin;
+  for(const part of parts){
+   const data=characters[part];
+   if(data){glyph(data,x,at-fittedSize*.15,fittedSize);x+=fittedSize;}
+   else{text(part,x,at,fittedSize);x+=font.widthOfTextAtSize(part,fittedSize);}
+  }
+ }
+ function newPage(){page=doc.addPage([W,H]);titleLine(`Chinese OS  /  ${title}  /  ${t('Writing practice')}`,H-35,12);text(`${t('Name')}: ____________________    ${t('Date')}: ______________`,margin,H-60,9);page.drawLine({start:{x:margin,y:H-73},end:{x:W-margin,y:H-73},color:guide,thickness:.6});y=H-94;}
  function glyph(data:CharacterData,x:number,bottom:number,size:number,through=data.strokes.length-1,highlight=false,ghost=false){
   // Hanzi data uses a Y-up coordinate system; cancel drawSvgPath's SVG Y flip.
   page.pushOperators(pushGraphicsState(),move(x+size*.065,bottom+size*.12),scale(1,-1));
@@ -67,9 +88,16 @@ export async function createNotebookPdf(items:Item[],level:NotebookScope,locale:
   y-=8;
   if(wordIndex%8===0)await new Promise<void>(resolve=>setTimeout(resolve,0));
  }
- const pages=doc.getPages();pages.forEach((p,i)=>{p.drawText(`${levelName}  |  ${t('Page')} ${i+1} / ${pages.length}`,{x:margin,y:25,size:8,font,color:ink});});
+ const pages=doc.getPages();pages.forEach((p,i)=>{page=p;titleLine(`${title}  |  ${t('Page')} ${i+1} / ${pages.length}`,25,8);});
  return doc.save();
 }
 export async function downloadNotebookPdf(items:Item[],level:NotebookScope,locale:Locale){
- const bytes=await createNotebookPdf(items,level,locale);const blob=new Blob([new Uint8Array(bytes)],{type:"application/pdf"});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`Chinese-OS-${String(level).toUpperCase()}-${locale}-${items.length}-words.pdf`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60_000);
+ const bytes=await createNotebookPdf(items,level,locale);
+ downloadPdf(bytes,`Chinese-OS-${String(level).toUpperCase()}-${locale}-${items.length}-words.pdf`);
+}
+export async function downloadHanziGroupPdf(entries:readonly HanziGroupPdfEntry[],title:string,locale:Locale,fileName:string){
+ downloadPdf(await createHanziGroupPdf(entries,title,locale),fileName);
+}
+function downloadPdf(bytes:Uint8Array,fileName:string){
+ const blob=new Blob([new Uint8Array(bytes)],{type:"application/pdf"});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=fileName;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60_000);
 }

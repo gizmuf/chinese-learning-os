@@ -1,9 +1,9 @@
 "use client";
 import { useI18n } from "./i18n";
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useLayoutEffect, useRef, useState } from "react";
 import type { Point, Stroke } from "./learning";
 import {acceptWritingPointer} from "./writing-pointer";
-import { paintInk } from "./ink-render";
+import { paintInk, writingPenWidth } from "./ink-render";
 export default function Ink({ strokes, onChange, penOnly, disabled = false,quietTouch=false,lineStyle='brush' }: {
   strokes: Stroke[]; onChange: (s: Stroke[]) => void; penOnly: boolean; disabled?: boolean;quietTouch?:boolean;lineStyle?:'pen'|'brush';
 }) {
@@ -17,6 +17,8 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false,quiet
   const penSeen=useRef(false);
   const size = useRef({ w: 0, h: 0, dpr: 1 });
   const frame = useRef(0);
+  const needsRefresh = useRef(true);
+  const shownPoints = useRef(0);
   const fallback = useRef<{move:(e:PointerEvent)=>void;finish:(e:PointerEvent)=>void;cancel:(e:PointerEvent)=>void;flush:()=>void}>({move:()=>{},finish:()=>{},cancel:()=>{},flush:()=>{}});
   const [touchNotice, setTouchNotice] = useState(false);
   const draw = useCallback(() => {
@@ -26,38 +28,79 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false,quiet
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
     const { w, h, dpr } = size.current;
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(saved, 0, 0);
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    if (active.current) paintInk(ctx, active.current.points, w, h, false,lineStyle);
+    if (needsRefresh.current || lineStyle === "brush") {
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(saved, 0, 0);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      needsRefresh.current = false;
+      shownPoints.current = 0;
+    }
+    const stroke = active.current?.points;
+    if (!stroke) return;
+    if (lineStyle === "brush") {
+      paintInk(ctx, stroke, w, h, false, lineStyle);
+      return;
+    }
+    // The fixed-width pen only paints the new samples in each frame. Commit
+    // replaces this preview with the usual smoothed outline.
+    const from = shownPoints.current;
+    if (from >= stroke.length) return;
+    const width = writingPenWidth(w, h);
+    if (from === 0) {
+      ctx.beginPath();
+      ctx.arc(stroke[0].x * w, stroke[0].y * h, width / 2, 0, Math.PI * 2);
+      ctx.fillStyle = "#254d42";
+      ctx.fill();
+    }
+    const first = stroke[Math.max(0, from - 1)];
+    ctx.beginPath();
+    ctx.moveTo(first.x * w, first.y * h);
+    for (let i = Math.max(1, from); i < stroke.length; i++) {
+      ctx.lineTo(stroke[i].x * w, stroke[i].y * h);
+    }
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.strokeStyle = "#254d42";
+    ctx.stroke();
+    shownPoints.current = stroke.length;
   }, [lineStyle]);
   const schedule = useCallback(() => { if (!frame.current) frame.current = requestAnimationFrame(draw); }, [draw]);
-  const rebuild = useCallback(() => {
+  const refresh = useCallback(() => { needsRefresh.current = true; schedule(); }, [schedule]);
+  const rebuild = useCallback((force = false) => {
     const canvas = ref.current;
     if (!canvas) return;
     const rect = canvas.getBoundingClientRect();
     if (!rect.width || !rect.height) return;
     const dpr = Math.min(window.devicePixelRatio || 1, 3);
+    const old = size.current;
+    if (!force && old.w === rect.width && old.h === rect.height && old.dpr === dpr) return;
     const width = Math.round(rect.width * dpr), height = Math.round(rect.height * dpr);
     const saved = cache.current ?? (cache.current = document.createElement("canvas"));
-    // Only resize backing stores after layout/scale changes, never per pointer event.
     if (canvas.width !== width || canvas.height !== height) { canvas.width = width; canvas.height = height; }
     saved.width = width; saved.height = height;
     size.current = { w: rect.width, h: rect.height, dpr };
     const ctx = saved.getContext("2d");
     if (!ctx) return;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    for (const stroke of current.current) paintInk(ctx, stroke, rect.width, rect.height,true,lineStyle);
-    schedule();
-  }, [schedule,lineStyle]);
-  // Parent echoes our committed array after pointer-up. A new Pencil stroke may
-  // already have started: only an external replacement (Clear/restore) cancels it.
-  useEffect(() => { if(current.current!==strokes&&!emitted.current.has(strokes)){current.current=strokes;active.current=null;} rebuild(); }, [strokes, rebuild]);
-  useEffect(() => {
-    const obs = new ResizeObserver(rebuild);
+    for (const stroke of current.current) paintInk(ctx, stroke, rect.width, rect.height, true, lineStyle);
+    refresh();
+  }, [refresh, lineStyle]);
+  useLayoutEffect(() => { rebuild(true); }, [rebuild]);
+  // Clear, undo and restore replace the saved strokes. The local bitmap
+  // already contains every committed stroke, including newer local commits.
+  useLayoutEffect(() => {
+    if (current.current === strokes || emitted.current.has(strokes)) return;
+    current.current = strokes;
+    active.current = null;
+    rebuild(true);
+  }, [strokes, rebuild]);
+  useLayoutEffect(() => {
+    const resize = () => rebuild();
+    const obs = new ResizeObserver(resize);
     obs.observe(ref.current!);
-    window.addEventListener("resize", rebuild);
+    window.addEventListener("resize", resize);
     // Capture is best-effort. A contact ending outside the canvas must still
     // commit once if Safari could not capture it.
     const down=(e:PointerEvent)=>{
@@ -73,9 +116,9 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false,quiet
     window.addEventListener('pointermove',move,{passive:false});
     window.addEventListener('pointerup',finish);
     window.addEventListener('pointercancel',cancel);
-    return () => { obs.disconnect(); window.removeEventListener("resize", rebuild); window.removeEventListener('pointerdown',down,true); window.removeEventListener('pointermove',move); window.removeEventListener('pointerup',finish); window.removeEventListener('pointercancel',cancel); cancelAnimationFrame(frame.current); frame.current=0; active.current = null; };
+    return () => { obs.disconnect(); window.removeEventListener("resize", resize); window.removeEventListener('pointerdown',down,true); window.removeEventListener('pointermove',move); window.removeEventListener('pointerup',finish); window.removeEventListener('pointercancel',cancel); cancelAnimationFrame(frame.current); frame.current=0; active.current = null; };
   }, [rebuild]);
-  useEffect(() => { active.current = null; penSeen.current=false; schedule(); }, [disabled, penOnly, schedule]);
+  useLayoutEffect(() => { active.current = null; penSeen.current = false; refresh(); }, [disabled, penOnly, refresh]);
   function point(e: PointerEvent | React.PointerEvent, rect: DOMRect): Point {
     return { x: Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width)), y: Math.min(1, Math.max(0, (e.clientY - rect.top) / rect.height)), p: e.pointerType === "pen" ? Math.max(0, Math.min(1, e.pressure)) : .5, t: e.timeStamp };
   }
@@ -84,7 +127,13 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false,quiet
     if (!stroke) return;
     active.current = null;
     const next = [...current.current, stroke.points];
-    emitted.current.add(next); current.current = next; onChange(next); rebuild();
+    emitted.current.add(next);
+    current.current = next;
+    const { w, h } = size.current;
+    const ctx = cache.current?.getContext("2d");
+    if (ctx) paintInk(ctx, stroke.points, w, h, true, lineStyle);
+    refresh();
+    onChange(next);
   }
   function cancel(e: PointerEvent | React.PointerEvent<HTMLCanvasElement>) {
     if (active.current?.id !== e.pointerId) return;
@@ -126,7 +175,7 @@ export default function Ink({ strokes, onChange, penOnly, disabled = false,quiet
         if (current.current.length >= 50) return;
         if(!acceptWritingPointer(e,penOnly,penSeen.current,active.current)){if(penOnly&&e.pointerType!=="pen"){if(quietTouch)e.preventDefault();else setTouchNotice(true);}return;}
         if(e.pointerType==="pen")penSeen.current=true;
-        if(active.current){const id=active.current.id;active.current=null;if(e.currentTarget.hasPointerCapture(id))e.currentTarget.releasePointerCapture(id);schedule();}
+        if(active.current){const id=active.current.id;active.current=null;if(e.currentTarget.hasPointerCapture(id))e.currentTarget.releasePointerCapture(id);refresh();}
         const rect = e.currentTarget.getBoundingClientRect();
         if (!rect.width || !rect.height) return;
         setTouchNotice(false); e.preventDefault();

@@ -5,6 +5,8 @@ import {ArrowLeft, ArrowRight, BookOpen, Volume2} from 'lucide-react';
 import catalog from '../data/mandarin-320.json';
 import audioSources from '../data/mandarin-320-audio.json';
 import {stopAudio} from './audio';
+import HanziQuickReview from './hanzi-quick-review';
+import {HanziGroupPdf} from './hanzi-group-pdf';
 import {Exercise, type Attempt, type Attempts} from './hanzi-family-lesson-practice';
 import {hanziFamilyBackLink, selectedPracticeHref} from './hanzi-family-lesson-route';
 import {createMandarin320PinyinLookup} from './mandarin-320-pinyin';
@@ -91,6 +93,10 @@ function Words({player, practise}: {player: Playback; practise: (mode: 'recall' 
       </label>
       <p role="status">{filtered.length} {query ? 'matches' : 'entries'}</p>
     </div>
+    {visible.length > 0 && <div className="hanzi-family-actions hanzi-group-actions">
+      <HanziGroupPdf entries={visible} title={'Mandarin 320 · Words ' + (page * rangeSize + 1) + '–' + (page * rangeSize + visible.length)} />
+      <HanziQuickReview entries={visible}/>
+    </div>}
     <div className="hanzi-family-entries mandarin320-entries" id="mandarin320-results">
       {visible.map(entry => <details className="hanzi-family-entry" key={entry.id} data-entry-id={entry.id}
         open={expanded.has(entry.id)} onToggle={event => toggleEntry(entry.id, event.currentTarget.open)}>
@@ -121,16 +127,39 @@ function Words({player, practise}: {player: Playback; practise: (mode: 'recall' 
   </section>;
 }
 
+const lookalikeMeanings: Record<string, string> = {
+  未: 'not yet', 末: 'end', 土: 'earth; soil', 士: 'scholar', 日: 'sun; day', 目: 'eye',
+  白: 'white', 百: 'hundred', 买: 'buy', 卖: 'sell', 午: 'noon', 牛: 'ox; cow',
+  人: 'person', 入: 'enter', 己: 'oneself', 已: 'already',
+};
+
+function appendixEntries(examples: string) {
+  return examples.split(';').flatMap(row => {
+    const definition = /^([\p{Script=Han}]+)\s+([^=]+?)\s*=\s*(.+)$/u.exec(row.trim());
+    if (definition) return [{hanzi: definition[1], pinyin: definition[2], meaning: definition[3]}];
+    return row.split('/').flatMap(part => {
+      const pair = /^([\p{Script=Han}])\s+(\S+)$/u.exec(part.trim());
+      return pair && lookalikeMeanings[pair[1]]
+        ? [{hanzi: pair[1], pinyin: pair[2], meaning: lookalikeMeanings[pair[1]]}]
+        : [];
+    });
+  });
+}
+
 function Appendix({onSelect}: {onSelect: (item: number) => void}) {
   return <section className="panel hanzi-family-panel" aria-labelledby="mandarin320-appendix">
     <h2 id="mandarin320-appendix">Components and contrasts</h2>
     <div className="hanzi-family-compare">
-      {catalog.appendix.map((group, index) => <section className="hanzi-family-group" key={group.title} data-appendix-id={index + 1}>
+      {catalog.appendix.map((group, index) => { const review = appendixEntries(group.examples); return <section className="hanzi-family-group" key={group.title} data-appendix-id={index + 1}>
         <h3 lang="pl"><StudyText text={group.title}/></h3>
         <p><StudyText text={group.examples}/></p>
         <p lang="pl"><StudyText text={group.note}/></p>
         <button type="button" className="secondary" onClick={() => onSelect(index + 1)}>Practise this contrast</button>
-      </section>)}
+        {review.length > 0 && <div className="hanzi-family-actions hanzi-group-actions">
+          <HanziGroupPdf entries={review} title={group.title}/>
+          <HanziQuickReview entries={review}/>
+        </div>}
+      </section>;})}
     </div>
   </section>;
 }

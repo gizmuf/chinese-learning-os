@@ -2,7 +2,18 @@ import {readFile,mkdir,copyFile,readdir,writeFile} from 'node:fs/promises';
 import path from 'node:path';
 const root=process.cwd();
 const source=(await Promise.all(['app/content.ts','app/course-data.ts','app/lesson04-data.ts','data/lesson04/content.json','app/lesson05-data.ts','data/lesson05/content.json','data/lesson06/content.json','data/lesson07/content.json','data/lesson08/content.json','data/lesson09/content.json','data/lesson10/content.json','data/lesson11/content.json','data/lesson12/content.json','app/reference-action-language.ts','data/reference-lessons/time-dates.json','data/reference-lessons/movement-directions.json','data/reference-lessons/shang.json','data/video-self-introduction/content.json','data/shuoshuo-morning.json'].map(file=>readFile(path.join(root,file),'utf8')))).join('\n');
-const chars=[...new Set(source.match(/[\u3400-\u9fff]/gu))];
+const hanziLesson=JSON.parse(await readFile(path.join(root,'data/hanzi-families-2026-11-17.json'),'utf8'));
+const mandarin320=JSON.parse(await readFile(path.join(root,'data/mandarin-320.json'),'utf8'));
+const hanziWorksheetText=[
+ ...hanziLesson.entries.map(entry=>entry.hanzi),
+ ...hanziLesson.visualFamilies.flatMap(group=>[group.title,...group.examples.map(example=>example.hanzi)]),
+ ...mandarin320.entries.map(entry=>entry.hanzi),
+ ...mandarin320.appendix.flatMap(group=>[
+  group.title,
+  ...group.examples.split(';').map(example=>example.trim().match(/^([\p{Script=Han}]+)\s+.+?\s*=/u)?.[1]??''),
+ ]),
+].join('');
+const chars=[...new Set((source+hanziWorksheetText).match(/[\u3400-\u9fff]/gu))];
 const target=path.join(root,'public/characters');
 await mkdir(target,{recursive:true});
 await mkdir(path.join(root,'public/licenses'),{recursive:true});

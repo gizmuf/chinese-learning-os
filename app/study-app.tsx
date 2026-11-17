@@ -91,6 +91,7 @@ import type {BrowseScope} from './hsk-scope';
 import './recognition-review.css';
 import StudyLookupProvider, {useDictionaryAssistance,StudyText,StudyConfusionsButton} from "./study-lookup";
 import PdfExport from "./pdf-export";
+import HanziQuickReview from "./hanzi-quick-review";
 import { LanguagePicker, useI18n } from "./i18n";
 import { localizeItem } from "./translate";
 import { synchronizeProgress } from "./progress-sync";
@@ -1049,7 +1050,7 @@ export default function StudyApp({
                 </select>
               </div>
               <StudyConfusionsButton/>
-              <div className="library-results-bar"><p className="library-count" role="status">{filtered.length} {t(filtered.length===1?'word':'words')} · {practiceSelection?libraryCopy.selected:label}</p><div className="library-view-switch" role="group" aria-label="Library view"><button type="button" title={libraryCopy.cards} aria-label={libraryCopy.cards} aria-pressed={libraryLayout==='cards'} onClick={()=>{setLibraryLayout('cards');libraryRoute('cards');}}><LayoutGrid size={17}/></button><button type="button" title={libraryCopy.notebook} aria-label={libraryCopy.notebook} aria-pressed={libraryLayout==='notebook'} onClick={()=>{setLibraryLayout('notebook');libraryRoute('notebook');}}><Rows3 size={17}/></button></div><LibraryScrollControls/></div>
+              <div className="library-results-bar"><p className="library-count" role="status">{filtered.length} {t(filtered.length===1?'word':'words')} · {practiceSelection?libraryCopy.selected:label}</p><HanziQuickReview entries={filtered.map(item=>({hanzi:item.hanzi,pinyin:item.pinyin,meaning:englishById.get(item.id)??item.english}))}/><div className="library-view-switch" role="group" aria-label="Library view"><button type="button" title={libraryCopy.cards} aria-label={libraryCopy.cards} aria-pressed={libraryLayout==='cards'} onClick={()=>{setLibraryLayout('cards');libraryRoute('cards');}}><LayoutGrid size={17}/></button><button type="button" title={libraryCopy.notebook} aria-label={libraryCopy.notebook} aria-pressed={libraryLayout==='notebook'} onClick={()=>{setLibraryLayout('notebook');libraryRoute('notebook');}}><Rows3 size={17}/></button></div><LibraryScrollControls/></div>
               {practiceSelection&&<p className="library-selection-note">{libraryCopy.ready}</p>}
               <div className={'word-grid'+(libraryLayout==='notebook'?' is-notebook':'')}>
                 {filtered.map((i) => (

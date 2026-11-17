@@ -1,8 +1,9 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';import {createRequire} from 'node:module';import {build} from 'esbuild';
+import {PDFDocument} from 'pdf-lib';
 const require=createRequire(import.meta.url);
 const folder='/tmp/chinese-os-pdf-qa';mkdirSync(folder,{recursive:true});
 await build({entryPoints:['app/notebook-pdf.ts','app/translate.ts','app/content.ts'],outdir:folder,bundle:true,platform:'node',format:'cjs',outExtension:{'.js':'.cjs'},logLevel:'silent'});
-const {items,isInLevel}=require(folder+'/content.cjs');const {localizeItem,translate}=require(folder+'/translate.cjs');const {createNotebookPdf,worksheetItems}=require(folder+'/notebook-pdf.cjs');
+const {items,isInLevel}=require(folder+'/content.cjs');const {localizeItem,translate}=require(folder+'/translate.cjs');const {createHanziGroupPdf,createNotebookPdf,worksheetItems}=require(folder+'/notebook-pdf.cjs');
 const translations=JSON.parse(readFileSync('data/translations.json','utf8'));
 test('all 1020 vocabulary cards have French and Russian meanings and sentences without changing learning identity',()=>{
  assert.equal(Object.keys(translations.vocabulary).length,items.length);
@@ -25,5 +26,26 @@ test('HSK3 notebooks generate in all three languages with every selected charact
   const bytes=await createNotebookPdf(pool,'hsk3',locale,{font,characters});
   assert.equal(Buffer.from(bytes.slice(0,4)).toString(),'%PDF');assert.ok(bytes.length>10_000);
   writeFileSync(`${folder}/HSK3-${locale}.pdf`,bytes);
+ }
+});
+
+test('Hanzi lesson worksheets use canonical strokes for the actual words and family titles',async()=>{
+ const lesson=JSON.parse(readFileSync('data/hanzi-families-2026-11-17.json','utf8'));
+ const mandarin=JSON.parse(readFileSync('data/mandarin-320.json','utf8'));
+ const groups=[
+  {title:'Words and families · 1–50',entries:lesson.entries},
+  lesson.visualFamilies.find(group=>group.examples.some(entry=>entry.hanzi==='炸')),
+  {title:'Mandarin 320 · 1–10',entries:mandarin.entries.slice(0,10)},
+  {title:'心 / 忄 — serce i stany',entries:[{hanzi:'心',pinyin:'xīn',meaning:'heart'}]},
+ ];
+ for(const [index,group] of groups.entries()){
+  const entries=group.entries??group.examples;
+  const glyphs=new Set((group.title+entries.map(entry=>entry.hanzi).join('')).match(/\p{Script=Han}/gu));
+  const characters=Object.fromEntries([...glyphs].map(char=>[char,require(`hanzi-writer-data/${char}.json`)]));
+  const bytes=await createHanziGroupPdf(entries,group.title,'en',{font,characters});
+  const document=await PDFDocument.load(bytes);
+  assert.equal(document.getTitle(),`Chinese OS - ${group.title} - Writing practice`);
+  assert.ok(document.getPageCount()>0);
+  writeFileSync(`${folder}/Hanzi-group-${index}.pdf`,bytes);
  }
 });

@@ -6,6 +6,8 @@ import lesson from '../data/hanzi-families-2026-11-17.json';
 import exerciseData from '../data/hanzi-families-2026-11-17-practice.json';
 import audioData from '../data/hanzi-families-2026-11-17-audio.json';
 import {stopAudio} from './audio';
+import HanziQuickReview from './hanzi-quick-review';
+import {HanziGroupPdf} from './hanzi-group-pdf';
 import HanziFamilyPractice, {exerciseKinds, loadHanziAttempts, type Attempts, type ExerciseFilter} from './hanzi-family-lesson-practice';
 import {hanziFamilyBackLink, hanziFamilyLessonId, hanziFamilyLessonTitle, type HanziExercise} from './hanzi-family-lesson-route';
 import {StudyText, useStudyLookup} from './study-lookup-context';
@@ -55,6 +57,10 @@ function StudyWords({player}: {player: ReturnType<typeof useRecordingPlayback>})
       </label>
       <p role="status">{grouped.length} words</p>
     </div>
+    {visible.length > 0 && <div className="hanzi-family-actions hanzi-group-actions">
+      <HanziGroupPdf entries={visible.map(({entry}) => entry)} title={'Hanzi families · Words ' + (page * pageSize + 1) + '–' + (page * pageSize + visible.length)} />
+      <HanziQuickReview entries={visible.map(({entry}) => entry)}/>
+    </div>}
     <div className="hanzi-family-entries" id="hanzi-family-word-list">
       {visible.map(({entry, index}) => {
         const clip = audio[entry.example];
@@ -105,6 +111,10 @@ function CompareShapes() {
           </li>)}
         </ul>
         <p lang="pl"><StudyText text={group.notes}/></p>
+        {group.examples?.length > 0 && <div className="hanzi-family-actions hanzi-group-actions">
+          <HanziGroupPdf entries={group.examples} title={group.title}/>
+          <HanziQuickReview entries={group.examples}/>
+        </div>}
       </section>)}
     </div>
   </section>;
