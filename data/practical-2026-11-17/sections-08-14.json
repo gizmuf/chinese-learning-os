@@ -1,0 +1,513 @@
+[
+  {
+    "id": "good-to-the-senses",
+    "title": "Good to taste, see, hear or smell",
+    "note": "The verb after 好 (hǎo) tells you which sense is involved. 好吃 (hǎo chī) describes food, while 好闻 (hǎo wén) describes a pleasant smell. 好看 (hǎo kàn) can describe how something looks or how enjoyable it is to watch.",
+    "entries": [
+      {
+        "hanzi": "好吃",
+        "pinyin": "hǎo chī",
+        "english": "Tasty; good to eat.",
+        "sourcePage": 9
+      },
+      {
+        "hanzi": "好看",
+        "pinyin": "hǎo kàn",
+        "english": "Good-looking; nice to watch.",
+        "sourcePage": 9
+      },
+      {
+        "hanzi": "好听",
+        "pinyin": "hǎo tīng",
+        "english": "Nice to listen to.",
+        "sourcePage": 9
+      },
+      {
+        "hanzi": "好闻",
+        "pinyin": "hǎo wén",
+        "english": "Nice-smelling.",
+        "sourcePage": 9
+      },
+      {
+        "hanzi": "香",
+        "pinyin": "xiāng",
+        "english": "Fragrant; appetizing.",
+        "sourcePage": 9
+      },
+      {
+        "hanzi": "香水",
+        "pinyin": "xiāng shuǐ",
+        "english": "Perfume.",
+        "sourcePage": 9
+      },
+      {
+        "hanzi": "这个苹果很好吃",
+        "pinyin": "zhè ge píng guǒ hěn hǎo chī",
+        "english": "This apple is tasty.",
+        "sourcePage": 9
+      },
+      {
+        "hanzi": "这件外套很好看",
+        "pinyin": "zhè jiàn wài tào hěn hǎo kàn",
+        "english": "This coat looks nice.",
+        "sourcePage": 10
+      },
+      {
+        "hanzi": "这首中文歌很好听",
+        "pinyin": "zhè shǒu zhōng wén gē hěn hǎo tīng",
+        "english": "This Chinese song sounds nice.",
+        "sourcePage": 10
+      },
+      {
+        "hanzi": "这个香水很好闻",
+        "pinyin": "zhè ge xiāng shuǐ hěn hǎo wén",
+        "english": "This perfume smells nice.",
+        "sourcePage": 10
+      },
+      {
+        "hanzi": "闻",
+        "pinyin": "wén",
+        "english": "Smell; hear of, in some words.",
+        "sourcePage": 10
+      },
+      {
+        "hanzi": "听",
+        "pinyin": "tīng",
+        "english": "Listen; hear.",
+        "sourcePage": 10
+      }
+    ]
+  },
+  {
+    "id": "song-and-clothing-classifiers",
+    "title": "Songs and clothes: classifiers",
+    "note": "Put the number or demonstrative before the classifier, as in 一首歌 (yì shǒu gē), 一件外套 (yí jiàn wài tào), and 这首歌 (zhè shǒu gē). Use 首 for songs and poems and 件 for individual pieces of clothing and certain other items. 首 and 手 (hand) are both pronounced shǒu. The pinyin shows how the tone of 一 changes before the following syllable.",
+    "entries": [
+      {
+        "hanzi": "一首歌",
+        "pinyin": "yì shǒu gē",
+        "english": "One song.",
+        "sourcePage": 10
+      },
+      {
+        "hanzi": "这首中文歌",
+        "pinyin": "zhè shǒu zhōng wén gē",
+        "english": "This Chinese song.",
+        "sourcePage": 10
+      },
+      {
+        "hanzi": "一件外套",
+        "pinyin": "yí jiàn wài tào",
+        "english": "One coat / outer jacket.",
+        "sourcePage": 10
+      },
+      {
+        "hanzi": "马甲",
+        "pinyin": "mǎ jiǎ",
+        "english": "Vest; waistcoat.",
+        "sourcePage": 10
+      },
+      {
+        "hanzi": "一件马甲",
+        "pinyin": "yí jiàn mǎ jiǎ",
+        "english": "One vest.",
+        "sourcePage": 10
+      },
+      {
+        "hanzi": "两件衣服",
+        "pinyin": "liǎng jiàn yī fu",
+        "english": "Two items of clothing.",
+        "sourcePage": 11
+      },
+      {
+        "hanzi": "我喜欢这首歌",
+        "pinyin": "wǒ xǐ huan zhè shǒu gē",
+        "english": "I like this song.",
+        "sourcePage": 11
+      },
+      {
+        "hanzi": "我想买这件外套",
+        "pinyin": "wǒ xiǎng mǎi zhè jiàn wài tào",
+        "english": "I want to buy this coat.",
+        "sourcePage": 11
+      },
+      {
+        "hanzi": "手",
+        "pinyin": "shǒu",
+        "english": "Hand.",
+        "sourcePage": 11
+      },
+      {
+        "hanzi": "首",
+        "pinyin": "shǒu",
+        "english": "Classifier for songs and poems; head/first in some words.",
+        "sourcePage": 11
+      },
+      {
+        "hanzi": "件",
+        "pinyin": "jiàn",
+        "english": "Classifier for clothing and some other items.",
+        "sourcePage": 11
+      },
+      {
+        "hanzi": "衣服",
+        "pinyin": "yī fu",
+        "english": "Clothes.",
+        "sourcePage": 11
+      }
+    ]
+  },
+  {
+    "id": "imports-devices-and-brands",
+    "title": "Imports, devices and brands",
+    "note": "Context distinguishes 苹果 (apple) and 小米 (millet) from the brand names Apple and Xiaomi. 出口 can refer to exports or a physical exit. 从 introduces the place of origin in the sample sentence about New Zealand. Compare 税 (shuì, tax) with 水 (shuǐ, water). The brand names are vocabulary examples, and the New Zealand sentence is for practice.",
+    "entries": [
+      {
+        "hanzi": "进口",
+        "pinyin": "jìn kǒu",
+        "english": "Import; imported.",
+        "sourcePage": 11
+      },
+      {
+        "hanzi": "出口",
+        "pinyin": "chū kǒu",
+        "english": "Export; an exit.",
+        "sourcePage": 11
+      },
+      {
+        "hanzi": "税",
+        "pinyin": "shuì",
+        "english": "Tax.",
+        "sourcePage": 11
+      },
+      {
+        "hanzi": "水",
+        "pinyin": "shuǐ",
+        "english": "Water.",
+        "sourcePage": 12
+      },
+      {
+        "hanzi": "苹果手机",
+        "pinyin": "píng guǒ shǒu jī",
+        "english": "An Apple phone.",
+        "sourcePage": 12
+      },
+      {
+        "hanzi": "苹果",
+        "pinyin": "píng guǒ",
+        "english": "An apple; Apple as a brand in context.",
+        "sourcePage": 12
+      },
+      {
+        "hanzi": "三星",
+        "pinyin": "sān xīng",
+        "english": "Samsung; literally three stars.",
+        "sourcePage": 12
+      },
+      {
+        "hanzi": "华为",
+        "pinyin": "huá wéi",
+        "english": "Huawei.",
+        "sourcePage": 12
+      },
+      {
+        "hanzi": "小米",
+        "pinyin": "xiǎo mǐ",
+        "english": "Xiaomi; millet in a food context.",
+        "sourcePage": 12
+      },
+      {
+        "hanzi": "手机",
+        "pinyin": "shǒu jī",
+        "english": "Mobile phone.",
+        "sourcePage": 12
+      },
+      {
+        "hanzi": "汽车",
+        "pinyin": "qì chē",
+        "english": "Car; automobile.",
+        "sourcePage": 12
+      },
+      {
+        "hanzi": "这是从新西兰进口的",
+        "pinyin": "zhè shì cóng xīn xī lán jìn kǒu de",
+        "english": "This was imported from New Zealand.",
+        "sourcePage": 12
+      }
+    ]
+  },
+  {
+    "id": "home-and-work",
+    "title": "At home and at work",
+    "note": "公司 (gōng sī, company) and 工资 (gōng zī, salary) begin with the same sound. They use different first characters (公 and 工) and different second syllables (sī and zī). Use 家 to count companies. Put 在 + place before the action verb, as in 我在公司工作.",
+    "entries": [
+      {
+        "hanzi": "一起出门",
+        "pinyin": "yì qǐ chū mén",
+        "english": "Go out together.",
+        "sourcePage": 12
+      },
+      {
+        "hanzi": "家用电器",
+        "pinyin": "jiā yòng diàn qì",
+        "english": "Household electrical appliances.",
+        "sourcePage": 13
+      },
+      {
+        "hanzi": "洗衣机",
+        "pinyin": "xǐ yī jī",
+        "english": "Washing machine.",
+        "sourcePage": 13
+      },
+      {
+        "hanzi": "空调",
+        "pinyin": "kōng tiáo",
+        "english": "Air conditioning; air conditioner.",
+        "sourcePage": 13
+      },
+      {
+        "hanzi": "电视",
+        "pinyin": "diàn shì",
+        "english": "Television.",
+        "sourcePage": 13
+      },
+      {
+        "hanzi": "公司",
+        "pinyin": "gōng sī",
+        "english": "Company.",
+        "sourcePage": 13
+      },
+      {
+        "hanzi": "工资",
+        "pinyin": "gōng zī",
+        "english": "Wages; salary.",
+        "sourcePage": 13
+      },
+      {
+        "hanzi": "我们一起出门吧",
+        "pinyin": "wǒ men yì qǐ chū mén ba",
+        "english": "Let's go out together.",
+        "sourcePage": 13
+      },
+      {
+        "hanzi": "我在一家公司工作",
+        "pinyin": "wǒ zài yì jiā gōng sī gōng zuò",
+        "english": "I work at a company.",
+        "sourcePage": 13
+      },
+      {
+        "hanzi": "我的工资不高",
+        "pinyin": "wǒ de gōng zī bù gāo",
+        "english": "My salary isn't high.",
+        "sourcePage": 13
+      },
+      {
+        "hanzi": "我家的洗衣机坏了",
+        "pinyin": "wǒ jiā de xǐ yī jī huài le",
+        "english": "Our washing machine is broken.",
+        "sourcePage": 13
+      },
+      {
+        "hanzi": "请打开空调",
+        "pinyin": "qǐng dǎ kāi kōng tiáo",
+        "english": "Please turn on the air conditioner.",
+        "sourcePage": 13
+      }
+    ]
+  },
+  {
+    "id": "similar-character-forms",
+    "title": "Look carefully: similar forms",
+    "note": "Compare the upper parts of 买 and 卖, and look for the dot in 太 and the extra horizontal stroke in 天 when comparing them with 大. 明 contains a shape like the sun character and one like the moon character. 朋 has two moon-like shapes. Compare 帅 and 师 by looking at their right-hand sides.",
+    "entries": [
+      {
+        "hanzi": "又",
+        "pinyin": "yòu",
+        "english": "Again; also.",
+        "sourcePage": 14
+      },
+      {
+        "hanzi": "有",
+        "pinyin": "yǒu",
+        "english": "Have; there is.",
+        "sourcePage": 14
+      },
+      {
+        "hanzi": "右",
+        "pinyin": "yòu",
+        "english": "Right-hand side.",
+        "sourcePage": 14
+      },
+      {
+        "hanzi": "买",
+        "pinyin": "mǎi",
+        "english": "Buy.",
+        "sourcePage": 14
+      },
+      {
+        "hanzi": "卖",
+        "pinyin": "mài",
+        "english": "Sell.",
+        "sourcePage": 14
+      },
+      {
+        "hanzi": "大",
+        "pinyin": "dà",
+        "english": "Big.",
+        "sourcePage": 14
+      },
+      {
+        "hanzi": "太",
+        "pinyin": "tài",
+        "english": "Too; extremely.",
+        "sourcePage": 14
+      },
+      {
+        "hanzi": "天",
+        "pinyin": "tiān",
+        "english": "Sky; day.",
+        "sourcePage": 14
+      },
+      {
+        "hanzi": "明",
+        "pinyin": "míng",
+        "english": "Bright; clear.",
+        "sourcePage": 14
+      },
+      {
+        "hanzi": "朋",
+        "pinyin": "péng",
+        "english": "Friend component.",
+        "sourcePage": 14
+      },
+      {
+        "hanzi": "帅",
+        "pinyin": "shuài",
+        "english": "Handsome.",
+        "sourcePage": 14
+      },
+      {
+        "hanzi": "师",
+        "pinyin": "shī",
+        "english": "Teacher / master component.",
+        "sourcePage": 15
+      }
+    ]
+  },
+  {
+    "id": "sound-alikes",
+    "title": "Sound-alikes are not the same word",
+    "note": "税 (tax) and 睡 (sleep) are both pronounced shuì. 水 (water) is pronounced shuǐ and 说 (speak) is shuō. Compare the left components of 税 and 说, then of 钱 and 线. Remember each sound with its full word and context.",
+    "entries": [
+      {
+        "hanzi": "税",
+        "pinyin": "shuì",
+        "english": "Tax.",
+        "sourcePage": 15
+      },
+      {
+        "hanzi": "睡",
+        "pinyin": "shuì",
+        "english": "Sleep.",
+        "sourcePage": 15
+      },
+      {
+        "hanzi": "水",
+        "pinyin": "shuǐ",
+        "english": "Water.",
+        "sourcePage": 15
+      },
+      {
+        "hanzi": "说",
+        "pinyin": "shuō",
+        "english": "Speak; say.",
+        "sourcePage": 15
+      },
+      {
+        "hanzi": "钱",
+        "pinyin": "qián",
+        "english": "Money.",
+        "sourcePage": 15
+      },
+      {
+        "hanzi": "线",
+        "pinyin": "xiàn",
+        "english": "Thread; line.",
+        "sourcePage": 15
+      },
+      {
+        "hanzi": "工",
+        "pinyin": "gōng",
+        "english": "Work; labour component.",
+        "sourcePage": 15
+      },
+      {
+        "hanzi": "公",
+        "pinyin": "gōng",
+        "english": "Public; common.",
+        "sourcePage": 15
+      },
+      {
+        "hanzi": "米",
+        "pinyin": "mǐ",
+        "english": "Rice; metre.",
+        "sourcePage": 15
+      },
+      {
+        "hanzi": "来",
+        "pinyin": "lái",
+        "english": "Come.",
+        "sourcePage": 16
+      },
+      {
+        "hanzi": "我想喝水",
+        "pinyin": "wǒ xiǎng hē shuǐ",
+        "english": "I want to drink water.",
+        "sourcePage": 16
+      },
+      {
+        "hanzi": "我想睡觉",
+        "pinyin": "wǒ xiǎng shuì jiào",
+        "english": "I want to sleep.",
+        "sourcePage": 16
+      }
+    ]
+  },
+  {
+    "id": "homework-reading-aloud",
+    "title": "Homework: reading aloud",
+    "note": "Record yourself reading the full teacher-provided text of 我的日记 (My Diary). Read it silently first, mark words you are unsure of, and rehearse slowly. Then record, listen once, and redo any unclear parts. The vocabulary below helps you discuss the assignment.",
+    "entries": [
+      {
+        "hanzi": "我的日记",
+        "pinyin": "wǒ de rì jì",
+        "english": "My diary.",
+        "sourcePage": 16
+      },
+      {
+        "hanzi": "日记",
+        "pinyin": "rì jì",
+        "english": "Diary; journal.",
+        "sourcePage": 16
+      },
+      {
+        "hanzi": "读",
+        "pinyin": "dú",
+        "english": "Read.",
+        "sourcePage": 16
+      },
+      {
+        "hanzi": "录音",
+        "pinyin": "lù yīn",
+        "english": "Record sound; an audio recording.",
+        "sourcePage": 16
+      },
+      {
+        "hanzi": "我想再读一遍",
+        "pinyin": "wǒ xiǎng zài dú yí biàn",
+        "english": "I want to read it once more.",
+        "sourcePage": 16
+      }
+    ]
+  }
+]

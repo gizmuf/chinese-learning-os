@@ -1,0 +1,174 @@
+{
+  "exercises": [
+    {
+      "id": 1,
+      "prompt": "Ask a fruit seller: “How much are the apples per jin?”",
+      "hanzi": "苹果多少钱一斤",
+      "pinyin": "Píngguǒ duōshao qián yì jīn?",
+      "english": "How much are the apples per jin?",
+      "explanation": "多少钱 asks the price. 一斤 at the end makes it a price per jin, a unit equal to 500 grams in mainland China."
+    },
+    {
+      "id": 2,
+      "prompt": "Say: “Twenty yuan per jin.”",
+      "hanzi": "二十块一斤",
+      "pinyin": "Èrshí kuài yì jīn.",
+      "english": "Twenty yuan per jin.",
+      "explanation": "块 is the everyday spoken unit for yuan. Give the price first and the unit of weight second."
+    },
+    {
+      "id": 3,
+      "prompt": "Say: “It is a bit expensive.” Use the mild-complaint pattern.",
+      "hanzi": "有点贵",
+      "pinyin": "Yǒudiǎn guì.",
+      "english": "It is a bit expensive.",
+      "explanation": "有点 before 贵 softens the complaint about the price."
+    },
+    {
+      "id": 4,
+      "prompt": "Request: “Could it be a little cheaper?”",
+      "hanzi": "可以便宜一点吗",
+      "pinyin": "Kěyǐ piányi yìdiǎn ma?",
+      "english": "Could it be a little cheaper?",
+      "explanation": "Put 一点 after 便宜 to ask for a small price reduction. 可以…吗 frames it as a request."
+    },
+    {
+      "id": 5,
+      "prompt": "Say: “I would like two jin of apples.”",
+      "hanzi": "我要两斤苹果",
+      "pinyin": "Wǒ yào liǎng jīn píngguǒ.",
+      "english": "I would like two jin of apples.",
+      "explanation": "Use 两 with the measure 斤, then name what you are buying, 苹果."
+    },
+    {
+      "id": 6,
+      "prompt": "Say: “These apples are both big and sweet.”",
+      "hanzi": "这些苹果又大又甜",
+      "pinyin": "Zhèxiē píngguǒ yòu dà yòu tián.",
+      "english": "These apples are big and sweet.",
+      "explanation": "又…又… gives two qualities of the same apples. 甜 (tián) describes the taste."
+    },
+    {
+      "id": 7,
+      "prompt": "Say: “My Chinese is getting better and better.”",
+      "hanzi": "我的中文越来越好",
+      "pinyin": "Wǒ de Zhōngwén yuèláiyuè hǎo.",
+      "english": "My Chinese is getting better.",
+      "explanation": "越来越 before 好 shows that the speaker’s Chinese keeps improving over time."
+    },
+    {
+      "id": 8,
+      "prompt": "Ask for no added sugar.",
+      "hanzi": "不要加糖",
+      "pinyin": "Bú yào jiā táng.",
+      "english": "Do not add sugar.",
+      "explanation": "不要 asks that something be left out. 加糖 means to add sugar, and 不 is pronounced bú before fourth-tone 要."
+    },
+    {
+      "id": 9,
+      "prompt": "Say: “I did not understand what I heard.”",
+      "hanzi": "我没听懂",
+      "pinyin": "Wǒ méi tīngdǒng.",
+      "english": "I did not understand what I heard.",
+      "explanation": "懂 is the result of 听. 没听懂 means that listening did not lead to understanding."
+    },
+    {
+      "id": 10,
+      "prompt": "Say: “I know this teacher.” Use familiarity, not knowing a fact.",
+      "hanzi": "我认识这位老师",
+      "pinyin": "Wǒ rènshi zhè wèi lǎoshī.",
+      "english": "I know this teacher.",
+      "explanation": "认识 expresses familiarity with a person. 位 is a polite classifier for people."
+    },
+    {
+      "id": 11,
+      "prompt": "Say: “This Chinese song sounds nice.”",
+      "hanzi": "这首中文歌很好听",
+      "pinyin": "Zhè shǒu Zhōngwén gē hěn hǎotīng.",
+      "english": "This Chinese song sounds nice.",
+      "explanation": "首 is the classifier for songs. 好听 describes something pleasant to hear."
+    },
+    {
+      "id": 12,
+      "prompt": "Say: “I want to buy this coat.” Include its classifier.",
+      "hanzi": "我想买这件外套",
+      "pinyin": "Wǒ xiǎng mǎi zhè jiàn wàitào.",
+      "english": "I want to buy this coat.",
+      "explanation": "想 comes before the action 买. 件 is the clothing classifier and goes between 这 and 外套."
+    },
+    {
+      "id": 13,
+      "prompt": "Say: “Let’s go out together.”",
+      "hanzi": "我们一起出门吧",
+      "pinyin": "Wǒmen yìqǐ chūmén ba.",
+      "english": "Let’s go out together.",
+      "explanation": "一起 means together. The final particle 吧 turns the sentence into a suggestion."
+    },
+    {
+      "id": 14,
+      "prompt": "Say: “I work at a company.”",
+      "hanzi": "我在一家公司工作",
+      "pinyin": "Wǒ zài yì jiā gōngsī gōngzuò.",
+      "english": "I work at a company.",
+      "explanation": "The location phrase 在一家公司 comes before 工作. 家 is the classifier for companies."
+    },
+    {
+      "id": 15,
+      "prompt": "Say: “My salary is not high.”",
+      "hanzi": "我的工资不高",
+      "pinyin": "Wǒ de gōngzī bù gāo.",
+      "english": "My salary is not high.",
+      "explanation": "工资 means salary or wages. Put 不 directly before 高 to say the salary is low or modest."
+    },
+    {
+      "id": 16,
+      "prompt": "Say: “I want to drink water.” Do not confuse water and tax.",
+      "hanzi": "我想喝水",
+      "pinyin": "Wǒ xiǎng hē shuǐ.",
+      "english": "I want to drink water.",
+      "explanation": "In 喝水, 水 (shuǐ) is third-tone water. 税 (shuì) is fourth-tone tax."
+    },
+    {
+      "id": 17,
+      "prompt": "Say: “I will come again tomorrow.”",
+      "hanzi": "我明天再来",
+      "pinyin": "Wǒ míngtiān zài lái.",
+      "english": "I will come again tomorrow.",
+      "explanation": "明天 sets the time. 再 before 来 signals that the visit will happen again."
+    },
+    {
+      "id": 18,
+      "prompt": "Say: “This one is cheaper than that one.”",
+      "hanzi": "这个比那个便宜",
+      "pinyin": "Zhège bǐ nàge piányi.",
+      "english": "This one is cheaper than that one.",
+      "explanation": "Use A 比 B + adjective. The item described comes before 比 and the comparison item comes after it."
+    }
+  ],
+  "review": [
+    {
+      "title": "Qualities, sounds and similar words",
+      "text": "甜 (tián) means sweet and 糖 (táng) means sugar. 好吃 (hǎochī) describes pleasing taste and 好听 (hǎotīng) describes pleasing sound. 公司 (gōngsī) means company and 工资 (gōngzī) means wages. Review each Hanzi form together with its pinyin."
+    },
+    {
+      "title": "Similar constructions, different jobs",
+      "text": "又…又… (yòu…yòu…) joins two descriptions. 越来越 (yuèláiyuè) shows an increasing change. 有点 (yǒudiǎn) before an adjective expresses a mild quality or complaint. 一点 (yìdiǎn) after an adjective asks for or describes a small difference."
+    },
+    {
+      "title": "Descriptions before a noun",
+      "text": "In the imported-apples example, the phrase describing where the apples come from goes before 的苹果 (de píngguǒ). When you see 是 (shì) and 的 (de) together, look at what 的 attaches to and check whether the sentence describes a noun or highlights a detail about a past event."
+    },
+    {
+      "title": "Tone changes and neutral syllables",
+      "text": "Say yì jīn, yìdiǎn and yì shǒu before the non-fourth tones in these examples, and yí jiàn and yígòng before fourth tones. Compare bú yào with bù xíng. Neutral syllables have no accent marks. Pinyin shows dictionary tones for strings of third tones, and their actual pronunciation depends on how the words are grouped."
+    },
+    {
+      "title": "A different yī",
+      "text": "In 洗衣机 (xǐyījī), 衣 (yī) means clothes and keeps its first tone. The tone-change rules for 一 (yī), the number one, apply to that character. In 空调 (kōngtiáo), air conditioning, 调 is pronounced tiáo."
+    },
+    {
+      "title": "Your reading recording",
+      "text": "Record yourself reading the exact “My Diary” text from your teacher. Use the lesson’s rehearsal checklist to prepare. Read slowly enough to keep word groups intact. Replay the recording and identify two or three specific places to improve."
+    }
+  ]
+}
