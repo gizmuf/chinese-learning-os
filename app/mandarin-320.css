@@ -1,0 +1,32 @@
+.mandarin320-ranges {max-width: 46rem}
+.mandarin320-ranges button {padding-inline: .35rem}
+.mandarin320-entries .hanzi-family-entry summary {
+  grid-template-columns: 2.9rem minmax(0, 1fr) minmax(6rem, 1fr) minmax(0, 1.7fr);
+}
+.mandarin320-entry-number {
+  grid-column: 1; grid-row: 1; padding-inline-start: .9rem;
+  color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums;
+}
+.mandarin320-entries .hanzi-family-entry summary .hanzi-family-headword {grid-column: 2; padding-left: 0}
+.mandarin320-entries summary .hanzi-family-reading,
+.mandarin320-entries summary .hanzi-family-gloss {overflow-wrap: anywhere}
+.mandarin320-entry-practice, .mandarin320 .hanzi-family-group > button,
+.mandarin320-result-footer {margin-block-start: .75rem}
+.mandarin320 .hanzi-family-group > button {min-height: 44px}
+.mandarin320 .hanzi-family-group p + p {margin-block-start: .6rem}
+.mandarin320-modes {margin-block: 0 1rem}
+.mandarin320-practice-tools {align-items: flex-end}
+.mandarin320-practice-tools p, .mandarin320-practice-tools a {margin-block: 0; align-self: center}
+.mandarin320-jump {align-items: flex-end}
+.mandarin320-jump label {display: grid; gap: .35rem}
+.mandarin320-jump input {width: 7.3rem}
+.mandarin320-practice-position {font-variant-numeric: tabular-nums; color: var(--muted); margin-block: .65rem}
+.mandarin320-example {width: 100%}
+.mandarin320-example p {margin: .25rem 0; overflow-wrap: anywhere}
+.mandarin320 .hanzi-family-feedback .mandarin320-example {border-top: 1px solid var(--line); padding-block-start: .6rem}
+@media (max-width: 37rem) {
+  .mandarin320-entries .hanzi-family-entry summary {grid-template-columns: 2.7rem minmax(0, 1fr)}
+  .mandarin320-entries .hanzi-family-entry summary .hanzi-family-reading,
+  .mandarin320-entries .hanzi-family-entry summary .hanzi-family-gloss {grid-column: 2; padding-left: 0}
+  .mandarin320-ranges {grid-template-columns: repeat(auto-fit, minmax(min(100%, 5rem), 1fr))}
+}

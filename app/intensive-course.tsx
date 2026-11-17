@@ -71,6 +71,7 @@ import {practicalLessonCopy} from './practical-lesson-copy';
 import PracticalLesson17 from './practical-lesson-17';
 import {practicalLesson17Date,practicalLesson17Href,practicalLesson17Id,practicalLesson17Title} from './practical-lesson-17-data';
 import {hanziFamilyLessonHref,hanziFamilyLessonId,hanziFamilyLessonTitle} from './hanzi-family-lesson-route';
+import {mandarin320Href,mandarin320Id,mandarin320Title} from './mandarin-320-route';
 import SpeakingChunks from "./speaking-chunks";
 import {atlasChunksReturn} from "./atlas-chunks-route";
 import {chunkCopy} from "./speaking-chunks-copy";
@@ -89,6 +90,7 @@ import type { LearningEvent, Stroke } from "./learning";
 type Tab = "lab" | "overview" | "learn" | "practice" | "writing" | "materials";
 const topics = Object.keys(topicInfo) as Topic[];
 const HanziFamilyLesson = lazy(() => import('./hanzi-family-lesson'));
+const Mandarin320 = lazy(() => import('./mandarin-320'));
 export default function IntensiveCourse({
   owner,
   db,
@@ -131,7 +133,7 @@ export default function IntensiveCourse({
   );
   useEffect(() => {
     const material=new URLSearchParams(window.location.search).get('material');
-    if(material===practicalLessonId||material===practicalLesson17Id||material===hanziFamilyLessonId)setPracticalMaterial(material);
+    if(material===practicalLessonId||material===practicalLesson17Id||material===hanziFamilyLessonId||material===mandarin320Id)setPracticalMaterial(material);
     if(material?.startsWith('reference-')){const id=material.slice('reference-'.length) as ReferenceMaterialId;if(referenceLessonById.has(id)){setReferenceId(id);setReferenceFromLibrary(new URLSearchParams(window.location.search).get('from')==='lessons');}}
     if(new URLSearchParams(window.location.search).get("material")==="self-introduction")setVideoOpen(true);
     if(new URLSearchParams(window.location.search).get("material")==="speaking-chunks")setChunksOpen(true);
@@ -249,6 +251,9 @@ export default function IntensiveCourse({
   if(practicalMaterial===hanziFamilyLessonId)return <Suspense fallback={<p role="status">Opening Hanzi lesson…</p>}>
     <HanziFamilyLesson key={owner??'guest'} {...{owner,penOnly,setPenOnly,notify}}/>
   </Suspense>;
+  if(practicalMaterial===mandarin320Id)return <Suspense fallback={<p role="status">Opening Mandarin 320…</p>}>
+    <Mandarin320 key={owner??'guest'} {...{owner,penOnly,setPenOnly,notify}}/>
+  </Suspense>;
   if(chunksOpen){
     const returnToAtlas=atlasChunksReturn(window.location.search);
     return <SpeakingChunks owner={owner} notify={notify} backToAtlas={!!returnToAtlas} onBack={()=>{
@@ -284,6 +289,11 @@ export default function IntensiveCourse({
       </div>
       {!open ? (
         <>
+          <section className="panel course-feature">
+            <div aria-hidden="true" lang="zh-Hans" className="lesson05-topic-art">爱 · 学习 · 出去</div>
+            <div><h2>{mandarin320Title}</h2><p>320 entries with examples, families and practice.</p>
+              <a className="primary" href={mandarin320Href}>{t("Open lesson")}<ArrowRight size={17}/></a></div>
+          </section>
           <section className="panel course-feature">
             <div aria-hidden="true" lang="zh-Hans" className="lesson05-topic-art">一般 · 出去</div>
             <div><p className="eyebrow">17 November 2026</p><h2>{hanziFamilyLessonTitle}</h2>
