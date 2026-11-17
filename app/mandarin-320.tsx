@@ -189,6 +189,12 @@ function Practice({route, navigate, attempts, pending, save, player, penOnly, se
   penOnly: boolean;
   setPenOnly: (value: boolean) => void;
 }) {
+  const [isIPad, setIsIPad] = useState(false);
+  const [pencilEnabled, setPencilEnabled] = useState(false);
+  useEffect(() => {
+    setIsIPad(/iPad/.test(navigator.userAgent)
+      || (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1));
+  }, []);
   const isContrast = route.mode === 'contrast';
   const count = isContrast ? mandarin320Contrasts.length : entries.length;
   const item = Math.min(route.item, count);
@@ -199,7 +205,8 @@ function Practice({route, navigate, attempts, pending, save, player, penOnly, se
   const attempt = attempts[exercise.id];
   const [before, after] = exercise.context?.split(' · ', 1)[0].split('＿＿') ?? [];
   const sentenceGap = entry && route.mode === 'sentence' && exercise.kind === 'gap' && after !== undefined
-    ? {before, after, translation: entry.example_meaning, lookup: lookupPinyin}
+    ? {before, after, translation: entry.example_meaning, lookup: lookupPinyin,
+        pencil: isIPad ? {enabled: pencilEnabled, toggle: () => setPencilEnabled(enabled => !enabled)} : undefined}
     : undefined;
   const select = (item: number) => navigate({item});
 

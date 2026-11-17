@@ -1,6 +1,6 @@
 'use client';
 
-import {useId, useRef, useState, type ReactNode} from 'react';
+import {useEffect, useEffectEvent, useId, useRef, useState, type ReactNode} from 'react';
 import {ArrowLeft, ArrowRight, RotateCcw} from 'lucide-react';
 import type {Stroke} from './learning';
 import PinyinHandwriting from './pinyin-handwriting';
@@ -74,6 +74,7 @@ type SentenceGap = {
   after: string;
   translation: string;
   lookup: (query: string) => {hanzi: string; pinyin: string}[];
+  pencil?: {enabled: boolean; toggle: () => void};
 };
 
 export function Exercise({exercise, attempt, onSave, penOnly, setPenOnly, feedbackDetails, pending = false, sentenceGap}: {
@@ -94,7 +95,9 @@ export function Exercise({exercise, attempt, onSave, penOnly, setPenOnly, feedba
   const checkButton = useRef<HTMLButtonElement>(null);
   const firstCandidate = useRef<HTMLButtonElement>(null);
   const [composing, setComposing] = useState(false);
+  const [pencilInput, setPencilInput] = useState(false);
   const candidateStatusId = useId();
+  const pencilHintId = useId();
   const options = exercise.choices ?? [];
   const building = exercise.kind === 'build';
   const writing = exercise.kind === 'writing';
@@ -107,6 +110,11 @@ export function Exercise({exercise, attempt, onSave, penOnly, setPenOnly, feedba
     : drawing ? strokes.length > 0
     : building ? pieces.length === options.length
     : answerText.trim().length > 0;
+  const pencil = sentenceGap?.pencil;
+  const pencilText = draft.trim();
+  const pencilReady = pencil?.enabled && pencilInput && canCheck && !attempt && !pending
+    && /^\p{Script=Han}+$/u.test(pencilText)
+    && [...pencilText].length === exercise.answer.match(/\p{Script=Han}/gu)?.length;
 
   async function check() {
     if (!canCheck || attempt || pending) return;
@@ -117,8 +125,24 @@ export function Exercise({exercise, attempt, onSave, penOnly, setPenOnly, feedba
     requestAnimationFrame(() => feedback.current?.focus());
   }
 
+  const checkPencilAnswer = useEffectEvent(() => {
+    if (pencilReady) void check();
+  });
+
+  useEffect(() => {
+    if (!pencilReady) return;
+    const timer = window.setTimeout(() => checkPencilAnswer(), 1200);
+    return () => window.clearTimeout(timer);
+  }, [pencilReady, draft]);
+
+  function updateGap(value: string) {
+    setDraft(value);
+    setPencilInput(pencil?.enabled ?? false);
+  }
+
   function reset() {
     setDraft('');
+    setPencilInput(false);
     setPieces([]);
     setStrokes([]);
     void onSave(null);
@@ -149,13 +173,14 @@ export function Exercise({exercise, attempt, onSave, penOnly, setPenOnly, feedba
       {sentenceGap && <>
         <p className="hanzi-family-context mandarin320-gap-sentence" lang="zh-Hans">
           {sentenceGap.before}<label className="mandarin320-gap">
-            <span lang="en">Your answer</span>
-            <input autoComplete="off" autoCapitalize="none" autoCorrect="off" spellCheck={false}
-              value={draft} placeholder="Hanzi or pinyin" aria-describedby={pinyinDraft ? candidateStatusId : undefined}
-              onChange={event => setDraft(event.target.value)}
+            <span className="mandarin320-gap-label" lang="en">Your answer</span>
+            <input lang="zh-Hans" autoComplete="off" autoCapitalize="none" autoCorrect="off" spellCheck={false}
+              value={draft} placeholder={pencil?.enabled ? 'Write here' : 'Hanzi or pinyin'}
+              aria-describedby={pinyinDraft ? candidateStatusId : pencil?.enabled ? pencilHintId : undefined}
+              onChange={event => updateGap(event.target.value)}
               onCompositionStart={() => setComposing(true)}
               onCompositionEnd={event => {
-                setDraft(event.currentTarget.value);
+                updateGap(event.currentTarget.value);
                 setComposing(false);
               }}
               onKeyDown={event => {
@@ -172,12 +197,20 @@ export function Exercise({exercise, attempt, onSave, penOnly, setPenOnly, feedba
           </label>{sentenceGap.after}
         </p>
         <p className="mandarin320-gap-translation">{sentenceGap.translation}</p>
+        {pencil && <div className="mandarin320-pencil-controls">
+          <button type="button" className="secondary" aria-pressed={pencil.enabled} onClick={() => {
+            setPencilInput(false);
+            pencil.toggle();
+          }}>Write with Apple Pencil</button>
+          {pencil.enabled && <p id={pencilHintId}>Write Hanzi in the gap with Chinese Scribble. Your answer is checked when you pause.</p>}
+        </div>}
         <p id={candidateStatusId} className="mandarin320-candidate-status" role="status">
           {pinyinDraft && (candidates.length ? 'Choose a Hanzi match.' : 'No matching Hanzi in Mandarin 320.')}
         </p>
         {candidates.length > 0 && <div className="hanzi-family-actions mandarin320-candidates" role="group" aria-label="Matching Hanzi">
           {candidates.map(({hanzi, pinyin}, index) => <button type="button" className="secondary" key={hanzi}
             ref={index === 0 ? firstCandidate : undefined} onClick={() => {
+              setPencilInput(false);
               setDraft(hanzi);
               requestAnimationFrame(() => checkButton.current?.focus());
             }}>
