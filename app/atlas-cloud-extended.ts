@@ -18,7 +18,7 @@ export function extendedCharacters(locale:Locale,scope:ExtendedScope='all'){
  return rows.filter(row=>(recognitionLevelByGlyph.get(row.hanzi)??Infinity)<=scopeRank(scope)).map(row=>{
   const reviewed=atlasByHanzi.get(row.hanzi);
   return {id:'structure-u'+row.hanzi.codePointAt(0)!.toString(16),hanzi:row.hanzi,
-   readings:row.readings,meaning:reviewed?.meaning[locale]??(locale==='tr'?turkishText(row.definition):row.definition),meaningLocale:reviewed||locale==='tr'&&turkishText(row.definition)!==row.definition?locale:'en' as Locale,
+   readings:row.readings,englishMeaning:reviewed?.meaning.en??row.definition,meaning:reviewed?.meaning[locale]??(locale==='tr'?turkishText(row.definition):row.definition),meaningLocale:reviewed||locale==='tr'&&turkishText(row.definition)!==row.definition?locale:'en' as Locale,
    sourceStatus:'dataset-derived-modern-structure' as const,complete:row.decompositionComplete,structureSource:'structureSource' in row?row.structureSource:null,
    decomposition:row.decomposition,radical:row.radical,unresolved:row.unresolvedComponents,
    components:row.recursiveComponents as string[],leafComponents:row.leafComponents,wordIds:row.wordIds,reviewed};

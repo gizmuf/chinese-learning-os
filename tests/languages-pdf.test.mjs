@@ -49,3 +49,12 @@ test('Hanzi lesson worksheets use canonical strokes for the actual words and fam
   writeFileSync(`${folder}/Hanzi-group-${index}.pdf`,bytes);
  }
 });
+
+test('family worksheets handle word separators and optional title glyphs without dropping study characters',async()=>{
+ const entries=[{hanzi:'大 学',pinyin:'dàxué',meaning:'university'}];
+ const data={font,characters:{大:characters.大,学:characters.学}};
+ const document=await PDFDocument.load(await createHanziGroupPdf(entries,'龰 · Walking family','en',data));
+ assert.equal(document.getTitle(),'Chinese OS - 龰 · Walking family - Writing practice');
+ assert.equal(document.getPageCount(),1);
+ await assert.rejects(()=>createHanziGroupPdf(entries,'Walking family','en',{font,characters:{大:characters.大}}),/Missing stroke order for 学/);
+});

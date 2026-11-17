@@ -7,6 +7,7 @@ import type {CloudRoute} from './atlas-cloud-route';
 import type {CloudWord} from './atlas-cloud-model';
 import {atlasById} from './atlas-model';
 import {hybridInventory,hybridComponentReading,hybridTextReading,hybridWords,hybridPartFamily,hybridSelection,hybridPage,hybridSwipe,type HybridLayout,type HybridSet} from './atlas-hybrid-model';
+import AtlasFamilyStudyActions, {atlasWordStudyEntries} from './atlas-family-study-actions';
 import {hybridText} from './atlas-hybrid-copy';
 import {validWordAnchor} from './word-family-model';
 import {StudyText} from './study-lookup';
@@ -87,6 +88,9 @@ export default function AtlasHybrid(p:Props){
   {p.route.mapSet==='family'&&<nav className="ah-seeds" aria-label={t('family')}>{['学','学生','电','大','人','子'].map(anchor=><button type="button" key={anchor} aria-pressed={p.route.anchor===anchor} onClick={()=>{setDraft(anchor);change({anchor,wordCompare:false,hanzi:Array.from(anchor)[0],familyEntry:'',mapPart:'',mapWordPage:0,mapCharPage:0})}} ><span lang="zh-Hans">{anchor}</span><small className="ah-visible-reading">{hybridTextReading(anchor)}</small></button>)}</nav>}
   <p className="ah-counts" aria-live="polite">{inventory.wordCount} {t('words')} · {inventory.characterCount} {t('characters')} · {inventory.occurrences} {t('occurrences')}</p>
   {missingSelection&&<p className="hsk-unclassified-note" role="status">The selected entry is outside the current results. The scoped map is shown below.</p>}
+  {character&&p.route.mapSet==='family'&&<AtlasFamilyStudyActions
+   title={mode==='matrix'?p.route.anchor:character.hanzi}
+   entries={atlasWordStudyEntries(mode==='matrix'?words:relatives,p.route.level)}/>}
   {!character?<p className="ah-empty">{t('empty')}</p>:<>
    <div className="ah-interaction" onClickCapture={e=>{if(performance.now()<suppressClick.current){e.preventDefault();e.stopPropagation()}}} onPointerDown={e=>{if(e.pointerType!=='mouse'&&!(e.target as HTMLElement).closest('input,select'))touch.current={x:e.clientX,y:e.clientY}}} onPointerCancel={()=>{touch.current=null}} onPointerUp={e=>{const start=touch.current;touch.current=null;if(!start)return;const dx=e.clientX-start.x,dy=e.clientY-start.y;const direction=hybridSwipe(dx,dy);if(!direction)return;const next=wordPage.page+direction;suppressClick.current=performance.now()+350;if(next>=0&&next<wordPage.pages)change({mapWordPage:next})}}>
    {mode==='layers'?<>

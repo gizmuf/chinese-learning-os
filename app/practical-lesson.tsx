@@ -1,5 +1,6 @@
 'use client';
 
+import LessonGroupActions from './lesson-group-actions';
 import {useEffect, useRef, useState} from 'react';
 import {ArrowLeft, ArrowRight, PenLine, Volume2} from 'lucide-react';
 import {playRecording, stopAudio} from './audio';
@@ -163,6 +164,10 @@ export default function PracticalLesson({notify}: {notify:(message:string)=>void
       return <details className="practical-variants" key={family.anchor} data-family={family.anchor}>
        <summary lang="zh-Hans">{family.anchor}</summary>
        <p>{family.note[locale]}</p>
+       <LessonGroupActions title={family.anchor} entries={words.map(hanzi=>{
+        const {pinyin,meaning}=practicalFamilyEntry(hanzi,'en');
+        return {hanzi,pinyin,english:meaning};
+       })}/>
        <ul className="practical-family-words">{words.map(word=><li key={word}>
         {familyTerm(word)}
         {listen(word+'。')}

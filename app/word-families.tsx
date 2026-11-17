@@ -18,6 +18,7 @@ import {playRecording,releaseRecording} from './audio';
 import {wordPronunciation,sentencePronunciation} from './atlas-spatial-model';
 import {WordFamilyBoard} from './word-family-board';
 import FamilyPracticeLab from './family-practice-lab';
+import AtlasFamilyStudyActions, {atlasWordStudyEntries} from './atlas-family-study-actions';
 import {familyLabCopy} from './family-practice-lab-copy';
 import './word-families.css';
 type Props={route:CloudRoute;onChange:(patch:Partial<CloudRoute>)=>void;onWrite:(word:CloudWord,trigger:HTMLButtonElement)=>void;notify:(message:string)=>void;expanded:boolean;onExpand:()=>void};
@@ -28,7 +29,8 @@ export default function WordFamilies(p:Props){
  const words=useMemo(()=>familyWords(anchor,locale,scope),[anchor,locale,scope]);
  const anchors=useMemo(()=>familyAnchors(locale,scope),[locale,scope]);
  const pair=useMemo(()=>p.route.wordCompare?compareWordFamilies('哪','那',locale,scope):[],[p.route.wordCompare,locale,scope]);
- const allPair=pair.flatMap(row=>[...row.left,...row.right]),pool=p.route.wordCompare?allPair:words;
+ const allPair=useMemo(()=>pair.flatMap(row=>[...row.left,...row.right]),[pair]),pool=p.route.wordCompare?allPair:words;
+ const studyEntries=useMemo(()=>atlasWordStudyEntries(pool,scope),[pool,scope]);
  const selected=p.route.familyEntry?pool.find(word=>word.id===p.route.familyEntry):selectFamilyWord(pool,p.route.familyEntry);
  const index=Math.max(0,words.findIndex(w=>w.id===selected?.id));
  const [draft,setDraft]=useState(anchor),[error,setError]=useState(''),[revealToken,setRevealToken]=useState(''),[playing,setPlaying]=useState('');
@@ -78,6 +80,7 @@ export default function WordFamilies(p:Props){
   {!(mode==='train'&&p.route.wordMemory)&&<nav className="wf-shortcuts" aria-label={c('Shared character groups','Groupes de caractères communs','Группы общих знаков')}>{['学','学生','电','电影','大','哪','那','天','子','人'].map(value=><button type="button" key={value} aria-pressed={!p.route.wordCompare&&anchor===value} onClick={()=>chooseAnchor(value)} lang="zh-Hans">{value}</button>)}<button type="button" aria-pressed={p.route.wordCompare} onClick={()=>p.onChange({wordCompare:!p.route.wordCompare,wordView:'board',anchor:'哪',familyEntry:''})}>{c('Compare','Comparer','Сравнить')} 哪 / 那</button><details className="wf-directory"><summary>{c('Character index','Index des caractères','Указатель знаков')} · {anchors.length}</summary><div>{anchors.map(row=><button type="button" key={row.anchor} onClick={()=>chooseAnchor(row.anchor)}><span lang="zh-Hans">{row.anchor}</span><small>{row.count}</small></button>)}</div></details></nav>}
   {p.route.familyEntry&&!selected&&<p role="status">The selected word is outside the current results. Change the HSK range to return to it.</p>}
   <p className="wf-count" aria-live="polite">{p.route.wordCompare?`${allPair.length}`:`${words.length}`} {c('words / readings','mots / lectures','слов / чтений')} · {scope==='all'?c('all available vocabulary','tout le vocabulaire disponible','весь доступный словарь'):`HSK ${scope===1?'1':'1–'+scope}`} · {p.route.wordCompare?'哪 / 那':anchor}</p>
+  <AtlasFamilyStudyActions title={p.route.wordCompare?'哪 / 那':anchor} entries={studyEntries}/>
   {mode==='board'?(p.route.wordCompare?<div className="wf-pairs"><div className="wf-pair-head">哪 · nǎ</div><div className="wf-pair-head">那 · nà</div>{pair.map(row=>(['left','right'] as const).map(side=><div key={row.key+side} className="wf-pair-cell">{row[side].length?row[side].map(word=><button key={word.id} type="button" aria-pressed={selected?.id===word.id} onClick={()=>choose(word)}><span className="wf-pair-word" lang="zh-Hans"><SharedText text={word.hanzi} anchor={side==='left'?'哪':'那'}/></span><span>{word.pinyin}<small>{word.meaning}</small></span></button>):<p>{c('Not in selected vocabulary','Absent du vocabulaire choisi','Нет в выбранном словаре')}</p>}</div>))}</div>:<WordFamilyBoard words={words} anchor={anchor} selectedId={selected?.id} onChoose={choose} copy={boardCopy}/>):words.length>0?<>
    <p className="wf-training-help">{c('Drag or scroll either reel. Both sides select one complete word; labels describe the whole word.','Faites glisser ou défiler une des deux roulettes. Elles choisissent un mot entier ; les étiquettes décrivent ce mot.','Перетаскивайте или прокручивайте любую ленту. Обе выбирают одно целое слово; подписи относятся к слову целиком.')}</p>
    <div className="wf-training-prompt"><strong>{selected?.meaning}</strong><span>{hidden?c('Recall the word before revealing it.','Rappelez le mot avant de le révéler.','Вспомните слово перед показом ответа.'):selected?.pinyin}</span></div>

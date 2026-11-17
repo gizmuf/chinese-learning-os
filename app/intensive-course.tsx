@@ -1,3 +1,4 @@
+import LessonGroupActions from './lesson-group-actions';
 import Lesson12 from './lesson12';
 import {lesson12} from './lesson12-data';
 import Lesson11 from './lesson11';
@@ -591,59 +592,53 @@ export default function IntensiveCourse({
                         ? !["dayparts", "meals"].includes(key)
                         : ["dayparts", "meals"].includes(key),
                     )
-                    .map(([key, ids]) => (
-                      <div className="course-timeline" key={key}>
-                        <h4>
-                          {t(
-                            (
-                              {
-                                days: "Days",
-                                years: "Years",
-                                months: "Months",
-                                weeks: "Weeks",
-                                dayparts: "Times of day",
-                                meals: "Meals",
-                              } as Record<string, string>
-                            )[key],
-                          )}
-                        </h4>
+                    .map(([key, ids]) => {
+                      const title = t({
+                        days: "Days",
+                        years: "Years",
+                        months: "Months",
+                        weeks: "Weeks",
+                        dayparts: "Times of day",
+                        meals: "Meals",
+                      }[key as keyof typeof timelines]);
+                      const timelineTerms = ids.map(id => terms.find(term => term.id === id)!);
+                      return <div className="course-timeline" key={key}>
+                        <h4>{title}</h4>
+                        <LessonGroupActions title={title} entries={timelineTerms}/>
                         <div className="course-time-direction">
                           {t("Earlier")}
                           <span>→</span>
                           {t("Later")}
                         </div>
                         <div className="course-time-cards">
-                          {ids.map((id, i) => {
-                            const value = terms.find((term) => term.id === id)!;
-                            return (
-                              <button
-                                key={id}
-                                className={
-                                  ids.length === 5 && i === 2 ? "now" : ""
-                                }
-                                onClick={() =>
-                                  speak(
-                                    value.hanzi,
-                                    notify,
-                                    termItem(value, locale),
-                                  )
-                                }
-                              >
-                                <small>
-                                  {topic === "time"
-                                    ? ["−2", "−1", t("Now"), "+1", "+2"][i]
-                                    : i + 1}
-                                </small>
-                                <strong lang="zh-Hans">{value.hanzi}</strong>
-                                <span className="pinyin">{value.pinyin}</span>
-                                <span>{value.meaning[locale]}</span>
-                                <Volume2 size={13} />
-                              {terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi} kind="word"/>}</button>
-                            );
-                          })}
+                          {timelineTerms.map((value, i) => (
+                            <button
+                              key={value.id}
+                              className={
+                                timelineTerms.length === 5 && i === 2 ? "now" : ""
+                              }
+                              onClick={() =>
+                                speak(
+                                  value.hanzi,
+                                  notify,
+                                  termItem(value, locale),
+                                )
+                              }
+                            >
+                              <small>
+                                {topic === "time"
+                                  ? ["−2", "−1", t("Now"), "+1", "+2"][i]
+                                  : i + 1}
+                              </small>
+                              <strong lang="zh-Hans">{value.hanzi}</strong>
+                              <span className="pinyin">{value.pinyin}</span>
+                              <span>{value.meaning[locale]}</span>
+                              <Volume2 size={13} />
+                            {terms.some(term=>term.id===value.id)&&<HskBadge text={value.hanzi} kind="word"/>}</button>
+                          ))}
                         </div>
-                      </div>
-                    ))}
+                      </div>;
+                    })}
                 <div className="course-examples">
                   {topicInfo[topic].examples.map((id) => (
                     <SentenceCard
@@ -684,6 +679,7 @@ export default function IntensiveCourse({
                 </button>
               </section>
               <h3>{t("Words and complete expressions")}</h3>
+              <LessonGroupActions title={topicInfo[topic].title[locale]} entries={terms.filter(value=>value.topic===topic)}/>
               <div className="course-vocabulary">
                 {terms
                   .filter((value) => value.topic === topic)

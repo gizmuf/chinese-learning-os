@@ -1,4 +1,5 @@
 'use client';
+import LessonGroupActions from './lesson-group-actions';
 import {useEffect,useRef,useState} from 'react';
 import {ArrowLeft,ArrowRight,Volume2} from 'lucide-react';
 import {useI18n} from './i18n';
@@ -57,6 +58,7 @@ function ChunksContent({owner,notify,onBack,backToAtlas}:Props){
  <nav className="chunk-patterns" aria-label={c('learn')}>{chunkUnits.map((u,i)=><button key={u.id} className="secondary" aria-pressed={index===i} onClick={()=>{stopAudio();setIndex(i);setVariant(0);}}><small>{String(i+1).padStart(2,'0')}</small>{u.title[locale]}</button>)}</nav>
  <section className="panel chunk-lesson" {...swipe}><header className="chunk-lesson-head"><div><span className="eyebrow">{index+1} / {chunkUnits.length}</span><h2>{unit.title[locale]}</h2></div><nav aria-label={c('learn')}><button className="secondary" disabled={!index} onClick={()=>move(-1)} aria-label={c('previous')}><ArrowLeft size={18}/></button><button className="secondary" disabled={index===chunkUnits.length-1} onClick={()=>move(1)} aria-label={c('next')}><ArrowRight size={18}/></button></nav></header>
  <p className="chunk-translation">{example.meaning[locale]}</p><ChunkStrip key={example.id} example={example} notify={notify}/><p className="chunk-legend">{c('legend')}</p>
+ <LessonGroupActions title={unit.title[locale]} entries={unit.variants}/>
  <div className="chunk-swap"><h3>{c('swap')}</h3><div className="chunk-variants">{unit.variants.map((v,i)=><button key={v.id} className="secondary" aria-pressed={variant===i} onClick={()=>{stopAudio();setVariant(i);}}>{v.chunks.filter((ch,j)=>unit.variants.some(other=>other.chunks[j]?.text!==ch.text)).map((ch,j)=><span className={"chunk-swap-piece chunk-role-"+ch.role} key={j}><span lang="zh-Hans">{ch.text}</span><span className="pinyin">{ch.pinyin}</span><small>{ch.meaning[locale]}</small></span>)}</button>)}</div></div>
  <div className="chunk-note"><p>{unit.note[locale]}</p><a href={'/?course=intensive&lesson='+unit.lesson}>{c('lesson')} {String(unit.lesson).padStart(2,'0')}<ArrowRight size={16}/></a></div>
  <p>{c('shadow')}</p><button className="secondary" onClick={()=>review(unit.variants.map(v=>'chunk-gap-'+v.id))}>{libraryCopy.practice[locale]}<ArrowRight size={17}/></button> <button className="primary" onClick={()=>start(unit.variants.map(v=>v.id))}>{c('recall')}<ArrowRight size={17}/></button></section>

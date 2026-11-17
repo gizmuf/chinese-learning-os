@@ -11,7 +11,6 @@ type PlanGroup=Omit<JourneyGroup,'title'|'words'>&{wordIds:string[]};
 const preferred=['学','电','天','人','家','看','生','子','上','下'];
 const dictionary=new Map(extendedCharacters('en','all').map(ch=>[ch.hanzi,ch]));
 const plans=new Map<CloudLevel,readonly PlanGroup[]>();
-const englishVocabulary=new Map(cloudWords('en').map(word=>[word.id,word]));
 
 /** A public-data-only plan: one canonical identity, one main location, stable across languages. */
 function journeyPlan(scope:CloudLevel):readonly PlanGroup[]{
@@ -50,6 +49,7 @@ function journeyPlan(scope:CloudLevel):readonly PlanGroup[]{
 }
 export function familyJourney(locale:Locale,scope:CloudLevel=3):JourneyGroup[]{
  const vocabulary=new Map(cloudWords(locale,scope).map(word=>[word.id,word]));
+ const englishVocabulary=locale==='en'?vocabulary:new Map(cloudWords('en',scope).map(word=>[word.id,word]));
  return journeyPlan(scope).map(group=>{
   const {wordIds,...meta}=group;
   return {...meta,title:group.kind==='topic'?(group.englishTitle==='More useful words'?journeyText(locale,'other'):translate(group.englishTitle,locale)):group.englishTitle,

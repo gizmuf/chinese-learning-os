@@ -33,22 +33,37 @@ export function createHanziGroupPdf(entries:readonly HanziGroupPdfEntry[],title:
 async function createWorksheetPdf(items:WorksheetWord[],title:string,locale:Locale,resources?:Resources):Promise<Uint8Array>{
  if(!items.length||items.some(item=>!item.hanzi))throw Error("Choose words for writing practice.");
  const t=(text:string)=>translate(text,locale);
- const titleCharacters=title.match(/\p{Script=Han}/gu)??[];
- const chars=[...new Set([...items.flatMap(item=>Array.from(item.hanzi)),...titleCharacters])];
- const load=async(url:string)=>{const r=await fetch(url);if(!r.ok)throw Error("PDF resource unavailable");return r;};
- const [fontBytes,characterPairs]=resources?[resources.font,Object.entries(resources.characters)]:await Promise.all([
-  load("/fonts/NotoSans-Regular.ttf").then(r=>r.arrayBuffer()).then(b=>new Uint8Array(b)),
-  Promise.all(chars.map(async char=>[char,await (await load(`/characters/${encodeURIComponent(char)}.json`)).json()] as [string,CharacterData])),
+ const wordGlyphs=items.map(item=>item.hanzi.match(/\p{Script=Han}/gu)??[]);
+ if(wordGlyphs.some(glyphs=>!glyphs.length))throw Error("Choose words for writing practice.");
+ const required=new Set(wordGlyphs.flat());
+ const titleGlyphs=title.match(/\p{Script=Han}/gu)??[];
+ const wanted=new Set([...required,...titleGlyphs]);
+ const [fontBytes,characters]=resources?[resources.font,resources.characters]:await Promise.all([
+  fetch("/fonts/NotoSans-Regular.ttf").then(async response=>{
+   if(!response.ok)throw Error("PDF font unavailable");
+   return new Uint8Array(await response.arrayBuffer());
+  }),
+  Promise.all([...wanted].map(async char=>{
+   try{
+    const response=await fetch(`/characters/${encodeURIComponent(char)}.json`,{cache:'force-cache'});
+    if(response.ok)return [char,await response.json() as CharacterData] as const;
+   }catch(error){
+    if(required.has(char))throw error;
+   }
+   return [char,undefined] as const;
+  })).then(pairs=>Object.fromEntries(pairs) as Record<string,CharacterData>),
  ]);
- const characters=Object.fromEntries(characterPairs) as Record<string,CharacterData>;
- for(const char of chars)if(!characters[char]?.strokes?.length)throw Error(`Missing stroke order for ${char}`);
+ for(const char of required)if(!characters[char]?.strokes?.length)throw Error(`Missing stroke order for ${char}`);
  const doc=await PDFDocument.create();doc.registerFontkit(fontkit);
  const font=await doc.embedFont(fontBytes,{subset:true});
+ const printable=new Set(font.getCharacterSet());
  doc.setTitle(`Chinese OS - ${title} - ${t('Writing practice')}`);doc.setAuthor('Chinese OS');doc.setLanguage(locale);
  let page:PDFPage;let y=0;
  function text(value:string,x:number,at:number,size=10,color=ink){page.drawText(value,{x,y:at,size,font,color});}
  function titleLine(value:string,at:number,size:number){
-  const parts=value.split(/(\p{Script=Han})/gu).filter(Boolean);
+  const parts=value.split(/(\p{Script=Han})/gu).filter(part=>
+   part && (!/^\p{Script=Han}$/u.test(part) || characters[part]?.strokes?.length || printable.has(part.codePointAt(0)!)),
+  );
   const width=parts.reduce((total,part)=>total+(characters[part]?size:font.widthOfTextAtSize(part,size)),0);
   const fittedSize=size*Math.min(1,(W-2*margin)/width);
   let x=margin;
@@ -72,13 +87,14 @@ async function createWorksheetPdf(items:WorksheetWord[],title:string,locale:Loca
  newPage();
  for(let wordIndex=0;wordIndex<items.length;wordIndex++){
   const item=items[wordIndex];const heading=lines(`${wordIndex+1}. ${item.pinyin}  -  ${item.english}`,font,10,W-2*margin);
-  const first=characters[Array.from(item.hanzi)[0]];
+  const glyphs=wordGlyphs[wordIndex];
+  const first=characters[glyphs[0]];
   const firstRow=31*Math.ceil(first.strokes.length/16)+90;
   if(y-heading.length*14-firstRow<68)newPage();
   for(const line of heading){text(line,margin,y,10);y-=14;}y-=3;
-  for(const [charIndex,char]of Array.from(item.hanzi).entries()){
+  for(const [charIndex,char]of glyphs.entries()){
    const data=characters[char];const stepSize=27,perLine=16,stepLines=Math.ceil(data.strokes.length/perLine);const needed=stepLines*31+68;
-   if(y-needed<58){newPage();text(`${wordIndex+1}. ${item.pinyin}  (${charIndex+1}/${Array.from(item.hanzi).length})`,margin,y,10);y-=18;}
+   if(y-needed<58){newPage();text(`${wordIndex+1}. ${item.pinyin}  (${charIndex+1}/${glyphs.length})`,margin,y,10);y-=18;}
    data.strokes.forEach((_,i)=>{const x=margin+(i%perLine)*31;const top=y-Math.floor(i/perLine)*31;glyph(data,x,top-stepSize,stepSize,i,true);});
    y-=stepLines*31+4;
    const size=(W-2*margin)/9;
