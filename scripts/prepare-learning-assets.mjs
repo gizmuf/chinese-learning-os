@@ -1,4 +1,5 @@
 import {readFile,mkdir,copyFile,readdir,writeFile} from 'node:fs/promises';
+import {constants} from 'node:fs';
 import path from 'node:path';
 const root=process.cwd();
 const source=(await Promise.all(['app/content.ts','app/course-data.ts','app/lesson04-data.ts','data/lesson04/content.json','app/lesson05-data.ts','data/lesson05/content.json','data/lesson06/content.json','data/lesson07/content.json','data/lesson08/content.json','data/lesson09/content.json','data/lesson10/content.json','data/lesson11/content.json','data/lesson12/content.json','app/reference-action-language.ts','data/reference-lessons/time-dates.json','data/reference-lessons/movement-directions.json','data/reference-lessons/shang.json','data/video-self-introduction/content.json','data/shuoshuo-morning.json'].map(file=>readFile(path.join(root,file),'utf8')))).join('\n');
@@ -18,6 +19,31 @@ const target=path.join(root,'public/characters');
 await mkdir(target,{recursive:true});
 await mkdir(path.join(root,'public/licenses'),{recursive:true});
 for(const c of chars)await copyFile(path.join(root,'node_modules/hanzi-writer-data',c+'.json'),path.join(target,c+'.json'));
+// Include stroke data from the built-in material used by the shared worksheets.
+const worksheetSources=[
+ 'app/atlas-data.ts',
+ 'app/atlas-family-stories-data.ts',
+ 'app/course-lab-data.ts',
+ 'app/practical-lesson-family-data.ts',
+ 'data/practical-2026-11-16/content.json',
+ 'data/practical-2026-11-17/sections-01-07.json',
+ 'data/practical-2026-11-17/sections-08-14.json',
+ 'data/reference-lessons/teaching.json',
+ 'data/my-day-01-v2.json',
+ 'data/shuoshuo-companion.json',
+ 'data/speaking-chunks/content.json',
+];
+const worksheetText=(await Promise.all(worksheetSources.map(file=>readFile(path.join(root,file),'utf8')))).join('');
+const strokeSource=path.join(root,'node_modules/hanzi-writer-data');
+const available=new Set(await readdir(strokeSource));
+for(const glyph of new Set(worksheetText.match(/\p{Script=Han}/gu))){
+ const filename=glyph+'.json';
+ // Some headings describe components for which the source has no standalone drawing.
+ if(!available.has(filename))continue;
+ try{await copyFile(path.join(strokeSource,filename),path.join(target,filename),constants.COPYFILE_EXCL);}
+ catch(error){if(error.code!=='EEXIST')throw error;}
+}
+
 for(const pkg of ['hanzi-writer','hanzi-writer-data','ts-fsrs']){
  const dir=path.join(root,'node_modules',pkg);
  for(const filename of await readdir(dir))if(/license|arphic|copying/i.test(filename))await copyFile(path.join(dir,filename),path.join(root,'public/licenses',pkg+'-'+filename));

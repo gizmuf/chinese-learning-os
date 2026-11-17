@@ -8,6 +8,7 @@ import type {CloudWord} from './atlas-cloud-model';
 import {atlasById} from './atlas-model';
 import {familyJourney,journeyCoverage,journeySelection,type JourneyWord} from './family-journey-model';
 import {journeyText} from './family-journey-copy';
+import AtlasFamilyStudyActions from './atlas-family-study-actions';
 import {StudyText,StudyLookupButton} from './study-lookup';
 import {SharedText} from './word-family-text';
 import {playRecording,releaseRecording} from './audio';
@@ -48,6 +49,8 @@ export default function FamilyJourney(p:Props){
   <details className="fj-directory"><summary>{t('index')} · {groups.length}</summary><div>{coverage.tracks.map(track=><section key={track.level??'extra'}><h3>{track.level?'HSK '+track.level:t('extras')}</h3>{track.groups.map(group=><button type="button" key={group.id} onClick={()=>jump(group.id)}>{group.anchor?<><b lang="zh-Hans">{group.anchor}</b><span>{group.reading} · {group.englishTitle}</span></>:<span>{group.title}</span>}<small>{group.words.length}</small></button>)}</section>)}</div></details>
   {groups.map((group,index)=><section className="fj-group" id={group.id} key={group.id} aria-label={(group.level?'HSK '+group.level:t('extras'))+' · '+(group.anchor?group.anchor+' · '+group.reading:group.title)}>
    <header className="fj-group-heading"><span className="fj-group-number">{String(index+1).padStart(2,'0')}</span>{group.anchor&&<span className="fj-anchor" lang="zh-Hans"><StudyText text={group.anchor} whole/></span>}<div><p className="fj-group-kind">{group.level?'HSK '+group.level:t('extras')} · {t(group.kind==='character'?'shared':'topic')} · {group.words.length} {t('words')}</p><h3>{group.anchor?group.reading+' · '+group.englishTitle:group.title}</h3></div></header>
+   {group.kind==='character'&&<AtlasFamilyStudyActions title={group.anchor+' · '+group.englishTitle}
+    entries={group.words.map(({hanzi,pinyin,englishMeaning})=>({hanzi,pinyin,meaning:englishMeaning}))}/>}
    <div className="fj-column-labels" aria-hidden="true"><span>{t('word')}</span><span>{t('pinyin')}</span><span>{t('english')}{locale!=='en'?' / '+t('meaning'):''}</span></div>
    <div className="fj-words">{group.words.map(word=><div className="fj-entry" key={word.id} data-word-id={word.id}>
     <div className="fj-row"><button type="button" className="fj-open" id={'fj-open-'+encodeURIComponent(word.id)} aria-expanded={selected?.word.id===word.id} aria-controls={selected?.word.id===word.id?'fj-context-'+encodeURIComponent(word.id):undefined} aria-label={word.hanzi+' · '+word.pinyin+' · '+word.englishMeaning+(locale!=='en'?' · '+word.meaning:'')} onClick={()=>select(word)}><span className="fj-hanzi" lang="zh-Hans"><SharedText text={word.hanzi} anchor={group.anchor}/></span><span className="fj-reading">{word.pinyin}</span><span className="fj-meaning"><span lang="en">{word.englishMeaning}</span>{locale!=='en'&&<small lang={locale}>{word.meaning}</small>}</span></button><StudyLookupButton text={word.hanzi}/><button type="button" className="fj-speaker" aria-label={t('listen')+' '+word.hanzi+' · '+word.pinyin} disabled={!wordPronunciation(word)} title={!wordPronunciation(word)?'Recording not available for this dictionary entry':undefined} aria-pressed={playing===wordPronunciation(word)?.source} onClick={()=>listen(word)}><Volume2 size={18}/></button></div>

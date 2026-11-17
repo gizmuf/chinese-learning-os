@@ -1,5 +1,6 @@
 'use client';
 
+import LessonGroupActions from './lesson-group-actions';
 import {useEffect,useLayoutEffect,useRef,useState} from 'react';
 import {ArrowLeft,ArrowRight,BookOpen,Volume2} from 'lucide-react';
 import {stopAudio} from './audio';
@@ -113,6 +114,7 @@ export default function PracticalLesson17({notify}: {notify:(message:string)=>vo
    </div>
    <h2 id="practical17-examples" ref={contentHeading} tabIndex={-1}>{section.title}</h2>
    <p className="practical17-note">{section.note}</p>
+   <LessonGroupActions title={section.title} entries={section.entries}/>
    <ul key={section.id+String(hideChinese)} className="practical17-examples">
     {section.entries.map((entry,index)=>{
      const sourceId='practical-2026-11-17:'+section.id+':'+(index+1);

@@ -1,4 +1,5 @@
 "use client";
+import LessonGroupActions from './lesson-group-actions';
 import { useMemo, useState } from "react";
 import {
   ArrowLeft,
@@ -418,6 +419,7 @@ export default function CourseLab({
               {family.anchor}
             </p>
             <p>{family.note[locale]}</p>
+            <LessonGroupActions title={family.title[locale]} entries={family.members.map(labTermById)}/>
             <div className="lesson-family-members">
               {family.members.map((id) => {
                 const member = labTermById(id);

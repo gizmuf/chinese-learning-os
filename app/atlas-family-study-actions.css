@@ -1,0 +1,19 @@
+.atlas-family-study-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-block: 8px 12px;
+}
+
+.atlas-family-study-actions > button.secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.atlas-family-study-actions > [role="alert"] {
+  flex-basis: 100%;
+  order: 1;
+  margin: 0;
+}

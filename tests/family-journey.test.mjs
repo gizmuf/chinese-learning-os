@@ -33,6 +33,16 @@ test('English definitions and full-word pinyin survive FR/RU localization with s
  }
  const fr=m.familyJourney('fr',1).flatMap(g=>g.words).find(w=>w.hanzi==='学生');assert.equal(fr.englishMeaning,'student');assert.notEqual(fr.meaning,fr.englishMeaning);
 });
+test('HSK 4–6 use English from the same scope when dictionary rows differ from All',()=>{
+ const allIds=new Set(m.cloudWords('en','all').map(word=>word.id));
+ for(const scope of [4,5,6]){
+  const expected=new Map(m.cloudWords('en',scope).map(word=>[word.id,word]));
+  assert.ok([...expected.keys()].some(id=>!allIds.has(id)));
+  const words=m.familyJourney('fr',scope).flatMap(group=>group.words);
+  assert.equal(words.length,expected.size);
+  for(const word of words)assert.equal(word.englishMeaning,expected.get(word.id).meaning);
+ }
+});
 test('Recorded journey entries preserve exact audio identities; dictionary entries never invent clips',()=>{
  for(const word of m.familyJourney('en','all').flatMap(g=>g.words)){
   const clip=m.wordPronunciation(word);if(word.origin==='dictionary'){assert.equal(clip,undefined);assert.equal(m.sentencePronunciation(word),undefined);continue;}assert.equal(clip.text,word.hanzi);assert.equal(clip.pinyin,word.pinyin);assert.ok(clip.source.endsWith('-word.mp3'));
