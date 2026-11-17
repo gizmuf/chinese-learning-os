@@ -12,7 +12,8 @@
 .mandarin320-entries summary .hanzi-family-gloss {overflow-wrap: anywhere}
 .mandarin320-entry-practice, .mandarin320 .hanzi-family-group > button,
 .mandarin320-result-footer {margin-block-start: .75rem}
-.mandarin320 .hanzi-family-group > button {min-height: 44px}
+.mandarin320 .hanzi-family-group > button,
+.mandarin320 .hanzi-family-exercise form > button {min-height: 44px}
 .mandarin320 .hanzi-family-group p + p {margin-block-start: .6rem}
 .mandarin320-modes {margin-block: 0 1rem}
 .mandarin320-practice-tools {align-items: flex-end}
