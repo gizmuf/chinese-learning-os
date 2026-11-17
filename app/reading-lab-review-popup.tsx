@@ -24,7 +24,7 @@ export function ReadingReviewTokenAction({opener, text}: {opener: HTMLElement; t
   const date = result.dueAt !== undefined ? new Date(result.dueAt).toLocaleDateString(undefined, {month: 'short', day: 'numeric'}) : '';
   return <div className="sp-reading-review-action">
     <button type="button" className="text-button" aria-disabled={saved || undefined} onClick={() => {if (!saved) request(true);}}>
-      <Bookmark size={16}/> {saved ? 'Saved for later' : 'Save for later'}
+      <Bookmark size={16} aria-hidden="true" fill={saved ? '#88918b' : 'none'} color={saved ? '#88918b' : 'currentColor'}/> {saved ? 'Saved for later' : 'Save for later'}
     </button>
     {result.dueAt !== undefined && <span role="status">{result.dueAt <= Date.now() ? 'Due now' : `Next review ${date}`}</span>}
     <small>In this sentence · {result.pinyin}</small>
