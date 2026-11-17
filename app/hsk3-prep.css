@@ -58,3 +58,7 @@
   .hsk-question-navigation button span{display:none}
   .hsk-mock-options:not([data-pictures=true]){flex-direction:column}
 }
+
+.hsk-exam-forms{margin-bottom:.85rem}
+.hsk-exam-forms a{display:inline-flex;align-items:center;min-height:44px;padding:.3rem .65rem}
+.hsk-exam-forms a[aria-current=page]{background:color-mix(in srgb,currentColor 8%,transparent);border-color:currentColor}

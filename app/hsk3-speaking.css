@@ -13,3 +13,9 @@
 .hsk-speaking-picture[data-scene=station]{background-position:50% 100%}
 .hsk-speaking-playback{display:grid;gap:.3rem;margin-block:.65rem;font-size:.9rem}
 .hsk-speaking-playback audio{width:min(100%,28rem);min-height:44px}
+.hsk-speaking-picture[data-form=b]{background-image:url('/audio/hsk3-speaking-b/scenes.webp')}
+.hsk-speaking-picture[data-scene=parcel]{background-position:0 0}
+.hsk-speaking-picture[data-scene=dog]{background-position:50% 0}
+.hsk-speaking-picture[data-scene=bus-stop]{background-position:100% 0}
+.hsk-speaking-picture[data-scene=cake]{background-position:0 100%}
+.hsk-speaking-picture[data-scene=luggage]{background-position:50% 100%}

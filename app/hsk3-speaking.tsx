@@ -5,11 +5,12 @@ import { Clock3, Headphones, Mic } from 'lucide-react';
 import { StudyText } from './study-lookup-context';
 import { beginSpeakingAttempt, clearSpeakingAnswers, readSpeakingAttempt, saveSpeakingAnswer } from './hsk3-speaking-storage';
 import { recordSpeakingAnswer } from './hsk3-speaking-recorder';
-import { speakingAudio, speakingClock, speakingSections, speakingSteps, speakingTasks, questionClip, type RecordedAnswer, type SpeakingTask } from './hsk3-speaking-model';
+import { speakingAudio, speakingClock, speakingSections, speakingStepsFor, speakingTasksFor, questionClip, type RecordedAnswer, type SpeakingTask } from './hsk3-speaking-model';
+import type { HskExamForm } from './hsk3-form';
 import './hsk3-speaking.css';
 
-function Picture({task}:{task:SpeakingTask}) {
-  return <div className="hsk-speaking-picture" data-scene={task.picture} role="img" aria-label={task.alt}/>;
+function Picture({task,form}:{task:SpeakingTask;form:HskExamForm}) {
+  return <div className="hsk-speaking-picture" data-scene={task.picture} data-form={form} role="img" aria-label={task.alt}/>;
 }
 
 function AnswerPlayback({answer}:{answer:RecordedAnswer}) {
@@ -24,7 +25,8 @@ function AnswerPlayback({answer}:{answer:RecordedAnswer}) {
   return <audio ref={player} controls preload="metadata" aria-label={'Your recording for question '+(answer.question+1)}/>;
 }
 
-function SpeakingReview({answers}:{answers:RecordedAnswer[]}) {
+function SpeakingReview({answers,form}:{answers:RecordedAnswer[];form:HskExamForm}) {
+  const speakingTasks=speakingTasksFor(form);
   const byQuestion=new Map(answers.map(answer=>[answer.question,answer]));
   return <div className="hsk-speaking-review">
     <p>{answers.length} / {speakingTasks.length} answers recorded. Listen for tones, word order and how clearly you answered the prompt.</p>
@@ -32,10 +34,10 @@ function SpeakingReview({answers}:{answers:RecordedAnswer[]}) {
       const answer=byQuestion.get(index);
       return <details key={index} className="hsk-mock-review">
         <summary><strong>{index+1}. {speakingSections[task.kind].title}</strong>{answer?'':' · no recording'}</summary>
-        {task.picture&&<Picture task={task}/>}
+        {task.picture&&<Picture task={task} form={form}/>}
         {task.kind!=='picture'&&<p className="hsk3-prep-question" lang="zh-Hans"><StudyText text={task.prompt}/></p>}
         <label className="hsk-speaking-playback">Original prompt
-          <audio controls preload="none" src={speakingAudio(questionClip(index))} aria-label={'Prompt for question '+(index+1)}/>
+          <audio controls preload="none" src={speakingAudio(questionClip(index),form)} aria-label={'Prompt for question '+(index+1)}/>
         </label>
         {answer&&<label className="hsk-speaking-playback">Your answer <AnswerPlayback answer={answer}/></label>}
         {task.example&&<p>Example answer <span lang="zh-Hans"><StudyText text={task.example}/></span></p>}
@@ -47,7 +49,9 @@ function SpeakingReview({answers}:{answers:RecordedAnswer[]}) {
 type Screen='loading'|'ready'|'review'|'active';
 const microphoneError='Microphone unavailable. Allow microphone access in your browser and try again.';
 
-export default function Hsk3Speaking() {
+export default function Hsk3Speaking({form='a'}:{form?:HskExamForm}) {
+  const speakingTasks=speakingTasksFor(form);
+  const speakingSteps=speakingStepsFor(form);
   const [screen,setScreen]=useState<Screen>('loading');
   const [answers,setAnswers]=useState<RecordedAnswer[]>([]);
   const [microphone,setMicrophone]=useState<'off'|'loading'|'ready'>('off');
@@ -80,7 +84,7 @@ export default function Hsk3Speaking() {
 
   useEffect(()=>{
     mounted.current=true;
-    readSpeakingAttempt().then(previous=>{
+    readSpeakingAttempt(form).then(previous=>{
       if(!mounted.current)return;
       const saved=previous?.answers??[];
       runId.current=previous?.id??'';
@@ -99,7 +103,7 @@ export default function Hsk3Speaking() {
       writer.current=null;
       releaseMicrophone();
     };
-  },[]);
+  },[form]);
 
   function queueSave(job:()=>Promise<unknown>) {
     queued.current=queued.current.then(job).then(saved=>{
@@ -160,7 +164,7 @@ export default function Hsk3Speaking() {
     if(!player||item.phase!=='listen')return;
     cue.current=index;
     setAudioRecovery(false);
-    player.src=speakingAudio(item.clip);
+    player.src=speakingAudio(item.clip,form);
     player.play().catch(()=>{
       if(mounted.current&&running.current&&cue.current===index)setAudioRecovery(true);
     });
@@ -219,7 +223,7 @@ export default function Hsk3Speaking() {
       const answer={question:speakingSteps[index].question,audio};
       const id=runId.current;
       setAnswers(current=>[...current,answer]);
-      queueSave(()=>saveSpeakingAnswer(id,answer));
+      queueSave(()=>saveSpeakingAnswer(id,answer,form));
     }
     if(stop||stopRequested.current!==null||index===speakingSteps.length-1) {
       releaseMicrophone();
@@ -249,7 +253,7 @@ export default function Hsk3Speaking() {
     if(running.current||!stream.current)return;
     const id=crypto.randomUUID();
     runId.current=id;
-    queueSave(()=>beginSpeakingAttempt(id));
+    queueSave(()=>beginSpeakingAttempt(id,form));
     setAnswers([]);
     setNote('');
     setScreen('active');
@@ -293,7 +297,7 @@ export default function Hsk3Speaking() {
       <p className="hsk-speaking-phase" role="status">
         {current.phase==='listen'?<><Headphones size={18}/> Listen to the prompt</>:current.phase==='prepare'?'Prepare your answer':<><Mic size={18}/> Recording · speak now</>}
       </p>
-      {task.picture&&<Picture task={task}/>}
+      {task.picture&&<Picture task={task} form={form}/>}
       {task.kind==='question'&&<p className="hsk3-prep-question" lang="zh-Hans">{task.prompt}</p>}
       {audioRecovery&&<button type="button" className="primary" onClick={()=>playCue(activeStep.current)}>Play prompt to continue</button>}
       <div className="hsk-speaking-actions">
@@ -302,13 +306,14 @@ export default function Hsk3Speaking() {
       </div>
     </>}
     {screen==='review'&&<>
-      <SpeakingReview answers={answers}/>
+      <SpeakingReview answers={answers} form={form}/>
+      <p><a href="/?course=hsk3&drill=listen-speak">Practise listening and speaking</a></p>
       <div className="hsk-speaking-actions">
         <button type="button" className="primary" onClick={()=>{setScreen('ready');setNote('');}}>New attempt</button>
         {answers.length>0&&<button type="button" className="secondary" onClick={()=>{
           const id=runId.current;
           queueSave(async()=>{
-            const deleted=await clearSpeakingAnswers(id);
+            const deleted=await clearSpeakingAnswers(id,form);
             if(!mounted.current||runId.current!==id)return;
             setAnswers([]);
             if(!deleted)setNote('A newer attempt was saved in another tab. Reload to review it.');

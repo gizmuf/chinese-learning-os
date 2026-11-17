@@ -1,0 +1,894 @@
+{
+  "review": {
+    "listen-picture": [
+      {
+        "kind": "choice",
+        "audio": "review-listen-picture-1",
+        "prompt": "Choose the object the speaker mentions.",
+        "transcript": "今天很冷，出门的时候别忘了穿外套。",
+        "answer": "🧥",
+        "options": [
+          "🧥",
+          "🌂",
+          "🎒"
+        ]
+      },
+      {
+        "kind": "choice",
+        "audio": "review-listen-picture-2",
+        "prompt": "Choose the object the speaker mentions.",
+        "transcript": "明天出门可能会下雨。你最好带一把伞。",
+        "answer": "🌂",
+        "options": [
+          "🌂",
+          "👟",
+          "📱"
+        ]
+      },
+      {
+        "kind": "choice",
+        "audio": "review-listen-picture-3",
+        "prompt": "Choose the object someone is looking for.",
+        "transcript": "我的眼镜在哪儿？就在桌子上，你的书旁边。",
+        "answer": "👓",
+        "options": [
+          "👓",
+          "📕",
+          "⏰"
+        ]
+      }
+    ],
+    "listen-detail": [
+      {
+        "kind": "choice",
+        "audio": "review-listen-detail-1",
+        "prompt": "他们几点见面？",
+        "transcript": "演出七点开始，我们六点四十在门口见，好吗？",
+        "answer": "六点四十",
+        "options": [
+          "六点四十",
+          "七点",
+          "七点四十"
+        ]
+      },
+      {
+        "kind": "choice",
+        "audio": "review-listen-detail-2",
+        "prompt": "说话人想喝什么？",
+        "transcript": "咖啡给我弟弟吧，我今天想喝热水。",
+        "answer": "热水",
+        "options": [
+          "热水",
+          "咖啡",
+          "茶"
+        ]
+      },
+      {
+        "kind": "choice",
+        "audio": "review-listen-detail-3",
+        "prompt": "哪种颜色还有？",
+        "transcript": "我刚才打电话问过了，蓝色的还有两件，白色的已经卖完了。",
+        "answer": "蓝色",
+        "options": [
+          "蓝色",
+          "白色",
+          "黑色"
+        ]
+      }
+    ],
+    "listen-passage": [
+      {
+        "kind": "choice",
+        "audio": "review-listen-passage-1",
+        "prompt": "她先做了什么？",
+        "transcript": "她先去商店买菜，然后回家做饭。本来想请朋友来吃饭，可是朋友今天要上班。",
+        "answer": "去买菜",
+        "options": [
+          "去买菜",
+          "回家做饭",
+          "去上班"
+        ]
+      },
+      {
+        "kind": "choice",
+        "audio": "review-listen-passage-2",
+        "prompt": "今天他是怎么去上班的？",
+        "transcript": "我每天坐公共汽车上班。今天车站人太多了，我等了很久也没上车，最后只好骑车去。",
+        "answer": "骑车",
+        "options": [
+          "骑车",
+          "坐公共汽车",
+          "走路"
+        ]
+      },
+      {
+        "kind": "choice",
+        "audio": "review-listen-passage-3",
+        "prompt": "说话人准备什么时候去看电影？",
+        "transcript": "今天有两场电影。早上的那场我想看，可是我要上课，所以我们下午再去吧。",
+        "answer": "下午",
+        "options": [
+          "下午",
+          "早上",
+          "晚上"
+        ]
+      }
+    ],
+    "reply": [
+      {
+        "kind": "choice",
+        "text": "你的自行车怎么在小王那儿？",
+        "prompt": "Choose the best reply.",
+        "answer": "我借给他了，他明天还给我。",
+        "options": [
+          "我借给他了，他明天还给我。",
+          "我今天在学校吃午饭。",
+          "我们可以坐电梯。"
+        ]
+      },
+      {
+        "kind": "choice",
+        "text": "你现在有空吗？我想请你帮个忙。",
+        "prompt": "Choose the best reply.",
+        "answer": "有空，你要我做什么？",
+        "options": [
+          "有空，你要我做什么？",
+          "那件衣服有点儿贵。",
+          "我比他大一岁。"
+        ]
+      },
+      {
+        "kind": "choice",
+        "text": "你最喜欢哪个季节？",
+        "prompt": "Choose the best reply.",
+        "answer": "我最喜欢秋天，那时候不冷也不热。",
+        "options": [
+          "我最喜欢秋天，那时候不冷也不热。",
+          "我打算明天早点儿来。",
+          "我把手机放在桌上了。"
+        ]
+      }
+    ],
+    "passage": [
+      {
+        "kind": "choice",
+        "text": "昨天晚上我忘了给手机充电。今天早上手机没电了，我只好到学校以后再给妈妈打电话。",
+        "prompt": "为什么早上没有打电话？",
+        "answer": "手机没电了。",
+        "options": [
+          "手机没电了。",
+          "他忘了妈妈的电话号码。",
+          "妈妈早上在上班。"
+        ]
+      },
+      {
+        "kind": "choice",
+        "text": "今天我比平时早十分钟到车站。可我前面有很多人在排队，等到我买好票的时候，车已经走了。",
+        "prompt": "为什么他没坐上车？",
+        "answer": "买票等了太久。",
+        "options": [
+          "买票等了太久。",
+          "他晚到了车站。",
+          "他走错了车站。"
+        ]
+      },
+      {
+        "kind": "choice",
+        "text": "姐姐想买新的书包。商场里的太贵，网上的又太小。最后她在学校旁边的小店买了一个，大小、价格都合适。",
+        "prompt": "她最后在哪儿买的？",
+        "answer": "学校旁边的小店。",
+        "options": [
+          "学校旁边的小店。",
+          "商场。",
+          "网上。"
+        ]
+      }
+    ],
+    "go-home": [
+      {
+        "kind": "choice",
+        "text": "我下班以后先___家，再去买菜。",
+        "prompt": "Complete the sentence.",
+        "answer": "回",
+        "options": [
+          "回",
+          "进",
+          "过"
+        ]
+      },
+      {
+        "kind": "choice",
+        "text": "雨越下越大，我们现在就___家吧。",
+        "prompt": "Complete the sentence.",
+        "answer": "回",
+        "options": [
+          "回",
+          "经过",
+          "离开"
+        ]
+      }
+    ],
+    "result": [
+      {
+        "kind": "choice",
+        "text": "房间还没有打扫___，你等一下再进来。",
+        "prompt": "Complete the sentence.",
+        "answer": "完",
+        "options": [
+          "完",
+          "起",
+          "来"
+        ]
+      },
+      {
+        "kind": "choice",
+        "text": "请先读___这句话，再回答问题。",
+        "prompt": "Complete the sentence.",
+        "answer": "完",
+        "options": [
+          "完",
+          "去",
+          "来"
+        ]
+      }
+    ],
+    "negative": [
+      {
+        "kind": "choice",
+        "text": "今天太热，我一点儿___不想出去。",
+        "prompt": "Complete the sentence.",
+        "answer": "也",
+        "options": [
+          "也",
+          "很",
+          "已经"
+        ]
+      },
+      {
+        "kind": "choice",
+        "text": "他们说得很快，我一个字___没听懂。",
+        "prompt": "Complete the sentence.",
+        "answer": "也",
+        "options": [
+          "也",
+          "再",
+          "还要"
+        ]
+      }
+    ],
+    "cause": [
+      {
+        "kind": "choice",
+        "text": "___下了大雪，今天我们不用去学校。",
+        "prompt": "Complete the sentence.",
+        "answer": "因为",
+        "options": [
+          "因为",
+          "还是",
+          "只有"
+        ]
+      },
+      {
+        "kind": "choice",
+        "text": "___我已经吃过晚饭了，所以现在不饿。",
+        "prompt": "Complete the sentence.",
+        "answer": "因为",
+        "options": [
+          "因为",
+          "虽然",
+          "如果"
+        ]
+      }
+    ],
+    "close": [
+      {
+        "kind": "choice",
+        "text": "外面太吵了，请把窗户关___。",
+        "prompt": "Complete the sentence.",
+        "answer": "上",
+        "options": [
+          "上",
+          "进去",
+          "出来"
+        ]
+      },
+      {
+        "kind": "choice",
+        "text": "出门前请把灯关___。",
+        "prompt": "Complete the sentence.",
+        "answer": "掉",
+        "options": [
+          "掉",
+          "出去",
+          "回来"
+        ]
+      }
+    ],
+    "simultaneous": [
+      {
+        "kind": "choice",
+        "text": "他___骑车，一边和朋友聊天。",
+        "prompt": "Complete the sentence.",
+        "answer": "一边",
+        "options": [
+          "一边",
+          "一起",
+          "一会儿"
+        ]
+      },
+      {
+        "kind": "choice",
+        "text": "我喜欢一边散步，___听中文。",
+        "prompt": "Complete the sentence.",
+        "answer": "一边",
+        "options": [
+          "一边",
+          "一共",
+          "一定"
+        ]
+      }
+    ],
+    "comparative": [
+      {
+        "kind": "choice",
+        "text": "换了新车以后，去学校比以前___方便了。",
+        "prompt": "Complete the sentence.",
+        "answer": "更",
+        "options": [
+          "更",
+          "才",
+          "已经"
+        ]
+      },
+      {
+        "kind": "choice",
+        "text": "她姐姐也很高，不过她比姐姐___高一点儿。",
+        "prompt": "Complete the sentence.",
+        "answer": "还",
+        "options": [
+          "还",
+          "先",
+          "刚才"
+        ]
+      }
+    ],
+    "transport": [
+      {
+        "kind": "choice",
+        "text": "今天早上我___火车来这个城市。",
+        "prompt": "Complete the sentence.",
+        "answer": "坐",
+        "options": [
+          "坐",
+          "做",
+          "住"
+        ]
+      },
+      {
+        "kind": "choice",
+        "text": "他住得远，每天___地铁上班。",
+        "prompt": "Complete the sentence.",
+        "answer": "坐",
+        "options": [
+          "坐",
+          "做",
+          "站"
+        ]
+      }
+    ],
+    "imminent": [
+      {
+        "kind": "choice",
+        "text": "他已经在楼下了，___就回来。",
+        "prompt": "Complete the sentence.",
+        "answer": "马上",
+        "options": [
+          "马上",
+          "从来",
+          "以前"
+        ]
+      },
+      {
+        "kind": "choice",
+        "text": "我穿好鞋了，___出门。",
+        "prompt": "Complete the sentence.",
+        "answer": "马上",
+        "options": [
+          "马上",
+          "从来",
+          "已经"
+        ]
+      }
+    ],
+    "past-focus": [
+      {
+        "kind": "choice",
+        "text": "这个杯子是我昨天___的。",
+        "prompt": "Complete the sentence.",
+        "answer": "买",
+        "options": [
+          "买",
+          "起床",
+          "散步"
+        ]
+      },
+      {
+        "kind": "choice",
+        "text": "这封信是我妹妹上周___的。",
+        "prompt": "Complete the sentence.",
+        "answer": "写",
+        "options": [
+          "写",
+          "坐",
+          "睡"
+        ]
+      }
+    ],
+    "write-安": [
+      {
+        "kind": "character",
+        "text": "今天很晚了，一个人回家要注意（ān）全。",
+        "answer": "安",
+        "example": "今天很晚了，一个人回家要注意安全。"
+      },
+      {
+        "kind": "character",
+        "text": "小狗现在很（ān）静。",
+        "answer": "安",
+        "example": "小狗现在很安静。"
+      }
+    ],
+    "write-坐": [
+      {
+        "kind": "character",
+        "text": "去机场可以（zuò）地铁。",
+        "answer": "坐",
+        "example": "去机场可以坐地铁。"
+      },
+      {
+        "kind": "character",
+        "text": "我们今天在家（zuò）晚饭。",
+        "answer": "做",
+        "example": "我们今天在家做晚饭。"
+      },
+      {
+        "kind": "character",
+        "text": "",
+        "answer": "做",
+        "example": "下班以后他先做饭，再去散步。",
+        "audio": "dictation-zuo"
+      }
+    ],
+    "write-右": [
+      {
+        "kind": "character",
+        "text": "请往（yòu）边走。",
+        "answer": "右",
+        "example": "请往右边走。"
+      },
+      {
+        "kind": "character",
+        "text": "洗手间在门的（yòu）边。",
+        "answer": "右",
+        "example": "洗手间在门的右边。"
+      }
+    ],
+    "write-再": [
+      {
+        "kind": "character",
+        "text": "请（zài）说一遍，我没听清楚。",
+        "answer": "再",
+        "example": "请再说一遍，我没听清楚。"
+      },
+      {
+        "kind": "character",
+        "text": "我现在还（zài）图书馆。",
+        "answer": "在",
+        "example": "我现在还在图书馆。"
+      },
+      {
+        "kind": "character",
+        "text": "",
+        "answer": "再",
+        "example": "我吃完饭再给你打电话。",
+        "audio": "dictation-zai"
+      }
+    ],
+    "write-参": [
+      {
+        "kind": "character",
+        "text": "我想（cān）加明天的活动。",
+        "answer": "参",
+        "example": "我想参加明天的活动。"
+      },
+      {
+        "kind": "character",
+        "text": "她要（cān）加学校的运动会。",
+        "answer": "参",
+        "example": "她要参加学校的运动会。"
+      }
+    ],
+    "write-带": [
+      {
+        "kind": "character",
+        "text": "下雨了，出门要（dài）伞。",
+        "answer": "带",
+        "example": "下雨了，出门要带伞。"
+      },
+      {
+        "kind": "character",
+        "text": "我眼睛不舒服，今天没（dài）眼镜。",
+        "answer": "戴",
+        "example": "我眼睛不舒服，今天没戴眼镜。"
+      },
+      {
+        "kind": "character",
+        "text": "",
+        "answer": "带",
+        "example": "去机场以前，记得带护照。",
+        "audio": "dictation-dai"
+      }
+    ],
+    "write-地": [
+      {
+        "kind": "character",
+        "text": "他把书放在（dì）上了。",
+        "answer": "地",
+        "example": "他把书放在地上了。"
+      },
+      {
+        "kind": "character",
+        "text": "这个（dì）方离学校不远。",
+        "answer": "地",
+        "example": "这个地方离学校不远。"
+      }
+    ],
+    "write-近": [
+      {
+        "kind": "character",
+        "text": "医院离我家很（jìn）。",
+        "answer": "近",
+        "example": "医院离我家很近。"
+      },
+      {
+        "kind": "character",
+        "text": "外面冷，快（jìn）来吧。",
+        "answer": "进",
+        "example": "外面冷，快进来吧。"
+      }
+    ],
+    "write-完": [
+      {
+        "kind": "character",
+        "text": "你看（wán）那本书了吗？",
+        "answer": "完",
+        "example": "你看完那本书了吗？"
+      },
+      {
+        "kind": "character",
+        "text": "我还没有写（wán）这封信。",
+        "answer": "完",
+        "example": "我还没有写完这封信。"
+      }
+    ],
+    "write-题": [
+      {
+        "kind": "character",
+        "text": "老师问了三个问（tí）。",
+        "answer": "题",
+        "example": "老师问了三个问题。"
+      },
+      {
+        "kind": "character",
+        "text": "这道（tí）很难，我没有做出来。",
+        "answer": "题",
+        "example": "这道题很难，我没有做出来。"
+      }
+    ],
+    "sentence-方便": [
+      {
+        "kind": "sentence",
+        "prompt": "Describe a place that is convenient to reach.",
+        "text": "方便",
+        "example": "坐地铁去那个地方很方便。"
+      },
+      {
+        "kind": "sentence",
+        "prompt": "Explain why shopping near your home is convenient.",
+        "text": "方便",
+        "example": "我下楼就能买到菜，真方便。"
+      }
+    ],
+    "sentence-迟到": [
+      {
+        "kind": "sentence",
+        "prompt": "Tell your teacher why you were late.",
+        "text": "迟到",
+        "example": "对不起，今天下雨，我迟到了。"
+      },
+      {
+        "kind": "sentence",
+        "prompt": "Tell a friend what time to leave so you won't be late.",
+        "text": "迟到",
+        "example": "我们早点儿出门吧，这样就不会迟到。"
+      }
+    ],
+    "sentence-打算": [
+      {
+        "kind": "sentence",
+        "prompt": "Describe one plan for tomorrow morning.",
+        "text": "打算",
+        "example": "我打算明天早上去图书馆。"
+      },
+      {
+        "kind": "sentence",
+        "prompt": "Make a weekend plan with a friend.",
+        "text": "打算",
+        "example": "我们打算星期天一起去爬山。"
+      }
+    ],
+    "sentence-比赛": [
+      {
+        "kind": "sentence",
+        "prompt": "Describe a game you want to watch.",
+        "text": "比赛",
+        "example": "我想去看明天的篮球比赛。"
+      },
+      {
+        "kind": "sentence",
+        "prompt": "Tell a friend what someone is preparing for.",
+        "text": "比赛",
+        "example": "哥哥每天练习跑步，因为下周有比赛。"
+      }
+    ],
+    "sentence-已经": [
+      {
+        "kind": "sentence",
+        "prompt": "Tell someone what you have finished today.",
+        "text": "已经",
+        "example": "我已经做完今天的作业了。"
+      },
+      {
+        "kind": "sentence",
+        "prompt": "Tell a friend where you've arrived.",
+        "text": "已经",
+        "example": "我已经到车站了，你到了吗？"
+      }
+    ],
+    "sentence-后来": [
+      {
+        "kind": "sentence",
+        "prompt": "Describe how your morning plan changed.",
+        "text": "后来",
+        "example": "我本来想骑车去学校，后来下雨了，就坐了公交车。"
+      },
+      {
+        "kind": "sentence",
+        "prompt": "Tell a friend what happened after you left home.",
+        "text": "后来",
+        "example": "我早上忘了带书，后来回家拿了。"
+      }
+    ],
+    "sentence-从来": [
+      {
+        "kind": "sentence",
+        "prompt": "Write about an experience you've never had.",
+        "text": "从来",
+        "example": "我从来没有坐过高铁。"
+      },
+      {
+        "kind": "sentence",
+        "prompt": "Write about something a friend never does.",
+        "text": "从来",
+        "example": "她从来不在上课的时候看手机。"
+      }
+    ],
+    "sentence-决定": [
+      {
+        "kind": "sentence",
+        "prompt": "Write about what you chose to eat.",
+        "text": "决定",
+        "example": "我决定晚上在家做面条。"
+      },
+      {
+        "kind": "sentence",
+        "prompt": "Describe a plan you settled on after it started raining.",
+        "text": "决定",
+        "example": "雨太大了，我们决定不出门。"
+      }
+    ],
+    "sentence-刚才": [
+      {
+        "kind": "sentence",
+        "prompt": "Ask who sent you a message a moment ago.",
+        "text": "刚才",
+        "example": "刚才给我发消息的是谁？"
+      },
+      {
+        "kind": "sentence",
+        "prompt": "Describe something you saw a moment ago.",
+        "text": "刚才",
+        "example": "我刚才在门口看见老师了。"
+      }
+    ],
+    "sentence-只要": [
+      {
+        "kind": "sentence",
+        "prompt": "Explain the condition for borrowing a book.",
+        "text": "只要",
+        "example": "只要带学生证，就可以借书。"
+      },
+      {
+        "kind": "sentence",
+        "prompt": "Invite a friend over if they have time.",
+        "text": "只要",
+        "example": "只要你不忙，就可以来我家吃饭。"
+      }
+    ]
+  },
+  "drill": [
+    {
+      "id": "dou",
+      "meaning": "We are all going to the library today.",
+      "chunks": [
+        [
+          "我们今天",
+          "wǒ men jīn tiān"
+        ],
+        [
+          "都去",
+          "dōu qù"
+        ],
+        [
+          "图书馆。",
+          "tú shū guǎn"
+        ]
+      ],
+      "voices": [
+        "xiaoxiao",
+        "xiaoyi",
+        "yunxi"
+      ]
+    },
+    {
+      "id": "duo",
+      "meaning": "There are a lot of people at the station today.",
+      "chunks": [
+        [
+          "今天车站",
+          "jīn tiān chē zhàn"
+        ],
+        [
+          "人很多。",
+          "rén hěn duō"
+        ]
+      ],
+      "voices": [
+        "xiaoxiao",
+        "xiaoyi",
+        "yunxi"
+      ]
+    },
+    {
+      "id": "directions",
+      "meaning": "Keep going straight. The metro station is on the left.",
+      "chunks": [
+        [
+          "请一直",
+          "qǐng yì zhí"
+        ],
+        [
+          "往前走，",
+          "wǎng qián zǒu"
+        ],
+        [
+          "地铁站",
+          "dì tiě zhàn"
+        ],
+        [
+          "就在左边。",
+          "jiù zài zuǒ biān"
+        ]
+      ],
+      "voices": [
+        "xiaoxiao"
+      ]
+    },
+    {
+      "id": "zai",
+      "meaning": "I'll eat at home first, then go to school.",
+      "chunks": [
+        [
+          "我先",
+          "wǒ xiān"
+        ],
+        [
+          "在家吃饭，",
+          "zài jiā chī fàn"
+        ],
+        [
+          "再去学校。",
+          "zài qù xué xiào"
+        ]
+      ],
+      "voices": [
+        "xiaoxiao"
+      ]
+    },
+    {
+      "id": "zuo",
+      "meaning": "I take the metro to work. She cooks at home.",
+      "chunks": [
+        [
+          "我坐地铁",
+          "wǒ zuò dì tiě"
+        ],
+        [
+          "去上班，",
+          "qù shàng bān"
+        ],
+        [
+          "她在家",
+          "tā zài jiā"
+        ],
+        [
+          "做饭。",
+          "zuò fàn"
+        ]
+      ],
+      "voices": [
+        "xiaoxiao"
+      ]
+    },
+    {
+      "id": "yibian",
+      "meaning": "He listens to music while doing his homework.",
+      "chunks": [
+        [
+          "他一边",
+          "tā yì biān"
+        ],
+        [
+          "做作业，",
+          "zuò zuò yè"
+        ],
+        [
+          "一边",
+          "yì biān"
+        ],
+        [
+          "听音乐。",
+          "tīng yīn yuè"
+        ]
+      ],
+      "voices": [
+        "xiaoxiao"
+      ]
+    },
+    {
+      "id": "daozhan",
+      "meaning": "I got to the station at eight in the morning and waited half an hour.",
+      "chunks": [
+        [
+          "早上八点",
+          "zǎo shang bā diǎn"
+        ],
+        [
+          "我到车站，",
+          "wǒ dào chē zhàn"
+        ],
+        [
+          "等了",
+          "děng le"
+        ],
+        [
+          "半个小时。",
+          "bàn ge xiǎo shí"
+        ]
+      ],
+      "voices": [
+        "xiaoxiao"
+      ]
+    }
+  ]
+}
