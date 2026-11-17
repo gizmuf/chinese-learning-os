@@ -43,6 +43,14 @@
 .hanzi-family-pen {display: flex; align-items: center; gap: .35rem}
 .hanzi-family-paging {border-top: 1px solid var(--line); padding-top: .8rem}
 .hanzi-family-exercise .pinyin-handwriting {width: 100%}
+@media (min-width: 48rem) {
+  #hanzi-family-word-list .hanzi-family-headword {
+    font-size: 1.75rem;
+    overflow-wrap: anywhere;
+  }
+  #hanzi-family-word-list .hanzi-family-example {font-size: 1.625rem}
+  #hanzi-family-word-list .hanzi-family-entry-body > p .study-word {font-size: 1.2em}
+}
 @media (max-width: 37rem) {
   .hanzi-family-entry summary {grid-template-columns: minmax(4.5rem, .8fr) minmax(5rem, 1fr); gap: .1rem .65rem}
   .hanzi-family-entry summary .hanzi-family-gloss {grid-column: 1 / -1; padding-left: 1rem}
