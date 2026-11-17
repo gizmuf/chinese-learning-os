@@ -1,6 +1,6 @@
 'use client';
 
-import {useRef, useState} from 'react';
+import {useRef, useState, type ReactNode} from 'react';
 import {ArrowLeft, ArrowRight, RotateCcw} from 'lucide-react';
 import type {Stroke} from './learning';
 import PinyinHandwriting from './pinyin-handwriting';
@@ -9,7 +9,7 @@ import {type HanziExercise, matchesHanziAnswer, selectedPracticeHref} from './ha
 import './pinyin-practice.css';
 
 type Outcome = 'correct' | 'retry' | 'compare';
-type Attempt = { outcome: Outcome; response: string; strokes?: Stroke[] };
+export type Attempt = { outcome: Outcome; response: string; strokes?: Stroke[] };
 export type Attempts = Partial<Record<string, Attempt>>;
 
 export function loadHanziAttempts(key: string): Attempts | null {
@@ -68,12 +68,14 @@ export default function HanziFamilyPractice({exercises, active, onSelect, filter
   </section>;
 }
 
-function Exercise({exercise, attempt, onSave, penOnly, setPenOnly}: {
+export function Exercise({exercise, attempt, onSave, penOnly, setPenOnly, feedbackDetails, pending = false}: {
   exercise: HanziExercise;
   attempt: Attempt | undefined;
-  onSave: (value: Attempt | null) => void;
+  onSave: (value: Attempt | null) => void | Promise<void>;
   penOnly: boolean;
   setPenOnly: (value: boolean) => void;
+  feedbackDetails?: ReactNode;
+  pending?: boolean;
 }) {
   const [draft, setDraft] = useState('');
   const [pieces, setPieces] = useState<number[]>([]);
@@ -87,9 +89,9 @@ function Exercise({exercise, attempt, onSave, penOnly, setPenOnly}: {
   const answerText = building ? pieces.map(index => options[index]).join('') : draft;
   const canCheck = drawing ? strokes.length > 0 : building ? pieces.length === options.length : answerText.trim().length > 0;
 
-  function check() {
-    if (!canCheck || attempt) return;
-    onSave(drawing ? {outcome: 'compare', response: '', strokes} : {
+  async function check() {
+    if (!canCheck || attempt || pending) return;
+    await onSave(drawing ? {outcome: 'compare', response: '', strokes} : {
       outcome: matchesHanziAnswer(exercise, answerText) ? 'correct' : 'retry',
       response: answerText,
     });
@@ -100,7 +102,7 @@ function Exercise({exercise, attempt, onSave, penOnly, setPenOnly}: {
     setDraft('');
     setPieces([]);
     setStrokes([]);
-    onSave(null);
+    void onSave(null);
   }
 
   return <div className="hanzi-family-exercise" data-study-assessment={attempt ? 'complete' : 'blocked'}>
@@ -115,15 +117,16 @@ function Exercise({exercise, attempt, onSave, penOnly, setPenOnly}: {
         {exercise.pinyin && <p className="hanzi-family-reading" lang="zh-Latn">{exercise.pinyin}</p>}
         {exercise.meaning && <p>{exercise.meaning}</p>}
         <p>{exercise.explanation}</p>
+        {feedbackDetails}
       </div>
       <div className="hanzi-family-actions">
         {attempt.outcome === 'compare' && <>
-          <button type="button" className="primary" onClick={() => onSave({...attempt, outcome: 'correct'})}>My writing matches</button>
-          <button type="button" className="secondary" onClick={() => onSave({...attempt, outcome: 'retry'})}>I need more practice</button>
+          <button type="button" className="primary" disabled={pending} onClick={() => void onSave({...attempt, outcome: 'correct'})}>My writing matches</button>
+          <button type="button" className="secondary" disabled={pending} onClick={() => void onSave({...attempt, outcome: 'retry'})}>I need more practice</button>
         </>}
-        <button type="button" className="secondary" onClick={reset}><RotateCcw size={16} aria-hidden="true"/>Try again</button>
+        <button type="button" className="secondary" disabled={pending} onClick={reset}><RotateCcw size={16} aria-hidden="true"/>Try again</button>
       </div>
-    </> : <form onSubmit={event => {event.preventDefault(); check();}}>
+    </> : <form onSubmit={event => {event.preventDefault(); void check();}}>
       {writing && <div className="hanzi-family-actions">
         <button type="button" className="secondary" aria-pressed={drawing} onClick={() => setWriteMode('ink')}>Handwriting</button>
         <button type="button" className="secondary" aria-pressed={!drawing} onClick={() => setWriteMode('typing')}>Type Hanzi</button>
@@ -149,7 +152,7 @@ function Exercise({exercise, attempt, onSave, penOnly, setPenOnly}: {
       </div> : <label className="hanzi-family-input">Your answer
         <input lang="zh-Hans" autoComplete="off" autoCorrect="off" spellCheck={false} value={draft} onChange={event => setDraft(event.target.value)}/>
       </label>)}
-      <button type="submit" className="primary" disabled={!canCheck}>{drawing ? 'Compare with the answer' : 'Check answer'}</button>
+      <button type="submit" className="primary" disabled={!canCheck || pending}>{pending ? 'Saving answer…' : drawing ? 'Compare with the answer' : 'Check answer'}</button>
     </form>}
   </div>;
 }
