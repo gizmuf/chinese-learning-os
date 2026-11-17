@@ -994,7 +994,7 @@ export default function StudyApp({
                 <button type="button" className="library-practice-shortcut" aria-pressed={practiceSelection} onClick={()=>{setPracticeSelection(true);libraryRoute(libraryLayout,true);}}><BookmarkCheck size={15}/>{libraryCopy.selected} · {practiceBook.entries.length}</button>
                 <ReferenceLessonLinks compact onOpen={id=>{stopAudio();window.history.replaceState(null,'',referenceLessonHref(id)+'&from=lessons');setView('course');window.scrollTo({top:0,behavior:'instant'});}}/>
               </nav>
-              {!practiceSelection && <HskExamCharacters/>}
+              {!practiceSelection && <HskExamCharacters key={user?.id ?? "guest"} owner={user?.id ?? "guest"}/>}
               <button hidden={practiceSelection} className="secondary pdf-library-button" onClick={() => setPdfSelection(filtered.map(item => item.id))}><Download size={16} /> {t("Print notebook PDF")}</button>
               <div className="library-controls"><SearchModeToggle value={searchMode} onChange={setSearchMode}/>
                 <label className="search-field">
