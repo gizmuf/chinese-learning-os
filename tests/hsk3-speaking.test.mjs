@@ -103,13 +103,13 @@ async function renderSpeaking() {
       },
     }],
   });
-  const module={exports:{}};
+  const componentModule={exports:{}};
   const require=createRequire(import.meta.url);
-  new Function('module','exports','require',component.text)(module,module.exports,require);
+  new Function('module','exports','require',component.text)(componentModule,componentModule.exports,require);
 
   let grant;
   let tick;
-  let recorder;
+  const recorders=[];
   const track={readyState:'live',onended:null,stop(){this.readyState='ended';}};
   Object.defineProperty(navigator,'mediaDevices',{configurable:true,value:{
     getUserMedia:()=>new Promise(resolve=>{grant=resolve;}),
@@ -118,7 +118,8 @@ async function renderSpeaking() {
     static isTypeSupported(){return true;}
     mimeType='audio/mp4';
     state='inactive';
-    start(){this.state='recording';recorder=this;}
+    constructor(){recorders.push(this);}
+    start(){this.state='recording';}
     stop(){this.state='inactive';}
   }
   Object.assign(globalThis,{
@@ -130,8 +131,8 @@ async function renderSpeaking() {
   const player={src:'',ended:true,play:async()=>{},pause(){}};
   let tree;
   await act(async()=>{
-    tree=renderer.create(React.createElement(module.exports.default),{
-      createNodeMock:element=>element.type==='audio'?player:null,
+    tree=renderer.create(React.createElement(componentModule.exports.default),{
+      createNodeMock:element=>element.type==='audio'?(element.props.hidden?player:{}):null,
     });
   });
 
@@ -151,6 +152,7 @@ async function renderSpeaking() {
       try {tick();} finally {Date.now=realNow;}
     }),
     finishRecording:()=>act(async()=>{
+      const recorder=recorders.at(-1);
       recorder.ondataavailable({data:new Blob(['answer'],{type:'audio/mp4'})});
       recorder.onstop();
     }),
