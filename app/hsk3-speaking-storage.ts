@@ -3,7 +3,8 @@ import type { RecordedAnswer } from './hsk3-speaking-model';
 const name = 'chinese-os-hsk3-speaking-v1';
 const storeName = 'attempt';
 const latest = 'latest';
-type StoredAttempt = { key:typeof latest; id:string; answers:RecordedAnswer[] };
+type StoredAnswer = { question:number; bytes:ArrayBuffer; mime:string };
+type StoredAttempt = { key:typeof latest; id:string; answers:StoredAnswer[] };
 
 async function useAttemptStore<T>(mode:IDBTransactionMode,run:(store:IDBObjectStore,setResult:(value:T)=>void)=>void) {
   const database=await new Promise<IDBDatabase>((resolve,reject)=>{
@@ -27,22 +28,30 @@ async function useAttemptStore<T>(mode:IDBTransactionMode,run:(store:IDBObjectSt
 
 export const readSpeakingAnswers=()=>useAttemptStore<RecordedAnswer[]>('readonly',(store,done)=>{
   const request=store.get(latest);
-  request.onsuccess=()=>done((request.result as StoredAttempt|undefined)?.answers??[]);
+  request.onsuccess=()=>{
+    const attempt=request.result as StoredAttempt|undefined;
+    done(attempt?.answers.map(({question,bytes,mime})=>({question,audio:new Blob([bytes],{type:mime})}))??[]);
+  };
 });
 
 export const beginSpeakingAttempt=(id:string)=>useAttemptStore<void>('readwrite',(store)=>{
   store.put({key:latest,id,answers:[]} satisfies StoredAttempt);
 });
 
-export const saveSpeakingAnswer=(id:string,answer:RecordedAnswer)=>useAttemptStore<boolean>('readwrite',(store,done)=>{
-  const request=store.get(latest);
-  request.onsuccess=()=>{
-    const attempt=request.result as StoredAttempt|undefined;
-    if(attempt?.id!==id) {done(false);return;}
-    attempt.answers=[...attempt.answers.filter(item=>item.question!==answer.question),answer];
-    store.put(attempt);
-    done(true);
-  };
-});
+export async function saveSpeakingAnswer(id:string,answer:RecordedAnswer) {
+  // WebKit may reject MediaRecorder-backed Blobs in IndexedDB. Materialize
+  // the bytes before opening the transaction and rebuild a Blob for playback.
+  const stored:StoredAnswer={question:answer.question,bytes:await answer.audio.arrayBuffer(),mime:answer.audio.type};
+  return useAttemptStore<boolean>('readwrite',(store,done)=>{
+    const request=store.get(latest);
+    request.onsuccess=()=>{
+      const attempt=request.result as StoredAttempt|undefined;
+      if(attempt?.id!==id) {done(false);return;}
+      attempt.answers=[...attempt.answers.filter(item=>item.question!==stored.question),stored];
+      store.put(attempt);
+      done(true);
+    };
+  });
+}
 
 export const clearSpeakingAnswers=()=>useAttemptStore<void>('readwrite',store=>{store.delete(latest);});

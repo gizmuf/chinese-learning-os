@@ -208,9 +208,14 @@ export default function Hsk3Speaking() {
       setAnswers(current=>[...current,answer]);
       queueSave(()=>saveSpeakingAnswer(id,answer));
     }
-    transition.current=false;
-    if(stop)showReview(message);
-    else startAt(index+1);
+    if(stop||index===speakingSteps.length-1) {
+      releaseMicrophone();
+      await queued.current;
+      if(mounted.current&&running.current)showReview(message);
+    } else {
+      transition.current=false;
+      startAt(index+1);
+    }
   }
 
   useEffect(()=>{
