@@ -1,0 +1,878 @@
+{
+  "entries": [
+    {
+      "hanzi": "一般",
+      "pinyin": "yìbān",
+      "meaning": "usual; ordinary; generally",
+      "example": "我一般七点起床。",
+      "example_pinyin": "Wǒ yìbān qī diǎn qǐchuáng.",
+      "example_meaning": "I usually get up at seven.",
+      "family": "一般般 yìbānbān = so-so; 一般人 yìbān rén = ordinary people; 一般来说 yìbān lái shuō = generally speaking.",
+      "notes": "般 bān i 船 chuán (boat) mają 舟. 一样 yíyàng oznacza „taki sam”, nie „zwykle”. 一 zmienia wymowę przed kolejną sylabą: tutaj yì."
+    },
+    {
+      "hanzi": "椅子",
+      "pinyin": "yǐzi",
+      "meaning": "chair",
+      "example": "请坐在椅子上。",
+      "example_pinyin": "Qǐng zuò zài yǐzi shang.",
+      "example_meaning": "Please sit on the chair.",
+      "family": "桌子 zhuōzi = table; 凳子 dèngzi = stool; 椅背 yǐbèi = chair back; 骑共享单车 qí gòngxiǎng dānchē = ride a shared bicycle.",
+      "notes": "椅 yǐ = 木 + 奇; 骑 qí = 马 + 奇. Wspólne 奇 nie gwarantuje identycznej wymowy. 子 zi to tutaj neutralnotonowy przyrostek, nie 了 le."
+    },
+    {
+      "hanzi": "一点儿",
+      "pinyin": "yìdiǎnr",
+      "meaning": "a little bit",
+      "example": "我会说一点儿中文。",
+      "example_pinyin": "Wǒ huì shuō yìdiǎnr Zhōngwén.",
+      "example_meaning": "I can speak a little Chinese.",
+      "family": "一点点 yìdiǎndiǎn = a tiny bit; 差点 chàdiǎn = almost; 一点儿水 yìdiǎnr shuǐ = a little water; 慢一点儿 màn yìdiǎnr = a little slower.",
+      "notes": "点 diǎn zawiera 占 zhàn i 灬. 儿 łączy się z poprzednią sylabą jako -r. 一下 yíxià dotyczy krótkiej czynności: 看一下 kàn yíxià = take a look. 一点儿 nie występuje tylko przed rzeczownikiem."
+    },
+    {
+      "hanzi": "一些",
+      "pinyin": "yìxiē",
+      "meaning": "some; a few",
+      "example": "我买了一些水果。",
+      "example_pinyin": "Wǒ mǎi le yìxiē shuǐguǒ.",
+      "example_meaning": "I bought some fruit.",
+      "family": "有些 yǒuxiē = some; 这些 zhèxiē = these; 那些 nàxiē = those; 哪些 nǎxiē = which ones; 一些事 yìxiē shì = some things.",
+      "notes": "些 xiē = 此 + 二; 此 cǐ = this (formal). Nie ma sztywnego podziału „policzalne/niepoliczalne”: 一些水 yìxiē shuǐ i 一点儿水 yìdiǎnr shuǐ są poprawne. 一点儿苹果 yìdiǎnr píngguǒ może oznaczać trochę jabłka/jabłek."
+    },
+    {
+      "hanzi": "有的",
+      "pinyin": "yǒude",
+      "meaning": "some; some of them",
+      "example": "有的人喜欢茶，有的人喜欢咖啡。",
+      "example_pinyin": "Yǒude rén xǐhuan chá, yǒude rén xǐhuan kāfēi.",
+      "example_meaning": "Some people like tea; some like coffee.",
+      "family": "有的…有的… yǒude…yǒude… = some…others…; 有些人 yǒuxiē rén = some people; 有时候 yǒu shíhou = sometimes.",
+      "notes": "有 yǒu = have; 的 de pozwala wskazać pewne osoby/rzeczy z grupy. 有的 nie znaczy „have to”. Obowiązek może wyrażać 得 děi, 要 yào lub 必须 bìxū. Nie myl 的 de, 得 de/děi i 地 de."
+    },
+    {
+      "hanzi": "有点儿",
+      "pinyin": "yǒudiǎnr",
+      "meaning": "a little; somewhat",
+      "example": "我有点儿累。",
+      "example_pinyin": "Wǒ yǒudiǎnr lèi.",
+      "example_meaning": "I'm a little tired.",
+      "family": "有点儿冷 yǒudiǎnr lěng = a bit cold; 有点儿贵 yǒudiǎnr guì = a bit expensive; 有点儿忙 yǒudiǎnr máng = a bit busy.",
+      "notes": "有点儿 + przymiotnik często opisuje niepożądany stan. 有点儿慢 yǒudiǎnr màn = a bit slow; 慢一点儿 màn yìdiǎnr = slower. 我肚子有点儿疼 Wǒ dùzi yǒudiǎnr téng = My stomach hurts a little."
+    },
+    {
+      "hanzi": "有些",
+      "pinyin": "yǒuxiē",
+      "meaning": "some; somewhat",
+      "example": "有些人很安静。",
+      "example_pinyin": "Yǒuxiē rén hěn ānjìng.",
+      "example_meaning": "Some people are very quiet.",
+      "family": "有些时候 yǒuxiē shíhou = at certain times; 有些地方 yǒuxiē dìfang = some places; 有些事 yǒuxiē shì = some things; 有些冷 yǒuxiē lěng = somewhat cold.",
+      "notes": "一些 yìxiē podkreśla ilość, 有些 yǒuxiē często część zbioru. 我买了一些苹果 Wǒ mǎi le yìxiē píngguǒ = I bought some apples. 有些苹果很甜 Yǒuxiē píngguǒ hěn tián = Some apples are sweet."
+    },
+    {
+      "hanzi": "有时候",
+      "pinyin": "yǒu shíhou",
+      "meaning": "sometimes",
+      "example": "我有时候骑共享单车。",
+      "example_pinyin": "Wǒ yǒu shíhou qí gòngxiǎng dānchē.",
+      "example_meaning": "I sometimes ride a shared bicycle.",
+      "family": "有时 yǒushí = sometimes; 有些时候 yǒuxiē shíhou = at certain times; 偶尔 ǒu'ěr = occasionally; 什么时候 shénme shíhou = when.",
+      "notes": "有时候 jest bardzo naturalne w rozmowie; 有时 krótsze, częste też w piśmie. 偶尔 podkreśla rzadsze występowanie. 有些时候 nie jest jedynym sposobem powiedzenia „sometimes”."
+    },
+    {
+      "hanzi": "雨",
+      "pinyin": "yǔ",
+      "meaning": "rain",
+      "example": "今天下雨。",
+      "example_pinyin": "Jīntiān xià yǔ.",
+      "example_meaning": "It's raining today.",
+      "family": "下雨 xià yǔ = rain; 雨天 yǔtiān = rainy day; 雨衣 yǔyī = raincoat; 雨伞 yǔsǎn = umbrella; 大雨 dà yǔ = heavy rain.",
+      "notes": "雨 yǔ i 两 liǎng wyglądają podobnie, ale wewnątrz 雨 widać cztery krople. Rodzina pogodowa z 雨 u góry: 雪 xuě snow, 霜 shuāng frost, 露 lù dew, 雷 léi thunder. 下雪 xià xuě = snow."
+    },
+    {
+      "hanzi": "远",
+      "pinyin": "yuǎn",
+      "meaning": "far; distant",
+      "example": "我家离学校不远。",
+      "example_pinyin": "Wǒ jiā lí xuéxiào bù yuǎn.",
+      "example_meaning": "My home isn't far from school.",
+      "family": "很远 hěn yuǎn = far/very far; 远方 yuǎnfāng = a distant place; 永远 yǒngyuǎn = forever; 不远 bù yuǎn = not far.",
+      "notes": "W uproszczonym zapisie 远 (辶 + 元) i 园 (囗 + 元) widać 元 yuán. Ich formy tradycyjne 遠 i 園 mają 袁 yuán. W 完 wán (finish) pod 宀 także widać 元. 近 jìn = near, 进 jìn = enter: ten sam dźwięk, inne znaki. 学校很远 Xuéxiào hěn yuǎn = The school is far."
+    },
+    {
+      "hanzi": "月",
+      "pinyin": "yuè",
+      "meaning": "moon; month",
+      "example": "十月。",
+      "example_pinyin": "Shí yuè.",
+      "example_meaning": "October.",
+      "family": "月亮 yuèliang = moon; 一月 yīyuè = January; 每个月 měi ge yuè = every month; 月光 yuèguāng = moonlight; 这个月 zhège yuè = this month; 上个月 shàng ge yuè = last month; 下个月 xià ge yuè = next month.",
+      "notes": "月 yuè i 日 rì (sun/day) to para czasu. Element podobny do 月 w 胖 pàng (fat), 脸 liǎn (face), 腿 tuǐ (leg) pochodzi od 肉 ròu (flesh), nie od księżyca. Nie każdy komponent 月 ma tę samą historię."
+    },
+    {
+      "hanzi": "再",
+      "pinyin": "zài",
+      "meaning": "again; then; more",
+      "example": "请再说一次。",
+      "example_pinyin": "Qǐng zài shuō yí cì.",
+      "example_meaning": "Please say it again.",
+      "family": "再见 zàijiàn = goodbye; 再次 zàicì = once again; 再说 zài shuō = say again / discuss later; 不再 bú zài = no longer.",
+      "notes": "再 = powtórzenie, 在 zài = miejsce lub trwająca czynność. 我们下周再来 Wǒmen xià zhōu zài lái = We'll come again next week. 他又来了 Tā yòu lái le = He came again. 再 zwykle dotyczy kolejnego powtórzenia, 又 yòu często już zaistniałego."
+    },
+    {
+      "hanzi": "在",
+      "pinyin": "zài",
+      "meaning": "at; in; ongoing action",
+      "example": "我在家。他在吃饭。",
+      "example_pinyin": "Wǒ zài jiā. Tā zài chīfàn.",
+      "example_meaning": "I'm at home. He is eating.",
+      "family": "现在 xiànzài = now; 正在 zhèngzài = be in the middle of; 在家 zài jiā = at home; 存在 cúnzài = exist.",
+      "notes": "我现在住在苏州 Wǒ xiànzài zhù zài Sūzhōu = I now live in Suzhou. 我们在这里吃饭 Wǒmen zài zhèlǐ chīfàn = We eat here. 我们再来这里吃饭 Wǒmen zài lái zhèlǐ chīfàn = We'll come here to eat again."
+    },
+    {
+      "hanzi": "早",
+      "pinyin": "zǎo",
+      "meaning": "early; morning",
+      "example": "早上好！",
+      "example_pinyin": "Zǎoshang hǎo!",
+      "example_meaning": "Good morning!",
+      "family": "早上 zǎoshang = morning; 早饭 zǎofàn = breakfast; 早点 zǎodiǎn = breakfast / earlier; 早就 zǎojiù = already, long before.",
+      "notes": "草 cǎo (grass) ma 艹 nad 早; 旱 hàn (drought) ma pod 日 znak 干, nie 十. 早点儿来 Zǎo diǎnr lái = Come earlier. 我早上喝咖啡 Wǒ zǎoshang hē kāfēi = I drink coffee in the morning."
+    },
+    {
+      "hanzi": "怎么",
+      "pinyin": "zěnme",
+      "meaning": "how; why; what's wrong",
+      "example": "你怎么去学校？",
+      "example_pinyin": "Nǐ zěnme qù xuéxiào?",
+      "example_meaning": "How do you get to school?",
+      "family": "怎么走 zěnme zǒu = how to get there; 为什么 wèishénme = why; 怎么了 zěnme le = what's wrong; 什么 shénme = what; 怎么样 zěnmeyàng = how is it.",
+      "notes": "怎 zěn zawiera 乍 i 心; 作 zuò ma 亻 i 乍. 么 me jest częścią tych wyrazów, nie samodzielną partykułą pytającą jak 吗 ma. 你怎么不吃？Nǐ zěnme bù chī? = Why aren't you eating?"
+    },
+    {
+      "hanzi": "怎么样",
+      "pinyin": "zěnmeyàng",
+      "meaning": "how is it; how about",
+      "example": "今天天气怎么样？",
+      "example_pinyin": "Jīntiān tiānqì zěnmeyàng?",
+      "example_meaning": "How is the weather today?",
+      "family": "这样 zhèyàng = like this; 那样 nàyàng = like that; 一样 yíyàng = same; 样子 yàngzi = appearance.",
+      "notes": "怎么 pyta o sposób działania; 怎么样 o ocenę, stan lub propozycję. 这个台灯怎么样？Zhège táidēng zěnmeyàng? = How about this desk lamp? 样 yàng = 木 + 羊; 洋 yáng = 氵 + 羊 (ocean)."
+    },
+    {
+      "hanzi": "找",
+      "pinyin": "zhǎo",
+      "meaning": "look for; give change",
+      "example": "我在找我的手机。",
+      "example_pinyin": "Wǒ zài zhǎo wǒ de shǒujī.",
+      "example_meaning": "I'm looking for my phone.",
+      "family": "找到 zhǎodào = find; 找人 zhǎo rén = look for someone; 找钱 zhǎo qián = give change; 寻找 xúnzhǎo = search.",
+      "notes": "找 = 扌 + 戈; porównaj z 我 wǒ (I). 找 opisuje szukanie, 找到 wynik: 我找到了 Wǒ zhǎodào le = I found it. 划 ma różne czytania: 划船 huá chuán = row a boat; 计划 jìhuà = plan."
+    },
+    {
+      "hanzi": "这",
+      "pinyin": "zhè",
+      "meaning": "this",
+      "example": "这是我的书。",
+      "example_pinyin": "Zhè shì wǒ de shū.",
+      "example_meaning": "This is my book.",
+      "family": "这个 zhège = this one; 这里 zhèlǐ = here; 这些 zhèxiē = these; 这样 zhèyàng = like this; 这么 zhème = so / this much.",
+      "notes": "这 zawiera 辶 i 文; 还 hái (still/also) zawiera 辶 i 不. 那 nà = that. 这 i 那 wskazują blisko/daleko od przyjętego punktu odniesienia. 哪里 nǎlǐ = where."
+    },
+    {
+      "hanzi": "样",
+      "pinyin": "yàng",
+      "meaning": "kind; manner; appearance",
+      "example": "苏州和上海不一样。",
+      "example_pinyin": "Sūzhōu hé Shànghǎi bù yíyàng.",
+      "example_meaning": "Suzhou and Shanghai are different.",
+      "family": "这样 zhèyàng = this way; 那样 nàyàng = that way; 一样 yíyàng = same; 不一样 bù yíyàng = different; 样子 yàngzi = appearance; 样品 yàngpǐn = sample; 各种各样 gè zhǒng gè yàng = all kinds of.",
+      "notes": "跟…一样 gēn…yíyàng = the same as…: 我的和你的一样 Wǒ de hé nǐ de yíyàng = Mine is the same as yours. 这样做 zhèyàng zuò = do it this way. Rodzina kształtu 羊 yáng: 样 yàng, 洋 yáng; samego 样 zwykle nie używamy jako „razem”."
+    },
+    {
+      "hanzi": "这里",
+      "pinyin": "zhèlǐ",
+      "meaning": "here; this place",
+      "example": "请来这里。",
+      "example_pinyin": "Qǐng lái zhèlǐ.",
+      "example_meaning": "Please come here.",
+      "family": "那里 nàlǐ = there; 哪里 nǎlǐ = where; 家里 jiālǐ = at home; 里面 lǐmiàn = inside; 这里边 zhèlǐbian = in here; 这边 zhèbiān = this side / here; 这儿 zhèr = here.",
+      "notes": "这里 wskazuje miejsce, 这边 także stronę/kierunek: 来这边 Lái zhèbiān = Come this way. 我很喜欢这里 Wǒ hěn xǐhuan zhèlǐ = I really like it here. 里 lǐ można wizualnie rozłożyć na 田 i 土; nie utożsamiaj go z całym środkiem 黑 hēi."
+    },
+    {
+      "hanzi": "真",
+      "pinyin": "zhēn",
+      "meaning": "true; real; really",
+      "example": "真的吗？真好！",
+      "example_pinyin": "Zhēn de ma? Zhēn hǎo!",
+      "example_meaning": "Really? That's great!",
+      "family": "真的 zhēn de = really / real; 认真 rènzhēn = earnest, careful; 真正 zhēnzhèng = genuine; 天真 tiānzhēn = innocent / naive; 假 jiǎ = fake.",
+      "notes": "Porównaj 真 zhēn, 直 zhí (straight), 具 jù (tool, w 工具 gōngjù). Nie mają identycznych dolnych kresek. 真正 zhēnzhèng = genuine, a 正在 zhèngzài = doing right now. 这里真漂亮 Zhèlǐ zhēn piàoliang = It's really beautiful here."
+    },
+    {
+      "hanzi": "正在",
+      "pinyin": "zhèngzài",
+      "meaning": "in the middle of doing",
+      "example": "他正在吃饭。",
+      "example_pinyin": "Tā zhèngzài chīfàn.",
+      "example_meaning": "He is eating right now.",
+      "family": "正在…呢 zhèngzài…ne = currently doing…; 正好 zhènghǎo = just right; 正在忙 zhèngzài máng = currently busy.",
+      "notes": "在 także oznacza trwanie: 我在买东西 Wǒ zài mǎi dōngxi. 我正在买东西 Wǒ zhèngzài mǎi dōngxi mocniej podkreśla czynność w toku. 现在 xiànzài to określenie czasu „teraz”, 正在 to marker trwania. 政 zhèng (politics) zawiera 正."
+    },
+    {
+      "hanzi": "只",
+      "pinyin": "zhǐ / zhī",
+      "meaning": "only / classifier",
+      "example": "我只有一个。一只猫。",
+      "example_pinyin": "Wǒ zhǐ yǒu yí ge. Yì zhī māo.",
+      "example_meaning": "I only have one. One cat.",
+      "family": "只有 zhǐyǒu = only have; 只是 zhǐshì = just; 两只猫 liǎng zhī māo = two cats; 一只手 yì zhī shǒu = one hand; 一只鞋 yì zhī xié = one shoe.",
+      "notes": "只 zhǐ ogranicza: 我只喝黑咖啡 Wǒ zhǐ hē hēi kāfēi = I only drink black coffee. 只 zhī liczy m.in. zwierzęta i pojedyncze elementy pary. 一双鞋 yì shuāng xié = a pair of shoes. Porównaj 兄 xiōng (elder brother) i 贝 bèi (shell)."
+    },
+    {
+      "hanzi": "只是",
+      "pinyin": "zhǐshì",
+      "meaning": "just; only; it's just that",
+      "example": "我只是开玩笑。",
+      "example_pinyin": "Wǒ zhǐshì kāi wánxiào.",
+      "example_meaning": "I'm just joking.",
+      "family": "只是…而已 zhǐshì…éryǐ = just…that's all; 只是说说 zhǐshì shuōshuo = just saying; 不只是 bù zhǐshì = not only.",
+      "notes": "这个台灯很好，只是有点儿贵 Zhège táidēng hěn hǎo, zhǐshì yǒudiǎnr guì = This lamp is good; it's just a bit expensive. 只有 zhǐyǒu = only have; 但是 dànshì = but. 是 shì i 足 zú (foot) różnią się też górą: 日 / 口."
+    },
+    {
+      "hanzi": "但",
+      "pinyin": "dàn",
+      "meaning": "but; however",
+      "example": "我想去，但我很忙。",
+      "example_pinyin": "Wǒ xiǎng qù, dàn wǒ hěn máng.",
+      "example_meaning": "I want to go, but I'm busy.",
+      "family": "但是 dànshì = but; 不但 búdàn = not only; 但愿 dànyuàn = hope / if only; 但求 dànqiú = only seek.",
+      "notes": "但 = 亻 + 旦; 担 dān (carry) = 扌 + 旦; 胆 dǎn (gallbladder/courage) = 月 + 旦. Samo 但 jest nieco bardziej pisane niż 但是, ale oba są poprawne. 但是今天很忙 Dànshì jīntiān hěn máng = But today I'm busy."
+    },
+    {
+      "hanzi": "知道",
+      "pinyin": "zhīdào",
+      "meaning": "know a fact; be aware",
+      "example": "我知道他的名字。",
+      "example_pinyin": "Wǒ zhīdào tā de míngzi.",
+      "example_meaning": "I know his name.",
+      "family": "不知道 bù zhīdào = don't know; 谁知道 shéi zhīdào = who knows; 知道吗 zhīdào ma = do you know; 通知 tōngzhī = notify / notice.",
+      "notes": "知道 = wiedzieć; 认识 rènshi = znać/rozpoznawać: 我认识她 Wǒ rènshi tā = I know her. 这个字我不认识 Zhège zì wǒ bù rènshi = I don't recognize this character. 知 = 矢 + 口, 和 hé = 禾 + 口. 道 = 辶 + 首; 味道 wèidao = taste/smell. 道 w 知道 bywa neutralne w mowie."
+    },
+    {
+      "hanzi": "住",
+      "pinyin": "zhù",
+      "meaning": "live; stay; retain (result)",
+      "example": "我现在住在苏州。",
+      "example_pinyin": "Wǒ xiànzài zhù zài Sūzhōu.",
+      "example_meaning": "I now live in Suzhou.",
+      "family": "住在 zhù zài = live in; 住房 zhùfáng = housing; 住院 zhùyuàn = be hospitalized; 记住 jìzhù = remember; 停住 tíngzhù = stop.",
+      "notes": "住 = 亻 + 主; 往 wǎng (toward) = 彳 + 主; 注 zhù (pour/note) = 氵 + 主. 位 wèi (position/classifier) ma 立, nie 主. 记住了 Jìzhù le = I've remembered it. 住 w takim połączeniu wyraża utrzymanie rezultatu, nie mieszkanie."
+    },
+    {
+      "hanzi": "桌子",
+      "pinyin": "zhuōzi",
+      "meaning": "table; desk",
+      "example": "书在桌子上。",
+      "example_pinyin": "Shū zài zhuōzi shang.",
+      "example_meaning": "The book is on the table.",
+      "family": "书桌 shūzhuō = desk; 饭桌 fànzhuō = dining table; 桌布 zhuōbù = tablecloth; 桌面 zhuōmiàn = tabletop / desktop.",
+      "notes": "桌 ma na dole 木. Porównaj 掉 diào (drop), które ma 扌 + 卓: podobne fragmenty, nie identyczny cały znak. 椅子在桌子旁边 Yǐzi zài zhuōzi pángbiān = The chair is beside the table. 子 zi jest tu neutralne."
+    },
+    {
+      "hanzi": "字",
+      "pinyin": "zì",
+      "meaning": "character; handwriting",
+      "example": "这个字怎么读？",
+      "example_pinyin": "Zhège zì zěnme dú?",
+      "example_meaning": "How do you read this character?",
+      "family": "汉字 Hànzì = Chinese character; 名字 míngzi = name; 写字 xiězì = write characters; 字典 zìdiǎn = dictionary; 数字 shùzì = number / digit.",
+      "notes": "字 = 宀 + 子; 学 xué także zawiera 子, ale ma inną górę. Obraz „dziecko pod dachem uczy się znaków” może być skojarzeniem, nie ustaloną etymologią. 字 to przede wszystkim znak; „wyraz” to często 词 cí."
+    },
+    {
+      "hanzi": "写",
+      "pinyin": "xiě",
+      "meaning": "write",
+      "example": "我会写。我在练习写字。",
+      "example_pinyin": "Wǒ huì xiě. Wǒ zài liànxí xiězì.",
+      "example_meaning": "I can write. I'm practising handwriting.",
+      "family": "写名字 xiě míngzi = write a name; 写汉字 xiě Hànzì = write Chinese characters; 写作业 xiě zuòyè = do written homework; 写下来 xiě xiàlai = write down.",
+      "notes": "Tak, samo 写 wystarczy, jeśli wiadomo, co piszesz. 写字 nazywa ogólnie pisanie znaków/pismo odręczne. Nie dodawaj 字 automatycznie do każdego 写: 写名字 już ma własny obiekt."
+    },
+    {
+      "hanzi": "昨天",
+      "pinyin": "zuótiān",
+      "meaning": "yesterday",
+      "example": "昨天我去了商店。",
+      "example_pinyin": "Zuótiān wǒ qù le shāngdiàn.",
+      "example_meaning": "Yesterday I went to the shop.",
+      "family": "昨天晚上 zuótiān wǎnshang = last night; 昨天早上 zuótiān zǎoshang = yesterday morning; 前天 qiántiān = the day before yesterday.",
+      "notes": "Oś czasu: 前天 qiántiān → 昨天 zuótiān → 今天 jīntiān → 明天 míngtiān → 后天 hòutiān. 昨 = 日 + 乍; 作 zuò i 怎 zěn też zawierają 乍. Samo 昨 jest najczęstsze w połączeniach."
+    },
+    {
+      "hanzi": "乍",
+      "pinyin": "zhà",
+      "meaning": "suddenly; at first",
+      "example": "乍一看。",
+      "example_pinyin": "Zhà yí kàn.",
+      "example_meaning": "At first glance.",
+      "family": "乍冷乍热 zhà lěng zhà rè = suddenly cold, suddenly hot; 昨 zuó = yesterday; 作 zuò = do; 怎 zěn = how; 炸 zhà = explode; 窄 zhǎi = narrow.",
+      "notes": "To przede wszystkim przydatny wspólny element kształtu. Nie wszystkie znaki czyta się tak samo. 炸 ma też wymowę zhá, np. 炸鸡 zhá jī = fried chicken. Samo 乍 jest mniej pilne do aktywnej nauki niż 昨天 / 怎么 / 工作."
+    },
+    {
+      "hanzi": "坐",
+      "pinyin": "zuò",
+      "meaning": "sit; travel by vehicle",
+      "example": "请坐。我坐公交车。",
+      "example_pinyin": "Qǐng zuò. Wǒ zuò gōngjiāochē.",
+      "example_meaning": "Please sit. I take the bus.",
+      "family": "坐下 zuòxià = sit down; 坐车 zuò chē = travel by car/vehicle; 坐飞机 zuò fēijī = fly; 坐地铁 zuò dìtiě = take the metro.",
+      "notes": "坐 wygląda jak dwie osoby 人 nad 土. 座 zuò (seat / classifier) ma dodatkowe 广: 一座桥 yí zuò qiáo = a bridge. 从 cóng = from, też ma dwie osoby. 我坐地铁去学校 Wǒ zuò dìtiě qù xuéxiào. 坐出租车 zuò chūzūchē lub 打的 dǎdī, nie 坐打的."
+    },
+    {
+      "hanzi": "做",
+      "pinyin": "zuò",
+      "meaning": "do; make; cook",
+      "example": "你在做什么？",
+      "example_pinyin": "Nǐ zài zuò shénme?",
+      "example_meaning": "What are you doing?",
+      "family": "做饭 zuòfàn = cook; 做作业 zuò zuòyè = do homework; 做什么 zuò shénme = do what; 做好 zuòhǎo = do well / finish preparing.",
+      "notes": "做 = 亻 + 故. Porównaj cztery zuò: 坐 sit, 座 seat, 做 do/make, 作 do/work. „做 konkretne, 作 abstrakcyjne” to tylko pomocnicza reguła, nie prawo. Ucz się połączeń: 工作 gōngzuò = work, 作业 zuòyè = homework; 做作业 zawiera oba znaki!"
+    },
+    {
+      "hanzi": "爱好",
+      "pinyin": "àihào",
+      "meaning": "hobby; be fond of",
+      "example": "我的爱好是看书。",
+      "example_pinyin": "Wǒ de àihào shì kànshū.",
+      "example_meaning": "My hobby is reading.",
+      "family": "有什么爱好 yǒu shénme àihào = what hobbies; 爱好运动 àihào yùndòng = be fond of sport; 业余爱好 yèyú àihào = hobby.",
+      "notes": "好 hǎo = good, ale 好 hào = be fond of: 爱好 àihào. 爱好 może być rzeczownikiem i czasownikiem; 喜欢 xǐhuan to szeroki, codzienny czasownik „lubić”. 我喜欢骑自行车 Wǒ xǐhuan qí zìxíngchē = I like cycling."
+    },
+    {
+      "hanzi": "白色",
+      "pinyin": "báisè",
+      "meaning": "white; the colour white",
+      "example": "她穿白色衣服。",
+      "example_pinyin": "Tā chuān báisè yīfu.",
+      "example_meaning": "She wears white clothes.",
+      "family": "白天 báitiān = daytime; 明白 míngbai = understand; 白色衣服 báisè yīfu = white clothes; 红色 hóngsè = red; 黑色 hēisè = black; 蓝色 lánsè = blue.",
+      "notes": "白 bái (white) i 百 bǎi (hundred): 百 ma dodatkową poziomą kreskę u góry. 白 ma 5 kresek, 百 ma 6. 白 i 白色 nie różnią się po prostu formalnością: 白色 wyraźnie nazywa kolor. 白色的台灯 báisè de táidēng = a white desk lamp."
+    },
+    {
+      "hanzi": "班",
+      "pinyin": "bān",
+      "meaning": "class; work shift",
+      "example": "我在三班。",
+      "example_pinyin": "Wǒ zài sān bān.",
+      "example_meaning": "I'm in Class Three.",
+      "family": "班级 bānjí = class; 上班 shàngbān = go to work / be at work; 下班 xiàbān = finish work; 班长 bānzhǎng = class monitor; 同班 tóngbān = in the same class.",
+      "notes": "班 bān i 斑 bān (spot/stripe) mają podobne boki, ale inny środek; w 斑 jest 文. 搬 bān = move/carry, 般 bān w 一般 yìbān = usual. 我班里有八个同学 Wǒ bān li yǒu bā ge tóngxué = There are eight classmates in my class. 班级 nie oznacza automatycznie rocznika."
+    },
+    {
+      "hanzi": "帮",
+      "pinyin": "bāng",
+      "meaning": "help; assist",
+      "example": "请帮我一下。",
+      "example_pinyin": "Qǐng bāng wǒ yíxià.",
+      "example_meaning": "Please help me a moment.",
+      "family": "帮忙 bāngmáng = help; 帮我 bāng wǒ = help me; 帮助 bāngzhù = assist; 帮手 bāngshǒu = helper; 帮不了 bāng bu liǎo = cannot help.",
+      "notes": "帮 = 邦 + 巾; 绑 bǎng (tie) = 纟 + 邦. 邦 bāng = state/country (mainly compounds). 你能帮我吗？Nǐ néng bāng wǒ ma? = Can you help me? W potencjalnym 帮不了 środkowe 不 zwykle jest neutralne."
+    },
+    {
+      "hanzi": "帮忙",
+      "pinyin": "bāngmáng",
+      "meaning": "help; lend a hand",
+      "example": "你能帮忙吗？",
+      "example_pinyin": "Nǐ néng bāngmáng ma?",
+      "example_meaning": "Can you help?",
+      "family": "帮个忙 bāng ge máng = do a favour; 帮大忙 bāng dà máng = be a great help; 请帮忙 qǐng bāngmáng = please help; 帮忙做事 bāngmáng zuòshì = help with things.",
+      "notes": "Powiedz 帮我 bāng wǒ, nie 帮忙我. 你能帮我一个忙吗？Nǐ néng bāng wǒ yí ge máng ma? = Can you do me a favour? 忙 máng = 忄 + 亡; 忘 wàng (forget) = 亡 + 心. 帮助 jest często bardziej formalne niż 帮忙."
+    },
+    {
+      "hanzi": "包",
+      "pinyin": "bāo",
+      "meaning": "bag; wrap; include",
+      "example": "我买了一个包。",
+      "example_pinyin": "Wǒ mǎi le yí ge bāo.",
+      "example_meaning": "I bought a bag.",
+      "family": "包子 bāozi = steamed bun; 书包 shūbāo = schoolbag; 面包 miànbāo = bread; 包括 bāokuò = include; 包起来 bāo qǐlái = wrap up.",
+      "notes": "Rodzina 包: 抱 bào = hug (扌), 饱 bǎo = full (饣), 跑 pǎo = run (足), 炮 pào = cannon (火). Wspólny element pomaga z dźwiękiem, nie ustala identycznego tonu. 菜包子 cài bāozi = vegetable bun; 我吃饱了 Wǒ chī bǎo le = I'm full."
+    },
+    {
+      "hanzi": "比",
+      "pinyin": "bǐ",
+      "meaning": "than; compare; ratio",
+      "example": "我比你高。",
+      "example_pinyin": "Wǒ bǐ nǐ gāo.",
+      "example_meaning": "I'm taller than you.",
+      "family": "比较 bǐjiào = compare / relatively; 比赛 bǐsài = competition; 比如 bǐrú = for example; 比不上 bǐ bu shàng = not compare favourably with.",
+      "notes": "A + 比 + B + przymiotnik. 这个台灯比那个便宜 Zhège táidēng bǐ nàge piányi = This lamp is cheaper than that one. Zwykle bez 很 bezpośrednio przed przymiotnikiem. 比 bǐ i 北 běi (north) mają trzeci ton i różne zakończenia sylaby: -i w bǐ i -ei w běi. 批 pī = criticize; 毕 bì = finish."
+    },
+    {
+      "hanzi": "如",
+      "pinyin": "rú",
+      "meaning": "like; as; if",
+      "example": "如果明天下雨，我在家学习。",
+      "example_pinyin": "Rúguǒ míngtiān xià yǔ, wǒ zài jiā xuéxí.",
+      "example_meaning": "If it rains tomorrow, I'll study at home.",
+      "family": "如果 rúguǒ = if; 比如 bǐrú = for example; 如何 rúhé = how; 如今 rújīn = nowadays; 如常 rúcháng = as usual.",
+      "notes": "如 = 女 + 口; 好 hǎo = 女 + 子; 加 jiā = 力 + 口. 如鱼得水 rú yú dé shuǐ = like a fish in water, in one's element. Poprawne: 他在这里如鱼得水 Tā zài zhèlǐ rú yú dé shuǐ. Nie łącz tego mechanicznie z 他像鱼."
+    },
+    {
+      "hanzi": "别",
+      "pinyin": "bié",
+      "meaning": "don't; other; separate",
+      "example": "别忘了！",
+      "example_pinyin": "Bié wàng le!",
+      "example_meaning": "Don't forget!",
+      "family": "别人 biéren = other people; 别的 biéde = other; 别走 bié zǒu = don't go; 区别 qūbié = difference; 特别 tèbié = special / especially.",
+      "notes": "别 + czasownik tworzy zakaz/prośbę: 别说 Bié shuō = Don't say it. 还要别的吗？Hái yào biéde ma? = Anything else? Porównaj 别 z 另 lìng (another), 拐 guǎi (turn) i 到 dào (arrive): podobne części, nie identyczne znaki."
+    },
+    {
+      "hanzi": "不错",
+      "pinyin": "búcuò",
+      "meaning": "not bad; quite good",
+      "example": "这个菜不错。",
+      "example_pinyin": "Zhège cài búcuò.",
+      "example_meaning": "This dish is pretty good.",
+      "family": "很不错 hěn búcuò = quite good; 错字 cuòzì = incorrectly written character; 没错 méi cuò = that's right; 不错过 bú cuòguò = not miss out.",
+      "notes": "不错 jest pozytywne, 不好 bù hǎo negatywne. 错 = 钅 + 昔; 借 jiè (borrow) = 亻 + 昔. 不 bù zmienia ton na bú przed czwartym tonem: 不错 búcuò. Sama część 昔 nie oznacza, że wymowa będzie taka sama."
+    },
+    {
+      "hanzi": "不好意思",
+      "pinyin": "bù hǎoyìsi",
+      "meaning": "sorry; excuse me; embarrassed",
+      "example": "不好意思，我来晚了。",
+      "example_pinyin": "Bù hǎoyìsi, wǒ lái wǎn le.",
+      "example_meaning": "Sorry, I'm late.",
+      "family": "有意思 yǒu yìsi = interesting; 没意思 méi yìsi = boring / pointless; 什么意思 shénme yìsi = what does it mean; 小意思 xiǎo yìsi = no big deal.",
+      "notes": "不好意思 bywa lekkim „przepraszam” lub „jest mi niezręcznie”. 对不起 duìbuqǐ częściej wyraża mocniejsze przeprosiny, zależnie od sytuacji. 不好意思，请问… Bù hǎoyìsi, qǐngwèn… = Excuse me, may I ask… 意 yì i 思 sī mają 心, ale różną górę."
+    },
+    {
+      "hanzi": "长",
+      "pinyin": "cháng / zhǎng",
+      "meaning": "long / grow; head; elder",
+      "example": "这条路很长。我长大了。",
+      "example_pinyin": "Zhè tiáo lù hěn cháng. Wǒ zhǎngdà le.",
+      "example_meaning": "This road is long. I've grown up.",
+      "family": "很长 hěn cháng = long; 长度 chángdù = length; 长大 zhǎngdà = grow up; 校长 xiàozhǎng = principal; 家长 jiāzhǎng = parent; 班长 bānzhǎng = class monitor.",
+      "notes": "Dwa czytania jednego znaku. 张 zhāng = 弓 + 长, m.in. klasyfikator: 一张桌子 yì zhāng zhuōzi = one table. 老 lǎo = old. 孩子长大了 Háizi zhǎngdà le = The child has grown up."
+    },
+    {
+      "hanzi": "车站",
+      "pinyin": "chēzhàn",
+      "meaning": "station; stop",
+      "example": "火车站在哪儿？",
+      "example_pinyin": "Huǒchēzhàn zài nǎr?",
+      "example_meaning": "Where is the train station?",
+      "family": "火车站 huǒchēzhàn = train station; 汽车站 qìchēzhàn = bus station; 地铁站 dìtiězhàn = metro station; 公交车站 gōngjiāochēzhàn = bus stop; 公交车 gōngjiāochē = bus.",
+      "notes": "站 zhàn to zarówno „stać”, jak i „stacja/przystanek”, zależnie od użycia. 站 = 立 + 占; 点 diǎn zawiera 占 + 灬. Porównaj 车 chē (vehicle) i 东 dōng (east). 地铁站在哪儿？Dìtiězhàn zài nǎr? = Where is the metro station?"
+    },
+    {
+      "hanzi": "出",
+      "pinyin": "chū",
+      "meaning": "go out; emerge; produce",
+      "example": "他出去了。",
+      "example_pinyin": "Tā chūqù le.",
+      "example_meaning": "He went out.",
+      "family": "出去 chūqù = go out; 出来 chūlái = come out; 出口 chūkǒu = exit; 出发 chūfā = set off; 出租车 chūzūchē = taxi; 演出 yǎnchū = performance.",
+      "notes": "出 przypomina dwa 山 shān (mountain) jedno nad drugim: to skojarzenie wzrokowe, nie jego etymologia. 击 jī (hit) też jest podobne. 出来吧 Chūlái ba = Come out. Kierunek zależy od 来 / 去 i punktu odniesienia."
+    },
+    {
+      "hanzi": "出来",
+      "pinyin": "chūlái",
+      "meaning": "come out; emerge",
+      "example": "请出来一下。",
+      "example_pinyin": "Qǐng chūlái yíxià.",
+      "example_meaning": "Please come out for a moment.",
+      "family": "出来吧 chūlái ba = come out; 拿出来 ná chūlái = take out; 看得出来 kàn de chūlái = can tell; 想出来 xiǎng chūlái = think up.",
+      "notes": "来 lái wskazuje ruch w stronę mówiącego lub przyjętego punktu odniesienia. Nie zawsze chodzi o fizyczne wyjście: 想出来 = wymyślić, 看得出来 = da się zauważyć. 来 lái i 米 mǐ (rice) wyglądają podobnie, ale różnią się kreskami."
+    },
+    {
+      "hanzi": "出去",
+      "pinyin": "chūqù",
+      "meaning": "go out; leave",
+      "example": "我出去一下。",
+      "example_pinyin": "Wǒ chūqù yíxià.",
+      "example_meaning": "I'm going out for a bit.",
+      "family": "出去走走 chūqù zǒuzou = go out for a walk; 拿出去 ná chūqù = take out; 走出去 zǒu chūqù = walk out; 别出去 bié chūqù = don't go out.",
+      "notes": "去 qù kieruje ruch od punktu odniesienia, 来 lái ku niemu. 去 ma 土 + 厶, 云 yún (cloud) ma 二 + 厶. 我出去走走 Wǒ chūqù zǒuzou = I'll go out for a walk. Powtórzenie 走走 nadaje lekki, krótkotrwały charakter czynności."
+    }
+  ],
+  "visualFamilies": [
+    {
+      "title": "木 · 本 · 末 · 未",
+      "forms": [
+        "木",
+        "本",
+        "末",
+        "未"
+      ],
+      "notes": "W 本 krótka kreska przecina pień u dołu. W 末 dłuższa z dwóch poziomych kresek jest na górze, a w 未 pod nią. Położenie i długość kresek pomagają rozpoznać znak.",
+      "examples": [
+        {
+          "hanzi": "木",
+          "pinyin": "mù",
+          "meaning": "wood"
+        },
+        {
+          "hanzi": "本",
+          "pinyin": "běn",
+          "meaning": "root; book"
+        },
+        {
+          "hanzi": "末",
+          "pinyin": "mò",
+          "meaning": "end"
+        },
+        {
+          "hanzi": "未",
+          "pinyin": "wèi",
+          "meaning": "not yet"
+        }
+      ]
+    },
+    {
+      "title": "般 · 船",
+      "forms": [
+        "般",
+        "船"
+      ],
+      "notes": "Oba znaki mają 舟 po lewej. Zwróć uwagę na prawą stronę i przeczytaj je w słowach 一般 yìbān i 划船 huá chuán.",
+      "examples": [
+        {
+          "hanzi": "般",
+          "pinyin": "bān",
+          "meaning": "kind; sort"
+        },
+        {
+          "hanzi": "船",
+          "pinyin": "chuán",
+          "meaning": "boat"
+        }
+      ]
+    },
+    {
+      "title": "椅 · 骑 · 奇",
+      "forms": [
+        "椅",
+        "骑",
+        "奇"
+      ],
+      "notes": "Wspólny element 奇 ma wymowę qí. Po lewej stronie 椅 jest 木, a w 骑 występuje 马. Porównaj całe sylaby yǐ i qí.",
+      "examples": [
+        {
+          "hanzi": "椅",
+          "pinyin": "yǐ",
+          "meaning": "chair"
+        },
+        {
+          "hanzi": "骑",
+          "pinyin": "qí",
+          "meaning": "ride"
+        },
+        {
+          "hanzi": "奇",
+          "pinyin": "qí",
+          "meaning": "strange"
+        }
+      ]
+    },
+    {
+      "title": "远 · 园 · 完 · 元",
+      "forms": [
+        "远",
+        "园",
+        "完",
+        "元"
+      ],
+      "notes": "W dzisiejszym uproszczonym zapisie 远 i 园 widoczny jest 元. Tradycyjne 遠 i 園 mają 袁. W 完 element 元 jest pod 宀. Porównanie uczy rozpoznawać współczesne kształty.",
+      "examples": [
+        {
+          "hanzi": "远",
+          "pinyin": "yuǎn",
+          "meaning": "far"
+        },
+        {
+          "hanzi": "园",
+          "pinyin": "yuán",
+          "meaning": "garden"
+        },
+        {
+          "hanzi": "完",
+          "pinyin": "wán",
+          "meaning": "finish"
+        },
+        {
+          "hanzi": "元",
+          "pinyin": "yuán",
+          "meaning": "yuan"
+        }
+      ]
+    },
+    {
+      "title": "样 · 洋 · 羊",
+      "forms": [
+        "样",
+        "洋",
+        "羊"
+      ],
+      "notes": "样 ma 木 po lewej, a 洋 ma 氵. Po prawej oba znaki mają 羊. Porównaj czwarty ton w 样 z drugim w 洋 i 羊.",
+      "examples": [
+        {
+          "hanzi": "样",
+          "pinyin": "yàng",
+          "meaning": "kind; manner"
+        },
+        {
+          "hanzi": "洋",
+          "pinyin": "yáng",
+          "meaning": "ocean"
+        },
+        {
+          "hanzi": "羊",
+          "pinyin": "yáng",
+          "meaning": "sheep"
+        }
+      ]
+    },
+    {
+      "title": "昨 · 作 · 怎 · 炸 · 窄",
+      "forms": [
+        "昨",
+        "作",
+        "怎",
+        "炸",
+        "窄"
+      ],
+      "notes": "Wspólny element 乍 jest po prawej w 昨, 作 i 炸 oraz u góry w 怎 i u dołu w 窄. 炸 czyta się zhà w 爆炸 bàozhà i zhá w 炸鸡 zhá jī.",
+      "examples": [
+        {
+          "hanzi": "昨",
+          "pinyin": "zuó",
+          "meaning": "yesterday"
+        },
+        {
+          "hanzi": "作",
+          "pinyin": "zuò",
+          "meaning": "do"
+        },
+        {
+          "hanzi": "怎",
+          "pinyin": "zěn",
+          "meaning": "how"
+        },
+        {
+          "hanzi": "炸",
+          "pinyin": "zhà / zhá",
+          "meaning": "explode / deep-fry"
+        },
+        {
+          "hanzi": "窄",
+          "pinyin": "zhǎi",
+          "meaning": "narrow"
+        }
+      ]
+    },
+    {
+      "title": "住 · 往 · 注 · 主",
+      "forms": [
+        "住",
+        "往",
+        "注",
+        "主"
+      ],
+      "notes": "W zapisie tych znaków porównaj wspólną część 主 z elementami po lewej: 亻 w 住, 彳 w 往 oraz 氵 w 注. Zwróć uwagę na różne odczyty całych znaków.",
+      "examples": [
+        {
+          "hanzi": "住",
+          "pinyin": "zhù",
+          "meaning": "live; stay"
+        },
+        {
+          "hanzi": "往",
+          "pinyin": "wǎng",
+          "meaning": "toward"
+        },
+        {
+          "hanzi": "注",
+          "pinyin": "zhù",
+          "meaning": "note; pour"
+        },
+        {
+          "hanzi": "主",
+          "pinyin": "zhǔ",
+          "meaning": "main; master"
+        }
+      ]
+    },
+    {
+      "title": "包 · 抱 · 饱 · 跑 · 炮",
+      "forms": [
+        "包",
+        "抱",
+        "饱",
+        "跑",
+        "炮"
+      ],
+      "notes": "包 widać po prawej. Lewa strona pomaga skojarzyć 抱 z dłonią (扌), 饱 z jedzeniem (饣), 跑 ze stopą (⻊), a 炮 z ogniem (火). Porównaj również początek sylaby i ton.",
+      "examples": [
+        {
+          "hanzi": "包",
+          "pinyin": "bāo",
+          "meaning": "wrap; bag"
+        },
+        {
+          "hanzi": "抱",
+          "pinyin": "bào",
+          "meaning": "hug"
+        },
+        {
+          "hanzi": "饱",
+          "pinyin": "bǎo",
+          "meaning": "full"
+        },
+        {
+          "hanzi": "跑",
+          "pinyin": "pǎo",
+          "meaning": "run"
+        },
+        {
+          "hanzi": "炮",
+          "pinyin": "pào",
+          "meaning": "cannon"
+        }
+      ]
+    },
+    {
+      "title": "比 · 北 · 批 · 毕",
+      "forms": [
+        "比",
+        "北",
+        "批",
+        "毕"
+      ],
+      "notes": "比 i 北 można zestawić po kształcie. Współczesny zapis pokazuje 比 po prawej w 批 i u góry w 毕. Porównaj trzeci ton w 比 i 北, pierwszy w 批 oraz czwarty w 毕.",
+      "examples": [
+        {
+          "hanzi": "比",
+          "pinyin": "bǐ",
+          "meaning": "compare"
+        },
+        {
+          "hanzi": "北",
+          "pinyin": "běi",
+          "meaning": "north"
+        },
+        {
+          "hanzi": "批",
+          "pinyin": "pī",
+          "meaning": "criticize"
+        },
+        {
+          "hanzi": "毕",
+          "pinyin": "bì",
+          "meaning": "finish"
+        }
+      ]
+    },
+    {
+      "title": "坐 · 座 · 做 · 作",
+      "forms": [
+        "坐",
+        "座",
+        "做",
+        "作"
+      ],
+      "notes": "W 座 widać 广 nad 坐. 做 i 作 mają 亻 po lewej oraz różne prawe części, 故 i 乍. Wszystkie cztery znaki czyta się zuò. Rozróżniaj je w połączeniach, np. 坐地铁, 一座桥, 做作业 i 工作.",
+      "examples": [
+        {
+          "hanzi": "坐",
+          "pinyin": "zuò",
+          "meaning": "sit"
+        },
+        {
+          "hanzi": "座",
+          "pinyin": "zuò",
+          "meaning": "seat; classifier"
+        },
+        {
+          "hanzi": "做",
+          "pinyin": "zuò",
+          "meaning": "do; make"
+        },
+        {
+          "hanzi": "作",
+          "pinyin": "zuò",
+          "meaning": "do; work"
+        }
+      ]
+    },
+    {
+      "title": "白 · 百 · 日 · 目",
+      "forms": [
+        "白",
+        "百",
+        "日",
+        "目"
+      ],
+      "notes": "白 ma krótką ukośną kreskę na górze, a 百 ma dodatkową poziomą kreskę nad 白. W 日 jest jedna kreska wewnętrzna, w 目 są dwie. To wskazówki do rozpoznawania współczesnych kształtów.",
+      "examples": [
+        {
+          "hanzi": "白",
+          "pinyin": "bái",
+          "meaning": "white"
+        },
+        {
+          "hanzi": "百",
+          "pinyin": "bǎi",
+          "meaning": "hundred"
+        },
+        {
+          "hanzi": "日",
+          "pinyin": "rì",
+          "meaning": "sun; day"
+        },
+        {
+          "hanzi": "目",
+          "pinyin": "mù",
+          "meaning": "eye"
+        }
+      ]
+    },
+    {
+      "title": "再 · 在 · 来 · 米",
+      "forms": [
+        "再",
+        "在",
+        "来",
+        "米"
+      ],
+      "notes": "再 i 在 brzmią zài. 再 wyraża m.in. powtórzenie, a 在 wskazuje miejsce lub czynność w toku. 来 i 米 porównaj po kreskach. W 来 dwie krótkie ukośne kreski są między dwiema poziomymi. W 米 obie są nad jedyną poziomą.",
+      "examples": [
+        {
+          "hanzi": "再",
+          "pinyin": "zài",
+          "meaning": "again"
+        },
+        {
+          "hanzi": "在",
+          "pinyin": "zài",
+          "meaning": "at; in"
+        },
+        {
+          "hanzi": "来",
+          "pinyin": "lái",
+          "meaning": "come"
+        },
+        {
+          "hanzi": "米",
+          "pinyin": "mǐ",
+          "meaning": "rice"
+        }
+      ]
+    }
+  ]
+}
