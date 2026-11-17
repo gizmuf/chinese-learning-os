@@ -14,7 +14,7 @@ const blankAnswer:DiagnosticAnswer={choice:null,draft:'',checked:false};
 const links = [
   {name:'Hanzi checklist', detail:'655 to recognize · 250 to write', href:'/?study=library&hsk=3&level=hsk3#hsk-exam', icon:ListChecks},
   {name:'Vocabulary', detail:'1,000 syllabus entries · HSK 1–3', href:'/?study=library&hsk=3&level=hsk3', icon:BookOpen},
-  {name:'Grammar', detail:'HSK 1–3 syllabus and practice', href:'/?grammar=hsk3', icon:FileText},
+  {name:'Grammar', detail:'HSK 1–3 syllabus and practice', href:'/?grammar=hsk3&grammarScope=exam', icon:FileText},
   {name:'Character families', detail:'Cloud Atlas · HSK 1–3', href:'/?atlas=1&cloud=1&hsk=3&layout=family', icon:Network},
   {name:'Reading Lab', detail:'Read Hanzi, with tones or Pinyin', href:'/?atlas=1&reader=1&hsk=3&aid=tones&chunks=1', icon:BookOpen},
 ] as const;

@@ -20,7 +20,7 @@ Course opens HSK 3 Exam Prep at `/?course=hsk3`. The landing page connects to th
 
 The short diagnostic has eight original tasks, including a two-voice recorded dialogue, reply matching, a word gap, two short passages, a character gap, sentence writing and speaking. Use the previous/next buttons, question picker, horizontal swipe or keyboard arrows to move between tasks. Short diagnostic answers are preserved when moving within the session.
 
-Grammar links all 57 syllabus groups to study cards. Forty-six additions expand previously partial or unmapped groups with explanations, contextual Hanzi and Pinyin, and choice exercises. Supplementary explanations and glosses currently use English. Existing exercise IDs and saved answers remain valid.
+Grammar opens all three levels at `/?grammar=hsk3&grammarScope=exam` and links all 57 syllabus groups to study cards. Forty-six additions expand previously partial or unmapped groups with explanations, contextual Hanzi and Pinyin, and choice exercises. Supplementary explanations and glosses currently use English. Existing exercise IDs and saved answers remain valid.
 
 ## Full timed mock
 
