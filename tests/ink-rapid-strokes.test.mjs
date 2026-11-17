@@ -1,8 +1,14 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {build} from 'esbuild';import {createRequire} from 'node:module';import {mkdtempSync,writeFileSync} from 'node:fs';import {tmpdir} from 'node:os';import {join} from 'node:path';import {pathToFileURL} from 'node:url';
-const require=createRequire(import.meta.url);globalThis.require=require;globalThis.IS_REACT_ACT_ENVIRONMENT=true;const listeners=new Map();globalThis.window={devicePixelRatio:1,addEventListener(k,f){listeners.set(k,f)},removeEventListener(k){listeners.delete(k)}};globalThis.ResizeObserver=class{observe(){}disconnect(){}};globalThis.requestAnimationFrame=()=>1;globalThis.cancelAnimationFrame=()=>{};
-const captures=new Set(),ctx={setTransform(){},clearRect(){},drawImage(){}},canvas=()=>({width:0,height:0,getContext:()=>ctx,getBoundingClientRect:()=>({left:0,top:0,width:200,height:200}),setPointerCapture:id=>captures.add(id),releasePointerCapture:id=>captures.delete(id),hasPointerCapture:id=>captures.has(id)});globalThis.document={createElement:canvas};const target=canvas();
-const b=await build({stdin:{contents:`import React,{useState} from 'react';import Ink from './app/ink';export {createElement} from 'react';export {default as renderer,act} from 'react-test-renderer';export function Harness(){const [strokes,setStrokes]=useState([]);globalThis.__clearInk=()=>setStrokes([]);globalThis.__echoInk=value=>setStrokes(value);return React.createElement(Ink,{strokes,penOnly:true,quietTouch:globalThis.__quietTouch,onChange:value=>{globalThis.__committedInk.push(value);setStrokes(value);}});}`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'esm',write:false,plugins:[{name:'mocks',setup(b){b.onResolve({filter:/^(react|react-test-renderer)$/},a=>({path:require.resolve(a.path),external:true}));b.onResolve({filter:/^\.\/(i18n|ink-render)$/},a=>({path:a.path,namespace:'mock'}));b.onLoad({filter:/.*/,namespace:'mock'},a=>({contents:a.path==='./i18n'?`export const useI18n=()=>({t:s=>s});`:`export const paintInk=()=>{};`}));}}]});const file=join(mkdtempSync(join(tmpdir(),'rapid-ink-')),'bundle.mjs');writeFileSync(file,b.outputFiles[0].text);const m=await import(pathToFileURL(file));
+const require=createRequire(import.meta.url);globalThis.require=require;globalThis.IS_REACT_ACT_ENVIRONMENT=true;const listeners=new Map();globalThis.window={devicePixelRatio:1,addEventListener(k,f){listeners.set(k,f)},removeEventListener(k){listeners.delete(k)}};globalThis.ResizeObserver=class{observe(){}disconnect(){}};let nextFrame=0;
+const frames=new Map();
+globalThis.requestAnimationFrame=draw=>{frames.set(++nextFrame,draw);return nextFrame;};
+globalThis.cancelAnimationFrame=id=>frames.delete(id);
+function paintFrame(){for(const [id,draw] of [...frames]){frames.delete(id);draw();}}
+const draws={copies:0,lines:0,commits:0};
+const captures=new Set(),ctx={setTransform(){},clearRect(){},drawImage(){draws.copies++;},beginPath(){},arc(){},fill(){},moveTo(){},lineTo(){draws.lines++;},stroke(){}},canvas=()=>({width:0,height:0,getContext:()=>ctx,getBoundingClientRect:()=>({left:0,top:0,width:200,height:200}),setPointerCapture:id=>captures.add(id),releasePointerCapture:id=>captures.delete(id),hasPointerCapture:id=>captures.has(id)});globalThis.document={createElement:canvas};const target=canvas();
+const b=await build({stdin:{contents:`import React,{useState} from 'react';import Ink from './app/ink';export {createElement} from 'react';export {default as renderer,act} from 'react-test-renderer';export function Harness(){const [strokes,setStrokes]=useState([]);globalThis.__clearInk=()=>setStrokes([]);globalThis.__echoInk=value=>setStrokes(value);return React.createElement(Ink,{strokes,penOnly:true,lineStyle:'pen',quietTouch:globalThis.__quietTouch,onChange:value=>{globalThis.__committedInk.push(value);setStrokes(value);}});}`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'esm',write:false,plugins:[{name:'mocks',setup(b){b.onResolve({filter:/^(react|react-test-renderer)$/},a=>({path:require.resolve(a.path),external:true}));b.onResolve({filter:/^\.\/(i18n|ink-render)$/},a=>({path:a.path,namespace:'mock'}));b.onLoad({filter:/.*/,namespace:'mock'},a=>({contents:a.path==='./i18n'?`export const useI18n=()=>({t:s=>s});`:`export const writingPenWidth=()=>2.8;export const paintInk=(_ctx,_stroke,_w,_h,complete)=>{if(complete)globalThis.__recordInkCommit();};`}));}}]});const file=join(mkdtempSync(join(tmpdir(),'rapid-ink-')),'bundle.mjs');writeFileSync(file,b.outputFiles[0].text);const m=await import(pathToFileURL(file));
 const event=(id,x=20,type='pen')=>({pointerId:id,pointerType:type,button:0,clientX:x,clientY:30,pressure:.5,timeStamp:x,currentTarget:target,preventDefault(){},nativeEvent:{pointerId:id,pointerType:type,clientX:x,clientY:30,pressure:.5,timeStamp:x}});
+globalThis.__recordInkCommit=()=>draws.commits++;
 async function mount(){captures.clear();globalThis.__committedInk=[];let r;await m.act(()=>{r=m.renderer.create(m.createElement(m.Harness),{createNodeMock:n=>n.type==='canvas'?target:null});});return r;}
 test('starting the next Pencil stroke before React echoes the previous stroke must not lose the new contact',async()=>{const r=await mount();const ink=()=>r.root.findByType('canvas').props;await m.act(()=>{ink().onPointerDown(event(7));ink().onPointerUp(event(7,40));ink().onPointerDown(event(7,60));});await m.act(()=>{ink().onPointerMove(event(7,80));ink().onPointerUp(event(7,100));});assert.equal(__committedInk.length,2);assert.equal(__committedInk.at(-1).length,2);await m.act(()=>r.unmount());});
 test('a delayed lost-capture notification from the previous contact cannot cancel a newly captured stroke with the reused Pencil ID',async()=>{const r=await mount();const ink=()=>r.root.findByType('canvas').props;await m.act(()=>{ink().onPointerDown(event(7));ink().onPointerUp(event(7,40));});await m.act(()=>{ink().onPointerDown(event(7,60));ink().onLostPointerCapture(event(7,40));ink().onPointerUp(event(7,100));});assert.equal(__committedInk.at(-1).length,2);await m.act(()=>r.unmount());});
@@ -60,4 +66,23 @@ test('late loss of old capture does not truncate a new contact whose capture was
  target.setPointerCapture=()=>{throw new Error('NotFoundError');};
  try{await m.act(()=>{ink().onPointerDown(event(7,60));ink().onLostPointerCapture(event(7,40));ink().onPointerMove(event(7,80));ink().onPointerUp(event(7,100));});assert.deepEqual(__committedInk.at(-1)[1].map(p=>p.x),[.3,.4,.5]);}
  finally{target.setPointerCapture=old;await m.act(()=>r.unmount());}
+});
+
+test('pen preview appends new samples and pointer-up paints only the newly saved stroke',async()=>{
+ const r=await mount();const ink=()=>r.root.findByType('canvas').props;
+ try{
+  paintFrame();
+  await m.act(()=>{ink().onPointerDown(event(7));ink().onPointerUp(event(7,35));});
+  paintFrame();
+  Object.assign(draws,{copies:0,lines:0,commits:0});
+  await m.act(()=>{ink().onPointerDown(event(7,40));ink().onPointerMove(event(7,60));});
+  paintFrame();
+  assert.deepEqual(draws,{copies:0,lines:1,commits:0});
+  await m.act(()=>{ink().onPointerMove(event(7,80));ink().onPointerMove(event(7,100));});
+  paintFrame();
+  assert.deepEqual(draws,{copies:0,lines:3,commits:0});
+  await m.act(()=>ink().onPointerUp(event(7,100)));
+  paintFrame();
+  assert.deepEqual(draws,{copies:1,lines:3,commits:1});
+ }finally{await m.act(()=>r.unmount());}
 });

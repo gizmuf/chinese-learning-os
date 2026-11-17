@@ -50,3 +50,34 @@ test('An explicit Pencil-only preference change restores finger mode without rem
  only=false;target.node.dispatchEvent(event('pointerdown',4,'touch'));assert.equal(starts,2);target.dispose();
  }finally{globalThis.document=original;}
 });
+
+test('SVG keeps a Pencil contact when capture fails and uses one box read for its coalesced samples',()=>{
+ const original=globalThis.document;
+ const win=new EventTarget();let reads=0;
+ globalThis.document={createElementNS:()=>{
+  const node=new FakeSvg();
+  node.ownerDocument={defaultView:win};
+  node.setPointerCapture=()=>{throw new Error('NotFoundError');};
+  node.getBoundingClientRect=()=>{reads++;return {left:10,top:20,width:320,height:320};};
+  return node;
+ }};
+ try{
+  const target=WritingSvgTarget.create(new FakeSvg(),()=>true);
+  const points=[];let ends=0;
+  target.addPointerStartListener(e=>points.push(e.getPoint()));
+  target.addPointerMoveListener(e=>points.push(e.getPoint()));
+  target.addPointerEndListener(()=>ends++);
+  target.node.dispatchEvent(event('pointerdown',7,'pen',20,25));
+  const move=event('pointermove',7,'pen',50,60);
+  move.getCoalescedEvents=()=>[event('pointermove',7,'pen',30,40),move];
+  win.dispatchEvent(move);
+  win.dispatchEvent(event('pointerup',8,'touch'));
+  target.node.dispatchEvent(event('lostpointercapture',7,'pen'));
+  assert.equal(ends,0);
+  win.dispatchEvent(event('pointerup',7,'pen'));
+  assert.equal(ends,1);
+  assert.equal(reads,1);
+  assert.deepEqual(points,[{x:10,y:5},{x:20,y:20},{x:40,y:40}]);
+  target.dispose();
+ }finally{globalThis.document=original;}
+});

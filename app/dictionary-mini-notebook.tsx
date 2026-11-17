@@ -2,6 +2,7 @@
 import {useEffect,useRef,useState} from 'react';
 import {PanelRightClose,RotateCcw,Undo2} from 'lucide-react';
 import Ink from './ink';
+import NotebookStrokePreview from './notebook-stroke-preview';
 import {Grid,NotebookWordModel} from './notebook';
 import type {Stroke} from './learning';
 import {readPracticeInk} from './practice-book';
@@ -28,6 +29,7 @@ export default function DictionaryMiniNotebook({text,word,visible,onClose,wholeW
   {(visible||library)&&character&&<><div className="sp-mini-notebook-model">{!library&&<NotebookWordModel text={whole?(word??text):character}/>} {!whole&&characters.length>1&&<div role="group" aria-label={c.character}>{characters.map(ch=><button type="button" key={ch} lang="zh-Hans" aria-pressed={character===ch} onClick={()=>setChoice(ch)}>{ch}</button>)}</div>}<label><input type="checkbox" checked={penOnly} onChange={e=>setPenOnly(e.target.checked)}/>{c.pen}</label></div>
   {!library&&glyphs.length>1&&<div className="sp-mini-unit-switch" role="group" aria-label="Practice unit"><button type="button" aria-pressed={!whole} onClick={()=>setWholeChoice(false)}>{t('One character')}</button><button type="button" aria-pressed={whole} onClick={()=>setWholeChoice(true)}>{t('Whole word')}{word&&word!==text?' · '+word:''}</button></div>}
   {persist&&<div className="sp-mini-storage-status" role="status">{!ready?(failed?'Could not load saved writing.':'Loading saved writing…'):''}</div>}{failed&&<button type="button" className="text-button" onClick={()=>{if(ready)save(pagesRef.current);else setRetry(v=>v+1);}}>Retry saving</button>}
+  <NotebookStrokePreview key={text+':'+page} text={whole?glyphs.join(''):character} visible={visible}/>
   {whole?<div className="sp-mini-word-pages">{wordRows.map((row,rep)=><div className="sp-mini-word-repetition" key={rep} style={{gridTemplateColumns:`repeat(${Math.min(row.length,4)},minmax(0,1fr))`,maxWidth:(Math.min(row.length,4)*158-8)+'px'}}>{row.map((ch,i)=>cell(wordRows.slice(0,rep).reduce((n,r)=>n+r.length,0)+i,ch))}</div>)}</div>:<div className="sp-mini-notebook-grid">{Array.from({length:8},(_,slot)=>cell(slot,character))}</div>}<p>{c.note}</p></>}
  </aside>;
 }

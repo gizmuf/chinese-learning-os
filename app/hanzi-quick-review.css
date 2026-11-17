@@ -1,0 +1,49 @@
+.hanzi-quick-dialog {
+  width: min(29rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: clamp(.75rem, 3vw, 1.25rem);
+  color: var(--ink);
+  background: var(--surface, var(--paper));
+  overflow: auto;
+}
+.hanzi-quick-dialog::backdrop {background: rgb(19 32 26 / 48%)}
+.hanzi-quick-heading {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: .6rem;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: .65rem;
+}
+.hanzi-quick-heading h3 {font-size: 1rem; margin: 0}
+.hanzi-quick-heading span {font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums}
+.hanzi-quick-heading button {min-height: 44px; min-width: 44px}
+.hanzi-quick-card {
+  width: 100%;
+  height: 17rem;
+  display: grid;
+  grid-template-rows: 5rem 2.6rem minmax(0, 1fr) 1.5rem;
+  align-items: center;
+  gap: .45rem;
+  padding: .8rem;
+  border: 1px solid var(--line);
+  border-radius: .8rem;
+  background: var(--paper);
+  color: var(--ink);
+  text-align: center;
+  touch-action: manipulation;
+}
+.hanzi-quick-card:focus-visible {outline: 2px solid var(--ink); outline-offset: 3px}
+.hanzi-quick-glyph {font-size: 1.4rem; font-weight: 600}
+.hanzi-quick-glyph[lang="zh-Hans"] {font-size: clamp(2.3rem, 7vw, 3.5rem); line-height: 1.15; overflow: auto; max-height: 100%}
+.hanzi-quick-reading {color: var(--muted); font-size: 1.13rem}
+.hanzi-quick-meaning {font-size: 1rem}
+.hanzi-quick-reading, .hanzi-quick-meaning {min-width: 0; max-height: 100%; overflow: auto; overflow-wrap: anywhere}
+.hanzi-quick-card [data-revealed="false"] {visibility: hidden}
+.hanzi-quick-action {font-size: .8rem; color: var(--muted)}
+.hanzi-quick-ratings {display: grid; grid-template-columns: 1fr 1fr; gap: .65rem; margin-top: .75rem}
+.hanzi-quick-ratings button {min-height: 44px; justify-content: center}
+.hanzi-group-actions {margin: .7rem 0 .9rem}
+.library-results-bar {flex-wrap: wrap}

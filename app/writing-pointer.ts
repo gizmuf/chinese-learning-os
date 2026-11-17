@@ -14,7 +14,7 @@ type Bound={getPoint:()=>{x:number;y:number};preventDefault:()=>void};
 export class WritingSvgTarget {
  node:SVGSVGElement|SVGGElement;svg:SVGSVGElement|SVGGElement;defs:SVGDefsElement;
  private start?:(e:Bound)=>void;private move?:(e:Bound)=>void;private end?:()=>void;
- private active:{id:number;type:string}|null=null;private penSeen=false;private lastPenOnly=false;
+ private active:{id:number;type:string;box:DOMRect;captured:boolean;startedAt:number}|null=null;private penSeen=false;private lastPenOnly=false;
  private listeners:AbortController|null=null;
  constructor(node:SVGSVGElement|SVGGElement,defs:SVGDefsElement,private penOnly:()=>boolean){this.node=this.svg=node;this.defs=defs;}
  static create(host:HTMLElement,penOnly:()=>boolean,width:string|number='100%',height:string|number='100%'){
@@ -23,19 +23,67 @@ export class WritingSvgTarget {
   const target=new WritingSvgTarget(svg,defs,penOnly);target.bind();return target;
  }
  private bind(){
-  this.listeners=new AbortController();const options={signal:this.listeners.signal};
-  this.node.addEventListener('pointerdown',raw=>{const e=raw as PointerEvent;const preference=this.penOnly();if(preference!==this.lastPenOnly){this.penSeen=false;this.lastPenOnly=preference;}
-   if(!acceptWritingPointer(e,preference,this.penSeen,this.active))return;
-   if(this.active)this.end?.();
-   this.active={id:e.pointerId,type:e.pointerType};if(e.pointerType==='pen')this.penSeen=true;
-   e.preventDefault();this.node.setPointerCapture(e.pointerId);this.start?.(this.bound(e));
-  },options);
-  this.node.addEventListener('pointermove',raw=>{const e=raw as PointerEvent;if(this.active?.id!==e.pointerId)return;e.preventDefault();const events=e.getCoalescedEvents?.();for(const point of events?.length?events:[e])this.move?.(this.bound(point));},options);
-  const finish=(raw:Event)=>{const e=raw as PointerEvent;if(this.active?.id!==e.pointerId)return;this.active=null;this.end?.();if(this.node.hasPointerCapture(e.pointerId))this.node.releasePointerCapture(e.pointerId);};
-  for(const kind of ['pointerup','pointercancel','lostpointercapture'])this.node.addEventListener(kind,finish,options);
-  this.node.addEventListener('contextmenu',e=>e.preventDefault(),options);
+  this.listeners = new AbortController();
+  const options = { signal: this.listeners.signal };
+  const complete = () => {
+   const active = this.active;
+   if (!active) return;
+   this.active = null;
+   if (this.node.hasPointerCapture(active.id)) this.node.releasePointerCapture(active.id);
+   this.end?.();
+  };
+  const matches = (e: PointerEvent) => this.active?.id === e.pointerId
+   && this.active.type === e.pointerType && e.timeStamp >= this.active.startedAt;
+  this.node.addEventListener('pointerdown', raw => {
+   const e = raw as PointerEvent;
+   const preference = this.penOnly();
+   if (preference !== this.lastPenOnly) {
+    this.penSeen = false;
+    this.lastPenOnly = preference;
+   }
+   if (e.pointerType === 'pen' && this.active?.type === 'pen') complete();
+   if (!acceptWritingPointer(e, preference, this.penSeen, this.active)) return;
+   complete();
+   e.preventDefault();
+   const box = this.node.getBoundingClientRect();
+   let captured = false;
+   try {
+    this.node.setPointerCapture(e.pointerId);
+    captured = true;
+   } catch { /* Window listeners handle contacts that leave the target. */ }
+   this.active = { id: e.pointerId, type: e.pointerType, box, captured, startedAt: e.timeStamp };
+   if (e.pointerType === 'pen') this.penSeen = true;
+   this.start?.(this.bound(e, box));
+  }, options);
+  const move = (raw: Event) => {
+   const e = raw as PointerEvent;
+   const active = this.active;
+   if (!active || !matches(e)) return;
+   e.preventDefault();
+   const events = e.getCoalescedEvents?.();
+   for (const point of events?.length ? events : [e]) this.move?.(this.bound(point, active.box));
+  };
+  const finish = (raw: Event) => {
+   if (matches(raw as PointerEvent)) complete();
+  };
+  this.node.addEventListener('pointermove', move, options);
+  for (const kind of ['pointerup', 'pointercancel']) this.node.addEventListener(kind, finish, options);
+  this.node.addEventListener('lostpointercapture', raw => {
+   const e = raw as PointerEvent;
+   if (this.active?.captured && !this.node.hasPointerCapture(e.pointerId)) finish(e);
+  }, options);
+  this.node.addEventListener('contextmenu', e => e.preventDefault(), options);
+  const outside = (e: Event) => !e.composedPath().includes(this.node);
+  const win = this.node.ownerDocument?.defaultView;
+  win?.addEventListener('pointermove', e => { if (outside(e)) move(e); }, { ...options, passive: false });
+  for (const kind of ['pointerup', 'pointercancel']) win?.addEventListener(kind, finish, options);
+  win?.addEventListener('pointerdown', e => {
+   if (outside(e) && e.pointerType === 'pen' && this.active?.type === 'pen') complete();
+  }, { ...options, capture: true });
  }
- private bound(e:PointerEvent):Bound{return {getPoint:()=>this._getMousePoint(e),preventDefault:()=>e.preventDefault()};}
+ private bound(e: PointerEvent, box: DOMRect): Bound {
+  return { getPoint: () => ({ x: e.clientX - box.left, y: e.clientY - box.top }), preventDefault: () => e.preventDefault() };
+ }
  addPointerStartListener(fn:(e:Bound)=>void){this.start=fn;}
  addPointerMoveListener(fn:(e:Bound)=>void){this.move=fn;}
  addPointerEndListener(fn:()=>void){this.end=fn;}

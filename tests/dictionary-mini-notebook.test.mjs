@@ -2,8 +2,14 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {build} from 'esbuild';
 import {createRequire} from 'node:module';
+import {readFile} from 'node:fs/promises';
 const require=createRequire(import.meta.url);globalThis.IS_REACT_ACT_ENVIRONMENT=true;
-const compiled=await build({stdin:{contents:`import React from 'react';export {createElement} from 'react';export {default as renderer,act} from 'react-test-renderer';export {default as Notebook} from './app/dictionary-mini-notebook';export {expandDictionaryForNotebook} from './app/dictionary-window';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false,external:['react','react-test-renderer'],loader:{'.css':'empty'},plugins:[{name:'isolated-writing-surface',setup(b){b.onResolve({filter:/^\.\/ink$/},()=>({path:'ink',namespace:'stub'}));b.onResolve({filter:/^\.\/notebook$/},()=>({path:'notebook',namespace:'stub'}));b.onLoad({filter:/.*/,namespace:'stub'},a=>({contents:a.path==='ink'?`import React from 'react';export default function Ink(p){return React.createElement('canvas',p);}`:`import React from 'react';export const Grid=()=>React.createElement('svg');export const NotebookWordModel=({text})=>React.createElement('span',null,text);`,loader:'jsx'}));}}],logLevel:'silent'});
+const compiled=await build({stdin:{contents:`import React from 'react';export {createElement} from 'react';export {default as renderer,act} from 'react-test-renderer';export {default as Notebook} from './app/dictionary-mini-notebook';export {expandDictionaryForNotebook} from './app/dictionary-window';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false,external:['react','react-test-renderer'],loader:{'.css':'empty'},plugins:[{name:'stroke-preview-runtime',setup(b){
+ b.onResolve({filter:/^(hanzi-writer|\.\/writing-pointer)$/},a=>({path:a.path,namespace:'stroke-mock'}));
+ b.onLoad({filter:/.*/,namespace:'stroke-mock'},a=>({contents:a.path==='hanzi-writer'
+  ? 'export default {create(host,character,options){return globalThis.strokeWriter(character,options);}};'
+  : 'export const WritingSvgTarget = {create:()=>({dispose(){}})};'}));
+}},{name:'isolated-writing-surface',setup(b){b.onResolve({filter:/^\.\/ink$/},()=>({path:'ink',namespace:'stub'}));b.onResolve({filter:/^\.\/notebook$/},()=>({path:'notebook',namespace:'stub'}));b.onLoad({filter:/.*/,namespace:'stub'},a=>({contents:a.path==='ink'?`import React from 'react';export default function Ink(p){return React.createElement('canvas',p);}`:`import React from 'react';export const Grid=()=>React.createElement('svg');export const NotebookWordModel=({text})=>React.createElement('span',null,text);`,loader:'jsx'}));}}],logLevel:'silent'});
 const module={exports:{}};new Function('require','module','exports',compiled.outputFiles[0].text)(require,module,module.exports);const m=module.exports;
 test('the inline notebook has eight independent cells and retains ink while folding or inspecting another character',async()=>{
  let r;const props={text:'书店',visible:true,wholeWord:false,onClose:()=>{}};await m.act(()=>{r=m.renderer.create(m.createElement(m.Notebook,props));});
@@ -46,4 +52,53 @@ test('offscreen library notebooks keep every square and toolbar in layout while 
  assert.deepEqual([squares(),tools(),r.root.findAllByProps({className:'sp-mini-word-repetition'}).length],shape);
  assert.equal(r.root.findByType('aside').props.hidden,false);assert.equal(r.root.findByType('aside').props.inert,true);assert.equal(r.root.findAllByType('canvas').length,0);
  await m.act(()=>r.update(m.createElement(m.Notebook,props)));assert.deepEqual(r.root.findAllByType('canvas')[0].props.strokes,ink);await m.act(()=>r.unmount());
+});
+
+test('stroke preview loads on demand, plays every glyph in order, and preserves writing through replay',async t=>{
+ const assets=new Map();
+ for(const character of '一般') assets.set(character,JSON.parse(await readFile(new URL('../public/characters/'+character+'.json',import.meta.url),'utf8')));
+ const playback=[],requests=[],speeds=[];
+ let finishFirst;
+ t.mock.method(globalThis,'fetch',async url=>{
+  const character=decodeURIComponent(url.slice('/characters/'.length,-'.json'.length));
+  requests.push(character);
+  return {ok:true,json:async()=>assets.get(character)};
+ });
+ const windowBefore=globalThis.window;
+ globalThis.window={matchMedia:()=>({matches:true})};
+ globalThis.strokeWriter=(character,options)=>{
+  assert.equal(options.charDataLoader(character),assets.get(character));
+  speeds.push(options.strokeAnimationSpeed);
+  return {
+   animateCharacter(){
+    playback.push(character);
+    if (playback.length===1) return new Promise(resolve=>{finishFirst=resolve;});
+    return Promise.resolve();
+   },
+   hideCharacter:()=>Promise.resolve(),
+  };
+ };
+ t.after(()=>{globalThis.window=windowBefore;delete globalThis.strokeWriter;});
+
+ let r;
+ await m.act(()=>{
+  r=m.renderer.create(m.createElement(m.Notebook,{text:'一般',visible:true,wholeWord:true,library:true,onClose:()=>{}}),{
+   createNodeMock:()=>({replaceChildren(){}}),
+  });
+ });
+ const firstCell=()=>r.root.findAllByType('canvas')[0];
+ const ink=[[{x:.1,y:.2,p:.5,t:1}]];
+ await m.act(()=>firstCell().props.onChange(ink));
+ assert.deepEqual(requests,[]);
+ await m.act(()=>r.root.findByProps({'aria-label':'Stroke order for 一般'}).props.onClick());
+ assert.deepEqual(requests,['一','般']);
+ assert.deepEqual(playback,['一']);
+ await m.act(()=>finishFirst());
+ assert.deepEqual(playback,['一','般']);
+ assert.deepEqual(speeds,[Infinity,Infinity]);
+ assert.deepEqual(firstCell().props.strokes,ink);
+ await m.act(()=>r.root.findByProps({'aria-label':'Replay · Stroke order for 一般'}).props.onClick());
+ assert.deepEqual(playback,['一','般','一','般']);
+ assert.deepEqual(firstCell().props.strokes,ink);
+ await m.act(()=>r.unmount());
 });
