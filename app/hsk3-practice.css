@@ -1,0 +1,18 @@
+.hsk-practice-actions,.hsk-practice-header,.hsk-practice-voices,.hsk-practice-text-controls{display:flex;flex-wrap:wrap;align-items:center;gap:.55rem}
+.hsk-practice-actions{margin-block:.75rem}
+.hsk-practice-header{justify-content:space-between}
+.hsk-practice-actions button,.hsk-practice-voices button,.hsk-practice-text-controls button,.hsk-mistake-save{min-height:44px}
+.hsk-practice-voices button[aria-pressed=true],.hsk-practice-text-controls button[aria-pressed=true]{border-color:currentColor;background:color-mix(in srgb,currentColor 8%,transparent)}
+.hsk-practice-instruction,.hsk-mistake-entry span{color:var(--muted)}
+.hsk-mistake-entry{padding-block:.6rem;border-block:1px solid var(--line)}
+.hsk-practice-due{margin-bottom:.65rem}
+.hsk-practice .hanzi-handwriting{width:min(100%,13rem)}
+.hsk-practice-question{margin-top:.5rem}
+.hsk-practice-chunks{display:flex;flex-wrap:wrap;align-items:baseline;gap:.45rem;margin-block:.75rem}
+.hsk-practice-chunks>span{font-size:1.34rem;padding:.15rem .35rem;border-bottom:1px solid var(--line);border-radius:.35rem;background:color-mix(in srgb,currentColor 4%,transparent)}
+.hsk-practice-chunks ruby{ruby-position:under}
+.hsk-practice-chunks rt{font-size:.65em;color:var(--muted)}
+.hsk-practice-reveal{margin-top:.7rem;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.7rem}
+.hsk-practice-reveal p{margin:.4rem 0}
+.hsk-practice-player{display:block;width:min(100%,28rem);margin-block:.65rem}
+.hsk-practice-player[hidden]{display:none}

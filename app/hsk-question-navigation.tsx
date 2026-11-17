@@ -40,16 +40,16 @@ export function useHskQuestionNavigation(move: (step: number) => boolean) {
   };
 }
 
-export function HskQuestionNavigation({position,total,onMove}: {
-  position: number; total: number; onMove: (position: number) => void;
+export function HskQuestionNavigation({position,total,onMove,disabled=false}: {
+  position: number; total: number; onMove: (position: number) => void; disabled?:boolean;
 }) {
   return <nav className="hsk-question-navigation" aria-label="Question navigation">
-    <button className="secondary" type="button" aria-label="Previous question" disabled={position===0}
+    <button className="secondary" type="button" aria-label="Previous question" disabled={disabled||position===0}
       onClick={()=>onMove(position-1)}><ChevronLeft size={18} aria-hidden="true"/> <span>Previous</span></button>
-    <select aria-label="Jump to question" value={position} onChange={event=>onMove(Number(event.target.value))}>
+    <select aria-label="Jump to question" disabled={disabled} value={position} onChange={event=>onMove(Number(event.target.value))}>
       {Array.from({length:total},(_,index)=><option key={index} value={index}>{index+1} / {total}</option>)}
     </select>
-    <button className="secondary" type="button" aria-label="Next question" disabled={position===total-1}
+    <button className="secondary" type="button" aria-label="Next question" disabled={disabled||position===total-1}
       onClick={()=>onMove(position+1)}><span>Next</span> <ChevronRight size={18} aria-hidden="true"/></button>
   </nav>;
 }
