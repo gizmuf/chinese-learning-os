@@ -1,0 +1,26 @@
+{
+  "introductions": {
+    "welcome": "欢迎参加汉语水平考试三级口语模拟练习。考试分三个部分，一共有十五道题。请戴上耳机，听清楚每一部分的要求。屏幕上出现开始回答时，请用普通话回答。每道题的时间结束后，将自动进入下一题。现在开始第一部分。",
+    "repeat": "第一部分，听后重复。第一题到第八题。你会听到八个句子，每个句子只听一遍。听完句子以后，请把你听到的内容说出来。每题有十秒钟的回答时间。请注意语音、声调和词语的顺序。",
+    "pictures": "第二部分，看图说话。第九题到第十三题。每道题有一张图片。请根据图片，用一两句完整的话描述你看到的情景。比如，你可以说图上有谁，他们在哪儿，正在做什么。每题有十五秒钟的回答时间。",
+    "questions": "第三部分，回答问题。第十四题和第十五题。每题有三分钟准备时间和一分半钟回答时间。准备的时候，请想一想你要说的内容和顺序。开始回答以后，请说出你的想法，并且尽量举一个例子。"
+  },
+  "speakCue": "准备时间到。请开始回答。",
+  "tasks": [
+    {"kind":"repeat","prompt":"明天早上八点，我们在学校门口见。"},
+    {"kind":"repeat","prompt":"你能帮我把这本书放在桌子上吗？"},
+    {"kind":"repeat","prompt":"下雨的时候，我一般坐地铁去上班。"},
+    {"kind":"repeat","prompt":"这家饭店的面条比那家好吃。"},
+    {"kind":"repeat","prompt":"我已经写完作业了，可以出去玩了。"},
+    {"kind":"repeat","prompt":"她一边做饭，一边听音乐。"},
+    {"kind":"repeat","prompt":"如果周末天气好，我们就去爬山。"},
+    {"kind":"repeat","prompt":"我等了半个小时，公交车终于来了。"},
+    {"kind":"picture","prompt":"第九题。请看图说话。","picture":"market","alt":"Two people choosing apples at a market stall","example":"他们在市场买水果。一个人拿着一个苹果，正在问多少钱。"},
+    {"kind":"picture","prompt":"第十题。请看图说话。","picture":"bicycle","alt":"A woman cycling on a city street with office buildings","example":"她戴着头盔，骑自行车去上班。路上有很多树。"},
+    {"kind":"picture","prompt":"第十一题。请看图说话。","picture":"library","alt":"A man writing in his notebook in a library","example":"他在图书馆学习。他一边看书，一边写字。"},
+    {"kind":"picture","prompt":"第十二题。请看图说话。","picture":"kitchen","alt":"Two friends making noodles together in a kitchen","example":"他们在厨房做晚饭。一个人在煮面，另一个人在准备菜。"},
+    {"kind":"picture","prompt":"第十三题。请看图说话。","picture":"station","alt":"A man holding an umbrella as a train arrives at the platform","example":"他拿着一把伞，在等地铁。地铁快到站了。"},
+    {"kind":"question","prompt":"你最喜欢去哪个地方？请说一说你为什么喜欢那里。","example":"我最喜欢去学校附近的公园。那里有很多树，空气也很好。我常常跟朋友去那儿散步。有时候我们一边走一边聊天。我忙了一天以后，去公园走一走就觉得很舒服。"},
+    {"kind":"question","prompt":"请说一说你平时怎么学习中文。你觉得什么方法最有用？","example":"我每天早上听十分钟中文。晚上我会把新词用在自己的句子里，然后读出来。周末我有时候跟朋友聊天。我觉得开口说最有用。比如，上次我练习了怎么问路，第二天就真的用上了。"}
+  ]
+}

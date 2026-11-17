@@ -1,0 +1,15 @@
+.hsk-speaking{scroll-margin-top:1rem}
+.hsk-speaking-status,.hsk-speaking-phase,.hsk-speaking-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem}
+.hsk-speaking-status{justify-content:space-between;border-block:1px solid var(--line);padding-block:.65rem}
+.hsk-speaking-phase{font-weight:600;margin-block:.7rem}
+.hsk-speaking-actions{margin-top:1rem}
+.hsk-speaking-actions button,.hsk-speaking button.primary{min-height:44px}
+.hsk-speaking-note{background:#f7f1e5;border-radius:.6rem;padding:.65rem .85rem}
+.hsk-speaking-picture{width:min(100%,23rem);aspect-ratio:1;background-image:url('/audio/hsk3-speaking/scenes.webp');background-size:300% 200%;background-repeat:no-repeat;border-radius:.65rem;margin-block:.7rem}
+.hsk-speaking-picture[data-scene=market]{background-position:0 0}
+.hsk-speaking-picture[data-scene=bicycle]{background-position:50% 0}
+.hsk-speaking-picture[data-scene=library]{background-position:100% 0}
+.hsk-speaking-picture[data-scene=kitchen]{background-position:0 100%}
+.hsk-speaking-picture[data-scene=station]{background-position:50% 100%}
+.hsk-speaking-playback{display:grid;gap:.3rem;margin-block:.65rem;font-size:.9rem}
+.hsk-speaking-playback audio{width:min(100%,28rem);min-height:44px}
