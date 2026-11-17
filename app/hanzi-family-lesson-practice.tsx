@@ -182,7 +182,7 @@ export function Exercise({exercise, attempt, onSave, penOnly, setPenOnly, feedba
           {sentenceGap.before}<label className="mandarin320-gap">
             <span className="mandarin320-gap-label" lang="en">Your answer</span>
             <input lang="zh-Hans" autoComplete="off" autoCapitalize="none" autoCorrect="off" spellCheck={false}
-              value={draft} placeholder={pencil?.enabled ? 'Write here' : 'Hanzi or pinyin'}
+              value={draft} placeholder={pencil?.enabled ? 'Write here' : undefined}
               aria-describedby={pinyinDraft ? candidateStatusId : pencil?.enabled ? pencilHintId : undefined}
               onChange={event => updateGap(event.target.value)}
               onCompositionStart={() => setComposing(true)}
