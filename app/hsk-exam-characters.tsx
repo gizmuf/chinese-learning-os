@@ -34,6 +34,13 @@ export default function HskExamCharacters({owner}: {owner: string}) {
   const progress = checklistCopy[locale];
 
   useEffect(() => {
+    if (window.location.hash === '#hsk-exam') {
+      const section = document.getElementById('hsk-exam') as HTMLDetailsElement | null;
+      if (section) {
+        section.open = true;
+        requestAnimationFrame(() => section.scrollIntoView({block: 'start'}));
+      }
+    }
     try { setChecklist(readExamChecklist(localStorage.getItem(key))); }
     catch { setUnsaved(true); }
     setReady(true);
@@ -63,7 +70,7 @@ export default function HskExamCharacters({owner}: {owner: string}) {
   const count = (skill: ExamMode) => lists[skill].filter(glyph => checklist[skill].has(glyph)).length;
   const characters = remainingOnly ? lists[mode].filter(glyph => !checklist[mode].has(glyph)) : lists[mode];
   const done = count(mode);
-  return <details className="hsk-exam-characters" onToggle={e => setOpen(e.currentTarget.open)}>
+  return <details id="hsk-exam" className="hsk-exam-characters" onToggle={e => setOpen(e.currentTarget.open)}>
     <summary>{copy.title}</summary>
     {open && <>
       <div className="hsk-exam-controls">

@@ -106,10 +106,11 @@ const MyDayLesson = lazy(() => import("./my-day-lesson"));
 const ShuoshuoCompanion = lazy(() => import("./shuoshuo-companion"));
 const ShuoshuoLesson = lazy(() => import("./shuoshuo-lesson"));
 const PrivateLessons = lazy(() => import("./private-lessons"));
+const Hsk3Prep = lazy(() => import("./hsk3-prep"));
 const TodayCourseReviews = lazy(() => import("./today-course-reviews"));
 const PronunciationLab = lazy(() => import("./pronunciation-lab-ui"));
 const TodayRecognition = lazy(() => import("./today-recognition"));
-type View = "pronunciation" | "sentence-check" | "labs" | "shuoshuo-lesson" | "private-lessons" | "shuoshuo" | "myday" | "studio" | "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
+type View = "hsk3-prep" | "pronunciation" | "sentence-check" | "labs" | "shuoshuo-lesson" | "private-lessons" | "shuoshuo" | "myday" | "studio" | "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
 export default function StudyApp({
   user,
   onSignIn,
@@ -142,7 +143,7 @@ export default function StudyApp({
   const sentenceCheckOrigin = useRef<{url:string;scroll:number}|null>(null);
   const [lab,setLab]=useState<SceneLab>("room");
   const [atlasReturn, setAtlasReturn] = useState<{url:string;scroll:number}|null>(null);
-  useEffect(() => { if (new URLSearchParams(window.location.search).get("view")==="labs") {setView("labs");setLab(sceneLab(new URLSearchParams(window.location.search).get("lab")));} else if (new URLSearchParams(window.location.search).get("lesson") === "shuoshuo-morning") setView("shuoshuo-lesson"); else if (new URLSearchParams(window.location.search).get("private") === "1") setView("private-lessons"); else if (new URLSearchParams(window.location.search).get("companion") === "shuoshuo") setView("shuoshuo"); else if (["my-day-01-v2","voice-live-2026-11-03","my-day-full-2026-11-03"].includes(new URLSearchParams(window.location.search).get("rehearsal")??"")) setView("myday"); else if (new URLSearchParams(window.location.search).get("study") === "sentence-check") setView("sentence-check"); else if (new URLSearchParams(window.location.search).get("study") === "studio") {setView("studio");setStudioVisited(true);} else if (new URLSearchParams(window.location.search).get("grammar") === "hsk3") setView("grammar"); else if (new URLSearchParams(window.location.search).get("atlas") === "1") setView("atlas"); else if (new URLSearchParams(window.location.search).get("course") === "intensive") setView("course"); }, []);
+  useEffect(() => { if (new URLSearchParams(window.location.search).get("view")==="labs") {setView("labs");setLab(sceneLab(new URLSearchParams(window.location.search).get("lab")));} else if (new URLSearchParams(window.location.search).get("lesson") === "shuoshuo-morning") setView("shuoshuo-lesson"); else if (new URLSearchParams(window.location.search).get("private") === "1") setView("private-lessons"); else if (new URLSearchParams(window.location.search).get("companion") === "shuoshuo") setView("shuoshuo"); else if (["my-day-01-v2","voice-live-2026-11-03","my-day-full-2026-11-03"].includes(new URLSearchParams(window.location.search).get("rehearsal")??"")) setView("myday"); else if (new URLSearchParams(window.location.search).get("study") === "sentence-check") setView("sentence-check"); else if (new URLSearchParams(window.location.search).get("study") === "studio") {setView("studio");setStudioVisited(true);} else if (new URLSearchParams(window.location.search).get("grammar") === "hsk3") setView("grammar"); else if (new URLSearchParams(window.location.search).get("atlas") === "1") setView("atlas"); else if (new URLSearchParams(window.location.search).get("course") === "hsk3") setView("hsk3-prep"); else if (new URLSearchParams(window.location.search).get("course") === "intensive") setView("course"); }, []);
   const [notebookEvents, setEvents] = useState<LearningEvent[]>([]);
   const [sync, setSync] = useState(t("Loading your notebook…"));
   const [db, setDb] = useState<IDBDatabase | null>(null);
@@ -573,7 +574,7 @@ export default function StudyApp({
     if(v==="atlas"&&atlasReturn){returnToAtlas();return;}
     setAtlasReturn(null);
     if(v==="studio")setStudioVisited(true);
-    window.history.replaceState(null, "", (v === "pronunciation" ? "/pronunciation-lab" : "/") + (v === "labs" ? sceneLabHref(lab).slice(1) : v === "shuoshuo-lesson" ? "?lesson=shuoshuo-morning" : v === "private-lessons" ? "?private=1" : v === "shuoshuo" ? "?companion=shuoshuo" : v === "myday" ? "?rehearsal=my-day-01-v2" : v === "studio" ? "?study=studio" : v === "sentence-check" ? "?study=sentence-check" : v === "grammar" ? "?grammar=hsk3" : v === "atlas" ? "?atlas=1" : v === "course" ? "?course=intensive" : v === "lessons" ? "?study=library&layout="+libraryLayout+(practiceSelection?"&set=selected":"")+"&hsk="+level : ""));
+    window.history.replaceState(null, "", (v === "pronunciation" ? "/pronunciation-lab" : "/") + (v === "labs" ? sceneLabHref(lab).slice(1) : v === "shuoshuo-lesson" ? "?lesson=shuoshuo-morning" : v === "private-lessons" ? "?private=1" : v === "shuoshuo" ? "?companion=shuoshuo" : v === "myday" ? "?rehearsal=my-day-01-v2" : v === "studio" ? "?study=studio" : v === "sentence-check" ? "?study=sentence-check" : v === "grammar" ? "?grammar=hsk3" : v === "atlas" ? "?atlas=1" : v === "hsk3-prep" ? "?course=hsk3" : v === "course" ? "?course=intensive" : v === "lessons" ? "?study=library&layout="+libraryLayout+(practiceSelection?"&set=selected":"")+"&hsk="+level : ""));
     stopAudio();
 
     setView(v);
@@ -632,7 +633,7 @@ export default function StudyApp({
           ).map((n) => (
             <button
               key={n.id}
-              className={(view==='practice'&&skill==='meaning'?'reviews':view==='sentence-check'?'studio':view) === n.id ? "nav-item active" : "nav-item"}
+              className={(view==='practice'&&skill==='meaning'?'reviews':view==='sentence-check'?'studio':view==='hsk3-prep'?'course':view) === n.id ? "nav-item active" : "nav-item"}
               title={n.title}
               onClick={() => changeView(n.id)}
             >
@@ -687,7 +688,7 @@ export default function StudyApp({
           <span>
             <span className="breadcrumb">{t("My study space")}</span>
             <ChevronRight size={13} />
-            {view === "labs" ? "3D Lab" : view === "shuoshuo-lesson" ? "A morning with Shuoshuo" : view === "private-lessons" ? "Private lessons" : view === "shuoshuo" ? "Shuoshuo · Vocabulary companion" : view === "myday" ? "My Day · Speaking" : view === "pronunciation" ? "Pronunciation Lab" : view === "studio" || view === "sentence-check" ? "StudyStudio" : view === "grammar" ? "HSK 1–3 grammar" : view === "atlas" ? t("Cloud Atlas") : view === "course" ? t("Intensive course") : view === "practice"
+            {view === "hsk3-prep" ? "HSK 3 Exam Prep" : view === "labs" ? "3D Lab" : view === "shuoshuo-lesson" ? "A morning with Shuoshuo" : view === "private-lessons" ? "Private lessons" : view === "shuoshuo" ? "Shuoshuo · Vocabulary companion" : view === "myday" ? "My Day · Speaking" : view === "pronunciation" ? "Pronunciation Lab" : view === "studio" || view === "sentence-check" ? "StudyStudio" : view === "grammar" ? "HSK 1–3 grammar" : view === "atlas" ? t("Cloud Atlas") : view === "course" ? t("Intensive course") : view === "practice"
               ? skill==='meaning'?t('Flashcards'):t("Writing studio")
               : view === "today"
                 ? t("Today")
@@ -751,6 +752,7 @@ export default function StudyApp({
           {view==='practice'&&!session&&!atlasReturn&&<button className="secondary atlas-return-button" onClick={returnFromWriting}><ChevronLeft size={16}/>{({en:'Back to learning material',fr:'Retour au cours',ru:'Назад к материалу',tr:'Ders materyaline dön'})[locale]}</button>}
           {view==="practice" && atlasReturn && <button className="secondary atlas-return-button" onClick={returnToAtlas}><ArrowRight size={16} style={{transform:"rotate(180deg)"}}/>{t("Back to Cloud Atlas")}</button>}
           {view === "grammar" && <Suspense fallback={<p>{t("Loading your notebook…")}</p>}><HSK3Grammar key={user?.id ?? "guest"} owner={user?.id ?? null} db={db?.name === "chinese-os-v1-"+(user?.id ?? "guest") ? db : null}/></Suspense>}
+          {view === "hsk3-prep" && <Suspense fallback={<p role="status">Opening HSK 3 Exam Prep…</p>}><Hsk3Prep/></Suspense>}
           {view === "course" && <IntensiveCourse onReferenceLibraryBack={()=>changeView("lessons")} owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} recordHSK={record} notify={notify} onHSKRecall={item => openPractice(item, "recall")} />}
           {view === "today" && (
             <>
@@ -992,6 +994,7 @@ export default function StudyApp({
               <div id="library-start" className="page-heading" tabIndex={-1}>
                 <div>
                   <p className="eyebrow">{t("WORDS FOR YOUR REAL LIFE")}</p>
+                  <button className="grammar-back" onClick={() => changeView("hsk3-prep")}>HSK 3 Exam Prep →</button>
                   <button className="grammar-back" onClick={() => changeView("grammar")}>HSK 1–3 grammar →</button>
                   <h1>
                     {t("Your learning library")}<span className="orange">.</span>

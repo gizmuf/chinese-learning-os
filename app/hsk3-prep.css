@@ -1,0 +1,26 @@
+.hsk3-prep{max-width:72rem;margin-inline:auto}
+.hsk3-prep-head{padding-block:.5rem 1.2rem}
+.hsk3-prep-head h1{margin:.25rem 0 .5rem}
+.hsk3-prep-head p:last-child{margin:0;color:var(--muted)}
+.hsk3-prep-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13.5rem),1fr));gap:.65rem;margin-bottom:1.25rem}
+.hsk3-prep-links a{border:1px solid var(--line);border-radius:.75rem;padding:.75rem;display:flex;align-items:flex-start;gap:.55rem;color:inherit;text-decoration:none}
+.hsk3-prep-links a svg{flex:none;margin-block-start:.15rem}
+.hsk3-prep-links a:hover strong{text-decoration:underline}
+.hsk3-prep-links small{display:block;line-height:1.4;color:var(--muted)}
+.hsk3-prep-practice{max-width:49rem;padding:clamp(1rem,3vw,1.5rem)}
+.hsk3-prep-practice h2{margin-top:0}
+.hsk3-prep-task-label{display:flex;justify-content:space-between;gap:.5rem;color:var(--muted);font-size:.875rem}
+.hsk3-prep-passage p,.hsk3-prep-question{font-size:1.28rem;line-height:1.8;margin:.65rem 0}
+.hsk3-prep-passage ruby{ruby-align:center}
+.hsk3-prep-passage rt{font-size:.65em}
+.hsk3-prep-player{display:flex;align-items:center;gap:.55rem;margin-block:.55rem}
+.hsk3-prep-player audio{width:min(100%,24rem);min-width:0}
+.hsk3-prep-options{min-width:0;padding:0;border:0;margin:0 0 .8rem;display:flex;flex-wrap:wrap;gap:.4rem .65rem}
+.hsk3-prep-options label{display:inline-flex;align-items:center;gap:.45rem;min-height:2.75rem;padding:.35rem .65rem;border:1px solid var(--line);border-radius:.5rem}
+.hsk3-prep-options label[data-correct=true]{outline:1px solid currentColor;outline-offset:-2px}
+.hsk3-prep-input{display:grid;gap:.3rem;max-width:28rem;margin-bottom:.85rem}
+.hsk3-prep-input input,.hsk3-prep-input textarea{width:100%;font-size:1.2rem}
+.hsk3-prep-feedback{border-top:1px solid var(--line);padding-top:.65rem;margin-bottom:.8rem}
+.hsk3-prep-aids{display:flex;gap:.35rem;flex-wrap:wrap}
+.hsk3-prep-aids button[aria-pressed=true]{border-color:currentColor}
+.hsk3-prep-source{font-size:.875rem;margin-top:1rem}
