@@ -28,7 +28,7 @@
 @media (min-width: 48rem) {
   .mandarin320 .mandarin320-entries .hanzi-family-entry-body > p .study-text .study-word,
   .mandarin320 .hanzi-family-group[data-appendix-id] > p .study-text .study-word {
-    font-size: 1.25rem;
+    font-size: 1.375rem;
   }
 }
 @media (max-width: 37rem) {
