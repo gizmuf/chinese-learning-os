@@ -6,15 +6,15 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const arrowControls = 'input, textarea, select, audio, canvas, [contenteditable]';
 const touchControls = 'button, label, a, ' + arrowControls;
 
-export function useHskQuestionNavigation(move: (step: number) => void) {
+export function useHskQuestionNavigation(move: (step: number) => boolean) {
   const start = useRef<{ x: number; y: number } | null>(null);
   useEffect(() => {
     function keydown(event: KeyboardEvent) {
-      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
+      if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
         (event.target instanceof Element && event.target.closest(arrowControls))) return;
       if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
-      event.preventDefault();
-      move(event.key === 'ArrowLeft' ? -1 : 1);
+      if (document.querySelector('dialog[open]')) return;
+      if (move(event.key === 'ArrowLeft' ? -1 : 1)) event.preventDefault();
     }
     window.addEventListener('keydown', keydown);
     return () => window.removeEventListener('keydown', keydown);

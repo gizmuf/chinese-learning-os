@@ -137,8 +137,9 @@ export default function Hsk3Mock() {
     });
   }
   function move(position:number) {
-    if(!section||position<0||position>=section.tasks.length) return;
+    if(!section||position<0||position>=section.tasks.length) return false;
     update(current=>({...current,position}));
+    return true;
   }
   const swipe=useHskQuestionNavigation(step=>move((attempt?.position??0)+step));
 

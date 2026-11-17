@@ -60,7 +60,12 @@ function Diagnostic() {
   function answer(patch:Partial<DiagnosticAnswer>) {
     setAnswers(current=>({...current,[position]:{...(current[position]??blankAnswer),...patch}}));
   }
-  const swipe=useHskQuestionNavigation(step=>{if(task&&position+step<hskPrepTasks.length)move(position+step);});
+  const swipe=useHskQuestionNavigation(step=>{
+    const next=position+step;
+    if(!task||next<0||next>=hskPrepTasks.length)return false;
+    move(next);
+    return true;
+  });
   const results=hskPrepTasks.flatMap((item,index)=>{
     const saved=answers[index];
     if(!saved?.checked)return [];
