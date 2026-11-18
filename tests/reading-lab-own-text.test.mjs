@@ -7,6 +7,7 @@ import {build} from 'esbuild';
 const {outputFiles: [bundle]} = await build({stdin: {
   contents: `export * from './app/reading-lab-own-text-model';
     export * from './app/reading-lab-own-audio';
+    export * from './app/reading-lab-audio-cache';
     export * from './lib/reading-lab-audio-policy';`,
   resolveDir: process.cwd(),
 }, bundle: true, platform: 'node', format: 'esm', write: false});
@@ -64,4 +65,14 @@ test('assembled audio cues follow decoded PCM lengths and reuse clips for repeat
   assert.equal(wav.getInt16(44 + 24000 * 2, true), 0);
   assert.equal(wav.getInt16(44 + 29760 * 2, true), -16384);
   assert.throws(() => m.joinSentenceAudio(sentences, new Map()), m.ReadingAudioError);
+});
+
+test('saved narration matches only the same sentence text, order and cue timing', () => {
+  const sentences = m.importReading('你好。再见。').sentences;
+  const audio = {wav:new Blob([new Uint8Array(48)],{type:'audio/wav'}), voice:'Qwen · Longanhuan',
+    duration:2, cues:sentences.map(({key,text},index)=>({key,text,start:index}))};
+  assert.ok(m.matchesSavedReadingAudio(audio,sentences));
+  assert.equal(m.matchesSavedReadingAudio(audio,[...sentences].reverse()),false);
+  assert.equal(m.matchesSavedReadingAudio({...audio,cues:[audio.cues[0],{...audio.cues[1],start:2}]},sentences),false);
+  assert.notEqual(m.readingAudioCacheKey(sentences),m.readingAudioCacheKey([...sentences].reverse()));
 });

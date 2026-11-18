@@ -7,6 +7,10 @@ import {useReadingLabNarrator} from './use-reading-lab-narrator';
 import {importReading, type ImportedReading} from './reading-lab-own-text-model';
 import {generateReadingAudio, readingAudioTicketsPath, ReadingAudioError} from './reading-lab-own-audio';
 import type {NarrationTrack} from './reading-lab-narrator-model';
+import {readSavedReadingAudio, saveReadingAudio} from './reading-lab-audio-cache';
+
+const microsoftVoice = 'Microsoft Xiaoxiao';
+const qwenVoice = 'Qwen · Longanhuan';
 import {parseReadingAudioSentences, readingAudioTextLimit, readingAudioSentenceLimit, readingAudioSentenceSize} from '../lib/reading-lab-audio-policy';
 
 export default function ReadingLabOwnText() {
@@ -44,6 +48,7 @@ function ImportedText({reading, onEdit}: {reading: ImportedReading; onEdit: () =
   const [showPinyin, setShowPinyin] = useState(true);
   const [available, setAvailable] = useState<boolean>();
   const [track, setTrack] = useState<NarrationTrack>();
+  const [voice, setVoice] = useState(microsoftVoice);
   const [status, setStatus] = useState('');
   const [busy, setBusy] = useState(false);
   const request = useRef<AbortController | null>(null);
@@ -57,18 +62,33 @@ function ImportedText({reading, onEdit}: {reading: ImportedReading; onEdit: () =
 
   useEffect(() => {
     result.current?.focus();
-    if (!canGenerate) return;
     const controller = new AbortController();
-    void fetch(readingAudioTicketsPath, {signal: controller.signal, cache: 'no-store'})
-      .then(async response => {
-        if (!response.ok) return false;
-        const settings = await response.json() as {enabled?: boolean};
-        return settings?.enabled === true;
-      })
-      .then(enabled => {if (!controller.signal.aborted) setAvailable(enabled);})
-      .catch(() => {if (!controller.signal.aborted) setAvailable(false);});
+    async function prepareAudio() {
+      const saved = await readSavedReadingAudio(sentences).catch(() => undefined);
+      if (controller.signal.aborted) return;
+      if (saved) {
+        const url = URL.createObjectURL(saved.wav);
+        source.current = url;
+        setVoice(saved.voice);
+        setTrack({source: url, duration: saved.duration, cues: saved.cues});
+        setStatus('Saved narration ready. Tap Play to listen.');
+        return;
+      }
+      if (!canGenerate) return;
+      try {
+        const response = await fetch(readingAudioTicketsPath, {signal: controller.signal, cache: 'no-store'});
+        const settings = response.ok ? await response.json() as {enabled?: boolean; voice?: string} : null;
+        if (!controller.signal.aborted) {
+          setVoice(settings?.voice === 'qwen' ? qwenVoice : microsoftVoice);
+          setAvailable(settings?.enabled === true);
+        }
+      } catch {
+        if (!controller.signal.aborted) setAvailable(false);
+      }
+    }
+    void prepareAudio();
     return () => controller.abort();
-  }, [canGenerate]);
+  }, [canGenerate, sentences]);
 
   useEffect(() => {
     if (!active || player.snapshot.status !== 'playing') return;
@@ -94,10 +114,13 @@ function ImportedText({reading, onEdit}: {reading: ImportedReading; onEdit: () =
     try {
       const ready = await generateReadingAudio(sentences, controller.signal, (count, total) =>
         setStatus('Preparing narration · ' + count + '/' + total + ' recordings'));
-      if (controller.signal.aborted) {URL.revokeObjectURL(ready.source); return;}
-      source.current = ready.source;
-      setTrack(ready);
-      setStatus('Narration ready. Tap Play to listen.');
+      if (controller.signal.aborted) return;
+      const saved = await saveReadingAudio(sentences, {...ready, voice}).then(() => true, () => false);
+      if (controller.signal.aborted) return;
+      const url = URL.createObjectURL(ready.wav);
+      source.current = url;
+      setTrack({source: url, duration: ready.duration, cues: ready.cues});
+      setStatus(saved ? 'Narration saved. Tap Play to listen.' : 'Narration ready for this session. Browser storage is unavailable.');
     } catch (error) {
       if (!controller.signal.aborted) setStatus(error instanceof ReadingAudioError && error.quota
         ? 'The daily audio allowance has been used. Try again tomorrow.'
@@ -119,12 +142,12 @@ function ImportedText({reading, onEdit}: {reading: ImportedReading; onEdit: () =
         <button type="button" onClick={onEdit}>Edit text</button>
       </div>
     </header>
-    {track ? <ReadingLabNarrator track={track} player={player} hidden={false} voice="Synthetic study voice · Microsoft Xiaoxiao"/> :
+    {track ? <ReadingLabNarrator track={track} player={player} hidden={false} voice={'Synthetic study voice · ' + voice}/> :
       <section className="rl-own-audio" aria-label="Generate narration">
         {available && <button type="button" className="primary" onClick={generate} disabled={busy}>Generate narration</button>}
         <p>{!canGenerate ? 'To generate narration, keep each sentence under ' + (readingAudioSentenceSize + 1) + ' characters.'
           : available === false ? 'Narration generation is unavailable on this site.'
-          : available ? 'Generating narration sends these sentences to Microsoft for speech synthesis.'
+          : available ? 'Generating narration sends these sentences to ' + voice + ' for speech synthesis.'
           : 'Checking narration availability…'}</p>
       </section>}
     {status && <p role="status" className="rl-own-pinyin">{status}</p>}
