@@ -15,10 +15,11 @@ const modes: Record<NarrationMode, string> = {
   'listen-repeat': 'Listen, then repeat aloud',
 };
 
-export default function ReadingLabNarrator({track, player, hidden}: {
+export default function ReadingLabNarrator({track, player, hidden, voice = 'Synthetic study voice · Qwen'}: {
   track?: NarrationTrack;
   player: ReturnType<typeof useReadingLabNarrator>;
   hidden: boolean;
+  voice?: string;
 }) {
   if (!track) return hidden ? null : <p className="rl-narration-unavailable">Narration unavailable for this reading.</p>;
   const {snapshot, rate, mode, changeMode, changeRate, seek, playFrom, toggle} = player;
@@ -27,7 +28,7 @@ export default function ReadingLabNarrator({track, player, hidden}: {
   const action = active ? 'Pause' : snapshot.status === 'waiting' ? last ? 'Finish' : 'Next sentence'
     : snapshot.status === 'error' ? 'Try again' : snapshot.status === 'ended' ? 'Play from start' : 'Play';
   return <section className="rl-narrator" aria-label="Reading narrator" hidden={hidden}>
-    <p className="rl-narrator-heading"><Volume2 size={18} aria-hidden="true"/> Narrator <small>Synthetic study voice · Qwen</small></p>
+    <p className="rl-narrator-heading"><Volume2 size={18} aria-hidden="true"/> Narrator <small>{voice}</small></p>
     <div className="rl-narrator-transport">
       <button className="rl-narrator-play" type="button" onClick={toggle}>
         {active ? <Pause size={17} aria-hidden="true"/> : <Play size={17} aria-hidden="true"/>}{action}

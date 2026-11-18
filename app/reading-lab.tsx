@@ -24,6 +24,7 @@ import type {ReadingReviewAction} from './reading-lab-review-model';
 import {emptyReadingLabSession, persistReadingLabSession, readReadingLabSession, readingLabDraftLimit, type ReadingLabResume} from './reading-lab-session';
 import Guided from './guided';
 import ReadingLabNarrator from './reading-lab-narrator';
+import ReadingLabOwnText from './reading-lab-own-text';
 import {narrationFor} from './reading-lab-narrator-model';
 import {useReadingLabNarrator} from './use-reading-lab-narrator';
 import './reading-lab.css';
@@ -241,6 +242,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   const [drafts, setDrafts] = useState(loaded.session.drafts);
   const [resume, setResume] = useState(loaded.session.resume);
   const [saveUnavailable, setSaveUnavailable] = useState(loaded.unavailable);
+  const [ownText, setOwnText] = useState(false);
   const [selectedWord, setSelectedWord] = useState(() => readerHistory().readingLabFocus?.word ?? '');
   const [recall, setRecall] = useState<RecallCheck>();
   const [questionEvidence, setQuestionEvidence] = useState<{article: string; chunk: string}>();
@@ -514,6 +516,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
         if (readerHistory().readingLabReviewSource === route.reviewReturn) history.back();
         else reviewOpen(route.reviewReturn!);
       }}>Back to review</button>}
+      <button type="button" onClick={() => {narrator.pause(); setOwnText(true);}}>Your text</button>
       {reading && <span>HSK {reading.level}</span>}
     </header>
     {outsideScope && <div role="status" className="hsk-outside panel">
@@ -646,6 +649,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
         setSelectedWord(''); setQuestionEvidence(undefined); setRecall(undefined);
         navigate({article: article.id, paragraph: '', grammar: '', chunk: undefined, reviewReturn: undefined}, {scroll: 0});
       }}/></>}
+    {ownText && <Modal className="rl-own-dialog" label="Your text" onClose={() => setOwnText(false)}><ReadingLabOwnText/></Modal>}
     {detour?.kind === 'atlas' && <AtlasDetour detour={detour.visit} level={reading?.level ?? route.level} penOnly={penOnly} notify={notify} onClose={closeDetour}/>}
     {detour?.kind === 'stroke' && <StrokeDetour text={detour.text} penOnly={penOnly} onClose={closeDetour}/>}
   </section>;
