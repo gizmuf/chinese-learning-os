@@ -231,3 +231,44 @@ html[data-theme=dark] .reading-lab{
   color: color-mix(in srgb, var(--rl-ink) 70%, var(--rl-paper));
   font-weight: 500;
 }
+
+.rl-own-dialog {
+  width: min(750px, calc(100% - 24px));
+  max-height: min(88dvh, 900px);
+  margin: auto;
+  padding: clamp(12px, 3vw, 24px);
+  border: 1px solid var(--rl-line);
+  border-radius: 14px;
+  background: var(--rl-paper);
+  color: var(--rl-ink);
+  overflow: auto;
+}
+.rl-own-dialog::backdrop {background: #13231e85}
+.rl-own-form, .rl-own-result, .rl-own-sentences {display: grid; gap: 12px; min-width: 0}
+.rl-own-form textarea {
+  width: 100%;
+  min-height: 160px;
+  resize: vertical;
+  padding: 10px;
+  border: 1px solid var(--rl-line);
+  border-radius: 8px;
+  background: var(--rl-paper);
+  color: var(--rl-ink);
+  font: inherit;
+  font-size: 1.16rem;
+}
+.rl-own-form button {justify-self: start; min-height: 44px}
+.rl-own-form small, .rl-own-pinyin, .rl-own-audio p {color: var(--rl-muted); margin: 0; font-size: .9rem}
+.rl-own-result-header {display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px}
+.rl-own-result-header h2 {margin: 0; font-size: 1.5rem}
+.rl-own-audio {padding: 12px; display: grid; gap: 6px; justify-items: start; border: 1px solid var(--rl-line); border-radius: 8px}
+.rl-own-audio button {min-height: 44px}
+.rl-own-sentences {margin: 0; padding-inline-start: 1.8rem}
+.rl-own-sentences li {padding: 10px; border: 1px solid var(--rl-line); border-radius: 8px; overflow-wrap: anywhere}
+.rl-own-sentence {font-size: clamp(1.2rem, 3vw, 1.55rem); line-height: 1.6}
+.rl-own-sentences li[data-narration-active=true] {background: var(--rl-gold); border-color: var(--rl-accent)}
+.rl-own-grammar {margin-top: 6px; font-size: .9rem}
+.rl-own-grammar summary, .rl-own-sentences button.text-button {min-height: 44px; padding-block: 10px}
+.rl-own-grammar dl {margin: 6px 0; display: grid; gap: 8px}
+.rl-own-grammar dt {font-size: 1.08rem; font-weight: 650}
+.rl-own-grammar dd {margin-inline-start: 0; color: var(--rl-muted)}
