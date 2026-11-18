@@ -23,6 +23,9 @@ import {readingReviewTokenEvent, type ReadingReviewTokenRequest} from './reading
 import type {ReadingReviewAction} from './reading-lab-review-model';
 import {emptyReadingLabSession, persistReadingLabSession, readReadingLabSession, readingLabDraftLimit, type ReadingLabResume} from './reading-lab-session';
 import Guided from './guided';
+import ReadingLabNarrator from './reading-lab-narrator';
+import {narrationFor} from './reading-lab-narrator-model';
+import {useReadingLabNarrator} from './use-reading-lab-narrator';
 import './reading-lab.css';
 
 type ReadingProps = {penOnly: boolean; notify: (message: string) => void};
@@ -78,8 +81,8 @@ function ReaderToken({token, tokenIndex, aid, onChoose}: {token: ReadingLabToken
   </button>;
 }
 
-function ReaderParagraph({paragraph, index, route, highlights, onChoose}: {
-  paragraph: ReadingLabParagraph; index: number; route: ReadingLabRoute; highlights: ReadonlySet<string>;
+function ReaderParagraph({paragraph, index, route, highlights, activeSentence, onChoose}: {
+  paragraph: ReadingLabParagraph; index: number; route: ReadingLabRoute; highlights: ReadonlySet<string>; activeSentence?: string;
   onChoose: (text: string, opener: HTMLButtonElement, paragraph: string) => void;
 }) {
   const sentenceByToken = new Map(splitReadingSentences(paragraph).flatMap((sentence, sentenceIndex) => sentence.tokens.map(token => [
@@ -91,7 +94,10 @@ function ReaderParagraph({paragraph, index, route, highlights, onChoose}: {
         data-reader-chunk={chunk.id} data-grammar-evidence={highlights.has(chunk.id) || undefined}>
         {chunk.tokens.map((token, tokenIndex) => {
           const source = sentenceByToken.get(token);
-          return <span key={tokenIndex} data-study-source-id={source && route.article + ':' + paragraph.id + ':' + source.sentenceIndex}
+          const sentenceKey = source && paragraph.id + ':' + source.sentenceIndex;
+          return <span key={tokenIndex} data-narration-cue={sentenceKey}
+            data-narration-active={activeSentence !== undefined && sentenceKey === activeSentence || undefined}
+            data-study-source-id={sentenceKey && route.article + ':' + sentenceKey}
             data-study-sentence={source?.sentence.hanzi} data-study-pinyin={source?.sentence.pinyin} data-study-meaning={source?.sentence.english}>
             <ReaderToken token={token} tokenIndex={tokenIndex} aid={route.aid} onChoose={(text, opener) => onChoose(text, opener, paragraph.id)}/>
           </span>;
@@ -252,6 +258,19 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   const requestedReading = readingLabReadings.find(candidate => candidate.id === route.article);
   const outsideScope = requestedReading && !knownHskInScope(requestedReading.level, route.level);
   const reading = outsideScope ? undefined : requestedReading;
+  const track = useMemo(() => narrationFor(reading), [reading]);
+  const narrator = useReadingLabNarrator(route.review ? undefined : track);
+  const activeSentence = narrator.snapshot.status !== 'idle' ? track?.cues[narrator.snapshot.index]?.key : undefined;
+
+  useEffect(() => {
+    if (!activeSentence || narrator.snapshot.status !== 'playing') return;
+    const token = root.current?.querySelector<HTMLElement>('[data-narration-active=true]');
+    const bounds = token?.getBoundingClientRect();
+    if (bounds && (bounds.top < 80 || bounds.bottom > window.innerHeight - 30)) {
+      token?.scrollIntoView({block: 'center', inline: 'nearest'});
+    }
+  }, [activeSentence, narrator.snapshot.status]);
+
   const grammar = reading?.grammar.find(entry => entry.id === route.grammar);
   const relatedFrame = resolveReadingGrammarFrame(grammar?.frameId);
   const highlights = useMemo(() => new Set([...(grammar?.sourceChunks ?? []), ...(questionEvidence?.article === route.article && questionEvidence?.chunk ? [questionEvidence.chunk] : []), ...(route.chunk ? [route.chunk] : [])]), [grammar, questionEvidence, route.article, route.chunk]);
@@ -360,6 +379,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
     history.replaceState({...history.state, readingLabScroll: window.scrollY, ...(focus ? {readingLabFocus: focus} : {})}, '', location.href);
   }
   function beginDetour(next: ReaderDetour) {
+    narrator.pause();
     saveResume(route, window.scrollY);
     preservePosition();
     history.pushState({...history.state, readingLabDetour: next}, '', location.href);
@@ -415,6 +435,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   }, [route.article, route.review, reviews.store, reviews.unavailable]);
 
   function chooseWord(text: string, opener: HTMLButtonElement, paragraph: string) {
+    narrator.pause();
     setSelectedWord(text);
     selectedTrigger.current = opener;
     if (route.paragraph !== paragraph) navigate({paragraph}, {replace: true});
@@ -514,6 +535,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
           <button type="button" key={aid.id} aria-pressed={route.aid === aid.id} onClick={() => navigate({aid: aid.id}, {replace: true})}>{aid.label}</button>)}</div>
         <label className="rl-chunk-switch"><input type="checkbox" checked={route.chunks} onChange={event => navigate({chunks: event.target.checked}, {replace: true})}/> Show chunks</label>
       </div>
+      <ReadingLabNarrator track={track} player={narrator} hidden={recall?.step === 'recall'}/>
       {route.aid !== 'hanzi' && recall?.step !== 'recall' && <details className="rl-tone-legend">
         <summary>Tone guide</summary>
         <div>{Object.entries(toneMarks).map(([tone, mark], index) => <span key={tone} data-tone={tone}><b>{mark}</b> {neutralNames[index]}</span>)}</div>
@@ -523,7 +545,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
         <div className="rl-text-panel">
           <div className="rl-text" data-aid={route.aid} data-chunks={route.chunks}>
             {reading.paragraphs.map((paragraph, index) =>
-              <ReaderParagraph key={paragraph.id} paragraph={paragraph} index={index} route={route} highlights={highlights} onChoose={chooseWord}/>)}
+              <ReaderParagraph key={paragraph.id} paragraph={paragraph} index={index} route={route} highlights={highlights} activeSentence={activeSentence} onChoose={chooseWord}/>)}
           </div>
           <VocabularyDetails reading={reading} {...vocabulary}/>
         </div>
@@ -568,6 +590,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
           <div className="rl-reading-actions">
             <button type="button" ref={recallStart} onClick={() => {
               saveResume(route, window.scrollY);
+              narrator.pause();
               setRecall({article: reading.id, step: 'recall', responses: {}});
               requestAnimationFrame(() => recallHeading.current?.focus());
             }}>Recall with the text hidden</button>
