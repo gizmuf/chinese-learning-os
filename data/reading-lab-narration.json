@@ -1,0 +1,53 @@
+{
+  "article": "my-day-morning-audio",
+  "source": "/audio/reading-lab/my-day-morning.wav",
+  "sha256": "312ac56e6807c92af208a61b5df8704f61c218708531f25915e955c07521818d",
+  "model": "qwen-audio-3.1-tts-plus",
+  "voice": "longanhuan_v3.1",
+  "sampleRate": 24000,
+  "frames": 357120,
+  "cues": [
+    {
+      "key": "p1:0",
+      "text": "我每天八点左右醒来。",
+      "startFrame": 0,
+      "clipId": "md-1",
+      "clipSha256": "926888a7f74af5b0dc58886a36906925dd542f38335a3b7335851126c69ed7ec"
+    },
+    {
+      "key": "p1:1",
+      "text": "二十到三十分钟后，我起床。",
+      "startFrame": 48000,
+      "clipId": "md-2",
+      "clipSha256": "e84ef48f0ee7fead1249a24f48f0b896f999835457cf343c88ef651f6c3672ae"
+    },
+    {
+      "key": "p1:2",
+      "text": "然后我去厨房做早饭。",
+      "startFrame": 113280,
+      "clipId": "md-3",
+      "clipSha256": "bf464cfa1f30235c412291ee3e420452088733e65e7412bd9f7a31e8068342a1"
+    },
+    {
+      "key": "p1:3",
+      "text": "因为我不吃肉，所以早饭我做素菜。",
+      "startFrame": 159360,
+      "clipId": "md-4",
+      "clipSha256": "f6e4c5750be3f97caf37136d43cc479e1db95b487e196c44c4df42050fa767db"
+    },
+    {
+      "key": "p1:4",
+      "text": "然后我吃早饭。",
+      "startFrame": 238080,
+      "clipId": "md-5",
+      "clipSha256": "cba624f246270c7aa144df69d46da70fc4a0d3d8bb770ab05007f31c19ddec9e"
+    },
+    {
+      "key": "p1:5",
+      "text": "早饭后，我准备出门，因为我得去学校。",
+      "startFrame": 274560,
+      "clipId": "md-6",
+      "clipSha256": "5c601c7aac48449141f2947a7dfe6b201e2cb03eda6666b75d265e84921010ae"
+    }
+  ]
+}

@@ -2,9 +2,10 @@
 import type { Item } from "./content";
 let current: HTMLAudioElement | null = null;
 let playbackRate = 1;
+let followsSpeechRate = true;
 export function setSpeechRate(rate: number) {
   playbackRate = rate === 0.8 ? 0.8 : 1;
-  if (current) current.playbackRate = playbackRate;
+  if (current && followsSpeechRate) current.playbackRate = playbackRate;
 }
 export function stopAudio() {
   if (!current) return;
@@ -27,12 +28,17 @@ export function speak(
   const source = `${prefix}/${encodeURIComponent(item.id)}-${text === item.hanzi ? "word" : "sentence"}.mp3`;
   playRecording(source,notify);
 }
-export function playRecording(source:string,notify:(message:string)=>void) {
+export function prepareRecording(source: string, rate?: number) {
   stopAudio();
   const audio = new Audio(source);
   current = audio;
-  audio.playbackRate = playbackRate;
+  followsSpeechRate = rate === undefined;
+  audio.playbackRate = rate ?? playbackRate;
   audio.preservesPitch = true;
+  return audio;
+}
+export function playRecording(source:string,notify:(message:string)=>void) {
+  const audio = prepareRecording(source);
   audio.onended = () => {
     if (current === audio) current = null;
   };
