@@ -1,5 +1,5 @@
 import type {ImportedSentence} from './reading-lab-own-text-model';
-import type {NarrationTrack} from './reading-lab-narrator-model';
+import type {SavedReadingAudio} from './reading-lab-audio-cache';
 
 export const readingAudioTicketsPath = '/api/reading-lab/audio-tickets';
 const sampleRate = 24000;
@@ -65,7 +65,7 @@ export function joinSentenceAudio(sentences: readonly ImportedSentence[], audio:
 
 export async function generateReadingAudio(
   sentences: readonly ImportedSentence[], signal: AbortSignal, progress: (ready: number, total: number) => void,
-): Promise<NarrationTrack> {
+): Promise<Omit<SavedReadingAudio, 'voice'>> {
   // Construct the offline decoder during the tap. It does not start playback.
   const decoder = new OfflineAudioContext(1, 1, sampleRate);
   const unique = [...new Set(sentences.map(item => item.text))];
@@ -101,6 +101,5 @@ export async function generateReadingAudio(
     clips.set(text, buffer);
     progress(clips.size, unique.length);
   }
-  const {wav, cues, duration} = joinSentenceAudio(sentences, clips);
-  return {source: URL.createObjectURL(wav), cues, duration};
+  return joinSentenceAudio(sentences, clips);
 }
