@@ -156,7 +156,7 @@ export function createReadingLabGateway({
       if (!/^ws-[a-z0-9]+$/u.test(workspace) || !Number.isFinite(deadline) ||
           !Number.isInteger(characters) || characters < 1 || characters > maxLifetimeCharacters) return;
       return {workspace, characters, deadline,
-        key: freeOnly === true && typeof key === 'string' && /^sk-[A-Za-z0-9_-]{12,}$/u.test(key) ? key : undefined};
+        key: freeOnly === true && typeof key === 'string' && /^sk-[A-Za-z0-9._~+/-]{12,253}={0,2}$/u.test(key) ? key : undefined};
     } catch { return undefined; }
   }
 
