@@ -41,23 +41,33 @@ function readingPinyin(text: string) {
 }
 
 export function importReading(source: string): ImportedReading {
-  const lines = source.split(/\r\n?|\n/u).map(line => line.trim().replace(/\\$/u, '').trim()).filter(Boolean);
+  const lines = source.split(/\r\n?|\n/u).map(line => line
+    .replace(/&#x20;|&#32;|&nbsp;/giu, ' ').replace(/\\\*/gu, '*')
+    .trim().replace(/\\$/u, '').trim()).filter(Boolean);
   const markdownTitle = lines[0]?.match(/^\*\*(.+)\*\*$/u)?.[1] ?? lines[0]?.match(/^#{1,6}\s+(.+)$/u)?.[1];
   const titleWithReading = lines.length >= 3 && /^[\p{Script=Han}]{1,16}$/u.test(lines[0])
-    && /^[\p{Script=Latin}\p{Mark} '\u2019-]+$/u.test(lines[1]);
-  const title = markdownTitle || (titleWithReading ? lines[0] : undefined);
+    && /^[\p{Script=Latin}\p{Mark} '\u2019-]+$/u.test(lines[1].replace(/^\*|\*$/gu, ''));
+  const title = markdownTitle && /^[\p{Script=Han}]{1,16}$/u.test(markdownTitle)
+    ? markdownTitle : (titleWithReading ? lines[0] : undefined);
   if (title) {
     lines.shift();
-    if (lines[0] && /^[\p{Script=Latin}\p{Mark} '\u2019-]+$/u.test(lines[0])) lines.shift();
+    if (lines[0] && /^[\p{Script=Latin}\p{Mark} '\u2019-]+$/u.test(lines[0].replace(/^\*|\*$/gu, ''))) lines.shift();
   }
-  const texts = lines.flatMap(line => Array.from(line.matchAll(/.+?(?:[。！？!?]+[”’」』】）》]*|\.(?!\d)|$)/gu), match => match[0].trim()))
-    .filter(text => hanzi.test(text));
+  const texts = lines.flatMap((line, index) => {
+    const plain = line.replace(/^\*\*(.+)\*\*$/u, '$1');
+    const sentences = Array.from(plain.matchAll(/.+?(?:[。！？!?]+[”’」』】）》]*|\.(?!\d)|$)/gu), match => match[0].trim())
+      .filter(text => hanzi.test(text));
+    const supplied = lines[index + 1]?.match(/^\*([^*]+)\*$/u)?.[1];
+    const readings = supplied && /^[\p{Script=Latin}\p{Mark}\s.,!?;:，。！？'’\u2010-]+$/u.test(supplied)
+      ? supplied.match(/[^.!?。！？]+[.!?。！？]*\s*/gu)?.map(reading => reading.trim()) : undefined;
+    return sentences.map((text, position) => ({text, supplied: readings?.length === sentences.length ? readings[position] : undefined}));
+  });
   return {
     ...(title && {title, titlePinyin: readingPinyin(title)}),
-    sentences: texts.map((text, index) => ({
+    sentences: texts.map(({text, supplied}, index) => ({
       key: 'sentence-' + (index + 1),
       text,
-      pinyin: readingPinyin(text),
+      pinyin: supplied || readingPinyin(text),
       grammar: patterns.flatMap(({label, note, match}) => {
         const example = text.match(match)?.[0];
         return example ? [{label, note, example}] : [];

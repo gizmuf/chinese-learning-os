@@ -1,22 +1,17 @@
 import type {ImportedSentence} from './reading-lab-own-text-model';
 import type {SavedReadingAudio} from './reading-lab-audio-cache';
 
-export const readingAudioTicketsPath = '/api/reading-lab/audio-tickets';
+export function readingAudioPath(origin = window.location.origin) {
+  const gateway = origin === 'https://cos.l00p.network' ? 'https://chineseos.l00p.network' : '';
+  return gateway + '/api/reading-lab/narration';
+}
 const sampleRate = 24000;
 const pauseFrames = Math.round(sampleRate * 0.24);
 const maxFrames = sampleRate * 360;
-const maxClipBytes = 512 * 1024;
+const maxClipBytes = 4 * 1024 * 1024;
 
-type Ticket = {text: string; expires: number; signature: string};
 export class ReadingAudioError extends Error {
   constructor(readonly quota: boolean = false) {super('Reading audio is unavailable');}
-}
-
-function validTicket(value: unknown): value is Ticket {
-  if (!value || typeof value !== 'object') return false;
-  const ticket = value as Partial<Ticket>;
-  return typeof ticket.text === 'string' && Number.isSafeInteger(ticket.expires)
-    && typeof ticket.signature === 'string' && /^[0-9a-f]{64}$/u.test(ticket.signature);
 }
 
 export function joinSentenceAudio(sentences: readonly ImportedSentence[], audio: ReadonlyMap<string, AudioBuffer>) {
@@ -69,30 +64,21 @@ export async function generateReadingAudio(
   // Construct the offline decoder during the tap. It does not start playback.
   const decoder = new OfflineAudioContext(1, 1, sampleRate);
   const unique = [...new Set(sentences.map(item => item.text))];
-  const configResponse = await fetch(readingAudioTicketsPath, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({sentences: unique}),
-    signal,
-  });
-  if (!configResponse.ok) throw new ReadingAudioError(configResponse.status === 429);
-  const data: {tickets?: unknown} = await configResponse.json();
-  if (!Array.isArray(data.tickets) || !data.tickets.every(validTicket) || data.tickets.length !== unique.length) {
-    throw new ReadingAudioError();
-  }
-  const tickets = new Map(data.tickets.map(ticket => [ticket.text, ticket]));
-  if (!unique.every(text => tickets.has(text))) throw new ReadingAudioError();
+  const endpoint = readingAudioPath();
   const clips = new Map<string, AudioBuffer>();
   let decodedFrames = 0;
   progress(0, unique.length);
   for (const text of unique) {
-    const response = await fetch('/api/sentence-check/audio', {
+    const response = await fetch(endpoint, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(tickets.get(text)),
+      body: JSON.stringify({text}),
+      credentials: 'omit',
       signal,
     });
-    if (!response.ok || !response.headers.get('Content-Type')?.startsWith('audio/')) throw new ReadingAudioError();
+    if (!response.ok || !response.headers.get('Content-Type')?.startsWith('audio/')) {
+      throw new ReadingAudioError(response.status === 429);
+    }
     const bytes = await response.arrayBuffer();
     if (!bytes.byteLength || bytes.byteLength > maxClipBytes || signal.aborted) throw new ReadingAudioError();
     const buffer = await decoder.decodeAudioData(bytes);
