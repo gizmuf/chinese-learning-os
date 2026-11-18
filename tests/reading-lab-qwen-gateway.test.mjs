@@ -24,7 +24,7 @@ test('only an explicit permitted POST calls Qwen, with persistent caching and fr
   const directory = mkdtempSync(join(tmpdir(), 'reading-lab-qwen-test-'));
   const expires = new Date(Date.now() + 60000).toISOString();
   writeFileSync(join(directory, 'config.json'), JSON.stringify({
-    key: ['sk-', 'dummy'.repeat(4)].join(''), workspace: 'ws-example', freeOnly: true, expires, characters: 500,
+    key: 'sk-' + ['dummy', 'example', 'test'].join('.'), workspace: 'ws-example', freeOnly: true, expires, characters: 500,
   }));
   let synthesis = 0;
   const server = createServer(createReadingLabGateway({directory, fetcher: async (url, init) => {
