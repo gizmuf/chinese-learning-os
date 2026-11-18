@@ -34,6 +34,17 @@ test('preserves the needed contextual pinyin and finds paired and result pattern
   );
 });
 
+test('imports escaped bold sentences with their supplied pinyin', () => {
+  const input = ['\\*\\*天气\\*\\*\\', '&#x20;\\*Tiānqì\\*', '',
+    '\\*\\*今天很冷。明天也一样。\\*\\*\\', '&#x20;\\*Jīntiān hěn lěng. Míngtiān yě yíyàng.\\*'].join('\n');
+  const reading = m.importReading(input);
+  assert.equal(reading.title, '天气');
+  assert.deepEqual(reading.sentences.map(({text, pinyin}) => [text, pinyin]), [
+    ['今天很冷。', 'Jīntiān hěn lěng.'],
+    ['明天也一样。', 'Míngtiān yě yíyàng.'],
+  ]);
+});
+
 test('audio requests reject invalid batches and count distinct sentences within the daily allowance', () => {
   assert.deepEqual(m.parseReadingAudioSentences({sentences: ['我在这里。','我在这里。','走路。']}), ['我在这里。','走路。']);
   for (const sentences of [[], ['a'], ['好\n了'], ['好'.repeat(201)], Array(25).fill('好'), Array(9).fill('好'.repeat(200))]) {

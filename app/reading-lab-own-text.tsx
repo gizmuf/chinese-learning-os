@@ -5,13 +5,13 @@ import {StudyText} from './study-lookup-context';
 import ReadingLabNarrator from './reading-lab-narrator';
 import {useReadingLabNarrator} from './use-reading-lab-narrator';
 import {importReading, type ImportedReading} from './reading-lab-own-text-model';
-import {generateReadingAudio, readingAudioTicketsPath, ReadingAudioError} from './reading-lab-own-audio';
+import {generateReadingAudio, readingAudioPath, ReadingAudioError} from './reading-lab-own-audio';
 import type {NarrationTrack} from './reading-lab-narrator-model';
 import {readSavedReadingAudio, saveReadingAudio} from './reading-lab-audio-cache';
-
-const microsoftVoice = 'Microsoft Xiaoxiao';
-const qwenVoice = 'Qwen · Longanhuan';
 import {parseReadingAudioSentences, readingAudioTextLimit, readingAudioSentenceLimit, readingAudioSentenceSize} from '../lib/reading-lab-audio-policy';
+
+const qwenVoice = 'Qwen · Longanhuan';
+const savedReadingKey = 'chinese-os:reading-lab:last-narrated-text';
 
 export default function ReadingLabOwnText() {
   const [source, setSource] = useState('');
@@ -19,17 +19,29 @@ export default function ReadingLabOwnText() {
   const [error, setError] = useState('');
   const field = useRef<HTMLTextAreaElement>(null);
 
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(savedReadingKey);
+      if (saved) setSource(current => current || saved);
+    } catch { /* Audio can still be played without local storage. */ }
+  }, []);
+
   function prepare(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (source.length > readingAudioTextLimit) return setError('Shorten the text to ' + readingAudioTextLimit + ' characters and try again.');
+    if (source.length > readingAudioTextLimit * 3) return setError('Shorten the pasted text and try again.');
     const next = importReading(source);
     if (!next.sentences.length) return setError('Paste some Chinese text to start.');
+    if (next.sentences.reduce((total, sentence) => total + sentence.text.length, 0) > readingAudioTextLimit) {
+      return setError('Shorten the Chinese text to ' + readingAudioTextLimit + ' characters and try again.');
+    }
     if (next.sentences.length > readingAudioSentenceLimit) return setError('Use up to ' + readingAudioSentenceLimit + ' sentences per reading.');
     setError('');
     setReading(next);
   }
 
-  if (reading) return <ImportedText reading={reading} onEdit={() => {
+  if (reading) return <ImportedText reading={reading} onSaved={() => {
+    try { localStorage.setItem(savedReadingKey, source); } catch { /* IndexedDB holds the audio. */ }
+  }} onEdit={() => {
     setReading(undefined);
     requestAnimationFrame(() => field.current?.focus());
   }}/>;
@@ -44,11 +56,11 @@ export default function ReadingLabOwnText() {
   </form>;
 }
 
-function ImportedText({reading, onEdit}: {reading: ImportedReading; onEdit: () => void}) {
+function ImportedText({reading, onEdit, onSaved}: {reading: ImportedReading; onEdit: () => void; onSaved: () => void}) {
   const [showPinyin, setShowPinyin] = useState(true);
   const [available, setAvailable] = useState<boolean>();
   const [track, setTrack] = useState<NarrationTrack>();
-  const [voice, setVoice] = useState(microsoftVoice);
+  const [voice, setVoice] = useState(qwenVoice);
   const [status, setStatus] = useState('');
   const [busy, setBusy] = useState(false);
   const request = useRef<AbortController | null>(null);
@@ -76,11 +88,10 @@ function ImportedText({reading, onEdit}: {reading: ImportedReading; onEdit: () =
       }
       if (!canGenerate) return;
       try {
-        const response = await fetch(readingAudioTicketsPath, {signal: controller.signal, cache: 'no-store'});
+        const response = await fetch(readingAudioPath(), {signal: controller.signal, cache: 'no-store', credentials: 'omit'});
         const settings = response.ok ? await response.json() as {enabled?: boolean; voice?: string} : null;
         if (!controller.signal.aborted) {
-          setVoice(settings?.voice === 'qwen' ? qwenVoice : microsoftVoice);
-          setAvailable(settings?.enabled === true);
+          setAvailable(settings?.enabled === true && settings.voice === 'qwen');
         }
       } catch {
         if (!controller.signal.aborted) setAvailable(false);
@@ -115,15 +126,17 @@ function ImportedText({reading, onEdit}: {reading: ImportedReading; onEdit: () =
       const ready = await generateReadingAudio(sentences, controller.signal, (count, total) =>
         setStatus('Preparing narration · ' + count + '/' + total + ' recordings'));
       if (controller.signal.aborted) return;
-      const saved = await saveReadingAudio(sentences, {...ready, voice}).then(() => true, () => false);
+      const saved = await saveReadingAudio(sentences, {...ready, voice: qwenVoice}).then(() => true, () => false);
+      if (saved) onSaved();
       if (controller.signal.aborted) return;
       const url = URL.createObjectURL(ready.wav);
       source.current = url;
       setTrack({source: url, duration: ready.duration, cues: ready.cues});
+      setVoice(qwenVoice);
       setStatus(saved ? 'Narration saved. Tap Play to listen.' : 'Narration ready for this session. Browser storage is unavailable.');
     } catch (error) {
       if (!controller.signal.aborted) setStatus(error instanceof ReadingAudioError && error.quota
-        ? 'The daily audio allowance has been used. Try again tomorrow.'
+        ? 'The free Qwen allowance is unavailable. Saved narration can still be played.'
         : 'Narration could not be prepared. Try again.');
     } finally {
       if (request.current === controller) request.current = null;
@@ -147,7 +160,7 @@ function ImportedText({reading, onEdit}: {reading: ImportedReading; onEdit: () =
         {available && <button type="button" className="primary" onClick={generate} disabled={busy}>Generate narration</button>}
         <p>{!canGenerate ? 'To generate narration, keep each sentence under ' + (readingAudioSentenceSize + 1) + ' characters.'
           : available === false ? 'Narration generation is unavailable on this site.'
-          : available ? 'Generating narration sends these sentences to ' + voice + ' for speech synthesis.'
+          : available ? 'Send these sentences to Qwen using its free allowance. Reading Lab saves the audio for replay on this device.'
           : 'Checking narration availability…'}</p>
       </section>}
     {status && <p role="status" className="rl-own-pinyin">{status}</p>}
