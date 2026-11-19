@@ -2,17 +2,18 @@
 
 import {useLayoutEffect, useRef, useState} from 'react';
 import {prepareRecording, releaseRecording} from './audio';
-import {narrationCueAt, narrationPosition, narrationStep, type NarrationMode, type NarrationRate, type NarrationTrack} from './reading-lab-narrator-model';
+import {narrationCueAt, narrationLoopLimit, narrationPosition, narrationStep, type NarrationMode, type NarrationRate, type NarrationTrack} from './reading-lab-narrator-model';
 
 type PlaybackStatus = 'idle' | 'loading' | 'playing' | 'paused' | 'waiting' | 'ended' | 'error';
-type Snapshot = {status: PlaybackStatus; position: number; index: number};
+type Snapshot = {status: PlaybackStatus; position: number; index: number; loopComplete?: boolean};
 const initial: Snapshot = {status: 'idle', position: 0, index: 0};
 
 export function useReadingLabNarrator(track?: NarrationTrack) {
   const [snapshot, setSnapshot] = useState(initial);
   const [mode, setMode] = useState<NarrationMode>('continuous');
   const [rate, setRate] = useState<NarrationRate>(0.9);
-  const session = useRef({snapshot: initial, mode, rate, attempt: 0});
+  const [loopPass, setLoopPass] = useState(0);
+  const session = useRef({snapshot: initial, mode, rate, attempt: 0, loopPass: 0});
   const recording = useRef<HTMLAudioElement | null>(null);
 
   function publish(next: Snapshot) {
@@ -20,9 +21,15 @@ export function useReadingLabNarrator(track?: NarrationTrack) {
     setSnapshot(next);
   }
 
+  function updateLoop(pass: number) {
+    session.current.loopPass = pass;
+    setLoopPass(pass);
+  }
+
   useLayoutEffect(() => {
     session.current.snapshot = initial;
     setSnapshot(initial);
+    updateLoop(0);
     return () => {
       session.current.attempt++;
       const previous = recording.current;
@@ -70,9 +77,19 @@ export function useReadingLabNarrator(track?: NarrationTrack) {
           media.pause();
           media.currentTime = step.position;
           break;
-        case 'finish':
-          publish({...step, status: 'ended'});
+        case 'finish': {
+          const pass = session.current.loopPass;
+          // Wait for the media's real end before counting a complete listen or restarting.
+          if (pass && !media.ended) break;
+          if (pass && pass < narrationLoopLimit) {
+            updateLoop(pass + 1);
+            move(0, true);
+          } else {
+            if (pass) updateLoop(0);
+            publish({...step, status: 'ended', loopComplete: pass === narrationLoopLimit});
+          }
           break;
+        }
         case 'follow':
           // The scrubber needs only tenths of a second; avoid rerendering on every frame.
           if (step.index !== state.index || Math.abs(step.position - state.position) >= 0.1) {
@@ -162,7 +179,18 @@ export function useReadingLabNarrator(track?: NarrationTrack) {
   }
 
   return {
-    snapshot, mode, rate, pause, toggle,
+    snapshot, mode, rate, loopPass, pause, toggle,
+    toggleLoop() {
+      if (session.current.loopPass) {
+        updateLoop(0);
+        pause();
+      } else if (track) {
+        session.current.mode = 'continuous';
+        setMode('continuous');
+        updateLoop(1);
+        move(0, true);
+      }
+    },
     seek(time: number) {
       const status = session.current.snapshot.status;
       move(time, status === 'playing' || status === 'loading');
@@ -172,6 +200,7 @@ export function useReadingLabNarrator(track?: NarrationTrack) {
       if (cue) move(cue.start, true);
     },
     changeMode(next: NarrationMode) {
+      if (next !== 'continuous') updateLoop(0);
       session.current.mode = next;
       setMode(next);
     },
