@@ -1,7 +1,7 @@
 'use client';
 
-import {Pause, Play, Volume2} from 'lucide-react';
-import {narrationRates, type NarrationMode, type NarrationRate, type NarrationTrack} from './reading-lab-narrator-model';
+import {Pause, Play, Repeat, Volume2} from 'lucide-react';
+import {narrationLoopLimit, narrationRates, type NarrationMode, type NarrationRate, type NarrationTrack} from './reading-lab-narrator-model';
 import type {useReadingLabNarrator} from './use-reading-lab-narrator';
 
 function clock(seconds: number) {
@@ -10,7 +10,7 @@ function clock(seconds: number) {
 }
 
 const modes: Record<NarrationMode, string> = {
-  continuous: 'Continuous',
+  continuous: 'Read through',
   repeat: 'Repeat sentence',
   'listen-repeat': 'Listen, then repeat aloud',
 };
@@ -22,7 +22,7 @@ export default function ReadingLabNarrator({track, player, hidden, voice = 'Synt
   voice?: string;
 }) {
   if (!track) return hidden ? null : <p className="rl-narration-unavailable">Narration unavailable for this reading.</p>;
-  const {snapshot, rate, mode, changeMode, changeRate, seek, playFrom, toggle} = player;
+  const {snapshot, rate, mode, loopPass, changeMode, changeRate, seek, playFrom, toggle, toggleLoop} = player;
   const active = snapshot.status === 'playing' || snapshot.status === 'loading';
   const last = snapshot.index === track.cues.length - 1;
   const action = active ? 'Pause' : snapshot.status === 'waiting' ? last ? 'Finish' : 'Next sentence'
@@ -37,6 +37,12 @@ export default function ReadingLabNarrator({track, player, hidden, voice = 'Synt
         aria-valuetext={clock(snapshot.position) + ' of ' + clock(track.duration)}
         value={snapshot.position} onChange={event => seek(event.target.valueAsNumber)}/>
       <span aria-hidden="true">{clock(snapshot.position)} / {clock(track.duration)}</span>
+    </div>
+    <div className="rl-narrator-loop">
+      <button type="button" className="rl-narrator-play" aria-pressed={loopPass > 0} onClick={toggleLoop}>
+        <Repeat size={17} aria-hidden="true"/> Continuous play
+      </button>
+      <span>{loopPass ? 'Listen ' + loopPass + ' of ' + narrationLoopLimit : 'Up to ' + narrationLoopLimit + ' listens'}</span>
     </div>
     <div className="rl-narrator-options">
       <label>Speed <select value={rate} onChange={event => changeRate(Number(event.target.value) as NarrationRate)}>
@@ -54,7 +60,7 @@ export default function ReadingLabNarrator({track, player, hidden, voice = 'Synt
       {snapshot.status === 'loading' ? 'Loading narration…'
         : snapshot.status === 'waiting' ? 'Your turn. Say the highlighted sentence aloud.'
         : snapshot.status === 'error' ? 'The recording could not play. Try again.'
-        : snapshot.status === 'ended' ? 'End of reading.' : ''}
+        : snapshot.status === 'ended' ? snapshot.loopComplete ? narrationLoopLimit + ' listens complete.' : 'End of reading.' : ''}
     </p>
   </section>;
 }

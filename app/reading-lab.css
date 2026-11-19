@@ -189,14 +189,14 @@ html[data-theme=dark] .reading-lab{
   border-radius: 12px;
   background: var(--rl-paper);
 }
-.rl-narrator-heading, .rl-narrator-transport, .rl-narrator-options {
+.rl-narrator-heading, .rl-narrator-transport, .rl-narrator-options, .rl-narrator-loop {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 8px 12px;
 }
 .rl-narrator-heading {margin: 0 0 9px; font-weight: 650;}
-.rl-narrator-heading small, .rl-narrator-options label, .rl-narrator-transport span {
+.rl-narrator-heading small, .rl-narrator-options label, .rl-narrator-transport span, .rl-narrator-loop span {
   font-size: .85rem;
   color: var(--rl-muted);
 }
@@ -218,6 +218,8 @@ html[data-theme=dark] .reading-lab{
   font: inherit;
 }
 .rl-narrator-play {display: inline-flex; gap: 6px; align-items: center; padding: 6px 12px; font-weight: 650;}
+.rl-narrator-loop {margin-top: 8px;}
+.rl-narrator-loop button[aria-pressed=true] {background: var(--rl-accent); border-color: var(--rl-accent); color: #fff;}
 .rl-narrator-options {margin-top: 8px;}
 .rl-narrator-options label {display: grid; gap: 3px; min-width: 0; max-width: 100%;}
 .rl-narrator-options select {width: 100%; padding: 0 8px;}

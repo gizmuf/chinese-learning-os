@@ -11,6 +11,7 @@ export type NarrationTrack = {
 };
 
 export const narrationRates = [0.75, 0.9, 1, 1.15] as const;
+export const narrationLoopLimit = 20;
 export type NarrationRate = typeof narrationRates[number];
 
 const demoTrack: NarrationTrack = {
