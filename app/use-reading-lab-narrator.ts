@@ -39,9 +39,9 @@ export function useReadingLabNarrator(track?: NarrationTrack) {
     };
   }, [track]);
 
-  function start(media: HTMLAudioElement) {
+  function start(media: HTMLAudioElement, next = session.current.snapshot) {
     const attempt = ++session.current.attempt;
-    publish({...session.current.snapshot, status: 'loading'});
+    publish({...next, status: 'loading'});
     void media.play().then(() => {
       if (recording.current === media && attempt === session.current.attempt && !media.paused
         && session.current.snapshot.status === 'loading') publish({...session.current.snapshot, status: 'playing'});
@@ -63,7 +63,7 @@ export function useReadingLabNarrator(track?: NarrationTrack) {
 
     const active = () => recording.current === media;
     const stopFrame = () => cancelAnimationFrame(frame);
-    function sync(time: number) {
+    function sync(time: number, atMediaEnd = false) {
       if (!active() || session.current.snapshot.status !== 'playing' || media.seeking) return;
       const state = session.current.snapshot;
       const step = narrationStep(source, session.current.mode, state.index, time);
@@ -81,10 +81,13 @@ export function useReadingLabNarrator(track?: NarrationTrack) {
         case 'finish': {
           const pass = session.current.loopPass;
           // Wait for the media's real end before counting a complete listen or restarting.
-          if (pass && !media.ended) break;
+          if (pass && !atMediaEnd) break;
           if (pass && pass < narrationLoopLimit) {
             updateLoop(pass + 1);
-            move(0, true);
+            // Restart Safari's decoder on the same saved source before replaying.
+            media.load();
+            media.playbackRate = session.current.rate;
+            start(media, initial);
           } else {
             if (pass) updateLoop(0);
             publish({...step, status: 'ended', loopComplete: pass === narrationLoopLimit});
@@ -112,7 +115,7 @@ export function useReadingLabNarrator(track?: NarrationTrack) {
     });
     media.addEventListener('timeupdate', () => sync(media.currentTime));
     media.addEventListener('ended', () => {
-      if (active() && media.ended) sync(source.duration);
+      if (active() && media.ended) sync(source.duration, true);
       if (media.paused) stopFrame();
     });
     media.addEventListener('pause', () => {
