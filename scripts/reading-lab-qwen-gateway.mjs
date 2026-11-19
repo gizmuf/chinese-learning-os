@@ -3,8 +3,10 @@ import {readFileSync} from 'node:fs';
 import {homedir} from 'node:os';
 import {join} from 'node:path';
 import {DatabaseSync} from 'node:sqlite';
+import {initializeSavedReadings, readingLabSavedPath, savedReadingResponse} from './reading-lab-saved.mjs';
 
 export const readingLabNarrationPath = '/api/reading-lab/narration';
+export {readingLabSavedPath};
 export const model = 'qwen-audio-3.1-tts-plus';
 export const voice = 'longanhuan_v3.1';
 const instruction = '请用标准普通话自然地说，像日常交谈一样。根据句意安排轻重音和语调，在意群之间自然衔接，语速适中，不要逐字朗读。';
@@ -31,20 +33,23 @@ function reply(res, status, value, headers = {}) {
   res.end(body);
 }
 
-async function readText(req) {
+async function readJson(req, limit) {
   if (!/^application\/json(?:\s*;|$)/iu.test(req.headers['content-type'] || '')) return;
   const chunks = [];
   let bytes = 0;
   for await (const chunk of req.iterator({destroyOnReturn: false})) {
     bytes += chunk.length;
-    if (bytes > requestBodyLimit) return;
+    if (bytes > limit) return;
     chunks.push(chunk);
   }
   try {
-    const {text} = JSON.parse(Buffer.concat(chunks).toString('utf8'));
-    if (typeof text === 'string' && text === text.trim() && text.length <= 200 &&
-        /\p{Script=Han}/u.test(text) && !/\p{C}/u.test(text)) return text;
+    return JSON.parse(Buffer.concat(chunks).toString('utf8'));
   } catch { /* Invalid JSON. */ }
+}
+
+function validText(text) {
+  return typeof text === 'string' && text === text.trim() && text.length <= 200 &&
+    /\p{Script=Han}/u.test(text) && !/\p{C}/u.test(text);
 }
 
 export function openNarrationStore(path) {
@@ -56,6 +61,7 @@ export function openNarrationStore(path) {
     CREATE INDEX IF NOT EXISTS attempts_start ON attempts (started);
     CREATE TABLE IF NOT EXISTS disabled (id INTEGER PRIMARY KEY CHECK (id=1));
   `);
+  initializeSavedReadings(db);
   return db;
 }
 
@@ -148,6 +154,7 @@ export function createReadingLabGateway({
 } = {}) {
   let store;
   let active = 0;
+  const getStore = () => store ??= openNarrationStore(join(directory, 'narration.sqlite'));
   function configuration() {
     try {
       const settings = JSON.parse(readFileSync(join(directory, 'config.json'), 'utf8'));
@@ -168,6 +175,16 @@ export function createReadingLabGateway({
     if (req.method === 'OPTIONS' && origin && req.headers['access-control-request-method'] === 'POST') {
       return reply(res, 204, undefined, {...cors, 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Allow-Headers': 'Content-Type'});
     }
+    const url = new URL(req.url, 'http://localhost');
+    if (url.pathname === readingLabSavedPath) {
+      if (active >= 4) return reply(res, 503, {error: 'busy'}, cors);
+      active++;
+      try {
+        return await savedReadingResponse(req, res, url, cors, {getStore, validText, readJson, reply, cacheDigest});
+      } catch {
+        if (!res.destroyed) return reply(res, 503, {error: 'unavailable'}, cors);
+      } finally { active--; }
+    }
     const settings = configuration();
     if (req.method === 'GET') return reply(res, 200, {enabled: Boolean(settings), voice: 'qwen'}, cors);
     if (req.method !== 'POST') return reply(res, 405, {error: 'method_not_allowed'}, cors);
@@ -176,10 +193,10 @@ export function createReadingLabGateway({
     if (active >= 4) return reply(res, 503, {error: 'busy'}, cors);
     active++;
     try {
-      const text = await readText(req);
-      if (!text) return reply(res, 400, {error: 'invalid_request'}, cors);
+      const {text} = await readJson(req, requestBodyLimit) ?? {};
+      if (!validText(text)) return reply(res, 400, {error: 'invalid_request'}, cors);
       const digest = cacheDigest(text);
-      store ??= openNarrationStore(join(directory, 'narration.sqlite'));
+      getStore();
       const reserved = reserve(store, digest, text.length + instruction.length, settings, Date.now());
       if (reserved.clip) return reply(res, 200, reserved.clip, {...cors, 'X-Narration-Cache': 'HIT'});
       if (reserved.error) return reply(res, reserved.code, {error: reserved.error}, cors);

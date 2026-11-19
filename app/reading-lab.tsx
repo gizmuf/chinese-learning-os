@@ -24,7 +24,8 @@ import type {ReadingReviewAction} from './reading-lab-review-model';
 import {emptyReadingLabSession, persistReadingLabSession, readReadingLabSession, readingLabDraftLimit, type ReadingLabResume} from './reading-lab-session';
 import Guided from './guided';
 import ReadingLabNarrator from './reading-lab-narrator';
-import ReadingLabOwnText from './reading-lab-own-text';
+import ReadingLabOwnText, {ReadingLabLinkedText} from './reading-lab-own-text';
+import {linkedReadingId, linkedReadingParam} from './reading-lab-linked-route';
 import {narrationFor} from './reading-lab-narrator-model';
 import {useReadingLabNarrator} from './use-reading-lab-narrator';
 import './reading-lab.css';
@@ -242,7 +243,8 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   const [drafts, setDrafts] = useState(loaded.session.drafts);
   const [resume, setResume] = useState(loaded.session.resume);
   const [saveUnavailable, setSaveUnavailable] = useState(loaded.unavailable);
-  const [ownText, setOwnText] = useState(false);
+  const [ownText, setOwnText] = useState<boolean | string>(() => linkedReadingId(location.search) ?? false);
+  const linkedReading = typeof ownText === 'string' ? ownText : undefined;
   const [selectedWord, setSelectedWord] = useState(() => readerHistory().readingLabFocus?.word ?? '');
   const [recall, setRecall] = useState<RecallCheck>();
   const [questionEvidence, setQuestionEvidence] = useState<{article: string; chunk: string}>();
@@ -288,6 +290,8 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
     history.scrollRestoration = 'manual';
     const pop = () => {
       if (!isReadingLabEntry(new URLSearchParams(location.search))) return;
+      const nextLinked = linkedReadingId(location.search);
+      setOwnText(current => nextLinked ?? (typeof current === 'string' ? false : current));
       const next = readReadingLabRoute(location.search);
       const state = readerHistory();
       const restored = currentDetour();
@@ -655,7 +659,16 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
         setSelectedWord(''); setQuestionEvidence(undefined); setRecall(undefined);
         navigate({article: article.id, paragraph: '', grammar: '', chunk: undefined, reviewReturn: undefined}, {scroll: 0});
       }}/></>}
-    {ownText && <Modal className="rl-own-dialog" label="Your text" onClose={() => setOwnText(false)}><ReadingLabOwnText/></Modal>}
+    {ownText && <Modal className="rl-own-dialog" label="Your text" onClose={() => {
+      setOwnText(false);
+      if (linkedReading) {
+        const url = new URL(location.href);
+        url.searchParams.delete(linkedReadingParam);
+        history.replaceState(history.state, '', url);
+      }
+    }}>{linkedReading
+      ? <ReadingLabLinkedText key={linkedReading} id={linkedReading}/>
+      : <ReadingLabOwnText/>}</Modal>}
     {detour?.kind === 'atlas' && <AtlasDetour detour={detour.visit} level={reading?.level ?? route.level} penOnly={penOnly} notify={notify} onClose={closeDetour}/>}
     {detour?.kind === 'stroke' && <StrokeDetour text={detour.text} penOnly={penOnly} onClose={closeDetour}/>}
   </section>;

@@ -1,9 +1,12 @@
 import type {ImportedSentence} from './reading-lab-own-text-model';
 import type {SavedReadingAudio} from './reading-lab-audio-cache';
 
-export function readingAudioPath(origin = window.location.origin) {
+export function readingLabApiBase(origin = window.location.origin) {
   const gateway = origin === 'https://cos.l00p.network' ? 'https://chineseos.l00p.network' : '';
-  return gateway + '/api/reading-lab/narration';
+  return gateway + '/api/reading-lab';
+}
+export function readingAudioPath() {
+  return readingLabApiBase() + '/narration';
 }
 const sampleRate = 24000;
 const pauseFrames = Math.round(sampleRate * 0.24);
