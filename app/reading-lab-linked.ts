@@ -1,8 +1,5 @@
 import ditouzu from '../data/reading-lab-linked-ditouzu.json';
-import type {NarrationTrack} from './reading-lab-narrator-model';
-
-export type LinkedReading = {markdown: string; track: NarrationTrack};
-export const linkedReadingParam = 'readingText';
+import type {LinkedReading} from './reading-lab-linked-route';
 
 const savedDitouzu: LinkedReading = {
   markdown: ditouzu.markdown,
@@ -13,6 +10,6 @@ const savedDitouzu: LinkedReading = {
   },
 };
 
-export function linkedReadingFor(search: string): LinkedReading | undefined {
-  if (new URLSearchParams(search).get(linkedReadingParam) === 'ditouzu') return savedDitouzu;
+export function linkedReadingFor(id: string): LinkedReading | undefined {
+  if (id === 'ditouzu') return savedDitouzu;
 }

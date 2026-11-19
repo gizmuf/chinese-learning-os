@@ -351,6 +351,10 @@ html[data-theme=dark] .reading-lab{
   padding: 8px clamp(12px, 3vw, 28px);
 }
 .rl-own-result-header h2 {margin: 0; font-size: 1.5rem}
+.rl-own-share {display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; margin-block: 0 12px}
+.rl-own-share button {display: inline-flex; align-items: center; gap: 6px; min-height: 44px}
+.rl-own-share small, .rl-own-share p {margin: 0; color: var(--rl-muted)}
+.rl-own-share input {flex: 1 1 100%; width: 100%; min-height: 44px}
 .rl-own-audio {padding: 12px; margin-bottom: 12px; display: grid; gap: 6px; justify-items: start; border: 1px solid var(--rl-line); border-radius: 8px}
 .rl-own-audio button {min-height: 44px}
 .rl-own-sentences {margin: 0; padding-inline-start: 1.6rem; gap: 0}

@@ -1,12 +1,12 @@
 'use client';
 
 import {useEffect, useRef, useState, type FormEvent} from 'react';
-import {Volume2} from 'lucide-react';
+import {Copy, Volume2} from 'lucide-react';
 import {StudyText} from './study-lookup-context';
 import ReadingLabNarrator from './reading-lab-narrator';
 import {useReadingLabNarrator} from './use-reading-lab-narrator';
 import {importReading, type ImportedReading} from './reading-lab-own-text-model';
-import type {LinkedReading} from './reading-lab-linked';
+import {linkedReadingHref, loadLinkedReading, saveLinkedReading, type LinkedReading} from './reading-lab-linked-route';
 import {generateReadingAudio, readingAudioPath, ReadingAudioError} from './reading-lab-own-audio';
 import type {NarrationTrack} from './reading-lab-narrator-model';
 import {readSavedReadingAudio, saveReadingAudio} from './reading-lab-audio-cache';
@@ -15,7 +15,22 @@ import {parseReadingAudioSentences, readingAudioTextLimit, readingAudioSentenceL
 const qwenVoice = 'Qwen · Longanhuan';
 const savedReadingKey = 'chinese-os:reading-lab:last-narrated-text';
 
-export default function ReadingLabOwnText({linked}: {linked?: LinkedReading}) {
+export function ReadingLabLinkedText({id, preset}: {id: string; preset?: LinkedReading}) {
+  const [linked, setLinked] = useState(preset);
+  const [failed, setFailed] = useState(false);
+  useEffect(() => {
+    if (preset) return;
+    const controller = new AbortController();
+    void loadLinkedReading(id, controller.signal).then(setLinked, () => {
+      if (!controller.signal.aborted) setFailed(true);
+    });
+    return () => controller.abort();
+  }, [id, preset]);
+  if (failed) return <p role="status">This reading link is unavailable.</p>;
+  return linked ? <ReadingLabOwnText linked={linked} linkedId={id}/> : <p role="status">Opening saved reading…</p>;
+}
+
+export default function ReadingLabOwnText({linked, linkedId}: {linked?: LinkedReading; linkedId?: string}) {
   const [source, setSource] = useState(linked?.markdown ?? '');
   const [reading, setReading] = useState<ImportedReading | undefined>(() => linked && importReading(linked.markdown));
   const [error, setError] = useState('');
@@ -42,7 +57,9 @@ export default function ReadingLabOwnText({linked}: {linked?: LinkedReading}) {
     setReading(next);
   }
 
-  if (reading) return <ImportedText reading={reading} linkedTrack={linked?.markdown === source ? linked.track : undefined} onSaved={() => {
+  const usesLinkedAudio = linked?.markdown === source;
+  if (reading) return <ImportedText reading={reading} markdown={source}
+    linkedTrack={usesLinkedAudio ? linked.track : undefined} linkedId={usesLinkedAudio ? linkedId : undefined} onSaved={() => {
     try { localStorage.setItem(savedReadingKey, source); } catch { /* IndexedDB holds the audio. */ }
   }} onEdit={() => {
     setReading(undefined);
@@ -59,9 +76,67 @@ export default function ReadingLabOwnText({linked}: {linked?: LinkedReading}) {
   </form>;
 }
 
-function ImportedText({reading, linkedTrack, onEdit, onSaved}: {
+function ShareReading({markdown, sentences, linkedId}: {
+  markdown: string;
+  sentences: readonly string[];
+  linkedId?: string;
+}) {
+  const [href, setHref] = useState('');
+  const [message, setMessage] = useState('');
+  const [saving, setSaving] = useState(false);
+  const field = useRef<HTMLInputElement>(null);
+
+  async function copy(url: string) {
+    try {
+      if (!navigator.clipboard?.writeText) throw Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(url);
+      setMessage('Link copied.');
+    } catch {
+      setMessage('Link ready. Tap Copy link or select the address.');
+    }
+  }
+
+  async function saveAndCopy() {
+    if (saving) return;
+    setMessage('');
+    setSaving(true);
+    try {
+      const existing = href || (linkedId ? linkedReadingHref(linkedId) : '');
+      const address = existing ? Promise.resolve(existing) : saveLinkedReading(markdown, sentences);
+      let preparedCopy: Promise<boolean> | undefined;
+      if (!existing && typeof ClipboardItem === 'function' && navigator.clipboard?.write) {
+        // Safari needs the clipboard write to begin during the tap, before the server replies.
+        const content = address.then(url => new Blob([url], {type: 'text/plain'}));
+        void content.catch(() => undefined);
+        try {
+          preparedCopy = navigator.clipboard.write([new ClipboardItem({'text/plain': content})]).then(() => true, () => false);
+        } catch { /* Older browsers still have the Copy link button and selectable address. */ }
+      }
+      const url = await address;
+      setHref(url);
+      if (await preparedCopy) setMessage('Link copied.');
+      else await copy(url);
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : 'Could not save a link. Try again.');
+    } finally { setSaving(false); }
+  }
+
+  return <div className="rl-own-share">
+    <button type="button" className="secondary" aria-describedby="rl-own-share-access" disabled={saving} onClick={saveAndCopy}>
+      <Copy size={16} aria-hidden="true"/>{saving ? 'Saving…' : href || linkedId ? 'Copy link' : 'Save & copy link'}
+    </button>
+    <small id="rl-own-share-access">Anyone with the link can read and listen.</small>
+    {href && <input ref={field} type="url" aria-label="Reading link" value={href} readOnly
+      onFocus={() => field.current?.select()}/>}
+    {message && <p role="status">{message}</p>}
+  </div>;
+}
+
+function ImportedText({reading, markdown, linkedTrack, linkedId, onEdit, onSaved}: {
   reading: ImportedReading;
+  markdown: string;
   linkedTrack?: NarrationTrack;
+  linkedId?: string;
   onEdit: () => void;
   onSaved: () => void;
 }) {
@@ -173,6 +248,7 @@ function ImportedText({reading, linkedTrack, onEdit, onSaved}: {
       </div>
     </header>
     <div className="rl-own-scroll" ref={readingPane}>
+      {track && <ShareReading markdown={markdown} sentences={sentences.map(sentence => sentence.text)} linkedId={linkedId}/>}
       {!track &&
         <section className="rl-own-audio" aria-label="Generate narration">
           {available && <button type="button" className="primary" onClick={generate} disabled={busy}>Generate narration</button>}

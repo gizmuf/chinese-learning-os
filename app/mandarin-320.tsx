@@ -1,7 +1,7 @@
 'use client';
 
 import {useEffect, useRef, useState} from 'react';
-import {ArrowLeft, ArrowRight, BookOpen, Volume2} from 'lucide-react';
+import {ArrowLeft, ArrowRight, BookOpen, ChevronDown, ChevronRight, Eye, Volume2} from 'lucide-react';
 import catalog from '../data/mandarin-320.json';
 import audioSources from '../data/mandarin-320-audio.json';
 import {stopAudio} from './audio';
@@ -22,21 +22,23 @@ const entries: MandarinEntry[] = catalog.entries;
 const lookupPinyin = createMandarin320PinyinLookup(entries);
 const clips: Record<string, string> = audioSources;
 const rangeSize = 40;
+const wordAidsKey = 'chinese-os:mandarin-320:word-aids';
+type WordAids = {pinyin: boolean; english: boolean};
 type Playback = ReturnType<typeof useRecordingPlayback>;
 
 function folded(value: string) {
   return value.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '');
 }
 
-function Example({entry, player, dictionary = false}: {entry: MandarinEntry; player: Playback; dictionary?: boolean}) {
+function Example({entry, player, dictionary = false, aids}: {entry: MandarinEntry; player: Playback; dictionary?: boolean; aids?: WordAids}) {
   const lookup = useStudyLookup();
   const clip = clips[entry.example];
   return <div className="hanzi-family-sentence mandarin320-example" data-study-source-id={mandarin320Id + ':' + entry.id}
     data-study-sentence={entry.example} data-study-pinyin={entry.example_pinyin}
     data-study-meaning={entry.example_meaning} data-study-audio={clip}>
     <p className="hanzi-family-example" lang="zh-Hans"><StudyText text={entry.example} pinyin={entry.example_pinyin} sourceText={entry.example} headword={entry.hanzi}/></p>
-    <p className="hanzi-family-reading" lang="zh-Latn">{entry.example_pinyin}</p>
-    <p lang="en">{entry.example_meaning}</p>
+    {aids?.pinyin !== false && <p className="hanzi-family-reading" lang="zh-Latn">{entry.example_pinyin}</p>}
+    {aids?.english !== false && <p lang="en">{entry.example_meaning}</p>}
     <div className="hanzi-family-actions">
       {clip && <button type="button" className="secondary" aria-label={'Listen to entry ' + entry.id + ' example'}
         data-playing={player.playing === clip || undefined} onClick={() => player.play(clip)}><Volume2 size={17} aria-hidden="true"/>Listen</button>}
@@ -51,6 +53,8 @@ function Words({player, practise}: {player: Playback; practise: (mode: 'recall' 
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(0);
   const [expanded, setExpanded] = useState<Set<number>>(() => new Set());
+  const [aids, setAids] = useState<WordAids>({pinyin: true, english: true});
+  const [overrides, setOverrides] = useState<Map<number, boolean>>(() => new Map());
   const heading = useRef<HTMLHeadingElement>(null);
   const query = folded(search.trim());
   const number = /^#?(\d+)$/u.exec(query);
@@ -59,6 +63,20 @@ function Words({player, practise}: {player: Playback; practise: (mode: 'recall' 
     : folded([entry.hanzi, entry.pinyin, entry.meaning, entry.family].join(' ')).includes(query));
   const pageCount = Math.ceil(filtered.length / rangeSize);
   const visible = filtered.slice(page * rangeSize, (page + 1) * rangeSize);
+
+  useEffect(() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem(wordAidsKey) ?? 'null');
+      if (typeof saved?.pinyin === 'boolean' && typeof saved?.english === 'boolean') setAids(saved);
+    } catch { /* The switches still work for this session. */ }
+  }, []);
+
+  function toggleAid(key: keyof WordAids) {
+    const next = {...aids, [key]: !aids[key]};
+    setAids(next);
+    setOverrides(new Map());
+    try { localStorage.setItem(wordAidsKey, JSON.stringify(next)); } catch { /* Store is optional. */ }
+  }
 
   function pageFromBottom(index: number) {
     setPage(index);
@@ -93,21 +111,45 @@ function Words({player, practise}: {player: Playback; practise: (mode: 'recall' 
       </label>
       <p role="status">{filtered.length} {query ? 'matches' : 'entries'}</p>
     </div>
+    <div className="hanzi-family-actions mandarin320-aids" role="group" aria-label="Words display">
+      <button type="button" className="secondary" aria-pressed={aids.pinyin} onClick={() => toggleAid('pinyin')}>Pinyin</button>
+      <button type="button" className="secondary" aria-pressed={aids.english} onClick={() => toggleAid('english')}>English</button>
+    </div>
     {visible.length > 0 && <div className="hanzi-family-actions hanzi-group-actions">
       <HanziGroupPdf entries={visible} title={'Mandarin 320 · Words ' + (page * rangeSize + 1) + '–' + (page * rangeSize + visible.length)} />
       <HanziQuickReview entries={visible}/>
     </div>}
     <div className="hanzi-family-entries mandarin320-entries" id="mandarin320-results">
-      {visible.map(entry => <details className="hanzi-family-entry" key={entry.id} data-entry-id={entry.id}
-        open={expanded.has(entry.id)} onToggle={event => toggleEntry(entry.id, event.currentTarget.open)}>
-        <summary>
-          <span className="mandarin320-entry-number">{entry.id}</span>
-          <span className="hanzi-family-headword" lang="zh-Hans">{entry.hanzi}</span>
-          <span className="hanzi-family-reading" lang="zh-Latn">{entry.pinyin}</span>
-          <span className="hanzi-family-gloss" lang="en">{entry.meaning}</span>
-        </summary>
-        {expanded.has(entry.id) && <div className="hanzi-family-entry-body">
-          <Example entry={entry} player={player} dictionary/>
+      {visible.map(entry => {
+        const open = expanded.has(entry.id);
+        const id = 'mandarin320-entry-' + entry.id;
+        const override = overrides.get(entry.id);
+        const pinyin = override ?? aids.pinyin;
+        const english = override ?? aids.english;
+        const showBoth = !(pinyin && english);
+        return <div className="hanzi-family-entry" key={entry.id} data-entry-id={entry.id}>
+          <div className="mandarin320-row">
+            <button type="button" className="mandarin320-entry-main" aria-expanded={open} aria-controls={id}
+              onClick={() => toggleEntry(entry.id, !open)}>
+              {open ? <ChevronDown size={16} aria-hidden="true"/> : <ChevronRight size={16} aria-hidden="true"/>}
+              <span className="mandarin320-entry-number">{entry.id}</span>
+              <span className="hanzi-family-headword" lang="zh-Hans">{entry.hanzi}</span>
+            </button>
+            <button type="button" className="mandarin320-entry-hints" aria-pressed={pinyin && english}
+              aria-label={(showBoth ? 'Show' : 'Hide') + ' pinyin and English for ' + entry.hanzi}
+              onClick={() => setOverrides(current => {
+                const next = new Map(current);
+                if (showBoth === aids.pinyin && showBoth === aids.english) next.delete(entry.id);
+                else next.set(entry.id, showBoth);
+                return next;
+              })}>
+              {pinyin && <span className="hanzi-family-reading" lang="zh-Latn">{entry.pinyin}</span>}
+              {english && <span className="hanzi-family-gloss" lang="en">{entry.meaning}</span>}
+              {!pinyin && !english && <span className="mandarin320-hint-label"><Eye size={16} aria-hidden="true"/>Show hints</span>}
+            </button>
+          </div>
+          <div id={id} className="hanzi-family-entry-body" hidden={!open}>{open && <>
+          <Example entry={entry} player={player} dictionary aids={{pinyin, english}}/>
           <h3>Related words</h3>
           <p><StudyText text={entry.family}/></p>
           <h3>What to look for</h3>
@@ -116,8 +158,9 @@ function Words({player, practise}: {player: Playback; practise: (mode: 'recall' 
             <button type="button" className="secondary" onClick={() => practise('recall', entry.id)}>Recall and write</button>
             <button type="button" className="secondary" onClick={() => practise('sentence', entry.id)}>Use in a sentence</button>
           </div>
-        </div>}
-      </details>)}
+          </>}</div>
+        </div>;
+      })}
       {!visible.length && <p>No entries match this search.</p>}
     </div>
     {pageCount > 1 && <div className="hanzi-family-actions hanzi-family-paging mandarin320-result-footer">

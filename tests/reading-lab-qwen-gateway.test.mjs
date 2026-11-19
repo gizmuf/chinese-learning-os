@@ -5,7 +5,8 @@ import {createServer} from 'node:http';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {test} from 'node:test';
-import {createReadingLabGateway, readingLabNarrationPath} from '../scripts/reading-lab-qwen-gateway.mjs';
+import {cacheDigest, createReadingLabGateway, normalizeNarrationWav, openNarrationStore,
+  readingLabNarrationPath, readingLabSavedPath} from '../scripts/reading-lab-qwen-gateway.mjs';
 
 function testWave() {
   const wav = Buffer.alloc(4844);
@@ -59,6 +60,57 @@ test('only an explicit permitted POST calls Qwen, with persistent caching and fr
     assert.equal(repeat.headers.get('x-narration-cache'), 'HIT');
     assert.deepEqual(Buffer.from(await repeat.arrayBuffer()), first);
     assert.equal(synthesis, 2);
+  } finally {
+    server.close();
+    await once(server, 'close');
+    rmSync(directory, {recursive: true, force: true});
+  }
+});
+
+test('saved reading links use cached recordings across origins and support Safari byte ranges without synthesis', async () => {
+  const directory = mkdtempSync(join(tmpdir(), 'reading-lab-share-test-'));
+  const path = join(directory, 'narration.sqlite');
+  const db = openNarrationStore(path);
+  const insert = db.prepare('INSERT INTO clips VALUES (?, ?)');
+  for (const text of ['你好。', '我来了。']) insert.run(cacheDigest(text), normalizeNarrationWav(testWave()));
+  db.close();
+  let providerCalls = 0;
+  const server = createServer(createReadingLabGateway({directory, fetcher: async () => {
+    providerCalls++;
+    throw Error('Saved readings must only use recorded clips');
+  }}));
+  server.listen(0, '127.0.0.1');
+  await once(server, 'listening');
+  try {
+    const base = 'http://127.0.0.1:' + server.address().port + readingLabSavedPath;
+    const reading = {markdown: '你好。\n我来了。', sentences: ['你好。', '我来了。']};
+    const save = (value, origin = 'https://cos.l00p.network') => fetch(base, {method: 'POST',
+      headers: {Origin: origin, 'Content-Type': 'application/json'}, body: JSON.stringify(value)});
+    assert.equal((await save(reading, 'https://example.com')).status, 403);
+    assert.equal((await save({markdown: '新帖子。', sentences: ['新帖子。']})).status, 409);
+    const saved = await save(reading);
+    assert.equal(saved.status, 200);
+    const {token} = await saved.json();
+    assert.match(token, /^[a-f0-9]{32}$/u);
+    assert.deepEqual(await (await save(reading)).json(), {token});
+    assert.equal((await fetch(base)).status, 404);
+    const address = base + '?token=' + token;
+    const opened = await fetch(address, {headers: {Origin: 'https://chineseos.l00p.network'}});
+    assert.equal(opened.headers.get('access-control-allow-origin'), 'https://chineseos.l00p.network');
+    const metadata = await opened.json();
+    assert.equal(metadata.markdown, reading.markdown);
+    assert.deepEqual(metadata.sentences, reading.sentences);
+    assert.deepEqual(metadata.starts, [0, .34]);
+    assert.equal(metadata.duration, .44);
+    const partial = await fetch(address + '&audio=1', {headers: {Range: 'bytes=0-1'}});
+    assert.equal(partial.status, 206);
+    const length = 44 + .44 * 24000 * 2;
+    assert.equal(partial.headers.get('content-range'), 'bytes 0-1/' + length);
+    assert.equal(await partial.text(), 'RI');
+    const wave = Buffer.from(await (await fetch(address + '&audio=1')).arrayBuffer());
+    assert.equal(wave.length, length);
+    assert.equal(wave.readUInt32LE(40), wave.length - 44);
+    assert.equal(providerCalls, 0);
   } finally {
     server.close();
     await once(server, 'close');
