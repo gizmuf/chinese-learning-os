@@ -264,14 +264,20 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   const narrator = useReadingLabNarrator(route.review ? undefined : track);
   const activeSentence = narrator.snapshot.status !== 'idle' ? track?.cues[narrator.snapshot.index]?.key : undefined;
 
+  function showNarratedSentence() {
+    const key = track?.cues[narrator.snapshot.index]?.key;
+    if (key) root.current?.querySelector('[data-narration-cue="' + key + '"]')?.scrollIntoView({block: 'center', inline: 'nearest'});
+  }
+
   useEffect(() => {
-    if (!activeSentence || narrator.snapshot.status !== 'playing') return;
+    if (!narrator.followText || !activeSentence || narrator.snapshot.status !== 'playing') return;
     const token = root.current?.querySelector<HTMLElement>('[data-narration-active=true]');
     const bounds = token?.getBoundingClientRect();
-    if (bounds && (bounds.top < 80 || bounds.bottom > window.innerHeight - 30)) {
+    const dockTop = root.current?.querySelector('.rl-article > .rl-narrator')?.getBoundingClientRect().top ?? window.innerHeight;
+    if (bounds && (bounds.top < 80 || bounds.bottom > Math.min(window.innerHeight, dockTop) - 12)) {
       token?.scrollIntoView({block: 'center', inline: 'nearest'});
     }
-  }, [activeSentence, narrator.snapshot.status]);
+  }, [activeSentence, narrator.snapshot.status, narrator.followText]);
 
   const grammar = reading?.grammar.find(entry => entry.id === route.grammar);
   const relatedFrame = resolveReadingGrammarFrame(grammar?.frameId);
@@ -538,7 +544,6 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
           <button type="button" key={aid.id} aria-pressed={route.aid === aid.id} onClick={() => navigate({aid: aid.id}, {replace: true})}>{aid.label}</button>)}</div>
         <label className="rl-chunk-switch"><input type="checkbox" checked={route.chunks} onChange={event => navigate({chunks: event.target.checked}, {replace: true})}/> Show chunks</label>
       </div>
-      <ReadingLabNarrator track={track} player={narrator} hidden={recall?.step === 'recall'}/>
       {route.aid !== 'hanzi' && recall?.step !== 'recall' && <details className="rl-tone-legend">
         <summary>Tone guide</summary>
         <div>{Object.entries(toneMarks).map(([tone, mark], index) => <span key={tone} data-tone={tone}><b>{mark}</b> {neutralNames[index]}</span>)}</div>
@@ -635,6 +640,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
           <p lang="zh-Hans">{reading.writing.example.hanzi}</p><p>{reading.writing.example.pinyin}</p><p>{reading.writing.example.english}</p>
         </details>}
       </section>
+      <ReadingLabNarrator track={track} player={narrator} hidden={recall?.step === 'recall'} onShowSentence={showNarratedSentence}/>
     </article> : <><ReadingReviewSummary store={scopedReviewStore} now={reviews.now} onOpen={reviewOpen}/><ReaderLibrary route={route} {...vocabulary} workspaceOrigin={returnWorkspace.current} resume={resume}
       onResume={() => {
         if (!resume) return;

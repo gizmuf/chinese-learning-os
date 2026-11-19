@@ -13,6 +13,7 @@ export function useReadingLabNarrator(track?: NarrationTrack) {
   const [mode, setMode] = useState<NarrationMode>('continuous');
   const [rate, setRate] = useState<NarrationRate>(0.9);
   const [loopPass, setLoopPass] = useState(0);
+  const [followText, setFollowText] = useState(false);
   const session = useRef({snapshot: initial, mode, rate, attempt: 0, loopPass: 0});
   const recording = useRef<HTMLAudioElement | null>(null);
 
@@ -179,7 +180,12 @@ export function useReadingLabNarrator(track?: NarrationTrack) {
   }
 
   return {
-    snapshot, mode, rate, loopPass, pause, toggle,
+    snapshot, mode, rate, loopPass, followText, setFollowText, pause, toggle,
+    stop() {
+      updateLoop(0);
+      move(0, false);
+      publish(initial);
+    },
     toggleLoop() {
       if (session.current.loopPass) {
         updateLoop(0);
