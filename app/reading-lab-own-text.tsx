@@ -6,6 +6,7 @@ import {StudyText} from './study-lookup-context';
 import ReadingLabNarrator from './reading-lab-narrator';
 import {useReadingLabNarrator} from './use-reading-lab-narrator';
 import {importReading, type ImportedReading} from './reading-lab-own-text-model';
+import type {LinkedReading} from './reading-lab-linked';
 import {generateReadingAudio, readingAudioPath, ReadingAudioError} from './reading-lab-own-audio';
 import type {NarrationTrack} from './reading-lab-narrator-model';
 import {readSavedReadingAudio, saveReadingAudio} from './reading-lab-audio-cache';
@@ -14,18 +15,19 @@ import {parseReadingAudioSentences, readingAudioTextLimit, readingAudioSentenceL
 const qwenVoice = 'Qwen · Longanhuan';
 const savedReadingKey = 'chinese-os:reading-lab:last-narrated-text';
 
-export default function ReadingLabOwnText() {
-  const [source, setSource] = useState('');
-  const [reading, setReading] = useState<ImportedReading>();
+export default function ReadingLabOwnText({linked}: {linked?: LinkedReading}) {
+  const [source, setSource] = useState(linked?.markdown ?? '');
+  const [reading, setReading] = useState<ImportedReading | undefined>(() => linked && importReading(linked.markdown));
   const [error, setError] = useState('');
   const field = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
+    if (linked) return;
     try {
       const saved = localStorage.getItem(savedReadingKey);
       if (saved) setSource(current => current || saved);
     } catch { /* Audio can still be played without local storage. */ }
-  }, []);
+  }, [linked]);
 
   function prepare(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -40,7 +42,7 @@ export default function ReadingLabOwnText() {
     setReading(next);
   }
 
-  if (reading) return <ImportedText reading={reading} onSaved={() => {
+  if (reading) return <ImportedText reading={reading} linkedTrack={linked?.markdown === source ? linked.track : undefined} onSaved={() => {
     try { localStorage.setItem(savedReadingKey, source); } catch { /* IndexedDB holds the audio. */ }
   }} onEdit={() => {
     setReading(undefined);
@@ -57,11 +59,16 @@ export default function ReadingLabOwnText() {
   </form>;
 }
 
-function ImportedText({reading, onEdit, onSaved}: {reading: ImportedReading; onEdit: () => void; onSaved: () => void}) {
+function ImportedText({reading, linkedTrack, onEdit, onSaved}: {
+  reading: ImportedReading;
+  linkedTrack?: NarrationTrack;
+  onEdit: () => void;
+  onSaved: () => void;
+}) {
   const [showPinyin, setShowPinyin] = useState(true);
   const [showGrammar, setShowGrammar] = useState(true);
   const [available, setAvailable] = useState<boolean>();
-  const [track, setTrack] = useState<NarrationTrack>();
+  const [track, setTrack] = useState(linkedTrack);
   const [voice, setVoice] = useState(qwenVoice);
   const [status, setStatus] = useState('');
   const [busy, setBusy] = useState(false);
@@ -83,6 +90,7 @@ function ImportedText({reading, onEdit, onSaved}: {reading: ImportedReading; onE
 
   useEffect(() => {
     result.current?.focus();
+    if (linkedTrack) return;
     const controller = new AbortController();
     async function prepareAudio() {
       const saved = await readSavedReadingAudio(sentences).catch(() => undefined);
@@ -108,7 +116,7 @@ function ImportedText({reading, onEdit, onSaved}: {reading: ImportedReading; onE
     }
     void prepareAudio();
     return () => controller.abort();
-  }, [canGenerate, sentences]);
+  }, [canGenerate, linkedTrack, sentences]);
 
   useEffect(() => {
     if (!player.followText || !active || player.snapshot.status !== 'playing') return;

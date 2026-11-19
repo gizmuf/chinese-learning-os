@@ -1,0 +1,54 @@
+{
+  "markdown": "**低头族**\\\n*Dītóuzú*\n\n**今天我想说一说一边走路一边看手机的危险。**\\\n*Jīntiān wǒ xiǎng shuō yi shuō yìbiān zǒulù yìbiān kàn shǒujī de wēixiǎn.*\n\n**什么东西都有好处，也有坏处。手机也一样。**\\\n*Shénme dōngxi dōu yǒu hǎochu, yě yǒu huàichu. Shǒujī yě yíyàng.*\n\n**现代生活，人们越来越离不开手机。**\\\n*Xiàndài shēnghuó, rénmen yuèláiyuè lí bu kāi shǒujī.*\n\n**坐地铁需要手机，打的需要手机，买东西需要手机。**\\\n*Zuò dìtiě xūyào shǒujī, dǎdī xūyào shǒujī, mǎi dōngxi xūyào shǒujī.*\n\n**一方面，手机给我们的生活带来了好处，另一方面，手机也带来了很多坏处。**\\\n*Yì fāngmiàn, shǒujī gěi wǒmen de shēnghuó dàilái le hǎochu, lìng yì fāngmiàn, shǒujī yě dàilái le hěn duō huàichu.*\n\n**在很多地方，比如在地铁站、在路上、在火车站、在超市，我们都能看到很多年轻人一边走路，一边玩手机。**\\\n*Zài hěn duō dìfang, bǐrú zài dìtiězhàn, zài lùshang, zài huǒchēzhàn, zài chāoshì, wǒmen dōu néng kàndào hěn duō niánqīngrén yìbiān zǒulù, yìbiān wán shǒujī.*\n\n**我觉得很不安全。**\\\n*Wǒ juéde hěn bù ānquán.*\n\n**因为路上有很多汽车，电动车开得很快，如果你玩手机，就注意不到危险，很容易发生交通事故。**\\\n*Yīnwèi lùshang yǒu hěn duō qìchē, diàndòngchē kāi de hěn kuài, rúguǒ nǐ wán shǒujī, jiù zhùyì bu dào wēixiǎn, hěn róngyì fāshēng jiāotōng shìgù.*",
+  "source": "/audio/reading-lab/ditouzu-f60d63d10adf.wav",
+  "sampleRate": 24000,
+  "frames": 1025280,
+  "sha256": "f60d63d10adf46658b9a30ff3c456d4511a63c3b8fceed7162d4893a5de6d8ec",
+  "cues": [
+    {
+      "key": "sentence-1",
+      "text": "今天我想说一说一边走路一边看手机的危险。",
+      "startFrame": 0
+    },
+    {
+      "key": "sentence-2",
+      "text": "什么东西都有好处，也有坏处。",
+      "startFrame": 96000
+    },
+    {
+      "key": "sentence-3",
+      "text": "手机也一样。",
+      "startFrame": 167040
+    },
+    {
+      "key": "sentence-4",
+      "text": "现代生活，人们越来越离不开手机。",
+      "startFrame": 201600
+    },
+    {
+      "key": "sentence-5",
+      "text": "坐地铁需要手机，打的需要手机，买东西需要手机。",
+      "startFrame": 282240
+    },
+    {
+      "key": "sentence-6",
+      "text": "一方面，手机给我们的生活带来了好处，另一方面，手机也带来了很多坏处。",
+      "startFrame": 405120
+    },
+    {
+      "key": "sentence-7",
+      "text": "在很多地方，比如在地铁站、在路上、在火车站、在超市，我们都能看到很多年轻人一边走路，一边玩手机。",
+      "startFrame": 568320
+    },
+    {
+      "key": "sentence-8",
+      "text": "我觉得很不安全。",
+      "startFrame": 796800
+    },
+    {
+      "key": "sentence-9",
+      "text": "因为路上有很多汽车，电动车开得很快，如果你玩手机，就注意不到危险，很容易发生交通事故。",
+      "startFrame": 835200
+    }
+  ]
+}
