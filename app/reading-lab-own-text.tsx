@@ -1,6 +1,7 @@
 'use client';
 
 import {useEffect, useRef, useState, type FormEvent} from 'react';
+import {Volume2} from 'lucide-react';
 import {StudyText} from './study-lookup-context';
 import ReadingLabNarrator from './reading-lab-narrator';
 import {useReadingLabNarrator} from './use-reading-lab-narrator';
@@ -58,6 +59,7 @@ export default function ReadingLabOwnText() {
 
 function ImportedText({reading, onEdit, onSaved}: {reading: ImportedReading; onEdit: () => void; onSaved: () => void}) {
   const [showPinyin, setShowPinyin] = useState(true);
+  const [showGrammar, setShowGrammar] = useState(true);
   const [available, setAvailable] = useState<boolean>();
   const [track, setTrack] = useState<NarrationTrack>();
   const [voice, setVoice] = useState(qwenVoice);
@@ -67,10 +69,17 @@ function ImportedText({reading, onEdit, onSaved}: {reading: ImportedReading; onE
   const source = useRef<string | undefined>(undefined);
   const result = useRef<HTMLHeadingElement>(null);
   const list = useRef<HTMLOListElement>(null);
+  const readingPane = useRef<HTMLDivElement>(null);
   const player = useReadingLabNarrator(track);
   const active = player.snapshot.status !== 'idle' ? track?.cues[player.snapshot.index]?.key : undefined;
   const sentences = reading.sentences;
   const canGenerate = Boolean(parseReadingAudioSentences({sentences: sentences.map(sentence => sentence.text)}));
+  const hasGrammar = sentences.some(sentence => sentence.grammar.length);
+
+  function showNarratedSentence() {
+    const row = list.current?.children[player.snapshot.index];
+    row?.scrollIntoView({block: 'center', inline: 'nearest'});
+  }
 
   useEffect(() => {
     result.current?.focus();
@@ -102,14 +111,13 @@ function ImportedText({reading, onEdit, onSaved}: {reading: ImportedReading; onE
   }, [canGenerate, sentences]);
 
   useEffect(() => {
-    if (!active || player.snapshot.status !== 'playing') return;
+    if (!player.followText || !active || player.snapshot.status !== 'playing') return;
     const sentence = list.current?.querySelector('[data-narration-active="true"]');
-    const dialog = list.current?.closest('dialog');
-    if (!sentence || !dialog) return;
+    if (!sentence || !readingPane.current) return;
     const bounds = sentence.getBoundingClientRect();
-    const frame = dialog.getBoundingClientRect();
+    const frame = readingPane.current.getBoundingClientRect();
     if (bounds.top < frame.top || bounds.bottom > frame.bottom) sentence.scrollIntoView({block: 'nearest'});
-  }, [active, player.snapshot.status]);
+  }, [active, player.snapshot.status, player.followText]);
 
   useEffect(() => () => {
     request.current?.abort();
@@ -152,35 +160,43 @@ function ImportedText({reading, onEdit, onSaved}: {reading: ImportedReading; onE
       </div>
       <div className="rl-modes" aria-label="Reading options">
         <button type="button" aria-pressed={showPinyin} onClick={() => setShowPinyin(!showPinyin)}>Pinyin</button>
+        {hasGrammar && <button type="button" aria-pressed={showGrammar} onClick={() => setShowGrammar(!showGrammar)}>Grammar</button>}
         <button type="button" onClick={onEdit}>Edit text</button>
       </div>
     </header>
-    {track ? <ReadingLabNarrator track={track} player={player} hidden={false} voice={'Synthetic study voice · ' + voice}/> :
-      <section className="rl-own-audio" aria-label="Generate narration">
-        {available && <button type="button" className="primary" onClick={generate} disabled={busy}>Generate narration</button>}
-        <p>{!canGenerate ? 'To generate narration, keep each sentence under ' + (readingAudioSentenceSize + 1) + ' characters.'
-          : available === false ? 'Narration generation is unavailable on this site.'
-          : available ? 'Send these sentences to Qwen using its free allowance. Reading Lab saves the audio for replay on this device.'
-          : 'Checking narration availability…'}</p>
-      </section>}
-    {status && <p role="status" className="rl-own-pinyin">{status}</p>}
-    <ol ref={list} className="rl-own-sentences">
-      {sentences.map((sentence, index) => <li key={sentence.key}
-        data-narration-cue={sentence.key} data-narration-active={sentence.key === active || undefined}>
-        <div className="rl-own-sentence" lang="zh-Hans" onClickCapture={event => {
-          if ((event.target as HTMLElement).closest('.study-word')) player.pause();
-        }}><StudyText text={sentence.text} pinyin={sentence.pinyin}/></div>
-        {showPinyin && <p className="rl-own-pinyin" lang="zh-Latn">{sentence.pinyin}</p>}
-        {track && <button type="button" className="text-button" aria-label={'Play sentence ' + (index + 1)}
-          onClick={() => player.playFrom(index)}>Play sentence</button>}
-        {sentence.grammar.length > 0 && <details className="rl-own-grammar">
-          <summary>Grammar · {sentence.grammar.map(pattern => pattern.label).join(' · ')}</summary>
-          <dl>{sentence.grammar.map(pattern => <div key={pattern.label}>
-            <dt lang="zh-Hans">{pattern.example}</dt><dd>{pattern.note}</dd>
-          </div>)}</dl>
-        </details>}
-      </li>)}
-    </ol>
-    {!sentences.some(sentence => sentence.grammar.length) && <p className="rl-own-pinyin">No supported grammar patterns found in this reading.</p>}
+    <div className="rl-own-scroll" ref={readingPane}>
+      {!track &&
+        <section className="rl-own-audio" aria-label="Generate narration">
+          {available && <button type="button" className="primary" onClick={generate} disabled={busy}>Generate narration</button>}
+          <p>{!canGenerate ? 'To generate narration, keep each sentence under ' + (readingAudioSentenceSize + 1) + ' characters.'
+            : available === false ? 'Narration generation is unavailable on this site.'
+            : available ? 'Send these sentences to Qwen using its free allowance. Reading Lab saves the audio for replay on this device.'
+            : 'Checking narration availability…'}</p>
+        </section>}
+      {status && <p role="status" className="rl-own-pinyin">{status}</p>}
+      <ol ref={list} className="rl-own-sentences">
+        {sentences.map((sentence, index) => <li key={sentence.key}
+          data-narration-cue={sentence.key} data-narration-active={sentence.key === active || undefined}>
+          <div className="rl-own-sentence-row">
+            <div>
+              <div className="rl-own-sentence" lang="zh-Hans" onClickCapture={event => {
+                if ((event.target as HTMLElement).closest('.study-word')) player.pause();
+              }}><StudyText text={sentence.text} pinyin={sentence.pinyin}/></div>
+              {showPinyin && <p className="rl-own-pinyin" lang="zh-Latn">{sentence.pinyin}</p>}
+            </div>
+            {track && <button type="button" className="rl-narrator-icon" aria-label={'Play sentence ' + (index + 1)}
+              title={'Play sentence ' + (index + 1)} onClick={() => player.playFrom(index)}><Volume2 size={18} aria-hidden="true"/></button>}
+          </div>
+          {sentence.grammar.length > 0 && <details className="rl-own-grammar" hidden={!showGrammar}>
+            <summary>Grammar · {sentence.grammar.map(pattern => pattern.label).join(' · ')}</summary>
+            <dl>{sentence.grammar.map(pattern => <div key={pattern.label}>
+              <dt lang="zh-Hans">{pattern.example}</dt><dd>{pattern.note}</dd>
+            </div>)}</dl>
+          </details>}
+        </li>)}
+      </ol>
+    </div>
+    {track && <ReadingLabNarrator track={track} player={player} hidden={false} onShowSentence={showNarratedSentence}
+      voice={'Synthetic study voice · ' + voice}/>}
   </div>;
 }
