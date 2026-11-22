@@ -12,19 +12,24 @@ import {
   type CharacterFrame, type SwipeDirection, type SwipeFrame, type SwipeMap,
 } from './atlas-swipe-model';
 import {childSwipeRegions, rootSwipeRegions, type SwipeLens} from './atlas-swipe-regions';
-import {SwipeFamilyMap, SwipeFamilyPeek} from './atlas-swipe-family-map';
+import {SwipeFamilyMap, SwipeFamilyOrbit, SwipeFamilyPeek} from './atlas-swipe-family-map';
 import {contextualWordParts, SwipeLabel} from './atlas-swipe-label';
 import {movingInk, SwipeArtwork, type SwipeMotion} from './atlas-swipe-art';
 import AtlasSwipeStoryPanel from './atlas-swipe-story-panel';
 import {findSwipeStory} from './atlas-swipe-story-data';
 import './atlas-swipe.css';
 import './atlas-swipe-story-entry.css';
+import './atlas-swipe-word-focus.css';
+import {SwipeWordBranches, type WordBranchReturn} from './atlas-swipe-word-branches';
+import {otherWordHanzi, wordCross} from './atlas-swipe-word-branches-model';
 
 type Mode = 'characters' | 'words';
+type WordView = 'swipe' | 'connections';
+type WordOrigin = {frame: SwipeFrame; vertical?: string; all: boolean; scope: BrowseScope; from: WordBranchReturn};
 type Selection = {hanzi: string; part?: string; slot?: string};
 type Gesture = {
   id: number; x: number; y: number; map: SwipeMap; picked: boolean;
-  axis?: 'x' | 'y'; slot?: string; from?: SwipeFrame; inside: boolean; badge: boolean;
+  axis?: 'x' | 'y'; slot?: string; from?: SwipeFrame; inside: boolean; badge: boolean; wordGlyph?: string;
 };
 type FamilyOrbit = {part: AssemblyPart; origin: CharacterFrame; lens?: SwipeLens};
 const animationDuration = 185;
@@ -43,17 +48,28 @@ function badgePosition(part: AssemblyPart): CSSProperties {
   return {left: horizontal * 100 + '%', top: offset * 100 + '%'};
 }
 
-export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelect, widen}: {
+export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, wordView, openFamilyOnEntry = false,
+  onSelect, onFamilyMapChange, onWordViewChange, widen}: {
   hanzi?: string; part?: string; slot?: string; scope: BrowseScope; entryWord?: string;
+  wordView?: 'connections'; onWordViewChange?: (view: WordView, word?: string) => void;
+  openFamilyOnEntry?: boolean; onFamilyMapChange: (open: boolean) => void;
   onSelect: (selection: Selection) => void; widen: () => void;
 }) {
   const index = useMemo(() => assemblyIndex('en'), []);
-  const [mode, setMode] = useState<Mode>(entryWord ? 'words' : 'characters');
+  const character = index.characters.get(hanzi ?? '') ?? index.characters.get('学')!;
+  const focus = useMemo(() => focusCharacter(index, character, part, slot), [index, character, part, slot]);
+  const [mode, setMode] = useState<Mode>(entryWord || wordView ? 'words' : 'characters');
+  const [wordsView, setWordsView] = useState<WordView>(wordView ?? 'swipe');
   const [all, setAll] = useState(false);
   const [lens, setLens] = useState<SwipeLens>();
-  const [familyOrbit, setFamilyOrbit] = useState<FamilyOrbit>();
+  const [familyOrbit, setFamilyOrbit] = useState<FamilyOrbit | undefined>(() =>
+    openFamilyOnEntry && !entryWord && !wordView && focus.part ? {part: focus.part, origin: focus} : undefined);
+  const [familyLayout, setFamilyLayout] = useState<'compare' | 'orbit'>('compare');
   const [wordAnchor, setWordAnchor] = useState(() => [...(entryWord ?? '')][0] ?? (hanzi || '学'));
+  const [wordVerticalAnchor, setWordVerticalAnchor] = useState<string>();
   const [wordSelection, setWordSelection] = useState<{id?: string; text?: string}>({text: entryWord});
+  const [wordHistory, setWordHistory] = useState<WordOrigin[]>([]);
+  const [wordRestoration, setWordRestoration] = useState<WordBranchReturn>();
   const [query, setQuery] = useState('');
   const [error, setError] = useState('');
   const [pace, setPace] = useState(2);
@@ -72,8 +88,6 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
   const settling = useRef(false);
   const stopAnimation = useRef<(() => void) | undefined>(undefined);
 
-  const character = index.characters.get(hanzi ?? '') ?? index.characters.get('学')!;
-  const focus = useMemo(() => focusCharacter(index, character, part, slot), [index, character, part, slot]);
   const characterFrame = useMemo(() => swipeCharacterFrame(focus), [focus]);
   const baseRegions = useMemo(() => rootSwipeRegions(character), [character]);
   const inside = mode === 'characters' && lens?.hanzi === character.data.hanzi ? lens : undefined;
@@ -94,7 +108,15 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
     : undefined;
   const current = word ?? characterFrame;
   const display = motion?.from ?? current;
-  const map = useMemo(() => swipeMap(frames, current, mode === 'characters' && !all), [all, current, frames, mode]);
+  const connections = mode === 'words' && wordsView === 'connections';
+  const cross = useMemo(() => connections && word ? wordCross(word, scope, wordVerticalAnchor) : undefined,
+    [connections, scope, word, wordVerticalAnchor]);
+  const map = useMemo<SwipeMap>(() => {
+    const base = swipeMap(frames, current, mode === 'characters' && !all);
+    return cross ? {...base, neighbours: {
+      left: cross.peers.left[0], right: cross.peers.right[0], up: cross.peers.up[0], down: cross.peers.down[0],
+    }, previous: cross.horizontal ? 'left' : 'up', next: cross.horizontal ? 'right' : 'down'} : base;
+  }, [all, cross, current, frames, mode]);
   const peek = useMemo(() => {
     if (all || inside || mode === 'words' || familyOrbit) return [];
     const visible = new Set(Object.values(map.neighbours).map(member => member?.id));
@@ -120,6 +142,12 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
   if (openStory && (openStory.key !== storyKey || !story)) setOpenStory(undefined);
   const storyActive = openStory?.key === storyKey && !!story;
   const storyFocus = storyActive ? openStory.focus : undefined;
+  const showWordBranches = !!(cross && !storyActive);
+  const returnWord = wordHistory.at(-1);
+  if (returnWord && returnWord.scope !== scope) {
+    setWordHistory([]);
+    setWordRestoration(undefined);
+  }
   const storyCharacter = story?.kind === 'character' ? index.characters.get(story.target) : undefined;
   const storyArtwork = storyActive && word && storyCharacter
     ? swipeCharacterFrame({character: storyCharacter}) : undefined;
@@ -138,7 +166,12 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
   }, [storyActive]);
 
   const mapOpen = familyOrbit !== undefined;
+  const comparingFamily = mapOpen && familyLayout === 'compare';
   const componentDepth = inside?.trail.length ?? 0;
+
+  useEffect(() => {
+    if (!familyOrbit?.lens && openFamilyOnEntry !== mapOpen) onFamilyMapChange(mapOpen);
+  }, [familyOrbit?.lens, mapOpen, onFamilyMapChange, openFamilyOnEntry]);
 
   useEffect(() => {
     const element = viewport.current;
@@ -171,6 +204,25 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
     else {
       setWordSelection({id: target.id});
       setWordAnchor(target.anchor);
+      setWordVerticalAnchor(undefined);
+      setWordRestoration(undefined);
+    }
+  }
+
+  function applySwipe(target: SwipeFrame, direction: SwipeDirection) {
+    if (!cross) {
+      applyFrame(target);
+      return;
+    }
+    setAll(false);
+    if (direction === 'up' || direction === 'down') {
+      const anchor = cross.horizontal && target.text.includes(cross.horizontal) ? cross.horizontal
+        : otherWordHanzi(target.text, target.anchor)[0] ?? target.anchor;
+      applyFrame({...target, anchor});
+      setWordVerticalAnchor(target.anchor);
+    } else {
+      applyFrame(target);
+      if (cross.vertical && target.text.includes(cross.vertical)) setWordVerticalAnchor(cross.vertical);
     }
   }
 
@@ -185,7 +237,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
   function transition(target: SwipeFrame, direction: SwipeDirection, progress = 0, complete = true, from?: SwipeFrame) {
     if (settling.current) return;
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      if (complete) applyFrame(target);
+      if (complete) applySwipe(target, direction);
       setMotion(undefined);
       return;
     }
@@ -194,7 +246,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
     const draw = window.requestAnimationFrame(() => {
       setMotion({target, direction, progress: complete ? 1 : 0, settling: true, from});
       timer = window.setTimeout(() => {
-        if (complete) applyFrame(target);
+        if (complete) applySwipe(target, direction);
         stopAnimation.current = undefined;
         settling.current = false;
         setMotion(undefined);
@@ -218,9 +270,9 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
     return () => window.clearTimeout(timer);
   }, [animationActive, pace, playing, revealKey, storyActive]);
 
-  function go(direction: SwipeDirection) {
+  function go(direction: SwipeDirection, distance = 0) {
     if (storyActive) return;
-    const target = map.neighbours[direction];
+    const target = cross ? cross.peers[direction][distance] : map.neighbours[direction];
     if (!target) return;
     setPlaying(false);
     transition(target, direction);
@@ -243,13 +295,48 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
     clearMotion();
     setPlaying(false);
     setError('');
+    setWordHistory([]);
+    setWordRestoration(undefined);
+    setWordVerticalAnchor(undefined);
     if (nextMode === 'words') {
       setWordAnchor(character.data.hanzi);
       setWordSelection({});
+    } else if (connections || entryWord) {
+      setWordsView('swipe');
+      onWordViewChange?.('swipe');
     }
     setFamilyOrbit(undefined);
     setLens(undefined);
     setMode(nextMode);
+  }
+
+  function changeWordView(view: WordView) {
+    if (wordsView === view) return;
+    clearMotion();
+    setPlaying(false);
+    setWordsView(view);
+    onWordViewChange?.(view, word?.text);
+  }
+
+  function chooseWordBranch(target: SwipeFrame, from: WordBranchReturn) {
+    if (!word || storyActive || settling.current) return;
+    clearMotion();
+    setPlaying(false);
+    setWordHistory(history => [...history, {frame: word, vertical: wordVerticalAnchor, all, scope, from}]);
+    setAll(false);
+    applyFrame(target);
+    viewport.current?.focus({preventScroll: true});
+  }
+
+  function returnToWord() {
+    if (!returnWord || returnWord.scope !== scope) return;
+    clearMotion();
+    setPlaying(false);
+    setAll(returnWord.all);
+    applyFrame(returnWord.frame);
+    setWordVerticalAnchor(returnWord.vertical);
+    setWordRestoration(returnWord.from);
+    setWordHistory(history => history.slice(0, -1));
   }
 
   function changeRange(full: boolean) {
@@ -259,6 +346,8 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
     setPlaying(false);
     setFamilyOrbit(undefined);
     setLens(undefined);
+    setWordHistory([]);
+    setWordRestoration(undefined);
     setAll(full);
     if (!full) return;
     const first = (mode === 'characters' ? scopedCharacterFrames(index, scope)
@@ -292,6 +381,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
     setPlaying(false);
     setAll(false);
     setFamilyOrbit(undefined);
+    setWordHistory([]);
     applyFrame(target);
     setError('');
     setQuery('');
@@ -327,6 +417,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
     const badge = !!element.closest('.as-count');
     if (storyActive || !event.isPrimary || event.button !== 0 || settling.current || element.closest('[data-swipe-control]')) return;
     if (mode === 'words' && !word) return;
+    if (showWordBranches && !element.closest('.as-composition')) return;
     setPlaying(false);
     let partSlot = element.closest('[data-swipe-slot]')?.getAttribute('data-swipe-slot') ?? undefined;
     const outline = event.currentTarget.querySelector<SVGSVGElement>('.as-current .as-paths');
@@ -338,8 +429,9 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
         y >= box.y + .035 && y <= box.y + box.h - .035);
       if (hits.length === 1) partSlot = hits[0].part.id;
     }
-    const selection = inside ? {map, picked: true} : mapFromTarget(element, partSlot);
-    gesture.current = {id: event.pointerId, x: event.clientX, y: event.clientY, slot: partSlot, inside: !!inside, badge, ...selection};
+    const selection = inside || showWordBranches ? {map, picked: true} : mapFromTarget(element, partSlot);
+    const wordGlyph = showWordBranches ? element.closest('[data-swipe-anchor]')?.getAttribute('data-swipe-anchor') ?? undefined : undefined;
+    gesture.current = {id: event.pointerId, x: event.clientX, y: event.clientY, slot: partSlot, inside: !!inside, badge, wordGlyph, ...selection};
     event.currentTarget.setPointerCapture(event.pointerId);
   }
   function pointerMove(event: PointerEvent<HTMLDivElement>) {
@@ -366,6 +458,14 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
     gesture.current = undefined;
     const dx = event.clientX - active.x;
     const dy = event.clientY - active.y;
+    if (word && active.wordGlyph && !active.axis && Math.max(Math.abs(dx), Math.abs(dy)) < 10) {
+      if (active.wordGlyph !== cross?.horizontal) {
+        setAll(false);
+        applyFrame({...word, anchor: active.wordGlyph});
+        if (cross?.horizontal) setWordVerticalAnchor(cross.horizontal);
+      }
+      return;
+    }
     if (!active.axis && active.slot && Math.max(Math.abs(dx), Math.abs(dy)) < 10) {
       const piece = parts.find(entry => entry.piece.id === active.slot)?.piece;
       if (piece) {
@@ -395,7 +495,8 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
       setFamilyOrbit(undefined);
       return;
     }
-    if (inside || familyOrbit || storyActive || event.target === storyButton.current) return;
+    if (inside || familyOrbit || storyActive || event.target === storyButton.current
+      || (event.target as Element).closest('[data-word-branch-rail]')) return;
     const direction = arrowDirections[event.key];
     if (!direction) return;
     event.preventDefault();
@@ -412,14 +513,25 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
       setAll(false);
       applyFrame(swipeCharacterFrame(origin));
     }
+    if (!familyOrbit || familyOrbit.part.glyph !== piece.glyph) setFamilyLayout('compare');
     setFamilyOrbit(current => current?.part.glyph === piece.glyph
       ? current : {part: piece, origin, lens: originalLens});
+  }
+
+  function cycleFamilyComponent(offset: number) {
+    if (!familyOrbit) return;
+    const unique = [...new Map(parts.map(({piece}) => [piece.glyph, piece])).values()];
+    if (unique.length < 2) return;
+    const selected = unique.findIndex(piece => piece.glyph === familyOrbit.part.glyph);
+    if (selected < 0) return;
+    openFamily(unique[(selected + offset + unique.length) % unique.length]);
   }
 
   function chooseOrbitMember(target: SwipeFrame, direction: SwipeDirection) {
     if (target.id === current.id) return;
     setPlaying(false);
-    transition(target, direction);
+    if (comparingFamily) applyFrame(target);
+    else transition(target, direction);
   }
 
   function returnToOrbitOrigin() {
@@ -485,11 +597,41 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
 
   const revealPinyin = showPinyin && step >= 1;
   const revealMeaning = showMeaning && step >= 2;
+  const inlineWordCaption = !!word && !storyActive;
+  const frameCaption = <>
+    <p className="as-reading" hidden={!showPinyin} data-revealed={revealPinyin || undefined}
+      data-reserve={inlineWordCaption && playing && !revealPinyin ? current.pinyin : undefined}>
+      {revealPinyin && <>
+        {inside && <span className="as-reading-glyph" lang="zh-Hans">{current.text}</span>}{current.pinyin}
+      </>}
+    </p>
+    <p className="as-meaning" hidden={!showMeaning} data-revealed={revealMeaning || undefined}
+      data-reserve={inlineWordCaption && playing && !revealMeaning ? current.meaning : undefined}>
+      {revealMeaning && <>
+        {inside && !showPinyin && <span className="as-reading-glyph" lang="zh-Hans">{current.text}</span>}{current.meaning}
+      </>}
+    </p>
+  </>;
   const contextualParts = word && contextualWordParts[word.id];
   const wordParts = contextualParts ?? (word && [...word.text].length > 1 ? [...word.text].flatMap(text => {
     const entry = index.characters.get(text);
     return entry ? [{text, pinyin: entry.data.readings.join(' / '), meaning: assemblyMeaning(entry)}] : [];
   }) : []);
+
+  const familyView = familyOrbit && {
+    anchor: familyOrbit.part.glyph,
+    frames: orbitFrames,
+    origin: familyOrbit.origin.character.data.hanzi !== current.text ? familyOrbit.origin.character.data.hanzi : undefined,
+    pinyin: showPinyin,
+    english: showMeaning,
+    choose: chooseOrbitMember,
+    close: () => setFamilyOrbit(undefined),
+    restore: returnToOrbitOrigin,
+    widen: scope !== 'all' ? widen : undefined,
+    switchLayout: () => setFamilyLayout(comparingFamily ? 'orbit' : 'compare'),
+  };
+  const activeRegion = inspected && inspected.part.glyph === familyOrbit?.part.glyph ? inspected
+    : lensParent?.part.glyph === familyOrbit?.part.glyph ? lensParent : undefined;
 
   const badgeButtons = orderedBadges.map(({piece, count}) =>
     <button type="button" key={piece.id} className="as-count" data-swipe-slot={piece.id}
@@ -502,7 +644,9 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
       <span><b lang="zh-Hans">{piece.glyph}</b>{count}</span>
     </button>);
 
-  return <section className="as" aria-label="Swipe Atlas" data-mode={mode} onKeyDown={event => {
+  const mapPartButtons = <div className="as-map-parts" role="group" aria-label="Component family sizes">{badgeButtons}</div>;
+
+  return <section className="as" aria-label="Swipe Atlas" data-mode={mode} data-word-view={mode === 'words' ? wordsView : undefined} onKeyDown={event => {
     if (storyActive && event.key === 'Escape') closeStory();
   }}>
     <div className="as-toolbar">
@@ -510,6 +654,10 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
         <button type="button" aria-pressed={mode === 'characters'} onClick={() => changeMode('characters')}>Characters</button>
         <button type="button" aria-pressed={mode === 'words'} onClick={() => changeMode('words')}>Words</button>
       </div>
+      {mode === 'words' && <div className="as-mode as-word-view" role="group" aria-label="Words view">
+        <button type="button" aria-pressed={!connections} onClick={() => changeWordView('swipe')}>Swipe</button>
+        <button type="button" aria-pressed={connections} onClick={() => changeWordView('connections')}>Connections</button>
+      </div>}
       <form className="as-find" onSubmit={find}>
         <input type="search" aria-label={mode === 'characters' ? 'Find hanzi or component' : 'Find word or hanzi'}
           placeholder={mode === 'characters' ? 'Hanzi or part' : 'Word or hanzi'}
@@ -530,18 +678,25 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
       </button>}
     </div>
     {error && <p className="as-error" role="alert">{error}</p>}
-    <div className="as-stage" data-story-open={storyActive || undefined} data-playing={playing || undefined}>
+    <div className="as-stage" data-family-layout={mapOpen ? familyLayout : undefined} data-story-open={storyActive || undefined} data-playing={playing || undefined}>
+      {connections && !storyActive && returnWord?.scope === scope &&
+        <button type="button" className="as-word-return" onClick={returnToWord}>
+          <ChevronLeft size={17} aria-hidden="true"/> Back to <span lang="zh-Hans">{returnWord.frame.text}</span>
+        </button>}
       <div className="as-viewport" ref={viewport} role="group" tabIndex={storyActive ? -1 : 0}
         aria-label={mode === 'characters' ? 'Swipe characters' : 'Swipe words'}
         aria-describedby="as-gesture-help" data-study-lookup="off" data-axis={map.vertical ? 'vertical' : 'horizontal'}
         data-depth={componentDepth} data-family-map={!!familyOrbit} data-small-family={!!familyOrbit && orbitFrames.length <= 8}
         data-large-family={!!familyOrbit && orbitFrames.length > 32 || undefined}
         data-family-peek={!storyActive && peek.length > 0 || undefined}
-        data-vertical-neighbour={!inside && !familyOrbit && !!(map.neighbours.up || map.neighbours.down) || undefined}
+        data-vertical-neighbour={!showWordBranches && !inside && !familyOrbit && !!(map.neighbours.up || map.neighbours.down) || undefined}
+        data-word-focus={inlineWordCaption || undefined} data-word-branches={showWordBranches || undefined}
+        data-word-axis-horizontal={showWordBranches ? cross.horizontal : undefined}
+        data-word-axis-vertical={showWordBranches ? cross.vertical : undefined}
         data-motion={motion ? motion.settling ? 'settling' : 'dragging' : 'rest'}
         onPointerDown={pointerDown} onPointerMove={pointerMove} onPointerUp={pointerUp}
         onLostPointerCapture={cancelPointer} onPointerCancel={cancelPointer} onKeyDown={keyDown}>
-        <div className="as-registration" aria-hidden="true"/>
+        {!comparingFamily && !inlineWordCaption && <div className="as-registration" aria-hidden="true"/>}
         {story && <button type="button" ref={storyButton} className="as-story-trigger" data-swipe-control
           aria-expanded={storyActive} aria-controls={storyAreaId}
           aria-disabled={animationActive || undefined} onClick={startStory}>
@@ -560,14 +715,12 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
           {inspected && <span className="as-inspected" aria-current="step" lang="zh-Hans"
             aria-label={'Selected ' + inspected.part.glyph}>{inspected.part.glyph}</span>}
         </nav>}
-        {familyOrbit ? <SwipeFamilyMap key={familyOrbit.part.glyph + ':' + scope}
-          anchor={familyOrbit.part.glyph} frames={orbitFrames} current={current.id}
-          origin={familyOrbit.origin.character.data.hanzi !== current.text ? familyOrbit.origin.character.data.hanzi : undefined}
-          inside={!!inside}
-          pinyin={showPinyin} english={showMeaning} choose={chooseOrbitMember} close={() => setFamilyOrbit(undefined)}
-          restore={returnToOrbitOrigin} widen={scope !== 'all' ? widen : undefined}/>
+        {familyView ? (comparingFamily
+          ? <SwipeFamilyMap {...familyView} current={current} originRegion={activeRegion}
+              components={mapPartButtons} cycleComponent={cycleFamilyComponent}/>
+          : <SwipeFamilyOrbit key={familyView.anchor + ':' + scope} {...familyView} current={current.id} inside={!!inside}/>)
           : !storyActive && peek.length > 0 && <SwipeFamilyPeek frames={peek} pinyin={showPinyin} english={showMeaning} choose={chooseOrbitMember}/>}
-        {Object.entries(swipeVectors).map(([key, [x, y]]) => {
+        {!showWordBranches && Object.entries(swipeVectors).map(([key, [x, y]]) => {
           const direction = key as SwipeDirection;
           const target = map.neighbours[direction];
           const Icon = icons[direction];
@@ -584,36 +737,33 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
             <span className="as-direction"><Icon size={15} aria-hidden="true"/>{label}</span>
           </button>;
         })}
-        {mode === 'words' && !word ? <div className="as-empty">
+        {comparingFamily ? null : mode === 'words' && !word ? <div className="as-empty">
           <p>No words with <span lang="zh-Hans">{wordAnchor}</span> in this HSK scope.</p>
           <button type="button" onClick={() => changeRange(true)}>Browse all words in scope</button>
         </div> : <div className="as-composition">
           <div className="as-glyph as-current" role="img" aria-label={current.text} data-character={current.text}
             style={motion && movingInk(display, motion, false)}>
             <SwipeArtwork frame={storyArtwork ?? display} interactive regions={inside ? regions : undefined}
-              active={inside?.active} storyFocus={storyFocus}/>
+              active={inside?.active} storyFocus={storyFocus} wordVerticalAnchor={showWordBranches ? cross.vertical : undefined}/>
           </div>
           {motion && <div className="as-glyph as-incoming" aria-hidden="true" style={movingInk(display, motion, true)}>
             <SwipeArtwork frame={motion.target}/>
           </div>}
-          {!familyOrbit && <div className="as-badges" aria-label="Component family sizes" data-stack={stackBadges} hidden={!!motion}>
+          {inlineWordCaption && <div className="as-word-focus-caption">{frameCaption}</div>}
+          {!word && !familyOrbit && <div className="as-badges" aria-label="Component family sizes" data-stack={stackBadges} hidden={!!motion}>
             {badgeButtons}
           </div>}
         </div>}
+        {showWordBranches &&
+          <SwipeWordBranches key={[scope, current.id, cross.horizontal, cross.vertical, all].join(':')}
+            cross={cross} scope={scope} pinyin={showPinyin} english={showMeaning}
+            restoration={wordRestoration} onRestored={() => setWordRestoration(undefined)}
+            go={go} choose={chooseWordBranch} pause={() => setPlaying(false)}/>}
       </div>
       <div className="as-caption" aria-live="off">
-        {familyOrbit && <div className="as-map-parts" role="group" aria-label="Component family sizes">{badgeButtons}</div>}
-        {(mode === 'characters' || word) && <>
-          <p className="as-reading" hidden={!showPinyin} data-revealed={revealPinyin || undefined}>
-            {revealPinyin && <>
-              {inside && <span className="as-reading-glyph" lang="zh-Hans">{current.text}</span>}{current.pinyin}
-            </>}
-          </p>
-          <p className="as-meaning" hidden={!showMeaning} data-revealed={revealMeaning || undefined}>
-            {revealMeaning && <>
-              {inside && !showPinyin && <span className="as-reading-glyph" lang="zh-Hans">{current.text}</span>}{current.meaning}
-            </>}
-          </p>
+        {familyOrbit && !comparingFamily && mapPartButtons}
+        {!comparingFamily && (mode === 'characters' || word) && <>
+          {!inlineWordCaption && frameCaption}
           {wordParts.length > 0 && (revealPinyin || revealMeaning) &&
             <div className="as-word-parts">
               <span className="as-word-parts-heading">{contextualParts ? 'In this word' : 'Individual characters · dictionary'}</span>
@@ -630,7 +780,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
           onClose={closeStory} onCompare={retainedPart ? compareStory : undefined} onFocusPart={focus =>
             setOpenStory(active => active?.key === storyKey ? {...active, focus} : active)}/>}
       </div>
-      {broadFamily && <p className="as-narrow">No matches in this HSK scope. <button type="button" onClick={widen}>Show all HSK levels</button></p>}
+      {broadFamily && !mapOpen && <p className="as-narrow">No matches in this HSK scope. <button type="button" onClick={widen}>Show all HSK levels</button></p>}
       <div className="as-controls" role="group" aria-label="Swipe controls">
         <div className="as-playback">
           <button type="button" className="as-play" aria-label={playing ? 'Pause continuous play' : 'Play continuous'}
@@ -657,10 +807,12 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
       </div>
     </div>
     <p className="as-help" id="as-gesture-help">
-      {familyOrbit ? 'Drag the map to turn it. Tap any character to bring it into the centre.'
+      {comparingFamily ? 'Drag the selected character sideways to browse, or up and down to switch parts.'
+        : familyOrbit ? 'Drag the map to turn it. Tap any character to bring it into the centre.'
         : inside ? 'Tap a part to inspect it, or tap its count to see its family.'
         : mode === 'characters' ? 'Drag the strokes to swap a part. Tap a count to see its family.'
-        : 'Drag a hanzi to browse the words that use it.'} {!inside && !familyOrbit && 'Tap the space around it to go next.'}
+        : connections ? 'Swipe the centre across or up and down. Tap a hanzi to make it the horizontal link.'
+        : 'Drag a hanzi to browse the words that use it.'} {!inside && !familyOrbit && !connections && 'Tap the space around it to go next.'}
     </p>
   </section>;
 }

@@ -1,10 +1,12 @@
 'use client';
 
-import {useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type MouseEvent, type PointerEvent} from 'react';
-import {ArrowLeft, ChevronLeft, ChevronRight, X} from 'lucide-react';
+import {useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type KeyboardEvent, type MouseEvent, type PointerEvent, type ReactNode} from 'react';
+import {ArrowLeft, ChevronLeft, ChevronRight, CircleHelp, LayoutGrid, Orbit, X} from 'lucide-react';
 import {SwipeArtwork} from './atlas-swipe-art';
+import {assemblyPositions} from './atlas-assembly-model';
+import type {SwipeRegion} from './atlas-swipe-regions';
 import {SwipeLabel} from './atlas-swipe-label';
-import type {SwipeDirection, SwipeFrame} from './atlas-swipe-model';
+import {swipeDirection, type SwipeDirection, type SwipeFrame} from './atlas-swipe-model';
 
 const fullTurn = 2 * Math.PI;
 const samples = 144;
@@ -129,19 +131,43 @@ function placeFamily(frames: SwipeFrame[], angle: number, layout: Ring[]) {
   });
 }
 
-export function SwipeFamilyMap({anchor, frames, current, origin, inside, pinyin, english, choose, close, restore, widen}: {
+type FamilyActions = {
+  origin?: string;
+  close: () => void;
+  restore: () => void;
+  switchLayout: () => void;
+};
+
+type FamilyViewProps = FamilyActions & {
   anchor: string;
   frames: SwipeFrame[];
-  current: string;
-  origin?: string;
-  inside: boolean;
   pinyin: boolean;
   english: boolean;
   choose: (target: SwipeFrame, direction: SwipeDirection) => void;
-  close: () => void;
-  restore: () => void;
   widen?: () => void;
-}) {
+};
+
+function FamilyMapActions({origin, close, restore, switchLayout, orbit}: FamilyActions & {orbit?: boolean}) {
+  return <div className={orbit ? 'as-orbit-actions' : 'as-compare-actions'}>
+    {origin && <button type="button" aria-label={'Return to ' + origin} onClick={restore}>
+      <ArrowLeft size={16} aria-hidden="true"/><span lang="zh-Hans">{origin}</span>
+    </button>}
+    <button type="button" aria-label={orbit ? 'Compare family members' : 'Switch to orbit view'} onClick={switchLayout}>
+      {orbit ? <LayoutGrid size={17} aria-hidden="true"/> : <><Orbit size={17} aria-hidden="true"/><span>Orbit</span></>}
+    </button>
+    <button type="button" aria-label="Close family map" onClick={close}><X size={19} aria-hidden="true"/></button>
+  </div>;
+}
+
+function FamilyMapEmpty({widen}: Pick<FamilyViewProps, 'widen'>) {
+  return <div className="as-orbit-empty" data-orbit-controls>
+    <p>No matches in this HSK scope.</p>
+    {widen && <button type="button" onClick={widen}>Show all HSK levels</button>}
+  </div>;
+}
+
+export function SwipeFamilyOrbit({anchor, frames, current, origin, inside, pinyin, english, choose, close, restore, widen,
+  switchLayout}: FamilyViewProps & {current: string; inside: boolean}) {
   const root = useRef<HTMLElement>(null);
   const drag = useRef<Drag | undefined>(undefined);
   const ignoreClick = useRef(false);
@@ -229,12 +255,7 @@ export function SwipeFamilyMap({anchor, frames, current, origin, inside, pinyin,
         <strong lang="zh-Hans">{anchor}</strong>
         <span>{frames.length} {frames.length === 1 ? 'character' : 'characters'}</span>
       </div>
-      <div className="as-orbit-actions">
-        {origin && <button type="button" aria-label={'Return to ' + origin} onClick={restore}>
-          <ArrowLeft size={18}/><span lang="zh-Hans">{origin}</span>
-        </button>}
-        <button type="button" aria-label="Close family map" onClick={close}><X size={19}/></button>
-      </div>
+      <FamilyMapActions origin={origin} close={close} restore={restore} switchLayout={switchLayout} orbit/>
     </header>
     {points.map(({frame, style, direction}) => {
       const centred = frame.id === current;
@@ -251,15 +272,178 @@ export function SwipeFamilyMap({anchor, frames, current, origin, inside, pinyin,
         </>}
       </button>;
     })}
-    {frames.length === 0 && <div className="as-orbit-empty" data-orbit-controls>
-      <p>No matches in this HSK scope.</p>
-      {widen && <button type="button" onClick={widen}>Show all HSK levels</button>}
-    </div>}
+    {!frames.length && <FamilyMapEmpty widen={widen}/>}
     {pages > 1 && <nav className="as-orbit-pages" aria-label="Family map pages" data-orbit-controls>
       <button type="button" aria-label="Previous family group" onClick={() => movePage(-1)} disabled={actual === 0}><ChevronLeft size={18}/></button>
       <span aria-live="polite">{offset + 1}–{offset + range.length} / {frames.length}</span>
       <button type="button" aria-label="Next family group" onClick={() => movePage(1)} disabled={actual === pages - 1}><ChevronRight size={18}/></button>
     </nav>}
+  </section>;
+}
+
+const comparisonPositions = [...assemblyPositions, 'multiple', 'unmapped'] as const;
+type ComparisonPosition = typeof comparisonPositions[number];
+
+function comparisonPosition(frame: SwipeFrame, anchor: string): ComparisonPosition {
+  const focus = frame.character;
+  if (!focus) return 'unmapped';
+  if (focus.character.parts.filter(part => part.glyph === anchor).length > 1) return 'multiple';
+  return focus.part?.positions[0] ?? 'unmapped';
+}
+
+const positionNames: Record<ComparisonPosition, string> = {
+  left: 'Left', right: 'Right', top: 'Top', bottom: 'Bottom', 'upper left': 'Upper left', 'upper right': 'Upper right',
+  'lower left': 'Lower left', 'lower right': 'Lower right', middle: 'Middle', around: 'Around', inside: 'Inside',
+  overlapping: 'Overlap', multiple: 'Multiple', unmapped: 'Other',
+};
+
+const positionDirections: Partial<Record<ComparisonPosition, SwipeDirection>> = {
+  left: 'left', right: 'right', top: 'up', bottom: 'down',
+  'upper left': 'left', 'upper right': 'right', 'lower left': 'left', 'lower right': 'right',
+};
+
+const comparisonArrows: Partial<Record<string, SwipeDirection>> = {
+  ArrowLeft: 'left', ArrowRight: 'right', ArrowUp: 'up', ArrowDown: 'down',
+};
+
+function FamilyInk({frame, anchor, region}: {frame: SwipeFrame; anchor: string; region?: SwipeRegion}) {
+  return <>
+    <span className="as-compare-ink" aria-hidden="true">
+      <SwipeArtwork frame={frame} familyAnchor={anchor} regions={region ? [region] : undefined}/>
+    </span>
+    <span className="as-compare-unmapped" title="No verified stroke highlight">
+      <CircleHelp size={12} aria-hidden="true"/>
+      <span className="as-visually-hidden">No verified stroke highlight</span>
+    </span>
+  </>;
+}
+
+export function SwipeFamilyMap({anchor, frames, current, origin, originRegion, components, pinyin, english,
+  choose, cycleComponent, close, restore, widen, switchLayout}: FamilyViewProps & {
+  current: SwipeFrame; originRegion?: SwipeRegion; components: ReactNode; cycleComponent: (offset: number) => void;
+}) {
+  const sheet = useRef<HTMLElement>(null);
+  const pointer = useRef<{id: number; x: number; y: number} | undefined>(undefined);
+  const suppressClick = useRef(false);
+  const keyboardMove = useRef(false);
+  const inFamily = frames.some(frame => frame.id === current.id);
+  const ordered = useMemo(() => {
+    const groups = new Map<ComparisonPosition, SwipeFrame[]>();
+    for (const frame of frames) {
+      const position = comparisonPosition(frame, anchor);
+      const group = groups.get(position) ?? [];
+      group.push(frame);
+      groups.set(position, group);
+    }
+    return comparisonPositions.flatMap(position => (groups.get(position) ?? []).map((frame, index) =>
+      ({frame, position, startsGroup: index === 0})));
+  }, [anchor, frames]);
+
+  useLayoutEffect(() => {
+    if (!keyboardMove.current) return;
+    keyboardMove.current = false;
+    sheet.current?.querySelector<HTMLButtonElement>('[data-family-current]')?.focus();
+  }, [anchor, current.id]);
+
+  function move(direction: SwipeDirection) {
+    if (direction === 'up' || direction === 'down') {
+      cycleComponent(direction === 'up' ? -1 : 1);
+      return;
+    }
+    if (!ordered.length) return;
+    const selectedIndex = ordered.findIndex(({frame}) => frame.id === current.id);
+    const step = direction === 'left' ? -1 : 1;
+    const start = selectedIndex < 0 && step < 0 ? 0 : selectedIndex;
+    const {frame} = ordered[(start + step + ordered.length) % ordered.length];
+    if (frame.id !== current.id) choose(frame, direction);
+  }
+
+  function startDrag(event: PointerEvent<HTMLButtonElement>) {
+    keyboardMove.current = false;
+    if (!event.isPrimary || event.button !== 0) return;
+    pointer.current = {id: event.pointerId, x: event.clientX, y: event.clientY};
+    event.currentTarget.setPointerCapture(event.pointerId);
+  }
+
+  function cancelDrag(event: PointerEvent<HTMLButtonElement>) {
+    if (pointer.current?.id === event.pointerId) pointer.current = undefined;
+  }
+
+  function finishDrag(event: PointerEvent<HTMLButtonElement>) {
+    const start = pointer.current;
+    if (!start || start.id !== event.pointerId) return;
+    cancelDrag(event);
+    const dx = event.clientX - start.x;
+    const dy = event.clientY - start.y;
+    if (Math.max(Math.abs(dx), Math.abs(dy)) < 26) return;
+    suppressClick.current = true;
+    move(swipeDirection(dx, dy, Math.abs(dx) >= Math.abs(dy) ? 'x' : 'y'));
+  }
+
+  function pressArrow(event: KeyboardEvent<HTMLButtonElement>) {
+    const direction = comparisonArrows[event.key];
+    if (!direction) return;
+    event.preventDefault();
+    keyboardMove.current = true;
+    move(direction);
+  }
+
+  const currentGestures = {
+    'data-family-current': true,
+    onPointerDown: startDrag, onPointerUp: finishDrag, onPointerCancel: cancelDrag,
+    onLostPointerCapture: cancelDrag, onKeyDown: pressArrow,
+    'aria-keyshortcuts': 'ArrowLeft ArrowRight ArrowUp ArrowDown',
+  };
+
+  return <section ref={sheet} className="as-compare" aria-label={'Family map for ' + anchor} data-swipe-control
+    onPointerDownCapture={() => { suppressClick.current = false; keyboardMove.current = false; }}
+    onClickCapture={event => {
+      if (!event.detail || !suppressClick.current) return;
+      suppressClick.current = false;
+      event.stopPropagation();
+      event.preventDefault();
+    }}>
+    <header className="as-compare-head">
+      <div className="as-compare-title">
+        <strong lang="zh-Hans">{anchor}</strong>
+        <div>
+          <span>{frames.length} {frames.length === 1 ? 'character' : 'characters'}</span>
+          {frames.length > 0 && <small>Shared strokes in red<span className="as-compare-unmapped-key">
+            {' · '}<CircleHelp size={11} aria-hidden="true"/> Outline only</span></small>}
+        </div>
+      </div>
+      {!inFamily && <button type="button" className="as-compare-outside" aria-current="true" {...currentGestures}>
+        <FamilyInk frame={current} anchor={anchor} region={originRegion}/>
+        <span className="as-compare-label">
+          <span className="as-visually-hidden" lang="zh-Hans">{current.text}</span>
+          <span className="as-compare-origin-label">Current</span>
+          <SwipeLabel frame={current} showPinyin={pinyin} showMeaning={english}/>
+        </span>
+      </button>}
+      {components}
+      <FamilyMapActions origin={origin} close={close} restore={restore} switchLayout={switchLayout}/>
+    </header>
+    {ordered.length > 0 && <div className="as-compare-grid" role="group" aria-label="Characters grouped by component position"
+      data-pinyin={pinyin} data-english={english}>
+      {ordered.map(({frame, position, startsGroup}) => {
+        const selected = frame.id === current.id;
+        const name = positionNames[position];
+        const direction = positionDirections[position] ?? 'right';
+        return <button type="button" key={frame.id} className="as-compare-member"
+          data-family-member={frame.text} data-position={position} data-group-start={startsGroup || undefined}
+          aria-current={selected || undefined} {...(selected ? currentGestures : {})}
+          onClick={() => { if (!selected) choose(frame, direction); }}>
+          {startsGroup && <span className="as-compare-position" aria-hidden="true">{name}</span>}
+          <FamilyInk frame={frame} anchor={anchor}/>
+          <span className="as-visually-hidden" lang="zh-Hans">{frame.text}</span>
+          <span className="as-compare-label">
+            <SwipeLabel frame={frame} showPinyin={pinyin} showMeaning={english}/>
+          </span>
+          <span className="as-visually-hidden"> · {name}</span>
+        </button>;
+      })}
+    </div>}
+    {!frames.length && <FamilyMapEmpty widen={widen}/>}
   </section>;
 }
 
