@@ -81,4 +81,9 @@ export function relatedStudyWords(character:string,locale:Locale,lessonId?:strin
  for(const row of ranked)if(!unique.has(row.text))unique.set(row.text,row);
  return [...unique.values()];
 }
+export function relatedStudySentence(character:string,locale:Locale,lessonId?:string){
+ if(!/^\p{Script=Han}$/u.test(character))return undefined;
+ const examples=studyOccurrences(character,locale).filter(row=>row.kind==='sentence');
+ return examples.find(row=>row.lessonId===lessonId)??examples[0];
+}
 export function occurrencePage<T>(rows:readonly T[],page:number,size=6){const pages=Math.max(1,Math.ceil(rows.length/size)),safe=Number.isFinite(page)?Math.max(0,Math.min(pages-1,Math.floor(page))):0;return {page:safe,pages,rows:rows.slice(safe*size,(safe+1)*size)};}

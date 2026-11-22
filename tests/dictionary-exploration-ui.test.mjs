@@ -25,6 +25,18 @@ test('family pages inspect characters through the existing lookup action and pre
 test('word previews fetch only the visible page and keep full definitions reachable',async()=>{
  const {r,selected}=await mount();globalThis.__readingRequests=[];await m.act(async()=>button(r,'Related words').props.onClick());const rows=r.root.findAllByProps({className:'sp-connection-target'});assert.equal(rows.length,3);assert.equal(__readingRequests.length,3);await m.act(()=>rows[0].props.onClick({currentTarget:{}}));assert.ok(['青年','青春','青山'].includes(selected[0]));await m.act(()=>r.unmount());
 });
+test('structure filters distinguish reviewed sound clues from shape-only matches',async()=>{
+ const {r}=await mount();
+ const roleButton=label=>r.root.findAllByType('button').find(node=>text(node).startsWith(label+' · '));
+ const sound=roleButton('Sound clue'),shape=roleButton('Shape / role unreviewed');
+ assert.equal(sound.props.disabled,false);
+ assert.equal(shape.props.disabled,false);
+ await m.act(()=>sound.props.onClick());
+ const words=r.root.findAllByProps({className:'sp-connection-target'}).map(text);
+ assert.ok(words.some(word=>word.startsWith('清')));
+ assert.ok(!words.some(word=>word.startsWith('菁')));
+ await m.act(()=>r.unmount());
+});
 test('lesson occurrences paginate the actual matching material without navigation or losing the current entry',async()=>{
  const {r}=await mount({text:'我',pinyin:'wǒ',meaning:'I'});await m.act(()=>button(r,'In lessons').props.onClick());const articles=r.root.findAllByType('article'),firstSource=articles[0].props['data-study-source-id'];assert.equal(articles.length,5);assert.ok(articles.every(a=>a.props['data-study-source-id']&&a.props['data-study-sentence'].includes('我')));assert.equal(r.root.findAllByType('a').length,0);assert.equal(r.root.findAllByType('select').length,1);await m.act(()=>button(r,'Next').props.onClick());assert.notEqual(r.root.findAllByType('article')[0].props['data-study-source-id'],firstSource);await m.act(()=>r.unmount());
 });
