@@ -1,6 +1,11 @@
 export const hanziSprintHref = '/?study=sprint';
 export const hanziSprintCopy = {
  en:{
+  cardMode:'Card mode', preview:'Quick preview', scored:'With scoring', previewStart:'Browse 50 characters',
+  previewHint:'Tap for pinyin, tap for meaning, then tap anywhere on the card to move on. Preview keeps your scores unchanged.',
+  nextCard:'Next character', markRecall:'Choose what you remembered',
+  scoreHint:'Partial answers count toward their own skill. The character stays in practice until you recall both.',
+  restartPreview:'Browse from the beginning',
   title:'14-day Hanzi Sprint', back:'Today', intro:'Work toward 1,000 characters with families, recall, listening and writing.',
   scope:'655 HSK 1–3 characters and 345 HSK 4 characters. The entry test removes the characters you already recall from the daily lessons.',
   day:'Day', entry:'Entry test', families:'Families', review:'Quick Review', sentences:'Sentences', writing:'Difficult writing',
@@ -20,6 +25,11 @@ export const hanziSprintCopy = {
   delay:'Correct recalls return after 1, 3, then 7 days. Difficult ones stay available for review.',
  },
  fr:{
+  cardMode:'Mode des cartes', preview:'Aperçu rapide', scored:'Avec évaluation', previewStart:'Parcourir 50 caractères',
+  previewHint:'Touchez la carte pour voir le pinyin, puis le sens, puis passer au caractère suivant. L’aperçu ne change pas vos résultats.',
+  nextCard:'Caractère suivant', markRecall:'Indiquez ce que vous avez retenu',
+  scoreHint:'Une réponse partielle est comptée pour la compétence correspondante. Le caractère reste à travailler jusqu’à obtenir les deux réponses.',
+  restartPreview:'Parcourir depuis le début',
   title:'Sprint hanzi de 14 jours', back:'Aujourd’hui', intro:'Travaillez 1 000 caractères par familles, rappel, écoute et écriture.',
   scope:'655 caractères HSK 1 à 3 et 345 du HSK 4. Le test initial retire de la leçon quotidienne les caractères déjà mémorisés.',
   day:'Jour', entry:'Test initial', families:'Familles', review:'Révision rapide', sentences:'Phrases', writing:'Écriture des caractères difficiles',
@@ -39,6 +49,11 @@ export const hanziSprintCopy = {
   delay:'Les réponses correctes reviennent après 1, 3 puis 7 jours. Les caractères difficiles restent à réviser.',
  },
  ru:{
+  cardMode:'Режим карточек', preview:'Быстрый просмотр', scored:'С оценкой', previewStart:'Просмотреть 50 знаков',
+  previewHint:'Нажмите на карточку, чтобы увидеть пиньинь, затем значение, затем следующий знак. Просмотр не меняет результаты.',
+  nextCard:'Следующий знак', markRecall:'Отметьте, что вспомнили',
+  scoreHint:'Частичный ответ учитывается в соответствующем навыке. Знак остаётся в тренировке, пока не вспомните оба ответа.',
+  restartPreview:'Начать просмотр сначала',
   title:'14-дневный спринт по иероглифам', back:'Сегодня', intro:'Изучайте 1 000 знаков по семьям с повторением, прослушиванием и письмом.',
   scope:'655 знаков HSK 1–3 и 345 знаков HSK 4. Входной тест убирает из ежедневных уроков знаки, которые вы уже помните.',
   day:'День', entry:'Входной тест', families:'Семьи', review:'Быстрое повторение', sentences:'Предложения', writing:'Письмо трудных знаков',
@@ -58,6 +73,11 @@ export const hanziSprintCopy = {
   delay:'Верные ответы повторяются через 1, 3 и 7 дней. Трудные знаки остаются в очереди.',
  },
  tr:{
+  cardMode:'Kart modu', preview:'Hızlı göz at', scored:'Puanlı', previewStart:'50 karaktere göz at',
+  previewHint:'Pinyin, anlam ve sonraki karakter için karta sırayla dokunun. Göz atmak puanlarınızı değiştirmez.',
+  nextCard:'Sonraki karakter', markRecall:'Ne hatırladığınızı seçin',
+  scoreHint:'Kısmi yanıt ilgili beceriye yazılır. İkisini de hatırlayana kadar karakter alıştırmada kalır.',
+  restartPreview:'Baştan göz at',
   title:'14 günlük Hanzi sprinti', back:'Bugün', intro:'Aileler, hatırlama, dinleme ve yazmayla 1.000 karaktere doğru ilerleyin.',
   scope:'HSK 1–3’ten 655 ve HSK 4’ten 345 karakter. Giriş testi, zaten bildiğiniz karakterleri günlük derslerden çıkarır.',
   day:'Gün', entry:'Giriş testi', families:'Aileler', review:'Hızlı tekrar', sentences:'Cümleler', writing:'Zor karakterleri yazma',

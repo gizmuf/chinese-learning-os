@@ -16,7 +16,14 @@
 .hsprint-error {border:1px solid #b55b42;padding:12px;border-radius:12px;margin:12px 0;}
 .hsprint-error button {margin-inline-start:10px;}
 .hsprint-card {display:grid;justify-items:center;align-content:center;gap:6px;width:min(100%,420px);padding:18px;min-height:270px;border:1px solid #d4e1cf;color:#263f35;background:#f5f8f1;border-radius:18px;text-align:center;}
-.hsprint-card:disabled {opacity:1;}
+.hsprint-card {cursor:pointer;}
+.hsprint-card[aria-disabled=true] {cursor:default;}
+.hsprint-card-action {display:flex;align-items:center;gap:7px;}
+.hsprint-card-modes button {min-height:44px;}
+@media(prefers-reduced-motion:no-preference){
+ .hsprint-card>strong {animation:hsprint-glyph-in 140ms ease-out both;}
+ @keyframes hsprint-glyph-in {from {opacity:.5;transform:translateY(2px);} to {opacity:1;transform:translateY(0);}}
+}
 .hsprint-card>strong {font-size:clamp(48px,12vw,76px);line-height:1.1;}
 .hsprint-card>.hsprint-pinyin {min-height:1.5em;}
 .hsprint-answer {min-height:4.4em;display:grid;align-content:center;gap:4px;}
