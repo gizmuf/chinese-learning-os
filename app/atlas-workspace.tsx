@@ -10,7 +10,7 @@ import type {CloudRoute} from './atlas-cloud-route';
 import {atlasCloudReturn, atlasWorkspaceHref, atlasWorkspaceScroll, isAtlasWorkspaceEntry, readAtlasWorkspaceRoute, type WorkspaceKind, type WorkspaceRoute} from './atlas-workspace-route';
 import {resolveWorkspaceContext, workspaceExploration, workspaceFamilySearch, workspaceGroups, workspaceOriginalHref, workspacePanelOutsideScope, workspaceBoardSize, workspaceScopeLabel, workspaceSelection, type WorkspaceFamilyType} from './atlas-workspace-model';
 import {workspaceExploreEvent} from './atlas-workspace-bridge';
-import {WorkspaceBoard, WorkspaceInspector, WorkspaceJourney, WorkspaceMap, WorkspacePractise, useWorkspaceAudio} from './atlas-workspace-content';
+import {WorkspaceBoard, WorkspaceInspector, WorkspaceJourney, WorkspaceMap, WorkspacePractise, WorkspaceReadingProvider, useWorkspaceAudio} from './atlas-workspace-content';
 import AtlasStoryExplorer from './atlas-story-explorer';
 import {WorkspaceStoryPane} from './atlas-workspace-story';
 import {isStoryTarget, type StoryTarget} from './atlas-story-explorer-model';
@@ -303,7 +303,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
   const inspector = <WorkspaceInspector context={context} route={route} audio={audio} explore={explore} showFamily={anchor => selectFamily(anchor, true)}
     onStory={story} onWriting={() => setExercise('writing')} onBuild={embedded ? undefined : openBuilder} chunksHref={embedded ? '' : chunksHref()}/>;
 
-  return <section ref={root} className={'atlas-workspace' + (route.wide ? ' aw-wide' : '') + (showStoryPanel ? ' aw-story-open' : '') + (building ? ' aw-build' : '') + (swiping ? ' aw-swipe' : '')} data-atlas-workspace aria-label="Atlas workspace"
+  return <WorkspaceReadingProvider active={route.mode === 'read' && !route.story} owner={owner} root={root} embedded={!!embedded}><section ref={root} className={'atlas-workspace' + (route.wide ? ' aw-wide' : '') + (showStoryPanel ? ' aw-story-open' : '') + (building ? ' aw-build' : '') + (swiping ? ' aw-swipe' : '')} data-atlas-workspace aria-label="Atlas workspace"
     onClickCapture={event => {
       const link = (event.target as Element).closest<HTMLAnchorElement>('.aw-inspector a[href*="returnAtlas"]');
       if (link) follow(link, chunksHref);
@@ -407,5 +407,5 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
           onBack={() => toggleStoryPanel(false, true)} onFullStory={story} inspector={inspector}/>
         : !inlineContext && !hideInspector && inspector}
     </div>}
-  </section>;
+  </section></WorkspaceReadingProvider>;
 }
