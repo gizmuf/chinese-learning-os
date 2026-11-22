@@ -7,13 +7,13 @@
 .cloud-context-layout .cloud-path{display:grid;grid-template-columns:1fr 14px 1fr 14px 1fr 14px 1fr;gap:5px;margin:12px 0 22px;padding-bottom:16px;border-bottom:1px solid var(--context-line)}
 .cloud-context-layout .cloud-path button{display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-width:0;min-height:67px;padding:9px 12px;text-align:left;overflow-wrap:anywhere}
 .cloud-context-layout .cloud-path button small{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--cl-muted)}
-.cloud-context-layout .cloud-path button b{font-size:27px;font-weight:400;font-family:ChineseOSNamedShapes,ChineseOSStructureShapes,'Noto Serif SC','Songti SC',serif}
+.cloud-context-layout .cloud-path button b{font-size:27px;font-weight:400;font-family:var(--font-hanzi), serif}
 .cloud-context-layout .cloud-path button>span{font-size:14px;line-height:30px}
 .cloud-family-context{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,1fr);align-items:start;gap:24px}
 .cloud-family-panel{min-width:0;padding:2px 0 8px}
 .cloud-family-panel-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:7px}
 .cloud-family-panel-heading h2{font-size:19px;font-weight:500;line-height:1.4;margin:4px 0;color:var(--cl-ink)}
-.cloud-component-label{font:27px/1 ChineseOSNamedShapes,ChineseOSStructureShapes,'Noto Serif SC','Songti SC',serif;margin-right:5px}
+.cloud-component-label{font:27px/1 var(--font-hanzi), serif;margin-right:5px}
 .cloud-family-total{font-size:11px;color:var(--cl-muted);white-space:nowrap}
 .cloud-family-description{font-size:12px;line-height:1.55;color:var(--cl-muted);margin:6px 0 16px}
 .cloud-relation-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:15px}
@@ -25,7 +25,7 @@
 .cloud-family-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(94px,1fr));gap:12px;align-content:start}
 .cloud-relative{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-width:0;min-height:146px;border:1px solid var(--context-line);border-radius:13px;padding:13px 8px 9px;background:var(--context-surface);color:var(--cl-ink);text-align:center}
 .cloud-relative:hover{background:#f0f4e9}.cloud-relative.is-selected{background:var(--context-selected);border:1.5px solid #64836a;box-shadow:none}
-.cloud-relative strong{display:flex;align-items:center;justify-content:center;font:42px/1 'Noto Serif SC','Songti SC',serif;width:1em;height:1em;flex:none;margin-bottom:8px}
+.cloud-relative strong{display:flex;align-items:center;justify-content:center;font:42px/1 var(--font-hanzi), serif;width:1em;height:1em;flex:none;margin-bottom:8px}
 .cloud-relative strong>span,.cloud-relative strong svg{width:1em;height:1em;display:block}
 .cloud-relative>span{font-size:12px;line-height:1.3;color:#7a6b45;overflow-wrap:anywhere}
 .cloud-relative p{font-size:11px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:5px 0;overflow-wrap:anywhere}
@@ -39,7 +39,7 @@
 .cloud-family-caption-new>span{display:block;flex:none;height:3px;width:16px;background:var(--cloud-shared)}
 .cloud-context-surface{position:sticky;top:18px;min-width:0;border:1px solid var(--context-line);border-radius:17px;background:var(--context-surface);padding:25px 22px;text-align:center}
 .cloud-context-step{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--cl-muted);margin-bottom:16px}
-.cloud-context-glyph{display:flex;justify-content:center;align-items:center;font:88px/1.2 'Noto Serif SC','Songti SC',serif;margin:8px 0 14px;font-weight:400}
+.cloud-context-glyph{display:flex;justify-content:center;align-items:center;font:88px/1.2 var(--font-hanzi), serif;margin:8px 0 14px;font-weight:400}
 .cloud-context-glyph>span{display:flex!important;justify-content:center;flex-wrap:wrap;max-width:100%}
 .cloud-context-glyph svg{display:block}.cloud-context-word{font-size:64px}
 .cloud-context-reading{font-size:14px;line-height:1.6;overflow-wrap:anywhere;color:#8b744b;display:block;margin:5px 0}
@@ -53,7 +53,7 @@
 .cloud-word-picker>span{display:block;margin-bottom:6px}.cloud-word-picker select{border:1px solid var(--context-line);background:#f8faf4;width:100%;max-width:100%;padding:9px 8px;border-radius:9px;min-height:42px;color:var(--cl-ink);font-size:12px}
 .cloud-context-layout .cloud-word-parts{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:14px}
 .cloud-context-layout .cloud-word-parts button{border:1px solid var(--context-line);border-radius:8px;background:#f7f9f1;min-width:44px;min-height:44px;font:25px serif;color:var(--cl-ink);padding:6px 10px}
-.cloud-component-glyph{display:block;font:76px/1.3 ChineseOSNamedShapes,ChineseOSStructureShapes,'Noto Serif SC','Songti SC',serif;color:var(--cloud-shared);font-weight:400;overflow-wrap:anywhere}
+.cloud-component-glyph{display:block;font:76px/1.3 var(--font-hanzi), serif;color:var(--cloud-shared);font-weight:400;overflow-wrap:anywhere}
 .cloud-component-context>p{font-size:15px;line-height:1.5}.cloud-component-context>.cloud-context-note{font-size:12px}
 .cloud-character-parts{margin-top:20px;border-top:1px solid var(--context-line);padding-top:13px;text-align:left;font-size:12px}
 .cloud-character-parts>summary,.cloud-family-tools>summary{cursor:pointer;min-height:34px;line-height:1.5;padding:7px 0;color:var(--cl-ink)}
@@ -61,7 +61,7 @@
 .cloud-context-layout .cloud-parts .cloud-zone-title{padding:0}.cloud-context-layout .cloud-parts .cloud-zone-title h2{font-size:13px}
 .cloud-context-layout .cloud-part{min-height:52px;font-size:12px}.cloud-context-layout .cloud-legend{position:static;font-size:10px;margin-top:12px;flex-wrap:wrap}
 .cloud-context-layout .cloud-source-note{font-size:11px}.cloud-context-layout .cloud-source-detail{font-size:12px}
-.cloud-sentence-context{min-width:0}.cloud-context-sentence{font:29px/1.8 'Noto Serif SC','Songti SC',serif;margin:12px 0;overflow-wrap:anywhere}
+.cloud-sentence-context{min-width:0}.cloud-context-sentence{font:29px/1.8 var(--font-hanzi), serif;margin:12px 0;overflow-wrap:anywhere}
 .cloud-context-sentence button{border:0;border-bottom:2px solid #bac8ab;background:#f0f3e7;padding:1px 3px;color:var(--cl-ink);font:inherit;border-radius:3px}
 .cloud-sentence-context>p:not(.cloud-context-sentence):not(.cloud-context-reading){font-size:14px;line-height:1.6}
 .cloud-context-layout .cloud-sentence-links{flex-wrap:wrap;justify-content:center}.cloud-context-layout .cloud-sentence-links button{min-height:40px}

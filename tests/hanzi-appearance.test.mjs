@@ -16,7 +16,6 @@ const fontReleases=Array.from(fontCss.matchAll(/\/fonts\/(ChineseOSStroke(-HSK)?
 });
 assert.equal(fontReleases.length,2);
 const [{strokeFont,strokeManifest}]=fontReleases;
-const text=node=>typeof node==='string'?node:Array.isArray(node)?node.map(text).join(''):node?text(node.children):'';
 test('All 17 walking-family characters keep stroke geometry regardless of mapping or semantic-role coverage',async()=>{
  globalThis.fetch=async url=>({ok:true,json:async()=>JSON.parse(fs.readFileSync('public'+decodeURIComponent(url),'utf8'))});
  let root;await m.act(async()=>{root=m.renderer.create(m.createElement(m.HanziStyleProvider,null,m.createElement(m.HanziDisplayControls),m.createElement(m.CloudHighlight,{hanzi:'进过近远腿边迎运还这迟送适选遇遍道',component:'walk'})));});
@@ -25,9 +24,12 @@ test('All 17 walking-family characters keep stroke geometry regardless of mappin
  await m.act(async()=>root.root.findByType('input').props.onChange({target:{checked:false}}));
  assert.equal(root.root.findAllByProps({'data-hanzi-render':'stroke-svg'}).length,17);
  assert.ok(root.root.findAllByType('path').every(p=>p.props.style.fill==='currentColor'));
- await m.act(async()=>root.root.findAllByType('button').find(b=>text(b.props.children)==='Print').props.onClick());
+ await m.act(async()=>root.root.findAllByType('button').find(b=>b.props['aria-label']==='Screen').props.onClick());
  assert.equal(root.root.findAllByType('svg').length,0);assert.equal(root.root.findAllByProps({'data-hanzi-render':'print'}).length,17);assert.equal(document.documentElement.dataset.hanziStyle,'print');
- await m.act(async()=>root.root.findAllByType('button').find(b=>text(b.props.children)==='Stroke shapes').props.onClick());assert.equal(root.root.findAllByProps({'data-hanzi-render':'stroke-svg'}).length,17);assert.equal(root.root.findByType('input').props.checked,false);await m.act(async()=>root.unmount());
+ await m.act(async()=>root.root.findAllByType('button').find(b=>b.props['aria-label']==='Book').props.onClick());
+ assert.equal(root.root.findAllByProps({'data-hanzi-render':'book'}).length,17);
+ assert.equal(document.documentElement.dataset.hanziStyle,'book');
+ await m.act(async()=>root.root.findAllByType('button').find(b=>b.props['aria-label']==='Brush').props.onClick());assert.equal(root.root.findAllByProps({'data-hanzi-render':'stroke-svg'}).length,17);assert.equal(root.root.findByType('input').props.checked,false);await m.act(async()=>root.unmount());
 });
 test('Supplemental maps preserve curated maps, add 16 direct walking highlights and do not invent nested leg mapping',()=>{
  for(const ch of '进过近远边迎运还这迟送适选遇遍道')assert.equal(m.cloudHighlightAvailability(ch,'walk'),'mapped',ch);
@@ -97,10 +99,32 @@ test('Practical dictionary targets respect the selected style and use the pinned
  let root;
  await m.act(async()=>{root=m.renderer.create(m.createElement(m.HanziStyleProvider,null,m.createElement(m.HanziDisplayControls),m.createElement(m.CloudHighlight,{hanzi:sample,component:'冉'})));});
  assert.equal(root.root.findAllByProps({'data-hanzi-render':'stroke-svg'}).length,sample.length);
- await m.act(async()=>root.root.findAllByType('button').find(button=>text(button.props.children)==='Print').props.onClick());
+ await m.act(async()=>root.root.findAllByType('button').find(button=>button.props['aria-label']==='Screen').props.onClick());
  assert.equal(root.root.findAllByProps({'data-hanzi-render':'print'}).length,sample.length);
- await m.act(async()=>root.root.findAllByType('button').find(button=>text(button.props.children)==='Stroke shapes').props.onClick());
+ await m.act(async()=>root.root.findAllByType('button').find(button=>button.props['aria-label']==='Brush').props.onClick());
  assert.equal(root.root.findAllByProps({'data-hanzi-render':'stroke-svg'}).length,sample.length);
  await m.act(async()=>root.unmount());
 });
 test.after(()=>{for(const handle of process._getActiveHandles())if(handle.constructor.name==='MessagePort')handle.unref();});
+
+
+test('Screen and Book have identical, shipped glyph coverage for the syllabus and Brush inventory',()=>{
+ const manifest=JSON.parse(fs.readFileSync('public/fonts/hanzi-reading-fonts.json'));
+ const syllabus=JSON.parse(gunzipSync(fs.readFileSync('public/dictionary/hsk-levels-2025.json.gz')));
+ const required=new Set([...Object.values(syllabus.characters).join(''),
+  ...Object.values(syllabus.words).join('').replaceAll('|',''),
+  ...fontReleases.flatMap(({strokeManifest})=>[...strokeManifest.characters])]);
+ const planned=new Set([...manifest.glyphs].map(ch=>ch.codePointAt(0)));
+ assert.ok(planned.size>=3088);
+ for(const ch of required)assert.ok(planned.has(ch.codePointAt(0)),ch);
+ const css=fs.readFileSync('app/hanzi-reading-fonts.css','utf8');
+ for(const face of Object.values(manifest.faces)){
+  assert.ok(fs.existsSync('public'+face.license));
+  for(const [asset,expected] of [[face,planned],[face.preview,new Set([...'好玩儿'].map(ch=>ch.codePointAt(0)))]]) {
+   const bytes=fs.readFileSync('public/fonts/'+asset.file);
+   assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),asset.sha256);
+   assert.ok(css.includes('/fonts/'+asset.file));
+   assert.deepEqual(new Set(fontkit.create(bytes).characterSet.filter(point=>point!==0xffff)),expected);
+  }
+ }
+});

@@ -61,14 +61,15 @@ async function seedPrivate(db,lesson){
 }
 
 test('guest round-trip includes allowlisted stores, lesson content and Reader drafts; account and credential stores stay out',async()=>{
- const guest=device({'chinese-os-language':'fr','chinese-os:reading-lab:v1:owner:abc':'signed state','firebase:user':'secret credentials',
+ const appearance={style:'book',highlight:false},appearanceKey='chinese-os:hanzi-appearance:v1';
+ const guest=device({'chinese-os-language':'fr',[appearanceKey]:JSON.stringify(appearance),'chinese-os:reading-lab:v1:owner:abc':'signed state','firebase:user':'secret credentials',
   'scene-lab-discovery-v1':JSON.stringify({objects:['table'],actions:['read']}),
   [m.readingLabGuestKey]:JSON.stringify({version:1,drafts:{'hsk2-library-meeting':'我的写作草稿'}})});
  const db=await notebook(guest.factory);
  const progress=event(), source=m.shuoshuoMorning;
  const privateRow=await seedPrivate(db,source);
  await put(db,'events',progress);
- await put(db,'drafts',settings,'settings');
+ await put(db,'drafts',{...settings,hanziStyle:'book',highlightComponents:false},'settings');
  await put(db,'drafts',{cells:{'0:0':[coords]},hidden:false,attemptId:id()},'notebook:'+m.items[0].id);
  await put(db,'drafts',{书:[, [coords]]},'practice-book-ink:书');
  await put(db,'drafts','SECRET','unknown-private-token');
@@ -89,14 +90,16 @@ test('guest round-trip includes allowlisted stores, lesson content and Reader dr
  assert.equal(omittedDrafts,1);
  const raw=await file.text();
  assert.doesNotMatch(raw,/SECRET|signed state|firebase:user|secret credentials/);
- assert.deepEqual(counts,{progress:1,atlas:1,course:1,recognition:1,connectionLab:1,drafts:5,privateLessons:1,preferences:3});
+ assert.deepEqual(counts,{progress:1,atlas:1,course:1,recognition:1,connectionLab:1,drafts:5,privateLessons:1,preferences:4});
  const target=device({'chinese-os-language':'en',[m.readingLabGuestKey]:JSON.stringify({version:1,drafts:{'hsk2-library-meeting':'现有文字','hsk2-cooking-together':'备用草稿'}})});
  const preview=await m.parseGuestBackup(raw);
  assert.equal(target.storage.getItem('chinese-os-language'),'en');
  const first=await m.restoreGuestBackup(target,preview);
  assert.deepEqual(first.failed,[]);
  assert.deepEqual(first.groups.notebook,{added:6,skipped:0});
- assert.deepEqual(first.groups.preferences,{added:1,skipped:2});
+ assert.deepEqual(first.groups.preferences,{added:2,skipped:2});
+ assert.deepEqual(JSON.parse(target.storage.getItem(appearanceKey)),appearance);
+ assert.equal((await get(target.factory,'chinese-os-v1-guest','drafts','settings')).hanziStyle,'book');
  assert.deepEqual(JSON.parse(target.storage.getItem('scene-lab-discovery-v1')),{objects:['table'],actions:['read']});
  assert.equal((await get(target.factory,'chinese-os-v1-guest','events',progress.id)).id,progress.id);
  assert.deepEqual(await get(target.factory,'chinese-os-v1-guest','drafts',m.privateLessonKey(source.contentHash)),privateRow);

@@ -85,6 +85,7 @@ import RecognitionReview, {recognitionDraftKey, validRecognitionDraft} from "./r
 import Notebook from "./notebook";
 import IntensiveCourse from "./intensive-course";
 import {useHanziStyle,HanziDisplayControls,type HanziStyle} from './hanzi-style';
+import {isHanziStyle} from './hanzi-style-preference';
 import {allReviewRun, buildReviewQueue, isAllReviewEntry, queueForScopedAllReview, scopedAllReviewHref} from './review-queue';
 import {GlobalHskProvider, GlobalHskSelect} from './global-hsk';
 import {defaultHskScope, globalHskLabel, hskScopeForOwner, initialGlobalHsk, knownHskInScope} from './global-hsk-model';
@@ -282,7 +283,7 @@ export default function StudyApp({
         }>(store, "settings");
         if (!alive) return;
         savedSettingsStore.current = prefs ? store : null;
-        if (prefs?.hanziStyle !== undefined || user) hanziAppearance.setStyle(prefs?.hanziStyle==='print'?'print':'strokes');
+        if (prefs?.hanziStyle !== undefined || user) hanziAppearance.setStyle(isHanziStyle(prefs?.hanziStyle)?prefs.hanziStyle:'strokes');
         if (prefs?.highlightComponents !== undefined || user) hanziAppearance.setHighlight(prefs?.highlightComponents??true);
         if (prefs) {
           setPenOnly(prefs.penOnly);

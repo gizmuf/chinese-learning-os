@@ -37,6 +37,7 @@ export default function AtlasGlyph({
   const [error, setError] = useState(false);
   const [retry, setRetry] = useState(0);
   useEffect(() => {
+    if (appearance.style!=='strokes') return;
     let active = true;
     const controller = new AbortController();
     setState(null);
@@ -60,8 +61,8 @@ export default function AtlasGlyph({
       active = false;
       controller.abort();
     };
-  }, [character.id, character.hanzi, retry]);
-  if (appearance.style==='print') return <div className="atlas-glyph-fallback"><span lang="zh-Hans">{character.hanzi}</span></div>;
+  }, [character.id, character.hanzi, retry, appearance.style]);
+  if (appearance.style!=='strokes') return <div className="atlas-glyph-fallback"><span lang="zh-Hans">{character.hanzi}</span></div>;
   if (!state)
     return (
       <div className="atlas-glyph-fallback">

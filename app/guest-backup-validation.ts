@@ -1,3 +1,4 @@
+import {hanziStyles} from './hanzi-style-preference';
 import {z} from 'zod';
 import {atlasEventSchema} from './atlas-learning';
 import {courseEventSchema} from './course-learning';
@@ -54,7 +55,7 @@ const privateLibrary = z.object({
  && (value.selected===null || value.entries.some(entry=>entry.contentHash===value.selected)));
 
 const exactDrafts = new Map<string,z.ZodType>([
- ['settings',z.object({penOnly:z.boolean(),hanziStyle:z.enum(['print','strokes']).optional(),highlightComponents:z.boolean().optional(),
+ ['settings',z.object({penOnly:z.boolean(),hanziStyle:z.enum(hanziStyles).optional(),highlightComponents:z.boolean().optional(),
   slowAudio:z.boolean().optional(),level:z.enum(levels).optional(),hskScope:z.union([z.literal(1),z.literal(2),z.literal(3),z.literal(4),z.literal(5),z.literal(6),z.literal('7-9'),z.literal('all')]).optional(),left:z.boolean(),minutes:int}).strict()],
  [studioDraftKey,z.custom(validStudio)],
  [companionDraftKey,z.custom(validCompanion)],
@@ -137,7 +138,7 @@ export async function validateDraft(key: string, value: unknown) {
 export const isKnownDraft = (key: string) => exactDrafts.has(key) || /^private-lessons:content:v1:[a-f0-9]{64}$/.test(key)
  || draftRules.some(([rule])=>rule.test(key));
 
-const appearance=z.object({style:z.enum(['print','strokes']),highlight:z.boolean()}).strict();
+const appearance=z.object({style:z.enum(hanziStyles),highlight:z.boolean()}).strict();
 const position=z.object({x:z.number().min(0).max(1),y:z.number().min(0).max(1)}).strict();
 const windowState=z.object({version:z.literal(2),position,size:z.object({width:z.number().positive(),height:z.number().positive()}).strict()}).strict();
 const lesson12Review=/^chineseos:lesson12-practice:v1:guest:review:[\da-f-]{36}$/i;

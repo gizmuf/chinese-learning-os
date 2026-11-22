@@ -32,7 +32,7 @@ html[data-theme=dark] .reading-lab{
 .rl-topline span,.rl-topic{font-size:.83rem;font-weight:650}
 .rl-library-heading,.rl-article-heading{padding:24px clamp(18px,4vw,44px);border:1px solid var(--rl-line);border-radius:20px;background:var(--rl-paper)}
 .rl-library-heading>svg{color:var(--rl-accent)}
-.rl-library-heading h1,.rl-article-heading h1{margin:8px 0;font-family:Georgia,'Songti SC','Noto Serif CJK SC','Noto Serif SC',serif;font-weight:600;font-size:clamp(2.15rem,5.6vw,4rem);line-height:1.12;letter-spacing:0}
+.rl-library-heading h1,.rl-article-heading h1{margin:8px 0;font-family:Georgia,var(--font-hanzi),serif;font-weight:600;font-size:clamp(2.15rem,5.6vw,4rem);line-height:1.12;letter-spacing:0}
 .rl-library-heading p,.rl-article-heading p{margin:6px 0;font-size:.95rem;line-height:1.55}
 .rl-library-heading p,.rl-level-intent{max-width:42rem}
 .rl-article-heading p.rl-topic{font-size:.82rem;margin-bottom:11px}
@@ -67,7 +67,7 @@ html[data-theme=dark] .reading-lab{
 .rl-paragraph+.rl-paragraph{margin-top:1.05rem;padding-top:.8rem;border-top:1px solid var(--rl-line)}
 .rl-paragraph,.rl-chunk{scroll-margin-block-start:20px}
 .rl-paragraph-text{
-  font-family:'Songti SC','Noto Serif CJK SC','Noto Serif SC',serif;
+  font-family:var(--font-hanzi),serif;
   color:var(--rl-ink);font-size:clamp(1.3rem,3.15vw,2.1rem);font-weight:500;line-height:1.72;overflow-wrap:anywhere
 }
 .rl-text:is([data-aid=pinyin],[data-aid=tones]) .rl-paragraph-text{line-height:2.05;padding-block-start:.125em}
