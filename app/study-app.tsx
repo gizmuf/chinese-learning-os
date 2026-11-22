@@ -1016,14 +1016,6 @@ export default function StudyApp({
               <div id="library-start" className="page-heading" tabIndex={-1}>
                 <div>
                   <p className="eyebrow">{t("WORDS FOR YOUR REAL LIFE")}</p>
-                  <button className="grammar-back" onClick={() => changeView("hsk3-prep")}>HSK 3 Exam Prep →</button>
-                  <button className="grammar-back" onClick={() => changeView("grammar")}>HSK 1–3 grammar →</button>
-                  <button type="button" className="grammar-back" onClick={() => {
-                    const layout = groupedLibrary ? 'cards' : 'groups';
-                    setPracticeSelection(false);
-                    setLibraryLayout(layout);
-                    libraryRoute(layout, false);
-                  }}>{groupedLibrary ? 'Back to cards' : 'Word groups →'}</button>
                   <h1>
                     {t("Your learning library")}<span className="orange">.</span>
                   </h1>
@@ -1034,6 +1026,16 @@ export default function StudyApp({
                     {!practiceSelection && [4, 5, 6, '7-9'].includes(level) && 'Authored study cards currently cover HSK 1–3. Higher HSK levels are available to browse in Atlas.'}
                     </>}
                   </p>
+                  <nav className="library-heading-actions" aria-label="Library sections">
+                    <button type="button" className="secondary" onClick={() => {
+                      const layout = groupedLibrary ? 'cards' : 'groups';
+                      setPracticeSelection(false);
+                      setLibraryLayout(layout);
+                      libraryRoute(layout, false);
+                    }}>{groupedLibrary ? 'Back to cards' : 'Word groups →'}</button>
+                    <button type="button" className="grammar-back" onClick={() => changeView("hsk3-prep")}>HSK 3 Exam Prep →</button>
+                    <button type="button" className="grammar-back" onClick={() => changeView("grammar")}>HSK 1–3 grammar →</button>
+                  </nav>
                 </div>
               </div>
               {groupedLibrary ? <Suspense fallback={<p role="status">Opening word groups…</p>}>

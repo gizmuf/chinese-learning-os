@@ -313,6 +313,17 @@ select {
   color: #919686;
   font-size: 12px;
 }
+.library-heading-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 16px;
+  margin-top: 12px;
+}
+.library-heading-actions button {
+  min-height: 44px;
+  font-size: .88rem;
+}
 .date-chip {
   font-size: 14px;
   border: 1px solid var(--border);
