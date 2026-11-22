@@ -1,15 +1,12 @@
 'use client';
 
 import {useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent, type ReactNode} from 'react';
-import source from '../data/atlas-assembly-strokes.json';
+import {mappedAssemblyGroups} from './atlas-assembly-outlines';
 import {loadGlyph} from './atlas-cloud-highlight';
-import {assemblyStrokeGroups, isAssemblyGlyph, type AssemblyCharacter, type AssemblyPart} from './atlas-assembly-model';
+import {isAssemblyGlyph, type AssemblyCharacter, type AssemblyPart} from './atlas-assembly-model';
 
-const mappings: Record<string, {ids: string; paths: string[]}> = source.mappings;
-
-function useOutline(character: AssemblyCharacter) {
-  const {data, parts} = character;
-  const hanzi = data.hanzi;
+export function useAssemblyOutline(character: AssemblyCharacter) {
+  const hanzi = character.data.hanzi;
   const [loaded, setLoaded] = useState<{hanzi: string; strokes: string[]}>();
   useEffect(() => {
     let active = true;
@@ -20,8 +17,7 @@ function useOutline(character: AssemblyCharacter) {
   }, [hanzi]);
 
   const strokes = loaded?.hanzi === hanzi ? loaded.strokes : undefined;
-  const groups = useMemo(() => strokes && assemblyStrokeGroups(parts, data.decomposition, mappings[hanzi], strokes.length),
-    [data.decomposition, parts, hanzi, strokes]);
+  const groups = useMemo(() => strokes && mappedAssemblyGroups(character, strokes.length), [character, strokes]);
   return {strokes, groups};
 }
 
@@ -58,7 +54,7 @@ function Ink({character, strokes, groups, active, split = false, onPart}: {
 export function AssemblyThumbnail({character, active}: {
   character: AssemblyCharacter; active: (part: AssemblyPart) => boolean;
 }) {
-  const {strokes, groups} = useOutline(character);
+  const {strokes, groups} = useAssemblyOutline(character);
   return <span className="ab-thumbnail ab-hanzi" lang="zh-Hans">
     <span className={strokes ? 'ab-visually-hidden' : undefined}>{character.data.hanzi}</span>
     {strokes && <Ink character={character} strokes={strokes} groups={groups} active={active}/>}
@@ -125,7 +121,7 @@ export function AssemblyDrawing({character, selected, split, onSplit, onPart}: {
   character: AssemblyCharacter; selected: string; split: boolean;
   onSplit: (split: boolean) => void; onPart: (glyph: string) => void;
 }) {
-  const {strokes, groups} = useOutline(character);
+  const {strokes, groups} = useAssemblyOutline(character);
   const diagram = split && character.parts.length > 0 && !groups;
   const hanzi = character.data.hanzi;
   return <div className="ab-drawing" data-split={split} data-art={diagram ? 'diagram' : groups ? 'mapped' : 'whole'}>
