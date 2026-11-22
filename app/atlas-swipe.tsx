@@ -13,6 +13,7 @@ import {
 } from './atlas-swipe-model';
 import {childSwipeRegions, rootSwipeRegions, type SwipeLens} from './atlas-swipe-regions';
 import {SwipeFamilyMap, SwipeFamilyPeek} from './atlas-swipe-family-map';
+import {contextualWordParts, SwipeLabel} from './atlas-swipe-label';
 import {movingInk, SwipeArtwork, type SwipeMotion} from './atlas-swipe-art';
 import AtlasSwipeStoryPanel from './atlas-swipe-story-panel';
 import {findSwipeStory} from './atlas-swipe-story-data';
@@ -112,7 +113,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
   const broadFamily = !all && !frames.length && mode === 'characters' && !!current.anchor
     && partFamily(index, current.anchor, 'all').length > 0;
   const revealKey = mode + ':' + current.id;
-  const step = reveal?.key === revealKey ? reveal.step : 0;
+  const step = !playing ? 2 : reveal?.key === revealKey ? reveal.step : 0;
   const animationActive = motion !== undefined;
   const story = !inside && !familyOrbit && (mode === 'characters' || word) ? findSwipeStory({...current, mode}) : undefined;
   const storyKey = [scope, all, mode, current.id, current.anchor, current.character?.part?.id].join(':');
@@ -148,10 +149,11 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
   }, [componentDepth, mapOpen]);
 
   useEffect(() => {
+    if (!playing) return;
     const pinyin = window.setTimeout(() => setReveal({key: revealKey, step: 1}), pace * 250);
     const english = window.setTimeout(() => setReveal({key: revealKey, step: 2}), pace * 520);
     return () => { window.clearTimeout(pinyin); window.clearTimeout(english); };
-  }, [pace, revealKey]);
+  }, [pace, playing, revealKey]);
 
   useEffect(() => {
     const onVisibility = () => { if (document.hidden) setPlaying(false); };
@@ -231,6 +233,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
     setFamilyOrbit(undefined);
     setLens(undefined);
     if (!next) applyFrame(frames[0]);
+    setReveal(undefined);
     setPlaying(true);
   }
 
@@ -480,10 +483,13 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
     requestAnimationFrame(() => viewport.current?.focus());
   }
 
-  const glyphMeaning = (glyph: string) => {
-    const entry = index.characters.get(glyph);
-    return entry ? assemblyMeaning(entry, true) : '';
-  };
+  const revealPinyin = showPinyin && step >= 1;
+  const revealMeaning = showMeaning && step >= 2;
+  const contextualParts = word && contextualWordParts[word.id];
+  const wordParts = contextualParts ?? (word && [...word.text].length > 1 ? [...word.text].flatMap(text => {
+    const entry = index.characters.get(text);
+    return entry ? [{text, pinyin: entry.data.readings.join(' / '), meaning: assemblyMeaning(entry)}] : [];
+  }) : []);
 
   const badgeButtons = orderedBadges.map(({piece, count}) =>
     <button type="button" key={piece.id} className="as-count" data-swipe-slot={piece.id}
@@ -524,11 +530,14 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
       </button>}
     </div>
     {error && <p className="as-error" role="alert">{error}</p>}
-    <div className="as-stage" data-story-open={storyActive || undefined}>
+    <div className="as-stage" data-story-open={storyActive || undefined} data-playing={playing || undefined}>
       <div className="as-viewport" ref={viewport} role="group" tabIndex={storyActive ? -1 : 0}
         aria-label={mode === 'characters' ? 'Swipe characters' : 'Swipe words'}
         aria-describedby="as-gesture-help" data-study-lookup="off" data-axis={map.vertical ? 'vertical' : 'horizontal'}
         data-depth={componentDepth} data-family-map={!!familyOrbit} data-small-family={!!familyOrbit && orbitFrames.length <= 8}
+        data-large-family={!!familyOrbit && orbitFrames.length > 32 || undefined}
+        data-family-peek={!storyActive && peek.length > 0 || undefined}
+        data-vertical-neighbour={!inside && !familyOrbit && !!(map.neighbours.up || map.neighbours.down) || undefined}
         data-motion={motion ? motion.settling ? 'settling' : 'dragging' : 'rest'}
         onPointerDown={pointerDown} onPointerMove={pointerMove} onPointerUp={pointerUp}
         onLostPointerCapture={cancelPointer} onPointerCancel={cancelPointer} onKeyDown={keyDown}>
@@ -554,9 +563,10 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
         {familyOrbit ? <SwipeFamilyMap key={familyOrbit.part.glyph + ':' + scope}
           anchor={familyOrbit.part.glyph} frames={orbitFrames} current={current.id}
           origin={familyOrbit.origin.character.data.hanzi !== current.text ? familyOrbit.origin.character.data.hanzi : undefined}
+          inside={!!inside}
           pinyin={showPinyin} english={showMeaning} choose={chooseOrbitMember} close={() => setFamilyOrbit(undefined)}
           restore={returnToOrbitOrigin} widen={scope !== 'all' ? widen : undefined}/>
-          : !storyActive && peek.length > 0 && <SwipeFamilyPeek frames={peek} pinyin={showPinyin} choose={chooseOrbitMember}/>}
+          : !storyActive && peek.length > 0 && <SwipeFamilyPeek frames={peek} pinyin={showPinyin} english={showMeaning} choose={chooseOrbitMember}/>}
         {Object.entries(swipeVectors).map(([key, [x, y]]) => {
           const direction = key as SwipeDirection;
           const target = map.neighbours[direction];
@@ -565,10 +575,12 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
           const orthogonal = direction !== map.next && direction !== map.previous;
           const label = orthogonal ? target.character?.part?.positions[0] : undefined;
           return <button type="button" className="as-neighbour" key={direction} data-swipe-control data-swipe-direction={direction}
-            aria-label={(label ? 'Move to ' + label + ' · ' : direction === map.next ? 'Next · ' : 'Previous · ') + target.text}
             style={{'--as-x': x, '--as-y': y, '--as-enter': motion?.direction === direction ? motion.progress : 0} as CSSProperties}
             onClick={() => go(direction)}>
+            <span className="as-visually-hidden">{label ? 'Move to ' : direction === map.next ? 'Next ' : 'Previous '}
+              <span lang="zh-Hans">{target.text}</span></span>
             <span className="as-peek" aria-hidden="true"><SwipeArtwork frame={target}/></span>
+            <SwipeLabel frame={target} showPinyin={showPinyin} showMeaning={showMeaning}/>
             <span className="as-direction"><Icon size={15} aria-hidden="true"/>{label}</span>
           </button>;
         })}
@@ -592,20 +604,24 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
       <div className="as-caption" aria-live="off">
         {familyOrbit && <div className="as-map-parts" role="group" aria-label="Component family sizes">{badgeButtons}</div>}
         {(mode === 'characters' || word) && <>
-          <p className="as-reading" data-revealed={showPinyin && step >= 1 || undefined}>
-            {showPinyin && step >= 1 && <>
+          <p className="as-reading" hidden={!showPinyin} data-revealed={revealPinyin || undefined}>
+            {revealPinyin && <>
               {inside && <span className="as-reading-glyph" lang="zh-Hans">{current.text}</span>}{current.pinyin}
             </>}
           </p>
-          <p className="as-meaning" data-revealed={showMeaning && step >= 2 || undefined}>
-            {showMeaning && step >= 2 ? current.meaning : ''}
+          <p className="as-meaning" hidden={!showMeaning} data-revealed={revealMeaning || undefined}>
+            {revealMeaning && <>
+              {inside && !showPinyin && <span className="as-reading-glyph" lang="zh-Hans">{current.text}</span>}{current.meaning}
+            </>}
           </p>
-          {word && showMeaning && step >= 2 && [...word.text].length > 1 &&
-            <div className="as-word-parts" aria-label="Individual character meanings">
-              {[...word.text].map((glyph, position) => {
-                const meaning = glyphMeaning(glyph);
-                return meaning && <span key={position}><strong lang="zh-Hans">{glyph}</strong>{meaning}</span>;
-              })}
+          {wordParts.length > 0 && (revealPinyin || revealMeaning) &&
+            <div className="as-word-parts">
+              <span className="as-word-parts-heading">{contextualParts ? 'In this word' : 'Individual characters · dictionary'}</span>
+              {wordParts.map((frame, position) => <span className="as-word-part" key={position}>
+                <strong lang="zh-Hans">{frame.text}</strong>
+                {revealPinyin && frame.pinyin && <span className="as-label-reading">{frame.pinyin}</span>}
+                {revealMeaning && <SwipeLabel frame={frame} showPinyin={false} showMeaning/>}
+              </span>)}
             </div>}
         </>}
       </div>
@@ -615,7 +631,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
             setOpenStory(active => active?.key === storyKey ? {...active, focus} : active)}/>}
       </div>
       {broadFamily && <p className="as-narrow">No matches in this HSK scope. <button type="button" onClick={widen}>Show all HSK levels</button></p>}
-      <footer className="as-controls">
+      <div className="as-controls" role="group" aria-label="Swipe controls">
         <div className="as-playback">
           <button type="button" className="as-play" aria-label={playing ? 'Pause continuous play' : 'Play continuous'}
             disabled={storyActive || frames.length < 2} onClick={play}>
@@ -638,7 +654,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelec
           <label><input type="checkbox" checked={showPinyin} onChange={event => setShowPinyin(event.target.checked)}/> Pinyin</label>
           <label><input type="checkbox" checked={showMeaning} onChange={event => setShowMeaning(event.target.checked)}/> English</label>
         </div>
-      </footer>
+      </div>
     </div>
     <p className="as-help" id="as-gesture-help">
       {familyOrbit ? 'Drag the map to turn it. Tap any character to bring it into the centre.'
