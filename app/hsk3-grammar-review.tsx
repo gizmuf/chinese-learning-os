@@ -1,6 +1,7 @@
 'use client';
 import { useRef, useState } from 'react';
 import { useI18n } from './i18n';
+import {StudyText,StudyLookupButton} from './study-lookup-context';
 import { withTurkish } from './turkish';
 import { useCourseProgress } from './course-store';
 import { grammarReviewEvent, grammarReviewQueue } from './grammar-hsk3-learning';
@@ -22,6 +23,7 @@ export default function GrammarReview({owner,onBack}:{owner:string|null;onBack:(
  const [result,setResult]=useState<CourseEvent|null>(null),[saving,setSaving]=useState(false),[error,setError]=useState(false);
  const submission=useRef<CourseEvent|null>(null),busy=useRef(false),assisted=useRef(false);
  const current=queue?.[index], available=grammarReviewQueue(progress.events);
+ const canExplore=hint||!!result;
  const start=(ids:string[])=>{setQueue(ids.map(id=>questions.find(q=>q.ex.id===id)!));setIndex(0);};
  const check=async()=>{
   if(!current||picked===null||busy.current||result)return;
@@ -38,11 +40,11 @@ export default function GrammarReview({owner,onBack}:{owner:string|null;onBack:(
    <button disabled={!progress.ready||!available.due.length} onClick={()=>start(available.due.map(q=>q.ex.id))}>{t.start}</button>
    <button disabled={!progress.ready||!available.unseen.length} onClick={()=>start(available.unseen.slice(0,10).map(q=>q.ex.id))}>{t.learn}</button>
    {!available.due.length&&<p>{t.empty}</p>}</>:!current?<><p role="status">{t.finish}</p><button onClick={()=>setQueue(null)}>{t.next}</button></>:<article className="grammar-card" data-study-assessment={result?'revealed':hint?'supported':'blocked'}>
-   <p>{index+1} / {queue.length}</p><p>{current.ex.prompt[locale]}</p><h3 className="grammar-question" lang="zh-Hans">{current.ex.sentence}</h3>
-   <div className="grammar-options">{current.ex.options.map((option,i)=><button key={i} lang="zh-Hans" aria-pressed={picked===i} disabled={saving||!!result||error} onClick={()=>setPicked(i)}>{option}</button>)}</div>
+   <p>{index+1} / {queue.length}</p><p>{current.ex.prompt[locale]}</p><h3 className="grammar-question" lang="zh-Hans" data-study-sentence={current.ex.sentence} data-study-source-id={current.ex.id+":question"}>{canExplore?<StudyText text={current.ex.sentence}/>:current.ex.sentence}</h3>
+   <div className="grammar-options" data-study-sentence={current.ex.sentence} data-study-source-id={current.ex.id+":options"}>{current.ex.options.map((option,i)=><span className="grammar-option" key={i}><button type="button" lang="zh-Hans" aria-pressed={picked===i} disabled={saving||!!result||error} onClick={()=>setPicked(i)}>{option}</button>{canExplore&&<StudyLookupButton text={option}/>}</span>)}</div>
    {!result&&!hint&&<button disabled={saving||error} onClick={()=>{assisted.current=true;setHint(true);}}>{t.hint}</button>}
-   {(hint||result)&&<aside><h3>{current.card.pattern}</h3><p>{current.card.explanation[locale]}</p><div className="grammar-example"><strong lang="zh-Hans">{current.card.example.hanzi}</strong><span>{current.card.example.pinyin}</span><p>{current.card.example.meaning[locale]}</p></div></aside>}
-   {!result?<><button className="primary" disabled={!progress.ready||picked===null||saving} onClick={()=>void check()}>{error?t.retry:t.check}</button>{error&&<p role="alert">{t.error}</p>}</>:<div role="status"><strong>{result.correct?t.yes:t.no}</strong><p lang="zh-Hans">{current.ex.sentence.replace('___',current.ex.options[current.ex.answer])}</p><p>{current.ex.explanation[locale]}</p><button onClick={next}>{t.next}</button></div>}
+   {(hint||result)&&<aside><h3><StudyText text={current.card.pattern}/></h3><p><StudyText text={current.card.explanation[locale]}/></p><div className="grammar-example" data-study-sentence={current.card.example.hanzi} data-study-pinyin={current.card.example.pinyin} data-study-meaning={current.card.example.meaning[locale]} data-study-source-id={current.card.id+":example"}><strong lang="zh-Hans"><StudyText text={current.card.example.hanzi} pinyin={current.card.example.pinyin}/></strong><span>{current.card.example.pinyin}</span><p>{current.card.example.meaning[locale]}</p></div></aside>}
+   {!result?<><button className="primary" disabled={!progress.ready||picked===null||saving} onClick={()=>void check()}>{error?t.retry:t.check}</button>{error&&<p role="alert">{t.error}</p>}</>:<div role="status"><strong>{result.correct?t.yes:t.no}</strong><p lang="zh-Hans" data-study-sentence={current.ex.sentence.replace('___',current.ex.options[current.ex.answer])} data-study-source-id={current.ex.id+":answer"}><StudyText text={current.ex.sentence.replace('___',current.ex.options[current.ex.answer])}/></p><p><StudyText text={current.ex.explanation[locale]}/></p><button onClick={next}>{t.next}</button></div>}
   </article>}
  </section>;
 }

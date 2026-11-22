@@ -8,7 +8,7 @@ import {join} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url);
-const b=await build({stdin:{contents:`export {default as Review} from './app/hsk3-grammar-review';export {useCourseProgress} from './app/course-store';export {createElement} from 'react';export {default as renderer,act} from 'react-test-renderer';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent',alias:{react:require.resolve('react').replace(/\/index\.js$/,'')},plugins:[{name:'test-context',setup(build){build.onResolve({filter:/^\.\/i18n$/},()=>({path:'i18n',namespace:'test'}));build.onResolve({filter:/^\.\/auth-client$/},()=>({path:'auth',namespace:'test'}));build.onLoad({filter:/.*/,namespace:'test'},args=>({contents:args.path==='i18n'?`export const useI18n=()=>({locale:'en'});`:`export const authenticatedFetch=(...args)=>globalThis.grammarFetch(...args);`,loader:'js'}));}}]});
+const b=await build({stdin:{contents:`export {default as Review} from './app/hsk3-grammar-review';export {LookupContext} from './app/study-lookup-context';export {useCourseProgress} from './app/course-store';export {createElement} from 'react';export {default as renderer,act} from 'react-test-renderer';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'esm',write:false,logLevel:'silent',alias:{react:require.resolve('react').replace(/\/index\.js$/,'')},plugins:[{name:'test-context',setup(build){build.onResolve({filter:/^\.\/i18n$/},()=>({path:'i18n',namespace:'test'}));build.onResolve({filter:/^\.\/auth-client$/},()=>({path:'auth',namespace:'test'}));build.onLoad({filter:/.*/,namespace:'test'},args=>({contents:args.path==='i18n'?`export const useI18n=()=>({locale:'en'});`:`export const authenticatedFetch=(...args)=>globalThis.grammarFetch(...args);`,loader:'js'}));}}]});
 // Bundled React and its renderer share one instance; CJS libraries need require.
 globalThis.require=require;
 const file=join(mkdtempSync(join(tmpdir(),'grammar-ui-')),'bundle.mjs');writeFileSync(file,b.outputFiles[0].text);
@@ -19,7 +19,7 @@ const tick=()=>new Promise(r=>setTimeout(r,10));
 const button=(node,label)=>node.root.findAllByType('button').find(b=>b.children.join('')===label);
 async function settle(){await m.act(async()=>{await tick();});}
 async function waitForRender(predicate){for(let i=0;i<100;i++){if(predicate())return;await settle();}assert.fail('Timed out waiting for the persisted answer feedback');}
-async function mount(owner=null){let root;await m.act(async()=>{root=m.renderer.create(m.createElement(m.Review,{owner,onBack(){}}));});await settle();return root;}
+async function mount(owner=null,lookup=null){let root;await m.act(async()=>{const review=m.createElement(m.Review,{owner,onBack(){}});root=m.renderer.create(lookup?m.createElement(m.LookupContext.Provider,{value:lookup},review):review);});await settle();return root;}
 test('actual review component hides hints, persists one answer for double click, without duplicate credit',async()=>{
  globalThis.grammarFetch=async()=>Response.json({events:[]});
  const root=await mount();
@@ -59,9 +59,11 @@ test('failed device save reveals no answer and retry reuses the original submiss
  IDBObjectStore.prototype.put=function(value,...args){ids.push(value.id);if(ids.length===1)throw Error('Disk failure');return original.call(this,value,...args);};
  try{
   await m.act(async()=>{button(root,'Check answer').props.onClick();await tick();});
+  await waitForRender(()=>root.root.findAllByProps({role:'alert'}).length===1);
   assert.equal(root.root.findAllByType('aside').length,0);
   assert.equal(root.root.findAllByProps({role:'alert'}).length,1);
   await m.act(async()=>{button(root,'Retry save').props.onClick();await tick();});
+  await waitForRender(()=>root.root.findAllByType('aside').length===1);
   assert.equal(root.root.findAllByType('aside').length,1);
   assert.ok(ids.length>=2);assert.equal(new Set(ids).size,1);
  }finally{IDBObjectStore.prototype.put=original;await m.act(async()=>root.unmount());}
@@ -80,3 +82,30 @@ test('hook immediately hides previous-owner history and readiness while the new 
  await m.act(async()=>root.unmount());
 });
 test.after(()=>{for(const handle of process._getActiveHandles())if(handle.constructor.name==='MessagePort')handle.unref();});
+
+
+test('dictionary exploration is available after a hint and the review stays assisted',async()=>{
+ let uploaded;
+ globalThis.grammarFetch=async(_url,init)=>{if(init?.method==='POST')uploaded=JSON.parse(init.body).events[0];return Response.json({events:uploaded?[uploaded]:[]});};
+ const opened=[];
+ const root=await mount('dictionary-'+crypto.randomUUID(),{dictionary:new Map(),open:(...args)=>opened.push(args)});
+ try {
+  await m.act(()=>button(root,'Start new reviews').props.onClick());
+  assert.equal(root.root.findAllByType('button').filter(node=>node.props.className==='study-word'||node.props.className==='study-lookup-button').length,0);
+  await m.act(()=>button(root,'Show hint (assisted)').props.onClick());
+  const word=root.root.findAllByType('button').find(node=>node.props.className==='study-word');
+  assert.ok(word);
+  await m.act(()=>word.props.onClick({stopPropagation(){},currentTarget:{}}));
+  assert.equal(opened.length,1);
+  assert.equal(button(root,'Check answer').props.disabled,true);
+  const definition=root.root.findAllByType('button').find(node=>node.props.className==='study-lookup-button');
+  assert.ok(definition);
+  await m.act(()=>definition.props.onClick({stopPropagation(){},currentTarget:{}}));
+  assert.equal(opened.length,2);
+  assert.equal(button(root,'Check answer').props.disabled,true);
+  await m.act(()=>root.root.findAllByType('button').find(node=>node.props['aria-pressed']===false).props.onClick());
+  await m.act(async()=>{await button(root,'Check answer').props.onClick();});
+  await waitForRender(()=>!!uploaded);
+  assert.equal(uploaded.assisted,true);
+ }finally{await m.act(()=>root.unmount());}
+});
