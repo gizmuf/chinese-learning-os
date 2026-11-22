@@ -8,7 +8,7 @@ const tokenPattern = /^[a-f0-9]{32}$/u;
 
 export function linkedReadingId(search: string) {
   const id = new URLSearchParams(search).get(linkedReadingParam);
-  return id && (id === 'ditouzu' || tokenPattern.test(id)) ? id : undefined;
+  return id && (id === 'ditouzu' || id === 'ditouzu-full' || tokenPattern.test(id)) ? id : undefined;
 }
 
 export function linkedReadingHref(id: string) {

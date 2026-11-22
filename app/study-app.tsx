@@ -17,6 +17,7 @@ import ReferenceLessonLinks from './reference-lesson-links';
 import {referenceLessonHref} from './reference-lessons-data';
 import {hanziFamilyLessonHref,hanziFamilyLessonTitle} from './hanzi-family-lesson-route';
 import {mandarin320Href,mandarin320Title} from './mandarin-320-route';
+import {connectorsPhoneHref,connectorsPhoneTitle,connectorsPhoneId} from './connectors-phone-model';
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   BookmarkPlus,
@@ -113,6 +114,7 @@ const Hsk3Prep = lazy(() => import("./hsk3-prep"));
 const TodayCourseReviews = lazy(() => import("./today-course-reviews"));
 const PronunciationLab = lazy(() => import("./pronunciation-lab-ui"));
 const TodayRecognition = lazy(() => import("./today-recognition"));
+const ConnectorsPhoneLesson = lazy(() => import('./connectors-phone-lesson'));
 type View = "hsk3-prep" | "pronunciation" | "sentence-check" | "labs" | "shuoshuo-lesson" | "private-lessons" | "shuoshuo" | "myday" | "studio" | "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
 export default function StudyApp({
   user,
@@ -138,6 +140,11 @@ export default function StudyApp({
   const lessons = sourceLessons.map(lesson => ({...lesson, title: t(lesson.title), subtitle: t(lesson.subtitle)}));
   const skillNames = Object.fromEntries(Object.entries(sourceSkillNames).map(([key,value]) => [key,t(value)])) as typeof sourceSkillNames;
   const [view, setView] = useState<View>(initialView);
+  const [connectorsOpen,setConnectorsOpen] = useState(()=>typeof location!=='undefined'&&new URLSearchParams(location.search).get('material')===connectorsPhoneId);
+  useEffect(()=>{
+    const read=()=>setConnectorsOpen(new URLSearchParams(location.search).get('material')===connectorsPhoneId);
+    addEventListener('popstate',read); return()=>removeEventListener('popstate',read);
+  },[]);
   const [shuoshuoLessonOrigin,setShuoshuoLessonOrigin] = useState<View>("lessons");
   const [companionOrigin,setCompanionOrigin] = useState<View>("lessons");
   const [myDayOrigin,setMyDayOrigin] = useState<View>("lessons");
@@ -572,6 +579,7 @@ export default function StudyApp({
     sentenceCheckOrigin.current=null;
   }
   function changeView(v: View) {
+    setConnectorsOpen(false);
     setStudioMenu(false);
     if(v==='practice'){const previous=lastWriting.current;if(previous)setWritingLayout(previous.layout);openPractice(previous?.item??selected,previous?.mode??mode);if(previous)setWritingOrigin(previous.origin);return;}
     if(v==="atlas"&&atlasReturn){returnToAtlas();return;}
@@ -992,7 +1000,8 @@ export default function StudyApp({
               </div>
             </>
           )}
-          {view === "lessons" && (
+          {view === "lessons" && connectorsOpen && <Suspense fallback={<p role="status">Opening connectors lesson…</p>}><ConnectorsPhoneLesson key={user?.id??'guest'} db={db}/></Suspense>}
+          {view === "lessons" && !connectorsOpen && (
             <>
               <div id="library-start" className="page-heading" tabIndex={-1}>
                 <div>
@@ -1014,7 +1023,7 @@ export default function StudyApp({
                 <button type="button" onClick={openShuoshuoLesson}>Shuoshuo · Morning</button>
                 <button type="button" aria-label={({en:'Open My day lesson',fr:'Ouvrir Ma journée',ru:'Открыть урок «Мой день»',tr:'Günüm dersini aç'}[locale])} onClick={openMyDay}>{({en:'My day',fr:'Ma journée',ru:'Мой день',tr:'Günüm'}[locale])}</button>
                 <button type="button" className="library-practice-shortcut" aria-pressed={practiceSelection} onClick={()=>{setPracticeSelection(true);libraryRoute(libraryLayout,true);}}><BookmarkCheck size={15}/>{libraryCopy.selected} · {practiceBook.entries.length}</button>
-                {[[mandarin320Href,mandarin320Title],[hanziFamilyLessonHref,hanziFamilyLessonTitle]].map(([href,title])=><a key={href} href={href+'&from=lessons'} onClick={event=>{
+                {[[connectorsPhoneHref,connectorsPhoneTitle],[mandarin320Href,mandarin320Title],[hanziFamilyLessonHref,hanziFamilyLessonTitle]].map(([href,title])=><a key={href} href={href+'&from=lessons'} onClick={event=>{
                   if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
                   event.preventDefault();
                   const returnTo=window.location.pathname+window.location.search+window.location.hash;

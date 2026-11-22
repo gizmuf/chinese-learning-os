@@ -2,6 +2,7 @@
 
 import {useEffect, useRef, useState, type FormEvent} from 'react';
 import {Copy, Volume2} from 'lucide-react';
+import {lazy, Suspense} from 'react';
 import {StudyText} from './study-lookup-context';
 import ReadingLabNarrator from './reading-lab-narrator';
 import {useReadingLabNarrator} from './use-reading-lab-narrator';
@@ -14,8 +15,14 @@ import {parseReadingAudioSentences, readingAudioTextLimit, readingAudioSentenceL
 
 const qwenVoice = 'Qwen · Longanhuan';
 const savedReadingKey = 'chinese-os:reading-lab:last-narrated-text';
+const ConnectorsPhoneReading = lazy(() => import('./connectors-phone-reading'));
 
 export function ReadingLabLinkedText({id, preset}: {id: string; preset?: LinkedReading}) {
+  if (id === 'ditouzu-full') return <Suspense fallback={<p role="status">Opening the full reading…</p>}><ConnectorsPhoneReading/></Suspense>;
+  return <SavedLinkedText key={id} id={id} preset={preset}/>;
+}
+
+function SavedLinkedText({id, preset}: {id: string; preset?: LinkedReading}) {
   const [linked, setLinked] = useState(preset);
   const [failed, setFailed] = useState(false);
   useEffect(() => {

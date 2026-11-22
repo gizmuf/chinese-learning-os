@@ -1,0 +1,79 @@
+.connectors-lesson {max-width: 1120px; margin-inline: auto; min-width: 0;}
+.cl-back {margin-bottom: 16px;}
+.cl-heading h1 {font-size: clamp(1.8rem, 3vw, 2.65rem); line-height: 1.18; margin-block: 10px;}
+.cl-heading > p:not(.eyebrow), .cl-source-note {color: #718074;}
+.cl-actions {display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px;}
+.cl-display {display: inline-flex; align-items: center; gap: 3px; padding: 3px; border-radius: 9px; background: #eff1ec;}
+.cl-display button {font: inherit; font-size: .85rem; min-height: 38px; padding: 6px 12px; border: 0; border-radius: 7px; color: #768174; background: transparent;}
+.cl-display button[aria-pressed="true"] {color: #34574b; background: white; box-shadow: 0 1px 3px #1837260a;}
+.cl-sections {display: flex; gap: 5px; overflow-x: auto; margin-top: 22px; border-bottom: 1px solid #e1e6dc; padding-bottom: 8px;}
+.cl-sections button {font: inherit; white-space: nowrap; min-height: 44px; padding: 8px 12px; border: 0; border-radius: 8px; background: transparent; color: #72806f; font-size: .9rem;}
+.cl-sections button[aria-current] {background: #eaf0e5; color: #34584b;}
+.cl-step-nav {display: flex; align-items: center; justify-content: space-between; margin-block: 16px 24px; color: #7a8476; font-size: .88rem;}
+.connectors-lesson h2 {font-size: 1.45rem; margin-block: 28px 14px; line-height: 1.35;}
+.cl-reference-grid {display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;}
+.connectors-lesson .panel {padding: 20px 22px; min-width: 0;}
+.cl-entry {min-width: 0;}
+.cl-entry p {margin-block: 8px 12px;}
+.cl-hanzi {font-size: clamp(1.55rem, 2.4vw, 2rem); line-height: 1.85; overflow-wrap: anywhere; color: #111;}
+.cl-hanzi .study-word, .cl-term .study-word {color: inherit; font: inherit;}
+.cl-pinyin {font-size: 1.05rem; line-height: 1.7; color: #92755a; overflow-wrap: anywhere;}
+.cl-reference-grid .cl-hanzi {font-size: 1.65rem;}
+.cl-reference-grid .cl-actions {margin-top: 9px;}
+.cl-family-row {display: grid; grid-template-columns: minmax(150px, .6fr) minmax(0, 1.4fr); gap: 22px; align-items: start;}
+.cl-family-bank {display: flex; flex-wrap: wrap; gap: 10px 16px; font-size: 1.3rem;}
+.cl-examples {display: grid; gap: 14px; margin-block: 16px 24px;}
+.cl-variant, .cl-challenge {margin-block: 14px;}
+.cl-source-note {font-size: .86rem; line-height: 1.5;}
+.cl-source {margin-top: 35px; border-top: 1px solid #e3e8dd; padding-top: 20px; color: #74816f; font-size: .85rem; overflow-wrap: anywhere;}
+.cl-source li {margin-block: 8px;}
+.cl-writing, .cl-compare {border: 1px solid #d7dfce; border-radius: 16px; background: #fff; color: #304c40; max-width: min(920px, calc(100vw - 28px)); width: 920px; max-height: calc(100dvh - 32px); overflow: auto; padding: 22px; box-shadow: 0 14px 55px #19352b25;}
+.cl-compare {width: 720px;}
+.cl-writing::backdrop, .cl-compare::backdrop {background: #1a30294d;}
+.cl-writing > header, .cl-compare > header {display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 15px;}
+.cl-writing > header h2, .cl-compare > header h2 {margin: 0; font-size: 1.4rem;}
+.cl-compare h3 {font-size: 1.1rem; margin-top: 20px;}
+.cl-compare-list {padding-left: 24px;}
+.cl-compare-list li {padding-block: 13px; border-bottom: 1px solid #e5e9df;}
+.cl-compare-list li > span {margin-right: 14px;}
+.cl-compare-list .cl-entry {margin-top: 8px;}
+.cl-compare-list .cl-entry .cl-hanzi {font-size: 1.5rem;}
+.cl-term {font-size: 1.45rem; color: #111;}
+.cl-compare-button {margin-block: 12px;}
+.cl-reader {height: min(800px, 82dvh); min-height: 400px; border: 1px solid #dfe5d8; border-radius: 14px; overflow: hidden; background: #fff;}
+.cl-reader .rl-own-result-header {padding: 16px 22px;}
+.cl-reader .rl-own-result-header h2 {color: #111;}
+.cl-reader .rl-own-scroll {position: relative;}
+.cl-reader .cl-hanzi {font-size: clamp(1.4rem, 2.5vw, 1.8rem);}
+.cl-reader .rl-own-sentences > li {padding-block: 22px;}
+.cl-reader .rl-own-sentences > li > .cl-actions {margin-top: 10px;}
+.cl-reader .rl-own-sentences > li > .cl-actions .cl-compare-button {margin: 0;}
+.cl-reading-link {margin-bottom: 16px;}
+.cl-practice-list {list-style: none; padding: 0; display: grid; gap: 18px; counter-reset: none;}
+.cl-practice-list h3, .cl-challenge h3 {font-size: 1rem; line-height: 1.5; margin: 0 0 16px;}
+.cl-practice label, .cl-challenge label {display: grid; gap: 7px; font-size: .9rem; margin-block: 12px;}
+.cl-practice textarea, .cl-practice input {width: 100%; border: 1px solid #d4ddcc; border-radius: 9px; font: inherit; color: #243c30; background: #fff; padding: 12px; min-height: 44px; box-sizing: border-box;}
+.cl-practice textarea {resize: vertical;}
+.cl-practice .cl-entry {margin-top: 20px; padding-top: 14px; border-top: 1px solid #e4e8dd;}
+.cl-characters {display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 9px; margin-block: 16px 22px;}
+.cl-character {display: flex; flex-direction: column; align-items: center; gap: 5px; border: 1px solid #e0e5da; border-radius: 10px; background: #fff; padding: 10px 4px; min-width: 0; color: #374f42;}
+.cl-character[aria-pressed="true"] {border-color: #8fa58c; background: #edf3e7;}
+.cl-character .cl-hanzi {font-size: 2.1rem;}
+.cl-character .cl-pinyin {font-size: .9rem;}
+.cl-ranges {display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;}
+.cl-ranges [aria-current] {background: #eaf0e4; border-color: #b5c4aa;}
+.cl-character-writing {display: grid; grid-template-columns: minmax(180px, .7fr) minmax(0, 1.3fr); gap: 22px; align-items: start;}
+.cl-character-writing .sp-mini-notebook {min-width: 0; border: 0; padding: 0;}
+.cl-character-writing .sp-mini-notebook-cell {min-width: 0;}
+.connectors-lesson [hidden] {display: none !important;}
+@media(max-width: 700px) {
+  .cl-reference-grid {grid-template-columns: minmax(0, 1fr);}
+  .cl-characters {grid-template-columns: repeat(4, minmax(0, 1fr));}
+  .cl-character-writing {grid-template-columns: minmax(0, 1fr);}
+  .cl-family-row {grid-template-columns: minmax(0, 1fr); gap: 12px;}
+  .connectors-lesson .panel {padding: 16px;}
+  .cl-reader {height: 78dvh; min-height: 380px;}
+  .cl-reader .rl-own-result-header {flex-wrap: wrap; padding: 14px;}
+  .cl-writing, .cl-compare {padding: 16px;}
+  .cl-sections {margin-top: 16px;}
+}
