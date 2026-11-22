@@ -5,6 +5,7 @@ import {useI18n} from './i18n';
 import {loadDictionaryResources,fetchDictionaryEntry} from './dictionary-client';
 import {dictionaryCharacterFamily,dictionaryFamilyParts} from './dictionary-character-family-model';
 import {dictionaryWordFamily} from './dictionary-word-family-model';
+import {connectorsWordRows} from './connectors-phone-model';
 import {studyOccurrenceCorpus,studyOccurrences,occurrencePage} from './dictionary-lesson-occurrences';
 import CloudHighlight from './atlas-cloud-highlight';
 import {atlasByHanzi,componentById} from './atlas-model';
@@ -38,7 +39,8 @@ export default function DictionaryExploration({entry,dictionary,onLookup,speaker
  const reviewed=atlasByHanzi.get(character),preferred=reviewed?.phonetic?componentById.get(reviewed.phonetic)?.glyph:undefined;
  const parts=useMemo(()=>dictionaryFamilyParts(character,allCharacters,preferred),[character,allCharacters,preferred]),part=parts.includes(partChoice)?partChoice:parts[0]??character;
  const family=useMemo(()=>tab==='family'?dictionaryCharacterFamily(character,part,allCharacters,priority):[],[tab,character,part,allCharacters,priority]);
- const words=useMemo(()=>tab==='words'?dictionaryWordFamily(resources?.headwords??[],character,priority):[],[tab,resources,character,priority]);
+ const words=useMemo(()=>tab==='words'?dictionaryWordFamily(
+  [...(resources?.headwords??[]),...connectorsWordRows.map(row=>row.hanzi)],character,priority):[],[tab,resources,character,priority]);
  const occurrences=useMemo(()=>tab==='lessons'?studyOccurrences(entry.text,locale):[],[tab,entry.text,locale]);
  const lessonOptions=[...new Map(occurrences.map(row=>[row.lessonId,row.lessonLabel])).entries()];
  const filtered=lesson?occurrences.filter(row=>row.lessonId===lesson):occurrences;

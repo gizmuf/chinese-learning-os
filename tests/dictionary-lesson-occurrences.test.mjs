@@ -17,6 +17,19 @@ test('reused lesson sentences remain independently located and words stay distin
  const corpus=m.studyOccurrenceCorpus('en');assert.ok(corpus.some(a=>a.kind==='sentence'&&corpus.some(b=>b.id!==a.id&&b.text===a.text&&b.lessonId!==a.lessonId)));
  const word=m.studyOccurrences('银行','en');assert.ok(word.some(v=>v.kind==='word'&&v.text==='银行'));assert.ok(word.some(v=>v.kind==='sentence'&&v.text!=='银行'));
 });
+test('Connectors word-family links are reciprocal and prefer the lesson glossary',()=>{
+ const location='connectors-phone';
+ for(const [from,to] of [['每次','每天'],['每天','每次']]){
+  const rows=m.relatedStudyWords('每','en',location,from);
+  assert.equal(rows[0].text,to);
+  assert.equal(rows[0].lessonId,location);
+  assert.match(rows[0].pinyin,/^měi /u);
+  assert.ok(!rows.some(row=>row.text===from));
+ }
+ const both=m.relatedStudyWords('每','en',location,'每').slice(0,2).map(row=>row.text);
+ assert.deepEqual(both,['每次','每天']);
+ assert.ok(m.studyOccurrences('每','en').some(row=>row.kind==='sentence'&&row.lessonId===location));
+});
 test('occurrence audio is exact text and points to existing retained recordings',()=>{
  const missing=[];for(const row of m.studyOccurrenceCorpus('en'))if(row.audio){assert.equal(row.audio.text,row.text);assert.equal(row.audio.kind,row.kind);if(!existsSync(recordingAssetPath(row.audio.source)))missing.push([row.id,row.audio.source]);}
  assert.deepEqual(missing,[]);

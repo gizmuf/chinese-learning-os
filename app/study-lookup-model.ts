@@ -1,3 +1,4 @@
+import {connectorsWordRows} from './connectors-phone-model';
 import {lesson12All,lesson12Pronunciation} from './lesson12-data';
 import {lesson11Terms,lesson11Pronunciation} from './lesson11-data';
 import {referenceEntries} from './reference-lessons-data';
@@ -115,7 +116,9 @@ export const studyFeedbackSelector='.lesson04-feedback,.course-feedback,.atlas-a
 /** A grammar example may need senses absent from an earlier lesson's narrower gloss. */
 export function studyLookupEntry(dictionary:StudyDictionary,text:string,locale:Locale,grammarContext=false){
  const existing=dictionary.get(text),gloss=grammarContext?grammarLookup.find(term=>term.text===text):undefined;
- return gloss?alignWordIdentity({...existing,text,pinyin:gloss.pinyin,meaning:gloss.meaning[locale]},cloudWords(locale)):existing;
+ if(gloss)return alignWordIdentity({...existing,text,pinyin:gloss.pinyin,meaning:gloss.meaning[locale]},cloudWords(locale));
+ const lessonWord=connectorsWordRows.find(row=>row.hanzi===text);
+ return existing??(lessonWord?{text,pinyin:lessonWord.pinyin,meaning:lessonWord.english}:undefined);
 }
 
 /** Keep Atlas on a component that actually belongs to the selected character. */

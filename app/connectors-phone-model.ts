@@ -1,3 +1,5 @@
+import lesson from '../data/connectors-phone-lesson.json';
+
 export const connectorsPhoneId = 'connectors-phone';
 export const connectorsPhoneTitle = 'Connectors, frequency & phone habits';
 export const connectorsPhoneHref = '/?study=library&material=' + connectorsPhoneId;
@@ -13,6 +15,7 @@ export const connectorsSections = [
 ] as const;
 export type ConnectorsSection = typeof connectorsSections[number][0];
 export type ConnectorsRow = {hanzi: string; pinyin: string; english: string; page?: number};
+export const connectorsWordRows = [...lesson.connectors, ...lesson.frequency, ...lesson.phoneVocabulary];
 
 export function connectorsSection(search: string): ConnectorsSection {
   const section = new URLSearchParams(search).get('section');

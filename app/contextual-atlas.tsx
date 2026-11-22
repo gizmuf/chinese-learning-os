@@ -8,11 +8,18 @@ import {HanziDisplayControls} from './hanzi-style';
 import {StudyText} from './study-lookup-context';
 import {atlasWritingEntry} from './writing-context-model';
 import {studyAtlasHref} from './study-lookup-model';
+import {useI18n} from './i18n';
+import {relatedStudyWords} from './dictionary-lesson-occurrences';
+import DictionaryWordFamily from './dictionary-word-family';
 const AtlasCloud=lazy(()=>import('./atlas-cloud'));
-export type AtlasVisit={entry:DictionaryEntry;route:CloudRoute;originY:number;originURL:string;trail?:string[];scrollTop?:number};
+export type AtlasVisit={entry:DictionaryEntry;route:CloudRoute;originY:number;originURL:string;trail?:string[];scrollTop?:number;wordFamily?:string};
 export default function ContextualAtlas({visit,owner,db,penOnly,setPenOnly,notify,onClose,onWrite,onChange}:{visit:AtlasVisit;owner:string|null;db:IDBDatabase|null;penOnly:boolean;setPenOnly:(value:boolean)=>void;notify:(message:string)=>void;onClose:()=>void;onWrite:(entry:DictionaryEntry)=>void;onChange:(route:CloudRoute,trail:string[],scrollTop:number)=>void}){
  const modal=useRef<HTMLDialogElement>(null),progress=useAtlasProgress(owner),[route,setRoute]=useState(visit.route),[trail,setTrail]=useState<CloudRoute[]>((visit.trail??[]).map(readCloudRoute)),[assessment,setAssessment]=useState(false);
  const source=visit.entry.contextual;
+ const {locale}=useI18n();
+ const wordFamily=visit.wordFamily;
+ const wordRows=useMemo(()=>wordFamily?relatedStudyWords(wordFamily,locale,source?.sourceId?.split(':')[0]):[],[wordFamily,locale,source?.sourceId]);
+ const wordReadings=useMemo(()=>new Map(wordRows.map(row=>[row.text,row])),[wordRows]);
  const scrollTimer=useRef<ReturnType<typeof setTimeout>|undefined>(undefined),latestView=useRef({route,trail,onChange});latestView.current={route,trail,onChange};
  useEffect(()=>()=>clearTimeout(scrollTimer.current),[]);
  function rememberScroll(){clearTimeout(scrollTimer.current);scrollTimer.current=setTimeout(()=>{const view=latestView.current;view.onChange(view.route,view.trail.map(cloudRouteHref),modal.current?.scrollTop??0);},140);}
@@ -20,6 +27,15 @@ export default function ContextualAtlas({visit,owner,db,penOnly,setPenOnly,notif
  useEffect(()=>{if(cloudRouteHref(visit.route)!==cloudRouteHref(route)){const history=[...trail,route].slice(-24);setTrail(history);setRoute(visit.route);onChange(visit.route,history.map(cloudRouteHref),modal.current?.scrollTop??0);}},[visit.route]);
  function navigate(next:CloudRoute){const history=cloudRouteHref(next)!==cloudRouteHref(route)?[...trail,route].slice(-24):trail;setTrail(history);setRoute(next);onChange(next,history.map(cloudRouteHref),modal.current?.scrollTop??0);}
  const embedded=useMemo(()=>({route,contextEntry:visit.entry,onRoute:navigate,onAssessmentChange:setAssessment,onContextWrite:(item:Item)=>onWrite(atlasWritingEntry(visit.entry,item,route.kind))}),[route,source]);
+ if(wordFamily){
+  const labels={en:['Atlas · Word family','Back to definition','Study vocabulary'],fr:['Atlas · Famille de mots','Retour à la définition','Vocabulaire étudié'],ru:['Атлас · Группа слов','Назад к словарной статье','Учебная лексика'],tr:['Atlas · Kelime ailesi','Tanıma dön','Ders kelimeleri']}[locale];
+  return <dialog ref={modal} className="context-atlas-dialog" aria-label={labels[0]} onScroll={rememberScroll}
+   onCancel={event=>{event.preventDefault();onClose();}}>
+   <header className="context-atlas-top"><button type="button" className="secondary" onClick={onClose}>← {labels[1]}</button><strong>{labels[0]}</strong></header>
+   <DictionaryWordFamily key={wordFamily} character={wordFamily} currentWords={wordRows.map(row=>row.text)}
+    currentReadings={wordReadings} scopeLabel={labels[2]} initialScope={wordRows.length?'course':'dictionary'}/>
+  </dialog>;
+ }
  return <dialog ref={modal} className="context-atlas-dialog" aria-label="Atlas alongside your lesson" onScroll={rememberScroll} onCancel={event=>{if(event.target!==event.currentTarget)return;event.preventDefault();if(!assessment)onClose();}}>
   <header className="context-atlas-top"><button className="secondary" disabled={assessment} onClick={onClose}>← Back to definition</button><strong>Character connections</strong><button className="secondary" disabled={assessment||!trail.length} onClick={()=>{const previous=trail.at(-1);if(previous){setTrail(old=>old.slice(0,-1));setRoute(previous);onChange(previous,trail.slice(0,-1).map(cloudRouteHref),modal.current?.scrollTop??0);}}}>Previous connection</button></header>
   <section className="context-atlas-views" aria-label="Atlas views"><div className="cloud-view-switch" role="group" aria-label="Context Atlas views">{(['space','family','path','journey','cloud','words','layers','constellations','matrix'] as const).map(layout=><button key={layout} aria-pressed={route.layout===layout} onClick={()=>navigate({...route,layout})}>{({space:'3D cards',family:'Family + context',path:'Complete path',journey:'Family journey',cloud:'Cloud',words:'Word families',layers:'Layer map',constellations:'Constellations',matrix:'Repetition matrix'})[layout]}</button>)}</div><HanziDisplayControls compact/></section>
@@ -27,4 +43,7 @@ export default function ContextualAtlas({visit,owner,db,penOnly,setPenOnly,notif
   <Suspense fallback={<p role="status">Opening your character connections…</p>}><AtlasCloud owner={owner} db={db} penOnly={penOnly} setPenOnly={setPenOnly} notify={notify} progress={progress} onWord={embedded.onContextWrite} embedded={embedded}/></Suspense>
  </dialog>;
 }
-export function atlasVisit(entry:DictionaryEntry):AtlasVisit|null{const href=studyAtlasHref(entry);return href?{entry,route:readCloudRoute(href.slice(href.indexOf('?'))),originY:window.scrollY,originURL:location.pathname+location.search}:null;}
+export function atlasVisit(entry:DictionaryEntry,wordAnchor?:string):AtlasVisit|null{
+ const href=wordAnchor? '/?'+new URLSearchParams({layout:'words',anchor:wordAnchor,hanzi:wordAnchor,hsk:'all'}):studyAtlasHref(entry);
+ return href?{entry,route:readCloudRoute(href.slice(href.indexOf('?'))),originY:window.scrollY,originURL:location.pathname+location.search,...(wordAnchor?{wordFamily:wordAnchor}:{})}:null;
+}
