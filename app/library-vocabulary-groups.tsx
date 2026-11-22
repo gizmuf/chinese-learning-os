@@ -43,7 +43,7 @@ export default function LibraryVocabularyGroups({scope}: {scope: BrowseScope}) {
       </label>
     </div>
     <p className="lvg-total" role="status">
-      {key ? results.length + ' matching groups' : total.toLocaleString() + ' vocabulary entries'}
+      {key ? `${results.length} matching ${results.length === 1 ? 'group' : 'groups'}` : total.toLocaleString() + ' vocabulary entries'}
     </p>
     {results.slice(0, shown).map(group => <section className="lvg-group" key={group.id} data-group={group.id}>
       <h2>
