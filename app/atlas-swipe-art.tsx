@@ -24,8 +24,10 @@ function CharacterInk({focus, interactive, regions, active}: {
   const outlined = nested ?? (groups && character.parts.map((piece, index) => ({part: piece, strokes: groups[index]})));
   const nestedStrokes = new Set(nested?.flatMap(region => region.strokes));
   return <svg viewBox="0 0 1024 1024" aria-hidden="true" focusable="false" className="as-paths">
-    {nested && <g className="as-piece as-context-ink" transform="translate(0 900) scale(1 -1)">
-      {strokes.map((path, index) => !nestedStrokes.has(index) && <path key={index} d={path}/>)}
+    {nested && <g className="as-piece as-context-ink">
+      <g transform="translate(0 900) scale(1 -1)">
+        {strokes.map((path, index) => !nestedStrokes.has(index) && <path key={index} d={path}/>)}
+      </g>
     </g>}
     {outlined ? outlined.map(({part: piece, strokes: indexes}) =>
       <g key={piece.id} className="as-piece" data-kept={nested ? !active || active === piece.id : piece.id === part?.id}
