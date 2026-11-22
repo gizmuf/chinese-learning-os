@@ -208,7 +208,7 @@ export default function HanziSprint({db, notify}: {db:IDBDatabase|null; notify:(
       {!item.meanings?.[locale]&&locale!=='en'&&<small>{c.english}</small>}
       {item.word&&<p><span lang="zh-Hans"><StudyText text={item.word.text} pinyin={item.word.pinyin}/></span> · {item.word.pinyin} · {item.word.meaning[locale]??item.word.meaning.en}</p>}
       <div className="hsprint-actions">
-       <button type="button" className="secondary" onClick={()=>{changeTab('sentences');setContext(item.hanzi);}}>{c.inUse}</button>
+       {(item.sentence||item.word)&&<button type="button" className="secondary" onClick={()=>{changeTab('sentences');setContext(item.hanzi);}}>{c.inUse}</button>}
        <a className="text-button" href={sprintAtlas(item.hanzi,item.part)}>{c.atlas}</a>
       </div>
      </article>)}</div>
