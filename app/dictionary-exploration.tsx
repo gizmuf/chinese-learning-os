@@ -1,5 +1,5 @@
 'use client';
-import HskBadge from './hsk-badge';
+import HskBadge,{useHskLevels} from './hsk-badge';
 import {useEffect,useMemo,useState,type ReactNode} from 'react';
 import {useI18n} from './i18n';
 import {loadDictionaryResources,fetchDictionaryEntry} from './dictionary-client';
@@ -14,10 +14,10 @@ import type {DictionaryEntry,StudyDictionary,Pronunciation} from './atlas-spatia
 import './dictionary-exploration.css';
 
 const copy={
- en:{title:'Follow a connection',family:'Character families',words:'Related words',lessons:'In lessons',character:'Explore a character',part:'Shared part',shape:'Characters with this written component.',wordNote:'Words containing this character. Lesson vocabulary appears first; the full dictionary remains available.',empty:'No matching entries in the available material.',loading:'Loading connections…',error:'Could not load connections.',retry:'Retry',previous:'Previous',next:'Next',all:'All lessons',word:'Word',sentence:'Sentence',source:'Source',back:'This preview stays in your current definition.'},
- fr:{title:'Suivre un lien',family:'Familles de caractères',words:'Mots associés',lessons:'Dans les leçons',character:'Explorer un caractère',part:'Composant commun',shape:'Caractères contenant ce composant écrit.',wordNote:'Mots contenant ce caractère. Le vocabulaire des leçons apparaît en premier ; le dictionnaire complet reste accessible.',empty:'Aucun résultat dans le contenu disponible.',loading:'Chargement des liens…',error:'Impossible de charger les liens.',retry:'Réessayer',previous:'Précédent',next:'Suivant',all:'Toutes les leçons',word:'Mot',sentence:'Phrase',source:'Source',back:'Cet aperçu reste dans la définition actuelle.'},
- ru:{title:'Проследить связь',family:'Семьи знаков',words:'Связанные слова',lessons:'В уроках',character:'Выбрать знак',part:'Общий компонент',shape:'Знаки с этим письменным компонентом.',wordNote:'Слова с этим знаком. Сначала лексика уроков; доступен и полный словарь.',empty:'Совпадений в доступном материале нет.',loading:'Загрузка связей…',error:'Не удалось загрузить связи.',retry:'Повторить',previous:'Назад',next:'Далее',all:'Все уроки',word:'Слово',sentence:'Предложение',source:'Источник',back:'Просмотр остаётся в текущем окне словаря.'},
- tr:{title:'Bir bağlantıyı izle',family:'Karakter aileleri',words:'İlgili kelimeler',lessons:'Derslerde',character:'Karakteri incele',part:'Ortak parça',shape:'Bu yazılı parçayı içeren karakterler.',wordNote:'Bu karakteri içeren kelimeler. Önce ders kelimeleri; sözlüğün tamamı da kullanılabilir.',empty:'Mevcut materyalde eşleşme yok.',loading:'Bağlantılar yükleniyor…',error:'Bağlantılar yüklenemedi.',retry:'Yeniden dene',previous:'Önceki',next:'Sonraki',all:'Tüm dersler',word:'Kelime',sentence:'Cümle',source:'Kaynak',back:'Bu önizleme geçerli sözlük penceresinde kalır.'}
+ en:{title:'Follow a connection',family:'Character families',words:'Related words',lessons:'In lessons',character:'Explore a character',part:'Shared part',shape:'Characters with this written component.',wordNote:'Words containing this character. HSK levels appear first, from 1 to 9, followed by unlisted dictionary words.',empty:'No matching entries in the available material.',loading:'Loading connections…',error:'Could not load connections.',retry:'Retry',previous:'Previous',next:'Next',all:'All lessons',word:'Word',sentence:'Sentence',source:'Source',back:'This preview stays in your current definition.'},
+ fr:{title:'Suivre un lien',family:'Familles de caractères',words:'Mots associés',lessons:'Dans les leçons',character:'Explorer un caractère',part:'Composant commun',shape:'Caractères contenant ce composant écrit.',wordNote:'Mots contenant ce caractère. Niveaux HSK de 1 à 9 en premier, puis les mots hors programme.',empty:'Aucun résultat dans le contenu disponible.',loading:'Chargement des liens…',error:'Impossible de charger les liens.',retry:'Réessayer',previous:'Précédent',next:'Suivant',all:'Toutes les leçons',word:'Mot',sentence:'Phrase',source:'Source',back:'Cet aperçu reste dans la définition actuelle.'},
+ ru:{title:'Проследить связь',family:'Семьи знаков',words:'Связанные слова',lessons:'В уроках',character:'Выбрать знак',part:'Общий компонент',shape:'Знаки с этим письменным компонентом.',wordNote:'Слова с этим знаком. Сначала уровни HSK от 1 до 9, затем слова вне программы.',empty:'Совпадений в доступном материале нет.',loading:'Загрузка связей…',error:'Не удалось загрузить связи.',retry:'Повторить',previous:'Назад',next:'Далее',all:'Все уроки',word:'Слово',sentence:'Предложение',source:'Источник',back:'Просмотр остаётся в текущем окне словаря.'},
+ tr:{title:'Bir bağlantıyı izle',family:'Karakter aileleri',words:'İlgili kelimeler',lessons:'Derslerde',character:'Karakteri incele',part:'Ortak parça',shape:'Bu yazılı parçayı içeren karakterler.',wordNote:'Bu karakteri içeren kelimeler. Önce HSK 1–9 seviyeleri, ardından listede olmayan kelimeler.',empty:'Mevcut materyalde eşleşme yok.',loading:'Bağlantılar yükleniyor…',error:'Bağlantılar yüklenemedi.',retry:'Yeniden dene',previous:'Önceki',next:'Sonraki',all:'Tüm dersler',word:'Kelime',sentence:'Cümle',source:'Kaynak',back:'Bu önizleme geçerli sözlük penceresinde kalır.'}
 };
 type PreviewJob={text:string;active:()=>boolean;resolve:(entry:DictionaryEntry|undefined)=>void;reject:(error:unknown)=>void};
 const previewJobs:PreviewJob[]=[];let previewsRunning=0;
@@ -34,7 +34,7 @@ const relationship={
 const relations=['all','meaning','sound','shape'] as const;
 export type ExplorationView={selected:string;tab:Tab;part:string;page:number;lesson:string;relation?:Relation};
 export default function DictionaryExploration({entry,dictionary,onLookup,speaker,renderSentence,views}:{views:Map<string,ExplorationView>;entry:DictionaryEntry;dictionary:StudyDictionary;onLookup:(text:string,trigger:HTMLButtonElement)=>void;speaker:(v:Pronunciation|undefined)=>ReactNode;renderSentence:(text:string,pinyin:string)=>ReactNode}){
- const {locale}=useI18n(),c=copy[locale];
+ const {locale}=useI18n(),c=copy[locale],hsk=useHskLevels();
  const characters=[...new Set(Array.from(entry.text).filter(ch=>/\p{Script=Han}/u.test(ch)))];
  const key=locale+':'+entry.text,saved=views.get(key);
  const [selected,setSelected]=useState(saved?.selected??characters[0]??''),[tab,setTab]=useState<Tab>(saved?.tab??(characters.length===1?'family':'words')),[partChoice,setPartChoice]=useState(saved?.part??''),[page,setPage]=useState(saved?.page??0),[lesson,setLesson]=useState(saved?.lesson??'');
@@ -48,14 +48,14 @@ export default function DictionaryExploration({entry,dictionary,onLookup,speaker
  const priority=useMemo(()=>[...new Set(corpus.filter(row=>row.kind==='word').map(row=>row.text))],[corpus]);
  const reviewed=atlasByHanzi.get(character),preferred=reviewed?.phonetic?componentById.get(reviewed.phonetic)?.glyph:undefined;
  const parts=useMemo(()=>dictionaryFamilyParts(character,allCharacters,preferred),[character,allCharacters,preferred]),part=parts.includes(partChoice)?partChoice:parts[0]??character;
- const structural=useMemo(()=>tab==='family'?dictionaryCharacterFamily(character,part,allCharacters,priority):[],[tab,character,part,allCharacters,priority]);
+ const structural=useMemo(()=>tab==='family'?dictionaryCharacterFamily(character,part,allCharacters,priority,hsk.index):[],[tab,character,part,allCharacters,priority,hsk.index]);
  const {family,relationCounts}=useMemo(()=>{
   const relationCounts={all:structural.length,meaning:0,sound:0,shape:0};
   const family=structural.filter(row=>{const role=cloudRelation(row.text,part);relationCounts[role]++;return relation==='all'||role===relation;});
   return {family,relationCounts};
  },[structural,part,relation]);
  const words=useMemo(()=>tab==='words'?dictionaryWordFamily(
-  [...(resources?.headwords??[]),...connectorsWordRows.map(row=>row.hanzi)],character,priority):[],[tab,resources,character,priority]);
+  [...(resources?.headwords??[]),...connectorsWordRows.map(row=>row.hanzi)],character,priority,hsk.index):[],[tab,resources,character,priority,hsk.index]);
  const occurrences=useMemo(()=>tab==='lessons'?studyOccurrences(entry.text,locale):[],[tab,entry.text,locale]);
  const lessonOptions=[...new Map(occurrences.map(row=>[row.lessonId,row.lessonLabel])).entries()];
  const filtered=lesson?occurrences.filter(row=>row.lessonId===lesson):occurrences;

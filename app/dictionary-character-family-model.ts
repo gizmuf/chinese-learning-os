@@ -1,4 +1,6 @@
 import type {DictionaryEntry,StudyDictionary} from './atlas-spatial-model';
+import type {HskIndex} from './hsk-level-model';
+import {dictionaryHskPriority} from './dictionary-hsk-priority';
 
 const idsArity:Readonly<Record<string,number>>={
  '⿰':2,'⿱':2,'⿲':3,'⿳':3,'⿴':2,'⿵':2,'⿶':2,'⿷':2,
@@ -89,13 +91,12 @@ export function dictionaryFamilyParts(character:string,dictionary:StudyDictionar
 }
 
 /** All attested containing character rows; pagination belongs to the caller. */
-export function dictionaryCharacterFamily(character:string,part:string,dictionary:StudyDictionary,priorityWords:readonly string[]=[]):DictionaryEntry[]{
+export function dictionaryCharacterFamily(character:string,part:string,dictionary:StudyDictionary,priorityWords:readonly string[]=[],hsk?:HskIndex):DictionaryEntry[]{
  if(!singleCharacter(character)||!singleCharacter(part))return [];
  const index=familyIndex(dictionary);
  if(!index.entries.has(character))return [];
  const family=containingEntries(part,index).filter(entry=>entry.text!==character);
- if(!priorityWords.length)return family;
  const priority=new Set(priorityWords.flatMap(word=>Array.from(word)));
  // The cached order already breaks ties by direct leaf count, then code point.
- return family.sort((a,b)=>Number(priority.has(b.text))-Number(priority.has(a.text)));
+ return dictionaryHskPriority(family.sort((a,b)=>Number(priority.has(b.text))-Number(priority.has(a.text))),hsk,entry=>entry);
 }
