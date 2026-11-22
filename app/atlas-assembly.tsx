@@ -1,7 +1,7 @@
 'use client';
 
-import {useMemo, useRef, useState, type FormEvent} from 'react';
-import {ArrowRight, ChevronsLeftRight, Grid2X2, List, Pin, Search} from 'lucide-react';
+import {useEffect, useMemo, useRef, useState, type FormEvent} from 'react';
+import {ArrowRight, ChevronDown, ChevronsLeftRight, Grid2X2, List, Pin, Search} from 'lucide-react';
 import {assemblyFamilySections, assemblyPresets, assemblySeeds, defaultAssemblyHanzi, findAssemblySeed} from './atlas-assembly-families';
 import {AssemblyDrawing, AssemblyThumbnail} from './atlas-assembly-glyph';
 import {
@@ -14,7 +14,7 @@ import './atlas-assembly.css';
 
 type BuildSelection = {hanzi: string; part: string};
 type FamilyData = ReturnType<typeof assemblyIndex>;
-const pageSize = 12;
+type FamilyLayout = 'grid' | 'list';
 const useExamples: Partial<Record<string, {hanzi: string; pinyin: string; meaning: string}[]>> = {
   挤: [
     {hanzi: '地铁站很挤。', pinyin: 'Dìtiězhàn hěn jǐ.', meaning: 'The subway station is very crowded.'},
@@ -27,8 +27,6 @@ const useExamples: Partial<Record<string, {hanzi: string; pinyin: string; meanin
   济: [{hanzi: '救济', pinyin: 'jiùjì', meaning: 'provide relief'}],
   剂: [{hanzi: '药剂', pinyin: 'yàojì', meaning: 'medicinal preparation'}],
 };
-const cardinalPositions: Position[] = ['left', 'right', 'top', 'bottom'];
-
 function labelPosition(value: Position) {
   return value.charAt(0).toUpperCase() + value.slice(1);
 }
@@ -109,36 +107,42 @@ function MemoryCue({owner, family}: {owner: string | null; family: string}) {
     : <button className="ab-cue-link" type="button" onClick={() => setEditing(true)}>{saved || '+ Add a memory cue'}</button>;
 }
 
-function FamilyPanel({index, current, select, scope, owner}: {
+function FamilyPanel({index, current, select, scope, owner, layout, setLayout}: {
   index: FamilyData; current: BuildSelection; select: (member: FamilyMember, part?: string) => void;
-  scope: BrowseScope; owner: string | null;
+  scope: BrowseScope; owner: string | null; layout: FamilyLayout; setLayout: (value: FamilyLayout) => void;
 }) {
   const [position, setPosition] = useState<Position | 'all'>('all');
-  const [layout, setLayout] = useState<'grid' | 'list'>('grid');
   const [form, setForm] = useState('');
   const [nested, setNested] = useState(false);
-  const [limit, setLimit] = useState(pageSize);
+  const resultsRoot = useRef<HTMLUListElement>(null);
+  const [outlines, setOutlines] = useState<ReadonlySet<string>>(() => new Set());
   const seed = findAssemblySeed(current.part);
   const filterPart = form || current.part;
   const members = useMemo(() => assemblyFamily(index, filterPart, scope, {exact: !!form, nested}),
     [index, scope, filterPart, form, nested]);
   const matchesPosition = ({positions}: {positions: Position[]}) => position === 'all' || positions.includes(position);
-  const visiblePositions = assemblyPositions.filter(region =>
-    members.some(member => member.occurrences.some(match => match.positions.includes(region))));
-  const visible = position === 'all' ? members : members.filter(member => member.occurrences.some(matchesPosition));
-  const quickPositions = cardinalPositions.filter(region => visiblePositions.includes(region));
-  const otherPositions = visiblePositions.filter(region => !quickPositions.includes(region));
+  const visiblePositions = useMemo(() => {
+    const regions = new Set(members.flatMap(member => member.occurrences.flatMap(match => match.positions)));
+    return assemblyPositions.filter(region => regions.has(region) || region === position);
+  }, [members, position]);
+  const visible = useMemo(() => position === 'all' ? members :
+    members.filter(member => member.occurrences.some(match => match.positions.includes(position))), [members, position]);
 
-  function filterPosition(value: typeof position) {
-    setPosition(value);
-    setLimit(pageSize);
-  }
-
-  function filterForm(value: string) {
-    setForm(value);
-    setPosition('all');
-    setLimit(pageSize);
-  }
+  useEffect(() => {
+    if (!resultsRoot.current || typeof IntersectionObserver === 'undefined') return;
+    const observer = new IntersectionObserver(entries => {
+      const nearby: string[] = [];
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        const hanzi = entry.target.getAttribute('data-outline');
+        if (hanzi) nearby.push(hanzi);
+        observer.unobserve(entry.target);
+      }
+      if (nearby.length) setOutlines(previous => new Set([...previous, ...nearby]));
+    }, {rootMargin: '120px 0px'});
+    for (const card of resultsRoot.current.querySelectorAll('[data-outline]')) observer.observe(card);
+    return () => observer.disconnect();
+  }, [visible]);
 
   return <aside id="ab-component-family" className="ab-panel ab-family" aria-label="Component family" tabIndex={-1}>
     <header className="ab-family-head">
@@ -152,30 +156,31 @@ function FamilyPanel({index, current, select, scope, owner}: {
         <button type="button" aria-label="List" title="List" aria-pressed={layout === 'list'} onClick={() => setLayout('list')}><List size={17}/></button>
       </div>
     </header>
-    {current.part && <>
-      {seed?.note && <p className="ab-family-note">{seed.note}</p>}
-      <MemoryCue owner={owner} family={seed?.part ?? current.part} key={owner + ':' + (seed?.part ?? current.part)}/>
-      {seed && seed.forms.length > 1 && <div className="ab-forms" role="group" aria-label="Component forms">
-        <button type="button" aria-pressed={!form} onClick={() => filterForm('')}>All forms</button>
-        {seed.forms.map(glyph =>
-          <button type="button" aria-pressed={form === glyph} onClick={() => filterForm(glyph)} aria-label={glyph + ' only'}
-            lang="zh-Hans" className="ab-hanzi" key={glyph}>{glyph}</button>)}
-      </div>}
-      <div className="ab-positions" role="group" aria-label="Component position">
-        {(['all', ...quickPositions] as const).map(region =>
-          <button type="button" key={region} aria-pressed={position === region} onClick={() => filterPosition(region)}>
-            {region === 'all' ? 'Any position' : labelPosition(region)}
-          </button>)}
-        {otherPositions.length > 0 && <select aria-label="More positions"
-          value={position !== 'all' && otherPositions.includes(position) ? position : ''}
-          onChange={event => filterPosition((event.target.value || 'all') as typeof position)}>
-          <option value="">More positions</option>
-          {otherPositions.map(region => <option value={region} key={region}>{labelPosition(region)}</option>)}
-        </select>}
-      </div>
-    </>}
-    {visible.length > 0 ? <ul className={'ab-family-results ab-' + layout}>
-      {visible.slice(0, limit).map(member => {
+    {current.part && <div className="ab-family-tools">
+      {seed && seed.forms.length > 1 && <select aria-label="Component form" value={form} onChange={event => {
+        setForm(event.target.value);
+        setPosition('all');
+      }}>
+        <option value="">All forms</option>
+        {seed.forms.map(glyph => <option lang="zh-Hans" key={glyph}>{glyph}</option>)}
+      </select>}
+      <select aria-label="Component position" value={position}
+        onChange={event => setPosition(event.target.value as typeof position)}>
+        <option value="all">Any position</option>
+        {visiblePositions.map(region => <option value={region} key={region}>{labelPosition(region)}</option>)}
+      </select>
+      <label className="ab-nested"><input type="checkbox" checked={nested} onChange={event => {
+        setNested(event.target.checked);
+        setPosition('all');
+      }}/> Include nested parts</label>
+      <details className="ab-family-notes">
+        <summary>Notes</summary>
+        {seed?.note && <p className="ab-family-note">{seed.note}</p>}
+        <MemoryCue owner={owner} family={seed?.part ?? current.part} key={owner + ':' + (seed?.part ?? current.part)}/>
+      </details>
+    </div>}
+    {visible.length > 0 ? <ul ref={resultsRoot} className={'ab-family-results ab-' + layout}>
+      {visible.map(member => {
         const {character, occurrences} = member;
         const hanzi = character.data.hanzi;
         const matching = occurrences.filter(matchesPosition);
@@ -185,26 +190,22 @@ function FamilyPanel({index, current, select, scope, owner}: {
           (position === 'all' || part.positions.includes(position));
         const reading = character.data.readings[0];
         const meaning = assemblyMeaning(character, true);
-        return <li key={hanzi}>
+        const metadata = [places.map(labelPosition).join(' / '), hskText(character)].filter(Boolean).join(' · ');
+        return <li key={hanzi} data-outline={hanzi}>
           <button type="button" aria-pressed={current.hanzi === hanzi}
-            aria-label={[hanzi, reading, meaning, ...places].filter(Boolean).join(' · ')}
+            aria-label={[hanzi, reading, meaning, metadata].filter(Boolean).join(' · ')}
             onClick={() => select(member, matching.find(match => match.glyph === current.part)?.glyph ?? matching[0]?.glyph)}>
-            <AssemblyThumbnail character={character} active={isActive}/>
+            {outlines.has(hanzi) ? <AssemblyThumbnail character={character} active={isActive}/> :
+              <span className="ab-thumbnail ab-hanzi" lang="zh-Hans">{hanzi}</span>}
             <span className="ab-result-copy">
               <strong>{reading || '—'}</strong>
               <span className="ab-gloss" title={assemblyMeaning(character)}>{meaning || '—'}</span>
-              <small>{[places.map(labelPosition).join(' / '), hskText(character)].filter(Boolean).join(' · ')}</small>
+              {layout === 'list' && metadata && <small>{metadata}</small>}
             </span>
           </button>
         </li>;
       })}
     </ul> : <p className="ab-empty">No characters match these filters in this HSK range.</p>}
-    {visible.length > limit && <button type="button" className="ab-more" onClick={() => setLimit(value => value + pageSize)}>Show more <span>{limit} / {visible.length}</span></button>}
-    {current.part && <label className="ab-nested"><input type="checkbox" checked={nested} onChange={event => {
-      setNested(event.target.checked);
-      setPosition('all');
-      setLimit(pageSize);
-    }}/> Include nested parts</label>}
   </aside>;
 }
 
@@ -220,6 +221,9 @@ export default function AtlasAssembly({hanzi, part, scope, owner, onSelect, show
   const [error, setError] = useState('');
   const [split, setSplit] = useState(false);
   const [directory, setDirectory] = useState(false);
+  const [familyFirst, setFamilyFirst] = useState(() => !!part && index.families.has(part));
+  const [builderOpen, setBuilderOpen] = useState(false);
+  const [familyLayout, setFamilyLayout] = useState<FamilyLayout>('grid');
   const [change, setChange] = useState<{from: string; to: string; kept: string}>();
   const character = (hanzi ? index.characters.get(hanzi) : undefined) ??
     (part && index.families.has(part) ? firstFamilyMember(index, part, scope)?.character : undefined) ??
@@ -232,7 +236,8 @@ export default function AtlasAssembly({hanzi, part, scope, owner, onSelect, show
     ? character.parts.some(candidate => candidate.glyph === part) ? part : relatedForm || part
     : firstPart;
   const current = {hanzi: glyph, part: selected};
-  const swaps = useMemo(() => assemblySwaps(index, character, selected, scope), [index, character, selected, scope]);
+  const showBuilder = !familyFirst || builderOpen;
+  const swaps = showBuilder ? assemblySwaps(index, character, selected, scope) : [];
   const outOfScope = scope !== 'all' && !!character.level && !browseInScope(character.level, scope);
   const seed = findAssemblySeed(selected);
   const familyKey = seed?.part ?? selected;
@@ -253,10 +258,27 @@ export default function AtlasAssembly({hanzi, part, scope, owner, onSelect, show
   }
 
   function openFamily(part: string) {
-    if (selected === part) return;
+    if (!part) {
+      selectHanzi(glyph, '');
+      showFamilyOverview();
+      return;
+    }
     const first = firstFamilyMember(index, part, scope, character);
-    if (first) selectHanzi(first.character.data.hanzi,
+    if (!first) return;
+    if (selected !== part) selectHanzi(first.character.data.hanzi,
       first.occurrences.find(match => match.glyph === part)?.glyph ?? first.occurrences[0]?.glyph ?? part);
+    showFamilyOverview();
+  }
+
+  function showFamilyOverview() {
+    setFamilyFirst(true);
+    setBuilderOpen(false);
+    setDirectory(false);
+    requestAnimationFrame(() => {
+      const family = layoutRoot.current?.querySelector<HTMLElement>('.ab-family');
+      family?.focus({preventScroll: true});
+      family?.scrollIntoView({block: 'nearest'});
+    });
   }
 
   function find(event: FormEvent<HTMLFormElement>) {
@@ -265,7 +287,10 @@ export default function AtlasAssembly({hanzi, part, scope, owner, onSelect, show
     if (!text) return;
     const known = assemblyPresets.find(item => item.label.toLocaleLowerCase() === text.toLocaleLowerCase() || item.forms.includes(text));
     if (known) openFamily(known.part);
-    else if (index.characters.has(text)) selectHanzi(text);
+    else if (index.characters.has(text)) {
+      selectHanzi(text);
+      if (familyFirst) showFamilyOverview();
+    }
     else if (index.families.has(text)) openFamily(text);
     else {
       setError('Enter a single indexed hanzi or part, such as 挤, 齐 or 扌.');
@@ -284,6 +309,7 @@ export default function AtlasAssembly({hanzi, part, scope, owner, onSelect, show
 
   function chooseMember(member: FamilyMember, pin?: string) {
     selectHanzi(member.character.data.hanzi, pin ?? selected);
+    if (familyFirst) return;
     const family = layoutRoot.current?.querySelector('.ab-family');
     const board = boardRoot.current;
     if (family && board && family.getBoundingClientRect().top > board.getBoundingClientRect().bottom - 2) {
@@ -304,25 +330,48 @@ export default function AtlasAssembly({hanzi, part, scope, owner, onSelect, show
     setSplit(false);
   }
 
-  return <section className="ab" aria-label="Build hanzi">
-    <header className="ab-header">
-      <div><h2>Build hanzi</h2><p>Split a character, pin a part and see where else it appears.</p></div>
-      <form className="ab-find" onSubmit={find}>
-        <input type="search" aria-label="Find hanzi or a part" placeholder="Find hanzi or a part" value={query}
-          onChange={event => { setQuery(event.target.value); setError(''); }} maxLength={20} enterKeyHint="search" autoComplete="off"/>
-        <button type="submit" aria-label="Find"><Search size={18}/></button>
-      </form>
-    </header>
-    {error && <p className="ab-error" role="alert">{error}</p>}
-    <div className="ab-seeds" role="group" aria-label="Common component families">
-      {assemblySeeds.map(seed => <button type="button" key={seed.part} aria-pressed={familyKey === seed.part}
-        onClick={() => openFamily(seed.part)}><span className="ab-hanzi" lang="zh-Hans">{seed.part}</span>{seed.label}</button>)}
-      <button type="button" aria-pressed={!selected} onClick={() => selectHanzi(glyph, '')}>All hanzi</button>
-      <button type="button" aria-expanded={directory} aria-controls="ab-directory" onClick={() => setDirectory(!directory)}>Browse components</button>
-    </div>
-    {directory && <AssemblyDirectory index={index} scope={scope} part={selected} choose={part => {openFamily(part); setDirectory(false);}}/>}
+  const findForm = <form className="ab-find" onSubmit={find}>
+    <input type="search" aria-label="Find hanzi or a part" placeholder="Find hanzi or a part" value={query}
+      onChange={event => { setQuery(event.target.value); setError(''); }} maxLength={20} enterKeyHint="search" autoComplete="off"/>
+    <button type="submit" aria-label="Find"><Search size={18}/></button>
+  </form>;
+  const directoryToggle = <button type="button" className="ab-browse-toggle" aria-expanded={directory} aria-controls="ab-directory"
+    onClick={() => {setDirectory(!directory); setError('');}}>
+    Browse components <ChevronDown size={15} aria-hidden="true"/>
+  </button>;
+  const seeds = <div className="ab-seeds" role="group" aria-label="Common component families">
+    {assemblySeeds.map(seed => <button type="button" key={seed.part} aria-pressed={familyKey === seed.part}
+      onClick={() => openFamily(seed.part)}><span className="ab-hanzi" lang="zh-Hans">{seed.part}</span>{seed.label}</button>)}
+    <button type="button" aria-pressed={!selected} onClick={() => openFamily('')}>All hanzi</button>
+    {!familyFirst && directoryToggle}
+  </div>;
+  const directoryContents = directory && <AssemblyDirectory index={index} scope={scope} part={selected} choose={openFamily}/>;
+  const searchError = error && <p className="ab-error" role="alert">{error}</p>;
+
+  return <section className={'ab' + (familyFirst ? ' ab-overview' : '')} aria-label="Build hanzi">
+    {familyFirst ? <h2 className="ab-visually-hidden">Build hanzi</h2> : <>
+      <header className="ab-header">
+        <div><h2>Build hanzi</h2><p>Split a character, pin a part and see where else it appears.</p></div>
+        {findForm}
+      </header>
+      {searchError}
+      {seeds}
+      {directoryContents}
+    </>}
     <div ref={layoutRoot} className="ab-columns">
       <section ref={boardRoot} className="ab-panel ab-board" aria-label="Character builder" tabIndex={-1} data-character={glyph}>
+        {familyFirst && <div className="ab-selected-strip">
+          <button type="button" className="ab-builder-toggle" aria-expanded={builderOpen} aria-controls="ab-builder"
+            onClick={() => setBuilderOpen(!builderOpen)}>
+            <span lang="zh-Hans" className="ab-hanzi ab-selected-glyph">{glyph}</span>
+            <span className="ab-selected-copy"><strong>{character.data.readings[0]}</strong>
+              <span>{assemblyMeaning(character, true)}</span></span>
+            <span className="ab-builder-action">{builderOpen ? 'Close builder' : 'Open builder'} <ChevronDown size={16} aria-hidden="true"/></span>
+          </button>
+          {directoryToggle}
+        </div>}
+        <div id="ab-builder" hidden={!showBuilder}>
+        {showBuilder && <>
         <header className="ab-board-head">
           <div className="ab-character-copy">
             <div className="ab-character-reading">
@@ -390,9 +439,17 @@ export default function AtlasAssembly({hanzi, part, scope, owner, onSelect, show
               aria-label={'Build ' + sample} aria-pressed={glyph === sample} onClick={() => selectHanzi(sample)}>{sample}</button>)}
           </div>
         </div>
+        </>}
+        </div>
       </section>
-      <FamilyPanel key={familyKey + ':' + scope} index={index} current={current} select={chooseMember}
-        scope={scope} owner={owner}/>
+      {familyFirst && directory && <div className="ab-browse-panel">
+        {findForm}
+        {searchError}
+        {seeds}
+        {directoryContents}
+      </div>}
+      <FamilyPanel key={familyKey} index={index} current={current} select={chooseMember}
+        scope={scope} owner={owner} layout={familyLayout} setLayout={setFamilyLayout}/>
     </div>
   </section>;
 }

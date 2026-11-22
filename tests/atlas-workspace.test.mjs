@@ -81,3 +81,16 @@ test('the HSK 1 学 matrix page contains every Hanzi in its word rows', () => {
   assert.equal(words.length, context.members.length);
   assert.deepEqual(atlas.workspaceHanzi(words.map(word => word.hanzi).join('')), ['学', '生', '习', '校', '大', '上', '同', '小', '中']);
 });
+
+test('Words deep links opt into Connections and keep plain Swipe as the default', () => {
+  const query = '?mode=swipe&swipeWord=一起';
+  const plain = atlas.readAtlasWorkspaceRoute(query);
+  const linked = atlas.readAtlasWorkspaceRoute(query + '&wordView=connections');
+  assert.equal(plain.wordView, undefined);
+  assert.equal(linked.wordView, 'connections');
+  assert.equal(atlas.readAtlasWorkspaceRoute(atlas.atlasWorkspaceHref(linked)).swipeWord, '一起');
+  assert.equal(new URLSearchParams(atlas.atlasWorkspaceHref(linked)).get('wordView'), 'connections');
+  for (const invalid of ['?mode=swipe&wordView=connections', '?mode=build&swipeWord=一起&wordView=connections', query + '&wordView=unknown']) {
+    assert.equal(atlas.readAtlasWorkspaceRoute(invalid).wordView, undefined);
+  }
+});

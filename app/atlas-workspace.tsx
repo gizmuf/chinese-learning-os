@@ -221,7 +221,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
       const hanzi = (fromParts && route.buildHanzi) || context.hanzi;
       const part = fromParts ? route.buildPart : route.kind === 'component' ? context.part?.glyph : undefined;
       if (mode === 'build') openBuilder(hanzi, part);
-      else navigate({mode, buildHanzi: hanzi, buildPart: part, swipeSlot: undefined, swipeWord: undefined, wide: true, story: '', step: 0, exercise: ''}, 0);
+      else navigate({mode, buildHanzi: hanzi, buildPart: part, swipeSlot: undefined, swipeWord: undefined, wordView: undefined, familyMap: undefined, wide: true, story: '', step: 0, exercise: ''}, 0);
       return;
     }
     const available = mode === 'read' ? workspaceGroups(locale, route.scope) : [];
@@ -365,9 +365,13 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
         showWords={hanzi => selectFamily(hanzi)} widen={() => changeScope('all')}/>
     </Suspense>}
     {swiping && <Suspense fallback={<p role="status">Opening Swipe…</p>}>
-      <AtlasSwipe key={swipeHistoryEntry} entryWord={route.swipeWord}
+      <AtlasSwipe key={swipeHistoryEntry} entryWord={route.swipeWord} openFamilyOnEntry={route.familyMap}
         hanzi={route.buildHanzi} part={route.buildPart} slot={route.swipeSlot} scope={route.scope}
-        onSelect={({hanzi, part, slot}) => navigate({buildHanzi: hanzi, buildPart: part, swipeSlot: slot, swipeWord: undefined}, null, true)}
+        onSelect={({hanzi, part, slot}) => navigate({buildHanzi: hanzi, buildPart: part, swipeSlot: slot, swipeWord: undefined, wordView: undefined}, null, true)}
+        wordView={route.wordView}
+        onWordViewChange={(view, word) => navigate({wordView: view === 'connections' ? 'connections' : undefined,
+          swipeWord: word, familyMap: undefined}, null, true)}
+        onFamilyMapChange={open => navigate({familyMap: open}, null, true)}
         widen={() => changeScope('all')}/>
     </Suspense>}
     {!composing && <div className={'aw-layout' + (hideInspector ? ' aw-layout-single' : '') + (showStoryPanel ? ' aw-layout-story' : '')} hidden={!!route.story}>

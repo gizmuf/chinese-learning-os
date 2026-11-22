@@ -1,0 +1,112 @@
+.as-viewport[data-word-focus] {
+  --as-word-peer: clamp(29px, 8cqw, 58px);
+  --as-word-span: min(24cqw, 124px);
+  --as-reach-x: min(32cqw, 164px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, min(35%, 184px)) minmax(0, 1fr);
+  align-items: center;
+  height: auto;
+  min-height: clamp(204px, 34cqw, 312px);
+}
+.as-viewport[data-word-focus] .as-composition {
+  position: relative;
+  inset: auto;
+  transform: none;
+  grid-area: 1 / 2;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  row-gap: 2px;
+  width: 100%;
+  height: auto;
+  padding-block: 12px;
+}
+.as-viewport[data-word-focus] .as-glyph {
+  position: relative;
+  inset: auto;
+  grid-area: 1 / 1;
+  width: 100%;
+  min-width: 0;
+}
+.as-viewport[data-word-focus] .as-word-ink { gap: 0; letter-spacing: normal; }
+.as-viewport[data-word-focus] .as-neighbour { width: min(27cqw, 136px); }
+.as-viewport[data-word-focus] .as-peek { height: var(--as-word-peer); }
+.as-viewport[data-word-focus] .as-peek .as-word-ink {
+  font-size: min(var(--as-word-peer), calc(var(--as-word-span) / var(--as-length)));
+}
+.as-viewport[data-word-focus]:not([data-word-branches]) .as-composition .as-word-ink {
+  font-size: min(calc(1.22 * var(--as-word-peer)), calc(1.22 * var(--as-word-span) / var(--as-length)));
+}
+.as-word-focus-caption {
+  grid-area: 2 / 1;
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  width: 100%;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.as-word-focus-caption :is(.as-reading, .as-meaning) { min-height: 0; margin: 0; }
+.as-word-focus-caption [data-reserve]::before { content: attr(data-reserve); visibility: hidden; }
+.as-word-focus-caption .as-reading { line-height: 1.1; }
+.as-word-focus-caption .as-meaning { line-height: 1.18; }
+.as-stage[data-playing=true] .as-word-focus-caption [data-revealed=true] { animation: as-reveal 140ms ease-out; }
+.as-stage:has([data-word-focus]) > .as-caption { min-height: 0; padding-block: 0 8px; }
+.as-viewport[data-word-focus][data-word-branches] {
+  --as-connection-peer: clamp(25px, 4.4cqw, 40px);
+  grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(0, 2.06fr) repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto minmax(92px, auto) auto;
+  align-items: stretch;
+  gap: 6px;
+  min-height: 0;
+  padding: 8px clamp(7px, 1.6cqw, 20px);
+  touch-action: pan-y pinch-zoom;
+}
+.as-viewport[data-word-focus][data-word-branches] .as-composition {
+  grid-area: 2 / 3;
+  padding: 4px;
+  pointer-events: auto;
+  touch-action: none;
+}
+.as-viewport[data-word-focus][data-word-branches] .as-composition .as-word-ink {
+  font-size: min(calc(1.22 * var(--as-connection-peer)), calc(29cqw / var(--as-length)));
+}
+.as-viewport[data-word-branches] .as-word-focus-caption .as-meaning {
+  font-size: clamp(.85rem, 1.75cqw, 1.05rem);
+}
+.as-stage:has([data-word-focus]) > .as-caption:empty { display: none; }
+
+@container (max-width: 599px) {
+  .as-viewport[data-word-focus][data-word-branches] {
+    --as-connection-peer: clamp(22px, 5.3cqw, 32px);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr) minmax(0, 1fr);
+    grid-template-rows: auto minmax(96px, auto) auto auto auto;
+    gap: 4px;
+  }
+  .as-viewport[data-word-focus][data-word-branches] .as-composition { grid-area: 2 / 2; }
+}
+
+@container (min-width: 720px) {
+  .as-viewport[data-word-focus][data-word-branches] {
+    grid-template-columns:
+      minmax(0, 1fr) repeat(2, minmax(0, min(10%, 100px)))
+      minmax(0, min(23%, 188px))
+      repeat(2, minmax(0, min(10%, 100px))) minmax(0, 1fr);
+    column-gap: 4px;
+  }
+  .as-viewport[data-word-focus][data-word-branches] .as-composition {
+    grid-area: 2 / 4;
+    align-content: start;
+  }
+  .as-word-axis:is([data-word-axis=left], [data-word-axis=right]) .as-axis-word {
+    align-content: start;
+    padding-block-start: 8px;
+  }
+  .as-viewport .as-word-axis[data-word-axis=up] { grid-area: 1 / 4; }
+  .as-viewport .as-word-axis[data-word-axis=down] { grid-area: 3 / 4; }
+  .as-viewport .as-word-axis[data-word-axis=left] { grid-area: 2 / 2 / 3 / 4; }
+  .as-viewport .as-word-axis[data-word-axis=right] { grid-area: 2 / 5 / 3 / 7; }
+  .as-viewport .as-word-branch[data-word-branch-rail] { align-self: stretch; max-height: none; min-height: 0; contain: size; }
+  .as-viewport .as-word-branch[data-word-branch-rail=left] { grid-area: 1 / 1 / 4 / 2; }
+  .as-viewport .as-word-branch[data-word-branch-rail=right] { grid-area: 1 / 7 / 4 / 8; }
+}

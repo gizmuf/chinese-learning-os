@@ -32,6 +32,8 @@ export type WorkspaceRoute = {
   buildPart?: string;
   swipeSlot?: string;
   swipeWord?: string;
+  wordView?: 'connections';
+  familyMap?: boolean;
 };
 
 export function isAtlasWorkspaceEntry(params: URLSearchParams) {
@@ -62,7 +64,11 @@ export function readAtlasWorkspaceRoute(search: string): WorkspaceRoute {
       buildPart: buildPart === '' || buildPart && /^[\p{Script=Han}\u2e80-\u2fdf\u31c0-\u31ee\ue000-\uf8ff]$/u.test(buildPart) ? buildPart : undefined,
     }),
     ...(mode === 'swipe' && swipeSlot && /^(?:whole|\d(?:\.\d){0,12})$/.test(swipeSlot) && {swipeSlot}),
-    ...(mode === 'swipe' && swipeWord && /^\p{Script=Han}{1,12}$/u.test(swipeWord) && {swipeWord}),
+    ...(mode === 'swipe' && params.get('familyMap') === '1' && {familyMap: true}),
+    ...(mode === 'swipe' && swipeWord && /^\p{Script=Han}{1,12}$/u.test(swipeWord) && {
+      swipeWord,
+      ...(params.get('wordView') === 'connections' && {wordView: 'connections' as const}),
+    }),
     relation: readOption(params.get('relation'), ['literal', 'structure', 'topic'], 'literal'),
     scope: parseBrowseScope(params.get('hsk')),
     anchor: readAnchor(params.get('anchor')),
@@ -111,7 +117,11 @@ export function atlasWorkspaceHref(route: WorkspaceRoute, scroll = 0) {
   }
   if (route.mode === 'swipe') {
     if (route.swipeSlot) params.set('swipeSlot', route.swipeSlot);
-    if (route.swipeWord) params.set('swipeWord', route.swipeWord);
+    if (route.swipeWord) {
+      params.set('swipeWord', route.swipeWord);
+      if (route.wordView === 'connections') params.set('wordView', route.wordView);
+    }
+    if (route.familyMap) params.set('familyMap', '1');
   }
   if (scroll > 0) params.set('awscroll', String(Math.floor(scroll)));
   return '?' + params;
