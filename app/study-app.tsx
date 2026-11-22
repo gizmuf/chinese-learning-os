@@ -115,6 +115,7 @@ const TodayCourseReviews = lazy(() => import("./today-course-reviews"));
 const PronunciationLab = lazy(() => import("./pronunciation-lab-ui"));
 const TodayRecognition = lazy(() => import("./today-recognition"));
 const ConnectorsPhoneLesson = lazy(() => import('./connectors-phone-lesson'));
+const LibraryVocabularyGroups = lazy(() => import('./library-vocabulary-groups'));
 type View = "hsk3-prep" | "pronunciation" | "sentence-check" | "labs" | "shuoshuo-lesson" | "private-lessons" | "shuoshuo" | "myday" | "studio" | "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
 export default function StudyApp({
   user,
@@ -174,7 +175,8 @@ export default function StudyApp({
   const [search, setSearch] = useState("");
   const [searchMode,setSearchMode]=useState<SearchMode>('pinyin');
   const [lesson, setLesson] = useState("all");
-  const [libraryLayout,setLibraryLayout]=useState<'cards'|'notebook'>('cards'),[practiceSelection,setPracticeSelection]=useState(false);
+  const [libraryLayout,setLibraryLayout]=useState<'cards'|'notebook'|'groups'>('cards'),[practiceSelection,setPracticeSelection]=useState(false);
+  const groupedLibrary = libraryLayout === 'groups' && !practiceSelection;
   const [level, setLevel] = useState<BrowseScope>(() => typeof window === 'undefined' ? defaultHskScope : initialGlobalHsk(location.search, !!document.referrer && new URL(document.referrer).origin === location.origin));
   const currentScope = useRef(level);
   const scopeChoice = useRef(0);
@@ -307,7 +309,15 @@ export default function StudyApp({
         const requestedAll=isAllReviewEntry(window.location.search),languageRoute=languagePracticeRoute(window.location.search,sourceItems);
         const writingRoute=writingPracticeRoute(window.location.search,sourceItems);
         if(alive&&writingRoute){const item=sourceItems.find(v=>v.id===writingRoute.itemId)!;setSelected(item);setMode(writingRoute.mode);setWritingLayout(writingRoute.layout);setWritingOrigin(writingRoute.origin);setSkill('writing');setSession(null);setFinished(false);setView('practice');}
-        else if(alive&&new URLSearchParams(window.location.search).get('study')==='library'){const p=new URLSearchParams(window.location.search);setView('lessons');setSession(null);setLibraryLayout(p.get('layout')==='notebook'?'notebook':'cards');setPracticeSelection(p.get('set')==='selected');}
+        else if (alive && new URLSearchParams(window.location.search).get('study') === 'library') {
+          const params = new URLSearchParams(window.location.search);
+          const selected = params.get('set') === 'selected';
+          const layout = params.get('layout');
+          setView('lessons');
+          setSession(null);
+          setLibraryLayout(layout === 'notebook' || layout === 'groups' && !selected ? layout : 'cards');
+          setPracticeSelection(selected);
+        }
         else if(alive&&languageRoute){const target=sourceItems.find(item=>item.id===languageRoute.itemId)!;setSelected(target);setSkill(languageRoute.skill);setLanguageRun(languageRoute.runId);setWritingOrigin(languageRoute.origin);setMode('recall');setSession(null);setFinished(false);setView('practice');
         }else if(alive&&requestedAll){
           const inScope = items.filter(item=>knownHskInScope(item.hskLevel,currentScope.current));
@@ -1008,16 +1018,27 @@ export default function StudyApp({
                   <p className="eyebrow">{t("WORDS FOR YOUR REAL LIFE")}</p>
                   <button className="grammar-back" onClick={() => changeView("hsk3-prep")}>HSK 3 Exam Prep →</button>
                   <button className="grammar-back" onClick={() => changeView("grammar")}>HSK 1–3 grammar →</button>
+                  <button type="button" className="grammar-back" onClick={() => {
+                    const layout = groupedLibrary ? 'cards' : 'groups';
+                    setPracticeSelection(false);
+                    setLibraryLayout(layout);
+                    libraryRoute(layout, false);
+                  }}>{groupedLibrary ? 'Back to cards' : 'Word groups →'}</button>
                   <h1>
                     {t("Your learning library")}<span className="orange">.</span>
                   </h1>
                   <p>
+                    {groupedLibrary ? label + ' · Grouped HSK vocabulary' : <>
                     {practiceSelection?libraryCopy.selected:label} · {practiceSelection?scopedChoices.length:studyItems.length} {t("words & phrases.")}{" "}
                     {!practiceSelection && (level === 'all' ? 'Includes unclassified extras.' : 'Classified course vocabulary.')}{' '}
                     {!practiceSelection && [4, 5, 6, '7-9'].includes(level) && 'Authored study cards currently cover HSK 1–3. Higher HSK levels are available to browse in Atlas.'}
+                    </>}
                   </p>
                 </div>
               </div>
+              {groupedLibrary ? <Suspense fallback={<p role="status">Opening word groups…</p>}>
+                <LibraryVocabularyGroups scope={level}/>
+              </Suspense> : <>
               <nav className="library-lesson-links" aria-label={libraryLessonLabel}>
                 <span><BookOpen size={15}/>{libraryLessonLabel}</span>
                 <button type="button" onClick={openShuoshuoLesson}>Shuoshuo · Morning</button>
@@ -1104,6 +1125,7 @@ export default function StudyApp({
                 <div className="empty-state">
                   {practiceSelection?libraryCopy.empty:t("No words found. Try another spelling or lesson.")}</div>
               )}
+              </>}
               <div id="library-end" className="library-boundary" tabIndex={-1}/>
             </>
           )}
