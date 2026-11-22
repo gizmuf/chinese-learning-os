@@ -45,6 +45,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
   const [localRoute, setRoute] = useState(() => embedded?.initial ?? readAtlasWorkspaceRoute(window.location.search));
   const route = useMemo(() => global && global.scope !== localRoute.scope ? {...localRoute, scope: global.scope} : localRoute,
     [localRoute, global?.scope]);
+  const [swipeHistoryEntry, setSwipeHistoryEntry] = useState(0);
   const [depth, setDepth] = useState(() => embedded ? 0 : workspaceHistory().depth);
   const embedTrail = useRef<{route: WorkspaceRoute; scroll: number}[]>([]);
   const searchType = route.relation === 'structure' ? 'structure' : 'literal';
@@ -81,6 +82,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
       audio.stop();
       const next = readAtlasWorkspaceRoute(location.search);
       if (next.mode === 'read') setJourneyVisited(true);
+      if (next.mode === 'swipe') setSwipeHistoryEntry(entry => entry + 1);
       setDepth(workspaceHistory().depth);
       setRoute(next);
     };
@@ -219,7 +221,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
       const hanzi = (fromParts && route.buildHanzi) || context.hanzi;
       const part = fromParts ? route.buildPart : route.kind === 'component' ? context.part?.glyph : undefined;
       if (mode === 'build') openBuilder(hanzi, part);
-      else navigate({mode, buildHanzi: hanzi, buildPart: part, swipeSlot: undefined, wide: true, story: '', step: 0, exercise: ''}, 0);
+      else navigate({mode, buildHanzi: hanzi, buildPart: part, swipeSlot: undefined, swipeWord: undefined, wide: true, story: '', step: 0, exercise: ''}, 0);
       return;
     }
     const available = mode === 'read' ? workspaceGroups(locale, route.scope) : [];
@@ -363,8 +365,9 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
         showWords={hanzi => selectFamily(hanzi)} widen={() => changeScope('all')}/>
     </Suspense>}
     {swiping && <Suspense fallback={<p role="status">Opening Swipe…</p>}>
-      <AtlasSwipe hanzi={route.buildHanzi} part={route.buildPart} slot={route.swipeSlot} scope={route.scope}
-        onSelect={({hanzi, part, slot}) => navigate({buildHanzi: hanzi, buildPart: part, swipeSlot: slot}, null, true)}
+      <AtlasSwipe key={swipeHistoryEntry} entryWord={route.swipeWord}
+        hanzi={route.buildHanzi} part={route.buildPart} slot={route.swipeSlot} scope={route.scope}
+        onSelect={({hanzi, part, slot}) => navigate({buildHanzi: hanzi, buildPart: part, swipeSlot: slot, swipeWord: undefined}, null, true)}
         widen={() => changeScope('all')}/>
     </Suspense>}
     {!composing && <div className={'aw-layout' + (hideInspector ? ' aw-layout-single' : '') + (showStoryPanel ? ' aw-layout-story' : '')} hidden={!!route.story}>

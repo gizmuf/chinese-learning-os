@@ -1,10 +1,10 @@
 'use client';
 
 import {
-  useEffect, useMemo, useRef, useState,
+  useEffect, useId, useLayoutEffect, useMemo, useRef, useState,
   type CSSProperties, type FormEvent, type KeyboardEvent, type PointerEvent,
 } from 'react';
-import {ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Pause, Play, Search} from 'lucide-react';
+import {BookOpen, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Pause, Play, Search} from 'lucide-react';
 import {assemblyIndex, assemblyMeaning, type AssemblyPart} from './atlas-assembly-model';
 import {type BrowseScope} from './hsk-scope';
 import {
@@ -13,7 +13,10 @@ import {
 } from './atlas-swipe-model';
 import {childSwipeRegions, rootSwipeRegions, type SwipeLens} from './atlas-swipe-regions';
 import {movingInk, SwipeArtwork, type SwipeMotion} from './atlas-swipe-art';
+import AtlasSwipeStoryPanel from './atlas-swipe-story-panel';
+import {findSwipeStory} from './atlas-swipe-story-data';
 import './atlas-swipe.css';
+import './atlas-swipe-story-entry.css';
 
 type Mode = 'characters' | 'words';
 type Selection = {hanzi: string; part?: string; slot?: string};
@@ -39,16 +42,16 @@ function badgePosition(part: AssemblyPart, vertical: boolean): CSSProperties {
   return {left: horizontal * 100 + '%', top: offset * 100 + '%'};
 }
 
-export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: {
-  hanzi?: string; part?: string; slot?: string; scope: BrowseScope;
+export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, onSelect, widen}: {
+  hanzi?: string; part?: string; slot?: string; scope: BrowseScope; entryWord?: string;
   onSelect: (selection: Selection) => void; widen: () => void;
 }) {
   const index = useMemo(() => assemblyIndex('en'), []);
-  const [mode, setMode] = useState<Mode>('characters');
+  const [mode, setMode] = useState<Mode>(entryWord ? 'words' : 'characters');
   const [all, setAll] = useState(false);
   const [lens, setLens] = useState<SwipeLens>();
-  const [wordAnchor, setWordAnchor] = useState(hanzi || '学');
-  const [wordId, setWordId] = useState('');
+  const [wordAnchor, setWordAnchor] = useState(() => [...(entryWord ?? '')][0] ?? (hanzi || '学'));
+  const [wordSelection, setWordSelection] = useState<{id?: string; text?: string}>({text: entryWord});
   const [query, setQuery] = useState('');
   const [error, setError] = useState('');
   const [pace, setPace] = useState(2);
@@ -57,6 +60,12 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
   const [showMeaning, setShowMeaning] = useState(true);
   const [reveal, setReveal] = useState<{key: string; step: number}>();
   const [motion, setMotion] = useState<SwipeMotion>();
+  const [openStory, setOpenStory] = useState<{key: string; focus?: string}>();
+  const storyAreaId = useId();
+  const storyArea = useRef<HTMLDivElement>(null);
+  const storyButton = useRef<HTMLButtonElement>(null);
+  const viewport = useRef<HTMLDivElement>(null);
+  const storyScroll = useRef(0);
   const gesture = useRef<Gesture | undefined>(undefined);
   const settling = useRef(false);
   const stopAnimation = useRef<(() => void) | undefined>(undefined);
@@ -75,7 +84,9 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
     : wordFrames('en', scope, wordAnchor, false), [all, focus, index, mode, scope, wordAnchor]);
   const inspected = inside && regions.find(region => region.part.id === inside.active);
   const frames = all ? scopedFrames : familyFrames;
-  const word = mode === 'words' ? frames.find(frame => frame.id === wordId) ?? frames[0] : undefined;
+  const word = mode === 'words'
+    ? frames.find(frame => wordSelection.id ? frame.id === wordSelection.id : frame.text === wordSelection.text) ?? frames[0]
+    : undefined;
   const current = word ?? characterFrame;
   const display = motion?.from ?? current;
   const map = useMemo(() => swipeMap(frames, current, mode === 'characters' && !all), [all, current, frames, mode]);
@@ -89,6 +100,27 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
   const revealKey = mode + ':' + current.id;
   const step = reveal?.key === revealKey ? reveal.step : 0;
   const animationActive = motion !== undefined;
+  const story = !inside && (mode === 'characters' || word) ? findSwipeStory({...current, mode}) : undefined;
+  const storyKey = [scope, all, mode, current.id, current.anchor, current.character?.part?.id].join(':');
+  if (openStory && (openStory.key !== storyKey || !story)) setOpenStory(undefined);
+  const storyActive = openStory?.key === storyKey && !!story;
+  const storyFocus = storyActive ? openStory.focus : undefined;
+  const storyCharacter = story?.kind === 'character' ? index.characters.get(story.target) : undefined;
+  const storyArtwork = storyActive && word && storyCharacter
+    ? swipeCharacterFrame({character: storyCharacter}) : undefined;
+  const relatedCharacter = story?.related && index.characters.get(story.related.hanzi);
+  const retainedPart = relatedCharacter?.parts.find(piece => storyCharacter?.parts.some(source => source.glyph === piece.glyph));
+
+  useLayoutEffect(() => {
+    if (!storyActive || !storyArea.current || !viewport.current) return;
+    const artTop = viewport.current.getBoundingClientRect().top;
+    const panelBottom = storyArea.current.getBoundingClientRect().bottom;
+    const stickyBottom = document.querySelector('.app-shell .topbar')?.getBoundingClientRect().bottom ?? 0;
+    const visibleBottom = window.visualViewport
+      ? window.visualViewport.offsetTop + window.visualViewport.height : window.innerHeight;
+    const adjustment = Math.min(Math.max(0, panelBottom - visibleBottom + 8), artTop - Math.max(stickyBottom, 0) - 8);
+    if (adjustment) window.scrollBy({top: adjustment, behavior: 'instant'});
+  }, [storyActive]);
 
   useEffect(() => {
     const pinyin = window.setTimeout(() => setReveal({key: revealKey, step: 1}), pace * 250);
@@ -106,10 +138,11 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
   }, []);
 
   function applyFrame(target: SwipeFrame) {
+    setOpenStory(undefined);
     setLens(undefined);
     if (target.character) onSelect({hanzi: target.text, part: target.anchor || undefined, slot: target.character.part?.id});
     else {
-      setWordId(target.id);
+      setWordSelection({id: target.id});
       setWordAnchor(target.anchor);
     }
   }
@@ -153,12 +186,13 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
     };
   });
   useEffect(() => {
-    if (!playing || animationActive) return;
+    if (!playing || animationActive || storyActive) return;
     const timer = window.setTimeout(() => advance.current(), pace * 1000 - animationDuration);
     return () => window.clearTimeout(timer);
-  }, [animationActive, pace, playing, revealKey]);
+  }, [animationActive, pace, playing, revealKey, storyActive]);
 
   function go(direction: SwipeDirection) {
+    if (storyActive) return;
     const target = map.neighbours[direction];
     if (!target) return;
     setPlaying(false);
@@ -166,6 +200,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
   }
 
   function play() {
+    if (storyActive) return;
     if (playing) { setPlaying(false); return; }
     if (frames.length < 2 || settling.current) return;
     setLens(undefined);
@@ -175,12 +210,13 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
 
   function changeMode(nextMode: Mode) {
     if (mode === nextMode) return;
+    setOpenStory(undefined);
     clearMotion();
     setPlaying(false);
     setError('');
     if (nextMode === 'words') {
       setWordAnchor(character.data.hanzi);
-      setWordId('');
+      setWordSelection({});
     }
     setLens(undefined);
     setMode(nextMode);
@@ -188,6 +224,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
 
   function changeRange(full: boolean) {
     if (all === full) return;
+    setOpenStory(undefined);
     clearMotion();
     setPlaying(false);
     setLens(undefined);
@@ -255,7 +292,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
 
   function pointerDown(event: PointerEvent<HTMLDivElement>) {
     const element = event.target as Element;
-    if (!event.isPrimary || event.button !== 0 || settling.current || element.closest('[data-swipe-control]')) return;
+    if (storyActive || !event.isPrimary || event.button !== 0 || settling.current || element.closest('[data-swipe-control]')) return;
     if (mode === 'words' && !word) return;
     setPlaying(false);
     let partSlot = element.closest('[data-swipe-slot]')?.getAttribute('data-swipe-slot') ?? undefined;
@@ -317,7 +354,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
   }
 
   function keyDown(event: KeyboardEvent<HTMLDivElement>) {
-    if (inside) return;
+    if (inside || storyActive || event.target === storyButton.current) return;
     const direction = arrowDirections[event.key];
     if (!direction) return;
     event.preventDefault();
@@ -325,7 +362,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
   }
 
   function tapPart(piece: AssemblyPart) {
-    if (settling.current) return;
+    if (storyActive || settling.current) return;
     setPlaying(false);
     const region = regions.find(entry => entry.part.id === piece.id);
     if (inside) {
@@ -342,12 +379,37 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
     }
   }
 
+  function startStory() {
+    if (!story || animationActive || gesture.current) return;
+    setPlaying(false);
+    storyScroll.current = window.scrollY;
+    setOpenStory({key: storyKey, focus: story.frames[0]?.focus});
+  }
+
+  function closeStory() {
+    setOpenStory(undefined);
+    requestAnimationFrame(() => {
+      window.scrollTo({top: storyScroll.current, behavior: 'instant'});
+      storyButton.current?.focus({preventScroll: true});
+    });
+  }
+
+  function compareStory(hanzi: string) {
+    if (relatedCharacter?.data.hanzi !== hanzi || !retainedPart) return;
+    setAll(false);
+    setMode('characters');
+    applyFrame(swipeCharacterFrame({character: relatedCharacter, part: retainedPart}));
+    requestAnimationFrame(() => viewport.current?.focus());
+  }
+
   const glyphMeaning = (glyph: string) => {
     const entry = index.characters.get(glyph);
     return entry ? assemblyMeaning(entry, true) : '';
   };
 
-  return <section className="as" aria-label="Swipe Atlas" data-mode={mode}>
+  return <section className="as" aria-label="Swipe Atlas" data-mode={mode} onKeyDown={event => {
+    if (storyActive && event.key === 'Escape') closeStory();
+  }}>
     <div className="as-toolbar">
       <div className="as-mode" role="group" aria-label="Study material">
         <button type="button" aria-pressed={mode === 'characters'} onClick={() => changeMode('characters')}>Characters</button>
@@ -368,13 +430,19 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
       </label>
     </div>
     {error && <p className="as-error" role="alert">{error}</p>}
-    <div className="as-stage">
-      <div className="as-viewport" role="group" tabIndex={0} aria-label="Swipe characters"
+    <div className="as-stage" data-story-open={storyActive || undefined}>
+      <div className="as-viewport" ref={viewport} role="group" tabIndex={storyActive ? -1 : 0}
+        aria-label={mode === 'characters' ? 'Swipe characters' : 'Swipe words'}
         aria-describedby="as-gesture-help" data-axis={map.vertical ? 'vertical' : 'horizontal'} data-depth={inside?.trail.length ?? 0}
         data-motion={motion ? motion.settling ? 'settling' : 'dragging' : 'rest'}
         onPointerDown={pointerDown} onPointerMove={pointerMove} onPointerUp={pointerUp}
         onLostPointerCapture={cancelPointer} onPointerCancel={cancelPointer} onKeyDown={keyDown}>
         <div className="as-registration" aria-hidden="true"/>
+        {story && <button type="button" ref={storyButton} className="as-story-trigger" data-swipe-control
+          aria-expanded={storyActive} aria-controls={storyAreaId}
+          aria-disabled={animationActive || undefined} onClick={startStory}>
+          <BookOpen size={16} aria-hidden="true"/> Story
+        </button>}
         {inside && <nav className="as-levels" aria-label="Component levels" data-swipe-control>
           <button type="button" aria-label={'Back to ' + character.data.hanzi} onClick={() => setLens(undefined)}>
             <ChevronLeft size={15}/><span lang="zh-Hans">{character.data.hanzi}</span>
@@ -394,6 +462,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
           const orthogonal = direction !== map.next && direction !== map.previous;
           const label = orthogonal ? target.character?.part?.positions[0] : undefined;
           return <button type="button" className="as-neighbour" key={direction} data-swipe-control data-swipe-direction={direction}
+            disabled={storyActive}
             aria-label={(label ? 'Move to ' + label + ' · ' : direction === map.next ? 'Next · ' : 'Previous · ') + target.text}
             style={{'--as-x': x, '--as-y': y, '--as-enter': motion?.direction === direction ? motion.progress : 0} as CSSProperties}
             onClick={() => go(direction)}>
@@ -407,7 +476,8 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
         </div> : <div className="as-composition">
           <div className="as-glyph as-current" role="img" aria-label={current.text} data-character={current.text}
             style={motion && movingInk(display, motion, false)}>
-            <SwipeArtwork frame={display} interactive regions={inside ? regions : undefined} active={inside?.active}/>
+            <SwipeArtwork frame={storyArtwork ?? display} interactive regions={inside ? regions : undefined}
+              active={inside?.active} storyFocus={storyFocus}/>
           </div>
           {motion && <div className="as-glyph as-incoming" aria-hidden="true" style={movingInk(display, motion, true)}>
             <SwipeArtwork frame={motion.target}/>
@@ -415,7 +485,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
           <div className="as-badges" aria-label="Component family sizes" hidden={!!motion}>
             {parts.map(({piece, count}) =>
               <button type="button" key={piece.id} className="as-count" data-swipe-slot={piece.id} data-component={piece.glyph}
-                aria-pressed={inside ? inside.active === piece.id : !all && focus.part?.id === piece.id}
+                disabled={storyActive} aria-pressed={inside ? inside.active === piece.id : !all && focus.part?.id === piece.id}
                 aria-label={'Explore ' + piece.glyph + ' · ' + piece.positions[0] + ' · ' + count + ' characters'}
                 style={badgePosition(piece, inside ? true : map.vertical)} onClick={event => { if (!event.detail) tapPart(piece); }}>
                 <span>{count}</span>
@@ -442,11 +512,16 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
             </div>}
         </>}
       </div>
+      <div className="as-story-area" id={storyAreaId} ref={storyArea} hidden={!storyActive}>
+        {storyActive && <AtlasSwipeStoryPanel key={story.id} story={story} showPinyin={showPinyin} showMeaning={showMeaning}
+          onClose={closeStory} onCompare={retainedPart ? compareStory : undefined} onFocusPart={focus =>
+            setOpenStory(active => active?.key === storyKey ? {...active, focus} : active)}/>}
+      </div>
       {broadFamily && <p className="as-narrow">No matches in this HSK scope. <button type="button" onClick={widen}>Show all HSK levels</button></p>}
       <footer className="as-controls">
         <div className="as-playback">
           <button type="button" className="as-play" aria-label={playing ? 'Pause continuous play' : 'Play continuous'}
-            disabled={frames.length < 2} onClick={play}>
+            disabled={storyActive || frames.length < 2} onClick={play}>
             {playing ? <Pause size={18}/> : <Play size={18}/>}<span>{playing ? 'Pause' : 'Play'}</span>
           </button>
           <label className="as-select">
@@ -457,7 +532,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
         </div>
         {map.total > 0 && <button type="button" className="as-progress" data-current={map.index + 1} data-total={map.total}
           aria-label={inside ? 'Position in family' : 'Next · ' + (map.index + 1) + ' of ' + map.total}
-          aria-disabled={!!inside || !next} onClick={() => { if (!inside && next) go(map.next); }}>
+          aria-disabled={storyActive || !!inside || !next} onClick={() => { if (!inside && next) go(map.next); }}>
           {!all && current.anchor && <span lang="zh-Hans">{inside?.trail.at(-1)?.part.glyph ?? current.anchor}</span>}
           {map.index >= 0 ? (map.index + 1) + ' / ' + map.total : map.total + ' in scope'}
           {!inside && next && <ChevronRight size={15} aria-hidden="true"/>}

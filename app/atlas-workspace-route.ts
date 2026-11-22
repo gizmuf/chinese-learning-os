@@ -31,6 +31,7 @@ export type WorkspaceRoute = {
   buildHanzi?: string;
   buildPart?: string;
   swipeSlot?: string;
+  swipeWord?: string;
 };
 
 export function isAtlasWorkspaceEntry(params: URLSearchParams) {
@@ -51,6 +52,7 @@ export function readAtlasWorkspaceRoute(search: string): WorkspaceRoute {
   const mode = readOption(params.get('mode'), workspaceModes, 'family');
   const buildPart = params.get('buildPart');
   const swipeSlot = params.get('swipeSlot');
+  const swipeWord = params.get('swipeWord');
   const story = params.get('wsstory');
   const storyPanel = params.get('storyPanel') === '1';
   return {
@@ -60,6 +62,7 @@ export function readAtlasWorkspaceRoute(search: string): WorkspaceRoute {
       buildPart: buildPart === '' || buildPart && /^[\p{Script=Han}\u2e80-\u2fdf\u31c0-\u31ee\ue000-\uf8ff]$/u.test(buildPart) ? buildPart : undefined,
     }),
     ...(mode === 'swipe' && swipeSlot && /^(?:whole|\d(?:\.\d){0,12})$/.test(swipeSlot) && {swipeSlot}),
+    ...(mode === 'swipe' && swipeWord && /^\p{Script=Han}{1,12}$/u.test(swipeWord) && {swipeWord}),
     relation: readOption(params.get('relation'), ['literal', 'structure', 'topic'], 'literal'),
     scope: parseBrowseScope(params.get('hsk')),
     anchor: readAnchor(params.get('anchor')),
@@ -106,7 +109,10 @@ export function atlasWorkspaceHref(route: WorkspaceRoute, scroll = 0) {
     if (route.buildHanzi) params.set('buildHanzi', route.buildHanzi);
     if (route.buildPart !== undefined) params.set('buildPart', route.buildPart);
   }
-  if (route.mode === 'swipe' && route.swipeSlot) params.set('swipeSlot', route.swipeSlot);
+  if (route.mode === 'swipe') {
+    if (route.swipeSlot) params.set('swipeSlot', route.swipeSlot);
+    if (route.swipeWord) params.set('swipeWord', route.swipeWord);
+  }
   if (scroll > 0) params.set('awscroll', String(Math.floor(scroll)));
   return '?' + params;
 }
