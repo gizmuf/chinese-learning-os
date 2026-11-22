@@ -8,7 +8,7 @@ Source: `Mandarin_Connectors_Phone_Reading_and_Hanzi.pdf`, 27 pages, provided as
 
 SHA-256: `74b5db271fea7c66eb57512eb6b3cbb91c0561051052a620adf8774c21d32b54`.
 
-The unchanged PDF is included at `/lessons/connectors-phone/Mandarin_Connectors_Phone_Reading_and_Hanzi.pdf`. Its credits and license pages remain intact.
+The unchanged PDF is included at `/assets/connectors-phone/Mandarin_Connectors_Phone_Reading_and_Hanzi-74b5db271fea.pdf`. Its credits and license pages remain intact.
 
 | Source pages | Lesson section | Coverage |
 | --- | --- | --- |
@@ -54,4 +54,4 @@ The previous nine-fragment Qwen excerpt omits five source sentences and is not s
 - WebKit with an iPad Pro 11 profile checked direct Reading Lab entry, touch actions, muted audio playback/resume, popup continuity and notebook input. Three rapid synthetic pen contacts were saved; an additional palm touch did not add ink. This is browser validation, not a physical Apple Pencil test.
 - Responsive checks at 390 px found no horizontal page overflow. Screenshots and machine-readable evidence are under `output/playwright/` and `output/connectors-phone-20261122/` in the working checkout.
 
-This task prepares a **local reviewed source change**, without a production deployment, new shared-reading token, audience change or Sites operation. Integration can resume from branch `codex/connectors-phone-lesson-20261122`, based on `4c6af2b`, using the deployment owner’s current integration base. The source PDF and lesson have not been pushed to the public GitHub repository.
+The lesson was first reviewed locally in `867adc72`. The authorized integration targets Alibaba and Contabo using their current host-specific source parents. The PDF uses an existing allowed static asset directory and a content-specific filename; publication policy and audiences remain unchanged. No new shared-reading token or Sites operation is required. Current host releases and activation evidence belong in `CHINESE-OS-STATUS.md` and `output/connectors-phone-deploy-20261122/`.
