@@ -1,7 +1,7 @@
 'use client';
 
 import {lazy, Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState, type FormEvent} from 'react';
-import {ArrowLeft, ArrowRight, BookOpen, ChevronRight, Columns2, Compass, Layers2, Maximize2, Minimize2, PenLine} from 'lucide-react';
+import {ArrowLeft, ArrowRight, BookOpen, ChevronRight, Columns2, Compass, Layers2, Hand, Maximize2, Minimize2, PenLine} from 'lucide-react';
 import {useI18n} from './i18n';
 import {GlobalHskSelect, useGlobalHsk} from './global-hsk';
 import type {CloudWord} from './atlas-cloud-model';
@@ -18,9 +18,10 @@ import './atlas-workspace.css';
 import {readReadingLabRoute, readingLabHref} from './reading-lab-route';
 
 const AtlasAssembly = lazy(() => import('./atlas-assembly'));
+const AtlasSwipe = lazy(() => import('./atlas-swipe'));
 
 const modes = [
-  ['family', 'Whole family', Columns2], ['read', 'Read through', BookOpen], ['map', 'Map', Compass], ['build', 'Build', Layers2], ['practise', 'Practise', PenLine],
+  ['family', 'Whole family', Columns2], ['read', 'Read through', BookOpen], ['map', 'Map', Compass], ['build', 'Build', Layers2], ['swipe', 'Swipe', Hand], ['practise', 'Practise', PenLine],
 ] as const;
 
 const originalViews: {name: string; views: [string, CloudRoute['layout']][]}[] = [
@@ -212,8 +213,13 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
   }
 
   function selectMode(mode: WorkspaceRoute['mode']) {
-    if (mode === 'build') {
-      if (route.mode !== 'build') openBuilder(context.hanzi, route.kind === 'component' ? context.part?.glyph : undefined);
+    if (mode === 'build' || mode === 'swipe') {
+      if (mode === route.mode) return;
+      const fromParts = route.mode === 'build' || route.mode === 'swipe';
+      const hanzi = (fromParts && route.buildHanzi) || context.hanzi;
+      const part = fromParts ? route.buildPart : route.kind === 'component' ? context.part?.glyph : undefined;
+      if (mode === 'build') openBuilder(hanzi, part);
+      else navigate({mode, buildHanzi: hanzi, buildPart: part, swipeSlot: undefined, wide: true, story: '', step: 0, exercise: ''}, 0);
       return;
     }
     const available = mode === 'read' ? workspaceGroups(locale, route.scope) : [];
@@ -277,6 +283,8 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
   }
 
   const building = !embedded && route.mode === 'build' && !route.story;
+  const swiping = !embedded && route.mode === 'swipe' && !route.story;
+  const composing = building || swiping;
   const canShowStoryPanel = route.mode === 'family' && !route.story;
   const showStoryPanel = canShowStoryPanel && route.storyPanel;
   const shortFamily = (route.relation === 'structure' ? context.structural.length : context.members.length) <= workspaceBoardSize;
@@ -293,7 +301,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
   const inspector = <WorkspaceInspector context={context} route={route} audio={audio} explore={explore} showFamily={anchor => selectFamily(anchor, true)}
     onStory={story} onWriting={() => setExercise('writing')} onBuild={embedded ? undefined : openBuilder} chunksHref={embedded ? '' : chunksHref()}/>;
 
-  return <section ref={root} className={'atlas-workspace' + (route.wide ? ' aw-wide' : '') + (showStoryPanel ? ' aw-story-open' : '') + (building ? ' aw-build' : '')} data-atlas-workspace aria-label="Atlas workspace"
+  return <section ref={root} className={'atlas-workspace' + (route.wide ? ' aw-wide' : '') + (showStoryPanel ? ' aw-story-open' : '') + (building ? ' aw-build' : '') + (swiping ? ' aw-swipe' : '')} data-atlas-workspace aria-label="Atlas workspace"
     onClickCapture={event => {
       const link = (event.target as Element).closest<HTMLAnchorElement>('.aw-inspector a[href*="returnAtlas"]');
       if (link) follow(link, chunksHref);
@@ -301,7 +309,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
     <header className="aw-header">
       <div className="aw-header-line">
         <div className="aw-brand"><Compass size={21} aria-hidden="true"/><h1 ref={heading} tabIndex={-1}>Hanzi Atlas</h1></div>
-        {!building && <form className="aw-search" onSubmit={search}>
+        {!composing && <form className="aw-search" onSubmit={search}>
           <select aria-label="Family search type" value={familyType} onChange={event => {
             setFamilyType(event.target.value === 'structure' ? 'structure' : 'literal');
             setError('');
@@ -313,7 +321,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
             value={draft} onChange={event => setDraft(event.target.value)} lang={familyType === 'literal' ? 'zh-Hans' : undefined} maxLength={familyType === 'literal' ? 8 : 40} aria-invalid={!!error}/>
           <button type="submit" aria-label={familyType === 'literal' ? 'Search word family' : 'Search component family'}><ArrowRight size={17}/></button>
         </form>}
-        <label className="aw-scope"><span>{building ? 'Hanzi' : 'Vocabulary'}</span><GlobalHskSelect label={building ? 'Hanzi scope' : 'Vocabulary scope'} scope={route.scope} setScope={changeScope}/></label>
+        <label className="aw-scope"><span>{composing ? 'Hanzi' : 'Vocabulary'}</span><GlobalHskSelect label={composing ? 'Hanzi scope' : 'Vocabulary scope'} scope={route.scope} setScope={changeScope}/></label>
         <button type="button" className="aw-expand" aria-pressed={route.wide} aria-label={route.wide ? 'Restore workspace' : 'Expand workspace'} title={route.wide ? 'Restore workspace' : 'Expand workspace'}
           onClick={() => navigate({wide: !route.wide}, null, true)}>{route.wide ? <Minimize2 size={17}/> : <Maximize2 size={17}/>}</button>
         {!embedded && <><a className="aw-reader-link" href={readingLabHref(readReadingLabRoute('?hsk=' + route.scope)) + '&returnWorkspace=' + encodeURIComponent(returnQuery())}
@@ -329,10 +337,10 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
       </div>
       {error && <p className="aw-error" role="alert">{error}</p>}
       <div className="aw-header-line aw-navigation">
-        <nav className="aw-modes" aria-label="Atlas presentation">{modes.filter(([mode]) => mode !== 'build' || !embedded).map(([mode, label, Icon]) =>
+        <nav className="aw-modes" aria-label="Atlas presentation">{modes.filter(([mode]) => !embedded || (mode !== 'build' && mode !== 'swipe')).map(([mode, label, Icon]) =>
           <button key={mode} type="button" aria-pressed={route.mode === mode && !route.story} onClick={() => selectMode(mode)}><Icon size={16}/>{label}</button>
         )}</nav>
-        {!building && <nav className="aw-samples" aria-label="Sample stories and families">
+        {!composing && <nav className="aw-samples" aria-label="Sample stories and families">
           <button type="button" onClick={() => explore('person', 'component')} title="Person component family"><span lang="zh-Hans">人 / 亻</span> shapes</button>
           <button type="button" onClick={() => selectFamily('生')} title="生 family"><span lang="zh-Hans">生</span> family</button>
           {(['幕', '明天', '姓'] as const).map(target =>
@@ -342,7 +350,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
       </div>
     </header>
 
-    {!building && (depth > 0 || route.story) && <nav className="aw-trail" aria-label="Atlas exploration trail">
+    {!composing && (depth > 0 || route.story) && <nav className="aw-trail" aria-label="Atlas exploration trail">
       {!route.story && <><button type="button" onClick={previous}><ArrowLeft size={15}/> Back</button><ChevronRight size={14} aria-hidden="true"/></>}
       <span lang="zh-Hans">{context.part?.glyph ?? route.anchor}</span>
       {!route.story && !hideInspector && context.hanzi && context.hanzi !== (context.part?.glyph ?? route.anchor) && <><ChevronRight size={14} aria-hidden="true"/><span lang="zh-Hans">{context.hanzi}</span></>}
@@ -354,7 +362,12 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
         onSelect={({hanzi, part}) => navigate({buildHanzi: hanzi, buildPart: part}, null, true)}
         showWords={hanzi => selectFamily(hanzi)} widen={() => changeScope('all')}/>
     </Suspense>}
-    {!building && <div className={'aw-layout' + (hideInspector ? ' aw-layout-single' : '') + (showStoryPanel ? ' aw-layout-story' : '')} hidden={!!route.story}>
+    {swiping && <Suspense fallback={<p role="status">Opening Swipe…</p>}>
+      <AtlasSwipe hanzi={route.buildHanzi} part={route.buildPart} slot={route.swipeSlot} scope={route.scope}
+        onSelect={({hanzi, part, slot}) => navigate({buildHanzi: hanzi, buildPart: part, swipeSlot: slot}, null, true)}
+        widen={() => changeScope('all')}/>
+    </Suspense>}
+    {!composing && <div className={'aw-layout' + (hideInspector ? ' aw-layout-single' : '') + (showStoryPanel ? ' aw-layout-story' : '')} hidden={!!route.story}>
       <div className="aw-material" data-sticky-family={showStoryPanel && shortFamily ? true : undefined}>
         {canShowStoryPanel && <div className="aw-actions aw-story-toggle">
           <button ref={panelToggle} type="button" aria-pressed={showStoryPanel} aria-controls={showStoryPanel ? 'aw-story-pane' : undefined}

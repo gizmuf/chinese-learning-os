@@ -4,7 +4,7 @@ import {cloudRouteHref, readCloudRoute, type CloudRoute} from './atlas-cloud-rou
 import {isHybridLayout} from './atlas-hybrid-model';
 import {isStoryTarget, type StoryTarget} from './atlas-story-explorer-model';
 
-export const workspaceModes = ['family', 'read', 'map', 'practise', 'build'] as const;
+export const workspaceModes = ['family', 'read', 'map', 'practise', 'build', 'swipe'] as const;
 export const workspaceMapViews = ['structure', 'connections', 'matrix'] as const;
 export const workspaceExercises = ['reels', 'contrast', 'recognition', 'writing'] as const;
 export type WorkspaceKind = 'word' | 'character' | 'component' | 'sentence';
@@ -30,6 +30,7 @@ export type WorkspaceRoute = {
   wide: boolean;
   buildHanzi?: string;
   buildPart?: string;
+  swipeSlot?: string;
 };
 
 export function isAtlasWorkspaceEntry(params: URLSearchParams) {
@@ -49,14 +50,16 @@ export function readAtlasWorkspaceRoute(search: string): WorkspaceRoute {
   const params = new URLSearchParams(search);
   const mode = readOption(params.get('mode'), workspaceModes, 'family');
   const buildPart = params.get('buildPart');
+  const swipeSlot = params.get('swipeSlot');
   const story = params.get('wsstory');
   const storyPanel = params.get('storyPanel') === '1';
   return {
     mode,
-    ...(mode === 'build' && {
+    ...((mode === 'build' || mode === 'swipe') && {
       buildHanzi: readCharacter(params.get('buildHanzi')) || undefined,
       buildPart: buildPart === '' || buildPart && /^[\p{Script=Han}\u2e80-\u2fdf\u31c0-\u31ee\ue000-\uf8ff]$/u.test(buildPart) ? buildPart : undefined,
     }),
+    ...(mode === 'swipe' && swipeSlot && /^(?:whole|\d(?:\.\d){0,12})$/.test(swipeSlot) && {swipeSlot}),
     relation: readOption(params.get('relation'), ['literal', 'structure', 'topic'], 'literal'),
     scope: parseBrowseScope(params.get('hsk')),
     anchor: readAnchor(params.get('anchor')),
@@ -99,10 +102,11 @@ export function atlasWorkspaceHref(route: WorkspaceRoute, scroll = 0) {
   if (route.map !== 'structure') params.set('map', route.map);
   if (route.exercise) params.set('practice', route.exercise);
   if (route.wide) params.set('wide', '1');
-  if (route.mode === 'build') {
+  if (route.mode === 'build' || route.mode === 'swipe') {
     if (route.buildHanzi) params.set('buildHanzi', route.buildHanzi);
     if (route.buildPart !== undefined) params.set('buildPart', route.buildPart);
   }
+  if (route.mode === 'swipe' && route.swipeSlot) params.set('swipeSlot', route.swipeSlot);
   if (scroll > 0) params.set('awscroll', String(Math.floor(scroll)));
   return '?' + params;
 }
