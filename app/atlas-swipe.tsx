@@ -4,14 +4,15 @@ import {
   useEffect, useMemo, useRef, useState,
   type CSSProperties, type FormEvent, type KeyboardEvent, type PointerEvent,
 } from 'react';
-import {ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Pause, Play, Search} from 'lucide-react';
+import {ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Orbit, Pause, Play, Search} from 'lucide-react';
 import {assemblyIndex, assemblyMeaning, type AssemblyPart} from './atlas-assembly-model';
 import {type BrowseScope} from './hsk-scope';
 import {
   characterFrames, focusCharacter, partFamily, scopedCharacterFrames, slotSwipeMap, swipeCharacterFrame, swipeDirection, swipeMap, swipeParts, swipeVectors, wordFrames,
-  type SwipeDirection, type SwipeFrame, type SwipeMap,
+  type CharacterFrame, type SwipeDirection, type SwipeFrame, type SwipeMap,
 } from './atlas-swipe-model';
 import {childSwipeRegions, rootSwipeRegions, type SwipeLens} from './atlas-swipe-regions';
+import {SwipeFamilyMap, SwipeFamilyPeek} from './atlas-swipe-family-map';
 import {movingInk, SwipeArtwork, type SwipeMotion} from './atlas-swipe-art';
 import './atlas-swipe.css';
 
@@ -19,8 +20,9 @@ type Mode = 'characters' | 'words';
 type Selection = {hanzi: string; part?: string; slot?: string};
 type Gesture = {
   id: number; x: number; y: number; map: SwipeMap; picked: boolean;
-  axis?: 'x' | 'y'; slot?: string; from?: SwipeFrame; inside: boolean;
+  axis?: 'x' | 'y'; slot?: string; from?: SwipeFrame; inside: boolean; badge: boolean;
 };
+type FamilyOrbit = {part: AssemblyPart; origin: CharacterFrame; lens?: SwipeLens};
 const animationDuration = 185;
 const paceOptions = [.8, 1, 1.5, 2, 3, 4, 6];
 const icons = {left: ChevronLeft, right: ChevronRight, up: ChevronUp, down: ChevronDown};
@@ -28,14 +30,12 @@ const arrowDirections: Partial<Record<string, SwipeDirection>> = {
   ArrowLeft: 'left', ArrowRight: 'right', ArrowUp: 'up', ArrowDown: 'down',
 };
 
-function badgePosition(part: AssemblyPart, vertical: boolean): CSSProperties {
-  const {x, y, w, h} = part.box;
+function badgePosition(part: AssemblyPart): CSSProperties {
+  const {x, w} = part.box;
   const position = part.positions[0];
   const centerX = x + w / 2;
-  const centerY = y + h / 2;
-  const horizontal = vertical ? 1.02 : Math.max(.05, Math.min(.95, centerX));
-  const offset = vertical ? Math.max(.1, Math.min(.9, centerY))
-    : position === 'around' || part.positions.includes('top') ? .08 : .94;
+  const horizontal = Math.max(.05, Math.min(.95, centerX));
+  const offset = position === 'around' || part.positions.includes('top') ? .08 : .94;
   return {left: horizontal * 100 + '%', top: offset * 100 + '%'};
 }
 
@@ -47,6 +47,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
   const [mode, setMode] = useState<Mode>('characters');
   const [all, setAll] = useState(false);
   const [lens, setLens] = useState<SwipeLens>();
+  const [familyOrbit, setFamilyOrbit] = useState<FamilyOrbit>();
   const [wordAnchor, setWordAnchor] = useState(hanzi || '学');
   const [wordId, setWordId] = useState('');
   const [query, setQuery] = useState('');
@@ -57,6 +58,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
   const [showMeaning, setShowMeaning] = useState(true);
   const [reveal, setReveal] = useState<{key: string; step: number}>();
   const [motion, setMotion] = useState<SwipeMotion>();
+  const viewport = useRef<HTMLDivElement>(null);
   const gesture = useRef<Gesture | undefined>(undefined);
   const settling = useRef(false);
   const stopAnimation = useRef<(() => void) | undefined>(undefined);
@@ -73,22 +75,45 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
     : wordFrames('en', scope, '', true) : [], [all, index, mode, scope]);
   const familyFrames = useMemo(() => all ? [] : mode === 'characters' ? characterFrames(index, focus, scope)
     : wordFrames('en', scope, wordAnchor, false), [all, focus, index, mode, scope, wordAnchor]);
+  const orbitFrames = useMemo(() => familyOrbit ? characterFrames(index, {
+    character: familyOrbit.origin.character, part: familyOrbit.part,
+  }, scope) : [], [familyOrbit, index, scope]);
   const inspected = inside && regions.find(region => region.part.id === inside.active);
   const frames = all ? scopedFrames : familyFrames;
   const word = mode === 'words' ? frames.find(frame => frame.id === wordId) ?? frames[0] : undefined;
   const current = word ?? characterFrame;
   const display = motion?.from ?? current;
   const map = useMemo(() => swipeMap(frames, current, mode === 'characters' && !all), [all, current, frames, mode]);
+  const peek = useMemo(() => {
+    if (all || inside || mode === 'words' || familyOrbit) return [];
+    const visible = new Set(Object.values(map.neighbours).map(member => member?.id));
+    visible.add(current.id);
+    const start = Math.max(0, map.index - 4);
+    return [...frames.slice(start), ...frames.slice(0, start)].filter(member => !visible.has(member.id)).slice(0, 8);
+  }, [all, current.id, familyOrbit, frames, inside, map, mode]);
   const parts = useMemo(() => {
     if (mode === 'words') return [];
     const available = inside ? regions.map(region => region.part) : swipeParts(index, character);
     return available.map(piece => ({piece, count: partFamily(index, piece.glyph, scope).length}));
   }, [character, index, inside, mode, regions, scope]);
+  const stackBadges = !!inside || map.vertical;
+  const orderedBadges = stackBadges ? [...parts].sort(({piece: a}, {piece: b}) =>
+    a.box.y + a.box.h / 2 - b.box.y - b.box.h / 2) : parts;
   const broadFamily = !all && !frames.length && mode === 'characters' && !!current.anchor
     && partFamily(index, current.anchor, 'all').length > 0;
   const revealKey = mode + ':' + current.id;
   const step = reveal?.key === revealKey ? reveal.step : 0;
   const animationActive = motion !== undefined;
+  const mapOpen = familyOrbit !== undefined;
+  const componentDepth = inside?.trail.length ?? 0;
+
+  useEffect(() => {
+    const element = viewport.current;
+    if ((!mapOpen && !componentDepth) || !element) return;
+    const bounds = element.getBoundingClientRect();
+    if (bounds.height <= innerHeight && (bounds.top < 0 || bounds.bottom > innerHeight))
+      element.scrollIntoView({block: 'nearest'});
+  }, [componentDepth, mapOpen]);
 
   useEffect(() => {
     const pinyin = window.setTimeout(() => setReveal({key: revealKey, step: 1}), pace * 250);
@@ -168,6 +193,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
   function play() {
     if (playing) { setPlaying(false); return; }
     if (frames.length < 2 || settling.current) return;
+    setFamilyOrbit(undefined);
     setLens(undefined);
     if (!next) applyFrame(frames[0]);
     setPlaying(true);
@@ -182,6 +208,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
       setWordAnchor(character.data.hanzi);
       setWordId('');
     }
+    setFamilyOrbit(undefined);
     setLens(undefined);
     setMode(nextMode);
   }
@@ -190,6 +217,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
     if (all === full) return;
     clearMotion();
     setPlaying(false);
+    setFamilyOrbit(undefined);
     setLens(undefined);
     setAll(full);
     if (!full) return;
@@ -223,6 +251,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
     clearMotion();
     setPlaying(false);
     setAll(false);
+    setFamilyOrbit(undefined);
     applyFrame(target);
     setError('');
     setQuery('');
@@ -255,6 +284,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
 
   function pointerDown(event: PointerEvent<HTMLDivElement>) {
     const element = event.target as Element;
+    const badge = !!element.closest('.as-count');
     if (!event.isPrimary || event.button !== 0 || settling.current || element.closest('[data-swipe-control]')) return;
     if (mode === 'words' && !word) return;
     setPlaying(false);
@@ -269,7 +299,7 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
       if (hits.length === 1) partSlot = hits[0].part.id;
     }
     const selection = inside ? {map, picked: true} : mapFromTarget(element, partSlot);
-    gesture.current = {id: event.pointerId, x: event.clientX, y: event.clientY, slot: partSlot, inside: !!inside, ...selection};
+    gesture.current = {id: event.pointerId, x: event.clientX, y: event.clientY, slot: partSlot, inside: !!inside, badge, ...selection};
     event.currentTarget.setPointerCapture(event.pointerId);
   }
   function pointerMove(event: PointerEvent<HTMLDivElement>) {
@@ -298,7 +328,10 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
     const dy = event.clientY - active.y;
     if (!active.axis && active.slot && Math.max(Math.abs(dx), Math.abs(dy)) < 10) {
       const piece = parts.find(entry => entry.piece.id === active.slot)?.piece;
-      if (piece) tapPart(piece);
+      if (piece) {
+        if (active.badge) openFamily(piece);
+        else tapPart(piece);
+      }
       return;
     }
     if (active.inside) return;
@@ -317,35 +350,91 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
   }
 
   function keyDown(event: KeyboardEvent<HTMLDivElement>) {
-    if (inside) return;
+    if (familyOrbit && event.key === 'Escape') {
+      event.preventDefault();
+      setFamilyOrbit(undefined);
+      return;
+    }
+    if (inside || familyOrbit) return;
     const direction = arrowDirections[event.key];
     if (!direction) return;
     event.preventDefault();
     go(direction);
   }
 
-  function tapPart(piece: AssemblyPart) {
+  function openFamily(piece: AssemblyPart) {
     if (settling.current) return;
     setPlaying(false);
+    const origin = inside ? focus : {character, part: piece};
+    const originalLens = inside && {...inside, active: piece.id};
+    if (originalLens) setLens(originalLens);
+    else {
+      setAll(false);
+      applyFrame(swipeCharacterFrame(origin));
+    }
+    setFamilyOrbit(current => current?.part.glyph === piece.glyph
+      ? current : {part: piece, origin, lens: originalLens});
+  }
+
+  function chooseOrbitMember(target: SwipeFrame, direction: SwipeDirection) {
+    if (target.id === current.id) return;
+    setPlaying(false);
+    transition(target, direction);
+  }
+
+  function returnToOrbitOrigin() {
+    if (!familyOrbit) return;
+    clearMotion();
+    applyFrame(swipeCharacterFrame(familyOrbit.origin));
+    setLens(familyOrbit.lens);
+    setFamilyOrbit(undefined);
+  }
+
+  function tapPart(piece: AssemblyPart) {
+    if (settling.current) return;
     const region = regions.find(entry => entry.part.id === piece.id);
+    const parents = lensParent ? [...ancestors, lensParent.part.glyph] : [];
+    const canOpen = region && childSwipeRegions(index, region, parents).length > 0;
     if (inside) {
-      if (region && inside.active === piece.id &&
-          childSwipeRegions(index, region, [...ancestors, lensParent!.part.glyph]).length) {
+      setPlaying(false);
+      if (inside.active !== piece.id) {
+        if (familyOrbit && !canOpen) openFamily(piece);
+        else {
+          setFamilyOrbit(undefined);
+          setLens({...inside, active: piece.id});
+        }
+      } else if (canOpen) {
+        setFamilyOrbit(undefined);
         setLens({...inside, trail: [...inside.trail, region], active: undefined});
-      } else setLens({...inside, active: piece.id});
+      } else openFamily(piece);
       return;
     }
+    if (!canOpen) {
+      openFamily(piece);
+      return;
+    }
+    setPlaying(false);
+    setFamilyOrbit(undefined);
     setAll(false);
     applyFrame(swipeCharacterFrame({character, part: piece}));
-    if (region && childSwipeRegions(index, region, []).length) {
-      setLens({hanzi: character.data.hanzi, trail: [region]});
-    }
+    setLens({hanzi: character.data.hanzi, trail: [region]});
   }
 
   const glyphMeaning = (glyph: string) => {
     const entry = index.characters.get(glyph);
     return entry ? assemblyMeaning(entry, true) : '';
   };
+
+  const badgeButtons = orderedBadges.map(({piece, count}) =>
+    <button type="button" key={piece.id} className="as-count" data-swipe-slot={piece.id}
+      data-component={piece.glyph} data-family-count={count}
+      aria-pressed={inside ? inside.active === piece.id : !all && focus.part?.id === piece.id}
+      aria-label={'Show family for ' + piece.glyph + ' · ' + piece.positions[0] + ' · ' + count + ' characters'}
+      title={piece.glyph + ' · ' + count + ' characters'}
+      style={familyOrbit || stackBadges ? undefined : badgePosition(piece)}
+      onClick={event => { if (familyOrbit || !event.detail) openFamily(piece); }}>
+      <span><b lang="zh-Hans">{piece.glyph}</b>{count}</span>
+    </button>);
 
   return <section className="as" aria-label="Swipe Atlas" data-mode={mode}>
     <div className="as-toolbar">
@@ -366,31 +455,44 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
           <option value="all">{scope === 'all' ? 'Entire Atlas' : 'Entire HSK scope'}</option>
         </select>
       </label>
+      {mode === 'characters' && focus.part && <button type="button" className="as-open-map"
+        aria-label="Family map" aria-expanded={!!familyOrbit} onClick={() => familyOrbit ? setFamilyOrbit(undefined)
+          : openFamily(inspected?.part ?? lensParent?.part ?? focus.part!)}>
+        <Orbit size={17}/><span>Family map</span>
+      </button>}
     </div>
     {error && <p className="as-error" role="alert">{error}</p>}
     <div className="as-stage">
-      <div className="as-viewport" role="group" tabIndex={0} aria-label="Swipe characters"
-        aria-describedby="as-gesture-help" data-axis={map.vertical ? 'vertical' : 'horizontal'} data-depth={inside?.trail.length ?? 0}
+      <div ref={viewport} className="as-viewport" role="group" tabIndex={0} aria-label="Swipe characters"
+        aria-describedby="as-gesture-help" data-study-lookup="off" data-axis={map.vertical ? 'vertical' : 'horizontal'} data-depth={componentDepth} data-family-map={!!familyOrbit} data-small-family={!!familyOrbit && orbitFrames.length <= 8}
         data-motion={motion ? motion.settling ? 'settling' : 'dragging' : 'rest'}
         onPointerDown={pointerDown} onPointerMove={pointerMove} onPointerUp={pointerUp}
         onLostPointerCapture={cancelPointer} onPointerCancel={cancelPointer} onKeyDown={keyDown}>
         <div className="as-registration" aria-hidden="true"/>
         {inside && <nav className="as-levels" aria-label="Component levels" data-swipe-control>
-          <button type="button" aria-label={'Back to ' + character.data.hanzi} onClick={() => setLens(undefined)}>
+          <button type="button" aria-label={'Back to ' + character.data.hanzi} onClick={() => { setFamilyOrbit(undefined); setLens(undefined); }}>
             <ChevronLeft size={15}/><span lang="zh-Hans">{character.data.hanzi}</span>
           </button>
           {inside.trail.map(({part: step}, index) => index === inside.trail.length - 1
             ? <span key={step.id} lang="zh-Hans" aria-current={inspected ? undefined : 'step'}>{step.glyph}</span>
-            : <button type="button" key={step.id} aria-label={'Back to ' + step.glyph} onClick={() =>
-              setLens({...inside, trail: inside.trail.slice(0, index + 1), active: undefined})}><span lang="zh-Hans">{step.glyph}</span></button>)}
+            : <button type="button" key={step.id} aria-label={'Back to ' + step.glyph} onClick={() => {
+              setFamilyOrbit(undefined);
+              setLens({...inside, trail: inside.trail.slice(0, index + 1), active: undefined});
+            }}><span lang="zh-Hans">{step.glyph}</span></button>)}
           {inspected && <span className="as-inspected" aria-current="step" lang="zh-Hans"
             aria-label={'Selected ' + inspected.part.glyph}>{inspected.part.glyph}</span>}
         </nav>}
+        {familyOrbit ? <SwipeFamilyMap key={familyOrbit.part.glyph + ':' + scope}
+          anchor={familyOrbit.part.glyph} frames={orbitFrames} current={current.id}
+          origin={familyOrbit.origin.character.data.hanzi !== current.text ? familyOrbit.origin.character.data.hanzi : undefined}
+          pinyin={showPinyin} english={showMeaning} choose={chooseOrbitMember} close={() => setFamilyOrbit(undefined)}
+          restore={returnToOrbitOrigin} widen={scope !== 'all' ? widen : undefined}/>
+          : peek.length > 0 && <SwipeFamilyPeek frames={peek} pinyin={showPinyin} choose={chooseOrbitMember}/>}
         {Object.entries(swipeVectors).map(([key, [x, y]]) => {
           const direction = key as SwipeDirection;
           const target = map.neighbours[direction];
           const Icon = icons[direction];
-          if (!target || inside) return null;
+          if (!target || inside || familyOrbit) return null;
           const orthogonal = direction !== map.next && direction !== map.previous;
           const label = orthogonal ? target.character?.part?.positions[0] : undefined;
           return <button type="button" className="as-neighbour" key={direction} data-swipe-control data-swipe-direction={direction}
@@ -412,18 +514,13 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
           {motion && <div className="as-glyph as-incoming" aria-hidden="true" style={movingInk(display, motion, true)}>
             <SwipeArtwork frame={motion.target}/>
           </div>}
-          <div className="as-badges" aria-label="Component family sizes" hidden={!!motion}>
-            {parts.map(({piece, count}) =>
-              <button type="button" key={piece.id} className="as-count" data-swipe-slot={piece.id} data-component={piece.glyph}
-                aria-pressed={inside ? inside.active === piece.id : !all && focus.part?.id === piece.id}
-                aria-label={'Explore ' + piece.glyph + ' · ' + piece.positions[0] + ' · ' + count + ' characters'}
-                style={badgePosition(piece, inside ? true : map.vertical)} onClick={event => { if (!event.detail) tapPart(piece); }}>
-                <span>{count}</span>
-              </button>)}
-          </div>
+          {!familyOrbit && <div className="as-badges" aria-label="Component family sizes" data-stack={stackBadges} hidden={!!motion}>
+            {badgeButtons}
+          </div>}
         </div>}
       </div>
       <div className="as-caption" aria-live="off">
+        {familyOrbit && <div className="as-map-parts" role="group" aria-label="Component family sizes">{badgeButtons}</div>}
         {(mode === 'characters' || word) && <>
           <p className="as-reading" data-revealed={showPinyin && step >= 1 || undefined}>
             {showPinyin && step >= 1 && <>
@@ -469,9 +566,10 @@ export default function AtlasSwipe({hanzi, part, slot, scope, onSelect, widen}: 
       </footer>
     </div>
     <p className="as-help" id="as-gesture-help">
-      {inside ? 'Tap a part to inspect its strokes.' : mode === 'characters'
-        ? 'Drag the strokes to swap a part, or drag its count to browse the family.'
-        : 'Drag a hanzi to browse the words that use it.'} {!inside && 'Tap the space around it to go next.'}
+      {familyOrbit ? 'Drag the map to turn it. Tap any character to bring it into the centre.'
+        : inside ? 'Tap a part to inspect it, or tap its count to see its family.'
+        : mode === 'characters' ? 'Drag the strokes to swap a part. Tap a count to see its family.'
+        : 'Drag a hanzi to browse the words that use it.'} {!inside && !familyOrbit && 'Tap the space around it to go next.'}
     </p>
   </section>;
 }
