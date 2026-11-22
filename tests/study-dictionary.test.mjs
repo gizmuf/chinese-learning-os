@@ -44,17 +44,20 @@ test('source sentence recording stays with its source while isolated headword au
  const html=m.contextualDefinition(entry),header=html.slice(html.indexOf('<header'),html.indexOf('</header>')),contextStart=html.indexOf('<section class="sp-dictionary-context"'),context=html.slice(contextStart,html.indexOf('</section>',contextStart));
  assert.match(header,/Whole word: 醒/);assert.doesNotMatch(header,/Listen to the sentence/);assert.match(context,/Listen to the sentence: 我每天八点左右醒来/);
  const sourceOnly=m.contextualDefinition({...entry,audio:sentence.audio});assert.doesNotMatch(sourceOnly.slice(0,sourceOnly.indexOf('</header>')),/Listen to the sentence/);assert.match(sourceOnly,/Listen to the sentence/);
- const missing=m.contextualDefinition({...entry,audio:undefined,contextual:{...sentence,audio:undefined}});assert.doesNotMatch(missing.slice(0,missing.indexOf('<section class="sp-dictionary-examples"')),/class="sp-speaker/);
+ const missing=m.contextualDefinition({...entry,audio:undefined,contextual:{...sentence,audio:undefined}});
+ const missingContext=missing.indexOf('<section class="sp-dictionary-context"');
+ assert.doesNotMatch(missing.slice(0,missing.indexOf('</header>')),/class="sp-speaker/);
+ assert.doesNotMatch(missing.slice(missingContext,missing.indexOf('</section>',missingContext)),/class="sp-speaker/);
 });
 
 test('all headwords expose the same nearby writing action and supported Atlas link',()=>{
  for(const entry of [{text:'在',pinyin:'zài',meaning:'at',character:'在'},{text:'书店',pinyin:'shūdiàn',meaning:'bookshop'},{text:'银行',pinyin:'yínháng',meaning:'bank'}]){
   const html=m.contextualDefinition(entry),actions=html.slice(html.indexOf('class="sp-dictionary-actions"'),html.indexOf('</div>',html.indexOf('class="sp-dictionary-actions"')));
   assert.match(actions,/>Write<\/button>/,entry.text);
-  assert.match(actions,/Explore in Atlas/,entry.text);
+  assert.match(actions,/Explore character structure/,entry.text);
   assert.equal((html.match(/>Write<\/button>/g)||[]).length,1);
  }
- const unavailable=m.contextualDefinition({text:'口',pinyin:'kǒu',meaning:'mouth',atlasAvailable:false});assert.match(unavailable,/>Write<\/button>/);assert.doesNotMatch(unavailable,/Explore in Atlas/);
+ const unavailable=m.contextualDefinition({text:'口',pinyin:'kǒu',meaning:'mouth',atlasAvailable:false});assert.match(unavailable,/>Write<\/button>/);assert.doesNotMatch(unavailable,/Explore character structure/);
 });
 test('the shared popup puts character structure and word parts before the source example',()=>{
  const contextual={text:'我想坐出租车。',pinyin:'Wǒ xiǎng zuò chūzūchē.',meaning:'I would like to take a taxi.'};
