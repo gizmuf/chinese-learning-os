@@ -80,7 +80,7 @@
 .aw-layout{display:grid;grid-template-columns:minmax(0,1.85fr) minmax(252px,1fr);gap:14px;margin-top:14px;align-items:start}
 .aw-material{min-width:0}
 .atlas-workspace .aw-layout.aw-layout-single{grid-template-columns:minmax(0,1fr)}
-.aw-inspector{position:sticky;top:12px}
+.aw-inspector{position:sticky;top:calc(var(--aw-sticky-header,0px) + 12px);max-height:calc(100dvh - var(--aw-sticky-header,0px) - 24px);overflow:auto;scrollbar-gutter:stable}
 .aw-panel{padding:16px}
 .aw-panel-head{justify-content:space-between;align-items:end;gap:6px 12px;margin-bottom:10px;flex-wrap:wrap}
 .aw-panel-head h2,.aw-inspector h2,.aw-journey-group h3{margin:0;line-height:1.13;letter-spacing:normal}
@@ -122,7 +122,7 @@
 .aw-chips button[lang]{font-size:1.12rem;min-width:37px}
 .aw-jump{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin:12px 0}
 .aw-jump select{min-width:min(190px,100%);max-width:100%}
-.aw-journey-group{margin:16px 0 20px;padding-top:12px;border-top:1px solid var(--aw-line);scroll-margin-top:12px}
+.aw-journey-group{margin:16px 0 20px;padding-top:12px;border-top:1px solid var(--aw-line);scroll-margin-top:calc(var(--aw-sticky-header,0px) + 64px)}
 .aw-journey-group h3{font-size:1.18rem}
 .aw-journey-group h3 [lang]{color:var(--aw-coral);font-size:1.45rem}
 .aw-journey-group h3 small,.aw-journey-group header p{color:var(--aw-muted);font-size:.77rem;margin:4px 0}
@@ -163,7 +163,7 @@
 .atlas-workspace.aw-wide .aw-layout{grid-template-columns:minmax(0,2.5fr) minmax(240px,1fr)}
 @media(max-width:850px){
   .aw-layout,.atlas-workspace.aw-wide .aw-layout{grid-template-columns:minmax(0,1fr)}
-  .aw-inspector{position:static}
+  .aw-inspector{position:static;max-height:none;overflow:visible;scrollbar-gutter:auto}
   .aw-panel{padding:12px}
   .aw-header{padding:8px 10px}
 }
@@ -277,3 +277,11 @@ html[data-theme=dark] .atlas-workspace{--aw-coral:#e68b79;--aw-muted:#b8c9bf}
   border-radius: 8px;
   background: var(--aw-wash);
 }
+
+/* Read-through controls stay beside the list, below the measured app header. */
+.aw-reading-controls{position:sticky;top:calc(var(--aw-sticky-header,0px) + 12px);z-index:5;display:flex;gap:3px;width:max-content;max-width:100%;margin:8px 0 8px auto;padding:3px;border:1px solid var(--aw-line);border-radius:999px;background:var(--aw-paper);box-shadow:0 1px 4px #24372e0a}
+.aw-reading-controls button{min-height:30px;padding:4px 11px;border:0;border-radius:999px;background:transparent;color:var(--aw-muted);font:inherit;font-size:.76rem;font-weight:500;line-height:1.2}
+.aw-reading-controls button[aria-pressed=true]{background:#ecefe9;color:var(--aw-ink)}
+.aw-reading-controls button:focus-visible{outline:2px solid var(--aw-green);outline-offset:2px}
+@media(pointer:coarse){.aw-reading-controls button{min-height:36px}}
+html[data-theme=dark] .aw-reading-controls button[aria-pressed=true]{background:#3a4941}
