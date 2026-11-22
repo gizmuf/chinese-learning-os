@@ -18,21 +18,32 @@ import './hanzi-sprint.css';
 
 const tabs = ['entry','families','review','sentences','writing','story'] as const;
 type Tab = typeof tabs[number];
+type CardMode = 'preview'|'scored';
 const batchSize = 50;
 
-function RecallCard({character, onRate}: {character:SprintCharacter; onRate:(result:Recall)=>void}) {
+function RecallCard({character, mode, onNext, onRate}: {
+ character:SprintCharacter; mode:CardMode; onNext:()=>void; onRate:(result:Recall)=>void;
+}) {
  const {locale}=useI18n(),c=hanziSprintCopy[locale];
  const [phase,setPhase]=useState(0);
+ const card=useRef<HTMLButtonElement>(null);
+ useEffect(()=>{card.current?.focus({preventScroll:true});},[]);
+ const scored=mode==='scored';
+ const action=phase===0?c.revealPinyin:phase===1?c.revealMeaning:scored?c.markRecall:c.nextCard;
+ function tapCard() {
+  if(phase<2)setPhase(phase+1);
+  else if(!scored)onNext();
+ }
  const meaning=character.meanings?.[locale];
  const ratings=[['both',true,true],['meaningOnly',true,false],['toneOnly',false,true],['neither',false,false]] as const;
  return <div className="hsprint-flash">
-  <button type="button" className="hsprint-card" onClick={()=>setPhase(n=>Math.min(2,n+1))} disabled={phase===2}>
+  <button ref={card} type="button" className="hsprint-card" onClick={tapCard} aria-disabled={scored&&phase===2}>
    <strong lang="zh-Hans">{character.hanzi}</strong>
    <span className="hsprint-pinyin">{phase>=1&&character.pinyin}</span>
    <span className="hsprint-answer">{phase>=2&&<>{!meaning&&locale!=='en'&&<small>{c.english}</small>}<span lang={meaning?locale:'en'}>{meaning??character.meaning}</span></>}</span>
-   <small>{phase===0?c.revealPinyin:phase===1?c.revealMeaning:c.checked}</small>
+   <small className="hsprint-card-action">{action}{phase===2&&!scored&&<ArrowRight size={15} aria-hidden="true"/>}</small>
   </button>
-  {phase===2&&<div className="hsprint-actions" role="group" aria-label={c.checked}>
+  {phase===2&&scored&&<div className="hsprint-actions" role="group" aria-label={c.markRecall}>
    {ratings.map(([label,meaning,reading])=><button className="secondary" type="button" key={label}
     onClick={()=>onRate({meaning,reading})}>{c[label]}</button>)}
   </div>}
@@ -59,6 +70,8 @@ export default function HanziSprint({db, notify}: {db:IDBDatabase|null; notify:(
  const pending=useRef<(()=>Promise<void>)|null>(null), saving=useRef(false), round=useRef(0);
  const [loadAttempt,setLoadAttempt]=useState(0),[loadError,setLoadError]=useState(false);
  const [tab,setTab]=useState<Tab>('entry'),[day,setDay]=useState(1),[groupIndex,setGroupIndex]=useState(0);
+ const [mode,setMode]=useState<CardMode>('preview');
+ const [browsed,setBrowsed]=useState<Record<string,ReadonlySet<string>>>({});
  const [batch,setBatch]=useState<readonly SprintCharacter[]>([]),[index,setIndex]=useState(0);
  const [writing,setWriting]=useState(''),[context,setContext]=useState(''),[storyIndex,setStoryIndex]=useState(0);
  useEffect(()=>{
@@ -137,6 +150,13 @@ export default function HanziSprint({db, notify}: {db:IDBDatabase|null; notify:(
   setIndex(0);
   setBatch(queue.slice(0,batchSize));
  }
+ const browseKey=tab==='entry'?'entry':'review:'+day;
+ function previewNext() {
+  if(!current||saving.current)return;
+  const hanzi=current.hanzi;
+  setBrowsed(items=>({...items,[browseKey]:new Set([...(items[browseKey]??[]),hanzi])}));
+  setIndex(index+1);
+ }
  function rate(result:Recall) {
   if(!current)return;
   const hanzi=current.hanzi, entry=tab==='entry', activeRound=round.current;
@@ -151,7 +171,11 @@ export default function HanziSprint({db, notify}: {db:IDBDatabase|null; notify:(
    changeDay(sprintDay(next,Date.now()));
   });
  }
- const questionQueue=tab==='entry'?diagnostic:review;
+ const allQuestions=tab==='entry'?diagnostic:review;
+ const questionQueue=mode==='preview'?allQuestions.filter(item=>!browsed[browseKey]?.has(item.hanzi)):allQuestions;
+ const reviewAgain=mode==='scored'&&tab==='review'&&repeat.length>0;
+ const restartPreview=mode==='preview'&&!questionQueue.length&&allQuestions.length>0;
+ const startLabel=complete?c.more:mode==='preview'?c.previewStart:tab==='entry'?c.check:c.review;
  return <section className="hsprint">
   <a className="text-button hsprint-back" href="/"><ArrowLeft size={16}/> {c.back}</a>
   <div className="page-heading"><div><h1>{c.title}<span className="orange">.</span></h1><p>{c.intro}</p></div></div>
@@ -177,20 +201,28 @@ export default function HanziSprint({db, notify}: {db:IDBDatabase|null; notify:(
     aria-pressed={tab===key} onClick={()=>changeTab(key)}>{c[key]}</button>)}</nav>
    {(tab==='entry'||tab==='review')&&<section className="panel hsprint-panel">
     <h2>{c[tab]}</h2>
-    <p>{tab==='entry'?c.entryHint:c.reviewHint}</p>
-    <p>{tab==='entry'?c.scope:isFinal?c.finalHint:c.delay}</p>
+    <div className="hsprint-actions hsprint-card-modes" role="group" aria-label={c.cardMode}>
+     {(['preview','scored'] as const).map(value=><button type="button" className="secondary"
+      key={value} aria-pressed={mode===value} onClick={()=>setMode(value)}>{c[value]}</button>)}
+    </div>
+    <p>{mode==='preview'?c.previewHint:tab==='entry'?c.entryHint:c.reviewHint}</p>
+    {mode==='scored'&&<p>{c.scoreHint} {tab==='entry'?c.scope:isFinal?c.finalHint:c.delay}</p>}
     {current&&<>
      <p aria-live="polite">{index+1} / {batch.length}</p>
-     <RecallCard key={current.hanzi} character={current} onRate={rate}/>
+     <RecallCard key={current.hanzi} character={current} mode={mode} onNext={previewNext} onRate={rate}/>
     </>}
     {!current&&<div className="hsprint-actions">
      {complete&&<strong role="status">{c.finish}</strong>}
      {questionQueue.length>0&&<button className="primary" type="button" onClick={()=>begin(questionQueue)}>
-      <Layers size={16}/> {complete?c.more:tab==='entry'?c.check:c.review}<span> · {questionQueue.length}</span>
+      <Layers size={16}/> {startLabel}<span> · {questionQueue.length}</span>
      </button>}
-     {tab==='review'&&repeat.length>0&&<button type="button" className="secondary" onClick={()=>begin(repeat)}>{c.revise} · {repeat.length}</button>}
+     {reviewAgain&&<button type="button" className="secondary" onClick={()=>begin(repeat)}>{c.revise} · {repeat.length}</button>}
+     {restartPreview&&<button className="secondary" type="button" onClick={()=>{
+      setBrowsed(items=>({...items,[browseKey]:new Set()}));
+      begin(allQuestions);
+     }}>{c.restartPreview}</button>}
      {tab==='entry'&&<button type="button" className="secondary" onClick={enterFamily}>{state.started?c.skip:c.start}<ArrowRight size={16}/></button>}
-     {tab==='review'&&!questionQueue.length&&!repeat.length&&<span>{c.empty}</span>}
+     {tab==='review'&&!questionQueue.length&&!reviewAgain&&!restartPreview&&<span>{c.empty}</span>}
     </div>}
    </section>}
    {tab==='families'&&<section className="panel hsprint-panel">
