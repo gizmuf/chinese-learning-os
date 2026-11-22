@@ -1,8 +1,11 @@
 import {canonicalDictionaryText,isSimplifiedHeadword} from './simplified-chinese';
-export function dictionaryWordFamily(words:Iterable<string>,character:string,currentWords:readonly string[]=[]){
+import {dictionaryHskPriority} from './dictionary-hsk-priority';
+import type {HskIndex} from './hsk-level-model';
+export function dictionaryWordFamily(words:Iterable<string>,character:string,currentWords:readonly string[]=[],hsk?:HskIndex){
  if(Array.from(character).length!==1||!/^\p{Script=Han}$/u.test(character))return [];
  character=canonicalDictionaryText(character)??'';if(!character)return [];
  const current=new Set(currentWords.map(word=>canonicalDictionaryText(word)??word)),unique=new Set([...words].map(word=>canonicalDictionaryText(word)).filter((word):word is string=>!!word&&isSimplifiedHeadword(word)).filter(word=>word!==character&&word.includes(character)));
- return [...unique].sort((a,b)=>Number(current.has(b))-Number(current.has(a))||Array.from(a).length-Array.from(b).length||a.localeCompare(b,'zh'));
+ const relevant=[...unique].sort((a,b)=>Number(current.has(b))-Number(current.has(a))||Array.from(a).length-Array.from(b).length||a.localeCompare(b,'zh'));
+ return dictionaryHskPriority(relevant,hsk,text=>({text}));
 }
 export function dictionaryFamilyPage(words:readonly string[],page:number,size=18){const pages=Math.max(1,Math.ceil(words.length/size)),safe=Math.max(0,Math.min(pages-1,Math.floor(page)));return {page:safe,pages,words:words.slice(safe*size,(safe+1)*size)};}

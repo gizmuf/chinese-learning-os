@@ -13,7 +13,7 @@ const characters=new Map([
  ...['清','情','请','精','睛','静','倩','靖','蜻','菁'].map((text,i)=>[text,{text,pinyin:'reading-'+i,meaning:'meaning-'+i,structure:{radical:'氵',decomposition:'⿰氵青'}}])
 ]);
 globalThis.__connectionsResources={headwords:new Set(['青年','青春','青山']),characters};globalThis.__readingRequests=[];
-const b=await build({stdin:{contents:`export {default as Exploration} from './app/dictionary-exploration';export {createElement} from 'react';export {default as renderer,act} from 'react-test-renderer';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'esm',write:false,loader:{'.css':'empty'},plugins:[{name:'isolated-hsk-metadata',setup(b){b.onResolve({filter:/^\.\/hsk-badge$/},()=>({path:'badge',namespace:'isolated-hsk'}));b.onLoad({filter:/.*/,namespace:'isolated-hsk'},()=>({contents:'export default function Badge(){return null;}'}));}},{name:'mocks',setup(b){b.onResolve({filter:/^(react|react-test-renderer)$/},a=>({path:require.resolve(a.path),external:true}));b.onResolve({filter:/^\.\/(i18n|dictionary-client|atlas-cloud-highlight)$/},a=>({path:a.path,namespace:'mock'}));b.onLoad({filter:/.*/,namespace:'mock'},a=>({contents:{'./i18n':`export const useI18n=()=>({locale:'en'});`,'./dictionary-client':`export const loadDictionaryResources=async()=>globalThis.__connectionsResources;export const fetchDictionaryEntry=async text=>{globalThis.__readingRequests.push(text);if(globalThis.__deferPreviews)return new Promise(resolve=>globalThis.__pendingPreviews.push({text,resolve:()=>resolve({text,pinyin:'test',meaning:'definition'})}));return {text,pinyin:'test',meaning:'definition'};};`,'./atlas-cloud-highlight':`export default ({hanzi})=>hanzi;`}[a.path]}));}}]});
+const b=await build({stdin:{contents:`export {default as Exploration} from './app/dictionary-exploration';export {createElement} from 'react';export {default as renderer,act} from 'react-test-renderer';`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'esm',write:false,loader:{'.css':'empty'},plugins:[{name:'isolated-hsk-metadata',setup(b){b.onResolve({filter:/^\.\/hsk-badge$/},()=>({path:'badge',namespace:'isolated-hsk'}));b.onLoad({filter:/.*/,namespace:'isolated-hsk'},()=>({contents:'export default function Badge(){return null;}export const useHskLevels=()=>({state:"ready",index:globalThis.__dictionaryTestHsk});'}));}},{name:'mocks',setup(b){b.onResolve({filter:/^(react|react-test-renderer)$/},a=>({path:require.resolve(a.path),external:true}));b.onResolve({filter:/^\.\/(i18n|dictionary-client|atlas-cloud-highlight)$/},a=>({path:a.path,namespace:'mock'}));b.onLoad({filter:/.*/,namespace:'mock'},a=>({contents:{'./i18n':`export const useI18n=()=>({locale:'en'});`,'./dictionary-client':`export const loadDictionaryResources=async()=>globalThis.__connectionsResources;export const fetchDictionaryEntry=async text=>{globalThis.__readingRequests.push(text);if(globalThis.__deferPreviews)return new Promise(resolve=>globalThis.__pendingPreviews.push({text,resolve:()=>resolve({text,pinyin:'test',meaning:'definition'})}));return {text,pinyin:'test',meaning:'definition'};};`,'./atlas-cloud-highlight':`export default ({hanzi})=>hanzi;`}[a.path]}));}}]});
 const file=join(mkdtempSync(join(tmpdir(),'connections-ui-')),'bundle.mjs');writeFileSync(file,b.outputFiles[0].text);const m=await import(pathToFileURL(file));
 const text=n=>typeof n==='string'?n:(n.children??[]).map(text).join('');
 const button=(r,label)=>r.root.findAllByType('button').find(n=>text(n)===label);
@@ -45,4 +45,25 @@ test('rapid word-page changes never exceed the shared three-request preview budg
  const original=globalThis.__connectionsResources;globalThis.__connectionsResources={headwords:new Set(['青一','青二','青三','青四','青五','青六','青七','青八','青九']),characters};globalThis.__deferPreviews=true;globalThis.__pendingPreviews=[];
  const {r}=await mount();await m.act(()=>button(r,'Related words').props.onClick());assert.equal(__pendingPreviews.length,3);await m.act(()=>button(r,'Next').props.onClick());assert.equal(__pendingPreviews.length,3);
  await m.act(async()=>{for(const task of __pendingPreviews.slice())task.resolve();await new Promise(resolve=>setTimeout(resolve,0));});assert.equal(__pendingPreviews.length,4);await m.act(async()=>{__pendingPreviews[3].resolve();await new Promise(resolve=>setTimeout(resolve,0));});assert.equal(__pendingPreviews.length,4);await m.act(()=>r.unmount());globalThis.__deferPreviews=false;globalThis.__connectionsResources=original;
+});
+
+
+test('related-word preview ranks HSK entries before unlisted entries across page boundaries',async()=>{
+ const original=globalThis.__connectionsResources;
+ const levelRows=[['那边','1'],['那里','1'],['那么','2'],['那些','2'],['那个','3'],['那儿','3'],['那时','3'],['刹那','7-9']];
+ globalThis.__dictionaryTestHsk={words:new Map(levelRows.map(([word,level])=>[word,[level]])),characters:new Map()};
+ globalThis.__connectionsResources={headwords:new Set(['玛那','支那','桑那','雾那',...levelRows.map(([word])=>word)]),characters};
+ let r;
+ try{
+  ({r}=await mount({text:'那个人',pinyin:'nà ge rén',meaning:'that person'}));
+  const visible=()=>r.root.findAllByProps({className:'sp-connection-target'}).map(node=>text(node.findByType('strong')));
+  const first=visible();assert.equal(first.length,8);
+  assert.ok(first.slice(0,7).every(word=>levelRows.slice(0,7).some(([known])=>known===word)));
+  assert.equal(first[7],'刹那');
+  await m.act(()=>button(r,'Next').props.onClick());
+  const second=visible();assert.equal(second.length,4);assert.ok(second.includes('玛那'));
+  await m.act(()=>r.root.findAllByProps({className:'sp-connection-target'})[0].props.onClick({currentTarget:{}}));
+ }finally{
+  if(r)await m.act(()=>r.unmount());globalThis.__connectionsResources=original;delete globalThis.__dictionaryTestHsk;
+ }
 });

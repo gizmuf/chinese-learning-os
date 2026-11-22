@@ -1,5 +1,5 @@
 'use client';
-import HskBadge from './hsk-badge';
+import HskBadge,{useHskLevels} from './hsk-badge';
 import {useEffect,useMemo,useState} from 'react';
 import {loadDictionaryResources,fetchDictionaryEntry} from './dictionary-client';
 import {dictionaryWordFamily,dictionaryFamilyPage} from './dictionary-word-family-model';
@@ -22,13 +22,13 @@ const copy={
  tr:{structural:'Yukarıda seçili bileşeni paylaşan karakterler',title:'Bu karakteri içeren kelimeler:',relation:'Bu karakteri içeren kelimeler; yukarıdaki yapısal aile ortak bileşeni olan karakterleri sayar.',coverage:'Kelime kapsamı',broader:'Geniş sözlük',resourceError:'Geniş kelime listesi yüklenemedi.',retryList:'Listeyi yeniden yükle',loadingList:'Kelimeler yükleniyor…',note:'Sözlük adlar, farklı yazımlar ve seyrek ifadeler içerebilir. Bazı tanımlar İngilizce kalır.',courseNote:'Geçerli harita ve filtredeki kelimeler. Diğer sözlük kelimeleri öteki sekmede bulunur. Bazı tanımlar İngilizce kalır.',empty:'Bu filtrede kelime yok. Geniş sözlüğü deneyin.',loading:'Okunuş yükleniyor…',missing:'Sözlük maddesi bulunamadı.',error:'Bu okunuş yüklenemedi.',retry:'Okunuşu yeniden yükle',previous:'Önceki kelimeler',next:'Sonraki kelimeler',pages:'Sözlük sayfaları',word:'Kelime',pinyin:'Pinyin',meaning:'Anlam',attribution:'kelimeler; etimolojik ilişkiler değil'},
 };
 export default function DictionaryWordFamily({character,currentWords,structuralCount,scopeLabel='Current HSK scope',currentReadings,initialScope='course'}:{character:string;currentWords:string[];structuralCount?:number;scopeLabel?:string;currentReadings?:ReadonlyMap<string,{pinyin:string;meaning:string}>;initialScope?:'course'|'dictionary'}){
- const {locale}=useI18n(),c=copy[locale],lookup=useStudyLookup();
+ const {locale}=useI18n(),c=copy[locale],lookup=useStudyLookup(),hsk=useHskLevels();
  function knownReading(word:string):Reading|undefined{const authored=currentReadings?.get(word);if(authored)return {state:'ready',pinyin:authored.pinyin,meaning:authored.meaning};const course=courseReadings.get(word);if(course)return course;const shared=lookup?.dictionary.get(word);return shared?.pinyin&&shared.meaning&&!shared.lookupStatus&&!/not recorded|not.*dictionary/i.test(shared.meaning)?{state:'ready',pinyin:shared.pinyin,meaning:shared.meaning}:undefined;}
  const [headwords,setHeadwords]=useState<Set<string>|null>(null),[error,setError]=useState(false),[attempt,setAttempt]=useState(0),[scope,setScope]=useState<'dictionary'|'course'>(initialScope),[page,setPage]=useState(0),[retry,setRetry]=useState(0);
  const [readings,setReadings]=useState<{key:string;rows:Record<string,Reading>}>({key:'',rows:{}});
  useEffect(()=>{let active=true;setError(false);void loadDictionaryResources().then(value=>{if(active)setHeadwords(value.headwords);}).catch(()=>{if(active)setError(true);});return()=>{active=false;};},[attempt]);
  useEffect(()=>{setPage(0);},[character,scope]);
- const all=useMemo(()=>dictionaryWordFamily([...(headwords??[]),...currentWords],character,currentWords),[headwords,character,currentWords]),course=useMemo(()=>dictionaryWordFamily(currentWords,character,currentWords),[currentWords,character]);
+ const all=useMemo(()=>dictionaryWordFamily([...(headwords??[]),...currentWords],character,currentWords,hsk.index),[headwords,character,currentWords,hsk.index]),course=useMemo(()=>dictionaryWordFamily(currentWords,character,currentWords,hsk.index),[currentWords,character,hsk.index]);
  const selected=scope==='course'?course:all,paging=dictionaryFamilyPage(selected,page),pageKey=character+'|'+scope+'|'+paging.words.join('\0');
  useEffect(()=>{
   let active=true;const retained=readings.key===pageKey?Object.fromEntries(Object.entries(readings.rows).filter(([,row])=>row.state!=='error')):{};

@@ -4,6 +4,8 @@ import {useState, type ReactNode} from 'react';
 import {Network} from 'lucide-react';
 import {useI18n} from './i18n';
 import {relatedStudySentence,relatedStudyWords} from './dictionary-lesson-occurrences';
+import {useHskLevels} from './hsk-badge';
+import {dictionaryHskPriority} from './dictionary-hsk-priority';
 import type {DictionaryEntry,Pronunciation} from './atlas-spatial-model';
 import './dictionary-exploration.css';
 
@@ -20,11 +22,11 @@ export default function DictionarySharedWords({entry,onLookup,onAtlas,speaker}:{
  onAtlas?:(character:string)=>void;
  speaker:(audio:Pronunciation|undefined)=>ReactNode;
 }){
- const {locale}=useI18n(),copy=labels[locale];
+ const {locale}=useI18n(),copy=labels[locale],hsk=useHskLevels();
  // Sentences already expose their individual words in the breakdown.
  const glyphs=/^[\p{Script=Han}]{1,8}$/u.test(entry.text)?[...new Set(Array.from(entry.text))]:[];
  const lessonId=entry.contextual?.sourceId?.split(':')[0];
- const groups=glyphs.map(character=>({character,rows:relatedStudyWords(character,locale,lessonId,entry.text)}));
+ const groups=glyphs.map(character=>({character,rows:dictionaryHskPriority(relatedStudyWords(character,locale,lessonId,entry.text),hsk.index,row=>row)}));
  const [selected,setSelected]=useState('');
  const group=groups.find(g=>g.character===selected)??groups.find(g=>g.rows.length)??groups[0];
  if(!group)return null;
