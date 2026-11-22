@@ -10,38 +10,78 @@ export type CloudWord = {
   id: string; hanzi: string; pinyin: string; meaning: string;
   level: BrowseLevel | null; origin: 'curriculum' | 'atlas-example' | 'dictionary';
   item?: Item; atlasCharacterId?: string;
+  recordingPinyin?: string; aliases?: string[];
 };
 export type CloudRole = 'semantic' | 'phonetic' | 'visual';
 const normalizedReading = (value: string) => value.normalize('NFC').toLowerCase().replace(/[\s’'·-]/g,'');
 const wordKey = (hanzi: string, pinyin: string) => hanzi+'|'+normalizedReading(pinyin);
 const inScope = (item: Item, level: CloudLevel) => level==='all'||(item.hskLevel!==undefined&&item.hskLevel<=scopeRank(level));
-/** Numeric scopes include earlier levels. Extras and unlevelled examples belong only to all. */
+/** Scopes are cumulative unless a single official band is requested. */
 const wordCache=new Map<string,CloudWord[]>();
-export function cloudWords(locale: Locale, level: CloudLevel='all'): CloudWord[] {
-  const key=locale+'|'+level;let result=wordCache.get(key);
-  if(!result){result=buildCloudWords(locale,level);wordCache.set(key,result)}
+export function cloudWords(locale: Locale, level: CloudLevel='all', onlyLevel = false): CloudWord[] {
+  const exactBand = onlyLevel && level !== 'all';
+  const key = `${locale}|${level}|${exactBand}`;
+  let result = wordCache.get(key);
+  if (!result) {
+    result = buildCloudWords(locale, level, exactBand);
+    wordCache.set(key, result);
+  }
   return [...result];
 }
-function buildCloudWords(locale: Locale, level: CloudLevel): CloudWord[] {
-  const canonical=items.filter(item=>inScope(item,level)).map(item=>{
+function buildCloudWords(locale: Locale, level: CloudLevel, exactBand: boolean): CloudWord[] {
+  const canonical: CloudWord[] = items.filter(item => exactBand ? item.hskLevel === level : inScope(item, level)).map(item => {
     const localized=localizeItem(item,locale);
     return {id:item.id,hanzi:item.hanzi,pinyin:item.pinyin,meaning:localized.english,
       level:item.hskLevel??null,origin:'curriculum' as const,item:localized};
   });
-  const knownHanzi=new Set(canonical.map(word=>word.hanzi));
-  const seenDictionary=new Set<string>();
-  const dictionary:CloudWord[]=browseWords.filter(word=>{const eligible=browseInScope(browseLevel(word.level),level)&&!knownHanzi.has(word.hanzi)&&!seenDictionary.has(word.hanzi);if(eligible)seenDictionary.add(word.hanzi);return eligible}).map(word=>({...word,meaning:simplifiedDisplayText(word.meaning),level:browseLevel(word.level),origin:'dictionary' as const}));
+  const listedHanzi = new Set(canonical.filter(word => word.level !== null).map(word => word.hanzi));
+  const extras = new Map(canonical.filter(word => word.level === null).map(word => [wordKey(word.hanzi, word.pinyin), word]));
+  const dictionary: CloudWord[] = [];
+  for (const word of browseWords) {
+    const band = browseLevel(word.level);
+    if (!(exactBand ? band === level : browseInScope(band, level)) || listedHanzi.has(word.hanzi)) continue;
+    listedHanzi.add(word.hanzi);
+    const extra = extras.get(wordKey(word.hanzi, word.pinyin));
+    if (extra) {
+      // The catalogue can show the confirmed level while the course item keeps its original identity.
+      extra.level = band;
+      extra.aliases = [word.id];
+    } else {
+      dictionary.push({...word, meaning: simplifiedDisplayText(word.meaning), level: band, origin: 'dictionary'});
+    }
+  }
   if(level!=='all')return [...canonical,...dictionary];
   const known=new Set(canonical.map(word=>wordKey(word.hanzi,word.pinyin)));
+  const listedReadings = new Map<string, CloudWord>();
+  for (const word of [...dictionary, ...canonical]) {
+    if (word.level === null) continue;
+    for (const reading of word.pinyin.split('/')) listedReadings.set(wordKey(word.hanzi, reading), word);
+  }
   const examples:CloudWord[]=[];
   for(const character of atlasCharacters){
     const key=wordKey(character.word,character.wordPinyin);
+    const exampleId = 'atlas-example:' + character.id;
+    // The Atlas example 学生 uses a neutral second syllable for the same word.
+    const catalogueKey = key === '学生|xuésheng' ? '学生|xuéshēng' : key;
+    const listed = listedReadings.get(catalogueKey);
+    if (listed) {
+      (listed.aliases ??= []).push(exampleId);
+      if (listed.origin === 'dictionary' && !listed.atlasCharacterId) {
+        listed.atlasCharacterId = character.id;
+        listed.recordingPinyin = character.wordPinyin;
+        if (locale !== 'en') listed.meaning = character.wordMeaning[locale];
+      }
+      continue;
+    }
     if(known.has(key))continue;
     known.add(key);
-    examples.push({id:'atlas-example:'+character.id,hanzi:character.word,pinyin:character.wordPinyin,
+    examples.push({id:exampleId,hanzi:character.word,pinyin:character.wordPinyin,
       meaning:character.wordMeaning[locale],level:null,origin:'atlas-example',atlasCharacterId:character.id});
   }
   return [...canonical,...examples,...dictionary];
+}
+export function matchesCloudWordId(word: CloudWord, id: string) {
+  return word.id === id || !!word.aliases?.includes(id);
 }
 export function wordsForCharacter(hanzi:string,locale:Locale,level:CloudLevel='all'){
   if(Array.from(hanzi).length!==1)return [];

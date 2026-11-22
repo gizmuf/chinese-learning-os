@@ -16,13 +16,22 @@ test('all 3088 official recognition characters can be browsed; supplied incomple
  for(const [level,count] of [[1,246],[2,371],[3,655],[4,1096],[5,1527],[6,1940],['7-9',3088]])assert.equal(extended.extendedCharacters('en',level).length,count);
  const missing=raw.characters.filter(r=>r.unresolvedComponents.length);assert.ok(missing.length>0);for(const row of missing)assert.equal(all.find(x=>x.hanzi===row.hanzi).complete,false);
 });
-test('no guessed readings for absent dictionary headwords; source limitation is explicit',()=>{
- assert.deepEqual(raw.meta.missingDictionaryEntries,[{hanzi:'精彩纷呈',level:'7-9'},{hanzi:'口哨儿',level:'7-9'}]);
+test('all official headwords are browsable, including published readings absent from CC-CEDICT',()=>{
+ const words=cloud.cloudWords('en','7-9');
+ const expected=new Set(Object.values(official.words).flatMap(band=>band.split('|')));
+ assert.deepEqual(new Set(words.map(word=>word.hanzi)),expected);
+ for(const [hanzi,pinyin] of [['精彩纷呈','jīngcǎi-fēnchéng'],['口哨儿','kǒushàor']]){
+  const word=words.find(row=>row.hanzi===hanzi);
+  assert.equal(word.pinyin,pinyin);
+  assert.equal(word.level,'7-9');
+ }
+ assert.deepEqual(raw.meta.missingDictionaryEntries,[]);
  assert.equal(raw.meta.hskSource.edition,'HSK examination syllabus, November 2025');
 });
 const spatial=await load('app/atlas-spatial-model.ts');
 test('dictionary-only words never invent a recording or independent-recall target',()=>{
  const word=cloud.cloudWords('en',4).find(w=>w.origin==='dictionary');assert.ok(word);assert.equal(spatial.wordPronunciation(word),undefined);assert.equal(spatial.sentencePronunciation(word),undefined);
  const dictionary=spatial.studyDictionary('en');assert.equal(dictionary.get(word.hanzi).audio,undefined);
+ assert.equal(dictionary.get('口哨儿').pinyin,'kǒushàor');assert.equal(dictionary.get('口哨儿').audio,undefined);
  const questions=spatial.recognitionQuestions(extended.extendedCharacters('en','7-9'),'en');assert.ok(questions.every(q=>q.word.item||q.word.atlasCharacterId));
 });

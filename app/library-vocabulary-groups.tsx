@@ -4,7 +4,7 @@ import {useMemo, useState} from 'react';
 import {Search} from 'lucide-react';
 import {useI18n} from './i18n';
 import {useStudyLookup} from './study-lookup-context';
-import {libraryVocabularyGroups, vocabularySearchKey, type VocabularyGrouping} from './library-vocabulary-groups-model';
+import {libraryVocabularyGroups, searchVocabularyGroups, type VocabularyGrouping} from './library-vocabulary-groups-model';
 import type {BrowseScope} from './hsk-scope';
 import './library-vocabulary-groups.css';
 
@@ -17,11 +17,9 @@ export default function LibraryVocabularyGroups({scope}: {scope: BrowseScope}) {
   const [onlyLevel, setOnlyLevel] = useState(false);
   const [query, setQuery] = useState('');
   const [shown, setShown] = useState(pageSize);
-  const {groups, total} = useMemo(() => libraryVocabularyGroups(locale, scope, onlyLevel, kind),
+  const model = useMemo(() => libraryVocabularyGroups(locale, scope, onlyLevel, kind),
     [locale, scope, onlyLevel, kind]);
-  const key = vocabularySearchKey(query);
-  const results = key ? groups.filter(group => vocabularySearchKey(group.label).includes(key) || group.entries.some(({word}) =>
-    vocabularySearchKey([word.hanzi, word.pinyin, word.meaning].join(' ')).includes(key))) : groups;
+  const results = searchVocabularyGroups(model, query);
 
   return <section className="lvg" aria-label="Grouped HSK vocabulary">
     <div className="lvg-controls">
@@ -43,7 +41,7 @@ export default function LibraryVocabularyGroups({scope}: {scope: BrowseScope}) {
       </label>
     </div>
     <p className="lvg-total" role="status">
-      {key ? `${results.length} matching ${results.length === 1 ? 'group' : 'groups'}` : total.toLocaleString() + ' vocabulary entries'}
+      {query.trim() ? `${results.length} matching ${results.length === 1 ? 'group' : 'groups'}` : model.total.toLocaleString() + ' vocabulary entries'}
     </p>
     {results.slice(0, shown).map(group => <section className="lvg-group" key={group.id} data-group={group.id}>
       <h2>

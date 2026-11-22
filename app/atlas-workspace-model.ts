@@ -1,4 +1,4 @@
-import {cloudWords, type CloudWord} from './atlas-cloud-model';
+import {cloudWords, matchesCloudWordId, type CloudWord} from './atlas-cloud-model';
 import {extendedCharacters, extendedComponent, extendedFamily, type ExtendedCharacter} from './atlas-cloud-extended';
 import {cloudRelation} from './atlas-cloud-connections';
 import {familyJourney, type JourneyGroup} from './family-journey-model';
@@ -26,23 +26,6 @@ export function workspaceCharacters(locale: Locale) {
   return index;
 }
 
-type WorkspaceWord = CloudWord & {recordedExampleId?: string};
-
-/** One display row for the reviewed 森林 example and the matching HSK4 entry. */
-function mergeWorkspaceWords(words: CloudWord[], scope: BrowseScope): WorkspaceWord[] {
-  if (scope !== 'all') return words;
-  const dictionary = words.find(word => word.id === 'hsk-browse:4:森林');
-  const recorded = words.find(word => word.id === 'atlas-example:u68ee');
-  if (!dictionary || !recorded?.atlasCharacterId) return words;
-  return words.filter(word => word !== dictionary).map(word => word === recorded
-    ? {...dictionary, pinyin: recorded.pinyin, atlasCharacterId: recorded.atlasCharacterId, recordedExampleId: recorded.id}
-    : word);
-}
-
-function matchesWorkspaceWordId(word: WorkspaceWord, id: string) {
-  return word.id === id || word.recordedExampleId === id;
-}
-
 export function workspaceScopeLabel(scope: BrowseScope) {
   if (scope === 'all') return 'All vocabulary';
   if (scope === 1) return 'HSK 1';
@@ -50,7 +33,7 @@ export function workspaceScopeLabel(scope: BrowseScope) {
 }
 
 export function workspaceJourneyGroup(group: JourneyGroup, locale: Locale, scope: BrowseScope) {
-  const full = group.kind === 'character' ? mergeWorkspaceWords(familyWords(group.anchor, locale, scope), scope) : group.words;
+  const full = group.kind === 'character' ? familyWords(group.anchor, locale, scope) : group.words;
   return {here: group.words, full};
 }
 
@@ -98,14 +81,14 @@ export function workspaceStoryExample(text: string, locale: Locale): StudyExampl
 }
 
 export function resolveWorkspaceContext(route: WorkspaceRoute, locale: Locale, groups: JourneyGroup[] = []) {
-  const catalog = mergeWorkspaceWords(cloudWords(locale, route.scope), route.scope);
+  const catalog = cloudWords(locale, route.scope);
   const group = groups.find(item => item.id === route.group);
   const componentId = route.part || (route.kind === 'component' ? route.expression : '');
   const part = componentId ? extendedComponent(componentId) : undefined;
-  const members = route.relation === 'literal' ? mergeWorkspaceWords(familyWords(route.anchor, locale, route.scope), route.scope)
+  const members = route.relation === 'literal' ? familyWords(route.anchor, locale, route.scope)
     : route.relation === 'topic' && group?.kind === 'topic' ? group.words : [];
   const structural = route.relation === 'structure' ? workspaceStructure(route.scope, locale, componentId) : [];
-  const explicit = (candidate: WorkspaceWord) => route.wordId ? matchesWorkspaceWordId(candidate, route.wordId)
+  const explicit = (candidate: CloudWord) => route.wordId ? matchesCloudWordId(candidate, route.wordId)
     : route.kind === 'sentence' ? !!route.expression && candidate.item?.sentence === route.expression
     : route.kind === 'word' ? !!route.expression && candidate.hanzi === route.expression : false;
   const selected = route.wordId || route.expression && (route.kind === 'word' || route.kind === 'sentence')
@@ -216,11 +199,11 @@ export function workspaceSelection(route: WorkspaceRoute, word: CloudWord): Part
 }
 
 export function workspaceExploration(text: string, kind: WorkspaceKind, locale: Locale, route: WorkspaceRoute): Partial<WorkspaceRoute> {
-  const catalog = mergeWorkspaceWords(cloudWords(locale, route.scope), route.scope);
+  const catalog = cloudWords(locale, route.scope);
   if (kind === 'component') return {kind, relation: 'structure', part: text, hanzi: '', wordId: '', expression: text, page: 0};
   if (kind === 'character') return {kind, hanzi: text, wordId: '', expression: '', page: 0};
   if (kind === 'sentence') {
-    const current = route.wordId ? cloudWords(locale).find(word => word.id === route.wordId && word.item?.sentence === text) : undefined;
+    const current = route.wordId ? cloudWords(locale).find(word => matchesCloudWordId(word, route.wordId) && word.item?.sentence === text) : undefined;
     const owner = current ?? catalog.find(word => word.item?.sentence === text) ?? cloudWords(locale).find(word => word.item?.sentence === text);
     return {kind, wordId: owner?.id ?? '', expression: text, hanzi: owner && owner.hanzi.includes(route.hanzi) ? route.hanzi : [...(owner?.hanzi || text)][0]};
 

@@ -50,15 +50,17 @@ def build(pdf):
  (ROOT/'data/hsk-exam-characters.json').write_text(json.dumps({'recognition':characters,'writing':writing},ensure_ascii=False,indent=2)+'\n')
  payload={'version':1,'words':words,'characters':characters}
  raw=json.dumps(payload,ensure_ascii=False,separators=(',',':')).encode()
- existing=ROOT/'public/dictionary/hsk-levels-2025.json.gz'
- if existing.exists():
-  old=json.loads(gzip.decompress(existing.read_bytes()))
-  if old['characters']==characters and all(set(old['words'][lv].split('|'))==set(words[lv].split('|')) for lv in LEVELS):
-   print('Current level asset matches the published syllabus')
-   return
- compressed=gzip.compress(raw,mtime=0)
- output=ROOT/'public/dictionary/hsk-levels-2025.json.gz';output.parent.mkdir(parents=True,exist_ok=True);output.write_bytes(compressed)
- meta={'edition':'HSK examination syllabus, November 2025','officialSource':SOURCE,'sourceSha256':SHA,'vocabularyEntries':11000,'recognitionCharacters':3088,'wordCounts':dict(zip(LEVELS,counts)),'recognitionCharacterCounts':{lv:len(characters[lv]) for lv in LEVELS},'asset':'/dictionary/hsk-levels-2025.json.gz','assetSha256':hashlib.sha256(compressed).hexdigest(),'wordPolicy':'Exact headword; homograph markers removed; levels refer to first introduction of each listed sense, not later part-of-speech extensions.','characterPolicy':'Official recognition-character tables, not inferred from containing words. HSK7-9 is one combined official table.'}
+ output=ROOT/'public/dictionary/hsk-levels-2025.json.gz'
+ previous=output.read_bytes() if output.exists() else b''
+ old=json.loads(gzip.decompress(previous)) if previous else None
+ if old and old['characters']==characters and all(set(old['words'][lv].split('|'))==set(words[lv].split('|')) for lv in LEVELS):
+  compressed=previous
+  print('Current level asset matches the published syllabus')
+ else:
+  compressed=gzip.compress(raw,mtime=0)
+  output.parent.mkdir(parents=True,exist_ok=True)
+  output.write_bytes(compressed)
+ meta={'edition':'HSK examination syllabus, November 2025','officialSource':SOURCE,'sourceSha256':SHA,'vocabularyEntries':11000,'recognitionCharacters':3088,'wordCounts':dict(zip(LEVELS,counts)),'wordSetCounts':{lv:len(words[lv].split('|')) for lv in LEVELS},'decodedAssetSha256':hashlib.sha256(gzip.decompress(compressed)).hexdigest(),'recognitionCharacterCounts':{lv:len(characters[lv]) for lv in LEVELS},'asset':'/dictionary/hsk-levels-2025.json.gz','assetSha256':hashlib.sha256(compressed).hexdigest(),'wordPolicy':'Exact headword; homograph markers removed; levels refer to first introduction of each listed sense, not later part-of-speech extensions.','characterPolicy':'Official recognition-character tables, not inferred from containing words. HSK7-9 is one combined official table.'}
  (ROOT/'data/hsk-levels-source.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
  print(json.dumps({'vocabularyEntries':11000,'recognitionCharacters':3088,'bytes':len(compressed),'rawBytes':len(raw)}))
 if __name__=='__main__':
