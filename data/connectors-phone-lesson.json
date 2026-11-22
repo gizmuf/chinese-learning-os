@@ -1,0 +1,1041 @@
+{
+  "id": "connectors-phone",
+  "title": "Connectors, frequency & phone habits",
+  "source": {
+    "file": "Mandarin_Connectors_Phone_Reading_and_Hanzi.pdf",
+    "sha256": "74b5db271fea7c66eb57512eb6b3cbb91c0561051052a620adf8774c21d32b54",
+    "pages": 27,
+    "download": "/lessons/connectors-phone/Mandarin_Connectors_Phone_Reading_and_Hanzi.pdf"
+  },
+  "connectors": [
+    {
+      "hanzi": "如果…就…",
+      "pinyin": "rúguǒ … jiù …",
+      "english": "if … then …",
+      "page": 1
+    },
+    {
+      "hanzi": "因为…所以…",
+      "pinyin": "yīnwèi … suǒyǐ …",
+      "english": "because … so …",
+      "page": 1
+    },
+    {
+      "hanzi": "不然",
+      "pinyin": "bùrán",
+      "english": "otherwise (everyday)",
+      "page": 1
+    },
+    {
+      "hanzi": "要不然",
+      "pinyin": "yàobùrán",
+      "english": "otherwise; or else (spoken)",
+      "page": 1
+    },
+    {
+      "hanzi": "否则",
+      "pinyin": "fǒuzé",
+      "english": "otherwise (more formal)",
+      "page": 1
+    },
+    {
+      "hanzi": "但是 / 但",
+      "pinyin": "dànshì / dàn",
+      "english": "but",
+      "page": 1
+    },
+    {
+      "hanzi": "比如",
+      "pinyin": "bǐrú",
+      "english": "for example",
+      "page": 1
+    },
+    {
+      "hanzi": "或",
+      "pinyin": "huò",
+      "english": "or (often in writing)",
+      "page": 1
+    },
+    {
+      "hanzi": "人或物",
+      "pinyin": "rén huò wù",
+      "english": "a person or thing",
+      "page": 1
+    },
+    {
+      "hanzi": "…的时候",
+      "pinyin": "… de shíhou",
+      "english": "when …",
+      "page": 1
+    },
+    {
+      "hanzi": "一边…一边…",
+      "pinyin": "yìbiān … yìbiān …",
+      "english": "do … while doing …",
+      "page": 1
+    },
+    {
+      "hanzi": "一方面…另一方面…",
+      "pinyin": "yì fāngmiàn … lìng yì fāngmiàn …",
+      "english": "on one hand … on the other …",
+      "page": 1
+    },
+    {
+      "hanzi": "也",
+      "pinyin": "yě",
+      "english": "also; too",
+      "page": 1
+    },
+    {
+      "hanzi": "都",
+      "pinyin": "dōu",
+      "english": "all; both",
+      "page": 1
+    },
+    {
+      "hanzi": "越来越",
+      "pinyin": "yuèláiyuè",
+      "english": "more and more",
+      "page": 1
+    },
+    {
+      "hanzi": "容易",
+      "pinyin": "róngyì",
+      "english": "easy to; likely to (+ verb)",
+      "page": 1
+    },
+    {
+      "hanzi": "就",
+      "pinyin": "jiù",
+      "english": "then; as early as (with a time)",
+      "page": 1
+    },
+    {
+      "hanzi": "才",
+      "pinyin": "cái",
+      "english": "not until (with a time)",
+      "page": 1
+    }
+  ],
+  "frequency": [
+    {
+      "hanzi": "随时",
+      "pinyin": "suíshí",
+      "english": "anytime; at any time",
+      "page": 2
+    },
+    {
+      "hanzi": "每次",
+      "pinyin": "měi cì",
+      "english": "every time; whenever (before an action)",
+      "page": 2
+    },
+    {
+      "hanzi": "每天",
+      "pinyin": "měi tiān",
+      "english": "every day",
+      "page": 2
+    },
+    {
+      "hanzi": "总是",
+      "pinyin": "zǒngshì",
+      "english": "always; habitually",
+      "page": 2
+    },
+    {
+      "hanzi": "一直",
+      "pinyin": "yìzhí",
+      "english": "continuously; all along",
+      "page": 2
+    },
+    {
+      "hanzi": "一般",
+      "pinyin": "yìbān",
+      "english": "usually; generally",
+      "page": 2
+    },
+    {
+      "hanzi": "经常",
+      "pinyin": "jīngcháng",
+      "english": "often",
+      "page": 2
+    },
+    {
+      "hanzi": "常常",
+      "pinyin": "chángcháng",
+      "english": "often",
+      "page": 2
+    },
+    {
+      "hanzi": "有时候",
+      "pinyin": "yǒushíhou",
+      "english": "sometimes",
+      "page": 2
+    },
+    {
+      "hanzi": "偶尔",
+      "pinyin": "ǒu'ěr",
+      "english": "occasionally",
+      "page": 2
+    }
+  ],
+  "phoneVocabulary": [
+    {
+      "hanzi": "别人",
+      "pinyin": "biérén",
+      "english": "other people; someone else",
+      "page": 2
+    },
+    {
+      "hanzi": "撞到别人",
+      "pinyin": "zhuàngdào biérén",
+      "english": "bump into someone",
+      "page": 2
+    },
+    {
+      "hanzi": "小心",
+      "pinyin": "xiǎoxīn",
+      "english": "be careful",
+      "page": 2
+    },
+    {
+      "hanzi": "注意不到危险",
+      "pinyin": "zhùyì bu dào wēixiǎn",
+      "english": "fail to notice danger",
+      "page": 2
+    },
+    {
+      "hanzi": "发生事故",
+      "pinyin": "fāshēng shìgù",
+      "english": "for an accident to happen",
+      "page": 2
+    }
+  ],
+  "connectorExamples": [
+    {
+      "hanzi": "如果你看手机，就要小心。",
+      "pinyin": "Rúguǒ nǐ kàn shǒujī, jiù yào xiǎoxīn.",
+      "english": "If you look at your phone, you need to be careful.",
+      "page": 1
+    },
+    {
+      "hanzi": "要小心，不然容易撞到别人。",
+      "pinyin": "Yào xiǎoxīn, bùrán róngyì zhuàngdào biérén.",
+      "english": "Be careful, otherwise you might bump into someone.",
+      "page": 1
+    },
+    {
+      "hanzi": "八点就起床 ／ 八点才起床",
+      "pinyin": "Bā diǎn jiù qǐchuáng / bā diǎn cái qǐchuáng.",
+      "english": "Get up as early as eight / not get up until eight.",
+      "page": 1
+    },
+    {
+      "hanzi": "我每天早上都在家做早饭。",
+      "pinyin": "Wǒ měitiān zǎoshang dōu zài jiā zuò zǎofàn.",
+      "english": "I make breakfast at home every morning.",
+      "page": 2
+    },
+    {
+      "hanzi": "我一直在家做早饭。",
+      "pinyin": "Wǒ yìzhí zài jiā zuò zǎofàn.",
+      "english": "I’ve been making breakfast at home all along.",
+      "page": 2
+    }
+  ],
+  "trends": [
+    {
+      "hanzi": "地铁站越来越挤。",
+      "pinyin": "Dìtiězhàn yuè lái yuè jǐ.",
+      "english": "The subway station is getting more crowded.",
+      "page": 3
+    },
+    {
+      "hanzi": "我越来越喜欢中文。",
+      "pinyin": "Wǒ yuè lái yuè xǐhuan Zhōngwén.",
+      "english": "I like Chinese more and more.",
+      "page": 3
+    },
+    {
+      "hanzi": "人们越来越离不开手机。",
+      "pinyin": "Rénmen yuè lái yuè lí bu kāi shǒujī.",
+      "english": "People increasingly can’t do without their phones.",
+      "page": 3
+    }
+  ],
+  "relationships": [
+    {
+      "hanzi": "人越多，越容易撞到别人。",
+      "pinyin": "Rén yuè duō, yuè róngyì zhuàngdào biérén.",
+      "english": "The more people there are, the easier it is to bump into someone.",
+      "page": 3
+    },
+    {
+      "hanzi": "他越吃越胖。",
+      "pinyin": "Tā yuè chī yuè pàng.",
+      "english": "The more he eats, the heavier he gets.",
+      "page": 3
+    },
+    {
+      "hanzi": "你越说，我越不明白。",
+      "pinyin": "Nǐ yuè shuō, wǒ yuè bù míngbai.",
+      "english": "The more you talk, the less I understand.",
+      "page": 3
+    }
+  ],
+  "variants": [
+    {
+      "hanzi": "越大越好。",
+      "pinyin": "Yuè dà yuè hǎo.",
+      "english": "The bigger, the better.",
+      "page": 4,
+      "note": "The two changing parts can be adjectives. The subject can be omitted when the context is clear."
+    },
+    {
+      "hanzi": "越是着急，越是容易出错。",
+      "pinyin": "Yuè shì zháojí, yuè shì róngyì chūcuò.",
+      "english": "The more rushed you are, the more easily you make mistakes.",
+      "page": 4,
+      "note": "越是…越是… is an emphatic variant."
+    },
+    {
+      "hanzi": "愈多愈好。",
+      "pinyin": "Yù duō yù hǎo.",
+      "english": "The more, the better.",
+      "page": 4,
+      "note": "愈…愈… is a written or formal variant."
+    },
+    {
+      "hanzi": "人越来越多，越挤越容易撞到别人。",
+      "pinyin": "Rén yuè lái yuè duō, yuè jǐ yuè róngyì zhuàngdào biérén.",
+      "english": "There are more and more people. The more crowded it gets, the easier it is to bump into someone.",
+      "page": 4,
+      "note": "Both patterns can occur in the same situation."
+    }
+  ],
+  "reading": [
+    {
+      "hanzi": "今天我想说一说一边走路一边看手机的危险。",
+      "pinyin": "Jīntiān wǒ xiǎng shuō yi shuō yìbiān zǒulù yìbiān kàn shǒujī de wēixiǎn.",
+      "english": "Today I’d like to talk about the dangers of looking at your phone while walking.",
+      "page": 5,
+      "id": "sentence-1"
+    },
+    {
+      "hanzi": "什么东西都有好处，也有坏处。",
+      "pinyin": "Shénme dōngxi dōu yǒu hǎochu, yě yǒu huàichu.",
+      "english": "Everything has advantages and disadvantages.",
+      "page": 5,
+      "id": "sentence-2"
+    },
+    {
+      "hanzi": "手机也一样。",
+      "pinyin": "Shǒujī yě yíyàng.",
+      "english": "Phones are no different.",
+      "page": 5,
+      "id": "sentence-3"
+    },
+    {
+      "hanzi": "现代生活，人们越来越离不开手机。",
+      "pinyin": "Xiàndài shēnghuó, rénmen yuèláiyuè líbukāi shǒujī.",
+      "english": "In modern life, people rely more and more on their phones.",
+      "page": 5,
+      "id": "sentence-4"
+    },
+    {
+      "hanzi": "坐地铁需要手机，打的需要手机，买东西需要手机。",
+      "pinyin": "Zuò dìtiě xūyào shǒujī, dǎdī xūyào shǒujī, mǎi dōngxi xūyào shǒujī.",
+      "english": "We need our phones to take the subway, get a taxi, and shop.",
+      "page": 5,
+      "id": "sentence-5"
+    },
+    {
+      "hanzi": "一方面，手机给我们的生活带来了好处。",
+      "pinyin": "Yì fāngmiàn, shǒujī gěi wǒmen de shēnghuó dàilái le hǎochu.",
+      "english": "On the one hand, phones have made our lives better in some ways.",
+      "page": 5,
+      "id": "sentence-6"
+    },
+    {
+      "hanzi": "另一方面，手机也带来了很多坏处。",
+      "pinyin": "Lìng yì fāngmiàn, shǒujī yě dàilái le hěn duō huàichu.",
+      "english": "On the other hand, phones have also brought many problems.",
+      "page": 5,
+      "id": "sentence-7"
+    },
+    {
+      "hanzi": "在很多地方，比如在地铁站、在路上、在火车站、在超市，我们都能看到很多年轻人一边走路，一边玩手机。",
+      "pinyin": "Zài hěn duō dìfang, bǐrú zài dìtiězhàn, zài lùshang, zài huǒchēzhàn, zài chāoshì, wǒmen dōu néng kàndào hěn duō niánqīngrén yìbiān zǒulù, yìbiān wán shǒujī.",
+      "english": "In many places, such as subway stations, streets, train stations, and supermarkets, we see lots of young people using their phones while walking.",
+      "page": 5,
+      "id": "sentence-8"
+    },
+    {
+      "hanzi": "我觉得很不安全。",
+      "pinyin": "Wǒ juéde hěn bù ānquán.",
+      "english": "I think it’s very unsafe.",
+      "page": 6,
+      "id": "sentence-9"
+    },
+    {
+      "hanzi": "出门在外，一边走路一边看手机，很容易撞到别人。",
+      "pinyin": "Chūmén zàiwài, yìbiān zǒulù yìbiān kàn shǒujī, hěn róngyì zhuàngdào biérén.",
+      "english": "When you’re out and about, it’s easy to bump into someone if you look at your phone while walking.",
+      "page": 6,
+      "id": "sentence-10"
+    },
+    {
+      "hanzi": "在商场、学校、公园或者地铁站，人一多，就更容易撞到别人。",
+      "pinyin": "Zài shāngchǎng, xuéxiào, gōngyuán huòzhě dìtiězhàn, rén yì duō, jiù gèng róngyì zhuàngdào biérén.",
+      "english": "In malls, schools, parks, or subway stations, it’s even easier to bump into someone when it gets crowded.",
+      "page": 6,
+      "id": "sentence-11"
+    },
+    {
+      "hanzi": "如果一直盯着手机屏幕，就容易忽略周围的情况。",
+      "pinyin": "Rúguǒ yìzhí dīngzhe shǒujī píngmù, jiù róngyì hūlüè zhōuwéi de qíngkuàng.",
+      "english": "If you keep staring at your phone screen, it’s easy to miss what’s happening around you.",
+      "page": 6,
+      "id": "sentence-12"
+    },
+    {
+      "hanzi": "有时候会撞到门或者别的东西，也可能掉进坑里，或者从楼梯上摔下来。",
+      "pinyin": "Yǒushíhou huì zhuàngdào mén huòzhě bié de dōngxi, yě kěnéng diàojìn kēng li, huòzhě cóng lóutī shang shuāi xiàlai.",
+      "english": "Sometimes you walk into a door or another object. You might also fall into a hole or tumble down the stairs.",
+      "page": 6,
+      "id": "sentence-13"
+    },
+    {
+      "hanzi": "有些小意外挺好笑的，有些却很危险。",
+      "pinyin": "Yǒuxiē xiǎo yìwài tǐng hǎoxiào de, yǒuxiē què hěn wēixiǎn.",
+      "english": "Some little mishaps are pretty funny, while others are dangerous.",
+      "page": 6,
+      "id": "sentence-14"
+    },
+    {
+      "hanzi": "因为路上有很多汽车，电动车开得很快，如果你玩手机，就注意不到危险，很容易发生交通事故。",
+      "pinyin": "Yīnwèi lùshang yǒu hěn duō qìchē, diàndòngchē kāi de hěn kuài, rúguǒ nǐ wán shǒujī, jiù zhùyì bu dào wēixiǎn, hěn róngyì fāshēng jiāotōng shìgù.",
+      "english": "There are lots of cars on the road, and electric scooters go fast. If you’re on your phone, you won’t notice the danger, and a traffic accident can easily happen.",
+      "page": 6,
+      "id": "sentence-15"
+    }
+  ],
+  "caution": [
+    {
+      "hanzi": "我们在外面的时候要小心。",
+      "pinyin": "Wǒmen zài wàimiàn de shíhou yào xiǎoxīn.",
+      "english": "We need to be careful when we’re out.",
+      "page": 8
+    },
+    {
+      "hanzi": "我们在超市的时候，人一多，就要小心。",
+      "pinyin": "Wǒmen zài chāoshì de shíhou, rén yì duō, jiù yào xiǎoxīn.",
+      "english": "When it gets crowded at the supermarket, we need to be careful.",
+      "page": 8
+    },
+    {
+      "hanzi": "如果不小心，就容易撞到别人。",
+      "pinyin": "Rúguǒ bù xiǎoxīn, jiù róngyì zhuàngdào biérén.",
+      "english": "If we aren’t careful, it’s easy to bump into someone.",
+      "page": 8
+    },
+    {
+      "hanzi": "在人多的地方要小心，不然容易撞到别人。",
+      "pinyin": "Zài rén duō de dìfang yào xiǎoxīn, bùrán róngyì zhuàngdào biérén.",
+      "english": "Be careful in crowded places, or you might bump into someone.",
+      "page": 8
+    },
+    {
+      "hanzi": "边走边看手机的时候，我们要小心。",
+      "pinyin": "Biān zǒu biān kàn shǒujī de shíhou, wǒmen yào xiǎoxīn.",
+      "english": "When we look at our phones while walking, we need to be careful.",
+      "page": 8
+    },
+    {
+      "hanzi": "不小心的话，就容易撞到别人。",
+      "pinyin": "Bù xiǎoxīn de huà, jiù róngyì zhuàngdào biérén.",
+      "english": "If you aren’t careful, you might bump into someone.",
+      "page": 8
+    },
+    {
+      "hanzi": "我们每次去人多的地方，如果边走边看手机，就要小心，不然容易撞到别人。",
+      "pinyin": "Wǒmen měicì qù rén duō de dìfang, rúguǒ biān zǒu biān kàn shǒujī, jiù yào xiǎoxīn, bùrán róngyì zhuàngdào biérén.",
+      "english": "Whenever we go somewhere crowded, we need to be careful if we use our phones while walking, or we might bump into someone.",
+      "page": 8
+    }
+  ],
+  "practice": [
+    {
+      "hanzi": "如果你一边走路一边看手机，就容易撞到别人。",
+      "pinyin": "Rúguǒ nǐ yìbiān zǒulù yìbiān kàn shǒujī, jiù róngyì zhuàngdào biérén.",
+      "english": "If you look at your phone while walking, you might bump into someone.",
+      "page": 10,
+      "prompt": "If you use your phone while walking, you might bump into someone.",
+      "promptPage": 9,
+      "id": "context-1"
+    },
+    {
+      "hanzi": "要小心，不然容易撞到别人。",
+      "pinyin": "Yào xiǎoxīn, bùrán róngyì zhuàngdào biérén.",
+      "english": "Be careful, or you might bump into someone.",
+      "page": 10,
+      "prompt": "Be careful, otherwise you might bump into someone.",
+      "promptPage": 9,
+      "id": "context-2"
+    },
+    {
+      "hanzi": "中国很安全，所以我喜欢住在苏州。",
+      "pinyin": "Zhōngguó hěn ānquán, suǒyǐ wǒ xǐhuan zhù zài Sūzhōu.",
+      "english": "China is very safe, so I like living in Suzhou.",
+      "page": 10,
+      "prompt": "China is very safe, so I like living in Suzhou.",
+      "promptPage": 9,
+      "id": "context-3"
+    },
+    {
+      "hanzi": "我八点就起床。／我八点才起床。",
+      "pinyin": "Wǒ bā diǎn jiù qǐchuáng. / Wǒ bā diǎn cái qǐchuáng.",
+      "english": "I get up as early as eight. / I don’t get up until eight.",
+      "page": 10,
+      "prompt": "At eight already! / Not until eight! (Use “get up” in both.)",
+      "promptPage": 9,
+      "id": "context-4"
+    },
+    {
+      "hanzi": "我经常在家做早饭，但有时候出去吃。",
+      "pinyin": "Wǒ jīngcháng zài jiā zuò zǎofàn, dàn yǒushíhou chūqu chī.",
+      "english": "I often make breakfast at home, but sometimes I go out to eat.",
+      "page": 10,
+      "prompt": "I often make breakfast at home, but sometimes I eat out.",
+      "promptPage": 9,
+      "id": "context-5"
+    },
+    {
+      "hanzi": "超市人多的时候，要小心。",
+      "pinyin": "Chāoshì rén duō de shíhou, yào xiǎoxīn.",
+      "english": "Be careful when the supermarket is crowded.",
+      "page": 10,
+      "prompt": "When there are a lot of people at the supermarket, be careful.",
+      "promptPage": 9,
+      "id": "context-6"
+    }
+  ],
+  "grammar": [
+    {
+      "hanzi": "天气越来越热。",
+      "pinyin": "Tiānqì yuè lái yuè rè.",
+      "english": "The weather is getting hotter.",
+      "page": 11,
+      "prompt": "天气 _____ 热。",
+      "answer": [
+        "越来越"
+      ],
+      "explanation": "Trend: the temperature is going up."
+    },
+    {
+      "hanzi": "路上越挤，越容易撞到别人。",
+      "pinyin": "Lùshang yuè jǐ, yuè róngyì zhuàngdào biérén.",
+      "english": "The more crowded the street is, the easier it is to bump into someone.",
+      "page": 11,
+      "prompt": "路上 _____ 挤，_____ 容易撞到别人。",
+      "answer": [
+        "越",
+        "越"
+      ],
+      "explanation": "Relationship: more crowding makes collisions easier."
+    },
+    {
+      "hanzi": "我越来越喜欢中文。",
+      "pinyin": "Wǒ yuè lái yuè xǐhuan Zhōngwén.",
+      "english": "I like Chinese more and more.",
+      "page": 11,
+      "prompt": "我 _____ 喜欢中文。",
+      "answer": [
+        "越来越"
+      ],
+      "explanation": "Trend: how much I like Chinese is changing."
+    },
+    {
+      "hanzi": "你越说，我越不明白。",
+      "pinyin": "Nǐ yuè shuō, wǒ yuè bù míngbai.",
+      "english": "The more you talk, the less I understand.",
+      "page": 11,
+      "prompt": "你 _____ 说，我 _____ 不明白。",
+      "answer": [
+        "越",
+        "越"
+      ],
+      "explanation": "Relationship: more talking, less understanding."
+    }
+  ],
+  "speaking": [
+    {
+      "hanzi": "路上的汽车越来越多。",
+      "pinyin": "Lùshang de qìchē yuè lái yuè duō.",
+      "english": "There are more and more cars on the road.",
+      "page": 11
+    },
+    {
+      "hanzi": "汽车越多，我们越要小心。",
+      "pinyin": "Qìchē yuè duō, wǒmen yuè yào xiǎoxīn.",
+      "english": "The more cars there are, the more careful we need to be.",
+      "page": 11
+    }
+  ],
+  "characters": [
+    {
+      "hanzi": "如",
+      "pinyin": "rú",
+      "strokes": 6,
+      "page": 12
+    },
+    {
+      "hanzi": "果",
+      "pinyin": "guǒ",
+      "strokes": 8,
+      "page": 12
+    },
+    {
+      "hanzi": "就",
+      "pinyin": "jiù",
+      "strokes": 12,
+      "page": 12
+    },
+    {
+      "hanzi": "因",
+      "pinyin": "yīn",
+      "strokes": 6,
+      "page": 12
+    },
+    {
+      "hanzi": "为",
+      "pinyin": "wèi",
+      "strokes": 4,
+      "page": 12
+    },
+    {
+      "hanzi": "所",
+      "pinyin": "suǒ",
+      "strokes": 8,
+      "page": 13
+    },
+    {
+      "hanzi": "以",
+      "pinyin": "yǐ",
+      "strokes": 4,
+      "page": 13
+    },
+    {
+      "hanzi": "不",
+      "pinyin": "bù",
+      "strokes": 4,
+      "page": 13
+    },
+    {
+      "hanzi": "然",
+      "pinyin": "rán",
+      "strokes": 12,
+      "page": 13
+    },
+    {
+      "hanzi": "要",
+      "pinyin": "yào",
+      "strokes": 9,
+      "page": 13
+    },
+    {
+      "hanzi": "否",
+      "pinyin": "fǒu",
+      "strokes": 7,
+      "page": 14
+    },
+    {
+      "hanzi": "则",
+      "pinyin": "zé",
+      "strokes": 6,
+      "page": 14
+    },
+    {
+      "hanzi": "但",
+      "pinyin": "dàn",
+      "strokes": 7,
+      "page": 14
+    },
+    {
+      "hanzi": "是",
+      "pinyin": "shì",
+      "strokes": 9,
+      "page": 14
+    },
+    {
+      "hanzi": "比",
+      "pinyin": "bǐ",
+      "strokes": 4,
+      "page": 14
+    },
+    {
+      "hanzi": "或",
+      "pinyin": "huò",
+      "strokes": 8,
+      "page": 15
+    },
+    {
+      "hanzi": "人",
+      "pinyin": "rén",
+      "strokes": 2,
+      "page": 15
+    },
+    {
+      "hanzi": "物",
+      "pinyin": "wù",
+      "strokes": 8,
+      "page": 15
+    },
+    {
+      "hanzi": "的",
+      "pinyin": "de",
+      "strokes": 8,
+      "page": 15
+    },
+    {
+      "hanzi": "时",
+      "pinyin": "shí",
+      "strokes": 7,
+      "page": 15
+    },
+    {
+      "hanzi": "候",
+      "pinyin": "hou",
+      "strokes": 10,
+      "page": 16
+    },
+    {
+      "hanzi": "一",
+      "pinyin": "yī",
+      "strokes": 1,
+      "page": 16
+    },
+    {
+      "hanzi": "边",
+      "pinyin": "biān",
+      "strokes": 5,
+      "page": 16
+    },
+    {
+      "hanzi": "方",
+      "pinyin": "fāng",
+      "strokes": 4,
+      "page": 16
+    },
+    {
+      "hanzi": "面",
+      "pinyin": "miàn",
+      "strokes": 9,
+      "page": 16
+    },
+    {
+      "hanzi": "另",
+      "pinyin": "lìng",
+      "strokes": 5,
+      "page": 17
+    },
+    {
+      "hanzi": "也",
+      "pinyin": "yě",
+      "strokes": 3,
+      "page": 17
+    },
+    {
+      "hanzi": "都",
+      "pinyin": "dōu",
+      "strokes": 10,
+      "page": 17
+    },
+    {
+      "hanzi": "越",
+      "pinyin": "yuè",
+      "strokes": 12,
+      "page": 17
+    },
+    {
+      "hanzi": "来",
+      "pinyin": "lái",
+      "strokes": 7,
+      "page": 17
+    },
+    {
+      "hanzi": "容",
+      "pinyin": "róng",
+      "strokes": 10,
+      "page": 18
+    },
+    {
+      "hanzi": "易",
+      "pinyin": "yì",
+      "strokes": 8,
+      "page": 18
+    },
+    {
+      "hanzi": "才",
+      "pinyin": "cái",
+      "strokes": 3,
+      "page": 18
+    },
+    {
+      "hanzi": "随",
+      "pinyin": "suí",
+      "strokes": 11,
+      "page": 18
+    },
+    {
+      "hanzi": "每",
+      "pinyin": "měi",
+      "strokes": 7,
+      "page": 18
+    },
+    {
+      "hanzi": "次",
+      "pinyin": "cì",
+      "strokes": 6,
+      "page": 19
+    },
+    {
+      "hanzi": "天",
+      "pinyin": "tiān",
+      "strokes": 4,
+      "page": 19
+    },
+    {
+      "hanzi": "总",
+      "pinyin": "zǒng",
+      "strokes": 9,
+      "page": 19
+    },
+    {
+      "hanzi": "直",
+      "pinyin": "zhí",
+      "strokes": 8,
+      "page": 19
+    },
+    {
+      "hanzi": "般",
+      "pinyin": "bān",
+      "strokes": 10,
+      "page": 19
+    },
+    {
+      "hanzi": "经",
+      "pinyin": "jīng",
+      "strokes": 8,
+      "page": 20
+    },
+    {
+      "hanzi": "常",
+      "pinyin": "cháng",
+      "strokes": 11,
+      "page": 20
+    },
+    {
+      "hanzi": "有",
+      "pinyin": "yǒu",
+      "strokes": 6,
+      "page": 20
+    },
+    {
+      "hanzi": "偶",
+      "pinyin": "ǒu",
+      "strokes": 11,
+      "page": 20
+    },
+    {
+      "hanzi": "尔",
+      "pinyin": "ěr",
+      "strokes": 5,
+      "page": 20
+    },
+    {
+      "hanzi": "别",
+      "pinyin": "bié",
+      "strokes": 7,
+      "page": 21
+    },
+    {
+      "hanzi": "撞",
+      "pinyin": "zhuàng",
+      "strokes": 15,
+      "page": 21
+    },
+    {
+      "hanzi": "到",
+      "pinyin": "dào",
+      "strokes": 8,
+      "page": 21
+    },
+    {
+      "hanzi": "小",
+      "pinyin": "xiǎo",
+      "strokes": 3,
+      "page": 21
+    },
+    {
+      "hanzi": "心",
+      "pinyin": "xīn",
+      "strokes": 4,
+      "page": 21
+    },
+    {
+      "hanzi": "注",
+      "pinyin": "zhù",
+      "strokes": 8,
+      "page": 22
+    },
+    {
+      "hanzi": "意",
+      "pinyin": "yì",
+      "strokes": 13,
+      "page": 22
+    },
+    {
+      "hanzi": "危",
+      "pinyin": "wēi",
+      "strokes": 6,
+      "page": 22
+    },
+    {
+      "hanzi": "险",
+      "pinyin": "xiǎn",
+      "strokes": 9,
+      "page": 22
+    },
+    {
+      "hanzi": "发",
+      "pinyin": "fā",
+      "strokes": 5,
+      "page": 22
+    },
+    {
+      "hanzi": "生",
+      "pinyin": "shēng",
+      "strokes": 5,
+      "page": 23
+    },
+    {
+      "hanzi": "事",
+      "pinyin": "shì",
+      "strokes": 8,
+      "page": 23
+    },
+    {
+      "hanzi": "故",
+      "pinyin": "gù",
+      "strokes": 9,
+      "page": 23
+    },
+    {
+      "hanzi": "挤",
+      "pinyin": "jǐ",
+      "strokes": 9,
+      "english": "crowded",
+      "page": 24
+    },
+    {
+      "hanzi": "胖",
+      "pinyin": "pàng",
+      "strokes": 9,
+      "english": "fat; heavier in the eating example",
+      "page": 24
+    },
+    {
+      "hanzi": "急",
+      "pinyin": "jí",
+      "strokes": 9,
+      "english": "urgent; part of “be anxious”",
+      "page": 24
+    },
+    {
+      "hanzi": "错",
+      "pinyin": "cuò",
+      "strokes": 13,
+      "english": "wrong; part of “make a mistake”",
+      "page": 24
+    },
+    {
+      "hanzi": "愈",
+      "pinyin": "yù",
+      "strokes": 13,
+      "english": "increasingly; written or formal",
+      "page": 24
+    }
+  ],
+  "coverage": [
+    {
+      "pages": [
+        1,
+        2
+      ],
+      "section": "Connectors and frequency",
+      "content": "All reference expressions and five contrast examples"
+    },
+    {
+      "pages": [
+        3,
+        4
+      ],
+      "section": "Trends and relationships",
+      "content": "Both constructions, all examples and formal/emphatic variants; four gap exercises continue in Practice"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        7
+      ],
+      "section": "Read and listen",
+      "content": "Full 15-sentence article, source pinyin, and all English translations"
+    },
+    {
+      "pages": [
+        8
+      ],
+      "section": "Be careful",
+      "content": "All seven caution examples and translations"
+    },
+    {
+      "pages": [
+        9,
+        10,
+        11
+      ],
+      "section": "Practice",
+      "content": "Six contextual prompts with model answers, four grammar gaps with explanations and two speaking challenges"
+    },
+    {
+      "pages": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "section": "Hanzi and pinyin",
+      "content": "All 63 characters with source readings and stroke counts; existing shared writing drills"
+    },
+    {
+      "pages": [
+        25,
+        26,
+        27
+      ],
+      "section": "Source PDF",
+      "content": "Attribution and license pages retained in unchanged downloadable PDF"
+    }
+  ]
+}

@@ -1,0 +1,472 @@
+{
+  "source": "/audio/connectors-phone/ditouzu-full-7c01747316ef.wav",
+  "voice": "Xiaoxiao Neural",
+  "voiceId": "zh-CN-XiaoxiaoNeural",
+  "rate": "-10%",
+  "sampleRate": 24000,
+  "frames": 2058048,
+  "sha256": "46c087f92b7677f6537e17a8dacf3be0694f10e6ef1ca58fa0318f0279b38a4d",
+  "cues": [
+    {
+      "key": "sentence-1",
+      "text": "今天我想说一说一边走路一边看手机的危险。",
+      "startFrame": 0
+    },
+    {
+      "key": "sentence-2",
+      "text": "什么东西都有好处，也有坏处。",
+      "startFrame": 125568
+    },
+    {
+      "key": "sentence-3",
+      "text": "手机也一样。",
+      "startFrame": 216000
+    },
+    {
+      "key": "sentence-4",
+      "text": "现代生活，人们越来越离不开手机。",
+      "startFrame": 267840
+    },
+    {
+      "key": "sentence-5",
+      "text": "坐地铁需要手机，打的需要手机，买东西需要手机。",
+      "startFrame": 368640
+    },
+    {
+      "key": "sentence-6",
+      "text": "一方面，手机给我们的生活带来了好处。",
+      "startFrame": 506304
+    },
+    {
+      "key": "sentence-7",
+      "text": "另一方面，手机也带来了很多坏处。",
+      "startFrame": 618624
+    },
+    {
+      "key": "sentence-8",
+      "text": "在很多地方，比如在地铁站、在路上、在火车站、在超市，我们都能看到很多年轻人一边走路，一边玩手机。",
+      "startFrame": 721152
+    },
+    {
+      "key": "sentence-9",
+      "text": "我觉得很不安全。",
+      "startFrame": 1009152
+    },
+    {
+      "key": "sentence-10",
+      "text": "出门在外，一边走路一边看手机，很容易撞到别人。",
+      "startFrame": 1067328
+    },
+    {
+      "key": "sentence-11",
+      "text": "在商场、学校、公园或者地铁站，人一多，就更容易撞到别人。",
+      "startFrame": 1210752
+    },
+    {
+      "key": "sentence-12",
+      "text": "如果一直盯着手机屏幕，就容易忽略周围的情况。",
+      "startFrame": 1388736
+    },
+    {
+      "key": "sentence-13",
+      "text": "有时候会撞到门或者别的东西，也可能掉进坑里，或者从楼梯上摔下来。",
+      "startFrame": 1516032
+    },
+    {
+      "key": "sentence-14",
+      "text": "有些小意外挺好笑的，有些却很危险。",
+      "startFrame": 1710144
+    },
+    {
+      "key": "sentence-15",
+      "text": "因为路上有很多汽车，电动车开得很快，如果你玩手机，就注意不到危险，很容易发生交通事故。",
+      "startFrame": 1818432
+    }
+  ],
+  "recordings": {
+    "今天我想说一说一边走路一边看手机的危险。": {
+      "source": "/audio/connectors-phone/db912489c1ac7bb1ecf1.mp3",
+      "sha256": "d453bf33223cb2afd6ea9d2f2332106236d8d99ee2dea3d77b33efb146da93a5",
+      "bytes": 29952,
+      "text": "今天我想说一说一边走路一边看手机的危险。"
+    },
+    "什么东西都有好处，也有坏处。": {
+      "source": "/audio/connectors-phone/4d38187ed3b4158e0d0b.mp3",
+      "sha256": "dfae976668e2e91d17aa7ad2e2c00533f50bf30271da5cee28f00b85bfa06c35",
+      "bytes": 21168,
+      "text": "什么东西都有好处，也有坏处。"
+    },
+    "手机也一样。": {
+      "source": "/audio/connectors-phone/7cd00fdcfc82b5e64c2f.mp3",
+      "sha256": "759a382d7371a00d790b92173cdbd45c28612c990e2503354fa9c5adfb6fc283",
+      "bytes": 11520,
+      "text": "手机也一样。"
+    },
+    "现代生活，人们越来越离不开手机。": {
+      "source": "/audio/connectors-phone/4e17b3eafa2bff50b20f.mp3",
+      "sha256": "8102a68c6f2641f27b423a2501db05242b3dd89251378d92e63a419282c75bd7",
+      "bytes": 23760,
+      "text": "现代生活，人们越来越离不开手机。"
+    },
+    "坐地铁需要手机，打的需要手机，买东西需要手机。": {
+      "source": "/audio/connectors-phone/7b5d76df0f9b2c56c4f1.mp3",
+      "sha256": "7665853f4af7e4ee90747a6943337a89a91265ede50efcf64cce996393a8dd8b",
+      "bytes": 32976,
+      "text": "坐地铁需要手机，打的需要手机，买东西需要手机。"
+    },
+    "一方面，手机给我们的生活带来了好处。": {
+      "source": "/audio/connectors-phone/bab52076ca30aee906ba.mp3",
+      "sha256": "699ef5ef4c001163ef55be9c3abf2cd732f3e4301b04b3609a71c9111704db82",
+      "bytes": 26640,
+      "text": "一方面，手机给我们的生活带来了好处。"
+    },
+    "另一方面，手机也带来了很多坏处。": {
+      "source": "/audio/connectors-phone/b54381ea7d542e7df5f9.mp3",
+      "sha256": "34f4f2df4e76d88dccec2916e93d17c75885325f1f50bdc31dd1ba73851f2562",
+      "bytes": 24192,
+      "text": "另一方面，手机也带来了很多坏处。"
+    },
+    "在很多地方，比如在地铁站、在路上、在火车站、在超市，我们都能看到很多年轻人一边走路，一边玩手机。": {
+      "source": "/audio/connectors-phone/b19396fba024f222c610.mp3",
+      "sha256": "0b1fb5fdc75efce2d16a579c172c73e72477d410bd5bdd6fffc25c01fb9453db",
+      "bytes": 70560,
+      "text": "在很多地方，比如在地铁站、在路上、在火车站、在超市，我们都能看到很多年轻人一边走路，一边玩手机。"
+    },
+    "我觉得很不安全。": {
+      "source": "/audio/connectors-phone/62e462ef0e07a2e210b1.mp3",
+      "sha256": "ec1fa84ebeed6738224f6943ce8289a651f5121d5d496b2a11a90a6e108ed7bc",
+      "bytes": 13104,
+      "text": "我觉得很不安全。"
+    },
+    "出门在外，一边走路一边看手机，很容易撞到别人。": {
+      "source": "/audio/connectors-phone/f6ef70b34adafd062a0a.mp3",
+      "sha256": "c35b4f418e380fdae6e3b6b51f1972376c1fe76e09d0fa146fe5eda8bea88ee0",
+      "bytes": 34416,
+      "text": "出门在外，一边走路一边看手机，很容易撞到别人。"
+    },
+    "在商场、学校、公园或者地铁站，人一多，就更容易撞到别人。": {
+      "source": "/audio/connectors-phone/432981352c1ac751fa78.mp3",
+      "sha256": "7d52c111ad3f4bc1902695da59dd6027ce43e1d4a2525c3516b7a31318f72a2f",
+      "bytes": 43056,
+      "text": "在商场、学校、公园或者地铁站，人一多，就更容易撞到别人。"
+    },
+    "如果一直盯着手机屏幕，就容易忽略周围的情况。": {
+      "source": "/audio/connectors-phone/bfd8b1d6c73b4357d135.mp3",
+      "sha256": "ba2f70382d4e323c6e0f7b170f117681bc736d90fae9194844399d2f4350233c",
+      "bytes": 30384,
+      "text": "如果一直盯着手机屏幕，就容易忽略周围的情况。"
+    },
+    "有时候会撞到门或者别的东西，也可能掉进坑里，或者从楼梯上摔下来。": {
+      "source": "/audio/connectors-phone/48171a63eef69574705c.mp3",
+      "sha256": "d932c38cf82717a39dcbda3b484dc715ddf091523324f8bbaa41341d50be5c44",
+      "bytes": 47088,
+      "text": "有时候会撞到门或者别的东西，也可能掉进坑里，或者从楼梯上摔下来。"
+    },
+    "有些小意外挺好笑的，有些却很危险。": {
+      "source": "/audio/connectors-phone/48c0dc0cea785e73dcf0.mp3",
+      "sha256": "3852c0cb4aa21c0a8cbceb5873fbc053d7baed6d037482f44cda24866e98db5c",
+      "bytes": 25632,
+      "text": "有些小意外挺好笑的，有些却很危险。"
+    },
+    "因为路上有很多汽车，电动车开得很快，如果你玩手机，就注意不到危险，很容易发生交通事故。": {
+      "source": "/audio/connectors-phone/4608afd1036945ff1cba.mp3",
+      "sha256": "d2515b4b3826d616952488d1b382e5f3cb23b11ad413acd01bc7661a52f9c37b",
+      "bytes": 59904,
+      "text": "因为路上有很多汽车，电动车开得很快，如果你玩手机，就注意不到危险，很容易发生交通事故。"
+    },
+    "如果你看手机，就要小心。": {
+      "source": "/audio/connectors-phone/d75c3397dcb29581a7b1.mp3",
+      "sha256": "c7a927d9b9f6ee3c9d1f47c108771c8d4b81fc2a5764f2f5a85246444700005f",
+      "bytes": 18576,
+      "text": "如果你看手机，就要小心。"
+    },
+    "要小心，不然容易撞到别人。": {
+      "source": "/audio/connectors-phone/6b2fc5d4f8ce5b5e260a.mp3",
+      "sha256": "da08438b1fce32208b6366bada364b81876ba238e7bc72a50bd63f2fe74eddd2",
+      "bytes": 19728,
+      "text": "要小心，不然容易撞到别人。"
+    },
+    "八点就起床 ／ 八点才起床": {
+      "source": "/audio/connectors-phone/697ac54a209641104049.mp3",
+      "sha256": "0d55df10e676abd5c67f5d75f7aa7e57cece875b0ec63bc105bac50b127f6719",
+      "bytes": 18864,
+      "text": "八点就起床 ／ 八点才起床"
+    },
+    "我每天早上都在家做早饭。": {
+      "source": "/audio/connectors-phone/30b894d5526fac982e2e.mp3",
+      "sha256": "ef413162d2112782e3cd22d4b63ef8f4aaf296d43e5a3f6c600efba3e5de9d96",
+      "bytes": 19008,
+      "text": "我每天早上都在家做早饭。"
+    },
+    "我一直在家做早饭。": {
+      "source": "/audio/connectors-phone/ae112a802339cdfb3fe6.mp3",
+      "sha256": "9f67ce3e6f8336636c20dc5d4614c29a3c866d763bfa8142a37d449fb9b78ba6",
+      "bytes": 14976,
+      "text": "我一直在家做早饭。"
+    },
+    "地铁站越来越挤。": {
+      "source": "/audio/connectors-phone/4d3aff38baea66c7ea14.mp3",
+      "sha256": "9f4cda5376a2cd640aee2666ade2e220fb95a49d0045e399cda93eb2967d4a55",
+      "bytes": 13968,
+      "text": "地铁站越来越挤。"
+    },
+    "我越来越喜欢中文。": {
+      "source": "/audio/connectors-phone/3926407bf67e7cdd0171.mp3",
+      "sha256": "9e1a2aff0c41283ef0b7596e9dd5ee670d82efb7da21e53800714cf9f132c166",
+      "bytes": 14400,
+      "text": "我越来越喜欢中文。"
+    },
+    "人们越来越离不开手机。": {
+      "source": "/audio/connectors-phone/4cb0071859420492ec80.mp3",
+      "sha256": "c824d499a4fb54ec06a08ca50a9694a365e07543a2428dd3d11a92da6dd8721e",
+      "bytes": 16560,
+      "text": "人们越来越离不开手机。"
+    },
+    "人越多，越容易撞到别人。": {
+      "source": "/audio/connectors-phone/d1cd374b74df4c45cab3.mp3",
+      "sha256": "14f7771182025be4bc68c99cc3e7adc9c9b6b48ef4731a299741b0854fc3b0f2",
+      "bytes": 19152,
+      "text": "人越多，越容易撞到别人。"
+    },
+    "他越吃越胖。": {
+      "source": "/audio/connectors-phone/69ece4c358422e9a1cb7.mp3",
+      "sha256": "7467c9397143e860a7dc590eb34291d582a9646b9713f6507ca19a168e6b2cd6",
+      "bytes": 11520,
+      "text": "他越吃越胖。"
+    },
+    "你越说，我越不明白。": {
+      "source": "/audio/connectors-phone/3a8006657e94560d4729.mp3",
+      "sha256": "474532ee3aa519933146af37a9f843d27c75bc057d58ac222f28493abd2381fe",
+      "bytes": 16128,
+      "text": "你越说，我越不明白。"
+    },
+    "越大越好。": {
+      "source": "/audio/connectors-phone/30023061801d5642425e.mp3",
+      "sha256": "345ac924c67d0977989c4ff82677b005591ee7ddf6749fedd6ea6f7274cafb7d",
+      "bytes": 11232,
+      "text": "越大越好。"
+    },
+    "越是着急，越是容易出错。": {
+      "source": "/audio/connectors-phone/2dc39c80fa42edd81b6c.mp3",
+      "sha256": "3c7b96cd0b137cc55bc0c7c046db8289f5b0a083bf2f066dda5c8d71ff0b6cf3",
+      "bytes": 19296,
+      "text": "越是着急，越是容易出错。"
+    },
+    "愈多愈好。": {
+      "source": "/audio/connectors-phone/d390f36b2c2c3b2325d9.mp3",
+      "sha256": "fc96e732b558f04c4f87d8ccd23c901d6e1d2b732ce761e508c3107e9e5295dd",
+      "bytes": 11232,
+      "text": "愈多愈好。"
+    },
+    "人越来越多，越挤越容易撞到别人。": {
+      "source": "/audio/connectors-phone/7855fac20bd2b5ba9ba7.mp3",
+      "sha256": "2a8a22d63e4177938c4acda7b02e13645342c73337b2af2c265c55be1a0fb855",
+      "bytes": 23904,
+      "text": "人越来越多，越挤越容易撞到别人。"
+    },
+    "我们在外面的时候要小心。": {
+      "source": "/audio/connectors-phone/f5027bc6be5a480b1007.mp3",
+      "sha256": "8de382ef7ee455ba616ae6e7b70a4928ba8cc0e38bdb203506c57830c4742e25",
+      "bytes": 17136,
+      "text": "我们在外面的时候要小心。"
+    },
+    "我们在超市的时候，人一多，就要小心。": {
+      "source": "/audio/connectors-phone/0535feabe436d72a35ca.mp3",
+      "sha256": "4d21de9a2c3f9264bc7e8d605ac75e3eb333dbae7bc798a4c0f05e904b2407fd",
+      "bytes": 26496,
+      "text": "我们在超市的时候，人一多，就要小心。"
+    },
+    "如果不小心，就容易撞到别人。": {
+      "source": "/audio/connectors-phone/d3e8198ecfe31ef68046.mp3",
+      "sha256": "0774fa06a17fd61067cdb3f23834f2ac09a7a54506d9ed5e6f5c1dd2afedef05",
+      "bytes": 20448,
+      "text": "如果不小心，就容易撞到别人。"
+    },
+    "在人多的地方要小心，不然容易撞到别人。": {
+      "source": "/audio/connectors-phone/da75e2402681fee77f0f.mp3",
+      "sha256": "68034dfc66d2b89e72740f33098e4a30cc52b40ec3db4e558f17b9aaf84c3ea0",
+      "bytes": 27072,
+      "text": "在人多的地方要小心，不然容易撞到别人。"
+    },
+    "边走边看手机的时候，我们要小心。": {
+      "source": "/audio/connectors-phone/25cf85c89b1065348f8e.mp3",
+      "sha256": "aa63b35aebc388dd569ac16fc8a34d426258676cd6c0160da8e8af6d7eabe519",
+      "bytes": 23184,
+      "text": "边走边看手机的时候，我们要小心。"
+    },
+    "不小心的话，就容易撞到别人。": {
+      "source": "/audio/connectors-phone/48350fe022aace122fd8.mp3",
+      "sha256": "734f60c80355003da065434c0f7a7eedf1197cbad7c45e2d7ec1f6b418e8c63b",
+      "bytes": 20304,
+      "text": "不小心的话，就容易撞到别人。"
+    },
+    "我们每次去人多的地方，如果边走边看手机，就要小心，不然容易撞到别人。": {
+      "source": "/audio/connectors-phone/ca04fa2cf6863f5a9bfc.mp3",
+      "sha256": "63eb18ba3d8315251530e92058158acc33802b7851e9917f614ca479623d8bd3",
+      "bytes": 46224,
+      "text": "我们每次去人多的地方，如果边走边看手机，就要小心，不然容易撞到别人。"
+    },
+    "如果你一边走路一边看手机，就容易撞到别人。": {
+      "source": "/audio/connectors-phone/11c7be509fcb264a9fa4.mp3",
+      "sha256": "36148562b20a47c6b6101bea263715ee2ee4c85125ff14f852314b6ba34b81b2",
+      "bytes": 30240,
+      "text": "如果你一边走路一边看手机，就容易撞到别人。"
+    },
+    "中国很安全，所以我喜欢住在苏州。": {
+      "source": "/audio/connectors-phone/11ba16541498e382330d.mp3",
+      "sha256": "ee083207f11ab4aa95cb22be6f1614e52b6f9925b7352288d9c6ec82a268bdd0",
+      "bytes": 25056,
+      "text": "中国很安全，所以我喜欢住在苏州。"
+    },
+    "我八点就起床。／我八点才起床。": {
+      "source": "/audio/connectors-phone/a673226cd94e4fd89146.mp3",
+      "sha256": "0edf5ea96b4f5ade8976f017d04bb0b1eae6e47ac3067fb925ae16c7d352e083",
+      "bytes": 24912,
+      "text": "我八点就起床。／我八点才起床。"
+    },
+    "我经常在家做早饭，但有时候出去吃。": {
+      "source": "/audio/connectors-phone/f574bd6a5e2dd4fcb379.mp3",
+      "sha256": "65f6dce3abb8ad1a62d3e3338982288bc71b119d0f550a7152b8fb746ba1274c",
+      "bytes": 25344,
+      "text": "我经常在家做早饭，但有时候出去吃。"
+    },
+    "超市人多的时候，要小心。": {
+      "source": "/audio/connectors-phone/a10da9630b1c2de3accf.mp3",
+      "sha256": "56ad650568bdc6e8315c7136d37b4cceb368a1c4c09e5f18b187badb57f0a4cf",
+      "bytes": 19152,
+      "text": "超市人多的时候，要小心。"
+    },
+    "天气越来越热。": {
+      "source": "/audio/connectors-phone/98d331161768497aff85.mp3",
+      "sha256": "932b7ffc1e475575f98b2f860ebada6e6dafa256ddfcf2d3c83e0a22b2297daf",
+      "bytes": 12384,
+      "text": "天气越来越热。"
+    },
+    "路上越挤，越容易撞到别人。": {
+      "source": "/audio/connectors-phone/4370dd65a64cad2a97f0.mp3",
+      "sha256": "1265e4cef5835426ee8d9232fecf7a84e86c85dc6814ffcae6626aff566763e7",
+      "bytes": 20304,
+      "text": "路上越挤，越容易撞到别人。"
+    },
+    "路上的汽车越来越多。": {
+      "source": "/audio/connectors-phone/77b9542e2671177ec496.mp3",
+      "sha256": "2e68e2b2c38a99b5b2d30da5606398edbf2d9721b3b0e546274085f290911f04",
+      "bytes": 15840,
+      "text": "路上的汽车越来越多。"
+    },
+    "汽车越多，我们越要小心。": {
+      "source": "/audio/connectors-phone/daeb8979b5edf961390b.mp3",
+      "sha256": "4c439f98b76c452b024fdab059ba014b8c73b32b899ac478dc2d9f5132392ea1",
+      "bytes": 18576,
+      "text": "汽车越多，我们越要小心。"
+    },
+    "我先吃早饭，然后去学校。": {
+      "source": "/audio/connectors-phone/5143113e3efe3fd28873.mp3",
+      "sha256": "c87e57649596b44f186bea634c5f4a4ce6424093870606c73a98618fbe69f4fb",
+      "bytes": 19296,
+      "text": "我先吃早饭，然后去学校。"
+    },
+    "你可以来吗？当然可以。": {
+      "source": "/audio/connectors-phone/5de200bdf950671a0ea2.mp3",
+      "sha256": "ef0fe93ab476bb9a370372217f9b6a2a927385ded2ba32e53de7c70e415b2747",
+      "bytes": 20304,
+      "text": "你可以来吗？当然可以。"
+    },
+    "他突然不说话了。": {
+      "source": "/audio/connectors-phone/37971da693fda4661c2d.mp3",
+      "sha256": "3b5be0e897ae19fae194431f53e0e4461f70d6ec66567a9c412d7920bda0dd89",
+      "bytes": 12960,
+      "text": "他突然不说话了。"
+    },
+    "他仍然在学习中文。": {
+      "source": "/audio/connectors-phone/8ded07b4d28b555c4f41.mp3",
+      "sha256": "c82b74eb22212308e55f893cf782e22ea5b5ed17976bf7fc38cc840c5860a320",
+      "bytes": 14976,
+      "text": "他仍然在学习中文。"
+    },
+    "他居然不知道。": {
+      "source": "/audio/connectors-phone/b9206b3bebfbe02853f2.mp3",
+      "sha256": "14626ffbcaf4e0493b8991e1cb839cc2d1d14914af78316882096c1db35c0853",
+      "bytes": 11664,
+      "text": "他居然不知道。"
+    },
+    "他说今天会下雨，果然下雨了。": {
+      "source": "/audio/connectors-phone/5fe4c3c10017ff74fe78.mp3",
+      "sha256": "5ffbaaa05a7657a96e411d621d9decd652e83852d1828606b36dd9b0c5b0b08e",
+      "bytes": 23328,
+      "text": "他说今天会下雨，果然下雨了。"
+    },
+    "快走，不然就迟到了。": {
+      "source": "/audio/connectors-phone/bad9116a2c76966f3a52.mp3",
+      "sha256": "708d7280b0b5c059d5c94793abee7f2c200d19b245b4067e6c3eac9f729c02e8",
+      "bytes": 16272,
+      "text": "快走，不然就迟到了。"
+    },
+    "多穿一点，要不然会冷。": {
+      "source": "/audio/connectors-phone/9490c6a0d71722ded13e.mp3",
+      "sha256": "0509beab95f98e6f2bc9fcc87163c4160f77311981f21c33451d5ea309cca259",
+      "bytes": 17568,
+      "text": "多穿一点，要不然会冷。"
+    },
+    "然后": {
+      "source": "/audio/connectors-phone/ca4f5ee82e28628d1e14.mp3",
+      "sha256": "487200e27a1998deabec46601057d7064bc7ffe98f0ed695e014bb250a706e2c",
+      "bytes": 11232,
+      "text": "然后"
+    },
+    "当然": {
+      "source": "/audio/connectors-phone/0002e2d87fe9c9ab93de.mp3",
+      "sha256": "d08e93b99ac2d62418b948492e4dbdef302cf829b8e5104d00d4061a444306a3",
+      "bytes": 11232,
+      "text": "当然"
+    },
+    "突然": {
+      "source": "/audio/connectors-phone/8f8f93b58e2c33d30b22.mp3",
+      "sha256": "cb39165564d2a302bb9f0992902aa191c0b99294d554a84469e9e28db45de4c3",
+      "bytes": 11232,
+      "text": "突然"
+    },
+    "仍然": {
+      "source": "/audio/connectors-phone/d7f3bed050a94a9992eb.mp3",
+      "sha256": "51290dfa35d688d5c9831f9d2b6af47f0bf1cdb75bb47fc875a8b1e053afcb86",
+      "bytes": 11232,
+      "text": "仍然"
+    },
+    "居然": {
+      "source": "/audio/connectors-phone/3a60b4463606f7240386.mp3",
+      "sha256": "3795506db34831fc9c78c7f1374ce76c63b2d293f3ad1b9748adfdb60545569d",
+      "bytes": 11232,
+      "text": "居然"
+    },
+    "果然": {
+      "source": "/audio/connectors-phone/f9fc06a4ae258bd610a3.mp3",
+      "sha256": "d86a003f6f53cea1959dcdf8abd231c3140c90451bbe0da36557310e9861e345",
+      "bytes": 11232,
+      "text": "果然"
+    },
+    "不然": {
+      "source": "/audio/connectors-phone/c15dcbcd994156ad25ac.mp3",
+      "sha256": "6ee1f145bd663e00d7659c475934da860124a499fa212043a2574008bdc4fb0f",
+      "bytes": 11232,
+      "text": "不然"
+    },
+    "要不然": {
+      "source": "/audio/connectors-phone/ecca5495624e6e510ead.mp3",
+      "sha256": "b471b50af89c1f9466a3bc8ae7ff28f1da7bc03aff07d27d2e2830a10df2c735",
+      "bytes": 11232,
+      "text": "要不然"
+    },
+    "吃早饭以后，我去学校。": {
+      "source": "/audio/connectors-phone/eef03992a19c89f3c198.mp3",
+      "sha256": "44eacbc83252623e54ca1f398af0b65272acec2ef6ea8e1eff8db1eead003f06",
+      "bytes": 17712,
+      "text": "吃早饭以后，我去学校。"
+    },
+    "以后我会早点起床。": {
+      "source": "/audio/connectors-phone/0e46dbaac511f86f0b22.mp3",
+      "sha256": "73fc76620ef80ba8a4771f4e31372a0038aaa8d9ddac00eae63448b9c01e3035",
+      "bytes": 16272,
+      "text": "以后我会早点起床。"
+    }
+  }
+}
