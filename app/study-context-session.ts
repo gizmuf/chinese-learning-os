@@ -37,6 +37,7 @@ export function restoreContextSession(raw:string|null,url:string,locale:Locale='
  if(Array.isArray(v.senses))entry.senses=v.senses.filter((sense:unknown)=>{const s=sense as {pinyin:string;meaning:string};return s&&string(s.pinyin,500)&&string(s.meaning,10000);}).slice(0,50);
  if(string(v.structure?.radical,10)&&string(v.structure?.decomposition,200))entry.structure={radical:v.structure.radical,decomposition:v.structure.decomposition};
  entry=contextualDictionaryEntry(entry,context);
- return {entry,originURL:url,trail:Array.isArray(value.trail)?value.trail.filter((v:unknown)=>string(v,2000)).slice(-24):[],scrollTop:Number.isFinite(value.scrollTop)?Math.max(0,value.scrollTop):0,route:readCloudRoute(cloudRouteHref(value.route)),originY:Math.max(0,value.originY)};
+ const wordFamily=typeof value.wordFamily==='string'&&/^\p{Script=Han}$/u.test(value.wordFamily)&&entry.text.includes(value.wordFamily)?value.wordFamily:undefined;
+ return {entry,originURL:url,trail:Array.isArray(value.trail)?value.trail.filter((v:unknown)=>string(v,2000)).slice(-24):[],scrollTop:Number.isFinite(value.scrollTop)?Math.max(0,value.scrollTop):0,route:readCloudRoute(cloudRouteHref(value.route)),originY:Math.max(0,value.originY),...(wordFamily?{wordFamily}:{})};
  }catch{return null;}
 }

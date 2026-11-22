@@ -13,6 +13,9 @@ import {items,lessons as libraryLessons} from './content';
 import {localizeItem,translate,type Locale} from './translate';
 import morning from '../data/shuoshuo-morning.json';
 import myDay from '../data/my-day-01-v2.json';
+import connectors from '../data/connectors-phone-lesson.json';
+import connectorsAudio from '../data/connectors-phone-audio.json';
+import {connectorsWordRows} from './connectors-phone-model';
 import {shuoshuoSentenceAudio} from './shuoshuo-audio';
 import {speakingClip} from './my-day-speaking-model';
 import {canonicalDictionaryText} from './simplified-chinese';
@@ -45,6 +48,15 @@ export function studyOccurrenceCorpus(locale:Locale):readonly StudyOccurrence[]{
  course(10,[...lesson10Terms,...lesson10Sentences],lesson10Pronunciation);
  course(11,[...lesson11Terms,...lesson11Sentences],lesson11Pronunciation);
  course(12,lesson12All,lesson12Pronunciation);
+ const connectorClips:Readonly<Record<string,{text:string;source:string}>>=connectorsAudio.recordings;
+ for(const [kind, values] of [
+  ['word', connectorsWordRows],
+  ['sentence', [...connectors.connectorExamples,...connectors.reading]],
+ ] as const) for(const v of values){
+  const audio=connectorClips[v.hanzi];
+  add(connectors.id,connectors.title,connectors.id+':'+v.hanzi,kind,v.hanzi,v.pinyin,v.english,
+   audio?.text===v.hanzi?{text:v.hanzi,pinyin:v.pinyin,source:audio.source,context:false}:undefined);
+ }
  for(const lesson of referenceLessons)for(const v of [...lesson.terms,...lesson.examples])add('reference-'+lesson.id,lesson.title,v.id,lesson.examples.includes(v)?'sentence':'word',v.hanzi,v.pinyin,v.en);
  for(const v of morning.sentences){const audio=shuoshuoSentenceAudio(v.id,v.hanzi);add('shuoshuo-morning','Shuoshuo · Morning','shuoshuo:'+v.id,'sentence',v.hanzi,v.pinyin,v.english,audio?{...audio,text:v.hanzi,pinyin:v.pinyin,context:false}:undefined,v.uncertain?{en:'Original source wording marked uncertain.',fr:'Formulation de la source signalée comme incertaine.',ru:'Исходная формулировка отмечена как неточная.',tr:'Kaynak ifadesi belirsiz olarak işaretlenmiş.'}[locale]:undefined);}
  let dayIndex=0;myDay.sections.forEach(section=>section.rows.forEach(v=>{const clip=speakingClip(v.hanzi);add('my-day-01-v2','My day · '+section.title,'my-day-01-v2:'+String(++dayIndex),'sentence',v.hanzi,v.pinyin,v.english,clip?{text:clip.text,source:clip.source,pinyin:v.pinyin,context:false}:undefined);}));
@@ -58,5 +70,15 @@ export function studyOccurrenceCorpus(locale:Locale):readonly StudyOccurrence[]{
 export function studyOccurrences(text:string,locale:Locale):StudyOccurrence[]{
  const target=canonicalDictionaryText(text);if(!target)return [];
  return studyOccurrenceCorpus(locale).filter(row=>row.text.includes(target));
+}
+/** Show words taught in the current lesson first, even when absent from a dictionary shard. */
+export function relatedStudyWords(character:string,locale:Locale,lessonId?:string,excluding?:string){
+ const matches=studyOccurrenceCorpus(locale).filter(row=>row.kind==='word'&&row.text!==excluding
+  && /^[\p{Script=Han}]{2,}$/u.test(row.text)&&row.text.includes(character));
+ const ranked=matches.sort((a,b)=>Number(b.lessonId===lessonId)-Number(a.lessonId===lessonId)
+  || Array.from(a.text).length-Array.from(b.text).length);
+ const unique=new Map<string,StudyOccurrence>();
+ for(const row of ranked)if(!unique.has(row.text))unique.set(row.text,row);
+ return [...unique.values()];
 }
 export function occurrencePage<T>(rows:readonly T[],page:number,size=6){const pages=Math.max(1,Math.ceil(rows.length/size)),safe=Number.isFinite(page)?Math.max(0,Math.min(pages-1,Math.floor(page))):0;return {page:safe,pages,rows:rows.slice(safe*size,(safe+1)*size)};}
