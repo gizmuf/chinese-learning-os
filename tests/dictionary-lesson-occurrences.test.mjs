@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {build} from 'esbuild';
 import {existsSync} from 'node:fs';
 import {recordingAssetPath} from './audio-source-helper.mjs';
-const b=await build({entryPoints:['app/dictionary-lesson-occurrences.ts'],bundle:true,platform:'node',format:'esm',write:false});
+const b=await build({stdin:{contents:"export * from './app/dictionary-lesson-occurrences';export {items} from './app/content';",resolveDir:process.cwd()},bundle:true,platform:'node',format:'esm',write:false});
 const m=await import('data:text/javascript;base64,'+Buffer.from(b.outputFiles[0].text).toString('base64'));
 test('full occurrence queries retain canonical lesson locations, translations and all pages, beyond two examples',()=>{
  for(const locale of ['en','fr','ru','tr']){
@@ -29,6 +29,18 @@ test('Connectors word-family links are reciprocal and prefer the lesson glossary
  const both=m.relatedStudyWords('每','en',location,'每').slice(0,2).map(row=>row.text);
  assert.deepEqual(both,['每次','每天']);
  assert.ok(m.studyOccurrences('每','en').some(row=>row.kind==='sentence'&&row.lessonId===location));
+});
+test('Every HSK 1–3 sign has real study context in all four locales',()=>{
+ const glyphs=new Set(m.items.filter(item=>item.hskLevel).flatMap(item=>Array.from(item.hanzi).filter(ch=>/^\p{Script=Han}$/u.test(ch))));
+ assert.equal(glyphs.size,655);
+ for(const locale of ['en','fr','ru','tr'])for(const glyph of glyphs){
+  if(m.relatedStudyWords(glyph,locale).length)continue;
+  const context=m.relatedStudySentence(glyph,locale);
+  assert.ok(context?.text.includes(glyph)&&context?.pinyin&&context?.meaning,`${locale} ${glyph}`);
+ }
+ const polite=m.relatedStudySentence('您','en');
+ assert.equal(polite.kind,'sentence');
+ assert.equal(polite.lessonId,'intensive-04');
 });
 test('occurrence audio is exact text and points to existing retained recordings',()=>{
  const missing=[];for(const row of m.studyOccurrenceCorpus('en'))if(row.audio){assert.equal(row.audio.text,row.text);assert.equal(row.audio.kind,row.kind);if(!existsSync(recordingAssetPath(row.audio.source)))missing.push([row.id,row.audio.source]);}

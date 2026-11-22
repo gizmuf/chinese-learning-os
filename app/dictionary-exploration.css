@@ -7,3 +7,5 @@
 .sp-shared-words-list .sp-connection-target{flex:1;display:grid;grid-template-columns:auto auto minmax(0,1fr);align-items:baseline;column-gap:12px;text-align:left;min-width:0}
 .sp-shared-words-list .sp-connection-target strong{font-size:1.35rem}
 @media(max-width:520px){.sp-shared-words-list .sp-connection-target{grid-template-columns:auto 1fr}.sp-shared-words-list .sp-connection-target>span:last-child{grid-column:1/-1}}
+.sp-shared-example{margin-top:8px;border-radius:10px;background:#f3f6ee;padding:10px 12px}
+.sp-shared-example p{margin:4px 0}

@@ -9,6 +9,7 @@ import {connectorsWordRows} from './connectors-phone-model';
 import {studyOccurrenceCorpus,studyOccurrences,occurrencePage} from './dictionary-lesson-occurrences';
 import CloudHighlight from './atlas-cloud-highlight';
 import {atlasByHanzi,componentById} from './atlas-model';
+import {cloudRelation,type CloudRelation} from './atlas-cloud-connections';
 import type {DictionaryEntry,StudyDictionary,Pronunciation} from './atlas-spatial-model';
 import './dictionary-exploration.css';
 
@@ -23,13 +24,22 @@ const previewJobs:PreviewJob[]=[];let previewsRunning=0;
 function drainPreviews(){while(previewsRunning<3&&previewJobs.length){const job=previewJobs.shift()!;if(!job.active()){job.resolve(undefined);continue;}previewsRunning++;void fetchDictionaryEntry(job.text).then(job.resolve,job.reject).finally(()=>{previewsRunning--;drainPreviews();});}}
 function requestPreview(text:string,active:()=>boolean){return new Promise<DictionaryEntry|undefined>((resolve,reject)=>{previewJobs.push({text,active,resolve,reject});drainPreviews();});}
 type Tab='family'|'words'|'lessons';
-export type ExplorationView={selected:string;tab:Tab;part:string;page:number;lesson:string};
+type Relation=CloudRelation|'all';
+const relationship={
+ en:{all:'All structural matches',meaning:'Meaning clue',sound:'Sound clue',shape:'Shape / role unreviewed'},
+ fr:{all:'Toutes les formes',meaning:'Indice de sens',sound:'Indice de prononciation',shape:'Forme / rôle non vérifié'},
+ ru:{all:'Все совпадения формы',meaning:'Подсказка значения',sound:'Подсказка звучания',shape:'Форма / роль не проверена'},
+ tr:{all:'Tüm yapı eşleşmeleri',meaning:'Anlam ipucu',sound:'Ses ipucu',shape:'Biçim / rol incelenmedi'},
+};
+const relations=['all','meaning','sound','shape'] as const;
+export type ExplorationView={selected:string;tab:Tab;part:string;page:number;lesson:string;relation?:Relation};
 export default function DictionaryExploration({entry,dictionary,onLookup,speaker,renderSentence,views}:{views:Map<string,ExplorationView>;entry:DictionaryEntry;dictionary:StudyDictionary;onLookup:(text:string,trigger:HTMLButtonElement)=>void;speaker:(v:Pronunciation|undefined)=>ReactNode;renderSentence:(text:string,pinyin:string)=>ReactNode}){
  const {locale}=useI18n(),c=copy[locale];
  const characters=[...new Set(Array.from(entry.text).filter(ch=>/\p{Script=Han}/u.test(ch)))];
  const key=locale+':'+entry.text,saved=views.get(key);
  const [selected,setSelected]=useState(saved?.selected??characters[0]??''),[tab,setTab]=useState<Tab>(saved?.tab??(characters.length===1?'family':'words')),[partChoice,setPartChoice]=useState(saved?.part??''),[page,setPage]=useState(saved?.page??0),[lesson,setLesson]=useState(saved?.lesson??'');
- useEffect(()=>{views.set(key,{selected,tab,part:partChoice,page,lesson});},[views,key,selected,tab,partChoice,page,lesson]);
+ const [relation,setRelation]=useState<Relation>(saved?.relation??'all');
+ useEffect(()=>{views.set(key,{selected,tab,part:partChoice,page,lesson,relation});},[views,key,selected,tab,partChoice,page,lesson,relation]);
  const [resources,setResources]=useState<Awaited<ReturnType<typeof loadDictionaryResources>>|null>(null),[error,setError]=useState(false),[attempt,setAttempt]=useState(0),[wordReadings,setWordReadings]=useState<Map<string,DictionaryEntry>>(()=>new Map());
  const character=characters.includes(selected)?selected:characters[0]??'';
  useEffect(()=>{let active=true;setError(false);void loadDictionaryResources().then(value=>{if(active)setResources(value);}).catch(()=>{if(active)setError(true);});return()=>{active=false;};},[attempt]);
@@ -38,7 +48,12 @@ export default function DictionaryExploration({entry,dictionary,onLookup,speaker
  const priority=useMemo(()=>[...new Set(corpus.filter(row=>row.kind==='word').map(row=>row.text))],[corpus]);
  const reviewed=atlasByHanzi.get(character),preferred=reviewed?.phonetic?componentById.get(reviewed.phonetic)?.glyph:undefined;
  const parts=useMemo(()=>dictionaryFamilyParts(character,allCharacters,preferred),[character,allCharacters,preferred]),part=parts.includes(partChoice)?partChoice:parts[0]??character;
- const family=useMemo(()=>tab==='family'?dictionaryCharacterFamily(character,part,allCharacters,priority):[],[tab,character,part,allCharacters,priority]);
+ const structural=useMemo(()=>tab==='family'?dictionaryCharacterFamily(character,part,allCharacters,priority):[],[tab,character,part,allCharacters,priority]);
+ const {family,relationCounts}=useMemo(()=>{
+  const relationCounts={all:structural.length,meaning:0,sound:0,shape:0};
+  const family=structural.filter(row=>{const role=cloudRelation(row.text,part);relationCounts[role]++;return relation==='all'||role===relation;});
+  return {family,relationCounts};
+ },[structural,part,relation]);
  const words=useMemo(()=>tab==='words'?dictionaryWordFamily(
   [...(resources?.headwords??[]),...connectorsWordRows.map(row=>row.hanzi)],character,priority):[],[tab,resources,character,priority]);
  const occurrences=useMemo(()=>tab==='lessons'?studyOccurrences(entry.text,locale):[],[tab,entry.text,locale]);
@@ -59,8 +74,13 @@ export default function DictionaryExploration({entry,dictionary,onLookup,speaker
  return <section className="sp-exploration" aria-label={c.title} data-study-exploration="true">
   <h3>{c.title}</h3>
   <div className="sp-exploration-tabs" role="group" aria-label={c.title}>{(['family','words','lessons'] as const).map(value=><button type="button" key={value} aria-pressed={tab===value} onClick={()=>changeTab(value)}>{c[value]}</button>)}</div>
-  {tab!=='lessons'&&characters.length>1&&<div className="sp-part-options" role="group" aria-label={c.character}>{characters.map(ch=><button type="button" lang="zh-Hans" key={ch} aria-pressed={character===ch} onClick={()=>{setSelected(ch);setPartChoice('');setPage(0);}}>{ch}</button>)}</div>}
-  {tab==='family'&&<><div className="sp-part-options" role="group" aria-label={c.part}><small>{c.part}</small>{parts.map(ch=><button type="button" key={ch} lang="zh-Hans" aria-pressed={part===ch} onClick={()=>{setPartChoice(ch);setPage(0);}}>{ch}</button>)}</div><p className="sp-connection-note">{c.shape}</p></>}
+  {tab!=='lessons'&&characters.length>1&&<div className="sp-part-options" role="group" aria-label={c.character}>{characters.map(ch=><button type="button" lang="zh-Hans" key={ch} aria-pressed={character===ch} onClick={()=>{setSelected(ch);setPartChoice('');setRelation('all');setPage(0);}}>{ch}</button>)}</div>}
+  {tab==='family'&&<><div className="sp-part-options" role="group" aria-label={c.part}><small>{c.part}</small>{parts.map(ch=><button type="button" key={ch} lang="zh-Hans" aria-pressed={part===ch} onClick={()=>{setPartChoice(ch);setRelation('all');setPage(0);}}>{ch}</button>)}</div><p className="sp-connection-note">{c.shape}</p>
+   {structural.length>0&&<div className="sp-exploration-tabs" role="group" aria-label={c.family}>
+    {relations.map(value=><button type="button" key={value} aria-pressed={relation===value} disabled={!relationCounts[value]}
+     onClick={()=>{setRelation(value);setPage(0);}}>{relationship[locale][value]} · {relationCounts[value]}</button>)}
+   </div>}
+  </>}
   {tab==='words'&&<p className="sp-connection-note">{c.wordNote}</p>}
   {tab==='lessons'&&<label className="sp-occurrence-filter">{c.lessons}<select value={lesson} onChange={e=>{setLesson(e.target.value);setPage(0);}}><option value="">{c.all}</option>{lessonOptions.map(([id,label])=><option key={id} value={id}>{label}</option>)}</select></label>}
   {error&&<p role="alert">{c.error} <button type="button" onClick={()=>setAttempt(v=>v+1)}>{c.retry}</button></p>}
