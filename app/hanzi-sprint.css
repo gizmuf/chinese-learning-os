@@ -1,0 +1,36 @@
+.hsprint {max-width:1100px; margin-inline:auto;}
+.hsprint h2 {margin:0 0 12px;}
+.hsprint-back {display:inline-flex;align-items:center;gap:8px;}
+.hsprint-stats {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:18px;}
+.hsprint-stats>div {border:1px solid #dce4d4;border-radius:14px;background:#edf2e8;color:#29483c;padding:13px;display:grid;gap:4px;}
+.hsprint-stats strong {font-size:1.2rem;}
+.hsprint-stats span {font-size:.82rem;}
+.hsprint-tabs,.hsprint-actions,.hsprint-day {display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.hsprint-tabs {margin:16px 0;}
+.hsprint-tabs button,.hsprint-actions button,.hsprint-context button {min-height:44px;}
+.hsprint button[aria-pressed=true] {background:#e3edde;border-color:#668674;color:#29483c;}
+.hsprint-day label,.hsprint-choice {display:flex;align-items:center;flex-wrap:wrap;gap:9px;}
+.hsprint select {min-height:44px;max-width:100%;}
+.hsprint-panel {padding:clamp(16px,4vw,30px);min-width:0;}
+.hsprint-panel>p {margin:8px 0 14px;}
+.hsprint-error {border:1px solid #b55b42;padding:12px;border-radius:12px;margin:12px 0;}
+.hsprint-error button {margin-inline-start:10px;}
+.hsprint-card {display:grid;justify-items:center;align-content:center;gap:6px;width:min(100%,420px);padding:18px;min-height:270px;border:1px solid #d4e1cf;color:#263f35;background:#f5f8f1;border-radius:18px;text-align:center;}
+.hsprint-card:disabled {opacity:1;}
+.hsprint-card>strong {font-size:clamp(48px,12vw,76px);line-height:1.1;}
+.hsprint-card>.hsprint-pinyin {min-height:1.5em;}
+.hsprint-answer {min-height:4.4em;display:grid;align-content:center;gap:4px;}
+.hsprint-answer span {max-height:3em;overflow:auto;}
+.hsprint-flash {display:grid;justify-items:center;gap:12px;}
+.hsprint-pinyin {color:var(--muted,#735c38);}
+.hsprint-family,.hsprint-frames {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px;margin:16px 0;}
+.hsprint-family article,.hsprint-frames article {border:1px solid #dce4d4;border-radius:13px;padding:12px;min-width:0;}
+.hsprint-family h3 {font-size:2.1rem;margin:0;}
+.hsprint-family p,.hsprint-frames p {margin:7px 0;}
+.hsprint-context {margin:15px 0;border:1px solid #dce4d4;padding:14px;border-radius:13px;}
+.hsprint-context p {margin:8px 0;}
+.hsprint-context-hanzi {font-size:1.4rem;}
+.hsprint-story-target {font-size:clamp(36px,8vw,60px);margin:15px 0 0;}
+.hsprint-frames strong {font-size:1.9rem;}
+.hsprint-frames b {display:block;font-size:.8rem;}
+@media(max-width:600px){.hsprint-stats {grid-template-columns:repeat(2,minmax(0,1fr));}}

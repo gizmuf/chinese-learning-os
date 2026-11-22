@@ -104,6 +104,8 @@ const Atlas = lazy(() => import("./atlas"));
 import {sceneLab,sceneLabHref,type SceneLab} from './scene-lab-model';
 import {LabNavIcon} from './scene-lab';
 const SceneLabView=lazy(()=>import('./scene-lab'));
+import {hanziSprintCopy, hanziSprintHref} from "./hanzi-sprint-copy";
+const HanziSprint = lazy(() => import("./hanzi-sprint"));
 const StudyStudio = lazy(() => import("./study-studio"));
 const MyDayLesson = lazy(() => import("./my-day-lesson"));
 const ShuoshuoCompanion = lazy(() => import("./shuoshuo-companion"));
@@ -115,7 +117,7 @@ const PronunciationLab = lazy(() => import("./pronunciation-lab-ui"));
 const TodayRecognition = lazy(() => import("./today-recognition"));
 const ConnectorsPhoneLesson = lazy(() => import('./connectors-phone-lesson'));
 const LibraryVocabularyGroups = lazy(() => import('./library-vocabulary-groups'));
-type View = "hsk3-prep" | "pronunciation" | "labs" | "shuoshuo-lesson" | "private-lessons" | "shuoshuo" | "myday" | "studio" | "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
+type View = "sprint" | "hsk3-prep" | "pronunciation" | "labs" | "shuoshuo-lesson" | "private-lessons" | "shuoshuo" | "myday" | "studio" | "grammar" | "atlas" | "course" | "today" | "lessons" | "practice" | "reviews" | "progress";
 export default function StudyApp({
   user,
   onSignIn,
@@ -152,7 +154,7 @@ export default function StudyApp({
   const [studioMenu,setStudioMenu] = useState(false);
   const [lab,setLab]=useState<SceneLab>("room");
   const [atlasReturn, setAtlasReturn] = useState<{url:string;scroll:number}|null>(null);
-  useEffect(() => { if (new URLSearchParams(window.location.search).get("view")==="labs") {setView("labs");setLab(sceneLab(new URLSearchParams(window.location.search).get("lab")));} else if (new URLSearchParams(window.location.search).get("lesson") === "shuoshuo-morning") setView("shuoshuo-lesson"); else if (new URLSearchParams(window.location.search).get("private") === "1") setView("private-lessons"); else if (new URLSearchParams(window.location.search).get("companion") === "shuoshuo") setView("shuoshuo"); else if (["my-day-01-v2","voice-live-2026-11-03","my-day-full-2026-11-03"].includes(new URLSearchParams(window.location.search).get("rehearsal")??"")) setView("myday"); else if (new URLSearchParams(window.location.search).get("study") === "studio") {setView("studio");setStudioVisited(true);} else if (new URLSearchParams(window.location.search).get("grammar") === "hsk3") setView("grammar"); else if (new URLSearchParams(window.location.search).get("atlas") === "1") setView("atlas"); else if (new URLSearchParams(window.location.search).get("course") === "hsk3") setView("hsk3-prep"); else if (new URLSearchParams(window.location.search).get("course") === "intensive") setView("course"); }, []);
+  useEffect(() => { if (new URLSearchParams(window.location.search).get("study")==="sprint") setView("sprint"); else if (new URLSearchParams(window.location.search).get("view")==="labs") {setView("labs");setLab(sceneLab(new URLSearchParams(window.location.search).get("lab")));} else if (new URLSearchParams(window.location.search).get("lesson") === "shuoshuo-morning") setView("shuoshuo-lesson"); else if (new URLSearchParams(window.location.search).get("private") === "1") setView("private-lessons"); else if (new URLSearchParams(window.location.search).get("companion") === "shuoshuo") setView("shuoshuo"); else if (["my-day-01-v2","voice-live-2026-11-03","my-day-full-2026-11-03"].includes(new URLSearchParams(window.location.search).get("rehearsal")??"")) setView("myday"); else if (new URLSearchParams(window.location.search).get("study") === "studio") {setView("studio");setStudioVisited(true);} else if (new URLSearchParams(window.location.search).get("grammar") === "hsk3") setView("grammar"); else if (new URLSearchParams(window.location.search).get("atlas") === "1") setView("atlas"); else if (new URLSearchParams(window.location.search).get("course") === "hsk3") setView("hsk3-prep"); else if (new URLSearchParams(window.location.search).get("course") === "intensive") setView("course"); }, []);
   const [notebookEvents, setEvents] = useState<LearningEvent[]>([]);
   const [sync, setSync] = useState(t("Loading your notebook…"));
   const [db, setDb] = useState<IDBDatabase | null>(null);
@@ -694,7 +696,7 @@ export default function StudyApp({
           <span>
             <span className="breadcrumb">{t("My study space")}</span>
             <ChevronRight size={13} />
-            {view === "hsk3-prep" ? "HSK 3 Exam Prep" : view === "labs" ? "3D Lab" : view === "shuoshuo-lesson" ? "A morning with Shuoshuo" : view === "private-lessons" ? "Private lessons" : view === "shuoshuo" ? "Shuoshuo · Vocabulary companion" : view === "myday" ? "My Day · Speaking" : view === "pronunciation" ? "Pronunciation Lab" : view === "studio" ? "StudyStudio" : view === "grammar" ? "HSK 1–3 grammar" : view === "atlas" ? t("Cloud Atlas") : view === "course" ? t("Intensive course") : view === "practice"
+            {view === "sprint" ? hanziSprintCopy[locale].title : view === "hsk3-prep" ? "HSK 3 Exam Prep" : view === "labs" ? "3D Lab" : view === "shuoshuo-lesson" ? "A morning with Shuoshuo" : view === "private-lessons" ? "Private lessons" : view === "shuoshuo" ? "Shuoshuo · Vocabulary companion" : view === "myday" ? "My Day · Speaking" : view === "pronunciation" ? "Pronunciation Lab" : view === "studio" ? "StudyStudio" : view === "grammar" ? "HSK 1–3 grammar" : view === "atlas" ? t("Cloud Atlas") : view === "course" ? t("Intensive course") : view === "practice"
               ? skill==='meaning'?t('Flashcards'):t("Writing studio")
               : view === "today"
                 ? t("Today")
@@ -759,6 +761,8 @@ export default function StudyApp({
           {view === "grammar" && <Suspense fallback={<p>{t("Loading your notebook…")}</p>}><HSK3Grammar key={user?.id ?? "guest"} owner={user?.id ?? null} db={db?.name === "chinese-os-v1-"+(user?.id ?? "guest") ? db : null}/></Suspense>}
           {view === "hsk3-prep" && <Suspense fallback={<p role="status">Opening HSK 3 Exam Prep…</p>}><Hsk3Prep/></Suspense>}
           {view === "course" && <IntensiveCourse onReferenceLibraryBack={()=>changeView("lessons")} owner={user?.id ?? null} db={db} penOnly={penOnly} setPenOnly={setPenOnly} recordHSK={record} notify={notify} onHSKRecall={item => openPractice(item, "recall")} />}
+          {view === "sprint" && <Suspense fallback={<p role="status">{hanziSprintCopy[locale].loading}</p>}><HanziSprint
+            db={db?.name === "chinese-os-v1-" + (user?.id ?? "guest") ? db : null} notify={notify}/></Suspense>}
           {view === "today" && (
             <>
               <div className="page-heading">
@@ -780,6 +784,9 @@ export default function StudyApp({
                 </div>
               </div>
               <ReadingLabResume owner={user?.id ?? null}/>
+              <a href={hanziSprintHref} className="secondary" style={{display:"inline-flex",alignItems:"center",gap:8,marginBottom:16}}>
+                {hanziSprintCopy[locale].title}<ArrowRight size={16} aria-hidden="true"/>
+              </a>
               <div className="dashboard-grid">
                 <section className="hero-card">
                   <div className="hero-copy">
