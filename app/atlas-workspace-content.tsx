@@ -179,10 +179,10 @@ function ListenButton({clip, audio, children}: {clip?: Pronunciation; audio: Wor
   </button>;
 }
 
-export function WorkspaceInspector({context, route, audio, explore, showFamily, onStory, onWriting, chunksHref}: {
+export function WorkspaceInspector({context, route, audio, explore, showFamily, onStory, onWriting, onBuild, chunksHref}: {
   context: WorkspaceContext; route: WorkspaceRoute; audio: WorkspaceAudio; explore: Explore;
   showFamily: (anchor: string) => void; onStory: (target: StoryTarget) => void;
-  onWriting: () => void; chunksHref: string;
+  onWriting: () => void; onBuild?: (hanzi: string) => void; chunksHref: string;
 }) {
   const {word, text, reading, meaning, example, pronunciation} = context;
   const lookup = useStudyLookup();
@@ -231,6 +231,7 @@ export function WorkspaceInspector({context, route, audio, explore, showFamily, 
         {context.parts.length > 0 && <><strong>Modern components</strong><div className="aw-chips">{context.parts.map(part =>
           <button key={part} type="button" lang="zh-Hans" onClick={() => explore(part, 'component')}>{part}</button>
         )}</div></>}
+        {onBuild && <button type="button" onClick={() => onBuild(context.hanzi)}>Build this hanzi <ArrowRight size={14}/></button>}
         <button type="button" onClick={() => showFamily(context.hanzi)}>Words containing <b lang="zh-Hans">{context.hanzi}</b> <ArrowRight size={14}/></button>
       </div>}
       {route.kind === 'component' && context.part && /\p{Script=Han}/u.test(context.part.glyph) &&

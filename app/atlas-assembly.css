@@ -1,0 +1,285 @@
+.app-shell:has(.atlas-workspace.aw-build.aw-wide:not([hidden] *)) > .sidebar {display: none}
+.app-shell .main:has(.atlas-workspace.aw-build.aw-wide:not([hidden] *)) {margin-left: 0}
+
+.ab {
+  --ab-paper: #fffcf5;
+  --ab-desk: #f7f4eb;
+  --ab-line: #dce2d7;
+  --ab-ink: #233d32;
+  --ab-muted: #53685d;
+  --ab-accent: #a54033;
+  --ab-accent-wash: #f7ece3;
+  container-type: inline-size;
+  margin-top: 22px;
+}
+.ab h2, .ab h3, .ab h4, .ab p {margin: 0}
+.ab :is(button, input, select) {font: inherit}
+.ab button {
+  color: var(--ab-ink);
+  background: transparent;
+  border: 1px solid var(--ab-line);
+  border-radius: 9px;
+  min-height: 40px;
+  padding: 6px 10px;
+}
+.ab button:hover {background-color: #edf1e8}
+.ab button[aria-pressed=true] {background-color: #e6efe3; border-color: #afc5b2}
+.ab .ab-hanzi {font-family: var(--font-hanzi), 'PingFang SC', 'Noto Sans CJK SC', sans-serif}
+.ab-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.ab-header {display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 14px 20px}
+.ab-header h2 {font-size: clamp(1.55rem, 3vw, 2rem); line-height: 1.17; letter-spacing: -.025em}
+.ab-header p {margin-top: 6px; color: var(--ab-muted); font-size: .9rem}
+.ab-find {
+  display: flex;
+  width: min(100%, 264px);
+  align-items: center;
+  border: 1px solid var(--ab-line);
+  border-radius: 10px;
+  background: var(--ab-paper);
+}
+.ab-find input {min-width: 0; width: 100%; color: var(--ab-ink); padding: 8px 12px; border: 0; background: transparent}
+.ab-find button {border: 0; display: grid; place-items: center; min-width: 40px}
+.ab .ab-error {color: var(--ab-accent); margin-top: 8px}
+.ab-seeds {display: flex; gap: 7px; flex-wrap: wrap; margin: 14px 0 16px}
+.ab-seeds button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background-color: var(--ab-paper);
+  padding-inline: 12px;
+  font-size: .84rem;
+  font-weight: 600;
+}
+.ab-seeds .ab-hanzi {font-size: 1.24rem; line-height: 1}
+
+.ab-directory {
+  margin: 0 0 14px;
+  padding: 12px;
+  border: 1px solid var(--ab-line);
+  border-radius: 12px;
+  background-color: #fbfdf8;
+}
+.ab-directory-head {display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px}
+.ab-directory-head p {font-weight: 650}
+.ab-directory-head input {width: min(100%, 248px); min-height: 40px; border: 1px solid var(--ab-line); border-radius: 8px; padding: 6px 9px; background: #fffefa}
+.ab-directory-results {max-height: 360px; overflow: auto; padding: 4px; margin-top: 6px}
+.ab-directory-results h3 {margin: 9px 0; font-size: .85rem}
+.ab-directory-results ul {display: grid; grid-template-columns: repeat(auto-fill, minmax(min(148px, 100%), 1fr)); gap: 6px; padding: 0; margin: 0; list-style: none}
+.ab-directory-results button {display: flex; align-items: center; justify-content: start; gap: 6px; width: 100%; text-align: start; min-height: 44px; font-size: .8rem; background-color: #fffefa}
+.ab-directory-results button .ab-hanzi {font-size: 1.4rem; min-width: 1em; text-align: center}
+.ab-directory-results button small {color: var(--ab-muted); margin-left: auto}
+
+.ab-columns {display: grid; grid-template-columns: minmax(0, 1.13fr) minmax(0, 1fr); gap: 14px; align-items: start}
+.ab-panel {border: 1px solid var(--ab-line); border-radius: 17px; min-width: 0; overflow: clip; background: var(--ab-paper)}
+.ab-board-head, .ab-family-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 16px 18px 12px;
+}
+.ab-character-reading {display: flex; gap: 8px 12px; align-items: baseline; flex-wrap: wrap}
+.ab-character-reading h3 {font-size: 1.55rem; line-height: 1.15; font-weight: 700}
+.ab-character-reading small {font-size: .72rem; color: var(--ab-muted)}
+.ab-character-copy p {margin-top: 4px; color: var(--ab-muted)}
+.ab .ab-split {display: inline-flex; align-items: center; gap: 6px; min-width: 84px; justify-content: center; flex: none; font-size: .84rem}
+.ab .ab-split[aria-expanded=true] {background: var(--ab-accent-wash); border-color: #dbb6a6; color: var(--ab-accent)}
+.ab .ab-outside {margin: 0 18px 8px; font-size: .82rem; color: var(--ab-muted)}
+.ab-outside button {font-size: .82rem}
+
+.ab-drawing {
+  margin: 0 12px;
+  border: 1px solid #e6e1d4;
+  border-radius: 12px;
+  background:
+    linear-gradient(90deg, transparent 49.8%, #dedfd0 50%, transparent 50.2%) center / 90% 88% no-repeat,
+    linear-gradient(0deg, transparent 49.8%, #dedfd0 50%, transparent 50.2%) center / 90% 88% no-repeat,
+    radial-gradient(ellipse at 50% 46%, #fdfbf4, var(--ab-desk) 77%);
+}
+.ab-gesture-pad {
+  height: clamp(226px, 26vw, 332px);
+  display: grid;
+  place-items: center;
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
+}
+.ab-gesture-pad:active {cursor: grabbing}
+.ab-art {
+  color: var(--ab-ink);
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: min(100%, 385px);
+  font-size: clamp(8rem, 16vw, 14rem);
+  line-height: 1;
+}
+.ab-art .ab-ink {width: 100%; height: 100%; max-height: clamp(226px, 26vw, 332px)}
+.ab-ink {display: block; fill: currentColor; overflow: visible}
+.ab-ink-part {transition: transform 240ms cubic-bezier(.2,.7,.3,1), fill 140ms ease}
+.ab-ink-part[data-active=true] {fill: var(--ab-accent)}
+.ab-art .ab-ink-part {cursor: pointer}
+.ab-diagram {position: relative; isolation: isolate; width: min(73%, 250px); aspect-ratio: 1}
+.ab-diagram > :is(button, span) {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  font-size: clamp(1.1rem, calc(var(--ab-diagram-scale) * 8rem), 4.5rem);
+  line-height: 1;
+  padding: 0;
+  font-weight: 500;
+  border: 1px dashed #b6c6ab;
+  background: #f7f5eb;
+  min-height: 0;
+}
+.ab-diagram > :is(button, span):first-child {z-index: -1}
+.ab-diagram button[data-active=true] {color: var(--ab-accent); border-color: #c28c77; background-color: var(--ab-accent-wash)}
+.ab-drawing .ab-drawing-note {font-size: .75rem; color: var(--ab-muted); padding: 0 10px 8px; text-align: center}
+
+.ab-parts, .ab-swap-tray, .ab-family-results {list-style: none; padding: 0; margin: 0}
+.ab-parts {display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 10px 12px 0}
+.ab-parts button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .82rem;
+  min-height: 42px;
+  background: #fffdf8;
+}
+.ab-parts button[aria-pressed=true] {color: var(--ab-accent); border-color: #d5a597; background: var(--ab-accent-wash)}
+.ab-part-glyph {font-size: 1.45rem; line-height: 1}
+.ab-unknown, .ab .ab-part-note, .ab-atomic {color: var(--ab-muted); font-size: .82rem}
+.ab .ab-part-note, .ab-atomic {padding: 8px 14px}
+.ab .ab-clue {margin: 7px 14px 0; color: var(--ab-muted); font-size: .8rem}
+.ab .ab-changed {margin: 8px 14px 0; color: #315e4c; font-size: .88rem; font-weight: 650}
+
+.ab-swaps {margin: 12px 12px 0; padding-top: 10px; border-top: 1px solid var(--ab-line)}
+.ab-swaps header {display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin: 0 2px 7px}
+.ab-swaps h4 {font-size: .88rem}
+.ab-swaps header > span {font-size: .78rem; color: var(--ab-muted)}
+.ab-swaps header b {color: var(--ab-accent)}
+.ab-swap-tray {display: flex; gap: 8px; overflow-x: auto; padding: 4px 4px 8px; scroll-padding: 4px; scroll-snap-type: x proximity}
+.ab-swap-tray li {scroll-snap-align: start; flex: 0 0 auto}
+.ab-swap-tray button {display: grid; gap: 3px; text-align: start; max-width: 190px; background-color: #fffdf8; min-width: 88px}
+.ab-swap-tray button span {display: flex; align-items: center; gap: 7px; font-size: 1.24rem; line-height: 1.05; white-space: nowrap}
+.ab-swap-tray small {font-size: .73rem; color: var(--ab-muted)}
+.ab-usage {border-top: 1px solid var(--ab-line); padding: 7px 0 0; margin: 8px 12px 0}
+.ab-usage summary {padding: 4px 2px; font-size: .82rem; color: var(--ab-muted)}
+.ab-usage ul {display: grid; gap: 8px; padding: 5px 0 0; list-style: none; margin: 0}
+.ab-usage li {display: grid; gap: 2px; font-size: .83rem}
+.ab-usage .ab-hanzi {font-size: 1.2rem}
+.ab-board-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin-top: 5px;
+  padding: 6px 12px 12px;
+}
+.ab-board-links {display: flex; align-items: center; flex-wrap: wrap; gap: 4px}
+.ab-board-links > button {display: inline-flex; align-items: center; gap: 6px; border-color: transparent; font-size: .86rem; font-weight: 650; padding-left: 3px}
+.ab-board-links > button span {font-size: 1.13rem}
+.ab .ab-jump-family {display: none}
+.ab-samples {display: flex; gap: 4px; margin-left: auto}
+.ab-samples button {font-size: 1rem; min-width: 36px; padding: 4px}
+
+.ab-family {background-color: #fbfdf8}
+.ab-family-head {padding-bottom: 8px}
+.ab-family-head h3 {display: flex; align-items: baseline; gap: 8px; font-size: 1.16rem; line-height: 1.18}
+.ab .ab-family-note {margin: 0 14px 5px; font-size: .82rem; color: var(--ab-muted)}
+.ab-family-glyph {color: var(--ab-accent); font-size: 1.45rem}
+.ab-result-count {color: var(--ab-muted); font-size: .82rem; padding-top: 3px}
+.ab-layout-toggle {display: flex; border: 1px solid var(--ab-line); border-radius: 9px; flex: none; overflow: clip}
+.ab-layout-toggle button {min-width: 40px; padding: 5px; border: 0; border-radius: 0; display: grid; place-items: center}
+.ab .ab-cue-link {margin: 0 14px 4px; min-height: 34px; max-width: calc(100% - 28px); overflow-wrap: anywhere; border-color: transparent; text-align: start; font-size: .82rem; color: var(--ab-muted)}
+.ab-cue {padding: 0 14px 8px; font-size: .82rem}
+.ab-cue label {display: block; margin-bottom: 4px}
+.ab-cue div {display: flex; align-items: center; gap: 4px}
+.ab-cue input {min-width: 0; width: 100%; padding: 10px; border: 1px solid var(--ab-line); border-radius: 9px; background: var(--ab-paper)}
+.ab-forms {display: flex; gap: 5px; padding: 0 14px 7px}
+.ab-forms button {font-size: .8rem; min-width: 42px}
+.ab-forms .ab-hanzi {font-size: 1.13rem}
+.ab-positions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 0 14px 10px;
+  color: var(--ab-muted);
+  font-size: .82rem;
+}
+.ab-positions button, .ab-positions select {min-height: 36px; padding: 5px 8px; font-size: .78rem}
+.ab-positions select {min-width: 99px; border-radius: 8px; color: var(--ab-ink); border: 1px solid var(--ab-line); background: #fffdf8}
+.ab-family-results {display: grid; gap: 6px; padding: 0 12px}
+.ab-family-results.ab-grid {grid-template-columns: repeat(auto-fit, minmax(min(110px, 100%), 1fr))}
+.ab-family-results li {min-width: 0}
+.ab-family-results button {
+  text-align: start;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  min-height: 65px;
+  padding: 7px;
+  background: #fffefa;
+}
+.ab-family-results.ab-grid button {min-height: 104px; flex-direction: column; justify-content: center; align-items: stretch; gap: 4px}
+.ab-family-results.ab-grid .ab-thumbnail {align-self: center}
+.ab-thumbnail {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--ab-ink);
+}
+.ab-thumbnail svg {width: 100%; height: 100%}
+.ab-result-copy {display: flex; flex-direction: column; min-width: 0; gap: 1px; line-height: 1.25}
+.ab-grid .ab-result-copy {text-align: center}
+.ab-result-copy strong {font-size: .82rem}
+.ab-result-copy .ab-gloss {white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: .78rem}
+.ab-result-copy small {color: var(--ab-muted); font-size: .72rem}
+.ab .ab-more {
+  display: flex;
+  width: calc(100% - 24px);
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 12px 0;
+  font-size: .84rem;
+  font-weight: 640;
+}
+.ab-more span, .ab-nested, .ab-empty {font-size: .81rem; color: var(--ab-muted)}
+.ab-nested {display: flex; align-items: center; gap: 7px; min-height: 44px; padding: 6px 12px}
+.ab-nested input {width: 16px; height: 16px; accent-color: #315e4c}
+.ab-empty {padding: 0 14px 10px}
+.ab-family:has(.ab-family-results):not(:has(.ab-nested)) {padding-bottom: 12px}
+
+@container (max-width: 735px) {
+  .ab-columns {grid-template-columns: minmax(0, 1fr)}
+  .ab .ab-jump-family {display: inline-flex}
+  .ab-family-results.ab-grid {grid-template-columns: repeat(auto-fill, minmax(min(110px, 100%), 1fr))}
+}
+@container (max-width: 400px) {
+  .ab-header, .ab-find {width: 100%}
+  .ab-board-head, .ab-family-head {padding-inline: 12px}
+  .ab-family-results.ab-grid {grid-template-columns: repeat(3, minmax(0, 1fr))}
+  .ab-family-results.ab-grid button {padding-inline: 3px}
+}
+@media (pointer: coarse) {
+  .ab :is(button, select) {min-height: 44px}
+  .ab-diagram > button {min-height: 0}
+}
+@media (prefers-reduced-motion: reduce) {
+  .ab-ink-part {transition: none}
+}

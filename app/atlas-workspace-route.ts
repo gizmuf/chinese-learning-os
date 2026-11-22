@@ -4,7 +4,7 @@ import {cloudRouteHref, readCloudRoute, type CloudRoute} from './atlas-cloud-rou
 import {isHybridLayout} from './atlas-hybrid-model';
 import {isStoryTarget, type StoryTarget} from './atlas-story-explorer-model';
 
-export const workspaceModes = ['family', 'read', 'map', 'practise'] as const;
+export const workspaceModes = ['family', 'read', 'map', 'practise', 'build'] as const;
 export const workspaceMapViews = ['structure', 'connections', 'matrix'] as const;
 export const workspaceExercises = ['reels', 'contrast', 'recognition', 'writing'] as const;
 export type WorkspaceKind = 'word' | 'character' | 'component' | 'sentence';
@@ -28,6 +28,8 @@ export type WorkspaceRoute = {
   map: typeof workspaceMapViews[number];
   exercise: typeof workspaceExercises[number] | '';
   wide: boolean;
+  buildHanzi?: string;
+  buildPart?: string;
 };
 
 export function isAtlasWorkspaceEntry(params: URLSearchParams) {
@@ -45,10 +47,16 @@ const readCharacter = (value: string | null) =>
 
 export function readAtlasWorkspaceRoute(search: string): WorkspaceRoute {
   const params = new URLSearchParams(search);
+  const mode = readOption(params.get('mode'), workspaceModes, 'family');
+  const buildPart = params.get('buildPart');
   const story = params.get('wsstory');
   const storyPanel = params.get('storyPanel') === '1';
   return {
-    mode: readOption(params.get('mode'), workspaceModes, 'family'),
+    mode,
+    ...(mode === 'build' && {
+      buildHanzi: readCharacter(params.get('buildHanzi')) || undefined,
+      buildPart: buildPart === '' || buildPart && /^[\p{Script=Han}\u2e80-\u2fdf\u31c0-\u31ee\ue000-\uf8ff]$/u.test(buildPart) ? buildPart : undefined,
+    }),
     relation: readOption(params.get('relation'), ['literal', 'structure', 'topic'], 'literal'),
     scope: parseBrowseScope(params.get('hsk')),
     anchor: readAnchor(params.get('anchor')),
@@ -91,6 +99,10 @@ export function atlasWorkspaceHref(route: WorkspaceRoute, scroll = 0) {
   if (route.map !== 'structure') params.set('map', route.map);
   if (route.exercise) params.set('practice', route.exercise);
   if (route.wide) params.set('wide', '1');
+  if (route.mode === 'build') {
+    if (route.buildHanzi) params.set('buildHanzi', route.buildHanzi);
+    if (route.buildPart !== undefined) params.set('buildPart', route.buildPart);
+  }
   if (scroll > 0) params.set('awscroll', String(Math.floor(scroll)));
   return '?' + params;
 }
@@ -116,14 +128,15 @@ export function atlasCloudReturn(origin: string | null) {
   return cloudRouteHref(readCloudRoute(origin));
 }
 
-export function workspaceHrefFromCloud(route: CloudRoute, word: {id: string; hanzi: string; sentence?: string} | undefined, selectedHanzi?: string) {
+export function workspaceHrefFromCloud(route: CloudRoute, word: {id: string; hanzi: string; sentence?: string} | undefined, selectedHanzi?: string, mode?: 'build') {
   const literal = route.layout === 'words' || route.layout === 'journey' || isHybridLayout(route.layout);
   const hanzi = selectedHanzi || (word && !word.hanzi.includes(route.hanzi) ? [...word.hanzi][0] : route.hanzi);
   const selectedWord = word && (literal || route.kind === 'word' || route.stage === 'sentence') ? word : undefined;
   const sentence = route.stage === 'sentence' ? selectedWord?.sentence : undefined;
   return atlasWorkspaceHref({
     ...readAtlasWorkspaceRoute(''),
-    scope: route.level, mode: route.layout === 'journey' ? 'read' : 'family',
+    scope: route.level, mode: mode ?? (route.layout === 'journey' ? 'read' : 'family'),
+    buildHanzi: mode === 'build' ? hanzi : undefined,
     anchor: literal ? route.anchor : hanzi,
     relation: literal ? 'literal' : 'structure',
     part: route.component, hanzi, wordId: selectedWord?.id ?? '',

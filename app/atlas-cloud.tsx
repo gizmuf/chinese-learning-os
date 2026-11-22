@@ -111,7 +111,10 @@ function CloudMap({owner,db,penOnly,setPenOnly,notify,progress,onWord,embedded}:
  const selected=sourceFocus?undefined:baseSelected;
  const learningContext=useMemo(()=>atlasLearningContext(route,locale,allWords,selected),[route,locale,allWords,selected]);
  const activeWord=learningContext.word;
- const unifiedHref=workspaceHrefFromCloud(route, activeWord && {id:activeWord.id,hanzi:activeWord.hanzi,sentence:activeWord.item?.sentence},learningContext.character?.hanzi);
+ const workspaceWord = activeWord && {id: activeWord.id, hanzi: activeWord.hanzi, sentence: activeWord.item?.sentence};
+ const workspaceHanzi = learningContext.character?.hanzi;
+ const unifiedHref = workspaceHrefFromCloud(route, workspaceWord, workspaceHanzi);
+ const buildHref = workspaceHrefFromCloud(route, workspaceWord, workspaceHanzi, 'build');
  const readHref=readingLabHref(readReadingLabRoute('?hsk='+route.level))+'&returnWorkspace='+encodeURIComponent(unifiedHref);
  const family=useMemo(()=>getFamily([route.component,...route.parts.filter(p=>p!==route.component)],route.level).sort((a,b)=>relationRank(a.hanzi)-relationRank(b.hanzi)).map(ch=>sourceFocus?.text===ch.hanzi?{...ch,pinyin:sourceFocus.pinyin,meaning:{...ch.meaning,[locale]:sourceFocus.meaning}}:ch),[route.component,route.parts,route.level,route.collection,route.nested,locale,sourceFocus]);
  const groups=cloudFamilyGroups<(typeof family)[number]>(family,route.component);
@@ -202,6 +205,7 @@ function CloudMap({owner,db,penOnly,setPenOnly,notify,progress,onWord,embedded}:
  return <section className={'cloud-lab '+(route.layout==='cloud'?'cloud-restored-layout':'cloud-context-layout')+' layout-'+route.layout+(tour!==null?' cloud-tour-active':'')} aria-label={c('Cloud Atlas','Atlas en nuages','Облачный Атлас')}>
   {!embedded&&<><header className="cloud-heading"><div><span className="cloud-eyebrow">{c('FOLLOW ONE CONNECTION','SUIVRE UN LIEN','СЛЕДУЕМ ЗА СВЯЗЬЮ')}</span><h1><Cloud size={27}/>{c('Cloud Atlas','Atlas en nuages','Облачный Атлас')}<span>。</span></h1></div><div className="cloud-header-actions"><button ref={tourLauncher} className="cloud-tour-launch" onClick={startTour}>{c('Try 人 → 你好','Essayer 人 → 你好','Пройти 人 → 你好')}</button><button onClick={()=>setAbout(!about)} aria-label={c('About this map','À propos de cette carte','Об этой карте')} aria-expanded={about}><Info size={18}/></button><button onClick={()=>setFull(!full)} aria-label={full?c('Exit expanded map','Réduire la carte','Уменьшить карту'):c('Expand map','Agrandir la carte','Развернуть карту')}>{full?<Minimize2 size={18}/>:<Maximize2 size={18}/>}</button></div></header>
   <nav className="cloud-learning-links" aria-label={c('Atlas learning tools','Outils de l’Atlas','Инструменты Атласа')}>
+    <a className="text-button" href={buildHref}>Build hanzi</a>
     <a className="text-button" href={unifiedHref}>{c('Unified Atlas','Atlas unifié','Единый Атлас')}</a>
     <a className="text-button" href={readHref}>{c('Reading Lab','Atelier de lecture','Лаборатория чтения')}</a>
     <a className="text-button" href={atlasChunksHref(route,learningContext.word)}>{libraryCopy.words[locale]} · {libraryCopy.grammar[locale]} →</a>

@@ -7,7 +7,7 @@ import {useHanziStyle} from './hanzi-style';
 type GlyphData = { strokes: string[] };
 const glyphRequests = new Map<string, Promise<GlyphData | null>>();
 
-function loadGlyph(hanzi: string): Promise<GlyphData | null> {
+export function loadGlyph(hanzi: string): Promise<GlyphData | null> {
   const cached = glyphRequests.get(hanzi);
   if (cached) return cached;
   const request = fetch('/characters/' + encodeURIComponent(hanzi) + '.json')
