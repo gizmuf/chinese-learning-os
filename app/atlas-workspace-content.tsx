@@ -1,6 +1,6 @@
 'use client';
 
-import {useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode} from 'react';
+import {createContext, useContext, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject} from 'react';
 import {ArrowDown, ArrowLeft, ArrowRight, AudioLines, BookOpen, PenLine, Volume2} from 'lucide-react';
 import {WordFamilyBoard, type FamilyBoardCopy} from './word-family-board';
 import {familyColumns} from './word-family-model';
@@ -28,6 +28,53 @@ type Choose = (word: CloudWord) => void;
 type Explore = (text: string, kind: WorkspaceKind) => void;
 export const boardCopy: FamilyBoardCopy = {all: 'Family members', word: 'Hanzi', pinyin: 'Pinyin', meaning: 'Meaning'};
 
+type ReadingHints = {pinyin: boolean; english: boolean};
+const visibleReadingHints: ReadingHints = {pinyin: true, english: true};
+const ReadingHintsContext = createContext<{hints: ReadingHints; active: boolean; change: (next: ReadingHints) => void} | null>(null);
+const useReadingHints = () => useContext(ReadingHintsContext)?.hints ?? visibleReadingHints;
+
+function restoreReadingHints(key: string): ReadingHints {
+  try {
+    const value = JSON.parse(localStorage.getItem(key) ?? 'null');
+    return {pinyin: typeof value?.pinyin === 'boolean' ? value.pinyin : true,
+      english: typeof value?.english === 'boolean' ? value.english : true};
+  } catch {return visibleReadingHints;}
+}
+
+export function WorkspaceReadingProvider({active, owner, root, embedded = false, children}: {
+  active: boolean; owner: string | null; root: RefObject<HTMLElement | null>; embedded?: boolean; children: ReactNode;
+}) {
+  const key = 'chinese-os:atlas-reading-hints:v1:' + (owner ?? 'guest');
+  const restored = useMemo(() => restoreReadingHints(key), [key]);
+  const [saved, setSaved] = useState(() => ({key, hints: restored}));
+  const hints = active ? saved.key === key ? saved.hints : restored : visibleReadingHints;
+  function change(next: ReadingHints) {
+    setSaved({key, hints: next});
+    try {localStorage.setItem(key, JSON.stringify(next));} catch { /* Display preferences also work without storage. */ }
+  }
+  useLayoutEffect(() => {
+    const node = root.current;
+    if (!node) return;
+    const topbar = embedded ? null : document.querySelector<HTMLElement>('.app-shell .topbar');
+    const measure = () => node.style.setProperty('--aw-sticky-header', (topbar?.getBoundingClientRect().height ?? 0) + 'px');
+    measure();
+    const observer = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(measure);
+    if (topbar) observer?.observe(topbar);
+    return () => observer?.disconnect();
+  }, [root, embedded]);
+  return <ReadingHintsContext.Provider value={{hints, active, change}}>{children}</ReadingHintsContext.Provider>;
+}
+
+function WorkspaceReadingControls({locale}: {locale: Locale}) {
+  const display = useContext(ReadingHintsContext);
+  if (!display?.active) return null;
+  const translation = {en: 'English', fr: 'Français', ru: 'Русский', tr: 'Türkçe'}[locale];
+  return <div className="aw-reading-controls" role="group" aria-label="Reading hints">
+    <button type="button" aria-pressed={display.hints.pinyin} onClick={() => display.change({...display.hints, pinyin: !display.hints.pinyin})}>Pinyin</button>
+    <button type="button" aria-pressed={display.hints.english} onClick={() => display.change({...display.hints, english: !display.hints.english})}>{translation}</button>
+  </div>;
+}
+
 export function workspaceColumns(words: CloudWord[], anchor: string) {
   const columns = familyColumns(words, anchor);
   return {
@@ -48,17 +95,19 @@ export function WorkspacePager({page, size, total, onPage}: {page: number; size:
 }
 
 function TopicWords({words, selected, choose}: {words: CloudWord[]; selected?: string; choose: Choose}) {
+  const hints = useReadingHints();
   return <div className="aw-topic-words">{words.map(word =>
     <button type="button" key={word.id} aria-pressed={word.id === selected} onClick={() => choose(word)} data-word-id={word.id}>
-      <strong lang="zh-Hans">{word.hanzi}</strong><span>{word.pinyin}</span><span>{word.meaning}</span>
+      <strong lang="zh-Hans">{word.hanzi}</strong><span>{hints.pinyin && word.pinyin}</span><span>{hints.english && word.meaning}</span>
     </button>
   )}</div>;
 }
 
 export function WorkspaceWordBoard({words, anchor, selected, choose}: {words: CloudWord[]; anchor: string; selected?: string; choose: Choose}) {
+  const hints = useReadingHints();
   return anchor
     ? <div className="word-family-lab aw-family-table" style={workspaceColumns(words, anchor)}>
-      <WordFamilyBoard words={words} anchor={anchor} selectedId={selected} onChoose={choose} copy={boardCopy}/>
+      <WordFamilyBoard words={words} anchor={anchor} selectedId={selected} onChoose={choose} copy={boardCopy} showPinyin={hints.pinyin} showMeaning={hints.english}/>
     </div>
     : <TopicWords words={words} selected={selected} choose={choose}/>;
 }
@@ -185,6 +234,7 @@ export function WorkspaceInspector({context, route, audio, explore, showFamily, 
   onWriting: () => void; onBuild?: (hanzi: string) => void; chunksHref: string;
 }) {
   const {word, text, reading, meaning, example, pronunciation} = context;
+  const hints = useReadingHints();
   const lookup = useStudyLookup();
   const fallback = text ? lookup?.dictionary.get(text) : undefined;
   const sentenceFocus = route.kind === 'sentence';
@@ -200,8 +250,8 @@ export function WorkspaceInspector({context, route, audio, explore, showFamily, 
           <h2 lang="zh-Hans"><SharedText text={text} anchor={route.relation === 'literal' ? route.anchor : ''}/></h2>
           <StudyLookupButton text={text}/>
         </div>
-        {(reading || fallback?.pinyin) && <p className="aw-reading">{reading ?? fallback?.pinyin}</p>}
-        {(meaning || fallback?.meaning) && <p className="aw-meaning">{meaning ?? fallback?.meaning}</p>}
+        {hints.pinyin && (reading || fallback?.pinyin) && <p className="aw-reading">{reading ?? fallback?.pinyin}</p>}
+        {hints.english && (meaning || fallback?.meaning) && <p className="aw-meaning">{meaning ?? fallback?.meaning}</p>}
         <div className="aw-actions">
           <ListenButton clip={pronunciation} audio={audio}/>
           {!outsideScope && (route.kind === 'word' || route.kind === 'character') && /^[\p{Script=Han}]{1,8}$/u.test(text) &&
@@ -218,7 +268,7 @@ export function WorkspaceInspector({context, route, audio, explore, showFamily, 
         {sentenceFocus
           ? <h2 lang="zh-Hans"><StudyText text={example.text} pinyin={example.pinyin} headword={word?.hanzi} anchor={route.relation === 'literal' ? route.anchor : ''}/></h2>
           : <p lang="zh-Hans"><StudyText text={example.text} pinyin={example.pinyin} headword={word?.hanzi} anchor={route.relation === 'literal' ? route.anchor : ''}/></p>}
-        <p className="aw-reading">{example.pinyin}</p><p>{example.meaning}</p>
+        {hints.pinyin && <p className="aw-reading">{example.pinyin}</p>}{hints.english && <p>{example.meaning}</p>}
         <div className="aw-actions">
           <ListenButton clip={example.audio} audio={audio}>Listen to sentence</ListenButton>
           {chunksHref && <a href={chunksHref}>Speaking chunks <ArrowRight size={14}/></a>}
@@ -246,6 +296,7 @@ export function WorkspaceJourney({route, groups, locale, context, select, openGr
   select: (word: CloudWord, group: JourneyGroup) => void;
   openGroup: (group: JourneyGroup) => void; showWhole: (group: JourneyGroup) => void; inspector?: ReactNode;
 }) {
+  const hints = useReadingHints();
   const [loaded, setLoaded] = useState(12);
   const [expanded, setExpanded] = useState<Set<string>>(() => new Set());
   const selectedIndex = groups.findIndex(group => group.id === route.group);
@@ -263,13 +314,14 @@ export function WorkspaceJourney({route, groups, locale, context, select, openGr
   return <section className="aw-panel aw-journey" aria-label="Family Journey">
     <header className="aw-panel-head"><div><p className="aw-relation">Family Journey</p><h2>Read through {scope}</h2></div>
       <span>{total} entries · {groups.length} groups</span></header>
+    <WorkspaceReadingControls locale={locale}/>
     {groups.length > 0 && <label className="aw-jump">Jump to group
       <select value={route.group || ''} onChange={event => {
         const group = groups.find(candidate => candidate.id === event.target.value);
         if (group) openGroup(group);
       }}>
         <option value="">Select a group</option>
-        {groups.map(group => <option key={group.id} value={group.id}>{group.anchor ? group.anchor + ' · ' + group.title : 'Topic · ' + group.title} · {group.level ? 'HSK ' + group.level : 'Extra'}</option>)}
+        {groups.map(group => <option key={group.id} value={group.id}>{group.anchor ? group.anchor + (hints.english ? ' · ' + group.title : '') : 'Topic · ' + group.title} · {group.level ? 'HSK ' + group.level : 'Extra'}</option>)}
       </select>
     </label>}
     {groups.slice(0, shown).map(group => {
@@ -277,7 +329,7 @@ export function WorkspaceJourney({route, groups, locale, context, select, openGr
       const fullOpen = expanded.has(group.id);
       return <article key={group.id} id={group.id} className="aw-journey-group" data-journey-kind={group.kind}>
         <header><div><p className="aw-relation">{group.kind === 'character' ? 'Shared written Hanzi' : 'Study topic'} · {group.level ? 'HSK ' + group.level : 'Extra'}</p>
-          <h3>{group.anchor && <span lang="zh-Hans">{group.anchor} </span>}{group.reading && <small>{group.reading} · </small>}{group.title}</h3>
+          <h3>{group.anchor && <span lang="zh-Hans">{group.anchor} </span>}{hints.pinyin && group.reading && <small>{group.reading}{hints.english ? ' · ' : ''}</small>}{(group.kind !== 'character' || hints.english) && group.title}</h3>
           <p>{workspaceGroupLabel(group, locale, route.scope)}</p></div></header>
         <WorkspaceWordBoard words={fullOpen ? full : here} anchor={group.anchor}
           selected={context.word?.id} choose={word => select(word, group)}/>
