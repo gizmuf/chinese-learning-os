@@ -80,7 +80,7 @@ test('Unified Atlas combines the HSK4 and recorded 森林 entries only in All vo
   assert.deepEqual(hsk4.members.filter(word => word.hanzi === '森林').map(word => word.id), [dictionaryId]);
   assert.equal(hsk4.word.atlasCharacterId, undefined);
   assert.equal(hsk4.pronunciation, undefined);
-  assert.deepEqual(model.familyWords('森', 'en', 'all').filter(word => word.hanzi === '森林').map(word => word.id), [exampleId, dictionaryId]);
+  assert.deepEqual(model.familyWords('森', 'en', 'all').filter(word => word.hanzi === '森林').map(word => word.id), [dictionaryId]);
 });
 
 test('Cloud Atlas handoff retains the learning selection, exact source route and both scopes', () => {

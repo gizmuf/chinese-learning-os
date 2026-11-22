@@ -96,7 +96,7 @@ test('all reader sentences pass exact authored readings through the shared dicti
   }
 });
 
-test('coverage counts exact official word tokens and distinct types, including listed words missing from dictionary browse', async () => {
+test('coverage counts exact official word tokens and distinct types, including catalogue supplements', async () => {
   assert.equal(createHash('sha256').update(compressed).digest('hex'), metadata.assetSha256);
   const result = model.analyzeReading(article, index);
   assert.deepEqual(result.totals, {tokens: 5, types: 4});
@@ -107,7 +107,7 @@ test('coverage counts exact official word tokens and distinct types, including l
   const browse = JSON.parse(await readFile('data/hsk-browse-index.json', 'utf8'));
   const dictionaryHeadwords = new Set(browse.words.map(word => word.hanzi));
   const headword = '精彩纷呈';
-  assert.equal(dictionaryHeadwords.has(headword), false);
+  assert.equal(dictionaryHeadwords.has(headword), true);
   const classifierFixture = {...article, paragraphs: [{id: 'p1', english: 'Splendid.', sentenceEnglish: ['Splendid.'], chunks: [{id: 'c1', tokens: [{text: headword, pinyin: ['jīng', 'cǎi', 'fēn', 'chéng']}]}]}]};
   const tested = model.analyzeReading(classifierFixture, index);
   assert.deepEqual(tested.offList, []);

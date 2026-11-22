@@ -4,7 +4,7 @@ import {useEffect,useLayoutEffect,useMemo,useRef,useState,type RefObject} from '
 import {ArrowLeft,ArrowRight,Maximize2,Minimize2,PenLine,Search,Volume2,X} from 'lucide-react';
 import {useI18n} from './i18n';
 import type {CloudRoute} from './atlas-cloud-route';
-import type {CloudWord} from './atlas-cloud-model';
+import {matchesCloudWordId, type CloudWord} from './atlas-cloud-model';
 import {atlasById} from './atlas-model';
 import {hybridInventory,hybridComponentReading,hybridTextReading,hybridWords,hybridPartFamily,hybridSelection,hybridPage,hybridSwipe,type HybridLayout,type HybridSet} from './atlas-hybrid-model';
 import AtlasFamilyStudyActions, {atlasWordStudyEntries} from './atlas-family-study-actions';
@@ -46,7 +46,7 @@ export default function AtlasHybrid(p:Props){
  const inventory=useMemo(()=>hybridInventory(words,locale),[words,locale]);
  const {characters}=inventory;
  const exactCharacter=characters.some(character=>character.hanzi===p.route.hanzi);
- const exactWord=!p.route.familyEntry||words.some(word=>word.id===p.route.familyEntry);
+ const exactWord=!p.route.familyEntry||words.some(word=>matchesCloudWordId(word,p.route.familyEntry));
  const missingSelection=!!global&&(!exactCharacter||!exactWord);
  const selected=hybridSelection(words,characters,p.route.hanzi,p.route.familyEntry);
  const {character,relatives}=selected;

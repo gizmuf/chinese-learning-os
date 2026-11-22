@@ -9,9 +9,17 @@ import {cloudComponentIds} from './atlas-cloud-connections';
 import type {RecognitionQuestion} from './atlas-spatial-model';
 import type {Locale} from './translate';
 const targets=new Set([...extendedCharacters('en',3).map(c=>c.hanzi),...atlasCharacters.map(c=>c.hanzi)]);
-const words=new Map(cloudWords('en').map(w=>[w.id,w]));
+function indexWords(locale:Locale){
+ const index=new Map<string,ReturnType<typeof cloudWords>[number]>();
+ for(const word of cloudWords(locale)){
+  index.set(word.id,word);
+  for(const id of word.aliases??[])index.set(id,word);
+ }
+ return index;
+}
+const words=indexWords('en');
 const localizedWords=new Map<Locale,Map<string,ReturnType<typeof cloudWords>[number]>>([['en',words]]);
-function wordMap(locale:Locale){let result=localizedWords.get(locale);if(!result){result=new Map(cloudWords(locale).map(word=>[word.id,word]));localizedWords.set(locale,result)}return result}
+function wordMap(locale:Locale){let result=localizedWords.get(locale);if(!result){result=indexWords(locale);localizedWords.set(locale,result)}return result}
 const families=new Map<string,Set<string>>();
 function members(part:string){let set=families.get(part);if(!set){set=new Set([...extendedFamily([part],'en',3).map(c=>c.hanzi),...cloudComponentIds(part).flatMap(id=>familyForComponents([id]).map(c=>c.hanzi))]);families.set(part,set)}return set}
 export const recognitionAttemptSchema=z.object({version:z.literal(1),id:z.string().uuid(),target:z.string().refine(h=>targets.has(h)),partId:z.string().max(40).refine(id=>!!extendedComponent(id)),wordId:z.string().max(100),choices:z.array(z.string()).min(2).max(4),choice:z.string(),correct:z.boolean(),at:z.number().int().nonnegative()}).strict().superRefine((e,ctx)=>{const word=words.get(e.wordId),set=members(e.partId);if(!word?.hanzi.includes(e.target)||new Set(e.choices).size!==e.choices.length||!e.choices.includes(e.target)||!e.choices.includes(e.choice)||e.choices.some(h=>!set.has(h))||e.correct!==(e.choice===e.target))ctx.addIssue({code:'custom',message:'Invalid recognition attempt context or result'})});

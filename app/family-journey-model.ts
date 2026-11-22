@@ -1,4 +1,4 @@
-import {cloudWords,type CloudLevel,type CloudWord} from './atlas-cloud-model';
+import {cloudWords,matchesCloudWordId,type CloudLevel,type CloudWord} from './atlas-cloud-model';
 import {extendedCharacters} from './atlas-cloud-extended';
 import {lessons} from './content';
 import {translate,type Locale} from './translate';
@@ -60,4 +60,4 @@ export function journeyCoverage(groups:readonly JourneyGroup[]){
  const words=groups.flatMap(group=>group.words),characters=new Set(words.flatMap(w=>Array.from(w.hanzi).filter(validWordAnchor)));
  return {words:words.length,characters:characters.size,groups:groups.length,tracks:([1,2,3,4,5,6,'7-9',null] as const).map(level=>({level,groups:groups.filter(g=>g.level===level),count:words.filter(w=>w.level===level).length})).filter(track=>track.count>0)};
 }
-export function journeySelection(groups:readonly JourneyGroup[],id:string){for(const group of groups){const word=group.words.find(w=>w.id===id);if(word)return {group,word}}return null}
+export function journeySelection(groups:readonly JourneyGroup[],id:string){for(const group of groups){const word=group.words.find(w=>matchesCloudWordId(w,id));if(word)return {group,word}}return null}

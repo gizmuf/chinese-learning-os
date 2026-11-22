@@ -2,7 +2,7 @@ import myDay from '../data/my-day-01-v2.json';
 import {speakingSource} from './my-day-speaking-model';
 import morning from '../data/shuoshuo-morning.json';
 import {grammarFrames} from './chunk-library-data';
-import {cloudWords} from './atlas-cloud-model';
+import {cloudWords,matchesCloudWordId} from './atlas-cloud-model';
 import {contextualDictionaryEntry,type DictionaryContext} from './dictionary-source-model';
 import type {DictionaryEntry,Pronunciation} from './atlas-spatial-model';
 import type {Locale} from './translate';
@@ -30,7 +30,7 @@ export function restoreContextSession(raw:string|null,url:string,locale:Locale='
  const original=v.contextual,context=original?source(original.sourceId,locale):undefined;
  if(original&&(!context||context.text!==original.text||context.pinyin!==original.pinyin||context.meaning!==original.meaning))return null;
  const sourceAudio=audio(original?.audio);if(context&&sourceAudio?.text===context.text&&sourceAudio.pinyin===context.pinyin)context.audio=sourceAudio;
- const word=typeof v.word?.id==='string'?cloudWords(locale).find(word=>word.id===v.word.id&&word.hanzi===v.text):undefined;
+ const word=typeof v.word?.id==='string'?cloudWords(locale).find(word=>matchesCloudWordId(word,v.word.id)&&word.hanzi===v.text):undefined;
  let entry:DictionaryEntry={text:v.text,pinyin:v.pinyin,meaning:v.meaning,contextual:context,audio:audio(v.audio),word,...(Array.from(v.text).length===1?{character:v.text}:{})};
  if(typeof v.atlasAvailable==='boolean')entry.atlasAvailable=v.atlasAvailable;if(typeof v.phrase==='boolean')entry.phrase=v.phrase;
  if(string(v.sourceName,150))entry.sourceName=v.sourceName;if(string(v.sourceURL,500)&&/^https:\/\/(www\.mdbg\.net|github\.com)\//.test(v.sourceURL))entry.sourceURL=v.sourceURL;

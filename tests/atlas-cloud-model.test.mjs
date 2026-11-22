@@ -23,6 +23,18 @@ test('Reviewed example words are unlevelled, never synthetic HSK items or invent
  for(const level of [1,2,3])assert.ok(cloud.cloudWords('en',level).every(word=>word.origin==='curriculum'));
  assert.equal(new Set(all.map(word=>word.id)).size,all.length);
 });
+test('course extras display confirmed HSK levels without changing their study identities',()=>{
+ for(const [hanzi,id,level] of [['厕所','bonus-02',4],['素食','vegetarian','7-9']]){
+  const matches=cloud.cloudWords('en').filter(word=>word.hanzi===hanzi);
+  assert.equal(matches.length,1);
+  const [word]=matches;
+  assert.equal(word.level,level);
+  assert.equal(word.item.id,id);
+  assert.equal(word.item.hskLevel,undefined);
+  assert.ok(cloud.matchesCloudWordId(word,'hsk-browse:'+level+':'+hanzi));
+  assert.ok(cloud.cloudWords('en',level,true).some(word=>word.id==='hsk-browse:'+level+':'+hanzi));
+ }
+});
 test('Structural families use AND membership and exact reverse component indexes',()=>{
  for(const row of cloud.cloudComponents()){
   const family=cloud.familyForComponents([row.component.id]);

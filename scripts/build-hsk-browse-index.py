@@ -17,12 +17,19 @@ def tone(m):
 for line in gzip.decompress((R/'resources/cc-cedict/cedict.txt.gz').read_bytes()).decode().splitlines():
  m=re.match(r'\S+ (\S+) \[([^]]+)\] /(.+)/$',line)
  if m:entries.setdefault(m[1],[]).append({'pinyin':re.sub(r'([a-züv:]+)([0-5])',tone,m[2],flags=re.I),'meaning':m[3].replace('/','; ')})
+# HSK syllabus rows 7572 and 7793, absent from this CC-CEDICT snapshot.
+# Readings follow the syllabus; the English glosses are authored for the catalogue.
+supplements={
+ '精彩纷呈':[{'pinyin':'jīngcǎi-fēnchéng','meaning':'full of highlights; one impressive moment after another'}],
+ '口哨儿':[{'pinyin':'kǒushàor','meaning':'a whistle (a sound made with the lips)'}],
+}
 words=[]; missing=[]
 for lv in ['4','5','6','7-9']:
  for w in h['words'][lv].split('|'):
-  senses=entries.get(w,[])
+  senses=entries.get(w) or supplements.get(w)
   if not senses:missing.append({'hanzi':w,'level':lv});continue
   words.append({'id':'hsk-browse:'+lv+':'+w,'hanzi':w,'pinyin':' / '.join(dict.fromkeys(s['pinyin'] for s in senses)),'meaning':' · '.join(dict.fromkeys(s['meaning'] for s in senses)),'level':lv})
+if missing:raise ValueError(f'{len(missing)} official vocabulary entries are missing: {missing[:10]}')
 parsed={}
 for glyph,row in chars.items():
  try:
@@ -43,7 +50,7 @@ for lv in ['4','5','6','7-9']:
   if g in oldchars:continue
   r=chars[g];leaves,unknown,complete=parsed[g]
   rows.append({'hanzi':g,'readings':r.get('pinyin',[]),'definition':r.get('definition',''),'decomposition':r.get('decomposition'),'radical':r.get('radical'),'leafComponents':leaves,'unresolvedComponents':unknown,'recursiveComponents':expand(g,{g}),'decompositionComplete':complete,'wordIds':[],'level':lv})
-meta={'edition':'HSK examination syllabus, November 2025','hskSource':json.loads((R/'data/hsk-levels-source.json').read_text()),'dictionarySource':json.loads((R/'data/dictionary-sources.json').read_text()),'policy':'Browsing only. HSK membership is official; dictionary readings/English senses are not sense-to-level aligned. 7-9 is a combined band. Modern IDS links are dataset-derived, not reviewed semantic/phonetic claims.','missingDictionaryEntries':missing}
+meta={'edition':'HSK examination syllabus, November 2025','hskSource':json.loads((R/'data/hsk-levels-source.json').read_text()),'dictionarySource':json.loads((R/'data/dictionary-sources.json').read_text()),'policy':'Browsing only. HSK membership is official; dictionary readings/English senses are not sense-to-level aligned. Headwords absent from CC-CEDICT use published syllabus readings and authored English glosses. 7-9 is a combined band. Modern IDS links are dataset-derived, not reviewed semantic/phonetic claims.','missingDictionaryEntries':missing}
 out={'meta':meta,'words':words,'characters':rows}
 (R/'data/hsk-browse-index.json').write_text(json.dumps(out,ensure_ascii=False,separators=(',',':'))+'\n')
 print({'words':len(words),'characters':len(rows),'missing':missing})

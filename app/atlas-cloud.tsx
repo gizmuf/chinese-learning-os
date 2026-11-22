@@ -12,7 +12,7 @@ import {Fragment,useEffect,useMemo,useRef,useState,type CSSProperties} from 'rea
 import {ArrowLeft,ChevronRight,Cloud,Grid2X2,Info,Maximize2,Minimize2,PenLine,Search,Volume2,X} from 'lucide-react';
 import {useI18n} from './i18n';
 import {atlasByHanzi,atlasItem,componentById} from './atlas-model';
-import {cloudWords,wordsForCharacter,familyForComponents,type CloudLevel,type CloudWord} from './atlas-cloud-model';
+import {cloudWords,wordsForCharacter,familyForComponents,matchesCloudWordId,type CloudLevel,type CloudWord} from './atlas-cloud-model';
 import {extendedCharacters,extendedComponent,extendedFamily,type ExtendedCharacter} from './atlas-cloud-extended';
 import type {Item} from './content';
 import type {DictionaryEntry} from './atlas-spatial-model';
@@ -106,7 +106,7 @@ function CloudMap({owner,db,penOnly,setPenOnly,notify,progress,onWord,embedded}:
  const words=useMemo(()=>wordsForCharacter(route.hanzi,locale,route.level),[route.hanzi,locale,route.level]);
  const dictionaryCourseWords=useMemo(()=>words.map(word=>word.hanzi),[words]);
  const allWords=useMemo(()=>cloudWords(locale,route.level),[locale,route.level]);
- const baseSelected=route.word?words.find(w=>w.id===route.word):words.find(w=>w.item&&w.hanzi===character?.word)??words.find(w=>w.item&&w.level&&[...w.hanzi].length>1)??words.find(w=>w.item&&[...w.hanzi].length>1)??words.find(w=>w.item)??words[0];
+ const baseSelected=route.word?words.find(w=>matchesCloudWordId(w,route.word)):words.find(w=>w.item&&w.hanzi===character?.word)??words.find(w=>w.item&&w.level&&[...w.hanzi].length>1)??words.find(w=>w.item&&[...w.hanzi].length>1)??words.find(w=>w.item)??words[0];
  const scopedWordMissing=!!route.word&&!baseSelected;
  const selected=sourceFocus?undefined:baseSelected;
  const learningContext=useMemo(()=>atlasLearningContext(route,locale,allWords,selected),[route,locale,allWords,selected]);

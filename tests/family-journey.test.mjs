@@ -45,7 +45,9 @@ test('HSK 4–6 use English from the same scope when dictionary rows differ from
 });
 test('Recorded journey entries preserve exact audio identities; dictionary entries never invent clips',()=>{
  for(const word of m.familyJourney('en','all').flatMap(g=>g.words)){
-  const clip=m.wordPronunciation(word);if(word.origin==='dictionary'){assert.equal(clip,undefined);assert.equal(m.sentencePronunciation(word),undefined);continue;}assert.equal(clip.text,word.hanzi);assert.equal(clip.pinyin,word.pinyin);assert.ok(clip.source.endsWith('-word.mp3'));
+  const clip=m.wordPronunciation(word);
+  if(!word.item&&!word.atlasCharacterId){assert.equal(clip,undefined);assert.equal(m.sentencePronunciation(word),undefined);continue;}
+  assert.equal(clip.text,word.hanzi);assert.equal(clip.pinyin,word.recordingPinyin??word.pinyin);assert.ok(clip.source.endsWith('-word.mp3'));
   if(word.item){assert.ok(clip.source.includes(encodeURIComponent(word.id)));const sentence=m.sentencePronunciation(word);assert.equal(sentence.text,word.item.sentence);assert.equal(sentence.source,clip.source.replace(/-word\.mp3$/,'-sentence.mp3'));}
  }
 });
