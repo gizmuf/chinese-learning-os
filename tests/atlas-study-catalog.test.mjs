@@ -202,6 +202,54 @@ test('sparse families use attested stroke positions, nested components and dicti
   verifyReadings(indexed);
 });
 
+test('mnemonics annotate each Han reference in order with contextual readings and exact levels', () => {
+  const storyReferences = /[\p{Script=Han}\u2e80-\u2fdf\u31c0-\u31ef\ue000-\uf8ff]+/gu;
+  let annotatedWords = 0;
+  let annotatedGraphics = 0;
+  for (const [glyph, card] of cards) {
+    const references = card.story.flatMap(scene => scene.match(storyReferences) ?? []);
+    if (glyph === '雪') {
+      assert.equal(card.storyTerms, undefined);
+      assert.deepEqual(references, card.parts.map(part => part.hanzi));
+      continue;
+    }
+    const terms = card.storyTerms ?? [];
+    let index = 0;
+    for (const reference of references) {
+      let covered = '';
+      while (covered.length < reference.length) {
+        const term = terms[index++];
+        assert.ok(term?.hanzi && reference.startsWith(covered + term.hanzi), `${glyph}: ${reference}`);
+        if ([...reference].length === 1) {
+          assert.equal(term.kind, 'character', `${glyph}: ${reference}`);
+          verifyTerm(term, recognition, glyph);
+          annotatedGraphics++;
+        } else {
+          assert.equal(term.kind, 'word', `${glyph}: ${reference}`);
+          assert.ok(term.pinyin.trim(), `${glyph}: ${reference}`);
+          verifyTerm(term, words, glyph);
+          annotatedWords++;
+        }
+        covered += term.hanzi;
+      }
+      assert.equal(covered, reference, glyph);
+    }
+    assert.equal(index, terms.length, glyph);
+  }
+  assert.ok(annotatedWords > 250 && annotatedGraphics > 750);
+  const names = glyph => cards.get(glyph).storyTerms.filter(term => term.kind === 'word')
+    .map(({hanzi, pinyin}) => [hanzi, pinyin]);
+  assert.deepEqual(names('行'), [['银行', 'yínháng']]);
+  assert.deepEqual(names('先'), [['你', 'nǐ'], ['先', 'xiān'], ['走', 'zǒu']]);
+  assert.deepEqual(names('已'), [['已经', 'yǐjīng'], ['做', 'zuò'], ['完', 'wán'], ['了', 'le']]);
+  assert.ok(names('地').some(([hanzi, pinyin]) => hanzi === '地' && pinyin === 'de'));
+  assert.ok(names('元').some(([hanzi, pinyin]) => hanzi === '元' && pinyin === 'yuán'));
+  for (const card of cards.values()) {
+    const bank = card.storyTerms?.find(term => term.hanzi === '银行');
+    if (bank) assert.deepEqual(bank.levels, ['3']);
+  }
+});
+
 test('generated study assets reproduce byte for byte from their checked-in sources', () => {
   const result = execFileSync(process.execPath, ['scripts/build-atlas-study-cards.mjs', '--check'], {cwd: root, encoding: 'utf8'});
   assert.match(result, /"stories": 655/);

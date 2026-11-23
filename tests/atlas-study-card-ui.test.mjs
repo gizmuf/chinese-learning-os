@@ -53,6 +53,8 @@ const component = term('彐', 'jì', 'component');
 const namedComponent = { ...term('辶', '', 'movement form'), namePinyin: 'zǒuzhīpáng' };
 const graphicComponent = term('𠂉', '', 'three-stroke top form');
 const skiing = term('滑雪', 'huáxuě', 'to ski', ['6']);
+const bank = { ...term('银行', 'yínháng', 'bank', ['3']), kind: 'word' };
+const study = { ...term('学', 'xué', 'to study', ['1']), kind: 'character' };
 const pilot = {
   entry: snow,
   words: [{ ...snow, example: snowStopped }, { ...fallingSnow, example: snowing }, skiing],
@@ -64,7 +66,8 @@ const pilot = {
   ],
   usage: [{ title: 'Pogoda', examples: [snowing] }],
   contexts: [snowStopped],
-  story: ['Wyglądasz przez okno.', 'Łapiesz płatek.'],
+  story: ['Wyglądasz przez okno 雨.', 'Łapiesz płatek 雪 koło 银行 i widzisz znak 学. Chwilę później zaczyna 下雪.'],
+  storyTerms: [{ ...rain, kind: 'character' }, { ...snow, kind: 'character' }, bank, bank, study, { ...fallingSnow, kind: 'word' }],
 };
 
 function content(node) {
@@ -85,7 +88,9 @@ test('a study card selects vocabulary and whole examples, labels HSK, and browse
   const index = [snow, zero, need].map(item => ({ ...item, pack: 'sample' }));
   t.mock.method(globalThis, 'fetch', async url => {
     if (url.endsWith('/index.json')) return Response.json({ cards: index });
-    if (url.endsWith('/sample.json')) return Response.json({ '雪': pilot, '零': { ...pilot, entry: zero } });
+    if (url.endsWith('/sample.json')) return Response.json({
+      '雪': pilot, '零': { ...pilot, entry: zero, storyTerms: [{ ...zero, kind: 'character' }] },
+    });
     throw new Error('Unexpected fetch: ' + url);
   });
   const selected = [];
@@ -130,6 +135,9 @@ test('a study card selects vocabulary and whole examples, labels HSK, and browse
   assert.match(content(visiblePanel(renderer)), /辶nazwa · zǒuzhīpángmovement formpoza wykazem/);
   assert.match(content(visiblePanel(renderer)), /𠂉forma graficznathree-stroke top formpoza wykazem/);
   assert.match(content(visiblePanel(renderer)), /雪 · xuě · snow · HSK 1/);
+  const storyTerms = visiblePanel(renderer).findByProps({ 'aria-label': 'Znaki i słowa z historyjki' });
+  assert.equal(storyTerms.children.length, 3);
+  assert.equal(content(storyTerms), '银行yínhángbankHSK 3 · słowo学xuéto studyHSK 1 · znak下雪xià xuěto snowpoza wykazem');
 
   await act(async () => { button(renderer, 'Znaki').props.onClick(); });
   assert.equal(renderer.root.findByProps({ 'aria-current': 'true' }).type, 'button');
@@ -141,6 +149,8 @@ test('a study card selects vocabulary and whole examples, labels HSK, and browse
   await act(() => renderer.update(createElement(AtlasStudyCard, { ...props, hanzi: '零' })));
   assert.equal(content(renderer.root.findByType('h2')), '零língzero');
   assert.equal(visiblePanel(renderer).props['aria-labelledby'].endsWith('-words-tab'), true);
+  await act(() => button(renderer, 'Historyjka').props.onClick());
+  assert.equal(visiblePanel(renderer).findAllByProps({ 'aria-label': 'Znaki i słowa z historyjki' }).length, 0);
   await act(() => button(renderer, 'Słownik').props.onClick());
   assert.equal(closed, true);
 });
