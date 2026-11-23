@@ -5,6 +5,8 @@ import {ArrowLeft, ArrowRight, RotateCcw} from 'lucide-react';
 import type {Stroke} from './learning';
 import PinyinHandwriting from './pinyin-handwriting';
 import {StudyText} from './study-lookup-context';
+import PreparedSentenceListen from './prepared-sentence-listen';
+import prepared from '../data/lesson-sentence-audio.json';
 import {type HanziExercise, matchesHanziAnswer, selectedPracticeHref} from './hanzi-family-lesson-route';
 import {canSubmitComposition} from './pinyin-practice-model';
 import './pinyin-practice.css';
@@ -37,6 +39,8 @@ export const exerciseKinds = [
 ] as const;
 export type ExerciseFilter = typeof exerciseKinds[number][0];
 
+const recordings: Record<string, {source: string}> = prepared.hanziFamily;
+
 export default function HanziFamilyPractice({exercises, active, onSelect, filter, onFilter, attempts, save, penOnly, setPenOnly}: {
   exercises: HanziExercise[];
   active: string;
@@ -68,7 +72,8 @@ export default function HanziFamilyPractice({exercises, active, onSelect, filter
       <p role="status">{exercises.filter(item => attempts[item.id]).length} / {exercises.length} attempted</p>
       <a className="text-button" href={selectedPracticeHref}>Selected for practice</a>
     </div>
-    <Exercise key={exercise.id} exercise={exercise} attempt={attempts[exercise.id]} onSave={value => save(exercise.id, value)} {...{penOnly, setPenOnly}}/>
+    <Exercise key={exercise.id} exercise={exercise} attempt={attempts[exercise.id]} onSave={value => save(exercise.id, value)} {...{penOnly, setPenOnly}}
+      feedbackDetails={<PreparedSentenceListen text={exercise.answer} source={recordings[exercise.answer]?.source}/>}/>
     <div className="hanzi-family-actions hanzi-family-paging">
       <button type="button" className="secondary" disabled={index === 0} onClick={() => onSelect(filtered[index - 1].id)}><ArrowLeft size={16} aria-hidden="true"/>Previous question</button>
       <button type="button" className="secondary" disabled={index === filtered.length - 1} onClick={() => onSelect(filtered[index + 1].id)}>Next question<ArrowRight size={16} aria-hidden="true"/></button>

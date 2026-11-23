@@ -19,8 +19,13 @@ const manifest = JSON.parse(readFileSync('data/reading-lab-narration.json'));
 const qwen = JSON.parse(readFileSync('data/qwen-curriculum-audio.json'));
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 
-test('only the exact verified passage has narration', () => {
-  assert.equal(readingLabReadings.filter(narrationFor).length, 1);
+test('all built-in readings have a recording with exact sentence cues', () => {
+  const preparedTracks = JSON.parse(readFileSync('data/reading-lab-prepared-narration.json'));
+  for (const reading of readingLabReadings) {
+    const narration = narrationFor(reading);
+    assert.ok(narration && matchesNarration(reading, narration), reading.id);
+    if (reading !== demo) assert.equal(digest(readFileSync('public' + narration.source)), preparedTracks[reading.id].sha256);
+  }
   assert.ok(matchesNarration(demo, track));
   assert.equal(matchesNarration(demo, {...track, cues: track.cues.slice(1)}), false);
   assert.equal(matchesNarration(demo, {...track, cues: track.cues.map(cue => ({...cue, text: '别的文字。'}))}), false);

@@ -15,7 +15,7 @@ const modes: Record<NarrationMode, string> = {
   'listen-repeat': 'Listen, then repeat aloud',
 };
 
-export default function ReadingLabNarrator({track, player, hidden, onShowSentence, voice = 'Synthetic study voice · Qwen'}: {
+export default function ReadingLabNarrator({track, player, hidden, onShowSentence, voice = track?.voice ?? 'Synthetic study voice · Qwen'}: {
   track?: NarrationTrack;
   player: ReturnType<typeof useReadingLabNarrator>;
   hidden: boolean;

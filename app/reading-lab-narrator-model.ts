@@ -1,4 +1,5 @@
 import demo from '../data/reading-lab-narration.json';
+import prepared from '../data/reading-lab-prepared-narration.json';
 import type {ReadingLabReading} from './reading-lab-types';
 import {splitReadingSentences} from './reading-lab-model';
 
@@ -7,6 +8,7 @@ export type NarrationCue = {key: string; text: string; start: number};
 export type NarrationTrack = {
   source: string;
   duration: number;
+  voice?: string;
   cues: readonly NarrationCue[];
 };
 
@@ -30,7 +32,16 @@ export function matchesNarration(reading: ReadingLabReading, track: NarrationTra
 }
 
 export function narrationFor(reading?: ReadingLabReading): NarrationTrack | undefined {
-  if (reading?.id === demo.article && matchesNarration(reading, demoTrack)) return demoTrack;
+  if (!reading) return;
+  if (reading.id === demo.article && matchesNarration(reading, demoTrack)) return demoTrack;
+  const clip = (prepared as Record<string, {source: string; frames: number; sampleRate: number; cues: {key: string; text: string; startFrame: number}[]}>)[reading.id];
+  if (clip) {
+    const track = {
+      source: clip.source, duration: clip.frames / clip.sampleRate, voice: 'Synthetic study voice · Xiaoxiao',
+      cues: clip.cues.map(({key, text, startFrame}) => ({key, text, start: startFrame / clip.sampleRate})),
+    };
+    if (matchesNarration(reading, track)) return track;
+  }
 }
 
 export function narrationPosition(track: NarrationTrack, time: number) {

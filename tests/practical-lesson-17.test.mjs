@@ -48,12 +48,13 @@ test('section and question URLs resolve without falling into the November 16 les
  assert.deepEqual(practicalLesson17View('?view=review&topic=unknown&question=22'),{view:'review',topic:first,question:1});
 });
 
-test('the lesson reuses existing recordings only for their matching utterances',()=>{
+test('the lesson can play each study row and answer using its matching utterance',()=>{
  const known=new Set([...practicalLesson17Sections.flatMap(section=>section.entries),...practicalLesson17Exercises].map(entry=>entry.hanzi));
+ assert.deepEqual(new Set(Object.keys(practicalLesson17Audio)),known);
  for(const [hanzi,recording] of Object.entries(practicalLesson17Audio)){
   assert.ok(known.has(hanzi));
   assert.ok([hanzi,hanzi+'。',hanzi+'？'].includes(recording.text));
-  assert.match(recording.source,/^\/audio\/practical-2026-11-16\/[a-f0-9]{20}\.mp3$/);
+  assert.match(recording.source,/^\/(?:[a-z0-9-]+\/)+[a-z0-9-]+\.mp3$/i);
   assert.ok(existsSync('public'+recording.source),recording.source);
  }
  assert.ok(practicalLesson17Audio['一共多少钱']);

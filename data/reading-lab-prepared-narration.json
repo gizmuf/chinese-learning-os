@@ -1,0 +1,609 @@
+{
+  "hsk2-library-meeting": {
+    "source": "/audio/lesson-sentences/hsk2-library-meeting-9a302b519fdc8c.mp3",
+    "frames": 727488,
+    "sampleRate": 24000,
+    "sha256": "30e4764a5580fd61b711ecd778fea1d25a0a9ddf908e4d9f3e860514835ba503",
+    "cues": [
+      {
+        "key": "p1:0",
+        "text": "星期六早上，我给朋友打电话。",
+        "startFrame": 0
+      },
+      {
+        "key": "p1:1",
+        "text": "我们想一起读书。",
+        "startFrame": 85248
+      },
+      {
+        "key": "p1:2",
+        "text": "我问：“我们几点见？”",
+        "startFrame": 137664
+      },
+      {
+        "key": "p1:3",
+        "text": "他说：“我九点要去买菜，十点可以吗？”",
+        "startFrame": 198720
+      },
+      {
+        "key": "p2:0",
+        "text": "十点的时候，我在图书馆门口等朋友。",
+        "startFrame": 300096
+      },
+      {
+        "key": "p2:1",
+        "text": "他来的时候，还给我买了水。",
+        "startFrame": 399168
+      },
+      {
+        "key": "p2:2",
+        "text": "我们喝了水，再进去读书。",
+        "startFrame": 476928
+      },
+      {
+        "key": "p2:3",
+        "text": "读完书，我们走到学校旁边吃饭。",
+        "startFrame": 550656
+      },
+      {
+        "key": "p2:4",
+        "text": "他说：“下个星期还在这里见吧！”",
+        "startFrame": 640512
+      }
+    ]
+  },
+  "hsk2-cooking-together": {
+    "source": "/audio/lesson-sentences/hsk2-cooking-together-16aa39f76423db.mp3",
+    "frames": 733824,
+    "sampleRate": 24000,
+    "sha256": "0bd9b64a3e9856ceb215bd6aba32a391233bb4aab2d868164da5baab496f2548",
+    "cues": [
+      {
+        "key": "p1:0",
+        "text": "今天晚上，我和妈妈一起做饭。",
+        "startFrame": 0
+      },
+      {
+        "key": "p1:1",
+        "text": "妈妈在洗菜，我在做米饭。",
+        "startFrame": 85248
+      },
+      {
+        "key": "p1:2",
+        "text": "弟弟回来的时候，我们还在做饭。",
+        "startFrame": 161856
+      },
+      {
+        "key": "p1:3",
+        "text": "他问：“我可以帮忙吗？”",
+        "startFrame": 246528
+      },
+      {
+        "key": "p2:0",
+        "text": "妈妈说：“可以。",
+        "startFrame": 311040
+      },
+      {
+        "key": "p2:1",
+        "text": "你洗完手，再拿三个碗。”",
+        "startFrame": 366912
+      },
+      {
+        "key": "p2:2",
+        "text": "弟弟拿了碗，也拿了三个杯子。",
+        "startFrame": 437760
+      },
+      {
+        "key": "p2:3",
+        "text": "六点半，我们坐在一起吃饭。",
+        "startFrame": 517824
+      },
+      {
+        "key": "p2:4",
+        "text": "弟弟吃了两碗米饭，还问：“明天我也可以做一个菜吗？”",
+        "startFrame": 596160
+      }
+    ]
+  },
+  "hsk3-rain-bike": {
+    "source": "/audio/lesson-sentences/hsk3-rain-bike-fd935e1a5cc564.mp3",
+    "frames": 1021824,
+    "sampleRate": 24000,
+    "sha256": "9cf4f4f0f36029e629237645d80fa46e4cccc1b07833b88e3d5f163358bc25a2",
+    "cues": [
+      {
+        "key": "p1:0",
+        "text": "昨天下午下课以后，雨突然下得很大。",
+        "startFrame": 0
+      },
+      {
+        "key": "p1:1",
+        "text": "我本来想骑自行车回家，可是我没有带伞。",
+        "startFrame": 97344
+      },
+      {
+        "key": "p1:2",
+        "text": "朋友说，学校门口有公交车，但是我们平时坐的那辆车今天不开到我家附近。",
+        "startFrame": 205056
+      },
+      {
+        "key": "p2:0",
+        "text": "我给爸爸打电话，告诉他我可能会晚一些到家。",
+        "startFrame": 398016
+      },
+      {
+        "key": "p2:1",
+        "text": "他说：“如果雨小一些，你就走到地铁站吧，那边离家更近。”",
+        "startFrame": 512640
+      },
+      {
+        "key": "p3:0",
+        "text": "我在门口等了十分钟。",
+        "startFrame": 661824
+      },
+      {
+        "key": "p3:1",
+        "text": "雨还在下，但是比刚才小多了。",
+        "startFrame": 724608
+      },
+      {
+        "key": "p3:2",
+        "text": "我把车放在学校，和朋友一起坐地铁回家。",
+        "startFrame": 812160
+      },
+      {
+        "key": "p3:3",
+        "text": "到了以后，我马上给爸爸打了电话。",
+        "startFrame": 932544
+      }
+    ]
+  },
+  "hsk3-exchanging-clothes": {
+    "source": "/audio/lesson-sentences/hsk3-exchanging-clothes-3f83b520afed80.mp3",
+    "frames": 1081728,
+    "sampleRate": 24000,
+    "sha256": "d5fd5dd54c44444fcfd1a3a6c79f73fcab0e7fdce1ebfba99d9ebaaa5596daf0",
+    "cues": [
+      {
+        "key": "p1:0",
+        "text": "上个星期，我在家附近的商店买了一件黑色的衣服。",
+        "startFrame": 0
+      },
+      {
+        "key": "p1:1",
+        "text": "我没有试，因为快要上班了。",
+        "startFrame": 131904
+      },
+      {
+        "key": "p1:2",
+        "text": "晚上回家一试，才发现衣服太小了。",
+        "startFrame": 210816
+      },
+      {
+        "key": "p2:0",
+        "text": "第二天，我把衣服带回商店。",
+        "startFrame": 305856
+      },
+      {
+        "key": "p2:1",
+        "text": "我问：“请问，这件衣服能换吗？”",
+        "startFrame": 388224
+      },
+      {
+        "key": "p2:2",
+        "text": "在商店工作的人先问我花了多少钱，然后说：“黑色的衣服都太小，白色的有大一些的。”",
+        "startFrame": 478080
+      },
+      {
+        "key": "p3:0",
+        "text": "我试了一件大一些的白色衣服，穿起来比黑色那件舒服。",
+        "startFrame": 688320
+      },
+      {
+        "key": "p3:1",
+        "text": "我问还要不要给钱。",
+        "startFrame": 826560
+      },
+      {
+        "key": "p3:2",
+        "text": "他说这两件衣服一样贵，所以我不用再给钱。",
+        "startFrame": 888768
+      },
+      {
+        "key": "p3:3",
+        "text": "我就把白色的衣服带回家了。",
+        "startFrame": 1006272
+      }
+    ]
+  },
+  "hsk4-repair-before-replace": {
+    "source": "/audio/lesson-sentences/hsk4-repair-before-replace-10a6b59b88c1d1.mp3",
+    "frames": 1585152,
+    "sampleRate": 24000,
+    "sha256": "6306812a45cdccb60cae5747385d1bbe60c1c662d8d85a30142e03a9149f1188",
+    "cues": [
+      {
+        "key": "p1:0",
+        "text": "上个月，我家的台灯突然不亮了。",
+        "startFrame": 0
+      },
+      {
+        "key": "p1:1",
+        "text": "我以为灯坏了，就打算去买一个新的。",
+        "startFrame": 88704
+      },
+      {
+        "key": "p1:2",
+        "text": "朋友提醒我，先想一想问题出在哪里。",
+        "startFrame": 184320
+      },
+      {
+        "key": "p1:3",
+        "text": "我换了一个灯泡，灯马上又亮了。",
+        "startFrame": 289152
+      },
+      {
+        "key": "p1:4",
+        "text": "原来只需要换个灯泡。",
+        "startFrame": 376704
+      },
+      {
+        "key": "p2:0",
+        "text": "后来我问了附近修东西的师傅，什么时候值得修，什么时候该换。",
+        "startFrame": 440640
+      },
+      {
+        "key": "p2:1",
+        "text": "他说，先问清楚大概需要多少钱和多长时间。",
+        "startFrame": 593280
+      },
+      {
+        "key": "p2:2",
+        "text": "如果只是换一个小零件，修好以后还能用很久，那就值得修。",
+        "startFrame": 723456
+      },
+      {
+        "key": "p2:3",
+        "text": "要是修一次跟买新的差不多贵，还要等一个月，就要想一想自己能不能等。",
+        "startFrame": 877824
+      },
+      {
+        "key": "p3:0",
+        "text": "当然，有些东西已经不值得修了。",
+        "startFrame": 1062144
+      },
+      {
+        "key": "p3:1",
+        "text": "有些东西虽然便宜，却已经不能安全使用了。",
+        "startFrame": 1158336
+      },
+      {
+        "key": "p3:2",
+        "text": "下次东西坏了，我会先问能不能修、大概多久能拿回来，然后再决定。",
+        "startFrame": 1268352
+      },
+      {
+        "key": "p3:3",
+        "text": "如果不是每天都要用的东西，我也会问朋友能不能先借来用。",
+        "startFrame": 1435968
+      }
+    ]
+  },
+  "hsk4-phone-free-dinner": {
+    "source": "/audio/lesson-sentences/hsk4-phone-free-dinner-c537f9edd6f58f.mp3",
+    "frames": 1538496,
+    "sampleRate": 24000,
+    "sha256": "53f5dec7ee8eb583b4ec3c443458b69262ba0704af339ccc25e1bf6299f421c5",
+    "cues": [
+      {
+        "key": "p1:0",
+        "text": "上周五，我们四个同事下班后一起吃饭。",
+        "startFrame": 0
+      },
+      {
+        "key": "p1:1",
+        "text": "菜还没有上，大家就已经在看手机了。",
+        "startFrame": 108288
+      },
+      {
+        "key": "p1:2",
+        "text": "有一个人回工作消息，另一个人在看视频。",
+        "startFrame": 207936
+      },
+      {
+        "key": "p1:3",
+        "text": "一个同事讲到一半，忽然停下来问：“你们听见我刚才说什么了吗？”",
+        "startFrame": 316224
+      },
+      {
+        "key": "p1:4",
+        "text": "没有人能回答。",
+        "startFrame": 467136
+      },
+      {
+        "key": "p2:0",
+        "text": "我建议，大家把手机放进包里，等吃完饭再看。",
+        "startFrame": 514944
+      },
+      {
+        "key": "p2:1",
+        "text": "那位同事说他在等家里来的电话，所以我们改了一下办法。",
+        "startFrame": 645120
+      },
+      {
+        "key": "p2:2",
+        "text": "他把手机放在手边，把屏幕向下放。",
+        "startFrame": 792000
+      },
+      {
+        "key": "p2:3",
+        "text": "如果家里打电话来，他就接，否则大家先不看手机。",
+        "startFrame": 889344
+      },
+      {
+        "key": "p3:0",
+        "text": "刚开始的几分钟，我们觉得太安静了，好像不知道该聊什么。",
+        "startFrame": 1020672
+      },
+      {
+        "key": "p3:1",
+        "text": "后来那位同事把刚才的事讲完了，我们才知道他下个月就要搬家。",
+        "startFrame": 1165248
+      },
+      {
+        "key": "p3:2",
+        "text": "有人问他要不要帮忙，大家很快聊得停不下来。",
+        "startFrame": 1326528
+      },
+      {
+        "key": "p3:3",
+        "text": "吃完饭以后，我们约好下次还这样。",
+        "startFrame": 1449216
+      }
+    ]
+  },
+  "hsk5-building-secondhand": {
+    "source": "/audio/lesson-sentences/hsk5-building-secondhand-c707fd6dff1048.mp3",
+    "frames": 1914624,
+    "sampleRate": 24000,
+    "sha256": "b59e4ed018443182cad04ce8bda791c2d12e58ab88b6e2b1a3f44348607e19ae",
+    "cues": [
+      {
+        "key": "p1:0",
+        "text": "去年冬天，我们楼里的几位邻居在一楼大厅开了一个二手角。",
+        "startFrame": 0
+      },
+      {
+        "key": "p1:1",
+        "text": "谁有用不上的书或小家电，就可以放在那里。",
+        "startFrame": 156672
+      },
+      {
+        "key": "p1:2",
+        "text": "想要的人可以免费拿走。",
+        "startFrame": 266112
+      },
+      {
+        "key": "p1:3",
+        "text": "刚开始，每周只有几件东西。",
+        "startFrame": 341568
+      },
+      {
+        "key": "p1:4",
+        "text": "大家看见有人拿走旧书以后，也愿意把家里不用的东西拿来了。",
+        "startFrame": 425664
+      },
+      {
+        "key": "p2:0",
+        "text": "三个月后，架子上的东西越来越多，麻烦也跟着来了。",
+        "startFrame": 566784
+      },
+      {
+        "key": "p2:1",
+        "text": "有一台电饭锅已经坏了，却在架子上放了两个星期。",
+        "startFrame": 697536
+      },
+      {
+        "key": "p2:2",
+        "text": "负责整理的邻居发现，有些人把这里当成了扔东西的地方。",
+        "startFrame": 827136
+      },
+      {
+        "key": "p2:3",
+        "text": "为了不让大厅越来越乱，大家商量出两条规则。",
+        "startFrame": 971136
+      },
+      {
+        "key": "p2:4",
+        "text": "第一，放东西的人得先检查东西还能不能用。",
+        "startFrame": 1091520
+      },
+      {
+        "key": "p2:5",
+        "text": "第二，两周后没有人拿的东西，由放东西的人自己带走。",
+        "startFrame": 1217088
+      },
+      {
+        "key": "p3:0",
+        "text": "一个月以后，架子上的东西没有以前多，拿走的却比以前多。",
+        "startFrame": 1359936
+      },
+      {
+        "key": "p3:1",
+        "text": "这让大家明白，二手角办得好不好，不在于收了多少东西，而在于多少东西真的又被用起来了。",
+        "startFrame": 1515456
+      },
+      {
+        "key": "p3:2",
+        "text": "现在，每个周末只需要花十分钟整理，这个小地方就能继续用下去。",
+        "startFrame": 1739520
+      }
+    ]
+  },
+  "hsk5-neighborhood-deliveries": {
+    "source": "/audio/lesson-sentences/hsk5-neighborhood-deliveries-52d2bd12068321.mp3",
+    "frames": 2019456,
+    "sampleRate": 24000,
+    "sha256": "d24fd59e754f2fe5e2b7a9d7581b97bdb3835d749b28047922dbf418a7bb8e82",
+    "cues": [
+      {
+        "key": "p1:0",
+        "text": "以前，我们小区的快递大多直接送到家门口。",
+        "startFrame": 0
+      },
+      {
+        "key": "p1:1",
+        "text": "去年夏天，小区在东门外开了一个快递站。",
+        "startFrame": 121536
+      },
+      {
+        "key": "p1:2",
+        "text": "住得近的居民觉得方便，下班回家时顺便就能取。",
+        "startFrame": 236736
+      },
+      {
+        "key": "p1:3",
+        "text": "送快递的人也不用每座楼都跑了。",
+        "startFrame": 372672
+      },
+      {
+        "key": "p1:4",
+        "text": "可住在西门附近的人往返要多走将近二十分钟。",
+        "startFrame": 463680
+      },
+      {
+        "key": "p1:5",
+        "text": "有些老人还拿不动大件。",
+        "startFrame": 588096
+      },
+      {
+        "key": "p2:0",
+        "text": "居民开会时，有人要求把快递都送回门口，也有人觉得还是快递站好：包裹放在门口，有时会丢，而且家里没有人的时候收不了。",
+        "startFrame": 657792
+      },
+      {
+        "key": "p2:1",
+        "text": "如果大家的需要不同，就不必只选一种方式。",
+        "startFrame": 979776
+      },
+      {
+        "key": "p2:2",
+        "text": "可以保留快递站，同时让需要帮助的人预约送上门。",
+        "startFrame": 1097280
+      },
+      {
+        "key": "p2:3",
+        "text": "送上门的时间可以固定在晚上，这样送快递的人能把同一座楼的包裹一起送。",
+        "startFrame": 1233216
+      },
+      {
+        "key": "p3:0",
+        "text": "我们可以先试用一个月，小区每天记下预约人数和送到的时间。",
+        "startFrame": 1422720
+      },
+      {
+        "key": "p3:1",
+        "text": "只看有多少人预约还不够。",
+        "startFrame": 1574784
+      },
+      {
+        "key": "p3:2",
+        "text": "即使预约的人不多，也要问一问那些常常搬不动包裹的居民。",
+        "startFrame": 1645056
+      },
+      {
+        "key": "p3:3",
+        "text": "如果他们能按时收到快递，而送快递的人也没有因此多跑几次，这个办法就值得保留下来。",
+        "startFrame": 1795968
+      }
+    ]
+  },
+  "podcast-53-after-work": {
+    "source": "/audio/lesson-sentences/podcast-53-after-work-37068561ad6cbf.mp3",
+    "frames": 1721088,
+    "sampleRate": 24000,
+    "sha256": "856705b8361d544f6611fc637209c6d5d21f4677ad4357650ed051f5973cac6b",
+    "cues": [
+      {
+        "key": "p1:0",
+        "text": "我以前一下班就看手机。",
+        "startFrame": 0
+      },
+      {
+        "key": "p1:1",
+        "text": "饭都吃完了，手机还在手里。",
+        "startFrame": 65664
+      },
+      {
+        "key": "p1:2",
+        "text": "有一天，我去楼下拿快递，才发现小区外面有一条小河。",
+        "startFrame": 148608
+      },
+      {
+        "key": "p2:0",
+        "text": "第二天晚饭后，我把手机留在家里，去河边散步。",
+        "startFrame": 296640
+      },
+      {
+        "key": "p2:1",
+        "text": "走到第一盏路灯下面，我想试试跑步。",
+        "startFrame": 423360
+      },
+      {
+        "key": "p2:2",
+        "text": "我只跑到第二盏灯，就改成走路了。",
+        "startFrame": 523008
+      },
+      {
+        "key": "p2:3",
+        "text": "这点路不长，可是我觉得比在家坐着舒服。",
+        "startFrame": 614592
+      },
+      {
+        "key": "p3:0",
+        "text": "后来，我给自己定了一个小目标，每天出门十分钟。",
+        "startFrame": 728640
+      },
+      {
+        "key": "p3:1",
+        "text": "有力气的时候，我就多跑一点。",
+        "startFrame": 854208
+      },
+      {
+        "key": "p3:2",
+        "text": "有压力的时候，我先慢慢走，再决定要不要跑。",
+        "startFrame": 935424
+      },
+      {
+        "key": "p4:0",
+        "text": "星期五，河边的广场上有人跳广场舞。",
+        "startFrame": 1055232
+      },
+      {
+        "key": "p4:1",
+        "text": "我跑完跟一位阿姨聊了几句。",
+        "startFrame": 1165248
+      },
+      {
+        "key": "p4:2",
+        "text": "她说，大家见个面，聊聊天，心里就轻松多了。",
+        "startFrame": 1243584
+      },
+      {
+        "key": "p5:0",
+        "text": "过了两个星期，我下班后更容易放松了。",
+        "startFrame": 1369728
+      },
+      {
+        "key": "p5:1",
+        "text": "我想，学中文也可以这样安排。",
+        "startFrame": 1477440
+      },
+      {
+        "key": "p5:2",
+        "text": "只要每天读一小段，再用一个新词说一句话，我就能慢慢坚持下去。",
+        "startFrame": 1558080
+      }
+    ]
+  }
+}
