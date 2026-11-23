@@ -1,0 +1,283 @@
+{
+  "卫生间": {
+    "story": "Na stacji szukasz toalety. Zamiast tabliczki widzisz drzwi w kształcie kostki mydła, spod których wypływa piana. Para skojarzeń to higiena i pomieszczenie.",
+    "cues": ["卫生", "间", "洗手"],
+    "situations": [
+      {"label": "Pytasz na stacji", "zh": "请问，卫生间在哪儿？", "pinyin": "Qǐngwèn, wèishēngjiān zài nǎr?", "en": "Excuse me, where is the restroom?", "words": ["请问", "卫生间", "在", "哪儿"]},
+      {"label": "Oglądasz wynajmowane mieszkanie", "zh": "这套房子的卫生间有窗户吗？", "pinyin": "Zhè tào fángzi de wèishēngjiān yǒu chuānghu ma?", "en": "Does the bathroom in this apartment have a window?", "words": ["这", "套", "房子", "的", "卫生间", "有", "窗户", "吗"]}
+    ],
+    "related": [
+      {"zh": "洗手间", "hint": "Uprzejme określenie toalety, przydatne w restauracji, galerii albo biurze."},
+      {"zh": "厕所", "hint": "Bezpośrednie słowo na toaletę, częste w rozmowie i na oznaczeniach publicznych."},
+      {"zh": "浴室", "hint": "Pomieszczenie do kąpieli lub pod prysznic, także wtedy, gdy toaleta jest osobno."}
+    ]
+  },
+  "间": {
+    "story": "Recepcjonistka kładzie na ladzie dwie miniaturowe sypialnie. Każda mieści się na osobnej podkładce i liczy się jako jedno pomieszczenie.",
+    "cues": ["一间", "房间", "中间"],
+    "situations": [
+      {"label": "Rezerwujesz pokoje w hotelu", "zh": "我们想订两间房。", "pinyin": "Wǒmen xiǎng dìng liǎng jiān fáng.", "en": "We’d like to book two rooms.", "words": ["我们", "想", "订", "两", "间", "房"]},
+      {"label": "Pokazujesz miejsce do nauki", "zh": "这间教室很安静。", "pinyin": "Zhè jiān jiàoshì hěn ānjìng.", "en": "This classroom is very quiet.", "words": ["这", "间", "教室", "很", "安静"]}
+    ],
+    "related": [
+      {"zh": "房间", "hint": "Rzeczownik oznaczający pokój, który można policzyć klasyfikatorem z tej karty."},
+      {"zh": "套", "hint": "Klasyfikator całego mieszkania lub kompletu przedmiotów."},
+      {"zh": "中间", "hint": "Oznacza środek przestrzeni albo miejsce pomiędzy dwiema rzeczami."},
+      {"zh": "之间", "hint": "Stoi po wymienionych osobach, miejscach lub punktach i oznacza miejsce albo relację między nimi."}
+    ]
+  },
+  "房间": {
+    "story": "Ktoś stawia domek dla lalek na wynos. Podnosisz dach i wyciągasz z niego pojedynczy pokój z łóżkiem i lampką. To ten kawałek domu masz zapamiętać.",
+    "cues": ["房子", "间", "房门"],
+    "situations": [
+      {"label": "Pokazujesz gościowi, gdzie będzie spał", "zh": "你的房间在二楼。", "pinyin": "Nǐ de fángjiān zài èr lóu.", "en": "Your room is on the second floor.", "words": ["你", "的", "房间", "在", "二", "楼"]},
+      {"label": "Umawiacie się na sprzątanie", "zh": "我先收拾房间，你去买菜吧。", "pinyin": "Wǒ xiān shōushi fángjiān, nǐ qù mǎi cài ba.", "en": "I’ll tidy up the room first. Why don’t you go get some groceries?", "words": ["我", "先", "收拾", "房间", "你", "去", "买", "菜", "吧"]}
+    ],
+    "related": [
+      {"zh": "卧室", "hint": "Sypialnia. Tą nazwą określasz funkcję pokoju."},
+      {"zh": "客厅", "hint": "Salon lub pokój dzienny, w którym można przyjmować gości."},
+      {"zh": "房子", "hint": "Dom, mieszkanie lub inny lokal jako całość."},
+      {"zh": "教室", "hint": "Sala, w której odbywają się zajęcia szkolne."}
+    ]
+  },
+  "雪": {
+    "story": "Za oknem rośnie biały kot z płatków śniegu. Zanim zdążysz zrobić zdjęcie, zsuwa się z parapetu i zostawia na szybie mokry ślad w kształcie łapy.",
+    "cues": ["下雪", "雪花", "雪人"],
+    "situations": [
+      {"label": "Odwiedzasz zasypane miasto", "zh": "屋顶上还有雪。", "pinyin": "Wūdǐng shàng hái yǒu xuě.", "en": "There’s still snow on the roof.", "words": ["屋顶", "上", "还", "有", "雪"]},
+      {"label": "Dajesz znać przed wyjściem", "zh": "外面下雪了，记得戴帽子。", "pinyin": "Wàimiàn xià xuě le, jìde dài màozi.", "en": "It’s snowing outside. Remember to wear a hat.", "words": ["外面", "下雪", "了", "记得", "戴", "帽子"]}
+    ],
+    "related": [
+      {"zh": "冰", "hint": "Lód, czyli zamarznięta woda, np. w kostkach albo na jeziorze."},
+      {"zh": "雨", "hint": "Deszcz. Przy opisie opadów łączy się z tym samym czasownikiem co śnieg."},
+      {"zh": "雪花", "hint": "Płatek śniegu, widoczny np. na rękawie płaszcza."},
+      {"zh": "雪人", "hint": "Bałwan ulepiony ze śniegu."}
+    ]
+  },
+  "面条儿": {
+    "story": "Kelner wyciąga z miski jedną nitkę makaronu i zarzuca ją jak linę przez całe stoisko. Jej koniec zawija mu się przy uchu, przypominając o końcówce er.",
+    "cues": ["面条", "条", "一碗"],
+    "situations": [
+      {"label": "Zamawiasz przy ladzie", "zh": "来一碗面条儿，不要放辣椒。", "pinyin": "Lái yì wǎn miàntiáor, bú yào fàng làjiāo.", "en": "A bowl of noodles, please, with no chili.", "words": ["来", "一", "碗", "面条儿", "不要", "放", "辣椒"]},
+      {"label": "Planujesz kolację w domu", "zh": "今晚我煮面条，你来切菜吧。", "pinyin": "Jīnwǎn wǒ zhǔ miàntiáo, nǐ lái qiē cài ba.", "en": "I’ll cook the noodles tonight. Could you chop the vegetables?", "words": ["今晚", "我", "煮", "面条", "你", "来", "切", "菜", "吧"]}
+    ],
+    "related": [
+      {"zh": "面条", "hint": "To samo słowo na makaron w nitkach, w wymowie bez końcówki er."},
+      {"zh": "米粉", "hint": "W menu zwykle makaron ryżowy. W sklepie słowo może oznaczać też mąkę ryżową."},
+      {"zh": "拉面", "hint": "Makaron formowany przez rozciąganie ciasta oraz danie z takim makaronem."},
+      {"zh": "米饭", "hint": "Ugotowany ryż podawany do posiłku lub jako składnik dania."}
+    ]
+  },
+  "零": {
+    "story": "Na wytarowanej wadze stoi pusta miska. Z wyświetlacza wyjeżdża wielkie świecące zero i toczy się po blacie jak obręcz.",
+    "cues": ["零度", "零下", "零点"],
+    "situations": [
+      {"label": "Sprawdzasz pogodę przed wyjściem", "zh": "今天早上只有零度。", "pinyin": "Jīntiān zǎoshang zhǐyǒu líng dù.", "en": "It was only zero degrees this morning.", "words": ["今天", "早上", "只有", "零", "度"]},
+      {"label": "Dyktujesz numer pokoju", "zh": "我的房间号是三零二。", "pinyin": "Wǒ de fángjiān hào shì sān líng èr.", "en": "My room number is three-oh-two.", "words": ["我", "的", "房间", "号", "是", "三", "零", "二"]}
+    ],
+    "related": [
+      {"zh": "零下", "hint": "Przed liczbą stopni pokazuje, że temperatura jest poniżej zera."},
+      {"zh": "零点", "hint": "Północ w zapisie 24-godzinnym. Przy liczbie dziesiętnej odczyt zera i separatora, np. zero przecinek pięć."},
+      {"zh": "没有", "hint": "Oznacza brak czegoś albo to, że ktoś czegoś nie ma. Zero służy do podania liczby."},
+      {"zh": "零食", "hint": "Przekąski jedzone między posiłkami."}
+    ]
+  },
+  "远": {
+    "story": "Na mapie kawiarnia wygląda na bliską. Kiedy przykładasz do mapy linijkę, ta wysuwa się przez okno, przeciąga przez miasto i dopiero na horyzoncie dotyka filiżanki.",
+    "cues": ["很远", "远方", "离"],
+    "situations": [
+      {"label": "Wybierasz trasę z hotelu", "zh": "地铁站离这里远吗？", "pinyin": "Dìtiězhàn lí zhèlǐ yuǎn ma?", "en": "Is the subway station far from here?", "words": ["地铁站", "离", "这里", "远", "吗"]},
+      {"label": "Wspominasz przeprowadzkę", "zh": "他搬得太远了，我们很少见面。", "pinyin": "Tā bān de tài yuǎn le, wǒmen hěn shǎo jiànmiàn.", "en": "He moved too far away, and we rarely see each other.", "words": ["他", "搬", "得", "太", "远", "了", "我们", "很", "少", "见面"]}
+    ],
+    "related": [
+      {"zh": "近", "hint": "Przeciwieństwo w pytaniu o drogę. Oznacza, że cel jest blisko."},
+      {"zh": "离", "hint": "Wprowadza punkt, od którego mierzysz odległość."},
+      {"zh": "附近", "hint": "Okolica lub coś w pobliżu wskazanego miejsca."},
+      {"zh": "远方", "hint": "Odległe miejsce. Częściej przywołuje obraz czegoś w dali niż podaje praktyczną odległość."}
+    ]
+  },
+  "时间": {
+    "story": "W kalendarzu dwie wizyty stoją jak drzwi na zawiasach. Pomiędzy nimi wpychasz małą klepsydrę. Skoro się zmieściła, znalazł się czas.",
+    "cues": ["时", "间", "有时间"],
+    "situations": [
+      {"label": "Proponujesz spotkanie", "zh": "你明天下午有时间吗？", "pinyin": "Nǐ míngtiān xiàwǔ yǒu shíjiān ma?", "en": "Do you have time tomorrow afternoon?", "words": ["你", "明天", "下午", "有", "时间", "吗"]},
+      {"label": "Sprawdzasz plan podróży", "zh": "出发时间改到下午三点了。", "pinyin": "Chūfā shíjiān gǎi dào xiàwǔ sān diǎn le.", "en": "The departure time has been moved to 3 p.m.", "words": ["出发", "时间", "改", "到", "下午", "三", "点", "了"]}
+    ],
+    "related": [
+      {"zh": "时候", "hint": "Określa moment lub okres wystąpienia zdarzenia, np. porę powrotu do domu."},
+      {"zh": "小时", "hint": "Godzina jako jednostka długości. Możesz nią zmierzyć czas oczekiwania."},
+      {"zh": "日期", "hint": "Data w kalendarzu, np. dzień wyjazdu."},
+      {"zh": "空闲", "hint": "Wolny od zajęć. Opisuje dostępność albo wolny czas."}
+    ]
+  },
+  "朋友": {
+    "story": "Gdy przyjaciel wchodzi do kawiarni, stawiasz przed nim drugą filiżankę. Obie mają po połowie namalowanego uśmiechu. Na stole po raz pierwszy widać go w całości.",
+    "cues": ["好朋友", "老朋友", "交朋友"],
+    "situations": [
+      {"label": "Przedstawiasz kogoś przy stole", "zh": "这是我的朋友，她叫小林。", "pinyin": "Zhè shì wǒ de péngyou, tā jiào Xiǎolín.", "en": "This is my friend. Her name is Xiaolin.", "words": ["这", "是", "我", "的", "朋友", "她", "叫", "小林"]},
+      {"label": "Opowiadasz o nowym mieście", "zh": "我在这里交了几个新朋友。", "pinyin": "Wǒ zài zhèlǐ jiāo le jǐ ge xīn péngyou.", "en": "I’ve made a few new friends here.", "words": ["我", "在", "这里", "交", "了", "几", "个", "新", "朋友"]}
+    ],
+    "related": [
+      {"zh": "好朋友", "hint": "Bliski przyjaciel. Podkreślasz zażyłość."},
+      {"zh": "老朋友", "hint": "Przyjaciel, którego znasz od dawna. Określenie mówi o stażu znajomości."},
+      {"zh": "同学", "hint": "Ktoś, z kim się uczysz lub uczyłeś. Określenie wskazuje wspólną szkołę albo zajęcia."},
+      {"zh": "同事", "hint": "Osoba, z którą pracujesz. Stopień zażyłości zależy od relacji."}
+    ]
+  },
+  "手机": {
+    "story": "Na dłoń siada ci maleńka maszyna z ekranem. Wibruje tak mocno, że na ulicy wszystkie dłonie podskakują w tym samym rytmie.",
+    "cues": ["手", "电话", "手机号码"],
+    "situations": [
+      {"label": "Szukasz telefonu przed wyjściem", "zh": "你看见我的手机了吗？", "pinyin": "Nǐ kànjiàn wǒ de shǒujī le ma?", "en": "Have you seen my phone?", "words": ["你", "看见", "我", "的", "手机", "了", "吗"]},
+      {"label": "Robisz zakupy w sklepie", "zh": "我可以用手机付款吗？", "pinyin": "Wǒ kěyǐ yòng shǒujī fùkuǎn ma?", "en": "Can I pay with my phone?", "words": ["我", "可以", "用", "手机", "付款", "吗"]}
+    ],
+    "related": [
+      {"zh": "电话", "hint": "Telefon lub połączenie telefoniczne. Słowo może też oznaczać numer kontaktowy."},
+      {"zh": "手机号码", "hint": "Numer telefonu komórkowego, np. podawany w formularzu."},
+      {"zh": "充电器", "hint": "Ładowarka, czyli urządzenie potrzebne do ładowania telefonu."},
+      {"zh": "电脑", "hint": "Komputer, zarówno stacjonarny, jak i przenośny."}
+    ]
+  },
+  "地铁": {
+    "story": "Pod przejściem dla pieszych asfalt ma okienko. Przez nie widzisz żelazne szyny pod ziemią i wagon pełen ludzi, którzy tak jak ty jadą do pracy.",
+    "cues": ["地", "铁", "地铁站"],
+    "situations": [
+      {"label": "Planujecie przejazd na lotnisko", "zh": "我们坐地铁去机场吧。", "pinyin": "Wǒmen zuò dìtiě qù jīchǎng ba.", "en": "Let’s take the subway to the airport.", "words": ["我们", "坐", "地铁", "去", "机场", "吧"]},
+      {"label": "Pytasz o trasę w obcym mieście", "zh": "这条地铁线到火车站吗？", "pinyin": "Zhè tiáo dìtiěxiàn dào huǒchēzhàn ma?", "en": "Does this subway line go to the train station?", "words": ["这", "条", "地铁", "线", "到", "火车站", "吗"]}
+    ],
+    "related": [
+      {"zh": "地铁站", "hint": "Stacja metra. Użyj tego słowa, gdy szukasz miejsca, do którego masz dojść."},
+      {"zh": "公交车", "hint": "Autobus komunikacji miejskiej, zwykle z ustaloną trasą i przystankami."},
+      {"zh": "火车", "hint": "Pociąg. W tym zestawie przydaje się na przejazdy koleją pomiędzy miastami."},
+      {"zh": "换乘", "hint": "Przesiąść się na inną linię albo do innego środka transportu."}
+    ]
+  },
+  "洗手间": {
+    "story": "W eleganckiej restauracji klamka toalety wygląda jak kran. Wystarczy położyć na niej dłoń, a mydło wyskakuje prosto do ręki. Dłonie podpowiadają, które to drzwi.",
+    "cues": ["洗手", "间", "卫生间"],
+    "situations": [
+      {"label": "Zwracasz się do kelnera", "zh": "打扰一下，洗手间在哪儿？", "pinyin": "Dǎrǎo yíxià, xǐshǒujiān zài nǎr?", "en": "Excuse me, where is the restroom?", "words": ["打扰", "一下", "洗手间", "在", "哪儿"]},
+      {"label": "Dajesz znać przy stoliku", "zh": "我去一下洗手间，马上回来。", "pinyin": "Wǒ qù yíxià xǐshǒujiān, mǎshàng huílai.", "en": "I’m just going to the restroom. I’ll be right back.", "words": ["我", "去", "一下", "洗手间", "马上", "回来"]}
+    ],
+    "related": [
+      {"zh": "卫生间", "hint": "Neutralna i uprzejma nazwa toalety także wtedy, gdy oglądasz łazienkę w mieszkaniu."},
+      {"zh": "厕所", "hint": "Bezpośrednie określenie toalety, często spotykane na publicznych tabliczkach."},
+      {"zh": "洗手", "hint": "Umyć ręce. Samo wyrażenie opisuje czynność."},
+      {"zh": "浴室", "hint": "Łazienka jako pomieszczenie do kąpieli lub prysznica."}
+    ]
+  },
+  "让": {
+    "story": "Na wąskim moście stoisz przed rowerzystką. Odsuwasz się, a pod jej kołami rozwija się czerwony dywan. Twój gest sprawia, że może przejechać.",
+    "cues": ["让路", "让开", "让座"],
+    "situations": [
+      {"label": "Opowiadasz o zasadach w pracy", "zh": "老板让我明天早点来。", "pinyin": "Lǎobǎn ràng wǒ míngtiān zǎodiǎn lái.", "en": "My boss asked me to come in a bit earlier tomorrow.", "words": ["老板", "让", "我", "明天", "早", "点", "来"]},
+      {"label": "Robisz komuś miejsce w drzwiach", "zh": "请让他先进去。", "pinyin": "Qǐng ràng tā xiān jìnqu.", "en": "Please let him go in first.", "words": ["请", "让", "他", "先", "进去"]},
+      {"label": "Reagujesz na dobrą wiadomość", "zh": "这个消息让我很开心。", "pinyin": "Zhège xiāoxi ràng wǒ hěn kāixīn.", "en": "This news made me very happy.", "words": ["这", "个", "消息", "让", "我", "很", "开心"]}
+    ],
+    "related": [
+      {"zh": "让路", "hint": "Ustąpić drogi komuś, kto chce przejść lub przejechać."},
+      {"zh": "允许", "hint": "Wyraźnie zezwolić. Nadaje się np. do wyjaśniania regulaminu."},
+      {"zh": "叫", "hint": "W potocznej konstrukcji przed osobą i czasownikiem może znaczyć kazać albo poprosić kogoś o coś."},
+      {"zh": "使", "hint": "Sprawić, że pojawia się skutek. Częste w bardziej formalnym stylu."}
+    ]
+  },
+  "眼睛": {
+    "story": "Kiedy mrugasz, dwa małe reflektory za powiekami gasną na sekundę. Przy kolejnym mrugnięciu ich światło wydobywa litery z odległego szyldu.",
+    "cues": ["眼", "看", "眼镜"],
+    "situations": [
+      {"label": "Mówisz o zmęczeniu po pracy", "zh": "我今天看电脑太久了，眼睛有点儿疼。", "pinyin": "Wǒ jīntiān kàn diànnǎo tài jiǔ le, yǎnjing yǒudiǎnr téng.", "en": "I spent too long looking at the computer today, and my eyes hurt a little.", "words": ["我", "今天", "看", "电脑", "太", "久", "了", "眼睛", "有点儿", "疼"]},
+      {"label": "Ustawiasz grupę do zdjęcia", "zh": "看镜头，眼睛睁大一点儿。", "pinyin": "Kàn jìngtóu, yǎnjing zhēng dà yìdiǎnr.", "en": "Look at the camera and open your eyes a little wider.", "words": ["看", "镜头", "眼睛", "睁", "大", "一点儿"]}
+    ],
+    "related": [
+      {"zh": "眼", "hint": "Krótsze oznaczenie oka, częste w złożeniach oraz w zwrotach o spojrzeniu."},
+      {"zh": "眼镜", "hint": "Okulary. Druga sylaba ma czwarty ton, a w słowie oznaczającym oczy jest zwykle neutralna."},
+      {"zh": "眼泪", "hint": "Łzy. Tego słowa użyjesz, gdy mówisz o kroplach wypływających z oczu."},
+      {"zh": "眼皮", "hint": "Powieka, która osłania oko przy mruganiu."}
+    ]
+  },
+  "一起": {
+    "story": "Chcesz odjechać rowerem, ale siodełko jest tak długie, że druga osoba siada za tobą i dostaje własne pedały. Od tej chwili ruszacie razem.",
+    "cues": ["一块儿", "一同", "合作"],
+    "situations": [
+      {"label": "Zapraszasz kogoś na obiad", "zh": "中午一起吃饭吧。", "pinyin": "Zhōngwǔ yìqǐ chī fàn ba.", "en": "Let’s have lunch together.", "words": ["中午", "一起", "吃饭", "吧"]},
+      {"label": "Proponujesz podwózkę komuś z pracy", "zh": "下班后我们一起走，我开车送你。", "pinyin": "Xiàbān hòu wǒmen yìqǐ zǒu, wǒ kāichē sòng nǐ.", "en": "Let’s leave together after work. I’ll give you a ride.", "words": ["下班", "后", "我们", "一起", "走", "我", "开车", "送", "你"]}
+    ],
+    "related": [
+      {"zh": "一块儿", "hint": "Potoczny odpowiednik razem z końcówką er. Pasuje do zaproszenia na wspólny posiłek."},
+      {"zh": "一同", "hint": "Razem lub wspólnie. Brzmi bardziej oficjalnie i dobrze pasuje do tekstów pisanych."},
+      {"zh": "同时", "hint": "W tym samym czasie. Czynności mogą odbywać się w różnych miejscach i bez współpracy."},
+      {"zh": "合作", "hint": "Współpracować nad wspólnym celem, np. projektem zawodowym."}
+    ]
+  },
+  "银行": {
+    "story": "W holu banku szereg srebrnych monet turla się po marmurze jak kolejka klientów. Każda zatrzymuje się przy okienku i czeka, aż kasjer ją wpłaci.",
+    "cues": ["银", "银行卡", "取钱"],
+    "situations": [
+      {"label": "Planujesz wypłatę gotówki", "zh": "我得去银行取点儿钱。", "pinyin": "Wǒ děi qù yínháng qǔ diǎnr qián.", "en": "I need to go to the bank to take out some cash.", "words": ["我", "得", "去", "银行", "取", "点儿", "钱"]},
+      {"label": "Dopiero urządzasz się w nowym mieście", "zh": "这家银行周六可以开户吗？", "pinyin": "Zhè jiā yínháng zhōuliù kěyǐ kāihù ma?", "en": "Can I open an account at this bank on Saturday?", "words": ["这", "家", "银行", "周六", "可以", "开户", "吗"]}
+    ],
+    "related": [
+      {"zh": "银行卡", "hint": "Karta wydana przez bank. Może to być karta debetowa albo kredytowa."},
+      {"zh": "银行账户", "hint": "Rachunek bankowy, na którym trzymasz środki albo rozliczasz płatności."},
+      {"zh": "取款机", "hint": "Bankomat. W wielu miejscach znajdziesz go także poza oddziałem banku."},
+      {"zh": "现金", "hint": "Gotówka, czyli pieniądze w banknotach i monetach."}
+    ]
+  },
+  "作业": {
+    "story": "Dzwonek kończy lekcję, ale zeszyt sam wskakuje ci do plecaka. W domu otwiera się na biurku dokładnie na stronie z zadaniami od nauczycielki.",
+    "cues": ["做作业", "交作业", "练习"],
+    "situations": [
+      {"label": "Dziecko wraca ze szkoły", "zh": "先做作业，做完再出去玩。", "pinyin": "Xiān zuò zuòyè, zuò wán zài chūqu wán.", "en": "Do your homework first. You can go out and play when you’re done.", "words": ["先", "做", "作业", "做", "完", "再", "出去", "玩"]},
+      {"label": "Dopytujesz na zajęciach", "zh": "老师，这次的作业什么时候交？", "pinyin": "Lǎoshī, zhè cì de zuòyè shénme shíhou jiāo?", "en": "When is this assignment due?", "words": ["老师", "这", "次", "的", "作业", "什么", "时候", "交"]}
+    ],
+    "related": [
+      {"zh": "练习", "hint": "Ćwiczenie lub ćwiczyć. Możesz ćwiczyć samodzielnie, bez zadania od nauczyciela."},
+      {"zh": "功课", "hint": "Praca szkolna lub nauka przedmiotu. W codziennej rozmowie może też oznaczać zadanie domowe."},
+      {"zh": "任务", "hint": "Zadanie do wykonania w szerszym sensie, np. w pracy albo w grze."},
+      {"zh": "作文", "hint": "Wypracowanie. To jeden z rodzajów pracy, jaką nauczyciel może zadać."}
+    ]
+  },
+  "方便": {
+    "story": "Masz pełne ręce zakupów. Winda sama otwiera się przed tobą i czeka, aż włożysz wszystkie torby. Niczego nie musisz odkładać, żeby wcisnąć przycisk.",
+    "cues": ["不方便", "交通方便", "方便面"],
+    "situations": [
+      {"label": "Sprawdzasz, czy możesz zadzwonić", "zh": "你现在方便接电话吗？", "pinyin": "Nǐ xiànzài fāngbiàn jiē diànhuà ma?", "en": "Is now a good time for you to take a call?", "words": ["你", "现在", "方便", "接", "电话", "吗"]},
+      {"label": "Tłumaczysz, dlaczego lubisz okolicę", "zh": "楼下就有超市，买东西很方便。", "pinyin": "Lóuxià jiù yǒu chāoshì, mǎi dōngxi hěn fāngbiàn.", "en": "There’s a supermarket right downstairs, so shopping is really convenient.", "words": ["楼下", "就", "有", "超市", "买", "东西", "很", "方便"]}
+    ],
+    "related": [
+      {"zh": "容易", "hint": "Łatwy do zrobienia lub skłonny się zdarzyć. Przy czynności mówi o poziomie trudności."},
+      {"zh": "简单", "hint": "Prosty, np. przepis z trzema składnikami albo instrukcja z dwoma krokami."},
+      {"zh": "麻烦", "hint": "Kłopotliwy lub uciążliwy, np. gdy trzeba jechać do urzędu kilka razy."},
+      {"zh": "方便面", "hint": "Makaron błyskawiczny. Nazwa przypomina o wygodzie szybkiego przygotowania."}
+    ]
+  },
+  "突然": {
+    "story": "Siedzisz w cichej bibliotece. Lampka na stole bez ostrzeżenia zapala się jak flesz aparatu. Zapamiętaj tę sekundę, w której wszystko nagle się zmieniło.",
+    "cues": ["忽然", "一下子", "意外"],
+    "situations": [
+      {"label": "Opowiadasz o drodze do domu", "zh": "我刚出门，突然下起雨来。", "pinyin": "Wǒ gāng chūmén, tūrán xià qǐ yǔ lái.", "en": "I had just stepped outside when it suddenly started raining.", "words": ["我", "刚", "出门", "突然", "下", "起", "雨", "来"]},
+      {"label": "Opowiadasz o rozmowie wideo", "zh": "我们正聊天，画面突然卡住了。", "pinyin": "Wǒmen zhèng liáotiān, huàmiàn tūrán kǎzhù le.", "en": "We were in the middle of chatting when the video suddenly froze.", "words": ["我们", "正", "聊天", "画面", "突然", "卡住", "了"]}
+    ],
+    "related": [
+      {"zh": "忽然", "hint": "Bardzo bliskie znaczenie. Stawiasz przed zdarzeniem, które następuje nagle."},
+      {"zh": "一下子", "hint": "W jednej chwili lub za jednym razem. Podkreśla szybki przebieg albo jednorazowe wykonanie."},
+      {"zh": "意外", "hint": "Nieoczekiwany lub niespodziewany, a jako rzeczownik również wypadek. Podkreśla zaskoczenie."},
+      {"zh": "立刻", "hint": "Natychmiast. Mówi, że coś zrobiono bez zwłoki, np. po otrzymaniu wiadomości."}
+    ]
+  },
+  "一般": {
+    "story": "Drukarka do paragonów codziennie wypuszcza tę samą godzinę śniadania. Na końcu każdego paragonu widnieją trzy z pięciu gwiazdek. Masz w ręku dwie podpowiedzi, zwykle i przeciętnie.",
+    "cues": ["通常", "普通", "平时"],
+    "situations": [
+      {"label": "Porównujecie codzienne zwyczaje", "zh": "我一般七点起床。", "pinyin": "Wǒ yìbān qī diǎn qǐchuáng.", "en": "I usually get up at seven.", "words": ["我", "一般", "七", "点", "起床"]},
+      {"label": "Oceniasz kawiarnię", "zh": "这家店的咖啡味道一般。", "pinyin": "Zhè jiā diàn de kāfēi wèidào yìbān.", "en": "The coffee at this place tastes just okay.", "words": ["这", "家", "店", "的", "咖啡", "味道", "一般"]},
+      {"label": "Pytasz o bilet na pociąg", "zh": "一般情况下，可以在网上买票。", "pinyin": "Yìbān qíngkuàng xià, kěyǐ zài wǎngshàng mǎi piào.", "en": "Under normal circumstances, you can buy tickets online.", "words": ["一般", "情况", "下", "可以", "在", "网上", "买", "票"]}
+    ],
+    "related": [
+      {"zh": "通常", "hint": "Zazwyczaj. Określa, co się zwykle dzieje w danej sytuacji."},
+      {"zh": "普通", "hint": "Zwykły, typowy dla swojej kategorii, np. regularny bilet bez dodatków."},
+      {"zh": "平时", "hint": "Na co dzień. Odnosi się do zwykłych dni, zwłaszcza przy zestawieniu z wyjątkiem."},
+      {"zh": "一般般", "hint": "Potoczna odpowiedź w stylu 'tak sobie', np. na pytanie, jak smakował obiad."}
+    ]
+  }
+}

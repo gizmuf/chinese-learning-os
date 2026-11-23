@@ -4,7 +4,7 @@ import PreparedSentenceListen from './prepared-sentence-listen';
 import prepared from '../data/lesson-sentence-audio.json';
 
 import { useEffect, useId, useRef, useState, type KeyboardEvent } from 'react';
-import { ArrowLeft, ArrowRight, BookOpen, ChevronDown, Search } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, ChevronDown, Columns2, Search } from 'lucide-react';
 import {
   loadStudyCard,
   loadStudyIndex,
@@ -48,6 +48,7 @@ type AtlasStudyCardProps = {
   hanzi: string;
   onNavigate: (hanzi: string) => void;
   onClose: () => void;
+  onTrial?: (hanzi: string) => void;
   returnLabel?: string;
 };
 
@@ -121,7 +122,7 @@ function ExampleWords({ example }: { example: StudyExample }) {
   </div>;
 }
 
-export default function AtlasStudyCard({ hanzi, onNavigate, onClose, returnLabel = 'Atlas' }: AtlasStudyCardProps) {
+export default function AtlasStudyCard({ hanzi, onNavigate, onClose, onTrial, returnLabel = 'Atlas' }: AtlasStudyCardProps) {
   const label = useId();
   const pickerId = useId();
   const pickerButton = useRef<HTMLButtonElement>(null);
@@ -186,6 +187,9 @@ export default function AtlasStudyCard({ hanzi, onNavigate, onClose, returnLabel
       </h2>
       {card && <div className="asc-scope"><strong>{levelText(card.entry.levels)}</strong><span>znak</span></div>}
       <div className="asc-actions">
+        {onTrial && <button type="button" className="asc-control" onClick={() => onTrial(hanzi)}>
+          <Columns2 size={16} aria-hidden="true" /> Porównaj lekcje
+        </button>}
         <button type="button" className="asc-control" ref={pickerButton}
           aria-expanded={pickerOpen} aria-controls={pickerId} onClick={() => setPickerOpen(!pickerOpen)}>
           <BookOpen size={16} aria-hidden="true" /> Znaki <ChevronDown className="asc-chevron" size={14} aria-hidden="true" />

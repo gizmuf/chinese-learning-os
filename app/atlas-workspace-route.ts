@@ -3,8 +3,9 @@ import {parseBrowseScope} from './hsk-browse';
 import {cloudRouteHref, readCloudRoute, type CloudRoute} from './atlas-cloud-route';
 import {isHybridLayout} from './atlas-hybrid-model';
 import {isStoryTarget, type StoryTarget} from './atlas-story-explorer-model';
+import trialHeads from '../data/atlas-word-trial/heads.json';
 
-export const workspaceModes = ['family', 'read', 'map', 'practise', 'build', 'swipe', 'cards'] as const;
+export const workspaceModes = ['family', 'read', 'map', 'practise', 'build', 'swipe', 'cards', 'word-trial'] as const;
 export const workspaceMapViews = ['structure', 'connections', 'matrix'] as const;
 export const workspaceExercises = ['reels', 'contrast', 'recognition', 'writing'] as const;
 export type WorkspaceKind = 'word' | 'character' | 'component' | 'sentence';
@@ -34,7 +35,13 @@ export type WorkspaceRoute = {
   swipeWord?: string;
   wordView?: 'connections';
   familyMap?: boolean;
+  trialWord?: string;
 };
+
+export const defaultTrialWord = '卫生间';
+export function atlasTrialWord(value?: string | null) {
+  return value && trialHeads.includes(value) ? value : defaultTrialWord;
+}
 
 export function isAtlasWorkspaceEntry(params: URLSearchParams) {
   return params.get('atlas') === '1' && params.get('workspace') === '1';
@@ -59,6 +66,7 @@ export function readAtlasWorkspaceRoute(search: string): WorkspaceRoute {
   const storyPanel = params.get('storyPanel') === '1';
   return {
     mode,
+    ...(mode === 'word-trial' && {trialWord: atlasTrialWord(params.get('trialWord'))}),
     ...((mode === 'build' || mode === 'swipe') && {
       buildHanzi: readCharacter(params.get('buildHanzi')) || undefined,
       buildPart: buildPart === '' || buildPart && /^[\p{Script=Han}\u2e80-\u2fdf\u31c0-\u31ee\ue000-\uf8ff]$/u.test(buildPart) ? buildPart : undefined,
@@ -92,6 +100,7 @@ export function readAtlasWorkspaceRoute(search: string): WorkspaceRoute {
 export function atlasWorkspaceHref(route: WorkspaceRoute, scroll = 0) {
   const params = new URLSearchParams({atlas: '1', workspace: '1', anchor: route.anchor, hsk: String(route.scope)});
   if (route.mode !== 'family') params.set('mode', route.mode);
+  if (route.mode === 'word-trial') params.set('trialWord', atlasTrialWord(route.trialWord));
   if (route.relation !== 'literal') params.set('relation', route.relation);
   if (route.group) params.set('group', route.group);
   if (route.part) params.set('part', route.part);

@@ -4,7 +4,7 @@ import {
   useEffect, useId, useLayoutEffect, useMemo, useRef, useState,
   type CSSProperties, type FormEvent, type KeyboardEvent, type PointerEvent,
 } from 'react';
-import {BookOpen, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Orbit, Pause, Play, Search} from 'lucide-react';
+import {BookOpen, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Columns2, Orbit, Pause, Play, Search} from 'lucide-react';
 import {assemblyIndex, assemblyMeaning, type AssemblyPart} from './atlas-assembly-model';
 import {type BrowseScope} from './hsk-scope';
 import {
@@ -49,9 +49,10 @@ function badgePosition(part: AssemblyPart): CSSProperties {
 }
 
 export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, wordView, openFamilyOnEntry = false,
-  onSelect, onFamilyMapChange, onWordViewChange, widen}: {
+  onSelect, onFamilyMapChange, onWordViewChange, onTrial, widen}: {
   hanzi?: string; part?: string; slot?: string; scope: BrowseScope; entryWord?: string;
   wordView?: 'connections'; onWordViewChange?: (view: WordView, word?: string) => void;
+  onTrial?: (word?: string, view?: 'connections') => void;
   openFamilyOnEntry?: boolean; onFamilyMapChange: (open: boolean) => void;
   onSelect: (selection: Selection) => void; widen: () => void;
 }) {
@@ -675,6 +676,10 @@ export default function AtlasSwipe({hanzi, part, slot, scope, entryWord, wordVie
         aria-label="Family map" aria-expanded={!!familyOrbit} onClick={() => familyOrbit ? setFamilyOrbit(undefined)
           : openFamily(inspected?.part ?? lensParent?.part ?? focus.part!)}>
         <Orbit size={17}/><span>Family map</span>
+      </button>}
+      {mode === 'words' && onTrial && <button type="button" className="as-open-map" lang="pl"
+        aria-label="Porównaj lekcje" title="Porównaj lekcje" onClick={() => onTrial(word?.text, connections ? 'connections' : undefined)}>
+        <Columns2 size={17} aria-hidden="true"/><span>Porównaj lekcje</span>
       </button>}
     </div>
     {error && <p className="as-error" role="alert">{error}</p>}

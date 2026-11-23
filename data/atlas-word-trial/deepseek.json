@@ -1,0 +1,1180 @@
+{
+  "卫生间": {
+    "story": "Wyobraź sobie kolejkę w metrze. Na drzwiach widzisz strażnika, który pilnuje porządku. Za nim jest życie, a za drzwiami pokój, do którego wpada światło. Strażnik pilnuje życia za drzwiami — to twój obraz toalety.",
+    "cues": [
+      "卫",
+      "生",
+      "间",
+      "卫生"
+    ],
+    "situations": [
+      {
+        "label": "Na stacji metra",
+        "zh": "地铁站的卫生间在哪儿？",
+        "pinyin": "Dìtiězhàn de wèishēngjiān zài nǎr?",
+        "en": "Where is the restroom in the subway station?",
+        "words": [
+          "地铁站",
+          "的",
+          "卫生间",
+          "在",
+          "哪儿"
+        ]
+      },
+      {
+        "label": "W centrum handlowym",
+        "zh": "商场里的卫生间很干净。",
+        "pinyin": "Shāngchǎng lǐ de wèishēngjiān hěn gānjìng.",
+        "en": "The restroom in the mall is very clean.",
+        "words": [
+          "商场",
+          "里",
+          "的",
+          "卫生间",
+          "很",
+          "干净"
+        ]
+      },
+      {
+        "label": "W parku",
+        "zh": "公园的卫生间离这里不远。",
+        "pinyin": "Gōngyuán de wèishēngjiān lí zhèlǐ bù yuǎn.",
+        "en": "The park restroom is not far from here.",
+        "words": [
+          "公园",
+          "的",
+          "卫生间",
+          "离",
+          "这里",
+          "不",
+          "远"
+        ]
+      },
+      {
+        "label": "Szukanie toalety",
+        "zh": "我在找卫生间。",
+        "pinyin": "Wǒ zài zhǎo wèishēngjiān.",
+        "en": "I'm looking for the restroom.",
+        "words": [
+          "我",
+          "在",
+          "找",
+          "卫生间"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "洗手间",
+        "hint": "Drugie częste określenie toalety. Dosłownie przywodzi na myśl mycie rąk."
+      },
+      {
+        "zh": "厕所",
+        "hint": "Bezpośrednie określenie toalety używane w codziennej mowie."
+      },
+      {
+        "zh": "公共卫生间",
+        "hint": "Napis kierujący do toalety publicznej."
+      },
+      {
+        "zh": "无障碍卫生间",
+        "hint": "Napis oznaczający dostępną toaletę, na przykład dla osoby na wózku."
+      },
+      {
+        "zh": "男卫生间",
+        "hint": "Tak można nazwać toaletę męską."
+      },
+      {
+        "zh": "女卫生间",
+        "hint": "Tak można nazwać toaletę damską."
+      },
+      {
+        "zh": "上卫生间",
+        "hint": "Czynność pójścia do toalety."
+      },
+      {
+        "zh": "找卫生间",
+        "hint": "Czynność szukania toalety."
+      }
+    ]
+  },
+  "间": {
+    "story": "Wyobraź sobie wielką bramę. Przez szparę w drzwiach wpada słońce. Widać wolną przestrzeń między drzwiami a światłem, jak pokój za progiem.",
+    "cues": [
+      "门",
+      "日",
+      "房间"
+    ],
+    "situations": [
+      {
+        "label": "Pokój",
+        "zh": "房间很大。",
+        "pinyin": "Fángjiān hěn dà.",
+        "en": "The room is big.",
+        "words": [
+          "房间",
+          "很",
+          "大"
+        ]
+      },
+      {
+        "label": "Między dwoma miejscami",
+        "zh": "公园和学校之间有一条路。",
+        "pinyin": "Gōngyuán hé xuéxiào zhījiān yǒu yì tiáo lù.",
+        "en": "There is a road between the park and the school.",
+        "words": [
+          "公园",
+          "和",
+          "学校",
+          "之间",
+          "有",
+          "一",
+          "条",
+          "路"
+        ]
+      },
+      {
+        "label": "Brakuje czasu",
+        "zh": "时间不够。",
+        "pinyin": "Shíjiān bú gòu.",
+        "en": "There isn't enough time.",
+        "words": [
+          "时间",
+          "不",
+          "够"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "问",
+        "hint": "W środku obramowania widać usta. Ten znak służy do pytania."
+      },
+      {
+        "zh": "闻",
+        "hint": "W środku drzwi widać ucho, które pomaga zapamiętać słyszenie."
+      },
+      {
+        "zh": "闪",
+        "hint": "W środku drzwi stoi człowiek. Skojarz go z szybkim mignięciem."
+      },
+      {
+        "zh": "闲",
+        "hint": "W środku drzwi stoi drzewo. Skojarz je z wolną chwilą."
+      },
+      {
+        "zh": "间隔",
+        "hint": "Odstęp w przestrzeni lub czasie. Pierwsza sylaba ma tu czwarty ton."
+      },
+      {
+        "zh": "时间",
+        "hint": "Czas, który można przeznaczyć na zrobienie czegoś."
+      },
+      {
+        "zh": "时候",
+        "hint": "Chwila lub pora, gdy coś się dzieje."
+      }
+    ]
+  },
+  "房间": {
+    "story": "Wchodzisz do pokoju, a tam fang (jak w „fang” – kieł) wystaje z podłogi i gryzie w nogę; szybko zamykasz drzwi, żeby nie wszedł.",
+    "cues": [
+      "屋子",
+      "室内",
+      "客房"
+    ],
+    "situations": [
+      {
+        "label": "Szukasz wolnego pokoju w hotelu",
+        "zh": "请问，还有空房间吗？",
+        "pinyin": "Qǐngwèn, hái yǒu kòng fángjiān ma?",
+        "en": "Excuse me, do you still have any vacant rooms?",
+        "words": [
+          "请",
+          "问",
+          "还",
+          "有",
+          "空",
+          "房间",
+          "吗"
+        ]
+      },
+      {
+        "label": "Uprzątasz swój pokój przed gośćmi",
+        "zh": "我得先打扫房间，客人快到了。",
+        "pinyin": "Wǒ děi xiān dǎsǎo fángjiān, kèrén kuài dào le.",
+        "en": "I need to clean the room first; the guests are almost here.",
+        "words": [
+          "我",
+          "得",
+          "先",
+          "打扫",
+          "房间",
+          "客人",
+          "快",
+          "到",
+          "了"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "屋子",
+        "hint": "屋子 to potoczne „izba/pokój”, często w domu; 房间 jest neutralne i uniwersalne."
+      },
+      {
+        "zh": "室内",
+        "hint": "室内 znaczy „wewnątrz pomieszczenia” i bywa przymiotnikowe; 房间 to konkretny pokój."
+      },
+      {
+        "zh": "客房",
+        "hint": "客房 to pokój gościnny/hotelowy; 房间 to każdy pokój."
+      }
+    ]
+  },
+  "雪": {
+    "story": "Na dachu leży śnieg, a ty rzucasz śnieżką w piec (xue – jak „sue”), który parzy cię za karę.",
+    "cues": [
+      "下雪",
+      "雪花",
+      "积雪"
+    ],
+    "situations": [
+      {
+        "label": "Rano patrzysz za okno",
+        "zh": "外面下雪了，路上很滑。",
+        "pinyin": "Wàimiàn xià xuě le, lùshang hěn huá.",
+        "en": "It's snowing outside; the road is very slippery.",
+        "words": [
+          "外面",
+          "下",
+          "雪",
+          "了",
+          "路上",
+          "很",
+          "滑"
+        ]
+      },
+      {
+        "label": "Planujesz wyjście z dzieckiem",
+        "zh": "雪太大了，我们改天再出去玩吧。",
+        "pinyin": "Xuě tài dà le, wǒmen gǎitiān zài chūqù wán ba.",
+        "en": "The snow is too heavy; let's go out and play another day.",
+        "words": [
+          "雪",
+          "太",
+          "大",
+          "了",
+          "我们",
+          "改天",
+          "再",
+          "出去",
+          "玩",
+          "吧"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "下雪",
+        "hint": "下雪 to czasownik „padać (o śniegu)”, a 雪 to sam śnieg."
+      },
+      {
+        "zh": "雪花",
+        "hint": "雪花 to pojedynczy płatek śniegu; 雪 to ogólna masa śniegu."
+      },
+      {
+        "zh": "积雪",
+        "hint": "积雪 to śnieg leżący/ nagromadzony na ziemi; 雪 może padać w powietrzu."
+      }
+    ]
+  },
+  "面条儿": {
+    "story": "Mian tiao (miękkie „mian”, jak „mianować”) to kluski tak długie, że ciągniesz je jak taśmę i zawiązujesz w kokardę na talerzu.",
+    "cues": [
+      "面",
+      "拉面",
+      "挂面"
+    ],
+    "situations": [
+      {
+        "label": "Zamawiasz obiad w barze",
+        "zh": "老板，来一碗面条儿，不要辣。",
+        "pinyin": "Lǎobǎn, lái yì wǎn miàntiáor, bú yào là.",
+        "en": "Boss, bring me a bowl of noodles, not spicy.",
+        "words": [
+          "老板",
+          "来",
+          "一",
+          "碗",
+          "面条儿",
+          "不要",
+          "辣"
+        ]
+      },
+      {
+        "label": "Gotujesz szybki posiłek w domu",
+        "zh": "冰箱里还有面条儿，我们煮面吃吧。",
+        "pinyin": "Bīngxiāng lǐ hái yǒu miàntiáor, wǒmen zhǔ miàn chī ba.",
+        "en": "There are still noodles in the fridge; let's boil noodles and eat.",
+        "words": [
+          "冰箱",
+          "里",
+          "还",
+          "有",
+          "面条儿",
+          "我们",
+          "煮",
+          "面",
+          "吃",
+          "吧"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "面",
+        "hint": "面 samo znaczy „makaron/kluski” lub „mąka”; 面条儿 to konkretne kluski w formie długich nitek."
+      },
+      {
+        "zh": "拉面",
+        "hint": "拉面 to makaron ręcznie ciągniony (ramen); 面条儿 to ogólne pojęcie klusek."
+      },
+      {
+        "zh": "挂面",
+        "hint": "挂面 to makaron suszony, prosty z paczki; 面条儿 bywa świeży lub gotowy."
+      }
+    ]
+  },
+  "零": {
+    "story": "Ling (零) to zero, które wygląda jak ucho od dzbanka – przechylasz je i nic nie wypływa, bo w środku jest zupełnie pusto.",
+    "cues": [
+      "零钱",
+      "零度",
+      "零下"
+    ],
+    "situations": [
+      {
+        "label": "Płacisz drobnymi w sklepie",
+        "zh": "我只有零钱，可以吗？",
+        "pinyin": "Wǒ zhǐ yǒu língqián, kěyǐ ma?",
+        "en": "I only have loose change; is that okay?",
+        "words": [
+          "我",
+          "只",
+          "有",
+          "零钱",
+          "可以",
+          "吗"
+        ]
+      },
+      {
+        "label": "Sprawdzasz temperaturę zimą",
+        "zh": "今天零下五度，水都结冰了。",
+        "pinyin": "Jīntiān língxià wǔ dù, shuǐ dōu jiébīng le.",
+        "en": "It's five degrees below zero today; even the water has frozen.",
+        "words": [
+          "今天",
+          "零下",
+          "五",
+          "度",
+          "水",
+          "都",
+          "结冰",
+          "了"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "〇",
+        "hint": "〇 to znak zera używany w numerach i datach; 零 to pełne słowo „zero”."
+      },
+      {
+        "zh": "空",
+        "hint": "空 znaczy „pusty”, a 零 to liczba zero; nie zamieniaj ich w rachunkach."
+      },
+      {
+        "zh": "无",
+        "hint": "无 to formalne „brak/nic”, używane w zwrotach; 零 to cyfra/zero."
+      }
+    ]
+  },
+  "远": {
+    "story": "Yuan (远) to daleko – tak daleko, że aż widzisz, jak ktoś z daleka rzuca ci piłkę („yuan” jak „one”), ale ona nigdy nie dolatuje.",
+    "cues": [
+      "遥远",
+      "远方",
+      "很远"
+    ],
+    "situations": [
+      {
+        "label": "Pytasz o odległość do dworca",
+        "zh": "火车站离这儿远吗？",
+        "pinyin": "Huǒchēzhàn lí zhèr yuǎn ma?",
+        "en": "Is the train station far from here?",
+        "words": [
+          "火车站",
+          "离",
+          "这儿",
+          "远",
+          "吗"
+        ]
+      },
+      {
+        "label": "Tłumaczysz, dlaczego nie odwiedzasz rodziny",
+        "zh": "我家离北京很远，坐飞机要三个小时。",
+        "pinyin": "Wǒ jiā lí Běijīng hěn yuǎn, zuò fēijī yào sān ge xiǎoshí.",
+        "en": "My home is very far from Beijing; it takes three hours by plane.",
+        "words": [
+          "我",
+          "家",
+          "离",
+          "北京",
+          "很",
+          "远",
+          "坐",
+          "飞机",
+          "要",
+          "三",
+          "个",
+          "小时"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "遥远",
+        "hint": "遥远 to literackie „odległy”, często o czasie lub marzeniach; 远 jest codzienne."
+      },
+      {
+        "zh": "远方",
+        "hint": "远方 to rzeczownik „dal/odległe strony”; 远 to przymiotnik/okolicznik."
+      },
+      {
+        "zh": "久",
+        "hint": "久 znaczy „długo (o czasie)”; 远 dotyczy odległości w przestrzeni."
+      }
+    ]
+  },
+  "时间": {
+    "story": "Shi jian (时间) to czas – wyobraź sobie zegar, który zamiast wskazówek ma dwie pałeczki (jian) i nimi odmierza każdą minutę.",
+    "cues": [
+      "时候",
+      "时刻",
+      "有空"
+    ],
+    "situations": [
+      {
+        "label": "Umawiasz się z kolegą",
+        "zh": "你明天有时间吗？我们一起去喝咖啡。",
+        "pinyin": "Nǐ míngtiān yǒu shíjiān ma? Wǒmen yìqǐ qù hē kāfēi.",
+        "en": "Do you have time tomorrow? Let's go drink coffee together.",
+        "words": [
+          "你",
+          "明天",
+          "有",
+          "时间",
+          "吗",
+          "我们",
+          "一起",
+          "去",
+          "喝",
+          "咖啡"
+        ]
+      },
+      {
+        "label": "Sprawdzasz godzinę na spotkaniu",
+        "zh": "时间不早了，我得马上回家。",
+        "pinyin": "Shíjiān bù zǎo le, wǒ děi mǎshàng huí jiā.",
+        "en": "It's getting late; I have to go home right away.",
+        "words": [
+          "时间",
+          "不",
+          "早",
+          "了",
+          "我",
+          "得",
+          "马上",
+          "回",
+          "家"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "时候",
+        "hint": "时候 to „moment/pora”, często w zwrotach 的时候; 时间 to czas jako wymiar lub dostępny czas."
+      },
+      {
+        "zh": "时刻",
+        "hint": "时刻 to konkretna chwila, często podniosła; 时间 jest szersze i codzienne."
+      },
+      {
+        "zh": "功夫",
+        "hint": "功夫 to „czas/umiejętność” w sensie wysiłku lub kung-fu; 时间 to neutralny czas."
+      }
+    ]
+  },
+  "朋友": {
+    "story": "Pengyou to przyjaciel – wyobraź sobie, że z dwoma wiaderkami (peng) i miską (you) idziesz przez podwórko, żeby pomóc koledze naprawić rower.",
+    "cues": [
+      "好友",
+      "伙伴",
+      "哥们儿"
+    ],
+    "situations": [
+      {
+        "label": "Przedstawiasz kogoś na spotkaniu",
+        "zh": "这是我最好的朋友，他叫小王。",
+        "pinyin": "Zhè shì wǒ zuì hǎo de péngyou, tā jiào Xiǎo Wáng.",
+        "en": "This is my best friend; his name is Xiao Wang.",
+        "words": [
+          "这",
+          "是",
+          "我",
+          "最",
+          "好",
+          "的",
+          "朋友",
+          "他",
+          "叫",
+          "小",
+          "王"
+        ]
+      },
+      {
+        "label": "Dzwonisz do kogoś, żeby się spotkać",
+        "zh": "周末我想跟朋友去看电影。",
+        "pinyin": "Zhōumò wǒ xiǎng gēn péngyou qù kàn diànyǐng.",
+        "en": "On the weekend I want to go see a movie with a friend.",
+        "words": [
+          "周末",
+          "我",
+          "想",
+          "跟",
+          "朋友",
+          "去",
+          "看",
+          "电影"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "好友",
+        "hint": "好友 to bliski lub internetowy „dobry znajomy”; 朋友 jest ogólne i codzienne."
+      },
+      {
+        "zh": "伙伴",
+        "hint": "伙伴 to towarzysz wspólnej pracy lub zabawy; 朋友 to raczej relacja osobista."
+      },
+      {
+        "zh": "哥们儿",
+        "hint": "哥们儿 to potoczny „kumpel”, zwykle między chłopakami; 朋友 pasuje do każdej płci i sytuacji."
+      }
+    ]
+  },
+  "手机": {
+    "story": "Shouji to telefon komórkowy – wyobraź sobie, że trzymasz w dłoni (shou) małe pudełko z przyciskami (ji), które dzwoni, gdy tylko je dotkniesz.",
+    "cues": [
+      "电话",
+      "智能手机",
+      "充电"
+    ],
+    "situations": [
+      {
+        "label": "Szukasz telefonu przed wyjściem",
+        "zh": "我的手机找不到了，你看见了吗？",
+        "pinyin": "Wǒ de shǒujī zhǎo bù dào le, nǐ kànjiàn le ma?",
+        "en": "I can't find my phone; have you seen it?",
+        "words": [
+          "我",
+          "的",
+          "手机",
+          "找",
+          "不",
+          "到",
+          "了",
+          "你",
+          "看见",
+          "了",
+          "吗"
+        ]
+      },
+      {
+        "label": "Uprzedzasz, że bateria się kończy",
+        "zh": "手机快没电了，我得先充电。",
+        "pinyin": "Shǒujī kuài méi diàn le, wǒ děi xiān chōngdiàn.",
+        "en": "My phone is almost out of battery; I need to charge it first.",
+        "words": [
+          "手机",
+          "快",
+          "没",
+          "电",
+          "了",
+          "我",
+          "得",
+          "先",
+          "充电"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "电话",
+        "hint": "电话 to telefon jako urządzenie stacjonarne lub sama rozmowa; 手机 to konkretnie komórka."
+      },
+      {
+        "zh": "智能手机",
+        "hint": "智能手机 to smartfon – podkreśla funkcje; 手机 to ogólne „komórka”."
+      },
+      {
+        "zh": "充电",
+        "hint": "充电 to czasownik „ładować”; 手机 to sam telefon, nie czynność."
+      }
+    ]
+  },
+  "地铁": {
+    "story": "Ditie to metro – wyobraź sobie pociąg, który zjeżdża pod ziemię (di) i sunie po stalowych torach (tie) jak po sznurku.",
+    "cues": [
+      "地铁站",
+      "轻轨",
+      "火车"
+    ],
+    "situations": [
+      {
+        "label": "Pytasz, jak dojechać do centrum",
+        "zh": "去市中心坐地铁方便吗？",
+        "pinyin": "Qù shìzhōngxīn zuò dìtiě fāngbiàn ma?",
+        "en": "Is it convenient to take the subway to the city center?",
+        "words": [
+          "去",
+          "市中心",
+          "坐",
+          "地铁",
+          "方便",
+          "吗"
+        ]
+      },
+      {
+        "label": "Sprawdzasz trasę w aplikacji",
+        "zh": "地铁三号线现在停运了，我们换公交吧。",
+        "pinyin": "Dìtiě sān hào xiàn xiànzài tíngyùn le, wǒmen huàn gōngjiāo ba.",
+        "en": "Subway line 3 is out of service now; let's switch to the bus.",
+        "words": [
+          "地铁",
+          "三",
+          "号",
+          "线",
+          "现在",
+          "停运",
+          "了",
+          "我们",
+          "换",
+          "公交",
+          "吧"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "地铁站",
+        "hint": "地铁站 to stacja metra; 地铁 to sam środek transportu lub cała sieć."
+      },
+      {
+        "zh": "轻轨",
+        "hint": "轻轨 to lekka kolej, często nad ziemią; 地铁 zwykle jeździ pod ziemią."
+      },
+      {
+        "zh": "火车",
+        "hint": "火车 to pociąg dalekobieżny; 地铁 to pociąg miejski."
+      }
+    ]
+  },
+  "洗手间": {
+    "story": "Xishoujian to toaleta – wyobraź sobie, że myjesz (xi) ręce (shou) w małym pokoiku (jian), zanim wyjdziesz.",
+    "cues": [
+      "厕所",
+      "卫生间",
+      "浴室"
+    ],
+    "situations": [
+      {
+        "label": "Pytasz w restauracji o toaletę",
+        "zh": "请问洗手间在哪儿？",
+        "pinyin": "Qǐngwèn xǐshǒujiān zài nǎr?",
+        "en": "Excuse me, where is the restroom?",
+        "words": [
+          "请",
+          "问",
+          "洗手间",
+          "在",
+          "哪儿"
+        ]
+      },
+      {
+        "label": "Uprzedzasz współlokatora",
+        "zh": "洗手间有人，请等一下。",
+        "pinyin": "Xǐshǒujiān yǒu rén, qǐng děng yíxià.",
+        "en": "Someone is in the bathroom; please wait a moment.",
+        "words": [
+          "洗手间",
+          "有",
+          "人",
+          "请",
+          "等",
+          "一下"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "厕所",
+        "hint": "厕所 to prostsze, czasem mniej eleganckie „toaleta”; 洗手间 brzmi uprzejmiej."
+      },
+      {
+        "zh": "卫生间",
+        "hint": "卫生间 to neutralna „łazienka/toaleta”; 洗手间 podkreśla mycie rąk i jest grzeczniejsze."
+      },
+      {
+        "zh": "浴室",
+        "hint": "浴室 to łazienka z wanną lub prysznicem; 洗手间 to głównie toaleta."
+      }
+    ]
+  },
+  "让": {
+    "story": "Rang to „pozwalać” – wyobraź sobie, że ktoś rzuca ci piłkę (rang), ale dopiero po twoim skinieniu pozwala jej przelecieć.",
+    "cues": [
+      "允许",
+      "叫",
+      "使"
+    ],
+    "situations": [
+      {
+        "label": "Prosisz o pozwolenie",
+        "zh": "妈妈，让我再玩十分钟吧。",
+        "pinyin": "Māma, ràng wǒ zài wán shí fēnzhōng ba.",
+        "en": "Mom, let me play ten more minutes.",
+        "words": [
+          "妈妈",
+          "让",
+          "我",
+          "再",
+          "玩",
+          "十",
+          "分钟",
+          "吧"
+        ]
+      },
+      {
+        "label": "Tłumaczysz, dlaczego ktoś nie może wejść",
+        "zh": "保安不让人进去。",
+        "pinyin": "Bǎo'ān bú ràng rén jìnqù.",
+        "en": "The security guard won't let people in.",
+        "words": [
+          "保安",
+          "不",
+          "让",
+          "人",
+          "进去"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "允许",
+        "hint": "允许 to formalne „zezwalać”; 让 jest codzienne i częstsze w mowie."
+      },
+      {
+        "zh": "叫",
+        "hint": "叫 to „kazać/wołać”, nacisk na polecenie; 让 to łagodniejsze „pozwalać”."
+      },
+      {
+        "zh": "使",
+        "hint": "使 to „powodować, że”; 让 może znaczyć „pozwalać” lub „sprawiać”."
+      }
+    ]
+  },
+  "眼睛": {
+    "story": "Yanjing to oko – wyobraź sobie, że patrzysz przez okrągłą soczewkę (yan), a obok stoi mały dzbanek (jing) z wodą do przemywania oczu.",
+    "cues": [
+      "眼",
+      "目光",
+      "眼神"
+    ],
+    "situations": [
+      {
+        "label": "Mówisz, że ktoś ma zmęczone oczy",
+        "zh": "你的眼睛红了，是不是没睡好？",
+        "pinyin": "Nǐ de yǎnjing hóng le, shì bu shì méi shuì hǎo?",
+        "en": "Your eyes are red; did you not sleep well?",
+        "words": [
+          "你",
+          "的",
+          "眼睛",
+          "红",
+          "了",
+          "是",
+          "不",
+          "是",
+          "没",
+          "睡",
+          "好"
+        ]
+      },
+      {
+        "label": "Prosisz o coś w gabinecie",
+        "zh": "医生，我的眼睛有点疼。",
+        "pinyin": "Yīshēng, wǒ de yǎnjing yǒudiǎn téng.",
+        "en": "Doctor, my eyes hurt a little.",
+        "words": [
+          "医生",
+          "我",
+          "的",
+          "眼睛",
+          "有点",
+          "疼"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "眼",
+        "hint": "眼 to pojedynczy znak „oko”, używany w złożeniach i wyrażeniach; 眼睛 to pełne, codzienne słowo."
+      },
+      {
+        "zh": "目光",
+        "hint": "目光 to „spojrzenie/wzrok” jako kierunek patrzenia; 眼睛 to narząd."
+      },
+      {
+        "zh": "眼神",
+        "hint": "眼神 to wyraz oczu, nastrój w spojrzeniu; 眼睛 to samo oko."
+      }
+    ]
+  },
+  "一起": {
+    "story": "Yiqi to „razem” – wyobraź sobie, że dwoje ludzi chwyta jedną linę (yi) i ciągnie ją w tę samą stronę (qi), aż w końcu idą ramię w ramię.",
+    "cues": [
+      "一块儿",
+      "共同",
+      "一同"
+    ],
+    "situations": [
+      {
+        "label": "Proponujesz wspólne wyjście",
+        "zh": "我们一起去吃饭吧。",
+        "pinyin": "Wǒmen yìqǐ qù chīfàn ba.",
+        "en": "Let's go eat together.",
+        "words": [
+          "我们",
+          "一起",
+          "去",
+          "吃饭",
+          "吧"
+        ]
+      },
+      {
+        "label": "Tłumaczysz, że pracujecie w jednym zespole",
+        "zh": "这个项目我们一起做。",
+        "pinyin": "Zhège xiàngmù wǒmen yìqǐ zuò.",
+        "en": "We are doing this project together.",
+        "words": [
+          "这个",
+          "项目",
+          "我们",
+          "一起",
+          "做"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "一块儿",
+        "hint": "一块儿 to potoczne „razem”, częste w mowie; 一起 jest neutralne i pasuje do każdej sytuacji."
+      },
+      {
+        "zh": "共同",
+        "hint": "共同 to „wspólny” w sensie formalnym, np. wspólny cel; 一起 to zwykłe „razem”."
+      },
+      {
+        "zh": "一同",
+        "hint": "一同 brzmi książkowo i uroczyście; 一起 jest codzienne."
+      }
+    ]
+  },
+  "银行": {
+    "story": "Yinhang to bank – wyobraź sobie, że wchodzisz do budynku, gdzie srebrne (yin) sztabki leżą na długim stole (hang) i czekają na klientów.",
+    "cues": [
+      "取钱",
+      "存款",
+      "账户"
+    ],
+    "situations": [
+      {
+        "label": "Szukasz banku w okolicy",
+        "zh": "附近有银行吗？我想取点钱。",
+        "pinyin": "Fùjìn yǒu yínháng ma? Wǒ xiǎng qǔ diǎn qián.",
+        "en": "Is there a bank nearby? I want to withdraw some money.",
+        "words": [
+          "附近",
+          "有",
+          "银行",
+          "吗",
+          "我",
+          "想",
+          "取",
+          "点",
+          "钱"
+        ]
+      },
+      {
+        "label": "Mówisz, że bank jest zamknięty",
+        "zh": "银行五点关门，我们明天再去吧。",
+        "pinyin": "Yínháng wǔ diǎn guānmén, wǒmen míngtiān zài qù ba.",
+        "en": "The bank closes at five; let's go tomorrow.",
+        "words": [
+          "银行",
+          "五",
+          "点",
+          "关门",
+          "我们",
+          "明天",
+          "再",
+          "去",
+          "吧"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "取钱",
+        "hint": "取钱 to czynność „wyjmować pieniądze”; 银行 to miejsce, gdzie to robisz."
+      },
+      {
+        "zh": "存款",
+        "hint": "存款 to „wkład/oszczędności” lub „wpłacać”; 银行 to sama instytucja."
+      },
+      {
+        "zh": "账户",
+        "hint": "账户 to konto bankowe; 银行 to bank jako budynek i firma."
+      }
+    ]
+  },
+  "作业": {
+    "story": "Zuoye to praca domowa – wyobraź sobie ucznia, który siedzi przy stole i zszywa (zuo) kartki w jedną noc (ye), żeby zdążyć na rano.",
+    "cues": [
+      "功课",
+      "练习",
+      "任务"
+    ],
+    "situations": [
+      {
+        "label": "Pytasz, czy ktoś odrobił zadanie",
+        "zh": "你的作业写完了吗？",
+        "pinyin": "Nǐ de zuòyè xiě wán le ma?",
+        "en": "Have you finished your homework?",
+        "words": [
+          "你",
+          "的",
+          "作业",
+          "写",
+          "完",
+          "了",
+          "吗"
+        ]
+      },
+      {
+        "label": "Tłumaczysz, że nie możesz wyjść",
+        "zh": "今晚作业太多，我不能出去。",
+        "pinyin": "Jīnwǎn zuòyè tài duō, wǒ bù néng chūqù.",
+        "en": "There's too much homework tonight; I can't go out.",
+        "words": [
+          "今晚",
+          "作业",
+          "太",
+          "多",
+          "我",
+          "不",
+          "能",
+          "出去"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "功课",
+        "hint": "功课 to „nauka/lekcje” szeroko, czasem też postępy; 作业 to konkretne zadanie do oddania."
+      },
+      {
+        "zh": "练习",
+        "hint": "练习 to ćwiczenie lub trening; 作业 to zadanie domowe zadane przez nauczyciela."
+      },
+      {
+        "zh": "任务",
+        "hint": "任务 to zadanie do wykonania w pracy lub projekcie; 作业 kojarzy się ze szkołą."
+      }
+    ]
+  },
+  "方便": {
+    "story": "Fangbian to „wygodny, dogodny” – wyobraź sobie, że masz kwadratowy (fang) plecak, który wygodnie dopasowuje się do pleców, więc wszędzie jest ci wygodnie.",
+    "cues": [
+      "便利",
+      "合适",
+      "顺便"
+    ],
+    "situations": [
+      {
+        "label": "Pytasz o dogodny termin",
+        "zh": "你什么时候方便见面？",
+        "pinyin": "Nǐ shénme shíhou fāngbiàn jiànmiàn?",
+        "en": "When is it convenient for you to meet?",
+        "words": [
+          "你",
+          "什么",
+          "时候",
+          "方便",
+          "见面"
+        ]
+      },
+      {
+        "label": "Chwalisz komunikację w mieście",
+        "zh": "这儿交通很方便。",
+        "pinyin": "Zhèr jiāotōng hěn fāngbiàn.",
+        "en": "Transportation here is very convenient.",
+        "words": [
+          "这儿",
+          "交通",
+          "很",
+          "方便"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "便利",
+        "hint": "便利 to „dogodny” częściej o usługach i sklepach; 方便 bywa też o osobie i czasie."
+      },
+      {
+        "zh": "合适",
+        "hint": "合适 to „odpowiedni, pasujący”; 方便 to „dogodny, wygodny” dla kogoś."
+      },
+      {
+        "zh": "顺便",
+        "hint": "顺便 to „przy okazji”; 方便 to dogodność, nie okazja."
+      }
+    ]
+  },
+  "突然": {
+    "story": "Turan to „nagle” – wyobraź sobie, że tur (turan) wybiega zza rogu i nagle zatrzymuje się przed tobą, aż podskakujesz.",
+    "cues": [
+      "忽然",
+      "猛地",
+      "意外"
+    ],
+    "situations": [
+      {
+        "label": "Opowiadasz o nagłej zmianie pogody",
+        "zh": "天突然下起了大雨。",
+        "pinyin": "Tiān tūrán xià qǐ le dàyǔ.",
+        "en": "Suddenly it started raining heavily.",
+        "words": [
+          "天",
+          "突然",
+          "下",
+          "起",
+          "了",
+          "大雨"
+        ]
+      },
+      {
+        "label": "Ktoś nagle cię woła",
+        "zh": "他突然叫我的名字，我吓了一跳。",
+        "pinyin": "Tā tūrán jiào wǒ de míngzi, wǒ xià le yí tiào.",
+        "en": "He suddenly called my name and I got a fright.",
+        "words": [
+          "他",
+          "突然",
+          "叫",
+          "我",
+          "的",
+          "名字",
+          "我",
+          "吓",
+          "了",
+          "一",
+          "跳"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "忽然",
+        "hint": "忽然 to prawie to samo co „nagle”, ale częściej w opowieściach; 突然 bywa też przymiotnikiem."
+      },
+      {
+        "zh": "猛地",
+        "hint": "猛地 to „gwałtownie, z impetem” o ruchu; 突然 to nagła zmiana lub zdarzenie."
+      },
+      {
+        "zh": "意外",
+        "hint": "意外 to „wypadek” lub „nieoczekiwany”; 突然 podkreśla nagłość w czasie."
+      }
+    ]
+  },
+  "一般": {
+    "story": "Yiban to „zwykle, przeciętnie” – wyobraź sobie jedną (yi) deskę (ban), która jest zupełnie zwyczajna, bez ozdób, taka jak wszystkie inne.",
+    "cues": [
+      "平常",
+      "普通",
+      "通常"
+    ],
+    "situations": [
+      {
+        "label": "Mówisz, że zwykle wstajesz wcześnie",
+        "zh": "我一般早上七点起床。",
+        "pinyin": "Wǒ yìbān zǎoshang qī diǎn qǐchuáng.",
+        "en": "I usually get up at seven in the morning.",
+        "words": [
+          "我",
+          "一般",
+          "早上",
+          "七",
+          "点",
+          "起床"
+        ]
+      },
+      {
+        "label": "Oceniasz jedzenie jako przeciętne",
+        "zh": "这家饭馆的菜一般，不太好吃。",
+        "pinyin": "Zhè jiā fànguǎn de cài yìbān, bú tài hǎochī.",
+        "en": "This restaurant's food is so-so, not very tasty.",
+        "words": [
+          "这",
+          "家",
+          "饭馆",
+          "的",
+          "菜",
+          "一般",
+          "不",
+          "太",
+          "好吃"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "zh": "平常",
+        "hint": "平常 to „na co dzień, zwykle” albo „zwyczajny”; 一般 bywa też oceną „przeciętny”."
+      },
+      {
+        "zh": "普通",
+        "hint": "普通 to „zwykły, pospolity” o rzeczy lub osobie; 一般 częściej o częstotliwości lub poziomie."
+      },
+      {
+        "zh": "通常",
+        "hint": "通常 to formalne „zazwyczaj”; 一般 jest swobodniejsze i częstsze w mowie."
+      }
+    ]
+  }
+}

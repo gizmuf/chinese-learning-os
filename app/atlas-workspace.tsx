@@ -7,7 +7,7 @@ import {GlobalHskSelect, useGlobalHsk} from './global-hsk';
 import type {CloudWord} from './atlas-cloud-model';
 import type {JourneyGroup} from './family-journey-model';
 import type {CloudRoute} from './atlas-cloud-route';
-import {atlasCloudReturn, atlasWorkspaceHref, atlasWorkspaceScroll, isAtlasWorkspaceEntry, readAtlasWorkspaceRoute, type WorkspaceKind, type WorkspaceRoute} from './atlas-workspace-route';
+import {atlasCloudReturn, atlasTrialWord, atlasWorkspaceHref, atlasWorkspaceScroll, isAtlasWorkspaceEntry, readAtlasWorkspaceRoute, type WorkspaceKind, type WorkspaceRoute} from './atlas-workspace-route';
 import {resolveWorkspaceContext, workspaceExploration, workspaceFamilySearch, workspaceGroups, workspaceOriginalHref, workspacePanelOutsideScope, workspaceBoardSize, workspaceScopeLabel, workspaceSelection, type WorkspaceFamilyType} from './atlas-workspace-model';
 import {workspaceExploreEvent} from './atlas-workspace-bridge';
 import {WorkspaceBoard, WorkspaceInspector, WorkspaceJourney, WorkspaceMap, WorkspacePractise, WorkspaceReadingProvider, useWorkspaceAudio} from './atlas-workspace-content';
@@ -21,9 +21,11 @@ import {readReadingLabRoute, readingLabHref} from './reading-lab-route';
 const AtlasAssembly = lazy(() => import('./atlas-assembly'));
 const AtlasStudyCard = lazy(() => import('./atlas-study-card'));
 const AtlasSwipe = lazy(() => import('./atlas-swipe'));
+const AtlasWordTrial = lazy(() => import('./atlas-word-trial'));
 
 const modes = [
-  ['family', 'Whole family', Columns2], ['read', 'Read through', BookOpen], ['map', 'Map', Compass], ['build', 'Build', Layers2], ['swipe', 'Swipe', Hand], ['cards', 'Study cards', BookOpen], ['practise', 'Practise', PenLine],
+  ['family', 'Whole family', Columns2], ['read', 'Read through', BookOpen], ['map', 'Map', Compass], ['build', 'Build', Layers2], ['swipe', 'Swipe', Hand], ['cards', 'Study cards', BookOpen],
+  ['word-trial', 'Porównaj lekcje', Columns2], ['practise', 'Practise', PenLine],
 ] as const;
 
 const originalViews: {name: string; views: [string, CloudRoute['layout']][]}[] = [
@@ -119,7 +121,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
     setError('');
   }, [searchType, searchTerm]);
 
-  function navigate(patch: Partial<WorkspaceRoute>, scroll: number | string | null = null, replace = false) {
+  function navigate(patch: Partial<WorkspaceRoute>, scroll: number | string | null = null, replace = false, origin?: Partial<WorkspaceRoute>) {
     const next = {...route, ...patch};
     const destination = ownHref(next);
     if (destination === query) {
@@ -140,7 +142,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
     const state = {...history.state, atlasWorkspace: {...current, scroll: currentScroll}};
     if (replace) history.replaceState(state, '', destination);
     else {
-      history.replaceState(state, '', window.location.href);
+      history.replaceState(state, '', origin ? ownHref({...route, ...origin}) : window.location.href);
       history.pushState({...history.state, atlasWorkspace: {depth: current.depth + 1, scroll: typeof scroll === 'number' ? scroll : currentScroll}}, '', destination);
     }
     pendingScroll.current = scroll;
@@ -217,6 +219,10 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
   }
 
   function selectMode(mode: WorkspaceRoute['mode']) {
+    if (mode === 'word-trial') {
+      if (route.mode !== mode || route.story) openWordTrial();
+      return;
+    }
     if (mode === 'cards') {
       if (route.mode === 'cards' && !route.story) return;
       const current = route.mode === 'swipe' || route.mode === 'build' ? route.buildHanzi : context.hanzi;
@@ -237,6 +243,11 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
       ?? available.find(entry => entry.words.some(word => word.id === context.word?.id));
     navigate({mode, story: '', step: 0, exercise: '', page: 0, wordId: route.wordId || context.word?.id || '',
       hanzi: route.hanzi || context.hanzi, ...(group ? {group: group.id} : {})}, group?.id ?? 0);
+  }
+
+  function openWordTrial(word?: string, swipeView?: WorkspaceRoute['wordView']) {
+    const origin = route.mode === 'swipe' && word ? {swipeWord: word, wordView: swipeView} : undefined;
+    navigate({mode: 'word-trial', trialWord: atlasTrialWord(word), wide: true, story: '', step: 0, exercise: ''}, 0, false, origin);
   }
 
   function chooseJourney(word: CloudWord, group: JourneyGroup) {
@@ -295,7 +306,8 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
   const building = !embedded && route.mode === 'build' && !route.story;
   const swiping = !embedded && route.mode === 'swipe' && !route.story;
   const studying = route.mode === 'cards' && !route.story;
-  const composing = building || swiping || studying;
+  const trial = !embedded && route.mode === 'word-trial' && !route.story;
+  const composing = building || swiping || studying || trial;
   const canShowStoryPanel = route.mode === 'family' && !route.story;
   const showStoryPanel = canShowStoryPanel && route.storyPanel;
   const shortFamily = (route.relation === 'structure' ? context.structural.length : context.members.length) <= workspaceBoardSize;
@@ -312,7 +324,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
   const inspector = <WorkspaceInspector context={context} route={route} audio={audio} explore={explore} showFamily={anchor => selectFamily(anchor, true)}
     onStory={story} onWriting={() => setExercise('writing')} onBuild={embedded ? undefined : openBuilder} chunksHref={embedded ? '' : chunksHref()}/>;
 
-  return <WorkspaceReadingProvider active={route.mode === 'read' && !route.story} owner={owner} root={root} embedded={!!embedded}><section ref={root} className={'atlas-workspace' + (route.wide ? ' aw-wide' : '') + (showStoryPanel ? ' aw-story-open' : '') + (building ? ' aw-build' : '') + (swiping ? ' aw-swipe' : '')} data-atlas-workspace aria-label="Atlas workspace"
+  return <WorkspaceReadingProvider active={route.mode === 'read' && !route.story} owner={owner} root={root} embedded={!!embedded}><section ref={root} className={'atlas-workspace' + (route.wide ? ' aw-wide' : '') + (showStoryPanel ? ' aw-story-open' : '') + (building ? ' aw-build' : '') + (swiping ? ' aw-swipe' : '') + (trial ? ' aw-word-trial' : '')} data-atlas-workspace aria-label="Atlas workspace"
     onClickCapture={event => {
       const link = (event.target as Element).closest<HTMLAnchorElement>('.aw-inspector a[href*="returnAtlas"]');
       if (link) follow(link, chunksHref);
@@ -332,7 +344,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
             value={draft} onChange={event => setDraft(event.target.value)} lang={familyType === 'literal' ? 'zh-Hans' : undefined} maxLength={familyType === 'literal' ? 8 : 40} aria-invalid={!!error}/>
           <button type="submit" aria-label={familyType === 'literal' ? 'Search word family' : 'Search component family'}><ArrowRight size={17}/></button>
         </form>}
-        {!studying && <label className="aw-scope"><span>{composing ? 'Hanzi' : 'Vocabulary'}</span><GlobalHskSelect label={composing ? 'Hanzi scope' : 'Vocabulary scope'} scope={route.scope} setScope={changeScope}/></label>}
+        {!studying && !trial && <label className="aw-scope"><span>{composing ? 'Hanzi' : 'Vocabulary'}</span><GlobalHskSelect label={composing ? 'Hanzi scope' : 'Vocabulary scope'} scope={route.scope} setScope={changeScope}/></label>}
         <button type="button" className="aw-expand" aria-pressed={route.wide} aria-label={route.wide ? 'Restore workspace' : 'Expand workspace'} title={route.wide ? 'Restore workspace' : 'Expand workspace'}
           onClick={() => navigate({wide: !route.wide}, null, true)}>{route.wide ? <Minimize2 size={17}/> : <Maximize2 size={17}/>}</button>
         {!embedded && <><a className="aw-reader-link" href={readingLabHref(readReadingLabRoute('?hsk=' + route.scope)) + '&returnWorkspace=' + encodeURIComponent(returnQuery())}
@@ -348,8 +360,9 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
       </div>
       {error && <p className="aw-error" role="alert">{error}</p>}
       <div className="aw-header-line aw-navigation">
-        <nav className="aw-modes" aria-label="Atlas presentation">{modes.filter(([mode]) => !embedded || (mode !== 'build' && mode !== 'swipe')).map(([mode, label, Icon]) =>
-          <button key={mode} type="button" aria-pressed={route.mode === mode && !route.story} onClick={() => selectMode(mode)}><Icon size={16}/>{label}</button>
+        <nav className="aw-modes" aria-label="Atlas presentation">{modes.filter(([mode]) => !embedded || (mode !== 'build' && mode !== 'swipe' && mode !== 'word-trial')).map(([mode, label, Icon]) =>
+          <button key={mode} type="button" lang={mode === 'word-trial' ? 'pl' : undefined}
+            aria-pressed={route.mode === mode && !route.story} onClick={() => selectMode(mode)}><Icon size={16}/>{label}</button>
         )}</nav>
         {!composing && <nav className="aw-samples" aria-label="Sample stories and families">
           <button type="button" onClick={() => explore('person', 'component')} title="Person component family"><span lang="zh-Hans">人 / 亻</span> shapes</button>
@@ -370,7 +383,12 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
     {route.story && <AtlasStoryExplorer target={route.story} step={route.step} onStepChange={step => navigate({step}, null, true)} onExplore={explore} onBack={previous}/>}
     {studying && <Suspense fallback={<p role="status">Opening study cards…</p>}>
       <AtlasStudyCard hanzi={route.hanzi || '雪'} onNavigate={hanzi => navigate({hanzi}, 0, true)}
+        onTrial={embedded ? undefined : openWordTrial}
         onClose={() => depth > 0 ? previous() : navigate({mode: 'family', anchor: route.hanzi || '雪', relation: 'literal'}, 0, true)}/>
+    </Suspense>}
+    {trial && <Suspense fallback={<p role="status" lang="pl">Otwieranie porównania lekcji…</p>}>
+      <AtlasWordTrial word={atlasTrialWord(route.trialWord)} onWordChange={trialWord => navigate({trialWord}, null)}
+        onClose={previous}/>
     </Suspense>}
     {building && <Suspense fallback={<p role="status">Opening the hanzi builder…</p>}>
       <AtlasAssembly hanzi={route.buildHanzi} part={route.buildPart} scope={route.scope} owner={owner}
@@ -385,6 +403,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
         onWordViewChange={(view, word) => navigate({wordView: view === 'connections' ? 'connections' : undefined,
           swipeWord: word, familyMap: undefined}, null, true)}
         onFamilyMapChange={open => navigate({familyMap: open}, null, true)}
+        onTrial={openWordTrial}
         widen={() => changeScope('all')}/>
     </Suspense>}
     {!composing && <div className={'aw-layout' + (hideInspector ? ' aw-layout-single' : '') + (showStoryPanel ? ' aw-layout-story' : '')} hidden={!!route.story}>
