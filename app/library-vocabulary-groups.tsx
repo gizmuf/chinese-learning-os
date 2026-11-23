@@ -3,6 +3,7 @@
 import {useMemo, useState} from 'react';
 import {Search} from 'lucide-react';
 import {useI18n} from './i18n';
+import HanziQuickReview from './hanzi-quick-review';
 import {useStudyLookup} from './study-lookup-context';
 import {libraryVocabularyGroups, searchVocabularyGroups, type VocabularyGrouping} from './library-vocabulary-groups-model';
 import type {BrowseScope} from './hsk-scope';
@@ -20,6 +21,7 @@ export default function LibraryVocabularyGroups({scope}: {scope: BrowseScope}) {
   const model = useMemo(() => libraryVocabularyGroups(locale, scope, onlyLevel, kind),
     [locale, scope, onlyLevel, kind]);
   const results = searchVocabularyGroups(model, query);
+  const reviewEntries = results.flatMap(group => group.entries.map(({word}) => word));
 
   return <section className="lvg" aria-label="Grouped HSK vocabulary">
     <div className="lvg-controls">
@@ -40,14 +42,20 @@ export default function LibraryVocabularyGroups({scope}: {scope: BrowseScope}) {
           value={query} onChange={event => { setQuery(event.target.value); setShown(pageSize); }}/>
       </label>
     </div>
-    <p className="lvg-total" role="status">
-      {query.trim() ? `${results.length} matching ${results.length === 1 ? 'group' : 'groups'}` : model.total.toLocaleString() + ' vocabulary entries'}
-    </p>
+    <div className="lvg-results">
+      <p className="lvg-total" role="status">
+        {query.trim() ? `${results.length} matching ${results.length === 1 ? 'group' : 'groups'}` : model.total.toLocaleString() + ' vocabulary entries'}
+      </p>
+      <HanziQuickReview entries={reviewEntries}/>
+    </div>
     {results.slice(0, shown).map(group => <section className="lvg-group" key={group.id} data-group={group.id}>
-      <h2>
-        <span lang={group.kind === 'pinyin' ? undefined : 'zh-Hans'}>{group.label}</span>
-        <small>{group.kind === 'pinyin' ? 'Pinyin' : group.entries.length + ' words'}</small>
-      </h2>
+      <header className="lvg-group-tools">
+        <h2>
+          <span lang={group.kind === 'pinyin' ? undefined : 'zh-Hans'}>{group.label}</span>
+          <small>{group.kind === 'pinyin' ? 'Pinyin' : group.entries.length + ' words'}</small>
+        </h2>
+        <HanziQuickReview entries={group.entries.map(({word}) => word)}/>
+      </header>
       <ul>
         {group.entries.map(({word, highlights}) => <li key={word.id} data-vocabulary-word={word.hanzi}>
           <button type="button" lang="zh-Hans" className="lvg-hanzi" aria-label={'Definition of ' + word.hanzi}
