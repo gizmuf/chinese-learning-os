@@ -29,6 +29,7 @@ const worksheetSources=[
  'data/practical-2026-11-17/sections-01-07.json',
  'data/practical-2026-11-17/sections-08-14.json',
  'data/reference-lessons/teaching.json',
+ 'app/reference-room-routes-data.ts',
  'data/my-day-01-v2.json',
  'data/shuoshuo-companion.json',
  'data/speaking-chunks/content.json',

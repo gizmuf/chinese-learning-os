@@ -1,4 +1,4 @@
-export const referenceMaterialIds=['time-dates','movement-directions','shang'] as const;
+export const referenceMaterialIds=['time-dates','movement-directions','shang','room-routes'] as const;
 export type ReferenceMaterialId=typeof referenceMaterialIds[number];
 export type ReferenceEntry={id:string;hanzi:string;pinyin:string;en:string;sourcePages:number[];note?:string;origin?:'source'|'practice'};
 export type ReferenceTopic={id:string;title:string;explanation:string;sourcePages:number[];termIds:string[];exampleIds:string[];visualIntent:string;correction?:string};
