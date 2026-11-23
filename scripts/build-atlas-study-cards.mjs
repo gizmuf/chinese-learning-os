@@ -125,7 +125,7 @@ const corpusPaths = [
   'data/practical-2026-11-17/sections-08-14.json', 'data/reference-lessons/movement-directions.json',
   'data/reference-lessons/shang.json', 'data/reference-lessons/time-dates.json',
   'data/reference-lessons/teaching.json', 'data/connectors-phone-lesson.json',
-  'data/reading-lab.json', 'data/reading-lab-podcast-53.json', 'data/reading-lab-linked-ditouzu.json',
+  'data/reading-lab.json', 'data/reading-lab-podcast-53.json',
   'data/shuoshuo-morning.json', 'data/shuoshuo-companion.json', 'data/my-day-01-v2.json',
   'data/video-self-introduction/content.json', 'data/speaking-chunks/content.json',
   'data/hsk-grammar-supplements.json', 'data/grammar-hsk3-a.json', 'data/grammar-hsk3-b.json',
