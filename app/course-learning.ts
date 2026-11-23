@@ -33,7 +33,7 @@ export const activityIds = [
 export const courseEventSchema = z
   .object({
     id: z.string().uuid(),
-    lessonId: z.enum(["intensive-03", "intensive-04", "intensive-05", "intensive-06", "intensive-07", "intensive-08", "intensive-09", "intensive-10", "intensive-11", "intensive-12", "reference-time-dates", "reference-movement-directions", "reference-shang", "video-self-introduction", "grammar-hsk3", "speaking-chunks"]),
+    lessonId: z.enum(["intensive-03", "intensive-04", "intensive-05", "intensive-06", "intensive-07", "intensive-08", "intensive-09", "intensive-10", "intensive-11", "intensive-12", "reference-time-dates", "reference-movement-directions", "reference-shang", "reference-room-routes", "video-self-introduction", "grammar-hsk3", "speaking-chunks"]),
     activityId: z.string(),
     kind: z.enum(["answer", "study", "writing"]),
     correct: z.boolean().nullable(),
