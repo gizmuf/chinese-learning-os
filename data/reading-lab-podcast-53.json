@@ -1,0 +1,546 @@
+{
+  "id": "podcast-53-after-work",
+  "level": 3,
+  "title": {
+    "hanzi": "下班后的十分钟",
+    "pinyin": "Xiàbān hòu de shí fēnzhōng",
+    "english": "Ten minutes after work"
+  },
+  "topic": "Chinese Daily Podcast #53 · Running and routines",
+  "levelIntent": "HSK 3 practice. Read about an evening routine and learn a few words about running, stress and small goals.",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "english": "I used to go on my phone as soon as I got off work. Even after dinner, my phone was still in my hand. One day I went downstairs to pick up a package and only then noticed a little river outside my apartment complex.",
+      "sentenceEnglish": [
+        "I used to go on my phone as soon as I got off work.",
+        "Even after dinner, my phone was still in my hand.",
+        "One day I went downstairs to pick up a package and only then noticed a little river outside my apartment complex."
+      ],
+      "chunks": [
+        {
+          "id": "p1-c1",
+          "tokens": [
+            {"text": "我", "pinyin": ["wǒ"]},
+            {"text": "以前", "pinyin": ["yǐ", "qián"]},
+            {"text": "一", "pinyin": ["yī"]},
+            {"text": "下班", "pinyin": ["xià", "bān"]},
+            {"text": "就", "pinyin": ["jiù"]},
+            {"text": "看", "pinyin": ["kàn"]},
+            {"text": "手机", "pinyin": ["shǒu", "jī"]},
+            {"text": "。", "pinyin": []}
+          ]
+        },
+        {
+          "id": "p1-c2",
+          "tokens": [
+            {"text": "饭", "pinyin": ["fàn"]},
+            {"text": "都", "pinyin": ["dōu"]},
+            {"text": "吃", "pinyin": ["chī"]},
+            {"text": "完", "pinyin": ["wán"]},
+            {"text": "了", "pinyin": ["le"]},
+            {"text": "，", "pinyin": []},
+            {"text": "手机", "pinyin": ["shǒu", "jī"]},
+            {"text": "还", "pinyin": ["hái"]},
+            {"text": "在", "pinyin": ["zài"]},
+            {"text": "手里", "pinyin": ["shǒu", "lǐ"]},
+            {"text": "。", "pinyin": []}
+          ]
+        },
+        {
+          "id": "p1-c3",
+          "tokens": [
+            {"text": "有", "pinyin": ["yǒu"]},
+            {"text": "一", "pinyin": ["yī"]},
+            {"text": "天", "pinyin": ["tiān"]},
+            {"text": "，", "pinyin": []},
+            {"text": "我", "pinyin": ["wǒ"]},
+            {"text": "去", "pinyin": ["qù"]},
+            {"text": "楼下", "pinyin": ["lóu", "xià"]},
+            {"text": "拿", "pinyin": ["ná"]},
+            {"text": "快递", "pinyin": ["kuài", "dì"]},
+            {"text": "，", "pinyin": []},
+            {"text": "才", "pinyin": ["cái"]},
+            {"text": "发现", "pinyin": ["fā", "xiàn"]},
+            {"text": "小区", "pinyin": ["xiǎo", "qū"]},
+            {"text": "外面", "pinyin": ["wài", "miàn"]},
+            {"text": "有", "pinyin": ["yǒu"]},
+            {"text": "一", "pinyin": ["yī"]},
+            {"text": "条", "pinyin": ["tiáo"]},
+            {"text": "小", "pinyin": ["xiǎo"]},
+            {"text": "河", "pinyin": ["hé"]},
+            {"text": "。", "pinyin": []}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "english": "After dinner the next day, I left my phone at home and went for a walk by the river. When I reached the first streetlamp, I decided to give running a try. I ran only as far as the second lamp before switching back to walking. It was a short distance, but it felt better than sitting at home.",
+      "sentenceEnglish": [
+        "After dinner the next day, I left my phone at home and went for a walk by the river.",
+        "When I reached the first streetlamp, I decided to give running a try.",
+        "I ran only as far as the second lamp before switching back to walking.",
+        "It was a short distance, but it felt better than sitting at home."
+      ],
+      "chunks": [
+        {
+          "id": "p2-c1",
+          "tokens": [
+            {"text": "第二天", "pinyin": ["dì", "èr", "tiān"]},
+            {"text": "晚饭", "pinyin": ["wǎn", "fàn"]},
+            {"text": "后", "pinyin": ["hòu"]},
+            {"text": "，", "pinyin": []},
+            {"text": "我", "pinyin": ["wǒ"]},
+            {"text": "把", "pinyin": ["bǎ"]},
+            {"text": "手机", "pinyin": ["shǒu", "jī"]},
+            {"text": "留", "pinyin": ["liú"]},
+            {"text": "在", "pinyin": ["zài"]},
+            {"text": "家里", "pinyin": ["jiā", "lǐ"]},
+            {"text": "，", "pinyin": []},
+            {"text": "去", "pinyin": ["qù"]},
+            {"text": "河边", "pinyin": ["hé", "biān"]},
+            {"text": "散步", "pinyin": ["sàn", "bù"]},
+            {"text": "。", "pinyin": []}
+          ]
+        },
+        {
+          "id": "p2-c2",
+          "tokens": [
+            {"text": "走", "pinyin": ["zǒu"]},
+            {"text": "到", "pinyin": ["dào"]},
+            {"text": "第一", "pinyin": ["dì", "yī"]},
+            {"text": "盏", "pinyin": ["zhǎn"]},
+            {"text": "路灯", "pinyin": ["lù", "dēng"]},
+            {"text": "下面", "pinyin": ["xià", "miàn"]},
+            {"text": "，", "pinyin": []},
+            {"text": "我", "pinyin": ["wǒ"]},
+            {"text": "想", "pinyin": ["xiǎng"]},
+            {"text": "试试", "pinyin": ["shì", "shi"]},
+            {"text": "跑步", "pinyin": ["pǎo", "bù"]},
+            {"text": "。", "pinyin": []}
+          ]
+        },
+        {
+          "id": "p2-c3",
+          "tokens": [
+            {"text": "我", "pinyin": ["wǒ"]},
+            {"text": "只", "pinyin": ["zhǐ"]},
+            {"text": "跑", "pinyin": ["pǎo"]},
+            {"text": "到", "pinyin": ["dào"]},
+            {"text": "第二", "pinyin": ["dì", "èr"]},
+            {"text": "盏", "pinyin": ["zhǎn"]},
+            {"text": "灯", "pinyin": ["dēng"]},
+            {"text": "，", "pinyin": []},
+            {"text": "就", "pinyin": ["jiù"]},
+            {"text": "改成", "pinyin": ["gǎi", "chéng"]},
+            {"text": "走路", "pinyin": ["zǒu", "lù"]},
+            {"text": "了", "pinyin": ["le"]},
+            {"text": "。", "pinyin": []}
+          ]
+        },
+        {
+          "id": "p2-c4",
+          "tokens": [
+            {"text": "这", "pinyin": ["zhè"]},
+            {"text": "点", "pinyin": ["diǎn"]},
+            {"text": "路", "pinyin": ["lù"]},
+            {"text": "不", "pinyin": ["bù"]},
+            {"text": "长", "pinyin": ["cháng"]},
+            {"text": "，", "pinyin": []},
+            {"text": "可是", "pinyin": ["kě", "shì"]},
+            {"text": "我", "pinyin": ["wǒ"]},
+            {"text": "觉得", "pinyin": ["jué", "de"]},
+            {"text": "比", "pinyin": ["bǐ"]},
+            {"text": "在", "pinyin": ["zài"]},
+            {"text": "家", "pinyin": ["jiā"]},
+            {"text": "坐着", "pinyin": ["zuò", "zhe"]},
+            {"text": "舒服", "pinyin": ["shū", "fu"]},
+            {"text": "。", "pinyin": []}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "english": "Later I set myself a small goal of getting outside for ten minutes every day. When I had the energy, I ran a bit farther. When I was stressed, I walked slowly first and then decided whether to run.",
+      "sentenceEnglish": [
+        "Later I set myself a small goal of getting outside for ten minutes every day.",
+        "When I had the energy, I ran a bit farther.",
+        "When I was stressed, I walked slowly first and then decided whether to run."
+      ],
+      "chunks": [
+        {
+          "id": "p3-c1",
+          "tokens": [
+            {"text": "后来", "pinyin": ["hòu", "lái"]},
+            {"text": "，", "pinyin": []},
+            {"text": "我", "pinyin": ["wǒ"]},
+            {"text": "给", "pinyin": ["gěi"]},
+            {"text": "自己", "pinyin": ["zì", "jǐ"]},
+            {"text": "定", "pinyin": ["dìng"]},
+            {"text": "了", "pinyin": ["le"]},
+            {"text": "一", "pinyin": ["yī"]},
+            {"text": "个", "pinyin": ["gè"]},
+            {"text": "小", "pinyin": ["xiǎo"]},
+            {"text": "目标", "pinyin": ["mù", "biāo"]},
+            {"text": "，", "pinyin": []},
+            {"text": "每天", "pinyin": ["měi", "tiān"]},
+            {"text": "出门", "pinyin": ["chū", "mén"]},
+            {"text": "十", "pinyin": ["shí"]},
+            {"text": "分钟", "pinyin": ["fēn", "zhōng"]},
+            {"text": "。", "pinyin": []}
+          ]
+        },
+        {
+          "id": "p3-c2",
+          "tokens": [
+            {"text": "有", "pinyin": ["yǒu"]},
+            {"text": "力气", "pinyin": ["lì", "qi"]},
+            {"text": "的", "pinyin": ["de"]},
+            {"text": "时候", "pinyin": ["shí", "hou"]},
+            {"text": "，", "pinyin": []},
+            {"text": "我", "pinyin": ["wǒ"]},
+            {"text": "就", "pinyin": ["jiù"]},
+            {"text": "多", "pinyin": ["duō"]},
+            {"text": "跑", "pinyin": ["pǎo"]},
+            {"text": "一点", "pinyin": ["yī", "diǎn"]},
+            {"text": "。", "pinyin": []}
+          ]
+        },
+        {
+          "id": "p3-c3",
+          "tokens": [
+            {"text": "有", "pinyin": ["yǒu"]},
+            {"text": "压力", "pinyin": ["yā", "lì"]},
+            {"text": "的", "pinyin": ["de"]},
+            {"text": "时候", "pinyin": ["shí", "hou"]},
+            {"text": "，", "pinyin": []},
+            {"text": "我", "pinyin": ["wǒ"]},
+            {"text": "先", "pinyin": ["xiān"]},
+            {"text": "慢慢", "pinyin": ["màn", "màn"]},
+            {"text": "走", "pinyin": ["zǒu"]},
+            {"text": "，", "pinyin": []},
+            {"text": "再", "pinyin": ["zài"]},
+            {"text": "决定", "pinyin": ["jué", "dìng"]},
+            {"text": "要", "pinyin": ["yào"]},
+            {"text": "不", "pinyin": ["bù"]},
+            {"text": "要", "pinyin": ["yào"]},
+            {"text": "跑", "pinyin": ["pǎo"]},
+            {"text": "。", "pinyin": []}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "english": "On Friday, people were doing square dancing in the plaza by the river. When I finished running, I had a quick chat with an older woman. She said she felt a lot more at ease when everyone got together and chatted.",
+      "sentenceEnglish": [
+        "On Friday, people were doing square dancing in the plaza by the river.",
+        "When I finished running, I had a quick chat with an older woman.",
+        "She said she felt a lot more at ease when everyone got together and chatted."
+      ],
+      "chunks": [
+        {
+          "id": "p4-c1",
+          "tokens": [
+            {"text": "星期五", "pinyin": ["xīng", "qī", "wǔ"]},
+            {"text": "，", "pinyin": []},
+            {"text": "河边", "pinyin": ["hé", "biān"]},
+            {"text": "的", "pinyin": ["de"]},
+            {"text": "广场", "pinyin": ["guǎng", "chǎng"]},
+            {"text": "上", "pinyin": ["shàng"]},
+            {"text": "有人", "pinyin": ["yǒu", "rén"]},
+            {"text": "跳", "pinyin": ["tiào"]},
+            {"text": "广场舞", "pinyin": ["guǎng", "chǎng", "wǔ"]},
+            {"text": "。", "pinyin": []}
+          ]
+        },
+        {
+          "id": "p4-c2",
+          "tokens": [
+            {"text": "我", "pinyin": ["wǒ"]},
+            {"text": "跑", "pinyin": ["pǎo"]},
+            {"text": "完", "pinyin": ["wán"]},
+            {"text": "跟", "pinyin": ["gēn"]},
+            {"text": "一", "pinyin": ["yī"]},
+            {"text": "位", "pinyin": ["wèi"]},
+            {"text": "阿姨", "pinyin": ["ā", "yí"]},
+            {"text": "聊", "pinyin": ["liáo"]},
+            {"text": "了", "pinyin": ["le"]},
+            {"text": "几", "pinyin": ["jǐ"]},
+            {"text": "句", "pinyin": ["jù"]},
+            {"text": "。", "pinyin": []}
+          ]
+        },
+        {
+          "id": "p4-c3",
+          "tokens": [
+            {"text": "她", "pinyin": ["tā"]},
+            {"text": "说", "pinyin": ["shuō"]},
+            {"text": "，", "pinyin": []},
+            {"text": "大家", "pinyin": ["dà", "jiā"]},
+            {"text": "见", "pinyin": ["jiàn"]},
+            {"text": "个", "pinyin": ["gè"]},
+            {"text": "面", "pinyin": ["miàn"]},
+            {"text": "，", "pinyin": []},
+            {"text": "聊聊天", "pinyin": ["liáo", "liáo", "tiān"]},
+            {"text": "，", "pinyin": []},
+            {"text": "心里", "pinyin": ["xīn", "lǐ"]},
+            {"text": "就", "pinyin": ["jiù"]},
+            {"text": "轻松", "pinyin": ["qīng", "sōng"]},
+            {"text": "多", "pinyin": ["duō"]},
+            {"text": "了", "pinyin": ["le"]},
+            {"text": "。", "pinyin": []}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "english": "After two weeks, it was easier to relax after work. I thought I could approach studying Chinese in the same way. As long as I read a short passage each day and use one new word in a sentence, I can keep it up.",
+      "sentenceEnglish": [
+        "After two weeks, it was easier to relax after work.",
+        "I thought I could approach studying Chinese in the same way.",
+        "As long as I read a short passage each day and use one new word in a sentence, I can keep it up."
+      ],
+      "chunks": [
+        {
+          "id": "p5-c1",
+          "tokens": [
+            {"text": "过", "pinyin": ["guò"]},
+            {"text": "了", "pinyin": ["le"]},
+            {"text": "两", "pinyin": ["liǎng"]},
+            {"text": "个", "pinyin": ["gè"]},
+            {"text": "星期", "pinyin": ["xīng", "qī"]},
+            {"text": "，", "pinyin": []},
+            {"text": "我", "pinyin": ["wǒ"]},
+            {"text": "下班", "pinyin": ["xià", "bān"]},
+            {"text": "后", "pinyin": ["hòu"]},
+            {"text": "更", "pinyin": ["gèng"]},
+            {"text": "容易", "pinyin": ["róng", "yì"]},
+            {"text": "放松", "pinyin": ["fàng", "sōng"]},
+            {"text": "了", "pinyin": ["le"]},
+            {"text": "。", "pinyin": []}
+          ]
+        },
+        {
+          "id": "p5-c2",
+          "tokens": [
+            {"text": "我", "pinyin": ["wǒ"]},
+            {"text": "想", "pinyin": ["xiǎng"]},
+            {"text": "，", "pinyin": []},
+            {"text": "学", "pinyin": ["xué"]},
+            {"text": "中文", "pinyin": ["zhōng", "wén"]},
+            {"text": "也", "pinyin": ["yě"]},
+            {"text": "可以", "pinyin": ["kě", "yǐ"]},
+            {"text": "这样", "pinyin": ["zhè", "yàng"]},
+            {"text": "安排", "pinyin": ["ān", "pái"]},
+            {"text": "。", "pinyin": []}
+          ]
+        },
+        {
+          "id": "p5-c3",
+          "tokens": [
+            {"text": "只要", "pinyin": ["zhǐ", "yào"]},
+            {"text": "每天", "pinyin": ["měi", "tiān"]},
+            {"text": "读", "pinyin": ["dú"]},
+            {"text": "一", "pinyin": ["yī"]},
+            {"text": "小", "pinyin": ["xiǎo"]},
+            {"text": "段", "pinyin": ["duàn"]},
+            {"text": "，", "pinyin": []},
+            {"text": "再", "pinyin": ["zài"]},
+            {"text": "用", "pinyin": ["yòng"]},
+            {"text": "一", "pinyin": ["yī"]},
+            {"text": "个", "pinyin": ["gè"]},
+            {"text": "新", "pinyin": ["xīn"]},
+            {"text": "词", "pinyin": ["cí"]},
+            {"text": "说", "pinyin": ["shuō"]},
+            {"text": "一", "pinyin": ["yī"]},
+            {"text": "句", "pinyin": ["jù"]},
+            {"text": "话", "pinyin": ["huà"]},
+            {"text": "，", "pinyin": []},
+            {"text": "我", "pinyin": ["wǒ"]},
+            {"text": "就", "pinyin": ["jiù"]},
+            {"text": "能", "pinyin": ["néng"]},
+            {"text": "慢慢", "pinyin": ["màn", "màn"]},
+            {"text": "坚持", "pinyin": ["jiān", "chí"]},
+            {"text": "下去", "pinyin": ["xià", "qù"]},
+            {"text": "。", "pinyin": []}
+          ]
+        }
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "as-soon-as",
+      "pattern": "一……就……",
+      "note": "Use 一 and 就 to connect an event with what happens immediately after it.",
+      "example": {
+        "hanzi": "我一到家就给你打电话。",
+        "pinyin": "Wǒ yī dào jiā jiù gěi nǐ dǎ diànhuà.",
+        "english": "I will call you as soon as I get home."
+      },
+      "sourceChunks": [
+        "p1-c1"
+      ]
+    },
+    {
+      "id": "first-then",
+      "pattern": "先……再……",
+      "note": "Use 先 for the first action and 再 for the action that follows.",
+      "example": {
+        "hanzi": "我们先买菜，再回家做饭。",
+        "pinyin": "Wǒmen xiān mǎi cài, zài huí jiā zuòfàn.",
+        "english": "We will buy groceries first, then go home to cook."
+      },
+      "sourceChunks": [
+        "p3-c3"
+      ]
+    },
+    {
+      "id": "as-long-as",
+      "pattern": "只要……就……",
+      "note": "Use 只要 to give a sufficient condition and 就 to introduce the result.",
+      "example": {
+        "hanzi": "只要今天不下雨，我们就去公园。",
+        "pinyin": "Zhǐyào jīntiān bù xiàyǔ, wǒmen jiù qù gōngyuán.",
+        "english": "As long as it does not rain today, we will go to the park."
+      },
+      "sourceChunks": [
+        "p5-c3"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "first-run",
+      "question": "第一次跑步时，“我”跑到哪儿就改成走路了？",
+      "answer": "我跑到第二盏灯就改成走路了。",
+      "evidence": {
+        "paragraphId": "p2",
+        "chunkId": "p2-c3"
+      }
+    },
+    {
+      "id": "small-goal",
+      "question": "“我”给自己定了什么小目标？",
+      "answer": "我的小目标是每天出门十分钟。",
+      "evidence": {
+        "paragraphId": "p3",
+        "chunkId": "p3-c1"
+      }
+    },
+    {
+      "id": "chinese-routine",
+      "question": "“我”打算怎么学中文？",
+      "answer": "每天读一小段，再用一个新词说一句话。",
+      "evidence": {
+        "paragraphId": "p5",
+        "chunkId": "p5-c3"
+      }
+    }
+  ],
+  "writing": {
+    "prompt": "写三句话，说说你下班后想做的一件小事。",
+    "english": "Write three sentences about one small thing you would like to do after work.",
+    "requirements": [
+      "说一说你现在下班后通常做什么。",
+      "用先……再……写出你的新计划。"
+    ]
+  },
+  "glossaryCandidates": [
+    "散步",
+    "跑步",
+    "路灯",
+    "目标",
+    "压力",
+    "广场舞",
+    "轻松",
+    "放松",
+    "坚持"
+  ],
+  "episode": {
+    "title": "Chinese Daily Podcast #53",
+    "youtubeId": "rFaUTrhom5Y",
+    "transcriptUrl": "https://chinesedailypodcast.blogspot.com/2025/09/podcast-53.html",
+    "chapters": [
+      {
+        "seconds": 0,
+        "label": "Feeling stuck"
+      },
+      {
+        "seconds": 161,
+        "label": "Stress after work"
+      },
+      {
+        "seconds": 333,
+        "label": "The first run"
+      },
+      {
+        "seconds": 577,
+        "label": "Changes in daily life"
+      },
+      {
+        "seconds": 772,
+        "label": "Square dancing"
+      },
+      {
+        "seconds": 962,
+        "label": "Building a habit"
+      },
+      {
+        "seconds": 1096,
+        "label": "Vocabulary recap"
+      }
+    ],
+    "vocabulary": [
+      {
+        "hanzi": "散步",
+        "pinyin": "sànbù",
+        "english": "to take a walk"
+      },
+      {
+        "hanzi": "跑步",
+        "pinyin": "pǎobù",
+        "english": "to run or jog"
+      },
+      {
+        "hanzi": "路灯",
+        "pinyin": "lùdēng",
+        "english": "streetlamp"
+      },
+      {
+        "hanzi": "目标",
+        "pinyin": "mùbiāo",
+        "english": "goal"
+      },
+      {
+        "hanzi": "压力",
+        "pinyin": "yālì",
+        "english": "stress or pressure"
+      },
+      {
+        "hanzi": "广场舞",
+        "pinyin": "guǎngchǎngwǔ",
+        "english": "group dancing in a public square"
+      },
+      {
+        "hanzi": "轻松",
+        "pinyin": "qīngsōng",
+        "english": "to feel at ease"
+      },
+      {
+        "hanzi": "放松",
+        "pinyin": "fàngsōng",
+        "english": "to relax"
+      },
+      {
+        "hanzi": "坚持",
+        "pinyin": "jiānchí",
+        "english": "to keep at something"
+      }
+    ]
+  }
+}

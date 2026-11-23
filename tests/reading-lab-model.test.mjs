@@ -9,6 +9,7 @@ const {outputFiles: [bundle]} = await build({
   stdin: {
     contents: `export * from './app/reading-lab-model'; export {hskLevelIndex} from './app/hsk-level-model';
       export {authoredCharacterReadings} from './app/pinyin-boundaries';
+      export {readingLabReadings} from './app/reading-lab-data';
       export {contextualDictionaryEntry} from './app/dictionary-source-model';`,
     resolveDir: process.cwd(),
   },
@@ -36,6 +37,17 @@ const article = {
   writing: {prompt: 'Write an invitation.', english: 'Use your own words.', requirements: ['Give a time.']},
   glossaryCandidates: ['巾'],
 };
+
+test('Podcast 53 has aligned reading aids, evidence, and vocabulary from the companion text', () => {
+  const reading = model.readingLabReadings.find(row => row.id === 'podcast-53-after-work');
+  assert.equal(reading.level, 3);
+  assert.deepEqual(model.validateReading(reading), []);
+  assert.equal(reading.paragraphs.flatMap(model.splitReadingSentences).length, 16);
+  const words = new Set(reading.paragraphs.flatMap(p => p.chunks.flatMap(c => c.tokens.map(t => t.text))));
+  assert.ok(reading.episode.vocabulary.every(entry => words.has(entry.hanzi)));
+  assert.equal(reading.episode.youtubeId, 'rFaUTrhom5Y');
+  assert.deepEqual(reading.episode.chapters.map(c => c.seconds), [0, 161, 333, 577, 772, 962, 1096]);
+});
 
 test('authored readings map tone signs to Hanzi and leave punctuation unmarked', () => {
   assert.deepEqual(model.tokenGlyphs({text: '妈妈，', pinyin: ['mā', 'ma']}), [
