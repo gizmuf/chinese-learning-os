@@ -20,9 +20,9 @@ const eligible = {
   writing: new Set(examCharacters('3', 'writing')),
 };
 
-/** Character available in the first Atlas study-card release. */
+/** Official cumulative recognition list used by the character study cards. */
 export function hasRecognitionStudyCard(glyph: string) {
-  return glyph === '雪';
+  return eligible.recognition.has(glyph);
 }
 
 export function readExamChecklist(saved: string | null): ExamChecklist {
