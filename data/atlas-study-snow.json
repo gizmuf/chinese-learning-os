@@ -1,0 +1,1345 @@
+{
+  "entry": {
+    "hanzi": "雪",
+    "pinyin": "xuě",
+    "english": "snow",
+    "levels": [
+      "1"
+    ]
+  },
+  "words": [
+    {
+      "hanzi": "雪",
+      "pinyin": "xuě",
+      "english": "snow",
+      "levels": [
+        "1"
+      ],
+      "example": {
+        "hanzi": "雪停了。",
+        "pinyin": "Xuě tíng le.",
+        "english": "The snow has stopped.",
+        "words": [
+          {
+            "hanzi": "雪",
+            "pinyin": "xuě",
+            "english": "snow",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "停",
+            "pinyin": "tíng",
+            "english": "stop",
+            "levels": [
+              "4"
+            ]
+          },
+          {
+            "hanzi": "了",
+            "pinyin": "le",
+            "english": "change of state or completed action",
+            "levels": [
+              "1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "hanzi": "下雪",
+      "pinyin": "xià xuě",
+      "english": "to snow",
+      "levels": [],
+      "example": {
+        "hanzi": "下雪了。",
+        "pinyin": "Xià xuě le.",
+        "english": "It’s snowing.",
+        "words": [
+          {
+            "hanzi": "下雪",
+            "pinyin": "xià xuě",
+            "english": "to snow",
+            "levels": []
+          },
+          {
+            "hanzi": "了",
+            "pinyin": "le",
+            "english": "change of state or completed action",
+            "levels": [
+              "1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "hanzi": "雪花",
+      "pinyin": "xuěhuā",
+      "english": "snowflake",
+      "levels": [],
+      "example": {
+        "hanzi": "雪花落在窗台上。",
+        "pinyin": "Xuěhuā luò zài chuāngtái shang.",
+        "english": "Snowflakes fall on the windowsill.",
+        "words": [
+          {
+            "hanzi": "雪花",
+            "pinyin": "xuěhuā",
+            "english": "snowflake",
+            "levels": []
+          },
+          {
+            "hanzi": "落",
+            "pinyin": "luò",
+            "english": "fall",
+            "levels": [
+              "4",
+              "6"
+            ]
+          },
+          {
+            "hanzi": "在",
+            "pinyin": "zài",
+            "english": "at",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "窗台",
+            "pinyin": "chuāngtái",
+            "english": "windowsill",
+            "levels": [
+              "5"
+            ]
+          },
+          {
+            "hanzi": "上",
+            "pinyin": "shang",
+            "english": "on",
+            "levels": [
+              "1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "hanzi": "大雪",
+      "pinyin": "dàxuě",
+      "english": "heavy snow",
+      "levels": [],
+      "example": {
+        "hanzi": "大雪封了路。",
+        "pinyin": "Dàxuě fēng le lù.",
+        "english": "Heavy snow blocked the road.",
+        "words": [
+          {
+            "hanzi": "大雪",
+            "pinyin": "dàxuě",
+            "english": "heavy snow",
+            "levels": []
+          },
+          {
+            "hanzi": "封",
+            "pinyin": "fēng",
+            "english": "block off",
+            "levels": [
+              "3"
+            ]
+          },
+          {
+            "hanzi": "了",
+            "pinyin": "le",
+            "english": "change of state or completed action",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "路",
+            "pinyin": "lù",
+            "english": "road",
+            "levels": [
+              "2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "hanzi": "小雪",
+      "pinyin": "xiǎoxuě",
+      "english": "light snow",
+      "levels": [],
+      "example": {
+        "hanzi": "外面下着小雪。",
+        "pinyin": "Wàimiàn xiàzhe xiǎoxuě.",
+        "english": "It’s snowing lightly outside.",
+        "words": [
+          {
+            "hanzi": "外面",
+            "pinyin": "wàimiàn",
+            "english": "outside",
+            "levels": [
+              "2"
+            ]
+          },
+          {
+            "hanzi": "下",
+            "pinyin": "xià",
+            "english": "fall (of precipitation)",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "着",
+            "pinyin": "zhe",
+            "english": "ongoing action or state",
+            "levels": [
+              "2",
+              "4"
+            ]
+          },
+          {
+            "hanzi": "小雪",
+            "pinyin": "xiǎoxuě",
+            "english": "light snow",
+            "levels": []
+          }
+        ]
+      }
+    },
+    {
+      "hanzi": "雪人",
+      "pinyin": "xuěrén",
+      "english": "snowman",
+      "levels": [],
+      "example": {
+        "hanzi": "我们一起堆雪人吧。",
+        "pinyin": "Wǒmen yìqǐ duī xuěrén ba.",
+        "english": "Let’s build a snowman together.",
+        "words": [
+          {
+            "hanzi": "我们",
+            "pinyin": "wǒmen",
+            "english": "we",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "一起",
+            "pinyin": "yìqǐ",
+            "english": "together",
+            "levels": [
+              "2"
+            ]
+          },
+          {
+            "hanzi": "堆",
+            "pinyin": "duī",
+            "english": "pile up or build",
+            "levels": [
+              "5"
+            ]
+          },
+          {
+            "hanzi": "雪人",
+            "pinyin": "xuěrén",
+            "english": "snowman",
+            "levels": []
+          },
+          {
+            "hanzi": "吧",
+            "pinyin": "ba",
+            "english": "suggestion particle",
+            "levels": [
+              "1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "hanzi": "雪球",
+      "pinyin": "xuěqiú",
+      "english": "snowball",
+      "levels": [],
+      "example": {
+        "hanzi": "他扔了个雪球。",
+        "pinyin": "Tā rēng le ge xuěqiú.",
+        "english": "He threw a snowball.",
+        "words": [
+          {
+            "hanzi": "他",
+            "pinyin": "tā",
+            "english": "he",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "扔",
+            "pinyin": "rēng",
+            "english": "throw",
+            "levels": [
+              "4"
+            ]
+          },
+          {
+            "hanzi": "了",
+            "pinyin": "le",
+            "english": "change of state or completed action",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "个",
+            "pinyin": "ge",
+            "english": "general classifier",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "雪球",
+            "pinyin": "xuěqiú",
+            "english": "snowball",
+            "levels": []
+          }
+        ]
+      }
+    },
+    {
+      "hanzi": "雪山",
+      "pinyin": "xuěshān",
+      "english": "snow-capped mountain",
+      "levels": [
+        "7-9"
+      ],
+      "example": {
+        "hanzi": "远处有一座雪山。",
+        "pinyin": "Yuǎnchù yǒu yí zuò xuěshān.",
+        "english": "There’s a snow-capped mountain in the distance.",
+        "words": [
+          {
+            "hanzi": "远处",
+            "pinyin": "yuǎnchù",
+            "english": "in the distance",
+            "levels": []
+          },
+          {
+            "hanzi": "有",
+            "pinyin": "yǒu",
+            "english": "there is",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "一",
+            "pinyin": "yí",
+            "english": "one",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "座",
+            "pinyin": "zuò",
+            "english": "classifier for mountains and large structures",
+            "levels": [
+              "4"
+            ]
+          },
+          {
+            "hanzi": "雪山",
+            "pinyin": "xuěshān",
+            "english": "snow-capped mountain",
+            "levels": [
+              "7-9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "hanzi": "雪地",
+      "pinyin": "xuědì",
+      "english": "snow-covered ground",
+      "levels": [],
+      "example": {
+        "hanzi": "雪地上有脚印。",
+        "pinyin": "Xuědì shang yǒu jiǎoyìn.",
+        "english": "There are footprints in the snow.",
+        "words": [
+          {
+            "hanzi": "雪地",
+            "pinyin": "xuědì",
+            "english": "snow-covered ground",
+            "levels": []
+          },
+          {
+            "hanzi": "上",
+            "pinyin": "shang",
+            "english": "on",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "有",
+            "pinyin": "yǒu",
+            "english": "there is",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "脚印",
+            "pinyin": "jiǎoyìn",
+            "english": "footprint",
+            "levels": [
+              "6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "hanzi": "雪白",
+      "pinyin": "xuěbái",
+      "english": "snow-white",
+      "levels": [],
+      "example": {
+        "hanzi": "她穿着雪白的衬衫。",
+        "pinyin": "Tā chuānzhe xuěbái de chènshān.",
+        "english": "She’s wearing a snow-white shirt.",
+        "words": [
+          {
+            "hanzi": "她",
+            "pinyin": "tā",
+            "english": "she",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "穿",
+            "pinyin": "chuān",
+            "english": "wear",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "着",
+            "pinyin": "zhe",
+            "english": "ongoing action or state",
+            "levels": [
+              "2",
+              "4"
+            ]
+          },
+          {
+            "hanzi": "雪白",
+            "pinyin": "xuěbái",
+            "english": "snow-white",
+            "levels": []
+          },
+          {
+            "hanzi": "的",
+            "pinyin": "de",
+            "english": "descriptive particle",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "衬衫",
+            "pinyin": "chènshān",
+            "english": "shirt",
+            "levels": [
+              "3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "hanzi": "冰雪",
+      "pinyin": "bīngxuě",
+      "english": "ice and snow",
+      "levels": [],
+      "example": {
+        "hanzi": "冰雪融化了。",
+        "pinyin": "Bīngxuě rónghuà le.",
+        "english": "The ice and snow have melted.",
+        "words": [
+          {
+            "hanzi": "冰雪",
+            "pinyin": "bīngxuě",
+            "english": "ice and snow",
+            "levels": []
+          },
+          {
+            "hanzi": "融化",
+            "pinyin": "rónghuà",
+            "english": "melt",
+            "levels": [
+              "6"
+            ]
+          },
+          {
+            "hanzi": "了",
+            "pinyin": "le",
+            "english": "change of state or completed action",
+            "levels": [
+              "1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "hanzi": "滑雪",
+      "pinyin": "huáxuě",
+      "english": "to ski",
+      "levels": [
+        "6"
+      ],
+      "example": {
+        "hanzi": "我喜欢滑雪。",
+        "pinyin": "Wǒ xǐhuan huáxuě.",
+        "english": "I like skiing.",
+        "words": [
+          {
+            "hanzi": "我",
+            "pinyin": "wǒ",
+            "english": "I",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "喜欢",
+            "pinyin": "xǐhuan",
+            "english": "like",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "滑雪",
+            "pinyin": "huáxuě",
+            "english": "to ski",
+            "levels": [
+              "6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "hanzi": "雪灾",
+      "pinyin": "xuězāi",
+      "english": "snow disaster",
+      "levels": [],
+      "example": {
+        "hanzi": "雪灾影响了交通。",
+        "pinyin": "Xuězāi yǐngxiǎng le jiāotōng.",
+        "english": "The severe snowfall disrupted transport.",
+        "words": [
+          {
+            "hanzi": "雪灾",
+            "pinyin": "xuězāi",
+            "english": "snow disaster",
+            "levels": []
+          },
+          {
+            "hanzi": "影响",
+            "pinyin": "yǐngxiǎng",
+            "english": "affect",
+            "levels": [
+              "3"
+            ]
+          },
+          {
+            "hanzi": "了",
+            "pinyin": "le",
+            "english": "change of state or completed action",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "交通",
+            "pinyin": "jiāotōng",
+            "english": "traffic or transport",
+            "levels": [
+              "4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "hanzi": "雪上加霜",
+      "pinyin": "xuě shàng jiā shuāng",
+      "english": "to make matters worse",
+      "levels": [
+        "7-9"
+      ],
+      "example": {
+        "hanzi": "车坏了，又下起雨来，真是雪上加霜。",
+        "pinyin": "Chē huài le, yòu xià qǐ yǔ lai, zhēn shi xuě shàng jiā shuāng.",
+        "english": "The car broke down, and then it started raining. That made things even worse.",
+        "words": [
+          {
+            "hanzi": "车",
+            "pinyin": "chē",
+            "english": "vehicle",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "坏",
+            "pinyin": "huài",
+            "english": "broken",
+            "levels": [
+              "2"
+            ]
+          },
+          {
+            "hanzi": "了",
+            "pinyin": "le",
+            "english": "change of state or completed action",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "又",
+            "pinyin": "yòu",
+            "english": "also or again",
+            "levels": [
+              "3"
+            ]
+          },
+          {
+            "hanzi": "下",
+            "pinyin": "xià",
+            "english": "fall (of precipitation)",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "起",
+            "pinyin": "qǐ",
+            "english": "begin (after a verb)",
+            "levels": [
+              "3"
+            ]
+          },
+          {
+            "hanzi": "雨",
+            "pinyin": "yǔ",
+            "english": "rain",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "来",
+            "pinyin": "lai",
+            "english": "directional complement",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "真是",
+            "pinyin": "zhēnshì",
+            "english": "really is",
+            "levels": [
+              "7-9"
+            ]
+          },
+          {
+            "hanzi": "雪上加霜",
+            "pinyin": "xuě shàng jiā shuāng",
+            "english": "to make matters worse",
+            "levels": [
+              "7-9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "hanzi": "雪中送炭",
+      "pinyin": "xuě zhōng sòng tàn",
+      "english": "to help in a time of need",
+      "levels": [],
+      "example": {
+        "hanzi": "你这时候来帮忙，真是雪中送炭。",
+        "pinyin": "Nǐ zhè shíhou lái bāngmáng, zhēn shi xuě zhōng sòng tàn.",
+        "english": "Your help came just when I needed it.",
+        "words": [
+          {
+            "hanzi": "你",
+            "pinyin": "nǐ",
+            "english": "you",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "这",
+            "pinyin": "zhè",
+            "english": "this",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "时候",
+            "pinyin": "shíhou",
+            "english": "time or moment",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "来",
+            "pinyin": "lái",
+            "english": "come",
+            "levels": [
+              "1"
+            ]
+          },
+          {
+            "hanzi": "帮忙",
+            "pinyin": "bāngmáng",
+            "english": "help",
+            "levels": [
+              "2"
+            ]
+          },
+          {
+            "hanzi": "真是",
+            "pinyin": "zhēnshì",
+            "english": "really is",
+            "levels": [
+              "7-9"
+            ]
+          },
+          {
+            "hanzi": "雪中送炭",
+            "pinyin": "xuě zhōng sòng tàn",
+            "english": "to help in a time of need",
+            "levels": []
+          }
+        ]
+      }
+    }
+  ],
+  "parts": [
+    {
+      "hanzi": "雨",
+      "pinyin": "yǔ",
+      "english": "rain",
+      "levels": [
+        "1"
+      ]
+    },
+    {
+      "hanzi": "彐",
+      "pinyin": "jì",
+      "english": "component shaped like a sideways E",
+      "levels": []
+    }
+  ],
+  "families": [
+    {
+      "part": {
+        "hanzi": "雨",
+        "pinyin": "yǔ",
+        "english": "rain",
+        "levels": [
+          "1"
+        ]
+      },
+      "position": "Górny element",
+      "members": [
+        {
+          "hanzi": "雪",
+          "pinyin": "xuě",
+          "english": "snow",
+          "levels": [
+            "1"
+          ]
+        },
+        {
+          "hanzi": "零",
+          "pinyin": "líng",
+          "english": "zero",
+          "levels": [
+            "1"
+          ]
+        },
+        {
+          "hanzi": "需",
+          "pinyin": "xū",
+          "english": "to need",
+          "levels": [
+            "3"
+          ]
+        },
+        {
+          "hanzi": "雾",
+          "pinyin": "wù",
+          "english": "fog",
+          "levels": [
+            "5"
+          ]
+        },
+        {
+          "hanzi": "震",
+          "pinyin": "zhèn",
+          "english": "to shake",
+          "levels": [
+            "5"
+          ]
+        },
+        {
+          "hanzi": "雷",
+          "pinyin": "léi",
+          "english": "thunder",
+          "levels": [
+            "6"
+          ]
+        },
+        {
+          "hanzi": "露",
+          "pinyin": "lù",
+          "english": "dew",
+          "levels": [
+            "6"
+          ]
+        },
+        {
+          "hanzi": "霜",
+          "pinyin": "shuāng",
+          "english": "frost",
+          "levels": [
+            "7-9"
+          ]
+        },
+        {
+          "hanzi": "霞",
+          "pinyin": "xiá",
+          "english": "rosy sky",
+          "levels": [
+            "7-9"
+          ]
+        },
+        {
+          "hanzi": "雹",
+          "pinyin": "báo",
+          "english": "hail",
+          "levels": [
+            "7-9"
+          ]
+        }
+      ],
+      "notes": {
+        "雪": "W górnej części widzisz 雨, a na dole 彐.",
+        "零": "Pod wspólnym 雨 znajduje się 令. W liczbach 零 oznacza zero.",
+        "需": "Rozpoznawanie znaku 需 jest na HSK 3. Samodzielne słowo 需 ma poziom HSK 5.",
+        "雾": "Pod 雨 znajduje się 务. W tym znaku wspólna część pasuje do znaczenia „mgła”.",
+        "震": "Znak do rozpoznawania jest na HSK 5. Słowo 震 pojawia się na HSK 7–9.",
+        "雷": "Pod 雨 widać 田. Porównaj kwadrat z krzyżem z trzema kreskami na dole 雪.",
+        "露": "Tutaj czytaj lù, czyli „rosa”. Ten sam zapis ma też odczyt lòu w innych użyciach.",
+        "霜": "Pod 雨 znajduje się 相. To inny dół niż w 雪.",
+        "霞": "Wschód lub zachód słońca może zabarwić obłoki na różowo.",
+        "雹": "Na dole widać 包. 雹 to grad."
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "term": {
+        "hanzi": "学",
+        "pinyin": "xué",
+        "english": "to study",
+        "levels": [
+          "1"
+        ]
+      },
+      "note": "W 雪 słyszysz trzeci ton, w 学 drugi. Na dole 学 jest 子."
+    },
+    {
+      "term": {
+        "hanzi": "血",
+        "pinyin": "xuè / xiě",
+        "english": "blood",
+        "levels": [
+          "4"
+        ]
+      },
+      "note": "Porównaj xuě z xuè. Przy znaczeniu „krew” spotkasz też potoczny odczyt xiě."
+    },
+    {
+      "term": {
+        "hanzi": "雷",
+        "pinyin": "léi",
+        "english": "thunder",
+        "levels": [
+          "6"
+        ]
+      },
+      "note": "U góry zostaje 雨. Spójrz na kwadrat 田 na dole 雷."
+    },
+    {
+      "term": {
+        "hanzi": "霜",
+        "pinyin": "shuāng",
+        "english": "frost",
+        "levels": [
+          "7-9"
+        ]
+      },
+      "note": "U góry zostaje 雨. Na dole 霜 zobaczysz 相."
+    },
+    {
+      "term": {
+        "hanzi": "彐",
+        "pinyin": "jì",
+        "english": "component shaped like a sideways E",
+        "levels": []
+      },
+      "note": "To sam dolny kształt 雪. Górny element 雨 odróżnia cały znak od tej części."
+    }
+  ],
+  "usage": [
+    {
+      "title": "Rzeczownik · opisz śnieg",
+      "examples": [
+        {
+          "hanzi": "雪很大。",
+          "pinyin": "Xuě hěn dà.",
+          "english": "It is snowing heavily.",
+          "words": [
+            {
+              "hanzi": "雪",
+              "pinyin": "xuě",
+              "english": "snow",
+              "levels": [
+                "1"
+              ]
+            },
+            {
+              "hanzi": "很",
+              "pinyin": "hěn",
+              "english": "very",
+              "levels": [
+                "1"
+              ]
+            },
+            {
+              "hanzi": "大",
+              "pinyin": "dà",
+              "english": "heavy or large",
+              "levels": [
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "hanzi": "雪白的地面。",
+          "pinyin": "Xuěbái de dìmiàn.",
+          "english": "The snow-white ground.",
+          "words": [
+            {
+              "hanzi": "雪白",
+              "pinyin": "xuěbái",
+              "english": "snow-white",
+              "levels": []
+            },
+            {
+              "hanzi": "的",
+              "pinyin": "de",
+              "english": "descriptive particle",
+              "levels": [
+                "1"
+              ]
+            },
+            {
+              "hanzi": "地面",
+              "pinyin": "dìmiàn",
+              "english": "ground surface",
+              "levels": [
+                "5"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Opady · 下雪",
+      "examples": [
+        {
+          "hanzi": "下雪了。",
+          "pinyin": "Xià xuě le.",
+          "english": "It’s snowing.",
+          "words": [
+            {
+              "hanzi": "下雪",
+              "pinyin": "xià xuě",
+              "english": "to snow",
+              "levels": []
+            },
+            {
+              "hanzi": "了",
+              "pinyin": "le",
+              "english": "change of state or completed action",
+              "levels": [
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "hanzi": "明天会下雪。",
+          "pinyin": "Míngtiān huì xià xuě.",
+          "english": "It will snow tomorrow.",
+          "words": [
+            {
+              "hanzi": "明天",
+              "pinyin": "míngtiān",
+              "english": "tomorrow",
+              "levels": [
+                "1"
+              ]
+            },
+            {
+              "hanzi": "会",
+              "pinyin": "huì",
+              "english": "will or be likely to",
+              "levels": [
+                "1",
+                "3"
+              ]
+            },
+            {
+              "hanzi": "下雪",
+              "pinyin": "xià xuě",
+              "english": "to snow",
+              "levels": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Aktywność · 滑雪",
+      "examples": [
+        {
+          "hanzi": "我喜欢滑雪。",
+          "pinyin": "Wǒ xǐhuan huáxuě.",
+          "english": "I like skiing.",
+          "words": [
+            {
+              "hanzi": "我",
+              "pinyin": "wǒ",
+              "english": "I",
+              "levels": [
+                "1"
+              ]
+            },
+            {
+              "hanzi": "喜欢",
+              "pinyin": "xǐhuan",
+              "english": "like",
+              "levels": [
+                "1"
+              ]
+            },
+            {
+              "hanzi": "滑雪",
+              "pinyin": "huáxuě",
+              "english": "to ski",
+              "levels": [
+                "6"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    {
+      "hanzi": "下雪了，地上很滑，小心摔倒。",
+      "pinyin": "Xià xuě le, dìshang hěn huá, xiǎoxīn shuāidǎo.",
+      "english": "It’s snowing. The ground is slippery, so be careful not to fall.",
+      "words": [
+        {
+          "hanzi": "下雪",
+          "pinyin": "xià xuě",
+          "english": "to snow",
+          "levels": []
+        },
+        {
+          "hanzi": "了",
+          "pinyin": "le",
+          "english": "change of state or completed action",
+          "levels": [
+            "1"
+          ]
+        },
+        {
+          "hanzi": "地上",
+          "pinyin": "dìshang",
+          "english": "on the ground",
+          "levels": []
+        },
+        {
+          "hanzi": "很",
+          "pinyin": "hěn",
+          "english": "very",
+          "levels": [
+            "1"
+          ]
+        },
+        {
+          "hanzi": "滑",
+          "pinyin": "huá",
+          "english": "slippery",
+          "levels": [
+            "5"
+          ]
+        },
+        {
+          "hanzi": "小心",
+          "pinyin": "xiǎoxīn",
+          "english": "be careful",
+          "levels": [
+            "3"
+          ]
+        },
+        {
+          "hanzi": "摔倒",
+          "pinyin": "shuāidǎo",
+          "english": "fall over",
+          "levels": []
+        }
+      ]
+    },
+    {
+      "hanzi": "雪天路滑，人一多更容易撞到别人。",
+      "pinyin": "Xuětiān lù huá, rén yì duō gèng róngyì zhuàngdào biérén.",
+      "english": "Roads are slippery on snowy days. When it gets crowded, it’s easier to bump into someone.",
+      "words": [
+        {
+          "hanzi": "雪天",
+          "pinyin": "xuětiān",
+          "english": "snowy day",
+          "levels": []
+        },
+        {
+          "hanzi": "路",
+          "pinyin": "lù",
+          "english": "road",
+          "levels": [
+            "2"
+          ]
+        },
+        {
+          "hanzi": "滑",
+          "pinyin": "huá",
+          "english": "slippery",
+          "levels": [
+            "5"
+          ]
+        },
+        {
+          "hanzi": "人",
+          "pinyin": "rén",
+          "english": "person",
+          "levels": [
+            "1"
+          ]
+        },
+        {
+          "hanzi": "一",
+          "pinyin": "yì",
+          "english": "as soon as",
+          "levels": [
+            "1"
+          ]
+        },
+        {
+          "hanzi": "多",
+          "pinyin": "duō",
+          "english": "numerous",
+          "levels": [
+            "1"
+          ]
+        },
+        {
+          "hanzi": "更",
+          "pinyin": "gèng",
+          "english": "even more",
+          "levels": [
+            "3"
+          ]
+        },
+        {
+          "hanzi": "容易",
+          "pinyin": "róngyì",
+          "english": "easily",
+          "levels": [
+            "3"
+          ]
+        },
+        {
+          "hanzi": "撞到",
+          "pinyin": "zhuàngdào",
+          "english": "bump into",
+          "levels": []
+        },
+        {
+          "hanzi": "别人",
+          "pinyin": "biérén",
+          "english": "other people",
+          "levels": [
+            "3"
+          ]
+        }
+      ]
+    },
+    {
+      "hanzi": "公园里有人在堆雪人。",
+      "pinyin": "Gōngyuán lǐ yǒu rén zài duī xuěrén.",
+      "english": "Someone is building a snowman in the park.",
+      "words": [
+        {
+          "hanzi": "公园",
+          "pinyin": "gōngyuán",
+          "english": "park",
+          "levels": [
+            "3"
+          ]
+        },
+        {
+          "hanzi": "里",
+          "pinyin": "lǐ",
+          "english": "in or inside",
+          "levels": [
+            "1"
+          ]
+        },
+        {
+          "hanzi": "有",
+          "pinyin": "yǒu",
+          "english": "there is",
+          "levels": [
+            "1"
+          ]
+        },
+        {
+          "hanzi": "人",
+          "pinyin": "rén",
+          "english": "person",
+          "levels": [
+            "1"
+          ]
+        },
+        {
+          "hanzi": "在",
+          "pinyin": "zài",
+          "english": "ongoing action marker",
+          "levels": [
+            "1"
+          ]
+        },
+        {
+          "hanzi": "堆",
+          "pinyin": "duī",
+          "english": "pile up or build",
+          "levels": [
+            "5"
+          ]
+        },
+        {
+          "hanzi": "雪人",
+          "pinyin": "xuěrén",
+          "english": "snowman",
+          "levels": []
+        }
+      ]
+    },
+    {
+      "hanzi": "雪白的地面很好看。",
+      "pinyin": "Xuěbái de dìmiàn hěn hǎokàn.",
+      "english": "The snow-white ground looks beautiful.",
+      "words": [
+        {
+          "hanzi": "雪白",
+          "pinyin": "xuěbái",
+          "english": "snow-white",
+          "levels": []
+        },
+        {
+          "hanzi": "的",
+          "pinyin": "de",
+          "english": "descriptive particle",
+          "levels": [
+            "1"
+          ]
+        },
+        {
+          "hanzi": "地面",
+          "pinyin": "dìmiàn",
+          "english": "ground surface",
+          "levels": [
+            "5"
+          ]
+        },
+        {
+          "hanzi": "很",
+          "pinyin": "hěn",
+          "english": "very",
+          "levels": [
+            "1"
+          ]
+        },
+        {
+          "hanzi": "好看",
+          "pinyin": "hǎokàn",
+          "english": "good-looking",
+          "levels": [
+            "1"
+          ]
+        }
+      ]
+    }
+  ],
+  "story": [
+    "Wczoraj po oknie spływał deszcz. Dzisiaj wyglądasz przez tę samą szybę, a za nią wirują białe płatki. Górne 雨 podpowiada ci pogodę.",
+    "Na parapecie leży już śnieg. Zgarniasz go bokiem rękawiczki i odsłaniasz trzy jasne paski, jak dolne 彐.",
+    "Otwierasz okno i jeden płatek ląduje ci na dłoni. Mówisz „pada śnieg” i widzisz obie części znaku razem."
+  ],
+  "structure": "We współczesnym zapisie 雪 u góry znajduje się 雨, a na dole 彐. Ruch rękawiczki w historyjce to skojarzenie z dolnym kształtem."
+}

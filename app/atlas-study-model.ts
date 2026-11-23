@@ -2,7 +2,7 @@
 export type StudyTerm = {hanzi: string; pinyin: string; english: string; levels: string[]; namePinyin?: string};
 export type StudyExample = {hanzi: string; pinyin: string; english: string; words?: StudyTerm[]};
 export type StudyWord = StudyTerm & {example?: StudyExample};
-export type StudyFamily = {part: StudyTerm; position?: string; members: StudyTerm[]; notes?: Record<string, string>};
+export type StudyFamily = {basis?: 'dictionary-radical'; part: StudyTerm; position?: string; members: StudyTerm[]; notes?: Record<string, string>};
 export type StudyContrast = {term: StudyTerm; note: string};
 export type StudyUsage = {title: string; examples: StudyExample[]};
 export type StudyCard = {
@@ -18,7 +18,7 @@ export type StudyCard = {
 };
 export type StudyIndexEntry = StudyTerm & {pack: string};
 
-const root = '/atlas/study-cards/snow-v1/';
+const root = '/atlas/study-cards/v1/';
 let indexRequest: Promise<StudyIndexEntry[]> | undefined;
 const packs = new Map<string, Promise<Record<string, StudyCard>>>();
 

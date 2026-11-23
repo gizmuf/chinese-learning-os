@@ -377,7 +377,8 @@ function FamilyPane({ card, onNavigate }: { card: StudyCard; onNavigate: (hanzi:
       </button>)}
     </div>}
     <p className="asc-family-note">
-      Wspólny komponent <strong lang="zh-Hans">{family.part.hanzi}</strong> · <TermReading term={family.part} />
+      {family.basis === 'dictionary-radical' ? 'Klucz słownikowy' : 'Wspólny komponent'}{' '}
+      <strong lang="zh-Hans">{family.part.hanzi}</strong> · <TermReading term={family.part} />
       {family.part.english && <> · <span lang="en">{family.part.english}</span></>}
       {' · ' + levelText(family.part.levels)}
       {family.position && <> · {familyPositions[family.position] ?? family.position}</>}
