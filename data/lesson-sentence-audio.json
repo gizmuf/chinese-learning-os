@@ -1,0 +1,1361 @@
+{
+  "practice": {
+    "苹果多少钱一斤": {
+      "text": "苹果多少钱一斤",
+      "source": "/audio/lesson-sentences/eb748c454ef3130425ad0032.mp3",
+      "sha256": "0af4ccf09060de9673ce25bd8d6456fc946b3a538122756f0a6b0e237e93d543"
+    },
+    "二十块一斤": {
+      "text": "二十块一斤",
+      "source": "/audio/lesson-sentences/c8cf67427630ced0f8ca6717.mp3",
+      "sha256": "eb5b27873a7e50bb7c1e35bb3f0be7b6281fe4a78d5af78911885c71b72218fd"
+    },
+    "太贵了": {
+      "text": "太贵了",
+      "source": "/audio/lesson-sentences/a61b23275e6eda76630b8464.mp3",
+      "sha256": "5b8e88574d26a069a6a3506ac877255a53aee324ba4408a9904836fe2fbdfd4e"
+    },
+    "便宜一点可以吗": {
+      "text": "便宜一点可以吗",
+      "source": "/audio/lesson-sentences/f5362d3d655e6ee275ed66a5.mp3",
+      "sha256": "c92c93a03ad7fa52f17e71cc58a9de4f21a5f5c25c75c6d5578441af49f04f7a"
+    },
+    "不行": {
+      "text": "不行",
+      "source": "/audio/hsk3-543-word.mp3",
+      "sha256": "51242119d430d9812bfba440e5aae879e2ac17417a7f8b369d54d9c46b776075"
+    },
+    "这是新西兰进口的苹果": {
+      "text": "这是新西兰进口的苹果",
+      "source": "/audio/lesson-sentences/6f3a8535b64dec8bf95d29f2.mp3",
+      "sha256": "c66de962b7edf74daf04f851d6595cfcb196239363931bf87b1869ddc80b405f"
+    },
+    "苹果": {
+      "text": "苹果",
+      "source": "/audio/hsk1-159-word.mp3",
+      "sha256": "5e531711d13ae133808bef42bb860b1a6bb4f6da0706dc5396f5bd220f745ab5"
+    },
+    "一斤": {
+      "text": "一斤",
+      "source": "/audio/lesson-sentences/d6ecb583ca6d2554509467a7.mp3",
+      "sha256": "f5f2f493cea4608abb74381e290c2ab37c800cd2f2a0227d6005e6e83d183c1c"
+    },
+    "块": {
+      "text": "块",
+      "source": "/audio/hsk1-105-word.mp3",
+      "sha256": "8b0e4e107f1cfab1cdd5f2fa376b9d14007b4b6a609991033fd8c67d1204d765"
+    },
+    "元": {
+      "text": "元",
+      "source": "/audio/hsk1-268-word.mp3",
+      "sha256": "ed6f653e72535c8066d7a406699b8aeca97ead40ade7788fc59936debee67f28"
+    },
+    "贵": {
+      "text": "贵",
+      "source": "/audio/hsk1-065-word.mp3",
+      "sha256": "ec29a0e999faa9f34ae41940d275e9d73e6294ffe23830e63e7c60c280640bdd"
+    },
+    "便宜": {
+      "text": "便宜",
+      "source": "/audio/hsk1-157-word.mp3",
+      "sha256": "9fbbfb03f16c5225880b20e25f4a39b918eebbffc9ed41995efccf2fb0d11aa7"
+    },
+    "这个多少钱": {
+      "text": "这个多少钱",
+      "source": "/audio/lesson-sentences/8c0b437165b99c03b5a339db.mp3",
+      "sha256": "8930cd756686069e78cda09344469efaefd09e5f9f2729485ac57ca5030e1f5b"
+    },
+    "一共多少钱": {
+      "text": "一共多少钱",
+      "source": "/audio/lesson-sentences/bec2e0703fae456f62bc2e46.mp3",
+      "sha256": "58247c01d31b454747320c5082bb5ac2af42d5567d19778b7d1ae6229a8967b9"
+    },
+    "我要两斤苹果": {
+      "text": "我要两斤苹果",
+      "source": "/audio/lesson-sentences/ba1d72efe1ba0ccff92e9cb9.mp3",
+      "sha256": "b311d44bf59b5f973663716986ba0c1cc4d1d177ddf9515b01d434acd396fa90"
+    },
+    "可以便宜一点吗": {
+      "text": "可以便宜一点吗",
+      "source": "/audio/lesson-sentences/ffdbcab519b079a3a1e07c7a.mp3",
+      "sha256": "8dd8e5abd02f40cb01686b92741b1bedfcefe0c86a3d1ee1a254ce9950da38a9"
+    },
+    "有点贵": {
+      "text": "有点贵",
+      "source": "/audio/lesson-sentences/c65a8cddbbb76a9d57205bad.mp3",
+      "sha256": "21f74a44fc764de0e816a7e7b0c81df7c241cb3c8763676d40c61671c06e6c4a"
+    },
+    "这个更便宜": {
+      "text": "这个更便宜",
+      "source": "/audio/lesson-sentences/fef3143c56f0ce923e6b0b09.mp3",
+      "sha256": "c92d1d7f470a5ac104acc9dc3ba786a24fd567f7437955fed802f840e9e90f64"
+    },
+    "这个比那个便宜": {
+      "text": "这个比那个便宜",
+      "source": "/audio/lesson-sentences/2ee337428c1c2aefdcb84b5f.mp3",
+      "sha256": "7e1b566b634736e5efd420ded3ac47c38aeea7eefde89a9ffbe3c3982b8ca0e2"
+    },
+    "太贵了我不买了": {
+      "text": "太贵了我不买了",
+      "source": "/audio/lesson-sentences/d14b3bae4987ad37e6bb54d6.mp3",
+      "sha256": "ba1af42bbe12be5c838f0e06e671ce633da5aa2bd2668a0eceb4b6ac833299d0"
+    },
+    "我买了两个苹果": {
+      "text": "我买了两个苹果",
+      "source": "/audio/lesson-sentences/247535335d399002ad7b6b36.mp3",
+      "sha256": "5643c01e1a99d04954cd1a818b92db93f7ea251809a118730adabc9f4f4775c3"
+    },
+    "买": {
+      "text": "买",
+      "source": "/audio/hsk1-116-word.mp3",
+      "sha256": "0e3763d92a8c1df9dc7476bdc616e9a6a18e47a17a5c8294e760d321444a803d"
+    },
+    "卖": {
+      "text": "卖",
+      "source": "/audio/hsk1-117-word.mp3",
+      "sha256": "c1a2f2a73b106fb997ef23850722b49ab42740ba43f1a1f84cbcc9e7290b2f92"
+    },
+    "这家店卖水果": {
+      "text": "这家店卖水果",
+      "source": "/audio/lesson-sentences/e2946ae2460e831624363961.mp3",
+      "sha256": "657a5269efaf1f88ee05646779ae1a0aeb7d7a567c9824ea63ee03d592185205"
+    },
+    "又大又好吃": {
+      "text": "又大又好吃",
+      "source": "/audio/lesson-sentences/08b6bf41980a41bc5c05f05c.mp3",
+      "sha256": "3cc70b36c633f036004953f8985e672a17c98733574c957bcdc6bbf9124e2b4d"
+    },
+    "又漂亮又聪明": {
+      "text": "又漂亮又聪明",
+      "source": "/audio/lesson-sentences/bb676b46e2640f1556507c03.mp3",
+      "sha256": "e7d75cbf127c4be9083649af30b3d587a2f6968a434b0a83dc73e662f5898578"
+    },
+    "又高又帅又有钱": {
+      "text": "又高又帅又有钱",
+      "source": "/audio/lesson-sentences/c52618b74189b4c524a379a0.mp3",
+      "sha256": "4296d102c2cfaa3818fee19fb1701d9995a76a2fdee3e2c689ded272747107ae"
+    },
+    "这些苹果又大又甜": {
+      "text": "这些苹果又大又甜",
+      "source": "/audio/lesson-sentences/35c8de113e26cdbe868ed612.mp3",
+      "sha256": "3fa54fc4126449c9e30f4e7ce92a7d4e964171281b6b29d0e4fcf2af10be71c2"
+    },
+    "这家店的菜又便宜又好吃": {
+      "text": "这家店的菜又便宜又好吃",
+      "source": "/audio/lesson-sentences/a1f59d478946ffccaff1a876.mp3",
+      "sha256": "672543c71d4d506602c4ca82598475232b362b7e3b39a76cde3e46f019e6dbbb"
+    },
+    "又": {
+      "text": "又",
+      "source": "/audio/hsk3-949-word.mp3",
+      "sha256": "8a66c2c4101d4466994507e329aa7cf941dab7ece4f5d541e826116710a5a01e"
+    },
+    "有": {
+      "text": "有",
+      "source": "/audio/have-word.mp3",
+      "sha256": "8258b09a4d71128b39a1e3b11905b406f655d40d7792b9cc7349a1272df178e6"
+    },
+    "有钱": {
+      "text": "有钱",
+      "source": "/audio/lesson-sentences/cd1deec9e4989aec3dfca294.mp3",
+      "sha256": "b7114b2e783bcd229011f8fddf6ac9ff7b479e40f5b823ac7f2eb2970454b199"
+    },
+    "没有钱": {
+      "text": "没有钱",
+      "source": "/audio/lesson-sentences/2f6c8ee734f9b4d749c2d141.mp3",
+      "sha256": "b890f1a52e071e4ad83d75fdb6adb1937d4c75dd97766319295ad1d6de504a34"
+    },
+    "没钱": {
+      "text": "没钱",
+      "source": "/audio/lesson-sentences/fe2dd253a139d0d5d47382b6.mp3",
+      "sha256": "11175b5f9c6c333c03c42db171edbebfa0087ab6c9af5bd2cd413efc629b1542"
+    },
+    "他又来了": {
+      "text": "他又来了",
+      "source": "/audio/lesson-sentences/2ef926ecddb13f72cadef7b8.mp3",
+      "sha256": "762b4d1e026821883169f6f52d02762fe3de7b991237795a802e073725e8a119"
+    },
+    "我明天再来": {
+      "text": "我明天再来",
+      "source": "/audio/lesson-sentences/456bc01e876c9e60a9e766bc.mp3",
+      "sha256": "10ea5e13b478a03ead49580d4586f09ce21ca85f371dab9a57c180aa976af3c1"
+    },
+    "越来越贵": {
+      "text": "越来越贵",
+      "source": "/audio/lesson-sentences/115cdf493afae659e14f30c1.mp3",
+      "sha256": "44d516b3f9d3e340f4cccc08dbe9e67612f1be5b5bfc6bad6238eae53b56a97b"
+    },
+    "越来越便宜": {
+      "text": "越来越便宜",
+      "source": "/audio/lesson-sentences/e100b8ee10484fd5dc80229c.mp3",
+      "sha256": "bb7d59b79b4c0ceb878f9f29faaee27e9f515553aa66e2bf3519b73ed31d167d"
+    },
+    "天气越来越冷": {
+      "text": "天气越来越冷",
+      "source": "/audio/lesson-sentences/215db0891be39c2361508f35.mp3",
+      "sha256": "1d63d2cca0e1417a36f475db73a2eb0c666cd93fbe1a8c93f86d1082d13b43a4"
+    },
+    "我的中文越来越好": {
+      "text": "我的中文越来越好",
+      "source": "/audio/lesson-sentences/ef5f305b6d5fac620b661333.mp3",
+      "sha256": "a7c0e278482f71ec95a3c0fa1e30d75fb3dcb4507f002580a0a3ed0bcd8845ef"
+    },
+    "我越来越喜欢这里": {
+      "text": "我越来越喜欢这里",
+      "source": "/audio/lesson-sentences/ba26dfec760746f1fa96874d.mp3",
+      "sha256": "071f3c37209408b1f0d410207f670f1ff98fc9da191e78de5854791f27258187"
+    },
+    "越": {
+      "text": "越",
+      "source": "/audio/hsk3-958-word.mp3",
+      "sha256": "bd28b18b16f03af00240bb21d26ec1aff8c55a0863cf6aa6ab60554bf3512fb5"
+    },
+    "来": {
+      "text": "来",
+      "source": "/audio/hsk1-106-word.mp3",
+      "sha256": "b51614c30c78f5d90f98b0aee6fa4375ebad0a23546666bfd90091c47938c801"
+    },
+    "这杯茶有点甜": {
+      "text": "这杯茶有点甜",
+      "source": "/audio/lesson-sentences/ddc69bb650486e0783c669ad.mp3",
+      "sha256": "89356ae5cc1db49d89962325f67279eea643bf4800b2467fe0c3a2af9594bef2"
+    },
+    "我想喝甜一点的": {
+      "text": "我想喝甜一点的",
+      "source": "/audio/lesson-sentences/b9e7c403d07531834b4a7756.mp3",
+      "sha256": "c724dd9bf29efc51449c94221f21ec7ef45f02a360885ace26518e151caf33e9"
+    },
+    "这个太甜了": {
+      "text": "这个太甜了",
+      "source": "/audio/lesson-sentences/b72a1bcd1b5ab538c08a1640.mp3",
+      "sha256": "fc24edb72b19aa1907c6a1d183714b66c458f81fcbf827bf73be585c9d62ad7f"
+    },
+    "甜": {
+      "text": "甜",
+      "source": "/audio/hsk3-855-word.mp3",
+      "sha256": "ffccf4b12b087851450e23d3ac11320885802c11496a511ae182fce815f70d4d"
+    },
+    "糖": {
+      "text": "糖",
+      "source": "/audio/hsk3-850-word.mp3",
+      "sha256": "64007cd4202e936d766b0c28580ed4ce40908c4bbc5a589593be7d57df48b550"
+    },
+    "无糖": {
+      "text": "无糖",
+      "source": "/audio/lesson-sentences/33e934d5eab50d6a7208383c.mp3",
+      "sha256": "8a06eff99b9340bffa255d85b2c2d33711b3bc808945a17892b1575468756c38"
+    },
+    "加糖": {
+      "text": "加糖",
+      "source": "/audio/lesson-sentences/001f384beb9471fbe29ad71a.mp3",
+      "sha256": "f31851624e41cb4f141a5ee8795da7e6c69ac4dfa1dd22fb89d819fc77adf9a6"
+    },
+    "不加糖": {
+      "text": "不加糖",
+      "source": "/audio/lesson-sentences/d4dfec75dcdd9f6a877061fd.mp3",
+      "sha256": "85cfd035d98ccac6676772b3ceb7ed68c5c1d36bff72699e8a99eac7e8a8b433"
+    },
+    "不要糖": {
+      "text": "不要糖",
+      "source": "/course07/audio/c07-t63.mp3",
+      "sha256": "65e5720145f5c6962666048e60aaa5df8bdae2de72045ac01d302943406d41ff"
+    },
+    "少放一点糖": {
+      "text": "少放一点糖",
+      "source": "/audio/lesson-sentences/ead9cf188aeaf96773209c41.mp3",
+      "sha256": "10d6698d51b3612880c7de9ead5dfcda247a8a582dc0f851a1bb4120aeefaa4e"
+    },
+    "这杯咖啡不加糖": {
+      "text": "这杯咖啡不加糖",
+      "source": "/audio/lesson-sentences/bf8ca742db7640f103e1ec3a.mp3",
+      "sha256": "02d7c39ab5b0623668a52557754ddee8a094a57fefea6cea67b63b5e16e0f68b"
+    },
+    "我要一杯无糖茶": {
+      "text": "我要一杯无糖茶",
+      "source": "/audio/lesson-sentences/63cefbabdab371efab510a43.mp3",
+      "sha256": "cfe44d8e9462a4165ef5e08c2e4710dafcb8e3cc087072d3881b2d9b508aca5b"
+    },
+    "苦": {
+      "text": "苦",
+      "source": "/audio/lesson-sentences/0e63c34d213f6f6077d4325c.mp3",
+      "sha256": "e0f7a8e72dbe1914310b0ebd8d62569139c55daace15e474f8b3ea7119e59487"
+    },
+    "酸": {
+      "text": "酸",
+      "source": "/audio/lesson-sentences/859ba3e78006453c8842a3c1.mp3",
+      "sha256": "24f5d8a27515eabd6091e25c3bd30479dd8eebccd972b9bb372bb4132e17eb1a"
+    },
+    "辣": {
+      "text": "辣",
+      "source": "/video-self-introduction/audio/char-8fa3.mp3",
+      "sha256": "3dd3322b263ba5467c73edab450865dbad2c6c14e11cc1017a248983c216efba"
+    },
+    "高": {
+      "text": "高",
+      "source": "/audio/hsk2-341-word.mp3",
+      "sha256": "74aa01d5dd2cdd8fc254245027dec1499456908eef2a852904a11ce11bfc6e5a"
+    },
+    "矮": {
+      "text": "矮",
+      "source": "/audio/hsk3-502-word.mp3",
+      "sha256": "a7195c30d8ed7c5b90b97528a225cccb74736551bfbe1c7e7979fd56b5ae8087"
+    },
+    "胖": {
+      "text": "胖",
+      "source": "/audio/hsk3-793-word.mp3",
+      "sha256": "78e96d08f27fb6a1efb9fe95549c47ba9ca900fb5c9c907eb004d0143ebb4252"
+    },
+    "瘦": {
+      "text": "瘦",
+      "source": "/audio/hsk3-839-word.mp3",
+      "sha256": "3d299d9b2f319c65d230377c060b451465bca0bb5b3a21890d5959f3f39b730a"
+    },
+    "帅": {
+      "text": "帅",
+      "source": "/audio/lesson-sentences/25c7d9524fcc1c468c65030d.mp3",
+      "sha256": "34b1b4412623ce63f9775412b6f25f25c18a902380085d1dee4c76b5142a342a"
+    },
+    "丑": {
+      "text": "丑",
+      "source": "/audio/lesson-sentences/025de7b314cf32b90bf285c5.mp3",
+      "sha256": "ccc38d28793d90a499b9726d01422d9ab695f9f13d9d03b65defd5583e26a2c6"
+    },
+    "穷": {
+      "text": "穷",
+      "source": "/audio/lesson-sentences/79245da187a5a9ca2342d231.mp3",
+      "sha256": "3ef462f43a2ff5947326eb853117152a9983715cbeee9bc3c605413192fc06c5"
+    },
+    "漂亮": {
+      "text": "漂亮",
+      "source": "/audio/hsk1-158-word.mp3",
+      "sha256": "da9dcbf6f9912bb32d237d008a7205fce0c81a6b0dc7d2e1d3cf494b0f9b28e5"
+    },
+    "聪明": {
+      "text": "聪明",
+      "source": "/audio/hsk3-570-word.mp3",
+      "sha256": "f4118fb071efd2870124511d025ab7eae6a232e92d99125315c612d92b0ec7a4"
+    },
+    "努力": {
+      "text": "努力",
+      "source": "/audio/hsk3-786-word.mp3",
+      "sha256": "59c740298ca621aeb9dd978be39b24a404acd1ebaf04a2d280d7c1f54341403a"
+    },
+    "她很聪明也很努力": {
+      "text": "她很聪明也很努力",
+      "source": "/audio/lesson-sentences/d3086de1ac7aa1f99a2fb596.mp3",
+      "sha256": "0ff7eba93f7f11725de2847009eb8fd68e868d6e88c7a207037d39b7dbb40d86"
+    },
+    "他不高但是很帅": {
+      "text": "他不高但是很帅",
+      "source": "/audio/lesson-sentences/2bebc7a537e16bbd881dd4e5.mp3",
+      "sha256": "8dc2047615f519a0aac194cfdeee87e98e2d5d35ae132375113833c3d7ae9205"
+    },
+    "明白": {
+      "text": "明白",
+      "source": "/audio/bonus-10-word.mp3",
+      "sha256": "fed072ae13e4e2d04bb1b4de98c779e009a288a5492a8d774fe65da8ca9cdca7"
+    },
+    "懂": {
+      "text": "懂",
+      "source": "/audio/hsk2-337-word.mp3",
+      "sha256": "fab259eb4559483d403feae5753135aa2ce203e84d337cfc7c3c9eb984176f8b"
+    },
+    "知道": {
+      "text": "知道",
+      "source": "/audio/hsk1-288-word.mp3",
+      "sha256": "a539e784c3660937cf5c669c655e43a30c00ffd71036315359d054ca1d6e897b"
+    },
+    "认识": {
+      "text": "认识",
+      "source": "/audio/hsk1-171-word.mp3",
+      "sha256": "23174bd14a5ebc27cc82040078b66327958f0fffb514436874ea6a55341f082f"
+    },
+    "我明白了": {
+      "text": "我明白了",
+      "source": "/audio/lesson-sentences/ea66d23efe6cf1431e8a7d1a.mp3",
+      "sha256": "7b2570120c69e8d3ba33f66a1448fa5f5eaf5706f6f2ad136b3981662c44007a"
+    },
+    "我没听懂": {
+      "text": "我没听懂",
+      "source": "/audio/lesson-sentences/17bb9b1b0022fdd432e4bbb7.mp3",
+      "sha256": "e2ff8ab740c6f763f3878eb554a3f88103184451d305950425009b9bafb31c98"
+    },
+    "我看不懂这个字": {
+      "text": "我看不懂这个字",
+      "source": "/audio/lesson-sentences/9f3ac0fab909f5f611af3c1a.mp3",
+      "sha256": "438467cc2fc1946dc35abf2291b85c6a88ef460033c8abb4ba03ea9423911809"
+    },
+    "我不知道多少钱": {
+      "text": "我不知道多少钱",
+      "source": "/audio/lesson-sentences/215f3133c1d408fe7c3d6d93.mp3",
+      "sha256": "c112ef6c0065e0c5bfe1611c1eaddab14329d7d2fdd5225d7d9736ba45eb4367"
+    },
+    "我认识这位老师": {
+      "text": "我认识这位老师",
+      "source": "/audio/lesson-sentences/d36ad4122bab75719611e3c6.mp3",
+      "sha256": "61e4c38f5d8b8577a9bbf27ad48961532620452c29e7d8f8d69d0dc58ceeec15"
+    },
+    "你认识这个字吗": {
+      "text": "你认识这个字吗",
+      "source": "/audio/lesson-sentences/82a40ed415833832a78b2c2c.mp3",
+      "sha256": "cc82d7689d402d7d02d4819e887429dfe3f7e9adafa96696404e1928f294c432"
+    },
+    "请再说一遍": {
+      "text": "请再说一遍",
+      "source": "/audio/lesson-sentences/ce6b676370dc674565c73c6d.mp3",
+      "sha256": "645d7df88867eeec3282158a6af2394380c7dd5e9e7a6f088e092fb2740819fc"
+    },
+    "请说慢一点": {
+      "text": "请说慢一点",
+      "source": "/audio/lesson-sentences/3704dc54338150447c47c665.mp3",
+      "sha256": "2b9cbbe2f644575a833c6a913a6e708064da4ebea6554158b53a9091cbc4cd12"
+    },
+    "好吃": {
+      "text": "好吃",
+      "source": "/audio/delicious-word.mp3",
+      "sha256": "c0b7e498d823017cd64f3913233fbbe5cc2c4a07585dc0be38bec9d8137163a5"
+    },
+    "好看": {
+      "text": "好看",
+      "source": "/audio/hsk1-073-word.mp3",
+      "sha256": "a5bcd8dd577085cea40dedf64fa8553872d3661ec5e504aac86675d0d1818f74"
+    },
+    "好听": {
+      "text": "好听",
+      "source": "/audio/hsk1-074-word.mp3",
+      "sha256": "dc6b6fb4f0ce2365e80a036034903e1029c41c9727be6b4011e7b50e5f9242f0"
+    },
+    "好闻": {
+      "text": "好闻",
+      "source": "/audio/lesson-sentences/2f9582f756d14e558414528e.mp3",
+      "sha256": "4971ed3ad20b83c92dd46aaf492da5710b03610ddbcd28d14afee3cd6ae6290c"
+    },
+    "香": {
+      "text": "香",
+      "source": "/audio/lesson-sentences/cf4c4cd832e449cd305c9a9c.mp3",
+      "sha256": "ab5bba0873becbd8b6d897fbe8bda07b8a2fe6ea503327ab59ca95309e536089"
+    },
+    "香水": {
+      "text": "香水",
+      "source": "/audio/lesson-sentences/2af77f5856a1510ae86e69f9.mp3",
+      "sha256": "38f773385efb46d1fd547b89a40283f4a4ec0e1f57f6511ecc199dd7053b4b11"
+    },
+    "这个苹果很好吃": {
+      "text": "这个苹果很好吃",
+      "source": "/audio/lesson-sentences/d0bf4bbbb4fcb35711daa379.mp3",
+      "sha256": "0cf927d122ec30660ab3a419d310856676a19b71b43eacb16fc4070e9a3e4b6f"
+    },
+    "这件外套很好看": {
+      "text": "这件外套很好看",
+      "source": "/audio/lesson-sentences/62aaa1bf87679ba2f70440d1.mp3",
+      "sha256": "3df24f2bde5b4c6e10886c84af8d087e84302676546ce21353d17f9957bc12f9"
+    },
+    "这首中文歌很好听": {
+      "text": "这首中文歌很好听",
+      "source": "/audio/lesson-sentences/5652b4e199ec6590657b704a.mp3",
+      "sha256": "7d729b0113c02c24dc52d80c9f1c2f72be23a5cfeda9bebaaa15f99440cdf847"
+    },
+    "这个香水很好闻": {
+      "text": "这个香水很好闻",
+      "source": "/audio/lesson-sentences/027f8ace36104ece8ddf586a.mp3",
+      "sha256": "dbf9fc54f9ef4dcad0046d170df2c83480dee6b53b95d99e661dc340fa6e1976"
+    },
+    "闻": {
+      "text": "闻",
+      "source": "/course05/audio/course05-c05-t33-sentence.mp3",
+      "sha256": "6643d66bf6ced533da628b9841ab7906e86170c5b5d7da621d80473dfeef1473"
+    },
+    "听": {
+      "text": "听",
+      "source": "/audio/hsk1-209-word.mp3",
+      "sha256": "e48474e545cb957e1dc486d972236edfdfabacd3d2120613d062b3d9b370c360"
+    },
+    "一首歌": {
+      "text": "一首歌",
+      "source": "/audio/lesson-sentences/ffacc9a66edd6901a44cc063.mp3",
+      "sha256": "a4ae2cf8eebd9d520fa71ba67452110318f56dc777815fb513eec85c082c98ab"
+    },
+    "这首中文歌": {
+      "text": "这首中文歌",
+      "source": "/audio/lesson-sentences/ba5d5f599aae483e6c08d930.mp3",
+      "sha256": "e45d7947aada92d15ff67e8297f3dc09a1b575a0fec8910fe4e867580195ce9d"
+    },
+    "一件外套": {
+      "text": "一件外套",
+      "source": "/audio/lesson-sentences/b3936502a5711d92698f3275.mp3",
+      "sha256": "2d46d0465198192dfcfcafcd592736e9593c3993c1eb6a45a2fe8fa12d0710b3"
+    },
+    "马甲": {
+      "text": "马甲",
+      "source": "/audio/lesson-sentences/bb2a92e89c3df9bb39678f22.mp3",
+      "sha256": "dc3b7e2d5db833583fe8867486ba5061ab42260d16dbd61bd2e190ad262e9c1d"
+    },
+    "一件马甲": {
+      "text": "一件马甲",
+      "source": "/audio/lesson-sentences/f929a50e07ab6ba12e7d87bb.mp3",
+      "sha256": "ab2bd8aa215d12cb049d77a3bec34b7629ce74675c4cf86fc1bc13146436007c"
+    },
+    "两件衣服": {
+      "text": "两件衣服",
+      "source": "/audio/lesson-sentences/3888e0d8bb7a7d19bb2adec5.mp3",
+      "sha256": "77f066581c03cbc4b66a223ec60e2dfc755443c0fb7b6452286e7f4fa2f5b117"
+    },
+    "我喜欢这首歌": {
+      "text": "我喜欢这首歌",
+      "source": "/audio/lesson-sentences/9ba4cdb84798b6cb414718ea.mp3",
+      "sha256": "0db7d869274869f086da89cb28dd378fcaa24917fed955f8bb1fc826a91bd56d"
+    },
+    "我想买这件外套": {
+      "text": "我想买这件外套",
+      "source": "/audio/lesson-sentences/d4e64478aacd720d8d3d2337.mp3",
+      "sha256": "3c8cb583883722b084bc74b678ca462555facd8f3ca5f5a0d9df419c4c22a603"
+    },
+    "手": {
+      "text": "手",
+      "source": "/audio/hsk2-433-word.mp3",
+      "sha256": "76add1015991afba709d96768e5adda3342a952e26d4f6227508055a39f13a5e"
+    },
+    "首": {
+      "text": "首",
+      "source": "/course05/audio/course05-c05-t27-sentence.mp3",
+      "sha256": "0c22cbb61942ad4a00d12aa6d2712b6ba3ea539f96fb0ba594979527da669f3c"
+    },
+    "件": {
+      "text": "件",
+      "source": "/audio/hsk1-089-word.mp3",
+      "sha256": "a2b46c4041e381b1060c5d089791e74aa74423f901deaf6a619a9dbf593c737f"
+    },
+    "衣服": {
+      "text": "衣服",
+      "source": "/audio/hsk1-255-word.mp3",
+      "sha256": "d2463bf0c627eecc5d01b208e2eff71c8ef90f0faa093fd5937250af263e0055"
+    },
+    "进口": {
+      "text": "进口",
+      "source": "/audio/lesson-sentences/514e5df21b748fda6ea5d8b4.mp3",
+      "sha256": "2ae999a37941528177e8e0a4847dce5df4843205b9f92dcc870f8e480d4b1bab"
+    },
+    "出口": {
+      "text": "出口",
+      "source": "/audio/lesson-sentences/7016090059bdfab9b07b9aec.mp3",
+      "sha256": "fb08262c2d12214838c2e5b41588954a68fb0838225488f9a270e5bac47e6572"
+    },
+    "税": {
+      "text": "税",
+      "source": "/audio/lesson-sentences/799cbeb072e1e5c01966ff52.mp3",
+      "sha256": "3234d30c762f7094856cfa332185bbe4ea612148064a208224b875a7a2f80800"
+    },
+    "水": {
+      "text": "水",
+      "source": "/audio/water-word.mp3",
+      "sha256": "f1f7b75774462bb8dfb7813f8eabb6d8578f763d67ff074d99ed145275d9cb18"
+    },
+    "苹果手机": {
+      "text": "苹果手机",
+      "source": "/audio/lesson-sentences/979948b81a983ad38d5da3b1.mp3",
+      "sha256": "49b2aa0f88f215ea40da6a2549c3c89e12ff527ba35f59d117d9e83e0a3b3ca6"
+    },
+    "三星": {
+      "text": "三星",
+      "source": "/audio/lesson-sentences/5fdd673ed1fcff1de84b798e.mp3",
+      "sha256": "77979f86e8b57a656ed484aa3a3a113dd757fe917dff089dfc73afc0c94ea795"
+    },
+    "华为": {
+      "text": "华为",
+      "source": "/audio/lesson-sentences/82eaaba81d9dcc54deabafe3.mp3",
+      "sha256": "7c58b5bed8ba8f476a510c483e7605cca7d8bae482fdf3144d1d6da4f5106313"
+    },
+    "小米": {
+      "text": "小米",
+      "source": "/audio/lesson-sentences/522d3edeb64a7ca45f5ea675.mp3",
+      "sha256": "fa48db66c730f12b6c953426d6971965a974906623b9f6d9bd264e6a55419ccc"
+    },
+    "手机": {
+      "text": "手机",
+      "source": "/atlas/audio/atlas-u624b-sentence.mp3",
+      "sha256": "26a73e0ac5304d2baf4f45fab24c967eb8d6efed980f86ec0130c9fdf8652b9e"
+    },
+    "汽车": {
+      "text": "汽车",
+      "source": "/audio/hsk3-803-word.mp3",
+      "sha256": "74b4ef5bf647a891f8e31150d9414de5c3577b3b90c2fefcf42a02a33242494d"
+    },
+    "这是从新西兰进口的": {
+      "text": "这是从新西兰进口的",
+      "source": "/audio/lesson-sentences/113e819c09d737d1d74ff5df.mp3",
+      "sha256": "89aae0ba8f233b3ee42b801437d97729e348a7d26defe8bdeccaaa5e8ca5cc74"
+    },
+    "一起出门": {
+      "text": "一起出门",
+      "source": "/audio/lesson-sentences/cd20e90f9f22d71bc800c8dd.mp3",
+      "sha256": "e465e5169cd3ae602d73875530d31173827f62374db8f654fa46cfe055836d72"
+    },
+    "家用电器": {
+      "text": "家用电器",
+      "source": "/audio/lesson-sentences/b2a5a4ed9613c275f2e92644.mp3",
+      "sha256": "3d9e5f70a27167c1383822f3c378ed425d73abe06462d846338a50ffffdc8a54"
+    },
+    "洗衣机": {
+      "text": "洗衣机",
+      "source": "/audio/hsk3-887-word.mp3",
+      "sha256": "18326327718571dfd0a2f63b54b741462352989cc356153322829e4762d53a6c"
+    },
+    "空调": {
+      "text": "空调",
+      "source": "/audio/hsk3-739-word.mp3",
+      "sha256": "a3f2ec710e25a021a3232a8e69ddee4a93d28e46a64be227c3daffb75764ae2b"
+    },
+    "电视": {
+      "text": "电视",
+      "source": "/audio/hsk1-037-word.mp3",
+      "sha256": "3aea97a6853a52d9728e9dcd5461643c9c32737df4c5936ac7e4512e3626039c"
+    },
+    "公司": {
+      "text": "公司",
+      "source": "/audio/hsk1-062-word.mp3",
+      "sha256": "0924bf2639a63da77fa35309fe34115f9181e6ac1e3736a2031cb257aaad4fe4"
+    },
+    "工资": {
+      "text": "工资",
+      "source": "/audio/lesson-sentences/11547412b45318913557599c.mp3",
+      "sha256": "1bae9421d53fa8ac1e7812096aa05aa8648cd0c3ccd93dd0736df59e4e2bd78c"
+    },
+    "我们一起出门吧": {
+      "text": "我们一起出门吧",
+      "source": "/audio/lesson-sentences/ebcbc56ffb705daa6eccff6e.mp3",
+      "sha256": "ae01d49985cf859fd088b68ac81c1f720e5f3e27330a458fac54c84c7cc5cb96"
+    },
+    "我在一家公司工作": {
+      "text": "我在一家公司工作",
+      "source": "/audio/lesson-sentences/0ed75e50f2cdf9cfd9541de2.mp3",
+      "sha256": "f08e6659c3f34feff3492090824c6ad4026a8f8d1a75982e4ec8f9d138ef3b59"
+    },
+    "我的工资不高": {
+      "text": "我的工资不高",
+      "source": "/audio/lesson-sentences/3d761b88c7dc9dc48cebc034.mp3",
+      "sha256": "80bbeffab26eb3343132c0ed0b48b129dddb4b57fc1416806e09e9dd83d4e605"
+    },
+    "我家的洗衣机坏了": {
+      "text": "我家的洗衣机坏了",
+      "source": "/audio/lesson-sentences/21d87267a3fe11feaeb98071.mp3",
+      "sha256": "5724ea5ddafa273ba65f48b887cead8b44955cbdb1cfe692d72843d0aaa0c974"
+    },
+    "请打开空调": {
+      "text": "请打开空调",
+      "source": "/audio/lesson-sentences/04bc8573f7c14b0cc52f7339.mp3",
+      "sha256": "2c3372bf650951855a560e0fd9e8395b3eddb371a6e0ac6096bc37087c1b0ab5"
+    },
+    "右": {
+      "text": "右",
+      "source": "/audio/hsk2-481-word.mp3",
+      "sha256": "4297aa7e5e1931eeb91f8fe74093d6e0dbd2e155bb1604c8d27bf9643d92233f"
+    },
+    "大": {
+      "text": "大",
+      "source": "/audio/hsk1-025-word.mp3",
+      "sha256": "89fbe2d5991b5b908e985a4a4814e2e6c6c673b741806f896fc2b8518f1c5747"
+    },
+    "太": {
+      "text": "太",
+      "source": "/audio/hsk1-206-word.mp3",
+      "sha256": "a2c1088d8e87dc9de4863913f986923a39a1e4ad2a0f26481fc34c4be8f37175"
+    },
+    "天": {
+      "text": "天",
+      "source": "/audio/hsk1-207-word.mp3",
+      "sha256": "09493b661faaace3b5c3f7cae95d2853aba68a21f81d7820a9ce1b0e503e5664"
+    },
+    "明": {
+      "text": "明",
+      "source": "/course06/audio/char-660e.mp3",
+      "sha256": "44545eb71024abca8fc9e0a730dd28a7eb95523925f621950ce27fa081aee591"
+    },
+    "朋": {
+      "text": "朋",
+      "source": "/course07/audio/char-670b.mp3",
+      "sha256": "cf175cea8f424d174a266a2aefa60c9cf25d0966d3884fb498ef1d9c9dd8703d"
+    },
+    "师": {
+      "text": "师",
+      "source": "/course07/audio/char-5e08.mp3",
+      "sha256": "4c772c364f63667e786343d38373c1a6fce486aaebe2b421388fb804b3c0ea48"
+    },
+    "睡": {
+      "text": "睡",
+      "source": "/audio/hsk1-194-word.mp3",
+      "sha256": "bda6c87924289a515b24bfa6872a3dec577b738b44f2085ab652aba41fcc046d"
+    },
+    "说": {
+      "text": "说",
+      "source": "/audio/hsk1-196-word.mp3",
+      "sha256": "7c51e96a81af31dd2a854f610c7012cc4c2076f238d9805f678b7cdfade5579b"
+    },
+    "钱": {
+      "text": "钱",
+      "source": "/audio/hsk1-164-word.mp3",
+      "sha256": "c162a380910ffca53092221637c4b8a57f620aef80d489d321432040d5061447"
+    },
+    "线": {
+      "text": "线",
+      "source": "/audio/lesson-sentences/83ee4811d833487cc08089de.mp3",
+      "sha256": "03318604ce45924525969db5beef40dc7874b9b517726ab52700a3973c9acbc7"
+    },
+    "工": {
+      "text": "工",
+      "source": "/course07/audio/char-5de5.mp3",
+      "sha256": "7608e5da80fb725e9836544886323eb5c03facab68eaca2b91e99c5b90e44bfa"
+    },
+    "公": {
+      "text": "公",
+      "source": "/course07/audio/char-516c.mp3",
+      "sha256": "92762f6b53d101a3b5a4b6109e54b0c2b9539e004b92460cff823ce6d0664f52"
+    },
+    "米": {
+      "text": "米",
+      "source": "/audio/hsk3-769-word.mp3",
+      "sha256": "ddb7a84c53b3dd12fb50491ce88806dff5e05c2cc7c020b7aeccd8fc2f55447a"
+    },
+    "我想喝水": {
+      "text": "我想喝水",
+      "source": "/audio/lesson-sentences/fdaa26ac8943d4a42d5b5f12.mp3",
+      "sha256": "f99222f405b85e14b7f669e95cafcd021872f400578bb07f77628f23e14aac43"
+    },
+    "我想睡觉": {
+      "text": "我想睡觉",
+      "source": "/audio/lesson-sentences/0210e87252468059b0058621.mp3",
+      "sha256": "f608c2c7cd90b4166ac95454a7817dce6a932cabbbf6529c5c0455e30384d8f9"
+    },
+    "我的日记": {
+      "text": "我的日记",
+      "source": "/audio/lesson-sentences/05942d66f5980d8309a9fb71.mp3",
+      "sha256": "cde192f30cd041a96534ba5f35b04c6d95704d9f335ce56a486a6425b94e6b81"
+    },
+    "日记": {
+      "text": "日记",
+      "source": "/audio/lesson-sentences/fee683550df02f6834007b8c.mp3",
+      "sha256": "39167ca4b4261b761aea39883f525db06468e53ba8afcd3a82c99027a4a029ca"
+    },
+    "读": {
+      "text": "读",
+      "source": "/audio/hsk1-042-word.mp3",
+      "sha256": "b7adfcdba0b89e27cfcfabcc6b45d75f2f41a69818ef5ab5851c01bb7173b61f"
+    },
+    "录音": {
+      "text": "录音",
+      "source": "/audio/lesson-sentences/ef28216629be020b1c658cc7.mp3",
+      "sha256": "ce3a3f2dd295682d41956c9f28b3c2a728238d0dd07caba2128824aed70173d8"
+    },
+    "我想再读一遍": {
+      "text": "我想再读一遍",
+      "source": "/audio/lesson-sentences/a8caff3d4b0227547fa83e4b.mp3",
+      "sha256": "bde99ec117edef3b1762d2ca485ec17cbef2dc361622d6547438679f098eabf4"
+    },
+    "不要加糖": {
+      "text": "不要加糖",
+      "source": "/audio/lesson-sentences/b78864853eaab4eab0d39126.mp3",
+      "sha256": "e7db7dbfd06f2ee50486e0881959c6639f8b3ac88992ba13e8a65930f398fbbf"
+    }
+  },
+  "snowLines": {
+    "雪停了。": {
+      "text": "雪停了。",
+      "source": "/audio/lesson-sentences/686649f441934a8764275dad.mp3",
+      "sha256": "4cd66a9bdf9629b12e26db8ad214320c913d590a93c9b0e877a14ffbd40029a6"
+    },
+    "下雪了。": {
+      "text": "下雪了。",
+      "source": "/audio/lesson-sentences/58568bcb9548fb2946f8f768.mp3",
+      "sha256": "212a6f67c16b8dd24eaedd60f0b2b211dfc9992bc1b7f0ad39dc90ccd946671d"
+    },
+    "雪花落在窗台上。": {
+      "text": "雪花落在窗台上。",
+      "source": "/audio/lesson-sentences/033c00489379bd4e77c6484e.mp3",
+      "sha256": "ece5d6cae6ddf05a55db44c62ab59eea5adc1acaee2923d7d3ff1fec1940e601"
+    },
+    "大雪封了路。": {
+      "text": "大雪封了路。",
+      "source": "/audio/lesson-sentences/3f667b0a98a655ceb27c0970.mp3",
+      "sha256": "eee8eb636a026b56d6ca238cd1ea1602fbbf56f88a8c2cdd2bdc6efd672d0fb0"
+    },
+    "外面下着小雪。": {
+      "text": "外面下着小雪。",
+      "source": "/audio/lesson-sentences/8f55f9e1da041cefa8d5b4ff.mp3",
+      "sha256": "3fb7c1bc183cd2b1392fa2ef63de6b41c328df6f96c3a8cd0b6785f1fcb027d4"
+    },
+    "我们一起堆雪人吧。": {
+      "text": "我们一起堆雪人吧。",
+      "source": "/audio/lesson-sentences/c2cf22c071e5b1dd48b725ed.mp3",
+      "sha256": "82f12d6855a62be964c07a8553f02970f60c56bdce10d96f78cf91468f65b358"
+    },
+    "他扔了个雪球。": {
+      "text": "他扔了个雪球。",
+      "source": "/audio/lesson-sentences/4be66fa7c1bdb9fdac87a9d4.mp3",
+      "sha256": "c7d4bc19849f305c474f34a4e5b21e7eb65cab728678d10afebe262fea7d0b02"
+    },
+    "远处有一座雪山。": {
+      "text": "远处有一座雪山。",
+      "source": "/audio/lesson-sentences/bd1e94040f268a5010f0a860.mp3",
+      "sha256": "710e74e1bd8ef9ffd0b159097a74e8ddab0ce60ca5fb4d4a34a57258a369db3d"
+    },
+    "雪地上有脚印。": {
+      "text": "雪地上有脚印。",
+      "source": "/audio/lesson-sentences/55b1cc4397b8d37ba79253f2.mp3",
+      "sha256": "619241a32fcf89d866bf939dee3c01d8cf3025a4043ca3bf6ce81e80faab4e3d"
+    },
+    "她穿着雪白的衬衫。": {
+      "text": "她穿着雪白的衬衫。",
+      "source": "/audio/lesson-sentences/0929e15609a9ac5d7afc8268.mp3",
+      "sha256": "523b67bdee32429205893ac1c2cb5d4943faac4a4491b18ddb607e7aedb8deee"
+    },
+    "冰雪融化了。": {
+      "text": "冰雪融化了。",
+      "source": "/audio/lesson-sentences/bdc9d9b986bc248bf81bf835.mp3",
+      "sha256": "07bc48109e2b689872d8ee2b7b22581c9e7e20b07eb3799caea57de498b92f84"
+    },
+    "我喜欢滑雪。": {
+      "text": "我喜欢滑雪。",
+      "source": "/audio/lesson-sentences/5f148979f60907fd86f89d6a.mp3",
+      "sha256": "9f16357abc745a9eb296add6bb07085af9d7ff1fbd6be83010e5bcf2ced4b1ab"
+    },
+    "雪灾影响了交通。": {
+      "text": "雪灾影响了交通。",
+      "source": "/audio/lesson-sentences/6fca007d3e8fb82b71f16259.mp3",
+      "sha256": "7199b481afd54a21226d2c00ef2a8cb5c2111ab76b36bf08d25e476e1d8ce6ef"
+    },
+    "车坏了，又下起雨来，真是雪上加霜。": {
+      "text": "车坏了，又下起雨来，真是雪上加霜。",
+      "source": "/audio/lesson-sentences/ab81df0fdf8def6b9da59fb2.mp3",
+      "sha256": "a31e6d41490c243e89119795763fd3392d93e4db7f441b8af06c7260f35095a3"
+    },
+    "你这时候来帮忙，真是雪中送炭。": {
+      "text": "你这时候来帮忙，真是雪中送炭。",
+      "source": "/audio/lesson-sentences/f8a41a5d51df992d6535adb2.mp3",
+      "sha256": "468263fe9f6033526a6e89918367da5b4addb40b63165cb7f5953556fe4765be"
+    },
+    "雪很大。": {
+      "text": "雪很大。",
+      "source": "/audio/lesson-sentences/fb456a48993ce8e7b145faba.mp3",
+      "sha256": "25a746a0eb203ef86f78fb7e0a92b8c2ca0484f7c9c840fd3b08d0b335a6a460"
+    },
+    "雪白的地面。": {
+      "text": "雪白的地面。",
+      "source": "/audio/lesson-sentences/b846b7b7b303fdd86bae0d30.mp3",
+      "sha256": "8db287dfccc5f723c8d4a8075ccf4c339e3ca8f13d395dd301d9afb9a562bb69"
+    },
+    "明天会下雪。": {
+      "text": "明天会下雪。",
+      "source": "/audio/lesson-sentences/80caee7470d63b3d81d1505b.mp3",
+      "sha256": "bc0b98caa95cb45cffe58695803cad8fb0c17c765991d9a612eb070ee42ba3a4"
+    },
+    "下雪了，地上很滑，小心摔倒。": {
+      "text": "下雪了，地上很滑，小心摔倒。",
+      "source": "/audio/lesson-sentences/d95bed0d502213aeb073b2bb.mp3",
+      "sha256": "74f4268a31d6ff30385c146d58a7d0cfdb4f674e3380531a10a4c4d1e5e90e19"
+    },
+    "雪天路滑，人一多更容易撞到别人。": {
+      "text": "雪天路滑，人一多更容易撞到别人。",
+      "source": "/audio/lesson-sentences/807873dfecb248bdc99bb0ff.mp3",
+      "sha256": "0b3470e4790db2789d5ca5e1c6b07c5403ba005c433b461a0b0e9dbea47f2f76"
+    },
+    "公园里有人在堆雪人。": {
+      "text": "公园里有人在堆雪人。",
+      "source": "/audio/lesson-sentences/22b820582fb729fb788125ba.mp3",
+      "sha256": "5fd9c2c5962897a899aff9dcb98b95dba5f287a987070cf0d0995b635a435419"
+    },
+    "雪白的地面很好看。": {
+      "text": "雪白的地面很好看。",
+      "source": "/audio/lesson-sentences/43bf158aa8c4881716e9b34f.mp3",
+      "sha256": "788c0f7eea72faae6dfea91369581ce8722d405a5686daab6fc56dffd294f274"
+    }
+  },
+  "connectors": {
+    "我经常坐地铁。": {
+      "text": "我经常坐地铁。",
+      "source": "/audio/lesson-sentences/113b3d40cac08f045119dae9.mp3",
+      "sha256": "104fe7efc3cf0fb58bf353c3d48eb8ec1ab7ef3f237baaf9370a4cb4ac68906d"
+    },
+    "我常常坐地铁。": {
+      "text": "我常常坐地铁。",
+      "source": "/audio/lesson-sentences/17d8a7bd98e3eb795cf66fb3.mp3",
+      "sha256": "ae816f19ace0daabccd5841cc409c41d5f3bd783ff7cbf23a53f155784adc984"
+    },
+    "我有时候坐地铁。": {
+      "text": "我有时候坐地铁。",
+      "source": "/audio/lesson-sentences/b8653bdf5152fd69fa148b51.mp3",
+      "sha256": "3d75c76004bfa0a5528078ea3d5b4e9aadbc814e95bbac6d25d9657878177b82"
+    },
+    "我很少坐地铁。": {
+      "text": "我很少坐地铁。",
+      "source": "/audio/lesson-sentences/f27b4ede9980619e2afaa41a.mp3",
+      "sha256": "9fad1a1f4483e86a41bc86b3162c0b659a6d09596c734abb445de5ec386a1628"
+    },
+    "我几乎从不坐地铁。": {
+      "text": "我几乎从不坐地铁。",
+      "source": "/audio/lesson-sentences/7887390ac80a045851c9f86a.mp3",
+      "sha256": "b84514599ebb8f74d1af2bffa2070643d6012e08e1efe957fd5607de1835ec54"
+    },
+    "我从不坐地铁。": {
+      "text": "我从不坐地铁。",
+      "source": "/audio/lesson-sentences/e301ce8406b5ecfd0e6e7b2c.mp3",
+      "sha256": "f3f8f83b0f9260de923750714ff106d03c16994b730e204c3e3affb6a088d1af"
+    },
+    "我先坐地铁，然后走路。": {
+      "text": "我先坐地铁，然后走路。",
+      "source": "/audio/lesson-sentences/03a6119c2fc65827ca5d1ff6.mp3",
+      "sha256": "a4be0b19efee215ab46130d125f3715a399c75bc39805b0a61b9db8e7e964109"
+    },
+    "看手机造成了交通事故。": {
+      "text": "看手机造成了交通事故。",
+      "source": "/audio/lesson-sentences/559aeaad6e945f9ac98cade3.mp3",
+      "sha256": "72a02ea5284722305416dfe91b946ffdb0908d760c3d83b4102ebedfd8071cd8"
+    }
+  },
+  "supplements": {
+    "下课的时候，我给你打电话。": {
+      "text": "下课的时候，我给你打电话。",
+      "source": "/audio/lesson-sentences/c4ad1942846484460f9a9400.mp3",
+      "sha256": "458efac6e5e54cd58bd4451d9869bef2ae85b77703e74549ffc9f91af4d75126"
+    },
+    "我们买了菜，再回家。": {
+      "text": "我们买了菜，再回家。",
+      "source": "/audio/lesson-sentences/1713d7c8fbc68f33cbeccdd6.mp3",
+      "sha256": "21faf4fccee63e1c9dcefc4e12dddbf2eb37571f2b1e5f2efbe86fe01fe74001"
+    },
+    "爸爸在吃饭，我在喝水。": {
+      "text": "爸爸在吃饭，我在喝水。",
+      "source": "/audio/lesson-sentences/593437539ef18e680b582e89.mp3",
+      "sha256": "10ebad2924cdf690f4fd8bc49c15fc9b330896d85069bda729485275d9212144"
+    },
+    "我洗了手，也洗了菜。": {
+      "text": "我洗了手，也洗了菜。",
+      "source": "/audio/lesson-sentences/44ad9f261678093f7093c2fd.mp3",
+      "sha256": "7e4e2607e7877231a13bd0c91ebd1ab388217d3bb5d84363ac184866db1232a2"
+    },
+    "我本来想走回家，可是雨下得太大。": {
+      "text": "我本来想走回家，可是雨下得太大。",
+      "source": "/audio/lesson-sentences/566ec0a4f1b12967d8553320.mp3",
+      "sha256": "8b43da73c9ff6530390a60f20c9214e3e851c2b30697a9fc62a4e7a427e4142c"
+    },
+    "如果雨还很大，我们就坐车。": {
+      "text": "如果雨还很大，我们就坐车。",
+      "source": "/audio/lesson-sentences/79d4e3bf9e69c21740e2a44f.mp3",
+      "sha256": "ac3a2d41a63939222da0b40cb9492bc988c994653af9efc4f85a360134fb3635"
+    },
+    "我回到家才发现衣服太大了。": {
+      "text": "我回到家才发现衣服太大了。",
+      "source": "/audio/lesson-sentences/e97c7cc1df78ea405c1af0fb.mp3",
+      "sha256": "c02f6b885acd810f0fe34ee669fca3b4e46f0b5a3331e1e1197d006d7328d374"
+    },
+    "这件白色的衣服比那件黑色的舒服。": {
+      "text": "这件白色的衣服比那件黑色的舒服。",
+      "source": "/audio/lesson-sentences/b7383b803c2302dcb2e87401.mp3",
+      "sha256": "7c17418c2379008414084459759d66acfc8ef2f335de26504f9bf0ec64ba72d3"
+    },
+    "我以为台灯坏了，后来才知道只要换一个灯泡。": {
+      "text": "我以为台灯坏了，后来才知道只要换一个灯泡。",
+      "source": "/audio/lesson-sentences/29ddafec92438302c752e3b7.mp3",
+      "sha256": "a473f466915376a815c1c3a17cd7f22d44371457e4013f4d830120edae0ef821"
+    },
+    "这把椅子虽然很旧，却还能用。": {
+      "text": "这把椅子虽然很旧，却还能用。",
+      "source": "/audio/lesson-sentences/8246353f258c39f9cd450887.mp3",
+      "sha256": "106ebd8c6c1522f9775bfa2f75cdbaec36d29c54e1d423a6d1a27e271c27d36b"
+    },
+    "如果工作不忙，我们就一起吃饭，否则改天再约。": {
+      "text": "如果工作不忙，我们就一起吃饭，否则改天再约。",
+      "source": "/audio/lesson-sentences/fa848af9f44d9f7941f370ea.mp3",
+      "sha256": "3f790d60155b9c3265139f14034e11920874dbbf05f9b5985c0bb281ffad58d4"
+    },
+    "大家笑得说不出话来。": {
+      "text": "大家笑得说不出话来。",
+      "source": "/audio/lesson-sentences/b603e06892618a64db9a5f7b.mp3",
+      "sha256": "c6a676c6acea7b17868e90064114761683ff37bed61c622c71840b30f2401d49"
+    },
+    "每周由一位邻居整理桌上的书。": {
+      "text": "每周由一位邻居整理桌上的书。",
+      "source": "/audio/lesson-sentences/aac75d066804b7f4a9c3b10d.mp3",
+      "sha256": "2e6d80cf6eb2b87a8f173bc49efb37d664501f0f33ed6ae7a42471c87ba4844c"
+    },
+    "活动的价值不在于来了多少人，而在于多少人愿意再来。": {
+      "text": "活动的价值不在于来了多少人，而在于多少人愿意再来。",
+      "source": "/audio/lesson-sentences/5d41c83a4fcf9774a251f245.mp3",
+      "sha256": "2bcf1ba74516ff0cc1f5850d12437e0546a61df78f7e827a1805f183e9581c62"
+    },
+    "我们可以保留周末的服务，同时增加晚上的时间。": {
+      "text": "我们可以保留周末的服务，同时增加晚上的时间。",
+      "source": "/audio/lesson-sentences/e8646b70f71f5a3d9887adc0.mp3",
+      "sha256": "68b6456608c25756605fe731448a0909c8882de745df9e942d76dde68d2fb51f"
+    },
+    "即使只收到几条意见，我们也要认真看。": {
+      "text": "即使只收到几条意见，我们也要认真看。",
+      "source": "/audio/lesson-sentences/69b2dc5633c74a7e15fe804c.mp3",
+      "sha256": "3ec93f112422c823f52a76120a667ba887cde57034f9182a359aedb450a34601"
+    },
+    "我一到家就给你打电话。": {
+      "text": "我一到家就给你打电话。",
+      "source": "/speaking-chunks/audio/frame-time-as-soon-1.mp3",
+      "sha256": "ada3c7cbaeace9599f8e57e35bce4b68f2614c740767e3a2106ca75ec231cc95"
+    },
+    "我们先买菜，再回家做饭。": {
+      "text": "我们先买菜，再回家做饭。",
+      "source": "/audio/lesson-sentences/a558492f60732b77002b383a.mp3",
+      "sha256": "466621457d751b927249328bcc8600b9a583bd5cc7adfa7911e754a9ed8e7dbf"
+    },
+    "只要今天不下雨，我们就去公园。": {
+      "text": "只要今天不下雨，我们就去公园。",
+      "source": "/audio/lesson-sentences/69b5a0510c190ebc79fa41f7.mp3",
+      "sha256": "bf4c8d7c2790a0daa68132175c4c84437a8f9a1e66813d7874848ac59e45159b"
+    },
+    "如果你有时间，我们就一起喝茶。": {
+      "text": "如果你有时间，我们就一起喝茶。",
+      "source": "/speaking-chunks/audio/frame-connect-if-1.mp3",
+      "sha256": "334c9a94f7e59e13471cb0b5540bd47a64416f8f06e5c2d9c39780d13b0d8f46"
+    },
+    "如果明天下雨，我就坐地铁。": {
+      "text": "如果明天下雨，我就坐地铁。",
+      "source": "/speaking-chunks/audio/frame-connect-if-2.mp3",
+      "sha256": "1436f4c557d1a0833e331a3c567c82e1ed8196d9a3109c098e8e5772699edcf1"
+    },
+    "今天比昨天暖和。": {
+      "text": "今天比昨天暖和。",
+      "source": "/speaking-chunks/audio/frame-compare-bi-1.mp3",
+      "sha256": "59de99df8c36e39494700b8c734b707c7493f0b0260190aba474d0ede90aea79"
+    },
+    "这杯茶比那杯茶便宜。": {
+      "text": "这杯茶比那杯茶便宜。",
+      "source": "/speaking-chunks/audio/frame-compare-bi-2.mp3",
+      "sha256": "f2707b06e8b12c5e31b7f6b9957ec86c85019dcd431f3c3db308dfa699262183"
+    },
+    "他说得很清楚。": {
+      "text": "他说得很清楚。",
+      "source": "/speaking-chunks/audio/frame-complement-de-1.mp3",
+      "sha256": "f4701924fbf7ff490ca02c9451586cacd1e7577ca529bc1ab853b8eb0695ea63"
+    },
+    "她跑得很快。": {
+      "text": "她跑得很快。",
+      "source": "/speaking-chunks/audio/frame-complement-de-2.mp3",
+      "sha256": "1b1fce7c5f6abf905232205df7b5d1fae34f408bd5370dcbefd46c99fdb9fc4e"
+    },
+    "即使明天下雨，我也会去上课。": {
+      "text": "即使明天下雨，我也会去上课。",
+      "source": "/speaking-chunks/audio/frame-adv-even-if-1.mp3",
+      "sha256": "04bf1f07fa75a0802b23e927d2c0de6e5353c98ece6869ad57b1ebc21f9c8232"
+    },
+    "即使只有十分钟，我们也可以练习中文。": {
+      "text": "即使只有十分钟，我们也可以练习中文。",
+      "source": "/speaking-chunks/audio/frame-adv-even-if-2.mp3",
+      "sha256": "7687aac063bb4966bcbf37808b29ff0e94c3bf95c1d5f3294f2a36ac8dd08807"
+    },
+    "因为我不吃肉，所以早饭我做素菜。": {
+      "text": "因为我不吃肉，所以早饭我做素菜。",
+      "source": "/audio/lesson-sentences/677373d3fc5b521658a44b5b.mp3",
+      "sha256": "9403b76d2555f9b3468b463070846417261e8f39653d6e44c8037838e721b994"
+    }
+  },
+  "familyPractice": {
+    "我买了一本书。": {
+      "text": "我买了一本书。",
+      "source": "/audio/hsk1-010-sentence.mp3",
+      "sha256": "ba2384570831dcb972799f1bc2bc3dbb4ce04ae823c2bc080171a04fb3200b7f"
+    },
+    "这张桌子是木头做的。": {
+      "text": "这张桌子是木头做的。",
+      "source": "/audio/lesson-sentences/54b8ee3e508a92d1d489cd71.mp3",
+      "sha256": "00b5d03c196fb0c59c3378433979bce34356734070827c559b253f3a9f57a44e"
+    },
+    "我想为未来做准备。": {
+      "text": "我想为未来做准备。",
+      "source": "/audio/lesson-sentences/00e51b90fdbb0b3f6ecc1bd0.mp3",
+      "sha256": "25af9c8d4aba5918652f937995f53b208c99b96dbc4df39c35aa4fbfddab0263"
+    },
+    "我们周末不用上班。": {
+      "text": "我们周末不用上班。",
+      "source": "/audio/lesson-sentences/31c11fe9cd9215b995413113.mp3",
+      "sha256": "961e62aa53d927de9e113fd38691c7c359b713e478dc11c5cf2129e312442332"
+    },
+    "我住在苏州。": {
+      "text": "我住在苏州。",
+      "source": "/audio/mandarin-320/5f93c56192bc589cfb0a.mp3",
+      "sha256": "585cd6aff97bc685519477474d38722a91009554d17abacd2d6cf6da1ec63390"
+    },
+    "先复习，再做作业。": {
+      "text": "先复习，再做作业。",
+      "source": "/audio/lesson-sentences/1504aedeb19efb3894f33125.mp3",
+      "sha256": "8305502ffe74cb30e29cc98555c30f2089a4c32456336dd85a9614861dccbfd6"
+    },
+    "她正在做作业。": {
+      "text": "她正在做作业。",
+      "source": "/audio/lesson-sentences/28b8cb2057b5e13c034ff616.mp3",
+      "sha256": "e251185243706b58d65887768ba054572eecad8536090a0a8f3d6eaee3edfebc"
+    },
+    "我没听清，请再说一遍。": {
+      "text": "我没听清，请再说一遍。",
+      "source": "/audio/lesson-sentences/781ed08c462088f0e16baed6.mp3",
+      "sha256": "6e30658d4bda66ec39522aa159edf165664338d9d78dd1dfd69b252f986c377c"
+    },
+    "今天晚上我在家做饭。": {
+      "text": "今天晚上我在家做饭。",
+      "source": "/audio/lesson-sentences/8fc4eafc1fa5846f4ad90680.mp3",
+      "sha256": "cf3ba40f115887f5cebd1fd158a05f081fc618f68bd49c9c7aafd91852a3b822"
+    },
+    "放学以后，我先做作业。": {
+      "text": "放学以后，我先做作业。",
+      "source": "/audio/lesson-sentences/9a19ab920ea18462df80128a.mp3",
+      "sha256": "8687e4b7bf80b8221924bb8ab7a8b756e2ff2c896c94e31077607e6a4b1890ef"
+    },
+    "我每天坐地铁去上班。": {
+      "text": "我每天坐地铁去上班。",
+      "source": "/audio/lesson-sentences/9b4876859e36f65af80201d1.mp3",
+      "sha256": "b0432ef3abeb6c031733beb40bfd3eead1bf4f39150be4e627a3f52691bf0244"
+    },
+    "请坐在椅子上。": {
+      "text": "请坐在椅子上。",
+      "source": "/audio/mandarin-320/b81186411461e5b72160.mp3",
+      "sha256": "e5b7b13286c9d45c9dc51c04c84ac314feb4916f3b2e123132aa93d0e7d164f5"
+    },
+    "一杯茶十块，两杯一共多少钱？": {
+      "text": "一杯茶十块，两杯一共多少钱？",
+      "source": "/audio/lesson-sentences/365e599351916b4e8fff6296.mp3",
+      "sha256": "c80459394148a89da02b3bcea19f3f5438b5e783466797cb28b13a4fb6b069d2"
+    },
+    "地铁站门口有很多共享单车，扫码就可以骑。": {
+      "text": "地铁站门口有很多共享单车，扫码就可以骑。",
+      "source": "/audio/lesson-sentences/c425265fdb1bf82ce535337e.mp3",
+      "sha256": "e1e143e3664fd32637405087d1a054c85d43f81e52c5a229a8a77f4ab4d94a66"
+    },
+    "我和她有一个共同的爱好：打篮球。": {
+      "text": "我和她有一个共同的爱好：打篮球。",
+      "source": "/audio/lesson-sentences/f313aa80adc2c1116c2d1b83.mp3",
+      "sha256": "2a2df33bdbc0c2b6a4ec98bb4ded381112fd9d54b3048da60346da1cf68d7339"
+    },
+    "地铁和公交车都是公共交通工具。": {
+      "text": "地铁和公交车都是公共交通工具。",
+      "source": "/audio/lesson-sentences/45ac07b1e893346da48ad7f4.mp3",
+      "sha256": "4e12ec645ac4e18eac65db0703b634efa9bab4797378576f79a8bc2154689abb"
+    },
+    "洗完头发以后，我用吹风机吹干了。": {
+      "text": "洗完头发以后，我用吹风机吹干了。",
+      "source": "/audio/lesson-sentences/046b44786c25b4484c79d0ba.mp3",
+      "sha256": "ae59bb7fe95af982a492bbc17efb35b100605d56703c7cbff811757d27bfc207"
+    },
+    "我今天头疼，太阳穴一跳一跳地疼。": {
+      "text": "我今天头疼，太阳穴一跳一跳地疼。",
+      "source": "/audio/lesson-sentences/94e3d2580a63095c511b4fc1.mp3",
+      "sha256": "59b7da2848e59fbca30dcc2b146115353c0992ad7b3b46934da1a5d6497c7daf"
+    },
+    "我问他同不同意，他没说话，只是点头表示同意。": {
+      "text": "我问他同不同意，他没说话，只是点头表示同意。",
+      "source": "/audio/lesson-sentences/1e871f7692e339431340c536.mp3",
+      "sha256": "52fb1a8e795065d9b70cbffd19da6d516f4a2cdd2c515c31c20946052dec147e"
+    },
+    "我问她要不要再来一杯，她摇头表示不要。": {
+      "text": "我问她要不要再来一杯，她摇头表示不要。",
+      "source": "/audio/lesson-sentences/ab0fdd76bc283c13649e21bb.mp3",
+      "sha256": "2559ba720807b333abda0df1bec88a778854ab51b25f65d3e597c64d95b1be1a"
+    },
+    "我的台式电脑没有键盘，所以我得买一个。": {
+      "text": "我的台式电脑没有键盘，所以我得买一个。",
+      "source": "/audio/lesson-sentences/073d5073f2e09bf7d9c6ec53.mp3",
+      "sha256": "646c591dec6d63ad4c9d44afeb31cfef67668da3128d5da7a7bf4d518ee78808"
+    },
+    "我给妈妈打了个电话，告诉她我已经到家了。": {
+      "text": "我给妈妈打了个电话，告诉她我已经到家了。",
+      "source": "/audio/lesson-sentences/d5d37a4b3d986f2f9619e7a9.mp3",
+      "sha256": "47154d7f775617b25b62b2b8b77bcd7806035a65868a97d1b11d7b52d0669107"
+    },
+    "我们在电影院看了一部电影，片长两个小时。": {
+      "text": "我们在电影院看了一部电影，片长两个小时。",
+      "source": "/audio/lesson-sentences/08d16f9683278a5ed85e64e6.mp3",
+      "sha256": "4ef8d0f4e7b9f5391b36082292a90287be6228e000efaa7058905dfee865d938"
+    },
+    "我骑着电瓶车出门，车到半路就没电了，只好推回家充电。": {
+      "text": "我骑着电瓶车出门，车到半路就没电了，只好推回家充电。",
+      "source": "/audio/lesson-sentences/d1e3e27303795f737316a1c7.mp3",
+      "sha256": "a04f377334638446005266341e7b6557dc52d1852049c7af46e917a3f98e2d78"
+    }
+  },
+  "hanziFamily": {
+    "请坐在椅子上": {
+      "text": "请坐在椅子上",
+      "source": "/audio/lesson-sentences/3c4f423b721878b7fb2cb234.mp3",
+      "sha256": "e1b450bc9fa7aa45d821750df251d0da70a568d95007e2fee1088959e4f87be1"
+    },
+    "有的人喜欢茶，有的人喜欢咖啡": {
+      "text": "有的人喜欢茶，有的人喜欢咖啡",
+      "source": "/audio/lesson-sentences/717b91fadc4d0ec0b433fffb.mp3",
+      "sha256": "afd871a1983fc017fe5ea2697dfe860dc765cd1ecbdde637d9c0b4f2bacc8af0"
+    },
+    "我有时候骑共享单车": {
+      "text": "我有时候骑共享单车",
+      "source": "/audio/lesson-sentences/952b820fbb206811fd5be82f.mp3",
+      "sha256": "da1377da054d26d2e4c4a6d847cf83e8efe6a974c993537be62840b5b4cd45fa"
+    },
+    "你怎么去学校": {
+      "text": "你怎么去学校",
+      "source": "/audio/lesson-sentences/222a3bf1618e291de6c9f3d5.mp3",
+      "sha256": "31cceaf8290352ad4d2007dd83522d8637ad02cdb6a2d6f16144e93b95b3719e"
+    },
+    "我只是开玩笑": {
+      "text": "我只是开玩笑",
+      "source": "/audio/lesson-sentences/094d793f4c4f1b7f078902a7.mp3",
+      "sha256": "aa03bf95ef7a5f7a89cecbb818d94ab1d79afbe9c4a60c5aacb669cb786ed27e"
+    },
+    "我现在住在苏州": {
+      "text": "我现在住在苏州",
+      "source": "/audio/lesson-sentences/20a91a11cbb5dfcdc43caf25.mp3",
+      "sha256": "39f45ba1650609cfe180c8ee1242707d6743949a63e590bdd7146ab3ba08c8f2"
+    },
+    "书在桌子上": {
+      "text": "书在桌子上",
+      "source": "/audio/lesson-sentences/c43bc7a7b8c70fa3211c4a07.mp3",
+      "sha256": "e8556b6b16f323ddec6f1a92804a46101f3025260f696c38d93bd27d3e4cda33"
+    },
+    "昨天我去了商店": {
+      "text": "昨天我去了商店",
+      "source": "/audio/lesson-sentences/a5a68193cc29fb36acb58425.mp3",
+      "sha256": "7a1599faa2fa6fd171457e91472b8a6df9f7c4fe75dc2c281a23643a2940ea15"
+    },
+    "你能帮忙吗": {
+      "text": "你能帮忙吗",
+      "source": "/audio/lesson-sentences/4b97021a6c20c5b55467719d.mp3",
+      "sha256": "3064ddadea20960229746ae261940dca3ee2a61b5bb3fb1ca7ed0e08dbc8de26"
+    },
+    "我比你高": {
+      "text": "我比你高",
+      "source": "/audio/lesson-sentences/1ef80cda4efef95ec6c4a5a1.mp3",
+      "sha256": "f6df49783fa994c003568f1283fc119f0e55d788dd407ba53d237321add8a88a"
+    },
+    "不好意思，我来晚了": {
+      "text": "不好意思，我来晚了",
+      "source": "/audio/lesson-sentences/9cbd00d082433bfd132456dd.mp3",
+      "sha256": "b86d05ac1c98b1c4df82118e20f661baf410039dfaddad99701ce96dbb2adb20"
+    },
+    "火车站在哪儿": {
+      "text": "火车站在哪儿",
+      "source": "/audio/lesson-sentences/409f5437ddc28f252c14c0d7.mp3",
+      "sha256": "f6b58c1bd8263b0e114213180c1940f9177bf4fdd4e5cc66a6848c04729f3788"
+    }
+  },
+  "lesson12Restored": {
+    "我骑电动车去学校。": {
+      "text": "我骑电动车去学校。",
+      "source": "/audio/lesson-sentences/53e62ce3a45120ffe9b4512dd0762ba0a543fea99ac48d8cf7fd3432ad56ad6c.mp3",
+      "sha256": "6969fab284ee8ec80eb33ceb82459e466f0f7b16b359e3fb4e98aff668a428e8"
+    },
+    "我坐公交车回家。": {
+      "text": "我坐公交车回家。",
+      "source": "/audio/lesson-sentences/d1405253dc96e8f75490a0f54bafeaf20b6e9f199e0bf4e8872cb1c1f3cefd33.mp3",
+      "sha256": "b887f200bc9280149a61fa803d6406cb743214eb8cb60d1d8f0350ff0abbba14"
+    },
+    "我想打车，不想租车。": {
+      "text": "我想打车，不想租车。",
+      "source": "/audio/lesson-sentences/42b56489f84d21d2c629cfa07435134976734d65dfe5c8c63d9f4e4086af105e.mp3",
+      "sha256": "2cb3d4161ed2e51b0beb4e9c6c1d5309f05371525a82cd3f50fc13f4be14206d"
+    },
+    "我们坐高铁去上海。": {
+      "text": "我们坐高铁去上海。",
+      "source": "/audio/lesson-sentences/bd69ddb18734b00e2b477e9acdf07b3c3676309e6ef3a7048fd92ae703f7951b.mp3",
+      "sha256": "162bf7738d3a91890fc8ecbbba44ae4a4e1a924c6c3c5e5d3607f3fc8d8e7417"
+    },
+    "我骑自行车去书店。": {
+      "text": "我骑自行车去书店。",
+      "source": "/audio/lesson-sentences/72a32bd6922efce8c9b7a153baca8505776e6a895edb4de50e30e91840ab4f8d.mp3",
+      "sha256": "4c95bc4240e0bdcfe0a906a3bc57af7ba3e17e1609eaa543bbf4e468f1da59dd"
+    },
+    "我坐出租车回家。": {
+      "text": "我坐出租车回家。",
+      "source": "/audio/lesson-sentences/805fb7bcd766fee480f024fd391a309fed0b5458e277dce637a5b331b17d52fb.mp3",
+      "sha256": "142d196a92f735b63644e82bb8113409cae583128d0466a99a29524269268115"
+    },
+    "我叫网约车去学校。": {
+      "text": "我叫网约车去学校。",
+      "source": "/audio/lesson-sentences/293066f343fc3339fb6ca258c820c2bd1649b9cf222e80b9b2f19bcae9b26a87.mp3",
+      "sha256": "607d84c4693fe6f953e762782e174d2aea8ff016f5cff35ffbd26eef8851532b"
+    },
+    "我坐火车去上海。": {
+      "text": "我坐火车去上海。",
+      "source": "/audio/lesson-sentences/46984879eef69bad01f5da749caea1558233f6fc44d2ac04f5dbba94b51718f1.mp3",
+      "sha256": "7b38cfa65fc761b4f07d7b810f82d8f50dd3cc3f8e2c6837b3c97aeceb7ecb1c"
+    },
+    "我坐飞机去上海。": {
+      "text": "我坐飞机去上海。",
+      "source": "/audio/lesson-sentences/6ab044770895537b32ec78b0610ae7df47839ba8723e63bf15ffc2fcf826e3a8.mp3",
+      "sha256": "c366bff92586ed7c4223926e08d36ab24c045e3d7b9135b3bef0940748fd78dc"
+    },
+    "我开车去学校。": {
+      "text": "我开车去学校。",
+      "source": "/audio/lesson-sentences/cfc2bc101c60e561c943065e5f91b544d2a6150d139f2ecfc4fa783f64f6f073.mp3",
+      "sha256": "2a4422828def8bae5ad1867a46e1930b166436822b68f4862224e8598c09fd93"
+    },
+    "我租车去旅行。": {
+      "text": "我租车去旅行。",
+      "source": "/audio/lesson-sentences/591dcd969f02b22e147afbdf274ff6abf24939b90f49fbdbd4236e58479388c1.mp3",
+      "sha256": "5ab149513b4c65bcde72c0576ec261bd36930aaa5d50aadfcd7b58ce21b634c6"
+    },
+    "银行在东边。": {
+      "text": "银行在东边。",
+      "source": "/audio/lesson-sentences/9f8561d0a85ca4a876944fcabd0f7802a610972397947d2f8a4580aab945da03.mp3",
+      "sha256": "62048e636af7782ab6cc17dcbb57e18d9fe6f014f9e48428e67d10057b58eadb"
+    },
+    "这是书店，东边的那座楼是银行。": {
+      "text": "这是书店，东边的那座楼是银行。",
+      "source": "/audio/lesson-sentences/de656d16c638f1a566c20a28d9a2fc52bcb306f448090197bf621fc72f1d90fc.mp3",
+      "sha256": "11daf64d898a3cf6dc1dc95f12b02ed4a7791cf3f9e9ff8d53d9ecba835c070e"
+    },
+    "谢谢！不客气！": {
+      "text": "谢谢！不客气！",
+      "source": "/audio/lesson-sentences/2b6c03e7b236df151b01a627a8f2f809be5848f8d5fa4e02fa69bbc029d32efc.mp3",
+      "sha256": "90bd54dd2c48a63c5240d51d393072ba4c363493e68c163b6ff0700e41eeda75"
+    },
+    "这是书店，那是银行。": {
+      "text": "这是书店，那是银行。",
+      "source": "/audio/lesson-sentences/a155d45a101469b9de3064ef209293d335b366a3a6640814d015fff92d8ebdbb.mp3",
+      "sha256": "e6b96adbc7f8292e195f0e0085ccc91e44f16f860b1e872a15a8894cfcd8afaf"
+    },
+    "那座楼是四号楼，我的宿舍在四号楼。": {
+      "text": "那座楼是四号楼，我的宿舍在四号楼。",
+      "source": "/audio/lesson-sentences/7adca56abe92b2d6642bd978e035752b09eb348fa200fb1b1c0a88d48e71ffce.mp3",
+      "sha256": "8fcb48c983f64236a7b2a1d9fd45a7b73bb0e77578a5375242920fc731fb74e7"
+    },
+    "书店在哪儿？": {
+      "text": "书店在哪儿？",
+      "source": "/audio/lesson-sentences/696cea5db872a1a041264c953e7f6fcfd54b245a9c508e4f8fb1b3e991c11334.mp3",
+      "sha256": "362ec3fed0f73ea94bb5d6c884394ab0d6e7c9d22ea3cf1b2abc24dee7560511"
+    },
+    "学校在宿舍南边。": {
+      "text": "学校在宿舍南边。",
+      "source": "/audio/lesson-sentences/f6ea67dbca68b189ed60e784eff28e830264b5dd831bd40d795eea569f03a5fa.mp3",
+      "sha256": "a64c7bf31e6c6a8598e9a42d0c96b49c5c1309c6149634ff26c33442f7056b7d"
+    },
+    "请问，银行在哪里？": {
+      "text": "请问，银行在哪里？",
+      "source": "/audio/lesson-sentences/ec6acb1233493183cefec786429835c72e2bf040c459295d5a6e54844508da1b.mp3",
+      "sha256": "c686c5b4c965ce7ba0f3b5521c3b00efce5bfe7a506a6a986ba1a3903c40c992"
+    },
+    "外面下雨了，带雨伞吧。": {
+      "text": "外面下雨了，带雨伞吧。",
+      "source": "/audio/lesson-sentences/c759cd15569be1bce8c36f1a48de543a87c07e5442dfc0cf5401c5dcccba244e.mp3",
+      "sha256": "8184cb6ae245781b54c2361a31914520de581f93e3a55aa41e702364df14760c"
+    },
+    "我想点外卖。": {
+      "text": "我想点外卖。",
+      "source": "/audio/lesson-sentences/ff4a50e13bceb808a88d7ba4f94fc0c86eeb9afe62f66a35cd194e378d82a076.mp3",
+      "sha256": "44ec332fbacbd225912aa71a358f9bde1a3c2402d9ad1fbf07eaf257f1c4dd71"
+    },
+    "我在找我的钱。": {
+      "text": "我在找我的钱。",
+      "source": "/audio/lesson-sentences/2ec11ddda58245022137263bcac91f5b3a27c46453a53d234763f23ee3fb180b.mp3",
+      "sha256": "dbd3b50dee7859d45f79ff8f8a5ba19649678618daf3f7fb00a53398ea9e02b1"
+    },
+    "外面下雨了，我带雨伞。": {
+      "text": "外面下雨了，我带雨伞。",
+      "source": "/audio/lesson-sentences/a24569e032897173033f9ebd1590cd9b679aa00d87dfcbbe8dc5b0ca86cdddc2.mp3",
+      "sha256": "6903eb9ed7bbf63807be1e3b6b088b63dbd4019b5e81fb4abc992a08792eb3fa"
+    },
+    "我有两千块钱。": {
+      "text": "我有两千块钱。",
+      "source": "/audio/lesson-sentences/019777e75d8e9f240793733476b2bc7fffa65399b7acc983053fdb840a911178.mp3",
+      "sha256": "bc18977396ec66e58b61f1df8e47f74269214f142bfe26d9dde7f1c9557245a3"
+    }
+  }
+}

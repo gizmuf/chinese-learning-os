@@ -1,5 +1,6 @@
 import source from '../data/lesson12/content.json';
 import recordings from '../data/lesson12/audio.json';
+import prepared from '../data/lesson-sentence-audio.json';
 import type {Copy} from './course-data';
 import type {Pronunciation} from './atlas-spatial-model';
 export const lesson12={id:'intensive-12' as const,number:12,date:source.date,title:source.title as Copy};
@@ -7,7 +8,11 @@ export type Lesson12Entry={id:string;family:string;hanzi:string;pinyin:string;me
 export const lesson12Words=source.words as Lesson12Entry[],lesson12Sentences=source.sentences as Lesson12Entry[];
 export const lesson12All=[...lesson12Words,...lesson12Sentences],lesson12ById=new Map(lesson12All.map(v=>[v.id,v]));
 export const lesson12Topics=source.topics;
-export const lesson12Audio=(v:Pick<Lesson12Entry,'id'>)=>(recordings as Record<string,{source:string}>)[v.id]?.source;
+const restoredClips: Record<string,{source:string}> = prepared.lesson12Restored;
+export const lesson12Audio=(v:Pick<Lesson12Entry,'id'>)=>{
+ const row=(recordings as Record<string,{text:string;source:string}>)[v.id];
+ return row && (restoredClips[row.text]?.source ?? row.source);
+};
 export const lesson12Pronunciation=(v:Lesson12Entry):Pronunciation|undefined=>{const source=lesson12Audio(v);return source?{text:v.hanzi,pinyin:v.pinyin,source,context:false,kind:v.chunks?'sentence':'word'}:undefined;};
 export const campusBuildings=[
  {id:'school',text:'学校',x:2,y:4,sentence:'c12-s035'},

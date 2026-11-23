@@ -1,5 +1,8 @@
 'use client';
 
+import PreparedSentenceListen from './prepared-sentence-listen';
+import prepared from '../data/lesson-sentence-audio.json';
+
 import {GlobalHskSelect, useGlobalHsk} from './global-hsk';
 import {globalHskLabel, knownHskInScope} from './global-hsk-model';
 import {useEffect, useLayoutEffect, useMemo, useRef, useState, type MouseEvent, type ReactNode} from 'react';
@@ -83,6 +86,12 @@ function ReaderToken({token, tokenIndex, aid, onChoose}: {token: ReadingLabToken
       ? <ruby key={index} data-tone={glyph.tone}>{glyph.text}<rt aria-hidden="true">{aid === 'tones' ? glyph.mark : glyph.pinyin}</rt></ruby>
       : <span key={index}>{glyph.text}</span>) : token.text}
   </button>;
+}
+
+const preparedExamples: Record<string, {source: string}> = prepared.supplements;
+
+function ListenToExample({text}: {text: string}) {
+  return <PreparedSentenceListen text={text} source={preparedExamples[text]?.source}/>;
 }
 
 function ReaderParagraph({paragraph, index, route, highlights, activeSentence, onChoose}: {
@@ -582,11 +591,11 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
                 if (paragraph) showEvidence(paragraph.id, id);
               }}>Find in the text <ArrowRight size={15}/></button>
               <p className="rl-topic">Try the pattern with another idea</p>
-              <p lang="zh-Hans">{grammar.example.hanzi}</p><p className="rl-example-pinyin">{grammar.example.pinyin}</p><p>{grammar.example.english}</p>
+              <p lang="zh-Hans">{grammar.example.hanzi}</p><p className="rl-example-pinyin">{grammar.example.pinyin}</p><p>{grammar.example.english}</p><ListenToExample text={grammar.example.hanzi}/>
               {relatedFrame && <details className="rl-existing-frame"><summary>More from Speaking Chunks</summary>
                 <p>{relatedFrame.explanation}</p>
                 {relatedFrame.examples.map(example => <div key={example.hanzi} className="rl-frame-example">
-                  <p lang="zh-Hans">{example.hanzi}</p><p className="rl-example-pinyin">{example.pinyin}</p><p>{example.english}</p>
+                  <p lang="zh-Hans">{example.hanzi}</p><p className="rl-example-pinyin">{example.pinyin}</p><p>{example.english}</p><ListenToExample text={example.hanzi}/>
                 </div>)}
               </details>}
             </div>}
@@ -644,7 +653,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
           onChange={event => saveDraft(reading.id, event.target.value)}/>
         <p role="status">{saveUnavailable ? 'Could not save to this browser. Copy your draft before leaving.' : drafts[reading.id] ? 'Draft saved on this browser.' : 'Your draft stays in this browser.'}</p>
         {reading.writing.example && <details><summary>Read one possible response</summary>
-          <p lang="zh-Hans">{reading.writing.example.hanzi}</p><p>{reading.writing.example.pinyin}</p><p>{reading.writing.example.english}</p>
+          <p lang="zh-Hans">{reading.writing.example.hanzi}</p><p>{reading.writing.example.pinyin}</p><p>{reading.writing.example.english}</p><ListenToExample text={reading.writing.example.hanzi}/>
         </details>}
       </section>
       <ReadingLabNarrator track={track} player={narrator} hidden={recall?.step === 'recall'} onShowSentence={showNarratedSentence}/>

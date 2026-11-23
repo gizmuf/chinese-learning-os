@@ -1,5 +1,8 @@
 'use client';
 
+import PreparedSentenceListen from './prepared-sentence-listen';
+import prepared from '../data/lesson-sentence-audio.json';
+
 import { useEffect, useId, useRef, useState, type KeyboardEvent } from 'react';
 import { ArrowLeft, ArrowRight, BookOpen, ChevronDown, Search } from 'lucide-react';
 import {
@@ -14,6 +17,8 @@ import {
 import { hasRecognitionStudyCard } from './hsk-exam-model';
 import { normalizedPinyin, untonedPinyin } from './pinyin-practice-model';
 import './atlas-study-card.css';
+
+const preparedExamples: Record<string, {source: string}> = prepared.snowLines;
 
 const sections = [
   ['words', 'Słowa i zwroty'],
@@ -331,7 +336,10 @@ function WordsPane({ card }: { card: StudyCard }) {
           <span lang="zh-Hans">{active?.hanzi}</span> · Brak zdania przykładowego.
         </p>}
       </div>
-      {active?.example && <ExampleWords example={active.example} />}
+      {active?.example && <>
+        <PreparedSentenceListen text={active.example.hanzi} source={preparedExamples[active.example.hanzi]?.source} label="Odsłuchaj"/>
+        <ExampleWords example={active.example}/>
+      </>}
     </div>
     <div className="asc-terms" role="group" aria-label="Słowa i zwroty">
       {words.map(word => <button type="button" key={studyTermKey(word)} aria-pressed={word === active}
@@ -449,7 +457,8 @@ function UsagePane({ card }: { card: StudyCard }) {
         onClick={() => setSelected(active ? undefined : key)} aria-pressed={active}>
         <SentenceContents example={example} hanzi={hanzi} />
       </button>
-      {active && <ExampleWords example={example} />}
+      <PreparedSentenceListen text={example.hanzi} source={preparedExamples[example.hanzi]?.source} label="Odsłuchaj"/>
+      {active && <ExampleWords example={example}/>}
     </div>;
   }
 

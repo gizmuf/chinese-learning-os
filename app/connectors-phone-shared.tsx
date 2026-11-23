@@ -6,9 +6,11 @@ import {StudyText} from './study-lookup-context';
 import SharedWriting from './shared-writing';
 import {playRecording, releaseRecording} from './audio';
 import audio from '../data/connectors-phone-audio.json';
+import prepared from '../data/lesson-sentence-audio.json';
 import {frequencyAlternatives, resultAlternatives, type ConnectorsRow} from './connectors-phone-model';
 
 export type ConnectorsDisplay = {pinyin: boolean; english: boolean};
+const recordings: Record<string, {text: string; source: string}> = {...prepared.connectors, ...audio.recordings};
 
 export function ConnectorsDisplayControls({value, onChange}: {value: ConnectorsDisplay; onChange: (next: ConnectorsDisplay) => void}) {
   return <div className="cl-display" role="group" aria-label="Study hints">
@@ -21,7 +23,7 @@ export function ConnectorsDisplayControls({value, onChange}: {value: ConnectorsD
 export function ConnectorsListen({text}: {text: string}) {
   const [error, setError] = useState('');
   const playing = useRef<HTMLAudioElement | null>(null);
-  const clip = (audio.recordings as Record<string, {text: string; source: string}>)[text];
+  const clip = recordings[text];
   useEffect(() => () => {
     if (playing.current) releaseRecording(playing.current);
   }, []);
@@ -82,16 +84,16 @@ export function ConnectorsCompare({kind, display, beforeOpen}: {
           <span className="cl-term"><StudyText text={item.term} pinyin={item.pinyin} whole/></span>
           {display.pinyin && <span className="cl-pinyin">{item.pinyin}</span>}
           {display.english && <span>{item.english} · {item.role}</span>}
-          <ConnectorsEntry row={{hanzi: item.example, pinyin: item.examplePinyin, english: item.exampleEnglish}} display={display} listen={false}/>
+          <ConnectorsEntry row={{hanzi: item.example, pinyin: item.examplePinyin, english: item.exampleEnglish}} display={display}/>
         </li>)}</ol>
         <h3>And 然后?</h3><p><StudyText text="然后"/> (ránhòu, “then”) orders actions. It needs a sequence; it does not describe frequency.</p>
-        <ConnectorsEntry row={{hanzi: '我先坐地铁，然后走路。', pinyin: 'Wǒ xiān zuò dìtiě, ránhòu zǒulù.', english: 'First I take the metro, then I walk.'}} display={display} listen={false}/>
+        <ConnectorsEntry row={{hanzi: '我先坐地铁，然后走路。', pinyin: 'Wǒ xiān zuò dìtiě, ránhòu zǒulù.', english: 'First I take the metro, then I walk.'}} display={display}/>
       </> : <>
         <p><StudyText text="带来了"/> can introduce benefits or disadvantages. Look at the two uses from the reading first.</p>
         {resultAlternatives.slice(0, 2).map(row => <ConnectorsEntry key={row.hanzi} row={row} display={display} listen={false}/>)}
         <h3>A different construction for an adverse result</h3>
         <p><StudyText text="造成了"/> means “caused” here, with an adverse outcome. It is not a general replacement for bringing benefits.</p>
-        <ConnectorsEntry row={resultAlternatives[2]} display={display} listen={false}/>
+        <ConnectorsEntry row={resultAlternatives[2]} display={display}/>
       </>}
     </dialog>
   </>;

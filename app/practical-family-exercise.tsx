@@ -2,6 +2,10 @@
 
 import {useEffect, useId, useRef, useState} from 'react';
 import {useI18n} from './i18n';
+import PreparedSentenceListen from './prepared-sentence-listen';
+import prepared from '../data/lesson-sentence-audio.json';
+
+const recordings: Record<string, {source: string}> = prepared.familyPractice;
 import {practicalFamilyExercises, type PracticalFamilyExercise} from './practical-family-exercise-data';
 
 const copy = {
@@ -25,7 +29,7 @@ export default function FamilyExercise({family}: {family:string}) {
 }
 
 function ExerciseRound({exercise}: {exercise:PracticalFamilyExercise}) {
- const {locale} = useI18n();
+ const {locale,t} = useI18n();
  const labels = copy[locale];
  const [index, setIndex] = useState(-1);
  const [choice, setChoice] = useState<string | null>(null);
@@ -60,6 +64,8 @@ function ExerciseRound({exercise}: {exercise:PracticalFamilyExercise}) {
   </div>;
  }
 
+ const sentence = question.before + question.answer + question.after;
+
  return <section className="practical-family-exercise" aria-labelledby={labelId} data-study-assessment={answered?'complete':'blocked'}>
   <h4 id={labelId} ref={heading} tabIndex={-1}>{terms.prompt} <span>{index+1}/{questions.length}</span></h4>
   <p className="practical-family-sentence" lang="zh-Hans">{question.before}<span className="practical-family-blank">＿</span>{question.after}</p>
@@ -80,6 +86,7 @@ function ExerciseRound({exercise}: {exercise:PracticalFamilyExercise}) {
     <p lang="zh-Latn">{question.pinyin}</p>
     <p>{question.meaning[locale]}</p>
     <p>{question.explanation[locale]}</p>
+    <PreparedSentenceListen text={sentence} source={recordings[sentence]?.source} label={t('Listen')}/>
    </div>}
   </div>
   {answered && <button className="secondary" type="button" onClick={() => {
