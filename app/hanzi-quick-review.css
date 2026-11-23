@@ -1,11 +1,11 @@
 .hanzi-quick-dialog {
   width: min(29rem, calc(100vw - 2rem));
   max-height: calc(100dvh - 2rem);
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-radius: 1rem;
   padding: clamp(.75rem, 3vw, 1.25rem);
   color: var(--ink);
-  background: var(--surface, var(--paper));
+  background: var(--surface, var(--white));
   overflow: auto;
 }
 .hanzi-quick-dialog::backdrop {background: rgb(19 32 26 / 48%)}
@@ -40,7 +40,7 @@
   align-items: center;
   gap: .45rem;
   padding: .8rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-radius: .8rem;
   background: var(--paper);
   color: var(--ink);
