@@ -467,7 +467,19 @@ function UsagePane({ card }: { card: StudyCard }) {
   </>;
 }
 
+function storyTermKey(term: StudyTerm, kind: 'word' | 'character') {
+  return JSON.stringify([kind, term.hanzi, term.pinyin, term.english, term.levels, term.namePinyin]);
+}
+
 function StoryPane({ card }: { card: StudyCard }) {
+  const seen = new Set([card.entry, ...card.parts].map(term => storyTermKey(term, 'character')));
+  const terms = (card.storyTerms ?? []).filter(term => {
+    const key = storyTermKey(term, term.kind);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
   return <div className="asc-story">
     <section aria-label="Budowa i znaczenie">
       <h3>Budowa i znaczenie</h3>
@@ -485,6 +497,12 @@ function StoryPane({ card }: { card: StudyCard }) {
       <h3>Wyobrażona historyjka</h3>
       {card.story.length ? card.story.map((line, index) => <p key={index}>{line}</p>)
         : <p className="asc-muted">Brak historyjki do tego znaku.</p>}
+      {!!terms.length && <div className="asc-terms asc-example-tokens asc-story-terms" role="group"
+        aria-label="Znaki i słowa z historyjki">
+        {terms.map(term => <div className="asc-term asc-token" key={storyTermKey(term, term.kind)}>
+          <TermContents term={term} kind={term.kind} showWordScope />
+        </div>)}
+      </div>}
     </section>
   </div>;
 }

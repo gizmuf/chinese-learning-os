@@ -763,6 +763,41 @@ for (const level of ['1', '2', '3']) {
   }
 }
 
+const storyTermPath = 'data/atlas-study-mnemonic-terms.tsv';
+const storyReferences = /[\p{Script=Han}\u2e80-\u2fdf\u31c0-\u31ef\ue000-\uf8ff]+/gu;
+const sceneReadings = new Map();
+if (existsSync(file(storyTermPath))) {
+  for (const line of read(storyTermPath).split('\n').filter(line => line && !line.startsWith('#'))) {
+    const [reference, ...fields] = line.trimEnd().split('\t');
+    const terms = fields.map(field => {
+      const [hanzi, pinyin, gloss, ...rest] = field.split('|');
+      if (!headword.test(hanzi) || !pinyin || !gloss || rest.length ||
+          (!lexicon.has(hanzi) && !wordLevels.has(hanzi) && !canonical.has(hanzi)) || !alignPinyin({hanzi, pinyin})) {
+        throw new Error(`Invalid mnemonic term ${reference}: ${field}`);
+      }
+      return {...lexicalTerm(hanzi, pinyin, gloss), kind: 'word'};
+    });
+    if (sceneReadings.has(reference) || !terms.length || terms.map(term => term.hanzi).join('') !== reference) {
+      throw new Error(`Invalid mnemonic annotation: ${reference}`);
+    }
+    sceneReadings.set(reference, terms);
+  }
+}
+
+const unresolvedStoryTerms = new Set();
+function makeStoryTerms(story) {
+  return story.flatMap(scene => (scene.match(storyReferences) ?? []).flatMap(reference => {
+    const edited = sceneReadings.get(reference);
+    if (edited) return edited;
+    if ([...reference].length === 1) return {...componentTerm(reference), kind: 'character'};
+    const lemma = lexicon.get(reference)?.[0]?.term;
+    if (lemma && (canonical.has(reference) || wordLevels.has(reference)) &&
+        alignPinyin({hanzi: reference, pinyin: lemma.pinyin})) return {...lemma, kind: 'word'};
+    unresolvedStoryTerms.add(reference);
+    return [];
+  }));
+}
+
 const packSize = 10;
 const packs = new Map();
 const index = {
@@ -775,6 +810,7 @@ const index = {
       changes: 'Selected definitions and readings were adapted for study. The CC-CEDICT-derived material is available under CC BY-SA 4.0.'},
     editedEntries: editorialEntries.size ? editorialPath : undefined,
     editedCollocations: editedCollocations ? collocationPath : undefined,
+    mnemonicTerms: sceneReadings.size ? storyTermPath : undefined,
     components: {source: structureSource.sourceUrl, additional: structureSource.additionalStructureSource.sourceUrl,
       notice: structureSource.epistemicNotice, license: '/licenses/hanzi-structure-LGPL.txt',
       names: {
@@ -783,12 +819,13 @@ const index = {
         teachingTable: 'https://file.xdf.cn/uploads/200411/1113_200411232325UoPnWYuJ7Y1kzVRq.pdf',
       }},
     comparisons: ['data/often-confused.json', 'modern IDS with same placed shape', 'independently recorded same pinyin'],
-    levels: 'Entry, parts and family members use official recognition bands. Words, sentence tokens and lexical comparisons use exact official headword bands. An empty array means the exact form is absent from the relevant syllabus table.',
+    levels: 'Entry, parts, family members and mnemonic graphics use official recognition bands. Words, sentence tokens, lexical comparisons and mnemonic words use exact official headword bands. An empty array means the exact form is absent from the relevant syllabus table.',
   },
   cards: [],
 };
 const stats = {cards: 0, sources: corpus.size, aligned: annotated.size, examples: 0, words: 0, wordExamples: 0,
   laterWords: 0, outsideSyllabusWords: 0, parts: 0, terminal: 0, families: 0, comparisons: 0, stories: 0,
+  storyTerms: 0, storyWords: 0, storyCharacters: 0, editedStories: sceneReadings.size,
   editedEntries: editorialEntries.size, editedCollocations};
 const weak = {contexts: [], words: [], families: [], comparisons: [], readings: [], meanings: [], mnemonic: []};
 const pilot = 'data/atlas-study-snow.json';
@@ -800,9 +837,11 @@ for (const [i, glyph] of targets.entries()) {
   const words = makeWords(glyph);
   const contexts = makeContexts(glyph, words);
   const entry = characterTerm(glyph);
+  const story = stories.get(glyph) ?? [];
+  const storyTerms = glyph === '雪' && override ? [] : makeStoryTerms(story);
   const card = glyph === '雪' && override ? override : {entry, words,
     parts: parts.map(part => componentTerm(part.glyph)), families, comparisons: makeComparisons(glyph, families),
-    usage: makeUsage(words, contexts, glyph), contexts, story: stories.get(glyph) ?? []};
+    usage: makeUsage(words, contexts, glyph), contexts, story, ...(storyTerms.length ? {storyTerms} : {})};
   const pack = String(Math.floor(i / packSize) + 1).padStart(2, '0');
   if (!packs.has(pack)) packs.set(pack, {});
   packs.get(pack)[glyph] = card;
@@ -818,6 +857,9 @@ for (const [i, glyph] of targets.entries()) {
   stats.families += card.families.length;
   stats.comparisons += card.comparisons.length;
   stats.stories += !!card.story.length;
+  stats.storyTerms += storyTerms.length;
+  stats.storyWords += storyTerms.filter(term => term.kind === 'word').length;
+  stats.storyCharacters += storyTerms.filter(term => term.kind === 'character').length;
   if (card.contexts.length < 2) weak.contexts.push(glyph);
   if (card.words.length < 3) weak.words.push(glyph);
   if (!card.families.length) weak.families.push(glyph);
@@ -826,13 +868,15 @@ for (const [i, glyph] of targets.entries()) {
   if (!card.entry.english) weak.meanings.push(glyph);
   if (!card.story.length) weak.mnemonic.push(glyph);
 }
-console.log(JSON.stringify({stats, weak: {...weak, mnemonic: weak.mnemonic.length}}, null, 2));
+console.log(JSON.stringify({stats, weak: {...weak, mnemonic: weak.mnemonic.length,
+  storyTerms: [...unresolvedStoryTerms]}}, null, 2));
 if (draft) {
   if (process.env.ATLAS_STUDY_DRAFT) writeFileSync(process.env.ATLAS_STUDY_DRAFT, JSON.stringify({index, packs: Object.fromEntries(packs), weak}));
 } else {
   if (weak.readings.length || weak.meanings.length || weak.mnemonic.length) throw new Error('Incomplete study cards');
   if (weak.contexts.length) throw new Error('Study cards require at least two attested sentences');
   if (weak.families.length) throw new Error(`Missing verified component families: ${weak.families.join(', ')}`);
+  if (unresolvedStoryTerms.size) throw new Error(`Missing mnemonic terms: ${[...unresolvedStoryTerms].join(', ')}`);
   if ([...packs.values()].some(pack => Object.values(pack).some(card => !card.words.length))) {
     throw new Error('A study card has no attested lexical item');
   }
