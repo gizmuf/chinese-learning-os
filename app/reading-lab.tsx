@@ -5,6 +5,7 @@ import {globalHskLabel, knownHskInScope} from './global-hsk-model';
 import {useEffect, useLayoutEffect, useMemo, useRef, useState, type MouseEvent, type ReactNode} from 'react';
 import {ArrowLeft, ArrowRight, BookOpen, PenLine} from 'lucide-react';
 import {readingLabReadings} from './reading-lab-data';
+import ReadingLabEpisodePanel from './reading-lab-episode';
 import {resolveReadingGrammarFrame} from './reading-lab-grammar';
 import type {ReadingLabParagraph, ReadingLabReading, ReadingLabToken} from './reading-lab-types';
 import {analyzeReading, readingToneNote, splitReadingSentences, tokenGlyphs, toneMarks} from './reading-lab-model';
@@ -544,6 +545,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
         <p className="rl-title-translation">{reading.title.english}</p>
         <p className="rl-level-intent">{reading.levelIntent}</p>
       </header>
+      {reading.episode && recall?.step !== 'recall' && <ReadingLabEpisodePanel key={reading.id} episode={reading.episode}/>}
       <div className="rl-reader-controls" hidden={recall?.step === 'recall'}>
         <div className="rl-modes" role="group" aria-label="Reading aid">{aids.map(aid =>
           <button type="button" key={aid.id} aria-pressed={route.aid === aid.id} onClick={() => navigate({aid: aid.id}, {replace: true})}>{aid.label}</button>)}</div>

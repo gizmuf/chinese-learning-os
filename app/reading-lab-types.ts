@@ -46,6 +46,14 @@ export type ReadingLabWriting = {
   example?: ReadingLabExample;
 };
 
+export type ReadingLabEpisode = {
+  title: string;
+  youtubeId: string;
+  transcriptUrl: string;
+  chapters: readonly {seconds: number; label: string}[];
+  vocabulary: readonly ReadingLabExample[];
+};
+
 export type ReadingLabReading = {
   id: string;
   level: ReadingLabLevel;
@@ -57,4 +65,5 @@ export type ReadingLabReading = {
   questions: readonly ReadingLabQuestion[];
   writing: ReadingLabWriting;
   glossaryCandidates: readonly string[];
+  episode?: ReadingLabEpisode;
 };

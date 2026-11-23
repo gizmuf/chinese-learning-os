@@ -38,6 +38,21 @@ html[data-theme=dark] .reading-lab{
 .rl-article-heading p.rl-topic{font-size:.82rem;margin-bottom:11px}
 .rl-article-heading p.rl-title-translation{font-size:1.13rem}
 .rl-article-heading p.rl-level-intent{font-size:.85rem}
+.rl-episode{display:grid;gap:8px;margin-block:14px}
+.rl-episode details{border:1px solid var(--rl-line);border-radius:12px;padding:12px 16px;background:var(--rl-paper)}
+.rl-episode summary{font-weight:650;color:var(--rl-accent)}
+.rl-episode p{margin-block:10px;font-size:.9rem;color:var(--rl-muted)}
+.rl-episode-links,.rl-episode-chapters{display:flex;gap:8px 14px;flex-wrap:wrap}
+.rl-episode-links a{display:inline-flex;align-items:center;min-height:44px;color:var(--rl-accent)}
+.rl-episode-chapters button{font:inherit;min-height:44px;padding:6px 10px;border:1px solid var(--rl-line);border-radius:8px;background:var(--rl-paper);color:var(--rl-ink)}
+.rl-episode-chapters button[aria-pressed=true]{border-color:var(--rl-accent);background:var(--rl-wash)}
+.rl-episode-chapters button span{font-variant-numeric:tabular-nums;color:var(--rl-muted)}
+.rl-episode iframe{display:block;width:100%;aspect-ratio:16/9;margin-top:12px;border:0;border-radius:8px}
+.rl-episode-vocabulary{margin:10px 0 0}
+.rl-episode-vocabulary>div{display:grid;grid-template-columns:minmax(5rem,1fr) minmax(6rem,1fr) minmax(0,2.4fr);gap:8px;align-items:center;padding:7px 0;border-top:1px solid var(--rl-line)}
+.rl-episode-vocabulary dt{font-size:1.18rem}
+.rl-episode-vocabulary dd{margin:0;overflow-wrap:anywhere}
+.rl-episode-pinyin{color:var(--rl-muted)}
 .rl-levels{margin:17px 0 12px}
 .rl-levels button,.rl-modes button{min-height:40px;font-weight:650}
 .rl-modes button[aria-pressed=true],.rl-levels button[aria-pressed=true],.rl-pattern-list button[aria-pressed=true],.rl-reading-actions button[aria-pressed=true]{background:var(--rl-wash);color:var(--rl-ink);border-color:var(--rl-accent)}
