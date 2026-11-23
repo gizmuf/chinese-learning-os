@@ -44,7 +44,7 @@ const topics: Topic[] = [
     sourcePages: [13, 14, 15, 16], summary: 'Locating known objects with 在, position words, and topic follow-up with 呢.',
     words: [
       ['里', 'lǐ', 'inside a place'], ['里边', 'lǐbian', 'the inside'], ['外', 'wài', 'outside'],
-      ['外边', 'wàibian', 'the outside'], ['上', 'shang', 'on or above, after a noun'],
+      ['外边', 'wàibian', 'the outside'], ['上', 'shàng', 'on or above, after a noun', 'Often unstressed (shang) after a noun, as in 桌子上.'],
       ['上边', 'shàngbian', 'the upper part'], ['下边', 'xiàbian', 'the lower part'],
       ['左边', 'zuǒbian', 'left side'], ['右边', 'yòubian', 'right side'],
       ['旁边', 'pángbiān', 'next to or beside'], ['中间', 'zhōngjiān', 'in the middle'],

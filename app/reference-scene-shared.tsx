@@ -5,7 +5,9 @@ import {StudyText} from './study-lookup';
 import {Volume2} from 'lucide-react';
 import {playRecording} from './audio';
 import audioReuse from '../data/reference-lessons/audio-reuse.json';
+import roomRoutesAudio from '../data/reference-lessons/room-routes-audio.json';
 import type {ReferenceCaption} from './reference-time-model';
+import type {ReferenceMaterialId} from './reference-lesson-types';
 export function ReferenceCaptionView({value,sourceId,context}:{value:ReferenceCaption;sourceId:string;context?:ReferenceCaption}){
  const source=context??value,display=useReferenceDisplay();
  return <div className="ref-scene-caption" data-study-sentence={source.hanzi} data-study-pinyin={source.pinyin} data-study-meaning={source.en} data-study-source-id={sourceId}><div lang="zh-Hans">{display.chunks&&value.chunks?<span className="ref-meaning-chunks">{value.chunks.map((ch,i)=><span key={i}><StudyText text={ch}/></span>)}</span>:<StudyText text={value.hanzi} pinyin={value.pinyin}/>}</div>{display.pinyin&&<p className="pinyin">{value.pinyin}</p>}{display.english&&<p className="ref-meaning">{value.en}</p>}<ReferenceListen text={value.hanzi}/></div>;
@@ -32,10 +34,12 @@ export function ReferenceMotionControls({motion,onReplay}:{motion:ReturnType<typ
  return <div className="ref-scene-controls ref-motion-controls"><button type="button" className="text-button" aria-label="Repeat this scene" onClick={onReplay??motion.replay}>↻ Repeat</button></div>;
 }
 
-const recordings=audioReuse as Record<string,{text:string;source:string;sha256:string}>;
+type Recordings = Record<string,{text:string;source:string;sha256:string}>;
+const recordings: Recordings = audioReuse;
+const roomRecordings: Recordings = roomRoutesAudio;
 export function playReferenceCaption(text:string,notify:(message:string)=>void=()=>{}){const clip=recordings[text];if(clip?.text===text)playRecording(clip.source,notify);}
-export function ReferenceListen({text}:{text:string}){
- const [error,setError]=useState(''),clip=recordings[text];
+export function ReferenceListen({text,lessonId}:{text:string;lessonId?:ReferenceMaterialId}){
+ const [error,setError]=useState(''),clip=(lessonId==='room-routes'?roomRecordings:recordings)[text];
  if(!clip||clip.text!==text)return null;
  return <><button type="button" className="text-button ref-listen" aria-label={'Listen: '+text} onClick={()=>{setError('');playRecording(clip.source,setError);}}><Volume2 size={16}/> Listen</button>{error&&<small role="status">{error}</small>}</>;
 }
