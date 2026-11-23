@@ -2,7 +2,7 @@
 
 import {useEffect, useState} from 'react';
 
-type WordAids = {pinyin: boolean; english: boolean};
+export type WordAids = {pinyin: boolean; english: boolean};
 
 export function useWordAids<Id extends number | string>(storageKey: string) {
   const [aids, setAids] = useState<WordAids>({pinyin: true, english: true});
