@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {build} from 'esbuild';
+import {createHash} from 'node:crypto';
+import {readFileSync} from 'node:fs';
 import {indexedDB} from 'fake-indexeddb';
 const b=await build({stdin:{contents:`export * from './app/reference-lessons-data';export * from './app/reference-lesson-review';export * from './app/course-learning';export * from './app/course-review-model';export * from './app/course-persistence';`,resolveDir:process.cwd()},bundle:true,platform:'node',format:'esm',write:false});
 const m=await import('data:text/javascript;base64,'+Buffer.from(b.outputFiles[0].text).toString('base64'));
@@ -39,4 +41,19 @@ test('actual indexedDB record-sync-hydrate preserves all reference IDs and separ
  const synced=await session.sync();assert.equal(synced.length,events.length);assert.ok(synced.every(e=>e.synced));session.dispose();await assert.rejects(session.record(events[0]),/Account changed/);
  const hydrated=await m.openCourseStore(owner);assert.deepEqual((await m.readCourseEvents(hydrated)).map(e=>e.id).sort(),events.map(e=>e.id).sort());hydrated.close();
  const other=await m.openCourseStore('reference-b-'+crypto.randomUUID());assert.deepEqual(await m.readCourseEvents(other),[]);other.close();
+});
+
+test('Rooms and routes has verified recordings for every word and full example',()=>{
+ const lesson=m.referenceLessonById.get('room-routes');
+ const recordings=JSON.parse(readFileSync('data/reference-lessons/room-routes-audio.json','utf8'));
+ const expected=new Set([...lesson.terms,...lesson.examples].map(entry=>entry.hanzi));
+ assert.deepEqual(new Set(Object.keys(recordings)),expected);
+ for(const text of expected){
+  const {text: spoken,source,sha256}=recordings[text];
+  assert.equal(spoken,text);
+  assert.match(source,/^\/(?:[a-z0-9-]+\/)+[a-z0-9-]+\.mp3$/i);
+  const clip=readFileSync('public'+source);
+  assert.ok(clip.length>1000,text);
+  assert.equal(createHash('sha256').update(clip).digest('hex'),sha256,text);
+ }
 });
