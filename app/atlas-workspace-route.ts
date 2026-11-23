@@ -4,7 +4,7 @@ import {cloudRouteHref, readCloudRoute, type CloudRoute} from './atlas-cloud-rou
 import {isHybridLayout} from './atlas-hybrid-model';
 import {isStoryTarget, type StoryTarget} from './atlas-story-explorer-model';
 
-export const workspaceModes = ['family', 'read', 'map', 'practise', 'build', 'swipe'] as const;
+export const workspaceModes = ['family', 'read', 'map', 'practise', 'build', 'swipe', 'cards'] as const;
 export const workspaceMapViews = ['structure', 'connections', 'matrix'] as const;
 export const workspaceExercises = ['reels', 'contrast', 'recognition', 'writing'] as const;
 export type WorkspaceKind = 'word' | 'character' | 'component' | 'sentence';
