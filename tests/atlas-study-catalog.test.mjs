@@ -132,6 +132,10 @@ test('pilot snow and high-frequency characters retain useful vocabulary and real
   const curry = cards.get('咖').words.find(word => word.hanzi === '咖喱');
   assert.equal(curry.pinyin, 'gālí');
   assert.deepEqual(curry.levels, []);
+  const restroom = cards.get('间').words.find(word => word.hanzi === '卫生间');
+  assert.deepEqual(restroom.example.words.at(-1), {
+    hanzi: '灯泡', pinyin: 'dēngpào', english: 'light bulb', levels: ['7-9'],
+  });
   const contexts = cards.get('还').contexts.flatMap(context => context.words);
   assert.ok(contexts.some(word => word.hanzi === '还' && word.pinyin === 'hái'));
   assert.ok(contexts.some(word => word.hanzi === '还' && word.pinyin === 'huán'));
