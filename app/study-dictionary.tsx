@@ -1,5 +1,7 @@
 'use client';
 import HskBadge from './hsk-badge';
+import {hasRecognitionStudyCard} from './hsk-exam-model';
+import {DictionaryStudyCard} from './dictionary-study-card';
 import {extendedCharacters} from './atlas-cloud-extended';
 import {lazy,Suspense,useEffect,useMemo,useRef,useState,type ReactNode,type RefObject} from 'react';
 import {authoredLookupBoundaries} from './pinyin-boundaries';
@@ -128,6 +130,8 @@ export function StudyDictionaryDialog({entry: suppliedEntry,dictionary,dialog,op
     {!reader&&practiceBook&&canChoosePractice(entry)&&<button type="button" className="icon-button sp-practice-choice" disabled={!practiceBook.ready||practiceBook.busy} aria-pressed={practiceBook.entries.some(v=>v.text===entry.text)} aria-label={practiceBook.entries.some(v=>v.text===entry.text)?({en:'Remove from practice book',fr:'Retirer du cahier',ru:'Убрать из тетради',tr:'Defterden çıkar'}[locale]):({en:'Add to practice book',fr:'Ajouter au cahier',ru:'Добавить в тетрадь',tr:'Deftere ekle'}[locale])} title={practiceBook.entries.some(v=>v.text===entry.text)?'Saved for practice':'Add to practice book'} onClick={()=>void practiceBook.toggle(entry)}>{practiceBook.entries.some(v=>v.text===entry.text)?<BookmarkCheck size={19}/>:<BookmarkPlus size={19}/>}</button>}
     {!reader&&/[\u3400-\u9fff]/u.test(entry.text)&&<button type="button" className="text-button sp-dictionary-notebook-toggle" aria-label="Notebook beside definition" aria-pressed={notebook} onClick={()=>setNotebook(v=>!v)}><NotebookPen size={17}/>{({en:'Notebook',fr:'Cahier',ru:'Тетрадь',tr:'Defter'}[locale])}</button>}
     {onWrite&&/[\u3400-\u9fff]/u.test(entry.text)&&<button type="button" className="text-button" onClick={()=>{if(reader){close();reader.dispatchEvent(new CustomEvent(readingLabWriteEvent,{detail:entry.text}));}else onWrite(entry);}}><PenLine size={17}/>{({en:'Write',fr:'Écrire',ru:'Писать',tr:'Yaz'}[locale])}</button>}
+    {singleHan&&hasRecognitionStudyCard(entry.text)&&<DictionaryStudyCard key={entry.text} hanzi={entry.text}
+     label={({en:'Study card',fr:'Fiche de révision',ru:'Учебная карточка',tr:'Çalışma kartı'})[locale]}/>}
     {singleHan&&onExplore&&<button type="button" className="text-button" onClick={()=>onExplore(entry,entry.text)}>
      <Network size={17} aria-hidden="true"/>{({en:'Open word family in Atlas',fr:'Ouvrir la famille de mots dans l’Atlas',ru:'Открыть группу слов в Атласе',tr:'Kelime ailesini Atlas’ta aç'})[locale]} · {entry.text}
     </button>}

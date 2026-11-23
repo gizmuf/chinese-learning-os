@@ -20,6 +20,11 @@ const eligible = {
   writing: new Set(examCharacters('3', 'writing')),
 };
 
+/** Official cumulative recognition list used by the character study cards. */
+export function hasRecognitionStudyCard(glyph: string) {
+  return eligible.recognition.has(glyph);
+}
+
 export function readExamChecklist(saved: string | null): ExamChecklist {
   let value: Partial<Record<ExamMode, unknown>> | undefined;
   try { value = saved ? JSON.parse(saved) : undefined; } catch { /* Restore an empty list. */ }
