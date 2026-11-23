@@ -6,13 +6,13 @@ const b=await build({stdin:{contents:`export * from './app/reference-lessons-dat
 const m=await import('data:text/javascript;base64,'+Buffer.from(b.outputFiles[0].text).toString('base64'));
 const now=1800000000000;let n=0;
 const event=(lesson,patch={})=>({id:'00000000-0000-4000-8000-'+String(++n).padStart(12,'0'),lessonId:m.referenceLessonEventIds[lesson.id],activityId:lesson.checks[0].id,kind:'answer',correct:true,assisted:false,at:now,...patch});
-test('all 17 source pages have complete, internally consistent references and unique independent checks',()=>{
- const shas=['eb4fff3e611b0163b55d45a53a87221ffdcaff46943dc1789cb84cdf7bf2e72f','eec3672166efd67651cf9ef4441c1b4b9ecd4ccbe6b4cafc700155876d22454c','f80157217ac781b6b01435b24ff5d5d8679943e39ee98f0b950ad4827ca187cb'];const globalIds=new Set();
+test('all source pages and photos have complete, internally consistent references and unique independent checks',()=>{
+ const shas=['eb4fff3e611b0163b55d45a53a87221ffdcaff46943dc1789cb84cdf7bf2e72f','eec3672166efd67651cf9ef4441c1b4b9ecd4ccbe6b4cafc700155876d22454c','f80157217ac781b6b01435b24ff5d5d8679943e39ee98f0b950ad4827ca187cb','e9d98cb9b089093990da70211b3fc57ad2d199f7cabf76986c97817c3d5c64c1'];const globalIds=new Set();
  for(const [i,lesson] of m.referenceLessons.entries()){
-  assert.equal(lesson.source.sha256,shas[i]);assert.equal(lesson.source.pages,[10,3,4][i]);assert.deepEqual(lesson.coverage.map(x=>x.page),Array.from({length:lesson.source.pages},(_,i)=>i+1));
+  assert.equal(lesson.source.sha256,shas[i]);assert.equal(lesson.source.pages,[10,3,4,16][i]);assert.deepEqual(lesson.coverage.map(x=>x.page),Array.from({length:lesson.source.pages},(_,i)=>i+1));
   const entries=new Map([...lesson.terms,...lesson.examples].map(x=>[x.id,x])),topics=new Map(lesson.topics.map(x=>[x.id,x]));const referenced=new Set(),checks=new Set();
   for(const row of [...entries.values(),...lesson.topics,...lesson.checks]){assert.ok(!globalIds.has(row.id),row.id);globalIds.add(row.id);assert.ok(row.sourcePages.length);assert.ok(row.sourcePages.every(p=>p>=1&&p<=lesson.source.pages));}
-  for(const page of lesson.coverage)for(const id of page.topicIds){assert.ok(topics.has(id));assert.ok(topics.get(id).sourcePages.includes(page.page));}
+  for(const page of lesson.coverage){assert.ok(page.topicIds.length);for(const id of page.topicIds){assert.ok(topics.has(id));assert.ok(topics.get(id).sourcePages.includes(page.page));}}
   for(const topic of lesson.topics)for(const id of [...topic.termIds,...topic.exampleIds]){assert.ok(entries.has(id),id);referenced.add(id);}
   for(const entry of entries.values()){assert.ok(referenced.has(entry.id),entry.id);assert.ok(entry.hanzi&&entry.pinyin&&entry.en);if(entry.origin==='practice')assert.ok(entry.note);}
   for(const check of lesson.checks){assert.ok(entries.has(check.targetId));assert.equal(new Set(check.optionIds).size,check.optionIds.length);if(check.kind!=='pinyin'){assert.equal(check.optionIds.filter(id=>id===check.targetId).length,1);assert.ok(check.optionIds.every(id=>entries.has(id)));}const key=check.kind+':'+check.targetId;assert.ok(!checks.has(key),key);checks.add(key);}
@@ -35,8 +35,8 @@ test('actual indexedDB record-sync-hydrate preserves all reference IDs and separ
  globalThis.indexedDB=indexedDB;const server=new Map();
  const fetcher=async(url,init,owner)=>{if(init.method==='POST'){server.set(owner,[...(server.get(owner)??[]),...JSON.parse(init.body).events]);return new Response('{}');}return new Response(JSON.stringify({events:server.get(owner)??[]}));};
  const owner='reference-a-'+crypto.randomUUID(),db=await m.openCourseStore(owner),session=m.courseSession(db,owner,()=>true,fetcher),events=m.referenceLessons.map(x=>event(x));
- for(const e of events)await session.record(e);await session.record(events[0]);assert.equal((await m.readCourseEvents(db)).length,3);
- const synced=await session.sync();assert.equal(synced.length,3);assert.ok(synced.every(e=>e.synced));session.dispose();await assert.rejects(session.record(events[0]),/Account changed/);
+ for(const e of events)await session.record(e);await session.record(events[0]);assert.equal((await m.readCourseEvents(db)).length,events.length);
+ const synced=await session.sync();assert.equal(synced.length,events.length);assert.ok(synced.every(e=>e.synced));session.dispose();await assert.rejects(session.record(events[0]),/Account changed/);
  const hydrated=await m.openCourseStore(owner);assert.deepEqual((await m.readCourseEvents(hydrated)).map(e=>e.id).sort(),events.map(e=>e.id).sort());hydrated.close();
  const other=await m.openCourseStore('reference-b-'+crypto.randomUUID());assert.deepEqual(await m.readCourseEvents(other),[]);other.close();
 });

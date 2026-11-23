@@ -1,12 +1,14 @@
 import time from '../data/reference-lessons/time-dates.json';
 import movement from '../data/reference-lessons/movement-directions.json';
 import shang from '../data/reference-lessons/shang.json';
+import roomRoutes from './reference-room-routes-data';
 import type {ReferenceLesson,ReferenceMaterialId} from './reference-lesson-types';
-export const referenceLessons=[time,movement,shang] as ReferenceLesson[];
+export const referenceLessons=[time,movement,shang,roomRoutes] as ReferenceLesson[];
 export const referenceLessonEventIds={
  'time-dates':'reference-time-dates',
  'movement-directions':'reference-movement-directions',
  shang:'reference-shang',
+ 'room-routes':'reference-room-routes',
 } as const;
 export const referenceLessonById=new Map(referenceLessons.map(lesson=>[lesson.id,lesson]));
 export const referenceEntries=referenceLessons.flatMap(lesson=>[...lesson.terms,...lesson.examples]);
