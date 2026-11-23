@@ -15,9 +15,12 @@
 }
 .lvg-search input { min-width: 0; width: 153px; border: 0; background: transparent; color: inherit; font: inherit; font-size: .91rem; }
 .lvg :is(h2,p,ul) { margin: 0; }
+.lvg-results, .lvg-group-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.lvg-group-tools { align-content: start; }
+.lvg-group-tools button { min-height: 44px; padding-inline: 8px; }
 .lvg-total { color: #586e61; font-size: .9rem; }
 .lvg-group {
-  display: grid; grid-template-columns: minmax(68px, .26fr) minmax(0, 1.74fr); align-items: start;
+  display: grid; grid-template-columns: minmax(8rem, .3fr) minmax(0, 1.7fr); align-items: start;
   padding: 10px 13px; gap: 10px 14px;
   border: 1px solid var(--border, #dce4d8); border-radius: 13px; background: var(--white, #fffefa);
 }
@@ -45,6 +48,7 @@
 @container (max-width: 550px) {
   .lvg-search { margin-inline-start: 0; }
   .lvg-group { grid-template-columns: minmax(0, 1fr); }
+  .lvg-group-tools { justify-content: space-between; }
   .lvg-group h2 { display: flex; gap: 7px; align-items: baseline; }
 }
 @container (max-width: 390px) {
