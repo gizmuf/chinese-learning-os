@@ -1,7 +1,7 @@
 {
   "一块": {
     "sha256": "a1e0bde3b0f08c850d9928c0737ff4170a13ea83091a6ad024410cba07f2a9ad",
-    "source": "/reference-room-routes/audio/d84bab0068e9300eaca3.mp3",
+    "source": "/audio/room-routes/d84bab0068e9300eaca3.mp3",
     "text": "一块"
   },
   "一块儿": {
@@ -26,17 +26,17 @@
   },
   "上边": {
     "sha256": "00228d09da7960ee049481cf3010270aafdee2476dfdc28163b4cda6a22845e0",
-    "source": "/reference-room-routes/audio/8cae94088bff52d78d37.mp3",
+    "source": "/audio/room-routes/8cae94088bff52d78d37.mp3",
     "text": "上边"
   },
   "下边": {
     "sha256": "1cb5f4844297efd996b37a275b1f9e4b8e2e57ddbf2205448abf2fb9f6b97585",
-    "source": "/reference-room-routes/audio/a5089425543b417e8668.mp3",
+    "source": "/audio/room-routes/a5089425543b417e8668.mp3",
     "text": "下边"
   },
   "不，我现在住学校外边。": {
     "sha256": "ed7ef9b6f2746cd3b27bdb9fea60ab0970b4bd20b3bf6b1b568160e4f2380477",
-    "source": "/reference-room-routes/audio/7c4fccd706fca9538179.mp3",
+    "source": "/audio/room-routes/7c4fccd706fca9538179.mp3",
     "text": "不，我现在住学校外边。"
   },
   "中间": {
@@ -51,12 +51,12 @@
   },
   "书架": {
     "sha256": "f6789f2d27c30536b315329024e30c51c43228183dec754738dcaf9e4d862b21",
-    "source": "/reference-room-routes/audio/da2c2d29f9ab75f44a9e.mp3",
+    "source": "/audio/room-routes/da2c2d29f9ab75f44a9e.mp3",
     "text": "书架"
   },
   "书架上有一本词典。": {
     "sha256": "66781118ba8b31862be4421ebbbf429acf7197784d21bab9019362d51fd73601",
-    "source": "/reference-room-routes/audio/2a517b97edd140268caf.mp3",
+    "source": "/audio/room-routes/2a517b97edd140268caf.mp3",
     "text": "书架上有一本词典。"
   },
   "他": {
@@ -66,12 +66,12 @@
   },
   "他说得太快了，我听不懂。": {
     "sha256": "9b9b8f5865895d0f9284056a55d67e7eb1c686c19e1b56b598e4fc2c89c7110c",
-    "source": "/reference-room-routes/audio/e9fbf86b7f84c8a679cd.mp3",
+    "source": "/audio/room-routes/e9fbf86b7f84c8a679cd.mp3",
     "text": "他说得太快了，我听不懂。"
   },
   "他送了她九十九朵玫瑰花。": {
     "sha256": "3b35ac3f1da6c5932f98dd0696bf3a776c1840252cb4b4065d915e506723d1ad",
-    "source": "/reference-room-routes/audio/e314d63000ad5582d0e0.mp3",
+    "source": "/audio/room-routes/e314d63000ad5582d0e0.mp3",
     "text": "他送了她九十九朵玫瑰花。"
   },
   "住": {
@@ -81,37 +81,37 @@
   },
   "你怎么去学校？": {
     "sha256": "41a30da6efc99218acec4d538cc8d291165eb14c025bbd0c7b5f4251d34fc2c4",
-    "source": "/reference-room-routes/audio/39896e99526dd33b0e8d.mp3",
+    "source": "/audio/room-routes/39896e99526dd33b0e8d.mp3",
     "text": "你怎么去学校？"
   },
   "你看得见墙上的地图吗？": {
     "sha256": "6ba287e89556308025815d4b0b25c0fd9df371a038d1a908311b2d16831649e2",
-    "source": "/reference-room-routes/audio/7668704567f497076761.mp3",
+    "source": "/audio/room-routes/7668704567f497076761.mp3",
     "text": "你看得见墙上的地图吗？"
   },
   "你走路去，还是坐地铁去？": {
     "sha256": "32080c0efb16285f3d9686e439f14ca66753cde52e8884eb233b00d4b341d890",
-    "source": "/reference-room-routes/audio/839fcc3d4d2ec249cca1.mp3",
+    "source": "/audio/room-routes/839fcc3d4d2ec249cca1.mp3",
     "text": "你走路去，还是坐地铁去？"
   },
   "公寓": {
     "sha256": "6383a4b3b6c4f73f32744508cf3c2f81a9df25610469323e1f814cde7be2e000",
-    "source": "/reference-room-routes/audio/e73bb0bb82e2cc69b425.mp3",
+    "source": "/audio/room-routes/e73bb0bb82e2cc69b425.mp3",
     "text": "公寓"
   },
   "十一月二十号": {
     "sha256": "c71fd87e12e410751172ed2afb4768fd8728a986055b8a6b58b0864908bf5860",
-    "source": "/reference-room-routes/audio/2963e11241df8ca2c7b1.mp3",
+    "source": "/audio/room-routes/2963e11241df8ca2c7b1.mp3",
     "text": "十一月二十号"
   },
   "十一月二十号是星期五。": {
     "sha256": "8c2e10b9d37687e25814a841cba4a013839ee7d40b1b5b8e405e4ae3b035ec37",
-    "source": "/reference-room-routes/audio/bedaca3d1407c08eda67.mp3",
+    "source": "/audio/room-routes/bedaca3d1407c08eda67.mp3",
     "text": "十一月二十号是星期五。"
   },
   "半夜": {
     "sha256": "24d9709ff2a4334e88157e8089a06d2a6d31f04518309a3dfd7e27986329d505",
-    "source": "/reference-room-routes/audio/ecf4ce25e0bdbc494a2c.mp3",
+    "source": "/audio/room-routes/ecf4ce25e0bdbc494a2c.mp3",
     "text": "半夜"
   },
   "右边": {
@@ -121,17 +121,17 @@
   },
   "吃不下": {
     "sha256": "da3d8e77b5d6ee7807ff1a4d3d1394afc3f4157042c7447b05a0b9f266b7c9bd",
-    "source": "/reference-room-routes/audio/a5e53ea6ce1d24c7030c.mp3",
+    "source": "/audio/room-routes/a5e53ea6ce1d24c7030c.mp3",
     "text": "吃不下"
   },
   "听不懂": {
     "sha256": "5ec018c5980e975674994ea47e674d93da2746b1e0a4ac5b1be8fdbac85bc5ba",
-    "source": "/reference-room-routes/audio/8fddb81929da87fb92ad.mp3",
+    "source": "/audio/room-routes/8fddb81929da87fb92ad.mp3",
     "text": "听不懂"
   },
   "听得懂": {
     "sha256": "e4d8acc8d826bbf87431b471bc0cf5a475f51239b99c413d8aeb34de7e5325f4",
-    "source": "/reference-room-routes/audio/87997e3843bc1e577822.mp3",
+    "source": "/audio/room-routes/87997e3843bc1e577822.mp3",
     "text": "听得懂"
   },
   "呢": {
@@ -156,12 +156,12 @@
   },
   "坐出租车": {
     "sha256": "88a91aea6a999cbf050be335020e05e427e0b763bc2ffbff981a942268cd4dca",
-    "source": "/reference-room-routes/audio/bfcdcc805be685a9b16c.mp3",
+    "source": "/audio/room-routes/bfcdcc805be685a9b16c.mp3",
     "text": "坐出租车"
   },
   "坐地铁": {
     "sha256": "767860caa17407f49ee68d546e4d473f9a6671d8d3880a4952ff24c1357f194e",
-    "source": "/reference-room-routes/audio/7a80e2742b334cc75ca9.mp3",
+    "source": "/audio/room-routes/7a80e2742b334cc75ca9.mp3",
     "text": "坐地铁"
   },
   "坐火车": {
@@ -171,12 +171,12 @@
   },
   "墙": {
     "sha256": "4bd92c20dfe0cb28901a79b68bce3e7a1eaf31594f6f8038f87f25b314a7c630",
-    "source": "/reference-room-routes/audio/ef5661b69307b5ec60b0.mp3",
+    "source": "/audio/room-routes/ef5661b69307b5ec60b0.mp3",
     "text": "墙"
   },
   "墙上有一张中国地图。": {
     "sha256": "2772045240a3b51c3ff2a1e61fd428389478a2e0c1077a6598623f2e6d7955f2",
-    "source": "/reference-room-routes/audio/97b084196a7f1669584c.mp3",
+    "source": "/audio/room-routes/97b084196a7f1669584c.mp3",
     "text": "墙上有一张中国地图。"
   },
   "外": {
@@ -191,17 +191,17 @@
   },
   "外边有一把椅子。": {
     "sha256": "59d6682ecd87ab9567347199b8d9a1aeb45e164671b944efb29571370fce5d86",
-    "source": "/reference-room-routes/audio/681dcae3703bff2c7952.mp3",
+    "source": "/audio/room-routes/681dcae3703bff2c7952.mp3",
     "text": "外边有一把椅子。"
   },
   "大卫的书呢？都在书架上。": {
     "sha256": "afb8b28f0be491681f2922748cba8ad2e603a45ef4e82b7e77efacbdf96325ec",
-    "source": "/reference-room-routes/audio/0047351c5cefad09a808.mp3",
+    "source": "/audio/room-routes/0047351c5cefad09a808.mp3",
     "text": "大卫的书呢？都在书架上。"
   },
   "套": {
     "sha256": "b9d063da195a8f077c8dcd05d83f92210d460922464d8336504bab1eaa7831c7",
-    "source": "/reference-room-routes/audio/82839948fc37f1734124.mp3",
+    "source": "/audio/room-routes/82839948fc37f1734124.mp3",
     "text": "套"
   },
   "好久不见": {
@@ -211,7 +211,7 @@
   },
   "好久不见！你最近好吗？": {
     "sha256": "3613ae40c6beaadae73d3c69eb8bc234697654185e36979930b8ee69b7ab1710",
-    "source": "/reference-room-routes/audio/72255d1d5e327237c1c1.mp3",
+    "source": "/audio/room-routes/72255d1d5e327237c1c1.mp3",
     "text": "好久不见！你最近好吗？"
   },
   "宿舍": {
@@ -221,7 +221,7 @@
   },
   "宿舍楼旁边有一家书店。": {
     "sha256": "cf84d01d9d4dd334fd355b277c7d050a0a5a94c58c14a060be96eb30d340fb43",
-    "source": "/reference-room-routes/audio/a4111ac9f4315ec3ddd5.mp3",
+    "source": "/audio/room-routes/a4111ac9f4315ec3ddd5.mp3",
     "text": "宿舍楼旁边有一家书店。"
   },
   "左边": {
@@ -246,72 +246,72 @@
   },
   "我们一块儿去学校吧。": {
     "sha256": "94004059e7455e31f1ee3526732a93dd2d522ebe8f606ab0d1fc9eb8189db055",
-    "source": "/reference-room-routes/audio/d5858e722178b3cd4835.mp3",
+    "source": "/audio/room-routes/d5858e722178b3cd4835.mp3",
     "text": "我们一块儿去学校吧。"
   },
   "我刚才没看见你。": {
     "sha256": "35038d0f0d733424de353132cbc8b5b60def5b3f6ebed3a17f602ad45894413d",
-    "source": "/reference-room-routes/audio/edbb5d2ef685b9d25e68.mp3",
+    "source": "/audio/room-routes/edbb5d2ef685b9d25e68.mp3",
     "text": "我刚才没看见你。"
   },
   "我听得懂这句话。": {
     "sha256": "6ef4ed6c4871514dd1dbc35a2d08e71487a9b209b9150e3c3737557a7d9858ff",
-    "source": "/reference-room-routes/audio/927b7a9507c4c5e97be9.mp3",
+    "source": "/audio/room-routes/927b7a9507c4c5e97be9.mp3",
     "text": "我听得懂这句话。"
   },
   "我坐在后边，看不见地图。": {
     "sha256": "20ffbe6e921ac58c1930cc4d46fe0ca13f079413f8159fd529632e2f1d0217ca",
-    "source": "/reference-room-routes/audio/5e6789bad9d76011f9bd.mp3",
+    "source": "/audio/room-routes/5e6789bad9d76011f9bd.mp3",
     "text": "我坐在后边，看不见地图。"
   },
   "我坐地铁或者骑自行车去学校。": {
     "sha256": "7204c1b4536bd5a7941225662d803560b7599aa7cde76bbe853e80e40444042c",
-    "source": "/reference-room-routes/audio/b362ef8ddbe3bede3cdf.mp3",
+    "source": "/audio/room-routes/b362ef8ddbe3bede3cdf.mp3",
     "text": "我坐地铁或者骑自行车去学校。"
   },
   "我很好。你还住宿舍吗？": {
     "sha256": "9f2e100864d7d197cae94f179d395017f215572e797b99a6216e77796f2a3dfc",
-    "source": "/reference-room-routes/audio/7e5ce320ff76d8dc58c7.mp3",
+    "source": "/audio/room-routes/7e5ce320ff76d8dc58c7.mp3",
     "text": "我很好。你还住宿舍吗？"
   },
   "我想买一束百合花。": {
     "sha256": "d699bed103515520c5a60ddd0a117608db7ccadd890465f2192291767a9dcb59",
-    "source": "/reference-room-routes/audio/0d3cb5b3c161b033996b.mp3",
+    "source": "/audio/room-routes/0d3cb5b3c161b033996b.mp3",
     "text": "我想买一束百合花。"
   },
   "我的包放不下十本书。": {
     "sha256": "bcf9fbbcd6a2a61c2b5e99e0797a5f99016fa1984f1b5d6243f7d870f55bc046",
-    "source": "/reference-room-routes/audio/437414bb529b391a3d4b.mp3",
+    "source": "/audio/room-routes/437414bb529b391a3d4b.mp3",
     "text": "我的包放不下十本书。"
   },
   "我的包放得下三本书。": {
     "sha256": "a38b3ea9c6582508d7f19ff6a00f6feb88897618dfcfe4fb970e38e6cda9592c",
-    "source": "/reference-room-routes/audio/b6e18e729dd6acbd0067.mp3",
+    "source": "/audio/room-routes/b6e18e729dd6acbd0067.mp3",
     "text": "我的包放得下三本书。"
   },
   "我的床在左边，大卫的床在右边。": {
     "sha256": "162fc1096d555fc4e99bf3081d881a30bf5043367ee24a77017f128395ee8ab3",
-    "source": "/reference-room-routes/audio/940e3d09212c84e3c82f.mp3",
+    "source": "/audio/room-routes/940e3d09212c84e3c82f.mp3",
     "text": "我的床在左边，大卫的床在右边。"
   },
   "我租了一个公寓。": {
     "sha256": "c233b3f44edb9c058ee5a115672deea2f606c2566fc25c848c8047fed6ed5f10",
-    "source": "/reference-room-routes/audio/7fc287f63039f4579d09.mp3",
+    "source": "/audio/room-routes/7fc287f63039f4579d09.mp3",
     "text": "我租了一个公寓。"
   },
   "我租了一套公寓。": {
     "sha256": "30064069cf4bd026861f12644639ac3bf4305f691f9e05de11e472165fcbd391",
-    "source": "/reference-room-routes/audio/96f8fce17dde10e0cc3c.mp3",
+    "source": "/audio/room-routes/96f8fce17dde10e0cc3c.mp3",
     "text": "我租了一套公寓。"
   },
   "我走路去学校。": {
     "sha256": "7c1480840fde3cbcfe5e0242ea7e61adb87cd9b4fffdfaa0f38bd50d6825e69c",
-    "source": "/reference-room-routes/audio/c6c42aeeb18a141002fb.mp3",
+    "source": "/audio/room-routes/c6c42aeeb18a141002fb.mp3",
     "text": "我走路去学校。"
   },
   "我饱了，吃不下一碗米饭。": {
     "sha256": "95c77b0629d14c82e5be305cb14721a911826e4d93436bbee5e95eab8a61003d",
-    "source": "/reference-room-routes/audio/20f8a633acf493c1fd6b.mp3",
+    "source": "/audio/room-routes/20f8a633acf493c1fd6b.mp3",
     "text": "我饱了，吃不下一碗米饭。"
   },
   "或者": {
@@ -326,17 +326,17 @@
   },
   "房间里有一张桌子。": {
     "sha256": "1af49362738676b2884cb787ede838f9bf9b8d9095226f2cf61d3bc848be12e3",
-    "source": "/reference-room-routes/audio/37787713d826bed932c1.mp3",
+    "source": "/audio/room-routes/37787713d826bed932c1.mp3",
     "text": "房间里有一张桌子。"
   },
   "房间里有床吗？": {
     "sha256": "05cafa483ac0c52dd4825af71937d3304cda7ec0ff7bfbef8a4d2bd301871cf6",
-    "source": "/reference-room-routes/audio/632273ba8ec514784e8b.mp3",
+    "source": "/audio/room-routes/632273ba8ec514784e8b.mp3",
     "text": "房间里有床吗？"
   },
   "打的": {
     "sha256": "54855123bbf8f0f19282bc9d91827d848eb853c11816e31d8ae076df4bda3fa4",
-    "source": "/reference-room-routes/audio/bd5c48bbc13f77122516.mp3",
+    "source": "/audio/room-routes/bd5c48bbc13f77122516.mp3",
     "text": "打的"
   },
   "把": {
@@ -346,17 +346,17 @@
   },
   "支": {
     "sha256": "e32422a43944a8bf5dfa71b673bd84d08da850ec091fc153bc21523dbec1d3a8",
-    "source": "/reference-room-routes/audio/bd73499ce772affbed99.mp3",
+    "source": "/audio/room-routes/bd73499ce772affbed99.mp3",
     "text": "支"
   },
   "放不下": {
     "sha256": "be3a709ebc43661a48f008c12ca1b0a93c8b34b62baee24ea772a40fcb76ded2",
-    "source": "/reference-room-routes/audio/4eafa5024e983e22b75b.mp3",
+    "source": "/audio/room-routes/4eafa5024e983e22b75b.mp3",
     "text": "放不下"
   },
   "放得下": {
     "sha256": "eab597d36fea825d86b85b4bfd6f996fe995f3d3cc66a1314f88221f98c47c42",
-    "source": "/reference-room-routes/audio/abf6e3b2f1cbd8f7d275.mp3",
+    "source": "/audio/room-routes/abf6e3b2f1cbd8f7d275.mp3",
     "text": "放得下"
   },
   "旁边": {
@@ -371,7 +371,7 @@
   },
   "晚上我想见你。": {
     "sha256": "73774d7187e92ce132939fe9d8b9a01b4384fa7729e0def3e9f733e9b357d5cf",
-    "source": "/reference-room-routes/audio/0aee1b82d36d89c5b98e.mp3",
+    "source": "/audio/room-routes/0aee1b82d36d89c5b98e.mp3",
     "text": "晚上我想见你。"
   },
   "最近": {
@@ -391,17 +391,17 @@
   },
   "朵": {
     "sha256": "6b3c75c7a985d765f1ad0c1012f21b188b12a57fc2c42fb5ae7f068b9997a46d",
-    "source": "/reference-room-routes/audio/0da9a35a4beee14eff46.mp3",
+    "source": "/audio/room-routes/0da9a35a4beee14eff46.mp3",
     "text": "朵"
   },
   "束": {
     "sha256": "e240ae4b8971a35f6dc6ff2e77f8b1af34427d525281c5f8cc6be577dc3b6fe6",
-    "source": "/reference-room-routes/audio/116f3cb4ee894d24974e.mp3",
+    "source": "/audio/room-routes/116f3cb4ee894d24974e.mp3",
     "text": "束"
   },
   "柜子": {
     "sha256": "700e6484a258e63cc41e363436515b6f310f84153b5b05df02ebc17157221234",
-    "source": "/reference-room-routes/audio/4b203b767ba0aabf1389.mp3",
+    "source": "/audio/room-routes/4b203b767ba0aabf1389.mp3",
     "text": "柜子"
   },
   "桌子": {
@@ -411,22 +411,22 @@
   },
   "桌子上一本书也没有。": {
     "sha256": "ca6f679300572ce9d029984b5cf7182bb97a84de333399bab25a456c54cc8e4e",
-    "source": "/reference-room-routes/audio/5590280f8d279a41a464.mp3",
+    "source": "/audio/room-routes/5590280f8d279a41a464.mp3",
     "text": "桌子上一本书也没有。"
   },
   "桌子上有一本书、一个本子和一支笔。": {
     "sha256": "757010713e3c31638c8167ff8082973da11409c2f68fd5b6fe3d27deea51a75e",
-    "source": "/reference-room-routes/audio/54d409337ef7bf9642ac.mp3",
+    "source": "/audio/room-routes/54d409337ef7bf9642ac.mp3",
     "text": "桌子上有一本书、一个本子和一支笔。"
   },
   "桌子上没有书。": {
     "sha256": "e6ab6a63f30d4486ecbd2903cf87d5261a419aae4add80d252afdf4e2e3fa895",
-    "source": "/reference-room-routes/audio/43580b84c836ed62dcf3.mp3",
+    "source": "/audio/room-routes/43580b84c836ed62dcf3.mp3",
     "text": "桌子上没有书。"
   },
   "桌子在床旁边。": {
     "sha256": "b253ef53010c90dea6a50b2d77d8e9d39809aa0372fba4a018b6f62e15d951f7",
-    "source": "/reference-room-routes/audio/d715cba7cd87d42d9849.mp3",
+    "source": "/audio/room-routes/d715cba7cd87d42d9849.mp3",
     "text": "桌子在床旁边。"
   },
   "椅子": {
@@ -436,7 +436,7 @@
   },
   "汉语书在上边，英语书在下边，词典在中间。": {
     "sha256": "4127ea6e9ec41e8dbb319575718d4915e0a5f52719c0c0a7e8f58d3b1faabd45",
-    "source": "/reference-room-routes/audio/7dacb90644caf94046c7.mp3",
+    "source": "/audio/room-routes/7dacb90644caf94046c7.mp3",
     "text": "汉语书在上边，英语书在下边，词典在中间。"
   },
   "沙发": {
@@ -446,7 +446,7 @@
   },
   "玫瑰花": {
     "sha256": "070371a69ef62581c8f470e7dae60a89ab1c10eb80755ce7ff738e3c98b21d4c",
-    "source": "/reference-room-routes/audio/ac59252eb64cde191dfd.mp3",
+    "source": "/audio/room-routes/ac59252eb64cde191dfd.mp3",
     "text": "玫瑰花"
   },
   "现在": {
@@ -456,17 +456,17 @@
   },
   "百合花": {
     "sha256": "9396f9625280b7f4f3228473239a1df6b8f5c2a737c2aff75f992065163731ca",
-    "source": "/reference-room-routes/audio/c8ab726591a9e9d41d12.mp3",
+    "source": "/audio/room-routes/c8ab726591a9e9d41d12.mp3",
     "text": "百合花"
   },
   "看不见": {
     "sha256": "c85aacd0b501b18e234c895c4329e5f2e278b034d16d77a3e3d0843ccc6f585a",
-    "source": "/reference-room-routes/audio/f92f065aad79ee8978da.mp3",
+    "source": "/audio/room-routes/f92f065aad79ee8978da.mp3",
     "text": "看不见"
   },
   "看得见": {
     "sha256": "c81a8f6f560f07aeed982077d6e0c496da033dfe460ae43b748fccd2d195637e",
-    "source": "/reference-room-routes/audio/c1f0d6204dc73bea7daf.mp3",
+    "source": "/audio/room-routes/c1f0d6204dc73bea7daf.mp3",
     "text": "看得见"
   },
   "看见": {
@@ -491,7 +491,7 @@
   },
   "词典在书架上。": {
     "sha256": "a3b657f680efc413cec46ab9e64e4fedc55c97762665a5d7357a75500fc80720",
-    "source": "/reference-room-routes/audio/b1105e74c5d30da9b634.mp3",
+    "source": "/audio/room-routes/b1105e74c5d30da9b634.mp3",
     "text": "词典在书架上。"
   },
   "走路": {
@@ -501,7 +501,7 @@
   },
   "还": {
     "sha256": "796f2acafd2eb767c6db420b6a6724b9b56d304e314fa217c947abead09083ee",
-    "source": "/reference-room-routes/audio/1bc709b8bf6c9706fa66.mp3",
+    "source": "/audio/room-routes/1bc709b8bf6c9706fa66.mp3",
     "text": "还"
   },
   "还是": {
@@ -511,7 +511,7 @@
   },
   "这间公寓放不下那张沙发。": {
     "sha256": "ebec5b6a5ca44f0b290d00a4b8f2a4f39cbf17c25534a04f3405b71bdb78d669",
-    "source": "/reference-room-routes/audio/45d1734501fc3c7f93c6.mp3",
+    "source": "/audio/room-routes/45d1734501fc3c7f93c6.mp3",
     "text": "这间公寓放不下那张沙发。"
   },
   "送": {
@@ -526,7 +526,7 @@
   },
   "里边": {
     "sha256": "ebce34b2904c25d25ca7982e3288a955dfdb4bd71848b2d07790795d4fbde2d0",
-    "source": "/reference-room-routes/audio/3127b761656dc725931c.mp3",
+    "source": "/audio/room-routes/3127b761656dc725931c.mp3",
     "text": "里边"
   },
   "银行": {
@@ -536,7 +536,7 @@
   },
   "青年公寓": {
     "sha256": "f6b134a1b528d0b965eba4b9c7b68d9f56691dddbe984eb129b32da967c45994",
-    "source": "/reference-room-routes/audio/67984d0106871c61f6d2.mp3",
+    "source": "/audio/room-routes/67984d0106871c61f6d2.mp3",
     "text": "青年公寓"
   },
   "饱": {
@@ -551,17 +551,17 @@
   },
   "马上要上课了。": {
     "sha256": "c51eab438776605e8cc74076352e2bde34eff26cf0634e9168e5603b613adb35",
-    "source": "/reference-room-routes/audio/a1622a96e00c5b071daa.mp3",
+    "source": "/audio/room-routes/a1622a96e00c5b071daa.mp3",
     "text": "马上要上课了。"
   },
   "骑自行车": {
     "sha256": "5a9e92e02f2029f3862c93e7bf1bf2cb7482277e6064697c7b7f4617c89cff45",
-    "source": "/reference-room-routes/audio/92883f83be7c1e320f45.mp3",
+    "source": "/audio/room-routes/92883f83be7c1e320f45.mp3",
     "text": "骑自行车"
   },
   "骑马": {
     "sha256": "c03d1904b0dec9a1334c0f7a2b87f99709fd1a68e50c46028560ba15a661c7d3",
-    "source": "/reference-room-routes/audio/09dcfa68c2aa1feee690.mp3",
+    "source": "/audio/room-routes/09dcfa68c2aa1feee690.mp3",
     "text": "骑马"
   }
 }

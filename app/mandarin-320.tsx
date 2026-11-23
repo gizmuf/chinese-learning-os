@@ -6,7 +6,7 @@ import catalog from '../data/mandarin-320.json';
 import audioSources from '../data/mandarin-320-audio.json';
 import {stopAudio} from './audio';
 import HanziQuickReview from './hanzi-quick-review';
-import {useWordAids} from './use-word-aids';
+import {useWordAids, type WordAids} from './use-word-aids';
 import {HanziGroupPdf} from './hanzi-group-pdf';
 import {Exercise, type Attempt, type Attempts} from './hanzi-family-lesson-practice';
 import {hanziFamilyBackLink, selectedPracticeHref} from './hanzi-family-lesson-route';
