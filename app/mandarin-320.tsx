@@ -6,6 +6,7 @@ import catalog from '../data/mandarin-320.json';
 import audioSources from '../data/mandarin-320-audio.json';
 import {stopAudio} from './audio';
 import HanziQuickReview from './hanzi-quick-review';
+import {useWordAids} from './use-word-aids';
 import {HanziGroupPdf} from './hanzi-group-pdf';
 import {Exercise, type Attempt, type Attempts} from './hanzi-family-lesson-practice';
 import {hanziFamilyBackLink, selectedPracticeHref} from './hanzi-family-lesson-route';
@@ -23,7 +24,6 @@ const lookupPinyin = createMandarin320PinyinLookup(entries);
 const clips: Record<string, string> = audioSources;
 const rangeSize = 40;
 const wordAidsKey = 'chinese-os:mandarin-320:word-aids';
-type WordAids = {pinyin: boolean; english: boolean};
 type Playback = ReturnType<typeof useRecordingPlayback>;
 
 function folded(value: string) {
@@ -53,8 +53,7 @@ function Words({player, practise}: {player: Playback; practise: (mode: 'recall' 
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(0);
   const [expanded, setExpanded] = useState<Set<number>>(() => new Set());
-  const [aids, setAids] = useState<WordAids>({pinyin: true, english: true});
-  const [overrides, setOverrides] = useState<Map<number, boolean>>(() => new Map());
+  const {aids, toggleAid, rowAids, toggleRow} = useWordAids<number>(wordAidsKey);
   const heading = useRef<HTMLHeadingElement>(null);
   const query = folded(search.trim());
   const number = /^#?(\d+)$/u.exec(query);
@@ -63,20 +62,6 @@ function Words({player, practise}: {player: Playback; practise: (mode: 'recall' 
     : folded([entry.hanzi, entry.pinyin, entry.meaning, entry.family].join(' ')).includes(query));
   const pageCount = Math.ceil(filtered.length / rangeSize);
   const visible = filtered.slice(page * rangeSize, (page + 1) * rangeSize);
-
-  useEffect(() => {
-    try {
-      const saved = JSON.parse(localStorage.getItem(wordAidsKey) ?? 'null');
-      if (typeof saved?.pinyin === 'boolean' && typeof saved?.english === 'boolean') setAids(saved);
-    } catch { /* The switches still work for this session. */ }
-  }, []);
-
-  function toggleAid(key: keyof WordAids) {
-    const next = {...aids, [key]: !aids[key]};
-    setAids(next);
-    setOverrides(new Map());
-    try { localStorage.setItem(wordAidsKey, JSON.stringify(next)); } catch { /* Store is optional. */ }
-  }
 
   function pageFromBottom(index: number) {
     setPage(index);
@@ -123,9 +108,7 @@ function Words({player, practise}: {player: Playback; practise: (mode: 'recall' 
       {visible.map(entry => {
         const open = expanded.has(entry.id);
         const id = 'mandarin320-entry-' + entry.id;
-        const override = overrides.get(entry.id);
-        const pinyin = override ?? aids.pinyin;
-        const english = override ?? aids.english;
+        const {pinyin, english} = rowAids(entry.id);
         const showBoth = !(pinyin && english);
         return <div className="hanzi-family-entry" key={entry.id} data-entry-id={entry.id}>
           <div className="mandarin320-row">
@@ -137,12 +120,7 @@ function Words({player, practise}: {player: Playback; practise: (mode: 'recall' 
             </button>
             <button type="button" className="mandarin320-entry-hints" aria-pressed={pinyin && english}
               aria-label={(showBoth ? 'Show' : 'Hide') + ' pinyin and English for ' + entry.hanzi}
-              onClick={() => setOverrides(current => {
-                const next = new Map(current);
-                if (showBoth === aids.pinyin && showBoth === aids.english) next.delete(entry.id);
-                else next.set(entry.id, showBoth);
-                return next;
-              })}>
+              onClick={() => toggleRow(entry.id)}>
               {pinyin && <span className="hanzi-family-reading" lang="zh-Latn">{entry.pinyin}</span>}
               {english && <span className="hanzi-family-gloss" lang="en">{entry.meaning}</span>}
               {!pinyin && !english && <span className="mandarin320-hint-label"><Eye size={16} aria-hidden="true"/>Show hints</span>}
