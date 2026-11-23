@@ -20,6 +20,11 @@ const eligible = {
   writing: new Set(examCharacters('3', 'writing')),
 };
 
+/** Character available in the first Atlas study-card release. */
+export function hasRecognitionStudyCard(glyph: string) {
+  return glyph === '雪';
+}
+
 export function readExamChecklist(saved: string | null): ExamChecklist {
   let value: Partial<Record<ExamMode, unknown>> | undefined;
   try { value = saved ? JSON.parse(saved) : undefined; } catch { /* Restore an empty list. */ }
