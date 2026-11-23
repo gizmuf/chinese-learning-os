@@ -15,6 +15,7 @@ export type StudyCard = {
   usage: StudyUsage[];
   contexts: StudyExample[];
   story: string[];
+  storyTerms?: (StudyTerm & {kind: 'word' | 'character'})[];
 };
 export type StudyIndexEntry = StudyTerm & {pack: string};
 

@@ -256,6 +256,7 @@ html[data-theme=dark] .atlas-study-card {
 .asc-story-entry [lang=zh-Hans] { font-size: 1.2rem; }
 .asc-imagery { border-inline-start: 1px solid var(--asc-line); padding-inline-start: 14px; }
 .asc-imagery p + p { margin-top: 6px; }
+.asc-story-terms { margin-top: 8px; }
 
 .asc-picker {
   padding: 9px 13px;
