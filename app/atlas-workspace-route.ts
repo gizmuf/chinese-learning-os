@@ -1,6 +1,7 @@
 import type {BrowseScope} from './hsk-browse';
 import {parseBrowseScope} from './hsk-browse';
 import {cloudRouteHref, readCloudRoute, type CloudRoute} from './atlas-cloud-route';
+import {assemblyPositions, buildLayouts, defaultBuildDisplay, type BuildDisplay} from './atlas-build-view';
 import {isHybridLayout} from './atlas-hybrid-model';
 import {isStoryTarget, type StoryTarget} from './atlas-story-explorer-model';
 import trialHeads from '../data/atlas-word-trial/heads.json';
@@ -31,6 +32,7 @@ export type WorkspaceRoute = {
   wide: boolean;
   buildHanzi?: string;
   buildPart?: string;
+  buildDisplay?: BuildDisplay;
   swipeSlot?: string;
   swipeWord?: string;
   wordView?: 'connections';
@@ -55,11 +57,12 @@ const readAnchor = (value: string | null) =>
   value && /^[\p{Script=Han}]{1,8}$/u.test(value) ? value : '学';
 const readCharacter = (value: string | null) =>
   value && /^\p{Script=Han}$/u.test(value) ? value : '';
+const readAssemblyPart = (value: string | null) =>
+  value === '' || value && /^[\p{Script=Han}\u2e80-\u2fdf\u31c0-\u31ee\ue000-\uf8ff]$/u.test(value) ? value : undefined;
 
 export function readAtlasWorkspaceRoute(search: string): WorkspaceRoute {
   const params = new URLSearchParams(search);
   const mode = readOption(params.get('mode'), workspaceModes, 'family');
-  const buildPart = params.get('buildPart');
   const swipeSlot = params.get('swipeSlot');
   const swipeWord = params.get('swipeWord');
   const story = params.get('wsstory');
@@ -69,7 +72,17 @@ export function readAtlasWorkspaceRoute(search: string): WorkspaceRoute {
     ...(mode === 'word-trial' && {trialWord: atlasTrialWord(params.get('trialWord'))}),
     ...((mode === 'build' || mode === 'swipe') && {
       buildHanzi: readCharacter(params.get('buildHanzi')) || undefined,
-      buildPart: buildPart === '' || buildPart && /^[\p{Script=Han}\u2e80-\u2fdf\u31c0-\u31ee\ue000-\uf8ff]$/u.test(buildPart) ? buildPart : undefined,
+      buildPart: readAssemblyPart(params.get('buildPart')),
+    }),
+    ...(mode === 'build' && {
+      buildDisplay: {
+        layout: readOption(params.get('buildView'), buildLayouts, defaultBuildDisplay.layout),
+        position: readOption(params.get('buildPosition'), [...assemblyPositions, 'all'], defaultBuildDisplay.position),
+        form: readAssemblyPart(params.get('buildForm')) ?? defaultBuildDisplay.form,
+        nested: params.get('buildNested') === '1',
+        directory: params.get('buildDirectory') === '1',
+        highlight: params.get('buildInk') !== '0',
+      },
     }),
     ...(mode === 'swipe' && swipeSlot && /^(?:whole|\d(?:\.\d){0,12})$/.test(swipeSlot) && {swipeSlot}),
     ...(mode === 'swipe' && params.get('familyMap') === '1' && {familyMap: true}),
@@ -123,6 +136,15 @@ export function atlasWorkspaceHref(route: WorkspaceRoute, scroll = 0) {
   if (route.mode === 'build' || route.mode === 'swipe') {
     if (route.buildHanzi) params.set('buildHanzi', route.buildHanzi);
     if (route.buildPart !== undefined) params.set('buildPart', route.buildPart);
+  }
+  if (route.mode === 'build' && route.buildDisplay) {
+    const {layout, position, form, nested, directory, highlight} = route.buildDisplay;
+    if (layout !== defaultBuildDisplay.layout) params.set('buildView', layout);
+    if (position !== 'all') params.set('buildPosition', position);
+    if (form) params.set('buildForm', form);
+    if (nested) params.set('buildNested', '1');
+    if (directory) params.set('buildDirectory', '1');
+    if (!highlight) params.set('buildInk', '0');
   }
   if (route.mode === 'swipe') {
     if (route.swipeSlot) params.set('swipeSlot', route.swipeSlot);

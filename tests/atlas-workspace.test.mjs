@@ -11,6 +11,20 @@ const {outputFiles: [bundle]} = await build({
 });
 const atlas = await import('data:text/javascript;base64,' + Buffer.from(bundle.text).toString('base64'));
 
+test('Build links restore the layout, family filters, and shared-stroke setting', () => {
+  const query = '?atlas=1&workspace=1&mode=build&hsk=3&buildHanzi=拿&buildPart=手&buildView=positions&buildForm=手&buildPosition=bottom&buildNested=1&buildDirectory=1&buildInk=0';
+  const route = atlas.readAtlasWorkspaceRoute(query);
+  assert.deepEqual(route.buildDisplay, {
+    layout: 'positions', position: 'bottom', form: '手', nested: true, directory: true, highlight: false,
+  });
+  assert.deepEqual(atlas.readAtlasWorkspaceRoute(atlas.atlasWorkspaceHref(route)), route);
+  assert.deepEqual(atlas.readAtlasWorkspaceRoute(atlas.atlasWorkspaceReturn(query)), route);
+  const invalid = atlas.readAtlasWorkspaceRoute('?mode=build&buildForm=two&buildPosition=unknown&buildView=new');
+  assert.equal(invalid.buildDisplay.layout, 'grid');
+  assert.equal(invalid.buildDisplay.position, 'all');
+  assert.equal(invalid.buildDisplay.form, '');
+});
+
 test('the workspace requires both explicit flags and resolves bare authored sentence links', () => {
   for (const search of ['?atlas=1', '?workspace=1', '?atlas=1&workspace=0']) {
     assert.equal(atlas.isAtlasWorkspaceEntry(new URLSearchParams(search)), false);

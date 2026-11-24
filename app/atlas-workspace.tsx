@@ -4,6 +4,8 @@ import {lazy, Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState, t
 import {ArrowLeft, ArrowRight, BookOpen, ChevronRight, Columns2, Compass, Layers2, Hand, Maximize2, Minimize2, PenLine} from 'lucide-react';
 import {useI18n} from './i18n';
 import {GlobalHskSelect, useGlobalHsk} from './global-hsk';
+import {defaultBuildDisplay} from './atlas-build-view';
+import {readBrowseScope} from './hsk-scope';
 import type {CloudWord} from './atlas-cloud-model';
 import type {JourneyGroup} from './family-journey-model';
 import type {CloudRoute} from './atlas-cloud-route';
@@ -47,8 +49,12 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
   const {locale} = useI18n();
   const global = useGlobalHsk();
   const [localRoute, setRoute] = useState(() => embedded?.initial ?? readAtlasWorkspaceRoute(window.location.search));
-  const route = useMemo(() => global && global.scope !== localRoute.scope ? {...localRoute, scope: global.scope} : localRoute,
-    [localRoute, global?.scope]);
+  const addressScope = !embedded ? readBrowseScope(new URLSearchParams(window.location.search).get('hsk')) : undefined;
+  const scope = addressScope ?? global?.scope ?? localRoute.scope;
+  const route = useMemo(() => scope === localRoute.scope ? localRoute : {...localRoute, scope}, [localRoute, scope]);
+  useEffect(() => {
+    if (addressScope !== undefined && global && global.scope !== addressScope) global.setScope(addressScope);
+  }, [addressScope, global]);
   const [swipeHistoryEntry, setSwipeHistoryEntry] = useState(0);
   const [depth, setDepth] = useState(() => embedded ? 0 : workspaceHistory().depth);
   const embedTrail = useRef<{route: WorkspaceRoute; scroll: number}[]>([]);
@@ -273,12 +279,14 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
   }
 
   function changeScope(scope: WorkspaceRoute['scope']) {
-    if (global) { audio.stop(); global.setScope(scope); return; }
+    if (scope === route.scope) return;
+    if (embedded && global) { audio.stop(); global.setScope(scope); return; }
     const group = route.group && (route.mode === 'read' || route.relation === 'topic')
       ? workspaceGroups(locale, scope).find(entry => entry.id === route.group)
       : undefined;
     navigate({scope, group: group?.id ?? '', page: 0, relation: route.relation === 'topic' && !group ? 'literal' : route.relation,
-      wordId: route.wordId || context.word?.id || '', hanzi: route.hanzi || context.hanzi}, 0);
+      wordId: route.wordId || context.word?.id || '', hanzi: route.hanzi || context.hanzi}, route.mode === 'build' ? null : 0);
+    global?.setScope(scope);
   }
 
   function setExercise(exercise: WorkspaceRoute['exercise']) {
@@ -392,7 +400,9 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
     </Suspense>}
     {building && <Suspense fallback={<p role="status">Opening the hanzi builder…</p>}>
       <AtlasAssembly hanzi={route.buildHanzi} part={route.buildPart} scope={route.scope} owner={owner}
-        onSelect={({hanzi, part}) => navigate({buildHanzi: hanzi, buildPart: part}, null, true)}
+        display={route.buildDisplay ?? defaultBuildDisplay}
+        onDisplayChange={buildDisplay => navigate({buildDisplay})}
+        onSelect={({hanzi, part}, buildDisplay) => navigate({buildHanzi: hanzi, buildPart: part, buildDisplay})}
         showWords={hanzi => selectFamily(hanzi)} widen={() => changeScope('all')}/>
     </Suspense>}
     {swiping && <Suspense fallback={<p role="status">Opening Swipe…</p>}>
