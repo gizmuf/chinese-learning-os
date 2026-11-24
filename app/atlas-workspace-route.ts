@@ -67,6 +67,9 @@ export function readAtlasWorkspaceRoute(search: string): WorkspaceRoute {
   const swipeWord = params.get('swipeWord');
   const story = params.get('wsstory');
   const storyPanel = params.get('storyPanel') === '1';
+  const builder = params.get('buildOpen');
+  const inspect = params.get('buildInspect');
+  const inspected = readAssemblyPart(params.get('buildInspected'));
   return {
     mode,
     ...(mode === 'word-trial' && {trialWord: atlasTrialWord(params.get('trialWord'))}),
@@ -82,6 +85,9 @@ export function readAtlasWorkspaceRoute(search: string): WorkspaceRoute {
         nested: params.get('buildNested') === '1',
         directory: params.get('buildDirectory') === '1',
         highlight: params.get('buildInk') !== '0',
+        ...(builder === '1' || builder === '0' ? {builder: builder === '1'} : {}),
+        ...(inspect && Array.from(inspect).length <= 8 && Array.from(inspect).every(glyph => readAssemblyPart(glyph)) && {inspect}),
+        ...(inspected && {inspected}),
       },
     }),
     ...(mode === 'swipe' && swipeSlot && /^(?:whole|\d(?:\.\d){0,12})$/.test(swipeSlot) && {swipeSlot}),
@@ -138,13 +144,16 @@ export function atlasWorkspaceHref(route: WorkspaceRoute, scroll = 0) {
     if (route.buildPart !== undefined) params.set('buildPart', route.buildPart);
   }
   if (route.mode === 'build' && route.buildDisplay) {
-    const {layout, position, form, nested, directory, highlight} = route.buildDisplay;
+    const {layout, position, form, nested, directory, highlight, builder, inspect, inspected} = route.buildDisplay;
     if (layout !== defaultBuildDisplay.layout) params.set('buildView', layout);
     if (position !== 'all') params.set('buildPosition', position);
     if (form) params.set('buildForm', form);
     if (nested) params.set('buildNested', '1');
     if (directory) params.set('buildDirectory', '1');
     if (!highlight) params.set('buildInk', '0');
+    if (builder !== undefined) params.set('buildOpen', builder ? '1' : '0');
+    if (inspect) params.set('buildInspect', inspect);
+    if (inspected) params.set('buildInspected', inspected);
   }
   if (route.mode === 'swipe') {
     if (route.swipeSlot) params.set('swipeSlot', route.swipeSlot);

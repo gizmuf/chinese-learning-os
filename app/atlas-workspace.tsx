@@ -4,7 +4,7 @@ import {lazy, Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState, t
 import {ArrowLeft, ArrowRight, BookOpen, ChevronRight, Columns2, Compass, Layers2, Hand, Maximize2, Minimize2, PenLine} from 'lucide-react';
 import {useI18n} from './i18n';
 import {GlobalHskSelect, useGlobalHsk} from './global-hsk';
-import {defaultBuildDisplay} from './atlas-build-view';
+import {defaultBuildDisplay, type BuildDisplay} from './atlas-build-view';
 import {readBrowseScope} from './hsk-scope';
 import type {CloudWord} from './atlas-cloud-model';
 import type {JourneyGroup} from './family-journey-model';
@@ -36,7 +36,7 @@ const originalViews: {name: string; views: [string, CloudRoute['layout']][]}[] =
   {name: 'Practise', views: [['3D cards', 'space']]},
 ];
 
-type WorkspaceHistory = {depth: number; scroll: number};
+type WorkspaceHistory = {depth: number; scroll: number; builderOrigin?: number};
 function workspaceHistory(): WorkspaceHistory {
   return window.history.state?.atlasWorkspace ?? {depth: 0, scroll: 0};
 }
@@ -149,7 +149,12 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
     if (replace) history.replaceState(state, '', destination);
     else {
       history.replaceState(state, '', origin ? ownHref({...route, ...origin}) : window.location.href);
-      history.pushState({...history.state, atlasWorkspace: {depth: current.depth + 1, scroll: typeof scroll === 'number' ? scroll : currentScroll}}, '', destination);
+      const fromFamily = route.buildDisplay?.builder === false ||
+        (route.buildDisplay?.builder === undefined && (route.buildPart || route.buildDisplay?.layout === 'positions'));
+      const builderOrigin = next.mode === 'build' && next.buildDisplay?.builder && route.mode === 'build'
+        ? current.builderOrigin ?? (fromFamily ? current.depth : undefined) : undefined;
+      history.pushState({...history.state, atlasWorkspace: {depth: current.depth + 1,
+        scroll: typeof scroll === 'number' ? scroll : currentScroll, builderOrigin}}, '', destination);
     }
     pendingScroll.current = scroll;
     if (next.mode === 'read') setJourneyVisited(true);
@@ -222,6 +227,16 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
 
   function openBuilder(hanzi: string, part?: string) {
     navigate({mode: 'build', buildHanzi: hanzi, buildPart: part, story: '', step: 0, exercise: ''}, 0);
+  }
+
+  function toggleBuilder(open: boolean) {
+    const current = workspaceHistory();
+    if (!open && current.builderOrigin !== undefined && current.builderOrigin < current.depth) {
+      history.go(current.builderOrigin - current.depth);
+      return;
+    }
+    const display: BuildDisplay = route.buildDisplay ?? defaultBuildDisplay;
+    navigate({buildDisplay: {...display, builder: open, ...(!open && {inspect: undefined, inspected: undefined})}});
   }
 
   function selectMode(mode: WorkspaceRoute['mode']) {
@@ -402,6 +417,7 @@ export default function AtlasWorkspace({penOnly, setPenOnly, notify, embedded, o
       <AtlasAssembly hanzi={route.buildHanzi} part={route.buildPart} scope={route.scope} owner={owner}
         display={route.buildDisplay ?? defaultBuildDisplay}
         onDisplayChange={buildDisplay => navigate({buildDisplay})}
+        onBuilderToggle={toggleBuilder} onBack={depth > 0 ? previous : undefined}
         onSelect={({hanzi, part}, buildDisplay) => navigate({buildHanzi: hanzi, buildPart: part, buildDisplay})}
         showWords={hanzi => selectFamily(hanzi)} widen={() => changeScope('all')}/>
     </Suspense>}
