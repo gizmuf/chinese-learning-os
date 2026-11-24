@@ -1,8 +1,11 @@
 import {findAssemblySeed} from './atlas-assembly-families';
+import {type Position} from './atlas-build-view';
 import {extendedCharacters, type ExtendedCharacter} from './atlas-cloud-extended';
 import {recognitionCharsByLevel} from './hsk-exam-model';
 import {browseInScope, browseLevel, type BrowseLevel, type BrowseScope} from './hsk-scope';
 import type {Locale} from './translate';
+
+export {assemblyPositions, type Position} from './atlas-build-view';
 
 const splits = {
   '⿰': ['left', 'right'],
@@ -23,11 +26,6 @@ const splits = {
 
 type Operator = keyof typeof splits;
 type Region = typeof splits[Operator][number];
-export const assemblyPositions = [
-  'left', 'right', 'top', 'bottom', 'upper left', 'upper right', 'lower left', 'lower right',
-  'middle', 'around', 'inside', 'overlapping',
-] as const;
-export type Position = typeof assemblyPositions[number];
 export type Tree = {glyph: string} | {operator: Operator; operands: Tree[]};
 
 export function parseAssembly(ids: string): Tree | undefined {
