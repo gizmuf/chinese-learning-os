@@ -44,10 +44,10 @@ class SingleInstance(unittest.TestCase):
         # The fixture exercises release-state semantics without 5 GB of free local disk.
         self.engine.disk = lambda _: None
 
-    def make_request(self, expected=None, index=b"new"):
+    def make_request(self, expected=None, index=b"new", extra=()):
         buf = io.BytesIO()
         with tarfile.open(fileobj=buf, mode="w:gz", format=tarfile.USTAR_FORMAT) as archive:
-            for name, body in (("index.html", index), ("assets/latest.txt", b"latest")):
+            for name, body in (("index.html", index), ("assets/latest.txt", b"latest"), *extra):
                 item = tarfile.TarInfo("public/" + name)
                 item.size = len(body)
                 item.mode = 0o644
@@ -113,6 +113,34 @@ class SingleInstance(unittest.TestCase):
         row = json.loads((self.inbox / "request.upload").read_bytes().splitlines()[0])
         self.assertEqual(row["expectedCurrent"], rid)
         self.assertNotEqual("r-" + row["sha256"], rid)
+
+    def test_full_vite_build_retires_old_chunks_and_preserves_other_public_files(self):
+        (self.old/'assets/entry-00000000.js').write_bytes(b'old Vite chunk')
+        (self.old/'audio').mkdir()
+        (self.old/'audio/line.mp3').write_bytes(b'lesson audio')
+        entry='assets/entry-AAAAAAAA.js'
+        lazy='assets/lazy-BBBBBBBB.js'
+        marker=json.dumps({'version':1,'chunks':[entry,lazy]}).encode()
+        rid=self.make_request(index=b'<script type="module" src="/assets/entry-AAAAAAAA.js"></script>',
+                              extra=((core.VITE_BUILD_MARKER,marker),(entry,b'import("./lazy-BBBBBBBB.js")'),(lazy,b'export default 1')))
+        self.assertEqual(self.engine.activate()['release'],rid)
+        published=self.releases/rid
+        self.assertFalse((published/'assets/entry-00000000.js').exists())
+        self.assertFalse((published/core.VITE_BUILD_MARKER).exists())
+        self.assertTrue((published/lazy).exists())
+        self.assertEqual((published/'assets/shared.txt').read_bytes(),b'shared')
+        self.assertEqual((published/'audio/line.mp3').read_bytes(),b'lesson audio')
+        self.assert_clean()
+
+    def test_full_vite_build_rejects_missing_lazy_chunk_before_any_switch(self):
+        entry='assets/entry-AAAAAAAA.js'
+        marker=json.dumps({'version':1,'chunks':[entry]}).encode()
+        self.make_request(index=b'<script type="module" src="/assets/entry-AAAAAAAA.js"></script>',
+                          extra=((core.VITE_BUILD_MARKER,marker),(entry,b'import("./missing-BBBBBBBB.js")')))
+        with self.assertRaisesRegex(core.Refused,'missing referenced Vite chunk'):
+            self.engine.activate()
+        self.assertEqual(self.engine.current(),self.before)
+        self.assert_clean()
 
 
 if __name__ == "__main__":

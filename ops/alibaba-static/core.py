@@ -10,6 +10,10 @@ ROOT_JSON_MAX = 16*1024*1024
 ROOT_JSON_MAX_STRING = 1024
 ROOT_JSON_MAX_NODES = 250000
 MAX_DIRECTORIES = 32768
+VITE_BUILD_MARKER = 'assets/chineseos-vite-build.json'
+VITE_CHUNK = re.compile(r'assets/[\w.-]+-[\w-]{8}\.(?:js|css)\Z', re.ASCII)
+VITE_ROOT_REF = re.compile(rb'''["']/?(assets/[\w.-]+-[\w-]{8}\.(?:js|css))["']''')
+VITE_LOCAL_REF = re.compile(rb'''["']\./([\w.-]+-[\w-]{8}\.(?:js|css))["']''')
 POLICY_KEYS = {'enabled','directories','rootFiles','immutablePrefixes','maxArchive','maxExpanded','maxFile','maxEntries','maxPublished','maxPublishedEntries','reserveBytes','maxPath','maxDepth','maxPax','healthPaths'}
 DEFAULT_POLICY = dict(enabled=False, directories=['assets','atlas','audio','audio-comparison','characters','dictionary','fonts','licenses','often-confused','speaking-chunks','video-self-introduction','writing-context','design-references'],rootFiles=['index.html','favicon.svg','file.svg','globe.svg','window.svg'],immutablePrefixes=['assets/','fonts/','audio/','characters/','dictionary/','atlas/','audio-comparison/'],maxArchive=300*1024**2,maxExpanded=600*1024**2,maxFile=100*1024**2,maxEntries=12000,maxPublished=1024**3,maxPublishedEntries=20000,reserveBytes=2*1024**3,maxPath=240,maxDepth=16,maxPax=4096,healthPaths=['/','/api/dictionary?text=%E5%91%86','/api/character-data?character=%E5%91%86','/connection-test/','/audio-comparison/my-day-first10/'])
 
@@ -264,6 +268,33 @@ def extract_public(source, destination, policy):
     if 'index.html' not in inventory:reject('missing index')
     return inventory
 
+def validate_vite_replacement(stage, inventory):
+    if VITE_BUILD_MARKER not in inventory:
+        return False
+    path = stage / VITE_BUILD_MARKER
+    if inventory[VITE_BUILD_MARKER]['bytes'] > 64*1024:
+        reject('Vite build manifest limit')
+    manifest = strict_json(path.read_bytes(), 64*1024)
+    if (not isinstance(manifest, dict) or set(manifest) != {'version', 'chunks'}
+            or manifest['version'] != 1 or not isinstance(manifest['chunks'], list)
+            or not all(isinstance(chunk, str) and VITE_CHUNK.fullmatch(chunk) for chunk in manifest['chunks'])):
+        reject('invalid Vite build manifest')
+    chunks = {name for name in inventory if VITE_CHUNK.fullmatch(name)}
+    if chunks != set(manifest['chunks']) or len(chunks) != len(manifest['chunks']):
+        reject('Vite build manifest does not match the upload')
+    roots = {ref.decode('ascii') for ref in VITE_ROOT_REF.findall((stage/'index.html').read_bytes())}
+    if not any(name.endswith('.js') for name in roots) or not roots <= chunks:
+        reject('missing Vite entry chunk')
+    for name in chunks:
+        source = (stage/name).read_bytes()
+        refs = {match.decode('ascii') for match in VITE_ROOT_REF.findall(source)}
+        refs.update('assets/'+match.decode('ascii') for match in VITE_LOCAL_REF.findall(source))
+        if not refs <= chunks:
+            reject('missing referenced Vite chunk')
+    path.unlink()
+    del inventory[VITE_BUILD_MARKER]
+    return True
+
 def hash_file(path, owner, maximum):
     fd=regular_fd(path,owner);total=0;digest=hashlib.sha256()
     with os.fdopen(fd,'rb') as f:
@@ -493,6 +524,7 @@ class Engine:
             reject('release already exists; operator review required')
         stage.mkdir(mode=0o700)
         with open(work/'archive.gz','rb') as src:inventory=extract_public(src,stage,self.p)
+        replace_build = validate_vite_replacement(stage, inventory)
         old=tree_inventory(self.l.base/'releases'/before,self.owner,self.p)
         # Root metadata is replaced, never trusted as publication authorization.
         for name,value in old.items():
@@ -501,6 +533,7 @@ class Engine:
                 if (any(name.startswith(prefix) for prefix in self.p['immutablePrefixes']) or re.match(r'(?:course[0-9]{2,3}|lesson[0-9]{2,3}-materials)/',name)) and inventory[name]!=value:reject('immutable asset collision')
             else:
                 if name in self.p['rootFiles']:reject('missing root baseline file')
+                if replace_build and VITE_CHUNK.fullmatch(name):continue
                 target=stage/name;target.parent.mkdir(parents=True,exist_ok=True,mode=0o755);copy_verified(self.l.base/'releases'/before/name,target,value,self.owner,self.p)
         merged=tree_inventory(stage,self.owner,self.p)
         receipt={'release':rid,'previous':before,'sha256':req['sha256'],'archiveBytes':req['bytes'],'integrity':'verified snapshot; NOT independent content authorization','authority':'ongoing static publication; explicit user request and source review required','transportRequester':'dedicated publisher; request metadata is not an owner approval','files':len(merged),'bytes':sum(x['bytes'] for x in merged.values())}
