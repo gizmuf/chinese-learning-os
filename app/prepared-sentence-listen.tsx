@@ -4,10 +4,11 @@ import {useEffect, useRef, useState} from 'react';
 import {Volume2} from 'lucide-react';
 import {playRecording, releaseRecording} from './audio';
 
-export default function PreparedSentenceListen({text, source, label = 'Listen'}: {
+export default function PreparedSentenceListen({text, source, label = 'Listen', iconOnly = false}: {
   text: string;
   source?: string;
   label?: string;
+  iconOnly?: boolean;
 }) {
   const [error, setError] = useState('');
   const playing = useRef<HTMLAudioElement | null>(null);
@@ -18,10 +19,10 @@ export default function PreparedSentenceListen({text, source, label = 'Listen'}:
 
   if (!source) return null;
   return <>
-    <button type="button" className="text-button" aria-label={label + ': ' + text} onClick={() => {
+    <button type="button" className={iconOnly ? "secondary prepared-listen-icon" : "text-button"} title={iconOnly ? label + ': ' + text : undefined} aria-label={label + ': ' + text} onClick={() => {
       setError('');
       playing.current = playRecording(source, setError);
-    }}><Volume2 size={16} aria-hidden="true"/>{label}</button>
+    }}><Volume2 size={16} aria-hidden="true"/>{!iconOnly && label}</button>
     {error && <small role="status">{error}</small>}
   </>;
 }

@@ -2,7 +2,7 @@
 
 import {lazy, Suspense, useEffect, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
-import {BookOpen} from 'lucide-react';
+import {BookOpen, X} from 'lucide-react';
 import './dictionary-study-card.css';
 
 const AtlasStudyCard = lazy(() => import('./atlas-study-card'));
@@ -30,6 +30,11 @@ export function DictionaryStudyCard({hanzi, label}: {hanzi: string; label: strin
     </button>
     {selected && createPortal(<dialog ref={modal} className="dictionary-study-card" aria-label={label} data-study-lookup="off"
       onCancel={event => {event.preventDefault(); event.stopPropagation(); setSelected(undefined);}}>
+      <div className="dictionary-study-card-closebar">
+        <button type="button" className="secondary dictionary-study-card-close" aria-label="Zamknij kartę" title="Zamknij kartę" onClick={() => setSelected(undefined)}>
+          <X size={20} aria-hidden="true"/>
+        </button>
+      </div>
       <Suspense fallback={<p role="status">Opening study cards…</p>}>
         <AtlasStudyCard returnLabel="Słownik" hanzi={selected} onNavigate={glyph => {
           setSelected(glyph);
