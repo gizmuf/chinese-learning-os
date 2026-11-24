@@ -204,6 +204,15 @@ html[data-theme=dark] .atlas-study-card {
 .atlas-study-card .asc-token { display: block; padding-block: 4px; }
 .asc-token .asc-glyph { font-size: 1.12rem; }
 .asc-token .asc-pinyin { margin-inline-start: 4px; }
+.asc-word-preview .asc-token .asc-glyph {
+  display: block;
+  font-size: 1.65rem;
+  line-height: 1.16;
+}
+.asc-word-preview .asc-token .asc-pinyin {
+  display: block;
+  margin: 2px 0;
+}
 .asc-token :is(.asc-english, .asc-level) { display: block; }
 .asc-token .asc-level { padding-top: 2px; }
 

@@ -1,5 +1,6 @@
 'use client';
 import {lazy,Suspense,useEffect,useMemo,useRef,useState} from 'react';
+import {X} from 'lucide-react';
 import type {Item} from './content';
 import type {DictionaryEntry} from './atlas-spatial-model';
 import {readCloudRoute,cloudRouteHref,type CloudRoute} from './atlas-cloud-route';
@@ -29,9 +30,10 @@ export default function ContextualAtlas({visit,owner,db,penOnly,setPenOnly,notif
  const embedded=useMemo(()=>({route,contextEntry:visit.entry,onRoute:navigate,onAssessmentChange:setAssessment,onContextWrite:(item:Item)=>onWrite(atlasWritingEntry(visit.entry,item,route.kind))}),[route,source]);
  if(wordFamily){
   const labels={en:['Atlas · Word family','Back to definition','Study vocabulary'],fr:['Atlas · Famille de mots','Retour à la définition','Vocabulaire étudié'],ru:['Атлас · Группа слов','Назад к словарной статье','Учебная лексика'],tr:['Atlas · Kelime ailesi','Tanıma dön','Ders kelimeleri']}[locale];
+  const closeLabel={en:'Close word family',fr:'Fermer la famille de mots',ru:'Закрыть группу слов',tr:'Kelime ailesini kapat'}[locale];
   return <dialog ref={modal} className="context-atlas-dialog" aria-label={labels[0]} onScroll={rememberScroll}
    onCancel={event=>{event.preventDefault();onClose();}}>
-   <header className="context-atlas-top"><button type="button" className="secondary" onClick={onClose}>← {labels[1]}</button><strong>{labels[0]}</strong></header>
+   <header className="context-atlas-top"><button type="button" className="secondary" onClick={onClose}>← {labels[1]}</button><strong>{labels[0]}</strong><button type="button" className="secondary context-atlas-close" aria-label={closeLabel} title={closeLabel} onClick={onClose}><X size={20} aria-hidden="true"/></button></header>
    <DictionaryWordFamily key={wordFamily} character={wordFamily} currentWords={wordRows.map(row=>row.text)}
     currentReadings={wordReadings} scopeLabel={labels[2]} initialScope={wordRows.length?'course':'dictionary'}/>
   </dialog>;

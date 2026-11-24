@@ -29,3 +29,11 @@ test('only visible rows load, concurrency is bounded, and late responses cannot 
 });
 
 test('authored Atlas words reuse the shared dictionary instead of a broader proper-name sense',async()=>{const r=await mount([],true,['树林'],'林');assert.ok(text(r.toJSON()).includes('shùlín'));assert.ok(text(r.toJSON()).includes('woods / grove'));assert.equal(m.inspect().requests.length,0);await m.act(()=>r.unmount());});
+
+test('the family offers recordings only for the matching written word and reading',async()=>{
+ const r=await mount([],true,['一般','一般般'],'一');
+ const speakers=r.root.findAllByType('button').map(b=>b.props['aria-label']).filter(Boolean);
+ assert.ok(speakers.includes('Listen: 一般 · yìbān'));
+ assert.ok(!speakers.some(label=>label.startsWith('Listen: 一般般')));
+ await m.act(()=>r.unmount());
+});

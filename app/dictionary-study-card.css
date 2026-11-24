@@ -12,6 +12,26 @@
   background: #fbfaf5;
   overscroll-behavior: contain;
 }
+.dictionary-study-card-closebar {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+.dictionary-study-card .dictionary-study-card-close {
+  pointer-events: auto;
+  align-self: start;
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  min-height: 44px;
+  padding: 0;
+  background: var(--panel, #fbfaf5);
+}
+.dictionary-study-card .asc-mast { padding-inline-end: 52px; }
 .dictionary-study-card::backdrop { background: rgb(22 41 31 / 48%); }
 @media (max-width: 37rem) {
   .dictionary-study-card { width: 100%; height: 100%; margin: 0; border: 0; border-radius: 0; padding: .5rem; }
