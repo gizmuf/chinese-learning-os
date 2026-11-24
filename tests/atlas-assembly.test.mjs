@@ -4,7 +4,7 @@ import test from 'node:test';
 import {build} from 'esbuild';
 
 const {outputFiles: [bundle]} = await build({
-  stdin: {contents: "export * from './app/atlas-assembly-model'; export * from './app/atlas-workspace-route';", resolveDir: process.cwd()},
+  stdin: {contents: "export * from './app/atlas-assembly-model'; export * from './app/atlas-assembly-outlines'; export * from './app/atlas-workspace-route';", resolveDir: process.cwd()},
   bundle: true, platform: 'node', format: 'esm', write: false,
 });
 const model = await import('data:text/javascript;base64,' + Buffer.from(bundle.text).toString('base64'));
@@ -17,6 +17,17 @@ test('IDS describes real slot counts, enclosures, and positions inside a contain
   assert.deepEqual(row('森').parts.map(part => part.positions[0]), ['top', 'lower left', 'lower right']);
   assert.deepEqual(model.assemblyParts(model.parseAssembly('⿰甲⿰乙丙')).map(part => part.positions), [['left'], ['right'], ['right']]);
   assert.equal(model.parseAssembly('⿰扌'), undefined);
+});
+
+test('nested Builder breakdown uses verified strokes and stays anchored in the original character', () => {
+  assert.deepEqual(row('齐').parts.map(part => part.glyph), ['文', '丿', '丨']);
+  assert.deepEqual(model.mappedAssemblyGroups(row('齐'), 6), [[0, 1, 2, 3], [4], [5]]);
+  assert.deepEqual(model.mappedAssemblyGroups(row('挤'), 9), [[0, 1, 2], [3, 4, 5, 6, 7, 8]]);
+  const trail = path => model.assemblyTrail(index, row('挤'), '齐', path).map(entry => entry.data.hanzi);
+  assert.deepEqual(trail('齐文'), ['齐', '文']);
+  assert.deepEqual(trail('齐清'), ['齐']);
+  assert.deepEqual(trail('文'), []);
+  assert.deepEqual(trail('齐文齐'), ['齐', '文']);
 });
 
 test('families contain distinct real characters with independently filterable forms, positions, and HSK levels', () => {

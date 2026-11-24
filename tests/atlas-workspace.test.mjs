@@ -25,6 +25,18 @@ test('Build links restore the layout, family filters, and shared-stroke setting'
   assert.equal(invalid.buildDisplay.form, '');
 });
 
+test('Build links keep the builder and inspected glyphs with the same family and view', () => {
+  const query = '?atlas=1&workspace=1&mode=build&hsk=3&buildHanzi=挤&buildPart=齐&buildView=positions&buildOpen=1&buildInspect=齐文&buildInspected=亠';
+  const route = atlas.readAtlasWorkspaceRoute(query);
+  assert.equal(route.buildHanzi, '挤');
+  assert.equal(route.buildPart, '齐');
+  assert.equal(route.buildDisplay.builder, true);
+  assert.equal(route.buildDisplay.inspect, '齐文');
+  assert.equal(route.buildDisplay.inspected, '亠');
+  assert.deepEqual(atlas.readAtlasWorkspaceRoute(atlas.atlasWorkspaceHref(route)), route);
+  assert.equal(atlas.readAtlasWorkspaceRoute(query.replace('buildOpen=1', 'buildOpen=0')).buildDisplay.builder, false);
+});
+
 test('the workspace requires both explicit flags and resolves bare authored sentence links', () => {
   for (const search of ['?atlas=1', '?workspace=1', '?atlas=1&workspace=0']) {
     assert.equal(atlas.isAtlasWorkspaceEntry(new URLSearchParams(search)), false);

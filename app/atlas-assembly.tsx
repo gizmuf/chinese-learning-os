@@ -1,11 +1,11 @@
 'use client';
 
 import {useEffect, useMemo, useRef, useState, type FormEvent} from 'react';
-import {ArrowRight, ChevronDown, ChevronsLeftRight, Grid2X2, List, Pin, Search, SquareSplitVertical} from 'lucide-react';
+import {ArrowLeft, ArrowRight, ChevronDown, ChevronsLeftRight, Grid2X2, List, Pin, Search, SquareSplitVertical} from 'lucide-react';
 import {assemblyFamilySections, assemblyPresets, assemblySeeds, defaultAssemblyHanzi, findAssemblySeed} from './atlas-assembly-families';
 import {AssemblyDrawing, AssemblyThumbnail} from './atlas-assembly-glyph';
 import {
-  assemblyFamily, assemblyIndex, assemblyMeaning, assemblyOperandText, assemblyPositions, assemblySwaps,
+  assemblyFamily, assemblyIndex, assemblyMeaning, assemblyOperandText, assemblyPositions, assemblySwaps, assemblyTrail, isAssemblyGlyph,
   type AssemblyCharacter, type FamilyMember, type Position,
 } from './atlas-assembly-model';
 import {useI18n} from './i18n';
@@ -292,9 +292,10 @@ function FamilyPanel({index, current, select, scope, owner, display, updateDispl
   </aside>;
 }
 
-export default function AtlasAssembly({hanzi, part, scope, owner, display, onDisplayChange, onSelect, showWords, widen}: {
+export default function AtlasAssembly({hanzi, part, scope, owner, display, onDisplayChange, onBuilderToggle, onBack, onSelect, showWords, widen}: {
   hanzi?: string; part?: string; scope: BrowseScope; owner: string | null; display: BuildDisplay;
   onDisplayChange: (display: BuildDisplay) => void; onSelect: (selection: BuildSelection, display: BuildDisplay) => void;
+  onBuilderToggle: (open: boolean) => void; onBack?: () => void;
   showWords: (hanzi: string) => void; widen: () => void;
 }) {
   const {locale} = useI18n();
@@ -305,9 +306,7 @@ export default function AtlasAssembly({hanzi, part, scope, owner, display, onDis
   const [error, setError] = useState('');
   const [split, setSplit] = useState(false);
   const {directory} = display;
-  const [overview, setFamilyFirst] = useState(() => !!part && index.families.has(part));
-  const familyFirst = overview || display.layout === 'positions';
-  const [builderOpen, setBuilderOpen] = useState(false);
+  const familyFirst = Boolean(part && index.families.has(part)) || display.layout === 'positions' || display.builder === false;
   const [change, setChange] = useState<{from: string; to: string; kept: string}>();
   const character = (hanzi ? index.characters.get(hanzi) : undefined) ??
     (part && index.families.has(part) ? firstFamilyMember(index, part, scope)?.character : undefined) ??
@@ -320,11 +319,17 @@ export default function AtlasAssembly({hanzi, part, scope, owner, display, onDis
     ? character.parts.some(candidate => candidate.glyph === part) ? part : relatedForm || part
     : firstPart;
   const current = {hanzi: glyph, part: selected};
-  const showBuilder = !familyFirst || builderOpen;
+  const showBuilder = display.builder ?? !familyFirst;
   const swaps = showBuilder ? assemblySwaps(index, character, selected, scope) : [];
   const outOfScope = scope !== 'all' && !!character.level && !browseInScope(character.level, scope);
   const seed = findAssemblySeed(selected);
   const familyKey = seed?.part ?? selected;
+  const trail = assemblyTrail(index, character, selected, display.inspect);
+  const branch = trail.at(-1);
+  const child = branch?.parts.find(piece => piece.glyph === display.inspected)?.glyph;
+  const path = trail.map(piece => piece.data.hanzi).join('');
+  const canContinue = !!child && assemblyTrail(index, character, selected, path + child).length > trail.length;
+  const availableBreakdown = !branch && assemblyTrail(index, character, selected, selected).length > 0;
   const nestedMatches = selected ? index.families.get(selected)?.find(member => member.character === character)?.occurrences ?? [] : [];
   const nested = !character.parts.some(candidate => candidate.glyph === selected) ? nestedMatches.find(match => match.via) : undefined;
   const latest = change?.to === glyph && change.kept === selected ? change : undefined;
@@ -336,15 +341,18 @@ export default function AtlasAssembly({hanzi, part, scope, owner, display, onDis
     onDisplayChange({...display, ...patch});
   }
 
-  function selectHanzi(hanzi: string, part?: string, closeDirectory = false) {
+  function selectHanzi(hanzi: string, part?: string, closeDirectory = false, inspect = false) {
     const next = index.characters.get(hanzi);
     if (!next) return;
     const fallback = next.parts.find(candidate => index.families.has(candidate.glyph))?.glyph ?? '';
     const selectedPart = part ?? fallback;
     const sameFamily = (findAssemblySeed(selectedPart)?.part ?? selectedPart) === familyKey;
-    const nextDisplay = {...display, ...(!sameFamily && {form: '', position: 'all' as const, nested: false}),
+    const nextDisplay = {...display, builder: showBuilder ? true : display.builder,
+      ...(!sameFamily && {form: '', position: 'all' as const, nested: false}),
       ...(!selectedPart && {layout: 'grid' as const}),
-      ...(closeDirectory && {directory: false})};
+      ...(closeDirectory && {directory: false, builder: false}),
+      inspect: inspect && assemblyTrail(index, next, selectedPart, selectedPart).length ? selectedPart : undefined,
+      inspected: undefined};
     onSelect({hanzi, part: selectedPart}, nextDisplay);
     setError('');
     setChange(undefined);
@@ -360,13 +368,11 @@ export default function AtlasAssembly({hanzi, part, scope, owner, display, onDis
     if (!first) return;
     if (selected !== part) selectHanzi(first.character.data.hanzi,
       first.occurrences.find(match => match.glyph === part)?.glyph ?? first.occurrences[0]?.glyph ?? part, true);
-    else updateDisplay({directory: false});
+    else updateDisplay({directory: false, builder: false, inspect: undefined, inspected: undefined});
     showFamilyOverview();
   }
 
   function showFamilyOverview() {
-    setFamilyFirst(true);
-    setBuilderOpen(false);
     requestAnimationFrame(() => {
       const family = layoutRoot.current?.querySelector<HTMLElement>('.ab-family');
       family?.focus({preventScroll: true});
@@ -414,11 +420,11 @@ export default function AtlasAssembly({hanzi, part, scope, owner, display, onDis
   }
 
   function pin(glyph: string) {
-    if (index.families.has(glyph)) selectHanzi(current.hanzi, glyph);
+    if (index.families.has(glyph)) selectHanzi(current.hanzi, glyph, false, true);
   }
 
   function replacePart(next: AssemblyCharacter) {
-    onSelect({hanzi: next.data.hanzi, part: selected}, display);
+    onSelect({hanzi: next.data.hanzi, part: selected}, {...display, inspect: undefined, inspected: undefined});
     setChange({from: glyph, to: next.data.hanzi, kept: selected});
     setSplit(false);
   }
@@ -440,11 +446,15 @@ export default function AtlasAssembly({hanzi, part, scope, owner, display, onDis
   </div>;
   const directoryContents = directory && <AssemblyDirectory index={index} scope={scope} part={selected} choose={openFamily}/>;
   const searchError = error && <p className="ab-error" role="alert">{error}</p>;
+  const back = onBack && <button type="button" className="ab-back" aria-label="Back in Atlas" onClick={onBack}>
+    <ArrowLeft size={16} aria-hidden="true"/>Back
+  </button>;
 
   return <section className={'ab' + (familyFirst ? ' ab-overview' : '') + (display.layout === 'positions' ? ' ab-by-position' : '')} aria-label="Build hanzi">
     {familyFirst ? <h2 className="ab-visually-hidden">Build hanzi</h2> : <>
       <header className="ab-header">
         <div><h2>Build hanzi</h2><p>Split a character, pin a part and see where else it appears.</p></div>
+        {back}
         {findForm}
       </header>
       {searchError}
@@ -454,12 +464,13 @@ export default function AtlasAssembly({hanzi, part, scope, owner, display, onDis
     <div ref={layoutRoot} className="ab-columns">
       <section ref={boardRoot} className="ab-panel ab-board" aria-label="Character builder" tabIndex={-1} data-character={glyph}>
         {familyFirst && <div className="ab-selected-strip">
-          <button type="button" className="ab-builder-toggle" aria-expanded={builderOpen} aria-controls="ab-builder"
-            onClick={() => setBuilderOpen(!builderOpen)}>
+          {back}
+          <button type="button" className="ab-builder-toggle" aria-expanded={showBuilder} aria-controls="ab-builder"
+            onClick={() => onBuilderToggle(!showBuilder)}>
             <span lang="zh-Hans" className="ab-hanzi ab-selected-glyph">{glyph}</span>
             <span className="ab-selected-copy"><strong>{character.data.readings[0]}</strong>
               <span>{assemblyMeaning(character, true)}</span></span>
-            <span className="ab-builder-action">{builderOpen ? 'Close builder' : 'Open builder'} <ChevronDown size={16} aria-hidden="true"/></span>
+            <span className="ab-builder-action">{showBuilder ? 'Back to family' : 'Open builder'} <ChevronDown size={16} aria-hidden="true"/></span>
           </button>
           {directoryToggle}
         </div>}
@@ -473,8 +484,13 @@ export default function AtlasAssembly({hanzi, part, scope, owner, display, onDis
             </div>
             <p>{assemblyMeaning(character) || 'Meaning unavailable'}</p>
           </div>
-          {character.parts.length > 0 && <button type="button" className="ab-split" aria-expanded={split} aria-controls="ab-drawing"
-            onClick={() => setSplit(!split)}><ChevronsLeftRight size={18}/>{split ? 'Join' : 'Split'}</button>}
+          <div className="ab-board-actions">
+            {!familyFirst && <button type="button" className="ab-back" onClick={() => onBuilderToggle(false)}>
+              <ArrowLeft size={16} aria-hidden="true"/>Back to family
+            </button>}
+            {character.parts.length > 0 && <button type="button" className="ab-split" aria-expanded={split} aria-controls="ab-drawing"
+              onClick={() => setSplit(!split)}><ChevronsLeftRight size={18}/>{split ? 'Join' : 'Split'}</button>}
+          </div>
         </header>
         {outOfScope && <p className="ab-outside">Outside the selected HSK range. <button type="button" onClick={widen}>Show all HSK levels</button></p>}
         <div id="ab-drawing">
@@ -494,6 +510,40 @@ export default function AtlasAssembly({hanzi, part, scope, owner, display, onDis
             })}
           </ul>
           {clue && <p className="ab-clue">{clue}</p>}
+        {availableBreakdown && <button type="button" className="ab-explore-part"
+          onClick={() => updateDisplay({inspect: selected, inspected: undefined})}>
+          Explore parts of <span lang="zh-Hans">{selected}</span> <ArrowRight size={15} aria-hidden="true"/>
+        </button>}
+        {branch && <section className="ab-component-detail" aria-label={'Parts of ' + branch.data.hanzi}>
+          <nav aria-label="Component path">
+            <button type="button" lang="zh-Hans" aria-label={'Return to ' + glyph}
+              onClick={() => updateDisplay({inspect: undefined, inspected: undefined})}>{glyph}</button>
+            {trail.map((piece, index) => <span key={piece.data.hanzi} className="ab-component-crumb">
+              <ArrowRight size={13} aria-hidden="true"/>
+              {piece === branch ? <span lang="zh-Hans" aria-current="location">{piece.data.hanzi}</span> :
+                <button type="button" lang="zh-Hans" aria-label={'Return to ' + piece.data.hanzi}
+                  onClick={() => updateDisplay({inspect: trail.slice(0, index + 1).map(item => item.data.hanzi).join(''), inspected: undefined})}>{piece.data.hanzi}</button>}
+            </span>)}
+          </nav>
+          <div className="ab-component-body">
+            <AssemblyThumbnail character={branch} active={piece => piece.glyph === child}/>
+            <div>
+              <h4>Parts of <span lang="zh-Hans">{branch.data.hanzi}</span></h4>
+              {branch.data.hanzi === '齐' && <p>Written shape · <span lang="zh-Hans">文</span> above <span lang="zh-Hans">丿、丨</span>.</p>}
+              <div className="ab-component-choices" role="group" aria-label="Parts in this component">
+                {branch.parts.filter(piece => isAssemblyGlyph(piece.glyph)).map(piece =>
+                  <button type="button" key={piece.id} aria-pressed={piece.glyph === child}
+                    onClick={() => updateDisplay({inspected: piece.glyph})}>
+                    <span className="ab-hanzi" lang="zh-Hans">{piece.glyph}</span> {labelPosition(piece.positions[0])}
+                  </button>)}
+              </div>
+              {canContinue && <button type="button" className="ab-explore-part"
+                onClick={() => updateDisplay({inspect: path + child, inspected: undefined})}>
+                Explore parts of <span lang="zh-Hans">{child}</span> <ArrowRight size={15} aria-hidden="true"/>
+              </button>}
+            </div>
+          </div>
+        </section>}
           {nested?.via && <p className="ab-part-note"><span lang="zh-Hans">{selected}</span> is inside <button type="button"
             onClick={() => selectHanzi(nested.via!, selected)} lang="zh-Hans">{nested.via}</button> · {labelPosition(nested.positions[0])}</p>}
         </> : <div className="ab-atomic">

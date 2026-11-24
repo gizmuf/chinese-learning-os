@@ -12,6 +12,9 @@ export type BuildDisplay = {
   nested: boolean;
   directory: boolean;
   highlight: boolean;
+  builder?: boolean;
+  inspect?: string;
+  inspected?: string;
 };
 
 export const defaultBuildDisplay: BuildDisplay = {

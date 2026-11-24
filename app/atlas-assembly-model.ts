@@ -1,4 +1,5 @@
 import {findAssemblySeed} from './atlas-assembly-families';
+import {assemblyOverrides} from './atlas-assembly-overrides';
 import {type Position} from './atlas-build-view';
 import {extendedCharacters, type ExtendedCharacter} from './atlas-cloud-extended';
 import {recognitionCharsByLevel} from './hsk-exam-model';
@@ -157,7 +158,9 @@ function knownGlyphs(tree: Tree): string[] {
 export function assemblyIndex(locale: Locale): BuildIndex {
   const cached = indices.get(locale);
   if (cached) return cached;
-  const characters = new Map(extendedCharacters(locale).map(data => {
+  const characters = new Map(extendedCharacters(locale).map(entry => {
+    const override = assemblyOverrides[entry.hanzi];
+    const data = override ? {...entry, decomposition: override.ids} : entry;
     const tree = parseAssembly(data.decomposition);
     return [data.hanzi, {data, tree, parts: assemblyParts(tree), level: levels.get(data.hanzi)}];
   }));
@@ -201,6 +204,23 @@ export function assemblyIndex(locale: Locale): BuildIndex {
   const index = {characters, families, swaps};
   indices.set(locale, index);
   return index;
+}
+
+export function assemblyTrail(index: BuildIndex, root: AssemblyCharacter, pinned: string, path?: string) {
+  const requested = Array.from(path ?? '');
+  const trail: AssemblyCharacter[] = [];
+  if (requested[0] !== pinned) return trail;
+  let parent = root;
+  const seen = new Set([root.data.hanzi]);
+  for (const glyph of requested) {
+    const part = index.characters.get(glyph);
+    if (!part?.parts.some(piece => isAssemblyGlyph(piece.glyph)) ||
+      seen.has(glyph) || !parent.parts.some(piece => piece.glyph === glyph)) break;
+    seen.add(glyph);
+    trail.push(part);
+    parent = part;
+  }
+  return trail;
 }
 
 function compareLevel(a: AssemblyCharacter, b: AssemblyCharacter) {

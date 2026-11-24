@@ -101,6 +101,8 @@
   border-radius: 0;
 }
 .ab-selected-strip button:focus-visible {outline-offset: -4px}
+.ab .ab-back {display: inline-flex; align-items: center; gap: 5px; flex: none; font-size: .82rem}
+.ab-selected-strip > .ab-back {align-self: stretch; border-width: 0 1px 0 0; border-radius: 0}
 .ab-selected-glyph {font-size: 2rem; line-height: 1; color: var(--ab-accent)}
 .ab-selected-copy {display: flex; align-items: baseline; gap: 7px; flex: 1; min-width: 0; font-size: .82rem}
 .ab-selected-copy > span {white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ab-muted)}
@@ -116,6 +118,7 @@
 .ab-character-reading h3 {font-size: 1.55rem; line-height: 1.15; font-weight: 700}
 .ab-character-reading small {font-size: .72rem; color: var(--ab-muted)}
 .ab-character-copy p {margin-top: 4px; color: var(--ab-muted)}
+.ab-board-actions {display: flex; flex-wrap: wrap; justify-content: end; gap: 6px}
 .ab .ab-split {display: inline-flex; align-items: center; gap: 6px; min-width: 84px; justify-content: center; flex: none; font-size: .84rem}
 .ab .ab-split[aria-expanded=true] {background: var(--ab-accent-wash); border-color: #dbb6a6; color: var(--ab-accent)}
 .ab .ab-outside {margin: 0 18px 8px; font-size: .82rem; color: var(--ab-muted)}
@@ -288,6 +291,21 @@
   color: var(--ab-ink);
 }
 .ab-thumbnail svg {width: 100%; height: 100%}
+.ab .ab-explore-part {display: inline-flex; align-items: center; gap: 5px; font-size: .85rem}
+.ab-board .ab-explore-part {margin: 3px 12px 12px}
+.ab-component-detail {margin: 4px 12px 12px; padding: 12px; background: var(--ab-desk); border: 1px solid var(--ab-line); border-radius: 10px}
+.ab-component-detail nav, .ab-component-crumb, .ab-component-body, .ab-component-choices {display: flex; align-items: center; gap: 8px; flex-wrap: wrap}
+.ab-component-detail nav {margin-bottom: 8px; color: var(--ab-muted)}
+.ab-component-detail nav :lang(zh-Hans) {font-family: var(--font-hanzi), sans-serif; font-size: 1.21rem}
+.ab-component-detail [aria-current=location] {color: var(--ab-accent)}
+.ab-component-body {gap: 12px}
+.ab-component-body > div:not(.ab-thumbnail) {min-width: 0; flex: 1 1 180px}
+.ab-component-body > .ab-thumbnail {width: 96px; height: 96px; flex-basis: 96px; font-size: 5.5rem}
+.ab-component-body p {margin-top: 4px; color: var(--ab-muted); font-size: .84rem}
+.ab-component-choices {margin-top: 7px}
+.ab-component-choices .ab-hanzi {font-size: 1.4rem}
+.ab-component-choices button[aria-pressed=true] {border-color: #dbb6a6; color: var(--ab-accent); background: var(--ab-accent-wash)}
+.ab .ab-component-detail .ab-explore-part {margin: 8px 0 0}
 .ab-result-copy {display: flex; flex-direction: column; min-width: 0; gap: 1px; line-height: 1.25}
 .ab-grid .ab-result-copy {text-align: center}
 .ab-result-copy strong {font-size: .82rem}
