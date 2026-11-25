@@ -8,7 +8,7 @@ import {globalHskLabel, knownHskInScope} from './global-hsk-model';
 import {Fragment, useEffect, useLayoutEffect, useMemo, useRef, useState, type MouseEvent, type ReactNode} from 'react';
 import {ArrowLeft, ArrowRight, BookOpen, PenLine} from 'lucide-react';
 import {readingLabReadings} from './reading-lab-data';
-import ReadingTutor from './reading-tutor';
+import ReadingTutor, {isReadingTutorHistoryEvent} from './reading-tutor';
 import {readingTutorSource} from './reading-tutor-context';
 import ReadingLabEpisodePanel from './reading-lab-episode';
 import {resolveReadingGrammarFrame} from './reading-lab-grammar';
@@ -318,8 +318,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
     history.scrollRestoration = 'manual';
     const pop = (event: PopStateEvent) => {
       if (!isReadingLabEntry(new URLSearchParams(location.search))) return;
-      const tutor = root.current?.querySelector<HTMLDialogElement>('.rt-dialog[open]');
-      if (event.state?.readingTutor || tutor?.dataset.tutorLocation === location.href) return;
+      if (isReadingTutorHistoryEvent(event)) return;
       const nextLinked = linkedReadingId(location.search);
       setOwnText(current => nextLinked ?? (typeof current === 'string' ? false : current));
       const next = readReadingLabRoute(location.search);
