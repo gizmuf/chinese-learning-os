@@ -12,6 +12,8 @@ import {playRecording, releaseRecording} from './audio';
 import {useI18n} from './i18n';
 import {browseInScope, type BrowseScope} from './hsk-scope';
 import {type BuildDisplay} from './atlas-build-view';
+import {PositionParts, partsLayouts, partsLayoutStorage, type PartsLayout} from './atlas-position-parts';
+import {positionPartsCopy} from './atlas-position-parts-copy';
 import './atlas-assembly.css';
 
 type BuildSelection = {hanzi: string; part: string};
@@ -219,6 +221,30 @@ function FamilyPanel({index, current, select, scope, owner, display, updateDispl
   const resultsRoot = useRef<HTMLDivElement>(null);
   const [outlines, setOutlines] = useState<ReadonlySet<string>>(() => new Set());
   const [positionPages, setPositionPages] = useState<Record<string, number>>({});
+  const [partsLayout, setPartsLayout] = useState<PartsLayout>('beside');
+  const [partsOpen, setPartsOpen] = useState(false);
+  const partsToggle = useRef<HTMLButtonElement>(null);
+  const copy = positionPartsCopy;
+  const character = index.characters.get(current.hanzi);
+  const showParts = layout === 'positions' && character && (partsLayout !== 'popup' || partsOpen);
+
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem(partsLayoutStorage);
+      if (partsLayouts.some(option => option === stored)) setPartsLayout(stored as PartsLayout);
+    } catch { /* Study layout still works when storage is unavailable. */ }
+  }, []);
+
+  function changePartsLayout(next: PartsLayout) {
+    setPartsLayout(next);
+    setPartsOpen(true);
+    try {localStorage.setItem(partsLayoutStorage, next);} catch { /* Optional preference. */ }
+  }
+
+  function closeParts() {
+    setPartsOpen(false);
+    partsToggle.current?.focus({preventScroll: true});
+  }
   const seed = findAssemblySeed(current.part);
   const hand = seed?.part === '扌';
   const form = seed?.forms.includes(display.form) || display.form === current.part ? display.form : '';
@@ -234,8 +260,7 @@ function FamilyPanel({index, current, select, scope, owner, display, updateDispl
     members.filter(member => member.occurrences.some(match => match.positions.includes(position))), [members, position]);
   const placements = useMemo(() => layout === 'positions' && current.part ? placeFamily(visible, position) : [],
     [layout, current.part, visible, position]);
-  const example = layout === 'positions' && visible.some(member => member.character.data.hanzi === current.hanzi)
-    ? useExamples[current.hanzi]?.[0] : undefined;
+  const example = useExamples[current.hanzi]?.[0];
 
   useEffect(() => {
     if (!resultsRoot.current || typeof IntersectionObserver === 'undefined') return;
@@ -271,7 +296,10 @@ function FamilyPanel({index, current, select, scope, owner, display, updateDispl
     return <li key={hanzi} data-outline={hanzi}>
       <button type="button" aria-pressed={current.hanzi === hanzi}
         aria-label={[hanzi, reading, placement ? fullMeaning : meaning, metadata].filter(Boolean).join(' · ')}
-        onClick={() => select(member, placement?.form ?? matching.find(match => match.glyph === current.part)?.glyph ?? matching[0]?.glyph)}>
+        onClick={() => {
+          select(member, placement?.form ?? matching.find(match => match.glyph === current.part)?.glyph ?? matching[0]?.glyph);
+          if (layout === 'positions') setPartsOpen(true);
+        }}>
         {outlines.has(hanzi) ? <AssemblyThumbnail character={character} active={isActive}/> :
           <span className="ab-thumbnail ab-hanzi" lang="zh-Hans">{hanzi}</span>}
         <span className="ab-result-copy">
@@ -315,15 +343,24 @@ function FamilyPanel({index, current, select, scope, owner, display, updateDispl
       <details className="ab-family-notes">
         <summary>Notes</summary>
         {seed?.note && <p className="ab-family-note">{seed.note}</p>}
+        {layout === 'positions' && hand && <details className="ab-hand-reference">
+          <summary>{copy.examplePanel[locale]}</summary>
+          <HandForms/><HandSentence index={index} highlight={highlight}/>
+        </details>}
         <MemoryCue owner={owner} family={seed?.part ?? current.part} key={owner + ':' + (seed?.part ?? current.part)}/>
       </details>
+      {layout === 'positions' && <label className="ab-parts-layout-label">
+        {copy.layout[locale]}
+        <select aria-label={copy.layout[locale]} value={partsLayout}
+          onChange={event => changePartsLayout(event.target.value as PartsLayout)}>
+          {partsLayouts.map(option => <option value={option} key={option}>{copy[option][locale]}</option>)}
+        </select>
+      </label>}
+      {layout === 'positions' && partsLayout === 'popup' && character &&
+        <button type="button" ref={partsToggle} aria-expanded={partsOpen} aria-controls={partsOpen ? 'ab-position-breakdown' : undefined}
+          onClick={() => partsOpen ? closeParts() : setPartsOpen(true)}>{copy.title[locale]}</button>}
     </div>}
-    {layout === 'positions' && hand && <><HandForms/><HandSentence index={index} highlight={highlight}/></>}
-    {example && <div className="ab-position-example" aria-live="polite">
-      <p><strong lang="zh-Hans" className="ab-hanzi">{example.hanzi}</strong>
-        <span>{example.pinyin} · {example.meaning}</span></p>
-      <button type="button" onClick={() => showWords(current.hanzi)}>Words with <span lang="zh-Hans">{current.hanzi}</span> <ArrowRight size={15}/></button>
-    </div>}
+    <div className="ab-position-workspace" data-parts-layout={layout === 'positions' ? partsLayout : undefined}>
     {visible.length > 0 ? <div ref={resultsRoot}>
       {placements.length ? <div className={'ab-positions' + (hand && placements.length > 1 ? ' ab-hand-groups' : '')}>
         {placements.map(group => {
@@ -359,6 +396,9 @@ function FamilyPanel({index, current, select, scope, owner, display, updateDispl
         {visible.map(member => memberTile(member))}
       </ul>}
     </div> : <p className="ab-empty">No characters match these filters in this HSK range.</p>}
+    {showParts && character && <PositionParts key={current.hanzi} character={character} characters={index.characters}
+      familyPart={current.part} example={example} scope={scope} close={partsLayout === 'popup' ? closeParts : undefined} showWords={showWords}/>}
+    </div>
   </aside>;
 }
 

@@ -29,35 +29,36 @@ function separation(part: AssemblyPart, index: number) {
   return [(x + w / 2 - .5) * 420, (y + h / 2 - .5) * 420];
 }
 
-function Ink({character, strokes, groups, active, split = false, onPart}: {
+function Ink({character, strokes, groups, active, activeStrokes, split = false, onPart}: {
   character: AssemblyCharacter;
   strokes: string[];
   groups?: number[][];
   active: (part: AssemblyPart) => boolean;
+  activeStrokes?: readonly number[];
   split?: boolean;
   onPart?: (glyph: string) => void;
 }) {
   return <svg viewBox={onPart ? '-116 -116 1256 1256' : '0 0 1024 1024'} aria-hidden="true" focusable="false" className="ab-ink">
     {groups ? character.parts.map((part, index) => {
       const [x, y] = split ? separation(part, index) : [0, 0];
-      return <g key={part.id} className="ab-ink-part" data-part={part.glyph} data-active={active(part)}
+      return <g key={part.id} className="ab-ink-part" data-part={part.glyph} data-active={!activeStrokes && active(part)}
         style={{transform: `translate(${x}px, ${y}px)`}}
         onClick={onPart ? () => onPart(part.glyph) : undefined}>
         <g transform="translate(0 900) scale(1 -1)">
-          {groups[index].map(stroke => <path key={stroke} d={strokes[stroke]}/>)}
+          {groups[index].map(stroke => <path key={stroke} d={strokes[stroke]} data-active={activeStrokes?.includes(stroke) || undefined}/>)}
         </g>
       </g>;
     }) : <g transform="translate(0 900) scale(1 -1)">{strokes.map((path, index) => <path key={index} d={path}/>)}</g>}
   </svg>;
 }
 
-export function AssemblyThumbnail({character, active}: {
-  character: AssemblyCharacter; active: (part: AssemblyPart) => boolean;
+export function AssemblyThumbnail({character, active, activeStrokes}: {
+  character: AssemblyCharacter; active: (part: AssemblyPart) => boolean; activeStrokes?: readonly number[];
 }) {
   const {strokes, groups} = useAssemblyOutline(character);
   return <span className="ab-thumbnail ab-hanzi" lang="zh-Hans">
     <span className={strokes ? 'ab-visually-hidden' : undefined}>{character.data.hanzi}</span>
-    {strokes && <Ink character={character} strokes={strokes} groups={groups} active={active}/>}
+    {strokes && <Ink character={character} strokes={strokes} groups={groups} active={active} activeStrokes={activeStrokes}/>}
   </span>;
 }
 
