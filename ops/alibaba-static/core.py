@@ -526,6 +526,8 @@ class Engine:
         with open(work/'archive.gz','rb') as src:inventory=extract_public(src,stage,self.p)
         replace_build = validate_vite_replacement(stage, inventory)
         old=tree_inventory(self.l.base/'releases'/before,self.owner,self.p)
+        if not replace_build and any(name not in old and VITE_CHUNK.fullmatch(name) for name in inventory):
+            reject('new Vite chunks require a complete build manifest')
         # Root metadata is replaced, never trusted as publication authorization.
         for name,value in old.items():
             if name in ('release.json','public-files.json'):continue

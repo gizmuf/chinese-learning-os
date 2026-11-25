@@ -142,6 +142,13 @@ class SingleInstance(unittest.TestCase):
         self.assertEqual(self.engine.current(),self.before)
         self.assert_clean()
 
+    def test_new_vite_chunks_require_a_complete_build_manifest(self):
+        self.make_request(extra=(('assets/entry-AAAAAAAA.js', b'new Vite chunk'),))
+        with self.assertRaisesRegex(core.Refused, 'require a complete build manifest'):
+            self.engine.activate()
+        self.assertEqual(self.engine.current(), self.before)
+        self.assert_clean()
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
