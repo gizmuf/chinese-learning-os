@@ -336,3 +336,43 @@ html[data-theme=dark] .atlas-study-card {
   .atlas-study-card .asc-term { padding: 5px; }
   .asc-glyph { font-size: 1.55rem; }
 }
+
+/* Playback stays a sibling of selectable content, so tapping it never changes the card selection. */
+.asc-playable-tile, .asc-playable-sentence { position: relative; min-inline-size: 0; }
+.asc-playable-tile { display: grid; }
+.asc-listen { position: relative; display: inline-grid; vertical-align: middle; }
+.asc-listen:is(.asc-tile-listen, .asc-sentence-listen) { position: absolute; inset-block-start: 2px; inset-inline-end: 3px; }
+.atlas-study-card .asc-listen .prepared-listen-icon {
+  display: grid;
+  place-items: center;
+  min-inline-size: 36px;
+  min-block-size: 36px;
+  padding: 0;
+  border-radius: 50%;
+  border-color: transparent;
+  background: transparent;
+}
+.atlas-study-card .asc-listen .prepared-listen-icon:not(:disabled):is(:hover, :focus-visible) { background: var(--asc-selected-bg, var(--asc-tile)); }
+.asc-listen .prepared-listen-icon:disabled { opacity: .47; }
+.asc-listen small[role=status] {
+  position: absolute;
+  z-index: 2;
+  inset-inline-end: 0;
+  inset-block-start: 100%;
+  inline-size: max-content;
+  max-inline-size: 180px;
+  padding: 4px 7px;
+  background: var(--asc-tile);
+  border: 1px solid var(--asc-line);
+  border-radius: 6px;
+}
+.asc-playable-tile:has(.asc-tile-listen) .asc-glyph { align-self: stretch; padding-inline-end: 32px; }
+.asc-playable-sentence:has(.asc-sentence-listen) > .asc-sentence { padding-inline-end: 42px; }
+.asc-playable-tile:has(.asc-tile-listen) .asc-token .asc-pinyin { display: block; margin-inline-start: 0; }
+.asc-family-note > .asc-listen, .asc-story-entry > .asc-listen { margin-inline-start: 5px; }
+
+@media (pointer:coarse) {
+  .atlas-study-card .asc-listen .prepared-listen-icon { min-inline-size: 44px; min-block-size: 44px; }
+  .asc-playable-tile:has(.asc-tile-listen) .asc-glyph { padding-inline-end: 42px; min-block-size: 40px; }
+  .asc-playable-sentence:has(.asc-sentence-listen) > .asc-sentence { padding-inline-end: 51px; }
+}

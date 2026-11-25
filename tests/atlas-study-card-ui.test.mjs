@@ -102,6 +102,7 @@ test('a study card selects vocabulary and whole examples, labels HSK, and browse
   t.after(async () => { await act(() => renderer.unmount()); });
 
   assert.equal(content(renderer.root.findByType('h2')), '雪xuěsnow');
+  assert.equal(renderer.root.findByProps({ className: 'asc-mast' }).findByProps({ 'aria-label': 'Odsłuchaj: 雪' }).type, 'button');
   assert.match(content(visiblePanel(renderer)), /下雪了。Xià xuě le.It’s snowing./);
   await act(() => button(renderer, 'Dalsze HSK', visiblePanel(renderer)).props.onClick());
   assert.match(content(visiblePanel(renderer)), /滑雪huáxuěto skiHSK 6/);
@@ -124,6 +125,8 @@ test('a study card selects vocabulary and whole examples, labels HSK, and browse
   assert.match(content(visiblePanel(renderer)), /滑雪huáxuěto skiHSK 6 · słowo/);
 
   await act(() => button(renderer, 'W użyciu').props.onClick());
+  assert.equal(visiblePanel(renderer).findByProps({ 'aria-label': 'Odsłuchaj: 下雪了。' }).type, 'button');
+  assert.equal(visiblePanel(renderer).findByProps({ 'aria-label': 'Odsłuchaj: 雪停了。' }).type, 'button');
   assert.equal(button(renderer, 'It’s snowing.', visiblePanel(renderer)).props['aria-pressed'], false);
   await act(() => button(renderer, 'It’s snowing.', visiblePanel(renderer)).props.onClick());
   assert.equal(button(renderer, 'It’s snowing.', visiblePanel(renderer)).props['aria-pressed'], true);

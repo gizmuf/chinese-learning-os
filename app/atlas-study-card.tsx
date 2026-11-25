@@ -1,10 +1,10 @@
 'use client';
 
 import PreparedSentenceListen from './prepared-sentence-listen';
-import prepared from '../data/lesson-sentence-audio.json';
+import {atlasStudyPronunciation} from './atlas-study-audio';
 
 import { useEffect, useId, useRef, useState, type KeyboardEvent } from 'react';
-import { ArrowLeft, ArrowRight, BookOpen, ChevronDown, Columns2, Search } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, ChevronDown, Columns2, Search, Volume2 } from 'lucide-react';
 import {
   loadStudyCard,
   loadStudyIndex,
@@ -17,8 +17,6 @@ import {
 import { hasRecognitionStudyCard } from './hsk-exam-model';
 import { normalizedPinyin, untonedPinyin } from './pinyin-practice-model';
 import './atlas-study-card.css';
-
-const preparedExamples: Record<string, {source: string}> = prepared.snowLines;
 
 const sections = [
   ['words', 'Słowa i zwroty'],
@@ -105,6 +103,44 @@ function TermContents({ term, highlight, kind, showWordScope }: {
   </>;
 }
 
+function StudyListen({ term, className }: {
+  term: Pick<StudyTerm, 'hanzi' | 'pinyin' | 'namePinyin'>;
+  className?: string;
+}) {
+  const pronunciation = atlasStudyPronunciation(term);
+  if (!pronunciation) return null;
+  const text = term.hanzi + (pronunciation.alternatives ? ' · ' + pronunciation.reading : '');
+  return <span className={'asc-listen' + (className ? ' ' + className : '')}>
+    {pronunciation.source
+      ? <PreparedSentenceListen key={pronunciation.source} text={text} source={pronunciation.source} label="Odsłuchaj" iconOnly />
+      : <button type="button" className="secondary prepared-listen-icon" disabled
+          aria-label={'Brak nagrania: ' + text} title={'Brak nagrania: ' + text}>
+          <Volume2 size={16} aria-hidden="true" />
+        </button>}
+  </span>;
+}
+
+function StudyTile({ term, highlight, kind, showWordScope, token = false, onSelect, pressed, current }: {
+  term: StudyTerm;
+  highlight?: string;
+  kind?: 'word' | 'character';
+  showWordScope?: boolean;
+  token?: boolean;
+  onSelect?: () => void;
+  pressed?: boolean;
+  current?: boolean;
+}) {
+  const content = <TermContents term={term} highlight={highlight} kind={kind} showWordScope={showWordScope} />;
+  const classes = 'asc-term' + (token ? ' asc-token' : '');
+  const wide = kind === 'word' && !!onSelect && Array.from(term.hanzi).length >= 4;
+  return <div className={'asc-playable-tile' + (wide ? ' asc-term-wide' : '')}>
+    {onSelect
+      ? <button type="button" className={classes} aria-pressed={pressed} aria-current={current ? 'true' : undefined} onClick={onSelect}>{content}</button>
+      : <div className={classes}>{content}</div>}
+    <StudyListen term={term} className="asc-tile-listen" />
+  </div>;
+}
+
 function SentenceContents({ example, hanzi }: { example: StudyExample; hanzi: string }) {
   return <>
     <span className="asc-sentence-hanzi" lang="zh-Hans"><MarkHanzi text={example.hanzi} hanzi={hanzi} /></span>
@@ -116,9 +152,7 @@ function SentenceContents({ example, hanzi }: { example: StudyExample; hanzi: st
 function ExampleWords({ example }: { example: StudyExample }) {
   if (!example.words?.length) return null;
   return <div className="asc-terms asc-example-tokens" role="group" aria-label="Słownictwo w zdaniu">
-    {example.words.map(term => <div className="asc-term asc-token" key={studyTermKey(term)}>
-      <TermContents term={term} kind="word" />
-    </div>)}
+    {example.words.map(term => <StudyTile term={term} kind="word" token key={studyTermKey(term)} />)}
   </div>;
 }
 
@@ -185,6 +219,7 @@ export default function AtlasStudyCard({ hanzi, onNavigate, onClose, onTrial, re
           <span className="asc-translation" lang="en">{card.entry.english}</span>
         </span>}
       </h2>
+      {card && <StudyListen term={card.entry} />}
       {card && <div className="asc-scope"><strong>{levelText(card.entry.levels)}</strong><span>znak</span></div>}
       <div className="asc-actions">
         {onTrial && <button type="button" className="asc-control" onClick={() => onTrial(hanzi)}>
@@ -303,10 +338,8 @@ function CharacterPicker({ hanzi, onSelect, onDismiss }: {
         {groups.filter(group => group.results.length).map(({ level, results }) => <section key={level} aria-label={formatLevel(level)}>
           <h3>{formatLevel(level)}</h3>
           <div className="asc-index-grid">
-            {results.map(entry => <button type="button" key={entry.hanzi} aria-current={entry.hanzi === hanzi ? 'true' : undefined}
-              className="asc-term" onClick={() => onSelect(entry.hanzi)}>
-              <TermContents term={entry} />
-            </button>)}
+            {results.map(entry => <StudyTile term={entry} key={entry.hanzi} current={entry.hanzi === hanzi ? true : undefined}
+              onSelect={() => onSelect(entry.hanzi)} />)}
           </div>
         </section>)}
       </div>}
@@ -334,23 +367,18 @@ function WordsPane({ card }: { card: StudyCard }) {
     </div>
     <div className="asc-word-preview">
       <div aria-live="polite" aria-atomic="true">
-        {active?.example ? <div className="asc-sentence">
-          <SentenceContents example={active.example} hanzi={hanzi} />
+        {active?.example ? <div className="asc-playable-sentence">
+          <div className="asc-sentence"><SentenceContents example={active.example} hanzi={hanzi} /></div>
+          <StudyListen term={active.example} className="asc-sentence-listen" />
         </div> : <p className="asc-muted">
           <span lang="zh-Hans">{active?.hanzi}</span> · Brak zdania przykładowego.
         </p>}
       </div>
-      {active?.example && <>
-        <PreparedSentenceListen text={active.example.hanzi} source={preparedExamples[active.example.hanzi]?.source} label="Odsłuchaj"/>
-        <ExampleWords example={active.example}/>
-      </>}
+      {active?.example && <ExampleWords example={active.example} />}
     </div>
     <div className="asc-terms" role="group" aria-label="Słowa i zwroty">
-      {words.map(word => <button type="button" key={studyTermKey(word)} aria-pressed={word === active}
-        className={'asc-term' + (Array.from(word.hanzi).length >= 4 ? ' asc-term-wide' : '')}
-        onClick={() => setSelection(word)}>
-        <TermContents term={word} highlight={hanzi} kind="word" />
-      </button>)}
+      {words.map(word => <StudyTile term={word} key={studyTermKey(word)} kind="word" highlight={hanzi}
+        pressed={word === active} onSelect={() => setSelection(word)} />)}
     </div>
   </>;
 }
@@ -376,7 +404,7 @@ function FamilyPane({ card, onNavigate }: { card: StudyCard; onNavigate: (hanzi:
 
   if (!family) return <>
     {!!card.parts.length && <div className="asc-terms">
-      {card.parts.map(part => <div className="asc-term" key={studyTermKey(part)}><TermContents term={part} kind="character" /></div>)}
+      {card.parts.map(part => <StudyTile term={part} key={studyTermKey(part)} kind="character" />)}
     </div>}
     <p className="asc-muted asc-family-note">Brak powiązanych znaków ze wspólnym komponentem w tej karcie.</p>
   </>;
@@ -394,6 +422,7 @@ function FamilyPane({ card, onNavigate }: { card: StudyCard; onNavigate: (hanzi:
       {family.part.english && <> · <span lang="en">{family.part.english}</span></>}
       {' · ' + levelText(family.part.levels)}
       {family.position && <> · {familyPositions[family.position] ?? family.position}</>}
+      <StudyListen term={family.part} />
       <span className="asc-muted asc-family-scope">Poziom dotyczy rozpoznawania znaku.</span>
     </p>
     {active && <div className="asc-note asc-family-selection">
@@ -404,20 +433,17 @@ function FamilyPane({ card, onNavigate }: { card: StudyCard; onNavigate: (hanzi:
         </p>
         {family.notes?.[active.hanzi] && <p>{family.notes[active.hanzi]}</p>}
       </div>
+      <StudyListen term={active} />
       <CardLink term={active} current={card.entry.hanzi} onNavigate={onNavigate} />
     </div>}
     <div className="asc-terms" role="group" aria-label="Znaki w rodzinie">
-      {family.members.map(term => <button type="button" key={studyTermKey(term)} className="asc-term"
-        aria-pressed={term === active} onClick={() => setSelection(term)}>
-        <TermContents term={term} kind="character" />
-      </button>)}
+      {family.members.map(term => <StudyTile term={term} key={studyTermKey(term)} kind="character"
+        pressed={term === active} onSelect={() => setSelection(term)} />)}
     </div>
     {!!otherParts.length && <div className="asc-other-parts">
       <h3>Pozostałe części</h3>
       <div className="asc-story-parts">
-        {otherParts.map(part => <div className="asc-term" key={studyTermKey(part)}>
-          <TermContents term={part} kind="character" />
-        </div>)}
+        {otherParts.map(part => <StudyTile term={part} key={studyTermKey(part)} kind="character" />)}
       </div>
     </div>}
   </>;
@@ -439,8 +465,8 @@ function ComparePane({ card, onNavigate }: { card: StudyCard; onNavigate: (hanzi
     </div>
     <div aria-live="polite" aria-atomic="true">
       <div className="asc-compare">
-        <div className="asc-term"><TermContents term={card.entry} kind="character" /></div>
-        <div className="asc-term"><TermContents term={pair.term} kind={pairKind} showWordScope /></div>
+        <StudyTile term={card.entry} kind="character" />
+        <StudyTile term={pair.term} kind={pairKind} showWordScope />
       </div>
       <p className="asc-note">{pair.note}</p>
     </div>
@@ -457,11 +483,13 @@ function UsagePane({ card }: { card: StudyCard }) {
   function renderExample(example: StudyExample, key: string) {
     const active = selected === key;
     return <div className="asc-example" key={key}>
-      <button className="asc-sentence asc-sentence-choice" type="button"
-        onClick={() => setSelected(active ? undefined : key)} aria-pressed={active}>
-        <SentenceContents example={example} hanzi={hanzi} />
-      </button>
-      <PreparedSentenceListen text={example.hanzi} source={preparedExamples[example.hanzi]?.source} label="Odsłuchaj"/>
+      <div className="asc-playable-sentence">
+        <button className="asc-sentence asc-sentence-choice" type="button"
+          onClick={() => setSelected(active ? undefined : key)} aria-pressed={active}>
+          <SentenceContents example={example} hanzi={hanzi} />
+        </button>
+        <StudyListen term={example} className="asc-sentence-listen" />
+      </div>
       {active && <ExampleWords example={example}/>}
     </div>;
   }
@@ -497,13 +525,12 @@ function StoryPane({ card }: { card: StudyCard }) {
     <section aria-label="Budowa i znaczenie">
       <h3>Budowa i znaczenie</h3>
       {card.parts.length ? <div className="asc-story-parts">
-        {card.parts.map(part => <div className="asc-term" key={studyTermKey(part)}>
-          <TermContents term={part} kind="character" />
-        </div>)}
+        {card.parts.map(part => <StudyTile term={part} key={studyTermKey(part)} kind="character" />)}
       </div> : <p className="asc-muted">Brak rozpisanych komponentów w tej karcie.</p>}
       {card.structure && <p className="asc-story-structure">{card.structure}</p>}
       <p className="asc-story-entry">
         <strong lang="zh-Hans">{card.entry.hanzi}</strong> · <TermReading term={card.entry} /> · <span lang="en">{card.entry.english}</span> · {levelText(card.entry.levels)}
+        <StudyListen term={card.entry} />
       </p>
     </section>
     <section className="asc-imagery" aria-label="Wyobrażona historyjka">
@@ -512,9 +539,8 @@ function StoryPane({ card }: { card: StudyCard }) {
         : <p className="asc-muted">Brak historyjki do tego znaku.</p>}
       {!!terms.length && <div className="asc-terms asc-example-tokens asc-story-terms" role="group"
         aria-label="Znaki i słowa z historyjki">
-        {terms.map(term => <div className="asc-term asc-token" key={storyTermKey(term, term.kind)}>
-          <TermContents term={term} kind={term.kind} showWordScope />
-        </div>)}
+        {terms.map(term => <StudyTile term={term} key={storyTermKey(term, term.kind)}
+          kind={term.kind} showWordScope token />)}
       </div>}
     </section>
   </div>;
