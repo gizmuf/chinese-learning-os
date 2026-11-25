@@ -19,6 +19,12 @@ const names = {chatgpt: 'ChatGPT', deepseek: 'DeepSeek'};
 const languageKey = 'cos-tutor-language';
 const languageEvent = 'chinese-os:tutor-language';
 let chosenLanguage: Language | undefined;
+const tutorHistoryEvents = new WeakSet<PopStateEvent>();
+
+export function isReadingTutorHistoryEvent(event: PopStateEvent) {
+  return tutorHistoryEvents.has(event);
+}
+
 const pairedSentences: Record<string, {parts: [Fragment, Fragment]; tone: string}> = {
   '我一到家就给你打电话。': {
     parts: [
@@ -78,6 +84,7 @@ export default function ReadingTutor({article, grammar, listen, source, onOpen}:
   const trigger = useRef<HTMLButtonElement>(null);
   const closeButton = useRef<HTMLButtonElement>(null);
   const opener = useRef<Opening | null>(null);
+  const activeHistoryEntry = useRef(false);
   const backRequested = useRef(false);
   const operation = useRef<AbortController | null>(null);
   const conversation = useRef<HTMLDivElement>(null);
@@ -107,6 +114,7 @@ export default function ReadingTutor({article, grammar, listen, source, onOpen}:
     }
     if (button && history.state?.readingTutor === historyKey) {
       opener.current = {button, url: location.href, scroll: window.scrollY};
+      activeHistoryEntry.current = true;
       setOpen(true);
     }
     return () => operation.current?.abort();
@@ -117,18 +125,22 @@ export default function ReadingTutor({article, grammar, listen, source, onOpen}:
   useEffect(() => {
     const pop = (event: PopStateEvent) => {
       backRequested.current = false;
-      if (event.state?.readingTutor === historyKey && opener.current?.url === location.href) setOpen(true);
-      else setOpen(false);
+      const wasOpen = activeHistoryEntry.current;
+      const sameLocation = opener.current?.url === location.href;
+      const isOpen = sameLocation && event.state?.readingTutor === historyKey;
+      activeHistoryEntry.current = isOpen;
+      // Classify this pop before React can unmount the dialog and the reader restores its own history.
+      if (sameLocation && (wasOpen || isOpen)) tutorHistoryEvents.add(event);
+      if (wasOpen || isOpen) setOpen(isOpen);
     };
-    window.addEventListener('popstate', pop);
-    return () => window.removeEventListener('popstate', pop);
+    window.addEventListener('popstate', pop, true);
+    return () => window.removeEventListener('popstate', pop, true);
   }, [historyKey]);
 
   useLayoutEffect(() => {
     if (!open) return;
     const element = dialog.current;
     if (!element) return;
-    element.dataset.tutorLocation = opener.current?.url ?? location.href;
     element.showModal();
     closeButton.current?.focus({preventScroll: true});
     return () => {
@@ -165,6 +177,7 @@ export default function ReadingTutor({article, grammar, listen, source, onOpen}:
   function openFrom(button: HTMLButtonElement) {
     const url = location.href;
     opener.current = {button, url, scroll: window.scrollY};
+    activeHistoryEntry.current = true;
     if (history.state?.readingTutor !== historyKey) history.pushState({...history.state, readingTutor: historyKey}, '', url);
     onOpen();
     setOpen(true);
@@ -176,6 +189,7 @@ export default function ReadingTutor({article, grammar, listen, source, onOpen}:
       backRequested.current = true;
       history.back();
     } else {
+      activeHistoryEntry.current = false;
       setOpen(false);
     }
   }
