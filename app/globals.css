@@ -4390,6 +4390,17 @@ html:has(.app-shell) {
   top: 0;
   z-index: 20;
 }
+.topbar-atlas-home {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--green);
+  padding: 5px 10px;
+  min-height: 36px;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
 @media (max-width: 650px) {
   html:has(.app-shell) { scroll-padding-top: 110px; }
 }
