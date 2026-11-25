@@ -40,10 +40,43 @@ def phonemes(pinyin):
                    for i, (segment, tone) in enumerate(parts))
 
 
+# An isolated interjection has no surrounding words to establish its tone.
+# Make the teaching contours unambiguous while preserving the recorded timbre.
+ISOLATED_TONES = {
+    "á": (0.80, 0.82, 0.96, 1.17),
+    "ǎ": (0.97, 0.77, 0.73, 1.01),
+    "à": (1.19, 1.10, 0.88, 0.73),
+    "ó": (0.80, 0.82, 0.96, 1.17),
+}
+
+
+def make_isolated_tone_clear(waveform, reading):
+    profile = ISOLATED_TONES.get(reading)
+    if not profile:
+        return waveform
+    from parselmouth import Sound
+    from parselmouth.praat import call
+    sound = Sound(waveform, sampling_frequency=24000)
+    pitch = sound.to_pitch(time_step=0.01, pitch_floor=110, pitch_ceiling=460)
+    frequency = pitch.selected_array["frequency"]
+    voiced = frequency > 0
+    assert voiced.sum() >= 8, reading
+    times = pitch.xs()[voiced]
+    centre = np.median(frequency[voiced])
+    start, end = times[0], times[-1]
+    manipulation = call(sound, "To Manipulation", 0.01, 110, 460)
+    tier = call("Create PitchTier", "Mandarin tone", sound.xmin, sound.xmax)
+    for fraction, ratio in zip((0.04, 0.32, 0.62, 0.94), profile):
+        call(tier, "Add point", start + fraction * (end - start), centre * ratio)
+    call([tier, manipulation], "Replace pitch tier")
+    return call(manipulation, "Get resynthesis (overlap-add)").values[0]
+
+
 def main():
     cli = argparse.ArgumentParser()
     cli.add_argument("plan", type=Path)
     cli.add_argument("--check", action="store_true")
+    cli.add_argument("--refresh-isolated-tones", action="store_true")
     args = cli.parse_args()
     rows = json.loads(args.plan.read_text())
     tasks = []
@@ -67,12 +100,13 @@ def main():
     pack = torch.load(voice, weights_only=True, map_location="cpu")
     completed = 0
     for output, phones, reading in tasks:
-        if output.exists():
+        if output.exists() and not (args.refresh_isolated_tones and reading in ISOLATED_TONES):
             continue
         assert all(phone in model.vocab for phone in phones), (reading, phones)
         output.parent.mkdir(parents=True, exist_ok=True)
         with torch.inference_mode():
             waveform = model(phones, pack[len(phones) - 1], speed=0.92).cpu().numpy()
+        waveform = make_isolated_tone_clear(waveform, reading)
         peak = np.abs(waveform).max()
         assert np.isfinite(waveform).all() and 0.014 < peak < 3 and 2500 < len(waveform) < 8*24000, (reading, peak, len(waveform))
         waveform = np.pad(waveform * (0.74 / peak), (2400, 2400))
