@@ -695,7 +695,11 @@ export default function StudyApp({
       <WritingPracticeProvider value={{db:db?.name === "chinese-os-v1-" + (user?.id??"guest") ? db : null,record,notify,penOnly,setPenOnly}}><StudyLookupProvider practiceBook={practiceBook} key={user?.id??"guest"} owner={user?.id??null} db={db?.name === "chinese-os-v1-"+(user?.id??"guest")?db:null} notify={notify} penOnly={penOnly} setPenOnly={setPenOnly}><main className="main">
         <header className="topbar">
           <span>
-            <span className="breadcrumb">{t("My study space")}</span>
+            {view === "atlas" ? (
+              <button type="button" className="topbar-atlas-home" onClick={() => changeView("today")}>
+                {t("Today")}
+              </button>
+            ) : <span className="breadcrumb">{t("My study space")}</span>}
             <ChevronRight size={13} />
             {view === "sprint" ? hanziSprintCopy[locale].title : view === "hsk3-prep" ? "HSK 3 Exam Prep" : view === "labs" ? "3D Lab" : view === "shuoshuo-lesson" ? "A morning with Shuoshuo" : view === "private-lessons" ? "Private lessons" : view === "shuoshuo" ? "Shuoshuo · Vocabulary companion" : view === "myday" ? "My Day · Speaking" : view === "pronunciation" ? "Pronunciation Lab" : view === "studio" ? "StudyStudio" : view === "grammar" ? "HSK 1–3 grammar" : view === "atlas" ? t("Cloud Atlas") : view === "course" ? t("Intensive course") : view === "practice"
               ? skill==='meaning'?t('Flashcards'):t("Writing studio")
