@@ -1,7 +1,7 @@
 'use client';
 
 import PreparedSentenceListen from './prepared-sentence-listen';
-import {atlasStudyPronunciation} from './atlas-study-audio';
+import {atlasStudyRecordings} from './atlas-study-audio';
 
 import { useEffect, useId, useRef, useState, type KeyboardEvent } from 'react';
 import { ArrowLeft, ArrowRight, BookOpen, ChevronDown, Columns2, Search, Volume2 } from 'lucide-react';
@@ -104,17 +104,59 @@ function TermContents({ term, highlight, kind, showWordScope }: {
 }
 
 function StudyListen({ term, className }: {
-  term: Pick<StudyTerm, 'hanzi' | 'pinyin' | 'namePinyin'>;
+  term: Pick<StudyTerm, 'hanzi' | 'pinyin' | 'namePinyin'> & {recordingPinyin?: string};
   className?: string;
 }) {
-  const pronunciation = atlasStudyPronunciation(term);
-  if (!pronunciation) return null;
-  const text = term.hanzi + (pronunciation.alternatives ? ' · ' + pronunciation.reading : '');
-  return <span className={'asc-listen' + (className ? ' ' + className : '')}>
-    {pronunciation.source
-      ? <PreparedSentenceListen key={pronunciation.source} text={text} source={pronunciation.source} label="Odsłuchaj" iconOnly />
+  const [open, setOpen] = useState(false);
+  const optionsId = useId();
+  const toggle = useRef<HTMLButtonElement>(null);
+  const controls = useRef<HTMLSpanElement>(null);
+  useEffect(() => {
+    const root = controls.current;
+    if (!open || !root) return;
+    const doc = root.ownerDocument;
+    function closeOutside(event: PointerEvent) {
+      if (!root?.contains(event.target as Node)) setOpen(false);
+    }
+    function closeOnEscape(event: globalThis.KeyboardEvent) {
+      if (event.key !== 'Escape') return;
+      event.stopPropagation();
+      event.preventDefault();
+      setOpen(false);
+      toggle.current?.focus();
+    }
+    doc.addEventListener('pointerdown', closeOutside, true);
+    doc.addEventListener('keydown', closeOnEscape, true);
+    return () => {
+      doc.removeEventListener('pointerdown', closeOutside, true);
+      doc.removeEventListener('keydown', closeOnEscape, true);
+    };
+  }, [open]);
+  const pinyin = term.recordingPinyin || term.pinyin || term.namePinyin;
+  if (!pinyin) return null;
+  const clips = atlasStudyRecordings(term.hanzi, pinyin);
+  const alternate = clips.length > 1;
+  const playLabel = (clip: (typeof clips)[number]) =>
+    clip.context ? `${term.hanzi} · ${clip.pinyin} — ${clip.context} ${clip.contextPinyin}`
+      : alternate ? `${term.hanzi} · ${clip.pinyin}` : term.hanzi;
+  return <span className={'asc-listen' + (className ? ' ' + className : '')} ref={controls}
+    onBlur={event => {
+      if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) setOpen(false);
+    }}>
+    {alternate ? <>
+      <button type="button" className="secondary prepared-listen-icon" ref={toggle} aria-expanded={open}
+        aria-controls={optionsId} aria-label={'Wymowa: ' + term.hanzi}
+        onClick={() => setOpen(!open)}>
+        <Volume2 size={16} aria-hidden="true" /><ChevronDown size={11} aria-hidden="true" />
+      </button>
+      <span className="asc-reading-options" id={optionsId} hidden={!open}>
+        {clips.map(clip => <PreparedSentenceListen key={clip.pinyin} text={playLabel(clip)} source={clip.source}
+          label={clip.context ? `${clip.pinyin} · ${clip.context} (${clip.contextPinyin})` : clip.pinyin} />)}
+      </span>
+    </> : clips[0]
+      ? <PreparedSentenceListen key={clips[0].source} text={playLabel(clips[0])} source={clips[0].source} label="Odsłuchaj" iconOnly />
       : <button type="button" className="secondary prepared-listen-icon" disabled
-          aria-label={'Brak nagrania: ' + text} title={'Brak nagrania: ' + text}>
+          aria-label={'Brak nagrania: ' + term.hanzi} title={'Brak nagrania: ' + term.hanzi}>
           <Volume2 size={16} aria-hidden="true" />
         </button>}
   </span>;
