@@ -81,8 +81,10 @@ export function StudyDictionaryDialog({entry: suppliedEntry,dictionary,dialog,op
  const readerSession=useRef<HTMLElement|null>(null);
  if(!entry){workspaceSession.current=null;readerSession.current=null;readerSource.current=undefined;}
  else if(opener.current&&!dialog.current?.contains(opener.current)){
-  workspaceSession.current=workspaceOrigin(opener.current);
-  const nextReader=readingLabOrigin(opener.current);
+  // Atlas links opened from a flashcard must stay above the running round.
+  const fromQuickReview = opener.current.closest('.hanzi-quick-dialog');
+  workspaceSession.current=fromQuickReview ? null : workspaceOrigin(opener.current);
+  const nextReader=fromQuickReview ? null : readingLabOrigin(opener.current);
   if(nextReader){
    const source=sourceContext(opener.current);
    readerSource.current=source??(nextReader===readerSession.current?readerSource.current:undefined);
