@@ -1,0 +1,725 @@
+{
+  "一\tyi": {
+    "context": "看一看",
+    "contextPinyin": "kàn yi kàn",
+    "source": "/audio/atlas-study/review-7411d8da390a3d3aeb6cf65b.mp3"
+  },
+  "丈夫\tzhàngfū": {
+    "pinyin": "zhàngfu",
+    "source": "/audio/hsk2-487-word.mp3"
+  },
+  "丈母娘\tzhàngmuniáng": {
+    "source": "/audio/atlas-study/review-0b2b1528a4190b4d3bc622d2.mp3"
+  },
+  "下功夫\txiàgōngfu": {
+    "source": "/audio/atlas-study/review-2336725cc568904d6d32b5b2.mp3"
+  },
+  "下来\txiàlai": {
+    "source": "/audio/atlas-study/review-5f80821a5869c087b89384cd.mp3"
+  },
+  "不\tbu": {
+    "context": "好不好",
+    "contextPinyin": "hǎo bu hǎo",
+    "source": "/audio/atlas-study/review-9c0727b8a0510816e76afd21.mp3"
+  },
+  "不\tbú": {
+    "context": "不对",
+    "contextPinyin": "bú duì",
+    "source": "/audio/atlas-study/review-2f58c700f8eb21b14781806f.mp3"
+  },
+  "两下子\tliǎngxiàzi": {
+    "source": "/audio/atlas-study/review-4dfbe23aa6fc2fceff67f100.mp3"
+  },
+  "两口子\tliǎngkǒuzi": {
+    "source": "/audio/atlas-study/review-3e55fb7376da36407ffc8281.mp3"
+  },
+  "丧\tsāng": {
+    "source": "/audio/atlas-study/review-54a337208bdcd7bf825b523e.mp3"
+  },
+  "个\tgě": {
+    "context": "自个儿",
+    "contextPinyin": "zì gěr",
+    "source": "/audio/atlas-study/review-cf5c02bd10d087d0977006f2.mp3"
+  },
+  "丷\tha": {
+    "english": "inverted 八 component",
+    "pinyin": "bāzìtóu",
+    "source": "/audio/atlas-study/review-736e7206272d038e654d8638.mp3"
+  },
+  "主意\tzhǔyi": {
+    "source": "/audio/atlas-study/review-8f836f86aaa438ca3ea49cc3.mp3"
+  },
+  "乜\tmiē": {
+    "context": "乜斜",
+    "contextPinyin": "miē xie",
+    "source": "/audio/atlas-study/review-fc01c364012ede2f81d8bd40.mp3"
+  },
+  "书记\tshūji": {
+    "source": "/audio/atlas-study/review-a83ef32f2f61d1e2033adee0.mp3"
+  },
+  "了不起\tliǎobuqǐ": {
+    "source": "/audio/atlas-study/review-be3231937556b71fe96a2a4f.mp3"
+  },
+  "价\tjie": {
+    "context": "整天价",
+    "contextPinyin": "zhěng tiān jie",
+    "source": "/audio/atlas-study/review-2abb57cb7378c3232f4e2769.mp3"
+  },
+  "价钱\tjiàqian": {
+    "source": "/audio/atlas-study/review-a3793c28c1e1f2b7368e19d3.mp3"
+  },
+  "休息\txiūxī": {
+    "pinyin": "xiūxi",
+    "source": "/audio/hsk1-246-word.mp3"
+  },
+  "传\tzhuàn": {
+    "source": "/audio/atlas-study/review-f6d5c2d0c91f123e0ef98785.mp3"
+  },
+  "位置\twèizhi": {
+    "source": "/audio/atlas-study/review-e62eba1429f61372c6e78340.mp3"
+  },
+  "作\tzuō": {
+    "context": "作坊",
+    "contextPinyin": "zuō fang",
+    "source": "/audio/atlas-study/review-233288d125f8d1534141c922.mp3"
+  },
+  "作料\tzuòliao": {
+    "source": "/audio/atlas-study/review-284c1b20c02abb154750d60c.mp3"
+  },
+  "你找谁\tnǐzhǎoshéi": {
+    "source": "/audio/atlas-study/review-e1648bdd3b002a712e25815e.mp3"
+  },
+  "供养\tgōngyǎng": {
+    "source": "/audio/atlas-study/review-85cc76764887b275c0d91b4d.mp3"
+  },
+  "便\tpián": {
+    "context": "便宜",
+    "contextPinyin": "pián yi",
+    "source": "/audio/hsk1-157-word.mp3"
+  },
+  "倒是\tdàoshi": {
+    "source": "/audio/atlas-study/review-a033c5e99614504500c52d54.mp3"
+  },
+  "值得\tzhíde": {
+    "source": "/audio/atlas-study/review-3bec55283c412f1307ca0127.mp3"
+  },
+  "假日\tjiàrì": {
+    "source": "/audio/atlas-study/review-a9580c5d96c87f69f5c9591e.mp3"
+  },
+  "儿\ter": {
+    "pinyin": "ér",
+    "source": "/atlas/word-trial/audio/21ae6102a159e66c5f5bc5b6.mp3"
+  },
+  "儿\tr": {
+    "context": "一点儿",
+    "contextPinyin": "yì diǎnr",
+    "source": "/audio/hsk1-261-word.mp3"
+  },
+  "养活\tyǎnghuo": {
+    "source": "/audio/atlas-study/review-5876f3bf19652150f87d6b2c.mp3"
+  },
+  "内脏\tnèizàng": {
+    "source": "/audio/atlas-study/review-b5461962e8e6f15edc5b76b1.mp3"
+  },
+  "冰棍儿\tbīnggùnr": {
+    "source": "/audio/atlas-study/review-4561cb49a5f20ee26e93ab24.mp3"
+  },
+  "冲\tchòng": {
+    "source": "/audio/atlas-study/review-7562d63bebff05ea776bd0fa.mp3"
+  },
+  "出去\tchuqu": {
+    "source": "/audio/atlas-study/review-249086e00867f1174c186efc.mp3"
+  },
+  "切换\tqiēhuàn": {
+    "source": "/audio/atlas-study/review-ce594f34b4548b8ccfd00b36.mp3"
+  },
+  "别\tbiè": {
+    "context": "别扭",
+    "contextPinyin": "biè niu",
+    "source": "/audio/atlas-study/review-d21a8ef4dea303eb5da2ac24.mp3"
+  },
+  "刷\tshuà": {
+    "source": "/audio/atlas-study/review-757b248e68835e684d36fe52.mp3"
+  },
+  "勒\tlēi": {
+    "source": "/audio/atlas-study/review-72a71c671901437dd9c75e2a.mp3"
+  },
+  "包饺子\tbāojiǎozi": {
+    "source": "/audio/atlas-study/review-aaee9f3251dbe905075038d1.mp3"
+  },
+  "匙\tshi": {
+    "context": "钥匙",
+    "contextPinyin": "yào shi",
+    "source": "/course08/audio/c08-t60.mp3"
+  },
+  "医生\tyìshēng": {
+    "pinyin": "yīshēng",
+    "source": "/audio/hsk1-256-word.mp3"
+  },
+  "医院\tyíyuàn": {
+    "pinyin": "yīyuàn",
+    "source": "/audio/hsk1-257-word.mp3"
+  },
+  "南\tnā": {
+    "context": "南无",
+    "contextPinyin": "nā mó",
+    "source": "/audio/atlas-study/review-26dd1b4f1380c4cca940f2cc.mp3"
+  },
+  "卜\tbo": {
+    "pinyin": "bǔ",
+    "source": "/audio/atlas-study/04c3562cabfea9bcbc8855db.mp3"
+  },
+  "卡\tqiǎ": {
+    "source": "/audio/atlas-study/review-52e7a06d20901847f5ead9b4.mp3"
+  },
+  "参\tcēn": {
+    "context": "参差",
+    "contextPinyin": "cēn cī",
+    "source": "/audio/atlas-study/review-66a7043c02900af7a7c6585c.mp3"
+  },
+  "叉\tchǎ": {
+    "source": "/audio/atlas-study/review-aab8a4a80b6b5f09403e14bb.mp3"
+  },
+  "发\tfà": {
+    "source": "/audio/atlas-study/review-490859f1704777b0687f6499.mp3"
+  },
+  "叨\ttāo": {
+    "context": "叨扰",
+    "contextPinyin": "tāo rǎo",
+    "source": "/audio/atlas-study/review-098b3302c5f0d1c1ba65cda4.mp3"
+  },
+  "只得\tzhǐdé": {
+    "source": "/audio/atlas-study/review-3c7ed65872c6fd418654f850.mp3"
+  },
+  "合\tgě": {
+    "source": "/audio/atlas-study/review-f8800d8b712b2704258502a2.mp3"
+  },
+  "味道\twèidao": {
+    "source": "/audio/atlas-study/review-750fb9fa113970dbbd09f011.mp3"
+  },
+  "和尚\théshang": {
+    "source": "/audio/atlas-study/review-51bb99319fbe454a0cac0019.mp3"
+  },
+  "和气\théqi": {
+    "source": "/audio/atlas-study/review-2168cf468b154e2bd4e5ccbd.mp3"
+  },
+  "咖\tgā": {
+    "context": "咖喱",
+    "contextPinyin": "gā lí",
+    "source": "/audio/atlas-study/review-1e037c8847619fc5c3d18608.mp3"
+  },
+  "咖喱\tgālí": {
+    "source": "/audio/atlas-study/review-1e037c8847619fc5c3d18608.mp3"
+  },
+  "哄\thòng": {
+    "source": "/audio/atlas-study/review-27a9015117231a863b839ea2.mp3"
+  },
+  "哇\twa": {
+    "source": "/audio/atlas-study/review-c8d60deea0092ab0dc099073.mp3"
+  },
+  "哈\thǎ": {
+    "context": "哈巴狗",
+    "contextPinyin": "hǎ ba gǒu",
+    "source": "/audio/atlas-study/review-2449059441124de96f35c7ec.mp3"
+  },
+  "哥哥\tgēgē": {
+    "pinyin": "gēge",
+    "source": "/audio/hsk1-059-word.mp3"
+  },
+  "哦\to": {
+    "source": "/audio/atlas-study/review-8342db549c6391ccc7e49ede.mp3"
+  },
+  "哦\tó": {
+    "source": "/audio/atlas-study/review-c1e3bfafff7d432487c58178.mp3"
+  },
+  "哪\tné": {
+    "context": "哪吒",
+    "contextPinyin": "né zhā",
+    "source": "/audio/atlas-study/review-5015c433522a6f5be3d817fb.mp3"
+  },
+  "商量\tshāngliang": {
+    "source": "/audio/atlas-study/review-7c6ebbaca42be6ef16d846b0.mp3"
+  },
+  "啊\tà": {
+    "source": "/audio/atlas-study/review-a39cb8c8b23cc04482a94a8a.mp3"
+  },
+  "啊\tá": {
+    "source": "/audio/atlas-study/review-80a8c61de1628f5780ad7791.mp3"
+  },
+  "啊\tǎ": {
+    "source": "/audio/atlas-study/review-1d975776d739d3631e950792.mp3"
+  },
+  "啦\tla": {
+    "source": "/audio/atlas-study/review-d1e4f71ba105dfbaf66f2c38.mp3"
+  },
+  "喜欢\txǐhuān": {
+    "pinyin": "xǐhuan",
+    "source": "/audio/hsk1-225-word.mp3"
+  },
+  "嚣张\txiāozhāng": {
+    "source": "/audio/atlas-study/review-55a80244ce5dbbda6e968a3e.mp3"
+  },
+  "回去\thuíqu": {
+    "source": "/audio/atlas-study/review-656847f476d9e03d822ca492.mp3"
+  },
+  "困难\tkùnnan": {
+    "source": "/audio/atlas-study/review-c4fbdf7d37dd92a25e98bf91.mp3"
+  },
+  "圈\tjuān": {
+    "source": "/audio/atlas-study/review-85a81fb682ab62c90ee44eca.mp3"
+  },
+  "在乎\tzàihu": {
+    "source": "/audio/atlas-study/review-293d70799b86ab7406da4827.mp3"
+  },
+  "在哪儿呢\tzàinǎrne": {
+    "source": "/audio/atlas-study/review-119020fd0147c50df4428bd1.mp3"
+  },
+  "地上\tdìshang": {
+    "source": "/audio/atlas-study/review-69a446b5addf489b882394b7.mp3"
+  },
+  "坏处\thuàichu": {
+    "source": "/audio/atlas-study/review-ae03677a452d70820a793488.mp3"
+  },
+  "外面\twàimian": {
+    "source": "/audio/atlas-study/review-d56afe70b3b121441a0407bf.mp3"
+  },
+  "太太\ttàitai": {
+    "source": "/audio/atlas-study/review-f150b01838dc6e94aa0bb08a.mp3"
+  },
+  "夫人\tfūren": {
+    "source": "/audio/atlas-study/review-6a87f5ff5591ce1d6084c47f.mp3"
+  },
+  "头\ttou": {
+    "context": "石头",
+    "contextPinyin": "shí tou",
+    "source": "/audio/atlas-study/f00a264ba561c49b6fc9c370.mp3"
+  },
+  "夹\tgā": {
+    "context": "夹肢窝",
+    "contextPinyin": "gā zhi wō",
+    "source": "/audio/atlas-study/review-3d87bd2c48a4358a7073f1cb.mp3"
+  },
+  "奶奶\tnǎinǎi": {
+    "pinyin": "nǎinai",
+    "source": "/audio/hsk2-409-word.mp3"
+  },
+  "好处\thǎochu": {
+    "source": "/audio/atlas-study/review-b95dc4821296206d5597612b.mp3"
+  },
+  "妈妈\tmāmā": {
+    "pinyin": "māma",
+    "source": "/audio/hsk1-114-word.mp3"
+  },
+  "妹妹\tmèimèi": {
+    "pinyin": "mèimei",
+    "source": "/audio/hsk1-123-word.mp3"
+  },
+  "姆\tm̄": {
+    "context": "姆妈",
+    "contextPinyin": "m̄ mā",
+    "source": "/audio/atlas-study/review-0d9099cbf3e04966ddbb549a.mp3"
+  },
+  "姐姐\tjiějiě": {
+    "pinyin": "jiějie",
+    "source": "/audio/hsk1-092-word.mp3"
+  },
+  "姨父\tyífu": {
+    "source": "/audio/atlas-study/review-8af0f8e7434719fc33628e0d.mp3"
+  },
+  "宁\tnìng": {
+    "source": "/audio/atlas-study/review-01251eecf513bb0ed1c1fedc.mp3"
+  },
+  "官司\tguānsi": {
+    "source": "/audio/atlas-study/review-8fb5c59bac08bcfcc70d9d48.mp3"
+  },
+  "客气\tkèqi": {
+    "source": "/audio/atlas-study/review-c1c753ac90c67b185c9b411c.mp3"
+  },
+  "将就\tjiāngjiu": {
+    "source": "/audio/atlas-study/review-df6a2e39092b24a3db4f10ca.mp3"
+  },
+  "小姐\txiǎojie": {
+    "source": "/audio/atlas-study/review-59062d6bae3c50f6c23ad74d.mp3"
+  },
+  "尝尝\tchángchang": {
+    "source": "/audio/atlas-study/review-c7f413c6160528ec111038fc.mp3"
+  },
+  "岁数\tsuìshu": {
+    "source": "/audio/atlas-study/review-177c72c8cf400c552f60e857.mp3"
+  },
+  "工夫\tgōngfu": {
+    "source": "/audio/atlas-study/review-272cdf7fa70ac4d554b38a95.mp3"
+  },
+  "差点儿\tchàdiǎnr": {
+    "source": "/audio/atlas-study/review-1432b0498e1ad8d9497ee125.mp3"
+  },
+  "帖\ttiè": {
+    "source": "/audio/atlas-study/review-1154375d19606f057d90836a.mp3"
+  },
+  "帮手\tbāngshou": {
+    "source": "/audio/atlas-study/review-37ef5118520d9c3d04fb7b68.mp3"
+  },
+  "干事\tgànshi": {
+    "source": "/audio/atlas-study/review-ffae8cc9a71e33869583704d.mp3"
+  },
+  "底下\tdǐxia": {
+    "source": "/audio/atlas-study/review-0f92b2fb2cc48723187bd4e7.mp3"
+  },
+  "弄\tlòng": {
+    "source": "/audio/atlas-study/review-ed035884823ec84f0c96780f.mp3"
+  },
+  "弟弟\tdìdì": {
+    "pinyin": "dìdi",
+    "source": "/audio/hsk1-032-word.mp3"
+  },
+  "强\tqiǎng": {
+    "source": "/audio/atlas-study/review-39ffca1d4da235eb0f44f0f3.mp3"
+  },
+  "心思\txīnsi": {
+    "source": "/audio/atlas-study/review-d27530a6eb8c2cd5f6cf45d5.mp3"
+  },
+  "心脏\txīnzàng": {
+    "source": "/audio/atlas-study/review-60e68412473ecf60d26603c2.mp3"
+  },
+  "怪不得\tguàibude": {
+    "source": "/audio/atlas-study/review-0153911b724628c61408c5d5.mp3"
+  },
+  "怪物\tguàiwu": {
+    "source": "/audio/atlas-study/review-918a97e8724eb64d18996a72.mp3"
+  },
+  "打听\tdǎting": {
+    "source": "/audio/atlas-study/review-24c282f9b335d1b523d21fff.mp3"
+  },
+  "扫\tsào": {
+    "context": "扫帚",
+    "contextPinyin": "sào zhou",
+    "source": "/audio/atlas-study/214ff8737539f59e112edc55.mp3"
+  },
+  "折\tzhē": {
+    "source": "/audio/atlas-study/review-41218912d6ca4146716c79a3.mp3"
+  },
+  "拉\tlá": {
+    "source": "/audio/atlas-study/review-a3381e1b5192a7822ad2aba5.mp3"
+  },
+  "挑\ttiǎo": {
+    "source": "/audio/atlas-study/review-e32e4dc6ade15be1e7996295.mp3"
+  },
+  "挨饿\táiè": {
+    "source": "/audio/atlas-study/review-4d176f9ef6b722de5d6c74f0.mp3"
+  },
+  "搂\tlōu": {
+    "source": "/audio/atlas-study/review-0ed4e2ffafed3672089a91fb.mp3"
+  },
+  "教学\tjiāoxué": {
+    "source": "/audio/atlas-study/review-475c561b8cc5326cc0f25804.mp3"
+  },
+  "教授\tjiāoshòu": {
+    "source": "/audio/atlas-study/review-5970f1648d642f1b6a56a08d.mp3"
+  },
+  "旋\txuàn": {
+    "source": "/audio/atlas-study/review-544355567839784fdca9e1d0.mp3"
+  },
+  "早点儿\tzǎodiǎnr": {
+    "source": "/audio/atlas-study/review-4f1edcda898404428bf5ad73.mp3"
+  },
+  "暗地里\tàndìli": {
+    "source": "/audio/atlas-study/review-bd45f9fc094ebaaa332a22d8.mp3"
+  },
+  "李子\tlǐzi": {
+    "source": "/audio/atlas-study/review-7e50ae938e44f9362a8c71a5.mp3"
+  },
+  "村子\tcūnzi": {
+    "source": "/audio/atlas-study/review-41e7c4d98876e3ad6a8c565c.mp3"
+  },
+  "来\tlai": {
+    "context": "出来",
+    "contextPinyin": "chū lai",
+    "source": "/audio/atlas-study/review-b8a92b6c493f5068a03da307.mp3"
+  },
+  "梯子\ttīzi": {
+    "source": "/audio/atlas-study/review-73289af8133f0556f6f463af.mp3"
+  },
+  "棱\tlēng": {
+    "source": "/audio/atlas-study/review-48ce842a23c2e87b4686dc44.mp3"
+  },
+  "横\thèng": {
+    "source": "/audio/atlas-study/review-2d172f407d05bb81dcc5f7c3.mp3"
+  },
+  "橙子\tchéngzi": {
+    "source": "/audio/atlas-study/review-2b13b4590725220a56094b11.mp3"
+  },
+  "歪\twǎi": {
+    "context": "歪脚",
+    "contextPinyin": "wǎi jiǎo",
+    "source": "/audio/atlas-study/review-eb47d692b71179235d359e62.mp3"
+  },
+  "比方\tbǐfang": {
+    "source": "/audio/atlas-study/review-9ba22c6e02811c4f0855183f.mp3"
+  },
+  "没法儿\tméifǎr": {
+    "source": "/audio/atlas-study/review-2ad8364cb510e2fbe64ba2ab.mp3"
+  },
+  "洗个澡\txǐgezǎo": {
+    "source": "/audio/atlas-study/review-c6fe3f6b94790ab4e573acfa.mp3"
+  },
+  "活泼\thuópo": {
+    "source": "/audio/atlas-study/review-09e8169e57c2d0c4e47aebaa.mp3"
+  },
+  "漂\tpiǎo": {
+    "source": "/audio/atlas-study/review-97757026e27481048a090236.mp3"
+  },
+  "漂亮\tpiàoliàng": {
+    "pinyin": "piàoliang",
+    "source": "/audio/hsk1-158-word.mp3"
+  },
+  "火候\thuǒhou": {
+    "source": "/audio/atlas-study/review-09e168a56d64f00d5950ac42.mp3"
+  },
+  "灯笼\tdēnglóng": {
+    "source": "/audio/atlas-study/review-d91725ef2db7ec16a1a952ae.mp3"
+  },
+  "热闹\trènao": {
+    "source": "/audio/atlas-study/review-12876d1d4ea4447e1f8317db.mp3"
+  },
+  "熬\tāo": {
+    "source": "/audio/atlas-study/review-daa1b5b0ddd6a813c5645e35.mp3"
+  },
+  "爷爷\tyéyé": {
+    "pinyin": "yéye",
+    "source": "/audio/hsk2-470-word.mp3"
+  },
+  "爸爸\tbàbà": {
+    "pinyin": "bàba",
+    "source": "/audio/hsk1-003-word.mp3"
+  },
+  "玩意儿\twányìr": {
+    "source": "/audio/atlas-study/review-0230f8d1bd97fb908721468c.mp3"
+  },
+  "理发\tlǐfà": {
+    "source": "/audio/atlas-study/review-67453e55606d77f8d54a18f9.mp3"
+  },
+  "相关\txiàngguān": {
+    "pinyin": "xiāngguān",
+    "source": "/audio/atlas-study/8034985608fd71f703802a09.mp3"
+  },
+  "眉毛\tméimao": {
+    "source": "/audio/atlas-study/review-e0e87a3779d6aeca8feb51da.mp3"
+  },
+  "着\tzháo": {
+    "source": "/audio/atlas-study/review-320a2ed3b8185bd38959f4ee.mp3"
+  },
+  "知道\tzhīdao": {
+    "source": "/audio/atlas-study/review-d0513815bec1312bb4601959.mp3"
+  },
+  "矫\tjiáo": {
+    "context": "矫情",
+    "contextPinyin": "jiáo qing",
+    "source": "/audio/atlas-study/review-7ed6bc770a739fea8b5131cf.mp3"
+  },
+  "码头\tmǎtou": {
+    "source": "/audio/atlas-study/review-3ed005f2222f8e347a95d320.mp3"
+  },
+  "离不开\tlíbukāi": {
+    "source": "/audio/atlas-study/review-262a502b9af7a0f1cead4283.mp3"
+  },
+  "种植\tzhòngzhí": {
+    "source": "/audio/atlas-study/review-5146fdae95589703ad356400.mp3"
+  },
+  "空地\tkōngdì": {
+    "source": "/audio/atlas-study/review-7d600c17bdbfa3967f36bbb5.mp3"
+  },
+  "穿着\tchuānzhuó": {
+    "source": "/audio/atlas-study/review-11a320b154feb5968015e750.mp3"
+  },
+  "笑话\txiàohua": {
+    "source": "/audio/atlas-study/review-5f741a413430855a54b1201c.mp3"
+  },
+  "答\tdā": {
+    "context": "答应",
+    "contextPinyin": "dā ying",
+    "source": "/audio/atlas-study/49aebf5a970f4a52e5c3bb36.mp3"
+  },
+  "簸\tbǒ": {
+    "source": "/audio/atlas-study/review-9609a5766223117776d5a2cb.mp3"
+  },
+  "结实\tjiēshí": {
+    "source": "/audio/atlas-study/review-72aeca70c43716e01845bea1.mp3"
+  },
+  "绷\tběng": {
+    "source": "/audio/atlas-study/review-b5bcbe672a3aca1433b9bfe5.mp3"
+  },
+  "网吧\twǎngbā": {
+    "source": "/audio/atlas-study/review-ef32b3ceb02e4a2bb8189224.mp3"
+  },
+  "罗\tluō": {
+    "pinyin": "luó",
+    "source": "/audio/atlas-study/bbddac07a78c60919158d7aa.mp3"
+  },
+  "老太太\tlǎotàitai": {
+    "source": "/audio/atlas-study/review-0e7d363f86ec5bef2dc66065.mp3"
+  },
+  "老是\tlǎoshi": {
+    "source": "/audio/atlas-study/review-ee84e03a9222634698b5bdc4.mp3"
+  },
+  "胳\tgā": {
+    "context": "胳肢窝",
+    "contextPinyin": "gā zhi wō",
+    "source": "/audio/atlas-study/review-837fe205c38acb0dfa5d4dc9.mp3"
+  },
+  "脑子\tnǎozi": {
+    "source": "/audio/atlas-study/review-ca49fa7bda56656ced363afb.mp3"
+  },
+  "脑袋\tnǎodai": {
+    "source": "/audio/atlas-study/review-b55930d664f8a44707932dc4.mp3"
+  },
+  "脾气\tpíqi": {
+    "source": "/audio/atlas-study/review-34d413edb928c5c308ee09a6.mp3"
+  },
+  "膀\tpāng": {
+    "source": "/audio/atlas-study/review-f43dea2da13df840a910a68a.mp3"
+  },
+  "舍\tshě": {
+    "source": "/audio/atlas-study/review-446a89a9b05eabeb6bb7785b.mp3"
+  },
+  "艮\tgěn": {
+    "source": "/audio/atlas-study/review-1f5c6ab4b1554f9e125593e1.mp3"
+  },
+  "色\tshǎi": {
+    "context": "色子",
+    "contextPinyin": "shǎi zi",
+    "source": "/audio/atlas-study/review-d5f4d1bd462c173330bbdad3.mp3"
+  },
+  "若\trě": {
+    "context": "般若",
+    "contextPinyin": "bō rě",
+    "source": "/audio/atlas-study/review-da295ed25afac264c719b4d5.mp3"
+  },
+  "葡萄酒\tpútaojiǔ": {
+    "source": "/audio/atlas-study/review-980a6cd2ca17d0d8997924eb.mp3"
+  },
+  "虾\thá": {
+    "context": "虾蟆",
+    "contextPinyin": "há ma",
+    "source": "/audio/atlas-study/review-6c97a4a76e97c9645746a4dc.mp3"
+  },
+  "街上\tjiēshang": {
+    "source": "/audio/atlas-study/review-c311367c2489f0f104459970.mp3"
+  },
+  "衣服\tyìfú": {
+    "pinyin": "yīfu",
+    "source": "/audio/hsk1-255-word.mp3"
+  },
+  "视为\tshìwéi": {
+    "source": "/audio/atlas-study/review-86e354198536b8aaf2c7d43c.mp3"
+  },
+  "认识\trènshí": {
+    "pinyin": "rènshi",
+    "source": "/audio/hsk1-171-word.mp3"
+  },
+  "讲究\tjiǎngjiu": {
+    "source": "/audio/atlas-study/review-e71da654777d99c4ccd24036.mp3"
+  },
+  "请帖\tqǐngtiě": {
+    "source": "/audio/atlas-study/review-66aeb35ec6b2ab46c56a0e8f.mp3"
+  },
+  "谁\tshéi": {
+    "source": "/audio/atlas-study/review-779ca35611f7abebd48fef4c.mp3"
+  },
+  "谁的\tshéide": {
+    "source": "/audio/atlas-study/review-671880a76d34d37c02b1fc6c.mp3"
+  },
+  "谁都可以\tshéidōukěyǐ": {
+    "source": "/audio/atlas-study/review-6b638a9f2d2dc4357a54393f.mp3"
+  },
+  "豁出去\thuōchuqu": {
+    "source": "/audio/atlas-study/review-6ff3a496472e190191ac83a2.mp3"
+  },
+  "走\tzou": {
+    "pinyin": "zǒu",
+    "source": "/audio/hsk2-495-word.mp3"
+  },
+  "起来\tqǐlai": {
+    "source": "/audio/atlas-study/review-1f5bf91f22ba9f4f7d25220c.mp3"
+  },
+  "路上\tlùshàng": {
+    "pinyin": "lùshang",
+    "source": "/audio/hsk2-393-word.mp3"
+  },
+  "踢毽子\ttījiànzi": {
+    "source": "/audio/atlas-study/review-69b50cf3601a216ee408dd54.mp3"
+  },
+  "转\tzhuàn": {
+    "source": "/audio/atlas-study/review-9d59e3cd87cd28c2713dac2c.mp3"
+  },
+  "边\tbian": {
+    "context": "那边",
+    "contextPinyin": "nà bian",
+    "source": "/audio/atlas-study/review-279dcd767dfdc2ffcab8d749.mp3"
+  },
+  "过去\tguòqu": {
+    "source": "/audio/atlas-study/review-86c97a6900b19f14b93e1af5.mp3"
+  },
+  "运气\tyùnqi": {
+    "source": "/audio/atlas-study/review-9632b63b70ac0ee052d1bc8b.mp3"
+  },
+  "还书\thuánshū": {
+    "source": "/audio/atlas-study/review-1d7fce85ff214ddab060dbea.mp3"
+  },
+  "这\tzhèi": {
+    "source": "/audio/atlas-study/review-9d3c7d2647e89da92d5cb0d7.mp3"
+  },
+  "这里\tzhèli": {
+    "source": "/audio/atlas-study/review-83942a445c2c235ae57b08d0.mp3"
+  },
+  "迫\tpǎi": {
+    "context": "迫击炮",
+    "contextPinyin": "pǎi jī pào",
+    "source": "/audio/atlas-study/review-2f5154ca1cdf16803ec16aeb.mp3"
+  },
+  "遛狗\tliùgǒu": {
+    "source": "/audio/atlas-study/review-7671ee332ce8736c2dc6ef43.mp3"
+  },
+  "那里\tnàli": {
+    "source": "/audio/atlas-study/review-45891214e4cf823ca59e0c60.mp3"
+  },
+  "部\tbú": {
+    "pinyin": "bù",
+    "source": "/audio/no-word.mp3"
+  },
+  "都会\tdūhuì": {
+    "source": "/audio/atlas-study/review-29a9a138b4d03f271e2255c4.mp3"
+  },
+  "里\tli": {
+    "context": "哪里",
+    "contextPinyin": "nǎ li",
+    "source": "/audio/atlas-study/review-3f6e2c87f8a1dd99853ad907.mp3"
+  },
+  "重点\tchóngdiǎn": {
+    "source": "/audio/atlas-study/review-3d0587d250a3eb849fbd5259.mp3"
+  },
+  "钻\tzuān": {
+    "source": "/audio/atlas-study/review-f311fb85a9bdb1b44941de26.mp3"
+  },
+  "长高\tzhǎnggāo": {
+    "source": "/audio/atlas-study/review-b5415c85ca400f681673cd53.mp3"
+  },
+  "闷\tmèn": {
+    "source": "/audio/atlas-study/review-ff1604227d70b17103d10484.mp3"
+  },
+  "阿\tē": {
+    "context": "阿谀",
+    "contextPinyin": "ē yú",
+    "source": "/audio/atlas-study/review-e2d7572c6795825dbdf09710.mp3"
+  },
+  "隆\tlōng": {
+    "context": "轰隆",
+    "contextPinyin": "hōng lōng",
+    "source": "/audio/atlas-study/review-eedf093632ec1033cf1da453.mp3"
+  },
+  "难\tnàn": {
+    "source": "/audio/atlas-study/review-97afa25851dd8c878c6e2bdd.mp3"
+  },
+  "马虎\tmǎhu": {
+    "source": "/audio/atlas-study/review-b21af979abe0ef9a364dd485.mp3"
+  }
+}

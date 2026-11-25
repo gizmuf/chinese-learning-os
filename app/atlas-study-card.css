@@ -376,3 +376,30 @@ html[data-theme=dark] .atlas-study-card {
   .asc-playable-tile:has(.asc-tile-listen) .asc-glyph { padding-inline-end: 42px; min-block-size: 40px; }
   .asc-playable-sentence:has(.asc-sentence-listen) > .asc-sentence { padding-inline-end: 51px; }
 }
+
+.asc-listen .prepared-listen-icon[aria-expanded] { display: flex; justify-content: center; gap: 2px; }
+.asc-reading-options {
+  position: absolute;
+  inset-block-start: 100%;
+  inset-inline-end: 0;
+  z-index: 5;
+  min-inline-size: 112px;
+  inline-size: max-content;
+  max-inline-size: min(235px, 65vw);
+  max-block-size: 60vh;
+  overflow: auto;
+  background: var(--asc-tile);
+  border: 1px solid var(--asc-line);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px #203d3226;
+  padding: 4px;
+}
+.asc-reading-options:not([hidden]) { display: grid; }
+.asc-listen .asc-reading-options .text-button { min-block-size: 44px; text-align: start; padding: 5px 8px; }
+
+@media (pointer:coarse) {
+  .asc-terms:not(.asc-example-tokens) { grid-template-columns: repeat(auto-fill, minmax(min(126px, 100%), 1fr)); }
+}
+@container (max-width: 320px) {
+  .asc-terms:not(.asc-example-tokens) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
