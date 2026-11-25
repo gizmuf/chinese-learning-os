@@ -23,7 +23,7 @@
           "tokens": [
             {"text": "我", "pinyin": ["wǒ"]},
             {"text": "以前", "pinyin": ["yǐ", "qián"]},
-            {"text": "一", "pinyin": ["yī"]},
+            {"text": "一", "pinyin": ["yí"]},
             {"text": "下班", "pinyin": ["xià", "bān"]},
             {"text": "就", "pinyin": ["jiù"]},
             {"text": "看", "pinyin": ["kàn"]},
@@ -379,7 +379,7 @@
       "note": "Use 一 and 就 to connect an event with what happens immediately after it.",
       "example": {
         "hanzi": "我一到家就给你打电话。",
-        "pinyin": "Wǒ yī dào jiā jiù gěi nǐ dǎ diànhuà.",
+        "pinyin": "Wǒ yí dào jiā jiù gěi nǐ dǎ diànhuà.",
         "english": "I will call you as soon as I get home."
       },
       "sourceChunks": [

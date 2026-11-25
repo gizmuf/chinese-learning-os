@@ -666,6 +666,7 @@ export default function StudyApp({
           </div>
         </div>
         <a className="settings-button" href="/pronunciation-lab">Pronunciation lab</a>
+        <a className="settings-button" href="/design-references/przewodnik/index.html" lang="pl"><BookOpen size={18}/> Przewodnik (PL)</a>
         <button className="settings-button" onClick={() => setSettings(true)}>
           <Settings2 size={18} /> {t("Study preferences")}</button>
         <div className="profile">
@@ -1496,6 +1497,7 @@ export default function StudyApp({
                 <X size={20} />
               </button>
             </div>
+            <a className="secondary" href="/design-references/przewodnik/index.html" lang="pl"><BookOpen size={16}/> Przewodnik po Chinese OS (PL)</a>
             <AppearanceControls/>
             <HanziDisplayControls/>
             <label className="setting-row">

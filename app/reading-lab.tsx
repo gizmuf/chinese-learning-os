@@ -5,12 +5,14 @@ import prepared from '../data/lesson-sentence-audio.json';
 
 import {GlobalHskSelect, useGlobalHsk} from './global-hsk';
 import {globalHskLabel, knownHskInScope} from './global-hsk-model';
-import {useEffect, useLayoutEffect, useMemo, useRef, useState, type MouseEvent, type ReactNode} from 'react';
+import {Fragment, useEffect, useLayoutEffect, useMemo, useRef, useState, type MouseEvent, type ReactNode} from 'react';
 import {ArrowLeft, ArrowRight, BookOpen, PenLine} from 'lucide-react';
 import {readingLabReadings} from './reading-lab-data';
+import ReadingTutor from './reading-tutor';
+import {readingTutorSource} from './reading-tutor-context';
 import ReadingLabEpisodePanel from './reading-lab-episode';
 import {resolveReadingGrammarFrame} from './reading-lab-grammar';
-import type {ReadingLabParagraph, ReadingLabReading, ReadingLabToken} from './reading-lab-types';
+import type {ReadingLabExample, ReadingLabGrammar, ReadingLabParagraph, ReadingLabReading, ReadingLabToken} from './reading-lab-types';
 import {analyzeReading, readingToneNote, splitReadingSentences, tokenGlyphs, toneMarks} from './reading-lab-model';
 import {isReadingLabEntry, readReadingLabRoute, readingLabAtlasEvent, readingLabHref, readingLabWriteEvent, type ReadingAid, type ReadingLabAtlasVisit, type ReadingLabRoute} from './reading-lab-route';
 import {atlasWorkspaceReturn, readAtlasWorkspaceRoute} from './atlas-workspace-route';
@@ -94,13 +96,24 @@ function ListenToExample({text}: {text: string}) {
   return <PreparedSentenceListen text={text} source={preparedExamples[text]?.source}/>;
 }
 
-function ReaderParagraph({paragraph, index, route, highlights, activeSentence, onChoose}: {
-  paragraph: ReadingLabParagraph; index: number; route: ReadingLabRoute; highlights: ReadonlySet<string>; activeSentence?: string;
+function ReaderParagraph({paragraph, index, route, grammars, highlights, activeSentence, onChoose, onTutor}: {
+  paragraph: ReadingLabParagraph; index: number; route: ReadingLabRoute; grammars: readonly ReadingLabGrammar[];
+  highlights: ReadonlySet<string>; activeSentence?: string; onTutor: () => void;
   onChoose: (text: string, opener: HTMLButtonElement, paragraph: string) => void;
 }) {
   const sentenceByToken = new Map(splitReadingSentences(paragraph).flatMap((sentence, sentenceIndex) => sentence.tokens.map(token => [
     token, {sentence, sentenceIndex},
   ] as const)));
+  const tutorBySentenceEnd = new Map<ReadingLabToken, {grammar: ReadingLabGrammar; chunk: string; example: ReadingLabExample}>();
+  for (const chunk of paragraph.chunks) {
+    const grammar = grammars.find(item => item.sourceChunks.includes(chunk.id));
+    if (!grammar) continue;
+    const example = readingTutorSource(paragraph, chunk.id);
+    const lastToken = sentenceByToken.get(chunk.tokens[0])?.sentence.tokens.at(-1);
+    if (example && lastToken && !tutorBySentenceEnd.has(lastToken)) {
+      tutorBySentenceEnd.set(lastToken, {grammar, chunk: chunk.id, example});
+    }
+  }
   return <section className="rl-paragraph" id={'rl-' + paragraph.id} data-reader-paragraph={paragraph.id}>
     <div className="rl-paragraph-text" lang="zh-Hans" aria-label={'Paragraph ' + (index + 1)}>
       {paragraph.chunks.map(chunk => <span key={chunk.id} id={'rl-' + chunk.id} className="rl-chunk"
@@ -108,12 +121,17 @@ function ReaderParagraph({paragraph, index, route, highlights, activeSentence, o
         {chunk.tokens.map((token, tokenIndex) => {
           const source = sentenceByToken.get(token);
           const sentenceKey = source && paragraph.id + ':' + source.sentenceIndex;
-          return <span key={tokenIndex} data-narration-cue={sentenceKey}
-            data-narration-active={activeSentence !== undefined && sentenceKey === activeSentence || undefined}
-            data-study-source-id={sentenceKey && route.article + ':' + sentenceKey}
-            data-study-sentence={source?.sentence.hanzi} data-study-pinyin={source?.sentence.pinyin} data-study-meaning={source?.sentence.english}>
-            <ReaderToken token={token} tokenIndex={tokenIndex} aid={route.aid} onChoose={(text, opener) => onChoose(text, opener, paragraph.id)}/>
-          </span>;
+          const tutor = tutorBySentenceEnd.get(token);
+          return <Fragment key={tokenIndex}>
+            <span data-narration-cue={sentenceKey}
+              data-narration-active={activeSentence !== undefined && sentenceKey === activeSentence || undefined}
+              data-study-source-id={sentenceKey && route.article + ':' + sentenceKey}
+              data-study-sentence={source?.sentence.hanzi} data-study-pinyin={source?.sentence.pinyin} data-study-meaning={source?.sentence.english}>
+              <ReaderToken token={token} tokenIndex={tokenIndex} aid={route.aid} onChoose={(text, opener) => onChoose(text, opener, paragraph.id)}/>
+            </span>
+            {tutor && <ReadingTutor article={route.article} grammar={tutor.grammar}
+              source={{chunk: tutor.chunk, example: tutor.example, paragraph: paragraph.id}} onOpen={onTutor}/>}
+          </Fragment>;
         })}
       </span>)}
     </div>
@@ -299,8 +317,10 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
   useEffect(() => {
     const before = history.scrollRestoration;
     history.scrollRestoration = 'manual';
-    const pop = () => {
+    const pop = (event: PopStateEvent) => {
       if (!isReadingLabEntry(new URLSearchParams(location.search))) return;
+      const tutor = root.current?.querySelector<HTMLDialogElement>('.rt-dialog[open]');
+      if (event.state?.readingTutor || tutor?.dataset.tutorLocation === location.href) return;
       const nextLinked = linkedReadingId(location.search);
       setOwnText(current => nextLinked ?? (typeof current === 'string' ? false : current));
       const next = readReadingLabRoute(location.search);
@@ -554,7 +574,7 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
         <p className="rl-title-translation">{reading.title.english}</p>
         <p className="rl-level-intent">{reading.levelIntent}</p>
       </header>
-      {reading.episode && recall?.step !== 'recall' && <ReadingLabEpisodePanel key={reading.id} episode={reading.episode}/>}
+      {reading.episode && recall?.step !== 'recall' && <ReadingLabEpisodePanel key={reading.id + '/episode'} episode={reading.episode}/>}
       <div className="rl-reader-controls" hidden={recall?.step === 'recall'}>
         <div className="rl-modes" role="group" aria-label="Reading aid">{aids.map(aid =>
           <button type="button" key={aid.id} aria-pressed={route.aid === aid.id} onClick={() => navigate({aid: aid.id}, {replace: true})}>{aid.label}</button>)}</div>
@@ -569,7 +589,8 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
         <div className="rl-text-panel">
           <div className="rl-text" data-aid={route.aid} data-chunks={route.chunks}>
             {reading.paragraphs.map((paragraph, index) =>
-              <ReaderParagraph key={paragraph.id} paragraph={paragraph} index={index} route={route} highlights={highlights} activeSentence={activeSentence} onChoose={chooseWord}/>)}
+              <ReaderParagraph key={paragraph.id} paragraph={paragraph} index={index} route={route} grammars={reading.grammar}
+                highlights={highlights} activeSentence={activeSentence} onChoose={chooseWord} onTutor={narrator.pause}/>)}
           </div>
           <VocabularyDetails reading={reading} {...vocabulary}/>
         </div>
@@ -591,7 +612,8 @@ export default function ReadingLab({owner, penOnly, notify}: ReadingProps & {own
                 if (paragraph) showEvidence(paragraph.id, id);
               }}>Find in the text <ArrowRight size={15}/></button>
               <p className="rl-topic">Try the pattern with another idea</p>
-              <p lang="zh-Hans">{grammar.example.hanzi}</p><p className="rl-example-pinyin">{grammar.example.pinyin}</p><p>{grammar.example.english}</p><ListenToExample text={grammar.example.hanzi}/>
+              <ReadingTutor key={reading.id + "/" + grammar.id} article={reading.id} grammar={grammar}
+                listen={<ListenToExample text={grammar.example.hanzi}/>} onOpen={narrator.pause}/>
               {relatedFrame && <details className="rl-existing-frame"><summary>More from Speaking Chunks</summary>
                 <p>{relatedFrame.explanation}</p>
                 {relatedFrame.examples.map(example => <div key={example.hanzi} className="rl-frame-example">
