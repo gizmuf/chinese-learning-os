@@ -9,6 +9,8 @@ const soundKey = (text, pin) => textKey(text) + '\t' + reading(pin);
 const characters = /^\p{Script=Han}$/u;
 const sourceDirectory = 'public/atlas/study-cards/v1';
 const catalogueFile = 'data/atlas-study-audio.json';
+const reviewFile = 'data/atlas-study-reading-review.json';
+const reviewed = existsSync(reviewFile) ? json(reviewFile) : {};
 const staticSound = file => file.startsWith('/') && !file.startsWith('/api/') && existsSync('public' + file) && statSync('public' + file).size > 1000;
 const targets = new Map();
 
@@ -125,6 +127,8 @@ function prepare(key, row) {
   if (staticSound(task.file)) result[key] = task.file;
 }
 for (const [key, row] of [...targets].sort(([, a], [, b]) => a.priority - b.priority)) {
+  const review = reviewed[key];
+  if (review && staticSound(review.source)) result[key] = review.source;
   if (!result[key]) prepare(key, row);
 }
 
