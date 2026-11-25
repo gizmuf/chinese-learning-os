@@ -57,7 +57,10 @@ const bank = { ...term('银行', 'yínháng', 'bank', ['3']), kind: 'word' };
 const study = { ...term('学', 'xué', 'to study', ['1']), kind: 'character' };
 const pilot = {
   entry: snow,
-  words: [{ ...snow, example: snowStopped }, { ...fallingSnow, example: snowing }, skiing],
+  words: [
+    { ...snow, example: snowStopped }, { ...fallingSnow, example: snowing }, skiing,
+    term('医生', 'yìshēng', 'doctor'), term('色', 'sè / shǎi', 'color'),
+  ],
   parts: [rain, component, namedComponent, graphicComponent],
   families: [{ part: rain, members: [snow, zero, need, thunder], notes: { '需': 'Samodzielne słowo 需 ma poziom HSK 5.' } }],
   comparisons: [
@@ -104,6 +107,15 @@ test('a study card selects vocabulary and whole examples, labels HSK, and browse
   assert.equal(content(renderer.root.findByType('h2')), '雪xuěsnow');
   assert.equal(renderer.root.findByProps({ className: 'asc-mast' }).findByProps({ 'aria-label': 'Odsłuchaj: 雪' }).type, 'button');
   assert.match(content(visiblePanel(renderer)), /下雪了。Xià xuě le.It’s snowing./);
+  assert.match(content(visiblePanel(renderer)), /医生yīshēngdoctor/);
+  const options = visiblePanel(renderer).findByProps({ 'aria-label': 'Wymowa: 色' });
+  assert.equal(options.props['aria-expanded'], false);
+  await act(() => options.props.onClick());
+  assert.equal(options.props['aria-expanded'], true);
+  assert.ok(visiblePanel(renderer).findByProps({ 'aria-label': 'sè: 色 · sè' }));
+  assert.ok(visiblePanel(renderer).findByProps({ 'aria-label': 'shǎi · 色子 (shǎi zi): 色 · shǎi — 色子 shǎi zi' }));
+  await act(() => options.props.onClick());
+
   await act(() => button(renderer, 'Dalsze HSK', visiblePanel(renderer)).props.onClick());
   assert.match(content(visiblePanel(renderer)), /滑雪huáxuěto skiHSK 6/);
   assert.doesNotMatch(content(visiblePanel(renderer)), /下雪了。/);
