@@ -32,6 +32,7 @@
   border-color: var(--green);
   color: var(--ink);
 }
+.hanzi-quick-card-shell {position: relative}
 .hanzi-quick-card {
   width: 100%;
   height: 17rem;
@@ -52,6 +53,39 @@
 .hanzi-quick-card:focus-visible {outline: 2px solid var(--ink); outline-offset: 3px}
 .hanzi-quick-glyph {font-size: 1.4rem; font-weight: 600}
 .hanzi-quick-glyph[lang="zh-Hans"] {font-size: clamp(2.3rem, 7vw, 3.5rem); line-height: 1.15; overflow: auto; max-height: 100%}
+.hanzi-quick-inspect {
+  position: absolute;
+  top: calc(.8rem + 1px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  place-items: center;
+  height: 5rem;
+  min-width: 44px;
+  max-width: calc(100% - 1.6rem);
+  padding: 0 1.3rem;
+  border: 0;
+  border-radius: .6rem;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.hanzi-quick-inspect svg {
+  position: absolute;
+  right: .2rem;
+  bottom: .45rem;
+  color: var(--muted);
+}
+.hanzi-quick-inspect:hover {background: var(--sage)}
+.hanzi-quick-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 .hanzi-quick-reading {color: var(--muted); font-size: 1.13rem}
 .hanzi-quick-meaning {font-size: 1rem}
 .hanzi-quick-reading, .hanzi-quick-meaning {min-width: 0; max-height: 100%; overflow: auto; overflow-wrap: anywhere}

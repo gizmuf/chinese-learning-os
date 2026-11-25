@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect, useId, useRef, useState } from 'react';
-import { ArrowRight, Layers, X } from 'lucide-react';
+import { ArrowRight, BookOpen, Layers, X } from 'lucide-react';
 import { hanziSprintCopy } from './hanzi-sprint-copy';
 import { useI18n } from './i18n';
+import { useStudyLookup } from './study-lookup-context';
 import './hanzi-quick-review.css';
 
 type Entry = { hanzi: string; pinyin: string; meaning: string };
@@ -15,10 +16,17 @@ const copy = {
 };
 
 const modes = ['preview', 'scored'] as const;
+const inspectLabel = {
+  en: 'Explore character and family',
+  fr: 'Explorer le caractère et sa famille',
+  ru: 'Исследовать знак и его семейство',
+  tr: 'Karakteri ve ailesini keşfet',
+};
 const newRound = () => ({ index: 0, step: 0, repeat: [] as Entry[] });
 
 function QuickReviewDialog({ entries, onClose }: { entries: readonly Entry[]; onClose: () => void }) {
   const { locale } = useI18n();
+  const lookup = useStudyLookup();
   const c = copy[locale];
   const modeLabels = hanziSprintCopy[locale];
   const dialog = useRef<HTMLDialogElement>(null);
@@ -67,12 +75,26 @@ function QuickReviewDialog({ entries, onClose }: { entries: readonly Entry[]; on
       {modes.map(value => <button type="button" className="secondary" key={value}
         aria-pressed={mode === value} onClick={() => setMode(value)}>{modeLabels[value]}</button>)}
     </div>
-    <button ref={card} type="button" className="hanzi-quick-card" onClick={reveal} aria-disabled={rateCard || undefined}>
-      <span key={index} className="hanzi-quick-glyph" lang={entry ? 'zh-Hans' : undefined}>{entry?.hanzi ?? c.done}</span>
-      <span className="hanzi-quick-reading" lang="zh-Latn-pinyin" data-revealed={Boolean(entry && step >= 1)}>{step >= 1 && entry?.pinyin}</span>
-      <span className="hanzi-quick-meaning" lang="en" data-revealed={Boolean(entry && step === 2)}>{step === 2 && entry?.meaning}</span>
-      <span className="hanzi-quick-action">{action}{entry && step === 2 && !scored && <ArrowRight size={15} aria-hidden="true"/>}</span>
-    </button>
+    <div className="hanzi-quick-card-shell">
+      <button ref={card} type="button" className="hanzi-quick-card" onClick={reveal} aria-disabled={rateCard || undefined}>
+        <span key={index} className="hanzi-quick-glyph" lang={entry ? 'zh-Hans' : undefined}>
+          {!scored && lookup && entry ? <span className="hanzi-quick-sr-only">{entry.hanzi}</span> : entry?.hanzi ?? c.done}
+        </span>
+        <span className="hanzi-quick-reading" lang="zh-Latn-pinyin" data-revealed={Boolean(entry && step >= 1)}>{step >= 1 && entry?.pinyin}</span>
+        <span className="hanzi-quick-meaning" lang="en" data-revealed={Boolean(entry && step === 2)}>{step === 2 && entry?.meaning}</span>
+        <span className="hanzi-quick-action">{action}{entry && step === 2 && !scored && <ArrowRight size={15} aria-hidden="true"/>}</span>
+      </button>
+      {!scored && lookup && entry && <button key={index} type="button" className="hanzi-quick-inspect"
+        aria-label={inspectLabel[locale] + ': ' + entry.hanzi}
+        title={inspectLabel[locale]}
+        onClick={event => {
+          event.stopPropagation();
+          lookup.open(entry.hanzi, event.currentTarget);
+        }}>
+        <span className="hanzi-quick-glyph" lang="zh-Hans">{entry.hanzi}</span>
+        <BookOpen size={14} aria-hidden="true"/>
+      </button>}
+    </div>
     {scored && <>
       <p className="hanzi-quick-repeat-note">{c.repeat}</p>
       <div className="hanzi-quick-ratings">
