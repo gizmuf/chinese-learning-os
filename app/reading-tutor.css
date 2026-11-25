@@ -1,0 +1,187 @@
+.reading-lab .rt-actions,
+.rt-providers,
+.rt-compose > div {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.rt-actions, .rt-providers { flex-wrap: wrap }
+
+.reading-lab .rt-ask {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  padding: .4rem .75rem;
+  border: 1px solid var(--rl-accent);
+  border-radius: .6rem;
+  background: var(--rl-wash);
+  color: var(--rl-ink);
+  font: 650 .875rem/1.25 system-ui, sans-serif;
+  white-space: nowrap;
+}
+
+.rl-chunk .rt-ask {
+  margin-inline: .3rem .5rem;
+  vertical-align: middle;
+}
+
+.reading-lab .rt-example .rt-inline {
+  display: inline;
+  min-height: 0;
+  border: 0;
+  border-bottom: 2px solid var(--rl-accent);
+  border-radius: .15em .15em 0 0;
+  padding: .13em;
+  font: inherit;
+  line-height: 1;
+  color: var(--rl-ink);
+  background: var(--rl-gold);
+}
+
+.rt-dialog {
+  width: min(36rem, calc(100% - 1.5rem));
+  max-width: none;
+  max-height: min(90dvh, 46rem);
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--rl-line);
+  border-radius: 1rem;
+  background: var(--rl-paper);
+  color: var(--rl-ink);
+  box-shadow: 0 16px 64px #13291e2b;
+  font: 1rem/1.45 system-ui, sans-serif;
+  overscroll-behavior: contain;
+}
+
+.rt-dialog[open] { display: flex; flex-direction: column }
+.rt-dialog::backdrop { background: #10241d76 }
+
+.rt-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: .65rem;
+  flex: none;
+  padding: .6rem .9rem;
+}
+
+.rt-head h2 { margin: 0; font-size: 1.2rem; line-height: 1.2 }
+
+.reading-lab .rt-dialog :is(button, select) {
+  min-height: 44px;
+  border: 1px solid var(--rl-line);
+  border-radius: .6rem;
+  padding: .35rem .6rem;
+  background: var(--rl-paper);
+  color: var(--rl-ink);
+  font: inherit;
+}
+
+.reading-lab .rt-dialog select { font-size: .875rem }
+.reading-lab .rt-dialog .rt-back { display: grid; width: 44px; place-items: center; padding: 0 }
+.rt-dialog :disabled { opacity: .55 }
+
+.rt-pinned {
+  flex: none;
+  padding: .8rem .9rem;
+  border-block: 1px solid var(--rl-line);
+  background: var(--rl-wash);
+}
+
+.rt-chunks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: .5rem;
+}
+
+.rt-chunks > div {
+  display: grid;
+  flex: 1 1 10.25rem;
+  align-content: start;
+  min-width: 0;
+  gap: .2rem;
+  padding: .5rem .65rem;
+  border: 1px solid var(--rl-line);
+  border-radius: .65rem;
+  background: var(--rl-paper);
+}
+
+.rt-chunks strong {
+  font-family: var(--hanzi-font, "Songti SC"), "Noto Serif CJK SC", serif;
+  font-weight: 500;
+  font-size: clamp(1.4rem, 3.4vw, 1.9rem);
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.rt-chunks span { color: var(--rl-accent); font-size: .925rem; font-weight: 650 }
+.rt-chunks small { color: var(--rl-muted); font-size: .85rem }
+.rt-chunks mark { padding-inline: .04em; background: var(--rl-gold); color: var(--rl-ink); border-radius: .15em }
+.rt-pinned p { margin: .6rem 0 0; font-size: .925rem }
+.rt-conversation { min-height: 0; overflow-y: auto; padding: 0 .9rem; overscroll-behavior: contain }
+.rt-conversation > :first-child { margin-top: .5rem }
+.rt-conversation > :last-child { margin-bottom: .5rem }
+.rt-unavailable { color: var(--rl-muted); font-size: .925rem }
+.reading-lab .rt-dialog .rt-providers [aria-pressed="true"],
+.reading-lab .rt-dialog .rt-compose button[type="submit"] { background: var(--rl-accent); border-color: var(--rl-accent); color: var(--rl-paper) }
+
+.reading-lab .rt-dialog .rt-connect { margin-block-start: .5rem; font-weight: 650 }
+.reading-lab .rt-dialog .rt-disconnect,
+.reading-lab .rt-dialog .rt-suggestion {
+  max-width: 100%;
+  padding-inline: 0;
+  border: 0;
+  color: var(--rl-accent);
+  font-size: .85rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-align: start;
+}
+
+.rt-turn { padding: .4rem 0 .6rem; overflow-wrap: anywhere }
+.rt-turn p { margin: .45rem 0 0; white-space: pre-wrap }
+.rt-turn .rt-question { width: fit-content; max-width: 90%; margin: 0 0 .5rem auto; padding: .5rem .65rem; background: var(--rl-wash); border-radius: .65rem }
+.rt-turn > strong { font-size: .8rem; color: var(--rl-accent) }
+.rt-compose { flex: none; border-top: 1px solid var(--rl-line); padding: .35rem .9rem .65rem }
+.rt-compose textarea {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px;
+  padding: .55rem;
+  border: 1px solid var(--rl-line);
+  border-radius: .6rem;
+  resize: vertical;
+  background: var(--rl-paper);
+  color: var(--rl-ink);
+  font: inherit;
+}
+.rt-compose button[type="submit"] { display: grid; width: 44px; place-items: center }
+.rt-dialog .rt-notice { flex: none; margin: 0; padding: .35rem .9rem; color: var(--rl-muted); font-size: .85rem }
+
+@media (max-width: 560px) {
+  .rt-dialog {
+    width: 100%;
+    max-height: 94dvh;
+    margin: auto 0 0;
+    border-radius: 1rem 1rem 0 0;
+    padding-bottom: env(safe-area-inset-bottom);
+    -webkit-text-size-adjust: 100%;
+  }
+  .rt-pinned { padding: .65rem }
+  .rt-chunks > div { padding: .45rem .55rem }
+  .rt-chunks strong { font-size: 1.25rem }
+  .rt-pinned p { line-height: 1.35 }
+}
+
+@media (max-height: 520px) {
+  .rt-dialog { max-height: 96dvh }
+  .rt-dialog[open] { overflow-y: auto }
+  .rt-head, .rt-pinned { padding-block: .45rem }
+  .rt-pinned p { margin-top: .35rem }
+  .rt-chunks > div { padding-block: .4rem }
+  .rt-conversation { min-height: min(3rem, 12dvh) }
+}
