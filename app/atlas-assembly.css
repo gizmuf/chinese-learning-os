@@ -332,6 +332,19 @@
 .ab-hand-comparison p {display: flex; flex-direction: column; gap: 2px}
 .ab-hand-comparison small, .ab-hand-rule {color: var(--ab-muted); font-size: .84rem}
 .ab-hand-rule {margin-top: 6px !important; text-align: center}
+.ab-hand-sentence {margin: 0 12px 12px; padding: 12px; border: 1px solid var(--ab-line); border-radius: 10px; background: #fffefa}
+.ab-hand-sentence > header {display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px 12px; margin-bottom: 7px}
+.ab-hand-sentence h4 {margin: 0; font-weight: 650}
+.ab .ab-hand-sentence > header button {display: inline-flex; align-items: center; gap: 6px}
+.ab-hand-sentence > p {font-size: .92rem; overflow-wrap: anywhere}
+.ab-hand-sentence > .ab-hand-sentence-text {font-size: clamp(1.35rem, 5vw, 1.9rem); line-height: 1.4}
+.ab-hand-sentence-text .ab-thumbnail {display: inline-flex; width: 1em; height: 1em; font-size: inherit; vertical-align: -.12em}
+.ab-hand-sentence ul {display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 8px; padding: 0; margin: 10px 0 0; list-style: none}
+.ab-hand-sentence li {display: flex; align-items: center; gap: 10px; padding: 7px; border: 1px solid var(--ab-line); border-radius: 8px; min-width: 0}
+.ab-hand-sentence li .ab-thumbnail {width: 58px; height: 58px; flex: 0 0 58px}
+.ab-hand-sentence li div {display: grid; gap: 2px; min-width: 0; font-size: .88rem}
+.ab-hand-sentence li small {color: var(--ab-muted); font-size: .8rem}
+.ab-hand-sentence li strong {font-size: 1.05rem}
 .ab-positions {display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 10px; padding: 0 12px 8px}
 .ab .ab-positions-toggle {display: inline-flex; align-items: center; gap: 5px; padding-inline: 8px; font-size: .84rem}
 .ab-position-group {min-width: 0; padding: 8px; border: 1px solid var(--ab-line); border-radius: 10px; background: #fffefa}
@@ -340,7 +353,7 @@
 .ab-position-group h4 .ab-hanzi {font-size:1.35rem; color:var(--ab-accent)}
 .ab-position-group > header > span {color:var(--ab-muted); font-size:.84rem}
 .ab-overview .ab-position-group .ab-family-results.ab-grid {
-  grid-template-columns: repeat(auto-fill, minmax(min(68px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(76px, 100%), 1fr));
   padding:0;
 }
 .ab-overview .ab-position-group .ab-family-results.ab-grid .ab-thumbnail {
@@ -350,7 +363,19 @@
   font-size:3rem;
 }
 .ab-position-group .ab-family-results.ab-grid button {min-height:82px; padding-inline:3px}
-.ab .ab-position-all {margin-top:8px; min-height:38px; font-size:.84rem}
+.ab-position-group .ab-grid .ab-result-copy .ab-gloss {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  height: 2.4em;
+  line-height: 1.2;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  color: var(--ab-ink);
+  font-size: .78rem;
+}
+.ab-position-pages {display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 7px; font-size: .84rem}
+.ab-position-pages span {flex: 1; text-align: center; color: var(--ab-muted); font-variant-numeric: tabular-nums}
 .ab-position-example {
   display:flex;
   align-items:center;

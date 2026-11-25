@@ -1,13 +1,14 @@
 'use client';
 
 import {useEffect, useMemo, useRef, useState, type FormEvent} from 'react';
-import {ArrowLeft, ArrowRight, ChevronDown, ChevronsLeftRight, Grid2X2, List, Pin, Search, SquareSplitVertical} from 'lucide-react';
+import {ArrowLeft, ArrowRight, ChevronDown, ChevronsLeftRight, Grid2X2, List, Pin, Search, SquareSplitVertical, Volume2} from 'lucide-react';
 import {assemblyFamilySections, assemblyPresets, assemblySeeds, defaultAssemblyHanzi, findAssemblySeed} from './atlas-assembly-families';
 import {AssemblyDrawing, AssemblyThumbnail} from './atlas-assembly-glyph';
 import {
   assemblyFamily, assemblyIndex, assemblyMeaning, assemblyOperandText, assemblyPositions, assemblySwaps, assemblyTrail, isAssemblyGlyph,
   type AssemblyCharacter, type FamilyMember, type Position,
 } from './atlas-assembly-model';
+import {playRecording, releaseRecording} from './audio';
 import {useI18n} from './i18n';
 import {browseInScope, type BrowseScope} from './hsk-scope';
 import {type BuildDisplay} from './atlas-build-view';
@@ -44,6 +45,22 @@ function hskText(character: AssemblyCharacter) {
 
 type Placement = {form: string; position: Position; members: FamilyMember[]};
 const handSamples = Array.from('打拉推找抱抓拍提接把挤指搬按拿拳掌');
+const positionPageSize = 50;
+const handSentence = '/atlas/audio/hand-positions-sentence.mp3';
+const handComparisonCopy = {
+  en: {title: 'Two hand forms in one sentence', left: 'Left · 3 strokes', bottom: 'Bottom · 4 strokes',
+    listen: 'Listen to the sentence', retry: 'Audio could not play. Try again.', translation: ''},
+  fr: {title: 'Deux formes de la main dans une phrase', left: 'À gauche · 3 traits', bottom: 'En bas · 4 traits',
+    listen: 'Écouter la phrase', retry: 'Lecture impossible. Réessayez.', translation: 'Je prends mon téléphone et j’appelle ma mère.'},
+  ru: {title: 'Две формы компонента «рука» в одном предложении', left: 'Слева · 3 черты', bottom: 'Внизу · 4 черты',
+    listen: 'Послушать предложение', retry: 'Не удалось воспроизвести запись. Попробуйте ещё раз.', translation: 'Я беру телефон и звоню маме.'},
+  tr: {title: 'Bir cümlede el bileşeninin iki biçimi', left: 'Solda · 3 çizgi', bottom: 'Altta · 4 çizgi',
+    listen: 'Cümleyi dinle', retry: 'Ses çalınamadı. Tekrar deneyin.', translation: 'Telefonumu alıp annemi arıyorum.'},
+};
+const handComparison = [
+  {hanzi: '打', part: '扌', position: 'left', expression: '打电话', pinyin: 'dǎ diànhuà', meaning: 'make a phone call'},
+  {hanzi: '拿', part: '手', position: 'bottom', expression: '拿起手机', pinyin: 'náqǐ shǒujī', meaning: 'pick up the phone'},
+] as const;
 
 function placeFamily(members: FamilyMember[], position: BuildDisplay['position']) {
   const placements = new Map<string, Placement>();
@@ -77,6 +94,48 @@ function HandForms() {
   </div>;
 }
 
+function HandSentence({index, highlight}: {index: FamilyData; highlight: boolean}) {
+  const {locale} = useI18n();
+  const copy = handComparisonCopy[locale];
+  const audio = useRef<HTMLAudioElement>(null);
+  const [failed, setFailed] = useState(false);
+  useEffect(() => () => { if (audio.current) releaseRecording(audio.current); }, []);
+  function handInk({hanzi, part, position}: typeof handComparison[number]) {
+    const character = index.characters.get(hanzi);
+    return character ? <AssemblyThumbnail character={character}
+      active={piece => highlight && piece.glyph === part && piece.positions.includes(position)}/> :
+      <span className="ab-thumbnail ab-hanzi" lang="zh-Hans">{hanzi}</span>;
+  }
+
+  return <section className="ab-hand-sentence" aria-labelledby="ab-hand-sentence-title">
+    <header>
+      <h4 id="ab-hand-sentence-title">{copy.title}</h4>
+      <button type="button" aria-label={copy.listen} onClick={() => {
+        setFailed(false);
+        audio.current = playRecording(handSentence, () => setFailed(true));
+      }}><Volume2 size={17} aria-hidden="true"/> {copy.listen}</button>
+    </header>
+    <p className="ab-hand-sentence-text ab-hanzi" lang="zh-Hans">
+      我{handInk(handComparison[1])}起手机，给妈妈{handInk(handComparison[0])}电话。
+    </p>
+    <p lang="zh-Latn-pinyin">Wǒ náqǐ shǒujī, gěi māma dǎ diànhuà.</p>
+    <p lang="en">I pick up my phone and call my mum.</p>
+    {copy.translation && <p lang={locale}>{copy.translation}</p>}
+    {failed && <p role="status">{copy.retry}</p>}
+    <ul aria-label={copy.title}>{handComparison.map(example => {
+      const {hanzi, part, position, expression, pinyin, meaning} = example;
+      return <li key={hanzi} data-hand-contrast={hanzi}>
+        {handInk(example)}
+        <div>
+          <small><span lang="zh-Hans">{part}</span> · {copy[position]}</small>
+          <strong lang="zh-Hans">{expression}</strong>
+          <span lang="zh-Latn-pinyin">{pinyin}</span>
+          <span lang="en">{meaning}</span>
+        </div>
+      </li>;
+    })}</ul>
+  </section>;
+}
 
 function firstFamilyMember(index: FamilyData, part: string, scope: BrowseScope, current?: AssemblyCharacter) {
   const direct = assemblyFamily(index, part, scope, {nested: false});
@@ -154,10 +213,12 @@ function FamilyPanel({index, current, select, scope, owner, display, updateDispl
   scope: BrowseScope; owner: string | null; display: BuildDisplay;
   updateDisplay: (patch: Partial<BuildDisplay>) => void; showWords: (hanzi: string) => void;
 }) {
+  const {locale, t} = useI18n();
   const {position, nested, highlight} = display;
   const layout = !current.part && display.layout === 'positions' ? 'grid' : display.layout;
   const resultsRoot = useRef<HTMLDivElement>(null);
   const [outlines, setOutlines] = useState<ReadonlySet<string>>(() => new Set());
+  const [positionPages, setPositionPages] = useState<Record<string, number>>({});
   const seed = findAssemblySeed(current.part);
   const hand = seed?.part === '扌';
   const form = seed?.forms.includes(display.form) || display.form === current.part ? display.form : '';
@@ -190,7 +251,7 @@ function FamilyPanel({index, current, select, scope, owner, display, updateDispl
     }, {rootMargin: '120px 0px'});
     for (const card of resultsRoot.current.querySelectorAll('[data-outline]')) observer.observe(card);
     return () => observer.disconnect();
-  }, [visible, layout, form, position]);
+  }, [visible, layout, form, position, positionPages, current.hanzi]);
 
   function memberTile(member: FamilyMember, placement?: Placement) {
     const {character, occurrences} = member;
@@ -205,16 +266,17 @@ function FamilyPanel({index, current, select, scope, owner, display, updateDispl
         : position === 'all' || part.positions.includes(position));
     const reading = character.data.readings[0];
     const meaning = assemblyMeaning(character, true);
+    const fullMeaning = assemblyMeaning(character);
     const metadata = [places.map(labelPosition).join(' / '), hskText(character)].filter(Boolean).join(' · ');
     return <li key={hanzi} data-outline={hanzi}>
       <button type="button" aria-pressed={current.hanzi === hanzi}
-        aria-label={[hanzi, reading, meaning, metadata].filter(Boolean).join(' · ')}
+        aria-label={[hanzi, reading, placement ? fullMeaning : meaning, metadata].filter(Boolean).join(' · ')}
         onClick={() => select(member, placement?.form ?? matching.find(match => match.glyph === current.part)?.glyph ?? matching[0]?.glyph)}>
         {outlines.has(hanzi) ? <AssemblyThumbnail character={character} active={isActive}/> :
           <span className="ab-thumbnail ab-hanzi" lang="zh-Hans">{hanzi}</span>}
         <span className="ab-result-copy">
           <strong>{reading || '—'}</strong>
-          <span className="ab-gloss" title={assemblyMeaning(character)}>{meaning || '—'}</span>
+          <span className="ab-gloss" title={fullMeaning}>{meaning || '—'}</span>
           {layout === 'list' && metadata && <small>{metadata}</small>}
         </span>
       </button>
@@ -256,7 +318,7 @@ function FamilyPanel({index, current, select, scope, owner, display, updateDispl
         <MemoryCue owner={owner} family={seed?.part ?? current.part} key={owner + ':' + (seed?.part ?? current.part)}/>
       </details>
     </div>}
-    {layout === 'positions' && hand && <HandForms/>}
+    {layout === 'positions' && hand && <><HandForms/><HandSentence index={index} highlight={highlight}/></>}
     {example && <div className="ab-position-example" aria-live="polite">
       <p><strong lang="zh-Hans" className="ab-hanzi">{example.hanzi}</strong>
         <span>{example.pinyin} · {example.meaning}</span></p>
@@ -273,16 +335,24 @@ function FamilyPanel({index, current, select, scope, owner, display, updateDispl
             };
             return rank(a) - rank(b);
           }) : group.members;
-          const shown = full ? order : order.slice(0, 14);
+          const key = [scope, seed?.part ?? current.part, form, position, nested, group.form, group.position].join(':');
+          const lastPage = Math.ceil(order.length / positionPageSize) - 1;
+          const selectedPage = Math.max(0, Math.floor(order.findIndex(member => member.character.data.hanzi === current.hanzi) / positionPageSize));
+          const page = Math.min(lastPage, positionPages[key] ?? selectedPage);
+          const start = page * positionPageSize;
+          const end = Math.min(start + positionPageSize, order.length);
+          const number = (value: number) => value.toLocaleString(locale);
+          const changePage = (next: number) => setPositionPages(previous => ({...previous, [key]: next}));
           return <section className="ab-position-group" key={group.form + group.position}
             aria-label={group.form + ' · ' + labelPosition(group.position)}>
             <header><h4><span className="ab-hanzi" lang="zh-Hans">{group.form}</span> {labelPosition(group.position)}</h4>
-              <span>{group.members.length.toLocaleString()}</span></header>
-            <ul className="ab-family-results ab-grid">{shown.map(member => memberTile(member, group))}</ul>
-            {shown.length < group.members.length && <button className="ab-position-all" type="button"
-              onClick={() => updateDisplay({form: group.form, position: group.position})}>
-              Show all {group.members.length.toLocaleString()} <span className="ab-visually-hidden">with {group.form} · {labelPosition(group.position)}</span>
-            </button>}
+              <span>{number(order.length)}</span></header>
+            {lastPage > 0 && <div className="ab-position-pages">
+              <button type="button" disabled={page === 0} onClick={() => changePage(page - 1)}>{t('Previous')}</button>
+              <span role="status">{number(start + 1)}–{number(end)} / {number(order.length)}</span>
+              <button type="button" disabled={page === lastPage} onClick={() => changePage(page + 1)}>{t('Next')}</button>
+            </div>}
+            <ul className="ab-family-results ab-grid">{order.slice(start, end).map(member => memberTile(member, group))}</ul>
           </section>;
         })}
       </div> : <ul className={'ab-family-results ab-' + (layout === 'list' ? 'list' : 'grid')}>
