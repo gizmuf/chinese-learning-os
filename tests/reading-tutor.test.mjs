@@ -12,14 +12,14 @@ const bundle = await build({
     export * as checker from './app/api/sentence-check/route';
     export * as plan from './app/api/reading-tutor/plan/route';
     export * as callback from './app/api/reading-tutor/plan/callback/route';
-    export {readPlanResponse} from './lib/reading-tutor';`, resolveDir: process.cwd()},
+    export {askReadingTutor, lessonGrammar, readPlanResponse} from './lib/reading-tutor';`, resolveDir: process.cwd()},
   bundle: true, platform: 'node', format: 'esm', write: false,
   plugins: [{name: 'bindings', setup(build) {
     build.onResolve({filter: /^cloudflare:workers$/}, () => ({path: 'bindings', namespace: 'fixture'}));
     build.onLoad({filter: /.*/, namespace: 'fixture'}, () => ({contents: 'export const env=globalThis.tutorFixtureBindings'}));
   }}],
 });
-const {tutor, checker, plan, callback, readPlanResponse} = await import('data:text/javascript;base64,' + Buffer.from(bundle.outputFiles[0].text).toString('base64'));
+const {tutor, checker, plan, callback, askReadingTutor, lessonGrammar, readPlanResponse} = await import('data:text/javascript;base64,' + Buffer.from(bundle.outputFiles[0].text).toString('base64'));
 const origin = 'https://chineseos.l00p.network', alibaba = 'https://cos.l00p.network', issuer = 'https://auth.openai.com';
 const page = '?atlas=1&reader=1&hsk=3&article=podcast-53-after-work&at=p1&grammar=as-soon-as';
 const input = {article: 'podcast-53-after-work', grammar: 'as-soon-as', language: 'pl', question: 'A jeśli pominę 一?', history: [], provider: 'chatgpt'};
@@ -29,6 +29,7 @@ const post = (body, cookie = '', website = origin) => new Request(origin + '/api
 const planResponse = (...events) => new Response(events.map(e => 'data: ' + JSON.stringify(e) + '\r\n\r\n').join(''), {headers: {'Content-Type': 'text/event-stream'}});
 const cookiePair = (response, name) => response.headers.getSetCookie().find(c => c.startsWith(name + '='))?.split(';')[0];
 const request = (resource, cookie = '', headers = {}) => new Request(origin + resource, {headers: {Cookie: cookie, ...headers}});
+const completion = content => Response.json({choices: [{finish_reason: 'stop', message: {role: 'assistant', content}}]});
 function databaseFixture(t) {
   const sql = new DatabaseSync(':memory:');
   const db = {prepare(query) {
@@ -149,19 +150,23 @@ test('DeepSeek follows the pinned reading sentence on both hosts and shares the 
     const body = JSON.parse(init.body);
     assert.equal(body.model, 'deepseek-flash');
     let content;
-    if (body.response_format) {
+    if (body.max_tokens === 900) {
       checkerCalls++;
       content = JSON.stringify({status: 'correct', correction: '我在家。', pinyin: 'wǒ zài jiā.', explanation: 'Clear sentence.', natural: '', naturalPinyin: ''});
     } else {
       tutorCalls++;
+      assert.deepEqual(body.response_format, {type: 'json_object'});
       assert.match(body.messages[0].content, /我以前一下班就看手机。/);
+      assert.match(body.messages[0].content, /我以前下班就看手机。/);
       assert.match(body.messages[0].content, /Wǒ yǐ qián yí xià bān jiù kàn shǒu jī/);
       assert.match(body.messages[0].content, /I used to go on my phone as soon as I got off work\./);
       assert.doesNotMatch(body.messages[0].content, /我一到家就给你打电话。/);
       assert.deepEqual(body.messages.slice(1).map(message => message.content), ['earlier', 'earlier reply', input.question]);
-      content = 'reply';
+      content = JSON.stringify({explanation: '就 łączy oba zdarzenia.', examples: [
+        {hanzi: '我下班就回家。', pinyin: 'Wǒ xiàbān jiù huí jiā.', english: 'I go home right after work.'},
+      ]});
     }
-    return Response.json({choices:[{finish_reason:'stop', message:{role: 'assistant', content}}]});
+    return completion(content);
   });
   const withHistory = {...input, provider:'deepseek', sourceChunk: 'p1-c1', history:[{question:'earlier',answer:'earlier reply'}]};
   assert.equal((await (await tutor.GET(request('/api/reading-tutor'))).json()).deepseek, true);
@@ -171,7 +176,8 @@ test('DeepSeek follows the pinned reading sentence on both hosts and shares the 
   assert.equal((await tutor.POST(post({...withHistory, sourceChunk: 'p1-c2'}))).status, 400);
   assert.equal((await tutor.POST(post(withHistory, '', 'https://outside.example'))).status, 403);
   assert.equal(sql.prepare('SELECT daily_used FROM sentence_check_ai_quota').get().daily_used, 0);
-  assert.equal((await (await tutor.POST(post(withHistory, '', alibaba))).json()).answer, 'reply');
+  assert.equal((await (await tutor.POST(post(withHistory, '', alibaba))).json()).answer,
+    '就 łączy oba zdarzenia.\n\n我下班就回家。\nWǒ xiàbān jiù huí jiā.\nI go home right after work.');
   const check = () => checker.POST(new Request(origin + '/api/sentence-check', {
     method: 'POST', headers: {Origin: origin, 'Content-Type': 'application/json'}, body: JSON.stringify({sentence: '我在家。', locale: 'en'}),
   }));
@@ -182,6 +188,45 @@ test('DeepSeek follows the pinned reading sentence on both hosts and shares the 
   assert.equal(tutorCalls, 2);
   assert.equal(checkerCalls, 1);
   assert.equal(sql.prepare('SELECT daily_used FROM sentence_check_ai_quota').get().daily_used, 3);
+});
+
+test('the faulty free-form answer and examples without a gloss or tones are rejected without another model call', async () => {
+  const context = lessonGrammar(input.article, input.grammar);
+  const question = 'Co zmienia pominięcie 一 w przypiętym zdaniu? Podaj jeden krótki przykład.';
+  const broken = 'Bez 一 zdanie traci sens „zaraz po”: 我就给你打电话。';
+  const example = {hanzi: '我到了就打给你。', pinyin: 'Wǒ dào le jiù dǎ gěi nǐ.', english: 'I will call you when I arrive.'};
+  const replies = [broken, ...[{...example, english: ''}, {...example, pinyin: 'wo dao le jiu da gei ni'}].map(item =>
+    JSON.stringify({explanation: '一 mocniej podkreśla bezpośrednie następstwo.', examples: [item]}))];
+  let paidCalls = 0;
+  for (const reply of replies) {
+    await assert.rejects(askReadingTutor({...input, provider: 'deepseek', question}, context, 'fixture', undefined, async () => {
+      paidCalls++;
+      return completion(reply);
+    }));
+  }
+  assert.equal(paidCalls, replies.length);
+});
+
+test('the omission explanation receives an exact pinned minimal pair and retains DeepSeek’s new example', async () => {
+  const question = 'Co zmienia pominięcie 一 w przypiętym zdaniu? Podaj jeden krótki przykład.';
+  const context = lessonGrammar(input.article, input.grammar);
+  const explanation = '一 mocniej podkreśla natychmiastowe następstwo. Z samym 就 druga czynność nadal może nastąpić zaraz po pierwszej.';
+  const examples = [
+    {hanzi: '我到家就给你打电话。', pinyin: 'Wǒ dào jiā jiù gěi nǐ dǎ diànhuà.', english: 'When I get home, I’ll call you right away.'},
+    {hanzi: '我起床就喝水。', pinyin: 'Wǒ qǐchuáng jiù hē shuǐ.', english: 'I drink water right after I get up.'},
+  ];
+  const result = await askReadingTutor({...input, provider: 'deepseek', question}, context, 'fixture', undefined, async (_url, init) => {
+    const {messages} = JSON.parse(init.body);
+    const instructions = messages[0].content;
+    assert.match(instructions, /我一到家就给你打电话。/);
+    assert.match(instructions, /Same pinned sentence without 一: \{"hanzi":"我到家就给你打电话。"/);
+    assert.match(instructions, /A 就 B, which can still mean B happens right after A/);
+    assert.match(instructions, /explanation in Polish/);
+    assert.match(instructions, /separate English gloss/);
+    assert.equal(messages.at(-1).content, question);
+    return completion(JSON.stringify({explanation, examples}));
+  });
+  assert.equal(result, `${explanation}\n\n我到家就给你打电话。\nWǒ dào jiā jiù gěi nǐ dǎ diànhuà.\nWhen I get home, I’ll call you right away.\n\n我起床就喝水。\nWǒ qǐchuáng jiù hē shuǐ.\nI drink water right after I get up.`);
 });
 
 test('an incomplete plan stream cannot become a tutor answer', async () => {
